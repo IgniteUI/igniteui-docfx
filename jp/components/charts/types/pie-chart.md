@@ -15,23 +15,12 @@ Ignite UI for Angular 円チャート (円グラフ) は、データセットの
 
 データ項目を文字列と数値データでバインドすることで、[`IgxPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartcomponent.html) の円チャートが作成できます。これらのデータ値を足すと可視化率 100% になります。この例では部門ごとの予算支出の全体的な内訳を示しています。
 
-<code-view style="height: 600px"
+<code-view style="height: 600px" alt="Angular 円チャートの概要"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-overview"
-           github-src="charts/pie-chart/overview"
-           alt="Angular 円チャートの概要" >
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart/overview"
+                                                 github-src="charts/pie-chart/overview">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/pie-chart/overview?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/pie-chart/overview?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -39,42 +28,42 @@ Ignite UI for Angular 円チャート (円グラフ) は、データセットの
 
 円チャートは小さいデータ セットに適していて、一目で読みやすくなります。円チャートは、部分対全体の可視化の一種です。その他:
 
--   円
--   ドーナツ (リング)
--   ファンネル
--   積層型エリア
--   積層型 100% エリア (積層型パーセント エリア)
--   積層型棒
--   積層型 100% 棒 (積層型パーセント棒)
--   ツリーマップ
--   ウォーターフォール
+*   円
+*   ドーナツ (リング)
+*   ファンネル
+*   積層型エリア
+*   積層型 100% エリア (積層型パーセント エリア)
+*   積層型棒
+*   積層型 100% 棒 (積層型パーセント棒)
+*   ツリーマップ
+*   ウォーターフォール
 
 Angular 円チャートは、データを解析するためのビューアー ツールを提供するインタラクティブ機能を含みます。
 
--   凡例
--   スライスの分割
--   スライスの選択
--   チャート アニメーション
+*   凡例
+*   スライスの分割
+*   スライスの選択
+*   チャート アニメーション
 
 円チャートのベスト プラクティス:
 
--   スライスまたはセグメントを、合計値または全体に対するパーセンテージ値として比較する。
--   カテゴリのグループがどのようにより小さなセグメントに分割されるかを表示する。
--   小さい非階層データ セット (6 ～ 8 セグメント未満のデータ) を表示する。
--   データ セグメントの合計が 100% になるようにする。
--   データの順序を最大 (最高) から最小 (最低) に並べ替える。
--   12 時の位置から始めて時計回りに進む標準的なプレゼンテーション方法を使用する。
--   カラー パレットがセグメント/スライスで識別できるようにする。
--   データラベルを読みやすくするため、セグメントと凡例のどちらに配置するべきか検討する。
--   より分かりやすい表現のために、円の代わりに棒またはリング チャートを選択する。
--   比較分析のために複数の円チャートを並べて配置しないようにする。
+*   スライスまたはセグメントを、合計値または全体に対するパーセンテージ値として比較する。
+*   カテゴリのグループがどのようにより小さなセグメントに分割されるかを表示する。
+*   小さい非階層データ セット (6 ～ 8 セグメント未満のデータ) を表示する。
+*   データ セグメントの合計が 100% になるようにする。
+*   データの順序を最大 (最高) から最小 (最低) に並べ替える。
+*   12 時の位置から始めて時計回りに進む標準的なプレゼンテーション方法を使用する。
+*   カラー パレットがセグメント/スライスで識別できるようにする。
+*   データラベルを読みやすくするため、セグメントと凡例のどちらに配置するべきか検討する。
+*   より分かりやすい表現のために、円の代わりに棒またはリング チャートを選択する。
+*   比較分析のために複数の円チャートを並べて配置しないようにする。
 
 以下の場合に円チャートを使用しないでください。
 
--   経時変化を比較する場合 - 棒チャート、折れ線チャート、またはエリア チャートを使用してください。
--   正確なデータ比較が必要な場合 - 棒チャート、折れ線チャート、またはエリア チャートを使用してください。
--   6 セグメントまたは 8 セグメント (大量のデータ) がある場合 - データ ストーリーに適した棒チャート、折れ線チャート、またはエリア チャートを検討してください。
--   棒チャートで値の違いがわかりやすくなります。
+*   経時変化を比較する場合 - 棒チャート、折れ線チャート、またはエリア チャートを使用してください。
+*   正確なデータ比較が必要な場合 - 棒チャート、折れ線チャート、またはエリア チャートを使用してください。
+*   6 セグメントまたは 8 セグメント (大量のデータ) がある場合 - データ ストーリーに適した棒チャート、折れ線チャート、またはエリア チャートを検討してください。
+*   棒チャートで値の違いがわかりやすくなります。
 
 ## Angular 円チャートの凡例
 
@@ -84,23 +73,12 @@ Angular 円チャートは、データを解析するためのビューアー �
 
 また、凡例項目の外観をカスタマイズするために [`legendItemTemplate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#legenditemtemplate) および [`legendItemBadgeTemplate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#legenditembadgetemplate)プロパティ、[`IgxItemLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxitemlegendcomponent.html) の複数のフォント プロパティも使用できます。
 
-<code-view style="height: 600px"
+<code-view style="height: 600px" alt="凡例付きの Angular 円チャート"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-legend"
-           github-src="charts/pie-chart/legend"
-           alt="凡例付きの Angular 円チャート" >
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart/legend"
+                                                 github-src="charts/pie-chart/legend">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/pie-chart/legend?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/pie-chart/legend?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -112,23 +90,12 @@ Angular 円チャートは、データを解析するためのビューアー �
 
 [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorytype) を Percent に設定すると、[`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorythreshold) は値ではなくパーセンテージとして解釈されます。つまり、値がすべての項目の値の合計の 2% 未満である項目は、Others カテゴリに割り当てられます。使用しているアプリケーションに最も適切な [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorytype) を使用できます。
 
-<code-view style="height: 600px"
+<code-view style="height: 600px" alt="Angular 円チャートその他の分類項目"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-others"
-           github-src="charts/pie-chart/others"
-           alt="Angular 円チャートその他の分類項目" >
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart/others"
+                                                 github-src="charts/pie-chart/others">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/pie-chart/others?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/pie-chart/others?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -136,23 +103,12 @@ Angular 円チャートは、データを解析するためのビューアー �
 
 円チャート コンポーネントは個々の円スライスの選択と展開だけでなく、選択状態を変更しカスタム ロジックを実装することを可能にする `SliceClick` イベントをコンポーネントサポートします。
 
-<code-view style="height: 600px"
+<code-view style="height: 600px" alt="Angular 円チャートの展開"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-explosion"
-           github-src="charts/pie-chart/explosion"
-           alt="Angular 円チャートの展開" >
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart/explosion"
+                                                 github-src="charts/pie-chart/explosion">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/pie-chart/explosion?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/pie-chart/explosion?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -164,38 +120,27 @@ Angular 円チャートは、データを解析するためのビューアー �
 
 円チャート コンポーネントは、選択モードを 3 つコンポーネントサポートします。
 
--   Single - single モードに設定すると、一度に 1 つのスライスのみ選択します。他のスライスを選択すると、最初に選択したスライスは選択解除され、新しいスライスが選択されます。
--   Multiple - Multiple モードに設定すると、一度に複数のスライスを選択します。スライスをクリックするとスライスが選択され、他のスライスをクリックすると、最初のスライスも、新しくクリックしたスライスも選択されます。
--   手動 - Manual モードに設定すると、選択は無効化されます。
+*   Single - single モードに設定すると、一度に 1 つのスライスのみ選択します。他のスライスを選択すると、最初に選択したスライスは選択解除され、新しいスライスが選択されます。
+*   Multiple - Multiple モードに設定すると、一度に複数のスライスを選択します。スライスをクリックするとスライスが選択され、他のスライスをクリックすると、最初のスライスも、新しくクリックしたスライスも選択されます。
+*   手動 - Manual モードに設定すると、選択は無効化されます。
 
 円チャート コンポーネントには、選択機能に関連する 4 つのイベントがあります。
 
--   SelectedItemChanging
--   SelectedItemChanged
--   SelectedItemsChanging
--   SelectedItemsChanged
+*   SelectedItemChanging
+*   SelectedItemChanged
+*   SelectedItemsChanging
+*   SelectedItemsChanged
 
 「Changing」で終わるイベントはキャンセル可能なイベントです。すなわち、イベント引数プロパティ `Cancel` を true に設定することで、スライスの選択を停止します。True に設定すると、関連付けられたプロパティは更新されず、その結果スライスは選択されません。この設定はたとえば、スライスのデータによって一定のスライスの選択を無効化する場合に使用します。
 
 「その他」スライスをクリックすると、[`IgxPieSliceOthersContext`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiesliceotherscontext.html) オブジェクトが返されます。オブジェクトは、「その他」スライスに含まれるデータ項目のリストがあります。
 
-<code-view style="height: 600px"
+<code-view style="height: 600px" alt="Angular 円チャートの選択"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-selection"
-           github-src="charts/pie-chart/selection"
-           alt="Angular 円チャートの選択" >
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart/selection"
+                                                 github-src="charts/pie-chart/selection">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/pie-chart/selection?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/pie-chart/selection?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -205,23 +150,12 @@ Angular 円チャートは、データを解析するためのビューアー �
 
 以下のコードでは、radiusFactor がチャートをサイズの 0.25% 増加し、startAngle がチャートを 1 度回転しています。radiusFactor と startAngle が最大値に達すると、アニメーション フラグをリセットし、間隔をクリアしてアニメーションを停止します。
 
-<code-view style="height: 600px"
+<code-view style="height: 600px" alt="Angular 円チャートのアニメーション"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-animation"
-           github-src="charts/pie-chart/animation"
-           alt="Angular 円チャートのアニメーション" >
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart/animation"
+                                                 github-src="charts/pie-chart/animation">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/pie-chart/animation?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/pie-chart/animation?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -229,11 +163,12 @@ Angular 円チャートは、データを解析するためのビューアー �
 
 円チャートを作成したら、次に示すように、チャートのスライスの色を変更するなど、スタイルをさらにカスタマイズすることができます。
 
-<code-view style="height: 600px"
+<code-view style="height: 600px" alt="Angular 円チャートのスタイル設定"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-styling"
-           alt="Angular 円チャートのスタイル設定" >
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart/styling"
+                                                 github-src="charts/pie-chart/styling">
 </code-view>
+
 
 <div class="divider--half"></div>
 
@@ -241,32 +176,33 @@ Angular 円チャートは、データを解析するためのビューアー �
 
 ラジアル円チャートはラジアル チャートのグループに属し、チャートの中心からデータ ポイントの位置に向かって伸びる円スライスを使用します。このチャート タイプは、複数の一連のデータ ポイントを分類するという概念を採用しており、データ ポイントを水平線に沿って引き伸ばすのではなく、円形の軸に沿ってラップします。
 
-<code-view style="height: 600px"
+<code-view style="height: 600px" alt="Angular ラジアル円チャート"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-radial-pie-chart"
-           alt="Angular ラジアル円チャート" >
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-pie-chart"
+                                                 github-src="charts/data-chart/radial-pie-chart">
 </code-view>
+
 
 <div class="divider--half"></div>
 
 ## その他のリソース
 
--   [ドーナツ チャート](donut-chart.md)
--   [極座標チャート](polar-chart.md)
--   [ラジアル チャート](radial-chart.md)
+*   [ドーナツ チャート](donut-chart.md)
+*   [極座標チャート](polar-chart.md)
+*   [ラジアル チャート](radial-chart.md)
 
-## API メンバー
+## API リファレンス
 
 以下のテーブルは、上記のセクションで説明した API メンバーをリストします。
 
--   [`legendItemBadgeTemplate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#legenditembadgetemplate)
--   [`legendItemTemplate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#legenditemtemplate)
--   [`legendLabelMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#legendlabelmemberpath)
--   [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorythreshold)
--   [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorytype)
--   [`selectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#selectionmode)
+*   [`legendItemBadgeTemplate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#legenditembadgetemplate)
+*   [`legendItemTemplate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#legenditemtemplate)
+*   [`legendLabelMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#legendlabelmemberpath)
+*   [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorythreshold)
+*   [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#otherscategorytype)
+*   [`selectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartbasecomponent.html#selectionmode)
 
-| チャート タイプ  | コントロール名                                                                                                                                        | API メンバー                                                                                                                                                   |
-| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 円チャート     | [`IgxPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartcomponent.html)   | `PieChart`                                                                                                                                                 |
+| チャート タイプ       | コントロール名   | API メンバー |
+| -----------------|----------------|------------ |
+| 円チャート      | [`IgxPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpiechartcomponent.html)     | `PieChart` |
 | ラジアル円チャート | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) | [`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradialpieseriescomponent.html) |

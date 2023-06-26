@@ -1,14 +1,13 @@
 ---
 title: 単一選択 ComboBox コンポーネント
 _description: Ignite UI for Angular ComboBox は、基本的な HTML 入力、選択、フィルタリング、およびカスタム ドロップダウン リストの機能を組み合わせた強力な入力を提供します。無料でお試しください。
-_keywords: angular combobox, ignite ui for angular, infragistics, angular コンボボックス, インフラジスティックス
+_keywords: angular 単一選択 combobox, angular combobox コンポーネント, angular 単一選択 combobox コンポーネント, angular combo, angular ui コンポーネント, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 
-# 単一選択 ComboBox
+# Angular Single Select ComboBox (単一選択のコンボボックス) コンポーネントの概要
 
-Angular Simple ComboBox コンポーネントは、単一の選択を可能にする [ComboBox コンポーネント](combo.md)の変更です。Simple ComboBox は、ユーザーが事前定義された項目のリストからオプションを選択できるようにする編集可能な入力です。Ignite UI for Angular Simple ComboBox コンポーネントは、フィルタリング機能、項目の選択、グループ化、およびドロップダウン リストへのカスタム値の追加も提供します。HTML select タグの代わりに使用でき、データ バインディング (ローカルおよびリモート)、フィルタリング、グループ化、カスタム テンプレート、カスタム値など、すぐに使用できる機能がいくつかあります。
-
+Angular Single Select ComboBox コンポーネントは、単一の選択を可能にする [ComboBox コンポーネント](combo.md)の変更です。これを「シンプルなコンボ」と呼びます。元の ComboBox コンポーネントの単一選択モードに対する需要が高かったため、ユーザーが事前定義された項目リストからオプションを選択し、カスタム値を入力できるようにする編集可能な検索入力を提供する拡張コンポーネントを作成しました。
 
 ## Angular Simple ComboBox の例
 
@@ -21,6 +20,7 @@ Angular Simple ComboBox コンポーネントは、単一の選択を可能に�
            iframe-src="{environment:demosBaseUrl}/lists/simple-combo-main" alt="Angular Simple ComboBox の例">
 </code-view>
 
+<div class="divider--half"></div>
 
 ## Angular Simple ComboBox の機能
 
@@ -33,9 +33,17 @@ Simple ComboBox コントロールは、次の機能を公開します:
     - テンプレート
     - テンプレート駆動フォームおよびリアクティブ フォームとの統合
 
-## 使用方法
+## Ignite UI for Angular Simple ComboBox を使用した作業の開始
 
-Simple ComboBox コンポーネントの使用を開始するには、最初に `IgxSimpleComboModule` を **app.module.ts** ファイルにインポートする必要があります。
+Ignite UI for Angular Simple ComboBox コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
+
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxSimpleComboModule` をインポートします。
 
 ```typescript
 import { IgxSimpleComboModule } from 'igniteui-angular';
@@ -51,7 +59,30 @@ import { IgxSimpleComboModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-次に、テンプレートで、[igx-simple-combo]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) をいくつかのデータにバインドする必要があります。
+あるいは、`16.0.0` 以降、`IgxSimpleComboComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_SIMPLE_COMBO_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/simple-combo/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+
+```typescript
+// home.component.ts
+
+import { IGX_SIMPLE_COMBO_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_SIMPLE_COMBO_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<igx-simple-combo></igx-simple-combo>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_SIMPLE_COMBO_DIRECTIVES]
+    /* or imports: [IgxSimpleComboComponent] */
+})
+export class HomeComponent {}
+```
+
+Ignite UI for Angular Simple ComboBox モジュールまたはディレクティブをインポートしたので、`igx-simple-combo` コンポーネントの使用を開始できます。
+
+## Angular Simple ComboBox の使用
+
+通常のコンボボックスと同様に、[igx-simple-combo]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) をデータにバインドできます。
 
 ```typescript
 export class MySimpleComboComponent implements OnInit {
@@ -183,7 +214,7 @@ Simple ComboBox を閉じてフォーカスを合わせると、次のように�
 Simple ComboBox が開かれ、リスト項目がフォーカスされている場合:
 - `下矢印` は次のリスト項目に移動します。アクティブな項目がリストの最後の項目で、カスタム値が有効な場合、フォーカスは [項目の追加] ボタンに移動します。
 
-- `上矢印` は前のリスト項目に移動します。アクティブな項目がリストの最初の項目である場合、リストは閉じられます。
+- `上矢印` は前のリスト項目に移動します。アクティブな項目がリストの最初の項目である場合、フォーカスは検索入力に戻り、入力内のすべてのテキストも選択されます。
 
 - `End` は最後のリスト項目に移動します。
 
@@ -199,7 +230,7 @@ Simple ComboBox が開かれ、リスト項目がフォーカスされている�
 
 - `Enter` キーは、検索入力のテキストと等しい `valueKey` と `displayKey` を持つ新しい項目を追加し、その項目を選択します。
 
-- `上矢印` フォーカスは最後のリスト項目に戻るか、リストが空の場合はリストを閉じます。
+- `上矢印` はフォーカスを最後のリスト項目に戻すか、あるいはリストが空の場合はフォーカスを入力に移動します。
 
 ## カスケーディング
 
@@ -210,6 +241,9 @@ Simple ComboBox が開かれ、リスト項目がフォーカスされている�
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/simple-combo-cascading" alt="Angular カスケーディングの例">
 </code-view>
+
+
+[カスケード コンボを使用した Angular Grid のサンプル](../components/grid/cascading-combos.md)を参照してください。
 
 <div class="divider--half"></div>
 
@@ -273,6 +307,17 @@ export class SimpleComboCascadingComponent implements OnInit {
 }
 ```
 
+## Angular Simple ComboBox リモート バインディング
+
+Ignite UI for Angular Simple ComboBox コンポーネントは、コンボボックスをリモート サービスにバインドし、要求に応じてデータを取得できる API を公開します。
+
+### デモ
+以下のサンプルは、[dataPreLoad]({environment:angularApiUrl}/classes/IgxSimpleComboComponent.html#dataPreLoad) プロパティを使用してリモート データの新しいチャンクをロードし、[ComboBox リモート バインディング](combo-remote.md)で説明されている手順に従うリモート バインディングを示しています。
+
+<code-view style="height: 400px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-remote" alt="Angular Simple Combo リモート バインディングの例">
+</code-view>
 
 ## Angular Simple ComboBox のスタイル設定
 
@@ -329,6 +374,7 @@ $custom-drop-down-theme: drop-down-theme(
 ### サンプル
 
 <code-view style="height:500px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/simple-combo-styling" >
 </code-view>

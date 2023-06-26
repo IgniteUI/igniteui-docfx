@@ -1,31 +1,40 @@
 ---
-title: Angular Select | Material Select | IgniteUI for Angular | インフラジスティックス
-_description: Angular Select の設定方法。マテリアル選択は、Angular ドロップダウン リストを備えた入力を提供し、Angular コンボボックスの単一項目選択を可能にします。
-_keywords:  angular select, igniteui for angular, インフラジスティックス
+title: Angular Select コンポーネント - IgniteUI for Angular
+_description: Angular Select コンポーネントを構成する方法について説明します。Angular Select は、Angular ドロップダウン リストを備えた入力を提供し、Angular Combobox の単一項目選択を可能にします。今すぐお試しください。
+_keywords: angular select, angular select コンポーネント, angular フォーム, angular フォーム select コンポーネント, angular ui コンポーネント, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 
-# Select
-<p class="highlight">[Select コンポーネント]({environment:angularApiUrl}/classes/igxselectcomponent.html)は、ドロップダウンに配置された項目のリストからの単一選択できます。このマテリアルベースのフォームコントロールは、単一または複数の文字の一致に基づいて、選択などの迅速な項目リスト ナビゲーションを提供します。[IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html) は [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を拡張するため、Select インスタンスですべての Drop Down イベントを処理できます。</p>
+# Angular Select (選択) コンポーネントの概要
+Angular Select は、事前定義された値のリストから 1 つの値を選択するために使用されるフォーム コンポーネントです。Angular Select コンポーネントは、ネイティブ HTML select 要素と同じ機能を提供しますが、さらに多くのカスタマイズ オプションを提供します。これは [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) に基づいており、テンプレート、仮想化、ドロップダウン リスト項目のカスタマイズなどのすべての機能をサポートしています。
 
 ## Angular Select の例
+以下は基本的な Angular Select の例です。クリックごとに開く、いくつかの選択肢のリストを表示するシンプルなコンテキスト メニューがあります。
 
-<code-view style="height: 300px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-1" alt="Angular Select の例">
 </code-view>
 
 
 
-## 使用方法
-[Select]({environment:angularApiUrl}/classes/igxselectcomponent.html) コンポーネントを初期化にするには、まず **IgxSelectModule** を **app.module** ファイルにインポートします。
+## Ignite UI for Angular Select を使用した作業の開始
+
+Ignite UI for Angular Select コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
+
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxSelectModule` をインポートします。
+
 ```typescript
 // app.module.ts
-
 ...
 import { IgxSelectModule } from 'igniteui-angular';
 // import { IgxSelectModule } from '@infragistics/igniteui-angular'; for licensed package
-
 @NgModule({
     ...
     imports: [..., IgxSelectModule],
@@ -34,7 +43,41 @@ import { IgxSelectModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-次に選択する項目のリストと共に `igx-select` を追加します。[`igx-select-item`]({environment:angularApiUrl}/classes/igxselectitemcomponent.html) を使用して、`igx-select` に含まれる項目を表示します。
+あるいは、`16.0.0` 以降、`IgxSelectComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_SELECT_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/select/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+
+```typescript
+// home.component.ts
+
+import { FormsModule } from '@angular/forms';
+import { IGX_SELECT_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_SELECT_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-select [(ngModel)]="selected">
+        <label igxLabel>Simple Select</label>
+        <igx-select-item value="Orange">Orange</igx-select-item>
+        <igx-select-item value="Apple">Apple</igx-select-item>
+        <igx-select-item value="Banana">Banana</igx-select-item>
+        <igx-select-item value="Mango">Mango</igx-select-item>
+    </igx-select>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_SELECT_DIRECTIVES, FormsModule]
+    /* or imports: [IgxSelectComponent, IgxSelectItemComponent, IgxLabelDirective, FormsModule] */
+})
+export class HomeComponent {
+    public selected: string;
+}
+```
+
+Ignite UI for Angular Select モジュールまたはディレクティブをインポートしたので、`igx-select` コンポーネントの使用を開始できます。
+
+## Angular Select の使用
+
+選択する項目のリストと共に `igx-select` を追加します。[`igx-select-item`]({environment:angularApiUrl}/classes/igxselectitemcomponent.html) を使用して、`igx-select` に含まれる項目を表示します。
 ```html
 <igx-select>
     <label igxLabel>Simple Select</label>
@@ -69,13 +112,14 @@ public items: string[] = ['Orange', 'Apple', 'Banana', 'Mango'];
     </igx-select-item>
 </igx-select>
 ```
+
 より複雑な項目テンプレートで `text` プロパティを確認するには、以下のグループ化サンプル [グループ選択](#選択項目のグループ化)を参照してください。
 
 ### 入力プロパティ
 
 Select コンポーネントは、[入力グループ](input-group.md)に適用可能な次のディレクティブをサポートしています。
 
-- `igxLabel` - Select 入力とのリンクは `aria-labelledby` を介して自動的に処理されるため、`for` プロパティを設定する必要はありません。
+- `igxLabel` - Angular Select 入力とのリンクは `aria-labelledby` を介して自動的に処理されるため、`for` プロパティを設定する必要はありません。
 - `igx-prefix`/`igxPrefix`
 - `igx-suffix`/`igxSuffix` - 組み込みのトグル ボタンサフィックスが常に最後に表示されることに注意してください。
 - `igx-hint`/`igxHint`
@@ -95,13 +139,10 @@ Select コンポーネントは、[入力グループ](input-group.md)に適用�
     </igx-select-item>
 </igx-select>
 ```
-
-
-<code-view style="height: 350px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 350px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/select-input-directives" >
 </code-view>
-
 
 > [!NOTE]
 Select コンポーネントに [`placeholder`]({environment:angularApiUrl}/classes/igxselectcomponent.html#placeholder) が指定されておらず、選択も行われていない場合、`igxLabel` は遷移し、プレースホルダーが適切な場所に表示されます。
@@ -127,6 +168,7 @@ public greengrocery: Array<{ label: string, items: Array<{ type: string, origin:
 ```
 
 次にテンプレート ファイルでこれらのオブジェクトを反復して項目へ適切にアクセスします。
+
 ```html
 <igx-select #select>
     <label igxLabel>Select With Groups</label>
@@ -145,12 +187,10 @@ public greengrocery: Array<{ label: string, items: Array<{ type: string, origin:
 </igx-select>
 ```
 
-
-<code-view style="height: 400px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-2" >
 </code-view>
-
 
 ### ヘッダーとフッター
 現在 Select コンポーネントにデフォルトのヘッダーとフッターのテンプレートはありません。ただし、ヘッダーまたはフッター テンプレートを追加するには、`igxSelectHeader` または `igxSelectFooter` でそれぞれマークします。これらはカスタム テンプレートであるため、スタイル設定も定義する必要があります。
@@ -207,16 +247,14 @@ public greengrocery: Array<{ label: string, items: Array<{ type: string, origin:
     </ng-template>
 </igx-select>
 ```
-
-
-<code-view style="height: 610px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 610px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/select-header-footer" >
 </code-view>
 
 
-### カスタム切り替えボタン
-`igxSelectToggleIcon` ディレクティブを使用するか、あるいは [`toggleIconTemplate`]({environment:angularApiUrl}/classes/igxselectcomponent.html#toggleicontemplate) プロパティに `TemplateRef` を設定して、デフォルトの切り替えボタンをカスタマイズできます。
+### Angular Select のカスタム切り替えボタン
+`igxSelectToggleIcon` ディレクティブを使用するか、あるいは [`toggleIconTemplate`]({environment:angularApiUrl}/classes/igxselectcomponent.html#toggleIconTemplate) プロパティに `TemplateRef` を設定して、デフォルトの切り替えボタンをカスタマイズできます。
 
 ```html
 <igx-select #select>
@@ -230,9 +268,9 @@ public greengrocery: Array<{ label: string, items: Array<{ type: string, origin:
 
 ## キーボード ナビゲーション
 
-- 選択がフォーカスされているときに `Space`、`Enter`、または `ALT + 上矢印/下矢印`キーをクリックして、`igx-select` を開きます。
-- `ALT + 上矢印/下矢印`の組み合わせ、または `Enter`、`Space`、`Esc`、`Tab` キーのいずれかを使用して、`igx-select` を閉じます。
-- `上矢印/下矢印`キーを使用して項目間を移動します。
+- 選択がフォーカスされているときに `Space`、`Enter`、または `ALT + 上矢印/下矢印` キーをクリックして、`igx-select` を開きます。
+- `ALT + 上矢印/下矢印` の組み合わせ、または `Enter`、`Space`、`Esc`、`Tab` キーのいずれかを使用して、`igx-select` を閉じます。
+- `上矢印/下矢印` キーを使用して項目間を移動します。
 - `Home` または `End` キーを使用して、リストの最初と最後の項目へ移動します。
 - 特定の文字で始まるリスト項目を移動するには、対応するキーを押します。
 - 必要な項目の最初の数文字を入力してすばやく特定の項目に移動できます。
@@ -265,7 +303,7 @@ export class MyClass implements OnInit {
             closeAnimation: scaleOutBottom,
             horizontalDirection: HorizontalAlignment.Right,
             horizontalStartPoint: HorizontalAlignment.Left,
-            openAnimation: scaleInTop,            
+            openAnimation: scaleInTop,
             verticalDirection: VerticalAlignment.Bottom,
             verticalStartPoint: VerticalAlignment.Bottom
         };
@@ -284,8 +322,8 @@ export class MyClass implements OnInit {
 - [ngOnInit](https://angular.io/api/core/OnInit) フックの内側にすべて設定できます。コンポーネントの生成時にテンプレートに自動的に反映します。
 
 
-<code-view style="height: 260px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 260px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-4" >
 </code-view>
 
@@ -323,7 +361,7 @@ export class MyClass implements OnInit {
 
 Select のスタイルを設定するには、それに含まれるコンポーネントのスタイルを設定します。この場合、[input-group-theme]({environment:sassApiUrl}/index.html#function-input-group-theme) と [drop-down-theme]({environment:sassApiUrl}/index.html#function-drop-down-theme) の両方を使用する必要があります。
 
-これら 2 つのコンポーネントのスタイル設定については、[`Input Group`](input-group.md#styling) および [`Drop Down`](drop-down.md#styling) のスタイル設定セクションを参照してください。
+これら 2 つのコンポーネントのスタイル設定については、[`Input Group`](input-group.md#スタイル設定) および [`Drop Down`](drop-down.md#スタイル設定) のスタイル設定セクションを参照してください。
 
 > [!NOTE]
 > [**IgxSelectComponent**]({environment:angularApiUrl}/classes/igxselectcomponent.html) は、[IgxOverlay](overlay.md) を使用して、`igx-select-items` リスト コンテナーを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[`IgxOverlay スタイル ガイド`](overlay-styling.md)を確認してください。
@@ -331,14 +369,14 @@ Select のスタイルを設定するには、それに含まれるコンポー�
 <div class="divider--half"></div>
 
 ## API リファレンス
-* [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)  
-* [IgxSelectItemComponent]({environment:angularApiUrl}/classes/igxselectitemcomponent.html)  
-* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)  
-* [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)  
-* [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html)  
-* [ConnectedPositioningStrategy]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html)  
-* [GlobalPositionStrategy]({environment:angularApiUrl}/classes/globalpositionstrategy.html#constructor)  
-* [AbsoluteScrollStrategy]({environment:angularApiUrl}/classes/absolutescrollstrategy.html)  
+* [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)
+* [IgxSelectItemComponent]({environment:angularApiUrl}/classes/igxselectitemcomponent.html)
+* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
+* [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)
+* [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html)
+* [ConnectedPositioningStrategy]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html)
+* [GlobalPositionStrategy]({environment:angularApiUrl}/classes/globalpositionstrategy.html#constructor)
+* [AbsoluteScrollStrategy]({environment:angularApiUrl}/classes/absolutescrollstrategy.html)
 * [PositionSettings]({environment:angularApiUrl}/interfaces/positionsettings.html)
 
 ## テーマの依存関係

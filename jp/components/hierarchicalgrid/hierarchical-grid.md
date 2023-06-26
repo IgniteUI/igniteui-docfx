@@ -1,37 +1,38 @@
 ---
 title: Angular 階層データグリッド | マテリアル テーブル | Ignite UI for Angular | インフラジスティックス
 _description: Angular Material Table に基づいて Ignite UI for Angular データグリッドの使用方法を学び、さまざまな Angular イベントを含むタッチレスポンシブ Angular コンポーネントを作成します。
-_keywords: Angular データ グリッド, igniteui for angular, インフラジスティックス
+_keywords: angular hierarchical data grid, angular hierarchical table, angular hierarchical data grid コンポーネント, angular hierarchical table コンポーネント, angular UI コンポーネント, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 
-# 階層グリッド
+# Angular 階層グリッド コンポーネントの概要
 
-Ignite UI for Angular 階層データ グリッド は、データの表示や操作が簡単にできます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイル フィルタリング、ソート、ページング、テンプレート、列移動などの豊富な機能を提供します。Hierarchical Grid は、Flat Grid コンポーネントをベースとして構築されており、親グリッドの行の展開/縮小、詳細な情報が必要な場合に対応する子グリッドを表示する機能を拡張しました。マテリアル テーブル ベースの UI グリッドにより、階層データの表示がさらに簡単できれいになりました。
+Ignite UI for Angular Hierarchical Data Grid は、階層表形式データの表示と操作に使用されます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイルのフィルタリング、ソート、ページング、テンプレート化、列の移動、列のピン固定、Excel および CSV へのエクスポートなどの豊富な機能セットを提供します。Hierarchical Grid は、Flat Grid コンポーネントをベースとして構築されており、親グリッドの行の展開/縮小、詳細な情報が必要な場合に対応する子グリッドを表示する機能を拡張しました。
 
 ## Angular 階層グリッドの例
 この Angular グリッドの例では、ユーザーがデータの階層セットを視覚化し、セル テンプレートを使用して[スパークライン](../sparkline.md)などの他の視覚的コンポーネントを追加する方法を確認できます。
 
-<code-view style="height:520px" 
-           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+<code-view style="height:520px"
+           data-demos-base-url="{environment:lobDemosBaseUrl}"
            iframe-src="{environment:lobDemosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing" alt="Angular 階層グリッドの例">
 </code-view>
 
 <div class="divider--half"></div>
 
-## 依存関係
+## Ignite UI for Angular Hierarchical Data Grid を使用した作業の開始
 
 >[!NOTE]
 >**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**.
 
-階層データ グリッドを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+Ignite UI for Angular Hierarchical Data Grid コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
-Ignite UI for Angular については、[はじめに](../general/getting-started.md)トピックををご覧ください。
 
-階層グリッドが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に _IgxHierarchicalGridModule_ をインポートする必要があります。
+Ignite UI for Angular については、「[はじめに](../general/getting-started.md)」ピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxHierarchicalGridModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -49,16 +50,43 @@ import { IgxHierarchicalGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-以下の方法で TypeScript の Hierarchical Grid の参照を取得します。
+あるいは、`16.0.0` 以降、`IgxHierarchicalGridComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_HIERARCHICAL_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/hierarchical-grid/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
-@ViewChild('hgrid1', { read: IgxHierarchicalGridComponent })
-public hgrid1: IgxHierarchicalGridComponent;
+// home.component.ts
+
+import { IGX_HIERARCHICAL_GRID_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_HIERARCHICAL_GRID_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-hierarchical-grid #hierarchicalGrid [data]="singers" [autoGenerate]="true">
+        <igx-row-island [key]="'Albums'" [autoGenerate]="true">
+            <igx-row-island [key]="'Songs'" [autoGenerate]="true">
+            </igx-row-island>
+        </igx-row-island>
+        <igx-row-island [key]="'Tours'" [autoGenerate]="true">
+        </igx-row-island>
+    </igx-hierarchical-grid>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_HIERARCHICAL_GRID_DIRECTIVES]
+    /* or imports: [IgxHierarchicalGridComponent, IgxRowIslandComponent] */
+})
+export class HomeComponent {
+    public singers: Artist [];
+}
 ```
+
+Ignite UI for Angular Hierarchical Grid モジュールまたはディレクティブをインポートしたので、`igx-hierarchical-grid` コンポーネントの使用を開始できます。
+
+## Angular Hierarchical Data Grid の使用
 
 ## データ バインディング
 
-**igx-hierarchical-grid** は、**igx-grid** から派生し、ほとんどの機能を共有します。主要な違いは階層で複数レベルを定義できることです。**Igx-row-island** と呼ばれる **Igx-hierarchical-grid** の定義内の個別のタグで設定されます。**igx-row-island** コンポーネントは、特定レベルの各子グリッドの設定を定義します。レベルごとの複数行アイランドがサポートされます。
+`igx-hierarchical-grid` は、`igx-grid` から派生し、ほとんどの機能を共有します。主要な違いは階層で複数レベルを定義できることです。`igx-row-island` と呼ばれる `igx-hierarchical-grid` の定義内の個別のタグで設定されます。`igx-row-island` コンポーネントは、特定レベルの各子グリッドの設定を定義します。レベルごとの複数行アイランドがサポートされます。
 階層グリッドで 2 通りのデータ バインドがサポートされます。 
 
 ### 階層データの使用
@@ -95,7 +123,7 @@ export const singers = [{
     }]
 }];
 ```
-各 **igx-row-island** は、子データを保持するプロパティのキーを指定します。
+各 `igx-row-island` は、子データを保持するプロパティのキーを指定します。
 
 ```html
 <igx-hierarchical-grid #hierarchicalGrid [data]="singers" [autoGenerate]="true">
@@ -108,26 +136,27 @@ export const singers = [{
 </igx-hierarchical-grid>
 ```
 > [!NOTE]
-> `data` の代わりにユーザーは、データを自動的に設定するめの読み込みに **igx-hierarchical-grid** が必要な `key` のみ設定します。
+> `data` の代わりにユーザーは、データを自動的に設定するめの読み込みに `igx-hierarchical-grid` が必要な `key` のみ設定します。
 
 ### ロードオンデマンドの使用
 
-ほとんどのアプリケーションがはじめに最小限のデータを読み込むようでざいんされているため、結果的に読み込み時間が短くなります。このような場合、**igx-hierarchical-grid** を設定してユーザーが作成したサービスでデータのオンデマンド フィードを可能にします。以下の設定は、特別な `@Output` と新しい loading-in-progress テンプレートでロードオンデマンドのすべての機能が提供されます。
+ほとんどのアプリケーションがはじめに最小限のデータを読み込むようでざいんされているため、結果的に読み込み時間が短くなります。このような場合、`igx-hierarchical-grid` を設定してユーザーが作成したサービスでデータのオンデマンド フィードを可能にします。以下の設定は、特別な `@Output` と新しい loading-in-progress テンプレートでロードオンデマンドのすべての機能が提供されます。
 
 ```html
 <!-- hierarchicalGridSample.component.html -->
 
-    <igx-hierarchical-grid #hGrid [primaryKey]="'CustomerID'" [autoGenerate]="true" [height]="'600px'" [width]="'100%'">
-        <igx-row-island [key]="'Orders'" [primaryKey]="'OrderID'" [autoGenerate]="true"  (gridCreated)="gridCreated($event, 'CustomerID')">
-            <igx-row-island [key]="'Order_Details'" [primaryKey]="'ProductID'" [autoGenerate]="true" (gridCreated)="gridCreated($event, 'OrderID')">
-            </igx-row-island>
+<igx-hierarchical-grid #hGrid [primaryKey]="'CustomerID'" [autoGenerate]="true" [height]="'600px'" [width]="'100%'">
+    <igx-row-island [key]="'Orders'" [primaryKey]="'OrderID'" [autoGenerate]="true"  (gridCreated)="gridCreated($event, 'CustomerID')">
+        <igx-row-island [key]="'Order_Details'" [primaryKey]="'ProductID'" [autoGenerate]="true" (gridCreated)="gridCreated($event, 'OrderID')">
         </igx-row-island>
-    </igx-hierarchical-grid>
+    </igx-row-island>
+</igx-hierarchical-grid>
 ```
 
 ```typescript
 //  hierarchicalGridSample.component.ts
 
+@Component({...})
 export class HierarchicalGridLoDSampleComponent implements AfterViewInit {
     @ViewChild("hGrid")
     public hGrid: IgxHierarchicalGridComponent;
@@ -197,7 +226,7 @@ export class RemoteLoDService {
 
 ## 行展開インジケーターの非表示/表示
 
-行がその展開前に子を持っているかの確認は、[`hasChildrenKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#haschildrenkey) 入力プロパティで判断できます。このようにして、展開インジケータを表示するかどうかを示すデータ オブジェクトからブール値プロパティを提供できます。
+行がその展開前に子を持っているかの確認は、[`hasChildrenKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#hasChildrenKey) 入力プロパティで判断できます。このようにして、展開インジケータを表示するかどうかを示すデータ オブジェクトからブール値プロパティを提供できます。
 
 ```html
 <igx-hierarchical-grid #grid [data]="data" primaryKey="ID" hasChildrenKey="hasChildren">
@@ -205,14 +234,14 @@ export class RemoteLoDService {
 </igx-hierarchical-grid>
 ```
 
-[`hasChildrenKey`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#haschildrenkey) プロパティを設定する必要がないことに注意してください。指定しなかった場合は、各行に展開インジケーターが表示されます。
+[`hasChildrenKey`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#hasChildrenKey) プロパティを設定する必要がないことに注意してください。指定しなかった場合は、各行に展開インジケーターが表示されます。
 
 さらに、ヘッダーのすべて展開/縮小インジケーターを表示/非表示にする場合は、[showExpandAll]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#showExpandAll) プロパティを使用できます。
 この UI は、パフォーマンス上の理由からデフォルトで無効になっているため、データが大きいグリッドやロードオンデマンドのグリッドで有効にすることはお勧めしません。
 
 ## 機能
 
-グリッド機能を有効にして **igx-row-island** マークアップを介して設定し、作成された各グリッドに適用されます。ランタイムに行アイランド インスタンスでオプションを変更すると生成した各グリッドで変更されます。 
+グリッド機能を有効にして `igx-row-island` マークアップを介して設定し、作成された各グリッドに適用されます。ランタイムに行アイランド インスタンスでオプションを変更すると生成した各グリッドで変更されます。 
 
 ```html
 <igx-hierarchical-grid [data]="localData" [displayDensity]="density" [autoGenerate]="false"
@@ -247,7 +276,7 @@ export class RemoteLoDService {
 - 集計
 - 検索
 
-選択とナビゲーション機能は、**igx-hierarchical-grid** 全体でグローバルに作用します。 
+選択とナビゲーション機能は、`igx-hierarchical-grid` 全体でグローバルに作用します。 
 
 - 選択 
     選択は、選択したセルを異なる 2 つの子グリッドで同時に表示することを許可しません。
@@ -356,7 +385,7 @@ $custom-grid-schema: extend($_light-grid,(
 ```
 カスタム スキーマを適用するには、`light` グローバルまたは `dark` グローバルを拡張する必要があります。プロセス全体が実際にコンポーネントにカスタム スキーマを提供し、その後、それぞれのコンポーネントテーマに追加します。   
 ```scss
-$my-custom-schema: extend($light-schema, ( 
+$my-custom-schema: extend($light-schema, (
     igx-grid: $custom-grid-schema
 ));
 
@@ -367,7 +396,7 @@ $custom-theme: grid-theme(
 ```
 
 ### カスタム テーマの適用
-テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。 
+テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。
 
 ```scss
 @include grid($custom-theme);
@@ -395,6 +424,7 @@ $custom-theme: grid-theme(
 ### デモ
 
 <code-view style="height:505px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-styling" >
 </code-view>
@@ -424,7 +454,7 @@ platformBrowserDynamic()
 |グループ化|グループ化機能は、階層グリッドでサポートされません。|
 
 > [!NOTE]
-> `igxHierarchicalGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxForOf` で有効です。詳細については、[igxForOf 既知の問題](../for-of.md#既知の問題と制限) のセクションを参照してください。
+> `igxHierarchicalGrid` は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限が `igxForOf` で有効です。詳細については、[igxForOf 既知の問題](../for-of.md#既知の問題と制限)のセクションを参照してください。
 
 ## API リファレンス
 

@@ -1,7 +1,7 @@
 ---
 title: Angular 星評価コンポーネント – Ignite UI for Angular
 _description: Angular 星評価コンポーネントを使用すると、ユーザーはフィードバックをすばやく表示して提供できます。任意の Angular アプリおよび Angular フォームで評価コンポーネントを使用できます。今すぐお試しください。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, Native Angular コンポーネント Library, Angular Rating コンポーネント, Angular Rating コントロール
+_keywords: Angular Rating コンポーネント, Angular Rating コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
 _language: ja
 ---
 # Angular Star Rating (星評価) の概要
@@ -24,7 +24,7 @@ Ignite UI Angular Star Rating コンポーネントは、igniteui-webcomponents 
 <div class="divider--half"></div>
 
 
-## Ignite UI for Angular Star Rating コンポーネントの概要
+## Ignite UI for Angular Star Rating の概要
 
 Ignite UI Rating は標準の[ウェブ コンポーネント](https://developer.mozilla.org/ja/docs/Web/Web_Components)であるため、Angular アプリケーションで使用できます。
 
@@ -79,6 +79,27 @@ export class AppModule { }
 
 >[!NOTE]
 >`IgcFormsModule` をインポートして `ngModel` または `formControl` を使用する場合、Angular はカスタム `ControlValueAccessor` ディレクティブによって `igc-rating` タグを認識するため、`CUSTOM_ELEMENTS_SCHEMA` を含める必要はありません。
+
+あるいは、`16.0.0` 以降、`IgcFormControlDirective` をスタンドアロンの依存関係としてインポートできます。
+
+```typescript
+// home.component.ts
+
+import { FormsModule } from '@angular/forms';
+import { IgcFormControlDirective } from 'igniteui-angular';
+// import { IgcFormControlDirective } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<igc-rating name="modelRating" [(ngModel)]="product.Rating" max="10" label="Model Rating"></igc-rating>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgcFormControlDirective, FormsModule]
+})
+export class HomeComponent {
+    public product: Product;
+}
+```
 
 たとえば、値に ngModel を使用して評価を追加すると、問題なくモデルと双方向にバインドされます。
 

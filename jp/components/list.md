@@ -1,17 +1,16 @@
 ---
 title: Angular List ビュー | Angular List 例 | インフラジスティックス
 _description: Ignite UI for Angular List コンポーネントは、アイテムの行を表示し、1 つ以上のヘッダー アイテム、およびリスト アイテムの検索とフィルタリングをサポートします。無料でお試しください。
-_keywords: angular list, ignite ui for angular, angular list コンポーネント
+_keywords: angular list, ignite ui for angular, angular list コンポーネント, angular list view, angular list view コンポーネント, angular ui コンポーネント
 _language: ja
 ---
 
-# Angular List ビュー
+# Angular List View (リスト ビュー) コンポーネントの概要
 
-List 要素は、項目のグループを番号の付いた形式または黒丸の付いた形式のいずれかで提示する時に非常に役に立ちます。さまざまなレイアウト要素の配列を含むテキスト アイテムの単純なリスト、またはより複雑なリストを作成できます。
-Ignite UI for Angular List コンポーネントは項目の行を表示し、ヘッダー項目を 1 つ以上、さらにリスト項目の検索およびフィルタリングをサポートします。各リスト項目はすべての有効な HTML または Angular コンポーネントをサポートするテンプレートに設定できます。
+Ignite UI for Angular List コンポーネントは項目の行を表示し、ヘッダー項目を 1 つ以上、さらにリスト項目の検索およびフィルタリングをサポートします。各リスト項目はすべての有効な HTML または Angular コンポーネントをサポートするテンプレートに設定できます。リスト コンポーネントは、組み込みのパンニング機能、空および読み込み状態のテンプレートも提供し、[`IgxForOf`](for-of.md) ディレクティブを使用した大きなリストの仮想化をサポートします。
 
 ## Angular List の例
-次の例は、_name_ プロパティと _phone number_ プロパティを持つ連絡先が入力されたリストを表しています。[`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) コンポーネントは、[**IgxAvatar**](avatar.md) と [**IgxIcon**](icon.md) を使用して、ユーザー エクスペリエンスを向上させ、**連絡先をお気に入りに追加**にアバター写真とさまざまなアイコンを設定する機能を公開します。さらに、リスト ビューは、フィルタリング パイプを使用して実現されたソート機能を公開します。
+次の例は、_name_ プロパティと _phone number_ プロパティを持つ連絡先が入力されたリストを表しています。[`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) コンポーネントは、[`IgxAvatar`](avatar.md) と [`IgxIcon`](icon.md) を使用して、ユーザー エクスペリエンスを向上させ、**連絡先をお気に入りに追加**にアバター写真とさまざまなアイコンを設定する機能を公開します。さらに、リスト ビューは、フィルタリング パイプを使用して実現されたソート機能を公開します。
 
 
 <code-view style="height: 513px"
@@ -21,36 +20,66 @@ Ignite UI for Angular List コンポーネントは項目の行を表示し、�
 
 <div class="divider--half"></div>
 
-## Angular でリスト ビューを作成する方法
+## Ignite UI for Angular List を使用した作業の開始
 
->[!NOTE]
->**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**.
-
-Angular List コンポーネントは項目の垂直リストを表示します。項目のデフォルト スタイル設定はマテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/lists.html)の単一行リストの仕様に基づきます。
-
-Angular List コンポーネントを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+Ignite UI for Angular List View コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
-Ignite UI for Angular については、[はじめに](general/getting-started.md)トピックををご覧ください。
 
-次に app.module.ts ファイルに `IgxListModule` をインポートします。
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxListModule` をインポートします。
+
+>[!NOTE]
+>**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**
 
 ```typescript
 // app.module.ts
 
-...
+import { HammerModule } from '@angular/platform-browser';
 import { IgxListModule } from 'igniteui-angular';
 // import { IgxListModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
-    imports: [..., IgxListModule],
+    imports: [..., IgxListModule, HammerModule],
     ...
 })
 export class AppModule {}
 ```
+
+あるいは、`16.0.0` 以降、`IgxListComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_LIST_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/list/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+
+```typescript
+// home.component.ts
+
+import { HammerModule } from '@angular/platform-browser';
+import { IGX_LIST_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_LIST_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-list>
+        <igx-list-item isHeader="true">Header</igx-list-item>
+        <igx-list-item>Item 1</igx-list-item>
+        <igx-list-item>Item 2</igx-list-item>
+        <igx-list-item>Item 3</igx-list-item>
+    </igx-list>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_LIST_DIRECTIVES, HammerModule]
+    /* or imports: [IgxListComponent, IgxListItemComponent, HammerModule] */
+})
+export class HomeComponent {}
+```
+
+Ignite UI for Angular List モジュールまたはディレクティブをインポートしたので、`igx-list` コンポーネントの使用を開始できます。
+
+## Angular List の使用
 
 連絡先コンポーネントのテンプレートでリストを作成できます。
 項目がない場合は、空のリストのデフォルト テンプレートを使用できます。
@@ -110,7 +139,6 @@ export class AppModule {}
 }
 ```
 
-
 <code-view style="height: 300px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-6" >
@@ -147,20 +175,20 @@ export class AppModule {}
 // contacts.component.ts
 ...
 public contacts = [{
-    name: 'Terrance Orta',
-    phone: '770-504-2217'
+    name: "Terrance Orta",
+    phone: "770-504-2217"
 }, {
-    name: 'Richard Mahoney',
-    phone: '423-676-2869'
+    name: "Richard Mahoney",
+    phone: "423-676-2869"
 }, {
-    name: 'Donna Price',
-    phone: '859-496-2817'
+    name: "Donna Price",
+    phone: "859-496-2817"
 }, {
-    name: 'Lisa Landers',
-    phone: '901-747-3428'
+    name: "Lisa Landers",
+    phone: "901-747-3428"
 }, {
-    name: 'Dorothy H. Spencer',
-    phone: '573-394-9254'
+    name: "Dorothy H. Spencer",
+    phone: "573-394-9254"
 }];
 ```
 
@@ -207,11 +235,7 @@ import {
     IgxAvatarModule,
     IgxIconModule
 } from 'igniteui-angular';
-// import { 
-//    IgxListModule,
-//    IgxAvatarModule,
-//    IgxIconModule
-// } from '@infragistics/igniteui-angular'; for licensed package
+// import { IgxListModule, IgxAvatarModule, IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -263,7 +287,7 @@ public contacts = [{
     Contacts
   </igx-list-item>
   <igx-list-item #item *ngFor="let contact of contacts;">
-      <igx-avatar igxListThumbnail [src]="contact.photo" roundShape="true"></igx-avatar>
+      <igx-avatar igxListThumbnail [src]="contact.photo" shape="circle"></igx-avatar>
       <h4 igxListLineTitle>{{ contact.name }}</h4>
       <p igxListLineSubTitle class="phone">{{ contact.phone }}</p>
       <span igxListLine>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, laborum.</span>
@@ -273,7 +297,7 @@ public contacts = [{
 ```
 
 - `igxListThumbnail` は、リスト項目の開始に何らかのメディアを追加する必要がある場合に使用します。このディレクティブは、ターゲット要素 (この場合は igx-avatar) を、デフォルトの位置と間隔を提供するコンテナーにラップします。
-- `igxListAction` は、スイッチ、ラジオ ボタン、チェックボックスなど、アクションまたはメタデータを持つリスト項目に使用します。この場合、アクションは ` igx-icon` で表示されます。ディレクティブは、正しい位置と間隔のコンテナーでターゲット要素をラップします。
+- `igxListAction` は、スイッチ、ラジオ ボタン、チェックボックスなど、アクションまたはメタデータを持つリスト項目に使用します。この場合、アクションは `igx-icon` で表示されます。ディレクティブは、正しい位置と間隔のコンテナーでターゲット要素をラップします。
 - `igxListLine` は、`igxListThumbnail` と `igxListAction` の間にテキストが必要な場合に使用します。このディレクティブは、テキストの位置、間隔、配置が残りのディレクティブと外観がよくなるようにします。
 
 次に、連絡先オブジェクトの isFavorite プロパティを切り替えるために [**IgxIcon**](icon.md) コンポーネントでクリック イベントをリッスンします。
@@ -288,7 +312,7 @@ toggleFavorite(item: IgxListItem) {
 }
 ```
 
-[`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displaydensity) 入力を使用して、ユーザーがリストの表示密度を選択できるようにします。これには、`IgxButtonGroupModule` をインポートし、[**IgxButtonGroup**](button-group.md) を使用してすべての密度値を表示します。このようにして選択されるたびに、リストの [`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displaydensity) にバインドされている独自の **density** プロパティを更新します。
+[`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displayDensity) 入力を使用して、ユーザーがリストの表示密度を選択できるようにします。これには、`IgxButtonGroupModule` をインポートし、[**IgxButtonGroup**](button-group.md) を使用してすべての密度値を表示します。このようにして選択されるたびに、リストの [`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displayDensity) にバインドされている独自の **density** プロパティを更新します。
 
 ```typescript
 // app.module.ts
@@ -318,11 +342,11 @@ public density = 'comfortable';
 public displayDensities;
 
 public ngOnInit() {
-this.displayDensities = [
-    { label: 'comfortable', selected: this.density === 'comfortable', togglable: true },
-    { label: 'cosy', selected: this.density === 'cosy', togglable: true },
-    { label: 'compact', selected: this.density === 'compact', togglable: true }
-];
+    this.displayDensities = [
+        { label: 'comfortable', selected: this.density === 'comfortable', togglable: true },
+        { label: 'cosy', selected: this.density === 'cosy', togglable: true },
+        { label: 'compact', selected: this.density === 'compact', togglable: true }
+    ];
 }
 
 public selectDensity(event) {
@@ -345,7 +369,7 @@ public selectDensity(event) {
 連絡先や電話番号の Angular リストなどを作成しましたが、次に連絡先に電話を掛ける機能を追加します。
 [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) はリスト項目パンニングに最適です。
 以下の手順に沿って作成します。
-- [`allowLeftPanning`]({environment:angularApiUrl}/classes/igxlistcomponent.html#allowleftpanning) と [`allowRightPanning`]({environment:angularApiUrl}/classes/igxlistcomponent.html#allowrightpanning) またはそのいずれかを使用してパンニングを有効にします。
+- [`allowLeftPanning`]({environment:angularApiUrl}/classes/igxlistcomponent.html#allowLeftPanning) と [`allowRightPanning`]({environment:angularApiUrl}/classes/igxlistcomponent.html#allowRightPanning) またはそのいずれかを使用してパンニングを有効にします。
 - 右と左またはそのいずれかのテンプレートを定義します。
 - リスト項目のパンニング イベントを処理して必要なアクションを実行します。
 
@@ -373,7 +397,7 @@ public selectDensity(event) {
   </ng-template>
   <igx-list-item isHeader="true">Contacts</igx-list-item>
   <igx-list-item #item *ngFor="let contact of contacts">
-    <igx-avatar igxListThumbnail [src]="contact.photo" roundShape="true"></igx-avatar>
+    <igx-avatar igxListThumbnail [src]="contact.photo" shape="circle"></igx-avatar>
     <h4 igxListLineTitle>{{ contact.name }}</h4>
     <p igxListLineSubTitle class="phone">{{ contact.phone }}</p>
     <igx-icon igxListAction [color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(item)">star</igx-icon>
@@ -441,7 +465,7 @@ public leftPanPerformed(args) {
 ```
 
 > [!NOTE]
-> リスト項目のパンニング時にパンニング イベントが発生するために達する必要のあるしきい値があります。[`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) [`panEndTriggeringThreshold`]({environment:angularApiUrl}/classes/igxlistcomponent.html#panendtriggeringthreshold) プロパティを使用するしきい値を変更できます。このプロパティのデフォルトは 0.5 でリスト項目幅の 50% を意味します。
+> リスト項目のパンニング時にパンニング イベントが発生するために達する必要のあるしきい値があります。[`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) [`panEndTriggeringThreshold`]({environment:angularApiUrl}/classes/igxlistcomponent.html#panEndTriggeringThreshold) プロパティを使用するしきい値を変更できます。このプロパティのデフォルトは 0.5 でリスト項目幅の 50% を意味します。
 
 次にリスト項目をパンニングします。
 
@@ -528,7 +552,7 @@ export class ContactListComponent {
            iframe-src="{environment:demosBaseUrl}/lists/list-item-selection" >
 </code-view>
 
-`selected` プロパティを各データ メンバーに追加します。デフォルトは `false` です。リスト項目がクリックされたら、データ コレクション内のすべての `selected` プロパティをリセットしたあと、クリックされた項目に対応するデータの `selected` プロパティを `true` に設定します。`selected` プロパティに基づいて、選択されたときの背景を定義している css クラスをリスト項目に適用します。
+`selected` プロパティを各データ メンバーに追加します。デフォルトは `false` です。リスト項目がクリックされたら、データ コレクション内のすべての `selected` プロパティをリセットしたあと、クリックされた項目に対応するデータの `selected` プロパティを `true` に設定します。選択したロパティに基づいて、選択されたときの背景を定義している css クラスをリスト項目に適用します。
 
 ```html
 <igx-list>
@@ -536,7 +560,7 @@ export class ContactListComponent {
     <igx-list-item [ngClass]="contact.selected ? 'selected' : ''"
                     (click)="selectItem(contact)"
                     *ngFor="let contact of contacts | igxFilter: filterContacts;">
-        <igx-avatar igxListThumbnail [src]="contact.photo" roundShape="true"></igx-avatar>
+        <igx-avatar igxListThumbnail [src]="contact.photo" shape="circle"></igx-avatar>
         <span igxListLineTitle>{{ contact.name }}</span>
         <span igxListLineSubTitle>{{ contact.phone }}</span>
         <igx-icon igxListAction [style.color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(contact, $event)">star</igx-icon>
@@ -594,7 +618,7 @@ public selectItem(item) {
 <div class="divider--half"></div>
 
 > [!NOTE]
-> 注: コンポーネントの .scss ファイルにコンポーネントテーマを作成する場合、表示のカプセル化を渡すために `::ng-deep` を使用する必要があります。そうでない場合、新しいテーマが動作しません。詳細は、[コンポーネント テーマ](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/themes/sass/component-themes.html)トピックを参照してください。
+> 注: コンポーネントの .scss ファイルにコンポーネントテーマを作成する場合、表示のカプセル化を渡すために `::ng-deep` を使用する必要があります。そうでない場合、新しいテーマが動作しません。詳細は、[コンポーネント テーマ](../components/themes/sass/component-themes.md#表示のカプセル化) トピックを参照してください。
 
 リスト コンポーネントに変更できるパラメーターの完全なリストについては、[IgxListComponent スタイル]({environment:sassApiUrl}/index.html#function-list-theme)を参照してください。
 

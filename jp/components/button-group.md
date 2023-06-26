@@ -5,8 +5,8 @@ _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェッ
 _language: ja
 ---
 
-# Button Group
-<p class="highlight">Ignite UI for Angular Button Group コンポーネントは、ボタンを水平/垂直配置、単一/複数選択、オン/オフ切り替えが可能なスタイルのボタン グループに組織するために使用します。</p>
+# Angular Button Group (ボタン グループ) コンポーネントの概要
+<p class="highlight">Angular Button Group コンポーネントは、ボタンを水平/垂直配置、単一/複数選択、オン/オフ切り替えが可能なスタイルのボタン グループに組織するために使用します。</p>
 
 ## Angular Button Group の例
 
@@ -17,27 +17,71 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 使用方法
+## Ignite UI for Angular Button Group を使用した作業の開始
 
-### はじめに
+Ignite UI for Angular Button Group コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
-Button Group が `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxButtonGroupModule` をインポートする必要があります。
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxButtonGroupModule` をインポートします。
 
 ```typescript
 // app.module.ts
 
+...
 import { IgxButtonGroupModule } from 'igniteui-angular';
 // import { IgxButtonGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
-    imports: [
-        ...
-        IgxButtonGroupModule,
-        ...
-    ]
+    ...
+    imports: [..., IgxButtonGroupModule],
+    ...
 })
 export class AppModule {}
 ```
+
+あるいは、`16.0.0` 以降、`IgxButtonGroupComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_BUTTON_GROUP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/buttonGroup/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+
+```typescript
+// home.component.ts
+
+...
+import { IGX_BUTTON_GROUP_DIRECTIVES, IgxIconComponent } from 'igniteui-angular';
+// import { IGX_BUTTON_GROUP_DIRECTIVES, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-buttongroup>
+        <button igxButton>
+            <igx-icon>format_align_left</igx-icon>
+        </button>
+        <button igxButton>
+            <igx-icon>format_align_center</igx-icon>
+        </button>
+        <button igxButton>
+            <igx-icon>format_align_right</igx-icon>
+        </button>
+        <button igxButton [selected]="true">
+            <igx-icon>format_align_justify</igx-icon>
+        </button>
+    </igx-buttongroup>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_BUTTON_GROUP_DIRECTIVES, IgxIconComponent]
+    /* or imports: [IgxButtonGroupComponent, IgxButtonDirective, IgxIconComponent] */
+})
+export class HomeComponent {}
+```
+
+Ignite UI for Angular Button Group モジュールまたはディレクティブをインポートしたので、`igx-buttongroup` とそのボタンの基本構成を開始できます。
+
+## Angular Button Group コンポーネントの使用
 
 ### ボタン グループの追加
 
@@ -70,6 +114,7 @@ export class AppModule {}
 //sample.component.ts
 import { ButtonGroupAlignment } from 'igniteui-angular';
 // import { ButtonGroupAlignment } from '@infragistics/igniteui-angular'; for licensed package
+
 ...
 public alignment = ButtonGroupAlignment.vertical;
 ...
@@ -94,7 +139,7 @@ public alignment = ButtonGroupAlignment.vertical;
 <div class="divider--half"></div>
 
 ### 複数選択
-[`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#multiselection) プロパティを使用して、ボタン グループ内のボタンの複数選択を有効/無効化します。
+[`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#multiSelection) プロパティを使用して、ボタン グループ内のボタンの複数選択を有効/無効化します。
 
 ```html
 <!-- sample.component.html -->
@@ -119,7 +164,7 @@ public alignment = ButtonGroupAlignment.vertical;
 
 
 ### 表示密度
-[`displayDensity`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#displaydensity) プロパティを使用して、ボタン グループの表示密度を制御します。これにより、グループ内のボタンのスタイルが、最大、最小、または標準 (デフォルト値) に設定されます。
+[`displayDensity`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#displayDensity) プロパティを使用して、ボタン グループの表示密度を制御します。これにより、グループ内のボタンのスタイルが、最大、最小、または標準 (デフォルト値) に設定されます。
 
 > [!NOTE] 
 > ボタン グループ内のボタンの表示密度は、明示的に指定されている場合は変更されません。
@@ -287,6 +332,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 
 
 <code-view style="height: 200px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-style" >
 </code-view>
@@ -305,7 +351,6 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
 * [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
 
-
 ## その他のリソース
 <div class="divider--half"></div>
 
@@ -313,3 +358,4 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+

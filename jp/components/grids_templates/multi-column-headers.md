@@ -205,7 +205,7 @@ _language: ja
 ...
 ```
 
-複数の列グループに対して単一のテンプレートを再利用する場合は、以下のように列グループの [`headerTemplate`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#headertemplate) プロパティを設定できます。
+複数の列グループに対して単一のテンプレートを再利用する場合は、以下のように列グループの [`headerTemplate`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#headerTemplate) プロパティを設定できます。
 
 ```html
 <ng-template #columnGroupHeaderTemplate let-columnGroup>
@@ -269,7 +269,7 @@ _language: ja
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も単純なアプローチに従って、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme)  を拡張する新しいテーマを作成し、`$header-background`, `$header-text-color`, `$header-border-width`, `$header-border-style` and `$header-border-color` パラメーターを受け取ります。
+最も単純なアプローチに従って、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme)  を拡張する新しいテーマを作成し、`$header-background`、`$header-text-color`、`$header-border-width`、`$header-border-style` および `$header-border-color` パラメーターを受け取ります。
 
 ```scss
 $custom-theme: grid-theme(
@@ -368,6 +368,7 @@ $custom-theme: grid-theme(
 
 
 <code-view style="height:500px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/multi-column-headers-styling" >
 </code-view>
@@ -378,6 +379,7 @@ $custom-theme: grid-theme(
 
 
 <code-view style="height:500px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-headers-styling" >
 </code-view>
@@ -388,6 +390,7 @@ $custom-theme: grid-theme(
 
 
 <code-view style="height:500px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-styling" >
 </code-view>

@@ -1,11 +1,11 @@
 ---
 title: Angular Combobox コンポーネント | データ バインディング ComboBox | インフラジスティックス
 _description: Ignite UI for Angular ComboBox は、基本的な HTML 入力、選択、フィルタリング、およびカスタム ドロップダウン リストの機能を組み合わせた強力な入力を提供します。無料でお試しください。
-_keywords: angular combobox, ignite ui for angular, インフラジスティックス
+_keywords: angular combobox, angular combo コンポーネント, angular combobox コンポーネント, Angular UI コンポーネント, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 
-# Angular ComboBox (コンボボックス) の概要
+# Angular ComboBox (コンボボックス) コンポーネントの概要
 
 Angular ComboBox コンポーネントは、編集可能な機能を提供するドロップダウン リストを表し、ユーザーが事前定義されたリストからオプションを選択できるようにします。Ignite UI for Angular ComboBox コンポーネントは、フィルタリング機能、項目の選択、グループ化、ドロップダウン リストにカスタム値の追加などの機能をサポートします。HTML select タグの代わりに使用でき、データ バインディング (ローカルおよびリモート)、フィルタリング、グループ化、カスタム テンプレート、カスタム値など、すぐに使用できる機能がいくつかあります。
 
@@ -14,28 +14,35 @@ Angular ComboBox コンポーネントは、編集可能な機能を提供する
 
 この Angular ComboBox の例では、ユーザーが項目をフィルターし、提供されたデータを使用して選択を実行する方法を表します。さらに、ComboBox は、キーボード ナビゲーションとカスタム スタイル設定機能を公開します。
 
-<div class="divider--half"></div>
-
 <code-view style="height: 400px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo-main" alt="Angular ComboBox の例">
 </code-view>
 
+<div class="divider--half"></div>
 
 ## Angular ComboBox 機能
 
 コンボボックス コントロールは以下の機能を公開します。
-    - データ バインディング- ローカル データおよび[リモート データ](combo-remote.md)
-    - [値バインディング](combo-features.md#データ-バインディング)
-    - [フィルタリング](combo-features.md#フィルタリング)
-    - [グループ化](combo-features.md#グループ化)
-    - [カスタム値](combo-features.md#カスタム値)
-    - [テンプレート](combo-templates.md)
-    - [テンプレート駆動フォーム](input-group.md)および[リアクティブ フォーム](angular-reactive-form-validation.md)との統合
+ * データ バインディング- ローカル データおよび[リモート データ](combo-remote.md)
+ * [値バインディング](combo-features.md#データ-バインディング)
+ * [フィルタリング](combo-features.md#フィルタリング)
+ * [グループ化](combo-features.md#グループ化)
+ * [カスタム値](combo-features.md#カスタム値)
+ * [テンプレート](combo-templates.md)
+ * [テンプレート駆動フォーム](input-group.md)および[リアクティブ フォーム](angular-reactive-form-validation.md)との統合
 
-## 使用方法
+## Ignite UI for Angular ComboBox を使用した作業の開始
 
-ComboBox コンポーネントを初期化にするには、まず `IgxComboModule` を **app.module.ts**  ファイルにインポートします。
+Ignite UI for Angular ComboBox コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
+
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxComboModule` をインポートします。
 
 ```typescript
 import { IgxComboModule } from 'igniteui-angular';
@@ -51,9 +58,39 @@ import { IgxComboModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-次に、テンプレートで [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) をいくつかのデータにバインドします。
+あるいは、`16.0.0` 以降、`IgxComboComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_COMBO_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/combo/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
+// home.component.ts
+
+import { IGX_COMBO_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_COMBO_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<igx-combo></igx-combo>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_COMBO_DIRECTIVES]
+    /* or imports: [IgxComboComponent] */
+})
+export class HomeComponent {}
+```
+
+Ignite UI for Angular Combo モジュールまたはディレクティブをインポートしたので、`igx-combo` コンポーネントの使用を開始できます。
+
+## Angular ComboBox コンポーネントの使用
+
+初期設定後、[igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) をいくつかのデータにバインドします。
+
+```typescript
+@Component({
+    selector: 'app-combo-demo',
+    template: '<igx-combo [data]="cities"></igx-combo>',
+    styleUrls: ['combo-demo.component.scss'],
+    standalone: true,
+    imports: [IGX_COMBO_DIRECTIVES]
+})
 export class ComboDemo implements OnInit {
     public cities: { name: string, id: string }[] = [];
 
@@ -63,11 +100,7 @@ export class ComboDemo implements OnInit {
 }
 ```
 
-```html
-<igx-combo [data]="cities"></igx-combo>
-```
-
-これで、コンボボックスの city の配列にバインドされました。
+コンボボックスは都市の配列にバインドされましたが、項目のテキストにどのプロパティを使用するか、値にどのプロパティを使用するかをコンポーネントにまだ伝えていません。実際に変更してみましょう。
 
 ### データ値と表示プロパティ
 
@@ -76,14 +109,14 @@ export class ComboDemo implements OnInit {
  - `valueKey` - **オプション、オブジェクト配列に推奨。** - コンボボックスの選択のために保存されるデータ エントリのプロパティを指定します。`valueKey` が省略された場合、コンボボックス値はデータ エントリへの参照を使用します (選択は `igxCombo.data` からのエントリの配列になります)。
  - `displayKey` - **オブジェクト配列に必須。** - アイテムのテキストに使用するプロパティを指定します。`displayKey` に値が指定されていない場合、コンボボックスは指定された `valueKey` (存在する場合) を使用します。
 
-この例では、コンボボックスに各都市の`名前`を表示し、コンボボックス値には各都市の `id` を格納します。格納するには、これらのプロパティをコンボボックスの`displayKey` と `valueKey` にそれぞれ提供します。
+この例では、コンボボックスに各都市の `name` を表示し、コンボボックス値には各都市の `id` を格納します。格納するには、これらのプロパティをコンボボックスの`displayKey` と `valueKey` にそれぞれ提供します。
 
 ```html
 <igx-combo [data]="cities" displayKey="name" valueKey="id"></igx-combo>
 ```
 
 > [!Note]
-> データソースが単純なタイプ (`string[]`、`number[]` など) で構成されている場合、`valueKey` と `displayKey` を**指定しないでください**。
+> データ ソースがプリミティブの配列 (`string[]`、`number[]` など) の場合、`valueKey` と `displayKey` を**指定しないでください**。プリミティブ値は値とテキストの両方に使用されます。
 
 ### 双方向バインディング
 
@@ -114,9 +147,9 @@ export class MyCombo {
 
 ```typescript
 export class MyCombo {
-    public cities: { name: string, id: string }[] = [
+    public cities: { name: string, id: string } [] = [
                    { name: 'Sofia', id: 'BG01' }, { name: 'London', id: 'UK01' }, ...];
-    public selectedCities: { name: string, id: string }[] = [this.cities[0], this.cities[1]];
+    public selectedCities: { name: string, id: string } [] = [this.cities[0], this.cities[1]];
 }
 ```
 
@@ -308,6 +341,7 @@ $custom-checkbox-theme: checkbox-theme(
 ### デモ
 
 <code-view style="height:410px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/combo-styling" >
 </code-view>

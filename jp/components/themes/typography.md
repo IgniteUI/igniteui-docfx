@@ -8,28 +8,31 @@ _language: ja
 
 # タイポグラフィ
 
-<p class="highlight">Ignite UI for Angular のタイポグラフィは、[マテリアル タイプ システム (英語)](https://material.io/design/typography/the-type-system.html#)をモデルにしています。邪魔にならないオプションで、CSS のみを使用してタイプ スタイルを変更できます。</p>
-<div class="divider"></div>
+<p class="highlight">
+
+Ignite UI for Angular のタイポグラフィは、[マテリアル タイプ システム (英語)](https://material.io/design/typography/the-type-system.html#)をモデルにしています。邪魔にならないオプションで、CSS のみを使用してタイプ スタイルを変更できます。
+</p>
 
 ## 概要
 タイプ システムは、**タイプ スケール**でほとんどのコンポーネントで使用されている **13 の異なるカテゴリ タイプ スタイル**で構成されます。エンドユーザーはすべてのスケール カテゴリの完全な再利用、調整ができます。
 
 以下は、Ignite UI for Angular のマテリアル テーマで定義される 13 カテゴリ スタイルすべてのリストです。
-| **スケール カテゴリ** | **フォント ファミリ** | **フォントの太さ** | **フォント サイズ** | **テキストの変換** | **文字間隔** | **線の高さ** | **CSS クラス**                |  **CSS 変数**                |
-|--------------------|-----------------|-----------------|---------------|--------------------|--------------------|-----------------|------------------------------| ------------------------------|
-| **h1**             | Titillium Web   | 300             | 6 rem         | none               | -.09375 rem        | 7 rem           | `ig-typography__h1`         |   `--ig-h1-*`         |
-| **h2**             | Titillium Web   | 300             | 3.75 rem      | none               | -.0312 rem         | 4.4375 rem      | `ig-typography__h2`         |   `--ig-h2-*`         |
-| **h3**             | Titillium Web   | 400             | 3 rem         | none               | 0                  | 3.5625 rem      | `ig-typography__h3`         |   `--ig-h3-*`         |
-| **h4**             | Titillium Web   | 400             | 2.125 rem     | none               | .015625 rem        | 2.5 rem         | `ig-typography__h4`         |   `--ig-h4-*`         |
-| **h5**             | Titillium Web   | 400             | 1.5 rem       | none               | 0                  | 1.75 rem        | `ig-typography__h4`         |   `--ig-h5-*`         |
-| **h6**             | Titillium Web   | 600             | 1.25 rem      | none               | .009375 rem        | 1.5 rem         | `ig-typography__h4`         |   `--ig-h6-*`         |
-| **subtitle-1**     | Titillium Web   | 400             | 1 rem         | none               | .009375 rem        | 1.5 rem         | `ig-typography__subtitle-1` |   `--ig-subtitle-1-*` |
-| **subtitle-2**     | Titillium Web   | 600             | .875 rem      | none               | .00625 rem         | 1.5 rem         | `ig-typography__subtitle-2` |   `--ig-subtitle-2-*` |
-| **body-1**         | Titillium Web   | 400             | 1 rem         | none               | .03125 rem         | 1.75 rem        | `ig-typography__body-1`     |   `--ig-body-1-*`     |
-| **body-2**         | Titillium Web   | 400             | .875 rem      | none               | .015625 rem        | 1.25 rem        | `ig-typography__body-2`     |   `--ig-body-2-*`     |
-| **button**         | Titillium Web   | 600             | .875 rem      | uppercase          | .046875            | 1 rem           | `ig-typography__button`     |   `--ig-button-*`     |
-| **caption**        | Titillium Web   | 400             | .75 rem       | none               | .025 rem           | 1 rem           | `ig-typography__caption`    |   `--ig-caption-*`    |
-| **overline**       | Titillium Web   | 400             | .625 rem      | uppercase          | .09375 rem         | 1 rem           | `ig-typography__overline`   |   `--ig-overline-*`   |
+
+| **スケール カテゴリ** | **フォント ファミリ** | **フォントの太さ** | **フォント サイズ** | **テキストの変換** | **文字間隔** | **線の高さ** | **CSS クラス**                |  **CSS 変数**   |
+| ------------------ | --------------- | --------------- | ------------- | ------------------ | ------------------ | --------------- | --------------------------- | ------------------- |
+| **h1**             | Titillium Web   | 300             | 6 rem         | none               | -.09375 rem        | 7 rem           | `ig-typography__h1`         | `--ig-h1-*`         |
+| **h2**             | Titillium Web   | 300             | 3.75 rem      | none               | -.0312 rem         | 4.4375 rem      | `ig-typography__h2`         | `--ig-h2-*`         |
+| **h3**             | Titillium Web   | 400             | 3 rem         | none               | 0                  | 3.5625 rem      | `ig-typography__h3`         | `--ig-h3-*`         |
+| **h4**             | Titillium Web   | 400             | 2.125 rem     | none               | .015625 rem        | 2.5 rem         | `ig-typography__h4`         | `--ig-h4-*`         |
+| **h5**             | Titillium Web   | 400             | 1.5 rem       | none               | 0                  | 1.75 rem        | `ig-typography__h4`         | `--ig-h5-*`         |
+| **h6**             | Titillium Web   | 600             | 1.25 rem      | none               | .009375 rem        | 1.5 rem         | `ig-typography__h4`         | `--ig-h6-*`         |
+| **subtitle-1**     | Titillium Web   | 400             | 1 rem         | none               | .009375 rem        | 1.5 rem         | `ig-typography__subtitle-1` | `--ig-subtitle-1-*` |
+| **subtitle-2**     | Titillium Web   | 600             | .875 rem      | none               | .00625 rem         | 1.5 rem         | `ig-typography__subtitle-2` | `--ig-subtitle-2-*` |
+| **body-1**         | Titillium Web   | 400             | 1 rem         | none               | .03125 rem         | 1.75 rem        | `ig-typography__body-1`     | `--ig-body-1-*`     |
+| **body-2**         | Titillium Web   | 400             | .875 rem      | none               | .015625 rem        | 1.25 rem        | `ig-typography__body-2`     | `--ig-body-2-*`     |
+| **button**         | Titillium Web   | 600             | .875 rem      | uppercase          | .046875            | 1 rem           | `ig-typography__button`     | `--ig-button-*`     |
+| **caption**        | Titillium Web   | 400             | .75 rem       | none               | .025 rem           | 1 rem           | `ig-typography__caption`    | `--ig-caption-*`    |
+| **overline**       | Titillium Web   | 400             | .625 rem      | uppercase          | .09375 rem         | 1 rem           | `ig-typography__overline`   | `--ig-overline-*`   |
 
 <div class="divider"></div>
 

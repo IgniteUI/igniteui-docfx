@@ -1,10 +1,10 @@
 ---
 title: Angular Mask Directive Component | Ignite UI for Angular
 _description: With the Mask Directive in Ignite UI for Angular, the developer can control user input and format the visible value based on configurable mask rules, providing different input options and ease in use and configuration.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular mask directive, Mask, Directive, Mask Editor, Angular Mask Editor
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Angular mask directive, Mask, Directive, Mask Editor, Angular Mask Editor
 ---
 
-# Mask
+# Angular Mask Directive Overview
 
 By applying the [`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) directive on a **text input field**, the developer can control user input and format the visible value, based on configurable mask rules. It provides different input options and ease in use and configuration.
 
@@ -17,10 +17,20 @@ By applying the [`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective
 
 <div class="divider--half"></div>
 
-## Usage
-[`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) directive is used on an input of type **text**.
+## Getting Started with Ignite UI for Angular Mask
 
-The first step is to import the `IgxMaskModule` and `IgxInputGroupModule` in our **app.module.ts** file.
+To get started with the Ignite UI for Angular Mask directive, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxMaskModule` and `IgxInputGroupModule` in your **app.module.ts** file. 
+
+>[!NOTE]
+>[`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) directive is used on an input of type **text**.
 
 ```typescript
 // app.module.ts
@@ -31,13 +41,41 @@ import { IgxMaskModule, IgxInputGroupModule } from 'igniteui-angular';
 
 @NgModule({
     ...
-    imports: [..., IgxInputGroupModule, IgxMaskModule]
+    imports: [..., IgxMaskModule, IgxInputGroupModule],
     ...
 })
 export class AppModule {}
 ```
 
-<div class="divider--half"></div>
+Alternatively, as of `16.0.0` you can import the `IgxMaskDirective` as a standalone dependency.
+
+```typescript
+// home.component.ts
+
+import { IgxMaskDirective, IGX_INPUT_GROUP_DIRECTIVES } from 'igniteui-angular';
+// import { IgxMaskDirective, IGX_INPUT_GROUP_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-input-group>
+        <igx-prefix>
+            <igx-icon>phone</igx-icon>
+        </igx-prefix>
+        <label igxLabel>Phone</label>
+        <input igxInput type="text" [igxMask]="'(####) 00-00-00 Ext. 9999'"/>
+    </igx-input-group>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxMaskDirective, IGX_INPUT_GROUP_DIRECTIVES]
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Mask module or directive imported, you can start using the `igxMask` directive.
+
+## Using the Angular Mask
 
 ### Supported Built-in Mask Rules
 <div class="divider--half"></div>
@@ -74,7 +112,7 @@ If configured properly, you should see the demo sample in your browser.
 > Note: The `IgxMaskDirective` supports IME input and updates the mask when composition ends.
 
 ### Bind to Formatted/Raw Value
-Use the [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeliterals) input to configure which input value (formatted or raw) to bind in your form when a specific mask is applied. By default, [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeliterals) is set to *false* and the raw value is used.
+Use the [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeLiterals) input to configure which input value (formatted or raw) to bind in your form when a specific mask is applied. By default, [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeLiterals) is set to *false* and the raw value is used.
 
 ```html
 <!--sample.component.html-->
@@ -193,7 +231,7 @@ You can see how this works in the previous sample.
 >In order for the component to work properly, it is crucial to set `igxTextSelection` after the `igxMask` directive. The reason for this is both directives operate on the input `focus` event so text selection should happen after the mask is set.
 
 ### Apply additional formatting on focus and blur
-In addition to the default mask behavior, the user can implement his own custom pipes and take advantage of the [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedvaluepipe) and [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayvaluepipe) input properties, to transform the value to a desired output when the input gets or loses focus. This will not affect the underlying model value. Let's demonstrate how this can be achieved!
+In addition to the default mask behavior, the user can implement his own custom pipes and take advantage of the [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedValuePipe) and [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayValuePipe) input properties, to transform the value to a desired output when the input gets or loses focus. This will not affect the underlying model value. Let's demonstrate how this can be achieved!
 
 Implement two pipes that will append/remove a '%' sign at the end of the displayed value:
 ```typescript
@@ -212,7 +250,7 @@ export class InputFormatPipe implements PipeTransform {
 }
 ```
 
-Pass an instance of each pipe to the [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedvaluepipe) and [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayvaluepipe) input properties as follows:
+Pass an instance of each pipe to the [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedValuePipe) and [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayValuePipe) input properties as follows:
 
 ```typescript
 public value = 100;

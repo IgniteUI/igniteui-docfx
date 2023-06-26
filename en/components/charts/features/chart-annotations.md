@@ -14,23 +14,12 @@ The Angular chart's hover interactions and annotations are implemented through h
 
 The following example demonstrates the annotation layers that are available on the Angular chart. Click on the checkboxes to turn each layer on and off.
 
-<code-view style="height: 600px"
+<code-view style="height: 600px" alt="Angular Annotations Example"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-with-annotations"
-           alt="Angular Annotations Example"
-           github-src="charts/category-chart/line-chart-with-annotations">
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/line-chart-with-annotations"
+                                                 github-src="charts/category-chart/line-chart-with-annotations">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/category-chart/line-chart-with-annotations?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/category-chart/line-chart-with-annotations?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -42,9 +31,9 @@ The [`IgxCrosshairLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-
 
 Crosshair types include:
 
--   Horizontal
--   Vertical
--   Both
+*   Horizontal
+*   Vertical
+*   Both
 
 The chart's crosshairs can also be configured to snap to data points by setting the [`crosshairsSnapToData`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#crosshairssnaptodata) property to true, otherwise the crosshairs will be interpolated between data points. Annotations can also be enabled to display the crosshair's value along the axis.
 
@@ -54,23 +43,12 @@ By default, the color of the crosshair lines is a lighter color than the series 
 
 The following example shows how to configure the crosshair layer but targeting a single series, setting the type to vertical and styling the brush color.
 
-<code-view style="height: 500px"
+<code-view style="height: 500px" alt="Angular Crosshair Layer Styling"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-crosshair-layer-styling"
-           alt="Angular Crosshair Layer Styling"
-           github-src="charts/data-chart/crosshair-layer-styling">
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/crosshair-layer-styling"
+                                                 github-src="charts/data-chart/crosshair-layer-styling">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/crosshair-layer-styling?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/crosshair-layer-styling?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -82,29 +60,18 @@ You can configure this annotation to target a specific series if you want to hav
 
 You can also customize this annotation by setting the following properties:
 
--   [`axisAnnotationBackground`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationbackground): This property is used to choose the brush for the annotation's background color. The default is to use the series brush.
--   [`axisAnnotationTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationtextcolor): This property is used to choose the brush for the annotation's text color.
--   [`axisAnnotationOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationoutline): This property is used to choose the brush for the annotation's outline color.
+*   [`axisAnnotationBackground`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationbackground): This property is used to choose the brush for the annotation's background color. The default is to use the series brush.
+*   [`axisAnnotationTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationtextcolor): This property is used to choose the brush for the annotation's text color.
+*   [`axisAnnotationOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxfinalvaluelayercomponent.html#axisannotationoutline): This property is used to choose the brush for the annotation's outline color.
 
 The following example demonstrates how to style the final value layer annotation by setting the properties listed above.
 
-<code-view style="height: 500px"
+<code-view style="height: 500px" alt="Angular Final Value Layer Styling"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-final-value-layer-styling"
-           alt="Angular Final Value Layer Styling"
-           github-src="charts/data-chart/final-value-layer-styling">
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/final-value-layer-styling"
+                                                 github-src="charts/data-chart/final-value-layer-styling">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/final-value-layer-styling?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/final-value-layer-styling?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -125,33 +92,22 @@ You can configure the callouts to target a specific series if you want to have m
 
 You can also customize this annotation by setting the following properties:
 
--   [`calloutLeaderBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcalloutlayercomponent.html#calloutleaderbrush): This property is used to choose the brush for the leader lines for the callouts for the layer.
--   [`calloutOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcalloutlayercomponent.html#calloutoutline): This property is used to choose the brush for the annotation's outline color.
--   [`calloutBackground`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcalloutlayercomponent.html#calloutbackground): This property is used to choose the brush for the annotation's background color. The default is to use the series brush.
--   [`calloutTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcalloutlayercomponent.html#callouttextcolor): This property is used to choose the brush for the annotation's text color.
--   [`calloutStrokeThickness`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcalloutlayercomponent.html#calloutstrokethickness): This property is used to choose the thickness for the callout backing.
--   [`calloutCornerRadius`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcalloutlayercomponent.html#calloutcornerradius): This property is used to curve the corners of the callouts.
--   [`allowedPositions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcalloutlayercomponent.html#allowedpositions): This property is used to choose which positions that the callout layer is allowed to use. eg. top, bottom
+*   [`calloutLeaderBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcalloutlayercomponent.html#calloutleaderbrush): This property is used to choose the brush for the leader lines for the callouts for the layer.
+*   [`calloutOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcalloutlayercomponent.html#calloutoutline): This property is used to choose the brush for the annotation's outline color.
+*   [`calloutBackground`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcalloutlayercomponent.html#calloutbackground): This property is used to choose the brush for the annotation's background color. The default is to use the series brush.
+*   [`calloutTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcalloutlayercomponent.html#callouttextcolor): This property is used to choose the brush for the annotation's text color.
+*   [`calloutStrokeThickness`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcalloutlayercomponent.html#calloutstrokethickness): This property is used to choose the thickness for the callout backing.
+*   [`calloutCornerRadius`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcalloutlayercomponent.html#calloutcornerradius): This property is used to curve the corners of the callouts.
+*   [`allowedPositions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcalloutlayercomponent.html#allowedpositions): This property is used to choose which positions that the callout layer is allowed to use. eg. top, bottom
 
 The following example demonstrates how to style the callout layer annotations by setting the properties listed above:
 
-<code-view style="height: 500px"
+<code-view style="height: 500px" alt="Angular Callout Layer Styling"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-callout-layer-styling"
-           alt="Angular Callout Layer Styling"
-           github-src="charts/data-chart/callout-layer-styling">
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/callout-layer-styling"
+                                                 github-src="charts/data-chart/callout-layer-styling">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/callout-layer-styling?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/callout-layer-styling?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -166,9 +122,9 @@ The following example demonstrates how to style the callout layer annotations by
 </igx-category-chart>
 ```
 
-## API Members
+## API References
 
 The following is a list of API members mentioned in the above sections:
 
--   [`crosshairsSnapToData`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#crosshairssnaptodata)
--   [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html)
+*   [`crosshairsSnapToData`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#crosshairssnaptodata)
+*   [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html)

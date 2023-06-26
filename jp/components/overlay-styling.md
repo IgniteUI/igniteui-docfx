@@ -7,6 +7,7 @@ _language: ja
 
 # オーバーレイ スタイリング
 <p class="highlight">
+
 [`IgxOverlayService`](overlay.md) は、ページ コンテンツの上にコンテンツを表示するために使用されます。Ignite UI for Angular コンポーネントの多くは、[ドロップダウン](drop-down.md)、[コンボ](combo.md)、[日付ピッカー](date-picker.md)などのオーバーレイを使用しているため、オーバーレイがコンテンツを表示する方法を理解することが重要です。
 他の要素上にコンテンツを表示するために、サービスはコンテンツを特別なアウトレット コンテナーに移します (デフォルトではドキュメントの本文の最後にアタッチされています)。この動作は、[特定のコンテナーにスコープされた](#スコープ-コンポーネント-スタイル) スタイルに影響を与える可能性があります。
 </p>
@@ -14,7 +15,7 @@ _language: ja
 
 ## オーバーレイ コンポーネントのスタイル設定
 
-ほとんどの場合、[グローバル](themes/sass/global-themes.md) テーマのスタイルはオーバーレイ アウトレットの影響を受けません。例として、グローバル [`css-vars`]({environment:sassApiUrl}/index.html#mixin-css-vars) mixin で[スタイル設定された](drop-down.md#スタイル設定)ドロップダウンを見てみましょう。
+ほとんどの場合、[グローバル](themes/sass/global-themes.md) テーマのスタイルはオーバーレイ アウトレットの影響を受けません。例として、グローバル [`css-vars`]({environment:sassApiUrl}/index.html#mixin-css-vars) ミックスインで[スタイル設定された](drop-down.md#スタイル設定)ドロップダウンを見てみましょう。
 
 ```html
 <!-- overlay-styling.component.html -->
@@ -153,7 +154,7 @@ $my-overlay-theme: overlay-theme(
 ```
 
 >[!NOTE]
->コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用していて、`$legacy-support` が `true` に設定されている場合、オーバーレイのテーマ関数を使用して `::ng-deep` によってこのカプセル化を`ペネトレーションします`。
+>コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用していて、`$legacy-support` が `true` に設定されている場合、オーバーレイのテーマ関数を使用して `::ng-deep` によってこのカプセル化を`解除します`。
 
 ## API リファレンス
 * [IgniteUI for Angular - テーマ ライブラリ](themes/index.md)

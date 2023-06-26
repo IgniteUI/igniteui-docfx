@@ -1,13 +1,13 @@
 ---
 title: Chip コンポーネント - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular Chip コンポーネントは入力、属性、または操作を表す小さい要素を提供します。
-_keywords: ジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Chip, Chip コンポーネント, ChipArea, ChipArea コンポーネント
+_keywords: Angular Chip、Angular Chip コンポーネント, Angular Chip Area, Angular Chip Area, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular UI コンポーネント
 _language: ja
 ---
 
-# Chip
+# Angular Chip (チップ) コンポーネントの概要
 
-[Chip コンポーネント]({environment:angularApiUrl}/classes/igxchipcomponent.html) は、楕円形のコンテナーに情報を表示する視覚的要素です。コンポーネントにはテンプレート化、削除、選択などのさまざまなプロパティがあります。複数のチップの順序を変更し、チップ領域をコンテナーとして視覚的に接続できます。
+<p class="highlight">[Angular Chip コンポーネント]({environment:angularApiUrl}/classes/igxchipcomponent.html)は、楕円形のコンテナーに情報を表示する視覚的要素です。コンポーネントにはテンプレート化、削除、選択などのさまざまなプロパティがあります。複数のチップの順序を変更し、チップ領域をコンテナーとして視覚的に接続できます。</p>
 
 ## Angular Chip の例
 
@@ -17,14 +17,22 @@ _language: ja
            iframe-src="{environment:demosBaseUrl}/data-display/chip-simple" alt="Angular Chip の例">
 </code-view>
 
+<div class="divider--half"></div>
 
-## 使用方法
+## Ignite UI for Angular Chip を使用した作業の開始
+Ignite UI for Angular Chip コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
-はじめに、**app.module.ts** ファイルに **IgxChipsModule** をインポートします。
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに **IgxChipsModule** をインポートします。
+
 ```typescript
 // app.module.ts
 
-...
 import { IgxChipsModule } from 'igniteui-angular';
 // import { IgxChipsModule } from '@infragistics/igniteui-angular'; for licensed package
 
@@ -35,6 +43,40 @@ import { IgxChipsModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
+
+あるいは、`16.0.0` 以降、`IgxChipComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_CHIPS_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/chips/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+
+```typescript
+// home.component.ts
+
+import { IGX_CHIPS_DIRECTIVES } from 'igniteui-angular';
+import { NgFor } from '@angular/common';
+// import { IGX_CHIPS_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-chip *ngFor="let chip of chipList" [id]="chip.id">
+        {{chip.text}}
+    </igx-chip>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_CHIPS_DIRECTIVES, NgFor]
+})
+export class HomeComponent {
+    public chipList = [
+        { text: 'Country', id: '1', icon: 'place' },
+        { text: 'City', id: '2', icon: 'location_city' },
+        { text: 'Address', id: '3', icon: 'home' },
+        { text: 'Street', id: '4', icon: 'streetview' }
+    ];
+}
+```
+
+Ignite UI for Angular Chips モジュールまたはディレクティブをインポートしたので、`igx-chip` コンポーネントの使用を開始できます。
+
+## Angular Chip コンポーネントの使用
 
 [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) には、[`id`]({environment:angularApiUrl}/classes/igxchipcomponent.html#id) 入力があるため、他のチップと簡単に識別できます。[`id`]({environment:angularApiUrl}/classes/igxchipcomponent.html#id) がない場合は自動的に生成します。
 
@@ -48,7 +90,7 @@ export class AppModule {}
 
 <img class="responsive-img"  src="../images/chip/selecting_default.gif" />
 
-選択は、[`selectable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectable) 入力を `true` に設定して有効にできます。チップを選択すると、[`selectedChanging`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectedchanging) イベントが発生します。新しい [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) 値を提供することにより、新しいステートとこの選択の変更をトリガーした [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) の元のイベントを取得できます。[`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) プロパティをプログラムで設定して行う場合、[`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) 引数に値 `null` になります。
+選択は、[`selectable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectable) 入力を `true` に設定して有効にできます。チップを選択すると、[`selectedChanging`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectedChanging) イベントが発生します。新しい [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) 値を提供することにより、新しいステートとこの選択の変更をトリガーした [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalEvent) の元のイベントを取得できます。[`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) プロパティをプログラムで設定して行う場合、[`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalEvent) 引数に値 `null` になります。
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [selectable]="true">
@@ -176,7 +218,7 @@ public chipRemoved(event: IBaseChipEventArgs) {
 </igx-chip>
 ```
 
-チップのサイズは、[`displayDensity`]({environment:angularApiUrl}/classes/igxchipcomponent.html#displaydensity) 入力を使用してカスタマイズできます。デフォルトの設定は `comfortable` です。チップ内のすべてが相対位置を保持する際に `cosy` または `compact` にも設定できます。
+チップのサイズは、[`displayDensity`]({environment:angularApiUrl}/classes/igxchipcomponent.html#displayDensity) 入力を使用してカスタマイズできます。デフォルトの設定は `comfortable` です。チップ内のすべてが相対位置を保持する際に `cosy` または `compact` にも設定できます。
 
 <img class="responsive-img"  src="../images/chip/density.jpg" />
 
@@ -193,9 +235,10 @@ public chipRemoved(event: IBaseChipEventArgs) {
 </igx-chip>
 ```
 
-`select icon` をカスタマイズするには、[`selectIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selecticon) 入力を使用します。`TemplateRef` 型の値を受け取り、同じ機能を保持する際にデフォルト アイコンをオーバーライドします。
+`select icon` をカスタマイズするには、[`selectIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectIcon) 入力を使用します。`TemplateRef` 型の値を受け取り、同じ機能を保持する際にデフォルト アイコンをオーバーライドします。
 
 <img class="responsive-img"  src="../images/chip/selecting_custom.gif" />
+
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [selectable]="true" [selectIcon]="mySelectIcon">
@@ -208,9 +251,10 @@ public chipRemoved(event: IBaseChipEventArgs) {
 </ng-template>
 ```
 
-`remove icon` をカスタマイズするには、[`removeIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removeicon) 入力を使用します。`TemplateRef` 型の値を取得してデフォルトの削除アイコンの代わりに描画します。
+`remove icon` をカスタマイズするには、[`removeIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removeIcon) 入力を使用します。`TemplateRef` 型の値を取得してデフォルトの削除アイコンの代わりに描画します。
 
 <img class="responsive-img"  src="../images/chip/remove_icons.jpg" />
+
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [removable]="true" [removeIcon]="myRemoveIcon">
@@ -300,7 +344,7 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
         class="chip-avatar-resized"
         igxPrefix
         [src]="chip.photo"
-        roundShape="true"
+        shape="circle"
         ></igx-avatar>
         {{chip.name}}
     </igx-chip>
@@ -329,6 +373,7 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
 ```ts
 import { IBaseChipEventArgs, IChipsAreaReorderEventArgs } from 'igniteui-angular';
 // import { IBaseChipEventArgs, IChipsAreaReorderEventArgs } from '@infragistics/igniteui-angular'; for licensed package
+
 ...
 public chipList = [
     {
@@ -448,6 +493,7 @@ $custom-theme: chip-theme(
 ### デモ
 
 <code-view style="height:100px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/chip-styling" >
 </code-view>

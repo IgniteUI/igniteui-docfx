@@ -1,14 +1,12 @@
 ---
 title: Angular Banner Component – Ignite UI for Angular | Infragistics
 _description: Easily integrate a short, non-intrusive message (along with optional actions) using Ignite UI for Angular Banner component.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Banner component, Angular Banner control
+_keywords: Angular Banner component, Angular Banner control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Angular UI Components
 ---
-# Banner
-<p class="highlight">
-The Ignite UI for Angular Banner Component provides a way to easily display a prominent message to your application's users in a way that is less transient than a snackbar and less obtrusive than a dialog. The Banner can also be configured to display custom action buttons and an icon.</p>
+# Angular Banner Component Overview
+<p class="highlight">Angular Banner Component provides a way to easily display a prominent message to your application's users in a way that is less transient than a snackbar and less obtrusive than a dialog. The Banner can also be configured to display custom action buttons and an icon.</p>
 
 ## Angular Banner Example
-
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -17,11 +15,17 @@ The Ignite UI for Angular Banner Component provides a way to easily display a pr
 
 <div class="divider--half"></div>
 
-## Usage
+## Getting Started with Ignite UI for Angular Banner
 
-### First Steps
+To get started with the Ignite UI for Angular Banner component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
-To get started with the Banner component, first you need to import the `IgxBannerModule` in your **app.module.ts** file:
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxBannerModule` in your **app.module.ts** file. 
 
 ```typescript
 // app.module.ts
@@ -38,6 +42,34 @@ import { IgxBannerModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
+Alternatively, as of `16.0.0` you can import the `IgxBannerComponent` as a standalone dependency, or use the [`IGX_BANNER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/banner/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+...
+import { IGX_BANNER_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_BANNER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-banner>
+        You are currently offline.
+    </igx-banner>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_BANNER_DIRECTIVES]
+    /* or imports: [IgxBannerComponent] */
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Banner module or directives imported, you can start with a basic configuration of the `igx-banner` component.
+
+## Using the Angular Banner Component
+
 ### Show Banner
 
 In order to display the banner component, use its [`open()`]({environment:angularApiUrl}/classes/igxbannercomponent.html#open) method and call it on a button click. The banner appears relative to where the element was inserted in the page template, moving all other content. It typically shows some non-intrusive content that requires minimal user interaction to be dismissed.
@@ -45,7 +77,7 @@ In order to display the banner component, use its [`open()`]({environment:angula
 ```html
 <!--banner.component.html-->
 
-<igx-icon (click)="connectionBanner.open()">Refresh</igx-icon>
+<igx-icon (click)="connectionBanner.open()">refresh</igx-icon>
 ...
 <igx-banner #connectionBanner>
     You are currently offline.
@@ -65,10 +97,10 @@ The [`IgxBannerComponent`]({environment:angularApiUrl}/classes/igxbannercomponen
 Configuring the message displayed in the banner is easy - just change the content you are passing to the `igx-banner` tag. The text will show up in the specified banner area and the banner will use its default template when displaying it. Below, we will change the content of our sample banner to be a bit more descriptive:
 
 ```html
-    <!--banner.component.html-->
-    <igx-banner #connectionBanner>
-        You have lost connection to the internet. This app is offline.
-    </igx-banner>
+<!--banner.component.html-->
+<igx-banner #connectionBanner>
+    You have lost connection to the internet. This app is offline.
+</igx-banner>
 ```
 
 ### Adding an icon
@@ -81,25 +113,23 @@ An [`igx-icon`](icon.md) can be displayed in the banner by passing it to the ban
 To pass an `igx-icon` to you banner, simply insert it in the banner's content:
 
 ```html
-    <!--banner.component.html-->
-    <igx-banner #connectionBanner>
-        <igx-icon>signal_wifi_off</igx-icon>
-        You have lost connection to the internet. This app is offline.
-    </igx-banner>
-    ...
+<!--banner.component.html-->
+<igx-banner #connectionBanner>
+    <igx-icon>signal_wifi_off</igx-icon>
+    You have lost connection to the internet. This app is offline.
+</igx-banner>
 ```
 
 If you want to use an `igx-icon` in your banner message, wrap it in a `span` tag:
 
 ```html
-    <!--banner.component.html-->
-    <igx-banner #connectionBanner>
-        You have lost connection to the internet. This app is offline.
-        <span>
-            <igx-icon>signal_wifi_off</igx-icon>
-        </span>
-    </igx-banner>
-    ...
+<!--banner.component.html-->
+<igx-banner #connectionBanner>
+    You have lost connection to the internet. This app is offline.
+    <span>
+        <igx-icon>signal_wifi_off</igx-icon>
+    </span>
+</igx-banner>
 ```
 
 ### Changing the banner button
@@ -107,14 +137,14 @@ If you want to use an `igx-icon` in your banner message, wrap it in a `span` tag
 The `IgxBannerModule` exposes a directive for templating the banner buttons - [`IgxBannerActionsDirective`]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html). This directive allows you to override the default banner button (`Dismiss`) and add user-defined custom actions.
 
 ```html
-    <!--banner.component.html-->
-    <igx-banner #connectionBanner>
-        <igx-icon>signal_wifi_off</igx-icon>
-        You have lost connection to the internet. This app is offline.
-        <igx-banner-actions>
-            <button igxButton igxRipple (click)="connectionBanner.toggle()">Toggle Banner</button>
-        </igx-banner-actions>
-    </igx-banner>
+<!--banner.component.html-->
+<igx-banner #connectionBanner>
+    <igx-icon>signal_wifi_off</igx-icon>
+    You have lost connection to the internet. This app is offline.
+    <igx-banner-actions>
+        <button igxButton igxRipple (click)="connectionBanner.toggle()">Toggle Banner</button>
+    </igx-banner-actions>
+</igx-banner>
 ```
 
 
@@ -126,16 +156,15 @@ The `IgxBannerModule` exposes a directive for templating the banner buttons - [`
 
 ### Applying custom animations
 
-The banner component comes with the [`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationsettings) property that allows applying custom opening and closing animations. Developers can choose between self-defined animations, and those from our [`Animation suite`]({environment:sassApiUrl}/index.html). The default ones, used by the banner, are `growVerIn` for entering and `growVerOut` for exiting.
+The banner component comes with the [`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationSettings) property that allows applying custom opening and closing animations. Developers can choose between self-defined animations, and those from our [`Animation suite`]({environment:sassApiUrl}/index.html). The default ones, used by the banner, are `growVerIn` for entering and `growVerOut` for exiting.
 
 Let's change the animations that our banner uses, so that it slides in and out:
 
 ```html
 <!--banner.component.html-->
-    <igx-banner #connectionBanner [animationSettings]="animationSettings">
-        ...
-    </igx-banner>
+<igx-banner #connectionBanner [animationSettings]="animationSettings">
     ...
+</igx-banner>
 ```
 
 ```typescript
@@ -327,6 +356,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 
 <code-view style="height: 530px" 
+           no-themin
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/notifications/banner-styling" >
 </code-view>

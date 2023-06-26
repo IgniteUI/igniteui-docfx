@@ -56,17 +56,17 @@ The sample below demonstrates @@igComponent's **Quick filtering** user experienc
 <div class="divider--half"></div>
 
 ## Setup
-In order to specify if filtering is enabled and which filtering mode should be used, the @@igComponent exposes the following boolean properties - [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering), [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering), [`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode) and [`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable).
+In order to specify if filtering is enabled and which filtering mode should be used, the @@igComponent exposes the following boolean properties - [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowFiltering), [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowAdvancedFiltering), [`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterMode) and [`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable).
 
 Property **[allowFiltering]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering)** enables you to specify the following options:
 - **false** - the filtering for the corresponding grid will be disabled; /default value/
 - **true** - the filtering for the corresponding grid will be enabled;
 
-Property **[allowAdvancedFiltering]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering)** enables you to specify the following options:
+Property **[allowAdvancedFiltering]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowAdvancedFiltering)** enables you to specify the following options:
 - **false** - the advanced filtering for the corresponding grid will be disabled; /default value/
 - **true** - the advanced filtering for the corresponding grid will be enabled;
 
-Property **[filterMode]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode)** enables you to specify the following options:
+Property **[filterMode]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterMode)** enables you to specify the following options:
 - **quickFilter** - a simplistic filtering UI; /default value/
 - **excelStyleFilter** - an Excel-like filtering UI;
 
@@ -74,15 +74,24 @@ Property **[filterable]({environment:angularApiUrl}/classes/igxcolumncomponent.h
 - **true** - the filtering for the corresponding column will be enabled; /default value/
 - **false** - the filtering for the corresponding column will be disabled;
 
-
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<@@igSelector [data]="data" [autoGenerate]="false" [allowFiltering]="true">
+    <igx-column field="Name" header="Order Product"></igx-column>
+    <igx-column field="Units" header="Units" dataType="number" [filterable]="false"></igx-column>
+</@@igSelector>
+```
+}
+@@if (igxName !== 'IgxTreeGrid') {
 ```html
 <@@igSelector #grid1 [data]="data" [autoGenerate]="false" [allowFiltering]="true">
-    <igx-column field="ProductName" dataType="string"></igx-column>
+    <igx-column field="ProductName"></igx-column>
     <igx-column field="Price" [dataType]="'number'" [filterable]="false">
 </@@igSelector>
 ```
+}
 
-To enable the [Advanced filtering](advanced-filtering.md) however, you need to set the [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowadvancedfiltering) input properties to `true`.
+To enable the [Advanced filtering](advanced-filtering.md) however, you need to set the [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowAdvancedFiltering) input properties to `true`.
 
 ```html
 <@@igSelector [data]="data" [autoGenerate]="true" [allowAdvancedFiltering]="true">
@@ -100,16 +109,25 @@ While some filtering conditions have been applied to a column, and the filter ro
 
 ## Usage
 
-There's a default filtering strategy provided out of the box, as well as all the standard filtering conditions, which the developer can replace with their own implementation. In addition, we've provided a way to easily plug in your own custom filtering conditions. The @@igComponent currently provides not only a simplistic filtering UI, but also more complex filtering options. Depending on the set [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) of the column, the correct set of [**filtering operations**]({environment:angularApiUrl}/interfaces/ifilteringoperation.html) is loaded inside the filter UI dropdown. Additionally, you can set the [`ignoreCase`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) and the initial [`condition`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html#condition) properties.
+There's a default filtering strategy provided out of the box, as well as all the standard filtering conditions, which the developer can replace with their own implementation. In addition, we've provided a way to easily plug in your own custom filtering conditions. The @@igComponent currently provides not only a simplistic filtering UI, but also more complex filtering options. Depending on the set [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#dataType) of the column, the correct set of [**filtering operations**]({environment:angularApiUrl}/interfaces/ifilteringoperation.html) is loaded inside the filter UI dropdown. Additionally, you can set the [`ignoreCase`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) and the initial [`condition`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html#condition) properties.
 
-Filtering feature is enabled for the @@igComponent component by setting the [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering) input to `true`. The default [`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode) is `quickFilter` and it **cannot** be changed run time. To disable this feature for a certain column – set the [`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable) input to `false`. 
+Filtering feature is enabled for the @@igComponent component by setting the [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowFiltering) input to `true`. The default [`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterMode) is `quickFilter` and it **cannot** be changed run time. To disable this feature for a certain column – set the [`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable) input to `false`. 
 
-@@if (igxName !== 'IgxHierarchicalGrid') {
+@@if (igxName === 'IgxGrid') {
 ```html
 <@@igSelector [data]="data" [autoGenerate]="false" [allowFiltering]="true">
-    <igx-column field="ProductName" dataType="string"></igx-column>
+    <igx-column field="ProductName"></igx-column>
     <igx-column field="Price" dataType="number"></igx-column>
     <igx-column field="Discontinued" [dataType]="'boolean'" [filterable]="false">
+</@@igSelector>
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<@@igSelector [data]="data" [autoGenerate]="false" [allowFiltering]="true">
+    <igx-column field="Name" header="Order Product"></igx-column>
+    <igx-column field="Units" header="Units" dataType="number"></igx-column>
+    <igx-column field="Delivered" header="Delivered" [dataType]="'boolean'" [filterable]="false">
 </@@igSelector>
 ```
 }
@@ -136,18 +154,57 @@ There are five filtering operand classes exposed:
    - [`IgxStringFilteringOperand`]({environment:angularApiUrl}/classes/igxstringfilteringoperand.html) defines all default filtering conditions for `string` type.
    - [`IgxDateFilteringOperand`]({environment:angularApiUrl}/classes/igxdatefilteringoperand.html) defines all default filtering conditions for `Date` type.
 
+@@if (igxName === 'IgxTreeGrid') {
+```typescript
+// Single column filtering
+
+// Filter the `Order Product` column for values which `contains` the `myproduct` substring, ignoring case
+this.@@igObjectRef.filter('Order Product', 'myproduct', IgxStringFilteringOperand.instance().condition('contains'), true);
+```
+}
+@@if (igxName !== 'IgxTreeGrid') {
 ```typescript
 // Single column filtering
 
 // Filter the `ProductName` column for values which `contains` the `myproduct` substring, ignoring case
 this.@@igObjectRef.filter('ProductName', 'myproduct', IgxStringFilteringOperand.instance().condition('contains'), true);
 ```
+}
 
 The only required parameters are the column field key and the filtering term. Both the condition and the case sensitivity will be inferred from the column properties if not provided. In the case of multiple filtering, the method accepts an array of filtering expressions.
 
 > [!NOTE]
 > The filtering operation **DOES NOT** change the underlying data source of the @@igComponent.
 
+@@if (igxName === 'IgxTreeGrid') {
+```typescript
+// Multi column filtering
+
+const gridFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And);
+const productFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And, 'ProductName');
+const productExpression = {
+    condition: IgxStringFilteringOperand.instance().condition('contains'),
+    fieldName: 'Order Product',
+    ignoreCase: true,
+    searchVal: 'ch'
+};
+productFilteringExpressionsTree.filteringOperands.push(productExpression);
+gridFilteringExpressionsTree.filteringOperands.push(productFilteringExpressionsTree);
+
+const priceFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And, 'Price');
+const priceExpression = {
+    condition: IgxNumberFilteringOperand.instance().condition('greaterThan'),
+    fieldName: 'UnitPrice',
+    ignoreCase: true,
+    searchVal: 20
+};
+priceFilteringExpressionsTree.filteringOperands.push(priceExpression);
+gridFilteringExpressionsTree.filteringOperands.push(priceFilteringExpressionsTree);
+
+this.@@igObjectRef.filteringExpressionsTree = gridFilteringExpressionsTree;
+```
+}
+@@if (igxName !== 'IgxTreeGrid') {
 ```typescript
 // Multi column filtering
 
@@ -174,8 +231,9 @@ gridFilteringExpressionsTree.filteringOperands.push(priceFilteringExpressionsTre
 
 this.@@igObjectRef.filteringExpressionsTree = gridFilteringExpressionsTree;
 ```
+}
 
-*   [`filterGlobal`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterglobal) - clears all existing filters and applies the new filtering condition to all @@igComponent's columns.
+*   [`filterGlobal`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterGlobal) - clears all existing filters and applies the new filtering condition to all @@igComponent's columns.
 
 ```typescript
 // Filter all cells for a value which contains `myproduct`
@@ -185,6 +243,16 @@ this.@@igObjectRef.filterGlobal('myproduct', IgxStringFilteringOperand.instance(
 
 *   [`clearFilter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearFilter) - removes any applied filtering from the target column. If called with no arguments it will clear the filtering of all columns.
 
+@@if (igxName === 'IgxTreeGrid') {
+```typescript
+// Remove the filtering state from the ProductName column
+this.@@igObjectRef.clearFilter('Order Product');
+
+// Clears the filtering state from all columns
+this.@@igObjectRef.clearFilter();
+```
+}
+@@if (igxName !== 'IgxTreeGrid') {
 ```typescript
 // Remove the filtering state from the ProductName column
 this.@@igObjectRef.clearFilter('ProductName');
@@ -192,11 +260,34 @@ this.@@igObjectRef.clearFilter('ProductName');
 // Clears the filtering state from all columns
 this.@@igObjectRef.clearFilter();
 ```
+}
 
 ## Initial filtered state
 
-To set the initial filtering state of the @@igComponent, set the [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstree) property to an array of [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) for each column to be filtered.
+To set the initial filtering state of the @@igComponent, set the [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringExpressionsTree) property to an array of [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) for each column to be filtered.
 
+@@if (igxName === 'IgxTreeGrid') {
+```typescript
+constructor(private cdr: ChangeDetectorRef) { }
+
+public ngAfterViewInit() {
+    const gridFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And);
+    const productFilteringExpressionsTree = new FilteringExpressionsTree(FilteringLogic.And, 'Order Product');
+    const productExpression = {
+        condition: IgxStringFilteringOperand.instance().condition('contains'),
+        fieldName: 'Order Product',
+        ignoreCase: true,
+        searchVal: 'c'
+    };
+    productFilteringExpressionsTree.filteringOperands.push(productExpression);
+    gridFilteringExpressionsTree.filteringOperands.push(productFilteringExpressionsTree);
+
+    this.@@igObjectRef.filteringExpressionsTree = gridFilteringExpressionsTree;
+    this.cdr.detectChanges();
+}
+```
+}
+@@if (igxName !== 'IgxTreeGrid') {
 ```typescript
 constructor(private cdr: ChangeDetectorRef) { }
 
@@ -216,6 +307,7 @@ public ngAfterViewInit() {
     this.cdr.detectChanges();
 }
 ```
+}
 
 ### Filtering logic
 
@@ -246,7 +338,12 @@ The @@igComponent supports remote filtering, which is demonstrated in the [`@@ig
 ## Custom Filtering Operands
 You can customize the filtering menu by adding, removing or modifying the filtering operands. By default, the filtering menu contains certain operands based on the column’s data type ([`IgxBooleanFilteringOperand`]({environment:angularApiUrl}/classes/igxbooleanfilteringoperand.html), [`IgxDateFilteringOperand`]({environment:angularApiUrl}/classes/igxdatefilteringoperand.html), [`IgxNumberFilteringOperand`]({environment:angularApiUrl}/classes/igxnumberfilteringoperand.html) and [`IgxStringFilteringOperand`]({environment:angularApiUrl}/classes/igxstringfilteringoperand.html)). You can extend these classes or their base class [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) to change the filtering menu items’ behavior.
 
-In the sample below, inspect the “Product Name” and “Discontinued” columns filters menus. For the “Discontinued” column filter, we have limited the number of operands to All, True and False. For the “Product Name” column filter – we have modified the Contains and Does Not Contain operands logic to perform case sensitive search and added also Empty and Not Empty operands.
+@@if (igxName !== 'IgxTreeGrid') {
+In the sample below, inspect the "Product Name" and "Discontinued" columns filters menus. For the "Discontinued" column filter, we have limited the number of operands to All, True and False. For the "Product Name" column filter – we have modified the Contains and Does Not Contain operands logic to perform case sensitive search and added also Empty and Not Empty operands.
+}
+@@if (igxName === 'IgxTreeGrid') {
+In the sample below, inspect the "Order Product" and "Delivered" columns filters menus. For the "Delivered" column filter, we have limited the number of operands to All, True and False. For the "Order Product" column filter – we have modified the Contains and Does Not Contain operands logic to perform case sensitive search and added also Empty and Not Empty operands.
+}
 
 To do that, extend the [`IgxStringFilteringOperand`]({environment:angularApiUrl}/classes/igxstringfilteringoperand.html) and [`IgxBooleanFilteringOperand`]({environment:angularApiUrl}/classes/igxbooleanfilteringoperand.html), modify the operations and their logic, and set the column [`filters`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filters) input to the new operands.
 
@@ -311,16 +408,31 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
     }
 }
 ```
-@@if (igxName !== 'IgxHierarchicalGrid') {
+@@if (igxName === 'IgxGrid') {
 ```html
 <!-- grid-custom-filtering.component.html -->
 
 <@@igSelector [data]="data" [autoGenerate]="false" [allowFiltering]="true">
-    <igx-column field="ProductName" header="Product Name" [dataType]="'string'" [filters]="caseSensitiveFilteringOperand"></igx-column>
+    <igx-column field="ProductName" header="Product Name" [filters]="caseSensitiveFilteringOperand"></igx-column>
     <igx-column field="Discontinued" header="Discontinued" [dataType]="'boolean'" [filters]="booleanFilteringOperand">
         <ng-template igxCell let-cell="cell" let-val>
-            <img *ngIf="val" src="assets/images/grid/active.png" title="Continued" alt="Continued" />
-            <img *ngIf="!val" src="assets/images/grid/expired.png" title="Discontinued" alt="Discontinued" />
+            <img *ngIf="val" src="assets/images/grid/active.png" title="Delivered" alt="Delivered" />
+            <img *ngIf="!val" src="assets/images/grid/expired.png" title="Undelivered" alt="Undelivered" />
+        </ng-template>
+    </igx-column>
+</@@igSelector>
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<!-- tree-grid-filtering-custom-sample.component.html -->
+
+<@@igSelector [data]="data" [autoGenerate]="false" [allowFiltering]="true">
+    <igx-column field="Name" header="Order Product" [filters]="caseSensitiveFilteringOperand"></igx-column>
+    <igx-column field="Delivered" header="Delivered" [dataType]="'boolean'" [filters]="booleanFilteringOperand">
+        <ng-template igxCell let-cell="cell" let-val>
+            <img *ngIf="val" src="assets/images/grid/active.png" title="Delivered" alt="Delivered" />
+            <img *ngIf="!val" src="assets/images/grid/expired.png" title="Undelivered" alt="Undelivered" />
         </ng-template>
     </igx-column>
 </@@igSelector>
@@ -331,7 +443,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 <!-- hierarchical-grid-custom-filtering.component.html -->
 
 <igx-hierarchical-grid [data]="localdata" [autoGenerate]="false" [allowFiltering]="true">
-    <igx-column field="Artist" [filterable]='true' [dataType]="'string'" [filters]="caseSensitiveFilteringOperand"></igx-column>
+    <igx-column field="Artist" [filterable]='true' [filters]="caseSensitiveFilteringOperand"></igx-column>
     <igx-column field="HasGrammyAward" [filterable]='true' [dataType]="'boolean'" [filters]="booleanFilteringOperand">
         <ng-template igxCell let-cell="cell" let-val>
             <img *ngIf="val" src="https://www.infragistics.com/angular-demos/assets/images/grid/active.png" title="True" alt="True" />
@@ -632,6 +744,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 @@if (igxName === 'IgxGrid') {
 
 <code-view style="height:500px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-filtering-style" >
 </code-view>
@@ -640,6 +753,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 @@if (igxName === 'IgxTreeGrid') {
 
 <code-view style="height:500px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering-style" >
 </code-view>
@@ -648,6 +762,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 @@if (igxName === 'IgxHierarchicalGrid') {
    
 <code-view style="height:650px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering-style" >
 </code-view>
@@ -664,7 +779,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ### Breaking Changes in 6.1.0
 * @@igxName `filteringExpressions` property is removed. Use [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstree) instead.
-* `filter_multiple` method is removed. Use [`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) method and [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstree) property instead.
+* `filter_multiple` method is removed. Use [`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) method and [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringExpressionsTree) property instead.
 * The [`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) method has new signature. It now accepts the following parameters:
   * `name` - the name of the column to be filtered.
   * `value` - the value to be used for filtering.

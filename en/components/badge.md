@@ -1,11 +1,11 @@
 ---
 title: Angular Badge Component – Ignite UI for Angular | Infragistics
 _description: Display an active count or icon in a predefined style to decorate other components anywhere in an application with Ignite UI for Angular Badge control.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Badge components, Angular Badge controls
+_keywords: Angular Badge component, Angular Badge control, Ignite UI for Angular, Angular UI Components 
 ---
 
-# Badge
-<p class="highlight">The Ignite UI for Angular Badge is a component used in conjunction with avatars, navigation menus, or other components in an application when a visual notification is needed. Badges are usually  designed as icons with a predefined style to communicate information, success, warnings, or errors.</p>
+# Angular Badge Component Overview
+<p class="highlight">Angular Badge is a component used in conjunction with avatars, navigation menus, or other components in an application when a visual notification is needed. Badges are usually  designed as icons with a predefined style to communicate information, success, warnings, or errors.</p>
 <div class="divider"></div>
 
 ## Angular Badge Example
@@ -17,8 +17,16 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <div class="divider--half"></div>
 
-## Usage
-To get started with the Badge, the first step is to import the `IgxBadgeModule` in the **app.module.ts** file:
+## Getting Started with Ignite UI for Angular Badge
+
+To get started with the Ignite UI for Angular Badge component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxBadgeModule` in your **app.module.ts** file. 
 
 ```typescript
 // app.module.ts
@@ -35,6 +43,28 @@ import { IgxBadgeModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
+Alternatively, as of `16.0.0` you can import the `IgxBadgeComponent` as a standalone dependency.
+
+```typescript
+// home.component.ts
+
+...
+import { IgxBadgeComponent } from 'igniteui-angular';
+// import { IgxBadgeComponent } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<igx-badge icon="check" type="success" shape="square"></igx-badge>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxBadgeComponent]
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Badge module or component imported, you can start with a basic configuration of the `igx-badge` component.
+
+## Using the Angular Badge Component
 Let's see how the demo sample is done. It's a simple success badge on an avatar. To build that, we need to import the `IgxAvatarModule`, along with the `IgxBadgeModule`:
 
 ```typescript
@@ -52,11 +82,13 @@ import { IgxBadgeModule, IgxAvatarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
+*Alternatively, as of `16.0.0` you can import the `IgxBadgeComponent` and `IgxAvatarComponent` as standalone dependencies.*
+
 Next, we will add those components to our template:
 
 ```html
 <div class="wrapper">
-    <igx-avatar icon="person" roundShape="true" size="small"></igx-avatar>
+    <igx-avatar icon="person" shape="circle" size="small"></igx-avatar>
     <igx-badge icon="check" type="success"></igx-badge>
 </div>
 ```
@@ -76,7 +108,15 @@ igx-badge {
 }
 ```
 
-If everything's done right, you should see the demo sample in your browser.
+### Badge Shape
+
+We can change the badge shape through the `shape` attribute setting its value to `square`. By default, the shape of the badge is `rounded`.
+
+```html
+<igx-badge icon="check" type="success" shape="square"></igx-badge>
+```
+
+If everything's done right, you should see the demo sample shown above in your browser.
 
 ### Badge in List
 
@@ -119,7 +159,7 @@ Next, we're adding the contacts in our template:
   <igx-list-item *ngFor="let member of members">
     <div class="wrapper">
       <div>
-        <igx-avatar icon="person" roundShape="true" size="small"></igx-avatar>
+        <igx-avatar icon="person" shape="circle" size="small"></igx-avatar>
         <igx-badge [icon]="member.icon" [type]="member.type" class="badge-style"></igx-badge>
       </div>
       <div class="contact-container">
@@ -203,12 +243,10 @@ Position the badge in its parent container:
 
 If the sample is configured properly, a list of members should be displayed and every member has an avatar and a badge, showing its current state.
 
-
 <code-view style="height: 280px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-3" >
 </code-view>
-
 
 ## Styling
 
@@ -276,8 +314,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 ### Demo
 
-
 <code-view style="height:340px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/badge-styling-sample" >
 </code-view>
@@ -302,6 +340,3 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 Our community is active and always welcoming to new ideas.
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
-
-
-

@@ -1,25 +1,34 @@
 ---
-title: Angular Month Picker Component – Ignite UI for Angular | Infragistics
-_description: The Ignite UI for Angular Month Picker component provides an easy and intuitive way to select a specific month and year using a month-year calendar view.
+title: Angular Month Picker Component – Ignite UI for Angular
+_description:  The Ignite UI for Angular Month Picker component provides an easy and intuitive way to select a specific month and year using a month-year calendar view. Try it now.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Month Picker components, Angular Month Picker controls
 ---
 
-# Month Picker
-<p class="highlight">
-    The Ignite UI for Angular Month Picker component provides an easy and intuitive way to select a specific month and year using a month-year calendar view. The component allows single selection, customizable display format and supports localization.
-</p>
+# Angular Month Picker Component Overview
+<p class="highlight">The Ignite UI for Angular Month Picker component provides an easy and intuitive way to select a specific month and year using a month-year calendar view. The component allows you bind it's value to a date object, and users can change the month and year portion of the date object through the month picker component UI. It also supports localization.</p>
 
 ## Angular Month Picker Example
+What you see here is a basic Angular Month Picker example with a the component's default view, enabling users to select the year and the month.  
 
 <code-view style="height: 620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-1" alt="Angular Month Picker Example">
 </code-view>
 
+## Getting Started with Ignite UI for Angular Month Picker
 
-## Usage
+To get started with the Ignite UI for Angular Month Picker component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
-The first step is to import the `IgxCalendarModule` inside our **app.module.ts** file. Note that the [`IgxCalendar`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) also depends on the **BrowserAnimationsModule** and on the **HammerModule** for touch interactions, so they need to be added to the AppModule as well:
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The first step is to import the `IgxCalendarModule` inside our **app.module.ts** file. 
+
+>[!NOTE]
+> The [**IgxMonthPickerComponent**]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html) also depends on the [`BrowserAnimationsModule`](https://angular.io/api/platform-browser/animations/BrowserAnimationsModule) and the [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) for touch interactions, so they need to be added to the AppModule as well:
 
 ```typescript
 // app.module.ts
@@ -37,21 +46,36 @@ import { IgxCalendarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-You will usually also import the [`IgxMonthPickerComponent`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html) in the AppComponent file (or your editor will auto-import them for you) when declaring types that are part of the month picker API:
+Alternatively, as of `16.0.0` you can import the `IgxMonthPickerComponent` as a standalone dependency, or use the [`IGX_CALENDAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/calendar/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
+// home.component.ts
+
+import { HammerModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IgxMonthPickerComponent } from 'igniteui-angular';
 // import { IgxMonthPickerComponent } from '@infragistics/igniteui-angular'; for licensed package
-...
 
-@ViewChild('monthPicker', { read: IgxMonthPickerComponent }) public monthPicker: IgxMonthPickerComponent;
+@Component({
+    selector: 'app-home',
+    template: '<igx-month-picker></igx-month-picker>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [BrowserAnimationsModule, HammerModule, IgxMonthPickerComponent]
+    /* or imports: [BrowserAnimationsModule, HammerModule, IGX_CALENDAR_DIRECTIVES] */
+})
+export class HomeComponent {}
 ```
+
+Now that you have the Ignite UI for Angular Calendar module or Month Picker component imported, you can start using the `igx-month-picker` component.
 
 > [!NOTE]
 > Note that the [`IgxMonthPickerComponent`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html) uses the [Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) WebAPI for localization and formatting of dates.
 > Consider using the [appropriate polyfills](https://github.com/andyearnshaw/Intl.js/) if your target platform does not support them.
 
-To add a month picker in a template, use the following code:
+## Using the Angular Month Picker
+
+To add the Angular Month Picker in a template, use the following code:
 
 ```html
 <!-- month-picker-sample.component.html -->
@@ -101,7 +125,7 @@ public numericFormatOptions = {
 ```
 
 ### Localization
-Use the [`locale`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#locale) input, to customize the month picker localization.
+Use the [`locale`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#locale) input, to customize the Ignite UI for Angular Month Picker localization.
 
 ```html
 <!-- month-picker-sample.component.html -->
@@ -221,6 +245,7 @@ After everything's done, your component should look like this:
 
 
 <code-view style="height: 600px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-styling" >
 </code-view>

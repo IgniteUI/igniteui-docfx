@@ -33,7 +33,7 @@ The sample below demonstrates the three types of @@igComponent's **column select
 *_Contact Title_, _City_ and _Address_ columns are with disabled column selection.
 }
 @@if (igxName === 'IgxTreeGrid') {
-*_Unit Price_ and _Discontinued_ are with disabled column selection.
+*_Units_, _Unit Price_ and _Delivered_ are with disabled column selection.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 *_Photo_ and _Debut_ are with disabled column selection.
@@ -49,7 +49,7 @@ The sample below demonstrates the three types of @@igComponent's **column select
 
 ## Basic usage
 
-The column selection feature can be enabled through the [`columnSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnselection) input, which takes [GridSelectionMode]({environment:angularApiUrl}/index.html#gridselectionmode) values.
+The column selection feature can be enabled through the [`columnSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnSelection) input, which takes [GridSelectionMode]({environment:angularApiUrl}/index.html#gridselectionmode) values.
 
 ## Interactions
 The default selection mode is `none`. If set to `single` or `multiple` all of the presented columns will be [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable). With that being said, in order to select a column, we just need to click on one, which will mark it as [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected). If the column is not selectable, no selection style will be applied on the header, while hovering.
@@ -181,7 +181,7 @@ The column selection UI has a few more APIs to explore, which are listed below.
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) properties:
-* [columnSelection]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnselection)
+* [columnSelection]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnSelection)
 * [selectedColumns]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selectedColumns)
 * [selectColumns]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selectColumns)
 * [deselectColumns]({environment:angularApiUrl}/classes/@@igTypeDoc.html#deselectColumns)

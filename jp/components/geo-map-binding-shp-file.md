@@ -12,32 +12,21 @@ Ignite UI for Angular Map コンポーネントの [`IgxShapeDataSource`]({envir
 
 ## Angular シェープ ファイルを地理的データにバインディングの例
 
-<code-view style="height: 500px"
+<code-view style="height: 500px" alt="Angular シェープ ファイルを地理的データにバインディングの例"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-binding-shp-polylines"
-           alt="Angular シェープ ファイルを地理的データにバインディングの例"
-           github-src="maps/geo-map/binding-shp-polylines">
+                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/binding-shp-polylines"
+                                                 github-src="maps/geo-map/binding-shp-polylines">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/binding-shp-polylines?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/binding-shp-polylines?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
 以下の表は、シェイプ ファイルを読み込むための [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html) クラスのプロパティを説明します。
 
-| プロパティ                                                                                                                                                 | 型      | 概要                                                    |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ----------------------------------------------------- |
-| [`shapefileSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html#shapefilesource) | string | シェイプ ファイル(.shp) から読み込まれた 1 つの地理空間シェープにすべてのポイントが含まれます。 |
-| [`databaseSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html#databasesource)   | string | たとえば、シェープファイルで日本は、以下でポイント オブジェクト リストのリストとして表されます。     |
+| プロパティ | 型 | 概要   |
+|----------|------|---------------|
+| [`shapefileSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html#shapefilesource) | string |シェイプ ファイル(.shp) から読み込まれた 1 つの地理空間シェープにすべてのポイントが含まれます。|
+|[`databaseSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html#databasesource) | string |たとえば、シェープファイルで日本は、以下でポイント オブジェクト リストのリストとして表されます。|
 
 <!-- TODO add for WPF only: -->
 
@@ -55,11 +44,12 @@ Map コンポーネントでは、Geographic Series は、シェイプ ファイ
 
 [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) クラスは、以下の表にリストする地理的データを保存するためのプロパティを提供します。
 
-| プロパティ      | 概要                                                                                                                                                                                                                                                      |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Points`   | シェイプ ファイル(.shp) から読み込まれた 1 つの地理空間シェープにすべてのポイントが含まれます。たとえば、シェープファイルで日本は、以下でポイント オブジェクト リストのリストとして表されます。<ul><li>ポイントの最初のリストは北海道のシェイプを表します。</li><li>ポイントの 2 番目のリストは本州のシェイプを表します。</li><li>ポイントの 3 番目のリストは九州のシェイプを表します。</li><li>ポイントの 4 番目のリストは四国のシェイプを表します。 |
-| </li></ul> |                                                                                                                                                                                                                                                         |
-| `Fields`   | 列名でキーが付けられたシェイプ データベース ファイル (.dbf) からのデータ行を含みます。たとえば、日本についてのデータには、人口、地域、首都名などが含まれます。                                                                                                                                                                    |
+| プロパティ     | 概要   |
+|--------------|---------------|
+|`Points`|シェイプ ファイル(.shp) から読み込まれた 1 つの地理空間シェープにすべてのポイントが含まれます。たとえば、シェープファイルで日本は、以下でポイント オブジェクト リストのリストとして表されます。<ul><li>ポイントの最初のリストは北海道のシェイプを表します。</li><li>ポイントの 2 番目のリストは本州のシェイプを表します。</li><li>ポイントの 3 番目のリストは九州のシェイプを表します。</li><li>ポイントの 4 番目のリストは四国のシェイプを表します。
+
+</li></ul>|
+| `Fields` |列名でキーが付けられたシェイプ データベース ファイル (.dbf) からのデータ行を含みます。たとえば、日本についてのデータには、人口、地域、首都名などが含まれます。|
 
 このデータ構造は、適切なデータ列がマップされている限り、ほとんどの地理的シリーズでの使用に適しています。
 
@@ -149,11 +139,11 @@ export class MapBindingShapefilePolylinesComponent implements AfterViewInit {
 }
 ```
 
-## API メンバー
+## API リファレンス
 
--   `Fields`
--   [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)
--   `ImportCompleted`
--   `ItemsSource`
--   `Points`
--   [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html)
+*   `Fields`
+*   [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)
+*   `ImportCompleted`
+*   `ItemsSource`
+*   `Points`
+*   [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html)

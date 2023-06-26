@@ -6,7 +6,10 @@ _language: ja
 ---
 
 # Bootstrap のテーマ
-<p class="highlight">Ignite UI for Angular テーマ エンジンは、Bootstrap のマークアップと CSS に基づいた人気のある [`NG Bootstrap`](https://ng-bootstrap.github.io/) などの他のコンポーネント ライブラリと組み合わせて使用できます。</p>
+<p class="highlight">
+
+Ignite UI for Angular テーマ エンジンは、Bootstrap のマークアップと CSS に基づいた人気のある [`NG Bootstrap`](https://ng-bootstrap.github.io/) などの他のコンポーネント ライブラリと組み合わせて使用できます。
+</p>
 <div class="divider--half"></div>
 
 ## 概要

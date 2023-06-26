@@ -1,13 +1,12 @@
 ---
-title: Input Groups コンポーネント - ネイティブ Angular | Ignite UI for Angular
-_description: Ignite UI for Angular Input Groups は、データ入力のための使いやすいフォーム、さらに検証およびエラー処理などの機能も提供します。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Label コンポーネント, Angular Label コントロール, Angular Input Group コンポーネント, Angular Input Group コントロール, Angular Input コンポーネント, Angular Input コントロール, Input コンポーネント, Input コントロール, Label コンポーネント, Label コントロール, Angular Input ディレクティブ, Angular Label ディレクティブ, Angular Forms, Angular リアクティブ フォーム, Angular フォームの検証
+title: Input Group コンポーネント - ネイティブ Angular | Ignite UI for Angular
+_description: Ignite UI for Angular Input Group は、データ入力のための使いやすいフォーム、さらに検証およびエラー処理などの機能も提供します。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Label コンポーネント, Angular Label コントロール, Angular Input Group コンポーネント, Angular Input Group コントロール, Angular Input コンポーネント, Angular Input コントロール, Input コンポーネント, Input コントロール, Label コンポーネント, Label コントロール, Angular Input ディレクティブ, Angular Label ディレクティブ, Angular Forms, Angular Reactive Forms, Angular フォームの検証
 _language: ja
 ---
 
-# Input Group
-<p class="highlight">Ignite UI for Angular コントロールは、フォーム入力を処理するためのモデル駆動型のアプローチを提供するリアクティブ フォームで簡単に使用できます。</p>
-<div class="divider--half"></div>
+# Angular Input Group (入力グループ) コンポーネントの概要
+`IgxInputGroupComponent` は、ユーザーが input、select、textarea などの入力要素を拡張することを可能にします。これは、テキスト、アイコン、ボタン、カスタム バリデーション、フローティング ラベルなどのカスタム コンテンツを、プレフィックス、サフィックス、またはヒントとして、それらの両側に追加することで実現できます。
 
 ## Angular Input Group の例
 
@@ -18,18 +17,27 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 使用方法
-Input Group コンポーネントを初期化にするには、まず `IgxInputGroupModule` を `igniteui-angular` ツールキットにインポートします。
+## Ignite UI for Angular Input Group を使用した作業の開始
 
-`IgxInputGroup` はテンプレート駆動フォームを使用するために **FormsModule** にも依存します。
+Ignite UI for Angular Input Group コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
+
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxInputGroupModule` をインポートします。
+
+`IgxInputGroupComponent` はテンプレート駆動フォームを使用するために Angular **FormsModule** にも依存します。
 
 ```typescript
 // app.module.ts
 
-...
+import { FormsModule } from '@angular/forms';
 import { IgxInputGroupModule } from 'igniteui-angular';
 // import { IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
-import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
     ...
@@ -39,10 +47,41 @@ import { FormsModule } from '@angular/forms';
 export class AppModule {}
 ```
 
+あるいは、`16.0.0` 以降、`IgxInputGroupComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_INPUT_GROUP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/input-group/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+
+```typescript
+// home.component.ts
+
+import { FormsModule } from '@angular/forms';
+import { IGX_INPUT_GROUP_DIRECTIVES, IgxIconComponent } from 'igniteui-angular';
+// import { IGX_INPUT_GROUP_DIRECTIVES, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-input-group>
+        <igx-prefix>+359</igx-prefix>
+        <label igxLabel for="phone">Phone</label>
+        <input igxInput [(ngModel)]="value" name="phone" type="tel" maxlength="9" />
+        <igx-icon igxSuffix>phone</igx-icon>
+    </igx-input-group>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_INPUT_GROUP_DIRECTIVES, IgxIconComponent, FormsModule]
+    /* or imports: [IgxInputGroupComponent, IgxPrefixDirective, IgxLabelDirective, IgxInputDirective, IgxIconComponent, IgxSuffixDirective, FormsModule] */
+})
+export class HomeComponent {
+    public value = '123456789';
+}
+```
+
+Ignite UI for Angular Input Group モジュールまたはディレクティブをインポートしたので、`igx-input-group` コンポーネントの使用を開始できます。
+
 > [!NOTE]
 > `igxInput`、`igxLabel`、`igx-preix`、`igx-suffix` または `igx-hint` ディレクティブを使用するには、`<igx-input-group>` コンテナーでラップする必要があります。
 
-## 例
+## Angular Input Group の使用
 
 ### Label および Input
 [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html)、[`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) ディレクティブとその検証、データ バインディング、API については、[このトピック](label-input.md)を参照してください。
@@ -54,14 +93,16 @@ export class AppModule {}
 <igx-input-group>
     <igx-prefix>+359</igx-prefix>
     <label igxLabel for="phone">Phone</label>
-    <input igxInput name="phone" type="tel" />
+    <input igxInput name="phone" type="tel" maxlength="9" />
     <igx-icon igxSuffix>phone</igx-icon>
 </igx-input-group>
 ```
 
-<div class="sample-container loading" style="height:100px">
-<iframe class="lazyload" id="input-group-sample-3-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-3' width="100%" height="100%" seamless frameBorder="0"></iframe>
-</div>
+<code-view style="height:110px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-3" alt="Angular Input Group の例">
+</code-view>
+
 <div class="divider--half"></div>
 
 ### Hint
@@ -80,9 +121,11 @@ export class AppModule {}
 ```
 
 ヒントを追加した phone フィールドは以下のようになります。
-<div class="sample-container loading" style="height:110px">
-<iframe class="lazyload" id="input-group-sample-4-frame" data-src='{environment:demosBaseUrl}/data-entries/input-group-sample-4' width="100%" height="100%" seamless frameBorder="0"></iframe>
-</div>
+<code-view style="height:110px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-4" alt="Angular Input Group の例">
+</code-view>
+
 <div class="divider--half"></div>
 
 ### Input タイプと Input グループ タイプ トークン
@@ -133,6 +176,268 @@ Ignite UI for Angular Input Group コンポーネントは、Angular 14 のデ�
            iframe-src="{environment:demosBaseUrl}/data-entries/typed-form" >
 </code-view>
 
+## 検証
+次のサンプルは、[テンプレート駆動フォーム](https://angular.io/guide/forms)または[リアクティブ フォーム](https://angular.io/guide/reactive-forms)を使用する場合に入力検証を構成する方法を示しています。
+
+### テンプレート駆動フォーム
+テンプレート駆動のフォーム検証は、検証属性 (`required`、`minlength` など) を `input` 要素に追加することによって実現されます。
+
+```html
+<form>
+    <igx-input-group>
+        <label igxLabel for="username">Username</label>
+        <input igxInput name="username" type="text" required />
+    </igx-input-group>
+
+    <igx-input-group>
+        <label igxLabel for="email">Email</label>
+        <input igxInput name="email" type="email" required email />
+    </igx-input-group>
+
+    <igx-input-group>
+        <label igxLabel for="password">Password</label>
+        <input igxInput name="password" type="password" required minlength="8" />
+    </igx-input-group>
+
+    <button igxButton="raised" igxRipple type="submit">Submit</button>
+</form>
+```
+
+`required` 属性はラベルの横にアスタリスクを追加し、このフィールドに入力する必要があることを示します。さらに、`input` に `email` や `minlength` などの追加の検証が適用されている場合、これにより、[`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) ディレクティブを介して追加要件をエンド ユーザーに通知します。
+
+次の例では、双方向データ バインディングを使用し、`ngModel` をローカル変数にエクスポートしてコントロールの状態を検査する方法を示します。
+
+```html
+<form #login="ngForm">
+    ...
+    <igx-input-group>
+        <label igxLabel for="email">Email</label>
+        <input igxInput name="email" type="email" [(ngModel)]="user.email" #email="ngModel" required email />
+        <igx-hint *ngIf="email.errors?.email">Please enter a valid email</igx-hint>
+    </igx-input-group>
+
+    <igx-input-group>
+        <label igxLabel for="password">Password</label>
+        <input igxInput name="password" type="password"
+            [(ngModel)]="user.password" #password="ngModel" required minlength="8" />
+        <igx-hint *ngIf="password.errors?.minlength">Password should be at least 8 characters</igx-hint>
+    </igx-input-group>
+
+    <button igxButton="raised" igxRipple type="submit">Submit</button>
+</form>
+```
+
+フォーム コントロールのいずれかが無効な場合、ユーザーはフォームを送信できないようにする必要があります。これは、フォームの状態に基づいて送信ボタンを有効/無効にすることで実現できます。
+
+次の例は、`ngForm` をローカル変数にエクスポートしてフォームの状態を検査する方法を示しています。
+
+```html
+<form #registrationForm="ngForm">
+    <igx-input-group>
+        <label igxLabel for="email">Email</label>
+        <input igxInput name="email" type="email" [(ngModel)]="user.email" #email="ngModel" required email />
+        <igx-hint *ngIf="email.errors?.email">Please enter a valid email</igx-hint>
+    </igx-input-group>
+    ...
+
+    <button igxButton="raised" igxRipple type="submit" [disabled]="!registrationForm.valid">Submit</button>
+</form>
+```
+
+上記の構成の結果は、次のサンプルで確認できます。[Email] および [Password] フィールドに入力を開始すると、入力された値が無効な場合に [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) が表示されることがわかります。サンプルは、[`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) および [`igx-suffix`](#prefix-および-suffix) ディレクティブを使用してパスワードの可視性を切り替える方法も示します。
+
+<code-view style="height:480px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-entries/template-driven-form-validation" >
+</code-view>
+
+### リアクティブ フォーム
+コンポーネント クラスのフォーム コントロール モデルにバリデーター関数を直接追加することにより、リアクティブなフォーム検証が実現されます。コンポーネント クラスでコントロールを作成したら、テンプレートのフォーム コントロール要素に関連付ける必要があります。
+
+```ts
+public registrationForm: FormGroup<User>;
+
+constructor(fb: FormBuilder) {
+    this.registrationForm = fb.group({
+        username: ['', { nonNullable: true, validators: [Validators.required] }],
+        email: ['', { nonNullable: true, validators: [Validators.required, Validators.email] }],
+        password: ['', { nonNullable: true, validators: [Validators.required, Validators.minLength(8)] }]
+    });
+}
+```
+```html
+<form [formGroup]="registrationForm">
+    <igx-input-group>
+        <label igxLabel for="username">Username</label>
+        <input igxInput name="username" type="text" formControlName="username" />
+    </igx-input-group>
+
+    <igx-input-group>
+        <label igxLabel for="email">Email</label>
+        <input igxInput name="email" type="email" formControlName="email" />
+    </igx-input-group>
+
+    <igx-input-group>
+        <label igxLabel for="password">Password</label>
+        <input igxInput name="password" type="password" formControlName="password" />
+    </igx-input-group>
+
+    <button igxButton="raised" igxRipple type="submit">Submit</button>
+</form>
+```
+
+テンプレート駆動のフォーム サンプルと同様に、`email` や `minlength` などの追加の検証がある場合、[`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) ディレクティブを使用して、検証が失敗した場合にエンド ユーザーに通知できます。
+
+次の例は、`get` メソッドを介してコントロールにアクセスし、その状態を検査する方法を示しています。また、`FormGroup` の状態を調べて、送信ボタンを有効/無効にする方法も示しています。
+
+```ts
+public get email() {
+    return this.registrationForm.get('email');
+}
+
+public get password() {
+    return this.registrationForm.get('password');
+}
+```
+```html
+<form [formGroup]="registrationForm">
+    ...
+    <igx-input-group>
+        <label igxLabel for="email">Email</label>
+        <input igxInput name="email" type="email" formControlName="email" />
+        <igx-hint *ngIf="email.errors?.email">Please enter a valid email</igx-hint>
+    </igx-input-group>
+
+    <igx-input-group>
+        <label igxLabel for="password">Password</label>
+        <input igxInput name="password" type="password" formControlName="password" />
+        <igx-hint *ngIf="password.errors?.minlength">Password should be at least 8 characters</igx-hint>
+    </igx-input-group>
+
+    <button igxButton="raised" igxRipple type="submit" [disabled]="!registrationForm.valid">Submit</button>
+</form>
+```
+
+上記の構成の結果は、次のサンプルで確認できます。テンプレート駆動のフォーム サンプルと同様に、[`igx-icon`]({environment:angularApiUrl}/classes/igxiconcomponent.html) および [`igx-suffix`](#prefix-および-suffix) ディレクティブを使用してパスワードの可視性を切り替える方法も示します。
+
+<code-view style="height:480px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-entries/reactive-form-validation" >
+</code-view>
+
+### カスタム バリデータ
+一部の入力フィールドではカスタム検証が必要な場合があり、これはカスタム バリデータを介して実現できます。値が無効な場合、バリデータは特定のエラー メッセージを表示するために使用できる一連のエラーを生成します。
+
+以下は、入力されたメール アドレスに定義済みの値が含まれているかどうかを検証し、値が発生する場所に基づいてさまざまなエラーを生成する、単純なカスタム リアクティブ フォーム バリデータの例です。
+
+```ts
+public registrationForm: FormGroup<User>;
+
+constructor(fb: FormBuilder) {
+    this.registrationForm = fb.group({
+        email: ['', {
+            nonNullable: true,
+            validators: [
+                Validators.required,
+                Validators.email,
+                this.emailValidator('infragistics')
+            ]
+        }],
+        ...
+    });
+}
+
+private emailValidator(val: string): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
+        const value = control.value?.toLowerCase();
+        const localPartRegex = new RegExp(`(?<=(${val})).*[@]`);
+        const domainRegex = new RegExp(`(?<=[@])(?=.*(${val}))`);
+        const returnObj: ValidatorErrors = {};
+
+        if (value && localPartRegex.test(value)) {
+            returnObj.localPart = true;
+        }
+        if (value && domainRegex.test(value)) {
+            returnObj.domain = true;
+        }
+
+        return returnObj;
+    }
+}
+```
+
+### クロス フィールド検証
+場合によっては、1 つのコントロールの検証が別のコントロールの値に依存することがあります。単一のカスタム バリデータで両方のコントロールを評価するには、共通の祖先コントロール (`FormGroup` など) で検証を実行する必要があります。バリデータは、`FormGroup` の `get` メソッドを呼び出して子コントロールを取得し、値を比較します。検証に失敗すると、`FormGroup` に対して一連のエラーを生成します。
+
+これにより、フォームの状態のみが無効に設定されます。コントロールの状態を設定するには、[`setErrors`](https://angular.io/api/forms/AbstractControl#seterrors) メソッドを使用して、生成したエラーを手動で追加します。次に、検証が成功すると、[`setValue`](https://angular.io/api/forms/AbstractControl#setvalue) メソッドを使用してエラーを削除できます。このメソッドは、指定された値に対してコントロールの検証を再実行します。
+
+以下の例は、[パスワード] に [メール アドレス] が含まれていてはならず、[パスワードの再入力] が [パスワード] と一致している必要があるクロスフィールドの検証を示しています。
+
+```ts
+private passwordValidator(): ValidatorFn {
+    return (control: AbstractControl): ValidationErrors | null => {
+        const email = control.get('email');
+        const password = control.get('password');
+        const repeatPassword = control.get('repeatPassword');
+        const returnObj: ValidatorErrors = {};
+
+        if (email.value
+            && password.value
+            && password.value.toLowerCase().includes(email.value)) {
+            password.setErrors({ ...password.errors, containsEmail: true });
+            returnObj.containsEmail = true;
+        }
+
+        if (password
+            && repeatPassword
+            && password.value !== repeatPassword.value) {
+            repeatPassword.setErrors({ ...repeatPassword.errors, mismatch: true });
+            returnObj.mismatch = true;
+        }
+
+        if (!returnObj.containsEmail && password.errors?.containsEmail) {
+            password.setValue(password.value);
+        }
+
+        if (!returnObj.mismatch && repeatPassword.errors?.mismatch) {
+            repeatPassword.setValue(repeatPassword.value);
+        }
+
+        return returnObj;
+    }
+}
+```
+
+カスタム バリデータを `FormGroup` に追加するには、フォームの作成時に 2 番目の引数として渡す必要があります。
+
+```ts
+public registrationForm: FormGroup<User>;
+
+constructor(fb: FormBuilder) {
+    this.registrationForm = fb.group({
+        email: ['', {
+            nonNullable: true,
+            validators: [
+                Validators.required,
+                Validators.email,
+                this.emailValidator('infragistics')
+            ]
+        }],
+        ...
+    },
+    {
+        validators: [this.passwordValidator()]
+    });
+}
+```
+
+以下のサンプルは、組み込みのバリデータを、前の例のカスタム `emailValidator` およびクロスフィールド `passwordValidator` と組み合わせて使用する方法を示しています。
+
+<code-view style="height:480px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-entries/reactive-form-custom-validation" >
+</code-view>
+
 ## スタイル設定
 
 入力グループのスタイル設定を開始するには、`index` ファイルをスタイルファイルに含めます。
@@ -169,11 +474,11 @@ $custom-input-group: input-group-theme(
 
 ### テーマ オーバーライドの使用
 
-Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、[input group mixin]({environment:sassApiUrl}/index.html#mixin-igx-input-group) を用いる必要があります。
+Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、[input group ミックスイン]({environment:sassApiUrl}/index.html#mixin-igx-input-group)を用いる必要があります。
 
 ただし、先の手順に示すように、インクルード ステートメントをそのままにすると、スタイルは適切に適用されません。テキストの色が適切に変更された場合も、下の境界線と背景は同じままです。これは、コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用しているためです。`input` 要素と `label` 要素はビューの一部であるため、スタイルが正しく適用されます。下の境界線は `igx-input-group` コンポーネントによって生成され、コンポーネントのスタイルの**影響を受けません**。
 
-境界線のスタイルを設定するには、`:: ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターでスタイルのスコープを設定する必要があります。
+境界線のスタイルを設定するには、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターでスタイルのスコープを設定する必要があります。
 
 ```scss
 :host {
@@ -187,6 +492,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 
 
 <code-view style="height:120px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-style" >
 </code-view>

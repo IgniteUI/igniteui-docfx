@@ -1,15 +1,15 @@
 ---
 title: TextHighlight ディレクティブ - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular TextHighlight ディレクティブは、テキスト部分のハイライトやアクティブ ハイライトがあります。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コンポーネント, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular TextHighlight ディレクティブ, IgxTextHighlight ディレクティブ
+_keywords: Angular TextHighlight ディレクティブ, Angular Text Highlight ディレクティブ, IgxTextHighlight ディレクティブ, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コンポーネント, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
 _language: ja
 ---
 
-# TextHighlight ディレクティブ
+# Angular Text Highlight (テキスト強調表示) ディレクティブの概要
 
 Ignite UI for Angular の [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) ディレクティブは、テキストのハイライト、大文字と小文字の区別のオプション、完全一致のみのハイライトをサポートします。既にハイライトしている部分を含む、テキストのハイライトをアクティブに保持できます。
 
-## Angular TextHighlight ディレクティブの例
+## Angular Text Highlight ディレクティブの例
 
 
 <code-view style="height: 260px;" 
@@ -19,17 +19,23 @@ Ignite UI for Angular の [`IgxTextHighlight`]({environment:angularApiUrl}/class
 
 <div class="divider--half"></div>
 
-## 使用方法
+## Ignite UI for Angular Text Highlight ディレクティブを使用した作業の開始
 
-Ignite UI for Angular TextHighlight ディレクティブを使用するには、**app.module.ts** ファイルに `IgxTextHighlightModule` とアプリケーションに必要な他の Ignite UI for Angular モジュールをインポートします。
+Ignite UI for Angular Text Highlight ディレクティブを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
+
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxTextHighlightModule` をインポートします。
 
 ```typescript
 // app.module.ts
 ...
-import { IgxButtonModule, IgxInputGroupModule,
-        IgxIconModule, IgxRippleModule, IgxTextHighlightModule } from 'igniteui-angular';
-// import { IgxButtonModule, IgxInputGroupModule,
-//        IgxIconModule, IgxRippleModule, IgxTextHighlightModule } from '@infragistics/igniteui-angular'; for licensed package
+import { IgxTextHighlightModule } from 'igniteui-angular';
+// import { IgxTextHighlightModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -39,7 +45,37 @@ import { IgxButtonModule, IgxInputGroupModule,
 export class AppModule {}
 ```
 
-次にテキストの様々な部分を強調表示するためにハイライトできる検索ボックスを作成します。Ignite UI for Angular の [InputGroup](input-group.md) コンポーネントは、一致のクリア、次の一致、前の一致へ移動するためのボタン、検索で大文字と小文字を区別を指定するボタンを追加します。また一致がいくつ見つかったかをを示すラベルがあります。
+あるいは、`16.0.0` 以降、`IgxTextHighlightDirective` をスタンドアロンの依存関係としてインポートできます。
+
+```typescript
+// home.component.ts
+
+import { IgxTextHighlightDirective } from 'igniteui-angular';
+// import { IgxTextHighlightDirective } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <div igxTextHighlight
+        [value]="html"
+        [groupName]="'group1'"
+        [containerClass]="'search-text'"
+        class="search-text">
+        {{html}}
+    </div>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxTextHighlightDirective]
+})
+export class HomeComponent {}
+```
+
+Ignite UI for Angular Text Highlight モジュールまたはディレクティブをインポートしたので、`igxTextHighlight` ディレクティブの使用を開始できます。
+
+## Angular Text Highlight ディレクティブの使用
+
+次にテキストの様々な部分を強調表示するためにハイライトできる検索ボックスを作成します。Ignite UI for Angular の [InputGroup](input-group.md) コンポーネントは、一致のクリア、次の一致、前の一致へ移動するためのボタン、検索で大文字と小文字を区別を指定するボタンを追加します。また一致がいくつ見つかったかを示すラベルがあります。
 
 ```html
 <div class="search-container">
@@ -184,7 +220,7 @@ private find(increment: number) {
 <div class="divider"></div>
 
 ## 複数要素で検索
-[`igxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) は、1 つのアクティブ ハイライトを共有する複数の要素内を検索できます。複数の TextHighlight ディレクティブで同じ [`groupName`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#groupname) 値を持つことにより可能になります。サンプルの設定は、前のサンプルの検索ボックスを再利用しますが、今回は div 要素を 2 つ追加します。 [`column`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#column) と [`row`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#row) 入力は複数要素がある場合に便利で、この場合は 2 つ目の div に異なる行値があります。
+[`igxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) は、1 つのアクティブ ハイライトを共有する複数の要素内を検索できます。複数の TextHighlight ディレクティブで同じ [`groupName`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#groupName) 値を持つことにより可能になります。サンプルの設定は、前のサンプルの検索ボックスを再利用しますが、今回は div 要素を 2 つ追加します。[`column`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#column) と [`row`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#row) 入力は複数要素がある場合に便利で、この場合は 2 つ目の div に異なる行値があります。
 
 ```html
 <div igxTextHighlight
@@ -279,7 +315,7 @@ private find(increment: number) {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`highlight-theme`]({environment:sassApiUrl}/index.html#function-highlight-theme) を拡張する新しいテーマを作成し、`$resting-background`、`$resting-color`、`$active-background` と `$active-color`パラメーターを受け取る方法です。
+最も簡単な方法は、[`highlight-theme`]({environment:sassApiUrl}/index.html#function-highlight-theme) を拡張する新しいテーマを作成し、`$resting-background`、`$resting-color`、`$active-background` と `$active-color` パラメーターを受け取る方法です。
 
 ```scss
 $dark-highlight: highlight-theme(
@@ -368,6 +404,7 @@ $dark-highlight: highlight-theme(
 
 
 <code-view style="height: 300px;" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-style" >
 </code-view>

@@ -39,6 +39,7 @@ _language: ja
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
 
 <p class="highlight">
+
 Excel Exporter サービスは @@igxName のデータを MS Excel へエクスポートできます。エクスポート機能は、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) クラスでカプセル化され、MS Excel テーブル形式でデータをエクスポートします。この形式ではフィルタリングやソートなどの機能が使用でき、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) の [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) メソッドを呼び出して最初の引数として @@igxName コンポーネントを渡し、グリッドを簡単にエクスポートします。
 </p>
 
@@ -47,6 +48,7 @@ Excel Exporter サービスは @@igxName のデータを MS Excel へエクス�
 @@if (igxName === 'IgxHierarchicalGrid') {
 
 <p class="highlight">
+
   Excel Exporter サービスは @@igxName のデータを MS Excel へエクスポートできます。エクスポート機能は、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) クラスでカプセル化されています。プロセスをトリガーするには、[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) の [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) メソッドを呼び出し、最初の引数として @@igxName コンポーネントを渡す必要があります。
 </p>
 
@@ -268,6 +270,7 @@ this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions('
 |制限|説明|
 |--- |--- |
 |ワークシートの最大サイズ|Excel でサポートされているワークシートの最大サイズは、1,048,576 行 x 16,384 列です。|
+|セルのスタイル設定|IgxExcelExporterService は、セル コンポーネントに適用されたカスタム スタイルのエクスポートをサポートしていません。このような場合は、[Excel Library](..\excel-library.md) を使用することをお勧めします。|
 }
 
 @@if (igxName === 'IgxTreeGrid') {
@@ -275,6 +278,7 @@ this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions('
 |--- |--- |
 |階層レベル|Excel エクスポーター サービスは、最大 8 レベルの階層を作成できます。|
 |ワークシートの最大サイズ|Excel でサポートされているワークシートの最大サイズは、1,048,576 行 x 16,384 列です。|
+|セルのスタイル設定|IgxExcelExporterService は、セル コンポーネントに適用されたカスタム スタイルのエクスポートをサポートしていません。このような場合は、[Excel Library](..\excel-library.md) を使用することをお勧めします。|
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -283,12 +287,14 @@ this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions('
 |階層レベル|Excel エクスポーター サービスは、最大 8 レベルの階層を作成できます。|
 |ワークシートの最大サイズ|Excel でサポートされているワークシートの最大サイズは、1,048,576 行 x 16,384 列です。|
 |ピン固定列された列のエクスポート|エクスポートされた Excel ファイルでは、ピン固定列は固定されませんが、グリッドに表示されるのと同じ順序で表示されます。|
+|セルのスタイル設定|IgxExcelExporterService は、セル コンポーネントに適用されたカスタム スタイルのエクスポートをサポートしていません。このような場合は、[Excel Library](..\excel-library.md) を使用することをお勧めします。|
 }
 
 @@if (igxName === 'IgxPivotGrid') {
 |制限|説明|
 |--- |--- |
 |ワークシートの最大サイズ|Excel でサポートされているワークシートの最大サイズは、1,048,576 行 x 16,384 列です。|
+|セルのスタイル設定|IgxExcelExporterService は、セル コンポーネントに適用されたカスタム スタイルのエクスポートをサポートしていません。このような場合は、[Excel Library](..\excel-library.md) を使用することをお勧めします。|
 }
 
 ## API リファレンス

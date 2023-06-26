@@ -1,13 +1,18 @@
 ---
-title: Angular Card Component – Ignite UI for Angular | Infragistics
-_description: Present users with dashboards and engaging text, images, icons or buttons as an entry point for detailed information with Ignite UI for Angular Card component.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Card component, Angular Card controls
+title: Angular Card Component – Ignite UI for Angular
+_description: With Angular Card component you can present users with dashboards and engaging text, images, icons or buttons as an entry point for detailed information. Try it now.
+_keywords: Angular Card component, Angular Card control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
 ---
 
-# Card
-<p class="highlight">The Ignite UI for Angular [`IgxCardComponent`]({environment:angularApiUrl}/classes/igxcardcomponent.html) displays text, images, icons, and buttons in a visually rich presentation that can serve as an entry point to more detailed information. Cards can be used to create a multimedia dashboard. The Card component supports pagination using the same component as the Ignite UI for Angular Grid, with some custom coding required.</p>
+# Angular Card Component Overview
+<p class="highlight">
+Angular Card represents a flexible container that has different elements like title text, descriptions, image styles, call to action buttons, links and others. In order to represent a given scenario/content in the best possible way, it offers various display options, headers, footers, as well as background colors, animations, and more.  
+
+This lightweight Angular Card component is used for creating all sorts of cards, some of them can be – business cards, material flipping cards, stacked cards.
+</p>
 
 ## Angular Card Example
+Below you can see a basic sample of a well-crafted Angular Material Card with main card sections like imge, title, subtitle, primary card content, container for a button. 
 
 <code-view style="height: 500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -16,13 +21,17 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <div class="divider--half"></div>
 
-## Usage
+## Getting Started with Ignite UI for Angular Card
 
-Cards allow you to easily display content composed of different types of objects or similar objects whose size and supported actions can vary.
+To get started with the Ignite UI for Angular Card component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
-### Getting Started
+```cmd
+ng add igniteui-angular
+```
 
-Import the `IgxCardModule` inside our **app.module.ts** file:
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxCardModule` inside your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -38,6 +47,63 @@ import { IgxCardModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
+Alternatively, as of `16.0.0` you can import the `IgxCardComponent` as a standalone dependency, or use the [`IGX_CARD_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/card/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+import { IGX_CARD_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_CARD_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-card>
+        <igx-card-media height="196px">
+            <img [src]="https://images.unsplash.com/photo-1518235506717-e1ed3306a89b?ixlib=rb-1.2.1&auto=format&fit=crop&w=640&q=50">
+        </igx-card-media>
+
+        <igx-card-header>
+            <h3 igxCardHeaderTitle>New York</h3>
+            <h5 igxCardHeaderSubtitle>City in New York</h5>
+        </igx-card-header>
+
+        <igx-card-content>
+            <p>New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers.</p>
+        </igx-card-content>
+
+        <igx-card-actions>
+            <button igxButton igxRipple>Read More</button>
+            <button igxButton="icon" igxRipple igxRippleCentered="true">
+                <igx-icon>favorite</igx-icon>
+            </button>
+            <button igxButton="icon" igxRipple igxRippleCentered="true">
+                <igx-icon>share</igx-icon>
+            </button>
+        </igx-card-actions>
+    </igx-card>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_CARD_DIRECTIVES]
+    /* or imports: [IgxCardComponent,
+        IgxCardHeaderComponent,
+        IgxCardMediaDirective,
+        IgxCardContentDirective,
+        IgxCardActionsComponent,
+        IgxCardFooterDirective,
+        IgxCardHeaderTitleDirective,
+        IgxCardHeaderSubtitleDirective,
+        IgxCardThumbnailDirective,
+        IgxButtonDirective,
+        IgxRippleDirective] */
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Card module or directives imported, you can start using the `igx-card` component.
+
+## Using the Angular Card Component
 Then to represent the demo card template we can add the following code.
 
 ```html
@@ -71,7 +137,7 @@ Then to represent the demo card template we can add the following code.
 
 You will notice a few things above. First when we want to _tag_ an elements as a header title, like the `h3` heading, we place it between the `igx-card-header` tags and attach the `igxCardHeaderTitle` directive to the element. Conversely, if we wanted to make another heading element a `subtitle` we would attach the `igxCardHeaderSubtitle` to it.
 
-Any image or video we want to show in the card, we wrap inside the `igx-card-media` tags. The `igx-card-media` allows us to size the content placed inside via the `width` and `height` attributes. In the example above we provided just `height`, which would leave the width to `auto`, thus allowing the image to stretch across the entire card surface, while maintaining the set height.
+Any image or video we want to show in the Angular Card, we wrap inside the `igx-card-media` tags. The `igx-card-media` allows us to size the content placed inside via the `width` and `height` attributes. In the example above we provided just `height`, which would leave the width to `auto`, thus allowing the image to stretch across the entire card surface, while maintaining the set height.
 
 You can place anything inside the `igx-card-content` tags. Usually text goes there.
 
@@ -124,7 +190,7 @@ or, even this:
 ### Outlined cards
 The card has a `type` attribute you can set to either `default` (set automatically if omitted), or `outlined`. The `outlined` type removes any shadows from the card, replacing them with a thin border to separate the card from the background.
 
-### Horizontal Layout
+### Angular Card Horizontal Layout
 
 By default all sections of the card (header, content, media, actions) are layed out vertically. This is nice when we have a lot of vertical space. Say we wanted to lay out all the sections in the card horizontally. We can use the `horizontal` attribute of the card to set its layout.
 
@@ -232,9 +298,9 @@ Below is an example showing how you can create a semi-horizontal card, where we 
 </code-view>
 
 
-### Card Actions
+### Angular Card Actions
 
-The card actions area allows additional configuration to what we have already mentioned.
+The Angular Material Card actions area allows additional configuration to what we have already mentioned.
 
 You can reverse order of the flat buttons and the button icons using the `reverse` attribute.
 
@@ -322,17 +388,18 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 }
 ```
 
-### Demo
+### Angular Card Demo
 
 
 <code-view style="height: 486px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/card-styling-sample" >
 </code-view>
 
 
 ### Summary
-In this article we covered a lot of ground with the card component. First, we created a very simple card with text content only. Then added some images to make the card a bit more appealing. We used some additional Ignite UI for Angular components inside our card, like avatars, buttons and icons, to enrich the experience and add some functionality. And finally, we changed the card's theme by setting some exposed theme colors, creating custom palettes and extending schemas. 
+In this article we covered a lot of ground with the card component. First, we created a very simple card with text content only. Then added some images to make the card a bit more appealing. We used some additional Ignite UI for Angular components inside our card, like Avatar Angular Material, buttons and icons, to enrich the experience and add some functionality. And finally, we changed the card's theme by setting some exposed theme colors, creating custom palettes and extending schemas. 
 The card component is capable of displaying more different layouts worth exploring in the Card Demo in the beginning of this article.
 
 ## API and Style References

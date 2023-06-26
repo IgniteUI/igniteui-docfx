@@ -1,14 +1,17 @@
 ---
 title: Angular Calendar Component – Ignite UI for Angular 
 _description: With Angular Calendar Component, users can create intuitive calendars for applications to display date information using three different selection modes. Try it Now
-_keywords: angular calendar, angular component, ignite ui for angular
+_keywords: angular calendar, angular calendar component, angular UI components, angular UI library, ignite ui for angular
 ---
 
 # Angular Calendar Component Overview
 
 Angular Calendar is a UI component used for displaying dates and days in an app. Supporting different features, it enables users to easily manage calendar functionalities, drag and create events in a calendar, navigate to a preferred date in it, and show events in an Angular calendar month view, week view, or day view in a single click.
 
-<p class="highlight">The Ignite UI for Angular Calendar component, developed as a native [Angular component](https://angular.io/guide/architecture#components), provides an easy and intuitive ways to display date information, enable dates or apply Angular calendar disable dates mode. Users can choose from three different selection modes - single selection, multi selection or range selection.</p>
+<p class="highlight">
+
+The Ignite UI for Angular Calendar component, developed as a native [Angular component](https://angular.io/guide/architecture#components), provides an easy and intuitive ways to display date information, enable dates or apply Angular calendar disable dates mode. Users can choose from three different selection modes - single selection, multi selection or range selection.
+</p>
 
 ## Angular Calendar Example
 
@@ -22,13 +25,20 @@ We created the following Angular Calendar example using the Ignite UI for Angula
 </code-view>
 
 
-## How to Create A Calendar In Angular With Ignite UI
+## Getting Started with Ignite UI for Angular Calendar
 
-### First Steps
+To get started with the Ignite UI for Angular Calendar component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
-To get started with the Calendar component, first you need to import the `IgxCalendarModule` in the **app.module.ts** file.
+```cmd
+ng add igniteui-angular
+```
 
-Note that the [**IgxCalendar**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) also depends on the **BrowserAnimationsModule** and the **HammerModule** for touch interactions, so they need to be added to the AppModule as well:
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxCalendarModule` in your **app.module.ts** file.
+
+>[!NOTE]
+> The [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) also depends on the [`BrowserAnimationsModule`](https://angular.io/api/platform-browser/animations/BrowserAnimationsModule) and the [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) for touch interactions, so they need to be added to the AppModule as well:
 
 ```typescript
 // app.module.ts
@@ -46,11 +56,34 @@ import { IgxCalendarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-> [!WARNING]
+Alternatively, as of `16.0.0` you can import the `IgxCalendarComponent` as a standalone dependency, or use the [`IGX_CALENDAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/calendar/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+import { HammerModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { IGX_CALENDAR_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_CALENDAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<igx-calendar></igx-calendar>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [BrowserAnimationsModule, HammerModule, IGX_CALENDAR_DIRECTIVES]
+    /* or imports: [BrowserAnimationsModule, HammerModule, IgxCalendarComponent] */
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Calendar module or directives imported, you can start using the `igx-calendar` component.
+
+> [!NOTE]
 > The [`IgxCalendarComponent`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) uses the [Intl Web API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat) for localization and formatting of dates.
 Consider using [appropriate polyfills](https://github.com/andyearnshaw/Intl.js/) if your target platform does not support them.
 
-## Angular Calendar Examples with Different Selection Modes 
+## Using the Angular Calendar
 
 ### Angular Single Selection Calendar
 
@@ -101,7 +134,7 @@ Following the same approach, we can switch to range selection mode:
 
 ### Localization and Formatting
 
-Due to their very nature, localization and formatting are essential to any calendar. In the `IgxCalendarComponent` those are controlled and customized through the following properties - [`locale`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#locale), [`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatoptions), [`formatViews`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatviews), [`weekStart`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#weekstart).
+Due to their very nature, localization and formatting are essential to any calendar. In the `IgxCalendarComponent` those are controlled and customized through the following properties - [`locale`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#locale), [`formatOptions`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatoptions), [`formatViews`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#formatViews), [`weekStart`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#weekStart).
 
 Let's go ahead and try those along with other customizations from the `IgxCalendarComponent API`. First thing we need to set is the `weekStart`, which controls the starting day of the week. It defaults to 0, which corresponds to Sunday, so we will set a value of 1 for Monday. In the markup below we are also binding the `formatOptions` and `formatViews` properties to customize the display formatting. Finally, we are binding the `locale` property to a value, based on the user's location choice:
 
@@ -147,7 +180,7 @@ If everything went well, we should now have a calendar with customized dates dis
 
 
 ### How to Disable Dates In Angular Calendar 
-This section demonstrates the usage of [`disabledDates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#disableddates) functionality. For this purpose, different single dates or ranges can be added to an array and then passed to the `disabledDates` descriptor.
+This section demonstrates the usage of [`disabledDates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#disabledDates) functionality. For this purpose, different single dates or ranges can be added to an array and then passed to the `disabledDates` descriptor.
 
 The [`DateRangeType`]({environment:angularApiUrl}/enums/daterangetype.html) is used to specify a range that is going to be disabled.
 
@@ -178,9 +211,9 @@ These configurions should have the following result:
 
 
 ### Special dates
-The [`specialDates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialdates) feature is using almost the same configuration principles as the `disabledDates`. The ability to select and focus `specialDates` is what differs them from the `disabled` ones.
+The [`specialDates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialDates) feature is using almost the same configuration principles as the `disabledDates`. The ability to select and focus `specialDates` is what differs them from the `disabled` ones.
 
-Let's add some `specialDates` to our `igxCalendar`. In order to do this, we have to create a [`DateRangeDescriptor`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html) item of type [`DateRangeType.Specific`]({environment:angularApiUrl}/enums/daterangetype.html#specific) and pass an array of dates as a [`dateRange`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html#daterange):
+Let's add some `specialDates` to our `igxCalendar`. In order to do this, we have to create a [`DateRangeDescriptor`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html) item of type [`DateRangeType.Specific`]({environment:angularApiUrl}/enums/daterangetype.html#specific) and pass an array of dates as a [`dateRange`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html#dateRange):
 
 ```typescript
 export class CalendarSample7Component {
@@ -249,8 +282,8 @@ The following demo illustrates a calendar with enabled week numbers:
 ## Calendar Events
 Let's explore the events emitted by the calendar:
 - [`selected`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selected) - emitted when selecting date(s) in the calendar.
-- [`viewDateChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#viewdatechanged) - emitted every time when the presented month/year is changed - for example after navigating to the `next` or `previous` month.
-- [`activeViewChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#activeviewchanged) - emitted after the active view is changed - for example after the user has clicked on the `month` or `year` section in the header.
+- [`viewDateChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#viewDateChanged) - emitted every time when the presented month/year is changed - for example after navigating to the `next` or `previous` month.
+- [`activeViewChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#activeViewChanged) - emitted after the active view is changed - for example after the user has clicked on the `month` or `year` section in the header.
 
 ```html
 <!-- app.component.html -->
@@ -369,7 +402,7 @@ When an `year` inside the decade view is focused, use:
 >Following version 8.2.0, keyboard navigation will not focus days that are outside of current month, but will rather change the month in view.
 
 ## Multi View Calendar
-Multiview calendar supports all three types of selection. Use the [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#monthsviewnumber) input to set the number of displayed months, which will be shown horizontally in a flex container. There is no limit on the max value set. While using a multi view calendar, you may want to hide the days that do not belong to the current month. You are able to do it with the [`hideOutsideDays`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#hideoutsidedays) property.  Keyboard navigation moves to next/previous months when those are in view.
+Multiview calendar supports all three types of selection. Use the [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#monthsViewNumber) input to set the number of displayed months, which will be shown horizontally in a flex container. There is no limit on the max value set. While using a multi view calendar, you may want to hide the days that do not belong to the current month. You are able to do it with the [`hideOutsideDays`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#hideOutsideDays) property.  Keyboard navigation moves to next/previous months when those are in view.
 
 
 <code-view style="height: 540px" 
@@ -434,6 +467,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 
 
 <code-view style="height:500px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-styling-sample" >
 </code-view>

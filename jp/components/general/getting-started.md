@@ -5,7 +5,7 @@ _keywords: ignite ui for angular, 作業の開始, angular コンポーネント
 _language: ja
 ---
 
-# Ignite UI で作業を開始
+# Ignite UI を使用した作業の開始
 
 [`Ignite UI for Angular`](https://github.com/IgniteUI/igniteui-angular) は、マテリアルベース UI ウィジェット、コンポーネント & Sketch UI キットでインフラジスティックス Angular のディレクティブをサポートします。デスクトップ ブラウザー向けアプリ、高パフォーマンスな HTML5 や JavaScript アプリ、Google の Angular フレームワークを対象にしたプログレッシブ ウェブアプリ (PWA) を作成できます。
 
@@ -58,7 +58,7 @@ ng add igniteui-angular
 >[!NOTE]
 > 上記のコマンドで Ignite UI for Angular のトライアル版をインストールすることに注意してください。
 
-インストール時に IE、Edge、および Safari のポリフィルを有効にするかどうかのプロンプトが表示されます。 これにより、プロジェクトに `web-animations-js` パッケージがインストールされます。これは、アプリケーションとこれらのブラウザーのいずれかで `AnimationBuilder` を使用する場合に必要です。ブラウザーで HTML 要素のスタイルをリセットする CSS ライブラリを追加することもできます。`minireset.css` がアプリケーションにインストールされます。
+インストール時に IE、Edge、および Safari のポリフィルを有効にするかどうかのプロンプトが表示されます。これにより、プロジェクトに `web-animations-js` パッケージがインストールされます。これは、アプリケーションとこれらのブラウザーのいずれかで `AnimationBuilder` を使用する場合に必要です。ブラウザーで HTML 要素のスタイルをリセットする CSS ライブラリを追加することもできます。`minireset.css` がアプリケーションにインストールされます。
 
 **ライセンス版の Ignite UI for Angular パッケージ**の使用を開始する場合、[Schematics および Ignite UI CLI を使用したパッケージのアップグレードガイド](ignite-ui-licensing.md#angular-schematics-または-ignite-ui-cli-を使用したパッケージのアップグレード)に従うことをお勧めします。
 

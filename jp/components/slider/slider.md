@@ -1,12 +1,13 @@
 ---
 title: Angular Slider |  Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular の Angular Slider でつまみラックを使用して、特定の範囲で選択を構成する方法を紹介します。
-_keywords: angular slider, igniteui for angular, インフラジスティックス
+_keywords: angular slider, angular sliderコンポーネント, angular range slider コンポーネント, angular range input コンポーネント, angular ui コンポーネント, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 
-# Slider 概要と構成
+# Angular Slider (スライダー) コンポーネントの概要
 <p class="highlight">Ignite UI for Angular Slider は、つまみをトラックで移動して指定した範囲内で値を選択できるフォーム コンポーネントです。トラックは連続またはステップとして定義でき、スライダーは単一値または範囲 (下限値と上限値) スライダーのタイプを選択できるように構成できます。</p>
+
 <div class="divider"></div>
 
 ## Angular Slider の例
@@ -18,27 +19,62 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 使用方法
+## Ignite UI for Angular Slider を使用した作業の開始
+
+Ignite UI for Angular Slider コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
+
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](../general/getting-started.md)」 トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxSliderModule` をインポートします。
 
 >[!WARNING]
 >**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**.
 
-Slider コンポーネントを初期化するには、**IgxSliderModule** を **app.module.ts** ファイルにインポートします。
-
 ```typescript
 // app.module.ts
 
-...
+import { HammerModule } from '@angular/platform-browser';
 import { IgxSliderModule } from 'igniteui-angular';
 // import { IgxSliderModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
-    imports: [..., IgxSliderModule],
+    imports: [..., IgxSliderModule, HammerModule],
     ...
 })
 export class AppModule {}
 ```
+
+あるいは、`16.0.0` 以降、`IgxSliderComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_SLIDER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/slider/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+
+```typescript
+// home.component.ts
+
+import { HammerModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { IGX_SLIDER_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_SLIDER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<igx-slider [minValue]="0" [maxValue]="100" [step]="10" [(ngModel)]="task.completion"></igx-slider>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_SLIDER_DIRECTIVES, FormsModule, HammerModule]
+    /* or imports: [IgxSliderComponent, FormsModule, HammerModule] */
+})
+export class HomeComponent {
+    public task: Task;
+}
+```
+
+Ignite UI for Angular Slider モジュールまたはディレクティブをインポートしたので、`igx-slider` コンポーネントの使用を開始できます。
+
+## Angular Slider の使用
 
 ### 不連続スライダー
 デフォルトで Slider コンポーネントは不連続タイプに設定されています。不連続スライダーで現在値は数値ラベル (バブル) で可視化されます。バブルはスライダーのつまみにカーソルを合わせると表示されます。
@@ -88,7 +124,7 @@ export class SampleComponent {
 
 
 ### 連続スライダー
-最初に、[`continuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#continuous) 入力を true に設定し、スライダー タイプを指定します。次に、[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) および [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue) プロパティを設定し、最小値および最大値を定義します。 
+最初に、[`continuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#continuous) 入力を true に設定し、スライダー タイプを指定します。次に、[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minValue) および [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxValue) プロパティを設定し、最小値および最大値を定義します。 
 
 > [!NOTE]
 > 連続スライダーには、トラック上にステップ インジケーターがなく、操作中に表示されるつまみラベルがありません。
@@ -183,8 +219,8 @@ export class SampleComponent {
 > RANGE タイプのスライダーを使用する場合、`ngModel` へのバインディングはスライダーからモデルを更新する方向でのみ動作します。両方の値に双方向バインディングを使用するには、`lowerValue` と `upperValue` バインディングを利用できます。
 
 
-最大値および最小値に近い値が適切でない場合があります。[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue) と [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue) の設定以外に、ユーザー選択を更に制限するための範囲も設定できます。 
-これは、[`lowerBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerbound) および [`upperBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperbound) プロパティで設定します。この設定により、0 ～ 100 および 900 ～ 1000 の範囲でつまみを移動できなくなります。
+最大値および最小値に近い値が適切でない場合があります。[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minValue) と [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxValue) の設定以外に、ユーザー選択を更に制限するための範囲も設定できます。 
+これは、[`lowerBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerBound) および [`upperBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperBound) プロパティで設定します。この設定により、0 ～ 100 および 900 ～ 1000 の範囲でつまみを移動できなくなります。
 
 ```html
 <!--sample.component.html-->
@@ -215,9 +251,9 @@ export class SampleComponent {
 このルールに対応する定義ができたら、`labels` 入力プロパティに渡す準備ができました。これは、データを`トラック`全体に均等に分散させることによって処理します。ラベル値は、コレクション内で定義したすべての初期値を表します。それらは、[lowerLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerLabel) または [upperLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperLabel) のいずれかを要求することによって、API を通じていつでもアクセスできます。
 
 >[!NOTE]
-> [`labelsView`]({environment:angularApiUrl}/classes/igxslidercomponent.html#labelsviewenabled) が有効になっているときは、[`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxvalue)、[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minvalue)、[`step`]({environment:angularApiUrl}/classes/igxslidercomponent.html#step) の入力が制御されることに注意してください。 
+> [`labelsView`]({environment:angularApiUrl}/classes/igxslidercomponent.html#labelsView) が有効になっているときは、[`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxValue)、[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minValue)、[`step`]({environment:angularApiUrl}/classes/igxslidercomponent.html#step) の入力が制御されることに注意してください。 
 
-もう 1 つの重要な要素は、`labelsView` が有効になっているときに`スライダー`が更新プロセスを処理する方法です。
+もう 1 つの重要な要素は、`labelsView` が有効になっているときに `slider` が更新プロセスを処理する方法です。
 これは単にコレクションの`インデックス`で動作します。それぞれ、`value`、`lowerBound` および `upperBound` プロパティがフォロー/設定することでトラックを制御することを意味します (`インデックス`)。
 
 ```html
@@ -245,7 +281,7 @@ public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
 </code-view>
 
 
-上記のサンプルからわかるように、`境界`の設定はまだ有効な操作です。[`lowerBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerbound) と [`upperBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperbound) に対応すると、スライドできる範囲が制限されます。
+上記のサンプルからわかるように、`境界`の設定はまだ有効な操作です。[`lowerBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerBound) と [`upperBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperBound) に対応すると、スライドできる範囲が制限されます。
 
 ### ラベルのテンプレート化
 上記では、[igxSliderThumbFrom]({environment:angularApiUrl}/interfaces/igxSliderThumbFrom.html) ディレクティブと [igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) ディレクティブの両方を使用して、カスタム `label` テンプレートを提供する方法を意図的に示しました。直感的に [igxSliderThumbFrom]({environment:angularApiUrl}/interfaces/igxSliderThumbFrom.html) は [lowerLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerLabel)に対応し、[igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) は [igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) に対応すると想定できます。 <br>
@@ -264,9 +300,9 @@ public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
 **Slider 目盛り**は、特定の時間枠、曜日など、データ可視化を簡単に行うことができます。この新しい機能は、データの表示範囲を確認するための Angular Slider の操作が必要なくなります。**目盛り**と**目盛り ラベル**の配置と方向の制御に関して、高い柔軟性があります。**目盛り**の**オン/オフ**を切り替えたり、**プライマリ**、**セカンダリ**、または**その両方**を選択したりできます。さらに、この機能は、**プライマリ目盛りラベル**、**セカンダリ目盛りラベル**、またはその両方を**オン/オフ**にする方法を提供します。**目盛りラベル**は**水平**から**垂直** (**上から下** (90) または**下から上** (-90)) に向きを変更することもできます。
 
 ### 目盛りの有効化
-スライダーの目盛りを有効にするには、[`showTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#showticks) を **true** に設定します。    
-[`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryticks) を使用してプライマリ目盛りの数を設定します。
-[`SecondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticks) を使用してセカンダリ目盛りの数を設定します。
+スライダーの目盛りを有効にするには、[`showTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#showTicks) を **true** に設定します。
+[`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryTicks) を使用してプライマリ目盛りの数を設定します。
+[`SecondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryTicks) を使用してセカンダリ目盛りの数を設定します。
 
 ```html
 <!--sample.component.html-->
@@ -297,7 +333,7 @@ public type = SliderType.RANGE;
 
 
 ### ラベルの向きと表示状態
-以下のサンプルでは、[`secondaryTickLabels`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticklabels) を **false** に設定して、すべての**セカンダリ ラベル**を無効にします。  
+以下のサンプルでは、[`secondaryTickLabels`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryTickLabels) を **false** に設定して、すべての**セカンダリ ラベル**を無効にします。  
 
 ```html
 <igx-slider
@@ -345,7 +381,7 @@ public type = SliderType.RANGE;
 </div>
 ```
 
-位置の変更は [`ticksOrientation`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksorientation) 入力から行われ、**Bottom** (デフォルト) から **Mirror** に変更されました。 
+位置の変更は [`ticksOrientation`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksOrientation) 入力から行われ、**Bottom** (デフォルト) から **Mirror** に変更されました。
 これが**目盛り**の外観に反映され、スライダーの上部または下部に表示します。 
 
 ```typescript
@@ -362,7 +398,7 @@ public type = SliderType.RANGE;
 
 
 > [!NOTE]
-> [`ticksOrientaion`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksorientation) が **Top** または **Mirror** に設定され、**目盛りラベル**が表示されている場合、**つまみラベル**は意図的に非表示になります。このようにして、ユーザー エクスペリエンスの低下と 2 つのラベルの重複を防止できます。
+> [`ticksOrientaion`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksOrientaion) が **Top** または **Mirror** に設定され、**目盛りラベル**が表示されている場合、**つまみラベル**は意図的に非表示になります。このようにして、ユーザー エクスペリエンスの低下と 2 つのラベルの重複を防止できます。
 
 ### ラベル ビューを含むスライダー目盛り
 この例では、目盛りラベルとつまみラベルがどのように一緒に機能するかを示します。
@@ -386,7 +422,7 @@ public type = SliderType.RANGE;
 </code-view>
 
 
-いずれにしても反映されないため、ここでは、[`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryticks) は設定されていません。コレクションの **長さ** が優先されます。これは、[`secondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryticks) を設定できないことを意味しません。すべての**セカンダリ目盛り**は、**ラベル**なしで空になります。
+いずれにしても反映されないため、ここでは、[`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryTicks) は設定されていません。コレクションの **長さ** が優先されます。これは、[`secondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryTicks) を設定できないことを意味しません。すべての**セカンダリ目盛り**は、**ラベル**なしで空になります。
 
 ### テンプレートのラベル
 最後に、**目盛りラベル**にカスタム テンプレートを提供する方法と、[`テンプレート コンテキスト`]({environment:angularApiUrl}/classes/igxtickscomponent.html#context) が提供するものを確認します。

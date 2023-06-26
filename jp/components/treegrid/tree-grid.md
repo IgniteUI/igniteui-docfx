@@ -1,20 +1,17 @@
 ---
 title: Angular Tree Grid | 最速の Angular Tree テーブル | インフラジスティックス
 _description: Ignite UI for Angular のツリー グリッドは、階層データまたはフラット データを簡単に表示および操作するために使用されます。コーディングをほとんど行わずにデータをバインドできます。無料でお試しください。
-_keywords: angular データ グリッド, igniteui for angular, インフラジスティックス
+_keywords: angular tree grid, angular tree table, angular hierarchical tree grid コンポーネント, angular tree table コンポーネント, angular UI コンポーネント, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 
-# Angular ツリー グリッド 概要と構成
+# Angular Tree Grid (ツリー グリッド) コンポーネントの概要
 
-Ignite UI for Angular Tree Grid は、階層データまたはフラットデータを簡単に表示および操作できます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイル フィルタリング、ソート、ページング、テンプレート、列移動などの豊富な機能を提供します。Material Table ベースの UI ツリー グリッドにより、表形式のデータの表示がさらに簡単できれいになりました。
-
+Ignite UI for Angular Tree Grid は、階層データまたはフラットな自己参照データを表示および操作できます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイルのフィルタリング、ソート、ページング、グループ化、テンプレート化、列の移動、列のピン固定、Excel および CSV へのエクスポートなどの豊富な機能セットを提供します。
 
 ## Angular ツリー グリッドの例
 
-この例では、ユーザーが階層データまたはフラット データを操作する方法を確認できます。フィルタリングとソートのオプション、ピン固定と非表示、行の選択、Excel と csv へのエクスポート、[スパークライン](../sparkline.md)コンポーネントを使用したセル テンプレートが含まれています。さらに、[Angular 改ページ](paging.md)を使用したカスタム改ページの例を見ることができます。
-
-
+In this example, you can see how users can display hierarchical data.フィルタリングとソートのオプション、ピン固定と非表示、行の選択、Excel と csv へのエクスポート、[スパークライン](../sparkline.md)コンポーネントを使用したセル テンプレートが含まれています。さらに、[Angular 改ページ](paging.md)を使用したカスタム改ページの例を見ることができます。
 
 <code-view style="height:850px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
@@ -23,15 +20,17 @@ Ignite UI for Angular Tree Grid は、階層データまたはフラットデー
 
 <div class="divider--half"></div>
 
-## Ignite UI for Angular Tree Grid で作業を開始
-ツリー グリッドを初期化するには、以下のコマンドを実行して Ignite UI for Angular をインストールする必要があります。
+## Ignite UI for Angular Tree Grid を使用した作業の開始
+
+Ignite UI for Angular Tree Grid コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
-Ignite UI for Angular については、[はじめに](../general/getting-started.md)トピックををご覧ください。
 
-ツリー グリッドが `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxTreeGridModule` をインポートする必要があります。
+Ignite UI for Angular については、[はじめに](../general/getting-started.md)トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxTreeGridModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -49,7 +48,30 @@ import { IgxTreeGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-## 使用方法
+あるいは、`16.0.0` 以降、`IgxTreeGridComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_TREE_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/tree-grid/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+
+```typescript
+// home.component.ts
+
+import { IGX_TREE_GRID_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_TREE_GRID_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<igx-tree-grid [data]="data"></igx-tree-grid>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_TREE_GRID_DIRECTIVES]
+    /* or imports: [IgxTreeGridComponent] */
+})
+export class HomeComponent {
+    public data: Employee [];
+}
+```
+
+Ignite UI for Angular Tree Grid モジュールまたはディレクティブをインポートしたので、`igx-tree-grid` コンポーネントの使用を開始できます。
+
+## Angular Tree Grid の使用
 
 >[!NOTE]
 >**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**.
@@ -62,14 +84,14 @@ export class AppModule {}
 ツリー グリッド階層の構築に使用するオプション (子コレクションまたは主キーまたは外部キー) にかかわらず、ツリー グリッドの行は 2 タイプのセルで構成されます。
 
 - [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) - 値を含む標準セル。
-- [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) - セル行のレベルに基づいた値、インジケーターの展開/縮小、インデント div 要素を含むツリー セル。インナー [`treeRow`]({environment:angularApiUrl}/classes/igxtreegridrow.html#treerow) の [`level`]({environment:angularApiUrl}/interfaces/itreegridrecord.html#level) プロパティでアクセスできる行コンポーネント レベル。
+- [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) - セル行のレベルに基づいた値、インジケーターの展開/縮小、インデント div 要素を含むツリー セル。インナー [`treeRow`]({environment:angularApiUrl}/classes/igxtreegridrow.html#treeRow) の [`level`]({environment:angularApiUrl}/interfaces/itreegridrecord.html#level) プロパティでアクセスできる行コンポーネント レベル。
 
 > [!NOTE]
 > 各行にはツリー セルを 1 つのみ含むことができますが、標準セルは複数含むことが可能です。
 
 ### 初期展開時の深さ
 
-初期時のツリーグリッドは、すべてのノード レベルを展開して表示します。この動作は、[`expansionDepth`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#expansiondepth) プロパティを使用して設定できます。デフォルトの値は **Infinity** ですべてのノードが展開されます。初期時の展開の深さは、このプロパティを数値に設定して制御できます。たとえば、**0** はルート レベルのノードのみを表示し、**1** はルートレベルと子ノードを表示します。
+初期時のツリーグリッドは、すべてのノード レベルを展開して表示します。この動作は、[`expansionDepth`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#expansionDepth) プロパティを使用して設定できます。デフォルトの値は **Infinity** ですべてのノードが展開されます。初期時の展開の深さは、このプロパティを数値に設定して制御できます。たとえば、**0** はルート レベルのノードのみを表示し、**1** はルートレベルと子ノードを表示します。
 
 ### 子コレクション
 **child collection** オプションを使用して各データ オブジェクトは子コレクションを含み、親データ オブジェクトとして同じタイプの項目で生成します。これによりツリー グリッドの各レコードがその子への直接の参照を持つことができます。元のデータソースを含むツリー グリッドの [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) プロパティが階層が定義されたコレクションになります。
@@ -116,7 +138,7 @@ export const EMPLOYEE_DATA = [
 </igx-tree-grid>
 ```
 
-IgxTreeGridComponent を階層にバインドするには、[`childDataKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#childdatakey) プロパティを各データ オブジェクトで使用される子コレクションの名前に設定します。このサンプルでは **Employees** コレクションです。
+IgxTreeGridComponent を階層にバインドするには、[`childDataKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#childDataKey) プロパティを各データ オブジェクトで使用される子コレクションの名前に設定します。このサンプルでは **Employees** コレクションです。
 更に自動列生成を無効にしてデータ オブジェクトの実際のプロパティとの一致を手動で定義します。**Employees** コレクションが階層で自動的に使用されるため、列定義に含める必要はありません。
 
 ```html
@@ -130,7 +152,7 @@ IgxTreeGridComponent を階層にバインドするには、[`childDataKey`]({en
 </igx-tree-grid>
 ```
 
-[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) を使用してツリー グリッドの行選択とページング機能を有効にします。
+[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) と [`paging`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#paging) プロパティを使用してツリー グリッドの行選択とページング機能を有効にします。
 最初の列に集計機能、各列にはフィルタリング、ソート、編集、サイズ変更機能を有効にします。
 
 ```html
@@ -180,9 +202,7 @@ IgxTreeGridComponent を階層にバインドするには、[`childDataKey`]({en
 ```typescript
 // treeGridSample.component.ts
 
-@Component({
-    ...
-})
+@Component({...})
 export class MyComponent implements OnInit {
 
     public data: any[];
@@ -209,7 +229,7 @@ export class MyComponent implements OnInit {
 
 上記サンプル データはすべてのレコードに ID (ParentID と Name、JobTitle、Age などの追加のプロパティ) があります。レコードの ID は一意である必要があります。ParentID は、親ノードの ID を含みます。行にツリーグリッドのいずれの行にも一致しない ParentID がある場合、行がルート行であることを意味します。
 
-親子関係は、ツリーグリッドの  [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey) と [`foreignKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#foreignkey) プロパティを使用して設定されます。
+親子関係は、ツリーグリッドの  [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primaryKey) と [`foreignKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#foreignKey) プロパティを使用して設定されます。
 
 上記フラット コレクションで定義されたデータを表示するツリーグリッドを設定する方法を示すコンポーネントのテンプレートです。
 
@@ -224,7 +244,7 @@ export class MyComponent implements OnInit {
 </igx-tree-grid>
 ```
 
-更に [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) プロパティを使用してツリーグリッドの行選択機能、および各列でフィルタリング、ソート、編集、移動、サイズ変更機能を有効にします。
+更に [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowSelection) プロパティを使用してツリーグリッドの行選択機能、および各列でフィルタリング、ソート、編集、移動、サイズ変更機能を有効にします。
 
 ```html
 <!--treeGridSample.component.html-->
@@ -249,8 +269,8 @@ export class MyComponent implements OnInit {
 **ツリー セル**のインデントは、フィルタリング、ソート、ページングなど他のツリーグリッド全体の機能で永続化されます。
 
 - **sorting** が列に適用された際にデータ行がレベルごとにソートされます。ルートレベルの行はそれぞれの子に関係なく個々にソートされます。各子コレクションは個々にソートされます。
-- 最初の列 ([`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) 0 を持つ列は、常にツリー列です。
-- 列ピン固定、列の非表示、列移動などの処理後に 0 の [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) で終わる列はツリー列になります。
+- 最初の列 ([`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleIndex) 0 を持つ列は、常にツリー列です。
+- 列ピン固定、列の非表示、列移動などの処理後に 0 の [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleIndex) で終わる列はツリー列になります。
 - エクスポートした Excel ワークシートは、ツリーグリッドでグループ化されるときにレコードをグループ化して階層に反映できます。すべてのレコードを展開した状態が保持および反映されます。
 - CSV レベルにエクスポートする際に展開した状態は無視されてすべてのデータがフラットでエクスポートされます。
 
@@ -379,6 +399,7 @@ $custom-theme: grid-theme(
 
 
 <code-view style="height:600px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-style" alt="Angular ツリー グリッド スタイル設定のデモ">
 </code-view>

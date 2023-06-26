@@ -16,23 +16,12 @@ The Ignite UI for Angular bullet graph component provides you with the ability t
 
 The following sample demonstrates how setting multiple properties on the same [`IgxBulletGraphComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html) can transform it to completely different bullet graph.
 
-<code-view style="height: 155px"
+<code-view style="height: 155px" alt="Angular Bullet Graph Example"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph-animation"
-           alt="Angular Bullet Graph Example"
-           github-src="gauges/bullet-graph/animation">
+                    iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph/animation"
+                                                 github-src="gauges/bullet-graph/animation">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/gauges/bullet-graph/animation?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/gauges/bullet-graph/animation?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -45,18 +34,16 @@ The features of the bullet graph include configurable orientation and direction,
 
 When installing the gauge package, the core package must also be installed.
 
-<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+```cmd
 npm install --save igniteui-angular-core
 npm install --save igniteui-angular-gauges
-</pre>
+```
 
 <!-- end: Angular, React, WebComponents -->
 
 ## Component Modules
 
 The [`IgxBulletGraphComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html) requires the following modules:
-
-<!-- Angular, React, WebComponents -->
 
 ```ts
 // app.module.ts
@@ -83,8 +70,8 @@ The following code walks through creating a bullet graph component, and configur
                    width="300"
                    minimumValue="5"
                    maximumValue="55"
-                   value = "35"
-                   targetValue = "43">
+                   value="35"
+                   targetValue="43">
         <igx-linear-graph-range startValue="0"
                                 endValue="15"
                                 brush="#828181">
@@ -128,22 +115,12 @@ Performance value is the primary measure displayed by the component and it is vi
 </igx-bullet-graph>
 ```
 
-<code-view style="height: 125px"
+<code-view style="height: 125px" alt="Angular bullet graph measures"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph-measures"
-           github-src="gauges/bullet-graph/measures">
+                    iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph/measures"
+                                                 github-src="gauges/bullet-graph/measures">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/gauges/bullet-graph/measures?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/gauges/bullet-graph/measures?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 ## Comparative Ranges
 
@@ -174,29 +151,19 @@ The ranges are visual elements that highlight a specified range of values on a s
 </igx-bullet-graph>
 ```
 
-<code-view style="height: 125px"
+<code-view style="height: 125px" alt="Angular bullet graph ranges"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph-ranges"
-           github-src="gauges/bullet-graph/ranges">
+                    iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph/ranges"
+                                                 github-src="gauges/bullet-graph/ranges">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/gauges/bullet-graph/ranges?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/gauges/bullet-graph/ranges?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 ## Tick Marks
 
 The tick marks serve as a visual division of the scale into intervals in order to increase the readability of the bullet graph.
 
--   Major tick marks – The major tick marks are used as primary delimiters on the scale. The frequency they appear at, their extents and style can be controlled by setting their corresponding properties.
--   Minor tick marks – The minor tick marks represent helper tick marks, which might be used to additionally improve the readability of the scale and can be customized in a way similar to the major ones.
+*   Major tick marks – The major tick marks are used as primary delimiters on the scale. The frequency they appear at, their extents and style can be controlled by setting their corresponding properties.
+*   Minor tick marks – The minor tick marks represent helper tick marks, which might be used to additionally improve the readability of the scale and can be customized in a way similar to the major ones.
 
 ```html
 <igx-bullet-graph
@@ -218,22 +185,12 @@ The tick marks serve as a visual division of the scale into intervals in order t
 </igx-bullet-graph>
 ```
 
-<code-view style="height: 125px"
+<code-view style="height: 125px" alt="Angular bullet graph tickmarks"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph-tickmarks"
-           github-src="gauges/bullet-graph/tickmarks">
+                    iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph/tickmarks"
+                                                 github-src="gauges/bullet-graph/tickmarks">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/gauges/bullet-graph/tickmarks?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/gauges/bullet-graph/tickmarks?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 ## Labels
 
@@ -253,22 +210,12 @@ The labels indicate the measures on the scale.
 </igx-bullet-graph>
 ```
 
-<code-view style="height: 125px"
+<code-view style="height: 125px" alt="Angular bullet graph labels"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph-labels"
-           github-src="gauges/bullet-graph/labels">
+                    iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph/labels"
+                                                 github-src="gauges/bullet-graph/labels">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/gauges/bullet-graph/labels?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/gauges/bullet-graph/labels?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 ## Backing
 
@@ -287,22 +234,12 @@ The backing element represents background and border of the bullet graph compone
 </igx-bullet-graph>
 ```
 
-<code-view style="height: 125px"
+<code-view style="height: 125px" alt="Angular bullet graph background"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph-background"
-           github-src="gauges/bullet-graph/background">
+                    iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph/background"
+                                                 github-src="gauges/bullet-graph/background">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/gauges/bullet-graph/background?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/gauges/bullet-graph/background?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 ## Scale
 
@@ -322,22 +259,12 @@ The scale is visual element that highlights the full range of values in the gaug
 </igx-bullet-graph>
 ```
 
-<code-view style="height: 125px"
+<code-view style="height: 125px" alt="Angular bullet graph scale"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph-scale"
-           github-src="gauges/bullet-graph/scale">
+                    iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph/scale"
+                                                 github-src="gauges/bullet-graph/scale">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/gauges/bullet-graph/scale?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/gauges/bullet-graph/scale?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 ## Summary
 
@@ -415,16 +342,16 @@ For your convenience, all above code snippets are combined into one code block b
 </igx-bullet-graph>
 ```
 
+## API References
+
+The following is a list of API members mentioned in the above sections:
+
+*   [`IgxBulletGraphComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html)
+*   [`IgxLinearGraphRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargraphrangecomponent.html)
+
 ## Additional Resources
 
 You can find more information about other types of gauges in these topics:
 
--   [Linear Gauge](linear-gauge.md)
--   [Radial Gauge](radial-gauge.md)
-
-## API Members
-
-The following is a list of API members mentioned in the above sections:
-
--   [`IgxBulletGraphComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxbulletgraphcomponent.html)
--   [`IgxLinearGraphRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargraphrangecomponent.html)
+*   [Linear Gauge](linear-gauge.md)
+*   [Radial Gauge](radial-gauge.md)

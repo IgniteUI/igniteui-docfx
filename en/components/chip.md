@@ -1,12 +1,12 @@
 ---
 title: Angular Chip Component – Ignite UI for Angular | Infragistics
 _description: The Ignite UI for Angular Chip component provide compact elements that represent an input, attribute, or action.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Chip, Chip Component, ChipArea, ChipArea Component
+_keywords: Angular Chip, Angular Chip Component, Angular Chip Area, Angular Chip Area Component, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular UI Components
 ---
 
-# Chip
+# Angular Chip Component Overview
 
-[The chip component]({environment:angularApiUrl}/classes/igxchipcomponent.html) is a visual element that displays information in an oval container. The component has various properties - it can be templated, deleted, and selected. Multiple chips can be reordered and visually connected to each other, using the chip area as a container.
+<p class="highlight">[The Angular Chip component]({environment:angularApiUrl}/classes/igxchipcomponent.html) is a visual element that displays information in an oval container. The component has various properties - it can be templated, deleted, and selected. Multiple chips can be reordered and visually connected to each other, using the chip area as a container.</p>
 
 ## Angular Chip Example
 
@@ -16,14 +16,22 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
            iframe-src="{environment:demosBaseUrl}/data-display/chip-simple" alt="Angular Chip Example">
 </code-view>
 
+<div class="divider--half"></div>
 
-## Usage
+## Getting Started with Ignite UI for Angular Chip
+To get started with the Ignite UI for Angular Chip component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
-The first step is to import the **IgxChipsModule** in the **app.module.ts** file:
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the **IgxChipsModule** in the **app.module.ts** file:
+
 ```typescript
 // app.module.ts
 
-...
 import { IgxChipsModule } from 'igniteui-angular';
 // import { IgxChipsModule } from '@infragistics/igniteui-angular'; for licensed package
 
@@ -34,6 +42,40 @@ import { IgxChipsModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
+
+Alternatively, as of `16.0.0` you can import the `IgxChipComponent` as a standalone dependency, or use the [`IGX_CHIPS_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/chips/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+import { IGX_CHIPS_DIRECTIVES } from 'igniteui-angular';
+import { NgFor } from '@angular/common';
+// import { IGX_CHIPS_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-chip *ngFor="let chip of chipList" [id]="chip.id">
+        {{chip.text}}
+    </igx-chip>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_CHIPS_DIRECTIVES, NgFor]
+})
+export class HomeComponent {
+    public chipList = [
+        { text: 'Country', id: '1', icon: 'place' },
+        { text: 'City', id: '2', icon: 'location_city' },
+        { text: 'Address', id: '3', icon: 'home' },
+        { text: 'Street', id: '4', icon: 'streetview' }
+    ];
+}
+```
+
+Now that you have the Ignite UI for Angular Chips module or directives imported, you can start using the `igx-chip` component.
+
+## Using the Angular Chip Component
 
 The [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.html) has an [`id`]({environment:angularApiUrl}/classes/igxchipcomponent.html#id) input property so that the different chip instances can be easily distinguished. If an [`id`]({environment:angularApiUrl}/classes/igxchipcomponent.html#id) is not provided, it will be automatically generated.
 
@@ -47,7 +89,7 @@ The [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.ht
 
 <img class="responsive-img"  src="../images/chip/selecting_default.gif" />
 
-Selection can be enabled by setting the [`selectable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectable) input property to `true`. When selecting a chip, the [`selectedChanging`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectedchanging) event is fired. It provides the new [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) value so you can get the new state and the original event in [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) that triggered the selection change. If this is not done through user interaction but instead is done by setting the [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) property programmatically, the [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalevent) argument has  a value of `null`.
+Selection can be enabled by setting the [`selectable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectable) input property to `true`. When selecting a chip, the [`selectedChanging`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectedChanging) event is fired. It provides the new [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) value so you can get the new state and the original event in [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalEvent) that triggered the selection change. If this is not done through user interaction but instead is done by setting the [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) property programmatically, the [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalEvent) argument has  a value of `null`.
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [selectable]="true">
@@ -175,7 +217,7 @@ You can template the `prefix` and the `suffix` of the chip, using the `IgxPrefix
 </igx-chip>
 ```
 
-You can customize the size of the chip, using the [`displayDensity`]({environment:angularApiUrl}/classes/igxchipcomponent.html#displaydensity) input. By default it is set to `comfortable`. It can also be set to `cosy` or `compact`, while everything inside the chip retains its relative positioning:
+You can customize the size of the chip, using the [`displayDensity`]({environment:angularApiUrl}/classes/igxchipcomponent.html#displayDensity) input. By default it is set to `comfortable`. It can also be set to `cosy` or `compact`, while everything inside the chip retains its relative positioning:
 
 <img class="responsive-img"  src="../images/chip/density.jpg" />
 
@@ -208,7 +250,7 @@ You can customize the `select icon`, using the [`selectIcon`]({environment:angul
 </ng-template>
 ```
 
-You can customize the `remove icon`, using the [`removeIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removeicon) input. It takes a value of type `TemplateRef` and renders it instead of the default remove icon.
+You can customize the `remove icon`, using the [`removeIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removeIcon) input. It takes a value of type `TemplateRef` and renders it instead of the default remove icon.
 
 <img class="responsive-img"  src="../images/chip/remove_icons.jpg" />
 
@@ -300,7 +342,7 @@ Here's an example of the chip area using IgxAvatar as prefix and custom icons fo
         class="chip-avatar-resized"
         igxPrefix
         [src]="chip.photo"
-        roundShape="true"
+        shape="circle"
         ></igx-avatar>
         {{chip.name}}
     </igx-chip>
@@ -449,6 +491,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 ### Demo
 
 <code-view style="height:100px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/chip-styling" >
 </code-view>

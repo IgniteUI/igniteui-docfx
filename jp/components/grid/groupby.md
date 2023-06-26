@@ -7,7 +7,7 @@ _language: ja
 
 # Angular Grid グループ化
 
-Angular Material テーブルまたは UI グリッドの Group By 動作は、列の値に基づいてグループ化されたデータ行を作成します。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の Group By では、グループを階層構造で視覚化できます。グループデータ行は展開または縮小でき、グループの順序は UI または API で変更できます。行選択を有効にすると、Group By 行セレクターがグループ行の一番左の領域に描画されます。[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) プロパティが単一に設定されている場合、チェックボックスは無効になり、選択が行われるグループの表示としてのみ機能します。[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) プロパティが複数に設定されている場合、Group By 行セレクターをクリックすると、このグループに属するすべてのレコードが選択されます。
+Angular Material テーブルまたは UI グリッドの Group By 動作は、列の値に基づいてグループ化されたデータ行を作成します。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の Group By では、グループを階層構造で視覚化できます。グループデータ行は展開または縮小でき、グループの順序は UI または API で変更できます。行選択を有効にすると、Group By 行セレクターがグループ行の一番左の領域に描画されます。[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowSelection) プロパティが単一に設定されている場合、チェックボックスは無効になり、選択が行われるグループの表示としてのみ機能します。[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowSelection) プロパティが複数に設定されている場合、Group By 行セレクターをクリックすると、このグループに属するすべてのレコードが選択されます。
 
 ## Angular Grid グループ化の例
 この例は、大量のデータのグループ化が可能であることを示しています。列ヘッダーを一番上 (グループ化領域) にドラッグすると、ユーザーは選択した列のデータを階層構造で表示できます。さらに列ヘッダーを一番上にドラッグすることで、複数のフィールドでグループ化できます。これらのグループ化オプションは、ユーザーが多数の行と列を持つテーブルがあり、はるかに高速で視覚的に受け入れられる方法でデータを表示しようとする場合に役立ちます。
@@ -21,7 +21,7 @@ Angular Material テーブルまたは UI グリッドの Group By 動作は、�
 
 ## 初期のグループ化状態
 
-グリッドの [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) プロパティに式の配列を割り当てることによって、グリッドの初期グループ化を定義することができます。
+グリッドの [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingExpressions) プロパティに式の配列を割り当てることによって、グリッドの初期グループ化を定義することができます。
 
 ```typescript
 public ngOnInit() {
@@ -55,7 +55,7 @@ public ngOnInit() {
 }
 ```
 
-ランタイムの式は [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) プロパティの取得または設定できます。既存の式を追加または変更する必要がある場合、[`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html) の単一または配列の [`groupBy`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupby) メソッドを使用してください。
+ランタイムの式は [`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingExpressions) プロパティの取得または設定できます。既存の式を追加または変更する必要がある場合、[`ISortingExpression`]({environment:angularApiUrl}/interfaces/isortingexpression.html) の単一または配列の [`groupBy`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupBy) メソッドを使用してください。
 
 ```typescript
 grid.groupBy({ fieldName: 'ProductName', dir: SortingDirection.Desc, ignoreCase: true });
@@ -65,7 +65,7 @@ grid.groupBy({ fieldName: 'ProductName', dir: SortingDirection.Desc, ignoreCase:
 
 ### API の展開/縮小
 
-グループ式の他にグループ行の展開も制御できます。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) コンポーネント [`groupingExpansionState`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpansionstate) の別のプロパティに保存されます。グループ行は、作成されたフィールド名とグループ化の各レベルを表す値に基づいて識別されます。以下は展開状態のインターフェイスのシグネチャです。
+グループ式の他にグループ行の展開も制御できます。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) コンポーネント [`groupingExpansionState`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingExpansionState) の別のプロパティに保存されます。グループ行は、作成されたフィールド名とグループ化の各レベルを表す値に基づいて識別されます。以下は展開状態のインターフェイスのシグネチャです。
 
 ```typescript
 export interface IGroupByKey {
@@ -79,7 +79,7 @@ export interface IGroupByExpandState {
 }
 ```
 
-[`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpressions) で [`IGroupByExpandState`]({environment:angularApiUrl}/interfaces/igroupbyexpandstate.html) のリストを直接 [`groupingExpansionState`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingexpansionstate) に設定すると展開が変更されます。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) はグループ レコード インスタンスでトグルするメソッドを公開します。
+[`groupingExpressions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingExpressions) で [`IGroupByExpandState`]({environment:angularApiUrl}/interfaces/igroupbyexpandstate.html) のリストを直接 [`groupingExpansionState`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupingExpansionState) に設定すると展開が変更されます。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) はグループ レコード インスタンスでトグルするメソッドを公開します。
 
 ```typescript
     const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
@@ -88,13 +88,13 @@ export interface IGroupByExpandState {
     groupRow.expanded = false;
 ```
 
-グループは展開済み (**デフォルト**) または縮小済みに作成でき、展開状態は一般的にデフォルト動作の反対の状態のみ含みます。グループを作成して展開するかどうか、または [`groupsExpanded`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupsexpanded) プロパティを介すかどうかを制御できます。
+グループは展開済み (**デフォルト**) または縮小済みに作成でき、展開状態は一般的にデフォルト動作の反対の状態のみ含みます。グループを作成して展開するかどうか、または [`groupsExpanded`]({environment:angularApiUrl}/classes/igxgridcomponent.html#groupsExpanded) プロパティを介すかどうかを制御できます。
 
 ### グループ API ですべての行を選択/選択解除
 
-グループ内のすべての行の選択/選択解除は、[`selectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectrowsingroup) および [`deselectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deselectrowsingroup) API メソッドを介して利用できます。
+グループ内のすべての行の選択/選択解除は、[`selectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectRowsInGroup) および [`deselectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deselectRowsInGroup) API メソッドを介して利用できます。
 
-以下のコードスニペットは、グループ レコード [`selectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectrowsingroup) メソッドを使用してグループ内のすべての行を選択するために使用できます。さらに、このメソッドの 2 番目のパラメーターは boolean プロパティです。それを使用して、前の行の選択をクリアするかどうかを選択できます。以前の選択はデフォルトで保存されます。
+以下のコードスニペットは、グループ レコード [`selectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectRowsInGroup) メソッドを使用してグループ内のすべての行を選択するために使用できます。さらに、このメソッドの 2 番目のパラメーターは boolean プロパティです。それを使用して、前の行の選択をクリアするかどうかを選択できます。以前の選択はデフォルトで保存されます。
 
 ```typescript
     const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
@@ -102,7 +102,7 @@ export interface IGroupByExpandState {
     grid.selectRowsInGroup(groupRow);
 ```
 
-プログラムでグループ内のすべての行の選択を解除する必要がある場合は、[`deselectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deselectrowsingroup) メソッドを使用できます。
+プログラムでグループ内のすべての行の選択を解除する必要がある場合は、[`deselectRowsInGroup`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deselectRowsInGroup) メソッドを使用できます。
 
 ```typescript
     const groupRow = this.grid.groupsRecords.find(r => r.value === "France");
@@ -208,7 +208,7 @@ export interface IGroupByRecord {
 igxGrid では、列ごとまたはグループ化式ごとにカスタム グループを定義できます。これにより、カスタム条件に基づいてグループ化が提供されます。これは、複雑なオブジェクトごとにグループ化する必要がある場合、または他のアプリケーション固有のシナリオで役立ちます。
 
 > [!NOTE]
-> カスタム グループ化を実装するには、まずデータを適切にソートする必要があります。このため、ベース [`DefaultSortingStrategy`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html) を拡張するカスタムのソート ストラテジを適用する必要がある場合もあります。データがソートされた後、列または特定のグループ化式に [`groupingComparer`]({environment:angularApiUrl}/interfaces/igroupingexpression.html#groupingcomparer) を指定することにより、カスタム グループを決定できます。
+> カスタム グループ化を実装するには、まずデータを適切にソートする必要があります。このため、ベース [`DefaultSortingStrategy`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html) を拡張するカスタムのソート ストラテジを適用する必要がある場合もあります。データがソートされた後、列または特定のグループ化式に [`groupingComparer`]({environment:angularApiUrl}/interfaces/igroupingexpression.html#groupingComparer) を指定することにより、カスタム グループを決定できます。
 
 以下のサンプルは、`Date` によるカスタム グループ化を示しています。日付の値は、ユーザーが選択したグループ化モードに基づいて、日、週、月、または年でソート / グループ化されています。
 
@@ -222,7 +222,7 @@ igxGrid では、列ごとまたはグループ化式ごとにカスタム グ�
 
 
 このサンプルでは、さまざまな日付条件のカスタム ソート ストラテジを定義しています。
-各カスタム ストラテジ、ベースの [`DefaultSortingStrategy`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html) を拡張し、[`compareValues`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html#comparevalues) メソッドを定義します。 値をソートするときに使用されるカスタム比較関数です。さらに、比較に必要な日付から値を抽出します。
+各カスタム ストラテジ、ベースの [`DefaultSortingStrategy`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html) を拡張し、[`compareValues`]({environment:angularApiUrl}/classes/defaultsortingstrategy.html#compareValues) メソッドを定義します。値をソートするときに使用されるカスタム比較関数です。さらに、比較に必要な日付から値を抽出します。
 
 ```typescript
 class BaseSortingStrategy extends DefaultSortingStrategy {
@@ -280,7 +280,7 @@ class WeekSortingStrategy extends BaseSortingStrategy {
 }
 ```
 
-[`groupingComparer`]({environment:angularApiUrl}/interfaces/igroupingexpression.html#groupingcomparer) 関数がグループ化式に対して定義され、選択されたグループ化モードに基づいて同じグループに属するアイテムを決定します。この関数が 0 を返すソートされた値は、同じグループの一部としてマークされます。
+[`groupingComparer`]({environment:angularApiUrl}/interfaces/igroupingexpression.html#groupingComparer) 関数がグループ化式に対して定義され、選択されたグループ化モードに基づいて同じグループに属するアイテムを決定します。この関数が 0 を返すソートされた値は、同じグループの一部としてマークされます。
 
 ```typescript
  groupingComparer: (a, b) => {
@@ -297,10 +297,22 @@ class WeekSortingStrategy extends BaseSortingStrategy {
 }
 ```
 
+バージョン 15.1.0 以降、組み込みのソート ストラテジ `GroupMemberCountSortingStrategy` を使用して、メンバー数に基づいて項目をソートすることもできます。
+
+```typescript
+public sortByGroup() {
+        const expressions = this.grid1.groupingExpressions;
+        if (expressions.length) {
+            const fieldName = expressions[0].fieldName;
+            const dir = expressions[0].dir === SortingDirection.Asc ? SortingDirection.Desc : SortingDirection.Asc;
+            this.grid1.groupBy({ fieldName, dir, ignoreCase: false, strategy: GroupMemberCountSortingStrategy.instance() });
+        }
+    }
+```
 
 ## スタイル設定
 
-igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md)でスタイルを設定できます。グリッドの [テーマ]({environment:sassApiUrl}/index.html#function-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
+igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md)でスタイルを設定できます。グリッドの[テーマ]({environment:sassApiUrl}/index.html#function-grid-theme)は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
 
 以下の手順では、グリッドの Group By スタイルをカスタマイズする手順を実行しています。
 
@@ -349,8 +361,8 @@ $custom-chips-theme: chip-theme(
 
 ### カスタム カラー パレットの定義
 
-上記で説明したアプローチでは、色の値がハード コーディングされていました。または、柔軟性を高めるために [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette)、[`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することもできます。   
-`Igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。
+上記で説明したアプローチでは、色の値がハード コーディングされていました。または、柔軟性を高めるために [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette)、[`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することもできます。
+`igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。
 
 ```scss
 $black-color: #292826;
@@ -384,8 +396,8 @@ $custom-chips-theme: chip-theme(
 );
 ```
 ### カスタム スキーマの定義
-さらに進んで、[**スキーマ**](../themes/sass/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。 
-すべてのコンポーネントに提供される 2 つの事前定義されたスキーマの 1 つを拡張します。この場合、`$_light_grid` を使用します。   
+さらに進んで、[**スキーマ**](../themes/sass/schemas.md)のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。
+すべてのコンポーネントに提供される 2 つの事前定義されたスキーマの 1 つを拡張します。この場合、`$_light_grid` を使用します。
 ```scss
 $custom-grid-schema: extend($_light-grid,(
     group-row-background: (igx-color:('secondary', 100)),
@@ -443,6 +455,7 @@ $custom-theme: grid-theme(
 
 
 <code-view style="height:570px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-styling" >
 </code-view>

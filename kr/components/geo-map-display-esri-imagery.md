@@ -12,10 +12,12 @@ The [`IgxArcGISOnlineMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-
 
 ## Demo
 
-<code-view style="height: 500px"
+<code-view style="height: 500px" alt="Angular geo map display esri imagery"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-display-esri-imagery"  >
+                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/display-esri-imagery"
+                                                 github-src="maps/geo-map/display-esri-imagery">
 </code-view>
+
 
 <div class="divider--half"></div>
 

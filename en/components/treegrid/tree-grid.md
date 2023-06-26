@@ -1,17 +1,16 @@
 ---
 title: Angular Tree Grid | Fastest Angular Tree Table | Infragistics
 _description: The Ignite UI for Angular Tree Grid is used to display and manipulate hierarchical or flat data with ease. Quickly bind your data with very little coding. Try it for FREE
-_keywords: angular data grid, igniteui for angular, infragistics
+_keywords: angular tree grid, angular tree table, angular tree grid component, angular tree table component, angular ui components, igniteui for angular, infragistics
 ---
 
-# Angular Tree Grid Overview and Configuration
+# Angular Tree Grid Component Overview
 
-The Ignite UI for Angular Tree Grid is used to display and manipulate hierarchical or flat data with ease. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating and column moving. Displaying of tabular data has never been easier and beautiful thanks to the Material Table-based UI Tree Grid.
-
+The Ignite UI for Angular Tree Grid is used to display and manipulate hierarchical or flat self-referencing data. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, grouping, templating, column moving, column pinning, export to Excel and CSV, and more.
 
 ## Angular Tree Grid Example
 
-In this example, you can see how users can manipulate hierarchical or flat data. We have included filtering and sorting options, pinning and hiding, row selection, export to excel and csv, and cell templating that uses our [Sparkline](../charts/types/sparkline-chart.md) component. In addition, you can see an example of custom pagination with [Angular Pagination](paging.md).
+In this example, you can see how users can display hierarchical data. We have included filtering and sorting options, pinning and hiding, row selection, export to excel and csv, and cell templating that uses our [Sparkline](../charts/types/sparkline-chart.md) component. In addition, you can see an example of custom pagination with [Angular Pagination](paging.md).
 
 <code-view style="height:850px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
@@ -21,14 +20,16 @@ In this example, you can see how users can manipulate hierarchical or flat data.
 <div class="divider--half"></div>
 
 ## Getting Started with Ignite UI for Angular Tree Grid
-To get started with the tree grid, first you need to install Ignite UI for Angular by typing the following command:
+
+To get started with the Ignite UI for Angular Tree Grid component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
 ```cmd
 ng add igniteui-angular
 ```
+
 For a complete introduction to the Ignite UI for Angular, read the [*getting started*](../general/getting-started.md) topic.
 
-The tree grid is exported as an `NgModule`, thus all you need to do in your application is to import the `IgxTreeGridModule` inside your `AppModule`:
+The next step is to import the `IgxTreeGridModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -46,7 +47,30 @@ import { IgxTreeGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-## Usage
+Alternatively, as of `16.0.0` you can import the `IgxTreeGridComponent` as a standalone dependency, or use the [`IGX_TREE_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/tree-grid/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+import { IGX_TREE_GRID_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_TREE_GRID_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<igx-tree-grid [data]="data"></igx-tree-grid>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_TREE_GRID_DIRECTIVES]
+    /* or imports: [IgxTreeGridComponent] */
+})
+export class HomeComponent {
+    public data: Employee [];
+}
+```
+
+Now that you have the Ignite UI for Angular Tree Grid module or directives imported, you can start using the `igx-tree-grid` component.
+
+## Using the Angular Tree Grid
 
 >[!NOTE]
 >**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.**.
@@ -59,14 +83,14 @@ In order to achieve this, the [`IgxTreeGridComponent`]({environment:angularApiUr
 Regardless of which option is used for building the tree grid's hierarchy (child collection or primary and foreign keys), the tree grid's rows are constructed of two types of cells:
 
 - [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) - Ordinary cell that contains a value.
-- [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) - Tree cell that contains a value, an expand/collapse indicator and an indentation div element, which is based on the level of the cell's row. The level of a row component can be accessed through the [`level`]({environment:angularApiUrl}/interfaces/itreegridrecord.html#level) property of its inner [`treeRow`]({environment:angularApiUrl}/classes/igxtreegridrow.html#treerow).
+- [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) - Tree cell that contains a value, an expand/collapse indicator and an indentation div element, which is based on the level of the cell's row. The level of a row component can be accessed through the [`level`]({environment:angularApiUrl}/interfaces/itreegridrecord.html#level) property of its inner [`treeRow`]({environment:angularApiUrl}/classes/igxtreegridrow.html#treeRow).
 
 > [!NOTE]
 > Each row can have only one tree cell, but it can have multiple (or none) ordinary cells.
 
 ### Initial Expansion Depth
 
-Initially the tree grid will expand all node levels and show them. This behavior can be configured using the [`expansionDepth`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#expansiondepth) property. By default its value is **Infinity** which means all node levels will be expanded. You may control the initial expansion depth by setting this property to a numeric value. For example **0** will show only root level nodes, **1** will show root level nodes and their child nodes and so on.
+Initially the tree grid will expand all node levels and show them. This behavior can be configured using the [`expansionDepth`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#expansionDepth) property. By default its value is **Infinity** which means all node levels will be expanded. You may control the initial expansion depth by setting this property to a numeric value. For example **0** will show only root level nodes, **1** will show root level nodes and their child nodes and so on.
 
 ### Child Collection
 When we are using the **child collection** option, every data object contains a child collection, that is populated with items of the same type as the parent data object. This way every record in our tree grid will have a direct reference to any of its children. In this case the [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) property of our tree grid that contains the original data source will be a hierarchically defined collection.
@@ -127,7 +151,7 @@ In addition, we will disable the automatic column generation and define them man
 </igx-tree-grid>
 ```
 
-We will now enable the row selection and paging features of the tree grid by using the [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) and the [`paging`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#paging) properties.
+We will now enable the row selection and paging features of the tree grid by using the [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowSelection) and the [`paging`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#paging) properties.
 We will also enable the summaries feature on the first column and the filtering, sorting, editing, moving and resizing features for each of our columns.
 
 ```html
@@ -177,9 +201,7 @@ The following is an example of a component which contains a flat collection defi
 ```typescript
 // treeGridSample.component.ts
 
-@Component({
-    ...
-})
+@Component({...})
 export class MyComponent implements OnInit {
 
     public data: any[];
@@ -206,7 +228,7 @@ export class MyComponent implements OnInit {
 
 In the sample data above, all records have an ID, a ParentID and some additional properties like Name, JobTitle and Age. As mentioned previously, the ID of the records must be unique. The ParentID contains the ID of the parent node. If a row has a ParentID that does not match any row in the tree grid, then that means this row is a root row.
 
-The parent-child relation is configured using the tree grid's [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primarykey) and [`foreignKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#foreignkey) properties.
+The parent-child relation is configured using the tree grid's [`primaryKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#primaryKey) and [`foreignKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#foreignKey) properties.
 
 Here is the template of the component which demonstrates how to configure the tree grid to display the data defined in the above flat collection:
 
@@ -221,7 +243,7 @@ Here is the template of the component which demonstrates how to configure the tr
 </igx-tree-grid>
 ```
 
-In addition we will enable the row selection feature of the tree grid by using the [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowselection) property and also the filtering, sorting, editing, moving and resizing features for each of our columns.
+In addition we will enable the row selection feature of the tree grid by using the [`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowSelection) property and also the filtering, sorting, editing, moving and resizing features for each of our columns.
 
 ```html
 <!--treeGridSample.component.html-->
@@ -246,8 +268,8 @@ And here is the final result:
 The indentation of the **tree cells** persists across other tree grid features like filtering, sorting and paging.
 
 - When **sorting** is applied on a column, the data rows get sorted by levels. This means that the root level rows will be sorted independently from their respective children. Their respective children collections will each be sorted independently as well and so on.
-- The first column (the one that has a [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) of 0) is always the tree column.
-- The column that ends up with a [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleindex) of 0 after operations like column pinning, column hiding and column moving becomes the tree column.
+- The first column (the one that has a [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleIndex) of 0) is always the tree column.
+- The column that ends up with a [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleIndex) of 0 after operations like column pinning, column hiding and column moving becomes the tree column.
 - Exported Excel worksheets reflect the hierarchy by grouping the records as they are grouped in the tree grid itself. All records expanded states would also be persisted and reflected.
 - When exporting to CSV, levels and expanded states are ignored and all data is exported as flat.
 
@@ -376,6 +398,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 
 <code-view style="height:600px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-style" alt="Angular tree grid styling demo">
 </code-view>

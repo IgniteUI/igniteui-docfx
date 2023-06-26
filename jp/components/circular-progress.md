@@ -1,11 +1,11 @@
 ---
 title: Angular Circular Progress コンポーネント
 _description: Ignite UI for Angular Circular Progress インジケーター コンポーネントは、丸形で進行状況を表示し、カスタマイズできるコンポーネントです。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Circular Progress コンポーネント, Angular Circular Progress コントロール
+_keywords: Angular Circular Progress コンポーネント, Angular Circular Progress コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, Angular UI コンポーネント
 _language: ja
 ---
 
-# Circular Progress
+# Angular Circular Progress (円形プログレス) コンポーネントの概要
 <p class="highlight">Ignite UI for Angular Circular Progress インジケーター コンポーネントは、変更でアプリケーションの進行状況を表す視覚的なインジケーターです。丸形インジケーターは状態変更で外観を更新します。<p>
 <div class="divider"></div>
 
@@ -18,9 +18,18 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 使用方法
+## Ignite UI for Angular Circular Progress を使用した作業の開始
 
-Circular Progress Indicator コンポーネントを使用するには、まず **IgxProgressBarModule** を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Circular Progress コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
+
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxProgressBarModule` をインポートします。
+
 ```typescript
 // app.module.ts
 
@@ -36,6 +45,35 @@ import { IgxProgressBarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
+あるいは、`16.0.0` 以降、`IgxCircularProgressBarComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/progressbar/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+
+```typescript
+// home.component.ts
+
+import { IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-circular-bar
+        [value]="100"
+        [animate]="true"
+        class="custom-size"
+    ></igx-circular-bar>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES]
+    /* or imports: [IgxCircularProgressBarComponent] */
+})
+export class HomeComponent {}
+```
+
+Ignite UI for Angular Progress Bar モジュールまたはディレクティブをインポートしたので、`igx-circular-bar` コンポーネントの使用を開始できます。
+
+## Angular Circular Progress の使用
+
 すべての動作をよりよく理解するため、デモのような簡単な例を作成します。
 
 ```html
@@ -49,10 +87,10 @@ export class AppModule {}
 その後、ブラウザ上でデモサンプルを確認することができます。
 
 >[!NOTE]
->**igx-circular-bar** は、各ステップに `{currentValue: 65, previousValue: 64}` のようなオブジェクトを出力する [`onProgressChanged`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#onprogresschanged) イベントを発生します。
+>**igx-circular-bar** は、各ステップに `{currentValue: 65, previousValue: 64}` のようなオブジェクトを出力する [`onProgressChanged`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#onProgressChanged) イベントを発生します。
 
 > [!NOTE]
-> [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) 値が定義されていない場合、デフォルトの進行のインクリメントの値は、**[`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) 値の 1%** です。更新レートを変更するには、[`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) 値を定義する必要があります。
+> [`step`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#step) 値が定義されていない場合、デフォルトの進行のインクリメントの値は、**[`max`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#max) 値の 1%** です。更新レートを変更するには、[`step`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#step) 値を定義する必要があります。
 
 
 ### 不確定のプログレス
@@ -68,7 +106,7 @@ export class AppModule {}
 ```
 
 >[!NOTE]
->円形のプログレスバーのテキストを非表示にするには、[`textVisibility`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#textvisibility) プロパティを ` false` に設定します。
+>円形のプログレスバーのテキストを非表示にするには、[`textVisibility`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#textVisibility) プロパティを `false` に設定します。
 
 結果は以下のようになります。
 
@@ -106,23 +144,26 @@ export class AppModule {}
 値を増減するメソッドを追加します。
 
 ```typescript
-public currentValue: number;
+@Component({...})
+export class HomeComponent {
+    public currentValue: number;
 
-public ngOnInit() {
-    this.currentValue = 0;
-}
-
-public incrementProgress() {
-    this.currentValue += 10;
-    if (this.currentValue > 100) {
-        this.currentValue = 100;
-    }
-}
-
-public decrementProgress() {
-    this.currentValue -= 10;
-    if (this.currentValue < 0) {
+    public ngOnInit() {
         this.currentValue = 0;
+    }
+
+    public incrementProgress() {
+        this.currentValue += 10;
+        if (this.currentValue > 100) {
+            this.currentValue = 100;
+        }
+    }
+
+    public decrementProgress() {
+        this.currentValue -= 10;
+        if (this.currentValue < 0) {
+            this.currentValue = 0;
+        }
     }
 }
 ```
@@ -263,6 +304,7 @@ $custom-theme: progress-circular-theme(
 <div class="divider--half"></div>
 
 <code-view style="height:100px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/circular-styling-sample" >
 </code-view>

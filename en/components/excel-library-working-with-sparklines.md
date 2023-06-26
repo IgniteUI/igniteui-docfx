@@ -11,23 +11,12 @@ The Infragistics Angular Excel Library has support for adding sparklines to an E
 
 ## Angular Working with Sparklines Example
 
-<code-view style="height: 500px"
+<code-view style="height: 500px" alt="Angular Working with Sparklines Example"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-working-with-sparklines"
-           alt="Angular Working with Sparklines Example"
-           github-src="excel/excel-library/working-with-sparklines">
+                    iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library/working-with-sparklines"
+                                                 github-src="excel/excel-library/working-with-sparklines">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/excel/excel-library/working-with-sparklines?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/excel/excel-library/working-with-sparklines?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -35,9 +24,9 @@ The Infragistics Angular Excel Library has support for adding sparklines to an E
 
 The following is a list of the supported predefined sparkline types.
 
--   Line
--   Column
--   Stacked (Win/Loss)
+*   Line
+*   Column
+*   Stacked (Win/Loss)
 
 The following code demonstrates how to programmatically add Sparklines to a Worksheet via the sparklineGroups collection:
 
@@ -50,6 +39,6 @@ sheet1.sparklineGroups().add(SparklineType.Column, "Sparklines!B1:B1", "Data!A2:
 workbook.save(workbook, "Sparklines.xlsx");
 ```
 
-## API Members
+## API References
 
--   [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html)
+*   [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/workbook.html)

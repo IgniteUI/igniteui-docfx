@@ -11,32 +11,21 @@ The Ignite UI for Angular map component, the [`IgxShapeDataSource`]({environment
 
 ## Angular Binding Shape Files with Geo-spatial Data Example
 
-<code-view style="height: 500px"
+<code-view style="height: 500px" alt="Angular Binding Shape Files with Geo spatial Data Example"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-binding-shp-polylines"
-           alt="Angular Binding Shape Files with Geo-spatial Data Example"
-           github-src="maps/geo-map/binding-shp-polylines">
+                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/binding-shp-polylines"
+                                                 github-src="maps/geo-map/binding-shp-polylines">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/binding-shp-polylines?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/binding-shp-polylines?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
 The following table explains properties of the [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html) class for loading shape files.
 
-| Property                                                                                                                                              | Type   | Description                                                                                              |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | -------------------------------------------------------------------------------------------------------- |
-| [`shapefileSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html#shapefilesource) | string | Specifies the Uri to a shape file (.shp) that contains geo-spatial data items.                           |
-| [`databaseSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html#databasesource)   | string | Specifies the Uri to a shape database file (.dbf) that contains a data table for geo-spatial data items. |
+| Property | Type | Description   |
+|----------|------|---------------|
+| [`shapefileSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html#shapefilesource) | string |Specifies the Uri to a shape file (.shp) that contains geo-spatial data items.|
+|[`databaseSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html#databasesource) | string |Specifies the Uri to a shape database file (.dbf) that contains a data table for geo-spatial data items.|
 
 <!-- TODO add for WPF only: -->
 
@@ -54,11 +43,12 @@ In the map component, Geographic Series are used for displaying geo-spatial data
 
 The [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapefilerecord.html) class provides properties for storing geo-spatial data, listed in the following table.
 
-| Property   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Points`   | Contains all the points in one geo-spatial shape loaded from a shape file (.shp). For example, the country of Japan in shape file would be represented as a list of a list of points object, where:<ul><li>The first list of points describes shape of Hokkaido island</li><li>The second list of points describes shape of Honshu island</li><li>The third list of points describes shape of Kyushu island</li><li>The fourth list of points describes shape of Shikoku island |
-| </li></ul> |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `Fields`   | Contains a row of data from the shape database file (.dbf) keyed by a column name. For example, a data about county of Japan which includes population, area, name of a capital, etc.                                                                                                                                                                                                                                                                                           |
+| Property     | Description   |
+|--------------|---------------|
+|`Points`|Contains all the points in one geo-spatial shape loaded from a shape file (.shp). For example, the country of Japan in shape file would be represented as a list of a list of points object, where:<ul><li>The first list of points describes shape of Hokkaido island</li><li>The second list of points describes shape of Honshu island</li><li>The third list of points describes shape of Kyushu island</li><li>The fourth list of points describes shape of Shikoku island
+
+</li></ul>|
+| `Fields` |Contains a row of data from the shape database file (.dbf) keyed by a column name. For example, a data about county of Japan which includes population, area, name of a capital, etc.|
 
 This data structure is suitable for use in most Geographic Series as long as appropriate data columns are mapped to them.
 
@@ -148,11 +138,11 @@ export class MapBindingShapefilePolylinesComponent implements AfterViewInit {
 }
 ```
 
-## API Members
+## API References
 
--   `Fields`
--   [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)
--   `ImportCompleted`
--   `ItemsSource`
--   `Points`
--   [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html)
+*   `Fields`
+*   [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)
+*   `ImportCompleted`
+*   `ItemsSource`
+*   `Points`
+*   [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html)

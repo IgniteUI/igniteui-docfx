@@ -2,7 +2,7 @@
 ---
 title: Angular Grid の集計 - Ignite UI for Angular
 _description: 列のグループ フッターに Angular のグリッド集計を設定し、Angular マテリアル UI の Ignite UI でカスタム Angular テンプレートを設定するオプションがあります。
-_keywords: Angular Grid 集計, igniteui for angular, infragistics
+_keywords: angular grid 集計, igniteui for angular, infragistics
 _language: ja
 ---
 }
@@ -10,7 +10,7 @@ _language: ja
 ---
 title: Angular Grid の集計 - Ignite UI for Angular
 _description: 列のグループ フッターに Angular のグリッド集計を設定し、Angular マテリアル UI の Ignite UI でカスタム Angular テンプレートを設定するオプションがあります。
-_keywords: gngular grid 集計, igniteui for angular, infragistics
+_keywords: angular grid 集計, igniteui for angular, infragistics
 _language: ja
 ---
 }
@@ -18,7 +18,7 @@ _language: ja
 ---
 title: Angular Grid の集計 - Ignite UI for Angular
 _description: 列のグループ フッターに Angular のグリッド集計を設定し、Angular マテリアル UI の Ignite UI でカスタム Angular テンプレートを設定するオプションがあります。
-_keywords: gngular grid 集計, igniteui for angular, infragistics
+_keywords: angular grid 集計, igniteui for angular, infragistics
 _language: ja
 ---
 }
@@ -32,7 +32,7 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
 @@if (igxName === 'IgxGrid') {
 
 <code-view style="height:650px"
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-summary" alt="Angular @@igComponent 集計の例">
 </code-view>
 
@@ -40,7 +40,7 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
 @@if (igxName === 'IgxTreeGrid') {
 
 <code-view style="height:750px"
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary" alt="Angular @@igComponent 集計の例">
 </code-view>
 
@@ -48,7 +48,7 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
 @@if (igxName === 'IgxHierarchicalGrid') {
 
 <code-view style="height:650px"
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary" alt="Angular @@igComponent 集計の例">
 </code-view>
 
@@ -62,7 +62,7 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
 **@@igComponent 集計**を列ごとに有効にして必要な列のみアクティブ化できます。@@igComponent 集計は、列のデータ型に基づいてデフォルト集計の定義済みセットを提供します。
 
 
-`string` と `boolean` [`data types`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) の場合、データ型の場合、以下の関数が利用できます。
+`string` と `boolean` [`data types`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#dataType) の場合、データ型の場合、以下の関数が利用できます。
  - count
 
 `number`、`currency`、および `percent` データ型の場合、以下の関数を使用できます。
@@ -79,17 +79,23 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
 
 すべての利用可能な列データ型は、公式の[列タイプ トピック](column-types.md#デフォルトのテンプレート)にあります。
 
-[`hasSummary`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#hassummary) プロパティを `true` に設定すると **@@igComponent 集計**が列レベルで有効になります。各列の集計は列のデータ型に基づいて解決されます。`@@igSelector` のデフォルトの列データ型は `string` のため、`number` または `date` 固有の集計を適用するには、[`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) プロパティを `number` または `date` に設定します。集計値は、グリッドの [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) および列 [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs) に従ってローカライズされて表示されます。
+[`hasSummary`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#hasSummary) プロパティを `true` に設定すると **@@igComponent 集計**が列レベルで有効になります。各列の集計は列のデータ型に基づいて解決されます。`@@igSelector` のデフォルトの列データ型は `string` のため、`number` または `date` 固有の集計を適用するには、[`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#dataType) プロパティを `number` または `date` に設定します。集計値は、グリッドの [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) および列 [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs) に従ってローカライズされて表示されます。
 
-@@if (igxName !== 'IgxHierarchicalGrid') {
+@@if (igxName === 'IgxGrid') {
 ```html
 <@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)">
-    <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
-    </igx-column>
-    <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true">
-    </igx-column>
-    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true">
-    </igx-column>
+    <igx-column field="ProductID" header="Product ID" width="200px" [sortable]="true"></igx-column>
+    <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true"></igx-column>
+    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true"></igx-column>
+</@@igSelector>
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)">
+    <igx-column field="ID" header="Order ID" width="200px" [sortable]="true"></igx-column>
+    <igx-column field="Name" header="Order Product" width="200px" [sortable]="true" [hasSummary]="true"></igx-column>
+    <igx-column field="Units" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true"></igx-column>
 </@@igSelector>
 ```
 }
@@ -110,17 +116,14 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
 </igx-hierarchical-grid>
 ```
 }
-特定の列や列のリストを有効または無効にする他の方法として **@@igSelector** のパブリック メソッド [`enableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#enablesummaries)/[`disableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#disablesummaries) を使用する方法があります。
+特定の列や列のリストを有効または無効にする他の方法として **@@igSelector** のパブリック メソッド [`enableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#enablesummaries)/[`disableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#disableSummaries) を使用する方法があります。
 
-@@if (igxName !== 'IgxHierarchicalGrid') {
+@@if (igxName === 'IgxGrid') {
 ```html
 <@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)" >
-    <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true">
-    </igx-column>
-    <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true">
-    </igx-column>
-    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="false">
-    </igx-column>
+    <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true"></igx-column>
+    <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true"></igx-column>
+    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="false"></igx-column>
 </@@igSelector>
 <button (click)="enableSummary()">Enable Summary</button>
 <button (click)="disableSummary()">Disable Summary </button>
@@ -134,6 +137,29 @@ public enableSummary() {
 }
 public disableSummary() {
     this.grid1.disableSummaries('ProductName');
+}
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)" >
+    <igx-column field="ID" header="Order ID" width="200px" [sortable]="true"></igx-column>
+    <igx-column field="Name" header="Order Product" width="200px" [sortable]="true" [hasSummary]="true" ></igx-column>
+    <igx-column field="Units" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="false"></igx-column>
+
+</@@igSelector>
+<button (click)="enableSummary()">Enable Summary</button>
+<button (click)="disableSummary()">Disable Summary </button>
+```
+```typescript
+public enableSummary() {
+    this.grid1.enableSummaries([
+        {fieldName: 'Units', customSummary: this.mySummary},
+        {fieldName: 'ID'}
+    ]);
+}
+public disableSummary() {
+    this.grid1.disableSummaries('Name');
 }
 ```
 }
@@ -196,7 +222,7 @@ class MySummary extends IgxNumberSummaryOperand {
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```typescript
 import { IgxRowIslandComponent, IgxHierarchicalGridComponent, IgxNumberSummaryOperand, IgxSummaryResult } from 'igniteui-angular';
-// import { IgxRowIslandComponent, IgxHierarchicalGridComponent, IgxNumberSummaryOperand, IgxSummaryResul } from '@infragistics/igniteui-angular'; for licensed package
+// import { IgxRowIslandComponent, IgxHierarchicalGridComponent, IgxNumberSummaryOperand, IgxSummaryResult } from '@infragistics/igniteui-angular'; for licensed package
 
 class MySummary extends IgxNumberSummaryOperand {
     constructor() {
@@ -254,6 +280,26 @@ export class GridComponent implements OnInit {
 ```
 }
 
+@@if (igxName === 'IgxTreeGrid') {
+`UnitPrice` 列にカスタム集計を追加します。[`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) プロパティを以下に作成するクラスに設定します。
+```html
+<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)">
+    <igx-column field="ID" header="Order ID" width="200px" [sortable]="true"></igx-column>
+    <igx-column field="Name" header="Order Product" width="200px" [sortable]="true" [hasSummary]="true"></igx-column>
+    <igx-column field="Units" [dataType]="'number'" width="200px" [editable]="true" [hasSummary]="true" [summaries]="mySummary"></igx-column>
+    <igx-column field="UnitPrice" header="Unit Price" width="200px" [dataType]="'number'"  [dataType]="'currency'" [hasSummary]="true"></igx-column>
+</@@igSelector>
+```
+
+```typescript
+...
+export class GridComponent implements OnInit {
+    mySummary = MySummary;
+    ....
+}
+```
+}
+
 @@if (igxName === 'IgxHierarchicalGrid') {
 列 `GramyNominations` にカスタム集計を追加します。[`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) プロパティを以下に作成するクラスに設定します。
 ```html
@@ -288,6 +334,21 @@ export class HGridSummarySampleComponent implements OnInit {
 - allGridData - グリッド データソース全体を提供します。
 - fieldName - 現在の列フィールド。
 
+@@if (igxName === 'IgxTreeGrid') {
+```typescript
+class MySummary extends IgxNumberSummaryOperand {
+    constructor() {
+        super();
+    }
+    operate(columnData: any[], allGridData = [], fieldName?): IgxSummaryResult[] {
+        const result = super.operate(allData.map(r => r[fieldName]));
+        result.push({ key: 'test', label: 'Total Undelivered', summaryResult: allData.filter((rec) => rec.Discontinued).length });
+        return result;
+    }
+}
+```
+}
+@@if (igxName !== 'IgxTreeGrid') {
 ```typescript
 class MySummary extends IgxNumberSummaryOperand {
     constructor() {
@@ -300,6 +361,7 @@ class MySummary extends IgxNumberSummaryOperand {
     }
 }
 ```
+}
 
 @@if (igxName === 'IgxGrid') {
 
@@ -412,22 +474,22 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
 @@if (igxName === 'IgxGrid') {
 ## グループの集計
 
-列のグループがある場合、@@igComponent は[`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summarycalculationmode) と [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) を使用して集計配置の変更やモードの計算をします。これら 2 つのプロパティに加えて、@@igxName は、参照するグループ行が縮小されたときに集計行が表示されたままであるかどうかを決定できる [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showsummaryoncollapse) プロパティを公開します。
+列のグループがある場合、@@igComponent は[`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryCalculationMode) と [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryPosition) を使用して集計配置の変更やモードの計算をします。これら 2 つのプロパティに加えて、@@igxName は、参照するグループ行が縮小されたときに集計行が表示されたままであるかどうかを決定できる [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showSummaryOnCollapse) プロパティを公開します。
 
-以下は、使用可能な [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summarycalculationmode) プロパティの値です。
+以下は、使用可能な [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryCalculationMode) プロパティの値です。
  - rootLevelOnly - ルート レベルのみ集計が計算されます。
  - childLevelsOnly - 子レベルのみ集計が計算されます。
  - rootAndChildLevels - ルートと子レベルの両方の集計が計算されます。これがデフォルト値です。
 
-以下は、使用可能な [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) プロパティの値です。
+以下は、使用可能な [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryPosition) プロパティの値です。
  - top - 集計行はグループ列の子の前に表示されます。
  - bottom - 集計行はグループ列の子の後に表示されます。これがデフォルト値です。
 
-[`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showsummaryoncollapse) プロパティはブール値です。デフォルト値は **false** に設定されています。これは、親行が縮小されたときに集計行が非表示になることを意味します。プロパティが **true** に設定されている場合、グループ行が縮小されたときに、集計行は表示されたままになります。
+[`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showSummaryOnCollapse) プロパティはブール値です。デフォルト値は **false** に設定されています。これは、親行が縮小されたときに集計行が非表示になることを意味します。プロパティが **true** に設定されている場合、グループ行が縮小されたときに、集計行は表示されたままになります。
 
 
 > [!NOTE]
-> [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) プロパティは子レベルの集計のみに適用します。ルートレベルの集計は、@@igComponent の下に常に固定されます。
+> [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryPosition) プロパティは子レベルの集計のみに適用します。ルートレベルの集計は、@@igComponent の下に常に固定されます。
 
 ### デモ
 
@@ -441,22 +503,22 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
 @@if (igxName === 'IgxTreeGrid') {
 ## 子集計
 
-@@igComponent はルート ノードの集計と各ネストされた子ノード レベルの区別をサポートします。集計は [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summarycalculationmode) プロパティを使用して設定できます。子レベル集計は、[`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) を使用して子ノードの前または後に表示できます。これら 2 つのプロパティに加えて、@@igxName は、参照する親ノードが縮小されたときに集計行が表示されたままであるかどうかを決定でき [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showsummaryoncollapse) プロパティを公開します。
+@@igComponent はルート ノードの集計と各ネストされた子ノード レベルの区別をサポートします。集計は [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryCalculationMode) プロパティを使用して設定できます。子レベル集計は、[`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryPosition) を使用して子ノードの前または後に表示できます。これら 2 つのプロパティに加えて、@@igxName は、参照する親ノードが縮小されたときに集計行が表示されたままであるかどうかを決定でき [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showSummaryOnCollapse) プロパティを公開します。
 
 
-以下は、使用可能な [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summarycalculationmode) プロパティの値です。
+以下は、使用可能な [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryCalculationMode) プロパティの値です。
  - rootLevelOnly - ルート レベルのノードのみ集計が計算されます。
  - childLevelsOnly - 子レベルのみ集計が計算されます。
  - rootAndChildLevels - ルートと子レベルの両方の集計が計算されます。これがデフォルト値です。
 
-以下は、使用可能な [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) プロパティの値です。
+以下は、使用可能な [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryPosition) プロパティの値です。
  - top - 集計行は子行のリストの前に表示されます。
  - bottom - 集計行は子行のリストの後に表示されます。これがデフォルト値です。
 
-[`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showsummaryoncollapse) プロパティはブール値です。デフォルト値は **false** に設定されています。これは、親行が縮小されたときに集計行が非表示になることを意味します。プロパティが **true** に設定されている場合、親行が縮小されたときに、集計行は表示されたままになります。
+[`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showSummaryOnCollapse) プロパティはブール値です。デフォルト値は **false** に設定されています。これは、親行が縮小されたときに集計行が非表示になることを意味します。プロパティが **true** に設定されている場合、親行が縮小されたときに、集計行は表示されたままになります。
 
 > [!NOTE]
-> [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryposition) プロパティは子レベルの集計のみに適用します。ルートレベルの集計は、@@igComponent の下に常に固定されます。
+> [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryPosition) プロパティは子レベルの集計のみに適用します。ルートレベルの集計は、@@igComponent の下に常に固定されます。
 
 
 <code-view style="height:720px"
@@ -467,7 +529,58 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
 }
 <div class="divider--half"></div>
 
-### キーボード ナビゲーション
+## 集計のエクスポート
+
+[`exportSummaries`]({environment:angularApiUrl}/classes/IgxExcelExporterOptions.html#exportSummaries) オプションが `IgxExcelExporterOptions` にあり、エクスポートされたデータにグリッドの集計を含めるかどうかを指定します。デフォルトの `exportSummaries` 値は **false** です。
+
+[`IgxExcelExporterService`]({environment:angularApiUrl}/classes/IgxExcelExporterService.html) は、すべての列タイプのデフォルトの集計を同等の Excel 関数としてエクスポートするため、シートが変更された場合でも適切に機能し続けます。以下の例をご覧ください:
+
+@@if (igxName === 'IgxGrid') {
+<code-view style="height:770px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-summary-export" >
+</code-view>
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+<code-view style="height:780px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary-export" >
+</code-view>
+}
+
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+<code-view style="height:760px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary-export" >
+</code-view>
+}
+
+エクスポートされたファイルには、シート内の各 `DataRecord` のレベルを保持する非表示の列が含まれています。このレベルは、集計関数に含める必要があるセルを除外するために集計で使用されます。
+
+以下の表では、デフォルトの各集計に対応する Excel 式を見つけることができます。
+
+データ型 | 関数 | Excel 関数 |
+|:--------|:--------:|:---------------|
+`string`、`boolean` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
+`number`、`currency`、`percent` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
+|| min| ="Min: "&MIN(IF(start:end=recordLevel, rangeStart:rangeEnd)) |
+|| max | ="Max: "&MAX(IF(start:end=recordLevel, rangeStart:rangeEnd)) |
+|| average | ="Avg: "&AVERAGEIF(start:end, recordLevel, rangeStart:rangeEnd) |
+|| sum | ="Sum: "&SUMIF(start:end, recordLevel, rangeStart:rangeEnd) |
+`date` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
+|| earliest | ="Earliest: "& TEXT(MIN(IF(start:end=recordLevel, rangeStart:rangeEnd)), format) |
+|| latest | ="Latest: "&TEXT(MAX(IF(start:end=recordLevel, rangeStart:rangeEnd)), format) |
+
+### 既知の問題と制限
+
+|制限|説明|
+|--- |--- |
+| カスタム集計のエクスポート | カスタム集計は、Excel 関数ではなく文字列としてエクスポートされます。 |
+| テンプレート化された集計のエクスポート | テンプレート化された集計はサポートされておらず、デフォルトのものとしてエクスポートされます。 |
+
+## キーボード ナビゲーション
 
 集計行は、以下のキーボード操作でナビゲーションできます。
 
@@ -475,7 +588,7 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
 - <kbd>DOWN</kbd> - 1 つ下のセルへ移動。
 - <kbd>LEFT</kbd> - 1 つ左のセルへ移動。
 - <kbd>RIGHT</kbd> - 1 つ右のセルへ移動。
-- <kbd>CTRL</kbd> + <kbd>LEFT</kbd> or <kbd>HOME</kbd> - 左端のセルへ移動。
+- <kbd>CTRL</kbd> + <kbd>LEFT</kbd> または <kbd>HOME</kbd> - 左端のセルへ移動。
 - <kbd>CTRL</kbd> + <kbd>RIGHT</kbd> または <kbd>END</kbd> - 右端のセルへ移動。
 
 ## スタイル設定
@@ -489,7 +602,7 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`grid-summary-theme`]({environment:sassApiUrl}/index.html#function-grid-summary-theme) を拡張する新しいテーマを作成し、`$background-color`, `$focus-background-color`、`$label-color`, `$result-color`、`$pinned-border-width`、`$pinned-border-style`、および `$pinned-border-color` パラメーターを受け取る方法です。
+最も簡単な方法は、[`grid-summary-theme`]({environment:sassApiUrl}/index.html#function-grid-summary-theme) を拡張する新しいテーマを作成し、`$background-color`、`$focus-background-color`、`$label-color`、`$result-color`、`$pinned-border-width`、`$pinned-border-style`、および `$pinned-border-color` パラメーターを受け取る方法です。
 
 ```scss
 $custom-theme: grid-summary-theme(
@@ -594,6 +707,7 @@ $custom-theme: grid-summary-theme(
 
 
 <code-view style="height:710px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-summary-styling" >
 </code-view>
@@ -604,6 +718,7 @@ $custom-theme: grid-summary-theme(
 
 
 <code-view style="height:710px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary-styling" >
 </code-view>
@@ -614,6 +729,7 @@ $custom-theme: grid-summary-theme(
 
 
 <code-view style="height:710px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary-styling" >
 </code-view>

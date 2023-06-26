@@ -6,7 +6,10 @@ _language: ja
 ---
 
 # Angular Material のテーマ
-<p class="highlight">Ignite UI for Angular テーマ エンジンを使用すると、[`Angular Material`](https://material.angular.io/) ライブラリなどの他のテーマ ライブラリからインポートされた外部コンポーネントと一緒に簡単に使用できます。</p>
+<p class="highlight">
+
+Ignite UI for Angular テーマ エンジンを使用すると、[`Angular Material`](https://material.angular.io/) ライブラリなどの他のテーマ ライブラリからインポートされた外部コンポーネントと一緒に簡単に使用できます。
+</p>
 <div class="divider--half"></div>
 
 ## Ignite UI と Angular Material の概要
@@ -26,7 +29,7 @@ Ignite UI for Angular は、マテリアル ベースの UI ウィジェット�
 
 <div class="divider--half"></div>
 
-## Ignite UI と Angular Material で作業を開始
+## Ignite UI と Angular Material を使用した作業の開始
 
 ### Angular Material のインストール方法
 
@@ -249,7 +252,7 @@ Angular Material コンポーネントの場合、前述のカスタム マテ�
 ```
 
 >[!WARNING]
->[`Emulated`](../sass/component-themes.md#view-encapsulation) ViewEncapsulation を`解除する`ために、上記のコードを `::ng-deep` セレクター内に配置してください。
+>[`Emulated`](../sass/component-themes.md#表示のカプセル化) ViewEncapsulation を`解除する`ために、上記のコードを `::ng-deep` セレクター内に配置してください。
 
 #### ライト モード
 

@@ -15,23 +15,12 @@ Ignite UI for Angular 折れ線チャート (または折れ線グラフ) は、
 
 次の例に示すように、データを `ItemsSource` プロパティにバインドし、[`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) プロパティを **Line** 列挙型に設定することで、[`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html)コントロールに Angular 折れ線チャートを作成できます。
 
-<code-view style="height: 600px"
+<code-view style="height: 600px" alt="Angular 複数ソースの折れ線チャート"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-multiple-sources"
-           github-src="charts/category-chart/line-chart-multiple-sources"
-           alt="Angular 複数ソースの折れ線チャート" >
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/line-chart-multiple-sources"
+                                                 github-src="charts/category-chart/line-chart-multiple-sources">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/category-chart/line-chart-multiple-sources?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/category-chart/line-chart-multiple-sources?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -39,46 +28,46 @@ Ignite UI for Angular 折れ線チャート (または折れ線グラフ) は、
 
 ## Angular 折れ線チャートはプロジェクトに適していますか?
 
--   [エリア チャート](area-chart.md)とは異なり、折れ線チャートは X 軸 (下軸) と線の間の領域を塗りつぶしません。
--   Angular 折れ線チャートは、データ ポイントをつなぐ線にスプライン補間とデータの表示を改善するスムージングがないこと以外は、Angular [スプライン チャート](spline-chart.md)と同じです。
+*   [エリア チャート](area-chart.md)とは異なり、折れ線チャートは X 軸 (下軸) と線の間の領域を塗りつぶしません。
+*   Angular 折れ線チャートは、データ ポイントをつなぐ線にスプライン補間とデータの表示を改善するスムージングがないこと以外は、Angular [スプライン チャート](spline-chart.md)と同じです。
 
 折れ線チャートには、データに基づいて複数のバリアントがあります。以下が含まれます。
 
--   階層型折れ線チャート
--   積層型折れ線チャート
--   ステップ折れ線チャート
--   極座標型折れ線チャート
--   積層型 100 折れ線チャート
+*   階層型折れ線チャート
+*   積層型折れ線チャート
+*   ステップ折れ線チャート
+*   極座標型折れ線チャート
+*   積層型 100 折れ線チャート
 
 ### 折れ線チャートのユースケース
 
 折れ線チャートを選択するための一般的なユースケースはいくつかあります:
 
--   パン、ズーム、ドリルダウンなどのチャート操作に適した大容量のデータセットを使用する場合
--   経時的なトレンドを比較する必要がある場合
--   2 つ以上のデータ シリーズの違いを表示したい場合
--   個別のカテゴリの部分対全体の累積比較を表示したい場合
--   比較解析のために 1 つ以上のカテゴリのデータ トレンドを表示する必要がある場合
--   詳細な時系列データを可視化する必要がある場合
+*   パン、ズーム、ドリルダウンなどのチャート操作に適した大容量のデータセットを使用する場合
+*   経時的なトレンドを比較する必要がある場合
+*   2 つ以上のデータ シリーズの違いを表示したい場合
+*   個別のカテゴリの部分対全体の累積比較を表示したい場合
+*   比較解析のために 1 つ以上のカテゴリのデータ トレンドを表示する必要がある場合
+*   詳細な時系列データを可視化する必要がある場合
 
 ### 折れ線チャートのベスト プラクティス:
 
--   データ比較が正確になるように Y 軸 (左軸または右軸) を常に 0 から開始する
--   時系列データを左から右へ並べ替える
--   実線などの視覚属性を使用して一連のデータを表示する
+*   データ比較が正確になるように Y 軸 (左軸または右軸) を常に 0 から開始する
+*   時系列データを左から右へ並べ替える
+*   実線などの視覚属性を使用して一連のデータを表示する
 
 ### 以下の場合に折れ線チャートを使用しないでください。
 
--   多くの (7 または 10 以上) シリーズのデータがある場合チャートを読みやすくすることが目標である場合
--   時系列データの値は同じ (同じ期間のデータ) である場合; 重複した行を区別できなくなります。
+*   多くの (7 または 10 以上) シリーズのデータがある場合チャートを読みやすくすることが目標である場合
+*   時系列データの値は同じ (同じ期間のデータ) である場合; 重複した行を区別できなくなります。
 
 ### 折れ線チャートのデータ構造:
 
--   データ ソースはデータ項目の配列またはリスト (単一シリーズの場合) である必要があります。
--   データ ソースは、配列の配列またはリストのリスト (複数シリーズの場合) である必要があります。
--   データ ソースに少なくとも 1 つのデータ項目を含む必要があります
--   すべてのデータ項目には、少なくとも 1 つのデータ列 (文字列または日時) が含まれている必要があります。
--   すべてのデータ項目には少なくとも 1 つの数値データ列が含まれている必要があります。
+*   データ ソースはデータ項目の配列またはリスト (単一シリーズの場合) である必要があります。
+*   データ ソースは、配列の配列またはリストのリスト (複数シリーズの場合) である必要があります。
+*   データ ソースに少なくとも 1 つのデータ項目を含む必要があります
+*   すべてのデータ項目には、少なくとも 1 つのデータ列 (文字列または日時) が含まれている必要があります。
+*   すべてのデータ項目には少なくとも 1 つの数値データ列が含まれている必要があります。
 
 ## 単一シリーズの Angular 折れ線チャート
 
@@ -86,23 +75,12 @@ Ignite UI for Angular 折れ線チャート (または折れ線グラフ) は、
 
 [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) コントロールでこのチャート タイプを作成するには、以下の例のように、データをバインドし、[`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) プロパティを `Line` に設定します:
 
-<code-view style="height: 600px"
+<code-view style="height: 600px" alt="単一シリーズの Angular 折れ線チャート"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-single-source"
-           alt="単一シリーズの Angular 折れ線チャート"
-           github-src="charts/category-chart/line-chart-single-source">
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/line-chart-single-source"
+                                                 github-src="charts/category-chart/line-chart-single-source">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/category-chart/line-chart-single-source?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/category-chart/line-chart-single-source?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -112,23 +90,12 @@ Angular 折れ線チャートを使用すると、複数のシリーズを組み
 
 [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) コントロールでこのチャート タイプを作成するには、以下の例のように、データをバインドし、[`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) プロパティを `Line` に設定します:
 
-<code-view style="height: 600px"
+<code-view style="height: 600px" alt="複数シリーズの Angular 折れ線チャート"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-multiple-sources"
-           alt="複数シリーズの Angular 折れ線チャート"
-           github-src="charts/category-chart/line-chart-multiple-sources'">
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/line-chart-multiple-sources"
+                                                 github-src="charts/category-chart/line-chart-multiple-sources">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/category-chart/line-chart-multiple-sources'?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/category-chart/line-chart-multiple-sources'?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -140,23 +107,12 @@ Angular 折れ線チャートは、次のデモに示すように、数百万に
 
 [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) コントロールでこのチャート タイプを作成するには、以下の例のように、データをバインドし、[`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) プロパティを `Line` に設定します:
 
-<code-view style="height: 600px"
+<code-view style="height: 600px" alt="ライブ データの Angular 折れ線チャートの例"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-high-frequency"
-           alt="Angular ライブ データの Angular 折れ線チャートの例"
-           github-src="charts/category-chart/high-frequency">
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/high-frequency"
+                                                 github-src="charts/category-chart/high-frequency">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/category-chart/high-frequency?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/category-chart/high-frequency?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -166,23 +122,12 @@ Angular 折れ線チャートは、次のデモに示すように、数百万に
 
 [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) コントロールでこのチャート タイプを作成するには、以下の例のように、データをバインドし、[`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) プロパティを `Line` に設定します:
 
-<code-view style="height: 600px"
+<code-view style="height: 600px" alt="Angular 折れ線チャートのスタイル設定"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-line-chart-styling"
-           alt="Angular 折れ線チャートのスタイル設定"
-           github-src="charts/category-chart/line-chart-styling">
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/line-chart-styling"
+                                                 github-src="charts/category-chart/line-chart-styling">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/category-chart/line-chart-styling?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/category-chart/line-chart-styling?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -194,23 +139,12 @@ Angular 折れ線チャートは、次のデモに示すように、数百万に
 
 積層型折れ線チャートは、地域間で数年間に生成された再生可能電力の量など、時間の経過に伴う価値の変化を示すためによく使用されます。[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールでこのチャート タイプを作成するには、以下の例のように、データを [`IgxStackedLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedlineseriescomponent.html) にバインドします:
 
-<code-view style="height: 600px"
+<code-view style="height: 600px" alt="Angular 積層型折れ線チャート"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-line-chart"
-           alt="Angular 積層型折れ線チャート"
-           github-src="charts/data-chart/stacked-line-chart">
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-line-chart"
+                                                 github-src="charts/data-chart/stacked-line-chart">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/stacked-line-chart?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/stacked-line-chart?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -220,23 +154,12 @@ Angular 折れ線チャートは、次のデモに示すように、数百万に
 
 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールでこのチャート タイプを作成するには、以下の例のように、データを [`IgxStacked100LineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100lineseriescomponent.html) にバインドします:
 
-<code-view style="height: 600px"
+<code-view style="height: 600px" alt="Angular 積層型 100% 折れ線チャート"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-stacked-100-line-chart"
-           alt="Angular 積層型 100% 折れ線チャート"
-           github-src="charts/data-chart/stacked-100-line-chart">
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-line-chart"
+                                                 github-src="charts/data-chart/stacked-100-line-chart">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/stacked-100-line-chart?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/stacked-100-line-chart?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -246,23 +169,12 @@ Angular 折れ線チャートは、次のデモに示すように、数百万に
 
 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールでこのチャート タイプを作成するには、以下の例のように、データを [`IgxRadialLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html) にバインドします:
 
-<code-view style="height: 600px"
+<code-view style="height: 600px" alt="Angular ラジアル折れ線チャート"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-radial-line-chart"
-           alt="Angular ラジアル折れ線チャート"
-           github-src="charts/data-chart/radial-line-chart">
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-line-chart"
+                                                 github-src="charts/data-chart/radial-line-chart">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/radial-line-chart?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/radial-line-chart?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -272,23 +184,12 @@ Angular 折れ線チャートは、次のデモに示すように、数百万に
 
 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html) コントロールでこのチャート タイプを作成するには、以下の例のように、データを [`IgxPolarLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html) にバインドします:
 
-<code-view style="height: 600px"
+<code-view style="height: 600px" alt="Angular 極座標型折れ線チャート"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart-polar-line-chart"
-           alt="Angular 極座標型折れ線チャート"
-           github-src="charts/data-chart/polar-line-chart">
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/polar-line-chart"
+                                                 github-src="charts/data-chart/polar-line-chart">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/polar-line-chart?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/data-chart/polar-line-chart?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -296,21 +197,21 @@ Angular 折れ線チャートは、次のデモに示すように、数百万に
 
 関連するチャートタイプの詳細については、以下のトピックを参照してください。
 
--   [エリア チャート](area-chart.md)
--   [縦棒チャート](column-chart.md)
--   [極座標チャート](polar-chart.md)
--   [ラジアル チャート](radial-chart.md)
--   [スプライン チャート](spline-chart.md)
--   [積層型チャート](stacked-chart.md)
+*   [エリア チャート](area-chart.md)
+*   [縦棒チャート](column-chart.md)
+*   [極座標チャート](polar-chart.md)
+*   [ラジアル チャート](radial-chart.md)
+*   [スプライン チャート](spline-chart.md)
+*   [積層型チャート](stacked-chart.md)
 
-## API メンバー
+## API リファレンス
 
 以下のテーブルは、上記のセクションで説明した API メンバーをリストします。
 
-| チャート タイプ     | コントロール名                                                                                                                                                | API メンバー                                                                                                                                                             |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 折れ線          | [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) | [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) = `Line`            |
-| 極座標折れ線       | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)         | [`IgxPolarLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html)           |
-| ラジアル折れ線      | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)         | [`IgxRadialLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html)         |
-| 積層型折れ線       | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)         | [`IgxStackedLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedlineseriescomponent.html)       |
-| 積層型 100% 折れ線 | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)         | [`IgxStacked100LineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100lineseriescomponent.html) |
+| チャート タイプ        | コントロール名       | API メンバー |
+| ------------------|--------------------|----------------------- |
+| 折れ線              | [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html) | [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxcategorychartcomponent.html#charttype) = `Line` |
+| 極座標折れ線        | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)     | [`IgxPolarLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxpolarlineseriescomponent.html) |
+| ラジアル折れ線       | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)     | [`IgxRadialLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxradiallineseriescomponent.html) |
+| 積層型折れ線      | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)     | [`IgxStackedLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstackedlineseriescomponent.html) |
+| 積層型 100% 折れ線 | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatachartcomponent.html)     | [`IgxStacked100LineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxstacked100lineseriescomponent.html) |

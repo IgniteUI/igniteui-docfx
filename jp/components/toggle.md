@@ -1,13 +1,13 @@
 ---
 title: Toggle コンポーネント - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular Toggle ディレクティブを使用すると、トグル コンテナーを開く、操作、アニメーションに適用、および閉じることができます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Toggle ディレクティブ, Angular Toggle コントロール, Angular Toggle コンポーネント
+_keywords: Angular Toggle ディレクティブ, Angular Toggle コントロール, Angular Toggle コンポーネント, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
 _language: ja
 ---
 
-# Toggle
+# Angular Toggle (トグル) ディレクティブの概要
 
-<p class="highlight">Ignite UI for Angular の Toggle ディレクティブは、ユーザーが簡単に開閉できるボックスにコンテンツをラップします。</p>
+<p class="highlight">Ignite UI for Angular Toggle ディレクティブを使用すると、ユーザー操作を通じて DOM 内のコンテナーを切り替え可能にできます。</p>
 
 ## Angular Toggle の例
 
@@ -18,11 +18,17 @@ _language: ja
 </code-view>
 
 
-## 使用方法
+## Ignite UI for Angular Toggle を使用した作業の開始
 
-### はじめに
+Ignite UI for Angular Toggle ディレクティブを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
-Toggle コンポーネントを初期化にするには、まず `IgxToggleModule` を **app.module.ts** ファイルにインポートします。
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxToggleModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -38,6 +44,35 @@ import { IgxToggleModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
+
+あるいは、`16.0.0` 以降、`IgxToggleDirective` をスタンドアロンの依存関係としてインポートできます。
+
+```typescript
+// home.component.ts
+
+import { IgxToggleDirective, IgxButtonDirective } from 'igniteui-angular';
+// import { IgxToggleDirective, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <button class="toggle-button" igxButton="raised" (click)="toggleContent()">Toggle</button>
+    <div class="toggle-content" igxToggle>
+        <section class="toggle-section">
+            <img src="assets/images/toggle/nature.jpg" alt="Nature" />
+        </section>
+    </div>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxToggleDirective, IgxButtonDirective]
+})
+export class HomeComponent {}
+```
+
+Ignite UI for Angular Toggle モジュールまたはディレクティブをインポートしたので、`igxToggle` ディレクティブの使用を開始できます。
+
+## Angular Toggle ディレクティブの使用
 
 ### トグルの表示
 
@@ -82,7 +117,7 @@ export class Class {
 `igxToggle` ディレクティブは  [`IgxOverlayService`]({environment:angularApiUrl}/classes/igxoverlayservice.html) プロバイダーを使用します。`open`、`close`、`toggle` メソッドは、コンテンツの表示方法を制御するオプションのオーバーレイ設定を受け取ります。省略した場合は、上のサンプルのようにデフォルトのオーバーレイ設定が使用されます。
 
 >[!NOTE]
-> デフォルトで、[`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) プロパティは `true`に設定されています。この機能を無効にするには、プロパティを `false` に設定する必要があります。さらに、[`closeOnEsc`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonesc) プロパティのデフォルトの設定は `false` であるため、利用するには、`true` に設定する必要があります。
+> デフォルトで、[`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeOnOutsideClick) プロパティは `true`に設定されています。この機能を無効にするには、プロパティを `false` に設定する必要があります。さらに、[`closeOnEscape`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeOnEscape) プロパティのデフォルトの設定は `false` であるため、利用するには、`true` に設定する必要があります。
 
 ```typescript
 // template.component.ts
@@ -146,7 +181,7 @@ export class Class {
 
 
 >[!NOTE]
-> デフォルトで、`IgxToggleActionDirective` はホスト要素を [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeonoutsideclick) プロパティから除外します。したがって、ホスト要素をクリックしてもイベントは発生しません。 さらに、このディレクティブはホスト要素をオーバーレイ設定の [`target`]({environment:angularApiUrl}/interfaces/overlaysettings.html#target) として設定します。
+> デフォルトで、`IgxToggleActionDirective` はホスト要素を [`closeOnOutsideClick`]({environment:angularApiUrl}/interfaces/overlaysettings.html#closeOnOutsideClick) プロパティから除外します。したがって、ホスト要素をクリックしてもイベントは発生しません。さらに、このディレクティブはホスト要素をオーバーレイ設定の [`target`]({environment:angularApiUrl}/interfaces/overlaysettings.html#target) として設定します。
 
 ### 自動トグル サービス プロバイダー
 

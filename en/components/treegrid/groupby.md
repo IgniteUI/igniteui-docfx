@@ -38,7 +38,7 @@ The component's inputs are the following:
 - grid - `IgxTreeGridComponent` that is used for the grouping
 - expressions - an array of [`IGroupingExpression`]({environment:angularApiUrl}/interfaces/igroupingexpression.html) objects which contains the fields used to generate the hierarchy
 - hideGroupedColumns - a boolean value indicating whether to hide the columns by which grouping was performed
-- density - a [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displaydensity) that can be used to change the view
+- density - a [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displayDensity) that can be used to change the view
 - dropAreaTemplate - a template for the drop area that can be used to override the default drop area template
 - dropAreaMessage - a string that can be used to override the default message for the default drop area template
 
@@ -129,7 +129,7 @@ Here is an example of how to use load on demand:
         <igx-column [field]="groupColumnKey"></igx-column>
 ```
 
-In order to load the child rows when the user expands a row, the Tree Grid provides the callback input property [`loadChildrenOnDemand`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#loadchildrenondemand) - the children data is retrieved from the server and it is assigned to the requested parent row based on the grouping parameters.
+In order to load the child rows when the user expands a row, the Tree Grid provides the callback input property [`loadChildrenOnDemand`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#loadChildrenOnDemand) - the children data is retrieved from the server and it is assigned to the requested parent row based on the grouping parameters.
 
 ```typescript
 public groupingExpressions: IGroupingExpression[] = [

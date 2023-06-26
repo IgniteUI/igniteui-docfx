@@ -1,13 +1,14 @@
 ---
 title: 仮想スクロール ディレクティブ
 _description: Ignite UI for Angular は ngFor と同様の仮想 igxFor ディレクティブを公開します。DOM でデータの表示されている部分のみを可視化すると DOM オブジェクトの描画が仮想化されます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, 仮想化, パフォーマンス, 仮想ディレクティブ, 仮想 For
+_keywords: Angular Virtual ForOf ディレクティブ, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ, 仮想化, パフォーマンス, 仮想ディレクティブ, Angular 仮想 For
 _language: ja
 ---
 
-# 仮想スクロール ディレクティブ
+# Angular Virtual ForOf (仮想 ForOf) ディレクティブの概要
 
 <p class="highlight">Ignite UI for Angular igxForOf ディレクティブは、膨大なデータをテンプレート化するための ngForOf の代替手段です。仮想化を使用して、DOM レンダリングとメモリ使用量を最適化します。</p>
+
 <div class="divider"></div>
 
 ## Angular 仮想スクロール ディレクティブの例
@@ -18,12 +19,19 @@ _language: ja
            iframe-src="{environment:demosBaseUrl}/data-display/igx-for-sample-1" alt="Angular 仮想スクロール ディレクティブの例">
 </code-view>
 
+<div class="divider"></div>
 
-## 使用方法
+## Ignite UI for Angular Virtual ForOf ディレクティブを使用した作業の開始
 
-### はじめに
+Ignite UI for Angular [`igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForOf) ディレクティブを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
-[`igxFor`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) ディレクティブは `NgModule` としてエクスポートされるため、アプリケーションで行う必要があるのは、`AppModule` に `IgxForOfModule` をインポートすることだけです。
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxForOfModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -41,9 +49,35 @@ import { IgxForOfModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-### igxFor を追加
+あるいは、`16.0.0` 以降、`IgxForOfDirective` をスタンドアロンの依存関係としてインポートできます。
 
-モジュールをインポート後、ローカル データにバインドする `igxFor` の基本構成を設定します。
+```typescript
+// home.component.ts
+
+import { IgxForOfDirective } from 'igniteui-angular';
+// import { IgxForOfDirective } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <span #container>
+        <ng-template *igxFor="data"></ng-template>
+    </span>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxForOfDirective]
+})
+export class HomeComponent {
+    public data: Employee [];
+}
+```
+
+Ignite UI for Angular ForOf モジュールまたはディレクティブをインポートしたので、`igxFor` ディレクティブの使用を開始できます。
+
+## Angular Virtual ForOf の使用
+
+そのモジュールまたはディレクティブをインポートしたので、ローカル データにバインドする `igxFor` の基本構成を設定します。
 
 ```html
 <span #container>
@@ -51,8 +85,7 @@ export class AppModule {}
 </span>
 ```
 
-**data** プロパティは、仮想化されたデータを提供する配列です。
-
+**data** プロパティは、仮想化 DOM の構築に使用されるデータ オブジェクトを提供する配列です。
 
 ## 例
 
@@ -78,7 +111,7 @@ export class AppModule {}
 </igx-list>
 ```
 
-***注:*** [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) テンプレートの親コンテナーには、次の CSS ルールが適用されていることを強く推奨します: 垂直方向には `height`、水平方向には `width`、`overflow: hidden` および ` position: relative`。スムーズ スクロール動作が、表示されたままの場合にページのその他の部分に視覚的に影響を与えることが可能なコンテンツ オフセットによって実装されるためです。
+**注:** [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForOf) テンプレートの親コンテナーには、次の CSS ルールが適用されていることを強く推奨します: 垂直方向には `height`、水平方向には `width`、`overflow: hidden` および ` position: relative`。スムーズ スクロール動作が、表示されたままの場合にページのその他の部分に視覚的に影響を与えることが可能なコンテンツ オフセットによって実装されるためです。
 
 ### 水平仮想化 
 
@@ -138,7 +171,7 @@ export class AppModule {}
 より詳細な情報とデモについては、[グリッド仮想化](grid/virtualization.md)トピックに従ってください。
 
 ### リモート サービスにバインドされる igxFor
-[`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) ディレクティブは、`Observable` プロパティ- `remoteData`を使用してリモート サービスにバインドできます。(次の例の場合) `chunkLoading` イベントも、データのリクエストをトリガーするために利用する必要があります。
+[`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForOf) ディレクティブは、`Observable` プロパティ- `remoteData`を使用してリモート サービスにバインドできます。(次の例の場合) `chunkLoading` イベントも、データのリクエストをトリガーするために利用する必要があります。
 
 ```html
 <div style='height: 500px; overflow: hidden; position: relative;'>
@@ -154,7 +187,7 @@ export class AppModule {}
 </div>
 ```
 
-***注:*** [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforof) のインスタンスで [`totalItemCount`]({environment:angularApiUrl}/classes/igxforofdirective.html#totalitemcount) プロパティを設定する必要があります。
+***注:*** [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForOf) のインスタンスで [`totalItemCount`]({environment:angularApiUrl}/classes/igxforofdirective.html#totalItemCount) プロパティを設定する必要があります。
 
 ```typescript
 this.virtDirRemote.totalItemCount = data['@odata.count'];
@@ -167,7 +200,7 @@ this.virtDirRemote.totalItemCount = data['@odata.count'];
 public virtDirRemote: IgxForOfDirective<any>;
 ```
 
-最初のチャンクをロードするリクエストの後、[`totalItemCount`]({environment:angularApiUrl}/classes/igxforofdirective.html#totalitemcount) を設定できます:
+最初のチャンクをロードするリクエストの後、[`totalItemCount`]({environment:angularApiUrl}/classes/igxforofdirective.html#totalItemCount) を設定できます:
 
 ```typescript
 public ngAfterViewInit() {
@@ -177,7 +210,7 @@ public ngAfterViewInit() {
 }
 ```
 
-データをリクエストする際、[`startIndex`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.startindex) プロパティと [`chunkSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.chunksize) プロパティを提供する [`IgxForOfState`]({environment:angularApiUrl}/classes/igxforofdirective.html#state) インターフェイスを利用できます。最初は chunkSize が 0 になるため、最初に読み込まれるチャンクのサイズを指定する必要があることに注意してください (最適な値は、初期の [`igxForContainerSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforcontainersize) を [`igxForItemSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforitemsize) で割った値です)。
+データをリクエストする際、[`startIndex`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.startindex) プロパティと [`chunkSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.chunkSize) プロパティを提供する [`IgxForOfState`]({environment:angularApiUrl}/classes/igxforofdirective.html#state) インターフェイスを利用できます。最初は chunkSize が 0 になるため、最初に読み込まれるチャンクのサイズを指定する必要があることに注意してください (最適な値は、初期の [`igxForContainerSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForContainerSize) を [`igxForItemSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForItemSize) で割った値です)。
 
 ```typescript
 public getData(data?: IForOfState, cb?: (any) => void): any {
@@ -250,6 +283,7 @@ igxFor ディレクティブのコンテキストには、`even`、`odd`、`firs
 
 ## その他のリソース
 
+<div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)

@@ -14,22 +14,12 @@ Ignite UI for Angular Map コンポーネントを使用すると、ビューモ
 
 以下のサンプルは、Bubble Series (バブル シリーズ) とも呼ばれる [`IgxGeographicProportionalSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html) を使用して [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) にデータを表示する方法を示しています。
 
-<code-view style="height: 500px"
+<code-view style="height: 500px" alt="Angular geo map type scatter bubble series"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map-type-scatter-bubble-series"
-           github-src="maps/geo-map/type-scatter-bubble-series">
+                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/type-scatter-bubble-series"
+                                                 github-src="maps/geo-map/type-scatter-bubble-series">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/type-scatter-bubble-series?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/maps/geo-map/type-scatter-bubble-series?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -45,11 +35,11 @@ Map は、マウス、キーボード、またはコードビハインドを使�
 
 地理マップコンポーネントを使用するには、はじめにこれらのパッケージをインストールする必要があります。
 
-<pre style="background:#141414;color:white;display:inline-block;padding:16x;margin-top:10px;font-family:'Consolas';border-radius:5px;width:100%">
+```cmd
 npm install --save igniteui-angular-core
 npm install --save igniteui-angular-charts
 npm install --save igniteui-angular-maps
-</pre>
+```
 
 <!-- end: Angular, React, WebComponents -->
 
@@ -118,24 +108,27 @@ export class MapOverviewComponent implements AfterViewInit {
 
 関連する Angular マップ機能の詳細については、以下のトピックを参照してください。
 
--   [地理マップのナビゲーション](geo-map-navigation.md)
-    <!-- - [地理マップ画像](geo-map-display-imagery-types.md) -->
--   [散布図記号シリーズの使用](geo-map-type-scatter-symbol-series.md)
--   [散布図比例シリーズの使用](geo-map-type-scatter-bubble-series.md)
--   [散布等高線シリーズの使用](geo-map-type-scatter-contour-series.md)
--   [散布図密度シリーズの使用](geo-map-type-scatter-density-series.md)
--   [散布エリア シリーズの使用](geo-map-type-scatter-area-series.md)
--   [シェイプ ポリゴン シリーズの使用](geo-map-type-shape-polygon-series.md)
--   [シェイプ ポリライン シリーズの使用](geo-map-type-shape-polyline-series.md)
+*   [地理マップのナビゲーション](geo-map-navigation.md)
 
-## API メンバー
+<!-- - [地理マップ画像](geo-map-display-imagery-types.md) -->
+
+*   [散布図記号シリーズの使用](geo-map-type-scatter-symbol-series.md)
+*   [散布図比例シリーズの使用](geo-map-type-scatter-bubble-series.md)
+*   [散布等高線シリーズの使用](geo-map-type-scatter-contour-series.md)
+*   [散布図密度シリーズの使用](geo-map-type-scatter-density-series.md)
+*   [散布エリア シリーズの使用](geo-map-type-scatter-area-series.md)
+*   [シェイプ ポリゴン シリーズの使用](geo-map-type-shape-polygon-series.md)
+*   [シェイプ ポリライン シリーズの使用](geo-map-type-shape-polyline-series.md)
+
+## API リファレンス
 
 以下は上記のセクションで説明した API メンバーのリストです。
 
--   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html)
--   [`IgxGeographicContourLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html)
--   [`IgxGeographicHighDensityScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html)
--   [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)
--   [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html)
--   [`IgxGeographicProportionalSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html)
--   [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html)
+*   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html)
+*   [`IgxGeographicContourLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographiccontourlineseriescomponent.html)
+*   [`IgxGeographicHighDensityScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographichighdensityscatterseriescomponent.html)
+*   [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)
+*   [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html)
+*   [`IgxGeographicProportionalSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicproportionalsymbolseriescomponent.html)
+*   [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicsymbolseriescomponent.html)
+*   [`IgxGeographicScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicscatterareaseriescomponent.html)

@@ -13,11 +13,8 @@ Infragistics Angular Excel Engine の [`WorksheetTable`]({environment:dvApiBaseU
 <!--## Angular Using Tables Example
 
 
-<code-view style="height: 500px"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-working-with-tables"
-           alt="Angular Using Tables Example" >
-</code-view>
+`sample="/excel/excel-library/working-with-tables", height="500", alt="Angular Using Tables Example"`
+
 
 -->
 
@@ -69,15 +66,15 @@ table.resize("A1:G15");
 
 以下は、[`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html) の列で使用できるフィルター タイプです。
 
--   [`AverageFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/averagefilter.html) - このコードは、列のすべてのセルの平均値の上か下かに基づいてセルをフィルターする方法を示します。
--   [`CustomFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/customfilter.html) - 1 つ以上のカスタム条件に基づいてセルをフィルターできます。
--   [`DatePeriodFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/dateperiodfilter.html) - 年の特定の月または四半期の日付を含むセルのみが表示されます。
--   [`FillFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fillfilter.html) - 特定の塗りつぶしを含むセルのみが表示されます。
--   [`FixedValuesFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fixedvaluesfilter.html) - 特定の表示値のみに一致するまたは日付/時間の特定のグループ内に分類されるセルが表示されます。
--   [`FontColorFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fontcolorfilter.html) - 特定のフォントの色を含むセルのみが表示されます。
--   [`RelativeDateRangeFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/relativedaterangefilter.html) - フィルターが適用されたときに、以下の日または前の四半期のように日付の相対的な時間の範囲内で発生するかどうかに基づいて、日付値ををフィルターできます。
--   [`TopOrBottomFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/toporbottomfilter.html) - このフィルターはトップまたはボトム N 値をフィルターします。このフィルターはトップまたはボトム N %値をフィルターします。
--   [`YearToDateFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/yeartodatefilter.html) - 年の始まりとフィルターが適用される日付の間に発生する場合、日付値を含むYearToDateFilter-をフィルターできます。
+*   [`AverageFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/averagefilter.html) - このコードは、列のすべてのセルの平均値の上か下かに基づいてセルをフィルターする方法を示します。
+*   [`CustomFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/customfilter.html) - 1 つ以上のカスタム条件に基づいてセルをフィルターできます。
+*   [`DatePeriodFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/dateperiodfilter.html) - 年の特定の月または四半期の日付を含むセルのみが表示されます。
+*   [`FillFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fillfilter.html) - 特定の塗りつぶしを含むセルのみが表示されます。
+*   [`FixedValuesFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fixedvaluesfilter.html) - 特定の表示値のみに一致するまたは日付/時間の特定のグループ内に分類されるセルが表示されます。
+*   [`FontColorFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fontcolorfilter.html) - 特定のフォントの色を含むセルのみが表示されます。
+*   [`RelativeDateRangeFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/relativedaterangefilter.html) - フィルターが適用されたときに、以下の日または前の四半期のように日付の相対的な時間の範囲内で発生するかどうかに基づいて、日付値ををフィルターできます。
+*   [`TopOrBottomFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/toporbottomfilter.html) - このフィルターはトップまたはボトム N 値をフィルターします。このフィルターはトップまたはボトム N %値をフィルターします。
+*   [`YearToDateFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/yeartodatefilter.html) - 年の始まりとフィルターが適用される日付の間に発生する場合、日付値を含むYearToDateFilter-をフィルターできます。
 
 以下のコード スニペットは、[`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html) の最初の列に平均を超えるフィルターを適用する方法を示します。
 
@@ -95,16 +92,16 @@ table.columns(0).applyAverageFilter(AverageFilterType.AboveAverage);
 
 テーブルのデータが後で変更される場合、ソート条件は自動的に再評価されません。テーブルのソート条件は、ソート条件が追加、削除、変更される時に、または [`reapplySortConditions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#reapplysortconditions) メソッドがテーブルで呼び出されるときに限り再適用されます。ソート条件が再評価されると、表示されたセルのみがソートられます。非表示行のすべてのセルは適切に維持されます。
 
-テーブル列からソート条件へアクセスする以外に [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html) の [`sortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#sortsettings) プロパティの [`sortConditions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sortsettings`1.html#sortconditions) コレクションからも公開されます。これは、列/ソート条件のペアの順番に並べられたコレクションです。このコレクション内の順序はソートの優先順位です。
+テーブル列からソート条件へアクセスする以外に [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html) の [`sortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#sortsettings) プロパティの [`sortConditions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sortsettings\`1.html#sortconditions) コレクションからも公開されます。これは、列/ソート条件のペアの順番に並べられたコレクションです。このコレクション内の順序はソートの優先順位です。
 
 列に設定可能なソート条件タイプは以下のとおりです。
 
--   [`OrderedSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/orderedsortcondition.html) - セル値に基づいてセルを昇順または降順にソートします。
--   [`CustomListSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/customlistsortcondition.html) - テキストまたは表示値に基づいて定義された順序でセルをソートします。このソート方法は、日付がカレンダーに表示されるためアルファベット順よりも便利です。
--   [`FillSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fillsortcondition.html) - 塗りつぶしが特定のパターン/グラデーションであるかどうかに基づいてセルをソートします。
--   [`FontColorSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fontcolorsortcondition.html) - フォントが特定の色であるかどうかによってセルをソートします。
+*   [`OrderedSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/orderedsortcondition.html) - セル値に基づいてセルを昇順または降順にソートします。
+*   [`CustomListSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/customlistsortcondition.html) - テキストまたは表示値に基づいて定義された順序でセルをソートします。このソート方法は、日付がカレンダーに表示されるためアルファベット順よりも便利です。
+*   [`FillSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fillsortcondition.html) - 塗りつぶしが特定のパターン/グラデーションであるかどうかに基づいてセルをソートします。
+*   [`FontColorSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fontcolorsortcondition.html) - フォントが特定の色であるかどうかによってセルをソートします。
 
-また [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html) の [`sortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#sortsettings) の [`caseSensitive`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sortsettings`1.html#casesensitive) プロパティは、文字列が大文字と小文字を区別してソートできるかどうかを開発者が設定できます。
+また [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html) の [`sortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#sortsettings) の [`caseSensitive`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sortsettings\`1.html#casesensitive) プロパティは、文字列が大文字と小文字を区別してソートできるかどうかを開発者が設定できます。
 
 以下のコード スニペットは、[`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html) に [`OrderedSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/orderedsortcondition.html) を適用する方法です。
 
@@ -119,15 +116,15 @@ table.columns(0).sortCondition = new OrderedSortCondition(SortDirection.Ascendin
 table.sortSettings.sortConditions().addItem(table.columns(0), new OrderedSortCondition(SortDirection.Ascending));
 ```
 
-## API メンバー
+## API リファレンス
 
--   [`deleteColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#deletecolumns)
--   [`deleteDataRows`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#deletedatarows)
--   [`FillFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fillfilter.html)
--   [`insertColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#insertcolumns)
--   [`insertDataRows`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#insertdatarows)
--   [`sortConditions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sortsettings`1.html#sortconditions)
--   [`sortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#sortsettings)
--   [`tables`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html#tables)
--   [`WorksheetTableStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettablestyle.html)
--   [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html)
+*   [`deleteColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#deletecolumns)
+*   [`deleteDataRows`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#deletedatarows)
+*   [`FillFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/fillfilter.html)
+*   [`insertColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#insertcolumns)
+*   [`insertDataRows`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#insertdatarows)
+*   [`sortConditions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/sortsettings\`1.html#sortconditions)
+*   [`sortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html#sortsettings)
+*   [`tables`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheet.html#tables)
+*   [`WorksheetTableStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettablestyle.html)
+*   [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheettable.html)

@@ -30,23 +30,12 @@ Finally, there is a summary row that displays the total of all series values. Th
 
 The following example demonstrates the data tooltip with a summary applied:
 
-<code-view style="height: 450px"
+<code-view style="height: 450px" alt="Angular Category Chart Data Tooltip Example"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-data-tooltip"
-           alt="Angular Category Chart Data Tooltip Example"
-           github-src="charts/category-chart/data-tooltip">
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/data-tooltip"
+                                                 github-src="charts/category-chart/data-tooltip">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/category-chart/data-tooltip?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/category-chart/data-tooltip?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 ### Angular Data Tooltip Columns
 
@@ -60,21 +49,21 @@ The value column displays series values as abbreviated text which can be formatt
 
 The units column displays an abbreviation symbol and/or unit text, which can be set either on the **DataToolTip** by setting the [`dataToolTipUnitsText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipunitstext) for all columns or using the following properties on each series in the chart:
 
--   Category Series (e.g. ColumnSeries)
-    -   ValueMemberAsLegendUnit="K"
--   Financial Price Series:
-    -   OpenMemberAsLegendUnit="K"
-    -   LowMemberAsLegendUnit="K"
-    -   HighMemberAsLegendUnit="K"
-    -   CloseMemberAsLegendUnit="K"
--   Range Series:
-    -   LowMemberAsLegendUnit="K"
-    -   HighMemberAsLegendUnit="K"
--   Radial Series:
-    -   ValueMemberAsLegendUnit="km"
--   Polar Series:
-    -   RadiusMemberAsLegendUnit="km"
-    -   AngleMemberAsLegendUnit="degrees"
+*   Category Series (e.g. ColumnSeries)
+    *   ValueMemberAsLegendUnit="K"
+*   Financial Price Series:
+    *   OpenMemberAsLegendUnit="K"
+    *   LowMemberAsLegendUnit="K"
+    *   HighMemberAsLegendUnit="K"
+    *   CloseMemberAsLegendUnit="K"
+*   Range Series:
+    *   LowMemberAsLegendUnit="K"
+    *   HighMemberAsLegendUnit="K"
+*   Radial Series:
+    *   ValueMemberAsLegendUnit="km"
+*   Polar Series:
+    *   RadiusMemberAsLegendUnit="km"
+    *   AngleMemberAsLegendUnit="degrees"
 
 For the above-listed properties, there are corresponding properties ending with **MemberAsLegendLabel** to determine the text in the label columns mentioned previously.
 
@@ -82,23 +71,12 @@ The columns included in the [`dataToolTipIncludedColumns`]({environment:dvApiBas
 
 The following example demonstrates a data tooltip with the added columns of Open, High, Low, Close, and Change:
 
-<code-view style="height: 450px"
+<code-view style="height: 450px" alt="Angular Financial Chart Data Tooltip Example"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-data-tooltip"
-           alt="Angular Financial Chart Data Tooltip Example"
-           github-src="charts/financial-chart/data-tooltip">
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/data-tooltip"
+                                                 github-src="charts/financial-chart/data-tooltip">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/financial-chart/data-tooltip?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/financial-chart/data-tooltip?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 ## Angular Data Tooltip Styling
 
@@ -106,23 +84,12 @@ The **DataToolTip** provides properties for styling each type of column. Each of
 
 The following example demonstrates usage of the styling properties mentioned above:
 
-<code-view style="height: 450px"
+<code-view style="height: 450px" alt="Angular Financial Chart Data Tooltip Styling Example"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-data-tooltip-styling-props"
-           alt="Angular Financial Chart Data Tooltip Styling Example"
-           github-src="charts/financial-chart/data-tooltip-styling-props">
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/data-tooltip-styling-props"
+                                                 github-src="charts/financial-chart/data-tooltip-styling-props">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/financial-chart/data-tooltip-styling-props?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/financial-chart/data-tooltip-styling-props?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 ## Angular Data Tooltip Grouping & Positioning
 
@@ -130,23 +97,12 @@ You can set [`dataToolTipGroupingMode`]({environment:dvApiBaseUrl}/products/igni
 
 The following example demonstrates a data tooltip positioned to the top-right of the chart:
 
-<code-view style="height: 450px"
+<code-view style="height: 450px" alt="Angular Category Chart Data Tooltip Positioning Example"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-data-tooltip-positioning"
-           alt="Angular Category Chart Data Tooltip Positioning Example"
-           github-src="charts/category-chart/data-tooltip-positioning">
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/data-tooltip-positioning"
+                                                 github-src="charts/category-chart/data-tooltip-positioning">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/category-chart/data-tooltip-positioning?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/category-chart/data-tooltip-positioning?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 ## Angular Data Tooltip Value Formatting
 
@@ -154,66 +110,44 @@ The **DataToolTip** provides automatic abbreviation of large numbers using its [
 
 The following example demonstrates a **DataToolTip** with the minimum and maximum fractions set:
 
-<code-view style="height: 450px"
+<code-view style="height: 450px" alt="Angular Category Chart Data Tooltip Formatting Decimals Example"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart-data-tooltip-formatting-decimals"
-           alt="Angular Category Chart Data Tooltip Formatting Decimals Example"
-           github-src="charts/category-chart/data-tooltip-formatting-decimals">
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/data-tooltip-formatting-decimals"
+                                                 github-src="charts/category-chart/data-tooltip-formatting-decimals">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/category-chart/data-tooltip-formatting-decimals?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/category-chart/data-tooltip-formatting-decimals?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 ## Angular Data Tooltip Value Mode
 
 You can change the default decimal display of values within the **DataToolTip** to be currency by changing the [`dataToolTipValueFormatMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipvalueformatmode) property of the layer. The **DataToolTip** also exposes the ability to modify the culture of the displayed currency symbol by using its [`dataToolTipValueFormatCulture`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipvalueformatculture) property and setting it to its corresponding culture tag. For example, the following sample demonstrates a chart with the [`dataToolTipValueFormatCulture`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipvalueformatculture) set to "en-GB":
 
-<code-view style="height: 450px"
+<code-view style="height: 450px" alt="Angular Financial Chart Data Tooltip Formatting Currency Example"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart-data-tooltip-formatting-currency"
-           alt="Angular Financial Chart Data Tooltip Formatting Currency Example"
-           github-src="charts/financial-chart/data-tooltip-formatting-currency">
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/data-tooltip-formatting-currency"
+                                                 github-src="charts/financial-chart/data-tooltip-formatting-currency">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/financial-chart/data-tooltip-formatting-currency?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/charts/financial-chart/data-tooltip-formatting-currency?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
-## API Members
+## API References
 
--   [`dataToolTipExcludedColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipexcludedcolumns)
--   [`dataToolTipGroupedPositionModeX`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipgroupedpositionmodex)
--   [`dataToolTipGroupedPositionModeY`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipgroupedpositionmodey)
--   [`dataToolTipGroupingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipgroupingmode)
--   [`dataToolTipHeaderText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipheadertext)
--   [`dataToolTipIncludedColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipincludedcolumns)
--   [`dataToolTipLabelTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltiplabeltextcolor)
--   [`IgxDataToolTipLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatatooltiplayercomponent.html)
--   [`dataToolTipSummaryTitleText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipsummarytitletext)
--   [`dataToolTipSummaryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipsummarytype)
--   [`dataToolTipTitleTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltiptitletextcolor)
--   [`dataToolTipUnitsTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipunitstextcolor)
--   [`dataToolTipUnitsText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipunitstext)
--   [`dataToolTipValueFormatAbbreviation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipvalueformatabbreviation)
--   [`dataToolTipValueFormatCulture`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipvalueformatculture)
--   [`dataToolTipValueFormatMaxFractions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipvalueformatmaxfractions)
--   [`dataToolTipValueFormatMaxFractions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipvalueformatmaxfractions)
--   [`dataToolTipValueFormatMinFractions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipvalueformatminfractions)
--   [`dataToolTipValueFormatMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipvalueformatmode)
--   [`dataToolTipValueTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipvaluetextcolor)
--   `MemberAsLegendLabel`
+*   [`dataToolTipExcludedColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipexcludedcolumns)
+*   [`dataToolTipGroupedPositionModeX`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipgroupedpositionmodex)
+*   [`dataToolTipGroupedPositionModeY`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipgroupedpositionmodey)
+*   [`dataToolTipGroupingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipgroupingmode)
+*   [`dataToolTipHeaderText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipheadertext)
+*   [`dataToolTipIncludedColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipincludedcolumns)
+*   [`dataToolTipLabelTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltiplabeltextcolor)
+*   [`IgxDataToolTipLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatatooltiplayercomponent.html)
+*   [`dataToolTipSummaryTitleText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipsummarytitletext)
+*   [`dataToolTipSummaryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipsummarytype)
+*   [`dataToolTipTitleTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltiptitletextcolor)
+*   [`dataToolTipUnitsTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipunitstextcolor)
+*   [`dataToolTipUnitsText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipunitstext)
+*   [`dataToolTipValueFormatAbbreviation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipvalueformatabbreviation)
+*   [`dataToolTipValueFormatCulture`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipvalueformatculture)
+*   [`dataToolTipValueFormatMaxFractions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipvalueformatmaxfractions)
+*   [`dataToolTipValueFormatMaxFractions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipvalueformatmaxfractions)
+*   [`dataToolTipValueFormatMinFractions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipvalueformatminfractions)
+*   [`dataToolTipValueFormatMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipvalueformatmode)
+*   [`dataToolTipValueTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdomainchartcomponent.html#datatooltipvaluetextcolor)
+*   `MemberAsLegendLabel`

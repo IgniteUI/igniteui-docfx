@@ -1,13 +1,18 @@
 ---
 title: Angular Tree コンポーネント - Ignite UI for Angular
 _description: Ignite UI for Angular Tree コンポーネントを使用すると、階層データをツリービュー構造で表示したり、ノードを簡単にカスタマイズしたり、オンデマンドでデータを読み込んだりできます。無料でお試しください。
-_keywords: angular tree, angular tree コンポーネント, ignite ui for angular, UI コントロール, インフラジスティックス
+_keywords: angular tree, angular tree コンポーネント, angular tree view, angular tree view コンポーネント, angular ui コンポーネント, ignite ui for angular, UI コントロール, インフラジスティックス
 _language: ja
 ---
+<style type="text/css">
+    code-view .codesandbox-btn {
+        display: none !important;
+    }
+</style>
 
 # Angular Tree コンポーネントの概要
 
-Angular Tree コンポーネントを使用すると、ユーザーはツリービュー構造で階層データを表現し、親子関係を維持したり、対応するデータ モデルなしで静的ツリービュー構造を定義したりできます。その主な目的は、エンドユーザーが階層データ構造内を視覚化してナビゲートできるようにすることです。UI for Angular Tree コンポーネントは、組み込みのチェックボックス、組み込みのキーボード ナビゲーションなどを通じて、ロードオンデマンド機能、項目のアクティブ化、項目の bi-state およびカスケード選択も提供します。
+Angular Tree コンポーネントを使用すると、ユーザーは親子関係を持つツリービュー構造で階層データを表現したり、対応するデータ モデルなしで静的なツリービュー構造を定義したりできます。その主な目的は、エンドユーザーが階層データ構造内を視覚化してナビゲートできるようにすることです。Ignite UI for Angular Tree コンポーネントは、ロード オン デマンド機能、項目のアクティブ化、組み込みのチェックボックス、組み込みのキーボード ナビゲーションなどによる項目のバイステートおよびトライステートのカスケード選択も提供します。
 
 ## Angular Tree の例
 この基本的な Angular Tree の例では、ノード階層を指定し、階層データセットを反復処理することにより、`igx-tree` とそのノードを定義する方法を確認できます。
@@ -26,7 +31,7 @@ Ignite UI for Angular Tree コンポーネントの使用を開始するには�
 ```cmd
 ng add igniteui-angular
 ```
-Ignite UI for Angular については、[**はじめに**](general/getting-started.md)トピックををご覧ください。
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
 次に、app.module ファイルに `IgxTreeModule` をインポートします。 
 
@@ -44,9 +49,46 @@ import { IgxTreeModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-ツリー モジュールがインポートされたので、`igx-tree` とそのノードの基本的な構成から始めましょう。
 
-## 使用方法
+あるいは、`16.0.0` 以降、`IgxTreeComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_TREE_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/tree/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+
+```typescript
+// home.component.ts
+
+import { IGX_TREE_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_TREE_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-tree>
+        <igx-tree-node>
+            Angular Libraries
+            <igx-tree-node>Ignite UI for Angular</igx-tree-node>
+            <igx-tree-node>Angular Material</igx-tree-node>
+        </igx-tree-node>
+        <igx-tree-node>
+            Web Component Libraries
+            <igx-tree-node>Ignite UI for Web Components</igx-tree-node>
+            <igx-tree-node>Open UI 5</igx-tree-node>
+        </igx-tree-node>
+        <igx-tree-node>
+            Blazor Libraries
+            <igx-tree-node>Ignite UI for Blazor</igx-tree-node>
+        </igx-tree-node>
+    </igx-tree>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_TREE_DIRECTIVES]
+    /* or imports: [IgxTreeComponent, IgxTreeNodeComponent] */
+})
+export class HomeComponent {}
+```
+
+Ignite UI for Angular Tree モジュールまたはディレクティブをインポートしたので、`igx-tree` とそのパネルの基本構成を開始できます。
+
+## Angular Tree の使用
 
 [IgxTreeNodesComponent]({environment:angularApiUrl}/classes/igxtreenodecomponent.html) は、[IgxTreeComponent]({environment:angularApiUrl}/classes/igxtreecomponent.html) に属するすべてのノードの表現です。
 ノードは、[disabled]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#disabled)、[active]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#active)、[selected]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#selected)、および [expanded]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#expanded) プロパティを提供します。これにより、要件に応じてノードの状態を構成できます。[data]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#data) プロパティを使用して、ノードが表すデータ エントリへの参照を追加できます。[IgxTreeComponent.findNodes()]({environment:angularApiUrl}/classes/igxtreecomponent.html#findNodes) を使用してノードを検索するには、`[data]` をバインドする必要があります。
@@ -200,7 +242,7 @@ export class MyTreeViewComponent {
 ```
 
 ## Angular Tree の選択
-`igx-tree` []({environment:angularApiUrl}/classes/igxtreecomponent.html#selection)でノード選択を設定するには、その [selection]({environment:angularApiUrl}/classes/igxtreecomponent.html#selection) プロパティを設定する必要があります。このプロパティは、**None**、**BiState**、**Cascading** の 3 つのモードを受け入れます。以下で、それぞれについて詳しく説明します。
+`igx-tree` でノード選択を設定するには、その [selection]({environment:angularApiUrl}/classes/igxtreecomponent.html#selection) プロパティを設定する必要があります。このプロパティは、**None**、**BiState**、**Cascading** の 3 つのモードを受け入れます。以下で、それぞれについて詳しく説明します。
 ### None
 `igx-tree` では、デフォルトでノードの選択が無効になっています。ユーザーは UI 操作を介してノードを選択または選択解除することはできませんが、これらのアクションは提供された API メソッドを介して実行できます。
 ### Bi-State
@@ -238,7 +280,7 @@ IgxTree ナビゲーションは、W3C アクセシビリティ標準に準拠�
  - <kbd>Home</kbd> - 最初のノードに移動します。
  - <kbd>End</kbd> - 最後に表示されたノードに移動します。
  - <kbd>Tab</kbd> - ツリーの外側にあるページ上の次のフォーカス可能な要素に移動します。
- - <kbd>Shift +Tab</kbd> - ツリーの外側で、ページ上の前のフォーカス可能な要素に移動します。
+ - <kbd>Shift + Tab</kbd> - ツリーの外側で、ページ上の前のフォーカス可能な要素に移動します。
  - <kbd>Space</kbd> - 現在のノードの選択を切り替えます。ノードをアクティブとしてマークします。
  - <kbd>Shift + Space</kbd> - 選択が有効になっている場合、Shift キーを押しながら、アクティブなノードと Space を押したノードの間ですべてのノードの選択を切り替えます。
  - <kbd>Enter</kbd> - フォーカスされたノードをアクティブにします。ノードにリンクがある場合は、リンクを開きます。
@@ -292,7 +334,7 @@ $custom-tree-theme: tree-theme(
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントのスタイルを設定するには、CSS 変数がサポートされていないため、別のアプローチを使用する必要があります。
 
-コンポーネントが [Emulated](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化に`ペネトレーション`する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
+コンポーネントが [Emulated](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化に解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 ```scss
 :host {
     ::ng-deep {

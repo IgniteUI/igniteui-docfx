@@ -1,16 +1,15 @@
 ---
 title: Angular List View | Angular List Example | Infragistics
 _description: The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Try it for FREE
-_keywords: angular list, ignite ui for angular, angular list component
+_keywords: angular list, ignite ui for angular, angular list component, angular list view, angular list view component, angular ui components
 ---
 
-# Angular List View
+# Angular List View Component Overview
 
-The List element is extremely useful when presenting a group of items. You can create a simple list of textual items, or a more complex one, containing an array of different layout elements.
-The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Each list item is completely templatable and will support any valid HTML or Angular component.
+The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Each list item is completely templatable and supports any valid HTML or Angular component. The list component also providers built in panning functionality, templates for empty and loading states, and supports virtualization for large lists using the [`IgxForOf`](for-of.md) directive.
 
 ## Angular List Example
-The following example represents a list populated with contacts with a _name_ and a _phone number_ properties. The [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component uses [**IgxAvatar**](avatar.md) and [**IgxIcon**](icon.md) to enrich the user experience and expose the capabilities of setting avatar picture and different icon for _favorite a contact_. In addition, the List View expose sorting capabilities achieved by using our filtering pipe.
+The following example represents a list populated with contacts with a _name_ and a _phone number_ properties. The [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component uses [`igx-avatar`](avatar.md) and [`igx-icon`](icon.md) to enrich the user experience and expose the capabilities of setting avatar picture and different icon for _favorite a contact_. In addition, the List View expose sorting capabilities achieved by using our filtering pipe.
 
 <code-view style="height: 513px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -19,36 +18,66 @@ The following example represents a list populated with contacts with a _name_ an
 
 <div class="divider--half"></div>
 
-## How to create list view with Angular?
+## Getting Started with Ignite UI for Angular List
 
->[!NOTE]
->**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.**.
-
-At its core the Angular list component allows you to easily display a vertical list of items. The default styling of the items is done according to the single-line list specification as per the Material Design [**guidelines**](https://material.io/guidelines/components/lists.html).
-
-To get started with the Angular list component, first you need to install Ignite UI for Angular by typing the following command:
+To get started with the Ignite UI for Angular List View component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
 ```cmd
 ng add igniteui-angular
 ```
+
 For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
-The next step is to import the `IgxListModule` in our app.module.ts file:
+The next step is to import the `IgxListModule` in the **app.module.ts** file.
+
+>[!NOTE]
+>**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.**.
 
 ```typescript
 // app.module.ts
 
-...
+import { HammerModule } from '@angular/platform-browser';
 import { IgxListModule } from 'igniteui-angular';
 // import { IgxListModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
-    imports: [..., IgxListModule],
+    imports: [..., IgxListModule, HammerModule],
     ...
 })
 export class AppModule {}
 ```
+
+Alternatively, as of `16.0.0` you can import the `IgxListComponent` as a standalone dependency, or use the [`IGX_LIST_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/list/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+import { HammerModule } from '@angular/platform-browser';
+import { IGX_LIST_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_LIST_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-list>
+        <igx-list-item isHeader="true">Header</igx-list-item>
+        <igx-list-item>Item 1</igx-list-item>
+        <igx-list-item>Item 2</igx-list-item>
+        <igx-list-item>Item 3</igx-list-item>
+    </igx-list>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_LIST_DIRECTIVES, HammerModule]
+    /* or imports: [IgxListComponent, IgxListItemComponent, HammerModule] */
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular List module or directives imported, you can start using the `igx-list` component.
+
+## Using the Angular List
 
 Then in the template of our contacts component we can create our list, but what if currently (or at some point in the future) we have no items in it?
 In this case, the Angular list provides us with a default template that is used when the list is empty.
@@ -86,7 +115,7 @@ If all went great, this is how our empty list should look like:
 </code-view>
 
 
-Sometimes there may be a delay in your data loading. In this case you can set the list's [`isLoading`]({environment:angularApiUrl}/classes/igxlistcomponent.html#isloading) property to `true` and a default template will inform the user regarding the ongoing data loading process. You can also provide your own loading template using the [`igxDataLoading`]({environment:angularApiUrl}/classes/igxdataloadingtemplatedirective.html) directive:
+Sometimes there may be a delay in your data loading. In this case you can set the list's [`isLoading`]({environment:angularApiUrl}/classes/igxlistcomponent.html#isLoading) property to `true` and a default template will inform the user regarding the ongoing data loading process. You can also provide your own loading template using the [`igxDataLoading`]({environment:angularApiUrl}/classes/igxdataloadingtemplatedirective.html) directive:
 
 ```html
 <!--contacts.component.html-->
@@ -107,7 +136,6 @@ Sometimes there may be a delay in your data loading. In this case you can set th
     text-shadow: 2px 1px 2px rgba(150, 150, 150, 1);
 }
 ```
-
 
 <code-view style="height: 300px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -258,7 +286,7 @@ Cool, now let's update the template for our contacts list to show the avatar and
     Contacts
   </igx-list-item>
   <igx-list-item #item *ngFor="let contact of contacts;">
-      <igx-avatar igxListThumbnail [src]="contact.photo" roundShape="true"></igx-avatar>
+      <igx-avatar igxListThumbnail [src]="contact.photo" shape="circle"></igx-avatar>
       <h4 igxListLineTitle>{{ contact.name }}</h4>
       <p igxListLineSubTitle class="phone">{{ contact.phone }}</p>
       <span igxListLine>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, laborum.</span>
@@ -283,7 +311,7 @@ toggleFavorite(item: IgxListItem) {
 }
 ```
 
-Let's also allow the user to choose the display density of the list by using its [`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displaydensity) input. We will do this by importing the `IgxButtonGroupModule` and using the [**IgxButtonGroup**](button-group.md) to display all density values. This way whenever one gets selected, we will update our own **density** property that is bound to the [`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displaydensity) of the list.
+Let's also allow the user to choose the display density of the list by using its [`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displayDensity) input. We will do this by importing the `IgxButtonGroupModule` and using the [**IgxButtonGroup**](button-group.md) to display all density values. This way whenever one gets selected, we will update our own **density** property that is bound to the [`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displayDensity) of the list.
 
 ```typescript
 // app.module.ts
@@ -340,7 +368,7 @@ And here's the result of all that work:
 Now that we have such a beautiful Angular list with contacts and their phone numbers, why don't we implement an ability to call a contact.
 The [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) has the perfect solution for this - list item panning.
 To do this you have to implement the following steps:
-- Enable the panning using the [`allowLeftPanning`]({environment:angularApiUrl}/classes/igxlistcomponent.html#allowleftpanning) and/or the [`allowRightPanning`]({environment:angularApiUrl}/classes/igxlistcomponent.html#allowrightpanning) properties
+- Enable the panning using the [`allowLeftPanning`]({environment:angularApiUrl}/classes/igxlistcomponent.html#allowLeftPanning) and/or the [`allowRightPanning`]({environment:angularApiUrl}/classes/igxlistcomponent.html#allowRightPanning) properties
 - Define template(s) for the left and/or right panning
 - Handle the list item's panning event(s) and perform the desired action
 
@@ -368,7 +396,7 @@ Here is the HTML code of the example:
   </ng-template>
   <igx-list-item isHeader="true">Contacts</igx-list-item>
   <igx-list-item #item *ngFor="let contact of contacts">
-    <igx-avatar igxListThumbnail [src]="contact.photo" roundShape="true"></igx-avatar>
+    <igx-avatar igxListThumbnail [src]="contact.photo" shape="circle"></igx-avatar>
     <h4 igxListLineTitle>{{ contact.name }}</h4>
     <p igxListLineSubTitle class="phone">{{ contact.phone }}</p>
     <igx-icon igxListAction [color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(item)">star</igx-icon>
@@ -436,7 +464,7 @@ public leftPanPerformed(args) {
 ```
 
 > [!NOTE]
-> When panning list items there is a threshold which must be reached in order for the panning events to be emitted. You can change the threshold using the [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html)'s [`panEndTriggeringThreshold`]({environment:angularApiUrl}/classes/igxlistcomponent.html#panendtriggeringthreshold) property. By default this property has a value of 0.5 which means 50% of list item's width.
+> When panning list items there is a threshold which must be reached in order for the panning events to be emitted. You can change the threshold using the [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html)'s [`panEndTriggeringThreshold`]({environment:angularApiUrl}/classes/igxlistcomponent.html#panEndTriggeringThreshold) property. By default this property has a value of 0.5 which means 50% of list item's width.
 
 Now try panning the list items for yourself:
 
@@ -532,7 +560,7 @@ What we are doing is we are adding an additional `selected` property to each dat
     <igx-list-item [ngClass]="contact.selected ? 'selected' : ''"
                     (click)="selectItem(contact)"
                     *ngFor="let contact of contacts | igxFilter: filterContacts;">
-        <igx-avatar igxListThumbnail [src]="contact.photo" roundShape="true"></igx-avatar>
+        <igx-avatar igxListThumbnail [src]="contact.photo" shape="circle"></igx-avatar>
         <span igxListLineTitle>{{ contact.name }}</span>
         <span igxListLineSubTitle>{{ contact.phone }}</span>
         <igx-icon igxListAction [style.color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(contact, $event)">star</igx-icon>
@@ -590,7 +618,7 @@ The result from the above code is
 <div class="divider--half"></div>
 
 > [!NOTE]
-> Please note that if we create our component theme in the component .scss file we need to use `::ng-deep` in order to pass the view encapsulation otherwise our new theme will not work! for more info please refer to:  [Component Themes](https://www.infragistics.com/products/ignite-ui-angular/angular/components/themes/sass/component-themes.html).
+> Please note that if we create our component theme in the component .scss file we need to use `::ng-deep` in order to pass the view encapsulation otherwise our new theme will not work! for more info please refer to:  [Component Themes](../components/themes/sass/component-themes.md).
 
 For full list of parameters that you can change for the list component please refer to: [IgxListComponent Styles]({environment:sassApiUrl}/index.html#function-list-theme)
 

@@ -12,23 +12,12 @@ Angular Spreadsheet コンポーネントを使用して [`IgxSpreadsheetCompone
 
 ## Angular Spreadsheet チャート アダプターの例
 
-<code-view style="height: 500px"
+<code-view style="height: 500px" alt="Angular Spreadsheet チャート アダプターの例"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-adapter-chart"
-           alt="Angular Spreadsheet チャート アダプターの例"
-           github-src="excel/spreadsheet/adapter-chart">
+                    iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet/adapter-chart"
+                                                 github-src="excel/spreadsheet/adapter-chart">
 </code-view>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-    <body>
-      <a target="_blank" href="https://codesandbox.io/s/github/IgniteUI/igniteui-angular-examples/tree/master/samples/excel/spreadsheet/adapter-chart?fontsize=14&hidenavigation=1&theme=dark&view=preview&file=/src/app.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Code Sandbox" src="https://static.infragistics.com/xplatform/images/browsers/open-sandbox.png"/>
-        </a>
-        <a target="_blank" href="https://stackblitz.com/github/IgniteUI/igniteui-angular-examples/tree/master/samples/excel/spreadsheet/adapter-chart?file=src%2Fapp.component.html" rel="noopener noreferrer">
-            <img height="40px" style="border-radius: 0rem; max-width: 100%;" alt="Stackblitz" src="https://static.infragistics.com/xplatform/images/browsers/open-stackblitz.png"/>
-        </a>
-    </body>
-</html>
 
 <div class="divider--half"></div>
 
@@ -48,53 +37,53 @@ WorksheetChart をワークシートに追加するには、ワークシート�
 
 Spreadsheet ChartAdapter は、折れ線、エリア、縦棒、ドーナツを含む 35 以上のチャート タイプがサポートされます。チャート タイプ一覧:
 
--   縦棒チャート
-    -   クラスタ縦棒チャート
-    -   積層型の柱状
-    -   100% 積層型縦棒チャート
--   折れ線チャート
-    -   折れ線チャート
-    -   マーカー付き折れ線チャート
-    -   積層型折れ線チャート
-    -   マーカー付き積層型折れ線チャート
-    -   100% 積層型折れ線チャート
-    -   マーカー付き 100% 積層型折れ線チャート
--   円チャート
--   ドーナツ型チャート
--   棒チャート
-    -   クラスター棒チャート
-    -   積層型棒
-    -   100% 積層型棒チャート
-    -   エリア チャート
-    -   エリア
-    -   積層型エリア
-    -   100% 積層型エリア チャート
--   XY (散布図) とバブル チャート
-    -   散布図 (マーカーのみ)
-    -   滑らかな線を使用した散布図
-    -   滑らかな線とマーカーを使用した散布図
-    -   直接を使用した散布図
-    -   直線とマーカーを使用した散布図
-    -   バブル (エフェクトなし) チャート
-    -   Bubble3DEffect
--   株価チャート
-    -   高値-安値-終値
-    -   始値-高値-安値-終値
-    -   出来高-高値-安値-終値
-    -   出来高-始値-高値-安値-終値
--   レーダー チャート
-    -   マーカーなしのレーダー
-    -   マーカー付きレーダー
-    -   塗りつぶしたレーダー
--   コンボ チャート
-    -   xAxis を共有する縦棒チャートと折れ線チャート
-    -   縦棒チャートと折れ線チャート、および第 2 xAxis
-    -   積層エリアと縦棒チャート
-    -   カスタムな組み合わせ
+*   縦棒チャート
+    *   クラスタ縦棒チャート
+    *   積層型の柱状
+    *   100% 積層型縦棒チャート
+*   折れ線チャート
+    *   折れ線チャート
+    *   マーカー付き折れ線チャート
+    *   積層型折れ線チャート
+    *   マーカー付き積層型折れ線チャート
+    *   100% 積層型折れ線チャート
+    *   マーカー付き 100% 積層型折れ線チャート
+*   円チャート
+*   ドーナツ型チャート
+*   棒チャート
+    *   クラスター棒チャート
+    *   積層型棒
+    *   100% 積層型棒チャート
+    *   エリア チャート
+    *   エリア
+    *   積層型エリア
+    *   100% 積層型エリア チャート
+*   XY (散布図) とバブル チャート
+    *   散布図 (マーカーのみ)
+    *   滑らかな線を使用した散布図
+    *   滑らかな線とマーカーを使用した散布図
+    *   直接を使用した散布図
+    *   直線とマーカーを使用した散布図
+    *   バブル (エフェクトなし) チャート
+    *   Bubble3DEffect
+*   株価チャート
+    *   高値-安値-終値
+    *   始値-高値-安値-終値
+    *   出来高-高値-安値-終値
+    *   出来高-始値-高値-安値-終値
+*   レーダー チャート
+    *   マーカーなしのレーダー
+    *   マーカー付きレーダー
+    *   塗りつぶしたレーダー
+*   コンボ チャート
+    *   xAxis を共有する縦棒チャートと折れ線チャート
+    *   縦棒チャートと折れ線チャート、および第 2 xAxis
+    *   積層エリアと縦棒チャート
+    *   カスタムな組み合わせ
 
 ## 依存関係
 
-> [!NOTE]
+> \[!Note]
 >
 > 以下のコード スニペットでは、外部の [ExcelUtility](excel-utility.md) クラスを使用して [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook) を保存およびロードしています。
 
@@ -166,11 +155,11 @@ ExcelUtility.loadFromUrl(process.env.PUBLIC_URL + "/ExcelFiles/ChartData.xlsx").
 });
 ```
 
-## API メンバー
+## API リファレンス
 
--   [`addChart`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetshapecollection.html#addchart)
--   [`chartAdapter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#chartadapter)
--   [`SpreadsheetChartAdapter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetchartadapter.html)
--   [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html)
--   [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook)
--   `XamSpreadsheet`
+*   [`addChart`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/worksheetshapecollection.html#addchart)
+*   [`chartAdapter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#chartadapter)
+*   [`SpreadsheetChartAdapter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/spreadsheetchartadapter.html)
+*   [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html)
+*   [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxspreadsheetcomponent.html#workbook)
+*   `XamSpreadsheet`

@@ -1,14 +1,19 @@
 ---
-title: Angular Paging | Paginator | Table Pagination | Infragistics
-_description: Configure Angular pagination and create custom pages in the Angular Material table by Ignite UI, get data for the requested pages with variety of angular events.
-_keywords: paginator, igniteui for angular, infragistics
+title: Angular Paginator Example – Ignite UI for Angular
+_description: Configure Angular pagination and create custom pages in the Angular Material table, or other iterable UI collection, by Ignite UI, get data for the requested pages with variety of angular events.
+_keywords: angular paginator, angular paginator component, angular ui components, igniteui for angular, infragistics
 ---
 
-# Paginator
-Pagination allows us to divide a set of data into a number of similar pages. This method of pagination is particularly well-suited for large data-sets and "infinite" scrolling user interfaces, that is why the paginator is typically used with a list of items or data table. The Pagination component enables the user to select a specific page from a range of pages and to determine how many records should see on each page.
+# Angular Paginator Component Overview
+Pagination in Angular is an optimization technique when working with huge data sets. The purpose of Angular Paginator is to provide UI and API to split and distribute a high volumes of data into equally sized pages, which can be navigated by the end-user.
+
+The Angular Paginator component displays to the end-user the page they are viewing, the size of the page, the total number of pages and UI elements for quick navigation between pages. 
+
+Ignite UI for Angular Paginator allows you to divide a set of data into a number of similar pages. This method of pagination is particularly well-suited for large data-sets which are difficult to display and view all at once, that is why the paginator is typically used together with a list of items or data table. The Paginator in Angular enables the user to select a specific page from a range of pages and to determine how many records they should see on each page.
 
 ## Angular Paginator Example
 
+The following Angular Pagination example shows a Paginator template demonstrating how users can navigate through 4 pages with different items and select the number of items to be displayed from a drop-down menu. 
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -17,14 +22,72 @@ Pagination allows us to divide a set of data into a number of similar pages. Thi
 
 <div class="divider--half"></div>
 
-## Usage
+## Getting Started with Ignite UI for Angular Paginator
+
+To get started with the Ignite UI for Angular Paginator component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxPaginatorModule` in the **app.module.ts** file.
+
+```typescript
+// app.module.ts
+
+import { IgxPaginatorModule } from 'igniteui-angular';
+// import { IgxPaginatorModule } from '@infragistics/igniteui-angular'; for licensed package
+
+@NgModule({
+    ...
+    imports: [..., IgxPaginatorModule],
+    ...
+})
+export class AppModule {}
+```
+
+Alternatively, as of `16.0.0` you can import the `IgxPaginatorComponent` as a standalone dependency, or use the [`IGX_PAGINATOR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/paginator/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+import { NgFor } from '@angular/common';
+import { HammerModule } from '@angular/platform-browser';
+import { IGX_PAGINATOR_DIRECTIVES, IGX_LIST_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_PAGINATOR_DIRECTIVES, IGX_LIST_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-list>
+        <igx-list-item *ngFor="let item of pagedData">{{item.text}}</igx-list-item>
+    </igx-list>
+    <igx-paginator [totalRecords]="products.length" [perPage]="perPage"></igx-paginator>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_PAGINATOR_DIRECTIVES, IGX_LIST_DIRECTIVES, HammerModule, NgFor]
+    /* or imports: [IgxPaginatorComponent, IgxListComponent, IgxListItemComponent, HammerModule, NgFor] */
+})
+export class HomeComponent {
+    public products: Product [];
+    public perPage = 10;
+    public pagedData: Product [];
+}
+```
+
+Now that you have the Ignite UI for Angular Paginator module or directives imported, you can start using the `igx-paginator` component.
+
+## Using the Angular Paginator
 
 Each paginator instance requires:
 
 - The number of items per page (default set to 15)
 - The total number of items being paged
 
-Also by default the current page is set to 0 when the paginator component is initialized but this can be changed through **page** property.
+Also by default the current page is set to 0 when the Angular paginator component is initialized but this can be changed through **page** property.
 
 ```html
 <igx-paginator #paginator [totalRecords]="120" [perPage]="25">
@@ -56,7 +119,7 @@ In addition, [`IgxPageSizeSelectorComponent`]({environment:angularApiUrl}/classe
 </igx-paginator>
 ```
 
-Paging can also be done programmatically through the Paging API /which is described in more details in the section below/ using the [`paginate`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#paginate), [`previousPage`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#previouspage), [`nextPage`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#nextpage) methods and the inputs [`page`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#page), [`perPage`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#perpage) and [`totalRecords`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#totalrecords). Where *page* allows you to set the current page, *perPage* - the number of items that are displayed at one page and *totalRecords* - the number of the records that are in the grid. `TotalRecords` property is useful when you have paging with remote data and you want to alter the page count based on total remote records. Keep in mind that If you are using paging and all the data is passed to the grid, the value of `totalRecords` property will be set by default to the length of the provided data source. If `totalRecords` is set, it will take precedence over the default length based on the data source.
+Paging can also be done programmatically through the Paging API /which is described in more details in the section below/ using the [`paginate`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#paginate), [`previousPage`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#previousPage), [`nextPage`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#nextPage) methods and the inputs [`page`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#page), [`perPage`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#perPage) and [`totalRecords`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#totalRecords). Where *page* allows you to set the current page, *perPage* - the number of items that are displayed at one page and *totalRecords* - the number of the records that are in the grid. `TotalRecords` property is useful when you have paging with remote data and you want to alter the page count based on total remote records. Keep in mind that If you are using paging and all the data is passed to the grid, the value of `totalRecords` property will be set by default to the length of the provided data source. If `totalRecords` is set, it will take precedence over the default length based on the data source.
 
 ## Paging API
 | Input           |      Description                           |
@@ -78,7 +141,7 @@ Paging can also be done programmatically through the Paging API /which is descri
 | pagingDone      | Emitted after paging is performed. |
 
 
-## Localization
+## Angular Paginator Localization
 With only a few lines of code you can easily localize all strings part of the Paging component. In order to localize a given Paging instance use the input property [resourceStrings]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#resourceStrings). You can use this
 
 **Step 1** - Import `IPaginatorResourceStrings` interface and [changei18n]({environment:angularApiUrl}/#changei18n) function:

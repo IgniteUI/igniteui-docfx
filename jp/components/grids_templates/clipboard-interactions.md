@@ -63,7 +63,7 @@ _language: ja
 @@if (igxName === 'IgxGrid') { カスタムの貼り付けハンドラを使って`貼り付け`の動作を設定することができます。[Excel から貼り付け](paste-excel.md)トピックをご覧ください 。}
 
 ## API の使用
-次のオプションを処理する [`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions) プロパティを公開します。
+次のオプションを処理する [`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardOptions) プロパティを公開します。
 - [`enabled`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions.enabled) は選択したセルのコピーを有効または無効にします。
 - [`copyHeaders`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions.copyHeaders) は、コピー時に関連付けられているヘッダーを含めます。
 - [`copyFormatters`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardoptions.copyFormatters) は、既存の列フォーマッタをコピーしたデータに適用します。
@@ -81,7 +81,6 @@ _language: ja
 * [ページング](paging.md)
 * [フィルタリング](filtering.md)
 * [ソート](sorting.md)
-* [集計](summaries.md)
 * [集計](summaries.md)
 * [列のピン固定](column-pinning.md)
 * [選択](selection.md)

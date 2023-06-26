@@ -44,22 +44,25 @@ export class MyOverlayComponent {
 
 The overlay service can be used to dynamically display an `HTMLNode` or even an Angular Component by attaching it to the overlay DOM.
 
-After a reference to the Overlay service is established, it can be used to dynamically show/hide content. For example, we can pass an Angular Component in the `attach` method. This will generate a unique ID, which we can pass to the `show` method to display the component:
+After a reference to the Overlay service is established, it can be used to dynamically show/hide content. For example, we can pass an Angular Component in the `attach` method. This will generate a unique ID, which we can pass to the `show` method to display the component. When displaying an Angular Component a second mandatory parameter `ViewContainerRef` should be passed in the `attach` method.
 
 ```typescript
 
 // my-overlay-component.component.ts
 import { MyDynamicComponent } from '../my-dynamic-component/my-dynamic-component.component';
 
+@Component({...})
 export class MyOverlayComponent {
     private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service
-    ... 
-    // a reference to the OverlayService is defined via @Inject in the constructor
-    // under this.overlayService
+
+    constructor(
+        @Inject(IgxOverlayService) private overlayService: IgxOverlayService,
+        private viewContainerRef: ViewContainerRef
+    ) {}
 
     public showInOverlay() {
         if (!this._overlayId) {
-            this._overlayId = this.overlayService.attach(MyDynamicComponent);
+            this._overlayId = this.overlayService.attach(MyDynamicComponent, this.viewContainerRef);
         }
         this.overlayService.show(this._overlayId);
     }
@@ -90,6 +93,8 @@ If we want to pass an already existing `ElementRef` from the page to the [`IgxOv
 ```typescript
 // my-overlay-component.component.ts
 import { Inject, ViewChild } from '@angular/core'
+
+@Component({...})
 export class MyOverlayComponent {
     private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service
 
@@ -107,10 +112,10 @@ export class MyOverlayComponent {
 
 The Overlay Service's [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method has two overloads:
   - `attach(element, settings?)`
-  - `attach(component, settings?, moduleRef?)`
+  - `attach(component, viewContainerRef, settings?)`
 
 The first parameter in both overloads is mandatory and represents the content that will be shown in the overlay. There are a couple of different scenarios how the content can be passed:
-  - A component definition - When passing a component in as the first argument, the overlay service creates a new instance of that component and dynamically attaches its `ElementRef` to the `overlay` DOM. If `moduleRef` is provided the service will use the module's `ComponentFactoryResolver` and `Injector` when creating the `ComponentRef` instead of the root ones.
+  - A component definition - When passing a component in as the first argument, the overlay service creates a new instance of that component and dynamically attaches its `ElementRef` to the `overlay` DOM. This method also accepts a second mandatory parameter `ViewContainerRef` which is a reference to the container where the created component's host view will be inserted.
   - An `ElementRef` to an existing DOM element (illustrated in the sample above) - Any view that is already rendered on the page can be passed through the overlay service and be rendered in the overlay DOM.
 
 In both cases the [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method will:
@@ -140,7 +145,7 @@ In the below demo, we can pass the [IgxCard](card.md#angular-card-example) compo
 
 The [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method also accepts an object of the [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) type, which configures the way the content is shown. If no such object is provided, the Overlay Service will use its default settings to render the passed content.
 
-For example, if we want the content to be positioned relative to an element, we can pass a different [`target`]({environment:angularApiUrl}/interfaces/overlaysettings.html#target) and [`positioningStrategy`]({environment:angularApiUrl}/interfaces/overlaysettings.html#positionstrategy) to the [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method, e.g. [`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html). In order to configure how the component is shown, we need to create an [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) object first:
+For example, if we want the content to be positioned relative to an element, we can pass a different [`target`]({environment:angularApiUrl}/interfaces/overlaysettings.html#target) and [`positioningStrategy`]({environment:angularApiUrl}/interfaces/overlaysettings.html#positioningStrategy) to the [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) method, e.g. [`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html). In order to configure how the component is shown, we need to create an [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) object first:
 ```typescript
 // my-overlay-component.component.ts
 // import the ConnectedPositioningStategy class
@@ -155,7 +160,7 @@ export class MyOverlayComponent {
 
     public showInOverlay() {
         if (!this._overlayId) {
-            this._overlayId = this.overlayService.attach(MyDynamicComponent, {
+            this._overlayId = this.overlayService.attach(MyDynamicComponent, this.viewContainerRef, {
                 target: this.myAnchorButton.nativeElement,
                 positionStrategy: new ConnectedPositioningStrategy()
             });
@@ -175,15 +180,15 @@ Clicking on the button will now show `MyDynamicComponent` positioned relative to
 
 ## Preset Overlay Settings
 
-The [`IgxOverlayService.createAbsolutePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createabsolutepositionsettings) and [`IgxOverlayService.createRelativePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createrelativepositionsettings) methods provide an easy way to create an [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) based on a predefined settings sets.
+The [`IgxOverlayService.createAbsolutePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createAbsolutePositionSettings) and [`IgxOverlayService.createRelativePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createRelativePositionSettings) methods provide an easy way to create an [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) based on a predefined settings sets.
 
-The [`IgxOverlayService.createAbsolutePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createabsolutepositionsettings) method creates non-modal [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) with [`GlobalPositionStrategy`]({environment:angularApiUrl}/classes/globalpositionstrategy.html) or [`ContainerPositionStrategy`]({environment:angularApiUrl}/classes/containerpositionstrategy.html) in case the `outlet` parameter is provided. The `AbsolutePosition` enumeration defines the possible positions to choose from: `Center`, `Top` or `Bottom`. The default position is `Center`.
+The [`IgxOverlayService.createAbsolutePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createAbsolutePositionSettings) method creates non-modal [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) with [`GlobalPositionStrategy`]({environment:angularApiUrl}/classes/globalpositionstrategy.html) or [`ContainerPositionStrategy`]({environment:angularApiUrl}/classes/containerpositionstrategy.html) in case the `outlet` parameter is provided. The `AbsolutePosition` enumeration defines the possible positions to choose from: `Center`, `Top` or `Bottom`. The default position is `Center`.
 
 ```typescript
 const globalOverlaySettings = IgxOverlayService.createAbsoluteOverlaySettings(AbsolutePosition.Top);
 ```
 
-The [`IgxOverlayService.createRelativePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createrelativepositionsettings) method creates [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) with [`AutoPositionStrategy`]({environment:angularApiUrl}/classes/autopositionstrategy.html), [`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) or [`ElasticPositionStrategy`]({environment:angularApiUrl}/classes/elasticpositionstrategy.html). Accepts target, position and strategy. The `target` is the attaching point or element for the component to show. The `position` is a `RelativePosition` enumeration with the following options: `Above`, `Below`, `Before`, `After` and `Default`. The `Default` option positions the element below the target, left aligned. The position strategy can be set through the `RelativePositionStrategy` enumeration, which default value is `Auto`.
+The [`IgxOverlayService.createRelativePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createRelativePositionSettings) method creates [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) with [`AutoPositionStrategy`]({environment:angularApiUrl}/classes/autopositionstrategy.html), [`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) or [`ElasticPositionStrategy`]({environment:angularApiUrl}/classes/elasticpositionstrategy.html). Accepts target, position and strategy. The `target` is the attaching point or element for the component to show. The `position` is a `RelativePosition` enumeration with the following options: `Above`, `Below`, `Before`, `After` and `Default`. The `Default` option positions the element below the target, left aligned. The position strategy can be set through the `RelativePositionStrategy` enumeration, which default value is `Auto`.
 
 ```typescript
 const targetElement = this.myAnchorButton.nativeElement;
@@ -217,7 +222,7 @@ We can modify the previously defined overlay method to not only show but also hi
 import { ConnectedPositioningStrategy } from 'igniteui-angular';
 // import { ConnectedPositioningStrategy } from '@infragistics/igniteui-angular'; for licensed package
 
-...
+@Component({...})
 export class MyOverlayComponent implements OnDestroy {
     private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service
     private _overlayShown = false; // Is the component rendered in the Overlay?
@@ -229,7 +234,7 @@ export class MyOverlayComponent implements OnDestroy {
         if (!this._overlayShown) { // If the element is not visible, show it
             //  generate ID
             if (!this._overlayId) {
-                this._overlayId = this.overlayService.attach(MyDynamicComponent, {
+                this._overlayId = this.overlayService.attach(MyDynamicComponent, this.viewContainerRef, {
                     target: this.myAnchorButton.nativeElement,
                     positionStrategy: new ConnectedPositioningStrategy({
                         closeOnOutsideClick: false, // overlay will not close on outside clicks

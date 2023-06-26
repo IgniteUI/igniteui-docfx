@@ -1,27 +1,35 @@
 ---
 title: Radio と Radio Group
 _description: Ignite UI for Angular Radio Button コントロールおよび Radio Group コントロールは、テンプレート主導およびリアクティブ フォームで選択可能なオプションのリストを表示します。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Radio Button コンポーネント, Angular Radio Button コントロール, Angular Radio Group コンポーネント, Angular Radio Group コントロール
+_keywords: Angular Radio Group コンポーネント, Angular Radio Group コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
 _language: ja
 ---
 
-# Radio & Radio Group
+# Angular Radio & Radio Group (ラジオ & ラジオ グループ) コンポーネントの概要
 
-## Radio Button
+## Radio Button (ラジオ ボタン)
 <p class="highlight">Ignite UI for Angular Radio Button コンポーネントを使用すると、隣に表示されるオプションのセットから単一のオプションを選択する機能を提供します。</p>
 
 ## Angular Radio & Radio Group の例
 
-<code-view style="height: 90px" 
+<code-view style="height: 120px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-1" alt="Angular Radio & Radio Group の例">
 </code-view>
 
 <div class="divider--half"></div>
 
-### 使用方法
+## Ignite UI for Angular Radio Button を使用した作業の開始
 
-Radio Button コンポーネントを初期化にするには、まず `IgxRadioModule` を `AppModule` ファイルにインポートします。
+Ignite UI for Angular Radio Button コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
+
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxRadioModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -40,6 +48,38 @@ export class AppModule {
 }
 ```
 
+あるいは、`16.0.0` 以降、`IgxRadioGroupDirective` と `IgxRadioComponent` をスタンドアロンの依存関係としてインポートできます。
+
+```typescript
+// home.component.ts
+
+import { FormsModule } from '@angular/forms';
+import { IgxRadioComponent, IgxRadioGroupDirective } from 'igniteui-angular';
+// import { IgxRadioComponent, IgxRadioGroupDirective } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-radio-group>
+        <igx-radio [(ngModel)]="selected" value="London">London</igx-radio>
+        <igx-radio [(ngModel)]="selected" value="New York">New York</igx-radio>
+        <igx-radio [(ngModel)]="selected" value="Tokyo">Tokyo</igx-radio>
+        <igx-radio [(ngModel)]="selected" value="Sofia">Sofia</igx-radio>
+    </igx-radio-group>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxRadioComponent, IgxRadioGroupDirective, FormsModule]
+})
+export class HomeComponent {
+    public selected: any;
+}
+```
+
+Ignite UI for Angular Radio Button モジュールまたはディレクティブをインポートしたので、`igx-radio-group` ディレクティブと `igx-radio` コンポーネントの使用を開始できます。
+
+## Angular Radio Button の使用
+
 ラジオ ボタンを表示するには、コンポーネントのテンプレートで以下のコードを追加します。
 
 ```html
@@ -56,7 +96,7 @@ export class AppModule {
 <igx-radio [(ngModel)]="selected" value="option2" labelPosition="before">Option 2</igx-radio>
 ```
 
-<div class="sample-container loading" style="height: 90px">
+<div class="sample-container loading" style="height: 120px">
     <iframe id="radio-sample-3-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-sample-3' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
@@ -102,10 +142,12 @@ public selectedColor: string = this.colors[3].hex;
 
 結果は以下のようになります。
 
-<code-view style="height: 450px" 
+
+<code-view style="height: 550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-2" >
 </code-view>
+
 
 ## スタイル設定
 
@@ -154,7 +196,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```
 
 
-<code-view style="height: 220px" 
+<code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-styling-sample" >
 </code-view>

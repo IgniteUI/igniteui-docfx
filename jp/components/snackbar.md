@@ -1,10 +1,10 @@
 ---
 title: Snackbar コンポーネント
 _description: Ignite UI for Angular Snackbar を使用すると、単一行メッセージをモバイルおよびデスクトップ アプリケーションに含みます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Snackbar コンポーネント, Angular Snackbar コントロール
+_keywords: Angular Snackbar コンポーネント, Angular Snackbar コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
 _language: ja
 ---
-# Snackbar
+# Angular Snackbar (スナックバー) コンポーネントの概要
 <p class="highlight">Ignite UI for Angular Snackbar コンポーネントは、アクションを含むことができる単一行のメッセージで操作のフィードバックを提供します。SnackBar メッセージがその他の画面要素の上に表示され、画面の中央下に配置されます。</p>
 <div class="divider"></div>
 
@@ -20,9 +20,17 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 使用方法
+## Ignite UI for Angular Snackbar を使用した作業の開始
 
-はじめに、**app.module.ts** ファイルに  `IgxSnackbarModule` をインポートします。
+Ignite UI for Angular Snackbar コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
+
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxSnackbarModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -38,6 +46,34 @@ import { IgxSnackbarModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
+
+あるいは、`16.0.0` 以降、`IgxSnackbarComponent` をスタンドアロンの依存関係としてインポートできます。
+
+```typescript
+// home.component.ts
+
+import { IgxSnackbarComponent, IgxButtonDirective } from 'igniteui-angular';
+// import { IgxSnackbarComponent, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <button igxButton="raised" (click)="snackbar.open()">Delete Message</button>
+    <div>
+        <igx-snackbar #snackbar>Message deleted</igx-snackbar>
+    </div>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxSnackbarComponent, IgxButtonDirective]
+})
+export class HomeComponent {}
+```
+
+Ignite UI for Angular Snackbar モジュールまたはコンポーネントをインポートしたので、`igx-snackbar` コンポーネントの使用を開始できます。
+
+## Angular Snackbar の使用
+
 ### Snackbar の表示
 Snackbar コンポーネントを表示するには、ボタン クリックで [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) メソッドを呼び出します。
 
@@ -50,7 +86,7 @@ Snackbar コンポーネントを表示するには、ボタン クリックで 
 </div>
 ```
 サンプルが正しく構成された場合、デモ サンプルが表示されます。ボタン クリック時にテキスト メッセージを表示する Snackbar が表示されます。
-以上のコード スニペットで示されるように、スナックバーに表示されるメッセージを設定する 1 つの方法は、コンテンツ プロジェクションを使用することです。 ただし、カスタム ロジックに基づいてプログラムによって値を切り替える必要がある場合は、値をパラメーターとして [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) メソッドに渡すだけです。
+以上のコード スニペットで示されるように、スナックバーに表示されるメッセージを設定する 1 つの方法は、コンテンツ プロジェクションを使用することです。ただし、カスタム ロジックに基づいてプログラムによって値を切り替える必要がある場合は、値をパラメーターとして [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) メソッドに渡すだけです。
 
 ```html
 <!--sample.component.html-->
@@ -63,7 +99,7 @@ Snackbar コンポーネントを表示するには、ボタン クリックで 
 ```
 
 ### 非表示/自動的に隠す
-開いた後は、[`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) 入力によって指定した期間遅延後に非表示になります。デフォルト値は 4000 ミリ秒です。この動作はデフォルトで有効ですが、[`autoHide`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#autohide) を **false** に設定して変更できます。この場合、Snackbar は非表示になりません。Snackbar の [`close()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#close) メソッドを使用して、コードでコンポーネントを閉じることができます。
+開いた後は、[`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displayTime) 入力によって指定した期間遅延後に非表示になります。デフォルト値は 4000 ミリ秒です。この動作はデフォルトで有効ですが、[`autoHide`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#autoHide) を **false** に設定して変更できます。この場合、Snackbar は非表示になりません。Snackbar の [`close()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#close) メソッドを使用して、コードでコンポーネントを閉じることができます。
 
 ```html
 <!--sample.component.html-->
@@ -90,7 +126,7 @@ public close(element) {
 </code-view>
 
 ### 表示時間
-[`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displaytime) でミリ秒間隔に設定し、Snackbar コンポーネントが表示される時間を設定します。デフォルトでは 4000 ミリ秒に設定されています。 
+[`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displayTime) でミリ秒間隔に設定し、Snackbar コンポーネントが表示される時間を設定します。デフォルトでは 4000 ミリ秒に設定されています。 
 
 ### Snackbar のカスタマイズ
 Snackbar の内容をカスタマイズして、メッセージやボタンよりも複雑な要素を表示することもできます。たとえば、ファイルの読み込み中にスナックバーを表示したい場合は、読み込みアニメーションをそのコンテンツに追加することができます。
@@ -162,7 +198,7 @@ Snackbar の主な機能を説明しました。次の例はより複雑なサ�
     <igx-list-item igxRipple="pink" igxRippleTarget=".igx-list__item" *ngFor="let item of navItems">
         <div class="item-container">
             <div class="contact">
-                <igx-avatar [src]="item.avatar" roundShape="true"></igx-avatar>
+                <igx-avatar [src]="item.avatar" shape="circle"></igx-avatar>
                 <div class="contact__info">
                     <span class="name">{{item.text}}</span>
                 </div>
@@ -181,7 +217,7 @@ Snackbar の主な機能を説明しました。次の例はより複雑なサ�
 ```typescript
 //sample.component.ts
 
-import { Component, OnInit, ViewChild } from "@angular/core";
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { IgxSnackbarComponent } from 'igniteui-angular';
 // import { IgxSnackbarComponent } from '@infragistics/igniteui-angular'; for licensed package
 ...
@@ -194,7 +230,7 @@ constructor() { }
 
 public ngOnInit() {
     this.navItems = [
-        { avatar: 'assets/images/avatar/2.jpg', text: 'Richard Mahoney' },
+        { avatar: 'assets/images/avatar/2.jpg', text: 'Richard Mahoney'},
         { avatar: 'assets/images/avatar/4.jpg', text: 'Lisa Landers' },
         { avatar: 'assets/images/avatar/14.jpg', text: 'Marianne Taylor' },
         { avatar: 'assets/images/avatar/17.jpg', text: 'Ward Riley' }
@@ -375,6 +411,7 @@ $dark-snackbar: snackbar-theme(
 
 
 <code-view style="height: 150px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/notifications/snackbar-style" >
 </code-view>

@@ -4,8 +4,8 @@ _description: Provides button group functionality to developers and also allows 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Button Group components, Angular Button Group controls, Angular Buttons components, Angular Buttons controls
 ---
 
-# Button Group
-<p class="highlight">The Ignite UI for Angular Button Group component is used to organize buttons into styled button groups with horizontal/vertical alignment, single/multiple selection and toggling.</p>
+# Angular Button Group Component Overview
+<p class="highlight">Angular Button Group component is used to organize buttons into styled button groups with horizontal/vertical alignment, single/multiple selection and toggling.</p>
 
 ## Angular Button Group Example
 
@@ -16,27 +16,71 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <div class="divider--half"></div>
 
-## Usage
+## Getting Started with Ignite UI for Angular Button Group
 
-### First Steps
+To get started with the Ignite UI for Angular Button Group component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
-The Button Group is exported as an `NgModule`, thus you will need to import the `IgxButtonGroupModule` inside your `AppModule`:
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxButtonGroupModule` in your **app.module.ts** file. 
 
 ```typescript
 // app.module.ts
 
+...
 import { IgxButtonGroupModule } from 'igniteui-angular';
 // import { IgxButtonGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
-    imports: [
-        ...
-        IgxButtonGroupModule,
-        ...
-    ]
+    ...
+    imports: [..., IgxButtonGroupModule],
+    ...
 })
 export class AppModule {}
 ```
+
+Alternatively, as of `16.0.0` you can import the `IgxButtonGroupComponent` as a standalone dependency, or use the [`IGX_BUTTON_GROUP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/buttonGroup/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+...
+import { IGX_BUTTON_GROUP_DIRECTIVES, IgxIconComponent } from 'igniteui-angular';
+// import { IGX_BUTTON_GROUP_DIRECTIVES, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-buttongroup>
+        <button igxButton>
+            <igx-icon>format_align_left</igx-icon>
+        </button>
+        <button igxButton>
+            <igx-icon>format_align_center</igx-icon>
+        </button>
+        <button igxButton>
+            <igx-icon>format_align_right</igx-icon>
+        </button>
+        <button igxButton [selected]="true">
+            <igx-icon>format_align_justify</igx-icon>
+        </button>
+    </igx-buttongroup>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_BUTTON_GROUP_DIRECTIVES, IgxIconComponent]
+    /* or imports: [IgxButtonGroupComponent, IgxButtonDirective, IgxIconComponent] */
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Button Group module or directives imported, you can start with a basic configuration of the `igx-buttongroup` and its buttons.
+
+## Using for Angular Button Group Component
 
 ### Add Button Group
 
@@ -94,7 +138,7 @@ public alignment = ButtonGroupAlignment.vertical;
 <div class="divider--half"></div>
 
 ### Multiple selection
-Use the the [`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#multiselection) input property to enable the multiple selection in the button group.
+Use the the [`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#multiSelection) input property to enable the multiple selection in the button group.
 
 ```html
 <!-- sample.component.html -->
@@ -119,7 +163,7 @@ Use the the [`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongrou
 
 
 ### Display Density
-The [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#displaydensity) input property is used to control the display density of a button group. This will set the style for the buttons in the group to cosy, compact or comfortable (default value) accordingly.
+The [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#displayDensity) input property is used to control the display density of a button group. This will set the style for the buttons in the group to cosy, compact or comfortable (default value) accordingly.
 
 > [!NOTE] 
 > The display density of a button within a button group is not changed if it is explicitly specified.
@@ -287,6 +331,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 
 
 <code-view style="height: 200px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-style" >
 </code-view>

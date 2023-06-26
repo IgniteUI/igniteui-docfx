@@ -1,10 +1,10 @@
 ---
 title: Angular スプリッター | 分割されたペイン |  Ignite UI for Angular | インフラジスティックス
 _description: Angular Splitter コンポーネントを使用して、ビューを水平または垂直に複数の縮小可能なスプリット ペインに分割する単純な分割レイアウトを作成します。
-_keywords: angular splitter, igniteui for angular, infragistics, インフラジスティックス
+_keywords: angular splitter, angular splitterコンポーネント, angular 分割ビュー コンポーネント, angular ui コンポーネント, igniteui for angular, インフラジスティックス
 ---
 
-# スプリッター
+# Angular Splitter (スプリッター) コンポーネントの概要
 
 Ignite UI for Angular Splitter コンポーネントはレイアウトを作成し、サイズ変更、展開、縮小が可能な複数の垂直方向または水平方向に配置されたペインに分割できます。これらの操作は、ペイン間のスプリッター バーで公開される UI によって実行されます。以下のデモでシンプルなスプリッター レイアウトを示します。
 
@@ -18,9 +18,18 @@ Ignite UI for Angular Splitter コンポーネントはレイアウトを作成�
 
 <div class="divider--half"></div>
 
-## 使用方法
+## Ignite UI for Angular Splitter を使用した作業の開始
 
-**igxSplitter** コンポーネントを初期化にするには、まず **IgxSplitterModule** を **app.module** にインポートします。
+Ignite UI for Angular Splitter コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
+
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxSplitterModule` をインポートします。
+
 ```typescript
 // app.module.ts
 ...
@@ -35,7 +44,40 @@ import { IgxSplitterModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-次に、コンポーネントのマークアップを追加します。
+あるいは、`16.0.0` 以降、`IgxSplitterComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_SPLITTER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/splitter/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+
+```typescript
+// home.component.ts
+
+import { IGX_SPLITTER_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_SPLITTER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-splitter>
+        <igx-splitter-pane>
+            Pane 1
+        </igx-splitter-pane>
+        <igx-splitter-pane>
+            Pane 2
+        </igx-splitter-pane>
+    </igx-splitter>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_SPLITTER_DIRECTIVES]
+    /* or imports: [IgxSplitterComponent, IgxSplitterPaneComponent] */
+})
+export class HomeComponent {}
+```
+
+Ignite UI for Angular Splitter モジュールまたはディレクティブをインポートしたので、`igx-splitter` コンポーネントの使用を開始できます。
+
+## Angular Splitter の使用
+
+**igxSplitter** は **igx-splitter** タグで初期化されます。単一の **igx-splitter** コンポーネントの下に複数のスプリッター ペインを定義できます。ペインのコンテンツはテンプレート化可能で、サイズ変更可能なコンテナーに描画されます。
+
 ```html
 <!-- splitter.component.html -->
 <igx-splitter>
@@ -50,8 +92,6 @@ export class AppModule {}
     </igx-splitter-pane>
 </igx-splitter>
 ```
-**igxSplitter** は **igx-splitter** タグで初期化されます。単一の **igx-splitter** コンポーネントの下に複数のスプリッター ペインを定義できます。ペインのコンテンツはテンプレート化可能で、サイズ変更可能なコンテナーに描画されます。
-
 
 ### 方向
 
@@ -144,10 +184,10 @@ public typeVertical = SplitterType.Vertical;
 - `下矢印` - 垂直スプリッターでスプリッター バーを下へ移動
 - `左矢印` - 水平スプリッターでスプリッター バーを左へ移動
 - `右矢印` - 水平スプリッターでスプリッター バーを右へ移動
-- `Ctrl +上矢印` - 垂直スプリッターでペインを展開/縮小
-- `Ctrl +下矢印` - 垂直スプリッターでペインを展開/縮小
-- `Ctrl +左矢印` - 水平スプリッターでペインを展開/縮小
-- `Ctrl +右矢印` - 水平スプリッターでペインを展開/縮小
+- `Ctrl + 上矢印` - 垂直スプリッターでペインを展開/縮小
+- `Ctrl + 下矢印` - 垂直スプリッターでペインを展開/縮小
+- `Ctrl + 左矢印` - 水平スプリッターでペインを展開/縮小
+- `Ctrl + 右矢印` - 水平スプリッターでペインを展開/縮小
 
 ## スタイル設定
 **igxSplitter** コンポーネントのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。

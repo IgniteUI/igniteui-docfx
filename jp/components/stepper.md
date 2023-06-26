@@ -1,11 +1,11 @@
 ---
 title: Angular Stepper コンポーネント - Ignite UI for Angular
 _description: Angular Stepper コンポーネントを使用してコンテンツをプロセスとして可視化し、コンテンツを論理的なステップに分割して進行状況を表示します。使用方法について説明します。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Angular Stepper コンポーネント, インフラジスティックス
+_keywords: Angular Stepper コンポーネント, Angular ウィザード コンポーネント, Angular Stepper コントロール, Angular ウィザード コントロール, Angular UI コンポーネント, Ignite UI for Angular, UI コンポーネント, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, インフラジスティックス
 _language: ja
 ---
 
-# Angular Stepper コンポーネントの概要
+# Angular Stepper (ステッパー) コンポーネントの概要
 Angular マテリアル ステッパーは高度にカスタマイズ可能なコンポーネントで、必要なプロセスを可視化し、進行状況を各ステップで表示します。垂直線または水平線で表示されます。Ignite UI for Angular ライブラリによって提供されるステッパー コンポーネントは、ウィザードのようなワークフローと、ステップ検証、スタイル設定、向き、キーボード ナビゲーションなどの複数の機能を提供します。 
 
 ## Angular Stepper の例
@@ -19,18 +19,16 @@ Angular ステッパー デモの 4 番目のステップは、2 番目のステ
 
 <div class="divider--half"></div>
 
-## Angular Stepper のインストール方法
-
-### Ignite UI for Angular Stepper を使用した作業の開始
+## Ignite UI for Angular Stepper を使用した作業の開始
 
 Ignite UI for Angular Stepper コンポーネントを初期化するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
 ```
-Ignite UI for Angular については、[*はじめに*](general/getting-started.md)トピックををご覧ください。
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-次に、app.module ファイルに `IgxStepperModule` をインポートします。 
+次に、**app.module** ファイルに `IgxStepperModule` をインポートします。 
 
 ```typescript
 // app.module.ts
@@ -46,9 +44,40 @@ import { IgxStepperModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
-Angular Material Stepper モジュールをインポート後、`igx-stepper` とそのステップの基本設定を開始します。
 
-## 使用方法
+あるいは、`16.0.0` 以降、`IgxStepperComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_STEPPER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/stepper/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+
+```typescript
+// home.component.ts
+
+import { HammerModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { IGX_STEPPER_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_STEPPER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `<igx-stepper>
+        <igx-step> 
+            <p igxStepTitle>Step 1</p>
+        </igx-step>
+        <igx-step> 
+            <p igxStepTitle>Step 2</p>
+        </igx-step>
+    </igx-stepper>`,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_STEPPER_DIRECTIVES, FormsModule, HammerModule]
+    /* or imports: [IgxStepperComponent, FormsModule, HammerModule] */
+})
+export class HomeComponent {
+    public task: Task;
+}
+```
+
+Angular Material Stepper モジュールまたはディレクティブをインポート後、`igx-stepper` とそのステップの基本設定を開始します。
+
+## Angular Stepper の使用
 [IgxStepComponent]({environment:angularApiUrl}/classes/igxstepcomponent.html) は、[IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) に属するすべてのステップの表現です。ステップは [isValid]({environment:angularApiUrl}/classes/igxstepcomponent.html#isValid)、[active]({environment:angularApiUrl}/classes/igxstepcomponent.html#active)、[optional]({environment:angularApiUrl}/classes/igxstepcomponent.html#optional)、[disabled]({environment:angularApiUrl}/classes/igxstepcomponent.html#disabled)、[completed]({environment:angularApiUrl}/classes/igxstepcomponent.html#completed) プロパティを提供し、ビジネス要件に応じてステップの状態を構成できます。
 
 ### ステッパーの宣言
@@ -192,7 +221,7 @@ Ignite UI for Angular Stepper では、タイトル、インジケーターな�
 - bottom
 - top
 
-`Igx-stepper` が水平方向の場合、タイトル位置のデフォルト値は `bottom` です。
+`igx-stepper` が水平方向の場合、タイトル位置のデフォルト値は `bottom` です。
 
 向きが垂直レイアウトに設定されている場合、タイトル位置のデフォルト値は `end` です。
 
@@ -256,7 +285,7 @@ Angular Stepper のアニメーションにより、エンドユーザーは定�
 ## キーボード ナビゲーション
 
 Angular Material Stepper は、さまざまなキーボード操作をエンドユーザーに提供します。この機能はデフォルトで有効になっており、エンドユーザーは簡単にステップを移動できます。 
-[IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) ナビゲーションは [W3 アクセシビリティ標準](https://www.w3.org/TR/wai-aria-practices-1.1/#tabpanel)に準拠しており、便利に使用できます。
+[IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) ナビゲーションは [W3 アクセシビリティ標準](https://www.w3.org/WAI/ARIA/apg/example-index/tabs/tabs-manual.html#accessibilityfeatures)に準拠しており、便利に使用できます。
 
 **キーの組み合わせ**
 
@@ -264,11 +293,11 @@ Angular Material Stepper は、さまざまなキーボード操作をエンド�
  - <kbd>Shift + Tab</kbd> - 前移動可能な要素にフォーカスを移動します。
  - <kbd>下矢印</kbd> - `igx-stepper` が**垂直方向**の場合、次のアクセス可能なステップのヘッダーにフォーカスを移動します。
  - <kbd>上矢印</kbd> - `igx-stepper` が**垂直方向**の場合、前のアクセス可能なステップのヘッダーにフォーカスを移動します。
- - <kbd>左矢印</kbd>- 両方の方向で前のアクセス可能なステップのヘッダーにフォーカスを移動します。
- - <kbd>右矢印</kbd>- 両方の方向で次にアクセス可能なステップのヘッダーにフォーカスを移動します。
+ - <kbd>左矢印</kbd> - 両方の方向で前のアクセス可能なステップのヘッダーにフォーカスを移動します。
+ - <kbd>右矢印</kbd> - 両方の方向で次にアクセス可能なステップのヘッダーにフォーカスを移動します。
  - <kbd>Home</kbd> - `igx-stepper` の最初の有効なステップのヘッダーにフォーカスを移動します。
  - <kbd>End</kbd> - `igx-stepper` の最後の有効なステップのヘッダーにフォーカスを移動します。
- - <kbd>Enter/Space</kbd> - 現在フォーカスされているステップをアクティブ化します。
+ - <kbd>Enter / Space</kbd> - 現在フォーカスされているステップをアクティブ化します。
  
  > 注: ユーザーがステップ ヘッダーで <kbd>Tab</kbd> キーを押すと、フォーカスはステップ コンテンツ コンテナーに移動します。コンテナーをスキップする場合、開発者は `[tabIndex]="-1"` コンテンツ コンテナーを設定する必要があります。
 

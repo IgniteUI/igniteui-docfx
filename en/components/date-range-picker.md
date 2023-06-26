@@ -1,14 +1,15 @@
 ---
 title: Angular Date Range Picker Component | Ignite UI for Angular
-_description: The Date Range Picker component allows you to choose a date range by defining its start and end date. You can select a range from a calendar UI.
-_keywords: Angular Date Range Picker, Date Range Picker, Date Picker
+_description: The Angular Date Range Picker component allows you to choose a date range by defining its start and end date. You can select a range from a calendar UI. Try it now. 
+_keywords: Angular Date Range Picker, Date Range Picker, Date Picker, Angular Date Range Picker Component, Angular UI Components, Angular component
 ---
 
-# Date Range Picker Component
+# Angular Date Range Picker Component Overview
 
-The Ignite UI for Angular Date Range Picker Component displays a month-view calendar that lets the end-user select a date range by defining its start and end date. The calendar's UI is shown either in a dropdown (default) or as a dialog upon user interaction with the calendar icon that is part of the input field. In addition, the component provides an advanced setup option, exposing two separate editable input fields. The component supports locales and custom date formatting.
+Angular Date Range Picker is a lightweight component that includes text input and a calendar pop-up to allow users to easily select start and end date values. It can be customized to match app requirements with features like range restrictions, formats, data range selection, grouping the start and end values together and many more. The Date Range Picker in Angular also allows developers to change the default view property and set it to month, year or multi-year. 
 
 ## Angular Date Range Picker Example
+We have created this basic Angular Date Range Picker example to show you the component in action. In this case, you see a calendar pop-up, letting users select start and end date values. 
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -18,17 +19,23 @@ The Ignite UI for Angular Date Range Picker Component displays a month-view cale
 <div class="divider--half"></div>
 
 
-## Usage
+## Getting Started with Ignite UI for Angular Date Range Picker
 
-### First Steps
-To get started with the Ignite UI for Angular Date Range Picker Component, let's first import the `IgxDateRangePickerModule` in the **app.module.ts** file.
+To get started with the Ignite UI for Angular Datepicker component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+
+```cmd
+ng add igniteui-angular
+```
+
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+
+The next step is to import the `IgxDateRangePickerModule` in your **app.module.ts** file.
 
 As `IgxDateRangePicker` uses the [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html), it also has a dependency on the **BrowserAnimationsModule** and the **HammerModule** for touch interactions, so they need to be added to the `AppModule` as well:
 
 ```typescript
 // app.module.ts
 
-...
 import { IgxDateRangePickerModule } from 'igniteui-angular';
 // import { IgxDateRangePickerModule } from '@infragistics/igniteui-angular'; for licensed package
 
@@ -43,6 +50,30 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 export class AppModule {}
 ```
 
+Alternatively, as of `16.0.0` you can import the `IgxDateRangePickerComponent` as a standalone dependency, or use the [`IGX_DATE_RANGE_PICKER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/date-range-picker/public_api.ts) token to import the component and all of its supporting components and directives.
+
+```typescript
+// home.component.ts
+
+import { HammerModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { IGX_DATE_RANGE_PICKER_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_DATE_RANGE_PICKER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<igx-date-range-picker [value]="range"></igx-date-range-picker>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [BrowserAnimationsModule, HammerModule, IGX_DATE_RANGE_PICKER_DIRECTIVES]
+    /* or imports: [BrowserAnimationsModule, HammerModule, IgxDateRangePickerComponent] */
+})
+export class HomeComponent {}
+```
+
+Now that you have the Ignite UI for Angular Date Range Picker module or directives imported, you can start using the `igx-date-range-picker` component.
+
+## Using the Angular Date Range Picker Component
 ### Display Date Range Picker
 To instantiate a date range picker in its default mode, use the following code:
 
@@ -63,12 +94,12 @@ To create a two-way data-binding, use `ngModel`:
 
 ### Projecting components
 
-To enrich the default Date Range Picker UX, the component allows projecting child components - the same as in the [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html): [`igxLabel`](label-input.md), [`IgxHint`](input-group.md#hints), [`igxPrefix`](input-group.md#prefix--suffix), [`igxSuffix`](input-group.md#prefix--suffix), excluding [`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html). More detailed information about this can be found in the [Label & Input](label-input.md) topic.
+To enrich the default Date Range Picker UX, the component allows projecting child components - the same as in the [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html): [`igxLabel`](label-input.md), [`igx-hint / igxHint`](input-group.md#hints), [`igx-prefix / igxPrefix`](input-group.md#prefix--suffix), [`igx-suffix / igxSuffix`](input-group.md#prefix--suffix), excluding [`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html). More detailed information about this can be found in the [Label & Input](label-input.md) topic.
 
-In addition, the Date Range Picker can be configured to project [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) - a component that controls the calendar toggle and can be modified as shown in the [Calendar toggle](#calendar-toggle) section.
+In addition, the Ignite UI for Angular Date Range Picker can be configured to project [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) - a component that controls the calendar toggle and can be modified as shown in the [Calendar toggle](#calendar-toggle) section.
 
 ```html
-<igx-date-range-picker [(ngModel)]="range">
+<igx-date-range-picker #dateRangePicker [(ngModel)]="range">
     <label igxLabel>Flight dates</label>
     <igx-hint *ngIf="dateRangePicker.invalid">
         Please choose start and end date!
@@ -77,7 +108,7 @@ In addition, the Date Range Picker can be configured to project [`IgxPickerToggl
 ```
 
 ### Display Separate Editable Inputs
-The Date Range Picker component also allows configuring two separate inputs for start and end date. This can be achieved by using the [`IgxDateRangeStartComponent`]({environment:angularApiUrl}/classes/igxdaterangestartcomponent.html) and [`IgxDateRangeEndComponent`]({environment:angularApiUrl}/classes/igxdaterangeendcomponent.html) as children of the date range picker, as shown in the demo below:
+The Angular Date Range Picker component also allows configuring two separate inputs for start and end date. This can be achieved by using the [`IgxDateRangeStartComponent`]({environment:angularApiUrl}/classes/igxdaterangestartcomponent.html) and [`IgxDateRangeEndComponent`]({environment:angularApiUrl}/classes/igxdaterangeendcomponent.html) as children of the date range picker, as shown in the demo below:
 
 ```html
 <igx-date-range-picker [(ngModel)]="range">
@@ -268,7 +299,7 @@ When using two separate inputs, it is possible to set the model and required pro
 <div class="divider--half"></div>
 
 ### Min and max values
-You can specify [`minValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#maxvalue) properties to restrict the user input by disabling calendar dates that are outside the range defined by those values.
+You can specify [`minValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#minValue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#maxValue) properties to restrict the user input by disabling calendar dates that are outside the range defined by those values.
 
 ```typescript
 public minDate = new Date(2020, 1, 15);
@@ -404,13 +435,14 @@ Regarding style scoping, you should refer to both styling sections [Overlay Scop
 
 
 <code-view style="height:600px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/styled-daterangepicker" >
 </code-view>
 
 
 ## Application Demo
-The demo below defines a form for flight tickets that uses the [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html). If no dates are selected, an [`IgxHint`]({environment:angularApiUrl}/classes/igxhintdirective.html) is used to display a validation error. The selection of the dates is restricted by the [`minValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#minvalue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#maxvalue) properties of the [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html)
+The demo below defines a form for flight tickets that uses the [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html). If no dates are selected, an [`IgxHint`]({environment:angularApiUrl}/classes/igxhintdirective.html) is used to display a validation error. The selection of the dates is restricted by the [`minValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#minValue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#maxValue) properties of the [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html)
 
 
 <code-view style="height:600px"

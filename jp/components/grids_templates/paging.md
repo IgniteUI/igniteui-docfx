@@ -17,7 +17,7 @@ _language: ja
 }
 
 # Angular @@igComponent ページネーション
-ページネーションは、大量のデータセットを類似したコンテンツを持つ一連のページに分割するために使用されます。Angular テーブルのページネーションにより、ユーザー エクスペリエンスとデータ操作が向上します。 @@igComponent ページネーションは、列の追加と同様に、`igx-paginator` タグを定義することにより、グリッド ツリーに投影された個別のコンポーネントを介して構成できます。他の Angular Material テーブルと同様に、@@igComponent のページネーションはカスタム ページのテンプレートをサポートします。
+ページネーションは、大量のデータセットを類似したコンテンツを持つ一連のページに分割するために使用されます。Angular テーブルのページネーションにより、ユーザー エクスペリエンスとデータ操作が向上します。@@igComponent ページネーションは、列の追加と同様に、`igx-paginator` タグを定義することにより、グリッド ツリーに投影された個別のコンポーネントを介して構成できます。他の Angular Material テーブルと同様に、@@igComponent のページネーションはカスタム ページのテンプレートをサポートします。
 
 ## Angular ページネーションの例
 
@@ -360,6 +360,7 @@ $dark-button: button-theme(
 
 
 <code-view style="height:560px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/custom-grid-paging-style" >
 </code-view>
@@ -371,6 +372,7 @@ $dark-button: button-theme(
 ### デモ
 
 <code-view style="height:560px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging-style" >
 </code-view>
@@ -382,6 +384,7 @@ $dark-button: button-theme(
 ### デモ
 
 <code-view style="height:560px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-paging-style" >
 </code-view>

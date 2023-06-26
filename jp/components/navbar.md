@@ -1,12 +1,13 @@
 ---
 title: Navbar コンポーネント
 _description: Ignite UI for Angular Navbar コントロールはアプリケーションでのスムーズな移動を可能にする UI コンポーネントです。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Navbar コンポーネント, Angular Navbar コントロール
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Navbar コンポーネント, Angular Navbar コントロール, Angular Navigation Bar, Angular Navigation Bar コンポーネント
 _language: ja
 ---
 
-# Navbar
-<p class="highlight">Ignite UI for Angular [`IgxNavbarComponent`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)、アプリケーション内の現在位置を示し、ブラウザーの [戻る] ボタンのように戻る機能を提供します。Navigation Bar の検索またはお気に入りなどのリンクによって、ユーザーはアプリケーションでナビゲーションをスムーズに実行できます。バーは、バーが含まれるコンテナー上に配置されます。</p>
+# Angular Navbar (ナビゲーション バー) コンポーネントの概要
+
+Ignite UI for Angular [`IgxNavbarComponent`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html) は、アプリケーション内の現在位置をユーザーに通知し、ブラウザーの [戻る] ボタンのように戻る機能を提供するアプリケーション ヘッダー コンポーネントです。Navigation Bar の検索またはお気に入りなどのリンクによって、ユーザーはアプリケーションでナビゲーションをスムーズに実行できます。バーは、バーが含まれるコンテナ上に配置されます。
 
 
 ## Angular Navbar の例
@@ -18,14 +19,21 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 使用方法
+## Ignite UI for Angular Navbar を使用した作業の開始
 
-Navbar コンポーネントを初期化する前に、`IgxNavbarModule` を **app.module.ts** ファイルにインポートします。 
+Ignite UI for Angular Navbar コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
+
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+ はじめに、**app.module.ts** ファイルに `IgxNavbarModule` をインポートします。 
 
 ```typescript
 // app.module.ts
 
-...
 import { IgxNavbarModule } from 'igniteui-angular';
 // import { IgxNavbarModule } from '@infragistics/igniteui-angular'; for licensed package
 
@@ -37,7 +45,30 @@ import { IgxNavbarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-コンポーネントのテンプレートで、以下のコードを追加し、タイトルのみのベーシックな NavBar を作成します。
+あるいは、`16.0.0` 以降、`IgxNavbarComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_NAVBAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/navbar/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+
+```typescript
+// home.component.ts
+
+import { IGX_NAVBAR_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_NAVBAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<igx-navbar title="Ignite UI for Angular"></igx-navbar>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_NAVBAR_DIRECTIVES]
+    /* or imports: [IgxNavbarComponent] */
+})
+export class HomeComponent {}
+```
+
+Ignite UI for Angular Navbar モジュールまたはディレクティブをインポートしたので、`igx-navbar` コンポーネントの使用を開始できます。
+
+## Angular Navbar の使用
+
+コンポーネントのテンプレートで、以下のコードを追加し、タイトルの基本的な NavBar を作成します。
 
 ```html
 <!--navbar.component.html-->
@@ -45,8 +76,6 @@ export class AppModule {}
 <igx-navbar title="Ignite UI for Angular">
 </igx-navbar>
 ```
-
-## 例
 
 ### メニュー ボタンの追加
 
@@ -60,7 +89,7 @@ export class AppModule {}
 ```
 
 > [!NOTE]
-> [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) は、デザインで Material フォントセットを使用します。
+> [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionButtonIcon) は、デザインで Material フォントセットを使用します。
 
 ### アイコン ボタンの追加
 
@@ -74,11 +103,7 @@ import {
     IgxButtonModule,
     IgxIconModule
 } from 'igniteui-angular';
-// import { 
-//    IgxNavbarModule,
-//    IgxButtonModule,
-//    IgxIconModule
-// } from '@infragistics/igniteui-angular'; for licensed package
+// import { IgxNavbarModule, IgxButtonModule, IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -114,7 +139,7 @@ export class AppModule {}
 
 <div class="divider--half"></div>
 
-### カスタム アクション の追加
+### カスタム動作の追加
 
 アプリのナビゲーションでナビゲーション バーの左端にあるデフォルト アイコンではなくカスタム テンプレートを使用したい場合、`igx-navbar-action` ディレクティブを使用して提供したコンテンツをレンダリングします。これには Font Awesome ホーム アイコンのボタンを使用します。
 
@@ -148,7 +173,7 @@ export class AppModule {}
 </igx-navbar>
 ```
 
-以下はカスタム アクション ボタン アイコンをした場合の navbar の外観です。
+以下はカスタム動作ボタン アイコンをした場合の navbar の外観です。
 
 
 <code-view style="height: 300px" 
@@ -160,7 +185,7 @@ export class AppModule {}
 
 ### ナビゲーション アイコを追加
 
-戻るためのアイコンが付いたナビゲーション バーを作成する場合は、次の手順を実行します。まず、`actionButtonIcon` プロパティを使用して、Material フォントセットから適切なアイコンを選択できます。次に、以前にアクセスしたページに戻るかどうかを確認し、その結果を [`isActionButtonVisible`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#isactionbuttonvisible) プロパティに渡します。最後の手順は、戻るためのメソッドを作成し、[`action`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#action) プロパティにフックすることです。 
+戻るためのアイコンが付いたナビゲーション バーを作成する場合は、次の手順を実行します。まず、`actionButtonIcon` プロパティを使用して、Material フォントセットから適切なアイコンを選択できます。次に、以前にアクセスしたページに戻るかどうかを確認し、その結果を [`isActionButtonVisible`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#isActionButtonVisible) プロパティに渡します。最後の手順は、戻るためのメソッドを作成し、[`action`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#action) プロパティにフックすることです。 
 
 ```html
 <!--navbar.component.html-->
@@ -238,7 +263,7 @@ Navbar のタイトルにカスタム コンテンツを提供する場合は、
 ```
 
 > [!NOTE]
-> [`igx-navbar-title`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) または [`igxNavbarTitle`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) の場合、デフォルト [`title`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#title) が使用されません。 
+> [`igx-navbar-title`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) または [`igxNavbarTitle`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) の場合、デフォルト [`title`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#title) が使用されません。
 
 
 <code-view style="height: 300px" 
@@ -364,6 +389,7 @@ $cutom-navbar-theme: navbar-theme(
 
 
 <code-view style="height: 150px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/menus/navbar-style" >
 </code-view>

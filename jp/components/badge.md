@@ -1,12 +1,12 @@
 ---
 title: Angular Badge コンポーネント
 _description: Ignite UI for Angular の Badge コントロールは、アプリケーションでその他のコンポーネントを装飾するために定義済みスタイルでアクティブ カウントまたはアイコンを表示します。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Badge コンポーネント, Angular Badge コントロール
+_keywords: Angular Badge コンポーネント, Angular Badge コントロール, Ignite UI for Angular, Angular UI コンポーネント
 _language: ja
 ---
 
-# Badge
-<p class="highlight">Ignite UI Badge は、視覚的な通知が必要な場合にアプリケーションでアバター、ナビゲーション メニュー、またはその他のコンポーネントと共に使用されるコンポーネントです。バッジは情報、成功、警告、またはエラーを表示するために定義済みのスタイルを持つアイコンとしてデザインされます。</p>
+# Angular Badge (バッジ) コンポーネントの概要
+<p class="highlight">Angular Badge は、視覚的な通知が必要な場合にアプリケーションでアバター、ナビゲーション メニュー、またはその他のコンポーネントと共に使用されるコンポーネントです。バッジは情報、成功、警告、またはエラーを表示するために定義済みのスタイルを持つアイコンとしてデザインされます。</p>
 <div class="divider"></div>
 
 ## Angular Badge の例
@@ -18,8 +18,16 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## 使用方法
-Badge コンポーネントを初期化する前に、`IgxBadgeModule` を **app.module.ts** ファイルにインポートします。
+## Ignite UI for Angular Badge を使用した作業の開始
+
+Ignite UI for Angular Badge コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
+
+```cmd
+ng add igniteui-angular
+```
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxBadgeModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -36,18 +44,35 @@ import { IgxBadgeModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
+あるいは、`16.0.0` 以降、`IgxBadgeComponent` をスタンドアロンの依存関係としてインポートできます。
+
+```typescript
+// home.component.ts
+
+...
+import { IgxBadgeComponent } from 'igniteui-angular';
+// import { IgxBadgeComponent } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<igx-badge icon="check" type="success" shape="square"></igx-badge>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxBadgeComponent]
+})
+export class HomeComponent {}
+```
+
+Ignite UI for Angular Badge モジュールまたはコンポーネントをインポートしたので、`igx-badge` コンポーネントの基本構成を開始できます。
+
+## Angular Badge コンポーネントの使用
 デモ サンプルの実行方法を見てみましょう。アバターのシンプルな success スタイルのバッジです。これを構築するためには、`IgxBadgeModule` とともに `IgxAvatarModule` をインポートする必要があります。
 
 ```typescript
 // app.module.ts
 ...
-import {
-  IgxBadgeModule,
-  IgxAvatarModule
-} from 'igniteui-angular';
-// import { 
-//   IgxBadgeModule,
-//   IgxAvatarModule } from '@infragistics/igniteui-angular'; for licensed package
+import { IgxBadgeModule, IgxAvatarModule } from 'igniteui-angular';
+// import {  IgxBadgeModule, IgxAvatarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
   ...
@@ -58,11 +83,13 @@ import {
 export class AppModule {}
 ```
 
+*あるいは、`16.0.0` 以降、`IgxBadgeComponent` と `IgxAvatarComponent` をスタンドアロンの依存関係としてインポートできます。*
+
 次に、これらのコンポーネントをテンプレートに追加します。
 
 ```html
 <div class="wrapper">
-    <igx-avatar icon="person" roundShape="true" size="small"></igx-avatar>
+    <igx-avatar icon="person" shape="circle" size="small"></igx-avatar>
     <igx-badge icon="check" type="success"></igx-badge>
 </div>
 ```
@@ -82,7 +109,15 @@ igx-badge {
 }
 ```
 
-すべて適切に設定すると、ブラウザ上でデモサンプルを確認することができます。
+### Badge の形状
+
+`shape` 属性の値を `square` に設定することで、バッジの形状を変更できます。デフォルトでは、バッジの形状は `rounded` です。
+
+```html
+<igx-badge icon="check" type="success" shape="square"></igx-badge>
+```
+
+すべて適切に設定すると、ブラウザ上で以上のデモ サンプルを確認することができます。
 
 ### リストのバッジ
 
@@ -99,11 +134,7 @@ import {
     IgxAvatarModule,
     IgxBadgeModule
 } from 'igniteui-angular';
-// import { 
-//    IgxListModule,
-//    IgxAvatarModule,
-//    IgxBadgeModule
-// } from '@infragistics/igniteui-angular'; for licensed package
+// import { IgxListModule, IgxAvatarModule, IgxBadgeModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
@@ -129,7 +160,7 @@ export class AppModule {}
   <igx-list-item *ngFor="let member of members">
     <div class="wrapper">
       <div>
-        <igx-avatar icon="person" roundShape="true" size="small"></igx-avatar>
+        <igx-avatar icon="person" shape="circle" size="small"></igx-avatar>
         <igx-badge [icon]="member.icon" [type]="member.type" class="badge-style"></igx-badge>
       </div>
       <div class="contact-container">
@@ -146,12 +177,12 @@ export class AppModule {}
 // contacts.component.ts
 
 ...
-public members: Member[] = [
-  new Member('Terrance Orta', 'online'),
-  new Member('Donna Price', 'online'),
-  new Member('Lisa Landers', 'away'),
-  new Member('Dorothy H. Spencer', 'offline'),
-];
+ public members: Member[] = [
+    new Member('Terrance Orta', 'online'),
+    new Member('Donna Price', 'online'),
+    new Member('Lisa Landers', 'away'),
+    new Member('Dorothy H. Spencer', 'offline'),
+  ];
 
 ```
 
@@ -213,12 +244,10 @@ class Member {
 
 サンプルを正しく構成すると、アバターと、その状態を示すバッジとともにメンバーのリストが表示されます。
 
-
 <code-view style="height: 280px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-3" >
 </code-view>
-
 
 ## スタイル設定
 
@@ -286,8 +315,8 @@ $custom-badge-theme: badge-theme(
 
 ### デモ
 
-
 <code-view style="height:340px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/badge-styling-sample" >
 </code-view>
@@ -306,11 +335,9 @@ $custom-badge-theme: badge-theme(
 ## テーマの依存関係
 * [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
 
-
 ## その他のリソース
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular) 
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular) 
-
+* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

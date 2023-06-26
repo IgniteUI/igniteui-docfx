@@ -358,6 +358,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 
 <code-view style="height:560px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/custom-grid-paging-style" >
 </code-view>
@@ -369,6 +370,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 ### Demo
 
 <code-view style="height:560px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging-style" >
 </code-view>
@@ -380,6 +382,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 ### Demo
 
 <code-view style="height:560px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-paging-style" >
 </code-view>

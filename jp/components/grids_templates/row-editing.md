@@ -73,10 +73,10 @@ import { @@igxNameModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-次に @@igComponent をバインドしたデータソースで定義し、[`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) を true に設定してバインドします。
+次に @@igComponent をバインドしたデータソースで定義し、[`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable) を true に設定してバインドします。
 @@if (igxName ==='IgxGrid') {
 ```html
-<igx-grid [data]="data" [primaryKey]="'ProductID'" [rowEditable]="true">
+<igx-grid [data]="data" [primaryKey]="'ProductID'" width="100%" height="500px" [rowEditable]="true">
     <igx-column field="ProductID" header="Product ID" editable="false"></igx-column>
     <igx-column field="ReorderLevel" header="ReorderLever" [dataType]="'number'"></igx-column>
     <igx-column field="ProductName" header="ProductName" [dataType]="'string'"></igx-column>
@@ -92,8 +92,8 @@ export class AppModule {}
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
-<igx-tree-grid #treeGrid [data]="data" [primaryKey]="EmployeID" [foreignKey]="PID" width ="100%"
-               height ="500px" [moving]="true" [rowEditable]="true" [rowSelection]="'multiple'">
+<igx-tree-grid [data]="data" [primaryKey]="EmployeID" [foreignKey]="PID"
+               [rowEditable]="true" [rowSelection]="'multiple'" [moving]="true">
     <igx-column *ngFor="let c of columns"
         [editable] ="c.editable"
         [field]="c.field"
@@ -108,8 +108,7 @@ export class AppModule {}
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid #hierarchicalGrid class="hgrid" [data]="localdata" [autoGenerate]="false"
-    [height]="'600px'" [width]="'100%'">
+<igx-hierarchical-grid [data]="localdata" [autoGenerate]="false" [rowEditable]="true">
     <igx-column field="Artist" [editable]="true" [dataType]="'string'"></igx-column>
     <igx-column field="HasGrammyAward" [editable]="true" [dataType]="'boolean'">
     </igx-column>
@@ -145,7 +144,7 @@ export class AppModule {}
 > プライマリキーは行編集操作で必須です。
 
 > [!NOTE]
-> 各列の編集を有効にする必要はありません。@@igComponent で [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable) プロパティを使用するとプライマリ行以外 `field` プロパティを定義したすべての行が編集可能になります。特定の列の編集を無効にする場合、[`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) 列の入力を false に設定します。
+> 各列の編集を有効にする必要はありません。@@igComponent で [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable) プロパティを使用するとプライマリ行以外 `field` プロパティを定義したすべての行が編集可能になります。特定の列の編集を無効にする場合、[`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) 列の入力を false に設定します。
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -195,7 +194,7 @@ export class TreeGridRowEditSampleComponent implements OnInit {
 
         this.columns = [
             { field: 'FirstName', label: 'First Name', resizable: true, sortable: true, filterable: true, editable: true, dataType: 'string' },
-            { field: 'LastName', label: 'Last Name', resizable: false,  sortable: false, filterable: false, editable: true, dataType: 'string' },
+            { field: 'LastName', label: 'Last Name', resizable: false, sortable: false, filterable: false, editable: true, dataType: 'string' },
             { field: 'Title', label: 'Title', resizable: true, sortable: true, filterable: true, editable: true, dataType: 'string' },
             { field: 'HireDate', label: 'Hire Date', resizable: true, sortable: true, filterable: true, editable: true, dataType: 'date' }
         ];
@@ -312,7 +311,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
     - コンテンツをレンダリングするための [`igx-banner`](../banner.md)
     - [`igx-button`](../button.md) はデフォルトのテンプレートでレンダリングされます (`[完了]` ボタンと `[キャンセル]` ボタンの場合)。
 
-以下の例では、これら 2 つのコンポーネントのスタイル設定オプション ([ボタン スタイル](../button.md#スタイル設定) & [バナー スタイル](../banner.md#スタイル設定)) を使用して、@@igxName の行編集のエクスペリエンスをカスタマイズします。
+以下の例では、これら 2 つのコンポーネントのスタイル設定オプション ([ボタン スタイル](../button.md#angular-ボタンのスタイル設定) & [バナー スタイル](../banner.md#スタイル設定)) を使用して、@@igxName の行編集のエクスペリエンスをカスタマイズします。
 次に、現在のセルのエディターと背景をより明確にするためにスタイルを設定します。セル スタイリングの詳細については、[こちら](cell-editing.md#スタイル設定)をご覧ください。
 
 ### テーマのインポート
@@ -395,7 +394,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 </@@igSelector>
 ```
 
-カスタム ボタンを定義した後は、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) を使用してスタイルを設定できます。[こちら](../button.md#スタイル設定)で `igx-button` のスタイリングについてさらに学ぶことができます。`完了`と`キャンセル`のカスタム テーマを作成できます。
+カスタム ボタンを定義した後は、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) を使用してスタイルを設定できます。[こちら](../button.md#angular-ボタンのスタイル設定)で `igx-button` のスタイリングについてさらに学ぶことができます。`完了`と`キャンセル`のカスタム テーマを作成できます。
 
 ```scss
 // custom.component.scss
@@ -420,6 +419,7 @@ $button-theme: button-theme(
 @@if (igxName === 'IgxGrid'){
 
 <code-view style="height:560px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-row-edit-style" >
 </code-view>
@@ -430,6 +430,7 @@ $button-theme: button-theme(
 @@if (igxName === 'IgxHierarchicalGrid'){
 
 <code-view style="height:560px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-edit-style" >
 </code-view>
@@ -440,6 +441,7 @@ $button-theme: button-theme(
 @@if (igxName === 'IgxTreeGrid'){
 
 <code-view style="height:560px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-row-edit-style" >
 </code-view>
@@ -459,15 +461,15 @@ $button-theme: button-theme(
 
 ## API リファレンス
 
-* [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditable)
-* [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditenter)
-* [onRowEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onrowedit)
-* [rowEditDone]({environment:angularApiUrl}/classes/@@igTypeDoc.html#roweditdone)
-* [onRowEditCancel]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onroweditcancel)
-* [endEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#endedit)
+* [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable)
+* [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditEnter)
+* [onRowEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEdit)
+* [rowEditDone]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditDone)
+* [onRowEditCancel]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditCancel)
+* [endEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#endEdit)
 * [field]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field)
 * [editable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable)
-* [primaryKey]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey)
+* [primaryKey]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primaryKey)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 
 ## その他のリソース

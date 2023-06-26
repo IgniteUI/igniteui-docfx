@@ -74,7 +74,7 @@ Ignite UI for Angular の @@igComponent のコンポーネントは、標準ド�
 
 ## 概要
 
-**列移動**は各列レベルで有効にできます。つまり、[**@@igSelector**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) に移動可能な列と移動不可の列の両方を含むことができます。[`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) の [`movable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#movable) 入力によって制御されます。
+**列移動**は各列レベルで有効にできます。つまり、[**@@igSelector**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) に移動可能な列と移動不可の列の両方を含むことができます。[`moving`]({environment:angularApiUrl}/classes/igxgridcomponent.html#moving) の [`igx-grid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) 入力によって制御されます。
 
 
 @@if (igxName === 'IgxGrid') {
@@ -99,7 +99,7 @@ Ignite UI for Angular の @@igComponent のコンポーネントは、標準ド�
 ## API
 ドラッグアンドドロップ機能に加えて、列の移動機能には、プログラムで列を移動/並べ替えできる 2 つの API メソッドも用意されています。 
 
-[`moveColumn`]({environment:angularApiUrl}/classes/igxgridcomponent.html#movecolumn) - 列を別の列 (ターゲット) の前または後に移動します。最初のパラメーターは移動する列で、2 番目のパラメーターはターゲット列です。オプションの 3 番目のパラメーター `position` ([`DropPosition`]({environment:angularApiUrl}/enums/dropposition.html) 値を表す) でターゲット列の前または後に列を配置するかどうかを決定します。
+[`moveColumn`]({environment:angularApiUrl}/classes/igxgridcomponent.html#moveColumn) - 列を別の列 (ターゲット) の前または後に移動します。最初のパラメーターは移動する列で、2 番目のパラメーターはターゲット列です。オプションの 3 番目のパラメーター `position` ([`DropPosition`]({environment:angularApiUrl}/enums/dropposition.html) 値を表す) でターゲット列の前または後に列を配置するかどうかを決定します。
 
 ```typescript
 // Move the ID column after the Name column
@@ -117,12 +117,12 @@ const idColumn = grid.getColumnByName("ID");
 idColumn.move(3);
 ```
 
-API を使用する時、操作が成功した場合、[`columnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMovingEnd) イベントのみが発行されることに注意してください。また、ドラッグアンドドロップ機能と比較して、API を使用するために `movable` プロパティを true に設定する必要がないことにも注意してください。 
+API を使用する時、操作が成功した場合、[`columnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMovingEnd) イベントのみが発行されることに注意してください。また、ドラッグアンドドロップ機能と比較して、API を使用するために `moving` プロパティを true に設定する必要がないことにも注意してください。 
 
 ## イベント
 
-列のドラッグアンドドロップ操作をカスタマイズするための列移動に関連するイベントが複数あります。[`columnMovingStart`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnMovingStart)、[`columnMoving`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnMoving)、[`columnMovingEnd`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnMovingEnd) があります。
-[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の [`columnMovingEnd`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnMovingEnd) イベントを処理し、列が新しい位置にドロップされたときにカスタム ロジックを実装できます。たとえば、Change On Year(%) 列の後に Category のドロップをキャンセルできます。
+列のドラッグアンドドロップ操作をカスタマイズするための列移動に関連するイベントが複数あります。[`columnMovingStart`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMovingStart)、[`columnMoving`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMoving)、[`columnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMovingEnd) があります。
+[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の [`columnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMovingEnd) イベントを処理し、列が新しい位置にドロップされたときにカスタム ロジックを実装できます。たとえば、Change On Year(%) 列の後に Category のドロップをキャンセルできます。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -239,11 +239,11 @@ $dark-grid-column-moving-theme: grid-theme(
 
 
 > [!NOTE]
->color および palette は、色を生成および取得するための重要な機能です。使い方の詳細については[パレット](../themes/palettes.md)のトピックを参照してください。
+>color および palette は、色を生成および取得するための重要な機能です。使い方の詳細については[パレット](../../components/themes/palettes.md)のトピックを参照してください。
 
 ### スキーマの使用
 
-テーマ エンジンを使用して[スキーマ](../themes/sass/schemas.md)の利点を使用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
+テーマ エンジンを使用して[スキーマ](../../components/themes/sass/schemas.md)の利点を使用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
 
 すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [light-grid]({environment:sassApiUrl}/index.html#variable-_light-grid)) の 1 つを拡張します。
 
@@ -269,7 +269,7 @@ $dark-grid-column-moving-schema: extend($_light-grid,
 ```scss
 // Extending the global dark-schema
 $custom-light-schema: extend($light-schema,(
-   grid: $dark-grid-column-moving-schema,
+    igx-grid: $dark-grid-column-moving-schema,
 ));
 
 // Defining dark-grid-theme with the global dark schema

@@ -10,7 +10,7 @@ _keywords: Ignite UI for Angular, Universal, サーバー側レンダリング
 
 ## Angular Universal
 
-すべての Angular アプリケーションがクライアントのブラウザーで実行されるため、[First Meaningful Paint (FMP)](https://web.dev/first-meaningful-paint) のパフォーマンスが低下する場合があります (ブラウザーが最初にページの主要コンテンツをレンダリングする場合など)。 サーバー ページの完全な HTML を生成できるため、[Angular Universal](https://angular.io/guide/universal) が役に立ちます。サーバーでクライアント サイドのページを HTML にレンダリングし、後でクライアントでブートストラップします。操作方法について説明します。
+すべての Angular アプリケーションがクライアントのブラウザーで実行されるため、[First Meaningful Paint (FMP)](https://web.dev/first-meaningful-paint) のパフォーマンスが低下する場合があります (ブラウザーが最初にページの主要コンテンツをレンダリングする場合など)。サーバー ページの完全な HTML を生成できるため、[Angular Universal](https://angular.io/guide/universal) が役に立ちます。サーバーでクライアント サイドのページを HTML にレンダリングし、後でクライアントでブートストラップします。操作方法について説明します。
 
 > [FMP](https://web.dev/first-meaningful-paint) は、ページの主要コンテンツがユーザーに表示されるタイミングを測定します。[FCP](https://web.dev/first-contentful-paint) メトリックは、ユーザーがページに移動した後ブラウザーが DOM コンテンツの最初の部分をレンダリングする時間を測定します。詳細については、[Lighthouse パフォーマンス スコアリング](https://web.dev/performance-scoring) を参照してください。
 
@@ -130,7 +130,7 @@ npm run build:ssr && npm run serve:ssr
 
 - アプリケーションが他のブラウザー固有のオブジェクトを使用している場合、ブラウザーで Angular のみが使用するように、その使用方法を条件付きステートメントでラップします。`isPlatformBrowser` と `isPlatformServer` 関数を `@angular/common` からインポートし、コンポーネントに `PLATFORM_ID` トークンを挿入し、インポートした関数を実行してサーバー上かブラウザー上かを確認します。 
 - HTML 要素の処理に ElementRef を使用する場合、nativeElement を使用して要素の属性を操作しないでください。代わりに、[Renderer2 メソッド](https://alligator.io/angular/using-renderer2) を挿入して使用します。
-- サーバー要求のすべての URL は絶対である必要があります。 サーバーから実行すると、相対 URL からのデータ要求は失敗することに注意してください。
+- サーバー要求のすべての URL は絶対である必要があります。サーバーから実行すると、相対 URL からのデータ要求は失敗することに注意してください。
 - ブラウザー イベントを処理するために、Angular チームは [preboot](https://github.com/angular/preboot) ライブラリを提供します。このライブラリはイベントをバッファリングし、クライアント側スクリプトが読み込まれるとそれらを再生します。
 - Angular Universal を使用する場合、サーバーはユーザーに表示されるページを事前にレンダリングしますが、相互作用は制限されます。クライアント側アプリがバックグラウンドで読み込まれると、サーバーでレンダリングされたページの表示からクライアント側アプリにシームレスに切り替わります。
 
@@ -141,6 +141,6 @@ npm run build:ssr && npm run serve:ssr
 * [Angular Universal ガイド (英語)](https://angular.io/guide/universal)
 * [Ignite UI スターターキット (英語)](https://github.com/IgniteUI/ng-universal-example)
 * [サーバー側レンダリング用語](https://developers.google.com/web/updates/2019/02/rendering-on-the-web)
-* [Ignite UI で作業を開始](getting-started.md)
+* [Ignite UI を使用した作業の開始](getting-started.md)
 * [Ignite UI CLI ガイド](cli/step-by-step-guide-using-cli.md)
 * [Ignite UI for Angular Schematics](cli/step-by-step-guide-using-angular-schematics.md)

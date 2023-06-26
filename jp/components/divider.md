@@ -1,18 +1,18 @@
 ---
 title: Divider コンポーネント
 _description: Ignite UI for Angular Divider コンポーネントは、コンテンツを水平と垂直の両方向に分割できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Divider コンポーネント, Angular Divider コントロール
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Divider コンポーネント, Angular Divider ディレクティブ, Angular Divider コントロール
 _language: ja
 ---
 
-# Divider
+# Angular Divider (デバイダー) コンポーネントの概要
 
-<p class="highlight">デバイダ コンポーネントは、コンテンツを水平と垂直の両方向に分割できます。</p>
+<p class="highlight">デバイダー コンポーネントは、コンテンツを水平と垂直の両方向に分割できます。</p>
 <div class="divider"></div>
 
 ## Angular Divider の例
 
-デフォルトでは、デバイダは水平の実線です。
+デフォルトでは、デバイダーは水平の実線です。
 
 
 <code-view style="height:207px" 
@@ -20,15 +20,57 @@ _language: ja
            iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-1" alt="Angular Divider の例">
 </code-view>
 
+## Ignite UI for Angular Divider を使用した作業の開始
 
-## 使用方法
+Ignite UI for Angular Divider コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
-```html
-<igx-divider></igx-divider>
+```cmd
+ng add igniteui-angular
 ```
 
-## 垂直デバイダ
-`vertical` 属性を追加してその値を `true` に設定することで、デバイダの方向を水平から垂直に変更できます。
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxDividerModule` をインポートします。
+
+```typescript
+// app.module.ts
+
+...
+import { IgxDividerModule } from 'igniteui-angular';
+// import { IgxDividerModule } from '@infragistics/igniteui-angular'; for licensed package
+
+@NgModule({
+    ...
+    imports: [..., IgxDividerModule],
+    ...
+})
+export class AppModule {}
+```
+
+あるいは、`16.0.0` 以降、`IgxDividerDirective` をスタンドアロンの依存関係としてインポートできます。
+
+```typescript
+// home.component.ts
+
+import { IgxDividerDirective } from 'igniteui-angular';
+// import { IgxDividerDirective } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<igx-divider></igx-divider>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxDividerDirective]
+})
+export class HomeComponent {}
+```
+
+Ignite UI for Angular Divider モジュールまたはディレクティブをインポートしたので、`igx-divider` コンポーネントの使用を開始できます。
+
+## Angular Divider の使用
+
+### 垂直デバイダー
+`vertical` 属性を追加してその値を `true` に設定することで、デバイダーの方向を水平から垂直に変更できます。
 
 ```html
 <igx-divider [vertical]="true"></igx-divider>
@@ -40,9 +82,9 @@ _language: ja
 </code-view>
 
 
-## 破線の仕切り
-デバイダのデフォルト スタイルは`実線`ですが、`破線`も使用できます。
-デフォルトの外観を変更するには、デバイダの `type` 属性を使用してその値を `dashed` に設定します。
+### 破線の仕切り
+デバイダーのデフォルト スタイルは `solid` ですが、`dashed` も使用できます。
+デフォルトの外観を変更するには、デバイダーの `type` 属性を使用してその値を `dashed` に設定します。
 
 ```html
 <igx-divider type="dashed"></igx-divider>
@@ -54,9 +96,9 @@ _language: ja
 </code-view>
 
 
-## インセット デバイダ
-デバイダは両側に設定できます。
-デバイダを埋め込むには、デバイダの `middle` 属性を `true` に設定し、`inset` 値を指定することにより、デバイダが両端から縮小し始めます。
+### インセット デバイダー
+デバイダーは両側に設定できます。
+デバイダーを埋め込むには、デバイダーの `middle` 属性を `true` に設定し、`inset` 値を指定することにより、デバイダーが両端から縮小し始めます。
 
 **値の最後に単位 (px,rem,%...) を追加する必要があることに注意してください。単位がない場合は機能しません。**
 
@@ -75,7 +117,7 @@ _language: ja
 </code-view>
 
 
-`middle` 属性の値が誤った値に設定されている場合、または属性がそれ以外で省略されている場合は、デバイダは左側にのみ設定されます。
+`middle` 属性の値が誤った値に設定されている場合、または属性がそれ以外で省略されている場合は、デバイダーは左側にのみ設定されます。
 
 ## API リファレンス
 <div class="divider--half"></div>

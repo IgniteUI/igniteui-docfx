@@ -17,95 +17,95 @@ This topic provides resources about maps and geo-spatial related material as wel
 
 Before plotting geo-spatial data in the control, one should get familiar with the following resources which provide general information about maps and geo-spatial data.
 
--   [Wikipedia – Cartography](http://en.wikipedia.org/wiki/Cartography)
+*   [Wikipedia – Cartography](http://en.wikipedia.org/wiki/Cartography)
 
--   [National Atlas of the United States – Geographic Locations](http://nationalatlas.gov/articles/mapping/a_latlong.html)
+*   [National Atlas of the United States – Geographic Locations](http://nationalatlas.gov/articles/mapping/a_latlong.html)
 
--   [National Atlas of the United States – Map Projections](http://nationalatlas.gov/articles/mapping/a_projections.html)
+*   [National Atlas of the United States – Map Projections](http://nationalatlas.gov/articles/mapping/a_projections.html)
 
--   [U.S. Geological Survey](http://www.usgs.gov/)
+*   [U.S. Geological Survey](http://www.usgs.gov/)
 
--   [Wikipedia – Map Projections](http://en.wikipedia.org/wiki/Map_projection)
+*   [Wikipedia – Map Projections](http://en.wikipedia.org/wiki/Map_projection)
 
--   [University of Colorado – Map Projections](http://www.colorado.edu/geography/gcraft/notes/mapproj/mapproj_f.html)
+*   [University of Colorado – Map Projections](http://www.colorado.edu/geography/gcraft/notes/mapproj/mapproj_f.html)
 
--   [CSISS – Map Projections](http://www.csiss.org/map-projections/index.html)
+*   [CSISS – Map Projections](http://www.csiss.org/map-projections/index.html)
 
 ## Shape Files Format
 
-The Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) control uses popular [Shape Files](http://en.wikipedia.org/wiki/Shapefile#Overview) format as one of the sources for geo-spatial data. Shape files are usually shipped with other file types, generally files with  _.shp_, _.shx_, and _.dbf_  extensions.
+The Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) control uses popular [Shape Files](http://en.wikipedia.org/wiki/Shapefile#Overview) format as one of the sources for geo-spatial data. Shape files are usually shipped with other file types, generally files with  *.shp*, *.shx*, and *.dbf*  extensions.
 
 The following table provides basic information and purpose for each type of shape files.
 
-| File Extension | Description                                                                                                                                                                                                                                                                                                                                     |
-| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `.shp`         | A shape file contains geo-spatial vector data items that describe points, polylines, and polygons. In this file, points may describe cities, polylines may describe roads, and polygons may describe shapes/borders of countries in geographic context.                                                                                         |
-| `.shx`         | A shape index file contains an index for a quick lookup of a geo-spatial vector data items.                                                                                                                                                                                                                                                     |
-| `.dbf`         | A shape database file contains a table in which a row corresponds to each geo-spatial data item from a shape (.shp) file. In the shape database file, string columns may describe attributes for geo-spatial data item such as strings (names of countries, regions, cities) and numeric columns (population of countries, location of cities). |
+| File Extension | Description |
+| ---------------|------------ |
+| `.shp` | A shape file contains geo-spatial vector data items that describe points, polylines, and polygons. In this file, points may describe cities, polylines may describe roads, and polygons may describe shapes/borders of countries in geographic context. |
+| `.shx` | A shape index file contains an index for a quick lookup of a geo-spatial vector data items. |
+| `.dbf` | A shape database file contains a table in which a row corresponds to each geo-spatial data item from a shape (.shp) file. In the shape database file, string columns may describe attributes for geo-spatial data item such as strings (names of countries, regions, cities) and numeric columns (population of countries, location of cities). |
 
 Refer to the following resources for detailed information and specifications on how geo-spatial data is stored in shape files.
 
--   [ESRI - Shape File Technical Description](http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf)
+*   [ESRI - Shape File Technical Description](http://www.esri.com/library/whitepapers/pdfs/shapefile.pdf)
 
--   [Wikipedia - Shape File Description](http://en.wikipedia.org/wiki/Shapefile#Overview)
+*   [Wikipedia - Shape File Description](http://en.wikipedia.org/wiki/Shapefile#Overview)
 
 ## Shape File Tools
 
 The following list provides resource tools for editing shape files.
 
--   [MapWindow – Shape (.shp) and Database (.dbf) File Editor](http://www.mapwindow.org/)
+*   [MapWindow – Shape (.shp) and Database (.dbf) File Editor](http://www.mapwindow.org/)
 
--   [Open Office – Database (.dbf) File Editor](http://openoffice.org/)
+*   [Open Office – Database (.dbf) File Editor](http://openoffice.org/)
 
--   [DBF Editor - Database (.dbf) File Editor](http://dbfeditor.com/)
+*   [DBF Editor - Database (.dbf) File Editor](http://dbfeditor.com/)
 
--   [DBF View - Database (.dbf) File Editor](http://dbfview.com/view-dbf-file.html)
+*   [DBF View - Database (.dbf) File Editor](http://dbfview.com/view-dbf-file.html)
 
--   [Satellite Signals – Geo-spatial Calculator](http://www.satsig.net/degrees-minutes-seconds-calculator.htm)
+*   [Satellite Signals – Geo-spatial Calculator](http://www.satsig.net/degrees-minutes-seconds-calculator.htm)
 
--   [RITA – NORTAD to Shape Files Converter](http://www.bts.gov/publications/north_american_transportation_atlas_data/html/data_converter.html)
+*   [RITA – NORTAD to Shape Files Converter](http://www.bts.gov/publications/north_american_transportation_atlas_data/html/data_converter.html)
 
 ## Shape Files Data Sources
 
 The following list provides resources for obtaining shape files. Also, samples for the [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html) control are good source of shape files. These shape files are included in the installer for the Samples Browser.
 
--   [ESRI - World Map Data](http://www.esri.com/data/download/basemap/index.html)
+*   [ESRI - World Map Data](http://www.esri.com/data/download/basemap/index.html)
 
--   [ESRI - Census 2010 Tiger/Line® - Shape Files](http://www.census.gov/geo/www/tiger/tgrshp2010/tgrshp2010.html)
+*   [ESRI - Census 2010 Tiger/Line® - Shape Files](http://www.census.gov/geo/www/tiger/tgrshp2010/tgrshp2010.html)
 
--   [National Atlas of the United States – Shape Files](http://www.nationalatlas.gov/atlasftp.html)
+*   [National Atlas of the United States – Shape Files](http://www.nationalatlas.gov/atlasftp.html)
 
--   [U.S. Census Bureau – Cartographic Boundary Files](http://www.census.gov/geo/www/cob/index.html)
+*   [U.S. Census Bureau – Cartographic Boundary Files](http://www.census.gov/geo/www/cob/index.html)
 
--   [U.S. Census Bureau - 2007 Tiger/Line® - Shape Files](http://www.census.gov/cgi-bin/geo/shapefiles/national-files)
+*   [U.S. Census Bureau - 2007 Tiger/Line® - Shape Files](http://www.census.gov/cgi-bin/geo/shapefiles/national-files)
 
--   [U.S. Federal Executive Branch – Raw Data](https://explore.data.gov/catalog/raw/)
+*   [U.S. Federal Executive Branch – Raw Data](https://explore.data.gov/catalog/raw/)
 
--   [NOAA – Shape Files](http://www.nws.noaa.gov/geodata/)
+*   [NOAA – Shape Files](http://www.nws.noaa.gov/geodata/)
 
--   [CDC - Shape Files](http://wwwn.cdc.gov/epiinfo/script/shapefiles.aspx)
+*   [CDC - Shape Files](http://wwwn.cdc.gov/epiinfo/script/shapefiles.aspx)
 
--   [Massachusetts Geographic Information System](http://www.mass.gov/mgis/massgis.htm)
+*   [Massachusetts Geographic Information System](http://www.mass.gov/mgis/massgis.htm)
 
--   [Geo Commons – Shape Files](http://geocommons.com/searches?query=shapefiles)
+*   [Geo Commons – Shape Files](http://geocommons.com/searches?query=shapefiles)
 
--   [Geo Community – Shape Files](http://data.geocomm.com/catalog/)
+*   [Geo Community – Shape Files](http://data.geocomm.com/catalog/)
 
--   [RITA – NORTAD Files (Must-be converted to Shape Files)](http://www.bts.gov/publications/north_american_transportation_atlas_data/)
+*   [RITA – NORTAD Files (Must-be converted to Shape Files)](http://www.bts.gov/publications/north_american_transportation_atlas_data/)
 
--   [MapCruzin – Shape Files](http://www.mapcruzin.com/download-free-arcgis-shapefiles.htm)
+*   [MapCruzin – Shape Files](http://www.mapcruzin.com/download-free-arcgis-shapefiles.htm)
 
 ## Additional Resources
 
 The following topics provide additional information related to this topic.
 
--   [Binding Shape Files](geo-map-binding-shp-file.md)
+*   [Binding Shape Files](geo-map-binding-shp-file.md)
 
-## API Members
+## API References
 
--   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html)
--   [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)
--   [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html)
--   `ItemsSource`
--   `ShapeMemberPath`
--   [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html)
+*   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html)
+*   [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicpolylineseriescomponent.html)
+*   [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicshapeseriescomponent.html)
+*   `ItemsSource`
+*   `ShapeMemberPath`
+*   [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html)

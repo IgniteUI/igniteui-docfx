@@ -49,7 +49,7 @@ The grid Excel filtering provides an Excel like filtering UI for any Angular Mat
 
 ## Usage
 
-To turn on the grid excel filtering, two inputs should be set. The [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowfiltering) should be set to `true` and the [`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filtermode) should be set to `excelStyleFilter`.
+To turn on the grid excel filtering, two inputs should be set. The [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowFiltering) should be set to `true` and the [`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterMode) should be set to `excelStyleFilter`.
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -87,7 +87,7 @@ To apply a filter with different expressions, you can click the **Text filter**,
 
 ## Configure Menu Features
 
-Sorting, pinning and hiding features can be removed from the filter menu using the corresponding inputs: [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable), [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected), [`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablepinning), [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding).
+Sorting, pinning and hiding features can be removed from the filter menu using the corresponding inputs: [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable), [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected), [`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablePinning), [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disableHiding).
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -113,23 +113,17 @@ In the sample below **Product Name** and **Discontinued** columns have all four 
 ```html
 <igx-tree-grid #treegrid1 [data]="data" [autoGenerate]="false" height="480px" width="100%" [moving]="true" [allowFiltering]="true"
     primaryKey="ID" foreignKey="ParentID" filterMode="excelStyleFilter">
-    <igx-column field="ID" header="Product ID" [dataType]="'string'">
-    </igx-column>
-    <igx-column field="Name" header="Product Name" [sortable]="true" [dataType]="'string'">
-    </igx-column>
-    <igx-column field="UnitPrice" header="Unit Price" [dataType]="'number'" [sortable]="false" [disablePinning]="true" [disableHiding]="true">
+    <igx-column field="ID" header="Order ID" [dataType]="'string'"></igx-column>
+    <igx-column field="Name" header="Order Product" [dataType]="'string'" [sortable]="true"></igx-column>
+    <igx-column field="Category" header="Category" [dataType]="'string'" [sortable]="true"></igx-column>
+    <igx-column field="Units" header="Units" [dataType]="'number'" [sortable]="true"></igx-column>
+    <igx-column field="UnitPrice" header="Unit Price" [dataType]="'currency'" [pipeArgs]="formatOptions"></igx-column>
+    <igx-column field="Price" header="Price" [dataType]="'currency'" [pipeArgs]="formatOptions" [sortable]="false" [disablePinning]="true" [disableHiding]="true"></igx-column>
+    <igx-column field="OrderDate" header="Order Date" [dataType]="'date'" [formatter]="formatDate" [sortable]="false"></igx-column>
+    <igx-column field="Delivered" header="Deliverued" [dataType]="'boolean'" [sortable]="false">
         <ng-template igxCell let-cell="cell" let-val>
-            <span *ngIf="cell.row.data.UnitPrice == 0">-</span>
-            <span *ngIf="cell.row.data.UnitPrice != 0">${{val}}</span>
-        </ng-template>
-    </igx-column>
-    <igx-column field="AddedDate" header="Added Date" [dataType]="'date'" [formatter]="formatDate" [sortable]="false">
-    </igx-column>
-    <igx-column field="Discontinued" header="Discontinued" [dataType]="'boolean'" [sortable]="true">
-        <ng-template igxCell let-cell="cell" let-val>
-            <span *ngIf="cell.row.data.UnitPrice == 0">-</span>
-            <img *ngIf="cell.row.data.UnitPrice != 0 && val" src="assets/images/grid/active.png" title="Continued" alt="Continued" />
-            <img *ngIf="cell.row.data.UnitPrice != 0 && !val" src="assets/images/grid/expired.png" title="Discontinued" alt="Discontinued" />
+            <img *ngIf="val" src="assets/images/grid/active.png" title="Delivered" alt="Delivered" />
+            <img *ngIf="!val" src="assets/images/grid/expired.png" title="Undelivered" alt="Undelivered" />
         </ng-template>
     </igx-column>
 </igx-tree-grid>
@@ -137,7 +131,7 @@ In the sample below **Product Name** and **Discontinued** columns have all four 
 
 <div class="divider--half"></div>
 
-In the sample below 'Product Name' and 'Discontinued' columns have all three features enabled, 'Unit Price' have all three disabled, 'Added Date' has only pinning and hiding.
+In the sample below 'Order Product', 'Category' and 'Units' columns have all three features enabled, 'Price' have all three disabled, 'Order Date' and 'Delivered' have only pinning and hiding.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
@@ -837,6 +831,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 @@if (igxName === 'IgxGrid') {
 
 <code-view style="height:950px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-style" >
 </code-view>
@@ -845,6 +840,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 @@if (igxName === 'IgxTreeGrid') {
 
 <code-view style="height:950px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-style" >
 </code-view>
@@ -853,6 +849,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 @@if (igxName === 'IgxHierarchicalGrid') {
 
 <code-view style="height:950px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-style" >
 </code-view>

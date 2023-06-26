@@ -45,22 +45,25 @@ export class MyOverlayComponent {
 
 オーバーレイ サービスでオーバーレイ DOM にアタッチすると `HTMLNode` または Angular コンポーネントを動的に表示できます。
 
-Overlay サービスへの参照を追加した後、コンテンツを動的に表示/非表示できます。たとえば、Angular コンポーネントは `attach` メソッドで渡せます。これは一意の ID を生成し、`show` メソッドに渡してコンポーネントを表示します。
+Overlay サービスへの参照を追加した後、コンテンツを動的に表示/非表示できます。たとえば、Angular コンポーネントは `attach` メソッドで渡せます。これは一意の ID を生成し、`show` メソッドに渡してコンポーネントを表示します。Angular コンポーネントを表示する場合、`attach` メソッドに 2 番目の必須パラメーター `ViewContainerRef` を渡す必要があります。
 
 ```typescript
 
 // my-overlay-component.component.ts
 import { MyDynamicComponent } from '../my-dynamic-component/my-dynamic-component.component';
 
+@Component({...})
 export class MyOverlayComponent {
     private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service
-    ... 
-    // a reference to the OverlayService is defined via @Inject in the constructor
-    // under this.overlayService
+
+    constructor(
+        @Inject(IgxOverlayService) private overlayService: IgxOverlayService,
+        private viewContainerRef: ViewContainerRef
+    ) {}
 
     public showInOverlay() {
         if (!this._overlayId) {
-            this._overlayId = this.overlayService.attach(MyDynamicComponent);
+            this._overlayId = this.overlayService.attach(MyDynamicComponent, this.viewContainerRef);
         }
         this.overlayService.show(this._overlayId);
     }
@@ -91,6 +94,8 @@ export class MyOverlayComponent {
 ```typescript
 // my-overlay-component.component.ts
 import { Inject, ViewChild } from '@angular/core'
+
+@Component({...})
 export class MyOverlayComponent {
     private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service
 
@@ -108,10 +113,10 @@ export class MyOverlayComponent {
 
 Overlay サービスの [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドには 2 つのオーバーロードがあります。
   - `attach(element, settings?)`
-  - `attach(component, settings?, moduleRef?)`
+  - `attach(component, viewContainerRef, settings?)`
 
 オーバーロードの最初のパラメーターは必須でオーバーレイに表示されるコンテンツを表します。以下は、コンテンツを渡す場合の例です。
-  - コンポーネント定義 - コンポーネントを最初の引数として渡す場合、オーバーレイ サービスがそのコンポーネントの新しいインスタンスを作成し、その `ElementRef` を動的に `オーバーレイ` DOM にアタッチします。`moduleRef` を指定した場合、サービスは `ComponentRef` を作成する際にルートのものではなくモジュールの `ComponentFactoryResolver` と `Injector` を使用します。
+  - コンポーネント定義 - コンポーネントを最初の引数として渡す場合、オーバーレイ サービスがそのコンポーネントの新しいインスタンスを作成し、その `ElementRef` を動的に `オーバーレイ` DOM にアタッチします。このメソッドは、2 番目の必須パラメーター `ViewContainerRef` に、作成されたコンポーネントのホスト ビューが挿入されるコンテナへの参照も受け入れます。
   - `ElementRef` から既存の DOM 要素 (上記のサンプルを参照) - ページで既に描画されたビューはオーバーレイ サービスで渡して、オーバーレイ DOM で描画できます。
 
 どちらの場合も、[`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドは次のようになります:
@@ -156,7 +161,7 @@ export class MyOverlayComponent {
 
     public showInOverlay() {
         if (!this._overlayId) {
-            this._overlayId = this.overlayService.attach(MyDynamicComponent, {
+            this._overlayId = this.overlayService.attach(MyDynamicComponent, this.viewContainerRef, {
                 target: this.myAnchorButton.nativeElement,
                 positionStrategy: new ConnectedPositioningStrategy()
             });
@@ -176,15 +181,15 @@ export class MyOverlayComponent {
 
 ## プリセット オーバーレイ設定
 
-[`IgxOverlayService.createAbsolutePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createabsolutepositionsettings) および [`IgxOverlayService.createRelativePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createrelativepositionsettings) メソッドにより、事前定義された設定セットに基づいて [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) を容易に作成することができます。
+[`IgxOverlayService.createAbsolutePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createAbsolutePositionSettings) および [`IgxOverlayService.createRelativePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createRelativePositionSettings) メソッドにより、事前定義された設定セットに基づいて [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) を容易に作成することができます。
 
-[`IgxOverlayService.createAbsolutePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createabsolutepositionsettings) メソッドは、`outlet` パラメーターが指定されている場合、[`GlobalPositionStrategy`]({environment:angularApiUrl}/classes/globalpositionstrategy.html) または [`ContainerPositionStrategy`]({environment:angularApiUrl}/classes/containerpositionstrategy.html) を使用して非モーダル [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) を作成します。`AbsolutePosition` 列挙体は、`Center`、`Top`、または `Bottom` から選択できる位置を定義します。デフォルトの位置は `Center` です。
+[`IgxOverlayService.createAbsolutePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createAbsolutePositionSettings) メソッドは、`outlet` パラメーターが指定されている場合、[`GlobalPositionStrategy`]({environment:angularApiUrl}/classes/globalpositionstrategy.html) または [`ContainerPositionStrategy`]({environment:angularApiUrl}/classes/containerpositionstrategy.html) を使用して非モーダル [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) を作成します。`AbsolutePosition` 列挙体は、`Center`、`Top`、または `Bottom` から選択できる位置を定義します。デフォルトの位置は `Center` です。
 
 ```typescript
 const globalOverlaySettings = IgxOverlayService.createAbsoluteOverlaySettings(AbsolutePosition.Top);
 ```
 
-[`IgxOverlayService.createRelativePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createrelativepositionsettings) メソッドは、[`AutoPositionStrategy`]({environment:angularApiUrl}/classes/autopositionstrategy.html)、[`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) または [`ElasticPositionStrategy`]({environment:angularApiUrl}/classes/elasticpositionstrategy.html) を使用して [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) を作成します。ターゲット、位置およびストラテジを受け入れます。`target` は、コンポーネントが表示するアタッチ ポイントまたは要素です。`position` は `RelativePosition` 列挙体であり、次のオプションがあります: `Above`、`Below`、`Before`、`After`、`Default`。`Default` オプションは、要素をターゲットの下に配置し、左揃えにします。位置ストラテジは、`RelativePositionStrategy` 列挙体を介して設定できます。デフォルト値は `Auto` です。
+[`IgxOverlayService.createRelativePositionSettings()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#createRelativePositionSettings) メソッドは、[`AutoPositionStrategy`]({environment:angularApiUrl}/classes/autopositionstrategy.html)、[`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) または [`ElasticPositionStrategy`]({environment:angularApiUrl}/classes/elasticpositionstrategy.html) を使用して [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) を作成します。ターゲット、位置およびストラテジを受け入れます。`target` は、コンポーネントが表示するアタッチ ポイントまたは要素です。`position` は `RelativePosition` 列挙体であり、次のオプションがあります: `Above`、`Below`、`Before`、`After`、`Default`。`Default` オプションは、要素をターゲットの下に配置し、左揃えにします。位置ストラテジは、`RelativePositionStrategy` 列挙体を介して設定できます。デフォルト値は `Auto` です。
 
 ```typescript
 const targetElement = this.myAnchorButton.nativeElement;
@@ -217,7 +222,8 @@ const connectedOverlaySettings = IgxOverlayService.createRelativeOverlaySettings
 // add an import for the definion of ConnectedPositioningStategy class
 import { ConnectedPositioningStrategy } from 'igniteui-angular';
 // import { ConnectedPositioningStrategy } from '@infragistics/igniteui-angular'; for licensed package
-...
+
+@Component({...})
 export class MyOverlayComponent implements OnDestroy {
     private _overlayId = ''; // The unique identifier assigned to the component by the Overlay service
     private _overlayShown = false; // Is the component rendered in the Overlay?
@@ -229,7 +235,7 @@ export class MyOverlayComponent implements OnDestroy {
         if (!this._overlayShown) { // If the element is not visible, show it
             //  generate ID
             if (!this._overlayId) {
-                this._overlayId = this.overlayService.attach(MyDynamicComponent, {
+                this._overlayId = this.overlayService.attach(MyDynamicComponent, this.viewContainerRef, {
                     target: this.myAnchorButton.nativeElement,
                     positionStrategy: new ConnectedPositioningStrategy({
                         closeOnOutsideClick: false, // overlay will not close on outside clicks
