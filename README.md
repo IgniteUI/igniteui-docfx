@@ -8,12 +8,13 @@ This project uses Node.js and Gulp as a build tool to accelerate the development
 
 1. [DocFX](https://dotnet.github.io/docfx)
 2. [Node.js](https://nodejs.org)
+3. [NET SDK 6.0 or higher](https://dotnet.microsoft.com/en-us/download)
 
 ## Getting Started
 
 ### Installing DocFX
 
-To install docfx restore it as a dotnet tool: 
+To install docfx, restore it as a dotnet tool - Installs the .NET local tools that are in scope for the current directory: 
 
 ```bash
 dotnet tool restore
@@ -34,11 +35,6 @@ If you are using yarn, run:
 ```bash
 yarn install
 ```
-
-## Command-Line Shell Permissions
-
-Start your command-line shell (CMD, PowerShell, Bash, etc.) with elevated permissions ("Run As Administrator" in Windows). This is required by Chocolatey, for further information read point 1 from [here](https://chocolatey.org/security#overall).
-
 ## Starting the Development Server
 
 The build process depends on the environment variable `NODE_ENV` to be able to set the correct URL for the Angular Samples. Assign either `development`, `staging`, or `production` to `NODE_ENV`.
@@ -119,4 +115,56 @@ The explicit-editor attribute for code-view elements is allowing to set explicit
 
 ```html
 <code-view explicit-editor="stackblitz" ... ></code-view>
+```
+
+## Include TOC topic labels
+
+Open '[ en | jp | kr ]\components\toc.yml' file for the specific language version.
+Each TOC topic includes parameters for name and href, along with an optional label parameter. Starting from version 3.5.1 of the igniteui-docfx-template, the supported labels include 'new,' 'updated,' 'preview,' and 'beta.' To add a desired label, simply specify its name and set its value to true.
+
+Example:
+
+```
+- name: Update guide
+  href: general/update-guide.md
+  updated: true
+```
+
+## Collapsible code snippets
+
+To generate and display collapsible code snippets on documentation websites, follow these steps:
+
+1. Create a \<div> section with the class "fancy-details".
+
+2. Add a \<summary> element to the created \<div> section.
+
+3. Add the summary text representing the code snippet header to the \<summary> element.
+
+4.  Add a \<code> element to the created \<div> section.
+
+5. Add the code snippet to the \<code> element.
+
+6. Example:
+```
+<div class="fancy-details">
+    <summary>Example of a successful response body: </summary>
+    <code>
+        {
+            "id": "{123456}_repo",
+            "modified": "2023-02-03T14:07:34.0000000",
+            "created": "2023-02-03T14:07:34.0000000",
+            "name": "Marketing",
+            "user": {
+                "id": "{123456}_u ",
+                "name": "Teddy Mitkova"
+            },
+            "dashboardSections": [
+                {
+                    "id": "{123456}_f",
+                    "name": "May"
+                }
+            ]
+        }
+    </code>
+</div>
 ```

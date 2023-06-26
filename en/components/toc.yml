@@ -1038,6 +1038,8 @@
 - name: Menus
   header: true
   sortable: true
+- name: Toolbar
+  href: menus/toolbar.md
 - name: Navigation Drawer
   href: navdrawer.md
   updated: false
