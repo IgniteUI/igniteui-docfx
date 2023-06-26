@@ -38,7 +38,7 @@ When installing the gauge package, the core package must also be installed.
 
 ## Component Modules
 
-The [`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargaugecomponent.html) requires the following modules:
+The [`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html) requires the following modules:
 
 ```ts
 // app.module.ts
@@ -236,7 +236,7 @@ The backing element represents background and border of the bullet graph control
 
 ## Scale
 
-The scale is a visual element that highlights the full range of values in the gauge. You can customize the appearance and the shape of the scale. It can also be inverted (using [`isScaleInverted`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargaugecomponent.html#isscaleinverted) property) and all labels will be rendered from right-to-left instead of left-to-right.
+The scale is a visual element that highlights the full range of values in the gauge. You can customize the appearance and the shape of the scale. It can also be inverted (using [`isScaleInverted`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxlineargaugecomponent.html#isscaleinverted) property) and all labels will be rendered from right-to-left instead of left-to-right.
 
 ```html
 <igx-linear-gauge
