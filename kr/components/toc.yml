@@ -867,6 +867,8 @@
   href: action-strip.md
 - name: Menus
   header: true
+- name: Toolbar
+  href: menus/toolbar.md
 - name: Navigation Drawer
   href: navdrawer.md
 - name: Navbar
