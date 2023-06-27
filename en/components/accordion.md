@@ -243,7 +243,7 @@ You can see the result below.
 <div class="divider--half"></div>
 
 ## Keyboard Navigation
-Keyboard navigation in the Angular Material Accordion provides a rich variety of keyboard interactions to the end-user. This functionality is enabled by default and allows end-users to easily navigate through the panels.
+Keyboard navigation in the Ignite UI for Angular Accordion provides a rich variety of keyboard interactions to the end-user. This functionality is enabled by default and allows end-users to easily navigate through the panels.
 The [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) navigation is compliant with W3C accessibility standards and convenient to use.
 
 **Key Combinations**

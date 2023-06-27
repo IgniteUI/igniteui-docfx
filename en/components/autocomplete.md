@@ -151,7 +151,7 @@ You can disable the Angular autocomplete by using the [`IgxAutocompleteDisabled`
 ### Autocomplete Settings
 The `igx-autocomplete` dropdown positioning, scrolling strategy, and outlet can be configured using the [`IgxAutocompleteSettings`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#autocompleteSettings).
 
-In the following Angular Material Autocomplete example we will position the dropdown above the input and disable the opening and closing animations. We're using the `ConnectedPositioningStrategy` for this:
+In the following Angular Autocomplete example we will position the dropdown above the input and disable the opening and closing animations. We're using the `ConnectedPositioningStrategy` for this:
 
 ```html
 <igx-input-group class="autocomplete">
