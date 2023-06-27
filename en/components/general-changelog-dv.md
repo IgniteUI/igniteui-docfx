@@ -14,9 +14,11 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 > This topic discusses changes only for components that are not included in the igniteui-angular package.
 > For changes specific to igniteui-angular components, please see CHANGELOG.MD at [Ignite UI Angular Changes](https://github.com/IgniteUI/igniteui-angular/blob/master/)
 
+## **16.1.0**
+
 ### New Components
 
-*   [Toolbar](menus/toolbar.md) - Beta
+*   [Toolbar](menus/toolbar.md) - Beta. This component is a companion container for UI operations to be used primarily with our charting components. The toolbar will dynamically update with a preset of properties and tool items when linked to our [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) or [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) components. You'll be able to create custom tools for your project allowing end users to provide changes, offering an endless amount of customization.
 
 ### igniteui-angular-charts Charts
 
