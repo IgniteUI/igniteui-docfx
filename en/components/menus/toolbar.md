@@ -7,7 +7,7 @@ mentionedTypes: ["Toolbar", "DomainChart", "CategoryChart", "XamDataChart"]
 
 # Angular Toolbar Overview
 
-The Angular Toolbar component is a companion conainer for UI operations to interact both standalone or with the Angular Data Chart & [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) components. This allows you to easily choose from a preset of properites on the eg. [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) with predefined SVG icons, but it also gives you the ability to create custom tools for your project. Benefiting from a number of attributes, you can define or change the icon in use or apply different actions to it. The [`IgxToolbarComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html) will display it's own SVG icons.
+The Angular Toolbar component is a companion container for UI operations to interact both standalone or with the Angular Data Chart & [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) components. This allows you to easily choose from a preset of properties and tools with predefined SVG icons, but it also gives you the ability to create custom tools for your project. Benefiting from a number of attributes, you can define or change the icon in use or apply different actions to it.
 
 ## Angular Toolbar Example
 
@@ -22,7 +22,7 @@ The Angular Toolbar component is a companion conainer for UI operations to inter
 
 <!-- Angular, WebComponents, React -->
 
-Install the Ignite UI for Angular layouts, inputs,  charts and core packages:
+Install the Ignite UI for Angular layouts, inputs, charts and core packages:
 
 ```cmd
 npm install igniteui-angular-layouts
@@ -31,7 +31,7 @@ npm install igniteui-angular-charts
 npm install igniteui-angular-core
 ```
 
-The following modules are required when using both the [`IgxToolbarComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html) with the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) component and it's features.
+The following modules are required when using the [`IgxToolbarComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html) with the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) component and it's features.
 
 ```ts
 import { IgxToolbarModule } from 'igniteui-angular-layouts';
@@ -70,9 +70,34 @@ IgrDataChartCategoryTrendLineModule.register();
 
 ## Usage
 
-### Angular Data Chart integration
+### Tool Actions
 
-The Angular Toolbar contains a `Target` property. This is used to link another component such as the DataChart.
+The following is a list of the different [`IgxToolActionComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html) items that you can add to the Toolbar.
+
+*   [`IgxToolActionButtonComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionbuttoncomponent.html)
+*   [`IgxToolActionCheckboxComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncheckboxcomponent.html)
+*   [`IgxToolActionIconButtonComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioniconbuttoncomponent.html)
+*   `ToolActionIconMenu`
+*   [`IgxToolActionLabelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionlabelcomponent.html)
+*   [`IgxToolActionNumberInputComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionnumberinputcomponent.html)
+*   [`IgxToolActionRadioComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionradiocomponent.html)
+
+Each of these tools exposes an `OnCommand` event that is triggered by mouse click.
+
+New and existing tools can be repositioned and marked hidden using the `OverlayId`, `BeforeId` and `AfterId` properties on the [`IgxToolActionComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html) object. ToolActions also expose a [`visibility`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#visibility) property.
+
+The following example demonstrates hiding both the built-in `ZoomReset` and `Analyze Menu` menu tool actions. A new instance of the `ZoomReset` tool action is added and placed within the `ZoomMenu` by using the the [`afterId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#afterid) property and assigning that to [`zoomOut`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#zoomout). This will ensure the new Reset tool is displayed at the bottom of the `ZoomMenu`.
+
+<code-view style="height: 600px" alt="Angular Toolbar Example"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/toolbar/layout-actions-for-data-chart"
+                                                 github-src="charts/toolbar/layout-actions-for-data-chart">
+</code-view>
+
+
+### Angular Data Chart Integration
+
+The Angular Toolbar contains a `Target` property. This is used to link a component, such as the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) as shown in the code below:
 
 ```html
   <div class="legend">
@@ -89,80 +114,69 @@ The Angular Toolbar contains a `Target` property. This is used to link another c
   </igx-data-chart>
 ```
 
-Several pre-existing [`IgxToolActionComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html) items and menus become available when the chart is linked with the Toolbar. The following names are a list of Tool/Tool [`overlayId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#overlayid) names necessary for further customization such as adding, editing, toggling visibility of tools. These names can be assinged to the [`overlayId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#overlayid), [`beforeId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#beforeid) and [`afterId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#afterid).
-
-Here is a list of the provided Angular [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) Tool Actions and their associated `OverlayId`:
+Several pre-existing [`IgxToolActionComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html) items and menus become available when the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) is linked with the Toolbar. Here is a list of the built-in Angular [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) Tool Actions and their associated `OverlayId`:
 
 Zooming Actions
 
-*   `ZoomReset`: [`IgxToolActionLabelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionlabelcomponent.html) performs [`resetZoom`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#resetzoom) on the chart for resetting the zoom level to it's default position.
-*   `ZoomMenu`: `ToolActionIconMenu` exposes two [`IgxToolActionLabelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionlabelcomponent.html) items to perform  [`zoomIn`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#zoomin) and [`zoomOut`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#zoomout) on the chart for increasing/decreasing the chart's zoom level.
+*   `ZoomReset`: A [`IgxToolActionLabelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionlabelcomponent.html) that invokes the [`resetZoom`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#resetzoom) method on the chart to reset the zoom level to it's default position.
+*   `ZoomMenu`: A `ToolActionIconMenu` that exposes two [`IgxToolActionLabelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionlabelcomponent.html) items to invoke the [`zoomIn`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#zoomin) and [`zoomOut`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#zoomout) methods on the chart for increasing/decreasing the chart's zoom level.
 
 Trend Actions
 
-*   `AnalyzeMenu`: `ToolActionIconMenu` contains several options for configuring the chart.
-*   `AnalyzeHeader`: sub section header `OverlayId`
-*   `LinesMenu`: sub menu `OverlayId`
-    *   `LinesHeader`: sub menu section header `OverlayId`
-        *   `MaxValue`: [`IgxToolActionCheckboxComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncheckboxcomponent.html) - displays a dashed horizontal line along the yAxis at the maximum value.
-        *   `MinValue`: [`IgxToolActionCheckboxComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncheckboxcomponent.html)- displays a dashed horizontal line along the yAxis at the minimum value.
-        *   `Average`: [`IgxToolActionCheckboxComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncheckboxcomponent.html) - displays a dashed horizontal line along the yAxis at the average value.
-*   `TrendsMenu`: [`IgxToolActionLabelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionlabelcomponent.html)
-    *   `TrendsHeader`: sub section header `OverlayId`
-        *   `Exponential`: [`IgxToolActionRadioComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionradiocomponent.html) - sets the [`trendLineType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#trendlinetype) on the chart to `ExponentialFit`.
-        *   `Linear`: [`IgxToolActionRadioComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionradiocomponent.html) - sets the [`trendLineType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#trendlinetype) on the chart to `LinearFit`.
-        *   `Logarithmic`: [`IgxToolActionRadioComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionradiocomponent.html) - sets the [`trendLineType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#trendlinetype) on the chart to `LogarithmicFit`.
-*   `HelpersHeader`: sub section header `OverlayId`
-*   `SeriesAvg`: [`IgxToolActionCheckboxComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncheckboxcomponent.html) - adds a series to the `ValueLines` using the `ValueLayerValueMode` of type `Average`.
-*   `ValueLabelsMenu`:  [`IgxToolActionLabelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionlabelcomponent.html)
-    *   `ValueLabelsHeader`: sub menu section header `OverlayId`
-        *   `ShowValueLabels`: [`IgxToolActionCheckboxComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncheckboxcomponent.html) - displays data point values via the chart's [`calloutsVisible`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#calloutsvisible) property.
-        *   `ShowLastValueLabel`: [`IgxToolActionCheckboxComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncheckboxcomponent.html) - displays final value callouts via the chart's [`finalValueAnnotationsVisible`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#finalvalueannotationsvisible) property.
-*   `ShowCrosshairs`: [`IgxToolActionCheckboxComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncheckboxcomponent.html) - displays the crosshair annotation via the chart's [`crosshairsDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#crosshairsdisplaymode) property triggered on mouse hover.
-*   `ShowGridlines`: [`IgxToolActionCheckboxComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncheckboxcomponent.html) used to display extra gridlines via the [`xAxisMajorStroke`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxxychartcomponent.html#xaxismajorstroke) property.
-
-### Tool Actions
-
-The following is a list of [`IgxToolActionComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html) items you can add to the Toolbar.
-
-*   [`IgxToolActionButtonComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionbuttoncomponent.html)
-*   [`IgxToolActionCheckboxComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncheckboxcomponent.html)
-*   [`IgxToolActionIconButtonComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioniconbuttoncomponent.html)
-*   `ToolActionIconMenu`
-*   [`IgxToolActionLabelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionlabelcomponent.html)
-*   [`IgxToolActionNumberInputComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionnumberinputcomponent.html)
-*   [`IgxToolActionRadioComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionradiocomponent.html)
-
-Each of these tools exposes an `OnCommand` event that can be triggered upon interacting with them as a mouse click.
-
-New and existing tools can be repositioned and marked hidden using the `OverlayId`, `BeforeId` and `AfterId` properties on the [`IgxToolActionComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html) object. ToolActions also expose a [`visibility`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#visibility) property.
-
-The following example demonstrates hiding both the `ZoomReset` and `Analyze Menu` menu tool actions. A new instance of the `ZoomReset` tool action is added and placed within the `ZoomMenu` by using the the [`afterId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#afterid) property and assinging that to [`zoomOut`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#zoomout). This will ensure the new Reset tool is displayed at the bottom of the `ZoomMenu`.
-
-<code-view style="height: 600px" alt="Angular Toolbar Example"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-                    iframe-src="{environment:dvDemosBaseUrl}/charts/toolbar/layout-actions-for-data-chart"
-                                                 github-src="charts/toolbar/layout-actions-for-data-chart">
-</code-view>
-
+*   `AnalyzeMenu`: A `ToolActionIconMenu` that contains several options for configuring different options of the chart.
+*   `AnalyzeHeader`: A sub section header.
+*   `LinesMenu`: A sub menu containing various tools for showing different dashed horizontal lines on the chart.
+    *   `LinesHeader`: A sub menu section header for the following three tools:
+        *   `MaxValue`: A [`IgxToolActionCheckboxComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncheckboxcomponent.html) that displays a dashed horizontal line along the yAxis at the maximum value of the series.
+        *   `MinValue`: A [`IgxToolActionCheckboxComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncheckboxcomponent.html) that displays a dashed horizontal line along the yAxis at the minimum value of the series.
+        *   `Average`:  A [`IgxToolActionCheckboxComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncheckboxcomponent.html) that displays a dashed horizontal line along the yAxis at the average value of the series.
+*   `TrendsMenu`: A sub menu containing tools for applying various trendlines to the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) plot area.
+    *   `TrendsHeader`: A sub menu section header for the following three tools:
+        *   `Exponential`: A [`IgxToolActionRadioComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionradiocomponent.html) that sets the [`trendLineType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#trendlinetype) on each series in the chart to `ExponentialFit`.
+        *   `Linear`: A [`IgxToolActionRadioComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionradiocomponent.html) that sets the [`trendLineType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#trendlinetype) on each series in the chart to `LinearFit`.
+        *   `Logarithmic`: A [`IgxToolActionRadioComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionradiocomponent.html) that sets the [`trendLineType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#trendlinetype) on each series in the the chart to `LogarithmicFit`.
+*   `HelpersHeader`: A sub section header.
+*   `SeriesAvg`: A [`IgxToolActionCheckboxComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncheckboxcomponent.html) that adds or removes a `ValueLayer` to the chart's series collection using the `ValueLayerValueMode` of type `Average`.
+*   `ValueLabelsMenu`: A sub menu containing varous tools for showing different annotations on the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)'s plot area.
+    *   `ValueLabelsHeader`: A sub menu section header for the following tools:
+        *   `ShowValueLabels`: A [`IgxToolActionCheckboxComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncheckboxcomponent.html) that toggles data point values by using a [`IgxCalloutLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcalloutlayercomponent.html).
+        *   `ShowLastValueLabel`: A [`IgxToolActionCheckboxComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncheckboxcomponent.html) that toggles final value axis annotations by using a [`IgxFinalValueLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinalvaluelayercomponent.html).
+*   `ShowCrosshairs`: A [`IgxToolActionCheckboxComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncheckboxcomponent.html) that toggles mouse-over crosshair annotations via the chart's [`crosshairsDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#crosshairsdisplaymode) property.
+*   `ShowGridlines`: A [`IgxToolActionCheckboxComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncheckboxcomponent.html) that toggles extra gridlines by applying a `MajorStroke` to the X-Axis.
 
 ### Vertical Orientation
 
-By default the Angular Toolbar is shown in the horizontal [`orientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html#orientation) position but also has the ability to shown vertically.
+By default the Angular Toolbar is shown horizontally, but it also has the ability to shown vertically by setting the [`orientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html#orientation) property.
+
+```html
+<igx-toolbar orientation="Vertical" />
+```
 
 <!-- The following example demonstrates the vertical orientation of the Angular Toolbar.
 `sample="/charts/toolbar/layout-in-vertical-orientation", height="600", alt="Angular Verical Orientation"` -->
 
-## Styling/Theming
+<!-- ## Styling/Theming
 
-The icon component can be styled by using it's [`baseTheme`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html#basetheme) property directly to the [`IgxToolbarComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html). The following example demonstrates the various theme options that can be applied.
+The icon component can be styled by using it's `BaseTheme` property directly to the `Toolbar`. 
 
-<code-view style="height: 600px" alt="Angular Toolbar Styling/Theming"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-                    iframe-src="{environment:dvDemosBaseUrl}/charts/toolbar/theming"
-                                                 github-src="charts/toolbar/theming">
-</code-view>
+```html
+<igx-toolbar baseTheme="SlingshotDark" />
+```
 
+```html
+<igc-toolbar base-theme="SlingshotDark" />
+```
+
+```razor
+<IgbToolbar BaseTheme="BaseControlTheme.SlingshotDark" />
+```
+
+```tsx
+<IgrToolbar baseTheme="SlingshotDark" />
+```
+
+<!-- The following example demonstrates the various theme options that can be applied.
+`sample="/charts/toolbar/theming", height="600", alt="Angular Toolbar Styling/Theming"` -->
 
 ## API References
 
