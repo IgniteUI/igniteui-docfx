@@ -9,107 +9,86 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ## Overview
-Roundness, as any other property, is set in the global and component themes, or schema like it's shown in the examples below.
+Border radius is defined in the theme schema of the component (see the example below). The border radius for any component defined in this manner can then be controlled via the `$roundness` parameter of the `theme` mixin or a single CSS variable called `--ig-radius-factor`.
+
 ```scss
-// Make all components sharp by setting the roundness factor to 0.
+$light-toast: (
+    ...,
+    border-radius: (rem(26px), rem(0), rem(26px)),
+);
+```
+
+As you can see from the example, the component schema for the [Toast]({environment:sassApiUrl}/index.html#variable-light-toast) defines the border radius as a list of three values. The first value is the default border radius (i.e. when `$roundness` or `--ig-radius-factor` is not declared). The second value denotes the minimum allowed border radius (i.e. when `$roundness` or `--ig-radius-factor` is set to `0`). And the third value denotes the maximum allowed border radius (i.e. when `$roundness` or `--ig-radius-factor` is set to `1`). In the toast component the default and maximum values match. Any value between 0 and 1 assigned to `$roundness` or `--ig-radius factor` will set the border radius of the toast as a percentage of the maximum value. For instance, setting the value to `.5` will make the border radius of the Toast component to be 50% of its maximum allowed border radius, which is 13 pixels.
+
+```scss
+// Make all components sharp by setting the roundness parameter to 0.
 @include theme(
     ...,
     $roundness: 0
 );
 ```
 
-Alternatively, you can modify the schema for each individual component to default to some value; Note that the global configuration will always take presedence.
+### How to use?
+Let's see how we can change the default values for the toast from the example above.
+
+If you want the toast to still be affected by the `$roundness` or the `--ig-radius-factor` variable in the resulting theme, use the `border-radius` function provided by the Ignite UI for Angular package.
 
 ```scss
-$_material-shape-button: (
-    border-radius: .2
+// Change the default, min and max values,
+// while preserving customization via `--ig-radius-factor`.
+$toast-theme: (
+    ...,
+    border-radus: border-radius(rem(4px), rem(4px), rem(16px))
 );
+
+@include css-vars($toast-theme);
 ```
 
-As you can see from the example above, the component schema for the [Button Theme]({environment:sassApiUrl}/index.html#function-button-theme) defines the default border-radius for all types of buttons.
+If you want the border-radius to be a constant value, unaffected by changes of `--ig-radius-factor`, just pass it directly to the border-radius parameter.
 
-Let's look at how this works. 
-
-The default `border-radius` value is set to `.2`, which in the end will be resolved to 4px. This fraction, between 0 and 1 represents the minimum and maximum allowed roundness. 0 is the minimum border-radius, i.e. 0px and 1 is the maximum or 20px. The minimum and maximum pixel values are defined for each individual component in its Sass theme.
-
-We decided to not limit you to fractions only. You can use whatever unit you want - pixels, relative units (em or rem), etc., allowing you to overwrite the implicit border radius limits.
-
-If you decide to go with fractions, you will automatically be limited by the theming engine to min and max values for each component.
-
-## Usage 
-Let's see how we can change the default values for the buttons from the example above.
-
-Using the theme mixin:
 ```scss
-$my-button-theme: button-theme(
-    $border-radius: .5 .2 .5 .2, // resolves to 10px 4px 10px 4px
+// Change the default, min and max values,
+// while preserving customization via `--ig-radius-factor`.
+$toast-theme: (
+    ...,
+    border-radus: rem(4px)
 );
 
-@include button($my-button-theme);
+@include css-vars($toast-theme);
 ```
 
-Using a component schema:
-```scss
-$my-flat-button: extend(
-    $_material-flat-button,
-    (
-        border-radius: .5 .2 .5 .2
-    )
-);
-
-$my-light-schema: extend(
-    $_material-light-schema, 
-    (
-        igx-button: $my-flat-button
-    )
-);
-
-@include theme(
-    $palette: $light-material-palette,
-    $schema: $my-light-schema
-);
-```
-
-Using either approach, the result from the above code snippets is:
-
-<div class="sample-container loading" style="height: 250px">
-    <iframe id="buttons-roundness-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/buttons-roundness-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="buttons-roundness-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-roundness-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
-</div>
 <div class="divider--half"></div>
 
-## Baseline Roundness
-The table below shows the default roundness for each component and its min and max boundaries:
+### Baseline border radius values
+The table below shows an excerpt of some of the component border radius values as defined in the Material schema.
 
-|                     | **Corners can be shaped?** | **Min/Max boundaries** | **Baseline theme values** |
-|---------------------|----------------------------|------------------------|---------------------------|
-| **Button(Flat)**    | Yes; Yes; Yes; Yes;        | 0 - 20px               | 4px                       |
-| **Button(Raised)**  | Yes; Yes; Yes; Yes;        | 0 - 20px               | 4px                       |
-| **button(Fab)**     | Yes; Yes; Yes; Yes;        | 12px - 28px            | 28px                      |
-| **button(Icon)**    | Yes; Yes; Yes; Yes;        | 0 - 18px               | 18px                      |
-| **Button-group**    | Yes; Yes; Yes; Yes;        | 0 - 20px               | 4px                       |
-| **Chip**            | Yes; Yes; Yes; Yes;        | 0 - 20px               | 4px                       |
-| **Card**            | Yes; Yes; Yes; Yes;        | 0 - 24px               | 4px                       |
-| **Carousel**        | Yes; Yes; Yes; Yes;        | 0 - 36px               | 0                         |
-| **Dialog**          | Yes; Yes; Yes; Yes;        | 0 - 36px               | 4px                       |
-| **Drop-down**       | Yes; Yes; Yes; Yes;        | 0 - 20px               | 4px                       |
-| **Expansion panel** | Yes; Yes; Yes; Yes;        | 0 - 16px               | 0                         |
-| **input(Border)**   | Yes; Yes; Yes; Yes;        | 0 - 20px               | 4px                       |
-| **input(Box)**      | Yes; Yes; No; No;          | 0 - 20px               | 4px 4px 0 0               |
-| **input(Search)**   | Yes; Yes; Yes; Yes;        | 0 - 20px               | 4px                       |
-| **List**            | Yes; Yes; Yes; Yes;        | 0 - 24px               | 0                         |
-| **List item**       | Yes; Yes; Yes; Yes;        | 0 - 24px               | 0                         |
-| **Navdrawer**       | Yes; Yes; Yes; Yes;        | 0 - 36px               | 0                         |
-| **Snackbar**        | Yes; Yes; Yes; Yes;        | 0 - 24px               | 4px                       |
-| **Tooltip**         | Yes; Yes; Yes; Yes;        | 0 - 16px               | 4px                       |
-| **Toast**           | Yes; Yes; Yes; Yes;        | 0 - 26px               | 26px                      |
+| **Component**          | **Min/Max Radius** | **Default Radius** |
+|------------------------|--------------------|--------------------|
+| **Button(Flat)**       |  0 / 20px          | 4px                |
+| **Button(Raised)**     |  0 / 20px          | 4px                |
+| **button(Fab)**        |  12px / 28px       | 28px               |
+| **button(Icon)**       |  0 / 18px          | 18px               |
+| **Button-group**       |  0 / 20px          | 4px                |
+| **Chip**               |  0 / 20px          | 4px                |
+| **Card**               |  0 / 24px          | 4px                |
+| **Carousel**           |  0 / 36px          | 0                  |
+| **Dialog**             |  0 / 36px          | 4px                |
+| **Drop-down**          |  0 / 20px          | 4px                |
+| **Expansion panel**    |  0 / 16px          | 0                  |
+| **input(Border)**      |  0 / 20px          | 4px                |
+| **input(Box)**         |  0 / 20px          | 4px 4px 0 0        |
+| **input(Search)**      |  0 / 20px          | 4px                |
+| **List**               |  0 / 24px          | 0                  |
+| **List item**          |  0 / 24px          | 0                  |
+| **Navdrawer**          |  0 / 36px          | 0                  |
+| **Snackbar**           |  0 / 24px          | 4px                |
+| **Tooltip**            |  0 / 16px          | 4px                |
+| **Toast**              |  0 / 26px          | 26px               |
 
+Please refer to the [Schema]({environment:sassApiUrl}/index.html) documentation for each component to find out what the default and min/max radius values are for each theme.
 
 <div class="divider--half"></div>
+
 Our community is active and always welcoming to new ideas.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
