@@ -9,7 +9,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ## Overview
-Border radius is defined in the theme schema of the component (see the example below). The border radius for any component defined in this manner can then be controlled via the `$roundness` parameter of the [theme]({environment:sassApiUrl}index.html#mixin-theme) mixin or a single CSS variable called `--ig-radius-factor`.
+Border radius is defined in the theme schema of the component (see the example below). The border radius for any component defined in this manner can then be controlled via the `$roundness` parameter of the [theme]({environment:sassApiUrl}/index.html#mixin-theme) mixin or a single CSS variable called `--ig-radius-factor`.
 
 ```scss
 $light-toast: (
