@@ -917,7 +917,7 @@
       - name: Printing styles
         href: themes/misc/printing-styles.md
         new: false
-      - name: Angular Material Theming
+      - name: Angular Theming
         href: themes/misc/angular-material-theming.md
         new: true
       - name: Bootstrap Theming

@@ -64,7 +64,7 @@ import { IGX_TREE_DIRECTIVES } from 'igniteui-angular';
         <igx-tree-node>
             Angular Libraries
             <igx-tree-node>Ignite UI for Angular</igx-tree-node>
-            <igx-tree-node>Angular Material</igx-tree-node>
+            <igx-tree-node>Angular</igx-tree-node>
         </igx-tree-node>
         <igx-tree-node>
             Web Component Libraries
