@@ -87,7 +87,7 @@ IgrDataChartCategoryTrendLineModule.register();
 
 [`IgxToolActionComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html) オブジェクトの [`overlayId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#overlayid)、[`beforeId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#beforeid)、および [`afterId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#afterid) プロパティを使用して、新規および既存のツールの位置を変更したり、非表示にマークしたりすることができます。ToolActions は [`visibility`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#visibility) プロパティも公開します。
 
-次の例は、組み込みの `ZoomReset` と `Analyze Menu` メニュー ツール アクションの両方を非表示にする方法を示しています。`ZoomReset` ツール操作の新しいインスタンスが追加され、[`afterId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#afterid) プロパティを使用して `ZoomMenu` 内に配置され、それを [`zoomOut`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#zoomout) に割り当てます。これにより、新しいリセット ツールが `ZoomMenu` の下部に表示されます。
+次の例は、組み込みの `ZoomReset` と `AnalyzeMenu` メニュー ツール アクションの両方を非表示にする方法を示しています。`ZoomReset` ツール操作の新しいインスタンスが追加され、[`afterId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#afterid) プロパティを使用して `ZoomMenu` 内に配置され、それを [`zoomOut`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#zoomout) に割り当てます。これにより、新しいリセット ツールが `ZoomMenu` の下部に表示されます。
 
 <code-view style="height: 600px" alt="Angular Toolbar の例"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -133,7 +133,7 @@ Angular ツールバーには、`Target` プロパティが含まれています
         *   `Average`:  シリーズの平均値で yAxis に沿って水平破線を表示する [`IgxToolActionCheckboxComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncheckboxcomponent.html)。
 *   `TrendsMenu`: さまざまな近似曲線を [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) プロット領域に適用するためのツールを含むサブ メニュー。
     *   `TrendsHeader`: 次の 3 つのツールのサブメニュー セクション ヘッダー:
-        *   `Exponential`: チャート内の各シリーズの [`trendLineType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#trendlinetype) を `Exponential Fit` に設定する [`IgxToolActionRadioComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionradiocomponent.html)。
+        *   `Exponential`: チャート内の各シリーズの [`trendLineType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#trendlinetype) を `ExponentialFit` に設定する [`IgxToolActionRadioComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionradiocomponent.html)。
         *   `Linear`: チャート内の各シリーズの [`trendLineType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#trendlinetype) を `LinearFit` に設定する [`IgxToolActionRadioComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionradiocomponent.html)。
         *   `Logarithmic`: チャート内の各シリーズの [`trendLineType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#trendlinetype) を `LogarithmicFit` に設定する [`IgxToolActionRadioComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionradiocomponent.html)。
 *   `HelpersHeader`: サブ セクションのヘッダー。
@@ -176,7 +176,7 @@ Angular ツールバーには、`Target` プロパティが含まれています
 <IgrToolbar baseTheme="SlingshotDark" />
 ```
 
-<!-- 次の例は、適用できるさまざまなテーマ オプションを示しています。 
+<!-- 次の例は、適用できるさまざまなテーマ オプションを示しています。
 `sample="/charts/toolbar/theming", height="600", alt="Angular Toolbar スタイル設定/テーマ設定"` -->
 
 ## API リファレンス

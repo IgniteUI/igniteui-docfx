@@ -15,7 +15,7 @@ Ignite UI for Angular の各バージョンのすべての重要な変更は、�
 > このトピックでは、igniteui-angular パッケージに含まれていないコンポーネントの変更についてのみ説明します。
 > igniteui-angular コンポーネントに固有の変更については、[Ignite UI Angular 変更](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md) の CHANGELOG.MD を参照してください。
 
-## **16.1.0**
+## **16.1.0 (June 2023)**
 
 ### 新しいコンポーネント
 
@@ -25,7 +25,7 @@ Ignite UI for Angular の各バージョンのすべての重要な変更は、�
 
 *   [ValueLayer](charts/features/chart-overlays.md#angular-value-layer) - `ValueLayer` という名前の新しいシリーズ タイプが公開されました。 これにより、Maximum、Minimum、Average など、プロットされたデータのさまざまな焦点のオーバーレイを描画できます。これは、新しい `ValueLines` コレクションに追加することで、[`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) と [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html) に適用されます。
 
-*   **ダッシュ配列**を [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) のシリーズのさまざまな部分に適用できるようになりました。これは、チャートにプロットされた[シリーズ](charts/types/line-chart.md#angular-折れ線チャートのスタイル設定)、チャートの\[グリッド線]\(charts/features/chart-axis-gridlines.md
+*   **ダッシュ配列**を [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) のシリーズのさまざまな部分に適用できるようになりました。これは、チャートにプロットされた[シリーズ](charts/types/line-chart.md#angular-折れ線チャートのスタイル設定)、チャートの[グリッド線](charts/features/chart-axis-gridlines.md#angular-軸グリッド線のプロパティ)、およびチャートにプロットされたシリーズの[トレンドライン](charts/features/chart-trendlines.md#angular-チャート-トレンドラインのダッシュ配列の例)に適用できます。
 
 ## **16.0.0 (May 2023)**
 
