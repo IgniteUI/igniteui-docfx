@@ -203,12 +203,12 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 <div class="divider--half"></div>
 
 ## Radio Group
-<p class="highlight">The Ignite UI for Angular Radio Group directive provides a grouping container that allows better control over the child radio components and **supports template-driven and reactive forms.**</p>
+<p class="highlight">The Ignite UI for Angular Radio Group directive provides a grouping container that allows better control over the child radio components and supports template-driven and reactive forms. </p>
 <div class="divider"></div>
 
 ### Demo
 
-<code-view style="height: 260px" 
+<code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-group-sample" >
 </code-view>
