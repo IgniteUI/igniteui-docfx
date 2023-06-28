@@ -123,11 +123,11 @@ Angular スパークラインの通常の範囲機能は、データが視覚化
 
 ## トレンドライン
 
-Angular スパークラインは、実際のスパークライン レイヤーの上に別のレイヤーとして表示される一連のトレンドラインをサポートしています。近似曲線を表示するには、[`trendLineType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxsparklinecomponent.html#trendlinetype) プロパティを使用します。
+Angular スパークラインは、実際のスパークライン レイヤーの上に別のレイヤーとして表示される一連のトレンドラインをサポートしています。トレンドラインを表示するには、[`trendLineType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxsparklinecomponent.html#trendlinetype) プロパティを使用します。
 
-近似曲線は、チャートがバインドされているデータの値を使用して、[`trendLineType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxsparklinecomponent.html#trendlinetype) プロパティで指定されたアルゴリズムに従って計算されます。
+トレンドラインは、チャートがバインドされているデータの値を使用して、[`trendLineType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxsparklinecomponent.html#trendlinetype) プロパティで指定されたアルゴリズムに従って計算されます。
 
-近似曲線は一度に 1 つだけ表示でき、デフォルトでは近似曲線は表示されません。
+トレンドラインは一度に 1 つだけ表示でき、デフォルトではトレンドラインは表示されません。
 
 以下のサンプルは、ドロップダウンを介して利用可能なすべてのトレンドラインを示しています:
 
