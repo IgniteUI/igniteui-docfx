@@ -152,7 +152,7 @@ Angular Autocomplete を無効にするには、[`IgxAutocompleteDisabled`]({env
 ### Autocomplete の設定
 `igx-autocomplete` ドロップダウンの配置、スクロール ストラテジとアウトレットは、[`IgxAutocompleteSettings`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#autocompletesettings) を使用して設定できます。
 
-以下の Angular Material Autocomplete 例では、ドロップダウンを入力の上に配置し、開始と終了のアニメーションを無効にします。`ConnectedPositioningStrategy` を使用します。
+以下の Angular Autocomplete 例では、ドロップダウンを入力の上に配置し、開始と終了のアニメーションを無効にします。`ConnectedPositioningStrategy` を使用します。
 
 ```html
 <igx-input-group class="autocomplete">

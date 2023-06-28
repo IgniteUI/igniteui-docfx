@@ -17,7 +17,7 @@ _language: ja
 
 # Angular @@igComponent の Excel スタイル フィルタリング
 
-グリッド Excel フィルタリングは、@@igComponent などの Angular Material テーブルに対して Excel のようなフィルタリング UI を提供します。
+グリッド Excel フィルタリングは、@@igComponent などの Angular テーブルに対して Excel のようなフィルタリング UI を提供します。
 
 ## Angular @@igComponent Excel スタイル フィルタリングの例
 

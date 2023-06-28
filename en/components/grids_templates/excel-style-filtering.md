@@ -16,7 +16,7 @@ _canonicalLink: grid/excel-style-filtering
 
 # Excel Filtering in Angular @@igComponent
 
-The grid Excel filtering provides an Excel like filtering UI for any Angular Material table like the @@igComponent.
+The grid Excel filtering provides an Excel like filtering UI for any Angular table like the @@igComponent.
 
 ## Angular @@igComponent Excel Style Filtering Example
 

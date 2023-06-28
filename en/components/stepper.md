@@ -75,6 +75,7 @@ export class HomeComponent {
 ```
 
 Now that you have the Angular Stepper module or directives imported, you can start with a basic configuration of the `igx-stepper` and its steps.
+Now that you have the Angular Stepper module or directives imported, you can start with a basic configuration of the `igx-stepper` and its steps.
 
 ## Using the Angular Stepper
 [IgxStepComponent]({environment:angularApiUrl}/classes/igxstepcomponent.html) is the representation of every step that belongs to the [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html). Steps provide [isValid]({environment:angularApiUrl}/classes/igxstepcomponent.html#isValid), [active]({environment:angularApiUrl}/classes/igxstepcomponent.html#active), [optional]({environment:angularApiUrl}/classes/igxstepcomponent.html#optional), [disabled]({environment:angularApiUrl}/classes/igxstepcomponent.html#disabled) and [completed]({environment:angularApiUrl}/classes/igxstepcomponent.html#completed) properties, which give you the ability to configure the step states according to your business requirement.
@@ -283,7 +284,7 @@ Setting `none` to the both animation type inputs disables stepper animations.
 
 ## Keyboard Navigation
 
-Ignite UI for Angular Stepper provides a rich variety of keyboard interactions to the end-user. This functionality is enabled by default and allows end-users to easily navigate through the steps. 
+Angular Stepper provides a rich variety of keyboard interactions to the end-user. This functionality is enabled by default and allows end-users to easily navigate through the steps. 
 The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) navigation is compliant with [W3 accessability standards](https://www.w3.org/WAI/ARIA/apg/example-index/tabs/tabs-manual.html#accessibilityfeatures) and convenient to use.
 
 **Key Combinations**
