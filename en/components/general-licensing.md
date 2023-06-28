@@ -156,12 +156,6 @@ steps:
   displayName: 'Npm config auth'
 ```
 
-<img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 380px"
-src="../images/general/azure-ci-pipelines-ci-yml-3.jpg"
-data-src="../images/general/azure-ci-pipelines-ci-yml-3.jpg"
-alt="Azure Pipelines CI yml update"
-title="Azure Pipelines CI yml update" />
-
 Add **npm registry** and **token** variables.
 
 <img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 600px"

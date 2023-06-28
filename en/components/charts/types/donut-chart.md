@@ -12,7 +12,7 @@ The Ignite UI for Angular Donut Chart is similar to the [Pie Chart](pie-chart.
 
 ## Angular Donut Chart Example
 
-You can create Donut Chart using the [`IgxDoughnutChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchartcomponent.html) control by binding your data as shown in the example below.
+You can create Donut Chart using the [`IgxDoughnutChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdoughnutchartcomponent.html) control by binding your data as shown in the example below.
 
 <code-view style="height: 600px" alt="Angular Doughnut Legend"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -102,8 +102,8 @@ You can find more information about related chart types in these topics:
 
 The following table lists API members mentioned in the above sections:
 
-*   [`IgxDoughnutChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchartcomponent.html)
-*   [`allowSliceExplosion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchartcomponent.html#allowsliceexplosion)
-*   [`allowSliceSelection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchartcomponent.html#allowsliceselection)
-*   [`innerExtent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchartcomponent.html#innerextent)
+*   [`IgxDoughnutChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdoughnutchartcomponent.html)
+*   [`allowSliceExplosion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdoughnutchartcomponent.html#allowsliceexplosion)
+*   [`allowSliceSelection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdoughnutchartcomponent.html#allowsliceselection)
+*   [`innerExtent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdoughnutchartcomponent.html#innerextent)
 *   `SliceClick`
