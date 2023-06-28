@@ -75,6 +75,7 @@ export class HomeComponent {
 ```
 
 Now that you have the Angular Stepper module or directives imported, you can start with a basic configuration of the `igx-stepper` and its steps.
+Now that you have the Angular Stepper module or directives imported, you can start with a basic configuration of the `igx-stepper` and its steps.
 
 ## Using the Angular Stepper
 [IgxStepComponent]({environment:angularApiUrl}/classes/igxstepcomponent.html) is the representation of every step that belongs to the [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html). Steps provide [isValid]({environment:angularApiUrl}/classes/igxstepcomponent.html#isValid), [active]({environment:angularApiUrl}/classes/igxstepcomponent.html#active), [optional]({environment:angularApiUrl}/classes/igxstepcomponent.html#optional), [disabled]({environment:angularApiUrl}/classes/igxstepcomponent.html#disabled) and [completed]({environment:angularApiUrl}/classes/igxstepcomponent.html#completed) properties, which give you the ability to configure the step states according to your business requirement.
