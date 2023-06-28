@@ -35,7 +35,7 @@ If you want the toast to still be affected by the `$roundness` or the `--ig-radi
 
 ```scss
 // Change the default, min and max values,
-// while preserving customization via `--ig-radius-factor`.
+// while preserving customization via $roundness or --ig-radius-factor.
 $toast-theme: (
     ...,
     border-radus: border-radius(rem(4px), rem(4px), rem(16px))
@@ -47,8 +47,7 @@ $toast-theme: (
 If you want the border-radius to be a constant value, unaffected by changes of `--ig-radius-factor`, just pass it directly to the border-radius parameter.
 
 ```scss
-// Change the default, min and max values,
-// while preserving customization via `--ig-radius-factor`.
+// Will be unaffected by changes to $roundess or --ig-radius-factor.
 $toast-theme: (
     ...,
     border-radus: rem(4px)
