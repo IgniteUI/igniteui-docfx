@@ -72,7 +72,7 @@ We expose [`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcompon
 > [!NOTE] 
 > Excel can automatically detect text that is separated by tabs (tab-delimited `/t`) and properly paste the data into separate columns. When the paste format doesn't work, and everything you paste appears in a single column, then Excel's delimiter is set to another character, or your text is using spaces instead of tabs.
 
-- [`gridCopy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#gridCopy) Emitted when a copy operation is executed. Fired only if copy behavior is enabled through the [`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardOptions)
+- [`gridCopy`]({environment:angularApiUrl}/classes/igxgridcomponent.html#gridCopy) Emitted when a copy operation is executed. Fired only if copy behavior is enabled through the [`clipboardOptions`]({environment:angularApiUrl}/classes/igxgridcomponent.html#clipboardОptions)
 
 ## Additional Resources
 <div class="divider--half"></div>

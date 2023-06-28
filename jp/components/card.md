@@ -1,11 +1,11 @@
 ---
 title: Angular Card コンポーネント – Ignite UI for Angular
 _description: Angular Card コンポーネントを使用して、詳細情報のエントリ ポイントとして、ダッシュボード、テキスト、画像、アイコン、ボタンなどを表示します。今すぐお試しください。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Card コンポーネント, Angular Card コントロール
+_keywords: Angular Card コンポーネント, Angular Card コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
 _language: ja
 ---
 
-# Angular Card (カード) の概要
+# Angular Card (カード) コンポーネントの概要
 <p class="highlight">
 Angular Material Card は、タイトル テキスト、説明、画像スタイル、CTA (行動喚起) ボタン、リンクなどのさまざまな要素を持つ柔軟なコンテナーを表します。特定のシナリオ/コンテンツを可能な限り最適な方法で表現するために、さまざまな表示オプション、ヘッダー、フッター、背景色、アニメーションなどを提供します。  
 
@@ -22,13 +22,17 @@ Angular Material Card は、タイトル テキスト、説明、画像スタイ
 
 <div class="divider--half"></div>
 
-## Ignite UI で Angular Card を使用する方法
+## Ignite UI for Angular Card を使用した作業の開始
 
-Card コンポーネントは、様々なオブジェクト タイプ、サイズやサポートされるアクションが異なる同様のオブジェクトから成るコンテンツを表示できます。
+Ignite UI for Angular Card コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
-### 作業の開始
+```cmd
+ng add igniteui-angular
+```
 
-**app.module.ts** ファイルに `IgxCardModule` をインポートします。
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxCardModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -44,6 +48,63 @@ import { IgxCardModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
+あるいは、`16.0.0` 以降、`IgxCardComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_CARD_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/card/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+
+```typescript
+// home.component.ts
+
+import { IGX_CARD_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_CARD_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <igx-card>
+        <igx-card-media height="196px">
+            <img [src]="https://images.unsplash.com/photo-1518235506717-e1ed3306a89b?ixlib=rb-1.2.1&auto=format&fit=crop&w=640&q=50">
+        </igx-card-media>
+
+        <igx-card-header>
+            <h3 igxCardHeaderTitle>New York</h3>
+            <h5 igxCardHeaderSubtitle>City in New York</h5>
+        </igx-card-header>
+
+        <igx-card-content>
+            <p>New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is Manhattan, a densely populated borough that’s among the world’s major commercial, financial and cultural centers.</p>
+        </igx-card-content>
+
+        <igx-card-actions>
+            <button igxButton igxRipple>Read More</button>
+            <button igxButton="icon" igxRipple igxRippleCentered="true">
+                <igx-icon>favorite</igx-icon>
+            </button>
+            <button igxButton="icon" igxRipple igxRippleCentered="true">
+                <igx-icon>share</igx-icon>
+            </button>
+        </igx-card-actions>
+    </igx-card>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_CARD_DIRECTIVES]
+    /* or imports: [IgxCardComponent,
+        IgxCardHeaderComponent,
+        IgxCardMediaDirective,
+        IgxCardContentDirective,
+        IgxCardActionsComponent,
+        IgxCardFooterDirective,
+        IgxCardHeaderTitleDirective,
+        IgxCardHeaderSubtitleDirective,
+        IgxCardThumbnailDirective,
+        IgxButtonDirective,
+        IgxRippleDirective] */
+})
+export class HomeComponent {}
+```
+
+Ignite UI for Angular Card モジュールまたはディレクティブをインポートしたので、`igx-card` コンポーネントの使用を開始できます。
+
+## Angular Card コンポーネントの使用
 次に、デモのカード テンプレートを表すために、以下のコードを追加します。
 
 ```html
@@ -179,7 +240,7 @@ Angular Card に表示する画像や動画は、`igx-card-media` タグで囲�
 }
 ```
 
-`igx-card-actions` のボタンが `vertical` のレイアウトに切り替わりました。`igx-card-actions` は、その`親`と`逆`のレイアウトになります。そのため、カードの `horizontal` 属性が `true` に設定されているときはいつでもアクションの `vertical` プロパティが `true` に設定され、その逆も同様です。
+`igx-card-actions` のボタンが `vertical` のレイアウトに切り替わりました。`igx-card-actions` は、その親と `inverse` のレイアウトになります。そのため、カードの `horizontal` 属性が `true` に設定されているときはいつでもアクションの `vertical` プロパティが `true` に設定され、その逆も同様です。
 
 アクション領域の `vertical` 属性を明示的に設定して、デフォルトの動作を上書きすることができます。
 

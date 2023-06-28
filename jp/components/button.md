@@ -1,12 +1,12 @@
 ---
 title: Angular Button コンポーネント – Ignite UI for Angular
 _description: Ignite UI for Angular Button コンポーネントで規格のボタンに定義済みテキスト、画像、およびその他の機能を追加します。今すぐお試しください。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Button コンポーネント, Angular Button コントロール
+_keywords: Angular Button コンポーネント, Angular Button コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, Angular UI コンポーネント
 _language: ja
 ---
 
-# Angular Button の概要
-<p class="highlight">Angular Material Button ディレクティブは、アクション可能なボタンを作成して Web ページ/アプリケーションに追加するために使用されます。簡単にカスタマイズでき、いくつかの組み込み機能を含むさまざまな Angular Button タイプがあります。デフォルトでは、AngularMaterial はネイティブの `<button>` および `<a>` 要素を使用して、アクセス可能なエクスペリエンスを提供します。 
+# Angular Button (ボタン) の概要
+<p class="highlight">Angular Button ディレクティブは、アクション可能なボタンを作成して Web ページ/アプリケーションに追加するために使用されます。簡単にカスタマイズでき、いくつかの組み込み機能を含むさまざまな Angular Button タイプがあります。デフォルトでは、AngularMaterial はネイティブの `<button>` および `<a>` 要素を使用して、アクセス可能なエクスペリエンスを提供します。 
 
 Ignite UI for Angular Button ディレクティブを任意の button、span、div、または anchor 要素に適用して高機能なボタンを構成できます。Flat ボタン、Raised ボタン、Outlined ボタン、Icon ボタン、FAB (フローティング アクション ボタン) の Angular ボタン タイプを使用できます。カスタマイズ可能な色、テーマを作成して Angular ボタン スタイルを変更するオプション、ユーザーがボタンの表示密度を選択できるようにするオプションなどを提供します。</p>
 
@@ -22,9 +22,17 @@ Ignite UI for Angular Button ディレクティブを任意の button、span、d
 
 <div class="divider--half"></div>
 
-## Ignite UI で Angular Button を使用する方法
+## Ignite UI for Angular Button を使用した作業の開始
 
-Angular Button ディレクティブは `NgModule` としてエクスポートされるため、アプリケーションで `AppModule` に `IgxButtonModule` をインポートする必要があります。
+Ignite UI for Angular Button ディレクティブを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
+
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxButtonModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -42,6 +50,27 @@ import { IgxButtonModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
+あるいは、`16.0.0` 以降、`IgxButtonDirective` をスタンドアロンの依存関係としてインポートできます。
+
+```typescript
+// home.component.ts
+
+...
+import { IgxButtonDirective } from 'igniteui-angular';
+// import { IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<button igxButton="flat">Flat</button>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxButtonDirective]
+})
+export class HomeComponent {}
+```
+
+Ignite UI for Angular Button モジュールまたはディレクティブをインポートしたので、要素で `igxButton` ディレクティブの使用を開始できます。
+
 ## Angular ボタン タイプ
 
 ### Flat ボタン
@@ -53,8 +82,8 @@ export class AppModule {}
 ```
 
 <div class="sample-container loading" style="height: 70px">
-    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-2">
-</iframe></div>
+    <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-2"></iframe>
+</div>
 
 ### Raised ボタン 
 
@@ -146,7 +175,7 @@ export class AppModule {}
 
 <div class="sample-container loading" style="height: 70px">
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-3">
-</iframe></div> 
+</iframe></div>
 
 ### Span
 
@@ -166,7 +195,7 @@ export class AppModule {}
 
 [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttondirective.html#displayDensity) 入力を使用して `igxButton` の表示密度を選択できます。これを行うには、まず `IgxButtonGroupModule` をインポートし、[`igxButtonGroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) コンポーネントによってすべての密度値を表示する必要があります。これにより、選択されるたびに Angular ボタンの `displayDensity` にバインドされた独自の **density** プロパティが更新されます。
 
-> [!NOTE] 
+> [!NOTE]
 > `icon` タイプのボタンは、異なる表示密度値を設定しても視覚的に変化しません。
 
 ```typescript
@@ -174,7 +203,6 @@ export class AppModule {}
 ...
 import { IgxButtonGroupModule } from 'igniteui-angular';
 // import { IgxButtonGroupModule } from '@infragistics/igniteui-angular'; for licensed package
-
 @NgModule({
     imports: [
         ...
@@ -186,7 +214,6 @@ import { IgxButtonGroupModule } from 'igniteui-angular';
 
 ```html
 <!--buttons-density.component.html-->
-
 <igx-buttongroup [values]="displayDensities" (selected)="selectDensity($event)"></igx-buttongroup>
 ...
 <button igxButton="flat" [displayDensity]="density">Flat</button>
@@ -196,7 +223,6 @@ import { IgxButtonGroupModule } from 'igniteui-angular';
 // buttons-density.component.ts
 public density = "comfortable";
 public displayDensities;
-
 public ngOnInit() {
     this.displayDensities = [
         { label: 'comfortable', selected: this.density === 'comfortable', togglable: true },
@@ -204,7 +230,6 @@ public ngOnInit() {
         { label: 'compact', selected: this.density === 'compact', togglable: true }
     ];
 }
-
 public selectDensity(event) {
     this.density = this.displayDensities[event.index].label;
 }
@@ -212,8 +237,8 @@ public selectDensity(event) {
 
 以下は結果です。
 
-<code-view style="height: 150px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 150px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/buttons-display-density" alt="Angular Button の例">
 </code-view>
 <div class="divider--half"></div>
@@ -224,10 +249,9 @@ public selectDensity(event) {
 
 ```scss
 @use "igniteui-angular/theming" as *;
-
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 次に、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) を拡張し、それぞれのホバーとフォーカス パラメーターと共に `$foreground` と `$background` パラメーターを受け入れる新しいテーマを作成します。
 
@@ -268,7 +292,6 @@ $custom-button-theme: button-theme(
 ### テーマ オーバーライドの使用
 
 Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
-
 コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
 
 ```scss
@@ -282,14 +305,11 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```
 
 ### デモ
-
-
-<code-view style="height: 100px" 
+<code-view style="height: 100px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/buttons-style" >
 </code-view>
-
 <div class="divider--half"></div>
 
 ## API リファレンス

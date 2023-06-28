@@ -1,11 +1,11 @@
 ---
 title: Date Range Picker コンポーネント - ネイティブ Angular | Ignite UI for Angular
 _description: Angular Date Range Picker コンポーネントを使用すると、開始日と終了日を定義して日付範囲を選択できます。カレンダー UI から範囲を選択できます。今すぐお試しください。 
-_keywords: Angular Date Range Picker, Date Range Picker, Date Picker, Angular 日付範囲ピッカー, 日付範囲ピッカー, 日付ピッカー
+_keywords: Angular Date Range Picker, Date Range Picker, Date Picker, Angular Date Range Picker コンポーネント, Angular UI コンポーネント, Angular コンポーネント
 _language: ja
 ---
 
-# Angular Date Range Picker (日付範囲ピッカー) の概要
+# Angular Date Range Picker (日付範囲ピッカー) コンポーネントの概要
 
 Angular Date Range Picker は、ユーザーが開始日と終了日の値を簡単に選択できるようにするテキスト入力とカレンダー ポップアップを含む軽量のコンポーネントです。範囲制限、フォーマット、データ範囲の選択、開始値と終了値のグループ化などの機能を使用して、アプリの要件に合わせてカスタマイズできます。Angular の Date Range Picker を使用すると、開発者はデフォルトのビュー プロパティを変更して、月、年、または複数年に設定することもできます。
 
@@ -20,17 +20,23 @@ Angular Date Range Picker は、ユーザーが開始日と終了日の値を簡
 <div class="divider--half"></div>
 
 
-## Ignite UI で Angular Date Range Picker コンポーネントを追加する方法
+## Ignite UI for Angular Date Range Picker を使用した作業の開始
 
-### はじめに
-Ignite UI for Date Range Picker コンポーネントを使用するには、まず `IgxDateRangePickerModule` を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular Date Range Picker コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
+
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxDateRangePickerModule` をインポートします。
 
 `IgxDateRangePicker` は [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) を使用しますが、タッチ操作のために **BrowserAnimationsModule** と **HammerModule** に依存関係があり、これらも `AppModule` に追加する必要があります。
 
 ```typescript
 // app.module.ts
 
-...
 import { IgxDateRangePickerModule } from 'igniteui-angular';
 // import { IgxDateRangePickerModule } from '@infragistics/igniteui-angular'; for licensed package
 
@@ -45,6 +51,30 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 export class AppModule {}
 ```
 
+あるいは、`16.0.0` 以降、`IgxDateRangePickerComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_DATE_RANGE_PICKER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/date-range-picker/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+
+```typescript
+// home.component.ts
+
+import { HammerModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { IGX_DATE_RANGE_PICKER_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_DATE_RANGE_PICKER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<igx-date-range-picker [value]="range"></igx-date-range-picker>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [BrowserAnimationsModule, HammerModule, IGX_DATE_RANGE_PICKER_DIRECTIVES]
+    /* or imports: [BrowserAnimationsModule, HammerModule, IgxDateRangePickerComponent] */
+})
+export class HomeComponent {}
+```
+
+Ignite UI for Angular Date Range Picker モジュールまたはディレクティブをインポートしたので、`igx-date-range-picker` コンポーネントの使用を開始できます。
+
+## Date Range Picker コンポーネントの使用
 ### Date Range Picker の表示
 Date Range Picker をデフォルトのモードでインスタンス化するには、以下のコードを使用してください。
 

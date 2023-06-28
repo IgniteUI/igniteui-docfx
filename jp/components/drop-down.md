@@ -1,11 +1,11 @@
 ---
 title: Angular Drop Down コンポーネント –  Ignite UI For Angular
 _description: インタラクティブ機能を追加し、アプリ内の項目のスクロール可能なリストにスタイル設定オプションを表示します。今すぐ Ignite UI for Angular の Drop Down コンポーネントをお試しください。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Drop Down コンポーネント, Angular Drop Down コントロール
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Drop Down コンポーネント, Angular Drop Down コントロール
 _language: ja
 ---
 
-# Angular Drop Down の概要
+# Angular Drop Down (ドロップダウン) コンポーネントの概要
 <p class="highlight">Ignite UI for Angular Drop Down は事前定義された値の切り替え可能なリストを表示し、ユーザーがクリックするだけで 1 つのオプション項目を簡単に選択できるようにするコンポーネントです。ドロップダウン メニューとして機能するようにすばやく構成することも、データをグループ化することでより有用な視覚情報を提供するために使用することもできます。グループ化を使用すると、フラット データと階層データの両方を使用できます。Drop Down コンポーネントを使用すると、宣言型のバインディングが可能になり、追加のコンテンツやリンクを埋め込むことができます。これにより、UI をさらにカスタマイズして Angular ドロップダウン リストの外観をスタイル設定する余地も残されます。これに加えて、キーボードのドロップダウン ナビゲーションや仮想化などの主要な機能が満載です。</p>
 <div class="divider"></div>
 
@@ -20,13 +20,17 @@ _language: ja
 
 <div class="divider--half"></div>
 
-## Ignite UI for Angular Drop Down で作業を開始
+## Ignite UI for Angular Drop Down を使用した作業の開始
 
-Angular アプリの Ignite UI Drop Down コンポーネントを簡単に構成する方法をご覧ください。以下のセクションでは、IgxDropDownModule をインポートし、単純な Angular Drop Down リストを作成する方法について説明します。
+Ignite UI for Angular Drop Down コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
-### はじめに
+```cmd
+ng add igniteui-angular
+```
 
-Drop Down コンポーネントを使用するには、まず `IgxDropDownModule` を **app.module.ts** ファイルにインポートします。
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxDropDownModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -42,6 +46,41 @@ import { IgxDropDownModule } from 'igniteui-angular';
 })
 export class AppModule {}
 ```
+
+あるいは、`16.0.0` 以降、`IgxDropDownComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_DROP_DOWN_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/drop-down/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+
+```typescript
+// home.component.ts
+
+import { NgFor } from '@angular/common';
+import { IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective } from 'igniteui-angular';
+// import { IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: `
+    <button igxButton="raised" 
+        [igxToggleAction]="dropdown"
+        [igxDropDownItemNavigation]="dropdown">
+        Options
+    </button>
+    <igx-drop-down #dropdown>
+        <igx-drop-down-item *ngFor="let item of items">
+            {{ item.field }}
+        </igx-drop-down-item>
+    </igx-drop-down>
+    `,
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective, NgFor]
+    /* or imports: [IgxDropDownComponent, IgxDropDownItemComponent, IgxToggleActionDirective, IgxButtonDirective, NgFor] */
+})
+export class HomeComponent {}
+```
+
+Ignite UI for Angular Drop Down モジュールまたはディレクティブをインポートしたので、`igx-drop-down` コンポーネントの使用を開始できます。
+
+## Angular Drop Down の使用
 
 ### ドロップダウンの追加
 
@@ -64,6 +103,7 @@ export class AppModule {}
 
 ```typescript
 // dropdown.component.ts
+@Component({...})
 export class MyDropDownComponent {
     public items: Array<{ field: string }> = [
         { field: 'Option 1' },
@@ -242,7 +282,7 @@ export class MyCustomDropDownComponent {
 
 
 ### ドロップダウン メニュー
-ドロップダウンをメニューとして動作するように構成できます。[selecting]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selecting) イベント ハンドラーで [ISelectionEventArgs]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) インターフェイスの [cancel]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#cancel) メンバーを true に設定します。この方法では、メニューを開いた際に選択した項目が保持されず、前の選択が無効になります。クリックされた項目は、イベントの [newSelection]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#newSelection) メンバー値で取得できます。
+ドロップダウンをメニューとして動作するように構成できます。[selectionChanging]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selectionChanging) イベント ハンドラーで [ISelectionEventArgs]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) インターフェイスの [cancel]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#cancel) メンバーを true に設定します。この方法では、メニューを開いた際に選択した項目が保持されず、前の選択が無効になります。クリックされた項目は、イベントの [newSelection]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#newSelection) メンバー値で取得できます。
 
 ```html
 <!-- dropdown.component.html -->
@@ -255,7 +295,7 @@ export class MyCustomDropDownComponent {
                 igxButton="icon">
             <igx-icon fontSet="material">more_vert</igx-icon>
         </button>
-        <igx-drop-down #menu (selectionChanging)="selecting($event)">
+        <igx-drop-down #menu (selectionChanging)="selectionHandler($event)">
             <igx-drop-down-item *ngFor="let item of items" [value]="item.text">
                 <div>{{ item.text }}</div>
             </igx-drop-down-item>
@@ -287,7 +327,7 @@ export class MyMenuComponent {
         scrollStrategy: new NoOpScrollStrategy()
     };
 
-    public selecting(eventArgs: ISelectionEventArgs) {
+    public selectionHandler(eventArgs: ISelectionEventArgs) {
         this.text = eventArgs.newSelection.value;
         eventArgs.cancel = true;
     }

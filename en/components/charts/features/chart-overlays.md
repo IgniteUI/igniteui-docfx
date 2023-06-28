@@ -35,7 +35,7 @@ When using the value overlay with a numeric angle axis, it will appear as a line
 
 It is also possible to show an axis annotation on a [`IgxValueOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvalueoverlaycomponent.html) to show the value of the overlay on the owning axis. In order to show this, you can set the [`isAxisAnnotationEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvalueoverlaycomponent.html#isaxisannotationenabled) property to true.
 
-## Angular Value Lines
+## Angular Value Layer
 
 The Angular charting components also expose the ability to use value lines to call out different focal points of your data, such as minimum, maximum, and average values.
 

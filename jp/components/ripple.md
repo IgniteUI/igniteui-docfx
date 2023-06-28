@@ -1,26 +1,37 @@
 ---
 title: Ripple ディレクティブ
 _description: Ignite UI for Angular Ripple ディレクティブは、リップル アニメーション エフェクトが適用されている領域を定義できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Ripple コンポーネント, Angular Ripple コントロール
+_keywords: Angular Ripple コンポーネント, Angular Ripple ディレクティブ, Angular Ripple コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
 _language: ja
 ---
 
-# Ripple
+# Angular Ripple (リップル) ディレクティブの概要
+
 <p class="highlight">Ignite UI for Angular Ripple コンポーネントは、タッチまたはマウス クリックに応答してアニメーションを作成します。</p>
 
-### Ripple デモ
+### Angular Ripple の例
+
 <div class="divider--half"></div>
-<div class="sample-container loading" style="height: 100px">
-    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-5" class="lazyload" alt="Ripple デモ">
-</iframe></div>
+
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-5" alt="Angular Ripple の例">
+</code-view>
+
 <p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div class="divider--half"></div>
 
-## 使用方法
+## Ignite UI for Angular Ripple ディレクティブを使用した作業の開始
 
-### はじめに
+Ignite UI for Angular Ripple ディレクティブを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
-Ripple ディレクティブが `NgModule` としてエクスポートされるため、アプリケーションで **app.module.ts** ファイルに `IgxRippleModule` をインポートする必要があります。
+```cmd
+ng add igniteui-angular
+```
+
+Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
+
+次に、**app.module.ts** ファイルに `IgxRippleModule` をインポートします。
 
 ```typescript
 // app.module.ts
@@ -38,9 +49,30 @@ import { IgxRippleModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
+あるいは、`16.0.0` 以降、`IgxRippleDirective` をスタンドアロンの依存関係としてインポートできます。
+
+```typescript
+// home.component.ts
+
+import { IgxRippleDirective, IgxButtonDirective } from 'igniteui-angular';
+// import { IgxRippleDirective, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
+
+@Component({
+    selector: 'app-home',
+    template: '<button igxButton="raised" igxRipple>Click Me</button>',
+    styleUrls: ['home.component.scss'],
+    standalone: true,
+    imports: [IgxRippleDirective, IgxButtonDirective]
+})
+export class HomeComponent {}
+```
+
+Ignite UI for Angular Ripple モジュールまたはディレクティブをインポートしたので、`igxRipple` ディレクティブの使用を開始できます。
+
 > [!WARNING]
 > [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) は Web Animation API を使用し、[サポートされるブラウザー](http://caniuse.com/#feat=web-animation)でネイティブに実行します。その他のブラウザーでは `web-animations.min.js` [ポリフィル](https://github.com/web-animations/web-animations-js)を使用します。
 
+## Angular Ripple ディレクティブの使用
 
 ### リップル エフェクトの追加
 
@@ -59,9 +91,11 @@ export class AppModule {}
 ```html
 <button igxButton="raised" igxRipple="white">White</button>
 ```
-<div class="sample-container loading" style="height: 100px">
-    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-6" class="lazyload">
-</iframe></div>
+
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-6" alt="Angular Ripple の例">
+</code-view>
 
 ### 中央揃えのリップル エフェクト
 デフォルトでリップル エフェクトはクリック イベントの位置から開始します。この動作で要素の中点を原点に変更するには、[`igxRippleCentered`]({environment:angularApiUrl}/classes/igxrippledirective.html#centered) プロパティを使用できます。
@@ -69,9 +103,11 @@ export class AppModule {}
 ```html
 <button igxButton="raised" igxRipple="white" [igxRippleCentered]="true">Centered</button>
 ```
-<div class="sample-container loading" style="height: 100px">
-    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-3" class="lazyload">
-</iframe></div>
+
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-3" alt="Angular Ripple の例">
+</code-view>
 
 ### リップルの期間
 [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippleDuration) プロパティを使用して、リップルアニメーションの期間を変更できます。これは、デフォルトで 600 ミリ秒に設定されています。
@@ -79,9 +115,11 @@ export class AppModule {}
 ```html
 <button igxButton="raised" igxRipple [igxRippleDuration]="2000">Click Me</button>
 ```
-<div class="sample-container loading" style="height: 100px">
-    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-4" class="lazyload">
-</iframe></div>
+
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-4" alt="Angular Ripple の例">
+</code-view>
 
 ### リップルの対象要素
 [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippleTarget) プロパティを使用して親要素内の特定の要素にリップル エフェクトをアタッチします。
@@ -94,9 +132,10 @@ export class AppModule {}
 ```
 親要素または子要素をクリックしても、リップル エフェクトはボタンにのみ表示されます。
 
-<div class="sample-container loading" style="height: 350px">
-    <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-2" class="lazyload">
-</iframe></div>
+<code-view style="height: 350px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-2" alt="Angular Ripple の例">
+</code-view>
 
 > [!NOTE]
 > `igxRippleTarget` プロパティで対象する子要素は、相対的に配置する必要があります。
