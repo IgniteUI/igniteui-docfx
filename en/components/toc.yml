@@ -691,7 +691,7 @@
       new: false
     - name: Chart Data Aggregations
       href: charts/features/chart-data-aggregations.md
-      new: true
+      new: false
     - name: Chart Data Legend
       href: charts/features/chart-data-legend.md
       new: false
