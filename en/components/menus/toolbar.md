@@ -86,7 +86,7 @@ Each of these tools exposes an `OnCommand` event that is triggered by mouse clic
 
 New and existing tools can be repositioned and marked hidden using the `OverlayId`, `BeforeId` and `AfterId` properties on the [`IgxToolActionComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html) object. ToolActions also expose a [`visibility`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#visibility) property.
 
-The following example demonstrates hiding both the built-in `ZoomReset` and `Analyze Menu` menu tool actions. A new instance of the `ZoomReset` tool action is added and placed within the `ZoomMenu` by using the the [`afterId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#afterid) property and assigning that to [`zoomOut`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#zoomout). This will ensure the new Reset tool is displayed at the bottom of the `ZoomMenu`.
+The following example demonstrates hiding both the built-in `ZoomReset` and `AnalyzeMenu` menu tool actions. A new instance of the `ZoomReset` tool action is added and placed within the `ZoomMenu` by using the the [`afterId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#afterid) property and assigning that to [`zoomOut`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#zoomout). This will ensure the new Reset tool is displayed at the bottom of the `ZoomMenu`.
 
 <code-view style="height: 600px" alt="Angular Toolbar Example"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -157,7 +157,7 @@ By default the Angular Toolbar is shown horizontally, but it also has the abilit
 
 <!-- ## Styling/Theming
 
-The icon component can be styled by using it's `BaseTheme` property directly to the `Toolbar`. 
+The icon component can be styled by using it's `BaseTheme` property directly to the `Toolbar`.
 
 ```html
 <igx-toolbar baseTheme="SlingshotDark" />
