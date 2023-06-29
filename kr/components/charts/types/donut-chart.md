@@ -12,7 +12,7 @@ The Ignite UI for Angular Donut Chart is similar to the [Pie Chart](pie-chart.
 
 ## Angular Donut Chart Example
 
-You can create this type of chart with the [`IgxDoughnutChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchartcomponent.html) control by binding your data as shown in the example below.
+You can create this type of chart with the [`IgxDoughnutChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdoughnutchartcomponent.html) control by binding your data as shown in the example below.
 
 <code-view style="height: 600px" alt="Angular Doughnut Legend"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -104,4 +104,4 @@ The following table lists API members mentioned in the above sections:
 
 | Chart Type       | Control Name   | API Members |
 | -----------------|----------------|------------ |
-| Donut Chart      | [`IgxDoughnutChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdoughnutchartcomponent.html)     | `DoughnutChart` |
+| Donut Chart      | [`IgxDoughnutChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdoughnutchartcomponent.html)     | `DoughnutChart` |
