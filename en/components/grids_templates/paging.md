@@ -1,21 +1,21 @@
 @@if(igxName === 'IgxGrid') {
 ---
 title: Angular Grid Paging | Angular Pagination Table | Infragistics
-_description: Configure Angular pagination and create custom pages in the Angular Material table by Ignite UI, get data for the requested pages with variety of angular events.
+_description: Configure Angular pagination and create custom pages in the Angular table by Ignite UI, get data for the requested pages with variety of angular events.
 _keywords: angular pagination, igniteui for angular, infragistics
 ---
 }
 @@if(igxName !== 'IgxGrid') {
 ---
 title: Angular Grid Paging | Angular Pagination Table | Infragistics
-_description: Configure Angular pagination and create custom pages in the Angular Material table by Ignite UI, get data for the requested pages with variety of angular events.
+_description: Configure Angular pagination and create custom pages in the Angular table by Ignite UI, get data for the requested pages with variety of angular events.
 _keywords: angular pagination, igniteui for angular, infragistics
 _canonicalLink: grid/paging
 ---
 }
 
 # Angular @@igComponent Pagination
-Pagination is used to split a large set of data into a sequence of pages that have similar content. Angular table pagination improves user experience and data interaction. @@igComponent pagination is configurable via a separate component projected in the grid tree by defining a `igx-paginator` tag, similar to adding of a column. As in any Angular Material table, the pagination in the @@igComponent supports template for custom pages.
+Pagination is used to split a large set of data into a sequence of pages that have similar content. Angular table pagination improves user experience and data interaction. @@igComponent pagination is configurable via a separate component projected in the grid tree by defining a `igx-paginator` tag, similar to adding of a column. As in any Angular Table, the pagination in the @@igComponent supports template for custom pages.
 
 ## Angular Pagination Example
 

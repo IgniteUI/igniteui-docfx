@@ -1,26 +1,26 @@
 ---
-title: Angular Material のテーマ
-_description: Ignite UI for Angular テーマ エンジンを使用すると、Angular Material ライブラリなどの他のテーマ ライブラリからインポートされた外部コンポーネントと一緒に簡単に使用できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, テーマ, Angular Material, Material コンポーネント
+title: Angular のテーマ
+_description: Ignite UI for Angular テーマ エンジンを使用すると、Angular ライブラリなどの他のテーマ ライブラリからインポートされた外部コンポーネントと一緒に簡単に使用できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, テーマ, Angular, Material コンポーネント
 _language: ja
 ---
 
-# Angular Material のテーマ
+# Angular のテーマ
 <p class="highlight">
 
-Ignite UI for Angular テーマ エンジンを使用すると、[`Angular Material`](https://material.angular.io/) ライブラリなどの他のテーマ ライブラリからインポートされた外部コンポーネントと一緒に簡単に使用できます。
+Ignite UI for Angular テーマ エンジンを使用すると、[`Angular`](https://material.angular.io/) ライブラリなどの他のテーマ ライブラリからインポートされた外部コンポーネントと一緒に簡単に使用できます。
 </p>
 <div class="divider--half"></div>
 
-## Ignite UI と Angular Material の概要
+## Ignite UI と Angular の概要
 
-Angular Material は、モバイルおよびデスクトップの Angular Web アプリケーション用の UI コンポーネント ライブラリです。これには、いくつかの事前に作成されたテーマと、[`マテリアル デザイン仕様`](https://material.io/components)に基づく多数のコンポーネントが含まれています。
+Angular は、モバイルおよびデスクトップの Angular Web アプリケーション用の UI コンポーネント ライブラリです。これには、いくつかの事前に作成されたテーマと、[`マテリアル デザイン仕様`](https://material.io/components)に基づく多数のコンポーネントが含まれています。
 
 Ignite UI for Angular は、マテリアル ベースの UI ウィジェット、コンポーネント、および Sketch UI キットの完全なセットで、Angular のディレクティブをサポートします。テーマ エンジンは使いやすく、単一のコンポーネント、複数のコンポーネント、またはスイート全体からさまざまなレベルでテーマを設定できます。さらに、他のテーマ ライブラリのコンポーネントをほとんど手間をかけずにスタイル設定するために使用できます。
 
-次の記事では、1 つのアプリケーションで Ignite UI コンポーネントと Angular Material コンポーネントの両方を使用する方法と、それらを同じように表示する方法を示します。
+次の記事では、1 つのアプリケーションで Ignite UI コンポーネントと Angular コンポーネントの両方を使用する方法と、それらを同じように表示する方法を示します。
 
-## Angular Material のテーマの例
+## Angular のテーマの例
 
 <code-view style="height: 1050px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -29,19 +29,19 @@ Ignite UI for Angular は、マテリアル ベースの UI ウィジェット�
 
 <div class="divider--half"></div>
 
-## Ignite UI と Angular Material を使用した作業の開始
+## Ignite UI と Angular を使用した作業の開始
 
-### Angular Material のインストール方法
+### Angular のインストール方法
 
-Angular CLI を使用しており、既存の Angular プロジェクトがある場合、以下のコマンドで Angular Material を追加できます。 
+Angular CLI を使用しており、既存の Angular プロジェクトがある場合、以下のコマンドで Angular を追加できます。 
 
 ```cmd 
 ng add @angular/material
 ```
 
-次に、事前に作成されたテーマの 1 つを選択し、Angular Material のグローバル タイポグラフィ スタイルとブラウザー アニメーションを設定するかどうかを選択する必要があります。この構成が完了すると、アプリケーションで Angular Material コンポーネントを使用できるようになります。
+次に、事前に作成されたテーマの 1 つを選択し、Angular のグローバル タイポグラフィ スタイルとブラウザー アニメーションを設定するかどうかを選択する必要があります。この構成が完了すると、アプリケーションで Angular コンポーネントを使用できるようになります。
 
-Angular Material ライブラリの使用に関する詳細については、[`公式ドキュメント`](https://material.angular.io/guide/getting-started)を参照してください。
+Angular ライブラリの使用に関する詳細については、[`公式ドキュメント`](https://material.angular.io/guide/getting-started)を参照してください。
 
 ### Ignite UI for Angular のインストール方法 
 
@@ -69,9 +69,9 @@ import { IgxAvatarModule } from 'igniteui-angular';
 
 既存のプロジェクトで Ignite UI for Angular を使用する方法については、[`「作業の開始」`](../../general/getting-started.md)トピックを参照してください。各コンポーネントをインポートして使用する方法の詳細およびガイド付きの例は、コンポーネントのドキュメントを参照してください。
 
-## Ignite UI と Angular Material コンポーネント
+## Ignite UI と Angular コンポーネント
 
-デモ サンプルの実行方法を見てみましょう。Ignite UI コンポーネントと Angular Material コンポーネントを組み合わせたもので、1 つのアプリケーションにうまく収まります。この例のナビゲーションは、[`igx-buttons`]({environment:angularApiUrl}/classes/igxbuttondirective.html) および [`igx-avatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) とともに material [`mat-toolbar`](https://material.angular.io/components/toolbar/overview) を使用して作成されます。[Campaigns] ボタンの下の[`メニュー`](https://material.angular.io/components/menu/overview)も Angular Material ライブラリから取得されます。ナビゲーションの下で、[`igx-card`]({environment:angularApiUrl}/classes/igxcardcomponent.html) コンポーネントを使用して統計を表示します。カード内に複数の項目を配置しました - [`igx-avatars`]({environment:angularApiUrl}/classes/igxavatarcomponent.html)、[`igx-icons`]({environment:angularApiUrl}/classes/igxiconcomponent.html)、および material [`buttons`](https://material.angular.io/components/button/overview)。
+デモ サンプルの実行方法を見てみましょう。Ignite UI コンポーネントと Angular コンポーネントを組み合わせたもので、1 つのアプリケーションにうまく収まります。この例のナビゲーションは、[`igx-buttons`]({environment:angularApiUrl}/classes/igxbuttondirective.html) および [`igx-avatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) とともに material [`mat-toolbar`](https://material.angular.io/components/toolbar/overview) を使用して作成されます。[Campaigns] ボタンの下の[`メニュー`](https://material.angular.io/components/menu/overview)も Angular ライブラリから取得されます。ナビゲーションの下で、[`igx-card`]({environment:angularApiUrl}/classes/igxcardcomponent.html) コンポーネントを使用して統計を表示します。カード内に複数の項目を配置しました - [`igx-avatars`]({environment:angularApiUrl}/classes/igxavatarcomponent.html)、[`igx-icons`]({environment:angularApiUrl}/classes/igxiconcomponent.html)、および material [`buttons`](https://material.angular.io/components/button/overview)。
 
 <img src="../../../images/material-nav.png" width="100%">
 
@@ -89,7 +89,7 @@ import { IgxAvatarModule } from 'igniteui-angular';
 
 ## Angular コンポーネントのスタイル設定 
 
-Ignite UI テーマ エンジンを使用してコンポーネントのスタイル設定を開始するには、グローバル テーマのベース ファイルとなる scss ファイルを作成します。このファイルを `_variables.scss` と呼びます。次に、Ignite UI の `index` ファイルと Angular Material の `theming` ファイルをインポートする必要があります。
+Ignite UI テーマ エンジンを使用してコンポーネントのスタイル設定を開始するには、グローバル テーマのベース ファイルとなる scss ファイルを作成します。このファイルを `_variables.scss` と呼びます。次に、Ignite UI の `index` ファイルと Angular の `theming` ファイルをインポートする必要があります。
 
 ```scss
 // _variables.scss
@@ -118,7 +118,7 @@ $igx-light-palette: palette(
 );
 ```
 
-Ignite UI パレットとは異なり、Angular Material カラー パレット マップには、1 つの色とそれに対応するコントラスト カラーの影のみが含まれています。たとえば、`$mat-purple` パレットを示します: 
+Ignite UI パレットとは異なり、Angular カラー パレット マップには、1 つの色とそれに対応するコントラスト カラーの影のみが含まれています。たとえば、`$mat-purple` パレットを示します: 
 
 ```scss
 $light-primary-text: white;
@@ -140,7 +140,7 @@ $mat-purple: (
 
 ### テーマ パレットの生成
 
-テーマ パレットを定義するには、色相から色へのマップを生成するマテリアルの `mat-palette` 関数を使用する必要があります。このサンプルでは、Ignite UI テーマを使用して Angular Material コンポーネントのスタイルを設定するため、構造に応じて `$light-material-palette` を変換する必要があります。
+テーマ パレットを定義するには、色相から色へのマップを生成するマテリアルの `mat-palette` 関数を使用する必要があります。このサンプルでは、Ignite UI テーマを使用して Angular コンポーネントのスタイルを設定するため、構造に応じて `$light-material-palette` を変換する必要があります。
 
 これを実現するために、すべてのカラー バリアントのマップとそれに続くコントラスト カラーを返す `$color`、`$saturations`、および `$palette` のパラメーターを使用して Sass 関数を作成します。使用している彩度は、[`マテリアル デザイン カラー システム`](https://material.io/design/color/the-color-system.html)に従います。
 
@@ -187,7 +187,7 @@ $light-palette-accent: mat-palette(
 );
 ```
 
-最後に、2 つのカラー パレットを `mat-light-theme` 関数に渡す準備ができました。これにより、Ignite UI マテリアルのカラー パレットから取得した色で Angular Material テーマが作成されます。
+最後に、2 つのカラー パレットを `mat-light-theme` 関数に渡す準備ができました。これにより、Ignite UI マテリアルのカラー パレットから取得した色で Angular テーマが作成されます。
 
 ```scss
 $custom-mat-light-theme: mat-light-theme(
@@ -233,7 +233,7 @@ $custom-mat-dark-theme: mat-dark-theme(
 
 Ignite UI for Angular には、[マテリアル デザイン](https://material.io/design)に基づいて事前定義されたテーマが付属しています。それらを使用するには、最初に `core` ミックスインを含め、次に組み込みのテーマ ミックスイン - [theme]({environment:sassApiUrl}/index.html#mixin-theme) を含める必要があります。また、事前定義されたマテリアル パレット - [$light-material-palette]({environment:sassApiUrl}/index.html#variable-light-material-palette) および [$dark-material-palette]({environment:sassApiUrl}/index.html#variable-dark-material-palette) も使用します。 
 
-Angular Material コンポーネントの場合、前述のカスタム マテリアル テーマに `mat-core` ミックスインを含めてから、`angular-material-theme` ミックスインを含める必要があります。 
+Angular コンポーネントの場合、前述のカスタム マテリアル テーマに `mat-core` ミックスインを含めてから、`angular-material-theme` ミックスインを含める必要があります。 
 
 ```scss
 // Make sure you always include the core mixin first
@@ -322,7 +322,7 @@ Angular Material コンポーネントの場合、前述のカスタム マテ�
 
 ### クラスの生成
 
-Angular Material `toolbar` は背景色に CSS クラスを使用します。サンプルでは、選択したテーマに応じてカラーを変更するため、`color-classes` ミックスインを使用します。指定したプロパティおよびカラー パレットのすべてのカラーの CSS クラス名を生成し、オプションでプレフィックスとサフィックスをクラス名に添付します。デモでは、ミックスインを 2 回使用します。1 回目はそれぞれの `$igx-light-palette` を最初の値として使用する light モード、2 回目は `$custom-dark-palette` を使用する dark モードです。
+Angular `toolbar` は背景色に CSS クラスを使用します。サンプルでは、選択したテーマに応じてカラーを変更するため、`color-classes` ミックスインを使用します。指定したプロパティおよびカラー パレットのすべてのカラーの CSS クラス名を生成し、オプションでプレフィックスとサフィックスをクラス名に添付します。デモでは、ミックスインを 2 回使用します。1 回目はそれぞれの `$igx-light-palette` を最初の値として使用する light モード、2 回目は `$custom-dark-palette` を使用する dark モードです。
 
 ```scss
 :host {
@@ -356,7 +356,7 @@ Ignite UI for Angular は、テーマごとに 4 つのデフォルト タイプ
 }
 ```
 
-Angular Material のタイポグラフィをカスタマイズするには、`mat-typography-config` 関数を使用する必要があります。次のように、`$font-family` を Ignite UI の `$material-typeface` と `$button` スタイルでオーバーライドします。 
+Angular のタイポグラフィをカスタマイズするには、`mat-typography-config` 関数を使用する必要があります。次のように、`$font-family` を Ignite UI の `$material-typeface` と `$button` スタイルでオーバーライドします。 
 
 ```scss
 $custom-typography: mat-typography-config(
@@ -381,7 +381,7 @@ $custom-typography: mat-typography-config(
 }
 ```
 
-詳細については、Angular Material [`タイポグラフィ ドキュメント`](https://material.angular.io/guide/typography)をご覧ください。  
+詳細については、Angular [`タイポグラフィ ドキュメント`](https://material.angular.io/guide/typography)をご覧ください。  
 
 ## API リファレンス
 <div class="divider--half"></div>

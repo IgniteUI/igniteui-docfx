@@ -691,7 +691,7 @@
       new: false
     - name: Chart Data Aggregations
       href: charts/features/chart-data-aggregations.md
-      new: true
+      new: false
     - name: Chart Data Legend
       href: charts/features/chart-data-legend.md
       new: false
@@ -917,7 +917,7 @@
       - name: Printing styles
         href: themes/misc/printing-styles.md
         new: false
-      - name: Angular Material Theming
+      - name: Angular Theming
         href: themes/misc/angular-material-theming.md
         new: true
       - name: Bootstrap Theming
@@ -1038,6 +1038,9 @@
 - name: Menus
   header: true
   sortable: true
+- name: Toolbar
+  href: menus/toolbar.md
+  preview: true
 - name: Navigation Drawer
   href: navdrawer.md
   updated: false

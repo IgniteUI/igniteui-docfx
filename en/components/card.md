@@ -12,7 +12,7 @@ This lightweight Angular Card component is used for creating all sorts of cards,
 </p>
 
 ## Angular Card Example
-Below you can see a basic sample of a well-crafted Angular Material Card with main card sections like imge, title, subtitle, primary card content, container for a button. 
+Below you can see a basic sample of a well-crafted Ignite UI for Angular Card with main card sections like image, title, subtitle, primary card content, container for a button. 
 
 <code-view style="height: 500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -300,7 +300,7 @@ Below is an example showing how you can create a semi-horizontal card, where we 
 
 ### Angular Card Actions
 
-The Angular Material Card actions area allows additional configuration to what we have already mentioned.
+The Angular Card actions area allows additional configuration to what we have already mentioned.
 
 You can reverse order of the flat buttons and the button icons using the `reverse` attribute.
 
@@ -399,7 +399,7 @@ If `$legacy-support` is set to `false`(default), include the component **css var
 
 
 ### Summary
-In this article we covered a lot of ground with the card component. First, we created a very simple card with text content only. Then added some images to make the card a bit more appealing. We used some additional Ignite UI for Angular components inside our card, like Avatar Angular Material, buttons and icons, to enrich the experience and add some functionality. And finally, we changed the card's theme by setting some exposed theme colors, creating custom palettes and extending schemas. 
+In this article we covered a lot of ground with the card component. First, we created a very simple card with text content only. Then added some images to make the card a bit more appealing. We used some additional Ignite UI for Angular components inside our card, avatar, buttons and icons, to enrich the experience and add some functionality. And finally, we changed the card's theme by setting some exposed theme colors, creating custom palettes and extending schemas. 
 The card component is capable of displaying more different layouts worth exploring in the Card Demo in the beginning of this article.
 
 ## API and Style References

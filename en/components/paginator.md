@@ -1,6 +1,6 @@
 ---
 title: Angular Paginator Example – Ignite UI for Angular
-_description: Configure Angular pagination and create custom pages in the Angular Material table, or other iterable UI collection, by Ignite UI, get data for the requested pages with variety of angular events.
+_description: Configure Angular pagination and create custom pages in the Angular table, or other iterable UI collection, by Ignite UI, get data for the requested pages with variety of angular events.
 _keywords: angular paginator, angular paginator component, angular ui components, igniteui for angular, infragistics
 ---
 
