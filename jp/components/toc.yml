@@ -1043,6 +1043,7 @@
   sortable: true
 - name: Toolbar
   href: menus/toolbar.md
+  preview: true
 - name: Navigation Drawer
   href: navdrawer.md
   updated: false
