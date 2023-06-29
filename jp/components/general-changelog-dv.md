@@ -15,9 +15,17 @@ Ignite UI for Angular の各バージョンのすべての重要な変更は、�
 > このトピックでは、igniteui-angular パッケージに含まれていないコンポーネントの変更についてのみ説明します。
 > igniteui-angular コンポーネントに固有の変更については、[Ignite UI Angular 変更](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md) の CHANGELOG.MD を参照してください。
 
+## **16.1.0**
+
 ### 新しいコンポーネント
 
-*   [Toolbar](menus/toolbar.md) - ベータ版
+*   [Toolbar](menus/toolbar.md) - ベータ版。このコンポーネントは、主にチャート コンポーネントで使用される UI 操作のコンパニオン コンテナーです。ツールバーは、[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) または [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) コンポーネントにリンクされると、プロパティとツール項目のプリセットで動的に更新されます。プロジェクト用のカスタム ツールを作成して、エンド ユーザーが変更を提供できるようになり、無限のカスタマイズが可能になります。
+
+### igniteui-angular-charts チャート
+
+*   [ValueLayer](charts/features/chart-overlays.md#angular-value-layer) - `ValueLayer` という名前の新しいシリーズ タイプが公開されました。 これにより、Maximum、Minimum、Average など、プロットされたデータのさまざまな焦点のオーバーレイを描画できます。これは、新しい `ValueLines` コレクションに追加することで、[`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) と [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html) に適用されます。
+
+*   **ダッシュ配列**を [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) のシリーズのさまざまな部分に適用できるようになりました。これは、チャートにプロットされた[シリーズ](charts/types/line-chart.md#angular-折れ線チャートのスタイル設定)、チャートの\[グリッド線]\(charts/features/chart-axis-gridlines.md
 
 ## **16.0.0 (May 2023)**
 
