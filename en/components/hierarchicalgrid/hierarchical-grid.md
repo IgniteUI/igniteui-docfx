@@ -1,6 +1,6 @@
 ---
 title: Angular Hierarchical Data Grid | Material Table | Ignite UI for Angular | Infragistics
-_description: Learn how to use Ignite UI for Angular data grid, based on Angular Material Table and create a touch-responsive angular component with variety of angular events.
+_description: Learn how to use Ignite UI for Angular data grid, based on Angular Table and create a touch-responsive angular component with variety of angular events.
 _keywords: angular hierarchical data grid, angular hierarchical table, angular hierarchical data grid component, angular hierarchical table component, angular UI components, igniteui for angular, infragistics
 ---
 

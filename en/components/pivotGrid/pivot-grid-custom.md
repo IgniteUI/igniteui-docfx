@@ -1,7 +1,7 @@
 ---
 title: Angular Pivot Grid Custom Remote | Pivot Tables | Infragistics
 _description: Create fast, responsive Angular pivot grids and tables with Ignite UI for Angular. Perform complex data analysis via pivot data.
-_keywords: angular pivot grid, angular material pivot table, ignite ui for angular, pivot grid customization, pivot grid remote, pivot remote
+_keywords: angular pivot grid, Angular pivot table, ignite ui for angular, pivot grid customization, pivot grid remote, pivot remote
 ---
 
 

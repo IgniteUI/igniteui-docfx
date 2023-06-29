@@ -1,7 +1,7 @@
 ---
 title: Angular ピボット グリッド機能 | ピボット テーブル | インフラジスティックス
 _description: Ignite UI for Angular を使用して、高速で応答性の高い Angular ピボット グリッドとテーブルを作成します。ピボット データを介して複雑なデータ分析を実行します。
-_keywords: angular ピボット グリッド, angular material ピボット テーブル, ignite ui for angular, ピボット グリッド機能, ピボット機能
+_keywords: angular ピボット グリッド, Angular ピボット テーブル, ignite ui for angular, ピボット グリッド機能, ピボット機能
 _language: ja
 ---
 
