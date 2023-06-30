@@ -1,6 +1,6 @@
 ---
 title: 丸み
-_description: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ
+_description: Ignite UI for Angular は、border-radius を変更してコンポーネントの形を変更できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ 
 _language: ja
 ---
@@ -10,107 +10,85 @@ _language: ja
 <div class="divider"></div>
 
 ## 概要
-丸みは、他のプロパティと同様に、グローバル テーマとコンポーネント テーマ、または以下の例に示すようなスキーマで設定されます。
+境界半径 (border-radius) は、コンポーネントのテーマ スキーマで定義されます (以下の例を参照)。この方法で定義されたコンポーネントの境界半径は、[theme]({environment:sassApiUrl}/index.html#mixin-theme) ミックスインの `$roundness` パラメーター、または `--ig-radius-factor` と呼ばれる単一の CSS 変数を介して制御できます。
+
 ```scss
-// Make all components sharp by setting the roundness factor to 0.
+$light-toast: (
+    ...,
+    border-radius: (rem(26px), rem(0), rem(26px)),
+);
+```
+
+上記の例からわかるように、[Toast]({environment:sassApiUrl}/index.html#variable-light-toast) のコンポーネント スキーマは、境界半径を 3 つの値のリストとして定義します。最初の値はデフォルトの境界半径です (`$roundness` または `--ig-radius-factor` が宣言されていない場合など)。2 番目の値は、許容される最小境界半径を示します (`$roundness` または `--ig-radius-factor` が `0` に設定されている場合など)。3 番目の値は、許容される最大境界半径を示します(`$roundness` または `--ig-radius-factor` が `1` に設定されている場合など)。トースト コンポーネントでは、デフォルト値と最大値が一致します。`$roundness` または `--ig-radius Factor` に割り当てられた 0 から 1 までの値は、トーストの境界半径を最大値のパーセンテージとして設定します。たとえば、値を `.5` に設定すると、トースト コンポーネントの境界半径が、許容される最大境界半径の 50% になります (13 ピクセル)。
+
+```scss
+// Make all components sharp by setting the roundness parameter to 0.
 @include theme(
     ...,
     $roundness: 0
 );
 ```
 
-または、個々のコンポーネントごとにスキーマを変更して、デフォルトで値を設定することもできます。グローバル構成が常に優先されることに注意してください。
+### 使用方法
+上記の例のトーストのデフォルト値を変更できます。
+
+トーストが結果のテーマの `$roundness` または `--ig-radius-factor` 変数の影響を受けたい場合は、Ignite UI for Angular パッケージで提供される `border-radius` 関数を使用します。
 
 ```scss
-$_material-shape-button: (
-    border-radius: .2
+// Change the default, min and max values,
+// while preserving customization via $roundness or --ig-radius-factor.
+$toast-theme: (
+    ...,
+    border-radus: border-radius(rem(4px), rem(4px), rem(16px))
 );
+
+@include css-vars($toast-theme);
 ```
 
-上記の例のように [Button テーマ]({environment:sassApiUrl}/index.html#function-button-theme)のコンポーネント スキーマはすべてのボタン タイプのデフォルトの border-radius を定義します。
+border-radius を `--ig-radius-factor` の変更の影響を受けずに定数値にしたい場合は、それを border-radius パラメーターに直接渡すだけです。
 
-次の例を見てみましょう。 
-
-デフォルトの `border-radius` 値は `.2` に設定され、最終的に 4px が設定されます。0 から 1 の間のこの小数部は、許容される丸みの最小値と最大値を表します。0 は最小の境界線半径 (0px) で 1 は最大 (20px) です。ピクセルの最小値と最大値は、Sass テーマの各コンポーネントで定義されます。
-
-フラクションのみに制限することはしません。ピクセル、相対単位 (em または rem) など任意の単位を使用して、明示的な境界線半径の制限を上書きできます。
-
-フラクションを使用する場合、テーマ エンジンによって各コンポーネントの min と max の値に自動的に制限されます。
-
-## 使用方法 
-上記の例のボタンのデフォルト値を変更できます。
-
-テーマ ミックスインの使用:
 ```scss
-$my-button-theme: button-theme(
-    $border-radius: .5 .2 .5 .2, // resolves to 10px 4px 10px 4px
+// Will be unaffected by changes to $roundess or --ig-radius-factor.
+$toast-theme: (
+    ...,
+    border-radus: rem(4px)
 );
 
-@include button($my-button-theme);
+@include css-vars($toast-theme);
 ```
 
-コンポーネント スキーマの使用:
-```scss
-$my-flat-button: extend(
-    $_material-flat-button,
-    (
-        border-radius: .5 .2 .5 .2
-    )
-);
-
-$my-light-schema: extend(
-    $_material-light-schema, 
-    (
-        igx-button: $my-flat-button
-    )
-);
-
-@include theme(
-    $palette: $light-material-palette,
-    $schema: $my-light-schema
-);
-```
-
-以下は上記コード スニペットの結果です。
-
-<div class="sample-container loading" style="height: 250px">
-    <iframe id="buttons-roundness-sample-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/data-entries/buttons-roundness-sample" onload="onSampleIframeContentLoaded(this);"></iframe>
-</div>
-<p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
-<div>
-<button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="buttons-roundness-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox</button>
-<button data-localize="stackblitz" disabled class="stackblitz-btn" data-iframe-id="buttons-roundness-sample-iframe" data-demos-base-url="{environment:demosBaseUrl}">StackBlitz</button>
-</div>
 <div class="divider--half"></div>
 
-## ベースラインの丸み
-以下のテーブルは、各コンポーネントのデフォルトの丸み、およびその最小境界と最大境界を示しています。
+### ベースライン境界半径の値
+以下の表は、マテリアル スキーマで定義されているコンポーネントの境界半径値の一部の抜粋を示しています。
 
-|                     | **角の形を変更できるか？** | **Min/Max 境界** | **ベースライン テーマ値** |
-|---------------------|----------------------------|------------------------|---------------------------|
-| **Button(Flat)**    | 〇; 〇; 〇; 〇;        | 0 - 20px               | 4px                       |
-| **Button(Raised)**  | 〇; 〇; 〇; 〇;        | 0 - 20px               | 4px                       |
-| **button(Fab)**     | 〇; 〇; 〇; 〇;        | 12px - 28px            | 28px                      |
-| **button(Icon)**    | 〇; 〇; 〇; 〇;        | 0 - 18px               | 18px                      |
-| **Button-group**    | 〇; 〇; 〇; 〇;        | 0 - 20px               | 4px                       |
-| **Chip**            | 〇; 〇; 〇; 〇;        | 0 - 20px               | 4px                       |
-| **Card**            | 〇; 〇; 〇; 〇;        | 0 - 24px               | 4px                       |
-| **Carousel**        | 〇; 〇; 〇; 〇;        | 0 - 36px               | 0                         |
-| **Dialog**          | 〇; 〇; 〇; 〇;        | 0 - 36px               | 4px                       |
-| **Drop-down**       | 〇; 〇; 〇; 〇;        | 0 - 20px               | 4px                       |
-| **Expansion panel** | 〇; 〇; 〇; 〇;        | 0 - 16px               | 0                         |
-| **input(Border)**   | 〇; 〇; 〇; 〇;        | 0 - 20px               | 4px                       |
-| **input(Box)**      | 〇; 〇; x; x;          | 0 - 20px               | 4px 4px 0 0               |
-| **input(Search)**   | 〇; 〇; 〇; 〇;        | 0 - 20px               | 4px                       |
-| **List**            | 〇; 〇; 〇; 〇;        | 0 - 24px               | 0                         |
-| **List item**       | 〇; 〇; 〇; 〇;        | 0 - 24px               | 0                         |
-| **Navdrawer**       | 〇; 〇; 〇; 〇;        | 0 - 36px               | 0                         |
-| **Snackbar**        | 〇; 〇; 〇; 〇;        | 0 - 24px               | 4px                       |
-| **Tooltip**         | 〇; 〇; 〇; 〇;        | 0 - 16px               | 4px                       |
-| **Toast**           | 〇; 〇; 〇; 〇;        | 0 - 26px               | 26px                      |
+| **コンポーネント**          | **Min/Max 境界** | **デフォルトの境界** |
+|------------------------|--------------------|--------------------|
+| **Button(Flat)**       |  0 / 20px          | 4px                |
+| **Button(Raised)**     |  0 / 20px          | 4px                |
+| **button(Fab)**        |  12px / 28px       | 28px               |
+| **button(Icon)**       |  0 / 18px          | 18px               |
+| **Button-group**       |  0 / 20px          | 4px                |
+| **Chip**               |  0 / 20px          | 4px                |
+| **Card**               |  0 / 24px          | 4px                |
+| **Carousel**           |  0 / 36px          | 0                  |
+| **Dialog**             |  0 / 36px          | 4px                |
+| **Drop-down**          |  0 / 20px          | 4px                |
+| **Expansion panel**    |  0 / 16px          | 0                  |
+| **input(Border)**      |  0 / 20px          | 4px                |
+| **input(Box)**         |  0 / 20px          | 4px 4px 0 0        |
+| **input(Search)**      |  0 / 20px          | 4px                |
+| **List**               |  0 / 24px          | 0                  |
+| **List item**          |  0 / 24px          | 0                  |
+| **Navdrawer**          |  0 / 36px          | 0                  |
+| **Snackbar**           |  0 / 24px          | 4px                |
+| **Tooltip**            |  0 / 16px          | 4px                |
+| **Toast**              |  0 / 26px          | 26px               |
 
+各テーマのデフォルトおよび最小/最大半径値を確認するには、各コンポーネントの [スキーマ]({environment:sassApiUrl}/index.html) ドキュメントを参照してください。
 
 <div class="divider--half"></div>
+
 コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
