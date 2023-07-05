@@ -1,7 +1,7 @@
 @@if(igxName === 'IgxGrid'){
 ---
 title: Angular Data Grid の高度なフィルタリング - Ignite UI for Angular
-_description: Angular マテリアル テーブルを使用してデータの高度なフィルターを構成する方法を学びます。グリッドの高度なフィルタリングは、これまで以上に便利で魅力的です。
+_description: Angular テーブルを使用してデータの高度なフィルターを構成する方法を学びます。グリッドの高度なフィルタリングは、これまで以上に便利で魅力的です。
 _keywords: 高度なフィルター, igniteui for angular, インフラジスティックス
 _language: ja
 ---
@@ -9,7 +9,7 @@ _language: ja
 @@if(igxName !== 'IgxGrid'){
 ---
 title: Angular Data Grid の高度なフィルタリング - Ignite UI for Angular
-_description: Angular マテリアル テーブルを使用してデータの高度なフィルターを構成する方法を学びます。グリッドの高度なフィルタリングは、これまで以上に便利で魅力的です。
+_description: Angular テーブルを使用してデータの高度なフィルターを構成する方法を学びます。グリッドの高度なフィルタリングは、これまで以上に便利で魅力的です。
 _keywords: 高度なフィルター, igniteui for angular, インフラジスティックス
 _language: ja
 ---
@@ -18,7 +18,7 @@ _language: ja
 
 # Angular @@igComponent 高度なフィルタリング
 
-高度なフィルタリングは、@@igComponent のような任意の Angular Material テーブルの全列に及ぶフィルタリング条件を持つグループを作成できるダイアログを提供します。
+高度なフィルタリングは、@@igComponent のような任意の Angular テーブルの全列に及ぶフィルタリング条件を持つグループを作成できるダイアログを提供します。
 
 ## Angular @@igComponent 高度なフィルタリングの例
 

@@ -1,6 +1,6 @@
 ---
 title: Angular Paginator の例 – Ignite UI for Angular
-_description: Angular ページネーションを設定し、Ignite UI を使用して Angular Material テーブルまたは他の反復可能な UI コレクションにカスタム ページを作成し、要求されたページのデータをさまざまな Angular イベントで取得します。
+_description: Angular ページネーションを設定し、Ignite UI を使用して Angular テーブルまたは他の反復可能な UI コレクションにカスタム ページを作成し、要求されたページのデータをさまざまな Angular イベントで取得します。
 _keywords: angular paginator, angular paginator コンポーネント, angular ui コンポーネント, igniteui for angular, インフラジスティックス
 _language: ja
 ---

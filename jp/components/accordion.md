@@ -242,7 +242,7 @@ Angular [Accordion コンポーネント]({environment:angularApiUrl}/classes/ig
 <div class="divider--half"></div>
 
 ## キーボード ナビゲーション
-Angular Material Accordion のキーボード ナビゲーションは、さまざまなキーボード操作をエンドユーザーに提供します。この機能はデフォルトで有効になっており、エンドユーザーは簡単にパネル間を移動できます。[IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) ナビゲーションは W3C アクセシビリティ標準に準拠しており、便利に使用できます。
+Ignite UI for Angular Accordion のキーボード ナビゲーションは、さまざまなキーボード操作をエンドユーザーに提供します。この機能はデフォルトで有効になっており、エンドユーザーは簡単にパネル間を移動できます。[IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) ナビゲーションは W3C アクセシビリティ標準に準拠しており、便利に使用できます。
 
 **キーの組み合わせ**
 

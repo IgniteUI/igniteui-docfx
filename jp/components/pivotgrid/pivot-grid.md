@@ -1,7 +1,7 @@
 ---
 title: Angular ピボット グリッドおよびテーブル - Ignite UI for Angular
 _description: Ignite UI for Angular を使用して、高速で応答性の高い Angular ピボット グリッドとテーブルを作成します。複雑な分析を実行し、データの並べ替え、グループ化、またはフィルタリングを適用します。
-_keywords: angular pivot grid, angular pivot grid コンポーネント, angular pivot table, angular pivot table コンポーネント, angular pivot data table, angular material pivot table, angular ui コンポーネント, ignite ui for angular
+_keywords: angular pivot grid, angular pivot grid コンポーネント, angular pivot table, angular pivot table コンポーネント, angular pivot data table, Angular pivot table, angular ui コンポーネント, ignite ui for angular
 _language: ja
 ---
 

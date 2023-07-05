@@ -1,7 +1,7 @@
 @@if(igxName === 'IgxGrid') {
 ---
 title: Angular Grid ページング | Angular ページネーション テーブル | インフラジスティックス
-_description: Angular ページネーションを構成して Ignite UI の Angular マテリアル テーブルにカスタム ページを作成し、さまざまな Angular イベントで要求されたページのデータを取得します。
+_description: Angular ページネーションを構成して Ignite UI の Angular テーブルにカスタム ページを作成し、さまざまな Angular イベントで要求されたページのデータを取得します。
 _keywords: angular ページネーション, igniteui for angular, インフラジスティックス
 _language: ja
 ---
@@ -9,7 +9,7 @@ _language: ja
 @@if(igxName !== 'IgxGrid') {
 ---
 title: Angular Grid ページング | Angular ページネーション テーブル | インフラジスティックス
-_description: Angular ページネーションを構成して Ignite UI の Angular マテリアル テーブルにカスタム ページを作成し、さまざまな Angular イベントで要求されたページのデータを取得します。
+_description: Angular ページネーションを構成して Ignite UI の Angular テーブルにカスタム ページを作成し、さまざまな Angular イベントで要求されたページのデータを取得します。
 _keywords: angular ページネーション, igniteui for angular, インフラジスティックス
 _canonicalLink: grid/paging
 _language: ja
@@ -17,7 +17,7 @@ _language: ja
 }
 
 # Angular @@igComponent ページネーション
-ページネーションは、大量のデータセットを類似したコンテンツを持つ一連のページに分割するために使用されます。Angular テーブルのページネーションにより、ユーザー エクスペリエンスとデータ操作が向上します。@@igComponent ページネーションは、列の追加と同様に、`igx-paginator` タグを定義することにより、グリッド ツリーに投影された個別のコンポーネントを介して構成できます。他の Angular Material テーブルと同様に、@@igComponent のページネーションはカスタム ページのテンプレートをサポートします。
+ページネーションは、大量のデータセットを類似したコンテンツを持つ一連のページに分割するために使用されます。Angular テーブルのページネーションにより、ユーザー エクスペリエンスとデータ操作が向上します。@@igComponent ページネーションは、列の追加と同様に、`igx-paginator` タグを定義することにより、グリッド ツリーに投影された個別のコンポーネントを介して構成できます。他の Angular テーブルと同様に、@@igComponent のページネーションはカスタム ページのテンプレートをサポートします。
 
 ## Angular ページネーションの例
 

@@ -7,7 +7,7 @@ _language: kr
 
 ## Angular Month Picker Overview
 <p class="highlight">The Ignite UI for Angular Month Picker component provides an easy and intuitive way to select a specific month and year using a month-year calendar view. The component allows single selection, customizable display format and supports localization.</p>
-In general, the Angular Material Month Picker offers two basic ways for choosing a date - from a calendar pop-up or by entering a date through text input. One of the key features of the Angular Month Picker are: validation, custom date formats, range restriction, and disable dates, and more.
+In general, the Angular Month Picker offers two basic ways for choosing a date - from a calendar pop-up or by entering a date through text input. One of the key features of the Angular Month Picker are: validation, custom date formats, range restriction, and disable dates, and more.
 
 ### Angular Month Picker Example
 What you see here is a basic Angular Month Picker example with a the component's default view, enabling users to select the year and the month.  
