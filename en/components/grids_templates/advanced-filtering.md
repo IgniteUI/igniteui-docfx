@@ -17,7 +17,7 @@ _canonicalLink: grid/advanced-filtering
 
 # Angular @@igComponent Advanced Filtering
 
-The Advanced filtering provides a dialog which allows the creation of groups with filtering conditions across all columns for any Angular Material table like the @@igComponent. 
+The Advanced filtering provides a dialog which allows the creation of groups with filtering conditions across all columns for any [Angular Material table](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/grid) like the @@igComponent. 
 
 ## Angular @@igComponent Advanced Filtering Example
 
@@ -172,7 +172,7 @@ It's super easy to configure the advanced filtering to work outside of the @@igC
 ```
 }
 
-
+You can also see how our [drag and drop App Builder™](https://www.infragistics.com/products/appbuilder) can streamline the entire design-to-Angular-code story. 
 <div class="divider--half"></div>
 
 

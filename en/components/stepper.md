@@ -5,7 +5,7 @@ _keywords: Angular Stepper component, Angular Wizard Component, Angular Stepper 
 ---
 
 # Angular Stepper Component Overview
-The Angular material stepper is a highly customizable component that visualizes content as a process and shows its progress by dividing the content into successive steps. It appears as a vertical or horizontal line. Provided by the Ignite UI for Angular library, the stepper component delivers a wizard-like workflow and multiple features like step validation, styling, orientation and keyboard navigation. 
+The Angular material stepper is a highly customizable component that visualizes content as a process and shows its progress by dividing the content into successive steps. It appears as a vertical or horizontal line. Provided by the Ignite UI for [Angular Component library](https://www.infragistics.com/products/ignite-ui-angular), the stepper component delivers a wizard-like workflow and multiple features like step validation, styling, orientation and keyboard navigation. 
 
 ## Angular Stepper Example
 In this Angular Stepper example, you can see how users are given the opportunity to customize their credit card and they pass trough the process in five logical steps - selecting card type, adding business information, filling in personal information, providing shipping details and confirmation.
@@ -299,6 +299,8 @@ The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponen
  - <kbd>Enter / Space</kbd> - activates the currently focused step
  
  > Note: By design when the user presses the <kbd>Tab</kbd> key over the step header the focus will move to the step content container. In case the container should be skipped the developer should set the content container `[tabIndex]="-1"`.
+
+The Stepper Component is also available in the low-code, [drag and drop App Builder™](https://www.infragistics.com/products/appbuilder). 
 
 ## Angular Stepper Styling
 Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the `igx-stepper` appearance. 
