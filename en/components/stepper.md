@@ -114,14 +114,14 @@ Steps can be declared using one of the following approaches.
     </igx-step>
 </igx-stepper>
 ```
-For each step the user has the ability to configure indicator, title, subtitle and content using the `igxStepIndicator`, `igxStepTitle`, `igxStepSubTitle` and `igxStepContent` directives as follows: 
+For each step the user has the ability to configure indicator, title, subtitle and content using the `igxStepIndicator`, `igxStepTitle`, `igxStepSubtitle` and `igxStepContent` directives as follows: 
 
 ```html
 <igx-stepper>
     <igx-step>
        <igx-icon igxStepIndicator>home</igx-icon>
        <p igxStepTitle>Home</p>
-       <p igxStepSubTitle>Home Sub Title</p>
+       <p igxStepSubtitle>Home Sub Title</p>
        <div igxStepContent>
           ...
        </div>
