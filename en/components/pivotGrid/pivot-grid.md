@@ -6,7 +6,7 @@ _keywords: angular pivot grid, angular pivot grid component, angular pivot table
 
 # Angular Pivot Grid Component Overview
 
-Ignite UI for Angular Pivot Grid is a UI component representing a table of grouped values and aggregates that lets you organize and summarize data in a tabular form. It is a data summarization tool that is used to reorganize and summarize selected columns and rows of data coming from a spreadsheet or database table to obtain a desired report.
+Ignite UI for Angular Pivot Grid is one of our best [Angular Components](https://www.infragistics.com/products/ignite-ui-angular), representing a table of grouped values and aggregates that lets you organize and summarize data in a tabular form. It is a data summarization tool that is used to reorganize and summarize selected columns and rows of data coming from a spreadsheet or database table to obtain a desired report.
 
 ## What is Angular Pivot Grid? 
 
@@ -87,7 +87,7 @@ The Angular Pivot Grid Component can be configured via the [`pivotConfiguration`
 </igx-pivot-grid>
 ```
 
-It is defined by three main dimensions: `rows`, `columns` and `values`. The `rows` and `columns` define the grouped structure that is displayed in the rows and columns of the grid. The `values` define the aggregation fields and the aggregation that will be used to calculate and display the related values of the groups.
+It is defined by three main dimensions: `rows`, `columns` and `values`. The `rows` and `columns` define the grouped structure that is displayed in the rows and columns of the [Angular grid](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/grid). The `values` define the aggregation fields and the aggregation that will be used to calculate and display the related values of the groups.
 
 A filter can also be defined via the `filters` configuration property. It can be used for fields that you do not want to add as a dimension or a value but would like to filter their related member values via the UI.
 
@@ -289,6 +289,7 @@ Resulting in the following view, which groups the Product Categories unique colu
            iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-basic" alt="Angular Pivot Grid Basic Example">
 </code-view>
 
+And if you want to streamline the entire app development process, you can try out our [WYSIWYG App Builder™](https://www.infragistics.com/products/appbuilder) for your next Angular app. 
 
 ## Known Issues and Limitations
 
