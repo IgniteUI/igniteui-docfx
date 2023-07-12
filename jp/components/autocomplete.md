@@ -27,7 +27,7 @@ Angular Autocomplete は、入力中に候補のリストから項目を簡単�
 
 ## Ignite UI for Angular Autocomplete を使用した作業の開始
 
-Ignite UI for Angular Autocomplete ディレクティブを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
+Ignite UI for Angular の [Angular コンポーネント](https://jp.infragistics.com/products/ignite-ui-angular) と Autocomplete ディレクティブを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
 ng add igniteui-angular
@@ -235,6 +235,8 @@ export class AutocompleteComponent {
 
 >[!NOTE]
 >Angular Autocomplete が開いた際にリストの最初の項目が自動的に選択されます。リストがフィルターされたときも同様です。
+
+また、[WYSIWYG App Builder™](https://jp.infragistics.com/products/appbuilder) が、実際の Angular コンポーネントを使用して、デザインからコード作成までのストーリー全体を 80% 効率化する方法を確認することもできます。
 
 ## 互換性サポート
 `igxAutocomplete` ディレクティブを適用すると要素を以下の ARIA 属性で装飾します。

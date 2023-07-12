@@ -18,7 +18,7 @@ _language: ja
 
 # Angular @@igComponent 高度なフィルタリング
 
-高度なフィルタリングは、@@igComponent のような任意の Angular テーブルの全列に及ぶフィルタリング条件を持つグループを作成できるダイアログを提供します。
+高度なフィルタリングは、@@igComponent のような任意の [Angular テーブル](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid/grid)の全列に及ぶフィルタリング条件を持つグループを作成できるダイアログを提供します。
 
 ## Angular @@igComponent 高度なフィルタリングの例
 
@@ -173,6 +173,7 @@ ngAfterViewInit(): void {
 ```
 }
 
+また、[ドラッグアンドドロップ App Builder™](https://jp.infragistics.com/products/appbuilder) が、デザインから Angular コード作成へのストーリー全体をどのように効率化できるかを確認することもできます。
 
 <div class="divider--half"></div>
 
@@ -423,7 +424,7 @@ $custom-drop-down-schema: extend($_light-drop-down,
 );
 ```
 
-カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) のいずれかを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネント テーマに追加するものです。
+カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) のいずれかを**拡張する**必要があります。これは基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネント テーマに追加するものです。
 
 ```scss
 $custom-light-schema: extend($light-schema,(
