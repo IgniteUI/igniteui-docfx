@@ -238,7 +238,7 @@ expectedData = [
 }
 @@if (igxName === 'IgxTreeGrid') {
 > [!NOTE]
-> [`selectedCells()`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#selectedCells) will return cells from all visible rows (rows in the grid's view port) and from all columns, regardless if they are in or out of view. [`getSelectedData()`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#getSelectedData) will also return the selected cell data.
+> [`selectedCells()`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#selectedCells) will return cells from all visible rows (rows in the grid's view port) and from all columns, including columns that are out of view. [`getSelectedData()`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#getSelectedData) will also return the selected cell data.
 > [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getSelectedRanges) will return the current selected ranges in the grid from both keyboard and pointer interactions. The type is GridSelectionRange[].
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
