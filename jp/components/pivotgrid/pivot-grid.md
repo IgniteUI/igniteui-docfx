@@ -7,7 +7,7 @@ _language: ja
 
 # Angular Pivot Grid (ピボット グリッド) コンポーネントの概要
 
-Ignite UI for Angular Pivot Grid は、グループ化された値と集計のテーブルを表す UI コンポーネントであり、データを表形式で整理して要約することができます。これは、スプレッドシートまたはデータベース テーブルから取得したデータの選択された列と行を再編成および要約して、目的のレポートを取得するために使用されるデータ要約ツールです。
+Ignite UI for Angular Pivot Grid は、当社の最高の [Angular コンポーネント](https://jp.infragistics.com/products/ignite-ui-angular)の 1 つであり、グループ化された値と集計のテーブルを表す UI コンポーネントであり、データを表形式で整理して要約することができます。これは、スプレッドシートまたはデータベース テーブルから取得したデータの選択された列と行を再編成および要約して、目的のレポートを取得するために使用されるデータ要約ツールです。
 
 ## Angular ピボット グリッドの概要 
 
@@ -88,7 +88,7 @@ Angular ピボット グリッド コンポーネントは、[`pivotConfiguratio
 </igx-pivot-grid>
 ```
 
-これは、`rows` (行)、`columns` (列)、`values` (値) の 3 つの主要なディメンションによって定義されます。`rows`と `columns` は、グリッドの行と列に表示されるグループ化された構造を定義します。`values` は、グループの関連する値を計算および表示するために使用される集計フィールドと集計を定義します。
+これは、`rows` (行)、`columns` (列)、`values` (値) の 3 つの主要なディメンションによって定義されます。`rows`と `columns` は、[Angular グリッド](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid/grid)の行と列に表示されるグループ化された構造を定義します。`values` は、グループの関連する値を計算および表示するために使用される集計フィールドと集計を定義します。
 
 フィルターは、`filters` 構成プロパティを介して定義することもできます。ディメンションまたは値として追加したくないが、UI を介して関連するメンバー値をフィルタリングしたいフィールドに使用できます。
 
@@ -289,6 +289,7 @@ public data = [
            iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-basic" alt="Angular ピボット グリッドの基本例">
 </code-view>
 
+また、アプリ開発プロセス全体を合理化したい場合は、次回の Angular アプリ開発から [WYSIWYG App Builder™](https://jp.infragistics.com/products/appbuilder) を試すことができます。
 
 ## 既知の問題と制限
 
