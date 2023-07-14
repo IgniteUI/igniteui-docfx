@@ -1,7 +1,7 @@
 ---
-title: ページ レイアウト | IgniteUI for Angular | インフラジスティックス
-_description: Angular アプリケーションのページ レイアウトをカスタマイズする方法を説明します。
-_keywords: ページ レイアウト, ignite ui for angular, インフラジスティックス
+title: Angular ページのレイアウト要素 | WPF vs Angular 比較ガイド | インフラジスティックス
+_description: Flexbox や Grid などの CSS 機能を使用する詳細なチュートリアルで、Angular アプリケーションのページ レイアウトをカスタマイズする方法について説明します。 
+_keywords: angular ページのレイアウト要素, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 

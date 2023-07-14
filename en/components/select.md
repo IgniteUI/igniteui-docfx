@@ -275,6 +275,8 @@ You can customize the default toggle button, using the `igxSelectToggleIcon` dir
 >[!NOTE]
 >`igx-select` supports only *single* selection of items.
 
+You can also try out the [drag and drop App Builder™](https://www.infragistics.com/products/appbuilder) to see how it automates certain processes and reduces the need for excessive hand coding when building your next Angular app. 
+
 ## Custom Overlay Settings
 You can create custom [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html). To do this you first define your template like so:
 ```html

@@ -7,7 +7,7 @@ _keywords: Angular Query Builder component, Angular Query Builder control, Ignit
 
 # Angular Query Builder Component Overview
 
-Angular Query Builder provides a rich UI that allows developers to build complex data filtering queries for a specified data set. With this component they can build a tree of expressions and set AND/OR conditions between them with editors and condition lists determined by each field's data type. The expression tree can then be easily transformed to a query in the format the backend supports.
+Angular Query Builder is part of our [Angular Components](https://www.infragistics.com/products/ignite-ui-angular) and it provides a rich UI that allows developers to build complex data filtering queries for a specified data set. With this component they can build a tree of expressions and set AND/OR conditions between them with editors and condition lists determined by each field's data type. The expression tree can then be easily transformed to a query in the format the backend supports.
 
 <p class="highlight">
 
@@ -439,6 +439,8 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 >[!NOTE]
 >The sample will not be affected by the selected global theme from `Change Theme`.
 <div class="divider--half"></div>
+
+You can also streamline your Angular app development using [WYSIWYG App Builder™](https://www.infragistics.com/products/appbuilder) with real UI components. 
 
 ## API References
 <div class="divider--half"></div>
