@@ -1,7 +1,7 @@
 ---
-title: Angular コンポーネントを使用した UI の作成 | IgniteUI for Angular | インフラジスティックス
-_description: WPF から Angular へ移行時に Angularコンポーネントを使用してユーザー インターフェイスを作成する方法を説明します。
-_keywords: angular コンポーネント, ignite ui for angular, インフラジスティックス
+title: Angular コンポーネントを使用したユーザー インターフェイスの作成 | WPF vs Angular 比較ガイド | インフラジスティックス
+_description: Angular コンポーネントを使用して Angular アプリケーションでユーザー インターフェイスを作成する方法について説明します。同様の WPF コンポーネントが Angular でどのように変換されるかを確認できます。
+_keywords: angular コンポーネントを使用したユーザー インターフェイスの作成, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 
