@@ -2,7 +2,7 @@
 title: Angular Toolbar コンポーネント | Ignite UI for Angular
 _description: Angular ツールバー コンポーネントを簡単に始める方法をご覧ください。データ チャートと互換性があります。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular ツールバー コンポーネント, Angular ツールバー コントロール
-mentionedTypes: ["Toolbar", "DomainChart", "CategoryChart", "XamDataChart"]
+mentionedTypes: ["Toolbar", "ToolAction", "DomainChart", "CategoryChart", "XamDataChart"]
 _language: ja
 ---
 
@@ -87,7 +87,7 @@ IgrDataChartCategoryTrendLineModule.register();
 
 [`IgxToolActionComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html) オブジェクトの [`overlayId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#overlayid)、[`beforeId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#beforeid)、および [`afterId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#afterid) プロパティを使用して、新規および既存のツールの位置を変更したり、非表示にマークしたりすることができます。ToolActions は [`visibility`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#visibility) プロパティも公開します。
 
-次の例は、組み込みの `ZoomReset` と `AnalyzeMenu` メニュー ツール アクションの両方を非表示にする方法を示しています。`ZoomReset` ツール操作の新しいインスタンスが追加され、[`afterId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#afterid) プロパティを使用して `ZoomMenu` 内に配置され、それを [`zoomOut`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#zoomout) に割り当てます。これにより、新しいリセット ツールが `ZoomMenu` の下部に表示されます。
+次の例は、組み込みの **ZoomReset** と **AnalyzeMenu** メニュー ツール アクションの両方を非表示にする方法を示しています。**ZoomReset** ツール操作の新しいインスタンスが追加され、[`afterId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#afterid) プロパティを使用して **ZoomMenu** 内に配置され、それを **ZoomOut** に割り当てます。これにより、新しいリセット ツールが **ZoomMenu** の下部に表示されます。
 
 <code-view style="height: 600px" alt="Angular Toolbar の例"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -115,7 +115,7 @@ Angular ツールバーには、`Target` プロパティが含まれています
   </igx-data-chart>
 ```
 
-[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) が Toolbar にリンクされると、いくつかの既存の [`IgxToolActionComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html) 項目とメニューが使用可能になります。以下は、組み込みの Angular [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) ツール操作とそれに関連付けられた `OverlayId` のリストです。
+[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) が Toolbar にリンクされると、いくつかの既存の [`IgxToolActionComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html) 項目とメニューが使用可能になります。以下は、組み込みの Angular [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) ツール操作とそれに関連付けられた [`overlayId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#overlayid) のリストです。
 
 ズーム操作
 
