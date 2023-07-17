@@ -374,6 +374,7 @@ The following code snippet demonstrates subscribing to the toolbar exporting eve
 ```typescript
 configureExport(args: IGridToolbarExportEventArgs) {
     const options: IgxExporterOptionsBase = args.options;
+    
     options.fileName = `Report_${new Date().toDateString()}`;
 
     if (options instanceof IgxExcelExporterOptions) {
