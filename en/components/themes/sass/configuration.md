@@ -49,7 +49,7 @@ Here's a list of global Sass variables forwarded in the main theming module:
 
 The Ignite UI for Angular themes ship with custom scrollbar styles that allow you to change the width and/or the colors of all scrollbars in your application. To apply the included styles, make sure to set the `ig-scrollbar` class to an element that contains your root app component.
 
-To customize the scrollbar further, you can create a new theme that extends the existing [`scrollbar-theme`]({environment:sassApiUrl}/index.html#function-scrollbar-theme) and accepts the `$schema`, `$thumb-background`, `$track-background` and the `$size` parameters.
+To customize the scrollbar further, you can create a new theme that extends the existing [`scrollbar-theme`]({environment:sassApiUrl}/index.html#function-scrollbar-theme) and accepts the `$schema`, `$thumb-background`, `$track-background` and the `$scrollbar-size` parameters.
 
 ```scss
 // app.component.scss
@@ -60,7 +60,7 @@ $my-scrollbar-theme: scrollbar-theme($thumb-background: black, $track-background
 The parameters can also be directly applied to the scrollbar function to prevent the creation of additional themes.
 ```scss
 // app.component.scss
-@include scrollbar(scrollbar-theme($size: 16px));
+@include scrollbar(scrollbar-theme($scrollbar-size: 16px));
 ```
 
 <div class="divider"></div>
