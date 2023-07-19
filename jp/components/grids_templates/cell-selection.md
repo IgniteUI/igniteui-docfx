@@ -233,17 +233,17 @@ expectedData = [
 
 @@if (igxName === 'IgxGrid') {
 > [!NOTE]
-> [`selectedCells()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectedCells) は、セルがグリッド ビュー ポートに表示されていない場合でも、正しい結果を返します。[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getSelectedData) も、選択したセル データを返します。
+> [`selectedCells()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectedCells) は、表示されているすべての行 (グリッドのビューポート内の行) と、表示されていない列を含むすべての列からセルを返します。[`getSelectedData()`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getSelectedData) も、選択したセル データを返します。
 > [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getSelectedRanges) は、キーボードとポインターの両方の操作からグリッドで現在選択されている範囲を返します。
 }
 @@if (igxName === 'IgxTreeGrid') {
 > [!NOTE]
-> [`selectedCells()`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#selectedCells) は、セルがグリッド ビュー ポートに表示されていない場合でも、正しい結果を返します。[`getSelectedData()`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#getSelectedData) も、選択したセル データを返します。
+> [`selectedCells()`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#selectedCells) は、表示されているすべての行 (グリッドのビューポート内の行) と、表示されていない列を含むすべての列からセルを返します。[`getSelectedData()`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#getSelectedData) も、選択したセル データを返します。
 > [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getSelectedRanges) は、キーボードとポインターの両方の操作からグリッドで現在選択されている範囲を返します。
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 > [!NOTE]
-> [`selectedCells()`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#selectedCells) は、セルがグリッド ビュー ポートに表示されていない場合でも、正しい結果を返します。[`getSelectedData()`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#getSelectedData) も、選択したセル データを返します。
+> [`selectedCells()`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#selectedCells) は、表示されているすべての行 (グリッドのビューポート内の行) と、表示されていない列を含むすべての列からセルを返します。[`getSelectedData()`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#getSelectedData) も、選択したセル データを返します。
 > [`getSelectedRanges(): GridSelectionRange[]`]({environment:angularApiUrl}/classes/igxgridcomponent.html#getSelectedRanges) は、キーボードとポインターの両方の操作からグリッドで現在選択されている範囲を返します。
 }
 
