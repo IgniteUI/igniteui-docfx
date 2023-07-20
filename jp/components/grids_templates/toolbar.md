@@ -40,7 +40,7 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナーとな�
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:420px" 
+<code-view style="height:500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-4" alt="Angular ツールバー グリッドの例">
 </code-view>
@@ -362,7 +362,7 @@ export class AppModule { ... }
 ```typescript
 configureExport(args: IGridToolbarExportEventArgs) {
     const options: IgxExporterOptionsBase = args.options;
-
+    
     options.fileName = `Report_${new Date().toDateString()}`;
 
     if (options instanceof IgxExcelExporterOptions) {
