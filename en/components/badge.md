@@ -118,6 +118,31 @@ We can change the badge shape through the `shape` attribute setting its value to
 
 If everything's done right, you should see the demo sample shown above in your browser.
 
+### Badge Icon
+
+In addition to material icons, the `igx-badge` component also supports usage of [Material Icons Extended](../components/material-icons-extended.md) and any other custom icon set. To add an icon from the material icons extended set inside your badge component, first you have to register it: 
+
+```ts
+export class BadgeIconComponent implements OnInit { 
+    constructor (protected _iconService: IgxIconService) {}
+
+    public ngOnInit() {
+        this._iconService.addSvgIconFromText(heartMonitor.name, heartMonitor.value, 'imx-icons');
+    }
+}
+```
+
+Then, just specify the icon name and family as follows: 
+
+```html 
+<igx-badge icon="heart-monitor" iconSet="imx-icons"></igx-badge>
+```
+
+<code-view style="height: 100px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/badge-icon" >
+</code-view>
+
 ### Badge in List
 
 Let's extend the previous sample and create a list with contacts, similar to those in chat clients. In addition to the contact name, we want to display an avatar and the current state of the contact (online, offline or away). To achieve this, we're using the [`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) and [`igx-avatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) components. For a container, [`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html) is used.
