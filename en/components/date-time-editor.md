@@ -136,8 +136,9 @@ To set a specific input format, pass it as a string to the IgxDateTimeEditor dir
 ```
 
 The table bellow shows formats that are supported by the directive's [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputFormat):
-| Format | Description |
-|:-------:|:-----------|
+
+|  Format  | Description |
+| -------- | ----------- |
 | `d` | Date, will be coerced with a leading zero while editing. |
 | `dd` | Date with an explicitly set leading zero. |
 | `M` | Month, will be coerced with a leading zero while editing. |
