@@ -17,11 +17,12 @@ _language: ja
 * [SliderType]({environment:angularApiUrl}/enums/slidertype.html)
 
 
-###その他のリソース
+### その他のリソース
 
 * [Slider の概要](slider.md)
 
 <div class="divider--half"></div>
+
 コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
