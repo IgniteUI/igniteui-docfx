@@ -91,6 +91,7 @@ Now that you have the Ignite UI for Angular Expansion Panel module or directives
 ## Using the Angular Expansion Panel
 
 The table below shows all the available markup parts for the Angular Expansion Panel.
+
 | Tag Name                          | Description                                                                                                            |
 | :-------------------------------: | :--------------------------------------------------------------------------------------------------------------------: |
 | `igx-expansion-panel`             | The component host - stores header and body.                                                                           |

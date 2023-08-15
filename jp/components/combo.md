@@ -365,7 +365,7 @@ $custom-checkbox-theme: checkbox-theme(
 * [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
 * [IgxComboComponent スタイル]({environment:sassApiUrl}/index.html#function-combo-theme)
 
-その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
+その他の [Angular コンポーネント](https://jp.infragistics.com/products/ignite-ui-angular)およびディレクティブ (またはそのいずれか) で使用した API:
 
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)

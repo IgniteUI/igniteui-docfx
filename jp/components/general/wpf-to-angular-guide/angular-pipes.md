@@ -1,7 +1,7 @@
 ---
-title: Angular パイプでデータを変換 | IgniteUI for Angular | インフラジスティックス
-_description: WPF コンバーターに類似した、Angular パイプを使用してデータを変換する方法を学びます。
-_keywords: transform data, ignite ui for angular, インフラジスティックス
+title: Angular パイプを使用したデータの変換 | WPF vs Angular 比較ガイド | インフラジスティックス
+_description: WPF コンバーターのように、Angular パイプがデータをある値から別の値に変換する方法について説明します。Angular は、一般的なデータ変換用に事前定義されたパイプを提供します。
+_keywords: Angular パイプを使用したデータの変換, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 

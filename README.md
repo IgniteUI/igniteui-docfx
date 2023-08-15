@@ -145,7 +145,7 @@ To generate and display collapsible code snippets on documentation websites, fol
 5. Add the code snippet to the \<code> element.
 
 6. Example:
-```
+```html
 <div class="fancy-details">
     <summary>Example of a successful response body: </summary>
     <code>

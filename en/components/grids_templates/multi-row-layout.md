@@ -108,7 +108,7 @@ The demo below adds additional navigation down/up via the <kbd>Enter</kbd> and <
 </code-view>
 
 
-### Layout Configurator
+## Layout Configurator
 
 Sometimes when configuring a column layout it might be a challenge to calculate and set the proper [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colStart)  and [`colEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colEnd)  or [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowStart)  and [`rowEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowEnd). Especially when there are a lot of columns in a single layout. That is why we have created a small configurator, so you can easily do that and have a similar preview of how it would look inside the igxGrid when applied. You can do the following interactions with it:
 

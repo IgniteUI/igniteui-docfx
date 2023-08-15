@@ -1,7 +1,7 @@
 ---
-title: Angular ディレクティブ | IgniteUI for Angular | インフラジスティックス
-_description: Angular 構造ディレクティブを使用して、カスタム条件に基づいて Angular コンポーネントの外観を設定します。
-_keywords: angular ディレクティブ, ignite ui for angular, インフラジスティックス
+title: Angular 構造ディレクティブ | ngIf, ngswitch | WPF vs Angular 比較ガイド | インフラジスティックス
+_description: ngIf、ngswitch、ngFor などの Angular 9 の構造ディレクティブを使用して、Angular アプリケーションのビューに要素を追加および削除する方法について説明します。
+_keywords: angular 構造ディレクティブ, ignite ui for angular, インフラジスティックス
 _language: ja
 ---
 
