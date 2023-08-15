@@ -107,13 +107,11 @@ You can set icons with content projection:
 
 ### Icon Size
 
-You can customize the icons using CSS. The icon's size can be changed through the `font-size` property. Additionally to center it, set equal values to the `width` and `height` properties:
+You can customize the icons using CSS. To change an icon size use the `--size` CSS variable:
 
 ```scss
-.custom-size{
-    font-size: 56px;
-    width: 56px;
-    height: 56px;
+.custom-size {
+    --size: 56px;
 }
 ```
 <div class="sample-container loading" style="height: 80px">
