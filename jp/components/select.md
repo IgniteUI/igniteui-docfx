@@ -144,8 +144,8 @@ Select コンポーネントは、[入力グループ](input-group.md)に適用�
            iframe-src="{environment:demosBaseUrl}/data-entries/select-input-directives" >
 </code-view>
 
-> [!NOTE]
-Select コンポーネントに [`placeholder`]({environment:angularApiUrl}/classes/igxselectcomponent.html#placeholder) が指定されておらず、選択も行われていない場合、`igxLabel` は遷移し、プレースホルダーが適切な場所に表示されます。
+>[!NOTE]
+>Select コンポーネントに [`placeholder`]({environment:angularApiUrl}/classes/igxselectcomponent.html#placeholder) が指定されておらず、選択も行われていない場合、`igxLabel` は遷移し、プレースホルダーが適切な場所に表示されます。
 
 ### 選択項目のグループ化
 項目グループを視覚的に分離するために、Select コンポーネントは、項目を `<igx-select-item-group>` にラップすることで項目のグループ化をサポートします。
@@ -277,7 +277,9 @@ public greengrocery: Array<{ label: string, items: Array<{ type: string, origin:
 - `Enter` キーまたは `Space` キーを使用して項目を選択します。
 
 >[!NOTE]
->`igx-select` は項目の*単一*選択のみをサポートします。
+>`igx-select` は項目の**単一**選択のみをサポートします。
+
+また、[ドラッグアンドドロップ App Builder™](https://jp.infragistics.com/products/appbuilder) を試して、特定のプロセスを自動化し、次の Angular アプリを構築する際の過度の手動コーディングの必要性を減らす方法を確認することもできます。
 
 ## カスタム オーバーレイ設定
 カスタム [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) を作成できます。テンプレートを以下のように定義します。

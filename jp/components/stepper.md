@@ -6,7 +6,7 @@ _language: ja
 ---
 
 # Angular Stepper (ステッパー) コンポーネントの概要
-Ignite UI for Angular Stepper は高度にカスタマイズ可能なコンポーネントで、必要なプロセスを可視化し、進行状況を各ステップで表示します。垂直線または水平線で表示されます。Ignite UI for Angular ライブラリによって提供されるステッパー コンポーネントは、ウィザードのようなワークフローと、ステップ検証、スタイル設定、向き、キーボード ナビゲーションなどの複数の機能を提供します。 
+Ignite UI for Angular Stepper は高度にカスタマイズ可能なコンポーネントで、必要なプロセスを可視化し、進行状況を各ステップで表示します。垂直線または水平線で表示されます。Ignite UI for [Angular コンポーネント ライブラリ](https://jp.infragistics.com/products/ignite-ui-angular)によって提供されるステッパー コンポーネントは、ウィザードのようなワークフローと、ステップ検証、スタイル設定、向き、キーボード ナビゲーションなどの複数の機能を提供します。
 
 ## Angular Stepper の例
 この Angular Stepper の例では、クレジット カードをカスタマイズでき、カード タイプの選択、ビジネス情報の追加、個人情報の入力、出荷の詳細の提供、確認の 5 つの論理ステップでプロセスを実行します。
@@ -113,14 +113,14 @@ Angular Stepper モジュールまたはディレクティブをインポート�
     </igx-step>
 </igx-stepper>
 ```
-各ステップで、`igxStepIndicator`、`igxStepTitle`、`igxStepSubTitle`、および `igxStepContent` ディレクティブを使用してインジケーター、タイトル、サブタイトル、コンテンツを構成できます。 
+各ステップで、`igxStepIndicator`、`igxStepTitle`、`igxStepSubtitle`、および `igxStepContent` ディレクティブを使用してインジケーター、タイトル、サブタイトル、コンテンツを構成できます。 
 
 ```html
 <igx-stepper>
     <igx-step>
        <igx-icon igxStepIndicator>home</igx-icon>
        <p igxStepTitle>Home</p>
-       <p igxStepSubTitle>Home Sub Title</p>
+       <p igxStepSubtitle>Home Sub Title</p>
        <div igxStepContent>
           ...
        </div>
@@ -180,7 +180,8 @@ Angular Stepper モジュールまたはディレクティブをインポート�
 
 現在のオプションではないステップが有効でない場合、現在のステップを検証するまで次のステップに進むことができません。 
 
-> 注: オプションのステップの有効性は考慮されません。
+> [!NOTE]
+> オプションのステップの有効性は考慮されません。
 
 以下の例は、リニア ステッパーを構成する方法を示しています。
 
@@ -199,7 +200,8 @@ Angular Stepper モジュールまたはディレクティブをインポート�
 - [**prev**]({environment:angularApiUrl}/classes/igxsteppercomponent.html#prev) – 前の無効化されていないステップをアクティブ化します。
 - [**reset**]({environment:angularApiUrl}/classes/igxsteppercomponent.html#reset) – ステッパーを初期状態にリセットします。
 
-> 注: reset メソッドはステップの内容をクリアしません。これは手動で行う必要があります。
+> [!NOTE]
+> reset メソッドはステップの内容をクリアしません。これは手動で行う必要があります。
 
 ### ステップのカスタマイズ
 
@@ -225,7 +227,8 @@ Ignite UI for Angular Stepper では、タイトル、インジケーターな�
 
 向きが垂直レイアウトに設定されている場合、タイトル位置のデフォルト値は `end` です。
 
-> 注：[titlePosition]({environment:angularApiUrl}/classes/igxsteppercomponent.html#titlePosition) プロパティは、ステッパーの [stepType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#stepType) プロパティが `full` に設定されている場合に**のみ**適用できます。
+> [!NOTE]
+> [titlePosition]({environment:angularApiUrl}/classes/igxsteppercomponent.html#titlePosition) プロパティは、ステッパーの [stepType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#stepType) プロパティが `full` に設定されている場合に**のみ**適用できます。
 
 **Indicator (インジケーター)**
 
@@ -239,7 +242,8 @@ Ignite UI for Angular Stepper では、タイトル、インジケーターな�
 
 このように、サブタイトルが定義されている場合、それらもステップ タイトルの下に描画されます。
 
-> 注: このコンテナーは、サイズ制限なしで要件に応じて再テンプレート化できます。たとえば、サイズが 24 ピクセルより大きいインジケーターを中に追加できます。
+> [!NOTE]
+> このコンテナーは、サイズ制限なしで要件に応じて再テンプレート化できます。たとえば、サイズが 24 ピクセルより大きいインジケーターを中に追加できます。
 
 以下のサンプルは公開されたすべてのステップ タイプと変更方法を示しています。
 
@@ -268,7 +272,8 @@ Ignite UI for Angular Stepper では、タイトル、インジケーターな�
 </igx-stepper>
 ```
 
-> 注: このテンプレートは、関連する状態のすべてのステップに適用されます。
+> [!NOTE]
+> このテンプレートは、関連する状態のすべてのステップに適用されます。
 
 ### Angular Stepper のアニメーション
 
@@ -299,7 +304,10 @@ Ignite UI for Angular は、さまざまなキーボード操作をエンドユ�
  - <kbd>End</kbd> - `igx-stepper` の最後の有効なステップのヘッダーにフォーカスを移動します。
  - <kbd>Enter / Space</kbd> - 現在フォーカスされているステップをアクティブ化します。
  
- > 注: ユーザーがステップ ヘッダーで <kbd>Tab</kbd> キーを押すと、フォーカスはステップ コンテンツ コンテナーに移動します。コンテナーをスキップする場合、開発者は `[tabIndex]="-1"` コンテンツ コンテナーを設定する必要があります。
+ > [!NOTE]
+ > ユーザーがステップ ヘッダーで <kbd>Tab</kbd> キーを押すと、フォーカスはステップ コンテンツ コンテナーに移動します。コンテナーをスキップする場合、開発者は `[tabIndex]="-1"` コンテンツ コンテナーを設定する必要があります。
+
+Stepper コンポーネントは、ローコード [ドラッグアンドドロップ App Builder™](https://jp.infragistics.com/products/appbuilder) でも使用できます。
 
 ## Angular Stepper のスタイル設定
 [Ignite UI for Angular テーマ](themes/index.md)を使用して、`igx-stepper` の外観を変更できます。 
@@ -333,7 +341,7 @@ $custom-stepper-theme: stepper-theme(
 
 IE11 のような古いブラウザー用にコンポーネントのスタイルを設定するには、CSS 変数がサポートされていないため、別の方法を使用する必要があります。
 
-コンポーネントが [Emulated](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`解除`する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。: 
+コンポーネントが [Emulated](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`解除する`必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。: 
 ```scss
 :host {
     ::ng-deep {

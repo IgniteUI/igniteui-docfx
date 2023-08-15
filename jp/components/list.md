@@ -7,7 +7,7 @@ _language: ja
 
 # Angular List View (リスト ビュー) コンポーネントの概要
 
-Ignite UI for Angular List コンポーネントは項目の行を表示し、ヘッダー項目を 1 つ以上、さらにリスト項目の検索およびフィルタリングをサポートします。各リスト項目はすべての有効な HTML または Angular コンポーネントをサポートするテンプレートに設定できます。リスト コンポーネントは、組み込みのパンニング機能、空および読み込み状態のテンプレートも提供し、[`IgxForOf`](for-of.md) ディレクティブを使用した大きなリストの仮想化をサポートします。
+Ignite UI for Angular List コンポーネントは項目の行を表示し、ヘッダー項目を 1 つ以上、さらにリスト項目の検索およびフィルタリングをサポートします。各リスト項目はすべての有効な HTML または [Angular コンポーネント](https://jp.infragistics.com/products/ignite-ui-angular)をサポートするテンプレートに設定できます。リスト コンポーネントは、組み込みのパンニング機能、空および読み込み状態のテンプレートも提供し、[`IgxForOf`](for-of.md) ディレクティブを使用した大きなリストの仮想化をサポートします。
 
 ## Angular List の例
 次の例は、_name_ プロパティと _phone number_ プロパティを持つ連絡先が入力されたリストを表しています。[`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) コンポーネントは、[`IgxAvatar`](avatar.md) と [`IgxIcon`](icon.md) を使用して、ユーザー エクスペリエンスを向上させ、**連絡先をお気に入りに追加**にアバター写真とさまざまなアイコンを設定する機能を公開します。さらに、リスト ビューは、フィルタリング パイプを使用して実現されたソート機能を公開します。

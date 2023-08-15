@@ -114,14 +114,14 @@ Steps can be declared using one of the following approaches.
     </igx-step>
 </igx-stepper>
 ```
-For each step the user has the ability to configure indicator, title, subtitle and content using the `igxStepIndicator`, `igxStepTitle`, `igxStepSubTitle` and `igxStepContent` directives as follows: 
+For each step the user has the ability to configure indicator, title, subtitle and content using the `igxStepIndicator`, `igxStepTitle`, `igxStepSubtitle` and `igxStepContent` directives as follows: 
 
 ```html
 <igx-stepper>
     <igx-step>
        <igx-icon igxStepIndicator>home</igx-icon>
        <p igxStepTitle>Home</p>
-       <p igxStepSubTitle>Home Sub Title</p>
+       <p igxStepSubtitle>Home Sub Title</p>
        <div igxStepContent>
           ...
        </div>
@@ -181,7 +181,8 @@ When the [linear]({environment:angularApiUrl}/classes/igxsteppercomponent.html#l
 
 If the current non-optional step is not valid you cannot go forward to the next step until you validate the current one. 
 
-> Note: Optional steps validity is not taken into account in order to move forward.
+> [!NOTE]
+> Optional steps validity is not taken into account in order to move forward.
 
 The following example demonstrates how to configure a linear stepper:
 
@@ -200,7 +201,8 @@ The following example demonstrates how to configure a linear stepper:
 - [**prev**]({environment:angularApiUrl}/classes/igxsteppercomponent.html#prev) – activates the previous non-disabled step.
 - [**reset**]({environment:angularApiUrl}/classes/igxsteppercomponent.html#reset) – resets the stepper to its initial state.
 
-> Note: The reset method would not clear the step`s content. This should be done manually.
+> [!NOTE]
+> The reset method would not clear the step`s content. This should be done manually.
 
 ### Customizing the Steps
 
@@ -226,7 +228,8 @@ When the `igx-stepper` is horizontally orientated, the title position default va
 
 When the orientation is set to vertical layout the title position by default is `end`.
 
-> Note: [titlePosition]({environment:angularApiUrl}/classes/igxsteppercomponent.html#titlePosition) property is applicable **only** when the stepper [stepType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#stepType) property is set to `full`.
+> [!NOTE]
+> [titlePosition]({environment:angularApiUrl}/classes/igxsteppercomponent.html#titlePosition) property is applicable **only** when the stepper [stepType]({environment:angularApiUrl}/classes/igxsteppercomponent.html#stepType) property is set to `full`.
 
 **Indicator**
 
@@ -240,7 +243,8 @@ If you want to display only titles for the steps, set the [stepType]({environmen
 
 In this way if subtitles are defined, they will also be rendered below the step title.
 
-> Note: This container could be re-templated as per your requirement without any size restrictions. For example, you could add an indicator with size greater than 24 pixels inside it.
+> [!NOTE]
+> This container could be re-templated as per your requirement without any size restrictions. For example, you could add an indicator with size greater than 24 pixels inside it.
 
 The sample below demonstrates all exposed step types and how they could be changed:
 
@@ -269,7 +273,8 @@ The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponen
 </igx-stepper>
 ```
 
-> Note: This templates would be applied for all steps with the relevant state.
+> [!NOTE]
+> This templates would be applied for all steps with the relevant state.
 
 ### Angular Stepper Animations
 
@@ -300,7 +305,8 @@ The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponen
  - <kbd>End</kbd> - moves the focus to the header of the LAST enabled step in the `igx-stepper`
  - <kbd>Enter / Space</kbd> - activates the currently focused step
  
- > Note: By design when the user presses the <kbd>Tab</kbd> key over the step header the focus will move to the step content container. In case the container should be skipped the developer should set the content container `[tabIndex]="-1"`.
+ > [!NOTE]
+ > By design when the user presses the <kbd>Tab</kbd> key over the step header the focus will move to the step content container. In case the container should be skipped the developer should set the content container `[tabIndex]="-1"`.
 
 The Stepper Component is also available in the low-code, [drag and drop App Builder™](https://www.infragistics.com/products/appbuilder). 
 
