@@ -126,7 +126,8 @@ The same Action Strip instance can be used in multiple places in the document as
 The Action Strip can change its parent container, which is possible by changing the [`context`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#context).
 The best way to do so is via the [`show`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#show) API method and passing the `context` as an argument. The `context` should be an instance of a component and should have an accessible `element` property of the `ElementRef` type.
 
->Note: The `show` API method uses [Angular Renderer2](https://angular.io/api/core/Renderer2) to append the Action Strip to that `element`.
+> [!NOTE]
+> The `show` API method uses [Angular Renderer2](https://angular.io/api/core/Renderer2) to append the Action Strip to that `element`.
 
 
 ## Usage in Grids
@@ -147,16 +148,19 @@ This can be utilized via grid action components and we are providing two default
     </igx-action-strip>
 </igx-grid>
 ```
->Note: These components inherit [`IgxGridActionsBaseDirective`]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html) and when creating a custom grid action component, it should also inherit `IgxGridActionsBaseDirective`.
+> [!NOTE]
+> These components inherit [`IgxGridActionsBaseDirective`]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html) and when creating a custom grid action component, it should also inherit `IgxGridActionsBaseDirective`.
 
->Note: When `IgxActionStripComponent` is a child component of the grid, hovering a row will automatically show the UI.
+> [!NOTE]
+> When `IgxActionStripComponent` is a child component of the grid, hovering a row will automatically show the UI.
 
 <code-view style="height: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-action-strip" >
 </code-view>
 
->Note: More information about how to use ActionStrip in the grid component could be found [here](/components/grid/row-actions.html).
+> [!NOTE]
+> More information about how to use ActionStrip in the grid component could be found [here](/components/grid/row-actions.html).
 
 ## Styling
 

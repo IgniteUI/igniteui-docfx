@@ -527,6 +527,7 @@ $custom-slider-theme: slider-theme(
 * [TickLabelsOrientation]({environment:angularApiUrl}/enums/ticklablesorientation.html)
 
 <div class="divider--half"></div>
+
 コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
