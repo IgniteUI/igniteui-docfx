@@ -1,7 +1,7 @@
 ---
-title: WPF から Angular へ移行チュートリアル | IgniteUI for Angular | インフラジスティックス
-_description: Angular から WPF に切り替える方法を両フレームワークを比較しながら説明します。バインディング、イベント、コンポーネントなどの類似点を確認します。
-_keywords: Angular ツール チュートリアル, igniteui for angular, インフラジスティックス
+title: WPF から Angular へのチュートリアルと開発者向けガイド | デスクトップから Web | インフラジスティックス
+_description: 開発者がデスクトップから Web フレームワークにスムーズに移行できるようにガイドする WPF から Angular へのチュートリアルをお読みください。今すぐ Angular について学びましょう！
+_keywords: wpf から angular へのチュートリアル, igniteui for angular, インフラジスティックス
 _language: ja
 ---
 

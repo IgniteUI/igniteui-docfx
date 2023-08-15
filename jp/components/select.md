@@ -277,7 +277,9 @@ public greengrocery: Array<{ label: string, items: Array<{ type: string, origin:
 - `Enter` キーまたは `Space` キーを使用して項目を選択します。
 
 >[!NOTE]
->`igx-select` は項目の*単一*選択のみをサポートします。
+>`igx-select` は項目の**単一**選択のみをサポートします。
+
+また、[ドラッグアンドドロップ App Builder™](https://jp.infragistics.com/products/appbuilder) を試して、特定のプロセスを自動化し、次の Angular アプリを構築する際の過度の手動コーディングの必要性を減らす方法を確認することもできます。
 
 ## カスタム オーバーレイ設定
 カスタム [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) を作成できます。テンプレートを以下のように定義します。
