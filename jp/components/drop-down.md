@@ -505,7 +505,6 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 
 ## その他のリソース
 
-<div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)

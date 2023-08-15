@@ -127,7 +127,8 @@ Ignite UI for Angular Action Strip モジュールまたはディレクティブ
 アクション ストリップは [`context`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#context) によって親コンテナーを変更できます。
 [`show`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#show) API メソッドを使用し、`context` を引数として渡すことを推奨します。`context` はコンポーネントのインスタンスで、`ElementRef` 型のアクセス可能な `element` プロパティを持つ必要があります。
 
->注: アクション ストリップを `element` に追加するために、`show` API メソッドは [Angular Renderer2](https://angular.io/api/core/Renderer2) を使用します。
+> [!NOTE]
+> アクション ストリップを `element` に追加するために、`show` API メソッドは [Angular Renderer2](https://angular.io/api/core/Renderer2) を使用します。
 
 
 ## グリッドでの使用
@@ -148,16 +149,19 @@ Ignite UI for Angular Action Strip モジュールまたはディレクティブ
     </igx-action-strip>
 </igx-grid>
 ```
->注: これらのコンポーネントは [`IgxGridActionsBaseDirective`]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html) を継承します。カスタム グリッド アクション コンポーネントを作成する場合、`IgxGridActionsBaseDirective` も継承する必要があります。
+> [!NOTE]
+> これらのコンポーネントは [`IgxGridActionsBaseDirective`]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html) を継承します。カスタム グリッド アクション コンポーネントを作成する場合、`IgxGridActionsBaseDirective` も継承する必要があります。
 
->注: `IgxActionStripComponent` がグリッドの子コンポーネントである場合、行をホバーするとUI が自動的に表示されます。
+> [!NOTE]
+> `IgxActionStripComponent` がグリッドの子コンポーネントである場合、行をホバーするとUI が自動的に表示されます。
 
 <code-view style="height: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-action-strip" >
 </code-view>
 
->注：グリッド コンポーネントで ActionStrip を使用する方法の詳細については、[こちら](/components/grid/row-actions.html)を参照してください。
+> [!NOTE]
+> グリッド コンポーネントで ActionStrip を使用する方法の詳細については、[こちら](/components/grid/row-actions.html)を参照してください。
 
 ## スタイル設定
 
@@ -168,7 +172,9 @@ Ignite UI for Angular Action Strip モジュールまたはディレクティブ
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
+
 次に、`action-strip-theme` を拡張する新しいテーマを作成し、変更するパラメーターを渡します。
+
 ```scss
 $custom-strip: action-strip-theme(
     $background: rgba(150, 133, 143, 0.4),

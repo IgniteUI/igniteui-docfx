@@ -109,7 +109,7 @@ _language: ja
 </code-view>
 
 
-### レイアウトの構成
+## レイアウトの構成
 
 列レイアウトを構成するときに、適切な [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colStart)  および [`colEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colEnd)、または [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowStart) および [`rowEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowEnd) を計算して設定するのが難しい場合があります。特に 1 つのレイアウトに多数の列がある場合などですが、適用時のプレビューを簡単に確認するためにコンフィギュレーターを使用できます。以下の操作が可能です。
 

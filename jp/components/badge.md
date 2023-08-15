@@ -119,6 +119,31 @@ igx-badge {
 
 すべて適切に設定すると、ブラウザ上で以上のデモ サンプルを確認することができます。
 
+### バッジ アイコン
+
+`igx-badge` コンポーネントは、マテリアル アイコンに加えて[マテリアル アイコン拡張](../components/material-icons-extended.md)およびその他のカスタム アイコン セットの使用もサポートしています。マテリアル アイコン拡張セットからバッジ コンポーネントにアイコンを追加するには、まずそのアイコンを登録する必要があります。
+
+```ts
+export class BadgeIconComponent implements OnInit { 
+    constructor (protected _iconService: IgxIconService) {}
+
+    public ngOnInit() {
+        this._iconService.addSvgIconFromText(heartMonitor.name, heartMonitor.value, 'imx-icons');
+    }
+}
+```
+
+そうすると、次のようにアイコン名とファミリーを指定すればよいです。
+
+```html 
+<igx-badge icon="heart-monitor" iconSet="imx-icons"></igx-badge>
+```
+
+<code-view style="height: 100px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/badge-icon" >
+</code-view>
+
 ### リストのバッジ
 
 チャット クライアントのような連絡先リストを作成します。連絡先の名前を表示し、アバターおよび連絡先の現在状態 (オンライン、オフライン、退席中) を表示します。これを達成するには、[`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) および [`igx-avatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) コンポーネントを使用します。コンテナーの場合、[`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html) が使用されます。
