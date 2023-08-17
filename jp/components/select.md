@@ -144,8 +144,8 @@ Select コンポーネントは、[入力グループ](input-group.md)に適用�
            iframe-src="{environment:demosBaseUrl}/data-entries/select-input-directives" >
 </code-view>
 
-> [!NOTE]
-Select コンポーネントに [`placeholder`]({environment:angularApiUrl}/classes/igxselectcomponent.html#placeholder) が指定されておらず、選択も行われていない場合、`igxLabel` は遷移し、プレースホルダーが適切な場所に表示されます。
+>[!NOTE]
+>Select コンポーネントに [`placeholder`]({environment:angularApiUrl}/classes/igxselectcomponent.html#placeholder) が指定されておらず、選択も行われていない場合、`igxLabel` は遷移し、プレースホルダーが適切な場所に表示されます。
 
 ### 選択項目のグループ化
 項目グループを視覚的に分離するために、Select コンポーネントは、項目を `<igx-select-item-group>` にラップすることで項目のグループ化をサポートします。

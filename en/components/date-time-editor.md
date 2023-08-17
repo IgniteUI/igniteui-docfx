@@ -136,8 +136,9 @@ To set a specific input format, pass it as a string to the IgxDateTimeEditor dir
 ```
 
 The table bellow shows formats that are supported by the directive's [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputFormat):
-| Format | Description |
-|:-------:|:-----------|
+
+|  Format  | Description |
+| -------- | ----------- |
 | `d` | Date, will be coerced with a leading zero while editing. |
 | `dd` | Date with an explicitly set leading zero. |
 | `M` | Month, will be coerced with a leading zero while editing. |
@@ -152,7 +153,8 @@ The table bellow shows formats that are supported by the directive's [`inputForm
 | `mm` | Minutes with an explicitly set leading zero. |
 | `tt` | AM/PM section for 12-hour format. |
 
-> Note: The `IgxDateTimeEditorDirective` directive supports IME input. When typing in an Asian language input, the control will display input method compositions and candidate lists directly in the control’s editing area, and immediately re-flow surrounding text as the composition ends.
+> [!NOTE]
+> The `IgxDateTimeEditorDirective` directive supports IME input. When typing in an Asian language input, the control will display input method compositions and candidate lists directly in the control’s editing area, and immediately re-flow surrounding text as the composition ends.
 
 ### Min max value
 You can specify [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#minValue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#maxValue) properties to restrict input and control the validity of the ngModel.
@@ -169,7 +171,7 @@ public maxDate = new Date(2020, 11, 1);
 ```
 The [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#minValue) and [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#minValue) inputs can also be of type `string`, see [Binding to ISO strings](#iso).
 
-### <a name="increment-decrement">Increment and decrement </a>
+### Increment and decrement <a name="increment-decrement"></a>
 [`igxDateTimeEditor`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) directive exposes public [`increment`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#increment) and [`decrement`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#decrement) methods. They increment or decrement a specific [`DatePart`]({environment:angularApiUrl}/enums/datepart.html) of the currently set date and time and can be used in a couple of ways.
 
 In the first scenario, if no specific [`DatePart`]({environment:angularApiUrl}/enums/datepart.html) is passed to the method, a default [`DatePart`]({environment:angularApiUrl}/enums/datepart.html) will increment or decrement, based on the specified [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputFormat) and the internal directive implementation. In the second scenario, you can explicitly specify what [`DatePart`]({environment:angularApiUrl}/enums/datepart.html) to manipulate as it may suite different requirements.
@@ -188,7 +190,8 @@ Additionally, `spinDelta` is an input property of type [`DatePartDeltas`]({envir
 ### In Angular Forms
 The Date Time Editor Directive supports all of the form directives from the core FormsModule [`NgModel`](https://angular.io/api/forms/NgModel) and [`ReactiveFormsModule`](https://angular.io/api/forms/ReactiveFormsModule) (FormControl, FormGroup, etc.). This also includes the [Forms `Validators`](https://angular.io/api/forms/Validators) functions. The following example illustrates the use of the `required` validator in a Template-driven Form.
 
-> Note: If needed, you can revert back to a valid state by handling the `validationFailed` event and changing the `newValue` property of the available arguments.
+> [!NOTE]
+> If needed, you can revert back to a valid state by handling the `validationFailed` event and changing the `newValue` property of the available arguments.
 
 Template-driven form example:
 ```html
@@ -211,7 +214,8 @@ You can force the component to select all of the input text on focus using [`igx
 </igx-input-group>
 ```
 
-> NOTE: In order for the component to work properly, it is crucial to set [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) after the [`igxDateTimeEditor`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) directive. The reason for this is both directives operate on the input `focus` event so text selection should happen after the mask is set.
+> [!NOTE]
+> In order for the component to work properly, it is crucial to set [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) after the [`igxDateTimeEditor`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) directive. The reason for this is both directives operate on the input `focus` event so text selection should happen after the mask is set.
 
 ## Styling
 For details check out the [`Input Group styling guide`](input-group.md#styling).

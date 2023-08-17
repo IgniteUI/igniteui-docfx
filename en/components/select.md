@@ -142,8 +142,8 @@ The Select component supports the following directives applicable to the [Input 
            iframe-src="{environment:demosBaseUrl}/data-entries/select-input-directives" >
 </code-view>
 
-> [!NOTE]
-If no [`placeholder`]({environment:angularApiUrl}/classes/igxselectcomponent.html#placeholder) is specified for the Select component and there is no selection made, the `igxLabel` will transition and appear where you would expect the placeholder to be.
+>[!NOTE]
+>If no [`placeholder`]({environment:angularApiUrl}/classes/igxselectcomponent.html#placeholder) is specified for the Select component and there is no selection made, the `igxLabel` will transition and appear where you would expect the placeholder to be.
 
 ### Group Select Items
 To help visually separate item groups, the select component supports item grouping by wrapping items in an `<igx-select-item-group>`.
