@@ -85,7 +85,8 @@ To instantiate a date range picker in its default mode, use the following code:
 public range: DateRange = { start: new Date(2020, 4, 20), end: new Date(2020, 4, 25) };
 ```
 
->Note: The Date Range Picker value is of type [`DateRange`]({environment:angularApiUrl}/interfaces/daterange.html), which contains a start and an end date.
+>[!NOTE]
+> The Date Range Picker value is of type [`DateRange`]({environment:angularApiUrl}/interfaces/daterange.html), which contains a start and an end date.
 
 To create a two-way data-binding, use `ngModel`:
 ```html
@@ -206,7 +207,8 @@ The Date Range Picker’s action buttons can be templated using the [`igxPickerA
 </code-view>
 
 ### Keyboard Navigation
-> Note: Use the demos for [Dialog mode](#dialog-mode) and [Display Separate Editable Inputs](#display-separate-editable-inputs) to try the keyboard combinations defined below.
+>[!NOTE]
+> Use the demos for [Dialog mode](#dialog-mode) and [Display Separate Editable Inputs](#display-separate-editable-inputs) to try the keyboard combinations defined below.
 
 Opening and closing the [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) calendar UI with the keyboard is available only for `dropdown` mode and can be triggered via the key combinations below:
 
@@ -243,7 +245,8 @@ The `inputFormat` property accepts a constructed format string using characters 
 </igx-date-range-picker>
 ```
 
-> Note: The `IgxDateRangePicker` now supports IME input. When composition ends, the control converts the wide-character numbers to ASCII characters.
+>[!NOTE]
+> The `IgxDateRangePicker` now supports IME input. When composition ends, the control converts the wide-character numbers to ASCII characters.
 
 ### Forms and Validation
 The Date Range Picker Component supports all directives from the core [FormsModule](https://angular.io/api/forms/FormsModule), [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) ([`FormControl`](https://angular.io/api/forms/FormControl), [`FormGroup`](https://angular.io/api/forms/FormGroup), etc.). This also includes the [Forms Validators](https://angular.io/api/forms/Validators) functions. In addition, the component's [min and max values](#min-and-max-values) also act as form validators.
