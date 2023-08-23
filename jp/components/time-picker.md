@@ -270,7 +270,8 @@ Time Picker コンポーネントは、さまざまな表示形式と入力形�
     [displayFormat]="`shortTime`">
 </igx-time-picker>
 ```
-> 注: `IgxTimePicker` が IME 入力をサポートするようになりました。合成が終了すると、コントロールはワイド文字の数字を ASCII 文字に変換します。
+>[!NOTE]
+> `IgxTimePicker` が IME 入力をサポートするようになりました。合成が終了すると、コントロールはワイド文字の数字を ASCII 文字に変換します。
 
 ### 増加および減少
 Time Picker は、パブリックの [`increment`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#increment) メソッドと [`decrement`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#decrement) メソッドを公開します。それらは 2 つのオプションのパラメターを受け入れます: 変更される `DatePart` とそれが変更される `delta` です。指定しない場合、`DatePart` はデフォルトで `Hours` になり、`delta` はデフォルトで [`itemsDelta`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#itemsdelta) になります。
