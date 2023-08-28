@@ -50,7 +50,8 @@ Use [`igxLayoutDir`]({environment:angularApiUrl}/classes/igxlayoutdirective.html
 
 <div class="divider--half"></div>
 
-**Note**: Reverse order using [`igxLayoutReverse`]({environment:angularApiUrl}/classes/igxlayoutdirective.html#reverse)`="true"`.
+>[!NOTE]
+> Reverse order using [`igxLayoutReverse`]({environment:angularApiUrl}/classes/igxlayoutdirective.html#reverse)`="true"`.
 
 <div class="divider--half"></div>
 
@@ -108,8 +109,8 @@ Use [`igxLayoutWrap`]({environment:angularApiUrl}/classes/igxlayoutdirective.htm
            iframe-src="{environment:demosBaseUrl}/layouts/layout-wrap" >
 </code-view>
 
-
-**Note**: The [`igxLayout`]({environment:angularApiUrl}/classes/igxlayoutdirective.html) directive affects the flow directions for that
+>[!NOTE]
+> The [`igxLayout`]({environment:angularApiUrl}/classes/igxlayoutdirective.html) directive affects the flow directions for that
 container's **immediate** children.
 <div class="divider--half"></div>
 
