@@ -169,7 +169,8 @@ export class ExpansionPanelComponent {
     ...
 </igx-expansion-panel>
 ```
-> [`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconPosition) プロパティは、`RTL` で使用できます。たとえば、**right** に表示するよう設定したアイコンは、RTL 設定時にヘッダーの左端に表示されます。
+>[!NOTE]
+>[`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconPosition) プロパティは、`RTL` で使用できます。たとえば、**right** に表示するよう設定したアイコンは、RTL 設定時にヘッダーの左端に表示されます。
 
 コントロールのトグル状態のデフォルト アイコンをテンプレート化できます。
 `igx-expansion-panel-icon` タグでコンテンツを渡します。
