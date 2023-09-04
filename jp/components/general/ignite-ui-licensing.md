@@ -163,7 +163,7 @@ npm を既に使用していて、Ignite UI for Angular ライセンスがある
 
 以下は、ローカル構成でアクセス トークンを使用してプライベート npm レジストリへの認証を設定する方法、Azure Pipelines のビルド手順、および Travis CI のビルド プロセスです。 
 
-* https://account.infragistics.com/access-tokens からトークンを生成します。
+* https://account.infragistics.com/package-feeds からトークンを生成します。
 
 <img class="responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; width: calc(100% - 250px)" 
   src="../../images/general/generate-token.jpg"
