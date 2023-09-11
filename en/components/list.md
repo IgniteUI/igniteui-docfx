@@ -348,8 +348,14 @@ public ngOnInit() {
     ];
 }
 
-public selectSize(event) {
-    this.renderer.setStyle(this, '--ig-size', `var(--ig-size-${[event.index].label})`, RendererStyleFlags2.DashCase);
+public selectSize(event: any) {
+    this.size = this.sizes[event.index].label;
+}
+
+
+@HostBinding('style.--ig-size')
+protected get sizeStyle() {
+    return `var(--ig-size-${this.size})`;
 }
 ```
 
