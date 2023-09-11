@@ -311,7 +311,7 @@ toggleFavorite(item: IgxListItem) {
 }
 ```
 
-Let's also allow the user to choose the display density of the list by using its [`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displayDensity) input. We will do this by importing the `IgxButtonGroupModule` and using the [**IgxButtonGroup**](button-group.md) to display all density values. This way whenever one gets selected, we will update our own **density** property that is bound to the [`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displayDensity) of the list.
+Let's also allow the user to choose the size of the list by using the `--ig-size` CSS custom property. We will do this by importing the `IgxButtonGroupModule` and using the [**IgxButtonGroup**](button-group.md) to display all size values. This way whenever one gets selected, we will update the **size** of the list.
 
 ```typescript
 // app.module.ts
@@ -327,9 +327,9 @@ import { IgxButtonGroupModule } from 'igniteui-angular';
 ```html
 <!--contacts.component.html-->
 
-<igx-buttongroup [values]="displayDensities" (selected)="selectDensity($event)"></igx-buttongroup>
+<igx-buttongroup [values]="sizes" (selected)="selectSize($event)"></igx-buttongroup>
 ...
-<igx-list [displayDensity]="density">
+<igx-list>
     ...
 </igx-list>
 ```
@@ -337,19 +337,19 @@ import { IgxButtonGroupModule } from 'igniteui-angular';
 ```typescript
 // contacts.component.ts
 
-public density = 'comfortable';
-public displayDensities;
+public size = 'large';
+public sizes;
 
 public ngOnInit() {
-    this.displayDensities = [
-        { label: 'comfortable', selected: this.density === 'comfortable', togglable: true },
-        { label: 'cosy', selected: this.density === 'cosy', togglable: true },
-        { label: 'compact', selected: this.density === 'compact', togglable: true }
+    this.sizes = [
+        { label: 'large', selected: this.size === 'large', togglable: true },
+        { label: 'medium', selected: this.size === 'medium', togglable: true },
+        { label: 'small', selected: this.size === 'small', togglable: true }
     ];
 }
 
-public selectDensity(event) {
-    this.density = this.displayDensities[event.index].label;
+public selectSize(event) {
+    this.renderer.setStyle(this, '--ig-size', `var(--ig-size-${[event.index].label})`, RendererStyleFlags2.DashCase);
 }
 ```
 

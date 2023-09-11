@@ -162,38 +162,19 @@ Use the the [`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongrou
 </code-view>
 
 
-### Display Density
-The [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#displayDensity) input property is used to control the display density of a button group. This will set the style for the buttons in the group to cosy, compact or comfortable (default value) accordingly.
+### Size (Display Density)
+The `--ig-size` CSS custom property can be used to control the size of the button group.
 
-> [!NOTE] 
-> The display density of a button within a button group is not changed if it is explicitly specified.
-
-```typescript
-// sample.component.ts
-...
-public displayDensity = 'comfortable';
-public displayDensities;
-
-public ngOnInit() {
-    this.displayDensities = [
-        { label: 'compact', selected: this.displayDensity === 'compact', togglable: true },
-        { label: 'cosy', selected: this.displayDensity === 'cosy', togglable: true },
-        { label: 'comfortable', selected: this.displayDensity === 'comfortable', togglable: true }
-    ];
+```scss
+/* sample.component.scss */
+igx-buttongroup {
+    --ig-size: var(--ig-size-small);
 }
-
-public selectDensity(event) {
-    this.displayDensity = this.displayDensities[event.index].label;
-}
-...
 ```
 
 ```html
 <!-- sample.component.html -->
-<igx-buttongroup [values]="displayDensities" 
-                 [displayDensity]="displayDensity"
-                 (selected)="selectDensity($event)">
-</igx-buttongroup>
+<igx-buttongroup></igx-buttongroup>
 ```
 
 

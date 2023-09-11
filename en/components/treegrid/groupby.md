@@ -38,7 +38,6 @@ The component's inputs are the following:
 - grid - `IgxTreeGridComponent` that is used for the grouping
 - expressions - an array of [`IGroupingExpression`]({environment:angularApiUrl}/interfaces/igroupingexpression.html) objects which contains the fields used to generate the hierarchy
 - hideGroupedColumns - a boolean value indicating whether to hide the columns by which grouping was performed
-- density - a [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displayDensity) that can be used to change the view
 - dropAreaTemplate - a template for the drop area that can be used to override the default drop area template
 - dropAreaMessage - a string that can be used to override the default message for the default drop area template
 

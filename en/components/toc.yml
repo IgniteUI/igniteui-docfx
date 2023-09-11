@@ -238,7 +238,7 @@
     - name: Collapsible Column Groups
       href: grid/collapsible-column-groups.md
       new: false
-    - name: Display Density
+    - name: Size (Display Density)
       href: grid/display-density.md
       new: false
     - name: Conditional Styling
@@ -381,7 +381,7 @@
     - name: Collapsible Column Groups
       href: treegrid/collapsible-column-groups.md
       new: false
-    - name: Display Density
+    - name: Size (Display Density)
       href: treegrid/display-density.md
       new: false
     - name: Conditional Styling
@@ -523,7 +523,7 @@
       href: hierarchicalgrid/conditional-cell-styling.md
       new: false
       updated: false
-    - name: Display Density
+    - name: Size (Display Density)
       href: hierarchicalgrid/display-density.md
       new: false
     # - name: Conditional Cell Styling
@@ -861,7 +861,7 @@
 - name: Typography
   href: themes/typography.md
   new: false
-- name: Display Density
+- name: Size (Display Density)
   href: display-density.md
 - name: Sass
   new: false
