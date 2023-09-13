@@ -26,7 +26,7 @@ The Angular Autocomplete example below generates a dropdown suggestion list as u
 
 ## Getting Started with Ignite UI for Angular Autocomplete
 
-To get started with the Ignite UI for Angular Autocomplete directive, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
+To get started with the Ignite UI for Angular for [Angular Components](https://www.infragistics.com/products/ignite-ui-angular) and Autocomplete directive in particular, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
 ```cmd
 ng add igniteui-angular
@@ -234,6 +234,8 @@ If everything went right, you should see this in your browser:
 
 >[!NOTE]
 >When the Angular autocomplete opens, then the first item on the list is automatically selected. The same is valid when the list is filtered.
+
+You can also see how our [WYSIWYG App Builder™](https://www.infragistics.com/products/appbuilder) streamlines the entire design-to-code story by 80% using real Angular components. 
 
 ## Compatibility support
 Applying the `igxAutocomplete` directive will decorate the element with the following ARIA attributes:

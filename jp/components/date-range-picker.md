@@ -86,7 +86,8 @@ Date Range Picker をデフォルトのモードでインスタンス化する�
 public range: DateRange = { start: new Date(2020, 4, 20), end: new Date(2020, 4, 25) };
 ```
 
->注: Date Range Picker の値は開始日と終了日を含む [`DateRange`]({environment:angularApiUrl}/interfaces/daterange.html) 型です。
+>[!NOTE]
+> Date Range Picker の値は開始日と終了日を含む [`DateRange`]({environment:angularApiUrl}/interfaces/daterange.html) 型です。
 
 双方向のデータバインディングを作成するには、`ngModel` を使用します。
 ```html
@@ -207,7 +208,8 @@ Date Range Picker のアクション ボタンは、[`igxPickerActions`]({enviro
 </code-view>
 
 ### キーボード ナビゲーション
-> 注: [ダイアログ モード](#ダイアログ-モード)のデモおよび[個別の編集可能な入力の表示](#個別の編集可能な入力の表示)を使用して、以下で定義するキーボードの組み合わせをお試しください。
+>[!NOTE]
+> [ダイアログ モード](#ダイアログ-モード)のデモおよび[個別の編集可能な入力の表示](#個別の編集可能な入力の表示)を使用して、以下で定義するキーボードの組み合わせをお試しください。
 
 [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) カレンダー UI をキーボードで開く、または閉じる動作は、`dropdown` モードでのみ使用でき、以下のキーの組み合わせでトリガーできます。
 
@@ -244,7 +246,8 @@ Date Range Picker コンポーネントはさまざまな表示および入力�
 </igx-date-range-picker>
 ```
 
-> 注: `IgxDateRangePicker` が IME 入力をサポートするようになりました。合成が終了すると、コントロールはワイド文字の数字を ASCII 文字に変換します。
+>[!NOTE]
+> `IgxDateRangePicker` が IME 入力をサポートするようになりました。合成が終了すると、コントロールはワイド文字の数字を ASCII 文字に変換します。
 
 ### フォームと検証
 Date Range Picker コンポーネントは、コア FormsModule [NgModel](https://angular.io/api/forms/NgModel) と [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) ([`FormControl`](https://angular.io/api/forms/FormControl)、[`FormGroup`](https://angular.io/api/forms/FormGroup) など) のすべてのフォーム ディレクティブをサポートします。これには、[フォーム バリデータ](https://angular.io/api/forms/Validators)機能も含まれます。さらに、コンポーネントの[最小値と最大値](#最小値と最大値)もフォーム バリデータとして機能します。

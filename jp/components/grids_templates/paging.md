@@ -1,7 +1,7 @@
 @@if(igxName === 'IgxGrid') {
 ---
 title: Angular Grid ページング | Angular ページネーション テーブル | インフラジスティックス
-_description: Angular ページネーションを構成して Ignite UI の Angular マテリアル テーブルにカスタム ページを作成し、さまざまな Angular イベントで要求されたページのデータを取得します。
+_description: Angular ページネーションを構成して Ignite UI の Angular テーブルにカスタム ページを作成し、さまざまな Angular イベントで要求されたページのデータを取得します。
 _keywords: angular ページネーション, igniteui for angular, インフラジスティックス
 _language: ja
 ---
@@ -9,7 +9,7 @@ _language: ja
 @@if(igxName !== 'IgxGrid') {
 ---
 title: Angular Grid ページング | Angular ページネーション テーブル | インフラジスティックス
-_description: Angular ページネーションを構成して Ignite UI の Angular マテリアル テーブルにカスタム ページを作成し、さまざまな Angular イベントで要求されたページのデータを取得します。
+_description: Angular ページネーションを構成して Ignite UI の Angular テーブルにカスタム ページを作成し、さまざまな Angular イベントで要求されたページのデータを取得します。
 _keywords: angular ページネーション, igniteui for angular, インフラジスティックス
 _canonicalLink: grid/paging
 _language: ja
@@ -332,7 +332,7 @@ $dark-button-schema: extend($_dark-button,
 );
 ```
 
-カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張**する必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加する方法です。
+カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張する**必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加する方法です。
 
 ```scss
 // Extending the global dark-schema

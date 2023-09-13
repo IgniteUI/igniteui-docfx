@@ -142,8 +142,8 @@ The Select component supports the following directives applicable to the [Input 
            iframe-src="{environment:demosBaseUrl}/data-entries/select-input-directives" >
 </code-view>
 
-> [!NOTE]
-If no [`placeholder`]({environment:angularApiUrl}/classes/igxselectcomponent.html#placeholder) is specified for the Select component and there is no selection made, the `igxLabel` will transition and appear where you would expect the placeholder to be.
+>[!NOTE]
+>If no [`placeholder`]({environment:angularApiUrl}/classes/igxselectcomponent.html#placeholder) is specified for the Select component and there is no selection made, the `igxLabel` will transition and appear where you would expect the placeholder to be.
 
 ### Group Select Items
 To help visually separate item groups, the select component supports item grouping by wrapping items in an `<igx-select-item-group>`.
@@ -274,6 +274,8 @@ You can customize the default toggle button, using the `igxSelectToggleIcon` dir
 
 >[!NOTE]
 >`igx-select` supports only *single* selection of items.
+
+You can also try out the [drag and drop App Builder™](https://www.infragistics.com/products/appbuilder) to see how it automates certain processes and reduces the need for excessive hand coding when building your next Angular app. 
 
 ## Custom Overlay Settings
 You can create custom [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html). To do this you first define your template like so:

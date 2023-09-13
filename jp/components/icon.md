@@ -108,13 +108,11 @@ Ignite UI for Angular Icon モジュールまたはコンポーネントをイ�
 
 ### アイコンのサイズ
 
-CSS を使用してアイコンをカスタマイズできます。アイコン サイズは `font-size` プロパティで変更できます。さらに中央揃えにするには、`width` と `height` プロパティに等しい値を設定します。
+CSS を使用してアイコンをカスタマイズできます。アイコンのサイズを変更するには、`--size` CSS 変数を使用します。
 
 ```scss
-.custom-size{
-    font-size: 56px;
-    width: 56px;
-    height: 56px;
+.custom-size {
+    --size: 56px;
 }
 ```
 <div class="sample-container loading" style="height: 80px">

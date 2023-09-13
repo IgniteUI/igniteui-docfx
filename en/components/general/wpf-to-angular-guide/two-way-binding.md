@@ -12,7 +12,7 @@ The two-way data binding in Angular enables data to flow from the component to t
 
 ### How does data binding work in Angular? 
 
-Angular data binding works by synchronizing the data in the components with the UI. This way it can always show the current value of the data. In terms of the two-way binding, the automatic data synchronization happens between the Model and the View, keeping both synced all the time. Because of this, any change made in the Model is immediately reflected in the View as well. And vice versa – changes made in the View are updated in the Model too. 
+Angular data binding works by synchronizing the data in the [angular components](https://www.infragistics.com/products/ignite-ui-angular) with the UI. This way it can always show the current value of the data. In terms of the two-way binding, the automatic data synchronization happens between the Model and the View, keeping both synced all the time. Because of this, any change made in the Model is immediately reflected in the View as well. And vice versa – changes made in the View are updated in the Model too. 
 The two-way data binding in Angular is used to display information to the end user and allows the end user to make changes to the underlying data using the UI. This makes a two-way connection between the view (the template) and the component class. This is similar to the two-way binding in WPF.
 
 A one-way binding is taking the state from our component class and displaying it in our view. Let's look at this code:

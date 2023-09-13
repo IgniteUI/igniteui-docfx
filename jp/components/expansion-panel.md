@@ -6,7 +6,7 @@ _language: ja
 ---
 # Angular Expansion Panel (展開パネル) コンポーネントの概要
 
-Angular は、最も便利で使いやすいレイアウト コンポーネントの 1 つである Angular Expansion Panel を提供します。この機能豊富なコンポーネントは、展開/縮小可能な詳細な概要ビューを作成するために使用されます。コンテンツには、Angular Expansion Panel のアニメーション、テキスト、アイコン、ヘッダー、操作バー、およびその他の要素を含めることができます。
+Ignite UI for Angular は、最も便利で使いやすいレイアウト コンポーネントの 1 つである Angular Expansion Panel を提供します。この機能豊富なコンポーネントは、展開/縮小可能な詳細な概要ビューを作成するために使用されます。コンテンツには、Angular Expansion Panel のアニメーション、テキスト、アイコン、ヘッダー、操作バー、およびその他の要素を含めることができます。
 <p class="highlight">
 
 Ignite UI Expansion Panel [igx-expansion-panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) は、軽量な Angular アコーディオン コンポーネントで、縮小または展開のどちらかの状態でレンダリングできます。Angular の Expansion Panel は、マウス クリックまたはキーボード操作によって切り替えることができます。複数の Angular 展開パネルを組み合わせて Angular アコーディオンにすることもできます。
@@ -92,6 +92,7 @@ Ignite UI for Angular Expansion Panel モジュールまたはディレクティ
 ## Angular Expansion Panel の使用
 
 以下の表は、Angular Expansion Panel で使用可能なすべてのマークアップ要素を示します。
+
 | タグ名                          | 説明                                                                                                          |
 | :-------------------------------: | :--------------------------------------------------------------------------------------------------------------------: |
 | `igx-expansion-panel`             | コンポーネント ホスト - ヘッダーとボディを格納します。                                                                           |
@@ -168,7 +169,8 @@ export class ExpansionPanelComponent {
     ...
 </igx-expansion-panel>
 ```
-> [`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconPosition) プロパティは、`RTL` で使用できます。たとえば、**right** に表示するよう設定したアイコンは、RTL 設定時にヘッダーの左端に表示されます。
+>[!NOTE]
+>[`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconPosition) プロパティは、`RTL` で使用できます。たとえば、**right** に表示するよう設定したアイコンは、RTL 設定時にヘッダーの左端に表示されます。
 
 コントロールのトグル状態のデフォルト アイコンをテンプレート化できます。
 `igx-expansion-panel-icon` タグでコンテンツを渡します。

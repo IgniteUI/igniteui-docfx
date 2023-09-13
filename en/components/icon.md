@@ -107,13 +107,11 @@ You can set icons with content projection:
 
 ### Icon Size
 
-You can customize the icons using CSS. The icon's size can be changed through the `font-size` property. Additionally to center it, set equal values to the `width` and `height` properties:
+You can customize the icons using CSS. To change an icon size use the `--size` CSS variable:
 
 ```scss
-.custom-size{
-    font-size: 56px;
-    width: 56px;
-    height: 56px;
+.custom-size {
+    --size: 56px;
 }
 ```
 <div class="sample-container loading" style="height: 80px">
@@ -193,6 +191,7 @@ To learn more about Material Symbols styles please visit their [`official docume
 
 ## Server-side Rendering Note
 
+>[!NOTE]
 > In case you have implemented server side rendering logic in your application using Angular Universal and have used the `IgxIconService` to register icons, this may cause the following exception:
 <br/><br/>
 `XMLHttpRequest is not defined. Could not fetch SVG from url.`
