@@ -52,6 +52,43 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
+## 16.0.x から 16.1.x の場合:
+
+### 一般
+
+#### **互換性のある変更**
+- コンポーネントのサイズを設定する方法として `DisplayDensityToken` インジェクション トークンを廃止し、CSS カスタム プロパティを使用する、よりシンプルで堅牢な方法を採用しています。そのため、`DisplayDensityToken` インジェクション トークンは非推奨になりました。これは、`displayDensity` 入力プロパティを公開するすべてのコンポーネントに影響を与えます。トークンと入力プロパティは 17.0.0 で削除されます。次のことを行うことをお勧めします。
+
+`DisplayDensityToken` が提供されているすべての宣言を削除します:
+
+```typescript
+// *.component.ts
+// remove the provider declaration for `DisplayDensityToken`
+providers: [{ provide: DisplayDensityToken, useValue: { displayDensity: DisplayDensity.compact } }],
+```
+
+`displayDensity` 入力プロパティへのすべてのバインディングまたはプログラムによる割り当てを削除します:
+
+```html
+<!-- Remove `[displayDensity]="'compact'"` -->
+<igx-grid [displayDensity]="'compact'">...</igx-grid>
+```
+
+代わりに、カスタム CSS プロパティ `--ig-size` を使用して、`displayDensity` と同じ結果を実現します:
+
+```css
+/* 
+Add --ig-size to a component or global file.
+Available values are:
+  - compact: --ig-size-small
+  - cosy: --ig-size-medium
+  - comfortable: --ig-size-large
+*/
+igx-grid {
+    --ig-size: var(--ig-size-small);
+}
+```
+
 ## 15.1.x から 16.0.x の場合:
 
 - Angular 16 へのアップグレードには、`NgModules` の内部での動作方法の変更が伴います。以前は、内部的に別のモジュールに依存するモジュールを追加すると、アプリ内で両方の宣言が利用可能になりました。この動作は意図されたものではなく、Angular 16 では変更されています。あなたのアプリがこの動作に依存していた場合、例えば `IgxGridModule` のような多くの内部依存関係を含むモジュールをインポートし、それらに付属するコンポーネントを使用しているだけであった場合、アプリが使用するコンポーネントごとに個別にモジュールを手動で追加する必要があります。
