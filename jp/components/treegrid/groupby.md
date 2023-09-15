@@ -39,7 +39,6 @@ _language: ja
 - grid - グループ化に使用される `IgxTreeGridComponent`。
 - expressions - [`IGroupingExpression`]({environment:angularApiUrl}/interfaces/igroupingexpression.html) オブジェクトの配列。これには、階層の生成に使用されるフィールドと各グループの並べ替えの詳細が含まれます。
 - hideGroupedColumns - グループ化が実行された列を非表示にするかどうかを示すブール値。
-- density - ビューを変更するために使用できる [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displayDensity)。
 - dropAreaTemplate - デフォルトのドロップ エリア テンプレートを上書きするために使用できるドロッ プエリアのテンプレート。
 - dropAreaMessage - デフォルトのドロップ エリア テンプレートのデフォルト メッセージを上書きするために使用できる文字列。
 

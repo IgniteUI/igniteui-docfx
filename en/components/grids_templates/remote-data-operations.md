@@ -624,7 +624,6 @@ When we define a custom paginator content we need to define the content in a way
     [(page)]="page"
     [(perPage)]="perPage"
     [selectOptions]="selectOptions"
-    [displayDensity]="grid1.displayDensity"
     (pageChange)="paginate($event)"
     (perPageChange)="perPageChange($event)">
     <igx-paginator-content>
@@ -712,7 +711,6 @@ public ngAfterViewInit() {
     [totalRecords]="totalCount"
     [(perPage)]="perPage"
     [selectOptions]="selectOptions"
-    [displayDensity]="treeGrid.displayDensity"
     (pageChange)="paginate($event)">
     <igx-paginator-content>
         <igx-page-size></igx-page-size>
