@@ -658,11 +658,11 @@ The custom template for the column, that will render the nested data:
                     </igx-expansion-panel-header>
                     <igx-expansion-panel-body>
                         <div class="description">
-                            <igx-input-group (keydown)="stop($event)" displayDensity="compact">
+                            <igx-input-group (keydown)="stop($event)" style="--ig-size: var(--ig-size-small)">
                                 <label igxLabel for="title">Title</label>
                                 <input type="text" name="title" igxInput [(ngModel)]="person.Title" style="text-overflow: ellipsis;" />
                             </igx-input-group>
-                            <igx-input-group (keydown)="stop($event)" displayDensity="compact" style="width: 15%;">
+                            <igx-input-group (keydown)="stop($event)" style="--ig-size: var(--ig-size-small); width: 15%;">
                                 <label igxLabel for="age">Age</label>
                                 <input type="number" name="age" igxInput [(ngModel)]="person.Age" />
                             </igx-input-group>
@@ -809,7 +809,7 @@ platformBrowserDynamic()
 |Grid [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) does not depend on the column widths | The [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) of all columns does not determine the spanning of the grid itself. It is determined by the parent container dimensions or the defined grid's [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width).|
 |Grid nested in parent container | When grid's [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) is not set and it is placed in a parent container with defined dimensions, the grid spans to this container.|
 |Grid `OnPush` ChangeDetectionStrategy |The grid operates with `ChangeDetectionStrategy.OnPush` so whenever some customization appears make sure that the grid is notified about the changes that happens.|
-| Columns have a minimum allowed column width. Depending on the [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displayDensity) option, they are as follows: <br/>"compact": 56px <br/> "cosy": 64px <br/> "comfortable ": 80px | If width less than the minimum allowed is set it will not affect the rendered elements. They will render with the minimum allowed width for the corresponding [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displayDensity). This may lead to an unexpected behavior with horizontal virtualization and is therefore not supported.
+| Columns have a minimum allowed column width. Depending on the value of [`--ig-size`] CSS variable, they are as follows: <br/>"small": 56px <br/> "medium": 64px <br/> "large ": 80px | If width less than the minimum allowed is set it will not affect the rendered elements. They will render with the minimum allowed width for the corresponding [`--ig-size`]. This may lead to an unexpected behavior with horizontal virtualization and is therefore not supported.
 | Row height is not affected by the height of cells that are not currently rendered in view. | Because of virtualization a column with a custom template (that changes the cell height) that is not in the view will not affect the row height. The row height will be affected only while the related column is scrolled in the view.
 
 > [!NOTE]

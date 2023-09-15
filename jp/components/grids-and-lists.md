@@ -240,7 +240,7 @@ Ignite UI for Angular のデータ グリッドは、大量のリアルタイム
 
 - [**Excel へのエクスポート**](grid/export-excel.md) ([**データ可視化**](excel-library-working-with-charts.md)を含む)
 
-- 行の高さとサイズ変更を調整する[**表示密度**](grid/display-density.md)
+- 行の高さとサイズ変更を調整する[**サイズ (表示密度)**](grid/display-density.md)
 
 - [**スパークライン列**](sparkline.md#デモ)や画像列などの列テンプレート
 </div>
@@ -443,14 +443,14 @@ Infragistics の Angular 製品の受賞歴のあるサポートにアクセス�
         <div class="divider--half"></div>
         <div class="faqs-accordion-panel">
             <ul>
-                <li>数百万のレコードをロードできる[仮想化された行と列](grid/virtualization.md)</li>
-                <li>セル、行、および[一括更新](grid/batch-editing.md)オプションを使用した[インライン編集](grid/row-editing.md)</li>
-                <li>[Excel スタイル フィルタリング](grid/excel-style-filtering.md)と [Excel キーボード ナビゲーション](grid/keyboard-navigation.md)機能</li>
-                <li>インタラクティブな [Outlook スタイルのようなグループ化](grid/groupby.md)</li>
-                <li>グリッド セルまたは列のデータに基づいた[列集計](grid/summaries.md)</li>
-                <li>[Excel へのエクスポート](grid/export-excel.md) ([データ可視化](excel-library-working-with-charts.md)を含む)</li>
-                <li>行の高さとサイズ変更を調整する[表示密度](grid/display-density.md)</li>
-                <li>[スパークライン列](sparkline.md)や画像列などの列テンプレート</li>
+                <li><a href="grid/virtualization.md">仮想化された行と列</a></li>
+                <li>セル、行、および<a href="grid/batch-editing.md">一括更新</a>オプションを使用した<a href="grid/row-editing.md">インライン編集</a></li>
+                <li><a href="grid/excel-style-filtering.md">Excel スタイル フィルタリング</a>と <a href="grid/keyboard-navigation.md">Excel キーボード ナビゲーション</a>機能</li>
+                <li>インタラクティブな <a href="grid/groupby.md">Outlook スタイルのようなグループ化</a></li>
+                <li>グリッド セルまたは列のデータに基づいた<a href="grid/summaries.md">列集計</a></li>
+                <li><a href="grid/export-excel.md">Excel へのエクスポート</a>、<a href="excel-library-working-with-charts.md">データ可視化</a>を含む</li>
+                <li>行の高さとサイズ変更を調整する<a href="grid/display-density.md">サイズ (表示密度)</a></li>
+                <li><a href="charts/types/sparkline-chart.md">スパークライン列</a> や画像列などの列テンプレート</li>
             </ul>
         </div>
     </div>
