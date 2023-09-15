@@ -51,7 +51,7 @@ _language: ja
 [`igx-paginator`](../paginator.md) コンポーネントを追加すると、機能が存在するかどうかが制御されます。トグル プロパティを持つ単純な `*ngIf` を使用して、機能を有効/無効にできます。[`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) 入力は、ページごとに表示されるレコードを制御します。以下のように @@igComponent でページングを有効にします。
 
 ```html
-<@@igSelector #@@igObjectRef [data]="data" [height]="'500px'" [width]="'100%'" [displayDensity]="'cosy'">
+<@@igSelector #@@igObjectRef [data]="data" [height]="'500px'" [width]="'100%'">
     <igx-paginator [perPage]="10">
     </igx-paginator>
 </@@igSelector>
@@ -61,7 +61,7 @@ _language: ja
 
 例:
 ```html
-<igx-paginator #paginator [totalRecords]='20'>
+<igx-paginator #paginator [totalRecords]="20">
     <igx-paginator-content>
         <div id="numberPager" style="justify-content: center;">
             <button [disabled]="paginator.isFirstPage" (click)="paginator.previousPage()" igxButton="flat">
@@ -92,7 +92,7 @@ _language: ja
 ```html
 <igx-grid #grid [data]="data">
     <igx-paginator #paginator [(page)]="grid.page" [totalRecords]="grid.totalRecords" [(perPage)]="10"
-            [selectOptions]="selectOptions" [displayDensity]="grid.displayDensity">
+            [selectOptions]="selectOptions">
     </igx-paginator>
 </igx-grid>
 ```
@@ -104,7 +104,7 @@ _language: ja
 ```html
 <igx-tree-grid #treeGrid [data]="data">
     <igx-paginator #paginator [(page)]="treeGrid.page" [totalRecords]="treeGrid.length" [(perPage)]="10"
-            [selectOptions]="selectOptions" [displayDensity]="treeGrid.displayDensity">
+            [selectOptions]="selectOptions">
     </igx-paginator>
 </igx-tree-grid>
 ```
