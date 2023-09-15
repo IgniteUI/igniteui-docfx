@@ -578,7 +578,7 @@ interface AminoAcid {
 <div class="divider--half"></div>
 
 **IgxGrid** で複雑なデータをバインドまたは複合データ (複数の列から) を可視化する別の方法は、列にカスタム ボディ テンプレートを使用することです。通常、以下のことができます。
-    - ネストされたデータを含むセルの値を使用します。
+    - ネストされたデータを含むセルの `value` を使用します。
     - `row.data` にアクセスするためにテンプレートの `cell` オブジェクトを使用します。それから、セルから任意の値 (`cell.row.data[field]` や `cell.row.data[field][nestedField]` など) を取得します。
 
 それをテンプレートに挿入します。
@@ -654,11 +654,11 @@ export const EMPLOYEE_DATA = [
                     </igx-expansion-panel-header>
                     <igx-expansion-panel-body>
                         <div class="description">
-                            <igx-input-group (keydown)="stop($event)" displayDensity="compact">
+                            <igx-input-group (keydown)="stop($event)" style="--ig-size: var(--ig-size-small)">
                                 <label igxLabel for="title">Title</label>
                                 <input type="text" name="title" igxInput [(ngModel)]="person.Title" style="text-overflow: ellipsis;" />
                             </igx-input-group>
-                            <igx-input-group (keydown)="stop($event)" displayDensity="compact" style="width: 15%;">
+                            <igx-input-group (keydown)="stop($event)" style="--ig-size: var(--ig-size-small); width: 15%;">
                                 <label igxLabel for="age">Age</label>
                                 <input type="number" name="age" igxInput [(ngModel)]="person.Age" />
                             </igx-input-group>
@@ -676,7 +676,8 @@ export const EMPLOYEE_DATA = [
 
 <code-view style="height:460px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding"
+           alt="Angular Grid ネストされたデータ バインディングの例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -758,7 +759,8 @@ export const DATA: any[] = [
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-composite-data-binding" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-composite-data-binding"
+           alt="Angular Grid 複合データ バインディングの例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -803,7 +805,7 @@ platformBrowserDynamic()
 |グリッドの [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) が列幅に依存しない | すべての列の [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) でグリッド自体のスパンは決定しません。親コンテナーのディメンションまたは定義したグリッドの [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) で決定されます。|
 |親コンテナーでネストされた Grid | グリッドの [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) を設定せずに定義済みのディメンションで親コンテナーに配置した場合、グリッドがコンテナーに合わせてスパンします。|
 |Grid `OnPush` ChangeDetectionStrategy|グリッドで `ChangeDetectionStrategy.OnPush` を処理し、カスタム表示されたときにグリッドに発生した変更について通知します。|
-| 列には設定可能な最小幅があります。[`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displayDensity) オプションに基づきます。<br/>"compact": 56px <br/> "cosy": 64px <br/> "comfortable ": 80px | 許容される最小幅未満に設定した場合、描画要素には影響せずに対応する [`displayDensity`]({environment:angularApiUrl}/classes/igxgridcomponent.html#displayDensity) に合わせて許容される最小幅で描画します。水平方向の仮想化は予期しない動作を招く場合があるためサポートしていません。
+| 列には設定可能な最小幅があります。[`--ig-size`] CSS 変数の値に応じて、次のようになります: <br/>"small": 56px <br/> "medium": 64px <br/> "large ": 80px | 許容される最小幅未満に設定した場合、描画される要素に影響はありません。対応する [`--ig-size`] の最小許容幅で描画します。水平方向の仮想化は予期しない動作を招く場合があるためサポートしていません。
 | ビューに描画されていないセル高さは行の高さに影響しません。|仮想化のため、セルの高さを変更するビューにないカスタム テンプレートの列は行の高さに影響しません。関連する列がビューにスクロールされるときのみ行の高さに影響します。
 
 > [!NOTE]
