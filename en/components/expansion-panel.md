@@ -168,7 +168,8 @@ Configuring the position of the header icon can be done through the [`iconPositi
     ...
 </igx-expansion-panel>
 ```
-> Note: The [`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconPosition) property works with `RTL` - e.g. an icon set to show up in **right** will show in the leftmost part of the header when RTL is on.
+>[!NOTE]
+> The [`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconPosition) property works with `RTL` - e.g. an icon set to show up in **right** will show in the leftmost part of the header when RTL is on.
 
 The default icon for the toggle state of the control can be templated.
 We can do that by passing content in an `igx-expansion-panel-icon` tag:

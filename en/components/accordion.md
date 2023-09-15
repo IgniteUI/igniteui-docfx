@@ -167,7 +167,8 @@ The following snippet demonstrates passing the animation settings to the compone
 </igx-accordion>
 ```
 
-> Note: If you would like to turn off the animation for the [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) the `animationSettings` could be set to `null`.
+>[!NOTE]
+> If you would like to turn off the animation for the [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) the `animationSettings` could be set to `null`.
 
 Alternatively, you have the ability to set every single [expansion panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)`s [animationSettings]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#animationSettings) input.
 
@@ -193,7 +194,8 @@ Alternatively, you have the ability to set every single [expansion panel]({envir
 ```
 Using the [collapseAll]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#collapseAll) and [expandAll]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#expandAll) methods you can respectively collapse and expand all [IgxExpansionPanels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) of the [IgxAccordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) programmatically.
 
-> Note: If [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singleBranchExpand) property is set to *true* calling [expandAll]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#expandAll) method would expand only the last [panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html).
+>[!NOTE]
+> If [singleBranchExpand]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#singleBranchExpand) property is set to *true* calling [expandAll]({environment:angularApiUrl}/classes/igxaccordioncomponent.html#expandAll) method would expand only the last [panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html).
 
 ### Angular Accordion Templating Example
 With the Angular [Accordion component]({environment:angularApiUrl}/classes/igxaccordioncomponent.html), you can customize the header and content panel`s appearance. 

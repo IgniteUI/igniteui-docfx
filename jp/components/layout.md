@@ -51,7 +51,8 @@ _language: ja
 
 <div class="divider--half"></div>
 
-**注**: 順序を反転するには、[`igxLayoutReverse`]({environment:angularApiUrl}/classes/igxlayoutdirective.html#reverse)`="true"` を使用します。
+>[!NOTE]
+>順序を反転するには、[`igxLayoutReverse`]({environment:angularApiUrl}/classes/igxlayoutdirective.html#reverse)`="true"` を使用します。
 
 <div class="divider--half"></div>
 
@@ -110,7 +111,8 @@ _language: ja
 </code-view>
 
 
-**注**: [`igxLayout`]({environment:angularApiUrl}/classes/igxlayoutdirective.html) ディレクティブはそのコンテナーの**直下**の子のフロー方向に影響します。
+>[!NOTE]
+>[`igxLayout`]({environment:angularApiUrl}/classes/igxlayoutdirective.html) ディレクティブはそのコンテナーの**直下**の子のフロー方向に影響します。
 
 <div class="divider--half"></div>
 

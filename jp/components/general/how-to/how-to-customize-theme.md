@@ -209,7 +209,7 @@ Ignite UI テーマは、複数の次元のテーマを抽象化し、非常に�
  * [形状](../../themes/sass/roundness.md) (境界線と半径)
  * [標高](../../themes/sass/elevations.md) (影)
  * [タイポグラフィ](../../themes/sass/typography.md) (フォントとフォント サイズ)
- * [表示密度](../../display-density.md) (画面に収まる情報の密度)
+ * [サイズ (表示密度)](../../display-density.md) (画面に収まる情報のサイズ)
 
 >[!NOTE]
 > 完全にカスタマイズされたビジュアル デザインが必要な場合は、サポートされているすべてのテーマ ディメンションを変更する必要があり、Sass API を最大限に活用できます。  

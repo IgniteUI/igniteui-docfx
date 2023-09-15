@@ -243,7 +243,7 @@ This UI is disabled by default for performance reasons and it is not recommended
 The grid features could be enabled and configured through the `igx-row-island` markup - they get applied for every grid that is created for it. Changing options at runtime through the row island instance changes them for each of the grids it has spawned.
 
 ```html
-<igx-hierarchical-grid [data]="localData" [displayDensity]="density" [autoGenerate]="false"
+<igx-hierarchical-grid [data]="localData" [autoGenerate]="false"
     [allowFiltering]='true' [height]="'600px'" [width]="'800px'" #hGrid>
     <igx-column field="ID" [pinned]="true" [filterable]='true'></igx-column>
     <igx-column-group header="Information">

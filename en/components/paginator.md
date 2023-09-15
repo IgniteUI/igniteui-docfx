@@ -124,7 +124,6 @@ Paging can also be done programmatically through the Paging API /which is descri
 ## Paging API
 | Input           |      Description                           |
 |-----------------|:------------------------------------------:|
-| displayDensity  | Gets/Sets the display density of the paginator. |
 | page            | Gets/Sets the current page. |
 | perPage         | Gets/Sets the number of visible items per page. |
 | selectOptions   | Gets/Sets custom options in the Select element of the paginator. Default select values [5, 10, 15, 25, 50, 100, 500] |

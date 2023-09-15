@@ -153,7 +153,8 @@ Angular の [`DatePipe`](https://angular.io/api/common/DatePipe) を使用して
 | `mm` | 先行ゼロが明示的に設定された分。 |
 | `tt` | 12 時間形式の AM/PM セクション。 |
 
-> 注: `IgxDateTimeEditorDirective` が IME 入力をサポートします。アジア言語の入力を入力すると、コントロールは入力メソッドの構成と候補リストをコントロールの編集領域に直接表示し、構成が終了するとすぐに周囲のテキストを再フローします。
+> [!NOTE]
+> `IgxDateTimeEditorDirective` が IME 入力をサポートします。アジア言語の入力を入力すると、コントロールは入力メソッドの構成と候補リストをコントロールの編集領域に直接表示し、構成が終了するとすぐに周囲のテキストを再フローします。
 
 ### 最小値と最大値
 [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#minValue) および [`maxValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#maxValue) プロパティを指定して、ngModel の入力を制限し、有効性を制御できます。
@@ -170,7 +171,7 @@ public maxDate = new Date(2020, 11, 1);
 ```
 [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#minValue) および [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#minValue) 入力は、タイプ `string` にすることもできます。 [ISO 文字列へのバインド](#iso)を参照してください。
 
-### <a name="increment-decrement">増加および減少</a>
+### 増加および減少 <a name="increment-decrement"></a>
 [`igxDateTimeEditor`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) ディレクティブは、公開 [`increment`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#increment) および [`decrement`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#decrement) メソッドを公開します。これらは、現在設定されている日時の特定の [`DatePart`]({environment:angularApiUrl}/enums/datepart.html) を増加または減少し、いくつかの方法で使用できます。
 
 最初のシナリオでは、特定の [`DatePart`]({environment:angularApiUrl}/enums/datepart.html) がメソッドに渡されない場合、デフォルトの [`DatePart`]({environment:angularApiUrl}/enums/datepart.html) は指定された [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputFormat) と内部ディレクティブの実装に基づいて増加または減少します。2 番目のシナリオでは、さまざまな要件に適合する可能性があるため、操作する [`DatePart`]({environment:angularApiUrl}/enums/datepart.html) を明示的に指定できます。
@@ -189,7 +190,8 @@ public maxDate = new Date(2020, 11, 1);
 ### Angular フォーム
 Date Time Editor ディレクティブは、コア FormsModule [`NgModel`](https://angular.io/api/forms/NgModel) と [`ReactiveFormsModule`](https://angular.io/api/forms/ReactiveFormsModule) (FormControl、FormGroup など) のすべてのフォーム ディレクティブをサポートします。これには、[フォーム `Validators`](https://angular.io/api/forms/Validators)機能も含まれます。次の例は、テンプレート駆動型フォームで `required` バリデータを使用する方法を示しています。
 
-> 注: 必要に応じて、`validationFailed` イベントを処理し、利用可能な引数の `newValue` プロパティを変更して有効な状態に戻すことができます。
+> [!NOTE]
+> 必要に応じて、`validationFailed` イベントを処理し、利用可能な引数の `newValue` プロパティを変更して有効な状態に戻すことができます。
 
 テンプレート駆動フォームの例:
 ```html
@@ -212,7 +214,8 @@ Date Time Editor ディレクティブは、コア FormsModule [`NgModel`](https
 </igx-input-group>
 ```
 
-> 注: コンポーネントが正しく動作するためには、[`igxDateTimeEditor`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) ディレクティブの後に [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) を設定することが重要です。これは、両方のディレクティブが入力 `focus` イベントで動作するため、マスクが設定された後にテキスト選択が行われるからです。
+> [!NOTE]
+> コンポーネントが正しく動作するためには、[`igxDateTimeEditor`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) ディレクティブの後に [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) を設定することが重要です。これは、両方のディレクティブが入力 `focus` イベントで動作するため、マスクが設定された後にテキスト選択が行われるからです。
 
 ## スタイル設定
 詳細については、[`Input Group スタイル ガイド`](input-group.md#スタイル設定)を参照してください。

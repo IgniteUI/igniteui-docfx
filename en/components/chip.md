@@ -217,18 +217,18 @@ You can template the `prefix` and the `suffix` of the chip, using the `IgxPrefix
 </igx-chip>
 ```
 
-You can customize the size of the chip, using the [`displayDensity`]({environment:angularApiUrl}/classes/igxchipcomponent.html#displayDensity) input. By default it is set to `comfortable`. It can also be set to `cosy` or `compact`, while everything inside the chip retains its relative positioning:
+You can customize the size of the chip, using the [`--ig-size`] CSS variable. By default it is set to `var(--ig-size-large)`. It can also be set to `var(--ig-size-medium)` or `var(--ig-size-small)`, while everything inside the chip retains its relative positioning:
 
 <img class="responsive-img"  src="../images/chip/density.jpg" />
 
 ```html
 <igx-chip>Hi! My name is Chip!</igx-chip>
 
-<igx-chip displayDensity="cosy">
+<igx-chip style="--ig-size: var(--ig-size-medium)">
     I can be smaller!
 </igx-chip>
 
-<igx-chip displayDensity="compact">
+<igx-chip style="--ig-size: var(--ig-size-small)">
     <igx-icon igxPrefix>child_care</igx-icon>
     Even tiny!
 </igx-chip>

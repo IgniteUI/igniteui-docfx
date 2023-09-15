@@ -191,6 +191,7 @@ To learn more about Material Symbols styles please visit their [`official docume
 
 ## Server-side Rendering Note
 
+>[!NOTE]
 > In case you have implemented server side rendering logic in your application using Angular Universal and have used the `IgxIconService` to register icons, this may cause the following exception:
 <br/><br/>
 `XMLHttpRequest is not defined. Could not fetch SVG from url.`

@@ -108,13 +108,11 @@ Ignite UI for Angular Icon モジュールまたはコンポーネントをイ�
 
 ### アイコンのサイズ
 
-CSS を使用してアイコンをカスタマイズできます。アイコン サイズは `font-size` プロパティで変更できます。さらに中央揃えにするには、`width` と `height` プロパティに等しい値を設定します。
+CSS を使用してアイコンをカスタマイズできます。アイコンのサイズを変更するには、`--size` CSS 変数を使用します。
 
 ```scss
-.custom-size{
-    font-size: 56px;
-    width: 56px;
-    height: 56px;
+.custom-size {
+    --size: 56px;
 }
 ```
 <div class="sample-container loading" style="height: 80px">
@@ -193,6 +191,7 @@ public ngOnInit() {
 
 ## サーバーサイド レンダリング時の注意
 
+> [!NOTE]
 > Angular Universal を使用してアプリケーションにサーバー側のレンダリング ロジックを実装し、`IgxIconService` を使用してアイコンを登録した場合は、以下の例外が発生することがあります。
 <br/><br/>
 `XMLHttpRequest is not defined. Could not fetch SVG from url.` (XMLHttpRequest が定義されていません。url から SVG をフェッチできませんでした。) 
