@@ -589,7 +589,7 @@ editDone(evt) {
 * [Searching](search.md)
 * [Toolbar](toolbar.md)
 * [Multi-column Headers](multi-column-headers.md)
-* [Display Density](display-density.md)
+* [Size (Display Density)](display-density.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

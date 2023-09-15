@@ -239,7 +239,7 @@
     - name: 列グループの折りたたみ
       href: grid/collapsible-column-groups.md
       new: false
-    - name: 表示密度
+    - name: サイズ (表示密度)
       href: grid/display-density.md
       new: false
     - name: 条件付きスタイル設定
@@ -382,7 +382,7 @@
     - name: 列グループの折りたたみ
       href: treegrid/collapsible-column-groups.md
       new: false
-    - name: 表示密度
+    - name: サイズ (表示密度)
       href: treegrid/display-density.md
       new: false
     - name: 条件付きスタイル設定
@@ -524,7 +524,7 @@
       href: hierarchicalgrid/conditional-cell-styling.md
       new: false
       updated: false
-    - name: 表示密度
+    - name: サイズ (表示密度)
       href: hierarchicalgrid/display-density.md
       new: false
     # - name: 条件付きセルのスタイル設定
@@ -864,7 +864,7 @@
 - name: タイポグラフィ
   href: themes/typography.md
   new: false
-- name: 表示密度
+- name: サイズ (表示密度)
   href: display-density.md
 - name: Sass
   new: false
