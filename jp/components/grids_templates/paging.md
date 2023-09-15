@@ -61,7 +61,7 @@ _language: ja
 
 例:
 ```html
-<igx-paginator #paginator [totalRecords]='20'>
+<igx-paginator #paginator [totalRecords]="20">
     <igx-paginator-content>
         <div id="numberPager" style="justify-content: center;">
             <button [disabled]="paginator.isFirstPage" (click)="paginator.previousPage()" igxButton="flat">

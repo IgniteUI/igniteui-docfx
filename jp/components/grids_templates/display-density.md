@@ -9,7 +9,7 @@ _language: ja
 @@if (igxName === 'IgxTreeGrid') {
 ---
 title:  Angular Grid のサイズ - Ignite UI for Angular
-_description: Tree Grid コンポーネントにサイズ機能を適用する方法を説明します。You can use a set of compact view options in the Ignite UI for Angular。
+_description: Tree Grid コンポーネントにサイズ機能を適用する方法を説明します。Ignite UI for Angular のコンパクト ビュー オプションのセットを使用できます。
 _keywords: material density, size, igniteui for angular, infragistics, マテリアル密度
 _language: ja
 ---
@@ -60,10 +60,11 @@ _language: ja
 
 ## 使用方法
 
-上記デモで示されるように、[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) には 3 つのサイズ オプション (small、medium、large) が用意されています。以下のコード スニペットは、size を設定する方法を示します。
+上記デモで示されるように、[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) には 3 つのサイズ オプション (**small**、**medium**、**large**) が用意されています。以下のコード スニペットは、size を設定する方法を示します。
 
 ```html
 <@@igSelector #@@igObjectRef [data]="data" style="--ig-size: var(--ig-size-small)">
+</@@igSelector>
 ```
 
 以下のコード スニペットは、size を設定する方法を示します。各オプションを @@igComponent に反映する方法を紹介します。サイズ間で切り替える際に各 @@igComponent 要素の高さとそのパディングが変更されます。カスタムの列 [**width**]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) を適用する場合、左右のパディングより大きくする必要があることに注意してください。

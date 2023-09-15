@@ -578,7 +578,7 @@ interface AminoAcid {
 <div class="divider--half"></div>
 
 **IgxGrid** で複雑なデータをバインドまたは複合データ (複数の列から) を可視化する別の方法は、列にカスタム ボディ テンプレートを使用することです。通常、以下のことができます。
-    - ネストされたデータを含むセルの値を使用します。
+    - ネストされたデータを含むセルの `value` を使用します。
     - `row.data` にアクセスするためにテンプレートの `cell` オブジェクトを使用します。それから、セルから任意の値 (`cell.row.data[field]` や `cell.row.data[field][nestedField]` など) を取得します。
 
 それをテンプレートに挿入します。
@@ -676,7 +676,8 @@ export const EMPLOYEE_DATA = [
 
 <code-view style="height:460px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding"
+           alt="Angular Grid ネストされたデータ バインディングの例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -758,7 +759,8 @@ export const DATA: any[] = [
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-composite-data-binding" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-composite-data-binding"
+           alt="Angular Grid 複合データ バインディングの例">
 </code-view>
 
 <div class="divider--half"></div>

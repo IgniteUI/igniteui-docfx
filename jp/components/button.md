@@ -6,17 +6,18 @@ _language: ja
 ---
 
 # Angular Button (ボタン) の概要
-<p class="highlight">Angular Button ディレクティブは、アクション可能なボタンを作成して Web ページ/アプリケーションに追加するために使用されます。簡単にカスタマイズでき、いくつかの組み込み機能を含むさまざまな Angular Button タイプがあります。デフォルトでは、AngularMaterial はネイティブの `<button>` および `<a>` 要素を使用して、アクセス可能なエクスペリエンスを提供します。 
 
-Ignite UI for Angular Button ディレクティブを任意の button、span、div、または anchor 要素に適用して高機能なボタンを構成できます。Flat ボタン、Raised ボタン、Outlined ボタン、Icon ボタン、FAB (フローティング アクション ボタン) の Angular ボタン タイプを使用できます。カスタマイズ可能な色、テーマを作成して Angular ボタン スタイルを変更するオプション、ユーザーがボタンのサイズを選択できるようにするオプションなどを提供します。</p>
+Angular Button ディレクティブは、アクション可能なボタンを作成して Web ページ/アプリケーションに追加するために使用されます。簡単にカスタマイズでき、いくつかの組み込み機能を含むさまざまな Angular Button タイプがあります。デフォルトでは、AngularMaterial はネイティブの `<button>` および `<a>` 要素を使用して、アクセス可能なエクスペリエンスを提供します。 
+
+Ignite UI for Angular Button ディレクティブを任意の button、span、div、または anchor 要素に適用して高機能なボタンを構成できます。Flat ボタン、Raised ボタン、Outlined ボタン、Icon ボタン、FAB (フローティング アクション ボタン) の Angular ボタン タイプを使用できます。カスタマイズ可能な色、テーマを作成して Angular ボタン スタイルを変更するオプション、ユーザーがボタンのサイズを選択できるようにするオプションなどを提供します。
 
 ## Angular Button の例
 以下の Angular Button の例を作成して、さまざまなボタン タイプが境界線でスタイル設定されている場合、または透明な背景が適用されている場合にどのように表示されるかを示します。
 
 <div class="divider--half"></div>
 
-<code-view style="height: 150px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 150px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/buttons-sample-1" alt="Angular Button の例">
 </code-view>
 
@@ -36,10 +37,8 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 
 ```typescript
 // app.module.ts
-
 import { IgxButtonModule } from 'igniteui-angular';
 // import { IgxButtonModule } from '@infragistics/igniteui-angular'; for licensed package
-
 @NgModule({
     imports: [
         ...
@@ -85,7 +84,7 @@ Ignite UI for Angular Button モジュールまたはディレクティブをイ
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-2"></iframe>
 </div>
 
-### Raised ボタン 
+### Raised ボタン
 
 エンボス加工されたボタンを作成するには、`igxButton` プロパティの値を変更するだけです。
 
@@ -161,7 +160,7 @@ Ignite UI for Angular Button モジュールまたはディレクティブをイ
 
 <div class="sample-container loading" style="height: 70px">
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-disabled-sample">
-</iframe></div> 
+</iframe></div>
 
 ### Ripple
 
@@ -256,7 +255,6 @@ protected get sizeStyle() {
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
-
 次に、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) を拡張し、それぞれのホバーとフォーカス パラメーターと共に `$foreground` と `$background` パラメーターを受け入れる新しいテーマを作成します。
 
 次のマークアップを前提として:

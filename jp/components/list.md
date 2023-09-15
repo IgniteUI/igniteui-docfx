@@ -12,7 +12,6 @@ Ignite UI for Angular List コンポーネントは項目の行を表示し、�
 ## Angular List の例
 次の例は、_name_ プロパティと _phone number_ プロパティを持つ連絡先が入力されたリストを表しています。[`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) コンポーネントは、[`IgxAvatar`](avatar.md) と [`IgxIcon`](icon.md) を使用して、ユーザー エクスペリエンスを向上させ、**連絡先をお気に入りに追加**にアバター写真とさまざまなアイコンを設定する機能を公開します。さらに、リスト ビューは、フィルタリング パイプを使用して実現されたソート機能を公開します。
 
-
 <code-view style="height: 513px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-4" alt="Angular List の例">
@@ -624,7 +623,7 @@ public selectItem(item) {
 <div class="divider--half"></div>
 
 > [!NOTE]
-> 注: コンポーネントの .scss ファイルにコンポーネントテーマを作成する場合、表示のカプセル化を渡すために `::ng-deep` を使用する必要があります。そうでない場合、新しいテーマが動作しません。詳細は、[コンポーネント テーマ](../components/themes/sass/component-themes.md#表示のカプセル化) トピックを参照してください。
+> コンポーネントの .scss ファイルにコンポーネントテーマを作成する場合、表示のカプセル化を渡すために `::ng-deep` を使用する必要があります。そうでない場合、新しいテーマが動作しません。詳細は、[コンポーネント テーマ](../components/themes/sass/component-themes.md#表示のカプセル化) トピックを参照してください。
 
 リスト コンポーネントに変更できるパラメーターの完全なリストについては、[IgxListComponent スタイル]({environment:sassApiUrl}/index.html#function-list-theme)を参照してください。
 

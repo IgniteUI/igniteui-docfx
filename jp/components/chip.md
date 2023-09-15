@@ -1,7 +1,7 @@
 ---
-title: Chip コンポーネント - ネイティブ Angular | Ignite UI for Angular
+title: Angular Chip コンポーネント - Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular Chip コンポーネントは入力、属性、または操作を表す小さい要素を提供します。
-_keywords: Angular Chip、Angular Chip コンポーネント, Angular Chip Area, Angular Chip Area, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular UI コンポーネント
+_keywords: Angular Chip, Angular Chip コンポーネント, Angular Chip Area, Angular Chip Area, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular UI コンポーネント
 _language: ja
 ---
 
@@ -316,7 +316,6 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
   - <kbd>SPACE</kbd> - チップが選択可能な場合、選択を切り替えます。
 
     <img class="responsive-img"  src="../images/chip/space_key.gif" />
-
   - <kbd>DELETE</kbd> - [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) の [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) イベントをトリガーし、チップ削除が手動で処理されます。
   - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - 現在フォーカスされたチップは左に位置を移動した際に [`igxChipArea`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) の [`reorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#reorder) イベントをトリガーします。
   - <kbd>SHIFT</kbd> + <kbd>RIGHT</kbd> - 現在フォーカスされたチップは右に位置を移動した際に [`igxChipArea`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) の [`reorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#reorder) イベントをトリガーします。
