@@ -79,7 +79,7 @@ The declaration of `Multi-column header` could be achieved by wrapping a set of 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid [data]="localdata" displayDensity="compact" [moving]="true" [allowFiltering]="true">
+<igx-hierarchical-grid [data]="localdata" [moving]="true" [allowFiltering]="true">
     <igx-column field="CustomerID" sortable="true" resizable="true"></igx-column>
     <igx-column-group header="Address Information">
         <igx-column-group header="Location">
@@ -128,7 +128,7 @@ For achieving `n-th` level of nested headers, the declaration above should be fo
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid [data]="localdata" displayDensity="compact" [allowFiltering]="true" [moving]="true">
+<igx-hierarchical-grid [data]="localdata" [allowFiltering]="true" [moving]="true">
     <igx-column field="CustomerID" sortable="true" resizable="true"></igx-column>
     <igx-column-group pinned]="false" header="General Information">
         <igx-column field="CompanyName" sortable="true" resizable="true"></igx-column>
@@ -174,7 +174,7 @@ Every [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcom
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid [data]="localdata" displayDensity="compact" [allowFiltering]="true" [moving]="true">
+<igx-hierarchical-grid [data]="localdata" [allowFiltering]="true" [moving]="true">
     <igx-column field="CustomerID" sortable="true" resizable="true"></igx-column>
     <igx-column-group [pinned]="false" header="General Information">
         <igx-column field="CompanyName" sortable="true" resizable="true"></igx-column>

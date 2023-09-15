@@ -163,38 +163,19 @@ public alignment = ButtonGroupAlignment.vertical;
 </code-view>
 
 
-### 表示密度
-[`displayDensity`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#displayDensity) プロパティを使用して、ボタン グループの表示密度を制御します。これにより、グループ内のボタンのスタイルが、最大、最小、または標準 (デフォルト値) に設定されます。
+### サイズ (表示密度)
+`--ig-size` CSS カスタム プロパティを使用して、ボタン グループのサイズを制御できます。
 
-> [!NOTE] 
-> ボタン グループ内のボタンの表示密度は、明示的に指定されている場合は変更されません。
-
-```typescript
-// sample.component.ts
-...
-public displayDensity = 'comfortable';
-public displayDensities;
-
-public ngOnInit() {
-    this.displayDensities = [
-        { label: 'compact', selected: this.displayDensity === 'compact', togglable: true },
-        { label: 'cosy', selected: this.displayDensity === 'cosy', togglable: true },
-        { label: 'comfortable', selected: this.displayDensity === 'comfortable', togglable: true }
-    ];
+```scss
+/* sample.component.scss */
+igx-buttongroup {
+    --ig-size: var(--ig-size-small);
 }
-
-public selectDensity(event) {
-    this.displayDensity = this.displayDensities[event.index].label;
-}
-...
 ```
 
 ```html
 <!-- sample.component.html -->
-<igx-buttongroup [values]="displayDensities" 
-                 [displayDensity]="displayDensity"
-                 (selected)="selectDensity($event)">
-</igx-buttongroup>
+<igx-buttongroup></igx-buttongroup>
 ```
 
 

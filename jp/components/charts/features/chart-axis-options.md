@@ -47,6 +47,19 @@ Angular チャートは、チャートで表示されるラベルの構成、書
 
 [`autoMarginAndAngleUpdateMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#automarginandangleupdatemode) を設定した後、[`shouldAutoExpandMarginForInitialLabels`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#shouldautoexpandmarginforinitiallabels) プロパティを true に設定して自動マージンをオプトインするか [`shouldConsiderAutoRotationForInitialLabels`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#shouldconsiderautorotationforinitiallabels) プロパティを true に設定して自動回転を行うことができます。[`autoExpandMarginExtraPadding`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#autoexpandmarginextrapadding) と [`autoExpandMarginMaximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#autoexpandmarginmaximumvalue) を設して、それぞれ追加のスペースまたは可能な最大マージンを提供することにより、適用される自動マージンをさらにカスタマイズすることもできます。
 
+[`IgxNumberFormatSpecifier`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumberformatspecifier.html) や [`IgxDateTimeFormatSpecifier`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxdatetimeformatspecifier.html) などのカスタム ラベル形式は、`XAxisLabelFormatSpecifier` および `YAxisLabelFormatSpecifier` コレクションを介して各軸に追加できます。一般に、Intl.NumberFormat および Intl.DateTimeFormat の言語に依存した数値、日付、時刻の書式設定を適用するために使用されます。カスタム形式をラベルに適用するには、[`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) で [`yAxisLabelFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxxychartcomponent.html#yaxislabelformat) または [`xAxisLabelFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxxychartcomponent.html#xaxislabelformat) を `{0}` に設定する必要があります。
+
+次の例では、yAxis を [`IgxNumberFormatSpecifier`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxnumberformatspecifier.html) でフォーマットして、米国のトップ興行収入映画の $USD 価格を表します。
+
+<code-view style="height: 450px" alt="軸ラベルの Angular 形式指定子"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/format-specifiers"
+                                                 github-src="charts/category-chart/format-specifiers">
+</code-view>
+
+
+<div class="divider--half"></div>
+
 ## 軸範囲の例
 
 チャートでは数値軸または時間軸の範囲の最小値と最大値を定義できます。範囲の最小値は軸の最小値で、範囲の最大値は軸の最大値です。これらは、[`yAxisMinimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#yaxisminimumvalue) および [`yAxisMaximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#yaxismaximumvalue) オプションを設定することによって設定されます。

@@ -244,7 +244,7 @@ export class RemoteLoDService {
 グリッド機能を有効にして `igx-row-island` マークアップを介して設定し、作成された各グリッドに適用されます。ランタイムに行アイランド インスタンスでオプションを変更すると生成した各グリッドで変更されます。 
 
 ```html
-<igx-hierarchical-grid [data]="localData" [displayDensity]="density" [autoGenerate]="false"
+<igx-hierarchical-grid [data]="localData" [autoGenerate]="false"
     [allowFiltering]='true' [height]="'600px'" [width]="'800px'" #hGrid>
     <igx-column field="ID" [pinned]="true" [filterable]='true'></igx-column>
     <igx-column-group header="Information">
