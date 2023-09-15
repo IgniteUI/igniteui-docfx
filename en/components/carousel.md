@@ -330,7 +330,7 @@ adding [IgxList]({environment:angularApiUrl}/classes/igxlistcomponent.html):
 ```html
 ...
 <div class="list-wrapper">
-    <igx-list displayDensity="compact">
+    <igx-list>
       <!-- Adding disabled classes when the list item index does not match the current slide index-->
         <igx-list-item *ngFor="let item of slides; let i=index" [ngClass]="{'disabled': i !== currentIndex }" >
       <!-- List item content goes here -->

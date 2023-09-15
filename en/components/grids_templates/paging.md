@@ -49,7 +49,7 @@ The following example represents @@igComponent pagination and exposes the option
 Adding a [`igx-paginator`](../paginator.md) component will control whether the feature is present, you can enable/disable it by using a simple `*ngIf` with a toggle property. The [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) input controls the visible records per page. Let’s update our @@igComponent to enable paging:
 
 ```html
-<@@igSelector #@@igObjectRef [data]="data" [height]="'500px'" [width]="'100%'" [displayDensity]="'cosy'">
+<@@igSelector #@@igObjectRef [data]="data" [height]="'500px'" [width]="'100%'">
     <igx-paginator [perPage]="10">
     </igx-paginator>
 </@@igSelector>
@@ -90,7 +90,7 @@ The `igx-paginator` component is used along with the `igx-grid` component in the
 ```html
 <igx-grid #grid [data]="data">
     <igx-paginator #paginator [(page)]="grid.page" [totalRecords]="grid.totalRecords" [(perPage)]="10"
-            [selectOptions]="selectOptions" [displayDensity]="grid.displayDensity">
+            [selectOptions]="selectOptions">
     </igx-paginator>
 </igx-grid>
 ```
@@ -102,7 +102,7 @@ The `igx-paginator` component is used along with the `igx-tree-grid` component i
 ```html
 <igx-tree-grid #treeGrid [data]="data">
     <igx-paginator #paginator [(page)]="treeGrid.page" [totalRecords]="treeGrid.length" [(perPage)]="10"
-            [selectOptions]="selectOptions" [displayDensity]="treeGrid.displayDensity">
+            [selectOptions]="selectOptions">
     </igx-paginator>
 </igx-tree-grid>
 ```

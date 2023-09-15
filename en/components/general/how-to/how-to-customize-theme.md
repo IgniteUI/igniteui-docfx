@@ -208,7 +208,7 @@ Ignite UI theming abstracts multiple dimensions of theming and provides for very
  * [Shape](../../themes/sass/roundness.md) (borders and radiuses)
  * [Elevations](../../themes/sass/elevations.md) (shadows)
  * [Typography](../../themes/sass/typography.md) (fonts and font sizes)
- * [Display density](../../display-density.md) (the density of information that is fitted on the screen)
+ * [Size (Display Density)](../../display-density.md) (the size of information that is fitted on the screen)
 
 >[!NOTE]
 > If you really want a fully custom visual design, you will need to modify all of the supported theming dimensions and you will take full advantage of the Sass APIs.
