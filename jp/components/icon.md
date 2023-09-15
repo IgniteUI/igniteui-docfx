@@ -191,6 +191,7 @@ public ngOnInit() {
 
 ## サーバーサイド レンダリング時の注意
 
+> [!NOTE]
 > Angular Universal を使用してアプリケーションにサーバー側のレンダリング ロジックを実装し、`IgxIconService` を使用してアイコンを登録した場合は、以下の例外が発生することがあります。
 <br/><br/>
 `XMLHttpRequest is not defined. Could not fetch SVG from url.` (XMLHttpRequest が定義されていません。url から SVG をフェッチできませんでした。) 

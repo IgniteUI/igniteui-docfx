@@ -239,7 +239,7 @@ This example demonstrates a few of the data grid’s key features:
 
 - [**Export to Excel**](grid/export-excel.md), including [**Data Visualization**](excel-library-working-with-charts.md)
 
-- [**Display Density**](grid/display-density.md) to adjust the height and sizing of the rows
+- [**Size (Display Density)**](grid/display-density.md) to adjust the height and sizing of the rows
 
 - Column templates like [**Sparkline Column**](charts/types/sparkline-chart.md) and Image Column
 </div>
@@ -428,14 +428,14 @@ There are multiple options to get access to our award-winning support at Infragi
         <div class="divider--half"></div>
         <div class="faqs-accordion-panel">
             <ul>
-                <li>[Virtualized Rows and Columns](grid/virtualization.md) so you can load millions of records</li>
-                <li>[Inline Editing](grid/row-editing.md) with Cell, Row, and [Batch](grid/batch-editing.md) Update options</li>
-                <li>[Excel-style Filtering](grid/excel-style-filtering.md) and full [Excel Keyboard Navigation](grid/keyboard-navigation.md) capability</li>
-                <li>Interactive [Outlook-style Grouping](grid/groupby.md)</li>
-                <li>[Column Summaries](grid/summaries.md) based on any data in a grid cell or column</li>
-                <li>[Export to Excel](grid/export-excel.md), including [Data Visualization](excel-library-working-with-charts.md)</li>
-                <li>[Display Density](grid/display-density.md) to adjust the height and sizing of the rows</li>
-                <li>Column templates like [Sparkline Column](charts/types/sparkline-chart.md) and Image Column</li>
+                <li><a href="grid/virtualization.md">Virtualized Rows and Columns</a></li>
+                <li><a href="grid/row-editing.md">Inline Editing</a> with Cell, Row, and <a href="grid/batch-editing.md">Batch</a> Update options</li>
+                <li><a href="grid/excel-style-filtering.md">Excel-style Filtering</a> and full <a href="grid/keyboard-navigation.md">Excel Keyboard Navigation</a> capability</li>
+                <li>Interactive <a href="grid/groupby.md">Outlook-style Grouping</a></li>
+                <li><a href="grid/summaries.md">Column Summaries</a> based on any data in a grid cell or column</li>
+                <li><a href="grid/export-excel.md">Export to Excel</a>, including <a href="excel-library-working-with-charts.md">Data Visualization</a></li>
+                <li><a href="grid/display-density.md">Size (Display Density)</a> to adjust the height and sizing of the rows</li>
+                <li>Column templates like <a href="charts/types/sparkline-chart.md">Sparkline Column</a> and Image Column</li>
             </ul>
         </div>
     </div>
