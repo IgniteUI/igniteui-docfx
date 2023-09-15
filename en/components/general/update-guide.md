@@ -51,6 +51,43 @@ Unfortunately not all changes can be automatically updated. Changes below are sp
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
+## From 16.0.x to 16.1.x
+
+### General
+
+#### **Non-breaking changes**
+- We are moving away from the `DisplayDensityToken` injection token as a way to set the size of the components in favor of a simpler, more robust way - using CSS custom properties. For that reason the `DisplayDensityToken` injection token is now deprecated. This ripples across all components that expose the `displayDensity` input property. The token and input properties will be removed in 17.0.0. We urge you to do the following:
+
+Remove all declarations where the `DisplayDensityToken` is provided:
+
+```typescript
+// *.component.ts
+// remove the provider declaration for `DisplayDensityToken`
+providers: [{ provide: DisplayDensityToken, useValue: { displayDensity: DisplayDensity.compact } }],
+```
+
+Remove all bindings or programmatic assignments to the `displayDensity` input property:
+
+```html
+<!-- Remove `[displayDensity]="'compact'"` -->
+<igx-grid [displayDensity]="'compact'">...</igx-grid>
+```
+
+Instead, use the custom CSS property `--ig-size` to achieve the same result as with `displayDensity`:
+
+```css
+/* 
+Add --ig-size to a component or global file.
+Available values are:
+  - compact: --ig-size-small
+  - cosy: --ig-size-medium
+  - comfortable: --ig-size-large
+*/
+igx-grid {
+    --ig-size: var(--ig-size-small);
+}
+```
+
 ## From 15.1.x to 16.0.x
 
 - The upgrade to Angular 16 comes with changes in how `NgModules` operate under the hood. Previously, adding a module that internally depends on another would make the declarations of both available in your app. This behavior was not intended and Angular 16 changes it. If your app was depending on this behavior, e.g. you were only importing a module containing many internal dependencies like `IgxGridModule` and using components coming with those, you will need to manually add the modules for each component your app uses separately.
