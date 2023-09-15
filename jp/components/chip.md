@@ -218,18 +218,18 @@ public chipRemoved(event: IBaseChipEventArgs) {
 </igx-chip>
 ```
 
-チップのサイズは、[`displayDensity`]({environment:angularApiUrl}/classes/igxchipcomponent.html#displayDensity) 入力を使用してカスタマイズできます。デフォルトの設定は `comfortable` です。チップ内のすべてが相対位置を保持する際に `cosy` または `compact` にも設定できます。
+[`--ig-size`] CSS 変数を使用して、チップのサイズをカスタマイズできます。デフォルトでは、`var(--ig-size-large)` に設定されています。`var(--ig-size-medium)` または `var(--ig-size-small)` に設定することもできますが、チップ内のすべての要素は相対的な位置を保持します。
 
 <img class="responsive-img"  src="../images/chip/density.jpg" />
 
 ```html
 <igx-chip>Hi! My name is Chip!</igx-chip>
 
-<igx-chip displayDensity="cosy">
+<igx-chip style="--ig-size: var(--ig-size-medium)">
     I can be smaller!
 </igx-chip>
 
-<igx-chip displayDensity="compact">
+<igx-chip style="--ig-size: var(--ig-size-small)">
     <igx-icon igxPrefix>child_care</igx-icon>
     Even tiny!
 </igx-chip>

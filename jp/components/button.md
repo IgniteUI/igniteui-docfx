@@ -8,7 +8,7 @@ _language: ja
 # Angular Button (ボタン) の概要
 <p class="highlight">Angular Button ディレクティブは、アクション可能なボタンを作成して Web ページ/アプリケーションに追加するために使用されます。簡単にカスタマイズでき、いくつかの組み込み機能を含むさまざまな Angular Button タイプがあります。デフォルトでは、AngularMaterial はネイティブの `<button>` および `<a>` 要素を使用して、アクセス可能なエクスペリエンスを提供します。 
 
-Ignite UI for Angular Button ディレクティブを任意の button、span、div、または anchor 要素に適用して高機能なボタンを構成できます。Flat ボタン、Raised ボタン、Outlined ボタン、Icon ボタン、FAB (フローティング アクション ボタン) の Angular ボタン タイプを使用できます。カスタマイズ可能な色、テーマを作成して Angular ボタン スタイルを変更するオプション、ユーザーがボタンの表示密度を選択できるようにするオプションなどを提供します。</p>
+Ignite UI for Angular Button ディレクティブを任意の button、span、div、または anchor 要素に適用して高機能なボタンを構成できます。Flat ボタン、Raised ボタン、Outlined ボタン、Icon ボタン、FAB (フローティング アクション ボタン) の Angular ボタン タイプを使用できます。カスタマイズ可能な色、テーマを作成して Angular ボタン スタイルを変更するオプション、ユーザーがボタンのサイズを選択できるようにするオプションなどを提供します。</p>
 
 ## Angular Button の例
 以下の Angular Button の例を作成して、さまざまなボタン タイプが境界線でスタイル設定されている場合、または透明な背景が適用されている場合にどのように表示されるかを示します。
@@ -191,12 +191,9 @@ Ignite UI for Angular Button モジュールまたはディレクティブをイ
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-4">
 </iframe></div>
 
-## 密度の表示
+## サイズ (表示密度)
 
-[`displayDensity`]({environment:angularApiUrl}/classes/igxbuttondirective.html#displayDensity) 入力を使用して `igxButton` の表示密度を選択できます。これを行うには、まず `IgxButtonGroupModule` をインポートし、[`igxButtonGroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) コンポーネントによってすべての密度値を表示する必要があります。これにより、選択されるたびに Angular ボタンの `displayDensity` にバインドされた独自の **density** プロパティが更新されます。
-
-> [!NOTE]
-> `icon` タイプのボタンは、異なる表示密度値を設定しても視覚的に変化しません。
+`--ig-size` カスタム CSS プロパティを使用して、ユーザーが `igxButton` のサイズを選択できるようにすることができます。これを行うには、まず `IgxButtonGroupModule` をインポートし、[`igxButtonGroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) コンポーネントによってサイズ値を表示する必要があります。このようにして、選択されるたびに **--ig-size** CSS プロパティを更新します。
 
 ```typescript
 // app.module.ts
@@ -214,24 +211,31 @@ import { IgxButtonGroupModule } from 'igniteui-angular';
 
 ```html
 <!--buttons-density.component.html-->
-<igx-buttongroup [values]="displayDensities" (selected)="selectDensity($event)"></igx-buttongroup>
+<igx-buttongroup [values]="sizes" (selected)="selectSize($event)"></igx-buttongroup>
 ...
-<button igxButton="flat" [displayDensity]="density">Flat</button>
+<button igxButton="flat">Flat</button>
 ```
 
 ```typescript
 // buttons-density.component.ts
-public density = "comfortable";
-public displayDensities;
+public size = "large";
+public sizes;
 public ngOnInit() {
-    this.displayDensities = [
-        { label: 'comfortable', selected: this.density === 'comfortable', togglable: true },
-        { label: 'cosy', selected: this.density === 'cosy', togglable: true },
-        { label: 'compact', selected: this.density === 'compact', togglable: true }
+    this.sizes = [
+        { label: 'large', selected: this.size === 'large', togglable: true },
+        { label: 'medium', selected: this.size === 'medium', togglable: true },
+        { label: 'small', selected: this.size === 'small', togglable: true }
     ];
 }
-public selectDensity(event) {
-    this.density = this.displayDensities[event.index].label;
+
+public selectSize(event: any) {
+    this.size = this.sizes[event.index].label;
+}
+
+
+@HostBinding('style.--ig-size')
+protected get sizeStyle() {
+    return `var(--ig-size-${this.size})`;
 }
 ```
 

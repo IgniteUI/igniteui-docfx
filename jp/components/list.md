@@ -312,7 +312,7 @@ toggleFavorite(item: IgxListItem) {
 }
 ```
 
-[`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displayDensity) 入力を使用して、ユーザーがリストの表示密度を選択できるようにします。これには、`IgxButtonGroupModule` をインポートし、[**IgxButtonGroup**](button-group.md) を使用してすべての密度値を表示します。このようにして選択されるたびに、リストの [`displayDensity`]({environment:angularApiUrl}/classes/igxlistcomponent.html#displayDensity) にバインドされている独自の **density** プロパティを更新します。
+また、`--ig-size` カスタム CSS プロパティを使用して、ユーザーがリストのサイズを選択できるようにすることができます。これには、`IgxButtonGroupModule` をインポートし、[**IgxButtonGroup**](button-group.md) を使用してすべてのサイズ値を表示します。このようにして、選択されるたびに、リストの**サイズ**が更新されます。
 
 ```typescript
 // app.module.ts
@@ -328,9 +328,9 @@ import { IgxButtonGroupModule } from 'igniteui-angular';
 ```html
 <!--contacts.component.html-->
 
-<igx-buttongroup [values]="displayDensities" (selected)="selectDensity($event)"></igx-buttongroup>
+<igx-buttongroup [values]="sizes" (selected)="selectSize($event)"></igx-buttongroup>
 ...
-<igx-list [displayDensity]="density">
+<igx-list>
     ...
 </igx-list>
 ```
@@ -338,19 +338,25 @@ import { IgxButtonGroupModule } from 'igniteui-angular';
 ```typescript
 // contacts.component.ts
 
-public density = 'comfortable';
-public displayDensities;
+public size = 'large';
+public sizes;
 
 public ngOnInit() {
-    this.displayDensities = [
-        { label: 'comfortable', selected: this.density === 'comfortable', togglable: true },
-        { label: 'cosy', selected: this.density === 'cosy', togglable: true },
-        { label: 'compact', selected: this.density === 'compact', togglable: true }
+    this.sizes = [
+        { label: 'large', selected: this.size === 'large', togglable: true },
+        { label: 'medium', selected: this.size === 'medium', togglable: true },
+        { label: 'small', selected: this.size === 'small', togglable: true }
     ];
 }
 
-public selectDensity(event) {
-    this.density = this.displayDensities[event.index].label;
+public selectSize(event: any) {
+    this.size = this.sizes[event.index].label;
+}
+
+
+@HostBinding('style.--ig-size')
+protected get sizeStyle() {
+    return `var(--ig-size-${this.size})`;
 }
 ```
 
