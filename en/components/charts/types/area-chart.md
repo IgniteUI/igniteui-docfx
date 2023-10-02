@@ -2,7 +2,7 @@
 title: Angular Area Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Area Chart
 _keywords: Angular Charts, Area Chart, Infragistics
-mentionedTypes: ["DomainChart", "CategoryChart", "XamDataChart", "CategoryChartType", 'Series']
+mentionedTypes: ["DomainChart", "CategoryChart", "XamDataChart", "CategoryChartType"]
 namespace: Infragistics.Controls.Charts
 ---
 
