@@ -206,6 +206,7 @@ public static totalMax: PivotAggregation = (members, data: any) => {
 ```
 ピボット値は、`displayName` プロパティも提供します。この値のカスタム名を列ヘッダーに表示するために使用できます。
 
+> [!NOTE]
 > `aggregatorName` と `aggregator` 関数の両方を定義すると、`aggregatorName` が優先されます。何も設定されていない場合、エラーがスローされます。
 
 ### プロパティを有効にする
@@ -307,6 +308,7 @@ public data = [
 
 ## その他のリソース
 <div class="divider--half"></div>
+
 * [Angular ピボット グリッド機能](pivot-grid-features.md)
 * [Angular ピボット グリッド カスタム集計](pivot-grid-custom.md)
 

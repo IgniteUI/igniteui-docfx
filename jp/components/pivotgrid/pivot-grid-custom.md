@@ -8,7 +8,7 @@ _language: ja
 
 # Angular ピボット グリッドのリモート操作
 
-ピボット データがすでにリモート サービスからグループ化および集約されており、クライアントでさらに処理する必要がないシナリオでは、クライアントでのデータ処理をスキップし、データをそのまま直接表示できるようにするカスタムの空のストラテジを使用するように構成できます。
+ピボット データがすでにリモート サービスからグループ化および集計されており、クライアントでさらに処理する必要がないシナリオでは、クライアントでのデータ処理をスキップし、データをそのまま直接表示できるようにするカスタムの空のストラテジを使用するように構成できます。
 
 ```typescript
 public pivotConfigHierarchy: IPivotConfiguration = {
@@ -17,7 +17,7 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 }
 ```
 
-次の例は、データがすでに集約されているシナリオの処理方法と、その構造がどのように見えるかを示しています:
+次の例は、データがすでに集計されているシナリオの処理方法と、その構造がどのように見えるかを示しています:
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-noop" alt="Angular ピボット グリッドのカスタム定義済み集計の例">
@@ -39,7 +39,7 @@ rows: [
 ]
 ```
 
-そして、集約された例は次のようになります:
+そして、集計された例は次のようになります:
 
 ```typescript
 public aggregatedData = [
@@ -110,7 +110,7 @@ public pivotConfig: IPivotConfiguration = {
 }
 ```
 
-データが構成と一致することが重要です。最良の結果を得るには、集計データに追加のフィールドを含めたり、提供されたデータのフィールドを行または列として宣言せずに残したりしないでください。`IgxPivotGrid` コンポーネントは、`PivotConfiguration` に基づいてデータを構築し、それに応じて構成と集約データが一致することが期待されます。
+データが構成と一致することが重要です。最良の結果を得るには、集計データに追加のフィールドを含めたり、提供されたデータのフィールドを行または列として宣言せずに残したりしないでください。`IgxPivotGrid` コンポーネントは、`PivotConfiguration` に基づいてデータを構築し、それに応じて構成と集計データが一致することが期待されます。
 
 同様に、ソートやフィルタリングなどの他のリモート データ操作の場合、関連する空のストラテジ (`filterStrategy`、`sortStrategy`) を設定することで、データ処理をスキップできます。
 
@@ -131,6 +131,7 @@ public noopSortStrategy = NoopSortingStrategy.instance();
 
 ## その他のリソース
 <div class="divider--half"></div>
+
 * [Angular ピボット グリッド機能](pivot-grid-features.md)
 * [Angular ピボット グリッドの概要](pivot-grid.md)
 
