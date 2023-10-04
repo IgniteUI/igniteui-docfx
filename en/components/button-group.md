@@ -137,24 +137,14 @@ public alignment = ButtonGroupAlignment.vertical;
 
 <div class="divider--half"></div>
 
-### Multiple selection
-Use the the [`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#multiSelection) input property to enable the multiple selection in the button group.
+### Selection
 
-```html
-<!-- sample.component.html -->
-<igx-buttongroup [multiSelection]="true">
-    <button igxButton>
-        <igx-icon>format_bold</igx-icon>
-    </button>
-    <button igxButton>
-        <igx-icon>format_italic</igx-icon>
-    </button>
-    <button igxButton>
-        <igx-icon>format_underlined</igx-icon>
-    </button>
-</igx-buttongroup>
-```
+In order to configure the `igx-buttongroup` selection, you could use its [selectionMode]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#selectionMode) property. This property accepts the following three modes: 
+- **single** - by default the selection of the `igx-buttongroup` is set to `single`. Users can select only one button in the group at the same time and could deselect all buttons in the group.
+- **singleRequired** - only one button in a group can be selected at the same time, however, once there is a selected button in the group, it is not possible to deselect all buttons.
+- **multi** - multiple buttons in the group could be selected.
 
+The sample below demonstrates the exposed `igx-buttongroup` selection modes:
 
 <code-view style="height: 80px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
