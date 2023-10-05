@@ -146,7 +146,7 @@ In order to configure the `igx-buttongroup` selection, you could use its [select
 
 The sample below demonstrates the exposed `igx-buttongroup` selection modes:
 
-<code-view style="height: 80px" 
+<code-view style="height: 170px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-4" >
 </code-view>
