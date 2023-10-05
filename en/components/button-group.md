@@ -237,7 +237,7 @@ public ngOnInit() {
 
 ```html
 <!-- sample.component.html -->
-<igx-buttongroup [multiSelection]="true" [values]="bordersButtons"></igx-buttongroup>
+<igx-buttongroup [selectionMode]="'multi'" [values]="bordersButtons"></igx-buttongroup>
 ```
 
 
