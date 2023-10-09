@@ -140,9 +140,9 @@ public alignment = ButtonGroupAlignment.vertical;
 ### Selection
 
 In order to configure the `igx-buttongroup` selection, you could use its [selectionMode]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#selectionMode) property. This property accepts the following three modes: 
-- **single** - by default the selection of the `igx-buttongroup` is set to `single`. Users can select only one button in the group at the same time and could deselect all buttons in the group.
-- **singleRequired** - only one button in a group can be selected at the same time, however, once there is a selected button in the group, it is not possible to deselect all buttons.
-- **multi** - multiple buttons in the group could be selected.
+- **single** - default selection mode of the button group. A single button can be selected/deselected by the user.
+- **singleRequired** - mimics a radio group behavior. Only one button can be selected and once initial selection is made, deselection is not possible through user interaction.
+- **multi** - multiple buttons in the group can be selected and deselected.
 
 The sample below demonstrates the exposed `igx-buttongroup` selection modes:
 
