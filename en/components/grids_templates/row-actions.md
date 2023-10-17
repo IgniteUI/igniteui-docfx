@@ -84,7 +84,8 @@ They are added inside the `<igx-action-strip>` and this is all needed to have an
 ```
 }
 
->Note: When `IgxActionStripComponent` is a child component of the grid, hovering a row will automatically show the UI.
+>[!NOTE]
+> When `IgxActionStripComponent` is a child component of the grid, hovering a row will automatically show the UI.
 
 ## Custom implementation
 
@@ -124,7 +125,8 @@ These components expose templates giving flexibility for customization. For inst
 </code-view>
 }
 
->Note: The predefined actions inherit [`IgxGridActionsBaseDirective`]({environment:infragisticsBaseUrl}/classes/igxgridactionsbasedirective.html) and when creating a custom grid action component, it should also inherit `IgxGridActionsBaseDirective`.
+>[!NOTE]
+> The predefined actions inherit [`IgxGridActionsBaseDirective`]({environment:infragisticsBaseUrl}/classes/igxgridactionsbasedirective.html) and when creating a custom grid action component, it should also inherit `IgxGridActionsBaseDirective`.
 
 ## API References
 
