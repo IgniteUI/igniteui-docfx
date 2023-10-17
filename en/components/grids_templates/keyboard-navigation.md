@@ -238,7 +238,8 @@ Based on the [IGridKeydownEventArgs]({environment:angularApiUrl}/interfaces/igri
             obj.target.activate();
         });
 ```
-> Note: Please refer to the sample code for full implementation details.
+>[!NOTE]
+> Please refer to the sample code for full implementation details.
 
 Use the demo below to try out the custom scenarios that we just implemented:
 - Double click or press <kbd>F2</kbd> key on a cell in the **Order** column, change the value to **7** and press <kbd>Tab</kbd> key. Prompt message will be shown.

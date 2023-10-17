@@ -90,6 +90,7 @@ _canonicalLink: grid/state-persistence
 }
 
 @@if (igxName !== 'IgxPivotGrid') {
+>[!NOTE]
 > The [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) directive does not take care of templates. Go to [Restoring Column](state-persistence.md#restoring-columns) section to see how to restore column templates.
 }
 
@@ -394,6 +395,7 @@ public restoreState() {
 ## Restoring Strategies
 [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) will not persist neither remote operations nor custom dimension strategies (For further information see [Grid Remote Operations](remote-data-operations.md) sample) by default (see [`limitations`](state-persistence.md#limitations)). Restoring any of these can be achieved with code on application level. The `IgxGridState` exposes an event called [`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#stateParsed) which can be used to additionally modify the grid state before it gets applied. Let's show how to do this:
 
+>[!NOTE]
 > [`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective) is only emitted when we are using [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setState) with string argument.
 
 * Set custom sorting strategy and custom column and row dimension strategies:
