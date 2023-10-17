@@ -339,6 +339,75 @@ export class MyMenuComponent {
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-menu" >
 </code-view>
 
+### Mutli-Level Drop Down menu
+
+This sample demonstrates how to implement a multi-level drop down menu with the use of a custom directive and service.
+
+The `MultiLevelDirective` sets the [`overlay settings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) of the inner drop down and manages its opened/closed state on hover. The `MultiLevelService` keeps track of all inner drop downs since multiple levels of hierarchy can be implemented.
+
+In order to configure the [`IgxDropDownItem`]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html) to open an additional drop down, add the `multiLevel` directive and set the `innerDropdown` property.
+
+```html
+<igx-drop-down #dropdown1>
+    <igx-drop-down-item [value]="'Web'" multiLevel [innerDropdown]="web">
+        Web <igx-icon igxSuffix>chevron_right</igx-icon>
+    </igx-drop-down-item>
+    ...
+</igx-drop-down>
+
+<igx-drop-down #web>
+    <igx-drop-down-item [value]="'App Builder'">
+        App Builder
+    </igx-drop-down-item>
+    ...
+</igx-drop-down>
+```
+
+To configure the multi-level drop down to behave as a menu, set the [ISelectionEventArgs]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) interface [cancel]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#cancel) member to **true** in the [selectionChanging]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selectionChanging) event handler. Also, to handle the selection and prevent closing the drop down when selecting a non-selectable item, use the `MultiLevelService`'s `handleSelection` and `handleClosing` methods.
+
+```ts
+@ViewChildren(IgxDropDownComponent, { read: IgxDropDownComponent })
+private _dropdowns: QueryList<IgxDropDownComponent>;
+
+@ViewChild('dropdown1', { read: IgxDropDownComponent })
+private _multiLevelDropdown: IgxDropDownComponent;
+
+constructor(private _multiLevelService: MultiLevelService) { }
+
+public ngAfterViewInit(): void {
+    this._dropdowns.forEach((dropdown) => {
+        dropdown.selectionChanging.subscribe((args) => {
+            args.cancel = true;
+            const value = args.newSelection.value;
+            const categories = this._multiLevelService.categories;
+
+            if (categories.includes(value)) {
+                this.selection = '';
+                return;
+            }
+
+            if (this._multiLevelService.isMultiLevel(dropdown)) {
+                this._multiLevelService.handleSelection();
+            } else {
+                dropdown.close();
+            }
+
+            this.selection = value;
+        });
+    });
+
+    this._multiLevelDropdown.closing.subscribe((args) => {
+        this._multiLevelService.handleClosing(args);
+    });
+}
+```
+
+The result from the above configurations could be seen in the below sample. Open the **Design & Development** drop down and hover over the drop down items.
+
+<code-view style="height:400px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-multi-level-menu">
+</code-view>
 
 ### Navigation directive
 Use the [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) directive to enable keyboard navigation for the `igxDropDown` component. In order to allow the directive to handle all triggered events, it should be applied to the active (focused) element or a parent container. By default, a drop-down or its items don't take focus, so the directive can be placed on a `button` or `input` that will control the drop-down. The navigation directive value should target a component that is an instance or a descendant of the [IgxDropDownBaseDirective]({environment:angularApiUrl}/classes/igxdropdownbasedirective.html) class.
