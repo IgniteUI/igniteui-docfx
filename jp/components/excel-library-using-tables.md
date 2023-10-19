@@ -33,7 +33,7 @@ var worksheet = this.workbook.worksheets().add("Sheet1");
 worksheet.tables().add("A1:G10", true);
 ```
 
-テーブルを追加後 [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html) で [`insertColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#insertcolumns)、[`insertDataRows`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#insertdatarows)、[`deleteColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#deletecolumns)、または [`deleteDataRows`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#deletedatarows) メソッドを呼び出して行列を追加または削除して変更できます。テーブルの [`resize`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#resize) メソッドを使用して新しいテーブル範囲を設定できます。
+テーブルを追加後 [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html) で [`insertColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#insertColumns)、[`insertDataRows`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#insertDataRows)、[`deleteColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#deleteColumns)、または [`deleteDataRows`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#deleteDataRows) メソッドを呼び出して行列を追加または削除して変更できます。テーブルの [`resize`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#resize) メソッドを使用して新しいテーブル範囲を設定できます。
 
 以下のコード スニペットは、3 つのメソッドの使用方法を示します。
 
@@ -62,7 +62,7 @@ table.resize("A1:G15");
 
 [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html) の列にフィルターを適用します。フィルターが列で適用されると、テーブルに適用したすべてのフィルター条件と一致する行を決定するために再評価されます。
 
-テーブルのデータを後で変更または行の `Hidden` プロパティを変更した場合、フィルター条件は自動的に再評価されません。テーブルのフィルター条件は、テーブルの列フィルターが追加、削除、変更されたときか、[`reapplyFilters`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#reapplyfilters) メソッドがテーブルに対して呼び出されたときに限り再適用されます。
+テーブルのデータを後で変更または行の `Hidden` プロパティを変更した場合、フィルター条件は自動的に再評価されません。テーブルのフィルター条件は、テーブルの列フィルターが追加、削除、変更されたときか、[`reapplyFilters`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#reapplyFilters) メソッドがテーブルに対して呼び出されたときに限り再適用されます。
 
 以下は、[`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html) の列で使用できるフィルター タイプです。
 
@@ -90,9 +90,9 @@ table.columns(0).applyAverageFilter(AverageFilterType.AboveAverage);
 
 テーブル列でソート条件を設定するとソートが実行されます。ソート条件が列で設定されると、テーブルのセルの順番を決定するためにテーブルのすべてのソート条件が再評価されます。ソートの基準を満たすためにセルを移動させる必要があるとき、テーブルのセルの行全体が 1 つの単位として移動されます。
 
-テーブルのデータが後で変更される場合、ソート条件は自動的に再評価されません。テーブルのソート条件は、ソート条件が追加、削除、変更される時に、または [`reapplySortConditions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#reapplysortconditions) メソッドがテーブルで呼び出されるときに限り再適用されます。ソート条件が再評価されると、表示されたセルのみがソートられます。非表示行のすべてのセルは適切に維持されます。
+テーブルのデータが後で変更される場合、ソート条件は自動的に再評価されません。テーブルのソート条件は、ソート条件が追加、削除、変更される時に、または [`reapplySortConditions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#reapplySortConditions) メソッドがテーブルで呼び出されるときに限り再適用されます。ソート条件が再評価されると、表示されたセルのみがソートられます。非表示行のすべてのセルは適切に維持されます。
 
-テーブル列からソート条件へアクセスする以外に [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html) の [`sortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#sortsettings) プロパティの [`sortConditions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.sortsettings\`1.html#sortconditions) コレクションからも公開されます。これは、列/ソート条件のペアの順番に並べられたコレクションです。このコレクション内の順序はソートの優先順位です。
+テーブル列からソート条件へアクセスする以外に [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html) の [`sortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#sortSettings) プロパティの [`sortConditions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.sortsettings\`1.html#sortConditions) コレクションからも公開されます。これは、列/ソート条件のペアの順番に並べられたコレクションです。このコレクション内の順序はソートの優先順位です。
 
 列に設定可能なソート条件タイプは以下のとおりです。
 
@@ -101,7 +101,7 @@ table.columns(0).applyAverageFilter(AverageFilterType.AboveAverage);
 *   [`FillSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.fillsortcondition.html) - 塗りつぶしが特定のパターン/グラデーションであるかどうかに基づいてセルをソートします。
 *   [`FontColorSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.fontcolorsortcondition.html) - フォントが特定の色であるかどうかによってセルをソートします。
 
-また [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html) の [`sortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#sortsettings) の [`caseSensitive`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.sortsettings\`1.html#casesensitive) プロパティは、文字列が大文字と小文字を区別してソートできるかどうかを開発者が設定できます。
+また [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html) の [`sortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#sortSettings) の [`caseSensitive`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.sortsettings\`1.html#caseSensitive) プロパティは、文字列が大文字と小文字を区別してソートできるかどうかを開発者が設定できます。
 
 以下のコード スニペットは、[`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html) に [`OrderedSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.orderedsortcondition.html) を適用する方法です。
 
@@ -118,13 +118,13 @@ table.sortSettings.sortConditions().addItem(table.columns(0), new OrderedSortCon
 
 ## API リファレンス
 
-*   [`deleteColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#deletecolumns)
-*   [`deleteDataRows`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#deletedatarows)
+*   [`deleteColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#deleteColumns)
+*   [`deleteDataRows`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#deleteDataRows)
 *   [`FillFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.fillfilter.html)
-*   [`insertColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#insertcolumns)
-*   [`insertDataRows`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#insertdatarows)
-*   [`sortConditions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.sortsettings\`1.html#sortconditions)
-*   [`sortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#sortsettings)
+*   [`insertColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#insertColumns)
+*   [`insertDataRows`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#insertDataRows)
+*   [`sortConditions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.sortsettings\`1.html#sortConditions)
+*   [`sortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#sortSettings)
 *   [`tables`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheet.html#tables)
 *   [`WorksheetTableStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettablestyle.html)
 *   [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html)
