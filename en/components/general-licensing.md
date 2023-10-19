@@ -86,9 +86,14 @@ npm install @infragistics/igniteui-dockmanager
 
 Have in mind that we have set the Ignite UI for Angular package to be scoped, meaning that no changing the registries is needed if you want to install packages from our private feed and from npmjs.org simultaneously.
 
-#### Some additional changes might have to be made in your project source
+### Changes in your project source after license package update
 
-If you are upgrading from trial to licensed package:
+If you are upgrading from trial to licensed package the new packages will be scoped under `@infragistics`.
+As a result you can either:
+
+*   Do a global replace for all trial packages and change then to the licensed scoped version across all files in your project. For example, replace all `igniteui-dockmanager` references to `@infragicstics/igniteui-dockmanager` The change should affect all imports where such packages are used.
+
+    **Or**
 
 *   Add a **paths** mapping in the project **tsconfig.json**.
 
