@@ -88,7 +88,8 @@ import { IgxActionStripModule } from 'igniteui-angular';
 ```
 }
 
->注: `IgxActionStripComponent` がグリッドの子コンポーネントの場合、行をホバーすると UI が自動的に表示されます。
+>[!NOTE]
+> `IgxActionStripComponent` がグリッドの子コンポーネントの場合、行をホバーすると UI が自動的に表示されます。
 
 ## カスタム実装
 
@@ -128,7 +129,8 @@ import { IgxActionStripModule } from 'igniteui-angular';
 </code-view>
 }
 
->注: これらのコンポーネントは [`IgxGridActionsBaseDirective`]({environment:infragisticsBaseUrl}/classes/igxgridactionsbasedirective.html) を継承します。カスタム グリッド アクション コンポーネントを作成する場合、`IgxGridActionsBaseDirective` も継承する必要があります。
+>[!NOTE]
+> これらのコンポーネントは [`IgxGridActionsBaseDirective`]({environment:infragisticsBaseUrl}/classes/igxgridactionsbasedirective.html) を継承します。カスタム グリッド アクション コンポーネントを作成する場合、`IgxGridActionsBaseDirective` も継承する必要があります。
 
 ## API リファレンス
 
