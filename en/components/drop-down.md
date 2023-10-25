@@ -341,11 +341,11 @@ export class MyMenuComponent {
 
 ### Mutli-Level Drop Down menu
 
-This sample demonstrates how to implement a multi-level drop down menu with the use of a custom directive and service.
+The following sample demonstrates how to implement a multi-level drop down menu that allows the user to quickly and easily navigate through a hierarchy of content by hovering on a series of nested menus.
 
-The `MultiLevelDirective` sets the [`overlay settings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) of the inner drop down and manages its opened/closed state on hover. The `MultiLevelService` keeps track of all inner drop downs since multiple levels of hierarchy can be implemented.
+For the implementation of the multi-level drop down menu we will use the [`IgxDropDownComponent`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) as well as a custom directive and service described below.
 
-In order to configure the [`IgxDropDownItem`]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html) to open an additional drop down, add the `multiLevel` directive and set the `innerDropdown` property.
+In order to configure the [`IgxDropDownItem`]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html) to open an additional drop down, add the `multiLevel` directive that would handle the [`overlay settings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) of the nested drop down and manages its opened/closed state through its `innerDropdown` property.
 
 ```html
 <igx-drop-down #dropdown1>
@@ -363,7 +363,7 @@ In order to configure the [`IgxDropDownItem`]({environment:angularApiUrl}/classe
 </igx-drop-down>
 ```
 
-To configure the multi-level drop down to behave as a menu, set the [ISelectionEventArgs]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) interface [cancel]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#cancel) member to **true** in the [selectionChanging]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selectionChanging) event handler. Also, to handle the selection and prevent closing the drop down when selecting a non-selectable item, use the `MultiLevelService`'s `handleSelection` and `handleClosing` methods.
+To configure the multi-level drop down to behave as a menu, you need to handle the [selectionChanging]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selectionChanging) event of all drop downs in the hierarchy and cancel the default behavior. Then, in order to handle the selection properly you could use the `MultiLevelService`'s `handleSelection` method and in order to prevent closing the drop down when clicking on a menu item, use the `MultiLevelService`'s `handleClosing` methods.
 
 ```ts
 @ViewChildren(IgxDropDownComponent, { read: IgxDropDownComponent })
@@ -402,7 +402,7 @@ public ngAfterViewInit(): void {
 }
 ```
 
-The result from the above configurations could be seen in the below sample. Open the **Design & Development** drop down and hover over the drop down items.
+The result from the above configurations could be seen in the below sample.
 
 <code-view style="height:400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
