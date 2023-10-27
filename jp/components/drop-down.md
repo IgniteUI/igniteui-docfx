@@ -364,7 +364,7 @@ export class MyMenuComponent {
 </igx-drop-down>
 ```
 
-複数レベルのドロップダウンがメニューとして動作するように構成するには、階層内のすべてのドロップダウンの [selectionChanging]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selectionChanging) イベントを処理し、デフォルトの動作をキャンセルする必要があります。次に、選択を適切に処理するには、`MultiLevelService`の `handleSelection` メソッドを使用します。また、メニュー項目をクリックしたときにドロップダウンが閉じないようにするには、`MultiLevelService` の `handleClosing` メソッドを使用します。
+複数レベルのドロップダウンがメニューとして動作するように構成するには、階層内のすべてのドロップダウンの [selectionChanging]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selectionChanging) イベントを処理し、デフォルトの動作をキャンセルする必要があります。次に、選択を適切に処理するには、`MultiLevelService` の `handleSelection` メソッドを使用します。また、メニュー項目をクリックしたときにドロップダウンが閉じないようにするには、`MultiLevelService` の `handleClosing` メソッドを使用します。
 
 ```ts
 @ViewChildren(IgxDropDownComponent, { read: IgxDropDownComponent })
