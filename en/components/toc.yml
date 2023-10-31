@@ -241,6 +241,7 @@
     - name: Size (Display Density)
       href: grid/display-density.md
       new: false
+      updated: true
     - name: Conditional Styling
       href: grid/conditional-cell-styling.md
       new: false
