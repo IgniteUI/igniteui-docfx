@@ -51,6 +51,44 @@ Unfortunately not all changes can be automatically updated. Changes below are sp
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
+## From 16.1.x to 17.0.x
+
+- **Breaking change**
+- `selectionChanging` arguments type is changed. Now the `oldSelection`, `newSelection`, `added` and `removed` collections, part of the `IComboSelectionChangingEventArgs` interface, no longer consist of the keys of the selected items (when the combo has set a `valueKey`), but now in any case the items are emitted. When the combo is working with remote data and a `valueKey` is set - for the selected items that are not currently part of combo view, a partial item data object will be emitted.
+
+If your code in `selectionChanging` event handler was depending on reading `valueKeys` from the event argument, update it as follows:
+
+```typescript
+  // prior version 15.1.x
+  public handleSelectionChanging(e: IComboSelectionChangingEventArgs): void {
+    this.selectedItems = e.newSelection;
+  }
+
+  // after version 15.1.x
+  public handleSelectionChanging(e: IComboSelectionChangingEventArgs): void {
+    this.selectedItems = e.newSelection.map(i => {
+       return i[e.owner?.valueKey]
+    });
+  }
+```
+
+- **Breaking change**
+- `selectionChanging` arguments type is changed. Now the `oldSelection`, `newSelection`, `added` and `removed` collections, part of the `ISimpleComboSelectionChangingEventArgs` interface, no longer consist of the keys of the selected items (when the simple combo has set a `valueKey`), but now in any case the items are emitted.
+
+If your code in `selectionChanging` event handler was depending on reading `valueKey` from the event argument, update it as follows:
+
+```typescript
+  // prior version 15.1.x
+  public handleSelectionChanging(e: ISimpleComboSelectionChangingEventArgs): void {
+    this.selectedItem = e.newSelection[0];
+  }
+
+  // after version 15.1.x
+  public handleSelectionChanging(e: ISimpleComboSelectionChangingEventArgs): void {
+    this.selectedItem = e.newSelection[0][e.owner?.valueKey];
+  }
+```
+
 ## From 16.0.x to 16.1.x
 
 ### General
