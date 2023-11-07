@@ -59,7 +59,7 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 If your code in `selectionChanging` event handler was depending on reading `valueKeys` from the event argument, update it as follows:
 
 ```typescript
-  // prior version 15.1.x
+  // version 16.1.x
   public handleSelectionChanging(e: IComboSelectionChangingEventArgs): void {
     this.selectedItems = e.newSelection;
   }
