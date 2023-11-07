@@ -53,39 +53,29 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 
 ## From 16.1.x to 17.0.x
 
-- **Breaking change**
-- `selectionChanging` arguments type is changed. Now the `oldSelection`, `newSelection`, `added` and `removed` collections, part of the `IComboSelectionChangingEventArgs` interface, no longer consist of the keys of the selected items (when the combo has set a `valueKey`), but now in any case the items are emitted. When the combo is working with remote data and a `valueKey` is set - for the selected items that are not currently part of combo view, a partial item data object will be emitted.
+**Breaking change**
+- In `IgxCombo`'s `selectionChanging` event arguments type `IComboSelectionChangingEventArgs` has these changes:
+    - properties `newSelection` and `oldSelection` have been renamed to `newValue` and `oldValue` respectively to better reflect their function. Just like Combo's `value`, those will emit either the specified property values or full data items depending on whether `valueKey` is set or not. Automatic migrations are available and will be applied on `ng update`.
+    - two new properties `newSelection` and `oldSelection` are exposed in place of the old ones that are no longer affected by `valueKey` and consistently emit items from Combo's `data`.
+    - properties `added` and `removed` now always contain data items, regardless of `valueKey` being set. This aligns them with the updated `newSelection` and `oldSelection` properties.
 
 If your code in `selectionChanging` event handler was depending on reading `valueKeys` from the event argument, update it as follows:
 
 ```typescript
   // version 16.1.x
   public handleSelectionChanging(e: IComboSelectionChangingEventArgs): void {
-    this.selectedItems = e.newSelection;
+    this.addedItems = e.added;
+    this.removedItems = e.removed;
   }
 
   // version 17.0.x
   public handleSelectionChanging(e: IComboSelectionChangingEventArgs): void {
-    this.selectedItems = e.newSelection.map(i => {
+    this.addedItems = e.added.map(i => {
        return i[e.owner?.valueKey]
     });
-  }
-```
-
-- **Breaking change**
-- `selectionChanging` arguments type is changed. Now the `oldSelection`, `newSelection`, `added` and `removed` collections, part of the `ISimpleComboSelectionChangingEventArgs` interface, no longer consist of the keys of the selected items (when the simple combo has set a `valueKey`), but now in any case the items are emitted.
-
-If your code in `selectionChanging` event handler was depending on reading `valueKey` from the event argument, update it as follows:
-
-```typescript
-  // prior version 15.1.x
-  public handleSelectionChanging(e: ISimpleComboSelectionChangingEventArgs): void {
-    this.selectedItem = e.newSelection[0];
-  }
-
-  // after version 15.1.x
-  public handleSelectionChanging(e: ISimpleComboSelectionChangingEventArgs): void {
-    this.selectedItem = e.newSelection[0][e.owner?.valueKey];
+    this.removedItems = e.removed.map(i => {
+       return i[e.owner?.valueKey]
+    });
   }
 ```
 
