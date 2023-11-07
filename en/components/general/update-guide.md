@@ -64,7 +64,7 @@ If your code in `selectionChanging` event handler was depending on reading `valu
     this.selectedItems = e.newSelection;
   }
 
-  // after version 15.1.x
+  // version 17.0.x
   public handleSelectionChanging(e: IComboSelectionChangingEventArgs): void {
     this.selectedItems = e.newSelection.map(i => {
        return i[e.owner?.valueKey]
