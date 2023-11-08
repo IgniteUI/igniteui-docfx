@@ -104,7 +104,7 @@ Angular ドーナツ チャートに複数の輪を表示して、各輪を異�
 以下のテーブルは、上記のセクションで説明した API メンバーをリストします。
 
 *   [`IgxDoughnutChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdoughnutchartcomponent.html)
-*   [`allowSliceExplosion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdoughnutchartcomponent.html#allowsliceexplosion)
-*   [`allowSliceSelection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdoughnutchartcomponent.html#allowsliceselection)
-*   [`innerExtent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdoughnutchartcomponent.html#innerextent)
+*   [`allowSliceExplosion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdoughnutchartcomponent.html#allowSliceExplosion)
+*   [`allowSliceSelection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdoughnutchartcomponent.html#allowSliceSelection)
+*   [`innerExtent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdoughnutchartcomponent.html#innerExtent)
 *   `SliceClick`

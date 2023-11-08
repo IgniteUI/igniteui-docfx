@@ -57,13 +57,13 @@ Ignite UI for Angular ツリーマップ チャートは、ネストされた一
 
 *   データ ソースはデータ項目の配列またはリストである必要があります。
 *   データ ソースにはデータ項目を少なくとも 1 つ含む必要があり、含まれない場合はマップでノードがレンダリングされません。
-*   すべてのデータ項目には、[`labelMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#labelmemberpath) プロパティにマッピングする必要があるデータ列 (文字列など) を少なくとも 1 列含める必要があります。
-*   すべてのデータ項目には、[`valueMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#valuememberpath) プロパティにマッピングする必要がある数値データ列を少なくとも 1 列含める必要があります。
-*   データを整理されたタイルに分類するには、オプションで [`parentIdMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#parentidmemberpath) および [`idMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#idmemberpath) を使用できます。
+*   すべてのデータ項目には、[`labelMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#labelMemberPath) プロパティにマッピングする必要があるデータ列 (文字列など) を少なくとも 1 列含める必要があります。
+*   すべてのデータ項目には、[`valueMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#valueMemberPath) プロパティにマッピングする必要がある数値データ列を少なくとも 1 列含める必要があります。
+*   データを整理されたタイルに分類するには、オプションで [`parentIdMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#parentIdMemberPath) および [`idMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#idMemberPath) を使用できます。
 
 ## Angular ツリーマップの構成
 
-次の例では、ツリーマップは、[`layoutType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#layouttype) プロパティと [`layoutOrientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#layoutorientation) プロパティを変更することにより、アルゴリズム構造を変更する機能を示しています。
+次の例では、ツリーマップは、[`layoutType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#layoutType) プロパティと [`layoutOrientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#layoutOrientation) プロパティを変更することにより、アルゴリズム構造を変更する機能を示しています。
 
 <code-view style="height: 600px" alt="Angular ツリーマップのレイアウト構成"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -78,9 +78,9 @@ Ignite UI for Angular ツリーマップ チャートは、ネストされた一
 
 ツリーマップ チャートは、データの相対的な重みを表示します。さまざまなアルゴリズムを使用して、データ項目のレイアウトをどのように行うかを決定します。
 
-*   [`SliceAndDice`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtreemaplayouttype.html#sliceanddice) - レイアウトのアルゴリズムは、縦横比を代わりに最初の順番を維持するようにします。
-*   [`Squarified`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtreemaplayouttype.html#squarified) - レイアウトのタイリング アルゴリズムでは、[`SliceAndDice`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtreemaplayouttype.html#sliceanddice) より縦横比がより正確で、Squarified より適切に並べ替えされます。
-*   [`Stripped`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtreemaplayouttype.html#stripped) - タイプのアルゴリズムは、最適な縦横比を描画しますが、オブジェクトがサイズによって並べ替えられます。
+*   [`SliceAndDice`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtreemaplayouttype.html#SliceAndDice) - レイアウトのアルゴリズムは、縦横比を代わりに最初の順番を維持するようにします。
+*   [`Squarified`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtreemaplayouttype.html#Squarified) - レイアウトのタイリング アルゴリズムでは、[`SliceAndDice`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtreemaplayouttype.html#SliceAndDice) より縦横比がより正確で、Squarified より適切に並べ替えされます。
+*   [`Stripped`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtreemaplayouttype.html#Stripped) - タイプのアルゴリズムは、最適な縦横比を描画しますが、オブジェクトがサイズによって並べ替えられます。
 
 ツリーマップを使用すると、要件に最適なアルゴリズムを選択できます。デフォルトでは、Squarified メソッドが使用されます。また、次の 2 つのメカニズムを使用してノードに色を付けることができる機能も含まれています。
 
@@ -89,12 +89,12 @@ Ignite UI for Angular ツリーマップ チャートは、ネストされた一
 
 ### レイアウト方向:
 
-[`layoutOrientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#layoutorientation) プロパティによってユーザーは階層のノードが展開される方向を設定できます。
+[`layoutOrientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#layoutOrientation) プロパティによってユーザーは階層のノードが展開される方向を設定できます。
 
-[`layoutOrientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#layoutorientation) プロパティがレイアウト タイプ SliceAndDice および Strip と動作することに注意してください。
+[`layoutOrientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#layoutOrientation) プロパティがレイアウト タイプ SliceAndDice および Strip と動作することに注意してください。
 
-*   [`Horizontal`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtreemaporientation.html#horizontal) – 子ノードは水平に積み重ねられます (SliceAndDice)。
-*   [`Vertical`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtreemaporientation.html#vertical) – 子ノードは垂直に積み重ねられます (SliceAndDice)。
+*   [`Horizontal`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtreemaporientation.html#Horizontal) – 子ノードは水平に積み重ねられます (SliceAndDice)。
+*   [`Vertical`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtreemaporientation.html#Vertical) – 子ノードは垂直に積み重ねられます (SliceAndDice)。
 
 ## Angular ツリーマップのスタイル設定
 
@@ -121,5 +121,5 @@ Ignite UI for Angular ツリーマップ チャートは、ネストされた一
 以下は、上記のセクションで説明した API メンバーのリストです。
 
 *   [`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html)
-*   [`layoutOrientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#layoutorientation)
-*   [`layoutType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#layouttype)
+*   [`layoutOrientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#layoutOrientation)
+*   [`layoutType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#layoutType)
