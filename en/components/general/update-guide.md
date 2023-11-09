@@ -59,7 +59,7 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 - `key` property has been deprecated in the following interfaces: `IRowDataEventArgs`. Use `rowKey` instead.
 - `primaryKey` has been deprecated in the following interfaces: `IGridEditDoneEventArgs`. Use `rowKey` instead.
 
-- Trying to make our API easier to use and maintain, the above changes were introduced. At the moment, some interfaces became cubersome, carrying two or more properties for the same entity - `rowID`, `key`, `rowKey` and `primaryKey`. `rowID`, `key`, and `primaryKey` are deprecated in all places, aiming to leave only `rowKey` from version 20 onwards. Same goes for `data` and `rowData` - the aim is to go only with `rowData` from version 20 onwards.
+- Trying to make our API easier to use and maintain, the above changes were introduced. At the moment, some interfaces became cubersome, carrying two or more properties for the same entity - `rowID`, `key`, `rowKey` and `primaryKey`. `rowID`, `key`, and `primaryKey` are deprecated in all places, aiming to leave only `rowKey` from version 18 onwards. Same goes for `data` and `rowData` - the aim is to go only with `rowData` from version 18 onwards.
 
 ### Breaking changes
 - If code inside `rowAdd` or `rowDelete` event handlers is reading `IGridEditEventArgs.oldValue` or `IGridEditEventArgs.newValue`, migrating the event argument type from `IGridEditEventArgs` to `IRowDataCancelableEventArgs` would be a breaking change, because the interface `IRowDataCancelableEventArgs` does not have `oldValue` and `newValue` props. These properties return always undefined when in `rowAdd` or `rowDelete` event handlers, so if there is a code reading these prop in these event handlers, just remove it.
