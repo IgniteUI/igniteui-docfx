@@ -51,6 +51,19 @@ Unfortunately not all changes can be automatically updated. Changes below are sp
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
+## From 16.1.x to 17.0.x
+### General
+- `rowAdd` and `rowDelete` events no longer emit event argument of type `IGridEditEventArgs`, but argument of type `IRowDataCancelableEventArgs`. The two interfaces `IGridEditEventArgs` and `IRowDataCancelableEventArgs` are compatible. Only case there would be issues is if your application was reading `IGridEditEventArgs.oldValue`, `IGridEditEventArgs.newValue`. These properties return always undefined when in `rowAdd` or `rowDelete` event handlers, so they can be safely removed.
+- `rowID` property has been deprecated in the following interfaces: `IGridEditDoneEventArgs`, `IPathSegment`, `IRowToggleEventArgs`, `IPinRowEventArgs`, `IgxAddRowParent` and will be removed in a future version. Use `rowKey` instead.
+- `data` property has been deprecated in the following interfaces: `IBaseRowDataEventArg` and `IRowDataEventArgs`. Use `rowData` instead.
+- `key` property has been deprecated in the following interfaces: `IRowDataEventArgs`. Use `rowKey` instead.
+- `primaryKey` has been deprecated in the following interfaces: `IGridEditDoneEventArgs`. Use `rowKey` instead.
+
+- Trying to make our API easier to use and maintain, the above changes were introduced. At the moment, some interfaces became cubersome, carrying two or more properties for the same entity - `rowID`, `key`, `rowKey` and `primaryKey`. `rowID`, `key`, and `primaryKey` are deprecated in all places, aiming to leave only `rowKey` from version 20 onwards. Same goes for `data` and `rowData` - the aim is to go only with `rowData` from version 20 onwards.
+
+### Breaking changes
+- If code inside `rowAdd` or `rowDelete` event handlers is reading `IGridEditEventArgs.oldValue` or `IGridEditEventArgs.newValue`, migrating the event argument type from `IGridEditEventArgs` to `IRowDataCancelableEventArgs` would be a breaking change, because the interface `IRowDataCancelableEventArgs` does not have `oldValue` and `newValue` props. These properties return always undefined when in `rowAdd` or `rowDelete` event handlers, so if there is a code reading these prop in these event handlers, just remove it.
+
 ## From 16.0.x to 16.1.x
 
 ### General
