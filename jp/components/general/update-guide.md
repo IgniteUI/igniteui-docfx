@@ -64,6 +64,30 @@ ng update @angular/cli
 
 ### Breaking changes
 - If code inside `rowAdd` or `rowDelete` event handlers is reading `IGridEditEventArgs.oldValue` or `IGridEditEventArgs.newValue`, migrating the event argument type from `IGridEditEventArgs` to `IRowDataCancelableEventArgs` would be a breaking change, because the interface `IRowDataCancelableEventArgs` does not have `oldValue` and `newValue` props. These properties return always undefined when in `rowAdd` or `rowDelete` event handlers, so if there is a code reading these prop in these event handlers, just remove it.
+- In `IgxCombo`'s `selectionChanging` event arguments type `IComboSelectionChangingEventArgs` has these changes:
+    - properties `newSelection` and `oldSelection` have been renamed to `newValue` and `oldValue` respectively to better reflect their function. Just like Combo's `value`, those will emit either the specified property values or full data items depending on whether `valueKey` is set or not. Automatic migrations are available and will be applied on `ng update`.
+    - two new properties `newSelection` and `oldSelection` are exposed in place of the old ones that are no longer affected by `valueKey` and consistently emit items from Combo's `data`.
+    - properties `added` and `removed` now always contain data items, regardless of `valueKey` being set. This aligns them with the updated `newSelection` and `oldSelection` properties.
+
+If your code in `selectionChanging` event handler was depending on reading `valueKeys` from the event argument, update it as follows:
+
+```typescript
+  // version 16.1.x
+  public handleSelectionChanging(e: IComboSelectionChangingEventArgs): void {
+    this.addedItems = e.added;
+    this.removedItems = e.removed;
+  }
+
+  // version 17.0.x
+  public handleSelectionChanging(e: IComboSelectionChangingEventArgs): void {
+    this.addedItems = e.added.map(i => {
+       return i[e.owner?.valueKey]
+    });
+    this.removedItems = e.removed.map(i => {
+       return i[e.owner?.valueKey]
+    });
+  }
+```
 
 ## 16.0.x から 16.1.x の場合:
 
