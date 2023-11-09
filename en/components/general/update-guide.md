@@ -78,6 +78,9 @@ If your code in `selectionChanging` event handler was depending on reading `valu
     });
   }
 ```
+- `getCurrentResourceStrings` has been removed. Use the specific component string imports instead. 
+    - E.g. EN strings come from `igniteui-angular`: `import { GridResourceStringsEN } from 'igniteui-angular';`
+    - E.g. DE or other language strings come from `igniteui-angular-i18n`: `import { GridResourceStringsDE } from 'igniteui-angular-i18n';`
 
 ## From 16.0.x to 16.1.x
 
