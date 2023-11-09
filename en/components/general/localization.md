@@ -6,20 +6,20 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 # Localization (i18n)
 
-Currently, Ignite UI for Angular ships with resource strings for the following languages and scripts: Bulgarian, Czech, Danish, Dutch, French, German, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Romanian, Spanish, Swedish, Turkish, Traditional Chinese (zh-Hant) and Simplified Chinese (zh-Hans). These are available via the `igniteui-angular-i18n` package.
+Currently, Ignite UI for Angular ships with resource strings for the following languages and scripts: Bulgarian, Czech, Danish, Dutch, English, French, German, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Romanian, Spanish, Swedish, Turkish, Traditional Chinese (zh-Hant) and Simplified Chinese (zh-Hans). These are available via the `igniteui-angular-i18n` package, except for English which comes as a default localization in `igniteui-angular`.
 
-With only a few lines of code, users can easily localize the strings in Ignite UI for Angular components.
+With only a few lines of code, users can easily change the localization strings in Ignite UI for Angular components.
 
 ## Angular Localization Example
 
-<code-view style="height:800px" 
+<code-view style="height:550px" 
            explicit-editor="csb"
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/services/localization-all-resources" 
            alt="Angular Localization Example">
 </code-view>
 
->Note: Hindi (HI) included in the sample is only for illustrational purposes and to emphasize on the possibility to pass a custom object. In this sample, it contains only several localized strings for the summary. More details at [Utilize own localized resources](#utilize-own-localized-resources) section below.
+>Note: Hindi (HI) included in the sample is only for illustrational purposes and to emphasize on the possibility to pass a custom localization object. In this sample, it contains only several localized strings for the summary. More details at [Utilize own localized resources](#utilize-own-localized-resources) section below.
 
 ## Usage
 
@@ -29,91 +29,134 @@ You can localize an application in one of the languages available in the `ignite
 
 Install the package by executing `npm install igniteui-angular-i18n --save-dev`
 
-Import the resource strings for the desired language and call the `changei18n()` function passing the corresponding resource object:
+Import the resource strings for the desired language and either change the strings for a component instance, using the component's `resourceStrings` input.
+
+```html
+<igx-grid [data]="data" [resourceStrings]="resourcesDE" [locale]="locale">
+    <igx-grid-toolbar>
+        <igx-grid-toolbar-title>German Locale</igx-grid-toolbar-title>
+    </igx-grid-toolbar>
+    <igx-column field="ProductName" header="Product Name" [groupable]="true">
+    </igx-column>
+    <igx-column field="QuantityPerUnit" header="Quantity Per Unit" [groupable]="true">
+    </igx-column>
+    <igx-column field="UnitPrice" header="Unit Price" [sortable]="true" [hasSummary]="true"
+        [dataType]="'currency'" [groupable]="true">
+    </igx-column>
+    <igx-column field="OrderDate" header="Order Date" [dataType]="'date'" [groupable]="true">
+    </igx-column>
+    <igx-column field="Discontinued" header="Discontinued" [dataType]="'boolean'" [groupable]="true">
+    </igx-column>
+</igx-grid>
+```
+
+```typescript
+import { Component } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+
+import localeDE from '@angular/common/locales/de';
+import { GridResourceStringsDE } from 'igniteui-angular-i18n';
+
+@Component({
+    selector: 'app-locale',
+    styleUrls: ['./locale.component.scss'],
+    templateUrl: 'locale.component.html'
+})
+export class LocaleComponent implements OnInit {
+    public resourcesDE = GridResourceStringsDE;
+    public locale = 'DE';
+    public data: any[];
+
+    constructor() {
+        registerLocaleData(localeDE);
+    }
+}
+```
+
+Alternatively, you can call the `changei18n()` function passing the corresponding resource object to change the localization for all components.
 
 ```typescript
 // app.component.ts
-...
+import { Component, OnInit } from '@angular/core';
 import { changei18n } from "igniteui-angular";
 import { IgxResourceStringsJA } from 'igniteui-angular-i18n';
-...
-public ngOnInit(): void {
-    ...
-    changei18n(IgxResourceStringsJA);
-    ...
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent implements OnInit {
+    public ngOnInit(): void {
+        changei18n(IgxResourceStringsJA);
+    }
 }
 ```
 
->Note: Feel free to contribute to the `igniteui-angular-i18n` package.
+>Note: Feel free to contribute to the [`igniteui-angular-i18n`](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n) package with more languages!
 
 ### Utilize own localized resources
-`changei18n` function expects an `IResourceStrings` object. If the language you want to use is not available in the `igniteui-angular-i18n` package, or simply want to change a particular string,
-you can pass a custom object containing your string resources for the language and components you need. This will change the global i18n for the igniteui-angular components on an app.module level. The localization can be done anywhere in the app, not only in the app.module.ts
+`changei18n` function expects an `IResourceStrings` object. If the language you want to use is not available in the `igniteui-angular-i18n` package, or simply want to change a particular string, you can pass a custom object containing your string resources for the language and components you need. This will change the global i18n for the igniteui-angular components.
 
 ```typescript
 // app.component.ts
-...
-import { changei18n } from "igniteui-angular";
-...
+import { Component, OnInit } from '@angular/core';
+import { changei18n, IGridResourceStrings } from "igniteui-angular";
 
-public partialCustomHindi: IResourceStrings;
-public ngOnInit(): void {
-    ...
-    this.partialCustomHindi = {
-        ...
-        igx_grid_summary_count: 'गणना',
-        igx_grid_summary_min: 'न्यून',
-        igx_grid_summary_max: 'अधिक',
-        igx_grid_summary_sum: 'योग',
-        igx_grid_summary_average: 'औसत'
-        ...
-    };
-    changei18n(this.partialCustomHindi);
-    ...
-}
-```
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent implements OnInit {
+    public partialCustomHindi: IGridResourceStrings;
 
-Alternatively, you may get all currently available resource strings. There is a global function `getCurrentResourceStrings`, which returns an `IResourceStrings` object.
-The values could be replaced in order to be localized and then the object can be passed to the `changei18n` function, as a parameter.
-
-```typescript
-// app.component.ts
-...
-import { changei18n } from "igniteui-angular";
-...
-
-public ngOnInit(): void {
-    ...
-    const currentRS = getCurrentResourceStrings();
-
-    for (const key of Object.keys(currentRS)) {
-    currentRS[key] = '[Localized]'+ currentRS[key];
+    public ngOnInit(): void {
+        this.partialCustomHindi = {
+            igx_grid_summary_count: 'गणना',
+            igx_grid_summary_min: 'न्यून',
+            igx_grid_summary_max: 'अधिक',
+            igx_grid_summary_sum: 'योग',
+            igx_grid_summary_average: 'औसत'
+        };
+        // This will change all grid application instances' strings to the newly provided ones
+        changei18n(this.partialCustomHindi);
     }
-
-    changei18n(currentRS);
-    ...
 }
 ```
+
+Alternatively, you may get all currently available component resource strings. There is objects for each component containing localizable strings. The values could be replaced in order to be localized and then the object can be passed to the `changei18n` function, as a parameter.
+
+```typescript
+// app.component.ts
+import { Component, OnInit } from '@angular/core';
+import { changei18n, GridResourceStringsEN, TimePickerResourceStringsEN } from "igniteui-angular";
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent implements OnInit {
+    public ngOnInit(): void {
+        const currentRS = {
+            ...GridResourceStringsEN,
+            ...TimePickerResourceStringsEN
+        };
+
+        for (const key of Object.keys(currentRS)) {
+            currentRS[key] = '[Localized] '+ currentRS[key];
+        }
+
+        changei18n(currentRS);
+    }
+}
+```
+
 <div>
 <button data-localize="stackblitz" class="stackblitz-btn" data-sample-src="{environment:demosBaseUrl}/services/localization-sample-2"
     data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
 </button>
-</div>
-
-### Localize specific strings for all components
-
-Another approach is to localize/change only some of the strings for all components of given type. There is a `resourceStrings` property for the components that could be localized, which is of `IResourceStrings` type.
-
-```typescript
-const currentRS = this.grid.resourceStrings;
-currentRS.igx_grid_filter = '[Localized]Filter';
-currentRS.igx_grid_filter_row_close = '[Localized]Close';
-```
-
-<div>
-    <button data-localize="stackblitz" class="stackblitz-btn" data-sample-src="{environment:demosBaseUrl}/services/localization-sample-3" 
-        data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
-    </button>
 </div>
 
 ### Localize specific strings for a specific instance of a component

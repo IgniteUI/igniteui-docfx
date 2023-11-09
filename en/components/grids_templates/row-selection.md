@@ -281,7 +281,8 @@ public handleRowSelectionChange(args) {
 
 ### Select all rows
 Another useful API method that [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) provides is `selectAll(onlyFilteredData)`. By default this method will select all data rows, but if filtering is applied, it will select only the rows that match the filter criteria. But if you call the method with *false* parameter, `selectAll(false)` will always select all data in the grid, even if filtering is applied.
-> **Note** Keep in mind that `selectAll()` will not select the rows that are deleted.
+>[!NOTE]
+> Keep in mind that `selectAll()` will not select the rows that are deleted.
 
 ### Deselect all rows
 [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) provides `deselectAll(onlyFilteredData)` method, which by default will deselect all data rows, but if filtering is applied will deselect only the rows that match the filter criteria. But if you call the method with *false* parameter, `deselectAll(false)` will always clear all row selection state even if filtering is applied.
