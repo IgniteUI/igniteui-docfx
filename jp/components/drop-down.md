@@ -403,12 +403,16 @@ public ngAfterViewInit(): void {
 }
 ```
 
+<!--  Temporary disabled till samples deploy
+
 上記の構成の結果は、次のサンプルで確認できます。
 
 <code-view style="height:400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-multi-level-menu">
 </code-view>
+
+-->
 
 ### Navigation ディレクティブ
 [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) ディレクティブを使用して、`igxDropDown` コンポーネントのキーボード ナビゲーションを有効にします。ディレクティブがトリガーされたすべてのイベントを処理できるようにするには、アクティブな (フォーカスされる) 要素または親コンテナーに適用する必要があります。デフォルトでは、ドロップダウンまたはその項目はフォーカスを取得しないため、ディレクティブはドロップダウンを制御する `button` または `input` に配置できます。ナビゲーション ディレクティブの値は、[IgxDropDownBaseDirective]({environment:angularApiUrl}/classes/igxdropdownbasedirective.html) クラスのインスタンスまたは子孫であるコンポーネントを対象とする必要があります。
