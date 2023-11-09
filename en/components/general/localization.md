@@ -129,7 +129,6 @@ Alternatively, you may get all currently available component resource strings. T
 
 ```typescript
 // app.component.ts
-// app.component.ts
 import { Component, OnInit } from '@angular/core';
 import { changei18n, GridResourceStringsEN, TimePickerResourceStringsEN } from "igniteui-angular";
 
