@@ -205,6 +205,7 @@ public static totalMax: PivotAggregation = (members, data: any) => {
 ```
 The pivot value also provides a `displayName` property. It can be used to display a custom name for this value in the column header.
 
+>[!NOTE]
 > If you define both `aggregatorName` and `aggregator` function, `aggregatorName` takes precedence. If none is set then an error is thrown.
 
 ### Enable property
@@ -307,6 +308,7 @@ And if you want to streamline the entire app development process, you can try ou
 
 ## Additional Resources
 <div class="divider--half"></div>
+
 * [Angular Pivot Grid Features](pivot-grid-features.md)
 * [Angular Pivot Grid Custom Aggregations](pivot-grid-custom.md)
 

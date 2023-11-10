@@ -15,7 +15,7 @@ _language: ja
 
 各タイプのトランザクションを追加する方法の例は、[トランザクションサービスの使用方法](transaction-how-to-use.md)のトピックで見ることができます。
 
-操作 (トランザクション) を実行するたびに、トランザクション ログと取り消しスタックに追加されます。トランザクション ログ内のすべての変更は、レコードごとに蓄積されます。その時点から、サービスは集約された [`State`]({environment:angularApiUrl}/interfaces/state.html) を維持します。[`State`]({environment:angularApiUrl}/interfaces/state.html) は一意のレコードで構成され、すべてのレコードは上記のサポートされているトランザクション タイプのいずれかです。
+操作 (トランザクション) を実行するたびに、トランザクション ログと取り消しスタックに追加されます。トランザクション ログ内のすべての変更は、レコードごとに蓄積されます。その時点から、サービスは集計された [`State`]({environment:angularApiUrl}/interfaces/state.html) を維持します。[`State`]({environment:angularApiUrl}/interfaces/state.html) は一意のレコードで構成され、すべてのレコードは上記のサポートされているトランザクション タイプのいずれかです。
 
 トランザクションを追加する際、[`startPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#startPending) を呼び出して、保留中のトランザクションをオンにすることができます。[`endPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#endPending) を呼び出すまで、後続のトランザクションはすべて単一のトランザクションに蓄積されます。`true` を [`endPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#endPending) に渡すと、蓄積されたすべてのトランザクションがトランザクションログと取り消しスタックに単一のトランザクションとして追加されます。
 
