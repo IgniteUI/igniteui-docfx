@@ -171,7 +171,7 @@ export class PhoneFormatDirective extends Validators {
 
 場合によっては、データ中の無効な値を送信しないようにしたいことがあります。
 その場合は、[`cellEdit`]({environment:angularApiUrl}/classes/IgxGridComponent.html#cellEdit) または [`rowEdit`]({environment:angularApiUrl}/classes/IgxGridComponent.html#rowEdit) イベントを使用し、新しい値が無効な場合にイベントをキャンセルできます。
-いずれのイベントも引数には [`valid`]({environment:angularApiUrl}/interfaces/IGridEditEventArgs.html#valid) プロパティがあり、これによってキャンセルできます。
+いずれのイベントも引数には [`valid`]({environment:angularApiUrl}/interfaces/IGridEditEventArgs.html#valid) プロパティがあり、これによってキャンセルできます。その使用方法は、[クロス フィールド検証の例](#クロス-フィールドの例)で確認できます。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -227,7 +227,7 @@ public cellEdit(evt) {
 <div class="divider--half"></div>
 }
 
-### クロス フィールド検証
+## クロス フィールド検証
 
 場合によっては、1 つのフィールドの検証がレコード内の別のフィールドの値に依存することがあります。
 その場合、カスタム検証を使用して共有 `FormGroup` を介してレコード内の値を比較できます。
@@ -346,17 +346,6 @@ public stateMessage(cell: CellType) {
 }
 
 ```
-
-以下のサンプルは、クロス フィールド検証の動作を示しています。
-
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-cross-field-validator-service" alt="Angular @@igComponent クロス フィールド検証の例">
-</code-view>
-
-
-<div class="divider--half"></div>
-
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -454,15 +443,6 @@ public stateMessage(cell: CellType) {
         return messages;
     }
 ```
-
-以下のサンプルは、ルート データと子データの両方について、階層グリッドでのクロス フィールド検証を示しています。
-
-<code-view style="height:530px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-cross-field-validation" alt="Angular @@igComponent クロス フィールド検証の例">
-</code-view>
-
-<div class="divider--half"></div>
 }
 
 
@@ -562,16 +542,39 @@ public stateMessage(cell: CellType) {
     return messages;
 }
 ```
+}
+### クロス フィールドの例
+
+@@if (igxName === 'IgxGrid') {
 
 以下のサンプルは、クロス フィールド検証の動作を示しています。
 
-<code-view style="height:570px" 
+<code-view style="height:620px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-cross-field-validator-service" alt="Angular @@igComponent クロス フィールド検証の例">
+</code-view>
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+
+以下のサンプルは、ルート データと子データの両方について、階層グリッドでのクロス フィールド検証を示しています。
+
+<code-view style="height:620px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-cross-field-validation" alt="Angular @@igComponent クロス フィールド検証の例">
+</code-view>
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+以下のサンプルは、クロス フィールド検証の動作を示しています。
+
+<code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-cross-field-validator-service" alt="Angular @@igComponent クロス フィールド検証の例">
 </code-view>
+}
 
 <div class="divider--half"></div>
-}
 
 ## スタイル設定
 
@@ -724,8 +727,7 @@ public cellStyles = {
 
 |制限|説明|
 |--- |--- |
-| `validationTrigger` が blur の場合、`editValue` と検証は、エディターからフォーカスが外れた後にのみトリガーされます。 | 
-理由は、これが formControl の [`updateOn`](https://angular.io/api/forms/AbstractControl#updateOn) プロパティを利用しているためです。これにより、formControl が更新され、関連する検証をトリガーするイベントが決定されます。
+| `validationTrigger` が blur の場合、`editValue` と検証は、エディターからフォーカスが外れた後にのみトリガーされます。 | 理由は、これが formControl の [`updateOn`](https://angular.io/api/forms/AbstractControl#updateOn) プロパティを利用しているためです。これにより、formControl が更新され、関連する検証をトリガーするイベントが決定されます。
 
 ## その他のリソース
 
