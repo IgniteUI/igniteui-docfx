@@ -46,7 +46,6 @@
       new: true
     - name: Use Standalone Components
       href: general/how-to/how-to-use-standalone-components.md
-      preview: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   sortable: false
