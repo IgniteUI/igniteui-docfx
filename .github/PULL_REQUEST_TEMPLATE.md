@@ -3,6 +3,7 @@ Closes #
 ### Checklist:
  
  - [ ] check topic's TOC/menu and paragraph headings
+ - [ ] [Include TOC topic labels](https://github.com/IgniteUI/igniteui-docfx/blob/master/README.md#include-toc-topic-labels) in topic content has a valuable update, it's new or considered as `preview`\ `beta`
  - [ ] link to other topics using `../relative/path.md`
  - [ ] at the References section at the end of the topic add links to topics, samples, etc
  - [ ] reference API documentation instead of adding a section with API

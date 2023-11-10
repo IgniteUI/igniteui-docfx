@@ -146,8 +146,9 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 
 ## その他のリソース
 <div class="divider--half"></div>
+
 * [Angular ピボット グリッド機能](pivot-grid-features.md)
-* [Angular ピボット グリッド カスタム](pivot-grid-custom.md)
+* [Angular ピボット グリッド カスタム集計](pivot-grid-custom.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

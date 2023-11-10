@@ -51,6 +51,39 @@ Unfortunately not all changes can be automatically updated. Changes below are sp
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
+## From 16.1.x to 17.0.x
+
+**Breaking change**
+- In `IgxCombo`'s `selectionChanging` event arguments type `IComboSelectionChangingEventArgs` has these changes:
+    - properties `newSelection` and `oldSelection` have been renamed to `newValue` and `oldValue` respectively to better reflect their function. Just like Combo's `value`, those will emit either the specified property values or full data items depending on whether `valueKey` is set or not. Automatic migrations are available and will be applied on `ng update`.
+    - two new properties `newSelection` and `oldSelection` are exposed in place of the old ones that are no longer affected by `valueKey` and consistently emit items from Combo's `data`.
+    - properties `added` and `removed` now always contain data items, regardless of `valueKey` being set. This aligns them with the updated `newSelection` and `oldSelection` properties.
+
+If your code in `selectionChanging` event handler was depending on reading `valueKeys` from the event argument, update it as follows:
+
+```typescript
+  // version 16.1.x
+  public handleSelectionChanging(e: IComboSelectionChangingEventArgs): void {
+    this.addedItems = e.added;
+    this.removedItems = e.removed;
+  }
+
+  // version 17.0.x
+  public handleSelectionChanging(e: IComboSelectionChangingEventArgs): void {
+    this.addedItems = e.added.map(i => {
+       return i[e.owner?.valueKey]
+    });
+    this.removedItems = e.removed.map(i => {
+       return i[e.owner?.valueKey]
+    });
+  }
+```
+- `getCurrentResourceStrings` has been removed. Use the specific component string imports instead. 
+    - E.g. EN strings come from `igniteui-angular`: `import { GridResourceStringsEN } from 'igniteui-angular';`
+    - E.g. DE or other language strings come from `igniteui-angular-i18n`: `import { GridResourceStringsDE } from 'igniteui-angular-i18n';`
+
+    Usage examples can be found in the updated [Localization (i18n)](localization.md) doc.
+
 ## From 16.0.x to 16.1.x
 
 ### General
