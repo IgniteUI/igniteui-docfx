@@ -153,12 +153,6 @@ export class AppComponent implements OnInit {
 }
 ```
 
-<div>
-<button data-localize="stackblitz" class="stackblitz-btn" data-sample-src="{environment:demosBaseUrl}/services/localization-sample-2"
-    data-demos-base-url="{environment:demosBaseUrl}">view on stackblitz
-</button>
-</div>
-
 ### Localize specific strings for a specific instance of a component
 
 If only a single `igx-grid` instance should be localized, there is a way. The `resourceStrings` property should be used and it should be set to a new instance of `IGridResourceStrings` type.
