@@ -32,12 +32,10 @@ Ignite UI for Angular @@igComponent は、デフォルトおよび編集テン�
 @@if (igxName === 'IgxGrid') {
 ## Angular 列タイプの例
 
-
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-column-data-types" >
 </code-view>
-
 }
 @@if (igxName === 'IgxTreeGrid') {
 }
@@ -198,8 +196,8 @@ public formatOptions = this.options;
 
 セルの値を編集すると、**通貨記号**がサフィックスまたはプレフィックスとして表示されます。詳細については、公式の[セル編集トピック](cell-editing.md#セル編集テンプレート)を参照してください。
 
+>[!NOTE]
 > 上/下矢印キーを使用する場合、値は digitsInfo-minFractionDigits (小数点以下の最小桁数。デフォルトは 0 です。) に基づいてステップで増減します。
-
 
 ### Percent (パーセント)
 
@@ -228,7 +226,8 @@ public formatPercentOptions = this.options;
 </igx-column>
 ```
 
-> 注: 上/下矢印キーを使用する場合、値は digitsInfo-minFractionDigits (小数点以下の最小桁数。デフォルトは 0 です。) に基づいてステップで増減します。
+>[!NOTE]
+> 上/下矢印キーを使用する場合、値は digitsInfo-minFractionDigits (小数点以下の最小桁数。デフォルトは 0 です。) に基づいてステップで増減します。
 
 ### 画像
 

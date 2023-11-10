@@ -94,6 +94,7 @@ igxGridState ディレクティブによって開発者がグリッドの状態�
 }
 
 @@if (igxName !== 'IgxPivotGrid') {
+>[!NOTE]
 > [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) ディレクティブはテンプレートを処理しません。列テンプレートの復元方法については、「[列の復元](state-persistence.md#列の復元)」セクションを参照してください。
 }
 
@@ -399,6 +400,7 @@ public restoreState() {
 [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) はデフォルトでは、リモート操作もカスタム ディメンション ストラテジ (詳細については、[グリッド リモート操作](remote-data-operations.md)サンプルを参照) も保持しません ([`制限`](state-persistence.md#制限) を参照)。これらの復元は、アプリケーション レベルのコードで実現できます。`IgxGridState` は、[`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#stateParsed) と呼ばれるイベントを公開します。このイベントはグリッド状態に追加の変更を、それが適用される前に行なうために使用できます。
 以下はその方法です。
 
+>[!NOTE]
 > [`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective) は、文字列引数で [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setState) を使用している場合にのみ発行されます。
 
 * カスタム ソート方法およびカスタム列/行ディメンション ストラテジを設定します。
