@@ -52,6 +52,48 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
+## From 16.1.x to 17.0.x
+### General
+- `rowAdd` and `rowDelete` events no longer emit event argument of type `IGridEditEventArgs`, but argument of type `IRowDataCancelableEventArgs`. The two interfaces `IGridEditEventArgs` and `IRowDataCancelableEventArgs` are compatible. Only case there would be issues is if your application was reading `IGridEditEventArgs.oldValue`, `IGridEditEventArgs.newValue`. These properties return always undefined when in `rowAdd` or `rowDelete` event handlers, so they can be safely removed.
+- `rowID` property has been deprecated in the following interfaces: `IGridEditDoneEventArgs`, `IPathSegment`, `IRowToggleEventArgs`, `IPinRowEventArgs`, `IgxAddRowParent` and will be removed in a future version. Use `rowKey` instead.
+- `data` property has been deprecated in the following interfaces: `IBaseRowDataEventArg` and `IRowDataEventArgs`. Use `rowData` instead.
+- `key` property has been deprecated in the following interfaces: `IRowDataEventArgs`. Use `rowKey` instead.
+- `primaryKey` has been deprecated in the following interfaces: `IGridEditDoneEventArgs`. Use `rowKey` instead.
+
+- Trying to make our API easier to use and maintain, the above changes were introduced. At the moment, some interfaces became cubersome, carrying two or more properties for the same entity - `rowID`, `key`, `rowKey` and `primaryKey`. `rowID`, `key`, and `primaryKey` are deprecated in all places, aiming to leave only `rowKey` from version 18 onwards. Same goes for `data` and `rowData` - the aim is to go only with `rowData` from version 18 onwards.
+
+### Breaking changes
+- If code inside `rowAdd` or `rowDelete` event handlers is reading `IGridEditEventArgs.oldValue` or `IGridEditEventArgs.newValue`, migrating the event argument type from `IGridEditEventArgs` to `IRowDataCancelableEventArgs` would be a breaking change, because the interface `IRowDataCancelableEventArgs` does not have `oldValue` and `newValue` props. These properties return always undefined when in `rowAdd` or `rowDelete` event handlers, so if there is a code reading these prop in these event handlers, just remove it.
+- In `IgxCombo`'s `selectionChanging` event arguments type `IComboSelectionChangingEventArgs` has these changes:
+    - properties `newSelection` and `oldSelection` have been renamed to `newValue` and `oldValue` respectively to better reflect their function. Just like Combo's `value`, those will emit either the specified property values or full data items depending on whether `valueKey` is set or not. Automatic migrations are available and will be applied on `ng update`.
+    - two new properties `newSelection` and `oldSelection` are exposed in place of the old ones that are no longer affected by `valueKey` and consistently emit items from Combo's `data`.
+    - properties `added` and `removed` now always contain data items, regardless of `valueKey` being set. This aligns them with the updated `newSelection` and `oldSelection` properties.
+
+If your code in `selectionChanging` event handler was depending on reading `valueKeys` from the event argument, update it as follows:
+
+```typescript
+  // version 16.1.x
+  public handleSelectionChanging(e: IComboSelectionChangingEventArgs): void {
+    this.addedItems = e.added;
+    this.removedItems = e.removed;
+  }
+
+  // version 17.0.x
+  public handleSelectionChanging(e: IComboSelectionChangingEventArgs): void {
+    this.addedItems = e.added.map(i => {
+       return i[e.owner?.valueKey]
+    });
+    this.removedItems = e.removed.map(i => {
+       return i[e.owner?.valueKey]
+    });
+  }
+```
+- `getCurrentResourceStrings` has been removed. Use the specific component string imports instead. 
+    - E.g. EN strings come from `igniteui-angular`: `import { GridResourceStringsEN } from 'igniteui-angular';`
+    - E.g. DE or other language strings come from `igniteui-angular-i18n`: `import { GridResourceStringsDE } from 'igniteui-angular-i18n';`
+
+    Usage examples can be found in the updated [Localization (i18n)](localization.md) doc.
+
 ## 16.0.x から 16.1.x の場合:
 
 ### 一般
