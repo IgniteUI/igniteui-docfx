@@ -281,7 +281,8 @@ public handleRowSelectionChange(args) {
 
 ### 全行の選択
 [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) が提供するもう 1 つの便利な API メソッドが `selectAll(onlyFilteredData)` です。このメソッドはデフォルトですべてのデータ行を選択しますが、フィルタリングが適用される場合、フィルター条件に一致する行のみが選択されます。ただし、false パラメーターを指定してメソッドを呼び出すと、`selectAll(false)` は、フィルターが適用されているかどうかに関係なく、常にグリッド内のすべてのデータを選択します。
-> **注**: `selectAll()` は削除された行を選択しないことに注意してください。
+>[!NOTE]
+> `selectAll()` は削除された行を選択しないことに注意してください。
 
 ### 全行の選択解除
 [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は、デフォルトですべてのデータ行の選択を解除する `deselectAll(onlyFilteredData)` メソッドを提供しますが、フィルタリングが適用される場合、フィルター条件に一致する行のみを選択解除します。ただし、false パラメーターを指定してメソッドを呼び出すと、`deselectAll(false)` は、フィルターが適用されているかどうかに関係なく、常にグリッド内のすべてのデータをクリアします。
