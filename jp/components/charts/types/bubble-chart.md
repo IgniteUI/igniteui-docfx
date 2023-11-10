@@ -2,7 +2,7 @@
 title: Angular バブル チャート | データ可視化 | インフラジスティックス
 _description: インフラジスティックス の Angular バブル チャート
 _keywords: Angular Charts, Bubble Chart, Infragistics, Angular チャート, バブル チャート, インフラジスティックス
-mentionedTypes: ["Series", "BubbleSeries", "ScatterSeries", 'Series']
+mentionedTypes: ["Series", "BubbleSeries", "ScatterSeries"]
 namespace: Infragistics.Controls.Charts
 _language: ja
 ---
