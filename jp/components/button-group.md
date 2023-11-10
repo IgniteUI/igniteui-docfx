@@ -138,26 +138,16 @@ public alignment = ButtonGroupAlignment.vertical;
 
 <div class="divider--half"></div>
 
-### 複数選択
-[`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#multiSelection) プロパティを使用して、ボタン グループ内のボタンの複数選択を有効/無効化します。
+### 選択
 
-```html
-<!-- sample.component.html -->
-<igx-buttongroup [multiSelection]="true">
-    <button igxButton>
-        <igx-icon>format_bold</igx-icon>
-    </button>
-    <button igxButton>
-        <igx-icon>format_italic</igx-icon>
-    </button>
-    <button igxButton>
-        <igx-icon>format_underlined</igx-icon>
-    </button>
-</igx-buttongroup>
-```
+`igx-buttongroup` 選択を構成するには、その [selectionMode]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#selectionMode) プロパティを使用できます。このプロパティは、次の 3 つのモードを受け入れます:
+- **single** - ボタン グループのデフォルトの選択モードです。ユーザーは単一のボタンを選択/選択解除できます。
+- **singleRequired** - ラジオ グループの動作を模倣します。選択できるボタンは 1 つだけであり、最初に選択すると、ユーザーの操作を通じて選択を解除することはできません。
+- **multi** - グループ内の複数のボタンを選択または選択解除できます。
 
+以下のサンプルは、公開された `igx-buttongroup` 選択モードを示しています。
 
-<code-view style="height: 80px" 
+<code-view style="height: 170px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-4" >
 </code-view>
@@ -248,7 +238,7 @@ public ngOnInit() {
 
 ```html
 <!-- sample.component.html -->
-<igx-buttongroup [multiSelection]="true" [values]="bordersButtons"></igx-buttongroup>
+<igx-buttongroup [selectionMode]="'multi'" [values]="bordersButtons"></igx-buttongroup>
 ```
 
 
