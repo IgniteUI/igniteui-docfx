@@ -4,11 +4,9 @@ _description: How to use Angular 16 preview feature that allows components to be
 _keywords: Ignite UI for Angular, Standalone Components, Angular 16, Angular Modules
 ---
 
-# Using Standalone Components with Ignite UI for Angular (Preview)
+# Using Standalone Components with Ignite UI for Angular
 
 Angular 14 introduced the concept of [standalone components](https://angular.io/guide/standalone-components) which allows for a simplified way of building applications by reducing the need for using `NgModules`. Standalone components were in developer preview until Angular 15. To support this new paradigm, all Ignite UI for Angular components are now exported as `standalone` with version `16.0.0`. All the existing `NgModules` are still exported by the library for backward compatibility. However, they no longer declare any of the Ignite UI for Angular components. Instead they import and export the `standalone` components.
-
-The `standalone` components are still in a **preview** stage. Some utility directive exports may change in the future and may be missing from the documentation in the initial release.
 
 ## How to use the new standalone components
 
