@@ -52,24 +52,25 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
-## From 16.1.x to 17.0.x
-### General
-- `rowAdd` and `rowDelete` events no longer emit event argument of type `IGridEditEventArgs`, but argument of type `IRowDataCancelableEventArgs`. The two interfaces `IGridEditEventArgs` and `IRowDataCancelableEventArgs` are compatible. Only case there would be issues is if your application was reading `IGridEditEventArgs.oldValue`, `IGridEditEventArgs.newValue`. These properties return always undefined when in `rowAdd` or `rowDelete` event handlers, so they can be safely removed.
-- `rowID` property has been deprecated in the following interfaces: `IGridEditDoneEventArgs`, `IPathSegment`, `IRowToggleEventArgs`, `IPinRowEventArgs`, `IgxAddRowParent` and will be removed in a future version. Use `rowKey` instead.
-- `data` property has been deprecated in the following interfaces: `IBaseRowDataEventArg` and `IRowDataEventArgs`. Use `rowData` instead.
-- `key` property has been deprecated in the following interfaces: `IRowDataEventArgs`. Use `rowKey` instead.
-- `primaryKey` has been deprecated in the following interfaces: `IGridEditDoneEventArgs`. Use `rowKey` instead.
+## 16.1.x から 17.0.x の場合:
 
-- Trying to make our API easier to use and maintain, the above changes were introduced. At the moment, some interfaces became cubersome, carrying two or more properties for the same entity - `rowID`, `key`, `rowKey` and `primaryKey`. `rowID`, `key`, and `primaryKey` are deprecated in all places, aiming to leave only `rowKey` from version 18 onwards. Same goes for `data` and `rowData` - the aim is to go only with `rowData` from version 18 onwards.
+### 一般
+- `rowAdd` および `rowDelete` イベントは、`IGridEditEventArgs` 型のイベント引数を発行しなくなり、`IRowDataCancelableEventArgs` 型の引数を発行します。2 つのインターフェイス `IGridEditEventArgs` と `IRowDataCancelableEventArgs` には互換性があります。問題が発生する唯一のケースは、アプリケーションが `IGridEditEventArgs.oldValue`、`IGridEditEventArgs.newValue` を読み取っていた場合です。これらのプロパティは、`rowAdd` または `rowDelete` イベント ハンドラー内では常に未定義を返すため、安全に削除できます。
+- `rowID` プロパティは、`IGridEditDoneEventArgs`、`IPathSegment`、`IRowToggleEventArgs`、`IPinRowEventArgs`、および `IgxAddRowParent` のインターフェイスでは非推奨となり、将来のバージョンでは削除される予定です。代わりに `rowKey` を使用してください。
+- `data` プロパティは、次のインターフェイスでは非推奨になりました: `IBaseRowDataEventArg` および `IRowDataEventArgs`。代わりに `rowData` を使用してください。
+- `key` プロパティは、次のインターフェイスでは非推奨になりました: `IRowDataEventArgs`。代わりに `rowKey` を使用してください。
+- `primaryKey` は次のインターフェイスでは非推奨になりました: `IGridEditDoneEventArgs`。代わりに `rowKey` を使用してください。
 
-### Breaking changes
-- If code inside `rowAdd` or `rowDelete` event handlers is reading `IGridEditEventArgs.oldValue` or `IGridEditEventArgs.newValue`, migrating the event argument type from `IGridEditEventArgs` to `IRowDataCancelableEventArgs` would be a breaking change, because the interface `IRowDataCancelableEventArgs` does not have `oldValue` and `newValue` props. These properties return always undefined when in `rowAdd` or `rowDelete` event handlers, so if there is a code reading these prop in these event handlers, just remove it.
-- In `IgxCombo`'s `selectionChanging` event arguments type `IComboSelectionChangingEventArgs` has these changes:
-    - properties `newSelection` and `oldSelection` have been renamed to `newValue` and `oldValue` respectively to better reflect their function. Just like Combo's `value`, those will emit either the specified property values or full data items depending on whether `valueKey` is set or not. Automatic migrations are available and will be applied on `ng update`.
-    - two new properties `newSelection` and `oldSelection` are exposed in place of the old ones that are no longer affected by `valueKey` and consistently emit items from Combo's `data`.
-    - properties `added` and `removed` now always contain data items, regardless of `valueKey` being set. This aligns them with the updated `newSelection` and `oldSelection` properties.
+- API の使用と保守を容易にするために、上記の変更が導入されました。現時点では、一部のインターフェイスは、同じエンティティに対して 2 つ以上のプロパティ (`rowID`、`key`、`rowKey`、および `primaryKey`) を含むため、煩雑になりました。`rowID`、`key`、および `primaryKey` はすべての場所で非推奨となり、バージョン 18 以降では `rowKey` のみを残すことを目的としています。同じことが `data` と `rowData` にも当てはまります。その目的は、バージョン 18 以降では `rowData` のみを使用することです。
 
-If your code in `selectionChanging` event handler was depending on reading `valueKeys` from the event argument, update it as follows:
+### 重大な変更
+- `rowAdd` または `rowDelete` イベント ハンドラー内のコードが `IGridEditEventArgs.oldValue` または `IGridEditEventArgs.newValue` を読み取っている場合、`IRowDataCancelableEventArgs` インターフェイスには `oldValue` および `newValue` プロパティがないため、イベント引数の型を `IGridEditEventArgs` から `IRowDataCancelableEventArgs` に移行することは重大な変更となります。これらのプロパティは、`rowAdd` または `rowDelete` イベント ハンドラー内では常に未定義を返すため、これらのイベント ハンドラー内でこれらのプロパティを読み取るコードがある場合は、それを削除してください。
+- `IgxCombo` の `IComboSelectionChangingEventArgs` 型の`selectionChanging` イベント引数には次の変更があります。
+    - `newSelection` と `oldSelection` プロパティは、その機能をより適切に反映するために、それぞれ `newValue` と `oldValue` に名前変更されました。Combo の `value` と同様に、これらは `valueKey` が設定されているかどうかに応じて、指定されたプロパティ値または完全なデータ項目を出力します。自動移行が利用可能で、`ng update` 時に適用されます。
+    - 2 つの新しいプロパティ (`newSelection` と `oldSelection`) が、`valueKey` の影響を受けなくなった古いプロパティの代わりに公開され、一貫して Combo の `data` から項目を出力します。
+    - `added` と `removed` プロパティには、設定されている `valueKey` に関係なく、常にデータ項目が含まれるようになりました。これにより、更新された `newSelection` プロパティと `oldSelection` プロパティが調整されます。
+
+`selectionChanging` イベント ハンドラーのコードがイベント引数からの `valueKeys` の読み取りに依存していた場合は、次のように更新します。
 
 ```typescript
   // version 16.1.x
@@ -88,11 +89,12 @@ If your code in `selectionChanging` event handler was depending on reading `valu
     });
   }
 ```
-- `getCurrentResourceStrings` has been removed. Use the specific component string imports instead. 
-    - E.g. EN strings come from `igniteui-angular`: `import { GridResourceStringsEN } from 'igniteui-angular';`
-    - E.g. DE or other language strings come from `igniteui-angular-i18n`: `import { GridResourceStringsDE } from 'igniteui-angular-i18n';`
 
-    Usage examples can be found in the updated [Localization (i18n)](localization.md) doc.
+- `getCurrentResourceStrings` は削除されました。`getCurrentResourceStrings` は削除されました。
+    - 例: EN 文字列は `igniteui-angular`: `import { GridResourceStringsEN } from 'igniteui-angular';` から取得されます。
+    - 例: DE または他の言語文字列は `igniteui-angular-i18n`: `import { GridResourceStringsDE } from 'igniteui-angular-i18n';` から取得されます。
+
+    使用例は、更新された[ローカライズ (i18n)](localization.md) ドキュメントにあります。
 
 ## 16.0.x から 16.1.x の場合:
 
