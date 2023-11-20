@@ -25,7 +25,7 @@ Infragistics Angular Excel Engine の [`WorksheetChart`]({environment:dvApiBaseU
 
 ワークシートを追加するには、ワークシートの Shapes コレクションの `AddChart` メソッドを使用します。このメソッドは、チャート タイプと表示位置を左上のセル、右下のセル、それらのセルのパーセンテージで指定できます。
 
-`AddChart` メソッドはワークシートに追加されるワークシート チャート要素を返します。次にチャートの [`setSourceData`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetchart.html#setsourcedata) メソッドを使用してデータ ソースとして使用するワークシート セル領域のセルのセル アドレスを設定できます。同様に行列のマッピングを Y と X 軸に切り替えることもできます。
+`AddChart` メソッドはワークシートに追加されるワークシート チャート要素を返します。次にチャートの [`setSourceData`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetchart.html#setSourceData) メソッドを使用してデータ ソースとして使用するワークシート セル領域のセルのセル アドレスを設定できます。同様に行列のマッピングを Y と X 軸に切り替えることもできます。
 
 `Line`、`Area`、[`IgxColumn`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_grids_grids.igxcolumn.html)、`Pie` を含む 70 タイプ以上のチャート タイプがサポートされます。
 
