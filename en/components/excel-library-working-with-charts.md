@@ -24,7 +24,7 @@ The Infragistics Angular Excel Engine's [`WorksheetChart`]({environment:dvApiBas
 
 In order to add a chart to a worksheet, you must use the `AddChart` method of the worksheet's shapes collection. In this method, you can specify the chart type that you wish to use, the top-left cell, the bottom-right cell, and the percentages of those cells that you wish for the chart to take up.
 
-The `AddChart` method returns the worksheet chart element to be added to the worksheet. Once you have this, you can use the [`setSourceData`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetchart.html#setsourcedata) method on the chart to set a cell address of the region of worksheet cells that you wish to use as a data source, as well as whether or not you want to switch the mapping of columns and rows to the X and Y axis.
+The `AddChart` method returns the worksheet chart element to be added to the worksheet. Once you have this, you can use the [`setSourceData`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetchart.html#setSourceData) method on the chart to set a cell address of the region of worksheet cells that you wish to use as a data source, as well as whether or not you want to switch the mapping of columns and rows to the X and Y axis.
 
 There are over 70 supported chart types, including `Line`, `Area`, [`IgxColumn`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_grids_grids.igxcolumn.html), and `Pie`.
 
