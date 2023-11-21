@@ -147,7 +147,7 @@ Ensure that whenever a change is made to the text content the appropriate status
 > Note: This status should be set only when the PR is approved. This will indicate that no further changes will be applied.
 2. `status: localized` this status is for issues that were with a pending translation status and have already been localized. Place this status label once these translation changes have been included in the current pull request, or the changes are already pulled with a different pull request.
 
-> Note: Keep in mind that when you submit a change in the EN .md files, you will need to make the same change in the JP versions as well. This will help our Localization team to translate the change. As for the KR version of the topic, these changes will be handled by the Localization team.
+> Note: Keep in mind that when you submit a change in the EN .md files, you don't need to make the same change in the JP/KR versions. This task will be handled by the Localization team.
 
 
 ## Fixing a bug  
