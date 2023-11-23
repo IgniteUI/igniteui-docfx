@@ -81,7 +81,7 @@ Next, we have added an [`igx-expansion-panel`]({environment:angularApiUrl}/class
 
 <img src="../../../images/igniteui-expansion.png" width="100%">
 
-Finally, we inserted an Ignite UI for Angular [`icon button`]({environment:angularApiUrl}/classes/igxbuttondirective.html) in the top right corner, that changes the theme of the whole app:  
+Finally, we inserted an Ignite UI for Angular [`icon button`]({environment:angularApiUrl}/classes/igxiconbuttondirective.html) in the top right corner, that changes the theme of the whole app:  
 
 <img src="../../../images/material-dark.png" width="100%">
 

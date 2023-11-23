@@ -8,7 +8,7 @@ _keywords: Angular Button component, Angular Button control, Ignite UI for Angul
 
 Angular Button directive is used for creating and adding actionable buttons to a web page/application. There are different Angular Button types that are easy to customize and include several built-in features. By default, Angular Material uses native `<button>` and `<a>` elements to deliver an accessible experience.
 
-The Ignite UI for Angular Button directive is intended to turn any button, span, div, or anchor element into a fully functional button. You can use the following Angular Button types - Flat Button, Raised Button, Outlined Button, Icon Button and Floating Action Button. With customizable colors, options to create themes and change the Angular Button Style and enabling users to choose the button size and more.
+The Ignite UI for Angular Button directive is intended to turn any button, span, div, or anchor element into a fully functional button. You can use the following Angular Button types - Flat Button, Contained Button, Outlined Button, and Floating Action Button. With customizable colors, options to create themes and change the Angular Button Style and enabling users to choose the button size and more.
 
 ## Angular Button Example
 We have created the Angular Button example below to show you how different button types can appear and look like when they are styled with a border or when a transparent background is applied.
@@ -83,12 +83,12 @@ Use the [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.htm
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-2"></iframe>
 </div>
 
-### Raised Button
+### Contained Button
 
-All you have to do to create a raised button is to change the value of the `igxButton` property:
+All you have to do to create a contained button is to change the value of the `igxButton` property:
 
 ```html
-<button igxButton="raised">Raised</button>
+<button igxButton="contained">Contained</button>
 ```
 
 <div class="sample-container loading" style="height: 70px">
@@ -109,10 +109,10 @@ Analogically, we can switch to outlined type:
 
 ### Icon Button
 
-We can also use icons as buttons:
+As of version `17.1.0` the IgniteUI for Angular exposes a new `igxIconButton` directive intended to turn icons into fully functional buttons. You can read more about the [*Icon Button here*](icon-button.md).
 
 ```html
-<button igxButton="icon">
+<button igxIconButton="flat">
   <igx-icon fontSet="material">favorite</igx-icon>
 </button>
 ```
@@ -154,7 +154,7 @@ To create an extended FAB, you can add any element prior to the `igx-icon`:
 The `disabled` property can be used to make a button unclickable:
 
 ```html
-<button igxButton="raised" [disabled]="'true'">Disabled</button>
+<button igxButton="contained" [disabled]="'true'">Disabled</button>
 ```
 
 <div class="sample-container loading" style="height: 70px">
@@ -166,7 +166,7 @@ The `disabled` property can be used to make a button unclickable:
 The [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) directive adds a ripple effect to your buttons or other specified elements. You can easily change the default ripple color, position and duration, using its properties:
 
 ```html
-<button igxButton="raised" igxRipple="white" [igxRippleCentered]="true" [igxRippleDuration]="2000">
+<button igxButton="contained" igxRipple="white" [igxRippleCentered]="true" [igxRippleDuration]="2000">
     Ripple
 </button>
 ```
@@ -180,7 +180,7 @@ The [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) d
 We can also use the `igxButton` directive to turn elements like `span` and `div` into Ignite UI for Angular styled buttons. The default colors can be customized via the `igxButtonColor` and the `igxButtonBackground` properties:
 
 ```html
-<span igxButton="raised" igxButtonColor="white" igxButtonBackground="#72da67" igxRipple="white">
+<span igxButton="contained" igxButtonColor="white" igxButtonBackground="#72da67" igxRipple="white">
     Span
 </span>
 ```
@@ -259,8 +259,8 @@ Following the simplest approach, we create a new theme that extends the [`button
 Given the following markup:
 
 ```html
-<div class="my-raised-btn">
-    <button igxButton="raised">Raised button</button>
+<div class="my-contained-btn">
+    <button igxButton="contained">Contained button</button>
 </div>
 ```
 
@@ -285,7 +285,7 @@ Take a look at the [`button-theme`]({environment:sassApiUrl}/index.html#function
 The last step is to pass the custom button theme in our application:
 
 ```scss
-.my-raised-btn {
+.my-contained-btn {
     @include css-vars($custom-button-theme);
 }
 ```
@@ -298,7 +298,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 ```scss
 :host {
      ::ng-deep {
-        .my-raised-btn {
+        .my-contained-btn {
             @include button($custom-button-theme);
         }
     }
@@ -319,6 +319,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
 * [IgxButton Styles]({environment:sassApiUrl}/index.html#function-button-theme)
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
+* [IgxIconButtonDirective]({environment:angularApiUrl}/classes/igxiconbuttondirective.html)
 * [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
 
 ## Additional Resources
