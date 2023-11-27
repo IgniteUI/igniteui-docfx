@@ -48,7 +48,7 @@ export class AppModule {
 }
 ```
 
-あるいは、`16.0.0` 以降、`IgxRadioGroupDirective` と `IgxRadioComponent` をスタンドアロンの依存関係としてインポートできます。
+あるいは、`16.0.0` 以降、`IgxRadioGroupDirective` と `IgxRadioComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_RADIO_GROUP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/directives/radio/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
