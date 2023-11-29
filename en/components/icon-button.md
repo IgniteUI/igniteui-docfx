@@ -149,25 +149,19 @@ As you can see from the sample above, we can also use the `igxIconButton` direct
 
 ## Angular Icon Button Styling
 
-To get started with styling the icon button, we need to import the `index` file, where all the theme functions and component mixins live:
-
-```scss
-@use "igniteui-angular/theming" as *;
-```
-
 Following the simplest approach, we use CSS variables to customize the appearance of the icon button:
 
 ```scss
 [igxIconButton="contained"] {
     --background: #011627;
-    --foreground: #FEFEFE;
-    --hover-foreground:  #011627dc;
-    --hover-background: #ECAA53;
+    --foreground: #fefefe;
+    --hover-foreground: #011627dc;
+    --hover-background: #ecaa53;
     --focus-foreground: #011627dc;
-    --focus-background: #ECAA53;
-    --focus-border-color:  #0116276c;
+    --focus-background: #ecaa53;
+    --focus-border-color: #0116276c;
     --active-foreground: #011627dc;
-    --active-background: #ECAA53;
+    --active-background: #ecaa53;
 }
 ```
 
