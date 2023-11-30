@@ -57,7 +57,7 @@ import { IgxSnackbarComponent, IgxButtonDirective } from 'igniteui-angular';
 @Component({
     selector: 'app-home',
     template: `
-    <button igxButton="raised" (click)="snackbar.open()">Delete Message</button>
+    <button igxButton="contained" (click)="snackbar.open()">Delete Message</button>
     <div>
         <igx-snackbar #snackbar>Message deleted</igx-snackbar>
     </div>
@@ -79,7 +79,7 @@ In order to display the snackbar component, use its [`open()`]({environment:angu
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="snackbar.open()">Delete Message</button>
+<button igxButton="contained" (click)="snackbar.open()">Delete Message</button>
 <div>
     <igx-snackbar #snackbar>Message deleted</igx-snackbar>
 </div>
@@ -90,8 +90,8 @@ As you can see in the code snippet above, one way to set the massage displayed i
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="snackbar.open('Message deleted')">Delete Message</button>
-<button igxButton="raised" (click)="snackbar.open('Message deletion was not successful. Please try again')">Delete Message</button>
+<button igxButton="contained" (click)="snackbar.open('Message deleted')">Delete Message</button>
+<button igxButton="contained" (click)="snackbar.open('Message deletion was not successful. Please try again')">Delete Message</button>
 <div>
     <igx-snackbar #snackbar></igx-snackbar>
 </div>
@@ -103,7 +103,7 @@ Once opened, the snackbar disappears after a period specified by the [`displayTi
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="snackbar.open()">Send message</button>
+<button igxButton="contained" (click)="snackbar.open()">Send message</button>
 <div>
   <igx-snackbar #snackbar [autoHide]="false" actionText="CLOSE" (clicked)="close(snackbar)">Message sent</igx-snackbar>
 </div>
@@ -132,7 +132,7 @@ We can also customize the content of the Snackbar to display more complex elemen
 
 ```html
 <!--sample.component.html-->
-<button igxButton="raised" (click)="snackbar.open()">Load file</button>
+<button igxButton="contained" (click)="snackbar.open()">Load file</button>
 <div>
   <igx-snackbar #snackbar displayTime="5000">File loading
     <svg id="dots" height="20px">
@@ -202,7 +202,7 @@ Let’s create a list with contacts that can be deleted. When an item is deleted
                     <span class="name">{{item.text}}</span>
                 </div>
             </div>
-            <span igxButton="icon" igxRipple igxRippleCentered="true" (click)="delete(item)">
+            <span igxIconButton="flat" igxRipple igxRippleCentered="true" (click)="delete(item)">
                 <igx-icon [style.color]="'#ff5252'">delete</igx-icon>
             </span>
         </div>
