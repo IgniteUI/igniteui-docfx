@@ -57,7 +57,7 @@ import { IgxToastComponent, IgxButtonDirective } from 'igniteui-angular';
 @Component({
     selector: 'app-home',
     template: `
-    <button igxButton="raised" (click)="toast.open()">Show notification</button>
+    <button igxButton="contained" (click)="toast.open()">Show notification</button>
     <igx-toast #toast>Notification displayed</igx-toast>
     `,
     styleUrls: ['home.component.scss'],
@@ -80,7 +80,7 @@ In order to display the toast component, use its [`open()`]({environment:angular
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="toast.open()">Show notification</button>
+<button igxButton="contained" (click)="toast.open()">Show notification</button>
 <igx-toast #toast>Notification displayed</igx-toast>
 ```
 
@@ -89,7 +89,7 @@ Another way to set the toast content is to directly pass the message as a parame
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="toast.open('Notification displayed')">Show notification</button>
+<button igxButton="contained" (click)="toast.open('Notification displayed')">Show notification</button>
 <igx-toast #toast></igx-toast>
 ```
 
@@ -121,8 +121,8 @@ Once opened, the toast disappears after a period specified by the [`displayTime`
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="toast.open()">Show Toast</button>
-<button igxButton="raised" (click)="toast.close()">Hide Toast</button>
+<button igxButton="contained" (click)="toast.open()">Show Toast</button>
+<button igxButton="contained" (click)="toast.close()">Hide Toast</button>
 <igx-toast #toast [autoHide]="false">Notification displayed</igx-toast>
 ```
 
@@ -140,7 +140,7 @@ Use [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#d
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="toast.open()">Show notification</button>
+<button igxButton="contained" (click)="toast.open()">Show notification</button>
 <igx-toast #toast displayTime="1000">Notification displayed</igx-toast>
 ```
 
@@ -156,7 +156,7 @@ Use [`positionSettings`]({environment:angularApiUrl}/classes/igxtoastcomponent.h
 ```html
 <!--sample.component.html-->
 <div>
-    <button igxButton="raised" (click)="open(toast)">Show notification on top</button>
+    <button igxButton="contained" (click)="open(toast)">Show notification on top</button>
     <igx-toast #toast>Notification displayed</igx-toast>
 </div>
 ```

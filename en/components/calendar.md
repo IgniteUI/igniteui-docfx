@@ -249,7 +249,7 @@ export class CalendarSample7Component {
     leftButtonLabel="OK"
     (leftButtonSelect)="alert.close()">
 </igx-dialog>
-<button igxButton="raised" (click)="submitPTOdays($event)">Submit Request</button>
+<button igxButton="contained" (click)="submitPTOdays($event)">Submit Request</button>
 ```
 
 The following demo illustrates a calendar with a vacation request option:

@@ -88,8 +88,8 @@ Let's create a search box that we can use to highlight different parts of the te
                 (keydown)="searchKeyDown($event)" />
         <igx-suffix>
             <div class="caseSensitiveButton">
-                <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="updateSearch()"
-                        [igxButtonBackground]="caseSensitive? 'rgb(73, 180, 254)' : 'transparent'">
+                <button igxIconButton="flat" igxRipple igxRippleCentered="true" (click)="updateSearch()"
+                        [style.background]="caseSensitive ? 'rgb(73, 180, 254)' : 'transparent'">
                     <igx-icon class="caseSensitiveIcon" fontSet="material">text_fields</igx-icon>
                 </button>
             </div>
@@ -105,10 +105,10 @@ Let's create a search box that we can use to highlight different parts of the te
             </ng-container>
            
             <div class="searchButtons">
-                <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="findPrev()" [disabled]="!canMoveHighlight">
+                <button igxIconButton="flat" igxRipple igxRippleCentered="true" (click)="findPrev()" [disabled]="!canMoveHighlight">
                     <igx-icon fontSet="material">navigate_before</igx-icon>
                 </button>
-                <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="findNext()" [disabled]="!canMoveHighlight">
+                <button igIconButton="flat" igxRipple igxRippleCentered="true" (click)="findNext()" [disabled]="!canMoveHighlight">
                     <igx-icon fontSet="material">navigate_next</igx-icon>
                 </button>
             </div>
