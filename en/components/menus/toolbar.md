@@ -144,6 +144,11 @@ Trend Actions
 *   `ShowCrosshairs`: A [`IgxToolActionCheckboxComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncheckboxcomponent.html) that toggles mouse-over crosshair annotations via the chart's [`crosshairsDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#crosshairsDisplayMode) property.
 *   `ShowGridlines`: A [`IgxToolActionCheckboxComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncheckboxcomponent.html) that toggles extra gridlines by applying a `MajorStroke` to the X-Axis.
 
+Save to Image Action
+
+*   `CopyAsImage`: A [`IgxToolActionLabelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionlabelcomponent.html) that exposes an option to copy the chart to the clipboard.
+*   `CopyHeader`: A sub section header.
+
 ### Vertical Orientation
 
 By default the Angular Toolbar is shown horizontally, but it also has the ability to shown vertically by setting the [`orientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html#orientation) property.
@@ -152,8 +157,12 @@ By default the Angular Toolbar is shown horizontally, but it also has the abilit
 <igx-toolbar orientation="Vertical" />
 ```
 
-<!-- The following example demonstrates the vertical orientation of the Angular Toolbar.
-`sample="/charts/toolbar/layout-in-vertical-orientation", height="600", alt="Angular Verical Orientation"` -->
+The following example demonstrates the vertical orientation of the Angular Toolbar. <code-view style="height: 600px" alt="Angular Verical Orientation"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/toolbar/layout-in-vertical-orientation"
+                                                 github-src="charts/toolbar/layout-in-vertical-orientation">
+</code-view>
+
 
 <!-- ## Styling/Theming
 
