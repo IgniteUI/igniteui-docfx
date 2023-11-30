@@ -44,10 +44,10 @@
       new: false
     - name: テーマのカスタマイズと最適化
       href: general/how-to/how-to-customize-theme.md
-      new: true
+      new: false
     - name: スタンドアロン コンポーネントの使用方法
       href: general/how-to/how-to-use-standalone-components.md
-      preview: true
+      updated: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   sortable: false
@@ -242,6 +242,7 @@
     - name: サイズ (表示密度)
       href: grid/display-density.md
       new: false
+      updated: true
     - name: 条件付きスタイル設定
       href: grid/conditional-cell-styling.md
       new: false

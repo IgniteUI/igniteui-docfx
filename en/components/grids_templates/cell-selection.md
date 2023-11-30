@@ -101,6 +101,7 @@ How to select cells:
 
 When you set the `[cellSelection]="'single'"`, this allows you to have only one selected cell in the grid at a time. Also the mode `mouse drag` will not work and instead of selecting a cell, this will make default text selection.
 
+>[!NOTE]
 > When single cell is selected [`selected`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selected) event is emitted, no matter if the `selection mode` is `single` or `multiple`. In multi-cell selection mode when you select a range of cells [`rangeSelected`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rangeSelected) event is emitted.
 
 ### @@igComponent None selection
