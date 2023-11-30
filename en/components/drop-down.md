@@ -58,7 +58,7 @@ import { IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective 
 @Component({
     selector: 'app-home',
     template: `
-    <button igxButton="raised" 
+    <button igxButton="contained" 
         [igxToggleAction]="dropdown"
         [igxDropDownItemNavigation]="dropdown">
         Options
@@ -88,7 +88,7 @@ Let's create a simple drop-down that provides several option items to choose fro
 
 ```html
 <!-- dropdown.component.html -->
-<button igxButton="raised" 
+<button igxButton="contained" 
         [igxToggleAction]="dropdown"
         [igxDropDownItemNavigation]="dropdown">
         Options
@@ -121,7 +121,7 @@ Let's say we want to have a predefined selected item. One way to do this, is by 
 
 ```html
 <!-- dropdown.component.html -->
-<button igxButton="raised" 
+<button igxButton="contained" 
         [igxToggleAction]="dropdown" 
         [igxDropDownItemNavigation]="dropdown">
         Options
@@ -159,7 +159,7 @@ To provide a more useful visual information, use the [isHeader]({environment:ang
 
 ```html
 <!-- dropdown.component.html -->
-<button igxButton="raised" 
+<button igxButton="contained" 
         [igxToggleAction]="dropdown"
         [igxDropDownItemNavigation]="dropdown">
         Countries
@@ -291,7 +291,7 @@ You can configure the drop-down to behave as a menu. To do this, set the [ISelec
                 [igxToggleOutlet]="outlet"
                 [overlaySettings]="overlaySettings"
                 [igxDropDownItemNavigation]="menu"
-                igxButton="icon">
+                igxIconButton="flat">
             <igx-icon fontSet="material">more_vert</igx-icon>
         </button>
         <igx-drop-down #menu (selectionChanging)="selectionHandler($event)">
@@ -424,7 +424,7 @@ The following sample demonstrates an input that opens and closes the `igxDropDow
         [value]="dropDown.selectedItem?.value"
         (keydown.ArrowDown)="openDropDown()"/>
 
-    <igx-suffix igxButton="icon" igxRipple>
+    <igx-suffix igxIconButton="flat" igxRipple>
         <igx-icon>arrow_drop{{ dropDown.collapsed ? '_down' : '_up' }}</igx-icon>
     </igx-suffix>
 </igx-input-group>

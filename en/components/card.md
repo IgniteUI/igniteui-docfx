@@ -74,10 +74,10 @@ import { IGX_CARD_DIRECTIVES } from 'igniteui-angular';
 
         <igx-card-actions>
             <button igxButton igxRipple>Read More</button>
-            <button igxButton="icon" igxRipple igxRippleCentered="true">
+            <button igxIconButton="flat" igxRipple igxRippleCentered="true">
                 <igx-icon>favorite</igx-icon>
             </button>
-            <button igxButton="icon" igxRipple igxRippleCentered="true">
+            <button igxIconButton="flat" igxRipple igxRippleCentered="true">
                 <igx-icon>share</igx-icon>
             </button>
         </igx-card-actions>
@@ -125,10 +125,10 @@ Then to represent the demo card template we can add the following code.
 
     <igx-card-actions>
         <button igxButton igxRipple>Read More</button>
-        <button igxButton="icon" igxRipple igxRippleCentered="true">
+        <button igxIconButton="flat" igxRipple igxRippleCentered="true">
             <igx-icon>favorite</igx-icon>
         </button>
-        <button igxButton="icon" igxRipple igxRippleCentered="true">
+        <button igxIconButton="flat" igxRipple igxRippleCentered="true">
             <igx-icon>share</igx-icon>
         </button>
     </igx-card-actions>
@@ -215,7 +215,7 @@ Here's an example of an outlined horizonal card:
     <igx-divider [vertical]="horizontal"></igx-divider>
 
     <igx-card-actions layout="justify">
-        <button *ngFor="let icon of card.icons;" igxButton="icon" igxRipple igxRippleCentered="true">
+        <button *ngFor="let icon of card.icons;" igxIconButton="flat" igxRipple igxRippleCentered="true">
             <igx-icon>{{icon}}</igx-icon>
         </button>
     </igx-card-actions>
@@ -245,7 +245,7 @@ You can set the `vertical` attribute of he actions area explicitly, thus overrid
 
 ```html
 <igx-card-actions layout="justify" [vertical]="false">
-    <button *ngFor="let icon of card.icons;" igxButton="icon" igxRipple igxRippleCentered="true">
+    <button *ngFor="let icon of card.icons;" igxIconButton="flat" igxRipple igxRippleCentered="true">
         <igx-icon>{{icon}}</igx-icon>
     </button>
 </igx-card-actions>
@@ -308,7 +308,7 @@ You can reverse order of the flat buttons and the button icons using the `revers
 <igx-card-actions [reverse]="true">
     <button igxButton>Button</button>
 
-    <button igxButton="icon">
+    <button igxIconButton="flat">
         <igx-icon>star</igx-icon>
     </button>
 </igx-card-actions>
@@ -322,7 +322,7 @@ You can also justify the buttons so that they are layed out across the entire ax
 <igx-card-actions layout="justify">
     <button igxButton>Button</button>
 
-    <button igxButton="icon">
+    <button igxIconButton="flat">
         <igx-icon>star</igx-icon>
     </button>
 </igx-card-actions>

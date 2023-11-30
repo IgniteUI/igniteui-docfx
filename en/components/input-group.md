@@ -198,7 +198,7 @@ Template-driven form validation is achieved by adding validation attributes, i.e
         <input igxInput name="password" type="password" required minlength="8" />
     </igx-input-group>
 
-    <button igxButton="raised" igxRipple type="submit">Submit</button>
+    <button igxButton="contained" igxRipple type="submit">Submit</button>
 </form>
 ```
 
@@ -222,7 +222,7 @@ The following example uses two-way data binding and demonstrates how to inspect 
         <igx-hint *ngIf="password.errors?.minlength">Password should be at least 8 characters</igx-hint>
     </igx-input-group>
 
-    <button igxButton="raised" igxRipple type="submit">Submit</button>
+    <button igxButton="contained" igxRipple type="submit">Submit</button>
 </form>
 ```
 
@@ -239,7 +239,7 @@ The following example demonstrates how to inspect the form's state by exporting 
     </igx-input-group>
     ...
 
-    <button igxButton="raised" igxRipple type="submit" [disabled]="!registrationForm.valid">Submit</button>
+    <button igxButton="contained" igxRipple type="submit" [disabled]="!registrationForm.valid">Submit</button>
 </form>
 ```
 
@@ -281,7 +281,7 @@ constructor(fb: FormBuilder) {
         <input igxInput name="password" type="password" formControlName="password" />
     </igx-input-group>
 
-    <button igxButton="raised" igxRipple type="submit">Submit</button>
+    <button igxButton="contained" igxRipple type="submit">Submit</button>
 </form>
 ```
 
@@ -313,7 +313,7 @@ public get password() {
         <igx-hint *ngIf="password.errors?.minlength">Password should be at least 8 characters</igx-hint>
     </igx-input-group>
 
-    <button igxButton="raised" igxRipple type="submit" [disabled]="!registrationForm.valid">Submit</button>
+    <button igxButton="contained" igxRipple type="submit" [disabled]="!registrationForm.valid">Submit</button>
 </form>
 ```
 
