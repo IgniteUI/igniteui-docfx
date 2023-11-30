@@ -137,26 +137,16 @@ public alignment = ButtonGroupAlignment.vertical;
 
 <div class="divider--half"></div>
 
-### Multiple selection
-Use the the [`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#multiSelection) input property to enable the multiple selection in the button group.
+### Selection
 
-```html
-<!-- sample.component.html -->
-<igx-buttongroup [multiSelection]="true">
-    <button igxButton>
-        <igx-icon>format_bold</igx-icon>
-    </button>
-    <button igxButton>
-        <igx-icon>format_italic</igx-icon>
-    </button>
-    <button igxButton>
-        <igx-icon>format_underlined</igx-icon>
-    </button>
-</igx-buttongroup>
-```
+In order to configure the `igx-buttongroup` selection, you could use its [selectionMode]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#selectionMode) property. This property accepts the following three modes: 
+- **single** - default selection mode of the button group. A single button can be selected/deselected by the user.
+- **singleRequired** - mimics a radio group behavior. Only one button can be selected and once initial selection is made, deselection is not possible through user interaction.
+- **multi** - multiple buttons in the group can be selected and deselected.
 
+The sample below demonstrates the exposed `igx-buttongroup` selection modes:
 
-<code-view style="height: 80px" 
+<code-view style="height: 170px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-4" >
 </code-view>
@@ -247,7 +237,7 @@ public ngOnInit() {
 
 ```html
 <!-- sample.component.html -->
-<igx-buttongroup [multiSelection]="true" [values]="bordersButtons"></igx-buttongroup>
+<igx-buttongroup [selectionMode]="'multi'" [values]="bordersButtons"></igx-buttongroup>
 ```
 
 

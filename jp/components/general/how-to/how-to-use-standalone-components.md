@@ -5,11 +5,9 @@ _keywords: Ignite UI for Angular, スタンドアロン コンポーネント, A
 _language: ja
 ---
 
-# Ignite UI for Angular での Standalone (スタンドアロン) コンポーネントの使用 (プレビュー)
+# Ignite UI for Angular での Standalone (スタンドアロン) コンポーネントの使用
 
 Angular 14 では[スタンドアロン コンポーネント](https://angular.io/guide/standalone-components)の概念が導入されました。これにより、`NgModules` を使用する必要性が減り、アプリケーションを構築する方法が簡素化されます。スタンドアロン コンポーネントは、Angular 15 まで開発者プレビューでした。この新しいパラダイムをサポートするために、バージョン `16.0.0` では、すべての Ignite UI for Angular コンポーネントが `standalone` としてエクスポートされるようになりました。既存のすべての `NgModule` は、後方互換性のためにライブラリによって引き続きエクスポートされます。ただし、Ignite UI for Angular コンポーネントは宣言されなくなりました。代わりに、`standalone` コンポーネントをインポートおよびエクスポートします。
-
-`standalone` コンポーネントはまだ**プレビュー**段階にあります。一部のユーティリティ ディレクティブのエクスポートは将来変更される可能性があり、初期リリースのドキュメントに含まれない可能性があります。
 
 ## 新しいスタンドアロン コンポーネントの使用方法
 
@@ -90,6 +88,7 @@ import { IgxGridModule } from 'igniteui-angular';
 | [`IGX_PIVOT_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/pivot-grid/public_api.ts) | すべてのピボット グリッド関連のコンポーネントとディレクティブをエクスポートします。 |
 | [`IGX_PROGRESS_BAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/progressbar/public_api.ts) | すべてのプログレス バー関連のコンポーネントとディレクティブをエクスポートします。 |
 | [`IGX_QUERY_BUILDER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/query-builder/public_api.ts) | すべてのクエリ ビルダー関連のコンポーネントとディレクティブをエクスポートします。 |
+| [`IGX_RADIO_GROUP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/directives/radio/public_api.ts) | すべてのラジオ グループ関連のコンポーネントとディレクティブをエクスポートします。 |
 | [`IGX_SELECT_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/select/public_api.ts) | すべてのセレクト関連のコンポーネントとディレクティブをエクスポートします。 |
 | [`IGX_SIMPLE_COMBO_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/simple-combo/public_api.ts) | すべてのシンプルなコンボ関連のコンポーネントとディレクティブをエクスポートします。 |
 | [`IGX_SLIDER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/slider/public_api.ts) | すべてのスライダー関連のコンポーネントとディレクティブをエクスポートします。 |

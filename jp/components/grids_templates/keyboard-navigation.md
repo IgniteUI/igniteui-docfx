@@ -238,10 +238,12 @@ public customKeydown(args: IGridKeydownEventArgs) {
         return;
     }
     // 2. CUSTOM NAVIGATION ON ENTER KEY PRESS
-    grid.navigateTo(target.rowIndex + 1, target.visibleColumnIndex,
-        (obj) => { obj.target.nativeElement.focus(); });
+    this.grid1.navigateTo(target.row.index + 1, target.column.visibleIndex, (obj) => {
+            obj.target.activate();
+        });
 ```
-> 注: 実装の詳細は、サンプルコードを参照してください。
+>[!NOTE]
+> 実装の詳細は、サンプルコードを参照してください。
 
 実装したカスタム シナリオを試すには以下のデモを使用してください。
 - `Order` 列のセルをダブルクリックするか <kbd>F2</kbd> キーを押し、値を `7` に変更して <kbd>Tab</kbd> キーを押します。プロンプト メッセージが表示されます。
