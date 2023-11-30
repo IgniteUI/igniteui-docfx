@@ -202,10 +202,10 @@ You can dynamically change the value of the progressbar by using external contro
     ></igx-linear-bar>
 
     <div class="button-container">
-        <button igxButton="icon" (click)="decrementProgress()">
+        <button igxIconButton="flat" (click)="decrementProgress()">
             <igx-icon fontSet="material">remove</igx-icon>
         </button>
-        <button igxButton="icon" (click)="incrementProgress()">
+        <button igxIconButton="flat" (click)="incrementProgress()">
             <igx-icon fontSet="material">add</igx-icon>
         </button>
     </div>
