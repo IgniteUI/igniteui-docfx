@@ -25,8 +25,8 @@ Ignite UI for Angular Map コンポーネントの [`IgxShapeDataSource`]({envir
 
 | プロパティ | 型 | 概要   |
 |----------|------|---------------|
-| [`shapefileSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/undefined.igxshapedatasource.html#shapefilesource) | string |シェイプ ファイル(.shp) から読み込まれた 1 つの地理空間シェープにすべてのポイントが含まれます。|
-|[`databaseSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/undefined.igxshapedatasource.html#databasesource) | string |たとえば、シェープファイルで日本は、以下でポイント オブジェクト リストのリストとして表されます。|
+| [`shapefileSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/undefined.igxshapedatasource.html#shapefileSource) | string |シェイプ ファイル(.shp) から読み込まれた 1 つの地理空間シェープにすべてのポイントが含まれます。|
+|[`databaseSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/undefined.igxshapedatasource.html#databaseSource) | string |たとえば、シェープファイルで日本は、以下でポイント オブジェクト リストのリストとして表されます。|
 
 <!-- TODO add for WPF only: -->
 
