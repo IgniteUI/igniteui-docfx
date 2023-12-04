@@ -17,7 +17,7 @@ Ignite UI for Angular チャートでは、トレンドラインはトレンド�
 
 # Angular チャート トレンドラインの例
 
-次のサンプルは、[`QuinticFit`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtrendlinetype.html#QuinticFit) トレンドラインが最初に適用された、2013 年から 2017 年までの Microsoft の株価トレンドを示す [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html) を示しています。適用されるトレンドラインのタイプを変更できるドロップダウンがあり、可能なすべてのトレンドライン タイプがそのドロップダウン内に一覧表示されます。
+次のサンプルは、[`QuinticFit`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/0trendlinetype.html#QuinticFit) トレンドラインが最初に適用された、2013 年から 2017 年までの Microsoft の株価トレンドを示す [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html) を示しています。適用されるトレンドラインのタイプを変更できるドロップダウンがあり、可能なすべてのトレンドライン タイプがそのドロップダウン内に一覧表示されます。
 
 <code-view style="height: 500px" alt="Angular トレンドラインの例"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -30,7 +30,7 @@ Ignite UI for Angular チャートでは、トレンドラインはトレンド�
 
 # Angular チャート トレンドラインのダッシュ配列の例
 
-次のサンプルは、`TrendLineDashArray` プロパティを介して適用された [`QuarticFit`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtrendlinetype.html#QuarticFit) 破線トレンドラインを持つ [`IgxFinancialPriceSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialpriceseriescomponent.html) を示す [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) を示しています。
+次のサンプルは、`TrendLineDashArray` プロパティを介して適用された [`QuarticFit`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/0trendlinetype.html#QuarticFit) 破線トレンドラインを持つ [`IgxFinancialPriceSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialpriceseriescomponent.html) を示す [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) を示しています。
 
 <code-view style="height: 500px" alt="Angular トレンドラインの例"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
