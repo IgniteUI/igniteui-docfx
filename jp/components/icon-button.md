@@ -7,7 +7,7 @@ _language: ja
 
 # Angular Icon Button (アイコン ボタン) の概要
 
-Ignite UI for Angular Icon Button ディレクティブを任意のアイコン要素に適用して高機能なボタンを構成できます。  `igxIconButton` には、flat、outlined、およびデフォルトの contained 3 つのタイプがあります。 
+Ignite UI for Angular Icon Button ディレクティブを任意のアイコン要素に適用して高機能なボタンを構成できます。`igxIconButton` には、flat、outlined、およびデフォルトの contained 3 つのタイプがあります。
 
 ## Angular Icon Button の例
 
