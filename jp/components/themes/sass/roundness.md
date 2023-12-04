@@ -65,7 +65,7 @@ $toast-theme: (
 | **コンポーネント**          | **Min/Max 境界** | **デフォルトの境界** |
 |------------------------|--------------------|--------------------|
 | **Button(Flat)**       |  0 / 20px          | 4px                |
-| **Button(Raised)**     |  0 / 20px          | 4px                |
+| **Button(Contained)**  |  0 / 20px          | 4px                |
 | **button(Fab)**        |  12px / 28px       | 28px               |
 | **button(Icon)**       |  0 / 18px          | 18px               |
 | **Button-group**       |  0 / 20px          | 4px                |
