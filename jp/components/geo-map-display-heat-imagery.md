@@ -148,7 +148,7 @@ constructor() {
 *   `ShapeFileRecords`
 *   [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html)
 *   [`IgxTileGeneratorMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxtilegeneratormapimagery.html)
-*   [`tileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxtilegeneratormapimagery.html#tilegenerator)
+*   [`tileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxtilegeneratormapimagery.html#tileGenerator)
 *   `TileImagery`
 *   `UseBlurRadiusAdjustedForZoom`
 *   `UseLogarithmicScale`
