@@ -268,7 +268,7 @@ public getTransactionLog(): any[] {
 すべての変更が完了したら、[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) の [`commit`]({environment:angularApiUrl}/classes/igxtransactionservice.html#commit) メソッドを使用して、一度にすべてをコミットできます。指定されたデータにすべてのトランザクションを適用します。
 
 ```html
-<button igxButton="raised" (click)="onCommit()" [disabled]="this.getTransactionLog().length === 0">Commit Transactions</button>
+<button igxButton="contained" (click)="onCommit()" [disabled]="this.getTransactionLog().length === 0">Commit Transactions</button>
 ```
 
 ```typescript
@@ -291,7 +291,7 @@ public onCommit(): void {
 リストとのやり取りのどの時点でも、[`clear`]({environment:angularApiUrl}/classes/igxtransactionservice.html#clear) メソッドを使用して、トランザクション ログをクリアできます。
 
 ```html
-<button igxButton="raised" (click)="onClear()" [disabled]="this.getTransactionLog().length === 0">Clear Transactions</button>
+<button igxButton="contained" (click)="onClear()" [disabled]="this.getTransactionLog().length === 0">Clear Transactions</button>
 ```
 
 ```typescript
