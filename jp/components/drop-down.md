@@ -59,7 +59,7 @@ import { IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective 
 @Component({
     selector: 'app-home',
     template: `
-    <button igxButton="raised" 
+    <button igxButton="contained" 
         [igxToggleAction]="dropdown"
         [igxDropDownItemNavigation]="dropdown">
         Options
@@ -89,7 +89,7 @@ Ignite UI for Angular Drop Down モジュールまたはディレクティブを
 
 ```html
 <!-- dropdown.component.html -->
-<button igxButton="raised" 
+<button igxButton="contained" 
         [igxToggleAction]="dropdown"
         [igxDropDownItemNavigation]="dropdown">
         Options
@@ -122,7 +122,7 @@ export class MyDropDownComponent {
 
 ```html
 <!-- dropdown.component.html -->
-<button igxButton="raised" 
+<button igxButton="contained" 
         [igxToggleAction]="dropdown" 
         [igxDropDownItemNavigation]="dropdown">
         Options
@@ -160,7 +160,7 @@ export class MyDropDownComponent {
 
 ```html
 <!-- dropdown.component.html -->
-<button igxButton="raised" 
+<button igxButton="contained" 
         [igxToggleAction]="dropdown"
         [igxDropDownItemNavigation]="dropdown">
         Countries
@@ -292,7 +292,7 @@ export class MyCustomDropDownComponent {
                 [igxToggleOutlet]="outlet"
                 [overlaySettings]="overlaySettings"
                 [igxDropDownItemNavigation]="menu"
-                igxButton="icon">
+                igxIconButton="flat">
             <igx-icon fontSet="material">more_vert</igx-icon>
         </button>
         <igx-drop-down #menu (selectionChanging)="selectionHandler($event)">
@@ -425,7 +425,7 @@ public ngAfterViewInit(): void {
         [value]="dropDown.selectedItem?.value"
         (keydown.ArrowDown)="openDropDown()"/>
 
-    <igx-suffix igxButton="icon" igxRipple>
+    <igx-suffix igxIconButton="flat" igxRipple>
         <igx-icon>arrow_drop{{ dropDown.collapsed ? '_down' : '_up' }}</igx-icon>
     </igx-suffix>
 </igx-input-group>

@@ -56,7 +56,7 @@ import { IgxToggleDirective, IgxButtonDirective } from 'igniteui-angular';
 @Component({
     selector: 'app-home',
     template: `
-    <button class="toggle-button" igxButton="raised" (click)="toggleContent()">Toggle</button>
+    <button class="toggle-button" igxButton="contained" (click)="toggleContent()">Toggle</button>
     <div class="toggle-content" igxToggle>
         <section class="toggle-section">
             <img src="assets/images/toggle/nature.jpg" alt="Nature" />
@@ -100,7 +100,7 @@ export class Class {
 
 ```html
 <!--template.component.html-->
-<button class="toggle-button" igxButton="raised" (click)="toggleContent()">Toggle</button>
+<button class="toggle-button" igxButton="contained" (click)="toggleContent()">Toggle</button>
 <div class="toggle-content" igxToggle>
     <section class="toggle-section">
         <img src="assets/images/toggle/nature.jpg"/>
@@ -163,7 +163,7 @@ export class Class {
 
 ```html
 <!--template.component.html-->
-<button class="toggle-button"  igxButton="raised" [igxToggleAction]="toggleRef">Toggle</button>
+<button class="toggle-button"  igxButton="contained" [igxToggleAction]="toggleRef">Toggle</button>
 <div class="toggle-content" igxToggle #toggleRef="toggle">
     <section class="toggle-section">
         <h6>Automatic toggle actions</h6>
@@ -189,7 +189,7 @@ export class Class {
 
 ```html
 <!--template.component.html-->
-<button igxToggleAction="toggleId" class="toggle-button" igxButton="raised">Toggle</button>
+<button igxToggleAction="toggleId" class="toggle-button" igxButton="contained">Toggle</button>
 <div igxToggle id="toggleId" class="toggle-content">
     <section class="toggle-section">
         <h6>Toggled by the service provider</h6>

@@ -89,7 +89,7 @@ Ignite UI for Angular Text Highlight モジュールまたはディレクティ�
                 (keydown)="searchKeyDown($event)" />
         <igx-suffix>
             <div class="caseSensitiveButton">
-                <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="updateSearch()"
+                <button igxIconButton="flat" igxRipple igxRippleCentered="true" (click)="updateSearch()"
                         [igxButtonBackground]="caseSensitive? 'rgb(73, 180, 254)' : 'transparent'">
                     <igx-icon class="caseSensitiveIcon" fontSet="material">text_fields</igx-icon>
                 </button>
@@ -106,10 +106,10 @@ Ignite UI for Angular Text Highlight モジュールまたはディレクティ�
             </ng-container>
            
             <div class="searchButtons">
-                <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="findPrev()" [disabled]="!canMoveHighlight">
+                <button igxIconButton="flat" igxRipple igxRippleCentered="true" (click)="findPrev()" [disabled]="!canMoveHighlight">
                     <igx-icon fontSet="material">navigate_before</igx-icon>
                 </button>
-                <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="findNext()" [disabled]="!canMoveHighlight">
+                <button igxIconButton="flat" igxRipple igxRippleCentered="true" (click)="findNext()" [disabled]="!canMoveHighlight">
                     <igx-icon fontSet="material">navigate_next</igx-icon>
                 </button>
             </div>

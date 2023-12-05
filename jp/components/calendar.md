@@ -250,7 +250,7 @@ export class CalendarSample7Component {
     leftButtonLabel="OK"
     (leftButtonSelect)="alert.close()">
 </igx-dialog>
-<button igxButton="raised" (click)="submitPTOdays($event)">Submit Request</button>
+<button igxButton="contained" (click)="submitPTOdays($event)">Submit Request</button>
 ```
 
 以下のデモでは、休暇要求オプションのカレンダーを示します。

@@ -22,7 +22,7 @@ Ignite UI for Angular のマテリアル テーマのさまざまなコンポー
 | ----------------------------------------------- | ----------------------- | ------------------ |
 | banner, button, toast                           | 0                       | --ig-elevation-0  |
 | badge, carousel buttons, search input           | 1                       | --ig-elevation-1  |
-| button group, raised button, card, grid, switch | 2                       | --ig-elevation-2  |
+| button group, contained button, card, grid, switch | 2                       | --ig-elevation-2  |
 | navbar, snackbar                                | 4                       | --ig-elevation-4  |
 | floating action button,                         | 6                       | --ig-elevation-6  |
 | bottom navigation, ghost chip, dropdown         | 8                       | --ig-elevation-8  |
@@ -44,7 +44,7 @@ Ignite UI for Angular のマテリアル テーマのさまざまなコンポー
 既存のコンポーネント テーマのエレベーションを変更することも同様に機能します。
 
 ```css
-[igxButton="raised"] {
+[igxButton="contained"] {
   --resting-shadow: var(--ig-elevation-4);
   --hover-shadow: var(--ig-elevation-12);
   --focus-shadow: var(--ig-elevation-12);
@@ -73,13 +73,13 @@ Ignite UI for Angular のマテリアル テーマのさまざまなコンポー
 特定のスコープに対してのみ、グローバルに設定されたエレベーションをシャドーイングすることができます。ボタン コンポーネントが静止状態にエレベーション レベル 2 を使用することはすでに見た通りです。レベル 2 は、カードおよびグリッド コンポーネントでも使用されます。したがって、3 つすべてのシャドウを変更するには、次のことを行う必要があります:
 
 ```css
-[igxButton="raised"],
+[igxButton="contained"],
 igx-grid,
 igx-card {
     --ig-elevation-2: 0 3px 9px 0 rgba(0, 0, 0, .24);
 }
 ```
-これにより、エンボス加工されたボタンとカードの `--resting-shadow`、およびグリッドの `--grid-shadow` が、`--ig-elevation-2` に割り当てられた値に設定されます。
+これにより、Contained ボタンとカードの `--resting-shadow`、およびグリッドの `--grid-shadow` が、`--ig-elevation-2` に割り当てられた値に設定されます。
 
 エレベーションは、Sass を使用して、より強力な方法で作成および使用することもできます。詳細については、以下の関連トピックを参照してください。
 

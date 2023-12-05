@@ -131,10 +131,10 @@ Ignite UI for Angular Progress Bar モジュールまたはディレクティブ
         class="custom-size">
     </igx-circular-bar>
     <div class="button-container">
-        <button igxButton="icon" (click)="decrementProgress()">
+        <button igxIconButton="flat" (click)="decrementProgress()">
             <igx-icon fontSet="material">remove</igx-icon>
         </button>
-        <button igxButton="icon" (click)="incrementProgress()">
+        <button igxIconButton="flat" (click)="incrementProgress()">
             <igx-icon fontSet="material">add</igx-icon>
         </button>
     </div>
@@ -221,10 +221,10 @@ $custom-theme: progress-circular-theme(
   </igx-circular-bar>
 
   <div class="button-container">
-      <button igxButton="icon" (click)="removeProgress()">
+      <button igxIconButton="flat" (click)="removeProgress()">
           <igx-icon fontSet="material">remove</igx-icon>
       </button>
-      <button igxButton="icon" (click)="addProgress()">
+      <button igxIconButton="flat" (click)="addProgress()">
           <igx-icon fontSet="material">add</igx-icon>
       </button>
   </div>
