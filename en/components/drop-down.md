@@ -58,7 +58,7 @@ import { IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective 
 @Component({
     selector: 'app-home',
     template: `
-    <button igxButton="raised" 
+    <button igxButton="contained" 
         [igxToggleAction]="dropdown"
         [igxDropDownItemNavigation]="dropdown">
         Options
@@ -88,7 +88,7 @@ Let's create a simple drop-down that provides several option items to choose fro
 
 ```html
 <!-- dropdown.component.html -->
-<button igxButton="raised" 
+<button igxButton="contained" 
         [igxToggleAction]="dropdown"
         [igxDropDownItemNavigation]="dropdown">
         Options
@@ -121,7 +121,7 @@ Let's say we want to have a predefined selected item. One way to do this, is by 
 
 ```html
 <!-- dropdown.component.html -->
-<button igxButton="raised" 
+<button igxButton="contained" 
         [igxToggleAction]="dropdown" 
         [igxDropDownItemNavigation]="dropdown">
         Options
@@ -159,7 +159,7 @@ To provide a more useful visual information, use the [isHeader]({environment:ang
 
 ```html
 <!-- dropdown.component.html -->
-<button igxButton="raised" 
+<button igxButton="contained" 
         [igxToggleAction]="dropdown"
         [igxDropDownItemNavigation]="dropdown">
         Countries
@@ -291,7 +291,7 @@ You can configure the drop-down to behave as a menu. To do this, set the [ISelec
                 [igxToggleOutlet]="outlet"
                 [overlaySettings]="overlaySettings"
                 [igxDropDownItemNavigation]="menu"
-                igxButton="icon">
+                igxIconButton="flat">
             <igx-icon fontSet="material">more_vert</igx-icon>
         </button>
         <igx-drop-down #menu (selectionChanging)="selectionHandler($event)">
@@ -402,16 +402,12 @@ public ngAfterViewInit(): void {
 }
 ```
 
-<!--  Temporary disabled till samples deploy
-
 The result from the above configurations could be seen in the below sample.
 
 <code-view style="height:400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-multi-level-menu">
 </code-view>
-
--->
 
 ### Navigation directive
 Use the [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) directive to enable keyboard navigation for the `igxDropDown` component. In order to allow the directive to handle all triggered events, it should be applied to the active (focused) element or a parent container. By default, a drop-down or its items don't take focus, so the directive can be placed on a `button` or `input` that will control the drop-down. The navigation directive value should target a component that is an instance or a descendant of the [IgxDropDownBaseDirective]({environment:angularApiUrl}/classes/igxdropdownbasedirective.html) class.
@@ -428,7 +424,7 @@ The following sample demonstrates an input that opens and closes the `igxDropDow
         [value]="dropDown.selectedItem?.value"
         (keydown.ArrowDown)="openDropDown()"/>
 
-    <igx-suffix igxButton="icon" igxRipple>
+    <igx-suffix igxIconButton="flat" igxRipple>
         <igx-icon>arrow_drop{{ dropDown.collapsed ? '_down' : '_up' }}</igx-icon>
     </igx-suffix>
 </igx-input-group>

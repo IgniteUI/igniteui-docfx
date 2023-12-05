@@ -43,10 +43,10 @@
       new: false
     - name: Customize and Optimize Themes
       href: general/how-to/how-to-customize-theme.md
-      new: true
+      new: false
     - name: Use Standalone Components
       href: general/how-to/how-to-use-standalone-components.md
-      preview: true
+      updated: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   sortable: false
@@ -241,6 +241,7 @@
     - name: Size (Display Density)
       href: grid/display-density.md
       new: false
+      updated: true
     - name: Conditional Styling
       href: grid/conditional-cell-styling.md
       new: false
@@ -946,6 +947,9 @@
   href: button.md
 - name: Button Group
   href: button-group.md
+- name: Icon Button
+  href: icon-button.md
+  new: true
 - name: Checkbox
   href: checkbox.md
 - name: Switch

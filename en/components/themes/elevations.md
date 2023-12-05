@@ -23,7 +23,7 @@ Here's a list of resting elevations as used in various components in Ignite UI f
 | ----------------------------------------------- | ----------------------- | ------------------ |
 | banner, button, toast                           | 0                       | --ig-elevation-0  |
 | badge, carousel buttons, search input           | 1                       | --ig-elevation-1  |
-| button group, raised button, card, grid, switch | 2                       | --ig-elevation-2  |
+| button group, contained button, card, grid, switch | 2                       | --ig-elevation-2  |
 | navbar, snackbar                                | 4                       | --ig-elevation-4  |
 | floating action button,                         | 6                       | --ig-elevation-6  |
 | bottom navigation, ghost chip, dropdown         | 8                       | --ig-elevation-8  |
@@ -45,7 +45,7 @@ To begin using elevations in your own components all you need is to reference th
 Changing the elevation in an existing component theme works similarly.
 
 ```css
-[igxButton="raised"] {
+[igxButton="contained"] {
   --resting-shadow: var(--ig-elevation-4);
   --hover-shadow: var(--ig-elevation-12);
   --focus-shadow: var(--ig-elevation-12);
@@ -74,13 +74,13 @@ Now, all components that use elevation levels 1 and 2 will have their shadows up
 You can shadow the globally set elevations for a specific scope only. We already saw that the button component uses elevation level 2 for its resting state. Level 2 is also used by the card and grid components. So to change the shadows for all three, all you need to do is:
 
 ```css
-[igxButton="raised"],
+[igxButton="contained"],
 igx-grid,
 igx-card {
     --ig-elevation-2: 0 3px 9px 0 rgba(0, 0, 0, .24);
 }
 ```
-This will set the `--resting-shadow` in the raised button and card, and the `--grid-shadow` in the grid, to the value assigned to `--ig-elevation-2`;
+This will set the `--resting-shadow` in the contained button and card, and the `--grid-shadow` in the grid, to the value assigned to `--ig-elevation-2`;
 
 Elevations can be created and consumed in a more powerful way using Sass as well. Check out the related topics below to learn more.
 

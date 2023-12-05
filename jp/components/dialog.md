@@ -56,7 +56,7 @@ import { IGX_DIALOG_DIRECTIVES, IgxButtonDirective, IgxRippleDirective } from 'i
 @Component({
     selector: 'app-home',
     template: `
-    <button igxButton="raised" igxRipple="white" (click)="alert.open()">Show Alert Dialog</button>
+    <button igxButton="contained" igxRipple="white" (click)="alert.open()">Show Alert Dialog</button>
 
     <igx-dialog #alert
         title="Notification"
@@ -85,7 +85,7 @@ Ignite UI for Angular Dialog Window モジュールまたはディレクティ�
 
 ```html
 <!--email.component.html-->
-<button igxButton="raised" igxRipple="white" (click)="alert.open()">Show Alert Dialog</button>
+<button igxButton="contained" igxRipple="white" (click)="alert.open()">Show Alert Dialog</button>
 
 <igx-dialog #alert
     title="Notification"
@@ -105,7 +105,7 @@ Ignite UI for Angular Dialog Window モジュールまたはディレクティ�
 
 ```html
 <!--file-manager.component.html-->
-<button igxButton="raised" igxRipple="white" (click)="dialog.open()">Show Confirmation Dialog</button>
+<button igxButton="contained" igxRipple="white" (click)="dialog.open()">Show Confirmation Dialog</button>
 
 <igx-dialog #dialog title="Confirmation"
     leftButtonLabel="Cancel"
@@ -131,7 +131,7 @@ Ignite UI for Angular Dialog Window モジュールまたはディレクティ�
 
 ```html
 <!--sign-in.component.html-->
-<button igxButton="raised" igxRipple="white" (click)="alert.open()">Show Custom Dialog</button>
+<button igxButton="contained" igxRipple="white" (click)="alert.open()">Show Custom Dialog</button>
 
 <igx-dialog #form [closeOnOutsideSelect]="true">
     <igx-dialog-title>

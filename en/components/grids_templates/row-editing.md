@@ -116,7 +116,7 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
     [hasSummary]="true"></igx-column>
     <igx-column width="10%">
         <ng-template igxCell let-cell="cell">
-            <button igxButton="icon" (click)="removeRow(cell.cellID.rowIndex)">
+            <button igxIconButton="flat" (click)="removeRow(cell.cellID.rowIndex)">
                 <igx-icon>delete</igx-icon>
             </button>
         </ng-template>
@@ -381,10 +381,10 @@ To further customize our Row Editing overlay, we can pass a custom template so w
 <@@igSelector>
     <ng-template igxRowEditActions let-endRowEdit>
         <div class="custom-buttons">
-            <button igxButton="icon" class="custom-button" igxRowEditTabStop (click)="endRowEdit(false)">
+            <button igxIconButton="flat" class="custom-button" igxRowEditTabStop (click)="endRowEdit(false)">
                 <igx-icon>clear</igx-icon>
             </button>
-            <button igxButton="icon" class="custom-button" igxRowEditTabStop (click)="endRowEdit(true)">
+            <button igxIconButton="flat" class="custom-button" igxRowEditTabStop (click)="endRowEdit(true)">
                 <igx-icon>check</igx-icon>
             </button>
         </div>

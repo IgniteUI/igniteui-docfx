@@ -47,14 +47,14 @@ export class AppModule {
 }
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxRadioGroupDirective` and `IgxRadioComponent` as standalone dependencies.
+Alternatively, as of `16.0.0` you can import the `IgxRadioGroupDirective` and `IgxRadioComponent` as standalone dependencies, or use the [`IGX_RADIO_GROUP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/directives/radio/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
 import { FormsModule } from '@angular/forms';
-import { IgxRadioComponent, IgxRadioGroupDirective } from 'igniteui-angular';
-// import { IgxRadioComponent, IgxRadioGroupDirective } from '@infragistics/igniteui-angular'; for licensed package
+import { IGX_RADIO_GROUP_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_RADIO_GROUP_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
     selector: 'app-home',
@@ -68,7 +68,8 @@ import { IgxRadioComponent, IgxRadioGroupDirective } from 'igniteui-angular';
     `,
     styleUrls: ['home.component.scss'],
     standalone: true,
-    imports: [IgxRadioComponent, IgxRadioGroupDirective, FormsModule]
+    imports: [IGX_RADIO_GROUP_DIRECTIVES, FormsModule]
+    /* or imports: [IgxRadioComponent, IgxRadioGroupDirective, FormsModule] */
 })
 export class HomeComponent {
     public selected: any;

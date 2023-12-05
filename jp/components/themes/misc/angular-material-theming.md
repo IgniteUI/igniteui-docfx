@@ -83,7 +83,7 @@ import { IgxAvatarModule } from 'igniteui-angular';
 
 <img src="../../../images/igniteui-expansion.png" width="100%">
 
-最後に、右上隅に Ignite UI for Angular [`アイコン ボタン`]({environment:angularApiUrl}/classes/igxbuttondirective.html)を挿入し、アプリ全体のテーマを変更します。  
+最後に、右上隅に Ignite UI for Angular [`アイコン ボタン`]({environment:angularApiUrl}/classes/igxiconbuttondirective.html)を挿入し、アプリ全体のテーマを変更します。  
 
 <img src="../../../images/material-dark.png" width="100%">
 

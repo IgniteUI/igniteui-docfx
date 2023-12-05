@@ -53,6 +53,11 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 
 ## From 16.1.x to 17.0.x
 
+### General
+- In 17.0 Angular have removed the `@nguniversal/*` packages. If the project uses these packages a standard `ng update` call will cause an error in the `igniteui-angular` migrations due to improperly modified `package-lock.json` - more details can be found [here](https://github.com/IgniteUI/igniteui-angular/issues/13668). To update to `17.0.x` one of the following additional steps needs to be taken:
+    - Delete the `package-lock.json` file before running `ng update`
+    - Run `npm dedupe --legacy-peer-deps` before running `ng update igniteui-angular`
+
 **Breaking change**
 - In `IgxCombo`'s `selectionChanging` event arguments type `IComboSelectionChangingEventArgs` has these changes:
     - properties `newSelection` and `oldSelection` have been renamed to `newValue` and `oldValue` respectively to better reflect their function. Just like Combo's `value`, those will emit either the specified property values or full data items depending on whether `valueKey` is set or not. Automatic migrations are available and will be applied on `ng update`.

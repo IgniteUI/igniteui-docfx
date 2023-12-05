@@ -197,7 +197,7 @@ Angular カスタム カルーセル インジケーターを追加するには�
                     </igx-input-group>
                 </form>
                 <div class="btn">
-                    <button igxButton="raised" type="submit" (click)="form.reset()">Sign In</button>
+                    <button igxButton="contained" type="submit" (click)="form.reset()">Sign In</button>
                 </div>
             </div>
         </igx-slide>
@@ -215,7 +215,7 @@ Angular カスタム カルーセル インジケーターを追加するには�
                     </igx-input-group>
                 </form>
                 <div class="btn">
-                    <button igxButton="raised" type="submit" (click)="form2.reset()">Search</button>
+                    <button igxButton="contained" type="submit" (click)="form2.reset()">Search</button>
                 </div>
             </div>
         </igx-slide>

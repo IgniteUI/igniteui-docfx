@@ -58,7 +58,7 @@ import { IgxRippleDirective, IgxButtonDirective } from 'igniteui-angular';
 
 @Component({
     selector: 'app-home',
-    template: '<button igxButton="raised" igxRipple>Click Me</button>',
+    template: '<button igxButton="contained" igxRipple>Click Me</button>',
     styleUrls: ['home.component.scss'],
     standalone: true,
     imports: [IgxRippleDirective, IgxButtonDirective]
@@ -80,7 +80,7 @@ for other browsers.
 Use the `igxRipple` directive to add a ripple effect to the specified element:
 
 ```html
-<button igxButton="raised" igxRipple>Click Me</button>
+<button igxButton="contained" igxRipple>Click Me</button>
 ```
 
 ## Examples 
@@ -90,7 +90,7 @@ Use the `igxRipple` directive to add a ripple effect to the specified element:
 You can easily change the default ripple color using the `igxRipple`:
 
 ```html
-<button igxButton="raised" igxRipple="white">White</button>
+<button igxButton="contained" igxRipple="white">White</button>
 ```
 
 <code-view style="height: 100px"
@@ -102,7 +102,7 @@ You can easily change the default ripple color using the `igxRipple`:
 By default, the ripple effect starts from the position of the click event. You can change this behavior using the [`igxRippleCentered`]({environment:angularApiUrl}/classes/igxrippledirective.html#centered) property and setting the center of the element as origin.
 
 ```html
-<button igxButton="raised" igxRipple="white" [igxRippleCentered]="true">Centered</button>
+<button igxButton="contained" igxRipple="white" [igxRippleCentered]="true">Centered</button>
 ```
 
 <code-view style="height: 100px"
@@ -114,7 +114,7 @@ By default, the ripple effect starts from the position of the click event. You c
 We can use the [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippleDuration) property to change the duration of the ripple animation, which, by default, is set to 600 milliseconds.
 
 ```html
-<button igxButton="raised" igxRipple [igxRippleDuration]="2000">Click Me</button>
+<button igxButton="contained" igxRipple [igxRippleDuration]="2000">Click Me</button>
 ```
 
 <code-view style="height: 100px"
@@ -128,7 +128,7 @@ Use the [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirecti
 ```html
 <div class="parent" igxRipple="white" igxRippleTarget=".child" [igxRippleCentered]="true">
     ...
-    <button class="sample-button child" igxButton="raised">Read More</button>
+    <button class="sample-button child" igxButton="contained">Read More</button>
 </div>
 ```
 Notice that no matter whether you click on the parent or the child element, the ripple effect will only appear on the button.

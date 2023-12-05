@@ -92,21 +92,21 @@ In order to add a menu button, we will show the action button using the `actionB
 
 ### Add Icon Buttons
 
-We can make our app a little more functional by adding options for searching, favorites and more. To do that let's grab the [**IgxButton**](button.md) and [**IgxIcon**](icon.md) modules and import them in our **app.module.ts** file.
+We can make our app a little more functional by adding options for searching, favorites and more. To do that let's grab the [**IgxIconButton**](icon-button.md) and [**IgxIcon**](icon.md) modules and import them in our **app.module.ts** file.
 ```typescript
 // app.module.ts
 
 ...
 import {
     IgxNavbarModule,
-    IgxButtonModule,
+    IgxIconButtonDirective,
     IgxIconModule
 } from 'igniteui-angular';
 // import { IgxNavbarModule, IgxButtonModule, IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
-    imports: [..., IgxButtonModule, IgxIconModule],
+    imports: [..., IgxIconButtonDirective, IgxIconModule],
 })
 export class AppModule {}
 ```
@@ -117,13 +117,13 @@ Next, we need to update our template with an icon button for each of the options
 <!--navbar.component.html-->
 
  <igx-navbar title="Sample App">
-    <button igxButton="icon">
+    <button igxIconButton="flat">
         <igx-icon>search</igx-icon>
     </button>
-    <button igxButton="icon">
+    <button igxIconButton="flat">
         <igx-icon>favorite</igx-icon>
     </button>
-    <button igxButton="icon">
+    <button igxIconButton="flat">
         <igx-icon>more_vert</igx-icon>
     </button>
 </igx-navbar>
@@ -155,18 +155,18 @@ What if we want to use a custom template for our app navigation on the left-most
 
  <igx-navbar title="Sample App">
     <igx-navbar-action>
-        <button igxButton="icon">
+        <button igxIconButton="flat">
             <igx-icon family="fa" name="fa-home"></igx-icon>
         </button>
     </igx-navbar-action>
         
-    <button igxButton="icon">
+    <button igxIconButton="flat">
         <igx-icon>search</igx-icon>
     </button>
-    <button igxButton="icon">
+    <button igxIconButton="flat">
         <igx-icon>favorite</igx-icon>
     </button>
-    <button igxButton="icon">
+    <button igxIconButton="flat">
         <igx-icon>more_vert</igx-icon>
     </button>
 </igx-navbar>
@@ -236,7 +236,7 @@ If we want to provide a custom content for a navbar's title, we can achieve this
 <div class="sample-column">
     <igx-navbar>
         <igx-navbar-action>
-            <button igxButton="icon">
+            <button igxIconButton="flat">
                 <igx-icon>menu</igx-icon>
             </button>
         </igx-navbar-action>
@@ -248,13 +248,13 @@ If we want to provide a custom content for a navbar's title, we can achieve this
             </a>
         </div>
 
-        <button igxButton="icon">
+        <button igxIconButton="flat">
             <igx-icon>search</igx-icon>
         </button>
-        <button igxButton="icon">
+        <button igxIconButton="flat">
             <igx-icon>favorite</igx-icon>
         </button>
-        <button igxButton="icon">
+        <button igxIconButton="flat">
             <igx-icon>more_vert</igx-icon>
         </button>
     </igx-navbar>

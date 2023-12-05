@@ -267,7 +267,7 @@ We will also add a representation of the current state of our list. It will show
 Once we are done with all our changes, we may commit them all at once using the [`commit`]({environment:angularApiUrl}/classes/igxtransactionservice.html#commit) method of the [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html). It applies all transactions over the provided data:
 
 ```html
-<button igxButton="raised" (click)="onCommit()" [disabled]="this.getTransactionLog().length === 0">Commit Transactions</button>
+<button igxButton="contained" (click)="onCommit()" [disabled]="this.getTransactionLog().length === 0">Commit Transactions</button>
 ```
 
 ```typescript
@@ -290,7 +290,7 @@ public onCommit(): void {
 At any point of our interaction with the list, we may clear the Transaction log, using the [`clear`]({environment:angularApiUrl}/classes/igxtransactionservice.html#clear) method.
 
 ```html
-<button igxButton="raised" (click)="onClear()" [disabled]="this.getTransactionLog().length === 0">Clear Transactions</button>
+<button igxButton="contained" (click)="onClear()" [disabled]="this.getTransactionLog().length === 0">Clear Transactions</button>
 ```
 
 ```typescript
