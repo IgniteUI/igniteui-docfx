@@ -177,7 +177,35 @@ When a node should render a link, the `IgxTreeNodeLink` directive should be adde
 </igx-tree>
 ```
 ### Node Interactions
-IgxTree provides the following API methods for node interactions:
+[IgxTreeNodesComponent]({environment:angularApiUrl}/classes/igxtreenodecomponent.html)s could be expanded or collapsed:
+- by clicking on the node expand indicator *(default behavior)*.
+- by clicking on the node if the `igx-tree` [toggleNodeOnClick]({environment:angularApiUrl}/classes/igxtreecomponent.html#toggleNodeOnClick) property is set to `true`.
+
+```html
+<igx-tree [toggleNodeOnClick]="true">
+	<igx-tree-node *ngFor="let node of data" [data]="node">
+		{{ node.text }}
+		<igx-tree-node *ngFor="let child of node.children" [data]="child">
+                {{ child.text }}
+		</igx-tree-node>
+	</igx-tree-node>
+</igx-tree>
+```
+
+By default multiple nodes could be expanded at the same time. In order to change this behavior and allow expanding only single branch at a time, the [singleBranchExpand]({environment:angularApiUrl}/classes/igxtreecomponent.html#singleBranchExpand) property could be enabled. This way when a node is expanded, all of the others already expanded branches in the same level will be collapsed.
+
+```html
+<igx-tree [singleBranchExpand]="true">
+	<igx-tree-node *ngFor="let node of data" [data]="node">
+		{{ node.text }}
+		<igx-tree-node *ngFor="let child of node.children" [data]="child">
+                {{ child.text }}
+		</igx-tree-node>
+	</igx-tree-node>
+</igx-tree>
+```
+
+In addition, the IgxTree provides the following API methods for node interactions:
 - [**expand**]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#expand) - expands the node with animation.
 - [**collapse**]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#collapse) - collapses the node with animation.
 - [**toggle**]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#toggle) - toggles node expansion state with animation.
