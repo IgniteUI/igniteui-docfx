@@ -81,7 +81,7 @@ The Column Chart is able to render multiple columns per category for comparison 
 
 The Angular Column Chart has many options for styling and modification of the visual appearance.
 
-You can create this type of chart in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) control by binding your data to a [`IgxColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcolumnseriescomponent.html), as shown in the example below:
+You can create this type of chart in the `XamCategoryChart` control by binding your data, as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Column Chart Styling"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
