@@ -230,7 +230,7 @@ Gauge needles are visual elements used to signify a gauge set value. Needles are
 
 The supported needle shapes and caps are set using the `needleShape` and `needlePivotShape` properties.
 
-You can enable an interactive mode of the gauge (using [`isNeedleDraggingEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#isneedledraggingenabled) property) and the end-user will be able to change value by dragging the needle between values of `minimumValue` and `maximumValue` properties.
+You can enable an interactive mode of the gauge (using [`isNeedleDraggingEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#isNeedleDraggingEnabled) property) and the end-user will be able to change value by dragging the needle between values of `minimumValue` and `maximumValue` properties.
 
 ```html
 <igx-radial-gauge
