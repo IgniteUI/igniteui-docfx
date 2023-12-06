@@ -25,8 +25,8 @@ The following table explains properties of the `ShapeDataSource` class for loadi
 
 | Property | Type | Description   |
 |----------|------|---------------|
-| [`shapefileSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/undefined.igxshapedatasource.html#shapefilesource) | string |Specifies the Uri to a shape file (.shp) that contains geo-spatial data items.|
-|[`databaseSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/undefined.igxshapedatasource.html#databasesource) | string |Specifies the Uri to a shape database file (.dbf) that contains a data table for geo-spatial data items.|
+| [`shapefileSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/undefined.igxshapedatasource.html#shapefileSource) | string |Specifies the Uri to a shape file (.shp) that contains geo-spatial data items.|
+|[`databaseSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/undefined.igxshapedatasource.html#databaseSource) | string |Specifies the Uri to a shape database file (.dbf) that contains a data table for geo-spatial data items.|
 
 <!-- TODO add for WPF only: -->
 
