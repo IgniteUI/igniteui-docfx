@@ -177,7 +177,7 @@ When a node should render a link, the `IgxTreeNodeLink` directive should be adde
 </igx-tree>
 ```
 ### Node Interactions
-[IgxTreeNodesComponent]({environment:angularApiUrl}/classes/igxtreenodecomponent.html)s could be expanded or collapsed:
+[IgxTreeNodeComponent]({environment:angularApiUrl}/classes/igxtreenodecomponent.html) could be expanded or collapsed:
 - by clicking on the node expand indicator *(default behavior)*.
 - by clicking on the node if the `igx-tree` [toggleNodeOnClick]({environment:angularApiUrl}/classes/igxtreecomponent.html#toggleNodeOnClick) property is set to `true`.
 
@@ -192,7 +192,7 @@ When a node should render a link, the `IgxTreeNodeLink` directive should be adde
 </igx-tree>
 ```
 
-By default multiple nodes could be expanded at the same time. In order to change this behavior and allow expanding only single branch at a time, the [singleBranchExpand]({environment:angularApiUrl}/classes/igxtreecomponent.html#singleBranchExpand) property could be enabled. This way when a node is expanded, all of the others already expanded branches in the same level will be collapsed.
+By default, multiple nodes could be expanded at the same time. In order to change this behavior and allow expanding only single branch at a time, the [singleBranchExpand]({environment:angularApiUrl}/classes/igxtreecomponent.html#singleBranchExpand) property could be enabled. This way when a node is expanded, all of the others already expanded branches in the same level will be collapsed.
 
 ```html
 <igx-tree [singleBranchExpand]="true">
