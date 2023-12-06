@@ -145,6 +145,11 @@ Angular ツールバーには、`Target` プロパティが含まれています
 *   `ShowCrosshairs`: チャートの [`crosshairsDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#crosshairsDisplayMode) プロパティを介してマウスオーバー十字線の注釈を切り替える [`IgxToolActionCheckboxComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncheckboxcomponent.html)。
 *   `ShowGridlines`: X-Axis に `MajorStroke` を適用することで追加のグリッド線を切り替える [`IgxToolActionCheckboxComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncheckboxcomponent.html)。
 
+画像に保存アクション
+
+*   `CopyAsImage`: チャートをクリップボードにコピーするオプションを公開する [`IgxToolActionLabelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionlabelcomponent.html)。
+*   `CopyHeader`: サブ セクションのヘッダー。
+
 ### 垂直方向
 
 デフォルトでは、Angular ツールバーは水平に表示されますが、[`orientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html#orientation) プロパティを設定することで垂直に表示することもできます。
@@ -153,8 +158,12 @@ Angular ツールバーには、`Target` プロパティが含まれています
 <igx-toolbar orientation="Vertical" />
 ```
 
-<!-- 次の例は、Angular ツールバーの垂直方向を示しています。
-`sample="/charts/toolbar/layout-in-vertical-orientation", height="600", alt="Angular 垂直方向"` -->
+次の例は、Angular ツールバーの垂直方向を示しています。 <code-view style="height: 600px" alt="Angular 垂直方向"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/toolbar/layout-in-vertical-orientation"
+                                                 github-src="charts/toolbar/layout-in-vertical-orientation">
+</code-view>
+
 
 <!-- ## スタイル設定 / テーマ設定
 
