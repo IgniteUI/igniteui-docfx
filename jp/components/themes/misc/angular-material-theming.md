@@ -22,7 +22,7 @@ Ignite UI for Angular は、マテリアル ベースの UI ウィジェット�
 
 ## Angular Material のテーマの例
 
-<code-view style="height: 1050px" 
+<code-view style="height: 1100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/theming/angular-sample" >
 </code-view>
@@ -71,7 +71,7 @@ import { IgxAvatarModule } from 'igniteui-angular';
 
 ## Ignite UI と Angular Material コンポーネント
 
-デモ サンプルの実行方法を見てみましょう。Ignite UI コンポーネントと Angular Material コンポーネントを組み合わせたもので、1 つのアプリケーションにうまく収まります。この例のナビゲーションは、[`igx-buttons`]({environment:angularApiUrl}/classes/igxbuttondirective.html) および [`igx-avatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) とともに material [`mat-toolbar`](https://material.angular.io/components/toolbar/overview) を使用して作成されます。[Campaigns] ボタンの下の[`メニュー`](https://material.angular.io/components/menu/overview)も Angular Material ライブラリから取得されます。ナビゲーションの下で、[`igx-card`]({environment:angularApiUrl}/classes/igxcardcomponent.html) コンポーネントを使用して統計を表示します。カード内に複数の項目を配置しました - [`igx-avatars`]({environment:angularApiUrl}/classes/igxavatarcomponent.html)、[`igx-icons`]({environment:angularApiUrl}/classes/igxiconcomponent.html)、および material [`buttons`](https://material.angular.io/components/button/overview)。
+デモ サンプルの実行方法を見てみましょう。Ignite UI コンポーネントと Angular Material コンポーネントを組み合わせたもので、1 つのアプリケーションにうまく収まります。この例のナビゲーションは、[`igx-buttons`]({environment:angularApiUrl}/classes/igxbuttondirective.html) および [`igx-avatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) とともに material [`mat-toolbar`](https://material.angular.io/components/toolbar/overview) を使用して作成されます。[Campaigns] ボタンの下の [`menu`](https://material.angular.io/components/menu/overview) も Angular Material ライブラリから取得されます。ナビゲーションの下で、[`igx-card`]({environment:angularApiUrl}/classes/igxcardcomponent.html) コンポーネントを使用して統計を表示します。カード内に複数の項目を配置しました - [`igx-avatars`]({environment:angularApiUrl}/classes/igxavatarcomponent.html)、[`igx-icons`]({environment:angularApiUrl}/classes/igxiconcomponent.html)、および material [`buttons`](https://material.angular.io/components/button/overview)。
 
 <img src="../../../images/material-nav.png" width="100%">
 
@@ -81,21 +81,21 @@ import { IgxAvatarModule } from 'igniteui-angular';
 
 次に、クレジット カードに関する情報を表示する [`igx-expansion-panel`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) を追加しました。その内容には、[`mat-sliders`](https://material.angular.io/components/slider/overview)、[`igx-divider`]({environment:angularApiUrl}/classes/igxdividerdirective.html)、[`mat-form-fields`](https://material.angular.io/components/form-field/overview) を含む [`mat-stepper`](https://material.angular.io/components/stepper/overview) があります。
 
-<img src="../../../images/igniteui-expansion.png" width="100%">
+<img src="../../../images/igx-expansion-panel.png" width="100%">
 
-最後に、右上隅に Ignite UI for Angular [`アイコン ボタン`]({environment:angularApiUrl}/classes/igxbuttondirective.html)を挿入し、アプリ全体のテーマを変更します。  
+最後に、右上隅に Ignite UI for Angular [`icon button`]({environment:angularApiUrl}/classes/igxbuttondirective.html) を挿入し、アプリ全体のテーマを変更します。  
 
 <img src="../../../images/material-dark.png" width="100%">
 
 ## Angular コンポーネントのスタイル設定 
 
-Ignite UI テーマ エンジンを使用してコンポーネントのスタイル設定を開始するには、グローバル テーマのベース ファイルとなる scss ファイルを作成します。このファイルを `_variables.scss` と呼びます。次に、Ignite UI の `index` ファイルと Angular Material の `theming` ファイルをインポートする必要があります。
+Ignite UI テーマ エンジンを使用してコンポーネントのスタイル設定を開始するには、グローバル テーマのベース ファイルとなる scss ファイルを作成します。このファイルを `_variables.scss` と呼びます。次に、Ignite UI および Angular Material の `index` ファイルをインポートする必要があります。
 
 ```scss
 // _variables.scss
 ```scss
 @use "igniteui-angular/theming" as *;
-@use "@angular/material/theming" as *;
+@use "@angular/material" as mat;
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
@@ -140,7 +140,7 @@ $mat-purple: (
 
 ### テーマ パレットの生成
 
-テーマ パレットを定義するには、色相から色へのマップを生成するマテリアルの `mat-palette` 関数を使用する必要があります。このサンプルでは、Ignite UI テーマを使用して Angular Material コンポーネントのスタイルを設定するため、構造に応じて `$light-material-palette` を変換する必要があります。
+テーマ パレットを定義するには、色相から色へのマップを生成するマテリアルの `define-palette` 関数を使用する必要があります。このサンプルでは、Ignite UI テーマを使用して Angular Material コンポーネントのスタイルを設定するため、構造に応じて `$light-material-palette` を変換する必要があります。
 
 これを実現するために、すべてのカラー バリアントのマップとそれに続くコントラスト カラーを返す `$color`、`$saturations`、および `$palette` のパラメーターを使用して Sass 関数を作成します。使用している彩度は、[`マテリアル デザイン カラー システム`](https://material.io/design/color/the-color-system.html)に従います。
 
@@ -171,29 +171,29 @@ $saturations: (50, 100, 200, 300, 400, 500, 600, 700, 800, 900, A100, A200, A400
 
 #### ライト テーマ パレット
 
-Ignite UI の `primary` カラー `$igx-light-palette` と新しく作成した `material-like-palette` 関数を使用して、ライト プライマリ マテリアル テーマ パレットを定義します。結果をパラメーターとして `mat-palette` 関数に渡す必要があります。この関数は、`default`、`lighter`、`darker`、および `text` 影のカラー値を生成し、それらをパレット マップに追加します。
+Ignite UI の `primary` カラー `$igx-light-palette` と新しく作成した `material-like-palette` 関数を使用して、ライト プライマリ マテリアル テーマ パレットを定義します。結果をパラメーターとして `define-palette` 関数に渡す必要があります。この関数は、`default`、`lighter`、`darker`、および `text` 影のカラー値を生成し、それらをパレット マップに追加します。
 
 ```scss
-$light-palette-primary: mat-palette(
-    material-like-palette('primary', $saturations, $igx-light-palette)
-);
+$light-palette-primary: mat.define-palette(
+    material-like-palette('primary', $saturations, $igx-light-palette));
 ```
 
 ライト アクセント パレットについても同じことをしましょう:
 
 ```scss
-$light-palette-accent: mat-palette(
-    material-like-palette('secondary', $saturations, $igx-light-palette)
-);
+$light-palette-accent: mat.define-palette(
+    material-like-palette('secondary', $saturations, $igx-light-palette));
 ```
 
-最後に、2 つのカラー パレットを `mat-light-theme` 関数に渡す準備ができました。これにより、Ignite UI マテリアルのカラー パレットから取得した色で Angular Material テーマが作成されます。
+最後に、2 つのカラー パレットを `define-light-theme` 関数に渡す準備ができました。これにより、Ignite UI マテリアルのカラー パレットから取得した色で Angular Material テーマが作成されます。
 
 ```scss
-$custom-mat-light-theme: mat-light-theme(
-    $light-palette-primary,
-    $light-palette-accent
-);
+$custom-mat-light-theme: mat.define-light-theme((
+    color: (
+        primary: $light-palette-primary,
+        accent: $light-palette-accent
+    )
+));
 ```
 
 >[!NOTE]
@@ -204,49 +204,52 @@ $custom-mat-light-theme: mat-light-theme(
 前のアプローチに従って、ダーク モードのマテリアル パレットを作成します。今回は、カスタムの `igx-palette` も定義します。
 
 ```scss
-// Custompalette
+// Custom palette
 $custom-dark-palette: palette(
-    $primary: #011627,
+    $primary: #206094,
     $secondary: #72da67,
-    $gray: #fff,
     $surface: #222,
+    $info: #1377d5,
+    $success: #4eb862,
+    $warn: #fbb13c,
+    $error: #ff134a,
 );
 
 // Material dark primary palette
-$dark-palette-primary: mat-palette(
-    material-like-palette('primary', $saturations, $custom-dark-palette)
-);
+$dark-palette-primary: mat.define-palette(
+    material-like-palette('primary', $saturations, $custom-dark-palette));
 // Material dark accent palette
-$dark-palette-accent: mat-palette(
-    material-like-palette('secondary', $saturations, $custom-dark-palette)
-);
+$dark-palette-accent: mat.define-palette(
+    material-like-palette('secondary', $saturations, $custom-dark-palette));
 // Material dark theme
-$custom-mat-dark-theme: mat-dark-theme(
-    $dark-palette-primary,
-    $dark-palette-accent
-);
+$custom-mat-dark-theme: mat.define-dark-theme((
+    color: (
+        primary: $dark-palette-primary, 
+        accent: $dark-palette-accent
+    )
+));
 ```
 
 ### テーマ
 
 `light` モードと `dark` モードを切り替えるために、ボタン クリックで変更されるカスタム `dark` クラスを追加します。スタイルシート ファイルに、各クラスにスコープされた異なるカラー パレットを含めます。
 
-Ignite UI for Angular には、[マテリアル デザイン](https://material.io/design)に基づいて事前定義されたテーマが付属しています。それらを使用するには、最初に `core` ミックスインを含め、次に組み込みのテーマ ミックスイン - [theme]({environment:sassApiUrl}/index.html#mixin-theme) を含める必要があります。また、事前定義されたマテリアル パレット - [$light-material-palette]({environment:sassApiUrl}/index.html#variable-light-material-palette) および [$dark-material-palette]({environment:sassApiUrl}/index.html#variable-dark-material-palette) も使用します。 
+Ignite UI for Angular には、[マテリアル デザイン](https://material.io/design)に基づいて事前定義されたテーマが付属しています。それらを使用するには、最初に `core` ミックスインを含め、次に組み込みのテーマ ミックスイン ([theme]({environment:sassApiUrl}/index.html#mixin-theme)) を含める必要があります。また、事前定義されたマテリアル パレット - [$light-material-palette]({environment:sassApiUrl}/index.html#variable-light-material-palette) および [$dark-material-palette]({environment:sassApiUrl}/index.html#variable-dark-material-palette) も使用します。 
 
-Angular Material コンポーネントの場合、前述のカスタム マテリアル テーマに `mat-core` ミックスインを含めてから、`angular-material-theme` ミックスインを含める必要があります。 
+Angular Material コンポーネントの場合、前述のカスタム マテリアル テーマに `core` ミックスインを含めてから、`all-component-themes` ミックスインを含める必要があります。
 
 ```scss
 // Make sure you always include the core mixin first
 @include core();
 
 ::ng-deep {
-    @include mat-core();
-    @include theme($igx-light-palette, $legacy-support: true);
-    @include angular-material-theme($custom-mat-light-theme);
+    @include mat.core();
+    @include theme($igx-light-palette);
+    @include mat.all-component-themes($custom-mat-light-theme);
 
     .dark {
-        @include dark-theme($custom-dark-palette, $legacy-support: true);
-        @include angular-material-theme($custom-mat-dark-theme);
+        @include dark-theme($custom-dark-palette);
+        @include mat.all-component-themes($custom-mat-dark-theme);
     }
 }
 ```
@@ -256,7 +259,7 @@ Angular Material コンポーネントの場合、前述のカスタム マテ�
 
 #### ライト モード
 
-カラー パレットとテーマの構成が完了したら、コンポーネントにいくつかの追加の色変更を加えることができます。アプリケーションの背景色は、host 要素で明示的に設定する必要があります。サンプルでは、渡されたパレットの `surface` カラーを使用します。ロゴは SVG 画像であるため、CSS を使用して簡単に色を変更できます:
+カラー パレットとテーマの構成が完了したら、コンポーネントにいくつかの追加の色変更を加えることができます。アプリケーションの背景色は、host 要素で明示的に設定する必要があります。サンプルでは、渡されたパレットの `surface` カラーを使用します。ロゴは SVG 画像であるため、CSS を使用して簡単に色を変更できます。また、`mat-slider` コンポーネントのカラーの一部を `secondary` に変更して、アプリにうまく収まるようにします。
 
 ```scss
 :host {
@@ -275,12 +278,28 @@ Angular Material コンポーネントの場合、前述のカスタム マテ�
             stroke-width: "0.8";
         }
     }
+
+    //  Update material slider component colors for both light and dark mode
+    .mat-mdc-slider.secondary .mdc-slider__track--inactive,
+    .mat-mdc-slider.secondary .mdc-slider__thumb-knob {
+        background-color: color($custom-mat-light-theme, 'secondary');
+    }
+
+    .mat-mdc-slider.secondary .mdc-slider__track--active_fill,
+    .mat-mdc-slider.secondary .mdc-slider__thumb-knob {
+        border-color: color($custom-mat-light-theme, 'secondary');
+    }
+
+    .mat-mdc-slider.secondary .mat-mdc-slider-visual-thumb .mat-ripple > * {
+        background-color: color($custom-mat-light-theme, 'secondary');
+        opacity: .12;
+    }
 }
 ```
 
 #### ダーク モード
 
-ダーク バリアントでは、同じ CSS スタイルを適用しますが、`$custom-dark-palette` を使用します。また、`mat-stepper` コンポーネントと `mat-slider` コンポーネントの色の一部を変更して、アプリにうまく収まるようにします。 
+ダーク バリアントでは、同じ CSS スタイルを適用しますが、`$custom-dark-palette` を使用します。さらに、`mat-stepper` コンポーネントのカラーの一部を更新します。
 
 ```scss
 :host {
@@ -303,12 +322,6 @@ Angular Material コンポーネントの場合、前述のカスタム マテ�
             // The background of the selected step icon inside the material stepper
             .mat-step-header .mat-step-icon-selected {
                 background-color: color($custom-dark-palette, 'secondary');
-            }
-
-            // The background of the material slider thumb and track
-            .mat-accent .mat-slider-thumb,
-            .mat-accent .mat-slider-track-fill {
-                background-color: color($custom-dark-palette, 'primary', 100);
             }
 
             // The background of the material stepper
@@ -356,29 +369,25 @@ Ignite UI for Angular は、テーマごとに 4 つのデフォルト タイプ
 }
 ```
 
-Angular Material のタイポグラフィをカスタマイズするには、`mat-typography-config` 関数を使用する必要があります。次のように、`$font-family` を Ignite UI の `$material-typeface` と `$button` スタイルでオーバーライドします。 
+Angular Material のタイポグラフィをカスタマイズするには、`define-typography-config` 関数を使用する必要があります。次のように、`$font-family` を Ignite UI の `$material-typeface` と `$button` スタイルでオーバーライドします。 
 
 ```scss
-$custom-typography: mat-typography-config(
+$custom-typography: mat.define-typography-config(
     $font-family: $material-typeface,
-    $button: mat-typography-level(14px, $font-weight: 600)
+    $button: mat.define-typography-level(14px, $font-weight: 600)
 );
 ```
 
-次に、タイポグラフィ設定を `mat-core` ミックスインに渡す必要があります。
+次に、typography 設定を `define-light-theme` ミックスインに渡す必要があります。
 
 ```scss
-::ng-deep {
-    @include mat-core($custom-typography);
-}
-```
-
-または `angular-material-typography` ミックスインに渡すことができます:
-
-```scss
-::ng-deep {
-    @include angular-material-typography($custom-typography);
-}
+$custom-mat-light-theme: mat.define-light-theme((
+    color: (
+        primary: $light-palette-primary,
+        accent: $light-palette-accent
+    ),
+    typography: $custom-typography
+));
 ```
 
 詳細については、Angular Material [`タイポグラフィ ドキュメント`](https://material.angular.io/guide/typography)をご覧ください。  
