@@ -177,7 +177,35 @@ Ignite UI for Angular Tree モジュールまたはディレクティブをイ�
 </igx-tree>
 ```
 ### ノードの操作
-IgxTree は、ノードの操作のために次の API メソッドを提供します。
+[IgxTreeNodeComponent]({environment:angularApiUrl}/classes/igxtreenodecomponent.html) は、次の方法で展開または縮小することができます:
+- ノード展開インジケーター **(デフォルトの動作)** をクリックします。
+- `igx-tree` [toggleNodeOnClick]({environment:angularApiUrl}/classes/igxtreecomponent.html#toggleNodeOnClick) プロパティが `true` に設定されている場合、ノードをクリックします。
+
+```html
+<igx-tree [toggleNodeOnClick]="true">
+	<igx-tree-node *ngFor="let node of data" [data]="node">
+		{{ node.text }}
+		<igx-tree-node *ngFor="let child of node.children" [data]="child">
+                {{ child.text }}
+		</igx-tree-node>
+	</igx-tree-node>
+</igx-tree>
+```
+
+デフォルトでは、複数のノードを同時に展開できます。この動作を変更し、一度に 1 つのブランチのみを展開できるようにするには、[singleBranchExpand]({environment:angularApiUrl}/classes/igxtreecomponent.html#singleBranchExpand) プロパティを有効にすることができます。このようにして、ノードが展開されると、同じレベル内ですでに展開されている他のすべてのブランチが縮小されます。
+
+```html
+<igx-tree [singleBranchExpand]="true">
+	<igx-tree-node *ngFor="let node of data" [data]="node">
+		{{ node.text }}
+		<igx-tree-node *ngFor="let child of node.children" [data]="child">
+                {{ child.text }}
+		</igx-tree-node>
+	</igx-tree-node>
+</igx-tree>
+```
+
+さらに、IgxTree は、ノード操作のために次の API メソッドを提供します:
 - [**expand**]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#expand) - アニメーションでノードを展開します。
 - [**collapse**]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#collapse) - アニメーションでノードを縮小します。
 - [**toggle**]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#toggle) - ノードの展開状態をアニメーションで切り替えます。
