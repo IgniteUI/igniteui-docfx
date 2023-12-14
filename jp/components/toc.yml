@@ -31,7 +31,7 @@
   new: false
   updated: false
 - name: 操作方法
-  new: true
+  new: false
   items:
     - name: .NET Core を使用してリアルタイム SignalR アプリの構築
       href: general/how-to/signal-r-service-live-data.md
@@ -152,7 +152,7 @@
           new: false
         - name: 検証
           href: grid/validation.md
-          new: true
+          new: false
         - name: カスケード コンボを使用したグリッド
           href: grid/cascading-combos.md
           new: true
@@ -308,7 +308,7 @@
           new: false
         - name: 検証
           href: treegrid/validation.md
-          new: true
+          new: false
     - name: 行ドラッグ
       href: treegrid/row-drag.md
       new: false
@@ -446,7 +446,7 @@
           new: false
         - name: 検証
           href: hierarchicalgrid/validation.md
-          new: true
+          new: false
     - name: Excel へエクスポート
       href: hierarchicalgrid/export-excel.md
       new: false
@@ -540,23 +540,23 @@
       new: false
     - name: 状態保持
       href: hierarchicalgrid/state-persistence.md
-      new: true
+      new: false
 - name: Pivot Grid
   href: pivotgrid/pivot-grid.md
-  new: true
+  new: false
   items:
     - name: Excel へのエクスポート
       href: pivotgrid/export-excel.md
-      new: true
+      new: false
     - name: ピボット グリッド機能
       href: pivotgrid/pivot-grid-features.md
-      new: true
+      new: false
     - name: ピボット グリッドのリモート処理とカスタマイズ
       href: pivotgrid/pivot-grid-custom.md
-      new: true
+      new: false
     - name: 状態保持
       href: pivotgrid/state-persistence.md
-      new: true
+      new: false
 - name: Tree
   href: tree.md
   new: false
@@ -578,7 +578,7 @@
       new: false
     - name: 単一選択コンボボックス
       href: simple-combo.md
-      new: true
+      new: false
 - name: Spreadsheet
   href: spreadsheet-overview.md
   new: false
@@ -694,7 +694,7 @@
       new: false
     - name: チャートのデータ集計
       href: charts/features/chart-data-aggregations.md
-      new: true
+      new: false
     - name: チャート データ凡例
       href: charts/features/chart-data-legend.md
       new: false
@@ -876,7 +876,7 @@
       new: false
     - name: 構成
       href: themes/sass/configuration.md
-      new: true
+      new: false
     - name: パレット
       href: themes/sass/palettes.md
       new: false
@@ -917,17 +917,19 @@
           href: themes/sass/presets/indigo.md
           new: true
     - name: その他
-      new: true
+      new: false
       items:
       - name: 印刷スタイル
         href: themes/misc/printing-styles.md
         new: false
       - name: Angular のテーマ
         href: themes/misc/angular-material-theming.md
-        new: true
+        new: false
+        updated: true
       - name: Bootstrap のテーマ
         href: themes/misc/bootstrap-theming.md
-        new: true
+        new: false
+        updated: true
 - name: データ入力と表示
   header: true
   sortable: true
@@ -960,13 +962,13 @@
   href: switch.md
 - name: Query Builder
   href: query-builder.md
-  new: true
+  new: false
 - name: Radio & Radio Group
   href: radio-button.md
   new: false
 - name: Rating
   href: rating.md
-  new: true
+  new: false
 - name: Label & Input
   href: label-input.md
 - name: Input Group
@@ -1000,7 +1002,7 @@
   new: false
 - name: Paginator
   href: paginator.md
-  new: true
+  new: false
   updated: false
 - name: インタラクション
   header: true
