@@ -75,10 +75,10 @@ import { IGX_CARD_DIRECTIVES } from 'igniteui-angular';
 
         <igx-card-actions>
             <button igxButton igxRipple>Read More</button>
-            <button igxButton="icon" igxRipple igxRippleCentered="true">
+            <button igxIconButton="flat" igxRipple igxRippleCentered="true">
                 <igx-icon>favorite</igx-icon>
             </button>
-            <button igxButton="icon" igxRipple igxRippleCentered="true">
+            <button igxIconButton="flat" igxRipple igxRippleCentered="true">
                 <igx-icon>share</igx-icon>
             </button>
         </igx-card-actions>
@@ -126,10 +126,10 @@ Ignite UI for Angular Card モジュールまたはディレクティブをイ�
 
     <igx-card-actions>
         <button igxButton igxRipple>Read More</button>
-        <button igxButton="icon" igxRipple igxRippleCentered="true">
+        <button igxIconButton="flat" igxRipple igxRippleCentered="true">
             <igx-icon>favorite</igx-icon>
         </button>
-        <button igxButton="icon" igxRipple igxRippleCentered="true">
+        <button igxIconButton="flat" igxRipple igxRippleCentered="true">
             <igx-icon>share</igx-icon>
         </button>
     </igx-card-actions>
@@ -216,7 +216,7 @@ Angular Card に表示する画像や動画は、`igx-card-media` タグで囲�
     <igx-divider [vertical]="horizontal"></igx-divider>
 
     <igx-card-actions layout="justify">
-        <button *ngFor="let icon of card.icons;" igxButton="icon" igxRipple igxRippleCentered="true">
+        <button *ngFor="let icon of card.icons;" igxIconButton="flat" igxRipple igxRippleCentered="true">
             <igx-icon>{{icon}}</igx-icon>
         </button>
     </igx-card-actions>
@@ -246,7 +246,7 @@ Angular Card に表示する画像や動画は、`igx-card-media` タグで囲�
 
 ```html
 <igx-card-actions layout="justify" [vertical]="false">
-    <button *ngFor="let icon of card.icons;" igxButton="icon" igxRipple igxRippleCentered="true">
+    <button *ngFor="let icon of card.icons;" igxIconButton="flat" igxRipple igxRippleCentered="true">
         <igx-icon>{{icon}}</igx-icon>
     </button>
 </igx-card-actions>
@@ -309,7 +309,7 @@ Angular Card の操作領域では、すでに説明したコンテンツに追�
 <igx-card-actions [reverse]="true">
     <button igxButton>Button</button>
 
-    <button igxButton="icon">
+    <button igxIconButton="flat">
         <igx-icon>star</igx-icon>
     </button>
 </igx-card-actions>
@@ -323,7 +323,7 @@ Angular Card の操作領域では、すでに説明したコンテンツに追�
 <igx-card-actions layout="justify">
     <button igxButton>Button</button>
 
-    <button igxButton="icon">
+    <button igxIconButton="flat">
         <igx-icon>star</igx-icon>
     </button>
 </igx-card-actions>

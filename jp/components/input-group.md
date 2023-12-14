@@ -199,7 +199,7 @@ Ignite UI for Angular Input Group コンポーネントは、Angular 14 のデ�
         <input igxInput name="password" type="password" required minlength="8" />
     </igx-input-group>
 
-    <button igxButton="raised" igxRipple type="submit">Submit</button>
+    <button igxButton="contained" igxRipple type="submit">Submit</button>
 </form>
 ```
 
@@ -223,7 +223,7 @@ Ignite UI for Angular Input Group コンポーネントは、Angular 14 のデ�
         <igx-hint *ngIf="password.errors?.minlength">Password should be at least 8 characters</igx-hint>
     </igx-input-group>
 
-    <button igxButton="raised" igxRipple type="submit">Submit</button>
+    <button igxButton="contained" igxRipple type="submit">Submit</button>
 </form>
 ```
 
@@ -240,7 +240,7 @@ Ignite UI for Angular Input Group コンポーネントは、Angular 14 のデ�
     </igx-input-group>
     ...
 
-    <button igxButton="raised" igxRipple type="submit" [disabled]="!registrationForm.valid">Submit</button>
+    <button igxButton="contained" igxRipple type="submit" [disabled]="!registrationForm.valid">Submit</button>
 </form>
 ```
 
@@ -282,7 +282,7 @@ constructor(fb: FormBuilder) {
         <input igxInput name="password" type="password" formControlName="password" />
     </igx-input-group>
 
-    <button igxButton="raised" igxRipple type="submit">Submit</button>
+    <button igxButton="contained" igxRipple type="submit">Submit</button>
 </form>
 ```
 
@@ -314,7 +314,7 @@ public get password() {
         <igx-hint *ngIf="password.errors?.minlength">Password should be at least 8 characters</igx-hint>
     </igx-input-group>
 
-    <button igxButton="raised" igxRipple type="submit" [disabled]="!registrationForm.valid">Submit</button>
+    <button igxButton="contained" igxRipple type="submit" [disabled]="!registrationForm.valid">Submit</button>
 </form>
 ```
 

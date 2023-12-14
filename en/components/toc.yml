@@ -30,7 +30,7 @@
   new: false
   updated: false
 - name: How to
-  new: true
+  new: false
   items:
     - name: Build Real-time SignalR App with .NET Core
       href: general/how-to/signal-r-service-live-data.md
@@ -151,7 +151,7 @@
           new: false
         - name: Validation
           href: grid/validation.md
-          new: true
+          new: false
         - name: Grid with Cascading combos
           href: grid/cascading-combos.md
           new: true
@@ -307,7 +307,7 @@
           new: false
         - name: Validation
           href: treegrid/validation.md
-          new: true
+          new: false
     - name: Row Drag
       href: treegrid/row-drag.md
       new: false
@@ -445,7 +445,7 @@
           new: false
         - name: Validation
           href: hierarchicalgrid/validation.md
-          new: true
+          new: false
     - name: Export to Excel
       href: hierarchicalgrid/export-excel.md
       new: false
@@ -539,26 +539,27 @@
       new: false
     - name: State Persistence
       href: hierarchicalgrid/state-persistence.md
-      new: true
+      new: false
 - name: Pivot Grid
   href: pivotGrid/pivot-grid.md
-  new: true
+  new: false
   items:
     - name: Export to Excel
       href: pivotGrid/export-excel.md
-      new: true
+      new: false
     - name: Pivot Grid Features
       href: pivotGrid/pivot-grid-features.md
-      new: true
+      new: false
     - name: Pivot Grid Remote Operations
       href: pivotGrid/pivot-grid-custom.md
-      new: true
+      new: false
     - name: State Persistence
       href: pivotGrid/state-persistence.md
-      new: true
+      new: false
 - name: Tree
   href: tree.md
   new: false
+  updated: true
 - name: List View
   href: list.md
 - name: Combo
@@ -576,7 +577,7 @@
       new: false
     - name: Single Select ComboBox
       href: simple-combo.md
-      new: true
+      new: false
 - name: Spreadsheet
   href: spreadsheet-overview.md
   new: false
@@ -872,7 +873,7 @@
       new: false
     - name: Configuration
       href: themes/sass/configuration.md
-      new: true
+      new: false
     - name: Palettes
       href: themes/sass/palettes.md
       new: false
@@ -913,17 +914,19 @@
           href: themes/sass/presets/indigo.md
           new: true
     - name: Misc
-      new: true
+      new: false
       items:
       - name: Printing styles
         href: themes/misc/printing-styles.md
         new: false
       - name: Angular Theming
         href: themes/misc/angular-material-theming.md
-        new: true
+        new: false
+        updated: true
       - name: Bootstrap Theming
         href: themes/misc/bootstrap-theming.md
-        new: true
+        new: false
+        updated: true
 - name: Data Entry & Display
   header: true
   sortable: true
@@ -947,19 +950,22 @@
   href: button.md
 - name: Button Group
   href: button-group.md
+#- name: Icon Button
+#  href: icon-button.md
+#  new: true
 - name: Checkbox
   href: checkbox.md
 - name: Switch
   href: switch.md
 - name: Query Builder
   href: query-builder.md
-  new: true
+  new: false
 - name: Radio & Radio Group
   href: radio-button.md
   new: false
 - name: Rating
   href: rating.md
-  new: true
+  new: false
 - name: Label & Input
   href: label-input.md
 - name: Input Group
@@ -993,7 +999,7 @@
   new: false
 - name: Paginator
   href: paginator.md
-  new: true
+  new: false
   updated: false
 - name: Interactions
   header: true

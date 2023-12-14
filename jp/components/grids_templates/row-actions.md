@@ -99,10 +99,10 @@ import { IgxActionStripModule } from 'igniteui-angular';
 <igx-grid>
     <igx-action-strip #actionstrip>
         <igx-grid-pinning-actions></igx-grid-pinning-actions>
-        <button title="Edit" igxButton="icon" igxRipple (click)='startEdit(actionstrip.context)'>
+        <button title="Edit" igxIconButton="flat" igxRipple (click)='startEdit(actionstrip.context)'>
             <igx-icon>edit</igx-icon>
         </button>
-        <button title="Delete" igxButton="icon" igxRipple *ngIf='!isDeleted(actionstrip.context)' (click)='actionstrip.context.delete()'>
+        <button title="Delete" igxIconButton="flat" igxRipple *ngIf='!isDeleted(actionstrip.context)' (click)='actionstrip.context.delete()'>
             <igx-icon>delete</igx-icon>
         </button>
     </igx-action-strip>

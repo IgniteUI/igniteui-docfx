@@ -55,7 +55,7 @@ import { IgxToggleDirective, IgxButtonDirective } from 'igniteui-angular';
 @Component({
     selector: 'app-home',
     template: `
-    <button class="toggle-button" igxButton="raised" (click)="toggleContent()">Toggle</button>
+    <button class="toggle-button" igxButton="contained" (click)="toggleContent()">Toggle</button>
     <div class="toggle-content" igxToggle>
         <section class="toggle-section">
             <img src="assets/images/toggle/nature.jpg" alt="Nature" />
@@ -99,7 +99,7 @@ Then in the template of our component, we can apply the directive on the element
 
 ```html
 <!--template.component.html-->
-<button class="toggle-button" igxButton="raised" (click)="toggleContent()">Toggle</button>
+<button class="toggle-button" igxButton="contained" (click)="toggleContent()">Toggle</button>
 <div class="toggle-content" igxToggle>
     <section class="toggle-section">
         <img src="assets/images/toggle/nature.jpg"/>
@@ -162,7 +162,7 @@ If we would like to take advantage of this functionality, we will have to use th
 
 ```html
 <!--template.component.html-->
-<button class="toggle-button"  igxButton="raised" [igxToggleAction]="toggleRef">Toggle</button>
+<button class="toggle-button"  igxButton="contained" [igxToggleAction]="toggleRef">Toggle</button>
 <div class="toggle-content" igxToggle #toggleRef="toggle">
     <section class="toggle-section">
         <h6>Automatic toggle actions</h6>
@@ -188,7 +188,7 @@ There is a convenient way to keep the state of the `igxToggle` directive and com
 
 ```html
 <!--template.component.html-->
-<button igxToggleAction="toggleId" class="toggle-button" igxButton="raised">Toggle</button>
+<button igxToggleAction="toggleId" class="toggle-button" igxButton="contained">Toggle</button>
 <div igxToggle id="toggleId" class="toggle-content">
     <section class="toggle-section">
         <h6>Toggled by the service provider</h6>
