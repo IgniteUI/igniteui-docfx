@@ -37,6 +37,9 @@ First you will be prompted to enter a name for your application:
 
 ![](../../../images/general/ig-step-by-step-new-project-name.png)
 
+After selecting `Angular` as a freamework, you will be prompted to choose the type of the project that is to be generated:
+<img class="responsive-img"  src="../../../images/general/ig-step-by-step-project-type-cli.png" />
+
 Then you will be guided to choose one of the available project templates. You can create an empty project, project with side navigation or [authentication project](auth-template.md) with basic authentication module. Navigate through the available options using the arrow keys and press ENTER to confirm the selection:
 
 ![](../../../images/general/ig-step-by-step-new-project-template.png)

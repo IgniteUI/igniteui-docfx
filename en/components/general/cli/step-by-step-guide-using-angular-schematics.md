@@ -26,10 +26,13 @@ This will activate the step by step mode and you will be asked a series of quest
 > Step by step mode relies on `Inquirer.js`, see [supported terminals](https://github.com/SBoudrias/Inquirer.js#support-os-terminals)
 
 
-
 ## Create new project
 
-First you will be prompted to enter a name for your application:
+First you will be prompted to choose the way your application will be bootstrapped, using modules or standalone components:
+
+<img class="responsive-img"  src="../../../images/general/ig-step-by-step-project-type.png" />
+
+Then you can enter a name for your application:
 
 <img class="responsive-img"  src="../../../images/general/ig-step-by-step-new-project-name.png" />
 
