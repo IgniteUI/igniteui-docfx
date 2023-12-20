@@ -82,7 +82,7 @@ Ignite UI for Angular 縦棒チャート、縦棒グラフ、または垂直棒�
 
 Angular 縦棒チャートには、外観のスタイル設定と変更のための多くのオプションがあります。
 
-[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) コントロールでこのチャート タイプを作成するには、以下の例のように、データを [`IgxColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcolumnseriescomponent.html) にバインドします:
+`XamCategoryChart` コントロールでこのチャート タイプを作成するには、以下の例のように、データをバインドします:
 
 <code-view style="height: 600px" alt="Angular 縦棒チャートのスタイル設定"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
