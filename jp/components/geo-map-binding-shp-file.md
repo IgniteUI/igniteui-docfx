@@ -2,7 +2,7 @@
 title: Angular マップ | データ可視化ツール | 地理的シェープ ファイルのバインディング | インフラジスティックス
 _description: インフラジスティックスの Angular JavaScript マップを使用して、シェイプ ファイルから地理空間データを読み込みます。Ignite UI for Angular マップのサンプルを是非お試しください!
 _keywords: Angular map, shapefiles, Ignite UI for Angular, Infragistics, data binding, Angular マップ, シェープファイル, データ バインディング, インフラジスティックス
-mentionedTypes: ['XamGeographicMap', 'ShapefileConverter', 'Series']
+mentionedTypes: ['XamGeographicMap', 'ShapefileConverter', 'Series', 'GeographicShapeSeriesBase']
 _language: ja
 ---
 
@@ -25,8 +25,8 @@ Ignite UI for Angular Map コンポーネントの [`IgxShapeDataSource`]({envir
 
 | プロパティ | 型 | 概要   |
 |----------|------|---------------|
-| [`shapefileSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html#shapefilesource) | string |シェイプ ファイル(.shp) から読み込まれた 1 つの地理空間シェープにすべてのポイントが含まれます。|
-|[`databaseSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html#databasesource) | string |たとえば、シェープファイルで日本は、以下でポイント オブジェクト リストのリストとして表されます。|
+| [`shapefileSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html#shapefileSource) | string |シェイプ ファイル(.shp) から読み込まれた 1 つの地理空間シェープにすべてのポイントが含まれます。|
+|[`databaseSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html#databaseSource) | string |たとえば、シェープファイルで日本は、以下でポイント オブジェクト リストのリストとして表されます。|
 
 <!-- TODO add for WPF only: -->
 

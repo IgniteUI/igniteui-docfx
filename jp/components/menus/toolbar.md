@@ -145,6 +145,41 @@ Angular ツールバーには、`Target` プロパティが含まれています
 *   `ShowCrosshairs`: チャートの [`crosshairsDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#crosshairsDisplayMode) プロパティを介してマウスオーバー十字線の注釈を切り替える [`IgxToolActionCheckboxComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncheckboxcomponent.html)。
 *   `ShowGridlines`: X-Axis に `MajorStroke` を適用することで追加のグリッド線を切り替える [`IgxToolActionCheckboxComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncheckboxcomponent.html)。
 
+画像に保存アクション
+
+*   `CopyAsImage`: チャートをクリップボードにコピーするオプションを公開する [`IgxToolActionLabelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionlabelcomponent.html)。
+*   `CopyHeader`: サブ セクションのヘッダー。
+
+### SVG アイコン
+
+ツールを手動で追加する場合、`RenderIconFromText` メソッドを使用してアイコンを割り当てることができます。このメソッドには 3 つのパラメーターを渡す必要があります。1 つ目は、ツールで定義されたアイコン コレクション名です (例: [`iconCollectionName`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#iconCollectionName))。2 つ目は、ツールで定義されたアイコンの名前 (例: [`iconName`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#iconName)) で、その後に SVG 文字列を追加します。
+
+```html
+<igx-tool-action-label
+    title="Custom Icon"
+    iconName="CustomIcon"
+    iconCollectionName="CustomCollection">
+</igx-tool-action-label>
+```
+
+```ts
+public toolbarCustomIconOnViewInit(): void {
+
+  const icon = '<svg width="28px" height="28px" stroke="none" viewBox="0 0 3.5 3.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--gis" preserveAspectRatio="xMidYMid meet"><path d="M0.436 0.178a0.073 0.073 0 0 0 -0.062 0.036L0.01 0.846a0.073 0.073 0 0 0 0.063 0.109h0.729a0.073 0.073 0 0 0 0.063 -0.109L0.501 0.214a0.073 0.073 0 0 0 -0.064 -0.036zm0.001 0.219 0.238 0.413H0.199zM1.4 0.507v0.245h0.525v-0.245zm0.77 0v0.245h1.33v-0.245zM0.073 1.388A0.073 0.073 0 0 0 0 1.461v0.583a0.073 0.073 0 0 0 0.073 0.073h0.729A0.073 0.073 0 0 0 0.875 2.045V1.461a0.073 0.073 0 0 0 -0.073 -0.073zm0.073 0.146h0.583v0.438H0.146zM1.4 1.674v0.245h0.945v-0.245zm1.19 0v0.245h0.91v-0.245zM0.438 2.447c-0.241 0 -0.438 0.197 -0.438 0.438 0 0.241 0.197 0.438 0.438 0.438s0.438 -0.197 0.438 -0.438c0 -0.241 -0.197 -0.438 -0.438 -0.438zm0 0.146a0.291 0.291 0 0 1 0.292 0.292 0.291 0.291 0 0 1 -0.292 0.292 0.291 0.291 0 0 1 -0.292 -0.292A0.291 0.291 0 0 1 0.438 2.593zM1.4 2.842v0.245h0.525v-0.245zm0.77 0v0.245h1.33v-0.245z" fill="#000000" fill-rule="evenodd"/></svg>';
+  
+  this.toolbar.registerIconFromText("CustomCollection", "CustomIcon", icon);
+}
+```
+
+```ts
+public toolbarCustomIconOnViewInit(): void {
+
+  const icon = '<svg width="28px" height="28px" stroke="none" viewBox="0 0 3.5 3.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--gis" preserveAspectRatio="xMidYMid meet"><path d="M0.436 0.178a0.073 0.073 0 0 0 -0.062 0.036L0.01 0.846a0.073 0.073 0 0 0 0.063 0.109h0.729a0.073 0.073 0 0 0 0.063 -0.109L0.501 0.214a0.073 0.073 0 0 0 -0.064 -0.036zm0.001 0.219 0.238 0.413H0.199zM1.4 0.507v0.245h0.525v-0.245zm0.77 0v0.245h1.33v-0.245zM0.073 1.388A0.073 0.073 0 0 0 0 1.461v0.583a0.073 0.073 0 0 0 0.073 0.073h0.729A0.073 0.073 0 0 0 0.875 2.045V1.461a0.073 0.073 0 0 0 -0.073 -0.073zm0.073 0.146h0.583v0.438H0.146zM1.4 1.674v0.245h0.945v-0.245zm1.19 0v0.245h0.91v-0.245zM0.438 2.447c-0.241 0 -0.438 0.197 -0.438 0.438 0 0.241 0.197 0.438 0.438 0.438s0.438 -0.197 0.438 -0.438c0 -0.241 -0.197 -0.438 -0.438 -0.438zm0 0.146a0.291 0.291 0 0 1 0.292 0.292 0.291 0.291 0 0 1 -0.292 0.292 0.291 0.291 0 0 1 -0.292 -0.292A0.291 0.291 0 0 1 0.438 2.593zM1.4 2.842v0.245h0.525v-0.245zm0.77 0v0.245h1.33v-0.245z" fill="#000000" fill-rule="evenodd"/></svg>';
+
+  this.toolbar.registerIconFromText("CustomCollection", "CustomIcon", icon);
+}
+```
+
 ### 垂直方向
 
 デフォルトでは、Angular ツールバーは水平に表示されますが、[`orientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html#orientation) プロパティを設定することで垂直に表示することもできます。
@@ -153,8 +188,12 @@ Angular ツールバーには、`Target` プロパティが含まれています
 <igx-toolbar orientation="Vertical" />
 ```
 
-<!-- 次の例は、Angular ツールバーの垂直方向を示しています。
-`sample="/charts/toolbar/layout-in-vertical-orientation", height="600", alt="Angular 垂直方向"` -->
+次の例は、Angular ツールバーの垂直方向を示しています。 <code-view style="height: 600px" alt="Angular 垂直方向"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/toolbar/layout-in-vertical-orientation"
+                                                 github-src="charts/toolbar/layout-in-vertical-orientation">
+</code-view>
+
 
 <!-- ## スタイル設定 / テーマ設定
 
