@@ -2,7 +2,7 @@
 title: Angular マップ | データ可視化ツール | 複数のデータ図形のバインディング | インフラジスティックス
 _description: インフラジスティックスの Angular を使用して、複数の地理的シリーズオブジェクトを追加し、いくつかのシェープファイルを地理空間データとオーバーレイすることができます。Ignite UI for Angular マップ チュートリアルを是非お試しください!
 _keywords: Angular map, shape files, Ignite UI for Angular, Infragistics, data binding, Angular マップ, シェープ ファイル, データ バインディング, インフラジスティックス
-mentionedTypes: ['XamGeographicMap', 'ShapefileConverter', 'Series']
+mentionedTypes: ['XamGeographicMap', 'ShapefileConverter', 'Series', 'GeographicShapeSeriesBase']
 namespace: Infragistics.Controls.Maps
 _language: ja
 ---

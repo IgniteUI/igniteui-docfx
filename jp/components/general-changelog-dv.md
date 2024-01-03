@@ -3,7 +3,7 @@ title: Angular 新機能 | Ignite UI for Angular | インフラジスティッ�
 _description: Ignite UI for Angular の新機能について学んでください。
 _keywords: Changelog, What's New, Ignite UI for Angular, Infragistics, 変更ログ, 新機能, インフラジスティックス
 _language: ja
-mentionedTypes: ["SeriesViewer", "XYChart", "DomainChart", "XamDataChart", "XamGeographicMap", "DatePicker", "MultiColumnComboBox", "CategoryChart", "CrosshairLayer", "FinalValueLayer", "CalloutLayer", "DataLegend"]
+mentionedTypes: ["SeriesViewer", "XYChart", "DomainChart", "XamDataChart", "Toolbar", "XamGeographicMap", "DatePicker", "MultiColumnComboBox", "CategoryChart", "CrosshairLayer", "FinalValueLayer", "CalloutLayer", "DataLegend"]
 namespace: Infragistics.Controls.Charts
 ---
 
@@ -14,6 +14,14 @@ Ignite UI for Angular の各バージョンのすべての重要な変更は、�
 > \[!Note]
 > このトピックでは、igniteui-angular パッケージに含まれていないコンポーネントの変更についてのみ説明します。
 > igniteui-angular コンポーネントに固有の変更については、[Ignite UI Angular 変更](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md) の CHANGELOG.MD を参照してください。
+
+## **17.0.0 (December 2023)**
+
+### igniteui-angular-grids (Toolbar - ベータ版)
+
+*   クリップボードを介してチャートを画像に保存するための新しいツールがデフォルトのツールとして追加されました。
+*   ツールバーの [`orientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html#orientation) プロパティを介して垂直方向が追加されました。デフォルトでは、ツールバーは水平方向ですが、ツールバーを垂直方向に表示できるようになり、ツールが左右にポップアップ表示されます。
+*   ツールバーの `renderImageFromText` メソッドを介してカスタム SVG アイコンのサポートが追加され、カスタム ツールの作成がさらに強化されました。
 
 ## **16.1.0 (June 2023)**
 
@@ -178,7 +186,7 @@ Ignite UI for Angular の各バージョンのすべての重要な変更は、�
 
 #### チャート凡例
 
-\*バブル、ドーナツ、および円チャートで使用できる水平方向の [`Orientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNorientation.html) プロパティを ItemLegend に追加しました。
+\*バブル、ドーナツ、および円チャートで使用できる水平方向の [`orientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html#orientation) プロパティを ItemLegend に追加しました。
 
 *   [`legendHighlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#legendHighlightingMode) プロパティを追加 - 凡例項目にカーソルを合わせたときにシリーズの強調表示を有効にします。
 
