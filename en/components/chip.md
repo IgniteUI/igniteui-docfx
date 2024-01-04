@@ -519,6 +519,15 @@ Or you can use the universal `--igx-chip-size` variable to target all instances:
 }
 ```
 
+You can also use one of the predefined sizes, assigning it to the `--ig-size` variable. The available values for `--ig-size` are `--ig-size-small`, `--ig-size-medium`, and `--ig-size-large`:
+
+```scss
+igx-chip {
+    --ig-size: var(--ig-size-small);
+}
+```
+
+Learn more about it in the [Size](display-density.md) article.
 
 ## Known Issues and Limitations
 

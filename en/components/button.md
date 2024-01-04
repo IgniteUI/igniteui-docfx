@@ -335,6 +335,16 @@ Or you can use the universal `--igx-button-size` variable to target all instance
 }
 ```
 
+You can also use one of the predefined sizes, assigning it to the `--ig-size` variable. The available values for `--ig-size` are `--ig-size-small`, `--ig-size-medium`, and `--ig-size-large`:
+
+```scss
+button {
+    --ig-size: var(--ig-size-large);
+}
+```
+
+Learn more about it in the [Size](display-density.md) article.
+
 <div class="divider--half"></div>
 
 ## API References

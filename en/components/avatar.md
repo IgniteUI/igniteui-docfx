@@ -229,6 +229,16 @@ Or you can use the universal `--igx-avatar-size` variable to target all instance
 }
 ```
 
+You can also use one of the predefined sizes, assigning it to the `--ig-size` variable, if theres no size attribute applied. The available values for `--ig-size` are `--ig-size-small`, `--ig-size-medium`, and `--ig-size-large`:
+
+```scss
+igx-avatar {
+    --ig-size: var(--ig-size-small);
+}
+```
+
+Learn more about it in the [Size](display-density.md) article.
+
 <div class="divider--half"></div>
 
 ## API References
