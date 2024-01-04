@@ -496,6 +496,29 @@ If `$legacy-support` is set to `false`(default), include the component **css var
            iframe-src="{environment:demosBaseUrl}/data-display/chip-styling" >
 </code-view>
 
+### Custom sizing
+
+You can either use the `--size` variable, targeting the `igx-chip` directly:
+
+```scss
+igx-chip {
+  --size: 50px;
+}
+```
+
+Or you can use the universal `--igx-chip-size` variable to target all instances:
+
+```html
+<div class="my-app">
+  <igx-chip></igx-chip>
+</div>
+```
+```scss
+.my-app {
+  --igx-chip-size: 50px;
+}
+```
+
 
 ## Known Issues and Limitations
 
