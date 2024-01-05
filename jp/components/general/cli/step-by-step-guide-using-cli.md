@@ -38,6 +38,9 @@ ig new
 
 ![](../../../images/general/ig-step-by-step-new-project-name.png)
 
+フレームワークとして `Angular` を選択すると、生成するプロジェクトのタイプを選択するように求められます。
+<img class="responsive-img"  src="../../../images/general/ig-step-by-step-project-type-cli.png" />
+
 次に、利用可能なプロジェクト テンプレートのいずれかを選択します。空のプロジェクト、サイド ナビゲーションのあるプロジェクト、または基本認証モジュールのある[認証プロジェクト](auth-template.md)を作成できます。矢印キーを使用して使用可能なオプションをナビゲートし、ENTER を押して選択を確認します。
 
 ![](../../../images/general/ig-step-by-step-new-project-template.png)
