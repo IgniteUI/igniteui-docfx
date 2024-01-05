@@ -27,10 +27,13 @@ ng new --collection="@igniteui/angular-schematics"
 > ステップ バイ ステップ モードは `Inquirer.js` に依存しています。[サポートされている端末](https://github.com/SBoudrias/Inquirer.js#support-os-terminals)を参照してください。
 
 
-
 ## 新しいプロジェクトの作成
 
-最初に、アプリケーションの名前を入力します。
+まず、アプリケーションをブートストラップする方法として、モジュールとスタンドアロン コンポーネントのどちらを使用するのかを選択するように求められます。
+
+<img class="responsive-img"  src="../../../images/general/ig-step-by-step-project-type.png" />
+
+次に、アプリケーションの名前を入力します。
 
 <img class="responsive-img"  src="../../../images/general/ig-step-by-step-new-project-name.png" />
 
