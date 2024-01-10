@@ -2,7 +2,7 @@
 title: Angular Stock/Financial Charts | Ignite UI for Angular
 _description: The Ignite UI for Angular Stock Chart is a composite visualization that renders stock ticker data, or price data in an interactive time-series display. Try for FREE.
 _keywords: Angular Charts, Stock Chart, Financial Chart, Candlestick Chart, OHLC Chart, Infragistics
-mentionedTypes: ["DomainChart", "FinancialChart", "FinancialChartType", "IndicatorTypes", "ZoomSliderType", 'Series']
+mentionedTypes: ["DomainChart", "FinancialChart", "FinancialChartType", "IndicatorTypes", "ZoomSliderType", 'Series', "FinancialChartType"]
 namespace: Infragistics.Controls.Charts
 ---
 

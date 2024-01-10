@@ -2,7 +2,7 @@
 title: Angular Step Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Step Chart
 _keywords: Angular Charts, Step Chart, Step Area Chart, Step Line Chart, Infragistics
-mentionedTypes: ["DomainChart", "CategoryChart", "CategoryChartType", 'Series']
+mentionedTypes: ["DomainChart", "CategoryChart", "CategoryChartType", 'Series', "CategoryChartType"]
 namespace: Infragistics.Controls.Charts
 ---
 
@@ -12,7 +12,7 @@ The Ignite UI for Angular Step Chart belongs to a group of category charts that 
 
 ## Angular Step Area Chart
 
-You can create Angular Step Area Chart in the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) control by setting [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#chartType) property to **StepArea** enum, as shown in the example below.
+You can create Angular Step Area Chart in the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) control by setting [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#chartType) property to [`StepArea`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNcategorycharttype.html#StepArea) enum, as shown in the example below.
 
 <code-view style="height: 600px" alt="Angular Step Area Chart Multiple Sources"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
