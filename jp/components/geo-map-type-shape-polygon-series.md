@@ -2,7 +2,7 @@
 title: Angular マップ | データ可視化ツール | シェイプ ポリゴン シリーズ | インフラジスティックス
 _description: インフラジスティックスの Angular マップのシェイプ ポリゴン シリーズを使用して、地理的位置によって定義される国または地域の図形を描画します。Ignite UI for Angular マップ シーリズについての詳細を表示します。
 _keywords: Angular map, shape polygon series, Ignite UI for Angular, Infragistics, Angular マップ, シェイプ ポリゴン シリーズ, インフラジスティックス
-mentionedTypes: ['XamGeographicMap', 'ShapefileConverter', 'Series']
+mentionedTypes: ['XamGeographicMap', 'ShapefileConverter', 'Series', 'GeographicShapeSeriesBase']
 _language: ja
 ---
 
@@ -25,7 +25,7 @@ Angular マップ コンポーネントでは、[`IgxGeographicShapeSeriesCompon
 
 ## データ要件
 
-マップコントロールの他の種類の地理的シリーズと同様に、[`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicshapeseriescomponent.html) には、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。さらに、このオブジェクトの各データ項目には、地理的位置を表す x 値と y 値を持つオブジェクトの配列の配列を使用して単一または複数の形状を格納する 1 つのデータ列が必要です。このデータ列は、`ShapeMemberPath` プロパティにマップされます。[`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicshapeseriescomponent.html) は、マップされたデータ列の点を使用してマップコントロールにポリゴンをプロットします。
+マップコントロールの他の種類の地理的シリーズと同様に、[`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicshapeseriescomponent.html) には、オブジェクトの配列にバインドできる `ItemsSource` プロパティがあります。さらに、このオブジェクトの各データ項目には、地理的位置を表す x 値と y 値を持つオブジェクトの配列の配列を使用して単一または複数の形状を格納する 1 つのデータ列が必要です。このデータ列は、[`shapeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicshapeseriesbasecomponent.html#shapeMemberPath) プロパティにマップされます。[`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicshapeseriescomponent.html) は、マップされたデータ列の点を使用してマップコントロールにポリゴンをプロットします。
 
 ## コード スニペット
 
@@ -154,5 +154,5 @@ export class MapTypeShapePolygonSeriesComponent implements AfterViewInit {
 *   [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicpolylineseriescomponent.html)
 *   [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicshapeseriescomponent.html)
 *   `ItemsSource`
-*   `ShapeMemberPath`
+*   [`shapeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicshapeseriesbasecomponent.html#shapeMemberPath)
 *   [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html)

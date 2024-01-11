@@ -101,7 +101,7 @@ import { WorksheetCell } from 'igniteui-angular-excel';
 
 ## コード スニペット
 
-以下のコード スニペットは、`XamSpreadsheet` コントロールで現在表示されているワークシートにハイパーリンクを追加する方法を示しています。
+以下のコード スニペットは、[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html) コントロールで現在表示されているワークシートにハイパーリンクを追加する方法を示しています。
 
 ```typescript
 this.spreadsheet.chartAdapter = new SpreadsheetChartAdapter();
@@ -162,4 +162,3 @@ ExcelUtility.loadFromUrl(process.env.PUBLIC_URL + "/ExcelFiles/ChartData.xlsx").
 *   [`SpreadsheetChartAdapter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet_chart_adapter.spreadsheetchartadapter.html)
 *   [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html)
 *   [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html#workbook)
-*   `XamSpreadsheet`
