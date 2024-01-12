@@ -114,7 +114,7 @@ for example:
 
 ### Chart Legend
 
-*   Added horizontal [`Orientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNorientation.html) property to ItemLegend that can be used with Bubble, Donut, and Pie Chart
+*   Added horizontal [`Orientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_excel.orientation.html) property to ItemLegend that can be used with Bubble, Donut, and Pie Chart
 *   Added [`legendHighlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#legendHighlightingMode) property - Enables series highlighting when hovering over legend items
 
 ### Geographic Map
