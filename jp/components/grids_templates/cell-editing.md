@@ -31,24 +31,24 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-editing" alt="Angular @@igComponent セル編集とセル テンプレートの例">
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:950px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:950px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-editing" alt="Angular @@igComponent セル編集とセル テンプレートの例">
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:660px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:660px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing" alt="Angular @@igComponent セル編集とセル テンプレートの例">
 </code-view>
 
@@ -162,8 +162,8 @@ public updateCell() {
 このコードは、`Race`、`Class`、および `Alignment` 列のセルに [`IgxSelectComponent`](../select.md) を実装する以下のサンプルで使用されています。
 
 
-<code-view style="height:625px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:625px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-select" >
 </code-view>
 
@@ -206,9 +206,14 @@ public keydownHandler(event) {
         // Number or Alphabet upper case or Alphabet lower case
         const columnName = grid.getColumnByVisibleIndex(activeElem.column).field;
         const cell = grid.getCellByColumn(activeElem.row, columnName);
-        if (cell && !grid.crudService.cellInEditMode) {
-            grid.crudService.enterEditMode(cell);
+        if (cell && !cell.editMode) {
+            cell.editMode = true;
             cell.editValue = event.key;
+            this.shouldAppendValue = true;
+        } else if (cell && cell.editMode && this.shouldAppendValue) {
+            event.preventDefault();
+            cell.editValue = cell.editValue + event.key;
+            this.shouldAppendValue = false;
         }
     }
 }
@@ -252,9 +257,9 @@ return dataView.findIndex((rec, index) => index > currentRowIndex && this.isEdit
 
 ### Angular Grid Excel スタイル編集のサンプル
 
-<code-view style="height:550px" 
+<code-view style="height:550px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-editing-excel-style" alt="Angular Grid Excel スタイル編集の例">
 </code-view>
 
@@ -484,24 +489,24 @@ export class MyHGridEventsComponent {
 以下は、上記の検証が `@@igSelector` に適用された結果のデモです。
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-editing-events" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-editing-events" >
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing-events" >
 </code-view>
 
@@ -523,7 +528,7 @@ export class MyHGridEventsComponent {
 
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 以上で Ignite UI for Angular テーマ エンジンによって公開されているすべての機能を使用できます。
 
@@ -587,27 +592,27 @@ $custom-grid-theme: grid-theme(
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:650px" 
+<code-view style="height:650px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-editing-style" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:950px" 
+<code-view style="height:950px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-editing-style" >
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:660px" 
+<code-view style="height:660px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing-style" >
 </code-view>
 
