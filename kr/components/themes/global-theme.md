@@ -27,8 +27,10 @@ To generate a global theme we're going to be including two mixins `core` and `th
 Let's create a custom global theme that will use the primary and secondary colors of our company.
 
 ```scss
-// Import the IgniteUI themes library first
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 
 $primary-color: #2ab759; // Some green shade I like
 $secondary-color: #f96a88; // Watermelon pink
