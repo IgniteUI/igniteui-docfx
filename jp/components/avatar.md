@@ -207,6 +207,39 @@ Internet Explorer 11 以前などブラウザーのコンポーネントをス�
            iframe-src="{environment:demosBaseUrl}/layouts/avatar-styling" >
 </code-view>
 
+### カスタム サイズ変更
+
+`igx-avatar` を直接ターゲットとして `--size` 変数を使用することができます。
+
+```scss
+igx-avatar {
+  --size: 200px;
+}
+```
+
+または、ユニバーサル変数 `--igx-avatar-size` を使用して、すべてのインスタンスをターゲットにすることもできます。
+
+```html
+<div class="my-app">
+  <igx-avatar></igx-avatar>
+</div>
+```
+```scss
+.my-app {
+  --igx-avatar-size: 200px;
+}
+```
+
+size 属性が適用されていない場合は、事前定義されたサイズの 1 つを使用して、それを `--ig-size` 変数に割り当てることもできます。`--ig-size` に使用可能な値は、`--ig-size-small`、`--ig-size-medium`、`--ig-size-large` です。
+
+```scss
+igx-avatar {
+    --ig-size: var(--ig-size-small);
+}
+```
+
+詳細については、[サイズ](display-density.md)の記事をご覧ください。
+
 <div class="divider--half"></div>
 
 ## API リファレンス

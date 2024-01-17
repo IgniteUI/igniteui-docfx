@@ -312,6 +312,40 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/buttons-style" >
 </code-view>
+
+### カスタム サイズ変更
+
+ボタンの高さは、`--size` 変数を使用して、`button` を直接ターゲットにして変更できます。
+
+```scss
+button {
+  --size: 50px;
+}
+```
+
+または、ユニバーサル変数 `--igx-button-size` を使用して、すべてのインスタンスをターゲットにすることもできます。
+
+```html
+<div class="my-app">
+  <button igxButton="raised"></button>
+</div>
+```
+```scss
+.my-app {
+  --igx-button-size: 50px;
+}
+```
+
+事前定義されたサイズの 1 つを使用して、それを `--ig-size` 変数に割り当てることもできます。`--ig-size` に使用可能な値は、`--ig-size-small`、`--ig-size-medium`、`--ig-size-large` です。
+
+```scss
+button {
+    --ig-size: var(--ig-size-large);
+}
+```
+
+詳細については、[サイズ](display-density.md)の記事をご覧ください。
+
 <div class="divider--half"></div>
 
 ## API リファレンス
