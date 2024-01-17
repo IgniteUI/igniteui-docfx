@@ -209,8 +209,10 @@ Ignite UI には、主要な Angular フレームワークの中で最も機能�
 最小限のコードで、コンポーネントのテーマを簡単に変更できます。SASS で開発されている API は簡単で、単一のコンポーネント、複数のコンポーネント、またはすべてのコンポーネントでテーマをカスタマイズできます。 
 
 ```scss
-// 最初に IgniteUI テーマ ライブラリをインポートします
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 
 $primary-color: #2ab759; // Some green shade I like
 $secondary-color: #f96a88; // Watermelon pink
