@@ -2,7 +2,7 @@
 title: Angular 株価/ファイナンシャル チャート | Ignite UI for Angular
 _description: Ignite UI for Angular 株価チャートは、インタラクティブな時系列表示で株価ティッカー データまたは価格データを描画する複合視覚化です。無料でお試しください。
 _keywords: Angular Charts, Stock Chart, Financial Chart, Candlestick Chart, OHLC Chart, Infragistics, Angular チャート, 株価チャート, ファイナンシャル チャート, ローソク足チャート, OHLC チャート, インフラジスティックス
-mentionedTypes: ["DomainChart", "FinancialChart", "FinancialChartType", "IndicatorTypes", "ZoomSliderType", 'Series']
+mentionedTypes: ["DomainChart", "FinancialChart", "FinancialChartType", "IndicatorTypes", "ZoomSliderType", 'Series', "FinancialChartType"]
 namespace: Infragistics.Controls.Charts
 _language: ja
 ---

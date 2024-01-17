@@ -2,7 +2,7 @@
 title: Angular ステップ チャート | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular ステップ チャート
 _keywords: Angular Charts, Step Chart, Step Area Chart, Step Line Chart, Infragistics, Angular チャート, ステップ チャート, ステップ エリア チャート, ステップ折れ線チャート, インフラジスティックス
-mentionedTypes: ["DomainChart", "CategoryChart", "CategoryChartType", 'Series']
+mentionedTypes: ["DomainChart", "CategoryChart", "CategoryChartType", 'Series', "CategoryChartType"]
 namespace: Infragistics.Controls.Charts
 _language: ja
 ---
@@ -13,7 +13,7 @@ Ignite UI for Angular ステップ チャートは連続する垂直線と水平
 
 ## Angular ステップ エリア チャート
 
-[`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) コントロールでステップ エリア チャートを作成するには、以下の例のように、[`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#chartType) プロパティを **StepArea** 列挙型に設定します。
+[`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) コントロールでステップ エリア チャートを作成するには、以下の例のように、[`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#chartType) プロパティを [`StepArea`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.categorycharttype.html#StepArea) 列挙型に設定します。
 
 <code-view style="height: 600px" alt="複数ソースの Angular ステップ エリア チャート"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
