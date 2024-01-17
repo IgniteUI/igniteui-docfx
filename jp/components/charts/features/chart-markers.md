@@ -2,7 +2,7 @@
 title: Angular チャート マーカー | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular チャート マーカー
 _keywords: Angular Charts, Markers, Infragistics, Angular チャート, マーカー, インフラジスティックス
-mentionedTypes: ["CategoryChart"]
+mentionedTypes: ["CategoryChart", "CategoryChartType", "MarkerType"]
 namespace: Infragistics.Controls.Charts
 _language: ja
 ---
@@ -13,7 +13,7 @@ Ignite UI for Angular マーカーは、カテゴリ チャートのプロット
 
 # Angular チャート マーカーの例
 
-次の例では、[折れチャート](../types/line-chart.md)は、2009 年から 2019 年までのヨーロッパ、中国、および米国の国々の再生可能エネルギーの発電量を比較しています。マーカーが [`MarkerType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.markertype.html) プロパティを "Circle" に設定して有効になっています。
+次の例では、[折れチャート](../types/line-chart.md)は、2009 年から 2019 年までのヨーロッパ、中国、および米国の国々の再生可能エネルギーの発電量を比較しています。マーカーが [`MarkerType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.markertype.html) プロパティを [`Circle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.markertype.html#Circle) 列挙値に設定して有効になっています。
 
 マーカーのカラーは、以下のサンプルの [`markerBrushes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#markerBrushes)プロパティと [`markerOutlines`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#markerOutlines) プロパティを設定することによっても管理されます。このサンプルでは、ドロップダウンを使用してマーカーと [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#chartType) を構成できます。
 
