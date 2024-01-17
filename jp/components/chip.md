@@ -497,6 +497,38 @@ $custom-theme: chip-theme(
            iframe-src="{environment:demosBaseUrl}/data-display/chip-styling" >
 </code-view>
 
+### カスタム サイズ変更
+
+`igx-chip` を直接ターゲットとして `--size` 変数を使用することができます。
+
+```scss
+igx-chip {
+  --size: 50px;
+}
+```
+
+または、ユニバーサル変数 `--igx-chip-size` を使用して、すべてのインスタンスをターゲットにすることもできます。
+
+```html
+<div class="my-app">
+  <igx-chip></igx-chip>
+</div>
+```
+```scss
+.my-app {
+  --igx-chip-size: 50px;
+}
+```
+
+事前定義されたサイズの 1 つを使用して、それを `--ig-size` 変数に割り当てることもできます。`--ig-size` に使用可能な値は、`--ig-size-small`、`--ig-size-medium`、`--ig-size-large` です。
+
+```scss
+igx-chip {
+    --ig-size: var(--ig-size-small);
+}
+```
+
+詳細については、[サイズ](display-density.md)の記事をご覧ください。
 
 ## 既知の問題と制限
 
