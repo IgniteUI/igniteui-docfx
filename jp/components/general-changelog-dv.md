@@ -13,7 +13,9 @@ Ignite UI for Angular の各バージョンのすべての重要な変更は、�
 
 > \[!Note]
 > このトピックでは、igniteui-angular パッケージに含まれていないコンポーネントの変更についてのみ説明します。
-> igniteui-angular コンポーネントに固有の変更については、[Ignite UI Angular 変更](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md) の CHANGELOG.MD を参照してください。
+> igniteui-angular コンポーネントに固有の変更については CHANGELOG.MD を参照してください。
+
+*   [Ignite UI for Angular 変更ログ](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md)
 
 ## **17.2.0 (January 2024)**
 
@@ -208,7 +210,7 @@ Ignite UI for Angular の各バージョンのすべての重要な変更は、�
 
 <div class="divider--half"></div>
 
-## **8.2.12 (November 2019)**
+## **8.2.12**
 
 *   Import ステートメントの変更
 
@@ -219,12 +221,12 @@ Import ステートメントは、API クラスと列挙型へのフル パス�
 
 | 影響されるパッケージ | 影響されるコンポーネント |
 | ------------------|---------------------|
-| <a href="https://www.npmjs.com/package/igniteui-angular-excel/v/8.2.12 (November 2019)" target="_blank">igniteui-angular-excel</a> | [Excel ライブラリ](excel-library.md)  |
-| <a href="https://www.npmjs.com/package/igniteui-angular-spreadsheet/v/8.2.12 (November 2019)" target="_blank">igniteui-angular-spreadsheet</a> | [スプレッドシート](spreadsheet-overview.md) |
-| <a href="https://www.npmjs.com/package/igniteui-angular-maps/v/8.2.12 (November 2019)" target="_blank">igniteui-angular-maps</a> | [マップ](geo-map.md)、[ツリーマップ](charts/types/treemap-chart.md)  |
-| <a href="https://www.npmjs.com/package/igniteui-angular-gauges/v/8.2.12 (November 2019)" target="_blank">igniteui-angular-gauges</a> |  [ブレット グラフ](bullet-graph.md)、[リニア ゲージ](linear-gauge.md)、[ラジアル ゲージ](radial-gauge.md)   |
-| <a href="https://www.npmjs.com/package/igniteui-angular-charts/v/8.2.12 (November 2019)" target="_blank">igniteui-angular-charts</a>| カテゴリ チャート、データ チャート、ドーナツ チャート、ファイナンシャル チャート、円チャート、[ズーム スライダー](zoomslider-overview.md)  |
-| <a href="https://www.npmjs.com/package/igniteui-angular-core/v/8.2.12 (November 2019)" target="_blank">igniteui-angular-core</a> | すべてのクラスと列挙型  |
+| <a href="https://www.npmjs.com/package/igniteui-angular-excel/v/8.2.12" target="_blank">igniteui-angular-excel</a> | [Excel ライブラリ](excel-library.md)  |
+| <a href="https://www.npmjs.com/package/igniteui-angular-spreadsheet/v/8.2.12" target="_blank">igniteui-angular-spreadsheet</a> | [スプレッドシート](spreadsheet-overview.md) |
+| <a href="https://www.npmjs.com/package/igniteui-angular-maps/v/8.2.12" target="_blank">igniteui-angular-maps</a> | [マップ](geo-map.md)、[ツリーマップ](charts/types/treemap-chart.md)  |
+| <a href="https://www.npmjs.com/package/igniteui-angular-gauges/v/8.2.12" target="_blank">igniteui-angular-gauges</a> |  [ブレット グラフ](bullet-graph.md)、[リニア ゲージ](linear-gauge.md)、[ラジアル ゲージ](radial-gauge.md)   |
+| <a href="https://www.npmjs.com/package/igniteui-angular-charts/v/8.2.12" target="_blank">igniteui-angular-charts</a>| カテゴリ チャート、データ チャート、ドーナツ チャート、ファイナンシャル チャート、円チャート、[ズーム スライダー](zoomslider-overview.md)  |
+| <a href="https://www.npmjs.com/package/igniteui-angular-core/v/8.2.12" target="_blank">igniteui-angular-core</a> | すべてのクラスと列挙型  |
 
 *   変更後のコード
 
