@@ -1,6 +1,6 @@
 ---
 title: How to Use Standalone Components - Angular | Ignite UI for Angular
-_description: How to use Angular 16 preview feature that allows components to be imported standalone and without the use of NgModules with Ignite UI Angular
+_description: How to use Ignite UI for Angular components as standalone components, and as dependencies in your other standalone components.
 _keywords: Ignite UI for Angular, Standalone Components, Angular 16, Angular Modules
 ---
 
