@@ -12,7 +12,7 @@ mentionedTypes: ['XamBulletGraph']
 If you want to use Ignite UI for Angular in an existing Angular CLI project (one that you have from before). We have you covered! All you have to do is execute these commands:
 
 ```cmd
-npm install --save {PackageCommon}
+npm install --save igniteui-angular
 npm install --save igniteui-angular-charts igniteui-angular-core
 npm install --save igniteui-angular-excel igniteui-angular-core
 npm install --save igniteui-angular-gauges igniteui-angular-core

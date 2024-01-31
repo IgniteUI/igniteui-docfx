@@ -12,9 +12,17 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 
 > \[!Note]
 > This topic discusses changes only for components that are not included in the igniteui-angular package.
-> For changes specific to igniteui-angular components, please see CHANGELOG.MD at [Ignite UI Angular Changes](https://github.com/IgniteUI/igniteui-angular/blob/master/)
+> For changes specific to igniteui-angular components, please see CHANGELOG.MD.
 
-## **17.0.0 (December 2023)**
+*   [Ignite UI for Angular Changelog at Github](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md)
+
+## **17.2.0 (January 2024)**
+
+### igniteui-angular-charts Charts
+
+*   [Chart Highlight Filter](charts/features/chart-highlight-filter.md) - The [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) and `DataChart` now expose a way to highlight and animate in and out of a subset of data. The display of this highlight depends on the series type. For column and area series, the subset will be shown on top of the total set of data where the subset will be colored by the actual brush of the series, and the total set will have a reduced opacity. For line series, the subset will be shown as a dotted line.
+
+## **17.0.0 (November 2023)**
 
 ### igniteui-angular-grids (Toolbar - Beta)
 
@@ -200,7 +208,7 @@ for example:
 
 <div class="divider--half"></div>
 
-## **8.2.12 (November 2019)**
+## **8.2.12**
 
 *   Changed Import Statements
 
@@ -211,12 +219,12 @@ Import statements have been simplified to use just package names instead of full
 
 | Affected Packages | Affected Components |
 | ------------------|---------------------|
-| <a href="https://www.npmjs.com/package/igniteui-angular-excel/v/8.2.12 (November 2019)" target="_blank">igniteui-angular-excel</a> | [Excel Library](excel-library.md)  |
-| <a href="https://www.npmjs.com/package/igniteui-angular-spreadsheet/v/8.2.12 (November 2019)" target="_blank">igniteui-angular-spreadsheet</a> | [Spreadsheet](spreadsheet-overview.md) |
-| <a href="https://www.npmjs.com/package/igniteui-angular-maps/v/8.2.12 (November 2019)" target="_blank">igniteui-angular-maps</a> | [Geo Map](geo-map.md), [Treemap](charts/types/treemap-chart.md)  |
-| <a href="https://www.npmjs.com/package/igniteui-angular-gauges/v/8.2.12 (November 2019)" target="_blank">igniteui-angular-gauges</a> |  [Bullet Graph](bullet-graph.md), [Linear Gauge](linear-gauge.md), [Radial Gauge](radial-gauge.md)   |
-| <a href="https://www.npmjs.com/package/igniteui-angular-charts/v/8.2.12 (November 2019)" target="_blank">igniteui-angular-charts</a>| Category Chart, Data Chart, Donut Chart, Financial Chart], Pie Chart, [Zoom Slider](zoomslider-overview.md)  |
-| <a href="https://www.npmjs.com/package/igniteui-angular-core/v/8.2.12 (November 2019)" target="_blank">igniteui-angular-core</a> | all classes and enums  |
+| <a href="https://www.npmjs.com/package/igniteui-angular-excel/v/8.2.12" target="_blank">igniteui-angular-excel</a> | [Excel Library](excel-library.md)  |
+| <a href="https://www.npmjs.com/package/igniteui-angular-spreadsheet/v/8.2.12" target="_blank">igniteui-angular-spreadsheet</a> | [Spreadsheet](spreadsheet-overview.md) |
+| <a href="https://www.npmjs.com/package/igniteui-angular-maps/v/8.2.12" target="_blank">igniteui-angular-maps</a> | [Geo Map](geo-map.md), [Treemap](charts/types/treemap-chart.md)  |
+| <a href="https://www.npmjs.com/package/igniteui-angular-gauges/v/8.2.12" target="_blank">igniteui-angular-gauges</a> |  [Bullet Graph](bullet-graph.md), [Linear Gauge](linear-gauge.md), [Radial Gauge](radial-gauge.md)   |
+| <a href="https://www.npmjs.com/package/igniteui-angular-charts/v/8.2.12" target="_blank">igniteui-angular-charts</a>| Category Chart, Data Chart, Donut Chart, Financial Chart], Pie Chart, [Zoom Slider](zoomslider-overview.md)  |
+| <a href="https://www.npmjs.com/package/igniteui-angular-core/v/8.2.12" target="_blank">igniteui-angular-core</a> | all classes and enums  |
 
 *   Code After Changes
 
