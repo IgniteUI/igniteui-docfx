@@ -13,7 +13,7 @@ mentionedTypes: ['XamBulletGraph']
 既存の Angular CLI プロジェクト (以前のもの) で Ignite UI for Angular を使用する場合は、以下のコマンドを実行します。
 
 ```cmd
-npm install --save {PackageCommon}
+npm install --save igniteui-angular
 npm install --save igniteui-angular-charts igniteui-angular-core
 npm install --save igniteui-angular-excel igniteui-angular-core
 npm install --save igniteui-angular-gauges igniteui-angular-core
