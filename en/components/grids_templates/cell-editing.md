@@ -205,9 +205,14 @@ public keydownHandler(event) {
         // Number or Alphabet upper case or Alphabet lower case
         const columnName = grid.getColumnByVisibleIndex(activeElem.column).field;
         const cell = grid.getCellByColumn(activeElem.row, columnName);
-        if (cell && !grid.crudService.cellInEditMode) {
-            grid.crudService.enterEditMode(cell);
+        if (cell && !cell.editMode) {
+            cell.editMode = true;
             cell.editValue = event.key;
+            this.shouldAppendValue = true;
+        } else if (cell && cell.editMode && this.shouldAppendValue) {
+            event.preventDefault();
+            cell.editValue = cell.editValue + event.key;
+            this.shouldAppendValue = false;
         }
     }
 }
