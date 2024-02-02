@@ -63,7 +63,7 @@ import { IGX_SLIDER_DIRECTIVES } from 'igniteui-angular';
     styleUrls: ['home.component.scss'],
     standalone: true,
     imports: [IGX_SLIDER_DIRECTIVES, FormsModule]
-    /* or imports: [IgxSliderComponent, FormsModule, HammerModule] */
+    /* or imports: [IgxSliderComponent, FormsModule] */
 })
 export class HomeComponent {
     public task: Task;
