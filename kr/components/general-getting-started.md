@@ -38,15 +38,15 @@ Now that we have everything we need, we can start creating/updating our applicat
 
 In **VS Code**, select **Terminal** menu, **New Terminal** option, and type this command in terminal window:
 
-*   **npx create-react-app my-app-name --typescript**
+*   **npx create-react-app MyAppName --typescript**
 
 Or
 
-*   **yarn create react-app my-app-name --typescript**
+*   **yarn create react-app MyAppName --typescript**
 
 Refer to this <a href="https://facebook.github.io/create-react-app/docs/adding-typescript" target="_blank">website</a> for more information on above commands.
 
-Next, you need to open the **my-app-name** folder in **VS Code** app and install the following packages for Ignite UI for Angular using these commands:
+Next, you need to open the **MyAppName** folder in **VS Code** app and install the following packages for Ignite UI for Angular using these commands:
 
 *   **npm install --save igniteui-angular-charts igniteui-angular-core**
 *   **npm install --save igniteui-angular-excel igniteui-angular-core**
