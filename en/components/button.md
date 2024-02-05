@@ -311,6 +311,40 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/buttons-style" >
 </code-view>
+
+### Custom sizing
+
+You can change the button height either by using the `--size` variable, targeting the `button` directly:
+
+```scss
+button {
+  --size: 50px;
+}
+```
+
+Or you can use the universal `--igx-button-size` variable to target all instances:
+
+```html
+<div class="my-app">
+  <button igxButton="raised"></button>
+</div>
+```
+```scss
+.my-app {
+  --igx-button-size: 50px;
+}
+```
+
+You can also use one of the predefined sizes, assigning it to the `--ig-size` variable. The available values for `--ig-size` are `--ig-size-small`, `--ig-size-medium`, and `--ig-size-large`:
+
+```scss
+button {
+    --ig-size: var(--ig-size-large);
+}
+```
+
+Learn more about it in the [Size](display-density.md) article.
+
 <div class="divider--half"></div>
 
 ## API References
