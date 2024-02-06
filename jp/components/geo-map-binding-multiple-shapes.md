@@ -22,7 +22,7 @@ Ignite UI for Angular マップでは、複数の地理的シリーズオブジ�
 
 <div class="divider--half"></div>
 
-このトピックでは、マップ コンポーネントに複数の地理的シリーズを表示する方法について段階的に説明します。すべての地理的シリーズは、[`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/undefined.igxshapedatasource.html) クラスを使用して形状ファイルからロードされた地理空間データに従ってプロットします。[`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/undefined.igxshapedatasource.html) オブジェクトの詳細については、[シェープ ファイルのバインディング](geo-map-binding-shp-file.md)のトピックを参照してください。
+このトピックでは、マップ コンポーネントに複数の地理的シリーズを表示する方法について段階的に説明します。すべての地理的シリーズは、[`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html) クラスを使用して形状ファイルからロードされた地理空間データに従ってプロットします。[`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html) オブジェクトの詳細については、[シェープ ファイルのバインディング](geo-map-binding-shp-file.md)のトピックを参照してください。
 
 *   [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicsymbolseriescomponent.html) – 主要都市の場所を表示します。
 *   [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicpolylineseriescomponent.html) – 主要ポート間のルートを表示します。
@@ -103,7 +103,7 @@ import { IgxShapeDataSource } from 'igniteui-angular-core';
 
 ## シェープファイルの読み込み
 
-次に、ページのコンストラクターで、地理マップコンポーネントに表示する各シェープファイルの [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/undefined.igxshapedatasource.html) を追加します。
+次に、ページのコンストラクターで、地理マップコンポーネントに表示する各シェープファイルの [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html) を追加します。
 
 ```ts
 const sdsPolygons = new IgxShapeDataSource();
@@ -127,7 +127,7 @@ sdsLocations.dataBind();
 
 ## ポリゴンの処理
 
-世界の国々の [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/undefined.igxshapedatasource.html) に読み込まれた形状データを処理し、[`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicshapeseriescomponent.html) オブジェクトに割り当てます。
+世界の国々の [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html) に読み込まれた形状データを処理し、[`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicshapeseriescomponent.html) オブジェクトに割り当てます。
 
 ```ts
 import { IgxGeographicPolylineSeriesComponent } from 'igniteui-angular-maps';
@@ -156,7 +156,7 @@ public onPolygonsLoaded(sds: IgxShapeDataSource, e: any) {
 
 ## ポリラインの処理
 
-[`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/undefined.igxshapedatasource.html) に読み込まれた形状データを処理し、主要都市間の通信ルートを使用して、[`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicpolylineseriescomponent.html) オブジェクトに割り当てます。
+[`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html) に読み込まれた形状データを処理し、主要都市間の通信ルートを使用して、[`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicpolylineseriescomponent.html) オブジェクトに割り当てます。
 
 ```ts
 import { IgxGeographicPolylineSeriesComponent } from 'igniteui-angular-maps';
@@ -187,7 +187,7 @@ public onPolylinesLoaded(sds: IgxShapeDataSource, e: any) {
 
 ## ポイントの処理
 
-[`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/undefined.igxshapedatasource.html) に読み込まれた世界各国の形状データを処理し、[`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicsymbolseriescomponent.html) オブジェクトに割り当てます。
+[`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html) に読み込まれた世界各国の形状データを処理し、[`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicsymbolseriescomponent.html) オブジェクトに割り当てます。
 
 ```ts
 import { IgxGeographicSymbolSeriesComponent } from 'igniteui-angular-maps';
@@ -366,4 +366,4 @@ export class MapBindingMultipleShapesComponent implements AfterViewInit {
 *   [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicpolylineseriescomponent.html)
 *   [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicshapeseriescomponent.html)
 *   [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicsymbolseriescomponent.html)
-*   [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/undefined.igxshapedatasource.html)
+*   [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html)
