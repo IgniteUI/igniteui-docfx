@@ -35,6 +35,8 @@ Additionally, a way to prevent the drop-down from closing on chip deletion would
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-tree-grid-hierarchical-selection">
 </code-view>
 
+>[!NOTE]
+>To display the Dropdown component opened initially, it is recommended to set the open method as a callback of the requestAnimationFrame method. This will ensure that the DOM tree is repainted and all elements are correctly positioned.
 
 ## API References
 
