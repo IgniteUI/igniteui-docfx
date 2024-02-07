@@ -206,6 +206,39 @@ If all went well, you should see something like the following in the browser:
            iframe-src="{environment:demosBaseUrl}/layouts/avatar-styling" >
 </code-view>
 
+### Custom sizing
+
+You can either use the `--size` variable, targeting the `igx-avatar` directly:
+
+```scss
+igx-avatar {
+  --size: 200px;
+}
+```
+
+Or you can use the universal `--igx-avatar-size` variable to target all instances:
+
+```html
+<div class="my-app">
+  <igx-avatar></igx-avatar>
+</div>
+```
+```scss
+.my-app {
+  --igx-avatar-size: 200px;
+}
+```
+
+You can also use one of the predefined sizes, assigning it to the `--ig-size` variable, if theres no size attribute applied. The available values for `--ig-size` are `--ig-size-small`, `--ig-size-medium`, and `--ig-size-large`:
+
+```scss
+igx-avatar {
+    --ig-size: var(--ig-size-small);
+}
+```
+
+Learn more about it in the [Size](display-density.md) article.
+
 <div class="divider--half"></div>
 
 ## API References

@@ -264,7 +264,37 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
            iframe-src="{environment:demosBaseUrl}/data-display/icon-styling" alt="Angular Icon Example">
 </code-view>
 
+### Custom sizing
 
+You can either use the `--size` variable, targeting the `igx-icon` directly:
+
+```scss
+igx-icon {
+  --size: 50px;
+}
+```
+
+Or you can use the universal `--igx-icon-size` variable to target all instances:
+```html
+<div class="my-app">
+  <igx-icon></igx-icon>
+</div>
+```
+```scss
+.my-app {
+  --igx-icon-size: 50px;
+}
+```
+
+You can also use one of the predefined sizes, assigning it to the `--ig-size` variable. The available values for `--ig-size` are `--ig-size-small`, `--ig-size-medium`, and `--ig-size-large`:
+
+```scss
+igx-icon {
+    --ig-size: var(--ig-size-medium);
+}
+```
+
+Learn more about it in the [Size](display-density.md) article.
 
 ## API References
 <div class="divider--half"></div>
