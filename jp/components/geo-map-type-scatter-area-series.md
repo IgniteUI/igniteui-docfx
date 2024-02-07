@@ -53,7 +53,7 @@ Angular マップ コンポーネントでは、[`IgxGeographicScatterAreaSeries
 | プロパティ名  | プロパティ型   | 説明   |
 |--------------|---------------| ---------------|
 |[`palette`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcustompalettecolorscalecomponent.html#palette)|ObservableCollection<Color>|補間するために選択する色のコレクションを取得または設定します。|
-|[`interpolationMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcustompalettecolorscalecomponent.html#interpolationMode)|[`ColorScaleInterpolationMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNcolorscaleinterpolationmode.html)|Palette から色を取得するメソッドを取得または設定します。|
+|[`interpolationMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcustompalettecolorscalecomponent.html#interpolationMode)|[`ColorScaleInterpolationMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.colorscaleinterpolationmode.html)|Palette から色を取得するメソッドを取得または設定します。|
 |[`maximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcustompalettecolorscalecomponent.html#maximumValue)|double|色を割り当てるための最大値。指定した値がこの値より大きい場合は透明になります。|
 |[`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcustompalettecolorscalecomponent.html#minimumValue)|double|色を割り当てるための最小値。指定した値がこの値より小さい場合は透明になります。|
 
