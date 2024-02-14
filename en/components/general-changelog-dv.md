@@ -30,14 +30,6 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 *   Vertical orientation has been added via the toolbar's [`orientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html#orientation) property. By default the toolbar is horizontal, now the toolbar can be shown in vertical orientation where the tools will popup to the left/right respectfully.
 *   Custom SVG icons support was added via the toolbar's `renderImageFromText` method, further enhancing custom tool creation.
 
-## **17.0.0 (December 2023)**
-
-### igniteui-angular-grids (Toolbar - Beta)
-
-*   A new tool has been added, as a default tool, to save the chart to an image via the clipboard.
-*   Vertical orientation has been added via the toolbar's [`orientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html#orientation) property. By default the toolbar is horizontal, now the toolbar can be shown in vertical orientation where the tools will popup to the left/right respectfully.
-*   Custom SVG icons support was added via the toolbar's `renderImageFromText` method, further enhancing custom tool creation.
-
 ## **16.1.0 (June 2023)**
 
 ### New Components
