@@ -12,7 +12,7 @@ mentionedTypes: ['XamBulletGraph']
 If you want to use Ignite UI for Angular in an existing Angular CLI project (one that you have from before). We have you covered! All you have to do is execute these commands:
 
 ```cmd
-npm install --save {PackageCommon}
+npm install --save igniteui-angular
 npm install --save igniteui-angular-charts igniteui-angular-core
 npm install --save igniteui-angular-excel igniteui-angular-core
 npm install --save igniteui-angular-gauges igniteui-angular-core
@@ -50,9 +50,15 @@ Finally, we can run our new application by using one of the following commands:
 npm run-script start
 ```
 
-After executing this command, your project will be built and served locally on your computer. It will automatically open in your default browser and you will be able to use Ignite UI for Angular components in your project.
+After executing this command, your project will be built and served locally on your computer. It will automatically open in your default browser and you will be able to use Ignite UI for Angular components in your project. The final result should show interactive map of the world:
 
-The final result should look something like this screenshot:
+<!-- <img src="../images/general/geo-map.png" /> -->
 
-<img src="../images/general/geo-map.png" />
+<code-view style="height: 750px" alt="Angular Overview Example"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/display-osm-imagery"
+                                                 github-src="maps/geo-map/display-osm-imagery">
+</code-view>
+
+
 <!-- end: Angular, React -->

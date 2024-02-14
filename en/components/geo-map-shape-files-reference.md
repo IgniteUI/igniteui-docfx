@@ -2,7 +2,7 @@
 title: Angular Map | Data Visualization Tools | Shape Files Reference | Shape Files Editing | Infragistics
 _description: Learn about shape files format to use with Infragistics' Angular map. Check out Ignite UI for Angular map tutorials!
 _keywords: Angular map, shape files, Ignite UI for Angular, Infragistics, shape editing
-mentionedTypes: ['XamGeographicMap']
+mentionedTypes: ['XamGeographicMap', 'GeographicShapeSeriesBase', 'Series']
 ---
 
 # Angular Shape Files Reference
@@ -107,5 +107,5 @@ The following topics provide additional information related to this topic.
 *   [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicpolylineseriescomponent.html)
 *   [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicshapeseriescomponent.html)
 *   `ItemsSource`
-*   `ShapeMemberPath`
-*   [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/undefined.igxshapedatasource.html)
+*   [`shapeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicshapeseriesbasecomponent.html#shapeMemberPath)
+*   [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html)
