@@ -12,7 +12,7 @@ The Ignite UI for Angular Stock Chart, sometimes referred to as Angular Financia
 
 ## Angular Stock Chart Example
 
-You can create Stock Chart using the [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html) control by binding your data and optionally setting [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#chartType) property to [`line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNcharttype.html#line) value, as shown in the example below.
+You can create Stock Chart using the [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html) control by binding your data and optionally setting [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#chartType) property to [`line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_excel.charttype.html#line) value, as shown in the example below.
 
 <code-view style="height: 600px" alt="Angular Stock Chart Example"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
