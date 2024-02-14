@@ -62,7 +62,7 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
     <igx-icon fontSet="material">search</igx-icon>
 </button>
 
-// version 17.0.x
+// version 17.1.x
 <button igxIconButton="flat" [style.background]="'red'">
     <igx-icon fontSet="material">search</igx-icon>
 </button>
