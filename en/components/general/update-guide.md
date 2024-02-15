@@ -51,6 +51,23 @@ Unfortunately not all changes can be automatically updated. Changes below are sp
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
+## From 17.0.x to 17.1.x
+
+- **Breaking changes**
+- In version 17.1.x the `icon` type of the `igxButton` directive has been changed to the `igxIconButton` directive of type `flat`. Automatic migrations are available and will be applied on `ng update`. However, some of the `igxButton` input properties that could previously be used with the `icon` type buttons, cannot be applied to the newly created `igxIconButton`. If you have used the `igxButtonColor` or the `igxButtonBackground` properties with a button of type `icon`, you should update it as follows: 
+
+```html
+// version 17.0.x
+<button igxButton="icon" [igxButtonBackground]="'red'">
+    <igx-icon fontSet="material">search</igx-icon>
+</button>
+
+// version 17.1.x
+<button igxIconButton="flat" [style.background]="'red'">
+    <igx-icon fontSet="material">search</igx-icon>
+</button>
+```
+
 ## From 16.1.x to 17.0.x
 
 ### General
