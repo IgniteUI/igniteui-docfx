@@ -36,6 +36,8 @@ DOM からチップを削除し、ツリー/グリッドから項目を選択解
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-tree-grid-hierarchical-selection">
 </code-view>
 
+>[!NOTE]
+>最初に開いた Dropdown コンポーネントを表示するには、open メソッドを requestAnimationFrame メソッドのコールバックとして設定することをお勧めします。これにより、DOM ツリーが再描画され、すべての要素が正しく配置されるようになります。
 
 ## API リファレンス
 
