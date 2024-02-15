@@ -11,7 +11,7 @@ The Ignite UI for Angular DatePicker Component lets users pick a single date thr
 
 ## Angular Datepicker Example
 
-Below you can see a sample that demonstrates how the Angular DatePicker works when users re enabled to pick a date through a manual text input and click on the calendar icon on the left to navigate to it. See how to render it. 
+Below you can see a sample that demonstrates how the Angular DatePicker works when users are enabled to pick a date through a manual text input and click on the calendar icon on the left to navigate to it. See how to render it. 
 
 <!-- TODO: datepicker sample with several options enabled -->
 <code-view style="height: 550px;"
@@ -145,10 +145,10 @@ The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepicker
     <igx-icon igxSuffix (click)="datePicker.open()">keyboard_arrow_down</igx-icon>
 </igx-date-picker>
 ```
-The above sample will add an additional toggle icon at the end of the input, right after the default clear icon. This will not remove the default toggle icon, though as prefixes and suffixes can be stacked one after the other.
+The above snippet will add an additional toggle icon at the end of the input, right after the default clear icon. This will not remove the default toggle icon, though as prefixes and suffixes can be stacked one after the other.
 
 #### Customizing the toggle and clear icons
-The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) can be configured with [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) and [`IgxPickerClearComponent`]({environment:angularApiUrl}/classes/igxpickerclearcomponent.html), these can be used to change the toggle and clear icons without having to add your own click handlers.
+The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) can be configured with [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) and [`IgxPickerClearComponent`]({environment:angularApiUrl}/classes/igxpickerclearcomponent.html). These can be used to change the toggle and clear icons without having to add your own click handlers.
 
 ```html
  <igx-date-picker>
@@ -164,7 +164,7 @@ The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepicker
 
 #### Custom action buttons
 The picker's action buttons can be modified in two ways:
-- the button's text can be changed using the [`todayButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#todayButtonLabel)) and the [`cancelButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#cancelButtonLabel) input properties:
+- the button's text can be changed using the [`todayButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#todayButtonLabel) and the [`cancelButtonLabel`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#cancelButtonLabel) input properties:
 ```html
 <igx-date-picker [todayButtonLabel]="'今日'" [cancelButtonLabel]="'キャンセル'"></igx-date-picker>
 ```
@@ -198,7 +198,7 @@ Since the [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdate
 ### Dialog Mode
 The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) also supports a `dialog` mode:
 ```html
-<igx-date-picker [mode]="'dropdown'"></igx-date-picker>
+<igx-date-picker [mode]="'dialog'"></igx-date-picker>
 ```
 <code-view style="height: 540px;"
            data-demos-base-url="{environment:demosBaseUrl}"
