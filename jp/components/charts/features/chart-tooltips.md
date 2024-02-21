@@ -28,10 +28,10 @@ Angular チャートでは、ツールチップはバインドされたデータ
 
 | プロパティの値     | 説明 |
 | -------------------|---------------- |
-| [`Default`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtooltiptype.html#Default) ツールチップ | ツールチップは、ポインタがその上に位置されると、単一の項目のツールチップを表示します。 |
-| [`Data`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtooltiptype.html#Data) ツールチップ | チャートのすべてのシリーズのデータ ツールチップを表示します。 |
-| [`Item`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtooltiptype.html#Item) ツールチップ | ツールチップは、ポインタが位置されているカテゴリの各データ項目のツールチップを表示します。 |
-| [`Category`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtooltiptype.html#Category) ツールチップ | ツールチップはポインターがデータ ポイント上に配置されたときにすべてのデータ ポイントに対してツールチップを表示できます。 |
+| [`Default`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.tooltiptype.html#Default) ツールチップ | ツールチップは、ポインタがその上に位置されると、単一の項目のツールチップを表示します。 |
+| [`Data`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.tooltiptype.html#Data) ツールチップ | チャートのすべてのシリーズのデータ ツールチップを表示します。 |
+| [`Item`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.tooltiptype.html#Item) ツールチップ | ツールチップは、ポインタが位置されているカテゴリの各データ項目のツールチップを表示します。 |
+| [`Category`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.tooltiptype.html#Category) ツールチップ | ツールチップはポインターがデータ ポイント上に配置されたときにすべてのデータ ポイントに対してツールチップを表示できます。 |
 
 <div class="divider--half"></div>
 
@@ -73,12 +73,6 @@ Angular チャートでは、ツールチップはバインドされたデータ
 *   [チャート マーカー](chart-markers.md)
 
 ## API リファレンス
-
-以下は、上記のセクションで説明した API メンバーのリストです。
-
-*   [`toolTipType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#toolTipType)
-*   [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html)
-*   [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)
 
 [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) コンポーネントと [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html) コンポーネントは、次の API プロパティを共有します:
 
