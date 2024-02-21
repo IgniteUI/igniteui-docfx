@@ -78,8 +78,8 @@ In the following example, the treemap demonstrates the ability of changing it's 
 The Treemap chart displays the relative weight of data. It uses a variety of algorithms to help it determine how the layout of its data items should occur:
 
 *   `SliceAndDiced` - layout algorithm aims to preserve the initial order at the expense of the aspect ratio.
-*   [`Squarified`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtreemaplayouttype.html#Squarified) - layout tiling algorithm has a better aspect ratio than the [`SliceAndDice`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtreemaplayouttype.html#SliceAndDice) and keeps a better order than Squarified.
-*   [`Stripped`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtreemaplayouttype.html#Stripped) - layout type algorithm obtains the best aspect ratio but the objects are arranged by size.
+*   [`Squarified`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.treemaplayouttype.html#Squarified) - layout tiling algorithm has a better aspect ratio than the [`SliceAndDice`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.treemaplayouttype.html#SliceAndDice) and keeps a better order than Squarified.
+*   [`Stripped`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.treemaplayouttype.html#Stripped) - layout type algorithm obtains the best aspect ratio but the objects are arranged by size.
 
 The Treemap allows you to choose the algorithm that is best for your requirements, defaulting to use the Squarified method. It also includes the ability to allow you to colorize nodes using two mechanisms:
 
@@ -92,8 +92,8 @@ The Treemap allows you to choose the algorithm that is best for your requirement
 
 Note that the [`layoutOrientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#layoutOrientation) property works with the layout types SliceAndDice and Strip.
 
-*   [`Horizontal`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtreemaporientation.html#Horizontal) – the child nodes are going to be stacked horizontally(SliceAndDice).
-*   [`Vertical`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtreemaporientation.html#Vertical) – the child nodes are going to be stacked vertically (SliceAndDice).
+*   [`Horizontal`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.treemaporientation.html#Horizontal) – the child nodes are going to be stacked horizontally(SliceAndDice).
+*   [`Vertical`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.treemaporientation.html#Vertical) – the child nodes are going to be stacked vertically (SliceAndDice).
 
 ## Angular Treemap Styling
 
