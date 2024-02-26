@@ -59,7 +59,7 @@ import { IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective 
 @Component({
     selector: 'app-home',
     template: `
-    <button igxButton="raised" 
+    <button igxButton="contained" 
         [igxToggleAction]="dropdown"
         [igxDropDownItemNavigation]="dropdown">
         Options
@@ -89,7 +89,7 @@ Ignite UI for Angular Drop Down モジュールまたはディレクティブを
 
 ```html
 <!-- dropdown.component.html -->
-<button igxButton="raised" 
+<button igxButton="contained" 
         [igxToggleAction]="dropdown"
         [igxDropDownItemNavigation]="dropdown">
         Options
@@ -122,7 +122,7 @@ export class MyDropDownComponent {
 
 ```html
 <!-- dropdown.component.html -->
-<button igxButton="raised" 
+<button igxButton="contained" 
         [igxToggleAction]="dropdown" 
         [igxDropDownItemNavigation]="dropdown">
         Options
@@ -160,7 +160,7 @@ export class MyDropDownComponent {
 
 ```html
 <!-- dropdown.component.html -->
-<button igxButton="raised" 
+<button igxButton="contained" 
         [igxToggleAction]="dropdown"
         [igxDropDownItemNavigation]="dropdown">
         Countries
@@ -292,7 +292,7 @@ export class MyCustomDropDownComponent {
                 [igxToggleOutlet]="outlet"
                 [overlaySettings]="overlaySettings"
                 [igxDropDownItemNavigation]="menu"
-                igxButton="icon">
+                igxIconButton="flat">
             <igx-icon fontSet="material">more_vert</igx-icon>
         </button>
         <igx-drop-down #menu (selectionChanging)="selectionHandler($event)">
@@ -340,6 +340,78 @@ export class MyMenuComponent {
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-menu" >
 </code-view>
 
+### 複数レベルのドロップダウン メニュー
+
+次のサンプルは、ユーザーが一連のネストされたメニュー上にマウスを移動することによって、コンテンツの階層をすばやく簡単に移動できるようにする複数レベルのドロップダウン メニューを実装する方法を示しています。
+
+複数レベルのドロップダウン メニューの実装には、[`IgxDropDownComponent`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) と、以下で説明するカスタム ディレクティブとサービスを使用します。
+
+追加のドロップダウンを開くように [`IgxDropDownItem`]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html) を構成するには、ネストされたドロップダウンの [`overlay settings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) を処理し、その `innerDropdown` プロパティを通じてその開閉状態を管理する `multiLevel` ディレクティブを追加します。
+
+```html
+<igx-drop-down #dropdown1>
+    <igx-drop-down-item [value]="'Web'" multiLevel [innerDropdown]="web">
+        Web <igx-icon igxSuffix>chevron_right</igx-icon>
+    </igx-drop-down-item>
+    ...
+</igx-drop-down>
+
+<igx-drop-down #web>
+    <igx-drop-down-item [value]="'App Builder'">
+        App Builder
+    </igx-drop-down-item>
+    ...
+</igx-drop-down>
+```
+
+複数レベルのドロップダウンがメニューとして動作するように構成するには、階層内のすべてのドロップダウンの [selectionChanging]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selectionChanging) イベントを処理し、デフォルトの動作をキャンセルする必要があります。次に、選択を適切に処理するには、`MultiLevelService` の `handleSelection` メソッドを使用します。また、メニュー項目をクリックしたときにドロップダウンが閉じないようにするには、`MultiLevelService` の `handleClosing` メソッドを使用します。
+
+```ts
+@ViewChildren(IgxDropDownComponent, { read: IgxDropDownComponent })
+private _dropdowns: QueryList<IgxDropDownComponent>;
+
+@ViewChild('dropdown1', { read: IgxDropDownComponent })
+private _multiLevelDropdown: IgxDropDownComponent;
+
+constructor(private _multiLevelService: MultiLevelService) { }
+
+public ngAfterViewInit(): void {
+    this._dropdowns.forEach((dropdown) => {
+        dropdown.selectionChanging.subscribe((args) => {
+            args.cancel = true;
+            const value = args.newSelection.value;
+            const categories = this._multiLevelService.categories;
+
+            if (categories.includes(value)) {
+                this.selection = '';
+                return;
+            }
+
+            if (this._multiLevelService.isMultiLevel(dropdown)) {
+                this._multiLevelService.handleSelection();
+            } else {
+                dropdown.close();
+            }
+
+            this.selection = value;
+        });
+    });
+
+    this._multiLevelDropdown.closing.subscribe((args) => {
+        this._multiLevelService.handleClosing(args);
+    });
+}
+```
+
+上記の構成の結果は、次のサンプルで確認できます。
+
+<code-view style="height:400px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-multi-level-menu">
+</code-view>
+
+>[!NOTE]
+>最初に開いた Dropdown コンポーネントを表示するには、open メソッドを requestAnimationFrame メソッドのコールバックとして設定することをお勧めします。これにより、DOM ツリーが再描画され、すべての要素が正しく配置されるようになります。
 
 ### Navigation ディレクティブ
 [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) ディレクティブを使用して、`igxDropDown` コンポーネントのキーボード ナビゲーションを有効にします。ディレクティブがトリガーされたすべてのイベントを処理できるようにするには、アクティブな (フォーカスされる) 要素または親コンテナーに適用する必要があります。デフォルトでは、ドロップダウンまたはその項目はフォーカスを取得しないため、ディレクティブはドロップダウンを制御する `button` または `input` に配置できます。ナビゲーション ディレクティブの値は、[IgxDropDownBaseDirective]({environment:angularApiUrl}/classes/igxdropdownbasedirective.html) クラスのインスタンスまたは子孫であるコンポーネントを対象とする必要があります。
@@ -356,7 +428,7 @@ export class MyMenuComponent {
         [value]="dropDown.selectedItem?.value"
         (keydown.ArrowDown)="openDropDown()"/>
 
-    <igx-suffix igxButton="icon" igxRipple>
+    <igx-suffix igxIconButton="flat" igxRipple>
         <igx-icon>arrow_drop{{ dropDown.collapsed ? '_down' : '_up' }}</igx-icon>
     </igx-suffix>
 </igx-input-group>

@@ -137,63 +137,34 @@ public alignment = ButtonGroupAlignment.vertical;
 
 <div class="divider--half"></div>
 
-### Multiple selection
-Use the the [`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#multiSelection) input property to enable the multiple selection in the button group.
+### Selection
 
-```html
-<!-- sample.component.html -->
-<igx-buttongroup [multiSelection]="true">
-    <button igxButton>
-        <igx-icon>format_bold</igx-icon>
-    </button>
-    <button igxButton>
-        <igx-icon>format_italic</igx-icon>
-    </button>
-    <button igxButton>
-        <igx-icon>format_underlined</igx-icon>
-    </button>
-</igx-buttongroup>
-```
+In order to configure the `igx-buttongroup` selection, you could use its [selectionMode]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#selectionMode) property. This property accepts the following three modes: 
+- **single** - default selection mode of the button group. A single button can be selected/deselected by the user.
+- **singleRequired** - mimics a radio group behavior. Only one button can be selected and once initial selection is made, deselection is not possible through user interaction.
+- **multi** - multiple buttons in the group can be selected and deselected.
 
+The sample below demonstrates the exposed `igx-buttongroup` selection modes:
 
-<code-view style="height: 80px" 
+<code-view style="height: 170px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-4" >
 </code-view>
 
 
-### Display Density
-The [`displayDensity`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#displayDensity) input property is used to control the display density of a button group. This will set the style for the buttons in the group to cosy, compact or comfortable (default value) accordingly.
+### Size (Display Density)
+The `--ig-size` CSS custom property can be used to control the size of the button group.
 
-> [!NOTE] 
-> The display density of a button within a button group is not changed if it is explicitly specified.
-
-```typescript
-// sample.component.ts
-...
-public displayDensity = 'comfortable';
-public displayDensities;
-
-public ngOnInit() {
-    this.displayDensities = [
-        { label: 'compact', selected: this.displayDensity === 'compact', togglable: true },
-        { label: 'cosy', selected: this.displayDensity === 'cosy', togglable: true },
-        { label: 'comfortable', selected: this.displayDensity === 'comfortable', togglable: true }
-    ];
+```scss
+/* sample.component.scss */
+igx-buttongroup {
+    --ig-size: var(--ig-size-small);
 }
-
-public selectDensity(event) {
-    this.displayDensity = this.displayDensities[event.index].label;
-}
-...
 ```
 
 ```html
 <!-- sample.component.html -->
-<igx-buttongroup [values]="displayDensities" 
-                 [displayDensity]="displayDensity"
-                 (selected)="selectDensity($event)">
-</igx-buttongroup>
+<igx-buttongroup></igx-buttongroup>
 ```
 
 
@@ -266,7 +237,7 @@ public ngOnInit() {
 
 ```html
 <!-- sample.component.html -->
-<igx-buttongroup [multiSelection]="true" [values]="bordersButtons"></igx-buttongroup>
+<igx-buttongroup [selectionMode]="'multi'" [values]="bordersButtons"></igx-buttongroup>
 ```
 
 

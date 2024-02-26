@@ -191,6 +191,7 @@ public ngOnInit() {
 
 ## サーバーサイド レンダリング時の注意
 
+> [!NOTE]
 > Angular Universal を使用してアプリケーションにサーバー側のレンダリング ロジックを実装し、`IgxIconService` を使用してアイコンを登録した場合は、以下の例外が発生することがあります。
 <br/><br/>
 `XMLHttpRequest is not defined. Could not fetch SVG from url.` (XMLHttpRequest が定義されていません。url から SVG をフェッチできませんでした。) 
@@ -263,7 +264,38 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
            iframe-src="{environment:demosBaseUrl}/data-display/icon-styling" alt="Angular Icon の例">
 </code-view>
 
+### カスタム サイズ変更
 
+`igx-icon` を直接ターゲットとして `--size` 変数を使用することができます。
+
+```scss
+igx-icon {
+  --size: 50px;
+}
+```
+
+または、ユニバーサル変数 `--igx-icon-size` を使用して、すべてのインスタンスをターゲットにすることもできます。
+
+```html
+<div class="my-app">
+  <igx-icon></igx-icon>
+</div>
+```
+```scss
+.my-app {
+  --igx-icon-size: 50px;
+}
+```
+
+事前定義されたサイズの 1 つを使用して、それを `--ig-size` 変数に割り当てることもできます。`--ig-size` に使用可能な値は、`--ig-size-small`、`--ig-size-medium`、`--ig-size-large` です。
+
+```scss
+igx-icon {
+    --ig-size: var(--ig-size-medium);
+}
+```
+
+詳細については、[サイズ](display-density.md)の記事をご覧ください。
 
 ## API リファレンス
 <div class="divider--half"></div>

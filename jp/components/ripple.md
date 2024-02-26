@@ -59,7 +59,7 @@ import { IgxRippleDirective, IgxButtonDirective } from 'igniteui-angular';
 
 @Component({
     selector: 'app-home',
-    template: '<button igxButton="raised" igxRipple>Click Me</button>',
+    template: '<button igxButton="contained" igxRipple>Click Me</button>',
     styleUrls: ['home.component.scss'],
     standalone: true,
     imports: [IgxRippleDirective, IgxButtonDirective]
@@ -79,7 +79,7 @@ Ignite UI for Angular Ripple モジュールまたはディレクティブをイ
 `igxRipple` を使用して指定した要素にリップル効果を追加します。
 
 ```html
-<button igxButton="raised" igxRipple>Click Me</button>
+<button igxButton="contained" igxRipple>Click Me</button>
 ```
 
 ## 例
@@ -89,7 +89,7 @@ Ignite UI for Angular Ripple モジュールまたはディレクティブをイ
 `igxRipple` を使用して、デフォルトのリップル色を簡単に変更できます。
 
 ```html
-<button igxButton="raised" igxRipple="white">White</button>
+<button igxButton="contained" igxRipple="white">White</button>
 ```
 
 <code-view style="height: 100px"
@@ -101,7 +101,7 @@ Ignite UI for Angular Ripple モジュールまたはディレクティブをイ
 デフォルトでリップル エフェクトはクリック イベントの位置から開始します。この動作で要素の中点を原点に変更するには、[`igxRippleCentered`]({environment:angularApiUrl}/classes/igxrippledirective.html#centered) プロパティを使用できます。
 
 ```html
-<button igxButton="raised" igxRipple="white" [igxRippleCentered]="true">Centered</button>
+<button igxButton="contained" igxRipple="white" [igxRippleCentered]="true">Centered</button>
 ```
 
 <code-view style="height: 100px"
@@ -113,7 +113,7 @@ Ignite UI for Angular Ripple モジュールまたはディレクティブをイ
 [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippleDuration) プロパティを使用して、リップルアニメーションの期間を変更できます。これは、デフォルトで 600 ミリ秒に設定されています。
 
 ```html
-<button igxButton="raised" igxRipple [igxRippleDuration]="2000">Click Me</button>
+<button igxButton="contained" igxRipple [igxRippleDuration]="2000">Click Me</button>
 ```
 
 <code-view style="height: 100px"
@@ -127,7 +127,7 @@ Ignite UI for Angular Ripple モジュールまたはディレクティブをイ
 ```html
 <div class="parent" igxRipple="white" igxRippleTarget=".child" [igxRippleCentered]="true">
     ...
-    <button class="sample-button child" igxButton="raised">Read More</button>
+    <button class="sample-button child" igxButton="contained">Read More</button>
 </div>
 ```
 親要素または子要素をクリックしても、リップル エフェクトはボタンにのみ表示されます。

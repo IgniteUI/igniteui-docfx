@@ -58,7 +58,7 @@ import { IgxSnackbarComponent, IgxButtonDirective } from 'igniteui-angular';
 @Component({
     selector: 'app-home',
     template: `
-    <button igxButton="raised" (click)="snackbar.open()">Delete Message</button>
+    <button igxButton="contained" (click)="snackbar.open()">Delete Message</button>
     <div>
         <igx-snackbar #snackbar>Message deleted</igx-snackbar>
     </div>
@@ -80,7 +80,7 @@ Snackbar コンポーネントを表示するには、ボタン クリックで 
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="snackbar.open()">Delete Message</button>
+<button igxButton="contained" (click)="snackbar.open()">Delete Message</button>
 <div>
     <igx-snackbar #snackbar>Message deleted</igx-snackbar>
 </div>
@@ -91,8 +91,8 @@ Snackbar コンポーネントを表示するには、ボタン クリックで 
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="snackbar.open('Message deleted')">Delete Message</button>
-<button igxButton="raised" (click)="snackbar.open('Message deletion was not successful. Please try again')">Delete Message</button>
+<button igxButton="contained" (click)="snackbar.open('Message deleted')">Delete Message</button>
+<button igxButton="contained" (click)="snackbar.open('Message deletion was not successful. Please try again')">Delete Message</button>
 <div>
     <igx-snackbar #snackbar></igx-snackbar>
 </div>
@@ -104,7 +104,7 @@ Snackbar コンポーネントを表示するには、ボタン クリックで 
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="snackbar.open()">Send message</button>
+<button igxButton="contained" (click)="snackbar.open()">Send message</button>
 <div>
   <igx-snackbar #snackbar [autoHide]="false" actionText="CLOSE" (clicked)="close(snackbar)">Message sent</igx-snackbar>
 </div>
@@ -133,7 +133,7 @@ Snackbar の内容をカスタマイズして、メッセージやボタンよ�
 
 ```html
 <!--sample.component.html-->
-<button igxButton="raised" (click)="snackbar.open()">Load file</button>
+<button igxButton="contained" (click)="snackbar.open()">Load file</button>
 <div>
   <igx-snackbar #snackbar displayTime="5000">File loading
     <svg id="dots" height="20px">
@@ -203,7 +203,7 @@ Snackbar の主な機能を説明しました。次の例はより複雑なサ�
                     <span class="name">{{item.text}}</span>
                 </div>
             </div>
-            <span igxButton="icon" igxRipple igxRippleCentered="true" (click)="delete(item)">
+            <span igxIconButton="flat" igxRipple igxRippleCentered="true" (click)="delete(item)">
                 <igx-icon [style.color]="'#ff5252'">delete</igx-icon>
             </span>
         </div>

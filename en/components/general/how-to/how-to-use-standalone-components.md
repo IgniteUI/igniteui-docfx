@@ -1,14 +1,12 @@
 ---
 title: How to Use Standalone Components - Angular | Ignite UI for Angular
-_description: How to use Angular 16 preview feature that allows components to be imported standalone and without the use of NgModules with Ignite UI Angular
+_description: How to use Ignite UI for Angular components as standalone components, and as dependencies in your other standalone components.
 _keywords: Ignite UI for Angular, Standalone Components, Angular 16, Angular Modules
 ---
 
-# Using Standalone Components with Ignite UI for Angular (Preview)
+# Using Standalone Components with Ignite UI for Angular
 
 Angular 14 introduced the concept of [standalone components](https://angular.io/guide/standalone-components) which allows for a simplified way of building applications by reducing the need for using `NgModules`. Standalone components were in developer preview until Angular 15. To support this new paradigm, all Ignite UI for Angular components are now exported as `standalone` with version `16.0.0`. All the existing `NgModules` are still exported by the library for backward compatibility. However, they no longer declare any of the Ignite UI for Angular components. Instead they import and export the `standalone` components.
-
-The `standalone` components are still in a **preview** stage. Some utility directive exports may change in the future and may be missing from the documentation in the initial release.
 
 ## How to use the new standalone components
 
@@ -89,6 +87,7 @@ The `IGX_GRID_DIRECTIVES` shown in the previous examples is a utility directive 
 | [`IGX_PIVOT_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/pivot-grid/public_api.ts) | Exports all pivot grid related components and directives. |
 | [`IGX_PROGRESS_BAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/progressbar/public_api.ts) | Exports all linear and circular progress bar related components and directives. |
 | [`IGX_QUERY_BUILDER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/query-builder/public_api.ts) | Exports all query builder related components and directives. |
+| [`IGX_RADIO_GROUP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/directives/radio/public_api.ts) | Exports all radio group related components and directives. |
 | [`IGX_SELECT_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/select/public_api.ts) | Exports all select related components and directives. |
 | [`IGX_SIMPLE_COMBO_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/simple-combo/public_api.ts) | Exports all simple combo related components and directives. |
 | [`IGX_SLIDER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/slider/public_api.ts) | Exports all slider related components and directives. |

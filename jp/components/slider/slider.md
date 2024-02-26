@@ -54,7 +54,6 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { HammerModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { IGX_SLIDER_DIRECTIVES } from 'igniteui-angular';
 // import { IGX_SLIDER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
@@ -64,12 +63,30 @@ import { IGX_SLIDER_DIRECTIVES } from 'igniteui-angular';
     template: '<igx-slider [minValue]="0" [maxValue]="100" [step]="10" [(ngModel)]="task.completion"></igx-slider>',
     styleUrls: ['home.component.scss'],
     standalone: true,
-    imports: [IGX_SLIDER_DIRECTIVES, FormsModule, HammerModule]
-    /* or imports: [IgxSliderComponent, FormsModule, HammerModule] */
+    imports: [IGX_SLIDER_DIRECTIVES, FormsModule]
+    /* or imports: [IgxSliderComponent, FormsModule] */
 })
 export class HomeComponent {
     public task: Task;
 }
+```
+
+スタンドアロン コンポーネントを使用する場合、[`HammerModule`](https://angular.io/api/platform-b​​rowser/HammerModule) を `app.config` ファイルにインポートする必要があります。
+
+```typescript
+//app.config.ts
+
+import { ApplicationConfig, importProvidersFrom } from '@angular/core';
+import { provideRouter } from '@angular/router';
+import { appRoutes } from './app.routes';
+import { HammerModule } from '@angular/platform-browser';
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    importProvidersFrom(HammerModule),
+    provideRouter(appRoutes)
+  ],
+};
 ```
 
 Ignite UI for Angular Slider モジュールまたはディレクティブをインポートしたので、`igx-slider` コンポーネントの使用を開始できます。

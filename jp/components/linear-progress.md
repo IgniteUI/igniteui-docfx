@@ -187,6 +187,7 @@ public positionEnd: IgxTextAlign = IgxTextAlign.END;
 > [!NOTE]
 > [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) 入力値が定義されていない場合、更新は **[`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) 値の 1%**。進行を速くしたい場合、[`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) 値を (**[`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) * 1%**) より大きい値にし、より遅い進行は[`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) をデフォルト進捗状況未満にする必要があります。
 
+> [!NOTE]
 > [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) を [`value`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#value) 入力より大きい値に定義した場合、**進行状況の更新に渡す値**を取得する更新は一つのみとなります。  
 <div class="divider--half"></div>
 
@@ -202,10 +203,10 @@ public positionEnd: IgxTextAlign = IgxTextAlign.END;
     ></igx-linear-bar>
 
     <div class="button-container">
-        <button igxButton="icon" (click)="decrementProgress()">
+        <button igxIconButton="flat" (click)="decrementProgress()">
             <igx-icon fontSet="material">remove</igx-icon>
         </button>
-        <button igxButton="icon" (click)="incrementProgress()">
+        <button igxIconButton="flat" (click)="incrementProgress()">
             <igx-icon fontSet="material">add</igx-icon>
         </button>
     </div>

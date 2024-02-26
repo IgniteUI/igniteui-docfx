@@ -93,21 +93,21 @@ Ignite UI for Angular Navbar モジュールまたはディレクティブをイ
 
 ### アイコン ボタンの追加
 
-検索、お気に入りなどのオプションを追加するには、[**IgxButton**](button.md) と [**IgxIcon**](icon.md) モジュールを **app.module.ts** ファイルにインポートします。
+検索、お気に入りなどのオプションを追加するには、[**IgxIconButton**](icon-button.md) と [**IgxIcon**](icon.md) モジュールを **app.module.ts** ファイルにインポートします。
 ```typescript
 // app.module.ts
 
 ...
 import {
     IgxNavbarModule,
-    IgxButtonModule,
+    IgxIconButtonDirective,
     IgxIconModule
 } from 'igniteui-angular';
 // import { IgxNavbarModule, IgxButtonModule, IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
-    imports: [..., IgxButtonModule, IgxIconModule],
+    imports: [..., IgxIconButtonDirective, IgxIconModule],
 })
 export class AppModule {}
 ```
@@ -118,13 +118,13 @@ export class AppModule {}
 <!--navbar.component.html-->
 
  <igx-navbar title="Sample App">
-    <button igxButton="icon">
+    <button igxIconButton="flat">
         <igx-icon>search</igx-icon>
     </button>
-    <button igxButton="icon">
+    <button igxIconButton="flat">
         <igx-icon>favorite</igx-icon>
     </button>
-    <button igxButton="icon">
+    <button igxIconButton="flat">
         <igx-icon>more_vert</igx-icon>
     </button>
 </igx-navbar>
@@ -156,18 +156,18 @@ export class AppModule {}
 
  <igx-navbar title="Sample App">
     <igx-navbar-action>
-        <button igxButton="icon">
+        <button igxIconButton="flat">
             <igx-icon family="fa" name="fa-home"></igx-icon>
         </button>
     </igx-navbar-action>
         
-    <button igxButton="icon">
+    <button igxIconButton="flat">
         <igx-icon>search</igx-icon>
     </button>
-    <button igxButton="icon">
+    <button igxIconButton="flat">
         <igx-icon>favorite</igx-icon>
     </button>
-    <button igxButton="icon">
+    <button igxIconButton="flat">
         <igx-icon>more_vert</igx-icon>
     </button>
 </igx-navbar>
@@ -237,7 +237,7 @@ Navbar のタイトルにカスタム コンテンツを提供する場合は、
 <div class="sample-column">
     <igx-navbar>
         <igx-navbar-action>
-            <button igxButton="icon">
+            <button igxIconButton="flat">
                 <igx-icon>menu</igx-icon>
             </button>
         </igx-navbar-action>
@@ -249,13 +249,13 @@ Navbar のタイトルにカスタム コンテンツを提供する場合は、
             </a>
         </div>
 
-        <button igxButton="icon">
+        <button igxIconButton="flat">
             <igx-icon>search</igx-icon>
         </button>
-        <button igxButton="icon">
+        <button igxIconButton="flat">
             <igx-icon>favorite</igx-icon>
         </button>
-        <button igxButton="icon">
+        <button igxIconButton="flat">
             <igx-icon>more_vert</igx-icon>
         </button>
     </igx-navbar>

@@ -30,7 +30,7 @@
   new: false
   updated: false
 - name: How to
-  new: true
+  new: false
   items:
     - name: Build Real-time SignalR App with .NET Core
       href: general/how-to/signal-r-service-live-data.md
@@ -43,10 +43,10 @@
       new: false
     - name: Customize and Optimize Themes
       href: general/how-to/how-to-customize-theme.md
-      new: true
+      new: false
     - name: Use Standalone Components
       href: general/how-to/how-to-use-standalone-components.md
-      preview: true
+      updated: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   sortable: false
@@ -151,7 +151,7 @@
           new: false
         - name: Validation
           href: grid/validation.md
-          new: true
+          new: false
         - name: Grid with Cascading combos
           href: grid/cascading-combos.md
           new: true
@@ -238,9 +238,10 @@
     - name: Collapsible Column Groups
       href: grid/collapsible-column-groups.md
       new: false
-    - name: Display Density
+    - name: Size (Display Density)
       href: grid/display-density.md
       new: false
+      updated: true
     - name: Conditional Styling
       href: grid/conditional-cell-styling.md
       new: false
@@ -306,7 +307,7 @@
           new: false
         - name: Validation
           href: treegrid/validation.md
-          new: true
+          new: false
     - name: Row Drag
       href: treegrid/row-drag.md
       new: false
@@ -381,7 +382,7 @@
     - name: Collapsible Column Groups
       href: treegrid/collapsible-column-groups.md
       new: false
-    - name: Display Density
+    - name: Size (Display Density)
       href: treegrid/display-density.md
       new: false
     - name: Conditional Styling
@@ -444,7 +445,7 @@
           new: false
         - name: Validation
           href: hierarchicalgrid/validation.md
-          new: true
+          new: false
     - name: Export to Excel
       href: hierarchicalgrid/export-excel.md
       new: false
@@ -523,7 +524,7 @@
       href: hierarchicalgrid/conditional-cell-styling.md
       new: false
       updated: false
-    - name: Display Density
+    - name: Size (Display Density)
       href: hierarchicalgrid/display-density.md
       new: false
     # - name: Conditional Cell Styling
@@ -538,26 +539,27 @@
       new: false
     - name: State Persistence
       href: hierarchicalgrid/state-persistence.md
-      new: true
+      new: false
 - name: Pivot Grid
   href: pivotGrid/pivot-grid.md
-  new: true
+  new: false
   items:
     - name: Export to Excel
       href: pivotGrid/export-excel.md
-      new: true
+      new: false
     - name: Pivot Grid Features
       href: pivotGrid/pivot-grid-features.md
-      new: true
+      new: false
     - name: Pivot Grid Remote Operations
       href: pivotGrid/pivot-grid-custom.md
-      new: true
+      new: false
     - name: State Persistence
       href: pivotGrid/state-persistence.md
-      new: true
+      new: false
 - name: Tree
   href: tree.md
   new: false
+  updated: true
 - name: List View
   href: list.md
 - name: Combo
@@ -575,7 +577,7 @@
       new: false
     - name: Single Select ComboBox
       href: simple-combo.md
-      new: true
+      new: false
 - name: Spreadsheet
   href: spreadsheet-overview.md
   new: false
@@ -633,7 +635,7 @@
   new: false
 - name: Line Chart
   href: charts/types/line-chart.md
-  new: false
+  updated: true
 - name: Pie Chart
   href: charts/types/pie-chart.md
   new: false
@@ -669,19 +671,22 @@
   new: false
 - name: Chart API
   href: charts/chart-api.md
-  new: false
+  updated: true
 - name: Chart Features
   href: charts/chart-features.md
-  updated: true
+  new: false
   items:
     - name: Axis Gridlines
       href: charts/features/chart-axis-gridlines.md
-      new: false
+      updated: true
     - name: Axis Layouts
       href: charts/features/chart-axis-layouts.md
       new: false
     - name: Axis Options
       href: charts/features/chart-axis-options.md
+      new: false
+    - name: Axis Types
+      href: charts/features/chart-axis-types.md
       new: false
     - name: Chart Animations
       href: charts/features/chart-animations.md
@@ -698,6 +703,9 @@
     - name: Chart Data Tooltip
       href: charts/features/chart-data-tooltip.md
       new: false
+    - name: Chart Highlight Filter
+      href: charts/features/chart-highlight-filter.md
+      new: true
     - name: Chart Highlighting
       href: charts/features/chart-highlighting.md
       new: false
@@ -709,7 +717,7 @@
       new: false
     - name: Chart Overlays
       href: charts/features/chart-overlays.md
-      new: false
+      updated: true
     - name: Chart Performance
       href: charts/features/chart-performance.md
       new: false
@@ -721,7 +729,7 @@
       new: false
     - name: Chart Trendlines
       href: charts/features/chart-trendlines.md
-      new: false
+      updated: true      
     - name: Zoom Slider
       href: zoomslider-overview.md
       new: false
@@ -861,7 +869,7 @@
 - name: Typography
   href: themes/typography.md
   new: false
-- name: Display Density
+- name: Size (Display Density)
   href: display-density.md
 - name: Sass
   new: false
@@ -871,7 +879,7 @@
       new: false
     - name: Configuration
       href: themes/sass/configuration.md
-      new: true
+      new: false
     - name: Palettes
       href: themes/sass/palettes.md
       new: false
@@ -912,17 +920,19 @@
           href: themes/sass/presets/indigo.md
           new: true
     - name: Misc
-      new: true
+      new: false
       items:
       - name: Printing styles
         href: themes/misc/printing-styles.md
         new: false
       - name: Angular Theming
         href: themes/misc/angular-material-theming.md
-        new: true
+        new: false
+        updated: true
       - name: Bootstrap Theming
         href: themes/misc/bootstrap-theming.md
-        new: true
+        new: false
+        updated: true
 - name: Data Entry & Display
   header: true
   sortable: true
@@ -946,19 +956,22 @@
   href: button.md
 - name: Button Group
   href: button-group.md
+- name: Icon Button
+  href: icon-button.md
+  new: true
 - name: Checkbox
   href: checkbox.md
 - name: Switch
   href: switch.md
 - name: Query Builder
   href: query-builder.md
-  new: true
+  new: false
 - name: Radio & Radio Group
   href: radio-button.md
   new: false
 - name: Rating
   href: rating.md
-  new: true
+  new: false
 - name: Label & Input
   href: label-input.md
 - name: Input Group
@@ -992,7 +1005,7 @@
   new: false
 - name: Paginator
   href: paginator.md
-  new: true
+  new: false
   updated: false
 - name: Interactions
   header: true

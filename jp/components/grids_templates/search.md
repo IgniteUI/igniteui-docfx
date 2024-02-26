@@ -341,10 +341,10 @@ public clearSearch() {
 
 <igx-suffix>
     <div class="searchButtons">
-        <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="@@igObjectRef.findPrev(searchText, caseSensitive, exactMatch)">
+        <button igxIconButton="flat" igxRipple igxRippleCentered="true" (click)="@@igObjectRef.findPrev(searchText, caseSensitive, exactMatch)">
             <igx-icon fontSet="material">navigate_before</igx-icon>
         </button>
-        <button igxButton="icon" igxRipple igxRippleCentered="true" (click)="@@igObjectRef.findNext(searchText, caseSensitive, exactMatch)">
+        <button igxIconButton="flat" igxRipple igxRippleCentered="true" (click)="@@igObjectRef.findNext(searchText, caseSensitive, exactMatch)">
             <igx-icon fontSet="material">navigate_next</igx-icon>
         </button>
     </div>

@@ -1,39 +1,39 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title:  Angular Grid Display Density - Ignite UI for Angular
-_description: Learn how to apply display density capabilities to the Data grid component. You can use a set of compact view options in the Ignite UI for Angular.
-_keywords: material density, igniteui for angular, infragistics
+title:  Angular Grid Size - Ignite UI for Angular
+_description: Learn how to apply size capabilities to the Data grid component. You can use a set of compact view options in the Ignite UI for Angular.
+_keywords: material density, size, igniteui for angular, infragistics
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title:  Angular Grid Display Density - Ignite UI for Angular
-_description: Learn how to apply display density capabilities to the Tree grid component. You can use a set of compact view options in the Ignite UI for Angular.
-_keywords: material density, igniteui for angular, infragistics
+title:  Angular Grid Size - Ignite UI for Angular
+_description: Learn how to apply size capabilities to the Tree grid component. You can use a set of compact view options in the Ignite UI for Angular.
+_keywords: material density, size igniteui for angular, infragistics
 _canonicalLink: grid/display-density
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title:  Angular Grid Display Density - Ignite UI for Angular
-_description: Learn how to apply display density capabilities to the Hierarchical grid component. You can use a set of compact view options in the Ignite UI for Angular.
-_keywords: material density, igniteui for angular, infragistics
+title:  Angular Grid Size - Ignite UI for Angular
+_description: Learn how to apply size capabilities to the Hierarchical grid component. You can use a set of compact view options in the Ignite UI for Angular.
+_keywords: material density, size, igniteui for angular, infragistics
 _canonicalLink: grid/display-density
 ---
 }
 
-# Angular @@igComponent Display Density
+# Angular @@igComponent Size
 
-**@@igxName** design is based on [Material Design Guidelines](https://material.io/design). We currently provide an option to choose between predefined set of display [density](https://material.io/design/layout/applying-density.html) options that will bring a cosy, comfortable or compact view respectively. By selecting the right density for your Material UI table / Material UI grid you can significantly improve the user experience when interacting with large amounts of content.
+**@@igxName** design is based on [Material Design Guidelines](https://material.io/design). We currently provide an option to choose between predefined set of size options that will bring a small, medium, or large view respectively. By selecting the right size for your Material UI table / Material UI grid you can significantly improve the user experience when interacting with large amounts of content.
 
 
-## Angular @@igComponent Display Density Example
+## Angular @@igComponent Size Example
 
 @@if (igxName === 'IgxGrid') {
 
 <code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-displayDensity" alt="Angular @@igComponent Display Density Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-displayDensity" alt="Angular @@igComponent Size Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -42,7 +42,7 @@ _canonicalLink: grid/display-density
 
 <code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-display-density" alt="Angular @@igComponent Display Density Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-display-density" alt="Angular @@igComponent Size Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -51,7 +51,7 @@ _canonicalLink: grid/display-density
 
 <code-view style="height:680px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-density" alt="Angular @@igComponent Display Density Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-density" alt="Angular @@igComponent Size Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -59,55 +59,49 @@ _canonicalLink: grid/display-density
 
 ## Usage
 
-As you can see in the demo above, the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) provides three density options: **compact**, **cosy** and **comfortable**. The code snippet below shows how to set [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displayDensity):
+As you can see in the demo above, the [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) provides three size options: **small**, **medium** and **large**. The code snippet below shows how to set size:
 
 ```html
-<@@igSelector #@@igObjectRef [data]="data" [displayDensity]="'cosy'" >
+<@@igSelector #@@igObjectRef [data]="data" style="--ig-size: var(--ig-size-small)">
 </@@igSelector>
 ```
 
-or
-
-```typescript
-this.@@igObjectRef.displayDensity = 'cosy';
-```
-
-And now let's see in details how each option reflects on the @@igComponent component. When you switch between different density options the height of each @@igComponent element and the corresponding paddings will be changed. Also if you want to apply custom column [**width**]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width), please consider the fact that it must be bigger than the sum of left and right padding.
- - **comfortable** - this is the default @@igComponent display density with the lowest intense and row height equal to `50px`. Left and Right paddings are `24px`; Minimal column [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) is `80px`;
- - **cosy** - this is the middle intense density with `40px` row height. Left and Right paddings are `16px`; Minimal column [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) is `64px`;
- - **compact** - this is the density with highest intense and `32px` row height. Left and Right paddings are `12px`; Minimal column [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) is `56px`;
+And now let's see in details how each option reflects on the @@igComponent component. When you switch between different sizes the height of each @@igComponent element and the corresponding paddings will be changed. Also if you want to apply custom column [**width**]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width), please consider the fact that it must be bigger than the sum of left and right padding.
+ - **--ig-size-large** - this is the default @@igComponent size with the lowest intense and row height equal to `50px`. Left and Right paddings are `24px`; Minimal column [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) is `80px`;
+ - **--ig-size-medium** - this is the middle size with `40px` row height. Left and Right paddings are `16px`; Minimal column [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) is `64px`;
+ - **--ig-size-small** - this is the smallest size with `32px` row height. Left and Right paddings are `12px`; Minimal column [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) is `56px`;
 
 > [!NOTE]
 > Please keep in mind that currently you **can not** override any of the sizes.
 
-Let's now continue with our sample and see in action how the [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displayDensity) is applied. Let's first add a button which will help us to switch between each density:
+Let's now continue with our sample and see in action how each size is applied. Let's first add a button which will help us to switch between each size:
 
 ```html
 <div class="density-chooser">
-    <igx-buttongroup [values]="displayDensities"></igx-buttongroup>
+    <igx-buttongroup [values]="sizes"></igx-buttongroup>
 </div>
 ```
 
 ```typescript
 @ViewChild(IgxButtonGroupComponent) public buttonGroup: IgxButtonGroupComponent;
-public density = 'compact';
-public displayDensities;
+public size = 'small';
+public sizes;
 
 public ngOnInit() {
-    this.displayDensities = [
+    this.sizes = [
         {
-            label: 'compact',
-            selected: this.density === 'compact',
+            label: 'small',
+            selected: this.size === 'small',
             togglable: true
         },
         {
-            label: 'cosy',
-            selected: this.density === 'cosy',
+            label: 'medium',
+            selected: this.sie === 'medium',
             togglable: true
         },
         {
-            label: 'comfortable',
-            selected: this.density === 'comfortable',
+            label: 'large',
+            selected: this.size === 'large',
             togglable: true
         }
     ];
@@ -119,9 +113,9 @@ Now we can add the markup.
 @@if (igxName === 'IgxGrid') {
 ```html
 <div class="density-chooser">
-    <igx-buttongroup [values]="displayDensities" (selected)="selectDensity($event)"></igx-buttongroup>
+    <igx-buttongroup [values]="sizes" (selected)="selectSize($event)"></igx-buttongroup>
 </div>
-<igx-grid #grid [data]="data" [displayDensity]="density" width="100%" height="550px" [allowFiltering]="true">
+<igx-grid #grid [data]="data" width="100%" height="550px" [allowFiltering]="true">
     <igx-column-group  header="Customer Information">
     <igx-column field="CustomerName" header="Customer Name" [dataType]="'string'" [sortable]="true" [hasSummary]="true">
     </igx-column>
@@ -175,9 +169,9 @@ Now we can add the markup.
 @@if (igxName === 'IgxTreeGrid') {
 ```html
 <div class="density-chooser">
-    <igx-buttongroup [values]="displayDensities" (selected)="selectDensity($event)"></igx-buttongroup>
+    <igx-buttongroup [values]="sizes" (selected)="selectSize($event)"></igx-buttongroup>
 </div>
-<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [displayDensity]="density" width="100%"
+<igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" width="100%"
     height="550px" [allowFiltering]="true">
     <igx-column field="Name" dataType="string" [sortable]="true" [hasSummary]="true" width="200px"></igx-column>
     <igx-column-group [pinned]="false" header="General Information">
@@ -223,7 +217,7 @@ Now we can add the markup.
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
 <div class="density-chooser">
-    <igx-buttongroup [values]="displayDensities" (selected)="selectDensity($event)"></igx-buttongroup>
+    <igx-buttongroup [values]="sizes" (selected)="selectSize($event)"></igx-buttongroup>
 </div>
 <igx-hierarchical-grid #hGrid [data]="localdata" [height]="'600px'" [width]="'100%'" [allowFiltering]="true">
     <igx-column field="CustomerID"></igx-column>
@@ -262,27 +256,33 @@ Now we can add the markup.
 ```
 }
 
-Finally, let's provide the necessary logic in order to actually apply the density:
+Finally, let's provide the necessary logic in order to actually apply the size:
 
 ```typescript
 @ViewChild('@@igObjectRef', { read: @@igxNameComponent })
 public @@igObjectRef: @@igxNameComponent;
 
-public selectDensity(event) {
-    this.density = this.displayDensities[event.index].label;
+public selectSize(event: any) {
+    this.size = this.sizes[event.index].label;
+}
+
+
+@HostBinding('style.--ig-size')
+protected get sizeStyle() {
+    return `var(--ig-size-${this.size})`;
 }
 ```
 
-Another option that [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) provides for you, in order to be able to change the height of the rows in the @@igComponent, is the property [`rowHeight`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowheight). So let's see in action how this property affects the @@igComponent layout along with the [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displayDensity) option.
+Another option that [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) provides for you, in order to be able to change the height of the rows in the @@igComponent, is the property [`rowHeight`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowheight). So let's see in action how this property affects the @@igComponent layout along with the `--ig-size` CSS variable.
 
 Please keep in mind the following:
- - [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displayDensity) options will have **NO** impact on row height **if there is [rowHeight]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowheight) specified**;
- - [`displayDensity`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#displayDensity) will **affect all of the rest elements in the @@igComponent**, as it has been described above;
+ - `--ig-size` CSS variable will have **NO** impact on row height **if there is [rowHeight]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowheight) specified**;
+ - `--ig-size` will **affect all of the rest elements in the @@igComponent**, as it has been described above;
 
 And now we can extend our sample and add [`rowHeight`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowHeight) property to the @@igComponent:
 
  ```html
- <@@igSelector #@@igObjectRef [data]="data" [displayDensity]="density" [rowHeight]="'80px'" width="100%" 
+ <@@igSelector #@@igObjectRef [data]="data" [rowHeight]="'80px'" width="100%" 
  height="550px" [allowFiltering]="true">
  ..............
  </@@igSelector>

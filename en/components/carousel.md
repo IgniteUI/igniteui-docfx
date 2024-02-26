@@ -196,7 +196,7 @@ This carousel is going to contain slides with forms and images:
                     </igx-input-group>
                 </form>
                 <div class="btn">
-                    <button igxButton="raised" type="submit" (click)="form.reset()">Sign In</button>
+                    <button igxButton="contained" type="submit" (click)="form.reset()">Sign In</button>
                 </div>
             </div>
         </igx-slide>
@@ -214,7 +214,7 @@ This carousel is going to contain slides with forms and images:
                     </igx-input-group>
                 </form>
                 <div class="btn">
-                    <button igxButton="raised" type="submit" (click)="form2.reset()">Search</button>
+                    <button igxButton="contained" type="submit" (click)="form2.reset()">Search</button>
                 </div>
             </div>
         </igx-slide>
@@ -330,7 +330,7 @@ adding [IgxList]({environment:angularApiUrl}/classes/igxlistcomponent.html):
 ```html
 ...
 <div class="list-wrapper">
-    <igx-list displayDensity="compact">
+    <igx-list>
       <!-- Adding disabled classes when the list item index does not match the current slide index-->
         <igx-list-item *ngFor="let item of slides; let i=index" [ngClass]="{'disabled': i !== currentIndex }" >
       <!-- List item content goes here -->

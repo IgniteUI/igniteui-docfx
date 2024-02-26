@@ -1,7 +1,7 @@
 ---
-title: Chip コンポーネント - ネイティブ Angular | Ignite UI for Angular
+title: Angular Chip コンポーネント - Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular Chip コンポーネントは入力、属性、または操作を表す小さい要素を提供します。
-_keywords: Angular Chip、Angular Chip コンポーネント, Angular Chip Area, Angular Chip Area, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular UI コンポーネント
+_keywords: Angular Chip, Angular Chip コンポーネント, Angular Chip Area, Angular Chip Area, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular UI コンポーネント
 _language: ja
 ---
 
@@ -218,18 +218,18 @@ public chipRemoved(event: IBaseChipEventArgs) {
 </igx-chip>
 ```
 
-チップのサイズは、[`displayDensity`]({environment:angularApiUrl}/classes/igxchipcomponent.html#displayDensity) 入力を使用してカスタマイズできます。デフォルトの設定は `comfortable` です。チップ内のすべてが相対位置を保持する際に `cosy` または `compact` にも設定できます。
+[`--ig-size`] CSS 変数を使用して、チップのサイズをカスタマイズできます。デフォルトでは、`var(--ig-size-large)` に設定されています。`var(--ig-size-medium)` または `var(--ig-size-small)` に設定することもできますが、チップ内のすべての要素は相対的な位置を保持します。
 
 <img class="responsive-img"  src="../images/chip/density.jpg" />
 
 ```html
 <igx-chip>Hi! My name is Chip!</igx-chip>
 
-<igx-chip displayDensity="cosy">
+<igx-chip style="--ig-size: var(--ig-size-medium)">
     I can be smaller!
 </igx-chip>
 
-<igx-chip displayDensity="compact">
+<igx-chip style="--ig-size: var(--ig-size-small)">
     <igx-icon igxPrefix>child_care</igx-icon>
     Even tiny!
 </igx-chip>
@@ -316,7 +316,6 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
   - <kbd>SPACE</kbd> - チップが選択可能な場合、選択を切り替えます。
 
     <img class="responsive-img"  src="../images/chip/space_key.gif" />
-
   - <kbd>DELETE</kbd> - [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) の [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) イベントをトリガーし、チップ削除が手動で処理されます。
   - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - 現在フォーカスされたチップは左に位置を移動した際に [`igxChipArea`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) の [`reorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#reorder) イベントをトリガーします。
   - <kbd>SHIFT</kbd> + <kbd>RIGHT</kbd> - 現在フォーカスされたチップは右に位置を移動した際に [`igxChipArea`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) の [`reorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#reorder) イベントをトリガーします。
@@ -498,6 +497,38 @@ $custom-theme: chip-theme(
            iframe-src="{environment:demosBaseUrl}/data-display/chip-styling" >
 </code-view>
 
+### カスタム サイズ変更
+
+`igx-chip` を直接ターゲットとして `--size` 変数を使用することができます。
+
+```scss
+igx-chip {
+  --size: 50px;
+}
+```
+
+または、ユニバーサル変数 `--igx-chip-size` を使用して、すべてのインスタンスをターゲットにすることもできます。
+
+```html
+<div class="my-app">
+  <igx-chip></igx-chip>
+</div>
+```
+```scss
+.my-app {
+  --igx-chip-size: 50px;
+}
+```
+
+事前定義されたサイズの 1 つを使用して、それを `--ig-size` 変数に割り当てることもできます。`--ig-size` に使用可能な値は、`--ig-size-small`、`--ig-size-medium`、`--ig-size-large` です。
+
+```scss
+igx-chip {
+    --ig-size: var(--ig-size-small);
+}
+```
+
+詳細については、[サイズ](display-density.md)の記事をご覧ください。
 
 ## 既知の問題と制限
 

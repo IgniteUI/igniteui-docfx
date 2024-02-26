@@ -84,7 +84,8 @@ They are added inside the `<igx-action-strip>` and this is all needed to have an
 ```
 }
 
->Note: When `IgxActionStripComponent` is a child component of the grid, hovering a row will automatically show the UI.
+>[!NOTE]
+> When `IgxActionStripComponent` is a child component of the grid, hovering a row will automatically show the UI.
 
 ## Custom implementation
 
@@ -94,10 +95,10 @@ These components expose templates giving flexibility for customization. For inst
 <igx-grid>
     <igx-action-strip #actionstrip>
         <igx-grid-pinning-actions></igx-grid-pinning-actions>
-        <button title="Edit" igxButton="icon" igxRipple (click)='startEdit(actionstrip.context)'>
+        <button title="Edit" igxIconButton="flat" igxRipple (click)='startEdit(actionstrip.context)'>
             <igx-icon>edit</igx-icon>
         </button>
-        <button title="Delete" igxButton="icon" igxRipple *ngIf='!isDeleted(actionstrip.context)' (click)='actionstrip.context.delete()'>
+        <button title="Delete" igxIconButton="flat" igxRipple *ngIf='!isDeleted(actionstrip.context)' (click)='actionstrip.context.delete()'>
             <igx-icon>delete</igx-icon>
         </button>
     </igx-action-strip>
@@ -124,7 +125,8 @@ These components expose templates giving flexibility for customization. For inst
 </code-view>
 }
 
->Note: The predefined actions inherit [`IgxGridActionsBaseDirective`]({environment:infragisticsBaseUrl}/classes/igxgridactionsbasedirective.html) and when creating a custom grid action component, it should also inherit `IgxGridActionsBaseDirective`.
+>[!NOTE]
+> The predefined actions inherit [`IgxGridActionsBaseDirective`]({environment:infragisticsBaseUrl}/classes/igxgridactionsbasedirective.html) and when creating a custom grid action component, it should also inherit `IgxGridActionsBaseDirective`.
 
 ## API References
 

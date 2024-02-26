@@ -2,7 +2,7 @@
 title: Angular Map | Data Visualization Tools | Binding Multiple Data Source | Infragistics
 _description: Use Infragistics' Angular JavaScript map to add multiple geographic series objects to overlay custom data sources with geo-spacial data. View Ignite UI for Angular map tutorials!
 _keywords: Angular map, geographic series, Ignite UI for Angular, Infragistics, data binding
-mentionedTypes: ['XamGeographicMap', 'SeriesViewer', 'Series']
+mentionedTypes: ['XamGeographicMap', 'SeriesViewer', 'Series', 'GeographicShapeSeriesBase']
 ---
 
 # Angular Binding Multiple Data Sources

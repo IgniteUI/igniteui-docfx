@@ -172,10 +172,10 @@ Drawer を開く/閉じる方法が複数あります。入力プロパティを
 ```
 Navigation Drawer は [`igxNavigationService`]({environment:angularApiUrl}/classes/igxnavigationservice.html) とも統合し、[`igxToggleAction`](toggle.md#トグル自動操作) ディレクティブで id によって対象にされます。
 
-**app.component.html** の `<main>` を以下のコードと置き換えます。トグルをスタイル設定するために [`igxButton`](button.md) および [Icon コンポーネント](icon.md)を追加します。
+**app.component.html** の `<main>` を以下のコードと置き換えます。トグルをスタイル設定するために [`igxIconButton`](icon-button.md) および [Icon コンポーネント](icon.md)を追加します。
 ```html
 <main>
-  <span igxButton="icon" igxToggleAction="navigation">
+  <span igxIconButton="flat" igxToggleAction="navigation">
     <igx-icon fontSet="material">menu</igx-icon>
   </span>
 </main>

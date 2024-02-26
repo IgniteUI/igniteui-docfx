@@ -51,6 +51,98 @@ Unfortunately not all changes can be automatically updated. Changes below are sp
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
+## From 17.0.x to 17.1.x
+
+- **Breaking changes**
+- In version 17.1.x the `icon` type of the `igxButton` directive has been changed to the `igxIconButton` directive of type `flat`. Automatic migrations are available and will be applied on `ng update`. However, some of the `igxButton` input properties that could previously be used with the `icon` type buttons, cannot be applied to the newly created `igxIconButton`. If you have used the `igxButtonColor` or the `igxButtonBackground` properties with a button of type `icon`, you should update it as follows: 
+
+```html
+// version 17.0.x
+<button igxButton="icon" [igxButtonBackground]="'red'">
+    <igx-icon fontSet="material">search</igx-icon>
+</button>
+
+// version 17.1.x
+<button igxIconButton="flat" [style.background]="'red'">
+    <igx-icon fontSet="material">search</igx-icon>
+</button>
+```
+
+## From 16.1.x to 17.0.x
+
+### General
+- In 17.0 Angular have removed the `@nguniversal/*` packages. If the project uses these packages a standard `ng update` call will cause an error in the `igniteui-angular` migrations due to improperly modified `package-lock.json` - more details can be found [here](https://github.com/IgniteUI/igniteui-angular/issues/13668). To update to `17.0.x` one of the following additional steps needs to be taken:
+    - Delete the `package-lock.json` file before running `ng update`
+    - Run `npm dedupe --legacy-peer-deps` before running `ng update igniteui-angular`
+
+**Breaking change**
+- In `IgxCombo`'s `selectionChanging` event arguments type `IComboSelectionChangingEventArgs` has these changes:
+    - properties `newSelection` and `oldSelection` have been renamed to `newValue` and `oldValue` respectively to better reflect their function. Just like Combo's `value`, those will emit either the specified property values or full data items depending on whether `valueKey` is set or not. Automatic migrations are available and will be applied on `ng update`.
+    - two new properties `newSelection` and `oldSelection` are exposed in place of the old ones that are no longer affected by `valueKey` and consistently emit items from Combo's `data`.
+    - properties `added` and `removed` now always contain data items, regardless of `valueKey` being set. This aligns them with the updated `newSelection` and `oldSelection` properties.
+
+If your code in `selectionChanging` event handler was depending on reading `valueKeys` from the event argument, update it as follows:
+
+```typescript
+  // version 16.1.x
+  public handleSelectionChanging(e: IComboSelectionChangingEventArgs): void {
+    this.addedItems = e.added;
+    this.removedItems = e.removed;
+  }
+
+  // version 17.0.x
+  public handleSelectionChanging(e: IComboSelectionChangingEventArgs): void {
+    this.addedItems = e.added.map(i => {
+       return i[e.owner?.valueKey]
+    });
+    this.removedItems = e.removed.map(i => {
+       return i[e.owner?.valueKey]
+    });
+  }
+```
+- `getCurrentResourceStrings` has been removed. Use the specific component string imports instead. 
+    - E.g. EN strings come from `igniteui-angular`: `import { GridResourceStringsEN } from 'igniteui-angular';`
+    - E.g. DE or other language strings come from `igniteui-angular-i18n`: `import { GridResourceStringsDE } from 'igniteui-angular-i18n';`
+
+    Usage examples can be found in the updated [Localization (i18n)](localization.md) doc.
+
+## From 16.0.x to 16.1.x
+
+### General
+
+#### **Non-breaking changes**
+- We are moving away from the `DisplayDensityToken` injection token as a way to set the size of the components in favor of a simpler, more robust way - using CSS custom properties. For that reason the `DisplayDensityToken` injection token is now deprecated. This ripples across all components that expose the `displayDensity` input property. The token and input properties will be removed in 17.0.0. We urge you to do the following:
+
+Remove all declarations where the `DisplayDensityToken` is provided:
+
+```typescript
+// *.component.ts
+// remove the provider declaration for `DisplayDensityToken`
+providers: [{ provide: DisplayDensityToken, useValue: { displayDensity: DisplayDensity.compact } }],
+```
+
+Remove all bindings or programmatic assignments to the `displayDensity` input property:
+
+```html
+<!-- Remove `[displayDensity]="'compact'"` -->
+<igx-grid [displayDensity]="'compact'">...</igx-grid>
+```
+
+Instead, use the custom CSS property `--ig-size` to achieve the same result as with `displayDensity`:
+
+```css
+/* 
+Add --ig-size to a component or global file.
+Available values are:
+  - compact: --ig-size-small
+  - cosy: --ig-size-medium
+  - comfortable: --ig-size-large
+*/
+igx-grid {
+    --ig-size: var(--ig-size-small);
+}
+```
+
 ## From 15.1.x to 16.0.x
 
 - The upgrade to Angular 16 comes with changes in how `NgModules` operate under the hood. Previously, adding a module that internally depends on another would make the declarations of both available in your app. This behavior was not intended and Angular 16 changes it. If your app was depending on this behavior, e.g. you were only importing a module containing many internal dependencies like `IgxGridModule` and using components coming with those, you will need to manually add the modules for each component your app uses separately.

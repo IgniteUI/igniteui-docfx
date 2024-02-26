@@ -52,6 +52,98 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
+## 17.0.x から 17.1.x の場合:
+
+- **重大な変更**
+- バージョン 17.1.x では、`igxButton` ディレクティブの `icon` タイプが、`flat` タイプの `igxIconButton` ディレクティブに変更されました。自動移行が利用可能で、`ng update` 時に適用されます。ただし、以前は `icon` タイプのボタンで使用できた `igxButton` 入力プロパティの一部は、新しく作成された `igxIconButton` には適用できません。`icon` タイプのボタンで `igxButtonColor` または `igxButtonBackground` プロパティを使用した場合は、次のように更新する必要があります。
+
+```html
+// version 17.0.x
+<button igxButton="icon" [igxButtonBackground]="'red'">
+    <igx-icon fontSet="material">search</igx-icon>
+</button>
+
+// version 17.1.x
+<button igxIconButton="flat" [style.background]="'red'">
+    <igx-icon fontSet="material">search</igx-icon>
+</button>
+```
+
+## 16.1.x から 17.0.x の場合:
+
+### 一般
+- 17.0 Angular では、`@nguniversal/*` パッケージが削除されました。プロジェクトがこれらのパッケージを使用している場合、標準の `ng update` 呼び出しにより、不適切に変更された `package-lock.json` が原因で `igniteui-angular` 移行でエラーが発生します。細については、[こちら](https://github.com/IgniteUI/igniteui-angular/issues/13668)を参照してください。`17.0.x` に更新するには、次の追加手順のいずれかを実行する必要があります。
+    - `ng update` を実行する前に `package-lock.json` ファイルを削除します。
+    - `ng update igniteui-angular` を実行する前に `npm dedupe --legacy-peer-deps` を実行します。
+
+### 重大な変更
+- `IgxCombo` の `IComboSelectionChangingEventArgs` 型の`selectionChanging` イベント引数には次の変更があります。
+    - `newSelection` と `oldSelection` プロパティは、その機能をより適切に反映するために、それぞれ `newValue` と `oldValue` に名前変更されました。Combo の `value` と同様に、これらは `valueKey` が設定されているかどうかに応じて、指定されたプロパティ値または完全なデータ項目を出力します。自動移行が利用可能で、`ng update` 時に適用されます。
+    - 2 つの新しいプロパティ (`newSelection` と `oldSelection`) が、`valueKey` の影響を受けなくなった古いプロパティの代わりに公開され、一貫して Combo の `data` から項目を出力します。
+    - `added` と `removed` プロパティには、設定されている `valueKey` に関係なく、常にデータ項目が含まれるようになりました。これにより、更新された `newSelection` プロパティと `oldSelection` プロパティが調整されます。
+
+`selectionChanging` イベント ハンドラーのコードがイベント引数からの `valueKeys` の読み取りに依存していた場合は、次のように更新します。
+
+```typescript
+  // version 16.1.x
+  public handleSelectionChanging(e: IComboSelectionChangingEventArgs): void {
+    this.addedItems = e.added;
+    this.removedItems = e.removed;
+  }
+
+  // version 17.0.x
+  public handleSelectionChanging(e: IComboSelectionChangingEventArgs): void {
+    this.addedItems = e.added.map(i => {
+       return i[e.owner?.valueKey]
+    });
+    this.removedItems = e.removed.map(i => {
+       return i[e.owner?.valueKey]
+    });
+  }
+```
+- `getCurrentResourceStrings` は削除されました。`getCurrentResourceStrings` は削除されました。
+    - 例: EN 文字列は `igniteui-angular`: `import { GridResourceStringsEN } from 'igniteui-angular';` から取得されます。
+    - 例: DE または他の言語文字列は `igniteui-angular-i18n`: `import { GridResourceStringsDE } from 'igniteui-angular-i18n';` から取得されます。
+
+    使用例は、更新された[ローカライズ (i18n)](localization.md) ドキュメントにあります。
+
+## 16.0.x から 16.1.x の場合:
+
+### 一般
+
+#### **互換性のある変更**
+- コンポーネントのサイズを設定する方法として `DisplayDensityToken` インジェクション トークンを廃止し、CSS カスタム プロパティを使用する、よりシンプルで堅牢な方法を採用しています。そのため、`DisplayDensityToken` インジェクション トークンは非推奨になりました。これは、`displayDensity` 入力プロパティを公開するすべてのコンポーネントに影響を与えます。トークンと入力プロパティは 17.0.0 で削除されます。次のことを行うことをお勧めします。
+
+`DisplayDensityToken` が提供されているすべての宣言を削除します:
+
+```typescript
+// *.component.ts
+// remove the provider declaration for `DisplayDensityToken`
+providers: [{ provide: DisplayDensityToken, useValue: { displayDensity: DisplayDensity.compact } }],
+```
+
+`displayDensity` 入力プロパティへのすべてのバインディングまたはプログラムによる割り当てを削除します:
+
+```html
+<!-- Remove `[displayDensity]="'compact'"` -->
+<igx-grid [displayDensity]="'compact'">...</igx-grid>
+```
+
+代わりに、カスタム CSS プロパティ `--ig-size` を使用して、`displayDensity` と同じ結果を実現します:
+
+```css
+/* 
+Add --ig-size to a component or global file.
+Available values are:
+  - compact: --ig-size-small
+  - cosy: --ig-size-medium
+  - comfortable: --ig-size-large
+*/
+igx-grid {
+    --ig-size: var(--ig-size-small);
+}
+```
+
 ## 15.1.x から 16.0.x の場合:
 
 - Angular 16 へのアップグレードには、`NgModules` の内部での動作方法の変更が伴います。以前は、内部的に別のモジュールに依存するモジュールを追加すると、アプリ内で両方の宣言が利用可能になりました。この動作は意図されたものではなく、Angular 16 では変更されています。あなたのアプリがこの動作に依存していた場合、例えば `IgxGridModule` のような多くの内部依存関係を含むモジュールをインポートし、それらに付属するコンポーネントを使用しているだけであった場合、アプリが使用するコンポーネントごとに個別にモジュールを手動で追加する必要があります。

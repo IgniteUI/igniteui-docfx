@@ -706,16 +706,16 @@ $custom-button-schema: extend($_light-button,
            color: ("secondary", 400)
         ),
 
-        raised-background:(
+        contained-background:(
            color: ("secondary", 400)
         ),
-        raised-text-color:(
+        contained-text-color:(
            color: ("primary", 400)
         ),
-        raised-hover-background:(
+        contained-hover-background:(
            color: ("primary", 400)
         ),
-        raised-hover-text-color:(
+        contained-hover-text-color:(
            color: ("secondary", 400)
         )
     )

@@ -55,7 +55,7 @@ import { IGX_DIALOG_DIRECTIVES, IgxButtonDirective, IgxRippleDirective } from 'i
 @Component({
     selector: 'app-home',
     template: `
-    <button igxButton="raised" igxRipple="white" (click)="alert.open()">Show Alert Dialog</button>
+    <button igxButton="contained" igxRipple="white" (click)="alert.open()">Show Alert Dialog</button>
 
     <igx-dialog #alert
         title="Notification"
@@ -85,7 +85,7 @@ To create an alert dialog, in the template of our email component, we add the fo
 
 ```html
 <!--email.component.html-->
-<button igxButton="raised" igxRipple="white" (click)="alert.open()">Show Alert Dialog</button>
+<button igxButton="contained" igxRipple="white" (click)="alert.open()">Show Alert Dialog</button>
 
 <igx-dialog #alert
     title="Notification"
@@ -106,7 +106,7 @@ To create a standard dialog, in the template of our file manager component, we a
 
 ```html
 <!--file-manager.component.html-->
-<button igxButton="raised" igxRipple="white" (click)="dialog.open()">Show Confirmation Dialog</button>
+<button igxButton="contained" igxRipple="white" (click)="dialog.open()">Show Confirmation Dialog</button>
 
 <igx-dialog #dialog title="Confirmation"
     leftButtonLabel="Cancel"
@@ -132,7 +132,7 @@ We add two input groups consisting of a label and and input decorated with the [
 
 ```html
 <!--sign-in.component.html-->
-<button igxButton="raised" igxRipple="white" (click)="alert.open()">Show Custom Dialog</button>
+<button igxButton="contained" igxRipple="white" (click)="alert.open()">Show Custom Dialog</button>
 
 <igx-dialog #form [closeOnOutsideSelect]="true">
     <igx-dialog-title>

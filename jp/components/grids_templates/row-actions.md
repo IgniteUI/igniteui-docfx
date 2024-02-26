@@ -88,7 +88,8 @@ import { IgxActionStripModule } from 'igniteui-angular';
 ```
 }
 
->注: `IgxActionStripComponent` がグリッドの子コンポーネントの場合、行をホバーすると UI が自動的に表示されます。
+>[!NOTE]
+> `IgxActionStripComponent` がグリッドの子コンポーネントの場合、行をホバーすると UI が自動的に表示されます。
 
 ## カスタム実装
 
@@ -98,10 +99,10 @@ import { IgxActionStripModule } from 'igniteui-angular';
 <igx-grid>
     <igx-action-strip #actionstrip>
         <igx-grid-pinning-actions></igx-grid-pinning-actions>
-        <button title="Edit" igxButton="icon" igxRipple (click)='startEdit(actionstrip.context)'>
+        <button title="Edit" igxIconButton="flat" igxRipple (click)='startEdit(actionstrip.context)'>
             <igx-icon>edit</igx-icon>
         </button>
-        <button title="Delete" igxButton="icon" igxRipple *ngIf='!isDeleted(actionstrip.context)' (click)='actionstrip.context.delete()'>
+        <button title="Delete" igxIconButton="flat" igxRipple *ngIf='!isDeleted(actionstrip.context)' (click)='actionstrip.context.delete()'>
             <igx-icon>delete</igx-icon>
         </button>
     </igx-action-strip>
@@ -128,7 +129,8 @@ import { IgxActionStripModule } from 'igniteui-angular';
 </code-view>
 }
 
->注: これらのコンポーネントは [`IgxGridActionsBaseDirective`]({environment:infragisticsBaseUrl}/classes/igxgridactionsbasedirective.html) を継承します。カスタム グリッド アクション コンポーネントを作成する場合、`IgxGridActionsBaseDirective` も継承する必要があります。
+>[!NOTE]
+> これらのコンポーネントは [`IgxGridActionsBaseDirective`]({environment:infragisticsBaseUrl}/classes/igxgridactionsbasedirective.html) を継承します。カスタム グリッド アクション コンポーネントを作成する場合、`IgxGridActionsBaseDirective` も継承する必要があります。
 
 ## API リファレンス
 

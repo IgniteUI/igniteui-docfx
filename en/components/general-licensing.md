@@ -86,9 +86,14 @@ npm install @infragistics/igniteui-dockmanager
 
 Have in mind that we have set the Ignite UI for Angular package to be scoped, meaning that no changing the registries is needed if you want to install packages from our private feed and from npmjs.org simultaneously.
 
-#### Some additional changes might have to be made in your project source
+### Changes in your project source after license package update
 
-If you are upgrading from trial to licensed package:
+If you are upgrading from trial to licensed package the new packages will be scoped under `@infragistics`.
+As a result you can either:
+
+*   Do a global replace for all trial packages and change then to the licensed scoped version across all files in your project. For example, replace all `igniteui-dockmanager` references to `@infragicstics/igniteui-dockmanager` The change should affect all imports where such packages are used.
+
+    **Or**
 
 *   Add a **paths** mapping in the project **tsconfig.json**.
 
@@ -121,11 +126,11 @@ So, if you've already adopted npm and you have an Ignite UI for Angular license,
 
 ## Access Token Usage
 
-You can also authenticate to our private npm feed using an access token, which you can acquire through your [infragistics.com user account](https://account.infragistics.com/package-feeds). The access token authentication is the preferred alternative when you want to integrate a CI process in a publicly accessible repository, which uses the Ignite UI for Angular licensed packages.
+You can also authenticate to our private npm feed using an access token, which you can acquire through your [infragistics.com user account](https://account.infragistics.com/access-tokens). The access token authentication is the preferred alternative when you want to integrate a CI process in a publicly accessible repository, which uses the Ignite UI for Angular licensed packages.
 
 The following information is on how to setup authentication to our private npm registry using an access token in local configuration, Azure Pipelines build procedures and Travis CI build process:
 
-*   Generate a token from https://account.infragistics.com/package-feeds
+*   Generate a token from https://account.infragistics.com/access-tokens
 
 <img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 600px"
 src="../images/general/generate-token.jpg"

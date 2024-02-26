@@ -136,10 +136,24 @@ below.
 @@if (igxName === 'IgxHierarchicalGrid') {
 
 ## Toolbar with child grids
-Due to certain limitations in how the child grids of an IgxHierarchicalGrid are implemented and how DI scope works, there is a caveat when
-using the toolbar in the scope of child grids. When defining a toolbar component inside the `igx-row-island` tags, always make sure
-to use the IgxGridToolbar directive on the toolbar itself and pass the provided grid instance as an input property to the toolbar itself.
-This will make sure you always have the correct grid instance in the scope of your template:
+Due to certain limitations in how the child grids of an IgxHierarchicalGrid are implemented and how DI scope works, when defining a toolbar component inside the `igx-row-island` tags use the `igxGridToolbar` directive with the template shorthand. This allows child grids to create their own separate toolbar instances:
+
+```html
+<igx-hierarchical-grid>
+    ...
+    <igx-row-island>
+        <igx-grid-toolbar *igxGridToolbar>
+            <igx-grid-toolbar-title>Child toolbar</igx-grid-toolbar-title>
+        </igx-grid-toolbar>
+    </igx-row-island>
+    ...
+</igx-hierarchical-grid>
+```
+The toolbar template context implicitly exposes a reference to the respective grid instance, which you can use for any other binding/logic needs. See below for an example.
+
+### With versions prior to 17.1.0
+
+Versions prior to 17.1.0 also required to pass the provided grid instance as an input property to the toolbar itself. This will make sure you always have the correct grid instance in the scope of your template:
 
 ```html
 <igx-hierarchical-grid>
