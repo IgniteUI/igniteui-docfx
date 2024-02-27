@@ -52,6 +52,23 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
+## 17.0.x から 17.1.x の場合:
+
+- **重大な変更**
+- バージョン 17.1.x では、`igxButton` ディレクティブの `icon` タイプが、`flat` タイプの `igxIconButton` ディレクティブに変更されました。自動移行が利用可能で、`ng update` 時に適用されます。ただし、以前は `icon` タイプのボタンで使用できた `igxButton` 入力プロパティの一部は、新しく作成された `igxIconButton` には適用できません。`icon` タイプのボタンで `igxButtonColor` または `igxButtonBackground` プロパティを使用した場合は、次のように更新する必要があります。
+
+```html
+// version 17.0.x
+<button igxButton="icon" [igxButtonBackground]="'red'">
+    <igx-icon fontSet="material">search</igx-icon>
+</button>
+
+// version 17.1.x
+<button igxIconButton="flat" [style.background]="'red'">
+    <igx-icon fontSet="material">search</igx-icon>
+</button>
+```
+
 ## 16.1.x から 17.0.x の場合:
 
 ### 一般
