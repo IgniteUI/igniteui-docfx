@@ -54,17 +54,15 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 ## From 17.0.x to 17.1.x
 
 ### General
-- `rowAdd` and `rowDelete` events no longer emit event argument of type `IGridEditEventArgs`, but argument of type `IRowDataCancelableEventArgs`. The two interfaces `IGridEditEventArgs` and `IRowDataCancelableEventArgs` are compatible. Only case there would be issues is if your application was reading `IGridEditEventArgs.oldValue`, `IGridEditEventArgs.newValue`. These properties return always undefined when in `rowAdd` or `rowDelete` event handlers, so they can be safely removed.
-- `rowID` property has been deprecated in the following interfaces: `IGridEditDoneEventArgs`, `IPathSegment`, `IRowToggleEventArgs`, `IPinRowEventArgs`, `IgxAddRowParent` and will be removed in a future version. Use `rowKey` instead.
-- `data` property has been deprecated in the following interfaces: `IBaseRowDataEventArg` and `IRowDataEventArgs`. Use `rowData` instead.
-- `key` property has been deprecated in the following interfaces: `IRowDataEventArgs`. Use `rowKey` instead.
-- `primaryKey` has been deprecated in the following interfaces: `IGridEditDoneEventArgs`. Use `rowKey` instead.
-
-- Trying to make our API easier to use and maintain, the above changes were introduced. At the moment, some interfaces became cubersome, carrying two or more properties for the same entity - `rowID`, `key`, `rowKey` and `primaryKey`. `rowID`, `key`, and `primaryKey` are deprecated in all places, aiming to leave only `rowKey` from version 18 onwards. Same goes for `data` and `rowData` - the aim is to go only with `rowData` from version 18 onwards.
+- `IgxGrid`, `IgxTreeGrid`, `IgxHierarchicalGrid`
+    - **Breaking Changes**
+        - `rowAdd` and `rowDelete` events now emit event argument of type `IRowDataCancelableEventArgs` instead of `IGridEditEventArgs`. The two interfaces are still compatible, however redundant for these events properties `cellID`, `newValue`, `oldValue`, `isAddRow` are deprecated in `IRowDataCancelableEventArgs` and will be removed in a future version. Switching to the correct new interfaces should reveal any deprecated use that can be safely removed.
+    - **Deprecations**
+        - `rowID` property has been deprecated in the following interfaces: `IGridEditDoneEventArgs`, `IPathSegment`, `IRowToggleEventArgs`, `IPinRowEventArgs`, `IgxAddRowParent` and will be removed in a future version. Use `rowKey` instead.
+        - `primaryKey` property has been deprecated in the following interfaces: `IRowDataEventArgs`, `IGridEditDoneEventArgs`. Use `rowKey` instead.
+        - `data` property has been deprecated in the following interfaces: `IRowDataEventArgs`. Use `rowData` instead.
 
 ### Breaking changes
-- If code inside `rowAdd` or `rowDelete` event handlers is reading `IGridEditEventArgs.oldValue` or `IGridEditEventArgs.newValue`, migrating the event argument type from `IGridEditEventArgs` to `IRowDataCancelableEventArgs` would be a breaking change, because the interface `IRowDataCancelableEventArgs` does not have `oldValue` and `newValue` props. These properties return always undefined when in `rowAdd` or `rowDelete` event handlers, so if there is a code reading these prop in these event handlers, just remove it.
-
 - In version 17.1.x the `icon` type of the `igxButton` directive has been changed to the `igxIconButton` directive of type `flat`. Automatic migrations are available and will be applied on `ng update`. However, some of the `igxButton` input properties that could previously be used with the `icon` type buttons, cannot be applied to the newly created `igxIconButton`. If you have used the `igxButtonColor` or the `igxButtonBackground` properties with a button of type `icon`, you should update it as follows: 
 
 ```html
