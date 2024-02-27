@@ -68,6 +68,17 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 </button>
 ```
 
+**NOTE**: Users have to manually add the `IgxIconButtonDirective` into their imports:
+
+```typescript
+import { IgxIconButtonDirective } from 'igniteui-angular';
+
+@Component({
+    ...
+    imports: [IgxIconButtonDirective]
+})
+```
+
 ## From 16.1.x to 17.0.x
 
 ### General
