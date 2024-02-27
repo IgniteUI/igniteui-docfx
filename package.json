@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@stackblitz/sdk": "^1.9.0",
-    "browser-sync": "^2.29.3",
+    "browser-sync": "^3.0.2",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
