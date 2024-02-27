@@ -31,7 +31,7 @@ For a complete introduction to the Ignite UI for Angular, read the [*getting sta
 
 The next step is to import the `IgxDateRangePickerModule` in your **app.module.ts** file.
 
-As `IgxDateRangePicker` uses the [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html), it also has a dependency on the **BrowserAnimationsModule** and the **HammerModule** for touch interactions, so they need to be added to the `AppModule` as well:
+As `IgxDateRangePicker` uses the [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html), it also has a dependency on the **BrowserAnimationsModule** and **optionally** the **HammerModule** for touch interactions, so they need to be added to the `AppModule` as well:
 
 ```typescript
 // app.module.ts
