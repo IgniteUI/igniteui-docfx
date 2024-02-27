@@ -54,7 +54,16 @@ ng update @angular/cli
 
 ## 17.0.x から 17.1.x の場合:
 
-- **重大な変更**
+### 一般
+- `IgxGrid`、`IgxTreeGrid`、`IgxHierarchicalGrid`
+    - **重大な変更**
+        - `rowAdd` および `rowDelete` イベントは、`IGridEditEventArgs` ではなく `IRowDataCancelableEventArgs` タイプのイベント引数を発行するようになりました。2 つのインターフェイスには引き続き互換性がありますが、これらのイベント プロパティの重複である `cellID`、`newValue`、`oldValue`、`isAddRow` は `IRowDataCancelableEventArgs` で非推奨となり、将来のバージョンでは削除される予定です。正しい新しいインターフェイスに切り替えると、安全に削除できる非推奨の使用法が明らかになります。
+    - **非推奨**
+        - `rowID` プロパティは、`IGridEditDoneEventArgs`、`IPathSegment`、`IRowToggleEventArgs`、`IPinRowEventArgs`、および `IgxAddRowParent` のインターフェイスでは非推奨となり、将来のバージョンでは削除される予定です。代わりに `rowKey` を使用してください。
+        - `primaryKey` プロパティは、次のインターフェイスでは非推奨になりました: `IRowDataEventArgs`、`IGridEditDoneEventArgs`。代わりに `rowKey` を使用してください。
+        - `data` プロパティは、次のインターフェイスでは非推奨になりました: `IRowDataEventArgs`。代わりに `rowData` を使用してください。
+
+### 重大な変更
 - バージョン 17.1.x では、`igxButton` ディレクティブの `icon` タイプが、`flat` タイプの `igxIconButton` ディレクティブに変更されました。自動移行が利用可能で、`ng update` 時に適用されます。ただし、以前は `icon` タイプのボタンで使用できた `igxButton` 入力プロパティの一部は、新しく作成された `igxIconButton` には適用できません。`icon` タイプのボタンで `igxButtonColor` または `igxButtonBackground` プロパティを使用した場合は、次のように更新する必要があります。
 
 ```html
@@ -101,6 +110,7 @@ ng update @angular/cli
     });
   }
 ```
+
 - `getCurrentResourceStrings` は削除されました。`getCurrentResourceStrings` は削除されました。
     - 例: EN 文字列は `igniteui-angular`: `import { GridResourceStringsEN } from 'igniteui-angular';` から取得されます。
     - 例: DE または他の言語文字列は `igniteui-angular-i18n`: `import { GridResourceStringsDE } from 'igniteui-angular-i18n';` から取得されます。
@@ -811,7 +821,7 @@ const selectedCells = grid.selectedCells;              // returns IgxGridCell[]
 const cells = grid.getColumnByName('ProductID').cells; // returns IgxGridCell[]
 ```
 
-- *cellClick*、*selected*、*contextMenu*、および *doubleClick* イベントによって発行される `IGridCellEventArgs` イベント引数の `cell` プロパティは、[`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) のインスタンスになりました。 
+- *cellClick*、*selected*、*contextMenu*、および *doubleClick* イベントによって発行される `IGridCellEventArgs` イベント引数の `cell` プロパティは、[`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) のインスタンスになりました。
 - セル テンプレートの `let-cell` プロパティは `IgxGridCell` になりました。
 - `getCellByColumnVisibleIndex` は非推奨になり、次のメジャー バージョンで削除される予定です。代わりに `getCellByKey`、`getCellByColumn` を使用してください。
 
@@ -888,7 +898,7 @@ $__legacy-libsass: true;
         }
         ```
 
-    * `IgxButton` テーマが簡略化されました。テーマ パラメーター (`button-theme`) 数が大幅に削減され、接頭辞付きのパラメーター (`flat-*`、`raised-*` など) が含まれなくなりました。`ng update` で実行された更新は、既存のボタン テーマを移行しますが、接頭辞付きのパラメーターがないことを考慮して、いくつかの追加の調整が必要になる場合があります。 
+    * `IgxButton` テーマが簡略化されました。テーマ パラメーター (`button-theme`) 数が大幅に削減され、接頭辞付きのパラメーター (`flat-*`、`raised-*` など) が含まれなくなりました。`ng update` で実行された更新は、既存のボタン テーマを移行しますが、接頭辞付きのパラメーターがないことを考慮して、いくつかの追加の調整が必要になる場合があります。
 
     以下のコード スニペットと同じ結果を得るには: 
 
@@ -1164,7 +1174,7 @@ import { HammerModule } from "@angular/platform-browser";
 * IgxDividerType.`DEFAULT` -> IgxDividerType.`SOLID`
 * IgxProgressType.`DANGER` -> IgxProgressType.`ERROR`
 
-`ng update` プロセスは、`AvatarType`、`Type` などのすべての列挙名を `IgxAvatarType` と `IgxBadgeType` にそれぞれ更新します。その他の列挙メンバー名は変更されません。 
+`ng update` プロセスは、`AvatarType`、`Type` などのすべての列挙名を `IgxAvatarType` と `IgxBadgeType` にそれぞれ更新します。その他の列挙メンバー名は変更されません。
 
 ## 8.1.x から 8.2.x の場合:
 
