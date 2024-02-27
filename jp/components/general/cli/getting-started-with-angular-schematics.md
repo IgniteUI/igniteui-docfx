@@ -37,6 +37,8 @@ Ignite UI for Angular コントロールを使用するように設定された�
 ng new newAngularProject --collection="@igniteui/angular-schematics" --template=side-nav
 ```
 
+さらに、`--type=igx-ts-legacy` のようにプロジェクトの `type` を設定することで、モジュール ベースのブートストラップを使用してプロジェクトを生成することを指定できます。これを指定しないと、デフォルトでスタンドアロン コンポーネントを使用するプロジェクトが使用されます。
+
 上記のように `@igniteui/angular-schematics` コレクションを提供せずに作成された Angular プロジェクトが既にある場合、以下のコマンドを使用して Ignite UI for Angular 製品を追加できます。
 
 ```cmd

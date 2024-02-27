@@ -79,6 +79,7 @@ export class HomeComponent {}
 Ignite UI for Angular Datepicker モジュールまたはディレクティブをインポートしたので、`igx-date-picker` コンポーネントの使用を開始できます。
 
 ## Angular Datepicker コンポーネントの使用
+
 ### Datepicker の表示
 デフォルトの `dropdown` 状態の Datepicker をインスタンス化するには、以下のコードを使用してください。
 
@@ -145,7 +146,7 @@ export class SampleFormComponent {
     <igx-icon igxSuffix (click)="datePicker.open()">keyboard_arrow_down</igx-icon>
 </igx-date-picker>
 ```
-上記のサンプルでは、​​入力の最後、デフォルトのクリア アイコンの直後に追加のトグル アイコンが追加されます。プレフィックスとサフィックスを次々に積み重ねることができるため、これによってデフォルトのトグル アイコンが削除されることはありません。
+上記のスニペットでは、​​入力の最後、デフォルトのクリア アイコンの直後に追加のトグル アイコンが追加されます。プレフィックスとサフィックスを次々に積み重ねることができるため、これによってデフォルトのトグル アイコンが削除されることはありません。
 
 #### トグル アイコンとクリア アイコンのカスタマイズ
 [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) と [`IgxPickerClearComponent`]({environment:angularApiUrl}/classes/igxpickerclearcomponent.html) で構成できます。これらを使用すると、独自のクリック ハンドラーを追加しなくても、トグル アイコンとクリア アイコンを変更できます。
@@ -197,7 +198,7 @@ export class SampleFormComponent {
 ### ダイアログ モード
 [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) は、`dialog` モードもサポートしています:
 ```html
-<igx-date-picker [mode]="'dropdown'"></igx-date-picker>
+<igx-date-picker [mode]="'dialog'"></igx-date-picker>
 ```
 <code-view style="height: 540px;"
            data-demos-base-url="{environment:demosBaseUrl}"

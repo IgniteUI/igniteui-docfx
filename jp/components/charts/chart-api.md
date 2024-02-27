@@ -2,7 +2,7 @@
 title: Angular チャート API | データ可視化 ツール | インフラジスティックス
 _description: インフラジスティックスの Ignite UI for Angular チャートは、チャートのビジュアルを構成およびスタイル設定するための便利な API を提供します。
 _keywords: Angular charts, chart API, API, Ignite UI for Angular, Infragistics, Angular チャート, チャート API, インフラジスティックス
-mentionedTypes: ["XamDataChart", "CategoryChart", "FinancialChart", "SeriesViewer", "XamDoughnutChart", "XamPieChart", and "XamSparkline" ]
+mentionedTypes: ["XamDataChart", "CategoryChart", "FinancialChart", "SeriesViewer", "XamDoughnutChart", "XamPieChart", "XamSparkline" ]
 namespace: Infragistics.Controls.Charts
 _language: ja
 ---

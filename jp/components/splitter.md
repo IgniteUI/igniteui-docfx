@@ -246,6 +246,28 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
            iframe-src="{environment:demosBaseUrl}/layouts/splitter-styling-sample" >
 </code-view>
 
+### カスタム サイズ変更
+
+`igx-splitter` を直接ターゲットとして `--size` 変数を使用することができます。
+
+```scss
+igx-splitter {
+  --size: 10px;
+}
+```
+
+または、ユニバーサル変数 `--igx-splitter-size` を使用して、すべてのインスタンスをターゲットにすることもできます。
+
+```html
+<div class="my-app">
+  <igx-splitter></igx-splitter>
+</div>
+```
+```scss
+.my-app {
+  --igx-splitter-size: 10px;
+}
+```
 
 ## API リファレンス
 <div class="divider--half"></div>

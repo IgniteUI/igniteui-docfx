@@ -409,6 +409,9 @@ The result from the above configurations could be seen in the below sample.
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-multi-level-menu">
 </code-view>
 
+>[!NOTE]
+>To display the Dropdown component opened initially, it is recommended to set the open method as a callback of the requestAnimationFrame method. This will ensure that the DOM tree is repainted and all elements are correctly positioned.
+
 ### Navigation directive
 Use the [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) directive to enable keyboard navigation for the `igxDropDown` component. In order to allow the directive to handle all triggered events, it should be applied to the active (focused) element or a parent container. By default, a drop-down or its items don't take focus, so the directive can be placed on a `button` or `input` that will control the drop-down. The navigation directive value should target a component that is an instance or a descendant of the [IgxDropDownBaseDirective]({environment:angularApiUrl}/classes/igxdropdownbasedirective.html) class.
 

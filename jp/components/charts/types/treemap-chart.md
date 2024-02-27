@@ -78,9 +78,9 @@ Ignite UI for Angular ツリーマップ チャートは、ネストされた一
 
 ツリーマップ チャートは、データの相対的な重みを表示します。さまざまなアルゴリズムを使用して、データ項目のレイアウトをどのように行うかを決定します。
 
-*   [`SliceAndDice`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtreemaplayouttype.html#SliceAndDice) - レイアウトのアルゴリズムは、縦横比を代わりに最初の順番を維持するようにします。
-*   [`Squarified`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtreemaplayouttype.html#Squarified) - レイアウトのタイリング アルゴリズムでは、[`SliceAndDice`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtreemaplayouttype.html#SliceAndDice) より縦横比がより正確で、Squarified より適切に並べ替えされます。
-*   [`Stripped`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtreemaplayouttype.html#Stripped) - タイプのアルゴリズムは、最適な縦横比を描画しますが、オブジェクトがサイズによって並べ替えられます。
+*   [`SliceAndDice`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.treemaplayouttype.html#SliceAndDice) - レイアウトのアルゴリズムは、縦横比を代わりに最初の順番を維持するようにします。
+*   [`Squarified`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.treemaplayouttype.html#Squarified) - レイアウトのタイリング アルゴリズムでは、[`SliceAndDice`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.treemaplayouttype.html#SliceAndDice) より縦横比がより正確で、Squarified より適切に並べ替えされます。
+*   [`Stripped`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.treemaplayouttype.html#Stripped) - タイプのアルゴリズムは、最適な縦横比を描画しますが、オブジェクトがサイズによって並べ替えられます。
 
 ツリーマップを使用すると、要件に最適なアルゴリズムを選択できます。デフォルトでは、Squarified メソッドが使用されます。また、次の 2 つのメカニズムを使用してノードに色を付けることができる機能も含まれています。
 
@@ -93,8 +93,8 @@ Ignite UI for Angular ツリーマップ チャートは、ネストされた一
 
 [`layoutOrientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#layoutOrientation) プロパティがレイアウト タイプ SliceAndDice および Strip と動作することに注意してください。
 
-*   [`Horizontal`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtreemaporientation.html#Horizontal) – 子ノードは水平に積み重ねられます (SliceAndDice)。
-*   [`Vertical`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/NaNtreemaporientation.html#Vertical) – 子ノードは垂直に積み重ねられます (SliceAndDice)。
+*   [`Horizontal`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.treemaporientation.html#Horizontal) – 子ノードは水平に積み重ねられます (SliceAndDice)。
+*   [`Vertical`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.treemaporientation.html#Vertical) – 子ノードは垂直に積み重ねられます (SliceAndDice)。
 
 ## Angular ツリーマップのスタイル設定
 

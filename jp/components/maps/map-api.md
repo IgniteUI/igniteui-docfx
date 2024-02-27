@@ -2,7 +2,7 @@
 title: Angular チャート API | データ視覚化ツール | インフラジスティックス
 _description: インフラジスティックスの Ignite UI for Angular マップは、マップ ビジュアルを構成およびスタイル設定するための便利な API を提供します。
 _keywords: Angular maps, geographic, map API, API, Angular マップ, 地理, マップ API, API, Ignite UI for Angular
-mentionedTypes: ['XamGeographicMap', 'Series', 'SeriesViewer', 'GeographicSymbolSeries', 'GeographicProportionalSymbolSeries', 'GeographicShapeSeries', 'GeographicHighDensityScatterSeries', 'GeographicScatterAreaSeries', 'GeographicContourLineSeries']
+mentionedTypes: ['XamGeographicMap', 'Series', 'SeriesViewer', 'GeographicSymbolSeries', 'GeographicProportionalSymbolSeries', 'GeographicShapeSeries', 'GeographicHighDensityScatterSeries', 'GeographicScatterAreaSeries', 'GeographicContourLineSeries', 'GeographicShapeSeriesBase']
 namespace: Infragistics.Controls.Maps
 _language: ja
 ---

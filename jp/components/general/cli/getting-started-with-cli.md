@@ -50,6 +50,10 @@ ig new
 ```cmd
 ig new newAngularProject --framework=angular --type=igx-ts --template=side-nav
 ```
+
+>[!NOTE]
+> `v13.1.0` 以降、`igx-ts` プロジェクト タイプはデフォルトでスタンドアロン コンポーネントを使用するプロジェクトを生成します。代わりにモジュールベースのブートストラップを使用したい場合は、`type` を `igx-ts-legacy` に設定できます。
+
 新しいアプリケーションが同じ名前でディレクトリに作成されます (`newAngularProject`)。Ignite UI for Angular アプリケーションを作成するときに選択できるいくつかのプロジェクト テンプレートがあります。
 
 | テンプレートの ID   | テンプレートの説明 |

@@ -410,6 +410,9 @@ public ngAfterViewInit(): void {
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-multi-level-menu">
 </code-view>
 
+>[!NOTE]
+>最初に開いた Dropdown コンポーネントを表示するには、open メソッドを requestAnimationFrame メソッドのコールバックとして設定することをお勧めします。これにより、DOM ツリーが再描画され、すべての要素が正しく配置されるようになります。
+
 ### Navigation ディレクティブ
 [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) ディレクティブを使用して、`igxDropDown` コンポーネントのキーボード ナビゲーションを有効にします。ディレクティブがトリガーされたすべてのイベントを処理できるようにするには、アクティブな (フォーカスされる) 要素または親コンテナーに適用する必要があります。デフォルトでは、ドロップダウンまたはその項目はフォーカスを取得しないため、ディレクティブはドロップダウンを制御する `button` または `input` に配置できます。ナビゲーション ディレクティブの値は、[IgxDropDownBaseDirective]({environment:angularApiUrl}/classes/igxdropdownbasedirective.html) クラスのインスタンスまたは子孫であるコンポーネントを対象とする必要があります。
 

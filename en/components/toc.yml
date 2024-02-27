@@ -635,7 +635,7 @@
   new: false
 - name: Line Chart
   href: charts/types/line-chart.md
-  new: false
+  updated: true
 - name: Pie Chart
   href: charts/types/pie-chart.md
   new: false
@@ -671,19 +671,22 @@
   new: false
 - name: Chart API
   href: charts/chart-api.md
-  new: false
+  updated: true
 - name: Chart Features
   href: charts/chart-features.md
-  updated: true
+  new: false
   items:
     - name: Axis Gridlines
       href: charts/features/chart-axis-gridlines.md
-      new: false
+      updated: true
     - name: Axis Layouts
       href: charts/features/chart-axis-layouts.md
       new: false
     - name: Axis Options
       href: charts/features/chart-axis-options.md
+      new: false
+    - name: Axis Types
+      href: charts/features/chart-axis-types.md
       new: false
     - name: Chart Animations
       href: charts/features/chart-animations.md
@@ -700,6 +703,9 @@
     - name: Chart Data Tooltip
       href: charts/features/chart-data-tooltip.md
       new: false
+    - name: Chart Highlight Filter
+      href: charts/features/chart-highlight-filter.md
+      new: true
     - name: Chart Highlighting
       href: charts/features/chart-highlighting.md
       new: false
@@ -711,7 +717,7 @@
       new: false
     - name: Chart Overlays
       href: charts/features/chart-overlays.md
-      new: false
+      updated: true
     - name: Chart Performance
       href: charts/features/chart-performance.md
       new: false
@@ -723,7 +729,7 @@
       new: false
     - name: Chart Trendlines
       href: charts/features/chart-trendlines.md
-      new: false
+      updated: true      
     - name: Zoom Slider
       href: zoomslider-overview.md
       new: false
@@ -950,9 +956,9 @@
   href: button.md
 - name: Button Group
   href: button-group.md
-#- name: Icon Button
-#  href: icon-button.md
-#  new: true
+- name: Icon Button
+  href: icon-button.md
+  new: true
 - name: Checkbox
   href: checkbox.md
 - name: Switch
