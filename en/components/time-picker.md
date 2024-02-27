@@ -34,7 +34,7 @@ For a complete introduction to the Ignite UI for Angular, read the [*getting sta
 The next step is to import the `IgxTimePickerModule` in your **app.module.ts** file.
 
 >[!NOTE]
->The IgxTimePicker is also dependent on both the **BrowserAnimationsModule** and **HammerModule** for touch interactions. They need to be added to the AppModule as well.
+>The IgxTimePicker is also dependent on both the **BrowserAnimationsModule** and **optionally** the **HammerModule** for touch interactions. They need to be added to the AppModule as well.
 
 ```typescript
 // app.module.ts
