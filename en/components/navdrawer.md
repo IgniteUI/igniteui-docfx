@@ -33,7 +33,7 @@ For a complete introduction to the Ignite UI for Angular, read the [*getting sta
 The first step is to import the `IgxNavigationDrawerModule` inside our **app.module.ts** file. 
 
 >[!NOTE]
-> The [`IgxNavigationDrawerComponent`]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html) also depends on the [`BrowserAnimationsModule`](https://angular.io/api/platform-browser/animations/BrowserAnimationsModule) and the [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) for touch interactions, so they need to be added to the AppModule as well:
+> The [`IgxNavigationDrawerComponent`]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html) also depends on the [`BrowserAnimationsModule`](https://angular.io/api/platform-browser/animations/BrowserAnimationsModule) and **optionally** the [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) for touch interactions, so they need to be added to the AppModule as well:
 
 
 ```typescript
@@ -172,10 +172,10 @@ There are various ways to open and close the drawer. Input properties can be bou
 ```
 The Navigation Drawer also integrates with [`igxNavigationService`]({environment:angularApiUrl}/classes/igxnavigationservice.html) and can be targeted by id with an [`igxToggleAction`](toggle.md#automatic-toggle-actions) directive.
 
-Let's replace the `<main>` in **app.component.html** with the following, adding [`igxButton`](button.md) and [Icon component](icon.md) to style our toggle:
+Let's replace the `<main>` in **app.component.html** with the following, adding [`igxIconButton`](icon-button.md) and [Icon component](icon.md) to style our toggle:
 ```html
 <main>
-  <span igxButton="icon" igxToggleAction="navigation">
+  <span igxIconButton="flat" igxToggleAction="navigation">
     <igx-icon fontSet="material">menu</igx-icon>
   </span>
 </main>

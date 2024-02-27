@@ -2,7 +2,7 @@
 title: Angular Map | Data Visualization Tools | Binding Geographic Shape Files | Infragistics
 _description: Use Infragistics' Angular JavaScript map to load geo-spatial data from shape files. View Ignite UI for Angular map demos!
 _keywords: Angular map, shapefiles, Ignite UI for Angular, Infragistics, data binding
-mentionedTypes: ['XamGeographicMap', 'ShapefileConverter', 'Series']
+mentionedTypes: ['XamGeographicMap', 'ShapefileConverter', 'Series', 'GeographicShapeSeriesBase']
 ---
 
 # Angular Binding Shape Files with Geo-spatial Data
@@ -24,8 +24,8 @@ The following table explains properties of the [`IgxShapeDataSource`]({environme
 
 | Property | Type | Description   |
 |----------|------|---------------|
-| [`shapefileSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html#shapefilesource) | string |Specifies the Uri to a shape file (.shp) that contains geo-spatial data items.|
-|[`databaseSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html#databasesource) | string |Specifies the Uri to a shape database file (.dbf) that contains a data table for geo-spatial data items.|
+| [`shapefileSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html#shapefileSource) | string |Specifies the Uri to a shape file (.shp) that contains geo-spatial data items.|
+|[`databaseSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html#databaseSource) | string |Specifies the Uri to a shape database file (.dbf) that contains a data table for geo-spatial data items.|
 
 <!-- TODO add for WPF only: -->
 

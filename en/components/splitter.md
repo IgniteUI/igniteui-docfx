@@ -246,6 +246,29 @@ This is the final result from applying your new theme.
            iframe-src="{environment:demosBaseUrl}/layouts/splitter-styling-sample" >
 </code-view>
 
+### Custom sizing
+
+You can either use the `--size` variable, targeting the `igx-splitter` directly:
+
+```scss
+igx-splitter {
+  --size: 10px;
+}
+```
+
+Or you can use the universal `--igx-splitter-size` variable to target all instances:
+
+```html
+<div class="my-app">
+  <igx-splitter></igx-splitter>
+</div>
+```
+```scss
+.my-app {
+  --igx-splitter-size: 10px;
+}
+```
+
 
 ## API References
 <div class="divider--half"></div>

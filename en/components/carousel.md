@@ -33,7 +33,7 @@ For a complete introduction to the Ignite UI for Angular, read the [*getting sta
 The next step is to import the **IgxCarouselModule** in our **app.module.ts** file:
 
 >[!NOTE]
->This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for touch interactions to work as expected.
+>This component can utilize the [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) **optionally**. It can be imported in the root module of the application in order for touch interactions to work as expected.
 
 ```typescript
 // app.module.ts
@@ -196,7 +196,7 @@ This carousel is going to contain slides with forms and images:
                     </igx-input-group>
                 </form>
                 <div class="btn">
-                    <button igxButton="raised" type="submit" (click)="form.reset()">Sign In</button>
+                    <button igxButton="contained" type="submit" (click)="form.reset()">Sign In</button>
                 </div>
             </div>
         </igx-slide>
@@ -214,7 +214,7 @@ This carousel is going to contain slides with forms and images:
                     </igx-input-group>
                 </form>
                 <div class="btn">
-                    <button igxButton="raised" type="submit" (click)="form2.reset()">Search</button>
+                    <button igxButton="contained" type="submit" (click)="form2.reset()">Search</button>
                 </div>
             </div>
         </igx-slide>

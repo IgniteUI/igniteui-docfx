@@ -8,13 +8,12 @@ mentionedTypes: ['XamBulletGraph']
 
 <!-- Angular, React -->
 
-# Ignite UI for Angular を使用した作業の開始
-
 ## 既存アプリの更新
 
 既存の Angular CLI プロジェクト (以前のもの) で Ignite UI for Angular を使用する場合は、以下のコマンドを実行します。
 
 ```cmd
+npm install --save igniteui-angular
 npm install --save igniteui-angular-charts igniteui-angular-core
 npm install --save igniteui-angular-excel igniteui-angular-core
 npm install --save igniteui-angular-gauges igniteui-angular-core
@@ -52,9 +51,15 @@ yarn add igniteui-angular-spreadsheet igniteui-angular-core
 npm run-script start
 ```
 
-コマンドを実行した後、プロジェクトがローカルでビルドされて提供されます。これでデフォルトのブラウザーで自動的に開き、プロジェクトで Ignite UI for Angular コンポーネントを使用できるようになります。
+コマンドを実行した後、プロジェクトがローカルでビルドされて提供されます。これでデフォルトのブラウザーで自動的に開き、プロジェクトで Ignite UI for Angular コンポーネントを使用できるようになります。最終結果には、インタラクティブなワールドマップが表示されます。
 
-以下の画像は、上記を実行した結果です。
+<!-- <img src="../images/general/geo-map.png" /> -->
 
-<img src="../images/general/geo-map.png" />
+<code-view style="height: 750px" alt="Angular 概要の例"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/display-osm-imagery"
+                                                 github-src="maps/geo-map/display-osm-imagery">
+</code-view>
+
+
 <!-- end: Angular, React -->

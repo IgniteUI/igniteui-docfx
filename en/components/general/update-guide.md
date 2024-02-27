@@ -51,7 +51,8 @@ Unfortunately not all changes can be automatically updated. Changes below are sp
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
-## From 16.1.x to 17.0.x
+## From 17.0.x to 17.1.x
+
 ### General
 - `rowAdd` and `rowDelete` events no longer emit event argument of type `IGridEditEventArgs`, but argument of type `IRowDataCancelableEventArgs`. The two interfaces `IGridEditEventArgs` and `IRowDataCancelableEventArgs` are compatible. Only case there would be issues is if your application was reading `IGridEditEventArgs.oldValue`, `IGridEditEventArgs.newValue`. These properties return always undefined when in `rowAdd` or `rowDelete` event handlers, so they can be safely removed.
 - `rowID` property has been deprecated in the following interfaces: `IGridEditDoneEventArgs`, `IPathSegment`, `IRowToggleEventArgs`, `IPinRowEventArgs`, `IgxAddRowParent` and will be removed in a future version. Use `rowKey` instead.
@@ -63,6 +64,28 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 
 ### Breaking changes
 - If code inside `rowAdd` or `rowDelete` event handlers is reading `IGridEditEventArgs.oldValue` or `IGridEditEventArgs.newValue`, migrating the event argument type from `IGridEditEventArgs` to `IRowDataCancelableEventArgs` would be a breaking change, because the interface `IRowDataCancelableEventArgs` does not have `oldValue` and `newValue` props. These properties return always undefined when in `rowAdd` or `rowDelete` event handlers, so if there is a code reading these prop in these event handlers, just remove it.
+
+- In version 17.1.x the `icon` type of the `igxButton` directive has been changed to the `igxIconButton` directive of type `flat`. Automatic migrations are available and will be applied on `ng update`. However, some of the `igxButton` input properties that could previously be used with the `icon` type buttons, cannot be applied to the newly created `igxIconButton`. If you have used the `igxButtonColor` or the `igxButtonBackground` properties with a button of type `icon`, you should update it as follows: 
+
+```html
+// version 17.0.x
+<button igxButton="icon" [igxButtonBackground]="'red'">
+    <igx-icon fontSet="material">search</igx-icon>
+</button>
+
+// version 17.1.x
+<button igxIconButton="flat" [style.background]="'red'">
+    <igx-icon fontSet="material">search</igx-icon>
+</button>
+```
+
+## From 16.1.x to 17.0.x
+### General
+- In 17.0 Angular have removed the `@nguniversal/*` packages. If the project uses these packages a standard `ng update` call will cause an error in the `igniteui-angular` migrations due to improperly modified `package-lock.json` - more details can be found [here](https://github.com/IgniteUI/igniteui-angular/issues/13668). To update to `17.0.x` one of the following additional steps needs to be taken:
+    - Delete the `package-lock.json` file before running `ng update`
+    - Run `npm dedupe --legacy-peer-deps` before running `ng update igniteui-angular`
+
+**Breaking change**
 - In `IgxCombo`'s `selectionChanging` event arguments type `IComboSelectionChangingEventArgs` has these changes:
     - properties `newSelection` and `oldSelection` have been renamed to `newValue` and `oldValue` respectively to better reflect their function. Just like Combo's `value`, those will emit either the specified property values or full data items depending on whether `valueKey` is set or not. Automatic migrations are available and will be applied on `ng update`.
     - two new properties `newSelection` and `oldSelection` are exposed in place of the old ones that are no longer affected by `valueKey` and consistently emit items from Combo's `data`.

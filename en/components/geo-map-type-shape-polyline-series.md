@@ -2,7 +2,7 @@
 title: Angular Map | Data Visualization Tools | Shape Polyline Series | Infragistics
 _description: Use Infragistics Angular map's shape polyline series to render roads or connections between geographic locations such as cities or airports. Learn more about Ignite UI for Angular map's series!
 _keywords: Angular map, Ignite UI for Angular, shape polyline series, Infragistics
-mentionedTypes: ['XamGeographicMap', 'ShapefileConverter', 'Series']
+mentionedTypes: ['XamGeographicMap', 'ShapefileConverter', 'Series', 'GeographicShapeSeriesBase']
 ---
 
 # Angular Geographic Polyline Map
@@ -24,7 +24,7 @@ The [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products
 
 ## Data Requirements
 
-Similarly to other types of geographic series in the control, the [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicpolylineseriescomponent.html) has the `ItemsSource` property which can be bound to an array of objects. In addition, each data item in this object must have one data column that stores single/multiple shapes using an array of arrays of objects with x and y values representing geographic locations. This data column is then mapped to the ShapeMemberPath property. The [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicpolylineseriescomponent.html) uses points of this mapped data column to plot polygons in the control.
+Similarly to other types of geographic series in the control, the [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicpolylineseriescomponent.html) has the `ItemsSource` property which can be bound to an array of objects. In addition, each data item in this object must have one data column that stores single/multiple shapes using an array of arrays of objects with x and y values representing geographic locations. This data column is then mapped to the [`shapeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicshapeseriesbasecomponent.html#shapeMemberPath) property. The [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicpolylineseriescomponent.html) uses points of this mapped data column to plot polygons in the control.
 
 ## Code Snippet
 

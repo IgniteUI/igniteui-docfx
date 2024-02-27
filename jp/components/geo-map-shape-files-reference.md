@@ -2,7 +2,7 @@
 title: Angular マップ | データ可視化ツール | シェープ ファイル リファレンス | シェープ ファイルの編集 | インフラジスティックス
 _description: インフラジスティックスの Angular マップで使用するシェープ ファイル形式について説明します。Ignite UI for Angular マップ チュートリアルを是非お試しください!
 _keywords: Angular map, shape files, Ignite UI for Angular, Infragistics, shape editing, Angular マップ, シェープ ファイル, シェイプの編集, インフラジスティックス
-mentionedTypes: ['XamGeographicMap']
+mentionedTypes: ['XamGeographicMap', 'GeographicShapeSeriesBase', 'Series']
 _language: ja
 ---
 
@@ -108,5 +108,5 @@ Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite
 *   [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicpolylineseriescomponent.html)
 *   [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicshapeseriescomponent.html)
 *   `ItemsSource`
-*   `ShapeMemberPath`
-*   [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxshapedatasource.html)
+*   [`shapeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicshapeseriesbasecomponent.html#shapeMemberPath)
+*   [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html)

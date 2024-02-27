@@ -52,19 +52,31 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
+## 17.0.x から 17.1.x の場合:
+
+- **重大な変更**
+- バージョン 17.1.x では、`igxButton` ディレクティブの `icon` タイプが、`flat` タイプの `igxIconButton` ディレクティブに変更されました。自動移行が利用可能で、`ng update` 時に適用されます。ただし、以前は `icon` タイプのボタンで使用できた `igxButton` 入力プロパティの一部は、新しく作成された `igxIconButton` には適用できません。`icon` タイプのボタンで `igxButtonColor` または `igxButtonBackground` プロパティを使用した場合は、次のように更新する必要があります。
+
+```html
+// version 17.0.x
+<button igxButton="icon" [igxButtonBackground]="'red'">
+    <igx-icon fontSet="material">search</igx-icon>
+</button>
+
+// version 17.1.x
+<button igxIconButton="flat" [style.background]="'red'">
+    <igx-icon fontSet="material">search</igx-icon>
+</button>
+```
+
 ## 16.1.x から 17.0.x の場合:
 
 ### 一般
-- `rowAdd` および `rowDelete` イベントは、`IGridEditEventArgs` 型のイベント引数を発行しなくなり、`IRowDataCancelableEventArgs` 型の引数を発行します。2 つのインターフェイス `IGridEditEventArgs` と `IRowDataCancelableEventArgs` には互換性があります。問題が発生する唯一のケースは、アプリケーションが `IGridEditEventArgs.oldValue`、`IGridEditEventArgs.newValue` を読み取っていた場合です。これらのプロパティは、`rowAdd` または `rowDelete` イベント ハンドラー内では常に未定義を返すため、安全に削除できます。
-- `rowID` プロパティは、`IGridEditDoneEventArgs`、`IPathSegment`、`IRowToggleEventArgs`、`IPinRowEventArgs`、および `IgxAddRowParent` のインターフェイスでは非推奨となり、将来のバージョンでは削除される予定です。代わりに `rowKey` を使用してください。
-- `data` プロパティは、次のインターフェイスでは非推奨になりました: `IBaseRowDataEventArg` および `IRowDataEventArgs`。代わりに `rowData` を使用してください。
-- `key` プロパティは、次のインターフェイスでは非推奨になりました: `IRowDataEventArgs`。代わりに `rowKey` を使用してください。
-- `primaryKey` は次のインターフェイスでは非推奨になりました: `IGridEditDoneEventArgs`。代わりに `rowKey` を使用してください。
-
-- API の使用と保守を容易にするために、上記の変更が導入されました。現時点では、一部のインターフェイスは、同じエンティティに対して 2 つ以上のプロパティ (`rowID`、`key`、`rowKey`、および `primaryKey`) を含むため、煩雑になりました。`rowID`、`key`、および `primaryKey` はすべての場所で非推奨となり、バージョン 18 以降では `rowKey` のみを残すことを目的としています。同じことが `data` と `rowData` にも当てはまります。その目的は、バージョン 18 以降では `rowData` のみを使用することです。
+- 17.0 Angular では、`@nguniversal/*` パッケージが削除されました。プロジェクトがこれらのパッケージを使用している場合、標準の `ng update` 呼び出しにより、不適切に変更された `package-lock.json` が原因で `igniteui-angular` 移行でエラーが発生します。細については、[こちら](https://github.com/IgniteUI/igniteui-angular/issues/13668)を参照してください。`17.0.x` に更新するには、次の追加手順のいずれかを実行する必要があります。
+    - `ng update` を実行する前に `package-lock.json` ファイルを削除します。
+    - `ng update igniteui-angular` を実行する前に `npm dedupe --legacy-peer-deps` を実行します。
 
 ### 重大な変更
-- `rowAdd` または `rowDelete` イベント ハンドラー内のコードが `IGridEditEventArgs.oldValue` または `IGridEditEventArgs.newValue` を読み取っている場合、`IRowDataCancelableEventArgs` インターフェイスには `oldValue` および `newValue` プロパティがないため、イベント引数の型を `IGridEditEventArgs` から `IRowDataCancelableEventArgs` に移行することは重大な変更となります。これらのプロパティは、`rowAdd` または `rowDelete` イベント ハンドラー内では常に未定義を返すため、これらのイベント ハンドラー内でこれらのプロパティを読み取るコードがある場合は、それを削除してください。
 - `IgxCombo` の `IComboSelectionChangingEventArgs` 型の`selectionChanging` イベント引数には次の変更があります。
     - `newSelection` と `oldSelection` プロパティは、その機能をより適切に反映するために、それぞれ `newValue` と `oldValue` に名前変更されました。Combo の `value` と同様に、これらは `valueKey` が設定されているかどうかに応じて、指定されたプロパティ値または完全なデータ項目を出力します。自動移行が利用可能で、`ng update` 時に適用されます。
     - 2 つの新しいプロパティ (`newSelection` と `oldSelection`) が、`valueKey` の影響を受けなくなった古いプロパティの代わりに公開され、一貫して Combo の `data` から項目を出力します。

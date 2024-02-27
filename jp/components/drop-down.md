@@ -59,7 +59,7 @@ import { IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective 
 @Component({
     selector: 'app-home',
     template: `
-    <button igxButton="raised" 
+    <button igxButton="contained" 
         [igxToggleAction]="dropdown"
         [igxDropDownItemNavigation]="dropdown">
         Options
@@ -89,7 +89,7 @@ Ignite UI for Angular Drop Down モジュールまたはディレクティブを
 
 ```html
 <!-- dropdown.component.html -->
-<button igxButton="raised" 
+<button igxButton="contained" 
         [igxToggleAction]="dropdown"
         [igxDropDownItemNavigation]="dropdown">
         Options
@@ -122,7 +122,7 @@ export class MyDropDownComponent {
 
 ```html
 <!-- dropdown.component.html -->
-<button igxButton="raised" 
+<button igxButton="contained" 
         [igxToggleAction]="dropdown" 
         [igxDropDownItemNavigation]="dropdown">
         Options
@@ -160,7 +160,7 @@ export class MyDropDownComponent {
 
 ```html
 <!-- dropdown.component.html -->
-<button igxButton="raised" 
+<button igxButton="contained" 
         [igxToggleAction]="dropdown"
         [igxDropDownItemNavigation]="dropdown">
         Countries
@@ -292,7 +292,7 @@ export class MyCustomDropDownComponent {
                 [igxToggleOutlet]="outlet"
                 [overlaySettings]="overlaySettings"
                 [igxDropDownItemNavigation]="menu"
-                igxButton="icon">
+                igxIconButton="flat">
             <igx-icon fontSet="material">more_vert</igx-icon>
         </button>
         <igx-drop-down #menu (selectionChanging)="selectionHandler($event)">
@@ -410,6 +410,9 @@ public ngAfterViewInit(): void {
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-multi-level-menu">
 </code-view>
 
+>[!NOTE]
+>最初に開いた Dropdown コンポーネントを表示するには、open メソッドを requestAnimationFrame メソッドのコールバックとして設定することをお勧めします。これにより、DOM ツリーが再描画され、すべての要素が正しく配置されるようになります。
+
 ### Navigation ディレクティブ
 [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) ディレクティブを使用して、`igxDropDown` コンポーネントのキーボード ナビゲーションを有効にします。ディレクティブがトリガーされたすべてのイベントを処理できるようにするには、アクティブな (フォーカスされる) 要素または親コンテナーに適用する必要があります。デフォルトでは、ドロップダウンまたはその項目はフォーカスを取得しないため、ディレクティブはドロップダウンを制御する `button` または `input` に配置できます。ナビゲーション ディレクティブの値は、[IgxDropDownBaseDirective]({environment:angularApiUrl}/classes/igxdropdownbasedirective.html) クラスのインスタンスまたは子孫であるコンポーネントを対象とする必要があります。
 
@@ -425,7 +428,7 @@ public ngAfterViewInit(): void {
         [value]="dropDown.selectedItem?.value"
         (keydown.ArrowDown)="openDropDown()"/>
 
-    <igx-suffix igxButton="icon" igxRipple>
+    <igx-suffix igxIconButton="flat" igxRipple>
         <igx-icon>arrow_drop{{ dropDown.collapsed ? '_down' : '_up' }}</igx-icon>
     </igx-suffix>
 </igx-input-group>

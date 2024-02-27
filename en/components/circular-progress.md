@@ -130,10 +130,10 @@ You can dynamically change the value of the progress by using external controls 
         class="custom-size">
     </igx-circular-bar>
     <div class="button-container">
-        <button igxButton="icon" (click)="decrementProgress()">
+        <button igxIconButton="flat" (click)="decrementProgress()">
             <igx-icon fontSet="material">remove</igx-icon>
         </button>
-        <button igxButton="icon" (click)="incrementProgress()">
+        <button igxIconButton="flat" (click)="incrementProgress()">
             <igx-icon fontSet="material">add</igx-icon>
         </button>
     </div>
@@ -220,10 +220,10 @@ To provide a gradient that has more than 2 color stops, we have to use the direc
   </igx-circular-bar>
 
   <div class="button-container">
-      <button igxButton="icon" (click)="removeProgress()">
+      <button igxIconButton="flat" (click)="removeProgress()">
           <igx-icon fontSet="material">remove</igx-icon>
       </button>
-      <button igxButton="icon" (click)="addProgress()">
+      <button igxIconButton="flat" (click)="addProgress()">
           <igx-icon fontSet="material">add</igx-icon>
       </button>
   </div>

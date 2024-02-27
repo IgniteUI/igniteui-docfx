@@ -9,7 +9,7 @@ _language: ja
 
 Angular Button ディレクティブは、アクション可能なボタンを作成して Web ページ/アプリケーションに追加するために使用されます。簡単にカスタマイズでき、いくつかの組み込み機能を含むさまざまな Angular Button タイプがあります。デフォルトでは、AngularMaterial はネイティブの `<button>` および `<a>` 要素を使用して、アクセス可能なエクスペリエンスを提供します。 
 
-Ignite UI for Angular Button ディレクティブを任意の button、span、div、または anchor 要素に適用して高機能なボタンを構成できます。Flat ボタン、Raised ボタン、Outlined ボタン、Icon ボタン、FAB (フローティング アクション ボタン) の Angular ボタン タイプを使用できます。カスタマイズ可能な色、テーマを作成して Angular ボタン スタイルを変更するオプション、ユーザーがボタンのサイズを選択できるようにするオプションなどを提供します。
+Ignite UI for Angular Button ディレクティブを任意の button、span、div、または anchor 要素に適用して高機能なボタンを構成できます。Flat ボタン、Contained ボタン、Outlined ボタン、FAB (フローティング アクション ボタン) の Angular ボタン タイプを使用できます。カスタマイズ可能な色、テーマを作成して Angular ボタン スタイルを変更するオプション、ユーザーがボタンのサイズを選択できるようにするオプションなどを提供します。
 
 ## Angular Button の例
 以下の Angular Button の例を作成して、さまざまなボタン タイプが境界線でスタイル設定されている場合、または透明な背景が適用されている場合にどのように表示されるかを示します。
@@ -84,12 +84,12 @@ Ignite UI for Angular Button モジュールまたはディレクティブをイ
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-2"></iframe>
 </div>
 
-### Raised ボタン
+### Contained ボタン
 
-エンボス加工されたボタンを作成するには、`igxButton` プロパティの値を変更するだけです。
+Contained ボタンを作成するには、`igxButton` プロパティの値を変更するだけです。
 
 ```html
-<button igxButton="raised">Raised</button>
+<button igxButton="contained">Contained</button>
 ```
 
 <div class="sample-container loading" style="height: 70px">
@@ -110,10 +110,10 @@ Ignite UI for Angular Button モジュールまたはディレクティブをイ
 
 ### Icon ボタン
 
-アイコンをボタンとして使用することもできます。
+バージョン `17.1.0` 以降、IgniteUI for Angular は、アイコンを完全に機能するボタンに変えることを目的とした新しい `igxIconButton` ディレクティブを公開します。*Icon Button* の詳細については[こちら](icon-button.md)を参照してください。
 
 ```html
-<button igxButton="icon">
+<button igxIconButton="flat">
   <igx-icon fontSet="material">favorite</igx-icon>
 </button>
 ```
@@ -155,7 +155,7 @@ Ignite UI for Angular Button モジュールまたはディレクティブをイ
 ボタンを無効にするには、`disabled` プロパティを使用します。
 
 ```html
-<button igxButton="raised" [disabled]="'true'">Disabled</button>
+<button igxButton="contained" [disabled]="'true'">Disabled</button>
 ```
 
 <div class="sample-container loading" style="height: 70px">
@@ -167,7 +167,7 @@ Ignite UI for Angular Button モジュールまたはディレクティブをイ
 [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) ディレクティブは、ボタンまたはその他の指定した要素にリップル効果を追加します。`以下のプロパティを使用して、デフォルトのリップル色、位置、および期間を簡単に変更できます。
 
 ```html
-<button igxButton="raised" igxRipple="white" [igxRippleCentered]="true" [igxRippleDuration]="2000">
+<button igxButton="contained" igxRipple="white" [igxRippleCentered]="true" [igxRippleDuration]="2000">
     Ripple
 </button>
 ```
@@ -181,7 +181,7 @@ Ignite UI for Angular Button モジュールまたはディレクティブをイ
 `span` や `div` などの要素を Ignite UI for Angular スタイルのボタンに変更するために `igxButton` ディレクティブを使用できます。デフォルトの色は `igxButtonColor` と `igxButtonBackground` プロパティでカスタマイズできます。
 
 ```html
-<span igxButton="raised" igxButtonColor="white" igxButtonBackground="#72da67" igxRipple="white">
+<span igxButton="contained" igxButtonColor="white" igxButtonBackground="#72da67" igxRipple="white">
     Span
 </span>
 ```
@@ -260,8 +260,8 @@ protected get sizeStyle() {
 次のマークアップを前提として:
 
 ```html
-<div class="my-raised-btn">
-    <button igxButton="raised">Raised button</button>
+<div class="my-contained-btn">
+    <button igxButton="contained">Contained button</button>
 </div>
 ```
 
@@ -286,7 +286,7 @@ $custom-button-theme: button-theme(
 最後には、カスタム ボタン テーマをアプリケーションに渡します。 
 
 ```scss
-.my-raised-btn {
+.my-contained-btn {
     @include css-vars($custom-button-theme);
 }
 ```
@@ -299,7 +299,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 ```scss
 :host {
      ::ng-deep {
-        .my-raised-btn {
+        .my-contained-btn {
             @include button($custom-button-theme);
         }
     }
@@ -312,6 +312,40 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/buttons-style" >
 </code-view>
+
+### カスタム サイズ変更
+
+ボタンの高さは、`--size` 変数を使用して、`button` を直接ターゲットにして変更できます。
+
+```scss
+button {
+  --size: 50px;
+}
+```
+
+または、ユニバーサル変数 `--igx-button-size` を使用して、すべてのインスタンスをターゲットにすることもできます。
+
+```html
+<div class="my-app">
+  <button igxButton="raised"></button>
+</div>
+```
+```scss
+.my-app {
+  --igx-button-size: 50px;
+}
+```
+
+事前定義されたサイズの 1 つを使用して、それを `--ig-size` 変数に割り当てることもできます。`--ig-size` に使用可能な値は、`--ig-size-small`、`--ig-size-medium`、`--ig-size-large` です。
+
+```scss
+button {
+    --ig-size: var(--ig-size-large);
+}
+```
+
+詳細については、[サイズ](display-density.md)の記事をご覧ください。
+
 <div class="divider--half"></div>
 
 ## API リファレンス
@@ -320,6 +354,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
 * [IgxButton スタイル]({environment:sassApiUrl}/index.html#function-button-theme)
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
+* [IgxIconButtonDirective]({environment:angularApiUrl}/classes/igxiconbuttondirective.html)
 * [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
 
 ## その他のリソース
