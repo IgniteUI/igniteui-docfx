@@ -78,6 +78,17 @@ ng update @angular/cli
 </button>
 ```
 
+**注**: ユーザーはインポートに `IgxIconButtonDirective` を手動で追加する必要があります。
+
+```typescript
+import { IgxIconButtonDirective } from 'igniteui-angular';
+
+@Component({
+    ...
+    imports: [IgxIconButtonDirective]
+})
+```
+
 ## 16.1.x から 17.0.x の場合:
 
 ### 一般
