@@ -284,21 +284,6 @@ When selected row is deleted from the grid component, `rowSelectionChanging` eve
     - Parameters in grid templates now have types for their context. This can also cause issues if the app is in strict template mode and uses the wrong type. References to the template that may require conversion:
          - `IgxColumnComponent` - [`ColumnType`]({environment:angularApiUrl}/interfaces/columntype.html) (for example the column parameter in `igxFilterCellTemplate`)
          - `IgxGridCell` - [`CellType`]({environment:angularApiUrl}/interfaces/celltype.html) (for example the cell parameter in `igxCell` template)
-- Ignite UI for Angular now has a peer dependency on [igniteui-theming](https://github.com/IgniteUI/igniteui-theming). Install the theming package and add the following preprocessor configuration in your `angular.json` file.
-
-    ```sh
-    npm install igniteui-theming
-    ```
-
-    ```json
-        "build": {
-          "options": {
-            "stylePreprocessorOptions": {
-                "includePaths": ["node_modules"]
-            }
-          }
-        }
-    ```
 
 - **Breaking Change** - All global CSS variables for theme configuration, colors, elevations, and typography have changed the prefix from `--igx` to `--ig`. This change doesn't affect global component variables;
     
