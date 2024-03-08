@@ -410,6 +410,49 @@ Multiview calendar supports all three types of selection. Use the [`monthsViewNu
            iframe-src="{environment:demosBaseUrl}/scheduling/multiview-calendar" >
 </code-view>
 
+## Calendar Orientation
+The orientation settings allows users to choose how the header and the view of the calendar are displayed.
+
+#### Header Orientation Options:
+
+You can change the header orientation to place the header of the calendar to be either horizontal(above the calendar view) or vertical(on the side of the calendar view).
+To do that, use the `[headerOrientation]` property, setting it respectively to `horizontal` or `vertical`
+
+#### View Orientation Options:
+
+You can set the view orientation to place the months in the calendar either horizontally(side by side) or vertically(above one another).
+To do that, use the `[orientation]` property, setting it respectively to `horizontal` or `vertical`.
+
+>[!NOTE]
+> You need at least two month view calendar to see that property working.
+
+```html
+<igx-calendar [monthsViewNumber]="2" [headerOrientation]="headerOrientation" [orientation]="orientation"></igx-calendar>
+```
+
+```typescript
+const orientations = ["horizontal", "vertical"] as const;
+type Orientation = (typeof orientations)[number];
+
+export class CalendarSample9Component {
+    protected orientations = Array.from(orientations, (o) => o);
+    protected headerOrientation: Orientation = "horizontal";
+    protected orientation: Orientation = "horizontal";
+
+    protected setHeaderOrientation(orientation: Orientation) {
+        this.headerOrientation = orientation;
+    }
+
+    protected setOrientation(orientation: Orientation) {
+        this.orientation = orientation;
+    }
+}
+```
+
+<code-view style="height: 750px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-9" alt="Angular Calendar Orientation Example">
+</code-view>
 
 ## Styling
 
