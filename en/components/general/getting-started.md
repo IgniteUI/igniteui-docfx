@@ -55,6 +55,7 @@ ng add igniteui-angular
 ```
 
 >[!NOTE]
+> You don't need to install the `igniteui-theming` package explicity, it comes with Ignite UI for Angular.
 > Keep in mind that with the command above you will install the Trial version of Ignite UI for Angular.
 
 During the installation process you will be asked if you would like to enable polyfills for IE, Edge and Safari. This will install the `web-animations-js` package in your project, which is required if you use `AnimationBuilder` in your application and one of these browsers. You can also choose to add CSS library to reset HTML element styles across browsers and the `minireset.css` will be installed in your application.
