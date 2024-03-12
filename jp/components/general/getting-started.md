@@ -56,6 +56,7 @@ ng add igniteui-angular
 ```
 
 >[!NOTE]
+> `igniteui-theming` パッケージは Ignite UI for Angular に付属しているため、明示的にインストールする必要はありません。
 > 上記のコマンドで Ignite UI for Angular のトライアル版をインストールすることに注意してください。
 
 インストール時に IE、Edge、および Safari のポリフィルを有効にするかどうかのプロンプトが表示されます。これにより、プロジェクトに `web-animations-js` パッケージがインストールされます。これは、アプリケーションとこれらのブラウザーのいずれかで `AnimationBuilder` を使用する場合に必要です。ブラウザーで HTML 要素のスタイルをリセットする CSS ライブラリを追加することもできます。`minireset.css` がアプリケーションにインストールされます。

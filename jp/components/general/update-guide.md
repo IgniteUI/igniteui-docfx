@@ -295,20 +295,16 @@ public onButtonClick(event) {
     - グリッド テンプレートのパラメーターに、コンテキストの型が追加されました。これは、アプリが厳密なテンプレート モードであり、間違った型を使用している場合にも問題を引き起こす可能性があります。変換が必要なテンプレートへの参照:
          - `IgxColumnComponent` - [`ColumnType`]({environment:angularApiUrl}/interfaces/columntype.html) (たとえば、`igxFilterCellTemplate` の列パラメーター)
          - `IgxGridCell` - [`CellType`]({environment:angularApiUrl}/interfaces/celltype.html) (たとえば、`igxCell` テンプレートの cell パラメーター)
-- Ignite UI for Angular に [igniteui-theming](https://github.com/IgniteUI/igniteui-theming) のピア依存関係があります。テーマ パッケージをインストールし、`angular.json` ファイルに以下のプリプロセッサー設定を追加します。
-
-    ```sh
-    npm install igniteui-theming
-    ```
+- Ignite UI for Angular に [igniteui-theming](https://github.com/IgniteUI/igniteui-theming) の依存関係があります。次のプリプロセッサ設定を `angular.json` ファイルに追加します。
 
     ```json
-        "build": {
-          "options": {
-            "stylePreprocessorOptions": {
-                "includePaths": ["node_modules"]
-            }
-          }
-        }
+	"build": {
+	  "options": {
+	    "stylePreprocessorOptions": {
+		"includePaths": ["node_modules"]
+	    }
+	  }
+	}
     ```
 
 - **重大な変更** - テーマの構成、カラー、エレベーション、およびタイポグラフィのすべてのグローバル CSS 変数のプレフィックスが `--igx` から `--ig` に変更されました。この変更はグローバル コンポーネント変数には影響しません。
