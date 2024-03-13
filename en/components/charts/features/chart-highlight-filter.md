@@ -29,6 +29,8 @@ The reduced opacity of the column and area series types is configurable by setti
 
 The part of the series shown by the highlight filter will be represented in the legend and tooltip layers of the chart separately. You can configure the title that this is given in the tooltip and legend by setting the [`highlightedTitleSuffix`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriescomponent.html#highlightedTitleSuffix). This will append the value that you provide to the end of the [`chartTitle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#chartTitle) of the series.
 
+If the `DataLegend` or [`IgxDataToolTipLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatatooltiplayercomponent.html) is used then the highlighted series will appear groupped. This can be managed by setting the `HighlightedValuesDataLegendGroup` property on the series to categorize them appropriately.
+
 The following example demonstrates the usage of the data highlighting overlay feature within the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) control using the `HighlightedValueMemberPath`:
 
 <code-view style="height: 500px" alt="Angular Highlight Filter Example"
