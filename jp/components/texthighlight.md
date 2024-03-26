@@ -7,7 +7,7 @@ _language: ja
 
 # Angular Text Highlight (テキスト強調表示) ディレクティブの概要
 
-Ignite UI for Angular の [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) ディレクティブは、テキストのハイライト、大文字と小文字の区別のオプション、完全一致のみのハイライトをサポートします。既にハイライトしている部分を含む、テキストのハイライトをアクティブに保持できます。
+Ignite UI for Angular の [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) および `IgxTextHighlightService` は、テキストの強調表示、大文字と小文字の区別のオプション、完全一致のみの強調表示をサポートします。既に強調表示している部分を含む、テキストの強調表示をアクティブに保持できます。
 
 ## Angular Text Highlight ディレクティブの例
 
@@ -50,8 +50,8 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IgxTextHighlightDirective } from 'igniteui-angular';
-// import { IgxTextHighlightDirective } from '@infragistics/igniteui-angular'; for licensed package
+import { IgxTextHighlightDirective, IgxTextHighlightService } from 'igniteui-angular';
+// import { IgxTextHighlightDirective, IgxTextHighlightService } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
     selector: 'app-home',
@@ -68,10 +68,12 @@ import { IgxTextHighlightDirective } from 'igniteui-angular';
     standalone: true,
     imports: [IgxTextHighlightDirective]
 })
-export class HomeComponent {}
+export class HomeComponent {
+    constructor(public textHighlightService: IgxTextHighlightService) {}
+}
 ```
 
-Ignite UI for Angular Text Highlight モジュールまたはディレクティブをインポートしたので、`igxTextHighlight` ディレクティブの使用を開始できます。
+Ignite UI for Angular Text Highlight モジュールまたはディレクティブをインポートしたので、`igxTextHighlight` の使用を開始できます。
 
 ## Angular Text Highlight ディレクティブの使用
 
@@ -90,7 +92,7 @@ Ignite UI for Angular Text Highlight モジュールまたはディレクティ�
         <igx-suffix>
             <div class="caseSensitiveButton">
                 <button igxIconButton="flat" igxRipple igxRippleCentered="true" (click)="updateSearch()"
-                        [igxButtonBackground]="caseSensitive? 'rgb(73, 180, 254)' : 'transparent'">
+                        [style.background]="caseSensitive ? 'rgb(73, 180, 254)' : 'transparent'">
                     <igx-icon class="caseSensitiveIcon" fontSet="material">text_fields</igx-icon>
                 </button>
             </div>
@@ -132,78 +134,89 @@ div テキストと IgxTextHighlight ディレクティブを追加します。�
 コンポーネント テンプレートのバインディングに使用する以下のフィールドをコンポーネントの .ts ファイルに追加します。
 
 ``` typescript
-public html = '...';
+@Component({
+    ...
+})
+export class HomeComponent {
+    public html = '...';
 
-@ViewChild(IgxTextHighlightDirective, {read: IgxTextHighlightDirective})
-public highlight: IgxTextHighlightDirective;
+    @ViewChild(IgxTextHighlightDirective, {read: IgxTextHighlightDirective})
+    public highlight: IgxTextHighlightDirective;
 
-public searchText: string = '';
-public matchCount: number = 0;
-public caseSensitive: boolean = false;
-public index: number = 0;
+    public searchText: string = '';
+    public matchCount: number = 0;
+    public caseSensitive: boolean = false;
+    public index: number = 0;
 
-
-public get canMoveHighlight() {
-    return this.matchCount > 1;
+    public get canMoveHighlight() {
+        return this.matchCount > 1;
+    }
 }
 ```
 
 次に以下のメソッドを追加すると、ユーザーが検索ボックスに入力したテキストにハイライトを適用でき、アクティブ ハイライト間を移動できます。
 
 ``` typescript
-public searchKeyDown(ev) {
-    if (this.searchText) {
-        if (ev.key === 'Enter' || ev.key === 'ArrowDown' || ev.key === 'ArrowRight') {
-            ev.preventDefault();
-            this.findNext();
-        } else if (ev.key === 'ArrowUp' || ev.key === 'ArrowLeft') {
-            ev.preventDefault();
-            this.findPrev();
+@Component({
+    ...
+})
+export class HomeComponent {
+    constructor(public textHighlightService: IgxTextHighlightService) {}
+
+    public searchKeyDown(ev) {
+        if (this.searchText) {
+            if (ev.key === 'Enter' || ev.key === 'ArrowDown' || ev.key === 'ArrowRight') {
+                ev.preventDefault();
+                this.findNext();
+            } else if (ev.key === 'ArrowUp' || ev.key === 'ArrowLeft') {
+                ev.preventDefault();
+                this.findPrev();
+            }
         }
     }
-}
 
-public onTextboxChange() {
-    this.index = 0;
-    this.find(0);
-}
+    public onTextboxChange() {
+        this.index = 0;
+        this.find(0);
+    }
 
-public updateSearch() {
-    this.caseSensitive = !this.caseSensitive;
-    this.find(0);
-}
+    public updateSearch() {
+        this.caseSensitive = !this.caseSensitive;
+        this.find(0);
+    }
 
-public clearSearch() {
-    this.searchText = '';
-    this.find(0);
-}
+    public clearSearch() {
+        this.searchText = '';
+        this.find(0);
+    }
 
-private findNext() {
-    this.find(1);
-}
+    private findNext() {
+        this.find(1);
+    }
 
-private findPrev() {
-    this.find(-1);
-}
+    private findPrev() {
+        this.find(-1);
+    }
 
-private find(increment: number) {
-    if (this.searchText) {
-        this.matchCount = this.highlight.highlight(this.searchText, this.caseSensitive);
-        this.index += increment;
+    private find(increment: number) {
+        if (this.searchText) {
+            this.matchCount = this.highlight.highlight(this.searchText, this.caseSensitive);
+            this.index += increment;
 
-        this.index = this.index < 0 ? this.matchCount - 1 : this.index;
-        this.index = this.index > this.matchCount - 1 ? 0 : this.index;
+            this.index = this.index < 0 ? this.matchCount - 1 : this.index;
+            this.index = this.index > this.matchCount - 1 ? 0 : this.index;
 
-        if (this.matchCount) {
-            IgxTextHighlightDirective.setActiveHighlight('group1', {
-                columnIndex: 0,
-                index: this.index,
-                page: 0,
-                rowIndex: 0
-            });
+            if (this.matchCount) {
+                this.textHighlightService.setActiveHighlight('group1', {
+                    columnIndex: 0,
+                    index: this.index,
+                    page: 0,
+                    rowIndex: 0
+                });
+            }
+        } else {
+            this.highlight.clearHighlight();
         }
-    } else {
-        this.highlight.clearHighlight();
     }
 }
 ```
@@ -253,44 +266,51 @@ public highlights;
 .ts ファイルのコードの残りすべてが単一要素の例 (find メソッドの例外) と同一となります。複数の要素があるため、このメソッドの変更が必要になりますが、TextHighlight ディレクティブの数値に関係なくコードを使用できます。
 
 ```typescript
-private find(increment: number) {
-    if (this.searchText) {
-        let count = 0;
-        const matchesArray = [];
+@Component({
+    ...
+})
+export class HomeComponent {
+    constructor(public textHighlightService: IgxTextHighlightService) {}
 
-        this.highlights.forEach((h) => {
-            count += h.highlight(this.searchText, this.caseSensitive);
-            matchesArray.push(count);
-        });
+    private find(increment: number) {
+        if (this.searchText) {
+            let count = 0;
+            const matchesArray = [];
 
-        this.matchCount = count;
-
-        this.index += increment;
-        this.index = this.index < 0 ? this.matchCount - 1 : this.index;
-        this.index = this.index > this.matchCount - 1 ? 0 : this.index;
-
-        if (this.matchCount) {
-            let row;
-
-            for (let i = 0; i < matchesArray.length; i++) {
-                if (this.index < matchesArray[i]) {
-                    row = i;
-                    break;
-                }
-            }
-
-            const actualIndex = row === 0 ? this.index : this.index - matchesArray[row - 1];
-
-            IgxTextHighlightDirective.setActiveHighlight('group1', {
-                index: actualIndex,
-                rowIndex: row
+            this.highlights.forEach((h) => {
+                count += h.highlight(this.searchText, this.caseSensitive);
+                matchesArray.push(count);
             });
+
+            this.matchCount = count;
+
+            this.index += increment;
+            this.index = this.index < 0 ? this.matchCount - 1 : this.index;
+            this.index = this.index > this.matchCount - 1 ? 0 : this.index;
+
+            if (this.matchCount) {
+                let row;
+
+                for (let i = 0; i < matchesArray.length; i++) {
+                    if (this.index < matchesArray[i]) {
+                        row = i;
+                        break;
+                    }
+                }
+
+                const actualIndex = row === 0 ? this.index : this.index - matchesArray[row - 1];
+
+                this.textHighlightService.setActiveHighlight('group1', {
+                    index: actualIndex,
+                    rowIndex: row
+                });
+            }
+        } else {
+            this.highlights.forEach((h) => {
+                h.clearHighlight();
+            });
+            this.matchCount = 0;
         }
-    } else {
-        this.highlights.forEach((h) => {
-            h.clearHighlight();
-        });
-        this.matchCount = 0;
     }
 }
 ```

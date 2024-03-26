@@ -35,7 +35,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 次に、**app.module.ts** ファイルに `IgxDatePickerModule` をインポートします。
 
 >[!NOTE]
-> ピッカーが [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) を使用し、タッチ操作のために **BrowserAnimationsModule** と**HammerModule** に依存関係があり、これらもモジュールに追加する必要があります。
+> ピッカーが [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) を使用し、タッチ操作のために **BrowserAnimationsModule** と **HammerModule** (**オプション**) に依存関係があり、これらもモジュールに追加する必要があります。
 
 ```typescript
 import { HammerModule } from '@angular/platform-browser';

@@ -39,7 +39,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 次に、**app.module.ts** ファイルに `IgxCalendarModule` をインポートします。
 
 >[!NOTE]
-> [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) はタッチ操作の [`BrowserAnimationsModule`](https://angular.io/api/platform-browser/animations/BrowserAnimationsModule) と [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) にも依存するため、これらを AppModule にも追加する必要があります。
+> [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) はタッチ操作の [`BrowserAnimationsModule`](https://angular.io/api/platform-browser/animations/BrowserAnimationsModule) と [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) (**オプション**) に依存関係があり、これらも AppModule に追加する必要があります。
 
 ```typescript
 // app.module.ts
