@@ -110,6 +110,26 @@ public type = SplitterType.Horizontal;
 </igx-splitter>
 ```
 
+### Collapsible Splitter
+
+You can make the splitter collapsible or not by showing or hiding the splitter's handle and expanders, using the [`nonCollapsible`]({environment:angularApiUrl}/classes/igxsplittercomponent.html#nonCollapsible) input. The default value is false, so the splitter is collapsible.
+
+```html
+<igx-splitter [nonCollapsible]="true">
+    <igx-splitter-pane>
+        ...
+    </igx-splitter-pane>
+    <igx-splitter-pane>
+        ...
+    </igx-splitter-pane>
+</igx-splitter>
+```
+
+<code-view style="height: 400px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/splitter-collapsible-sample" >
+</code-view>
+
 ### Configuring panes
 
 The **igxSplitterPane** component contains several input properties. You can set the initial pane size by using the [`size`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#size) input property. The [`minSize`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#minSize) and [`maxSize`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#maxSize) input properties can be used to set the minimum or maximum allowed size of the pane. Resizing beyond `minSize` and `maxSize` is not allowed.
