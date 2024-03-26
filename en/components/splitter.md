@@ -112,10 +112,10 @@ public type = SplitterType.Horizontal;
 
 ### Collapsible Splitter
 
-You can make the splitter collapsible or not by showing or hiding the splitter's handle and expanders, using the [`collapsible`]({environment:angularApiUrl}/classes/igxsplittercomponent.html#collapsible) input. The splitter is collapsible by default.
+You can make the splitter collapsible or not by showing or hiding the splitter's handle and expanders, using the [`nonCollapsible`]({environment:angularApiUrl}/classes/igxsplittercomponent.html#nonCollapsible) input. The default value is false, so the splitter is collapsible.
 
 ```html
-<igx-splitter [collapsible]="false">
+<igx-splitter [nonCollapsible]="true">
     <igx-splitter-pane>
         ...
     </igx-splitter-pane>
