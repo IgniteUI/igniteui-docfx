@@ -78,20 +78,12 @@ The following example demonstrates a data tooltip with the added columns of Open
 </code-view>
 
 
-## Angular Data Tooltip Styling
+## Angular Data Tooltip Grouping for Data Chart
 
-The **DataToolTip** provides properties for styling each type of column. Each of these properties begins with Title, Label, Value, or Units, and you can style the text's color, font, and margin. For example, if you wanted to set the text color of each of these, you would set the [`dataToolTipTitleTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipTitleTextColor), [`dataToolTipLabelTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipLabelTextColor), [`dataToolTipValueTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueTextColor), and [`dataToolTipUnitsTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipUnitsTextColor) properties.
+`DataLegendGroup` can be set, on all types of series, to a string that will categorize a group of series in Data Legend. Each group will have its own summary row displayed before another group of series is displayed:
+By default, DataLegend will hide names of groups, but you can display group names by setting the `GroupRowVisible` property to true. [`groupingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatatooltiplayercomponent.html#groupingMode) should be set to "Grouped" and [`labelDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#labelDisplayMode) should be set to "Visible" on the Data Tooltip Layer.
 
-The following example demonstrates usage of the styling properties mentioned above:
-
-<code-view style="height: 450px" alt="Angular Financial Chart Data Tooltip Styling Example"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-                    iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/data-tooltip-styling-props"
-                                                 github-src="charts/financial-chart/data-tooltip-styling-props">
-</code-view>
-
-
-## Angular Data Tooltip Grouping & Positioning
+## Angular Data Tooltip Grouping & Positioning for Category Chart & Financial Chart
 
 You can set [`dataToolTipGroupingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipGroupingMode) property to either `Grouped` or `Individual` to group content for multiple series into single tooltip or separate content for each series in multiple tooltips. In the `Grouped` mode, you can customize where the tooltip is shown by setting the [`dataToolTipGroupedPositionModeX`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipGroupedPositionModeX) and [`dataToolTipGroupedPositionModeY`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipGroupedPositionModeY) properties. This essentially allows you to customize the horizontal and vertical alignments of the tooltip and whether you want it to track to the closest series points to the mouse position or pin the tooltip to edge of plot area.
 
@@ -127,6 +119,36 @@ You can change the default decimal display of values within the **DataToolTip** 
                                                  github-src="charts/financial-chart/data-tooltip-formatting-currency">
 </code-view>
 
+
+## Angular Data Tooltip Styling
+
+The **DataToolTip** provides properties for styling each type of column. Each of these properties begins with Title, Label, Value, or Units, and you can style the text's color, font, and margin. For example, if you wanted to set the text color of each of these, you would set the [`dataToolTipTitleTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipTitleTextColor), [`dataToolTipLabelTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipLabelTextColor), [`dataToolTipValueTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueTextColor), and [`dataToolTipUnitsTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipUnitsTextColor) properties.
+
+The following example demonstrates usage of the styling properties mentioned above:
+
+<code-view style="height: 450px" alt="Angular Financial Chart Data Tooltip Styling Example"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/data-tooltip-styling-props"
+                                                 github-src="charts/financial-chart/data-tooltip-styling-props">
+</code-view>
+
+
+Several properties are exposed including grouping portions of the tooltip.
+
+*   `GroupTextMargin`
+*   `GroupTextColor`
+*   `GroupTextFontSize`
+*   `GroupTextFontFamily`
+*   `GroupTextFontStyle`
+*   `GroupTextFontStretch`
+*   `GroupTextFontWeight`
+*   `HeaderTextMargin`
+*   [`headerTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#headerTextColor)
+*   `HeaderTextFontSize`
+*   `HeaderTextFontFamily`
+*   `HeaderTextFontStyle`
+*   `HeaderTextFontStretch`
+*   `HeaderTextFontWeight`
 
 ## API References
 
