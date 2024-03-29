@@ -16,6 +16,12 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 
 *   [Ignite UI for Angular Changelog at Github](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md)
 
+## **17.3.0 (March 2024)**
+
+### igniteui-angular-gauges
+
+*   New `OpticalScalingEnabled` and `OpticalScalingSize` properties for the `RadialGauge`. This new feature will manage the size at which labels, titles, and subtitles of the gauge have 100% optical scaling. You can read more about this new feature [here](radial-gauge.md#optical-scaling)
+
 ## **17.2.0 (January 2024)**
 
 ### igniteui-angular-charts (Charts)
@@ -27,14 +33,6 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 ### igniteui-angular-grids (Toolbar - Beta)
 
 *   Save tool action has been added to save the chart to an image via the clipboard.
-*   Vertical orientation has been added via the toolbar's [`orientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html#orientation) property. By default the toolbar is horizontal, now the toolbar can be shown in vertical orientation where the tools will popup to the left/right respectfully.
-*   Custom SVG icons support was added via the toolbar's `renderImageFromText` method, further enhancing custom tool creation.
-
-## **17.0.0 (December 2023)**
-
-### igniteui-angular-grids (Toolbar - Beta)
-
-*   A new tool has been added, as a default tool, to save the chart to an image via the clipboard.
 *   Vertical orientation has been added via the toolbar's [`orientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html#orientation) property. By default the toolbar is horizontal, now the toolbar can be shown in vertical orientation where the tools will popup to the left/right respectfully.
 *   Custom SVG icons support was added via the toolbar's `renderImageFromText` method, further enhancing custom tool creation.
 
