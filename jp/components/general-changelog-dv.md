@@ -2,9 +2,9 @@
 title: Angular 新機能 | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular の新機能について学んでください。
 _keywords: Changelog, What's New, Ignite UI for Angular, Infragistics, 変更ログ, 新機能, インフラジスティックス
-_language: ja
 mentionedTypes: ["SeriesViewer", "XYChart", "DomainChart", "XamDataChart", "Toolbar", "XamGeographicMap", "DatePicker", "MultiColumnComboBox", "CategoryChart", "CrosshairLayer", "FinalValueLayer", "CalloutLayer", "DataLegend"]
 namespace: Infragistics.Controls.Charts
+_language: ja
 ---
 
 # Ignite UI for Angular 変更ログ
@@ -17,6 +17,12 @@ Ignite UI for Angular の各バージョンのすべての重要な変更は、�
 
 *   [Ignite UI for Angular 変更ログ](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md)
 
+## **17.3.0 (March 2024)**
+
+### igniteui-angular-gauges
+
+*   `RadialGauge` の新しい `OpticalScalingEnabled` プロパティと `OpticalScalingSize` プロパティ。この新機能は、ゲージのラベル、タイトル、サブタイトルが 100% のオプティカル スケーリングを持つサイズを管理します。この新機能の詳細については、[こちら](radial-gauge.md#オプティカル-スケーリング)を参照してください。
+
 ## **17.2.0 (January 2024)**
 
 ### igniteui-angular-charts (チャート)
@@ -28,14 +34,6 @@ Ignite UI for Angular の各バージョンのすべての重要な変更は、�
 ### igniteui-angular-grids (Toolbar - ベータ版)
 
 *   クリップボードを介してチャートを画像に保存するための保存ツール アクションが追加されました。
-*   ツールバーの [`orientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html#orientation) プロパティを介して垂直方向が追加されました。デフォルトでは、ツールバーは水平方向ですが、ツールバーを垂直方向に表示できるようになり、ツールが左右にポップアップ表示されます。
-*   ツールバーの `renderImageFromText` メソッドを介してカスタム SVG アイコンのサポートが追加され、カスタム ツールの作成がさらに強化されました。
-
-## **17.0.0 (December 2023)**
-
-### igniteui-angular-grids (Toolbar - ベータ版)
-
-*   クリップボードを介してチャートを画像に保存するための新しいツールがデフォルトのツールとして追加されました。
 *   ツールバーの [`orientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html#orientation) プロパティを介して垂直方向が追加されました。デフォルトでは、ツールバーは水平方向ですが、ツールバーを垂直方向に表示できるようになり、ツールが左右にポップアップ表示されます。
 *   ツールバーの `renderImageFromText` メソッドを介してカスタム SVG アイコンのサポートが追加され、カスタム ツールの作成がさらに強化されました。
 
