@@ -60,6 +60,7 @@ Boston Marathon 2021 – この Angular グリッドの例では、ユーザー�
 
 
 <code-view style="height:700px"
+           img-src="https://static.infragistics.com/marketing/Website/products/ignite-ui/samples/ignite-ui-angular-marathon-grid-sample-1900.jpg"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
            iframe-src="{environment:lobDemosBaseUrl}/grid/grid" alt="Angular データ グリッドの例">
 </code-view>
