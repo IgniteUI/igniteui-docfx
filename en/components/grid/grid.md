@@ -37,6 +37,7 @@ _keywords: angular data grid, angular grid component, angular data grid componen
     <article class="sample-column">
         <div class="tabbar-wrapper">
             <p>The Angular Data Grid is a component for displaying data in a tabular format. Modern grids are complex and are usually packed with a large set of features like data selection, excel style filtering, sorting, paging, grouping, templating, column moving, column pinning, exporting to Excel, CSV formats and more. </p>
+            <p>Ignite UI Angular Data Grid covers all of these basic Grid features, but also advanced features like batch editing, state persistence, keyboard navigations and more. Ensuring seamless integration with various data sources, our component offers the best performance and scalability, making it ideal for apps handling large datasets or those requiring real-time updates fast.</p>
         </div>
     </article>
     <article class="sample-column">
@@ -61,7 +62,7 @@ Boston Marathon 2021 – In this angular grid example, you can see how users can
 
 <code-view style="height:700px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           img-src="../../images/boston-marathon-image.png"
+           img-src="https://static.infragistics.com/marketing/Website/products/ignite-ui/samples/ignite-ui-angular-marathon-grid-sample-1900.jpg"
            iframe-src="{environment:lobDemosBaseUrl}/grid/grid" alt="Angular data grid example">
 </code-view>
 
