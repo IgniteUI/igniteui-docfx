@@ -109,7 +109,7 @@ export class AppModule {}
 </igx-radial-gauge>
 ```
 
-<code-view style="height: 320px" alt="Angular radial gauge backing"
+<code-view style="height: 320px" alt="Angular ラジアル ゲージのバッキング"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/backing"
                                                  github-src="gauges/radial-gauge/backing">
@@ -136,7 +136,7 @@ export class AppModule {}
 </igx-radial-gauge>
 ```
 
-<code-view style="height: 320px" alt="Angular radial gauge scale"
+<code-view style="height: 320px" alt="Angular ラジアル ゲージのスケール"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/scale"
                                                  github-src="gauges/radial-gauge/scale">
@@ -159,10 +159,21 @@ export class AppModule {}
 </igx-radial-gauge>
 ```
 
-<code-view style="height: 320px" alt="Angular radial gauge labels"
+<code-view style="height: 320px" alt="Angular ラジアル ゲージのラベル"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/labels"
                                                  github-src="gauges/radial-gauge/labels">
+</code-view>
+
+
+## オプティカル スケーリング - タイトル、サブタイトル、ラベル
+
+ラジアル ゲージのラベルとタイトルにより、スケーリングを変更できます。これを有効にするには、まず `OpticalScalingEnabled` を true に設定します。次に、ラベルが 100% のオプティカル スケーリングを持つサイズを管理する `OpticalScalingSize` を設定できます。ゲージのサイズが大きくなると、ラベルのフォントも大きくなります。たとえば、このプロパティが 500 に設定され、ゲージのピクセル単位のサイズが 2 倍の 1000 になると、ラベルのフォント サイズは 200% 大きくなります。
+
+<code-view style="height: 500px" alt="Angular ラジアル ゲージのラベル"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/optical-scaling"
+                                                 github-src="gauges/radial-gauge/optical-scaling">
 </code-view>
 
 
@@ -187,7 +198,7 @@ export class AppModule {}
 </igx-radial-gauge>
 ```
 
-<code-view style="height: 320px" alt="Angular radial gauge tickmarks"
+<code-view style="height: 320px" alt="Angular ラジアル ゲージの目盛"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/tickmarks"
                                                  github-src="gauges/radial-gauge/tickmarks">
@@ -217,7 +228,7 @@ export class AppModule {}
 </igx-radial-gauge>
 ```
 
-<code-view style="height: 320px" alt="Angular radial gauge ranges"
+<code-view style="height: 320px" alt="Angular ラジアル ゲージの範囲"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/ranges"
                                                  github-src="gauges/radial-gauge/ranges">
@@ -253,7 +264,7 @@ export class AppModule {}
 </igx-radial-gauge>
 ```
 
-<code-view style="height: 320px" alt="Angular radial gauge needle"
+<code-view style="height: 320px" alt="Angular ラジアル ゲージの針"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/needle"
                                                  github-src="gauges/radial-gauge/needle">
