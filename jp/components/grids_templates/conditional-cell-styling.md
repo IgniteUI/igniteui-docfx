@@ -303,7 +303,10 @@ private downFontCondition = (rowData: any, columnKey: any): boolean => {
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+```html
+<!-- sample.component.html -->
+<igx-column field="GrammyNominations" header="Grammy Nominations" dataType="number" [cellClasses]="grammyClasses"></igx-column>
+```
 }
 
 [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellClasses) 入力は、キーと値のペアを含むオブジェクト リテラルを受け取ります。キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。
@@ -373,7 +376,36 @@ public priceClasses = {
 ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<!-- TODO -->
+```typescript
+// sample.component.ts
+
+private upGrammyCondition = (rowData: any, columnKey: any): boolean => {
+    return rowData[columnKey] > 5;
+}
+
+private downGrammyCondition = (rowData: any, columnKey: any): boolean => {
+    return rowData[columnKey] <= 5;
+}
+
+public grammyClasses = {
+    downGrammy: this.downPriceCondition,
+    upGrammy: this.upPriceCondition
+};
+```
+
+```scss
+// sample.component.scss
+
+::ng-deep {
+    .upGrammy {
+        color: red;
+    }
+
+    .downGrammy {
+        color: green;
+    }
+}
+```
 }
 
 **::ng-deep** または **`ViewEncapsulation.None`** を使用してカスタム スタイルを現在のコンポーネントとその子コンポーネントに適用します。
@@ -383,7 +415,6 @@ public priceClasses = {
 @@if (igxName === 'IgxGrid') {
 
 <code-view style="height:530px"
-           no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-cell-styling" >
 </code-view>
@@ -451,6 +482,7 @@ public evenColStyles = {
 
 `ngOnInit` で、@@igxName 列を動的に作成するために使用される事前定義 `columns` コレクションの各列に `cellStyles` 構成を追加します。
 
+@@if (igxName === 'IgxGrid') {
 ```ts
 // component.ts
 public ngOnInit() {
@@ -465,7 +497,42 @@ public ngOnInit() {
 
     this.applyCSS();
 }
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```ts
+// component.ts
+public ngOnInit() {
+    this.data = ORDERS_DATA;
+     this.columns = [
+        { field: 'ID' },
+        { field: 'Name' },
+        { field: 'UnitPrice' },
+        { field: 'OrderDate' }
+    ];
 
+    this.applyCSS();
+}
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```ts
+// component.ts
+public ngOnInit() {
+    this.data = SINGERS;
+    this.columns = [
+        { field: 'Artist' },
+        { field: 'HasGrammyAward' },
+        { field: 'Debut' },
+        { field: 'GrammyNominations' },
+        { field: 'GrammyAwards' }
+    ];
+
+    this.applyCSS();
+}
+```
+}
+```ts
 public applyCSS() {
     this.columns.forEach((column, index) => {
         column.cellStyles = (index % 2 === 0 ? this.evenColStyles : this.oddColStyles);
@@ -479,6 +546,7 @@ public updateCSS(css: string) {
 }
 ```
 
+@@if (igxName === 'IgxGrid') {
 ```html
 // component.html
 <igx-grid
@@ -493,6 +561,36 @@ public updateCSS(css: string) {
     </igx-column>
 </igx-grid>
 ```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+//component.html
+<igx-tree-grid
+    #grid1 [data]="data"
+    primaryKey="ID" foreignKey="ParentID"
+    height="350px">
+    <igx-column *ngFor="let c of columns"
+        [field]="c.field"
+        [header]="c.header"
+        [cellStyles]="c.cellStyles">
+    </igx-column>
+</igx-tree-grid>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-hierarchical-grid #hierarchicalGrid [data]="localdata"    
+    [autoGenerate]="false"
+    [height]="'580px'">
+    <igx-column *ngFor="let c of columns"
+        [field]="c.field"
+        [header]="c.header"
+        [cellStyles]="c.cellStyles">
+    </igx-column>
+</igx-hierarchical-grid>
+```
+}
+
 
 `popin` アニメーションの定義
 
@@ -560,6 +658,7 @@ editDone(evt) {
 
 ```
 
+@@if (igxName === 'IgxGrid') {
 ```html
 <igx-grid #grid1 [data]="data" height="500px" width="100%" (onCellEdit)="editDone($event)">
   <igx-column field="Col1" dataType="number" [cellClasses]="backgroundClasses"></igx-column>
@@ -567,6 +666,26 @@ editDone(evt) {
   <igx-column field="Col3" header="Col3" dataType="string" [cellClasses]="backgroundClasses"></igx-column>
 </igx-grid>
 ```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<igx-tree-grid #grid1 [data]="data" height="500px" width="100%" (onCellEdit)="editDone($event)">
+  <igx-column field="Col1" dataType="number" [cellClasses]="backgroundClasses"></igx-column>
+  <igx-column field="Col2" dataType="number" [editable]="true" [cellClasses]="backgroundClasses"></igx-column>
+  <igx-column field="Col3" header="Col3" dataType="string" [cellClasses]="backgroundClasses"></igx-column>
+</igx-tree-grid>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<igx-hierarchical-grid #grid1 [data]="data" height="500px" width="100%" (onCellEdit)="editDone($event)">
+  <igx-column field="Col1" dataType="number" [cellClasses]="backgroundClasses"></igx-column>
+  <igx-column field="Col2" dataType="number" [editable]="true" [cellClasses]="backgroundClasses"></igx-column>
+  <igx-column field="Col3" header="Col3" dataType="string" [cellClasses]="backgroundClasses"></igx-column>
+</igx-hierarchical-grid>
+```
+}
+
 
 ## API リファレンス
 <div class="divider--half"></div>

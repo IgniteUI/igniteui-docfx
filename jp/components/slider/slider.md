@@ -32,7 +32,7 @@ Ignite UI for Angular については、「[はじめに](../general/getting-sta
 次に、**app.module.ts** ファイルに `IgxSliderModule` をインポートします。
 
 >[!WARNING]
->**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**.
+>このコンポーネントは、**オプションで** [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) を利用できます。タッチ操作が正しく動作するために、アプリケーションのルート モジュールにインポートできます。
 
 ```typescript
 // app.module.ts
@@ -71,7 +71,7 @@ export class HomeComponent {
 }
 ```
 
-スタンドアロン コンポーネントを使用する場合、[`HammerModule`](https://angular.io/api/platform-b​​rowser/HammerModule) を `app.config` ファイルにインポートする必要があります。
+スタンドアロン コンポーネントを使用する場合、[`HammerModule`](https://angular.io/api/platform-browser/HammerModule) を `app.config` ファイルにインポートする必要があります。
 
 ```typescript
 //app.config.ts

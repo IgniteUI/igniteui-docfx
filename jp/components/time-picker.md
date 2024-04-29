@@ -35,7 +35,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 次に、**app.module.ts** ファイルに `IgxTimePickerModule` をインポートします。
 
 >[!NOTE]
->IgxTimePicker は、タッチ操作において、**BrowserAnimationsModule** と **HammerModule** に依存しています。これらも AppModule に追加する必要があります。
+>IgxTimePicker は、タッチ操作において、**BrowserAnimationsModule** と **HammerModule** (オプション) に依存しています。これらも AppModule に追加する必要があります。
 
 ```typescript
 // app.module.ts

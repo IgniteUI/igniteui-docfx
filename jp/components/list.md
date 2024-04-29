@@ -32,7 +32,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 次に、**app.module.ts** ファイルに `IgxListModule` をインポートします。
 
 >[!NOTE]
->**このコンポーネントでは、タッチ操作が正しく動作するために、アプリケーションのルート モジュールに [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) をインポートする必要があります。**
+>このコンポーネントは、**オプションで** [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) を利用できます。タッチ操作が正しく動作するために、アプリケーションのルート モジュールにインポートできます。
 
 ```typescript
 // app.module.ts
