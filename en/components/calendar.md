@@ -19,7 +19,7 @@ We created the following Angular Calendar example using the Ignite UI for Angula
 
 <div class="divider--half"></div>
 
-<code-view style="height: 500px" 
+<code-view style="height: 480px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-5" alt="Angular Calendar Example">
 </code-view>
@@ -106,7 +106,7 @@ We can easily change the default mode using the [`selection`]({environment:angul
 ```
 
 
-<code-view style="height: 420px" 
+<code-view style="height: 360px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-1" >
 </code-view>
@@ -123,7 +123,7 @@ Following the same approach, we can switch to range selection mode:
 ```
 
 
-<code-view style="height: 420px" 
+<code-view style="height: 480px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-8" >
 </code-view>
@@ -173,7 +173,7 @@ public ngOnInit() {
 If everything went well, we should now have a calendar with customized dates display, that also changes the locale representation, based on the user location. Let's have a look at it:
 
 
-<code-view style="height: 620px" 
+<code-view style="height: 580px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-2" >
 </code-view>
@@ -204,7 +204,7 @@ export class CalendarSample6Component {
 These configurions should have the following result:
 
 
-<code-view style="height: 480px" 
+<code-view style="height: 420px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-6" >
 </code-view>
@@ -255,7 +255,7 @@ export class CalendarSample7Component {
 The following demo illustrates a calendar with a vacation request option:
 
 
-<code-view style="height: 450px" 
+<code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-7" >
 </code-view>
@@ -273,7 +273,7 @@ You can now use [`showWeekNumbers`]({environment:angularApiUrl}/classes/igxcalen
 The following demo illustrates a calendar with enabled week numbers:
 
 
-<code-view style="height: 420px" 
+<code-view style="height: 380px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-1" >
 </code-view>
@@ -328,7 +328,7 @@ There are separate views provided by the `IgxCalendarModule` that can be used in
 -  Angular Calendar Days View  - [`igx-days-view`]({environment:angularApiUrl}/classes/igxdaysviewcomponent.html)
 
 
-<code-view style="height: 420px" 
+<code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-days-view" >
 </code-view>
@@ -337,7 +337,7 @@ There are separate views provided by the `IgxCalendarModule` that can be used in
 - Angular Calendar Month View  - [`igx-months-view`]({environment:angularApiUrl}/classes/igxmonthsviewcomponent.html)
 
 
-<code-view style="height: 520px" 
+<code-view style="height: 290px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-months-view" >
 </code-view>
@@ -346,7 +346,7 @@ There are separate views provided by the `IgxCalendarModule` that can be used in
 - Angular Calendar Year View  - [`igx-years-view`]({environment:angularApiUrl}/classes/igxyearsviewcomponent.html)
 
 
-<code-view style="height: 500px" 
+<code-view style="height: 320px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-years-view" >
 </code-view>
@@ -405,7 +405,7 @@ When an `year` inside the decade view is focused, use:
 Multiview calendar supports all three types of selection. Use the [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#monthsViewNumber) input to set the number of displayed months, which will be shown horizontally in a flex container. There is no limit on the max value set. While using a multi view calendar, you may want to hide the days that do not belong to the current month. You are able to do it with the [`hideOutsideDays`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#hideOutsideDays) property.  Keyboard navigation moves to next/previous months when those are in view.
 
 
-<code-view style="height: 540px" 
+<code-view style="height: 500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/multiview-calendar" >
 </code-view>
