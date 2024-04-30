@@ -538,10 +538,10 @@ $custom-slider-theme: slider-theme(
 
 * [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)
 * [IgxSliderComponent スタイル]({environment:sassApiUrl}/index.html#function-slider-theme)
-* [SliderType]({environment:angularApiUrl}/enums/slidertype.html)
+* [SliderType]({environment:angularApiUrl}/variables/IgxSliderType-1.html)
 * [IRangeSliderValue]({environment:angularApiUrl}/interfaces/irangeslidervalue.html)
-* [TicksOrientation]({environment:angularApiUrl}/enums/ticksorientation.html)
-* [TickLabelsOrientation]({environment:angularApiUrl}/enums/ticklablesorientation.html)
+* [TicksOrientation]({environment:angularApiUrl}/classes/IgxSliderComponent.html#ticksOrientation)
+* [TickLabelsOrientation]({environment:angularApiUrl}/classes/IgxSliderComponent.html#tickLabelsOrientation)
 
 <div class="divider--half"></div>
 

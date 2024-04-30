@@ -110,6 +110,26 @@ public type = SplitterType.Horizontal;
 </igx-splitter>
 ```
 
+### 縮小可能なスプリッター
+
+[`nonCollapsible`]({environment:angularApiUrl}/classes/igxsplittercomponent.html#nonCollapsible) 入力を使用して、スプリッターのハンドルとエキスパンダーを表示または非表示にすることで、スプリッターを折りたたみ可能 (縮小可能) または非折りたたむことができます。デフォルト値は false で、スプリッターは縮小することができます。
+
+```html
+<igx-splitter [nonCollapsible]="true">
+    <igx-splitter-pane>
+        ...
+    </igx-splitter-pane>
+    <igx-splitter-pane>
+        ...
+    </igx-splitter-pane>
+</igx-splitter>
+```
+
+<code-view style="height: 400px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/splitter-collapsible-sample" >
+</code-view>
+
 ### ペインの構成
 
 **igxSplitterPane** コンポーネントには、いくつかのプロパティが含まれています。[`size`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#size) プロパティを使用してペインの初期サイズを設定できます。[`minSize`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#minSize) および [`maxSize`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#maxSize) プロパティを使用して、ペインの最小または最大サイズを設定できます。`minSize` および `maxSize` を超えるサイズ変更は許可されません。

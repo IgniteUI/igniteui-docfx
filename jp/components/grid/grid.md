@@ -38,6 +38,7 @@ _language: ja
     <article class="sample-column">
         <div class="tabbar-wrapper">
             <p>Angular Data Grid は、データを表形式で表示するためのコンポーネントです。最新のグリッドは複雑で、通常、データ選択、Excel スタイルのフィルタリング、ソート、ページング、グループ化、テンプレート化、列の移動、列のピン固定、Excel へのエクスポート、CSV 形式などの大規模な機能セットが詰め込まれています。</p>
+            <p>Ignite UI Angular Data Grid は、これらの基本的なグリッド機能をすべてカバーするだけでなく、一括編集、状態保持、キーボード ナビゲーションなどの高度な機能も備えています。当社のコンポーネントは、さまざまなデータ ソースとのシームレスな統合を保証し、最高のパフォーマンスとスケーラビリティを提供するため、大規模なデータセットを処理するアプリや、高速なリアルタイム更新を必要とするアプリに最適です。</p>
         </div>
     </article>
     <article class="sample-column">
@@ -60,15 +61,14 @@ Boston Marathon 2021 – この Angular グリッドの例では、ユーザー�
 
 
 <code-view style="height:700px"
-           img-src="https://static.infragistics.com/marketing/Website/products/ignite-ui/samples/ignite-ui-angular-marathon-grid-sample-1900.jpg"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
+           img-src="https://static.infragistics.com/marketing/Website/products/ignite-ui/samples/ignite-ui-angular-marathon-grid-sample-1900.jpg"
            iframe-src="{environment:lobDemosBaseUrl}/grid/grid" alt="Angular データ グリッドの例">
 </code-view>
 
 <div class="divider--half"></div>
 
 ## Ignite UI for Angular Data Grid を使用した作業の開始
-### 依存関係
 
 >[!NOTE]
 >このコンポーネントは、**オプションで** [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) を利用できます。タッチ操作が正しく動作するために、アプリケーションのルート モジュールにインポートできます。
