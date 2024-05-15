@@ -165,16 +165,6 @@ export class AppModule {}
                                                  github-src="gauges/radial-gauge/labels">
 </code-view>
 
-## オプティカル スケーリング
-
-ラジアル ゲージのラベルとタイトルにより、スケーリングを変更できます。これを有効にするには、まず `OpticalScalingEnabled` を true に設定します。次に、ラベルが 100% のオプティカル スケーリングを持つサイズを管理する `OpticalScalingSize` を設定できます。ゲージのサイズが大きくなると、ラベルのフォントも大きくなります。たとえば、このプロパティが 500 に設定され、ゲージのピクセル単位のサイズが 2 倍の 1000 になると、ラベルのフォント サイズは 200% 大きくなります。
-
-<code-view style="height: 500px" alt="Angular ラジアル ゲージのオプティカル スケーリング"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-                    iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/optical-scaling"
-                                                 github-src="gauges/radial-gauge/optical-scaling">
-</code-view>
-
 
 ## オプティカル スケーリング
 
