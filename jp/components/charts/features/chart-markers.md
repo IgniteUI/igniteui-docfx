@@ -44,7 +44,7 @@ Ignite UI for Angular マーカーは、カテゴリ チャートのプロット
 関連するチャート機能の詳細については、以下のトピックを参照してください。
 
 *   [チャート注釈](chart-annotations.md)
-*   [チャート強調表示](chart-highlighting.md)
+*   [チャートのハイライト表示](chart-highlighting.md)
 
 ## API リファレンス
 
