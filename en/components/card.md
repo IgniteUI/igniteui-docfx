@@ -192,9 +192,9 @@ The card has a `type` attribute you can set to either `default` (set automatical
 
 ### Angular Card Horizontal Layout
 
-By default all sections of the card (header, content, media, actions) are layed out vertically. This is nice when we have a lot of vertical space. Say we wanted to lay out all the sections in the card horizontally. We can use the `horizontal` attribute of the card to set its layout.
+By default all sections of the card (header, content, media, actions) are laid out vertically. This is nice when we have a lot of vertical space. Say we wanted to lay out all the sections in the card horizontally. We can use the `horizontal` attribute of the card to set its layout.
 
-Here's an example of an outlined horizonal card:
+Here's an example of an outlined horizontal card:
 
 ```html
 <igx-card type="outlined" [horizontal]="horizontal">
@@ -263,7 +263,7 @@ If everything went well, our card should look like this:
 
 You can get even more creative with the layout of the `igx-card`.
 
-Below is an example showing how you can create a semi-horizontal card, where we have every section of the card layed out vertically, while the `igx-card-media` appears alongside the vertical sections of the card.
+Below is an example showing how you can create a semi-horizontal card, where we have every section of the card laid out vertically, while the `igx-card-media` appears alongside the vertical sections of the card.
 
 ```html
 <igx-card [horizontal]="horizontal">
@@ -302,21 +302,7 @@ Below is an example showing how you can create a semi-horizontal card, where we 
 
 The Angular Card actions area allows additional configuration to what we have already mentioned.
 
-You can reverse order of the flat buttons and the button icons using the `reverse` attribute.
-
-```html
-<igx-card-actions [reverse]="true">
-    <button igxButton>Button</button>
-
-    <button igxIconButton="flat">
-        <igx-icon>star</igx-icon>
-    </button>
-</igx-card-actions>
-```
-
-Now the icon buttons will appear before the flat-style text buttons.
-
-You can also justify the buttons so that they are layed out across the entire axis, not at the opposite ends. To do that, use the `layout` attribute an set its value to `justify`, like below:
+You can justify the buttons so that they are laid out across the entire axis, not at the opposite ends. To do that, use the `layout` attribute an set its value to `justify`, like below:
 
 ```html
 <igx-card-actions layout="justify">
