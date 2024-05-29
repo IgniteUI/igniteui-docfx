@@ -302,6 +302,19 @@ Below is an example showing how you can create a semi-horizontal card, where we 
 
 The Angular Card actions area allows additional configuration to what we have already mentioned.
 
+You can positions elements in the card actions area either in the start or the end by using the `igxStart` or `igxEnd` directives.
+
+```html
+<igx-card-actions>
+    <button igxIconButton="flat" igxStart>
+        <igx-icon>drag_indicator</igx-icon>
+    </button>
+    <button igxIconButton="flat" igxEnd>
+        <igx-icon>favorite</igx-icon>
+    </button>
+</igx-card-actions>
+```
+
 You can justify the buttons so that they are laid out across the entire axis, not at the opposite ends. To do that, use the `layout` attribute an set its value to `justify`, like below:
 
 ```html
