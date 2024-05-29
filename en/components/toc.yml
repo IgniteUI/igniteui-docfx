@@ -986,8 +986,11 @@
 - name: Icon
   href: icon.md
   items:
+    - name: Icon Service
+      href: icon-service.md
     - name: Material Icons Extended
       href: material-icons-extended.md
+      new: true
 - name: Divider
   href: divider.md
   new: false
