@@ -315,7 +315,7 @@ You can positions elements in the card actions area either in the start or the e
 </igx-card-actions>
 ```
 
-You can justify the buttons so that they are laid out across the entire axis, not at the opposite ends. To do that, use the `layout` attribute an set its value to `justify`, like below:
+You can justify the buttons so that they are laid out across the entire axis, not at the opposite ends. To do that, use the `layout` attribute and set its value to `justify`, like below:
 
 ```html
 <igx-card-actions layout="justify">
