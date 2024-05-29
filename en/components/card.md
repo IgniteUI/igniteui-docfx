@@ -302,7 +302,7 @@ Below is an example showing how you can create a semi-horizontal card, where we 
 
 The Angular Card actions area allows additional configuration to what we have already mentioned.
 
-You can positions elements in the card actions area either in the start or the end by using the `igxStart` or `igxEnd` directives.
+You can position elements in the card actions area either in the start or the end by using the `igxStart` or `igxEnd` directives.
 
 ```html
 <igx-card-actions>
