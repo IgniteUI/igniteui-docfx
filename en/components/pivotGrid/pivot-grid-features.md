@@ -113,7 +113,7 @@ The Pivot Grid supports single selection which is enabled just like in the base 
 In case there are multiple row or column dimensions which would create groups that span multiple rows/columns, selection is applied to all cells that belong to the selected group.
 
 ## Super Compact Mode
-The `IgxPivotGrid` component provides a `superCompactMode` `@Input`. It is suitable for cases that require a lot of cells to be present on the screen at once. If enabled the option ignores the `displayDensity` option for the pivot grid. Enabling `superCompactMode` also sets the `displayDensity` input to `compact` for each child component(like `IgxChip`) that does not have the `superCompactMode` option.
+The `IgxPivotGrid` component provides a `superCompactMode` `@Input`. It is suitable for cases that require a lot of cells to be present on the screen at once. If enabled the option ignores the `ig-size` variable for the pivot grid. Enabling `superCompactMode` also sets the `ig-size` variable to `ig-size-small` for each child component(like `IgxChip`) that does not have the `superCompactMode` option.
 
 ```html
 <igx-pivot-grid [superCompactMode]="true"></igx-pivot-grid>
