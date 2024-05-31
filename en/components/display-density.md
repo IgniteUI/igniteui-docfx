@@ -1,12 +1,12 @@
 ---
-title: Size (Display Density) | Ignite UI for Angular 
-_description: The Ignite UI for Angular provides a way of setting size (display density) property on application or component level. 
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Components, Native Angular Controls, Native Angular Components Library, density, display density, size
+title: Size | Ignite UI for Angular 
+_description: The Ignite UI for Angular provides a way of setting size property on application or component level. 
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Components, Native Angular Controls, Native Angular Components Library, size
 ---
 
-# Size (Display Density)
+# Size
 
-Size (display density) configuration can significantly improve the visual representation of large amounts of data. In Ignite UI for Angular, we provide a pre-defined set of options – large (comfortable), medium (cosy), and small (compact).
+Size configuration can significantly improve the visual representation of large amounts of data. In Ignite UI for Angular, we provide a pre-defined set of options – large, medium, and small.
 
 Using the `--ig-size` custom CSS property, you can configure the size on an application or a component level.
 
