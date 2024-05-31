@@ -152,7 +152,7 @@ The sample below demonstrates the exposed `igx-buttongroup` selection modes:
 </code-view>
 
 
-### Size (Display Density)
+### Size
 The `--ig-size` CSS custom property can be used to control the size of the button group.
 
 ```scss
