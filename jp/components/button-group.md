@@ -153,7 +153,7 @@ public alignment = ButtonGroupAlignment.vertical;
 </code-view>
 
 
-### サイズ (表示密度)
+### サイズ
 `--ig-size` CSS カスタム プロパティを使用して、ボタン グループのサイズを制御できます。
 
 ```scss
