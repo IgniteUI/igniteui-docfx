@@ -101,6 +101,9 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 }
 ```
 
+>[!NOTE]
+>As of version `18.0.0` the IgniteUI for Angular the `width` of the row dimensions can also be set to `auto`.
+
 ## Dimensions selection
 
 The Pivot Grid supports single selection which is enabled just like in the base grid. For example:
@@ -122,6 +125,14 @@ The `IgxPivotGrid` component provides a `superCompactMode` `@Input`. It is suita
 ## Additional summary column
 
 When a `column` dimension defines a hierarchy, the pivot grid will render additional summary/total column, which accumulates the aggregations of all of the columns inside the group. When the group is collapsed only the summary column will remain. And when the group is expanded the additional summary column appears at the end of the group.
+
+## Row Dimensions Headers
+
+As of version `18.0.0` the IgniteUI for Angular row dimension value headers can be enabled through `pivotUI` option:
+```html
+<igx-pivot-grid [pivotUI]="{ showRowHeaders: true }">
+</igx-pivot-grid>
+```
 
 ## Interactions
 
