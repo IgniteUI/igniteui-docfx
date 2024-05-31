@@ -239,7 +239,7 @@ This example demonstrates a few of the data grid’s key features:
 
 - [**Export to Excel**](grid/export-excel.md), including [**Data Visualization**](excel-library-working-with-charts.md)
 
-- [**Size (Display Density)**](grid/display-density.md) to adjust the height and sizing of the rows
+- [**Size**](grid/display-density.md) to adjust the height and sizing of the rows
 
 - Column templates like [**Sparkline Column**](charts/types/sparkline-chart.md) and Image Column
 </div>
@@ -434,7 +434,7 @@ There are multiple options to get access to our award-winning support at Infragi
                 <li>Interactive <a href="grid/groupby.md">Outlook-style Grouping</a></li>
                 <li><a href="grid/summaries.md">Column Summaries</a> based on any data in a grid cell or column</li>
                 <li><a href="grid/export-excel.md">Export to Excel</a>, including <a href="excel-library-working-with-charts.md">Data Visualization</a></li>
-                <li><a href="grid/display-density.md">Size (Display Density)</a> to adjust the height and sizing of the rows</li>
+                <li><a href="grid/display-density.md">Size</a> to adjust the height and sizing of the rows</li>
                 <li>Column templates like <a href="charts/types/sparkline-chart.md">Sparkline Column</a> and Image Column</li>
             </ul>
         </div>
