@@ -129,9 +129,9 @@ this.Chart.excludedProperties = [ "CHN",  "FRN", "GER" ];
 
 コールアウト注釈、十字線注釈、最終値注釈などの[チャート注釈](chart-annotations.md)を有効にすると、Angular チャートのパフォーマンスがわずかに低下します。
 
-### チャートの強調表示
+### チャートのハイライト表示
 
-[チャートの強調表示](chart-highlighting.md)を有効にすると、Angular チャートのパフォーマンスがわずかに低下します。
+[チャートのハイライト表示](chart-highlighting.md)を有効にすると、Angular チャートのパフォーマンスがわずかに低下します。
 
 ### チャート凡例
 
@@ -368,7 +368,7 @@ this.LineSeries.Resolution = 10;
 *   [株価チャート](../types/stock-chart.md)
 *   [チャート アニメーション](chart-animations.md)
 *   [チャート注釈](chart-annotations.md)
-*   [チャート強調表示](chart-highlighting.md)
+*   [チャートのハイライト表示](chart-highlighting.md)
 *   [チャート マーカー](chart-markers.md)
 *   [チャート オーバーレイ](chart-overlays.md)
 *   [チャート トレンドライン](chart-trendlines.md)

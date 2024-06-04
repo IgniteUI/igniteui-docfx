@@ -19,6 +19,13 @@ Note that the fourth step in our Angular stepper demo gets enabled only if the u
 
 <div class="divider--half"></div>
 
+Here is the a sample demonstrating how to achieve the above functionality using Angular Reactive Forms.
+
+<code-view style="height: 725px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/stepper-sample-reactive-forms" alt="Angular Stepper Example with Reactive Forms">
+</code-view>
+
 ## Getting Started with Ignite UI for Angular Stepper
 
 To get started with the Ignite UI for Angular Stepper component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:

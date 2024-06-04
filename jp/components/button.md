@@ -190,7 +190,7 @@ Contained ボタンを作成するには、`igxButton` プロパティの値を�
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-4">
 </iframe></div>
 
-## サイズ (表示密度)
+## サイズ
 
 `--ig-size` カスタム CSS プロパティを使用して、ユーザーが `igxButton` のサイズを選択できるようにすることができます。これを行うには、まず `IgxButtonGroupModule` をインポートし、[`igxButtonGroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) コンポーネントによってサイズ値を表示する必要があります。このようにして、選択されるたびに **--ig-size** CSS プロパティを更新します。
 
