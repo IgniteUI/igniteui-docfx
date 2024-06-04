@@ -101,6 +101,9 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 }
 ```
 
+>[!NOTE]
+>As of version `18.0.0` the IgniteUI for Angular the `width` of the row dimensions can also be set to `auto`.
+
 ## Dimensions selection
 
 The Pivot Grid supports single selection which is enabled just like in the base grid. For example:
@@ -113,7 +116,7 @@ The Pivot Grid supports single selection which is enabled just like in the base 
 In case there are multiple row or column dimensions which would create groups that span multiple rows/columns, selection is applied to all cells that belong to the selected group.
 
 ## Super Compact Mode
-The `IgxPivotGrid` component provides a `superCompactMode` `@Input`. It is suitable for cases that require a lot of cells to be present on the screen at once. If enabled the option ignores the `displayDensity` option for the pivot grid. Enabling `superCompactMode` also sets the `displayDensity` input to `compact` for each child component(like `IgxChip`) that does not have the `superCompactMode` option.
+The `IgxPivotGrid` component provides a `superCompactMode` `@Input`. It is suitable for cases that require a lot of cells to be present on the screen at once. If enabled the option ignores the `ig-size` variable for the pivot grid. Enabling `superCompactMode` also sets the `ig-size` variable to `ig-size-small` for each child component(like `IgxChip`) that does not have the `superCompactMode` option.
 
 ```html
 <igx-pivot-grid [superCompactMode]="true"></igx-pivot-grid>
@@ -122,6 +125,14 @@ The `IgxPivotGrid` component provides a `superCompactMode` `@Input`. It is suita
 ## Additional summary column
 
 When a `column` dimension defines a hierarchy, the pivot grid will render additional summary/total column, which accumulates the aggregations of all of the columns inside the group. When the group is collapsed only the summary column will remain. And when the group is expanded the additional summary column appears at the end of the group.
+
+## Row Dimensions Headers
+
+As of version `18.0.0` the IgniteUI for Angular row dimension value headers can be enabled through `pivotUI` option:
+```html
+<igx-pivot-grid [pivotUI]="{ showRowHeaders: true }">
+</igx-pivot-grid>
+```
 
 ## Interactions
 
