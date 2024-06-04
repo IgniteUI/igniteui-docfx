@@ -709,7 +709,7 @@ editDone(evt) {
 * [Searching](search.md)
 * [Toolbar](toolbar.md)
 * [Multi-column Headers](multi-column-headers.md)
-* [Size (Display Density)](display-density.md)
+* [Size](display-density.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
