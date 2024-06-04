@@ -206,32 +206,30 @@ $dark-paginator: paginator-theme(
 );
 ```
 
-As seen, the `paginator-theme` only controls colors for the paging container, but does not affect the buttons in the pager UI. To style those buttons, let's create a new button theme:
+As seen, the `paginator-theme` only controls colors for the paging container, but does not affect the buttons in the pager UI. To style those buttons, let's create a new icon button theme:
 
 ```scss
-$dark-button: button-theme(
-    $icon-color: #FFCD0F,
-    $icon-hover-color: #292826,
-    $icon-hover-background: #FFCD0F,
-    $icon-focus-color: #292826,
-    $icon-focus-background: #FFCD0F,
-    $disabled-color: #16130C
+$dark-button: icon-button-theme(
+    $foreground: #FFCD0F,
+    $hover-foreground: #292826,
+    $hover-background: #FFCD0F,
+    $focus-foreground: #292826,
+    $focus-background: #FFCD0F,
+    $disabled-foreground: #16130C
 );
 ```
-
-In this example we only changed the icon color and background and the button disabled color, but the the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) provides way more parameters to control the button style.
 
 The last step is to **include** the component mixins, each with its respective theme:
 
 ```scss
 @include grid-paginator($dark-grid-paginator);
 .igx-grid-paginator__pager {
-    @include button($dark-button);
+    @include icon-button($dark-button);
 }
 ```
 
 >[!NOTE]
->We scope the **igx-button** mixin within `.igx-paginator__pager`, so that only the paginator buttons would be styled. Otherwise other buttons in the grid would be affected too.
+>We scope the **icon-button** mixin within `.igx-paginator__pager`, so that only the paginator buttons would be styled. Otherwise other icon buttons in the grid would be affected too.
 
  >[!NOTE]
  >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
@@ -239,9 +237,9 @@ The last step is to **include** the component mixins, each with its respective t
 ```scss
 :host {
     ::ng-deep {
-        @include paginator($dark-paginator);
-        .igx-paginator__pager {
-            @include button($dark-button);
+        igx-paginator {
+            @include css-vars($dark-button);
+            @include css-vars($dark-paginator);
         }
     }
 }
@@ -270,14 +268,14 @@ $dark-paginator: paginator-theme(
     $border-color: color($dark-palette, "primary", 500)
 );
 
-$dark-button: button-theme(
+$dark-button: icon-button-theme(
     $palette: $dark-palette,
-    $icon-color: color($dark-palette, "secondary", 700),
-    $icon-hover-color: color($dark-palette, "primary", 500),
-    $icon-hover-background: color($dark-palette, "secondary", 500),
-    $icon-focus-color: color($dark-palette, "primary", 500),
-    $icon-focus-background: color($dark-palette, "secondary", 500),
-    $disabled-color: color($dark-palette, "primary", 700)
+    $foregroundr: color($dark-palette, "secondary", 700),
+    $hover-foreground: color($dark-palette, "primary", 500),
+    $hover-background: color($dark-palette, "secondary", 500),
+    $focus-foreground: color($dark-palette, "primary", 500),
+    $focus-background: color($dark-palette, "secondary", 500),
+    $disabled-foreground: color($dark-palette, "primary", 700)
 );
 ```
 
@@ -288,11 +286,11 @@ $dark-button: button-theme(
 
  Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/sass/schemas.md). A **schema** is a recipe of a theme.
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-pagination`]({environment:sassApiUrl}/index.html#variable-_dark-grid-pagination) and [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button) schemas:
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`$base-dark-pagination`]({environment:sassApiUrl}/index.html#variable-base-dark-pagination) and [`$material-flat-icon-button-dark`]({environment:sassApiUrl}/index.html#variable-material-flat-icon-button-dark) schemas:
 
 ```scss
 // Extending the dark paginator schema
-$dark-paginator-schema: extend($_dark-pagination,
+$dark-paginator-schema: extend($base-dark-pagination,
         (
             text-color:(
                color: ("secondary", 400)
@@ -305,25 +303,25 @@ $dark-paginator-schema: extend($_dark-pagination,
             )
         )
 );
-// Extending the dark button schema
-$dark-button-schema: extend($_dark-button,
+// Extending the dark icon button schema
+$dark-button-schema: extend($material-flat-icon-button-dark,
         (
-            icon-color:(
+            foreground:(
                color:("secondary", 700)
             ),
-            icon-hover-color:(
+            hover-foreground:(
                color:("primary", 500)
             ),
-            icon-hover-background:(
+            hover-background:(
                color:("secondary", 500)
             ),
-            icon-focus-color:(
+            focus-foreground:(
                color:("primary", 500)
             ),
-            icon-focus-background:(
+            focus-background:(
                color:("secondary", 500)
             ),
-            disabled-color:(
+            disabled-foreground:(
                color:("primary", 700)
             )
         )
@@ -336,7 +334,7 @@ In order to apply our custom schemas we have to **extend** one of the globals ([
 // Extending the global dark-schema
 $custom-dark-schema: extend($dark-schema,(
     igx-paginator: $dark-paginator-schema,
-    igx-button: $dark-button-schema
+    igx-icon-button: $dark-button-schema
 ));
 
 // Definingpaginator-theme with the global dark schema
@@ -345,8 +343,8 @@ $dark-paginator: paginator-theme(
   $schema: $custom-dark-schema
 );
 
-// Defining button-theme with the global dark schema
-$dark-button: button-theme(
+// Defining icon-button-theme with the global dark schema
+$dark-button: icon-button-theme(
   $palette: $dark-palette,
   $schema: $custom-dark-schema
 );

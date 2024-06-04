@@ -292,6 +292,25 @@ Resulting in the following view, which groups the Product Categories unique colu
 
 And if you want to streamline the entire app development process, you can try out our [WYSIWYG App Builder™](https://www.infragistics.com/products/appbuilder) for your next Angular app. 
 
+### Auto generate configuration
+The `autoGenerateConfig` property automatically generates dimensions and values based on the data source fields:
+
+- Numeric Fields:
+  - Created as `IPivotValue` using `IgxPivotNumericAggregate.sum` aggregator.
+  - Added to the values collection and enabled by default.
+
+- Non-Numeric Fields:
+  - Created as `IPivotDimension`.
+  - Disabled by default.
+  - Added to the columns collection.
+
+- Date Fields(only the first `date` field is enabled, the other `date` fields apply non-numeric fields rule):
+  - Created as `IgxPivotDateDimension`
+  - Enabled by default
+  - added to the rows collection.
+
+This feature allows developers to quickly create a pivot view without manually specifying dimensions and values. With a pivot selector next to the pivot grid, users can enable and reorder dimensions and values as needed.
+
 ## Known Issues and Limitations
 
 |Limitation|Description|
