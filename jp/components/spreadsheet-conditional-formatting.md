@@ -8,7 +8,7 @@ _language: ja
 
 # Angular Spreadsheet の条件付き書式設定
 
-Angular Spreadsheet コンポーネントは、ワークシートのセルに条件付き書式を設定できます。これにより、条件に基づいてデータのさまざまな部分を強調表示できます。
+Angular Spreadsheet コンポーネントは、ワークシートのセルに条件付き書式を設定できます。これにより、条件に基づいてデータのさまざまな部分をハイライト表示できます。
 
 ## Angular Spreadsheet の条件付き書式設定の例
 
