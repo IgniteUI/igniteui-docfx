@@ -101,6 +101,9 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 }
 ```
 
+>[!NOTE]
+>バージョン `18.0.0` 以降、Ignite UI for Angular では行幅の `width` を `auto` に設定できます。
+
 ## ディメンションの選択
 
 ピボット グリッドは、ベース グリッドと同じように有効になる単一選択をサポートします。例:
@@ -122,6 +125,14 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 ## 集計列の追加
 
 `column` ディメンションが階層を定義すると、ピボット グリッドは追加の集計/合計列を描画し、グループ内のすべての列の集計を蓄積します。グループが縮小されている場合、集計列のみが残ります。また、グループを展開すると、グループの最後に追加の集計列が表示されます。
+
+## 行幅のヘッダー
+
+バージョン `18.0.0` 以降では、IgniteUI for Angular の幅値のヘッダーは `pivotUI` オプションを通じて有効にできます。
+```html
+<igx-pivot-grid [pivotUI]="{ showRowHeaders: true }">
+</igx-pivot-grid>
+```
 
 ## インタラクション
 

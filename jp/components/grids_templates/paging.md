@@ -208,32 +208,30 @@ $dark-paginator: paginator-theme(
 );
 ```
 
-`paginator-theme` はページング コンテナーの色の制御のみですが、ポケットベル UI のボタンには影響しません。これらのボタンにスタイル設定するために、新しいボタン テーマを作成しましょう。
+`paginator-theme` はページング コンテナーの色の制御のみですが、ポケットベル UI のボタンには影響しません。これらのボタンにスタイル設定するために、新しいアイコン ボタン テーマを作成しましょう。
 
 ```scss
-$dark-button: button-theme(
-    $icon-color: #FFCD0F,
-    $icon-hover-color: #292826,
-    $icon-hover-background: #FFCD0F,
-    $icon-focus-color: #292826,
-    $icon-focus-background: #FFCD0F,
-    $disabled-color: #16130C
+$dark-button: icon-button-theme(
+    $foreground: #FFCD0F,
+    $hover-foreground: #292826,
+    $hover-background: #FFCD0F,
+    $focus-foreground: #292826,
+    $focus-background: #FFCD0F,
+    $disabled-foreground: #16130C
 );
 ```
-
-この例では、アイコンの色と背景、ボタンの無効な色のみを変更しましたが、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) ではボタン スタイルを制御するためのパラメータを増やすことができます。
 
 最後にそれぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。
 
 ```scss
 @include grid-paginator($dark-grid-paginator);
 .igx-grid-paginator__pager {
-    @include button($dark-button);
+    @include icon-button($dark-button);
 }
 ```
 
 >[!NOTE]
->**igx-button** ミックスインを `.igx-paginator__pager` 内でスコープして、ページネーター ボタンのみにスタイルが設定されるようにします。そうでない場合は、グリッド内の他のボタンも影響を受けます。
+>**icon-button** ミックスインを `.igx-paginator__pager` 内でスコープして、ページネーター ボタンのみにスタイルが設定されるようにします。そうでない場合は、グリッド内の他のアイコン ボタンも影響を受けます。
 
  >[!NOTE]
  >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
@@ -241,9 +239,9 @@ $dark-button: button-theme(
 ```scss
 :host {
     ::ng-deep {
-        @include paginator($dark-paginator);
-        .igx-paginator__pager {
-            @include button($dark-button);
+        igx-paginator {
+            @include css-vars($dark-button);
+            @include css-vars($dark-paginator);
         }
     }
 }
@@ -272,14 +270,14 @@ $dark-paginator: paginator-theme(
     $border-color: color($dark-palette, "primary", 500)
 );
 
-$dark-button: button-theme(
+$dark-button: icon-button-theme(
     $palette: $dark-palette,
-    $icon-color: color($dark-palette, "secondary", 700),
-    $icon-hover-color: color($dark-palette, "primary", 500),
-    $icon-hover-background: color($dark-palette, "secondary", 500),
-    $icon-focus-color: color($dark-palette, "primary", 500),
-    $icon-focus-background: color($dark-palette, "secondary", 500),
-    $disabled-color: color($dark-palette, "primary", 700)
+    $foregroundr: color($dark-palette, "secondary", 700),
+    $hover-foreground: color($dark-palette, "primary", 500),
+    $hover-background: color($dark-palette, "secondary", 500),
+    $focus-foreground: color($dark-palette, "primary", 500),
+    $focus-background: color($dark-palette, "secondary", 500),
+    $disabled-foreground: color($dark-palette, "primary", 700)
 );
 ```
 
@@ -290,11 +288,11 @@ $dark-button: button-theme(
 
 テーマ エンジンには [**スキーマ**](../themes/sass/schemas.md)を使用できる利点があり、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用するための方法です。
 
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (この場合は ([`dark-pagination`]({environment:sassApiUrl}/index.html#variable-_dark-pagination) と [`dark-button`]({environment:sassApiUrl}/index.html#variable-_dark-button) スキーマ) の 1 つを拡張します。
+すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (この場合は [`$base-dark-pagination`]({environment:sassApiUrl}/index.html#variable-base-dark-pagination) と [`$material-flat-icon-button-dark`]({environment:sassApiUrl}/index.html#variable-material-flat-icon-button-dark) スキーマ) の 1 つを拡張します。
 
 ```scss
 // Extending the dark paginator schema
-$dark-paginator-schema: extend($_dark-pagination,
+$dark-paginator-schema: extend($base-dark-pagination,
         (
             text-color:(
                color: ("secondary", 400)
@@ -307,25 +305,25 @@ $dark-paginator-schema: extend($_dark-pagination,
             )
         )
 );
-// Extending the dark button schema
-$dark-button-schema: extend($_dark-button,
+// Extending the dark icon button schema
+$dark-button-schema: extend($material-flat-icon-button-dark,
         (
-            icon-color:(
+            foreground:(
                color:("secondary", 700)
             ),
-            icon-hover-color:(
+            hover-foreground:(
                color:("primary", 500)
             ),
-            icon-hover-background:(
+            hover-background:(
                color:("secondary", 500)
             ),
-            icon-focus-color:(
+            focus-foreground:(
                color:("primary", 500)
             ),
-            icon-focus-background:(
+            focus-background:(
                color:("secondary", 500)
             ),
-            disabled-color:(
+            disabled-foreground:(
                color:("primary", 700)
             )
         )
@@ -338,7 +336,7 @@ $dark-button-schema: extend($_dark-button,
 // Extending the global dark-schema
 $custom-dark-schema: extend($dark-schema,(
     igx-paginator: $dark-paginator-schema,
-    igx-button: $dark-button-schema
+    igx-icon-button: $dark-button-schema
 ));
 
 // Definingpaginator-theme with the global dark schema
@@ -347,8 +345,8 @@ $dark-paginator: paginator-theme(
   $schema: $custom-dark-schema
 );
 
-// Defining button-theme with the global dark schema
-$dark-button: button-theme(
+// Defining icon-button-theme with the global dark schema
+$dark-button: icon-button-theme(
   $palette: $dark-palette,
   $schema: $custom-dark-schema
 );

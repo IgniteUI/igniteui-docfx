@@ -52,6 +52,22 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
+## 17.2.x から 18.0.x の場合:
+
+### 一般
+- `IgxPivotGrid`
+### 重大な変更
+- ピボット グリッドの `showPivotConfigurationUI` プロパティが変更され、`pivotUI` に拡張されました。
+```html
+// version 17.2.x
+<igx-pivot-grid [data]="data" [pivotConfiguration]="pivotConfig" [showPivotConfigurationUI]="false">
+</igx-pivot-grid>
+
+// version 18.0.x
+<igx-pivot-grid [data]="data" [pivotConfiguration]="pivotConfig" [pivotUI]="{ showConfiguration: false }">
+</igx-pivot-grid>
+```
+
 ## 17.0.x から 17.1.x の場合:
 
 ### 一般
