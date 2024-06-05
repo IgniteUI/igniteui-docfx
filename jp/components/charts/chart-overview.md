@@ -55,7 +55,6 @@ Angular 棒チャート (棒グラフ) は、さまざまなカテゴリのデ�
 
 <code-view style="height: 600px" alt="Angular 複数ソースの棒チャート"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-                img-src="https://static.infragistics.com/marketing/Website/products/Ignite-UI-for-Angular/ignite-ui-angular-bar-chart"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/bar-chart-multiple-sources"
                                                  github-src="charts/data-chart/bar-chart-multiple-sources">
 </code-view>
