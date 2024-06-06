@@ -371,7 +371,7 @@ In the above example we are using an `igx-checkbox` and we bind `rowContext.sele
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 > [!NOTE]
-The `rowContext.select()` and `rowContext.deselect()` methods are exposed in the template context of an `@@igSelector`. They make it easier to toggle the current row, especially in a child grid, when you implement a click handler that overrides the base functionality.
+> The `rowContext.select()` and `rowContext.deselect()` methods are exposed in the template context of an `@@igSelector`. They make it easier to toggle the current row, especially in a child grid, when you implement a click handler that overrides the base functionality.
 }
 
 ### Header template
@@ -438,7 +438,7 @@ Each hierarchy level in an `@@igSelector` can have its own row and header templa
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 > [!NOTE]
-The `headContext.selectAll()` and `headContext.deselectAll()` methods are exposed in the template context of an `@@igSelector`. They make it easier to toggle all rows, especially in a child grid, when you implement a click handler that overrides the base functionality.
+> The `headContext.selectAll()` and `headContext.deselectAll()` methods are exposed in the template context of an `@@igSelector`. They make it easier to toggle all rows, especially in a child grid, when you implement a click handler that overrides the base functionality.
 }
 
 ### Row Numbering Demo
