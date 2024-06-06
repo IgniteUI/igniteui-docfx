@@ -283,7 +283,7 @@ public data = [
 ```
 
 
-Resulting in the following view, which groups the Product Categories unique columns, Sellers Countries in unique rows and displays the related aggregations for the number of units in the related cells:
+Resulting in the following view, which groups the Product Categories unique columns, Sellers Names in unique rows and displays the related aggregations for the number of units in the related cells:
 
 <code-view style="height: 530px"
            data-demos-base-url="{environment:demosBaseUrl}"
