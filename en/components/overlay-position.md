@@ -174,12 +174,22 @@ overlay.show(overlayId);
 
 ### Offsetting Content
 
-To offset the content along the corresponding axis by a provided amount:
+The `setOffset` method enables precise adjustment of content positioning along the corresponding axis by a specified amount. Additionally, it supports an optional `offsetMode` parameter, providing control over how offset values are applied.
+
 ```typescript
-// deltaX and deltaY determine by how much the content will be offset compared to its' previous position
+// deltaX and deltaY determine the amount by which the content will be offset.
+// Using OffsetMode.Add to add the values (default behavior)
 const deltaX: number = 30;
 const deltaY: number = 15;
-overlay.setOffset(this._overlayId, deltaX, deltaY);
+overlay.setOffset(this._overlayId, deltaX, deltaY, OffsetMode.Add);
+```
+
+```typescript
+// deltaX and deltaY determine the exact position to set the content to, relative to its target element.
+// Using OffsetMode.Set to set the offset to specific values
+const deltaX: number = 30;
+const deltaY: number = 15;
+overlay.setOffset(this._overlayId, deltaX, deltaY, OffsetMode.Set);
 ```
 
 ## API References
