@@ -712,7 +712,7 @@ editDone(evt) {
 * [検索](search.md)
 * [ツールバー](toolbar.md)
 * [複数行ヘッダー](multi-column-headers.md)
-* [サイズ (表示密度)](display-density.md)
+* [サイズ](display-density.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

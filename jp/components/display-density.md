@@ -1,13 +1,13 @@
 ---
-title: サイズ (表示密度) | Ignite UI for Angular 
-_description: Ignite UI for Angular は、アプリケーションまたはコンポーネント レベルで size (表示密度) プロパティの表示を設定できます。
-_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular Components, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, density, 表示密度, サイズ
+title: サイズ | Ignite UI for Angular 
+_description: Ignite UI for Angular は、アプリケーションまたはコンポーネント レベルで size プロパティの表示を設定できます。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular Components, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, サイズ
 _language: ja
 ---
 
-# サイズ (表示密度)
+# サイズ
 
-サイズ (表示密度) 設定の表示は、大規模データセットのビジュアル表示を大きく改善します。Ignite UI for Angular では、large (comfortable)、medium (cosy)、small (compact) の事前定義されたオプション セットが提供されています。
+size 設定の表示は、大規模データセットのビジュアル表示を大きく改善します。Ignite UI for Angular では、large、medium、small の事前定義されたオプション セットが提供されています。
 
 `--ig-size` カスタム CSS プロパティを使用すると、アプリケーションまたはコンポーネント レベルでサイズを設定できます。
 

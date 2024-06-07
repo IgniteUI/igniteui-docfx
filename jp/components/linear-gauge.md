@@ -111,16 +111,47 @@ export class AppModule {}
 </igx-linear-gauge>
 ```
 
-<code-view style="height: 125px" alt="Angular linear gauge needle"
+<code-view style="height: 125px" alt="Angular リニア ゲージのneedle"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge/needle"
                                                  github-src="gauges/linear-gauge/needle">
 </code-view>
 
 
+## 針のハイライト
+
+リニア ゲージを変更して、2 番目の針を表示できます。これにより、メイン針の [`value`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargaugecomponent.html#value) の不透明度が低く表示されます。これを有効にするには、まず `HighlightValueDisplayMode` を Overlay に設定し、次に `HighlightValue` を適用します。
+
+```html
+<igx-linear-gauge
+    #linearGauge
+    height="80px" 
+    width="400px"
+    value=70
+    minimumValue=0 
+    maximumValue=100 
+    interval=10
+    labelInterval=10
+    labelExtent=0.025
+    labelsPreTerminal=0
+    labelsPostInitial=0
+    needleBrush="Blue"
+    highlightValueDisplayMode="Overlay"
+    highlightValue=25
+    isHighlightNeedleDraggingEnabled=true>
+</igx-linear-gauge>
+```
+
+<code-view style="height: 125px" alt="Angular リニア ゲージの針のハイライト"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge/highlight-needle"
+                                                 github-src="gauges/linear-gauge/highlight-needle">
+</code-view>
+
+
 ## 範囲
 
-範囲はスケールで指定した値の範囲を強調表示する視覚的な要素です。その目的は、パフォーマンス バー メジャーの質的状態を視覚で伝えると同時に、その状態をレベルとして示すことにあります。
+範囲はスケールで指定した値の範囲をハイライト表示する視覚的な要素です。その目的は、パフォーマンス バー メジャーの質的状態を視覚で伝えると同時に、その状態をレベルとして示すことにあります。
 
 ```html
 <igx-linear-gauge
@@ -142,7 +173,7 @@ export class AppModule {}
 </igx-linear-gauge>
 ```
 
-<code-view style="height: 125px" alt="Angular linear gauge ranges"
+<code-view style="height: 125px" alt="Angular リニア ゲージの範囲"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge/ranges"
                                                  github-src="gauges/linear-gauge/ranges">
@@ -177,7 +208,7 @@ export class AppModule {}
 </igx-linear-gauge>
 ```
 
-<code-view style="height: 125px" alt="Angular linear gauge tickmarks"
+<code-view style="height: 125px" alt="Angular リニア ゲージの目盛"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge/tickmarks"
                                                  github-src="gauges/linear-gauge/tickmarks">
@@ -202,7 +233,7 @@ export class AppModule {}
 </igx-linear-gauge>
 ```
 
-<code-view style="height: 125px" alt="Angular linear gauge labels"
+<code-view style="height: 125px" alt="Angular リニア ゲージのラベル"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge/labels"
                                                  github-src="gauges/linear-gauge/labels">
@@ -226,7 +257,7 @@ export class AppModule {}
 </igx-linear-gauge>
 ```
 
-<code-view style="height: 125px" alt="Angular linear gauge backing"
+<code-view style="height: 125px" alt="Angular リニア ゲージのバッキング"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge/backing"
                                                  github-src="gauges/linear-gauge/backing">
@@ -235,7 +266,7 @@ export class AppModule {}
 
 ## スケール
 
-スケールはゲージで値の全範囲を強調表示する視覚的な要素です。外観やスケールの図形のカスタマイズ、更にスケールを反転 ([`isScaleInverted`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargaugecomponent.html#isScaleInverted) プロパティを使用) させて、すべてのラベルを左から右ではなく、右から左へ描画することもできます。
+スケールはゲージで値の全範囲をハイライト表示する視覚的な要素です。外観やスケールの図形のカスタマイズ、更にスケールを反転 ([`isScaleInverted`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargaugecomponent.html#isScaleInverted) プロパティを使用) させて、すべてのラベルを左から右ではなく、右から左へ描画することもできます。
 
 ```html
 <igx-linear-gauge
@@ -253,7 +284,7 @@ export class AppModule {}
 </igx-linear-gauge>
 ```
 
-<code-view style="height: 125px" alt="Angular linear gauge scale"
+<code-view style="height: 125px" alt="Angular リニア ゲージのスケール"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge/scale"
                                                  github-src="gauges/linear-gauge/scale">

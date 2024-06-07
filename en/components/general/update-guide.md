@@ -51,6 +51,24 @@ Unfortunately not all changes can be automatically updated. Changes below are sp
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
+## From 17.2.x to 18.0.x
+
+### Breaking changes
+- In version 18.0.x the depracated `displayDensity` property is removed in favor of the custom CSS property `--ig-size`. For further reference please see the update guide [from 16.0.x to 16.1.x](#from-160x-to-161x).
+
+### General
+- `IgxPivotGrid`
+### Breaking changes
+- The property `showPivotConfigurationUI` of pivot grid is changed and extended to `pivotUI`.
+```html
+// version 17.2.x
+<igx-pivot-grid [data]="data" [pivotConfiguration]="pivotConfig" [showPivotConfigurationUI]="false">
+</igx-pivot-grid>
+
+// version 18.0.x
+<igx-pivot-grid [data]="data" [pivotConfiguration]="pivotConfig" [pivotUI]="{ showConfiguration: false }">
+</igx-pivot-grid>
+```
 ## From 17.0.x to 17.1.x
 
 ### General
