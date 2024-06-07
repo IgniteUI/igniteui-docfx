@@ -123,7 +123,8 @@ public handleRowSelection(event) {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-hierarchical-grid [data]="localdata" [autoGenerate]="true" [rowSelection]="'single'" (rowSelectionChanging)="handleRowSelection($event)">
+<igx-hierarchical-grid [data]="localdata" [autoGenerate]="true"
+        [rowSelection]="'single'" (rowSelectionChanging)="handleRowSelection($event)">
 </igx-hierarchical-grid>
 ```
 ```typescript
@@ -371,7 +372,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 > [!NOTE]
-`rowContext.select()` および `rowContext.deselect()` メソッドは、`@@igSelector` のテンプレート コンテキストで公開されます。基本機能をオーバーライドするクリック ハンドラーを実装した場合、特に子グリッドで現在の行を簡単に切り替えることができます。
+> `rowContext.select()` および `rowContext.deselect()` メソッドは、`@@igSelector` のテンプレート コンテキストで公開されます。基本機能をオーバーライドするクリック ハンドラーを実装した場合、特に子グリッドで現在の行を簡単に切り替えることができます。
 }
 
 ### ヘッダー テンプレート
@@ -438,7 +439,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 > [!NOTE]
-`headContext.selectAll()` と `headContext.deselectAll()` メソッドは、`@@igSelector` のテンプレート コンテキストで公開されます。基本機能をオーバーライドするクリック ハンドラーを実装した場合、特に子グリッドで現在の行を簡単に切り替えることができます。
+> `headContext.selectAll()` と `headContext.deselectAll()` メソッドは、`@@igSelector` のテンプレート コンテキストで公開されます。基本機能をオーバーライドするクリック ハンドラーを実装した場合、特に子グリッドで現在の行を簡単に切り替えることができます。
 }
 
 ### 行の番号付けデモ

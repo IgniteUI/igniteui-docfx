@@ -283,7 +283,7 @@ public data = [
 ```
 
 
-次のビューは、Product (製品) カテゴリの一意の列をグループ化し、Sellers Countries (売り手の国) を一意の行にグループ化し、関連するセルのユニット数の関連する集計を表示します。
+次のビューは、Product (製品) カテゴリの一意の列をグループ化し、Sellers Names (売り手の名前) を一意の行にグループ化し、関連するセルのユニット数の関連する集計を表示します。
 
 <code-view style="height: 530px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -305,7 +305,7 @@ public data = [
   - 列コレクションに追加されます。
 
 - 日付フィールド (最初の `date` フィールドのみが有効になり、他の `date` フィールドには非数値フィールドのルールが適用されます):
-  - `IgxPivotDateDimension` として作成されます。`
+  - `IgxPivotDateDimension` として作成されます。
   - デフォルトで有効です。
   - 行コレクションに追加されます。
 
