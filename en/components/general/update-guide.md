@@ -53,6 +53,9 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 
 ## From 17.2.x to 18.0.x
 
+### Breaking changes
+- In version 18.0.x the depracated `displayDensity` property is removed in favor of the custom CSS property `--ig-size`. For further reference please see the update guide [from 16.0.x to 16.1.x](#from-160x-to-161x).
+
 ### General
 - `IgxPivotGrid`
 ### Breaking changes
