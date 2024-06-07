@@ -118,10 +118,19 @@ export class AppModule {}
 
 エクスポート処理の開始は、コンポーネントのテンプレートでボタンのハンドラーを使用します。
 
+@@if (igxName !== 'IgxPivotGrid') {
 ```html
 <@@igSelector #@@igObjectRef [data]="localData" [autoGenerate]="true"></@@igSelector>
 <button (click)="exportButtonHandler()">Export @@igxName to Excel</button>
 ```
+}
+
+@@if (igxName === 'IgxPivotGrid') {
+```html
+<@@igSelector #@@igObjectRef [data]="localData" [pivotConfiguration]="pivotConfig"></@@igSelector>
+<button (click)="exportButtonHandler()">Export @@igxName to Excel</button>
+```
+}
 
 エクスポーター サービスへのアクセスは、コンポーネントのコンストラクターで [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) 型の引数を定義し、Angular フレームワークはサービスのインスタンスを提供します。データを MS Excel 形式でエクスポートするには、エクスポーター サービスの [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) メソッドを呼び出して @@igxName コンポーネントを最初の引数として渡します。
 
