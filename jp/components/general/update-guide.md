@@ -54,6 +54,9 @@ ng update @angular/cli
 
 ## 17.2.x から 18.0.x の場合:
 
+### 重大な変更
+- バージョン 18.0.x では、廃止された `displayDensity` プロパティが `IgxGrid`、`IgxTreeGrid`、`IgxHierarchicalGrid`、`IgxRowIsland` およびすべてのグリッド関連コンポーネントから削除され、代わりにカスタム CSS プロパティ `--ig-size` が採用されました。詳細については、[16.0.x から 16.1.x へのアップデート ガイド](#160x-から-161x-の場合)を参照してください。
+
 ### 一般
 - `IgxPivotGrid`
 ### 重大な変更
