@@ -289,7 +289,7 @@ The radial gauge can be modified to show a second needle. This will make the mai
 </igx-radial-gauge>
 ```
 
-<code-view style="height: 125px" alt="Angular radial gauge highlight needle"
+<code-view style="height: 320px" alt="Angular radial gauge highlight needle"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/highlight-needle"
                                                  github-src="gauges/radial-gauge/highlight-needle">
