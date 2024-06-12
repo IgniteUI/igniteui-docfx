@@ -31,7 +31,7 @@ _language: ja
 関連するチャートタイプの詳細については、以下のトピックを参照してください。
 
 *   [チャート注釈](chart-annotations.md)
-*   [チャートのハイライト表示](chart-highlighting.md)
+*   [チャート強調表示](chart-highlighting.md)
 *   [チャート ツールチップ](chart-tooltips.md)
 
 ## API リファレンス

@@ -107,36 +107,6 @@ Ignite UI for Angular ツリーマップ チャートは、ネストされた一
 </code-view>
 
 
-### Angular ツリーマップのハイライト
-
-次の例では、ツリーマップでノードのハイライト機能を示しています。
-この機能には 2 つのオプションがあります。各ノードは、不透明度を下げることで個別に明るくしたり、他のすべてのノードに同じ効果をトリガーさせたりすることができます。この機能を有効にするには、[`HighlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.highlightingmode.html) を Brighten または FadeOthers に設定します。
-
-<code-view style="height: 600px" alt="Angular ツリーマップのハイライト"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-                    iframe-src="{environment:dvDemosBaseUrl}/charts/tree-map/highlighting"
-                                                 github-src="charts/tree-map/highlighting">
-</code-view>
-
-
-## Angular ツリーマップのパーセントベースのハイライト
-
-`HighlightedItemsSource`: ハイライト表示された値を読み取るデータ ソースを指定します。null の場合、ハイライト表示された値は ItemsSource プロパティから読み取られます。
-`HighlightedValueMemberPath`: ハイライト表示された値が読み取られるデータ ソース内のプロパティの名前を指定します。
-`HighlightedValueOpacity`: ハイライト表示された値の背後にある通常の値の不透明度を制御します。
-`HighlightedValuesDisplayMode`: ハイライト表示された値を有効または無効にします。
-
-*   Auto: ツリーマップによって、使用するモードが決まります。
-*   Overlay: ツリーマップには、通常の値の上にハイライト表示された値が表示され、通常の値にはわずかに不透明度が適用されます。
-*   Hidden: ツリーマップにはハイライト表示された値は表示されません。
-
-<code-view style="height: 600px" alt="Angular ツリーマップのパーセントベースのハイライト"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-                    iframe-src="{environment:dvDemosBaseUrl}/charts/tree-map/highlighting-percent-based"
-                                                 github-src="charts/tree-map/highlighting-percent-based">
-</code-view>
-
-
 <div class="divider--half"></div>
 
 ## その他のリソース
