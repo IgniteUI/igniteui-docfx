@@ -17,6 +17,10 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 *   [Ignite UI for Angular Changelog at Github]
 https://github.com/igniteui/igniteui-angular/blob/master/CHANGELOG.md
 
+## **18.0.0 (June 2024)**
+
+* Angular 18 support added.
+
 ## **17.3.0 (March 2024)**
 
 ### igniteui-angular-charts
