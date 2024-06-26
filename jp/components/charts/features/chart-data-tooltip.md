@@ -1,6 +1,6 @@
 ---
 title: Angular チャート データ ツールチップ | データ視覚化ツール | インフラジスティックス
-_description: データ ツールチップ レイヤーで Infragistics Ignite UI for Angular チャートを使用してください!
+_description: データ ツールチップ レイヤーで Infragistics Ignite UI for Angular チャートをお試しください!
 _keywords: Angular charts, chart legend, legend, legend types, Ignite UI for Angular, Infragistics, Angular チャート, チャート凡例, 凡例, 凡例タイプ, インフラジスティックス
 mentionedTypes: ["XamDataChart", "Legend", "CategoryChart", "FinancialChart", "XamDataLegend", "DataToolTipLayer"]
 namespace: Infragistics.Controls.Charts
@@ -79,6 +79,17 @@ Ignite UI for Angular では、**DataToolTip** は、シリーズの値とタイ
 </code-view>
 
 
+## Angular データ チャートのデータ ツールチップのグループ化
+
+`DataLegendGroup` は、すべてのタイプのシリーズで、データ凡例内のシリーズ グループを分類する文字列に設定できます。各グループには、別のシリーズ グループが表示される前に、独自の集計行が表示されます。デフォルトでは、DataLegend はグループ名を非表示にしますが、`GroupRowVisible` プロパティを true に設定するとグループ名を表示できます。データ ツールチップ レイヤーで [`groupingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatatooltiplayercomponent.html#groupingMode) を 「Grouped」 に設定し、[`labelDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#labelDisplayMode) を 「Visible」 に設定する必要があります。
+
+<code-view style="height: 450px" alt="Angular データ ツールチップのグループ化"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/data-tooltip-grouping"
+                                                 github-src="charts/data-chart/data-tooltip-grouping">
+</code-view>
+
+
 ## Angular カテゴリ チャート & ファイナンシャル チャートのデータ ツールチップのグループ化と配置
 
 [`dataToolTipGroupingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipGroupingMode) プロパティを `Grouped` または `Individual` に設定して、複数のシリーズのコンテンツを 1 つのツールチップにグループ化するか、各シリーズのコンテンツを複数のツールチップに分割することができます。`Grouped` モードでは、[`dataToolTipGroupedPositionModeX`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipGroupedPositionModeX) プロパティと [`dataToolTipGroupedPositionModeY`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipGroupedPositionModeY) プロパティを設定することにより、ツールチップが表示される場所をカスタマイズできます。これにより、ツールチップの水平方向と垂直方向の配置を、マウス位置に最も近いシリーズ ポイントに追従させるか、プロット領域の端に固定するかをカスタマイズできます。
@@ -115,6 +126,36 @@ Ignite UI for Angular では、**DataToolTip** は、シリーズの値とタイ
                                                  github-src="charts/financial-chart/data-tooltip-formatting-currency">
 </code-view>
 
+
+## Angular データ ツールチップのスタイル設定
+
+**DataToolTip** は、各タイプの列をスタイル設定するためのプロパティを提供します。これらの各プロパティ名は、Title、Label、Value、Units で始まり、テキストの色、フォント、およびマージンのスタイルを設定できます。たとえば、これらのそれぞれのテキストの色を設定する場合は、[`dataToolTipTitleTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipTitleTextColor)、[`dataToolTipLabelTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipLabelTextColor)、[`dataToolTipValueTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueTextColor)、および [`dataToolTipUnitsTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipUnitsTextColor) プロパティを設定します。
+
+次の例は、上記のスタイル設定プロパティの使用法を示しています:
+
+<code-view style="height: 450px" alt="Angular ファイナンシャル チャート データ ツールチップのスタイル設定"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/data-tooltip-styling-props"
+                                                 github-src="charts/financial-chart/data-tooltip-styling-props">
+</code-view>
+
+
+ツールチップのグループ化部分を含むいくつかのプロパティが公開されています。
+
+*   `GroupTextMargin`
+*   `GroupTextColor`
+*   `GroupTextFontSize`
+*   `GroupTextFontFamily`
+*   `GroupTextFontStyle`
+*   `GroupTextFontStretch`
+*   `GroupTextFontWeight`
+*   `HeaderTextMargin`
+*   [`headerTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#headerTextColor)
+*   `HeaderTextFontSize`
+*   `HeaderTextFontFamily`
+*   `HeaderTextFontStyle`
+*   `HeaderTextFontStretch`
+*   `HeaderTextFontWeight`
 
 ## API リファレンス
 

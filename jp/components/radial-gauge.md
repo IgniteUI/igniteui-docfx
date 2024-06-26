@@ -290,7 +290,7 @@ export class AppModule {}
 </igx-radial-gauge>
 ```
 
-<code-view style="height: 125px" alt="Angular ラジアル ゲージの針のハイライト"
+<code-view style="height: 320px" alt="Angular ラジアル ゲージの針のハイライト"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/highlight-needle"
                                                  github-src="gauges/radial-gauge/highlight-needle">
