@@ -138,13 +138,13 @@ As of version `18.0.0` the IgniteUI for Angular row dimension value headers can 
 
 The `IgxPivotGridComponent` can support two ways of row dimension rendering. This option can be controlled by the `pivotUI` and `rowLayout` properties. The default state of the grid is vertical.
 
-<!-- vertical sample? -->
+Since no setting is required for this layout to be presented, all the variations can be observed in the features sample above.
 
 The alternative would be horizontal. In this mode, the children of a single row dimension when expanded are shown horizontally in the same parent multi row layout.
 
 <code-view style="height: 870px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-features" alt="Angular Pivot Grid with Horizontal row dimensions layout">
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-layout" alt="Angular Pivot Grid with Horizontal Row Dimensions Layout">
 </code-view>
 
 Due to the nature of the horizontal layout, keeping visible the parent dimension value aggregations in a separate row when expanded, the `horizontalSummary` option for each row dimension and their children in the pivotConfiguration he would need to be enabled. It is only applicable for the horizontal rendering mode. There the  "None"(default), "Top" and "Bottom" position can be specified.
