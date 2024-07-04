@@ -17,7 +17,7 @@
 - name: Data Visualization Changelog
   href: general-changelog-dv.md
   new: false
-  updated: true
+  updated: false
 - name: Update guide
   href: general/update-guide.md
   new: false
@@ -46,7 +46,7 @@
       new: false
     - name: Use Standalone Components
       href: general/how-to/how-to-use-standalone-components.md
-      updated: true
+      updated: false
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   sortable: false
@@ -102,7 +102,7 @@
   new: false
 - name: RTL Support
   href: interactivity/right-to-left-support.md
-  updated: true
+  updated: false
   new: false
 - name: Accessibility Compliance
   href: interactivity/accessibility-compliance.md
@@ -110,11 +110,11 @@
 - name: Grids & Lists
   href: grids-and-lists.md
   header: true
-  updated: true
+  updated: false
 - name: Data Grid
   href: grid/grid.md
   new: false
-  updated: true
+  updated: false
   sortable: true
   items:
     - name: Row Actions
@@ -138,7 +138,7 @@
       items:
         - name: Cell Editing
           href: grid/cell-editing.md
-          updated: true
+          updated: false
         - name: Row Editing
           href: grid/row-editing.md
           new: false
@@ -147,17 +147,17 @@
           new: false
         - name: Batch Editing
           href: grid/batch-editing.md
-          updated: true
+          updated: false
           new: false
         - name: Validation
           href: grid/validation.md
           new: false
         - name: Grid with Cascading combos
           href: grid/cascading-combos.md
-          new: true
+          new: false
     - name: Row Drag
       href: grid/row-drag.md
-      updated: true
+      updated: false
       new: false
     - name: Paging
       href: grid/paging.md
@@ -169,7 +169,7 @@
       items:
         - name: Excel Style Filtering
           href: grid/excel-style-filtering.md
-          updated: true
+          updated: false
         - name: Advanced Filtering
           href: grid/advanced-filtering.md
           new: false
@@ -182,7 +182,7 @@
       updated: false
     - name: Summaries
       href: grid/summaries.md
-      updated: true
+      updated: false
     - name: Column Moving
       href: grid/column-moving.md
       new: false
@@ -197,7 +197,7 @@
       updated: false
     - name: Column Resizing
       href: grid/column-resizing.md
-      updated: true
+      updated: false
       new: false
     - name: Column Hiding
       href: grid/column-hiding.md
@@ -224,11 +224,11 @@
     - name: Toolbar
       href: grid/toolbar.md
       new: false
-      updated: true
+      updated: false
     - name: Export to Excel
       href: grid/export-excel.md
       new: false
-      updated: true
+      updated: false
     - name: Paste from Excel
       href: grid/paste-excel.md
       new: false
@@ -241,7 +241,7 @@
     - name: Size
       href: grid/display-density.md
       new: false
-      updated: true
+      updated: false
     - name: Conditional Styling
       href: grid/conditional-cell-styling.md
       new: false
@@ -294,7 +294,7 @@
       items:
         - name: Cell Editing
           href: treegrid/cell-editing.md
-          updated: true
+          updated: false
         - name: Row Editing
           href: treegrid/row-editing.md
           new: false
@@ -303,7 +303,7 @@
           new: false
         - name: Batch Editing
           href: treegrid/batch-editing.md
-          updated: true
+          updated: false
           new: false
         - name: Validation
           href: treegrid/validation.md
@@ -321,7 +321,7 @@
       items:
       - name: Excel Style Filtering
         href: treegrid/excel-style-filtering.md
-        updated: true
+        updated: false
       - name: Advanced Filtering
         href: treegrid/advanced-filtering.md
         new: false
@@ -331,7 +331,7 @@
     - name: Summaries
       href: treegrid/summaries.md
       new: false
-      updated: true
+      updated: false
     - name: Column Moving
       href: treegrid/column-moving.md
       new: false
@@ -346,12 +346,12 @@
       updated: false
     - name: Column Resizing
       href: treegrid/column-resizing.md
-      updated: true
+      updated: false
       new: false
     - name: Column Hiding
       href: treegrid/column-hiding.md
       new: false
-      updated: true
+      updated: false
     - name: Selection
       href: treegrid/selection.md
       new: false
@@ -371,11 +371,11 @@
     - name: Toolbar
       href: treegrid/toolbar.md
       new: false
-      updated: true
+      updated: false
     - name: Export to Excel
       href: treegrid/export-excel.md
       new: false
-      updated: true
+      updated: false
     - name: Multi-column Headers
       href: treegrid/multi-column-headers.md
       new: false
@@ -391,7 +391,7 @@
       updated: false
     - name: Group By
       href: treegrid/groupby.md
-      updated: true
+      updated: false
       new: false
     - name: Keyboard navigation
       href: treegrid/keyboard-navigation.md
@@ -432,7 +432,7 @@
       items:
         - name: Cell Editing
           href: hierarchicalgrid/cell-editing.md
-          updated: true
+          updated: false
         - name: Row Editing
           href: hierarchicalgrid/row-editing.md
           new: false
@@ -441,7 +441,7 @@
           new: false
         - name: Batch Editing
           href: hierarchicalgrid/batch-editing.md
-          updated: true
+          updated: false
           new: false
         - name: Validation
           href: hierarchicalgrid/validation.md
@@ -449,7 +449,7 @@
     - name: Export to Excel
       href: hierarchicalgrid/export-excel.md
       new: false
-      updated: true
+      updated: false
     - name: Row Drag
       href: hierarchicalgrid/row-drag.md
       new: false
@@ -463,7 +463,7 @@
       items:
       - name: Excel Style Filtering
         href: hierarchicalgrid/excel-style-filtering.md
-        updated: true
+        updated: false
       - name: Advanced Filtering
         href: hierarchicalgrid/advanced-filtering.md
         new: false
@@ -473,7 +473,7 @@
     - name: Summaries
       href: hierarchicalgrid/summaries.md
       new: false
-      updated: true
+      updated: false
     - name: Column Moving
       href: hierarchicalgrid/column-moving.md
       new: false
@@ -487,12 +487,12 @@
       new: false
     - name: Column Resizing
       href: hierarchicalgrid/column-resizing.md
-      updated: true
+      updated: false
       new: false
     - name: Column Hiding
       href: hierarchicalgrid/column-hiding.md
       new: false
-      updated: true
+      updated: false
     - name: Selection
       href: hierarchicalgrid/selection.md
       new: false
@@ -513,7 +513,7 @@
     - name: Toolbar
       href: hierarchicalgrid/toolbar.md
       new: false
-      updated: true
+      updated: false
     - name: Multi-column Headers
       href: hierarchicalgrid/multi-column-headers.md
       new: false
@@ -543,12 +543,15 @@
 - name: Pivot Grid
   href: pivotGrid/pivot-grid.md
   new: false
+  updated: true
   items:
     - name: Export to Excel
       href: pivotGrid/export-excel.md
       new: false
+      updated: true
     - name: Pivot Grid Features
       href: pivotGrid/pivot-grid-features.md
+      updated: true
       new: false
     - name: Pivot Grid Remote Operations
       href: pivotGrid/pivot-grid-custom.md
@@ -556,10 +559,11 @@
     - name: State Persistence
       href: pivotGrid/state-persistence.md
       new: false
+      updated: true
 - name: Tree
   href: tree.md
   new: false
-  updated: true
+  updated: false
 - name: List View
   href: list.md
 - name: Combo
@@ -635,7 +639,7 @@
   new: false
 - name: Line Chart
   href: charts/types/line-chart.md
-  updated: true
+  updated: false
 - name: Pie Chart
   href: charts/types/pie-chart.md
   new: false
@@ -671,14 +675,14 @@
   new: false
 - name: Chart API
   href: charts/chart-api.md
-  updated: true
+  updated: false
 - name: Chart Features
   href: charts/chart-features.md
   new: false
   items:
     - name: Axis Gridlines
       href: charts/features/chart-axis-gridlines.md
-      updated: true
+      updated: false
     - name: Axis Layouts
       href: charts/features/chart-axis-layouts.md
       new: false
@@ -705,7 +709,7 @@
       new: false
     - name: Chart Highlight Filter
       href: charts/features/chart-highlight-filter.md
-      new: true
+      new: false
     - name: Chart Highlighting
       href: charts/features/chart-highlighting.md
       new: false
@@ -717,7 +721,7 @@
       new: false
     - name: Chart Overlays
       href: charts/features/chart-overlays.md
-      updated: true
+      updated: false
     - name: Chart Performance
       href: charts/features/chart-performance.md
       new: false
@@ -729,7 +733,7 @@
       new: false
     - name: Chart Trendlines
       href: charts/features/chart-trendlines.md
-      updated: true      
+      updated: false      
     - name: Zoom Slider
       href: zoomslider-overview.md
       new: false
@@ -918,7 +922,7 @@
           new: false
         - name: Indigo
           href: themes/sass/presets/indigo.md
-          new: true
+          new: false
     - name: Misc
       new: false
       items:
@@ -928,11 +932,11 @@
       - name: Angular Theming
         href: themes/misc/angular-material-theming.md
         new: false
-        updated: true
+        updated: false
       - name: Bootstrap Theming
         href: themes/misc/bootstrap-theming.md
         new: false
-        updated: true
+        updated: false
 - name: Data Entry & Display
   header: true
   sortable: true
@@ -945,7 +949,7 @@
       new: false
     - name: Multi-select Hierarchical Drop Down
       href: drop-down-hierarchical-selection.md
-      new: true
+      new: false
 - name: Select
   href: select.md
   new: false
@@ -958,7 +962,7 @@
   href: button-group.md
 - name: Icon Button
   href: icon-button.md
-  new: true
+  new: false
 - name: Checkbox
   href: checkbox.md
 - name: Switch
@@ -982,7 +986,7 @@
   new: false
 - name: Badge
   href: badge.md
-  updated: true
+  updated: false
 - name: Icon
   href: icon.md
   items:
@@ -1018,7 +1022,7 @@
 - name: Slider
   href: slider/slider.md
   new: false
-  updated: true
+  updated: false
 - name: Ripple
   href: ripple.md
 - name: Toggle
@@ -1049,7 +1053,7 @@
   href: zoomslider-overview.md
 - name: Action Strip
   new: false
-  updated: true
+  updated: false
   href: action-strip.md
 - name: Menus
   header: true
@@ -1095,7 +1099,7 @@
 - name: Dock Manager
   href: dock-manager.md
   new: false
-  updated: true
+  updated: false
 - name: Notifications
   header: true
   sortable: true
@@ -1146,7 +1150,7 @@
     - name: Transaction Service class hierarchy
       href: transaction-classes.md
       new: false
-      updated: true
+      updated: false
     - name: How to use the Transaction Service
       href: transaction-how-to-use.md
       new: false

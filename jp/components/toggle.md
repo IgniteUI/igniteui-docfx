@@ -208,17 +208,27 @@ export class Class {
 
 ### トグル コンテナーのオフセット
 
-対応する軸に沿ったトグル コンテナーの位置を指定した量だけ操作できます。
+対応する軸に沿ったトグル コンテナーの位置を指定した量だけ操作できます。`setOffset` メソッドは、現在のオフセット値に追加するか、特定の値に設定するかを決定するオプションの `offsetMode` パラメーターもサポートしています。
 
 ```typescript
 // deltaX and deltaY determine by how much the container will be offset compared to its' previous position
-public offsetToggle() {
+// Using OffsetMode.Add to add the values (default behavior)
+public offsetToggleAdd() {
     const deltaX = 30;
     const deltaY = 30;
-    this.toggle.setOffset(deltaX, deltaY);
+    this.toggle.setOffset(deltaX, deltaY, OffsetMode.Add);
 }
 ```
 
+```typescript
+// deltaX and deltaY determine the exact position to set the container to, relative to its target element.
+// Using OffsetMode.Set to set the offset to specific values
+public offsetToggleSet() {
+    const deltaX = 30;
+    const deltaY = 30;
+    this.toggle.setOffset(deltaX, deltaY, OffsetMode.Set);
+}
+```
 
 <code-view style="height: 370px" 
            data-demos-base-url="{environment:demosBaseUrl}" 

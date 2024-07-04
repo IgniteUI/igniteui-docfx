@@ -18,7 +18,7 @@
 - name: データ可視化の変更ログ
   href: general-changelog-dv.md
   new: false
-  updated: true
+  updated: false
 - name: アップデート ガイド
   href: general/update-guide.md
   new: false
@@ -47,7 +47,7 @@
       new: false
     - name: スタンドアロン コンポーネントの使用方法
       href: general/how-to/how-to-use-standalone-components.md
-      updated: true
+      updated: false
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   sortable: false
@@ -103,7 +103,7 @@
   new: false
 - name: RTL サポート
   href: interactivity/right-to-left-support.md
-  updated: true
+  updated: false
   new: false
 - name: アクセシビリティ準拠
   href: interactivity/accessibility-compliance.md
@@ -111,11 +111,11 @@
 - name: グリッドとリスト
   href: grids-and-lists.md
   header: true
-  updated: true
+  updated: false
 - name: Data Grid
   href: grid/grid.md
   new: false
-  updated: true
+  updated: false
   sortable: true
   items:
     - name: 行のアクション
@@ -139,7 +139,7 @@
       items:
         - name: セル編集
           href: grid/cell-editing.md
-          updated: true
+          updated: false
         - name: 行編集
           href: grid/row-editing.md
           new: false
@@ -148,17 +148,17 @@
           new: false
         - name: 一括編集
           href: grid/batch-editing.md
-          updated: true
+          updated: false
           new: false
         - name: 検証
           href: grid/validation.md
           new: false
         - name: カスケード コンボを使用したグリッド
           href: grid/cascading-combos.md
-          new: true
+          new: false
     - name: 行ドラッグ
       href: grid/row-drag.md
-      updated: true
+      updated: false
       new: false
     - name: ページング
       href: grid/paging.md
@@ -170,7 +170,7 @@
       items:
         - name: Excel スタイル フィルタリング
           href: grid/excel-style-filtering.md
-          updated: true
+          updated: false
         - name: 高度なフィルタリング
           href: grid/advanced-filtering.md
           new: false
@@ -183,7 +183,7 @@
       updated: false
     - name: 集計
       href: grid/summaries.md
-      updated: true
+      updated: false
     - name: 列移動
       href: grid/column-moving.md
       new: false
@@ -198,7 +198,7 @@
       updated: false
     - name: 列のサイズ変更
       href: grid/column-resizing.md
-      updated: true
+      updated: false
       new: false
     - name: 列の非表示
       href: grid/column-hiding.md
@@ -225,11 +225,11 @@
     - name: ツールバー
       href: grid/toolbar.md
       new: false
-      updated: true
+      updated: false
     - name: Excel エクスポート
       href: grid/export-excel.md
       new: false
-      updated: true
+      updated: false
     - name: Excel からの貼り付け
       href: grid/paste-excel.md
       new: false
@@ -239,10 +239,10 @@
     - name: 列グループの折りたたみ
       href: grid/collapsible-column-groups.md
       new: false
-    - name: サイズ (表示密度)
+    - name: サイズ
       href: grid/display-density.md
       new: false
-      updated: true
+      updated: false
     - name: 条件付きスタイル設定
       href: grid/conditional-cell-styling.md
       new: false
@@ -295,7 +295,7 @@
       items:
         - name: セル編集
           href: treegrid/cell-editing.md
-          updated: true
+          updated: false
         - name: 行編集
           href: treegrid/row-editing.md
           new: false
@@ -304,7 +304,7 @@
           new: false
         - name: 一括編集
           href: treegrid/batch-editing.md
-          updated: true
+          updated: false
           new: false
         - name: 検証
           href: treegrid/validation.md
@@ -322,7 +322,7 @@
       items:
       - name: Excel スタイル フィルタリング
         href: treegrid/excel-style-filtering.md
-        updated: true
+        updated: false
       - name: 高度なフィルタリング
         href: treegrid/advanced-filtering.md
         new: false
@@ -332,7 +332,7 @@
     - name: 集計
       href: treegrid/summaries.md
       new: false
-      updated: true
+      updated: false
     - name: 列移動
       href: treegrid/column-moving.md
       new: false
@@ -347,12 +347,12 @@
       updated: false
     - name: 列のサイズ変更
       href: treegrid/column-resizing.md
-      updated: true
+      updated: false
       new: false
     - name: 列の非表示
       href: treegrid/column-hiding.md
       new: false
-      updated: true
+      updated: false
     - name: 選択
       href: treegrid/selection.md
       new: false
@@ -372,18 +372,18 @@
     - name: ツールバー
       href: treegrid/toolbar.md
       new: false
-      updated: true
+      updated: false
     - name: Excel エクスポート
       href: treegrid/export-excel.md
       new: false
-      updated: true
+      updated: false
     - name: 複数列ヘッダー
       href: treegrid/multi-column-headers.md
       new: false
     - name: 列グループの折りたたみ
       href: treegrid/collapsible-column-groups.md
       new: false
-    - name: サイズ (表示密度)
+    - name: サイズ
       href: treegrid/display-density.md
       new: false
     - name: 条件付きスタイル設定
@@ -392,7 +392,7 @@
       updated: false
     - name: グループ化
       href: treegrid/groupby.md
-      updated: true
+      updated: false
       new: false
     - name: キーボードナビゲーション
       href: treegrid/keyboard-navigation.md
@@ -433,7 +433,7 @@
       items:
         - name: セル編集
           href: hierarchicalgrid/cell-editing.md
-          updated: true
+          updated: false
         - name: 行編集
           href: hierarchicalgrid/row-editing.md
           new: false
@@ -442,7 +442,7 @@
           new: false
         - name: 一括編集
           href: hierarchicalgrid/batch-editing.md
-          updated: true
+          updated: false
           new: false
         - name: 検証
           href: hierarchicalgrid/validation.md
@@ -450,7 +450,7 @@
     - name: Excel へエクスポート
       href: hierarchicalgrid/export-excel.md
       new: false
-      updated: true
+      updated: false
     - name: 行ドラッグ
       href: hierarchicalgrid/row-drag.md
       new: false
@@ -464,7 +464,7 @@
       items:
       - name: Excel スタイル フィルタリング
         href: hierarchicalgrid/excel-style-filtering.md
-        updated: true
+        updated: false
       - name: 高度なフィルタリング
         href: hierarchicalgrid/advanced-filtering.md
         new: false
@@ -474,7 +474,7 @@
     - name: 集計
       href: hierarchicalgrid/summaries.md
       new: false
-      updated: true
+      updated: false
     - name: 列移動
       href: hierarchicalgrid/column-moving.md
       new: false
@@ -488,12 +488,12 @@
       new: false
     - name: 列のサイズ変更
       href: hierarchicalgrid/column-resizing.md
-      updated: true
+      updated: false
       new: false
     - name: 列の非表示
       href: hierarchicalgrid/column-hiding.md
       new: false
-      updated: true
+      updated: false
     - name: 選択
       href: hierarchicalgrid/selection.md
       new: false
@@ -514,7 +514,7 @@
     - name: ツールバー
       href: hierarchicalgrid/toolbar.md
       new: false
-      updated: true
+      updated: false
     - name: 複数列ヘッダー
       href: hierarchicalgrid/multi-column-headers.md
       new: false
@@ -525,7 +525,7 @@
       href: hierarchicalgrid/conditional-cell-styling.md
       new: false
       updated: false
-    - name: サイズ (表示密度)
+    - name: サイズ
       href: hierarchicalgrid/display-density.md
       new: false
     # - name: 条件付きセルのスタイル設定
@@ -544,12 +544,15 @@
 - name: Pivot Grid
   href: pivotgrid/pivot-grid.md
   new: false
+  updated: true
   items:
     - name: Excel へのエクスポート
       href: pivotgrid/export-excel.md
       new: false
+      updated: true
     - name: ピボット グリッド機能
       href: pivotgrid/pivot-grid-features.md
+      updated: true
       new: false
     - name: ピボット グリッドのリモート処理とカスタマイズ
       href: pivotgrid/pivot-grid-custom.md
@@ -557,10 +560,11 @@
     - name: 状態保持
       href: pivotgrid/state-persistence.md
       new: false
+      updated: true
 - name: Tree
   href: tree.md
   new: false
-  updated: true
+  updated: false
 - name: List View
   href: list.md
 - name: Combo
@@ -636,7 +640,7 @@
   new: false
 - name: 折れ線チャート
   href: charts/types/line-chart.md
-  updated: true
+  updated: false
 - name: 円チャート
   href: charts/types/pie-chart.md
   new: false
@@ -672,14 +676,14 @@
   new: false
 - name: チャート API
   href: charts/chart-api.md
-  updated: true
+  updated: false
 - name: チャート機能
   href: charts/chart-features.md
   new: false
   items:
     - name: 軸グリッド線
       href: charts/features/chart-axis-gridlines.md
-      updated: true
+      updated: false
     - name: 軸レイアウト
       href: charts/features/chart-axis-layouts.md
       new: false
@@ -706,7 +710,7 @@
       new: false
     - name: チャート強調表示フィルター
       href: charts/features/chart-highlight-filter.md
-      new: true
+      new: false
     - name: チャート強調表示
       href: charts/features/chart-highlighting.md
       new: false
@@ -718,7 +722,7 @@
       new: false
     - name: チャート オーバーレイ
       href: charts/features/chart-overlays.md
-      updated: true
+      updated: false
     - name: チャートのパフォーマンス
       href: charts/features/chart-performance.md
       new: false
@@ -730,7 +734,7 @@
       new: false
     - name: チャート トレンドライン
       href: charts/features/chart-trendlines.md
-      updated: true
+      updated: false
     - name: ズーム スライダー
       href: zoomslider-overview.md
       new: false
@@ -872,7 +876,7 @@
 - name: タイポグラフィ
   href: themes/typography.md
   new: false
-- name: サイズ (表示密度)
+- name: サイズ
   href: display-density.md
 - name: Sass
   new: false
@@ -921,7 +925,7 @@
           new: false
         - name: Indigo
           href: themes/sass/presets/indigo.md
-          new: true
+          new: false
     - name: その他
       new: false
       items:
@@ -931,11 +935,11 @@
       - name: Angular のテーマ
         href: themes/misc/angular-material-theming.md
         new: false
-        updated: true
+        updated: false
       - name: Bootstrap のテーマ
         href: themes/misc/bootstrap-theming.md
         new: false
-        updated: true
+        updated: false
 - name: データ入力と表示
   header: true
   sortable: true
@@ -948,7 +952,7 @@
       new: false
     - name: 複数選択の階層ドロップダウン
       href: drop-down-hierarchical-selection.md
-      new: true
+      new: false
 - name: Select
   href: select.md
   new: false
@@ -961,7 +965,7 @@
   href: button-group.md
 - name: Icon Button
   href: icon-button.md
-  new: true
+  new: false
 - name: Checkbox
   href: checkbox.md
 - name: Switch
@@ -985,7 +989,7 @@
   new: false
 - name: Badge
   href: badge.md
-  updated: true
+  updated: false
 - name: Icon
   href: icon.md
   items:
@@ -1018,7 +1022,7 @@
 - name: Slider
   href: slider/slider.md
   new: false
-  updated: true
+  updated: false
 - name: Ripple
   href: ripple.md
 - name: Toggle
@@ -1049,7 +1053,7 @@
   href: zoomslider-overview.md
 - name: Action Strip
   new: false
-  updated: true
+  updated: false
   href: action-strip.md
 - name: メニュー
   header: true
@@ -1095,7 +1099,7 @@
 - name: Dock Manager
   href: dock-manager.md
   new: false
-  updated: true
+  updated: false
 - name: 通知
   header: true
   sortable: true
@@ -1146,7 +1150,7 @@
     - name: トランザクション サービス クラス階層
       href: transaction-classes.md
       new: false
-      updated: true
+      updated: false
     - name: トランザクション サービスの使用方法
       href: transaction-how-to-use.md
       new: false

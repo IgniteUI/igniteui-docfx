@@ -207,17 +207,27 @@ If all went well, it will look like this:
 
 ### Offsetting the Toggle Container
 
-We can manipulate the position of the toggle container along the corresponding axis by a provided amount:
+We can manipulate the position of the toggle container along the corresponding axis by a provided amount. The `setOffset` method also supports an optional `offsetMode` parameter that determines whether to add to the current offset values or set them to a specific value.
 
 ```typescript
 // deltaX and deltaY determine by how much the container will be offset compared to its' previous position
-public offsetToggle() {
+// Using OffsetMode.Add to add the values (default behavior)
+public offsetToggleAdd() {
     const deltaX = 30;
     const deltaY = 30;
-    this.toggle.setOffset(deltaX, deltaY);
+    this.toggle.setOffset(deltaX, deltaY, OffsetMode.Add);
 }
 ```
 
+```typescript
+// deltaX and deltaY determine the exact position to set the container to, relative to its target element.
+// Using OffsetMode.Set to set the offset to specific values
+public offsetToggleSet() {
+    const deltaX = 30;
+    const deltaY = 30;
+    this.toggle.setOffset(deltaX, deltaY, OffsetMode.Set);
+}
+```
 
 <code-view style="height: 370px" 
            data-demos-base-url="{environment:demosBaseUrl}" 

@@ -114,10 +114,19 @@ export class AppModule {}
 
 To initiate an export process you may use the handler of a button in your component's template.
 
+@@if (igxName !== 'IgxPivotGrid') {
 ```html
 <@@igSelector #@@igObjectRef [data]="localData" [autoGenerate]="true"></@@igSelector>
 <button (click)="exportButtonHandler()">Export @@igxName to Excel</button>
 ```
+}
+
+@@if (igxName === 'IgxPivotGrid') {
+```html
+<@@igSelector #@@igObjectRef [data]="localData" [pivotConfiguration]="pivotConfig"></@@igSelector>
+<button (click)="exportButtonHandler()">Export @@igxName to Excel</button>
+```
+}
 
 You may access the exporter service by defining an argument of type [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) in the component's constructor and the Angular framework will provide an instance of the service. To export some data in MS Excel format you need to invoke the exporter service's [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) method and pass the @@igxName component as first argument.
 

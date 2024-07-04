@@ -303,21 +303,20 @@ Angular Card に表示する画像や動画は、`igx-card-media` タグで囲�
 
 Angular Card の操作領域では、すでに説明したコンテンツに追加の設定を加えることができます。
 
-`reverse` 属性を使用して、フラット ボタンとボタン アイコンの順序を逆にすることができます。
+`igxStart` または `igxEnd` ディレクティブを使用して、カードのアクション領域内の要素を先頭または末尾に配置できます。
 
 ```html
-<igx-card-actions [reverse]="true">
-    <button igxButton>Button</button>
-
-    <button igxIconButton="flat">
-        <igx-icon>star</igx-icon>
+<igx-card-actions>
+    <button igxIconButton="flat" igxStart>
+        <igx-icon>drag_indicator</igx-icon>
+    </button>
+    <button igxIconButton="flat" igxEnd>
+        <igx-icon>favorite</igx-icon>
     </button>
 </igx-card-actions>
 ```
 
-アイコン ボタンはフラットスタイルのテキスト ボタンの前に表示されます。
-
-ボタンは、両端ではなく軸全体に配置されるように配置することもできるため、以下のように、`layout` 属性を使用して値を `justify` に設定します。
+ボタンは、両端ではなく軸全体に配置されるように配置することができます。そのためには、以下のように `layout` 属性を使用してその値を `justify` に設定します。
 
 ```html
 <igx-card-actions layout="justify">

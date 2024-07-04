@@ -31,8 +31,7 @@ _language: ja
 <div class="divider"></div>
 
 ### Container
-コンテンツを `GlobalPositionStrategy` として配置します。
-`ContainerPositionStrategy`は画面に関連する位置ではなく、`OverlaySettings` `outlet`で提供されるコンテンツに関連する位置にコンテンツを配置します。デフォルトは:
+コンテンツを `GlobalPositionStrategy` として配置します。`ContainerPositionStrategy`は画面に関連する位置ではなく、`OverlaySettings` `outlet`で提供されるコンテンツに関連する位置にコンテンツを配置します。デフォルトは:
 
 | horizontalDirection        | verticalDirection        |
 |:---------------------------|:-------------------------|
@@ -48,9 +47,7 @@ _language: ja
 <div class="divider"></div>
 
 ### Auto
-**Connected** ポジション ストラテジと同じ方法で要素を配置します。
-要素が部分的にビューポートから出た場合を考慮して、異なる開始点も計算します。**Auto** ストラテジは最初に **Connected** ストラテジと同じように要素を表示しようとします。要素がビューポートから出た場合 **Auto** は開始点と方向を反転します。つまり、方向が 'bottom' の場合、要素は 'top' に切り替わります。
-反転後、要素がまだビューポートの外である場合、**Auto** は要素をビューポートに入れるために初期の方向と開始点を使用します。たとえば、エレメントがビューポートの右側から 50 ピクセル分外に出た場合、**Auto** はそれを 50 ピクセル分左へずらします。その後、要素がビューポートから部分的に外れている場合、そしてその高さまたは幅がビューポートのものより大きい場合、**Auto** は要素の左端/上端をビューポートの左端/上端に揃えます。デフォルトは:
+**Connected** ポジション ストラテジと同じ方法で要素を配置します。要素が部分的にビューポートから出た場合を考慮して、異なる開始点も計算します。**Auto** ストラテジは最初に **Connected** ストラテジと同じように要素を表示しようとします。要素がビューポートから出た場合 **Auto** は開始点と方向を反転します。つまり、方向が 'bottom' の場合、要素は 'top' に切り替わります。反転後、要素がまだビューポートの外である場合、**Auto** は要素をビューポートに入れるために初期の方向と開始点を使用します。たとえば、エレメントがビューポートの右側から 50 ピクセル分外に出た場合、**Auto** はそれを 50 ピクセル分左へずらします。その後、要素がビューポートから部分的に外れている場合、そしてその高さまたは幅がビューポートのものより大きい場合、**Auto** は要素の左端/上端をビューポートの左端/上端に揃えます。デフォルトは:
 
 | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       |
 |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|
@@ -58,7 +55,7 @@ _language: ja
 <div class="divider"></div>
 
 ### Elastic
-要素の一部が表示範囲外の場合、**Connected** 配置ストラテジのように要素を配置し、要素をビュー ポートに収まるように (幅や高さの再計算により) サイズ変更します。 [`minSize`]({environment:angularApiUrl}/interfaces/positionsettings.html#minSize) を [`positionSettings`]({environment:angularApiUrl}/interfaces/positionsettings.html)  へ渡して要素のサイズが特定のしきい値を下回るようなサイズ変更を防ぐことができます。デフォルトは:
+要素の一部が表示範囲外の場合、**Connected** 配置ストラテジのように要素を配置し、要素をビュー ポートに収まるように (幅や高さの再計算により) サイズ変更します。 [`minSize`]({environment:angularApiUrl}/interfaces/positionsettings.html#minSize) を [`positionSettings`]({environment:angularApiUrl}/interfaces/positionSettings.html)  へ渡して要素のサイズが特定のしきい値を下回るようなサイズ変更を防ぐことができます。デフォルトは:
 
 | target          | horizontalDirection       |  verticalDirection       | horizontalStartPoint     | verticalStartPoint       | minSize               |
 |:----------------|:--------------------------|:-------------------------|:-------------------------|:-------------------------|:----------------------|
@@ -178,12 +175,22 @@ overlay.show(overlayId);
 
 ### コンテンツのオフセット
 
-対応する軸に沿って指定した量のみコンテンツをオフセットする方法:
+`setOffset` メソッドを使用すると、対応する軸に沿って指定された量だけコンテンツの位置を正確に調整できます。さらに、オプションの `offsetMode` パラメーターをサポートしており、オフセット値の適用方法を制御できます。
+
 ```typescript
-// deltaX and deltaY determine by how much the content will be offset compared to its' previous position
+// deltaX and deltaY determine the amount by which the content will be offset.
+// Using OffsetMode.Add to add the values (default behavior)
 const deltaX: number = 30;
 const deltaY: number = 15;
-overlay.setOffset(this._overlayId, deltaX, deltaY);
+overlay.setOffset(this._overlayId, deltaX, deltaY, OffsetMode.Add);
+```
+
+```typescript
+// deltaX and deltaY determine the exact position to set the content to, relative to its target element.
+// Using OffsetMode.Set to set the offset to specific values
+const deltaX: number = 30;
+const deltaY: number = 15;
+overlay.setOffset(this._overlayId, deltaX, deltaY, OffsetMode.Set);
 ```
 
 ## API リファレンス

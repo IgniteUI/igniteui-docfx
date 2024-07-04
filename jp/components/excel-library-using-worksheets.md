@@ -66,7 +66,7 @@ worksheet.displayOptions.gridlineColor = "Red";
 
 ## ヘッダーの構成
 
-列ヘッダーと行ヘッダーは、列と行を視覚的に特定するために使用します。また、現在選択されているセルやセル領域を強調表示する場合にも使用します。
+列ヘッダーと行ヘッダーは、列と行を視覚的に特定するために使用します。また、現在選択されているセルやセル領域をハイライト表示する場合にも使用します。
 
 列と行のヘッダーは、ワークシートの [`displayOptions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheet.html#displayOptions) の [`showRowAndColumnHeaders`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.displayoptions.html#showRowAndColumnHeaders) プロパティを使用して、表示と非表示を切り替えることができます。以下のコードは、列と行ヘッダーを非表示にする方法を示します。
 
