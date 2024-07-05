@@ -27,6 +27,11 @@ export class AppComponent implements OnInit {
 }
 ```
 
+<code-view style="height: 180px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/icon-service" alt="Icon Service Example">
+</code-view>
+
 ### Adding Icon Families
 
 Adding a new family of icons is done using the `setFamily` method of the icon service. It creates an family entry with some metadata that instructs the `igx-icon` component about the icon(s) it should render.
