@@ -160,22 +160,40 @@ this.@@igObjectRef.clearSort();
 
 @@igComponent でソート状態を初期設定するには、ソート式の配列を @@igComponent の [`sortingExpressions`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingExpressions) プロパティに渡します。
 
-@@if (igxName !== 'IgxTreeGrid') {
+@@if (igxName === 'IgxGrid') {
 ```typescript
-public ngOnInit() {
+public ngAfterViewInit(): void {
     this.@@igObjectRef.sortingExpressions = [
-        { fieldName: 'Name', dir: SortingDirection.Asc, ignoreCase: true },
-        { fieldName: 'Price', dir: SortingDirection.Desc }
+        {
+            dir: SortingDirection.Asc, fieldName: 'CategoryName',
+            ignoreCase: true, strategy: DefaultSortingStrategy.instance()
+        }
     ];
 }
 ```
 }
-@@if (igxName !== 'IgxTreeGrid') {
+
+@@if (igxName === 'IgxTreeGrid') {
 ```typescript
-public ngOnInit() {
+public ngAfterViewInit(): void {
     this.@@igObjectRef.sortingExpressions = [
-        { fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true },
-        { fieldName: 'Price', dir: SortingDirection.Desc }
+        { 
+            dir: SortingDirection.Asc, fieldName: 'UnitPrice',
+            ignoreCase: true, strategy: DefaultSortingStrategy.instance() 
+        }
+    ];
+}
+```
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+```typescript
+public ngOnInit(): void {
+    this.@@igObjectRef.sortingExpressions = [
+        { 
+            dir: SortingDirection.Asc, fieldName: 'Artist',
+            ignoreCase: true, strategy: DefaultSortingStrategy.instance() 
+        }
     ];
 }
 ```
@@ -187,7 +205,7 @@ public ngOnInit() {
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {
-#### リモート ソート
+## リモート ソート
 
 @@igComponent はリモート ソートをサポートします。詳細については、[`@@igComponent リモート データ操作`](remote-data-operations.md)で説明されています。
 
@@ -283,7 +301,7 @@ $custom-theme: grid-theme(
 ```
 
 >[!NOTE]
->`igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](../themes/palettes.md) のトピックをご覧ください。
+>`igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](../themes/sass/palettes.md) のトピックをご覧ください。
 
 ### スキーマの使用
 
