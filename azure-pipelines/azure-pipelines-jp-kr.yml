@@ -1,0 +1,74 @@
+trigger:
+  branches:
+    include:
+      - vnext
+      - master
+  paths:
+    exclude:
+      - '**/en/*'
+
+name: $(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)
+
+parameters:
+- name: isVerbose
+  displayName: 'Get verbose output from steps - where configurable'
+  type: boolean
+  default: false
+- name: shouldCleanPostExecution
+  displayName: 'Clean all pipeline dirs after the pipeline finishes?'
+  type: boolean
+  default: true
+
+stages:
+  - stage: Build
+    displayName: Build Stage
+    jobs:
+      - job: Build
+        displayName: Build Job
+        pool:
+          name: BuildAgentOnPrem
+        steps:
+          - checkout: self
+            clean: true
+            fetchTags: true
+
+          - task: NodeTool@0
+            displayName: Use Node 18.x
+            inputs:
+              versionSpec: 18.x
+
+          - task: UseDotNet@2
+            displayName: Use .NET Core sdk 6.x
+            inputs:
+              version: 6.x
+
+          - template: templates/npm-build-tasks.yml
+            parameters:
+              lang: jp
+              isVerbose: ${{ parameters.isVerbose }}
+
+          - template: templates/npm-build-tasks.yml
+            parameters:
+              lang: kr
+              isVerbose: ${{ parameters.isVerbose }}
+
+          - template: templates/publish-artifact-tasks.yml
+            parameters:
+              lang: jp
+
+          - template: templates/publish-artifact-tasks.yml
+            parameters:
+              lang: kr
+
+          - task: PowerShell@2
+            displayName: PowerShell Script
+            inputs:
+              targetType: inline
+              script: |
+                $version = ("$(build.buildnumber)").split('_')[1]
+                Write-Host "##vso[task.setvariable variable=BuildVersion]$version"
+              workingDirectory: $(Build.SourcesDirectory)
+
+          - ${{ if eq(parameters.shouldCleanPostExecution, true) }}:
+            - task: PostBuildCleanup@4
+              displayName: Clean Agent Directories

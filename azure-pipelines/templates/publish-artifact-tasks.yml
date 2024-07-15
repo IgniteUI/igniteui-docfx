@@ -1,0 +1,18 @@
+parameters:
+  - name: lang
+    type: string
+
+steps:
+  - task: PublishPipelineArtifact@1
+    displayName: 'Publish Pipeline Artifact: staging-${{ parameters.lang }}'
+    condition: ne(variables['Build.SourceBranchName'], 'master')
+    inputs:
+      path: $(Build.SourcesDirectory)/${{ parameters.lang }}/_site
+      artifactName: staging-${{ parameters.lang }}
+
+  - task: PublishPipelineArtifact@1
+    displayName: 'Publish Pipeline Artifact: prod-${{ parameters.lang }}'
+    condition: eq(variables['Build.SourceBranchName'], 'master')
+    inputs:
+      path: $(Build.SourcesDirectory)/${{ parameters.lang }}/_site
+      artifactName: prod-${{ parameters.lang }}
