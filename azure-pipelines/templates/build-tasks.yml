@@ -28,7 +28,7 @@ steps:
     displayName: 'Package ${{ parameters.buildType }} ${{ parameters.lang }} - zip'
     inputs:
       verbose: ${{ parameters.isVerbose }}
-      rootFolderOrFile: $(Build.SourcesDirectory)/${{ parameters.language }}/_site
+      rootFolderOrFile: $(Build.SourcesDirectory)/${{ parameters.lang }}/_site
       includeRootFolder: false
       archiveType: 'zip'
       archiveFile: $(Build.ArtifactStagingDirectory)/${{ parameters.buildType }}_${{ parameters.lang }}.zip

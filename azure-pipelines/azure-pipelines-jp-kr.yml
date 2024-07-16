@@ -36,7 +36,7 @@ stages:
       - job: Build
         displayName: Build Job
         pool:
-          name: BuildAgentOnPrem
+          vmImage: 'ubuntu-latest'
         steps:
           - checkout: self
             clean: true
