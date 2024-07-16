@@ -1,0 +1,31 @@
+parameters:
+  - name: lang
+    type: string
+  - name: isVerbose
+    type: boolean
+    default: false
+  - name: buildType
+    type: string
+
+steps:
+  - task: Npm@1
+    displayName: 'npm ci'
+    inputs:
+      command: custom
+      workingDir: $(Build.SourcesDirectory)
+      verbose: ${{ parameters.isVerbose }}
+      customCommand: ci
+
+  - task: Npm@1
+    displayName: npm build ${{ parameters.buildType }} ${{ parameters.lang }}
+    inputs:
+      command: custom
+      workingDir: $(Build.SourcesDirectory)
+      verbose: ${{ parameters.isVerbose }}
+      customCommand: run build-${{ parameters.buildType }} -- --lang=${{ parameters.lang }}
+
+  - task: PublishPipelineArtifact@1
+    displayName: 'Publish Pipeline Artifact: ${{ parameters.buildType }}-${{ parameters.lang }}'
+    inputs:
+      path: $(Build.SourcesDirectory)/${{ parameters.lang }}/_site
+      artifactName: ${{ parameters.buildType }}-${{ parameters.lang }}

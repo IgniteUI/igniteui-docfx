@@ -8,7 +8,17 @@ trigger:
       - '**/jp/*'
       - '**/kr/*'
 
+# This pipeline is meant to build specific branches for deployment. It's not meant to be a part of PR validation. Ensure that this pipeline is reserved for deployment purposes.
+pr: none
+
 name: $(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)
+
+variables:
+  - name: buildType
+    ${{ if eq(variables['Build.SourceBranchName'], 'master') }}:
+      value: 'production'
+    ${{ else }}:  
+      value: 'staging' # Intended for the vnext branch, but also available for manually triggering other branches
 
 parameters:
 - name: isVerbose
@@ -34,32 +44,20 @@ stages:
             fetchTags: true
 
           - task: NodeTool@0
-            displayName: Use Node 18.x
+            displayName: Use Node 20.x
             inputs:
-              versionSpec: 18.x
+              versionSpec: 20.x
 
           - task: UseDotNet@2
             displayName: Use .NET Core sdk 6.x
             inputs:
               version: 6.x
 
-          - template: templates/npm-build-tasks.yml
+          - template: templates/build-and-publish-tasks.yml
             parameters:
               lang: en
               isVerbose: ${{ parameters.isVerbose }}
-
-          - template: templates/publish-artifact-tasks.yml
-            parameters:
-              lang: en
-
-          - task: PowerShell@2
-            displayName: PowerShell Script
-            inputs:
-              targetType: inline
-              script: |
-                $version = ("$(build.buildnumber)").split('_')[1]
-                Write-Host "##vso[task.setvariable variable=BuildVersion]$version"
-              workingDirectory: $(Build.SourcesDirectory)
+              buildType: $(buildType)
 
           - ${{ if eq(parameters.shouldCleanPostExecution, true) }}:
             - task: PostBuildCleanup@4
