@@ -53,11 +53,17 @@ stages:
             inputs:
               version: 6.x
 
-          - template: templates/build-and-publish-tasks.yml
+          - template: templates/build-tasks.yml
             parameters:
               lang: en
               isVerbose: ${{ parameters.isVerbose }}
               buildType: $(buildType)
+
+          - task: PublishPipelineArtifact@1
+            displayName: 'Publish Pipeline Artifact'
+            inputs:
+              path: '$(Build.ArtifactStagingDirectory)'
+              artifactName: 'IgniteUIDocFX'
 
           - ${{ if eq(parameters.shouldCleanPostExecution, true) }}:
             - task: PostBuildCleanup@4

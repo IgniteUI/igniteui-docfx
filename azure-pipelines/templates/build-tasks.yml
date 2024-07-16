@@ -24,8 +24,12 @@ steps:
       verbose: ${{ parameters.isVerbose }}
       customCommand: run build-${{ parameters.buildType }} -- --lang=${{ parameters.lang }}
 
-  - task: PublishPipelineArtifact@1
-    displayName: 'Publish Pipeline Artifact: ${{ parameters.buildType }}-${{ parameters.lang }}'
+  - task: ArchiveFiles@2
+    displayName: 'Package ${{ parameters.buildType }} ${{ parameters.lang }} - zip'
     inputs:
-      path: $(Build.SourcesDirectory)/${{ parameters.lang }}/_site
-      artifactName: ${{ parameters.buildType }}-${{ parameters.lang }}
+      verbose: ${{ parameters.isVerbose }}
+      rootFolderOrFile: $(Build.SourcesDirectory)/${{ parameters.language }}/_site
+      includeRootFolder: false
+      archiveType: 'zip'
+      archiveFile: $(Build.ArtifactStagingDirectory)/${{ parameters.buildType }}_${{ parameters.lang }}.zip
+      replaceExistingArchive: true
