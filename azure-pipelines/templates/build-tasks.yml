@@ -9,12 +9,12 @@ parameters:
 
 steps:
   - task: Npm@1
-    displayName: 'npm install'
+    displayName: 'npm ci'
     inputs:
       command: custom
       workingDir: $(Build.SourcesDirectory)
       verbose: ${{ parameters.isVerbose }}
-      customCommand: 'install --production=false'
+      customCommand: 'ci --production=false'
 
   - task: Npm@1
     displayName: npm build ${{ parameters.buildType }} ${{ parameters.lang }}
