@@ -14,7 +14,7 @@ steps:
       command: custom
       workingDir: $(Build.SourcesDirectory)
       verbose: ${{ parameters.isVerbose }}
-      customCommand: ci
+      customCommand: 'ci --production=false'
 
   - task: Npm@1
     displayName: npm build ${{ parameters.buildType }} ${{ parameters.lang }}
