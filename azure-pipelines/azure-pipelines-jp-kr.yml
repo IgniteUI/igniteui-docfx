@@ -36,7 +36,7 @@ stages:
       - job: Build
         displayName: Build Job
         pool:
-          vmImage: 'ubuntu-latest'
+          vmImage: 'windows-latest' # TODO: Go to ubuntu-latest once the template is applied correctly under ubuntu
         steps:
           - checkout: self
             clean: true
