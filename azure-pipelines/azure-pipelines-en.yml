@@ -37,7 +37,7 @@ stages:
       - job: Build
         displayName: Build Job
         pool:
-          vmImage: 'windows-latest'
+          vmImage: 'ubuntu-latest'
         steps:
           - checkout: self
             clean: true
