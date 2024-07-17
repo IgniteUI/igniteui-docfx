@@ -22,7 +22,7 @@ steps:
       command: custom
       workingDir: $(Build.SourcesDirectory)
       verbose: ${{ parameters.isVerbose }}
-      customCommand: run build-${{ parameters.buildType }} -- --lang=${{ parameters.lang }}
+      customCommand: 'run build-${{ parameters.buildType }} -- --lang=${{ parameters.lang }}'
 
   - task: ArchiveFiles@2
     displayName: 'Package ${{ parameters.buildType }} ${{ parameters.lang }} - zip'
