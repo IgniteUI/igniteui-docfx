@@ -158,22 +158,40 @@ this.@@igObjectRef.clearSort();
 
 It is possible to set the initial sorting state of the @@igComponent by passing an array of sorting expressions to the [`sortingExpressions`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingExpressions) property of the @@igComponent.
 
-@@if (igxName !== 'IgxTreeGrid') {
+@@if (igxName === 'IgxGrid') {
 ```typescript
-public ngOnInit() {
+public ngAfterViewInit(): void {
     this.@@igObjectRef.sortingExpressions = [
-        { fieldName: 'Name', dir: SortingDirection.Asc, ignoreCase: true },
-        { fieldName: 'Price', dir: SortingDirection.Desc }
+        {
+            dir: SortingDirection.Asc, fieldName: 'CategoryName',
+            ignoreCase: true, strategy: DefaultSortingStrategy.instance()
+        }
     ];
 }
 ```
 }
-@@if (igxName !== 'IgxTreeGrid') {
+
+@@if (igxName === 'IgxTreeGrid') {
 ```typescript
-public ngOnInit() {
+public ngAfterViewInit(): void {
     this.@@igObjectRef.sortingExpressions = [
-        { fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true },
-        { fieldName: 'Price', dir: SortingDirection.Desc }
+        { 
+            dir: SortingDirection.Asc, fieldName: 'UnitPrice',
+            ignoreCase: true, strategy: DefaultSortingStrategy.instance() 
+        }
+    ];
+}
+```
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+```typescript
+public ngOnInit(): void {
+    this.@@igObjectRef.sortingExpressions = [
+        { 
+            dir: SortingDirection.Asc, fieldName: 'Artist',
+            ignoreCase: true, strategy: DefaultSortingStrategy.instance() 
+        }
     ];
 }
 ```

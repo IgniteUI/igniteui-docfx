@@ -1,0 +1,75 @@
+trigger:
+  branches:
+    include:
+      - vnext
+      - master
+  paths:
+    exclude:
+      - '**/en/*'
+
+# This pipeline is meant to build specific branches for deployment. It's not meant to be a part of PR validation. Ensure that this pipeline is reserved for deployment purposes.
+pr: none
+
+name: $(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)
+
+variables:
+  - name: buildType
+    ${{ if eq(variables['Build.SourceBranchName'], 'master') }}:
+      value: 'production'
+    ${{ else }}:  
+      value: 'staging' # Intended for the vnext branch, but also available for manually triggering other branches
+
+parameters:
+- name: isVerbose
+  displayName: 'Get verbose output from steps - where configurable'
+  type: boolean
+  default: false
+- name: shouldCleanPostExecution
+  displayName: 'Clean all pipeline dirs after the pipeline finishes?'
+  type: boolean
+  default: true
+
+stages:
+  - stage: Build
+    displayName: Build Stage
+    jobs:
+      - job: Build
+        displayName: Build Job
+        pool:
+          vmImage: 'ubuntu-latest'
+        steps:
+          - checkout: self
+            clean: true
+            fetchTags: true
+
+          - task: NodeTool@0
+            displayName: Use Node 20.x
+            inputs:
+              versionSpec: 20.x
+
+          - task: UseDotNet@2
+            displayName: Use .NET Core sdk 6.x
+            inputs:
+              version: 6.x
+
+          - template: templates/build-tasks.yml
+            parameters:
+              lang: jp
+              isVerbose: ${{ parameters.isVerbose }}
+              buildType: $(buildType)
+
+          - template: templates/build-tasks.yml
+            parameters:
+              lang: kr
+              isVerbose: ${{ parameters.isVerbose }}
+              buildType: $(buildType)
+
+          - task: PublishPipelineArtifact@1
+            displayName: 'Publish Pipeline Artifact'
+            inputs:
+              path: '$(Build.ArtifactStagingDirectory)'
+              artifactName: 'IgniteUIDocFX'
+
+          - ${{ if eq(parameters.shouldCleanPostExecution, true) }}:
+            - task: PostBuildCleanup@4
+              displayName: Clean Agent Directories
