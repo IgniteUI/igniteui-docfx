@@ -136,18 +136,52 @@ As of version `18.0.0` the IgniteUI for Angular row dimension value headers can 
 
 ## Row Dimension Layout
 
-The `IgxPivotGridComponent` can support two ways of row dimension rendering. This option can be controlled by the `pivotUI` and `rowLayout` properties. The default state of the grid is vertical.
+The `IgxPivotGridComponent` supports two ways of row dimension rendering. This option can be controlled by the `pivotUI` option's `rowLayout` property. 
 
-Since no setting is required for this layout to be presented, all the variations can be observed in the features sample above.
+```html
+  <igx-pivot-grid [pivotUI]="pivotUI">
+  </igx-pivot-grid>
+```
 
-The alternative would be horizontal. In this mode, the children of a single row dimension when expanded are shown horizontally in the same parent multi row layout.
+```typescript
+public pivotUI: IPivotUISettings = { rowLayout: PivotRowLayoutType.Horizontal };
+```
+
+The default layout of the grid is `Vertical`. In this mode a hierarchy of dimensions expands vertically. This variation can be observed in the features sample above.
+
+The alternative would be `Horizontal`. In this mode, the children of a single row dimension when expanded are shown horizontally in the same parent multi row layout.
 
 <code-view style="height: 870px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-layout" alt="Angular Pivot Grid with Horizontal Row Dimensions Layout">
 </code-view>
 
-Due to the nature of the horizontal layout, keeping visible the parent dimension value aggregations in a separate row when expanded, the `horizontalSummary` option for each row dimension and their children in the pivotConfiguration he would need to be enabled. It is only applicable for the horizontal rendering mode. There the  "None"(default), "Top" and "Bottom" position can be specified.
+Note that in this mode the parent row dimension aggregates are not visible unless the parent row is collapsed. 
+To show the parent dimension in a row summary the`horizontalSummary` property can be enabled for the related dimension.
+
+```ts
+rows: [
+            {
+                memberFunction: () => 'All Products',
+                memberName: 'AllProducts',
+                enabled: true,
+                horizontalSummary: true,
+                width: "150px",
+                childLevel: {
+                    //...
+                }
+            }
+        ]
+```
+
+Additionally the position of the summary can be changed via the `horizontalSummariesPosition` property of the `pivotUI` option. It can be set to either `Top`(default) or `Bottom`.
+
+```ts
+public pivotUI: IPivotUISettings = { rowLayout: PivotRowLayoutType.Horizontal, horizontalSummariesPosition: PivotSummaryPosition.Bottom };
+```
+>[!NOTE]
+> The row summary related options - `horizontalSummary` and  `horizontalSummariesPosition` are applicable only for the `Horizontal` layout mode.
+
 
 ## Interactions
 
