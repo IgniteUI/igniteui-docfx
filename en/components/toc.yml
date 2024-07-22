@@ -992,9 +992,9 @@
   items:
     - name: Icon Service
       href: icon-service.md
+      new: true
     - name: Material Icons Extended
       href: material-icons-extended.md
-      new: true
 - name: Divider
   href: divider.md
   new: false
