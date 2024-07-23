@@ -179,7 +179,7 @@ setIconRef('input_collapse', 'default', {
 });
 ```
 
-This will set the expand icon to the `chevron_right` ligature from the `material` font family.
+This will set the expand and collapse icons to the `arrow_downward` and `arrow_upward` ligatures, respectively, from the `material` font family for all combo and select components.
 
 ## API
 
