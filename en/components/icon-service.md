@@ -168,12 +168,12 @@ Starting with version 18.1.0 of Ignite UI for Angular, we added a new `setFamily
 To take advantage of changing the internal icons by reference, as opposed to creating custom templates, you can do the following to replace the expand/collapse icons in the combo and select components:
 
 ```ts
-setIconRef('input_expand', 'default', {
+iconService.setIconRef('input_expand', 'default', {
     name: 'arrow_downward',
     family: 'material',
 });
 
-setIconRef('input_collapse', 'default', {
+iconService.setIconRef('input_collapse', 'default', {
     name: 'arrow_upward',
     family: 'material',
 });
