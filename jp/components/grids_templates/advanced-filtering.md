@@ -359,7 +359,7 @@ $custom-drop-down: drop-down-theme(
 ```
 
 >[!NOTE]
->`Igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](../themes/sass/palettes.md) のトピックを参照してください。
+>`igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](../themes/sass/palettes.md) のトピックを参照してください。
 
 ### スキーマの使用
 

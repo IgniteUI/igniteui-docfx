@@ -270,6 +270,32 @@ You can enable an interactive mode of the gauge (using [`isNeedleDraggingEnabled
 </code-view>
 
 
+## Highlight Needle
+
+The radial gauge can be modified to show a second needle. This will make the main needle's [`value`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#value) appear with a lower opacity. To enable this first set `HighlightValueDisplayMode` to Overlay and then apply a `HighlightValue`.
+
+```html
+<igx-radial-gauge #radialGauge
+    labelExtent=0.65
+    labelInterval=10
+    highlightValueDisplayMode="Overlay"
+    highlightValue=50
+    highlightLabelDisplaysValue=true
+    highlightLabelSnapsToNeedlePivot=true
+    isHighlightNeedleDraggingEnabled=true
+    height="100%" width="100%"
+    minimumValue=0 value=30
+    maximumValue=100 interval=10  >
+</igx-radial-gauge>
+```
+
+<code-view style="height: 320px" alt="Angular radial gauge highlight needle"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/highlight-needle"
+                                                 github-src="gauges/radial-gauge/highlight-needle">
+</code-view>
+
+
 ## Summary
 
 For your convenience, all above code snippets are combined into one code block below that you can easily copy to your project and see the radial gauge with all features and visuals enabled.

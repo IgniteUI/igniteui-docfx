@@ -239,13 +239,22 @@ Implement two pipes that will append/remove a '%' sign at the end of the display
 @Pipe({ name: 'displayFormat' })
 export class DisplayFormatPipe implements PipeTransform {
     public transform(value: any): string {
-        return value + ' %';
+        if (value !== null && value !== undefined) {
+            value = value.toString().trim();
+            if (!value.endsWith('%')) {
+                value += ' %';
+            }
+        }
+        return value;
     }
 }
 
 @Pipe({ name: 'inputFormat' })
 export class InputFormatPipe implements PipeTransform {
     public transform(value: any): string {
+        if (value !== null && value !== undefined) {
+            value = value.toString().replace(/%/g, '').trim();
+        }
         return value;
     }
 }
@@ -260,14 +269,16 @@ public inputFormat = new InputFormatPipe();
 ```
 ```html
 <igx-input-group>
-    <label igxLabel for="email">Increase</label>
-    <input igxInput
-    type="text"
-    [(ngModel)]="value"
-    [igxMask]="'000'"
-    [igxTextSelection]="true"
-    [focusedValuePipe]="inputFormat"
-    [displayValuePipe]="displayFormat"/>
+    <label igxLabel>Increase</label>
+    <input
+        igxInput
+        type="text"
+        [(ngModel)]="value"
+        [igxMask]="'000'"
+        [igxTextSelection]="true"
+        [focusedValuePipe]="inputFormat"
+        [displayValuePipe]="displayFormat"
+    />
 </igx-input-group>
 ```
 
