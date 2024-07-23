@@ -115,7 +115,7 @@ console.log(type); // -> 'font'
 
 ## Internal Usage
 
-Starting with version 18.1.0 of Ignite UI for Angular, we added a new `setFamily` method that allows us to create a new family of icons in the `iconService` and associate them with a CSS class.
+Starting with version 18.1.0 of Ignite UI for Angular, we added a new `setFamily` method that allows us to create new families of icons in the `iconService` and associate them with CSS classes, types, and even prefixes. Additionally, icons used internally are now all declared by reference in a new `default` family with aliased names (see table bellow).
 
 | Icon Name      | Target Family | Target Name          | Used By                                                 | Theme                       |
 |----------------|---------------|----------------------|---------------------------------------------------------|-----------------------------|
@@ -165,11 +165,16 @@ Starting with version 18.1.0 of Ignite UI for Angular, we added a new `setFamily
 | visibility     | material      | visibility           | Grid, Excel Style Filtering                             | All                         |
 | visibility_off | material      | visibility_off       | Grid, Excel Style Filtering                             | All                         |
 
-To change the expand icon in the tree for instance, you can do the following:
+To take advantage of changing the internal icons by reference, as opposed to creating custom templates, you can do the following to replace the expand/collapse icons in the combo and select components:
 
 ```ts
-setIconRef('expand', 'tree', {
-    name: 'chevron_right',
+setIconRef('input_expand', 'default', {
+    name: 'arrow_downward',
+    family: 'material',
+});
+
+setIconRef('input_collapse', 'default', {
+    name: 'arrow_upward',
     family: 'material',
 });
 ```
