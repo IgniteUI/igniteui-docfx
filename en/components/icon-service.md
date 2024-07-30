@@ -274,46 +274,46 @@ Here's a breakdown of all icons as used by each component:
 
 #### Expansion Panel
 | Icon         | Description                                                   |
-| ------------ | -------------------------------------------------------------          |
+|------------- | ------------------------------------------------------------- |
 | **expand**   | Used for the toggle button that triggers the expanded state.  |
 | **collapse** | Used for the toggle button that triggers the collapsed state. |
 
 #### Grid
-| Icon                | Description                                                                  |
-|---------------------|------------------------------------------------------------------------------|
-| **add**             | Used in excel-filter menu to add filter entry.                               |
-| **arrow_back**      | Used in various UI elements for moving a column backwards.                   |
-| **arrow_drop_down** | Used in various buttons to indicate togglable menus.                         |
-| **arrow_forward**   | Used in various UI elements for moving a column forwards.                    |
-| **cancel**          | Used in various UI elements for canceling operations.                        |
-| **chevron_right**   | Used to indicate expandable menus, like in the excel style filtering.        |
-| **close**           | Used to close an expanded menu.                                              |
-| **confirm**         | Used to confirm an operation.                                                |
-| **drag_indicator**  | Used to show a handle to indicate an item can be dragged.                    |
-| **error**           | Used in editable cells to indicate erroneous data input.                     |
-| **expand_more**     | Used by the excel filtering menu to indicate the addition of more filters.   |
-| **filter_***        | Used for various filtering operands.                                         |
-| **group_work**      | Used by the group-by drop area.                                              |
-| **hide**            | Used by various UI elements for hiding columns.                              |
-| **import_export**   | Used by the excel filter exporter button and pivot data selector for moving. |
-| **input_clear**     | Used by input fields for clearing input data.                                |
-| **next**            | Used by the filtering row menu to navigate between chips.                    |
-| **pin**             | Used by various UI elements for column pinning.                              |
-| **prev**            | Used by the filtering row menu to navigate between chips.                    |
-| **remove**          | Used by various UI elements as a removal indicator.                          |
-| **refresh**         | Used by the filtering row menu to reload the filters.                        |
-| **selected**        | Used by various UI elements to indicated active selection.                   |
-| **show**            | Used by various UI elements for showing columns.                             |
-| **sort_asc**        | Used by various UI elements to indicate sorting direction.                   |
-| **sort_desc**       | Used by various UI elements to indicate sorting direction.                   |
-| **sum**             | Used by the pivot grid and data selectors.                                   |
-| **table_rows**      | Used by the pivot grid data selector.                                        |
-| **tree_collapse**   | Used by tree-like structure to show less details.                            |
-| **tree_expand**     | Used by tree-like structure to show more details.                            |
-| **unpin**           | Used by various UI elements for column pinning.                              |
-| **unfold_less**     | Used by the hierarchical grid to collapse all rows.                          |
-| **unfold_more**     | Used by the hierarchical grid to expand all rows.                            |
-| **view_column**     | Used by the pivot data selector.                                             |
+| Icon                 | Description                                                                    |
+| -------------------- | ------------------------------------------------------------------------------ |
+| **add**              | Used in excel-filter menu to add filter entry.                                 |
+| **arrow_back**       | Used in various UI elements for moving a column backwards.                     |
+| **arrow_drop_down**  | Used in various buttons to indicate togglable menus.                           |
+| **arrow_forward**    | Used in various UI elements for moving a column forwards.                      |
+| **cancel**           | Used in various UI elements for canceling operations.                          |
+| **chevron_right**    | Used to indicate expandable menus, like in the excel style filtering.          |
+| **close**            | Used to close an expanded menu.                                                |
+| **confirm**          | Used to confirm an operation.                                                  |
+| **drag_indicator**   | Used to show a handle to indicate an item can be dragged.                      |
+| **error**            | Used in editable cells to indicate erroneous data input.                       |
+| **expand_more**      | Used by the excel filtering menu to indicate the addition of more filters.     |
+| **filter_***         | Used for various filtering operands.                                           |
+| **group_work**       | Used by the group-by drop area.                                                |
+| **hide**             | Used by various UI elements for hiding columns.                                |
+| **import_export**    | Used by the excel filter exporter button and pivot data selector for moving.   |
+| **input_clear**      | Used by input fields for clearing input data.                                  |
+| **next**             | Used by the filtering row menu to navigate between chips.                      |
+| **pin**              | Used by various UI elements for column pinning.                                |
+| **prev**             | Used by the filtering row menu to navigate between chips.                      |
+| **remove**           | Used by various UI elements as a removal indicator.                            |
+| **refresh**          | Used by the filtering row menu to reload the filters.                          |
+| **selected**         | Used by various UI elements to indicated active selection.                     |
+| **show**             | Used by various UI elements for showing columns.                               |
+| **sort_asc**         | Used by various UI elements to indicate sorting direction.                     |
+| **sort_desc**        | Used by various UI elements to indicate sorting direction.                     |
+| **sum**              | Used by the pivot grid and data selectors.                                     |
+| **table_rows**       | Used by the pivot grid data selector.                                          |
+| **tree_collapse**    | Used by tree-like structure to show less details.                              |
+| **tree_expand**      | Used by tree-like structure to show more details.                              |
+| **unpin**            | Used by various UI elements for column pinning.                                |
+| **unfold_less**      | Used by the hierarchical grid to collapse all rows.                            |
+| **unfold_more**      | Used by the hierarchical grid to expand all rows.                              |
+| **view_column**      | Used by the pivot data selector.                                               |
 
 #### Input Group
 | Icon            | Description                                          |
