@@ -117,55 +117,90 @@ console.log(type); // -> 'font'
 
 Starting with version 18.1.0 of Ignite UI for Angular, we added a new `setFamily` method that allows us to create new families of icons in the Icon Service and associate them with CSS classes, types, and even prefixes. Additionally, icons used internally are now all declared by reference in a new `default` family with aliased names (see table bellow).
 
-| Icon Name      | Target Family | Target Name          | Used By                                                 | Theme                       |
-|----------------|---------------|----------------------|---------------------------------------------------------|-----------------------------|
-| add            | material      | add                  | Grid, Query Builder, Excel Style Filtering              | All                         |
-| arrow_next     | material      | keyboard_arrow_right | Month Picker, Calendar                                  | All                         |
-| arrow_prev     | material      | keyboard_arrow_left  | Month Picker, Calendar                                  | All                         |
-| arrow_back     | material      | arrow_back           | Grid, Excel Style Filtering                             | All                         |
-| arrow_forward  | material      | arrow_forward        | Grid, Excel Style Filtering                             | All                         |
-| arrow_upward   | material      | arrow_upward         | Grid, Excel Style Filtering                             | All                         |
-| arrow_downward | material      | arrow_downward       | Grid, Excel Style Filtering                             | All                         |
-| case_sensitive | imx-icons     | case-sensitive       | Combo, Simple Combo                                     | All                         |
-| carousel_next  | material      | keyboard_arrow_right | Carousel                                                | Indigo                      |
-| carousel_prev  | material      | keyboard_arrow_left  | Carousel                                                | Indigo                      |
-| carousel_next  | material      | arrow_forward        | Carousel                                                | Material, Bootstrap, Fluent |
-| carousel_prev  | material      | arrow_back           | Carousel                                                | Material, Bootstrap, Fluent |
-| chevron_left   | material      | chevron_left         | Grid, Paginator, Excel Style Filtering                  | All                         |
-| chevron_right  | material      | chevron_right        | Grid, Paginator, Excel Style Filtering, TreeNode        | All                         |
-| check          | material      | check                | Grid, Query Builder                                     | All                         |
-| close          | material      | close                | Grid, Query Builder, Filtering Row                      | All                         |
-| clear          | material      | clear                | Grid, Input Group, Excel Style Filtering, Filtering Row | All                         |
-| clock          | material      | access_time          | Time Picker                                             | All                         |
-| collapse       | material      | expand_less          | Grid, Expansion Panel                                   | All                         |
-| date_range     | material      | date_range           | Date Range Picker                                       | All                         |
-| delete         | material      | delete               | Grid, Query Builder                                     | All                         |
-| edit           | material      | edit                 | Grid, Query Builder                                     | All                         |
-| expand         | material      | expand_more          | Grid, Expansion Panel, Filtering Row, TreeNode          | All                         |
-| filter_list    | material      | filter_list          | Grid, Filtering Cell, Excel Style Filtering             | All                         |
-| first_page     | material      | first_page           | Grid, Paginator                                         | All                         |
-| functions      | material      | functions            | Grid, Pivot Data Selector                               | All                         |
-| import_export  | material      | import_export        | Grid                                                    | All                         |
-| input_clear    | material      | cancel               | Combo, Simple Combo, Time Picker, Date Picker           | Material                    |
-| input_clear    | material      | clear                | Combo, Simple Combo, Time Picker, Date Picker           | Indigo, Fluent, Bootstrap   |
-| input_expand   | material      | expand_more          | Combo, Simple Combo, Select                             | Material                    |
-| input_collapse | material      | expand_less          | Combo, Simple Combo, Select                             | Material                    |
-| input_expand   | material      | arrow_drop_down      | Combo, Simple Combo, Select                             | Indigo, Fluent, Bootstrap   |
-| input_collapse | material      | arrow_drop_up        | Combo, Simple Combo, Select                             | Indigo, Fluent, Bootstrap   |
-| last_page      | material      | last_page            | Grid, Paginator                                         | All                         |
-| more_vert      | material      | more_vert            | Action Strip, Grid                                      | All                         |
-| next           | material      | navigate_next        | Grid, Tabs, Filtering Row                               | All                         |
-| prev           | material      | navigate_before      | Grid, Tabs, Filtering Row                               | All                         |
-| remove         | material      | cancel               | Grid, Chip                                              | All                         |
-| refresh        | material      | refresh              | Grid, Filtering Row                                     | All                         |
-| selected       | material      | done                 | Grid, Chip, Filtering Row                               | All                         |
-| table_rows     | material      | table_rows           | Grid                                                    | All                         |
-| today          | material      | today                | Date Picker                                             | All                         |
-| view_column    | material      | view_column          | Grid                                                    | All                         |
-| visibility     | material      | visibility           | Grid, Excel Style Filtering                             | All                         |
-| visibility_off | material      | visibility_off       | Grid, Excel Style Filtering                             | All                         |
+| Alias                            | Target Icon           | Target Family |
+|----------------------------------|-----------------------|---------------|
+| **add**                          | add                   | material      |
+| **add_child**                    | add-child             | imx-icons     |
+| **add_row**                      | add-row               | imx-icons     |
+| **arrow_back**                   | arrow_back            | material      |
+| **arrow_drop_down**              | arrow_drop_up         | material      |
+| **arrow_forward**                | arrow_forward         | material      |
+| **arrow_next**                   | chevron_right         | material      |
+| **arrow_prev**                   | chevron_left          | material      |
+| **case_sensitive**               | case-sensitive        | imx-icons     |
+| **carousel_next**                | arrow_forward         | material      |
+| **carousel_prev**                | arrow_back            | material      |
+| **chevron_left**                 | chevron_left          | material      |
+| **chevron_right**                | chevron_right         | material      |
+| **clock**                        | access_time           | material      |
+| **close**                        | close                 | material      |
+| **collapse**                     | expand_less           | material      |
+| **confirm**                      | check                 | material      |
+| **date_range**                   | date_range            | material      |
+| **delete**                       | delete                | material      |
+| **drag_indicator**               | drag_indicator        | material      |
+| **edit**                         | edit                  | material      |
+| **error**                        | error                 | material      |
+| **expand**                       | expand_more           | material      |
+| **expand_more**                  | expand_more           | material      |
+| **filter_all**                   | select-all            | imx-icons     |
+| **filter_before**                | is-before             | imx-icons     |
+| **filter_contains**              | contains              | imx-icons     |
+| **filter_does_not_contain**      | does-not-contain      | imx-icons     |
+| **filter_empty**                 | is-empty              | imx-icons     |
+| **filter_equal**                 | equals                | imx-icons     |
+| **filter_false**                 | is-false              | imx-icons     |
+| **filter_greater_than**          | greater-than          | imx-icons     |
+| **filter_greater_than_or_equal** | greater-than-or-equal | imx-icons     |
+| **filter_in**                    | is-in                 | imx-icons     |
+| **filter_last_month**            | last-month            | imx-icons     |
+| **filter_last_year**             | last-year             | imx-icons     |
+| **filter_less_than**             | less-than             | imx-icons     |
+| **filter_less_than_or_equal**    | less-than-or-equal    | imx-icons     |
+| **filter_next_month**            | next-month            | imx-icons     |
+| **filter_next_year**             | next-year             | imx-icons     |
+| **filter_not_empty**             | not-empty             | imx-icons     |
+| **filter_not_equal**             | not-equal             | imx-icons     |
+| **filter_not_null**              | is-not-null           | imx-icons     |
+| **filter_null**                  | is-null               | imx-icons     |
+| **filter_starts_with**           | starts-with           | imx-icons     |
+| **filter_this_month**            | this-month            | imx-icons     |
+| **filter_this_year**             | this-year             | imx-icons     |
+| **filter_today**                 | today                 | imx-icons     |
+| **filter_true**                  | is-true               | imx-icons     |
+| **filter_yesterday**             | yesterday             | imx-icons     |
+| **first_page**                   | first_page            | material      |
+| **group_work**                   | group_work            | material      |
+| **hide**                         | visibility_off        | material      |
+| **import_export**                | import_export         | material      |
+| **input_collapse**               | arrow_drop_up         | material      |
+| **input_clear**                  | clear                 | material      |
+| **input_expand**                 | arrow_drop_down       | material      |
+| **jump_down**                    | jump-down             | imx-icons     |
+| **jump_up**                      | jump-up               | imx-icons     |
+| **last_page**                    | last_page             | material      |
+| **more_vert**                    | more_vert             | material      |
+| **next**                         | navigate_next         | material      |
+| **pin**                          | pin-left              | imx-icons     |
+| **prev**                         | navigate_before       | material      |
+| **refresh**                      | refresh               | material      |
+| **remove**                       | cancel                | material      |
+| **search**                       | search                | material      |
+| **selected**                     | done                  | material      |
+| **show**                         | visibility            | material      |
+| **sort_asc**                     | arrow_upward          | material      |
+| **sort_desc**                    | arrow_downward        | material      |
+| **sum**                          | functions             | material      |
+| **table_rows**                   | table_rows            | material      |
+| **today**                        | calendar_today        | material      |
+| **tree_collapse**                | expand_more           | material      |
+| **tree_expand**                  | chevron_right         | material      |
+| **unfold_less**                  | unfold_less           | material      |
+| **unfold_more**                  | unfold_more           | material      |
+| **unpin**                        | unpin-left            | imx-icons     |
+| **view_column**                  | view_column           | material      |
 
-To take advantage of changing the internal icons by reference, as opposed to creating custom templates, you can do the following to replace the expand/collapse icons in the combo and select components:
+To take advantage of changing the internal icons by reference, as opposed by to creating custom templates, you can do the following to replace the expand/collapse icons in the combo and select components:
 
 ```ts
 iconService.setIconRef('input_expand', 'default', {
@@ -180,6 +215,154 @@ iconService.setIconRef('input_collapse', 'default', {
 ```
 
 This will set the expand and collapse icons to the `arrow_downward` and `arrow_upward` ligatures, respectively, from the `material` font family for all combo and select components.
+
+Here's a breakdown of all icons as used by each component:
+
+<style>
+.table-responsive tbody tr td:first-of-type {
+    width: 25%;
+    min-width: fit-content;
+}
+</style>
+
+#### Action Strip
+
+| Icon          | Description              |
+| ------------- | ------------------------ |
+| **add_child** | Used by the popup menu.  |
+| **add_row**   | Used by the popup menu.  |
+| **more_vert** | Used by the popup menu.  |
+
+#### Calendar
+
+| Icon           | Description                                             |
+| -------------- | ------------------------------------------------------- |
+| **arrow_prev** | Used by the header for navigating between months/years. |
+| **arrow_next** | Used by the header for navigating between months/years. |
+
+#### Carousel
+
+| Icon              | Description                         |
+| ----------------- | ----------------------------------- |
+| **carousel_prev** | Used for navigating between slides. |
+| **carousel_next** | Used for navigating between slides. |
+
+#### Chip
+| Icon         | Description                               |
+| ------------ | ----------------------------------------- |
+| **selected** | Used to indicate that a chip is selected. |
+| **remove**   | Used for the remove button.               |
+
+#### Combo (incl. Simple Combo)
+| Icon               | Description                                                  |
+| ------------------ | ------------------------------------------------------------ |
+| **case_sensitive** | Used to indicate and toggle case-sensitive filtering.        |
+| **input_clear**    | Used for the clear button.                                   |
+| **input_expand**   | Used for the toggle button when the combo menu is collapsed. |
+| **input_collapse** | Used for the toggle button when the combo menu is expanded.  |
+
+#### Date Picker
+| Icon            | Description                                          |
+| --------------- | ---------------------------------------------------- |
+| **today**       | Used for the toggle button that triggers the picker. |
+| **input_clear** | Used for the clear button.                           |
+
+#### Date Range Picker
+| Icon           | Description                                          |
+| -------------- | ---------------------------------------------------- |
+| **date_range** | Used for the toggle button that triggers the picker. |
+
+#### Expansion Panel
+| Icon         | Description                                                   |
+| ------------ | -------------------------------------------------------------          |
+| **expand**   | Used for the toggle button that triggers the expanded state.  |
+| **collapse** | Used for the toggle button that triggers the collapsed state. |
+
+#### Grid
+| Icon                | Description                                                                  |
+|---------------------|------------------------------------------------------------------------------|
+| **add**             | Used in excel-filter menu to add filter entry.                               |
+| **arrow_back**      | Used in various UI elements for moving a column backwards.                   |
+| **arrow_drop_down** | Used in various buttons to indicate togglable menus.                         |
+| **arrow_forward**   | Used in various UI elements for moving a column forwards.                    |
+| **cancel**          | Used in various UI elements for canceling operations.                        |
+| **chevron_right**   | Used to indicate expandable menus, like in the excel style filtering.        |
+| **close**           | Used to close an expanded menu.                                              |
+| **confirm**         | Used to confirm an operation.                                                |
+| **drag_indicator**  | Used to show a handle to indicate an item can be dragged.                    |
+| **error**           | Used in editable cells to indicate erroneous data input.                     |
+| **expand_more**     | Used by the excel filtering menu to indicate the addition of more filters.   |
+| **filter_***        | Used for various filtering operands.                                         |
+| **group_work**      | Used by the group-by drop area.                                              |
+| **hide**            | Used by various UI elements for hiding columns.                              |
+| **import_export**   | Used by the excel filter exporter button and pivot data selector for moving. |
+| **input_clear**     | Used by input fields for clearing input data.                                |
+| **next**            | Used by the filtering row menu to navigate between chips.                    |
+| **pin**             | Used by various UI elements for column pinning.                              |
+| **prev**            | Used by the filtering row menu to navigate between chips.                    |
+| **remove**          | Used by various UI elements as a removal indicator.                          |
+| **refresh**         | Used by the filtering row menu to reload the filters.                        |
+| **selected**        | Used by various UI elements to indicated active selection.                   |
+| **show**            | Used by various UI elements for showing columns.                             |
+| **sort_asc**        | Used by various UI elements to indicate sorting direction.                   |
+| **sort_desc**       | Used by various UI elements to indicate sorting direction.                   |
+| **sum**             | Used by the pivot grid and data selectors.                                   |
+| **table_rows**      | Used by the pivot grid data selector.                                        |
+| **tree_collapse**   | Used by tree-like structure to show less details.                            |
+| **tree_expand**     | Used by tree-like structure to show more details.                            |
+| **unpin**           | Used by various UI elements for column pinning.                              |
+| **unfold_less**     | Used by the hierarchical grid to collapse all rows.                          |
+| **unfold_more**     | Used by the hierarchical grid to expand all rows.                            |
+| **view_column**     | Used by the pivot data selector.                                             |
+
+#### Input Group
+| Icon            | Description                                          |
+| --------------- | ---------------------------------------------------- |
+| **input_clear** | Used for the clear button.                           |
+
+#### Paginator
+| Icon           | Description                                                  |
+| -------------- | ------------------------------------------------------------ |
+| **first_page** | Used by the button used for navigating to the first page.    |
+| **last_page**  | Used by the button used for navigating to the last page.     |
+| **prev**       | Used by the button used for navigating to the previous page. |
+| **next**       | Used by the button used for navigating to the next page.     |
+
+#### Query Builder
+| Icon         | Description                                                  |
+| ------------ | ------------------------------------------------------------ |
+| **add**      | Used by the button for adding new filter entries.            |
+| **close**    | Used by the button that closes the contextual menu.          |
+| **edit**     | Used by the button for editing filter entries.               |
+| **confirm**  | Used by the button to confirm adding new filter entries.     |
+| **ungroup**  | Used by the button to ungroup filter entries.                |
+| **delete**   | Used by the button to delete filter entries.                 |
+| **filter_*** | Used for various filtering operands.                         |
+
+
+#### Select
+| Icon               | Description                                                   |
+| ------------------ | -----------------------------------------------------------   |
+| **input_expand**   | Used for the toggle button when the select menu is collapsed. |
+| **input_collapse** | Used for the toggle button when the select menu is expanded.  |
+
+#### Tabs
+| Icon         | Description                                                 |
+| ------------ | ----------------------------------------------------------- |
+| **prev**     | Used by the button used for navigating to the previous tab. |
+| **next**     | Used by the button used for navigating to the next tab.     |
+
+
+#### Time Picker
+| Icon         | Description                                          |
+| ------------ | ---------------------------------------------------- |
+| **clock**    | Used for the toggle button that triggers the picker. |
+
+#### Tree
+| Icon              | Description                                          |
+| ----------------- | ---------------------------------------------------- |
+| **tree_expand**   | Used for the toggle button that triggers the picker. |
+| **tree_collapse** | Used for the toggle button that triggers the picker. |
 
 ## API
 
