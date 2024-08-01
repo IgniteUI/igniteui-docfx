@@ -143,6 +143,7 @@ Starting with version 18.1.0 of Ignite UI for Angular, we added a new `setFamily
 | **error**                        | error                 | material      |
 | **expand**                       | expand_more           | material      |
 | **expand_more**                  | expand_more           | material      |
+| **file_download**                | file_download         | material      |
 | **filter_all**                   | select-all            | imx-icons     |
 | **filter_before**                | is-before             | imx-icons     |
 | **filter_contains**              | contains              | imx-icons     |
@@ -292,10 +293,11 @@ Here's a breakdown of all icons as used by each component:
 | **drag_indicator**   | Used to show a handle to indicate an item can be dragged.                      |
 | **error**            | Used in editable cells to indicate erroneous data input.                       |
 | **expand_more**      | Used by the excel filtering menu to indicate the addition of more filters.     |
+| **file_dowload**     | Used by the excel filter exporter.                                             |
 | **filter_***         | Used for various filtering operands.                                           |
 | **group_work**       | Used by the group-by drop area.                                                |
 | **hide**             | Used by various UI elements for hiding columns.                                |
-| **import_export**    | Used by the excel filter exporter button and pivot data selector for moving.   |
+| **import_export**    | Used by the pivot data selector for moving.                                    |
 | **input_clear**      | Used by input fields for clearing input data.                                  |
 | **next**             | Used by the filtering row menu to navigate between chips.                      |
 | **pin**              | Used by various UI elements for column pinning.                                |
