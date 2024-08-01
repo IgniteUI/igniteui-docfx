@@ -190,7 +190,7 @@ Starting with version 18.1.0 of Ignite UI for Angular, we added a new `setFamily
 | **show**                         | visibility            | material      |
 | **sort_asc**                     | arrow_upward          | material      |
 | **sort_desc**                    | arrow_downward        | material      |
-| **sum**                          | functions             | material      |
+| **functions**                    | functions             | material      |
 | **table_rows**                   | table_rows            | material      |
 | **today**                        | calendar_today        | material      |
 | **tree_collapse**                | expand_more           | material      |
@@ -306,7 +306,7 @@ Here's a breakdown of all icons as used by each component:
 | **show**             | Used by various UI elements for showing columns.                               |
 | **sort_asc**         | Used by various UI elements to indicate sorting direction.                     |
 | **sort_desc**        | Used by various UI elements to indicate sorting direction.                     |
-| **sum**              | Used by the pivot grid and data selectors.                                     |
+| **functions**        | Used by the pivot grid and data selectors.                                     |
 | **table_rows**       | Used by the pivot grid data selector.                                          |
 | **tree_collapse**    | Used by tree-like structure to show less details.                              |
 | **tree_expand**      | Used by tree-like structure to show more details.                              |
