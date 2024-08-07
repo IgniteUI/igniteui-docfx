@@ -279,18 +279,18 @@ export class AppModule {}
 <igx-radial-gauge #radialGauge
     labelExtent=0.65
     labelInterval=10
-    titleDisplaysValue=true
     highlightValueDisplayMode="Overlay"
-    highlightValue=25
+    highlightValue=50
+    highlightLabelDisplaysValue=true
+    highlightLabelSnapsToNeedlePivot=true
     isHighlightNeedleDraggingEnabled=true
-    isNeedleDraggingEnabled=true
     height="100%" width="100%"
-    minimumValue=0 value=75
-    maximumValue=80 interval=10  >
+    minimumValue=0 value=30
+    maximumValue=100 interval=10  >
 </igx-radial-gauge>
 ```
 
-<code-view style="height: 125px" alt="Angular ラジアル ゲージの針のハイライト"
+<code-view style="height: 320px" alt="Angular ラジアル ゲージの針のハイライト"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/highlight-needle"
                                                  github-src="gauges/radial-gauge/highlight-needle">
