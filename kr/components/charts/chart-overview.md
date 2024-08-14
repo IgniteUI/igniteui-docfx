@@ -40,7 +40,8 @@ Built with a modular design of axis, markers, series, legend, and annotation lay
 
 The Angular Bar Chart, or Bar Graph is among the most common category chart types used to quickly compare frequency, count, total, or average of data in different categories with data encoded by horizontal bars of equal width and differing lengths. They are ideal for showing variations in the value of an item over time, data distribution, sorted data ranking (high to low, worst to best). Data is represented using a collection of rectangles that extend from the left to right of the chart towards the values of data points. Learn more about our [bar chart](types/bar-chart.md)
 
-<code-view style="height: 600px" alt="Angular Bar Chart Multiple Sources"
+<code-view style="height: img-src=https://static.infragistics.com/marketing/Website/products/Ignite-UI-for-Angular/ignite-ui-angular-bar-chart 600px" alt="Angular Bar Chart Multiple Sources"
+      img-src="https://static.infragistics.com/marketing/Website/products/Ignite-UI-for-Angular/ignite-ui-angular-bar-chart height=600"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/bar-chart-multiple-sources"
                                                  github-src="charts/data-chart/bar-chart-multiple-sources">
