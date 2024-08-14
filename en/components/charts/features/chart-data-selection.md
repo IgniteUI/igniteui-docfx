@@ -66,13 +66,20 @@ Other selection modes offer various methods of selection. For example using `Sel
 </code-view>
 
 
-## Configuring Multiple Selection
+## Configuring Outline Selection
 
 When `FocusBrush` is applied, selected series will appear with a border when the `SelectionMode` property is set to one of the focus options.
 
 ## Radial Series Selection
 
 This example demonstrates another series type via the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) where each radial series can be selected with different colors.
+
+<code-view style="height: 450px" alt="Angular Radial Column Chart Selection Multiple Modes Example"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-column-chart-selection"
+                                                 github-src="charts/data-chart/radial-column-chart-selection">
+</code-view>
+
 
 ## API References
 
