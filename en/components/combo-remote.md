@@ -78,7 +78,8 @@ When data is returned from a service as an observable, we can set it to the comb
            (selectionChanging)="handleSelectionChanging($event)"
            (closing)="onClosing()"
            (opened)="onOpened()"
-           (closed)="onClosed()">
+           (closed)="onClosed()"
+           [disableFiltering]="false">
 </igx-combo>
 ```
 

@@ -46,6 +46,7 @@ export class AppModule {}
 <div class="combo-container">
     <igx-combo #combo [data]="lData" displayKey="field" valueKey="field"
         [allowCustomValues]="customValues"
+        [disableFiltering]="disableFiltering"
         [showSearchCaseIcon]="showSearchCaseIcon"
         [disabled]="disabled">
     </igx-combo>
@@ -54,7 +55,8 @@ export class AppModule {}
     <igx-switch [(ngModel)]="customValues">Allow Custom Values</igx-switch>
     <igx-switch (change)="enableGroups($event)">Enable Grouping</igx-switch>
     <igx-switch [(ngModel)]="disabled">Disable Combo</igx-switch>
-    <igx-switch [(ngModel)]="showSearchCaseIcon">Show Case-sensitive Icon</igx-switch>
+    <igx-switch [(ngModel)]="disableFiltering">Disable Filtering</igx-switch>
+    <igx-switch *ngIf="!disableFiltering" [(ngModel)]="showSearchCaseIcon">Show Case-sensitive Icon</igx-switch>
 </div>
 ```
 
@@ -64,6 +66,7 @@ Note that grouping is enabled/disabled by setting the [groupKey]({environment:an
 ```typescript
     @ViewChild('combo', { read: IgxComboComponent }) public combo: IgxComboComponent;
 
+    public disableFiltering = false;
     public showSearchCaseIcon = true;
     public customValues = true;
     public disabled = false;
@@ -136,12 +139,12 @@ If everything is set up correctly, the combobox's list will display centered, us
 > The combobox component uses the [AutoPositionStrategy]({environment:angularApiUrl}/classes/autopositionstrategy.html) as a default position strategy.
 
 ### Filtering
-The filtering in the combobox is always enabled.
+By default, filtering in the combobox is enabled. It can be disabled by setting the [disableFiltering]({environment:angularApiUrl}/classes/igxcombocomponent.html#disableFiltering) property to true.
 
 Filtering options can be further enhanced by enabling the search case sensitivity. To display the case-sensitive icon in the search input, set the [showSearchCaseIcon]({environment:angularApiUrl}/classes/IgxComboComponent.html#showSearchCaseIcon) property to true:
 
 ```html
-<igx-combo [showSearchCaseIcon]="true"></igx-combo>
+<igx-combo [disableFiltering]="true" [showSearchCaseIcon]="true"></igx-combo>
 ```
 
 <div class="divider--half"></div>
