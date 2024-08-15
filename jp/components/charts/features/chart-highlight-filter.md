@@ -30,6 +30,26 @@ Ignite UI for Angular チャート コンポーネントは、プロットされ
 
 ハイライト表示フィルターによって表示されるシリーズの部分は、チャートの凡例レイヤーとツールチップ レイヤーに個別に表示されます。[`highlightedTitleSuffix`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriescomponent.html#highlightedTitleSuffix) を設定することで、ツールチップと凡例に表示されるタイトルを構成できます。これにより、指定した値がシリーズの [`chartTitle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#chartTitle) の末尾に追加されます。
 
+`DataLegend` または [`IgxDataToolTipLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatatooltiplayercomponent.html) を使用すると、ハイライト表示されたシリーズがグループ化されて表示されます。これは、シリーズの `HighlightedValuesDataLegendGroup` プロパティを設定してシリーズを適切に分類することで管理できます。
+
+次の例は、`HighlightedValuesDataLegendGroup` を使用した [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) コントロール内のデータ凡例のグループ化とデータ ハイライト オーバーレイ機能の使用法を示しています。
+
+<code-view style="height: 500px" alt="Angular データ凡例のグループ化のハイライト表示の例"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/data-legend-grouping-and-highlighting"
+                                                 github-src="charts/data-chart/data-legend-grouping-and-highlighting">
+</code-view>
+
+
+次の例は、`HighlightedValuesDataLegendGroup` を使用した [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) コントロール内のデータ ツールチップのグループ化とデータ ハイライト オーバーレイ機能の使用法を示しています。
+
+<code-view style="height: 500px" alt="Angular データ ツールチップのグループ化のハイライト表示の例"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/data-tooltip-grouping-and-highlighting"
+                                                 github-src="charts/data-chart/data-tooltip-grouping-and-highlighting">
+</code-view>
+
+
 次の例は、`HighlightedValueMemberPath` を使用した [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) コントロール内のデータハイライト表示オーバーレイ機能の使用法を示しています。
 
 <code-view style="height: 500px" alt="Angular ハイライト表示フィルターの例"
@@ -74,7 +94,7 @@ HighlightedHighMemberPath, HighlightedLowMemberPath, HighlightedOpenMemberPath, 
 
 以下は上記のセクションで説明した API メンバーのリストです。
 
-| [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) プロパティ                    | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) プロパティ |
+| [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) プロパティ                       | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) プロパティ |
 | ----------------------------------------------|---------------------------|
 | `CategoryChart.HighlightedItemsSource`        | `Series.HighlightedItemsSource`  |
 | [`highlightedTitleSuffix`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriescomponent.html#highlightedTitleSuffix)        | [`highlightedTitleSuffix`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriescomponent.html#highlightedTitleSuffix)  |
