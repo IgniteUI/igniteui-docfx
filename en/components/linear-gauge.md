@@ -117,37 +117,6 @@ This is the primary measure displayed by the linear gauge component and is visua
 </code-view>
 
 
-## Highlight Needle
-
-The linear gauge can be modified to show a second needle. This will make the main needle's [`value`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargaugecomponent.html#value) appear with a lower opacity. To enable this first set `HighlightValueDisplayMode` to Overlay and then apply a `HighlightValue`.
-
-```html
-<igx-linear-gauge
-    #linearGauge
-    height="80px" 
-    width="400px"
-    value=70
-    minimumValue=0 
-    maximumValue=100 
-    interval=10
-    labelInterval=10
-    labelExtent=0.025
-    labelsPreTerminal=0
-    labelsPostInitial=0
-    needleBrush="Blue"
-    highlightValueDisplayMode="Overlay"
-    highlightValue=25
-    isHighlightNeedleDraggingEnabled=true>
-</igx-linear-gauge>
-```
-
-<code-view style="height: 125px" alt="Angular linear gauge highlight needle"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-                    iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge/highlight-needle"
-                                                 github-src="gauges/linear-gauge/highlight-needle">
-</code-view>
-
-
 ## Ranges
 
 The ranges are visual elements that highlight a specified range of values on a scale. Their purpose is to visually communicate the qualitative state of the performance bar measure, illustrating at the same times the degree to which it resides within that state.

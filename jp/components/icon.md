@@ -142,6 +142,7 @@ public ngOnInit() {
 <igx-icon name="contains" family="filter-icons"></igx-icon>
 ```
 
+
 <code-view style="height: 70px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/svg-icon-sample" >
@@ -155,21 +156,21 @@ public ngOnInit() {
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
 ```
 
-次に、[`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) 依存関係を注入し、その `registerFamilyAlias` メソッドを利用して、マテリアル シンボルが `igx-icon` で動作できるようにする必要があります。
+次に、[`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) 依存関係を注入し、その `setFamily` メソッドを利用して、マテリアル シンボルが `igx-icon` で動作できるようにする必要があります。
 
 ```ts
 constructor(private iconService: IgxIconService) { }
 
 public ngOnInit() {
     // registers a 'material-symbols-outlined' class to be applied to all igx-icons with 'material-symbols' font-family
-    this.iconService.registerFamilyAlias('material-symbols', 'material-symbols-outlined');
+    this.iconService.setFamily('material-symbols', { className: 'material-symbols-outlined', type: 'liga' });
 }
 ```
 
 これで、目的のアイコンをマークアップに追加し、調整可能なフォント スタイルを使用してカスタマイズする準備が整いました。
 
 ```html
-<igx-icon family="material-symbols" class="custom-icon">diamond</igx-icon>
+<igx-icon family="material-symbols" name="diamond" class="custom-icon"></igx-icon>
 ```
 
 ```scss
