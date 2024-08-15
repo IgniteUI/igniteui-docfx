@@ -155,21 +155,21 @@ Additionally, users can take advantage of the latest Material icons and their de
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
 ```
 
-Then we need to inject the [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) dependency and make use of its `registerFamilyAlias` method so that Material Symbols can work with `igx-icon`: 
+Then we need to inject the [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) dependency and make use of its `setFamily` method so that Material Symbols can work with `igx-icon`: 
 
 ```ts
 constructor(private iconService: IgxIconService) { }
 
 public ngOnInit() {
     // registers a 'material-symbols-outlined' class to be applied to all igx-icons with 'material-symbols' font-family
-    this.iconService.registerFamilyAlias('material-symbols', 'material-symbols-outlined');
+    this.iconService.setFamily('material-symbols', { className: 'material-symbols-outlined', type: 'liga' });
 }
 ```
 
 Now, we are ready to add the desired icon into our markup and customize it using adjustable font styles:
 
 ```html
-<igx-icon family="material-symbols" class="custom-icon">diamond</igx-icon>
+<igx-icon family="material-symbols" name="diamond" class="custom-icon"></igx-icon>
 ```
 
 ```scss
