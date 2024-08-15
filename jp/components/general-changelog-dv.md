@@ -15,7 +15,11 @@ Ignite UI for Angular の各バージョンのすべての重要な変更は、�
 > このトピックでは、igniteui-angular パッケージに含まれていないコンポーネントの変更についてのみ説明します。
 > igniteui-angular コンポーネントに固有の変更については CHANGELOG.MD を参照してください。
 
-*   [Ignite UI for Angular 変更ログ](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md)
+*   [Ignite UI for Angular 変更ログ](https://github.com/igniteui/igniteui-angular/blob/master/CHANGELOG.md)
+
+## **18.0.0 (June 2024)**
+
+* Angular 18 のサポートが追加されました。
 
 ## **17.3.0 (March 2024)**
 

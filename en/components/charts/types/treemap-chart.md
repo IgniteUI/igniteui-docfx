@@ -2,7 +2,7 @@
 title: Angular Treemap | Data Visualization Tools | Orientation | Layout | Data Binding | Infragistics
 _description: Use Infragistics' Angular Treemap control show relative weighting of data points at more than one level supporting strip, squarified, and slice-and-dice algorithms. Learn about Ignite UI for Angular treemap!
 _keywords: Angular Tree Map, Treemap, layout, orientation, Ignite UI for Angular, Infragistics
-mentionedTypes: ["Treemap", "TreemapOrientation", "TreemapLayoutType"]
+mentionedTypes: ["Treemap", "TreemapOrientation", "TreemapLayoutType", "TreemapHighlightingMode", "TreemapHighlightedValueDisplayMode"]
 namespace: Infragistics.Controls.Charts
 ---
 
@@ -119,14 +119,13 @@ In the following example, the treemap demonstrates the ability of node highlight
 
 ## Angular Treemap Percent based highlighting
 
-`HighlightedItemsSource`: Specifies the datasource to read highlighted values from. If null, then highlighted values are read from the ItemsSource property.
-`HighlightedValueMemberPath`: Specifies the name of the property in the datasource where the highlighted values are read.
-`HighlightedValueOpacity`: Controls the opacity of the normal value behind the highlighted value.
-`HighlightedValuesDisplayMode`: Enables or disables highlighted values.
-
-*   Auto: The treemap decides what mode to use.
-*   Overlay: The treemap displays highlighted values over top the normal value with a slight opacity applied to the normal value.
-*   Hidden: The treemap does not show highlighted values.
+*   `HighlightedItemsSource`: Specifies the datasource to read highlighted values from. If null, then highlighted values are read from the ItemsSource property.
+*   `HighlightedValueMemberPath`: Specifies the name of the property in the datasource where the highlighted values are read.
+*   `HighlightedValueOpacity`: Controls the opacity of the normal value behind the highlighted value.
+*   `HighlightedValuesDisplayMode`: Enables or disables highlighted values.
+    *   Auto: The treemap decides what mode to use.
+    *   Overlay: The treemap displays highlighted values over top the normal value with a slight opacity applied to the normal value.
+    *   Hidden: The treemap does not show highlighted values.
 
 <code-view style="height: 600px" alt="Angular Treemap Percent based Highlighting"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -150,4 +149,6 @@ The following is a list of API members mentioned in the above sections:
 
 *   [`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html)
 *   [`layoutOrientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#layoutOrientation)
+*   `HighlightedValuesDisplayMode`
+*   `HighlightedValueMemberPath`
 *   [`layoutType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#layoutType)
