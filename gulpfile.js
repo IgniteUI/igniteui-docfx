@@ -196,55 +196,51 @@ const build = series(
 const buildCI = series(generateGridsTopics, generateTreeGridsTopics, generateHierarchicalGridsTopics, generatePivotGridsTopics, buildSite);
 
 const copyGitHooks = async (cb) => {
-
-    if (process.env.AZURE_PIPELINES || process.env.TRAVIS || process.env.CI || !fs.existsSync('.git')) {
+    if (process.env.AZURE_PIPELINES || process.env.TRAVIS || process.env.CI || !(await exists('.git'))) {
         return;
     }
 
-    const gitHooksDir = './.git/hooks/';
-    const defaultCopyHookDir = gitHooksDir + 'scripts/';
+    const gitHooksDir = path.join('.git', 'hooks');
+    const defaultCopyHookDir = path.join(gitHooksDir, 'scripts');
     const dirs = [
         gitHooksDir,
         defaultCopyHookDir,
-        defaultCopyHookDir + 'templates',
-        defaultCopyHookDir + 'templateValidators',
-        defaultCopyHookDir + 'utils'
+        path.join(defaultCopyHookDir, 'templates'),
+        path.join(defaultCopyHookDir, 'templateValidators'),
+        path.join(defaultCopyHookDir, 'utils')
     ];
 
-    dirs.forEach((dir) => {
-        if (!fs.existsSync(dir)) {
-            fs.mkdir(dir, (err) => {
-                if (err) {
-                    throw err;
-                }
-            });
+    try {
+        for (const dir of dirs) {
+            if (!(await exists(dir))) {
+                await fs.mkdir(dir, { recursive: true });
+            }
         }
-    });
 
-    const defaultHookDir = './.hooks/scripts/';
+        const defaultHookDir = path.join('.hooks', 'scripts');
 
-    fs.copyFileSync(defaultHookDir + 'templates/default.js',
-        defaultCopyHookDir + 'templates/default.js');
+        await fs.copyFile(path.join(defaultHookDir, 'templates', 'default.js'), path.join(defaultCopyHookDir, 'templates', 'default.js'));
+        await fs.copyFile(path.join(defaultHookDir, 'templateValidators', 'default-style-validator.js'), path.join(defaultCopyHookDir, 'templateValidators', 'default-style-validator.js'));
+        await fs.copyFile(path.join(defaultHookDir, 'utils', 'issue-validator.js'), path.join(defaultCopyHookDir, 'utils', 'issue-validator.js'));
+        await fs.copyFile(path.join(defaultHookDir, 'utils', 'line-limits.js'), path.join(defaultCopyHookDir, 'utils', 'line-limits.js'));
+        await fs.copyFile(path.join(defaultHookDir, 'common.js'), path.join(defaultCopyHookDir, 'common.js'));
+        await fs.copyFile(path.join(defaultHookDir, 'validate.js'), path.join(defaultCopyHookDir, 'validate.js'));
+        await fs.copyFile(path.join('.hooks', 'prepare-commit-msg'), path.join(gitHooksDir, 'prepare-commit-msg'));
 
-    fs.copyFileSync(defaultHookDir + 'templateValidators/default-style-validator.js',
-        defaultCopyHookDir + 'templateValidators/default-style-validator.js');
+        await cb();
+    } catch (err) {
+        console.error('Error copying git hooks:', err);
+        throw err;
+    }
+};
 
-    fs.copyFileSync(defaultHookDir + 'utils/issue-validator.js',
-        defaultCopyHookDir + 'utils/issue-validator.js');
-
-    fs.copyFileSync(defaultHookDir + 'utils/line-limits.js',
-        defaultCopyHookDir + 'utils/line-limits.js');
-
-    fs.copyFileSync(defaultHookDir + 'common.js',
-        defaultCopyHookDir + 'common.js');
-
-    fs.copyFileSync(defaultHookDir + 'validate.js',
-        defaultCopyHookDir + 'validate.js');
-
-    fs.copyFileSync('./.hooks/prepare-commit-msg',
-        './.git/hooks/prepare-commit-msg');
-
-    return await cb();
+const exists = async (path) => {
+    try {
+        await fs.access(path);
+        return true;
+    } catch {
+        return false;
+    }
 };
 
 exports.buildCI = buildCI;

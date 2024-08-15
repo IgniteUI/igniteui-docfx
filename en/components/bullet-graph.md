@@ -122,36 +122,6 @@ Performance value is the primary measure displayed by the component and it is vi
 </code-view>
 
 
-## Highlight Value
-
-The bullet graph's performance value can be further modified to show progress represented as a highlighted value. This will make the [`value`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxbulletgraphcomponent.html#value) appear with a lower opacity. A good example is if [`value`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxbulletgraphcomponent.html#value) is 50 and  `HighlightValue` is set to 25. This would represent a performance of 50% regardless of what the value of [`targetValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxbulletgraphcomponent.html#targetValue) is set to. To enable this first set `HighlightValueDisplayMode` to Overlay and then apply a `HighlightValue` to something lower than [`value`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxbulletgraphcomponent.html#value).
-
-```html
-<igx-bullet-graph
-    #bulletGraph
-    height="80px" 
-    width="400px"
-    value=70 
-    targetValue=90
-    minimumValue=0 
-    maximumValue=100 
-    interval=10
-    labelInterval=10
-    labelExtent=0.025
-    labelsPreTerminal=0
-    labelsPostInitial=0
-    highlightValueDisplayMode="Overlay"
-    highlightValue=25>
-  </igx-bullet-graph>
-```
-
-<code-view style="height: 125px" alt="Angular bullet graph highlight needle"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-                    iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph/highlight-needle"
-                                                 github-src="gauges/bullet-graph/highlight-needle">
-</code-view>
-
-
 ## Comparative Ranges
 
 The ranges are visual elements that highlight a specified range of values on a scale. Their purpose is to visually communicate the qualitative state of the performance bar measure, illustrating at the same time the degree to which it resides within that state.

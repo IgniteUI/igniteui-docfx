@@ -204,7 +204,7 @@ private notify(snackbar, message, input) {
 ### テキスト選択
 [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) を使用して、フォーカスがあるコンポーネントにすべての入力テキストを選択させることができます。[Label および Input](label-input.md#フォーカスとテキストの選択) で `igxTextSelection` の詳細情報を参照してください。
 
-**app.module.ts** ファイルに `IgxToastModule` をインポートします:
+**app.module.ts** ファイルに `IgxTextSelectionModule` をインポートします:
 
 ```typescript
 ...
@@ -240,13 +240,22 @@ export class AppModule {}
 @Pipe({ name: 'displayFormat' })
 export class DisplayFormatPipe implements PipeTransform {
     public transform(value: any): string {
-        return value + ' %';
+        if (value !== null && value !== undefined) {
+            value = value.toString().trim();
+            if (!value.endsWith('%')) {
+                value += ' %';
+            }
+        }
+        return value;
     }
 }
 
 @Pipe({ name: 'inputFormat' })
 export class InputFormatPipe implements PipeTransform {
     public transform(value: any): string {
+        if (value !== null && value !== undefined) {
+            value = value.toString().replace(/%/g, '').trim();
+        }
         return value;
     }
 }
@@ -261,14 +270,16 @@ public inputFormat = new InputFormatPipe();
 ```
 ```html
 <igx-input-group>
-    <label igxLabel for="email">Increase</label>
-    <input igxInput
-    type="text"
-    [(ngModel)]="value"
-    [igxMask]="'000'"
-    [igxTextSelection]="true"
-    [focusedValuePipe]="inputFormat"
-    [displayValuePipe]="displayFormat"/>
+    <label igxLabel>Increase</label>
+    <input
+        igxInput
+        type="text"
+        [(ngModel)]="value"
+        [igxMask]="'000'"
+        [igxTextSelection]="true"
+        [focusedValuePipe]="inputFormat"
+        [displayValuePipe]="displayFormat"
+    />
 </igx-input-group>
 ```
 
