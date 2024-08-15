@@ -1,6 +1,6 @@
 ---
-title: Angular チャート データの凡例 | データ視覚化ツール | インフラジスティックス
-_description: インフラジスティックス Ignite UI for Angular チャートでデータ凡例を使用する
+title: Angular チャートのデータ凡例 | データ視覚化ツール | インフラジスティックス
+_description: インフラジスティックスの Ignite UI for Angular チャートでデータ凡例をお試しください!
 _keywords: Angular charts, chart legend, legend, legend types, Ignite UI for Angular, Infragistics, Angular チャート, チャート凡例, 凡例, 凡例タイプ, インフラジスティックス
 mentionedTypes: ["XamCategoryChart", "XamDataLegend", "Series", "DataLegendSummaryType", "DataAbbreviationMode" ]
 namespace: Infragistics.Controls.Charts
@@ -26,7 +26,7 @@ Ignite UI for Angular では、[`IgxDataLegendComponent`]({environment:dvApiBase
 
 ヘッダー行には、カテゴリ シリーズとファイナンシャル シリーズにマウスを合わせると、x 軸の現在のラベルが表示されます。x 軸に日付が表示されている場合は、[`headerFormatDate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#headerFormatDate) プロパティと [`headerFormatTime`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#headerFormatTime) プロパティを使用して、[`IgxDataLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html) の日付と時刻を書式設定できます。他のタイプのシリーズの場合、[`IgxDataLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html) はヘッダー行を描画しません。
 
-### シリーズ列
+### シリーズ行
 
 シリーズ行は、チャートにプロットされた各シリーズを表します。これらの行には、凡例バッジ、シリーズ タイトル、シリーズの実際の値 / 省略値、および指定されている場合は省略記号と測定単位が表示されます。[`includedSeries`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#includedSeries) または [`excludedSeries`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#excludedSeries) プロパティをシリーズのインデックス (1、2、3) またはシリーズのタイトル (Tesla、Microsoft) のコレクションに設定することにより、シリーズの行をフィルタできます。
 
@@ -102,7 +102,8 @@ OHLC 価格の **TypicalPrice** (標準価格) とパーセンテージの **Cha
 
 ## Angular データ凡例値の書式設定
 
-[`IgxDataLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html) は、[`valueFormatAbbreviation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#valueFormatAbbreviation) プロパティを使用して、大きな数値の自動省略形を提供します。これにより、単位の列に kilo、million、billion などの乗数が追加されます。[`valueFormatMinFractions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#valueFormatMinFractions) および [`valueFormatMaxFractions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#valueFormatMaxFractions) を設定することにより、表示される小数桁数をカスタマイズできます。これにより、小数点以下に表示される最小桁数と最大桁数をそれぞれ決定できます。次の例は、これらのプロパティの使用方法を示しています:
+[`IgxDataLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html) は、[`valueFormatAbbreviation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#valueFormatAbbreviation) プロパティを使用して、大きな数値の自動省略形を提供します。これにより、単位の列に kilo、million、billion などの乗数が追加されます。[`valueFormatMinFractions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#valueFormatMinFractions) および [`valueFormatMaxFractions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#valueFormatMaxFractions) を設定することにより、表示される小数桁数をカスタマイズできます。これにより、小数点以下に表示される最小桁数と最大桁数をそれぞれ決定できます。
+次の例は、これらのプロパティの使用方法を示しています:
 
 <code-view style="height: 450px" alt="Angular データ凡例の小数の書式設定"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -111,9 +112,9 @@ OHLC 価格の **TypicalPrice** (標準価格) とパーセンテージの **Cha
 </code-view>
 
 
-## Angular データ凡例値モード
+## Angular データ凡例の値モード
 
-[`valueFormatMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#valueFormatMode) プロパティを変更することにより、[`IgxDataLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html) 内の値のデフォルトの 10 進表示を通貨表示に変更することができます。また、[`valueFormatCulture`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#valueFormatCulture) プロパティにカルチャ タグを設定することで、表示される通貨記号のカルチャを変更できます。たとえば、次のデータ凡例の例では、[`valueFormatCulture`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#valueFormatCulture) が「en-GB」に設定されており、英国ポンド (£) の記号が表示されています:
+[`valueFormatMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#valueFormatMode) プロパティを変更することにより、[`IgxDataLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html) 内の値のデフォルトの 10 進表示を通貨表示に変更することができます。また、[`valueFormatCulture`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#valueFormatCulture) プロパティにカルチャ タグを設定することで、表示される通貨記号のカルチャを変更できます。たとえば、次のデータ凡例の例では、[`valueFormatCulture`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#valueFormatCulture) が 「en-GB」 に設定されており、英国ポンド (£) の記号が表示されています:
 
 <code-view style="height: 450px" alt="Angular 通貨の書式設定"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -122,12 +123,57 @@ OHLC 価格の **TypicalPrice** (標準価格) とパーセンテージの **Cha
 </code-view>
 
 
+## Angular データ凡例のグループ化
+
+`DataLegendGroup` は、すべてのタイプのシリーズで、データ凡例内のシリーズ グループを分類する文字列に設定できます。各グループには、別のシリーズ グループが表示される前に、独自の集計行が表示されます。
+デフォルトでは、DataLegend はグループ名を非表示にしますが、`GroupRowVisible` プロパティを true に設定するとグループ名を表示できます。
+
+<code-view style="height: 450px" alt="Angular データ凡例のグループ化"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/data-legend-grouping"
+                                                 github-src="charts/data-chart/data-legend-grouping">
+</code-view>
+
+
+## Angular データ凡例のスタイル設定とイベント
+
+凡例のグループ化部分を含むいくつかのプロパティが公開されています。
+
+*   `GroupRowMargin`
+*   `GroupTextMargin`
+*   `GroupTextColor`
+*   `GroupTextFontSize`
+*   `GroupTextFontFamily`
+*   `GroupTextFontStyle`
+*   `GroupTextFontStretch`
+*   `GroupTextFontWeight`
+*   `HeaderTextMargin`
+*   [`headerTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#headerTextColor)
+*   `HeaderTextFontSize`
+*   `HeaderTextFontFamily`
+*   `HeaderTextFontStyle`
+*   `HeaderTextFontStretch`
+*   `HeaderTextFontWeight`
+
 [`IgxDataLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html) には、値が更新されているマウス操作中であっても、対応する行を描画するときに発生するいくつかのイベントがあります。それらのイベントを、その使用目的とあわせて以下に示します:
 
+*   `StyleGroupRow`: このイベントは、グループ行に表示されるテキストのスタイルを設定するために、グループごとに発生します。
+*   `StyleHeaderRow`: このイベントは、ヘッダー行を描画するときに発生します。
 *   `StyleSeriesRow`: このイベントは、シリーズの行ごとに 1 回発生し、シリーズの値の条件付きスタイル設定を可能にします。
 *   `StyleSeriesColumn`: このイベントは、シリーズの列ごとに 1 回発生し、シリーズの値の条件付きスタイル設定を可能にします。
 *   `StyleSummaryRow`: このイベントは、集計行を描画するときに 1 回発生します。
 *   `StyleSummaryColumn`: このイベントは、集計列を描画するときに 1 回発生します。
+
+一部のイベントは、引数として [`IgxDataLegendStylingRowEventArgs`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendstylingroweventargs.html) パラメーターを公開します。これにより、各項目のテキスト、テキストの色、および行の全体的な可視性をカスタマイズできます。イベント引数は、イベント固有のプロパティも公開します。たとえば、`StyleSeriesRow` イベントはシリーズごとに発生するため、イベント引数は、シリーズを表す行の、シリーズ インデックスとシリーズ タイトルを返します。
+
+`StyleSummaryColumn` および `SeriesStyleColumn` イベントは、シリーズ内の各フィールドをカスタマイズするために、引数として [`IgxDataLegendStylingColumnEventArgs`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendstylingcolumneventargs.html) パラメーターを公開します。イベント引数は、列インデックスや値メンバーなどの列に関するプロパティに関連するイベント固有のプロパティも公開します。
+
+<code-view style="height: 450px" alt="Angular データ凡例のスタイル設定"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/data-legend-styling"
+                                                 github-src="charts/data-chart/data-legend-styling">
+</code-view>
+
 
 ## API リファレンス
 
@@ -139,7 +185,7 @@ OHLC 価格の **TypicalPrice** (標準価格) とパーセンテージの **Cha
 *   [`includedColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#includedColumns)
 *   [`includedSeries`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#includedSeries)
 *   [`labelDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#labelDisplayMode)
-*   [`labelTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#labelTextColor)
+*   [`labelTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendstylingcolumneventargs.html#labelTextColor)
 *   `StyleHeaderRow`:
 *   `StyleSeriesColumn`:
 *   `StyleSeriesRow`
@@ -150,11 +196,11 @@ OHLC 価格の **TypicalPrice** (標準価格) とパーセンテージの **Cha
 *   [`summaryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#summaryType)
 *   [`titleTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#titleTextColor)
 *   `UnitText`
-*   [`unitsTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#unitsTextColor)
+*   [`unitsTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendstylingcolumneventargs.html#unitsTextColor)
 *   [`valueFormatAbbreviation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#valueFormatAbbreviation)
 *   [`valueFormatCulture`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#valueFormatCulture)
 *   [`valueFormatMaxFractions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#valueFormatMaxFractions)
 *   [`valueFormatMaxFractions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#valueFormatMaxFractions)
 *   [`valueFormatMinFractions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#valueFormatMinFractions)
 *   [`valueFormatMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#valueFormatMode)
-*   [`valueTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#valueTextColor)
+*   [`valueTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendstylingcolumneventargs.html#valueTextColor)
