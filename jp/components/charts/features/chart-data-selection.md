@@ -74,6 +74,13 @@ Angular {ComponentTitle} の Ignite UI for Angular 選択機能を使用する�
 
 この例では、各ラジアル シリーズを異なる色で選択できる [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) を介した別のシリーズ タイプを示します。
 
+<code-view style="height: 450px" alt="Angular ラジアル縦棒チャートの複数モード選択の例"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-column-chart-selection"
+                                                 github-src="charts/data-chart/radial-column-chart-selection">
+</code-view>
+
+
 ## API リファレンス
 
 以下は上記のセクションで説明した API メンバーのリストです。
