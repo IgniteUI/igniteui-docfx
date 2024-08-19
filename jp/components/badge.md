@@ -133,7 +133,7 @@ export class BadgeIconComponent implements OnInit {
 }
 ```
 
-そうすると、次のようにアイコン名とファミリーを指定すればよいです。
+そうすると、次のようにアイコン名とファミリを指定すればよいです。
 
 ```html 
 <igx-badge icon="heart-monitor" iconSet="imx-icons"></igx-badge>

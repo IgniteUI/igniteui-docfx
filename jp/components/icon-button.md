@@ -100,7 +100,7 @@ Contained アイコン ボタンを作成するには、`igxIconButton` プロ�
 
 ### Disabled アイコン ボタン
 
-アイコン ボタンを無効にしたい場合は、[`disabled`]({environment:angularApiUrl}/classes/igxiconbuttoncomponent.html#disabled) プロパティを使用できます。このサンプルでは、`igxIconButton` ディレクティブを使用してさまざまなファミリーのアイコンを使用する方法も示します。
+アイコン ボタンを無効にしたい場合は、[`disabled`]({environment:angularApiUrl}/classes/igxiconbuttoncomponent.html#disabled) プロパティを使用できます。このサンプルでは、`igxIconButton` ディレクティブを使用してさまざまなファミリのアイコンを使用する方法も示します。
 
 ```html
 <button igxIconButton="flat" disabled>

@@ -708,10 +708,10 @@
     - name: チャート データ ツールチップ
       href: charts/features/chart-data-tooltip.md
       new: false
-    - name: チャート強調表示フィルター
+    - name: チャートのハイライト表示フィルター
       href: charts/features/chart-highlight-filter.md
       new: false
-    - name: チャート強調表示
+    - name: チャートのハイライト表示
       href: charts/features/chart-highlighting.md
       new: false
     - name: チャート マーカー
