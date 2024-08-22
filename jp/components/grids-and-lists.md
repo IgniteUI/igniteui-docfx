@@ -240,7 +240,7 @@ Ignite UI for Angular のデータ グリッドは、大量のリアルタイム
 
 - [**Excel へのエクスポート**](grid/export-excel.md) ([**データ可視化**](excel-library-working-with-charts.md)を含む)
 
-- 行の高さとサイズ変更を調整する[**サイズ (表示密度)**](grid/display-density.md)
+- 行の高さとサイズ変更を調整する[**サイズ**](grid/display-density.md)
 
 - [**スパークライン列**](sparkline.md#デモ)や画像列などの列テンプレート
 </div>
@@ -449,7 +449,7 @@ Infragistics の Angular 製品の受賞歴のあるサポートにアクセス�
                 <li>インタラクティブな <a href="grid/groupby.md">Outlook スタイルのようなグループ化</a></li>
                 <li>グリッド セルまたは列のデータに基づいた<a href="grid/summaries.md">列集計</a></li>
                 <li><a href="grid/export-excel.md">Excel へのエクスポート</a>、<a href="excel-library-working-with-charts.md">データ可視化</a>を含む</li>
-                <li>行の高さとサイズ変更を調整する<a href="grid/display-density.md">サイズ (表示密度)</a></li>
+                <li>行の高さとサイズ変更を調整する<a href="grid/display-density.md">サイズ</a></li>
                 <li><a href="charts/types/sparkline-chart.md">スパークライン列</a> や画像列などの列テンプレート</li>
             </ul>
         </div>

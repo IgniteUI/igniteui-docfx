@@ -101,6 +101,9 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 }
 ```
 
+>[!NOTE]
+>As of version `18.0.0` the IgniteUI for Angular the `width` of the row dimensions can also be set to `auto`.
+
 ## Dimensions selection
 
 The Pivot Grid supports single selection which is enabled just like in the base grid. For example:
@@ -113,7 +116,7 @@ The Pivot Grid supports single selection which is enabled just like in the base 
 In case there are multiple row or column dimensions which would create groups that span multiple rows/columns, selection is applied to all cells that belong to the selected group.
 
 ## Super Compact Mode
-The `IgxPivotGrid` component provides a `superCompactMode` `@Input`. It is suitable for cases that require a lot of cells to be present on the screen at once. If enabled the option ignores the `displayDensity` option for the pivot grid. Enabling `superCompactMode` also sets the `displayDensity` input to `compact` for each child component(like `IgxChip`) that does not have the `superCompactMode` option.
+The `IgxPivotGrid` component provides a `superCompactMode` `@Input`. It is suitable for cases that require a lot of cells to be present on the screen at once. If enabled the option ignores the `ig-size` variable for the pivot grid. Enabling `superCompactMode` also sets the `ig-size` variable to `ig-size-small` for each child component(like `IgxChip`) that does not have the `superCompactMode` option.
 
 ```html
 <igx-pivot-grid [superCompactMode]="true"></igx-pivot-grid>
@@ -122,6 +125,60 @@ The `IgxPivotGrid` component provides a `superCompactMode` `@Input`. It is suita
 ## Additional summary column
 
 When a `column` dimension defines a hierarchy, the pivot grid will render additional summary/total column, which accumulates the aggregations of all of the columns inside the group. When the group is collapsed only the summary column will remain. And when the group is expanded the additional summary column appears at the end of the group.
+
+## Row Dimensions Headers
+
+As of version `18.0.0` the IgniteUI for Angular row dimension value headers can be enabled through `pivotUI` option:
+```html
+<igx-pivot-grid [pivotUI]="{ showRowHeaders: true }">
+</igx-pivot-grid>
+```
+
+## Row Dimension Layout
+
+The `IgxPivotGridComponent` supports two ways of row dimension rendering. This can be controlled by setting the `pivotUI` option's `rowLayout` property. 
+
+```html
+  <igx-pivot-grid [pivotUI]="pivotUI">
+  </igx-pivot-grid>
+```
+
+```typescript
+public pivotUI: IPivotUISettings = { rowLayout: PivotRowLayoutType.Horizontal };
+```
+
+The default layout of the grid is `Vertical`. In this mode the hierarchy of dimensions expands vertically. The alternative would be `Horizontal`. In this mode, the children of a single row dimension when expanded are shown horizontally in the same parent multi row layout. In the sample bellow you can toggle between the two modes to compare them.
+
+Note that in the `Horizontal` mode, the parent row dimension aggregates are not visible unless the parent row is collapsed. 
+To show the parent dimension in a row summary, the `horizontalSummary` property can be enabled for the related dimension.
+
+```ts
+rows: [
+    {
+        memberFunction: () => 'All Products',
+        memberName: 'AllProducts',
+        enabled: true,
+        horizontalSummary: true,
+        width: "150px",
+        childLevel: {
+            //...
+        }
+    }
+]
+```
+
+Additionally the position of the summary can be changed via the `horizontalSummariesPosition` property of the `pivotUI` option. It can be set to either `Top`(default) or `Bottom`.
+
+```ts
+public pivotUI: IPivotUISettings = { rowLayout: PivotRowLayoutType.Horizontal, horizontalSummariesPosition: PivotSummaryPosition.Bottom };
+```
+>[!NOTE]
+> The row summary related options - `horizontalSummary` and  `horizontalSummariesPosition` are applicable only for the `Horizontal` layout mode.
+
+<code-view style="height: 870px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-layout" alt="Angular Pivot Grid with Horizontal Row Dimensions Layout">
+</code-view>
 
 ## Interactions
 

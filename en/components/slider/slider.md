@@ -31,7 +31,7 @@ For a complete introduction to the Ignite UI for Angular, read the [*getting sta
 The next step is to import the `IgxSliderModule` in your **app.module.ts** file.
 
 >[!WARNING]
->**This component requires [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) to be imported in the root module of the application in order for user interactions to work as expected.**.
+>**This component can utilize the [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) **optionally**. It can be imported in the root module of the application in order for touch interactions to work as expected.**.
 
 ```typescript
 // app.module.ts
@@ -536,10 +536,10 @@ Now to apply the component theme all that's left is to include `css-vars` mixin 
 
 * [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)
 * [IgxSliderComponent Styles]({environment:sassApiUrl}/index.html#function-slider-theme)
-* [SliderType]({environment:angularApiUrl}/enums/slidertype.html)
+* [SliderType]({environment:angularApiUrl}/variables/IgxSliderType-1.html)
 * [IRangeSliderValue]({environment:angularApiUrl}/interfaces/irangeslidervalue.html)
-* [TicksOrientation]({environment:angularApiUrl}/enums/ticksorientation.html)
-* [TickLabelsOrientation]({environment:angularApiUrl}/enums/ticklablesorientation.html)
+* [TicksOrientation]({environment:angularApiUrl}/classes/IgxSliderComponent.html#ticksOrientation)
+* [TickLabelsOrientation]({environment:angularApiUrl}/classes/IgxSliderComponent.html#tickLabelsOrientation)
 
 <div class="divider--half"></div>
 

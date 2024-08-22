@@ -8,7 +8,7 @@ _language: ja
 
 # Angular チャート機能
 
-Ignite UI for Angular チャートを使用すると、さまざまな機能を表示して、チャートで伝えられる完全なデータ ストーリーを表現できます。これらの各機能は完全にカスタマイズ可能であり、デザインのニーズにに合わせてスタイルを設定できるため、完全に制御できます。強調表示や注釈などの操作により、重要なデータの詳細を呼び出すことができ、チャート内のより深いデータ分析が可能になります。
+Ignite UI for Angular チャートを使用すると、さまざまな機能を表示して、チャートで伝えられる完全なデータ ストーリーを表現できます。これらの各機能は完全にカスタマイズ可能であり、デザインのニーズにに合わせてスタイルを設定できるため、完全に制御できます。ハイライト表示や注釈などの操作により、重要なデータの詳細を呼び出すことができ、チャート内のより深いデータ分析が可能になります。
 
 Angular チャートは、次のチャート機能を提供します。
 
@@ -51,11 +51,11 @@ Angular チャートは、次のチャート機能を提供します。
 
 <div class="divider--half"></div>
 
-## 強調表示
+## ハイライト表示
 
-線、列、マーカーなどのビジュアルに、マウスをデータ項目の上に置いたときに強調表示して、フォーカスを合わせます。この機能は、すべてのチャート タイプで有効になっています。この機能の詳細については、[チャート強調表示](features/chart-highlighting.md)トピックを参照してください。
+線、列、マーカーなどのビジュアルに、マウスをデータ項目の上に置いたときにハイライト表示して、フォーカスを合わせます。この機能は、すべてのチャート タイプで有効になっています。この機能の詳細については、[チャートのハイライト表示](features/chart-highlighting.md)トピックを参照してください。
 
-<code-view style="height: 500px" alt="Angular 強調表示の例"
+<code-view style="height: 500px" alt="Angular ハイライト表示の例"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/column-chart-with-highlighting"
                                                  github-src="charts/category-chart/column-chart-with-highlighting">

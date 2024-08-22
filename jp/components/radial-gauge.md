@@ -109,7 +109,7 @@ export class AppModule {}
 </igx-radial-gauge>
 ```
 
-<code-view style="height: 320px" alt="Angular radial gauge backing"
+<code-view style="height: 320px" alt="Angular ラジアル ゲージのバッキング"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/backing"
                                                  github-src="gauges/radial-gauge/backing">
@@ -118,7 +118,7 @@ export class AppModule {}
 
 ## スケール
 
-スケールは視覚要素で、[`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#minimumValue) と [`maximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#maximumValue) 値を設定してゲージの値範囲全体を強調表示できます。バッキングとともにゲージの全体的な図形を定義します。[`scaleStartAngle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#scaleStartAngle) と [`scaleEndAngle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#scaleEndAngle) プロパティは、スケールの円弧の境界線を定義します。[`scaleSweepDirection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#scaleSweepDirection) プロパティが、スケールが時計回りまたは反時計回りのどちらの方向に動くかを指定します。[`scaleBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#scaleBrush)、[`scaleStartExtent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#scaleStartExtent)、[`scaleEndExtent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#scaleEndExtent) プロパティを設定してスケールの外観をカスタマイズできます。
+スケールは視覚要素で、[`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#minimumValue) と [`maximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#maximumValue) 値を設定してゲージの値範囲全体をハイライト表示できます。バッキングとともにゲージの全体的な図形を定義します。[`scaleStartAngle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#scaleStartAngle) と [`scaleEndAngle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#scaleEndAngle) プロパティは、スケールの円弧の境界線を定義します。[`scaleSweepDirection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#scaleSweepDirection) プロパティが、スケールが時計回りまたは反時計回りのどちらの方向に動くかを指定します。[`scaleBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#scaleBrush)、[`scaleStartExtent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#scaleStartExtent)、[`scaleEndExtent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#scaleEndExtent) プロパティを設定してスケールの外観をカスタマイズできます。
 
 ```html
 <igx-radial-gauge
@@ -136,7 +136,7 @@ export class AppModule {}
 </igx-radial-gauge>
 ```
 
-<code-view style="height: 320px" alt="Angular radial gauge scale"
+<code-view style="height: 320px" alt="Angular ラジアル ゲージのスケール"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/scale"
                                                  github-src="gauges/radial-gauge/scale">
@@ -159,10 +159,21 @@ export class AppModule {}
 </igx-radial-gauge>
 ```
 
-<code-view style="height: 320px" alt="Angular radial gauge labels"
+<code-view style="height: 320px" alt="Angular ラジアル ゲージのラベル"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/labels"
                                                  github-src="gauges/radial-gauge/labels">
+</code-view>
+
+
+## オプティカル スケーリング
+
+ラジアル ゲージのラベルとタイトルにより、スケーリングを変更できます。これを有効にするには、まず `OpticalScalingEnabled` を true に設定します。次に、ラベルが 100% のオプティカル スケーリングを持つサイズを管理する `OpticalScalingSize` を設定できます。ゲージのサイズが大きくなると、ラベルのフォントも大きくなります。たとえば、このプロパティが 500 に設定され、ゲージのピクセル単位のサイズが 2 倍の 1000 になると、ラベルのフォント サイズは 200% 大きくなります。
+
+<code-view style="height: 500px" alt="Angular ラジアル ゲージのオプティカル スケーリング"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/optical-scaling"
+                                                 github-src="gauges/radial-gauge/optical-scaling">
 </code-view>
 
 
@@ -187,7 +198,7 @@ export class AppModule {}
 </igx-radial-gauge>
 ```
 
-<code-view style="height: 320px" alt="Angular radial gauge tickmarks"
+<code-view style="height: 320px" alt="Angular ラジアル ゲージの目盛"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/tickmarks"
                                                  github-src="gauges/radial-gauge/tickmarks">
@@ -196,7 +207,7 @@ export class AppModule {}
 
 ## 範囲
 
-範囲に [`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#minimumValue) や [`maximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#maximumValue) プロパティで指定した連続値の境界を強調表示します。開始値と終了値を指定してゲージに複数の範囲を追加でき、各範囲には、[`brush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugerangecomponent.html#brush) や [`outline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugerangecomponent.html#outline) などのカスタマイズ プロパティがあります。または、[`rangeBrushes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#rangeBrushes) や [`rangeOutlines`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#rangeOutlines) プロパティを範囲の色リストに設定することもできます。
+範囲に [`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#minimumValue) や [`maximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#maximumValue) プロパティで指定した連続値の境界をハイライト表示します。開始値と終了値を指定してゲージに複数の範囲を追加でき、各範囲には、[`brush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugerangecomponent.html#brush) や [`outline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugerangecomponent.html#outline) などのカスタマイズ プロパティがあります。または、[`rangeBrushes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#rangeBrushes) や [`rangeOutlines`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#rangeOutlines) プロパティを範囲の色リストに設定することもできます。
 
 ```html
 <igx-radial-gauge
@@ -217,7 +228,7 @@ export class AppModule {}
 </igx-radial-gauge>
 ```
 
-<code-view style="height: 320px" alt="Angular radial gauge ranges"
+<code-view style="height: 320px" alt="Angular ラジアル ゲージの範囲"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/ranges"
                                                  github-src="gauges/radial-gauge/ranges">
@@ -253,10 +264,36 @@ export class AppModule {}
 </igx-radial-gauge>
 ```
 
-<code-view style="height: 320px" alt="Angular radial gauge needle"
+<code-view style="height: 320px" alt="Angular ラジアル ゲージの針"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/needle"
                                                  github-src="gauges/radial-gauge/needle">
+</code-view>
+
+
+## 針のハイライト
+
+ラジアル ゲージを変更して、2 番目の針を表示できます。これにより、メイン針の [`value`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#value) の不透明度が低く表示されます。これを有効にするには、まず `HighlightValueDisplayMode` を Overlay に設定し、次に `HighlightValue` を適用します。
+
+```html
+<igx-radial-gauge #radialGauge
+    labelExtent=0.65
+    labelInterval=10
+    highlightValueDisplayMode="Overlay"
+    highlightValue=50
+    highlightLabelDisplaysValue=true
+    highlightLabelSnapsToNeedlePivot=true
+    isHighlightNeedleDraggingEnabled=true
+    height="100%" width="100%"
+    minimumValue=0 value=30
+    maximumValue=100 interval=10  >
+</igx-radial-gauge>
+```
+
+<code-view style="height: 320px" alt="Angular ラジアル ゲージの針のハイライト"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/highlight-needle"
+                                                 github-src="gauges/radial-gauge/highlight-needle">
 </code-view>
 
 

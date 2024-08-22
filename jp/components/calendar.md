@@ -20,7 +20,7 @@ Ignite UI for Angular Calendar パッケージを使用して、次の Angular C
 
 <div class="divider--half"></div>
 
-<code-view style="height: 500px" 
+<code-view style="height: 480px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-5" alt="Angular Calendar の例">
 </code-view>
@@ -39,7 +39,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 次に、**app.module.ts** ファイルに `IgxCalendarModule` をインポートします。
 
 >[!NOTE]
-> [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) はタッチ操作の [`BrowserAnimationsModule`](https://angular.io/api/platform-browser/animations/BrowserAnimationsModule) と [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) にも依存するため、これらを AppModule にも追加する必要があります。
+> [**IgxCalendarComponent**]({environment:angularApiUrl}/classes/igxcalendarcomponent.html) はタッチ操作の [`BrowserAnimationsModule`](https://angular.io/api/platform-browser/animations/BrowserAnimationsModule) と [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) (**オプション**) に依存関係があり、これらも AppModule に追加する必要があります。
 
 ```typescript
 // app.module.ts
@@ -107,7 +107,7 @@ Ignite UI for Angular Calendar モジュールまたはディレクティブを�
 ```
 
 
-<code-view style="height: 420px" 
+<code-view style="height: 360px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-1" >
 </code-view>
@@ -124,7 +124,7 @@ Ignite UI for Angular Calendar モジュールまたはディレクティブを�
 ```
 
 
-<code-view style="height: 420px" 
+<code-view style="height: 480px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-8" >
 </code-view>
@@ -154,7 +154,7 @@ Ignite UI for Angular Calendar モジュールまたはディレクティブを�
     [formatViews]="formatViews">
 </igx-calendar>
 ```
-すべてのプロパティ値が AppComponent ファイルに設定されます。
+すべてのプロパティ値が AppCоmponent ファイルに設定されます。
 
 ```typescript
 // app.component.ts
@@ -174,7 +174,7 @@ public ngOnInit() {
 すべて適切に設定できると、カスタマイズされた日付を持つカレンダーが表示され、ユーザーの場所に基づいてロケール表現が変更されます。以下は結果です。
 
 
-<code-view style="height: 620px" 
+<code-view style="height: 580px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-2" >
 </code-view>
@@ -256,7 +256,7 @@ export class CalendarSample7Component {
 以下のデモでは、休暇要求オプションのカレンダーを示します。
 
 
-<code-view style="height: 450px" 
+<code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-7" >
 </code-view>
@@ -274,7 +274,7 @@ export class CalendarSample7Component {
 以下のデモは、週番号が有効になっているカレンダーを示しています:
 
 
-<code-view style="height: 420px" 
+<code-view style="height: 380px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-1" >
 </code-view>
@@ -329,7 +329,7 @@ public activeViewChanged(event: CalendarView) {
 - Angular Calendar 日ビュー - [`igx-days-view`]({environment:angularApiUrl}/classes/igxdaysviewcomponent.html)
 
 
-<code-view style="height: 420px" 
+<code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-days-view" >
 </code-view>
@@ -338,7 +338,7 @@ public activeViewChanged(event: CalendarView) {
 - Angular Calendar 月ビュー - [`igx-months-view`]({environment:angularApiUrl}/classes/igxmonthsviewcomponent.html)
 
 
-<code-view style="height: 520px" 
+<code-view style="height: 290px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-months-view" >
 </code-view>
@@ -347,7 +347,7 @@ public activeViewChanged(event: CalendarView) {
 - Angular Calendar 年ビュー - [`igx-years-view`]({environment:angularApiUrl}/classes/igxyearsviewcomponent.html)
 
 
-<code-view style="height: 500px" 
+<code-view style="height: 320px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-years-view" >
 </code-view>
@@ -406,11 +406,54 @@ Tab キーを使用してページを移動する場合、*igxCalendarComponent*
 マルチ ビューカレンダーは、3 種類すべての選択をサポートしています。[`monthsViewNumber`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#monthsViewNumber) 入力を使用して、表示される月の数を設定します。これは、フレックス コンテナーに水平に表示されます。設定される最大値に制限はありません。マルチ ビューカレンダーを使用する場合、現在の月に属さない日を非表示にできます。非表示にするには、[`hideOutsideDays`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#hideOutsideDays)プ ロパティを使用します。キーボード ナビゲーションは、表示されている次/前の月へ移動します。
 
 
-<code-view style="height: 540px" 
+<code-view style="height: 500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/multiview-calendar" >
 </code-view>
 
+## カレンダーの方向
+方向の設定により、ユーザーはカレンダーのヘッダーとビューの表示方法を選択できます。
+
+#### ヘッダーの方向オプション
+
+ヘッダーの方向を変更して、カレンダーのヘッダーを水平 (カレンダー ビューの上) または垂直 (カレンダー ビューの横) に配置できます。
+これを行うには、`[headerOrientation]` プロパティを使用し、それぞれ `horizo​​ntal` または `vertical` に設定します。
+
+#### ビューの方向オプション
+
+ビューの方向を設定して、カレンダー内の月を水平 (並べて) または垂直 (上下に) に配置できます。
+これを行うには、`[orientation]` プロパティを使用して、それぞれ `horizo​​ntal` または `vertical` に設定します。
+
+>[!NOTE]
+> そのプロパティが機能していることを確認するには、少なくとも 2 か月分のビュー カレンダーが必要です。
+
+```html
+<igx-calendar [monthsViewNumber]="2" [headerOrientation]="headerOrientation" [orientation]="orientation"></igx-calendar>
+```
+
+```typescript
+const orientations = ["horizontal", "vertical"] as const;
+type Orientation = (typeof orientations)[number];
+
+export class CalendarSample9Component {
+    protected orientations = Array.from(orientations, (o) => o);
+    protected headerOrientation: Orientation = "horizontal";
+    protected orientation: Orientation = "horizontal";
+
+    protected setHeaderOrientation(orientation: Orientation) {
+        this.headerOrientation = orientation;
+    }
+
+    protected setOrientation(orientation: Orientation) {
+        this.orientation = orientation;
+    }
+}
+```
+
+<code-view style="height: 750px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-9" alt="Angular Calendar の方向の例">
+</code-view>
 
 ## スタイル設定
 
@@ -446,7 +489,7 @@ $custom-calendar-theme: calendar-theme(
 
 ### CSS 変数の使用
 
-最後に Calendar のカスタム テーマを設定します。
+最後に calendar のカスタム テーマを設定します。
 
 ```scss
  @include css-vars($custom-calendar-theme);

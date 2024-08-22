@@ -23,7 +23,7 @@ _language: ja
 ---
 }
 
-# Angular Grid Sizing
+# Angular Grid のサイズ変更
 
 [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) はサイズ変更する方法が多数あり、ユーザーのさまざまな状況に対応できます。方法は簡単なものから複雑なものまでさまざまです。それぞれを取り上げて、より詳しく説明します。パーセンテージを使用する場合など、いくつかの違いがあるため、`width` と `height` は別々に設定します。
 

@@ -137,8 +137,24 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナーとな�
 @@if (igxName === 'IgxHierarchicalGrid') {
 
 ## 子グリッド付きのツールバー
-IgxHierarchicalGrid の子グリッドの実装方法と DI スコープの動作には特定の制限があるため、子グリッドのスコープでツールバーを使用する場合は注意が必要です。`igx-row-island` タグ内でツールバー コンポーネントを定義するときは、必ずツールバー自体で IgxGridToolbar ディレクティブを使用し、提供されたグリッド インスタンスを入力プロパティとしてツールバー自体に渡すようにしてください。
-これにより、テンプレートのスコープ内に常に正しいグリッド インスタンスが含まれるようになります。
+IgxHierarchicalGrid の子グリッドの実装方法および DI スコープの動作には制限があるため、`igx-row-island` タグ内でツールバー コンポーネントを定義する場合は、`igxGridToolbar` ディレクティブとテンプレートの短縮表現を使用します。これにより、子グリッドが独立したツールバー インスタンスを作成することができます。
+
+```html
+<igx-hierarchical-grid>
+    ...
+    <igx-row-island>
+        <igx-grid-toolbar *igxGridToolbar>
+            <igx-grid-toolbar-title>Child toolbar</igx-grid-toolbar-title>
+        </igx-grid-toolbar>
+    </igx-row-island>
+    ...
+</igx-hierarchical-grid>
+```
+ツールバー テンプレート コンテキストは、各グリッド インスタンスへの参照を暗黙的に公開し、他のバインディング/ロジックに使用できます。以下の例を参照してください。
+
+### 17.1.0 以前のバージョン
+
+17.1.0 以前のバージョンでは、提供されたグリッド インスタンスを 入力プロパティとしてツールバー自体に渡す必要もありました。これにより、テンプレートのスコープ内に常に正しいグリッド インスタンスが含まれるようになります。
 
 ```html
 <igx-hierarchical-grid>
@@ -174,7 +190,7 @@ IgxHierarchicalGrid の子グリッドの実装方法と DI スコープの動�
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:420px" 
+<code-view style="height:500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-1" >
 </code-view>

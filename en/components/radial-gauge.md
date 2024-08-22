@@ -165,6 +165,17 @@ The radial gauge labels are visual elements displaying numeric values at a speci
 </code-view>
 
 
+## Optical Scaling
+
+The radial gauge's labels and titles can change it's scaling. To enable this, first set `OpticalScalingEnabled` to true. Then you can set `OpticalScalingSize` which manages the size at which labels have 100% optical scaling. Labels will have larger fonts when gauge's size is larger. For example, labels will have a 200% larger font size when this property is set to 500 and the gauge px size is doubled to eg. 1000.
+
+<code-view style="height: 500px" alt="Angular radial gauge optical scaling"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/optical-scaling"
+                                                 github-src="gauges/radial-gauge/optical-scaling">
+</code-view>
+
+
 ## Tick Marks
 
 Tick marks are thin lines radiating from the center of the radial gauge. There are two types of tick marks: major and minor. Major tick marks are displayed at the [`interval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#interval) between the [`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#minimumValue) and [`maximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#maximumValue) properties. Use the [`minorTickCount`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#minorTickCount) property to specify the number of minor tick marks displayed between each major tick mark. You can control the length of tick marks by setting a fraction (between 0 and 1) to [`tickStartExtent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#tickStartExtent), [`tickEndExtent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#tickEndExtent), [`minorTickStartExtent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#minorTickStartExtent), and [`minorTickEndExtent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#minorTickEndExtent) properties.
@@ -256,6 +267,32 @@ You can enable an interactive mode of the gauge (using [`isNeedleDraggingEnabled
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/needle"
                                                  github-src="gauges/radial-gauge/needle">
+</code-view>
+
+
+## Highlight Needle
+
+The radial gauge can be modified to show a second needle. This will make the main needle's [`value`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#value) appear with a lower opacity. To enable this first set `HighlightValueDisplayMode` to Overlay and then apply a `HighlightValue`.
+
+```html
+<igx-radial-gauge #radialGauge
+    labelExtent=0.65
+    labelInterval=10
+    highlightValueDisplayMode="Overlay"
+    highlightValue=50
+    highlightLabelDisplaysValue=true
+    highlightLabelSnapsToNeedlePivot=true
+    isHighlightNeedleDraggingEnabled=true
+    height="100%" width="100%"
+    minimumValue=0 value=30
+    maximumValue=100 interval=10  >
+</igx-radial-gauge>
+```
+
+<code-view style="height: 320px" alt="Angular radial gauge highlight needle"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/highlight-needle"
+                                                 github-src="gauges/radial-gauge/highlight-needle">
 </code-view>
 
 

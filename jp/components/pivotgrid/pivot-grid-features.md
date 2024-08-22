@@ -101,6 +101,9 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 }
 ```
 
+>[!NOTE]
+>バージョン `18.0.0` 以降、Ignite UI for Angular では行ディメンションの `width` を `auto` に設定できます。
+
 ## ディメンションの選択
 
 ピボット グリッドは、ベース グリッドと同じように有効になる単一選択をサポートします。例:
@@ -113,7 +116,7 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 複数の行/列にまたがるグループを作成する複数の行または列のディメンションがある場合、選択は、選択されたグループに属するすべてのセルに適用されます。
 
 ## スーパー コンパクト モード
-`IgxPivotGrid` コンポーネントは、`superCompactMode` `@Input` を提供します。一度にたくさんのセルが画面に表示させる必要がある場合に適しています。有効にすると、このオプションはピボット グリッドの `displayDensity` オプションを無視します。`superCompactMode` を有効にすると、`superCompactMode` オプションがない子コンポーネント (`IgxChip` など) ごとに `displayDensity` 入力が `compact` に設定されます。
+`IgxPivotGrid` コンポーネントは、`superCompactMode` `@Input` を提供します。一度にたくさんのセルが画面に表示させる必要がある場合に適しています。有効にすると、このオプションはピボット グリッドの `ig-size` 変数を無視します。`superCompactMode` を有効にすると、`superCompactMode` オプションがない子コンポーネント (`IgxChip` など) ごとに `ig-size` 変数が `ig-size-small` に設定されます。
 
 ```html
 <igx-pivot-grid [superCompactMode]="true"></igx-pivot-grid>
@@ -122,6 +125,60 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 ## 集計列の追加
 
 `column` ディメンションが階層を定義すると、ピボット グリッドは追加の集計/合計列を描画し、グループ内のすべての列の集計を蓄積します。グループが縮小されている場合、集計列のみが残ります。また、グループを展開すると、グループの最後に追加の集計列が表示されます。
+
+## 行ディメンションのヘッダー
+
+バージョン `18.0.0` 以降では、Ignite UI for Angular の幅値のヘッダーは `pivotUI` オプションを通じて有効にできます。
+```html
+<igx-pivot-grid [pivotUI]="{ showRowHeaders: true }">
+</igx-pivot-grid>
+```
+
+## 行ディメンションのレイアウト
+
+`IgxPivotGridComponent` は、行ディメンションのレンダリングについて 2 通りの方法をサポートしています。これは、`pivotUI` オプションの `rowLayout` プロパティを設定することで制御できます。
+
+```html
+  <igx-pivot-grid [pivotUI]="pivotUI">
+  </igx-pivot-grid>
+```
+
+```typescript
+public pivotUI: IPivotUISettings = { rowLayout: PivotRowLayoutType.Horizontal };
+```
+
+グリッドのデフォルトのレイアウトは `Vertical` です。このモードでは、ディメンションの階層が垂直に展開されます。代わりに `Horizontal` を使用することもできます。このモードでは、展開された単一行ディメンションの子は、同じ親の複数行レイアウトで水平に表示されます。以下のサンプルでは、​​2 つのモードを切り替えて比較できます。
+
+`Horizo​​ntal` モードでは、親行が縮小されていない限り、親行ディメンションの集計は表示されないことに注意してください。
+行集計に親ディメンションを表示するには、関連するディメンションの `horizo​​ntalSummary` プロパティを有効にします。
+
+```ts
+rows: [
+    {
+        memberFunction: () => 'All Products',
+        memberName: 'AllProducts',
+        enabled: true,
+        horizontalSummary: true,
+        width: "150px",
+        childLevel: {
+            //...
+        }
+    }
+]
+```
+
+さらに、`pivotUI` オプションの `horizontalSummariesPosition` プロパティで集計の位置を変更できます。これは、`Top` (デフォルト) または `Bottom` に設定できます。
+
+```ts
+public pivotUI: IPivotUISettings = { rowLayout: PivotRowLayoutType.Horizontal, horizontalSummariesPosition: PivotSummaryPosition.Bottom };
+```
+>[!NOTE]
+> 行集計関連のオプション (`horizontalSummary` および `horizontalSummariesPosition`) は、`Horizontal` レイアウト モードにのみ適用されます。
+
+<code-view style="height: 870px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-layout" alt="水平行ディメンション レイアウトの Angular ピボット グリッド">
+</code-view>
 
 ## インタラクション
 

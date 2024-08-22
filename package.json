@@ -10,19 +10,20 @@
     "start:en": "npm start -- --lang en",
     "build": "gulp build",
     "build-gh-actions": "gulp buildCI",
-    "build-staging": "set NODE_ENV=staging && gulp build",
-    "build-production": "set NODE_ENV=production && gulp build",
+    "build-staging": "cross-env NODE_ENV=staging gulp build",
+    "build-production": "cross-env NODE_ENV=production gulp build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "dotnet tool restore --ignore-failed-sources && gulp copyGitHooks"
   },
   "author": "Infragistics",
   "license": "ISC",
   "dependencies": {
-    "igniteui-docfx-template": "^3.6.1"
+    "igniteui-docfx-template": "^3.7.6"
   },
   "devDependencies": {
     "@stackblitz/sdk": "^1.9.0",
     "browser-sync": "^2.29.3",
+    "cross-env": "^7.0.3",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",

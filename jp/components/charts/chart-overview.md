@@ -54,6 +54,7 @@ Angular カテゴリとファイナンシャル チャートを使いやすく�
 Angular 棒チャート (棒グラフ) は、さまざまなカテゴリのデータの頻度、カウント、合計、または平均を、同じ幅と異なる長さの水平棒でエンコードされたデータとすばやく比較するために使用される最も一般的なカテゴリ チャート タイプの 1 つです。これらは、時間の経過に伴う項目の価値の変動、データ分布、ソートされたデータのランキング (高から低、最悪から最高) を表示するのに理想的です。データは、チャートの左から右にデータ ポイントの値に向かって伸びる長方形のコレクションを使用して表されます。[棒チャート](types/bar-chart.md)の詳細をご覧ください。
 
 <code-view style="height: 600px" alt="Angular 複数ソースの棒チャート"
+      img-src="https://static.infragistics.com/marketing/Website/products/Ignite-UI-for-Angular/ignite-ui-angular-bar-chart"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/bar-chart-multiple-sources"
                                                  github-src="charts/data-chart/bar-chart-multiple-sources">
@@ -206,7 +207,7 @@ Angular ピラミッド チャートは、年齢ピラミッドまたは人口�
 
 ### Angular 散布図
 
-Angular 散布図は、デカルト (X、Y) 座標系を使用してデータをプロットすることにより、2 つの値間の関係を示すために使用されます。各データ ポイントは、X 軸と Y 軸上のデータ値の交点として描画されます。散布図は、不均一な間隔またはデータのクラスターに注意を向けます。予測結果の収集データの標準偏差を強調表示し、科学データや統計データをプロットするためによく使用されます。Angular 散布図は、データがバインド前に時系列になっていない場合でも、X 軸と Y 軸でデータを時系列に整理してプロットします。[散布図](types/scatter-chart.md)の詳細をご覧ください。
+Angular 散布図は、デカルト (X、Y) 座標系を使用してデータをプロットすることにより、2 つの値間の関係を示すために使用されます。各データ ポイントは、X 軸と Y 軸上のデータ値の交点として描画されます。散布図は、不均一な間隔またはデータのクラスターに注意を向けます。予測結果の収集データの標準偏差をハイライト表示し、科学データや統計データをプロットするためによく使用されます。Angular 散布図は、データがバインド前に時系列になっていない場合でも、X 軸と Y 軸でデータを時系列に整理してプロットします。[散布図](types/scatter-chart.md)の詳細をご覧ください。
 
 <code-view style="height: 600px" alt="Angular 散布マーカー チャート"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -323,7 +324,7 @@ alt="Angular チャート インタラクティブなパニングとズーム"/>
 
 ### マーカー、ツールチップ、およびテンプレート
 
-10 個の[マーカー タイプ](features/chart-markers.md)のいずれかを使用するか、独自の[マーカー-テンプレート](features/chart-markers.md#angular-チャート-マーカーのテンプレート)を作成して、データを強調表示するか、シンプルな[ツールチップ](features/chart-tooltips.md)または[カスタム ツールチップ](features/chart-tooltips.md#angular-チャート-ツールチップ-テンプレート)を使用した多軸および複数系列のチャートで、データにコンテキストと意味を追加します。
+10 個の[マーカー タイプ](features/chart-markers.md)のいずれかを使用するか、独自の[マーカー-テンプレート](features/chart-markers.md#angular-チャート-マーカーのテンプレート)を作成して、データをハイライト表示するか、シンプルな[ツールチップ](features/chart-tooltips.md)または[カスタム ツールチップ](features/chart-tooltips.md#angular-チャート-ツールチップ-テンプレート)を使用した多軸および複数系列のチャートで、データにコンテキストと意味を追加します。
 
 <img class="responsive-img" src="../../images/charts/ignite-ui-angular-financial-chart-custom-tooltips-1100.jpg"
 alt="Angular チャート マーカー、ツールチップ、およびテンプレート"/>
