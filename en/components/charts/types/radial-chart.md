@@ -75,12 +75,6 @@ Once our radial chart is created, we may want to make some further styling custo
 
 <div class="divider--half"></div>
 
-## Angular Radial Chart Settings
-
-In addition, the labels can be configured to appear near or wide from the chart. This can be configured with the `LabelMode` property for the [`IgxCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategoryangleaxiscomponent.html).
-
-<div class="divider--half"></div>
-
 ## Additional Resources
 
 You can find more information about related chart types in these topics:
