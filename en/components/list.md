@@ -591,6 +591,16 @@ public selectItem(item) {
 
 <div class="divider--half"></div>
 
+## Chat Component
+The following sample demonstrates how to create a simple chat component using **IgxList**.
+
+<code-view style="height: 650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/lists/list-chat-sample" >
+</code-view>
+
+<div class="divider--half"></div>
+
 ## Applying theme to the list component
 
 Let's see how we can change the background of our list. First we need to import index.scss in to our component .scss file.
