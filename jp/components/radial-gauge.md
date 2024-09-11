@@ -143,9 +143,11 @@ export class AppModule {}
 </code-view>
 
 
-## ラベル
+## ラベルとタイトル
 
 ゲージ ラベルは [`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#minimumValue) と [`maximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#maximumValue) の値の間で指定された間隔で数値を表示する視覚要素です。0 はゲージ中央、1 はゲージ バッキングの外側範囲を表す [`labelExtent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#labelExtent) プロパティで小数を使用してラベルの配置を設定できます。[`fontBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#fontBrush) や [`font`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#font) など、さまざまなスタイル プロパティを設定してラベルをカスタマイズできます。
+
+これらの針のラベルにはそれぞれ、`TitleExtent`、`TitleAngle`、`SubtitleFontSize`、`HighlightLabelBrush` など、フォント、角度、ブラシ、ゲージの中心からの距離を変更するために適用できるさまざまなスタイル属性があります。
 
 ```html
 <igx-radial-gauge
@@ -165,6 +167,19 @@ export class AppModule {}
                                                  github-src="gauges/radial-gauge/labels">
 </code-view>
 
+
+## タイトルとサブタイトル
+
+`TitleText` プロパティと `SubtitleText` プロパティが使用可能であり、どちらも針のカスタム テキストを表示するために使用できます。あるいは、`TitleDisplaysValue` と `SubtitleDisplaysValue` を true に設定すると、針の値が表示され、`TitleText` と `SubtitleText` がオーバーライドされます。したがって、タイトルにカスタム テキストを使用しながらサブタイトルで値を表示したり、その逆を行ったりすることができます。
+
+以下に説明するように針のハイライトが表示されている場合は、`HighlightLabelText` を介してカスタム テキストを表示できます。それ以外の場合は、`HighlightLabelDisplaysValue` を有効にしてその値を表示できます。
+
+```html
+<igx-radial-gauge
+    titleText="Global Sales"
+    subtitleText="2024">
+</igx-radial-gauge>
+```
 
 ## オプティカル スケーリング
 
