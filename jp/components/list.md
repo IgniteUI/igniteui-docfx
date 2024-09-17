@@ -590,6 +590,16 @@ public selectItem(item) {
 
 <div class="divider--half"></div>
 
+## Chat コンポーネント
+以下のサンプルは、**IgxList** を使用して作成したシンプルなチャットです。
+
+<code-view style="height: 650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/lists/list-chat-sample" >
+</code-view>
+
+<div class="divider--half"></div>
+
 ## List コンポーネントにテーマの適用
 
 以下は、リストの背景を変更する方法を説明します。まず、index.scss をコンポーネントの .scss ファイルにインポートします。
