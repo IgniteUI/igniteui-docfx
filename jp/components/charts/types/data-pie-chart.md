@@ -89,7 +89,7 @@ ItemLegend バッジを変更することもできます。デフォルトでは
 
 円チャートの基本データに、小さい値を含む多くの項目が含まれる場合があります。この場合、Others カテゴリは、単一スライスへの複数のデータ値の自動集計を許可します。
 
-`XamDataPieChart` の「その他」カテゴリには、 [`OthersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.otherscategorytype.html)、`OthersCategoryThreshold`、`OthersCategoryText` という 3 つの主要な構成可能なプロパティがあり、これらを使用して、チャート内の「その他」スライスの表示方法を構成できます。これらについては、それぞれ以下で説明します。
+`XamDataPieChart` の「その他」カテゴリには、[`OthersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.otherscategorytype.html)、`OthersCategoryThreshold`、`OthersCategoryText` という 3 つの主要な構成可能なプロパティがあり、これらを使用して、チャート内の「その他」スライスの表示方法を構成できます。これらについては、それぞれ以下で説明します。
 
 [`OthersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.otherscategorytype.html) プロパティは、`XamDataPieChart` の `OthersCategoryThreshold` プロパティと連動して機能します。[`OthersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.otherscategorytype.html) では、`OthersCategoryThreshold` を数値として評価するか、パーセンテージとして評価するかを定義できます。たとえば、数値を選択し、`OthersCategoryThreshold` を 5 に設定すると、5 未満の値を持つスライスはすべて「その他」カテゴリの一部になります。パーセント タイプで同じ値 5 を使用すると、`XamDataPieChart` の合計値の 5 パーセント未満の値はすべて「その他」カテゴリの一部になります。
 
