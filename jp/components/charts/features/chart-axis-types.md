@@ -144,11 +144,11 @@ Ignite UI for Angular カテゴリ チャートは、[`IgxCategoryXAxisComponent
 
 ### 比例カテゴリ角度軸
 
-`ProportionalCategoryAngleAxis` は、そのデータを一連のカテゴリ データ項目として扱います。この軸のラベルは、シーケンス内の位置に応じて円の端に沿って配置されます。この軸の種類では、数字、文字列などのほぼすべてのデータのタイプを表示できます。
+[`IgxProportionalCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxproportionalcategoryangleaxiscomponent.html) は、そのデータを一連のカテゴリ データ項目として扱います。この軸のラベルは、シーケンス内の位置に応じて円の端に沿って配置されます。この軸の種類では、数字、文字列などのほぼすべてのデータのタイプを表示できます。
 
-`ProportionalCategoryAngleAxis` は通常、[`IgxNumericRadiusAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxnumericradiusaxiscomponent.html) と一緒に使用され、円チャートをプロットします (例: [ラジアル シリーズ](../types/radial-chart.md))。
+[`IgxProportionalCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxproportionalcategoryangleaxiscomponent.html) は通常、[`IgxNumericRadiusAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxnumericradiusaxiscomponent.html) と一緒に使用され、円チャートをプロットします (例: [ラジアル シリーズ](../types/radial-chart.md))。
 
-次の例は、`ProportionalCategoryAngleAxis` タイプの使用方法を示しています。
+次の例は、[`IgxProportionalCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxproportionalcategoryangleaxiscomponent.html) タイプの使用方法を示しています。
 
 <code-view style="height: 500px" alt="Angular 比例カテゴリ角度軸の例"
            data-demos-base-url="{environment:dvDemosBaseUrl}"

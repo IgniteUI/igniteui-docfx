@@ -80,7 +80,7 @@ Ignite UI for Angular ラジアル折れ線チャートは、データ ポイン
 
 ## Angular ラジアル チャートの設定
 
-さらに、ラベルはチャートの近くまたは広い位置に表示されるように設定できます。これは、[`IgxCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategoryangleaxiscomponent.html) の `LabelMode` プロパティで設定できます。
+さらに、ラベルはチャートの近くまたは広い位置に表示されるように設定できます。これは、[`IgxCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategoryangleaxiscomponent.html) の [`labelMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategoryangleaxiscomponent.html#labelMode) プロパティで設定できます。
 
 <div class="divider--half"></div>
 
