@@ -80,8 +80,8 @@ The following example demonstrates a data tooltip with the added columns of Open
 
 ## Angular Data Tooltip Grouping for Data Chart
 
-`DataLegendGroup` can be set, on all types of series, to a string that will categorize a group of series in Data Legend. Each group will have its own summary row displayed before another group of series is displayed:
-By default, DataLegend will hide names of groups, but you can display group names by setting the `GroupRowVisible` property to true. [`groupingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatatooltiplayercomponent.html#groupingMode) should be set to "Grouped" and [`labelDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#labelDisplayMode) should be set to "Visible" on the Data Tooltip Layer.
+[`dataLegendGroup`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriescomponent.html#dataLegendGroup) can be set, on all types of series, to a string that will categorize a group of series in Data Legend. Each group will have its own summary row displayed before another group of series is displayed:
+By default, DataLegend will hide names of groups, but you can display group names by setting the [`groupRowVisible`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#groupRowVisible) property to true. [`groupingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatatooltiplayercomponent.html#groupingMode) should be set to "Grouped" and [`labelDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#labelDisplayMode) should be set to "Visible" on the Data Tooltip Layer.
 
 <code-view style="height: 450px" alt="Angular Data Tooltip Grouping"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -143,7 +143,7 @@ The following example demonstrates usage of the styling properties mentioned abo
 Several properties are exposed including grouping portions of the tooltip.
 
 *   `GroupTextMargin`
-*   `GroupTextColor`
+*   [`groupTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#groupTextColor)
 *   `GroupTextFontSize`
 *   `GroupTextFontFamily`
 *   `GroupTextFontStyle`
