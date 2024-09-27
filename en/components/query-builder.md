@@ -64,7 +64,7 @@ import { IGX_QUERY_BUILDER_DIRECTIVES, FilteringExpressionsTree, FieldType } fro
     selector: 'app-home',
     template: `
     <igx-query-builder #queryBuilder
-        [fields]="fields"
+        [entities]="entities"
         [(expressionTree)]="expressionTree"
         (expressionTreeChange)="onExpressionTreeChange()">
     </igx-query-builder>
@@ -76,7 +76,7 @@ import { IGX_QUERY_BUILDER_DIRECTIVES, FilteringExpressionsTree, FieldType } fro
 })
 export class HomeComponent {
     public expressionTree: FilteringExpressionsTree;
-    public fields: FieldType [];
+    public entities: Array<any>;
 
     public onExpressionTreeChange() {
         ...
@@ -88,41 +88,53 @@ Now that you have the Ignite UI for Angular Query Builder module or directives i
 
 ## Using the Angular Query Builder
 
-If no expression tree is initially set, you start with creating a group of conditions linked with [`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) or [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or). After that, conditions or sub-groups can be added. 
+If no expression tree is initially set, you start with creating a group of conditions linked with [`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) or [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or). Then you choose entity and which fields the query should return. After that, conditions or sub-groups can be added. 
 
-In order to add a condition, a field, an operand based on the field dataType and a value if the operand is not unary. Once the condition is committed, a chip with the condition information appears. By hovering or clicking the chip, you have the options to modify it or add another condition or group right after it.
+In order to add a condition you select a field, an operand based on the field data type and a value if the operand is not unary. The operands `In` and `Not In` will allow you to create inner query with conditions from different entity instead of providing a value. Once the condition is committed, a chip with the condition information appears. By clicking the chip, you have the options to modify it or add another condition or group right after it.
 
 If you select more than one condition chip, a context menu appears with options to create a group or delete the queries. If you choose to create a group with the selected conditions, the newly created group will appear where the topmost selected condition was placed.
 
 In order to select a group, you can also click on its vertical line, which is colored based on the linking condition ([`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) or [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or)). If a single group is selected, you get a context menu with options to change its logic, ungroup or delete it.
 
-You can start using the component by setting the [`fields`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#fields) property to an array describing the field name and its data type. It will automatically assign the corresponding operands based on the data type.
+Since every condition is related to a specific field from a particular entity changing the entity will lead to resetting all present conditions and groups. When selecting a new entity a confirmation dialog will be shown unless the [`showEntityChangeDialog`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#showEntityChangeDialog) input property is set to false.
+
+You can start using the component by setting the [`entities`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#entities) property to an array describing the entity name and an array of its fields, where each field is defined by its name and data type. Once a field is selected it will automatically assign the corresponding operands based on the data type.
 The Query Builder has the [`expressionTree`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#expressionTree) input property. You could use it to set an initial state of the control and access the user-specified filtering logic.
 
 ```typescript
 ngAfterViewInit(): void {
-    const tree = new FilteringExpressionsTree(FilteringLogic.And);
+    const innerTree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'Companies', ['ID']);
+    innerTree.filteringOperands.push({
+        fieldName: 'Employees',
+        condition: IgxNumberFilteringOperand.instance().condition('greaterThan'),
+        conditionName: 'greaterThan',
+        searchVal: 100
+    });
+    innerTree.filteringOperands.push({
+        fieldName: 'Contact',
+        condition: IgxBooleanFilteringOperand.instance().condition('true'),
+        conditionName: 'true'
+    });
+
+    const tree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'Orders', ['*']);
     tree.filteringOperands.push({
-        fieldName: 'ID',
-        condition: IgxStringFilteringOperand.instance().condition('contains'),
-        searchVal: 'a',
-        ignoreCase: true
+        fieldName: 'CompanyID',
+        condition: IgxStringFilteringOperand.instance().condition('in'),
+        conditionName: 'in',
+        searchTree: innerTree
     });
-    const subTree = new FilteringExpressionsTree(FilteringLogic.Or);
-    subTree.filteringOperands.push({
-        fieldName: 'ContactTitle',
-        condition: IgxStringFilteringOperand.instance().condition('doesNotContain'),
-        searchVal: 'b',
-        ignoreCase: true
+    tree.filteringOperands.push({
+        fieldName: 'OrderDate',
+        condition: IgxDateFilteringOperand.instance().condition('before'),
+        conditionName: 'before',
+        searchVal: new Date('2024-01-01T00:00:00.000Z')
     });
-    subTree.filteringOperands.push({
-        fieldName: 'CompanyName',
-        condition: IgxStringFilteringOperand.instance().condition('startsWith'),
-        searchVal: 'c',
-        ignoreCase: true
+    tree.filteringOperands.push({
+        fieldName: 'ShippedDate',
+        condition: IgxDateFilteringOperand.instance().condition('null'),
+        conditionName: 'null'
     });
-    tree.filteringOperands.push(subTree);
-    
+
     this.queryBuilder.expressionTree = tree;
 }
 ```
@@ -131,11 +143,43 @@ The `expressionTree` is a two-way bindable property which means a corresponding 
 
 ```html
 <igx-query-builder #queryBuilder
-    [fields]="fields"
+    [entities]="entities"
     [(expressionTree)]="expressionTree"
     (expressionTreeChange)="onExpressionTreeChange()">
 </igx-query-builder>
 ```
+
+## Templating
+
+The Ignite UI for Angular Query Builder Component allows defining templates for header and search value using the following predefined reference names:
+
+### Header
+
+Passing content inside of the `igx-query-builder-header` allows templating the query builder header. The [`IgxQueryBuilderHeaderComponent`]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html) component provides a way to hide the legend by setting the [`showLegend`]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html#showLegend) input property is set to false.
+
+ The code snippet below illustrates how to do this:
+
+```html
+<igx-query-builder #queryBuilder [entities]="this.entities">
+    <igx-query-builder-header [showLegend]="false">
+        <span>Build your query</span>
+    </igx-query-builder-header>
+</igx-query-builder>
+```
+
+### Search value
+
+The search value of a condition can be templated using the [`igxQueryBuilderSearchValue`]({environment:angularApiUrl}/classes/igxquerybuildersearchvaluetemplatedirective.html) directive, applied to a `<ng-template>` inside of the `igx-query-builder`'s body:
+
+```html
+<igx-query-builder #queryBuilder [entities]="this.entities">
+    <ng-template #searchValueTemplate igxQueryBuilderSearchValue let-expression="expression">
+        <input type="text" required [(ngModel)]="expression.searchVal" />
+    </ng-template>
+</igx-query-builder>
+```
+
+<!-- TODO: Sample for templating -->
 
 ## Styling
 
@@ -446,6 +490,8 @@ You can also streamline your Angular app development using [WYSIWYG App Builderâ
 <div class="divider--half"></div>
 
 * [IgxQueryBuilderComponent API]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html)
+* [IgxQueryBuilderHeaderComponent]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html)
+* [IgxQueryBuilderSearchValueTemplateDirective]({environment:angularApiUrl}/classes/igxquerybuildersearchvaluetemplatedirective.html)
 * [IgxQueryBuilderComponent Styles]({environment:sassApiUrl}/index.html#function-query-builder-theme)
 
 ## Additional Resources
