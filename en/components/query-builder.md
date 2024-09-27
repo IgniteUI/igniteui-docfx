@@ -88,15 +88,15 @@ Now that you have the Ignite UI for Angular Query Builder module or directives i
 
 ## Using the Angular Query Builder
 
-If no expression tree is initially set, you start with creating a group of conditions linked with [`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) or [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or). Then you choose entity and which fields the query should return. After that, conditions or sub-groups can be added. 
+If no expression tree is initially set, you start with creating a group of conditions linked with [`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) or [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or). Then you choose an entity and which of its fields the query should return. After that, conditions or sub-groups can be added. 
 
-In order to add a condition you select a field, an operand based on the field data type and a value if the operand is not unary. The operands `In` and `Not In` will allow you to create inner query with conditions from different entity instead of providing a value. Once the condition is committed, a chip with the condition information appears. By clicking the chip, you have the options to modify it or add another condition or group right after it.
+In order to add a condition you select a field, an operand based on the field data type and a value if the operand is not unary. The operands `In` and `Not In` will allow you to create an inner query with conditions for a different entity instead of simply providing a value. Once the condition is committed, a chip with the condition information appears. By clicking the chip, you have the options to modify it or add another condition or group right after it.
 
-If you select more than one condition chip, a context menu appears with options to create a group or delete the queries. If you choose to create a group with the selected conditions, the newly created group will appear where the topmost selected condition was placed.
+If you select more than one condition chip, a context menu appears with options to group or delete the current selection. If you choose to create a group with the selected conditions, the newly created group will appear where the topmost selected condition was placed.
 
 In order to select a group, you can also click on its vertical line, which is colored based on the linking condition ([`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) or [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or)). If a single group is selected, you get a context menu with options to change its logic, ungroup or delete it.
 
-Since every condition is related to a specific field from a particular entity changing the entity will lead to resetting all present conditions and groups. When selecting a new entity a confirmation dialog will be shown unless the [`showEntityChangeDialog`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#showEntityChangeDialog) input property is set to false.
+Since every condition is related to a specific field from a particular entity changing the entity will lead to resetting all preset conditions and groups. When selecting a new entity a confirmation dialog will be shown, unless the [`showEntityChangeDialog`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#showEntityChangeDialog) input property is set to false.
 
 You can start using the component by setting the [`entities`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#entities) property to an array describing the entity name and an array of its fields, where each field is defined by its name and data type. Once a field is selected it will automatically assign the corresponding operands based on the data type.
 The Query Builder has the [`expressionTree`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#expressionTree) input property. You could use it to set an initial state of the control and access the user-specified filtering logic.
@@ -151,11 +151,11 @@ The `expressionTree` is a two-way bindable property which means a corresponding 
 
 ## Templating
 
-The Ignite UI for Angular Query Builder Component allows defining templates for header and search value using the following predefined reference names:
+The Ignite UI for Angular Query Builder Component allows defining templates for the component's header and the search value using the following predefined reference names:
 
 ### Header
 
-Passing content inside of the `igx-query-builder-header` allows templating the query builder header. The [`IgxQueryBuilderHeaderComponent`]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html) component provides a way to hide the legend by setting the [`showLegend`]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html#showLegend) input property is set to false.
+Passing content inside of the `igx-query-builder-header` allows templating the query builder header. The [`IgxQueryBuilderHeaderComponent`]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html) provides a way to hide the legend by setting the [`showLegend`]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html#showLegend) input property to false.
 
  The code snippet below illustrates how to do this:
 
@@ -169,7 +169,7 @@ Passing content inside of the `igx-query-builder-header` allows templating the q
 
 ### Search value
 
-The search value of a condition can be templated using the [`igxQueryBuilderSearchValue`]({environment:angularApiUrl}/classes/igxquerybuildersearchvaluetemplatedirective.html) directive, applied to a `<ng-template>` inside of the `igx-query-builder`'s body:
+The search value of a condition can be templated using the [`igxQueryBuilderSearchValue`]({environment:angularApiUrl}/classes/igxquerybuildersearchvaluetemplatedirective.html) directive, applied to an `<ng-template>` inside of the `igx-query-builder`'s body:
 
 ```html
 <igx-query-builder #queryBuilder [entities]="this.entities">
