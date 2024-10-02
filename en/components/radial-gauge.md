@@ -142,9 +142,11 @@ The scale is visual element that highlights full range of values in the gauge wh
 </code-view>
 
 
-## Labels
+## Labels and Titles
 
 The radial gauge labels are visual elements displaying numeric values at a specified interval between values of the [`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#minimumValue) and [`maximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#maximumValue) properties. You can position labels by setting the [`labelExtent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#labelExtent) property to a fraction, where 0 represents center of gauge and 1 represents outer extent of the gauge backing. Also, you can customize labels setting various styling properties such as [`fontBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#fontBrush) and [`font`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#font).
+
+Each of these labels for the needle have various styling attributes you can apply to change the font, angle, brush and distance from the center of the gauge such as `TitleExtent`, `TitleAngle`, `SubtitleFontSize`, `HighlightLabelBrush`.
 
 ```html
 <igx-radial-gauge
@@ -164,6 +166,19 @@ The radial gauge labels are visual elements displaying numeric values at a speci
                                                  github-src="gauges/radial-gauge/labels">
 </code-view>
 
+
+## Title & Subtitle
+
+`TitleText` and `SubtitleText` properties are available and can both be used to display custom text for the needle. Alternatively, `TitleDisplaysValue` and `SubtitleDisplaysValue`, when set to true, will let display the needle's value and override `TitleText` and `SubtitleText`. So you can occupy custom text for the title but show the value via the subtitle and vice versa.
+
+If the highlight needle is shown, as explained below, then custom text can be shown via  `HighlightLabelText`, otherwise `HighlightLabelDisplaysValue` can be enabled and display it's value.
+
+```html
+<igx-radial-gauge
+    titleText="Global Sales"
+    subtitleText="2024">
+</igx-radial-gauge>
+```
 
 ## Optical Scaling
 
