@@ -2,7 +2,7 @@
 title: Angular Map | Data Visualization Tools | Shape Styling | Conditional Formatting | Infragistics
 _description: Learn how to apply custom styling to Infragistics' Angular map's shape series. Check out Ignite UI for Angular map tutorials!
 _keywords: Angular map, custom styling, Ignite UI for Angular, Infragistics, conditional formatting, shape styling
-mentionedTypes: ['XamGeographicMap', 'GeographicShapeSeries', 'Series']
+mentionedTypes: ["XamGeographicMap", "GeographicShapeSeries", "Series"]
 ---
 
 # Angular Shape Styling on Geographic Shape Series
