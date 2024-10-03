@@ -161,9 +161,8 @@ Passing content inside of the `igx-query-builder-header` allows templating the q
 
 ```html
 <igx-query-builder #queryBuilder [entities]="this.entities">
-    <igx-query-builder-header [showLegend]="false">
-        <span>Build your query</span>
-    </igx-query-builder-header>
+        <igx-query-builder-header [title]="'Query Builder Template Sample'" [showLegend]="true">  
+        </igx-query-builder-header>
 </igx-query-builder>
 ```
 
@@ -172,14 +171,45 @@ Passing content inside of the `igx-query-builder-header` allows templating the q
 The search value of a condition can be templated using the [`igxQueryBuilderSearchValue`]({environment:angularApiUrl}/classes/igxquerybuildersearchvaluetemplatedirective.html) directive, applied to an `<ng-template>` inside of the `igx-query-builder`'s body:
 
 ```html
-<igx-query-builder #queryBuilder [entities]="this.entities">
-    <ng-template #searchValueTemplate igxQueryBuilderSearchValue let-expression="expression">
-        <input type="text" required [(ngModel)]="expression.searchVal" />
+<igx-query-builder #queryBuilder
+    [entities]="entities"
+    [expressionTree]="expressionTree">
+    <ng-template #searchValueTemplate igxQueryBuilderSearchValue 
+                let-searchValue
+                let-selectedField = "selectedField" 
+                let-selectedCondition = "selectedCondition"
+                let-defaultSearchValueTemplate = "defaultSearchValueTemplate">
+        @if (
+            selectedField?.field === 'Region' &&
+            (selectedCondition === 'equals' || selectedCondition === 'doesNotEqual')
+            ){
+            <igx-select [placeholder]="'Select region'" [(ngModel)]="searchValue.value">
+                <igx-select-item *ngFor="let reg of regionOptions" [value]="reg.value">
+                    {{ reg.text }}
+                </igx-select-item>
+            </igx-select>
+        } 
+        @else if (
+            selectedField?.field === 'OrderStatus' &&
+            (selectedCondition === 'equals' || selectedCondition === 'doesNotEqual')
+            ){
+            <igx-radio-group>
+                <igx-radio class="radio-sample" *ngFor="let stat of statusOptions" value="{{stat.value}}" [(ngModel)]="searchValue.value">
+                    {{stat.text}}
+                </igx-radio>
+            </igx-radio-group>
+        }
+            @else {  
+            <ng-container #defaultTemplate *ngTemplateOutlet="defaultSearchValueTemplate"></ng-container>
+        }
     </ng-template>
 </igx-query-builder>
 ```
 
-<!-- TODO: Sample for templating -->
+<code-view style="height:530px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-template-sample" alt="Angular Query Builder Templates Example">
+</code-view>
 
 ## Styling
 
