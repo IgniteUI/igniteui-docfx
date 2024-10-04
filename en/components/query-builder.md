@@ -205,6 +205,8 @@ The search value of a condition can be templated using the [`igxQueryBuilderSear
 </igx-query-builder>
 ```
 
+We’ve created this Angular Query Builder example to show you the templating functionalities for the header and the search value of the Angular Query Builder component.
+
 <code-view style="height:530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/query-builder-template-sample" alt="Angular Query Builder Templates Example">
