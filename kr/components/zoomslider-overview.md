@@ -3,7 +3,7 @@ title: Angular ZoomSlider | Data Visualization Tools | Data Binding | Infragisti
 _description: Use the ZoomSlider within the data chart to easily display a subset of data. It is displayed with two handles representing minimum and maximum values.
 _language: kr
 _keywords: zoom slider, Ignite UI for Angular, Infragistics, data chart
-mentionedTypes: ['ZoomSlider', 'XamDataChart']
+mentionedTypes: ["ZoomSlider", "XamDataChart"]
 ---
 
 # Zoom Slider
