@@ -2,7 +2,7 @@
 title: Angular Excel ライブラリ | セルの使用 | インフラジスティックス
 _description: インフラジスティックスの Angular Excel ライブラリのセルでセルへのアクセス、数式とコメントの追加、セルの結合、セルの書式設定などの操作を実行する方法について説明します。Ignite UI for Angular Excel のサンプルを是非お試しください!
 _keywords: Excel library,  cell operations, Ignite UI for Angular, Infragistics, Excel ライブラリ, セル操作, インフラジスティックス
-mentionedTypes: ['Workbook', 'Worksheet', 'WorksheetCell', 'WorkbookStyleCollection', 'IWorksheetCellFormat', 'WorkbookColorInfo', 'DisplayOptions']
+mentionedTypes: ["Workbook", "Worksheet", "WorksheetCell", "WorkbookStyleCollection", "IWorksheetCellFormat", "WorkbookColorInfo", "DisplayOptions"]
 _language: ja
 ---
 

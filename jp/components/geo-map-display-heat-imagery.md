@@ -2,7 +2,7 @@
 title: Angular マップ | データ可視化ツール | インフラジスティックス
 _description: インフラジスティックスの Angular JavaScript マップを使用してヒートマップ画像を表示します。Ignite UI for Angular マップのサンプルを是非お試しください!
 _keywords: Angular map, heat map imagery, Ignite UI for Angular, Infragistics, Angular マップ, ヒートマップ画像, インフラジスティックス
-mentionedTypes: ['XamGeographicMap', 'ShapefileConverter', 'HeatTileGenerator', 'GeographicTileSeries']
+mentionedTypes: ["XamGeographicMap", "ShapefileConverter", "HeatTileGenerator", "GeographicTileSeries"]
 _language: ja
 ---
 
