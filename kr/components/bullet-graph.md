@@ -3,7 +3,7 @@ title: Angular Bullet Graph Component - Angular | Ignite UI for Angular
 _description: The Bullet Graph Component in Ignite UI for Angular allows for a linear and concise view of measures compared against a scale.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Data Grid, Angular Chart Control, Angular Grid Component, Angular data grid Bullet graph component example, Angular bullet graph
 _language: kr
-mentionedTypes: ['XamBulletGraph']
+mentionedTypes: ["XamBulletGraph"]
 ---
 
 # Angular Bullet Graph
