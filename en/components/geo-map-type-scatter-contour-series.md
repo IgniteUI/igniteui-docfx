@@ -2,7 +2,7 @@
 title: Angular Map | Data Visualization Tools | Scatter Contour Series | Data Binding | Infragistics
 _description: Use Infragistics Angular map's scatter contour series to draw colored contour lines, in a geographic context, based on a triangulation of longitude and latitude data with a numeric value assigned to each point. Learn more about Ignite UI for Angular map's series!
 _keywords: Angular map, scatter contour series, Ignite UI for Angular, Infragistics
-mentionedTypes: ['XamGeographicMap','GeographicContourLineSeries','CustomPaletteColorScale', 'Series']
+mentionedTypes: ["XamGeographicMap","GeographicContourLineSeries","CustomPaletteColorScale", "Series"]
 ---
 
 # Angular Geographic Contour Map

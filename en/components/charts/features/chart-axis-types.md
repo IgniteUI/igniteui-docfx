@@ -141,6 +141,21 @@ The following example demonstrates usage of the [`IgxCategoryAngleAxisComponent`
 </code-view>
 
 
+### Proportional Category Angle Axis
+
+The [`IgxProportionalCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxproportionalcategoryangleaxiscomponent.html) treats its data as a sequence of category data items. The labels on this axis are placed along the edge of a circle according to their position in that sequence. This type of axis can display almost any type of data including strings and numbers.
+
+The [`IgxProportionalCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxproportionalcategoryangleaxiscomponent.html) is generally used with the [`IgxNumericRadiusAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxnumericradiusaxiscomponent.html) to plot a pie chart eg. [Radial Series](../types/radial-chart.md).
+
+The following example demonstrates usage of the [`IgxProportionalCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxproportionalcategoryangleaxiscomponent.html) type:
+
+<code-view style="height: 500px" alt="Angular Proportional Category Angle Axis Example"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-proportional-category-angle-axis"
+                                                 github-src="charts/data-chart/radial-proportional-category-angle-axis">
+</code-view>
+
+
 ### Numeric Angle Axis
 
 The [`IgxNumericAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxnumericangleaxiscomponent.html) treats its data as continuously varying numerical data items. The labels on this axis area placed along a radius line starting from the center of the circular plot. The location of the labels on the [`IgxNumericAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxnumericangleaxiscomponent.html) varies according to the value in the data column mapped using the `RadiusMemberPath` property of the [Polar Series](../types/polar-chart.md) object or the `ValueMemberPath` property of the [Radial Series](../types/radial-chart.md) object.
