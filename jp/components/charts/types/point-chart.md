@@ -2,7 +2,7 @@
 title: Angular ポイント チャート | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular ポイント チャート
 _keywords: Angular Charts, Point Chart, Infragistics, Angular チャート, ポイント チャート, インフラジスティックス
-mentionedTypes: ["DomainChart", "CategoryChart", "CategoryChartType", "Legend", 'Series']
+mentionedTypes: ["DomainChart", "CategoryChart", "CategoryChartType", "Legend", "Series"]
 namespace: Infragistics.Controls.Charts
 _language: ja
 ---

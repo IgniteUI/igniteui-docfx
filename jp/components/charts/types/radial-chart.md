@@ -2,7 +2,7 @@
 title: Angular ラジアル チャート | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular ラジアル チャート
 _keywords: Angular Charts, Radial Chart, Infragistics, Angular チャート, ラジアル チャート, インフラジスティックス
-mentionedTypes: ["XamDataChart", "RadialLineSeries", 'Series']
+mentionedTypes: ["XamDataChart", "RadialLineSeries", "Series"]
 namespace: Infragistics.Controls.Charts
 _language: ja
 ---
@@ -80,7 +80,7 @@ Ignite UI for Angular ラジアル折れ線チャートは、データ ポイン
 
 ## Angular ラジアル チャートの設定
 
-さらに、ラベルはチャートの近くまたは広い位置に表示されるように設定できます。これは、[`IgxCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategoryangleaxiscomponent.html) の `LabelMode` プロパティで設定できます。
+さらに、ラベルはチャートの近くまたは広い位置に表示されるように設定できます。これは、[`IgxCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategoryangleaxiscomponent.html) の [`labelMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategoryangleaxiscomponent.html#labelMode) プロパティで設定できます。
 
 <div class="divider--half"></div>
 
