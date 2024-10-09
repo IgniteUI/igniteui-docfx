@@ -2,7 +2,7 @@
 title: Angular スプレッドシート | 設定 | セル | 数式 | ナビゲーション | 選択 | インフラジスティックス
 _description: Ignite UI for Angular によって Angular スプレッドシートを設定して、チャート データを向上させる方法について説明します。Infragistics はデータ可視化を向上させます。
 _keywords: Excel Spreadsheet, Ignite UI for Angular, Infragistics, Excel スプレッドシート, インフラジスティックス
-mentionedTypes: ['Spreadsheet']
+mentionedTypes: ["Spreadsheet"]
 _language: ja
 ---
 

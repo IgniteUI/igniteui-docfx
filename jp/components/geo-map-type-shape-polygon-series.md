@@ -2,7 +2,7 @@
 title: Angular マップ | データ可視化ツール | シェイプ ポリゴン シリーズ | インフラジスティックス
 _description: インフラジスティックスの Angular マップのシェイプ ポリゴン シリーズを使用して、地理的位置によって定義される国または地域の図形を描画します。Ignite UI for Angular マップ シーリズについての詳細を表示します。
 _keywords: Angular map, shape polygon series, Ignite UI for Angular, Infragistics, Angular マップ, シェイプ ポリゴン シリーズ, インフラジスティックス
-mentionedTypes: ['XamGeographicMap', 'ShapefileConverter', 'Series', 'GeographicShapeSeriesBase']
+mentionedTypes: ["XamGeographicMap", "ShapefileConverter", "Series", "GeographicShapeSeriesBase"]
 _language: ja
 ---
 
