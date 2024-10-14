@@ -179,28 +179,18 @@ The search value of a condition can be templated using the [`igxQueryBuilderSear
                 let-selectedField = "selectedField" 
                 let-selectedCondition = "selectedCondition"
                 let-defaultSearchValueTemplate = "defaultSearchValueTemplate">
-        @if (
-            selectedField?.field === 'Region' &&
-            (selectedCondition === 'equals' || selectedCondition === 'doesNotEqual')
-            ){
+        @if (selectedField?.field === 'Region' && (selectedCondition === 'equals' || selectedCondition === 'doesNotEqual')){
             <igx-select [placeholder]="'Select region'" [(ngModel)]="searchValue.value">
-                <igx-select-item *ngFor="let reg of regionOptions" [value]="reg.value">
-                    {{ reg.text }}
-                </igx-select-item>
+                <igx-select-item *ngFor="let reg of regionOptions" [value]="reg.value">{{ reg.text }}</igx-select-item>
             </igx-select>
-        } 
-        @else if (
-            selectedField?.field === 'OrderStatus' &&
-            (selectedCondition === 'equals' || selectedCondition === 'doesNotEqual')
-            ){
-            <igx-radio-group>
-                <igx-radio class="radio-sample" *ngFor="let stat of statusOptions" value="{{stat.value}}" [(ngModel)]="searchValue.value">
+        } @else if (selectedField?.field === 'OrderStatus' && (selectedCondition === 'equals' || selectedCondition === 'doesNotEqual')){
+            <igx-radio-group [(ngModel)]="searchValue.value">
+                <igx-radio class="radio-sample" *ngFor="let stat of statusOptions" value="{{stat.value}}">
                     {{stat.text}}
                 </igx-radio>
             </igx-radio-group>
-        }
-            @else {  
-            <ng-container #defaultTemplate *ngTemplateOutlet="defaultSearchValueTemplate"></ng-container>
+        } @else {  
+            <ng-container *ngTemplateOutlet="defaultSearchValueTemplate"></ng-container>
         }
     </ng-template>
 </igx-query-builder>
