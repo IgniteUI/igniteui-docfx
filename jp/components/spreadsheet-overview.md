@@ -3,7 +3,7 @@ title: Angular Spreadsheet コンポーネント – Ignite UI for Angular
 _description: Ignite UI for Angular Spreadsheet を使用して、柔軟なレイアウト、簡単なカスタマイズ オプション、Excel のような便利なインターフェイスを利用できます。表データを好きなように管理できます。
 _keywords: Excel Spreadsheet, Ignite UI for Angular, Infragistics, Excel スプレッドシート, インフラジスティックス
 _language: ja
-mentionedTypes: ['Spreadsheet']
+mentionedTypes: ["Spreadsheet"]
 ---
 
 # Angular Spreadsheet の概要
