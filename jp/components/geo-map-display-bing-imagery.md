@@ -2,7 +2,7 @@
 title: Angular マップ | データ可視化ツール | Bing 画像の表示 | インフラジスティックス
 _description: インフラジスティックスの Angular を使用して Microsoft Bing Maps からの画像を表示します。Ignite UI for Angular マップ チュートリアルを是非お試しください!
 _keywords: Angular map, bing maps, Ignite UI for Angular, Infragistics, imagery tile source, map background, Angular マップ, bing マップ, インフラジスティックス, 画像タイル ソース, マップ背景
-mentionedTypes: ['XamGeographicMap', 'BingMapsMapImagery']
+mentionedTypes: ["XamGeographicMap", "BingMapsMapImagery"]
 _language: ja
 ---
 

@@ -2,7 +2,7 @@
 title: Angular ラジアル ゲージ チャート | データ可視化ツール | インフラジスティックス
 _description: インフラジスティックスの Angular ラジアル ゲージコ ントロールを使用して、魅力的なデータ可視化とダッシュボードを作成し、豊富なスタイルと対話機能を KPI で実現できます。Ignite UI for Angular ラジアル ゲージの設定可能な要素について説明します。
 _keywords: Radial Gauge, Ignite UI for Angular, Infragistics, animation, labels, needle, scales, ranges, tick marks, ラジアル ゲージ, インフラジスティックス, アニメーション, ラベル, 針, スケール, 範囲, 目盛
-mentionedTypes: ['XamRadialGauge', 'XamRadialGaugeRange']
+mentionedTypes: ["XamRadialGauge", "XamRadialGaugeRange"]
 namespace: Infragistics.Controls.Gauges
 _language: ja
 ---
@@ -143,9 +143,11 @@ export class AppModule {}
 </code-view>
 
 
-## ラベル
+## ラベルとタイトル
 
 ゲージ ラベルは [`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#minimumValue) と [`maximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#maximumValue) の値の間で指定された間隔で数値を表示する視覚要素です。0 はゲージ中央、1 はゲージ バッキングの外側範囲を表す [`labelExtent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#labelExtent) プロパティで小数を使用してラベルの配置を設定できます。[`fontBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#fontBrush) や [`font`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#font) など、さまざまなスタイル プロパティを設定してラベルをカスタマイズできます。
+
+これらの針のラベルにはそれぞれ、[`titleExtent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#titleExtent)、[`titleAngle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#titleAngle)、`SubtitleFontSize`、[`highlightLabelBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#highlightLabelBrush) など、フォント、角度、ブラシ、ゲージの中心からの距離を変更するために適用できるさまざまなスタイル属性があります。
 
 ```html
 <igx-radial-gauge
@@ -166,9 +168,22 @@ export class AppModule {}
 </code-view>
 
 
+## タイトルとサブタイトル
+
+[`titleText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#titleText) プロパティと [`subtitleText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#subtitleText) プロパティが使用可能であり、どちらも針のカスタム テキストを表示するために使用できます。あるいは、[`titleDisplaysValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#titleDisplaysValue) と [`subtitleDisplaysValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#subtitleDisplaysValue) を true に設定すると、針の値が表示され、[`titleText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#titleText) と [`subtitleText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#subtitleText) がオーバーライドされます。したがって、タイトルにカスタム テキストを使用しながらサブタイトルで値を表示したり、その逆を行ったりすることができます。
+
+以下に説明するように針のハイライトが表示されている場合は、[`highlightLabelText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#highlightLabelText) を介してカスタム テキストを表示できます。それ以外の場合は、[`highlightLabelDisplaysValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#highlightLabelDisplaysValue) を有効にしてその値を表示できます。
+
+```html
+<igx-radial-gauge
+    titleText="Global Sales"
+    subtitleText="2024">
+</igx-radial-gauge>
+```
+
 ## オプティカル スケーリング
 
-ラジアル ゲージのラベルとタイトルにより、スケーリングを変更できます。これを有効にするには、まず `OpticalScalingEnabled` を true に設定します。次に、ラベルが 100% のオプティカル スケーリングを持つサイズを管理する `OpticalScalingSize` を設定できます。ゲージのサイズが大きくなると、ラベルのフォントも大きくなります。たとえば、このプロパティが 500 に設定され、ゲージのピクセル単位のサイズが 2 倍の 1000 になると、ラベルのフォント サイズは 200% 大きくなります。
+ラジアル ゲージのラベルとタイトルにより、スケーリングを変更できます。これを有効にするには、まず [`opticalScalingEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#opticalScalingEnabled) を true に設定します。次に、ラベルが 100% のオプティカル スケーリングを持つサイズを管理する [`opticalScalingSize`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#opticalScalingSize) を設定できます。ゲージのサイズが大きくなると、ラベルのフォントも大きくなります。たとえば、このプロパティが 500 に設定され、ゲージのピクセル単位のサイズが 2 倍の 1000 になると、ラベルのフォント サイズは 200% 大きくなります。
 
 <code-view style="height: 500px" alt="Angular ラジアル ゲージのオプティカル スケーリング"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -273,7 +288,7 @@ export class AppModule {}
 
 ## 針のハイライト
 
-ラジアル ゲージを変更して、2 番目の針を表示できます。これにより、メイン針の [`value`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#value) の不透明度が低く表示されます。これを有効にするには、まず `HighlightValueDisplayMode` を Overlay に設定し、次に `HighlightValue` を適用します。
+ラジアル ゲージを変更して、2 番目の針を表示できます。これにより、メイン針の [`value`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#value) の不透明度が低く表示されます。これを有効にするには、まず [`highlightValueDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#highlightValueDisplayMode) を Overlay に設定し、次に [`highlightValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#highlightValue) を適用します。
 
 ```html
 <igx-radial-gauge #radialGauge

@@ -2,7 +2,7 @@
 title: Angular ステップ チャート | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular ステップ チャート
 _keywords: Angular Charts, Step Chart, Step Area Chart, Step Line Chart, Infragistics, Angular チャート, ステップ チャート, ステップ エリア チャート, ステップ折れ線チャート, インフラジスティックス
-mentionedTypes: ["DomainChart", "CategoryChart", "CategoryChartType", 'Series', "CategoryChartType"]
+mentionedTypes: ["DomainChart", "CategoryChart", "CategoryChartType", "Series", "CategoryChartType"]
 namespace: Infragistics.Controls.Charts
 _language: ja
 ---

@@ -2,7 +2,7 @@
 title: Angular マップ | データ可視化ツール | Open Street Maps 画像の表示 | インフラジスティックス
 _description: インフラジスティックスの Angular を使用して OSM Maps からの画像を表示します。Ignite UI for Angular マップ チュートリアルを是非お試しください!
 _keywords: Angular map, OSM, Ignite UI for Angular, Infragistics, imagery tile source, map background, Angular マップ, インフラジスティックス, 画像タイル ソース, マップ背景
-mentionedTypes: ['XamGeographicMap']
+mentionedTypes: ["XamGeographicMap"]
 _language: ja
 ---
 
