@@ -78,9 +78,9 @@ Ignite UI for Angular ツリーマップ チャートは、ネストされた一
 
 ツリーマップ チャートは、データの相対的な重みを表示します。さまざまなアルゴリズムを使用して、データ項目のレイアウトをどのように行うかを決定します。
 
-*   [`SliceAndDice`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.treemaplayouttype.html#SliceAndDice) - レイアウトのアルゴリズムは、縦横比を代わりに最初の順番を維持するようにします。
-*   [`Squarified`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.treemaplayouttype.html#Squarified) - レイアウトのタイリング アルゴリズムでは、[`SliceAndDice`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.treemaplayouttype.html#SliceAndDice) より縦横比がより正確で、Squarified より適切に並べ替えされます。
-*   [`Stripped`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.treemaplayouttype.html#Stripped) - タイプのアルゴリズムは、最適な縦横比を描画しますが、オブジェクトがサイズによって並べ替えられます。
+*   `SliceAndDice` - レイアウトのアルゴリズムは、縦横比を代わりに最初の順番を維持するようにします。
+*   `Squarified` - レイアウトのタイリング アルゴリズムでは、`SliceAndDice` より縦横比がより正確で、Squarified より適切に並べ替えされます。
+*   `Stripped` - タイプのアルゴリズムは、最適な縦横比を描画しますが、オブジェクトがサイズによって並べ替えられます。
 
 ツリーマップを使用すると、要件に最適なアルゴリズムを選択できます。デフォルトでは、Squarified メソッドが使用されます。また、次の 2 つのメカニズムを使用してノードに色を付けることができる機能も含まれています。
 
@@ -93,8 +93,8 @@ Ignite UI for Angular ツリーマップ チャートは、ネストされた一
 
 [`layoutOrientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#layoutOrientation) プロパティがレイアウト タイプ SliceAndDice および Strip と動作することに注意してください。
 
-*   [`Horizontal`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.treemaporientation.html#Horizontal) – 子ノードは水平に積み重ねられます (SliceAndDice)。
-*   [`Vertical`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.treemaporientation.html#Vertical) – 子ノードは垂直に積み重ねられます (SliceAndDice)。
+*   `Horizontal` – 子ノードは水平に積み重ねられます (SliceAndDice)。
+*   `Vertical` – 子ノードは垂直に積み重ねられます (SliceAndDice)。
 
 ## Angular ツリーマップのスタイル設定
 
@@ -110,7 +110,7 @@ Ignite UI for Angular ツリーマップ チャートは、ネストされた一
 ### Angular ツリーマップのハイライト表示
 
 次の例では、ツリーマップでノードのハイライト機能を示しています。
-この機能には 2 つのオプションがあります。各ノードは、不透明度を下げることで個別に明るくしたり、他のすべてのノードに同じ効果をトリガーさせたりすることができます。この機能を有効にするには、[`HighlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.highlightingmode.html) を Brighten または FadeOthers に設定します。
+この機能には 2 つのオプションがあります。各ノードは、不透明度を下げることで個別に明るくしたり、他のすべてのノードに同じ効果をトリガーさせたりすることができます。この機能を有効にするには、[`highlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#highlightingMode) を Brighten または FadeOthers に設定します。
 
 <code-view style="height: 600px" alt="Angular ツリーマップのハイライト"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -121,10 +121,10 @@ Ignite UI for Angular ツリーマップ チャートは、ネストされた一
 
 ## Angular ツリーマップのパーセントベースのハイライト表示
 
-*   `HighlightedItemsSource`: ハイライト表示された値を読み取るデータ ソースを指定します。null の場合、ハイライト表示された値は ItemsSource プロパティから読み取られます。
-*   `HighlightedValueMemberPath`: ハイライト表示された値が読み取られるデータ ソース内のプロパティの名前を指定します。
-*   `HighlightedValueOpacity`: ハイライト表示された値の背後にある通常の値の不透明度を制御します。
-*   `HighlightedValuesDisplayMode`: ハイライト表示された値を有効または無効にします。
+*   [`highlightedDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#highlightedDataSource): ハイライト表示された値を読み取るデータ ソースを指定します。null の場合、ハイライト表示された値は ItemsSource プロパティから読み取られます。
+*   [`highlightedValueMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#highlightedValueMemberPath): ハイライト表示された値が読み取られるデータ ソース内のプロパティの名前を指定します。
+*   [`highlightedValueOpacity`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#highlightedValueOpacity): ハイライト表示された値の背後にある通常の値の不透明度を制御します。
+*   [`highlightedValuesDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#highlightedValuesDisplayMode): ハイライト表示された値を有効または無効にします。
     *   Auto: ツリーマップによって、使用するモードが決まります。
     *   Overlay: ツリーマップには、通常の値の上にハイライト表示された値が表示され、通常の値にはわずかに不透明度が適用されます。
     *   Hidden: ツリーマップにはハイライト表示された値は表示されません。
@@ -151,6 +151,6 @@ Ignite UI for Angular ツリーマップ チャートは、ネストされた一
 
 *   [`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html)
 *   [`layoutOrientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#layoutOrientation)
-*   `HighlightedValuesDisplayMode`
-*   `HighlightedValueMemberPath`
+*   [`highlightedValuesDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#highlightedValuesDisplayMode)
+*   [`highlightedValueMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#highlightedValueMemberPath)
 *   [`layoutType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#layoutType)
