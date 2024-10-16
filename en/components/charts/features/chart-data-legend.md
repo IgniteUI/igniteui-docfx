@@ -124,8 +124,8 @@ You have the ability to change the default decimal display of values within the 
 
 ## Angular Data Legend Grouping
 
-`DataLegendGroup` can be set, on all types of series, to a string that will categorize a group of series in Data Legend. Each group will have its own summary row displayed before another group of series is displayed:
-By default, DataLegend will hide names of groups, but you can display group names by setting the `GroupRowVisible` property to true.
+[`dataLegendGroup`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriescomponent.html#dataLegendGroup) can be set, on all types of series, to a string that will categorize a group of series in Data Legend. Each group will have its own summary row displayed before another group of series is displayed:
+By default, DataLegend will hide names of groups, but you can display group names by setting the [`groupRowVisible`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#groupRowVisible) property to true.
 
 <code-view style="height: 450px" alt="Angular Data Legend Grouping"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -140,7 +140,7 @@ Several properties are exposed including grouping portions of the legend.
 
 *   `GroupRowMargin`
 *   `GroupTextMargin`
-*   `GroupTextColor`
+*   [`groupTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#groupTextColor)
 *   `GroupTextFontSize`
 *   `GroupTextFontFamily`
 *   `GroupTextFontStyle`

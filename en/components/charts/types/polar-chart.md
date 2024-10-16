@@ -2,7 +2,7 @@
 title: Angular Polar Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Polar Chart
 _keywords: Angular Charts, Polar Chart, Infragistics
-mentionedTypes: ["XamDataChart", "PolarAreaSeries", 'Series']
+mentionedTypes: ["XamDataChart", "PolarAreaSeries", "Series"]
 namespace: Infragistics.Controls.Charts
 ---
 

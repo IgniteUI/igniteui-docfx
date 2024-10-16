@@ -2,7 +2,7 @@
 title: Angular Point Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Point Chart
 _keywords: Angular Charts, Point Chart, Infragistics
-mentionedTypes: ["DomainChart", "CategoryChart", "CategoryChartType", "Legend", 'Series']
+mentionedTypes: ["DomainChart", "CategoryChart", "CategoryChartType", "Legend", "Series"]
 namespace: Infragistics.Controls.Charts
 ---
 
