@@ -2,7 +2,7 @@
 title: Angular Spreadsheet | Clipboard Operations | Infragistics
 _description: Use clipboard operations such as copy, cut and paste within Infragistics' Angular spreadsheet control. View Infragistics Ignite UI for Angular spreadsheet demos today!
 _keywords: Spreadsheet, clipboard operations, Ignite UI for Angular, Infragistics
-mentionedTypes: ['Spreadsheet', 'SpreadsheetAction', 'SpreadsheetCommandType', 'Command']
+mentionedTypes: ["Spreadsheet", "SpreadsheetAction", "SpreadsheetCommandType", "Command"]
 ---
 
 # Angular Working with Clipboard
