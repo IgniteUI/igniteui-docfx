@@ -65,7 +65,7 @@ import { IGX_QUERY_BUILDER_DIRECTIVES, FilteringExpressionsTree, FieldType } fro
     selector: 'app-home',
     template: `
     <igx-query-builder #queryBuilder
-        [entities]="entities"
+        [fields]="fields"
         [(expressionTree)]="expressionTree"
         (expressionTreeChange)="onExpressionTreeChange()">
     </igx-query-builder>
@@ -77,7 +77,7 @@ import { IGX_QUERY_BUILDER_DIRECTIVES, FilteringExpressionsTree, FieldType } fro
 })
 export class HomeComponent {
     public expressionTree: FilteringExpressionsTree;
-    public entities: Array<any>;
+    public fields: FieldType [];
 
     public onExpressionTreeChange() {
         ...
@@ -89,53 +89,41 @@ Ignite UI for Angular Query Builder モジュールまたはディレクティ�
 
 ## Angular Query Builder の使用
 
-最初に式木が設定されていない場合は、[`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) または [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or) で結合された条件のグループを作成することから開始します。次に、エンティティと、クエリで返すフィールドを選択します。その後、条件またはサブグループを追加できます。 
+最初に式木が設定されていない場合は、[`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) または [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or) で結合された条件のグループを作成することから開始します。その後、条件またはサブグループを追加できます。 
 
-条件を追加するには、フィールド、フィールドのデータ タイプに基づくオペランド、およびオペランドが単項でない場合は値を選択します。`In` オペランドと `Not In` オペランドを使用すると、単に値を指定するのではなく、異なるエンティティの条件を含む内部クエリを作成できます。条件が確定すると、条件情報を含むチップが表示されます。チップをホバーまたはクリックすると、チップを変更したり、その直後に別の条件やグループを追加したりできます。
+条件、フィールド、dataType フィールドに基づくオペランド、およびオペランドが単項でない場合の値を追加します。条件が確定すると、条件情報を含むチップが表示されます。チップをホバーまたはクリックすると、チップを変更したり、その直後に別の条件やグループを追加したりできます。
 
-複数の条件チップを選択すると、現在の選択をグループ化または削除するオプションを含むコンテキスト メニューが表示されます。選択した条件でグループを作成することを選択した場合、一番上に選択した条件が配置された場所に新しく作成されたグループが表示されます。
+複数の条件チップを選択すると、グループを作成したりクエリを削除したりするためのオプションを含むコンテキストメニューが表示されます。選択した条件でグループを作成することを選択した場合、一番上に選択した条件が配置された場所に新しく作成されたグループが表示されます。
 
 グループを選択するために、リンク条件 ([`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) または [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or)) に基づいて色付けされた垂直線をクリックすることもできます。単一のグループが選択されている場合、ロジックを変更、グループ解除、または削除するオプションを含むコンテキスト メニューが表示されます。
 
-すべての条件は特定のエンティティの特定のフィールドに関連しているため、エンティティを変更すると、すべての事前設定された条件とグループがリセットされます。新しいエンティティを選択すると、[`showEntityChangeDialog`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#showEntityChangeDialog) 入力プロパティが false に設定されていない限り、確認ダイアログが表示されます。
-
-[`entities`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#entities) プロパティを、エンティティ名とそのフィールドの配列を記述する配列に設定することで、コンポーネントの使用を開始できます。各フィールドは、名前とデータ タイプによって定義されます。フィールドが選択されると、データ タイプに基づいて対応するオペランドが自動的に割り当てられます。
+コンポーネントの使用を開始するには、[`fields`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#fields) プロパティに、フィールド名とそのデータ タイプを説明する配列を追加します。データ タイプに基づいて対応するオペランドを自動的に割り当てます。
 クエリ ビルダーには [`expressionTree`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#expressionTree) 入力プロパティがあります。コントロールの初期状態を設定するために使用できます。
 
 ```typescript
 ngAfterViewInit(): void {
-    const innerTree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'Companies', ['ID']);
-    innerTree.filteringOperands.push({
-        fieldName: 'Employees',
-        condition: IgxNumberFilteringOperand.instance().condition('greaterThan'),
-        conditionName: 'greaterThan',
-        searchVal: 100
-    });
-    innerTree.filteringOperands.push({
-        fieldName: 'Contact',
-        condition: IgxBooleanFilteringOperand.instance().condition('true'),
-        conditionName: 'true'
-    });
-
-    const tree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'Orders', ['*']);
+    const tree = new FilteringExpressionsTree(FilteringLogic.And);
     tree.filteringOperands.push({
-        fieldName: 'CompanyID',
-        condition: IgxStringFilteringOperand.instance().condition('in'),
-        conditionName: 'in',
-        searchTree: innerTree
+        fieldName: 'ID',
+        condition: IgxStringFilteringOperand.instance().condition('contains'),
+        searchVal: 'a',
+        ignoreCase: true
     });
-    tree.filteringOperands.push({
-        fieldName: 'OrderDate',
-        condition: IgxDateFilteringOperand.instance().condition('before'),
-        conditionName: 'before',
-        searchVal: new Date('2024-01-01T00:00:00.000Z')
+    const subTree = new FilteringExpressionsTree(FilteringLogic.Or);
+    subTree.filteringOperands.push({
+        fieldName: 'ContactTitle',
+        condition: IgxStringFilteringOperand.instance().condition('doesNotContain'),
+        searchVal: 'b',
+        ignoreCase: true
     });
-    tree.filteringOperands.push({
-        fieldName: 'ShippedDate',
-        condition: IgxDateFilteringOperand.instance().condition('null'),
-        conditionName: 'null'
+    subTree.filteringOperands.push({
+        fieldName: 'CompanyName',
+        condition: IgxStringFilteringOperand.instance().condition('startsWith'),
+        searchVal: 'c',
+        ignoreCase: true
     });
-
+    tree.filteringOperands.push(subTree);
+    
     this.queryBuilder.expressionTree = tree;
 }
 ```
@@ -144,75 +132,11 @@ ngAfterViewInit(): void {
 
 ```html
 <igx-query-builder #queryBuilder
-    [entities]="entities"
+    [fields]="fields"
     [(expressionTree)]="expressionTree"
     (expressionTreeChange)="onExpressionTreeChange()">
 </igx-query-builder>
 ```
-
-## テンプレート化
-
-Ignite UI for Angular Query Builder コンポーネントでは、次の定義済み参照名を使用して、コンポーネントのヘッダーと検索値のテンプレートを定義できます。
-
-### ヘッダー
-
-`igx-query-builder-header` 内にコンテンツを渡すと、クエリ ビルダー ヘッダーをテンプレート化できます。[`IgxQueryBuilderHeaderComponent`]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html) は、[`showLegend`]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html#showLegend) 入力プロパティを false に設定することで凡例を非表示にする方法を提供します。
-
-以下のコードはこれを実行する方法を示します。
-
-```html
-<igx-query-builder #queryBuilder [entities]="this.entities">
-        <igx-query-builder-header [title]="'Query Builder Template Sample'" [showLegend]="true">  
-        </igx-query-builder-header>
-</igx-query-builder>
-```
-
-### 検索値
-
-条件の検索値は、[`igxQueryBuilderSearchValue`]({environment:angularApiUrl}/classes/igxquerybuildersearchvaluetemplatedirective.html) ディレクティブを使用してテンプレート化でき、`igx-query-builder` 本体内の `<ng-template>` に適用されます。
-
-```html
-<igx-query-builder #queryBuilder
-    [entities]="entities"
-    [expressionTree]="expressionTree">
-    <ng-template #searchValueTemplate igxQueryBuilderSearchValue 
-                let-searchValue
-                let-selectedField = "selectedField" 
-                let-selectedCondition = "selectedCondition"
-                let-defaultSearchValueTemplate = "defaultSearchValueTemplate">
-        @if (
-            selectedField?.field === 'Region' &&
-            (selectedCondition === 'equals' || selectedCondition === 'doesNotEqual')
-            ){
-            <igx-select [placeholder]="'Select region'" [(ngModel)]="searchValue.value">
-                <igx-select-item *ngFor="let reg of regionOptions" [value]="reg.value">
-                    {{ reg.text }}
-                </igx-select-item>
-            </igx-select>
-        } 
-        @else if (
-            selectedField?.field === 'OrderStatus' &&
-            (selectedCondition === 'equals' || selectedCondition === 'doesNotEqual')
-            ){
-            <igx-radio-group>
-                <igx-radio class="radio-sample" *ngFor="let stat of statusOptions" value="{{stat.value}}" [(ngModel)]="searchValue.value">
-                    {{stat.text}}
-                </igx-radio>
-            </igx-radio-group>
-        }
-            @else {  
-            <ng-container #defaultTemplate *ngTemplateOutlet="defaultSearchValueTemplate"></ng-container>
-        }
-    </ng-template>
-</igx-query-builder>
-```
-
-この Angular Query Builder の例は、Angular Query Builder コンポーネントのヘッダーと検索値のテンプレート機能を紹介するために作成しました。
-
-<code-view style="height:530px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-template-sample" alt="Angular Query Builder テンプレートの例">
-</code-view>
 
 ## スタイル設定
 
@@ -523,8 +447,6 @@ $custom-drop-down: drop-down-theme(
 <div class="divider--half"></div>
 
 * [IgxQueryBuilderComponent API]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html)
-* [IgxQueryBuilderHeaderComponent]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html)
-* [IgxQueryBuilderSearchValueTemplateDirective]({environment:angularApiUrl}/classes/igxquerybuildersearchvaluetemplatedirective.html)
 * [IgxQueryBuilderComponent スタイル]({environment:sassApiUrl}/index.html#function-query-builder-theme)
 
 ## その他のリソース
