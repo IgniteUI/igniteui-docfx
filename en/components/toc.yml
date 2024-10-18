@@ -970,7 +970,6 @@
 - name: Query Builder
   href: query-builder.md
   new: false
-  updated: true
 - name: Radio & Radio Group
   href: radio-button.md
   new: false
