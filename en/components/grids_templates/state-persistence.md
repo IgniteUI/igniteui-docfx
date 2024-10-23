@@ -51,7 +51,8 @@ _canonicalLink: grid/state-persistence
 * `Expansion`
 * `GroupBy`
 * `Columns`
-    * **NEW**: Multi column headers are now supported out of the box
+    * Multi column headers
+    * Multi-row Layout
     * Columns order
     * Column properties defined by the [`IColumnState`]({environment:angularApiUrl}/interfaces/icolumnstate.html) interface.
     * Columns templates and functions are restored using application level code, see [Restoring Column](state-persistence.md#restoring-columns) section.
@@ -70,7 +71,7 @@ _canonicalLink: grid/state-persistence
 * `Row Pinning`
 * `Expansion`
 * `Columns`
-    * **NEW**: Multi column headers are now supported out of the box
+    * Multi column headers
     * Columns order
     * Column properties defined by the [`IColumnState`]({environment:angularApiUrl}/interfaces/icolumnstate.html) interface.
     * Columns templates and functions are restored using application level code, see [Restoring Column](state-persistence.md#restoring-columns) section.
@@ -173,7 +174,9 @@ public restoreGridState() {
 @@if (igxName !== 'IgxPivotGrid') {
 ## Restoring columns
 
-[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) will not persist columns templates, column formatters, etc. by default (see [`limitations`](state-persistence.md#limitations)). Restoring any of these can be achieved with code on application level. Let's show how to do this for templated columns:
+When possible the state directive will reuses the columns that already exists on the grid when restoring the state, instead of creating new column instances. The only scenario where a new instance will be created is when the column (or its children in case of a column groups) have no `field` property so there's no way to uniquely identify the matching column and re-use it.
+
+For such scenarios, the following [`limitations`](state-persistence.md#limitations) are imposed. In that case restoring complex objects can be achieved with code on application level. Let's show how to do this for templated columns:
 
 1. Define a template reference variable (in the example below it is `#activeTemplate`) and assign an event handler for the [`columnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnInit) event:
 @@if (igxName === 'IgxGrid') {
