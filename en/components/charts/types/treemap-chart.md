@@ -78,8 +78,8 @@ In the following example, the treemap demonstrates the ability of changing it's 
 The Treemap chart displays the relative weight of data. It uses a variety of algorithms to help it determine how the layout of its data items should occur:
 
 *   `SliceAndDiced` - layout algorithm aims to preserve the initial order at the expense of the aspect ratio.
-*   [`Squarified`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.treemaplayouttype.html#Squarified) - layout tiling algorithm has a better aspect ratio than the [`SliceAndDice`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.treemaplayouttype.html#SliceAndDice) and keeps a better order than Squarified.
-*   [`Stripped`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.treemaplayouttype.html#Stripped) - layout type algorithm obtains the best aspect ratio but the objects are arranged by size.
+*   `Squarified` - layout tiling algorithm has a better aspect ratio than the `SliceAndDice` and keeps a better order than Squarified.
+*   `Stripped` - layout type algorithm obtains the best aspect ratio but the objects are arranged by size.
 
 The Treemap allows you to choose the algorithm that is best for your requirements, defaulting to use the Squarified method. It also includes the ability to allow you to colorize nodes using two mechanisms:
 
@@ -92,8 +92,8 @@ The Treemap allows you to choose the algorithm that is best for your requirement
 
 Note that the [`layoutOrientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#layoutOrientation) property works with the layout types SliceAndDice and Strip.
 
-*   [`Horizontal`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.treemaporientation.html#Horizontal) – the child nodes are going to be stacked horizontally(SliceAndDice).
-*   [`Vertical`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.treemaporientation.html#Vertical) – the child nodes are going to be stacked vertically (SliceAndDice).
+*   `Horizontal` – the child nodes are going to be stacked horizontally(SliceAndDice).
+*   `Vertical` – the child nodes are going to be stacked vertically (SliceAndDice).
 
 ## Angular Treemap Styling
 
@@ -108,7 +108,7 @@ In the following example, the treemap demonstrates the ability of changing the l
 
 ### Angular Treemap Highlighting
 
-In the following example, the treemap demonstrates the ability of node highlighting. There are two options for this feature. Each node can individually brighten, by decreasing its opacity, or cause all other nodes to trigger the same effect. To enable this feature, set [`HighlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.highlightingmode.html)to Brighten or FadeOthers.
+In the following example, the treemap demonstrates the ability of node highlighting. There are two options for this feature. Each node can individually brighten, by decreasing its opacity, or cause all other nodes to trigger the same effect. To enable this feature, set [`highlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#highlightingMode)to Brighten or FadeOthers.
 
 <code-view style="height: 600px" alt="Angular Treemap Highlighting"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -119,10 +119,10 @@ In the following example, the treemap demonstrates the ability of node highlight
 
 ## Angular Treemap Percent based highlighting
 
-*   `HighlightedItemsSource`: Specifies the datasource to read highlighted values from. If null, then highlighted values are read from the ItemsSource property.
-*   `HighlightedValueMemberPath`: Specifies the name of the property in the datasource where the highlighted values are read.
-*   `HighlightedValueOpacity`: Controls the opacity of the normal value behind the highlighted value.
-*   `HighlightedValuesDisplayMode`: Enables or disables highlighted values.
+*   [`highlightedDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#highlightedDataSource): Specifies the datasource to read highlighted values from. If null, then highlighted values are read from the ItemsSource property.
+*   [`highlightedValueMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#highlightedValueMemberPath): Specifies the name of the property in the datasource where the highlighted values are read.
+*   [`highlightedValueOpacity`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#highlightedValueOpacity): Controls the opacity of the normal value behind the highlighted value.
+*   [`highlightedValuesDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#highlightedValuesDisplayMode): Enables or disables highlighted values.
     *   Auto: The treemap decides what mode to use.
     *   Overlay: The treemap displays highlighted values over top the normal value with a slight opacity applied to the normal value.
     *   Hidden: The treemap does not show highlighted values.
@@ -149,6 +149,6 @@ The following is a list of API members mentioned in the above sections:
 
 *   [`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html)
 *   [`layoutOrientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#layoutOrientation)
-*   `HighlightedValuesDisplayMode`
-*   `HighlightedValueMemberPath`
+*   [`highlightedValuesDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#highlightedValuesDisplayMode)
+*   [`highlightedValueMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#highlightedValueMemberPath)
 *   [`layoutType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#layoutType)
