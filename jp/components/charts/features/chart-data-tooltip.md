@@ -81,7 +81,7 @@ Ignite UI for Angular では、**DataToolTip** は、シリーズの値とタイ
 
 ## Angular データ チャートのデータ ツールチップのグループ化
 
-`DataLegendGroup` は、すべてのタイプのシリーズで、データ凡例内のシリーズ グループを分類する文字列に設定できます。各グループには、別のシリーズ グループが表示される前に、独自の集計行が表示されます。デフォルトでは、DataLegend はグループ名を非表示にしますが、`GroupRowVisible` プロパティを true に設定するとグループ名を表示できます。データ ツールチップ レイヤーで [`groupingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatatooltiplayercomponent.html#groupingMode) を 「Grouped」 に設定し、[`labelDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#labelDisplayMode) を 「Visible」 に設定する必要があります。
+[`dataLegendGroup`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriescomponent.html#dataLegendGroup) は、すべてのタイプのシリーズで、データ凡例内のシリーズ グループを分類する文字列に設定できます。各グループには、別のシリーズ グループが表示される前に、独自の集計行が表示されます。デフォルトでは、DataLegend はグループ名を非表示にしますが、[`groupRowVisible`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#groupRowVisible) プロパティを true に設定するとグループ名を表示できます。データ ツールチップ レイヤーで [`groupingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatatooltiplayercomponent.html#groupingMode) を 「Grouped」 に設定し、[`labelDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#labelDisplayMode) を 「Visible」 に設定する必要があります。
 
 <code-view style="height: 450px" alt="Angular データ ツールチップのグループ化"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -143,7 +143,7 @@ Ignite UI for Angular では、**DataToolTip** は、シリーズの値とタイ
 ツールチップのグループ化部分を含むいくつかのプロパティが公開されています。
 
 *   `GroupTextMargin`
-*   `GroupTextColor`
+*   [`groupTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#groupTextColor)
 *   `GroupTextFontSize`
 *   `GroupTextFontFamily`
 *   `GroupTextFontStyle`

@@ -2,7 +2,7 @@
 title: Angular Chart Performance | Data Visualization | Infragistics
 _description: Infragistics' Angular Chart Performance
 _keywords: Angular Charts, Performance, Infragistics
-mentionedTypes: ["DomainChart", "CategoryChart", "FinancialChart", "XamDataChart"]
+mentionedTypes: ["DomainChart", "CategoryChart", "FinancialChart", "XamDataChart", "FinancialChartVolumeType", "FinancialChartZoomSliderType"]
 namespace: Infragistics.Controls.Charts
 ---
 
@@ -74,11 +74,9 @@ export class MultiDataSources {
         const dataSource1: any[] = [];
         dataSource1.push({ "Year": "1996", "Value": 148 });
         dataSource1.push({ "Year": "2000", "Value": 142 });
-
         const dataSource2: any[] = [];
         dataSource2.push({ "Year": "1996", "Value": 110 });
         dataSource2.push({ "Year": "2000", "Value": 115 });
-
         const multipleSources: any[] = [dataSource1, dataSource2];
         return multipleSources;
     }
@@ -100,7 +98,7 @@ this.Chart.excludedProperties = [ "CHN",  "FRN", "GER" ];
 
 ### Chart Types
 
-Simpler chart types such as [Line Chart](../types/line-chart.md) have faster performance than using [Spline Chart](../types/spline-chart.md) because of the complex interpolation of spline lines between data points. Therefore, you should use [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#chartType) property of Angular [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) or the [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html) control to select type of chart that renders faster. Alternatively, you can change a type of series to a faster series in Angular [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) control.
+Simpler chart types such as [Line Chart](../types/line-chart.md) have faster performance than using [Spline Chart](../types/spline-chart.md) because of the complex interpolation of spline lines between data points. Therefore, you should use [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#chartType) property of Angular [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) or the [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html) control to select type of chart that renders faster. Alternatively, you can change a type of series to a faster series in Angular [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) control.
 
 The following table lists chart types in order from the fastest performance to slower performance in each group of charts:
 
@@ -312,16 +310,16 @@ Setting a lot of panes using [`indicatorTypes`]({environment:dvApiBaseUrl}/produ
 
 ### Zoom Slider
 
-Setting the [`zoomSliderType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#zoomSliderType) option to `None` will improve chart performance and enable more vertical space for other indicators and the volume pane.
+Setting the [`zoomSliderType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#zoomSliderType) option to [`None`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#None) will improve chart performance and enable more vertical space for other indicators and the volume pane.
 
 ### Volume Type
 
 Setting the [`volumeType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#volumeType) property can have the following impact on chart performance:
 
-*   `None` - is the least expensive since it does not display the volume pane.
-*   `Line` - is more expensive volume type to render and it is recommended when rendering a lot of data points or when plotting a lot of data sources.
-*   `Area` - is more expensive to render than the `Line` volume type.
-*   [`IgxColumn`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_grids_grids.igxcolumn.html) - is more expensive to render than the `Area` volume type and it is recommended when rendering volume data of 1-3 stocks.
+*   [`None`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#None) - is the least expensive since it does not display the volume pane.
+*   [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#Line) - is more expensive volume type to render and it is recommended when rendering a lot of data points or when plotting a lot of data sources.
+*   [`Area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#Area) - is more expensive to render than the [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#Line) volume type.
+*   [`Column`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#Column) - is more expensive to render than the [`Area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#Area) volume type and it is recommended when rendering volume data of 1-3 stocks.
 
 ## Performance in Data Chart
 

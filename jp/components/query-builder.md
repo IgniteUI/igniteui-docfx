@@ -8,7 +8,7 @@ _language: ja
 
 # Angular Query Builder (クエリ ビルダー) コンポーネントの概要
 
-Angular Query Builder は、[Angular コンポーネント](https://jp.infragistics.com/products/ignite-ui-angular)の一部であり、開発者が指定されたデータ セットに対して複雑なデータ フィルタリング クエリを作成できる機能豊富な UI を提供します。このコンポーネントを使用すると、式のツリーを構築し、エディターと各フィールドのデータ型によって決定される条件リストを使用して、それらの間に AND/OR 条件を設定できます。式ツリーは、バックエンドがサポートする形式のクエリに簡単に変換できます。
+Angular Query Builder は、[Angular コンポーネント](https://jp.infragistics.com/products/ignite-ui-angular)の一部であり、開発者が指定されたデータ セットに対して複雑なデータ フィルタリング クエリを作成できる機能豊富な UI を提供します。このコンポーネントを使用すると、式のツリーを構築し、エディターと各フィールドのデータ タイプによって決定される条件リストを使用して、それらの間に AND/OR 条件を設定できます。式ツリーは、バックエンドがサポートする形式のクエリに簡単に変換できます。
 
 <p class="highlight">
 
@@ -97,7 +97,7 @@ Ignite UI for Angular Query Builder モジュールまたはディレクティ�
 
 グループを選択するために、リンク条件 ([`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) または [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or)) に基づいて色付けされた垂直線をクリックすることもできます。単一のグループが選択されている場合、ロジックを変更、グループ解除、または削除するオプションを含むコンテキスト メニューが表示されます。
 
-コンポーネントの使用を開始するには、[`fields`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#fields) プロパティに、フィールド名とそのデータ型を説明する配列を追加します。データ型に基づいて対応するオペランドを自動的に割り当てます。
+コンポーネントの使用を開始するには、[`fields`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#fields) プロパティに、フィールド名とそのデータ タイプを説明する配列を追加します。データ タイプに基づいて対応するオペランドを自動的に割り当てます。
 クエリ ビルダーには [`expressionTree`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#expressionTree) 入力プロパティがあります。コントロールの初期状態を設定するために使用できます。
 
 ```typescript
