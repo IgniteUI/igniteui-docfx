@@ -1,10 +1,3 @@
-<style>
-    /* Fix for the overlapping right side-affix when the screen is shrinked */
-    .table-responsive {
-        width:63vw;
-    }
-</style>
-
 @@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid の編集 - Ignite UI for Angular
@@ -29,6 +22,13 @@ _keywords: データ操作, ignite ui for angular, インフラジスティッ�
 _language: ja
 ---
 }
+
+<style>
+    /* Fix for the overlapping right side-affix when the screen is shrinked */
+    .table-responsive {
+        width:63vw;
+    }
+</style>
 
 # Angular @@igComponent 編集
 
@@ -70,6 +70,24 @@ Ignite UI for Angular @@igComponent コンポーネントは、レコードの�
 - カスタム テンプレートについては、[セル編集トピック](cell-editing.md#セル編集テンプレート)を参照してください。
 
 すべての利用可能な列データ型は、公式の[列タイプ トピック](column-types.md#デフォルトのテンプレート)にあります。
+
+#### 日付/時刻列のデフォルトのテンプレート エディター
+
+`date`、`dateTime`、`time` 列データ タイプのテンプレート エディターは、`IgxGrid` の [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) に応じてデフォルトの入力形式を使用します。
+
+列に [`pipeArgs`]({environment:angularApiUrl}/interfaces/columntype.html#pipeArgs) オブジェクトの `format` プロパティが設定されている場合、エディターの入力形式はそこから推測されます。条件は、数値の日付と時刻の部分のみを含むものとして解析できることです。
+
+エディターの入力形式を明示的に設定する必要がある場合は、[`IColumnEditorOptions`]({environment:angularApiUrl}/interfaces/icolumneditoroptions.html) タイプの [`editorOptions`]({environment:angularApiUrl}/interfaces/columntype.html#editorOptions) オブジェクトを利用できます。これは、`date`、`dateTime`、および `time` 列データ タイプのエディターの入力形式として使用される `dateTimeFormat` プロパティを受け入れます。
+
+```typescript
+const editorOptions: IColumnEditorOptions = {
+    dateTimeFormat: 'MM/dd/YYYY',
+}
+```
+
+```html
+<igx-column field="sampleDate" dataType="date" [editorOptions]="editorOptions"></igx-column>
+```
 
 ### イベントの引数とシーケンス
 グリッドは、編集エクスペリエンスをより詳細に制御できる広範なイベントを公開します。これらのイベントは、[**行の編集**](row-editing.md)および[**セルの編集**](cell-editing.md)のライフサイクル - 編集の開始、コミット、またはキャンセル時に発生します。
@@ -160,6 +178,7 @@ public onSorting(event: ISortingEventArgs) {
 
 ## その他のリソース
 <div class="divider--half"></div>
+
 
 * [igxGrid を使用して CRUD 操作の構築](../general/how-to/how-to-perform-crud.md)
 * [@@igComponent 概要](@@igMainTopic.md)
