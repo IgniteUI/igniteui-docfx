@@ -254,29 +254,30 @@ public restore() {
            iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" >
 </code-view>
 
-### Overlay Settings
-The [`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html) uses [Overlay Settings]({environment:angularApiUrl}/interfaces/overlaysettings.html) to control the position of its container. The default settings can be changed by defining Custom OverlaySettings and passing them to the snackbar `open()` method:
-
-```typescript
-public customSettings: OverlaySettings = {
-    positionStrategy: new GlobalPositionStrategy(
-        { 
-            horizontalDirection: HorizontalAlignment.Left,
-            verticalDirection: VerticalAlignment.Top
-        }),
-    modal: true,
-    closeOnOutsideClick: true,
-};
-
-snackbar.open(customSettings);
-```
-
-Users can also provide a specific outlet where the snackbar will be placed in the DOM when it is visible:
+### Positioning
+Use [`positionSettings`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#positionSettings) property to configure where the snackbar appears. By default, it is displayed at the bottom of the page. In the sample below, we set notification to appear at the top position.
 
 ```html
-<igx-snackbar [outlet]="igxBodyOverlayOutlet"></igx-snackbar>
-<div #igxBodyOverlayOutlet igxOverlayOutlet></div>
+<!--sample.component.html-->
+<div>
+    <button igxButton="contained" (click)="open(snackbar)">Show notification on top</button>
+    <igx-snackbar #snackbar>Notification displayed</igx-snackbar>
+</div>
 ```
+
+```typescript
+// sample.component.ts
+import { VerticalAlignment, HorizontalAlignment } from 'igniteui-angular';
+// import { VerticalAlignment, HorizontalAlignment } from '@infragistics/igniteui-angular'; for licensed package
+...
+public open(snackbar) {
+    snackbar.positionSettings.verticalDirection = VerticalAlignment.Top;
+    snackbar.positionSettings.horizontalDirection = HorizontalAlignment.Right;
+    snackbar.open();
+}
+...
+```
+
 ## Styling
 To get started with styling the snackbar, we need to import the index file, where all the theme functions and component mixins live:
 
