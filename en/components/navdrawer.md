@@ -69,13 +69,11 @@ import { IGX_NAVIGATION_DRAWER_DIRECTIVES, IgxRippleDirective, IgxIconComponent 
     <div class="content-wrap">
         <igx-nav-drawer [isOpen]="true">
             <ng-template igxDrawer>
-                <nav>
-                    <span igxDrawerItem [isHeader]="true">Components</span>
-                    <span *ngFor="let item of navItems" igxDrawerItem [active]="item.text === selected" igxRipple (click)="navigate(item)">
-                        <igx-icon fontSet="material">{{ item.name }}</igx-icon>
-                        <span>{{ item.text }}</span>
-                    </span>
-                </nav>
+                <span igxDrawerItem [isHeader]="true">Components</span>
+                <span *ngFor="let item of navItems" igxDrawerItem [active]="item.text === selected" igxRipple (click)="navigate(item)">
+                    <igx-icon fontSet="material">{{ item.name }}</igx-icon>
+                    <span>{{ item.text }}</span>
+                </span>
             </ng-template>
         </igx-nav-drawer>
         <main>
@@ -117,14 +115,12 @@ The [`igxRipple`](ripple.md) directive completes the look and feel:
 <div class="content-wrap">
   <igx-nav-drawer id="navigation" #drawer [isOpen]="true">
     <ng-template igxDrawer>
-      <nav>
         <span igxDrawerItem [isHeader]="true">Components</span>
         <span *ngFor="let item of navItems" igxDrawerItem [active]="item.text === selected"
         igxRipple (click)="navigate(item)">
           <igx-icon fontSet="material">{{ item.name }}</igx-icon>
           <span>{{ item.text }}</span>
         </span>
-      </nav>
     </ng-template>
   </igx-nav-drawer>
   <main>
@@ -334,15 +330,13 @@ export class AppComponent {
 
 <!-- ... -->
 <ng-template igxDrawer>
-    <nav>
-        <span igxDrawerItem [isHeader]="true">Components</span>
+    <span igxDrawerItem [isHeader]="true">Components</span>
 
-        <span *ngFor="let item of componentLinks" routerLink="{{item.link}}"
-            routerLinkActive #rla="routerLinkActive"
-            igxDrawerItem igxRipple [active]="rla.isActive">
-                {{item.name}}
-        </span>
-    </nav>
+    <span *ngFor="let item of componentLinks" routerLink="{{item.link}}"
+        routerLinkActive #rla="routerLinkActive"
+        igxDrawerItem igxRipple [active]="rla.isActive">
+            {{item.name}}
+    </span>
 </ng-template>
 <!-- ... -->
 ```
