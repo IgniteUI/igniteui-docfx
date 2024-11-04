@@ -255,7 +255,7 @@ public restore() {
 </code-view>
 
 ### Positioning
-Use [`positionSettings`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#positionSettings) property to configure where the snackbar appears. By default, it is displayed at the bottom of the page. In the sample below, we set notification to appear at the top position.
+Use [`positionSettings`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#positionSettings) property to configure where the snackbar appears. By default, it is displayed at the bottom of the page. In the sample below, we set notification to appear at the top position.
 
 ```html
 <!--sample.component.html-->
