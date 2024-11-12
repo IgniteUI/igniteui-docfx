@@ -259,10 +259,8 @@ Use [`positionSettings`]({environment:angularApiUrl}/classes/igxsnackbarcomponen
 
 ```html
 <!--sample.component.html-->
-<div>
-    <button igxButton="contained" (click)="open(snackbar)">Show notification on top</button>
-    <igx-snackbar #snackbar>Notification displayed</igx-snackbar>
-</div>
+<button igxButton="contained" (click)="open(snackbar)">Show notification on top</button>
+<igx-snackbar #snackbar>Notification displayed</igx-snackbar>
 ```
 
 ```typescript
