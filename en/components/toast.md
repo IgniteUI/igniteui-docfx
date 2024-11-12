@@ -110,9 +110,6 @@ public showMessage() {
 }
 ```
 
-> [!WARNING]
-> The igx-toast component `show` and `hide` methods have been deprecated. `open` and `close` should be used instead.
-
 ## Examples
 
 ### Hide/Auto Hide
@@ -178,30 +175,6 @@ public open(toast) {
            iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-5" >
 </code-view>
 
-### Overlay Settings
-The [`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html) uses [Overlay Settings]({environment:angularApiUrl}/interfaces/overlaysettings.html) to control the position of its container. The default settings can be changed by defining Custom OverlaySettings and passing them to the toast `open()` method:
-
-```typescript
-public customSettings: OverlaySettings = {
-    positionStrategy: new GlobalPositionStrategy(
-        { 
-            horizontalDirection: HorizontalAlignment.Left,
-            verticalDirection: VerticalAlignment.Top
-        }),
-    modal: true,
-    closeOnOutsideClick: true,
-};
-
-toast.open(customSettings);
-```
-
-Users can also provide a specific outlet where the toast will be placed in the DOM when it is visible:
-
-```html
-<igx-toast [outlet]="igxBodyOverlayOutlet"></igx-toast>
-<div #igxBodyOverlayOutlet igxOverlayOutlet></div>
-```
-
 <div class="divider--half"></div>
 
 ## Styling
@@ -215,7 +188,7 @@ To get started with styling the toast, we need to import the index file, where a
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`toast-theme`]({environment:sassApiUrl}/index.html#function-toast-theme) and accepts the `$shadow`, `$background`, `$text-color` and the `$border-radius` parameters.
+Following the simplest approach, we create a new theme that extends the [`toast-theme`]({environment:sassApiUrl}/index.html#function-toast-theme) and accepts the `$background`, `$text-color` and `$border-radius` parameters.
 
 ```scss
 $custom-toast-theme: toast-theme(
