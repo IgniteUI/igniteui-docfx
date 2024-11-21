@@ -121,21 +121,6 @@ public chipRemoved(event: IBaseChipEventArgs) {
     this.changeDetectionRef.detectChanges();
 }
 ```
-
-### Dragging
-
-Dragging can be enabled by setting the [`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removable) input to `true`. When enabled, you can click and drag the chip around.
-
-```html
-<igx-chip *ngFor="let chip of chipList" [id]="chip.id" [draggable]="true">
-    <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
-    {chip.text}}
-</igx-chip>
-```
-
->[!NOTE]
->To reorder the chips you need to handle the event using the [`IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html).
-
 <div class="divider"></div>
 
 **To create the demo sample, we will use the features above:**
