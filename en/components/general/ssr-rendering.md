@@ -60,6 +60,7 @@ ng serve
 - If using ElementRef for HTML element handling, don’t use the nativeElement to manipulate attributes on the element. Instead, inject and use the [Renderer2 methods](https://alligator.io/angular/using-renderer2).
 - All URLs for server requests should be absolute, keep in mind that data requests from relative URLs will fail when running from the server.
 - For handling browser events the Angular team provides the [withEventReplay()](https://angular.dev/guide/hydration#capturing-and-replaying-events) function. This feature allows to capture all events that happen before hydration and replay those events once hydration has completed.
+- If using IgxIconService to register icons please make sure that you have configured [provideHttpClient()](https://angular.dev/api/common/http/provideHttpClient) in your providers.
 - When using Angular SSR, the server will pre-render pages that will be visible to the users, however, interactions will be limited. Once the client-side app is loaded in the background, it will seamlessly switch from showing the server-rendered pages to the client-side app.
 
 ## Useful resources
