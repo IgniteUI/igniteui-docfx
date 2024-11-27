@@ -116,55 +116,6 @@ All available column data types could be found in the official [Column types top
 ```
 }
 
-**@@igComponent summaries** can be customized further by using the [`disabledSummaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disabledSummaries) property, which allows you to exclude specific summary functions for a column. This property accepts an array of strings representing the keys of the summaries to disable. 
-
-@@if (igxName === 'IgxGrid') {
-For example, to disable the `count`, `min`, and `max` summaries for a `ReorderLevel` column, you can set the `disabledSummaries` property to `['count', 'min', 'max']`:
-
-```html
-<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)">
-    <igx-column field="ProductID" header="Product ID" width="200px" [sortable]="true"></igx-column>
-    <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true"></igx-column>
-    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true" [disabledSummaries]="['count', 'min', 'max']">
-    </igx-column>
-</@@igSelector>
-```
-}
-@@if (igxName === 'IgxTreeGrid') {
-For example, to disable the `count`, `min`, and `max` summaries for a `Units` column, you can set the `disabledSummaries` property to `['count', 'min', 'max']`:
-
-```html
-<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)">
-    <igx-column field="ID" header="Order ID" width="200px" [sortable]="true"></igx-column>
-    <igx-column field="Name" header="Order Product" width="200px" [sortable]="true" [hasSummary]="true"></igx-column>
-    <igx-column field="Units" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true" [disabledSummaries]="['count', 'min', 'max']">
-    </igx-column>
-</@@igSelector>
-```
-}
-@@if (igxName === 'IgxHierarchicalGrid') {
-For example, to disable the `count`, `min`, and `max` summaries for a `Grammy Nominations` column, you can set the `disabledSummaries` property to `['count', 'min', 'max']`:
-
-```html
-<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false">
-    <igx-column field="Artist" [hasSummary]='true'></igx-column>
-    <igx-column field="Photo">
-        <ng-template igxCell let-cell="cell">
-            <div class="cell__inner_2">
-                <img [src]="cell.value" class="photo" />
-            </div>
-        </ng-template>
-    </igx-column>
-    <igx-column field="Debut" [hasSummary]='true'></igx-column>
-    <igx-column field="Grammy Nominations" [hasSummary]='true' [dataType]="'number'" [summaries]="mySummary" [disabledSummaries]="['count', 'min', 'max']">
-    </igx-column>
-    <igx-column field="Grammy Awards" [hasSummary]='true' [dataType]="'number'"></igx-column>
-</igx-hierarchical-grid>
-```
-}
-
-In this example, the numeric column will display only the remaining summaries, such as `average` and `sum`, while excluding the disabled ones. This approach ensures that you can tailor the summary results displayed for each column to better suit your application's requirements.
-
 The other way to enable/disable summaries for a specific column or a list of columns is to use the public method [`enableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#enableSummaries)/[`disableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#disableSummaries) of the **@@igSelector**.
 
 @@if (igxName === 'IgxGrid') {
@@ -377,59 +328,6 @@ export class HGridSummarySampleComponent implements OnInit {
 ```
 }
 
-**@@igComponent summaries** also support customization when using the [`disabledSummaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disabledSummaries) property alongside custom summaries. This property allows you to exclude specific custom summary, offering precise control over which summaries are displayed for a given column. For example, to disable a custom summary like `test` while keeping others active, you can use the `disabledSummaries` property and set it to `['test']`:
-
-@@if (igxName === 'IgxGrid') {
-```html
- <@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)">
-    <igx-column field="ProductID" width="200px"  [sortable]="true">
-    </igx-column>
-    <igx-column field="ProductName" width="200px" [sortable]="true" [hasSummary]="true">
-    </igx-column>
-    <igx-column field="UnitsInStock" width="200px" [dataType]="'number'" [hasSummary]="true" [summaries]="mySummary" [disabledSummaries]="['test']" [sortable]="true">
-    </igx-column>
-    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true">
-    </igx-column>
- </@@igSelector>
-```
-
-In this example, the `UnitsInStock` column uses the custom `MySummary` class but excludes the `test` summary function by specifying it in the `disabledSummaries` property. This configuration allows for even greater flexibility, enabling you to disable custom summaries to suit your application's specific needs.
-}
-
-@@if (igxName === 'IgxTreeGrid') {
-```html
-<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)">
-    <igx-column field="ID" header="Order ID" width="200px" [sortable]="true"></igx-column>
-    <igx-column field="Name" header="Order Product" width="200px" [sortable]="true" [hasSummary]="true"></igx-column>
-    <igx-column field="Units" [dataType]="'number'" width="200px" [editable]="true" [hasSummary]="true" [summaries]="mySummary" [disabledSummaries]="['test']">
-    </igx-column>
-    <igx-column field="UnitPrice" header="Unit Price" width="200px" [dataType]="'number'" [dataType]="'currency'" [hasSummary]="true"></igx-column>
-</@@igSelector>
-```
-
-In this example, the `Units` column uses the custom `MySummary` class but excludes the `test` summary function by specifying it in the `disabledSummaries` property. This configuration allows for even greater flexibility, enabling you to disable custom summaries to suit your application's specific needs.
-}
-
-@@if (igxName === 'IgxHierarchicalGrid') {
-```html
- <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false">
-    <igx-column field="Artist" [hasSummary]='true'></igx-column>
-    <igx-column field="Photo">
-        <ng-template igxCell let-cell="cell">
-            <div class="cell__inner_2">
-                <img [src]="cell.value" class="photo" />
-            </div>
-        </ng-template>
-    </igx-column>
-    <igx-column field="Debut" [hasSummary]='true'></igx-column>
-    <igx-column field="Grammy Nominations" [hasSummary]='true' [dataType]="'number'" [summaries]="mySummary" [disabledSummaries]="['test']"></igx-column>
-    <igx-column field="Grammy Awards" [hasSummary]='true' [dataType]="'number'"></igx-column>
-</igx-hierarchical-grid>
-```
-
-In this example, the `Grammy Nominations` column uses the custom `MySummary` class but excludes the `test` summary function by specifying it in the `disabledSummaries` property. This configuration allows for even greater flexibility, enabling you to disable custom summaries to suit your application's specific needs.
-}
-
 ### Custom summaries, which access all data
  Now you can access all @@igComponent data inside the custom column summary. Two additional optional parameters are introduced in the IgxSummaryOperand `operate` method.
 As you can see in the code snippet below the operate method has the following three parameters:
@@ -534,7 +432,175 @@ When a default summary is defined, the height of the summary area is calculated 
 
 }
 
+## Disable Summaries
 
+The [`disabledSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#disabledSummaries) property provides precise control over the summary functions displayed for each column in the grid. This property is particularly useful when you want to remove unnecessary or less relevant summaries, ensuring that only meaningful and context-specific results are presented to users. It accepts an array of strings, such as `['count', 'min', 'max']`, where each string corresponds to a **summary key** that should be excluded from the column's displayed summaries.
+
+This property can also be modified **dynamically at runtime** through code, providing flexibility to adapt the grid's summaries to changing application states or user actions.
+
+Below are examples demonstrating the use of the `disabledSummaries` property for each grid type, along with details on how to dynamically update summaries at runtime.
+
+@@if (igxName === 'IgxGrid') {
+```html
+<!-- default summaries -->
+<igx-column
+    field="UnitPrice"
+    header="Unit Price"
+    dataType="number"
+    [hasSummary]="true"
+    [disabledSummaries]="['count', 'sum', 'average']"
+>
+</igx-column>
+<!-- custom summaries -->
+<igx-column
+    field="UnitsInStock"
+    header="Units In Stock"
+    dataType="number"
+    [hasSummary]="true"
+    [summaries]="discontinuedSummary"
+    [disabledSummaries]="['total', 'totalDiscontinued']"
+>
+</igx-column>
+```
+For `UnitPrice`, default summaries like `count`, `sum`, and `average` are disabled, leaving others like `min` and `max` active.
+
+For `UnitsInStock`, custom summaries such as `total` and `totalDiscontinued` are excluded using the `disabledSummaries` property.
+
+```typescript
+public disableDefaultSummary(event) {
+    const selectedValue = this.defaultSummaries[event.index].value;
+    const column = this.grid1.getColumnByName('UnitPrice');
+
+    if (!column.disabledSummaries.includes(selectedValue)) {
+        column.disabledSummaries = [...column.disabledSummaries, selectedValue];
+    }
+}
+
+public enableDefaultSummary(event) {
+    const selectedValue = this.defaultSummaries[event.index].value;
+    const column = this.grid1.getColumnByName('UnitPrice');
+
+    column.disabledSummaries = column.disabledSummaries.filter(
+        (summary) => summary !== selectedValue
+    );
+}
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<!-- custom summaries -->
+<igx-column
+    field="Units"
+    header="Units"
+    dataType="number"
+    [hasSummary]="true"
+    [summaries]="unitsSummary"
+    [disabledSummaries]="['totalDelivered', 'totalNotDelivered']"
+>
+</igx-column>
+<!-- default summaries -->
+<igx-column
+    field="UnitPrice"
+    header="Unit Price"
+    dataType="number"
+    [hasSummary]="true"
+    [disabledSummaries]="['count', 'sum', 'average']"
+>
+</igx-column>
+```
+For `Units`, custom summaries such as `totalDelivered` and `totalNotDelivered` are excluded using the `disabledSummaries` property.
+
+For `UnitPrice`, default summaries like `count`, `sum`, and `average` are disabled, leaving others like `min` and `max` active.
+
+```typescript
+public disableDefaultSummary(event) {
+    const selectedValue = this.defaultSummaries[event.index].value;
+    const column = this.treeGrid1.getColumnByName('UnitPrice');
+
+    if (!column.disabledSummaries.includes(selectedValue)) {
+        column.disabledSummaries = [...column.disabledSummaries, selectedValue];
+    }
+}
+
+public enableDefaultSummary(event) {
+    const selectedValue = this.defaultSummaries[event.index].value;
+    const column = this.treeGrid1.getColumnByName('UnitPrice');
+
+    column.disabledSummaries = column.disabledSummaries.filter(
+        (summary) => summary !== selectedValue
+    );
+}
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<!-- custom summaries -->
+<igx-column
+    field="Photo"
+    [hasSummary]="true"
+    [summaries]="grammySummary"
+    [disabledSummaries]="['singersWithAwards', 'awards']"
+>
+    <ng-template igxCell let-cell="cell">
+        <div class="cell__inner_2">
+            <img [src]="cell.value" class="photo" />
+        </div>
+    </ng-template>
+</igx-column>
+<!-- default summaries -->
+<igx-column
+    field="GrammyNominations"
+    header="Grammy Nominations"
+    dataType="number"
+    [hasSummary]="true"
+    [disabledSummaries]="['count', 'sum', 'average']"
+></igx-column>
+```
+For `Photo`, custom summaries such as `singersWithAwards` and `awards` are excluded using the `disabledSummaries` property.
+
+For `GrammyNominations` default summaries like `count`, `sum`, and `average` are disabled, leaving others like `min` and `max` active.
+
+```typescript
+public disableDefaultSummary(event) {
+    const selectedValue = this.defaultSummaries[event.index].value;
+    const column = this.hierarchicalGrid1.getColumnByName('GrammyNominations');
+
+    if (!column.disabledSummaries.includes(selectedValue)) {
+        column.disabledSummaries = [...column.disabledSummaries, selectedValue];
+    }
+}
+
+public enableDefaultSummary(event) {
+    const selectedValue = this.defaultSummaries[event.index].value;
+    const column = this.hierarchicalGrid1.getColumnByName('GrammyNominations');
+
+    column.disabledSummaries = column.disabledSummaries.filter(
+        (summary) => summary !== selectedValue
+    );
+}
+```
+}
+
+At runtime, summaries can also be dynamically disabled using the `disabledSummaries` property. For example, you can set or update the property on specific columns programmatically to adapt the displayed summaries based on user actions or application state changes.
+
+@@if (igxName === 'IgxGrid') {
+<code-view style="height:750px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-disable-summaries" >
+</code-view>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<code-view style="height:850px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-disable-summaries" >
+</code-view>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<code-view style="height:750px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-disable-summaries" >
+</code-view>
+}
 
 ## Formatting summaries
 By default, summary results, produced by the built-in summary operands, are localized and formatted according to the grid [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) and column [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs). When using custom operands, the `locale` and `pipeArgs` are not applied. If you want to change the default appearance of the summary results, you may format them using the [`summaryFormatter`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaryFormatter) property.
