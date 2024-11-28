@@ -2,7 +2,7 @@
 ---
 title: Angular Grid の集計 - Ignite UI for Angular
 _description: 列のグループ フッターで Angular Grid 集計を構成し、オプションを使用して Ignite UI for Angular テーブルにカスタム Angular テンプレートを設定します。
-_keywords: angular grid 集計, igniteui for angular, infragistics
+_keywords: angular grid 集計, ignite ui for angular, infragistics
 _language: ja
 ---
 }
@@ -10,7 +10,7 @@ _language: ja
 ---
 title: Angular Grid の集計 - Ignite UI for Angular
 _description: 列のグループ フッターで Angular Grid 集計を構成し、オプションを使用して Ignite UI for Angular テーブルにカスタム Angular テンプレートを設定します。
-_keywords: angular grid 集計, igniteui for angular, infragistics
+_keywords: angular grid 集計, ignite ui for angular, infragistics
 _language: ja
 ---
 }
@@ -18,7 +18,7 @@ _language: ja
 ---
 title: Angular Grid の集計 - Ignite UI for Angular
 _description: 列のグループ フッターで Angular Grid 集計を構成し、オプションを使用して Ignite UI for Angular テーブルにカスタム Angular テンプレートを設定します。
-_keywords: angular grid 集計, igniteui for angular, infragistics
+_keywords: angular grid 集計, ignite ui for angular, infragistics
 _language: ja
 ---
 }
@@ -116,7 +116,57 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
 </igx-hierarchical-grid>
 ```
 }
-特定の列や列のリストを有効または無効にする他の方法として **@@igSelector** のパブリック メソッド [`enableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#enablesummaries)/[`disableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#disableSummaries) を使用する方法があります。
+
+**@@igComponent 集計**は、[`disabledSummaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disabledSummaries) プロパティを使用してさらにカスタマイズできます。これにより、列の特定の集計関数を除外できます。このプロパティは、無効にする集計のキーを表す文字列の配列を受け入れます。
+
+@@if (igxName === 'IgxGrid') {
+たとえば、`ReorderLevel` 列の `count`、`min`、および `max` 集計を無効にするには、`disabledSummaries` プロパティを `['count', 'min', 'max']` に設定します。
+
+```html
+<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)">
+    <igx-column field="ProductID" header="Product ID" width="200px" [sortable]="true"></igx-column>
+    <igx-column field="ProductName" header="Product Name" width="200px" [sortable]="true" [hasSummary]="true"></igx-column>
+    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true" [disabledSummaries]="['count', 'min', 'max']">
+    </igx-column>
+</@@igSelector>
+```
+}
+@@if (igxName === 'IgxTreeGrid') {
+たとえば、`Units` 列の `count`、`min`、`max` 集計を無効にするには、`disabledSummaries` プロパティを `['count', 'min', 'max']` に設定します。
+
+```html
+<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)">
+    <igx-column field="ID" header="Order ID" width="200px" [sortable]="true"></igx-column>
+    <igx-column field="Name" header="Order Product" width="200px" [sortable]="true" [hasSummary]="true"></igx-column>
+    <igx-column field="Units" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true" [disabledSummaries]="['count', 'min', 'max']">
+    </igx-column>
+</@@igSelector>
+```
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+たとえば、`Grammy Nominations` 列の `count`、`min`、`max` の集計を無効にするには、`disabledSummaries` プロパティを `['count', 'min', 'max']` に設定します。
+
+```html
+<igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false">
+    <igx-column field="Artist" [hasSummary]='true'></igx-column>
+    <igx-column field="Photo">
+        <ng-template igxCell let-cell="cell">
+            <div class="cell__inner_2">
+                <img [src]="cell.value" class="photo" />
+            </div>
+        </ng-template>
+    </igx-column>
+    <igx-column field="Debut" [hasSummary]='true'></igx-column>
+    <igx-column field="Grammy Nominations" [hasSummary]='true' [dataType]="'number'" [summaries]="mySummary" [disabledSummaries]="['count', 'min', 'max']">
+    </igx-column>
+    <igx-column field="Grammy Awards" [hasSummary]='true' [dataType]="'number'"></igx-column>
+</igx-hierarchical-grid>
+```
+}
+
+この例では、数値列には、無効な集計を除外し、`average` や `sum` などの残りの集計のみが表示されます。これにより、各列に表示される集計結果をアプリケーションの要件に合わせてカスタマイズできるようになります。
+
+特定の列や列のリストを有効または無効にする他の方法として **@@igSelector** のパブリック メソッド [`enableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#enableSummaries)/[`disableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#disableSummaries) を使用する方法があります。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -256,7 +306,7 @@ interface IgxSummaryResult {
 
 > [!NOTE]
 > 集計行の高さを正しく計算するために、@@igComponent の [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) メソッドでデータが空の場合も常に [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html) 配列の正しい長さを返す必要があります。
-@@if (igxName !== 'IgxHierarchicalGrid') {
+@@if (igxName === 'IgxGrid') {
 `UnitsInStock` 列にカスタム集計を追加します。[`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) プロパティを以下に作成するクラスに設定します。
 ```html
 <@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)" >
@@ -325,6 +375,59 @@ export class HGridSummarySampleComponent implements OnInit {
     ....
 }
 ```
+}
+
+**@@igComponent 集計**は、カスタム集計と一緒に [`disabledSummaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disabledSummaries) プロパティを使用する場合のカスタマイズもサポートします。このプロパティを使用すると、特定のカスタム集計を除外して、特定の列に表示される集計を正確に制御できます。たとえば、`test` のようなカスタム集計を無効にして、他の集計をアクティブにするには、`disabledSummaries` プロパティを使用して `['test']` に設定します。
+
+@@if (igxName === 'IgxGrid') {
+```html
+ <@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)">
+    <igx-column field="ProductID" width="200px"  [sortable]="true">
+    </igx-column>
+    <igx-column field="ProductName" width="200px" [sortable]="true" [hasSummary]="true">
+    </igx-column>
+    <igx-column field="UnitsInStock" width="200px" [dataType]="'number'" [hasSummary]="true" [summaries]="mySummary" [disabledSummaries]="['test']" [sortable]="true">
+    </igx-column>
+    <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true">
+    </igx-column>
+ </@@igSelector>
+```
+
+この例では、`UnitsInStock` 列はカスタム `MySummary` クラスを使用しますが、`disabledSummaries` プロパティで指定することで `test` 集計関数を除外します。この構成により柔軟性がさらに高まり、アプリケーションの特定のニーズに合わせてカスタム集計を無効にすることができます。
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)">
+    <igx-column field="ID" header="Order ID" width="200px" [sortable]="true"></igx-column>
+    <igx-column field="Name" header="Order Product" width="200px" [sortable]="true" [hasSummary]="true"></igx-column>
+    <igx-column field="Units" [dataType]="'number'" width="200px" [editable]="true" [hasSummary]="true" [summaries]="mySummary" [disabledSummaries]="['test']">
+    </igx-column>
+    <igx-column field="UnitPrice" header="Unit Price" width="200px" [dataType]="'number'" [dataType]="'currency'" [hasSummary]="true"></igx-column>
+</@@igSelector>
+```
+
+この例では、`Units` 列はカスタム `MySummary` クラスを使用しますが、`disabledSummaries` プロパティで指定することで `test` 集計関数を除外します。この構成により柔軟性がさらに高まり、アプリケーションの特定のニーズに合わせてカスタム集計を無効にすることができます。
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+ <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false">
+    <igx-column field="Artist" [hasSummary]='true'></igx-column>
+    <igx-column field="Photo">
+        <ng-template igxCell let-cell="cell">
+            <div class="cell__inner_2">
+                <img [src]="cell.value" class="photo" />
+            </div>
+        </ng-template>
+    </igx-column>
+    <igx-column field="Debut" [hasSummary]='true'></igx-column>
+    <igx-column field="Grammy Nominations" [hasSummary]='true' [dataType]="'number'" [summaries]="mySummary" [disabledSummaries]="['test']"></igx-column>
+    <igx-column field="Grammy Awards" [hasSummary]='true' [dataType]="'number'"></igx-column>
+</igx-hierarchical-grid>
+```
+
+この例では、`Grammy Nominations` 列はカスタム `MySummary` クラスを使用しますが、`disabledSummaries` プロパティで指定することで `test` 集計関数を除外します。この構成により柔軟性がさらに高まり、アプリケーションの特定のニーズに合わせてカスタム集計を無効にすることができます。
 }
 
 ### すべてのデータにアクセスするカスタム集計
