@@ -52,7 +52,9 @@ _canonicalLink: grid/state-persistence
 * `GroupBy`
 * `Columns`
     * Multi column headers
+    @@if (igxName === 'IgxGrid') {
     * Multi-row Layout
+    }
     * Columns order
     * Column properties defined by the [`IColumnState`]({environment:angularApiUrl}/interfaces/icolumnstate.html) interface.
     * Columns templates and functions are restored using application level code, see [Restoring Column](state-persistence.md#restoring-columns) section.
