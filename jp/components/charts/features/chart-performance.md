@@ -75,11 +75,9 @@ export class MultiDataSources {
         const dataSource1: any[] = [];
         dataSource1.push({ "Year": "1996", "Value": 148 });
         dataSource1.push({ "Year": "2000", "Value": 142 });
-
         const dataSource2: any[] = [];
         dataSource2.push({ "Year": "1996", "Value": 110 });
         dataSource2.push({ "Year": "2000", "Value": 115 });
-
         const multipleSources: any[] = [dataSource1, dataSource2];
         return multipleSources;
     }

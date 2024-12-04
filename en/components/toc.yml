@@ -631,6 +631,9 @@
 - name: Composite Chart
   href: charts/types/composite-chart.md
   new: false
+- name: Data Pie Chart
+  href: charts/types/data-pie-chart.md
+  new: true
 - name: Donut Chart
   href: charts/types/donut-chart.md
   new: false
