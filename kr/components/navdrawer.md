@@ -51,7 +51,6 @@ While any content can be provided in the template, the [`igxDrawerItem`]({enviro
 <div class="content-wrap">
   <igx-nav-drawer id="navigation" #drawer [isOpen]="true">
     <ng-template igxDrawer>
-      <nav>
         <span igxDrawerItem [isHeader]="true"> Email Account </span>
         <span igxDrawerItem igxRipple> Inbox </span>
         <span igxDrawerItem igxRipple [active]="true"> Drafts </span>
@@ -59,7 +58,6 @@ While any content can be provided in the template, the [`igxDrawerItem`]({enviro
         <span igxDrawerItem [isHeader]="true"> Folders </span>
         <span igxDrawerItem igxRipple> Deleted </span>
         <span igxDrawerItem igxRipple> Archive </span>
-      </nav>
     </ng-template>
   </igx-nav-drawer>
   <main>
@@ -237,13 +235,11 @@ One way to tie in the active state is to directly use the [`routerLinkActive`](h
 ```html
 <!-- ... -->
 <ng-template igxDrawer>
-    <nav>
-        <span *ngFor="let item of componentLinks" routerLink="{{item.link}}"
-            igxDrawerItem igxRipple 
-            routerLinkActive="igx-nav-drawer__item--active" >
-                {{item.name}}
-        </span>
-    </nav>
+    <span *ngFor="let item of componentLinks" routerLink="{{item.link}}"
+        igxDrawerItem igxRipple 
+        routerLinkActive="igx-nav-drawer__item--active" >
+            {{item.name}}
+    </span>
 </ng-template>
 <!-- ... -->
 ```
@@ -251,13 +247,11 @@ This approach, of course, does not affect the actual directive active state and 
 ```html
 <!-- ... -->
 <ng-template igxDrawer>
-    <nav>
-        <span *ngFor="let item of componentLinks" routerLink="{{item.link}}"
-            routerLinkActive #rla="routerLinkActive"
-            igxDrawerItem igxRipple [active]="rla.isActive">
-                {{item.name}}
-        </span>
-    </nav>
+    <span *ngFor="let item of componentLinks" routerLink="{{item.link}}"
+        routerLinkActive #rla="routerLinkActive"
+        igxDrawerItem igxRipple [active]="rla.isActive">
+            {{item.name}}
+    </span>
 </ng-template>
 <!-- ... -->
 ```
