@@ -10,6 +10,9 @@ In order to switch from `Material` to `Bootstrap`, you can use the [theme]({envi
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 @include core();
 @include theme($palette: $light-bootstrap-palette, $schema: $light-bootstrap-schema);
+
+// We can also include the Indigo font and font scaling
+@include typography($font-family: $bootstrap-typeface, $type-scale: $bootstrap-type-scale);
 ```
 
 ## Bootstrap Dark Theme
@@ -20,6 +23,8 @@ In order to switch from `Material` to `Bootstrap`, you can use the [theme]({envi
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 @include core();
 @include theme($palette: $dark-bootstrap-palette, $schema: $dark-bootstrap-schema);
+
+@include typography($font-family: $bootstrap-typeface, $type-scale: $bootstrap-type-scale);
 ```
 
 ## API Overview
