@@ -100,7 +100,7 @@ It currently accepts 2 arguments:
 - `$font-family` - The global font family to be used by the application.
 - `$type-scale` - The default type scale to be used by the application.
 
-To use the typography styles, include the `typography` mixin anywhere after the `core` mixin and before the `theme` mixin. Let's take advantage of the type scale `$my-type-scale` we defined above and make it the default type scale.
+To use the typography styles, include the `typography` mixin anywhere after the `core`. Let's take advantage of the type scale `$my-type-scale` we defined above and make it the default type scale.
 
 ```scss
 @include typography(
@@ -169,6 +169,49 @@ $card-categories: (
 ```
 
 We no longer include the `typography` mixin by passing it the `$my-type-scale` scale with our modification to the `h6` category. Now all we do is pass the custom h6 style we created to the `type-style-vars` mixin.
+
+Also with the `card-typography` mixin we can change all of the elements type scales with a different ones. If we set `title: 'h1'` in the `$card-categories` map, and then include it with the `card-typography` mixin, the card will now use `h1` isntead of the default `h6` for it's title element.
+
+```scss
+// You can specify which categories from the type sale the card uses
+$card-categories: (
+    title: 'h1',
+    title-small: 'h3',
+    subtitle: 'subtitle-1',
+    content: 'body-1',
+);
+
+.my-cool-card {
+  @include card-typography($card-categories);
+}
+```
+
+## Units Converting
+
+We also have three typography function for converting property units.
+With the functions we can convert `px` units to `em` and `rem` and also `em` and `rem` units to `px`. 
+All we need to do is to call one of the three functions and pass the number that we want to convert.
+
+### To 'px'
+```scss
+   .my-component {
+     margin: px(3.23rem);
+   }
+```
+
+### To 'rem'
+```scss
+   .my-component {
+     margin: rem(10px) rem(5px);
+   }
+```
+
+### To 'em'
+```scss
+   .my-component {
+     margin: em(10px) em(5px);
+   }
+```
 
 ## CSS Classes
 
