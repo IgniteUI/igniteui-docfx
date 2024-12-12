@@ -126,6 +126,20 @@ To use any of the versions, you would simply need to pass it to our [theme]({env
     $palette: $dark-material-palette,
 );
 ```
+### Available Themes
+Ignite UI for Angular gives you the option to pick from a set of predefined themes.
+The table below shows all the built-in themes that you can use right away.
+
+| Theme                                                             | Schema                             | Color Palette                                                                          |
+| ----------------------------------------------------------------- | ---------------------------------- | -------------------------------------------------------------------------------------- |
+| [**Material Light**](presets/material.md#default-theme)           |  `$light-material-schema`          | $light-material-palette                                                                |
+| [**Material Dark**](presets/material.md#material-dark-theme)      |  `$dark-material-schema`           | $dark-material-palette                                                                 |
+| [**Fluent Light**](presets/fluent.md)                             | `$light-fluent-schema`             | $light-fluent-palette <br> $light-fluent-excel-palette <br> $light-fluent-word-palette |
+| [**Fluent Dark**](presets/fluent.md#fluent-dark-theme)            |  `$dark-fluent-schema`             | $dark-fluent-palette <br> $dark-fluent-excel-palette <br> $dark-fluent-word-palette    |
+| [**Bootstrap Light**](presets/bootstrap.md)                       | `$light-bootstrap-schema`          | $light-bootstrap-palette                                                               |
+| [**Bootstrap Dark**](presets/bootstrap.md#bootstrap-dark-theme)   |  `$dark-bootstrap-schema `         | $dark-bootstrap-palette                                                                |
+| [**Indigo Light**](presets/indigo.md)                             | `$light-indigo-schema`             | $light-indigo-palette                                                                  |
+| [**Indigo Dark**](presets/indigo.md#indigo-dark-theme)            |   `$dark-indigo-schema `           | $dark-indigo-palette                                                                   |
 
 
 ## Additional Resources
