@@ -8,6 +8,9 @@ The *__light__* version of the Material theme is the default theme in Ignite UI 
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 @include core();
 @include theme($palette: $light-material-palette, $schema: $light-material-schema);
+
+// We can also include the Material font and font scaling
+@include typography($font-family: $material-typeface, $type-scale: $material-type-scale);
 ```
 
 ## Material Dark Theme
@@ -18,6 +21,8 @@ The *__light__* version of the Material theme is the default theme in Ignite UI 
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 @include core();
 @include theme($palette: $dark-material-palette, $schema: $dark-material-schema);
+
+@include typography($font-family: $material-typeface, $type-scale: $material-type-scale);
 ```
 
 If you want to use only the dark schema, but with your own palette you have to manually do the following:

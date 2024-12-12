@@ -13,6 +13,9 @@ We also support Word and Excel palettes. To use them just pass one of the two *_
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 @include core();
 @include theme($palette: $light-fluent-palette, $schema: $light-fluent-schema);
+
+// We can also include the Indigo font and font scaling
+@include typography($font-family: $fluent-typeface, $type-scale: $fluent-type-scale);
 ```
 
 ## Fluent Dark Theme
@@ -23,6 +26,8 @@ We also support Word and Excel palettes. To use them just pass one of the two *_
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 @include core();
 @include theme($palette: $dark-fluent-palette, $schema: $dark-fluent-schema);
+
+@include typography($font-family: $fluent-typeface, $type-scale: $fluent-type-scale);
 ```
 
 ## API Overview
