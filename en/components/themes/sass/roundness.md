@@ -12,9 +12,18 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 Border radius is defined in the [theme schema](https://github.com/IgniteUI/igniteui-theming/blob/18f878033898e1b6a3bb0ed28993e9a4037d1a80/sass/themes/schemas/components/light/_toast.scss#L44) of the component (see the example below). The border radius for any component defined in this manner can then be controlled via the `$roundness` parameter of the [theme]({environment:sassApiUrl}/index.html#mixin-theme) mixin or a single CSS variable called `--ig-radius-factor`.
 
 ```scss
-$light-toast: (
-    ...,
-    border-radius: (rem(26px), rem(0), rem(26px)),
+$light-toast: extend(
+    $default-elevation-toast,
+    (
+     ...,
+      border-radius: (
+          border-radius: (
+                rem(26px),
+                rem(0),
+                rem(26px),
+            ),
+      ),
+    )
 );
 ```
 

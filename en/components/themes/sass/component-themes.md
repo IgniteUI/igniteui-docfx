@@ -118,7 +118,7 @@ What exactly does `Emulated` View Encapsulation mean, anyway? This type of View 
 @use "igniteui-angular/theming" as *;
 
 $avatar-royalblue-theme: avatar-theme(
-  $initials-background: royalblue,
+    $icon-color: royalblue,
 );
 
 :host ::ng-deep {
@@ -177,8 +177,6 @@ The above instance could also be achieved without using any Sass. All we need to
 ```
 
 <div class="divider-half"></div>
-
-
 
 ## API Overview
 

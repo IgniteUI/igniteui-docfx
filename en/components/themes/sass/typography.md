@@ -154,7 +154,7 @@ $my-h6: type-style($font-size: 12px);
 // You can specify which categories from the type sale the card uses
 $card-categories: (
     title: 'h6',
-    title-small: 'subtitle-2',
+    title-small: 'subtitle-1',
     subtitle: 'subtitle-2',
     content: 'body-2',
 );
@@ -170,21 +170,7 @@ $card-categories: (
 
 We no longer include the `typography` mixin by passing it the `$my-type-scale` scale with our modification to the `h6` category. Now all we do is pass the custom h6 style we created to the `type-style-vars` mixin.
 
-Also with the `card-typography` mixin we can change all of the elements type scales with a different ones. If we set `title: 'h1'` in the `$card-categories` map, and then include it with the `card-typography` mixin, the card will now use `h1` isntead of the default `h6` for it's title element.
-
-```scss
-// You can specify which categories from the type sale the card uses
-$card-categories: (
-    title: 'h1',
-    title-small: 'h3',
-    subtitle: 'subtitle-1',
-    content: 'body-1',
-);
-
-.my-cool-card {
-  @include card-typography($card-categories);
-}
-```
+Also with the `card-typography` mixin we can change all of the elements type scales with a different ones. In the exmaple above, we set the `title-small` key in the `$card-categories` map to have type scale value of `subtitle-1`, which will result in making the small title in our card component a little bit bigger. This is because by default the card component is using type scale `subtitle-2` which is smaller in font size than the `subtitle-1` type scale which we just set with the `card-typography` mixin.
 
 ## Units Converting
 
