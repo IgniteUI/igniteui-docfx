@@ -123,20 +123,6 @@ public chipRemoved(event: IBaseChipEventArgs) {
 }
 ```
 
-### ドラッグ
-
-ドラッグは、[`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removable) 入力を `true` に設定して有効にできます。有効にすると、チップをクリックしてドラッグできます。
-
-```html
-<igx-chip *ngFor="let chip of chipList" [id]="chip.id" [draggable]="true">
-    <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
-    {chip.text}}
-</igx-chip>
-```
-
->[!NOTE]
->チップの順序をソートするには、[`IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) を使用してイベントを処理する必要があります。
-
 <div class="divider"></div>
 
 **デモ サンプルを作成するには、上記の機能を使用します。**
