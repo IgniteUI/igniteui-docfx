@@ -66,19 +66,15 @@ If you wanted to change the primary and secondary colors, all you have to do is 
 ```css
 /* styles.css */
 :root {
-  --ig-primary-h: 105deg;
-  --ig-primary-s: 29%;
-  --ig-primary-l: 56%;
-
-  --ig-secondary-h: 259deg;
-  --ig-secondary-s: 63%;
-  --ig-secondary-l: 24%;
+  --ig-primary-500: #09f;
+  --ig-secondary-500: red;
+  --ig-surface-500: rgb(221 211 211);
 }
 ```
 
-Let's break down the names of these color variables. The `ig` prefix is there as a unique identifier to indicate that this variable is part of an Ignite UI for Angular theme, `primary` is the name of the `color` palette, and `h`, `s`, and `l` stand for hue, saturation, and lightness. We will take a deeper look at palettes in the [Palettes](./palettes.md) section of the documentation. For now all you need to know is that we have several base colors (primary, secondary, success, info, etc.) that include different shades or _variants_ that are all generated from the hue, saturation, and lightness CSS variables, The `500` color variants are considered the main representation values for hue, saturation, and lightness. For instance, the primary 500 color variant is declared as `--ig-primary-500: hsla(var(--ig-primary-h), var(--ig-primary-s), var(--ig-primary-l), var(--ig-primary-a))`.
+Let's break down the names of these color variables. The `ig` prefix is there as a unique identifier to indicate that this variable is part of an Ignite UI for Angular theme, `primary` is the color variable name, and `500` stands for the color variant. We will take a deeper look at palettes in the [Palettes](./palettes.md) section of the documentation. For now all you need to know is that we have several base color variables (primary, secondary, surface, success, info, etc.) that include different shades or _variants_ that are all generated from the main color variants. The `500` color variants that we set in the above example are considered the main variable color and all of the other variants for the given color variable are generated from the `500` variant. 
 
-Following this approach, you can completely overhaul the entire palette.
+Changing these variants, you can completely overhaul the entire palette.
 
 >[!WARNING]
 > Some components do not use colors from the palettes. In those instances, you will have to target the component CSS variables directly to modify their colors.

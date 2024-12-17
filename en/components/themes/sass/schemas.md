@@ -17,17 +17,37 @@ Schemas are like recipes. They are simple Sass maps, similar to JSON that allow 
 Let's take a look at the light Material Avatar schema:
 
 ```scss
-$_light-avatar: extend(
-    $_square-shape-avatar,
-    (
-        background: (
-           color: ('gray', 400)
-        ),
-
+$light-avatar: (
+    background: (
         color: (
-           color: ('gray', 800)
+            'gray',
+            400,
+            0.54,
         ),
-    )
+    ),
+    color: (
+        color: (
+            'gray',
+            800,
+            0.96,
+        ),
+    ),
+    icon-color: (
+        color: (
+            'gray',
+            800,
+            0.96,
+        ),
+    ),
+    border-radius: rem(8px),
+    size: (
+        sizable: (
+            rem(40px),
+            rem(64px),
+            rem(88px),
+        ),
+    ),
+    default-size: 1,
 );
 ```
 
@@ -42,7 +62,7 @@ We can also add other functions and arguments to the `background` map as key val
 Let's see how the schema will change when we make this addition:
 
 ```scss
-$_light-avatar: (
+$light-avatar: (
     icon-background: (
        color: ('gray', 400),
         to-opaque: #fff
@@ -59,7 +79,7 @@ The result of the `color` function call will automatically be passed as the firs
 As you saw from the example above. Schemas are simple maps and as such can be extended by overriding some of their properties. You might want to _extend_ the material avatar schema by only changing its `background` property, without having to copy all other properties manually. This is easily done using the `extend` function we provide.
 
 ```scss
-$my-avatar-schema: extend($_light-avatar, (
+$my-avatar-schema: extend($light-avatar, (
     background: limegreen
 ));
 ```
@@ -85,12 +105,13 @@ We use the light and dark schemas accordingly with the light and dark palettes t
 ## Consuming Schemas
 Until now we have shown what a component schema is and how you can create one, but we have not talked about how you can use schemas in your Sass project. 
 
-Individual component schemas are bundled up in a global schema map for all components we have. So the `$_light-avatar` schema is part of the global `$light-material-schema`. The `$light-material-schema` maps component schemas to component names. The `$light-material-schema` looks something like this:
+Individual component schemas are bundled up in a global schema map for all components we have. So the `$light-avatar` schema is stored in the `$material-avatar` variable, which is then used in the global `$light-material-schema`. The `$light-material-schema` map contains all component names as keys, and their corresponding schemas as values. The `$light-material-schema` looks something like this:
 
 ```scss
 $light-material-schema: (
-    igx-avatar: $_light-avatar,
-    igx-badge: $_light-badge,
+    action-strip: $material-action-strip,
+    avatar: $material-avatar,
+    badge: $material-badge,
     ...
 );
 ```
@@ -99,7 +120,7 @@ We do this so we can pass the entire `$light-material-schema` to the `theme` mix
 
 ```scss
 $my-light-schema: extend($light-material-schema, (
-    igx-avatar: $my-avatar-schema
+    avatar: $my-avatar-schema
 ));
 ```
 
@@ -117,12 +138,29 @@ Avatars in your global theme will now have use limegreen color for their backgro
 
 Some component schemas, like the button schema, have property definitions for roundness. This means that you can change the default button roundness for all buttons.
 
-Finally, let's see how individual component themes can use the schema we created above.
+Let's see how individual component themes can use the schema we created above.
 
 ```scss
 $my-avatar-theme: avatar-theme(
     $schema: $my-avatar-schema
 );
+```
+
+Currently the most used use case for schemas is if we want a specific element to have a different theme than the global one.
+For example if we had `$light-material-schema` applied for our global theme, and we wanted only one specific avatar component to use `$light-indigo-schema` we can do the following:
+
+```scss
+//We only get the avatar part of the light-indigo-schema
+$indigo-avatar: map.get($light-indigo-schema, avatar);
+
+//We include the speicfic schematic to a class which we can then set on the avatar component that we want
+.diff-avatar {
+    @include css-vars(
+        avatar-theme(
+            $schema: $indigo-avatar
+        )
+    );
+}
 ```
 
 ## Conclusions
