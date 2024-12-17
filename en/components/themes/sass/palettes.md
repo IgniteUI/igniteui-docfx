@@ -9,7 +9,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ## Overview
-Palettes in the context of Ignite UI for Angular are declared as [Sass Maps](https://sass-lang.com/documentation/values/maps) with the keys of those map being the palette colors (`primary`, `secondary`, `gray`, etc.). Each color is in turn a map itself and has all color variants listed as keys. The values assigned to those color variants are the actual colors used throughout all component themes. All palette maps are generated programatically by the palette function. The function accepts arguments for `primary`, `secondary`, `gray`, `surface`, `info`, `success`, `warn`, and `error` colors. The `primary` color is usually your brand color. It is mostly used to style static elements, such as the `igx-navbar` component. The secondary color is the one used on elements that are actionable, such as buttons, switches, sliders, etc. The only required arguments are the ones for `primary` and `secondary` colors. The surface color is used to color the 'surface' of some components, such as cards, menus, date/time pickers, banners sheets, etc. We default the colors for `surface`, `gray`, `info`, `success`, `warn`, and `error` to a predefined set of our choosing.
+Palettes in the context of Ignite UI for Angular are declared as [Sass Maps](https://sass-lang.com/documentation/values/maps) with the keys of those map being the palette colors (`primary`, `secondary`, `surface`, etc.). Each color is in turn a map itself and has all color variants listed as keys. The values assigned to those color variants are the actual colors used throughout all component themes. All palette maps are generated programatically by the palette function. The function accepts arguments for `primary`, `secondary`, `surface`, `gray`, `info`, `success`, `warn`, and `error` colors. The `primary` color is usually your brand color. It is mostly used to style static elements, such as the `igx-navbar` component. The `secondary` color is the one used on elements that are actionable, such as buttons, switches, sliders, etc.
+The `surface` color is the one used for background color of some components, such as cards, menus, date/time pickers, banners sheets, etc.. The only required arguments are the ones for `primary`, `secondary` and `surface` colors. We default the colors for `surface`, `gray`, `info`, `success`, `warn`, and `error` to a predefined set of our choosing.
 
 To get started with your first color palette, create an _scss_ file that would be the base file for your global theme. I will call mine _"_variables.scss"_.
 
@@ -19,11 +20,12 @@ To get started with your first color palette, create an _scss_ file that would b
 $melon-palette: palette(
     $primary: #2ab759,
     $secondary: #f96a88,
+    $surface: #e5e5e5
 );
 ```
 
 >[!WARNING]
-> The value you pass to `$primary`, `$secondary`, or any other color **must be of type color**. You cannot pass CSS variables as arguments as those can't be resolved at Sass build-time.
+> The value you pass to `$primary`, `$secondary` and `surface` or any other color **must be of type color**. You cannot pass CSS variables as arguments as those can't be resolved at Sass build-time.
 
 We created a palette that contains variants for all colors in it, including automatically created text contrast colors for each variant. If you haven't checked [the documentation](../palettes.md) regarding palettes with CSS variables, go check it out now. It contains information about all the color variants of a palette.
 
@@ -33,124 +35,116 @@ In case you want to manually create your palette, or create the palette generati
 
 ```scss
 $handmade-palette: (
-    primary: (
-        50: to-hsl(#e6eff8),
+    'primary': (
+        50: #e6eff8,
         '50-contrast': black,
-        100: to-hsl(#bfd7f2),
+        100: #bfd7f2,
         '100-contrast': black,
-        200: to-hsl(#98bfec),
+        200: #98bfec,
         '200-contrast': black,
-        300: to-hsl(#85b5e9),
+        300: #85b5e9,
         '300-contrast': white,
-        400: to-hsl(#73a6e4),
+        400: #73a6e4,
         '400-contrast': white,
-        500: to-hsl(#6797de),
+        500: #6797de,
         '500-contrast': white,
-        600: to-hsl(#3681dd),
+        600: #3681dd,
         '600-contrast': white,
-        700: to-hsl(#357fda),
+        700: #357fda,
         '700-contrast': white,
-        800: to-hsl(#306dc8),
+        800: #306dc8,
         '800-contrast': white,
-        900: to-hsl(#284ea8),
+        900: #284ea8,
         '900-contrast': white,
-        'A100': to-hsl(#98bfec),
+        'A100': #98bfec,
         'A100-contrast': white,
-        'A200': to-hsl(#73a6e4),
+        'A200': #73a6e4,
         'A200-contrast': white,
-        'A400': to-hsl(#3681dd),
+        'A400': #3681dd,
         'A400-contrast': white,
-        'A700': to-hsl(#284ea8),
+        'A700': #284ea8,
         'A700-contrast': white
     ),
-    secondary: (
-        50: to-hsl(#fef7e2),
+    'secondary': (
+        50: #fef7e2,
         '50-contrast': black,
-        100: to-hsl(#fdeab7),
+        100: #fdeab7,
         '100-contrast': black,
-        200: to-hsl(#fbdd89),
+        200: #fbdd89,
         '200-contrast': black,
-        300: to-hsl(#fad15c),
+        300: #fad15c,
         '300-contrast': black,
-        400: to-hsl(#f9c63f),
+        400: #f9c63f,
         '400-contrast': black,
-        500: to-hsl(#f7bd32),
+        500: #f7bd32,
         '500-contrast': white,
-        600: to-hsl(#f6b02d),
+        600: #f6b02d,
         '600-contrast': white,
-        700: to-hsl(#f49e2a),
+        700: #f49e2a,
         '700-contrast': white,
-        800: to-hsl(#f38e28),
+        800: #f38e28,
         '800-contrast': white,
-        900: to-hsl(#f38e28),
+        900: #f38e28,
         '900-contrast': white,
-        'A100': to-hsl(#fbdd89),
+        'A100': #fbdd89,
         'A100-contrast': black,
-        'A200': to-hsl(#f9c63f),
+        'A200': #f9c63f,
         'A200-contrast': black,
-        'A400': to-hsl(#f6b02d),
+        'A400': #f6b02d,
         'A400-contrast': white,
-        'A700': to-hsl(#f38e28),
+        'A700': #f38e28,
         'A700-contrast': white
     ),
-    gray: (
-        50: to-hsl(#fff),
+    'gray': (
+        50: #fff,
         '50-contrast': black,
-        100: to-hsl(#fafafa),
+        100: #fafafa,
         '100-contrast': black,
-        200: to-hsl(#f5f5f5),
+        200: #f5f5f5,
         '200-contrast': black,
-        300: to-hsl(#f0f0f0),
+        300: #f0f0f0,
         '300-contrast': black,
-        400: to-hsl(#dedede),
+        400: #dedede,
         '400-contrast': black,
-        500: to-hsl(#b3b2b2),
+        500: #b3b2b2,
         '500-contrast': black,
-        600: to-hsl(#979696),
+        600: #979696,
         '600-contrast': white,
-        700: to-hsl(#7b7a7a),
+        700: #7b7a7a,
         '700-contrast': white,
-        800: to-hsl(#404040),
+        800: #404040,
         '800-contrast': white,
-        900: to-hsl(#1a1a1a),
+        900: #1a1a1a,
         '900-contrast': white
     ),
-    info: (
-        500: to-hsl(rgb(18, 118, 211)),
+    'info': (
+        500: rgb(18, 118, 211),
         '500-contrast': black
     ),
-    success: (
-        500: to-hsl(rgb(76, 184, 96)),
+    'success': (
+        500: rgb(76, 184, 96),
         '500-contrast': black
     ),
-    warn: (
-        500: to-hsl(rgb(251, 178, 60)),
+    'warn': (
+        500: rgb(251, 178, 60),
         '500-contrast': black
     ),
-    error: (
-        500: to-hsl(rgb(255, 20, 75)),
+    'error': (
+        500: rgb(255, 20, 75),
         '500-contrast': black
     ),
-    surface: (
-        500: to-hsl(rgb(255, 255, 255)),
+    'surface': (
+        500: rgb(255, 255, 255),
         '500-contrast': black
     )
 );
 
-:root {
-    --ig-primary-a: 1;
-    --ig-secondary-a: 1;
-    --ig-info-a: 1;
-    --ig-success-a: 1;
-    --ig-warn-a: 1;
-    --ig-error-a: 1;
-    --ig-gray-a: 1;
-    --ig-surface-a: 1;
-}
 ```
-<div class="divider"></div>
 
-The `to-hsl()` function takes a color, no matter the color space, and returns its hue, saturation, and lightness values in a comma-separated list, which will be used when declaring the CSS variables for each shade in the palette. The `alpha` value for each palette color(primary, secondary, gray, etc.) must be initialized separately.
+>[!WARNING]
+> It's important to set the string map keys to be between quatation marks - `'primary'`, `'secondary'`, `'gray'`, etc.
+
+<div class="divider"></div>
 
 ## Predefined Palettes
 We provide predefined light and dark palettes, which you can use along with our schemas to create themes for your components:
@@ -170,15 +164,6 @@ We provide predefined light and dark palettes, which you can use along with our 
   - $dark-bootstrap-palette
   - $dark-indigo-palette
 
-We also provide a few additional palettes that you can use:
-
-- Light Additional Palettes
-  - $light-green-palette
-  - $light-purple-palette
-- Dark Additional Palettes
-  - $dark-green-palette
-  - $dark-purple-palette
-
 You can mix and match all light palettes with a light schema of your choice and vice versa - all dark palettes with a dark schema that you think will best match your needs and vision.
 
 ## The Default Palette
@@ -194,6 +179,7 @@ For example, you could have the following Sass files in your app.
 $my-palette: palette(
   $primary: #2ab759,
   $secondary: #f96a88,
+  $surface: #e5e5e5
 );
 
 $default-palette: $my-palette;
@@ -220,7 +206,7 @@ This ensures that the same palette, declared in our `_variables.scss` file is us
 
 ## Grayscale Colors
 
-Similar to the `primary` and `secondary` colors, you can provide another color to the `palette` function that will be used to generate shades of gray. The default color used to generate the `gray` palette in all light themes is `#000`, or better known as `black`. The `gray` color variants are mainly used for setting text colors across components. Modifying the value is useful when changing the background or surface colors in your application. For instance, if your application uses a darker surface background, setting the `gray` color to `white` is sensible, and will force all text colors to be based on shades of `white`.
+Similar to the `primary`, `secondary` and `surface` colors, you can provide another color to the `palette` function that will be used to generate shades of gray. The default color used to generate the `gray` palette in all light themes is `#000`, or better known as `black`. The `gray` color variants are mainly used for setting text colors across components. Modifying the value is useful when changing the background or surface colors in your application. For instance, if your application uses a darker surface background, setting the `gray` color to `white` is sensible, and will force all text colors to be based on shades of `white`.
 
 To generate a palette that uses `white` for its gray shades:
 
@@ -228,11 +214,13 @@ To generate a palette that uses `white` for its gray shades:
 // Import the Ignite UI themes library first
 $company-color: #2ab759; /* Some green shade I like */
 $secondary-color: #f96a88; /* Watermelon pink */
+$surface-color: #e5e5e5 /* Light gray for backgrounds/ */
 $grayscale-base: #fff; /* Used to generate shades of gray */
 
 $my-color-palette: palette(
     $primary: $company-color,
     $secondary: $secondary-color,
+    $surface: $surface-color,
     $gray: $grayscale-base
 );
 ```
@@ -241,7 +229,7 @@ $my-color-palette: palette(
 
 ## Colors Variants
 
-We provide a function that is easy to remember and use - `color`. It can take up to three arguments - `palette`, `color`, and `variant`;
+We provide a function that is easy to remember and use - `color`. It can take up to four arguments - `palette`, `color`, `variant` and `opacity`;
 
 ```scss
 // Get the primary CSS variable reference of the 500 color variant
@@ -250,11 +238,16 @@ $my-primary-500: color();
 // Get the primary CSS variable reference of the 600 color variant
 $my-primary-600: color($variant: 600);
 
+// Get the primary CSS variable reference of the 600 color variant with .5 opacity
+$my-primary-600-opacity: color($variant: 600, $opacity: .5);
+
 // Get the secondary A700 color variant as a HEX value from $my-palette
 $my-primary-A700: color($my-palette, 'secondary', 'A700');
 
 // Get the warn 500 color variant as HEX value from $my-palette
 $my-warning-color: color($my-palette, 'warn');
+
+
 
 .my-awesome-class {
     background: $my-primary-600;
@@ -272,7 +265,7 @@ If you omit the `$palette` argument, you will get a string referencing the corre
 
 ## Contrast Text Colors
 
-Similar to how we retrieve color variants, there's a way to get the contrast text color for each of the color variants in the palette.
+Similar to how we retrieve color variants, there's a way to get the contrast text color for each of the color variants in the palette with the function `contrast-color`, accepts the same type and number of arguments as the `color` function.
 
 ```scss
 $my-primary-800: color($my-palette, 'primary', 600);
@@ -326,6 +319,7 @@ Here's an example:
 $my-palette: palette(
   $primary: #2ab759,
   $secondary: #f96a88,
+  $surface: #e5e5e5
 );
 
 @include palette($my-palette);
