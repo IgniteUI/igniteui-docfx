@@ -1017,7 +1017,7 @@
   new: false
 - name: Color Editor
   href: inputs/color-editor.md
-  new: true
+  preview: true
 - name: Text Highlight
   href: texthighlight.md
   new: false
