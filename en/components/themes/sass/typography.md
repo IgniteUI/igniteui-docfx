@@ -170,33 +170,32 @@ $card-categories: (
 
 We no longer include the `typography` mixin by passing it the `$my-type-scale` scale with our modification to the `h6` category. Now all we do is pass the custom h6 style we created to the `type-style-vars` mixin.
 
-Also with the `card-typography` mixin we can change all of the elements type scales with a different ones. In the exmaple above, we set the `title-small` key in the `$card-categories` map to have type scale value of `subtitle-1`, which will result in making the small title in our card component a little bit bigger. This is because by default the card component is using type scale `subtitle-2` which is smaller in font size than the `subtitle-1` type scale which we just set with the `card-typography` mixin.
+Using the card-typography mixin, we can update the typography styles for all elements in the card component. In the example above, the title-small key in the $card-categories map is assigned the subtitle-1 type style. This change makes the small title in the card slightly larger. By default, the card component uses the subtitle-2 type style for the small title, which has a smaller font size than subtitle-1. The mixin allows us to override this default and apply the new style.
 
-## Units Converting
+## Converting Units
 
-We also have three typography function for converting property units.
-With the functions we can convert `px` units to `em` and `rem` and also `em` and `rem` units to `px`. 
-All we need to do is to call one of the three functions and pass the number that we want to convert.
+We also have three typography functions for converting property units. With the functions we can convert `px` units to `em` or `rem`, and also `em` or `rem` units to `px`. 
+All we need to do is call one of the three functions and pass a value that we want to convert.
 
 ### To 'px'
 ```scss
-   .my-component {
-     margin: px(3.23rem);
-   }
+.my-component {
+    margin: px(3.23rem);
+}
 ```
 
 ### To 'rem'
 ```scss
-   .my-component {
-     margin: rem(10px) rem(5px);
-   }
+.my-component {
+    margin: rem(10px) rem(5px);
+}
 ```
 
 ### To 'em'
 ```scss
-   .my-component {
-     margin: em(10px) em(5px);
-   }
+.my-component {
+    margin: em(10px) em(5px);
+}
 ```
 
 ## CSS Classes

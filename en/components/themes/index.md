@@ -14,10 +14,10 @@ Ignite UI for Angular allows you to modify the styles of all component themes us
 ## Basic Usage
 
 Ignite UI for Angular includes the following themes as part of its package:
-    - Material
-    - Bootstrap
-    - Fluent
-    - Indigo
+- Material
+- Bootstrap
+- Fluent
+- Indigo
 
 All themes have light and dark variants as well as support for left-to-right(LTR) and right-to-left(RTL) content by default. The easiest way to start using any of the bundled themes in your application is by specifying the path to a CSS theme file in your `angular.json` configuration. For example, if you wanted to use the dark Material theme, you would include the path to the theme file like so:
 

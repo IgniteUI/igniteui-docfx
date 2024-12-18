@@ -57,22 +57,6 @@ Let's take the `background` property for example. It tells the avatar theme what
 
 *The `background` can be assigned any value, that is, a value that can be assigned to the CSS `background-color` property.* You can also assign a map to `background`, like in the sample above. When you assign a map to the `background` property, the map should contain functions as the key names (e.g. `color`), and arguments for the functions as values for said keys. We do this to be able to resolve the values later on, when the avatar theme is being built. See, because we don't know the palette a user might pass to the avatar theme, we should be able to resolve it later on, only when the palette is known.
 
-We can also add other functions and arguments to the `background` map as key value pairs. For instance we may want to run the resolved result from `color: ('gray', 400)` through the `to-opaque` function we have, to resolve the HEX value for the `400` color variant of the `gray` palette, which is usually represented in rgba. 
-
-Let's see how the schema will change when we make this addition:
-
-```scss
-$light-avatar: (
-    icon-background: (
-       color: ('gray', 400),
-        to-opaque: #fff
-    ),
-    ...
-);
-```
-
-The result of the `color` function call will automatically be passed as the first argument to the `to-opaque` function. Since `to-opaque` accepts a second argument for the background color, we provide it as the value. If the function doesn't accept any additional arguments, you should assign an empty list `()` as its value.
-
 <div class="divider--half"></div>
 
 ## Extending Schemas
@@ -90,15 +74,15 @@ Now the value of `$my-avatar-schema` will contain all properties of `$_light-ava
 We provide predefined light and dark schemas that we use in our theme presets:
 
 - Light Schemas
-    - $light-material-schema
-    - $light-fluent-schema
-    - $light-bootstrap-schema
-    - $light-indigo-schema
+    - `$light-material-schema`
+    - `$light-fluent-schema`
+    - `$light-bootstrap-schema`
+    - `$light-indigo-schema`
 - Dark Schemas
-    - $dark-material-schema
-    - $dark-fluent-schema
-    - $dark-bootstrap-schema
-    - $dark-indigo-schema
+    - `$dark-material-schema`
+    - `$dark-fluent-schema`
+    - `$dark-bootstrap-schema`
+    - `$dark-indigo-schema`
 
 We use the light and dark schemas accordingly with the light and dark palettes to create the component themes. For example, using the `$light-material-schema` along with the `$light-material-palette` will help us create all of the light material component themes. And vice versa - using the `$dark-material-schema` along with the `$dark-material-palette` will give us the dark material component themes.
 
@@ -134,7 +118,7 @@ Now we can pass all that to the global theme mixin:
 );
 ```
 
-Avatars in your global theme will now have use limegreen color for their background.
+Avatars in your global theme will now use limegreen color for their background.
 
 Some component schemas, like the button schema, have property definitions for roundness. This means that you can change the default button roundness for all buttons.
 
@@ -150,11 +134,11 @@ Currently the most used use case for schemas is if we want a specific element to
 For example if we had `$light-material-schema` applied for our global theme, and we wanted only one specific avatar component to use `$light-indigo-schema` we can do the following:
 
 ```scss
-//We only get the avatar part of the light-indigo-schema
+// We only get the avatar part of the light-indigo-schema
 $indigo-avatar: map.get($light-indigo-schema, avatar);
 
-//We include the speicfic schematic to a class which we can then set on the avatar component that we want
-.diff-avatar {
+// We include the specific schema to a class which we can then set on the avatar component that we want
+.indigo-avatar {
     @include css-vars(
         avatar-theme(
             $schema: $indigo-avatar

@@ -18,30 +18,31 @@ The `primary`, `secondary`, and `gray` colors follow the [2014 Material Design C
 <table>
     <tr>
         <th colspan="10" style="text-align: center !important">All</th>
-        <th colspan="4" style="text-align: center !important">*Primary & Secondary Only*</th>
+        <th colspan="4" style="text-align: center !important"><b>Primary & Secondary Only</b></th>
     </tr>
     <tr>
-        <td>**50**</td>
-        <td>**100**</td>
-        <td>**200**</td>
-        <td>**300**</td>
-        <td>**400**</td>
-        <td>**500**</td>
-        <td>**600**</td>
-        <td>**700**</td>
-        <td>**800**</td>
-        <td>**900**</td>
-        <td>*A100*</td>
-        <td>*A200*</td>
-        <td>*A400*</td>
-        <td>*A700*</td>
+        <td>50</td>
+        <td>100</td>
+        <td>200</td>
+        <td>300</td>
+        <td>400</td>
+        <td>500</td>
+        <td>600</td>
+        <td>700</td>
+        <td>800</td>
+        <td>900</td>
+        <td><b>A100</b></td>
+        <td><b>A200</b></td>
+        <td><b>A400</b></td>
+        <td><b>A700</b></td>
     </tr>
 </table>
 
 <div class="divider--half"></div>
+
 As the table above shows, the `gray` color doesn't include the `A100`, `A200`, `A400`, and `A700` variants, while the `primary` and `secondary` colors contain all 14 color variants. We include 5 additional colors that are not part of the 2014 Material Design Color Palette - `info`, `success`, `warn`, `error` and `surface`.
 
-On top of the aforementioned colors, we also include **Level AAA** [WCAG](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) compliant `contrast` colors for each color variant. This means that you can safely use the corresponding `contrast` color variants as foreground colors for the base color variant.
+On top of the aforementioned colors, we also include **Level AA** [WCAG](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) compliant `contrast` colors for each color variant. This means that you can safely use the corresponding `contrast` color variants as foreground colors for the base color variant.
 
 > [!NOTE]
 > Contrast colors are generated at build-time by the Sass theming engine based on the main variables color (primary, secondary, etc.).
@@ -67,10 +68,10 @@ Here's an excerpt of the `primary` variable color as declared in the Light Mater
 }
 ```
 
-All primary color variants are derived from one base variable color variant - `--ig-primary-500`. The same goes for the other color variables `--ig-secondary-500`, `--ig-surface-500`, etc. The other variants are generated through the relative color function `hsl()` which takes the main variable color variant `500` and changes it's `staturation` and `lightness` according to the variable variant which is assigned on (`600`,`700`, etc.). We decided to use this approach as it allows us to modify all variants of the `primary`, `secondary`, `surface` and other colors at runtime.
+All primary color variants are derived from one base variable color variant `--ig-primary-500`. The same goes for the other color variables `--ig-secondary-500`, `--ig-surface-500`, etc. The other variants are generated through the relative color function `hsl()` which takes the main variable color variant `500` and changes it's `staturation` and `lightness` according to the variable variant which is assigned on (`600`,`700`, etc.). We decided to use this approach as it allows us to modify all variants of the `primary`, `secondary`, `surface` and other colors at runtime.
 
 > [!WARNING]
-> Because the Contrast colors are not generated at runtime like the rest, if we change the main color variant(`500`), the contrast color would not be updated. We would need to change it manually.
+> Because the contrast colors are not generated at CSS runtime like the rest, if we change the main color variant(`500`), the contrast color would not be updated. We would need to change them manually. This behavior will be improved upon in an upcoming release, where the contrast colors will also be calculated at CSS runtime.
 
 ## Defining Palettes
 
@@ -84,7 +85,7 @@ If you wanted to change the color variants for a color from the palette, you can
 
 This will automatically update all the other primary variants.
 
-You will notice that color variants for each color are monochromatic. This is because all color variants are generated with the relative color function `hsl()`
+You will notice that color variants for each color are monochromatic. This is because all color variants are generated with the relative color function `hsl()`.
 
 ## Scoping
 
@@ -98,7 +99,7 @@ Let's say your corporate primary color is `#9f349c` and you want to create prima
 }
 ```
 
-This will automatically calculate each primary color variant and it's contrast color, thanks to the Sass function for generating color palettes at build-time that we provide. If you want to see more about it, you can check out the [Palettes with Sass](./sass/palettes.md) section of the documentation.
+This will automatically alter each primary color variant.
 
 Apart from having a single global palette, you can also create several palettes scoped to other CSS selectors. For example, we can have a blue and red palette scoped to class selectors:
 
