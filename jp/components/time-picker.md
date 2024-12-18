@@ -262,6 +262,7 @@ Time Picker コンポーネントは、さまざまな表示形式と入力形�
 表示形式は、編集モードでの値の形式であり、リストされている Angular [DatePipe](https://angular.io/api/common/DatePipe) 形式の 1 つにすることができます。これにより、`shortTime` や `longTime` などの事前定義されたフォーマット オプションをサポートできます。
 
 入力形式は、編集モードでないときの値の形式と、時間部分がドロップダウン/ダイアログに表示される形式です。`inputFormat` プロパティは、DatePipe でサポートされている文字を使用して構築されたフォーマット文字列を受け入れます。`hh:mm:ss` ですが、`shortTime` や `longTime` などの事前定義されたフォーマット オプションはサポートしていません。`inputFormat` プロパティが定義されていない場合、デフォルトで `hh:mm tt` になります。
+あるいは、[`inputFormat`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#inputFormat) プロパティが設定されていない場合、入力形式は [`displayFormat`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#displayFormat) から数値の日付と時刻の部分のみを含む形式として解析できる場合に推測されます。
 
 ```html
 <igx-time-picker

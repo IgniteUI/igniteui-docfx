@@ -194,6 +194,41 @@ The following example demonstrates the vertical orientation of the Angular Toolb
 </code-view>
 
 
+### Color Editor
+
+You can add a custom color editor tool to the the Angular Toolbar, which will also work with the Command event to perform custom styling to your application.
+
+```html
+<igx-toolbar
+  name="toolbar"
+  #toolbar>
+      <igx-tool-action-color-editor
+      title="Series Brush"
+      name="colorEditorTool"
+      #colorEditorTool>
+      </igx-tool-action-color-editor>
+</igx-toolbar>
+```
+
+```ts
+<igc-toolbar
+  name="toolbar"
+  id="toolbar">
+      <igc-tool-action-color-editor
+      title="Series Brush Color"
+      name="colorEditorTool"
+      id="colorEditorTool">
+      </igc-tool-action-color-editor>
+</igc-toolbar>
+```
+
+The following example demonstrates styling the Angular Data Chart series brush with the Color Editor tool. <code-view style="height: 600px" alt="Angular Color Editor Support"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/toolbar/color-editor-support"
+                                                 github-src="charts/toolbar/color-editor-support">
+</code-view>
+
+
 <!-- ## Styling/Theming
 
 The icon component can be styled by using it's `BaseTheme` property directly to the `Toolbar`.

@@ -195,6 +195,43 @@ public toolbarCustomIconOnViewInit(): void {
 </code-view>
 
 
+### Color Editor (カラー エディター)
+
+Angular Toolbar にカスタム カラー エディター ツールを追加できます。このツールは、コマンド イベントと連携して、アプリケーションにカスタム スタイルを適用することもできます。
+
+```html
+<igx-toolbar
+  name="toolbar"
+  #toolbar>
+      <igx-tool-action-color-editor
+      title="Series Brush"
+      name="colorEditorTool"
+      #colorEditorTool>
+      </igx-tool-action-color-editor>
+</igx-toolbar>
+```
+
+```ts
+<igc-toolbar
+  name="toolbar"
+  id="toolbar">
+      <igc-tool-action-color-editor
+      title="Series Brush Color"
+      name="colorEditorTool"
+      id="colorEditorTool">
+      </igc-tool-action-color-editor>
+</igc-toolbar>
+```
+
+次の例は、カラー エディター ツールを使用して Angular Data Chart シリーズ ブラシのスタイルを設定する方法を示しています。
+
+<code-view style="height: 600px" alt="Angular Color Editor のサポート"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/toolbar/color-editor-support"
+                                                 github-src="charts/toolbar/color-editor-support">
+</code-view>
+
+
 <!-- ## スタイル設定 / テーマ設定
 
 アイコン コンポーネントは、`BaseTheme` プロパティを `Toolbar` に直接使用してスタイルを設定できます。

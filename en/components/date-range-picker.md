@@ -245,6 +245,8 @@ The `inputFormat` property accepts a constructed format string using characters 
 </igx-date-range-picker>
 ```
 
+If the [`inputFormat`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#inputFormat) property is not set, the input format will be inferred from the [`displayFormat`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#displayFormat) in case it can be parsed as containing numeric date-time parts only.
+
 >[!NOTE]
 > The `IgxDateRangePicker` now supports IME input. When composition ends, the control converts the wide-character numbers to ASCII characters.
 
