@@ -12,7 +12,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 Palettes in the context of Ignite UI for Angular are declared as [Sass Maps](https://sass-lang.com/documentation/values/maps) with the keys of those map being the palette colors (`primary`, `secondary`, `surface`, etc.). Each color is in turn a map itself and has all color variants listed as keys. The values assigned to those color variants are the actual colors used throughout all component themes. All palette maps are generated programatically by the palette function. The function accepts arguments for `primary`, `secondary`, `surface`, `gray`, `info`, `success`, `warn`, and `error` colors. The `primary` color is usually your brand color. It is mostly used to style static elements, such as the `igx-navbar` component. The `secondary` color is the one used on elements that are actionable, such as buttons, switches, sliders, etc.
 The `surface` color is the one used for background color of some components, such as cards, menus, date/time pickers, banners sheets, etc.. The only required arguments are the ones for `primary`, `secondary` and `surface` colors. We default the colors for `surface`, `gray`, `info`, `success`, `warn`, and `error` to a predefined set of our choosing.
 
-To get started with your first color palette, create an _scss_ file that would be the base file for your global theme. I will call mine _"_variables.scss"_.
+To get started with your first color palette, create an _scss_ file that would be the base file for your global theme. I will call mine _`_variables.scss`_.
 
 ```scss
 // _variables.scss
@@ -36,25 +36,25 @@ In case you want to manually create your palette, or create the palette generati
 ```scss
 $handmade-palette: (
     'primary': (
-        50: #e6eff8,
+        '50': #e6eff8,
         '50-contrast': black,
-        100: #bfd7f2,
+        '100': #bfd7f2,
         '100-contrast': black,
-        200: #98bfec,
+        '200': #98bfec,
         '200-contrast': black,
-        300: #85b5e9,
+        '300': #85b5e9,
         '300-contrast': white,
-        400: #73a6e4,
+        '400': #73a6e4,
         '400-contrast': white,
-        500: #6797de,
+        '500': #6797de,
         '500-contrast': white,
-        600: #3681dd,
+        '600': #3681dd,
         '600-contrast': white,
-        700: #357fda,
+        '700': #357fda,
         '700-contrast': white,
-        800: #306dc8,
+        '800': #306dc8,
         '800-contrast': white,
-        900: #284ea8,
+        '900': #284ea8,
         '900-contrast': white,
         'A100': #98bfec,
         'A100-contrast': white,
@@ -66,25 +66,25 @@ $handmade-palette: (
         'A700-contrast': white
     ),
     'secondary': (
-        50: #fef7e2,
+        '50': #fef7e2,
         '50-contrast': black,
-        100: #fdeab7,
+        '100': #fdeab7,
         '100-contrast': black,
-        200: #fbdd89,
+        '200': #fbdd89,
         '200-contrast': black,
-        300: #fad15c,
+        '300': #fad15c,
         '300-contrast': black,
-        400: #f9c63f,
+        '400': #f9c63f,
         '400-contrast': black,
-        500: #f7bd32,
+        '500': #f7bd32,
         '500-contrast': white,
-        600: #f6b02d,
+        '600': #f6b02d,
         '600-contrast': white,
-        700: #f49e2a,
+        '700': #f49e2a,
         '700-contrast': white,
-        800: #f38e28,
+        '800': #f38e28,
         '800-contrast': white,
-        900: #f38e28,
+        '900': #f38e28,
         '900-contrast': white,
         'A100': #fbdd89,
         'A100-contrast': black,
@@ -96,45 +96,45 @@ $handmade-palette: (
         'A700-contrast': white
     ),
     'gray': (
-        50: #fff,
+        '50': #fff,
         '50-contrast': black,
-        100: #fafafa,
+        '100': #fafafa,
         '100-contrast': black,
-        200: #f5f5f5,
+        '200': #f5f5f5,
         '200-contrast': black,
-        300: #f0f0f0,
+        '300': #f0f0f0,
         '300-contrast': black,
-        400: #dedede,
+        '400': #dedede,
         '400-contrast': black,
-        500: #b3b2b2,
+        '500': #b3b2b2,
         '500-contrast': black,
-        600: #979696,
+        '600': #979696,
         '600-contrast': white,
-        700: #7b7a7a,
+        '700': #7b7a7a,
         '700-contrast': white,
-        800: #404040,
+        '800': #404040,
         '800-contrast': white,
-        900: #1a1a1a,
+        '900': #1a1a1a,
         '900-contrast': white
     ),
     'info': (
-        500: rgb(18, 118, 211),
+        '500': rgb(18, 118, 211),
         '500-contrast': black
     ),
     'success': (
-        500: rgb(76, 184, 96),
+        '500': rgb(76, 184, 96),
         '500-contrast': black
     ),
     'warn': (
-        500: rgb(251, 178, 60),
+        '500': rgb(251, 178, 60),
         '500-contrast': black
     ),
     'error': (
-        500: rgb(255, 20, 75),
+        '500': rgb(255, 20, 75),
         '500-contrast': black
     ),
     'surface': (
-        500: rgb(255, 255, 255),
+        '500': rgb(255, 255, 255),
         '500-contrast': black
     )
 );
@@ -142,7 +142,7 @@ $handmade-palette: (
 ```
 
 >[!WARNING]
-> It's important to set the string map keys to be between quatation marks - `'primary'`, `'secondary'`, `'gray'`, etc.
+> It's important to set the map keys as strings, explicitly between quotation marks - `'primary'`, `'secondary'`, `'gray'`, etc. The same applies for all color variants - `500`, `500-contrast`, etc.
 
 <div class="divider"></div>
 
@@ -150,59 +150,21 @@ $handmade-palette: (
 We provide predefined light and dark palettes, which you can use along with our schemas to create themes for your components:
 
 - Light Palettes
-  - $light-material-palette
-  - $light-fluent-excel-palette
-  - $light-fluent-word-palette
-  - $light-fluent-palette
-  - $light-bootstrap-palette
-  - $light-indigo-palette
+  - `$light-material-palette`
+  - `$light-fluent-excel-palette`
+  - `$light-fluent-word-palette`
+  - `$light-fluent-palette`
+  - `$light-bootstrap-palette`
+  - `$light-indigo-palette`
 - Dark Palettes
-  - $dark-material-palette
-  - $dark-fluent-excel-palette
-  - $dark-fluent-word-palette
-  - $dark-fluent-palette
-  - $dark-bootstrap-palette
-  - $dark-indigo-palette
+  - `$dark-material-palette`
+  - `$dark-fluent-excel-palette`
+  - `$dark-fluent-word-palette`
+  - `$dark-fluent-palette`
+  - `$dark-bootstrap-palette`
+  - `$dark-indigo-palette`
 
 You can mix and match all light palettes with a light schema of your choice and vice versa - all dark palettes with a dark schema that you think will best match your needs and vision.
-
-## The Default Palette
-The `theme` mixin takes a palette(see the previous section) as one of its arguments. The passed palette is assigned to the global `$default-palette` variable. This palette stored in this variable is used across the Sass library as fallback palette, whenever a palette is expected, but not explicitly provided by the user.
-
-You can use this knowledge to your advantage to allow you to re-use the same palette across multiple Sass documents in your application.
-
-For example, you could have the following Sass files in your app.
-
-```scss
-// src/styles/_variables.scss
-
-$my-palette: palette(
-  $primary: #2ab759,
-  $secondary: #f96a88,
-  $surface: #e5e5e5
-);
-
-$default-palette: $my-palette;
-```
-
-In your main styles file:
-```scss
-// src/styles/styles.scss
-@use 'variables' as *;
-
-@include theme($palette: $my-palette);
-```
-
-In a component `.scss` file:
-```scss
-@use '../styles/styles/variables' as *;
-
-:host {
-  background: color($variant: 900);
-}
-```
-
-This ensures that the same palette, declared in our `_variables.scss` file is used across all Sass files
 
 ## Grayscale Colors
 
@@ -232,13 +194,13 @@ $my-color-palette: palette(
 We provide a function that is easy to remember and use - `color`. It can take up to four arguments - `palette`, `color`, `variant` and `opacity`;
 
 ```scss
-// Get the primary CSS variable reference of the 500 color variant
+// Get the primary color as CSS variable reference to the 500 color variant
 $my-primary-500: color();
 
-// Get the primary CSS variable reference of the 600 color variant
+// Get the primary color as CSS variable reference to the 600 color variant
 $my-primary-600: color($variant: 600);
 
-// Get the primary CSS variable reference of the 600 color variant with .5 opacity
+// Get the primary color as CSS variable reference to the 600 color variant with .5 opacity
 $my-primary-600-opacity: color($variant: 600, $opacity: .5);
 
 // Get the secondary A700 color variant as a HEX value from $my-palette
