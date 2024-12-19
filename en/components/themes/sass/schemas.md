@@ -130,8 +130,8 @@ $my-avatar-theme: avatar-theme(
 );
 ```
 
-Currently the most used use case for schemas is if we want a specific element to have a different theme than the global one.
-For example if we had `$light-material-schema` applied for our global theme, and we wanted only one specific avatar component to use `$light-indigo-schema` we can do the following:
+Currently, the most common use case for schemas is when we want a specific element to have a different theme than the global one.
+For example, if we had `$light-material-schema` applied for our global theme, and we wanted only one specific avatar component to use `$light-indigo-schema` we can do the following:
 
 ```scss
 // We only get the avatar part of the light-indigo-schema
