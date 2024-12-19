@@ -24,15 +24,11 @@ DashboardTile (Beta)
 
 *   New [Dashboard Tile](dashboard-tile.md) component is a container control that analyzes and visualizes a bound ItemsSource collection or single point and returns an appropriate data visualization based on the schema and count of the data. This control utilizes a built-in [Toolbar](menus/toolbar.md) component to allow you to make changes to the visualization at runtime, allowing you to see many different visualizations of your data with minimal code.
 
-Color Editor (Beta)
-
-*   New [Color Editor](inputs/color-editor.md) component is a lightweight color picker. The Color Editor can pop open by clicking the brush icon. Both the RGBA and HEX values can be obtained from the desired color along the bottom.
-
 ### igniteui-angular-charts (Inputs)
 
-*   New ColorEditor & Toolbar ToolAction (Beta)
+*   New ColorEditor (Beta) & Toolbar ToolAction (Beta)
 
-This new editor can be used as a standalone color picker and is now integrated into the [Toolbar](menus/toolbar.md) component to update visualizations at runtime.
+This new [Color Editor](inputs/color-editor.md) can be used as a standalone color picker and is now integrated into the [Toolbar](menus/toolbar.md) component to update visualizations at runtime.
 
 ## **18.1.0 (September 2024)**
 
