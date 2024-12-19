@@ -17,23 +17,23 @@ To generate a global theme we're going to be including two mixins `core` and `th
 ### Core mixin  
 <div class="divider--half"></div>
 
-|           Name            |  Type   | Default |                                Description                                |
+| Name                      | Type    | Default | Description                                                               |
 | :-----------------------: | :-----: | :-----: | :-----------------------------------------------------------------------: |
-|      `$print-layout`      | boolean |  true   |                 Include/exclude the styles for printing.                  |
-| `$enhanced-accessibility` | boolean |  false  | Switches component colors and other properties to more accessible values. |
+| `$print-layout`           | boolean | true    | Include/exclude the styles for printing.                                  |
+| `$enhanced-accessibility` | boolean | false   | Switches component colors and other properties to more accessible values. |
 
 
 ### Theme mixins
 <div class="divider--half"></div>
 
-|     Name      |  Type   |         Default          |                                                 Description                                                  |
+| Name          | Type    | Default                  | Description                                                                                                  |
 | :-----------: | :-----: | :----------------------: | :----------------------------------------------------------------------------------------------------------: |
-|  `$palette`   |   map   |           null           |                    The palette map to be used to by the default themes of all components.                    |
-|   `$schema`   |   map   | `$light-material-schema` |                             The schema used as basis for styling the components.                             |
-|  `$exclude`   |  list   |            ()            |                       A list of component themes to be excluded from the global theme.                       |
-| `$roundness`  | Number  |            1             | Sets the global roundness factor for all components (the value can be any decimal fraction between 0 and 1). |
-| `$elevation`  | boolean |          `true`          |                           Turns on/off elevations for all components in the theme.                           |
-| `$elevations` |   Map   |  `$material-elevations`  |                            The elevation map to be used by all component themes.                             |
+| `$palette`    | map     | `null`                   | The palette map to be used to by the default themes of all components.                                       |
+| `$schema`     | map     | `$light-material-schema` | The schema used as basis for styling the components.                                                         |
+| `$exclude`    | list    | `()`                     | A list of component themes to be excluded from the global theme.                                             |
+| `$roundness`  | Number  | `null`                   | Sets the global roundness factor for all components (the value can be any decimal fraction between 0 and 1). |
+| `$elevation`  | boolean | `true`                   | Turns on/off elevations for all components in the theme.                                                     |
+| `$elevations` | Map     | `$material-elevations`   | The elevation map to be used by all component themes.                                                        |
 
 Let's create a custom global theme that will use the primary, secondary and surface colors of our company.
 
