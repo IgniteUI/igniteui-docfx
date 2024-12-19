@@ -6,7 +6,10 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 # Size
 
-Size configuration can significantly improve the visual representation of large amounts of data. In Ignite UI for Angular, we provide a pre-defined set of options – large, medium, and small.
+Size configuration can significantly improve the visual representation of large amounts of data. In Ignite UI for Angular, we provide a pre-defined set of options: 
+- **large**
+- **medium**
+- **small**
 
 Using the `--ig-size` custom CSS property, you can configure the size on an application or a component level.
 

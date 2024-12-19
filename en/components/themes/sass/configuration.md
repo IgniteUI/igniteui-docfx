@@ -9,33 +9,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="highlight">The Ignite UI for Angular theming library exposes several input arguments variables that let you configure how the theming engine works.</div>
 <div class="divider"></div>
 
-## Legacy Support
-
-The development of Ignite UI for Angular started back in 2016 when Internet Explorer 11 was still relevant. Some of our users depend on IE11 to this day. Our theming engine was built in a way that allows you to produce styles for ever-green and old browsers alike, using the same API. We allow you to configure how the engine behaves based on a single global variable - `$igx-legacy-support`. By default, it is set to `false`, but you can shadow its declaration. The value of this variable is also implicitly set when you specify the `$legacy-support` parameter on the `theme` mixin.
-
-> [!WARNING]
-> The `$legacy-support` option was removed in igniteui-angular 13.0.x. Support for IE11 and legacy browsers was removed in version 13 and this option is no longer valid.
-
-Example:
-
-```scss
-// Sets the global $igx-legacy-support variable to true
-@include theme(
-  $legacy-support: true
-);
-```
-
-This is the default way to turn off legacy support for the theme you're building in your `styles.scss` file. If you have styles scoped to specific components, like the `app.component.scss` file, you will have to specify the legacy support there as well.
-
-```scss
-// app.component.scss
-$igx-legacy-support: true;
-
-$color: color($light-material-palette, 'primary', 900);
-```
-
-We recommend you create a `_variables.scss` file in the `styles` directory of your project where you store all of your global configuration variables. In this way, you can simply import your configuration in every style file.
-
 ## Global Variables
 
 Here's a list of global Sass variables forwarded in the main theming module:
@@ -49,18 +22,15 @@ Here's a list of global Sass variables forwarded in the main theming module:
 
 The Ignite UI for Angular themes ship with custom scrollbar styles that allow you to change the width and/or the colors of all scrollbars in your application. To apply the included styles, make sure to set the `ig-scrollbar` class to an element that contains your root app component.
 
-To customize the scrollbar further, you can create a new theme that extends the existing [`scrollbar-theme`]({environment:sassApiUrl}/index.html#function-scrollbar-theme) and accepts the `$schema`, `$thumb-background`, `$track-background` and the `$scrollbar-size` parameters.
+To customize the scrollbar further, you can create a new scrollbar style with the [`scrollbar-theme`]({environment:sassApiUrl}/index.html#function-scrollbar-theme) function. The function accepts arguments for style changes on the scrollbar. We can customize the scrollbar size, color, border, min-height... and many more.
 
 ```scss
 // app.component.scss
-$my-scrollbar-theme: scrollbar-theme($thumb-background: black, $track-background: gray);
+// Here we set the scrollbar to have size of 16px, scrollbar thumb to be in color pink, and scrolblar track to be in color green
+$my-scrollbar-theme: scrollbar-theme($sb-size: 16px, $sb-thumb-bg-color: pink, $sb-track-bg-color: green);
 
-@include scrollbar($my-scrollbar-theme);
-```
-The parameters can also be directly applied to the scrollbar function to prevent the creation of additional themes.
-```scss
-// app.component.scss
-@include scrollbar(scrollbar-theme($scrollbar-size: 16px));
+// We use 'css-vars' mixin for generating the css variables with the new scrollbar values.
+@include css-vars($my-scrollbar-theme);
 ```
 
 <div class="divider"></div>

@@ -9,12 +9,21 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <div class="divider"></div>
 
 ## Overview
-Border radius is defined in the theme schema of the component (see the example below). The border radius for any component defined in this manner can then be controlled via the `$roundness` parameter of the [theme]({environment:sassApiUrl}/index.html#mixin-theme) mixin or a single CSS variable called `--ig-radius-factor`.
+Border radius is defined in the [theme schema](https://github.com/IgniteUI/igniteui-theming/blob/18f878033898e1b6a3bb0ed28993e9a4037d1a80/sass/themes/schemas/components/light/_toast.scss#L44) of the component (see the example below). The border radius for any component defined in this manner can then be controlled via the `$roundness` parameter of the [theme]({environment:sassApiUrl}/index.html#mixin-theme) mixin or a single CSS variable called `--ig-radius-factor`.
 
 ```scss
-$light-toast: (
-    ...,
-    border-radius: (rem(26px), rem(0), rem(26px)),
+$light-toast: extend(
+    $default-elevation-toast,
+    (
+        ...,
+        border-radius: (
+            border-radius: (
+                rem(26px),
+                rem(0),
+                rem(26px),
+            ),
+        ),
+    )
 );
 ```
 
@@ -36,25 +45,28 @@ If you want the toast to still be affected by the `$roundness` or the `--ig-radi
 ```scss
 // Change the default, min and max values,
 // while preserving customization via $roundness or --ig-radius-factor.
-$toast-theme: (
-    ...,
-    border-radus: border-radius(rem(4px), rem(4px), rem(16px))
-);
-
-@include css-vars($toast-theme);
+igx-toast {
+  --border-radius: #{border-radius(rem(4px), rem(4px), rem(16px))};
+}
 ```
 
 If you want the border-radius to be a constant value, unaffected by changes of `--ig-radius-factor`, just pass it directly to the border-radius parameter.
 
 ```scss
 // Will be unaffected by changes to $roundess or --ig-radius-factor.
-$toast-theme: (
-    ...,
-    border-radus: rem(4px)
-);
-
-@include css-vars($toast-theme);
+igx-toast {
+  --border-radius: rem(4px);
+}
 ```
+
+We can also use the `border-radius` mixin to directly assign the border-radius property to elements. 
+
+```scss
+button {
+    @include border-radius(rem(4px), rem(4px), rem(16px));
+}
+```
+Now the `border-radius` on the button will be affected by the `$roundness` and `--ig-radius-factor` variables.
 
 <div class="divider--half"></div>
 

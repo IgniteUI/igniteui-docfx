@@ -66,17 +66,6 @@ In addition to this, you can tell the theme to ignore/not use elevations complet
 );
 ```
 
-Some component themes also accept the `$elevations` parameter to allow you to pass custom elevation for their instances only.
-
-For instance, the card component does support passing custom elevations. To find out which components accept a custom elevations map, take a look at their Sass documentation. Each component uses only specific levels from the elevations map, those too are listed in the component's Sass docs.
-
-```scss
-@include card(card-theme(
-    //...
-    $elevations: $my-elevations,
-));
-```
-
 Since the `elevation` function returns a list of box shadows, you can use the return value of that function to modify only certain elevations in your component themes. 
 
 ```scss
@@ -84,18 +73,7 @@ $card-theme: card-theme(
     $resting-shadow: elevation(10)
 );
 
-@include card($card-theme);
-```
-
-This compiles to:
-
-```css
-.igx-card {
-  box-shadow: 
-    0 6px 6px -3px rgba(0, 0, 0, 0.26),
-    0 10px 14px 1px rgba(0, 0, 0, 0.12),
-    0 4px 18px 3px rgba(0, 0, 0, 0.08);
-}
+@include css-vars($card-theme);
 ```
 
 You can also pass simple box shadows without taking advantage of the `elevation` function:
@@ -105,16 +83,7 @@ $card-theme: card-theme(
 );
 
 .my-card {
-  @include card($card-theme);
-}
-```
-
-Here is the result from the above snippet:
-
-```scss
-.my-card .igx-card {
-  /* ... */
-  box-shadow: 0 10px 10px 10px #666;
+  @include css-vars($card-theme);
 }
 ```
 <div class="divider--half"></div>

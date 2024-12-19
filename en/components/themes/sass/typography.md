@@ -100,7 +100,7 @@ It currently accepts 2 arguments:
 - `$font-family` - The global font family to be used by the application.
 - `$type-scale` - The default type scale to be used by the application.
 
-To use the typography styles, include the `typography` mixin anywhere after the `core` mixin and before the `theme` mixin. Let's take advantage of the type scale `$my-type-scale` we defined above and make it the default type scale.
+To use the typography styles, include the `typography` mixin anywhere after the `core`. Let's take advantage of the type scale `$my-type-scale` we defined above and make it the default type scale.
 
 ```scss
 @include typography(
@@ -154,7 +154,7 @@ $my-h6: type-style($font-size: 12px);
 // You can specify which categories from the type sale the card uses
 $card-categories: (
     title: 'h6',
-    title-small: 'subtitle-2',
+    title-small: 'subtitle-1',
     subtitle: 'subtitle-2',
     content: 'body-2',
 );
@@ -169,6 +169,43 @@ $card-categories: (
 ```
 
 We no longer include the `typography` mixin by passing it the `$my-type-scale` scale with our modification to the `h6` category. Now all we do is pass the custom h6 style we created to the `type-style-vars` mixin.
+
+Using the card-typography mixin, we can update the typography styles for all elements in the card component. In the example above, the title-small key in the $card-categories map is assigned the subtitle-1 type style. This change makes the small title in the card slightly larger. By default, the card component uses the subtitle-2 type style for the small title, which has a smaller font size than subtitle-1. The mixin allows us to override this default and apply the new style.
+
+## Converting Units
+
+We also have three typography functions for converting property units. With the functions we can convert `px` units to `em` or `rem`, and also `em` or `rem` units to `px`. 
+All we need to do is call one of the three functions and pass a value that we want to convert.
+
+### To 'px'
+```scss
+.my-component {
+    margin: px(3.23rem);
+}
+```
+
+### To 'rem'
+```scss
+.my-component {
+    margin: rem(10px) rem(5px);
+}
+```
+
+### To 'em'
+```scss
+.my-component {
+    margin: em(10px) em(5px);
+}
+```
+
+It's important to remember that when converting a value, the conversion is based on a default base font size of 16px (where 16px = 1em/rem). If we want, we can provide a custom base font size as an argument to the conversion function. This will ensure that the resulting value is calculated relative to the specified base font size.
+```scss
+.my-component {
+    margin: rem(10px 26px);
+}
+```
+
+This will convert the 10px value to rem, based on the font size of 26px.
 
 ## CSS Classes
 
