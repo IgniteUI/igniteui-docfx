@@ -15,14 +15,14 @@ Border radius is defined in the [theme schema](https://github.com/IgniteUI/ignit
 $light-toast: extend(
     $default-elevation-toast,
     (
-     ...,
-      border-radius: (
-          border-radius: (
+        ...,
+        border-radius: (
+            border-radius: (
                 rem(26px),
                 rem(0),
                 rem(26px),
             ),
-      ),
+        ),
     )
 );
 ```

@@ -20,7 +20,10 @@ The *__light__* version of the Material theme is the default theme in Ignite UI 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 @include core();
-@include theme($palette: $dark-material-palette, $schema: $dark-material-schema);
+@include theme(
+    $palette: $dark-material-palette,
+    $schema: $dark-material-schema
+);
 
 @include typography($font-family: $material-typeface, $type-scale: $material-type-scale);
 ```
