@@ -198,6 +198,15 @@ All we need to do is call one of the three functions and pass a value that we wa
 }
 ```
 
+It's important to remember that when converting a value, the conversion is based on a default base font size of 16px (where 16px = 1em/rem). If we want, we can provide a custom base font size as an argument to the conversion function. This will ensure that the resulting value is calculated relative to the specified base font size.
+```scss
+.my-component {
+    margin: rem(10px 26px);
+}
+```
+
+This will convert the 10px value to rem, based on the font size of 26px.
+
 ## CSS Classes
 
 In addition to adding text styles for all components based on type scale categories, we also style the default h1-h6 and p elements. This allows us to separate semantics from styling. So for instance, even though the `h1` tag has some default styling that we provide when using `typography`, you can modify it to look like an `h3` by giving it a class of `ig-typography__h3`.

@@ -302,11 +302,11 @@ Following the simplest approach, we create a new theme that extends the [`badge-
 
 ```scss
 $custom-badge-theme: badge-theme(
-    $border-color: white,
-    $border-width: 1px,
+    $schema: $light-bootstrap-schema,
     $icon-color: white,
     $text-color: black,
-    $shadow: 3px 2px 5px 0px rgba(0,0,0,0.4)
+    $shadow: 3px 2px 5px 0px rgba(0,0,0,0.4),
+    $border-radius: 15px
 );
 ```
 
@@ -314,42 +314,11 @@ $custom-badge-theme: badge-theme(
 
 <div class="divider"></div>
 
-The last step is to **include** the component theme in our application.
-
-If `$legacy-support` is set to `true`, include the **component theme** like that:
-
-```scss
- @include badge($custom-badge-theme);
-```
->[!NOTE]
->If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
-
-```scss
-:host {
-     ::ng-deep {
-        @include badge($custom-badge-theme);
-    }
-}
-```
-
-<div class="divider"></div>
-
-If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
+To include the new theme we use the `css-vars` mixin:
 
 ```scss
 @include css-vars($custom-badge-theme);
 ```
-
->[!NOTE]
->If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
-
-```scss
-:host {
-    @include css-vars($custom-badge-theme);
-}
-```
-
-Don't forget to include the themes in the same way as it was demonstrated above.
 
 ### Demo
 
