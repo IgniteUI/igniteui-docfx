@@ -438,7 +438,7 @@ The [`disabledSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#d
 
 This property can also be modified **dynamically at runtime** through code, providing flexibility to adapt the grid's summaries to changing application states or user actions.
 
-Below are examples demonstrating the use of the `disabledSummaries` property for each grid type, along with details on how to dynamically update summaries at runtime.
+Below are examples demonstrating the use of the `disabledSummaries` property for different columns and different summaries.
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -465,26 +465,6 @@ Below are examples demonstrating the use of the `disabledSummaries` property for
 For `UnitPrice`, default summaries like `count`, `sum`, and `average` are disabled, leaving others like `min` and `max` active.
 
 For `UnitsInStock`, custom summaries such as `total` and `totalDiscontinued` are excluded using the `disabledSummaries` property.
-
-```typescript
-public disableDefaultSummary(event) {
-    const selectedValue = this.defaultSummaries[event.index].value;
-    const column = this.grid1.getColumnByName('UnitPrice');
-
-    if (!column.disabledSummaries.includes(selectedValue)) {
-        column.disabledSummaries = [...column.disabledSummaries, selectedValue];
-    }
-}
-
-public enableDefaultSummary(event) {
-    const selectedValue = this.defaultSummaries[event.index].value;
-    const column = this.grid1.getColumnByName('UnitPrice');
-
-    column.disabledSummaries = column.disabledSummaries.filter(
-        (summary) => summary !== selectedValue
-    );
-}
-```
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
@@ -511,26 +491,6 @@ public enableDefaultSummary(event) {
 For `Units`, custom summaries such as `totalDelivered` and `totalNotDelivered` are excluded using the `disabledSummaries` property.
 
 For `UnitPrice`, default summaries like `count`, `sum`, and `average` are disabled, leaving others like `min` and `max` active.
-
-```typescript
-public disableDefaultSummary(event) {
-    const selectedValue = this.defaultSummaries[event.index].value;
-    const column = this.treeGrid1.getColumnByName('UnitPrice');
-
-    if (!column.disabledSummaries.includes(selectedValue)) {
-        column.disabledSummaries = [...column.disabledSummaries, selectedValue];
-    }
-}
-
-public enableDefaultSummary(event) {
-    const selectedValue = this.defaultSummaries[event.index].value;
-    const column = this.treeGrid1.getColumnByName('UnitPrice');
-
-    column.disabledSummaries = column.disabledSummaries.filter(
-        (summary) => summary !== selectedValue
-    );
-}
-```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
@@ -559,44 +519,24 @@ public enableDefaultSummary(event) {
 For `Photo`, custom summaries such as `singersWithAwards` and `awards` are excluded using the `disabledSummaries` property.
 
 For `GrammyNominations` default summaries like `count`, `sum`, and `average` are disabled, leaving others like `min` and `max` active.
-
-```typescript
-public disableDefaultSummary(event) {
-    const selectedValue = this.defaultSummaries[event.index].value;
-    const column = this.hierarchicalGrid1.getColumnByName('GrammyNominations');
-
-    if (!column.disabledSummaries.includes(selectedValue)) {
-        column.disabledSummaries = [...column.disabledSummaries, selectedValue];
-    }
-}
-
-public enableDefaultSummary(event) {
-    const selectedValue = this.defaultSummaries[event.index].value;
-    const column = this.hierarchicalGrid1.getColumnByName('GrammyNominations');
-
-    column.disabledSummaries = column.disabledSummaries.filter(
-        (summary) => summary !== selectedValue
-    );
-}
-```
 }
 
 At runtime, summaries can also be dynamically disabled using the `disabledSummaries` property. For example, you can set or update the property on specific columns programmatically to adapt the displayed summaries based on user actions or application state changes.
 
 @@if (igxName === 'IgxGrid') {
-<code-view style="height:750px"
+<code-view style="height:850px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-disable-summaries" >
 </code-view>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<code-view style="height:850px"
+<code-view style="height:950px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-disable-summaries" >
 </code-view>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<code-view style="height:750px"
+<code-view style="height:850px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-disable-summaries" >
 </code-view>
