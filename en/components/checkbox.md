@@ -209,7 +209,7 @@ After all that is done, our application should look like this:
 </code-view>
 
 
-## Styling
+## Angular Checkbox Styling
 
 To get started with styling the checkbox, we need to import the `index` file, where all the theme functions and component mixins live:
 
