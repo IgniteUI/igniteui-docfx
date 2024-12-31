@@ -27,7 +27,7 @@ To get started with the Ignite UI for Angular Navigation Drawer component, first
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
 The first step is to import the `IgxNavigationDrawerModule` inside our **app.module.ts** file.
 
@@ -55,18 +55,14 @@ Alternatively, as of `16.0.0` you can import the `IgxNavigationDrawerComponent` 
 ```typescript
 // home.component.ts
 
-import { HammerModule } from "@angular/platform-browser";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { NgFor } from "@angular/common";
-import {
-  IGX_NAVIGATION_DRAWER_DIRECTIVES,
-  IgxRippleDirective,
-  IgxIconComponent,
-} from "igniteui-angular";
+import { HammerModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgFor } from '@angular/common';
+import { IGX_NAVIGATION_DRAWER_DIRECTIVES, IgxRippleDirective, IgxIconComponent } from 'igniteui-angular';
 // import { IGX_NAVIGATION_DRAWER_DIRECTIVES, IgxRippleDirective, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
-  selector: "app-home",
+  selector: 'app-home',
   template: `
     <div class="content-wrap">
       <igx-nav-drawer [isOpen]="true">
@@ -91,16 +87,9 @@ import {
       </main>
     </div>
   `,
-  styleUrls: ["home.component.scss"],
+  styleUrls: ['home.component.scss'],
   standalone: true,
-  imports: [
-    BrowserAnimationsModule,
-    HammerModule,
-    IGX_NAVIGATION_DRAWER_DIRECTIVES,
-    IgxRippleDirective,
-    IgxIconComponent,
-    NgFor,
-  ],
+  imports: [BrowserAnimationsModule, HammerModule, IGX_NAVIGATION_DRAWER_DIRECTIVES, IgxRippleDirective, IgxIconComponent, NgFor],
   /* or imports: [BrowserAnimationsModule, HammerModule, IgxNavigationDrawerComponent, IgxNavDrawerTemplateDirective, IgxNavDrawerItemDirective, IgxIconComponent, IgxRippleDirective, NgFor] */
 })
 export class HomeComponent {
@@ -136,13 +125,7 @@ The [`igxRipple`](ripple.md) directive completes the look and feel:
     <ng-template igxDrawer>
       <nav>
         <span igxDrawerItem [isHeader]="true">Components</span>
-        <span
-          *ngFor="let item of navItems"
-          igxDrawerItem
-          [active]="item.text === selected"
-          igxRipple
-          (click)="navigate(item)"
-        >
+        <span *ngFor="let item of navItems" igxDrawerItem [active]="item.text === selected" igxRipple (click)="navigate(item)">
           <igx-icon fontSet="material">{{ item.name }}</igx-icon>
           <span>{{ item.text }}</span>
         </span>
@@ -251,13 +234,7 @@ Here's how that would look applied to the previous example:
 
 ```html
 <div class="content-wrap" igxLayout igxLayoutDir="row">
-  <igx-nav-drawer
-    id="navigation"
-    #drawer
-    [isOpen]="true"
-    [pin]="true"
-    [pinThreshold]="0"
-  >
+  <igx-nav-drawer id="navigation" #drawer [isOpen]="true" [pin]="true" [pinThreshold]="0">
     <!-- template(s) -->
   </igx-nav-drawer>
   <main igxFlex>
@@ -315,25 +292,13 @@ The mini variant is commonly used in a persistent setup, so we've set `pin` and 
 ```html
 <igx-nav-drawer id="navigation" [pin]="true" [pinThreshold]="0">
   <ng-template igxDrawer>
-    <span
-      *ngFor="let item of navItems"
-      igxDrawerItem
-      [active]="item.text === selected"
-      igxRipple
-      (click)="navigate(item)"
-    >
+    <span *ngFor="let item of navItems" igxDrawerItem [active]="item.text === selected" igxRipple (click)="navigate(item)">
       <igx-icon fontSet="material">{{ item.name }}</igx-icon>
       <span>{{ item.text }}</span>
     </span>
   </ng-template>
   <ng-template igxDrawerMini>
-    <span
-      *ngFor="let item of navItems"
-      igxDrawerItem
-      [active]="item.text === selected"
-      igxRipple
-      (click)="navigate(item)"
-    >
+    <span *ngFor="let item of navItems" igxDrawerItem [active]="item.text === selected" igxRipple (click)="navigate(item)">
       <igx-icon fontSet="material">{{ item.name }}</igx-icon>
     </span>
   </ng-template>
@@ -363,11 +328,11 @@ export class AppComponent {
             name: 'Avatar'
         },
         {
-            link:  'badge',
+            link: 'badge',
             name: 'Badge'
         },
         {
-            link:  'button-group',
+            link: 'button-group',
             name: 'Button Group'
         }
     ];
@@ -391,9 +356,8 @@ You can use `routerLinkActive` where it's assigned to a template variable and it
       #rla="routerLinkActive"
       igxDrawerItem
       igxRipple
-      [active]="rla.isActive"
-    >
-      {{item.name}}
+      [active]="rla.isActive">
+       {{item.name}}
     </span>
   </nav>
 </ng-template>
@@ -436,19 +400,9 @@ To create a multi-level hierarchical navigation using the `IgxNavigationDrawerCo
   <ng-template igxDrawer>
     <igx-tree>
       <igx-tree-node *ngFor="let route of routes">
-        <a
-          igxTreeNodeLink
-          [routerLink]="route.path"
-          routerLinkActive="route-selected-class"
-          >{{ route.data?.displayName }}</a
-        >
+        <a igxTreeNodeLink [routerLink]="route.path" routerLinkActive="route-selected-class">{{ route.data?.displayName }}</a>
         <igx-tree-node *ngFor="let child of route.children">
-          <a
-            igxTreeNodeLink
-            [routerLink]="[route.path, child.path]"
-            routerLinkActive="route-selected-class"
-            >{{ child.data?.displayName }}</a
-          >
+          <a igxTreeNodeLink [routerLink]="[route.path, child.path]" routerLinkActive="route-selected-class">{{ child.data?.displayName }}</a>
         </igx-tree-node>
       </igx-tree-node>
     </igx-tree>
@@ -460,12 +414,12 @@ To create a multi-level hierarchical navigation using the `IgxNavigationDrawerCo
 > In this example, we're not using the `igxDrawerItem`, instead we're populating directly with custom `igxDrawer` content, in this case using an `igx-tree`.
 
 ```typescript
-import { menusRoutes } from "../../menus-routing.module";
+import { menusRoutes } from '../../menus-routing.module';
 
 @Component({
-  selector: "app-nav-drawer-hierarchical",
-  templateUrl: "./nav-drawer-hierarchical.component.html",
-  styleUrls: ["./nav-drawer-hierarchical.component.scss"],
+  selector: 'app-nav-drawer-hierarchical',
+  templateUrl: './nav-drawer-hierarchical.component.html',
+  styleUrls: ['./nav-drawer-hierarchical.component.scss'],
 })
 export class NavDrawerHierarchicalComponent {
   public routes = menusRoutes;
@@ -478,8 +432,8 @@ In this example, we're populating the routes with custom routing `data`, which c
 export const menusRoutes: Routes = [
   {
     component: NavDrawerHierarchicalComponent,
-    path: "navigation-drawer-hierarchical",
-    data: { displayName: "Hierarchical Drawer Menu" },
+    path: 'navigation-drawer-hierarchical',
+    data: { displayName: 'Hierarchical Drawer Menu' },
   },
 ];
 ```
@@ -537,5 +491,5 @@ The last step is to **include** the component theme in our application.
 
 ## API and Style References
 
-- [IgxNavigationDrawerComponent API]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html)
-- [IgxNavigationDrawerComponent Styles]({environment:sassApiUrl}/index.html#function-navdrawer-theme)
+* [IgxNavigationDrawerComponent API]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html)
+* [IgxNavigationDrawerComponent Styles]({environment:sassApiUrl}/index.html#function-navdrawer-theme)

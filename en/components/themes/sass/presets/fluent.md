@@ -47,4 +47,4 @@ We also support Word and Excel palettes. To use them just pass one of the two _*
 
 ## API Overview
 
-- [Global Theme]({environment:sassApiUrl}/index.html#mixin-theme)
+* [Global Theme]({environment:sassApiUrl}/index.html#mixin-theme)

@@ -25,7 +25,7 @@ To get started with the Ignite UI for Angular Linear Progress component, first y
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
 The next step is to import the `IgxProgressBarModule` in the **app.module.ts** file:
 
@@ -49,13 +49,13 @@ Alternatively, as of `16.0.0` you can import the `IgxLinearProgressBarComponent`
 ```typescript
 // home.component.ts
 
-import { IGX_LINEAR_PROGRESS_BAR_DIRECTIVES } from "igniteui-angular";
+import { IGX_LINEAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular';
 // import { IGX_LINEAR_PROGRESS_BAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
-  selector: "app-home",
+  selector: 'app-home',
   template: '<igx-linear-bar [value]="progress"></igx-linear-bar>',
-  styleUrls: ["home.component.scss"],
+  styleUrls: ['home.component.scss'],
   standalone: true,
   imports: [IGX_LINEAR_PROGRESS_BAR_DIRECTIVES],
   /* or imports: [IgxLinearProgressBarComponent] */
@@ -90,11 +90,7 @@ Let's see how we can create different types of progress bars that can be both st
 ```html
 <div class="linear-container">
   <igx-linear-bar [value]="100" type="default"></igx-linear-bar>
-  <igx-linear-bar
-    [value]="100"
-    type="success"
-    [striped]="true"
-  ></igx-linear-bar>
+  <igx-linear-bar [value]="100" type="success" [striped]="true"></igx-linear-bar>
   <igx-linear-bar [value]="100" type="error"></igx-linear-bar>
   <igx-linear-bar [value]="100" type="info" [striped]="true"></igx-linear-bar>
   <igx-linear-bar [value]="100" type="warning"></igx-linear-bar>
@@ -121,11 +117,7 @@ The [`animationDuration`]({environment:angularApiUrl}/classes/igxcircularprogres
 The following example specifies the animation duration set to 5 seconds.
 
 ```html
-<igx-linear-bar
-  [striped]="false"
-  [value]="100"
-  [animationDuration]="5000"
-></igx-linear-bar>
+<igx-linear-bar [striped]="false" [value]="100" [animationDuration]="5000"></igx-linear-bar>
 ```
 
 ### Text Properties
@@ -191,7 +183,7 @@ Let's take a look at how this turned out:
 <div class="divider--half"></div>
 
 > [!NOTE]
-> If the [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) input value is not defined, the progress update is **1% of the [`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) value**. In case you want the progress to be faster, the [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) value should be greater than (**[`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) \* 1%**), respectfully for slower progress the [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) should be less than the default progress update.
+> If the [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) input value is not defined, the progress update is **1% of the [`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) value**. In case you want the progress to be faster, the [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) value should be greater than (**[`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) * 1%**), respectfully for slower progress the [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) should be less than the default progress update.
 
 > [!NOTE]
 > If the [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) value is defined greater than the [`value`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#value) input, there is only one update, which gets **the value that is passed for progress update**.
@@ -291,6 +283,6 @@ The last step is to **include** the component theme in our application.
 
 <div class="divider--half"></div>
 
-- [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
-- [IgxLinearProgressBarComponent Styles]({environment:sassApiUrl}/index.html#function-progress-linear-theme)
-- [IgxTextAlign]({environment:angularApiUrl}/enums/igxtextalign.html)
+* [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
+* [IgxLinearProgressBarComponent Styles]({environment:sassApiUrl}/index.html#function-progress-linear-theme)
+* [IgxTextAlign]({environment:angularApiUrl}/enums/igxtextalign.html)

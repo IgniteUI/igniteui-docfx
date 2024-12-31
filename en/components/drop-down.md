@@ -27,7 +27,7 @@ To get started with the Ignite UI for Angular Drop Down component, first you nee
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
 The next step is to import the `IgxDropDownModule` in your **app.module.ts** file.
 
@@ -52,15 +52,11 @@ Alternatively, as of `16.0.0` you can import the `IgxDropDownComponent` as a sta
 // home.component.ts
 
 import { NgFor } from "@angular/common";
-import {
-  IGX_DROP_DOWN_DIRECTIVES,
-  IgxToggleActionDirective,
-  IgxButtonDirective,
-} from "igniteui-angular";
+import { IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective } from "igniteui-angular";
 // import { IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
-  selector: "app-home",
+  selector: 'app-home',
   template: `
     <button
       igxButton="contained"
@@ -75,14 +71,9 @@ import {
       </igx-drop-down-item>
     </igx-drop-down>
   `,
-  styleUrls: ["home.component.scss"],
+  styleUrls: ['home.component.scss'],
   standalone: true,
-  imports: [
-    IGX_DROP_DOWN_DIRECTIVES,
-    IgxToggleActionDirective,
-    IgxButtonDirective,
-    NgFor,
-  ],
+  imports: [ IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective, NgFor ],
   /* or imports: [IgxDropDownComponent, IgxDropDownItemComponent, IgxToggleActionDirective, IgxButtonDirective, NgFor] */
 })
 export class HomeComponent {}
@@ -98,11 +89,7 @@ Let's create a simple drop-down that provides several option items to choose fro
 
 ```html
 <!-- dropdown.component.html -->
-<button
-  igxButton="contained"
-  [igxToggleAction]="dropdown"
-  [igxDropDownItemNavigation]="dropdown"
->
+<button igxButton="contained" [igxToggleAction]="dropdown" [igxDropDownItemNavigation]="dropdown">
   Options
 </button>
 <igx-drop-down #dropdown>
@@ -134,11 +121,7 @@ Let's say we want to have a predefined selected item. One way to do this, is by 
 
 ```html
 <!-- dropdown.component.html -->
-<button
-  igxButton="contained"
-  [igxToggleAction]="dropdown"
-  [igxDropDownItemNavigation]="dropdown"
->
+<button igxButton="contained" [igxToggleAction]="dropdown" [igxDropDownItemNavigation]="dropdown">
   Options
 </button>
 <igx-drop-down #dropdown (opening)="dropdown.setSelectedItem(0)">
@@ -152,9 +135,9 @@ Let's say we want to have a predefined selected item. One way to do this, is by 
 // dropdown.component.ts
 export class MyDropDownComponent {
   public items: Array<{ field: string }> = [
-    { field: "Option 1" },
-    { field: "Option 2" },
-    { field: "Option 3" },
+    { field: 'Option 1' },
+    { field: 'Option 2' },
+    { field: 'Option 3' },
   ];
 }
 ```
@@ -172,21 +155,12 @@ To provide a more useful visual information, use the [isHeader]({environment:ang
 
 ```html
 <!-- dropdown.component.html -->
-<button
-  igxButton="contained"
-  [igxToggleAction]="dropdown"
-  [igxDropDownItemNavigation]="dropdown"
->
+<button igxButton="contained" [igxToggleAction]="dropdown" [igxDropDownItemNavigation]="dropdown">
   Countries
 </button>
 <igx-drop-down #dropdown [width]="'240px'">
   <div class="drop-down__scroll-container">
-    <igx-drop-down-item
-      *ngFor="let item of items"
-      [disabled]="item.disabled"
-      [isHeader]="item.header"
-      [selected]="item.selected"
-    >
+    <igx-drop-down-item *ngFor="let item of items" [disabled]="item.disabled" [isHeader]="item.header" [selected]="item.selected">
       <igx-icon igxPrefix>place</igx-icon>
       {{ item.field }}
       <span igxSuffix>{{ item.code }}</span>
@@ -200,14 +174,14 @@ To provide a more useful visual information, use the [isHeader]({environment:ang
 // dropdown.component.ts
 export class MyDropDownComponent {
   public items: any[] = [
-    { field: "European Union", code: "EU", header: true },
-    { field: "Germany", code: "DE" },
-    { field: "Bulgaria", code: "BG", selected: true },
-    { field: "France", code: "FR", disabled: true },
-    { field: "North America", code: "NA", header: true },
-    { field: "Canada", code: "CA" },
-    { field: "United States", code: "US" },
-    { field: "Mexico", code: "MX" },
+    { field: 'European Union', code: 'EU', header: true },
+    { field: 'Germany', code: 'DE' },
+    { field: 'Bulgaria', code: 'BG', selected: true },
+    { field: 'France', code: 'FR', disabled: true },
+    { field: 'North America', code: 'NA', header: true },
+    { field: 'Canada', code: 'CA' },
+    { field: 'United States', code: 'US' },
+    { field: 'Mexico', code: 'MX' },
   ];
 }
 ```
@@ -267,14 +241,8 @@ export class MyCustomDropDownComponent {
 
 ```html
 <igx-drop-down>
-  <igx-drop-down-item-group
-    *ngFor="let foodGroup of foods"
-    [label]="foodGroup.name"
-  >
-    <igx-drop-down-item
-      *ngFor="let food of foodGroup.entries"
-      [value]="food.refNo"
-    >
+  <igx-drop-down-item-group *ngFor="let foodGroup of foods" [label]="foodGroup.name">
+    <igx-drop-down-item *ngFor="let food of foodGroup.entries" [value]="food.refNo">
       {{ food.name }}
     </igx-drop-down-item>
   </igx-drop-down-item-group>
@@ -285,15 +253,8 @@ The group also has the additional functionality of disabling items inside of its
 
 ```html
 <igx-drop-down>
-  <igx-drop-down-item-group
-    *ngFor="let foodGroup of foods"
-    [label]="foodGroup.name"
-    [disabled]="foodGroup.name === 'Meats'"
-  >
-    <igx-drop-down-item
-      *ngFor="let food of foodGroup.entries"
-      [value]="food.refNo"
-    >
+  <igx-drop-down-item-group *ngFor="let foodGroup of foods" [label]="foodGroup.name" [disabled]="foodGroup.name === 'Meats'">
+    <igx-drop-down-item *ngFor="let food of foodGroup.entries" [value]="food.refNo">
       {{ food.name }}
     </igx-drop-down-item>
   </igx-drop-down-item-group>
@@ -479,13 +440,13 @@ The following sample demonstrates an input that opens and closes the `igxDropDow
 // input-dropdown.component.ts
 export class InputDropDownComponent {
   @ViewChild(IgxDropDownComponent) public igxDropDown: IgxDropDownComponent;
-  @ViewChild("inputGroup", { read: IgxInputGroupComponent })
+  @ViewChild('inputGroup', { read: IgxInputGroupComponent })
   public inputGroup: IgxInputGroupComponent;
 
   public items: Array<{ field: string }> = [
-    { field: "Option 1" },
-    { field: "Option 2" },
-    { field: "Option 3" },
+    { field: 'Option 1' },
+    { field: 'Option 2' },
+    { field: 'Option 3' },
   ];
 
   public openDropDown() {
@@ -527,10 +488,7 @@ When the `allowItemsFocus` property is enabled, the drop down items gain tab ind
   <input igxInput type="text" />
 </igx-input-group>
 <igx-drop-down #dropDown [allowItemsFocus]="true">
-  <igx-drop-down-item
-    *ngFor="let p of provinceData"
-    [igxDropDownItemNavigation]="dropDown"
-  >
+  <igx-drop-down-item *ngFor="let p of provinceData" [igxDropDownItemNavigation]="dropDown">
     {{ p }}
   </igx-drop-down-item>
 </igx-drop-down>
@@ -583,21 +541,21 @@ The last step is to pass the custom drop-down theme:
 
 ## API Summary
 
-- [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
-- [IgxDropDownComponent Styles]({environment:sassApiUrl}/index.html#function-drop-down-theme)
-- [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html).
-- [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-- [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
-- [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
-- [IgxDividerDirective Styles]({environment:sassApiUrl}/index.html#function-divider-theme)
+* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
+* [IgxDropDownComponent Styles]({environment:sassApiUrl}/index.html#function-drop-down-theme)
+* [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html).
+* [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
+* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
+* [IgxDividerDirective Styles]({environment:sassApiUrl}/index.html#function-divider-theme)
 
 ## Theming Dependencies
 
-- [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
 
 ## Additional Resources
 
 Our community is active and always welcoming to new ideas.
 
-- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

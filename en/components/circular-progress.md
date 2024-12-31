@@ -25,7 +25,7 @@ To get started with the Ignite UI for Angular Circular Progress component, first
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
 The next step is to import the `IgxProgressBarModule` in the **app.module.ts** file:
 
@@ -49,11 +49,11 @@ Alternatively, as of `16.0.0` you can import the `IgxCircularProgressBarComponen
 ```typescript
 // home.component.ts
 
-import { IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES } from "igniteui-angular";
+import { IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular';
 // import { IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
-  selector: "app-home",
+  selector: 'app-home',
   template: `
     <igx-circular-bar
       [value]="100"
@@ -61,7 +61,7 @@ import { IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES } from "igniteui-angular";
       class="custom-size"
     ></igx-circular-bar>
   `,
-  styleUrls: ["home.component.scss"],
+  styleUrls: ['home.component.scss'],
   standalone: true,
   imports: [IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES],
   /* or imports: [IgxCircularProgressBarComponent] */
@@ -76,11 +76,7 @@ Now that you have the Ignite UI for Angular Progress Bar module or directives im
 To have a better understanding how everything works, let's create a simple example, like the one in the demo:
 
 ```html
-<igx-circular-bar
-  [value]="100"
-  [animate]="true"
-  class="custom-size"
-></igx-circular-bar>
+<igx-circular-bar [value]="100" [animate]="true" class="custom-size"></igx-circular-bar>
 ```
 
 After that, we should have the demo sample in your browser.
@@ -96,11 +92,7 @@ After that, we should have the demo sample in your browser.
 If you want to track a process that is not determined precisely, you can set the [`indeterminate`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#indeterminate) input property to `true`.
 
 ```html
-<igx-circular-bar
-  [animate]="false"
-  [indeterminate]="true"
-  [textVisibility]="false"
-></igx-circular-bar>
+<igx-circular-bar [animate]="false" [indeterminate]="true" [textVisibility]="false"></igx-circular-bar>
 ```
 
 > [!NOTE]
@@ -125,8 +117,7 @@ You can dynamically change the value of the progress by using external controls 
     [value]="currentValue"
     [max]="100"
     [animate]="true"
-    class="custom-size"
-  >
+    class="custom-size">
   </igx-circular-bar>
   <div class="button-container">
     <button igxIconButton="flat" (click)="decrementProgress()">
@@ -207,8 +198,7 @@ To provide a gradient that has more than 2 color stops, we have to use the direc
     [value]="currentValue"
     [max]="100"
     [animate]="true"
-    class="custom-size"
-  >
+    class="custom-size">
     <ng-template igxProgressBarGradient let-id>
       <svg:linearGradient [id]="id" gradientTransform="rotate(90)">
         <stop offset="0%" stop-color="#ff9a40" />
@@ -278,5 +268,5 @@ The last step is to **include** the component theme in our application.
 
 <div class="divider--half"></div>
 
-- [IgxCircularProgressBarComponent]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html)
-- [IgxCircularProgressBarComponent Styles]({environment:sassApiUrl}/index.html#function-progress-circular-theme)
+* [IgxCircularProgressBarComponent]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html)
+* [IgxCircularProgressBarComponent Styles]({environment:sassApiUrl}/index.html#function-progress-circular-theme)

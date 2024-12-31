@@ -7,8 +7,6 @@ _keywords: angular slider, angular slider component, angular range slider compon
 # Angular Slider Component Overview
 <p class="highlight">The Ignite UI for Angular Slider is a form component which allows selection in a given range by moving a thumb along a track. The track can be defined as continuous or stepped and the slider can be configured so users can choose between single value and range (lower and upper value) slider types.</p>
 
-<div class="divider"></div>
-
 ## Angular Slider Example
 
 <code-view style="height: 250px" 

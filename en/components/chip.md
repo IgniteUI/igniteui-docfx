@@ -25,7 +25,7 @@ To get started with the Ignite UI for Angular Chip component, first you need to 
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
 The next step is to import the **IgxChipsModule** in the **app.module.ts** file:
 
@@ -48,27 +48,27 @@ Alternatively, as of `16.0.0` you can import the `IgxChipComponent` as a standal
 ```typescript
 // home.component.ts
 
-import { IGX_CHIPS_DIRECTIVES } from "igniteui-angular";
-import { NgFor } from "@angular/common";
+import { IGX_CHIPS_DIRECTIVES } from 'igniteui-angular';
+import { NgFor } from '@angular/common';
 // import { IGX_CHIPS_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
-  selector: "app-home",
+  selector: 'app-home',
   template: `
     <igx-chip *ngFor="let chip of chipList" [id]="chip.id">
       {{ chip.text }}
     </igx-chip>
   `,
-  styleUrls: ["home.component.scss"],
+  styleUrls: ['home.component.scss'],
   standalone: true,
   imports: [IGX_CHIPS_DIRECTIVES, NgFor],
 })
 export class HomeComponent {
   public chipList = [
-    { text: "Country", id: "1", icon: "place" },
-    { text: "City", id: "2", icon: "location_city" },
-    { text: "Address", id: "3", icon: "home" },
-    { text: "Street", id: "4", icon: "streetview" },
+    { text: 'Country', id: '1', icon: 'place' },
+    { text: 'City', id: '2', icon: 'location_city' },
+    { text: 'Address', id: '3', icon: 'home' },
+    { text: 'Street', id: '4', icon: 'streetview' },
   ];
 }
 ```
@@ -107,12 +107,7 @@ Removing can be enabled by setting the [`removable`]({environment:angularApiUrl}
 By default, the chip doesn't get automatically removed from the DOM tree upon clicking on the remove icon. Removal needs to be handled manually.
 
 ```html
-<igx-chip
-  *ngFor="let chip of chipList"
-  [id]="chip.id"
-  [removable]="true"
-  (remove)="chipRemoved($event)"
->
+<igx-chip *ngFor="let chip of chipList" [id]="chip.id" [removable]="true" (remove)="chipRemoved($event)">
   <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
   {{chip.text}}
 </igx-chip>
@@ -146,15 +141,9 @@ Dragging can be enabled by setting the [`draggable`]({environment:angularApiUrl}
 **To create the demo sample, we will use the features above:**
 
 ```html
-<igx-chip
-  *ngFor="let chip of chipList"
-  [id]="chip.id"
-  [selectable]="true"
-  [removable]="true"
-  (remove)="chipRemoved($event)"
->
+<igx-chip *ngFor="let chip of chipList" [id]="chip.id" [selectable]="true" [removable]="true" (remove)="chipRemoved($event)">
   <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
-  {{chip.text}}
+   {{chip.text}}
 </igx-chip>
 ```
 
@@ -215,9 +204,7 @@ You can template the `prefix` and the `suffix` of the chip, using the `IgxPrefix
 ```html
 <igx-chip>
   <igx-icon igxPrefix>insert_emoticon</igx-icon>
-  <igx-icon igxSuffix style="transform: rotate(180deg)"
-    >insert_emoticon</igx-icon
-  >
+  <igx-icon igxSuffix style="transform: rotate(180deg)">insert_emoticon</igx-icon>
   <span>Why not both?</span>
 </igx-chip>
 ```
@@ -244,11 +231,7 @@ You can customize the `select icon`, using the [`selectIcon`]({environment:angul
 <img class="responsive-img"  src="../images/chip/selecting_custom.gif" />
 
 ```html
-<igx-chip
-  *ngFor="let chip of chipList"
-  [selectable]="true"
-  [selectIcon]="mySelectIcon"
->
+<igx-chip *ngFor="let chip of chipList" [selectable]="true" [selectIcon]="mySelectIcon">
   <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
   {{chip.text}}
 </igx-chip>
@@ -263,11 +246,7 @@ You can customize the `remove icon`, using the [`removeIcon`]({environment:angul
 <img class="responsive-img"  src="../images/chip/remove_icons.jpg" />
 
 ```html
-<igx-chip
-  *ngFor="let chip of chipList"
-  [removable]="true"
-  [removeIcon]="myRemoveIcon"
->
+<igx-chip *ngFor="let chip of chipList" [removable]="true" [removeIcon]="myRemoveIcon">
   <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
   {{chip.text}}
 </igx-chip>
@@ -414,14 +393,13 @@ Here's an example of the chip area using IgxAvatar as prefix and custom icons fo
     [removable]="true"
     [removeIcon]="myRemoveIcon"
     (remove)="chipRemoved($event)"
-    [draggable]="'true'"
-  >
+    [draggable]="'true'">
     <igx-avatar
       class="chip-avatar-resized"
       igxPrefix
       [src]="chip.photo"
-      shape="circle"
-    ></igx-avatar>
+      shape="circle">
+    </igx-avatar>
     {{chip.name}}
   </igx-chip>
 </igx-chips-area>
@@ -578,18 +556,18 @@ Learn more about it in the [Size](display-density.md) article.
 
 ## API
 
-- [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
-- [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-chip-theme)
-- [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
+* [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
+* [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-chip-theme)
+* [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
 
 ## Theming Dependencies
 
-- [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ## References
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

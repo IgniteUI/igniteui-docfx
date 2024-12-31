@@ -27,7 +27,7 @@ To get started with the Ignite UI for Angular Action Strip component, first you 
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
 The next step is to import the `IgxActionStripModule` in your **app.module.ts** file.
 
@@ -199,32 +199,32 @@ The last step is to include the newly created component theme in our application
 
 For more detailed information regarding the Action Strip API, refer to the following links:
 
-- [`IgxActionStripComponent API`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html)
+* [`IgxActionStripComponent API`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html)
 
 The following built-in CSS styles helped us achieve this Action Strip layout:
 
-- [`IgxActionStripComponent Styles`]({environment:sassApiUrl}/index.html#function-action-strip-theme)
+* [`IgxActionStripComponent Styles`]({environment:sassApiUrl}/index.html#function-action-strip-theme)
 
 Additional components and/or directives that can be used within the Action Strip:
 
-- [`IgxGridActionsBaseDirective `]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html)
-- [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html)
-- [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html)
-- [`IgxDividerDirective`]({environment:angularApiUrl}/classes/igxdividerdirective.html)
+* [`IgxGridActionsBaseDirective `]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html)
+* [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html)
+* [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html)
+* [`IgxDividerDirective`]({environment:angularApiUrl}/classes/igxdividerdirective.html)
 
 <div class="divider"></div>
 
 ## Theming Dependencies
 
-- [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
-- [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
-- [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-drop-down-theme)
-- [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-drop-down-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

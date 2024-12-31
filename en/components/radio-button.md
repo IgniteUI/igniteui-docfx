@@ -27,7 +27,7 @@ To get started with the Ignite UI for Angular Radio Button component, first you 
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
 The next step is to import the `IgxRadioModule` in the **app.module.ts** file.
 
@@ -53,12 +53,12 @@ Alternatively, as of `16.0.0` you can import the `IgxRadioGroupDirective` and `I
 ```typescript
 // home.component.ts
 
-import { FormsModule } from "@angular/forms";
-import { IGX_RADIO_GROUP_DIRECTIVES } from "igniteui-angular";
+import { FormsModule } from '@angular/forms';
+import { IGX_RADIO_GROUP_DIRECTIVES } from 'igniteui-angular';
 // import { IGX_RADIO_GROUP_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
-  selector: "app-home",
+  selector: 'app-home',
   template: `
     <igx-radio-group>
       <igx-radio [(ngModel)]="selected" value="London">London</igx-radio>
@@ -67,7 +67,7 @@ import { IGX_RADIO_GROUP_DIRECTIVES } from "igniteui-angular";
       <igx-radio [(ngModel)]="selected" value="Sofia">Sofia</igx-radio>
     </igx-radio-group>
   `,
-  styleUrls: ["home.component.scss"],
+  styleUrls: ['home.component.scss'],
   standalone: true,
   imports: [IGX_RADIO_GROUP_DIRECTIVES, FormsModule],
   /* or imports: [IgxRadioComponent, IgxRadioGroupDirective, FormsModule] */
@@ -93,12 +93,8 @@ Radio buttons can be displayed using the following code inside the component tem
 The `labelPosition` property can be used to change the default position of the label in the radio component. Users can choose between `before` and `after`. If not specified, the label will be placed after the radio button.
 
 ```html
-<igx-radio [(ngModel)]="selected" value="option1" labelPosition="before"
-  >Option 1</igx-radio
->
-<igx-radio [(ngModel)]="selected" value="option2" labelPosition="before"
-  >Option 2</igx-radio
->
+<igx-radio [(ngModel)]="selected" value="option1" labelPosition="before">Option 1</igx-radio>
+<igx-radio [(ngModel)]="selected" value="option2" labelPosition="before">Option 2</igx-radio>
 ```
 
 <div class="sample-container loading" style="height: 120px">
@@ -132,12 +128,7 @@ public selectedColor: string = this.colors[3].hex;
 
 ```html
 <!--radiogroup.component.html-->
-<igx-radio
-  *ngFor="let color of colors"
-  name="color"
-  [value]="color.hex"
-  [(ngModel)]="selectedColor"
->
+<igx-radio *ngFor="let color of colors" name="color" [value]="color.hex" [(ngModel)]="selectedColor">
   {{color.name}}
 </igx-radio>
 
@@ -271,13 +262,13 @@ public alignment = RadioGroupAlignment.vertical;
 
 <div class="divider--half"></div>
 
-- [IgxRadioGroupDirective]({environment:angularApiUrl}/classes/igxradiogroupdirective.html)
-- [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
-- [IgxRadioComponent Styles]({environment:sassApiUrl}/index.html#function-radio-theme)
+* [IgxRadioGroupDirective]({environment:angularApiUrl}/classes/igxradiogroupdirective.html)
+* [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
+* [IgxRadioComponent Styles]({environment:sassApiUrl}/index.html#function-radio-theme)
 
 ## Theming Dependencies
 
-- [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
 
 ## Additional Resources
 
@@ -285,5 +276,5 @@ public alignment = RadioGroupAlignment.vertical;
 
 Our community is active and always welcoming to new ideas.
 
-- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

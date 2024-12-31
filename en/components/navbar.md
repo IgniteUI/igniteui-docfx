@@ -25,7 +25,7 @@ To get started with the Ignite UI for Angular Navbar component, first you need t
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
 The first step is to import the `IgxNavbarModule` inside our **app.module.ts** file.
 
@@ -48,13 +48,13 @@ Alternatively, as of `16.0.0` you can import the `IgxNavbarComponent` as a stand
 ```typescript
 // home.component.ts
 
-import { IGX_NAVBAR_DIRECTIVES } from "igniteui-angular";
+import { IGX_NAVBAR_DIRECTIVES } from 'igniteui-angular';
 // import { IGX_NAVBAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
-  selector: "app-home",
+  selector: 'app-home',
   template: '<igx-navbar title="Ignite UI for Angular"></igx-navbar>',
-  styleUrls: ["home.component.scss"],
+  styleUrls: ['home.component.scss'],
   standalone: true,
   imports: [IGX_NAVBAR_DIRECTIVES],
   /* or imports: [IgxNavbarComponent] */
@@ -81,12 +81,7 @@ In order to add a menu button, we will show the action button using the `actionB
 ```html
 <!--navbar.component.html-->
 
-<igx-navbar
-  title="Sample App"
-  actionButtonIcon="menu"
-  [isActionButtonVisible]="true"
->
-</igx-navbar>
+<igx-navbar title="Sample App" actionButtonIcon="menu" [isActionButtonVisible]="true"></igx-navbar>
 ```
 
 > [!NOTE]
@@ -100,11 +95,7 @@ We can make our app a little more functional by adding options for searching, fa
 // app.module.ts
 
 ...
-import {
-    IgxNavbarModule,
-    IgxIconButtonDirective,
-    IgxIconModule
-} from 'igniteui-angular';
+import { IgxNavbarModule, IgxIconButtonDirective, IgxIconModule } from 'igniteui-angular';
 // import { IgxNavbarModule, IgxButtonModule, IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -244,10 +235,7 @@ If we want to provide a custom content for a navbar's title, we can achieve this
     </igx-navbar-action>
 
     <div igxNavbarTitle>
-      <a
-        href="https://www.infragistics.com/products/ignite-ui-angular"
-        target="_blank"
-      >
+      <a href="https://www.infragistics.com/products/ignite-ui-angular" target="_blank">
         <img
           src="https://static.infragistics.com/marketing/Website/products/ignite-ui-landing/ignite-ui-logo.svg"
           width="120px"
@@ -409,25 +397,25 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 <div class="divider--half"></div>
 
-- [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
-- [IgxNavbarActionDirective]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html)
-- [IgxNavbarTitleDirective]({environment:angularApiUrl}/classes/igxnavbartitledirective.html)
-- [IgxNavbarComponent Styles]({environment:sassApiUrl}/index.html#function-navbar-theme)
+* [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
+* [IgxNavbarActionDirective]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html)
+* [IgxNavbarTitleDirective]({environment:angularApiUrl}/classes/igxnavbartitledirective.html)
+* [IgxNavbarComponent Styles]({environment:sassApiUrl}/index.html#function-navbar-theme)
 
 Additional components and/or directives with relative APIs that were used:
 
-- [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-- [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ## Theming Dependencies
 
-- [IgxIconComponent Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
-- [IgxButtonComponent Theme]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxIconComponent Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxButtonComponent Theme]({environment:sassApiUrl}/index.html#function-button-theme)
 
 ## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

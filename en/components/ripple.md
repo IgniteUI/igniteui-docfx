@@ -28,7 +28,7 @@ To get started with the Ignite UI for Angular Ripple directive, first you need t
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
 The next step is to import the `IgxRippleModule` in the **app.module.ts** file.
 
@@ -53,13 +53,13 @@ Alternatively, as of `16.0.0` you can import the `IgxRippleDirective` as standal
 ```typescript
 // home.component.ts
 
-import { IgxRippleDirective, IgxButtonDirective } from "igniteui-angular";
+import { IgxRippleDirective, IgxButtonDirective } from 'igniteui-angular';
 // import { IgxRippleDirective, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
-  selector: "app-home",
+  selector: 'app-home',
   template: '<button igxButton="contained" igxRipple>Click Me</button>',
-  styleUrls: ["home.component.scss"],
+  styleUrls: ['home.component.scss'],
   standalone: true,
   imports: [IgxRippleDirective, IgxButtonDirective],
 })
@@ -133,12 +133,7 @@ We can use the [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxripp
 Use the [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#igxRippleTarget) property to attach a ripple effect to a specific element inside a parent element.
 
 ```html
-<div
-  class="parent"
-  igxRipple="white"
-  igxRippleTarget=".child"
-  [igxRippleCentered]="true"
->
+<div class="parent" igxRipple="white" igxRippleTarget=".child" [igxRippleCentered]="true">
   ...
   <button class="sample-button child" igxButton="contained">Read More</button>
 </div>
