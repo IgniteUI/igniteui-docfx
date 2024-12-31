@@ -26,7 +26,7 @@ To get started with the Ignite UI for Angular Tooltip directive, first you need 
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
 The next step is to import the `IgxTooltipModule` in your **app.module.ts** file.
 
@@ -49,11 +49,11 @@ Alternatively, as of `16.0.0` you can import the `IgxTooltipDirective` as a stan
 ```typescript
 // home.component.ts
 
-import { IGX_TOOLTIP_DIRECTIVES, IgxAvatarComponent } from "igniteui-angular";
+import { IGX_TOOLTIP_DIRECTIVES, IgxAvatarComponent } from 'igniteui-angular';
 // import { IGX_TOOLTIP_DIRECTIVES, IgxAvatarComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
-  selector: "app-home",
+  selector: 'app-home',
   template: `
     <igx-avatar
       class="avatar"
@@ -67,7 +67,7 @@ import { IGX_TOOLTIP_DIRECTIVES, IgxAvatarComponent } from "igniteui-angular";
 
     <div #tooltipRef="tooltip" igxTooltip>Her name is Madelyn James</div>
   `,
-  styleUrls: ["home.component.scss"],
+  styleUrls: ['home.component.scss'],
   standalone: true,
   imports: [IGX_TOOLTIP_DIRECTIVES, IgxAvatarComponent],
   /* or imports: [IgxTooltipDirective, IgxTooltipTargetDirective, IgxAvatarComponent] */
@@ -110,8 +110,7 @@ The avatar will be our target and all we have to do is set the [`igxTooltipTarge
   igxTooltipTarget
   src="assets/images/avatar/10.jpg"
   size="medium"
-  shape="circle"
->
+  shape="circle">
 </igx-avatar>
 ```
 
@@ -141,8 +140,7 @@ Now that we have both our target and tooltip defined, all that's left for us to 
   [igxTooltipTarget]="tooltipRef"
   src="assets/images/avatar/10.jpg"
   size="medium"
-  shape="circle"
->
+  shape="circle">
 </igx-avatar>
 
 <div #tooltipRef="tooltip" igxTooltip>Her name is Madelyn James</div>
@@ -228,8 +226,7 @@ Let's start by creating our map. We need a simple div that has for a background 
     [style.color]="'blue'"
     fontSet="material"
     [igxTooltipTarget]="locationTooltip"
-    >location_on</igx-icon
-  >
+    >location_on</igx-icon>
   ...
 </div>
 ```
@@ -246,8 +243,7 @@ Now for the tooltip! For its content, we will create a container that will be po
       [style.color]="'blue'"
       fontSet="material"
       [igxTooltipTarget]="locationTooltip"
-      >location_on</igx-icon
-    >
+      >location_on</igx-icon>
 
     <div class="locationTooltip" #locationTooltip="tooltip" igxTooltip>
       <div class="locationTooltipContent">
@@ -255,8 +251,8 @@ Now for the tooltip! For its content, we will create a container that will be po
           class="logo"
           src="assets/images/card/avatars/igLogo.png"
           size="medium"
-          shape="square"
-        ></igx-avatar>
+          shape="square">
+        </igx-avatar>
         <div>
           <div>Infragistics Inc. HQ</div>
           <div>2 Commerce Dr, Cranbury, NJ 08512, USA</div>
@@ -356,21 +352,21 @@ Extra care should be taken in the following scenarios:
 
 In this article we learned how to create, configure and style awesome tooltips for the elements on our page! We also used some additional Ignite UI for Angular components like icons and avatars to improve on the design of our application! The respective APIs are listed below:
 
-- [IgxTooltipDirective]({environment:angularApiUrl}/classes/igxtooltipdirective.html)
-- [IgxTooltipTargetDirective]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html)
+* [IgxTooltipDirective]({environment:angularApiUrl}/classes/igxtooltipdirective.html)
+* [IgxTooltipTargetDirective]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html)
 
 Additional components and/or directives that were used:
 
-- [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
-- [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-- [IgxToggleDirective]({environment:angularApiUrl}/classes/igxtoggledirective.html)
-- [IgxToggleActionDirective]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)
+* [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
+* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [IgxToggleDirective]({environment:angularApiUrl}/classes/igxtoggledirective.html)
+* [IgxToggleActionDirective]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)
 
 Styles:
 
-- [IgxTooltipDirective Styles]({environment:sassApiUrl}/index.html#function-tooltip-theme)
-- [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-avatar-theme)
-- [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxTooltipDirective Styles]({environment:sassApiUrl}/index.html#function-tooltip-theme)
+* [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-avatar-theme)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 <div class="divider"></div>
 
@@ -379,5 +375,5 @@ Styles:
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

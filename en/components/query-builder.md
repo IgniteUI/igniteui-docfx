@@ -33,7 +33,7 @@ To get started with the Ignite UI for Angular Query Builder component, first you
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
 The next step is to import the `IgxQueryBuilderModule` in the **app.module.ts** file.
 
@@ -129,12 +129,7 @@ ngAfterViewInit(): void {
 The `expressionTree` is a two-way bindable property which means a corresponding `expressionTreeChange` output is implemented that emits when the end-user changes the UI by creating, editing or removing conditions. It can also be subscribed to separately to receive notifications and react to such changes.
 
 ```html
-<igx-query-builder
-  #queryBuilder
-  [fields]="fields"
-  [(expressionTree)]="expressionTree"
-  (expressionTreeChange)="onExpressionTreeChange()"
->
+<igx-query-builder #queryBuilder [fields]="fields" [(expressionTree)]="expressionTree" (expressionTreeChange)="onExpressionTreeChange()">
 </igx-query-builder>
 ```
 
@@ -442,13 +437,13 @@ You can also streamline your Angular app development using [WYSIWYG App Builderâ
 
 <div class="divider--half"></div>
 
-- [IgxQueryBuilderComponent API]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html)
-- [IgxQueryBuilderComponent Styles]({environment:sassApiUrl}/index.html#function-query-builder-theme)
+* [IgxQueryBuilderComponent API]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html)
+* [IgxQueryBuilderComponent Styles]({environment:sassApiUrl}/index.html#function-query-builder-theme)
 
 ## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

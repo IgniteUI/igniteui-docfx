@@ -25,7 +25,7 @@ To get started with the Ignite UI for Angular Switch component, first you need t
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
 The next step is to import the `IgxSwitchModule` in your **app.module.ts** file.
 
@@ -49,13 +49,13 @@ Alternatively, as of `16.0.0` you can import the `IgxSwitchComponent` as a stand
 ```typescript
 // home.component.ts
 
-import { IgxSwitchComponent } from "igniteui-angular";
+import { IgxSwitchComponent } from 'igniteui-angular';
 // import { IgxSwitchComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
-  selector: "app-home",
+  selector: 'app-home',
   template: ` <igx-switch [checked]="true"> Simple switch </igx-switch> `,
-  styleUrls: ["home.component.scss"],
+  styleUrls: ['home.component.scss'],
   standalone: true,
   imports: [IgxSwitchComponent],
 })
@@ -170,12 +170,12 @@ The last step is to **include** the component theme in our application.
 
 <div class="divider--half"></div>
 
-- [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
-- [IgxSwitchComponent Styles]({environment:sassApiUrl}/index.html#function-switch-theme)
+* [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
+* [IgxSwitchComponent Styles]({environment:sassApiUrl}/index.html#function-switch-theme)
 
 ## Theming Dependencies
 
-- [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
 
 ## Additional Resources
 
@@ -183,5 +183,5 @@ The last step is to **include** the component theme in our application.
 
 Our community is active and always welcoming to new ideas.
 
-- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

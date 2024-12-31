@@ -26,10 +26,7 @@ In many cases you would only need to make slight modifications to the typography
 We have selected [Titillium Web](https://fonts.google.com/selection?selection.family=Titillium+Web:300,400,600,700) to be the default font in the Material theme for Ignite UI for Angular. To use it you have to host it yourself, or include it from Google Fonts:
 
 ```html
-<link
-  href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700"
-  rel="stylesheet"
-/>
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700" rel="stylesheet"/>
 ```
 
 There are a several mixins and functions that are used to set and retrieve category styles to/from a type scale. Those are:
@@ -129,7 +126,7 @@ The `type-style` mixin can be used to retrieve the style rules for a scale categ
 
 ```scss
 .my-fancy-h1 {
-  @include type-style("h1") {
+  @include type-style('h1') {
     color: royalblue;
   }
 }
@@ -176,15 +173,15 @@ $my-h6: type-style(
 
 // You can specify which categories from the type sale the card uses
 $card-categories: (
-  title: "h6",
-  title-small: "subtitle-1",
-  subtitle: "subtitle-2",
-  content: "body-2",
+  title: 'h6',
+  title-small: 'subtitle-1',
+  subtitle: 'subtitle-2',
+  content: 'body-2',
 );
 
 .my-cool-card {
   // Overwrite the 'h6' type style for this scope
-  @include type-style-vars("h6", $my-h6);
+  @include type-style-vars('h6', $my-h6);
 
   // Pass the custom card catergories to the card typography mixin
   @include card-typography($card-categories);
@@ -266,5 +263,5 @@ Here's a list of all CSS classes we provide by default:
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

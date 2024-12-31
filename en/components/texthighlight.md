@@ -25,7 +25,7 @@ To get started with the Ignite UI for Angular Text Highlight directive, first yo
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
 The next step is to import the `IgxTextHighlightModule` in your **app.module.ts** file.
 
@@ -48,14 +48,11 @@ Alternatively, as of `16.0.0` you can import the `IgxTextHighlightDirective` as 
 ```typescript
 // home.component.ts
 
-import {
-  IgxTextHighlightDirective,
-  IgxTextHighlightService,
-} from "igniteui-angular";
+import { IgxTextHighlightDirective, IgxTextHighlightService } from 'igniteui-angular';
 // import { IgxTextHighlightDirective, IgxTextHighlightService } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
-  selector: "app-home",
+  selector: 'app-home',
   template: `
     <div
       igxTextHighlight
@@ -67,7 +64,7 @@ import {
       {{ html }}
     </div>
   `,
-  styleUrls: ["home.component.scss"],
+  styleUrls: ['home.component.scss'],
   standalone: true,
   imports: [IgxTextHighlightDirective],
 })
@@ -100,8 +97,7 @@ Let's create a search box that we can use to highlight different parts of the te
       autocomplete="off"
       [(ngModel)]="searchText"
       (ngModelChange)="onTextboxChange()"
-      (keydown)="searchKeyDown($event)"
-    />
+      (keydown)="searchKeyDown($event)"/>
     <igx-suffix>
       <div class="caseSensitiveButton">
         <button
@@ -109,11 +105,8 @@ Let's create a search box that we can use to highlight different parts of the te
           igxRipple
           igxRippleCentered="true"
           (click)="updateSearch()"
-          [style.background]="caseSensitive ? 'rgb(73, 180, 254)' : 'transparent'"
-        >
-          <igx-icon class="caseSensitiveIcon" fontSet="material"
-            >text_fields</igx-icon
-          >
+          [style.background]="caseSensitive ? 'rgb(73, 180, 254)' : 'transparent'">
+          <igx-icon class="caseSensitiveIcon" fontSet="material">text_fields</igx-icon>
         </button>
       </div>
       <ng-container *ngIf="searchText.length > 0">
@@ -131,8 +124,7 @@ Let's create a search box that we can use to highlight different parts of the te
           igxRipple
           igxRippleCentered="true"
           (click)="findPrev()"
-          [disabled]="!canMoveHighlight"
-        >
+          [disabled]="!canMoveHighlight">
           <igx-icon fontSet="material">navigate_before</igx-icon>
         </button>
         <button
@@ -140,8 +132,7 @@ Let's create a search box that we can use to highlight different parts of the te
           igxRipple
           igxRippleCentered="true"
           (click)="findNext()"
-          [disabled]="!canMoveHighlight"
-        >
+          [disabled]="!canMoveHighlight">
           <igx-icon fontSet="material">navigate_next</igx-icon>
         </button>
       </div>
@@ -158,9 +149,8 @@ Then, we will add a div with text and the IgxTextHighlight directive. Note that,
   [value]="html"
   [groupName]="'group1'"
   [containerClass]="'search-text'"
-  class="search-text"
->
-  {{html}}
+  class="search-text">
+   {{html}}
 </div>
 ```
 
@@ -274,9 +264,8 @@ The [`igxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdir
   [row]="0"
   [containerClass]="'search-text'"
   [value]="firstParagraph"
-  class="search-text"
->
-  {{firstParagraph}}
+  class="search-text">
+   {{firstParagraph}}
 </div>
 <div
   igxTextHighlight
@@ -284,9 +273,8 @@ The [`igxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdir
   [row]="1"
   [containerClass]="'search-text'"
   [value]="secondParagraph"
-  class="search-text"
->
-  {{secondParagraph}}
+  class="search-text">
+   {{secondParagraph}}
 </div>
 ```
 
@@ -400,9 +388,8 @@ All we have to do is create a couple of css classes with some properties and att
 <div
   igxTextHighlight
   [cssClass]="'custom-highlight'"
-  [activeCssClass]="'custom-active-highlight'"
->
-  {{html}}
+  [activeCssClass]="'custom-active-highlight'">
+   {{html}}
 </div>
 ```
 
@@ -447,20 +434,20 @@ As mentioned earlier, we can even combine them with a theme:
 
 For more detailed information regarding the TextHighlight directive's API, refer to the following link:
 
-- [`IgxTextHighlight API`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html)
+* [`IgxTextHighlight API`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html)
 
 Additional components that were used:
 
-- [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-- [`IgxInputGroupComponent Styles`]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+* [`IgxInputGroupComponent Styles`]({environment:sassApiUrl}/index.html#function-input-group-theme)
 <div class="divider"></div>
 
 ## Additional Resources
 
-- [Grid Search](grid/search.md)
+* [Grid Search](grid/search.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

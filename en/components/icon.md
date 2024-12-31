@@ -25,7 +25,7 @@ To get started with the Ignite UI for Angular Icon component, first you need to 
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
 The next step is to import the `IgxIconModule` in your **app.module.ts** file.
 
@@ -50,18 +50,18 @@ Alternatively, as of `16.0.0` you can import the `IgxIconComponent` as a standal
 ```typescript
 // home.component.ts
 
-import { IgxIconComponent } from "igniteui-angular";
+import { IgxIconComponent } from 'igniteui-angular';
 // import { IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
-  selector: "app-home",
+  selector: 'app-home',
   template: '<igx-icon [style.color]="color">home</igx-icon>',
-  styleUrls: ["home.component.scss"],
+  styleUrls: ['home.component.scss'],
   standalone: true,
   imports: [IgxIconComponent],
 })
 export class HomeComponent {
-  public color = "#e41c77";
+  public color = '#e41c77';
 }
 ```
 
@@ -74,7 +74,7 @@ Now that you have the Ignite UI for Angular Icon module or component imported, y
 Use `style.color` CSS property to change its default color:
 
 ```html
-<igx-icon [style.color]="'#e41c77'">home</igx-icon>
+<igx-icon [style.color]="#e41c77">home</igx-icon>
 ```
 
 <div class="sample-container loading" style="height: 40px">
@@ -125,9 +125,9 @@ You can also use an SVG image as an icon. First, inject the [`IgxIconService`]({
 
 Use the [`addSvgIcon`]({environment:angularApiUrl}/classes/igxiconservice.html#addSvgIcon) method to import the SVG file in cache. When the SVG is cached, it can be used anywhere in the application. The icon name and file URL path are the method's mandatory parameters; family can be specified as well. After that, you can use the SVG files in the HTML markup. Alternatively, you can use the `addSvgIconFromText` method to import an SVG file, providing the SVG text content instead of the file URL.
 
-- Have in mind that if there are two icons with the same name and the same family, the SVG icon will be displayed with priority.
-- It is better not to provide image width and height in the SVG file.
-- You may need additional polyfill scripts ("polyfills") for Internet Explorer.
+* Have in mind that if there are two icons with the same name and the same family, the SVG icon will be displayed with priority.
+* It is better not to provide image width and height in the SVG file.
+* You may need additional polyfill scripts ("polyfills") for Internet Explorer.
 
 ```typescript
 constructor(private iconService: IgxIconService) { }
@@ -152,10 +152,7 @@ public ngOnInit() {
 Additionally, users can take advantage of the latest Material icons and their design variations included in the newly created [`Material Symbols Library`](https://fonts.google.com/icons). To start using Material Symbols, first you have to add the library to your application:
 
 ```html
-<link
-  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-  rel="stylesheet"
-/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
 ```
 
 Then we need to inject the [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) dependency and make use of its `setFamily` method so that Material Symbols can work with `igx-icon`:
@@ -172,11 +169,7 @@ public ngOnInit() {
 Now, we are ready to add the desired icon into our markup and customize it using adjustable font styles:
 
 ```html
-<igx-icon
-  family="material-symbols"
-  name="diamond"
-  class="custom-icon"
-></igx-icon>
+<igx-icon family="material-symbols" name="diamond" class="custom-icon"></igx-icon>
 ```
 
 ```scss
@@ -212,7 +205,7 @@ npm i xmlhttprequest
 On the top of your `server.ts` file, add:
 
 ```typescript
-(global as any).XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+(global as any).XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 ```
 
 </li>
@@ -290,8 +283,8 @@ Learn more about it in the [Size](display-density.md) article.
 
 <div class="divider--half"></div>
 
-- [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-- [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ## Additional Resources
 
@@ -299,5 +292,5 @@ Learn more about it in the [Size](display-density.md) article.
 
 Our community is active and always welcoming to new ideas.
 
-- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

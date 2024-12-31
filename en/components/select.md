@@ -15,8 +15,6 @@ Below is a basic Angular Select example. It has a simple contextual menu that di
            iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-1" alt="Angular Select Example">
 </code-view>
 
-
-
 ## Getting Started with Ignite UI for Angular Select
 
 To get started with the Ignite UI for Angular Select component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:

@@ -25,7 +25,7 @@ To get started with the Ignite UI for Angular Label and Input directives, first 
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
 The next step is to import the `IgxInputGroupModule` in your **app.module.ts** file.
 
@@ -50,25 +50,25 @@ Alternatively, as of `16.0.0` you can import the `IgxLabelDirective`, `IgxInputD
 ```typescript
 // home.component.ts
 
-import { FormsModule } from "@angular/forms";
-import { IGX_INPUT_GROUP_DIRECTIVES } from "igniteui-angular";
+import { FormsModule } from '@angular/forms';
+import { IGX_INPUT_GROUP_DIRECTIVES } from 'igniteui-angular';
 // import { IGX_INPUT_GROUP_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
-  selector: "app-home",
+  selector: 'app-home',
   template: `
     <igx-input-group>
       <input igxInput name="fullName" type="text" [(ngModel)]="fullName" />
       <label igxLabel for="fullName">Full Name</label>
     </igx-input-group>
   `,
-  styleUrls: ["home.component.scss"],
+  styleUrls: ['home.component.scss'],
   standalone: true,
   imports: [IGX_INPUT_GROUP_DIRECTIVES, FormsModule],
   /* or imports: [IgxInputGroupComponent, IgxLabelDirective, IgxInputDirective, FormsModule] */
 })
 export class HomeComponent {
-  public fullName = "John Doe";
+  public fullName = 'John Doe';
 }
 ```
 
@@ -123,13 +123,7 @@ in our markup:
 
 ```html
 <igx-input-group>
-  <input
-    igxInput
-    name="fullName"
-    type="text"
-    [(ngModel)]="user.fullName"
-    required="required"
-  />
+  <input igxInput name="fullName" type="text" [(ngModel)]="user.fullName" required="required"/>
   <label igxLabel for="fullName">Full Name</label>
 </igx-input-group>
 ```
@@ -152,13 +146,7 @@ If you want the text in an input element, marked with `igxInput`, to be selected
 
 ```html
 <igx-input-group>
-  <input
-    igxInput
-    [igxTextSelection]="true"
-    [igxFocus]="isFocused"
-    name="fullName"
-    type="text"
-  />
+  <input igxInput [igxTextSelection]="true" [igxFocus]="isFocused" name="fullName" type="text"/>
   <label igxLabel for="fullName">Full Name</label>
 </igx-input-group>
 
@@ -186,9 +174,9 @@ The Ignite UI for Angular Input Group component helps developers to create easy-
 
 <div class="divider--half"></div>
 
-- [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
-- [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
-- [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+* [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
+* [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
+* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
 ## Additional Resources
 
@@ -196,9 +184,9 @@ The Ignite UI for Angular Input Group component helps developers to create easy-
 
 Related topics:
 
-- [Input Group](input-group.md)
+* [Input Group](input-group.md)
 
 Our community is active and always welcoming to new ideas.
 
-- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

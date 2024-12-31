@@ -68,4 +68,4 @@ Since all individual components use the `$default-palette` by default, if you do
 
 ## API Overview
 
-- [Global Theme]({environment:sassApiUrl}/index.html#mixin-theme)
+* [Global Theme]({environment:sassApiUrl}/index.html#mixin-theme)

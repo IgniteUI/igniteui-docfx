@@ -31,7 +31,7 @@ To get started with the Ignite UI for Angular Button directive, first you need t
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
 The next step is to import the `IgxButtonModule` in your **app.module.ts** file.
 
@@ -110,7 +110,7 @@ Analogically, we can switch to outlined type:
 
 ### Icon Button
 
-As of version `17.1.0` the IgniteUI for Angular exposes a new `igxIconButton` directive intended to turn icons into fully functional buttons. You can read more about the [_Icon Button here_](icon-button.md).
+As of version `17.1.0` the IgniteUI for Angular exposes a new `igxIconButton` directive intended to turn icons into fully functional buttons. You can read more about the [*Icon Button here*](icon-button.md).
 
 ```html
 <button igxIconButton="flat">
@@ -167,12 +167,7 @@ The `disabled` property can be used to make a button unclickable:
 The [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) directive adds a ripple effect to your buttons or other specified elements. You can easily change the default ripple color, position and duration, using its properties:
 
 ```html
-<button
-  igxButton="contained"
-  igxRipple="white"
-  [igxRippleCentered]="true"
-  [igxRippleDuration]="2000"
->
+<button igxButton="contained" igxRipple="white" [igxRippleCentered]="true" [igxRippleDuration]="2000">
   Ripple
 </button>
 ```
@@ -186,12 +181,7 @@ The [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) d
 We can also use the `igxButton` directive to turn elements like `span` and `div` into Ignite UI for Angular styled buttons. The default colors can be customized via the `igxButtonColor` and the `igxButtonBackground` properties:
 
 ```html
-<span
-  igxButton="contained"
-  igxButtonColor="white"
-  igxButtonBackground="#72da67"
-  igxRipple="white"
->
+<span igxButton="contained" igxButtonColor="white" igxButtonBackground="#72da67" igxRipple="white">
   Span
 </span>
 ```
@@ -220,10 +210,7 @@ import { IgxButtonGroupModule } from 'igniteui-angular';
 
 ```html
 <!--buttons-density.component.html-->
-<igx-buttongroup
-  [values]="sizes"
-  (selected)="selectSize($event)"
-></igx-buttongroup>
+<igx-buttongroup [values]="sizes" (selected)="selectSize($event)"></igx-buttongroup>
 ...
 <button igxButton="flat">Flat</button>
 ```
@@ -352,11 +339,11 @@ Learn more about it in the [Size](display-density.md) article.
 
 <div class="divider--half"></div>
 
-- [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-- [IgxButton Styles]({environment:sassApiUrl}/index.html#function-button-theme)
-- [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
-- [IgxIconButtonDirective]({environment:angularApiUrl}/classes/igxiconbuttondirective.html)
-- [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
+* [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+* [IgxButton Styles]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
+* [IgxIconButtonDirective]({environment:angularApiUrl}/classes/igxiconbuttondirective.html)
+* [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
 
 ## Additional Resources
 
@@ -364,5 +351,5 @@ Learn more about it in the [Size](display-density.md) article.
 
 Our community is active and always welcoming to new ideas.
 
-- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

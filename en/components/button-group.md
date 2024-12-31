@@ -25,7 +25,7 @@ To get started with the Ignite UI for Angular Button Group component, first you 
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
 The next step is to import the `IgxButtonGroupModule` in your **app.module.ts** file.
 
@@ -238,10 +238,7 @@ public ngOnInit() {
 
 ```html
 <!-- sample.component.html -->
-<igx-buttongroup
-  [selectionMode]="'multi'"
-  [values]="bordersButtons"
-></igx-buttongroup>
+<igx-buttongroup [selectionMode]="'multi'" [values]="bordersButtons"></igx-buttongroup>
 ```
 
 <code-view style="height: 90px" 
@@ -296,16 +293,16 @@ The last step is to include the component's theme.
 
 <div class="divider--half"></div>
 
-- [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
-- [IgxButtonGroup Styles]({environment:sassApiUrl}/index.html#function-button-group-theme)
-- [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-- [IgxButton Styles]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
+* [IgxButtonGroup Styles]({environment:sassApiUrl}/index.html#function-button-group-theme)
+* [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+* [IgxButton Styles]({environment:sassApiUrl}/index.html#function-button-theme)
 
 ## Theming Dependencies
 
-- [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
-- [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
-- [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
 
 ## Additional Resources
 
@@ -313,5 +310,5 @@ The last step is to include the component's theme.
 
 Our community is active and always welcoming to new ideas.
 
-- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
