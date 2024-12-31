@@ -8,8 +8,7 @@ _keywords: Angular TextHighlight Directive, Angular Text Highlight Directive, Ig
 
 The [`IgxTextHighlightDirective`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) and `IgxTextHighlightService` in Ignite UI for Angular are used to highlight parts of a text, providing options for case sensitive searches and to highlight only exact matches. They allow the developer to keep an active highlight, which can be any of the already highlighted parts.
 
-## Angular Text Highlight Directive Example   
-
+## Angular Text Highlight Directive Example
 
 <code-view style="height: 260px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -26,7 +25,7 @@ To get started with the Ignite UI for Angular Text Highlight directive, first yo
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxTextHighlightModule` in your **app.module.ts** file.
 
@@ -49,26 +48,31 @@ Alternatively, as of `16.0.0` you can import the `IgxTextHighlightDirective` as 
 ```typescript
 // home.component.ts
 
-import { IgxTextHighlightDirective, IgxTextHighlightService } from 'igniteui-angular';
+import {
+  IgxTextHighlightDirective,
+  IgxTextHighlightService,
+} from "igniteui-angular";
 // import { IgxTextHighlightDirective, IgxTextHighlightService } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
-    selector: 'app-home',
-    template: `
-    <div igxTextHighlight
-        [value]="html"
-        [groupName]="'group1'"
-        [containerClass]="'search-text'"
-        class="search-text">
-        {{html}}
+  selector: "app-home",
+  template: `
+    <div
+      igxTextHighlight
+      [value]="html"
+      [groupName]="'group1'"
+      [containerClass]="'search-text'"
+      class="search-text"
+    >
+      {{ html }}
     </div>
-    `,
-    styleUrls: ['home.component.scss'],
-    standalone: true,
-    imports: [IgxTextHighlightDirective]
+  `,
+  styleUrls: ["home.component.scss"],
+  standalone: true,
+  imports: [IgxTextHighlightDirective],
 })
 export class HomeComponent {
-    constructor(public textHighlightService: IgxTextHighlightService) {}
+  constructor(public textHighlightService: IgxTextHighlightService) {}
 }
 ```
 
@@ -80,59 +84,89 @@ Let's create a search box that we can use to highlight different parts of the te
 
 ```html
 <div class="search-container">
-    <igx-input-group type="search" class="input-group">
-        <igx-prefix>
-            <igx-icon *ngIf="searchText.length == 0">search</igx-icon>
-            <igx-icon *ngIf="searchText.length > 0" (click)="clearSearch()">clear</igx-icon>
-        </igx-prefix>
+  <igx-input-group type="search" class="input-group">
+    <igx-prefix>
+      <igx-icon *ngIf="searchText.length == 0">search</igx-icon>
+      <igx-icon *ngIf="searchText.length > 0" (click)="clearSearch()"
+        >clear</igx-icon
+      >
+    </igx-prefix>
 
-        <input #search1 id="search1" igxInput placeholder="Search" autocomplete="off" [(ngModel)]="searchText" (ngModelChange)="onTextboxChange()"
-                (keydown)="searchKeyDown($event)" />
-        <igx-suffix>
-            <div class="caseSensitiveButton">
-                <button igxIconButton="flat" igxRipple igxRippleCentered="true" (click)="updateSearch()"
-                        [style.background]="caseSensitive ? 'rgb(73, 180, 254)' : 'transparent'">
-                    <igx-icon class="caseSensitiveIcon" fontSet="material">text_fields</igx-icon>
-                </button>
-            </div>
-            <ng-container *ngIf="searchText.length > 0">
-                <span>
-                    <ng-container *ngIf="matchCount > 0">
-                        {{ index + 1 }} of {{ matchCount }} results
-                    </ng-container>
-                    <ng-container *ngIf="matchCount == 0">
-                        No results
-                    </ng-container>
-                </span>
-            </ng-container>
-           
-            <div class="searchButtons">
-                <button igxIconButton="flat" igxRipple igxRippleCentered="true" (click)="findPrev()" [disabled]="!canMoveHighlight">
-                    <igx-icon fontSet="material">navigate_before</igx-icon>
-                </button>
-                <button igIconButton="flat" igxRipple igxRippleCentered="true" (click)="findNext()" [disabled]="!canMoveHighlight">
-                    <igx-icon fontSet="material">navigate_next</igx-icon>
-                </button>
-            </div>
-        </igx-suffix>
-    </igx-input-group>
+    <input
+      #search1
+      id="search1"
+      igxInput
+      placeholder="Search"
+      autocomplete="off"
+      [(ngModel)]="searchText"
+      (ngModelChange)="onTextboxChange()"
+      (keydown)="searchKeyDown($event)"
+    />
+    <igx-suffix>
+      <div class="caseSensitiveButton">
+        <button
+          igxIconButton="flat"
+          igxRipple
+          igxRippleCentered="true"
+          (click)="updateSearch()"
+          [style.background]="caseSensitive ? 'rgb(73, 180, 254)' : 'transparent'"
+        >
+          <igx-icon class="caseSensitiveIcon" fontSet="material"
+            >text_fields</igx-icon
+          >
+        </button>
+      </div>
+      <ng-container *ngIf="searchText.length > 0">
+        <span>
+          <ng-container *ngIf="matchCount > 0">
+            {{ index + 1 }} of {{ matchCount }} results
+          </ng-container>
+          <ng-container *ngIf="matchCount == 0"> No results </ng-container>
+        </span>
+      </ng-container>
+
+      <div class="searchButtons">
+        <button
+          igxIconButton="flat"
+          igxRipple
+          igxRippleCentered="true"
+          (click)="findPrev()"
+          [disabled]="!canMoveHighlight"
+        >
+          <igx-icon fontSet="material">navigate_before</igx-icon>
+        </button>
+        <button
+          igIconButton="flat"
+          igxRipple
+          igxRippleCentered="true"
+          (click)="findNext()"
+          [disabled]="!canMoveHighlight"
+        >
+          <igx-icon fontSet="material">navigate_next</igx-icon>
+        </button>
+      </div>
+    </igx-suffix>
+  </igx-input-group>
 </div>
 ```
+
 Then, we will add a div with text and the IgxTextHighlight directive. Note that, since we need to bind the value input to the text in the div, we will also use interpolation for the div's text.
 
 ```html
-<div igxTextHighlight
-     [value]="html"
-     [groupName]="'group1'"
-     [containerClass]="'search-text'"
-     class="search-text">
-    {{html}}
+<div
+  igxTextHighlight
+  [value]="html"
+  [groupName]="'group1'"
+  [containerClass]="'search-text'"
+  class="search-text"
+>
+  {{html}}
 </div>
 ```
 
 In the .ts file of our component first we need to add the following fields, that are used for bindings in our component's template:
 
-``` typescript
+```typescript
 @Component({
     ...
 })
@@ -155,7 +189,7 @@ export class HomeComponent {
 
 Then we need to add the following methods which will allow the user to apply the highlights for the text they have typed in the search box and to move the active highlight around.
 
-``` typescript
+```typescript
 @Component({
     ...
 })
@@ -222,36 +256,40 @@ export class HomeComponent {
 
 If the sample is configured properly, the final result should look like that:
 
-
 <code-view style="height: 260px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-1" >
 </code-view>
 
-
 <div class="divider"></div>
 
 ## Search across multiple elements
+
 The [`igxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) allows you to search across multiple elements which all share one active highlight. This is done by having the same [`groupName`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#groupName) value across multiple TextHighlight directives. In order to setup the sample we will reuse the search box from the previous sample, but this time we will add two div elements. The [`column`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#column) and [`row`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#row) inputs are useful when you have multiple elements and in our case the second div has a different row value.
 
 ```html
-<div igxTextHighlight
-     [groupName]="'group1'"
-     [row]="0"
-     [containerClass]="'search-text'"
-     [value]="firstParagraph"
-     class="search-text">
-    {{firstParagraph}}
+<div
+  igxTextHighlight
+  [groupName]="'group1'"
+  [row]="0"
+  [containerClass]="'search-text'"
+  [value]="firstParagraph"
+  class="search-text"
+>
+  {{firstParagraph}}
 </div>
-<div igxTextHighlight
-     [groupName]="'group1'"
-     [row]="1"
-     [containerClass]="'search-text'"
-     [value]="secondParagraph"
-     class="search-text">
-    {{secondParagraph}}
+<div
+  igxTextHighlight
+  [groupName]="'group1'"
+  [row]="1"
+  [containerClass]="'search-text'"
+  [value]="secondParagraph"
+  class="search-text"
+>
+  {{secondParagraph}}
 </div>
 ```
+
 In the .ts file we have the `firstParagraph` and `secondParagraph` fields, which are bound to the respective value inputs of the text highlight directives. Also, we will now use ViewChildren instead of ViewChild to get all the highlights in our template.
 
 ```typescript
@@ -262,6 +300,7 @@ public secondParagraph = "...";
 @ViewChildren(IgxTextHighlightDirective)
 public highlights;
 ```
+
 All the rest of the code in the .ts file is identical to the single element example with the exception of the find method. Changes to this method are necessary since we now have multiple elements, but the code there can be used regardless of the number of TextHighlight directives you have on your page.
 
 ```typescript
@@ -314,12 +353,10 @@ export class HomeComponent {
 }
 ```
 
-
 <code-view style="height: 400px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-2" >
 </code-view>
-
 
 <div class="divider"></div>
 
@@ -332,16 +369,16 @@ The [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdir
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 Following the simplest approach, we create a new theme that extends the [`highlight-theme`]({environment:sassApiUrl}/index.html#function-highlight-theme) and accepts the `$resting-background`, `$resting-color`, `$active-background` and the `$active-color` parameters.
 
 ```scss
 $dark-highlight: highlight-theme(
-    $resting-background: #FFCD0F,
-    $resting-color: #292826,
-    $active-background: #292826,
-    $active-color: #FFCD0F
+  $resting-background: #ffcd0f,
+  $resting-color: #292826,
+  $active-background: #292826,
+  $active-color: #ffcd0f,
 );
 ```
 
@@ -349,30 +386,9 @@ The `$resting-background` and the `$resting-color` parameters will be applied to
 
 The last step is to **include** the newly created theme.
 
-If `$legacy-support` is set to `true`, include the component theme like that:
-```scss
-@include highlight($dark-highlight);
-```
-
->[!NOTE]
->If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep`:
-
-```scss
-:host {
-    ::ng-deep {
-        @include highlight($dark-highlight);
-    }
-}
-```
-
-If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
-
 ```scss
 @include css-vars($dark-highlight);
 ```
-
->[!NOTE]
->Keep in mind that by default the `$legacy-support` is set to `false`
 
 ### Custom styles
 
@@ -381,46 +397,43 @@ Let's say we want to provide an even richer styling to our highlighted text part
 All we have to do is create a couple of css classes with some properties and attach them by using the inputs from above:
 
 ```html
-<div igxTextHighlight
-     [cssClass]="'custom-highlight'"
-     [activeCssClass]="'custom-active-highlight'">
-    {{html}}
+<div
+  igxTextHighlight
+  [cssClass]="'custom-highlight'"
+  [activeCssClass]="'custom-active-highlight'"
+>
+  {{html}}
 </div>
 ```
 
 ```scss
 // cssClass
 .custom-highlight {
-    border: 1px solid #FFCD0F;
+  border: 1px solid #ffcd0f;
 }
 // activeCssClass
 .custom-active-highlight {
-    box-shadow: 0 0 3px 0 rgba(0,0,0,0.75);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.75);
 }
 ```
 
 As mentioned earlier, we can even combine them with a theme:
 
 ```scss
-:host {
-    ::ng-deep {
-       @include highlight($dark-highlight);
-        
-       // cssClass
-       .custom-highlight {
-            border: 1px solid #FFCD0F;
-       }
-        
-        // activeCssClass
-       .custom-active-highlight {
-            box-shadow: 0 0 3px 0 rgba(0,0,0,0.75);
-        }
-   }
+@include highlight($dark-highlight);
+
+// cssClass
+.custom-highlight {
+  border: 1px solid #ffcd0f;
+}
+
+// activeCssClass
+.custom-active-highlight {
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.75);
 }
 ```
 
 ### Demo
-
 
 <code-view style="height: 300px;" 
            no-theming
@@ -433,19 +446,21 @@ As mentioned earlier, we can even combine them with a theme:
 ## API References
 
 For more detailed information regarding the TextHighlight directive's API, refer to the following link:
-* [`IgxTextHighlight API`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html)
+
+- [`IgxTextHighlight API`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html)
 
 Additional components that were used:
 
-* [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [`IgxInputGroupComponent Styles`]({environment:sassApiUrl}/index.html#function-input-group-theme)
+- [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+- [`IgxInputGroupComponent Styles`]({environment:sassApiUrl}/index.html#function-input-group-theme)
 <div class="divider"></div>
 
 ## Additional Resources
-* [Grid Search](grid/search.md)
+
+- [Grid Search](grid/search.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
