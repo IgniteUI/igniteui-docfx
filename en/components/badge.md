@@ -6,7 +6,6 @@ _keywords: Angular Badge component, Angular Badge control, Ignite UI for Angular
 
 # Angular Badge Component Overview
 <p class="highlight">Angular Badge is a component used in conjunction with avatars, navigation menus, or other components in an application when a visual notification is needed. Badges are usually  designed as icons with a predefined style to communicate information, success, warnings, or errors.</p>
-<div class="divider"></div>
 
 ## Angular Badge Example
 
@@ -288,17 +287,11 @@ Following the simplest approach, we create a new theme that extends the [`badge-
 
 ```scss
 $custom-badge-theme: badge-theme(
-    $schema: $light-bootstrap-schema,
+    $border-radius: 15px,
     $icon-color: white,
     $text-color: black,
-    $shadow: 3px 2px 5px 0px rgba(0,0,0,0.4),
-    $border-radius: 15px
 );
 ```
-
-### Including Themes
-
-<div class="divider"></div>
 
 To include the new theme we use the `css-vars` mixin:
 

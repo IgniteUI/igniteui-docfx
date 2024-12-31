@@ -11,6 +11,7 @@ Angular Button directive is used for creating and adding actionable buttons to a
 The Ignite UI for Angular Button directive is intended to turn any button, span, div, or anchor element into a fully functional button. You can use the following Angular Button types - Flat Button, Contained Button, Outlined Button, and Floating Action Button. With customizable colors, options to create themes and change the Angular Button Style and enabling users to choose the button size and more.
 
 ## Angular Button Example
+
 We have created the Angular Button example below to show you how different button types can appear and look like when they are styled with a border or when a transparent background is applied.
 
 <div class="divider--half"></div>
@@ -30,9 +31,9 @@ To get started with the Ignite UI for Angular Button directive, first you need t
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
-The next step is to import the `IgxButtonModule` in your **app.module.ts** file. 
+The next step is to import the `IgxButtonModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -109,7 +110,7 @@ Analogically, we can switch to outlined type:
 
 ### Icon Button
 
-As of version `17.1.0` the IgniteUI for Angular exposes a new `igxIconButton` directive intended to turn icons into fully functional buttons. You can read more about the [*Icon Button here*](icon-button.md).
+As of version `17.1.0` the IgniteUI for Angular exposes a new `igxIconButton` directive intended to turn icons into fully functional buttons. You can read more about the [_Icon Button here_](icon-button.md).
 
 ```html
 <button igxIconButton="flat">
@@ -135,13 +136,13 @@ To create an extended FAB, you can add any element prior to the `igx-icon`:
 
 ```html
 <button class="btn" igxButton="fab">
-    <span>like</span>
-    <igx-icon fontSet="material">favorite</igx-icon>
+  <span>like</span>
+  <igx-icon fontSet="material">favorite</igx-icon>
 </button>
 ```
 
->[!NOTE]
->To get the extended FAB text styled properly, use `<span>` or `<div>` tags.
+> [!NOTE]
+> To get the extended FAB text styled properly, use `<span>` or `<div>` tags.
 
 <div class="sample-container loading" style="height: 100px">
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-6">
@@ -166,8 +167,13 @@ The `disabled` property can be used to make a button unclickable:
 The [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) directive adds a ripple effect to your buttons or other specified elements. You can easily change the default ripple color, position and duration, using its properties:
 
 ```html
-<button igxButton="contained" igxRipple="white" [igxRippleCentered]="true" [igxRippleDuration]="2000">
-    Ripple
+<button
+  igxButton="contained"
+  igxRipple="white"
+  [igxRippleCentered]="true"
+  [igxRippleDuration]="2000"
+>
+  Ripple
 </button>
 ```
 
@@ -180,8 +186,13 @@ The [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) d
 We can also use the `igxButton` directive to turn elements like `span` and `div` into Ignite UI for Angular styled buttons. The default colors can be customized via the `igxButtonColor` and the `igxButtonBackground` properties:
 
 ```html
-<span igxButton="contained" igxButtonColor="white" igxButtonBackground="#72da67" igxRipple="white">
-    Span
+<span
+  igxButton="contained"
+  igxButtonColor="white"
+  igxButtonBackground="#72da67"
+  igxRipple="white"
+>
+  Span
 </span>
 ```
 
@@ -209,7 +220,10 @@ import { IgxButtonGroupModule } from 'igniteui-angular';
 
 ```html
 <!--buttons-density.component.html-->
-<igx-buttongroup [values]="sizes" (selected)="selectSize($event)"></igx-buttongroup>
+<igx-buttongroup
+  [values]="sizes"
+  (selected)="selectSize($event)"
+></igx-buttongroup>
 ...
 <button igxButton="flat">Flat</button>
 ```
@@ -243,9 +257,10 @@ If all went well, you should see something like the following in the browser:
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/buttons-display-density" alt="Angular Button Example">
 </code-view>
+
 <div class="divider--half"></div>
 
-## Angular Button Styling
+## Styling
 
 To get started with styling the button, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -254,13 +269,14 @@ To get started with styling the button, we need to import the `index` file, wher
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
+
 Following the simplest approach, we create a new theme that extends the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) and accepts the `$foreground` and the `$background` parameters with their respective hover and focus parameters.
 
 Given the following markup:
 
 ```html
 <div class="my-contained-btn">
-    <button igxButton="contained">Contained button</button>
+  <button igxButton="contained">Contained button</button>
 </div>
 ```
 
@@ -268,44 +284,28 @@ We need to create a theme:
 
 ```scss
 $custom-button-theme: button-theme(
-    $foreground: #fdfdfd,
-    $hover-foreground: #fdfdfd,
-    $focus-foreground: #fdfdfd,
-    $background: #345779,
-    $hover-background: #2e4d6b,
-    $focus-background: #2e4d6b,
-    $disabled-foreground: #2e4d6b
+  $foreground: #fdfdfd,
+  $hover-foreground: #fdfdfd,
+  $focus-foreground: #fdfdfd,
+  $background: #345779,
+  $hover-background: #2e4d6b,
+  $focus-background: #2e4d6b,
+  $disabled-foreground: #2e4d6b,
 );
 ```
 
 Take a look at the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) section for a complete list of available parameters for styling any type of button.
 
-### Using CSS variables
-
 The last step is to pass the custom button theme in our application:
 
 ```scss
 .my-contained-btn {
-    @include css-vars($custom-button-theme);
-}
-```
-
-### Using Theme Overrides
-
-In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables.
-If the component is using the [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`:
-
-```scss
-:host {
-     ::ng-deep {
-        .my-contained-btn {
-            @include button($custom-button-theme);
-        }
-    }
+  @include css-vars($custom-button-theme);
 }
 ```
 
 ### Demo
+
 <code-view style="height: 100px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -329,6 +329,7 @@ Or you can use the universal `--igx-button-size` variable to target all instance
   <button igxButton="raised"></button>
 </div>
 ```
+
 ```scss
 .my-app {
   --igx-button-size: 50px;
@@ -339,7 +340,7 @@ You can also use one of the predefined sizes, assigning it to the `--ig-size` va
 
 ```scss
 button {
-    --ig-size: var(--ig-size-large);
+  --ig-size: var(--ig-size-large);
 }
 ```
 
@@ -348,18 +349,20 @@ Learn more about it in the [Size](display-density.md) article.
 <div class="divider--half"></div>
 
 ## API References
+
 <div class="divider--half"></div>
 
-* [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxButton Styles]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
-* [IgxIconButtonDirective]({environment:angularApiUrl}/classes/igxiconbuttondirective.html)
-* [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
+- [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+- [IgxButton Styles]({environment:sassApiUrl}/index.html#function-button-theme)
+- [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
+- [IgxIconButtonDirective]({environment:angularApiUrl}/classes/igxiconbuttondirective.html)
+- [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
