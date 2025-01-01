@@ -17,7 +17,7 @@ Ignite UI for Angular の各バージョンのすべての重要な変更は、�
 
 *   [Ignite UI for Angular 変更ログ (GitHub)](https://github.com/IgniteUI/igniteui-angular/blob/master)
 
-## **Version TBA (December 2024)**
+## **18.2.0 (December 2024)**
 
 ### igniteui-angular-charts (チャート)
 
