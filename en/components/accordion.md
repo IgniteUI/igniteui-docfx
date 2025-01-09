@@ -280,27 +280,12 @@ $custom-panel-theme: expansion-panel-theme(
     $expanded-margin: 0px
 );
 ```
-### Using CSS Variables
 
 The last step is to include the component's theme.
 ```scss
-:host {
-    @include css-vars($custom-panel-theme);
-}
+@include css-vars($custom-panel-theme);
 ```
 
-### Using Theme Overrides
-
-In order to style components in Internet Explorer 11, we have to use a different approach, since CSS variables are not supported there.
-
-If the component is using the [Emulated](themes/sass/component-themes.md#view-encapsulation) `ViewEncapsulation`, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme from leaking into other components, make sure to wrap the `::ng-deep` in a `:host` selector: 
-```scss
-:host {
-    ::ng-deep {
-        @include expansion-panel($custom-panel-theme);    
-    }
-}
-```
 ## API Reference
 * [IgxAccordion API]({environment:angularApiUrl}/classes/igxaccordioncomponent.html)
 * [IgxExpansionPanel API]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)

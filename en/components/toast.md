@@ -6,7 +6,6 @@ _keywords: Angular Toast component, Angular Toast control, Ignite UI for Angular
 
 # Angular Toast Component Overview
 <p class="highlight">The Ignite UI for Angular Toast component provides information and warning messages that are auto-hiding, non-interactive and cannot be dismissed by the user. Notifications can be displayed at the bottom, the middle, or the top of the page.</p>
-<div class="divider"></div>
 
 ## Angular Toast Example
 
@@ -192,33 +191,16 @@ Following the simplest approach, we create a new theme that extends the [`toast-
 
 ```scss
 $custom-toast-theme: toast-theme(
-    $background: #dedede,
-    $text-color: #151515,
-    $border-radius: 12px
+  $background: #dedede,
+  $text-color: #151515,
+  $border-radius: 12px
 );
 ```
-
-### Using CSS variables
 
 The last step is to pass the custom toast theme:
 
 ```scss
 @include css-vars($custom-toast-theme);
-```
-
-### Using mixins
-
-In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables.
-
-If the component is using the [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`:
-
-```scss
-:host {
-    ::ng-deep {
-        // Pass the custom toast theme to the `igx-toast` mixin
-        @include toast($custom-toast-theme);
-    }
-}
 ```
 
 ### Using color palettes
@@ -230,17 +212,18 @@ Instead of hardcoding the color values, like we just did, we can achieve greater
 ```scss
 $white-color: #dedede;
 $black-color: #151515;
+$light-color: #efefef;
 
-$light-toast-palette: palette($primary: $white-color, $secondary: $black-color);
+$light-toast-palette: palette($primary: $white-color, $secondary: $black-color, $surface: $light-color);
 ```
 
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
 
 ```scss
 $custom-toast-theme: toast-theme(
-    $background: color($light-toast-palette, "primary", 400),
-    $text-color: color($light-toast-palette, "secondary", 400),
-    $border-radius: 12px
+  $background: color($light-toast-palette, "primary", 400),
+  $text-color: color($light-toast-palette, "secondary", 400),
+  $border-radius: 12px
 );
 ```
 
@@ -256,25 +239,28 @@ Extend one of the two predefined schemas, that are provided for every component,
 ```scss
 //  Extending the toast schema
 $light-toast-schema: extend($_light-toast,
-    (
-        background: (
-           color: ("primary", 400)
-        ),
-        text-color: (
-           color: ("secondary", 400)
-        ),
-        border-radius: 12px
-    )
+  (
+    background: (
+      color: ("primary", 400)
+    ),
+    text-color: (
+      color: ("secondary", 400)
+    ),
+    border-radius: 12px
+  )
 );
 ```
 
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+In order to apply our custom schemas we have to **extend** one of the globals ([`light-material-schema`]({environment:sassApiUrl}/index.html#variable-light-material-schema) or [`dark-material-schema`]({environment:sassApiUrl}/index.html#variable-dark-material-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
 
 ```scss
 // Extending the global light-schema
-$custom-light-schema: extend($light-schema,(
+$custom-light-schema: extend(
+  $light-material-schema,
+  (
     igx-toast: $light-toast-schema
-));
+  )
+);
 
 // Defining toast with the global light schema
 $custom-toast-theme: toast-theme(

@@ -333,7 +333,7 @@ $custom-navbar-theme: navbar-theme(
 
 You can build a robust and flexible structure that benefits from [**schemas**](themes/sass/schemas.md). A **schema** is a recipe of a theme.
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-navbar`]({environment:sassApiUrl}/index.html#variable-_light-navbar) schema:
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-navbar`]({environment:sassApiUrl}/index.html#variable-light-navbar) schema:
 
 ```scss
 // Extending the navbar schema
@@ -363,7 +363,7 @@ $light-navbar-schema: extend(
 );
 ```
 
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+In order to apply our custom schemas we have to **extend** one of the globals ([`light-material-schema`]({environment:sassApiUrl}/index.html#variable-light-material-schema) or [`dark-material-schema`]({environment:sassApiUrl}/index.html#variable-dark-material-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
 
 ```scss
 // Extending the global light-schema

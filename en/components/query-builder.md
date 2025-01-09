@@ -277,7 +277,7 @@ $custom-drop-down: drop-down-theme(
 ```
 
 > [!NOTE]
-> The `color` and `palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](themes/sass/palettes.md) topic for detailed guidance on how to use them.
+> The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 ### Using Schemas
 
@@ -370,11 +370,11 @@ $custom-drop-down-schema: extend(
 );
 ```
 
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+In order to apply our custom schemas we have to **extend** one of the globals ([`light-material-schema`]({environment:sassApiUrl}/index.html#variable-light-material-schema) or [`dark-material-schema`]({environment:sassApiUrl}/index.html#variable-dark-material-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
 
 ```scss
 $custom-light-schema: extend(
-  $light-schema,
+  $light-material-schema,
   (
     igx-query-builder: $custom-query-builder-schema,
     igx-button: $custom-button-schema,
