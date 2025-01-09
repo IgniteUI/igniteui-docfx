@@ -269,13 +269,11 @@ Following the simplest approach, we create a new theme that extends the [`banner
 
 ```scss
 $custom-banner-theme: banner-theme(
-    $banner-message-color: #151515,
-    $banner-background: #dedede,
-    $banner-illustration-color: #666666
+  $banner-message-color: #151515,
+  $banner-background: #dedede,
+  $banner-illustration-color: #666666
 );
 ```
-
-### Using CSS variables 
 
 The last step is to pass the custom banner theme:
 
@@ -283,41 +281,27 @@ The last step is to pass the custom banner theme:
 @include css-vars($custom-banner-theme);
 ```
 
-### Using mixins
-
-In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables. 
-
-If the component is using the [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`:
-
-```scss
-:host {
-    ::ng-deep {
-        // Pass the custom banner theme to the `igx-banner` mixin
-        @include banner($custom-banner-theme);
-    }
-}
-```
-
 ### Using color palettes
 
 Instead of hardcoding the color values, like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
 
-The `igx-palette` function generates a color palette based on the primary and secondary colors that are passed:
+The `igx-palette` function generates a color palette based on the primary, secondary and surface colors that are passed:
 
 ```scss
 $white-color: #dedede;
 $black-color: #151515;
+$light-color: #efefef;
 
-$light-banner-palette: palette($primary: $white-color, $secondary: $black-color);
+$light-banner-palette: palette($primary: $white-color, $secondary: $black-color, $surface: $light-color);
 ```
 
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
 
 ```scss
 $custom-banner-theme: banner-theme(
-    $banner-message-color: color($light-banner-palette, "secondary", 400),
-    $banner-background: color($light-banner-palette, "primary", 400),
-    $banner-illustration-color: color($light-banner-palette, "secondary", 100)
+  $banner-message-color: color($light-banner-palette, "secondary", 400),
+  $banner-background: color($light-banner-palette, "primary", 400),
+  $banner-illustration-color: color($light-banner-palette, "secondary", 100)
 );
 ```
 
@@ -327,22 +311,23 @@ $custom-banner-theme: banner-theme(
 ### Using schemas
 
 You can build a robust and flexible structure that benefits from [`schemas`](themes/sass/schemas.md).
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-banner`]({environment:sassApiUrl}/index.html#variable-_light-banner) schema: 
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-banner`]({environment:sassApiUrl}/index.html#variable-light-banner) schema: 
 
 ```scss
 //  Extending the banner schema
-$light-toast-schema: extend($_light-toast,
-    (
-        banner-message-color: (
-           color: ("secondary", 400)
-        ),
-        banner-background: (
-           color: ("primary", 400)
-        ),
-        banner-illustration-color: (
-           color: ("secondary", 100)
-        )
+$light-toast-schema: extend(
+  $light-banner,
+  (
+    banner-message-color: (
+      color: ("secondary", 400)
+    ),
+    banner-background: (
+      color: ("primary", 400)
+    ),
+    banner-illustration-color: (
+      color: ("secondary", 100)
     )
+  )
 );
 
 // Defining banner with the global light schema

@@ -225,7 +225,7 @@ $black-color: #575757;
 $dark-palette: palette($primary: $yellow-color, $secondary: $black-color);
 ```
 
-And then with [**igx-color**]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the pallete.
+And then with [**igx-color**]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
 
 ```scss
 $dark-grid-column-moving-theme: grid-theme(
@@ -238,7 +238,7 @@ $dark-grid-column-moving-theme: grid-theme(
 
 
 > [!NOTE]
-> The color and palette are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../../components/themes/palettes.md) topic for detailed guidance on how to use them.
+> The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../../components/themes/palettes.md) topic for detailed guidance on how to use them.
 
 ### Using Schemas
 
