@@ -10,7 +10,6 @@ _keywords: Angular Chip, Angular Chip Component, Angular Chip Area, Angular Chip
 
 ## Angular Chip Example
 
-
 <code-view style="height: 100px; padding-top: 10px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/chip-simple" alt="Angular Chip Example">
@@ -203,7 +202,9 @@ You can customize the `remove icon`, using the [`removeIcon`]({environment:angul
 
 <div class="divider"></div>
 
-**To create the demo sample, we will use the features above:**
+### Demo
+
+To create the demo sample below, we will use the features above:
 
 ```html
 <igx-chip
