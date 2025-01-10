@@ -6,7 +6,7 @@ _keywords: Angular Chip, Angular Chip Component, Angular Chip Area, Angular Chip
 
 # Angular Chip Component Overview
 
-<p class="highlight">[The Angular Chip component]({environment:angularApiUrl}/classes/igxchipcomponent.html) is a visual element that displays information in an oval container. The component has various properties - it can be templated, deleted, and selected. Multiple chips can be reordered and visually connected to each other, using the chip area as a container.</p>
+<p class="highlight">The Angular Chip component is a visual element that displays information in an oval container. The component has various properties - it can be templated, deleted, and selected. Multiple chips can be reordered and visually connected to each other, using the chip area as a container.</p>
 
 ## Angular Chip Example
 
