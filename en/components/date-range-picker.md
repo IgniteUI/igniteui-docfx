@@ -379,16 +379,17 @@ The Date Range Picker Component exposes `date-range-picker-theme` and utilizes s
 // COMMON
 $purple: #9E379F;
 $blue: #61AEDB;
+$light-gray: #efefef;
 
-$custom-palette: palette($primary: $blue, $secondary: $purple);
+$custom-palette: palette($primary: $blue, $secondary: $purple, $surface: $light-gray);
 
 $today-text: color($custom-palette, "primary", 500);
 $text-color: color($custom-palette, "secondary", 200);
 $color-focused: color($custom-palette, "secondary", 500);
 
 // DATE-RANGE
-$custom-date-range-theme:date-range-picker-theme(
-    $label-color: $color-focused
+$custom-date-range-theme: date-range-picker-theme(
+  $label-color: $color-focused
 );
 
 // INPUT GROUP
@@ -403,14 +404,13 @@ $custom-input-group-theme: input-group-theme(
 
 // CALENDAR
 $custom-calendar-theme: calendar-theme(
-    $palette: $custom-palette,
-    $date-current-text-color: $today-text,
-    $border-radius: 0.5,
-    $date-border-radius: 0.5
+  $palette: $custom-palette,
+  $date-current-text-color: $today-text,
+  $border-radius: 0.5,
+  $date-border-radius: 0.5
 );
 ```
 
-### Using CSS variables
 The last step is to pass the custom themes:
 
 ```scss
@@ -419,23 +419,21 @@ The last step is to pass the custom themes:
 @include css-vars($custom-calendar-theme);
 ```
 
-### Using Theme Overrides
+>[!WARNING]
+>If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
 
-In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables.
-
-If the component is using the [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate it using `::ng-deep`. To prevent the custom theme from leaking into other components, be sure to include the `:host` selector before `::ng-deep`:
-
- ```scss
+```scss
 :host {
-    ::ng-deep {
-        @include date-range-picker($custom-date-range-theme);
-        @include input-group($custom-input-group-theme);
-        @include calendar($custom-calendar-theme);
-    }
+  ::ng-deep {
+    @include date-range-picker($custom-date-range-theme);
+    @include input-group($custom-input-group-theme);
+    @include calendar($custom-calendar-theme);
+  }
 }
 ```
 
 ### Scoping Styles
+
 Regarding style scoping, you should refer to both styling sections [Overlay Scoped Component Styles](overlay-styling.md#Scoped Overlay Styles) and [Input Group Scoping Styles](input-group.md#styling) as they provide more information.
 
 

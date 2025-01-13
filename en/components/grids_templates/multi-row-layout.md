@@ -57,7 +57,7 @@ The result of the above configuration can be seen on the screenshot below:
 > [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowStart) and [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colStart) properties must be set for each `igx-column` into `igx-column-layout`. The `igxColumnLayout` component is not verifying if the layout is correct and not throwing errors or warnings about that. The developers must make sure that the declaration of their layout is correct and complete, otherwise they may end up in broken layout with misalignments, overlaps and browser inconsistencies.
 
 ## Feature Integration
-Due to the completly different rendering approach of Multi-row Layout, some of the column features will work only on `igx-column-layout` component. Such features are Column Pinning and Column Hiding. Othes like - Sorting and Grouping will work in the same way - on `igx-column` component.
+Due to the completely different rendering approach of Multi-row Layout, some of the column features will work only on `igx-column-layout` component. Such features are Column Pinning and Column Hiding. Others like - Sorting and Grouping will work in the same way - on `igx-column` component.
 - Filtering - only Excel Style Filtering is supported. Setting `filterMode` explicitly to `FilterMode.quickFilter` has no effect.
 - Paging - works on records, not visual rows.
 - Group By - `hideGroupedColumns` option has no effect in Multi-row Layout. The grouped columns are always visible.
@@ -72,12 +72,12 @@ The following features are currently **not** supported:
 
 IgxGridComponent with Multi-Row Layouts provides build-in keyboard navigation.
 
-### Horizontal nagivation
+### Horizontal navigation
 * <kbd>Arrow Left</kbd> or <kbd>Arrow Right</kbd> - move to the adjacent cell on the left/right within the current row unaffected by the column layouts that are defined. If the current cell spans on more than one row, <kbd>Arrow Left</kbd> and <kbd>Arrow Right</kbd> should navigate to the first cell on the left and right with the same `rowStart`, unless you have navigated to some other adjacent cell before. The navigation stores the starting navigation cell and navigates to the cells with the same `rowStart` if possible.
 * <kbd>Ctrl</kbd> + <kbd>Arrow Left</kbd> (<kbd>HOME</kbd>) or <kbd>Ctrl</kbd> + <kbd>Arrow Right</kbd> (<kbd>END</kbd>) - navigate to the start or end of the row and select the cell with accordance to the starting navigation cell.
 
 
-### Vertical nagivation
+### Vertical navigation
 * <kbd>Arrow Up</kbd> or <kbd>Arrow Down</kbd> - move to the cell above/below in relation to a starting position and is unaffected by the rows. If the current cell spans on more than one column the next active cell will be selected with accordance to the starting navigation cell.
 * <kbd>Ctrl</kbd> + Arrow Up</kbd> or <kbd>Ctrl</kbd> + <kbd>Down</kbd> - Navigate and apply focus on the same column on the first or on the last row.
 * <kbd>Ctrl</kbd> + <kbd>Home</kbd> or <kbd>Ctrl</kbd> + <kbd>End</kbd> - Navigate to the first row and focus first cell or navigate to the last row and focus the last cell.
@@ -127,7 +127,7 @@ By default we have set the same columns as our previous sample, but it can be cl
 </div>
 
 ## Styling
-The igxGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
+The igxGrid allows styling through the [`Ignite UI for Angular Theme Library`](../themes/sass/component-themes.md). The [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
 
 In the below steps, we are going through the steps of customizing the grid's Multi-row Layout styling.     
 
@@ -146,51 +146,52 @@ Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUr
 
 ```scss
 $custom-theme: grid-theme(
-    $cell-active-border-color: #ffcd0f,
-    $cell-selected-background: #6f6f6f,
-    $row-hover-background: #fde069,
-    $row-selected-background: #8d8d8d,
-    $header-background: #494949,
-    $header-text-color: #fff,
-    $sorted-header-icon-color: #ffcd0f,
-    $sortable-header-icon-hover-color: #e9bd0d
+  $cell-active-border-color: #ffcd0f,
+  $cell-selected-background: #6f6f6f,
+  $row-hover-background: #fde069,
+  $row-selected-background: #8d8d8d,
+  $header-background: #494949,
+  $header-text-color: #fff,
+  $sorted-header-icon-color: #ffcd0f,
+  $sortable-header-icon-hover-color: #e9bd0d
 );
 ```    
 
 ### Defining a custom color palette
 In the approach, that was described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
-`igx-palette` generates a color palette, based on provided primary and secondary colors.  
+`igx-palette` generates a color palette, based on provided primary, secondary and surface colors.  
 
  ```scss
 $black-color: #494949;
 $yellow-color: #FFCD0F;
+$gray-color: #efefef;
 
-$custom-palette: palette(
-  $primary: $black-color,
-  $secondary: $yellow-color
-);
+$custom-palette: palette($primary: $black-color, $secondary: $yellow-color, $surface: $gray-color);
 ```   
 
 After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.
 
 ```scss
 $custom-theme: grid-theme(
-    $cell-active-border-color: color($custom-palette, "secondary", 500),
-    $cell-selected-background: color($custom-palette, "primary", 300),
-    $row-hover-background: color($custom-palette, "secondary", 300),
-    $row-selected-background: color($custom-palette, "primary", 100),
-    $header-background: color($custom-palette, "primary", 500),
-    $header-text-color:contrast-color($custom-palette, "primary", 500),
-    $sorted-header-icon-color: color($custom-palette, "secondary", 500),
-    $sortable-header-icon-hover-color: color($custom-palette, "secondary", 600)
+  $cell-active-border-color: color($custom-palette, "secondary", 500),
+  $cell-selected-background: color($custom-palette, "primary", 300),
+  $row-hover-background: color($custom-palette, "secondary", 300),
+  $row-selected-background: color($custom-palette, "primary", 100),
+  $header-background: color($custom-palette, "primary", 500),
+  $header-text-color:contrast-color($custom-palette, "primary", 500),
+  $sorted-header-icon-color: color($custom-palette, "secondary", 500),
+  $sortable-header-icon-hover-color: color($custom-palette, "secondary", 600)
 );
 ```
 
 ### Defining custom schemas
 You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/sass/schemas.md). The **schema** is the recipe of a theme.   
-Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `$_light_grid`.   
+Extend one of the two predefined schemas, that are provided for every component. In our case, we would use [`light-grid`]({environment:sassApiUrl}/index.html#variable-light-grid):
+
 ```scss
-$custom-grid-schema: extend($_light-grid,(
+$custom-grid-schema: extend(
+  $light-grid,
+  (
     cell-active-border-color: (igx-color:('secondary', 500)),
     cell-selected-background: (igx-color:('primary', 300)),
     row-hover-background: (igx-color:('secondary', 300)),
@@ -199,45 +200,36 @@ $custom-grid-schema: extend($_light-grid,(
     header-text-color: (igx-contrast-color:('primary', 500)),
     sorted-header-icon-color: (igx-color:('secondary', 500)),
     sortable-header-icon-hover-color: (igx-color:('secondary', 600)) 
-));
+  )
+);
 ```   
 
-In order for the custom schema to be applied, either `light`, or `dark` globals has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respective component theme afterwards.   
+In order for the custom schema to be applied, either ([`light`]({environment:sassApiUrl}/index.html#variable-light-material-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-material-schema)) globals has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respective component theme afterwards.   
 
 ```scss
-$my-custom-schema: extend($light-schema, ( 
+$my-custom-schema: extend(
+  $light-material-schema, 
+  ( 
     igx-grid: $custom-grid-schema
-));
- $custom-theme: grid-theme(
-    $palette: $custom-palette,
-    $schema: $my-custom-schema
+  )
+);
+
+$custom-theme: grid-theme(
+  $palette: $custom-palette,
+  $schema: $my-custom-schema
 );
 ```
 
 ### Applying the custom theme
 The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file:  
-```scss
-@include grid($custom-theme);
-```
 
-### Scoped component theme
+```scss
+@include css-vars($custom-theme);
+```
 
 In order for the custom theme do affect only specific component, you can move all of the styles you just defined from the global styles file to the custom component's style file (including the import of the `index` file).
 
 This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation), your styles will be applied only to your custom component.
-
- >[!NOTE]
- >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
- >[!NOTE]
- >Wrap the statement inside of a `:host` selector to prevent your styles from affecting elements *outside of* our component: 
-
-```scss
-:host {
-    ::ng-deep {
-        @include grid($custom-theme);
-    }
-}
-```
 
 ### Demo 
 

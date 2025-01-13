@@ -514,11 +514,11 @@ The result of the above validation being applied to our `@@igSelector` can be se
 
 ## Styling
 
-The @@igxName allows for its cells to be styled through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-grid-theme) exposes a wide range of properties, which allow users to style many different aspects of the grid.
+The @@igxName allows for its cells to be styled through the [`Ignite UI for Angular Theme Library`](../themes/sass/component-themes.md). The grid's [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) exposes a wide range of properties, which allow users to style many different aspects of the grid.
 
 In the below steps, we are going to go over how you can style the grid's cell in edit mode and how you can scope those styles.
 
-In order to use the [Ignite UI Theming Library](../themes/sass/component-themes.md), we must first import the theme `index` file in our global styles:
+In order to use the [`Ignite UI Theming Library`](../themes/sass/component-themes.md), we must first import the theme `index` file in our global styles:
 
 ### Importing style library
 
@@ -537,8 +537,9 @@ After we've properly imported the index file, we create a custom palette that we
 ```scss
 $white: #fff;
 $blue: #4567bb;
+$gray: #efefef;
 
-$color-palette: palette($primary: $white, $secondary: $blue);
+$color-palette: palette($primary: $white, $secondary: $blue, $surface: $gray);
 ```
 
 ### Defining themes
@@ -547,10 +548,10 @@ We can now define the theme using our palette. The cells are styled by the [`gri
 
 ```scss
 $custom-grid-theme: grid-theme(
-    $cell-editing-background: $blue,
-    $cell-edited-value-color: $white,
-    $cell-active-border-color: $white,
-    $edit-mode-color: color($color-palette, "secondary", 200)
+  $cell-editing-background: $blue,
+  $cell-edited-value-color: $white,
+  $cell-active-border-color: $white,
+  $edit-mode-color: color($color-palette, "secondary", 200)
 );
 ```
 
@@ -562,31 +563,9 @@ The easiest way to apply our theme is with a `sass` `@include` statement in the 
 @include grid($custom-grid-theme);
 ```
 
-This way, the theme will apply to **all** grids in our application. If we wish to apply this custom styling only to a specific component, we need to scope the theme.
+### Demo
 
-### Scoped component theme
-
-In order for the custom theme to affect only our specific component, we can move all of the styles we just defined from the global styles file to our custom component's style file (including the [import](#importing-style-library) of the `index` file).
-
-This way, due to Angular's [`ViewEncapsulation`](https://angular.io/api/core/Component#encapsulation), our styles will be applied only to our custom component.
-
- >[!NOTE]
- >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
- >[!NOTE]
- >We wrap the statement inside of a `:host` selector to prevent our styles from affecting elements *outside of* our component:
-
-```scss
-:host {
-    ::ng-deep {
-            @include grid($custom-grid-theme);
-        }
-    }
-}
-```
-
-### Styling Demo
-
-In addition to the steps above, we can also style the controls that are used for the cells' editing templates: [`igx-input-group`](../input-group.md#styling), [`igx-datepicker`](../date-picker.md#styling) & [`igx-checkbox`](../checkbox.md#angular-checkbox-styling)
+In addition to the steps above, we can also style the controls that are used for the cells' editing templates: [`igx-input-group`](../input-group.md#styling), [`igx-datepicker`](../date-picker.md#styling) & [`igx-checkbox`](../checkbox.md#styling)
 
 @@if (igxName === 'IgxGrid') {
 

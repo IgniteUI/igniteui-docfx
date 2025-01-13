@@ -294,7 +294,7 @@ The TreeView checkboxes also have a tri-state mode, which is applicable only for
 ## Keyboard Navigation
 Keyboard navigation in IgxTree provides a rich variety of keyboard interactions for the user. This functionality is enabled by default and allows users to navigate through the nodes.
 
-The IgxTree navigation is compliant with W3C accesibility standards and convenient to use.
+The IgxTree navigation is compliant with W3C accessibility standards and convenient to use.
 
 **Key Combinations**
 
@@ -329,7 +329,7 @@ The Ignite UI for Angular IgxTree can be rendered in such way that it requires t
 
 After the user clicks the expand icon, it is replaced by a loading indicator. When the [loading]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#loading) property resolves to `false`, the loading indicator disappears and the children are loaded.
 
-## Angular Tree Styling
+## Styling
 Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the tree appearance. First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file: 
 
 ```scss
@@ -340,35 +340,20 @@ Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter
 ``` 
 
 Following the simplest approach, we create a new theme that extends the [tree-theme]({environment:sassApiUrl}/index.html#function-tree-theme) and pass the parameters, which we would like to change: 
+
 ```scss
-$custom-tree-theme:tree-theme(
-    $background-selected: #ffe6cc,
-    $background-active: #ecaa53,
-    $background-active-selected: #ff8c1a
+$custom-tree-theme: tree-theme(
+  $background-selected: #ffe6cc,
+  $background-active: #ecaa53,
+  $background-active-selected: #ff8c1a
 );
 ```
 
-### Using CSS Variables
-
 The last step is to include the component's theme.
 ```scss
-:host {
-    @include css-vars($custom-tree-theme);
-}
+@include css-vars($custom-tree-theme);
 ```
 
-### Using Theme Overrides
-
-In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since CSS variables are not supported there.
-
-If the component is using the [Emulated](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`: 
-```scss
-:host {
-    ::ng-deep {
-        @include tree($custom-tree-theme);    
-    }
-}
-```
 ## Known Issues and Limitations
 
 |Limitation|Description|

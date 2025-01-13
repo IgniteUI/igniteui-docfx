@@ -368,7 +368,7 @@ In order to apply our custom schemas we have to **extend** one of the globals ([
 ```scss
 // Extending the global light-schema
 $custom-light-schema: extend(
-  $light-schema,
+  $light-material-schema,
   (
     navbar: $light-navbar-schema,
   )

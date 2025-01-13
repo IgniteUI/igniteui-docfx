@@ -247,7 +247,7 @@ If all went well, you should see something like the following in the browser:
 
 <div class="divider--half"></div>
 
-## Angular Button Styling
+## Styling
 
 To get started with styling the button, we need to import the `index` file, where all the theme functions and component mixins live:
 

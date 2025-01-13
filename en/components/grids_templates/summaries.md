@@ -401,7 +401,7 @@ class MySummary extends IgxNumberSummaryOperand {
 </igx-column>
 ```
 
-When a default summary is defined, the height of the summary area is calculated by design depending on the column with the largest number of summaries and the size of the grid. Use the [summaryRowHeight]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryRowHeight) input property to override the default value. As an argument it expects a number value, and setting a falsy value will trigger the default sizing behavior of the grid footer.
+When a default summary is defined, the height of the summary area is calculated by design depending on the column with the largest number of summaries and the size of the grid. Use the [summaryRowHeight]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryRowHeight) input property to override the default value. As an argument it expects a number value, and setting a false value will trigger the default sizing behavior of the grid footer.
 
 > [!NOTE]
 > Column summary template could be defined through API by setting the column [summaryTemplate]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaryTemplate) property to the required TemplateRef.
@@ -715,29 +715,29 @@ Following the simplest approach, we create a new theme that extends the [`grid-s
 
 ```scss
 $custom-theme: grid-summary-theme(
-    $background-color: #e0f3ff,
-    $focus-background-color: rgba( #94d1f7, .3 ),
-    $label-color: #e41c77,
-    $result-color: black,
-    $pinned-border-width: 2px,
-    $pinned-border-style: dotted,
-    $pinned-border-color: #e41c77
+  $background-color: #e0f3ff,
+  $focus-background-color: rgba( #94d1f7, .3 ),
+  $label-color: #e41c77,
+  $result-color: black,
+  $pinned-border-width: 2px,
+  $pinned-border-style: dotted,
+  $pinned-border-color: #e41c77
 );
 ```
-The last step is to **include** the component mixins:
+The last step is to **include** the component custom theme:
 
 ```scss
-@include grid-summary($custom-theme);
+@include css-vars($custom-theme);
 ```
 
 >[!NOTE]
- >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
 
  ```scss
 :host {
-    ::ng-deep {
-        @include grid-summary($custom-theme);
-    }
+  ::ng-deep {
+    @include css-vars($custom-theme);
+  }
 }
 ```
 
@@ -745,26 +745,27 @@ The last step is to **include** the component mixins:
 
 Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
 
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+`igx-palette` generates a color palette based on the primary, secondary and surface colors that are passed:
 
 ```scss
 $blue-color: #7793b1;
 $green-color: #00ff2d;
+$gray-color: #efefef;
 
-$my-custom-palette: palette($primary: $blue-color, $secondary: $green-color);
+$my-custom-palette: palette($primary: $blue-color, $secondary: $green-color, $surface: $gray-color);
 ```
 
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
 
 ```scss
 $custom-theme: grid-summary-theme(
-    $background-color: color($my-custom-palette, "primary", 700),
-    $focus-background-color: color($my-custom-palette, "primary", 800),
-    $label-color: color($my-custom-palette, "secondary", 500),
-    $result-color: color($my-custom-palette, "grays", 900),
-    $pinned-border-width: 2px,
-    $pinned-border-style: dotted,
-    $pinned-border-color: color($my-custom-palette, "secondary", 500)
+  $background-color: color($my-custom-palette, "primary", 700),
+  $focus-background-color: color($my-custom-palette, "primary", 800),
+  $label-color: color($my-custom-palette, "secondary", 500),
+  $result-color: color($my-custom-palette, "grays", 900),
+  $pinned-border-width: 2px,
+  $pinned-border-style: dotted,
+  $pinned-border-color: color($my-custom-palette, "secondary", 500)
 );
 ```
 
@@ -775,37 +776,39 @@ $custom-theme: grid-summary-theme(
 
 Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/sass/schemas.md). A **schema** is a recipe of a theme.
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`_light-grid-summary`]({environment:sassApiUrl}/index.html#variable-_light-grid-summary):
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-grid-summary`]({environment:sassApiUrl}/index.html#variable-light-grid-summary):
 
 ```scss
 // Extending the light grid summary schema
-$my-summary-schema: extend($_light-grid-summary,
-    (
-        background-color: (igx-color: ('primary', 700)),
-        focus-background-color: (igx-color: ('primary', 800)),
-        label-color: (igx-color: ('secondary', 500)),
-        result-color: (igx-color: ('grays', 900)),
-        pinned-border-width: 2px,
-        pinned-border-style: dotted,
-        pinned-border-color: (igx-color: ('secondary', 500))
-    )
+$my-summary-schema: extend(
+  $light-grid-summary,
+  (
+    background-color: (igx-color: ('primary', 700)),
+    focus-background-color: (igx-color: ('primary', 800)),
+    label-color: (igx-color: ('secondary', 500)),
+    result-color: (igx-color: ('grays', 900)),
+    pinned-border-width: 2px,
+    pinned-border-style: dotted,
+    pinned-border-color: (igx-color: ('secondary', 500))
+  )
 );
 ```
 
-In order to apply our custom schema we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+In order to apply our custom schema we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-material-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-material-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
 
 ```scss
 // Extending the global light-schema
-$my-custom-schema: extend($light-schema,
-    (
-        igx-grid-summary: $my-summary-schema
-    )
+$my-custom-schema: extend(
+  $light-material-schema,
+  (
+    igx-grid-summary: $my-summary-schema
+  )
 );
 
 // Defining our custom theme with the custom schema
 $custom-theme: grid-summary-theme(
-    $palette: $my-custom-palette,
-    $schema: $my-custom-schema
+  $palette: $my-custom-palette,
+  $schema: $my-custom-schema
 );
 ```
 
