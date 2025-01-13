@@ -292,19 +292,8 @@ The simplest approach to achieve this is to create a new theme that extends the 
 
 ``` scss
 $custom-grid-theme: grid-theme(
-    $resize-line-color: #0288D1
+  $resize-line-color: #0288D1
 );
-
-```
- >[!NOTE]
- >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`.
-
-```scss
-:host {
-    ::ng-deep {
-        @include grid($custom-grid-theme);
-    }
-}
 ```
 
 ### Defining a color palette
@@ -315,16 +304,17 @@ Instead of hard-coding the color values, we can achieve greater flexibility in t
 ```scss
 $primary-color: #0288D1;
 $secondary-color: #BDBDBD;
+$surface-color: #efefef;
 
-$custom-theme-palette: palette($primary: $primary-color, $secondary: $secondary-color);
+$custom-theme-palette: palette($primary: $primary-color, $secondary: $secondary-color, $surface: $surface-color);
 ```
 
 And then, with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color), we can easily retrieve the color from the palette. 
 
 ```scss
 $custom-grid-theme: grid-theme(
-    $palette: $custom-theme-palette,
-    $resize-line-color: color($custom-theme-palette, 'secondary', 500)
+  $palette: $custom-theme-palette,
+  $resize-line-color: color($custom-theme-palette, 'secondary', 500)
 );
 ```
 
@@ -334,39 +324,44 @@ $custom-grid-theme: grid-theme(
 ### Using Schemas
 Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/sass/schemas.md). A **schema** is a recipe of a theme.
 
-Extend the predefined schema provided for every component, in this case - [`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid) schema:
+Extend the predefined schema provided for every component, in this case - [`light-grid`]({environment:sassApiUrl}/index.html#variable-light-grid) schema:
 
 ```scss
 // Extending the light grid schema
-$light-grid-schema: extend($_light-grid,
-    (
-        resize-line-color: (
-           color: ('secondary', 500)
-            ),
-        header-background: (
-           color: ("primary", 100)
-            ),
-        header-text-color: (
-           color: ("primary", 600)
-            )
+$light-grid-schema: extend(
+  $light-grid,
+  (
+    resize-line-color: (
+      color: ('secondary', 500)
+    ),
+    header-background: (
+      color: ("primary", 100)
+    ),
+    header-text-color: (
+      color: ("primary", 600)
     )
+  )
 );
 ```
 
-In order to apply our custom schema, we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component theme:
+In order to apply our custom schema, we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-material-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-material-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component theme:
 
 ```scss
 // Extending the global light-schema
-$custom-light-grid-schema: extend($light-schema,(
+$custom-light-grid-schema: extend(
+  $light-material-schema,
+  (
     igx-grid: $light-grid-schema
-));
+  )
+);
 
 // Specifying the palette and schema of the custom grid theme
 $custom-grid-theme: grid-theme(
-    $palette: $custom-theme-palette,
-    $schema: $custom-light-grid-schema
+  $palette: $custom-theme-palette,
+  $schema: $custom-light-grid-schema
 );
 ```
+
 Don't forget to include the theme in the same way as it was demonstrated above.
 
 ### Demo

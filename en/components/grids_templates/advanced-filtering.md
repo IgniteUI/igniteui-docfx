@@ -191,7 +191,7 @@ The advanced filtering dialog takes its background color from the grid's theme, 
 
 ```scss
 $custom-grid: grid-theme(
-    $filtering-row-background: #FFCD0F
+  $filtering-row-background: #FFCD0F
 );
 ```
 
@@ -199,28 +199,28 @@ Since we have other components inside the advanced filtering dialog, such as but
 
 ```scss
 $custom-button: button-theme(
-    $disabled-color: gray,
-    ...
+  $disabled-color: gray,
+  ...
 );
 
 $custom-button-group: button-group-theme(
-    $item-background:  #292826,
-    ...
+  $item-background:  #292826,
+  ...
 );
 
 $custom-input-group: input-group-theme(
-    $box-background: #4a4a4a,
-    ...
+  $box-background: #4a4a4a,
+  ...
 );
 
 $custom-chip: chip-theme(
-    $background: #FFCD0F,
-    ...
+  $background: #FFCD0F,
+  ...
 );
 
 $custom-drop-down: drop-down-theme(
-    $background-color: #292826,
-    ...
+  $background-color: #292826,
+  ...
 );
 ```
 
@@ -229,39 +229,39 @@ In this example we only changed some of the parameters for the listed components
 The last step is to **include** the component mixins, each with its respective theme. We will also add some styles for other elements inside the advanced filtering dialog.
 
 ```scss
-@include grid($custom-grid);
+@include css-vars($custom-grid);
 igx-advanced-filtering-dialog {
-    @include button($custom-button);
-    @include button-group($custom-button-group);
-    @include input-group($custom-input-group);
-    @include chip($custom-chip);
-    @include drop-down($custom-drop-down);
-    .igx-filter-empty__title {
-        color: #FFCD0F
-    }
-    .igx-advanced-filter__header {
-        color: #FFCD0F
-    }
-    .igx-filter-tree__expression-actions igx-icon {
-        color: #FFCD0F
-    }
-    .igx-filter-tree__expression-actions igx-icon:hover {
-        color: #ffe482
-    }
-    .igx-filter-tree__expression-actions igx-icon:focus {
-        color: #ffe482
-    }
-    .igx-filter-contextual-menu {
-        border: 1px solid #FFCD0F
-    }
-    .igx-filter-contextual-menu__close-btn {
-        position: absolute !important;
-        background: #292826 !important;
-        border-color: #FFCD0F !important;
-    }
-    .igx-input-group__input::placeholder {
-        color: gray;
-    }
+  @include css-vars($custom-button);
+  @include css-vars($custom-button-group);
+  @include css-vars($custom-input-group);
+  @include css-vars($custom-chip);
+  @include css-vars($custom-drop-down);
+  .igx-filter-empty__title {
+    color: #FFCD0F
+  }
+  .igx-advanced-filter__header {
+    color: #FFCD0F
+  }
+  .igx-filter-tree__expression-actions igx-icon {
+    color: #FFCD0F
+  }
+  .igx-filter-tree__expression-actions igx-icon:hover {
+    color: #ffe482
+  }
+  .igx-filter-tree__expression-actions igx-icon:focus {
+    color: #ffe482
+  }
+  .igx-filter-contextual-menu {
+    border: 1px solid #FFCD0F
+  }
+  .igx-filter-contextual-menu__close-btn {
+    position: absolute !important;
+    background: #292826 !important;
+    border-color: #FFCD0F !important;
+  }
+  .igx-input-group__input::placeholder {
+    color: gray;
+  }
 }
 ```
 
@@ -273,42 +273,42 @@ igx-advanced-filtering-dialog {
 
 ```scss
 :host {
-    ::ng-deep {
-        @include drop-down($custom-drop-down);
-        @include grid($custom-grid);
-        igx-advanced-filtering-dialog {
-            @include button($custom-button);
-            @include button-group($custom-button-group);
-            @include input-group($custom-input-group);
-            @include chip($custom-chip);
-            .igx-input-group__input::placeholder {
-                color: gray;
-            }
-            .igx-filter-empty__title {
-                color: #FFCD0F
-            }
-            .igx-advanced-filter__header {
-                color: #FFCD0F
-            }
-            .igx-filter-tree__expression-actions igx-icon {
-                color: #FFCD0F
-            }
-            .igx-filter-tree__expression-actions igx-icon:hover {
-                color: #ffe482
-            }
-            .igx-filter-tree__expression-actions igx-icon:focus {
-                color: #ffe482
-            }
-            .igx-filter-contextual-menu {
-                border: 1px solid #FFCD0F
-            }
-            .igx-filter-contextual-menu__close-btn {
-                position: absolute !important;
-                background: #292826 !important;
-                border-color: #FFCD0F !important;
-            }
-        }
+  ::ng-deep {
+    @include css-vars($custom-drop-down);
+    @include css-vars($custom-grid);
+    igx-advanced-filtering-dialog {
+      @include css-vars($custom-button);
+      @include css-vars($custom-button-group);
+      @include css-vars($custom-input-group);
+      @include css-vars($custom-chip);
+      .igx-input-group__input::placeholder {
+        color: gray;
+      }
+      .igx-filter-empty__title {
+        color: #FFCD0F
+      }
+      .igx-advanced-filter__header {
+        color: #FFCD0F
+      }
+      .igx-filter-tree__expression-actions igx-icon {
+        color: #FFCD0F
+      }
+      .igx-filter-tree__expression-actions igx-icon:hover {
+        color: #ffe482
+      }
+      .igx-filter-tree__expression-actions igx-icon:focus {
+        color: #ffe482
+      }
+      .igx-filter-contextual-menu {
+        border: 1px solid #FFCD0F
+      }
+      .igx-filter-contextual-menu__close-btn {
+        position: absolute !important;
+        background: #292826 !important;
+        border-color: #FFCD0F !important;
+      }
     }
+  }
 }
 ```
 
@@ -316,43 +316,45 @@ igx-advanced-filtering-dialog {
 
 Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
 
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+`igx-palette` generates a color palette based on the primary, secondary and surface colors that are passed:
 
 ```scss
 $yellow-color: #FFCD0F;
 $black-color: #292826;
-$dark-palette: palette($primary: $yellow-color, $secondary: $black-color);
+$gray-color: #efefef;
+
+$dark-palette: palette($primary: $yellow-color, $secondary: $black-color, $surface: $gray-color);
 ```
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
 
 ```scss
 $custom-grid: grid-theme(
-    $filtering-row-background: color($dark-palette, "secondary", 400)
+  $filtering-row-background: color($dark-palette, "secondary", 400)
 );
 
 $custom-button: button-theme(
-    $disabled-color: color($dark-palette, "secondary", 100),
-    ...
+  $disabled-color: color($dark-palette, "secondary", 100),
+  ...
 );
 
 $custom-button-group: button-group-theme(
-    $item-background: color($dark-palette, "secondary", 400),
-    ...
+  $item-background: color($dark-palette, "secondary", 400),
+  ...
 );
 
 $custom-input-group: input-group-theme(
-    $box-background: color($dark-palette, "secondary", 200),
-    ...
+  $box-background: color($dark-palette, "secondary", 200),
+  ...
 );
 
 $custom-chip: chip-theme(
-    $background: color($dark-palette, "primary", 400),
-    ...
+  $background: color($dark-palette, "primary", 400),
+  ...
 );
 
 $custom-drop-down: drop-down-theme(
-    $background-color: color($dark-palette, "secondary", 400),
-    ...
+  $background-color: color($dark-palette, "secondary", 400),
+  ...
 );
 ```
 
@@ -363,105 +365,114 @@ $custom-drop-down: drop-down-theme(
 
 Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/sass/schemas.md). A **schema** is a recipe of a theme.
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid), [`light-button`]({environment:sassApiUrl}/index.html#variable-_light-button), [`light-button-group`]({environment:sassApiUrl}/index.html#variable-_light-button-group), [`light-chip`]({environment:sassApiUrl}/index.html#variable-_light-chip), [`light-input-group`]({environment:sassApiUrl}/index.html#variable-_light-input-group) and [`light-drop-down`]({environment:sassApiUrl}/index.html#variable-_light-drop-down) schemas:
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-grid`]({environment:sassApiUrl}/index.html#variable-light-grid), [`light-button`]({environment:sassApiUrl}/index.html#variable-light-button), [`light-button-group`]({environment:sassApiUrl}/index.html#variable-light-button-group), [`light-chip`]({environment:sassApiUrl}/index.html#variable-light-chip), [`light-input-group`]({environment:sassApiUrl}/index.html#variable-light-input-group) and [`light-drop-down`]({environment:sassApiUrl}/index.html#variable-light-drop-down) schemas:
 
 ```scss
-$grid-dark-palette: palette($primary: #11bd7b, $secondary: #e32057, $info: $black-color);
+$grid-dark-palette: palette($primary: #11bd7b, $secondary: #e32057, $surface: #efefef, $info: $black-color);
 
-$custom-grid-schema: extend($_light-grid,
-    (
-        filtering-row-background:(
-           color: ("info")
-        )
+$custom-grid-schema: extend(
+  $light-grid,
+  (
+    filtering-row-background:(
+      color: ("info")
     )
+  )
 );
 
-$custom-button-schema: extend($_light-button,
-    (
-        disabled-color:(
-           color: ("secondary", 100)
-        ),
-        ...
-    )
+$custom-button-schema: extend(
+  $light-button,
+  (
+    disabled-color:(
+      color: ("secondary", 100)
+    ),
+    ...
+  )
 );
 
-$custom-button-group-schema: extend($_light-button-group,
-    (
-        item-background:(
-           color: ("secondary", 400)
-        ),
-        ...
-    )
+$custom-button-group-schema: extend(
+  $light-button-group,
+  (
+    item-background:(
+      color: ("secondary", 400)
+    ),
+    ...
+  )
 );
 
-$custom-input-group-schema: extend($_light-input-group,
-    (
-        box-background:(
-           color: ("secondary", 200)
-        ),
-        ...
-    )
+$custom-input-group-schema: extend(
+  $light-input-group,
+  (
+    box-background:(
+      color: ("secondary", 200)
+    ),
+    ...
+  )
 );
 
-$custom-chip-schema: extend($_light-chip,
-    (
-        background:(
-           color: ("primary", 400)
-        ),
-        ...
-    )
+$custom-chip-schema: extend(
+  $light-chip,
+  (
+    background:(
+      color: ("primary", 400)
+    ),
+    ...
+  )
 );
 
-$custom-drop-down-schema: extend($_light-drop-down,
-    (
-        background-color:(
-           color: ("secondary", 400)
-        ),
-        ...
-    )
+$custom-drop-down-schema: extend(
+  $light-drop-down,
+  (
+    background-color:(
+      color: ("secondary", 400)
+    ),
+    ...
+  )
 );
 ```
 
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-material-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-material-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
 
 ```scss
-$custom-light-schema: extend($light-schema,(
+$custom-light-schema: extend(
+  $light-schema,
+  (
     igx-grid: $custom-grid-schema,
     igx-button: $custom-button-schema,
     igx-button-group: $custom-button-group-schema,
     igx-input-group: $custom-input-group-schema,
     igx-chip: $custom-chip-schema,
     igx-drop-down: $custom-drop-down-schema
-));
+  )
+);
 
 $custom-grid: grid-theme(
-    $palette: $grid-dark-palette,
-    $schema: $custom-light-schema
+  $palette: $grid-dark-palette,
+  $schema: $custom-light-schema
 );
 
 $custom-button: button-theme(
-    $palette: $dark-palette,
-    $schema: $custom-light-schema
+  $palette: $dark-palette,
+  $schema: $custom-light-schema
 );
 
 $custom-button-group: button-group-theme(
-    $palette: $dark-palette,
-    $schema: $custom-light-schema
+  $palette: $dark-palette,
+  $schema: $custom-light-schema
 );
 
 $custom-input-group: input-group-theme(
-    $palette: $dark-palette,
-    $schema: $custom-light-schema
+  $palette: $dark-palette,
+  $schema: $custom-light-schema
 );
 
 $custom-chip: chip-theme(
-    $palette: $dark-palette,
-    $schema: $custom-light-schema
+  $palette: $dark-palette,
+  $schema: $custom-light-schema
 );
 
 $custom-drop-down: drop-down-theme(
-    $palette: $dark-palette,
-    $schema: $custom-light-schema
+  $palette: $dark-palette,
+  $schema: $custom-light-schema
 );
 ```
 

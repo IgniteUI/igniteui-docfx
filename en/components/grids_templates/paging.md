@@ -185,7 +185,7 @@ Remote paging can be achieved by declaring a service, responsible for data fetch
 In some cases you may want to define your own paging behavior and this is when we can take advantage of the `igx-paginator-content` and add our custom logic along with it. [This section](remote-data-operations.md#remote-paging-with-custom-igx-paginator-content) explains how we are going to extend the Remote Paging example in order to demonstrate this.
 }
 
-## Pagination Styling in Angular
+## Styling
 
 To get started with styling the paginator, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -196,13 +196,13 @@ To get started with styling the paginator, we need to import the `index` file, w
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`paginator-theme`]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme) and accepts the `$text-color`, `$background-color` and the `$border-color` parameters.
+Following the simplest approach, we create a new theme that extends the [`paginator-theme`]({environment:sassApiUrl}/index.html#function-paginator-theme) and accepts the `$text-color`, `$background-color` and the `$border-color` parameters.
 
 ```scss
 $dark-paginator: paginator-theme(
-    $text-color: #F4D45C,
-    $background-color: #575757,
-    $border-color: #292826
+  $text-color: #F4D45C,
+  $background-color: #575757,
+  $border-color: #292826
 );
 ```
 
@@ -210,38 +210,40 @@ As seen, the `paginator-theme` only controls colors for the paging container, bu
 
 ```scss
 $dark-button: icon-button-theme(
-    $foreground: #FFCD0F,
-    $hover-foreground: #292826,
-    $hover-background: #FFCD0F,
-    $focus-foreground: #292826,
-    $focus-background: #FFCD0F,
-    $disabled-foreground: #16130C
+  $foreground: #FFCD0F,
+  $hover-foreground: #292826,
+  $hover-background: #FFCD0F,
+  $focus-foreground: #292826,
+  $focus-background: #FFCD0F,
+  $disabled-foreground: #16130C
 );
 ```
 
 The last step is to **include** the component mixins, each with its respective theme:
 
 ```scss
-@include grid-paginator($dark-grid-paginator);
+@include css-vars($dark-paginator);
+
 .igx-grid-paginator__pager {
-    @include icon-button($dark-button);
+  @include css-vars($dark-button);
 }
 ```
 
 >[!NOTE]
 >We scope the **icon-button** mixin within `.igx-paginator__pager`, so that only the paginator buttons would be styled. Otherwise other icon buttons in the grid would be affected too.
 
- >[!NOTE]
- >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>[!NOTE]
+>If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep` in order to style the components which are inside the paging container, like the button:
 
 ```scss
+@include css-vars($dark-paginator);
+
 :host {
+  igx-paginator {
     ::ng-deep {
-        igx-paginator {
-            @include css-vars($dark-button);
-            @include css-vars($dark-paginator);
-        }
+      @include css-vars($dark-button);
     }
+  }
 }
 ```
 
@@ -249,33 +251,34 @@ The last step is to **include** the component mixins, each with its respective t
 
 Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
 
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+`igx-palette` generates a color palette based on the primary, secondary and surface colors that are passed:
 
 ```scss
 $yellow-color: #F9D342;
 $black-color: #292826;
+$gray-color: #efefef;
 
-$dark-palette: palette($primary: $black-color, $secondary: $yellow-color);
+$dark-palette: palette($primary: $black-color, $secondary: $yellow-color, $surface: $gray-color);
 ```
 
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the pallette.
+And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
 
 ```scss
 $dark-paginator: paginator-theme(
-    $palette: $dark-palette,
-    $text-color: color($dark-palette, "secondary", 400),
-    $background-color: color($dark-palette, "primary", 200),
-    $border-color: color($dark-palette, "primary", 500)
+  $palette: $dark-palette,
+  $text-color: color($dark-palette, "secondary", 400),
+  $background-color: color($dark-palette, "primary", 200),
+  $border-color: color($dark-palette, "primary", 500)
 );
 
 $dark-button: icon-button-theme(
-    $palette: $dark-palette,
-    $foregroundr: color($dark-palette, "secondary", 700),
-    $hover-foreground: color($dark-palette, "primary", 500),
-    $hover-background: color($dark-palette, "secondary", 500),
-    $focus-foreground: color($dark-palette, "primary", 500),
-    $focus-background: color($dark-palette, "secondary", 500),
-    $disabled-foreground: color($dark-palette, "primary", 700)
+  $palette: $dark-palette,
+  $foregroundr: color($dark-palette, "secondary", 700),
+  $hover-foreground: color($dark-palette, "primary", 500),
+  $hover-background: color($dark-palette, "secondary", 500),
+  $focus-foreground: color($dark-palette, "primary", 500),
+  $focus-background: color($dark-palette, "secondary", 500),
+  $disabled-foreground: color($dark-palette, "primary", 700)
 );
 ```
 
@@ -284,58 +287,63 @@ $dark-button: icon-button-theme(
 
 ### Using Schemas
 
- Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/sass/schemas.md). A **schema** is a recipe of a theme.
+Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/sass/schemas.md). A **schema** is a recipe of a theme.
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`$base-dark-pagination`]({environment:sassApiUrl}/index.html#variable-base-dark-pagination) and [`$material-flat-icon-button-dark`]({environment:sassApiUrl}/index.html#variable-material-flat-icon-button-dark) schemas:
+Extend one of the two predefined schemas, that are provided for every component, in this case we would use - [`$base-dark-pagination`]({environment:sassApiUrl}/index.html#variable-base-dark-pagination) and [`$material-flat-icon-button-dark`]({environment:sassApiUrl}/index.html#variable-material-flat-icon-button-dark) schemas:
 
 ```scss
 // Extending the dark paginator schema
-$dark-paginator-schema: extend($base-dark-pagination,
-        (
-            text-color:(
-               color: ("secondary", 400)
-            ),
-            background-color:(
-               color: ("primary", 200)
-            ),
-            border-color:(
-               color:( "primary", 500)
-            )
-        )
+$dark-paginator-schema: extend(
+  $base-dark-pagination,
+  (
+    text-color:(
+      color: ("secondary", 400)
+    ),
+    background-color:(
+      color: ("primary", 200)
+    ),
+    border-color:(
+      color:( "primary", 500)
+    )
+  )
 );
 // Extending the dark icon button schema
-$dark-button-schema: extend($material-flat-icon-button-dark,
-        (
-            foreground:(
-               color:("secondary", 700)
-            ),
-            hover-foreground:(
-               color:("primary", 500)
-            ),
-            hover-background:(
-               color:("secondary", 500)
-            ),
-            focus-foreground:(
-               color:("primary", 500)
-            ),
-            focus-background:(
-               color:("secondary", 500)
-            ),
-            disabled-foreground:(
-               color:("primary", 700)
-            )
-        )
+$dark-button-schema: extend(
+  $material-flat-icon-button-dark,
+  (
+    foreground:(
+      color:("secondary", 700)
+    ),
+    hover-foreground:(
+      color:("primary", 500)
+    ),
+    hover-background:(
+      color:("secondary", 500)
+    ),
+    focus-foreground:(
+      color:("primary", 500)
+    ),
+    focus-background:(
+      color:("secondary", 500)
+    ),
+    disabled-foreground:(
+      color:("primary", 700)
+    )
+  )
 );
 ```
 
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-material-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-material-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
 
 ```scss
 // Extending the global dark-schema
-$custom-dark-schema: extend($dark-schema,(
+$custom-dark-schema: extend(
+  $dark-schema,
+  (
     igx-paginator: $dark-paginator-schema,
     igx-icon-button: $dark-button-schema
-));
+  )
+);
 
 // Definingpaginator-theme with the global dark schema
 $dark-paginator: paginator-theme(

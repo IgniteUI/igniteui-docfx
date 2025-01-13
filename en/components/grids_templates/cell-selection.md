@@ -262,9 +262,9 @@ The multi-cell selection is index based (DOM elements selection).
 
 }
 
-## Styling Guidelines
+## Styling
 
-The theme engine exposes properties that allows us to style the `range of selected cells`.
+The theme engine exposes properties that allows us to style the **range of selected cells**.
 
 ### Import theme
 
@@ -280,11 +280,15 @@ To get started with styling the selection, we need to import the `index` file, w
 ### Define colors
 
 Once done, we can make use of the [`igx-contrast-color`]({environment:sassApiUrl}/index.html#function-igx-contrast-color) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions. With them, we define the colors we would like to use for our selection range:
+
 ```scss
-    $text-color:contrast-color($default-palette, 'primary', 900);
-    $background-color: color($default-palette, "primary", 900);
-    $border-yellow: #f2c43c;
+$text-color: contrast-color($default-palette, 'primary', 900);
+$background-color: color($default-palette, "primary", 900);
+$border-yellow: #f2c43c;
 ```
+
+>[!NOTE]
+>If we don't want to use the `igx-contrast-color` and `igx-color` functions, we can always hardcode the color values.
 
 ### Create custom theme
 
@@ -292,9 +296,9 @@ Next we create a new theme that extends the [`grid-theme`]({environment:sassApiU
 
 ```scss
 $custom-grid-theme: grid-theme(
-    $cell-selected-text-color: $text-color,
-    $cell-active-border-color: $border-yellow,
-    $cell-selected-background: $background-color
+  $cell-selected-text-color: $text-color,
+  $cell-active-border-color: $border-yellow,
+  $cell-selected-background: $background-color
 );
 ```
 
@@ -303,20 +307,11 @@ $custom-grid-theme: grid-theme(
 Afterwards, all we need to do is include the mixin in our component's style (could also be in the app styles), so that our @@igSelector uses the newly created theme instead of the default one:
 
 ```scss
-    @include grid($custom-grid-theme);
+@include css-vars($custom-grid-theme);
 ```
 
- >[!NOTE]
- >If the component is using an [`Emulated ViewEncapsulation`](../themes/sass/component-themes.md#view-encapsulation), it is necessary to penetrate this encapsulation using `::ng-deep`.
- > We scope the style under `:host` selector so as not to affect any other grids we might have in our application.
 
- ```scss
-    :host {
-        ::ng-deep {
-            @include grid($custom-grid-theme);
-        }
-    }
-```
+
 
 
 With the custom theme applied, the selected grid cells are highlighted with our selected colors:

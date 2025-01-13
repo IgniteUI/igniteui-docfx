@@ -265,10 +265,10 @@ Following the simplest approach, we create a new theme that extends the [`dialog
 
 ```scss
 $my-dialog-theme: dialog-theme(
-    $background: #011627,
-    $title-color: #ECAA53,
-    $message-color: #FEFEFE,
-    $border-radius: .3,
+  $background: #011627,
+  $title-color: #ECAA53,
+  $message-color: #FEFEFE,
+  $border-radius: .3,
 );
 ```
 
@@ -294,12 +294,10 @@ Since the dialog window uses the [`IgxOverlayService`](overlay.md), in order for
 
 The last step is to **include** the component theme in our application.
 
-If `$legacy-support` is set to `true`, include the **theme** like that:
-
 ```scss
  @include dialog($my-dialog-theme);
 ```
->[!NOTE]
+>[!WARNING]
 >If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
 
 ```scss
@@ -307,23 +305,6 @@ If `$legacy-support` is set to `true`, include the **theme** like that:
      ::ng-deep {
         @include dialog($my-dialog-theme);
     }
-}
-```
-
-<div class="divider"></div>
-
-If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
-
-```scss
-@include css-vars($my-dialog-theme);
-```
-
->[!NOTE]
->If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
-
-```scss
-:host {
-    @include css-vars($my-dialog-theme);
 }
 ```
 

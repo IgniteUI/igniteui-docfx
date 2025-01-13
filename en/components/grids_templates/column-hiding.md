@@ -474,8 +474,8 @@ By using the simplest approach, we create a new theme that extends the [`column-
 
 ```scss
 $custom-column-actions-theme: column-actions-theme(
-    $background-color: steelblue,
-    $title-color: gold
+  $background-color: steelblue,
+  $title-color: gold
 );
 ```
 
@@ -490,26 +490,28 @@ In this example we only changed the text-color of the flat buttons and the butto
 The last step is to **include** the component mixins, each with its respective theme: 
 
 ```scss
-@include column-actions($custom-column-actions-theme);
+@include css-vars($custom-column-actions-theme);
+
 .igx-column-actions {
-    @include button($custom-button);
+  @include css-vars($custom-button);
 }
 ```
 
 >[!NOTE]
 >We scope the **igx-button** mixin within `.igx-column-actions`, so that only the column hiding buttons would be styled. Otherwise other buttons in the grid would be affected too.
 
- >[!NOTE]
- >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>[!NOTE]
+>If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep` for the components inside the column action component (buttons, checkboxes ...etc):
 
 ```scss
+@include css-vars($custom-column-actions-theme);
+
 :host {
-    ::ng-deep {
-        @include column-actions($custom-column-actions-theme);
-        .igx-column-actions {
-            @include button($custom-button);
-        }
+  ::ng-deep {
+    .igx-column-actions {
+      @include css-vars($custom-button);
     }
+  }
 }
 ```
 
@@ -517,28 +519,29 @@ The last step is to **include** the component mixins, each with its respective t
 
 Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
 
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
+`igx-palette` generates a color palette based on the primary, secondary and surface colors that are passed:
 
 ```scss
 $yellow-color: gold;
 $blue-color: steelblue;
+$light-gray: lightgray;
 
-$custom-palette: palette($primary: $blue-color, $secondary: $yellow-color);
+$custom-palette: palette($primary: $blue-color, $secondary: $yellow-color, $surface: $light-gray);
 ```
 
 And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
 
 ```scss
 $custom-column-actions-theme: column-actions-theme(
-    $palette: $custom-palette,
-    $title-color: color($custom-palette, "secondary", 400),
-    $background-color: color($custom-palette, "primary", 200)
+  $palette: $custom-palette,
+  $title-color: color($custom-palette, "secondary", 400),
+  $background-color: color($custom-palette, "primary", 200)
 );
 
 $custom-button: button-theme(
-    $palette: $custom-palette,
-    $flat-text-color: color($custom-palette, "secondary", 400),
-    $disabled-color: black
+  $palette: $custom-palette,
+  $flat-text-color: color($custom-palette, "secondary", 400),
+  $disabled-color: black
 );
 ```
 
@@ -551,37 +554,42 @@ Going further with the theming engine, you can build a robust and flexible struc
 
 ```scss
 // Extending the dark column actions schema
-$custom-column-actions-schema: extend($_dark-column-actions,
-    (
-        title-color:(
-           color: ("secondary", 400)
-        ),
-        background-color:(
-           color: ("primary", 200)
-        )
+$custom-column-actions-schema: extend(
+  $dark-material-column-actions,
+  (
+    title-color:(
+      color: ("secondary", 400)
+    ),
+    background-color:(
+      color: ("primary", 200)
     )
+  )
 );
 // Extending the dark button schema
-$custom-button-schema: extend($_dark-button,
-    (           
-        flat-text-color:(
-           color:("secondary", 500)
-        ),
-        disabled-color:(
-           color:("primary", 700)
-        )
+$custom-button-schema: extend(
+  $material-flat-button-dark,
+  (           
+    flat-text-color:(
+      color:("secondary", 500)
+    ),
+    disabled-color:(
+      color:("primary", 700)
     )
+  )
 );
 ```
 
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-material-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-material-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
 
 ```scss
 // Extending the global dark-schema
-$custom-dark-schema: extend($dark-schema,(
+$custom-dark-schema: extend(
+  $dark-material-schema,
+  (
     igx-column-actions: $custom-column-actions-schema,
     igx-button: $custom-button-schema
-));
+  )
+);
 
 // Defining column-actions-theme with the global dark schema
 $custom-column-actions-theme: column-actions-theme(

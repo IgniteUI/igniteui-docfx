@@ -209,7 +209,7 @@ After all that is done, our application should look like this:
 </code-view>
 
 
-## Angular Checkbox Styling
+## Styling
 
 To get started with styling the checkbox, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -225,11 +225,11 @@ Then, we create a new theme that extends the [`checkbox-theme`]({environment:sas
 ```scss
 // in styles.scss
 $custom-checkbox-theme: checkbox-theme(
-    $border-radius: 10px,
-    $label-color: #011627,
-    $empty-color: #ECAA53,
-    $fill-color: #ECAA53,
-    $tick-color: #011627,
+  $border-radius: 10px,
+  $label-color: #011627,
+  $empty-color: #ECAA53,
+  $fill-color: #ECAA53,
+  $tick-color: #011627,
 );
 ```
 

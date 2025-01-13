@@ -392,7 +392,7 @@ This would allow reordering the rows and moving them between the pinned and unpi
 
 ## Styling
 
-The @@igxName allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The @@igComponent's [theme]({environment:sassApiUrl}/index.html#function-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the @@igComponent.
+The @@igxName allows styling through the [`Ignite UI for Angular Theme Library`](../themes/sass/component-themes.md). The @@igComponent's [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the @@igComponent.
 
 Below, we are going through the steps of customizing the @@igComponent's row pinning styling.
 
@@ -413,12 +413,10 @@ Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUr
 
 ```scss
 $custom-grid-theme: grid-theme(
-    /* Pinning properties that affect styling */
-    $pinned-border-width: 5px,
-    $pinned-border-style: double,
-    $pinned-border-color: #FFCD0F,
-    $cell-active-border-color: #FFCD0F
-    /* add other features properties here... */
+  $pinned-border-width: 5px,
+  $pinned-border-style: double,
+  $pinned-border-color: #FFCD0F,
+  $cell-active-border-color: #FFCD0F
 );
 ```
 
@@ -428,21 +426,6 @@ The last step is to pass the custom grid theme:
 
 ```scss
 @include css-vars($custom-grid-theme);
-```
-
-### Using mixins
-
-In order to style components for Internet Explorer 11, you have to use different approach, since it doesn't support CSS variables. 
-
-If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. However, in order to prevent the custom theme to leak to other components, be sure to include the `:host` selector before `::ng-deep`:
-
-```scss
-:host {
-    ::ng-deep {
-        // Pass the custom grid theme to the `igx-grid` mixin
-        @include grid($custom-grid-theme);
-    }
-}
 ```
 
 ### Demo

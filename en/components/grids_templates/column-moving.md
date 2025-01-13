@@ -189,27 +189,16 @@ Following the simplest approach, we create a new theme that extends the [`grid-t
 ```scss
 // Define dark theme for the column moving
 $dark-grid-column-moving-theme: grid-theme(
-    $ghost-header-text-color: #F4D45C,
-    $ghost-header-background: #575757,
-    $ghost-header-icon-color: #f4bb5c
+  $ghost-header-text-color: #F4D45C,
+  $ghost-header-background: #575757,
+  $ghost-header-icon-color: #f4bb5c
 );
 ```
 
 The last step is to **include** the component mixins with its respective theme:
 
 ```scss
-@include grid($dark-grid-column-moving-theme);
-```
-
-> [!NOTE]
-> Depending on the component [**View Encapsulation**](../../components/themes/sass/component-themes.md#view-encapsulation) strategy, it may be necessary to `penetrate` this encapsulation using `::ng-deep`
-
-```scss
-:host {
-    ::ng-deep {
-        @include grid($dark-grid-column-moving-theme);
-    }
-}
+@include css-vars($dark-grid-column-moving-theme);
 ```
 
 ### Defining a color palette
@@ -217,25 +206,25 @@ The last step is to **include** the component mixins with its respective theme:
 Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) and [igx-color]({environment:sassApiUrl}/index.html#function-igx-color) functions.
 
 
-**igx-palette** generates a color palette based on the primary and secondary colors that are passed:
+**igx-palette** generates a color palette based on the primary, secondary and surface colors that are passed:
 ```scss
 $yellow-color: #F4D45C;
 $black-color: #575757;
+$light-gray: #efefef;
 
-$dark-palette: palette($primary: $yellow-color, $secondary: $black-color);
+$dark-palette: palette($primary: $yellow-color, $secondary: $black-color, $surface: $light-gray);
 ```
 
 And then with [**igx-color**]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
 
 ```scss
 $dark-grid-column-moving-theme: grid-theme(
-    $palette: $dark-palette,
-    $ghost-header-text-color: color($dark-palette, "primary", 400),
-    $ghost-header-background: color($dark-palette, "secondary", 200),
-    $ghost-header-icon-color: color($dark-palette, "primary", 500)
+  $palette: $dark-palette,
+  $ghost-header-text-color: color($dark-palette, "primary", 400),
+  $ghost-header-background: color($dark-palette, "secondary", 200),
+  $ghost-header-icon-color: color($dark-palette, "primary", 500)
 );
 ```
-
 
 > [!NOTE]
 > The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../../components/themes/palettes.md) topic for detailed guidance on how to use them.
@@ -244,32 +233,36 @@ $dark-grid-column-moving-theme: grid-theme(
 
 Going further with the theming engine, you can build a robust and flexible structure that benefits from [schemas](../../components/themes/sass/schemas.md). A **schema** is a recipe of a theme.
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - [light-grid]({environment:sassApiUrl}/index.html#variable-_light-grid).
+Extend one of the two predefined schemas, that are provided for every component, in this case - [light-grid]({environment:sassApiUrl}/index.html#variable-light-grid).
 
 ```scss
 // Extending the dark grid schema
-$dark-grid-column-moving-schema: extend($_light-grid,
-        (
-            ghost-header-text-color:(
-               color: ("primary", 400)
-            ),
-            ghost-header-background:(
-               color: ("secondary", 200)
-            ),
-            ghost-header-icon-color:(
-               color:( "primary", 500)
-            )
+$dark-grid-column-moving-schema: extend(
+  $light-grid,
+    (
+      ghost-header-text-color: (
+        color: ("primary", 400)
+        ),
+      ghost-header-background: (
+        color: ("secondary", 200)
+        ),
+      ghost-header-icon-color: (
+        color:( "primary", 500)
         )
+    )
 );
 ```
 
-In order to apply our custom schema we have to **extend** one of the globals ([light]({environment:sassApiUrl}/index.html#variable-light-schema) or [dark]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component theme:
+In order to apply our custom schema we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-material-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-material-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component theme:
 
 ```scss
 // Extending the global dark-schema
-$custom-light-schema: extend($light-schema,(
+$custom-light-schema: extend(
+  $light-material-schema,
+  (
     igx-grid: $dark-grid-column-moving-schema,
-));
+  )
+);
 
 // Defining dark-grid-theme with the global dark schema
 $dark-grid-column-moving-theme: grid-theme(
