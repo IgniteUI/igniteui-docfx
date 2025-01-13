@@ -70,6 +70,24 @@ In the @@igComponent if you set rowEditable property to true, and editable prope
 
 All available column data types could be found in the official [Column types topic](column-types.md#default-template).
 
+#### Default template editors of date-time columns
+
+The template editors of `date`, `dateTime` and `time` column data types use a default input format as per the `IgxGrid`'s [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale).
+
+In case the [`pipeArgs`]({environment:angularApiUrl}/interfaces/columntype.html#pipeArgs) object `format` property is set on the column, the input format of the editors will be inferred from it. The condition is that it can be parsed as containing numeric date-time parts only.
+
+If the editors input format should be explicitly set, the [`editorOptions`]({environment:angularApiUrl}/interfaces/columntype.html#editorOptions) object of type [`IColumnEditorOptions`]({environment:angularApiUrl}/interfaces/icolumneditoroptions.html) can be leveraged. It accepts a `dateTimeFormat` property that is used as input format for the editors of `date`, `dateTime` and `time` column data types.
+
+```typescript
+const editorOptions: IColumnEditorOptions = {
+    dateTimeFormat: 'MM/dd/YYYY',
+}
+```
+
+```html
+<igx-column field="sampleDate" dataType="date" [editorOptions]="editorOptions"></igx-column>
+```
+
 ### Event arguments and sequence
 The grid exposes a wide array of events that provide greater control over the editing experience. These events are fired during the [**Row Editing**](row-editing.md) and [**Cell Editing**](cell-editing.md) lifecycle - when starting, committing or canceling the editing action.
 
