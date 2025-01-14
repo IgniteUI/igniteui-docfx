@@ -458,7 +458,7 @@ Below are examples demonstrating the use of the `disabledSummaries` property for
     dataType="number"
     [hasSummary]="true"
     [summaries]="discontinuedSummary"
-    [disabledSummaries]="['total', 'totalDiscontinued']"
+    [disabledSummaries]="['discontinued', 'totalDiscontinued']"
 >
 </igx-column>
 ```
@@ -475,7 +475,7 @@ For `UnitsInStock`, custom summaries such as `total` and `totalDiscontinued` are
     dataType="number"
     [hasSummary]="true"
     [summaries]="unitsSummary"
-    [disabledSummaries]="['totalDelivered', 'totalNotDelivered']"
+    [disabledSummaries]="['uniqueCount', 'maxDifference']"
 >
 </igx-column>
 <!-- default summaries -->
