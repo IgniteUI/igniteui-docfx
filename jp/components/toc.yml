@@ -614,6 +614,11 @@
     - name: Excel ユーティリティ
       href: excel-utility.md
       new: false
+- name: ダッシュボード
+  header: true
+- name: ダッシュボード タイル
+  href: dashboard-tile.md
+  preview: true
 - name: チャート
   href: charts/chart-overview.md
   header: true
@@ -632,7 +637,7 @@
 - name: 複合チャート
   href: charts/types/composite-chart.md
   new: false
-- name: Data Pie Chart
+- name: データ円チャート
   href: charts/types/data-pie-chart.md
   new: true
 - name: ドーナツ チャート
@@ -1013,6 +1018,9 @@
 - name: Chip
   href: chip.md
   new: false
+- name: Color Editor
+  href: inputs/color-editor.md
+  preview: true
 - name: Text Highlight
   href: texthighlight.md
   new: false
