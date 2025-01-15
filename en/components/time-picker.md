@@ -261,6 +261,7 @@ The time picker component supports different display and input formats.
 The display format is the format of the value when in edit mode and can be one of the listed Angular [DatePipe](https://angular.io/api/common/DatePipe) formats. This allows it to support predefined format options, such as `shortTime` and `longTime`.
 
 The input format is the format of the value when not in edit mode and the format, in which the time portions are displayed in the dropdown/dialog. The `inputFormat` property accepts a constructed format string using characters supported by the DatePipe, e.g. `hh:mm:ss`, but doesn't support predefined format options, such as `shortTime` and `longTime`. If the `inputFormat` property is not defined, it defaults to `hh:mm tt`.
+Alternatively, if the [`inputFormat`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#inputFormat) property is not set, the input format will be inferred from the [`displayFormat`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#displayFormat) in case it can be parsed as containing numeric date-time parts only.
 
 ```html
 <igx-time-picker
