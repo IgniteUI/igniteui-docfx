@@ -16,6 +16,20 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 
 *   [Ignite UI for Angular CHANGELOG.md at Github](https://github.com/IgniteUI/igniteui-angular/blob/master)
 
+## **18.2.0 (December 2024)**
+
+### igniteui-angular-charts (Charts)
+
+DashboardTile (Beta)
+
+*   New [Dashboard Tile](dashboard-tile.md) component is a container control that analyzes and visualizes a bound ItemsSource collection or single point and returns an appropriate data visualization based on the schema and count of the data. This control utilizes a built-in [Toolbar](menus/toolbar.md) component to allow you to make changes to the visualization at runtime, allowing you to see many different visualizations of your data with minimal code.
+
+### igniteui-angular-charts (Inputs)
+
+*   New ColorEditor (Beta) & Toolbar ToolAction (Beta)
+
+This new [Color Editor](inputs/color-editor.md) can be used as a standalone color picker and is now integrated into the [Toolbar](menus/toolbar.md) component to update visualizations at runtime.
+
 ## **18.1.0 (September 2024)**
 
 *   [Data Pie Chart](charts/types/data-pie-chart.md) - The [`IgxDataPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiechartcomponent.html) is a new component that renders a pie chart. This component works similarly to the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html), in that it will automatically detect the properties on your underlying data model while allowing selection, highlighting, animation and legend support via the ItemLegend component.

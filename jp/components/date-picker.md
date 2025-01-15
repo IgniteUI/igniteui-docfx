@@ -213,6 +213,7 @@ export class SampleFormComponent {
 注意すべき点は、Ignite UI の Angular DatePicker Component が `date` と `month` の部分がない形式で提供された場合、それらの部分に常に先行ゼロを追加することです。例えば、`d/M/yy` は `dd/MM/yy` になります。これは編集中にのみ適用されます。
 
 一方、[`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayFormat) は Angular の [`DatePipe`](https://angular.io/api/common/DatePipe) を使用し、フォーカスされていないときにピッカーの入力を書式設定するために使用されます。[`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayFormat) が指定されていない場合、ピッカーは [`inputFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#inputFormat) を [`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayFormat) として使用します。
+あるいは、[`inputFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#inputFormat) プロパティが設定されていない場合、入力形式は [`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayFormat) から数値の日付と時刻の部分のみを含む形式として解析できる場合に推測されます。
 
 これらの詳細については、[`IgxDateTimeEditor`](date-time-editor.md#例) の例のセクションを参照してください。
 

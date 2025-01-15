@@ -246,6 +246,8 @@ Date Range Picker コンポーネントはさまざまな表示および入力�
 </igx-date-range-picker>
 ```
 
+[`inputFormat`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#inputFormat) プロパティが設定されていない場合、入力形式は [`displayFormat`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#displayFormat) から数値の日付と時刻の部分のみを含む形式として解析できる場合に推測されます。
+
 >[!NOTE]
 > `IgxDateRangePicker` が IME 入力をサポートするようになりました。合成が終了すると、コントロールはワイド文字の数字を ASCII 文字に変換します。
 
