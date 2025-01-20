@@ -523,10 +523,12 @@ $custom-drop-down-theme: drop-down-theme(
 );
 ```
 
-The last step is to pass the custom drop-down theme:
+The last step is to pass the custom drop-down theme to a class or element selector:
 
 ```scss
-@include css-vars($custom-drop-down-theme);
+.drop-down__scroll-container {
+  @include css-vars($custom-drop-down-theme);
+}
 ```
 
 ### Demo

@@ -253,6 +253,7 @@ To get started with styling the button, we need to import the `index` file, wher
 
 ```scss
 @use "igniteui-angular/theming" as *;
+
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
@@ -286,7 +287,7 @@ Take a look at the [`button-theme`]({environment:sassApiUrl}/index.html#function
 The last step is to pass the custom button theme in our application:
 
 ```scss
-.my-contained-btn {
+.button-sample {
   @include css-vars($custom-button-theme);
 }
 ```

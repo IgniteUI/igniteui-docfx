@@ -354,6 +354,13 @@ The last step is to include the component's theme.
 @include css-vars($custom-tree-theme);
 ```
 
+### Demo
+
+<code-view style="height: 400px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/lists/tree-styling" alt="Tree Styling">
+</code-view>
+
 ## Known Issues and Limitations
 
 |Limitation|Description|

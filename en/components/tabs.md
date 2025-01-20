@@ -433,7 +433,7 @@ $dark-palette: palette(
   $primary: $black-color,
   $secondary: $yellow-color,
   $surface: $light-color,
-  $grays: #fff
+  $gray: #fff
 );
 ```
 
@@ -441,7 +441,6 @@ We can easily retrieve any color from the palette using [`igx-color`]({environme
 
 ```scss
 $dark-tabs: tabs-theme(
-  $palette: $dark-palette,
   $item-text-color: color($dark-palette, "secondary", 400),
   $item-background: color($dark-palette, "primary", 400),
   $item-hover-background: color($dark-palette, "secondary", 400),

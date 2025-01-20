@@ -155,8 +155,8 @@ Following the simplest approach, we create a new theme that extends the [`avatar
 Given the following markup:
 
 ```html
-<div class="initials-avatar">
-  <igx-avatar>BA</igx-avatar>
+<div class="avatar-sample initials">
+  <igx-avatar initials="JS" size="medium"></igx-avatar>
 </div>
 ```
 
@@ -173,7 +173,7 @@ $custom-avatar-theme: avatar-theme(
 The last step is to pass the custom avatar theme:
 
 ```scss
-.initials-avatar {
+.initials {
   @include css-vars($custom-avatar-theme);
 }
 ```

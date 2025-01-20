@@ -375,8 +375,15 @@ The `$resting-background` and the `$resting-color` parameters will be applied to
 The last step is to **include** the newly created theme.
 
 ```scss
-@include css-vars($dark-highlight);
+:host {
+  ::ng-deep {
+    @include css-vars($dark-highlight);
+  }
+}
 ```
+
+> [!NOTE]
+> If the component is using an [`Emulated`](/themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep` to apply the styles.
 
 ### Custom styles
 
@@ -407,18 +414,19 @@ All we have to do is create a couple of css classes with some properties and att
 As mentioned earlier, we can even combine them with a theme:
 
 ```scss
-@include highlight($dark-highlight);
-
-// cssClass
-.custom-highlight {
-  border: 1px solid #ffcd0f;
-}
-
-// activeCssClass
-.custom-active-highlight {
-  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.75);
+:host {
+  ::ng-deep {
+    @include css-vars($dark-highlight);  
+    .custom-highlight {
+      border: 1px solid #ffcd0f;
+    }  
+    .custom-active-highlight {
+      box-shadow: 0 0 3px 0 rgba(0,0,0, .5);
+    }
+  }
 }
 ```
+
 
 ### Demo
 

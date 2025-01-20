@@ -239,17 +239,17 @@ Extend one of the two predefined schemas, that are provided for every component,
 // Extending the dark grid schema
 $dark-grid-column-moving-schema: extend(
   $light-grid,
-    (
-      ghost-header-text-color: (
-        color: ("primary", 400)
-        ),
-      ghost-header-background: (
-        color: ("secondary", 200)
-        ),
-      ghost-header-icon-color: (
-        color:( "primary", 500)
-        )
+  (
+    ghost-header-text-color: (
+      color: ("primary", 400)
+    ),
+    ghost-header-background: (
+      color: ("secondary", 200)
+    ),
+    ghost-header-icon-color: (
+      color:( "primary", 500)
     )
+  )
 );
 ```
 

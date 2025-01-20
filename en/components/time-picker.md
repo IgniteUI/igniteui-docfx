@@ -427,9 +427,9 @@ Now, the time picker's items are properly rendered **inside** of our component's
 
 ```scss
 :host {
-     ::ng-deep {
-        @include css-vars($my-time-picker-theme);
-    }
+  ::ng-deep {
+    @include css-vars($my-time-picker-theme);
+  }
 }
 ```
 

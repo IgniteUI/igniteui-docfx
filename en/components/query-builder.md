@@ -183,53 +183,30 @@ $custom-drop-down: drop-down-theme(
 
 In this example we only changed some of the parameters for the listed components, but the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme), [`button-group-theme`]({environment:sassApiUrl}/index.html#function-button-group-theme), [`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme), [`drop-down-theme`]({environment:sassApiUrl}/index.html#function-drop-down-theme), [`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme) themes provide way more parameters to control their respective styling.
 
-The last step is to **include** the new component themes using the `css-vars` mixin. We will also add some styles for other elements inside the query builder.
+The last step is to **include** the new component themes using the `css-vars` mixin.
 
 ```scss
 @include css-vars($custom-query-builder);
-igx-query-builder {
-  @include css-vars($custom-button);
-  @include css-vars($custom-button-group);
-  @include css-vars($custom-input-group);
-  @include css-vars($custom-chip);
-  @include css-vars($custom-drop-down);
-  .igx-filter-empty__title {
-    color: #ffcd0f;
-  }
-  .igx-query-builder__header {
-    color: #ffcd0f;
-  }
-  .igx-filter-tree__expression-actions igx-icon {
-    color: #ffcd0f;
-  }
-  .igx-filter-tree__expression-actions igx-icon:hover {
-    color: #ffe482;
-  }
-  .igx-filter-tree__expression-actions igx-icon:focus {
-    color: #ffe482;
-  }
-  .igx-filter-contextual-menu {
-    border: 1px solid #ffcd0f;
-  }
-  .igx-filter-contextual-menu__close-btn {
-    position: absolute !important;
-    background: #292826 !important;
-    border-color: #ffcd0f !important;
-  }
-  .igx-input-group__input::placeholder {
-    color: gray;
+
+:host {
+  ::ng-deep {
+    @include css-vars($custom-drop-down);
+    @include css-vars($custom-button);
+    @include css-vars($custom-button-group);
+    @include css-vars($custom-input-group);
+    @include css-vars($custom-chip);
   }
 }
 ```
 
 > [!NOTE]
-> We scope most of the components' mixins within `igx-query-builder`, so that these custom themes will affect only components nested in the Query Builder. Otherwise, other buttons, chips, inputs and dropdowns in the application would be affected too.
+> If the component is using an [`Emulated`](/themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep` to style the components inside the query builder component (button, chip, drop-down ...etc).
 
 ### Defining a color palette
 
 Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
 
-`palette` generates a color palette based on the primary, secondary and surface colors that are passed:
+[`palette`]({environment:sassApiUrl}/index.html#function-igx-palette) generates a color palette based on the primary, secondary and surface colors that are passed:
 
 ```scss
 $yellow-color: #ffcd0f;
@@ -420,7 +397,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 ### Demo
 
-<code-view style="height:530px" 
+<code-view style="height:330px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/query-builder-style" >

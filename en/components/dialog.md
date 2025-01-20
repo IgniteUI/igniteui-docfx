@@ -279,9 +279,9 @@ Since the dialog window uses the [`IgxOverlayService`](overlay.md), in order for
 
 ```html
 <div igxOverlayOutlet>
-    <igx-dialog #dialog1>
-        <!-- .... -->
-    </igx-dialog>
+  <igx-dialog #dialog1>
+      <!-- .... -->
+  </igx-dialog>
 </div>
 ```
 
@@ -295,16 +295,17 @@ Since the dialog window uses the [`IgxOverlayService`](overlay.md), in order for
 The last step is to **include** the component theme in our application.
 
 ```scss
- @include dialog($my-dialog-theme);
+@include css-vars($my-dialog-theme);
 ```
->[!WARNING]
->If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
+
+>[!NOTE]
+>If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep` to apply the styles.
 
 ```scss
 :host {
-     ::ng-deep {
-        @include dialog($my-dialog-theme);
-    }
+  ::ng-deep {
+    @include css-vars($my-dialog-theme);
+  }
 }
 ```
 

@@ -183,7 +183,6 @@ The last step is to pass the custom radio theme in our application:
 ## Radio Group
 
 <p class="highlight">The Ignite UI for Angular Radio Group directive provides a grouping container that allows better control over the child radio components and supports template-driven and reactive forms. </p>
-<div class="divider"></div>
 
 ### Demo
 

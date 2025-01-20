@@ -213,15 +213,6 @@ Lets see the result from all the above changes:
 
 ## Styling  
 
-### Angular Expansion Panel Demo
-
-<code-view style="height: 440px;" 
-           no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-styling" >
-</code-view>
-
-
 ### Palettes & Colors
 Fist we create a custom palette which can later be passed to our component:
 ```scss
@@ -247,6 +238,7 @@ $my-color-palette: palette(
 ```
 
 ### Creating the Component Theme
+
 Now let's create our component theme and pass the `$my-color-palette` palette from the above sniped.
 
 ```scss
@@ -259,7 +251,7 @@ $custom-panel-theme: expansion-panel-theme(
   $header-title-color: color($my-color-palette, "secondary"),
   $header-icon-color: color($my-color-palette, "secondary"),
   $body-background: color($my-color-palette, "primary", 700),
-  $body-color: color($my-color-palette, "secondary" 100),
+  $body-color: color($my-color-palette, "secondary", 100),
   $border-radius: .5
 );
 ```
@@ -289,6 +281,14 @@ Now to apply the component theme all that's left is to include `css-vars` mixin 
 ```
 
 To find out more on how you can use Ignite UI theming engine [`click here`](themes/sass/component-themes.md)
+
+### Demo
+
+<code-view style="height: 440px;" 
+           no-theming
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-styling" >
+</code-view>
 
 ## Angular Expansion Panel Animations 
 ### Using specific animation

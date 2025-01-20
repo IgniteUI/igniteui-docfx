@@ -557,7 +557,6 @@ Now, create a new theme that extends the [`grid-toolbar-theme`]({environment:sas
 
 ```scss
 $dark-grid-toolbar-theme: grid-toolbar-theme(
-  $palette: $my-dark-palette,
   $background-color: $my-dark-color,
   $title-text-color: color($my-dark-palette, 'secondary'),
   $dropdown-background: $my-dark-color,
@@ -568,29 +567,22 @@ To theme the column actions menus of the toolbar, we have to change the theme of
 
 ```scss
 $dark-column-actions-theme: column-actions-theme(
-  $palette: $my-dark-palette,
   $title-color: color($my-dark-palette, 'secondary'),
   $background-color: color($my-dark-palette, 'surface')
 );
 ```
 
-Since the column actions are using other components - `igx-button`, `igx-checkbox`, and `igx-input-group`, we need to change their themes to match our new toolbar theme.
+Since the column actions are using other components - `igx-button` and `igx-checkbox` we need to change their themes to match our new toolbar theme.
 
 ```scss
 $dark-button-theme: button-theme(
-  $palette: $my-dark-palette,
   $outlined-background: color($my-dark-palette, 'secondary'),
   $outlined-hover-background: color($my-dark-palette, 'grays', 100),
   $outlined-hover-text-color: color($my-dark-palette, 'secondary')
 );
 
 $dark-checkbox-theme: checkbox-theme(
-  $palette: $my-dark-palette,
   $tick-color: $my-dark-color,
-);
-
-$dark-input-group-theme: input-group-theme(
-  $palette: $my-dark-palette
 );
 ```
 
@@ -600,7 +592,6 @@ The last step is to **include** the newly created themes.
 @include css-vars($dark-grid-toolbar-theme);
 @include css-vars($dark-column-actions-theme);
 @include css-vars($dark-checkbox-theme);
-@include css-vars($dark-input-group-theme);
 @include css-vars($dark-button-theme);
 ```
 
@@ -614,7 +605,6 @@ The last step is to **include** the newly created themes.
   ::ng-deep {
     @include css-vars($dark-column-actions-theme);
     @include css-vars($dark-checkbox-theme);
-    @include css-vars($dark-input-group-theme);
     @include css-vars($dark-button-theme);
   }
 }

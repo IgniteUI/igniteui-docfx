@@ -143,7 +143,6 @@ To get started with styling the switch, we need to import the `index` file, wher
 Then, we create a new theme that extends the [`switch-theme`]({environment:sassApiUrl}/index.html#function-switch-theme) and use some of its parameters to style the switch's items:
 
 ```scss
-// in styles.scss
 $custom-switch-theme: switch-theme(
   $thumb-on-color: #ecaa53,
   $track-on-color: #f0cb9c,
