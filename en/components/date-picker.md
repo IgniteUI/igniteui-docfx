@@ -213,6 +213,7 @@ The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepicker
 A good thing to note is that the  the Angular Date Picker Component in Ignite UI will always add a leading zero on the `date` and `month` portions if they were provided in a format that does not have it, e.g. `d/M/yy` becomes `dd/MM/yy`. This applies only during editing.
 
 [`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayFormat) on the other hand uses Angular's [`DatePipe`](https://angular.io/api/common/DatePipe) and is used to format the picker's input when it is not focused. If no [`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayFormat) is provided, the picker will use the [`inputFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#inputFormat) as its [`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayFormat).
+Alternatively, if the [`inputFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#inputFormat) property is not set, the input format will be inferred from the [`displayFormat`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html#displayFormat) in case it can be parsed as containing numeric date-time parts only.
 
 More information about these can be found in the [`IgxDateTimeEditor`](date-time-editor.md#examples) examples section.
 
