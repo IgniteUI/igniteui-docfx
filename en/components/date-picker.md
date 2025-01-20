@@ -327,9 +327,9 @@ The last step is to pass the custom Date Picker theme:
 
 ```scss
 :host {
-     ::ng-deep {
-        @include css-vars($custom-datepicker-theme);
-    }
+  ::ng-deep {
+    @include css-vars($custom-datepicker-theme);
+  }
 }
 ```
 

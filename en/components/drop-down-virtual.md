@@ -123,7 +123,7 @@ The last part of the configuration is to set `overflow: hidden` to the wrapping 
 ```scss
 // drop-drop-virtual.component.scss
 .drop-down-virtual-wrapper {
-    overflow: hidden;
+  overflow: hidden;
 }
 ```
 

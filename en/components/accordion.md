@@ -19,7 +19,7 @@ In it, you can see how to define an `igx-accrodion` and its [expansion panels]({
 
 <code-view style="height:460px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/accordion-sample-1" alt="Angular Avatar Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/accordion-sample-1" alt="Angular Accordion Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -239,7 +239,7 @@ You can see the result below.
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/accordion-sample-2" alt="Angular Avatar Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/accordion-sample-2" alt="Angular Accordion Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -261,8 +261,9 @@ The [IgxAccordionComponent]({environment:angularApiUrl}/classes/igxaccordioncomp
  - <kbd>Home</kbd> - navigates to the FIRST enabled panel in the accordion
  - <kbd>End</kbd> - navigates to the LAST enabled panel in the accordion
 
-## Angular Accordion Styling
-The [accordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) serves only as a container for the underlying [panels]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html). Styles can be applied directly through the panel's theme, as described in the [styling section of the IgxExpansionPanel topic](expansion-panel.md#styling).
+## Styling
+
+The [`accordion`]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) serves only as a container for the underlying [`panels`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html). Styles can be applied directly through the panel's theme, as described in the [`styling section of the IgxExpansionPanel topic`](expansion-panel.md#styling).
 
 By design, there is a margin set to the expanded panels, in case that they are positioned within an `igx-accordion`. In order to modify it there is a property exposed inside the igx-expansion-panel theme.
 In order to take advantage of the functions exposed by the theming engine, we have to import the `index` file in our style file:
@@ -274,10 +275,12 @@ In order to take advantage of the functions exposed by the theming engine, we ha
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [expansion-panel-theme]({environment:sassApiUrl}/index.html#function-expansion-panel-theme) and accepts an `$expanded-margin` parameter. 
+Following the simplest approach, we create a new theme that extends the [`expansion-panel-theme`]({environment:sassApiUrl}/index.html#function-expansion-panel-theme) and accepts an `$expanded-margin`, `$body-color` and `$header-focus-background` parameters. 
 ```scss
 $custom-panel-theme: expansion-panel-theme(
-    $expanded-margin: 0px
+  $expanded-margin: 10px,
+  $body-color: #282885,
+  $header-focus-background: #efefef
 );
 ```
 
@@ -285,6 +288,13 @@ The last step is to include the component's theme.
 ```scss
 @include css-vars($custom-panel-theme);
 ```
+
+### Demo
+
+<code-view style="height:350px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/accordion-style" alt="Angular Accordion Style Example">
+</code-view>
 
 ## API Reference
 * [IgxAccordion API]({environment:angularApiUrl}/classes/igxaccordioncomponent.html)

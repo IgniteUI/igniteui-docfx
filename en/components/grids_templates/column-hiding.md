@@ -474,15 +474,15 @@ By using the simplest approach, we create a new theme that extends the [`column-
 
 ```scss
 $custom-column-actions-theme: column-actions-theme(
-  $background-color: steelblue,
-  $title-color: gold
+  $background-color: #292826,
+  $title-color: #ffcd0f
 );
 ```
 
 As seen, the `column-actions-theme` only controls colors for the column actions container, but does not affect the buttons, checkboxes and the input-group inside of it. Let's say we want to style the buttons as well, so we will create a new button theme:
 
 ```scss
-$custom-button: button-theme($flat-text-color: gold, $disabled-color: black);
+$custom-button: button-theme($foreground: #292826, $disabled-foreground: rgba(255, 255, 255, .54));
 ```
 
 In this example we only changed the text-color of the flat buttons and the button disabled color, but the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) provides way more parameters to control the button style.

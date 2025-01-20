@@ -164,7 +164,7 @@ You can easily create a new theme, that extends the [`ripple-theme`]({environmen
 
 ```scss
 $custom-ripple-theme: ripple-theme(
-  $color: #217346,
+  $color: #383779,
 );
 ```
 

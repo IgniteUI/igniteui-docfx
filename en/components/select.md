@@ -372,7 +372,7 @@ To get started with styling the Select component button, we need to import the `
 Following the simplest approach, we create a new theme that extends the [`select-theme`]({environment:sassApiUrl}/index.html#function-select-theme) and accepts some of the default theme's parameters:
 
 ```scss
-$custom-select-the: select-theme(
+$custom-select-theme: select-theme(
   $toggle-button-background: #2b2b2b,
   $toggle-button-background-focus: #808080,
 );
@@ -381,8 +381,14 @@ $custom-select-the: select-theme(
 The last step is to pass the custom radio theme in our application:
 
 ```scss
-@include css-vars($custom-radio-theme);
+@include css-vars($custom-select-theme);
 ```
+
+<code-view style="height: 220px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-entries/select-styling" >
+</code-view>
+
 
 <div class="divider--half"></div>
 

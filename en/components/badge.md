@@ -287,9 +287,9 @@ Following the simplest approach, we create a new theme that extends the [`badge-
 
 ```scss
 $custom-badge-theme: badge-theme(
-    $border-radius: 15px,
-    $icon-color: white,
-    $text-color: black,
+  $border-radius: 15px,
+  $icon-color: white,
+  $text-color: black,
 );
 ```
 

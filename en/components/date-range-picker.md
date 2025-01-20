@@ -394,18 +394,17 @@ $custom-date-range-theme: date-range-picker-theme(
 
 // INPUT GROUP
 $custom-input-group-theme: input-group-theme(
-  $palette: $custom-palette,
   $filled-text-color: $text-color,
   $idle-text-color: $text-color,
   $focused-text-color: $color-focused,
+  $idle-bottom-line-color: $purple,
   $hover-bottom-line-color: $color-focused,
-  $idle-bottom-line-color: $purple
+  $interim-bottom-line-color: $color-focused
 );
 
 // CALENDAR
 $custom-calendar-theme: calendar-theme(
-  $palette: $custom-palette,
-  $date-current-text-color: $today-text,
+  $date-current-foreground: $today-text,
   $border-radius: 0.5,
   $date-border-radius: 0.5
 );

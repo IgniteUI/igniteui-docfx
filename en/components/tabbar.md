@@ -444,14 +444,14 @@ Extend one of the two predefined schemas, that are provided for every component,
 // Extending the dark material bottom nav schema
 $dark-bottom-nav-schema: extend(
   $dark-material-bottom-nav,
-    (
-      background: (
-          color: ("primary", 400)
-      ),
-      active-item-color: (
-          color: ("secondary", 400)
-      )
+  (
+    background: (
+        color: ("primary", 400)
+    ),
+    active-item-color: (
+        color: ("secondary", 400)
     )
+  )
 );
 ```
 

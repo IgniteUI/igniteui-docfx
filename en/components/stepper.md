@@ -334,9 +334,25 @@ Following the simplest approach, we create a new theme that extends the [stepper
 
 ```scss
 $custom-stepper-theme: stepper-theme(
+  $indicator-background: #fff,
+
+  $current-indicator-background: #f6cd28,
+  $current-indicator-outline: #351e65,
+
   $current-title-color: #351e65,
   $current-subtitle-color: #5f4691,
-  $step-separator-style: "solid"
+
+  $complete-indicator-background: #351e65,
+  $complete-indicator-outline: #351e65,
+
+  $complete-title-color: red,
+  $complete-subtitle-color: #5f4691,
+
+  $border-radius-step-header: 16px,
+  $border-radius-indicator: 10px 4px 10px 4px,
+
+  $step-separator-color: #f6cd28,
+  $complete-step-separator-color: #351e65,
 );
 ```
 

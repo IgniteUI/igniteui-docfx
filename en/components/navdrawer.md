@@ -481,6 +481,17 @@ The last step is to **include** the component theme in our application.
 @include css-vars($custom-theme);
 ```
 
+>[!NOTE]
+>If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep` to apply the styles.
+
+```scss
+:host {
+  ::ng-deep { 
+    @include css-vars($custom-theme);
+  }
+}
+```        
+
 <code-view style="height: 400px; border: 1px solid #D4D4D4;" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 

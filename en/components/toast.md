@@ -261,11 +261,12 @@ $custom-toast-theme: toast-theme(
 
 You can build a robust and flexible structure that benefits from [**schemas**](themes/sass/schemas.md). A **schema** is a recipe of a theme.
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-toast`]({environment:sassApiUrl}/index.html#variable-_light-toast) schema:
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-toast`]({environment:sassApiUrl}/index.html#variable-light-toast) schema:
 
 ```scss
 //  Extending the toast schema
-$light-toast-schema: extend($_light-toast,
+$light-toast-schema: extend(
+  $light-toast,
   (
     background: (
       color: ("primary", 400)

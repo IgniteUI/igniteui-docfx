@@ -323,7 +323,7 @@ Since the tooltip uses the [`IgxOverlayService`](overlay.md), in order for our c
 The last step is to **include** the component theme in our application.
 
 ```scss
-@include tooltip($dark-tooltip);
+@include css-vars($dark-tooltip);
 ```
 
 So now our styled tooltip should look like this:

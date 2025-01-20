@@ -200,9 +200,9 @@ Following the simplest approach, we create a new theme that extends the [`pagina
 
 ```scss
 $dark-paginator: paginator-theme(
-  $text-color: #F4D45C,
-  $background-color: #575757,
-  $border-color: #292826
+  $text-color: #d0ab23;,
+  $background-color: #231c2c,
+  $border-color: #d0ab23;
 );
 ```
 
@@ -210,12 +210,12 @@ As seen, the `paginator-theme` only controls colors for the paging container, bu
 
 ```scss
 $dark-button: icon-button-theme(
-  $foreground: #FFCD0F,
-  $hover-foreground: #292826,
-  $hover-background: #FFCD0F,
-  $focus-foreground: #292826,
-  $focus-background: #FFCD0F,
-  $disabled-foreground: #16130C
+  $foreground: #d0ab23,
+  $hover-foreground: #231c2c,
+  $hover-background: #d0ab23,
+  $focus-foreground: #231c2c,
+  $focus-background: #d0ab23,
+  $disabled-foreground: #9b7829
 );
 ```
 
@@ -254,9 +254,9 @@ Instead of hardcoding the color values like we just did, we can achieve greater 
 `igx-palette` generates a color palette based on the primary, secondary and surface colors that are passed:
 
 ```scss
-$yellow-color: #F9D342;
-$black-color: #292826;
-$gray-color: #efefef;
+$yellow-color: #d0ab23;
+$black-color: #231c2c;
+$gray-color: #999;
 
 $dark-palette: palette($primary: $black-color, $secondary: $yellow-color, $surface: $gray-color);
 ```

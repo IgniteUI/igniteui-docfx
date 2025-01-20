@@ -331,12 +331,9 @@ Once we've imported the themes file, we can create custom themes.
 We can now define a custom [`banner theme`]({environment:sassApiUrl}/index.html#function-banner-theme) that will affect our Row Editing background and make use of one of the predefined palettes namely `$purple-palette` :
 
 ```scss
-$my-light-gray: #e3e3e3;
-$my-banner-palette: $purple-palette; 
- 
 $banner-theme: banner-theme(
-  $banner-background: $my-light-gray,
-  $banner-message-color: color($my-banner-palette, "secondary", 600)
+  $banner-background: #e3e3e3,
+  $banner-message-color: color($purple-palette, "secondary", 600)
 );
 ```
 
