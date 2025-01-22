@@ -434,11 +434,11 @@ When a default summary is defined, the height of the summary area is calculated 
 
 ## Disable Summaries
 
-The [`disabledSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#disabledSummaries) property provides precise control over the summary functions displayed for each column in the grid. This property is particularly useful when you want to remove unnecessary or less relevant summaries, ensuring that only meaningful and context-specific results are presented to users. It accepts an array of strings, such as `['count', 'min', 'max']`, where each string corresponds to a **summary key** that should be excluded from the column's displayed summaries.
+The [`disabledSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#disabledSummaries) property provides precise per-column control over the Ignite UI for Angular grid summary feature. This property enables users to customize the summaries displayed for each column in the grid, ensuring that only the most relevant and meaningful data is shown. For example, you can exclude specific summary types, such as `['count', 'min', 'max']`, by specifying their summary keys in an array.
 
 This property can also be modified **dynamically at runtime** through code, providing flexibility to adapt the grid's summaries to changing application states or user actions.
 
-Below are examples demonstrating the use of the `disabledSummaries` property for different columns and different summaries.
+The following examples illustrate how to use the `disabledSummaries` property to manage summaries for different columns and exclude specific default and custom summary types in the Ignite UI for Angular grid:
 
 @@if (igxName === 'IgxGrid') {
 ```html
