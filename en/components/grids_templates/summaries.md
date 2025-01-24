@@ -710,7 +710,7 @@ Following the simplest approach, we create a new theme that extends the [`grid-s
 ```scss
 $custom-theme: grid-summary-theme(
   $background-color: #e0f3ff,
-  $focus-background-color: rgba( #94d1f7, .3 ),
+  $focus-background-color: rgba(#94d1f7, .3),
   $label-color: #e41c77,
   $result-color: black,
   $pinned-border-width: 2px,
@@ -718,6 +718,10 @@ $custom-theme: grid-summary-theme(
   $pinned-border-color: #e41c77
 );
 ```
+
+>[!NOTE]
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
+
 The last step is to **include** the component custom theme:
 
 ```scss
@@ -734,79 +738,6 @@ The last step is to **include** the component custom theme:
   }
 }
 ```
-
-### Defining a color palette
-
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
-
-`igx-palette` generates a color palette based on the primary, secondary and surface colors that are passed:
-
-```scss
-$blue-color: #7793b1;
-$green-color: #00ff2d;
-$gray-color: #efefef;
-
-$my-custom-palette: palette($primary: $blue-color, $secondary: $green-color, $surface: $gray-color);
-```
-
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
-
-```scss
-$custom-theme: grid-summary-theme(
-  $background-color: color($my-custom-palette, "primary", 700),
-  $focus-background-color: color($my-custom-palette, "primary", 800),
-  $label-color: color($my-custom-palette, "secondary", 500),
-  $result-color: color($my-custom-palette, "grays", 900),
-  $pinned-border-width: 2px,
-  $pinned-border-style: dotted,
-  $pinned-border-color: color($my-custom-palette, "secondary", 500)
-);
-```
-
->[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palettes.md) topic for detailed guidance on how to use them.
-
-### Using Schemas
-
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/sass/schemas.md). A **schema** is a recipe of a theme.
-
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-grid-summary`]({environment:sassApiUrl}/index.html#variable-light-grid-summary):
-
-```scss
-// Extending the light grid summary schema
-$my-summary-schema: extend(
-  $light-grid-summary,
-  (
-    background-color: (igx-color: ('primary', 700)),
-    focus-background-color: (igx-color: ('primary', 800)),
-    label-color: (igx-color: ('secondary', 500)),
-    result-color: (igx-color: ('grays', 900)),
-    pinned-border-width: 2px,
-    pinned-border-style: dotted,
-    pinned-border-color: (igx-color: ('secondary', 500))
-  )
-);
-```
-
-In order to apply our custom schema we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-material-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-material-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
-
-```scss
-// Extending the global light-schema
-$my-custom-schema: extend(
-  $light-material-schema,
-  (
-    igx-grid-summary: $my-summary-schema
-  )
-);
-
-// Defining our custom theme with the custom schema
-$custom-theme: grid-summary-theme(
-  $palette: $my-custom-palette,
-  $schema: $my-custom-schema
-);
-```
-
-Don't forget to include the themes in the same way as it was demonstrated above.
 
 @@if (igxName === 'IgxGrid') {
 ### Demo

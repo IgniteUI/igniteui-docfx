@@ -264,7 +264,7 @@ The multi-cell selection is index based (DOM elements selection).
 
 ## Styling
 
-The theme engine exposes properties that allows us to style the **range of selected cells**.
+The theme engine exposes properties that allow us to style the **range of selected cells**.
 
 ### Import theme
 
@@ -279,7 +279,7 @@ To get started with styling the selection, we need to import the `index` file, w
 
 ### Define colors
 
-Once done, we can make use of the [`igx-contrast-color`]({environment:sassApiUrl}/index.html#function-igx-contrast-color) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions. With them, we define the colors we would like to use for our selection range:
+Once done, we can make use of the [`contrast-color`]({environment:sassApiUrl}/index.html#function-contrast-color) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. With them, we define the colors we would like to use for our selection range:
 
 ```scss
 $text-color: contrast-color($color: 'primary', $variant: 900);
@@ -288,7 +288,7 @@ $border-yellow: #f2c43c;
 ```
 
 >[!NOTE]
->If we don't want to use the `igx-contrast-color` and `igx-color` functions, we can always hardcode the color values.
+>If we don't want to use the `contrast-color` and `color` functions, we can always hardcode the color values.
 
 ### Create custom theme
 

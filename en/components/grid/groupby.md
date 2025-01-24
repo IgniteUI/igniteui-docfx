@@ -337,16 +337,16 @@ $custom-theme: grid-theme(
   $group-row-background: #494949,
   $group-row-selected-background: #383838,
   $group-label-column-name-text: #f8f8f8,
-  $group-label-icon: #FFCD0F,
+  $group-label-icon: #ffcd0f,
   $group-label-text: #f8f8f8,
-  $group-count-background: #FFCD0F,
+  $group-count-background: #ffcd0f,
   $group-count-text-color: #000,
-  $expand-icon-color: #FFCD0F,
+  $expand-icon-color: #ffcd0f,
   $expand-icon-hover-color: rgb(223, 181, 13),
-  $cell-active-border-color: #FFCD0F,
+  $cell-active-border-color: #ffcd0f,
   $row-selected-background: #fff6d3,
   $row-selected-text-color: #000,
-  $drop-indicator-color: #FFCD0F
+  $drop-indicator-color: #ffcd0f
 );
 
 /* Chip theme will style the chips in the Group By area */
@@ -359,17 +359,21 @@ $custom-chips-theme: chip-theme(
 
 ### Defining a custom color palette
 
-In the approach that we described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
-`igx-palette` generates a color palette, based on provided primary, secondary and surface colors.  
+In the approach that we described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions.   
+`palette` generates a color palette, based on provided primary, secondary and surface colors.  
 
 ```scss
 $black-color: #292826;
-$yellow-color: #FFCD0F;
+$yellow-color: #ffcd0f;
 $grey-color: #efefef;
 
-$custom-palette: palette($primary: $black-color, $secondary: $yellow-color, $surface: $grey-color);
+$custom-palette: palette(
+  $primary: $black-color, 
+  $secondary: $yellow-color, 
+  $surface: $grey-color
+);
 ```
-After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors. 
+After a custom palette has been generated, the `color` function can be used to obtain different varieties of the primary and the secondary colors. 
   
 ```scss
 $custom-theme: grid-theme(
@@ -399,15 +403,15 @@ Extend one of the two predefined schemas, that are provided for every component.
 $custom-grid-schema: extend(
   $light-grid,
   (
-    group-row-background: (igx-color:('secondary', 100)),
-    group-row-selected-background: (igx-color:('primary', 400)),
-    group-label-column-name-text: (igx-color:('primary', 600)),
-    group-label-icon: (igx-color:('primary', 600)),
-    group-label-text: (igx-color:('secondary', 700)),
-    group-count-background: (igx-color:('primary', 600)),
-    group-count-text-color: (igx-color:('secondary', 400)),
-    expand-icon-color: (igx-color:('primary', 600)),
-    expand-icon-hover-color: (igx-color:('primary', 400))
+    group-row-background: (color:('secondary', 100)),
+    group-row-selected-background: (color:('primary', 400)),
+    group-label-column-name-text: (color:('primary', 600)),
+    group-label-icon: (color:('primary', 600)),
+    group-label-text: (color:('secondary', 700)),
+    group-count-background: (color:('primary', 600)),
+    group-count-text-color: (color:('secondary', 400)),
+    expand-icon-color: (color:('primary', 600)),
+    expand-icon-hover-color: (color:('primary', 400))
   )
 );
 ```
@@ -417,7 +421,7 @@ In order for the custom schema to be applied, either ([`light`]({environment:sas
 $my-custom-schema: extend(
   $light-material-schema, 
   ( 
-    igx-grid: $custom-grid-schema
+    grid: $custom-grid-schema
   )
 );
 

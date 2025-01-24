@@ -46,9 +46,9 @@ The `type-style` function is an interface-like function that simply ensures that
 
 ```scss
 $h1-style: type-style(
-  $font-size: 112px,
+  $font-size: rem(112px),
   $font-weight: 600,
-  $line-height: 96px,
+  $line-height: rem(96px),
   ...,
 );
 ```
@@ -87,7 +87,7 @@ Adding additional type styles to a scale is just as easy:
 ```scss
 $my-type-category: type-style(
   $font-weight: 600,
-  $font-size: 42px,
+  $font-size: rem(42px),
   $text-transform: uppercase,
   ...,
 );
@@ -147,7 +147,7 @@ There are two ways to change the text styles of a card. The first is by modifyin
 ```scss
 // Create a custom h6 scale category style
 $my-h6: type-style(
-  $font-size: 12px,
+  $font-size: rem(12px),
 );
 
 // Create a custom type scale with the modified h6
@@ -168,7 +168,7 @@ $my-type-scale: extend(
 ```scss
 // Create a custom h6 scale category style
 $my-h6: type-style(
-  $font-size: 12px,
+  $font-size: rem(12px),
 );
 
 // You can specify which categories from the type sale the card uses

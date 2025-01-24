@@ -381,7 +381,11 @@ $purple: #9E379F;
 $blue: #61AEDB;
 $light-gray: #efefef;
 
-$custom-palette: palette($primary: $blue, $secondary: $purple, $surface: $light-gray);
+$custom-palette: palette(
+  $primary: $blue, 
+  $secondary: $purple, 
+  $surface: $light-gray
+);
 
 $today-text: color($custom-palette, "primary", 500);
 $text-color: color($custom-palette, "secondary", 200);

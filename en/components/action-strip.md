@@ -87,7 +87,6 @@ To initialize and position the Action Strip correctly, it needs to be inside a r
       <igx-icon>format_bold</igx-icon>
     </button>
   </igx-action-strip>
-  <div></div>
 </div>
 ```
 

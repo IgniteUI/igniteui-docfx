@@ -291,97 +291,14 @@ $custom-navbar-theme: navbar-theme(
 );
 ```
 
+>[!NOTE]
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
+
 The last step is to pass the newly created theme to the `css-vars` mixin:
 
 ```scss
 @include css-vars($custom-navbar-theme);
 ```
-
-### Using color palettes
-
-Instead of hardcoding the color values, like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
-
-`igx-palette` generates a color palette based on the primary, secondary and surface colors that are passed:
-
-```scss
-$white-color: #dedede;
-$black-color: #151515;
-$gray-color: #efefef;
-
-$light-navbar-palette: palette(
-  $primary: $white-color,
-  $secondary: $black-color,
-  $surface: $gray-color,
-);
-```
-
-And then with `igx-color` we can easily retrieve color from the generated palette.
-
-```scss
-$custom-navbar-theme: navbar-theme(
-  $text-color: color($light-navbar-palette, "secondary", 400),
-  $background: color($light-navbar-palette, "primary", 400),
-  $idle-icon-color: color($light-navbar-palette, "surface", 400),
-  $hover-icon-color: #8c8c8c,
-);
-```
-
-> [!NOTE]
-> The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to the [`Palettes`](themes/sass/palettes.md) topic for detailed guidance on how to use them.
-
-### Using schemas
-
-You can build a robust and flexible structure that benefits from [**schemas**](themes/sass/schemas.md). A **schema** is a recipe of a theme.
-
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-navbar`]({environment:sassApiUrl}/index.html#variable-light-navbar) schema:
-
-```scss
-// Extending the navbar schema
-$light-navbar-schema: extend(
-  $light-navbar,
-  (
-    text-color: (
-      color: (
-        "secondary",
-        400,
-      ),
-    ),
-    background: (
-      color: (
-        "primary",
-        400,
-      ),
-    ),
-    idle-icon-color: (
-      color: (
-        "secondary",
-        400,
-      ),
-    ),
-    $hover-icon-color: #8c8c8c,
-  )
-);
-```
-
-In order to apply our custom schemas we have to **extend** one of the globals ([`light-material-schema`]({environment:sassApiUrl}/index.html#variable-light-material-schema) or [`dark-material-schema`]({environment:sassApiUrl}/index.html#variable-dark-material-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
-
-```scss
-// Extending the global light-schema
-$custom-light-schema: extend(
-  $light-material-schema,
-  (
-    navbar: $light-navbar-schema,
-  )
-);
-
-// Defining navbar with the global light schema
-$cutom-navbar-theme: navbar-theme(
-  $palette: $light-navbar-palette,
-  $schema: $custom-light-schema,
-);
-```
-
-Don't forget to include the themes in the same way as it was demonstrated above.
 
 ### Demo
 

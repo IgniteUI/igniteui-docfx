@@ -341,9 +341,9 @@ Following the simplest approach, we create a new theme that extends the [`card-t
 ```scss
 $colorful-card: card-theme(
   $background: #011627,
-  $header-text-color: #FEFEFE,
-  $subtitle-text-color: #ECAA53,
-  $content-text-color: #FEFEFE
+  $header-text-color: #fefefe,
+  $subtitle-text-color: #ecaa53,
+  $content-text-color: #fefefe
 );
 ```
 As seen, the `card-theme` exposes some useful parameters for basic styling of its items. 

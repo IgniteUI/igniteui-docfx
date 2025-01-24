@@ -219,6 +219,9 @@ $dark-button: icon-button-theme(
 );
 ```
 
+>[!NOTE]
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
+
 The last step is to **include** the component mixins, each with its respective theme:
 
 ```scss
@@ -230,7 +233,7 @@ The last step is to **include** the component mixins, each with its respective t
 ```
 
 >[!NOTE]
->We scope the **icon-button** mixin within `.igx-paginator__pager`, so that only the paginator buttons would be styled. Otherwise other icon buttons in the grid would be affected too.
+>We include the created **icon-button-theme** within `.igx-paginator__pager`, so that only the paginator buttons would be styled. Otherwise other icon buttons in the grid would be affected too.
 
 >[!NOTE]
 >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep` in order to style the components which are inside the paging container, like the button:
@@ -247,118 +250,6 @@ The last step is to **include** the component mixins, each with its respective t
 }
 ```
 
-### Defining a Color Palette
-
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
-
-`igx-palette` generates a color palette based on the primary, secondary and surface colors that are passed:
-
-```scss
-$yellow-color: #d0ab23;
-$black-color: #231c2c;
-$gray-color: #999;
-
-$dark-palette: palette($primary: $black-color, $secondary: $yellow-color, $surface: $gray-color);
-```
-
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
-
-```scss
-$dark-paginator: paginator-theme(
-  $palette: $dark-palette,
-  $text-color: color($dark-palette, "secondary", 400),
-  $background-color: color($dark-palette, "primary", 200),
-  $border-color: color($dark-palette, "primary", 500)
-);
-
-$dark-button: icon-button-theme(
-  $palette: $dark-palette,
-  $foregroundr: color($dark-palette, "secondary", 700),
-  $hover-foreground: color($dark-palette, "primary", 500),
-  $hover-background: color($dark-palette, "secondary", 500),
-  $focus-foreground: color($dark-palette, "primary", 500),
-  $focus-background: color($dark-palette, "secondary", 500),
-  $disabled-foreground: color($dark-palette, "primary", 700)
-);
-```
-
->[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
-
-### Using Schemas
-
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/sass/schemas.md). A **schema** is a recipe of a theme.
-
-Extend one of the two predefined schemas, that are provided for every component, in this case we would use - [`$base-dark-pagination`]({environment:sassApiUrl}/index.html#variable-base-dark-pagination) and [`$material-flat-icon-button-dark`]({environment:sassApiUrl}/index.html#variable-material-flat-icon-button-dark) schemas:
-
-```scss
-// Extending the dark paginator schema
-$dark-paginator-schema: extend(
-  $base-dark-pagination,
-  (
-    text-color:(
-      color: ("secondary", 400)
-    ),
-    background-color:(
-      color: ("primary", 200)
-    ),
-    border-color:(
-      color:( "primary", 500)
-    )
-  )
-);
-// Extending the dark icon button schema
-$dark-button-schema: extend(
-  $material-flat-icon-button-dark,
-  (
-    foreground:(
-      color:("secondary", 700)
-    ),
-    hover-foreground:(
-      color:("primary", 500)
-    ),
-    hover-background:(
-      color:("secondary", 500)
-    ),
-    focus-foreground:(
-      color:("primary", 500)
-    ),
-    focus-background:(
-      color:("secondary", 500)
-    ),
-    disabled-foreground:(
-      color:("primary", 700)
-    )
-  )
-);
-```
-
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-material-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-material-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
-
-```scss
-// Extending the global dark-schema
-$custom-dark-schema: extend(
-  $dark-schema,
-  (
-    igx-paginator: $dark-paginator-schema,
-    igx-icon-button: $dark-button-schema
-  )
-);
-
-// Definingpaginator-theme with the global dark schema
-$dark-paginator: paginator-theme(
-  $palette: $dark-palette,
-  $schema: $custom-dark-schema
-);
-
-// Defining icon-button-theme with the global dark schema
-$dark-button: icon-button-theme(
-  $palette: $dark-palette,
-  $schema: $custom-dark-schema
-);
-```
-
-Don't forget to include the themes in the same way as it was demonstrated above.
 @@if (igxName === 'IgxGrid'){
 ### Pagination Style Example
 

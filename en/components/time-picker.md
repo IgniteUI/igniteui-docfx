@@ -384,10 +384,10 @@ Following the simplest approach, we create a new theme that extends the [`time-p
 
 ```scss
 $my-time-picker-theme: time-picker-theme(
-  $text-color: #E4C8A5,
-  $hover-text-color: #ECAA53,
-  $selected-text-color: #ECAA53,
-  $header-background: #ECAA53,
+  $text-color: #e4c8a5,
+  $hover-text-color: #ecaa53,
+  $selected-text-color: #ecaa53,
+  $header-background: #ecaa53,
   $header-hour-text-color: #011627,
   $header-time-period-color: #011627,
   $background-color: #011627

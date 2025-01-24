@@ -66,7 +66,7 @@ import { IGX_BUTTON_GROUP_DIRECTIVES, IgxIconComponent } from 'igniteui-angular'
         <button igxButton>
             <igx-icon>format_align_right</igx-icon>
         </button>
-        <button igxButton [selected]="true">
+        <button igxButton selected>
             <igx-icon>format_align_justify</igx-icon>
         </button>
     </igx-buttongroup>
@@ -99,7 +99,7 @@ Use the [`igx-buttongroup`]({environment:angularApiUrl}/classes/igxbuttongroupco
   <button igxButton>
     <igx-icon>format_align_right</igx-icon>
   </button>
-  <button igxButton [selected]="true">
+  <button igxButton selected>
     <igx-icon>format_align_justify</igx-icon>
   </button>
 </igx-buttongroup>
@@ -126,7 +126,7 @@ public alignment = ButtonGroupAlignment.vertical;
 <igx-buttongroup [alignment]="alignment">
   <button igxButton>Sofia</button>
   <button igxButton>London</button>
-  <button igxButton [selected]="true">New York</button>
+  <button igxButton selected>New York</button>
   <button igxButton>Tokyo</button>
 </igx-buttongroup>
 ```

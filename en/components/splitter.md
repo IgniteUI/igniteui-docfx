@@ -226,10 +226,10 @@ You can change the default styles of the splitter by creating a new theme that e
 
 $custom-splitter-theme: splitter-theme(
   $bar-color: #011627,
-  $handle-color: #ECAA53,
-  $expander-color: #ECAA53,
+  $handle-color: #ecaa53,
+  $expander-color: #ecaa53,
   $border-radius: 0,
-  $focus-color: #ECAA53,
+  $focus-color: #ecaa53,
   $size: 4px
 );
 ```

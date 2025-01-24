@@ -439,8 +439,7 @@ The following sample demonstrates how to customize the exported files:
 When using the default toolbar exporter component, whenever an export operation takes place the toolbar will show a progress indicator while the operation is in progress.
 Moreover, users can set the toolbar [showProgress]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#showProgress) property and use for their own long running operations
 or just as another way to signify an action taking place in the grid.
-The sample below uses has significant amount of data, in order to increase the time needed for data export so the progress bar can be seen. Additionally it has another button
-that simulates a long running operation in the grid:
+The sample below has significant amount of data. While the data is being exported, the progress bar is shown. Additionally, it has another button that simulates a long running operation in the grid:
 
 @@if (igxName === 'IgxGrid') {
 
@@ -545,7 +544,7 @@ First, let's create a new palette.
 ```scss
 $my-dark-palette: palette(
   $primary: #2466ff,
-  $secondary: #FFCD0F,
+  $secondary: #ffcd0f,
   $surface: #2a2b2f,
   $grays: #fff,
 );
