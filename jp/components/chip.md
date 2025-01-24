@@ -125,7 +125,7 @@ public chipRemoved(event: IBaseChipEventArgs) {
 
 ### ドラッグ
 
-ドラッグは、[`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removable) 入力を `true` に設定して有効にできます。有効にすると、チップをクリックしてドラッグできます。
+ドラッグは、[`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#draggable) 入力を `true` に設定して有効にできます。有効にすると、チップをクリックしてドラッグできます。
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [id]="chip.id" [draggable]="true">
