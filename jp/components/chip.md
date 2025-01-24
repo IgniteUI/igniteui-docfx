@@ -7,10 +7,9 @@ _language: ja
 
 # Angular Chip (チップ) コンポーネントの概要
 
-<p class="highlight">[Angular Chip コンポーネント]({environment:angularApiUrl}/classes/igxchipcomponent.html)は、楕円形のコンテナーに情報を表示する視覚的要素です。コンポーネントにはテンプレート化、削除、選択などのさまざまなプロパティがあります。複数のチップの順序を変更し、チップ領域をコンテナーとして視覚的に接続できます。</p>
+<p class="highlight">Angular Chip コンポーネントは、楕円形のコンテナーに情報を表示する視覚的要素です。コンポーネントにはテンプレート化、削除、選択などのさまざまなプロパティがあります。複数のチップの順序を変更し、チップ領域をコンテナーとして視覚的に接続できます。</p>
 
 ## Angular Chip の例
-
 
 <code-view style="height: 100px; padding-top: 10px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -130,77 +129,12 @@ public chipRemoved(event: IBaseChipEventArgs) {
 ```html
 <igx-chip *ngFor="let chip of chipList" [id]="chip.id" [draggable]="true">
     <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
-    {chip.text}}
-</igx-chip>
-```
-
->[!NOTE]
->チップの順序をソートするには、[`IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) を使用してイベントを処理する必要があります。
-
-<div class="divider"></div>
-
-**デモ サンプルを作成するには、上記の機能を使用します。**
-
-```html
-<igx-chip
-*ngFor="let chip of chipList"
-[id]="chip.id"
-[selectable]="true"
-[removable]="true"
-(remove)="chipRemoved($event)"
->
-    <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
     {{chip.text}}
 </igx-chip>
 ```
 
-次に、`chipList` と [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) イベントを処理する関数を追加します。
-
-```ts
-import { IBaseChipEventArgs } from 'igniteui-angular';
-// import { IBaseChipEventArgs } from '@infragistics/igniteui-angular'; for licensed package
-...
-public chipList = [
-    {
-        text: 'Country',
-        id: '1',
-        icon: 'place'
-    },
-    {
-        text: 'City',
-        id: '2',
-        icon: 'location_city'
-    },
-    {
-        text: 'Town',
-        id: '3',
-        icon: 'store'
-    },
-    {
-        text: 'First Name',
-        id: '4',
-        icon: 'person_pin'
-    }
-];
-
-private changeDetectionRef: any;
-
-public chipRemoved(event: IBaseChipEventArgs) {
-    this.chipList = this.chipList.filter((item) => {
-        return item.id !== event.owner.id;
-    });
-    this.changeDetectionRef.detectChanges();
-}
-```
-
-すべて適切に設定できると、ブラウザーで以下が表示されます。
-
-
-<code-view style="height: 100px; padding-top: 10px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/chip-simple" >
-</code-view>
-
+>[!NOTE]
+>チップの順序をソートするには、[`IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) を使用してイベントを処理する必要があります。詳細については、[`Chip のソート セクション`](chip.md#chip-のソート)を参照してください。
 
 ### Chip テンプレート
 
@@ -266,6 +200,72 @@ public chipRemoved(event: IBaseChipEventArgs) {
     <igx-icon>delete</igx-icon>
 </ng-template>
 ```
+
+<div class="divider"></div>
+
+### デモ
+
+**デモ サンプルを作成するには、上記の機能を使用します。**
+
+```html
+<igx-chip
+*ngFor="let chip of chipList"
+[id]="chip.id"
+[selectable]="true"
+[removable]="true"
+(remove)="chipRemoved($event)"
+>
+    <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
+    {{chip.text}}
+</igx-chip>
+```
+
+次に、`chipList` と [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) イベントを処理する関数を追加します。
+
+```ts
+import { IBaseChipEventArgs } from 'igniteui-angular';
+// import { IBaseChipEventArgs } from '@infragistics/igniteui-angular'; for licensed package
+...
+public chipList = [
+    {
+        text: 'Country',
+        id: '1',
+        icon: 'place'
+    },
+    {
+        text: 'City',
+        id: '2',
+        icon: 'location_city'
+    },
+    {
+        text: 'Town',
+        id: '3',
+        icon: 'store'
+    },
+    {
+        text: 'First Name',
+        id: '4',
+        icon: 'person_pin'
+    }
+];
+
+private changeDetectionRef: any;
+
+public chipRemoved(event: IBaseChipEventArgs) {
+    this.chipList = this.chipList.filter((item) => {
+        return item.id !== event.owner.id;
+    });
+    this.changeDetectionRef.detectChanges();
+}
+```
+
+すべて適切に設定できると、ブラウザーで以下が表示されます。
+
+
+<code-view style="height: 100px; padding-top: 10px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/chip-simple" >
+</code-view>
 
 ## Chip Area
 
@@ -433,6 +433,7 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
+
 最も簡単な方法は、[`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme)を拡張する新しいテーマを作成し、チップの項目をスタイル設定するいくつかのパラメーターを受け取る方法です。
 
 ```scss
