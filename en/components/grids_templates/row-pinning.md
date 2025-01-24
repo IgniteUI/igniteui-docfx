@@ -415,8 +415,8 @@ Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUr
 $custom-grid-theme: grid-theme(
   $pinned-border-width: 5px,
   $pinned-border-style: double,
-  $pinned-border-color: #FFCD0F,
-  $cell-active-border-color: #FFCD0F
+  $pinned-border-color: #ffcd0f,
+  $cell-active-border-color: #ffcd0f
 );
 ```
 

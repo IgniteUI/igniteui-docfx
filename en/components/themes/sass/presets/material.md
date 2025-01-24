@@ -64,7 +64,7 @@ $my-color-palette: palette(
 @include theme($my-color-palette, $schema: $dark-schema);
 ```
 
-Since all individual components use the `$default-palette` by default, if you don't specify the rest of the colors like $info and $error they will use their default values from the `$default-palette`.
+Since all individual components use the `$light-material-palette` by default, if you don't specify the rest of the colors like $info and $error they will use their default values from the `$light-material-palette`.
 
 ## API Overview
 

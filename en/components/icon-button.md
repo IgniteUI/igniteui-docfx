@@ -153,15 +153,15 @@ Following the simplest approach, we use CSS variables to customize the appearanc
 
 ```scss
 [igxIconButton="contained"] {
-    --background: #011627;
-    --foreground: #fefefe;
-    --hover-foreground: #011627dc;
-    --hover-background: #ecaa53;
-    --focus-foreground: #011627dc;
-    --focus-background: #ecaa53;
-    --focus-border-color: #0116276c;
-    --active-foreground: #011627dc;
-    --active-background: #ecaa53;
+  --background: #011627;
+  --foreground: #fefefe;
+  --hover-foreground: #011627dc;
+  --hover-background: #ecaa53;
+  --focus-foreground: #011627dc;
+  --focus-background: #ecaa53;
+  --focus-border-color: #0116276c;
+  --active-foreground: #011627dc;
+  --active-background: #ecaa53;
 }
 ```
 

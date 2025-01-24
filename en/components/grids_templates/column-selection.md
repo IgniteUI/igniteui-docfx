@@ -112,12 +112,12 @@ Following the simplest approach, let's define our custom **theme**.
 ```scss
 $custom-grid-theme: grid-theme(
   $row-selected-background: #011627,
-  $row-selected-text-color: #ECAA53,
+  $row-selected-text-color: #ecaa53,
   $row-selected-hover-background: #011627,
-  $header-selected-text-color: #ECAA53,
+  $header-selected-text-color: #ecaa53,
   $header-selected-background: #011627,
-  $expand-icon-color: #ECAA53,
-  $expand-icon-hover-color: #B64B80
+  $expand-icon-color: #ecaa53,
+  $expand-icon-hover-color: #b64b80
 );
 ```
 }
@@ -125,9 +125,9 @@ $custom-grid-theme: grid-theme(
 ```scss
 $custom-grid-theme: grid-theme(
   $row-selected-background: #011627,
-  $row-selected-text-color: #ECAA53,
+  $row-selected-text-color: #ecaa53,
   $row-selected-hover-background: #011627,
-  $header-selected-text-color: #ECAA53,
+  $header-selected-text-color: #ecaa53,
   $header-selected-background: #011627
 );
 ```

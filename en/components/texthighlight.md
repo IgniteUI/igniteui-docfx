@@ -417,9 +417,11 @@ As mentioned earlier, we can even combine them with a theme:
 :host {
   ::ng-deep {
     @include css-vars($dark-highlight);  
+    
     .custom-highlight {
       border: 1px solid #ffcd0f;
     }  
+
     .custom-active-highlight {
       box-shadow: 0 0 3px 0 rgba(0,0,0, .5);
     }

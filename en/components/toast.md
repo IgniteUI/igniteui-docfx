@@ -224,80 +224,16 @@ $custom-toast-theme: toast-theme(
 );
 ```
 
+>[!NOTE]
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
+
 The last step is to pass the custom toast theme:
 
 ```scss
 @include css-vars($custom-toast-theme);
 ```
 
-### Using color palettes
-
-Instead of hardcoding the color values, like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
-
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
-
-```scss
-$white-color: #dedede;
-$black-color: #151515;
-$light-color: #efefef;
-
-$light-toast-palette: palette($primary: $white-color, $secondary: $black-color, $surface: $light-color);
-```
-
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
-
-```scss
-$custom-toast-theme: toast-theme(
-  $background: color($light-toast-palette, "primary", 400),
-  $text-color: color($light-toast-palette, "secondary", 400),
-  $border-radius: 12px
-);
-```
-
->[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to the [`Palettes`](themes/palettes.md) topic for detailed guidance on how to use them.
-
-### Using schemas
-
-You can build a robust and flexible structure that benefits from [**schemas**](themes/sass/schemas.md). A **schema** is a recipe of a theme.
-
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-toast`]({environment:sassApiUrl}/index.html#variable-light-toast) schema:
-
-```scss
-//  Extending the toast schema
-$light-toast-schema: extend(
-  $light-toast,
-  (
-    background: (
-      color: ("primary", 400)
-    ),
-    text-color: (
-      color: ("secondary", 400)
-    ),
-    border-radius: 12px
-  )
-);
-```
-
-In order to apply our custom schemas we have to **extend** one of the globals ([`light-material-schema`]({environment:sassApiUrl}/index.html#variable-light-material-schema) or [`dark-material-schema`]({environment:sassApiUrl}/index.html#variable-dark-material-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
-
-```scss
-// Extending the global light-schema
-$custom-light-schema: extend(
-  $light-material-schema,
-  (
-    igx-toast: $light-toast-schema
-  )
-);
-
-// Defining toast with the global light schema
-$custom-toast-theme: toast-theme(
-  $palette: $light-toast-palette,
-  $schema: $custom-light-schema
-);
-```
-
-Don't forget to include the themes in the same way as it was demonstrated above.
+### Demo
 
 <code-view style="height: 600px" 
            no-theming

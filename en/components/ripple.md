@@ -175,7 +175,7 @@ The next step is to pass the custom ripple theme:
 ```
 
 > [!NOTE]
-> A color that is set using the `igxRiple` directive, would take precedence from the one, set within a custom theme.
+> A color set using the `igxRiple` directive would take precedence over one set by a custom theme.
 
 ### Demo
 

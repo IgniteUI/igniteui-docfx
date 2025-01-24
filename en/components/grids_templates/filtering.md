@@ -543,9 +543,9 @@ Following the simplest approach, we create a new theme that extends the [`grid-t
 ```scss
 $custom-grid: grid-theme(
   $filtering-row-text-color: #292826,
-  $filtering-row-background: #FFCD0F,
+  $filtering-row-background: #ffcd0f,
   $filtering-header-text-color: #292826,
-  $filtering-header-background: #FFCD0F
+  $filtering-header-background: #ffcd0f
 );
 ```
 
@@ -553,19 +553,22 @@ As seen, the `grid-theme` only controls colors for the filtering row and the res
 
 ```scss
 $dark-input-group: input-group-theme(
-  $box-background: #FFCD0F,
+  $box-background: #ffcd0f,
   $idle-text-color: #292826,
   $focused-text-color: #292826,
   $filled-text-color: #292826
 );
 
 $dark-button: button-theme(
-  $flat-background: #FFCD0F,
+  $flat-background: #ffcd0f,
   $flat-text-color: #292826,
   $flat-hover-background: #292826,
-  $flat-hover-text-color: #FFCD0F
+  $flat-hover-text-color: #ffcd0f
 );
 ```
+
+>[!NOTE]
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 In this example we only changed some of the parameters for the input group and the button, but the [`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme) and the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) provide way more parameters to control their respective styling.
 
@@ -573,176 +576,39 @@ The last step is to **include** the component mixins, each with its respective t
 
 ```scss
 @include css-vars($custom-grid);
+
 .igx-grid__filtering-row {
   @include css-vars($dark-button);
   @include css-vars($dark-input-group);  
+
   .igx-input-group__input::placeholder {
-    color: #FFCD0F;
+    color: #ffcd0f;
   }
 }
 ```
 
 >[!NOTE]
->We scope the **igx-button** and the **igx-input-group** mixins within `.igx-grid__filtering-row`, so that only the filtering row buttons and its input group would be styled. Otherwise other buttons and input groups in the grid would be affected too.
+>We include the created **button-theme** and **input-group-theme** within `.igx-grid__filtering-row`, so that only the filtering row buttons and its input group would be styled. Otherwise other buttons and input groups in the grid would be affected too.
 
- >[!NOTE]
- >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>[!NOTE]
+>If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
 
 ```scss
 :host {
   ::ng-deep {
     @include css-vars($custom-grid);
+
     .igx-grid__filtering-row {
       @include css-vars($dark-button);
-      @include css-vars($dark-input-group)  
+      @include css-vars($dark-input-group)
+
       .igx-input-group__input::placeholder {
-        color: #FFCD0F;
+        color: #ffcd0f;
       }
     }
   }
 }
 ```
-
-### Defining a color palette
-
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
-
-`igx-palette` generates a color palette based on the primary, secondary and surface colors that are passed:
-
-```scss
-$yellow-color: #FFCD0F;
-$black-color: #292826;
-$grey-color: #efefef;
-
-$dark-palette: palette($primary: $black-color, $secondary: $yellow-color, $surface: $grey-color);
-```
-
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
-
-```scss
-$custom-grid: grid-theme(
-  $filtering-row-text-color: color($dark-palette, "primary", 400),
-  $filtering-row-background: color($dark-palette, "secondary", 400),
-  $filtering-header-text-color: color($dark-palette, "primary", 400),
-  $filtering-header-background: color($dark-palette, "secondary", 400)
-);
-
-$dark-input-group: input-group-theme(
-  $box-background: color($dark-palette, "secondary", 400),
-  $idle-text-color: color($dark-palette, "primary", 400),
-  $focused-text-color: color($dark-palette, "primary", 400),
-  $filled-text-color: color($dark-palette, "primary", 400)
-);
-
-$dark-button: button-theme(
-  $flat-background: color($dark-palette, "secondary", 400),
-  $flat-text-color: color($dark-palette, "primary", 400),
-  $flat-hover-background: color($dark-palette, "primary", 400),
-  $flat-hover-text-color: color($dark-palette, "secondary", 400)
-);
-```
-
->[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
-
-### Using Schemas
-
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/sass/schemas.md). A **schema** is a recipe of a theme.
-
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-grid`]({environment:sassApiUrl}/index.html#variable-light-grid), [`light-input-group`]({environment:sassApiUrl}/index.html#variable-light-input-group) and [`light-button`]({environment:sassApiUrl}/index.html#variable-light-button) schemas: 
-
-```scss
-// Extending the light grid schema
-$custom-grid-schema: extend(
-  $light-grid,
-  (
-    filtering-row-text-color:(
-      color: ("primary", 400)
-    ),
-    filtering-row-background:(
-      color: ("secondary", 400)
-    ),
-    filtering-header-text-color:(
-      color: ("primary", 400)
-    ),
-    filtering-header-background:(
-      color: ("secondary", 400)
-    )
-  )
-);
-
-// Extending the light input group schema
-$custom-input-group-schema: extend(
-  $light-input-group,
-  (
-    box-background:(
-      color: ("secondary", 400)
-    ),
-    idle-text-color:(
-      color: ("primary", 400)
-    ),
-    focused-text-color:(
-      color: ("primary", 400)
-    ),
-    filled-text-color:(
-      color: ("primary", 400)
-    )
-  )
-);
-
-// Extending the light button schema
-$custom-button-schema: extend(
-  $light-button,
-  (
-    flat-background:(
-      color: ("secondary", 400)
-    ),
-    flat-text-color:(
-      color: ("primary", 400)
-    ),
-    flat-hover-background:(
-      color: ("primary", 400)
-    ),
-    flat-hover-text-color:(
-      color: ("secondary", 400)
-    )
-  )
-);
-```
-
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-material-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-material-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
-
-```scss
-// Extending the global light-schema
-$custom-light-schema: extend(
-  $light-material-schema,
-  (
-    igx-grid: $custom-grid-schema,
-    igx-input-group: $custom-input-group-schema,
-    igx-button: $custom-button-schema
-  )
-);
-
-// Defining grid-theme with the global light schema
-$custom-grid: grid-theme(
-  $palette: $dark-palette,
-  $schema: $custom-light-schema
-);
-
-// Defining button-theme with the global light schema
-$custom-button: button-theme(
-  $palette: $dark-palette,
-  $schema: $custom-light-schema
-);
-
-// Defining input-group-theme with the global light schema
-$custom-input-group: input-group-theme(
-  $palette: $dark-palette,
-  $schema: $custom-light-schema
-);
-```
-
-Don't forget to include the themes in the same way as it was demonstrated above.
 
 ### Demo
 

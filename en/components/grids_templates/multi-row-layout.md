@@ -157,68 +157,8 @@ $custom-theme: grid-theme(
 );
 ```    
 
-### Defining a custom color palette
-In the approach, that was described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
-`igx-palette` generates a color palette, based on provided primary, secondary and surface colors.  
-
- ```scss
-$black-color: #494949;
-$yellow-color: #FFCD0F;
-$gray-color: #efefef;
-
-$custom-palette: palette($primary: $black-color, $secondary: $yellow-color, $surface: $gray-color);
-```   
-
-After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.
-
-```scss
-$custom-theme: grid-theme(
-  $cell-active-border-color: color($custom-palette, "secondary", 500),
-  $cell-selected-background: color($custom-palette, "primary", 300),
-  $row-hover-background: color($custom-palette, "secondary", 300),
-  $row-selected-background: color($custom-palette, "primary", 100),
-  $header-background: color($custom-palette, "primary", 500),
-  $header-text-color:contrast-color($custom-palette, "primary", 500),
-  $sorted-header-icon-color: color($custom-palette, "secondary", 500),
-  $sortable-header-icon-hover-color: color($custom-palette, "secondary", 600)
-);
-```
-
-### Defining custom schemas
-You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/sass/schemas.md). The **schema** is the recipe of a theme.   
-Extend one of the two predefined schemas, that are provided for every component. In our case, we would use [`light-grid`]({environment:sassApiUrl}/index.html#variable-light-grid):
-
-```scss
-$custom-grid-schema: extend(
-  $light-grid,
-  (
-    cell-active-border-color: (igx-color:('secondary', 500)),
-    cell-selected-background: (igx-color:('primary', 300)),
-    row-hover-background: (igx-color:('secondary', 300)),
-    row-selected-background: (igx-color:('primary', 100)),
-    header-background: (igx-color:('primary', 500)),
-    header-text-color: (igx-contrast-color:('primary', 500)),
-    sorted-header-icon-color: (igx-color:('secondary', 500)),
-    sortable-header-icon-hover-color: (igx-color:('secondary', 600)) 
-  )
-);
-```   
-
-In order for the custom schema to be applied, either ([`light`]({environment:sassApiUrl}/index.html#variable-light-material-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-material-schema)) globals has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respective component theme afterwards.   
-
-```scss
-$my-custom-schema: extend(
-  $light-material-schema, 
-  ( 
-    igx-grid: $custom-grid-schema
-  )
-);
-
-$custom-theme: grid-theme(
-  $palette: $custom-palette,
-  $schema: $my-custom-schema
-);
-```
+>[!NOTE]
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 ### Applying the custom theme
 The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file:  
