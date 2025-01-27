@@ -6,10 +6,9 @@ _keywords: Angular Chip, Angular Chip Component, Angular Chip Area, Angular Chip
 
 # Angular Chip Component Overview
 
-<p class="highlight">[The Angular Chip component]({environment:angularApiUrl}/classes/igxchipcomponent.html) is a visual element that displays information in an oval container. The component has various properties - it can be templated, deleted, and selected. Multiple chips can be reordered and visually connected to each other, using the chip area as a container.</p>
+<p class="highlight">The Angular Chip component is a visual element that displays information in an oval container. The component has various properties - it can be templated, deleted, and selected. Multiple chips can be reordered and visually connected to each other, using the chip area as a container.</p>
 
 ## Angular Chip Example
-
 
 <code-view style="height: 100px; padding-top: 10px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -124,82 +123,17 @@ public chipRemoved(event: IBaseChipEventArgs) {
 
 ### Dragging
 
-Dragging can be enabled by setting the [`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removable) input to `true`. When enabled, you can click and drag the chip around.
+Dragging can be enabled by setting the [`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#draggable) input to `true`. When enabled, you can click and drag the chip around.
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [id]="chip.id" [draggable]="true">
-    <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
-    {chip.text}}
-</igx-chip>
-```
-
->[!NOTE]
->To reorder the chips you need to handle the event using the [`IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html).
-
-<div class="divider"></div>
-
-**To create the demo sample, we will use the features above:**
-
-```html
-<igx-chip
-*ngFor="let chip of chipList"
-[id]="chip.id"
-[selectable]="true"
-[removable]="true"
-(remove)="chipRemoved($event)"
->
     <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
     {{chip.text}}
 </igx-chip>
 ```
 
-Then, we need to add the `chipList` and the function, that handles the [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) event:
-
-```ts
-import { IBaseChipEventArgs } from 'igniteui-angular';
-// import { IBaseChipEventArgs } from '@infragistics/igniteui-angular'; for licensed package
-...
-public chipList = [
-    {
-        text: 'Country',
-        id: '1',
-        icon: 'place'
-    },
-    {
-        text: 'City',
-        id: '2',
-        icon: 'location_city'
-    },
-    {
-        text: 'Town',
-        id: '3',
-        icon: 'store'
-    },
-    {
-        text: 'First Name',
-        id: '4',
-        icon: 'person_pin'
-    }
-];
-
-private changeDetectionRef: any;
-
-public chipRemoved(event: IBaseChipEventArgs) {
-    this.chipList = this.chipList.filter((item) => {
-        return item.id !== event.owner.id;
-    });
-    this.changeDetectionRef.detectChanges();
-}
-```
-
-If everything went well, you should see this in your browser:
-
-
-<code-view style="height: 100px; padding-top: 10px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/chip-simple" >
-</code-view>
-
+>[!NOTE]
+>To reorder the chips you can handle the event using the [`IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html). More about it could be found in [`Reorder Chips section`](chip.md#reorder-chips).
 
 ### Chip Templates
 
@@ -265,6 +199,71 @@ You can customize the `remove icon`, using the [`removeIcon`]({environment:angul
     <igx-icon>delete</igx-icon>
 </ng-template>
 ```
+
+<div class="divider"></div>
+
+### Demo
+
+To create the demo sample below, we will use the features above:
+
+```html
+<igx-chip
+*ngFor="let chip of chipList"
+[id]="chip.id"
+[selectable]="true"
+[removable]="true"
+(remove)="chipRemoved($event)"
+>
+    <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
+    {{chip.text}}
+</igx-chip>
+```
+
+Then, we need to add the `chipList` and the function, that handles the [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) event:
+
+```ts
+import { IBaseChipEventArgs } from 'igniteui-angular';
+// import { IBaseChipEventArgs } from '@infragistics/igniteui-angular'; for licensed package
+...
+public chipList = [
+    {
+        text: 'Country',
+        id: '1',
+        icon: 'place'
+    },
+    {
+        text: 'City',
+        id: '2',
+        icon: 'location_city'
+    },
+    {
+        text: 'Town',
+        id: '3',
+        icon: 'store'
+    },
+    {
+        text: 'First Name',
+        id: '4',
+        icon: 'person_pin'
+    }
+];
+
+private changeDetectionRef: any;
+
+public chipRemoved(event: IBaseChipEventArgs) {
+    this.chipList = this.chipList.filter((item) => {
+        return item.id !== event.owner.id;
+    });
+    this.changeDetectionRef.detectChanges();
+}
+```
+If everything went well, you should see this in your browser:
+
+
+<code-view style="height: 100px; padding-top: 10px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/chip-simple" >
+</code-view>
 
 ## Chip Area
 
