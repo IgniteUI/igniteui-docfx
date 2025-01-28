@@ -309,7 +309,7 @@ The Row Editing overlay is a composite element - its UI is comprised of a couple
     - [`igx-banner`](../banner.md) in order to render its contents
     - [`igx-button`](../button.md)s are rendered in the default template (for the `Done` and `Cancel` buttons).
 
-In the below example, we will make use of those two components' styling options, ([button styling](../button.md#Angular Button Styling) & [banner-styling](../banner.md#styling)), to customize the experience of our @@igxName's Row Editing.
+In the below example, we will make use of those two components' styling options, [`button styling`](../button.md#styling) & [`banner-styling`](../banner.md#styling), to customize the experience of our @@igxName's Row Editing.
 We will also style the current cell's editor and background to make it more distinct. You can learn more about cell styling [here](cell-editing.md#styling).
 
 ### Import theme
@@ -331,42 +331,36 @@ Once we've imported the themes file, we can create custom themes.
 We can now define a custom [`banner theme`]({environment:sassApiUrl}/index.html#function-banner-theme) that will affect our Row Editing background and make use of one of the predefined palettes namely `$purple-palette` :
 
 ```scss
-    $my-light-gray: #e3e3e3;
-    $my-banner-palette: $purple-palette;
-
-    $banner-theme: banner-theme(
-        $banner-background: $my-light-gray,
-        $banner-message-color: color($my-banner-palette, "secondary", 600)
-    );
+$banner-theme: banner-theme(
+  $banner-background: #e3e3e3,
+  $banner-message-color: color($purple-palette, "secondary", 600)
+);
 ```
 
 Here we are using `my-banner-palette` in conjunction with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) (exposed by the theme library) for generating our colors.
 
 ### Include the theme
 
-All we have to do now is apply the theme with a Sass `@include` statement. We pass our newly defined `$banner-theme` through the [`igx-banner mixin`]({environment:sassApiUrl}/index.html#mixin-igx-banner):
+All we have to do now is apply the theme with a Sass `@include` statement. We pass our newly defined `$banner-theme` through the [`css-vars mixin`]({environment:sassApiUrl}/index.html#mixin-css-vars):
 
 ```scss
-@include banner($banner-theme);
+@include css-vars($banner-theme);
 ```
-
-This will apply our custom banner theme to the Row Editing overlay. However, since we defined these in the global styles file, these styles will also apply to **all** banners in our application.
 
 ### Component styles
 
-Since the Row Editing overlay makes use of a lot of other components' themes, styling it via the global styles can affect other parts of our application (e.g. banners, buttons, etc.). The best way to prevent that is to scope our banner theme. We can define our styles (including the [`theme/index` import](#import-theme)) in the component containing our @@igSelector.
+Since the Row Editing overlay makes use of a lot of other components' themes, styling it via the global styles can affect other parts of our application (e.g. banners, buttons, etc.). The best way to prevent that is to scope the banner theme to the style file of the specific component it's applied to.
 
 >[!NOTE]
->If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
->We wrap the statement inside of a `:host` selector to prevent our styles from affecting elements *outside of* our component:
+>If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid Row Editing Overlay.
 
 ```scss
 // custom.component.scss
 
 :host {
-    ::ng-deep {
-        @include banner($banner-theme);
-    }
+  ::ng-deep {
+    @include css-vars($banner-theme);
+  }
 }
 ```
 
@@ -392,7 +386,7 @@ To further customize our Row Editing overlay, we can pass a custom template so w
 </@@igSelector>
 ```
 
-After we've defined our custom buttons, we can make use of the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) to style them. You can learn more about `igx-button` styling [here](../button.md#angular-button-styling). We can create a custom theme for our `Done` and `Cancel`:
+After we've defined our custom buttons, we can make use of the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) to style them. You can learn more about `igx-button` styling [here](../button.md#styling). We can create a custom theme for our `Done` and `Cancel`:
 
 ```scss
 // custom.component.scss
@@ -404,8 +398,8 @@ $button-theme: button-theme(
 
 ...
 .custom-buttons {
-    @include button($button-theme);
-  }
+  @include css-vars($button-theme);
+}
 ```
 
 We scope our `@include` statement in `.custom-buttons` so that it is only applied to the `Done`and `Cancel` buttons.

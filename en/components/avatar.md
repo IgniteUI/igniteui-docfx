@@ -92,8 +92,8 @@ We can also change the background through the `background` property or set a col
 // avatar.component.scss
 
 igx-avatar {
-    background: #e41c77;
-    color: #000000;
+  background: #e41c77;
+  color: #000000;
 }
 
 ```
@@ -155,45 +155,26 @@ Following the simplest approach, we create a new theme that extends the [`avatar
 Given the following markup:
 
 ```html
-<div class="initials-avatar">
-    <igx-avatar>BA</igx-avatar>
+<div class="avatar-sample initials">
+  <igx-avatar initials="JS" size="medium"></igx-avatar>
 </div>
 ```
 
-We need to create a theme:
+We create the following avatar theme:
 
 ```scss
 $custom-avatar-theme: avatar-theme(
-    $background: #72da67,
-    $color: #000000,
-    $border-radius: 16px
+  $background: #72da67,
+  $color: #000000,
+  $border-radius: 16px
 );
 ```
-
-### Using CSS variables 
 
 The last step is to pass the custom avatar theme:
 
 ```scss
-.initials-avatar {
-    @include css-vars($custom-avatar-theme);
-}
-```
-
-### Using mixins
-
-In order to style components for Internet Explorer 11 and older browsers, we have to use different approach, since it doesn't support CSS variables. 
-
-If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. On the other side, in order to prevent the custom theme to leak to other components, be sure to include the `:host` selector before `::ng-deep`:
-
-```scss
-:host {
-    ::ng-deep {
-        // Pass the custom avatar theme to the `igx-avatar` mixin
-        .initials-avatar {
-            @include avatar($custom-avatar-theme);
-        }
-    }
+.initials {
+  @include css-vars($custom-avatar-theme);
 }
 ```
 
@@ -233,7 +214,7 @@ You can also use one of the predefined sizes, assigning it to the `--ig-size` va
 
 ```scss
 igx-avatar {
-    --ig-size: var(--ig-size-small);
+  --ig-size: var(--ig-size-small);
 }
 ```
 

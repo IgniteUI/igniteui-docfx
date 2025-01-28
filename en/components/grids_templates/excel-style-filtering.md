@@ -403,7 +403,7 @@ By default, the @@igComponent component filters the data based on the original c
 @@if (igxName === 'IgxTreeGrid') {
 ## Tree Filter View
 
-By default, the Excel Style Filtering dialog displays the items in a list view. In order to display them in a tree view you can use the [`TreeGridFilteringStrategy`]({environment:angularApiUrl}/classes/treegridfilteringstrategy.html) and specify an array of column field names. Filter items will be displayed in a tree view for the speicified columns and in a list view for all other columns. The following sample demonstrates how to show filter items in a tree view for the first column:
+By default, the Excel Style Filtering dialog displays the items in a list view. In order to display them in a tree view you can use the [`TreeGridFilteringStrategy`]({environment:angularApiUrl}/classes/treegridfilteringstrategy.html) and specify an array of column field names. Filter items will be displayed in a tree view for the specified columns and in a list view for all other columns. The following sample demonstrates how to show filter items in a tree view for the first column:
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -539,7 +539,7 @@ The excel style filtering dialog takes its background color from the grid's them
 
 ```scss
 $custom-grid: grid-theme(
-    $filtering-row-background: #FFCD0F
+  $filtering-row-background: #ffcd0f
 );
 ```
 
@@ -547,53 +547,59 @@ We obviously have a lot more components inside the excel like filtering dialog, 
 
 ```scss
 $dark-button: button-theme(
-    $background: #FFCD0F,
-    $foreground: #292826,
-    $hover-background: #292826,
-    $hover-foreground: #FFCD0F
+  $background: #ffcd0f,
+  $foreground: #292826,
+  $hover-background: #292826,
+  $hover-foreground: #ffcd0f
 );
 
 $dark-input-group: input-group-theme(
-    $box-background: #FFCD0F,
-    $idle-text-color: #292826,
-    $focused-text-color: #292826,
-    $filled-text-color: #292826
+  $box-background: #ffcd0f,
+  $idle-text-color: #292826,
+  $focused-text-color: #292826,
+  $filled-text-color: #292826
 );
 
 $custom-list: list-theme(
-    $background: #FFCD0F
+  $background: #ffcd0f
 );
 
 $custom-checkbox: checkbox-theme(
-    $empty-color: #292826,
-    $fill-color: #292826,
-    $tick-color: #FFCD0F,
-    $label-color: #292826
+  $empty-color: #292826,
+  $fill-color: #292826,
+  $tick-color: #ffcd0f,
+  $label-color: #292826
 );
 
 $custom-drop-down: drop-down-theme(
-    $background-color: #FFCD0F,
-    $item-text-color: #292826,
-    $hover-item-background: #292826,
-    $hover-item-text-color: #FFCD0F
+  $background-color: #ffcd0f,
+  $item-text-color: #292826,
+  $hover-item-background: #292826,
+  $hover-item-text-color: #ffcd0f
 );
 ```
+
+>[!NOTE]
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 In this example we only changed some of the parameters for the listed components, but the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme), [`checkbox-theme`]({environment:sassApiUrl}/index.html#function-checkbox-theme), [`drop-down-theme`]({environment:sassApiUrl}/index.html#function-drop-down-theme), [`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme), [`list-theme`]({environment:sassApiUrl}/index.html#function-list-theme) themes provide way more parameters to control their respective styling.
 
 The last step is to **include** the component mixins, each with its respective theme. We will also set the color property for the input's placeholder.
 
 ```scss
-@include drop-down($custom-drop-down);
-@include grid($custom-grid);
-.igx-excel-filter, .igx-excel-filter__secondary {
-    @include button($dark-button);
-    @include input-group($dark-input-group);
-    @include list($custom-list);
-    @include checkbox($custom-checkbox);
-    .igx-input-group__input::placeholder {
-        color: #FFCD0F;
-    }
+@include css-vars($custom-drop-down);
+@include css-vars($custom-grid);
+
+.igx-excel-filter, 
+.igx-excel-filter__secondary {
+  @include css-vars($dark-button);
+  @include css-vars($dark-input-group);
+  @include css-vars($custom-list);
+  @include css-vars($custom-checkbox);
+
+  .igx-input-group__input::placeholder {
+    color: #ffcd0f;
+  }
 }
 ```
 
@@ -605,226 +611,24 @@ The last step is to **include** the component mixins, each with its respective t
 
 ```scss
 :host {
-    ::ng-deep {
-        @include drop-down($custom-drop-down);
-        @include grid($custom-grid);
-        .igx-excel-filter, .igx-excel-filter__secondary {
-            @include button($dark-button);
-            @include input-group($dark-input-group);
-            @include list($custom-list);
-            @include checkbox($custom-checkbox);
-            .igx-input-group__input::placeholder {
-                color: #FFCD0F;
-            }
-        }
+  ::ng-deep {
+    @include css-vars($custom-drop-down);
+    @include css-vars($custom-grid);
+
+    .igx-excel-filter,
+    .igx-excel-filter__secondary {
+      @include css-vars($dark-button);
+      @include css-vars($dark-input-group);
+      @include css-vars($custom-list);
+      @include css-vars($custom-checkbox);
+      
+      .igx-input-group__input::placeholder {
+        color: #ffcd0f;
+      }
     }
+  }
 }
 ```
-
-### Defining a color palette
-
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
-
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
-
-```scss
-$yellow-color: #FFCD0F;
-$black-color: #292826;
-
-$dark-palette: palette($primary: $black-color, $secondary: $yellow-color);
-```
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
-
-```scss
-$custom-grid: grid-theme(
-    $filtering-row-background: #FFCD0F
-);
-
-$dark-button: button-theme(
-    $background: color($dark-palette, "secondary", 400),
-    $foreground: color($dark-palette, "primary", 400),
-    $hover-background: color($dark-palette, "primary", 400),
-    $hover-foreground: color($dark-palette, "secondary", 400)
-);
-
-$dark-input-group: input-group-theme(
-    $box-background: color($dark-palette, "secondary", 400),
-    $idle-text-color: color($dark-palette, "primary", 400),
-    $focused-text-color: color($dark-palette, "primary", 400),
-    $filled-text-color: color($dark-palette, "primary", 400)
-);
-
-$custom-list: list-theme(
-    $background: color($dark-palette, "secondary", 400)
-);
-
-$custom-checkbox: checkbox-theme(
-    $empty-color: color($dark-palette, "primary", 400),
-    $fill-color: color($dark-palette, "primary", 400),
-    $tick-color: color($dark-palette, "secondary", 400),
-    $label-color: color($dark-palette, "primary", 400)
-);
-
-$custom-drop-down:drop-down-theme(
-    $background-color: color($dark-palette, "secondary", 400),
-    $item-text-color: color($dark-palette, "primary", 400),
-    $hover-item-background: color($dark-palette, "primary", 400),
-    $hover-item-text-color: color($dark-palette, "secondary", 400)
-);
-```
-
->[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
-
-### Using Schemas
-
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/sass/schemas.md). A **schema** is a recipe of a theme.
-
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid), [`light-input-group`]({environment:sassApiUrl}/index.html#variable-_light-input-group), [`light-button`]({environment:sassApiUrl}/index.html#variable-_light-button), [`light-list`]({environment:sassApiUrl}/index.html#variable-_light-list), [`light-checkbox`]({environment:sassApiUrl}/index.html#variable-_light-checkbox) and [`light-drop-down`]({environment:sassApiUrl}/index.html#variable-_light-drop-down) schemas:
-
-```scss
-$custom-grid-schema: extend($_light-grid,
-    (
-        filtering-row-background:(
-           color: ("secondary", 400)
-        )
-    )
-);
-
-$custom-button-schema: extend($_light-button,
-    (
-        flat-background:(
-           color: ("secondary", 400)
-        ),
-        flat-text-color:(
-           color: ("primary", 400)
-        ),
-        flat-hover-background:(
-           color: ("primary", 400)
-        ),
-        flat-hover-text-color:(
-           color: ("secondary", 400)
-        ),
-
-        contained-background:(
-           color: ("secondary", 400)
-        ),
-        contained-text-color:(
-           color: ("primary", 400)
-        ),
-        contained-hover-background:(
-           color: ("primary", 400)
-        ),
-        contained-hover-text-color:(
-           color: ("secondary", 400)
-        )
-    )
-);
-
-$custom-input-group-schema: extend($_light-input-group,
-    (
-        box-background:(
-           color: ("secondary", 400)
-        ),
-        idle-text-color:(
-           color: ("primary", 400)
-        ),
-        focused-text-color:(
-           color: ("primary", 400)
-        ),
-        filled-text-color:(
-           color: ("primary", 400)
-        )
-    )
-);
-
-$custom-list-schema: extend($_light-list,
-    (
-        background:(
-           color: ("secondary", 400)
-        )
-    )
-);
-
-$custom-checkbox-schema: extend($_light-checkbox,
-    (
-        empty-color:(
-           color: ("primary", 400)
-        ),
-        fill-color:(
-           color: ("primary", 400)
-        ),
-        tick-color:(
-           color: ("secondary", 400)
-        ),
-        label-color:(
-           color: ("primary", 400)
-        )
-    )
-);
-
-$custom-drop-down-schema: extend($_light-drop-down,
-    (
-        background-color:(
-           color: ("secondary", 400)
-        ),
-        item-text-color:(
-           color: ("primary", 400)
-        ),
-        hover-item-background:(
-           color: ("primary", 400)
-        ),
-        hover-item-text-color:(
-           color: ("secondary", 400)
-        )
-    )
-);
-```
-
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
-
-```scss
-$custom-light-schema: extend($light-schema,(
-   grid: $custom-grid-schema,
-   button: $custom-button-schema,
-   input-group: $custom-input-group-schema,
-   list: $custom-list-schema,
-   checkbox: $custom-checkbox-schema,
-   drop-down: $custom-drop-down-schema
-));
-
-$custom-grid: grid-theme(
-    $palette: $dark-palette,
-    $schema: $custom-light-schema
-);
-
-$custom-button: button-theme(
-    $palette: $dark-palette,
-    $schema: $custom-light-schema
-);
-
-$custom-input-group: input-group-theme(
-    $palette: $dark-palette,
-    $schema: $custom-light-schema
-);
-
-$custom-list: list-theme(
-    $palette: $dark-palette,
-    $schema: $custom-light-schema
-);
-
-$custom-checkbox: checkbox-theme(
-    $palette: $dark-palette,
-    $schema: $custom-light-schema
-);
-
-$custom-drop-down: drop-down-theme(
-    $palette: $dark-palette,
-    $schema: $custom-light-schema
-);
-```
-
-Don't forget to include the themes in the same way as it was demonstrated above.
 
 ### Demo
 

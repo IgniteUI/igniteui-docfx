@@ -8,8 +8,6 @@ _keywords: Angular Virtual ForOf Directive, Native Angular Components Suite, Ang
 
 <p class="highlight">The Ignite UI for Angular igxForOf directive is an alternative to ngForOf for templating large amounts of data. It uses virtualization behind the scenes to optimize DOM rendering and memory consumption.</p>
 
-<div class="divider"></div>
-
 ## Angular Virtual For Directive Example
 
 
@@ -209,7 +207,7 @@ public ngAfterViewInit() {
 }
 ```
 
-When requesting data you can take advantage of the [`IgxForOfState`]({environment:angularApiUrl}/classes/igxforofdirective.html#state) interface, which provides the [`startIndex`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.startindex) and [`chunkSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.chunkSize) properties. Note that initialy the chunkSize will be 0, so you have to specify the size of the first loaded chunk (the best value is the initial [`igxForContainerSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforcontainersize) divided by the [`igxForItemSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForItemSize)).
+When requesting data you can take advantage of the [`IgxForOfState`]({environment:angularApiUrl}/classes/igxforofdirective.html#state) interface, which provides the [`startIndex`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.startindex) and [`chunkSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#state.chunkSize) properties. Note that initially the chunkSize will be 0, so you have to specify the size of the first loaded chunk (the best value is the initial [`igxForContainerSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxforcontainersize) divided by the [`igxForItemSize`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForItemSize)).
 
 ```typescript
 public getData(data?: IForOfState, cb?: (any) => void): any {
