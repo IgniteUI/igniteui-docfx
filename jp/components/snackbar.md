@@ -5,7 +5,7 @@ _keywords: Angular Snackbar コンポーネント, Angular Snackbar コントロ
 _language: ja
 ---
 # Angular Snackbar (スナックバー) コンポーネントの概要
-<p class="highlight">Ignite UI for Angular Snackbar コンポーネントは、アクションを含むことができる単一行のメッセージで操作のフィードバックを提供します。SnackBar メッセージがその他の画面要素の上に表示され、画面の中央下に配置されます。</p>
+<p class="highlight">Ignite UI for Angular Snackbar コンポーネントは、アクションを含むことができる単一行のメッセージで操作のフィードバックを提供します。Snackbar メッセージがその他の画面要素の上に表示され、画面の中央下に配置されます。</p>
 <div class="divider"></div>
 
 ## Angular Snackbar の例
@@ -255,31 +255,29 @@ public restore() {
            iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" >
 </code-view>
 
-### オーバーレイ設定
-[`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html) は、[オーバーレイ設定]({environment:angularApiUrl}/interfaces/overlaysettings.html)を使用してコンテナーの位置を制御します。デフォルト設定は、カスタム オーバーレイ設定を定義し、それらをスナックバーの `open()` メソッドに渡すことで変更できます。
-
-```typescript
-public customSettings: OverlaySettings = {
-    positionStrategy: new GlobalPositionStrategy(
-        { 
-            horizontalDirection: HorizontalAlignment.Left,
-            verticalDirection: VerticalAlignment.Top
-        }),
-    modal: true,
-    closeOnOutsideClick: true,
-};
-
-snackbar.open(customSettings);
-```
-
-ユーザーは、スナックバーが表示されたときに DOM に配置される特定のアウトレットを提供することもできます。
+### 配置
+[`positionSettings`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#positionSettings) プロパティを使用すると、Snackbar の表示位置を構成します。デフォルトで、ページの下に表示されます。以下のサンプルで、通知が上位置に表示されます。
 
 ```html
-<igx-snackbar [outlet]="igxBodyOverlayOutlet"></igx-snackbar>
-<div #igxBodyOverlayOutlet igxOverlayOutlet></div>
+<!--sample.component.html-->
+<button igxButton="contained" (click)="open(snackbar)">Show notification on top</button>
+<igx-snackbar #snackbar>Notification displayed</igx-snackbar>
 ```
-## スタイル設定
 
+```typescript
+// sample.component.ts
+import { VerticalAlignment, HorizontalAlignment } from 'igniteui-angular';
+// import { VerticalAlignment, HorizontalAlignment } from '@infragistics/igniteui-angular'; for licensed package
+...
+public open(snackbar) {
+    snackbar.positionSettings.verticalDirection = VerticalAlignment.Top;
+    snackbar.positionSettings.horizontalDirection = HorizontalAlignment.Right;
+    snackbar.open();
+}
+...
+```
+
+## スタイル設定
 スナックバーのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する index ファイルをインポートする必要があります。
 
 ```scss

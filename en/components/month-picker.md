@@ -188,55 +188,20 @@ The month picker uses the calendar's theme, so we have to create a new theme tha
 $my-calendar-theme: calendar-theme(
   $border-radius: 15px,
   $content-background: #011627,
-  $picker-background-color: #011627,
-  $month-current-text-color: #ECAA53,
-  $month-hover-background: #ECAA53,
-  $year-current-text-color: #ECAA53,
-  $year-hover-text-color: #D37B08,
-  $picker-arrow-color: #ECAA53,
-  $picker-text-hover-color: #D37B08,
-  $picker-arrow-hover-color: #D37B08,
-  $picker-text-color: #ECAA53
+  $picker-background: #011627,
+  $ym-current-foreground: #ecaa53,
+  $ym-hover-background: #ecaa53,
+  $navigation-color: #ecaa53,
+  $picker-hover-foreground: #d37b08,
+  $navigation-hover-color: #d37b08,
+  $picker-foreground: #ecaa53,
 );
 ```
 
-### Including themes
-
-<div class="divider"></div>
-
 The next step is to **include** the component theme in our application.
-
-If `$legacy-support` is set to `true`, include the **component theme** like that:
-
-```scss
- @include calendar($my-calendar-theme);
-```
->[!NOTE]
->If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
-
-```scss
-:host {
-     ::ng-deep {
-        @include calendar($my-calendar-theme);
-    }
-}
-```
-
-<div class="divider"></div>
-
-If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
 
 ```scss
 @include css-vars($my-calendar-theme);
-```
-
->[!NOTE]
->If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
-
-```scss
-:host {
-    @include css-vars($my-calendar-theme);
-}
 ```
 
 After everything's done, your component should look like this:
@@ -244,7 +209,7 @@ After everything's done, your component should look like this:
 ### Demo
 
 
-<code-view style="height: 600px" 
+<code-view style="height: 350px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-styling" >
@@ -258,7 +223,6 @@ After everything's done, your component should look like this:
 * [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
 * [IgxCalendarComponent Styles]({environment:sassApiUrl}/index.html#function-calendar-theme)
 
-<div class="divider--half"></div>
 
 ## Theming Dependencies
 <div class="divider--half"></div>

@@ -7,7 +7,7 @@ _keywords: lock column, ignite ui for angular, infragistics 
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Column Pinning - Ignite UI for Angulars
+title: Angular Tree Grid Column Pinning - Ignite UI for Angular
 _description: Want to use the Pinning feature of the Ignite UI for Angular when you develop your next app? Easily lock column or change column order with rich API.
 _keywords: lock column, ignite ui for angular, infragistics 
 _canonicalLink: grid/column-pinning
@@ -359,88 +359,23 @@ Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUr
 
 ```scss
 $custom-theme: grid-theme(
-    /* Pinning properties that affect styling */
-    $pinned-border-width: 5px,
-    $pinned-border-style: double,
-    $pinned-border-color: #FFCD0F,
-    $cell-active-border-color: #FFCD0F
-    /* add other features properties here... */
+  $pinned-border-width: 5px,
+  $pinned-border-style: double,
+  $pinned-border-color: #ffcd0f,
+  $cell-active-border-color: #ffcd0f
 );
 ```    
 
-### Defining a custom color palette
-In the approach, that was described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
-`igx-palette` generates a color palette, based on provided primary and secondary colors.  
-
- ```scss
-$primary-color: #292826;
-$secondary-color: #ffcd0f;
-
-$custom-palette: palette(
-  $primary: $primary-color,
-  $secondary: $secondary-color
-);
-```   
-
-After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.   
-
-
-```scss
-$custom-theme: grid-theme(
-    $pinned-border-width: 5px,
-    $pinned-border-style: double,
-    $pinned-border-color: color($custom-palette, "secondary", 500),
-    $cell-active-border-color: color($custom-palette, "secondary", 500)
-);
-```   
-
-The `$custom-theme` contains the same properties as the one in the previous section, but this time the colors are not hardcoded. Instead, the custom `igx-palette` was used and the colors were obtained through its primary and secondary colors, with a given color variant.   
-
-### Defining custom schemas
-You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/sass/schemas.md). The **schema** is the recipe of a theme.   
-Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `$_light_grid`.   
-```scss
-$custom-grid-schema: extend($_light-grid,(
-    pinned-border-width: 5px,
-    pinned-border-style: double,
-    pinned-border-color: color:("secondary", 500),
-    cell-active-border-color: color:("secondary", 500)
-));
-```   
-In order for the custom schema to be applied, either `light`, or `dark` globals has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respective component theme afterwards.     
-```scss
-$my-custom-schema: extend($light-schema, ( 
-    igx-grid: $custom-grid-schema
-));
-$custom-theme: grid-theme(
-    $palette: $custom-palette,
-    $schema: $my-custom-schema
-);
-```
+>[!NOTE]
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 ### Applying the custom theme
 The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file: 
-```scss
-@include grid($custom-theme);
-```
-
-### Scoped component theme
-
-In order for the custom theme to affect only specific component, you can move all of the styles you just defined from the global styles file to the custom component's style file (including the import of the `index` file).
-
-This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation), your styles will be applied only to your custom component.
- >[!NOTE]
- >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
- >[!NOTE]
- >Wrap the statement inside of a `:host` selector to prevent your styles from affecting elements *outside of* our component:
 
 ```scss
-:host {
-    ::ng-deep {
-        @include grid($custom-theme);
-    }
-}
+@include css-vars($custom-theme);
 ```
+
 ### Demo
 
 

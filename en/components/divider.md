@@ -7,7 +7,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 # Angular Divider Component Overview
 
 <p class="highlight">The divider component enables users to separate content both horizontally and vertically.</p>
-<div class="divider"></div>
 
 ## Angular Divider Example
 
@@ -116,7 +115,7 @@ To inset the divider, set the `middle` attribute of the divider to `true` and pr
 </code-view>
 
 
-If the value of the `middle` attribute is set to a falsy value, or if the attribute is omitted altoghether, the divider will set in only on the left.
+If the value of the `middle` attribute is set to a false value, or if the attribute is omitted altogether, the divider will set in only on the left.
 
 ## API References
 <div class="divider--half"></div>

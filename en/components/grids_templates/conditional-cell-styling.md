@@ -93,7 +93,7 @@ The [`rowClasses`]({environment:angularApiUrl}/classes/igxhierarchicalgridcompon
 // sample.component.ts
 
 public rowClasses = {
-    activeRow: this.activeRowCondition
+  activeRow: this.activeRowCondition
 };
 
 public activeRowCondition = (row: RowType) => this.grid?.navigation.activeNode?.row === row.index;
@@ -104,15 +104,13 @@ public activeRowCondition = (row: RowType) => this.grid?.navigation.activeNode?.
 
 ::ng-deep {
  .activeRow {
-    border: 2px solid #fc81b8;
-    border-left: 3px solid #e41c77;
+  border: 2px solid #fc81b8;
+  border-left: 3px solid #e41c77;
  }
 }
 ```
-
-Use **::ng-deep** or **`ViewEncapsulation.None`** to force the custom styles down through the current component and its children.
-
-
+> [!NOTE]
+> Use **`::ng-deep`** or **`ViewEncapsulation.None`** to force the custom styles down through the current component and its children.
 
 ### Demo
 
@@ -272,17 +270,16 @@ private downFontCondition = (rowData: any, columnKey: any): boolean => {
 }
 ```
 
-```css
+```scss
 // component.scss file
 .upFont {
-    color: red;
+  color: red;
 }
 
 .downFont {
-    color: green;
+  color: green;
 }
 ```
-
 
 ### Using cellClasses
 You can conditionally style the @@igxName cells by setting the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellClasses) input and define custom rules.
@@ -405,7 +402,8 @@ public grammyClasses = {
 ```
 }
 
-Use **::ng-deep** or **`ViewEncapsulation.None`** to force the custom styles down through the current component and its children.
+> [!NOTE]
+> Use **`::ng-deep`** or **`ViewEncapsulation.None`** to force the custom styles down through the current component and its children.
 
 ### Demo
 
@@ -639,7 +637,7 @@ Define a `popin` animation
 ## Known issues and limitations
 
 - If there are cells bind to the same condition (from different columns) and one cell is updated, the other cells won't be updated based on the new value, if the condition is met.
-A pipe check should be performed in order to apply the changes to the rest of the cells. The example below shows how to do that with a `spread operator` ... on [`onCellEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onCellEdit) event. This will copy the original object with a new instance, and lead pure pipe to be fired.
+A pipe check should be performed in order to apply the changes to the rest of the cells. The example below shows how to do that with a `spread operator(...)` on [`onCellEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onCellEdit) event. This will copy the original object with a new instance, and lead pure pipe to be fired.
 
 ```ts
 public backgroundClasses = {
