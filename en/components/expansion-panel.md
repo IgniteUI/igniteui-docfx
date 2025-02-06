@@ -11,8 +11,6 @@ Ignite UI for Angular provides developers with one of the most useful and easy-t
 Ignite UI Expansion Panel [igx-expansion-panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) is a lightweight Angular accordion component which can be rendered in two states - collapsed or expanded. The Expansion Panel in Angular can be toggled using mouse click, or keyboard interactions. You can also combine multiple Angular Expansion Panels into Angular accordion. 
 </p>
 
-<div class="divider--half"></div>
-
 ## Angular Expansion Panel Example
 
 We've created this simple Angular Expansion Panel Example using Ignite UI Angular. See how the sample works. 
@@ -215,15 +213,6 @@ Lets see the result from all the above changes:
 
 ## Styling  
 
-### Angular Expansion Panel Demo
-
-<code-view style="height: 440px;" 
-           no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-styling" >
-</code-view>
-
-
 ### Palettes & Colors
 Fist we create a custom palette which can later be passed to our component:
 ```scss
@@ -238,68 +227,73 @@ Fist we create a custom palette which can later be passed to our component:
 // Add your brand colors.
 $my-primary-color:#353a4b;
 $my-secondary-color: #ffd351;
+$my-surface-color: #efefef;
 
 // Create custom palette.
 $my-color-palette: palette(
-    $primary: $my-primary-color,
-    $secondary: $my-secondary-color
+  $primary: $my-primary-color,
+  $secondary: $my-secondary-color,
+  $surface: $my-surface-color
 );
 ```
 
 ### Creating the Component Theme
+
 Now let's create our component theme and pass the `$my-color-palette` palette from the above sniped.
+
 ```scss
 // In expansion-styling.component.scss
 // Create expansion panel theme.
 $custom-panel-theme: expansion-panel-theme(
-    // pass `$my-color-palette` palette.
-    $palette: $my-color-palette,
-
-    // Styling parameters.
-    $header-background: color($my-color-palette, "primary", 700),
-    $header-focus-background: color($my-color-palette, "primary", 700),
-    $header-title-color: color($my-color-palette, "secondary"),
-    $header-icon-color: color($my-color-palette, "secondary"),
-    $body-background: color($my-color-palette, "primary", 700),
-    $body-color: color($my-color-palette, "secondary" 100),
-    $border-radius: .5
+  // Styling parameters.
+  $header-background: color($my-color-palette, "primary", 700),
+  $header-focus-background: color($my-color-palette, "primary", 700),
+  $header-title-color: color($my-color-palette, "secondary"),
+  $header-icon-color: color($my-color-palette, "secondary"),
+  $body-background: color($my-color-palette, "primary", 700),
+  $body-color: color($my-color-palette, "secondary", 100),
+  $border-radius: .5
 );
 ```
+
+If we prefer instead of creating a palette, we can assign the colors directly to the expansion-panel-theme function as arguments.
+
+```scss
+$custom-panel-theme: expansion-panel-theme(
+  $header-background: #353a4b,
+  $header-focus-background: #353a4b,
+  $header-title-color: #ffd351,
+  $header-icon-color: #ffd351,
+  ...
+);
+```
+
 >[!NOTE]
 > To see all the available parameters for styling trough the [`theming`](themes/sass/component-themes.md) engine check the [`API documentation`]({environment:sassApiUrl}/index.html#function-expansion-panel-theme)
 
 ### Applying the Component Theme
+
 Now to apply the component theme all that's left is to include `css-vars` mixin and pass the `$custom-panel-theme` map.
-```scss
-// In expansion-styling.component.scss
-// Pass our custom-panel-theme to `igx-expansion-panel` mixin.
-// The `:host` here makes sure that all the theming will affect only this component.
-:host {
-  @include css-vars($custom-panel-theme);
-}
-```
-
- >[!NOTE]
- > If you need to support Internet explorer 11 you have to use the component mixin `igx-expansion-panel` instead of `css-vars` and because our component have [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation we have to penetrate it by using `::ng-deep`.
- > Also in order to prevent our custom theme from leaking into other components, we have to include the `:host` selector before `::ng-deep`:
 
 ```scss
 // In expansion-styling.component.scss
-// The `:host` here makes sure that all the theming will affect only this component after the ViewEncapsulation Penetration.
-:host {
-    // Penetrate the ViewEncapsulation.
-    ::ng-deep {
-        @include expansion-panel($custom-panel-theme);
-    }
-}
+@include css-vars($custom-panel-theme);
 ```
 
 To find out more on how you can use Ignite UI theming engine [`click here`](themes/sass/component-themes.md)
 
+### Demo
+
+<code-view style="height: 440px;" 
+           no-theming
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-styling" >
+</code-view>
+
 ## Angular Expansion Panel Animations 
 ### Using specific animation
 It is possible to use other than default animation when expanding and collapsing the component.
-Assuming the igxExpansionPanel is already imported in `app.module.ts` as previously described, you can create a custom animation setting object and set it to be used in the Ignite UI for Agular Expansion Panel. The approach requires the [`useAnimation`](https://angular.io/api/animations/useAnimation) method and the specific animations to be used so we start importing these and defining the animation settings like:
+Assuming the igxExpansionPanel is already imported in `app.module.ts` as previously described, you can create a custom animation setting object and set it to be used in the Ignite UI for Angular Expansion Panel. The approach requires the [`useAnimation`](https://angular.io/api/animations/useAnimation) method and the specific animations to be used so we start importing these and defining the animation settings like:
 
 ```typescript
 // in expansion-panel.component.ts

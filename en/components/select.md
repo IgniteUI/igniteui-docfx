@@ -15,8 +15,6 @@ Below is a basic Angular Select example. It has a simple contextual menu that di
            iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-1" alt="Angular Select Example">
 </code-view>
 
-
-
 ## Getting Started with Ignite UI for Angular Select
 
 To get started with the Ignite UI for Angular Select component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
@@ -355,14 +353,42 @@ export class MyClass implements OnInit {
 >If you pass in your custom settings both as an argument in the `open` function and in the template, `igx-select` will use the one provided in the `open` function. However, if you bind the settings to an internal event, such as `opening` or `opened` then `igx-select` will use the settings that are provided in the template.
 
 ## Styling
-Every component has its own theme.
 
-To get the Select styled, you have style its containing components. In our case, we need to use both the [input-group-theme]({environment:sassApiUrl}/index.html#function-input-group-theme) and the [drop-down-theme]({environment:sassApiUrl}/index.html#function-drop-down-theme).
+Every component has its own theme function.
 
+To get the Select component styled, you have to style its containing components. In our case, these are the [input-group-theme]({environment:sassApiUrl}/index.html#function-input-group-theme) and the [drop-down-theme]({environment:sassApiUrl}/index.html#function-drop-down-theme).
 Take a look at the [`Input Group`](input-group.md#styling) and the [`Drop Down`](drop-down.md#styling) styling sections to get a better understanding of how to style those two components.
 
-> [!NOTE]
-> The [**IgxSelectComponent**]({environment:angularApiUrl}/classes/igxselectcomponent.html) uses the [IgxOverlay](overlay.md) to hold and display the `igx-select-items` list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check the [`IgxOverlay styling guide`](overlay-styling.md).
+We also have a [`select-theme`]({environment:sassApiUrl}/index.html#function-select-theme) function which is used only for styling the button of our Select component. <br>
+To get started with styling the Select component button, we need to import the `index` file, where all the theme functions and component mixins live:
+
+```scss
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+Following the simplest approach, we create a new theme that extends the [`select-theme`]({environment:sassApiUrl}/index.html#function-select-theme) and accepts some of the default theme's parameters:
+
+```scss
+$custom-select-theme: select-theme(
+  $toggle-button-background: #2b2b2b,
+  $toggle-button-background-focus: #808080,
+);
+```
+
+The last step is to pass the custom radio theme in our application:
+
+```scss
+@include css-vars($custom-select-theme);
+```
+
+<code-view style="height: 220px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-entries/select-styling" >
+</code-view>
+
 
 <div class="divider--half"></div>
 

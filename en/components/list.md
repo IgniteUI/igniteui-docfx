@@ -612,29 +612,28 @@ Let's see how we can change the background of our list. First we need to import 
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Then we need to create a theme for our component.
+Following the simplest approach, we create a new theme that extends the [`list-theme`]({environment:sassApiUrl}/index.html#function-list-theme) and accepts the `$background` parameter.
 
 ```scss
-:host ::ng-deep {
-    $my-list-theme: list-theme(
-        $background: #0568ab
-    );
-
-    @include list($my-list-theme);
-}
+$my-list-theme: list-theme(
+  $background: #0568ab
+);
 ```
-The result from the above code is
 
+Take a look at the [`list-theme`]({environment:sassApiUrl}/index.html#function-list-theme) section for a complete list of available parameters for styling the list.
+
+The last step is to **include** the newly created themes.
+
+```scss
+@include css-vars($my-list-theme);
+```
+
+The result is the following:
 
 <code-view style="height: 365px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-8" >
 </code-view>
-
-<div class="divider--half"></div>
-
-> [!NOTE]
-> Please note that if we create our component theme in the component .scss file we need to use `::ng-deep` in order to pass the view encapsulation otherwise our new theme will not work! for more info please refer to:  [Component Themes](../components/themes/sass/component-themes.md).
 
 For full list of parameters that you can change for the list component please refer to: [IgxListComponent Styles]({environment:sassApiUrl}/index.html#function-list-theme)
 
