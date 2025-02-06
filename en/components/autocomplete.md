@@ -11,7 +11,6 @@ Angular Autocomplete is a search box directive that enables users to easily find
 
 The [`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) directive provides a way to enhance a text input by showing an [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) with suggested options, provided by the developer. The suggestions will show once you start typing in the text input or use the `Arrow Up`/`Arrow Down` keys.
 </p>
-<div class="divider"></div>
 
 ## Angular Autocomplete Example
 
@@ -256,7 +255,7 @@ The `drop-down` component, used as provider for suggestions, will expose the fol
 ## Styling
 Every component has its own theme.
 
-To get the `igxAutocomplete` styled, you have style its containing components. In our case, we need to use both the [input-group-theme]({environment:sassApiUrl}/index.html#function-input-group-theme) and the [drop-down-theme]({environment:sassApiUrl}/index.html#function-drop-down-theme).
+To get the `igxAutocomplete` styled, you have to style its containing components. In our case, these are the [input-group-theme]({environment:sassApiUrl}/index.html#function-input-group-theme) and the [drop-down-theme]({environment:sassApiUrl}/index.html#function-drop-down-theme).
 
 Take a look at the [`igxInputGroup`](input-group.md#styling) and the [`igxDropdown`](drop-down.md#styling) styling sections to get a better understanding of how to style those two components.
 

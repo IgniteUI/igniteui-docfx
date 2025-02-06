@@ -111,9 +111,6 @@ public showMessage() {
 }
 ```
 
-> [!WARNING]
-> igx-toast コンポーネントの `show` メソッドと `hide` メソッドは非推奨になりました。代わりに `open` と `close` を使用する必要があります。
-
 ## 例
 
 ### 非表示/自動的に隠す
@@ -179,30 +176,6 @@ public open(toast) {
            iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-5" >
 </code-view>
 
-### オーバーレイ設定
-[`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html) は、[オーバーレイ設定]({environment:angularApiUrl}/interfaces/overlaysettings.html)を使用してコンテナーの位置を制御します。デフォルト設定は、カスタム オーバーレイ設定を定義し、それらをトーストの `open()` メソッドに渡すことで変更できます。
-
-```typescript
-public customSettings: OverlaySettings = {
-    positionStrategy: new GlobalPositionStrategy(
-        { 
-            horizontalDirection: HorizontalAlignment.Left,
-            verticalDirection: VerticalAlignment.Top
-        }),
-    modal: true,
-    closeOnOutsideClick: true,
-};
-
-toast.open(customSettings);
-```
-
-ユーザーは、トーストが表示されたときに DOM に配置される特定のアウトレットを提供することもできます。
-
-```html
-<igx-toast [outlet]="igxBodyOverlayOutlet"></igx-toast>
-<div #igxBodyOverlayOutlet igxOverlayOutlet></div>
-```
-
 <div class="divider--half"></div>
 
 ## スタイル設定
@@ -216,7 +189,7 @@ Toast のスタイル設定を始めるには、すべてのテーマ関数と�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`toast-theme`]({environment:sassApiUrl}/index.html#function-toast-theme) を拡張する新しいテーマを作成し、`$shadow`、`$background`、`$text-color` と `$border-radius` パラメーターを受け取る方法です。 
+最も簡単な方法は、[`toast-theme`]({environment:sassApiUrl}/index.html#function-toast-theme) を拡張する新しいテーマを作成し、`$background`、`$text-color` と `$border-radius` パラメーターを受け取る方法です。 
 
 ```scss
 $custom-toast-theme: toast-theme(

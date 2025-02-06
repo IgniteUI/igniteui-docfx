@@ -6,7 +6,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 # Angular Dialog Window Component Overview
 <p class="highlight">Use the Ignite UI for Angular Dialog Window component to display messages or present forms for users to fill out. The component opens a dialog window centered on top of app content. You can also provide a standard alert message that users can cancel.</p>
-<div class="divider"></div>
 
 ## Angular Dialog Window Example
 
@@ -266,10 +265,10 @@ Following the simplest approach, we create a new theme that extends the [`dialog
 
 ```scss
 $my-dialog-theme: dialog-theme(
-    $background: #011627,
-    $title-color: #ECAA53,
-    $message-color: #FEFEFE,
-    $border-radius: .3,
+  $background: #011627,
+  $title-color: #ECAA53,
+  $message-color: #FEFEFE,
+  $border-radius: .3,
 );
 ```
 
@@ -280,9 +279,9 @@ Since the dialog window uses the [`IgxOverlayService`](overlay.md), in order for
 
 ```html
 <div igxOverlayOutlet>
-    <igx-dialog #dialog1>
-        <!-- .... -->
-    </igx-dialog>
+  <igx-dialog #dialog1>
+      <!-- .... -->
+  </igx-dialog>
 </div>
 ```
 
@@ -295,36 +294,18 @@ Since the dialog window uses the [`IgxOverlayService`](overlay.md), in order for
 
 The last step is to **include** the component theme in our application.
 
-If `$legacy-support` is set to `true`, include the **theme** like that:
-
-```scss
- @include dialog($my-dialog-theme);
-```
->[!NOTE]
->If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
-
-```scss
-:host {
-     ::ng-deep {
-        @include dialog($my-dialog-theme);
-    }
-}
-```
-
-<div class="divider"></div>
-
-If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
-
 ```scss
 @include css-vars($my-dialog-theme);
 ```
 
 >[!NOTE]
->If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
+>If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep` to apply the styles.
 
 ```scss
 :host {
+  ::ng-deep {
     @include css-vars($my-dialog-theme);
+  }
 }
 ```
 
