@@ -231,7 +231,7 @@ By default, the combo control provides multiple selection. The snippet below dem
 ```typescript
 public singleSelection(event: IComboSelectionChangeEventArgs) {
     if (event.added.length) {
-        event.newSelection = event.added;
+        event.newValue = event.added;
     }
 }
 ```
@@ -275,9 +275,9 @@ When combobox is opened, allow custom values are enabled and add item button is 
 - `ArrowUp` focus will be moved back to the last list item or if the list is empty, will be moved to the search input.
 
 
-## Angular ComboBox Styling
+## Styling
 
-Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the combobox appearance. First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file:
+Using the [`Ignite UI for Angular Theming`](themes/index.md), we can greatly alter the combobox appearance. First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file:
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -286,56 +286,57 @@ Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [combo-theme]({environment:sassApiUrl}/index.html#function-combo-theme) and accepts the `$search-separator-border-color` parameter:
+Following the simplest approach, we create a new theme that extends the [`combo-theme`]({environment:sassApiUrl}/index.html#function-combo-theme) and accepts the `$search-separator-border-color` parameter:
+
 ```scss
 $custom-combo-theme: combo-theme(
-    $search-separator-border-color: #1a5214
+  $search-separator-border-color: #1a5214
 );
 ```
 
-The [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) uses the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) internally as an item container. It also includes the [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) and the [IgxCheckbox]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) components. Creating new themes, that extend these components' themes, and scoping them under the respective classes will let you change the combobox styles:
+The [`IgxComboComponent`]({environment:angularApiUrl}/classes/igxcombocomponent.html) uses the [`IgxDropDownComponent`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) internally as an item container. It also includes the [`IgxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) and the [`IgxCheckbox`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) components. Creating new themes, that extend these components' themes, and scoping them under the respective classes will let you change the combobox styles:
 
 ```scss
 $custom-drop-down-theme: drop-down-theme(
-    $background-color: #d9f5d6,
-    $header-text-color: #1a5214,
-    $item-text-color: #1a5214,
+  $background-color: #d9f5d6,
+  $header-text-color: #1a5214,
+  $item-text-color: #1a5214,
 
-    $focused-item-background: #72da67,
-    $focused-item-text-color: #1a5214,
-    $hover-item-background: #a0e698,
-    $hover-item-text-color: #1a5214,
+  $focused-item-background: #72da67,
+  $focused-item-text-color: #1a5214,
+  $hover-item-background: #a0e698,
+  $hover-item-text-color: #1a5214,
 
-    $selected-item-background: #a0e698,
-    $selected-item-text-color: #1a5214,
-    $selected-hover-item-background: #72da67,
-    $selected-hover-item-text-color: #1a5214,
-    $selected-focus-item-background: #72da67,
-    $selected-focus-item-text-color: #1a5214,
+  $selected-item-background: #a0e698,
+  $selected-item-text-color: #1a5214,
+  $selected-hover-item-background: #72da67,
+  $selected-hover-item-text-color: #1a5214,
+  $selected-focus-item-background: #72da67,
+  $selected-focus-item-text-color: #1a5214,
 );
 
 $custom-checkbox-theme: checkbox-theme(
-    $border-radius: 10px,
-    $fill-color: #1a5214,
-    $empty-color: #1a5214,
+  $border-radius: 10px,
+  $fill-color: #1a5214,
+  $empty-color: #1a5214,
 );
 ```
 
 The last step is to include the component's theme.
 
 ```scss
-:host {
-    @include css-vars($custom-combo-theme);
-    @include css-vars($custom-drop-down-theme);
-    @include css-vars($custom-checkbox-theme);
+:host ::ng-deep {
+  @include css-vars($custom-combo-theme);
+  @include css-vars($custom-drop-down-theme);
+  @include css-vars($custom-checkbox-theme);
 }
 ```
 
 > [!NOTE]
-> The [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) component uses the [IgxOverlay](overlay.md) service to hold and display the combobox items list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check the [IgxOverlay Styling Guide](overlay-styling.md).
+> The [`IgxCombo`]({environment:angularApiUrl}/classes/igxcombocomponent.html) component uses the [`IgxOverlay`](overlay.md) service to hold and display the combobox items list container. To properly scope your styles you might have to use an [`OverlaySetting.outlet`]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check the [`IgxOverlay Styling Guide`](overlay-styling.md). Also is necessary to use `::ng-deep` when we are styling the components.
 
 > [!Note]
-> The default `type` of the `IgxCombo` is `box` unlike the [IgxSelect](select.md) where it is `line`.
+> The default `type` of the `IgxCombo` is `box` unlike the [`IgxSelect`](select.md) where it is `line`.
 
 ### Demo
 
@@ -351,12 +352,11 @@ The last step is to include the component's theme.
 ## Known Issues
 
 - The combobox input that displays the selected items is not editable. However, due to browser specifics in FireFox, the cursor is visible.
-- The combobox does not have input for sizing its height. In the future, the [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component will expose an option that allows custom sizing, and then the [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) will use the same functionality for proper styling and better consistency.
 - When the combobox is bound to an array of primitive data which contains `undefined` (i.e. `[ undefined, ...]`), `undefined` is not displayed in the dropdown. When it is bound to an array of complex data (i.e. objects) and the value used for `valueKey` is `undefined`, the item will be displayed in the dropdown, but cannot be selected.
 - When the combobox is bound to a remote service and there is a predefined selection, its input will remain blank until the requested data is loaded.
 
 > [!NOTE]
-> The combobox uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for the combobox. For more details see [igxForOf Known Issues](for-of.md#known-limitations) section.
+> The combobox uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for the combobox. For more details see [`igxForOf Known Issues`](for-of.md#known-limitations) section.
 
 ## API Summary
 <div class="divider--half"></div>

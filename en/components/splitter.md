@@ -224,13 +224,13 @@ You can change the default styles of the splitter by creating a new theme that e
 ```scss
 // In splitter-styling-sample.component.scss
 
-$splitter-theme: splitter-theme(
-    $bar-color: #011627,
-    $handle-color: #ECAA53,
-    $expander-color: #ECAA53,
-    $border-radius: 0,
-    $focus-color: #ECAA53,
-    $size: 4px
+$custom-splitter-theme: splitter-theme(
+  $bar-color: #011627,
+  $handle-color: #ecaa53,
+  $expander-color: #ecaa53,
+  $border-radius: 0,
+  $focus-color: #ecaa53,
+  $size: 4px
 );
 ```
 
@@ -240,21 +240,6 @@ The next step is to pass the custom splitter theme:
 
 ```scss
 @include css-vars($custom-splitter-theme);
-```
-
-### Using Theme Overrides
-
-In order to style components for Internet Explorer 11, we have to use different approach, since it doesn't support CSS variables. 
-
-If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. On the other side, in order to prevent the custom theme to leak to other components, be sure to include the `:host` selector before `::ng-deep`:
-
-```scss
-:host {
-    ::ng-deep {
-        // Pass the custom splitter theme to the `igx-splitter` mixin
-        @include splitter($custom-splitter-theme);
-    }
-}
 ```
 
 ### Demo

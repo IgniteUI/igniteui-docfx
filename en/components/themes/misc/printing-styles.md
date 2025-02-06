@@ -23,7 +23,7 @@ You can do that in your theme `SCSS` file:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
 // Turn the print styles off by setting the $print-layout param to false.
-core($print-layout: false)
+@include core($print-layout: false)
 
 // Add the theme and the palette.
 @include theme($default-palette);
