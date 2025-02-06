@@ -5,20 +5,17 @@ _keywords: Angular Action Strip component, Angular Action Strip directive, Angul
 ---
 
 # Angular Action Strip Directive Overview
+
 <p class="highlight">
 The Ignite UI for Angular Action Strip component provides an overlay area containing one or more actions allowing additional UI and functionality to be shown on top of a specific target container upon user interaction e.g. hover. The container should be positioned relatively as the Action Strip attempts to overlay it and is itself positioned absolutely. Despite overlapped by an Action Strip, the main interactions and user access to the target container remain available.
 </p>
 
-<div class="divider--half"></div>
-
 ## Angular Action Strip Example
-
 
 <code-view style="height: 400px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/menus/action-strip-paragraph" alt="Angular Action Strip Example">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -32,7 +29,7 @@ ng add igniteui-angular
 
 For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
-The next step is to import the `IgxActionStripModule` in your **app.module.ts** file. 
+The next step is to import the `IgxActionStripModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -80,45 +77,45 @@ export class HomeComponent {}
 Now that you have the Ignite UI for Angular Action Strip module or directives imported, you can start with a basic configuration of the `igx-action-strip` component.
 
 ## Using the Angular Action Strip Component
+
 To initialize and position the Action Strip correctly, it needs to be inside a relatively positioned container:
 
 ```html
 <div style="position:relative; width:100px; height:100px;">
-    <igx-action-strip>
-        <button igxButton (click)="makeTextBold()">
-            <igx-icon>format_bold</igx-icon>
-        </button>
-    </igx-action-strip>
-<div>
+  <igx-action-strip>
+    <button igxButton (click)="makeTextBold()">
+      <igx-icon>format_bold</igx-icon>
+    </button>
+  </igx-action-strip>
+</div>
 ```
 
 By default, the Action Strip will be visible, but this can be configured via the [`hidden`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#hidden) @Input property.
 
 ### Menu look and feel
+
 For scenarios where more than three action items will be shown, it is best to use [`IgxActionStripMenuItem`]({environment:angularApiUrl}/classes/igxactionstripmenuitemdirective.html) directive. Any item within the Action Strip marked with the `*igxActionStripMenuItem` structural directive will be shown in a dropdown, revealed upon toggling the more button i.e. the three dots representing the last action.
 
 ```html
 <div style="position:relative; width:100px; height:100px;">
-    <igx-action-strip>
-        <button *igxActionStripMenuItem igxButton (click)="alignTextLeft()">
-            <igx-icon>format_align_left</igx-icon>
-        </button>
-        <button *igxActionStripMenuItem igxButton (click)="alignTextCenter()">
-            <igx-icon>format_align_center</igx-icon>
-        </button>
-        <button *igxActionStripMenuItem igxButton (click)="alignTextRight()">
-            <igx-icon>format_align_right</igx-icon>
-        </button>
-    </igx-action-strip>
+  <igx-action-strip>
+    <button *igxActionStripMenuItem igxButton (click)="alignTextLeft()">
+      <igx-icon>format_align_left</igx-icon>
+    </button>
+    <button *igxActionStripMenuItem igxButton (click)="alignTextCenter()">
+      <igx-icon>format_align_center</igx-icon>
+    </button>
+    <button *igxActionStripMenuItem igxButton (click)="alignTextRight()">
+      <igx-icon>format_align_right</igx-icon>
+    </button>
+  </igx-action-strip>
 </div>
 ```
-
 
 <code-view style="height: 400px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/menus/action-strip-paragraph-menu" >
 </code-view>
-
 
 ### Reusing the Action Strip
 
@@ -129,25 +126,25 @@ The best way to do so is via the [`show`]({environment:angularApiUrl}/classes/ig
 > [!NOTE]
 > The `show` API method uses [Angular Renderer2](https://angular.io/api/core/Renderer2) to append the Action Strip to that `element`.
 
-
 ## Usage in Grids
 
 The Action Strip provides additional functionality and UI for the IgxGrid.
 This can be utilized via grid action components and we are providing two default ones:
+
 - [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html) - includes functionality and UI related to grid editing. It allows you to quickly toggle edit mode for cells or rows, depending on the value of the `rowEditable` option of the grid and whether deleting rows is allowed.
 - [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html) - includes functionality and UI related to grid row pinning. It allows you to quickly pin rows and navigate between pinned rows and their disabled counterparts.
 
 ```html
 <igx-grid [data]="data" [rowEditable]="true" [primaryKey]="'ID'">
-    <igx-column *ngFor="let c of columns" [field]="c.field">
-    </igx-column>
+  <igx-column *ngFor="let c of columns" [field]="c.field"> </igx-column>
 
-    <igx-action-strip #actionStrip>
-        <igx-grid-pinning-actions></igx-grid-pinning-actions>
-        <igx-grid-editing-actions></igx-grid-editing-actions>
-    </igx-action-strip>
+  <igx-action-strip #actionStrip>
+    <igx-grid-pinning-actions></igx-grid-pinning-actions>
+    <igx-grid-editing-actions></igx-grid-editing-actions>
+  </igx-action-strip>
 </igx-grid>
 ```
+
 > [!NOTE]
 > These components inherit [`IgxGridActionsBaseDirective`]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html) and when creating a custom grid action component, it should also inherit `IgxGridActionsBaseDirective`.
 
@@ -165,33 +162,30 @@ This can be utilized via grid action components and we are providing two default
 ## Styling
 
 To customize the Action Strip, you first need to import the `index` file, where all styling functions and mixins are located.
+
 ```scss
 @use "igniteui-angular/theming" as *;
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
+
 Next, we have to create a new theme that extends the `action-strip-theme` and pass the parameters which we'd like to change:
+
 ```scss
 $custom-strip: action-strip-theme(
-    $background: rgba(150, 133, 143, 0.4),
-    $actions-background: rgba(109, 121, 147, 0.6),
-    $icon-color: null,
-    $delete-action: null,
-    $actions-border-radius: 0
+  $background: rgba(150, 133, 143, 0.4),
+  $actions-background: rgba(109, 121, 147, 0.6),
+  $icon-color: null,
+  $delete-action: null,
+  $actions-border-radius: 0,
 );
 ```
 
 The last step is to include the newly created component theme in our application.
 
-When `$legacy-support` is set to `false`(default), include the component css variables like this:
 ```scss
 @include css-vars($custom-strip);
-```
-
-When `$legacy-support` is set to `true`, include the component theme like this:
-```scss
-@include action-strip($custom-strip);
 ```
 
 <code-view style="height: 400px;" 
@@ -200,17 +194,10 @@ When `$legacy-support` is set to `true`, include the component theme like this:
            iframe-src="{environment:demosBaseUrl}/menus/action-strip-styling" >
 </code-view>
 
-## Known Issues and Limitations
-
-- Using the Action Strip component on IE11 requires the explicit import of the array polyfill in polyfill.ts of the angular application.
-
-    ```typescript
-    import 'core-js/es7/array';
-    ```
-
 ## API and Style References
 
 For more detailed information regarding the Action Strip API, refer to the following links:
+
 * [`IgxActionStripComponent API`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html)
 
 The following built-in CSS styles helped us achieve this Action Strip layout:
@@ -224,10 +211,10 @@ Additional components and/or directives that can be used within the Action Strip
 * [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html)
 * [`IgxDividerDirective`]({environment:angularApiUrl}/classes/igxdividerdirective.html)
 
-
 <div class="divider"></div>
 
 ## Theming Dependencies
+
 * [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
 * [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
 * [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-drop-down-theme)

@@ -11,7 +11,6 @@ While most tooltips have a limited number of available positions, with the [`igx
 
 ## Angular Tooltip Example
 
-
 <code-view style="height:150px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/tooltip-simple" alt="Angular Tooltip Example">
@@ -54,20 +53,24 @@ import { IGX_TOOLTIP_DIRECTIVES, IgxAvatarComponent } from 'igniteui-angular';
 // import { IGX_TOOLTIP_DIRECTIVES, IgxAvatarComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
-    selector: 'app-home',
-    template: `
-    <igx-avatar class="avatar" #target="tooltipTarget" [igxTooltipTarget]="tooltipRef"
-                src="assets/images/avatar/10.jpg" size="medium" shape="circle">
+  selector: 'app-home',
+  template: `
+    <igx-avatar
+      class="avatar"
+      #target="tooltipTarget"
+      [igxTooltipTarget]="tooltipRef"
+      src="assets/images/avatar/10.jpg"
+      size="medium"
+      shape="circle"
+    >
     </igx-avatar>
 
-    <div #tooltipRef="tooltip" igxTooltip>
-        Her name is Madelyn James
-    </div>
-    `,
-    styleUrls: ['home.component.scss'],
-    standalone: true,
-    imports: [IGX_TOOLTIP_DIRECTIVES, IgxAvatarComponent]
-    /* or imports: [IgxTooltipDirective, IgxTooltipTargetDirective, IgxAvatarComponent] */
+    <div #tooltipRef="tooltip" igxTooltip>Her name is Madelyn James</div>
+  `,
+  styleUrls: ['home.component.scss'],
+  standalone: true,
+  imports: [IGX_TOOLTIP_DIRECTIVES, IgxAvatarComponent],
+  /* or imports: [IgxTooltipDirective, IgxTooltipTargetDirective, IgxAvatarComponent] */
 })
 export class HomeComponent {}
 ```
@@ -92,6 +95,7 @@ export class AppModule {}
 ```
 
 ### Tooltip target
+
 The avatar will be our target and all we have to do is set the [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive on it, which basically marks our element as one that has a tooltip.
 
 - The [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive extends the [`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) directive.
@@ -100,12 +104,18 @@ The avatar will be our target and all we have to do is set the [`igxTooltipTarge
 ```html
 <!--simpleTooltip.component.html-->
 
-<igx-avatar class="avatar" #target="tooltipTarget" igxTooltipTarget
-            src="assets/images/avatar/10.jpg" size="medium" shape="circle">
+<igx-avatar
+  class="avatar"
+  #target="tooltipTarget"
+  igxTooltipTarget
+  src="assets/images/avatar/10.jpg"
+  size="medium"
+  shape="circle">
 </igx-avatar>
 ```
 
 ### Tooltip
+
 Now let's create the tooltip element itself! Since we want a simple text tooltip, we will define an ordinary div element with text inside and set the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) directive on it, which marks it as a tooltip.
 
 - The [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) directive extends the [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) directive.
@@ -114,29 +124,32 @@ Now let's create the tooltip element itself! Since we want a simple text tooltip
 ```html
 <!--simpleTooltip.component.html-->
 
-<div #tooltipRef="tooltip" igxTooltip>
-    Her name is Madelyn James
-</div>
+<div #tooltipRef="tooltip" igxTooltip>Her name is Madelyn James</div>
 ```
 
 ### Attach tooltip to target
+
 Now that we have both our target and tooltip defined, all that's left for us to do is assign the tooltip's reference to the [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) selector of the target.
 
 ```html
 <!--simpleTooltip.component.html-->
 
-<igx-avatar class="avatar" #target="tooltipTarget" [igxTooltipTarget]="tooltipRef"
-            src="assets/images/avatar/10.jpg" size="medium" shape="circle">
+<igx-avatar
+  class="avatar"
+  #target="tooltipTarget"
+  [igxTooltipTarget]="tooltipRef"
+  src="assets/images/avatar/10.jpg"
+  size="medium"
+  shape="circle">
 </igx-avatar>
 
-<div #tooltipRef="tooltip" igxTooltip>
-    Her name is Madelyn James
-</div>
+<div #tooltipRef="tooltip" igxTooltip>Her name is Madelyn James</div>
 ```
 
 If everything went well, you should see the sample shown in the [Tooltip Demo](#angular-tooltip-example) section.
 
 ### Show/Hide delay settings
+
 What if we want to control the amount of time that should pass before showing and hiding the tooltip? For this purpose we can use the [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showDelay) and the [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hideDelay) properties of the [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive. Both properties are of type **number** and take time in milliseconds.
 
 > [!NOTE]
@@ -167,38 +180,38 @@ We will also use the following styles for our application:
 /* richTooltip.component.css */
 
 .location:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .map {
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 252px;
-    background-image: url(assets/images/card/media/infragisticsMap.png);
-    border: 1px solid #D4D4D4;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 252px;
+  background-image: url(assets/images/card/media/infragisticsMap.png);
+  border: 1px solid #d4d4d4;
 }
 
 .locationTooltip {
-    width: 310px;
-    background-color: var(--igx-grays-700);
-    padding: 3px;
-    font-size: 13px;
+  width: 310px;
+  background-color: var(--igx-grays-700);
+  padding: 3px;
+  font-size: 13px;
 }
 
 .locationTooltipContent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
-    margin-right: 10px;
-    min-width: 25px;
-    width: 45px;
-    height: 45px;
+  margin-right: 10px;
+  min-width: 25px;
+  width: 45px;
+  height: 45px;
 }
 ```
 
@@ -208,9 +221,13 @@ Let's start by creating our map. We need a simple div that has for a background 
 <!--richTooltip.component.html-->
 
 <div class="map">
-    <igx-icon class="location" [style.color]="'blue'" fontSet="material"
-    [igxTooltipTarget]="locationTooltip">location_on</igx-icon>
-    ...
+  <igx-icon
+    class="location"
+    [style.color]="'blue'"
+    fontSet="material"
+    [igxTooltipTarget]="locationTooltip"
+    >location_on</igx-icon>
+  ...
 </div>
 ```
 
@@ -220,27 +237,33 @@ Now for the tooltip! For its content, we will create a container that will be po
 <!--richTooltip.component.html-->
 
 <div class="wrapper">
-    <div class="map">
-        <igx-icon class="location" [style.color]="'blue'" fontSet="material"
-        [igxTooltipTarget]="locationTooltip">location_on</igx-icon>
+  <div class="map">
+    <igx-icon
+      class="location"
+      [style.color]="'blue'"
+      fontSet="material"
+      [igxTooltipTarget]="locationTooltip"
+      >location_on</igx-icon>
 
-        <div class="locationTooltip" #locationTooltip="tooltip" igxTooltip>
-            <div class="locationTooltipContent">
-                <igx-avatar class="logo" src="assets/images/card/avatars/igLogo.png"
-                    size="medium" shape="square"></igx-avatar>
-                <div>
-                    <div>Infragistics Inc. HQ</div>
-                    <div>2 Commerce Dr, Cranbury, NJ 08512, USA</div>
-                </div>
-            </div>
+    <div class="locationTooltip" #locationTooltip="tooltip" igxTooltip>
+      <div class="locationTooltipContent">
+        <igx-avatar
+          class="logo"
+          src="assets/images/card/avatars/igLogo.png"
+          size="medium"
+          shape="square">
+        </igx-avatar>
+        <div>
+          <div>Infragistics Inc. HQ</div>
+          <div>2 Commerce Dr, Cranbury, NJ 08512, USA</div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
-
 ```
 
 If all went well, this is how our location and tooltip should look like:
-
 
 <code-view style="height:300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -250,6 +273,7 @@ If all went well, this is how our location and tooltip should look like:
 <div class="divider--half"></div>
 
 ## Overlay configuration
+
 Both the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) and [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directives use the [`IgxOverlayService`](overlay.md) to open and close the respective tooltip element.
 
 The [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive exposes an [`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) property (inherited from the [`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)), which can be used to customize the animations of our tooltip, its position in the UI and a lot more! If this property is not set, then default overlay settings will be used.
@@ -266,15 +290,15 @@ To get started with styling the tooltip, we need to import the `index` file, whe
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 Following the simplest approach, we create a new theme that extends the [`tooltip-theme`]({environment:sassApiUrl}/index.html#function-tooltip-theme) and accepts the `$text-color`, `$background` and the `$border-radius` parameters.
 
 ```scss
 $dark-tooltip: tooltip-theme(
-    $text-color: #ECAA53,
-    $background: #011627,
-    $border-radius: 6px
+  $text-color: #ecaa53,
+  $background: #011627,
+  $border-radius: 6px,
 );
 ```
 
@@ -284,63 +308,27 @@ $dark-tooltip: tooltip-theme(
 Since the tooltip uses the [`IgxOverlayService`](overlay.md), in order for our custom theme to reach down the tooltip that we want to style, we will provide a specific outlet where the tooltip will be placed in the DOM when it is visible.
 
 ```html
-<igx-avatar #target="tooltipTarget" [igxTooltipTarget]="tooltipRef"
-            [igxToggleOutlet]="outlet">
+<igx-avatar
+  #target="tooltipTarget"
+  [igxTooltipTarget]="tooltipRef"
+  [igxToggleOutlet]="outlet"
+>
 </igx-avatar>
 
 <div #outlet="overlay-outlet" igxOverlayOutlet>
-    <div #tooltipRef="tooltip" igxTooltip>
-        Her name is Madelyn James
-    </div>
+  <div #tooltipRef="tooltip" igxTooltip>Her name is Madelyn James</div>
 </div>
 ```
 
-> [!NOTE]
-> In order to learn more about various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay.md), you can take a look at the [Overlay styling topic](overlay-styling.md).
-
-### Including Themes
-
-<div class="divider"></div>
-
 The last step is to **include** the component theme in our application.
-
-If `$legacy-support` is set to `true`, include the **component theme** like that:
-
-```scss
- @include tooltip($dark-tooltip);
-```
->[!NOTE]
->If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
-
-```scss
-:host {
-     ::ng-deep {
-        @include tooltip($dark-tooltip);
-    }
-}
-```
-
-<div class="divider"></div>
-
-If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
 
 ```scss
 @include css-vars($dark-tooltip);
 ```
 
->[!NOTE]
->If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
-
-```scss
-:host {
-    @include css-vars($dark-tooltip);
-}
-```
-
 So now our styled tooltip should look like this:
 
 ### Demo
-
 
 <code-view style="height:200px" 
            no-theming
@@ -352,9 +340,10 @@ So now our styled tooltip should look like this:
 
 ## Accessibility
 
-Elements with the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) directive have an autogenerated [`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id) property (if not set by the developer), a tooltip [`role`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#role) and the **aria-hidden** attribute that is automatically updated depending on whether the tooltip is visible or not. By setting the **aria-describedby** attribute of the target to its respective tooltip's [`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id), a reference will be provided to the tooltip element. This provides screenreaders the information needed to read out the tooltip's contents when the end-user triggers the tooltip.
+Elements with the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) directive have an autogenerated [`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id) property (if not set by the developer), a tooltip [`role`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#role) and the **aria-hidden** attribute that is automatically updated depending on whether the tooltip is visible or not. By setting the **aria-describedby** attribute of the target to its respective tooltip's [`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id), a reference will be provided to the tooltip element. This provides screen readers the information needed to read out the tooltip's contents when the end-user triggers the tooltip.
 
 Extra care should be taken in the following scenarios:
+
 - The tooltip's content is too complex to be automatically interpreted.
 - The tooltip is used with a manually implemented behavior (e.g. manually show/hide) instead of the built-in one.
 - The target element is unfocusable.

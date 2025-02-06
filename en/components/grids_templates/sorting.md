@@ -27,7 +27,7 @@ _canonicalLink: grid/sorting
 In Ignite UI for Angular @@igComponent, data sorting is enabled on a per-column level, meaning that the **@@igSelector** can have a mix of sortable and non-sortable columns. Performing angular sort actions enables you to change the display order of the records based on specified criteria.
 
 >[!NOTE]
-> Up until now, grouping/sorting worked in conjuction with each other. In 13.2 version, a new behavior which decouples gropuing from sorting is introduced. For example - clearing the grouping will not clear sorting expressions in the grid or vice versa. Still, if a column is both sorted and grouped, grouped expressions take precedence.
+> Up until now, grouping/sorting worked in conjunction with each other. In 13.2 version, a new behavior which decouples grouping from sorting is introduced. For example - clearing the grouping will not clear sorting expressions in the grid or vice versa. Still, if a column is both sorted and grouped, grouped expressions take precedence.
 
 ## Angular @@igComponent Sorting Overview Example
 
@@ -40,7 +40,7 @@ In Ignite UI for Angular @@igComponent, data sorting is enabled on a per-column 
 
 }
 @@if (igxName === 'IgxTreeGrid') {
-Additionally there is a custom contextmenu added for sorting using **@@igSelector**'s [`contextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#contextMenu) Output.
+Additionally there is a custom context menu added for sorting using **@@igSelector**'s [`contextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#contextMenu) Output.
 
 
 <code-view style="height:550px" 
@@ -50,7 +50,7 @@ Additionally there is a custom contextmenu added for sorting using **@@igSelecto
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-Additionally there is a custom contextmenu added for sorting using **@@igSelector**'s [`contextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#contextMenu) Output.
+Additionally there is a custom context menu added for sorting using **@@igSelector**'s [`contextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#contextMenu) Output.
 
 
 <code-view style="height:510px" 
@@ -255,86 +255,19 @@ Following the simplest approach, we create a new theme that extends the [`grid-t
 
 ```scss
 $custom-theme: grid-theme(
-    $sorted-header-icon-color: #ffb06a,
-    $sortable-header-icon-hover-color: black
+  $sorted-header-icon-color: #ffb06a,
+  $sortable-header-icon-hover-color: black
 );
 ```
+
+>[!NOTE]
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
+
 The last step is to **include** the component mixins: 
 
 ```scss
- @include grid($custom-theme);
+@include css-vars($custom-theme);
 ```
-
->[!NOTE]
- >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
-
- ```scss
-:host {
-    ::ng-deep {
-        @include grid($custom-theme);
-    }
-}
-```
-
-### Defining a color palette
-
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
-
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
-
-```scss
-$black-color: black;
-$orange-color: #ffb06a;
-
-$custom-palette: palette($primary: $black-color, $secondary: $orange-color);
-```
-
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
-
-```scss
-$custom-theme: grid-theme(
-    $sorted-header-icon-color: color($custom-palette, "secondary", 500),
-    $sortable-header-icon-hover-color: color($custom-palette, "primary", 500)
-);
-```
-
->[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
-
-### Using Schemas
-
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/sass/schemas.md). A **schema** is a recipe of a theme.
-
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`_light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid):  
-
-```scss
-// Extending the light grid schema
-$custom-grid-schema: extend($_light-grid,
-    (
-        sorted-header-icon-color: (igx-color:('secondary', 500)),
-        sortable-header-icon-hover-color: (igx-color:('primary', 500))
-    )
-);
-```
-
-In order to apply our custom schema we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
-
-```scss
-// Extending the global light-schema
-$my-custom-schema: extend($light-schema, 
-    (
-        igx-grid: $custom-grid-schema
-    )
-);
-
-// Defining our custom theme with the custom schema
-$custom-theme: grid-theme(
-  $palette: $custom-palette,
-  $schema: $my-custom-schema
-);
-```
-
-Don't forget to include the themes in the same way as it was demonstrated above.
 
 @@if (igxName === 'IgxGrid') {
 ### Demo

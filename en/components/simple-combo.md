@@ -318,40 +318,44 @@ The sample below demonstrates remote binding using the [dataPreLoad]({environmen
            iframe-src="{environment:demosBaseUrl}/lists/simple-combo-remote" alt="Angular Simple Combo Remote Binding Example">
 </code-view>
 
-## Angular Simple ComboBox Styling
+## Styling
 
-Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the simple combobox appearance. First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file:
+Using the [`Ignite UI for Angular Theming`](themes/index.md), we can greatly alter the simple combobox appearance. First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file:
 
 ```scss
 @use 'igniteui-angular/theming' as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [combo-theme]({environment:sassApiUrl}/index.html#function-combo-theme) and accepts the `$empty-list-background` parameter:
+Following the simplest approach, we create a new theme that extends the [`combo-theme`]({environment:sassApiUrl}/index.html#function-combo-theme) and accepts the `$empty-list-background` parameter:
+
 ```scss
 $custom-simple-combo-theme: combo-theme(
-    $empty-list-background: #1a5214
+  $empty-list-background: #1a5214
 );
 ```
 
-The [IgxSimpleComboComponent]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) uses the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) internally as an item container. It also includes the [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component. Creating new themes, that extend these components' themes, and scoping them under the respective classes will let's you change the simple combobox styles:
+The [`IgxSimpleComboComponent`]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) uses the [`IgxDropDownComponent`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) internally as an item container. It also includes the [`IgxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component. Creating new themes, that extend these components' themes, and scoping them under the respective classes will let's you change the simple combobox styles:
 
 ```scss
 $custom-drop-down-theme: drop-down-theme(
-    $background-color: #d9f5d6,
-    $header-text-color: #1a5214,
-    $item-text-color: #1a5214,
+  $background-color: #d9f5d6,
+  $header-text-color: #1a5214,
+  $item-text-color: #1a5214,
 
-    $focused-item-background: #72da67,
-    $focused-item-text-color: #1a5214,
-    $hover-item-background: #a0e698,
-    $hover-item-text-color: #1a5214,
+  $focused-item-background: #72da67,
+  $focused-item-text-color: #1a5214,
+  $hover-item-background: #a0e698,
+  $hover-item-text-color: #1a5214,
 
-    $selected-item-background: #a0e698,
-    $selected-item-text-color: #1a5214,
-    $selected-hover-item-background: #72da67,
-    $selected-hover-item-text-color: #1a5214,
-    $selected-focus-item-background: #72da67,
-    $selected-focus-item-text-color: #1a5214,
+  $selected-item-background: #a0e698,
+  $selected-item-text-color: #1a5214,
+  $selected-hover-item-background: #72da67,
+  $selected-hover-item-text-color: #1a5214,
+  $selected-focus-item-background: #72da67,
+  $selected-focus-item-text-color: #1a5214,
 );
 ```
 
@@ -359,16 +363,16 @@ The last step is to include the component's theme.
 
 ```scss
 :host ::ng-deep {
-    @include css-vars($custom-combo-theme);
-    @include css-vars($custom-drop-down-theme);
+  @include css-vars($custom-combo-theme);
+  @include css-vars($custom-drop-down-theme);
 }
 ```
 
 > [!NOTE]
-> The [IgxSimpleCombo]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) component uses the [IgxOverlay](overlay.md) service to hold and display the simple combobox items list container. To properly scope your styles you might have to use an [OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check the [IgxOverlay Styling Guide](overlay-styling.md).
+> The [`IgxSimpleCombo`]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) component uses the [`IgxOverlay`](overlay.md) service to hold and display the simple combobox items list container. To properly scope your styles you might have to use an [`OverlaySetting.outlet`]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check the [`IgxOverlay Styling Guide`](overlay-styling.md). Also is necessary to use `::ng-deep` when we are styling the components.
 
 > [!Note]
-> The default `type` of the `IgxSimpleCombo` is `box` unlike the [IgxSelect](select.md) where it is `line`.
+> The default `type` of the `IgxSimpleCombo` is `box` unlike the [`IgxSelect`](select.md) where it is `line`.
 
 ### Demo
 
