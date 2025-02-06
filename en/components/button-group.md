@@ -5,6 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Angular Button Group Component Overview
+
 <p class="highlight">Angular Button Group component is used to organize buttons into styled button groups with horizontal/vertical alignment, single/multiple selection and toggling.</p>
 
 ## Angular Button Group Example
@@ -26,7 +27,7 @@ ng add igniteui-angular
 
 For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
-The next step is to import the `IgxButtonGroupModule` in your **app.module.ts** file. 
+The next step is to import the `IgxButtonGroupModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -65,7 +66,7 @@ import { IGX_BUTTON_GROUP_DIRECTIVES, IgxIconComponent } from 'igniteui-angular'
         <button igxButton>
             <igx-icon>format_align_right</igx-icon>
         </button>
-        <button igxButton [selected]="true">
+        <button igxButton selected>
             <igx-icon>format_align_justify</igx-icon>
         </button>
     </igx-buttongroup>
@@ -89,24 +90,25 @@ Use the [`igx-buttongroup`]({environment:angularApiUrl}/classes/igxbuttongroupco
 ```html
 <!-- sample.component.html -->
 <igx-buttongroup>
-    <button igxButton>
-        <igx-icon>format_align_left</igx-icon>
-    </button>
-    <button igxButton>
-        <igx-icon>format_align_center</igx-icon>
-    </button>
-    <button igxButton>
-        <igx-icon>format_align_right</igx-icon>
-    </button>
-    <button igxButton [selected]="true">
-        <igx-icon>format_align_justify</igx-icon>
-    </button>
+  <button igxButton>
+    <igx-icon>format_align_left</igx-icon>
+  </button>
+  <button igxButton>
+    <igx-icon>format_align_center</igx-icon>
+  </button>
+  <button igxButton>
+    <igx-icon>format_align_right</igx-icon>
+  </button>
+  <button igxButton selected>
+    <igx-icon>format_align_justify</igx-icon>
+  </button>
 </igx-buttongroup>
 ```
 
 ## Examples
 
 ### Alignment
+
 Use the [`alignment`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#alignment) input property to set the orientation of the buttons in the button group.
 
 ```typescript
@@ -122,13 +124,12 @@ public alignment = ButtonGroupAlignment.vertical;
 ```html
 <!-- sample.component.html -->
 <igx-buttongroup [alignment]="alignment">
-    <button igxButton>Sofia</button>
-    <button igxButton>London</button>
-    <button igxButton [selected]="true">New York</button>
-    <button igxButton>Tokyo</button>
+  <button igxButton>Sofia</button>
+  <button igxButton>London</button>
+  <button igxButton selected>New York</button>
+  <button igxButton>Tokyo</button>
 </igx-buttongroup>
 ```
-
 
 <code-view style="height: 220px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -139,7 +140,8 @@ public alignment = ButtonGroupAlignment.vertical;
 
 ### Selection
 
-In order to configure the `igx-buttongroup` selection, you could use its [selectionMode]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#selectionMode) property. This property accepts the following three modes: 
+In order to configure the `igx-buttongroup` selection, you could use its [selectionMode]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#selectionMode) property. This property accepts the following three modes:
+
 - **single** - default selection mode of the button group. A single button can be selected/deselected by the user.
 - **singleRequired** - mimics a radio group behavior. Only one button can be selected and once initial selection is made, deselection is not possible through user interaction.
 - **multi** - multiple buttons in the group can be selected and deselected.
@@ -151,14 +153,14 @@ The sample below demonstrates the exposed `igx-buttongroup` selection modes:
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-4" >
 </code-view>
 
-
 ### Size
+
 The `--ig-size` CSS custom property can be used to control the size of the button group.
 
 ```scss
 /* sample.component.scss */
 igx-buttongroup {
-    --ig-size: var(--ig-size-small);
+  --ig-size: var(--ig-size-small);
 }
 ```
 
@@ -167,14 +169,13 @@ igx-buttongroup {
 <igx-buttongroup></igx-buttongroup>
 ```
 
-
 <code-view style="height: 80px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-5" >
 </code-view>
 
-
 ### Custom toggle buttons
+
 Use the [`values`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#values) input property to set an array of customized buttons in the button group.
 
 ```typescript
@@ -240,12 +241,10 @@ public ngOnInit() {
 <igx-buttongroup [selectionMode]="'multi'" [values]="bordersButtons"></igx-buttongroup>
 ```
 
-
 <code-view style="height: 90px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-3" >
 </code-view>
-
 
 ## Styling
 
@@ -256,27 +255,25 @@ To get started with styling the button group, we need to import the `index` file
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 Following the simplest approach, we create a new theme that extends the [`button-group-theme`]({environment:sassApiUrl}/index.html#function-button-group-theme) and accepts some of the parameters that style the button group's items in their different states.
 
 ```scss
 $custom-button-group: button-group-theme(
-    $item-text-color: #fdfdfd,
-    $item-background: #2f4d6a,
-    $item-hover-text-color: #fdfdfd,
-    $item-hover-background: #1f3347,
-    $item-selected-text-color: #fdfdfd,
-    $item-selected-background: #1f3347,
-    $item-selected-hover-background: #1f3347,
-    $disabled-text-color: gray,
-    $disabled-background-color: lightgray
+  $item-text-color: #fdfdfd,
+  $item-background: #2f4d6a,
+  $item-hover-text-color: #fdfdfd,
+  $item-hover-background: #1f3347,
+  $item-selected-text-color: #fdfdfd,
+  $item-selected-background: #1f3347,
+  $item-selected-hover-background: #1f3347,
+  $disabled-text-color: gray,
+  $disabled-background-color: lightgray,
 );
 ```
 
 As seen, the `button-group-theme` exposes some useful parameters for basic styling of its items. If you want to drill deeper and change some button specific parameters, you can create a new theme that extends the `button-theme` and scope it under the respective button group class.
-
-### Using CSS variables 
 
 The last step is to include the component's theme.
 
@@ -284,22 +281,7 @@ The last step is to include the component's theme.
 @include css-vars($custom-button-group);
 ```
 
-### Using Theme Overrides
-
-In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables. 
-
-If the component is using the [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`:
-
-```scss
-:host {
-    ::ng-deep {
-        @include button-group($custom-button-group);
-    }
-}
-```
-
 ### Demo
-
 
 <code-view style="height: 200px" 
            no-theming
@@ -307,8 +289,8 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-style" >
 </code-view>
 
-
 ## API References
+
 <div class="divider--half"></div>
 
 * [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
@@ -317,15 +299,16 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 * [IgxButton Styles]({environment:sassApiUrl}/index.html#function-button-theme)
 
 ## Theming Dependencies
+
 * [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
 * [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
 * [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
 
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
-

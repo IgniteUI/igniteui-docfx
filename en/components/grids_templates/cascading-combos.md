@@ -20,7 +20,7 @@ The sample below demonstrates how `Grid` works with nested `Cascading Combos`.
 ## Setup
 In order enable column editing, make sure [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) property is set to **true**.
 
-Once the column editig is enabled, you can start by adding your [Single Select ComboBox](../simple-combo.md). Please note that here in order to have only one single selection available, you will need to use [igxSimpleCombo](../simple-combo.md) instead of modifying the igxCombo.
+Once the column editing is enabled, you can start by adding your [Single Select ComboBox](../simple-combo.md). Please note that here in order to have only one single selection available, you will need to use [igxSimpleCombo](../simple-combo.md) instead of modifying the igxCombo.
 
 To get started with the [Simple ComboBox component](../simple-combo.md#angular-simple-combobox-features), first you need to import the `IgxSimpleComboModule` in your **app.module.ts** file:
 

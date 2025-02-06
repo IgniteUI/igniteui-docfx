@@ -6,7 +6,6 @@ _keywords: Angular Badge component, Angular Badge control, Ignite UI for Angular
 
 # Angular Badge Component Overview
 <p class="highlight">Angular Badge is a component used in conjunction with avatars, navigation menus, or other components in an application when a visual notification is needed. Badges are usually  designed as icons with a predefined style to communicate information, success, warnings, or errors.</p>
-<div class="divider"></div>
 
 ## Angular Badge Example
 
@@ -117,6 +116,20 @@ We can change the badge shape through the `shape` attribute setting its value to
 ```
 
 If everything's done right, you should see the demo sample shown above in your browser.
+
+### Badge Size
+
+The size of the badge can be controlled using the `--size` variable. It will make sure that the badge sizes proportionally in both directions. Keep in mind, however, that badges containing text values use the `caption` typography style for its font-size and line-height. For that reason, when setting the `--size` of a badge containing text to values below 16px, you will also need to modify its typography.
+
+Example:
+```scss
+igx-badge {
+  --size: 12px;
+
+  font-size: calc(var(--size) / 2);
+  line-height: normal;
+}
+```
 
 ### Badge Icon
 
@@ -288,54 +301,17 @@ Following the simplest approach, we create a new theme that extends the [`badge-
 
 ```scss
 $custom-badge-theme: badge-theme(
-    $border-color: white,
-    $border-width: 1px,
-    $icon-color: white,
-    $text-color: black,
-    $shadow: 3px 2px 5px 0px rgba(0,0,0,0.4)
+  $border-radius: 15px,
+  $icon-color: white,
+  $text-color: black,
 );
 ```
 
-### Including Themes
-
-<div class="divider"></div>
-
-The last step is to **include** the component theme in our application.
-
-If `$legacy-support` is set to `true`, include the **component theme** like that:
-
-```scss
- @include badge($custom-badge-theme);
-```
->[!NOTE]
->If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
-
-```scss
-:host {
-     ::ng-deep {
-        @include badge($custom-badge-theme);
-    }
-}
-```
-
-<div class="divider"></div>
-
-If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
+To include the new theme we use the `css-vars` mixin:
 
 ```scss
 @include css-vars($custom-badge-theme);
 ```
-
->[!NOTE]
->If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
-
-```scss
-:host {
-    @include css-vars($custom-badge-theme);
-}
-```
-
-Don't forget to include the themes in the same way as it was demonstrated above.
 
 ### Demo
 

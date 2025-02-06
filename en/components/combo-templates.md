@@ -135,10 +135,10 @@ Use selector `[igxComboClearIcon]`:
 When used with templates, the `igxComboClearIcon` and the `igxComboToggleIcon` selectors, change how the respective buttons appear in the combobox input. Passing content inside of the `igx-combo` also allows templating of the combobox input similar to the way an `igx-input-group` can be templated (using `igx-prefix`, `igx-suffix` and `igxLabel`). The code snippet below illustrates how to add an appropriate label and prefix to the combobox input:
 
 ```html
-    <igx-combo>
-        <label igxLabel>Locations</label>
-        <igx-prefix><igx-icon>pin_drop</igx-icon></igx-prefix>
-    </igx-combo>
+<igx-combo>
+    <label igxLabel>Locations</label>
+    <igx-prefix><igx-icon>pin_drop</igx-icon></igx-prefix>
+</igx-combo>
 ```
 
 ## API Summary

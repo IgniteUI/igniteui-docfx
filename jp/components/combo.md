@@ -232,7 +232,7 @@ export class MyExampleCombo {
 ```typescript
 public singleSelection(event: IComboSelectionChangeEventArgs) {
     if (event.added.length) {
-        event.newSelection = event.added;
+        event.newValue = event.added;
     }
 }
 ```
