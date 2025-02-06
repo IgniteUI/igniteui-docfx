@@ -298,7 +298,7 @@ Setting `none` to the both animation type inputs disables stepper animations.
 ## Keyboard Navigation
 
 Angular Stepper provides a rich variety of keyboard interactions to the end-user. This functionality is enabled by default and allows end-users to easily navigate through the steps. 
-The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) navigation is compliant with [W3 accessability standards](https://www.w3.org/WAI/ARIA/apg/example-index/tabs/tabs-manual.html#accessibilityfeatures) and convenient to use.
+The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) navigation is compliant with [W3 accessibility standards](https://www.w3.org/WAI/ARIA/apg/example-index/tabs/tabs-manual.html#accessibilityfeatures) and convenient to use.
 
 **Key Combinations**
 
@@ -318,44 +318,48 @@ The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponen
 The Stepper Component is also available in the low-code, [drag and drop App Builder™](https://www.infragistics.com/products/appbuilder). 
 
 ## Angular Stepper Styling
+
 Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the `igx-stepper` appearance. 
 
 First, in order to use the functions exposed by the theme engine, we need to import the `index` file in our style file: 
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
 Following the simplest approach, we create a new theme that extends the [stepper-theme]({environment:sassApiUrl}/index.html#function-stepper-theme) and pass the parameters, which we would like to change: 
+
 ```scss
 $custom-stepper-theme: stepper-theme(
-    $current-title-color: #351e65,
-    $current-subtitle-color: #5f4691,
-    $step-separator-style: "solid"
+  $indicator-background: #fff,
+
+  $current-indicator-background: #f6cd28,
+  $current-indicator-outline: #351e65,
+
+  $current-title-color: #351e65,
+  $current-subtitle-color: #5f4691,
+
+  $complete-indicator-background: #351e65,
+  $complete-indicator-outline: #351e65,
+
+  $complete-title-color: red,
+  $complete-subtitle-color: #5f4691,
+
+  $border-radius-step-header: 16px,
+  $border-radius-indicator: 10px 4px 10px 4px,
+
+  $step-separator-color: #f6cd28,
+  $complete-step-separator-color: #351e65,
 );
-
 ```
-
-### Using CSS Variables
 
 The last step is to include the component's theme.
+
 ```scss
-:host {
-    @include css-vars($custom-stepper-theme);
-}
-```
-
-### Using Theme Overrides
-
-In order to style components for older browsers, like IE11, we have to use a different approach, since CSS variables are not supported there.
-
-If the component is using the [Emulated](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`: 
-```scss
-:host {
-    ::ng-deep {
-        @include stepper($custom-stepper-theme);    
-    }
-}
+@include css-vars($custom-stepper-theme);
 ```
 
 ### Demo
