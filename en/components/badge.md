@@ -117,6 +117,20 @@ We can change the badge shape through the `shape` attribute setting its value to
 
 If everything's done right, you should see the demo sample shown above in your browser.
 
+### Badge Size
+
+The size of the badge can be controlled using the `--size` variable. It will make sure that the badge sizes proportionally in both directions. Keep in mind, however, that badges containing text values use the `caption` typography style for its font-size and line-height. For that reason, when setting the `--size` of a badge containing text to values below 16px, you will also need to modify its typography.
+
+Example:
+```scss
+igx-badge {
+  --size: 12px;
+
+  font-size: calc(var(--size) / 2);
+  line-height: normal;
+}
+```
+
 ### Badge Icon
 
 In addition to material icons, the `igx-badge` component also supports usage of [Material Icons Extended](../components/material-icons-extended.md) and any other custom icon set. To add an icon from the material icons extended set inside your badge component, first you have to register it: 
