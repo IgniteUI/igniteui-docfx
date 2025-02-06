@@ -228,14 +228,14 @@ The styles that `.h-sample-column` class applies are:
 
 ```scss
 .h-sample-column {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 1 0%;
 
-    igx-card-header {
-        padding-bottom: 0;
-    }
+  igx-card-header {
+      padding-bottom: 0;
+  }
 }
 ```
 
@@ -340,51 +340,18 @@ Following the simplest approach, we create a new theme that extends the [`card-t
 
 ```scss
 $colorful-card: card-theme(
-    $background: #011627,
-    $header-text-color: #FEFEFE,
-    $subtitle-text-color: #ECAA53,
-    $content-text-color: #FEFEFE
+  $background: #011627,
+  $header-text-color: #fefefe,
+  $subtitle-text-color: #ecaa53,
+  $content-text-color: #fefefe
 );
 ```
 As seen, the `card-theme` exposes some useful parameters for basic styling of its items. 
 
-### Including themes
-
-<div class="divider"></div>
-
 The last step is to **include** the component theme in our application.
-
-If `$legacy-support` is set to `true`, include the **component theme** like that:
-
-```scss
- @include card($colorful-card);
-```
->[!NOTE]
->If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
-
-```scss
-:host {
-     ::ng-deep {
-        @include card($colorful-card);
-    }
-}
-```
-
-<div class="divider"></div>
-
-If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
 
 ```scss
 @include css-vars($colorful-card);
-```
-
->[!NOTE]
->If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
-
-```scss
-:host {
-    @include css-vars($colorful-card);
-}
 ```
 
 ### Angular Card Demo

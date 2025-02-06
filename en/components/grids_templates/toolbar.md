@@ -439,8 +439,7 @@ The following sample demonstrates how to customize the exported files:
 When using the default toolbar exporter component, whenever an export operation takes place the toolbar will show a progress indicator while the operation is in progress.
 Moreover, users can set the toolbar [showProgress]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#showProgress) property and use for their own long running operations
 or just as another way to signify an action taking place in the grid.
-The sample belows uses has significant amount of data, in order to increase the time needed for data export so the progressbar can be seen. Additionally it has another button
-that simulates a long running operation in the grid:
+The sample below has significant amount of data. While the data is being exported, the progress bar is shown. Additionally, it has another button that simulates a long running operation in the grid:
 
 @@if (igxName === 'IgxGrid') {
 
@@ -544,10 +543,10 @@ First, let's create a new palette.
 
 ```scss
 $my-dark-palette: palette(
-    $primary: #2466ff,
-    $secondary: #FFCD0F,
-    $surface: #2a2b2f,
-    $grays: #fff,
+  $primary: #2466ff,
+  $secondary: #ffcd0f,
+  $surface: #2a2b2f,
+  $grays: #fff,
 );
 
 $my-dark-color: color($my-dark-palette, 'surface');
@@ -557,10 +556,9 @@ Now, create a new theme that extends the [`grid-toolbar-theme`]({environment:sas
 
 ```scss
 $dark-grid-toolbar-theme: grid-toolbar-theme(
-    $palette: $my-dark-palette,
-    $background-color: $my-dark-color,
-    $title-text-color: color($my-dark-palette, 'secondary'),
-    $dropdown-background: $my-dark-color,
+  $background-color: $my-dark-color,
+  $title-text-color: color($my-dark-palette, 'secondary'),
+  $dropdown-background: $my-dark-color,
 );
 ```
 
@@ -568,69 +566,46 @@ To theme the column actions menus of the toolbar, we have to change the theme of
 
 ```scss
 $dark-column-actions-theme: column-actions-theme(
-    $palette: $my-dark-palette,
-    $title-color: color($my-dark-palette, 'secondary'),
-    $background-color: color($my-dark-palette, 'surface')
+  $title-color: color($my-dark-palette, 'secondary'),
+  $background-color: color($my-dark-palette, 'surface')
 );
 ```
 
-Since the column actions are using other components - igx-button, igx-checkbox, and igx-input-group, we need to change their themes to match our new toolbar theme.
+Since the column actions are using other components - `igx-button` and `igx-checkbox` we need to change their themes to match our new toolbar theme.
 
 ```scss
 $dark-button-theme: button-theme(
-    $palette: $my-dark-palette,
-    $outlined-background: color($my-dark-palette, 'secondary'),
-    $outlined-hover-background: color($my-dark-palette, 'grays', 100),
-    $outlined-hover-text-color: color($my-dark-palette, 'secondary')
+  $outlined-background: color($my-dark-palette, 'secondary'),
+  $outlined-hover-background: color($my-dark-palette, 'grays', 100),
+  $outlined-hover-text-color: color($my-dark-palette, 'secondary')
 );
 
 $dark-checkbox-theme: checkbox-theme(
-    $palette: $my-dark-palette,
-    $tick-color: $my-dark-color,
-);
-
-$dark-input-group-theme: input-group-theme(
-    $palette: $my-dark-palette
+  $tick-color: $my-dark-color,
 );
 ```
 
 The last step is to **include** the newly created themes.
 
 ```scss
-:host {
-    @include grid-toolbar($dark-grid-toolbar-theme);
-    @include column-actions($dark-column-actions-theme);
-    @include checkbox($dark-checkbox-theme);
-    @include input-group($dark-input-group-theme);
-    @include button($dark-button-theme);
-}
+@include css-vars($dark-grid-toolbar-theme);
+@include css-vars($dark-column-actions-theme);
+@include css-vars($dark-checkbox-theme);
+@include css-vars($dark-button-theme);
 ```
 
 >[!NOTE]
->If `$legacy-support` is set to `false(default)`, include the component css variables like that:
+>If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep` to style the components inside the grid toolbar component:
 
 ```scss
+@include css-vars($dark-grid-toolbar-theme);
+
 :host {
-    @include css-vars($dark-grid-toolbar-theme);
+  ::ng-deep {
     @include css-vars($dark-column-actions-theme);
     @include css-vars($dark-checkbox-theme);
-    @include css-vars($dark-input-group-theme);
     @include css-vars($dark-button-theme);
-}
-```
-
->[!NOTE]
->If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
-
-```scss
-:host {
-    ::ng-deep {
-        @include grid-toolbar($dark-grid-toolbar-theme);
-        @include column-actions($dark-column-actions-theme);
-        @include checkbox($dark-checkbox-theme);
-        @include input-group($dark-input-group-theme);
-        @include button($dark-button-theme);
-    }
+  }
 }
 ```
 

@@ -147,21 +147,21 @@ Users can choose one of the three predefined `igxIconButton` sizes by using the 
 
 As you can see from the sample above, we can also use the `igxIconButton` directive to turn elements like `span` and `div` into Ignite UI for Angular styled icon buttons. 
 
-## Angular Icon Button Styling
+## Icon Button Styling
 
 Following the simplest approach, we use CSS variables to customize the appearance of the icon button:
 
 ```scss
 [igxIconButton="contained"] {
-    --background: #011627;
-    --foreground: #fefefe;
-    --hover-foreground: #011627dc;
-    --hover-background: #ecaa53;
-    --focus-foreground: #011627dc;
-    --focus-background: #ecaa53;
-    --focus-border-color: #0116276c;
-    --active-foreground: #011627dc;
-    --active-background: #ecaa53;
+  --background: #011627;
+  --foreground: #fefefe;
+  --hover-foreground: #011627dc;
+  --hover-background: #ecaa53;
+  --focus-foreground: #011627dc;
+  --focus-background: #ecaa53;
+  --focus-border-color: #0116276c;
+  --active-foreground: #011627dc;
+  --active-background: #ecaa53;
 }
 ```
 

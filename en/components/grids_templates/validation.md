@@ -109,7 +109,7 @@ That service has the following public APIs:
 - [`clear`]({environment:angularApiUrl}/classes/IgxGridValidationService.html#clear) - clears state for record by id or clears all state if no id is provided.
 - [`markAsTouched`]({environment:angularApiUrl}/classes/IgxGridValidationService.html#markAsTouched) - marks the related record/field as touched.
 
-Invalid states will persis until the validation errors in them are fixed according to the validation rule or they are cleared.
+Invalid states will persist until the validation errors in them are fixed according to the validation rule or they are cleared.
 
 ## Validation triggers
 
@@ -604,10 +604,10 @@ In order to change the error color you can use the css variable `--igx-error-500
 Changing the default error template allows setting custom classes and styles:
 ```html
 <ng-template igxCellValidationError let-cell='cell' let-defaultErr='defaultErrorTemplate'>
-    <div class="validator-container">
-        <ng-container *ngTemplateOutlet="defaultErr">
-        </ng-container>
-    </div>
+  <div class="validator-container">
+    <ng-container *ngTemplateOutlet="defaultErr">
+    </ng-container>
+  </div>
 </ng-template>
 ```
 
@@ -619,16 +619,16 @@ public rowStyles = {
     background: (row: RowType) => row.validation.status === 'INVALID' ? '#FF000033' : '#00000000'
 };
 public cellStyles = {
-    'invalid-cell': (rowData, columnKey) => {
-        const pKey = this.grid.primaryKey;
-        const cell = this.grid.getCellByKey(rowData[pKey], columnKey);
-        return cell && cell.validation.status === 'INVALID';
-    }
+  'invalid-cell': (rowData, columnKey) => {
+    const pKey = this.grid.primaryKey;
+    const cell = this.grid.getCellByKey(rowData[pKey], columnKey);
+    return cell && cell.validation.status === 'INVALID';
+  }
 }
 ```
 ```html
 <igx-grid [rowStyles]="rowStyles">
-    <igx-column field="ReorderLevel" header="ReorderLever" required [cellClasses]="cellStyles">
+  <igx-column field="ReorderLevel" header="ReorderLever" required [cellClasses]="cellStyles">
 ```
 }
 
@@ -638,25 +638,25 @@ public rowStyles = {
     background: (row: RowType) => row.validation.status === 'INVALID' ? '#FF000033' : '#00000000'
 };
 public cellStyles = {
-    'invalid-cell': (rowData, columnKey) => {
-        let cell = this.hierarchicalGrid.getCellByKey(rowData, columnKey);
-        // search in child grids
-        if (!cell) {
-            for (let grid of this.childGrid.gridAPI.getChildGrids()) {
-                cell = grid.getCellByKey(rowData, columnKey);
-                if (cell) break;
-            }
-        }
-        return cell && cell.validation.status === 'INVALID';
+  'invalid-cell': (rowData, columnKey) => {
+    let cell = this.hierarchicalGrid.getCellByKey(rowData, columnKey);
+    // search in child grids
+    if (!cell) {
+      for (let grid of this.childGrid.gridAPI.getChildGrids()) {
+        cell = grid.getCellByKey(rowData, columnKey);
+        if (cell) break;
+      }
     }
+    return cell && cell.validation.status === 'INVALID';
+  }
 }
 ```
 ```html
 <igx-hierarchical-grid [rowStyles]="rowStyles">
-    <igx-column field="Artist" [editable]="true" [dataType]="'string'" required [cellClasses]="cellStyles">
-    ...
-    <igx-row-island [key]="'Albums'" [rowStyles]="rowStyles">
-        <igx-column field="Album" [editable]="true" [dataType]="'string'" required [cellClasses]="cellStyles">
+  <igx-column field="Artist" [editable]="true" [dataType]="'string'" required [cellClasses]="cellStyles">
+  ...
+  <igx-row-island [key]="'Albums'" [rowStyles]="rowStyles">
+    <igx-column field="Album" [editable]="true" [dataType]="'string'" required [cellClasses]="cellStyles">
 ```
 }
 
@@ -667,16 +667,16 @@ public rowStyles = {
     background: (row: RowType) => row.cells.find(c => c.validation.errors !== null && c.validation.errors !== undefined) ? '#FF000033' : '#00000000'
 };
 public cellStyles = {
-    'invalid-cell': (rowData, columnKey) => {
-        const pKey = this.treeGrid.primaryKey;
-        const cell = this.treeGrid.getCellByKey(rowData[pKey], columnKey);
-        return cell && cell.validation.status === 'INVALID';
-    }
+  'invalid-cell': (rowData, columnKey) => {
+      const pKey = this.treeGrid.primaryKey;
+      const cell = this.treeGrid.getCellByKey(rowData[pKey], columnKey);
+      return cell && cell.validation.status === 'INVALID';
+  }
 }
 ```
 ```html
 <igx-tree-grid [rowStyles]="rowStyles">
-        <igx-column *ngFor="let c of columns" [field]="c.field" [dataType]="c.dataType" [header]="c.label" [required]="c.required" [cellClasses]="cellStyles">
+  <igx-column *ngFor="let c of columns" [field]="c.field" [dataType]="c.dataType" [header]="c.label" [required]="c.required" [cellClasses]="cellStyles">
 ```
 }
 
