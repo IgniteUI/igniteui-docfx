@@ -87,7 +87,7 @@ Now that you have the Ignite UI for Angular Query Builder module or directives i
 
 ## Using the Angular Query Builder
 
-If no expression tree is initially set, you start by choosing entity and which of its fields the query should return. After that, conditions or sub-groups can be added. 
+If no expression tree is initially set, you start by choosing an entity and which of its fields the query should return. After that, conditions or sub-groups can be added. 
 
 In order to add a condition you select a field, an operand based on the field data type and a value if the operand is not unary. The operands `In` and `Not In` will allow you to create an inner query with conditions for a different entity instead of simply providing a value. Once the condition is committed, a chip with the condition information appears. By clicking or hovering the chip, you have the options to modify it or add another condition or group right after it.
 
