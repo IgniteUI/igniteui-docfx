@@ -7,7 +7,7 @@ _language: ja
 
 # 仮想ドロップダウン
 
-Ignite UI for Angular Drop Down コンポーネントは、選択可能な項目リストを表示するために、[IgxForOf](for-of.md) ディレクティブの使用方法を完全に統合できます。
+Ignite UI for Angular Drop Down コンポーネントは、選択可能な項目リストを表示するために、[`IgxForOf`](for-of.md) ディレクティブの使用方法を完全に統合できます。
 
 ## Angular 仮想ドロップダウンの例
 
@@ -124,7 +124,7 @@ export class DropDownVirtualComponent {
 ```scss
 // drop-drop-virtual.component.scss
 .drop-down-virtual-wrapper {
-    overflow: hidden;
+  overflow: hidden;
 }
 ```
 
@@ -132,7 +132,7 @@ export class DropDownVirtualComponent {
 `igx-drop-down` は、`*igxFor` 構造ディレクティブを使用したリモート データの部分的な読み込みをサポートします。構成はローカル項目の構成に似ていますが、主な違いはデータ部分の読み込み方法です。
 
 ### テンプレート
-ドロップダウン テンプレートは、以前の例 と比べてそれほど変更する必要はありません。それでも、ラッピング div を指定し、それに応じてスタイルを設定し、`*igxFor` の完全な設定を書き出す必要があります。リモートソースからデータを取得するので、データが観測可能になるように指定して Angular の `非同期`パイプに渡す必要があります。
+ドロップダウン テンプレートは、以前の例 と比べてそれほど変更する必要はありません。それでも、ラッピング div を指定し、それに応じてスタイルを設定し、`*igxFor` の完全な設定を書き出す必要があります。リモートソースからデータを取得するので、データが観測可能になるように指定して Angular の `async` パイプに渡す必要があります。
 
 ```html
 <igx-drop-down #remoteDropDown>
@@ -260,7 +260,7 @@ export class DropDownRemoteComponent implements OnInit, OnDestroy {
  - リストが仮想化されている場合、`<igx-drop-down-item-group>` を項目のグループ化に使用することはできません。代わりに `isHeader` プロパティを使用します。
  - `items` アクセサーは、現在仮想化ビューにあるヘッダー以外のロップダウン項目のリストのみを返します。
  - [`dropdown.selectedItem`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selectedItem) は、タイプ  `{ value: any, index: number }` です。
- - [`selecting`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selecting) によって発行されたオブジェクトは、`const emittedEvent: { newSelection: { value: any, index: number }, oldSelection: { value: any, index: number }, cancel: boolean, } ` に変更されます。
+ - [`selection`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selection) によって発行されたオブジェクトは、`const emittedEvent: { newSelection: { value: any, index: number }, oldSelection: { value: any, index: number }, cancel: boolean, } ` に変更されます。
  - `dropdown.setSelectedItem` は、**データセット内の項目のインデックス**を使用して呼び出す必要があります。
  - ドロップダウン項目の `[selected]` 入力を設定しても、ドロップダウン選択内の項目はマークされません。
 

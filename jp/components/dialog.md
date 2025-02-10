@@ -7,7 +7,6 @@ _language: ja
 
 # Angular Dialog Window (ダイアログ ウィンドウ) コンポーネントの概要
 <p class="highlight">Ignite UI for Angular Dialog Window コンポーネントをメッセージを表示するか、入力フォームを表示するために使用します。コンポーネントはアプリケーション コンテンツの中央上にダイアログ ウィンドウを開きます。キャンセル可能な規格の警告メッセージを提供できます。</p>
-<div class="divider"></div>
 
 ## Angular Dialog の例
 
@@ -266,10 +265,10 @@ params: {
 
 ```scss
 $my-dialog-theme: dialog-theme(
-    $background: #011627,
-    $title-color: #ECAA53,
-    $message-color: #FEFEFE,
-    $border-radius: .3,
+  $background: #011627,
+  $title-color: #ECAA53,
+  $message-color: #FEFEFE,
+  $border-radius: .3,
 );
 ```
 
@@ -280,9 +279,9 @@ $my-dialog-theme: dialog-theme(
 
 ```html
 <div igxOverlayOutlet>
-    <igx-dialog #dialog1>
-        <!-- .... -->
-    </igx-dialog>
+  <igx-dialog #dialog1>
+      <!-- .... -->
+  </igx-dialog>
 </div>
 ```
 
@@ -295,36 +294,18 @@ $my-dialog-theme: dialog-theme(
 
 最後にコンポーネントのテーマを**含めます**。
 
-`$legacy-support` が `true` に設定されている場合、**テーマ**を以下のように含めます。
-
-```scss
- @include dialog($my-dialog-theme);
-```
->[!NOTE]
->コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`解除する`必要があります。
-
-```scss
-:host {
-     ::ng-deep {
-        @include dialog($my-dialog-theme);
-    }
-}
-```
-
-<div class="divider"></div>
-
-`$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
-
 ```scss
 @include css-vars($my-dialog-theme);
 ```
 
 >[!NOTE]
->コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合においても、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
+>コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、スタイルを適用するには `::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
 :host {
+  ::ng-deep {
     @include css-vars($my-dialog-theme);
+  }
 }
 ```
 

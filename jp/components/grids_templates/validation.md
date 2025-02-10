@@ -605,10 +605,10 @@ public stateMessage(cell: CellType) {
 デフォルトのエラー テンプレートを変更することで、カスタム クラスとスタイルを設定できます。
 ```html
 <ng-template igxCellValidationError let-cell='cell' let-defaultErr='defaultErrorTemplate'>
-    <div class="validator-container">
-        <ng-container *ngTemplateOutlet="defaultErr">
-        </ng-container>
-    </div>
+  <div class="validator-container">
+    <ng-container *ngTemplateOutlet="defaultErr">
+    </ng-container>
+  </div>
 </ng-template>
 ```
 
@@ -620,16 +620,16 @@ public rowStyles = {
     background: (row: RowType) => row.validation.status === 'INVALID' ? '#FF000033' : '#00000000'
 };
 public cellStyles = {
-    'invalid-cell': (rowData, columnKey) => {
-        const pKey = this.grid.primaryKey;
-        const cell = this.grid.getCellByKey(rowData[pKey], columnKey);
-        return cell && cell.validation.status === 'INVALID';
-    }
+  'invalid-cell': (rowData, columnKey) => {
+    const pKey = this.grid.primaryKey;
+    const cell = this.grid.getCellByKey(rowData[pKey], columnKey);
+    return cell && cell.validation.status === 'INVALID';
+  }
 }
 ```
 ```html
 <igx-grid [rowStyles]="rowStyles">
-    <igx-column field="ReorderLevel" header="ReorderLever" required [cellClasses]="cellStyles">
+  <igx-column field="ReorderLevel" header="ReorderLever" required [cellClasses]="cellStyles">
 ```
 }
 
@@ -639,25 +639,25 @@ public rowStyles = {
     background: (row: RowType) => row.validation.status === 'INVALID' ? '#FF000033' : '#00000000'
 };
 public cellStyles = {
-    'invalid-cell': (rowData, columnKey) => {
-        let cell = this.hierarchicalGrid.getCellByKey(rowData, columnKey);
-        // search in child grids
-        if (!cell) {
-            for (let grid of this.childGrid.gridAPI.getChildGrids()) {
-                cell = grid.getCellByKey(rowData, columnKey);
-                if (cell) break;
-            }
-        }
-        return cell && cell.validation.status === 'INVALID';
+  'invalid-cell': (rowData, columnKey) => {
+    let cell = this.hierarchicalGrid.getCellByKey(rowData, columnKey);
+    // search in child grids
+    if (!cell) {
+      for (let grid of this.childGrid.gridAPI.getChildGrids()) {
+        cell = grid.getCellByKey(rowData, columnKey);
+        if (cell) break;
+      }
     }
+    return cell && cell.validation.status === 'INVALID';
+  }
 }
 ```
 ```html
 <igx-hierarchical-grid [rowStyles]="rowStyles">
-    <igx-column field="Artist" [editable]="true" [dataType]="'string'" required [cellClasses]="cellStyles">
-    ...
-    <igx-row-island [key]="'Albums'" [rowStyles]="rowStyles">
-        <igx-column field="Album" [editable]="true" [dataType]="'string'" required [cellClasses]="cellStyles">
+  <igx-column field="Artist" [editable]="true" [dataType]="'string'" required [cellClasses]="cellStyles">
+  ...
+  <igx-row-island [key]="'Albums'" [rowStyles]="rowStyles">
+    <igx-column field="Album" [editable]="true" [dataType]="'string'" required [cellClasses]="cellStyles">
 ```
 }
 
@@ -668,16 +668,16 @@ public rowStyles = {
     background: (row: RowType) => row.cells.find(c => c.validation.errors !== null && c.validation.errors !== undefined) ? '#FF000033' : '#00000000'
 };
 public cellStyles = {
-    'invalid-cell': (rowData, columnKey) => {
-        const pKey = this.treeGrid.primaryKey;
-        const cell = this.treeGrid.getCellByKey(rowData[pKey], columnKey);
-        return cell && cell.validation.status === 'INVALID';
-    }
+  'invalid-cell': (rowData, columnKey) => {
+      const pKey = this.treeGrid.primaryKey;
+      const cell = this.treeGrid.getCellByKey(rowData[pKey], columnKey);
+      return cell && cell.validation.status === 'INVALID';
+  }
 }
 ```
 ```html
 <igx-tree-grid [rowStyles]="rowStyles">
-        <igx-column *ngFor="let c of columns" [field]="c.field" [dataType]="c.dataType" [header]="c.label" [required]="c.required" [cellClasses]="cellStyles">
+  <igx-column *ngFor="let c of columns" [field]="c.field" [dataType]="c.dataType" [header]="c.label" [required]="c.required" [cellClasses]="cellStyles">
 ```
 }
 

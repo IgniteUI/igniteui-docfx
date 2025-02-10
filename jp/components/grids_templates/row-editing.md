@@ -26,8 +26,8 @@ _canonicalLink: grid/row-editing
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-row-editing" alt="Angular @@igComponent 行編集の例">
 </code-view>
 
@@ -35,17 +35,17 @@ _canonicalLink: grid/row-editing
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:590px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:590px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-row-edit" alt="Angular @@igComponent 行編集の例">
 </code-view>
 
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-   
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-editing" alt="Angular @@igComponent 行編集の例">
 </code-view>
 
@@ -311,7 +311,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
     - コンテンツをレンダリングするための [`igx-banner`](../banner.md)
     - [`igx-button`](../button.md) はデフォルトのテンプレートでレンダリングされます (`[完了]` ボタンと `[キャンセル]` ボタンの場合)。
 
-以下の例では、これら 2 つのコンポーネントのスタイル設定オプション ([ボタン スタイル](../button.md#angular-ボタンのスタイル設定) & [バナー スタイル](../banner.md#スタイル設定)) を使用して、@@igxName の行編集のエクスペリエンスをカスタマイズします。
+以下の例では、これら 2 つのコンポーネントのスタイル設定オプション ([`ボタンのスタイル設定`](../button.md#スタイル設定) & [`バナーのスタイル設定`](../banner.md#スタイル設定)) を使用して、@@igxName の行編集のエクスペリエンスをカスタマイズします。
 次に、現在のセルのエディターと背景をより明確にするためにスタイルを設定します。セル スタイリングの詳細については、[こちら](cell-editing.md#スタイル設定)をご覧ください。
 
 ### テーマのインポート
@@ -333,42 +333,36 @@ export class HGridRowEditingSampleComponent implements OnInit {
 行編集の背景にカスタムの [`banner テーマ`]({environment:sassApiUrl}/index.html#function-banner-theme)を定義して、定義済みのパレットの 1 つである `$purple-palette` を使用することができます。
 
 ```scss
-    $my-light-gray: #e3e3e3;
-    $my-banner-palette: $purple-palette;
-
-    $banner-theme: banner-theme( 
-        $banner-background: $my-light-gray,
-        $banner-message-color: color($my-banner-palette, "secondary", 600)
-    );
+$banner-theme: banner-theme(
+  $banner-background: #e3e3e3,
+  $banner-message-color: color($purple-palette, "secondary", 600)
+);
 ```
 
 ここでは、色を生成するために `my-banner-palette` を [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) (テーマ ライブラリによって公開) と共に使用しています。
 
 ### テーマを含む
 
-次に Sass `@include` ステートメントを使用してテーマを適用します。新しく定義された `$banner-theme` を [`igx-banner mixin`]({environment:sassApiUrl}/index.html#mixin-igx-banner) で渡します。
+次に Sass `@include` ステートメントを使用してテーマを適用します。新しく定義された `$banner-theme` を [`css-vars mixin`]({environment:sassApiUrl}/index.html#mixin-css-vars) で渡します。
 
 ```scss
-@include banner($banner-theme); 
+@include css-vars($banner-theme);
 ```
-
-これにより、カスタム バナー テーマが行編集オーバーレイに適用されます。ただし、グローバル スタイル ファイルで定義したため、これらのスタイルはアプリケーションの**すべて**のバナーにも適用されます。
 
 ### コンポーネント スタイル
 
-行編集オーバーレイは他の多くのコンポーネントのテーマを利用するため、グローバル スタイルでスタイル設定するとアプリケーションの他の部分 (バナー、ボタンなど) に影響を与える可能性があります。回避策としては、バナー テーマのスコープがあります。@@igSelector を含むコンポーネントでスタイル ([`theme/index`インポート](#テーマのインポート)を含む) を定義できます。
+行編集オーバーレイは他の多くのコンポーネントのテーマを利用するため、グローバル スタイルでスタイル設定するとアプリケーションの他の部分 (バナー、ボタンなど) に影響を与える可能性があります。それを防ぐ最善の方法は、バナー テーマを適用する特定のコンポーネントのスタイル ファイルにスコープすることです。
 
 >[!NOTE]
->コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、グリッドのスタイルを設定するには、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
->ステートメントがコンポーネントの外にある要素に影響を与えないよう、ステートメントを `:host` セレクター内にラップします。
+>コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、グリッド行編集オーバーレイのスタイルを設定するには、`::ng-deep`を使用してこのカプセル化を解除する必要があります。
 
 ```scss
 // custom.component.scss
 
 :host {
-    ::ng-deep {
-        @include banner($banner-theme);
-    }
+  ::ng-deep {
+    @include css-vars($banner-theme);
+  }
 }
 ```
 
@@ -394,7 +388,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 </@@igSelector>
 ```
 
-カスタム ボタンを定義した後は、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) を使用してスタイルを設定できます。[こちら](../button.md#angular-ボタンのスタイル設定)で `igx-button` のスタイリングについてさらに学ぶことができます。`完了`と`キャンセル`のカスタム テーマを作成できます。
+カスタム ボタンを定義した後は、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) を使用してスタイルを設定できます。[こちら](../button.md#スタイル設定)で `igx-button` のスタイリングについてさらに学ぶことができます。`[完了]` と `[キャンセル]` のカスタム テーマを作成できます。
 
 ```scss
 // custom.component.scss
@@ -406,11 +400,11 @@ $button-theme: button-theme(
 
 ...
 .custom-buttons {
-    @include button($button-theme);
-  }
+  @include css-vars($button-theme);
+}
 ```
 
-`@include` ステートメントを` .custom-buttons` でスコープ設定して、`[完了]` ボタンと`[キャンセル]` ボタンにのみ適用されるようにします。
+`@include` ステートメントを `.custom-buttons` でスコープ設定して、`[完了]` ボタンと `[キャンセル]` ボタンにのみ適用されるようにします。
 
 ### デモ
 
@@ -418,9 +412,9 @@ $button-theme: button-theme(
 
 @@if (igxName === 'IgxGrid'){
 
-<code-view style="height:560px" 
+<code-view style="height:560px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-row-edit-style" >
 </code-view>
 
@@ -429,9 +423,9 @@ $button-theme: button-theme(
 
 @@if (igxName === 'IgxHierarchicalGrid'){
 
-<code-view style="height:560px" 
+<code-view style="height:560px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-edit-style" >
 </code-view>
 
@@ -440,24 +434,24 @@ $button-theme: button-theme(
 
 @@if (igxName === 'IgxTreeGrid'){
 
-<code-view style="height:560px" 
+<code-view style="height:560px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-row-edit-style" >
 </code-view>
 
 }
 
 >[!NOTE]
->このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
+>このサンプルは、`Change Theme` (テーマの変更) から選択したグローバル テーマに影響を受けません。
 
 ## 既知の問題と制限
 
 - グリッドに `primaryKey` が設定されておらず、リモート データ シナリオが有効になっている場合 (ページング、ソート、フィルタリング、スクロール時に、グリッドに表示されるデータを取得するためのリモート サーバーへのリクエストがトリガーされる場合)、データ要求が完了すると、行は次の状態を失います:
-    * Row Selection
-    * Row Expand/collapse
-    * Row Editing
-    * Row Pinning
+    * 行の選択
+    * 行の展開/縮小
+    * 行の編集
+    * 行のピン固定
 
 ## API リファレンス
 

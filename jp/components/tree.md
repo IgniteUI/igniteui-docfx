@@ -343,33 +343,24 @@ Ignite UI for Angular IgxTree は、サーバーから最小限のデータの�
 最も単純なアプローチに従って、[tree-theme]({environment:sassApiUrl}/index.html#function-tree-theme) を拡張し、変更したいパラメーターを渡す新しいテーマを作成します。
 ```scss
 $custom-tree-theme: tree-theme(
-    $background-selected: #ffe6cc,
-    $background-active: #ecaa53,
-    $background-active-selected: #ff8c1a
+  $background-selected: #ffe6cc,
+  $background-active: #ecaa53,
+  $background-active-selected: #ff8c1a
 );
 ```
 
-### CSS 変数の使用
-
 最後にコンポーネントのテーマを含めます。
 ```scss
-:host {
-    @include css-vars($custom-tree-theme);
-}
+@include css-vars($custom-tree-theme);
 ```
 
-### テーマ オーバーライドの使用
+### デモ
 
-Internet Explorer 11 などの古いブラウザーのコンポーネントのスタイルを設定するには、CSS 変数がサポートされていないため、別のアプローチを使用する必要があります。
+<code-view style="height: 400px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/lists/tree-styling" alt="Tree のスタイル設定">
+</code-view>
 
-コンポーネントが [Emulated](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化に解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
-```scss
-:host {
-    ::ng-deep {
-        @include tree($custom-tree-theme);    
-    }
-}
-```
 ## 既知の問題と制限
 
 |制限|説明|
@@ -377,6 +368,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントの�
 | 再帰的なテンプレート ノード | `igx-tree` は、テンプレートを介した igx-tree-nodes の再帰的な作成をサポートしていません。[詳細](https://github.com/IgniteUI/igniteui-angular/wiki/Tree-Specification#assumptions-and-limitations)をご覧ください。すべてのノードを手動で宣言する必要があります。つまり、非常に深い階層を視覚化する場合は、テンプレート ファイルのサイズに影響します。ツリーは、主にレイアウト/ナビゲーション コンポーネントとして使用することを目的としています。多数のレベルの深度と同種のデータを含む階層データ ソースを視覚化する必要がある場合は、[**IgxTreeGrid**](treegrid/tree-grid.md) を使用できます。|
 |古い ViewEngine (Ivy 以前) での IgxTreeNodes の使用|`enableIvy:false` が tsconfig.json に設定されている場合、Angular の View Engine (Ivy以前) にツリーが使用されないという問題があります。|
 |FireFox のタブ ナビゲーション|ツリーにスクロールバーがある場合、キーボード ナビゲーションを介してツリーにタブで移動すると、最初に igx-tree-node 要素にフォーカスされます。これは FireFox のデフォルトの動作ですが、ツリーに明示的な `tabIndex = -1` を設定することで解決できます。
+
 ## API リファレンス
 <div class="divider"></div>
 

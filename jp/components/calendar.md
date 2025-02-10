@@ -472,43 +472,24 @@ export class CalendarSample9Component {
 $custom-calendar-theme: calendar-theme(
   $header-background: #345779,
   $content-background: #fdfdfd,
-  $header-text-color: #ffffff,
-  $date-current-text-color: #2dabe8,
-  $picker-arrow-color: #2dabe8,
-  $date-selected-text-color: #fdfdfd,
-  $date-current-bg-color: #fdfdfd,
-  $picker-arrow-hover-color:  #345779,
-  $year-current-text-color: #2dabe8,
-  $year-hover-text-color: #2dabe8,
-  $month-current-text-color: #2dabe8,
-  $month-hover-text-color: #2dabe8,
-  $picker-text-color: #2dabe8,
-  $picker-text-hover-color:  #345779
+  $header-foreground: #ffffff,
+  $date-current-foreground: #2dabe8,
+  $navigation-color: #2dabe8,
+  $date-selected-foreground: #fdfdfd,
+  $date-current-background: #fdfdfd,
+  $navigation-hover-color: #345779,
+  $ym-current-foreground: #2dabe8,
+  $ym-hover-foreground: #2dabe8,
+  $picker-foreground: #2dabe8,
+  $picker-hover-foreground: #345779,
 );
 ```
-
-### CSS 変数の使用
 
 最後に calendar のカスタム テーマを設定します。
 
 ```scss
  @include css-vars($custom-calendar-theme);
 ```
-
-### テーマ オーバーライドの使用
-
-Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
-
-コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
-
- ```scss
-:host {
-  ::ng-deep {
-    @include calendar($custom-calendar-theme);
-  }
-}
-```
-
 
 <code-view style="height:500px" 
            no-theming

@@ -6,16 +6,15 @@ _language: ja
 ---
 
 # Angular Icon (アイコン) コンポーネントの概要
+
 <p class="highlight">Ignite UI for Angular Icon コンポーネントはアイコンおよびフォント ファミリを統合するため、交互の使用やマテリアル アイコンをマークアップに追加できます。</p>
 
 ## Angular Icon の例
-
 
 <code-view style="height: 75px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/icon-sample-1" alt="Angular Icon の例">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -56,14 +55,14 @@ import { IgxIconComponent } from 'igniteui-angular';
 // import { IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
-    selector: 'app-home',
-    template: '<igx-icon [style.color]="color">home</igx-icon>',
-    styleUrls: ['home.component.scss'],
-    standalone: true,
-    imports: [IgxIconComponent]
+  selector: 'app-home',
+  template: '<igx-icon [style.color]="color">home</igx-icon>',
+  styleUrls: ['home.component.scss'],
+  standalone: true,
+  imports: [IgxIconComponent],
 })
 export class HomeComponent {
-    public color = '#e41c77';
+  public color = '#e41c77';
 }
 ```
 
@@ -76,12 +75,12 @@ Ignite UI for Angular Icon モジュールまたはコンポーネントをイ�
 `style.color` CSS プロパティを使用して、デフォルトの色を変更します。
 
 ```html
-<igx-icon [style.color]="'#e41c77'">home</igx-icon>
+<igx-icon [style.color]="#e41c77">home</igx-icon>
 ```
+
 <div class="sample-container loading" style="height: 40px">
     <iframe id="icon-sample-3-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-3" class="lazyload">
 </iframe></div>
-
 
 ### アイコンの無効化
 
@@ -90,6 +89,7 @@ Ignite UI for Angular Icon モジュールまたはコンポーネントをイ�
 ```html
 <igx-icon [active]="false">volume_off</igx-icon>
 ```
+
 <div class="sample-container loading" style="height: 40px">
     <iframe id="icon-sample-4-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-4" class="lazyload">
 </iframe></div>
@@ -112,9 +112,10 @@ CSS を使用してアイコンをカスタマイズできます。アイコン�
 
 ```scss
 .custom-size {
-    --size: 56px;
+  --size: 56px;
 }
 ```
+
 <div class="sample-container loading" style="height: 80px">
     <iframe id="icon-sample-2-iframe" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-display/icon-sample-2" class="lazyload">
 </iframe></div>
@@ -142,7 +143,6 @@ public ngOnInit() {
 <igx-icon name="contains" family="filter-icons"></igx-icon>
 ```
 
-
 <code-view style="height: 70px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/svg-icon-sample" >
@@ -153,7 +153,7 @@ public ngOnInit() {
 さらに、ユーザーは新しく作成された[`マテリアル シンボル ライブラリ`](https://fonts.google.com/icons)に含まれる最新のマテリアル アイコンとそのデザイン バリエーションを利用できます。マテリアル シンボルの使用を開始するには、まずライブラリをアプリケーションに追加する必要があります。
 
 ```html
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
 ```
 
 次に、[`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html) 依存関係を注入し、その `setFamily` メソッドを利用して、マテリアル シンボルが `igx-icon` で動作できるようにする必要があります。
@@ -175,11 +175,7 @@ public ngOnInit() {
 
 ```scss
 .custom-icon {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 200,
-  'GRAD' 0,
-  'opsz' 40
+  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 40;
 }
 ```
 
@@ -194,10 +190,8 @@ public ngOnInit() {
 
 > [!NOTE]
 > Angular Universal を使用してアプリケーションにサーバー側のレンダリング ロジックを実装し、`IgxIconService` を使用してアイコンを登録した場合は、以下の例外が発生することがあります。
-<br/><br/>
-`XMLHttpRequest is not defined. Could not fetch SVG from url.` (XMLHttpRequest が定義されていません。url から SVG をフェッチできませんでした。) 
-<br/><br/>
-これを避けるためには、以下の順序に従って下さい。
+> <br/><br/>`XMLHttpRequest is not defined. Could not fetch SVG from url.` (XMLHttpRequest が定義されていません。url から SVG をフェッチできませんでした。)> <br/><br/>
+> これを避けるためには、以下の順序に従って下さい。
 <ol>
 <li>
 `xmlhttprequest` のインストール:
@@ -205,6 +199,7 @@ public ngOnInit() {
 ```cmd
 npm i xmlhttprequest
 ```
+
 </li>
 <li>
 `server.ts` ファイル以外に追加するファイル:
@@ -212,6 +207,7 @@ npm i xmlhttprequest
 ```typescript
 (global as any).XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
 ```
+
 </li>
 </ol>
 
@@ -231,30 +227,14 @@ npm i xmlhttprequest
 ```scss
 $custom-icon-theme: icon-theme(
   $color: #1481b8,
-  $disabled-color: #494949
+  $disabled-color: #494949,
 );
-```   
-
-### CSS 変数の使用 
+```
 
 最後には、カスタム アイコン テーマをアプリケーションに渡します。
 
 ```scss
- @include css-vars($custom-icon-theme);
-```
-
-### テーマ オーバーライドの使用
-
-Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
-
-コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
-
-```scss
-:host {
-     ::ng-deep {
-        @include icon($custom-icon-theme);
-    }
-}
+@include css-vars($custom-icon-theme);
 ```
 
 ### デモ
@@ -282,6 +262,7 @@ igx-icon {
   <igx-icon></igx-icon>
 </div>
 ```
+
 ```scss
 .my-app {
   --igx-icon-size: 50px;
@@ -292,19 +273,21 @@ igx-icon {
 
 ```scss
 igx-icon {
-    --ig-size: var(--ig-size-medium);
+  --ig-size: var(--ig-size-medium);
 }
 ```
 
 詳細については、[サイズ](display-density.md)の記事をご覧ください。
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [IgxIconComponent スタイル]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。

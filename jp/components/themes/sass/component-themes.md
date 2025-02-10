@@ -1,6 +1,6 @@
 ﻿---
 title: コンポーネント テーマ
-_description: Ignite UI for Angular Theming コンポーネントは SASS で開発されます。使用が簡単な API は単一のコンポーネント、複数のコンポーネント、またはスイート全体のスタイル変更を適用できます。
+_description: Ignite UI for Angular テーマ コンポーネントは SASS で開発されます。使用が簡単な API は単一のコンポーネント、複数のコンポーネント、またはスイート全体のスタイル変更を適用できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Theming コンポーネント, Angular テーマ
 _language: ja
 ---
@@ -112,7 +112,7 @@ $avatar-royalblue-theme: avatar-theme(
 
 Angular では、表示のカプセル化に 3 つの方法 Emulated (デフォルト)、Shadow DOM、None を採用しています。各方法の詳細については、[Angular ヘルプ](https://angular.io/api/core/ViewEncapsulation) をご覧ください。表示をカプセル化した親コンポーネントの一部である Ignite UI for Angular コンポーネントのテーマを処理する方法について詳しく説明します。
 
-`エミュレートされた`表示のカプセル化とは？このタイプの表示のカプセル化は、Shadow DOM 仕様の利点を享受しませんが、ホスト要素に適用された一意の属性識別子を使用してコンポーネントとその子のスタイルをバインドする方法を利用します。インナー セレクターをターゲットにした表示のカプセル化コンポーネントのスタイルシートに追加したスタイルのルールは、ホスト要素の一意の属性を参照しないため適用されません。このカプセル化を解除するには、View Encapsulation 解除ストラテジをいくつか使用する必要があります。現在の Angular でこれを行うのは `::ng-deep` です。ホスト要素でカプセル化された内部のセレクターをターゲットにできます。CSS 変数の代わりに CSS ルールを扱っている場合やコンポーネントの単一のインスタンスをカスタマイズする場合は、`::ng-deep` の使用をお勧めします。次のセクションで例を示します。
+`エミュレートされた`表示のカプセル化とは？このタイプの表示のカプセル化は、Shadow DOM 仕様の利点を享受しませんが、ホスト要素に適用された一意の属性識別子を使用してコンポーネントとその子のスタイルをバインドする方法を利用します。
 
 以下は CSS 変数を使用する例です。特定の親コンポーネントにバインドするアバター テーマを作成します。
 
@@ -153,7 +153,7 @@ $avatar-royalblue-theme: avatar-theme(
 
 CSS 変数を使用する間は、`::ng-deep` 擬似セレクターは必要ありません。上記コードで背景色に常に `royalblue` が含まれる `igx-avatar` の CSS 変数を作成しました。カスタム アバターのテーマは、その他の `igx-avatar` コンポーネントに影響しないため、カスタムの `app-avatar` コンポーネント内でカプセル化されたままです。
 
-`$igx-legacy-support` を `false` に設定してビルドした Ignite UI for Angular テーマは、プロジェクトで Sass を使用せずにコンポーネントのスタイルを設定できます。たとえば、上記は `--igx-avatar-background` CSS 変数に色の値を設定することにより実現できます。
+上記のインスタンスは、Sass を使用せずに実現することもできます。 `--igx-avatar-background` CSS 変数の値を希望のカラーに設定します。
 
 ```css
 /* app-avatar.component.css */
@@ -162,69 +162,14 @@ CSS 変数を使用する間は、`::ng-deep` 擬似セレクターは必要あ�
 }
 ```
 
-<div class="divider"></div>
-
-## 古いブラウザーの場合
-
-<div class="divider--half"></div>
-
-[概要](#概要)セクションの説明にあったように、`$igx-legacy-support` グローバル変数を `true` に設定することにより、ハードコーディングされた値をコンポーネントのスタイル設定に使用できます。`theme` ミックスインを使用して `$legacy-support` に `true` を渡した場合、`$igx-legacy-support` もまた `true` に設定されます。
-
-### グローバル テーマの使用
-
-以下は、ハードコーディングされた値で複数コンポーネントをスタイル設定する方法の例です。
-
-```scss
-// Import the theming module
-@use "igniteui-angular/theming" as *;
-
-// !IMPORTANT: Prior to Ignite UI for Angular version 13 use:
-// @import '~igniteui-angular/lib/core/styles/themes/index';
-
-@include core();
-@include theme($palette: $default-palette, $legacy-support: true);
-
-// Overwrite the default themes for igx-avatar using hard-coded values:
-$avatar-royalblue-theme: avatar-theme(
-  $background: royalblue,
-);
-
-@include avatar($avatar-royalblue-theme);
-```
-
-<div class="divider"></div>
-
-### カプセル化した表示の使用
-
-以下のサンプルは、[表示のカプセル化](#表示のカプセル化)セクションのサンプルを開始点として使用しています。
-
-```scss
-// Import the theming module
-@use "igniteui-angular/theming" as *;
-
-// !IMPORTANT: Prior to Ignite UI for Angular version 13 use:
-// @import '~igniteui-angular/lib/core/styles/themes/index';
-
-// Enable legacy support first.
-// !IMPORTANT: Only applicable for versions older than Ignite UI for Angular 13.
-$igx-legacy-support: true;
-$avatar-royalblue-theme: avatar-theme(
-  $initials-background: royalblue,
-);
-
-:host ::ng-deep {
-  @include avatar($avatar-royalblue-theme);
-}
-```
-
-<div class="divider"></div>
+<div class="divider-half"></div>
 
 ## API の概要
 
 <div class="divider--half"></div>
 
-- [Global テーマ]({environment:sassApiUrl}/index.html#mixin-theme)
-- [Avatar テーマ]({environment:sassApiUrl}/index.html#function-igx-avatar)
+- [グローバル テーマ]({environment:sassApiUrl}/index.html#mixin-theme)
+- [Avatar テーマ]({environment:sassApiUrl}/index.html#function-avatar-theme)
 
 ## その他のリソース
 

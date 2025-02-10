@@ -295,82 +295,18 @@ column.autosize();
 
 ``` scss
 $custom-grid-theme: grid-theme(
-    $resize-line-color: #0288D1
-);
-
-```
- >[!NOTE]
- >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
-
-```scss
-:host {
-    ::ng-deep {
-        @include grid($custom-grid-theme);
-    }
-}
-```
-
-### カラーパレットの定義
-上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
-
-`igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。
-
-```scss
-$primary-color: #0288D1;
-$secondary-color: #BDBDBD;
-
-$custom-theme-palette: palette($primary: $primary-color, $secondary: $secondary-color);
-```
-
-次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。 
-
-```scss
-$custom-grid-theme: grid-theme(
-    $palette: $custom-theme-palette,
-    $resize-line-color: color($custom-theme-palette, 'secondary', 500)
+  $resize-line-color: #0288d1
 );
 ```
 
 >[!NOTE]
->`igx-color` と `igx-palette` は色を生成したり取り出したりするための関数です。使い方の詳細については [`パレット`](../themes/palettes.md) のトピックを参照してください。
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックをご覧ください。
 
-### スキーマの使用
-テーマ エンジンを使用して[**スキーマ**](../themes/sass/schemas.md)の利点を使用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
-
-すべてのコンポーネントに提供されている定義済みスキーマ、ここでは [`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid) スキーマを拡張します。
+最後のステップは、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。
 
 ```scss
-// Extending the light grid schema
-$light-grid-schema: extend($_light-grid,
-    (
-        resize-line-color: (
-           color: ('secondary', 500)
-            ),
-        header-background: (
-           color: ("primary", 100)
-            ),
-        header-text-color: (
-           color: ("primary", 600)
-            )
-    )
-);
+@include css-vars($custom-grid-theme);
 ```
-
-カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを拡張する必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネントテーマに追加するものです。
-
-```scss
-// Extending the global light-schema
-$custom-light-grid-schema: extend($light-schema,(
-   grid: $light-grid-schema
-));
-
-// Specifying the palette and schema of the custom grid theme
-$custom-grid-theme: grid-theme(
-    $palette: $custom-theme-palette,
-    $schema: $custom-light-grid-schema
-);
-```
-テーマを上記と同じ方法で含めることに注意してください。
 
 ### デモ
 
@@ -402,7 +338,7 @@ $custom-grid-theme: grid-theme(
 }
 
 >[!NOTE]
->このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
+>このサンプルは、`Change Theme` (テーマの変更) から選択したグローバル テーマに影響を受けません。
 
 ## API リファレンス
 <div class="divider--half"></div>

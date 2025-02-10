@@ -96,7 +96,7 @@ Ignite UI for Angular の @@igxName コンポーネントは、カスタム ル�
 // sample.component.ts
 
 public rowClasses = {
-    activeRow: this.activeRowCondition
+  activeRow: this.activeRowCondition
 };
 
 public activeRowCondition = (row: RowType) => this.grid?.navigation.activeNode?.row === row.index;
@@ -107,15 +107,13 @@ public activeRowCondition = (row: RowType) => this.grid?.navigation.activeNode?.
 
 ::ng-deep {
  .activeRow {
-    border: 2px solid #fc81b8;
-    border-left: 3px solid #e41c77;
+  border: 2px solid #fc81b8;
+  border-left: 3px solid #e41c77;
  }
 }
 ```
-
-**::ng-deep** または **`ViewEncapsulation.None`** を使用してカスタム スタイルを現在のコンポーネントとその子コンポーネントに適用します。
-
-
+> [!NOTE]
+> **`::ng-deep`** または **`ViewEncapsulation.None`** を使用してカスタム スタイルを現在のコンポーネントとその子コンポーネントに適用します。
 
 ### デモ
 
@@ -275,17 +273,16 @@ private downFontCondition = (rowData: any, columnKey: any): boolean => {
 }
 ```
 
-```css
+```scss
 // component.scss file
 .upFont {
-    color: red;
+  color: red;
 }
 
 .downFont {
-    color: green;
+  color: green;
 }
 ```
-
 
 ### cellClasses の使用
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellClasses) 入力を設定してカスタム条件を定義することにより、@@igxName の条件付きセルのスタイルを設定できます。
@@ -408,7 +405,8 @@ public grammyClasses = {
 ```
 }
 
-**::ng-deep** または **`ViewEncapsulation.None`** を使用してカスタム スタイルを現在のコンポーネントとその子コンポーネントに適用します。
+> [!NOTE]
+> **`::ng-deep`** または **`ViewEncapsulation.None`** を使用してカスタム スタイルを現在のコンポーネントとその子コンポーネントに適用します。
 
 ### デモ
 
@@ -642,7 +640,7 @@ public updateCSS(css: string) {
 ## 既知の問題と制限
 
 - 他の列に同じ条件でバインドされたセルがある場合、その 1 つのセルが更新された際に条件が満たされて要る場合も他のセルが新しい値に基づいて更新されない問題。
-残りのセルに変更を適用するには、パイプ チェックを実行する必要があります。以下の例は、[`onCellEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onCellEdit) イベントで`スプレッド演算子` ... を使用してチェックを実行する方法を示します。これにより、元のオブジェクトが新しいインスタンスでコピーされ、パイプのみ発生します。
+残りのセルに変更を適用するには、パイプ チェックを実行する必要があります。以下の例は、[`onCellEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#onCellEdit) イベントで `spread operator(...)` を使用してチェックを実行する方法を示します。これにより、元のオブジェクトが新しいインスタンスでコピーされ、パイプのみ発生します。
 
 ```ts
 public backgroundClasses = {

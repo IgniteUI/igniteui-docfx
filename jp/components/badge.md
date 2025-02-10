@@ -303,54 +303,17 @@ Badge のスタイル設定は、すべてのテーマ関数とコンポーネ�
 
 ```scss
 $custom-badge-theme: badge-theme(
-    $border-color: white,
-    $border-width: 1px,
-    $icon-color: white,
-    $text-color: black,
-    $shadow: 3px 2px 5px 0px rgba(0,0,0,0.4)
+  $border-radius: 15px,
+  $icon-color: white,
+  $text-color: black,
 );
 ```
 
-### テーマを含む
-
-<div class="divider"></div>
-
-最後にコンポーネントのテーマをアプリケーションに含めます。
-
-`$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
-
-```scss
- @include badge($custom-badge-theme);
-```
->[!NOTE]
->コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
-
-```scss
-:host {
-     ::ng-deep {
-        @include badge($custom-badge-theme);
-    }
-}
-```
-
-<div class="divider"></div>
-
-`$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
+新しいテーマを含めるには、`css-vars` ミックスインを使用します。
 
 ```scss
 @include css-vars($custom-badge-theme);
 ```
-
->[!NOTE]
->コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合においても、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
-
-```scss
-:host {
-    @include css-vars($custom-badge-theme);
-}
-```
-
-テーマを上記と同じ方法で含めることに注意してください。
 
 ### デモ
 

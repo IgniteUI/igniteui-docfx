@@ -40,7 +40,7 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナーとな�
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:500px" 
+<code-view style="height:420px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-4" alt="Angular ツールバー グリッドの例">
 </code-view>
@@ -176,7 +176,9 @@ IgxHierarchicalGrid の子グリッドの実装方法および DI スコープ�
 
 ## 機能
 
-ツールバーは、グリッド全体に影響を与えるロジック/インタラクションを分離するのに最適です。上記のように、制御、列の非表示、列のピン固定、高度なフィルタリング、およびグリッドからのデータのエクスポートのためのデフォルトのコンポーネントを提供するように構成できます。これらの機能は、Ignite UI for Angular スイートのカード コンポーネントと同様のパターンに従うことで、互いに独立して有効にできます。
+ツールバーは、グリッド全体に影響を与えるロジック/インタラクションを分離するのに最適です。
+上記のように、制御、列の非表示、列のピン固定、高度なフィルタリング、およびグリッドからのデータのエクスポートのためのデフォルトのコンポーネントを提供するように構成できます。
+これらの機能は、Ignite UI for Angular スイートのカード コンポーネントと同様のパターンに従うことで、互いに独立して有効にできます。
 以下にリストされているのは、ツールバーの主な機能と、それぞれのサンプル コードです。
 
 
@@ -333,7 +335,7 @@ export class AppModule { ... }
 ```
 
 > [!Note]
-> v 12.2.1 以降では、エクスポーター サービスは root で提供されます。つまり、AppModule プロバイダーでそれらを宣言する必要はありません。
+> v12.2.1 以降では、エクスポーター サービスは root で提供されます。つまり、AppModule プロバイダーでそれらを宣言する必要はありません。
 
 ツールバー エクスポーター コンポーネントは、UI とエクスポート エクスペリエンスの両方をカスタマイズするためのいくつかの入力プロパティを公開します。
 これらは、表示テキストの変更から、ドロップダウンのオプションの有効化/無効化、生成されたファイルの名前のカスタマイズまで多岐にわたります。
@@ -362,7 +364,7 @@ export class AppModule { ... }
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 
-エクスポートされたファイル名を変更することに加えて、ユーザーは [toolbarExporting](environment:angularApiUrl}/classes/@@igTypeDoc.html#toolbarExporting) イベントを待機し、イベント プロパティのオプション エントリをカスタマイズすることで、エクスポーター オプションをさらに構成できます。
+エクスポートされたファイル名を変更することに加えて、ユーザーは [toolbarExporting]({environment:angularApiUrl}/classes/@@igTypeDoc.html#toolbarExporting) イベントを待機し、イベント プロパティのオプション エントリをカスタマイズすることで、エクスポーター オプションをさらに構成できます。
 
 > [!NOTE]
 > デフォルトで CSV にエクスポートした際にエクスポーターがカンマ区切りセパレーターを使用してエクスポートし、出力ファイルに .csv 拡張しを使用します。
@@ -428,7 +430,7 @@ configureExport(args: IGridToolbarExportEventArgs) {
 
 デフォルトのツールバー エクスポーター コンポーネントを使用する場合、エクスポート操作が行われると、操作の進行中にツールバーに進行状況インジケーターが表示されます。
 さらに、ユーザーはツールバーの [showProgress]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html#showProgress) プロパティを設定して、自分の長時間実行操作に使用するか、グリッドで実行されている操作を示す別の方法として使用できます。
-以下のサンプルでは、progressbar が表示されるようにデータのエクスポートに必要な時間を増やすために、大量のデータを使用しています。さらに、グリッドで長時間実行される操作をシミュレートする別のボタンがあります。
+以下のサンプルには大量のデータが含まれています。データのエクスポート中はプログレス バーが表示されます。さらに、グリッドで長時間実行される操作をシミュレートする別のボタンがあります。
 
 @@if (igxName === 'IgxGrid') {
 
@@ -531,10 +533,10 @@ configureExport(args: IGridToolbarExportEventArgs) {
 
 ```scss
 $my-dark-palette: palette(
-    $primary: #2466ff,
-    $secondary: #FFCD0F,
-    $surface: #2a2b2f,
-    $grays: #fff,
+  $primary: #2466ff,
+  $secondary: #ffcd0f,
+  $surface: #2a2b2f,
+  $grays: #fff,
 );
 
 $my-dark-color: color($my-dark-palette, 'surface');
@@ -544,10 +546,9 @@ $my-dark-color: color($my-dark-palette, 'surface');
 
 ```scss
 $dark-grid-toolbar-theme: grid-toolbar-theme(
-    $palette: $my-dark-palette,
-    $background-color: $my-dark-color,
-    $title-text-color: color($my-dark-palette, 'secondary'),
-    $dropdown-background: $my-dark-color,
+  $background-color: $my-dark-color,
+  $title-text-color: color($my-dark-palette, 'secondary'),
+  $dropdown-background: $my-dark-color,
 );
 ```
 
@@ -555,69 +556,46 @@ $dark-grid-toolbar-theme: grid-toolbar-theme(
 
 ```scss
 $dark-column-actions-theme: column-actions-theme(
-    $palette: $my-dark-palette,
-    $title-color: color($my-dark-palette, 'secondary'),
-    $background-color: color($my-dark-palette, 'surface')
+  $title-color: color($my-dark-palette, 'secondary'),
+  $background-color: color($my-dark-palette, 'surface')
 );
 ```
 
-列操作は他のコンポーネント (igx-button、igx-checkbox、および igx-input-group) を使用しているため、新しいツールバー テーマに一致するようにテーマを変更する必要があります。
+列操作は他のコンポーネント (`igx-button`、`igx-checkbox`) を使用しているため、新しいツールバー テーマに一致するようにテーマを変更する必要があります。
 
 ```scss
 $dark-button-theme: button-theme(
-    $palette: $my-dark-palette,
-    $outlined-background: color($my-dark-palette, 'secondary'),
-    $outlined-hover-background: color($my-dark-palette, 'grays', 100),
-    $outlined-hover-text-color: color($my-dark-palette, 'secondary')
+  $outlined-background: color($my-dark-palette, 'secondary'),
+  $outlined-hover-background: color($my-dark-palette, 'grays', 100),
+  $outlined-hover-text-color: color($my-dark-palette, 'secondary')
 );
 
 $dark-checkbox-theme: checkbox-theme(
-    $palette: $my-dark-palette,
-    $tick-color: $my-dark-color,
-);
-
-$dark-input-group-theme: input-group-theme(
-    $palette: $my-dark-palette
+  $tick-color: $my-dark-color,
 );
 ```
 
 最後にコンポーネントのテーマを**含めます**。
 
 ```scss
-:host {
-    @include grid-toolbar($dark-grid-toolbar-theme);
-    @include column-actions($dark-column-actions-theme);
-    @include checkbox($dark-checkbox-theme);
-    @include input-group($dark-input-group-theme);
-    @include button($dark-button-theme);
-}
+@include css-vars($dark-grid-toolbar-theme);
+@include css-vars($dark-column-actions-theme);
+@include css-vars($dark-checkbox-theme);
+@include css-vars($dark-button-theme);
 ```
 
 >[!NOTE]
->`$legacy-support` が `false (デフォルト)` に設定されている場合、css 変数 を以下のように含めます。
+>コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、グリッド ツールバー コンポーネント内のコンポーネントのスタイルを設定するために、`::ng-deep` を使用してこのカプセル化を`解除する`必要があります。
 
 ```scss
+@include css-vars($dark-grid-toolbar-theme);
+
 :host {
-    @include css-vars($dark-grid-toolbar-theme);
+  ::ng-deep {
     @include css-vars($dark-column-actions-theme);
     @include css-vars($dark-checkbox-theme);
-    @include css-vars($dark-input-group-theme);
     @include css-vars($dark-button-theme);
-}
-```
-
->[!NOTE]
->コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
-
-```scss
-:host {
-    ::ng-deep {
-        @include grid-toolbar($dark-grid-toolbar-theme);
-        @include column-actions($dark-column-actions-theme);
-        @include checkbox($dark-checkbox-theme);
-        @include input-group($dark-input-group-theme);
-        @include button($dark-button-theme);
-    }
+  }
 }
 ```
 
