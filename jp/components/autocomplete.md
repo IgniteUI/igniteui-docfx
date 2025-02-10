@@ -12,7 +12,6 @@ Angular Autocomplete は、入力中に候補のリストから項目を簡単�
 
 [`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) ディレクティブは [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) と候補オプションを表示してテキスト入力を向上する方法を提供します。候補は、テキスト入力の開始時、または `上矢印`/`下矢印` キーを使用して表示します。
 </p>
-<div class="divider"></div>
 
 ## Angular Autocomplete の例
 
@@ -257,7 +256,7 @@ export class AutocompleteComponent {
 ## スタイル設定
 各コンポーネントには独自のテーマがあります。
 
-`igxAutocomplete` のスタイルを設定するには、それに含まれるコンポーネントのスタイルを設定します。この場合、[input-group-theme]({environment:sassApiUrl}/index.html#function-input-group-theme) と [drop-down-theme]({environment:sassApiUrl}/index.html#function-drop-down-theme) の両方を使用する必要があります。 
+`igxAutocomplete` のスタイルを設定するには、それに含まれるコンポーネントのスタイルを設定します。この場合、[input-group-theme]({environment:sassApiUrl}/index.html#function-input-group-theme) と [drop-down-theme]({environment:sassApiUrl}/index.html#function-drop-down-theme) を使用します。 
 
 これら 2 つのコンポーネントのスタイル設定については、[`igxInputGroup`](input-group.md#スタイル設定) および [`igxDropdown`](drop-down.md#スタイル設定) のスタイル設定セクションを参照してください。
 

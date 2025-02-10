@@ -707,15 +707,24 @@
     - name: チャートの注釈
       href: charts/features/chart-annotations.md
       new: false
+    - name: ダッシュボードでのチャート作成
+      href: dashboard-tile.md
+      new: true
     - name: チャートのデータ集計
       href: charts/features/chart-data-aggregations.md
       new: false
+    - name: チャートのデータ フィルタリング
+      href: charts/features/chart-data-filtering.md
+      new: true
     - name: チャート データ凡例
       href: charts/features/chart-data-legend.md
       new: false
     - name: チャート データ ツールチップ
       href: charts/features/chart-data-tooltip.md
       new: false
+    - name: チャートのデータ選択
+      href: charts/features/chart-data-selection.md
+      new: true
     - name: チャートのハイライト表示フィルター
       href: charts/features/chart-highlight-filter.md
       new: false
@@ -940,7 +949,7 @@
       - name: 印刷スタイル
         href: themes/misc/printing-styles.md
         new: false
-      - name: Angular のテーマ
+      - name: Angular Material のテーマ
         href: themes/misc/angular-material-theming.md
         new: false
         updated: false

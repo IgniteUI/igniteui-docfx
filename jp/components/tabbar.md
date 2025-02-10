@@ -396,112 +396,24 @@ export class TabbarRoutingModule { }
 
 ```scss
 $dark-bottom-nav: bottom-nav-theme(
-    $background: #292826,
-    $active-item-color: #F4D45C
+  $background: #292826,
+  $icon-selected-color: #f4d45c
 );
 ```
+
+>[!NOTE]
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](themes/sass/palettes.md)のトピックをご覧ください。
 
 [`bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-bottom-nav-theme) は、tabs コンポーネントのスタイル設定で多くのパラメーターが利用できます。
 
 > [!NOTE]
 > 項目のコンテンツの一部として使用される追加コンポーネントをスタイルするには、それぞれのコンポーネントに固有の追加テーマを作成する必要があります。
 
-### テーマを含む
-
-<div class="divider"></div>
-
-最後にコンポーネントのテーマを**含めます**。
-
-`$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
-
-```scss
-@include bottom-nav($dark-bottom-nav);
-```
-
->[!NOTE]
->コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
-
-```scss
-:host {
-     ::ng-deep {
-        @include bottom-nav($dark-bottom-nav);
-    }
-}
-```
-
-<div class="divider"></div>
-
-`$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
+最後にコンポーネントのテーマをアプリケーションに**含めます**。
 
 ```scss
 @include css-vars($dark-bottom-nav);
 ```
-
->[!NOTE]
->コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
-
-```scss
-:host {
-    @include css-vars($dark-bottom-nav);
-}
-```
-### カラーパレットの定義
-
-上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
-
-`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
-
-```scss
-$yellow-color: #F4D45C;
-$black-color: #292826;
-$dark-palette: palette($primary: $black-color, $secondary: $yellow-color);
-```
-
-また [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。
-
-```scss
-$dark-bottom-nav: bottom-nav-theme(
-    $background: color($dark-palette, "primary", 400),
-    $active-item-color: color($dark-palette, "secondary", 400)
-);
-```
-
-### スキーマの使用
-
-テーマ エンジンを使用して[**スキーマ**](themes/sass/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
-
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`dark-bottom-nav`]({environment:sassApiUrl}/index.html#variable-_dark-bottom-nav) の 1 つを拡張します。
-
-```scss
-// Extending the dark bottom nav schema
-$dark-bottom-nav-schema: extend($_dark-bottom-nav,
-    (
-        background: (
-           color: ("primary", 400)
-        ),
-        active-item-color: (
-           color: ("secondary", 400)
-        )
-    )
-);
-```
-
-カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張する**必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加するものです。
-
-```scss
-// Extending the global dark-schema
-$custom-dark-schema: extend($dark-schema,(
-    igx-bottom-nav: $dark-bottom-nav-schema
-));
-
-// Defining bottom-nav-theme with the global dark schema
-$dark-bottom-nav:bottom-nav-theme(
-  $palette: $dark-palette,
-  $schema: $custom-dark-schema
-);
-```
-
-上記と同じ方法でテーマを含める必要があることに注意してください。
 
 ### デモ
 

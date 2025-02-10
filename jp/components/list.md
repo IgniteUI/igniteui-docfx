@@ -611,29 +611,28 @@ public selectItem(item) {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-次に、コンポーネントのテーマを作成します。
+最も簡単な方法は、[`list-theme`]({environment:sassApiUrl}/index.html#function-list-theme) を拡張し、`$background` パラメーターを受け入れる新しいテーマを作成する方法です。
 
 ```scss
-:host ::ng-deep {
-    $my-list-theme: list-theme(
-        $background: #0568ab
-    );
-
-    @include list($my-list-theme);
-}
+$my-list-theme: list-theme(
+  $background: #0568ab
+);
 ```
-以下は上記コードの結果です。
 
+リストのスタイル設定に使用できるパラメーターの完全なリストについては、[`list-theme`]({environment:sassApiUrl}/index.html#function-list-theme) セクションを参照してください。
+
+最後にコンポーネントのテーマを**含めます**。
+
+```scss
+@include css-vars($my-list-theme);
+```
+
+以下は上記コードの結果です。
 
 <code-view style="height: 365px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-8" >
 </code-view>
-
-<div class="divider--half"></div>
-
-> [!NOTE]
-> コンポーネントの .scss ファイルにコンポーネントテーマを作成する場合、表示のカプセル化を渡すために `::ng-deep` を使用する必要があります。そうでない場合、新しいテーマが動作しません。詳細は、[コンポーネント テーマ](../components/themes/sass/component-themes.md#表示のカプセル化) トピックを参照してください。
 
 リスト コンポーネントに変更できるパラメーターの完全なリストについては、[IgxListComponent スタイル]({environment:sassApiUrl}/index.html#function-list-theme)を参照してください。
 

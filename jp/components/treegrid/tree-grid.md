@@ -11,7 +11,7 @@ Ignite UI for Angular Tree Grid は、階層データまたはフラットな自
 
 ## Angular ツリー グリッドの例
 
-In this example, you can see how users can display hierarchical data.フィルタリングとソートのオプション、ピン固定と非表示、行の選択、Excel と csv へのエクスポート、[スパークライン](../sparkline.md)コンポーネントを使用したセル テンプレートが含まれています。さらに、[Angular 改ページ](paging.md)を使用したカスタム改ページの例を見ることができます。
+この例では、ユーザーが階層データを表示する方法を確認できます。フィルタリングとソートのオプション、ピン固定と非表示、行の選択、Excel と csv へのエクスポート、[スパークライン](../sparkline.md)コンポーネントを使用したセル テンプレートが含まれています。さらに、[Angular 改ページ](paging.md)を使用したカスタム改ページの例を見ることができます。
 
 <code-view style="height:850px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
@@ -269,25 +269,28 @@ export class MyComponent implements OnInit {
 **ツリー セル**のインデントは、フィルタリング、ソート、ページングなど他のツリーグリッド全体の機能で永続化されます。
 
 - **sorting** が列に適用された際にデータ行がレベルごとにソートされます。ルートレベルの行はそれぞれの子に関係なく個々にソートされます。各子コレクションは個々にソートされます。
-- 最初の列 ([`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleIndex) 0 を持つ列は、常にツリー列です。
+- 最初の列 ([`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleIndex)) 0 を持つ列は、常にツリー列です。
 - 列ピン固定、列の非表示、列移動などの処理後に 0 の [`visibleIndex`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#visibleIndex) で終わる列はツリー列になります。
 - エクスポートした Excel ワークシートは、ツリーグリッドでグループ化されるときにレコードをグループ化して階層に反映できます。すべてのレコードを展開した状態が保持および反映されます。
 - CSV レベルにエクスポートする際に展開した状態は無視されてすべてのデータがフラットでエクスポートされます。
 
 <div class="divider--half"></div>
 
-## Angular ツリー グリッド サイズ変更
+## Angular ツリー グリッドのサイズ変更
 
 [Grid サイズ変更](sizing.md) トピックを確認してください。
 
-## Angular ツリー グリッド スタイル設定
+## スタイル設定
 
-[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md)でスタイルを設定できます。ツリー グリッドの [テーマ]({environment:sassApiUrl}/index.html#function-grid-theme)  は、さまざまなプロパティを公開します。これにより、ツリーグリッドのすべての機能をカスタマイズできます。
+Tree Grid は、[`Ignite UI for Angular テーマ ライブラリ`](../themes/sass/component-themes.md)でスタイルを設定できます。ツリー グリッドの [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme)  は、さまざまなプロパティを公開します。これにより、ツリーグリッドのすべての機能をカスタマイズできます。
 
-Tree Grid (ツリー グリッドのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが含まれる `index` ファイルをインポートする必要があります。
+ツリー グリッドのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが含まれる `index` ファイルをインポートする必要があります。
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
 次に、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張し、必要に応じてツリー グリッドをカスタマイズするために必要なパラメーターを受け取る新しいテーマを作成します。
@@ -297,103 +300,27 @@ Tree Grid (ツリー グリッドのスタイル設定は、すべてのテー�
 
 ```scss
 $custom-theme: grid-theme(
-  $cell-active-border-color: #FFCD0F,
-  $cell-selected-background: #6F6F6F,
-  $row-hover-background: #F8E495,
-  $row-selected-background: #8D8D8D,
+  $cell-active-border-color: #ffcd0f,
+  $cell-selected-background: #6f6f6f,
+  $row-hover-background: #f8e495,
+  $row-selected-background: #8d8d8d,
   $header-background: #494949,
-  $header-text-color: #FFF,
-  $expand-icon-color: #FFCD0F,
-  $expand-icon-hover-color: #E0B710,
-  $resize-line-color: #FFCD0F,
-  $row-highlight: #FFCD0F
+  $header-text-color: #fff,
+  $expand-icon-color: #ffcd0f,
+  $expand-icon-hover-color: #e0b710,
+  $resize-line-color: #ffcd0f,
+  $row-highlight: #ffcd0f
 );
 ```
+
+>[!NOTE]
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックをご覧ください。
 
 最後にコンポーネントのテーマを**含めます**。
 
 ```scss
-@include grid($custom-theme);
+@include css-vars($custom-theme);
 ```
-
->[!NOTE]
->コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
-
-```scss
-:host {
-    ::ng-deep {
-        @include grid($custom-theme);
-    }
-}
-```
-
-### カラーパレットの定義
-
-上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
-
-`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
-
-```scss
-$yellow-color: #FFCD0F;
-$black-color: #494949;
-$custom-palette: palette($primary: $black-color, $secondary: $yellow-color);
-```
-
-次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。 
-
-```scss
-$custom-theme: grid-theme(
-    $cell-active-border-color: color($custom-palette, "secondary", 500),
-    $cell-selected-background: color($custom-palette, "primary", 300),
-    $row-hover-background: color($custom-palette, "secondary", 100),
-    $row-selected-background: color($custom-palette, "primary", 100),
-    $header-background: color($custom-palette, "primary", 500),
-    $header-text-color:contrast-color($custom-palette, "primary", 500),
-    $expand-icon-color: color($custom-palette, "secondary", 500),
-    $expand-icon-hover-color: color($custom-palette, "secondary", 600),
-    $resize-line-color: color($custom-palette, "secondary", 500),
-    $row-highlight: color($custom-palette, "secondary", 500)
-);
-```
-
-### スキーマの使用
-
-テーマ エンジンを使用して[**スキーマ**](../themes/sass/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
-
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid)) の 1 つを拡張します。
-
-```scss
-// Extending the light tree grid schema
-$custom-grid-schema: extend($_light-grid, (
-    cell-active-border-color: (igx-color:('secondary', 500)),
-    cell-selected-background: (igx-color:('primary', 300)),
-    row-hover-background: (igx-color:('secondary', 100)),
-    row-selected-background: (igx-color:('primary', 100)),
-    header-background: (igx-color:('primary', 500)),
-    header-text-color: (igx-contrast-color:('primary', 500)),
-    expand-icon-color: (igx-color:('secondary', 500)),
-    expand-icon-hover-color: (igx-color:('secondary', 600)),
-    resize-line-color: (igx-color:('secondary', 500)),
-    row-highlight: (igx-color:('secondary', 500))
-));
-```
-
-カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを拡張する必要があります。これは基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネント テーマに追加するものです。
-
-```scss
-// Extending the global light-schema
-$my-custom-schema: extend($light-schema, (
-    igx-grid: $custom-grid-schema
-));
-
-// Defining grid-theme with the global light schema
-$custom-theme: grid-theme(
-    $palette: $custom-palette,
-    $schema: $my-custom-schema
-);
-```
-
-上記と同じ方法でテーマを含める必要があることに注意してください。
 
 ### Angular ツリー グリッド スタイル設定のデモ
 
@@ -405,7 +332,7 @@ $custom-theme: grid-theme(
 </code-view>
 
 >[!NOTE]
->このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
+>このサンプルは、`Change Theme` (テーマの変更) から選択したグローバル テーマに影響を受けません。
 
 <div class="divider--half"></div>
 
