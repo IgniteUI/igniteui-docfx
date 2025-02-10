@@ -148,21 +148,21 @@ public ngOnInit() {
 
 上記のサンプルからわかるように、`igxIconButton` ディレクティブを使用して、`span` や `div` などの要素を Ignite UI for Angular スタイルのアイコン ボタンに変換することもできます。 
 
-## Angular Icon Button のスタイル設定
+## Icon Button のスタイル設定
 
 最も簡単な方法は、CSS 変数を使用してアイコン ボタンの外観をカスタマイズする方法です。
 
 ```scss
 [igxIconButton="contained"] {
-    --background: #011627;
-    --foreground: #fefefe;
-    --hover-foreground: #011627dc;
-    --hover-background: #ecaa53;
-    --focus-foreground: #011627dc;
-    --focus-background: #ecaa53;
-    --focus-border-color: #0116276c;
-    --active-foreground: #011627dc;
-    --active-background: #ecaa53;
+  --background: #011627;
+  --foreground: #fefefe;
+  --hover-foreground: #011627dc;
+  --hover-background: #ecaa53;
+  --focus-foreground: #011627dc;
+  --focus-background: #ecaa53;
+  --focus-border-color: #0116276c;
+  --active-foreground: #011627dc;
+  --active-background: #ecaa53;
 }
 ```
 

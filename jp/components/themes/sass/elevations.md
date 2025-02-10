@@ -67,17 +67,6 @@ $my-elevation-1: elevation($name: 1);
 );
 ```
 
-一部のコンポーネント テーマは `$elevations` パラメーターも受け入れて、インスタンスに対してのみカスタム エレベーションを渡すことができます。
-
-たとえば、カード コンポーネントは、カスタム エレベーションの渡しをサポートしています。カスタム エレベーション マップを受け入れるコンポーネントを見つけるには、Sass のドキュメントを参照してください。各コンポーネントは、エレベーション マップの特定のレベルのみを使用します。それらもコンポーネントの Sass ドキュメントにリストされています。
-
-```scss
-@include card(card-theme(
-    //...
-    $elevations: $my-elevations,
-));
-```
-
 `elevation` 関数はボックス シャドウのリストを返すため、その関数の戻り値を使用して、コンポーネント テーマの特定のエレベーションのみを変更できます。 
 
 ```scss
@@ -85,18 +74,7 @@ $card-theme: card-theme(
     $resting-shadow: elevation(10)
 );
 
-@include card($card-theme);
-```
-
-これは次のようにコンパイルされます:
-
-```css
-.igx-card {
-  box-shadow: 
-    0 6px 6px -3px rgba(0, 0, 0, 0.26),
-    0 10px 14px 1px rgba(0, 0, 0, 0.12),
-    0 4px 18px 3px rgba(0, 0, 0, 0.08);
-}
+@include css-vars($card-theme);
 ```
 
 `elevation` 関数を利用せずに、単純なボック スシャドウを渡すこともできます。
@@ -106,16 +84,7 @@ $card-theme: card-theme(
 );
 
 .my-card {
-  @include card($card-theme);
-}
-```
-
-上記のスニペットの結果は次のとおりです:
-
-```scss
-.my-card .igx-card {
-  /* ... */
-  box-shadow: 0 10px 10px 10px #666;
+  @include css-vars($card-theme);
 }
 ```
 <div class="divider--half"></div>

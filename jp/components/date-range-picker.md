@@ -380,38 +380,41 @@ Date Range Picker コンポーネントは `date-range-picker-theme` を公開�
 // COMMON
 $purple: #9E379F;
 $blue: #61AEDB;
+$light-gray: #efefef;
 
-$custom-palette: palette($primary: $blue, $secondary: $purple);
+$custom-palette: palette(
+  $primary: $blue, 
+  $secondary: $purple, 
+  $surface: $light-gray
+);
 
 $today-text: color($custom-palette, "primary", 500);
 $text-color: color($custom-palette, "secondary", 200);
 $color-focused: color($custom-palette, "secondary", 500);
 
 // DATE-RANGE
-$custom-date-range-theme:date-range-picker-theme(
-    $label-color: $color-focused
+$custom-date-range-theme: date-range-picker-theme(
+  $label-color: $color-focused
 );
 
 // INPUT GROUP
 $custom-input-group-theme: input-group-theme(
-  $palette: $custom-palette,
   $filled-text-color: $text-color,
   $idle-text-color: $text-color,
   $focused-text-color: $color-focused,
+  $idle-bottom-line-color: $purple,
   $hover-bottom-line-color: $color-focused,
-  $idle-bottom-line-color: $purple
+  $interim-bottom-line-color: $color-focused
 );
 
 // CALENDAR
 $custom-calendar-theme: calendar-theme(
-    $palette: $custom-palette,
-    $date-current-text-color: $today-text,
-    $border-radius: 0.5,
-    $date-border-radius: 0.5
+  $date-current-foreground: $today-text,
+  $border-radius: 0.5,
+  $date-border-radius: 0.5
 );
 ```
 
-### CSS 変数の使用
 最後にカスタム テーマを渡します。
 
 ```scss
@@ -420,23 +423,21 @@ $custom-calendar-theme: calendar-theme(
 @include css-vars($custom-calendar-theme);
 ```
 
-### テーマ オーバーライドの使用
+>[!WARNING]
+>コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
-Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
-
-コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
-
- ```scss
+```scss
 :host {
-    ::ng-deep {
-        @include date-range-picker($custom-date-range-theme);
-        @include input-group($custom-input-group-theme);
-        @include calendar($custom-calendar-theme);
-    }
+  ::ng-deep {
+    @include date-range-picker($custom-date-range-theme);
+    @include input-group($custom-input-group-theme);
+    @include calendar($custom-calendar-theme);
+  }
 }
 ```
 
 ### スタイルのスコーピング
+
 スタイルのスコーピングについては、詳細は[オーバーレイのスコープ コンポーネント スタイル](overlay-styling.md#スコープ-コンポーネント-スタイル)および[入力グループのスタイル スコーピング](input-group.md#スタイル設定)の両方のスタイル設定セクションを参照してください。
 
 

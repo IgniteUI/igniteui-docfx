@@ -393,7 +393,7 @@ public onDropAllowed(args) {
 
 ## スタイル設定
 
-@@igxName は、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md)でスタイルを設定できます。@@igComponent の [theme]({environment:sassApiUrl}/index.html#function-grid-theme) は、@@igComponent のすべての機能をカスタマイズできるさまざまなプロパティを公開します。
+@@igxName は、[`Ignite UI for Angular テーマ ライブラリ`](../themes/sass/component-themes.md)でスタイルを設定できます。@@igComponent の [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) は、@@igComponent のすべての機能をカスタマイズできるさまざまなプロパティを公開します。
 
 以下では、@@igComponent の行ピン固定スタイルをカスタマイズする手順を示します。
 
@@ -414,12 +414,10 @@ public onDropAllowed(args) {
 
 ```scss
 $custom-grid-theme: grid-theme(
-    /* Pinning properties that affect styling */
-    $pinned-border-width: 5px,
-    $pinned-border-style: double,
-    $pinned-border-color: #FFCD0F,
-    $cell-active-border-color: #FFCD0F
-    /* add other features properties here... */
+  $pinned-border-width: 5px,
+  $pinned-border-style: double,
+  $pinned-border-color: #ffcd0f,
+  $cell-active-border-color: #ffcd0f
 );
 ```
 
@@ -429,21 +427,6 @@ $custom-grid-theme: grid-theme(
 
 ```scss
 @include css-vars($custom-grid-theme);
-```
-
-### ミックスインの使用
-
-Internet Explorer 11 のコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチが必要です。
-
-コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。ただし、カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
-
-```scss
-:host {
-    ::ng-deep {
-        // Custom grid theme を `igx-grid` ミックスインに渡します
-        @include grid($custom-grid-theme);
-    }
-}
 ```
 
 ### デモ
@@ -477,7 +460,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 }
 
 >[!NOTE]
->このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
+>このサンプルは、`Change Theme` (テーマの変更) から選択したグローバル テーマに影響を受けません。
 
 ## API リファレンス
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)

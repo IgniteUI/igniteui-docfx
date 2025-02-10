@@ -128,7 +128,7 @@ API を使用する時、操作が成功した場合、[`columnMovingEnd`]({envi
 ```html
 <igx-grid #dataGrid [data]="data" [autoGenerate]="false" [moving]="true" (columnMovingEnd)="onColumnMovingEnd($event)">
     <igx-column [field]="'Category'"></igx-column>
-    <igx-column [field]="'Change On Year(%)'" [dataType]="'number'"></igx-column>
+    <igx-column [field]="'Change On Year(%)'" [dataType]="'number'" ></igx-column>
 </igx-grid>
 ```
 
@@ -190,102 +190,27 @@ public onColumnMovingEnd(event) {
 ```scss
 // Define dark theme for the column moving
 $dark-grid-column-moving-theme: grid-theme(
-    $ghost-header-text-color: #F4D45C,
-    $ghost-header-background: #575757,
-    $ghost-header-icon-color: #f4bb5c
+  $ghost-header-text-color: #f4d45c,
+  $ghost-header-background: #575757,
+  $ghost-header-icon-color: #f4bb5c
 );
 ```
+
+>[!NOTE]
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックをご覧ください。
 
 最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。
 
 ```scss
-@include grid($dark-grid-column-moving-theme);
+@include css-vars($dark-grid-column-moving-theme);
 ```
-
-> [!NOTE]
-> コンポーネントの [**View Encapsulation**](../themes/sass/component-themes.md#表示のカプセル化) ストラテジに基づいて、`::ng-deep` を使用してこのカプセル化を解除する必要な場合があります。
-
-```scss
-:host {
-    ::ng-deep {
-        @include grid($dark-grid-column-moving-theme);
-    }
-}
-```
-
-### カラーパレットの定義
-
-上記のように色の値をハードコーディングする代わりに、[igx-palette]({environment:sassApiUrl}/index.html#function-igx-palette) と [igx-color]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
-
-
-**igx-palette** は渡された一次色と二次色に基づいてカラーパレットを生成します。
-```scss
-$yellow-color: #F4D45C;
-$black-color: #575757;
-
-$dark-palette: palette($primary: $yellow-color, $secondary: $black-color);
-```
-
-次に [**igx-color**]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。
-
-```scss
-$dark-grid-column-moving-theme: grid-theme(
-    $palette: $dark-palette,
-    $ghost-header-text-color: color($dark-palette, "primary", 400),
-    $ghost-header-background: color($dark-palette, "secondary", 200),
-    $ghost-header-icon-color: color($dark-palette, "primary", 500)
-);
-```
-
-
-> [!NOTE]
->color および palette は、色を生成および取得するための重要な機能です。使い方の詳細については[パレット](../../components/themes/palettes.md)のトピックを参照してください。
-
-### スキーマの使用
-
-テーマ エンジンを使用して[スキーマ](../../components/themes/sass/schemas.md)の利点を使用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
-
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [light-grid]({environment:sassApiUrl}/index.html#variable-_light-grid)) の 1 つを拡張します。
-
-```scss
-// Extending the dark grid schema
-$dark-grid-column-moving-schema: extend($_light-grid,
-        (
-            ghost-header-text-color:(
-               color: ("primary", 400)
-            ),
-            ghost-header-background:(
-               color: ("secondary", 200)
-            ),
-            ghost-header-icon-color:(
-               color:( "primary", 500)
-            )
-        )
-);
-```
-
-カスタム スキーマを適用するには、グローバル ([light]({environment:sassApiUrl}/index.html#variable-light-schema) または [dark]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを拡張する必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネントテーマに追加するものです。
-
-```scss
-// Extending the global dark-schema
-$custom-light-schema: extend($light-schema,(
-    igx-grid: $dark-grid-column-moving-schema,
-));
-
-// Defining dark-grid-theme with the global dark schema
-$dark-grid-column-moving-theme: grid-theme(
-  $palette: $dark-palette,
-  $schema: $custom-light-schema
-);
-```
-
-テーマを上記と同じ方法で含めることに注意してください。
 
 ### デモ
 
 @@if (igxName === 'IgxGrid') {
 
 <code-view style="height:650px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-moving-styled-sample" >
 </code-view>
@@ -294,7 +219,8 @@ $dark-grid-column-moving-theme: grid-theme(
 
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:650px" 
+<code-view style="height:650px"
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-moving-styled" >
 </code-view>
@@ -304,6 +230,7 @@ $dark-grid-column-moving-theme: grid-theme(
 @@if (igxName === 'IgxHierarchicalGrid') {
 
 <code-view style="height:660px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-moving-styled" >
 </code-view>
@@ -311,14 +238,13 @@ $dark-grid-column-moving-theme: grid-theme(
 }
 
 >[!NOTE]
->このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
+>このサンプルは、`Change Theme` (テーマの変更) から選択したグローバル テーマに影響を受けません。
 
 ## API リファレンス
 <div class="divider--half"></div>
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#mixin-igx-grid)
 
 ## その他のリソース
 <div class="divider--half"></div>

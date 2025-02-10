@@ -27,7 +27,6 @@ _language: ja
 
 Ignite UI for Angular @@igComponent では、列レベルでのデータ ソートが可能です。つまり、**@@igSelector** にソート可能な列とソート不可の列の両方を持つことができます。Angular でソートを実行すると、指定した条件に基づいてレコードの表示順序を変更できます。
 
-
 >[!NOTE]
 > これまで、グループ化 / ソートは互いに連携して機能していました。13.2 バージョンでは、グループ化をソートから切り離す新しい動作が導入されています。たとえば、グループ化をクリアしても、グリッド内のソート式はクリアされません。その逆も同様です。それでも、列がソートおよびグループ化されている場合は、グループ化された式が優先されます。
 
@@ -42,7 +41,7 @@ Ignite UI for Angular @@igComponent では、列レベルでのデータ ソー�
 
 }
 @@if (igxName === 'IgxTreeGrid') {
-更に **@@igSelector** の [`contextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#contextMenu) 出力を使用してソートにカスタム contextmenu が追加されます。
+更に **@@igSelector** の [`contextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#contextMenu) 出力を使用してソートにカスタム コンテキスト メニューが追加されます。
 
 
 <code-view style="height:550px" 
@@ -52,7 +51,7 @@ Ignite UI for Angular @@igComponent では、列レベルでのデータ ソー�
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-更に **@@igSelector** の [`contextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#contextMenu) 出力を使用してソートにカスタム contextmenu が追加されます。
+更に **@@igSelector** の [`contextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#contextMenu) 出力を使用してソートにカスタム コンテキスト メニューが追加されます。
 
 
 <code-view style="height:510px" 
@@ -257,86 +256,19 @@ public ngOnInit(): void {
 
 ```scss
 $custom-theme: grid-theme(
-    $sorted-header-icon-color: #ffb06a,
-    $sortable-header-icon-hover-color: black
+  $sorted-header-icon-color: #ffb06a,
+  $sortable-header-icon-hover-color: black
 );
 ```
+
+>[!NOTE]
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックをご覧ください。
+
 最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。 
 
 ```scss
- @include grid($custom-theme);
+@include css-vars($custom-theme);
 ```
-
->[!NOTE]
- >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
-
- ```scss
-:host {
-    ::ng-deep {
-        @include grid($custom-theme);
-    }
-}
-```
-
-### カラーパレットの定義
-
-上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
-
-`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
-
-```scss
-$black-color: black;
-$orange-color: #ffb06a;
-
-$custom-palette: palette($primary: $black-color, $secondary: $orange-color);
-```
-
-次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。
-
-```scss
-$custom-theme: grid-theme(
-    $sorted-header-icon-color: color($custom-palette, "secondary", 500),
-    $sortable-header-icon-hover-color: color($custom-palette, "primary", 500)
-);
-```
-
->[!NOTE]
->`igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](../themes/sass/palettes.md) のトピックをご覧ください。
-
-### スキーマの使用
-
-テーマ エンジンを使用して[**スキーマ**](../themes/sass/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
-
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`_light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid)) の 1 つを拡張します。  
-
-```scss
-// Extending the light grid schema
-$custom-grid-schema: extend($_light-grid,
-    (
-        sorted-header-icon-color: (igx-color:('secondary', 500)),
-        sortable-header-icon-hover-color: (igx-color:('primary', 500))
-    )
-);
-```
-
-カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張する**必要があります。これは基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネントテーマに追加するものです。
-
-```scss
-// Extending the global light-schema
-$my-custom-schema: extend($light-schema, 
-    (
-        igx-grid: $custom-grid-schema
-    )
-);
-
-// Defining our custom theme with the custom schema
-$custom-theme: grid-theme(
-  $palette: $custom-palette,
-  $schema: $my-custom-schema
-);
-```
-
-上記と同じ方法でテーマを含める必要があることに注意してください。
 
 @@if (igxName === 'IgxGrid') {
 ### デモ
@@ -373,7 +305,7 @@ $custom-theme: grid-theme(
 }
 
 >[!NOTE]
->このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
+>このサンプルは、`Change Theme` (テーマの変更) から選択したグローバル テーマに影響を受けません。
 
 ## API リファレンス
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)

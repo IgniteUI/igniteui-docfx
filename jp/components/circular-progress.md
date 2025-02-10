@@ -6,8 +6,8 @@ _language: ja
 ---
 
 # Angular Circular Progress (円形プログレス) コンポーネントの概要
+
 <p class="highlight">Ignite UI for Angular Circular Progress インジケーター コンポーネントは、変更でアプリケーションの進行状況を表す視覚的なインジケーターです。丸形インジケーターは状態変更で外観を更新します。<p>
-<div class="divider"></div>
 
 ## Angular Circular Progress の例
 
@@ -54,18 +54,18 @@ import { IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular';
 // import { IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
-    selector: 'app-home',
-    template: `
+  selector: 'app-home',
+  template: `
     <igx-circular-bar
-        [value]="100"
-        [animate]="true"
-        class="custom-size"
+      [value]="100"
+      [animate]="true"
+      class="custom-size"
     ></igx-circular-bar>
-    `,
-    styleUrls: ['home.component.scss'],
-    standalone: true,
-    imports: [IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES]
-    /* or imports: [IgxCircularProgressBarComponent] */
+  `,
+  styleUrls: ['home.component.scss'],
+  standalone: true,
+  imports: [IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES],
+  /* or imports: [IgxCircularProgressBarComponent] */
 })
 export class HomeComponent {}
 ```
@@ -77,39 +77,29 @@ Ignite UI for Angular Progress Bar モジュールまたはディレクティブ
 すべての動作をよりよく理解するため、デモのような簡単な例を作成します。
 
 ```html
-<igx-circular-bar
-    [value]="100"
-    [animate]="true"
-    class="custom-size"
-></igx-circular-bar>
+<igx-circular-bar [value]="100" [animate]="true" class="custom-size"></igx-circular-bar>
 ```
 
 その後、ブラウザ上でデモサンプルを確認することができます。
 
->[!NOTE]
->**igx-circular-bar** は、各ステップに `{currentValue: 65, previousValue: 64}` のようなオブジェクトを出力する [`onProgressChanged`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#onProgressChanged) イベントを発生します。
+> [!NOTE]
+> **igx-circular-bar** は、各ステップに `{currentValue: 65, previousValue: 64}` のようなオブジェクトを出力する [`onProgressChanged`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#onProgressChanged) イベントを発生します。
 
 > [!NOTE]
 > [`step`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#step) 値が定義されていない場合、デフォルトの進行のインクリメントの値は、**[`max`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#max) 値の 1%** です。更新レートを変更するには、[`step`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#step) 値を定義する必要があります。
-
 
 ### 不確定のプログレス
 
 正確に決定していないプロセスをトラックしたい場合、[`indeterminate`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#indeterminate) プロパティを `true` に設定できます。
 
 ```html
-<igx-circular-bar
-    [animate]="false"
-    [indeterminate]="true"
-    [textVisibility]="false"
-></igx-circular-bar>
+<igx-circular-bar [animate]="false" [indeterminate]="true" [textVisibility]="false"></igx-circular-bar>
 ```
 
->[!NOTE]
->円形のプログレスバーのテキストを非表示にするには、[`textVisibility`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#textVisibility) プロパティを `false` に設定します。
+> [!NOTE]
+> 円形のプログレスバーのテキストを非表示にするには、[`textVisibility`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#textVisibility) プロパティを `false` に設定します。
 
 結果は以下のようになります。
-
 
 <code-view style="height:100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -124,20 +114,20 @@ Ignite UI for Angular Progress Bar モジュールまたはディレクティブ
 
 ```html
 <div class="sample-content">
-    <igx-circular-bar
-        [value]="currentValue"
-        [max]="100"
-        [animate]="true"
-        class="custom-size">
-    </igx-circular-bar>
-    <div class="button-container">
-        <button igxIconButton="flat" (click)="decrementProgress()">
-            <igx-icon fontSet="material">remove</igx-icon>
-        </button>
-        <button igxIconButton="flat" (click)="incrementProgress()">
-            <igx-icon fontSet="material">add</igx-icon>
-        </button>
-    </div>
+  <igx-circular-bar
+    [value]="currentValue"
+    [max]="100"
+    [animate]="true"
+    class="custom-size">
+  </igx-circular-bar>
+  <div class="button-container">
+    <button igxIconButton="flat" (click)="decrementProgress()">
+      <igx-icon fontSet="material">remove</igx-icon>
+    </button>
+    <button igxIconButton="flat" (click)="incrementProgress()">
+      <igx-icon fontSet="material">add</igx-icon>
+    </button>
+  </div>
 </div>
 ```
 
@@ -195,8 +185,7 @@ export class HomeComponent {
 $colors: #695cf9, #ef017c;
 
 $custom-theme: progress-circular-theme(
-    $progress-circle-color: $colors
-    
+  $progress-circle-color: $colors,
 );
 ```
 
@@ -211,28 +200,27 @@ $custom-theme: progress-circular-theme(
     [max]="100"
     [animate]="true"
     class="custom-size">
-      <ng-template igxProgressBarGradient let-id>
-          <svg:linearGradient [id]="id" gradientTransform="rotate(90)">
-              <stop offset="0%"   stop-color="#ff9a40"/>
-              <stop offset="50%" stop-color="#1eccd4"/>
-              <stop offset="100%" stop-color="#ff0079"/>
-          </svg:linearGradient>
-      </ng-template>
+    <ng-template igxProgressBarGradient let-id>
+      <svg:linearGradient [id]="id" gradientTransform="rotate(90)">
+        <stop offset="0%" stop-color="#ff9a40" />
+        <stop offset="50%" stop-color="#1eccd4" />
+        <stop offset="100%" stop-color="#ff0079" />
+      </svg:linearGradient>
+    </ng-template>
   </igx-circular-bar>
 
   <div class="button-container">
-      <button igxIconButton="flat" (click)="removeProgress()">
-          <igx-icon fontSet="material">remove</igx-icon>
-      </button>
-      <button igxIconButton="flat" (click)="addProgress()">
-          <igx-icon fontSet="material">add</igx-icon>
-      </button>
+    <button igxIconButton="flat" (click)="removeProgress()">
+      <igx-icon fontSet="material">remove</igx-icon>
+    </button>
+    <button igxIconButton="flat" (click)="addProgress()">
+      <igx-icon fontSet="material">add</igx-icon>
+    </button>
   </div>
 </div>
 ```
 
 上記の手順を再現した後、以下のようになります。
-
 
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -256,51 +244,19 @@ $custom-theme: progress-circular-theme(
 
 ```scss
 $custom-theme: progress-circular-theme(
-    $base-circle-color: lightgray,
-    $progress-circle-color: rgb(32, 192, 17)
+  $base-circle-color: lightgray,
+  $progress-circle-color: rgb(32, 192, 17),
 );
 ```
 
-### テーマを含む
-
-<div class="divider"></div>
-
-最後にコンポーネントのテーマをアプリケーションに含めます。
-
-`$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
-
-```scss
- @include progress-circular($custom-theme);
-```
->[!NOTE]
->コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
-
-```scss
-:host {
-     ::ng-deep {
-        @include progress-circular($custom-theme);
-    }
-}
-```
-
-<div class="divider"></div>
-
-`$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
+最後にコンポーネントのテーマをアプリケーションに**含めます**。
 
 ```scss
 @include css-vars($custom-theme);
 ```
 
->[!NOTE]
->コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合においても、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
-
-```scss
-:host {
-    @include css-vars($custom-theme);
-}
-```
-
 ### デモ
+
 <div class="divider--half"></div>
 
 <code-view style="height:100px" 
@@ -309,8 +265,8 @@ $custom-theme: progress-circular-theme(
            iframe-src="{environment:demosBaseUrl}/data-display/circular-styling-sample" >
 </code-view>
 
-
 ## API
+
 <div class="divider--half"></div>
 
 * [IgxCircularProgressBarComponent]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html)

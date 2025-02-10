@@ -6,9 +6,8 @@ _language: ja
 ---
 
 # Angular Label & Input (ラベル & 入力) ディレクティブの概要
-Ignite UI for Angular Input および Label ディレクティブを使用すると、`igx-input-group` コンポーネント内の単一行または複数行の入力要素を装飾およびスタイル設定できます。
 
-<div class="divider--half"></div>
+Ignite UI for Angular Input および Label ディレクティブを使用すると、`igx-input-group` コンポーネント内の単一行または複数行の入力要素を装飾およびスタイル設定できます。
 
 ## Angular Label および Input の例
 
@@ -57,49 +56,50 @@ import { IGX_INPUT_GROUP_DIRECTIVES } from 'igniteui-angular';
 // import { IGX_INPUT_GROUP_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
-    selector: 'app-home',
-    template: `
+  selector: 'app-home',
+  template: `
     <igx-input-group>
-        <input igxInput name="fullName" type="text" [(ngModel)]="fullName" />
-        <label igxLabel for="fullName">Full Name</label>
+      <input igxInput name="fullName" type="text" [(ngModel)]="fullName" />
+      <label igxLabel for="fullName">Full Name</label>
     </igx-input-group>
-    `,
-    styleUrls: ['home.component.scss'],
-    standalone: true,
-    imports: [IGX_INPUT_GROUP_DIRECTIVES, FormsModule]
-    /* or imports: [IgxInputGroupComponent, IgxLabelDirective, IgxInputDirective, FormsModule] */
+  `,
+  styleUrls: ['home.component.scss'],
+  standalone: true,
+  imports: [IGX_INPUT_GROUP_DIRECTIVES, FormsModule],
+  /* or imports: [IgxInputGroupComponent, IgxLabelDirective, IgxInputDirective, FormsModule] */
 })
 export class HomeComponent {
-    public fullName = 'John Doe';
+  public fullName = 'John Doe';
 }
 ```
 
 Ignite UI for Angular Input Group モジュールまたはディレクティブをインポートしたので、`igxLabel` & `igxInput` ディレクティブおよび `igx-input-group` コンポーネントの使用を開始できます。
 
 ## Angular Label & Input の使用
+
 Label および Input ディレクティブのデフォルト スタイル設定はマテリアル デザイン [**ガイドライン**](https://material.io/guidelines/components/text-fields.html)のテキスト フィールド仕様を実装します。
 
 [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) および [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html) を使用するには、`<igx-input-group>` コンテナーにラップします。
 
 ```html
 <igx-input-group>
-    <input igxInput name="fullName" type="text" />
-    <label igxLabel for="fullName">Full Name</label>
+  <input igxInput name="fullName" type="text" />
+  <label igxLabel for="fullName">Full Name</label>
 </igx-input-group>
 ```
 
 `igxInput` ディレクティブは `<input>` および `<textarea>` 単一行および複数行テキスト フィールドの HTML 要素に適用できます。
 
 ### 検証
+
 [`required`]({environment:angularApiUrl}/classes/igxinputdirective.html#required) 属性を使用して `input` を検証できます。ラベルの隣にアスタリスクが追加され、このフィールドは必須入力であることを示します。入力は検証が成功/失敗したかどうかによって緑/赤に変わります。
 
 ```html
 <igx-input-group>
-    <input igxInput name="fullName" type="text" required="required" />
-    <label igxLabel for="fullName">Full Name</label>
+  <input igxInput name="fullName" type="text" required="required" />
+  <label igxLabel for="fullName">Full Name</label>
 </igx-input-group>
 ```
-
 
 <code-view style="height:100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -109,6 +109,7 @@ Label および Input ディレクティブのデフォルト スタイル設定
 <div class="divider--half"></div>
 
 ### データ バインディング
+
 Ignite UI for Angular Input ディレクティブは、一方向および双方向のデータ バインディングをサポートします。以下のコードは `NgModel` を使用して双方向のデータ バインディングを追加する方法を示します。
 
 ```typescript
@@ -122,8 +123,8 @@ public user = {
 
 ```html
 <igx-input-group>
-    <input igxInput name="fullName" type="text" [(ngModel)]="user.fullName" required="required" />
-    <label igxLabel for="fullName">Full Name</label>
+  <input igxInput name="fullName" type="text" [(ngModel)]="user.fullName" required="required"/>
+  <label igxLabel for="fullName">Full Name</label>
 </igx-input-group>
 ```
 
@@ -133,29 +134,30 @@ public user = {
 
 ```html
 <igx-input-group>
-    <input igxInput [igxFocus]="isFocused" name="fullName" type="text" />
-    <label igxLabel for="fullName">Full Name</label>
+  <input igxInput [igxFocus]="isFocused" name="fullName" type="text" />
+  <label igxLabel for="fullName">Full Name</label>
 </igx-input-group>
 ```
->[!NOTE]
->[`igxFocus`]({environment:angularApiUrl}/classes/igxfocusdirective.html) ディレクティブを使用するには、[`IgxFocusModule`]({environment:angularApiUrl}/classes/igxfocusmodule.html) をインポートする必要があります。
+
+> [!NOTE]
+> [`igxFocus`]({environment:angularApiUrl}/classes/igxfocusdirective.html) ディレクティブを使用するには、[`IgxFocusModule`]({environment:angularApiUrl}/classes/igxfocusmodule.html) をインポートする必要があります。
 
 `igxInput` でマークされた input 要素内のテキストをフォーカス際に選択したい場合、[`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) ディレクティブを有効にする必要があります。
 
 ```html
 <igx-input-group>
-    <input igxInput [igxTextSelection]="true" [igxFocus]="isFocused" name="fullName" type="text" />
-    <label igxLabel for="fullName">Full Name</label>
+  <input igxInput [igxTextSelection]="true" [igxFocus]="isFocused" name="fullName" type="text"/>
+  <label igxLabel for="fullName">Full Name</label>
 </igx-input-group>
 
 <igx-input-group>
-    <input igxInput [igxTextSelection]="true" name="email" type="text" />
-    <label igxLabel for="email">Email</label>
+  <input igxInput [igxTextSelection]="true" name="email" type="text" />
+  <label igxLabel for="email">Email</label>
 </igx-input-group>
 ```
->[!NOTE]
->[`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html)  ディレクティブを使用するには、[`IgxTextSelectionModule`]({environment:angularApiUrl}/classes/igxtextselectionmodule.html) をインポートする必要があります。
 
+> [!NOTE]
+> [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) ディレクティブを使用するには、[`IgxTextSelectionModule`]({environment:angularApiUrl}/classes/igxtextselectionmodule.html) をインポートする必要があります。
 
 <code-view style="height: 130px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -165,9 +167,11 @@ public user = {
 <div class="divider--half"></div>
 
 ## Input Group
+
 Ignite UI for Angular Input Group コンポーネントは、開発者が使いやすく美しフォームを作成するのに役立ちます。詳細については、別のトピック[こちら](input-group.md) を参照してください。
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
 * [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
@@ -175,11 +179,14 @@ Ignite UI for Angular Input Group コンポーネントは、開発者が使い�
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 関連トピック:
+
 * [Input Group](input-group.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
+
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
