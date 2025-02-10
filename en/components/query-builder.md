@@ -181,7 +181,7 @@ The search value of a condition can be templated using the [`igxQueryBuilderSear
             (selectedCondition === 'equals' || selectedCondition === 'doesNotEqual')
             ){
             <igx-select [placeholder]="'Select region'" [(ngModel)]="searchValue.value">
-                <igx-select-item *ngFor="let reg of regionOptions" [value]="reg.value">
+                <igx-select-item *ngFor="let reg of regionOptions" [value]="reg">
                     {{ reg.text }}
                 </igx-select-item>
             </igx-select>
@@ -203,7 +203,30 @@ The search value of a condition can be templated using the [`igxQueryBuilderSear
 </igx-query-builder>
 ```
 
-We’ve created this Angular Query Builder example to show you the templating functionalities for the header and the search value of the Angular Query Builder component.
+## Formatter
+In order to change the appearance of the search value in the chip displayed when a condition is not in edit mode, you can set a formatter function to the fields array. The search value and selected condition could be acccessed through the value and rowData arguments as follows:
+
+```ts
+this.ordersFields = [
+    { field: "CompanyID", dataType: "string" },
+    { field: "OrderID", dataType: "number" },
+    { field: "EmployeeId", dataType: "number" },
+    { field: "OrderDate", dataType: "date" },
+    { field: "RequiredDate", dataType: "date" },
+    { field: "ShippedDate", dataType: "date" },
+    { field: "ShipVia", dataType: "number" },
+    { field: "Freight", dataType: "number" },
+    { field: "ShipName", dataType: "string" },
+    { field: "ShipCity", dataType: "string" },
+    { field: "ShipPostalCode", dataType: "string" },
+    { field: "ShipCountry", dataType: "string" },
+    { field: "Region", dataType: "string", formatter: (value: any, rowData: any) => rowData === 'equals' || rowData === 'doesNotEqual' ? `${value.id}` : value }},
+    { field: "OrderStatus", dataType: "number" }
+];
+```
+
+## Demo
+We’ve created this Angular Query Builder example to show you the templating and formatter functionalities for the header and the search value of the Angular Query Builder component.
 
 <code-view style="height:530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
