@@ -32,9 +32,8 @@ _language: ja
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
-
 $my-drop-down-theme: drop-down-theme(
-    $palette: $my-custom-palette
+  $background-color: #efefef
 );
 
 @include css-vars($my-drop-down-theme);
@@ -46,29 +45,22 @@ $my-drop-down-theme: drop-down-theme(
 
 オーバーレイに表示される要素のスタイルをスコーピングする際に DOM のオーバーレイ `アウトレット`の位置を指定する必要があります。スコープが設定された CSS ルールには、要素の特定の階層構造が必要です - オーバーレイ コンテンツが、適用するスタイルの正しいコンテキストで表示されることを確認してください。
 
-たとえば、`igx-combo` を取り上げます。コンボは独自のビュー内でコンテンツを定義するため、項目の[スタイル設定](combo.md#angular-combobox-スタイル設定)は `igx-drop-down` テーマを使用します。
-
-> [!NOTE]
-> スタイルが他に影響しないようにするには、スタイルのスコープを `:host` セレクター内にしてください。
+たとえば、`igx-combo` を取り上げます。コンボは独自のビュー内でコンテンツを定義するため、項目の[スタイル設定](combo.md#スタイル設定)は `igx-drop-down` テーマを使用します。
 
 ```scss
 // overlay-styling.component.scss
-:host {
-    @include css-vars($my-drop-down-theme);
-}
+@include css-vars($my-drop-down-theme);
 ```
 
-テーマの `$legacy-support` 変数が `true` に設定されている場合、コンポーネントのテーマ関数を使用してスタイル設定します。
-
 >[!NOTE]
->コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+>コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、スタイルを適用するには `::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
 // overlay-styling.component.scss
 :host {
-   ::ng-deep{ 
-        @include drop-down($my-drop-down-theme);
-    }
+  ::ng-deep { 
+    @include css-vars($my-drop-down-theme);
+  }
 }
 ```
 
@@ -83,9 +75,9 @@ $my-drop-down-theme: drop-down-theme(
 
 ```typescript
 export class OverlayStylingComponent {
-    ...
-    constructor(public element: ElementRef) {
-    }
+  ...
+  constructor(public element: ElementRef) {
+  }
 }
 ```
 
@@ -108,7 +100,7 @@ export class OverlayStylingComponent {
 オーバーレイ モーダルをスタイル設定する最も簡単な方法は、アプリのグローバル スタイルにテーマを含める方法です。
 
 ```scss
-//  styles.scss
+// styles.scss
 $my-overlay-theme: overlay-theme(
   $background-color: rgba(0, 153, 255, 0.3)
 );
@@ -116,15 +108,19 @@ $my-overlay-theme: overlay-theme(
 @include css-vars($my-overlay-theme);
 ```
 
-テーマの `$legacy-support` 変数が `true` に設定されている場合、オーバーレイのテーマ関数を使用してコンポーネントをスタイル設定します。
+これで、**すべて**のモーダル オーバーレイの背景が紫色になります。
+
+>[!NOTE]
+>コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、スタイルを適用するには `::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
-// styles.scss
-...
-@include overlay($my-overlay-theme);
-```        
-
-これで、**すべて**のモーダル オーバーレイの背景が紫色になります。
+// overlay-styling.component.scss
+:host {
+  ::ng-deep { 
+    @include css-vars($my-overlay-theme);
+  }
+}
+```
 
 ### スコープ オーバーレイ スタイル
 
@@ -132,29 +128,12 @@ $my-overlay-theme: overlay-theme(
 オーバーフロークリッピング、z-index、およびビューポートの問題のリスクを最小限に抑えるために、より高いレベルのコンポーネントでのみモーダルオーバーレイのアウトレットを使用することをお勧めします。
 
 ```scss
-//  styles.scss
+// styles.scss
 ...
 .purple {
-    @include css-vars($my-overlay-theme);
+  @include css-vars($my-overlay-theme);
 }
 ```
-
-テーマがアプリの他のコンポーネントに影響を与えないように、`:host` セレクターを使用します。
-
-```scss
-// overlay-styling.component.scss
-@use "igniteui-angular/theming" as *;
-
-// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
-// @import '~igniteui-angular/lib/core/styles/themes/index';
-...
-:host {
-    @include css-vars($my-overlay-theme);
-}
-```
-
->[!NOTE]
->コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用していて、`$legacy-support` が `true` に設定されている場合、オーバーレイのテーマ関数を使用して `::ng-deep` によってこのカプセル化を`解除します`。
 
 ## API リファレンス
 * [IgniteUI for Angular - テーマ ライブラリ](themes/index.md)

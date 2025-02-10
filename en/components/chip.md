@@ -124,7 +124,7 @@ public chipRemoved(event: IBaseChipEventArgs) {
 
 ### Dragging
 
-Dragging can be enabled by setting the [`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removable) input to `true`. When enabled, you can click and drag the chip around.
+Dragging can be enabled by setting the [`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#draggable) input to `true`. When enabled, you can click and drag the chip around.
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [id]="chip.id" [draggable]="true">
@@ -255,6 +255,71 @@ You can customize the `remove icon`, using the [`removeIcon`]({environment:angul
   <igx-icon>delete</igx-icon>
 </ng-template>
 ```
+
+<div class="divider"></div>
+
+### Demo
+
+To create the demo sample below, we will use the features above:
+
+```html
+<igx-chip
+*ngFor="let chip of chipList"
+[id]="chip.id"
+[selectable]="true"
+[removable]="true"
+(remove)="chipRemoved($event)"
+>
+    <igx-icon igxPrefix>{{chip.icon}}</igx-icon>
+    {{chip.text}}
+</igx-chip>
+```
+
+Then, we need to add the `chipList` and the function, that handles the [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) event:
+
+```ts
+import { IBaseChipEventArgs } from 'igniteui-angular';
+// import { IBaseChipEventArgs } from '@infragistics/igniteui-angular'; for licensed package
+...
+public chipList = [
+    {
+        text: 'Country',
+        id: '1',
+        icon: 'place'
+    },
+    {
+        text: 'City',
+        id: '2',
+        icon: 'location_city'
+    },
+    {
+        text: 'Town',
+        id: '3',
+        icon: 'store'
+    },
+    {
+        text: 'First Name',
+        id: '4',
+        icon: 'person_pin'
+    }
+];
+
+private changeDetectionRef: any;
+
+public chipRemoved(event: IBaseChipEventArgs) {
+    this.chipList = this.chipList.filter((item) => {
+        return item.id !== event.owner.id;
+    });
+    this.changeDetectionRef.detectChanges();
+}
+```
+If everything went well, you should see this in your browser:
+
+
+<code-view style="height: 100px; padding-top: 10px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/data-display/chip-simple" >
+</code-view>
 
 ## Chip Area
 

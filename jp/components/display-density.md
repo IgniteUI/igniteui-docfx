@@ -7,7 +7,7 @@ _language: ja
 
 # サイズ
 
-size 設定の表示は、大規模データセットのビジュアル表示を大きく改善します。Ignite UI for Angular では、large、medium、small の事前定義されたオプション セットが提供されています。
+size 設定の表示は、大規模データセットのビジュアル表示を大きく改善します。Ignite UI for Angular では、**large**、**medium**、**small** の事前定義されたオプション セットが提供されています。
 
 `--ig-size` カスタム CSS プロパティを使用すると、アプリケーションまたはコンポーネント レベルでサイズを設定できます。
 

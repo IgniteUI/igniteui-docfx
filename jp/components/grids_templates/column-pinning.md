@@ -342,7 +342,7 @@ public toggleColumn(col: ColumnType) {
 @@if (igxName === 'IgxGrid') {
 ## スタイル設定   
 
-igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md) でスタイルを設定できます。[テーマ]({environment:sassApiUrl}/index.html#function-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。
+igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md) でスタイルを設定できます。[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。
 
 以下の手順では、グリッドのピン固定スタイルをカスタマイズする手順を実行しています。
 
@@ -360,88 +360,23 @@ igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](..
 
 ```scss
 $custom-theme: grid-theme(
-    /* Pinning properties that affect styling */
-    $pinned-border-width: 5px,
-    $pinned-border-style: double,
-    $pinned-border-color: #FFCD0F,
-    $cell-active-border-color: #FFCD0F
-    /* add other features properties here... */
-);
-```    
-
-### カスタム カラー パレットの定義
-上記で説明したアプローチでは、色の値がハード コーディングされていました。または、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して、柔軟性を高めることができます。
-`Igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。
-
- ```scss
-$primary-color: #292826;
-$secondary-color: #ffcd0f;
-
-$custom-palette: palette(
-  $primary: $primary-color,
-  $secondary: $secondary-color
-);
-```   
-
-カスタム パレットが生成された後、`igx-color` 関数を使用して、さまざまな種類の原色と二次色を取得できます。   
-
-
-```scss
-$custom-theme: grid-theme(
-    $pinned-border-width: 5px,
-    $pinned-border-style: double,
-    $pinned-border-color: color($custom-palette, "secondary", 500),
-    $cell-active-border-color: color($custom-palette, "secondary", 500)
-);
-```   
-
-`$custom-theme` には前のセクションと同じプロパティが含まれていますが、今回は色がハードコードされていません。代わりに、カスタム `igx-palette` パレットが使用され、特定のカラーバリアントを使用して、プライマリ カラーとセカンダリ カラーから色が取得されました。   
-
-### カスタム スキーマの定義
-さらに進んで、[**スキーマ**](../themes/sass/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。   
-すべてのコンポーネントに提供される 2 つの事前定義されたスキーマの 1 つを拡張します。この場合、`$_light_grid` を使用します。   
-```scss
-$custom-grid-schema: extend($_light-grid,(
-    pinned-border-width: 5px,
-    pinned-border-style: double,
-    pinned-border-color: color:("secondary", 500),
-    cell-active-border-color: color:("secondary", 500)
-));
-```   
-カスタム スキーマを適用するには、`light` グローバルまたは `dark` グローバルを拡張する必要があります。プロセス全体が実際にコンポーネントにカスタム スキーマを提供し、その後、それぞれのコンポーネントテーマに追加します。     
-```scss
-$my-custom-schema: extend($light-schema, ( 
-    igx-grid: $custom-grid-schema
-));
-$custom-theme: grid-theme(
-    $palette: $custom-palette,
-    $schema: $my-custom-schema
+  $pinned-border-width: 5px,
+  $pinned-border-style: double,
+  $pinned-border-color: #ffcd0f,
+  $cell-active-border-color: #ffcd0f
 );
 ```
+
+>[!NOTE]
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックをご覧ください。
 
 ### カスタム テーマの適用
 テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。 
-```scss
-@include grid($custom-theme);
-```
-
-### スコープ コンポーネント テーマ
-
-カスタム テーマが特定のコンポーネントのみに影響するように、定義したすべてのスタイルをグローバル スタイル ファイルからカスタム コンポーネントのスタイルファイルに移動できます (`index` ファイルのインポートを含む)。
-
-このように、Angular の [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation) により、スタイルはカスタム コンポーネントにのみ適用されます。
- >[!NOTE]
- >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、グリッドのスタイル設定は `::ng-deep` を使用してこのカプセル化を解除する必要があります。
- >[!NOTE]
- >ステートメントがコンポーネントの外にある要素に影響を与えないよう、ステートメントを `:host` セレクター内にラップします。
 
 ```scss
-:host {
-    ::ng-deep {
-        @include grid($custom-theme);
-    }
-}
+@include css-vars($custom-theme);
 ```
+
 ### デモ
 
 
@@ -452,7 +387,7 @@ $custom-theme: grid-theme(
 </code-view>
 
 >[!NOTE]
->このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
+>このサンプルは、`Change Theme` (テーマの変更) から選択したグローバル テーマに影響を受けません。
 
 }
 

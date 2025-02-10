@@ -9,7 +9,7 @@ _language: ja
 
 <p class="highlight">Ignite UI for Angular Ripple コンポーネントは、タッチまたはマウス クリックに応答してアニメーションを作成します。</p>
 
-### Angular Ripple の例
+## Angular Ripple の例
 
 <div class="divider--half"></div>
 
@@ -58,11 +58,11 @@ import { IgxRippleDirective, IgxButtonDirective } from 'igniteui-angular';
 // import { IgxRippleDirective, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
-    selector: 'app-home',
-    template: '<button igxButton="contained" igxRipple>Click Me</button>',
-    styleUrls: ['home.component.scss'],
-    standalone: true,
-    imports: [IgxRippleDirective, IgxButtonDirective]
+  selector: 'app-home',
+  template: '<button igxButton="contained" igxRipple>Click Me</button>',
+  styleUrls: ['home.component.scss'],
+  standalone: true,
+  imports: [IgxRippleDirective, IgxButtonDirective],
 })
 export class HomeComponent {}
 ```
@@ -70,7 +70,8 @@ export class HomeComponent {}
 Ignite UI for Angular Ripple モジュールまたはディレクティブをインポートしたので、`igxRipple` ディレクティブの使用を開始できます。
 
 > [!WARNING]
-> [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) は Web Animation API を使用し、[サポートされるブラウザー](http://caniuse.com/#feat=web-animation)でネイティブに実行します。その他のブラウザーでは `web-animations.min.js` [ポリフィル](https://github.com/web-animations/web-animations-js)を使用します。
+> [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) は Web Animation API を使用し、[サポートされるブラウザー](http://caniuse.com/#feat=web-animation)でネイティブに実行します。
+> その他のブラウザーでは `web-animations.min.js` [ポリフィル](https://github.com/web-animations/web-animations-js)を使用します。
 
 ## Angular Ripple ディレクティブの使用
 
@@ -98,10 +99,13 @@ Ignite UI for Angular Ripple モジュールまたはディレクティブをイ
 </code-view>
 
 ### 中央揃えのリップル エフェクト
+
 デフォルトでリップル エフェクトはクリック イベントの位置から開始します。この動作で要素の中点を原点に変更するには、[`igxRippleCentered`]({environment:angularApiUrl}/classes/igxrippledirective.html#centered) プロパティを使用できます。
 
 ```html
-<button igxButton="contained" igxRipple="white" [igxRippleCentered]="true">Centered</button>
+<button igxButton="contained" igxRipple="white" [igxRippleCentered]="true">
+  Centered
+</button>
 ```
 
 <code-view style="height: 100px"
@@ -110,10 +114,13 @@ Ignite UI for Angular Ripple モジュールまたはディレクティブをイ
 </code-view>
 
 ### リップルの期間
+
 [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippleDuration) プロパティを使用して、リップルアニメーションの期間を変更できます。これは、デフォルトで 600 ミリ秒に設定されています。
 
 ```html
-<button igxButton="contained" igxRipple [igxRippleDuration]="2000">Click Me</button>
+<button igxButton="contained" igxRipple [igxRippleDuration]="2000">
+  Click Me
+</button>
 ```
 
 <code-view style="height: 100px"
@@ -122,14 +129,16 @@ Ignite UI for Angular Ripple モジュールまたはディレクティブをイ
 </code-view>
 
 ### リップルの対象要素
+
 [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippleTarget) プロパティを使用して親要素内の特定の要素にリップル エフェクトをアタッチします。
 
 ```html
 <div class="parent" igxRipple="white" igxRippleTarget=".child" [igxRippleCentered]="true">
-    ...
-    <button class="sample-button child" igxButton="contained">Read More</button>
+  ...
+  <button class="sample-button child" igxButton="contained">Read More</button>
 </div>
 ```
+
 親要素または子要素をクリックしても、リップル エフェクトはボタンにのみ表示されます。
 
 <code-view style="height: 350px"
@@ -140,7 +149,6 @@ Ignite UI for Angular Ripple モジュールまたはディレクティブをイ
 > [!NOTE]
 > `igxRippleTarget` プロパティで対象する子要素は、相対的に配置する必要があります。
 
-
 ## スタイル設定
 
 はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルにすべてのスタイリング機能とミックスインが配置されている `index` ファイルをインポートする必要があります。
@@ -150,17 +158,15 @@ Ignite UI for Angular Ripple モジュールまたはディレクティブをイ
 
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-```   
+```
 
 次に、[`ripple-theme`]({environment:sassApiUrl}/index.html#function-ripple-theme) を拡張し、必要に応じてリップルをカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成します。
 
 ```scss
 $custom-ripple-theme: ripple-theme(
-  $color: #217346
+  $color: #383779,
 );
-```  
-
-### CSS 変数の使用
+```
 
 次に Ripple のカスタム テーマを渡します。
 
@@ -168,25 +174,10 @@ $custom-ripple-theme: ripple-theme(
 @include css-vars($custom-ripple-theme);
 ```
 
-### コンポーネント テーマ オーバーライドの使用
+> [!NOTE]
+> `igxRiple` ディレクティブを使用したカラー セットは、カスタム テーマによるカラー セットよりも優先されます。
 
-Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
-
-コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
-
-```scss
-:host {
-    ::ng-deep {
-        // Custom ripple theme を `igx-ripple` ミックスインに渡します
-        @include ripple($custom-ripple-theme);
-    }
-}
-```
-
->[!NOTE]
-  > `igxRiple` ディレクティブを使用して設定される色は、カスタム テーマ内で設定される色よりも優先されます。  
-
-## Angular Ripple の例
+### デモ
 
 <code-view style="height:200px" 
            no-theming
@@ -194,9 +185,8 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
            iframe-src="{environment:demosBaseUrl}/interactions/ripple-styling" alt="Angular Ripple の例">
 </code-view>
 
-
-
 ## API リファレンス
+
 <div class="divider--half"></div>
 
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)

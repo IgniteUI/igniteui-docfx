@@ -23,7 +23,7 @@
   href: general/update-guide.md
   new: false
   updated: true
-- name: サーバー側レンダリング (SSR)
+- name: サーバー サイド レンダリング (SSR)
   href: general/ssr-rendering.md
   new: false
 - name: データ分析
@@ -614,6 +614,11 @@
     - name: Excel ユーティリティ
       href: excel-utility.md
       new: false
+- name: ダッシュボード
+  header: true
+- name: ダッシュボード タイル
+  href: dashboard-tile.md
+  preview: true
 - name: チャート
   href: charts/chart-overview.md
   header: true
@@ -632,7 +637,7 @@
 - name: 複合チャート
   href: charts/types/composite-chart.md
   new: false
-- name: Data Pie Chart
+- name: データ円チャート
   href: charts/types/data-pie-chart.md
   new: true
 - name: ドーナツ チャート
@@ -702,15 +707,24 @@
     - name: チャートの注釈
       href: charts/features/chart-annotations.md
       new: false
+    - name: ダッシュボードでのチャート作成
+      href: dashboard-tile.md
+      new: true
     - name: チャートのデータ集計
       href: charts/features/chart-data-aggregations.md
       new: false
+    - name: チャートのデータ フィルタリング
+      href: charts/features/chart-data-filtering.md
+      new: true
     - name: チャート データ凡例
       href: charts/features/chart-data-legend.md
       new: false
     - name: チャート データ ツールチップ
       href: charts/features/chart-data-tooltip.md
       new: false
+    - name: チャートのデータ選択
+      href: charts/features/chart-data-selection.md
+      new: true
     - name: チャートのハイライト表示フィルター
       href: charts/features/chart-highlight-filter.md
       new: false
@@ -935,7 +949,7 @@
       - name: 印刷スタイル
         href: themes/misc/printing-styles.md
         new: false
-      - name: Angular のテーマ
+      - name: Angular Material のテーマ
         href: themes/misc/angular-material-theming.md
         new: false
         updated: false
@@ -1013,6 +1027,9 @@
 - name: Chip
   href: chip.md
   new: false
+- name: Color Editor
+  href: inputs/color-editor.md
+  preview: true
 - name: Text Highlight
   href: texthighlight.md
   new: false

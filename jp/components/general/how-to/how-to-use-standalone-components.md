@@ -103,7 +103,7 @@ import { IgxGridModule } from 'igniteui-angular';
 
 - [スタンドアロン コンポーネント](https://angular.io/guide/standalone-components)
 - [Ignite UI を使用した作業の開始](../getting-started.md)
-- [Angular のサーバー側レンダリング](../ssr-rendering.md)
+- [Angular のサーバー サイド レンダリング](../ssr-rendering.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

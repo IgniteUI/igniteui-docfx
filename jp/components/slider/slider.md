@@ -8,8 +8,6 @@ _language: ja
 # Angular Slider (スライダー) コンポーネントの概要
 <p class="highlight">Ignite UI for Angular Slider は、つまみをトラックで移動して指定した範囲内で値を選択できるフォーム コンポーネントです。トラックは連続またはステップとして定義でき、スライダーは単一値または範囲 (下限値と上限値) スライダーのタイプを選択できるように構成できます。</p>
 
-<div class="divider"></div>
-
 ## Angular Slider の例
 
 <code-view style="height: 250px" 
@@ -483,55 +481,51 @@ public type = SliderType.RANGE;
            iframe-src="{environment:demosBaseUrl}/interactions/slider-tick-labels-template" >
 </code-view>
 
-
 ## スタイル設定
-スライダー コンポーネントのデフォルト スタイル設定を変更するには、新しいテーマを作成します。
+
+スライダーをカスタマイズするには、すべてのスタイリング関数とミックスインが置かれている `index` ファイルをインポートする必要があります。
+
+```scss
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+次に、`slider-theme` を拡張する新しいテーマを作成し、変更するパラメーターを渡します。
+
+```scss
+$custom-slider-theme: slider-theme(
+  $track-color: #ff7400,
+  $track-hover-color: #ff7400,
+
+  $thumb-color: #ff7400,
+
+  $base-track-color: #ddd,
+  $base-track-hover-color: #ccc,
+
+  $tick-label-color: #b246c2,
+  $tick-label-color-tall: #ff7400,
+
+  $tick-color: #b246c2,
+  $tick-color-tall: #ff7400,
+);
+```
+
+最後に新しく作成されたコンポーネントのテーマをアプリケーションに含めます。
+
+```scss
+@include css-vars($custom-slider-theme);
+```
 
 ### デモ
-これは、新しいテーマを適用した結果です。
 
+これは、新しいテーマを適用した結果です。
 
 <code-view style="height: 240px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-styling-sample" >
 </code-view>
-
-
-### コンポーネント テーマの作成
-はじめに、[カスタム パレット](../themes/palettes.md)を作成します。
-コンポーネント テーマを作成し、カスタム パレットを適用します。 
-```scss
-// In app-slider-styling.component.scss
-
-// Create slider theme.
-$custom-slider-theme: slider-theme(
-    $track-color: #ff7400,
-    $track-hover-color: #ff7400,
-
-    $thumb-color: #ff7400,
-
-    $base-track-color: #ddd,
-    $base-track-hover-color: #ccc,
-
-    $tick-label-color: #b246c2,
-    $tick-label-color-tall: #ff7400,
-
-    $tick-color: #b246c2,
-    $tick-color-tall: #ff7400,
-);
-```
-
-#### コンポーネント テーマの適用
-コンポーネント テーマを適用するには、`css-vars` ミックスインをインクルードし、`$custom-slider-theme` マップを渡します。
-```scss
-// In app-slider-styling.component.scss
-
-// Pass our custom-slider-theme to `css-vars` mixin.
-// The `:host` here makes sure that all the theming will affect only this slider component.
-:host {
-  @include css-vars($custom-slider-theme);
-}
-```
 
 ## API リファレンス
 <div class="divider--half"></div>

@@ -270,91 +270,20 @@ export class MyBannerComponent {
 
 ```scss
 $custom-banner-theme: banner-theme(
-    $banner-message-color: #151515,
-    $banner-background: #dedede,
-    $banner-illustration-color: #666666
+  $banner-message-color: #151515,
+  $banner-background: #dedede,
+  $banner-illustration-color: #666666
 );
 ```
 
-### CSS 変数の使用 
+>[!NOTE]
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](themes/sass/palettes.md)のトピックをご覧ください。
 
 最後にバナーのカスタム テーマを渡します。
 
 ```scss
 @include css-vars($custom-banner-theme);
 ```
-
-### ミックスインの使用
-
-Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
-
-コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
-
-```scss
-:host {
-    ::ng-deep {
-        // Custom banner theme を `igx-banner` ミックスインに渡します
-        @include banner($custom-banner-theme);
-    }
-}
-```
-
-### カラー パレットの使用
-
-上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して色に関してより高い柔軟性を実現することができます。
-
-`igx-palette` 関数は渡された一次色と二次色に基づいてカラーパレットを生成します。
-
-```scss
-$white-color: #dedede;
-$black-color: #151515;
-
-$light-banner-palette: palette($primary: $white-color, $secondary: $black-color);
-```
-
-次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。 
-
-```scss
-$custom-banner-theme: banner-theme(
-    $banner-message-color: color($light-banner-palette, "secondary", 400),
-    $banner-background: color($light-banner-palette, "primary", 400),
-    $banner-illustration-color: color($light-banner-palette, "secondary", 100)
-);
-```
-
->[!NOTE]
->`igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](./themes/palettes.md) のトピックをご覧ください。
-
-### スキーマの使用
-
-テーマ エンジンを使用して[`スキーマ`](./themes/sass/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`light-banner`]({environment:sassApiUrl}/index.html#variable-_light-banner)) の 1 つを拡張します。
-
-```scss
-//  Extending the banner schema
-$light-toast-schema: extend($_light-toast,
-    (
-        banner-message-color: (
-           color: ("secondary", 400)
-        ),
-        banner-background: (
-           color: ("primary", 400)
-        ),
-        banner-illustration-color: (
-           color: ("secondary", 100)
-        )
-    )
-);
-
-// Defining banner with the global light schema
-$custom-banner-theme: banner-theme(
-  $palette: $light-banner-palette,
-  $schema: $light-toast-schema
-);
-```
-
-上記と同じ方法でテーマを含める必要があることに注意してください。
-
 
 <code-view style="height: 530px" 
            no-theming
