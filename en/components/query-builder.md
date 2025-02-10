@@ -16,7 +16,7 @@ The [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybui
 
 ## Angular Query Builder Example
 
-We’ve created this Angular Query Builder example to show you the default functionalities of the Angular Query Builder component. Click the plus button to add conditions, “and” group as well as “or” group. Navigate the side bars to ungroup or delete.
+We’ve created this Angular Query Builder example to show you the default functionalities of the Angular Query Builder component. Click the plus button to add conditions, “and” group as well as “or” group. Grouping or ungrouping expressions as well as re-ordering could be achieved via the Drag&Drop functionality.
 
 <code-view style="height:530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -87,13 +87,11 @@ Now that you have the Ignite UI for Angular Query Builder module or directives i
 
 ## Using the Angular Query Builder
 
-If no expression tree is initially set, you start by creating a group of conditions linked with [`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) or [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or). Then you choose an entity and which of its fields the query should return. After that, conditions or sub-groups can be added. 
+If no expression tree is initially set, you start by choosing entity and which of its fields the query should return. After that, conditions or sub-groups can be added. 
 
-In order to add a condition you select a field, an operand based on the field data type and a value if the operand is not unary. The operands `In` and `Not In` will allow you to create an inner query with conditions for a different entity instead of simply providing a value. Once the condition is committed, a chip with the condition information appears. By clicking the chip, you have the options to modify it or add another condition or group right after it.
+In order to add a condition you select a field, an operand based on the field data type and a value if the operand is not unary. The operands `In` and `Not In` will allow you to create an inner query with conditions for a different entity instead of simply providing a value. Once the condition is committed, a chip with the condition information appears. By clicking or hovering the chip, you have the options to modify it or add another condition or group right after it.
 
-If you select more than one condition chip, a context menu appears with options to group or delete the current selection. If you choose to create a group with the selected conditions, the newly created group will appear where the topmost selected condition was placed.
-
-In order to select a group, you can also click on its vertical line, which is colored based on the linking condition ([`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) or [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or)). If a single group is selected, you get a context menu with options to change its logic, ungroup or delete it.
+Clicking on the ([`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) or [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or)) button placed above each group, will open a menu with options to change the group type or ungroup the conditions inside.
 
 Since every condition is related to a specific field from a particular entity changing the entity will lead to resetting all preset conditions and groups. When selecting a new entity a confirmation dialog will be shown, unless the [`showEntityChangeDialog`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#showEntityChangeDialog) input property is set to false.
 
@@ -154,13 +152,13 @@ The Ignite UI for Angular Query Builder Component allows defining templates for 
 
 ### Header
 
-Passing content inside of the `igx-query-builder-header` allows templating the query builder header. The [`IgxQueryBuilderHeaderComponent`]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html) provides a way to hide the legend by setting the [`showLegend`]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html#showLegend) input property to false.
+Passing content inside of the `igx-query-builder-header` allows templating the query builder header. 
 
  The code snippet below illustrates how to do this:
 
 ```html
 <igx-query-builder #queryBuilder [entities]="this.entities">
-        <igx-query-builder-header [title]="'Query Builder Template Sample'" [showLegend]="true">  
+        <igx-query-builder-header [title]="'Query Builder Template Sample'">  
         </igx-query-builder-header>
 </igx-query-builder>
 ```
