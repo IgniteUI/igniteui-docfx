@@ -146,6 +146,10 @@ The `expressionTree` is a two-way bindable property which means a corresponding 
 </igx-query-builder>
 ```
 
+### Expressions Dragging
+
+## Keyboard navigation
+
 ## Templating
 
 The Ignite UI for Angular Query Builder Component allows defining templates for the component's header and the search value using the following predefined reference names:
