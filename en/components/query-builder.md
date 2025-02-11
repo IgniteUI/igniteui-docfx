@@ -148,7 +148,12 @@ The `expressionTree` is a two-way bindable property which means a corresponding 
 
 ### Expressions Dragging
 
-## Keyboard navigation
+## Keyboard interaction
+**Key Combinations**
+ - <kbd>Arrow Down</kbd> - 
+ - <kbd>Arrow Up</kbd> - 
+ - <kbd>Tab</kbd> / <kbd>Shift + Tab</kbd> - navigates to the next/previous chip, drag indicator and remove button
+ - <kbd>Space</kbd> / <kbd>Enter</kbd> - focused expression enters edit mode 
 
 ## Templating
 
