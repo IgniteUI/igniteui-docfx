@@ -7,7 +7,6 @@ _language: ja
 
 # Angular Toast (トースト) コンポーネントの概要
 <p class="highlight">Ignite UI for Angular Toast コンポーネントは、自動非表示でユーザーが閉じられない非対話型の情報および報告メッセージを表示できます。通知はページの上側、中央、または下側に表示できます。</p>
-<div class="divider"></div>
 
 ## Angular Toast の例
 
@@ -193,13 +192,14 @@ Toast のスタイル設定を始めるには、すべてのテーマ関数と�
 
 ```scss
 $custom-toast-theme: toast-theme(
-    $background: #dedede,
-    $text-color: #151515,
-    $border-radius: 12px
+  $background: #dedede,
+  $text-color: #151515,
+  $border-radius: 12px
 );
 ```
 
-### CSS 変数の使用
+>[!NOTE]
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](themes/sass/palettes.md)のトピックをご覧ください。
 
 最後に Toast のカスタム テーマを設定します。
 
@@ -207,84 +207,7 @@ $custom-toast-theme: toast-theme(
 @include css-vars($custom-toast-theme);
 ```
 
-### ミックスインの使用
-
-Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
-
-コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。 
-
-```scss
-:host {
-    ::ng-deep {
-        // Custom toast theme を `igx-toast` ミックスインに渡します
-        @include toast($custom-toast-theme);
-    }
-}
-```
-
-### カラー パレットの使用
-
-上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して色に関してより高い柔軟性を実現することができます。
-
-`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
-
-```scss
-$white-color: #dedede;
-$black-color: #151515;
-
-$light-toast-palette: palette($primary: $white-color, $secondary: $black-color);
-```
-
-また [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。 
-
-```scss
-$custom-toast-theme: toast-theme(
-    $background: color($light-toast-palette, "primary", 400),
-    $text-color: color($light-toast-palette, "secondary", 400),
-    $border-radius: 12px
-);
-```
-
->[!NOTE]
->`igx-color` および `igx-palette` は、色を生成および取得するための重要な機能です。使い方の詳細については[`パレット`](themes/palettes.md)のトピックを参照してください。
-
-### スキーマの使用
-
-[**スキーマ**](themes/sass/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
-
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`light-toast`]({environment:sassApiUrl}/index.html#variable-_light-toast)) の 1 つを拡張します。 
-
-```scss
-//  Extending the toast schema
-$light-toast-schema: extend($_light-toast,
-    (
-        background: (
-           color: ("primary", 400)
-        ),
-        text-color: (
-           color: ("secondary", 400)
-        ),
-        border-radius: 12px
-    )
-);
-```
-
-カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張する**必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加するものです。
-
-```scss
-// Extending the global light-schema
-$custom-light-schema: extend($light-schema,(
-    igx-toast: $light-toast-schema
-));
-
-// Defining toast with the global light schema
-$custom-toast-theme: toast-theme(
-  $palette: $light-toast-palette,
-  $schema: $custom-light-schema
-);
-```
-
-上記と同じ方法でテーマを含める必要があることに注意してください。
+### デモ
 
 <code-view style="height: 600px" 
            no-theming

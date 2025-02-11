@@ -319,40 +319,44 @@ Ignite UI for Angular Simple ComboBox コンポーネントは、コンボボッ
            iframe-src="{environment:demosBaseUrl}/lists/simple-combo-remote" alt="Angular Simple Combo リモート バインディングの例">
 </code-view>
 
-## Angular Simple ComboBox のスタイル設定
+## スタイル設定
 
-[Ignite UI for Angular Theming](themes/index.md) を使用すると、Simple ComboBox の外観を大幅に変更できます。はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。
+[`Ignite UI for Angular テーマ`](themes/index.md) を使用すると、Simple ComboBox の外観を大幅に変更できます。はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。
 
 ```scss
 @use 'igniteui-angular/theming' as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も単純なアプローチに従って、[combo-theme]({environment:sassApiUrl}/index.html#function-combo-theme) を拡張し、`$empty-list-background` パラメーターを受け入れる新しいテーマを作成します。
+最も単純なアプローチに従って、[`combo-theme`]({environment:sassApiUrl}/index.html#function-combo-theme) を拡張し、`$empty-list-background` パラメーターを受け入れる新しいテーマを作成します。
+
 ```scss
 $custom-simple-combo-theme: combo-theme(
-    $empty-list-background: #1a5214
+  $empty-list-background: #1a5214
 );
 ```
 
-[IgxSimpleComboComponent]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) は、[IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を項目コンテナーとして内部的に使用します。[IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) コンポーネントも含まれています。これらのコンポーネントのテーマを拡張する新しいテーマを作成し、それぞれのクラスの下でそれらをスコープすると、Simple ComboBox のスタイルを変更できます。
+[`IgxSimpleComboComponent`]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) は、[`IgxDropDownComponent`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を項目コンテナーとして内部的に使用します。[`IgxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) コンポーネントも含まれています。これらのコンポーネントのテーマを拡張する新しいテーマを作成し、それぞれのクラスの下でそれらをスコープすると、Simple ComboBox のスタイルを変更できます。
 
 ```scss
 $custom-drop-down-theme: drop-down-theme(
-    $background-color: #d9f5d6,
-    $header-text-color: #1a5214,
-    $item-text-color: #1a5214,
+  $background-color: #d9f5d6,
+  $header-text-color: #1a5214,
+  $item-text-color: #1a5214,
 
-    $focused-item-background: #72da67,
-    $focused-item-text-color: #1a5214,
-    $hover-item-background: #a0e698,
-    $hover-item-text-color: #1a5214,
+  $focused-item-background: #72da67,
+  $focused-item-text-color: #1a5214,
+  $hover-item-background: #a0e698,
+  $hover-item-text-color: #1a5214,
 
-    $selected-item-background: #a0e698,
-    $selected-item-text-color: #1a5214,
-    $selected-hover-item-background: #72da67,
-    $selected-hover-item-text-color: #1a5214,
-    $selected-focus-item-background: #72da67,
-    $selected-focus-item-text-color: #1a5214,
+  $selected-item-background: #a0e698,
+  $selected-item-text-color: #1a5214,
+  $selected-hover-item-background: #72da67,
+  $selected-hover-item-text-color: #1a5214,
+  $selected-focus-item-background: #72da67,
+  $selected-focus-item-text-color: #1a5214,
 );
 ```
 
@@ -360,16 +364,16 @@ $custom-drop-down-theme: drop-down-theme(
 
 ```scss
 :host ::ng-deep {
-    @include css-vars($custom-combo-theme);
-    @include css-vars($custom-drop-down-theme);
+  @include css-vars($custom-combo-theme);
+  @include css-vars($custom-drop-down-theme);
 }
 ```
 
 > [!NOTE]
-> [IgxSimpleCombo]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) コンポーネントは、[IgxOverlay](overlay.md) サービスを使用して、Simple ComboBox 項目リスト コンテナーを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[IgxOverlay スタイル ガイド](overlay-styling.md)を確認してください。
+> [`IgxSimpleCombo`]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) コンポーネントは、[`IgxOverlay`](overlay.md) サービスを使用して、Simple ComboBox 項目リスト コンテナーを保持および表示します。スタイルを適切にスコープするには、[`OverlaySetting.outlet`]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[`IgxOverlay スタイル ガイド`](overlay-styling.md)を確認してください。また、コンポーネントのスタイルを設定するときに `::ng-deep` を使用する必要があります。
 
 > [!Note]
-> `IgxSimpleCombo` のデフォルトの`タイプ`は、`line` である [IgxSelect](select.md) とは異なり `box` です。
+> `IgxSimpleCombo` のデフォルトの `type` は、`line` である [`IgxSelect`](select.md) とは異なり `box` です。
 
 ### サンプル
 

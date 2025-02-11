@@ -24,7 +24,7 @@ _language: ja
 }
 
 # Angular @@igComponent フィルタリング
-IgniteUI for [Angular @@igComponent コンポーネント](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid/grid)は、[クイック フィルタリング、[Excel スタイル フィルタリング](excel-style-filtering.md)、および[高度なフィルタリング](advanced-filtering.md)の 3 つの異なるフィルタリング タイプを提供します。それらのフィルタリング タイプは指定された基準を満たすレコードのみを表示できるようにします。Ignite UI の Material UI グリッドコンポーネントは、@@igComponent がバインドされているデータコンテナーを介して、Angular フィルター機能と広範なフィルター API を提供します。
+IgniteUI for [Angular @@igComponent コンポーネント](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid/grid)は、クイック フィルタリング、[Excel スタイル フィルタリング](excel-style-filtering.md)、および[高度なフィルタリング](advanced-filtering.md)の 3 つの異なるフィルタリング タイプを提供します。それらのフィルタリング タイプは指定された基準を満たすレコードのみを表示できるようにします。Ignite UI の Material UI グリッドコンポーネントは、@@igComponent がバインドされているデータコンテナーを介して、Angular フィルター機能と広範なフィルター API を提供します。
 
 ## Angular @@igComponent フィルタリングの例
 
@@ -68,7 +68,7 @@ IgniteUI for [Angular @@igComponent コンポーネント](https://jp.infragisti
 - **true** - 対応するグリッドのフィルタリングが有効になります。
 
 **[filterMode]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterMode)** プロパティを使用して、以下のオプションを指定できます:
-- **quickFilter** - 簡易なフィルタリング UI /デフォルト値/。 
+- **quickFilter** - 簡易なフィルタリング UI /デフォルト値/。
 - **excelStyleFilter** - Excel のようなフィルタリング UI。
 
 **[filterable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable)** プロパティを使用して、以下のオプションを指定できます:
@@ -528,7 +528,6 @@ public matchingRecordsOnlyStrategy = new TreeGridMatchingRecordsOnlyFilteringStr
 }
 
 
-
 ## スタイル設定
 
 フィルター行のスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
@@ -544,202 +543,73 @@ public matchingRecordsOnlyStrategy = new TreeGridMatchingRecordsOnlyFilteringStr
 
 ```scss
 $custom-grid: grid-theme(
-    $filtering-row-text-color: #292826,
-    $filtering-row-background: #FFCD0F,
-    $filtering-header-text-color: #292826,
-    $filtering-header-background: #FFCD0F
+  $filtering-row-text-color: #292826,
+  $filtering-row-background: #ffcd0f,
+  $filtering-header-text-color: #292826,
+  $filtering-header-background: #ffcd0f
 );
 ```
 
-以下のように、`grid-theme` は、フィルタリング行とフィルタリングされているそれぞれの列ヘッダーの色のみを制御します。入力グループ、チップ、ボタンなど、フィルタリング行内には明らかに多くのコンポーネントがあります。スタイルの設定は、それぞれに個別のテーマを作成する必要があるため、新しい入力グループのテーマと新しいボタンのテーマを作成します。
+以下のように、`grid-theme` は、フィルタリング行とフィルタリングされているそれぞれの列ヘッダーの色のみを制御します。入力グループ、チップ、ボタンなど、フィルタリング行内には明らかに多くのコンポーネントがあります。スタイルの設定は、それぞれに個別のテーマを作成する必要があるため、新しい [`input-group-theme`]({environment:sassApiUrl}/index.html#input-group-theme) と新しい [`button-theme`]({environment:sassApiUrl}/index.html#button-theme) を作成します。
 
 ```scss
 $dark-input-group: input-group-theme(
-    $box-background: #FFCD0F,
-    $idle-text-color: #292826,
-    $focused-text-color: #292826,
-    $filled-text-color: #292826
+  $box-background: #ffcd0f,
+  $idle-text-color: #292826,
+  $focused-text-color: #292826,
+  $filled-text-color: #292826
 );
 
 $dark-button: button-theme(
-    $flat-background: #FFCD0F,
-    $flat-text-color: #292826,
-    $flat-hover-background: #292826,
-    $flat-hover-text-color: #FFCD0F
+  $flat-background: #ffcd0f,
+  $flat-text-color: #292826,
+  $flat-hover-background: #292826,
+  $flat-hover-text-color: #ffcd0f
 );
 ```
+
+>[!NOTE]
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックをご覧ください。
 
 この例では、入力グループとボタンのパラメーターの一部のみを変更しましたが、[`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme) と [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) は、それぞれのスタイルを制御するためのより多くのパラメーターを提供します。
 
 最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。また、入力のプレース ホルダーの色プロパティを設定します。
 
 ```scss
-@include grid($custom-grid);
-.igx-grid__filtering-row {
-    @include button($dark-button);
-    @include input-group($dark-input-group);
+@include css-vars($custom-grid);
 
-    .igx-input-group__input::placeholder {
-        color: #FFCD0F;
-    }
+.igx-grid__filtering-row {
+  @include css-vars($dark-button);
+  @include css-vars($dark-input-group);  
+
+  .igx-input-group__input::placeholder {
+    color: #ffcd0f;
+  }
 }
 ```
 
 >[!NOTE]
->`.igx-grid__filtering-row` 内で **igx-button** および **igx-input-group** ミックスインをスコープし、行フィルター ボタンとその入力グループのみのスタイルを設定します。そうでない場合は、グリッド内の他のボタンと入力グループも影響を受けます。
+>作成した **button-theme** と **input-group-theme** を `.igx-grid__filtering-row` 内に含めて、フィルタリング行ボタンとその入力グループのみにスタイルを設定します。そうでない場合は、グリッド内の他のボタンと入力グループも影響を受けます。
 
- >[!NOTE]
- >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+>[!NOTE]
+>コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
 :host {
-     ::ng-deep {
-        @include grid($custom-grid);
-        .igx-grid__filtering-row {
-            @include button($dark-button);
-            @include input-group($dark-input-group);
+  ::ng-deep {
+    @include css-vars($custom-grid);
 
-            .igx-input-group__input::placeholder {
-                color: #FFCD0F;
-            }
-        }
+    .igx-grid__filtering-row {
+      @include css-vars($dark-button);
+      @include css-vars($dark-input-group)
+
+      .igx-input-group__input::placeholder {
+        color: #ffcd0f;
+      }
     }
+  }
 }
 ```
-
-### カラーパレットの定義
-
-上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
-
-`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
-
-```scss
-$yellow-color: #FFCD0F;
-$black-color: #292826;
-
-$dark-palette: palette($primary: $black-color, $secondary: $yellow-color);
-```
-
-次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。 
-
-```scss
-$custom-grid: grid-theme(
-    $filtering-row-text-color: color($dark-palette, "primary", 400),
-    $filtering-row-background: color($dark-palette, "secondary", 400),
-    $filtering-header-text-color: color($dark-palette, "primary", 400),
-    $filtering-header-background: color($dark-palette, "secondary", 400)
-);
-
-$dark-input-group: input-group-theme(
-    $box-background: color($dark-palette, "secondary", 400),
-    $idle-text-color: color($dark-palette, "primary", 400),
-    $focused-text-color: color($dark-palette, "primary", 400),
-    $filled-text-color: color($dark-palette, "primary", 400)
-);
-
-$dark-button: button-theme(
-    $flat-background: color($dark-palette, "secondary", 400),
-    $flat-text-color: color($dark-palette, "primary", 400),
-    $flat-hover-background: color($dark-palette, "primary", 400),
-    $flat-hover-text-color: color($dark-palette, "secondary", 400)
-);
-```
-
->[!NOTE]
->`igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックを参照してください。
-
-### スキーマの使用
-
-テーマ エンジンを使用して[**スキーマ**](../themes/sass/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
-
-すべてのコンポーネントに提供される定義済みスキーマ ([`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid)、[`light-input-group`]({environment:sassApiUrl}/index.html#variable-_light-input-group)、[`light-button`]({environment:sassApiUrl}/index.html#variable-_light-button)) のうちの 1 つを拡張します。 
-
-```scss
-// Extending the light grid schema
-$custom-grid-schema: extend($_light-grid,
-    (
-        filtering-row-text-color:(
-           color: ("primary", 400)
-        ),
-        filtering-row-background:(
-           color: ("secondary", 400)
-        ),
-        filtering-header-text-color:(
-           color: ("primary", 400)
-        ),
-        filtering-header-background:(
-           color: ("secondary", 400)
-        )
-    )
-);
-
-// Extending the light input group schema
-$custom-input-group-schema: extend($_light-input-group,
-    (
-        box-background:(
-           color: ("secondary", 400)
-        ),
-        idle-text-color:(
-           color: ("primary", 400)
-        ),
-        focused-text-color:(
-           color: ("primary", 400)
-        ),
-        filled-text-color:(
-           color: ("primary", 400)
-        )
-    )
-);
-
-// Extending the light button schema
-$custom-button-schema: extend($_light-button,
-    (
-        flat-background:(
-           color: ("secondary", 400)
-        ),
-        flat-text-color:(
-           color: ("primary", 400)
-        ),
-        flat-hover-background:(
-           color: ("primary", 400)
-        ),
-        flat-hover-text-color:(
-           color: ("secondary", 400)
-        )
-    )
-);
-```
-
-カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張する**必要があります。これは基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネントテーマに追加するものです。
-
-```scss
-// Extending the global light-schema
-$custom-light-schema: extend($light-schema,(
-    igx-grid: $custom-grid-schema,
-    igx-input-group: $custom-input-group-schema,
-    igx-button: $custom-button-schema
-));
-
-// Defining grid-theme with the global light schema
-$custom-grid: grid-theme(
-  $palette: $dark-palette,
-  $schema: $custom-light-schema
-);
-
-// Defining button-theme with the global light schema
-$custom-button: button-theme(
-  $palette: $dark-palette,
-  $schema: $custom-light-schema
-);
-
-// Defining input-group-theme with the global light schema
-$custom-input-group: input-group-theme(
-  $palette: $dark-palette,
-  $schema: $custom-light-schema
-);
-```
-
-上記と同じ方法でテーマを含める必要があることに注意してください。
 
 ### デモ
 
@@ -771,7 +641,7 @@ $custom-input-group: input-group-theme(
 
 }
 >[!NOTE]
->このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
+>このサンプルは、`Change Theme` (テーマの変更) から選択したグローバル テーマに影響を受けません。
 
 ## 既知の制限
 

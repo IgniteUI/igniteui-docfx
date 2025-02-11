@@ -6,8 +6,8 @@ _language: ja
 ---
 
 # Angular Drop Down (ドロップダウン) コンポーネントの概要
+
 <p class="highlight">Ignite UI for Angular Drop Down は事前定義された値の切り替え可能なリストを表示し、ユーザーがクリックするだけで 1 つのオプション項目を簡単に選択できるようにするコンポーネントです。ドロップダウン メニューとして機能するようにすばやく構成することも、データをグループ化することでより有用な視覚情報を提供するために使用することもできます。グループ化を使用すると、フラット データと階層データの両方を使用できます。Drop Down コンポーネントを使用すると、宣言型のバインディングが可能になり、追加のコンテンツやリンクを埋め込むことができます。これにより、UI をさらにカスタマイズして Angular ドロップダウン リストの外観をスタイル設定する余地も残されます。これに加えて、キーボードのドロップダウン ナビゲーションや仮想化などの主要な機能が満載です。</p>
-<div class="divider"></div>
 
 ## Angular Drop Down の例
 
@@ -57,23 +57,25 @@ import { IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective 
 // import { IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
-    selector: 'app-home',
-    template: `
-    <button igxButton="contained" 
-        [igxToggleAction]="dropdown"
-        [igxDropDownItemNavigation]="dropdown">
-        Options
+  selector: 'app-home',
+  template: `
+    <button
+      igxButton="contained"
+      [igxToggleAction]="dropdown"
+      [igxDropDownItemNavigation]="dropdown"
+    >
+      Options
     </button>
     <igx-drop-down #dropdown>
-        <igx-drop-down-item *ngFor="let item of items">
-            {{ item.field }}
-        </igx-drop-down-item>
+      <igx-drop-down-item *ngFor="let item of items">
+        {{ item.field }}
+      </igx-drop-down-item>
     </igx-drop-down>
-    `,
-    styleUrls: ['home.component.scss'],
-    standalone: true,
-    imports: [IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective, NgFor]
-    /* or imports: [IgxDropDownComponent, IgxDropDownItemComponent, IgxToggleActionDirective, IgxButtonDirective, NgFor] */
+  `,
+  styleUrls: ['home.component.scss'],
+  standalone: true,
+  imports: [ IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective, NgFor ],
+  /* or imports: [IgxDropDownComponent, IgxDropDownItemComponent, IgxToggleActionDirective, IgxButtonDirective, NgFor] */
 })
 export class HomeComponent {}
 ```
@@ -86,18 +88,15 @@ Ignite UI for Angular Drop Down モジュールまたはディレクティブを
 
 選択可能な複数のオプション項目を提供するシンプルなドロップダウンを作成します。これを実現するには、[IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) と [IgxToggleAction]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) を使用してドロップダウンを開きます / 閉じます。
 
-
 ```html
 <!-- dropdown.component.html -->
-<button igxButton="contained" 
-        [igxToggleAction]="dropdown"
-        [igxDropDownItemNavigation]="dropdown">
-        Options
+<button igxButton="contained" [igxToggleAction]="dropdown" [igxDropDownItemNavigation]="dropdown">
+  Options
 </button>
 <igx-drop-down #dropdown>
-    <igx-drop-down-item *ngFor="let item of items">
-        {{ item.field }}
-    </igx-drop-down-item>
+  <igx-drop-down-item *ngFor="let item of items">
+    {{ item.field }}
+  </igx-drop-down-item>
 </igx-drop-down>
 ```
 
@@ -118,39 +117,36 @@ export class MyDropDownComponent {
 デフォルトのデモでは、Angular で切り替え可能な Drop Down リストを使用して、エンドユーザーが事前定義されたすべての項目を展開し、そのうちの 1 つを選択できるようにしています。次の例は、Angular Drop Down リストの動作を示しています。
 
 ### 定義済みの選択項目
+
 定義済みの選択項目を作成したいとします。1 つの方法は、ドロップダウン コンポーネントの [opening]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#opening) イベントを処理することです。
 
 ```html
 <!-- dropdown.component.html -->
-<button igxButton="contained" 
-        [igxToggleAction]="dropdown" 
-        [igxDropDownItemNavigation]="dropdown">
-        Options
+<button igxButton="contained" [igxToggleAction]="dropdown" [igxDropDownItemNavigation]="dropdown">
+  Options
 </button>
 <igx-drop-down #dropdown (opening)="dropdown.setSelectedItem(0)">
-    <igx-drop-down-item *ngFor="let item of items">
-        {{ item.field }}
-    </igx-drop-down-item>
+  <igx-drop-down-item *ngFor="let item of items">
+    {{ item.field }}
+  </igx-drop-down-item>
 </igx-drop-down>
 ```
 
 ```typescript
 // dropdown.component.ts
 export class MyDropDownComponent {
-    public items: Array<{ field: string }> = [
-        { field: 'Option 1' },
-        { field: 'Option 2' },
-        { field: 'Option 3' }
-    ];
+  public items: Array<{ field: string }> = [
+    { field: 'Option 1' },
+    { field: 'Option 2' },
+    { field: 'Option 3' },
+  ];
 }
 ```
-
 
 <code-view style="height: 200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-2" >
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -160,50 +156,43 @@ export class MyDropDownComponent {
 
 ```html
 <!-- dropdown.component.html -->
-<button igxButton="contained" 
-        [igxToggleAction]="dropdown"
-        [igxDropDownItemNavigation]="dropdown">
-        Countries
+<button igxButton="contained" [igxToggleAction]="dropdown" [igxDropDownItemNavigation]="dropdown">
+  Countries
 </button>
 <igx-drop-down #dropdown [width]="'240px'">
-    <div class="drop-down__scroll-container">
-        <igx-drop-down-item *ngFor="let item of items" 
-                            [disabled]="item.disabled"
-                            [isHeader]="item.header"
-                            [selected]="item.selected">
-            <igx-icon igxPrefix>place</igx-icon>
-            {{ item.field }}
-            <span igxSuffix>{{ item.code }}</span>
-            <igx-divider></igx-divider>
-        </igx-drop-down-item>
-    </div>
+  <div class="drop-down__scroll-container">
+    <igx-drop-down-item *ngFor="let item of items" [disabled]="item.disabled" [isHeader]="item.header" [selected]="item.selected">
+      <igx-icon igxPrefix>place</igx-icon>
+      {{ item.field }}
+      <span igxSuffix>{{ item.code }}</span>
+      <igx-divider></igx-divider>
+    </igx-drop-down-item>
+  </div>
 </igx-drop-down>
 ```
 
 ```typescript
 // dropdown.component.ts
 export class MyDropDownComponent {
-    public items: any[] = [
-        { field: 'European Union', code: 'EU', header: true },
-        { field: 'Germany', code: 'DE' },
-        { field: 'Bulgaria', code: 'BG', selected: true },
-        { field: 'France', code: 'FR', disabled: true },
-        { field: 'North America', code: 'NA', header: true },
-        { field: 'Canada', code: 'CA' },
-        { field: 'United States', code: 'US' },
-        { field: 'Mexico', code: 'MX' }
-    ];
+  public items: any[] = [
+    { field: 'European Union', code: 'EU', header: true },
+    { field: 'Germany', code: 'DE' },
+    { field: 'Bulgaria', code: 'BG', selected: true },
+    { field: 'France', code: 'FR', disabled: true },
+    { field: 'North America', code: 'NA', header: true },
+    { field: 'Canada', code: 'CA' },
+    { field: 'United States', code: 'US' },
+    { field: 'Mexico', code: 'MX' },
+  ];
 }
 ```
 
 サンプルを正しく構成すると European Union ヘッダーの下に国の一覧がグループ形式で表示され、France は非インタラクティブな項目、そして Bulgaria は選択済みの項目として表示されます。
 
-
 <code-view style="height: 310px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-3" >
 </code-view>
-
 
 ### 階層データのグループ化
 
@@ -213,7 +202,7 @@ export class MyDropDownComponent {
 // dropdown.component.ts
 export class MyCustomDropDownComponent {
     ...
-    public foods: { 
+    public foods: {
         name: string,
         entries: { name: string, refNo: string }[]
     }[] = [
@@ -253,11 +242,11 @@ export class MyCustomDropDownComponent {
 
 ```html
 <igx-drop-down>
-    <igx-drop-down-item-group *ngFor="let foodGroup of foods" [label]="foodGroup.name">
-        <igx-drop-down-item *ngFor="let food of foodGroup.entries" [value]='food.refNo'>
-            {{ food.name }}
-        </igx-drop-down-item>
-    </igx-drop-down-item-group>
+  <igx-drop-down-item-group *ngFor="let foodGroup of foods" [label]="foodGroup.name">
+    <igx-drop-down-item *ngFor="let food of foodGroup.entries" [value]="food.refNo">
+      {{ food.name }}
+    </igx-drop-down-item>
+  </igx-drop-down-item-group>
 </igx-drop-down>
 ```
 
@@ -265,13 +254,13 @@ export class MyCustomDropDownComponent {
 
 ```html
 <igx-drop-down>
-    <igx-drop-down-item-group *ngFor="let foodGroup of foods" [label]="foodGroup.name" [disabled]="foodGroup.name === 'Meats'">
-        <igx-drop-down-item *ngFor="let food of foodGroup.entries" [value]='food.refNo'>
-            {{ food.name }}
-        </igx-drop-down-item>
-    </igx-drop-down-item-group>
+  <igx-drop-down-item-group *ngFor="let foodGroup of foods" [label]="foodGroup.name" [disabled]="foodGroup.name === 'Meats'">
+    <igx-drop-down-item *ngFor="let food of foodGroup.entries" [value]="food.refNo">
+      {{ food.name }}
+    </igx-drop-down-item>
+  </igx-drop-down-item-group>
 </igx-drop-down>
-``` 
+```
 
 以下のサンプルで結果を確認できます。
 
@@ -280,60 +269,65 @@ export class MyCustomDropDownComponent {
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-5" >
 </code-view>
 
-
 ### ドロップダウン メニュー
+
 ドロップダウンをメニューとして動作するように構成できます。[selectionChanging]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selectionChanging) イベント ハンドラーで [ISelectionEventArgs]({environment:angularApiUrl}/interfaces/iselectioneventargs.html) インターフェイスの [cancel]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#cancel) メンバーを true に設定します。この方法では、メニューを開いた際に選択した項目が保持されず、前の選択が無効になります。クリックされた項目は、イベントの [newSelection]({environment:angularApiUrl}/interfaces/iselectioneventargs.html#newSelection) メンバー値で取得できます。
 
 ```html
 <!-- dropdown.component.html -->
 <div>
-    <igx-navbar title="Contacts">
-        <button [igxToggleAction]="menu"
-                [igxToggleOutlet]="outlet"
-                [overlaySettings]="overlaySettings"
-                [igxDropDownItemNavigation]="menu"
-                igxIconButton="flat">
-            <igx-icon fontSet="material">more_vert</igx-icon>
-        </button>
-        <igx-drop-down #menu (selectionChanging)="selectionHandler($event)">
-            <igx-drop-down-item *ngFor="let item of items" [value]="item.text">
-                <div>{{ item.text }}</div>
-            </igx-drop-down-item>
-        </igx-drop-down>
-    </igx-navbar>
+  <igx-navbar title="Contacts">
+    <button
+      [igxToggleAction]="menu"
+      [igxToggleOutlet]="outlet"
+      [overlaySettings]="overlaySettings"
+      [igxDropDownItemNavigation]="menu"
+      igxIconButton="flat"
+    >
+      <igx-icon fontSet="material">more_vert</igx-icon>
+    </button>
+    <igx-drop-down #menu (selectionChanging)="selectionHandler($event)">
+      <igx-drop-down-item *ngFor="let item of items" [value]="item.text">
+        <div>{{ item.text }}</div>
+      </igx-drop-down-item>
+    </igx-drop-down>
+  </igx-navbar>
 
-    <div>
-        <ng-container *ngIf="text">
-            <label igxLabel>{{ text }}</label>
-        </ng-container>
-    </div>
+  <div>
+    <ng-container *ngIf="text">
+      <label igxLabel>{{ text }}</label>
+    </ng-container>
+  </div>
 
-    <div igxOverlayOutlet #outlet="overlay-outlet"></div>
+  <div igxOverlayOutlet #outlet="overlay-outlet"></div>
 </div>
 ```
 
 ```typescript
 // dropdown.component.ts
 export class MyMenuComponent {
-    public items: Array<{ text: string }> =
-        [{ text: 'Add New Contact' }, { text: 'Edit Contact' }, { text: 'Refresh' }, { text: 'Help' }];
-    public text: string;
-    public overlaySettings = {
-        positionStrategy: new ConnectedPositioningStrategy({
-            horizontalDirection: HorizontalAlignment.Left,
-            horizontalStartPoint: HorizontalAlignment.Right,
-            verticalStartPoint: VerticalAlignment.Bottom
-        }),
-        scrollStrategy: new NoOpScrollStrategy()
-    };
+  public items: Array<{ text: string }> = [
+    { text: "Add New Contact" },
+    { text: "Edit Contact" },
+    { text: "Refresh" },
+    { text: "Help" },
+  ];
+  public text: string;
+  public overlaySettings = {
+    positionStrategy: new ConnectedPositioningStrategy({
+      horizontalDirection: HorizontalAlignment.Left,
+      horizontalStartPoint: HorizontalAlignment.Right,
+      verticalStartPoint: VerticalAlignment.Bottom,
+    }),
+    scrollStrategy: new NoOpScrollStrategy(),
+  };
 
-    public selectionHandler(eventArgs: ISelectionEventArgs) {
-        this.text = eventArgs.newSelection.value;
-        eventArgs.cancel = true;
-    }
+  public selectionHandler(eventArgs: ISelectionEventArgs) {
+    this.text = eventArgs.newSelection.value;
+    eventArgs.cancel = true;
+  }
 }
 ```
-
 
 <code-view style="height: 240px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -350,17 +344,15 @@ export class MyMenuComponent {
 
 ```html
 <igx-drop-down #dropdown1>
-    <igx-drop-down-item [value]="'Web'" multiLevel [innerDropdown]="web">
-        Web <igx-icon igxSuffix>chevron_right</igx-icon>
-    </igx-drop-down-item>
-    ...
+  <igx-drop-down-item [value]="'Web'" multiLevel [innerDropdown]="web">
+    Web <igx-icon igxSuffix>chevron_right</igx-icon>
+  </igx-drop-down-item>
+  ...
 </igx-drop-down>
 
 <igx-drop-down #web>
-    <igx-drop-down-item [value]="'App Builder'">
-        App Builder
-    </igx-drop-down-item>
-    ...
+  <igx-drop-down-item [value]="'App Builder'"> App Builder </igx-drop-down-item>
+  ...
 </igx-drop-down>
 ```
 
@@ -410,62 +402,66 @@ public ngAfterViewInit(): void {
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-multi-level-menu">
 </code-view>
 
->[!NOTE]
->最初に開いた Dropdown コンポーネントを表示するには、open メソッドを requestAnimationFrame メソッドのコールバックとして設定することをお勧めします。これにより、DOM ツリーが再描画され、すべての要素が正しく配置されるようになります。
+> [!NOTE]
+> 最初に開いた Dropdown コンポーネントを表示するには、open メソッドを requestAnimationFrame メソッドのコールバックとして設定することをお勧めします。これにより、DOM ツリーが再描画され、すべての要素が正しく配置されるようになります。
 
 ### Navigation ディレクティブ
+
 [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) ディレクティブを使用して、`igxDropDown` コンポーネントのキーボード ナビゲーションを有効にします。ディレクティブがトリガーされたすべてのイベントを処理できるようにするには、アクティブな (フォーカスされる) 要素または親コンテナーに適用する必要があります。デフォルトでは、ドロップダウンまたはその項目はフォーカスを取得しないため、ディレクティブはドロップダウンを制御する `button` または `input` に配置できます。ナビゲーション ディレクティブの値は、[IgxDropDownBaseDirective]({environment:angularApiUrl}/classes/igxdropdownbasedirective.html) クラスのインスタンスまたは子孫であるコンポーネントを対象とする必要があります。
 
 以下のサンプルでは、クリックで `igxDropDown` インスタンスを開閉できます。入力自体に [igxDropDownItemNavigation]({environment:angularApiUrl}/classes/igxdropdownitemnavigationdirective.html) ディレクティブを適用すると、上下矢印キーを使用するキーボード ナビゲーションが有効になります。これは、[allowItemsFocus]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#allowItemsFocus) プロパティを `false` に設定し、入力でフォーカスを維持できるデフォルトのドロップダウン動作に依存します。
 
-
 ```html
 <!-- input-dropdown.component.html -->
 <igx-input-group #inputGroup [igxToggleAction]="dropDown">
-    <input type="text" igxInput [igxDropDownItemNavigation]="dropDown"
-        readonly= "true"
-        placeholder="choose an option"
-        [value]="dropDown.selectedItem?.value"
-        (keydown.ArrowDown)="openDropDown()"/>
+  <input
+    type="text"
+    igxInput
+    [igxDropDownItemNavigation]="dropDown"
+    readonly="true"
+    placeholder="choose an option"
+    [value]="dropDown.selectedItem?.value"
+    (keydown.ArrowDown)="openDropDown()"
+  />
 
-    <igx-suffix igxIconButton="flat" igxRipple>
-        <igx-icon>arrow_drop{{ dropDown.collapsed ? '_down' : '_up' }}</igx-icon>
-    </igx-suffix>
+  <igx-suffix igxIconButton="flat" igxRipple>
+    <igx-icon>arrow_drop{{ dropDown.collapsed ? '_down' : '_up' }}</igx-icon>
+  </igx-suffix>
 </igx-input-group>
 
 <span>Selected: {{ dropDown.selectedItem?.value }}</span>
 <igx-drop-down #dropDown [width]="'160px'">
-    <igx-drop-down-item *ngFor="let item of items" [value]="item.field">
-        {{ item.field }}
-    </igx-drop-down-item>
+  <igx-drop-down-item *ngFor="let item of items" [value]="item.field">
+    {{ item.field }}
+  </igx-drop-down-item>
 </igx-drop-down>
 ```
 
 ```typescript
 // input-dropdown.component.ts
 export class InputDropDownComponent {
-    @ViewChild(IgxDropDownComponent) public igxDropDown: IgxDropDownComponent;
-    @ViewChild('inputGroup', { read: IgxInputGroupComponent}) public inputGroup: IgxInputGroupComponent;
+  @ViewChild(IgxDropDownComponent) public igxDropDown: IgxDropDownComponent;
+  @ViewChild('inputGroup', { read: IgxInputGroupComponent })
+  public inputGroup: IgxInputGroupComponent;
 
-    public items: Array<{ field: string }> = [
-        { field: 'Option 1' },
-        { field: 'Option 2' },
-        { field: 'Option 3' }
-    ];
+  public items: Array<{ field: string }> = [
+    { field: 'Option 1' },
+    { field: 'Option 2' },
+    { field: 'Option 3' },
+  ];
 
-    public openDropDown() {
-        if (this.igxDropDown.collapsed) {
-            this.igxDropDown.open({
-                modal: false,
-                positionStrategy: new ConnectedPositioningStrategy({
-                    target: this.inputGroup.element.nativeElement
-                })
-            });
-        }
+  public openDropDown() {
+    if (this.igxDropDown.collapsed) {
+      this.igxDropDown.open({
+        modal: false,
+        positionStrategy: new ConnectedPositioningStrategy({
+          target: this.inputGroup.element.nativeElement,
+        }),
+      });
     }
+  }
 }
 ```
-
 
 <code-view style="height:220px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -476,30 +472,31 @@ export class InputDropDownComponent {
 
 ディレクティブを適用すると、キーボード ナビゲーションの結果として以下の動作が実行します。
 
-| 名前 | 説明 |
-| :--- | :--- |
-| `Enter` | ドロップダウンから項目の選択後、ドロップダウンを閉じます。 |
-| `Space` | ドロップダウンから項目の選択後、ドロップダウンを閉じます。 |
-| `Esc` | ドロップダウンを閉じます。 |
-| `Arrow Down` | ターゲット コンポーネントの次の項目に移動します。|
-| `Arrow Up` | ターゲット コンポーネントの前の項目に移動します。 |
-| `End` | ターゲット コンポーネントの最後の項目に移動します。 |
-| `Home` | ターゲット コンポーネントの最初の項目に移動します。 |
+|     名前     |                            説明                            |
+| :----------- | :--------------------------------------------------------- |
+| `Enter`      | ドロップダウンから項目の選択後、ドロップダウンを閉じます。 |
+| `Space`      | ドロップダウンから項目の選択後、ドロップダウンを閉じます。 |
+| `Esc`        | ドロップダウンを閉じます。                                 |
+| `Arrow Down` | ターゲット コンポーネントの次の項目に移動します。          |
+| `Arrow Up`   | ターゲット コンポーネントの前の項目に移動します。          |
+| `End`        | ターゲット コンポーネントの最後の項目に移動します。        |
+| `Home`       | ターゲット コンポーネントの最初の項目に移動します。        |
 
 `allowItemsFocus` プロパティが有効な場合、ドロップダウン項目がタブ インデックスを取得し、アクティブな時にフォーカスされます。フォーカスされたドロップダウン項目がキーボード ナビゲーション時にイベントをトリガーするため、ナビゲーション ディレクティブを各ドロップダウン項目に適用する必要があります。
 
 ```html
 <igx-input-group [igxToggleAction]="dropDown">
-    <input igxInput type="text">
+  <input igxInput type="text" />
 </igx-input-group>
 <igx-drop-down #dropDown [allowItemsFocus]="true">
-    <igx-drop-down-item *ngFor="let p of provinceData" [igxDropDownItemNavigation]="dropDown">
-        {{ p }}
-    </igx-drop-down-item>
+  <igx-drop-down-item *ngFor="let p of provinceData" [igxDropDownItemNavigation]="dropDown">
+    {{ p }}
+  </igx-drop-down-item>
 </igx-drop-down>
 ```
 
 ## スタイル設定
+
 [Ignite UI for Angular テーマ](themes/index.md) を使用して、ドロップダウンの外観を変更できます。はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。
 
 ```scss
@@ -513,44 +510,27 @@ export class InputDropDownComponent {
 
 ```scss
 $custom-drop-down-theme: drop-down-theme(
-    $background-color: #fdfdfd,
-    $header-text-color: #345779,
-    $item-text-color: #2dabe8,
-    $selected-item-background: #345779,
-    $selected-item-text-color: #fdfdfd,
-    $selected-hover-item-background: #345779,
-    $selected-hover-item-text-color: #fdfdfd,
-    $selected-focus-item-background: #345779,
-    $selected-focus-item-text-color: #fdfdfd,
-    $hover-item-background: rgba(0, 0, 0, 0.12),
-    $hover-item-text-color: #345779,
+  $background-color: #fdfdfd,
+  $header-text-color: #345779,
+  $item-text-color: #2dabe8,
+  $selected-item-background: #345779,
+  $selected-item-text-color: #fdfdfd,
+  $selected-hover-item-background: #345779,
+  $selected-hover-item-text-color: #fdfdfd,
+  $selected-focus-item-background: #345779,
+  $selected-focus-item-text-color: #fdfdfd,
+  $hover-item-background: rgba(0, 0, 0, 0.12),
+  $hover-item-text-color: #345779,
 );
 ```
 
-### CSS 変数の使用
-
-最後にカスタム ドロップダウン テーマを設定します。
+最後に、カスタム ドロップダウン テーマをクラスまたは要素セレクターに渡します。
 
 ```scss
- @include css-vars($custom-drop-down-theme);
-```
-
-### テーマ オーバーライドの使用
-
-Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
-
-コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
-
- ```scss
-:host {
-  ::ng-deep {
-    @include drop-down($custom-drop-down-theme);
-  }
+.drop-down__scroll-container {
+  @include css-vars($custom-drop-down-theme);
 }
 ```
-
-> [!NOTE]
-> [IgxDropDown]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) コンポーネントは、[IgxOverlay](overlay.md) を使用して、`igx-drop-down-items` リスト コンテナーを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[IgxOverlay スタイリング ガイド](overlay-styling.md)を確認してください。
 
 ### デモ
 
@@ -560,12 +540,11 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-styling" >
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## API リファレンス
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) 
-* [IgxDropDownComponent スタイル]({environment:sassApiUrl}/index.html#mixin-igx-drop-down)
+* [IgxDropDownComponent スタイル]({environment:sassApiUrl}/index.html#function-drop-down-theme)
 * [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
 * [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-overlay-theme)

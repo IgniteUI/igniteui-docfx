@@ -313,7 +313,7 @@ public sortByGroup() {
 
 ## スタイル設定
 
-igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md)でスタイルを設定できます。グリッドの[テーマ]({environment:sassApiUrl}/index.html#function-grid-theme)は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
+igxGridを使用すると、[`Ignite UI for Angular テーマ ライブラリ`](../themes/sass/component-themes.md)でスタイルを設定できます。グリッドの [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
 
 以下の手順では、グリッドの Group By スタイルをカスタマイズする手順を実行しています。
 
@@ -335,135 +335,147 @@ igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](..
 ```scss
 
 $custom-theme: grid-theme(
-    /* Group By properties that affect styling */
-    $group-row-background: #494949,
-    $group-row-selected-background: #383838,
-    $group-label-column-name-text: #f8f8f8,
-    $group-label-icon: #FFCD0F,
-    $group-label-text: #f8f8f8,
-    $group-count-background: #FFCD0F,
-    $group-count-text-color: #000,
-    $expand-icon-color: #FFCD0F,
-    $expand-icon-hover-color: rgb(223, 181, 13),
-    $cell-active-border-color: #FFCD0F,
-    $row-selected-background: #fff6d3,
-    $row-selected-text-color: #000,
-    $drop-indicator-color: #FFCD0F
-    /* add other features properties here... */
+  $group-row-background: #494949,
+  $group-row-selected-background: #383838,
+  $group-label-column-name-text: #f8f8f8,
+  $group-label-icon: #ffcd0f,
+  $group-label-text: #f8f8f8,
+  $group-count-background: #ffcd0f,
+  $group-count-text-color: #000,
+  $expand-icon-color: #ffcd0f,
+  $expand-icon-hover-color: rgb(223, 181, 13),
+  $cell-active-border-color: #ffcd0f,
+  $row-selected-background: #fff6d3,
+  $row-selected-text-color: #000,
+  $drop-indicator-color: #ffcd0f
 );
 
 /* Chip theme will style the chips in the Group By area */
 $custom-chips-theme: chip-theme(
-    $background: #494949,
-    $text-color: #f8f8f8,
-    $hover-text-color: #e7e7e7
+  $background: #494949,
+  $text-color: #f8f8f8,
+  $hover-text-color: #e7e7e7
 );
 ```
 
 ### カスタム カラー パレットの定義
 
-上記で説明したアプローチでは、色の値がハード コーディングされていました。または、柔軟性を高めるために [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette)、[`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することもできます。
-`igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。
+上記で説明したアプローチでは、色の値がハード コーディングされていました。または、柔軟性を高めるために [`palette`]({environment:sassApiUrl}/index.html#function-palette)、[`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用することもできます。
+`palette` は、指定されたプライマリ カラー、セカンダリ カラー、およびサーフェス カラーに基づいてカラー パレットを生成します。
 
 ```scss
 $black-color: #292826;
-$yellow-color: #FFCD0F;
+$yellow-color: #ffcd0f;
+$grey-color: #efefef;
 
 $custom-palette: palette(
-  $primary: $black-color,
-  $secondary: $yellow-color
+  $primary: $black-color, 
+  $secondary: $yellow-color, 
+  $surface: $grey-color
 );
 ```
-カスタム パレットが生成された後、`igx-color` 関数を使用して、さまざまな種類の原色と二次色を取得できます。 
+
+カスタム パレットが生成された後、`color` 関数を使用して、さまざまな種類の原色と二次色を取得できます。 
 
 ```scss
 $custom-theme: grid-theme(
-    $group-row-background: color($custom-palette, "primary", 300),
-    $group-row-selected-background: color($custom-palette, "primary", 400),
-    $group-label-column-name-text:contrast-color($custom-palette, "primary", 500),
-    $group-label-icon: color($custom-palette, "secondary", 600),
-    $group-label-text:contrast-color($custom-palette, "primary", 500),
-    $group-count-background: color($custom-palette, "secondary", 600),
-    $group-count-text-color: color($custom-palette, "primary", 400),
-    $expand-icon-color: color($custom-palette, "secondary", 600),
-    $expand-icon-hover-color: color($custom-palette, "secondary", 300),
-    $cell-active-border-color: color($custom-palette, "secondary", 600)
+  $group-row-background: color($custom-palette, "primary", 300),
+  $group-row-selected-background: color($custom-palette, "primary", 400),
+  $group-label-column-name-text:contrast-color($custom-palette, "primary", 500),
+  $group-label-icon: color($custom-palette, "secondary", 600),
+  $group-label-text:contrast-color($custom-palette, "primary", 500),
+  $group-count-background: color($custom-palette, "secondary", 600),
+  $group-count-text-color: color($custom-palette, "primary", 400),
+  $expand-icon-color: color($custom-palette, "secondary", 600),
+  $expand-icon-hover-color: color($custom-palette, "secondary", 300),
+  $cell-active-border-color: color($custom-palette, "secondary", 600)
 );
 
 $custom-chips-theme: chip-theme(
-    $background: color($custom-palette, "primary", 300),
-    $text-color:contrast-color($custom-palette, "primary", 500),
-    $hover-text-color:contrast-color($custom-palette, "primary", 600)
+  $background: color($custom-palette, "primary", 300),
+  $text-color:contrast-color($custom-palette, "primary", 500),
+  $hover-text-color:contrast-color($custom-palette, "primary", 600)
 );
 ```
+
 ### カスタム スキーマの定義
 さらに進んで、[**スキーマ**](../themes/sass/schemas.md)のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。
-すべてのコンポーネントに提供される 2 つの事前定義されたスキーマの 1 つを拡張します。この場合、`$_light_grid` を使用します。
+すべてのコンポーネントに提供される 2 つの事前定義されたスキーマの 1 つを拡張します。この場合、[`light-grid`]({environment:sassApiUrl}/index.html#variable-light-grid) を使用します。
+
 ```scss
-$custom-grid-schema: extend($_light-grid,(
-    group-row-background: (igx-color:('secondary', 100)),
-    group-row-selected-background: (igx-color:('primary', 400)),
-    group-label-column-name-text: (igx-color:('primary', 600)),
-    group-label-icon: (igx-color:('primary', 600)),
-    group-label-text: (igx-color:('secondary', 700)),
-    group-count-background: (igx-color:('primary', 600)),
-    group-count-text-color: (igx-color:('secondary', 400)),
-    expand-icon-color: (igx-color:('primary', 600)),
-    expand-icon-hover-color: (igx-color:('primary', 400))
-));
+$custom-grid-schema: extend(
+  $light-grid,
+  (
+    group-row-background: (color:('secondary', 100)),
+    group-row-selected-background: (color:('primary', 400)),
+    group-label-column-name-text: (color:('primary', 600)),
+    group-label-icon: (color:('primary', 600)),
+    group-label-text: (color:('secondary', 700)),
+    group-count-background: (color:('primary', 600)),
+    group-count-text-color: (color:('secondary', 400)),
+    expand-icon-color: (color:('primary', 600)),
+    expand-icon-hover-color: (color:('primary', 400))
+  )
+);
 ```
-カスタム スキーマを適用するには、`light` グローバルまたは `dark` グローバルを拡張する必要があります。プロセス全体が実際にコンポーネントにカスタム スキーマを提供し、その後、それぞれのコンポーネントテーマに追加します。   
+
+カスタム スキーマを適用するには、[`light`]({environment:sassApiUrl}/index.html#variable-light-material-schema) グローバルまたは [`dark`]({environment:sassApiUrl}/index.html#variable-dark-material-schema) グローバルを拡張する必要があります。プロセス全体が実際にコンポーネントにカスタム スキーマを提供し、その後、それぞれのコンポーネントテーマに追加します。
+
 ```scss
-$my-custom-schema: extend($light-schema, ( 
-    igx-grid: $custom-grid-schema
-));
+$my-custom-schema: extend(
+  $light-material-schema, 
+  ( 
+    grid: $custom-grid-schema
+  )
+);
 
 $custom-theme: grid-theme(
-    $palette: $custom-palette,
-    $schema: $my-custom-schema
+  $palette: $custom-palette,
+  $schema: $my-custom-schema
 );
 ```
 
 ### カスタム テーマの適用
 
 テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。
+
 ```scss
-@include grid($custom-theme);
-@include chip($custom-chips-theme);
+@include css-vars($custom-theme);
+@include css-vars($custom-chips-theme);
 ```
 
 ### スコープ コンポーネント テーマ
 
-カスタム テーマが特定のコンポーネントのみに影響するように、定義したすべてのスタイルをグローバル スタイル ファイルからカスタム コンポーネントのスタイルファイルに移動できます (インデックス ファイルのインポートを含む)。
+カスタム テーマが特定のコンポーネントのみに影響するように、定義したすべてのスタイルをグローバル スタイル ファイルからカスタム コンポーネントのスタイルファイルに移動できます (`index` ファイルのインポートを含む)。
 
 このように、Angular の [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation) により、スタイルはカスタム コンポーネントにのみ適用されます。
 
  >[!NOTE]
- >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
- >[!NOTE]
- >ステートメントがコンポーネントの外にある要素に影響を与えないよう、ステートメントを `:host` セレクター内にラップします。
+ >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、グリッド内のコンポーネントをスタイル設定するためには、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+
+この例では、チップ テーマに `::ng-deep` を使用する必要があります。
 
 ```scss
+@include css-vars($custom-theme);
+
 :host {
-    ::ng-deep {
-        @include grid($custom-theme);
-        @include chip($custom-chips-theme);
-    }
+  ::ng-deep {
+    @include chip($custom-chips-theme);
+  }
 }
 ```
 
-### デモ   
+### デモ
 
 
-<code-view style="height:570px" 
+<code-view style="height:570px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-styling" >
 </code-view>
 
 >[!NOTE]
->このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
-
+>このサンプルは、`Change Theme` (テーマの変更) から選択したグローバル テーマに影響を受けません。
 
 ## 既知の制限
 
@@ -490,8 +502,8 @@ $custom-theme: grid-theme(
 * [ページング](paging.md)
 * [フィルタリング](filtering.md)
 * [ソート](sorting.md)
-* [集計](summaries.md)
 * [列移動](column-moving.md)
+* [集計](summaries.md)
 * [列のサイズ変更](column-resizing.md)
 * [選択](selection.md)
 

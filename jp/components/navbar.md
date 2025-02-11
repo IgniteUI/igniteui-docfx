@@ -9,7 +9,6 @@ _language: ja
 
 Ignite UI for Angular [`IgxNavbarComponent`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html) は、アプリケーション内の現在位置をユーザーに通知し、ブラウザーの [戻る] ボタンのように戻る機能を提供するアプリケーション ヘッダー コンポーネントです。Navigation Bar の検索またはお気に入りなどのリンクによって、ユーザーはアプリケーションでナビゲーションをスムーズに実行できます。バーは、バーが含まれるコンテナ上に配置されます。
 
-
 ## Angular Navbar の例
 
 <code-view style="height: 300px" 
@@ -54,12 +53,12 @@ import { IGX_NAVBAR_DIRECTIVES } from 'igniteui-angular';
 // import { IGX_NAVBAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
-    selector: 'app-home',
-    template: '<igx-navbar title="Ignite UI for Angular"></igx-navbar>',
-    styleUrls: ['home.component.scss'],
-    standalone: true,
-    imports: [IGX_NAVBAR_DIRECTIVES]
-    /* or imports: [IgxNavbarComponent] */
+  selector: 'app-home',
+  template: '<igx-navbar title="Ignite UI for Angular"></igx-navbar>',
+  styleUrls: ['home.component.scss'],
+  standalone: true,
+  imports: [IGX_NAVBAR_DIRECTIVES],
+  /* or imports: [IgxNavbarComponent] */
 })
 export class HomeComponent {}
 ```
@@ -73,8 +72,7 @@ Ignite UI for Angular Navbar モジュールまたはディレクティブをイ
 ```html
 <!--navbar.component.html-->
 
-<igx-navbar title="Ignite UI for Angular">
-</igx-navbar>
+<igx-navbar title="Ignite UI for Angular"> </igx-navbar>
 ```
 
 ### メニュー ボタンの追加
@@ -84,8 +82,7 @@ Ignite UI for Angular Navbar モジュールまたはディレクティブをイ
 ```html
 <!--navbar.component.html-->
 
-<igx-navbar title="Sample App" actionButtonIcon="menu" [isActionButtonVisible]="true">
-</igx-navbar>
+<igx-navbar title="Sample App" actionButtonIcon="menu" [isActionButtonVisible]="true"></igx-navbar>
 ```
 
 > [!NOTE]
@@ -94,15 +91,12 @@ Ignite UI for Angular Navbar モジュールまたはディレクティブをイ
 ### アイコン ボタンの追加
 
 検索、お気に入りなどのオプションを追加するには、[**IgxIconButton**](icon-button.md) と [**IgxIcon**](icon.md) モジュールを **app.module.ts** ファイルにインポートします。
+
 ```typescript
 // app.module.ts
 
 ...
-import {
-    IgxNavbarModule,
-    IgxIconButtonDirective,
-    IgxIconModule
-} from 'igniteui-angular';
+import { IgxNavbarModule, IgxIconButtonDirective, IgxIconModule } from 'igniteui-angular';
 // import { IgxNavbarModule, IgxButtonModule, IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -117,16 +111,16 @@ export class AppModule {}
 ```html
 <!--navbar.component.html-->
 
- <igx-navbar title="Sample App">
-    <button igxIconButton="flat">
-        <igx-icon>search</igx-icon>
-    </button>
-    <button igxIconButton="flat">
-        <igx-icon>favorite</igx-icon>
-    </button>
-    <button igxIconButton="flat">
-        <igx-icon>more_vert</igx-icon>
-    </button>
+<igx-navbar title="Sample App">
+  <button igxIconButton="flat">
+    <igx-icon>search</igx-icon>
+  </button>
+  <button igxIconButton="flat">
+    <igx-icon>favorite</igx-icon>
+  </button>
+  <button igxIconButton="flat">
+    <igx-icon>more_vert</igx-icon>
+  </button>
 </igx-navbar>
 ```
 
@@ -154,27 +148,26 @@ export class AppModule {}
 ```html
 <!--navbar.component.html-->
 
- <igx-navbar title="Sample App">
-    <igx-navbar-action>
-        <button igxIconButton="flat">
-            <igx-icon family="fa" name="fa-home"></igx-icon>
-        </button>
-    </igx-navbar-action>
-        
+<igx-navbar title="Sample App">
+  <igx-navbar-action>
     <button igxIconButton="flat">
-        <igx-icon>search</igx-icon>
+      <igx-icon family="fa" name="fa-home"></igx-icon>
     </button>
-    <button igxIconButton="flat">
-        <igx-icon>favorite</igx-icon>
-    </button>
-    <button igxIconButton="flat">
-        <igx-icon>more_vert</igx-icon>
-    </button>
+  </igx-navbar-action>
+
+  <button igxIconButton="flat">
+    <igx-icon>search</igx-icon>
+  </button>
+  <button igxIconButton="flat">
+    <igx-icon>favorite</igx-icon>
+  </button>
+  <button igxIconButton="flat">
+    <igx-icon>more_vert</igx-icon>
+  </button>
 </igx-navbar>
 ```
 
 以下はカスタム動作ボタン アイコンをした場合の navbar の外観です。
-
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -190,32 +183,32 @@ export class AppModule {}
 ```html
 <!--navbar.component.html-->
 
-<igx-navbar title="Ignite UI for Angular"
-    actionButtonIcon="arrow_back"
-    [isActionButtonVisible]="canGoBack()"
-    (action)="navigateBack()">
+<igx-navbar
+  title="Ignite UI for Angular"
+  actionButtonIcon="arrow_back"
+  [isActionButtonVisible]="canGoBack()"
+  (action)="navigateBack()"
+>
 </igx-navbar>
 ```
 
 ```typescript
 export class NavbarSample3Component {
+  constructor(private _location: Location) {}
 
-  constructor(private _location: Location) { }
-
-  public ngOnInit() {  }
+  public ngOnInit() {}
 
   public navigateBack() {
     this._location.back();
   }
 
   public canGoBack() {
-      return window.history.length > 0;
+    return window.history.length > 0;
   }
 }
 ```
 
-サンプルが正しく構成された場合、ブラウザーで以下が表示されます。 
-
+サンプルが正しく構成された場合、ブラウザーで以下が表示されます。
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -235,36 +228,40 @@ Navbar のタイトルにカスタム コンテンツを提供する場合は、
 <!--navbar.component.html-->
 
 <div class="sample-column">
-    <igx-navbar>
-        <igx-navbar-action>
-            <button igxIconButton="flat">
-                <igx-icon>menu</igx-icon>
-            </button>
-        </igx-navbar-action>
+  <igx-navbar>
+    <igx-navbar-action>
+      <button igxIconButton="flat">
+        <igx-icon>menu</igx-icon>
+      </button>
+    </igx-navbar-action>
 
-        <div igxNavbarTitle>
-            <a href="https://www.infragistics.com/products/ignite-ui-angular" target="_blank">
-                <img src="https://static.infragistics.com/marketing/Website/products/ignite-ui-landing/ignite-ui-logo.svg"
-                     width="120px" height="50px" alt style="margin-top: 7px;">
-            </a>
-        </div>
+    <div igxNavbarTitle>
+      <a href="https://www.infragistics.com/products/ignite-ui-angular" target="_blank">
+        <img
+          src="https://static.infragistics.com/marketing/Website/products/ignite-ui-landing/ignite-ui-logo.svg"
+          width="120px"
+          height="50px"
+          alt
+          style="margin-top: 7px;"
+        />
+      </a>
+    </div>
 
-        <button igxIconButton="flat">
-            <igx-icon>search</igx-icon>
-        </button>
-        <button igxIconButton="flat">
-            <igx-icon>favorite</igx-icon>
-        </button>
-        <button igxIconButton="flat">
-            <igx-icon>more_vert</igx-icon>
-        </button>
-    </igx-navbar>
+    <button igxIconButton="flat">
+      <igx-icon>search</igx-icon>
+    </button>
+    <button igxIconButton="flat">
+      <igx-icon>favorite</igx-icon>
+    </button>
+    <button igxIconButton="flat">
+      <igx-icon>more_vert</igx-icon>
+    </button>
+  </igx-navbar>
 </div>
 ```
 
 > [!NOTE]
 > [`igx-navbar-title`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) または [`igxNavbarTitle`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) の場合、デフォルト [`title`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#title) が使用されません。
-
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -288,105 +285,23 @@ Navbar のタイトルにカスタム コンテンツを提供する場合は、
 
 ```scss
 $custom-navbar-theme: navbar-theme(
-    $text-color: #151515,
-    $background: #dedede,
-    $idle-icon-color: #151515,
-    $hover-icon-color: #8c8c8c
+  $text-color: #151515,
+  $background: #dedede,
+  $idle-icon-color: #151515,
+  $hover-icon-color: #8c8c8c,
 );
 ```
 
-### CSS 変数の使用
+>[!NOTE]
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](themes/sass/palettes.md)のトピックをご覧ください。
 
-最後にコンポーネントのテーマを渡します。
+最後に、新しく作成されたテーマを `css-vars` ミックスインに渡します。
 
 ```scss
 @include css-vars($custom-navbar-theme);
 ```
 
-### ミックスインの使用 
-
-Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。 
-
-コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
-
-```scss
-:host {
-    ::ng-deep {
-        // Custom navbar theme を `igx-navbar` ミックスインに渡します
-        @include navbar($custom-navbar-theme);
-    }
-}
-```
-
-### カラー パレットの使用
-
-上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して色に関してより高い柔軟性を実現することができます。
-
-`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
-
-```scss
-$white-color: #dedede;
-$black-color: #151515;
-$light-navbar-palette: palette($primary: $white-color, $secondary: $black-color);
-```
-
-`igx-color` を使用して、パレットから簡単に取得することができます。
-
-```scss
-$custom-navbar-theme: navbar-theme(
-    $text-color: color($light-navbar-palette, "secondary", 400),
-    $background: color($light-navbar-palette, "primary", 400),
-    $idle-icon-color: color($light-navbar-palette, "secondary", 400),
-    $hover-icon-color: #8c8c8c
-);
-```
-
->[!NOTE]
->`igx-color` および `igx-palette` は、色を生成および取得するための重要な機能です。使い方の詳細については[`パレット`](themes/sass/palettes.md)のトピックを参照してください。
-
-### スキーマの使用
-
-[**スキーマ**](themes/sass/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
-
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`light-navbar`]({environment:sassApiUrl}/index.html#variable-_light-navbar)) の 1 つを拡張します。 
-
-```scss
- // Extending the navbar schema
- $light-navbar-schema: extend($_light-navbar,
-    (
-        text-color: (
-           color: ("secondary", 400)
-        ),
-        background: (
-           color: ("primary", 400)
-        ),
-        idle-icon-color:(
-           color: ("secondary", 400)
-        ),
-        $hover-icon-color: #8c8c8c
-    )
-);
-```
-
-カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張する**必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加するものです。
-
-```scss
-// Extending the global light-schema
-$custom-light-schema: extend($light-schema,(
-    igx-navbar: $light-navbar-schema
-));
-
-// Defining navbar with the global light schema
-$cutom-navbar-theme: navbar-theme(
-  $palette: $light-navbar-palette,
-  $schema: $custom-light-schema
-);
-```
-
-上記と同じ方法でテーマを含める必要があることに注意してください。
-
 ### デモ
-
 
 <code-view style="height: 150px" 
            no-theming
@@ -397,6 +312,7 @@ $cutom-navbar-theme: navbar-theme(
 <div class="divider--half"></div>
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
 * [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
@@ -410,6 +326,7 @@ $cutom-navbar-theme: navbar-theme(
 * [IgxIconComponent スタイル]({environment:sassApiUrl}/index.html#function-icon-theme)
 
 ## テーマの依存関係
+
 * [IgxIconComponent テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
 * [IgxButtonComponent テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
 

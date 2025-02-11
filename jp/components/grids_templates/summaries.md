@@ -2,7 +2,7 @@
 ---
 title: Angular Grid の集計 - Ignite UI for Angular
 _description: 列のグループ フッターで Angular Grid 集計を構成し、オプションを使用して Ignite UI for Angular テーブルにカスタム Angular テンプレートを設定します。
-_keywords: angular grid 集計, igniteui for angular, infragistics
+_keywords: angular grid 集計, ignite ui for angular, infragistics
 _language: ja
 ---
 }
@@ -10,7 +10,8 @@ _language: ja
 ---
 title: Angular Grid の集計 - Ignite UI for Angular
 _description: 列のグループ フッターで Angular Grid 集計を構成し、オプションを使用して Ignite UI for Angular テーブルにカスタム Angular テンプレートを設定します。
-_keywords: angular grid 集計, igniteui for angular, infragistics
+_keywords: angular grid 集計, ignite ui for angular, infragistics
+_canonicalLink: grid/summaries
 _language: ja
 ---
 }
@@ -18,7 +19,8 @@ _language: ja
 ---
 title: Angular Grid の集計 - Ignite UI for Angular
 _description: 列のグループ フッターで Angular Grid 集計を構成し、オプションを使用して Ignite UI for Angular テーブルにカスタム Angular テンプレートを設定します。
-_keywords: angular grid 集計, igniteui for angular, infragistics
+_keywords: angular grid 集計, ignite ui for angular, infragistics
+_canonicalLink: grid/summaries
 _language: ja
 ---
 }
@@ -116,7 +118,8 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
 </igx-hierarchical-grid>
 ```
 }
-特定の列や列のリストを有効または無効にする他の方法として **@@igSelector** のパブリック メソッド [`enableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#enablesummaries)/[`disableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#disableSummaries) を使用する方法があります。
+
+特定の列や列のリストを有効または無効にする他の方法として **@@igSelector** のパブリック メソッド [`enableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#enableSummaries)/[`disableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#disableSummaries) を使用する方法があります。
 
 @@if (igxName === 'IgxGrid') {
 ```html
@@ -252,11 +255,11 @@ interface IgxSummaryResult {
     summaryResult: any;
 }
 ```
-以下の[「すべてのデータにアクセスするカスタム集計」](#すべての-@@igComponent-データにアクセスするカスタム集計)セクションを参照してください。
+以下の[「すべてのデータにアクセスするカスタム集計」](#すべてのデータにアクセスするカスタム集計)セクションを参照してください。
 
 > [!NOTE]
 > 集計行の高さを正しく計算するために、@@igComponent の [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) メソッドでデータが空の場合も常に [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html) 配列の正しい長さを返す必要があります。
-@@if (igxName !== 'IgxHierarchicalGrid') {
+@@if (igxName === 'IgxGrid') {
 `UnitsInStock` 列にカスタム集計を追加します。[`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) プロパティを以下に作成するクラスに設定します。
 ```html
 <@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)" >
@@ -400,7 +403,7 @@ class MySummary extends IgxNumberSummaryOperand {
 </igx-column>
 ```
 
-デフォルトの集計が定義されている場合、集計領域の高さは、集計の数が最も多い列とグリッドのサイズに応じてデザインにより計算されます。[summaryRowHeight]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryRowHeight) 入力プロパティを使用して、デフォルト値をオーバーライドします。引数として数値が必要であり、falsy の値を設定すると、グリッド フッターのデフォルトのサイズ設定動作がトリガーされます。
+デフォルトの集計が定義されている場合、集計領域の高さは、集計の数が最も多い列とグリッドのサイズに応じてデザインにより計算されます。[summaryRowHeight]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryRowHeight) 入力プロパティを使用して、デフォルト値をオーバーライドします。引数として数値が必要であり、false 値を設定すると、グリッド フッターのデフォルトのサイズ設定動作がトリガーされます。
 
 > [!NOTE]
 > 列の集計テンプレートは、列 [summaryTemplate]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaryTemplate) プロパティを必要な TemplateRef に設定することにより、API を介して定義できます。
@@ -431,7 +434,115 @@ class MySummary extends IgxNumberSummaryOperand {
 
 }
 
+## 集計の無効化
 
+[`disabledSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#disabledSummaries) プロパティは、Ignite UI for Angular グリッド集計機能に対して列ごとに正確な制御を提供します。このプロパティを使用すると、グリッド内の各列に表示される集計をカスタマイズして、最も関連性の高い意味のあるデータのみが表示されるようにすることができます。たとえば、配列で集計キーを指定することにより、`['count', 'min', 'max']` などの特定の集計タイプを除外できます。
+
+このプロパティは、コードを通じて**実行時に動的に**変更することもできるため、変化するアプリケーションの状態やユーザー操作に合わせてグリッドの集計を柔軟に調整できます。
+
+次の例は、`disabledSummaries` プロパティを使用してさまざまな列の集計を管理し、Ignite UI for Angular グリッドで特定のデフォルトおよびカスタムの集計タイプを除外する方法を示しています。
+
+@@if (igxName === 'IgxGrid') {
+```html
+<!-- default summaries -->
+<igx-column
+    field="UnitPrice"
+    header="Unit Price"
+    dataType="number"
+    [hasSummary]="true"
+    [disabledSummaries]="['count', 'sum', 'average']"
+>
+</igx-column>
+<!-- custom summaries -->
+<igx-column
+    field="UnitsInStock"
+    header="Units In Stock"
+    dataType="number"
+    [hasSummary]="true"
+    [summaries]="discontinuedSummary"
+    [disabledSummaries]="['discontinued', 'totalDiscontinued']"
+>
+</igx-column>
+```
+`UnitPrice` の場合、`count`、`sum`、`average` などのデフォルトの集計は無効になっており、`min` や `max` などの他の集計は有効のままになっています。
+
+`UnitsInStock` の場合、`total` や `totalDiscontinued` などのカスタム集計は `disabledSummaries` プロパティを使用して除外されます。
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<!-- custom summaries -->
+<igx-column
+    field="Units"
+    header="Units"
+    dataType="number"
+    [hasSummary]="true"
+    [summaries]="unitsSummary"
+    [disabledSummaries]="['uniqueCount', 'maxDifference']"
+>
+</igx-column>
+<!-- default summaries -->
+<igx-column
+    field="UnitPrice"
+    header="Unit Price"
+    dataType="number"
+    [hasSummary]="true"
+    [disabledSummaries]="['count', 'sum', 'average']"
+>
+</igx-column>
+```
+`Units` の場合、`totalDelivered` や `totalNotDelivered` などのカスタム集計は `disabledSummaries` プロパティを使用して除外されます。
+
+`UnitPrice` の場合、`count`、`sum`、`average` などのデフォルトの集計は無効になっており、`min` や `max` などの他の集計は有効のままになっています。
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<!-- custom summaries -->
+<igx-column
+    field="Photo"
+    [hasSummary]="true"
+    [summaries]="grammySummary"
+    [disabledSummaries]="['singersWithAwards', 'awards']"
+>
+    <ng-template igxCell let-cell="cell">
+        <div class="cell__inner_2">
+            <img [src]="cell.value" class="photo" />
+        </div>
+    </ng-template>
+</igx-column>
+<!-- default summaries -->
+<igx-column
+    field="GrammyNominations"
+    header="Grammy Nominations"
+    dataType="number"
+    [hasSummary]="true"
+    [disabledSummaries]="['count', 'sum', 'average']"
+></igx-column>
+```
+`Photo` の場合、`singersWithAwards` や `awards` などのカスタム集計は `disabledSummaries` プロパティを使用して除外されます。
+
+`GrammyNominations` の場合、`count`、`sum`、`average` などのデフォルトの集計は無効になっており、`min` や `max` などの他の集計は有効のままになっています。
+}
+
+実行時に、`disabledSummaries` プロパティを使用して集計を動的に無効にすることもできます。たとえば、特定の列のプロパティをプログラムで設定または更新して、ユーザー操作やアプリケーションの状態の変化に基づいて表示される集計を調整できます。
+
+@@if (igxName === 'IgxGrid') {
+<code-view style="height:850px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-disable-summaries" >
+</code-view>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<code-view style="height:950px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-disable-summaries" >
+</code-view>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<code-view style="height:850px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-disable-summaries" >
+</code-view>
+}
 
 ## 集計のフォーマット
 デフォルトでは、組み込みの集計オペランドによって生成される集計結果は、グリッド [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) および列 [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs) に従ってローカライズおよびフォーマットされます。カスタム オペランドを使用する場合、`locale` と `pipeArgs` は適用されません。集計結果のデフォルトの外観を変更する場合は、[`summaryFormatter`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaryFormatter) プロパティを使用してフォーマットできます。
@@ -606,101 +717,35 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
 
 ```scss
 $custom-theme: grid-summary-theme(
-    $background-color: #e0f3ff,
-    $focus-background-color: rgba( #94d1f7, .3 ),
-    $label-color: #e41c77,
-    $result-color: black,
-    $pinned-border-width: 2px,
-    $pinned-border-style: dotted,
-    $pinned-border-color: #e41c77
+  $background-color: #e0f3ff,
+  $focus-background-color: rgba(#94d1f7, .3),
+  $label-color: #e41c77,
+  $result-color: black,
+  $pinned-border-width: 2px,
+  $pinned-border-style: dotted,
+  $pinned-border-color: #e41c77
 );
-```
-最後にそれぞれのテーマを持つコンポーネント ミックスインを**含めます**。
-
-```scss
-@include grid-summary($custom-theme);
 ```
 
 >[!NOTE]
- >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックをご覧ください。
 
- ```scss
+最後にコンポーネントのカスタム テーマを**含めます**。
+
+```scss
+@include css-vars($custom-theme);
+```
+
+>[!NOTE]
+>コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+
+```scss
 :host {
-    ::ng-deep {
-        @include grid-summary($custom-theme);
-    }
+  ::ng-deep {
+    @include css-vars($custom-theme);
+  }
 }
 ```
-
-### カラーパレットの定義
-
-上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
-
-`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
-
-```scss
-$blue-color: #7793b1;
-$green-color: #00ff2d;
-
-$my-custom-palette: palette($primary: $blue-color, $secondary: $green-color);
-```
-
-また [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。
-
-```scss
-$custom-theme: grid-summary-theme(
-    $background-color: color($my-custom-palette, "primary", 700),
-    $focus-background-color: color($my-custom-palette, "primary", 800),
-    $label-color: color($my-custom-palette, "secondary", 500),
-    $result-color: color($my-custom-palette, "grays", 900),
-    $pinned-border-width: 2px,
-    $pinned-border-style: dotted,
-    $pinned-border-color: color($my-custom-palette, "secondary", 500)
-);
-```
-
->[!NOTE]
->`igx-color` および `igx-palette` は、色を生成および取得するための重要な機能です。使い方の詳細については[`パレット`](../themes/palettes.md)のトピックを参照してください。
-
-### スキーマの使用
-
-テーマ エンジンを使用して[**スキーマ**](../themes/sass/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法のことです。
-
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`_light-grid-summary`]({environment:sassApiUrl}/index.html#variable-_light-grid-summary) の 1 つを拡張します。
-
-```scss
-// Extending the light grid summary schema
-$my-summary-schema: extend($_light-grid-summary,
-    (
-        background-color: (igx-color: ('primary', 700)),
-        focus-background-color: (igx-color: ('primary', 800)),
-        label-color: (igx-color: ('secondary', 500)),
-        result-color: (igx-color: ('grays', 900)),
-        pinned-border-width: 2px,
-        pinned-border-style: dotted,
-        pinned-border-color: (igx-color: ('secondary', 500))
-    )
-);
-```
-
-カスタム スキーマを適用するには、グローバル [`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema) の 1 つを**拡張する**必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加するものです。
-
-```scss
-// Extending the global light-schema
-$my-custom-schema: extend($light-schema,
-    (
-        igx-grid-summary: $my-summary-schema
-    )
-);
-
-// Defining our custom theme with the custom schema
-$custom-theme: grid-summary-theme(
-    $palette: $my-custom-palette,
-    $schema: $my-custom-schema
-);
-```
-
-上記と同じ方法でテーマを含める必要があることに注意してください。
 
 @@if (igxName === 'IgxGrid') {
 ### デモ
