@@ -146,7 +146,28 @@ The `expressionTree` is a two-way bindable property which means a corresponding 
 </igx-query-builder>
 ```
 
-### Expressions Dragging
+## Expressions Dragging
+
+With the [*Drag & Drop*](drag-drop.md) functionality, users can easily reposition condition chips to adjust their query logic dynamically.
+#### How It Works
+1. **Click and Hold:** Click and hold on chip with `right mouse` button.
+2. **Drag to Reposition:** Drag away with mouse, a drag ghost will appear. Move it to a desired position within the query, a drop ghost will appear on the designated new position.
+3. **Drop to Apply Changes:** Release the mouse button to drop the chip in its new location.
+4. **Observe Updates:** The query logic updates dynamically to reflect the new order.
+
+##### Notes
+- Dragging a chip does not modify its condition, only its position.
+- In the main query, changes take effect immediately after dropping a chip. In inner queries, user has to commit the inner query after repositioning the chip. 
+
+### Keyboard reordering
+
+Similar to mouse Drag & Drop, you can use the keyboard to rearrange condition chips.
+##### How It Works
+1. **Start:** Using <kbd>Tab</kbd> / <kbd>Shift + Tab</kbd> navigate to a chip's, drag indicator.
+2. **Move Up/Down:** With <kbd>Arrow Down</kbd>/<kbd>Arrow Up</kbd> move the chip to a new position.
+3. **Confirm position:** Pressing <kbd>Space</kbd> / <kbd>Enter</kbd> confirms the new position.
+4. **Canceling:** By hitting <kbd>Esc</kbd>, user can cancel keyboard repositioning. The chip returns to it's original position.
+
 
 ## Keyboard interaction
 **Key Combinations**
