@@ -250,7 +250,7 @@ this.ordersFields = [
     { field: "ShipCity", dataType: "string" },
     { field: "ShipPostalCode", dataType: "string" },
     { field: "ShipCountry", dataType: "string" },
-    { field: "Region", dataType: "string", formatter: (value: any, rowData: any) => rowData === 'equals' || rowData === 'doesNotEqual' ? `${value.id}` : value }},
+    { field: "Region", dataType: "string", formatter: (value: any, rowData: any) => rowData === 'equals' || rowData === 'doesNotEqual' ? `${value.value}` : value }},
     { field: "OrderStatus", dataType: "number" }
 ];
 ```
