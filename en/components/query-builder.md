@@ -148,13 +148,12 @@ The `expressionTree` is a two-way bindable property which means a corresponding 
 
 ## Expressions Dragging
 
-With the [*Drag & Drop*](drag-drop.md) functionality, users can easily reposition condition chips to adjust their query logic dynamically.
-Chips can be dragged along the whole query tree, including in groups and subgroups. 
-##### Notes
-- Dragging a chip does not modify its condition, only its position.
-- In the main query, changes take effect immediately after dropping a chip. In inner queries, user has to commit the inner query after repositioning the chip. 
-- Chip can also be dragged in a newly created group to achieve condition grouping.
-- Chips from one query tree cannot be dragged in another, e.g. from parent to inner and vice versa.
+Condition chips can be easily repositioned using mouse [*Drag & Drop*](drag-drop.md) or [*Keyboard reordering*](#keyboard-interaction) approaches. With those, users can adjust their query logic dynamically.
+- Dragging a chip does not modify its condition/contents, only it's position.
+- Chip can also be dragged along groups and subgroups. For example, grouping/ungrouping expressions is achieved via the `Expressions Dragging` functionality.
+In order to group already existing conditions, first you need to add a new group through the 'add' group button. Then via dragging, the required expressions can be moved to that group. In order to ungroup, you could drag all conditions outside their current group and once the last condition is moved out, the group will be deleted.
+>[!NOTE]
+>Chips from one query tree cannot be dragged in another, e.g. from parent to inner and vice versa.
 <div style="display:inline-block;">
     <a style="background: url(../../images/general/query-builder-drag-and-drop.gif); display:flex; justify-content:center; width: 80vw; max-width:480px; min-height:415px;"
        target="_blank">
@@ -163,27 +162,23 @@ Chips can be dragged along the whole query tree, including in groups and subgrou
     <p style="text-align:center;">Rearranging chips using mouse Drag and Drop</p>
 </div>
 
-### Keyboard reordering
-Similar to mouse Drag & Drop, user can use the keyboard to rearrange condition chips.
-##### How It Works
-1. **Start:** Using <kbd>Tab</kbd> / <kbd>Shift + Tab</kbd> navigate to a chip's, drag indicator.
-2. **Move Up/Down:** With <kbd>Arrow Down</kbd>/<kbd>Arrow Up</kbd> move the chip to a new position.
-3. **Confirm position:** Pressing <kbd>Space</kbd> / <kbd>Enter</kbd> confirms the new position.
-4. **Canceling:** By hitting <kbd>Esc</kbd>, user can cancel keyboard repositioning. The chip returns to it's original position.
+## Keyboard interaction
+**Key Combinations**
+ - <kbd>Tab</kbd> / <kbd>Shift + Tab</kbd> navigates to the next/previous chip, drag indicator, remove button, 'add' menu, group root menu.
+ - <kbd>Arrow Down</kbd>/<kbd>Arrow Up</kbd> While chip's drag indicator is focused, chip enters `Keyboard reordering` and can be reposition Up/Down like with [*Expressions Dragging*](#expressions-dragging). Also navigates in 'add' menu's and group context menu's items.
+ - <kbd>Space</kbd> / <kbd>Enter</kbd> Focused expression enters edit mode. Focused group root opens it's group context menu. Chip in `Keyboard reordering` mode confirms it's new position.
+ - <kbd>Esc</kbd> User can cancel `Keyboard reordering` action. The chip returns to it's original position.
+
+>[!NOTE]
+>`Keyboard reordering` provides the same functionality as mouse Drag & Drop. Once the procedure is initiated, user has to confirm the new position or cancel the move.
 <div style="display:inline-block;">
-    <a style="background: url(../../images/general/query-builder-keyboard-drag-and-drop.gif); display:flex; justify-content:center; width: 80vw; max-width:320px; min-height:262px;"
+    <a style="background: url(../../images/general/query-builder-keyboard-drag-and-drop.gif); display:flex; justify-content:center; width: 80vw; max-width:480px; min-height:428px;"
        target="_blank">
         <img src="../images/general/play.svg" style="vertical-align: middle;" />
     </a>
     <p style="text-align:center;">Rearranging chips using keyboard reordering</p>
 </div>
 
-## Keyboard interaction
-**Key Combinations**
- - <kbd>Arrow Down</kbd> - 
- - <kbd>Arrow Up</kbd> - 
- - <kbd>Tab</kbd> / <kbd>Shift + Tab</kbd> - navigates to the next/previous chip, drag indicator and remove button
- - <kbd>Space</kbd> / <kbd>Enter</kbd> - focused expression enters edit mode 
 
 ## Templating
 
