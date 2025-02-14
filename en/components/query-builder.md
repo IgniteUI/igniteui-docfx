@@ -149,25 +149,34 @@ The `expressionTree` is a two-way bindable property which means a corresponding 
 ## Expressions Dragging
 
 With the [*Drag & Drop*](drag-drop.md) functionality, users can easily reposition condition chips to adjust their query logic dynamically.
-#### How It Works
-1. **Click and Hold:** Click and hold on chip with `right mouse` button.
-2. **Drag to Reposition:** Drag away with mouse, a drag ghost will appear. Move it to a desired position within the query, a drop ghost will appear on the designated new position.
-3. **Drop to Apply Changes:** Release the mouse button to drop the chip in its new location.
-4. **Observe Updates:** The query logic updates dynamically to reflect the new order.
-
+Chips can be dragged along the whole query tree, including in groups and subgroups. 
 ##### Notes
 - Dragging a chip does not modify its condition, only its position.
 - In the main query, changes take effect immediately after dropping a chip. In inner queries, user has to commit the inner query after repositioning the chip. 
+- Chip can also be dragged in a newly created group to achieve condition grouping.
+- Chips from one query tree cannot be dragged in another, e.g. from parent to inner and vice versa.
+<div style="display:inline-block;">
+    <a style="background: url(../../images/general/query-builder-drag-and-drop.gif); display:flex; justify-content:center; width: 80vw; max-width:480px; min-height:415px;"
+       target="_blank">
+        <img src="../images/general/play.svg" style="vertical-align: middle;" />
+    </a>
+    <p style="text-align:center;">Rearranging chips using mouse Drag and Drop</p>
+</div>
 
 ### Keyboard reordering
-
-Similar to mouse Drag & Drop, you can use the keyboard to rearrange condition chips.
+Similar to mouse Drag & Drop, user can use the keyboard to rearrange condition chips.
 ##### How It Works
 1. **Start:** Using <kbd>Tab</kbd> / <kbd>Shift + Tab</kbd> navigate to a chip's, drag indicator.
 2. **Move Up/Down:** With <kbd>Arrow Down</kbd>/<kbd>Arrow Up</kbd> move the chip to a new position.
 3. **Confirm position:** Pressing <kbd>Space</kbd> / <kbd>Enter</kbd> confirms the new position.
 4. **Canceling:** By hitting <kbd>Esc</kbd>, user can cancel keyboard repositioning. The chip returns to it's original position.
-
+<div style="display:inline-block;">
+    <a style="background: url(../../images/general/query-builder-keyboard-drag-and-drop.gif); display:flex; justify-content:center; width: 80vw; max-width:320px; min-height:262px;"
+       target="_blank">
+        <img src="../images/general/play.svg" style="vertical-align: middle;" />
+    </a>
+    <p style="text-align:center;">Rearranging chips using keyboard reordering</p>
+</div>
 
 ## Keyboard interaction
 **Key Combinations**
