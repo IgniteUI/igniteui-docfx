@@ -164,13 +164,13 @@ In order to group already existing conditions, first you need to add a new group
 
 ## Keyboard interaction
 **Key Combinations**
- - <kbd>Tab</kbd> / <kbd>Shift + Tab</kbd> navigates to the next/previous chip, drag indicator, remove button, 'add' menu, group root menu.
- - <kbd>Arrow Down</kbd>/<kbd>Arrow Up</kbd> While chip's drag indicator is focused, chip enters `Keyboard reordering` and can be reposition Up/Down like with [*Expressions Dragging*](#expressions-dragging). Also navigates in 'add' menu's and group context menu's items.
- - <kbd>Space</kbd> / <kbd>Enter</kbd> Focused expression enters edit mode. Focused group root opens it's group context menu. Chip in `Keyboard reordering` mode confirms it's new position.
- - <kbd>Esc</kbd> User can cancel `Keyboard reordering` action. The chip returns to it's original position.
+ - <kbd>Tab</kbd> / <kbd>Shift + Tab</kbd> - navigates to the next/previous chip, drag indicator, remove button, 'add' expression button.
+ - <kbd>Arrow Down</kbd>/<kbd>Arrow Up</kbd> - when chip's drag indicator is focused, the chip can be moved up/down.
+ - <kbd>Space</kbd> / <kbd>Enter</kbd> - focused expression enters edit mode. If chip is been moved, this confirms it's new position.
+ - <kbd>Esc</kbd> - chip's reordering is canceled and it returns to it's original position.
 
 >[!NOTE]
->`Keyboard reordering` provides the same functionality as mouse Drag & Drop. Once the procedure is initiated, user has to confirm the new position or cancel the move.
+>Keyboard reordering provides the same functionality as mouse Drag & Drop. Once a chip is moved, user has to confirm the new position or cancel the reorder.
 <div style="display:inline-block;">
     <a style="background: url(../../images/general/query-builder-keyboard-drag-and-drop.gif); display:flex; justify-content:center; width: 80vw; max-width:480px; min-height:428px;"
        target="_blank">
