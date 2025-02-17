@@ -38,7 +38,7 @@ _canonicalLink: grid/state-persistence
 ## Supported Features
 [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) directive supports saving and restoring the state of the following features:
 
-@@if (igxName !== 'IgxHierarchicalGrid' && igxName !== 'IgxPivotGrid') {
+@@if (igxName === 'IgxGrid') {
 
 * `Sorting`
 * `Filtering`
@@ -50,6 +50,24 @@ _canonicalLink: grid/state-persistence
 * `Row Pinning`
 * `Expansion`
 * `GroupBy`
+* `Columns`
+    * **NEW**: Multi column headers are now supported out of the box
+    * Columns order
+    * Column properties defined by the [`IColumnState`]({environment:angularApiUrl}/interfaces/icolumnstate.html) interface.
+    * Columns templates and functions are restored using application level code, see [Restoring Column](state-persistence.md#restoring-columns) section.
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+
+* `Sorting`
+* `Filtering`
+* `Advanced Filtering`
+* `Paging`
+* `Cell Selection`
+* `Row Selection`
+* `Column Selection`
+* `Row Pinning`
+* `Expansion`
 * `Columns`
     * **NEW**: Multi column headers are now supported out of the box
     * Columns order
