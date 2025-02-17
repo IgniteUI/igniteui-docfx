@@ -281,8 +281,10 @@ To get started with styling the Query Builder, we need to import the `index` fil
 The Query Builder takes its background color from the its theme, using the `background` parameter. In order to change the background we need to create a custom theme:
 
 ```scss
+
 $custom-query-builder: query-builder-theme(
-  $background: #ffcd0f,
+  $background: #292826,
+  ...
 );
 ```
 
@@ -290,32 +292,28 @@ Since we have other components inside the Query Builder, such as buttons, chips,
 
 ```scss
 $custom-button: button-theme(
-  $disabled-foreground: gray,
-  ...,
-);
-
-$custom-button-group: button-group-theme(
-  $item-background: #292826,
-  ...,
+  $schema: $dark-material-schema,
+  $background: #292826,
+  $foreground: #ffcd0f,
+  ...
 );
 
 $custom-input-group: input-group-theme(
-  $box-background: #4a4a4a,
-  ...,
+  $focused-secondary-color: #ffcd0f
 );
 
 $custom-chip: chip-theme(
   $background: #ffcd0f,
-  ...,
+  $text-color: #292826
 );
 
-$custom-drop-down: drop-down-theme(
-  $background-color: #292826,
-  ...,
+$custom-icon-button: icon-button-theme(
+  $background: #ffcd0f,
+  $foreground: #292826
 );
 ```
 
-In this example we only changed some of the parameters for the listed components, but the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme), [`button-group-theme`]({environment:sassApiUrl}/index.html#function-button-group-theme), [`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme), [`drop-down-theme`]({environment:sassApiUrl}/index.html#function-drop-down-theme), [`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme) themes provide way more parameters to control their respective styling.
+In this example we only changed some of the parameters for the listed components, but the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme), [`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme), [`drop-down-theme`]({environment:sassApiUrl}/index.html#function-drop-down-theme), [`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme) themes provide way more parameters to control their respective styling.
 
 >[!NOTE]
 >Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
@@ -327,11 +325,13 @@ The last step is to **include** the new component themes using the `css-vars` mi
 
 :host {
   ::ng-deep {
-    @include css-vars($custom-drop-down);
-    @include css-vars($custom-button);
-    @include css-vars($custom-button-group);
     @include css-vars($custom-input-group);
     @include css-vars($custom-chip);
+    @include css-vars($custom-icon-button);
+
+    .igx-filter-tree__buttons {
+      @include css-vars($custom-button);
+    }
   }
 }
 ```
