@@ -150,7 +150,7 @@ The `expressionTree` is a two-way bindable property which means a corresponding 
 
 Condition chips can be easily repositioned using mouse [*Drag & Drop*](drag-drop.md) or [*Keyboard reordering*](#keyboard-interaction) approaches. With those, users can adjust their query logic dynamically.
 - Dragging a chip does not modify its condition/contents, only it's position.
-- Chip can also be dragged along groups and subgroups. For example, grouping/ungrouping expressions is achieved via the `Expressions Dragging` functionality.
+- Chip can also be dragged along groups and subgroups. For example, grouping/ungrouping expressions is achieved via the Expressions Dragging functionality.
 In order to group already existing conditions, first you need to add a new group through the 'add' group button. Then via dragging, the required expressions can be moved to that group. In order to ungroup, you could drag all conditions outside their current group and once the last condition is moved out, the group will be deleted.
 >[!NOTE]
 >Chips from one query tree cannot be dragged in another, e.g. from parent to inner and vice versa.
