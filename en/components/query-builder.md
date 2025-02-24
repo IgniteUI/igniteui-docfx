@@ -185,8 +185,9 @@ In order to group already existing conditions, first you need to add a new group
 The Ignite UI for Angular Query Builder Component allows defining templates for the component's header and the search value using the following predefined reference names:
 
 ### Header
+By default the [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) header would not be displayed. In order to define such, the [`IgxQueryBuilderHeaderComponent`]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html) should be added inside of the `igx-query-builder`.
 
-Passing content inside of the `igx-query-builder-header` allows templating the query builder header. 
+Then, for setting the header title could be used the [`title`]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html#title) input and passing content inside of the `igx-query-builder-header` allows templating the query builder header. 
 
  The code snippet below illustrates how to do this:
 
@@ -341,7 +342,7 @@ The last step is to **include** the new component themes using the `css-vars` mi
 
 ### Demo
 
-<code-view style="height:330px" 
+<code-view style="height:530px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/query-builder-style" >
