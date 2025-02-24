@@ -342,7 +342,7 @@ The last step is to **include** the new component themes using the `css-vars` mi
 
 ### Demo
 
-<code-view style="height:330px" 
+<code-view style="height:530px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/query-builder-style" >
