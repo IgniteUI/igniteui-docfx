@@ -153,15 +153,11 @@ ngAfterViewInit(): void {
 - チップをドラッグしても、その状態や内容は変更されず、位置のみが変更されます。
 - チップはグループやサブグループにドラッグすることもできます。たとえば、式のグループ化/グループ解除は、式のドラッグ機能によって実行されます。
 既存の条件をグループ化するには、まず「追加」グループ ボタンを使用して新しいグループを追加する必要があります。次に、ドラッグすることで、必要な式をそのグループに移動できます。グループを解除するには、すべての条件を現在のグループの外にドラッグします。最後の条件を移動したら、グループは削除されます。
+
 >[!NOTE]
 >あるクエリ ツリーのチップを別のクエリ ツリーにドラッグすることはできません (例: 親から内部へ、またはその逆)。
-<div style="display:inline-block;">
-    <a style="background: url(../../images/general/query-builder-drag-and-drop.gif); display:flex; justify-content:center; width: 80vw; max-width:480px; min-height:415px;"
-       target="_blank">
-        <img src="../images/general/play.svg" style="vertical-align: middle;" />
-    </a>
-    <p style="text-align:center;">マウスのドラッグアンドドロップを使用してチップを並べ替える</p>
-</div>
+
+<img class="responsive-img" src="../images/general/query-builder-drag-and-drop.gif" />
 
 ## キーボード操作
 **キーの組み合わせ**
@@ -172,14 +168,8 @@ ngAfterViewInit(): void {
 
 >[!NOTE]
 >キーボードの並べ替えは、マウスのドラッグ アンド ドロップと同じ機能を提供します。チップを移動したら、ユーザーは新しい位置を確認するか、並べ替えをキャンセルする必要があります。
-<div style="display:inline-block;">
-    <a style="background: url(../../images/general/query-builder-keyboard-drag-and-drop.gif); display:flex; justify-content:center; width: 80vw; max-width:480px; min-height:428px;"
-       target="_blank">
-        <img src="../images/general/play.svg" style="vertical-align: middle;" />
-    </a>
-    <p style="text-align:center;">キーボードの並べ替えを使用してチップを並べ替える</p>
-</div>
 
+<img class="responsive-img" src="../images/general/query-builder-keyboard-drag-and-drop.gif" />
 
 ## テンプレート化
 
