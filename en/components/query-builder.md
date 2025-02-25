@@ -152,15 +152,11 @@ Condition chips can be easily repositioned using mouse [*Drag & Drop*](drag-drop
 - Dragging a chip does not modify its condition/contents, only it's position.
 - Chip can also be dragged along groups and subgroups. For example, grouping/ungrouping expressions is achieved via the Expressions Dragging functionality.
 In order to group already existing conditions, first you need to add a new group through the 'add' group button. Then via dragging, the required expressions can be moved to that group. In order to ungroup, you could drag all conditions outside their current group and once the last condition is moved out, the group will be deleted.
+
 >[!NOTE]
 >Chips from one query tree cannot be dragged in another, e.g. from parent to inner and vice versa.
-<div style="display:inline-block;">
-    <a style="background: url(../../images/general/query-builder-drag-and-drop.gif); display:flex; justify-content:center; width: 80vw; max-width:480px; min-height:415px;"
-       target="_blank">
-        <img src="../images/general/play.svg" style="vertical-align: middle;" />
-    </a>
-    <p style="text-align:center;">Rearranging chips using mouse Drag and Drop</p>
-</div>
+
+<img class="responsive-img"  src="../images/general/query-builder-drag-and-drop.gif" />
 
 ## Keyboard interaction
 **Key Combinations**
@@ -171,14 +167,8 @@ In order to group already existing conditions, first you need to add a new group
 
 >[!NOTE]
 >Keyboard reordering provides the same functionality as mouse Drag & Drop. Once a chip is moved, user has to confirm the new position or cancel the reorder.
-<div style="display:inline-block;">
-    <a style="background: url(../../images/general/query-builder-keyboard-drag-and-drop.gif); display:flex; justify-content:center; width: 80vw; max-width:480px; min-height:428px;"
-       target="_blank">
-        <img src="../images/general/play.svg" style="vertical-align: middle;" />
-    </a>
-    <p style="text-align:center;">Rearranging chips using keyboard reordering</p>
-</div>
 
+<img class="responsive-img"  src="../images/general/query-builder-keyboard-drag-and-drop.gif" />
 
 ## Templating
 
