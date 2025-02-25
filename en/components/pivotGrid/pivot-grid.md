@@ -95,6 +95,9 @@ A filter can also be defined via the `filters` configuration property. It can be
 
 Each basic dimension configuration requires a `memberName` that matches a field from the provided `data`, or a `memberFunction` that extracts a value from the record in case of complex objects or other custom scenarios.
 
+>[!NOTE]
+> The `memberName` needs to be unique. In case you need different dimensions for the same field, you can define a custom unique `memberName` for each, and extract the related value via `memberFunction`.
+
 Multiple sibling dimensions can be defined, which creates a more complex nested group in the related row or column dimension area.
 
 The dimensions can be reordered or moved from one area to another via their corresponding chips using drag & drop.
@@ -151,7 +154,12 @@ It also allows for further customization via the second option parameter in orde
 
 ### Values configuration
 
-A value configuration requires a `member` that matches a field from the provided `data`, or it can define either an `aggregatorName` or custom `aggregator` function for more complex scenarios. Out of the box, there are 4 predefined aggregations that can be used depending on the data type of the data field:
+A value configuration requires a `member` that matches a field from the provided `data`, or it can define either via an `aggregatorName` or custom `aggregator` function for more complex scenarios.
+
+>[!NOTE]
+> The `member` needs to be unique. In case you need different value aggregations for the same field, you can define a custom unique `member` for each, and extract the related value via the `aggregator` function.
+
+ Out of the box, there are 4 predefined aggregations that can be used depending on the data type of the data field:
 
 - `IgxPivotNumericAggregate` - for numeric fields.
     Contains the following aggregation functions: `SUM`, `AVG`, `MIN`, `MAX`, `COUNT`.
