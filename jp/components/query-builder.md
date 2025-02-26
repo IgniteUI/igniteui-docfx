@@ -19,7 +19,7 @@ Angular Query Builder は、[Angular コンポーネント](https://jp.infragist
 
 この Angular Query Builder の例を作成して、Angular Query Builder コンポーネントのデフォルト機能を紹介しました。プラス ボタンをクリックして、条件、「and」グループ、および「or」グループを追加します。グループ解除または削除するには、サイド バーに移動します。
 
-<code-view style="height:530px" 
+<code-view style="height:700px"
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/query-builder-sample-1" alt="Angular Query Builder の例">
 </code-view>
@@ -117,8 +117,8 @@ ngAfterViewInit(): void {
     const tree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'Orders', ['*']);
     tree.filteringOperands.push({
         fieldName: 'CompanyID',
-        condition: IgxStringFilteringOperand.instance().condition('in'),
-        conditionName: 'in',
+        condition: IgxStringFilteringOperand.instance().condition('inQuery'),
+        conditionName: 'inQuery',
         searchTree: innerTree
     });
     tree.filteringOperands.push({
@@ -157,9 +157,10 @@ ngAfterViewInit(): void {
 >[!NOTE]
 >あるクエリ ツリーのチップを別のクエリ ツリーにドラッグすることはできません (例: 親から内部へ、またはその逆)。
 
-<img class="responsive-img" src="../images/general/query-builder-drag-and-drop.gif" />
+<img class="responsive-img"  src="../images/general/query-builder-drag-and-drop.gif" />
 
 ## キーボード操作
+
 **キーの組み合わせ**
  - <kbd>Tab</kbd>/<kbd>Shift + Tab</kbd> - 次の/前のチップ、ドラッグ インジケーター、削除ボタン、式の「追加」ボタンに移動します。
  - <kbd>下矢印</kbd>/<kbd>上矢印</kbd> - チップのドラッグ インジケーターがフォーカスされている場合、チップを上下に移動できます。
@@ -169,13 +170,14 @@ ngAfterViewInit(): void {
 >[!NOTE]
 >キーボードの並べ替えは、マウスのドラッグ アンド ドロップと同じ機能を提供します。チップを移動したら、ユーザーは新しい位置を確認するか、並べ替えをキャンセルする必要があります。
 
-<img class="responsive-img" src="../images/general/query-builder-keyboard-drag-and-drop.gif" />
+<img class="responsive-img"  src="../images/general/query-builder-keyboard-drag-and-drop.gif" />
 
 ## テンプレート化
 
 Ignite UI for Angular Query Builder コンポーネントでは、次の定義済み参照名を使用して、コンポーネントのヘッダーと検索値のテンプレートを定義できます。
 
-### ヘッダー
+### ヘッダー テンプレート
+
 デフォルトでは、[`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) ヘッダーは表示されません。これを定義するには、[`IgxQueryBuilderHeaderComponent`]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html) を `igx-query-builder` 内に追加する必要があります。
 
 次に、ヘッダー タイトルを設定するために [`title`]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html#title) 入力を使用し、`igx-query-builder-header` 内にコンテンツを渡すことで、クエリ ビルダー ヘッダーをテンプレート化できます。 
@@ -197,7 +199,8 @@ Ignite UI for Angular Query Builder コンポーネントでは、次の定義�
 <igx-query-builder #queryBuilder
     [entities]="entities"
     [expressionTree]="expressionTree">
-    <ng-template #searchValueTemplate igxQueryBuilderSearchValue 
+    <ng-template #searchValueTemplate
+                igxQueryBuilderSearchValue 
                 let-searchValue
                 let-selectedField = "selectedField" 
                 let-selectedCondition = "selectedCondition"
@@ -217,7 +220,10 @@ Ignite UI for Angular Query Builder コンポーネントでは、次の定義�
             (selectedCondition === 'equals' || selectedCondition === 'doesNotEqual')
             ){
             <igx-radio-group>
-                <igx-radio class="radio-sample" *ngFor="let stat of statusOptions" value="{{stat.value}}" [(ngModel)]="searchValue.value">
+                <igx-radio class="radio-sample"
+                           *ngFor="let stat of statusOptions"
+                           value="{{stat.value}}"
+                           [(ngModel)]="searchValue.value">
                     {{stat.text}}
                 </igx-radio>
             </igx-radio-group>
@@ -230,6 +236,7 @@ Ignite UI for Angular Query Builder コンポーネントでは、次の定義�
 ```
 
 ## フォーマッター
+
 条件が編集モードではないときに表示されるチップ内の検索値の外観を変更するには、フィールド配列にフォーマッター関数を設定できます。検索値と選択された条件には、次のように value 引数と rowData 引数を通じてアクセスできます。
 
 ```ts
@@ -252,9 +259,10 @@ this.ordersFields = [
 ```
 
 ## デモ
+
 この Angular Query Builder の例は、Angular Query Builder コンポーネントのヘッダーと検索値のテンプレート化とフォーマッター機能を紹介するために作成しました。
 
-<code-view style="height:530px" 
+<code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/query-builder-template-sample" alt="Angular Query Builder テンプレートの例">
 </code-view>
@@ -308,7 +316,7 @@ $custom-icon-button: icon-button-theme(
 この例では、リストされたコンポーネントのパラメーターの一部のみを変更しましたが、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme)、[`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme)、[`drop-down-theme`]({environment:sassApiUrl}/index.html#function-drop-down-theme)、[`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme) テーマは、それぞれのスタイルを制御するためのより多くのパラメーターを提供します。
 
 >[!NOTE]
->上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](themes/sass/palettes.md)のトピックをご覧ください。
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](./themes/sass/palettes.md)のトピックをご覧ください。
 
 最後に、`css-vars` ミックスインを使用して新しいコンポーネント テーマを**含めます**。
 
