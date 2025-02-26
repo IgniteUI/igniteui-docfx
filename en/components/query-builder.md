@@ -18,7 +18,7 @@ The [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybui
 
 We’ve created this Angular Query Builder example to show you the default functionalities of the Angular Query Builder component. Click the plus button to add conditions, “and” group as well as “or” group. Grouping or ungrouping expressions as well as re-ordering could be achieved via the Drag&Drop functionality.
 
-<code-view style="height:530px" 
+<code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/query-builder-sample-1" alt="Angular Query Builder Example">
 </code-view>
@@ -116,8 +116,8 @@ ngAfterViewInit(): void {
     const tree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'Orders', ['*']);
     tree.filteringOperands.push({
         fieldName: 'CompanyID',
-        condition: IgxStringFilteringOperand.instance().condition('in'),
-        conditionName: 'in',
+        condition: IgxStringFilteringOperand.instance().condition('inQuery'),
+        conditionName: 'inQuery',
         searchTree: innerTree
     });
     tree.filteringOperands.push({
@@ -149,20 +149,17 @@ The `expressionTree` is a two-way bindable property which means a corresponding 
 ## Expressions Dragging
 
 Condition chips can be easily repositioned using mouse [*Drag & Drop*](drag-drop.md) or [*Keyboard reordering*](#keyboard-interaction) approaches. With those, users can adjust their query logic dynamically.
-- Dragging a chip does not modify its condition/contents, only it's position.
+- Dragging a chip does not modify its condition/contents, only its position.
 - Chip can also be dragged along groups and subgroups. For example, grouping/ungrouping expressions is achieved via the Expressions Dragging functionality.
 In order to group already existing conditions, first you need to add a new group through the 'add' group button. Then via dragging, the required expressions can be moved to that group. In order to ungroup, you could drag all conditions outside their current group and once the last condition is moved out, the group will be deleted.
+
 >[!NOTE]
 >Chips from one query tree cannot be dragged in another, e.g. from parent to inner and vice versa.
-<div style="display:inline-block;">
-    <a style="background: url(../../images/general/query-builder-drag-and-drop.gif); display:flex; justify-content:center; width: 80vw; max-width:480px; min-height:415px;"
-       target="_blank">
-        <img src="../images/general/play.svg" style="vertical-align: middle;" />
-    </a>
-    <p style="text-align:center;">Rearranging chips using mouse Drag and Drop</p>
-</div>
+
+<img class="responsive-img"  src="../images/general/query-builder-drag-and-drop.gif" />
 
 ## Keyboard interaction
+
 **Key Combinations**
  - <kbd>Tab</kbd> / <kbd>Shift + Tab</kbd> - navigates to the next/previous chip, drag indicator, remove button, 'add' expression button.
  - <kbd>Arrow Down</kbd>/<kbd>Arrow Up</kbd> - when chip's drag indicator is focused, the chip can be moved up/down.
@@ -171,20 +168,15 @@ In order to group already existing conditions, first you need to add a new group
 
 >[!NOTE]
 >Keyboard reordering provides the same functionality as mouse Drag & Drop. Once a chip is moved, user has to confirm the new position or cancel the reorder.
-<div style="display:inline-block;">
-    <a style="background: url(../../images/general/query-builder-keyboard-drag-and-drop.gif); display:flex; justify-content:center; width: 80vw; max-width:480px; min-height:428px;"
-       target="_blank">
-        <img src="../images/general/play.svg" style="vertical-align: middle;" />
-    </a>
-    <p style="text-align:center;">Rearranging chips using keyboard reordering</p>
-</div>
 
+<img class="responsive-img"  src="../images/general/query-builder-keyboard-drag-and-drop.gif" />
 
 ## Templating
 
 The Ignite UI for Angular Query Builder Component allows defining templates for the component's header and the search value using the following predefined reference names:
 
-### Header
+### Header Template
+
 By default the [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) header would not be displayed. In order to define such, the [`IgxQueryBuilderHeaderComponent`]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html) should be added inside of the `igx-query-builder`.
 
 Then, for setting the header title could be used the [`title`]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html#title) input and passing content inside of the `igx-query-builder-header` allows templating the query builder header. 
@@ -206,7 +198,8 @@ The search value of a condition can be templated using the [`igxQueryBuilderSear
 <igx-query-builder #queryBuilder
     [entities]="entities"
     [expressionTree]="expressionTree">
-    <ng-template #searchValueTemplate igxQueryBuilderSearchValue 
+    <ng-template #searchValueTemplate
+                igxQueryBuilderSearchValue 
                 let-searchValue
                 let-selectedField = "selectedField" 
                 let-selectedCondition = "selectedCondition"
@@ -226,7 +219,10 @@ The search value of a condition can be templated using the [`igxQueryBuilderSear
             (selectedCondition === 'equals' || selectedCondition === 'doesNotEqual')
             ){
             <igx-radio-group>
-                <igx-radio class="radio-sample" *ngFor="let stat of statusOptions" value="{{stat.value}}" [(ngModel)]="searchValue.value">
+                <igx-radio class="radio-sample"
+                           *ngFor="let stat of statusOptions"
+                           value="{{stat.value}}"
+                           [(ngModel)]="searchValue.value">
                     {{stat.text}}
                 </igx-radio>
             </igx-radio-group>
@@ -238,7 +234,8 @@ The search value of a condition can be templated using the [`igxQueryBuilderSear
 </igx-query-builder>
 ```
 
-## Formatter
+### Formatter
+
 In order to change the appearance of the search value in the chip displayed when a condition is not in edit mode, you can set a formatter function to the fields array. The search value and selected condition could be acccessed through the value and rowData arguments as follows:
 
 ```ts
@@ -260,10 +257,11 @@ this.ordersFields = [
 ];
 ```
 
-## Demo
+### Demo
+
 We’ve created this Angular Query Builder example to show you the templating and formatter functionalities for the header and the search value of the Angular Query Builder component.
 
-<code-view style="height:530px" 
+<code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/query-builder-template-sample" alt="Angular Query Builder Templates Example">
 </code-view>
