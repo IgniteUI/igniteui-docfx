@@ -163,15 +163,6 @@ In addition to the mouse highlighting, the [`IgxDataPieChartComponent`]({environ
 
 When these conditions are met, the values of the subset will be highlighted, while the remainder of the full set of data will be faded - effectively creating a highlight for the subset and allowing easier visualization of a subset of your data within the same control.
 
-The following example demonstrates highlight filtering.
-
-<code-view style="height: 600px" alt="Angular Data Pie Chart Highlight Filtering"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-pie-chart/highlight-filter"
-                                                 github-src="charts/data-pie-chart/highlight-filter">
-</code-view>
-
-
 <div class="divider--half"></div>
 
 ## Angular Data Pie Chart Animation
@@ -186,8 +177,8 @@ The following sample demonstrates the usage of animation in the [`IgxDataPieChar
 
 <code-view style="height: 600px" alt="Angular Data Pie Chart Animation"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-pie-chart/animation-replay"
-                                                 github-src="charts/data-pie-chart/animation-replay">
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-pie-chart/animation"
+                                                 github-src="charts/data-pie-chart/animation">
 </code-view>
 
 
