@@ -164,15 +164,6 @@ ItemLegend バッジを変更することもできます。デフォルトでは
 
 これらの条件が満たされると、サブセットの値がハイライト表示され、データの全セットの残りの部分はフェードアウトされます。これにより、サブセットが効果的にハイライトされ、同じコントロール内でデータのサブセットをより簡単に視覚化できるようになります。
 
-以下の例は、ハイライト表示を示しています。
-
-<code-view style="height: 600px" alt="Angular データ円チャートのハイライト表示"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-pie-chart/highlight-filter"
-                                                 github-src="charts/data-pie-chart/highlight-filter">
-</code-view>
-
-
 <div class="divider--half"></div>
 
 ## Angular データ円チャートのアニメーション
@@ -187,8 +178,8 @@ ItemLegend バッジを変更することもできます。デフォルトでは
 
 <code-view style="height: 600px" alt="Angular データ円チャートのアニメーション"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-pie-chart/animation-replay"
-                                                 github-src="charts/data-pie-chart/animation-replay">
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-pie-chart/animation"
+                                                 github-src="charts/data-pie-chart/animation">
 </code-view>
 
 
