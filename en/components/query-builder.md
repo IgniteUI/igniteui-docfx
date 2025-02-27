@@ -16,9 +16,9 @@ The [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybui
 
 ## Angular Query Builder Example
 
-We’ve created this Angular Query Builder example to show you the default functionalities of the Angular Query Builder component. Click the plus button to add conditions, “and” group as well as “or” group. Navigate the side bars to ungroup or delete.
+We’ve created this Angular Query Builder example to show you the default functionalities of the Angular Query Builder component. Click the plus button to add conditions, “and” group as well as “or” group. Grouping or ungrouping expressions as well as re-ordering could be achieved via the Drag&Drop functionality.
 
-<code-view style="height:530px" 
+<code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/query-builder-sample-1" alt="Angular Query Builder Example">
 </code-view>
@@ -63,7 +63,7 @@ import { IGX_QUERY_BUILDER_DIRECTIVES, FilteringExpressionsTree, FieldType } fro
     selector: 'app-home',
     template: `
     <igx-query-builder #queryBuilder
-        [fields]="fields"
+        [entities]="entities"
         [(expressionTree)]="expressionTree"
         (expressionTreeChange)="onExpressionTreeChange()">
     </igx-query-builder>
@@ -75,7 +75,7 @@ import { IGX_QUERY_BUILDER_DIRECTIVES, FilteringExpressionsTree, FieldType } fro
 })
 export class HomeComponent {
     public expressionTree: FilteringExpressionsTree;
-    public fields: FieldType [];
+    public entities: Array<any>;
 
     public onExpressionTreeChange() {
         ...
@@ -87,51 +87,184 @@ Now that you have the Ignite UI for Angular Query Builder module or directives i
 
 ## Using the Angular Query Builder
 
-If no expression tree is initially set, you start with creating a group of conditions linked with [`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) or [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or). After that, conditions or sub-groups can be added.
+If no expression tree is initially set, you start by choosing an entity and which of its fields the query should return. After that, conditions or sub-groups can be added. 
 
-In order to add a condition, a field, an operand based on the field dataType and a value if the operand is not unary. Once the condition is committed, a chip with the condition information appears. By hovering or clicking the chip, you have the options to modify it or add another condition or group right after it.
+In order to add a condition you select a field, an operand based on the field data type and a value if the operand is not unary. The operands `In` and `Not In` will allow you to create an inner query with conditions for a different entity instead of simply providing a value. Once the condition is committed, a chip with the condition information appears. By clicking or hovering the chip, you have the options to modify it or add another condition or group right after it.
 
-If you select more than one condition chip, a context menu appears with options to create a group or delete the queries. If you choose to create a group with the selected conditions, the newly created group will appear where the topmost selected condition was placed.
+Clicking on the ([`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) or [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or)) button placed above each group, will open a menu with options to change the group type or ungroup the conditions inside.
 
-In order to select a group, you can also click on its vertical line, which is colored based on the linking condition ([`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) or [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or)). If a single group is selected, you get a context menu with options to change its logic, ungroup or delete it.
+Since every condition is related to a specific field from a particular entity changing the entity will lead to resetting all preset conditions and groups. When selecting a new entity a confirmation dialog will be shown, unless the [`showEntityChangeDialog`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#showEntityChangeDialog) input property is set to false.
 
-You can start using the component by setting the [`fields`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#fields) property to an array describing the field name and its data type. It will automatically assign the corresponding operands based on the data type.
+You can start using the component by setting the [`entities`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#entities) property to an array describing the entity name and an array of its fields, where each field is defined by its name and data type. Once a field is selected it will automatically assign the corresponding operands based on the data type.
 The Query Builder has the [`expressionTree`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#expressionTree) input property. You could use it to set an initial state of the control and access the user-specified filtering logic.
 
 ```typescript
 ngAfterViewInit(): void {
-    const tree = new FilteringExpressionsTree(FilteringLogic.And);
+    const innerTree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'Companies', ['ID']);
+    innerTree.filteringOperands.push({
+        fieldName: 'Employees',
+        condition: IgxNumberFilteringOperand.instance().condition('greaterThan'),
+        conditionName: 'greaterThan',
+        searchVal: 100
+    });
+    innerTree.filteringOperands.push({
+        fieldName: 'Contact',
+        condition: IgxBooleanFilteringOperand.instance().condition('true'),
+        conditionName: 'true'
+    });
+
+    const tree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'Orders', ['*']);
     tree.filteringOperands.push({
-        fieldName: 'ID',
-        condition: IgxStringFilteringOperand.instance().condition('contains'),
-        searchVal: 'a',
-        ignoreCase: true
+        fieldName: 'CompanyID',
+        condition: IgxStringFilteringOperand.instance().condition('inQuery'),
+        conditionName: 'inQuery',
+        searchTree: innerTree
     });
-    const subTree = new FilteringExpressionsTree(FilteringLogic.Or);
-    subTree.filteringOperands.push({
-        fieldName: 'ContactTitle',
-        condition: IgxStringFilteringOperand.instance().condition('doesNotContain'),
-        searchVal: 'b',
-        ignoreCase: true
+    tree.filteringOperands.push({
+        fieldName: 'OrderDate',
+        condition: IgxDateFilteringOperand.instance().condition('before'),
+        conditionName: 'before',
+        searchVal: new Date('2024-01-01T00:00:00.000Z')
     });
-    subTree.filteringOperands.push({
-        fieldName: 'CompanyName',
-        condition: IgxStringFilteringOperand.instance().condition('startsWith'),
-        searchVal: 'c',
-        ignoreCase: true
+    tree.filteringOperands.push({
+        fieldName: 'ShippedDate',
+        condition: IgxDateFilteringOperand.instance().condition('null'),
+        conditionName: 'null'
     });
-    tree.filteringOperands.push(subTree);
 
     this.queryBuilder.expressionTree = tree;
 }
 ```
 
-The `expressionTree` is a two-way bindable property which means a corresponding `expressionTreeChange` output is implemented that emits when the end-user changes the UI by creating, editing or removing conditions. It can also be subscribed to separately to receive notifications and react to such changes.
+The `expressionTree` is a two-way bindable property which means a corresponding `expressionTreeChange` output is implemented that emits when the end-user changes the UI by creating, editing or removing conditions. It can also be subscribed separately to receive notifications and react to such changes.
 
 ```html
-<igx-query-builder #queryBuilder [fields]="fields" [(expressionTree)]="expressionTree" (expressionTreeChange)="onExpressionTreeChange()">
+<igx-query-builder #queryBuilder
+    [entities]="entities"
+    [(expressionTree)]="expressionTree"
+    (expressionTreeChange)="onExpressionTreeChange()">
 </igx-query-builder>
 ```
+
+## Expressions Dragging
+
+Condition chips can be easily repositioned using mouse [*Drag & Drop*](drag-drop.md) or [*Keyboard reordering*](#keyboard-interaction) approaches. With those, users can adjust their query logic dynamically.
+- Dragging a chip does not modify its condition/contents, only its position.
+- Chip can also be dragged along groups and subgroups. For example, grouping/ungrouping expressions is achieved via the Expressions Dragging functionality.
+In order to group already existing conditions, first you need to add a new group through the 'add' group button. Then via dragging, the required expressions can be moved to that group. In order to ungroup, you could drag all conditions outside their current group and once the last condition is moved out, the group will be deleted.
+
+>[!NOTE]
+>Chips from one query tree cannot be dragged in another, e.g. from parent to inner and vice versa.
+
+<img class="responsive-img"  src="../images/general/query-builder-drag-and-drop.gif" />
+
+## Keyboard interaction
+
+**Key Combinations**
+ - <kbd>Tab</kbd> / <kbd>Shift + Tab</kbd> - navigates to the next/previous chip, drag indicator, remove button, 'add' expression button.
+ - <kbd>Arrow Down</kbd>/<kbd>Arrow Up</kbd> - when chip's drag indicator is focused, the chip can be moved up/down.
+ - <kbd>Space</kbd> / <kbd>Enter</kbd> - focused expression enters edit mode. If chip is been moved, this confirms it's new position.
+ - <kbd>Esc</kbd> - chip's reordering is canceled and it returns to it's original position.
+
+>[!NOTE]
+>Keyboard reordering provides the same functionality as mouse Drag & Drop. Once a chip is moved, user has to confirm the new position or cancel the reorder.
+
+<img class="responsive-img"  src="../images/general/query-builder-keyboard-drag-and-drop.gif" />
+
+## Templating
+
+The Ignite UI for Angular Query Builder Component allows defining templates for the component's header and the search value using the following predefined reference names:
+
+### Header Template
+
+By default the [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) header would not be displayed. In order to define such, the [`IgxQueryBuilderHeaderComponent`]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html) should be added inside of the `igx-query-builder`.
+
+Then, for setting the header title could be used the [`title`]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html#title) input and passing content inside of the `igx-query-builder-header` allows templating the query builder header. 
+
+ The code snippet below illustrates how to do this:
+
+```html
+<igx-query-builder #queryBuilder [entities]="this.entities">
+        <igx-query-builder-header [title]="'Query Builder Template Sample'">  
+        </igx-query-builder-header>
+</igx-query-builder>
+```
+
+### Search value
+
+The search value of a condition can be templated using the [`igxQueryBuilderSearchValue`]({environment:angularApiUrl}/classes/igxquerybuildersearchvaluetemplatedirective.html) directive, applied to an `<ng-template>` inside of the `igx-query-builder`'s body:
+
+```html
+<igx-query-builder #queryBuilder
+    [entities]="entities"
+    [expressionTree]="expressionTree">
+    <ng-template #searchValueTemplate
+                igxQueryBuilderSearchValue 
+                let-searchValue
+                let-selectedField = "selectedField" 
+                let-selectedCondition = "selectedCondition"
+                let-defaultSearchValueTemplate = "defaultSearchValueTemplate">
+        @if (
+            selectedField?.field === 'Region' &&
+            (selectedCondition === 'equals' || selectedCondition === 'doesNotEqual')
+            ){
+            <igx-select [placeholder]="'Select region'" [(ngModel)]="searchValue.value">
+                <igx-select-item *ngFor="let reg of regionOptions" [value]="reg">
+                    {{ reg.text }}
+                </igx-select-item>
+            </igx-select>
+        } 
+        @else if (
+            selectedField?.field === 'OrderStatus' &&
+            (selectedCondition === 'equals' || selectedCondition === 'doesNotEqual')
+            ){
+            <igx-radio-group>
+                <igx-radio class="radio-sample"
+                           *ngFor="let stat of statusOptions"
+                           value="{{stat.value}}"
+                           [(ngModel)]="searchValue.value">
+                    {{stat.text}}
+                </igx-radio>
+            </igx-radio-group>
+        }
+            @else {  
+            <ng-container #defaultTemplate *ngTemplateOutlet="defaultSearchValueTemplate"></ng-container>
+        }
+    </ng-template>
+</igx-query-builder>
+```
+
+### Formatter
+
+In order to change the appearance of the search value in the chip displayed when a condition is not in edit mode, you can set a formatter function to the fields array. The search value and selected condition could be acccessed through the value and rowData arguments as follows:
+
+```ts
+this.ordersFields = [
+    { field: "CompanyID", dataType: "string" },
+    { field: "OrderID", dataType: "number" },
+    { field: "EmployeeId", dataType: "number" },
+    { field: "OrderDate", dataType: "date" },
+    { field: "RequiredDate", dataType: "date" },
+    { field: "ShippedDate", dataType: "date" },
+    { field: "ShipVia", dataType: "number" },
+    { field: "Freight", dataType: "number" },
+    { field: "ShipName", dataType: "string" },
+    { field: "ShipCity", dataType: "string" },
+    { field: "ShipPostalCode", dataType: "string" },
+    { field: "ShipCountry", dataType: "string" },
+    { field: "Region", dataType: "string", formatter: (value: any, rowData: any) => rowData === 'equals' || rowData === 'doesNotEqual' ? `${value.value}` : value }},
+    { field: "OrderStatus", dataType: "number" }
+];
+```
+
+### Demo
+
+We’ve created this Angular Query Builder example to show you the templating and formatter functionalities for the header and the search value of the Angular Query Builder component.
+
+<code-view style="height:700px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-template-sample" alt="Angular Query Builder Templates Example">
+</code-view>
 
 ## Styling
 
@@ -147,8 +280,10 @@ To get started with styling the Query Builder, we need to import the `index` fil
 The Query Builder takes its background color from the its theme, using the `background` parameter. In order to change the background we need to create a custom theme:
 
 ```scss
+
 $custom-query-builder: query-builder-theme(
-  $background: #ffcd0f,
+  $background: #292826,
+  ...
 );
 ```
 
@@ -156,32 +291,28 @@ Since we have other components inside the Query Builder, such as buttons, chips,
 
 ```scss
 $custom-button: button-theme(
-  $disabled-foreground: gray,
-  ...,
-);
-
-$custom-button-group: button-group-theme(
-  $item-background: #292826,
-  ...,
+  $schema: $dark-material-schema,
+  $background: #292826,
+  $foreground: #ffcd0f,
+  ...
 );
 
 $custom-input-group: input-group-theme(
-  $box-background: #4a4a4a,
-  ...,
+  $focused-secondary-color: #ffcd0f
 );
 
 $custom-chip: chip-theme(
   $background: #ffcd0f,
-  ...,
+  $text-color: #292826
 );
 
-$custom-drop-down: drop-down-theme(
-  $background-color: #292826,
-  ...,
+$custom-icon-button: icon-button-theme(
+  $background: #ffcd0f,
+  $foreground: #292826
 );
 ```
 
-In this example we only changed some of the parameters for the listed components, but the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme), [`button-group-theme`]({environment:sassApiUrl}/index.html#function-button-group-theme), [`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme), [`drop-down-theme`]({environment:sassApiUrl}/index.html#function-drop-down-theme), [`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme) themes provide way more parameters to control their respective styling.
+In this example we only changed some of the parameters for the listed components, but the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme), [`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme), [`drop-down-theme`]({environment:sassApiUrl}/index.html#function-drop-down-theme), [`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme) themes provide way more parameters to control their respective styling.
 
 >[!NOTE]
 >Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
@@ -193,11 +324,13 @@ The last step is to **include** the new component themes using the `css-vars` mi
 
 :host {
   ::ng-deep {
-    @include css-vars($custom-drop-down);
-    @include css-vars($custom-button);
-    @include css-vars($custom-button-group);
     @include css-vars($custom-input-group);
     @include css-vars($custom-chip);
+    @include css-vars($custom-icon-button);
+
+    .igx-filter-tree__buttons {
+      @include css-vars($custom-button);
+    }
   }
 }
 ```
@@ -207,7 +340,7 @@ The last step is to **include** the new component themes using the `css-vars` mi
 
 ### Demo
 
-<code-view style="height:330px" 
+<code-view style="height:530px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/query-builder-style" >
@@ -225,6 +358,8 @@ You can also streamline your Angular app development using [WYSIWYG App Builder�
 <div class="divider--half"></div>
 
 * [IgxQueryBuilderComponent API]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html)
+* [IgxQueryBuilderHeaderComponent]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html)
+* [IgxQueryBuilderSearchValueTemplateDirective]({environment:angularApiUrl}/classes/igxquerybuildersearchvaluetemplatedirective.html)
 * [IgxQueryBuilderComponent Styles]({environment:sassApiUrl}/index.html#function-query-builder-theme)
 
 ## Additional Resources
