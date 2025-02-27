@@ -475,129 +475,52 @@ export class AppModule {}
 
 ```scss
 $custom-column-actions-theme: column-actions-theme(
-    $background-color: steelblue,
-    $title-color: gold
+  $background-color: #292826,
+  $title-color: #ffcd0f
 );
 ```
 
 ご覧のように `column-actions-theme` は列操作コンテナーの色のみを制御しますが、ボタン、チェックボックス、内部の入力グループには影響しません。ボタンのスタイルも設定したい場合、新しいボタン テーマを作成します。
 
 ```scss
-$custom-button: button-theme($flat-text-color: gold, $disabled-color: black);
+$custom-button: button-theme(
+  $foreground: #292826, 
+  $disabled-foreground: rgba(255, 255, 255, .54)
+);
 ```
+
+>[!NOTE]
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックをご覧ください。
 
 この例では、フラットボタンのテキストの色とボタンの無効な色のみを変更しましたが、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) の方がより多くの方法を提供します。ボタンのスタイルを制御するパラメーター。
 
 最後にそれぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。 
 
 ```scss
-@include column-actions($custom-column-actions-theme);
+@include css-vars($custom-column-actions-theme);
+
 .igx-column-actions {
-    @include button($custom-button);
+  @include css-vars($custom-button);
 }
 ```
 
 >[!NOTE]
->`.igx-column-actions` 内で **igx-button** ミックスインのスコープを設定し、列非表示ボタンのみがスタイル設定されるようにします。そうでない場合は、グリッド内の他のボタンも影響を受けます。
+>作成した **button-theme** を `.igx-column-actions` 内に含めて、列を非表示にするボタンのみにスタイルを設定します。 そうでない場合は、グリッド内の他のボタンも影響を受けます。
 
- >[!NOTE]
- >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+>[!NOTE]
+>コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、列アクション コンポーネント内のコンポーネント (ボタン、チェックボックスなど) に対して `::ng-deep` を使用してこのカプセル化を`解除する`必要があります。
 
 ```scss
+@include css-vars($custom-column-actions-theme);
+
 :host {
-    ::ng-deep {
-        @include column-actions($custom-column-actions-theme);
-        .igx-column-actions {
-            @include button($custom-button);
-        }
+  ::ng-deep {
+    .igx-column-actions {
+      @include css-vars($custom-button);
     }
+  }
 }
 ```
-
-### カラーパレットの定義
-
-上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
-
-`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
-
-```scss
-$yellow-color: gold;
-$blue-color: steelblue;
-
-$custom-palette: palette($primary: $blue-color, $secondary: $yellow-color);
-```
-
-次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。 
-
-```scss
-$custom-column-actions-theme: column-actions-theme(
-    $palette: $custom-palette,
-    $title-color: color($custom-palette, "secondary", 400),
-    $background-color: color($custom-palette, "primary", 200)
-);
-
-$custom-button: button-theme(
-    $palette: $custom-palette,
-    $flat-text-color: color($custom-palette, "secondary", 400),
-    $disabled-color: black
-);
-```
-
->[!NOTE]
->`igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](../themes/sass/palettes.md) のトピックをご覧ください。
-
-### スキーマの使用
-
-テーマ エンジンを使用して[**スキーマ**](../themes/sass/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
-
-```scss
-// Extending the dark column actions schema
-$custom-column-actions-schema: extend($_dark-column-actions,
-    (
-        title-color:(
-           color: ("secondary", 400)
-        ),
-        background-color:(
-           color: ("primary", 200)
-        )
-    )
-);
-// Extending the dark button schema
-$custom-button-schema: extend($_dark-button,
-    (           
-        flat-text-color:(
-           color:("secondary", 500)
-        ),
-        disabled-color:(
-           color:("primary", 700)
-        )
-    )
-);
-```
-
-カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張する**必要があります。これは基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネントテーマに追加するものです。
-
-```scss
-// Extending the global dark-schema
-$custom-dark-schema: extend($dark-schema,(
-    igx-column-actions: $custom-column-actions-schema,
-    igx-button: $custom-button-schema
-));
-
-// Defining column-actions-theme with the global dark schema
-$custom-column-actions-theme: column-actions-theme(
-  $palette: $custom-palette,
-  $schema: $custom-dark-schema
-);
-
-// Defining button-theme with the global dark schema
-$custom-button: button-theme(
-  $palette: $custom-palette,
-  $schema: $custom-dark-schema
-);
-```
-
-上記と同じ方法でテーマを含める必要があることに注意してください。
 
 ### デモ
 
@@ -657,9 +580,9 @@ $custom-button: button-theme(
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) プロパティ:
 * [showProgress]({environment:angularApiUrl}/classes/IgxGridToolbarComponent.html#showProgress)
 
-[`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) コンポーネント:
-* [IgxGridToolbarTitleComponent](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/igxgridtoolbartitlecomponent.html)
-* [IgxGridToolbarActionsComponent](https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest/classes/igxgridtoolbaractionscomponent.html)
+[`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) components:
+* [IgxGridToolbarTitleComponent]({environment:angularApiUrl}/classes/igxgridtoolbartitlecomponent.html)
+* [IgxGridToolbarActionsComponent]({environment:angularApiUrl}/classes/igxgridtoolbaractionscomponent.html)
 
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) メソッド:
 

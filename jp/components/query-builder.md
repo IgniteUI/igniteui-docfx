@@ -5,10 +5,9 @@ _keywords: Angular Query Builder コンポーネント, Angular Query Builder �
 _language: ja
 ---
 
-
 # Angular Query Builder (クエリ ビルダー) コンポーネントの概要
 
-Angular Query Builder は、[Angular コンポーネント](https://jp.infragistics.com/products/ignite-ui-angular)の一部であり、開発者が指定されたデータ セットに対して複雑なデータ フィルタリング クエリを作成できる機能豊富な UI を提供します。このコンポーネントを使用すると、式のツリーを構築し、エディターと各フィールドのデータ タイプによって決定される条件リストを使用して、それらの間に AND/OR 条件を設定できます。式ツリーは、バックエンドがサポートする形式のクエリに簡単に変換できます。
+Angular Query Builder は、[Angular コンポーネント](https://jp.infragistics.com/products/ignite-ui-angular)の一部であり、開発者が指定されたデータ セットに対して複雑なデータ フィルタリング クエリを作成できる機能豊富な UI を提供します。このコンポーネントを使用すると、式のツリーを構築し、エディターと各フィールドのデータ タイプによって決定される条件リストを使用して、それらの間に AND/OR 条件を設定できます。式のグループ化やグループ解除、順序の変更は、ドラッグ アンド ドロップ機能を使用して実行できます。
 
 <p class="highlight">
 
@@ -20,7 +19,7 @@ Angular Query Builder は、[Angular コンポーネント](https://jp.infragist
 
 この Angular Query Builder の例を作成して、Angular Query Builder コンポーネントのデフォルト機能を紹介しました。プラス ボタンをクリックして、条件、「and」グループ、および「or」グループを追加します。グループ解除または削除するには、サイド バーに移動します。
 
-<code-view style="height:530px" 
+<code-view style="height:700px"
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/query-builder-sample-1" alt="Angular Query Builder の例">
 </code-view>
@@ -65,7 +64,7 @@ import { IGX_QUERY_BUILDER_DIRECTIVES, FilteringExpressionsTree, FieldType } fro
     selector: 'app-home',
     template: `
     <igx-query-builder #queryBuilder
-        [fields]="fields"
+        [entities]="entities"
         [(expressionTree)]="expressionTree"
         (expressionTreeChange)="onExpressionTreeChange()">
     </igx-query-builder>
@@ -77,7 +76,7 @@ import { IGX_QUERY_BUILDER_DIRECTIVES, FilteringExpressionsTree, FieldType } fro
 })
 export class HomeComponent {
     public expressionTree: FilteringExpressionsTree;
-    public fields: FieldType [];
+    public entities: Array<any>;
 
     public onExpressionTreeChange() {
         ...
@@ -89,54 +88,184 @@ Ignite UI for Angular Query Builder モジュールまたはディレクティ�
 
 ## Angular Query Builder の使用
 
-最初に式木が設定されていない場合は、[`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) または [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or) で結合された条件のグループを作成することから開始します。その後、条件またはサブグループを追加できます。 
+最初に式ツリーが設定されていない場合は、エンティティと、クエリが返すフィールドを選択することから始めます。その後、条件またはサブグループを追加できます。
 
-条件、フィールド、dataType フィールドに基づくオペランド、およびオペランドが単項でない場合の値を追加します。条件が確定すると、条件情報を含むチップが表示されます。チップをホバーまたはクリックすると、チップを変更したり、その直後に別の条件やグループを追加したりできます。
+条件を追加するには、フィールド、フィールドのデータ タイプに基づくオペランド、およびオペランドが単項でない場合は値を選択します。`In` オペランドと `Not In` オペランドを使用すると、単に値を指定するのではなく、異なるエンティティの条件を含む内部クエリを作成できます。条件が確定すると、条件情報を含むチップが表示されます。チップをクリックまたはホバーすると、チップを変更したり、その直後に別の条件やグループを追加したりできます。
 
-複数の条件チップを選択すると、グループを作成したりクエリを削除したりするためのオプションを含むコンテキストメニューが表示されます。選択した条件でグループを作成することを選択した場合、一番上に選択した条件が配置された場所に新しく作成されたグループが表示されます。
+各グループの上にある ([`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) or [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or)) ボタンをクリックすると、グループ タイプを変更したり、内部の条件をグループ化解除したりするためのオプションを含むメニューが開きます。
 
-グループを選択するために、リンク条件 ([`AND`]({environment:angularApiUrl}/enums/filteringlogic.html#and) または [`OR`]({environment:angularApiUrl}/enums/filteringlogic.html#or)) に基づいて色付けされた垂直線をクリックすることもできます。単一のグループが選択されている場合、ロジックを変更、グループ解除、または削除するオプションを含むコンテキスト メニューが表示されます。
+すべての条件は特定のエンティティの特定のフィールドに関連しているため、エンティティを変更すると、すべての事前設定された条件とグループがリセットされます。新しいエンティティを選択すると、[`showEntityChangeDialog`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#showEntityChangeDialog) 入力プロパティが false に設定されていない限り、確認ダイアログが表示されます。
 
-コンポーネントの使用を開始するには、[`fields`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#fields) プロパティに、フィールド名とそのデータ タイプを説明する配列を追加します。データ タイプに基づいて対応するオペランドを自動的に割り当てます。
-クエリ ビルダーには [`expressionTree`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#expressionTree) 入力プロパティがあります。コントロールの初期状態を設定するために使用できます。
+[`entities`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#entities) プロパティを、エンティティ名とそのフィールドの配列を記述する配列に設定することで、コンポーネントの使用を開始できます。各フィールドは、名前とデータ タイプによって定義されます。フィールドが選択されると、データ タイプに基づいて対応するオペランドが自動的に割り当てられます。
+Query Builder には [`expressionTree`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html#expressionTree) 入力プロパティがあります。これを使用して、コントロールの初期状態を設定し、ユーザー指定のフィルタリング ロジックにアクセスできます。
 
 ```typescript
 ngAfterViewInit(): void {
-    const tree = new FilteringExpressionsTree(FilteringLogic.And);
+    const innerTree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'Companies', ['ID']);
+    innerTree.filteringOperands.push({
+        fieldName: 'Employees',
+        condition: IgxNumberFilteringOperand.instance().condition('greaterThan'),
+        conditionName: 'greaterThan',
+        searchVal: 100
+    });
+    innerTree.filteringOperands.push({
+        fieldName: 'Contact',
+        condition: IgxBooleanFilteringOperand.instance().condition('true'),
+        conditionName: 'true'
+    });
+
+    const tree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'Orders', ['*']);
     tree.filteringOperands.push({
-        fieldName: 'ID',
-        condition: IgxStringFilteringOperand.instance().condition('contains'),
-        searchVal: 'a',
-        ignoreCase: true
+        fieldName: 'CompanyID',
+        condition: IgxStringFilteringOperand.instance().condition('inQuery'),
+        conditionName: 'inQuery',
+        searchTree: innerTree
     });
-    const subTree = new FilteringExpressionsTree(FilteringLogic.Or);
-    subTree.filteringOperands.push({
-        fieldName: 'ContactTitle',
-        condition: IgxStringFilteringOperand.instance().condition('doesNotContain'),
-        searchVal: 'b',
-        ignoreCase: true
+    tree.filteringOperands.push({
+        fieldName: 'OrderDate',
+        condition: IgxDateFilteringOperand.instance().condition('before'),
+        conditionName: 'before',
+        searchVal: new Date('2024-01-01T00:00:00.000Z')
     });
-    subTree.filteringOperands.push({
-        fieldName: 'CompanyName',
-        condition: IgxStringFilteringOperand.instance().condition('startsWith'),
-        searchVal: 'c',
-        ignoreCase: true
+    tree.filteringOperands.push({
+        fieldName: 'ShippedDate',
+        condition: IgxDateFilteringOperand.instance().condition('null'),
+        conditionName: 'null'
     });
-    tree.filteringOperands.push(subTree);
-    
+
     this.queryBuilder.expressionTree = tree;
 }
 ```
 
-`expressionTree` は、双方向のバインド可能なプロパティです。これは、エンド ユーザーが条件を作成、編集、または削除して UI を変更したときに発行される、対応する `expressionTreeChange` 出力が実装されていることを意味します。通知を受信して変更に反応するために個別にサブスクライブすることもできます。
+`expressionTree` は、双方向のバインド可能なプロパティです。これは、エンド ユーザーが条件を作成、編集、または削除して UI を変更したときに発行される、対応する `expressionTreeChange` 出力が実装されていることを意味します。通知を受信して変更に対応するために個別にサブスクライブすることもできます。
 
 ```html
 <igx-query-builder #queryBuilder
-    [fields]="fields"
+    [entities]="entities"
     [(expressionTree)]="expressionTree"
     (expressionTreeChange)="onExpressionTreeChange()">
 </igx-query-builder>
 ```
+
+## 式のドラッグ
+
+条件チップは、マウスの[**ドラッグ アンド ドロップ**](drag-drop.md)または[**キーボードによる並べ替え**](#キーボード操作)アプローチを使用して簡単に再配置できます。これらを使用すると、ユーザーはクエリ ロジックを動的に調整できます。
+- チップをドラッグしても、その状態や内容は変更されず、位置のみが変更されます。
+- チップはグループやサブグループにドラッグすることもできます。たとえば、式のグループ化/グループ解除は、式のドラッグ機能によって実行されます。
+既存の条件をグループ化するには、まず「追加」グループ ボタンを使用して新しいグループを追加する必要があります。次に、ドラッグすることで、必要な式をそのグループに移動できます。グループを解除するには、すべての条件を現在のグループの外にドラッグします。最後の条件を移動したら、グループは削除されます。
+
+>[!NOTE]
+>あるクエリ ツリーのチップを別のクエリ ツリーにドラッグすることはできません (例: 親から内部へ、またはその逆)。
+
+<img class="responsive-img"  src="../images/general/query-builder-drag-and-drop.gif" />
+
+## キーボード操作
+
+**キーの組み合わせ**
+ - <kbd>Tab</kbd>/<kbd>Shift + Tab</kbd> - 次の/前のチップ、ドラッグ インジケーター、削除ボタン、式の「追加」ボタンに移動します。
+ - <kbd>下矢印</kbd>/<kbd>上矢印</kbd> - チップのドラッグ インジケーターがフォーカスされている場合、チップを上下に移動できます。
+ - <kbd>Space</kbd>/<kbd>Enter</kbd> - フォーカスされた式が編集モードに入ります。チップが移動された場合、これにより新しい位置が確認されます。
+ - <kbd>Esc</kbd> - チップの並べ替えがキャンセルされ、元の位置に戻ります。
+
+>[!NOTE]
+>キーボードの並べ替えは、マウスのドラッグ アンド ドロップと同じ機能を提供します。チップを移動したら、ユーザーは新しい位置を確認するか、並べ替えをキャンセルする必要があります。
+
+<img class="responsive-img"  src="../images/general/query-builder-keyboard-drag-and-drop.gif" />
+
+## テンプレート化
+
+Ignite UI for Angular Query Builder コンポーネントでは、次の定義済み参照名を使用して、コンポーネントのヘッダーと検索値のテンプレートを定義できます。
+
+### ヘッダー テンプレート
+
+デフォルトでは、[`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) ヘッダーは表示されません。これを定義するには、[`IgxQueryBuilderHeaderComponent`]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html) を `igx-query-builder` 内に追加する必要があります。
+
+次に、ヘッダー タイトルを設定するために [`title`]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html#title) 入力を使用し、`igx-query-builder-header` 内にコンテンツを渡すことで、クエリ ビルダー ヘッダーをテンプレート化できます。 
+
+以下のコードはこれを実行する方法を示します。
+
+```html
+<igx-query-builder #queryBuilder [entities]="this.entities">
+        <igx-query-builder-header [title]="'Query Builder Template Sample'">  
+        </igx-query-builder-header>
+</igx-query-builder>
+```
+
+### 検索値
+
+条件の検索値は、[`igxQueryBuilderSearchValue`]({environment:angularApiUrl}/classes/igxquerybuildersearchvaluetemplatedirective.html) ディレクティブを使用してテンプレート化でき、`igx-query-builder` 本体内の `<ng-template>` に適用されます。
+
+```html
+<igx-query-builder #queryBuilder
+    [entities]="entities"
+    [expressionTree]="expressionTree">
+    <ng-template #searchValueTemplate
+                igxQueryBuilderSearchValue 
+                let-searchValue
+                let-selectedField = "selectedField" 
+                let-selectedCondition = "selectedCondition"
+                let-defaultSearchValueTemplate = "defaultSearchValueTemplate">
+        @if (
+            selectedField?.field === 'Region' &&
+            (selectedCondition === 'equals' || selectedCondition === 'doesNotEqual')
+            ){
+            <igx-select [placeholder]="'Select region'" [(ngModel)]="searchValue.value">
+                <igx-select-item *ngFor="let reg of regionOptions" [value]="reg">
+                    {{ reg.text }}
+                </igx-select-item>
+            </igx-select>
+        } 
+        @else if (
+            selectedField?.field === 'OrderStatus' &&
+            (selectedCondition === 'equals' || selectedCondition === 'doesNotEqual')
+            ){
+            <igx-radio-group>
+                <igx-radio class="radio-sample"
+                           *ngFor="let stat of statusOptions"
+                           value="{{stat.value}}"
+                           [(ngModel)]="searchValue.value">
+                    {{stat.text}}
+                </igx-radio>
+            </igx-radio-group>
+        }
+            @else {  
+            <ng-container #defaultTemplate *ngTemplateOutlet="defaultSearchValueTemplate"></ng-container>
+        }
+    </ng-template>
+</igx-query-builder>
+```
+
+## フォーマッター
+
+条件が編集モードではないときに表示されるチップ内の検索値の外観を変更するには、フィールド配列にフォーマッター関数を設定できます。検索値と選択された条件には、次のように value 引数と rowData 引数を通じてアクセスできます。
+
+```ts
+this.ordersFields = [
+    { field: "CompanyID", dataType: "string" },
+    { field: "OrderID", dataType: "number" },
+    { field: "EmployeeId", dataType: "number" },
+    { field: "OrderDate", dataType: "date" },
+    { field: "RequiredDate", dataType: "date" },
+    { field: "ShippedDate", dataType: "date" },
+    { field: "ShipVia", dataType: "number" },
+    { field: "Freight", dataType: "number" },
+    { field: "ShipName", dataType: "string" },
+    { field: "ShipCity", dataType: "string" },
+    { field: "ShipPostalCode", dataType: "string" },
+    { field: "ShipCountry", dataType: "string" },
+    { field: "Region", dataType: "string", formatter: (value: any, rowData: any) => rowData === 'equals' || rowData === 'doesNotEqual' ? `${value.value}` : value }},
+    { field: "OrderStatus", dataType: "number" }
+];
+```
+
+## デモ
+
+この Angular Query Builder の例は、Angular Query Builder コンポーネントのヘッダーと検索値のテンプレート化とフォーマッター機能を紹介するために作成しました。
+
+<code-view style="height:700px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-template-sample" alt="Angular Query Builder テンプレートの例">
+</code-view>
 
 ## スタイル設定
 
@@ -147,13 +276,15 @@ ngAfterViewInit(): void {
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 クエリ ビルダーは、`background` パラメーターを使用して、そのテーマから背景色を取得します。背景を変更するには、カスタム テーマを作成する必要があります。
 
 ```scss
+
 $custom-query-builder: query-builder-theme(
-    $background: #FFCD0F
+  $background: #292826,
+  ...
 );
 ```
 
@@ -161,273 +292,52 @@ Query Builder 内には、ボタン、チップ、ドロップダウン、入力
 
 ```scss
 $custom-button: button-theme(
-    $disabled-color: gray,
-    ...
-);
-
-$custom-button-group: button-group-theme(
-    $item-background:  #292826,
-    ...
+  $schema: $dark-material-schema,
+  $background: #292826,
+  $foreground: #ffcd0f,
+  ...
 );
 
 $custom-input-group: input-group-theme(
-    $box-background: #4a4a4a,
-    ...
+  $focused-secondary-color: #ffcd0f
 );
 
 $custom-chip: chip-theme(
-    $background: #FFCD0F,
-    ...
+  $background: #ffcd0f,
+  $text-color: #292826
 );
 
-$custom-drop-down: drop-down-theme(
-    $background-color: #292826,
-    ...
+$custom-icon-button: icon-button-theme(
+  $background: #ffcd0f,
+  $foreground: #292826
 );
 ```
 
-この例では、リストされたコンポーネントのパラメーターの一部のみを変更しましたが、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme)、[`button-group-theme`]({environment:sassApiUrl}/index.html#function-button-group-theme)、[`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme)、[`drop-down-theme`]({environment:sassApiUrl}/index.html#function-drop-down-theme)、[`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme) テーマは、それぞれのスタイルを制御するためのより多くのパラメーターを提供します。
-
-最後のステップは、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。また、高度なフィルタリング ダイアログ内の他の要素のスタイルを追加します。
-
-```scss
-@include query-builder($custom-query-builder);
-igx-query-builder {
-    @include button($custom-button);
-    @include button-group($custom-button-group);
-    @include input-group($custom-input-group);
-    @include chip($custom-chip);
-    @include drop-down($custom-drop-down);
-    .igx-filter-empty__title {
-        color: #FFCD0F
-    }
-    .igx-query-builder__header {
-        color: #FFCD0F
-    }
-    .igx-filter-tree__expression-actions igx-icon {
-        color: #FFCD0F
-    }
-    .igx-filter-tree__expression-actions igx-icon:hover {
-        color: #ffe482
-    }
-    .igx-filter-tree__expression-actions igx-icon:focus {
-        color: #ffe482
-    }
-    .igx-filter-contextual-menu {
-        border: 1px solid #FFCD0F
-    }
-    .igx-filter-contextual-menu__close-btn {
-        position: absolute !important;
-        background: #292826 !important;
-        border-color: #FFCD0F !important;
-    }
-    .igx-input-group__input::placeholder {
-        color: gray;
-    }
-}
-```
+この例では、リストされたコンポーネントのパラメーターの一部のみを変更しましたが、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme)、[`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme)、[`drop-down-theme`]({environment:sassApiUrl}/index.html#function-drop-down-theme)、[`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme) テーマは、それぞれのスタイルを制御するためのより多くのパラメーターを提供します。
 
 >[!NOTE]
->ほとんどのコンポーネントのミックスインの範囲を `igx-query-builder` 内に設定して、これらのカスタム テーマがクエリ ビルダーの中にネストされたコンポーネントにのみ影響するようにします。そうでない場合、アプリケーション内の他のボタン、チップ、入力、ドロップダウンも影響を受けます。
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](./themes/sass/palettes.md)のトピックをご覧ください。
 
->[!NOTE]
->コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化に`解除する`必要があります。
+最後に、`css-vars` ミックスインを使用して新しいコンポーネント テーマを**含めます**。
 
 ```scss
+@include css-vars($custom-query-builder);
+
 :host {
-    ::ng-deep {
-        @include drop-down($custom-drop-down);
-        @include query-builder($custom-query-builder);
-        igx-query-builder {
-            @include button($custom-button);
-            @include button-group($custom-button-group);
-            @include input-group($custom-input-group);
-            @include chip($custom-chip);
-            .igx-input-group__input::placeholder {
-                color: gray;
-            }
-            .igx-filter-empty__title {
-                color: #FFCD0F
-            }
-            .igx-query-builder__header {
-                color: #FFCD0F
-            }
-            .igx-filter-tree__expression-actions igx-icon {
-                color: #FFCD0F
-            }
-            .igx-filter-tree__expression-actions igx-icon:hover {
-                color: #ffe482
-            }
-            .igx-filter-tree__expression-actions igx-icon:focus {
-                color: #ffe482
-            }
-            .igx-filter-contextual-menu {
-                border: 1px solid #FFCD0F
-            }
-            .igx-filter-contextual-menu__close-btn {
-                position: absolute !important;
-                background: #292826 !important;
-                border-color: #FFCD0F !important;
-            }
-        }
+  ::ng-deep {
+    @include css-vars($custom-input-group);
+    @include css-vars($custom-chip);
+    @include css-vars($custom-icon-button);
+
+    .igx-filter-tree__buttons {
+      @include css-vars($custom-button);
     }
+  }
 }
 ```
 
-### カラーパレットの定義
-
-上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
-
-`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
-
-```scss
-$yellow-color: #FFCD0F;
-$black-color: #292826;
-$dark-palette: palette($primary: $yellow-color, $secondary: $black-color);
-```
-また [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。 
-
-```scss
-$custom-query-builder: query-builder-theme(
-    $background: color($dark-palette, "secondary", 400)
-);
-
-$custom-button: button-theme(
-    $disabled-color: color($dark-palette, "secondary", 100),
-    ...
-);
-
-$custom-button-group: button-group-theme(
-    $item-background: color($dark-palette, "secondary", 400),
-    ...
-);
-
-$custom-input-group: input-group-theme(
-    $box-background: color($dark-palette, "secondary", 200),
-    ...
-);
-
-$custom-chip: chip-theme(
-    $background: color($dark-palette, "primary", 400),
-    ...
-);
-
-$custom-drop-down: drop-down-theme(
-    $background-color: color($dark-palette, "secondary", 400),
-    ...
-);
-```
-
->[!NOTE]
->`igx-color` および `igx-palette` は、色を生成および取得するための重要な機能です。使い方の詳細については[`パレット`](themes/sass/palettes.md)のトピックを参照してください。
-
-### スキーマの使用
-
-テーマ エンジンを使用して [**スキーマ**](themes/sass/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
-
-すべてのコンポーネント (この場合は [`light-query-builder`]({environment:sassApiUrl}/index.html#variable-_light-query-builder)、[`light-button`]({environment:sassApiUrl}/index.html#variable-_light-button)、[`light-button-group`]({environment:sassApiUrl}/index.html#variable-_light-button-group)、[`light-chip`]({environment:sassApiUrl}/index.html#variable-_light-chip)、[`light-input-group`]({environment:sassApiUrl}/index.html#variable-_light-input-group) および [`light-drop-down`]({environment:sassApiUrl}/index.html#variable-_light-drop-down)) に提供されている 2 つの定義済みスキーマのいずれかを拡張します。
-
-```scss
-$query-builder-dark-palette: palette($primary: #11bd7b, $secondary: #e32057, $info: $black-color);
-
-$custom-query-builder-schema: extend($_light-query-builder,
-    (
-        background:(
-           color: ("info")
-        )
-    )
-);
-
-$custom-button-schema: extend($_light-button,
-    (
-        disabled-color:(
-           color: ("secondary", 100)
-        ),
-        ...
-    )
-);
-
-$custom-button-group-schema: extend($_light-button-group,
-    (
-        item-background:(
-           color: ("secondary", 400)
-        ),
-        ...
-    )
-);
-
-$custom-input-group-schema: extend($_light-input-group,
-    (
-        box-background:(
-           color: ("secondary", 200)
-        ),
-        ...
-    )
-);
-
-$custom-chip-schema: extend($_light-chip,
-    (
-        background:(
-           color: ("primary", 400)
-        ),
-        ...
-    )
-);
-
-$custom-drop-down-schema: extend($_light-drop-down,
-    (
-        background-color:(
-           color: ("secondary", 400)
-        ),
-        ...
-    )
-);
-```
-
-カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張する**必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加するものです。
-
-```scss
-$custom-light-schema: extend($light-schema,(
-    igx-query-builder: $custom-query-builder-schema,
-    igx-button: $custom-button-schema,
-    igx-button-group: $custom-button-group-schema,
-    igx-input-group: $custom-input-group-schema,
-    igx-chip: $custom-chip-schema,
-    igx-drop-down: $custom-drop-down-schema
-));
-
-$custom-query-builder: query-builder-theme(
-    $palette: $query-builder-dark-palette,
-    $schema: $custom-light-schema
-);
-
-$custom-button: button-theme(
-    $palette: $dark-palette,
-    $schema: $custom-light-schema
-);
-
-$custom-button-group: button-group-theme(
-    $palette: $dark-palette,
-    $schema: $custom-light-schema
-);
-
-$custom-input-group: input-group-theme(
-    $palette: $dark-palette,
-    $schema: $custom-light-schema
-);
-
-$custom-chip: chip-theme(
-    $palette: $dark-palette,
-    $schema: $custom-light-schema
-);
-
-$custom-drop-down: drop-down-theme(
-    $palette: $dark-palette,
-    $schema: $custom-light-schema
-);
-```
-
-上記と同じ方法でテーマを含める必要があることに注意してください。
+> [!NOTE]
+> コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、クエリ ビルダー コンポーネント内のコンポーネント (ボタン、チップ、ドロップダウンなど) のスタイルを設定するには、`::ng-deep` を使用してこのカプセル化を`解除する`必要があります。
 
 ### デモ
 
@@ -437,16 +347,20 @@ $custom-drop-down: drop-down-theme(
            iframe-src="{environment:demosBaseUrl}/interactions/query-builder-style" >
 </code-view>
 
->[!NOTE]
->サンプルは、`テーマの変更`で選択したグローバル テーマの影響を受けません。
+> [!NOTE]
+> サンプルは、`Change Theme` (テーマの変更) で選択したグローバル テーマの影響を受けません。
+
 <div class="divider--half"></div>
 
 [WYSIWYG App Builder™](https://jp.infragistics.com/products/appbuilder) と実際の UI コンポーネントを使用して、Angular アプリ開発を効率化することもできます。
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
 * [IgxQueryBuilderComponent API]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html)
+* [IgxQueryBuilderHeaderComponent]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html)
+* [IgxQueryBuilderSearchValueTemplateDirective]({environment:angularApiUrl}/classes/igxquerybuildersearchvaluetemplatedirective.html)
 * [IgxQueryBuilderComponent スタイル]({environment:sassApiUrl}/index.html#function-query-builder-theme)
 
 ## その他のリソース

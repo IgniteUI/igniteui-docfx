@@ -304,7 +304,7 @@ igxGrid を使用して [CRUD 操作を構築する方法](../general/how-to/how
 
 ## スタイル設定
 
-igxHierarchicalGrid を使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md) でスタイルを設定できます。[テーマ]({environment:sassApiUrl}/index.html#function-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
+igxHierarchicalGrid を使用すると、[`Ignite UI for Angular テーマ ライブラリ`](../themes/sass/component-themes.md) でスタイルを設定できます。[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
 
 以下の手順では、igxHierarchicalGrid スタイルをカスタマイズする手順を実行しています。     
 
@@ -312,7 +312,10 @@ igxHierarchicalGrid を使用すると、[Ignite UI for Angular テーマ ライ
 階層グリッドのカスタマイズは、すべてのスタイリング機能とミックスインが配置されている `index` ファイルをインポートする必要があります。 
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index'
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
 ### カスタム テーマの定義
@@ -320,7 +323,6 @@ igxHierarchicalGrid を使用すると、[Ignite UI for Angular テーマ ライ
 
  >[!NOTE]
  >特定の `sass` 階層グリッド機能はありません。
-
 
 ```scss
 $custom-theme: grid-theme(
@@ -337,89 +339,20 @@ $custom-theme: grid-theme(
 );
 ```
 
-### カスタム カラー パレットの定義
-上記で説明したアプローチでは、色の値がハード コーディングされていました。または、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して、柔軟性を高めることができます。   
-`Igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。 
-
- ```scss
-$black-color: #494949;
-$yellow-color: #FFCD0F;
-
-$custom-palette: palette(
-  $primary: $black-color,
-  $secondary: $yellow-color
-);
-```
-カスタム パレットが生成された後、`igx-color` 関数を使用して、さまざまな種類の原色と二次色を取得できます。
-```scss
-$custom-theme: grid-theme(
-    $cell-active-border-color: (igx-color($custom-palette, "secondary", 500)),
-    $cell-selected-background: (igx-color($custom-palette, "primary", 300)),
-    $row-hover-background: (igx-color($custom-palette, "secondary", 100)),
-    $row-selected-background: (igx-color($custom-palette, "primary", 100)),
-    $header-background: (igx-color($custom-palette, "primary", 500)),
-    $header-text-color: (igx-contrast-color($custom-palette, "primary", 500)),
-    $expand-icon-color: (igx-color($custom-palette, "secondary", 500)),
-    $expand-icon-hover-color: (igx-color($custom-palette, "secondary", 600)),
-    $resize-line-color: (igx-color($custom-palette, "secondary", 500)),
-    $row-highlight: (igx-color($custom-palette, "secondary", 500))
-);
-```
-
-### カスタム スキーマの定義
-さらに進んで、[**スキーマ**](../themes/sass/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。   
-すべてのコンポーネントに提供される 2 つの事前定義されたスキーマの 1 つを拡張します。この場合、`$_light_grid` を使用します。
-```scss
-$custom-grid-schema: extend($_light-grid,(
-    cell-active-border-color: (igx-color:('secondary', 500)),
-    cell-selected-background: (igx-color:('primary', 300)),
-    row-hover-background: (igx-color:('secondary', 100)),
-    row-selected-background: (igx-color:('primary', 100)),
-    header-background: (igx-color:('primary', 500)),
-    header-text-color: (igx-contrast-color:('primary', 500)),
-    expand-icon-color: (igx-color:('secondary', 500)),
-    expand-icon-hover-color: (igx-color:('secondary', 600)),
-    resize-line-color: (igx-color:('secondary', 500)),
-    row-highlight: (igx-color:('secondary', 500))
-));
-```
-カスタム スキーマを適用するには、`light` グローバルまたは `dark` グローバルを拡張する必要があります。プロセス全体が実際にコンポーネントにカスタム スキーマを提供し、その後、それぞれのコンポーネントテーマに追加します。   
-```scss
-$my-custom-schema: extend($light-schema, (
-    igx-grid: $custom-grid-schema
-));
-
-$custom-theme: grid-theme(
-    $palette: $custom-palette,
-    $schema: $my-custom-schema
-);
-```
+>[!NOTE]
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックをご覧ください。
 
 ### カスタム テーマの適用
 テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。
 
 ```scss
-@include grid($custom-theme);
+@include css-vars($custom-theme);
 ```
 
 ### スコープ コンポーネント テーマ
 
 カスタム テーマが特定のコンポーネントのみに影響するように、定義したすべてのスタイルをグローバル スタイル ファイルからカスタム コンポーネントのスタイルファイルに移動できます (`index` ファイルのインポートを含む)。
-
 このように、Angular の [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation) により、スタイルはカスタム コンポーネントにのみ適用されます。
-
- >[!NOTE]
- >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、グリッドのスタイル設定は `::ng-deep` を使用してこのカプセル化を解除する必要があります。
- >[!NOTE]
- >ステートメントがコンポーネントの外にある要素に影響を与えないよう、ステートメントを `:host` セレクター内にラップします。
-
-```scss
-:host {
-    ::ng-deep {
-        @include grid($custom-theme);
-    }
-}
-```
 
 ### デモ
 
@@ -430,7 +363,7 @@ $custom-theme: grid-theme(
 </code-view>
 
 >[!NOTE]
->このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
+>このサンプルは、`Change Theme` (テーマの変更) から選択したグローバル テーマに影響を受けません。
 
 ## パフォーマンス (試験中)
 

@@ -124,7 +124,7 @@ $theme-colors: (
 );
 ```
 
-Ignite UI for Angular の [`palette`]({environment:sassApiUrl}/index.html#function-palette) 関数は、`primary`、`secondary`、`gray`、`info`、`success`、`warn`、`error` の各カラーとそのカラー バリアントを含むカラー パレット マップを生成します。定義済みの bootstrap パレットは 7 カラーで構成されます。
+Ignite UI for Angular の [`palette`]({environment:sassApiUrl}/index.html#function-palette) 関数は、`primary`、`secondary`、`gray`、`info`、`success`、`warn`、`error` の各カラーとそのカラー バリエーションを含むカラー パレット マップを生成します。定義済みの bootstrap パレットは 7 カラーで構成されます。
 
 ```scss
 $bootstrap-palette: palette(
@@ -229,7 +229,7 @@ $custom-dark: color($light-bootstrap-palette, "gray", 800);
 
 #### Dark モード
 
-Dark バリアントには、新しく作成した `$custom-dark-palette` を使用します。`dark` クラス スタイルに追加し、`$theme-colors` マップを新しい値で変更する必要があります。 
+Dark バリエーションには、新しく作成した `$custom-dark-palette` を使用します。`dark` クラス スタイルに追加し、`$theme-colors` マップを新しい値で変更する必要があります。 
 
 Ignite UI for Angular のすべてのコンポーネントは渡されたパレット カラーを使用するため、追加の調整なしで dark モードにうまくフィットします。ただし、ng-bootstrap コンポーネントのスタイル設定を変更する必要があります。
 
@@ -332,7 +332,7 @@ Bootstrap `navbar` は背景色に CSS クラスを使用します。サンプ�
 }
 ```
 
-次に、「bg-パレットのカラー-カラー バリアント」パターンに従って CSS クラスを navbar コンポーネントに追加します。サンプル アプリでは `bg-gray-200` を使用しています。
+次に、「bg-パレットのカラー-カラー バリエーション」パターンに従って CSS クラスを navbar コンポーネントに追加します。サンプル アプリでは `bg-gray-200` を使用しています。
 
 ### タイポグラフィ
 

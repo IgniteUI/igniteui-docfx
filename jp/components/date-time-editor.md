@@ -7,7 +7,6 @@ _language: ja
 
 # Angular Date Time Editor (日付/時刻エディター) ディレクティブ
 <p class="highlight">Ignite UI for Angular Date Time Editor ディレクティブでは、選択された入力要素で日付と時刻を設定および編集できます。ユーザーは、編集可能なマスク入力によって日付または時間部分を編集できます。さらに、検証に最小値と最大値だけでなく、希望の表示形式および入力形式の設定を指定できます。</p>
-<div class="divider"></div>
 
 ## Angular Date Time Editor の例
 
@@ -109,7 +108,7 @@ public date = new Date();
 ##### 完全な ISO 文字列
 完全な `ISO` 文字列がバインドされている場合、ディレクティブは [`Date.parse`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse#date_time_string_format) に必要なすべての要素が指定されている場合にのみそれを解析します。
 
-`InvalidDate` を含むすべての falsy 値は `null` として解析されます。不完全な日付のみ、時刻のみ、または完全な `ISO` 文字列は `InvalidDate` として解析されます。
+`InvalidDate` を含むすべての false 値は `null` として解析されます。不完全な日付のみ、時刻のみ、または完全な `ISO` 文字列は `InvalidDate` として解析されます。
 
 ### キーボード ナビゲーション
 Date Time Editor ディレクティブには直感的なキーボード ナビゲーション機能があり、マウス操作なしでさまざまな DatePart を移動、インクリメント、デクリメントなどができます。

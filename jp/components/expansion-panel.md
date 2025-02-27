@@ -12,8 +12,6 @@ Ignite UI for Angular は、最も便利で使いやすいレイアウト コン
 Ignite UI Expansion Panel [igx-expansion-panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) は、軽量な Angular アコーディオン コンポーネントで、縮小または展開のどちらかの状態でレンダリングできます。Angular の Expansion Panel は、マウス クリックまたはキーボード操作によって切り替えることができます。複数の Angular 展開パネルを組み合わせて Angular アコーディオンにすることもできます。
 </p>
 
-<div class="divider--half"></div>
-
 ## Angular Expansion Panel の例
 
 Ignite UI Angular を使用して、この単純な Angular Expansion Panel の例を作成しました。以下にサンプルの動作を確認できます。
@@ -216,15 +214,6 @@ Angular Expansion Panel は、パネルの縮小時に「更に表示」を描�
 
 ## スタイル設定  
 
-### Angular Expansion Panel のデモ
-
-<code-view style="height: 440px;" 
-           no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-styling" >
-</code-view>
-
-
 ### パレットおよび色
 はじめに、後でコンポーネントに渡すカスタム パレットを作成します。
 ```scss
@@ -239,63 +228,66 @@ Angular Expansion Panel は、パネルの縮小時に「更に表示」を描�
 // Add your brand colors.
 $my-primary-color:#353a4b;
 $my-secondary-color: #ffd351;
+$my-surface-color: #efefef;
 
 // Create custom palette.
 $my-color-palette: palette(
-    $primary: $my-primary-color,
-    $secondary: $my-secondary-color
+  $primary: $my-primary-color,
+  $secondary: $my-secondary-color,
+  $surface: $my-surface-color
 );
 ```
 
 ### コンポーネント テーマの作成
+
 コンポーネント テーマを作成し、上記のスニペットから `$my-color-palette` パレットを渡します。
 ```scss
 // In expansion-styling.component.scss
 // Create expansion panel theme.
 $custom-panel-theme: expansion-panel-theme(
-    // pass `$my-color-palette` palette.
-    $palette: $my-color-palette,
-
-    // Styling parameters.
-    $header-background: color($my-color-palette, "primary", 700),
-    $header-focus-background: color($my-color-palette, "primary", 700),
-    $header-title-color: color($my-color-palette, "secondary"),
-    $header-icon-color: color($my-color-palette, "secondary"),
-    $body-background: color($my-color-palette, "primary", 700),
-    $body-color: color($my-color-palette, "secondary" 100),
-    $border-radius: .5
+  // Styling parameters.
+  $header-background: color($my-color-palette, "primary", 700),
+  $header-focus-background: color($my-color-palette, "primary", 700),
+  $header-title-color: color($my-color-palette, "secondary"),
+  $header-icon-color: color($my-color-palette, "secondary"),
+  $body-background: color($my-color-palette, "primary", 700),
+  $body-color: color($my-color-palette, "secondary", 100),
+  $border-radius: .5
 );
 ```
+
+パレットを作成する代わりに、引数としてカラーを直接 expansion-panel-theme 関数に割り当てることもできます。
+
+```scss
+$custom-panel-theme: expansion-panel-theme(
+  $header-background: #353a4b,
+  $header-focus-background: #353a4b,
+  $header-title-color: #ffd351,
+  $header-icon-color: #ffd351,
+  ...
+);
+```
+
 >[!NOTE]
-> [`テーマ`](themes/sass/component-themes.md) エンジンを介したスタイル設定に使用可能なすべてのパラメーターを確認するには、[`API ヘルプ`]({environment:sassApiUrl}/index.html#function-expansion-panel-theme)を参照してください。
+>[`テーマ`](themes/sass/component-themes.md) エンジンを介したスタイル設定に使用可能なすべてのパラメーターを確認するには、[`API ヘルプ`]({environment:sassApiUrl}/index.html#function-expansion-panel-theme)を参照してください。
 
 ### コンポーネント テーマの適用
 コンポーネント テーマを適用するには、`css-vars` ミックスインをインクルードし、`$custom-panel-theme` マップを渡します。
-```scss
-// In expansion-styling.component.scss
-// Pass our custom-panel-theme to `igx-expansion-panel` mixin.
-// The `:host` here makes sure that all the theming will affect only this component.
-:host {
-  @include css-vars($custom-panel-theme);
-}
-```
-
- >[!NOTE]
- > Internet Explorer 11 をサポートする場合は、`css-vars` の代わりにコンポーネント ミックスインの `igx-expansion-panel` を使用する必要があります。コンポーネントの ViewEncapsulation が [`Emulated`](themes/sass/component-themes.md#表示のカプセル化)であるため、`::ng-deep` を使用してカプセル化を解除する必要があります。
- > カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含める必要があります。
 
 ```scss
 // In expansion-styling.component.scss
-// The `:host` here makes sure that all the theming will affect only this component after the ViewEncapsulation Penetration.
-:host {
-    // Penetrate the ViewEncapsulation.
-    ::ng-deep {
-        @include expansion-panel($custom-panel-theme);
-    }
-}
+@include css-vars($custom-panel-theme);
 ```
 
-Ignite UI テーマ エンジンの使用方法の詳細については、[`こちらをクリックしてください`](themes/sass/component-themes.md)
+Ignite UI テーマ エンジンの使用方法の詳細については、[`こちらをクリックしてください`](themes/sass/component-themes.md)。
+
+### デモ
+
+<code-view style="height: 440px;" 
+           no-theming
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-styling" >
+</code-view>
 
 ## Angular Expansion Panel のアニメーション
 ### 特定のアニメーションの使用

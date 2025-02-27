@@ -54,8 +54,11 @@ igxGridState ディレクティブによって開発者がグリッドの状態�
 * `行のピン固定`
 * `展開`
 * `グループ化`
-* `複数の列`
-    * **新規**: 複数列ヘッダーが標準でサポートされるようになりました。
+* `列`
+    * 複数列ヘッダー
+    @@if (igxName === 'IgxGrid') {
+    * 複数行レイアウト
+    }
     * 列の順序
     * [`IColumnState`]({environment:angularApiUrl}/interfaces/icolumnstate.html) インターフェイスによって定義される列プロパティ。
     * 列テンプレートおよび関数はアプリケーション レベルのコードを使用して復元されます。[列の復元](state-persistence.md#列の復元)セクションを参照してください。
@@ -73,8 +76,8 @@ igxGridState ディレクティブによって開発者がグリッドの状態�
 * `列の選択`
 * `行のピン固定`
 * `展開`
-* `複数の列`
-    * **新規**: 複数列ヘッダーが標準でサポートされるようになりました。
+* `列`
+    * 複数列ヘッダー
     * 列の順序
     * [`IColumnState`]({environment:angularApiUrl}/interfaces/icolumnstate.html) インターフェイスによって定義される列プロパティ。
     * 列テンプレートおよび関数はアプリケーション レベルのコードを使用して復元されます。[列の復元](state-persistence.md#列の復元)セクションを参照してください。
@@ -177,7 +180,9 @@ public restoreGridState() {
 @@if (igxName !== 'IgxPivotGrid') {
 ## 列の復元
 
-[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) はデフォルトで列テンプレート、列フォーマッタなどを保持しません ([`制限`](state-persistence.md#制限)を参照)。これらの復元は、アプリケーション レベルのコードで実現できます。テンプレート化された列でこれを行う方法を示します。
+可能であれば、State ディレクティブは、新しい列インスタンスを作成するのではなく、状態を復元するときにグリッド上に既に存在する列を再利用します。新しいインスタンスが作成される唯一のシナリオは、列 (​​または列グループの場合はその子) に `field` プロパティがなく、一致する列を一意に識別して再利用する方法がない場合です。
+
+このようなシナリオでは、以下の[`制限`](state-persistence.md#制限)が課せられます。これらの復元は、アプリケーション レベルのコードで実現できます。テンプレート化された列でこれを行う方法を示します。
 
 1. テンプレート参照変数 (以下の例では `#activeTemplate`) を定義し、[`columnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnInit) イベントにイベント ハンドラーを割り当てます。
 @@if (igxName === 'IgxGrid') {

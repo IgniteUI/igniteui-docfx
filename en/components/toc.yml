@@ -706,15 +706,24 @@
     - name: Chart Annotations
       href: charts/features/chart-annotations.md
       new: false
+    - name: Charting in Dashboards
+      href: dashboard-tile.md
+      new: true
     - name: Chart Data Aggregations
       href: charts/features/chart-data-aggregations.md
       new: false
+    - name: Chart Data Filtering
+      href: charts/features/chart-data-filtering.md
+      new: true
     - name: Chart Data Legend
       href: charts/features/chart-data-legend.md
       new: false
     - name: Chart Data Tooltip
       href: charts/features/chart-data-tooltip.md
       new: false
+    - name: Chart Data Selection
+      href: charts/features/chart-data-selection.md
+      new: true
     - name: Chart Highlight Filter
       href: charts/features/chart-highlight-filter.md
       new: false
@@ -978,6 +987,7 @@
 - name: Query Builder
   href: query-builder.md
   new: false
+  updated: true
 - name: Radio & Radio Group
   href: radio-button.md
   new: false
