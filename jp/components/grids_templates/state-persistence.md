@@ -42,7 +42,7 @@ igxGridState ディレクティブによって開発者がグリッドの状態�
 ## サポートされている機能
 [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) ディレクティブは、以下の機能の状態の保存および復元をサポートします。
 
-@@if (igxName !== 'IgxHierarchicalGrid' && igxName !== 'IgxPivotGrid') {
+@@if (igxName === 'IgxGrid') {
 
 * `ソート`
 * `フィルタリング`
@@ -59,6 +59,24 @@ igxGridState ディレクティブによって開発者がグリッドの状態�
     @@if (igxName === 'IgxGrid') {
     * 複数行レイアウト
     }
+    * 列の順序
+    * [`IColumnState`]({environment:angularApiUrl}/interfaces/icolumnstate.html) インターフェイスによって定義される列プロパティ。
+    * 列テンプレートおよび関数はアプリケーション レベルのコードを使用して復元されます。[列の復元](state-persistence.md#列の復元)セクションを参照してください。
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+
+* `ソート`
+* `フィルタリング`
+* `高度なフィルタリング`
+* `ページング`
+* `セルの選択`
+* `行の選択`
+* `列の選択`
+* `行のピン固定`
+* `展開`
+* `複数の列`
+    * **新規**: 複数列ヘッダーが標準でサポートされるようになりました。
     * 列の順序
     * [`IColumnState`]({environment:angularApiUrl}/interfaces/icolumnstate.html) インターフェイスによって定義される列プロパティ。
     * 列テンプレートおよび関数はアプリケーション レベルのコードを使用して復元されます。[列の復元](state-persistence.md#列の復元)セクションを参照してください。
