@@ -45,7 +45,7 @@ As the table above shows, the `gray` color doesn't include the `A100`, `A200`, `
 On top of the aforementioned colors, we also include **Level AA** [WCAG](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) compliant `contrast` colors for each color variant. This means that you can safely use the corresponding `contrast` color variants as foreground colors for the base color variant.
 
 > [!NOTE]
-> Contrast colors are using CSS relative colors and are runtime calculated, based on the main variables color (primary, secondary, etc.).
+> Contrast colors are CSS relative colors and are runtime calculated, based on the corresponding shade color (primary, secondary, etc.).
 
 Here's an excerpt of the `primary` variable color as declared in the Light Material Palette:
 
