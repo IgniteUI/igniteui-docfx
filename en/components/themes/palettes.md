@@ -45,7 +45,7 @@ As the table above shows, the `gray` color doesn't include the `A100`, `A200`, `
 On top of the aforementioned colors, we also include **Level AA** [WCAG](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) compliant `contrast` colors for each color variant. This means that you can safely use the corresponding `contrast` color variants as foreground colors for the base color variant.
 
 > [!NOTE]
-> Contrast colors are generated at build-time by the Sass theming engine based on the main variables color (primary, secondary, etc.).
+> Contrast colors are CSS relative colors and are runtime calculated, based on the corresponding shade color (primary, secondary, etc.).
 
 Here's an excerpt of the `primary` variable color as declared in the Light Material Palette:
 
@@ -53,25 +53,37 @@ Here's an excerpt of the `primary` variable color as declared in the Light Mater
 :root {
   //...
   --ig-primary-500: #09f;
-  --ig-primary-500-contrast: black;
+  --ig-primary-500-contrast: hsl(from color(from var(--ig-primary-500) var(--y-contrast)) h 0 l);
   --ig-primary-600: hsl(from var(--ig-primary-500) h calc(s * 1.26) calc(l * 0.89));
-  --ig-primary-600-contrast: black;
+  --ig-primary-600-contrast: hsl(from color(from var(--ig-primary-600) var(--y-contrast)) h 0 l);
   --ig-primary-700: hsl(from var(--ig-primary-500) h calc(s * 1.26) calc(l * 0.81));
   //...
   --ig-secondary-400: hsl(from var(--ig-secondary-500) h calc(s * 0.875) calc(l * 1.08));
-  --ig-secondary-400-contrast: black;
+  --ig-secondary-400-contrast: hsl(from color(from var(--ig-secondary-400) var(--y-contrast)) h 0 l);
   --ig-secondary-500: #df1b74;
-  --ig-secondary-500-contrast: white;
+  --ig-secondary-500-contrast: hsl(from color(from var(--ig-secondary-500) var(--y-contrast)) h 0 l);
   --ig-secondary-600: hsl(from var(--ig-secondary-500) h calc(s * 1.26) calc(l * 0.89));
-  --ig-secondary-600-contrast: white;
+  --ig-secondary-600-contrast: hsl(from color(from var(--ig-secondary-600) var(--y-contrast)) h 0 l);
   //...
+  --ig-wcag-a: 0.31;
+  --ig-wcag-aa: 0.185;
+  --ig-wcag-aaa: 0.178;
+  --ig-contrast-level: var(--ig-wcag-aa);
+  --y: clamp(0,(y / var(--ig-contrast-level) - 1)* -infinity, 1);
+  --y-contrast: xyz-d65 var(--y) var(--y) var(--y);
 }
 ```
 
-All primary color variants are derived from one base variable color variant `--ig-primary-500`. The same goes for the other color variables `--ig-secondary-500`, `--ig-surface-500`, etc. The other variants are generated through the relative color function `hsl()` which takes the main variable color variant `500` and changes it's `staturation` and `lightness` according to the variable variant which is assigned on (`600`,`700`, etc.). We decided to use this approach as it allows us to modify all variants of the `primary`, `secondary`, `surface` and other colors at runtime.
+All primary color variants come from a single base variable: `--ig-primary-500`. This same pattern applies to other color variables like `--ig-secondary-500` and `--ig-surface-500`. The additional variants are created using relative color CSS functions that take the main `500` variable and adjust its `saturation` and `lightness` to create other variants (600, 700, etc.). We chose this approach because it lets us modify all variants of `primary`, `secondary`, `surface`, and other colors during runtime.
 
-> [!WARNING]
-> Because the contrast colors are not generated at CSS runtime like the rest, if we change the main color variant(`500`), the contrast color would not be updated. We would need to change them manually. This behavior will be improved upon in an upcoming release, where the contrast colors will also be calculated at CSS runtime.
+ The contrast colors are CSS runtime generated, based on the the provided color's luminance and the chosen contrast-level to calculate the best contrast color for it. If we change the main color variant(`500`), the contrast colors will also be updated.
+
+ > [!NOTE]
+ > You could specify the contrast-level globally by using the `palette` mixin, or if you'd like to set it specifically in the scope of your element, you could use the `adaptive-contrast` mixin. They both accept one of the predefined values: `a`, `aa` or `aaa`.
+
+ ```scss
+  @include palette($palette, $contrast-level: 'aaa');
+ ```
 
 ## Defining Palettes
 
