@@ -74,7 +74,7 @@ Here's an excerpt of the `primary` variable color as declared in the Light Mater
 }
 ```
 
-All primary color variants are derived from one base variable color variant `--ig-primary-500`. The same goes for the other color variables `--ig-secondary-500`, `--ig-surface-500`, etc. The other variants are generated through the relative color function `hsl()` which takes the main variable color variant `500` and changes it's `saturation` and `lightness` according to the variable variant which is assigned on (`600`,`700`, etc.). We decided to use this approach as it allows us to modify all variants of the `primary`, `secondary`, `surface` and other colors at runtime.
+All primary color variants come from a single base variable: `--ig-primary-500`. This same pattern applies to other color variables like `--ig-secondary-500` and `--ig-surface-500`. The additional variants are created using relative color CSS functions that take the main `500` variable and adjust its `saturation` and `lightness` to create other variants (600, 700, etc.). We chose this approach because it lets us modify all variants of `primary`, `secondary`, `surface`, and other colors during runtime.
 
  The contrast colors are CSS runtime generated, based on the the provided color's luminance and the chosen contrast-level to calculate the best contrast color for it. If we change the main color variant(`500`), the contrast colors will also be updated.
 
