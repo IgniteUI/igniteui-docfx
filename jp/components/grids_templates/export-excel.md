@@ -196,6 +196,11 @@ public exportButtonHandler() {
 > [!NOTE]
 > Excel テーブルは複数の行ヘッダーをサポートしていないため、エクスポートされた @@igComponent はテーブルとしてフォーマットされません。
 
+@@if (igxName === 'IgxHierarchicalGrid') {
+> [!NOTE]
+> 行アイランド内の複数列ヘッダーのエクスポートされた展開状態は常に初期状態になります。
+}
+
 @@if (igxName === 'IgxGrid') {
 <code-view style="height: 800px;" 
            data-demos-base-url="{environment:demosBaseUrl}"
