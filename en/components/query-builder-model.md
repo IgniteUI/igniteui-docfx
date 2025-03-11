@@ -64,6 +64,12 @@ JSON.stringify(tree, null, 2);
 
 ## Demo
 
+<code-view style="height:700px" 
+           no-theming
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-sql-sample" >
+</code-view>
+
 ## Using Sub-Queries
 In the context of the [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) the *IN / NOT-IN* operators are used with the newly exposed subquery functionality in the *WHERE* clause.
 
