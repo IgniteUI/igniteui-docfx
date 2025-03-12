@@ -72,16 +72,16 @@ Selecting the *IN / NOT-IN* operator in a `FilteringExpression` would create a s
 
 The following expression tree:
 ```ts
-const innerTree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'Orders', ['OrderId']);
+const innerTree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'products', ['supplier_id']);
 innerTree.filteringOperands.push({
-    fieldName: 'OrderId',
+    fieldName: 'supplier_id',
     conditionName: IgxNumberFilteringOperand.instance().condition('greaterThan').name,
     searchVal: 10
 });
 
-const tree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'Products', ['Id']);
+const tree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'suppliers', ['supplier_id']);
 tree.filteringOperands.push({
-    fieldName: 'Id',
+    fieldName: 'supplier_id',
     conditionName: IgxStringFilteringOperand.instance().condition('inQuery').name,
     searchTree: innerTree
 });
@@ -96,7 +96,7 @@ This would be transferred as:
 {
   "filteringOperands": [
     {
-      "fieldName": "Id",
+      "fieldName": "supplier_id",
       "condition": {
         "name": "inQuery",
         "isUnary": false,
@@ -108,7 +108,7 @@ This would be transferred as:
       "searchTree": {
         "filteringOperands": [
           {
-            "fieldName": "OrderId",
+            "fieldName": "supplier_id",
             "condition": {
               "name": "greaterThan",
               "isUnary": false,
@@ -120,17 +120,17 @@ This would be transferred as:
           }
         ],
         "operator": 0,
-        "entity": "Orders",
+        "entity": "suppliers",
         "returnFields": [
-          "OrderId"
+          "supplier_id"
         ]
       }
     }
   ],
   "operator": 0,
-  "entity": "Products",
+  "entity": "products",
   "returnFields": [
-    "Id"
+    "supplier_id"
   ]
 }
 ```
