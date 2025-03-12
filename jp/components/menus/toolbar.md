@@ -82,12 +82,13 @@ IgrDataChartCategoryTrendLineModule.register();
 *   [`IgxToolActionLabelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionlabelcomponent.html)
 *   [`IgxToolActionNumberInputComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionnumberinputcomponent.html)
 *   [`IgxToolActionRadioComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionradiocomponent.html)
+*   [`IgxToolActionSubPanelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionsubpanelcomponent.html)
 
-これらのツールはそれぞれ、マウスのクリックによってトリガーされる `OnCommand` イベントを公開します。
+これらのツールはそれぞれ、マウスのクリックによってトリガーされる `OnCommand` イベントを公開します。注: [`IgxToolActionIconMenuComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioniconmenucomponent.html) は、[`IgxToolActionIconMenuComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioniconmenucomponent.html) 内にラップすることもできる他のツールのラッパーです。
 
 [`IgxToolActionComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html) オブジェクトの [`overlayId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#overlayId)、[`beforeId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#beforeId)、および [`afterId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#afterId) プロパティを使用して、新規および既存のツールの位置を変更したり、非表示にマークしたりすることができます。ToolActions は [`visibility`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#visibility) プロパティも公開します。
 
-次の例は、組み込みの **ZoomReset** と **AnalyzeMenu** メニュー ツール アクションの両方を非表示にする方法を示しています。**ZoomReset** ツール操作の新しいインスタンスが追加され、[`afterId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#afterId) プロパティを使用して **ZoomMenu** 内に配置され、それを **ZoomOut** に割り当てます。これにより、新しいリセット ツールが **ZoomMenu** の下部に表示されます。
+次の例は、いくつかの機能を示しています。まず、**ZoomReset** や **AnalyzeMenu** メニュー ツール操作などの組み込みツールを非表示にするなど、[`IgxToolActionSubPanelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionsubpanelcomponent.html) でツールをグループ化できます。この例では、[`afterId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#afterId) プロパティを使用して **ZoomOut** に割り当てることで、**ZoomReset** ツール操作の新しいインスタンスが追加され、**ZoomMenu** 内に配置されます。また、ツールの [`isHighlighted`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#isHighlighted) プロパティによってもハイライト表示されます。これにより、新しいリセット ツールが **ZoomMenu** の下部にすぐに表示されます。
 
 <code-view style="height: 600px" alt="Angular Toolbar の例"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -154,6 +155,12 @@ Angular ツールバーには、`Target` プロパティが含まれています
 
 ツールを手動で追加する場合、`RenderIconFromText` メソッドを使用してアイコンを割り当てることができます。このメソッドには 3 つのパラメーターを渡す必要があります。1 つ目は、ツールで定義されたアイコン コレクション名です (例: [`iconCollectionName`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#iconCollectionName))。2 つ目は、ツールで定義されたアイコンの名前 (例: [`iconName`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#iconName)) で、その後に SVG 文字列を追加します。
 
+### データ URL アイコン
+
+svg を追加するのと同様に、`RegisterIconFromDataURL` を介して URL からアイコン画像を追加することもできます。メソッドの 3 番目のパラメーターは、文字列 URL を入力するために使用されます。
+
+次のスニペットは、アイコンを追加する両方の方法を示しています。
+
 ```html
 <igx-tool-action-label
     title="Custom Icon"
@@ -174,11 +181,57 @@ public toolbarCustomIconOnViewInit(): void {
 ```ts
 public toolbarCustomIconOnViewInit(): void {
 
+  toolbar.registerIconFromDataURL("CustomCollection", "CustomIcon", "https://www.svgrepo.com/show/678/calculator.svg");
+
+}
+```
+
+```ts
+public toolbarCustomIconOnViewInit(): void {
+
   const icon = '<svg width="28px" height="28px" stroke="none" viewBox="0 0 3.5 3.5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--gis" preserveAspectRatio="xMidYMid meet"><path d="M0.436 0.178a0.073 0.073 0 0 0 -0.062 0.036L0.01 0.846a0.073 0.073 0 0 0 0.063 0.109h0.729a0.073 0.073 0 0 0 0.063 -0.109L0.501 0.214a0.073 0.073 0 0 0 -0.064 -0.036zm0.001 0.219 0.238 0.413H0.199zM1.4 0.507v0.245h0.525v-0.245zm0.77 0v0.245h1.33v-0.245zM0.073 1.388A0.073 0.073 0 0 0 0 1.461v0.583a0.073 0.073 0 0 0 0.073 0.073h0.729A0.073 0.073 0 0 0 0.875 2.045V1.461a0.073 0.073 0 0 0 -0.073 -0.073zm0.073 0.146h0.583v0.438H0.146zM1.4 1.674v0.245h0.945v-0.245zm1.19 0v0.245h0.91v-0.245zM0.438 2.447c-0.241 0 -0.438 0.197 -0.438 0.438 0 0.241 0.197 0.438 0.438 0.438s0.438 -0.197 0.438 -0.438c0 -0.241 -0.197 -0.438 -0.438 -0.438zm0 0.146a0.291 0.291 0 0 1 0.292 0.292 0.291 0.291 0 0 1 -0.292 0.292 0.291 0.291 0 0 1 -0.292 -0.292A0.291 0.291 0 0 1 0.438 2.593zM1.4 2.842v0.245h0.525v-0.245zm0.77 0v0.245h1.33v-0.245z" fill="#000000" fill-rule="evenodd"/></svg>';
 
   this.toolbar.registerIconFromText("CustomCollection", "CustomIcon", icon);
+
 }
 ```
+
+```ts
+public toolbarCustomIconOnViewInit(): void {
+
+  toolbar.registerIconFromDataURL("CustomCollection", "CustomIcon", "https://www.svgrepo.com/show/678/calculator.svg");
+  
+}
+```
+
+@code {
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        var toolbar = this.toolbar;
+
+        if (firstRender) {
+            this.ToolbarCustomIconOnViewInit();
+        }
+    }
+
+    private IgbToolbar toolbar;
+
+    public void ToolbarCustomIconOnViewInit()
+    {
+    	this.toolbar.EnsureReady().ContinueWith(new Action<Task>((e) =>
+    	{
+            this.toolbar.RegisterIconFromDataURLAsync("CustomCollection", "CustomIcon", "https://www.svgrepo.com/show/678/calculator.svg");
+    	}));
+    }
+
+}
+
+````
+
+```tsx
+<IgrToolbar orientation="Vertical" />
+````
 
 ### 垂直方向
 
@@ -188,7 +241,9 @@ public toolbarCustomIconOnViewInit(): void {
 <igx-toolbar orientation="Vertical" />
 ```
 
-次の例は、Angular ツールバーの垂直方向を示しています。 <code-view style="height: 600px" alt="Angular 垂直方向"
+次の例は、Angular ツールバーの垂直方向を示しています。
+
+<code-view style="height: 600px" alt="Angular 垂直方向"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/toolbar/layout-in-vertical-orientation"
                                                  github-src="charts/toolbar/layout-in-vertical-orientation">
