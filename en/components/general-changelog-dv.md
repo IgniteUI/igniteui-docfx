@@ -16,6 +16,35 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 
 *   [Ignite UI for Angular CHANGELOG.md at Github](https://github.com/IgniteUI/igniteui-angular/blob/master)
 
+## **19.0.1 (February 2025)}**
+
+### Enhancements
+
+#### Toolbar
+
+*   Added new `GroupHeaderTextStyle` property to [`IgxToolbarComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html) and [`IgxToolPanelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolpanelcomponent.html). If set, it will apply to all [`IgxToolActionGroupHeaderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactiongroupheadercomponent.html) actions.
+*   Added new property on [`IgxToolActionComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html) called [`titleHorizontalAlignment`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#titleHorizontalAlignment) which controls the horizontal alignment of the title text.
+*   Added new property on [`IgxToolActionSubPanelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionsubpanelcomponent.html) called `ItemSpacing` which controls the spacing between items inside the panel.
+
+### Bug Fixes
+
+The following table lists the bug fixes made for the Ignite UI for Angular toolset for this release:
+
+| Bug Number | Control | Description      |
+|------------|---------|------------------|
+|26218|Excel Library|Chart's plot area right margin becomes narrower and fill pattern and fill foreground are gone just by loading an Excel file|
+|30286|IgxDataChart|Bubble Series tooltip content is switched to that of nearby bubble data in clicking a bubble|
+|32906|IgxDataChart|IgxDataChart is showing two xAxis on the top|
+|33605|IgxDataChart|ScatterLineSeries is not showing the color of the line correctly in the legend|
+|34053|IgxRadialGauge|The position of the scale label is shifted|
+|34083|Excel Library|TextOperatorConditionalFormat's is not loaded/saved properly if the text contains = in a template Excel file|
+|34776|IgxDataChart|Repeatedly showing and hiding the IgxDataChart causes memory leakage in JS Heap|
+|35495|Excel Library|Pictures in cells are lost when a template file is loaded|
+|35496|IgxSpreadsheet|Error when setting styles in Excel with images|
+|35498|IgxDataChart|Tooltips for the series specified in IncludedSeries are not displayed|
+|36176|Excel Library|Exception occurs when loading an Excel workbook that has a LET function|
+|36379|Excel Library|Colors with any alpha channel in an excel workbook fail to load|
+
 ## **19.0.0 (January 2025)**
 
 *   Angular 19 support.
