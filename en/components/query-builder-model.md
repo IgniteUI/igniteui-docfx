@@ -143,7 +143,7 @@ In the sample below we have a SQL database with 3 tables - 'suppliers', 'categor
 
 Let's say we want to find all suppliers who supply products that belong to the 'Beverages' category. Since the data is distributed across the 3 tables we can take advantage of the *IN* operator and accomplish the task by creating subqueries. Each subquery is represented by a `FilteringExpressionsTree` and can be converted to a SQL query through the `transformExpressionTreeToSqlQuery(tree: IExpressionTree)` method.
 
-First, we create `categoriesTree` which will return the `category_id` for the record where `category_name` is `Beverages`. This is the innermost subquery:
+First, we create а `categoriesTree` which will return the `category_id` for the record where `category_name` is `Beverages`. This is the innermost subquery:
 
 ```ts
 const categoriesTree = new FilteringExpressionsTree(0, undefined, 'categories', ['category_id']);
@@ -160,7 +160,7 @@ The corresponding SQL query for this `FilteringExpressionsTree` will look like t
 SELECT category_id FROM categories WHERE category_name = 'Beverages'
 ```
 
-Then we create `productsTree` that will return the `supplier_id` field from the `categoriesTree` for the records where the `category_id` matches the `category_id` returned by the innermost subquery. We do this by setting the `inQuery` condition and the relevant `searchTree`. This is the middle subquery:
+Then we create а `productsTree` that will return the `supplier_id` field from the `categoriesTree` for the records where the `category_id` matches the `category_id` returned by the innermost subquery. We do this by setting the `inQuery` condition and the relevant `searchTree`. This is the middle subquery:
 
 ```ts
 const productsTree = new FilteringExpressionsTree(0, undefined, 'products', ['supplier_id']);
@@ -179,7 +179,7 @@ SELECT supplier_id FROM products WHERE category_id IN (
   )
 ```
 
-Finally, we create `suppliersTree` that will return all fields from `suppliers` entity where the `supplier_id` matches any of the `supplier_id`s returned by the middle subquery. This is the outermost query:
+Finally, we create а `suppliersTree` that will return all fields from `suppliers` entity where the `supplier_id` matches any of the `supplier_id`s returned by the middle subquery. This is the outermost query:
 
 ```ts
 const suppliersTree = new FilteringExpressionsTree(0, undefined, 'suppliers', ['*']);
@@ -200,7 +200,7 @@ SELECT * FROM suppliers WHERE supplier_id IN (
 )
 ```
 
-Now can set the `expressionsTree` property of the `IgxQueryBuilderComponent` to `suppliersTree`. Furthermore, every change to the query triggers SQL query execution and refreshing the results data shown in the grid.
+Now we can set the `expressionsTree` property of the `IgxQueryBuilderComponent` to `suppliersTree`. Furthermore, every change to the query triggers SQL query execution and refreshing the results data shown in the grid.
 
 <code-view style="height:700px" 
            no-theming
