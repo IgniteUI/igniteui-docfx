@@ -549,45 +549,42 @@ Finally, we need to apply the filtering pipe to our contacts data before we can 
 
 ## List Item Selection
 
-As you probably have already noticed, list items do not provide selection states. However, if your application requires your list to keep track of which item is selected, we give you an example of how this can be achieved. All you need to do is keep track of the state somewhere in your component, or in the data the list is bound to.
+The list items have a `selected` state property that helps us track which items have been selected. This property allows us to identify and manage the selection status of each item.
 
-Here's an example, in which we apply a background color to the list according to the theme's secondary 500 color, based on state tracking coming from the data the list is bound to:
+Here's an example, in which by using the `selected` property we apply a background color to the list items that we select:
 
 <code-view style="height: 420px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-item-selection" >
 </code-view>
 
-What we are doing is we are adding an additional `selected` property to each data member, which defaults to `false`. Upon list item click, we're resetting all the `selected` properties in the data collection and setting the one corresponding to the clicked item to `true`. Based on the selected property, we're applying a css class to the list item which gives it the selected background.
+To make list items selectable, we simply need to add the `selected` property value to each list item we want to be able to select. By default, this property will be set to `false`. Then, we add a `(click)` event to each list item, which will toggle the `selected` property value between `true` and `false`, effectively switching the selection state each time the item is clicked."
 
 ```html
 <igx-list>
-    <igx-list-item isHeader="true">Contacts</igx-list-item>
-    <igx-list-item [ngClass]="contact.selected ? 'selected' : ''"
-                    (click)="selectItem(contact)"
-                    *ngFor="let contact of contacts | igxFilter: filterContacts;">
+    <igx-list-item [isHeader]="true">Contacts</igx-list-item>
+    @for (contact of contacts | igxFilter: filterContacts; track contact) {
+      <igx-list-item [selected]="contact.selected" (click)="contact.selected = !contact.selected">
         <igx-avatar igxListThumbnail [src]="contact.photo" shape="circle"></igx-avatar>
         <span igxListLineTitle>{{ contact.name }}</span>
         <span igxListLineSubTitle>{{ contact.phone }}</span>
-        <igx-icon igxListAction [style.color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(contact, $event)">star</igx-icon>
-    </igx-list-item>
-</igx-list>
+        <igx-icon igxListAction [style.color]="contact.isFavorite ? 'orange' : 'lightgray'" igxRipple="pink"
+          [igxRippleCentered]="true" (click)="toggleFavorite(contact, $event)"
+        (mousedown)="mousedown($event)">star</igx-icon>
+      </igx-list-item>
+    }
+  </igx-list>
 ```
 
-```typescript
-public selectItem(item) {
-    if (!item.selected) {
-        this.contacts.forEach(c => c.selected = false);
-        item.selected = true;
-    }
-}
-```
+When a list item is selected, the class `.igx-list__item-base--selected` is added to the element. We can use this class to style the selected state of the element.
 
 ```scss
-.selected {
-    background-color: hsla(var(--igx-secondary-500))
+.igx-list__item-base--selected .igx-list__item-content {
+  background-color: var(--ig-secondary-500);
 }
 ```
+
+If you prefer to use the list theming function, there are parameters available that allow you to style the selected state of the list items. You can find more information about these parameters here: [`list-theme`]({environment:sassApiUrl}/index.html#function-list-theme)
 
 <div class="divider--half"></div>
 
