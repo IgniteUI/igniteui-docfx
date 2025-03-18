@@ -4,11 +4,6 @@ _description: Angular Query Builder provides easily serializable/deserializable 
 _keywords: Angular Query Builder component, Angular Query Builder control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
 ---
 
-# Query Builder 
-<p class="highlight">
-
-</p>
-
 ## Query Builder Model
 In order to set an expression tree to the [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) you need to define [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html). Each [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) should have filtering logic that represents how a data record should resolve against the tree and depending on the use case, you could pass field name, entity name and an array of return fields. If all fields in certain entity should be returned, the `returnFields` property could be set to ['*']:
 
