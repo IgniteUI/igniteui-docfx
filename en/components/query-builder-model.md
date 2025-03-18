@@ -132,7 +132,7 @@ This would be transferred as:
 
 ## SQL Example
 
-Let's take a look at practical example how the Ignite UI for Angular Query Builder Component can be used to build SQL queries.
+Let's take a look at a practical example how the Ignite UI for Angular Query Builder Component can be used to build SQL queries.
 
 In the sample below we have a SQL database with 3 tables - 'suppliers', 'categories' and 'products'. Once we fetch information about them we set our `entities` property of the [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) and we can build queries.
 
