@@ -119,9 +119,37 @@ export class HomeComponent {
 ### Configuring IgxCarousel
 <div class="divider--half"></div>
 
-By default, the Carousel in Angular has its **[`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop)** input property set to `true` ( *looping occurs when the first slide comes after the last by navigating using the Next action, or when the last slide comes after the first by using the Previous action* ). The looping behavior can be disabled by setting the value of the `loop` input to `false`.
+By default, the Carousel in Angular has its [`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop) input property set to `true` (*looping occurs when the first slide comes after the last by navigating using the Next action, or when the last slide comes after the first by using the Previous action*). The looping behavior can be disabled by setting the value of the [`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop) input to `false`.
 
-To keep track of each slide index, the carousel has indicators that are positioned at the `bottom` of the carousel by default. In order to change this behavior, we have to use the [indicatorsOrientation]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicatorsOrientation) property and assign it to `top`. Indicators can be disabled by setting the `indicators` input property to `false`.
+```html
+<igx-carousel [loop]="false">
+    ...
+</igx-carousel>
+```
+
+To keep track of each slide index, the carousel has indicators that are positioned at the `end` of the carousel by default. In order to change this behavior, use the [`indicatorsOrientation`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicatorsOrientation) property and assign it to `start`.
+
+```html
+<igx-carousel indicatorsOrientation="start">
+    ...
+</igx-carousel>
+```
+
+By default, the [`IgxCarousel`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html) displays its navigation buttons and indicators. Use the [`indicators`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicators) property to hide the indicators and the [`navigation`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#navigation) property to hide the navigation buttons.
+
+```html
+<igx-carousel [navigation]="false" [indicators]="false">
+    ...
+</igx-carousel>
+```
+
+The [`IgxCarousel`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html) supports vertical mode. Use the [`vertical`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#vertical) property to enable it.
+
+```html
+<igx-carousel [vertical]="true">
+    ...
+</igx-carousel>
+```
 
 ### Custom indicators
 <div class="divider--half"></div>

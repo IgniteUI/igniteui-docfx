@@ -89,6 +89,13 @@ The matcher is ideal for using in charts, such as the [`IgxCategoryChartComponen
 
 For example, if you datasource has numeric properties Nuclear, Coal, Oil, Solar then you know there are series created for each of these properties. If you want to select the series bound to Solar values, you can add a ChartSelection object to the SelectedSeriesItems collection using a matcher with the following properties set.
 
+<code-view style="height: 500px" alt="Angular Selection Matcher"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/selection-matcher"
+                                                 github-src="charts/category-chart/selection-matcher">
+</code-view>
+
+
 ## API References
 
 The following is a list of API members mentioned in the above sections:
