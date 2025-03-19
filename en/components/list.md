@@ -549,16 +549,16 @@ Finally, we need to apply the filtering pipe to our contacts data before we can 
 
 ## List Item Selection
 
-The list items have a `selected` state property that helps us track which items have been selected. This property allows us to identify and manage the selection status of each item.
+The list items have a `selected` property that helps us track which items are "selected". This property allows us to identify and manage the selection status of each item.
 
-Here's an example, in which by using the `selected` property we apply a background color to the list items that we select:
+Here's an example illustrating how the visual style of the items changes when using the `selected` property:
 
 <code-view style="height: 420px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-item-selection" >
 </code-view>
 
-To make list items selectable, we simply need to add the `selected` property value to each list item we want to be able to select. By default, this property will be set to `false`. Then, we add a `(click)` event to each list item, which will toggle the `selected` property value between `true` and `false`, effectively switching the selection state each time the item is clicked."
+By default, the `selected` property is set to `false`. We can toggle its value using an inline expression bound to the `(click)` event on each list item, effectively switching the visual state of the item each time it's clicked.
 
 ```html
 <igx-list>
@@ -576,11 +576,20 @@ To make list items selectable, we simply need to add the `selected` property val
   </igx-list>
 ```
 
-When a list item is selected, the class `.igx-list__item-base--selected` is added to the element. We can use this class to style the selected state of the element.
+The list item also exposes a few CSS variables which you can use to style different parts of the selected elements:
+
+- `--item-background-selected`
+- `--item-text-color-selected`
+- `--item-title-color-selected`
+- `--item-action-color-selected`
+- `--item-subtitle-color-selected`
+- `--item-thumbnail-color-selected`
 
 ```scss
-.igx-list__item-base--selected .igx-list__item-content {
-  background-color: var(--ig-secondary-500);
+igx-list-item {
+  --item-background-selected: var(--ig-secondary-500);
+  --item-title-color-selected: var(--ig-secondary-500-contrast);
+  --item-subtitle-color-selected: var(--ig-info-100);
 }
 ```
 
