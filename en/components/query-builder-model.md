@@ -203,13 +203,35 @@ Now we can set the `expressionsTree` property of the `IgxQueryBuilderComponent` 
            iframe-src="{environment:demosBaseUrl}/interactions/query-builder-sql-sample" >
 </code-view>
 
+## Request data from an Endpoint
+
+The demo below demonstrates how the [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) expression tree could be used to requets data from an endpoint [Northwind WebAPI](https://data-northwind.indigo.design/swagger/index.html) and set it as [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) data source.
+
+In order to update the data source when there is a change in the [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html), the `expressionTreeChange` event should be handled.
+
+In the event handler, could be called an `HttpClient` POST request that accepts an endpoint url and body - the [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) `expressionTree`.
+
+After subscribing to the request, the received data should be parsed to proper data type and set it as data source of the [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html).
+
+```ts
+public onChange() {
+    this.http.post(`${API_ENDPOINT}/QueryBuilder/ExecuteQuery`, this.expressionTree).subscribe(data =>{
+        this.data = Object.values(data)[0];
+    });
+}
+```
+
+<code-view style="height:700px" 
+           no-theming
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-request-sample" >
+</code-view>
+
 ## API References
 
 <div class="divider--half"></div>
 
 * [IgxQueryBuilderComponent API]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html)
-* [IgxQueryBuilderHeaderComponent]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html)
-* [IgxQueryBuilderSearchValueTemplateDirective]({environment:angularApiUrl}/classes/igxquerybuildersearchvaluetemplatedirective.html)
 * [IgxQueryBuilderComponent Styles]({environment:sassApiUrl}/index.html#function-query-builder-theme)
 
 ## Additional Resources
