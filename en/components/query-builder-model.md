@@ -4,6 +4,19 @@ _description: Angular Query Builder provides easily serializable/deserializable 
 _keywords: Angular Query Builder component, Angular Query Builder control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
 ---
 
+# Using Query Builder Model
+Angular Query Builder provides serializable/deserializable JSON format model, making it easily to build SQL queries.
+
+## Overview
+
+This Angular Query Builder example demonstartes how the [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) expression tree could be used to requet data from an endpoint [Northwind WebAPI](https://data-northwind.indigo.design/swagger/index.html) and set it as [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) data source.
+
+<code-view style="height:700px" 
+           no-theming
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-request-sample" >
+</code-view>
+
 ## Query Builder Model
 In order to set an expression tree to the [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) you need to define [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html). Each [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) should have filtering logic that represents how a data record should resolve against the tree and depending on the use case, you could pass field name, entity name and an array of return fields. If all fields in certain entity should be returned, the `returnFields` property could be set to ['*']:
 
@@ -201,30 +214,6 @@ Now we can set the `expressionsTree` property of the `IgxQueryBuilderComponent` 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/query-builder-sql-sample" >
-</code-view>
-
-## Request data from an Endpoint
-
-The demo below demonstrates how the [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) expression tree could be used to requets data from an endpoint [Northwind WebAPI](https://data-northwind.indigo.design/swagger/index.html) and set it as [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) data source.
-
-In order to update the data source when there is a change in the [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html), the `expressionTreeChange` event should be handled.
-
-In the event handler, could be called an `HttpClient` POST request that accepts an endpoint url and body - the [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) `expressionTree`.
-
-After subscribing to the request, the received data should be parsed to proper data type and set it as data source of the [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html).
-
-```ts
-public onChange() {
-    this.http.post(`${API_ENDPOINT}/QueryBuilder/ExecuteQuery`, this.expressionTree).subscribe(data =>{
-        this.data = Object.values(data)[0];
-    });
-}
-```
-
-<code-view style="height:700px" 
-           no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-request-sample" >
 </code-view>
 
 ## API References
