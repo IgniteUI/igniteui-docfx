@@ -120,9 +120,37 @@ export class HomeComponent {
 ### IgxCarousel の定義
 <div class="divider--half"></div>
 
-デフォルトでは、Angular のカルーセルの **[`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop)** 入力プロパティは `true` に設定されています (ループは、Next 動作でナビゲートするときに最初のスライドが最後のスライドの後に来るか、Previous 動作を使用して最後のスライドが最初のスライドの後に来るときに起こります)。ループ動作を無効にするには、`loop` 入力の値を `false` に設定します。
+デフォルトでは、Angular のカルーセルの [`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop) 入力プロパティは `true` に設定されています (ループは、Next 動作でナビゲートするときに最初のスライドが最後のスライドの後に来るか、Previous 動作を使用して最後のスライドが最初のスライドの後に来るときに起こります)。ループ動作を無効にするには、[`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop) 入力の値を `false` に設定します。
 
-各スライド インデックスを追跡するために、カルーセルには、デフォルトでカルーセルの `bottom` に配置されるインジケーターがあります。この動作を変更するには、[indicatorsOrientation]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicatorsOrientation) プロパティを使用して、`top` に割り当てる必要があります。インジケーターは、`indicators` 入力プロパティを `false` に設定することで無効にできます。
+```html
+<igx-carousel [loop]="false">
+    ...
+</igx-carousel>
+```
+
+各スライド インデックスを追跡するために、カルーセルには、デフォルトでカルーセルの `end` に配置されるインジケーターがあります。この動作を変更するには、[`indicatorsOrientation`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicatorsOrientation) プロパティを使用して、`start` に割り当てます。
+
+```html
+<igx-carousel indicatorsOrientation="start">
+    ...
+</igx-carousel>
+```
+
+デフォルトでは、[`IgxCarousel`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html) はナビゲーション ボタンとインジケーターを表示します。インジケーターを非表示にするには [`indicators`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicators) プロパティを使用し、ナビゲーション ボタンを非表示にするには [`navigation`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#navigation) プロパティを使用します。
+
+```html
+<igx-carousel [navigation]="false" [indicators]="false">
+    ...
+</igx-carousel>
+```
+
+[`IgxCarousel`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html) は垂直モードをサポートします。これを有効にするには、[`vertical`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#vertical) プロパティを使用します。
+
+```html
+<igx-carousel [vertical]="true">
+    ...
+</igx-carousel>
+```
 
 ### カスタム インジケーター
 <div class="divider--half"></div>
