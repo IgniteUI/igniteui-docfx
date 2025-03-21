@@ -5,7 +5,7 @@ _keywords: Angular Query Builder component, Angular Query Builder control, Ignit
 ---
 
 # Using Query Builder Model
-Angular Query Builder provides serializable/deserializable JSON format model, making it easily to build SQL queries.
+Angular Query Builder provides serializable/deserializable JSON format model, making it easy to build SQL queries.
 
 ## Overview
 
