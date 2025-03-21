@@ -19,8 +19,9 @@ The [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybui
 We’ve created this Angular Query Builder example to show you the default functionalities of the Angular Query Builder component. Click the plus button to add conditions, “and” group as well as “or” group. Grouping or ungrouping expressions as well as re-ordering could be achieved via the Drag&Drop functionality.
 
 <code-view style="height:700px" 
+           no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-sample-1" alt="Angular Query Builder Example">
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-request-sample" >
 </code-view>
 
 <div class="divider--half"></div>
