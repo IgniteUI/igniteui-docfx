@@ -71,6 +71,7 @@ JSON.stringify(tree, null, 2);
 ```
 
 ## Using Sub-Queries
+
 In the context of the [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) the *IN / NOT-IN* operators are used with the newly exposed subquery functionality in the *WHERE* clause.
 
 > [!Note]
@@ -80,16 +81,16 @@ Selecting the *IN / NOT-IN* operator in a `FilteringExpression` would create a s
 
 The following expression tree:
 ```ts
-const innerTree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'products', ['supplier_id']);
+const innerTree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'Products', ['supplierId']);
 innerTree.filteringOperands.push({
-    fieldName: 'supplier_id',
+    fieldName: 'supplierId',
     conditionName: IgxNumberFilteringOperand.instance().condition('greaterThan').name,
     searchVal: 10
 });
 
-const tree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'suppliers', ['supplier_id']);
+const tree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'Suppliers', ['supplierId']);
 tree.filteringOperands.push({
-    fieldName: 'supplier_id',
+    fieldName: 'supplierId',
     conditionName: IgxStringFilteringOperand.instance().condition('inQuery').name,
     searchTree: innerTree
 });
@@ -104,7 +105,7 @@ This would be transferred as:
 {
   "filteringOperands": [
     {
-      "fieldName": "supplier_id",
+      "fieldName": "supplierId",
       "condition": {
         "name": "inQuery",
         "isUnary": false,
@@ -116,7 +117,7 @@ This would be transferred as:
       "searchTree": {
         "filteringOperands": [
           {
-            "fieldName": "supplier_id",
+            "fieldName": "supplierId",
             "condition": {
               "name": "greaterThan",
               "isUnary": false,
@@ -128,17 +129,17 @@ This would be transferred as:
           }
         ],
         "operator": 0,
-        "entity": "suppliers",
+        "entity": "Suppliers",
         "returnFields": [
-          "supplier_id"
+          "supplierId"
         ]
       }
     }
   ],
   "operator": 0,
-  "entity": "products",
+  "entity": "Products",
   "returnFields": [
-    "supplier_id"
+    "supplierId"
   ]
 }
 ```
@@ -147,16 +148,16 @@ This would be transferred as:
 
 Let's take a look at a practical example how the Ignite UI for Angular Query Builder Component can be used to build SQL queries.
 
-In the sample below we have a SQL database with 3 tables - 'suppliers', 'categories' and 'products'. Once we fetch information about them we set our `entities` property of the [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) and we can build queries.
+In the sample below we have 3 `entities` with names 'Suppliers', 'Categories' and 'Products'.
 
-Let's say we want to find all suppliers who supply products that belong to the 'Beverages' category. Since the data is distributed across the 3 tables we can take advantage of the *IN* operator and accomplish the task by creating subqueries. Each subquery is represented by a `FilteringExpressionsTree` and can be converted to a SQL query through the `transformExpressionTreeToSqlQuery(tree: IExpressionTree)` method.
+Let's say we want to find all suppliers who supply products that belong to the 'Beverages' category. Since the data is distributed across all entities we can take advantage of the *IN* operator and accomplish the task by creating subqueries. Each subquery is represented by a `FilteringExpressionsTree` and can be converted to a SQL query through the `transformExpressionTreeToSqlQuery(tree: IExpressionTree)` method.
 
-First, we create а `categoriesTree` which will return the `category_id` for the record where `category_name` is `Beverages`. This is the innermost subquery:
+First, we create а `categoriesTree` which will return the `categoryId` for the record where `name` is `Beverages`. This is the innermost subquery:
 
 ```ts
-const categoriesTree = new FilteringExpressionsTree(0, undefined, 'categories', ['category_id']);
+const categoriesTree = new FilteringExpressionsTree(0, undefined, 'Categories', ['categoryId']);
 categoriesTree.filteringOperands.push({
-    fieldName: 'category_name',
+    fieldName: 'name',
     conditionName: IgxStringFilteringOperand.instance().condition('equals').name,
     searchVal: 'Beverages'
 });
@@ -165,15 +166,15 @@ categoriesTree.filteringOperands.push({
 The corresponding SQL query for this `FilteringExpressionsTree` will look like this:
 
 ```
-SELECT category_id FROM categories WHERE category_name = 'Beverages'
+SELECT categoryId FROM Categories WHERE name = 'Beverages'
 ```
 
-Then we create а `productsTree` that will return the `supplier_id` field from the `categoriesTree` for the records where the `category_id` matches the `category_id` returned by the innermost subquery. We do this by setting the `inQuery` condition and the relevant `searchTree`. This is the middle subquery:
+Then we create а `productsTree` that will return the `supplierId` field from the `categoriesTree` for the records where the `categoryId` matches the `categoryId` returned by the innermost subquery. We do this by setting the `inQuery` condition and the relevant `searchTree`. This is the middle subquery:
 
 ```ts
-const productsTree = new FilteringExpressionsTree(0, undefined, 'products', ['supplier_id']);
+const productsTree = new FilteringExpressionsTree(0, undefined, 'Products', ['supplierId']);
 productsTree.filteringOperands.push({
-    fieldName: 'category_id',
+    fieldName: 'categoryId',
     conditionName: IgxStringFilteringOperand.instance().condition('inQuery').name,
     searchTree: categoriesTree
 });
@@ -182,17 +183,17 @@ productsTree.filteringOperands.push({
 This is the updated state of the SQL query:
 
 ```
-SELECT supplier_id FROM products WHERE category_id IN (
-    SELECT category_id FROM categories WHERE category_name = 'Beverages'
+SELECT supplierId FROM Products WHERE categoryId IN (
+    SELECT categoryId FROM Categories WHERE name = 'Beverages'
   )
 ```
 
-Finally, we create а `suppliersTree` that will return all fields from `suppliers` entity where the `supplier_id` matches any of the `supplier_id`s returned by the middle subquery. This is the outermost query:
+Finally, we create а `suppliersTree` that will return all fields from `Suppliers` entity where the `supplierId` matches any of the `supplierId`s returned by the middle subquery. This is the outermost query:
 
 ```ts
-const suppliersTree = new FilteringExpressionsTree(0, undefined, 'suppliers', ['*']);
+const suppliersTree = new FilteringExpressionsTree(0, undefined, 'Suppliers', ['*']);
 suppliersTree.filteringOperands.push({
-    fieldName: 'supplier_id',
+    fieldName: 'supplierId',
     conditionName: IgxStringFilteringOperand.instance().condition('inQuery').name,
     searchTree: productsTree
 });
@@ -201,14 +202,14 @@ suppliersTree.filteringOperands.push({
 Our SQL query is now complete:
 
 ```
-SELECT * FROM suppliers WHERE supplier_id IN (
-  SELECT supplier_id FROM products WHERE category_id IN (
-      SELECT category_id FROM categories WHERE category_name = 'Beverages'
+SELECT * FROM Suppliers WHERE supplierId IN (
+  SELECT supplierId FROM Products WHERE categoryId IN (
+      SELECT categoryId FROM Categories WHERE name = 'Beverages'
     )
 )
 ```
 
-Now we can set the `expressionsTree` property of the `IgxQueryBuilderComponent` to `suppliersTree`. Furthermore, every change to the query triggers SQL query execution and refreshing the results data shown in the grid.
+Now we can set the `expressionsTree` property of the `IgxQueryBuilderComponent` to `suppliersTree`. Furthermore, every change to the query triggers a new request to the endpoint and the results data shown in the grid is refreshed.
 
 <code-view style="height:700px" 
            no-theming
