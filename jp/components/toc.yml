@@ -1124,6 +1124,10 @@
   href: dock-manager.md
   new: false
   updated: false
+- name: Tile Manager
+  href: tile-manager.md
+  new: true
+  updated: false
 - name: 通知
   header: true
   sortable: true
