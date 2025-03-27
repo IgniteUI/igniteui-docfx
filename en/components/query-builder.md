@@ -20,7 +20,8 @@ We’ve created this Angular Query Builder example to show you the default funct
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-sample-1" alt="Angular Query Builder Example">
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-request-sample"
+           alt="Angular Query Builder Overview Example">
 </code-view>
 
 <div class="divider--half"></div>
