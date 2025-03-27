@@ -37,15 +37,15 @@ import { defineComponents, IgcTileManagerComponent } from 'igniteui-webcomponent
 
 defineComponents(IgcTileManagerComponent);
 ```
-You also need to include the `CUSTOM_ELEMENTS_SCHEMA` schema in the `AppModule`:
+You also need to include the `CUSTOM_ELEMENTS_SCHEMA` schema in your component's configuration
 
 ```typescript
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
-@NgModule({
+@Component({
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule {}
+export class AppComponent {
 ```
 
 Now you can start with a basic configuration of the Angular Tile Manager.
