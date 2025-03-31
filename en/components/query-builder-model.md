@@ -1,11 +1,11 @@
 ---
-title: Using Query Builder Model
-_description: Angular Query Builder provides easily serializable/deserializable JSON format model, making it easy to build SQL queries. Try it Now.
+title: Using the Query Builder Model
+_description: Angular Query Builder provides a serializable/deserializable JSON format model, making it easy to build SQL queries. Try it now.
 _keywords: Angular Query Builder component, Angular Query Builder control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
 ---
 
-# Using Query Builder Model
-Angular Query Builder provides serializable/deserializable JSON format model, making it easy to build SQL queries.
+# Using the Query Builder Model
+Angular Query Builder provides a serializable/deserializable JSON format model, making it easy to build SQL queries.
 
 ## Overview
 
@@ -18,13 +18,13 @@ This Angular Query Builder example demonstartes how the [`IgxQueryBuilderCompone
 </code-view>
 
 ## Query Builder Model
-In order to set an expression tree to the [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) you need to define [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html). Each [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) should have filtering logic that represents how a data record should resolve against the tree and depending on the use case, you could pass field name, entity name and an array of return fields. If all fields in certain entity should be returned, the `returnFields` property could be set to ['*']:
+In order to set an expression tree to the [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html), you need to define a[`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html). Each [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) should have filtering logic that represents how a data record should resolve against the tree and depending on the use case, you could pass a field name, entity name, and an array of return fields. If all fields in a certain entity should be returned, the `returnFields` property could be set to ['*']:
 
 ```ts
 const tree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'Entity A', ['*']);
 ```
-Once the root [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) is created, adding conditions, groups or subqueries, could be done by setting its `filteringOperands` property to an array of [`IFilteringExpression`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) (single expression or a group) and [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) (subquery).
-Each [`IFilteringExpression`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) and [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) should have `fieldName` that is the name of the column where the filtering expression is placed. If required, you could also set a `condition` of type [`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html), `conditionName`, `searchVal`, `searchTree` of type [`IExpressionTree`]({environment:angularApiUrl}/interfaces/iexpressiontree.html) and `ignoreCase` properties.
+Once the root [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) is created, adding conditions, groups or subqueries, could be done by setting its `filteringOperands` property to an array of [`IFilteringExpression`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) (single expression or a group) or [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) (subquery).
+Each [`IFilteringExpression`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) and [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) should have a `fieldName` that is the name of the column where the filtering expression is placed, and either a `condition` of type [`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html) or a `conditionName`. If required, you could also set a `searchVal`, `searchTree` of type [`IExpressionTree`]({environment:angularApiUrl}/interfaces/iexpressiontree.html), and `ignoreCase` properties.
 
 - Defining a simple **expression**:
 ```ts
@@ -55,12 +55,12 @@ tree.filteringOperands.push(group);
 const innerTree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'Entity B', ['Number']);
 innerTree.filteringOperands.push({
     fieldName: 'Number',
-    conditionName: IgxNumberFilteringOperand.instance().condition('equals').name,
+    conditionName: 'equals',
     searchVal: 123
 });
  tree.filteringOperands.push({
     fieldName: 'Id',
-    conditionName: IgxStringFilteringOperand.instance().condition('inQuery').name,
+    conditionName: 'inQuery',
     searchTree: innerTree
 });
 ```
@@ -77,7 +77,7 @@ In the context of the [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/c
 > [!Note]
 > A subquery is a query nested inside another query used to retrieve data that will be used as a condition for the outer query. 
 
-Selecting the *IN / NOT-IN* operator in a `FilteringExpression` would create a subquery. After choosing entity and a column to return, it checks if the value in the specified column in the outer query matches or not any of the values returned by the subquery.
+Selecting the *IN / NOT-IN* operator in a `FilteringExpression` would create a subquery. After choosing an entity and a column to return, it checks if the value in the specified column in the outer query matches or not any of the values returned by the subquery.
 
 The following expression tree:
 ```ts
@@ -146,11 +146,11 @@ This would be transferred as:
 
 ## SQL Example
 
-Let's take a look at a practical example how the Ignite UI for Angular Query Builder Component can be used to build SQL queries.
+Let's take a look at a practical example of how the Ignite UI for Angular Query Builder Component can be used to build SQL queries.
 
 In the sample below we have 3 `entities` with names 'Suppliers', 'Categories' and 'Products'.
 
-Let's say we want to find all suppliers who supply products that belong to the 'Beverages' category. Since the data is distributed across all entities we can take advantage of the *IN* operator and accomplish the task by creating subqueries. Each subquery is represented by a `FilteringExpressionsTree` and can be converted to a SQL query through the `transformExpressionTreeToSqlQuery(tree: IExpressionTree)` method.
+Let's say we want to find all suppliers who supply products which belong to the 'Beverages' category. Since the data is distributed across all entities, we can take advantage of the *IN* operator and accomplish the task by creating subqueries. Each subquery is represented by a `FilteringExpressionsTree` and can be converted to a SQL query through the `transformExpressionTreeToSqlQuery(tree: IExpressionTree)` method.
 
 First, we create а `categoriesTree` which will return the `categoryId` for the record where `name` is `Beverages`. This is the innermost subquery:
 
@@ -209,7 +209,7 @@ SELECT * FROM Suppliers WHERE supplierId IN (
 )
 ```
 
-Now we can set the `expressionsTree` property of the `IgxQueryBuilderComponent` to `suppliersTree`. Furthermore, every change to the query triggers a new request to the endpoint and the results data shown in the grid is refreshed.
+Now we can set the `expressionsTree` property of the `IgxQueryBuilderComponent` to `suppliersTree`. Furthermore, every change to the query triggers a new request to the endpoint and the resulting data shown in the grid is refreshed.
 
 <code-view style="height:700px" 
            no-theming
