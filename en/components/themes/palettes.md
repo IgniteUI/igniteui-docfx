@@ -107,11 +107,11 @@ Apart from having a single global palette, you can also create several palettes 
 /* styles.css */
 
 .blue-theme {
-    --ig-primary-500: #0008ff;
+  --ig-primary-500: #0008ff;
 }
 
 .red-theme {
-    --ig-primary-500: #ff0400;
+  --ig-primary-500: #ff0400;
 }
 ```
 
@@ -172,12 +172,13 @@ Be mindful when changing the `gray` and `surface` color variants as they are use
 
 So far we've covered the `primary`, `secondary`, `gray`, and `surface` color variants and how you can override them. There are four more colors - `info`, `success`, `warn`, and `error`. They are usually used to set the colors in different states. For example, the `igx-input-group` component uses these colors in its input validation states.
 They can be changed as the other color variants, all we need to do it to set the `500` variant and all of the other varints will be generated.
+
 ```css
 :root {
-    --ig-info-500: #1377d5;
-    --ig-success-500: #4eb862;
-    --ig-warn-500: #faa419;
-    --ig-error-500: #ff134a;
+  --ig-info-500: #1377d5;
+  --ig-success-500: #4eb862;
+  --ig-warn-500: #faa419;
+  --ig-error-500: #ff134a;
 }
 ```
 
