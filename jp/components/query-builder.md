@@ -19,9 +19,10 @@ Angular Query Builder は、[Angular コンポーネント](https://jp.infragist
 
 この Angular Query Builder の例を作成して、Angular Query Builder コンポーネントのデフォルト機能を紹介しました。プラス ボタンをクリックして、条件、「and」グループ、および「or」グループを追加します。グループ解除または削除するには、サイド バーに移動します。
 
-<code-view style="height:700px"
+<code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-sample-1" alt="Angular Query Builder の例">
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-request-sample"
+           alt="Angular Query Builder 概要の例">
 </code-view>
 
 <div class="divider--half"></div>

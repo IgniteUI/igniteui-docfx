@@ -89,6 +89,13 @@ Angular {ComponentTitle} の Ignite UI for Angular 選択機能を使用する�
 
 たとえば、データ ソースに Nuclear、Coal、Oil、Solar という数値プロパティがある場合、これらのプロパティごとにシリーズが作成されていることがわかります。Solar 値にバインドされたシリーズを選択する場合は、次のプロパティが設定されたマッチャーを使用して、ChartSelection オブジェクトを SelectedSeriesItems コレクションに追加できます。
 
+<code-view style="height: 500px" alt="Angular 選択マッチャー"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/selection-matcher"
+                                                 github-src="charts/category-chart/selection-matcher">
+</code-view>
+
+
 ## API リファレンス
 
 以下は上記のセクションで説明した API メンバーのリストです。
