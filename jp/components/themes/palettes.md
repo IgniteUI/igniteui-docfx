@@ -108,11 +108,11 @@ Ignite UI for Angular は、`primary`、`secondary`、`surface`、`gray`、`info
 /* styles.css */
 
 .blue-theme {
-    --ig-primary-500: #0008ff;
+  --ig-primary-500: #0008ff;
 }
 
 .red-theme {
-    --ig-primary-500: #ff0400;
+  --ig-primary-500: #ff0400;
 }
 ```
 
@@ -176,10 +176,10 @@ Ignite UI for Angular のパレットは、テーマが明るいまたは暗い�
 
 ```css
 :root {
-    --ig-info-500: #1377d5;
-    --ig-success-500: #4eb862;
-    --ig-warn-500: #faa419;
-    --ig-error-500: #ff134a;
+  --ig-info-500: #1377d5;
+  --ig-success-500: #4eb862;
+  --ig-warn-500: #faa419;
+  --ig-error-500: #ff134a;
 }
 ```
 
