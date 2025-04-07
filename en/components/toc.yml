@@ -988,6 +988,10 @@
   href: query-builder.md
   new: false
   updated: true
+  items:
+    - name: Using Query Builder Model
+      href: query-builder-model.md
+      new: true
 - name: Radio & Radio Group
   href: radio-button.md
   new: false
@@ -1120,6 +1124,10 @@
 - name: Dock Manager
   href: dock-manager.md
   new: false
+  updated: false
+- name: Tile Manager
+  href: tile-manager.md
+  new: true
   updated: false
 - name: Notifications
   header: true
