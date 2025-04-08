@@ -79,14 +79,10 @@ All primary color variants come from a single base variable: `--ig-primary-500`.
  The contrast colors are CSS runtime generated, based on the the provided color's luminance and the chosen contrast-level to calculate the best contrast color for it. If we change the main color variant(`500`), the contrast colors will also be updated.
 
  > [!NOTE]
- > The contrast-level is specified by the `palette` or the `adaptive-contrast` mixin by passing one of the predefined values: `a`, `aa` or `aaa`.
+ > You could specify the contrast-level globally by using the `palette` mixin, or if you'd like to set it specifically in the scope of your element, you could use the `adaptive-contrast` mixin. They both accept one of the predefined values: `a`, `aa` or `aaa`.
 
  ```scss
   @include palette($palette, $contrast-level: 'aaa');
-
-  OR
-
-  @include adaptive-contrast('aaa');
  ```
 
 ## Defining Palettes
