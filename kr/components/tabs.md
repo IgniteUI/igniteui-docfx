@@ -133,9 +133,7 @@ First add the Material+Icons import in your 'styles.css' file in the main applic
           </div>
         </igx-card-header>
         <igx-card-actions>
-          <div class="igx-card-actions__bgroup">
-            <button igxButton igxRipple>PLAY</button>
-          </div>
+          <button igxButton igxRipple>PLAY</button>
         </igx-card-actions>
       </igx-card>
     </div>

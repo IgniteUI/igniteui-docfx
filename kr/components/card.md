@@ -154,12 +154,10 @@ Next, we need to update the template for our card to show these action buttons:
         <img width="100%" height="100%" src="assets/images/card/media/audi_tt.jpg">
     </div>
     <igx-card-actions >
-        <div class="igx-card-actions__igroup--start">
-            <span igxButton="icon" igxRipple igxRippleCentered="true" *ngFor="let icon of icons">
-                <igx-icon fontSet="material">{{icon}}</igx-icon>
-            </span>
-        </div>
         <button igxButton igxRipple >Follow</button>
+        <span igxStart igxButton="icon" igxRipple igxRippleCentered="true" *ngFor="let icon of icons">
+            <igx-icon fontSet="material">{{icon}}</igx-icon>
+        </span>
     </igx-card-actions>
 </igx-card>
 ```
