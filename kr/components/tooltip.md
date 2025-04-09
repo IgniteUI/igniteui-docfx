@@ -293,14 +293,12 @@ As a finishing touch, we will add a couple of button icons as card actions at th
         ...
     </igx-card-content>
     <igx-card-actions>
-        <div class="igx-card-actions__igroup--start">
-            <span igxButton="icon">
-                <igx-icon fontSet="material">favorite</igx-icon>
-            </span>
-            <span igxButton="icon">
-                <igx-icon fontSet="material">share</igx-icon>
-            </span>
-        </div>
+        <span igxStar igxButton="icon">
+            <igx-icon fontSet="material">favorite</igx-icon>
+        </span>
+        <span igxStart igxButton="icon">
+            <igx-icon fontSet="material">share</igx-icon>
+        </span>
     </igx-card-actions>
 </igx-card>
 ```
