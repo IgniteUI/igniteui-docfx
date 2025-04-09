@@ -177,15 +177,15 @@ export class HomeComponent {
 ### グラデーション プログレス
 
 プログレス バーをカスタマイズする方法の 1 つとして、単色の代わりにカラー グラデーションを使用する方法があります。
-これは、[`IgxProgressBarGradientDirective`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#gradienttemplate) ディレクティブを使用する、もしくは、カスタムテーマを実装 することにより実行できます (カスタム テーマは 2 つまでの色経由点 (color stop) をサポートします)。
+これは、[`IgxProgressBarGradientDirective`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#gradienttemplate) ディレクティブを使用する、もしくは、カスタム テーマを実装することにより実行できます (カスタム テーマは 2 つまでの色経由点 (color stop) をサポートします)。
 
-２つの色経由点のみでグラデーションを作成する場合、カスタム テーマを使用できます。色のリストを作成し、それを `$progress-circle-color` テーマ パラメーターに渡します。
+カスタム テーマを使用して 2 つの色経由点のみを含むグラデーションを作成するには、色のリストを作成し、それを `$fill-color-default` テーマ パラメーターに渡す必要があります。
 
 ```scss
 $colors: #695cf9, #ef017c;
 
 $custom-theme: progress-circular-theme(
-  $progress-circle-color: $colors,
+  $fill-color-default: $colors,
 );
 ```
 
@@ -240,12 +240,12 @@ $custom-theme: progress-circular-theme(
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法として、[`progress-circular-theme`]({environment:sassApiUrl}/index.html#function-progress-circular-theme) を拡張し、`$base-circle-color` および `$progress-circle-color` パラメーターを受け取る新しいテーマを作成する方法があります。
+最も簡単な方法として、[`progress-circular-theme`]({environment:sassApiUrl}/index.html#function-progress-circular-theme) を拡張し、`$base-circle-color` および `$fill-color-default` パラメーターを受け取る新しいテーマを作成する方法があります。
 
 ```scss
 $custom-theme: progress-circular-theme(
   $base-circle-color: lightgray,
-  $progress-circle-color: rgb(32, 192, 17),
+  $fill-color-default: rgb(32, 192, 17),
 );
 ```
 
