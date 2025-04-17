@@ -46,7 +46,7 @@ Ignite UI for Angular は、`primary`、`secondary`、`surface`、`gray`、`info
 上記のカラーに加えて、各カラー バリエーションに **Level AA** [WCAG](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) 準拠の `contrast` カラーも含まれています。つまり、対応する `contrast` カラー バリエーションをベースカラー バリエーションの前景カラーとして安全に使用できます。
 
 > [!NOTE]
-> コントラスト カラーは、メイン変数のカラー (primary、secondary など) に基づいて、Sass テーマ設定エンジンによってビルド時に生成されます。
+> コントラスト カラーは CSS 相対カラーであり、対応するシェード カラー (primary、secondary など) に基づいて実行時に計算されます。
 
 以下は、Light Material パレットで宣言された `primary` 変数カラーの抜粋です。
 
@@ -54,25 +54,37 @@ Ignite UI for Angular は、`primary`、`secondary`、`surface`、`gray`、`info
 :root {
   //...
   --ig-primary-500: #09f;
-  --ig-primary-500-contrast: black;
+  --ig-primary-500-contrast: hsl(from color(from var(--ig-primary-500) var(--y-contrast)) h 0 l);
   --ig-primary-600: hsl(from var(--ig-primary-500) h calc(s * 1.26) calc(l * 0.89));
-  --ig-primary-600-contrast: black;
+  --ig-primary-600-contrast: hsl(from color(from var(--ig-primary-600) var(--y-contrast)) h 0 l);
   --ig-primary-700: hsl(from var(--ig-primary-500) h calc(s * 1.26) calc(l * 0.81));
   //...
   --ig-secondary-400: hsl(from var(--ig-secondary-500) h calc(s * 0.875) calc(l * 1.08));
-  --ig-secondary-400-contrast: black;
+  --ig-secondary-400-contrast: hsl(from color(from var(--ig-secondary-400) var(--y-contrast)) h 0 l);
   --ig-secondary-500: #df1b74;
-  --ig-secondary-500-contrast: white;
+  --ig-secondary-500-contrast: hsl(from color(from var(--ig-secondary-500) var(--y-contrast)) h 0 l);
   --ig-secondary-600: hsl(from var(--ig-secondary-500) h calc(s * 1.26) calc(l * 0.89));
-  --ig-secondary-600-contrast: white;
+  --ig-secondary-600-contrast: hsl(from color(from var(--ig-secondary-600) var(--y-contrast)) h 0 l);
   //...
+  --ig-wcag-a: 0.31;
+  --ig-wcag-aa: 0.185;
+  --ig-wcag-aaa: 0.178;
+  --ig-contrast-level: var(--ig-wcag-aa);
+  --y: clamp(0,(y / var(--ig-contrast-level) - 1)* -infinity, 1);
+  --y-contrast: xyz-d65 var(--y) var(--y) var(--y);
 }
 ```
 
-すべてのプライマリ カラー バリエーションは、1 つの基本変数カラー バリエーション `--ig-primary-500` から派生します。他のカラー変数 (`--ig-secondary-500`、`--ig-surface-500` など) にも同様のことが当てはまります。他のバリエーションは、メイン変数カラー バリエーション `500` を受け取り、割り当てられた変数バリエーション (`600`、`700` など) に応じて `saturation` と `lightness` を変更する相対カラー関数 `hsl()` によって生成されます。`primary`、`secondary`、`surface`、またはその他のカラーのすべてのバリエーションを実行時に変更できるため、この方法を使用することにしました。
+すべてのプライマリ カラー バリエーションは、単一の基本変数 (`--ig-primary-500`) から生成されます。同じパターンは、`--ig-secondary-500` や `--ig-surface-500` などの他のカラー変数にも適用されます。追加のバリエーションは、メインの `500` 変数を取得し、その `saturation` (彩度) と `lightness` (明度) を調整して他のバリエーション (600、700 など) を作成する、相対カラー CSS 関数を使用して作成されます。このアプローチを選んだ理由は、`primary`、`secondary`、`surface`、またはその他のカラーのすべてのバリエーションを実行時に変更できるようにするためです。
 
-> [!WARNING]
-> コントラスト カラーは他の部分のように CSS 実行時に生成されないため、メイン カラー バリエーション (`500`) を変更しても、コントラスト カラーは更新されません。手動で変更する必要があります。この動作は今後のリリースで改善され、コントラスト カラーも CSS 実行時に計算されるようになります。
+ コントラスト カラーは、指定されたカラーの輝度と選択されたコントラスト レベルに基づいて、 CSS ランタイムによって最適なコントラスト カラーが計算されます。メイン カラー バリエーション (`500`) を変更すると、コントラスト カラーも更新されます。
+
+ > [!NOTE]
+ > コントラスト レベルは、`palette` ミックスインを使用してグローバルに指定することも、特定の要素のスコープ内で `adaptive-contrast` ミックスインを使用して指定することもできます。どちらも、事前定義された値 `a`、`aa`、または `aaa` のいずれかを受け入れます。
+
+ ```scss
+  @include palette($palette, $contrast-level: 'aaa');
+ ```
 
 ## パレットの定義
 
