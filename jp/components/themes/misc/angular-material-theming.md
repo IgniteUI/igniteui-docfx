@@ -103,7 +103,7 @@ Ignite UI テーマ エンジンを使用してコンポーネントのスタイ
 
 ### カラー パレット
 
-Ignite UI for Angular の [`palette`]({environment:sassApiUrl}/index.html#function-palette) 関数は、`primary`、`secondary`、`gray` 影の 3 つのサブパレットと、`info`、`success`、`warn`、`error` および `surface` の 5 つの追加カラーを含むカラー パレット マップを生成します。テーマ エンジンは、カラー バリエーションごとに、ビルド時にテキストのコントラスト カラーを自動的に生成します。これもパレットに含まれています。以下に、事前定義されたライト マテリアル パレットを示します:
+Ignite UI for Angular の [`palette`]({environment:sassApiUrl}/index.html#function-palette) 関数は、`primary`、`secondary`、`gray` の 3 つのサブパレットと、`info`、`success`、`warn`、`error` および `surface` の 5 つの追加カラーを含むカラー パレット マップを生成します。テーマ エンジンは、カラー バリエーションごとに、実行時にテキストのコントラスト カラーを自動的に生成します。これもパレットに含まれています。以下に、事前定義されたライト マテリアル パレットを示します:
 
 ```scss
 $igx-light-palette: palette(
