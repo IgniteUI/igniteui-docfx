@@ -42,7 +42,7 @@ We can use one method for all row islands since the endpoint only needs the key 
 
 Now let's improve the user experience by informing the user that the data is still loading so he doesn't have to look at an empty grid in the meantime. That's why the [`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) supports a loading indicator that can be displayed while the grid is empty.
 
-We can display a loading indicator by setting the [`isLoading`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#isloading) property to `true` while there is no data. We need to set it initially for the root grid and also when creating new child grids, until their data is loaded. We could always set it to `true` in our template, but we want to hide it and display that the grid has no data if the service returns an empty array by setting it to `false`.
+We display a loading indicator by setting the [`isLoading`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#isloading) property to `true` while there is no data. We need to set it initially for the root grid and also when creating new child grids, until their data is loaded. We could always set it to `true` in our template, but we want to hide it (by setting it to `false`) and display that the grid has no data if the service returns an empty array.
 
 Finally, let's turn the [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autoGenerate) property off and define the columns collection in the markup.
 
@@ -120,7 +120,7 @@ public schema: EntityType[] = [
 
 #### Setting initial filter
 
-Now let's add initial filtering rules to our grid so that the root grid is filtered when first loaded. We will create [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) and set it to the [`advancedFilteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#advancedFilteringExpressionsTree) property of the `IgxHierarchicalGrid` using the `ngOnInit` lifecycle hook.
+Now let's add initial filtering rules to our grid so that the root grid is filtered when first loaded. We will create a [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) and set it to the [`advancedFilteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#advancedFilteringExpressionsTree) property of the `IgxHierarchicalGrid` using the `ngOnInit` lifecycle hook.
 
 Let's say we want to filter customers that have order's freight at least `500`. We will take advantage of the ability to create nested queries in the filtering expressions and this is the result:
 
@@ -153,7 +153,7 @@ We will be communicating with the endpoint over HTTP protocol using the XMLHttpR
 
 #### Getting root grid data
 
-The [Northwind WebAPI](https://data-northwind.indigo.design/swagger/index.html) provides us with an POST endpoint that accepts an `IFilteringExpressionsTree` as a parameter and we will use it in order to take advantage of the Advanced Filtering functionality in the `IgxHierarchicalGrid` and filter records in the root grid. We will do this in `refreshRootGridData` method: 
+The [Northwind WebAPI](https://data-northwind.indigo.design/swagger/index.html) provides us with a POST endpoint that accepts an `IFilteringExpressionsTree` as a parameter and we will use it in order to take advantage of the Advanced Filtering functionality in the `IgxHierarchicalGrid` and filter records in the root grid. We will do this in `refreshRootGridData` method: 
 
 ```typescript
 public refreshRootGridData() {
@@ -187,11 +187,11 @@ public ngAfterViewInit() {
 
 #### Getting child grids data
 
-Next we will define how we should build our URL for the GET request in order to get the data for our child grids. This is visual representation of the relations between the tables:
+Next we will define how we should build our URL for the GET request in order to get the data for our child grids. This is the visual representation of the relations between the tables:
 
 <img class="responsive-img" src="../../images/hgrid-database.jpg" />
 
-Finally, we need to create our `gridCreated` method that will request data for any new child grid created. It will be similar to getting the root level grid data, just this time we will use the data provided in the event [`gridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#gridCreated) and build our URL with it:
+Finally, we need to implement our `gridCreated` method that will request data for any new child grid created. It will be similar to getting the root level grid data, just this time we will use the data provided in the event [`gridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#gridCreated) and build our URL with it:
 
 ````TypeScript
 public gridCreated(event: IGridCreatedEventArgs) {
