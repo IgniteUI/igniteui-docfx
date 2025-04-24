@@ -119,6 +119,9 @@ igxGridState ディレクティブによって開発者がグリッドの状態�
 > [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) ディレクティブはテンプレートを処理しません。列テンプレートの復元方法については、「[列の復元](state-persistence.md#列の復元)」セクションを参照してください。
 }
 
+>[!NOTE]
+> `Row Selection` 機能を使用するには、[`primaryKey`]({environment:angularApiUrl}/classes/IgxGridComponent.html#primaryKey) プロパティを設定して、正しく保存/復元する必要があります。
+
 ## 使用方法
 
 [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getState) - このメソッドは、シリアル化された JSON 文字列でグリッド状態を返します。これは、開発者がそれを取得して任意のデータストレージ (データベース、クラウド、ブラウザーの localStorage など) に保存できます。このメソッドは最初のオプションのパラメーター `serialize` を受け取り、[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getState) が [`IGridState`]({environment:angularApiUrl}/interfaces/igridstate.html) オブジェクトを返すか、シリアル化された JSON 文字列を返すかを決定します。
