@@ -80,8 +80,9 @@ To enable the advanced filtering, the [`allowAdvancedFiltering`]({environment:an
 ```
 }
 
-The advanced filtering generates a [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) which is stored in the [`advancedFilteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#advancedFilteringExpressionsTree) input property. You could use the [`advancedFilteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#advancedFilteringExpressionsTree) property to set an initial state of the advanced filtering.
+The advanced filtering generates a [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) which is stored in the [`advancedFilteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#advancedFilteringExpressionsTree) input property. You could use this property to set an initial state of the advanced filtering.
 
+@@if (igxName !== 'IgxHierarchicalGrid') {
 ```typescript
 ngAfterViewInit(): void {
     const tree = new FilteringExpressionsTree(FilteringLogic.And);
@@ -109,6 +110,60 @@ ngAfterViewInit(): void {
     this.@@igObjectRef.advancedFilteringExpressionsTree = tree;
 }
 ```
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+```TypeScript
+ngAfterViewInit(): void {
+    const tree = new FilteringExpressionsTree(FilteringLogic.Or);
+    tree.filteringOperands.push({
+        fieldName: 'Artist',
+        condition: IgxStringFilteringOperand.instance().condition('startsWith'),
+        conditionName: IgxStringFilteringOperand.instance().condition('startsWith').name,
+        searchVal: 'A'
+    });
+    const subTree = new FilteringExpressionsTree(FilteringLogic.And);
+    subTree.filteringOperands.push({
+        fieldName: 'GrammyAwards',
+        condition: IgxNumberFilteringOperand.instance().condition('greaterThanOrEqualTo'),
+        conditionName: IgxNumberFilteringOperand.instance().condition('greaterThanOrEqualTo').name,
+        searchVal: 1
+    });
+    subTree.filteringOperands.push({
+        fieldName: 'Debut',
+        condition: IgxNumberFilteringOperand.instance().condition('lessThan'),
+        conditionName: IgxNumberFilteringOperand.instance().condition('lessThan').name,
+        searchVal: 2000
+    });
+    tree.filteringOperands.push(subTree);
+    this.@@igObjectRef.advancedFilteringExpressionsTree = tree;
+}
+```
+
+The advanced filtering in the `IgxHierarchicalGrid` can be used to filter root grid data based on child grids data using the *IN / NOT-IN* operators. This way, subqueries can be created to define more complex filtering logic. More information about this functionality can be found in [`Query Builder's Using Sub-Queries section`](../query-builder-model.md#using-sub-queries). Here's a sample [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) with a subquery:
+
+```TypeScript
+ngAfterViewInit(): void {
+    const albumsTree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'Albums', ['Artist']);
+    albumsTree.filteringOperands.push({
+        fieldName: 'LaunchDate',
+        condition: IgxDateFilteringOperand.instance().condition('after'),
+        conditionName: IgxDateFilteringOperand.instance().condition('after').name,
+        searchVal: new Date(2017, 1, 1)
+    });
+    const tree = new FilteringExpressionsTree(FilteringLogic.And);
+    tree.filteringOperands.push({
+        fieldName: 'Artist',
+        condition: IgxStringFilteringOperand.instance().condition('inQuery'),
+        conditionName: IgxStringFilteringOperand.instance().condition('inQuery').name,
+        searchTree: albumsTree
+    });
+    this.@@igObjectRef.advancedFilteringExpressionsTree = tree;
+}
+```
+
+If remote data is used, the [`schema`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#schema) property of the `IgxHierarchicalGrid` should be set. Please refer to [`Load on Demand`](../hierarchicalgrid/load-on-demand.md) topic for detailed guidance.
+}
 
 In case you don't want to show the @@igComponent toolbar, you could use the [`openAdvancedFilteringDialog`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#openAdvancedFilteringDialog) and [`closeAdvancedFilteringDialog`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#closeAdvancedFilteringDialog) methods to open and close the advanced filtering dialog programmatically.
 
@@ -167,7 +222,7 @@ It's super easy to configure the advanced filtering to work outside of the @@igC
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-advanced-filtering-dialog [grid]="hierarchicalgrid1">
+<igx-advanced-filtering-dialog [grid]="hierarchicalGrid">
 </igx-advanced-filtering-dialog>
 ```
 }
