@@ -426,6 +426,7 @@
     - name: Load on Demand
       href: hierarchicalgrid/load-on-demand.md
       new: false
+      updated: true
     - name: Editing
       href: hierarchicalgrid/editing.md
       new: false
@@ -467,6 +468,7 @@
       - name: Advanced Filtering
         href: hierarchicalgrid/advanced-filtering.md
         new: false
+        updated: true
     - name: Sorting
       href: hierarchicalgrid/sorting.md
       updated: false
