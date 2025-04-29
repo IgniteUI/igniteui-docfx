@@ -258,7 +258,7 @@ To get started with styling the button, we need to import the `index` file, wher
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) and accepts the `$foreground` and the `$background` parameters with their respective hover and focus parameters.
+Following the simplest approach, we create a new theme that extends the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) and accepts the `$background` parameter with its respective hover and focus parameters.
 
 Given the following markup:
 
@@ -272,17 +272,13 @@ We need to create a theme:
 
 ```scss
 $custom-button-theme: button-theme(
-  $foreground: #fdfdfd,
-  $hover-foreground: #fdfdfd,
-  $focus-foreground: #fdfdfd,
-  $background: #345779,
-  $hover-background: #2e4d6b,
-  $focus-background: #2e4d6b,
-  $disabled-foreground: #2e4d6b,
+  $background: #348ae0,
+  $hover-background: #2e7bc8,
+  $focus-background: #2e7bc8
 );
 ```
 
-Take a look at the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) section for a complete list of available parameters for styling any type of button.
+Take a look at the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) section for a complete list of available parameters for styling all button types.
 
 The last step is to pass the custom button theme in our application:
 
@@ -291,6 +287,32 @@ The last step is to pass the custom button theme in our application:
   @include css-vars($custom-button-theme);
 }
 ```
+
+You can also choose to style only buttons of a specific type - `flat`, `outlined`, `contained`, or `fab`.
+To do this, use the corresponding theme functions: [`flat-button-theme`]({environment:sassApiUrl}/index.html#function-flat-button-theme), [`outlined-button-theme`]({environment:sassApiUrl}/index.html#function-outlined-button-theme), [`contained-button-theme`]({environment:sassApiUrl}/index.html#function-contained-button-theme), and [`fab-button-theme`]({environment:sassApiUrl}/index.html#function-fab-button-theme)
+
+For example, given the following markup:
+
+```html
+<div class="my-contained-btn">
+  <button igxButton="contained">Contained button</button>
+</div>
+<div class="my-flat-btn">
+  <button igxButton="flat">Flat button</button>
+</div>
+```
+
+If you want to style only the `contained` button, you can use the [`contained-button-theme`]({environment:sassApiUrl}/index.html#function-flat-button-theme) function:
+
+```scss
+$custom-contained-theme: contained-button-theme(
+  $background: #348ae0,
+  $hover-background: #2e7bc8,
+  $focus-background: #2e7bc8
+);
+```
+
+As you can see, we only supply background color values, but the foreground colors change as well. This is thanks to the [`adaptive-contrast`]({environment:sassApiUrl}/index.html#function-adaptive-contrast) function used within the themes. When a background value is provided, the foreground color is automatically calculated to be either black or white, depending on which offers better contrast. If needed, this behavior can be overridden by passing specific color values to the corresponding `foreground` parameters.
 
 ### Demo
 
