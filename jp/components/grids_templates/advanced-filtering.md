@@ -81,8 +81,9 @@ _language: ja
 ```
 }
 
-高度なフィルタリングは、[`advancedFilteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#advancedFilteringExpressionsTree) 入力プロパティに保存される [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) を生成します。[`advancedFilteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#advancedFilteringExpressionsTree) プロパティを使用して、高度なフィルタリングの初期状態を設定できます。
+高度なフィルタリングは、[`advancedFilteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#advancedFilteringExpressionsTree) 入力プロパティに保存される [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) を生成します。このプロパティを使用して、高度なフィルタリングの初期状態を設定できます。
 
+@@if (igxName !== 'IgxHierarchicalGrid') {
 ```typescript
 ngAfterViewInit(): void {
     const tree = new FilteringExpressionsTree(FilteringLogic.And);
@@ -110,6 +111,60 @@ ngAfterViewInit(): void {
     this.@@igObjectRef.advancedFilteringExpressionsTree = tree;
 }
 ```
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+```TypeScript
+ngAfterViewInit(): void {
+    const tree = new FilteringExpressionsTree(FilteringLogic.Or);
+    tree.filteringOperands.push({
+        fieldName: 'Artist',
+        condition: IgxStringFilteringOperand.instance().condition('startsWith'),
+        conditionName: IgxStringFilteringOperand.instance().condition('startsWith').name,
+        searchVal: 'A'
+    });
+    const subTree = new FilteringExpressionsTree(FilteringLogic.And);
+    subTree.filteringOperands.push({
+        fieldName: 'GrammyAwards',
+        condition: IgxNumberFilteringOperand.instance().condition('greaterThanOrEqualTo'),
+        conditionName: IgxNumberFilteringOperand.instance().condition('greaterThanOrEqualTo').name,
+        searchVal: 1
+    });
+    subTree.filteringOperands.push({
+        fieldName: 'Debut',
+        condition: IgxNumberFilteringOperand.instance().condition('lessThan'),
+        conditionName: IgxNumberFilteringOperand.instance().condition('lessThan').name,
+        searchVal: 2000
+    });
+    tree.filteringOperands.push(subTree);
+    this.@@igObjectRef.advancedFilteringExpressionsTree = tree;
+}
+```
+
+`IgxHierarchicalGrid` の高度なフィルタリングでは、*IN / NOT-IN* 演算子を使用して、子グリッド データに基づいてルート グリッド データをフィルタリングできます。この演算子により、サブクエリを作成して、より複雑なフィルタリング ロジックを定義できます。この機能の詳細については、[クエリ ビルダーの「サブクエリの使用」セクション](../query-builder-model.md#サブクエリの使用)を参照してください。以下はサブクエリを含むサンプル [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) です。
+
+```TypeScript
+ngAfterViewInit(): void {
+    const albumsTree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'Albums', ['Artist']);
+    albumsTree.filteringOperands.push({
+        fieldName: 'LaunchDate',
+        condition: IgxDateFilteringOperand.instance().condition('after'),
+        conditionName: IgxDateFilteringOperand.instance().condition('after').name,
+        searchVal: new Date(2017, 1, 1)
+    });
+    const tree = new FilteringExpressionsTree(FilteringLogic.And);
+    tree.filteringOperands.push({
+        fieldName: 'Artist',
+        condition: IgxStringFilteringOperand.instance().condition('inQuery'),
+        conditionName: IgxStringFilteringOperand.instance().condition('inQuery').name,
+        searchTree: albumsTree
+    });
+    this.@@igObjectRef.advancedFilteringExpressionsTree = tree;
+}
+```
+
+リモート データを使用する場合は、`IgxHierarchicalGrid` の [`schema`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#schema) プロパティを設定する必要があります。詳細なガイダンスについては、[`ロードオンデマンド`](../hierarchicalgrid/load-on-demand.md)のトピックを参照してください。
+}
 
 @@igComponent ツールバーを表示したくない場合は、[`openAdvancedFilteringDialog`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#openAdvancedFilteringDialog) および [`closeAdvancedFilteringDialog`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#closeAdvancedFilteringDialog) メソッドを使用して、高度なフィルタリング ダイアログをコーディングを使用して開いたり閉じたりできます。
 
@@ -168,7 +223,7 @@ ngAfterViewInit(): void {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ```html
-<igx-advanced-filtering-dialog [grid]="hierarchicalgrid1">
+<igx-advanced-filtering-dialog [grid]="hierarchicalGrid">
 </igx-advanced-filtering-dialog>
 ```
 }
