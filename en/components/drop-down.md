@@ -505,21 +505,14 @@ Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`drop-down-theme`]({environment:sassApiUrl}/index.html#function-drop-down-theme) and accepts some of the default theme's parameters.
+Following the simplest approach, we create a new theme that extends the [`drop-down-theme`]({environment:sassApiUrl}/index.html#function-drop-down-theme) and accepts some of the default theme's parameters. When you provide a certain background color, the theme automatically calculates the state colors and appropriate contrasting foregrounds. By setting the `$background` property, you'll get a fully styled dropdown.
 
 ```scss
 $custom-drop-down-theme: drop-down-theme(
-  $background-color: #fdfdfd,
   $header-text-color: #345779,
   $item-text-color: #2dabe8,
-  $selected-item-background: #345779,
-  $selected-item-text-color: #fdfdfd,
-  $selected-hover-item-background: #345779,
-  $selected-hover-item-text-color: #fdfdfd,
-  $selected-focus-item-background: #345779,
-  $selected-focus-item-text-color: #fdfdfd,
-  $hover-item-background: rgba(0, 0, 0, 0.12),
   $hover-item-text-color: #345779,
+  $selected-item-background: #345779,
 );
 ```
 

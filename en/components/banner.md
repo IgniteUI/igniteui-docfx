@@ -265,13 +265,11 @@ First, in order to use the functions exposed by the theme engine, we need to imp
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`banner-theme`]({environment:sassApiUrl}/index.html#function-banner-theme) and accepts the `$banner-message-color`, `$banner-background` and the `$banner-illustration-color` parameters.
+Following the simplest approach, we create a new theme that extends the [`banner-theme`]({environment:sassApiUrl}/index.html#function-banner-theme) and specifying just the `$banner-background`. Based on this value, the `$banner-message-color` and `$banner-illustration-color` are automatically set to black or white, depending on which provides better contrast with the background.
 
 ```scss
 $custom-banner-theme: banner-theme(
-  $banner-message-color: #151515,
-  $banner-background: #dedede,
-  $banner-illustration-color: #666666
+  $banner-background: #011627,
 );
 ```
 
