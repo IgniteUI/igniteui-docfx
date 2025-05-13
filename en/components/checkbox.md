@@ -220,16 +220,14 @@ To get started with styling the checkbox, we need to import the `index` file, wh
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Then, we create a new theme that extends the [`checkbox-theme`]({environment:sassApiUrl}/index.html#function-checkbox-theme) and use some of its parameters to style the checkbox's items:
+Then, we create a new theme that extends the [`checkbox-theme`]({environment:sassApiUrl}/index.html#function-checkbox-theme) and setting parameters to style the checkbox elements. By specifying the `$empty-color` and `$fill-color`, the theme automatically calculates appropriate state colors and contrast foregrounds. You can still override any other parameter with custom values as needed.
 
 ```scss
 // in styles.scss
 $custom-checkbox-theme: checkbox-theme(
-  $border-radius: 10px,
-  $label-color: #011627,
-  $empty-color: #ECAA53,
-  $fill-color: #ECAA53,
-  $tick-color: #011627,
+  $empty-color: #ecaa53,
+  $fill-color: #ecaa53,
+  $border-radius: 5px
 );
 ```
 

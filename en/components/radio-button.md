@@ -155,15 +155,12 @@ To get started with styling the radio buttons, we need to import the `index` fil
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`radio-theme`]({environment:sassApiUrl}/index.html#function-radio-theme) and accepts some of the default theme's parameters:
+Following the simplest approach, we create a new theme that extends the [`radio-theme`]({environment:sassApiUrl}/index.html#function-radio-theme). By providing just two key parameters — `$empty-color` and `$fill-color` — you can generate a fully styled radio button. These values serve as the foundation for the theme, by providing them it will automatically compute all the required foreground and background colors for various states (e.g., hover, selected, disabled).
 
 ```scss
 $custom-radio-theme: radio-theme(
-  $disabled-color: lightgray,
-  $empty-color: #345779,
+  $empty-color:  #345779,
   $fill-color: #2dabe8,
-  $fill-color-hover: #2dabe8,
-  $fill-hover-border-color: #2dabe8,
 );
 ```
 

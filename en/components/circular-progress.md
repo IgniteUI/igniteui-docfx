@@ -243,7 +243,6 @@ Following the simplest approach, we create a new theme that extends the [`progre
 
 ```scss
 $custom-theme: progress-circular-theme(
-  $base-circle-color: lightgray,
   $fill-color-default: rgb(32, 192, 17),
 );
 ```

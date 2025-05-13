@@ -283,6 +283,7 @@ The Query Builder takes its background color from the its theme, using the `back
 ```scss
 
 $custom-query-builder: query-builder-theme(
+  $schema: $dark-material-schema,
   $background: #292826,
   ...
 );
@@ -291,25 +292,24 @@ $custom-query-builder: query-builder-theme(
 Since we have other components inside the Query Builder, such as buttons, chips, dropdowns and inputs, we need to create a separate theme for each one:
 
 ```scss
-$custom-button: button-theme(
+$custom-button: flat-button-theme(
   $schema: $dark-material-schema,
-  $background: #292826,
   $foreground: #ffcd0f,
-  ...
 );
 
 $custom-input-group: input-group-theme(
+  $schema: $dark-material-schema,
   $focused-secondary-color: #ffcd0f
 );
 
 $custom-chip: chip-theme(
+  $schema: $dark-material-schema,
   $background: #ffcd0f,
-  $text-color: #292826
 );
 
-$custom-icon-button: icon-button-theme(
-  $background: #ffcd0f,
-  $foreground: #292826
+$custom-icon-button: outlined-icon-button-theme(
+  $schema: $dark-material-schema,
+  $foreground: #ffcd0f,
 );
 ```
 
