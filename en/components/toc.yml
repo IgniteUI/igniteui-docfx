@@ -720,6 +720,9 @@
     - name: Chart Data Legend
       href: charts/features/chart-data-legend.md
       new: false
+    - name: Chart Data Annotations
+      href: charts/features/chart-data-annotations.md
+      new: false
     - name: Chart Data Tooltip
       href: charts/features/chart-data-tooltip.md
       new: false
