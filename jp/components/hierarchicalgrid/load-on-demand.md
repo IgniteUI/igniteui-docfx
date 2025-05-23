@@ -9,12 +9,10 @@ _language: ja
 
 [`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) は、要求するサーバーからのデータを最低限にすることによりすばやく描画できます。このため、ユーザーがビューで結果を確認でき、表示データをインタラクティブに操作できます。初期時にグリッドのデータのみが取得されて描画され、ユーザーが子グリッドを含む行を拡張した後のみ、特定の子グリッドのデータを取得します。このメカニズムはロードオンデマンドであらゆるリモートデータとの設定が簡単にできます。
 
-
-このトピックは、既に利用可能なリモート oData v4 サービスと通信してリモート サービス プロバイダーを作成し、ロードオンデマンドを設定する方法を説明します。以下は、デモと作成手順を示します。
+このトピックでは、データを [Northwind WebAPI](https://data-northwind.indigo.design/swagger/index.html) に要求してロードオンデマンドを構成する方法を説明します。以下は、デモと作成手順を示します。
 
 
 ## Angular 階層グリッド ロードオンデマンドの例
-
 
 <code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -23,278 +21,196 @@ _language: ja
 
 <div class="divider--half"></div>
 
-### リモート サービス プロバイダー
+### 階層グリッドのセットアップ
 
-はじめにサービス プロバイダーを準備して階層グリッドに必要なデータを取得します。
-
-#### 基本データの取得
-
-ブラウザーが提供する XMLHttpRequest インターフェイス を使用した HTTP プロトコルでバックエンドサービスと通信します。簡易的なクライアント HTTP API を提供する Angular の [`HttpClient`](https://angular.io/api/common/http/HttpClient) モジュールを使用してより簡単に行うことができます。データを取得にはサービスのシンプルなメソッドが必要となります。
-
-
-```typescript
-public getData(dataState): Observable<any[]> {
-    return this.http.get(this.buildUrl(dataState)).pipe(
-        map(response => response['value']),
-    );
-}
-```
-
-`this.http` は、`HttpCLient` モジュールの参照となり、`buildUrl()` は取得したデータに基づいて url を生成するメソッドになります。実行された非同期のため、返信をマップして結果値のみ取得し、Observable を返します。それにより後でサブスクライブし、アプリケーションで処理を進めてグリッドへ渡すことができます。
-
-#### 要求 URL をビルドします。
-
-次に GET 要求の URL をビルドする方法を定義します。メイン グリッドのデータを取得できますが含まれる子グリッドのデータも取得できます。ルート レベルに `https://services.odata.org/V4/Northwind/Northwind.svc/` の `Customers` データを使用し、それ以外のレベルには `Order` と `Order_Details` を使用します。このモデルはアプリケーションごとに異なりますが、ここでは以下を使用します。
-
-<img class="responsive-img" src="../../images/hgrid-database.jpg" />
-
- はじめに必要となるのはグリッドのデータ、親業のプライマリキーとその一意の ID をどこから取得するかを決定するテーブルの `key` が必要です。インターフェイス `IDataState` でこれらすべてを定義します。例:
-
-```typescript
-export interface IDataState {
-    key: string;
-    parentID: any;
-    parentKey: string;
-    rootLevel: boolean;
-}
-
-//...
-public buildUrl(dataState: IDataState): string {
-    let qS = "";
-    if (dataState) {
-        qS += `${dataState.key}?`;
-
-        if (!dataState.rootLevel) {
-            if (typeof dataState.parentID === "string") {
-                qS += `$filter=${dataState.parentKey} eq '${dataState.parentID}'`;
-            } else {
-                qS += `$filter=${dataState.parentKey} eq ${dataState.parentID}`;
-            }
-        }
-    }
-    return `${this.url}${qS}`;
-}
-//...
-```
-
-#### 結果
-
-最後に `remote-lod.service.ts` は以下のようになります。
-
-
-```typescript
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-
-export interface IDataState {
-    key: string;
-    parentID: any;
-    parentKey: string;
-    rootLevel: boolean;
-}
-
-@Injectable()
-export class RemoteLoDService {
-    url = `https://services.odata.org/V4/Northwind/Northwind.svc/`;
-
-    constructor(private http: HttpClient) { }
-
-    public getData(dataState: IDataState): Observable<any[]> {
-        return this.http.get(this.buildUrl(dataState)).pipe(
-            map((response) => response['value'])
-        );
-    }
-
-    public buildUrl(dataState: IDataState): string {
-        let qS = "";
-        if (dataState) {
-            qS += `${dataState.key}?`;
-
-            if (!dataState.rootLevel) {
-                if (typeof dataState.parentID === "string") {
-                    qS += `$filter=${dataState.parentKey} eq '${dataState.parentID}'`;
-                } else {
-                    qS += `$filter=${dataState.parentKey} eq ${dataState.parentID}`;
-                }
-            }
-        }
-        return `${this.url}${qS}`;
-    }
-}
-```
-
-### 階層グリッド設定
-
-次に階層グリッドを設定してリモート サービス プロバイダーに接続します。
-
-#### テンプレートの地祇
-
-最初に階層グリッド テンプレートを必要な階層レベルで定義します。customers のルート グリッド [`primaryKey`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#primaryKey) は最初のレベルの orders の `CustomerID` です。`OrderID` と各 order 詳細の `ProductID` です。各データベース テーブルとキーで初期テンプレートを定義します。
+階層グリッドのセットアップを行いましょう。
+最初に階層グリッド テンプレートを必要な階層レベルで定義します。ルート グリッド (顧客データ) の [`primaryKey`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#primaryKey) は `customerId`、第 1 階層の注文データでは `orderId`、さらにその詳細には `productId` をそれぞれ主キーとして使用します。各データベース テーブルとキーで初期テンプレートを定義します。
 
 ```html
-<igx-hierarchical-grid #hGrid [primaryKey]="'CustomerID'" [autoGenerate]="false" [height]="'600px'" [width]="'100%'">
-    <igx-column field="CustomerID" [hidden]="true"></igx-column>
-    <igx-column field="CompanyName"></igx-column>
-    <igx-column field="ContactName"></igx-column>
-    <igx-column field="ContactTitle"></igx-column>
-    <igx-column field="Country"></igx-column>
-    <igx-column field="Phone"></igx-column>
-    <igx-row-island [key]="'Orders'" [primaryKey]="'OrderID'" [autoGenerate]="false" >
-        <igx-column field="OrderID" [hidden]="true"></igx-column>
-        <igx-column field="ShipCountry"></igx-column>
-        <igx-column field="ShipCity"></igx-column>
-        <igx-column field="ShipAddress"></igx-column>
-        <igx-column field="OrderDate"></igx-column>
-        <igx-row-island [key]="'Order_Details'" [primaryKey]="'ProductID'" [autoGenerate]="false" >
-            <igx-column field="ProductID" [hidden]="true"></igx-column>
-            <igx-column field="Quantity"></igx-column>
-            <igx-column field="UnitPrice"></igx-column>
-            <igx-column field="Discount"></igx-column>
+<igx-hierarchical-grid #hGrid [primaryKey]="'customerId'" [autoGenerate]="true" [height]="'600px'" [width]="'100%'">
+    <igx-row-island [key]="'Orders'" [primaryKey]="'orderId'" [autoGenerate]="true">
+        <igx-row-island [key]="'Details'" [primaryKey]="'productId'" [autoGenerate]="true">
         </igx-row-island>
     </igx-row-island>
 </igx-hierarchical-grid>
 ```
 
-ルート レベル階層グリッドと最終的にはその子のデータがテンプレートに必要となります。`#hGrid` 参照が使用できるため、コードでサービスからデータ取得後にルート グリッドのデータを簡単に設定できます。展開されている子にデータを設定する方法は異なります。
+コードでエンドポイントからデータを取得後に、`#hGrid` 参照を使用して、ルート グリッドのデータを簡単に設定できます。展開されている子にデータを設定する方法は異なります。
 
-行がはじめて展開されたときに新し子 `IgxHierarchicalGrid` が描画がされるため、データを設定するために新しく作成されたグリッドの参照を取得する必要があります。各 [`IgxRowIsland`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html) コンポーネントに [`gridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#gridCreated) イベントがあり、特定の子アイランドに新しい子グリッドが作成されたときに発生します。新しいグリッドの参照を取得するために使用でき、サービスからデータを要求して適用します。
+行がはじめて展開されたときに新しく子グリッド `IgxHierarchicalGrid` が描画されるため、データを設定するために新しく作成されたグリッドの参照を取得する必要があります。そのため、各 [`IgxRowIsland`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html) コンポーネントは、特定の子アイランドに新しい子グリッドが作成されたときに発生する [`gridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#gridCreated) イベントを提供します。このイベントを使用して、新しいグリッドの参照を取得し、エンドポイントにデータを要求して適用することができます。
 
-サービスをビルドしているためルートレベルの場合に情報のみが必要なため、すべてのアイランドに 1 メソッドを使用できます。このすべての情報には、イベント引数から直接またはイベントをトリガーする行アイランドからアクセスできます。 
+エンドポイントには、行アイランドのキー、親行の主キー、およびその一意の識別子のみが必要なため、すべての行アイランドに対して同じメソッドを使用できます。このすべての情報は、イベント引数から直接アクセスできます。 
 
-`gridCreated` を使用するメソッドに名前を付けます。イベント [`gridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#gridCreated) は [`parentID`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#parentID) プロパティ、[`owner`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#owner) として行アイランドへの参照、新しい子 [`grid`]({environment:angularApiUrl}/interfaces/igridcreatedeventargs.html#grid) プロパティを提供するため、最初の引数として渡されます。
-親行の `primaryKey` についての情報はありませんが、バインドした行アイランドに基づいて 2 つ目の引数として簡単に渡すことができます。 
+#### 読み込みインジケーターの設定
 
-変更を加えたテンプレート ファイル `hierarchical-grid-lod.component.html` は以下のようになります。
+空グリッドを表示する代わりに、データがまだ読み込み中であることをユーザーに示すことで、ユーザー エクスペリエンスを向上させることができます。その目的で、[`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) は、グリッドが空のときに表示できる読み込みインジケーターをサポートします。
+
+データが存在しない間は、[`isLoading`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#isloading) プロパティを `true` に設定することで読み込みインジケーターを表示します。データが読み込まれるまでルートグリッドにあらかじめ設定しますが、新しい子グリッドを作成する際にも必要です。テンプレートでは常にこれを `true` に設定できますが、サービスが空の配列を返す場合はインジケーターを非表示にして (`false` に設定して)、グリッドにデータがないことを表示します。
+
+最後に、[`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autoGenerate) プロパティを false に設定にし、マークアップで列コレクションを定義します。
+
+すべての変更を加えたテンプレート ファイル `hierarchical-grid-lod.component.html` は以下のようになります。
 
 ```html
-<igx-hierarchical-grid #hGrid [primaryKey]="'CustomerID'" [autoGenerate]="false" [height]="'600px'" [width]="'100%'">
-    <igx-column field="CustomerID" [hidden]="true"></igx-column>
-    <igx-column field="CompanyName"></igx-column>
-    <igx-column field="ContactName"></igx-column>
-    <igx-column field="ContactTitle"></igx-column>
-    <igx-column field="Country"></igx-column>
-    <igx-column field="Phone"></igx-column>
-    <igx-row-island [key]="'Orders'" [primaryKey]="'OrderID'" [autoGenerate]="false" (gridCreated)="gridCreated($event, 'CustomerID')">
-        <igx-column field="OrderID" [hidden]="true"></igx-column>
-        <igx-column field="ShipCountry"></igx-column>
-        <igx-column field="ShipCity"></igx-column>
-        <igx-column field="ShipAddress"></igx-column>
-        <igx-column field="OrderDate"></igx-column>
-        <igx-row-island [key]="'Order_Details'" [primaryKey]="'ProductID'" [autoGenerate]="false" (gridCreated)="gridCreated($event, 'OrderID')">
-            <igx-column field="ProductID" [hidden]="true"></igx-column>
-            <igx-column field="Quantity"></igx-column>
-            <igx-column field="UnitPrice"></igx-column>
-            <igx-column field="Discount"></igx-column>
+    <igx-hierarchical-grid #hGrid [data]="remoteData" [isLoading]="true" [primaryKey]="'customerId'" [autoGenerate]="false" [height]="'580px'" [width]="'100%'" [igxPreventDocumentScroll]="true" [allowAdvancedFiltering]="true" [schema]="schema" (advancedFilteringExpressionsTreeChange)="refreshRootGridData()">
+            <igx-grid-toolbar></igx-grid-toolbar>
+
+            <igx-column field="customerId" [dataType]="'string'"></igx-column>
+            <igx-column field="companyName" [dataType]="'string'"></igx-column>
+            <igx-column field="contactName" [dataType]="'string'"></igx-column>
+            <igx-column field="contactTitle" [dataType]="'string'"></igx-column>
+
+        <igx-row-island #rowIsland1 [key]="'Orders'" [primaryKey]="'orderId'" [autoGenerate]="false" (gridCreated)="gridCreated($event)">
+            <igx-column field="orderId"></igx-column>
+            <igx-column field="customerId"></igx-column>
+            <igx-column field="shipVia"></igx-column>
+            <igx-column field="freight"></igx-column>
+
+            <igx-row-island #rowIsland2 [key]="'Details'" [primaryKey]="'orderId'" [autoGenerate]="false" (gridCreated)="gridCreated($event)">
+                <igx-column field="orderId"></igx-column>
+                <igx-column field="productId"></igx-column>
+                <igx-column field="unitPrice"></igx-column>
+                <igx-column field="quantity"></igx-column>
+                <igx-column field="discount"></igx-column>
+            </igx-row-island>
         </igx-row-island>
-    </igx-row-island>
-</igx-hierarchical-grid>
+    </igx-hierarchical-grid>
 ```
 
-#### サービスへ接続
+### 高度なフィルタリング
 
-最後の手順の 1 つとして、以前作成したサービスに階層グリッドを接続することです。`Injectable` として定義するため、プロバイダーとしてアプリケーションへ渡すことができます。`ViewChild` クエリをデータに設定してルートグリッドへの参照も取得します。
+ロードオンデマンドで `IgxHierarchicalGrid` の高度なフィルタリングを使用するには、グリッドの [`schema`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#schema) プロパティを、階層構造を持つエンティティに設定し、子エンティティとフィールドをそのデータ タイプで指定する必要があります。これにより、子グリッドのデータが読み込まれる前にネストされたクエリを含むフィルタリング式を作成でき、グリッドはこれらのフィルタをデータに正しく解釈して適用することができます。
 
-````TypeScript
-@Component({
-    providers: [RemoteLoDService],
-    selector: "app-hierarchical-grid-lod",
-    styleUrls: ["./hierarchical-grid-lod.component.scss"],
-    templateUrl: "./hierarchical-grid-lod.component.html"
-})
-export class HierarchicalGridLoDSampleComponent {
-    @ViewChild("hGrid")
-    public hGrid: IgxHierarchicalGridComponent;
+この例では、これが正しい階層構造です:
 
-    constructor(private remoteService: RemoteLoDService) { }
-}
-````
+```TypeScript
+public schema: EntityType[] = [
+    {
+        name: 'Customers',
+        fields: [
+            { field: 'customerId', dataType: 'string' },
+            { field: 'companyName', dataType: 'string' },
+            { field: 'contactName', dataType: 'string' },
+            { field: 'contactTitle', dataType: 'string' }
+        ],
+        childEntities: [
+            {
+                name: 'Orders',
+                fields: [
+                    { field: 'customerId', dataType: 'string' },
+                    { field: 'orderId', dataType: 'number' },
+                    { field: 'employeeId', dataType: 'number' },
+                    { field: 'shipVia', dataType: 'string' },
+                    { field: 'freight', dataType: 'number' }
+                ],
+                childEntities: [
+                    {
+                        name: 'Details',
+                        fields: [
+                            { field: 'orderId', dataType: 'number' },
+                            { field: 'productId', dataType: 'number' },
+                            { field: 'unitPrice', dataType: 'number' },
+                            { field: 'quantity', dataType: 'number' },
+                            { field: 'discount', dataType: 'number' }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+];
+```
 
-グリッドがサービスのデータを要求して割り当てる前に描画されることを確認するために、`AfterViewInit` ライフサイクル フックを使用します。親がないため、`rootLevel` は `true` でそのキーのみをサービスの `getData` へ渡すことができます。サブスクライブする必要のある observable を返します。
+#### 初期フィルターの設定
 
-````TypeScript
-public ngAfterViewInit() {
-    this.remoteService.getData({ parentID: null, rootLevel: true, key: "Customers" }).subscribe((data) => {
-        this.hGrid.data = data;
-        this.hGrid.cdr.detectChanges();
+ルート グリッドが最初に読み込まれたときにフィルター処理されるように、グリッドに初期フィルタリング ルールを追加しましょう。[`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) を作成し、`ngOnInit` ライフサイクル フックを使用して `IgxHierarchicalGrid` の [`advancedFilteringExpressionsTree`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#advancedFilteringExpressionsTree) プロパティに設定します。
+
+例えば、注文の運賃が少なくとも `500` である顧客をフィルタリングするとします。フィルタリング式でネストされたクエリを作成する機能を利用すると、次のようになります:
+
+```TypeScript
+public ngOnInit() {
+    const ordersTree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'Orders', ['customerId']);
+    ordersTree.filteringOperands.push({
+        fieldName: 'freight',
+        ignoreCase: false,
+        condition: IgxNumberFilteringOperand.instance().condition('greaterThanOrEqualTo'),
+        conditionName: IgxNumberFilteringOperand.instance().condition('greaterThanOrEqualTo').name,
+        searchVal: '500'
     });
+
+    const customersTree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'Customers', ['customerId', 'companyName', 'contactName', 'contactTitle']);
+    customersTree.filteringOperands.push({
+        fieldName: 'customerId',
+        condition: IgxStringFilteringOperand.instance().condition('inQuery'),
+        conditionName: IgxStringFilteringOperand.instance().condition('inQuery').name,
+        ignoreCase: false,
+        searchTree: ordersTree
+    });
+    this.hGrid.advancedFilteringExpressionsTree = customersTree;
 }
-````
+```
 
-次に作成した新しい子グリッドのデータを要求する `gridCreated` メソッドを作成する必要があります。ルート レベル グリッド データの取得と同様に、ここでは`parentID` や `parentKey` などの情報を渡す必要があります。`rootLevel` はいずれの子も `false` です。
+### エンドポイントへの接続
 
-````TypeScript
-public gridCreated(event: IGridCreatedEventArgs, _parentKey: string) {
-    const dataState = {
-        key: event.owner.key,
-        parentID: event.parentID,
-        parentKey: _parentKey,
-        rootLevel: false
-    };
-    this.remoteService.getData(dataState).subscribe(
-        (data) => {
-            event.grid.data = data;
-            event.grid.cdr.detectChanges();
-        }
-    );
-}
-````
+ブラウザーが提供する XMLHttpRequest インターフェイス を使用して、HTTP プロトコルでエンドポイントと通信します。これをより簡単に行うために、簡素化されたクライアント HTTP API を提供する Angular の [`HttpClient`](https://angular.io/api/common/http/HttpClient) モジュールを使用します。
 
-これにより、アプリケーションの設定はほぼ完了です。最後の手順は、空グリッドを表示する代わりにユーザーにデータがまだ読み込み中であることを通知してユーザー エクスペリエンスを向上します。 [`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) は、グリッドが空のときに表示できるインジケーターの読み込みサポートします。新しいデータが取得されると読み込みインジケーターが非表示となりデータが描画されます。 
+#### ルート グリッド データの取得
 
-#### 読み込み通知の設定
+[Northwind WebAPI](https://data-northwind.indigo.design/swagger/index.html) は、`IFilteringExpressionsTree` をパラメーターとして受け入れる POST エンドポイントを提供します。これを使用して、`IgxHierarchicalGrid` の高度なフィルタリング機能を活用し、ルート グリッドのレコードをフィルターします。これを `refreshRootGridData` メソッドで実行します。
 
-[`IgxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) は、[`isLoading`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#isLoading) プロパティを `true` に設定して読み込みインジケーターを表示できます。データが読み込まれるまでルートグリッドにあらかじめ設定しますが、新しい子グリッドを作成する際にも必要です。テンプレートで常に `true` に設定できますが、`false` に設定してサービスが空配列を返した場合は非表示にしてデータのないグリッドを表示できます。 
-
-以下は `hierarchical-grid-lod.component.ts` の最終バージョンです。
-
-````TypeScript
-import { AfterViewInit, Component, ViewChild } from "@angular/core";
-import {
-    IGridCreatedEventArgs,
-    IgxHierarchicalGridComponent,
-    IgxRowIslandComponent
-} from "igniteui-angular";
-import { RemoteLoDService } from "../services/remote-lod.service";
-
-@Component({
-    providers: [RemoteLoDService],
-    selector: "app-hierarchical-grid-lod",
-    styleUrls: ["./hierarchical-grid-lod.component.scss"],
-    templateUrl: "./hierarchical-grid-lod.component.html"
-})
-export class HierarchicalGridLoDSampleComponent implements AfterViewInit {
-    @ViewChild("hGrid")
-    public hGrid: IgxHierarchicalGridComponent;
-
-    constructor(private remoteService: RemoteLoDService) { }
-
-    public ngAfterViewInit() {
-        this.hGrid.isLoading = true;
-        this.remoteService.getData({ parentID: null, rootLevel: true, key: "Customers" }).subscribe((data) => {
+```typescript
+public refreshRootGridData() {
+    const tree = this.hGrid.advancedFilteringExpressionsTree;
+    this.hGrid.isLoading = true;
+    if (tree) {
+        this.http.post(`${API_ENDPOINT}/QueryBuilder/ExecuteQuery`, tree).subscribe(data =>{
+            this.remoteData = Object.values(data)[0];
             this.hGrid.isLoading = false;
-            this.hGrid.data = data;
+            this.hGrid.cdr.detectChanges();
+        });
+    } else {
+        this.http.get(`${API_ENDPOINT}/Customers`).subscribe(data => {
+            this.remoteData = Object.values(data);
+            this.hGrid.isLoading = false;
             this.hGrid.cdr.detectChanges();
         });
     }
+}
+```
 
-    public gridCreated(event: IGridCreatedEventArgs, _parentKey: string) {
-        const dataState = {
-            key: event.owner.key,
-            parentID: event.parentID,
-            parentKey: _parentKey,
-            rootLevel: false
-        };
-        event.grid.isLoading = true;
-        this.remoteService.getData(dataState).subscribe(
-            (data) => {
-                event.grid.isLoading = false;
-                event.grid.data = data;
-                event.grid.cdr.detectChanges();
-            }
-        );
-    }
+ご覧のとおり、`this.http` は `HttpCLient` モジュールへの参照になります。`subscribe` メソッドは Angular の Observable の一部であり、HTTP リクエストからの非同期応答を処理するために使用されます。データが受信されると、取得したデータを関連するグリッドに割り当て、読み込み状態を false に更新し、変更検出をトリガーして UI に変更が反映されるようにします。
+
+ルート グリッドが初期表示された後にデータを読み込むために、`ngAfterViewInit` ライフサイクル フックを使用して `refreshRootGridData` メソッドを呼び出します。
+
+````TypeScript
+public ngAfterViewInit() {
+    this.refreshRootGridData();
+}
+````
+
+#### 子グリッド データの取得
+
+次に、子グリッドのデータを取得するために、GET リクエストの URL をどのように構築するかを定義します。これはテーブル間の関係を視覚的に表現したものです。
+
+<img class="responsive-img" src="../../images/hgrid-database.jpg" />
+
+最後に、作成された新しい子グリッドのデータを要求する `gridCreated` メソッドを実装する必要があります。これはルート レベルのグリッド データを取得する場合と似ていますが、今回はイベント [`gridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#gridCreated) で提供されたデータを使用し、それを使用して URL を構築します。
+
+````TypeScript
+public gridCreated(event: IGridCreatedEventArgs) {
+    event.grid.isLoading = true;
+    const url = this.buildUrl(event);
+    this.http.get(url).subscribe(data => {
+        event.grid.data = Object.values(data);
+        event.grid.isLoading = false;
+        this.hGrid.cdr.detectChanges();
+    });
+}
+
+private buildUrl(event: IGridCreatedEventArgs) {
+    const parentKey = (event.grid.parent as any).key ?? this.schema[0].name;
+    const url = `${API_ENDPOINT}/${parentKey}/${event.parentID}/${event.owner.key}`;
+    return url;
 }
 ````
 

@@ -427,6 +427,7 @@
     - name: ロードオンデマンド
       href: hierarchicalgrid/load-on-demand.md
       new: false
+      updated: true
     - name: 編集
       href: hierarchicalgrid/editing.md
       new: false
@@ -468,6 +469,7 @@
       - name: 高度なフィルタリング
         href: hierarchicalgrid/advanced-filtering.md
         new: false
+        updated: true
     - name: ソート
       href: hierarchicalgrid/sorting.md
       updated: false
