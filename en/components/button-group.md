@@ -257,19 +257,11 @@ To get started with styling the button group, we need to import the `index` file
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`button-group-theme`]({environment:sassApiUrl}/index.html#function-button-group-theme) and accepts some of the parameters that style the button group's items in their different states.
+Following the simplest approach, we create a new theme that extends the [`button-group-theme`]({environment:sassApiUrl}/index.html#function-button-group-theme) and specifying just the `$item-background`. Based on this value, the theme will automatically compute appropriate state colors, contrast foregrounds, and borders for the button group. Of course, you're still free to override any of the theme parameters with custom values if needed.
 
 ```scss
 $custom-button-group: button-group-theme(
-  $item-text-color: #fdfdfd,
-  $item-background: #2f4d6a,
-  $item-hover-text-color: #fdfdfd,
-  $item-hover-background: #1f3347,
-  $item-selected-text-color: #fdfdfd,
-  $item-selected-background: #1f3347,
-  $item-selected-hover-background: #1f3347,
-  $disabled-text-color: gray,
-  $disabled-background-color: lightgray,
+  $item-background: #57a5cd,
 );
 ```
 

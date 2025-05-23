@@ -140,12 +140,12 @@ To get started with styling the switch, we need to import the `index` file, wher
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Then, we create a new theme that extends the [`switch-theme`]({environment:sassApiUrl}/index.html#function-switch-theme) and use some of its parameters to style the switch's items:
+Then, we create a new theme that extends the [`switch-theme`]({environment:sassApiUrl}/index.html#function-switch-theme) and by providing just two parameters - `$thumb-off-color` and `$thumb-on-color` you can get a fully styled switch, as the theme generates all the rest of the necessary colors based on these two, you can of course override any of the other parameters for a customized look:
 
 ```scss
 $custom-switch-theme: switch-theme(
+  $thumb-off-color: #7cadd5,
   $thumb-on-color: #ecaa53,
-  $track-on-color: #f0cb9c,
 );
 ```
 

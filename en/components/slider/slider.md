@@ -490,23 +490,15 @@ To customize the Slider, you first need to import the `index` file, where all st
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Next, we have to create a new theme that extends the `slider-theme` and pass the parameters which we'd like to change:
+Next, we have to create a new theme that extends the `slider-theme` and pass the parameters which we'd like to change. By providing just the `$track-color` or `$thumb-color` parameter, the theme will automatically generate all related colors for the track and thumb, and their various interaction states.
+
+You can also override additional properties, such as tick colors and labels, for more precise control.
 
 ```scss
 $custom-slider-theme: slider-theme(
-  $track-color: #ff7400,
-  $track-hover-color: #ff7400,
-
   $thumb-color: #ff7400,
-
-  $base-track-color: #ddd,
-  $base-track-hover-color: #ccc,
-
   $tick-label-color: #b246c2,
-  $tick-label-color-tall: #ff7400,
-
-  $tick-color: #b246c2,
-  $tick-color-tall: #ff7400,
+  $tick-color: #b246c2
 );
 ```
 

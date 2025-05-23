@@ -286,11 +286,12 @@ Using the [`Ignite UI for Angular Theming`](themes/index.md), we can greatly alt
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`combo-theme`]({environment:sassApiUrl}/index.html#function-combo-theme) and accepts the `$search-separator-border-color` parameter:
+Following the simplest approach, we create a new theme that extends the [`combo-theme`]({environment:sassApiUrl}/index.html#function-combo-theme). By setting the `$toggle-button-background`, the theme automatically determines suitable state colors and contrast foregrounds for the button. You can also specify additional parameters, such as `$search-separator-border-color`:
 
 ```scss
 $custom-combo-theme: combo-theme(
-  $search-separator-border-color: #1a5214
+  $search-separator-border-color: #1d3743,
+  $toggle-button-background: #57a5cd,
 );
 ```
 
@@ -298,27 +299,13 @@ The [`IgxComboComponent`]({environment:angularApiUrl}/classes/igxcombocomponent.
 
 ```scss
 $custom-drop-down-theme: drop-down-theme(
-  $background-color: #d9f5d6,
-  $header-text-color: #1a5214,
-  $item-text-color: #1a5214,
-
-  $focused-item-background: #72da67,
-  $focused-item-text-color: #1a5214,
-  $hover-item-background: #a0e698,
-  $hover-item-text-color: #1a5214,
-
-  $selected-item-background: #a0e698,
-  $selected-item-text-color: #1a5214,
-  $selected-hover-item-background: #72da67,
-  $selected-hover-item-text-color: #1a5214,
-  $selected-focus-item-background: #72da67,
-  $selected-focus-item-text-color: #1a5214,
+  $background-color: #57a5cd,
 );
 
 $custom-checkbox-theme: checkbox-theme(
   $border-radius: 10px,
-  $fill-color: #1a5214,
-  $empty-color: #1a5214,
+  $fill-color: #1d3743,
+  $empty-color: #1d3743,
 );
 ```
 
