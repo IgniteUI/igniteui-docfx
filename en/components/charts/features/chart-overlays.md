@@ -81,21 +81,6 @@ For example, you can use `DataAnnotationSliceLayer`, [`IgxValueOverlayComponent`
 </code-view>
 
 
-### Rendering Overlay Text
-
-The following code snippet demonstrates how to render a comparison of three annotation layers as shown in the picture above.
-
-<div class="divider--half"></div>
-
-```html
-<igx-data-chart
-    [dataSource]="data">
-</igx-data-chart>
-```
-
-```ts
-```
-
 ### Styling Overlay Text
 
 This code example shows how to style and customize Overlay Text on
