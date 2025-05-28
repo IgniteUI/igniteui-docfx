@@ -51,7 +51,7 @@ Next, you need to open the **MyAppName** folder in **VS Code** app and install t
 *   **npm install --save igniteui-angular-charts igniteui-angular-core**
 *   **npm install --save igniteui-angular-excel igniteui-angular-core**
 *   **npm install --save igniteui-angular-gauges igniteui-angular-core**
-*   **npm install --save igniteui-angular-grids igniteui-angular-core**
+*   **npm install --save igniteui-angular igniteui-angular-core**
 *   **npm install --save igniteui-angular-maps igniteui-angular-core**
 *   **npm install --save igniteui-angular-spreadsheet igniteui-angular-core**
 
@@ -60,7 +60,7 @@ Or
 *   **yarn add igniteui-angular-charts igniteui-angular-core**
 *   **yarn add igniteui-angular-excel igniteui-angular-core**
 *   **yarn add igniteui-angular-gauges igniteui-angular-core**
-*   **yarn add igniteui-angular-grids igniteui-angular-core**
+*   **yarn add igniteui-angular igniteui-angular-core**
 *   **yarn add igniteui-angular-maps igniteui-angular-core**
 *   **yarn add igniteui-angular-spreadsheet igniteui-angular-core**
 
@@ -78,7 +78,7 @@ What if you want to use Ignite UI for Angular in an existing Angular CLI project
 *   **npm install --save igniteui-angular-charts igniteui-angular-core**
 *   **npm install --save igniteui-angular-excel igniteui-angular-core**
 *   **npm install --save igniteui-angular-gauges igniteui-angular-core**
-*   **npm install --save igniteui-angular-grids igniteui-angular-core**
+*   **npm install --save igniteui-angular igniteui-angular-core**
 *   **npm install --save igniteui-angular-maps igniteui-angular-core**
 *   **npm install --save igniteui-angular-spreadsheet igniteui-angular-core**
 
@@ -87,7 +87,7 @@ Or
 *   **yarn add igniteui-angular-charts igniteui-angular-core**
 *   **yarn add igniteui-angular-excel igniteui-angular-core**
 *   **yarn add igniteui-angular-gauges igniteui-angular-core**
-*   **yarn add igniteui-angular-grids igniteui-angular-core**
+*   **yarn add igniteui-angular igniteui-angular-core**
 *   **yarn add igniteui-angular-maps igniteui-angular-core**
 *   **yarn add igniteui-angular-spreadsheet igniteui-angular-core**
 
