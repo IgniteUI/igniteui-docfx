@@ -36,7 +36,7 @@ npm install igniteui-angular-charts
 npm install igniteui-angular-core
 npm install igniteui-angular-dashboards
 npm install igniteui-angular-gauges
-npm install igniteui-angular-grids
+npm install igniteui-angular-data-grids
 npm install igniteui-angular-inputs
 npm install igniteui-angular-layouts
 npm install igniteui-angular-maps

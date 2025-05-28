@@ -127,6 +127,12 @@ Ignite UI for Angular では、**DataToolTip** は、シリーズの値とタイ
 </code-view>
 
 
+## レイアウト モード
+
+凡例項目は、[`layoutMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#layoutMode) プロパティを使って垂直または表形式の構造に配置できます。デフォルト値は `Table` で、以前のリリースと同じ外観と操作性を維持します。
+
+例: <img src="../../../images/general/layout_mode.png" />
+
 ## Angular データ ツールチップのスタイル設定
 
 **DataToolTip** は、各タイプの列をスタイル設定するためのプロパティを提供します。これらの各プロパティ名は、Title、Label、Value、Units で始まり、テキストの色、フォント、およびマージンのスタイルを設定できます。たとえば、これらのそれぞれのテキストの色を設定する場合は、[`dataToolTipTitleTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipTitleTextColor)、[`dataToolTipLabelTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipLabelTextColor)、[`dataToolTipValueTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueTextColor)、および [`dataToolTipUnitsTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipUnitsTextColor) プロパティを設定します。
