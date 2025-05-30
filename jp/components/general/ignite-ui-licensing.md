@@ -93,6 +93,15 @@ Infragistics アカウントにログインするユーザー名およびパス�
 >[!NOTE]
 > `npm` はユーザー名で `"@"` の使用を許可しません。ユーザー名が Infragistics アカウントのメール アドレスであるため、`"@"` 記号を含みます。この制限を回避するには、`"@"` 記号の代わりに `"!!"` (2 つの感嘆符) を使用します。たとえば、ユーザー名が `"username@example.com"` の場合、`"username!!example.com"` と入力します。
 
+> [!NOTE]
+> **macOS シェルの動作**: macOS を使用していて、`npm config set` を介して `:_auth` トークンを手動で設定する場合は、次のように**トークンを二重引用符で囲む**ようにしてください。
+> 
+> ```bash
+> npm config set //packages.infragistics.com/npm/js-licensed/:_auth="YOUR_IG_AUTH_TOKEN"
+> ```
+> 
+> これは、macOS でのシェル解析の違いにより、トークン内の特殊文字が適切に引用符で囲まれていない場合に認証エラー発生する可能性があるたです。この問題は、通常 Windows では発生しません。
+
 #### 完了した後に、ログイン済みの状態で、プロジェクトで Ignite UI の最新バージョンをインストールできます。
 
 ```cmd
