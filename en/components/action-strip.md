@@ -90,7 +90,7 @@ To initialize and position the Action Strip correctly, it needs to be inside a r
 </div>
 ```
 
-By default, the Action Strip will be visible, but this can be configured via the [`hidden`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#hidden) @Input property.
+By default, the Action Strip will not be visible, but this can be configured via the [`hidden`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#hidden) @Input property.
 
 ### Menu look and feel
 
