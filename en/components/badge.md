@@ -297,13 +297,12 @@ To get started with styling the badges, we need to import the `index` file, wher
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`badge-theme`]({environment:sassApiUrl}/index.html#function-badge-theme) and accepts some parameters that style the badge's items.
+Following the simplest approach, we create a new theme that extends the [`badge-theme`]({environment:sassApiUrl}/index.html#function-badge-theme) and accepts some parameters that style the badge's items. When you set the `$background-color`, the `$icon-color` and `$text-color` are automatically assigned based on which offers better contrast—black or white. Note that the `$border-radius` property only takes effect when the badge's `shape` is set to `square`.
 
 ```scss
 $custom-badge-theme: badge-theme(
-  $border-radius: 15px,
-  $icon-color: white,
-  $text-color: black,
+  $background-color: #57a5cd,
+  $border-radius: 4px
 );
 ```
 
