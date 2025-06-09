@@ -91,7 +91,7 @@ Ignite UI for Angular Action Strip モジュールまたはディレクティブ
 </div>
 ```
 
-デフォルトでアクション ストリップは表示されますが、これは [`hidden`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#hidden) の @Input プロパティで設定できます。
+デフォルトでアクション ストリップは表示されませんが、これは [`hidden`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#hidden) の @Input プロパティで設定できます。
 
 ### メニューのルック アンド フィール
 
