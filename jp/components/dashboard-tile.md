@@ -16,12 +16,10 @@ Angular Dashboard Tile は、データ ソース コレクション/配列また
 
 ## Angular Dashboard Tile の例
 
-<!-- TODO -->
-
 <code-view style="height: 600px" alt="Angular Dashboard Tile の例"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-                    iframe-src="{environment:dvDemosBaseUrl}/charts/dashboard-tile/chart-dashboard"
-                                                 github-src="charts/dashboard-tile/chart-dashboard">
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/dashboard-tile/local-data-source-dashboard"
+                                                 github-src="charts/dashboard-tile/local-data-source-dashboard">
 </code-view>
 
 
@@ -36,7 +34,7 @@ npm install igniteui-angular-charts
 npm install igniteui-angular-core
 npm install igniteui-angular-dashboards
 npm install igniteui-angular-gauges
-npm install igniteui-angular-grids
+npm install igniteui-angular-data-grids
 npm install igniteui-angular-inputs
 npm install igniteui-angular-layouts
 npm install igniteui-angular-maps
