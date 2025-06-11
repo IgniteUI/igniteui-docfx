@@ -292,6 +292,32 @@ The last step is to pass the custom button theme in our application:
 }
 ```
 
+You can also choose to style only buttons of a specific type - `flat`, `outlined`, `contained`, or `fab`.
+To do this, you can use the new type-specific theme functions: [`flat-button-theme`]({environment:sassApiUrl}/index.html#function-flat-button-theme), [`outlined-button-theme`]({environment:sassApiUrl}/index.html#function-outlined-button-theme), [`contained-button-theme`]({environment:sassApiUrl}/index.html#function-contained-button-theme), and [`fab-button-theme`]({environment:sassApiUrl}/index.html#function-fab-button-theme)
+
+For example, given the following markup:
+
+```html
+<div class="my-contained-btn">
+  <button igxButton="contained">Contained button</button>
+</div>
+<div class="my-flat-btn">
+  <button igxButton="flat">Flat button</button>
+</div>
+```
+
+If you want to style only the `contained` button, you can use the [`contained-button-theme`]({environment:sassApiUrl}/index.html#function-flat-button-theme) function:
+
+```scss
+$custom-contained-theme: contained-button-theme(
+  $background: #348ae0,
+);
+```
+
+With the new type-specific theme functions, styling buttons is now easier. For [`contained-button-theme`]({environment:sassApiUrl}/index.html#function-contained-button-theme) and [`fab-button-theme`]({environment:sassApiUrl}/index.html#function-fab-button-theme) functions (as shown in the example above), you only need to provide a color to the `$background` parameter. All other button state and text colors will then be automatically generated and applied based on that value. The text color is determined by the newly added [`adaptive-contrast`]({environment:sassApiUrl}/index.html#function-adaptive-contrast) function, which calculates whether black or white provides better contrast against the supplied background color.
+
+For [`flat-button-theme`]({environment:sassApiUrl}/index.html#function-flat-button-theme) and [`outlined-button-theme`]({environment:sassApiUrl}/index.html#function-outlined-button-theme) functions, the button state colors are also automatically generated and applied, but they are derived from the supplied `$foreground` parameter instead of `$background`.
+
 ### Demo
 
 <code-view style="height: 100px"
