@@ -330,29 +330,15 @@ First, in order to use the functions exposed by the theme engine, we need to imp
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [stepper-theme]({environment:sassApiUrl}/index.html#function-stepper-theme) and pass the parameters, which we would like to change: 
+Following the simplest approach, we create a new theme that extends the [stepper-theme]({environment:sassApiUrl}/index.html#function-stepper-theme) and provide just a few base parameters. The theme will automatically generate all required styles, including state-specific colors and accessible contrasting foregrounds. You can also override any of the available parameters if you want more control over the appearance.
 
 ```scss
-$custom-stepper-theme: stepper-theme(
-  $indicator-background: #fff,
-
+$stepper-theme: stepper-theme(
+  $step-background: #351e65,
   $current-indicator-background: #f6cd28,
-  $current-indicator-outline: #351e65,
-
-  $current-title-color: #351e65,
-  $current-subtitle-color: #5f4691,
-
-  $complete-indicator-background: #351e65,
-  $complete-indicator-outline: #351e65,
-
-  $complete-title-color: red,
-  $complete-subtitle-color: #5f4691,
 
   $border-radius-step-header: 16px,
   $border-radius-indicator: 10px 4px 10px 4px,
-
-  $step-separator-color: #f6cd28,
-  $complete-step-separator-color: #351e65,
 );
 ```
 

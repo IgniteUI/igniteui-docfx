@@ -369,12 +369,11 @@ To get started with styling the Select component button, we need to import the `
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`select-theme`]({environment:sassApiUrl}/index.html#function-select-theme) and accepts some of the default theme's parameters:
+Following the simplest approach, we create a new theme that extends the [`select-theme`]({environment:sassApiUrl}/index.html#function-select-theme) and provide only the `$toggle-button-background` parameter. The theme function will automatically calculate all corresponding background and foreground colors for the different states based on this single value.
 
 ```scss
 $custom-select-theme: select-theme(
-  $toggle-button-background: #2b2b2b,
-  $toggle-button-background-focus: #808080,
+  $toggle-button-background: #57a5cd,
 );
 ```
 
