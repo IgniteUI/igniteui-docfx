@@ -256,7 +256,7 @@ $custom-panel-theme: expansion-panel-theme(
 );
 ```
 
-If we prefer instead of creating a palette, we can assign the colors directly to the expansion-panel-theme function as arguments.
+If we prefer instead of creating a palette, we can assign the colors directly to the expansion-panel-theme function as arguments. If the `title-color`, `icon-color`, or other foreground properties are not explicitly provided, they will be automatically assigned to either black or white - whichever offers better contrast with the background.
 
 ```scss
 $custom-panel-theme: expansion-panel-theme(

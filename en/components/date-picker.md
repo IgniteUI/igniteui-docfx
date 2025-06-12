@@ -297,22 +297,11 @@ To get started with styling the date picker, we need to import the `index` file,
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-The Angular Date Picker uses the calendar's theme, so we have to create a new theme that extends the [`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) and use some of its parameters to style the date picker's items:
+The Angular Date Picker uses the calendar's theme, so we have to create a new theme that extends the [`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme). By setting the `$header-background`, the theme automatically computes the necessary colors for the other properties to ensure a visually balanced and accessible design.
 
 ```scss
 $custom-datepicker-theme: calendar-theme(
-  $header-background: #345779,
-  $content-background: #fdfdfd,
-  $header-foreground: #ffffff,
-  $date-current-foreground: #2dabe8,
-  $navigation-color: #2dabe8,
-  $date-selected-foreground: #fdfdfd,
-  $date-current-background: #fdfdfd,
-  $navigation-hover-color: #345779,
-  $ym-current-foreground: #2dabe8,
-  $ym-hover-foreground: #2dabe8,
-  $picker-foreground: #2dabe8,
-  $picker-hover-foreground: #345779,
+  $header-background: #57a5cd,
 );
 ```
 

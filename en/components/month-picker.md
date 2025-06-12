@@ -182,19 +182,13 @@ To get started with styling the month picker, we need to import the `index` file
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
-The month picker uses the calendar's theme, so we have to create a new theme that extends the [`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) and use some of its parameters to style the month picker's items:
+The month picker uses the calendar's theme, so we have to create a new theme that extends the [`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme). To style the month picker's items, you can set the `$content-background` parameter. Optionally, you can also set `$header-background` if you want to override the rest of the properties.
+These two parameters act as the foundation for the theme and are used to automatically generate the appropriate background and foreground colors for all interaction states, such as hover, selected, and active.
 
 ```scss
 $my-calendar-theme: calendar-theme(
   $border-radius: 15px,
-  $content-background: #011627,
-  $picker-background: #011627,
-  $ym-current-foreground: #ecaa53,
-  $ym-hover-background: #ecaa53,
-  $navigation-color: #ecaa53,
-  $picker-hover-foreground: #d37b08,
-  $navigation-hover-color: #d37b08,
-  $picker-foreground: #ecaa53,
+  $content-background: #57a5cd,
 );
 ```
 

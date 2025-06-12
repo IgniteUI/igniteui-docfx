@@ -465,22 +465,12 @@ To get started with styling the calendar, we need to import the `index` file, wh
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) and accepts some of the default theme's parameters.
+Following the simplest approach, we create a new theme that extends the [`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) and by specifying just the `$header-background` and `$content-background` parameters, the theme will automatically compute appropriate state colors and contrast foregrounds. Of course, you're still free to override any of the theme parameters with custom values if needed.
 
 ```scss
 $custom-calendar-theme: calendar-theme(
-  $header-background: #345779,
-  $content-background: #fdfdfd,
-  $header-foreground: #ffffff,
-  $date-current-foreground: #2dabe8,
-  $navigation-color: #2dabe8,
-  $date-selected-foreground: #fdfdfd,
-  $date-current-background: #fdfdfd,
-  $navigation-hover-color: #345779,
-  $ym-current-foreground: #2dabe8,
-  $ym-hover-foreground: #2dabe8,
-  $picker-foreground: #2dabe8,
-  $picker-hover-foreground: #345779,
+  $header-background: #ecaa53,
+  $content-background: #011627,
 );
 ```
 

@@ -219,17 +219,15 @@ To get started with styling the **igxSplitter** component, you need to import th
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-You can change the default styles of the splitter by creating a new theme that extends the [`splitter-theme`]({environment:sassApiUrl}/index.html#function-splitter-theme).
+You can change the default styles of the splitter by creating a new theme that extends the [`splitter-theme`]({environment:sassApiUrl}/index.html#function-splitter-theme). By providing just the base parameters, the theme will automatically generate all necessary styles for the interaction states.
 
 ```scss
 // In splitter-styling-sample.component.scss
 
-$custom-splitter-theme: splitter-theme(
+$splitter-theme: splitter-theme(
   $bar-color: #011627,
   $handle-color: #ecaa53,
   $expander-color: #ecaa53,
-  $border-radius: 0,
-  $focus-color: #ecaa53,
   $size: 4px
 );
 ```
