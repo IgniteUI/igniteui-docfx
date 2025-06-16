@@ -948,6 +948,9 @@
     - name: Misc
       new: false
       items:
+      - name: Using Tailwind Custom Classes
+        href: themes/misc/tailwind-classes.md
+        new: true
       - name: Printing styles
         href: themes/misc/printing-styles.md
         new: false
