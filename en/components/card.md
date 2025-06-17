@@ -336,14 +336,12 @@ To get started with styling the card, we need to import the `index` file, where 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
-Following the simplest approach, we create a new theme that extends the [`card-theme`]({environment:sassApiUrl}/index.html#function-card-theme) and accepts some parameters that style the card's items:
+Following the simplest approach, we create a new theme that extends the [`card-theme`]({environment:sassApiUrl}/index.html#function-card-theme) and providing just a few styling parameters. If you only specify the `$background` parameter, the appropriate foreground colors will be automatically chosen, either black or white, based on which offers better contrast with the background.
 
 ```scss
 $colorful-card: card-theme(
   $background: #011627,
-  $header-text-color: #fefefe,
   $subtitle-text-color: #ecaa53,
-  $content-text-color: #fefefe
 );
 ```
 As seen, the `card-theme` exposes some useful parameters for basic styling of its items. 

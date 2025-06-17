@@ -339,13 +339,11 @@ Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [tree-theme]({environment:sassApiUrl}/index.html#function-tree-theme) and pass the parameters, which we would like to change: 
+Following the simplest approach, we create a new theme that extends the [tree-theme]({environment:sassApiUrl}/index.html#function-tree-theme) and provide just the `$background` parameter, the theme will automatically calculate all the other necessary colors, of course you can override any of the other properties: 
 
 ```scss
 $custom-tree-theme: tree-theme(
-  $background-selected: #ffe6cc,
-  $background-active: #ecaa53,
-  $background-active-selected: #ff8c1a
+  $background: #ecaa53,
 );
 ```
 
