@@ -489,19 +489,13 @@ To get started with styling the chip, we need to import the `index` file, where 
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme) and accepts some parameters that style the chip's items:
+Following the simplest approach, we create a new theme that extends the [`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme) and accepts some parameters that style the chip's items. By specifying the `$background` or the `$selected-background`, the theme automatically calculates appropriate state colors and contrast foregrounds. You can still override any other parameter with custom values as needed.
 
 ```scss
 $custom-theme: chip-theme(
-  $background: #011627,
-  $hover-background: #011627dc,
-  $focus-background: #0116276c,
+  $background: #57a5cd,
   $selected-background: #ecaa53,
-  $hover-selected-background: #ecaa53,
-  $focus-selected-background: #ecaa53,
-  $text-color: #fefefe,
-  $remove-icon-color: #f14545,
-  $remove-icon-color-focus: #da0000,
+  $remove-icon-color: #d81414,
   $border-radius: 5px,
 );
 ```

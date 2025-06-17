@@ -618,11 +618,11 @@ Let's see how we can change the background of our list. First we need to import 
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`list-theme`]({environment:sassApiUrl}/index.html#function-list-theme) and accepts the `$background` parameter.
+Following the simplest approach, we create a new theme that extends the [`list-theme`]({environment:sassApiUrl}/index.html#function-list-theme) and by passing only the `$background` parameter, the theme will automatically calculate the state colors and appropriate contrasting foregrounds. However, you can still manually define them if desired.
 
 ```scss
 $my-list-theme: list-theme(
-  $background: #0568ab
+  $background: #57a5cd
 );
 ```
 
