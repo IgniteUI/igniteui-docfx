@@ -92,6 +92,15 @@ You will be asked to provide the username and the password that you use for logg
 >[!NOTE]
 > `npm` is disallowing the use of the `"@"` symbol inside your username as it is considered as being "not safe for the net". Because your username is actually the email that you use for your Infragistics account it always contains the symbol `"@"`. That's why you must escape this limitation by replacing the `"@"` symbol with `"!!"` (two exclamation marks). For example, if your username is `"username@example.com"` when asked about your username you should provide the following input: `"username!!example.com"`.
 
+> [!NOTE]
+> **macOS shell behavior**: If you're using macOS and setting the `:_auth` token manually via `npm config set`, make sure to **wrap the token in double quotes** like this:
+> 
+> ```bash
+> npm config set //packages.infragistics.com/npm/js-licensed/:_auth="YOUR_IG_AUTH_TOKEN"
+> ```
+> 
+> This is necessary due to shell parsing differences on macOS that may cause authentication issues if special characters in the token are not properly quoted. This issue doesn't typically occur on Windows.
+
 #### After this is done, you will be logged in and you will be able to install the latest versions of the Ignite UI packages into your project:
 
 ```cmd

@@ -16,7 +16,7 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 
 *   [Ignite UI for Angular CHANGELOG.md at Github](https://github.com/IgniteUI/igniteui-angular/blob/master)
 
-## **25.1**
+## **19.1.0**
 
 ### igniteui-angular-charts (Charts)
 
@@ -38,6 +38,12 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 ### igniteui-angular-dashboards (Dashboards)
 
 *   The `DashboardTile` now supports propagating the aggregations from its DataGrid view to the chart visualization such as sorting, grouping, filtering and selection. This is currently supported by binding the `DataSource` of the `DashboardTile` to an instance of `LocalDataSource`.
+
+### igniteui-angular
+
+**Breaking Changes**
+
+*   The 'igniteui-angular-grids' package has been renamed to 'igniteui-angular-data-grids'.
 
 ### Enhancements
 
@@ -199,7 +205,7 @@ This new [Color Editor](inputs/color-editor.md) can be used as a standalone colo
 
 ## **17.0.0 (November 2023)**
 
-### igniteui-angular-grids (Toolbar - Beta)
+### igniteui-angular (Toolbar - Beta)
 
 *   Save tool action has been added to save the chart to an image via the clipboard.
 *   Vertical orientation has been added via the toolbar's [`orientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html#orientation) property. By default the toolbar is horizontal, now the toolbar can be shown in vertical orientation where the tools will popup to the left/right respectfully.
