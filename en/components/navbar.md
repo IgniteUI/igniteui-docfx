@@ -280,14 +280,12 @@ To get started with styling the navbar, we need to import the `index` file, wher
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`navbar-theme`]({environment:sassApiUrl}/index.html#function-navbar-theme) and accepts the `$text-color`, `$background`, `$idle-icon-color` and the `$hover-icon-color` parameters.
+Following the simplest approach, we create a new theme that extends the [`navbar-theme`]({environment:sassApiUrl}/index.html#function-navbar-theme) and provide just the `$background` and `$idle-icon-color` parameters. The theme will automatically compute all of the necessary background and foreground colors for various interaction states. If need, you can also manually override specific properties for finer control over the appearance.
 
 ```scss
 $custom-navbar-theme: navbar-theme(
-  $text-color: #151515,
-  $background: #dedede,
-  $idle-icon-color: #151515,
-  $hover-icon-color: #8c8c8c,
+  $background: #011627,
+  $idle-icon-color: #ecaa53,
 );
 ```
 

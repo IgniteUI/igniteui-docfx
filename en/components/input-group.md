@@ -445,20 +445,18 @@ The first thing we need to do, in order to get started with the input group styl
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
-Next, we have to create a new theme that extends the [`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme) and pass the parameters which we'd like to change:
+To customize the appearance of input groups, you can create a new theme by extending the [`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme). This approach allows you to override only the parameters you want to change, while the rest are automatically handled by the base theme.
+
+Even by specifying just a few core parameters—like colors for the border or background—you'll get a fully styled input group with consistent state-based styles (hover, focus, etc.) applied for you.
+
+Here’s a simple example:
 
 ```scss
 $custom-input-group: input-group-theme(
-  $filled-text-color: #288a54,
-  $focused-text-color: #174f30,
-  $idle-text-color: #288a54,
-  $idle-bottom-line-color: #288a54,
-  $interim-bottom-line-color: #288a54,
-  $hover-bottom-line-color: #288a54,
-  $focused-secondary-color: #174f30,
-  $box-background: #eeeeee
+    $box-background: #57a5cd,
+    $border-color: #57a5cd,
 );
 ```
 
@@ -470,12 +468,19 @@ The last step is to include the newly created theme:
 
 ### Demo
 
-
-<code-view style="height:120px"
+<code-view style="height:230px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-style" >
 </code-view>
+
+>[!NOTE]
+>If your page includes multiple types of input groups — such as `box`, `border`, `line`, or `search` — it's best to scope your theme variables to the specific input group type.
+<br>For example:<br>
+Use `.igx-input-group--box` when styling box-style inputs.
+Use `.igx-input-group--search` when targeting search inputs.
+This helps prevent style conflicts between different input types.
+For instance, setting a dark `$box-background` globally could cause the borders of border or line inputs to become invisible (usually appearing white).
 
 <div class="divider--half"></div>
 

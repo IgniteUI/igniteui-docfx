@@ -275,12 +275,13 @@ In order to take advantage of the functions exposed by the theming engine, we ha
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`expansion-panel-theme`]({environment:sassApiUrl}/index.html#function-expansion-panel-theme) and accepts an `$expanded-margin`, `$body-color` and `$header-focus-background` parameters. 
+Following the simplest approach, we create a new theme that extends the [`expansion-panel-theme`]({environment:sassApiUrl}/index.html#function-expansion-panel-theme) and accepts a `$header-background`, `$body-color` and `$expanded-margin` parameters. The theme automatically assigns foreground colors, either black or white, based on which provides better contrast with the specified backgrounds.
+
 ```scss
 $custom-panel-theme: expansion-panel-theme(
-  $expanded-margin: 10px,
-  $body-color: #282885,
-  $header-focus-background: #efefef
+  $header-background: #011627,
+  $body-background: #f0ece7,
+  $expanded-margin: 10px
 );
 ```
 

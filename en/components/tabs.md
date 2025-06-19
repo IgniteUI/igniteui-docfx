@@ -392,18 +392,14 @@ To get started with styling the tabs, we need to import the theming module, wher
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`tabs-theme`]({environment:sassApiUrl}/index.html#function-tabs-theme) and accepts various properties that allow us to style the tab groups.
+Following the simplest approach, we create a new theme that extends the [`tabs-theme`]({environment:sassApiUrl}/index.html#function-tabs-theme). By passing just a few base parameters—such as `$item-background` and `$item-active-color`—you can style your tabs with minimal effort. The theme will automatically generate all necessary background and foreground colors for the various interaction states.
+
+You can, of course, override any additional parameters to further fine-tune the appearance.
 
 ```scss
 $dark-tabs: tabs-theme(
-  $item-text-color: #f4d45c,
   $item-background: #292826,
-  $item-hover-background: #f4d45c,
-  $item-hover-color: #292826,
-  $item-active-color: #f4d45c,
-  $item-active-icon-color: #f4d45c,
-  $indicator-color: #f4d45c,
-  $tab-ripple-color: #f4d45c
+  $item-active-color: #F4D45C,
 );
 ```
 

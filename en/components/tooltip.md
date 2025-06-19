@@ -292,7 +292,7 @@ To get started with styling the tooltip, we need to import the `index` file, whe
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`tooltip-theme`]({environment:sassApiUrl}/index.html#function-tooltip-theme) and accepts the `$text-color`, `$background` and the `$border-radius` parameters.
+Following the simplest approach, we create a new theme that extends the [`tooltip-theme`]({environment:sassApiUrl}/index.html#function-tooltip-theme) and provide the `$text-color`, `$background` and the `$border-radius` parameters.
 
 ```scss
 $dark-tooltip: tooltip-theme(
