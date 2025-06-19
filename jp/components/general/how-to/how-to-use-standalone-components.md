@@ -7,7 +7,7 @@ _language: ja
 
 # Ignite UI for Angular での Standalone (スタンドアロン) コンポーネントの使用
 
-Angular 14 では[スタンドアロン コンポーネント](https://angular.io/guide/standalone-components)の概念が導入されました。これにより、`NgModules` を使用する必要性が減り、アプリケーションを構築する方法が簡素化されます。スタンドアロン コンポーネントは、Angular 15 まで開発者プレビューでした。この新しいパラダイムをサポートするために、バージョン `16.0.0` では、すべての Ignite UI for Angular コンポーネントが `standalone` としてエクスポートされるようになりました。既存のすべての `NgModule` は、後方互換性のためにライブラリによって引き続きエクスポートされます。ただし、Ignite UI for Angular コンポーネントは宣言されなくなりました。代わりに、`standalone` コンポーネントをインポートおよびエクスポートします。
+Angular 14 では[スタンドアロン コンポーネント](https://angular.io/guide/standalone-components)の概念が導入されました。これにより、`NgModules` を使用する必要性が減り、アプリケーションを構築する方法が簡素化されます。スタンドアロン コンポーネントは、Angular 15 まで開発者プレビューでした。この新しいパラダイムをサポートするために、バージョン `16.0.0` では、すべての Ignite UI for Angular コンポーネントが `standalone` としてエクスポートされるようになりました。Angular 19 以降、すべてのコンポーネントはデフォルトでスタンドアロンです。既存のすべての `NgModule` は、後方互換性のためにライブラリによって引き続きエクスポートされます。ただし、Ignite UI for Angular コンポーネントは宣言されなくなりました。代わりに、`standalone` コンポーネントをインポートおよびエクスポートします。
 
 ## 新しいスタンドアロン コンポーネントの使用方法
 
@@ -20,7 +20,6 @@ import { IGX_GRID_DIRECTIVES } from 'igniteui-angular';
     selector: 'app-grid-sample',
     styleUrls: ['grid.sample.scss'],
     templateUrl: 'grid.sample.html',
-    standalone: true,
     imports: [IGX_GRID_DIRECTIVES, AsyncPipe]
 })
 ```
@@ -34,7 +33,6 @@ import { IgxGridComponent, IgxColumnComponent } from 'igniteui-angular';
     selector: 'app-grid-sample',
     styleUrls: ['grid.sample.scss'],
     templateUrl: 'grid.sample.html',
-    standalone: true,
     imports: [IgxGridComponent, IgxColumnComponent, AsyncPipe]
 })
 ```
@@ -49,7 +47,6 @@ import { IgxGridModule } from 'igniteui-angular';
     selector: 'app-grid-sample',
     styleUrls: ['grid.sample.scss'],
     templateUrl: 'grid.sample.html',
-    standalone: true,
     imports: [IgxGridModule, AsyncPipe]
 })
 ```
@@ -106,7 +103,7 @@ import { IgxGridModule } from 'igniteui-angular';
 
 - [スタンドアロン コンポーネント](https://angular.io/guide/standalone-components)
 - [Ignite UI を使用した作業の開始](../getting-started.md)
-- [Angular のサーバー側レンダリング](../ssr-rendering.md)
+- [Angular のサーバー サイド レンダリング](../ssr-rendering.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

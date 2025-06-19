@@ -103,7 +103,7 @@ Ignite UI テーマ エンジンを使用してコンポーネントのスタイ
 
 ### カラー パレット
 
-Ignite UI for Angular の [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) 関数は、`primary`、`secondary`、`gray` 影の 3 つのサブパレットと、`info`、`success`、`warn`、`error` および `surface` の 5 つの追加カラーを含むカラー パレット マップを生成します。テーマ エンジンは、カラー バリエーションごとに、ビルド時にテキストのコントラスト カラーを自動的に生成します。これもパレットに含まれています。以下に、事前定義されたライト マテリアル パレットを示します:
+Ignite UI for Angular の [`palette`]({environment:sassApiUrl}/index.html#function-palette) 関数は、`primary`、`secondary`、`gray` の 3 つのサブパレットと、`info`、`success`、`warn`、`error` および `surface` の 5 つの追加カラーを含むカラー パレット マップを生成します。テーマ エンジンは、カラー バリエーションごとに、実行時にテキストのコントラスト カラーを自動的に生成します。これもパレットに含まれています。以下に、事前定義されたライト マテリアル パレットを示します:
 
 ```scss
 $igx-light-palette: palette(
@@ -142,7 +142,7 @@ $mat-purple: (
 
 テーマ パレットを定義するには、色相から色へのマップを生成するマテリアルの `define-palette` 関数を使用する必要があります。このサンプルでは、Ignite UI テーマを使用して Angular Material コンポーネントのスタイルを設定するため、構造に応じて `$light-material-palette` を変換する必要があります。
 
-これを実現するために、すべてのカラー バリアントのマップとそれに続くコントラスト カラーを返す `$color`、`$saturations`、および `$palette` のパラメーターを使用して Sass 関数を作成します。使用している彩度は、[`マテリアル デザイン カラー システム`](https://material.io/design/color/the-color-system.html)に従います。
+これを実現するために、すべてのカラー バリエーションのマップとそれに続くコントラスト カラーを返す `$color`、`$saturations`、および `$palette` のパラメーターを使用して Sass 関数を作成します。使用している彩度は、[`マテリアル デザイン カラー システム`](https://material.io/design/color/the-color-system.html)に従います。
 
 ```scss
 $saturations: (50, 100, 200, 300, 400, 500, 600, 700, 800, 900, A100, A200, A400, A700);
@@ -201,7 +201,7 @@ $custom-mat-light-theme: mat.define-light-theme((
 
 #### ダーク テーマ パレット
 
-前のアプローチに従って、ダーク モードのマテリアル パレットを作成します。今回は、カスタムの `igx-palette` も定義します。
+前のアプローチに従って、ダーク モードのマテリアル パレットを作成します。今回は、カスタムの `palette` も定義します。
 
 ```scss
 // Custom palette
@@ -299,7 +299,7 @@ Angular Material コンポーネントの場合、前述のカスタム マテ�
 
 #### ダーク モード
 
-ダーク バリアントでは、同じ CSS スタイルを適用しますが、`$custom-dark-palette` を使用します。さらに、`mat-stepper` コンポーネントのカラーの一部を更新します。
+ダーク バリエーションでは、同じ CSS スタイルを適用しますが、`$custom-dark-palette` を使用します。さらに、`mat-stepper` コンポーネントのカラーの一部を更新します。
 
 ```scss
 :host {
@@ -357,7 +357,7 @@ Angular Material `toolbar` は背景色に CSS クラスを使用します。サ
 }
 ```
 
-次に、「bg-パレットのカラー-カラー バリアント」パターンに従って CSS クラスを navbar コンポーネントに追加します。サンプル アプリでは `bg-gray-100` を使用しています。
+次に、「bg-パレットのカラー-カラー バリエーション」パターンに従って CSS クラスを navbar コンポーネントに追加します。サンプル アプリでは `bg-gray-100` を使用しています。
 
 ### Angular コンポーネントのタイポグラフィ
 

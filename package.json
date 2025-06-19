@@ -21,11 +21,11 @@
     "igniteui-docfx-template": "^3.7.6"
   },
   "devDependencies": {
-    "@stackblitz/sdk": "^1.9.0",
-    "browser-sync": "^2.29.3",
+    "@stackblitz/sdk": "^1.11.0",
+    "browser-sync": "^3.0.3",
     "cross-env": "^7.0.3",
     "del": "^5.1.0",
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.0",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-dart-sass": "^1.0.2",
     "gulp-file-include": "^2.1.1",

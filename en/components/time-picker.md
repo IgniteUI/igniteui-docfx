@@ -261,6 +261,7 @@ The time picker component supports different display and input formats.
 The display format is the format of the value when in edit mode and can be one of the listed Angular [DatePipe](https://angular.io/api/common/DatePipe) formats. This allows it to support predefined format options, such as `shortTime` and `longTime`.
 
 The input format is the format of the value when not in edit mode and the format, in which the time portions are displayed in the dropdown/dialog. The `inputFormat` property accepts a constructed format string using characters supported by the DatePipe, e.g. `hh:mm:ss`, but doesn't support predefined format options, such as `shortTime` and `longTime`. If the `inputFormat` property is not defined, it defaults to `hh:mm tt`.
+Alternatively, if the [`inputFormat`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#inputFormat) property is not set, the input format will be inferred from the [`displayFormat`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#displayFormat) in case it can be parsed as containing numeric date-time parts only.
 
 ```html
 <igx-time-picker
@@ -273,7 +274,7 @@ The input format is the format of the value when not in edit mode and the format
 > The `IgxTimePicker` now supports IME input. When composition ends, the control converts the wide-character numbers to ASCII characters.
 
 ### Increment and decrement
-The time picker exposes public [`increment`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#increment) and [`decrement`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#decrement) methods, which accept two optional parametars: the `DatePart` to be modified and the `delta` by which it will be changed. If not specified the `DatePart` defaults to `Hours` and the `delta` defaults to [`itemsDelta`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#itemsDelta).
+The time picker exposes public [`increment`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#increment) and [`decrement`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#decrement) methods, which accept two optional parameters: the `DatePart` to be modified and the `delta` by which it will be changed. If not specified the `DatePart` defaults to `Hours` and the `delta` defaults to [`itemsDelta`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#itemsDelta).
 
 You can find a sample that illustrates the use of both methods at [Date Time Editor Directive](date-time-editor.md#increment-decrement).
 
@@ -383,12 +384,10 @@ Following the simplest approach, we create a new theme that extends the [`time-p
 
 ```scss
 $my-time-picker-theme: time-picker-theme(
-  $text-color: #E4C8A5,
-  $hover-text-color: #ECAA53,
-  $selected-text-color: #ECAA53,
-  $header-background: #ECAA53,
-  $header-hour-text-color: #011627,
-  $header-time-period-color: #011627,
+  $text-color: #e4c8a5,
+  $hover-text-color: #ecaa53,
+  $selected-text-color: #ecaa53,
+  $header-background: #ecaa53,
   $background-color: #011627
 );
 ```
@@ -419,42 +418,17 @@ Now, the time picker's items are properly rendered **inside** of our component's
 >[!NOTE]
 >In order to learn more about the various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay.md), you can take a look at the [Overlay styling topic](overlay-styling.md).
 
-### Including Themes
-
-<div class="divider"></div>
-
-The last step is to **include** the component theme in our application.
-
-If `$legacy-support` is set to `true`, include the **theme** like that:
-
 ```scss
- @include time-picker($my-time-picker-theme);
+ @include css-vars($my-time-picker-theme);
 ```
->[!NOTE]
+>[!WARNING]
 >If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
 
 ```scss
 :host {
-     ::ng-deep {
-        @include time-picker($my-time-picker-theme);
-    }
-}
-```
-
-<div class="divider"></div>
-
-If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
-
-```scss
-@include css-vars($my-time-picker-theme);
-```
-
->[!NOTE]
->If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
-
-```scss
-:host {
+  ::ng-deep {
     @include css-vars($my-time-picker-theme);
+  }
 }
 ```
 

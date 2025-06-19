@@ -11,6 +11,7 @@ Angular Button directive is used for creating and adding actionable buttons to a
 The Ignite UI for Angular Button directive is intended to turn any button, span, div, or anchor element into a fully functional button. You can use the following Angular Button types - Flat Button, Contained Button, Outlined Button, and Floating Action Button. With customizable colors, options to create themes and change the Angular Button Style and enabling users to choose the button size and more.
 
 ## Angular Button Example
+
 We have created the Angular Button example below to show you how different button types can appear and look like when they are styled with a border or when a transparent background is applied.
 
 <div class="divider--half"></div>
@@ -32,7 +33,7 @@ ng add igniteui-angular
 
 For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
-The next step is to import the `IgxButtonModule` in your **app.module.ts** file. 
+The next step is to import the `IgxButtonModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -135,13 +136,13 @@ To create an extended FAB, you can add any element prior to the `igx-icon`:
 
 ```html
 <button class="btn" igxButton="fab">
-    <span>like</span>
-    <igx-icon fontSet="material">favorite</igx-icon>
+  <span>like</span>
+  <igx-icon fontSet="material">favorite</igx-icon>
 </button>
 ```
 
->[!NOTE]
->To get the extended FAB text styled properly, use `<span>` or `<div>` tags.
+> [!NOTE]
+> To get the extended FAB text styled properly, use `<span>` or `<div>` tags.
 
 <div class="sample-container loading" style="height: 100px">
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-6">
@@ -167,7 +168,7 @@ The [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) d
 
 ```html
 <button igxButton="contained" igxRipple="white" [igxRippleCentered]="true" [igxRippleDuration]="2000">
-    Ripple
+  Ripple
 </button>
 ```
 
@@ -181,7 +182,7 @@ We can also use the `igxButton` directive to turn elements like `span` and `div`
 
 ```html
 <span igxButton="contained" igxButtonColor="white" igxButtonBackground="#72da67" igxRipple="white">
-    Span
+  Span
 </span>
 ```
 
@@ -243,24 +244,27 @@ If all went well, you should see something like the following in the browser:
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/buttons-display-density" alt="Angular Button Example">
 </code-view>
+
 <div class="divider--half"></div>
 
-## Angular Button Styling
+## Styling
 
 To get started with styling the button, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
 @use "igniteui-angular/theming" as *;
+
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
+
 Following the simplest approach, we create a new theme that extends the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) and accepts the `$foreground` and the `$background` parameters with their respective hover and focus parameters.
 
 Given the following markup:
 
 ```html
 <div class="my-contained-btn">
-    <button igxButton="contained">Contained button</button>
+  <button igxButton="contained">Contained button</button>
 </div>
 ```
 
@@ -268,44 +272,54 @@ We need to create a theme:
 
 ```scss
 $custom-button-theme: button-theme(
-    $foreground: #fdfdfd,
-    $hover-foreground: #fdfdfd,
-    $focus-foreground: #fdfdfd,
-    $background: #345779,
-    $hover-background: #2e4d6b,
-    $focus-background: #2e4d6b,
-    $disabled-foreground: #2e4d6b
+  $foreground: #fdfdfd,
+  $hover-foreground: #fdfdfd,
+  $focus-foreground: #fdfdfd,
+  $background: #345779,
+  $hover-background: #2e4d6b,
+  $focus-background: #2e4d6b,
+  $disabled-foreground: #2e4d6b,
 );
 ```
 
 Take a look at the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) section for a complete list of available parameters for styling any type of button.
 
-### Using CSS variables
-
 The last step is to pass the custom button theme in our application:
 
 ```scss
-.my-contained-btn {
-    @include css-vars($custom-button-theme);
+.button-sample {
+  @include css-vars($custom-button-theme);
 }
 ```
 
-### Using Theme Overrides
+You can also choose to style only buttons of a specific type - `flat`, `outlined`, `contained`, or `fab`.
+To do this, you can use the new type-specific theme functions: [`flat-button-theme`]({environment:sassApiUrl}/index.html#function-flat-button-theme), [`outlined-button-theme`]({environment:sassApiUrl}/index.html#function-outlined-button-theme), [`contained-button-theme`]({environment:sassApiUrl}/index.html#function-contained-button-theme), and [`fab-button-theme`]({environment:sassApiUrl}/index.html#function-fab-button-theme)
 
-In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables.
-If the component is using the [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`:
+For example, given the following markup:
+
+```html
+<div class="my-contained-btn">
+  <button igxButton="contained">Contained button</button>
+</div>
+<div class="my-flat-btn">
+  <button igxButton="flat">Flat button</button>
+</div>
+```
+
+If you want to style only the `contained` button, you can use the [`contained-button-theme`]({environment:sassApiUrl}/index.html#function-flat-button-theme) function:
 
 ```scss
-:host {
-     ::ng-deep {
-        .my-contained-btn {
-            @include button($custom-button-theme);
-        }
-    }
-}
+$custom-contained-theme: contained-button-theme(
+  $background: #348ae0,
+);
 ```
 
+With the new type-specific theme functions, styling buttons is now easier. For [`contained-button-theme`]({environment:sassApiUrl}/index.html#function-contained-button-theme) and [`fab-button-theme`]({environment:sassApiUrl}/index.html#function-fab-button-theme) functions (as shown in the example above), you only need to provide a color to the `$background` parameter. All other button state and text colors will then be automatically generated and applied based on that value. The text color is determined by the newly added [`adaptive-contrast`]({environment:sassApiUrl}/index.html#function-adaptive-contrast) function, which calculates whether black or white provides better contrast against the supplied background color.
+
+For [`flat-button-theme`]({environment:sassApiUrl}/index.html#function-flat-button-theme) and [`outlined-button-theme`]({environment:sassApiUrl}/index.html#function-outlined-button-theme) functions, the button state colors are also automatically generated and applied, but they are derived from the supplied `$foreground` parameter instead of `$background`.
+
 ### Demo
+
 <code-view style="height: 100px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -329,6 +343,7 @@ Or you can use the universal `--igx-button-size` variable to target all instance
   <button igxButton="raised"></button>
 </div>
 ```
+
 ```scss
 .my-app {
   --igx-button-size: 50px;
@@ -339,7 +354,7 @@ You can also use one of the predefined sizes, assigning it to the `--ig-size` va
 
 ```scss
 button {
-    --ig-size: var(--ig-size-large);
+  --ig-size: var(--ig-size-large);
 }
 ```
 
@@ -348,6 +363,7 @@ Learn more about it in the [Size](display-density.md) article.
 <div class="divider--half"></div>
 
 ## API References
+
 <div class="divider--half"></div>
 
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
@@ -357,6 +373,7 @@ Learn more about it in the [Size](display-density.md) article.
 * [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.

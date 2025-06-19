@@ -94,6 +94,7 @@ _language: ja
 API 操作の詳細については、[`API リファレンス`](#api-references) セクションを参照してください。
 
 ## スタイル設定
+
 スタイル設定オプションに移動する前に、core ジュールとすべてのコンポーネント ミックスインをインポートする必要があります。
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -111,27 +112,28 @@ API 操作の詳細については、[`API リファレンス`](#api-references)
 @@if (igxName === 'IgxTreeGrid') {
 ```scss
 $custom-grid-theme: grid-theme(
-    $row-selected-background: #011627,
-    $row-selected-text-color: #ECAA53,
-    $row-selected-hover-background: #011627,
-    $header-selected-text-color: #ECAA53,
-    $header-selected-background: #011627,
-    $expand-icon-color: #ECAA53,
-    $expand-icon-hover-color: #B64B80
+  $row-selected-background: #011627,
+  $row-selected-text-color: #ecaa53,
+  $row-selected-hover-background: #011627,
+  $header-selected-text-color: #ecaa53,
+  $header-selected-background: #011627,
+  $expand-icon-color: #ecaa53,
+  $expand-icon-hover-color: #b64b80
 );
 ```
 }
 @@if (igxName !== 'IgxTreeGrid') {
 ```scss
 $custom-grid-theme: grid-theme(
-    $row-selected-background: #011627,
-    $row-selected-text-color: #ECAA53,
-    $row-selected-hover-background: #011627,
-    $header-selected-text-color: #ECAA53,
-    $header-selected-background: #011627
+  $row-selected-background: #011627,
+  $row-selected-text-color: #ecaa53,
+  $row-selected-hover-background: #011627,
+  $header-selected-text-color: #ecaa53,
+  $header-selected-background: #011627
 );
 ```
 }
+
 [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) はいくつかのパラメーターを受け入れますが、選択したすべての列の外観を変更するのは以下の 5 つです。
 - **$row-selected-background**- 選択した部分の背景を設定します。
 - **$row-selected-text-color** - 選択した部分のテキスト色を設定します。
@@ -147,19 +149,6 @@ $custom-grid-theme: grid-theme(
 @include css-vars($custom-grid-theme)
 ```
 
-### 基本テーマのオーバーライド
-Internet Explorer 11 のコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチが必要です。
-
->[!NOTE]
->コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
-
-```scss
-:host {
-    ::ng-deep {
-        @include grid($custom-column-selection-theme);
-    }
-}
-```
 ### デモ
 
 
@@ -169,7 +158,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 </code-view>
 
 >[!NOTE]
->このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
+>このサンプルは、`Change Theme` (テーマの変更) から選択したグローバル テーマに影響を受けません。
 <div class="divider--half"></div>
 
 # <a name="api-references"></a>API リファレンス
@@ -178,7 +167,7 @@ Internet Explorer 11 のコンポーネントをスタイル設定するには�
 
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumnomponent.html)
-* [IgxColumnGrpupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
+* [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
 * [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) プロパティ:

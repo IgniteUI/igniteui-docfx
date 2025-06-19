@@ -8,6 +8,7 @@ _language: ja
 # Angular Radio & Radio Group (ラジオ & ラジオ グループ) コンポーネントの概要
 
 ## Radio Button (ラジオ ボタン)
+
 <p class="highlight">Ignite UI for Angular Radio Button コンポーネントを使用すると、隣に表示されるオプションのセットから単一のオプションを選択する機能を提供します。</p>
 
 ## Angular Radio & Radio Group の例
@@ -54,25 +55,26 @@ export class AppModule {
 // home.component.ts
 
 import { FormsModule } from '@angular/forms';
-import { IgxRadioComponent, IgxRadioGroupDirective } from 'igniteui-angular';
-// import { IgxRadioComponent, IgxRadioGroupDirective } from '@infragistics/igniteui-angular'; for licensed package
+import { IGX_RADIO_GROUP_DIRECTIVES } from 'igniteui-angular';
+// import { IGX_RADIO_GROUP_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
-    selector: 'app-home',
-    template: `
+  selector: 'app-home',
+  template: `
     <igx-radio-group>
-        <igx-radio [(ngModel)]="selected" value="London">London</igx-radio>
-        <igx-radio [(ngModel)]="selected" value="New York">New York</igx-radio>
-        <igx-radio [(ngModel)]="selected" value="Tokyo">Tokyo</igx-radio>
-        <igx-radio [(ngModel)]="selected" value="Sofia">Sofia</igx-radio>
+      <igx-radio [(ngModel)]="selected" value="London">London</igx-radio>
+      <igx-radio [(ngModel)]="selected" value="New York">New York</igx-radio>
+      <igx-radio [(ngModel)]="selected" value="Tokyo">Tokyo</igx-radio>
+      <igx-radio [(ngModel)]="selected" value="Sofia">Sofia</igx-radio>
     </igx-radio-group>
-    `,
-    styleUrls: ['home.component.scss'],
-    standalone: true,
-    imports: [IgxRadioComponent, IgxRadioGroupDirective, FormsModule]
+  `,
+  styleUrls: ['home.component.scss'],
+  standalone: true,
+  imports: [IGX_RADIO_GROUP_DIRECTIVES, FormsModule],
+  /* or imports: [IgxRadioComponent, IgxRadioGroupDirective, FormsModule] */
 })
 export class HomeComponent {
-    public selected: any;
+  public selected: any;
 }
 ```
 
@@ -101,6 +103,7 @@ Ignite UI for Angular Radio Button モジュールまたはディレクティブ
 </div>
 
 ### プロパティ
+
 上記のサンプルに 4 つのラジオ ボタンを追加し、各ボタンに特定の背景色を適用します。次に含まれる div 要素の backgroundColor プロパティをコンポーネントの selectedColor プロパティにバインドします。selectedColor は `NgModel` ディレクティブによって双方向バインディングが設定されるため、ユーザーが別のラジオ ボタン (色) を選択する際に値が更新されます。
 
 ```typescript
@@ -126,28 +129,21 @@ public selectedColor: string = this.colors[3].hex;
 
 ```html
 <!--radiogroup.component.html-->
-<igx-radio *ngFor="let color of colors" 
-           name="color" 
-           [value]="color.hex" 
-           [(ngModel)]="selectedColor">
-           {{color.name}}
+<igx-radio *ngFor="let color of colors" name="color" [value]="color.hex" [(ngModel)]="selectedColor">
+  {{color.name}}
 </igx-radio>
 
-<div [style.background-color]="selectedColor">
-    ...
-</div>
+<div [style.background-color]="selectedColor">...</div>
 ```
 
 双方向バインディングで `NgModel` ディレクティブを使用しない場合、`FormsModule` をインポートし、NgModule の imports リストに追加する必要があります。
 
 結果は以下のようになります。
 
-
 <code-view style="height: 550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-2" >
 </code-view>
-
 
 ## スタイル設定
 
@@ -165,36 +161,19 @@ public selectedColor: string = this.colors[3].hex;
 
 ```scss
 $custom-radio-theme: radio-theme(
-    $disabled-color: lightgray,
-    $empty-color:  #345779,
-    $fill-color: #2dabe8,
-    $fill-color-hover: #2dabe8,
-    $fill-hover-border-color: #2dabe8
+  $disabled-color: lightgray,
+  $empty-color: #345779,
+  $fill-color: #2dabe8,
+  $fill-color-hover: #2dabe8,
+  $fill-hover-border-color: #2dabe8,
 );
 ```
-
-### CSS 変数の使用
 
 最後には、カスタム ラジオ テーマをアプリケーションに渡します。
 
 ```scss
 @include css-vars($custom-radio-theme);
 ```
-
-### テーマ オーバーライドの使用
-
-Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
-
-コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
-
-```scss
-:host {
-     ::ng-deep {
-        @include radio($custom-radio-theme);
-    }
-}
-```
-
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -204,6 +183,7 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 <div class="divider--half"></div>
 
 ## Radio Group
+
 <p class="highlight">Ignite UI for Angular Radio Group ディレクティブは、ラジオの子コンポーネントを制御できるグループ化コンテナーを提供し、テンプレート駆動型およびリアクティブ型のフォームをサポートします。</p>
 <div class="divider"></div>
 
@@ -240,9 +220,9 @@ import { IgxRadioModule } from 'igniteui-angular';
 ```html
 <!--radio-group.component.html-->
 <igx-radio-group name="fruitsRadioGroup">
-    <igx-radio *ngFor="let fruit of fruits" value="{{fruit}}">
-        {{fruit}}
-    </igx-radio>
+  <igx-radio *ngFor="let fruit of fruits" value="{{fruit}}">
+    {{fruit}}
+  </igx-radio>
 </igx-radio-group>
 ```
 
@@ -252,6 +232,7 @@ public fruits = ["Apple", "Mango", "Banana", "Orange"];
 ```
 
 ### 配置
+
 [`alignment`]({environment:angularApiUrl}/classes/igxradiogroupdirective.html#alignment) 入力プロパティを使用して、ラジオ グループ内の `igxRadio` コンポーネントの方向を変更します。`horizontal` および `vertical` から選択できます。ラジオ グループのデフォルト配置は horizontal (水平) です。
 
 ```typescript
@@ -265,13 +246,12 @@ public alignment = RadioGroupAlignment.vertical;
 ```html
 <!-- sample.component.html -->
 <igx-radio-group [alignment]="alignment">
-    <igx-radio [(ngModel)]="selected" value="London">London</igx-radio>
-    <igx-radio [(ngModel)]="selected" value="New York">New York</igx-radio>
-    <igx-radio [(ngModel)]="selected" value="Tokyo">Tokyo</igx-radio>
-    <igx-radio [(ngModel)]="selected" value="Sofia">Sofia</igx-radio>
+  <igx-radio [(ngModel)]="selected" value="London">London</igx-radio>
+  <igx-radio [(ngModel)]="selected" value="New York">New York</igx-radio>
+  <igx-radio [(ngModel)]="selected" value="Tokyo">Tokyo</igx-radio>
+  <igx-radio [(ngModel)]="selected" value="Sofia">Sofia</igx-radio>
 </igx-radio-group>
 ```
-
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -281,6 +261,7 @@ public alignment = RadioGroupAlignment.vertical;
 <div class="divider--half"></div>
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
 * [IgxRadioGroupDirective]({environment:angularApiUrl}/classes/igxradiogroupdirective.html)
@@ -288,6 +269,7 @@ public alignment = RadioGroupAlignment.vertical;
 * [IgxRadioComponent スタイル]({environment:sassApiUrl}/index.html#function-radio-theme)
 
 ## テーマの依存関係
+
 * [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
 
 ## その他のリソース

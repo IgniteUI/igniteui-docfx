@@ -191,6 +191,11 @@ It is now possible to export @@igComponent with defined [multi-column headers](m
 > [!NOTE]
 > The exported @@igComponent will not be formatted as a table, since Excel tables do not support multiple row headers.
 
+@@if (igxName === 'IgxHierarchicalGrid') {
+> [!NOTE]
+> The exported expansion state of the multi-column headers in the row islands will always be in its initial state.
+}
+
 @@if (igxName === 'IgxGrid') {
 <code-view style="height: 800px;" 
            data-demos-base-url="{environment:demosBaseUrl}"

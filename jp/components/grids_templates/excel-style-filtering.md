@@ -108,7 +108,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 <div class="divider--half"></div>
 
-以下のサンプルの **Product Name** と **Discontinued** 列で 4 つすべての機能が有効です。**Quantity Per Unit** で 4 機能すべてが無効、**Unit Price** でソートと移動のみ有効、**Order Date** でピン固定と非表示のみ[`選択可能`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable)です。
+以下のサンプルの **Product Name** と **Discontinued** 列で 4 つすべての機能が有効です。**Quantity Per Unit** で 4 機能すべてが無効、**Unit Price** でソートと移動のみ有効、**Order Date** でピン固定と非表示のみ [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) です。
 }
 @@if (igxName === 'IgxTreeGrid') {
 ```html
@@ -539,7 +539,7 @@ Excel スタイルのフィルタリング ダイアログは、`filtering-row-b
 
 ```scss
 $custom-grid: grid-theme(
-    $filtering-row-background: #FFCD0F
+  $filtering-row-background: #ffcd0f
 );
 ```
 
@@ -547,53 +547,59 @@ $custom-grid: grid-theme(
 
 ```scss
 $dark-button: button-theme(
-    $background: #FFCD0F,
-    $foreground: #292826,
-    $hover-background: #292826,
-    $hover-foreground: #FFCD0F
+  $background: #ffcd0f,
+  $foreground: #292826,
+  $hover-background: #292826,
+  $hover-foreground: #ffcd0f
 );
 
 $dark-input-group: input-group-theme(
-    $box-background: #FFCD0F,
-    $idle-text-color: #292826,
-    $focused-text-color: #292826,
-    $filled-text-color: #292826
+  $box-background: #ffcd0f,
+  $idle-text-color: #292826,
+  $focused-text-color: #292826,
+  $filled-text-color: #292826
 );
 
 $custom-list: list-theme(
-    $background: #FFCD0F
+  $background: #ffcd0f
 );
 
 $custom-checkbox: checkbox-theme(
-    $empty-color: #292826,
-    $fill-color: #292826,
-    $tick-color: #FFCD0F,
-    $label-color: #292826
+  $empty-color: #292826,
+  $fill-color: #292826,
+  $tick-color: #ffcd0f,
+  $label-color: #292826
 );
 
 $custom-drop-down: drop-down-theme(
-    $background-color: #FFCD0F,
-    $item-text-color: #292826,
-    $hover-item-background: #292826,
-    $hover-item-text-color: #FFCD0F
+  $background-color: #ffcd0f,
+  $item-text-color: #292826,
+  $hover-item-background: #292826,
+  $hover-item-text-color: #ffcd0f
 );
 ```
+
+>[!NOTE]
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックをご覧ください。
 
 この例では、リストされたコンポーネントのパラメーターの一部のみを変更しましたが、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme)、[`checkbox-theme`]({environment:sassApiUrl}/index.html#function-checkbox-theme)、[`drop-down-theme`]({environment:sassApiUrl}/index.html#function-drop-down-theme)、[`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme)、[`list-theme`]({environment:sassApiUrl}/index.html#function-list-theme) テーマは、それぞれのスタイルを制御するためのより多くのパラメーターを提供します。
 
 最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。また、入力のプレース ホルダーの色プロパティを設定します。
 
 ```scss
-@include drop-down($custom-drop-down);
-@include grid($custom-grid);
-.igx-excel-filter, .igx-excel-filter__secondary {
-    @include button($dark-button);
-    @include input-group($dark-input-group);
-    @include list($custom-list);
-    @include checkbox($custom-checkbox);
-    .igx-input-group__input::placeholder {
-        color: #FFCD0F;
-    }
+@include css-vars($custom-drop-down);
+@include css-vars($custom-grid);
+
+.igx-excel-filter, 
+.igx-excel-filter__secondary {
+  @include css-vars($dark-button);
+  @include css-vars($dark-input-group);
+  @include css-vars($custom-list);
+  @include css-vars($custom-checkbox);
+
+  .igx-input-group__input::placeholder {
+    color: #ffcd0f;
+  }
 }
 ```
 
@@ -605,226 +611,24 @@ $custom-drop-down: drop-down-theme(
 
 ```scss
 :host {
-    ::ng-deep {
-        @include drop-down($custom-drop-down);
-        @include grid($custom-grid);
-        .igx-excel-filter, .igx-excel-filter__secondary {
-            @include button($dark-button);
-            @include input-group($dark-input-group);
-            @include list($custom-list);
-            @include checkbox($custom-checkbox);
-            .igx-input-group__input::placeholder {
-                color: #FFCD0F;
-            }
-        }
+  ::ng-deep {
+    @include css-vars($custom-drop-down);
+    @include css-vars($custom-grid);
+
+    .igx-excel-filter,
+    .igx-excel-filter__secondary {
+      @include css-vars($dark-button);
+      @include css-vars($dark-input-group);
+      @include css-vars($custom-list);
+      @include css-vars($custom-checkbox);
+      
+      .igx-input-group__input::placeholder {
+        color: #ffcd0f;
+      }
     }
+  }
 }
 ```
-
-### カラーパレットの定義
-
-上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
-
-`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します:
-
-```scss
-$yellow-color: #FFCD0F;
-$black-color: #292826;
-
-$dark-palette: palette($primary: $black-color, $secondary: $yellow-color);
-```
-また [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。
-
-```scss
-$custom-grid: grid-theme(
-    $filtering-row-background: #FFCD0F
-);
-
-$dark-button: button-theme(
-    $background: color($dark-palette, "secondary", 400),
-    $foreground: color($dark-palette, "primary", 400),
-    $hover-background: color($dark-palette, "primary", 400),
-    $hover-foreground: color($dark-palette, "secondary", 400)
-);
-
-$dark-input-group: input-group-theme(
-    $box-background: color($dark-palette, "secondary", 400),
-    $idle-text-color: color($dark-palette, "primary", 400),
-    $focused-text-color: color($dark-palette, "primary", 400),
-    $filled-text-color: color($dark-palette, "primary", 400)
-);
-
-$custom-list: list-theme(
-    $background: color($dark-palette, "secondary", 400)
-);
-
-$custom-checkbox: checkbox-theme(
-    $empty-color: color($dark-palette, "primary", 400),
-    $fill-color: color($dark-palette, "primary", 400),
-    $tick-color: color($dark-palette, "secondary", 400),
-    $label-color: color($dark-palette, "primary", 400)
-);
-
-$custom-drop-down: drop-down-theme(
-    $background-color: color($dark-palette, "secondary", 400),
-    $item-text-color: color($dark-palette, "primary", 400),
-    $hover-item-background: color($dark-palette, "primary", 400),
-    $hover-item-text-color: color($dark-palette, "secondary", 400)
-);
-```
-
->[!NOTE]
->`igx-color` および `igx-palette` は、色を生成および取得するための重要な機能です。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックを参照してください。
-
-### スキーマの使用
-
-テーマ エンジンを使用して[**スキーマ**](../themes/sass/schemas.md)の利点を使用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
-
-すべてのコンポーネント (この場合は[`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid)、[`light-input-group`]({environment:sassApiUrl}/index.html#variable-_light-input-group)、[`light-button`]({environment:sassApiUrl}/index.html#variable-_light-button)、[`light-list`]({environment:sassApiUrl}/index.html#variable-_light-list)、[`light-checkbox`]({environment:sassApiUrl}/index.html#variable-_light-checkbox)、[`light-drop-down`]({environment:sassApiUrl}/index.html#variable-_light-drop-down)) に提供される 2 つの定義済みスキーマのいずれかを拡張します。
-
-```scss
-$custom-grid-schema: extend($_light-grid,
-    (
-        filtering-row-background:(
-           color: ("secondary", 400)
-        )
-    )
-);
-
-$custom-button-schema: extend($_light-button,
-    (
-        flat-background:(
-           color: ("secondary", 400)
-        ),
-        flat-text-color:(
-           color: ("primary", 400)
-        ),
-        flat-hover-background:(
-           color: ("primary", 400)
-        ),
-        flat-hover-text-color:(
-           color: ("secondary", 400)
-        ),
-
-        contained-background:(
-           color: ("secondary", 400)
-        ),
-        contained-text-color:(
-           color: ("primary", 400)
-        ),
-        contained-hover-background:(
-           color: ("primary", 400)
-        ),
-        contained-hover-text-color:(
-           color: ("secondary", 400)
-        )
-    )
-);
-
-$custom-input-group-schema: extend($_light-input-group,
-    (
-        box-background:(
-           color: ("secondary", 400)
-        ),
-        idle-text-color:(
-           color: ("primary", 400)
-        ),
-        focused-text-color:(
-           color: ("primary", 400)
-        ),
-        filled-text-color:(
-           color: ("primary", 400)
-        )
-    )
-);
-
-$custom-list-schema: extend($_light-list,
-    (
-        background:(
-           color: ("secondary", 400)
-        )
-    )
-);
-
-$custom-checkbox-schema: extend($_light-checkbox,
-    (
-        empty-color:(
-           color: ("primary", 400)
-        ),
-        fill-color:(
-           color: ("primary", 400)
-        ),
-        tick-color:(
-           color: ("secondary", 400)
-        ),
-        label-color:(
-           color: ("primary", 400)
-        )
-    )
-);
-
-$custom-drop-down-schema: extend($_light-drop-down,
-    (
-        background-color:(
-           color: ("secondary", 400)
-        ),
-        item-text-color:(
-           color: ("primary", 400)
-        ),
-        hover-item-background:(
-           color: ("primary", 400)
-        ),
-        hover-item-text-color:(
-           color: ("secondary", 400)
-        )
-    )
-);
-```
-
-カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張する**必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加するものです。
-
-```scss
-$custom-light-schema: extend($light-schema,(
-   grid: $custom-grid-schema,
-   button: $custom-button-schema,
-   input-group: $custom-input-group-schema,
-   list: $custom-list-schema,
-   checkbox: $custom-checkbox-schema,
-   drop-down: $custom-drop-down-schema
-));
-
-$custom-grid: grid-theme(
-    $palette: $dark-palette,
-    $schema: $custom-light-schema
-);
-
-$custom-button: button-theme(
-    $palette: $dark-palette,
-    $schema: $custom-light-schema
-);
-
-$custom-input-group: input-group-theme(
-    $palette: $dark-palette,
-    $schema: $custom-light-schema
-);
-
-$custom-list: list-theme(
-    $palette: $dark-palette,
-    $schema: $custom-light-schema
-);
-
-$custom-checkbox: checkbox-theme(
-    $palette: $dark-palette,
-    $schema: $custom-light-schema
-);
-
-$custom-drop-down: drop-down-theme(
-    $palette: $dark-palette,
-    $schema: $custom-light-schema
-);
-```
-
-テーマを上記と同じ方法で含めることに注意してください。
 
 ### デモ
 
@@ -857,7 +661,7 @@ $custom-drop-down: drop-down-theme(
 }
 
 >[!NOTE]
->このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
+>このサンプルは、`Change Theme` (テーマの変更) から選択したグローバル テーマに影響を受けません。
 <div class="divider--half"></div>
 
 ## API リファレンス

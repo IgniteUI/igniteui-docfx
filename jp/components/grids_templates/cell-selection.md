@@ -100,10 +100,10 @@ _language: ja
 
 ### @@igComponent 単一選択
 
-`[cellSelection]="'single'"` を設定すると、一度にグリッド内で選択されたセルを1つだけ持つことができます。また、モード`マウスドラッグ`は機能せず、セルを選択する代わりに、デフォルトのテキスト選択が行われます。
+`[cellSelection]="'single'"` を設定すると、一度にグリッド内で選択されたセルを1つだけ持つことができます。また、モード`マウス ドラッグ`は機能せず、セルを選択する代わりに、デフォルトのテキスト選択が行われます。
 
 >[!NOTE]
-> `選択モード`が `single` であるか `multiple` であるかに関係なく、単一セルが [`selected`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selected) イベントが発生したときに発生します。複数セル選択モードでは、セル範囲を選択すると [`rangeSelected`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rangeSelected) イベントが発生します。
+> `selection mode` が `single` であるか `multiple` であるかに関係なく、単一セルが [`selected`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selected) イベントが発生したときに発生します。複数セル選択モードでは、セル範囲を選択すると [`rangeSelected`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rangeSelected) イベントが発生します。
 
 ### @@igComponent 選択なし
 セルの選択を無効にする場合は、`[cellSelection]="'none'"` プロパティを設定するだけです。このモードでは、セルをクリックするかキーボードでナビゲートしようとすると、セルは**選択されず**、`アクティブ化のスタイル`のみが適用され、ページ上の他の要素をスクロールまたはクリックすると失われます。選択を定義する唯一の方法は、以下で説明する API メソッドを使用することです。
@@ -132,6 +132,7 @@ _language: ja
 以下は、範囲の選択、選択の解除、または選択したセル データを取得する方法です。
 
 ### 範囲の選択
+
 @@if (igxName === 'IgxGrid') {
 [`selectRange(range)`]({environment:angularApiUrl}/classes/igxgridcomponent.html#selectRange) - API を使用してセル範囲を選択します。`rowStart` と `rowEnd` は行インデックスを使用する必要があり、`columnStart` と `columnEnd` は列インデックスまたは列データフィールド値を使用できます。
 }
@@ -261,9 +262,9 @@ expectedData = [
 
 }
 
-## スタイリングのガイドライン
+## スタイル設定
 
-テーマ エンジンは、`選択したセルの範囲`をスタイルできるプロパティを公開します。
+テーマ エンジンは、**選択したセルの範囲**をスタイルできるプロパティを公開します。
 
 ### テーマのインポート
 
@@ -278,12 +279,16 @@ expectedData = [
 
 ### 色の定義
 
-完了後、[`igx-contrast-color`]({environment:sassApiUrl}/index.html#function-igx-contrast-color) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用できます。これらの関数を使用して、選択範囲に使用する色を定義します。
+完了後、[`contrast-color`]({environment:sassApiUrl}/index.html#function-contrast-color) と [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用できます。これらの関数を使用して、選択範囲に使用する色を定義します。
+
 ```scss
-    $text-color:contrast-color($default-palette, 'primary', 900);
-    $background-color: color($default-palette, "primary", 900);
-    $border-yellow: #f2c43c;
+$text-color: contrast-color($color: 'primary', $variant: 900);
+$background-color: color($color: "primary", $variant: 900);
+$border-yellow: #f2c43c;
 ```
+
+>[!NOTE]
+>`contrast-color` 関数と `color` 関数を使用しない場合は、いつでもカラーの値をハードコードできます。
 
 ### カスタム テーマの作成
 
@@ -291,9 +296,9 @@ expectedData = [
 
 ```scss
 $custom-grid-theme: grid-theme(
-    $cell-selected-text-color: $text-color,
-    $cell-active-border-color: $border-yellow,
-    $cell-selected-background: $background-color
+  $cell-selected-text-color: $text-color,
+  $cell-active-border-color: $border-yellow,
+  $cell-selected-background: $background-color
 );
 ```
 
@@ -302,21 +307,8 @@ $custom-grid-theme: grid-theme(
 次にコンポーネントのスタイルにミックスインを含め (アプリ スタイルにすることも可能)、@@igSelector がデフォルトのテーマの代わりに新しく作成されたテーマを使用するようになります。
 
 ```scss
-    @include grid($custom-grid-theme);
+@include css-vars($custom-grid-theme);
 ```
-
- >[!NOTE]
- >コンポーネントが [`Emulated ViewEncapsulation`](../themes/sass/component-themes.md#表示のカプセル化) を使用している場合、`::ng-deep` を使用してこのカプセル化に侵入する必要があります。
- > アプリケーション内に存在する可能性のある他のグリッドに影響を与えないように、スタイルを `:host` セレクターの下で範囲指定します。
-
- ```scss
-    :host {
-        ::ng-deep {
-            @include grid($custom-grid-theme);
-        }
-    }
-```
-
 
 カスタム テーマを適用すると、選択したグリッドセルが選択した色で強調表示されます。
 
@@ -356,7 +348,7 @@ $custom-grid-theme: grid-theme(
 }
 
 >[!NOTE]
->このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
+>このサンプルは、`Change Theme` (テーマの変更) から選択したグローバル テーマに影響を受けません。
 
 ## API リファレンス
 

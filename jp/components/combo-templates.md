@@ -136,10 +136,10 @@ export class AppModule {}
 テンプレートで使用した場合、`igxComboClearIcon` および `igxComboToggleIcon` セレクターがコンボボックス入力での各ボタンの表示方法を変更します。`igx-combo` 内のコンテンツを渡すと、`igx-input-group` をテンプレート化する方法 (`igx-prefix`、`igx-suffix`、`igxLabel` を使用) と同様に、コンボボックス入力のテンプレート化も可能になります。以下のコード スニペットは、適切なラベルやプレフィックスをコンボボックスに追加する方法を示します。
 
 ```html
-    <igx-combo>
-        <label igxLabel>Locations</label>
-        <igx-prefix><igx-icon>pin_drop</igx-icon></igx-prefix>
-    </igx-combo>
+<igx-combo>
+    <label igxLabel>Locations</label>
+    <igx-prefix><igx-icon>pin_drop</igx-icon></igx-prefix>
+</igx-combo>
 ```
 
 ## API まとめ

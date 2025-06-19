@@ -161,7 +161,7 @@ If the sample is configured properly, the final result should look like that:
 - **Justify**: all tab headers are equal in width and fully fit the tabs container. If the space is not enough to fit all items, scroll buttons are displayed.
 
 
-Sample below demostrates how tabs get aligned when switching between `tabAlignment` property values.
+Sample below demonstrates how tabs get aligned when switching between `tabAlignment` property values.
 
 <code-view style="height: 250px; border: 1px solid #ededed"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -308,25 +308,25 @@ import {
 ...
 
 const routes: Routes = [
-    {
-        path: '',
-        pathMatch: 'full',
-        redirectTo: '/tabs-routing'
-    },
-    {
-        path: 'tabs-routing',
-        component: TabsRoutingComponent,
-        children: [
-            { path: 'view1', component: TabsRoutingView1Component },
-            { path: 'view2', component: TabsRoutingView2Component },
-            { path: 'view3', component: TabsRoutingView3Component },
-        ]
-    }
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: '/tabs-routing'
+  },
+  {
+    path: 'tabs-routing',
+    component: TabsRoutingComponent,
+    children: [
+        { path: 'view1', component: TabsRoutingView1Component },
+        { path: 'view2', component: TabsRoutingView2Component },
+        { path: 'view3', component: TabsRoutingView3Component },
+      ]
+  }
 ];
 
 @NgModule({
-    exports: [RouterModule],
-    imports: [RouterModule.forRoot(appRoutes)]
+  exports: [RouterModule],
+  imports: [RouterModule.forRoot(appRoutes)]
 })
 export class AppRoutingModule { }
 ```
@@ -392,20 +392,19 @@ To get started with styling the tabs, we need to import the theming module, wher
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`tabs-theme`]({environment:sassApiUrl}/index.html#function-tabs-theme) and accepts various properties that allow us to style the tab groups.
+Following the simplest approach, we create a new theme that extends the [`tabs-theme`]({environment:sassApiUrl}/index.html#function-tabs-theme). By passing just a few base parameters—such as `$item-background` and `$item-active-color`—you can style your tabs with minimal effort. The theme will automatically generate all necessary background and foreground colors for the various interaction states.
+
+You can, of course, override any additional parameters to further fine-tune the appearance.
 
 ```scss
 $dark-tabs: tabs-theme(
-    $item-text-color: #F4D45C,
-    $item-background: #292826,
-    $item-hover-background: #F4D45C,
-    $item-hover-color: #292826,
-    $item-active-color: #F4D45C,
-    $item-active-icon-color: #F4D45C,
-    $indicator-color: #F4D45C,
-    $tab-ripple-color: #F4D45C
+  $item-background: #292826,
+  $item-active-color: #F4D45C,
 );
 ```
+
+>[!NOTE]
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 If we take a look at the [`tabs-theme`]({environment:sassApiUrl}/index.html#function-tabs-theme), we will notice that there are even more properties available to us in order to style our tabs.
 
@@ -418,55 +417,13 @@ The last step is to **include** the component theme in our application.
 @include css-vars($dark-tabs);
 ```
 
-If you are targeting browsers that don't support CSS variables, like IE 11, you can use the theme component mixin to overwrite its default theme:
-
-```scss
-:host {
-  ::ng-deep {
-    @include tabs($dark-tabs);
-  }
-}
-```
-### Palettes & Colors
-
-Instead of hardcoding the color values, like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
-
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
-
-```scss
-$yellow-color: #F4D45C;
-$black-color: #292826;
-
-$dark-palette: palette(
-  $primary: $black-color,
-  $secondary: $yellow-color,
-  $grays: #fff
-);
-```
-
-We can easily retrieve any color from the palette using [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color).
-
-```scss
-$dark-tabs: tabs-theme(
-    $palette: $dark-palette,
-    $item-text-color: color($dark-palette, "secondary", 400),
-    $item-background: color($dark-palette, "primary", 400),
-    $item-hover-background: color($dark-palette, "secondary", 400),
-    $item-hover-color: color($dark-palette, "primary", 400),
-    $item-active-color: color($dark-palette, "secondary", 400),
-    $item-active-icon-color: color($dark-palette, "secondary", 400),
-    $indicator-color: color($dark-palette, "secondary", 400),
-    $tab-ripple-color: color($dark-palette, "secondary", 400)
-);
-```
-
+### Demo
 
 <code-view style="height: 250px; border: 1px solid #ededed"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/tabs-style" >
 </code-view>
-
 
 <div class="divider--half"></div>
 

@@ -232,7 +232,7 @@ export class MyExampleCombo {
 ```typescript
 public singleSelection(event: IComboSelectionChangeEventArgs) {
     if (event.added.length) {
-        event.newSelection = event.added;
+        event.newValue = event.added;
     }
 }
 ```
@@ -276,9 +276,9 @@ public singleSelection(event: IComboSelectionChangeEventArgs) {
 - `上矢印` - フォーカスは最後のリスト項目に戻るか、あるいはリストが空の場合、検索入力に移動します。
 
 
-## Angular ComboBox スタイル設定
+## スタイル設定
 
-[Ignite UI for Angular テーマ](themes/index.md)を使用して、コンボボックスの外観を変更できます。はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。
+[`Ignite UI for Angular テーマ`](themes/index.md)を使用して、コンボボックスの外観を変更できます。はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -287,56 +287,57 @@ public singleSelection(event: IComboSelectionChangeEventArgs) {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-[combo-theme]({environment:sassApiUrl}/index.html#function-combo-theme) を拡張する新しいテーマを作成し、`$search-separator-border-color` パラメーターを受け取ります。
+[`combo-theme`]({environment:sassApiUrl}/index.html#function-combo-theme) を拡張する新しいテーマを作成し、`$search-separator-border-color` パラメーターを受け取ります。
+
 ```scss
 $custom-combo-theme: combo-theme(
-    $search-separator-border-color: #1a5214
+  $search-separator-border-color: #1a5214
 );
 ```
 
-[IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) は、項目コンテナーとして [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を内部使用します。[IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) および [IgxCheckbox]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) コンポーネントも含まれます。これらのコンポーネントのテーマを拡張する新しいテーマを作成し、それぞれのクラスの下にスコープすることで、コンボボックスのスタイル設定を変更できます。
+[`IgxComboComponent`]({environment:angularApiUrl}/classes/igxcombocomponent.html) は、項目コンテナーとして [`IgxDropDownComponent`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を内部使用します。[`IgxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) および [`IgxCheckbox`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) コンポーネントも含まれます。これらのコンポーネントのテーマを拡張する新しいテーマを作成し、それぞれのクラスの下にスコープすることで、コンボボックスのスタイル設定を変更できます。
 
 ```scss
 $custom-drop-down-theme: drop-down-theme(
-    $background-color: #d9f5d6,
-    $header-text-color: #1a5214,
-    $item-text-color: #1a5214,
+  $background-color: #d9f5d6,
+  $header-text-color: #1a5214,
+  $item-text-color: #1a5214,
 
-    $focused-item-background: #72da67,
-    $focused-item-text-color: #1a5214,
-    $hover-item-background: #a0e698,
-    $hover-item-text-color: #1a5214,
+  $focused-item-background: #72da67,
+  $focused-item-text-color: #1a5214,
+  $hover-item-background: #a0e698,
+  $hover-item-text-color: #1a5214,
 
-    $selected-item-background: #a0e698,
-    $selected-item-text-color: #1a5214,
-    $selected-hover-item-background: #72da67,
-    $selected-hover-item-text-color: #1a5214,
-    $selected-focus-item-background: #72da67,
-    $selected-focus-item-text-color: #1a5214,
+  $selected-item-background: #a0e698,
+  $selected-item-text-color: #1a5214,
+  $selected-hover-item-background: #72da67,
+  $selected-hover-item-text-color: #1a5214,
+  $selected-focus-item-background: #72da67,
+  $selected-focus-item-text-color: #1a5214,
 );
 
 $custom-checkbox-theme: checkbox-theme(
-    $border-radius: 10px,
-    $fill-color: #1a5214,
-    $empty-color: #1a5214,
+  $border-radius: 10px,
+  $fill-color: #1a5214,
+  $empty-color: #1a5214,
 );
 ```
 
 最後にコンポーネントのテーマを含めます。
 
 ```scss
-:host {
-    @include css-vars($custom-combo-theme);
-    @include css-vars($custom-drop-down-theme);
-    @include css-vars($custom-checkbox-theme);
+:host ::ng-deep {
+  @include css-vars($custom-combo-theme);
+  @include css-vars($custom-drop-down-theme);
+  @include css-vars($custom-checkbox-theme);
 }
 ```
 
 > [!NOTE]
-> [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) は、[IgxOverlay](overlay.md) サービスを使用して、コンボボックス項目のリスト コンテナーを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[IgxOverlay スタイル ガイド](overlay-styling.md)を確認してください。
+> [`IgxCombo`]({environment:angularApiUrl}/classes/igxcombocomponent.html) は、[`IgxOverlay`](overlay.md) サービスを使用して、コンボボックス項目のリスト コンテナーを保持および表示します。スタイルを適切にスコープするには、[`OverlaySetting.outlet`]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[`IgxOverlay スタイル ガイド`](overlay-styling.md)を確認してください。また、コンポーネントのスタイルを設定するときに `::ng-deep` を使用する必要があります。
 
 > [!NOTE]
-> `IgxCombo` のデフォルト `type` は `box` です。[IgxSelect](select.md) は `line` です。
+> `IgxCombo` のデフォルト `type` は `box` です。[`IgxSelect`](select.md) は `line` です。
 
 ### デモ
 
@@ -352,12 +353,11 @@ $custom-checkbox-theme: checkbox-theme(
 ## 既知の問題
 
 - 選択した項目を表示するコンボボックス入力は編集できません。ただし、IE および FireFox のブラウザー仕様により、カーソルは表示されます。
-- コンボボックスの高さを変更するための入力はありません。将来、[IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) コンポーネントは、カスタムのサイズ変更オプションを公開し、[IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) は適切なスタイル設定と外観の統一に同じ機能を使用します。
 - コンボボックスが `undefined` (例: `[ undefined, ...]`) を含むプリミティブ データの配列にバインドされる場合、`undefined` はドロップダウンに表示されません。複合データ (オブジェクトなど) の配列にバインドされ、`valueKey` に使用される値が `undefined` の場合、項目はドロップダウンに表示されますが、選択はできません。
 - コンボボックスがリモート サービスにバインドされ、定義済みの選択がある場合、要求されたデータが読み込まれるまでその入力は空白のままになります。
 
 > [!NOTE]
-> コンボボックスは内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限がコンボボックスで有効です。詳細については、[igxForOf 既知の制限](for-of.md#既知の制限)セクションを参照してください。
+> コンボボックスは内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限がコンボボックスで有効です。詳細については、[`igxForOf 既知の制限`](for-of.md#既知の制限)セクションを参照してください。
 
 ## API まとめ
 <div class="divider--half"></div>

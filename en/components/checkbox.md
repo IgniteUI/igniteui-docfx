@@ -8,7 +8,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 <p class="highlight">Angular Checkbox is an extension of the standard HTML input type checkbox, providing similar functionality, only enhanced with things like animations and Material Design styling. It enables users to choose one or several predefined options, mostly in forms and surveys.
 
 The Ignite UI for Angular Checkbox component is a selection control that allows users to make a binary choice for a certain condition. It behaves similarly to the native browser checkbox. Some of the features it offers are styling options, themes, checked, unchecked, and indeterminate states, and others.</p>
-<div class="divider"></div>
 
 ## Angular Checkbox Example
 See the checkbox in action in the following Angular Checkbox example below.
@@ -210,7 +209,7 @@ After all that is done, our application should look like this:
 </code-view>
 
 
-## Angular Checkbox Styling
+## Styling
 
 To get started with styling the checkbox, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -221,57 +220,23 @@ To get started with styling the checkbox, we need to import the `index` file, wh
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Then, we create a new theme that extends the [`checkbox-theme`]({environment:sassApiUrl}/index.html#function-checkbox-theme) and use some of its parameters to style the checkbox's items:
+Then, we create a new theme that extends the [`checkbox-theme`]({environment:sassApiUrl}/index.html#function-checkbox-theme) and setting parameters to style the checkbox elements. By specifying the `$empty-color` and `$fill-color`, the theme automatically calculates appropriate state colors and contrast foregrounds. You can still override any other parameter with custom values as needed.
 
 ```scss
 // in styles.scss
 $custom-checkbox-theme: checkbox-theme(
-    $border-radius: 10px,
-    $label-color: #011627,
-    $empty-color: #ECAA53,
-    $fill-color: #ECAA53,
-    $tick-color: #011627,
+  $empty-color: #ecaa53,
+  $fill-color: #ecaa53,
+  $border-radius: 5px
 );
 ```
 
-### Including Themes
-
-<div class="divider"></div>
-
 The last step is to **include** the component theme in our application.
-
-If `$legacy-support` is set to `true`, include the **component theme** like that:
-
-```scss
- @include checkbox($custom-checkbox-theme);
-```
->[!NOTE]
->If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
-
-```scss
-:host {
-     ::ng-deep {
-        @include checkbox($custom-checkbox-theme);
-    }
-}
-```
-
-<div class="divider"></div>
-
-If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
 
 ```scss
 @include css-vars($custom-checkbox-theme);
 ```
 
->[!NOTE]
->If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
-
-```scss
-:host {
-    @include css-vars($custom-checkbox-theme);
-}
-```
 ### Demo
 
 

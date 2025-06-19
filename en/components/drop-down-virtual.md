@@ -6,7 +6,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 # Virtual Drop Down
 
-The Ignite UI for Angular Drop Down component can fully integrate with the [IgxForOf](for-of.md) directive in order to display a very large list of items for its selection.
+The Ignite UI for Angular Drop Down component can fully integrate with the [`IgxForOf`](for-of.md) directive in order to display a very large list of items for its selection.
 
 ## Angular Virtual Drop Down Example
 
@@ -123,7 +123,7 @@ The last part of the configuration is to set `overflow: hidden` to the wrapping 
 ```scss
 // drop-drop-virtual.component.scss
 .drop-down-virtual-wrapper {
-    overflow: hidden;
+  overflow: hidden;
 }
 ```
 
@@ -256,7 +256,7 @@ The result of the above configuration is a drop-down that dynamically loads the 
 
 Using the drop-down with a virtualized list of items enforces some limitations. Please, be aware of the following when trying to set up a drop-down list using `*igxFor`:
  - The drop-down items that are being looped need to be passed in a wrapping element (e.g. `<div>`) which has the following css: `overflow: hidden` and `height` equal to `containerSize` in `px`
- - `<igx-drop-down-item-group>` cannot be used for grouping items when the list is virtualized. Use the `isHeader` propery instead
+ - `<igx-drop-down-item-group>` cannot be used for grouping items when the list is virtualized. Use the `isHeader` property instead
  - The `items` accessor will return only the list of non-header drop-down items that are currently in the virtualized view.
  - [`dropdown.selectedItem`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selectedItem) is of type `{ value: any, index: number }`
  - The object emitted by [`selection`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selection) changes to `const emittedEvent: { newSelection: { value: any, index: number }, oldSelection: { value: any, index: number }, cancel: boolean, } `

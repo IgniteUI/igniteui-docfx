@@ -119,20 +119,36 @@ export class HomeComponent {
 ### Configuring IgxCarousel
 <div class="divider--half"></div>
 
-By default, the Carousel in Angular has its **[`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop)** input property set to `true` ( *looping occurs when the first slide comes after the last by navigating using the Next action, or when the last slide comes after the first by using the Previous action* ). The looping behavior can be disabled by setting the value of the `loop` input to `false`.
-
-To keep track of each slide index, the carousel has indicators that are positioned at the `bottom` of the carousel by default. In order to change this behavior, we have to use the [indicatorsOrientation]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicatorsOrientation) property and assign it to `top`. Indicators can be disabled by adding an empty template.
-
-The carousel template may look like this:
+By default, the Carousel in Angular has its [`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop) input property set to `true` (*looping occurs when the first slide comes after the last by navigating using the Next action, or when the last slide comes after the first by using the Previous action*). The looping behavior can be disabled by setting the value of the [`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop) input to `false`.
 
 ```html
-<div class="carousel-container">
-    <igx-carousel #carousel [loop]="false">
-      ...
-        <!-- Adding an empty template to disable carousel's indicators -->
-        <ng-template igxCarouselIndicator></ng-template>
-    </igx-carousel>
-</div>
+<igx-carousel [loop]="false">
+    ...
+</igx-carousel>
+```
+
+To keep track of each slide index, the carousel has indicators that are positioned at the `end` of the carousel by default. In order to change this behavior, use the [`indicatorsOrientation`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicatorsOrientation) property and assign it to `start`.
+
+```html
+<igx-carousel indicatorsOrientation="start">
+    ...
+</igx-carousel>
+```
+
+By default, the [`IgxCarousel`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html) displays its navigation buttons and indicators. Use the [`indicators`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicators) property to hide the indicators and the [`navigation`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#navigation) property to hide the navigation buttons.
+
+```html
+<igx-carousel [navigation]="false" [indicators]="false">
+    ...
+</igx-carousel>
+```
+
+The [`IgxCarousel`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html) supports vertical mode. Use the [`vertical`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#vertical) property to enable it.
+
+```html
+<igx-carousel [vertical]="true">
+    ...
+</igx-carousel>
 ```
 
 ### Custom indicators
@@ -279,12 +295,13 @@ The carousel [animations](carousel.md#angular-carousel-animations) are fully sup
 ### Keyboard navigation
 <div class="divider--half"></div>
 
-* To navigate to the **next**/**previous** slide, you have to use, respectfully:
-    * `Arrow Right` key for the next slide
-    * `Arrow Left` key for the previous slide
-*  To navigate to the **end**/**start** slide you have to use, respectfully:
-    * `End` key for the end slide
-    * `Home` key for the start slide
+* Navigation buttons
+    * `Space`/`Enter` key - navigates to the next/previous slide.
+* Indicators
+    * `Arrow Left` key - navigates to the previous (next in Right-to-Left mode) slide.
+    * `Arrow Right` key - navigates to the next (previous in Right-to-Left mode) slide.
+    * `Home` key - navigates to the first (last in Right-to-Left mode) slide.
+    * `End` key - navigates to the last (first in Right-to-Left mode) slide.
 
 ### Automatic transitioning
 <div class="divider--half"></div>
@@ -312,14 +329,10 @@ Our carousel will look like this in the template:
 ```html
 ...
 <div class="carousel-wrapper">
-    <igx-carousel [navigation]="false" [pause]="false" animationType="fade" [interval]="2000" [gesturesSupport]="false">
-        <div class="slides-wrapper">
-            <igx-slide *ngFor="let item of slides">
-                  <!-- Slides content goes here -->
-             </igx-slide>
-        </div>
-        <!-- Adding an empty template to disable carousel's indicators -->
-        <ng-template igxCarouselIndicator></ng-template>
+    <igx-carousel [navigation]="false" [indicators]="false" [pause]="false" animationType="fade" [interval]="2000" [gesturesSupport]="false">
+        <igx-slide *ngFor="let item of slides">
+            <!-- Slides content goes here -->
+        </igx-slide>
     </igx-carousel>
 </div>
 ...

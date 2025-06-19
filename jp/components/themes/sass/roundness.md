@@ -10,12 +10,21 @@ _language: ja
 <div class="divider"></div>
 
 ## 概要
-境界半径 (border-radius) は、コンポーネントのテーマ スキーマで定義されます (以下の例を参照)。この方法で定義されたコンポーネントの境界半径は、[theme]({environment:sassApiUrl}/index.html#mixin-theme) ミックスインの `$roundness` パラメーター、または `--ig-radius-factor` と呼ばれる単一の CSS 変数を介して制御できます。
+境界半径は、コンポーネントの[テーマ スキーマ](https://github.com/IgniteUI/igniteui-theming/blob/18f878033898e1b6a3bb0ed28993e9a4037d1a80/sass/themes/schemas/components/light/_toast.scss#L44)で定義されます (以下の例を参照)。この方法で定義されたコンポーネントの境界半径は、[theme]({environment:sassApiUrl}/index.html#mixin-theme) ミックスインの `$roundness` パラメーター、または `--ig-radius-factor` と呼ばれる単一の CSS 変数を介して制御できます。
 
 ```scss
-$light-toast: (
-    ...,
-    border-radius: (rem(26px), rem(0), rem(26px)),
+$light-toast: extend(
+    $default-elevation-toast,
+    (
+        ...,
+        border-radius: (
+            border-radius: (
+                rem(26px),
+                rem(0),
+                rem(26px),
+            ),
+        ),
+    )
 );
 ```
 
@@ -37,25 +46,28 @@ $light-toast: (
 ```scss
 // Change the default, min and max values,
 // while preserving customization via $roundness or --ig-radius-factor.
-$toast-theme: (
-    ...,
-    border-radus: border-radius(rem(4px), rem(4px), rem(16px))
-);
-
-@include css-vars($toast-theme);
+igx-toast {
+  --border-radius: #{border-radius(rem(4px), rem(4px), rem(16px))};
+}
 ```
 
 border-radius を `--ig-radius-factor` の変更の影響を受けずに定数値にしたい場合は、それを border-radius パラメーターに直接渡すだけです。
 
 ```scss
 // Will be unaffected by changes to $roundess or --ig-radius-factor.
-$toast-theme: (
-    ...,
-    border-radus: rem(4px)
-);
-
-@include css-vars($toast-theme);
+igx-toast {
+  --border-radius: rem(4px);
+}
 ```
+
+また、`border-radius` ミックスインを使用して、要素に border-radius プロパティを直接割り当てることもできます。 
+
+```scss
+button {
+    @include border-radius(rem(4px), rem(4px), rem(16px));
+}
+```
+これで、ボタンの `border-radius` は `$roundness` および `--ig-radius-factor` 変数の影響を受けるようになります。
 
 <div class="divider--half"></div>
 

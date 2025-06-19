@@ -17,6 +17,53 @@ Ignite UI for Angular の各バージョンのすべての重要な変更は、�
 
 *   [Ignite UI for Angular 変更ログ (GitHub)](https://github.com/IgniteUI/igniteui-angular/blob/master)
 
+## **19.0.1 (February 2025)**
+
+### 機能拡張
+
+#### Toolbar
+
+*   [`IgxToolbarComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html) と [`IgxToolPanelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolpanelcomponent.html) に新しい `GroupHeaderTextStyle` プロパティを追加しました。設定されている場合、すべての [`IgxToolActionGroupHeaderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactiongroupheadercomponent.html) アクションに適用されます。
+*   タイトル テキストの水平方向の配置を制御する [`titleHorizontalAlignment`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#titleHorizontalAlignment) という新しいプロパティを [`IgxToolActionComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html) に追加しました。
+*   [`IgxToolActionSubPanelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionsubpanelcomponent.html) に、パネル内の項目間の間隔を制御する `ItemSpacing` という新しいプロパティを追加しました。
+
+### バグ修正
+
+次の表は、このリリースの Ignite UI for Angular ツールセットに対して行われたバグ修正を示しています。
+
+| バグ番号 | コントロール | 説明      |
+|------------|---------|------------------|
+|26218|Excel Library|Excel ファイルを読み込むだけで、チャートのプロット領域の右マージンが狭くなり、塗りつぶしパターンと前景の塗りつぶしが消える。|
+|30286|IgxDataChart|バブルをクリックすると、Bubble Series のツールチップが近くのバブル データの内容に切り替わる。|
+|32906|IgxDataChart|IgxDataChart は上部に 2 つの xAxis を表示している。|
+|33605|IgxDataChart|凡例に ScatterLineSeries の線の色が正しく表示されない。|
+|34053|IgxRadialGauge|スケール ラベルの位置がずれる。|
+|34083|Excel Library|テンプレート Excel ファイルのテキストに 「=」 が含まれている場合、TextOperatorConditionalFormat が正しく読み込まれない/保存されない。|
+|34776|IgxDataChart|IgxDataChart を繰り返し表示したり非表示にしたりすると、JS ヒープでメモリ リークが発生する。|
+|35495|Excel Library|テンプレート ファイルを読み込むと、セル内の画像が失われる。|
+|35496|IgxSpreadsheet|Excel に画像付きでスタイルを設定すると エラーが発生する。|
+|35498|IgxDataChart|IncludedSeries で指定されたシリーズのツールチップは表示されない。|
+|36176|Excel Library|LET 関数を含む Excel ブックを読み込むと、例外が発生する。|
+|36379|Excel Library|Excel ワークブック内のアルファ チャネルを含む色は読み込まれない。|
+
+## **19.0.0 (January 2025)**
+
+*   Angular 19 のサポート。
+
+## **18.2.0 (December 2024)**
+
+### igniteui-angular-charts (チャート)
+
+DashboardTile (ベータ版)
+
+*   新しい [Dashboard Tile](dashboard-tile.md) コンポーネントは、バインドされた ItemsSource コレクションまたは単一のポイントを分析および視覚化し、データのスキーマとカウントに基づいて適切なデータ視覚化を返すコンテナー コントロールです。このコントロールは、組み込みの [Toolbar](menus/toolbar.md) コンポーネントを利用して、実行時に視覚化を変更できるようにし、最小限のコードでデータのさまざまな視覚化を表示できるようにします。
+
+### igniteui-angular-charts (入力)
+
+*   新しい ColorEditor (ベータ版) と Toolbar の ToolAction (ベータ版)
+
+この新しい[カラー エディター](inputs/color-editor.md)はスタンドアロンのカラー ピッカーとして使用でき、実行時に視覚化を更新するために [Toolbar](menus/toolbar.md) コンポーネントに統合されました。
+
 ## **18.1.0 (September 2024)**
 
 *   [データ円チャート](charts/types/data-pie-chart.md) - [`IgxDataPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiechartcomponent.html) は円ャートを表示する新しいコンポーネントです。このコンポーネントは、[`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) と同様に動作し、基になるデータ モデルのプロパティを自動的に検出しながら、ItemLegend コンポーネントを介して選択、ハイライト表示、アニメーション、凡例のサポートを可能にします。

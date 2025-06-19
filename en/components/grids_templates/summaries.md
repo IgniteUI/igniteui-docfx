@@ -115,6 +115,7 @@ All available column data types could be found in the official [Column types top
 </igx-hierarchical-grid>
 ```
 }
+
 The other way to enable/disable summaries for a specific column or a list of columns is to use the public method [`enableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#enableSummaries)/[`disableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#disableSummaries) of the **@@igSelector**.
 
 @@if (igxName === 'IgxGrid') {
@@ -400,7 +401,7 @@ class MySummary extends IgxNumberSummaryOperand {
 </igx-column>
 ```
 
-When a default summary is defined, the height of the summary area is calculated by design depending on the column with the largest number of summaries and the size of the grid. Use the [summaryRowHeight]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryRowHeight) input property to override the default value. As an argument it expects a number value, and setting a falsy value will trigger the default sizing behavior of the grid footer.
+When a default summary is defined, the height of the summary area is calculated by design depending on the column with the largest number of summaries and the size of the grid. Use the [summaryRowHeight]({environment:angularApiUrl}/classes/igxgridcomponent.html#summaryRowHeight) input property to override the default value. As an argument it expects a number value, and setting a false value will trigger the default sizing behavior of the grid footer.
 
 > [!NOTE]
 > Column summary template could be defined through API by setting the column [summaryTemplate]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaryTemplate) property to the required TemplateRef.
@@ -431,7 +432,115 @@ When a default summary is defined, the height of the summary area is calculated 
 
 }
 
+## Disable Summaries
 
+The [`disabledSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#disabledSummaries) property provides precise per-column control over the Ignite UI for Angular grid summary feature. This property enables users to customize the summaries displayed for each column in the grid, ensuring that only the most relevant and meaningful data is shown. For example, you can exclude specific summary types, such as `['count', 'min', 'max']`, by specifying their summary keys in an array.
+
+This property can also be modified **dynamically at runtime** through code, providing flexibility to adapt the grid's summaries to changing application states or user actions.
+
+The following examples illustrate how to use the `disabledSummaries` property to manage summaries for different columns and exclude specific default and custom summary types in the Ignite UI for Angular grid:
+
+@@if (igxName === 'IgxGrid') {
+```html
+<!-- default summaries -->
+<igx-column
+    field="UnitPrice"
+    header="Unit Price"
+    dataType="number"
+    [hasSummary]="true"
+    [disabledSummaries]="['count', 'sum', 'average']"
+>
+</igx-column>
+<!-- custom summaries -->
+<igx-column
+    field="UnitsInStock"
+    header="Units In Stock"
+    dataType="number"
+    [hasSummary]="true"
+    [summaries]="discontinuedSummary"
+    [disabledSummaries]="['discontinued', 'totalDiscontinued']"
+>
+</igx-column>
+```
+For `UnitPrice`, default summaries like `count`, `sum`, and `average` are disabled, leaving others like `min` and `max` active.
+
+For `UnitsInStock`, custom summaries such as `total` and `totalDiscontinued` are excluded using the `disabledSummaries` property.
+}
+@@if (igxName === 'IgxTreeGrid') {
+```html
+<!-- custom summaries -->
+<igx-column
+    field="Units"
+    header="Units"
+    dataType="number"
+    [hasSummary]="true"
+    [summaries]="unitsSummary"
+    [disabledSummaries]="['uniqueCount', 'maxDifference']"
+>
+</igx-column>
+<!-- default summaries -->
+<igx-column
+    field="UnitPrice"
+    header="Unit Price"
+    dataType="number"
+    [hasSummary]="true"
+    [disabledSummaries]="['count', 'sum', 'average']"
+>
+</igx-column>
+```
+For `Units`, custom summaries such as `totalDelivered` and `totalNotDelivered` are excluded using the `disabledSummaries` property.
+
+For `UnitPrice`, default summaries like `count`, `sum`, and `average` are disabled, leaving others like `min` and `max` active.
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+```html
+<!-- custom summaries -->
+<igx-column
+    field="Photo"
+    [hasSummary]="true"
+    [summaries]="grammySummary"
+    [disabledSummaries]="['singersWithAwards', 'awards']"
+>
+    <ng-template igxCell let-cell="cell">
+        <div class="cell__inner_2">
+            <img [src]="cell.value" class="photo" />
+        </div>
+    </ng-template>
+</igx-column>
+<!-- default summaries -->
+<igx-column
+    field="GrammyNominations"
+    header="Grammy Nominations"
+    dataType="number"
+    [hasSummary]="true"
+    [disabledSummaries]="['count', 'sum', 'average']"
+></igx-column>
+```
+For `Photo`, custom summaries such as `singersWithAwards` and `awards` are excluded using the `disabledSummaries` property.
+
+For `GrammyNominations` default summaries like `count`, `sum`, and `average` are disabled, leaving others like `min` and `max` active.
+}
+
+At runtime, summaries can also be dynamically disabled using the `disabledSummaries` property. For example, you can set or update the property on specific columns programmatically to adapt the displayed summaries based on user actions or application state changes.
+
+@@if (igxName === 'IgxGrid') {
+<code-view style="height:850px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-disable-summaries" >
+</code-view>
+}
+@@if (igxName === 'IgxTreeGrid') {
+<code-view style="height:950px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-disable-summaries" >
+</code-view>
+}
+@@if (igxName === 'IgxHierarchicalGrid') {
+<code-view style="height:850px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-disable-summaries" >
+</code-view>
+}
 
 ## Formatting summaries
 By default, summary results, produced by the built-in summary operands, are localized and formatted according to the grid [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) and column [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs). When using custom operands, the `locale` and `pipeArgs` are not applied. If you want to change the default appearance of the summary results, you may format them using the [`summaryFormatter`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaryFormatter) property.
@@ -606,101 +715,35 @@ Following the simplest approach, we create a new theme that extends the [`grid-s
 
 ```scss
 $custom-theme: grid-summary-theme(
-    $background-color: #e0f3ff,
-    $focus-background-color: rgba( #94d1f7, .3 ),
-    $label-color: #e41c77,
-    $result-color: black,
-    $pinned-border-width: 2px,
-    $pinned-border-style: dotted,
-    $pinned-border-color: #e41c77
+  $background-color: #e0f3ff,
+  $focus-background-color: rgba(#94d1f7, .3),
+  $label-color: #e41c77,
+  $result-color: black,
+  $pinned-border-width: 2px,
+  $pinned-border-style: dotted,
+  $pinned-border-color: #e41c77
 );
-```
-The last step is to **include** the component mixins:
-
-```scss
-@include grid-summary($custom-theme);
 ```
 
 >[!NOTE]
- >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
+
+The last step is to **include** the component custom theme:
+
+```scss
+@include css-vars($custom-theme);
+```
+
+>[!NOTE]
+>If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
 
  ```scss
 :host {
-    ::ng-deep {
-        @include grid-summary($custom-theme);
-    }
+  ::ng-deep {
+    @include css-vars($custom-theme);
+  }
 }
 ```
-
-### Defining a color palette
-
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
-
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
-
-```scss
-$blue-color: #7793b1;
-$green-color: #00ff2d;
-
-$my-custom-palette: palette($primary: $blue-color, $secondary: $green-color);
-```
-
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
-
-```scss
-$custom-theme: grid-summary-theme(
-    $background-color: color($my-custom-palette, "primary", 700),
-    $focus-background-color: color($my-custom-palette, "primary", 800),
-    $label-color: color($my-custom-palette, "secondary", 500),
-    $result-color: color($my-custom-palette, "grays", 900),
-    $pinned-border-width: 2px,
-    $pinned-border-style: dotted,
-    $pinned-border-color: color($my-custom-palette, "secondary", 500)
-);
-```
-
->[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/palettes.md) topic for detailed guidance on how to use them.
-
-### Using Schemas
-
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/sass/schemas.md). A **schema** is a recipe of a theme.
-
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`_light-grid-summary`]({environment:sassApiUrl}/index.html#variable-_light-grid-summary):
-
-```scss
-// Extending the light grid summary schema
-$my-summary-schema: extend($_light-grid-summary,
-    (
-        background-color: (igx-color: ('primary', 700)),
-        focus-background-color: (igx-color: ('primary', 800)),
-        label-color: (igx-color: ('secondary', 500)),
-        result-color: (igx-color: ('grays', 900)),
-        pinned-border-width: 2px,
-        pinned-border-style: dotted,
-        pinned-border-color: (igx-color: ('secondary', 500))
-    )
-);
-```
-
-In order to apply our custom schema we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
-
-```scss
-// Extending the global light-schema
-$my-custom-schema: extend($light-schema,
-    (
-        igx-grid-summary: $my-summary-schema
-    )
-);
-
-// Defining our custom theme with the custom schema
-$custom-theme: grid-summary-theme(
-    $palette: $my-custom-palette,
-    $schema: $my-custom-schema
-);
-```
-
-Don't forget to include the themes in the same way as it was demonstrated above.
 
 @@if (igxName === 'IgxGrid') {
 ### Demo

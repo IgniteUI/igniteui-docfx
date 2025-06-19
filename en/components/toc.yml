@@ -426,6 +426,7 @@
     - name: Load on Demand
       href: hierarchicalgrid/load-on-demand.md
       new: false
+      updated: true
     - name: Editing
       href: hierarchicalgrid/editing.md
       new: false
@@ -467,6 +468,7 @@
       - name: Advanced Filtering
         href: hierarchicalgrid/advanced-filtering.md
         new: false
+        updated: true
     - name: Sorting
       href: hierarchicalgrid/sorting.md
       updated: false
@@ -613,6 +615,11 @@
     - name: Excel Utility
       href: excel-utility.md
       new: false
+- name: Dashboards
+  header: true
+- name: Dashboard Tile
+  href: dashboard-tile.md
+  preview: true
 - name: Charts
   href: charts/chart-overview.md
   header: true
@@ -631,6 +638,9 @@
 - name: Composite Chart
   href: charts/types/composite-chart.md
   new: false
+- name: Data Pie Chart
+  href: charts/types/data-pie-chart.md
+  new: true
 - name: Donut Chart
   href: charts/types/donut-chart.md
   new: false
@@ -698,15 +708,27 @@
     - name: Chart Annotations
       href: charts/features/chart-annotations.md
       new: false
+    - name: Charting in Dashboards
+      href: dashboard-tile.md
+      new: true
     - name: Chart Data Aggregations
       href: charts/features/chart-data-aggregations.md
       new: false
+    - name: Chart Data Filtering
+      href: charts/features/chart-data-filtering.md
+      new: true
     - name: Chart Data Legend
       href: charts/features/chart-data-legend.md
       new: false
+    - name: Chart Data Annotations
+      href: charts/features/chart-data-annotations.md
+      new: true
     - name: Chart Data Tooltip
       href: charts/features/chart-data-tooltip.md
       new: false
+    - name: Chart Data Selection
+      href: charts/features/chart-data-selection.md
+      new: true
     - name: Chart Highlight Filter
       href: charts/features/chart-highlight-filter.md
       new: false
@@ -929,7 +951,7 @@
       - name: Printing styles
         href: themes/misc/printing-styles.md
         new: false
-      - name: Angular Theming
+      - name: Angular Material Theming
         href: themes/misc/angular-material-theming.md
         new: false
         updated: false
@@ -970,6 +992,11 @@
 - name: Query Builder
   href: query-builder.md
   new: false
+  updated: true
+  items:
+    - name: Using Query Builder Model
+      href: query-builder-model.md
+      new: true
 - name: Radio & Radio Group
   href: radio-button.md
   new: false
@@ -1007,6 +1034,9 @@
 - name: Chip
   href: chip.md
   new: false
+- name: Color Editor
+  href: inputs/color-editor.md
+  preview: true
 - name: Text Highlight
   href: texthighlight.md
   new: false
@@ -1099,6 +1129,10 @@
 - name: Dock Manager
   href: dock-manager.md
   new: false
+  updated: false
+- name: Tile Manager
+  href: tile-manager.md
+  new: true
   updated: false
 - name: Notifications
   header: true

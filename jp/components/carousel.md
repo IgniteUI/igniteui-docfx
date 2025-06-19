@@ -120,20 +120,36 @@ export class HomeComponent {
 ### IgxCarousel の定義
 <div class="divider--half"></div>
 
-デフォルトでは、Angular のカルーセルの **[`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop)** 入力プロパティは `true` に設定されています (ループは、Next 動作でナビゲートするときに最初のスライドが最後のスライドの後に来るか、Previous 動作を使用して最後のスライドが最初のスライドの後に来るときに起こります)。ループ動作を無効にするには、`loop` 入力の値を `false` に設定します。
-
-各スライド インデックスを追跡するために、カルーセルには、デフォルトでカルーセルの `bottom` に配置されるインジケーターがあります。この動作を変更するには、[indicatorsOrientation]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicatorsOrientation) プロパティを使用して、`top` に割り当てる必要があります。空のテンプレートを追加すると、インジケーターを無効にできます。
-
-カルーセル テンプレートは以下のようになります。
+デフォルトでは、Angular のカルーセルの [`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop) 入力プロパティは `true` に設定されています (ループは、Next 動作でナビゲートするときに最初のスライドが最後のスライドの後に来るか、Previous 動作を使用して最後のスライドが最初のスライドの後に来るときに起こります)。ループ動作を無効にするには、[`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop) 入力の値を `false` に設定します。
 
 ```html
-<div class="carousel-container">
-    <igx-carousel #carousel [loop]="false">
-      ...
-        <!-- Adding an empty template to disable carousel's indicators -->
-        <ng-template igxCarouselIndicator></ng-template>
-    </igx-carousel>
-</div>
+<igx-carousel [loop]="false">
+    ...
+</igx-carousel>
+```
+
+各スライド インデックスを追跡するために、カルーセルには、デフォルトでカルーセルの `end` に配置されるインジケーターがあります。この動作を変更するには、[`indicatorsOrientation`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicatorsOrientation) プロパティを使用して、`start` に割り当てます。
+
+```html
+<igx-carousel indicatorsOrientation="start">
+    ...
+</igx-carousel>
+```
+
+デフォルトでは、[`IgxCarousel`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html) はナビゲーション ボタンとインジケーターを表示します。インジケーターを非表示にするには [`indicators`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#indicators) プロパティを使用し、ナビゲーション ボタンを非表示にするには [`navigation`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#navigation) プロパティを使用します。
+
+```html
+<igx-carousel [navigation]="false" [indicators]="false">
+    ...
+</igx-carousel>
+```
+
+[`IgxCarousel`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html) は垂直モードをサポートします。これを有効にするには、[`vertical`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#vertical) プロパティを使用します。
+
+```html
+<igx-carousel [vertical]="true">
+    ...
+</igx-carousel>
 ```
 
 ### カスタム インジケーター
@@ -280,12 +296,13 @@ Carousel [アニメーション](carousel.md#angular-carousel-のアニメーシ
 ### キーボード ナビゲーション
 <div class="divider--half"></div>
 
-* **次へ**/**前へ**のスライドに移動するには、それぞれ以下を使用する必要があります。
-    * `右矢印` キー - 次のスライド
-    * `左矢印` キー - 前のスライド
-* **最後**/**最初**のスライドに移動するには、それぞれ以下を使用する必要があります。
-    * `End` キー - 最後のスライド
-    * `Home` キー - 最初のスライド
+* ナビゲーション ボタン
+    * `Space`/`Enter` キー - 次のスライド/前のスライドに移動します。
+* インジケーター
+    * `左矢印` キー - 前のスライド (右から左モードでは次) に移動します。
+    * `右矢印` キー - 次のスライド  (右から左モードでは前へ) に移動します。
+    * `Home` キー - 最初のスライド (右から左モードでは最後) に移動します。
+    * `End` キー - 最後のスライド (右から左モードでは最初) に移動します。
 
 ### 自動的なトランジション
 <div class="divider--half"></div>
@@ -313,14 +330,10 @@ Carousel [アニメーション](carousel.md#angular-carousel-のアニメーシ
 ```html
 ...
 <div class="carousel-wrapper">
-    <igx-carousel [navigation]="false" [pause]="false" animationType="fade" [interval]="2000" [gesturesSupport]="false">
-        <div class="slides-wrapper">
-            <igx-slide *ngFor="let item of slides">
-                  <!-- Slides content goes here -->
-             </igx-slide>
-        </div>
-        <!-- Adding an empty template to disable carousel's indicators -->
-        <ng-template igxCarouselIndicator></ng-template>
+    <igx-carousel [navigation]="false" [indicators]="false" [pause]="false" animationType="fade" [interval]="2000" [gesturesSupport]="false">
+        <igx-slide *ngFor="let item of slides">
+            <!-- Slides content goes here -->
+        </igx-slide>
     </igx-carousel>
 </div>
 ...

@@ -201,7 +201,7 @@ export class CalendarSample6Component {
 }
 ```
 
-These configurions should have the following result:
+These configurations should have the following result:
 
 
 <code-view style="height: 420px" 
@@ -353,14 +353,14 @@ There are separate views provided by the `IgxCalendarModule` that can be used in
 
 
 ## Keyboard navigation
-If you traverse the page using *Tab key* you should keep in mind that based on [W3 accessability recommendations](https://www.w3.org/TR/wai-aria-practices/#layoutGrid) the *igxCalendarComponent* now introduces the following tab stops:
+If you traverse the page using *Tab key* you should keep in mind that based on [W3 accessibility recommendations](https://www.w3.org/TR/wai-aria-practices/#layoutGrid) the *igxCalendarComponent* now introduces the following tab stops:
 - Previous month button
 - Month selection button
 - Year selection button
 - Next month button
 - Selected date, Current date, First focusable (not disabled) date in the days view
 
-In an Angular Calendar that contains more than one selected dates, only the first date will be introduced as a tab stop. For example, when an Angular Calendar multiselect is enabled and you have selected the dates: *13/10/2020*, *17/10/2020* and *21/10/2020* only *13/10/2020* will be accessible during tab navigation; in an Angular Calendar Range Picker, only the first date of the selected range will be part of the *page tab sequence*.
+In an Angular Calendar that contains more than one selected dates, only the first date will be introduced as a tab stop. For example, when an Angular Calendar multi-select is enabled and you have selected the dates: *13/10/2020*, *17/10/2020* and *21/10/2020* only *13/10/2020* will be accessible during tab navigation; in an Angular Calendar Range Picker, only the first date of the selected range will be part of the *page tab sequence*.
 
 >[!NOTE]
 > Behavioral change, from *v10.2.0* - Tab key navigation in the *days view* is no longer available. In order to navigate between the dates in the *date view* you should use the *arrow keys*.
@@ -402,7 +402,7 @@ When an `year` inside the decade view is focused, use:
 >Following version 8.2.0, keyboard navigation will not focus days that are outside of current month, but will rather change the month in view.
 
 ## Multi View Calendar
-Multiview calendar supports all three types of selection. Use the [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#monthsViewNumber) input to set the number of displayed months, which will be shown horizontally in a flex container. There is no limit on the max value set. While using a multi view calendar, you may want to hide the days that do not belong to the current month. You are able to do it with the [`hideOutsideDays`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#hideOutsideDays) property.  Keyboard navigation moves to next/previous months when those are in view.
+Multi-view calendar supports all three types of selection. Use the [`monthsViewNumber`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#monthsViewNumber) input to set the number of displayed months, which will be shown horizontally in a flex container. There is no limit on the max value set. While using a multi view calendar, you may want to hide the days that do not belong to the current month. You are able to do it with the [`hideOutsideDays`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#hideOutsideDays) property.  Keyboard navigation moves to next/previous months when those are in view.
 
 
 <code-view style="height: 500px" 
@@ -465,49 +465,20 @@ To get started with styling the calendar, we need to import the `index` file, wh
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) and accepts some of the default theme's parameters.
+Following the simplest approach, we create a new theme that extends the [`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) and by specifying just the `$header-background` and `$content-background` parameters, the theme will automatically compute appropriate state colors and contrast foregrounds. Of course, you're still free to override any of the theme parameters with custom values if needed.
 
 ```scss
 $custom-calendar-theme: calendar-theme(
-  $header-background: #345779,
-  $content-background: #fdfdfd,
-  $header-text-color: #ffffff,
-  $date-current-text-color: #2dabe8,
-  $picker-arrow-color: #2dabe8,
-  $date-selected-text-color: #fdfdfd,
-  $date-current-bg-color: #fdfdfd,
-  $picker-arrow-hover-color:  #345779,
-  $year-current-text-color: #2dabe8,
-  $year-hover-text-color: #2dabe8,
-  $month-current-text-color: #2dabe8,
-  $month-hover-text-color: #2dabe8,
-  $picker-text-color: #2dabe8,
-  $picker-text-hover-color:  #345779
+  $header-background: #ecaa53,
+  $content-background: #011627,
 );
 ```
-
-### Using CSS variables
 
 The last step is to pass the custom calendar theme:
 
 ```scss
  @include css-vars($custom-calendar-theme);
 ```
-
-### Using Theme Overrides
-
-In order to style components for older browsers, like Internet Explorer 11, we have to use a different approach, since it doesn't support CSS variables.
-
-If the component is using the [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`. To prevent the custom theme to leak into other components, be sure to include the `:host` selector before `::ng-deep`:
-
- ```scss
-:host {
-  ::ng-deep {
-    @include calendar($custom-calendar-theme);
-  }
-}
-```
-
 
 <code-view style="height:500px" 
            no-theming

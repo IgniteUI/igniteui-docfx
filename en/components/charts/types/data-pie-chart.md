@@ -83,6 +83,8 @@ The Others category in the [`IgxDataPieChartComponent`]({environment:dvApiBaseUr
 
 The [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryType) property works in tandem with the [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryThreshold) property of the [`IgxDataPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiechartcomponent.html). For the [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryType), you can define whether you want the [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryThreshold) to be evaluated as a number or a percentage. For example, if you decide on number and set the [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryThreshold) to 5, any slices that have a value less than 5 will become part of the Others category. Using the same value of 5 with a percent type, any values that are less than 5 percent of the total values of the [`IgxDataPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiechartcomponent.html) will become part of the Others category.
 
+To get the underlying data items that are contained within the Others slice in the chart, you can utilize the `GetOthersContext` method on the chart. This return type of this method is an [`OthersCategoryContext`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.otherscategorycontext.html) which exposes an `Items` property. The `Items` property returns an array that will contain the items in the Others slice. Additionally, when clicking the Others slice, the `Item` property of the event arguments for the `SeriesClick` event will be will also return this [`OthersCategoryContext`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.otherscategorycontext.html).
+
 By default, the Others slice will be represented by a label of "Others." You can change this by modifying the [`othersCategoryText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryText) property of the chart.
 
 If you want to ensure that the Others category does not show up in the [`IgxDataPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiechartcomponent.html), you can set the [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryThreshold) to 0.
@@ -163,6 +165,15 @@ In addition to the mouse highlighting, the [`IgxDataPieChartComponent`]({environ
 
 When these conditions are met, the values of the subset will be highlighted, while the remainder of the full set of data will be faded - effectively creating a highlight for the subset and allowing easier visualization of a subset of your data within the same control.
 
+The following example demonstrates highlight filtering.
+
+<code-view style="height: 600px" alt="Angular Data Pie Chart Highlight Filtering"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-pie-chart/highlight-filter"
+                                                 github-src="charts/data-pie-chart/highlight-filter">
+</code-view>
+
+
 <div class="divider--half"></div>
 
 ## Angular Data Pie Chart Animation
@@ -177,8 +188,8 @@ The following sample demonstrates the usage of animation in the [`IgxDataPieChar
 
 <code-view style="height: 600px" alt="Angular Data Pie Chart Animation"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-pie-chart/animation"
-                                                 github-src="charts/data-pie-chart/animation">
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-pie-chart/animation-replay"
+                                                 github-src="charts/data-pie-chart/animation-replay">
 </code-view>
 
 

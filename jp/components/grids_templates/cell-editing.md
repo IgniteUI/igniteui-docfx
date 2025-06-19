@@ -170,7 +170,7 @@ public updateCell() {
 <div class="divider--half"></div>
 
 > [!NOTE]
-> 編集モードでセルの [`editValue`]({environment:angularApiUrl}/classes/igxgridcell.html#editValue) に加えられた変更は、終了時に適切な[`編集イベント`](editing.md#イベントの引数とシーケンス)をトリガーし、[トランザクション状態](./batch-editing.md)に適用されます (トランザクションが有効な場合)。
+> 編集モードでセルの [`editValue`]({environment:angularApiUrl}/classes/igxgridcell.html#editValue) に加えられた変更は、終了時に適切な[編集イベント](editing.md#イベントの引数とシーケンス)をトリガーし、[トランザクション状態](./batch-editing.md)に適用されます (トランザクションが有効な場合)。
 
 > [!NOTE]
 > セルテンプレート [`igxCell`](../grid/grid.md#セル-テンプレート) は、編集モード外での列のセルの表示方法を制御します。
@@ -219,7 +219,7 @@ public keydownHandler(event) {
 }
 ```
 
-  * `Enter` / `Shift + Enter` ナビゲーション
+  * `Enter`/`Shift + Enter` ナビゲーション
 
 ```typescript
 if (key == 13) {
@@ -267,7 +267,7 @@ return dataView.findIndex((rec, index) => index > currentRowIndex && this.isEdit
 上記のアプローチの主な利点は次のとおりです:
 
 - 常時編集モード: セルが選択されているときに入力すると、編集モードに入り、入力された値が既存の値を置き換えます。
-- `Enter` / `Shift + Enter` で移動する場合、データ以外の行はスキップされます。これにより、ユーザーは値をすばやく切り替えることができます。
+- `Enter`/`Shift + Enter` で移動する場合、データ以外の行はスキップされます。これにより、ユーザーは値をすばやく切り替えることができます。
 
 }
 
@@ -367,7 +367,7 @@ row.update(newData);
 
 ### @@igComponent からデータを削除
 
-[`deleteRow()`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#deleterow) メソッドは、プライマリキーが定義されている場合に指定した行のみを削除することに注意してください。
+[`deleteRow()`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#deleteRow) メソッドは、プライマリキーが定義されている場合に指定した行のみを削除することに注意してください。
 
 @@if (igxName === 'IgxGrid') {
 ```typescript
@@ -515,11 +515,11 @@ export class MyHGridEventsComponent {
 
 ## スタイル設定
 
-@@igxName で [Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md)を使用してセルのスタイルを設定できます。グリッドの [theme]({environment:sassApiUrl}/index.html#function-grid-theme) は、ユーザーがグリッドのさまざまな側面をスタイル設定できる広範なプロパティを公開します。
+@@igxName で [`Ignite UI for Angular テーマ ライブラリ`](../themes/sass/component-themes.md)を使用してセルのスタイルを設定できます。グリッドの [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) は、ユーザーがグリッドのさまざまな側面をスタイル設定できる広範なプロパティを公開します。
 
 以下の手順では、編集モードでグリッドのセルのスタイルを設定する方法と、それらのスタイルの範囲を設定する方法について説明します。
 
-[Ignite UI Theming ライブラリ](../themes/sass/component-themes.md)を使用するには、まずグローバル スタイルでテーマ `index` ファイルをインポートする必要があります。
+[`Ignite UI テーマ ライブラリ`](../themes/sass/component-themes.md)を使用するには、まずグローバル スタイルでテーマ `index` ファイルをインポートする必要があります。
 
 ### スタイル ライブラリのインポート
 
@@ -534,13 +534,18 @@ export class MyHGridEventsComponent {
 
 ### パレットの定義
 
-インデックス ファイルをインポート後、カスタム パレットを作成します。好きな 2 つの色を定義し、それらを使用して [`igx-palette`](../themes/palettes.md) でパレットを作成しましょう。
+インデックス ファイルをインポート後、カスタム パレットを作成します。好きな 3 つの色を定義し、それらを使用して [`palette`](../themes/palettes.md) でパレットを作成しましょう。
 
 ```scss
 $white: #fff;
 $blue: #4567bb;
+$gray: #efefef;
 
-$color-palette: palette($primary: $white, $secondary: $blue);
+$color-palette: palette(
+  $primary: $white, 
+  $secondary: $blue, 
+  $surface: $gray
+);
 ```
 
 ### テーマの定義
@@ -549,10 +554,10 @@ $color-palette: palette($primary: $white, $secondary: $blue);
 
 ```scss
 $custom-grid-theme: grid-theme(
-    $cell-editing-background: $blue,
-    $cell-edited-value-color: $white,
-    $cell-active-border-color: $white,
-    $edit-mode-color: color($color-palette, "secondary", 200)
+  $cell-editing-background: $blue,
+  $cell-edited-value-color: $white,
+  $cell-active-border-color: $white,
+  $edit-mode-color: color($color-palette, "secondary", 200)
 );
 ```
 
@@ -564,31 +569,9 @@ $custom-grid-theme: grid-theme(
 @include grid($custom-grid-theme);
 ```
 
-これにより、テーマはアプリケーションの**すべて**のグリッドに適用されます。このカスタム スタイルを特定のコンポーネントにのみ適用する場合は、テーマのスコープを設定する必要があります。
+### デモ
 
-### スコープ コンポーネント テーマ
-
-カスタム テーマが特定のコンポーネントのみに影響するように、定義したすべてのスタイルをグローバル スタイル ファイルからカスタム コンポーネントのスタイル ファイルに移動できます (`index` ファイルの [import](#スタイル-ライブラリのインポート) を含む)。
-
-このように、Angular の [`ViewEncapsulation`](https://angular.io/api/core/Component#encapsulation) により、スタイルはカスタム コンポーネントにのみ適用されます。
-
- >[!NOTE]
- >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、グリッドのスタイルを設定するには、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
- >[!NOTE]
- >ステートメントがコンポーネントの外にある要素に影響を与えないよう、ステートメントを `:host` セレクター内にラップします。
-
-```scss
-:host {
-    ::ng-deep {
-            @include grid($custom-grid-theme);
-        }
-    }
-}
-```
-
-### デモのスタイル設定
-
-上記の手順に加えて、セルの編集テンプレートに使用されるコントロールのスタイルを設定することもできます ([`igx-input-group`](../input-group.md#スタイル設定)、[`igx-datepicker`](../date-picker.md#スタイル設定) および [`igx-checkbox`](../checkbox.md#angular-checkbox-のスタイル設定))。
+上記の手順に加えて、セルの編集テンプレートに使用されるコントロールのスタイルを設定することもできます ([`input-group`](../input-group.md#スタイル設定)、[`datepicker`](../date-picker.md#スタイル設定) および [`checkbox`](../checkbox.md#スタイル設定))。
 
 @@if (igxName === 'IgxGrid') {
 
@@ -619,7 +602,7 @@ $custom-grid-theme: grid-theme(
 }
 
 >[!NOTE]
->このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
+>このサンプルは、`Change Theme` (テーマの変更) から選択したグローバル テーマに影響を受けません。
 <div class="divider--half"></div>
 
 ## API リファレンス
@@ -629,7 +612,7 @@ $custom-grid-theme: grid-theme(
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
-* [IgxDatePickerComponent スタイル]({environment:sassApiUrl}/index.html#function-igx-date-picker-theme)
+* [IgxDatePickerComponent スタイル]({environment:sassApiUrl}/index.html#function-date-picker-theme)
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
 * [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/index.html#function-checkbox-theme)
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
