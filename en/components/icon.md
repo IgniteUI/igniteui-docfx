@@ -271,10 +271,10 @@ We recommend not using hardcoded colors on SVG child elements so the icon can be
 
 ```html
 <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-  <!-- This element uses the theme color from igx-icon component -->
+  <!-- This element uses the theme color from the igx-icon component -->
   <path d="M12 2L15 8H9L12 2Z" />
 
-  <!-- This element uses a accent color from Ignite UI pallete -->
+  <!-- This element uses an accent color from Ignite UI palette -->
   <circle cx="12" cy="17" r="4" fill="var(--ig-primary-500)" />
 </svg>
 ```
