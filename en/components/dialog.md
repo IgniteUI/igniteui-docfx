@@ -261,19 +261,25 @@ To get started with styling the dialog window, we need to import the `index` fil
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`dialog-theme`]({environment:sassApiUrl}/index.html#function-dialog-theme) and accepts parameters that style the dialog.
+Following the simplest approach, we create a new theme that extends the [`dialog-theme`]({environment:sassApiUrl}/index.html#function-dialog-theme) and accepts parameters that style the dialog. By providing the `$background`, the theme automatically selects suitable contrast colors for the foreground properties. However, you can still manually define them if desired.
 
 ```scss
 $my-dialog-theme: dialog-theme(
   $background: #011627,
-  $title-color: #ECAA53,
-  $message-color: #FEFEFE,
-  $border-radius: .3,
+  $title-color: #ecaa53,
+  $border-radius: 5px,
 );
 ```
 
 > [!NOTE]
 > In order to style any additional components that are used as part of the dialog window's content (such as the [`IgxButton`](button.md)), an additional theme should be created that is specific to the respective component and is placed under the dialog window's scope only (so it does not affect the rest of the application).
+
+```scss
+$custom-button: contained-button-theme(
+  $background: #ecaa53,
+  $foreground: #011627,
+);
+```
 
 Since the dialog window uses the [`IgxOverlayService`](overlay.md), in order for our custom theme to reach down the dialog window that we want to style, we will provide a specific outlet where the dialog window will be placed in the DOM when it is visible.
 
