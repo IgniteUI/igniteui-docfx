@@ -187,12 +187,12 @@ To get started with styling the toast, we need to import the index file, where a
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`toast-theme`]({environment:sassApiUrl}/index.html#function-toast-theme) and accepts the `$background`, `$text-color` and `$border-radius` parameters.
+Following the simplest approach, we create a new theme that extends the [`toast-theme`]({environment:sassApiUrl}/index.html#function-toast-theme) and provide the `$background`, `$text-color` and `$border-radius` parameters.
 
 ```scss
 $custom-toast-theme: toast-theme(
-  $background: #dedede,
-  $text-color: #151515,
+  $text-color: #ffcd0f,
+  $background: #292826,
   $border-radius: 12px
 );
 ```

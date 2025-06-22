@@ -150,13 +150,13 @@ To get started with styling the avatar, we need to import the `index` file, wher
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`avatar-theme`]({environment:sassApiUrl}/index.html#function-avatar-theme) and accepts the `$background`, `$color`, and the `$border-radius` parameters.
+Following the simplest approach, we create a new theme that extends the [`avatar-theme`]({environment:sassApiUrl}/index.html#function-avatar-theme) providing values for the `$background` and `$border-radius` parameters. The `$color` (or `$icon-color`) is automatically set to either black or white, depending on which offers better contrast with the specified background. Note that the `$border-radius` property only takes effect when the avatar's `shape` is set to `rounded`.
 
 Given the following markup:
 
 ```html
 <div class="avatar-sample initials">
-  <igx-avatar initials="JS" size="medium"></igx-avatar>
+  <igx-avatar initials="JS" shape="rounded" size="medium"></igx-avatar>
 </div>
 ```
 
@@ -165,7 +165,6 @@ We create the following avatar theme:
 ```scss
 $custom-avatar-theme: avatar-theme(
   $background: #72da67,
-  $color: #000000,
   $border-radius: 16px
 );
 ```
