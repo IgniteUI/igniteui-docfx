@@ -258,19 +258,11 @@ public ngOnInit() {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`button-group-theme`]({environment:sassApiUrl}/index.html#function-button-group-theme) を拡張し、さまざまな状態のボタン グループの項目をスタイルするパラメーターを受け取る新しいテーマを作成する方法です。
+最もシンプルな方法として、[`button-group-theme`]({environment:sassApiUrl}/index.html#function-button-group-theme) を拡張し、`$item-background` のみを指定して新しいテーマを作成します。これにより、インタラクション状態の色、前景色、境界線の色が自動的に算出されます。必要に応じて任意のテーマ パラメーターをオーバーライドすることも可能です。
 
 ```scss
 $custom-button-group: button-group-theme(
-  $item-text-color: #fdfdfd,
-  $item-background: #2f4d6a,
-  $item-hover-text-color: #fdfdfd,
-  $item-hover-background: #1f3347,
-  $item-selected-text-color: #fdfdfd,
-  $item-selected-background: #1f3347,
-  $item-selected-hover-background: #1f3347,
-  $disabled-text-color: gray,
-  $disabled-background-color: lightgray,
+  $item-background: #57a5cd,
 );
 ```
 

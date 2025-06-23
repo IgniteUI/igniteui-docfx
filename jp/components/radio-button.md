@@ -156,16 +156,12 @@ public selectedColor: string = this.colors[3].hex;
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`radio-theme`]({environment:sassApiUrl}/index.html#function-radio-theme) を拡張する新しいテーマを作成し、デフォルト テーマのいくつかのパラメーターを受け取る方法です。
-
+最もシンプルな方法として、[`radio-theme`]({environment:sassApiUrl}/index.html#function-radio-theme) を拡張する新しいテーマを作成します。`$empty-color` と `$fill-color` の 2 つの主要パラメーターを指定することで、完全なスタイルのラジオ ボタンを生成できます。これらの値はテーマの基盤となり、指定することでホバー、選択、無効など、さまざまな状態に必要な前景色および背景色が自動的に計算されます。
 
 ```scss
 $custom-radio-theme: radio-theme(
-  $disabled-color: lightgray,
-  $empty-color: #345779,
+  $empty-color:  #345779,
   $fill-color: #2dabe8,
-  $fill-color-hover: #2dabe8,
-  $fill-hover-border-color: #2dabe8,
 );
 ```
 

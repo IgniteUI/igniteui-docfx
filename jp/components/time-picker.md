@@ -389,8 +389,6 @@ $my-time-picker-theme: time-picker-theme(
   $hover-text-color: #ecaa53,
   $selected-text-color: #ecaa53,
   $header-background: #ecaa53,
-  $header-hour-text-color: #011627,
-  $header-time-period-color: #011627,
   $background-color: #011627
 );
 ```

@@ -241,6 +241,7 @@ $my-color-palette: palette(
 ### コンポーネント テーマの作成
 
 コンポーネント テーマを作成し、上記のスニペットから `$my-color-palette` パレットを渡します。
+
 ```scss
 // In expansion-styling.component.scss
 // Create expansion panel theme.
@@ -256,7 +257,7 @@ $custom-panel-theme: expansion-panel-theme(
 );
 ```
 
-パレットを作成する代わりに、引数としてカラーを直接 expansion-panel-theme 関数に割り当てることもできます。
+パレットを作成する代わりに、引数としてカラーを直接 expansion-panel-theme 関数に割り当てることもできます。`title-color` や `icon-color`、その他の前景プロパティを明示的に指定していない場合でも、テーマは背景とのコントラストを考慮し、黒または白を自動的に割り当てます。
 
 ```scss
 $custom-panel-theme: expansion-panel-theme(

@@ -188,12 +188,12 @@ Toast のスタイル設定を始めるには、すべてのテーマ関数と�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`toast-theme`]({environment:sassApiUrl}/index.html#function-toast-theme) を拡張する新しいテーマを作成し、`$background`、`$text-color` と `$border-radius` パラメーターを受け取る方法です。 
+最もシンプルな方法として、[`toast-theme`]({environment:sassApiUrl}/index.html#function-toast-theme) を拡張する新しいテーマを作成し、`$background`、`$text-color`、`$border-radius` パラメーターを指定します。
 
 ```scss
 $custom-toast-theme: toast-theme(
-  $background: #dedede,
-  $text-color: #151515,
+  $text-color: #ffcd0f,
+  $background: #292826,
   $border-radius: 12px
 );
 ```

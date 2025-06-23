@@ -142,12 +142,12 @@ igx-switch {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-次に、[`switch-theme`]({environment:sassApiUrl}/index.html#function-switch-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用してスイッチの項目をスタイル設定します。
+次に、[`switch-theme`]({environment:sassApiUrl}/index.html#function-switch-theme) を拡張して新しいテーマを作成します。`$thumb-off-color` と `$thumb-on-color` の 2 つのパラメーターを指定するだけで、完全なスタイルのスイッチが生成されます。その他のパラメーターをオーバーライドして、外観をさらにカスタマイズすることも可能です。
 
 ```scss
 $custom-switch-theme: switch-theme(
+  $thumb-off-color: #7cadd5,
   $thumb-on-color: #ecaa53,
-  $track-on-color: #f0cb9c,
 );
 ```
 

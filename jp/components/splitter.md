@@ -219,17 +219,15 @@ public typeVertical = SplitterType.Vertical;
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-スプリッターのデフォルトのスタイルを変更するには、[`splitter-theme`]({environment:sassApiUrl}/index.html#function-splitter-theme) を拡張して新しいテーマを作成します。
+スプリッターのデフォルトのスタイルを変更するには、[`splitter-theme`]({environment:sassApiUrl}/index.html#function-splitter-theme) を拡張して新しいテーマを作成します。基本的なパラメーターを提供するだけで、インタラクション状態に必要なすべてのスタイルが自動生成されます。
 
 ```scss
 // In splitter-styling-sample.component.scss
 
-$custom-splitter-theme: splitter-theme(
+$splitter-theme: splitter-theme(
   $bar-color: #011627,
   $handle-color: #ecaa53,
   $expander-color: #ecaa53,
-  $border-radius: 0,
-  $focus-color: #ecaa53,
   $size: 4px
 );
 ```

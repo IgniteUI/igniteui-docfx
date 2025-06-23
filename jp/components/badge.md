@@ -299,13 +299,12 @@ Badge のスタイル設定は、すべてのテーマ関数とコンポーネ�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`badge-theme`]({environment:sassApiUrl}/index.html#function-badge-theme) を拡張する新しいテーマを作成し、バッジの項目をスタイル設定するいくつかのパラメーターを受け取る方法です。
+最も簡単な方法は、[`badge-theme`]({environment:sassApiUrl}/index.html#function-badge-theme) を拡張する新しいテーマを作成し、バッジの項目をスタイル設定するいくつかのパラメーターを受け取る方法です。`$background-color` を設定すると、`$icon-color` と `$text-color` は、背景色とのコントラストが高い黒または白に自動的に割り当てられます。なお、`$border-radius` プロパティはバッジの `shape` が `square` に設定されている場合のみ適用されます。
 
 ```scss
 $custom-badge-theme: badge-theme(
-  $border-radius: 15px,
-  $icon-color: white,
-  $text-color: black,
+  $background-color: #57a5cd,
+  $border-radius: 4px
 );
 ```
 
