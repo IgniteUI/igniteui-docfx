@@ -281,14 +281,12 @@ Navbar のタイトルにカスタム コンテンツを提供する場合は、
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`navbar-theme`]({environment:sassApiUrl}/index.html#function-navbar-theme) を拡張する新しいテーマを作成し、`$text-color`、`$background`、`$idle-icon-color`、`$hover-icon-color` パラメーターを受け取る方法です。
+最もシンプルな方法として、[`navbar-theme`]({environment:sassApiUrl}/index.html#function-navbar-theme) を拡張し、`$background` および `$idle-icon-color` パラメータのみを提供する新しいテーマを作成します。テーマは、さまざまなインタラクション状態に必要なすべての背景色と前景色を自動的に計算します。より細かい制御を行いたい場合は、個別のプロパティをオーバーライドすることも可能です。
 
 ```scss
 $custom-navbar-theme: navbar-theme(
-  $text-color: #151515,
-  $background: #dedede,
-  $idle-icon-color: #151515,
-  $hover-icon-color: #8c8c8c,
+  $background: #011627,
+  $idle-icon-color: #ecaa53,
 );
 ```
 

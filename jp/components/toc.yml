@@ -721,6 +721,9 @@
     - name: チャート データ凡例
       href: charts/features/chart-data-legend.md
       new: false
+    - name: チャート データの注釈
+      href: charts/features/chart-data-annotations.md
+      new: true
     - name: チャート データ ツールチップ
       href: charts/features/chart-data-tooltip.md
       new: false

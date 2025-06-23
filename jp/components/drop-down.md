@@ -506,21 +506,14 @@ export class InputDropDownComponent {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`drop-down-theme`]({environment:sassApiUrl}/index.html#function-drop-down-theme) を拡張する新しいテーマを作成し、デフォルト テーマのいくつかのパラメーターを受け取る方法です。
+最もシンプルな方法として、[`drop-down-theme`]({environment:sassApiUrl}/index.html#function-drop-down-theme) を拡張し、既定のテーマ パラメーターの一部を指定することで、新しいテーマを作成します。背景色を指定するだけで、インタラクション状態の色や適切な前景色が自動的に計算されます。`$background` プロパティを設定すると、完全にスタイル設定されたドロップダウンが表示されます。
 
 ```scss
 $custom-drop-down-theme: drop-down-theme(
-  $background-color: #fdfdfd,
   $header-text-color: #345779,
   $item-text-color: #2dabe8,
-  $selected-item-background: #345779,
-  $selected-item-text-color: #fdfdfd,
-  $selected-hover-item-background: #345779,
-  $selected-hover-item-text-color: #fdfdfd,
-  $selected-focus-item-background: #345779,
-  $selected-focus-item-text-color: #fdfdfd,
-  $hover-item-background: rgba(0, 0, 0, 0.12),
   $hover-item-text-color: #345779,
+  $selected-item-background: #345779,
 );
 ```
 

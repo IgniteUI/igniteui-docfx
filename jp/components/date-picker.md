@@ -297,22 +297,11 @@ IgxDatePicker と [`IgxTimePicker`](time-picker.md) を一緒に使用する場�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Angular Date Picker はカレンダーのテーマを使用するため、[`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用して日付ピッカーの項目をスタイル設定します。
+Angular Date Picker はカレンダーのテーマを使用しているため、[`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) を拡張して新しいテーマを作成します。`$header-background` を指定することで、他のプロパティの視覚的なバランスとアクセシビリティを保つための色が自動的に算出されます。
 
 ```scss
 $custom-datepicker-theme: calendar-theme(
-  $header-background: #345779,
-  $content-background: #fdfdfd,
-  $header-foreground: #ffffff,
-  $date-current-foreground: #2dabe8,
-  $navigation-color: #2dabe8,
-  $date-selected-foreground: #fdfdfd,
-  $date-current-background: #fdfdfd,
-  $navigation-hover-color: #345779,
-  $ym-current-foreground: #2dabe8,
-  $ym-hover-foreground: #2dabe8,
-  $picker-foreground: #2dabe8,
-  $picker-hover-foreground: #345779,
+  $header-background: #57a5cd,
 );
 ```
 

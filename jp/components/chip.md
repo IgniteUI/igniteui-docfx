@@ -491,19 +491,13 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme)を拡張する新しいテーマを作成し、チップの項目をスタイル設定するいくつかのパラメーターを受け取る方法です。
+最もシンプルな方法として、[`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme) を拡張して新しいテーマを作成し、チップの項目をスタイリングします。`$background` または `$selected-background` を指定することで、状態に応じた色や前景色が自動的に計算されます。必要に応じて、他のパラメーターをカスタム値でオーバーライドすることもできます。
 
 ```scss
 $custom-theme: chip-theme(
-  $background: #011627,
-  $hover-background: #011627dc,
-  $focus-background: #0116276c,
+  $background: #57a5cd,
   $selected-background: #ecaa53,
-  $hover-selected-background: #ecaa53,
-  $focus-selected-background: #ecaa53,
-  $text-color: #fefefe,
-  $remove-icon-color: #f14545,
-  $remove-icon-color-focus: #da0000,
+  $remove-icon-color: #d81414,
   $border-radius: 5px,
 );
 ```

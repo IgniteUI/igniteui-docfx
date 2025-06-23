@@ -168,6 +168,21 @@ public ngOnInit() {
 
 ボタンのスタイル設定に使用できるパラメーターの完全なリストについては、[`icon-button-theme`]({environment:sassApiUrl}/index.html#function-icon-button-theme) セクションを参照してください。
 
+特定のタイプのアイコン ボタン (`flat`、`outlined`、`contained`) のみをスタイリングすることもできます。
+そのためには、次のタイプ別テーマ関数を使用します: [`flat-icon-button-theme`]({environment:sassApiUrl}/index.html#function-flat-icon-button-theme)、[`outlined-icon-button-theme`]({environment:sassApiUrl}/index.html#function-outlined-icon-button-theme)、[`contained-icon-button-theme`]({environment:sassApiUrl}/index.html#function-contained-icon-button-theme)。
+
+以下は、`contained-icon-button-theme` 関数を使用して SCSS でカスタム テーマを定義する例です。
+
+```scss
+@use "igniteui-angular/theming" as *;
+
+$custom-contained: contained-icon-button-theme(
+    $background: #ECAA53,
+);
+```
+
+これにより、ホバー、フォーカス、アクティブなどのさまざまな状態に適した前景色と背景色を含む、完全にテーマ設定された `contained icon button` が生成されます。
+
 <code-view style="height: 100px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
