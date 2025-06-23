@@ -392,18 +392,14 @@ export class AppRoutingModule { }
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-次に、[`tabs-theme`]({environment:sassApiUrl}/index.html#function-tabs-theme) を拡張する新しいテーマを作成し、タブグループのスタイルを設定できるさまざまなプロパティを受け取ります。
+最もシンプルな方法として、[`tabs-theme`]({environment:sassApiUrl}/index.html#function-tabs-theme) を拡張する新しいテーマを作成します。`$item-background` や `$item-active-color` などの少数のベース パラメーターを指定することで、最小限の労力でタブのスタイルを設定できます。テーマは、さまざまなインタラクション状態に必要なすべての背景色と前景色を自動的に生成します。
+
+追加のパラメーターをオーバーライドして、外観をさらに微調整することもできます。
 
 ```scss
 $dark-tabs: tabs-theme(
-  $item-text-color: #f4d45c,
   $item-background: #292826,
-  $item-hover-background: #f4d45c,
-  $item-hover-color: #292826,
-  $item-active-color: #f4d45c,
-  $item-active-icon-color: #f4d45c,
-  $indicator-color: #f4d45c,
-  $tab-ripple-color: #f4d45c
+  $item-active-color: #F4D45C,
 );
 ```
 
