@@ -374,12 +374,11 @@ Select コンポーネントのボタンのスタイル設定を始めるには�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`select-theme`]({environment:sassApiUrl}/index.html#function-select-theme) を拡張する新しいテーマを作成し、デフォルト テーマのいくつかのパラメーターを受け取る方法です。
+最もシンプルな方法として、[`select-theme`]({environment:sassApiUrl}/index.html#function-select-theme) を拡張し、`$toggle-button-background` のみを提供して新しいテーマを作成します。theme 関数は、この単一の値に基づいて、さまざまな状態に対応するすべての背景色と前景色を自動的に計算します。
 
 ```scss
 $custom-select-theme: select-theme(
-  $toggle-button-background: #2b2b2b,
-  $toggle-button-background-focus: #808080,
+  $toggle-button-background: #57a5cd,
 );
 ```
 

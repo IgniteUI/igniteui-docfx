@@ -287,11 +287,12 @@ public singleSelection(event: IComboSelectionChangeEventArgs) {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-[`combo-theme`]({environment:sassApiUrl}/index.html#function-combo-theme) を拡張する新しいテーマを作成し、`$search-separator-border-color` パラメーターを受け取ります。
+最もシンプルな方法として、[`combo-theme`]({environment:sassApiUrl}/index.html#function-combo-theme) を拡張する新しいテーマを作成します。`$toggle-button-background` を設定することで、新しいテーマがボタンに対する状態色や前景色を自動的に決定します。必要に応じて、`$search-separator-border-color` などの追加パラメーターを指定することも可能です。
 
 ```scss
 $custom-combo-theme: combo-theme(
-  $search-separator-border-color: #1a5214
+  $search-separator-border-color: #1d3743,
+  $toggle-button-background: #57a5cd,
 );
 ```
 
@@ -299,27 +300,13 @@ $custom-combo-theme: combo-theme(
 
 ```scss
 $custom-drop-down-theme: drop-down-theme(
-  $background-color: #d9f5d6,
-  $header-text-color: #1a5214,
-  $item-text-color: #1a5214,
-
-  $focused-item-background: #72da67,
-  $focused-item-text-color: #1a5214,
-  $hover-item-background: #a0e698,
-  $hover-item-text-color: #1a5214,
-
-  $selected-item-background: #a0e698,
-  $selected-item-text-color: #1a5214,
-  $selected-hover-item-background: #72da67,
-  $selected-hover-item-text-color: #1a5214,
-  $selected-focus-item-background: #72da67,
-  $selected-focus-item-text-color: #1a5214,
+  $background-color: #57a5cd,
 );
 
 $custom-checkbox-theme: checkbox-theme(
   $border-radius: 10px,
-  $fill-color: #1a5214,
-  $empty-color: #1a5214,
+  $fill-color: #1d3743,
+  $empty-color: #1d3743,
 );
 ```
 

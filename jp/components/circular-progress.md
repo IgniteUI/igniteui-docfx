@@ -162,15 +162,14 @@ export class HomeComponent {
 
 ```scss
 .custom-size {
-  width: 100px;
-  height: 100px;
+  --diameter: 100px;
 }
 
 .sample-content {
   width: 300px;
   display: flex;
   align-items: center;
-  margin-top: 30px;
+  margin: 30px;
 }
 ```
 
@@ -244,8 +243,8 @@ $custom-theme: progress-circular-theme(
 
 ```scss
 $custom-theme: progress-circular-theme(
-  $base-circle-color: lightgray,
   $fill-color-default: rgb(32, 192, 17),
+  $diameter: 50px
 );
 ```
 
