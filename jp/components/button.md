@@ -293,6 +293,32 @@ $custom-button-theme: button-theme(
 }
 ```
 
+特定のタイプのボタン (`flat`、`outlined`、`contained`、`fab`) のみをスタイリングすることもできます。
+そのためには、次のようなタイプ別のテーマ関数を使用します: [`flat-button-theme`]({environment:sassApiUrl}/index.html#function-flat-button-theme)、[`outlined-button-theme`]({environment:sassApiUrl}/index.html#function-outlined-button-theme)、[`contained-button-theme`]({environment:sassApiUrl}/index.html#function-contained-button-theme)、[`fab-button-theme`]({environment:sassApiUrl}/index.html#function-fab-button-theme)。
+
+例として、以下のようなマークアップがあるとします。
+
+```html
+<div class="my-contained-btn">
+  <button igxButton="contained">Contained button</button>
+</div>
+<div class="my-flat-btn">
+  <button igxButton="flat">Flat button</button>
+</div>
+```
+
+`contained` ボタンのみをスタイリングしたい場合は、[`contained-button-theme`]({environment:sassApiUrl}/index.html#function-flat-button-theme) 関数を使用します。
+
+```scss
+$custom-contained-theme: contained-button-theme(
+  $background: #348ae0,
+);
+```
+
+新たに追加されたタイプ別テーマ関数により、ボタンのスタイリングがより簡単になりました。上記の例のように、[`contained-button-theme`]({environment:sassApiUrl}/index.html#function-contained-button-theme) および [`fab-button-theme`]({environment:sassApiUrl}/index.html#function-fab-button-theme) では、`$background` パラメーターに色を指定するだけで、他のすべての状態用の色やテキストの色が自動的に生成されます。テキストの色は、新しく追加された [`adaptive-contrast`]({environment:sassApiUrl}/index.html#function-adaptive-contrast) 関数によって、指定された背景に対して黒か白のどちらがより良いコントラストを持つかを計算して決定されます。
+
+[`flat-button-theme`]({environment:sassApiUrl}/index.html#function-flat-button-theme) および [`outlined-button-theme`]({environment:sassApiUrl}/index.html#function-outlined-button-theme) では、状態用の色も自動的に生成されますが、これらは `$background` ではなく `$foreground` パラメーターに基づいて計算されます。
+
 ### デモ
 
 <code-view style="height: 100px"

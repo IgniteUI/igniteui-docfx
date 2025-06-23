@@ -151,13 +151,13 @@ Avatar のスタイル設定を始めるには、すべてのテーマ関数と�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`avatar-theme`]({environment:sassApiUrl}/index.html#function-avatar-theme) を拡張する新しいテーマを作成し、`$background`、`$color` と `$border-radius` パラメーターを受け取る方法です。
+最もシンプルな方法として、[`avatar-theme`]({environment:sassApiUrl}/index.html#function-avatar-theme) を拡張し、`$background` および `$border-radius` パラメーターを指定して新しいテーマを作成します。`$color` (または `$icon-color`) は、指定された背景に対してよりコントラストの高い色 (黒または白) が自動的に設定されます。なお、`$border-radius` プロパティはアバターの `shape` が `rounded` に設定されている場合のみ適用されます。
 
 次のマークアップを前提として:
 
 ```html
 <div class="avatar-sample initials">
-  <igx-avatar initials="JS" size="medium"></igx-avatar>
+  <igx-avatar initials="JS" shape="rounded" size="medium"></igx-avatar>
 </div>
 ```
 
@@ -166,7 +166,6 @@ Avatar のスタイル設定を始めるには、すべてのテーマ関数と�
 ```scss
 $custom-avatar-theme: avatar-theme(
   $background: #72da67,
-  $color: #000000,
   $border-radius: 16px
 );
 ```

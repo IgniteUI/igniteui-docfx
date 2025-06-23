@@ -236,16 +236,14 @@ public toggleAll() {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-チェックボックスはカレンダーのテーマを使用するため、[`checkbox-theme`]({environment:sassApiUrl}/index.html#function-checkbox-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用してチェックボックスの項目をスタイル設定します。
+次に、[`checkbox-theme`]({environment:sassApiUrl}/index.html#function-checkbox-theme) を拡張して新しいテーマを作成し、チェックボックス要素をスタイリングします。`$empty-color` と `$fill-color` を指定することで、必要な状態色やコントラストのある前景色が自動的に計算されます。必要に応じて、他のパラメーターをカスタム値でオーバーライドすることもできます。
 
 ```scss
 // in styles.scss
 $custom-checkbox-theme: checkbox-theme(
-  $border-radius: 10px,
-  $label-color: #011627,
-  $empty-color: #ECAA53,
-  $fill-color: #ECAA53,
-  $tick-color: #011627,
+  $empty-color: #ecaa53,
+  $fill-color: #ecaa53,
+  $border-radius: 5px
 );
 ```
 

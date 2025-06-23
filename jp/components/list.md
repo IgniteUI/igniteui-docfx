@@ -617,11 +617,11 @@ igx-list-item {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`list-theme`]({environment:sassApiUrl}/index.html#function-list-theme) を拡張し、`$background` パラメーターを受け入れる新しいテーマを作成する方法です。
+最もシンプルな方法として、[`list-theme`]({environment:sassApiUrl}/index.html#function-list-theme) を拡張し、`$background` パラメーターだけを指定することで、状態ごとのカラーや適切なコントラストの前景色が自動的に計算されます。必要に応じて手動で指定することも可能です。
 
 ```scss
 $my-list-theme: list-theme(
-  $background: #0568ab
+  $background: #57a5cd
 );
 ```
 

@@ -330,29 +330,15 @@ Stepper コンポーネントは、ローコード [ドラッグアンドドロ�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法として、[stepper-theme]({environment:sassApiUrl}/index.html#function-stepper-theme) を拡張する新しいテーマを作成し、変更するパラメーターを渡す方法があります。
+最もシンプルな方法として、[stepper-theme]({environment:sassApiUrl}/index.html#function-stepper-theme) を拡張し、少数のベース パラメーターのみを指定して新しいテーマを作成します。テーマは、状態固有の色やアクセス可能なコントラストの前景など、必要なすべてのスタイルを自動的に生成します。外観をさらに調整したい場合は、他の任意のパラメーターをオーバーライドすることも可能です。
 
 ```scss
-$custom-stepper-theme: stepper-theme(
-  $indicator-background: #fff,
-
+$stepper-theme: stepper-theme(
+  $step-background: #351e65,
   $current-indicator-background: #f6cd28,
-  $current-indicator-outline: #351e65,
-
-  $current-title-color: #351e65,
-  $current-subtitle-color: #5f4691,
-
-  $complete-indicator-background: #351e65,
-  $complete-indicator-outline: #351e65,
-
-  $complete-title-color: red,
-  $complete-subtitle-color: #5f4691,
 
   $border-radius-step-header: 16px,
   $border-radius-indicator: 10px 4px 10px 4px,
-
-  $step-separator-color: #f6cd28,
-  $complete-step-separator-color: #351e65,
 );
 ```
 

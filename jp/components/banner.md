@@ -266,13 +266,11 @@ export class MyBannerComponent {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`banner-theme`]({environment:sassApiUrl}/index.html#function-banner-theme) を拡張する新しいテーマを作成し、`$banner-message-color`、`$banner-background` と `$banner-illustration-color` パラメーターを受け取る方法です。
+最もシンプルな方法として、[`banner-theme`]({environment:sassApiUrl}/index.html#function-banner-theme) を拡張し、`$banner-background` のみを指定して新しいテーマを作成します。指定された値に基づき、`$banner-message-color` および `$banner-illustration-color` は背景とのコントラストが高い黒または白に自動的に設定されます。
 
 ```scss
 $custom-banner-theme: banner-theme(
-  $banner-message-color: #151515,
-  $banner-background: #dedede,
-  $banner-illustration-color: #666666
+  $banner-background: #011627,
 );
 ```
 

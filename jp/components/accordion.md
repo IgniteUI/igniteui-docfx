@@ -275,13 +275,13 @@ Ignite UI for Angular Accordion のキーボード ナビゲーションは、�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`expansion-panel-theme`]({environment:sassApiUrl}/index.html#function-expansion-panel-theme) を拡張し、`$expanded-margin`、`$body-color`、および `$header-focus-background` パラメーターを受け入れる新しいテーマを作成する方法です。 
+最もシンプルな方法として、[`expansion-panel-theme`]({environment:sassApiUrl}/index.html#function-expansion-panel-theme) を拡張し、`$header-background`、`$body-color`、および `$expanded-margin` の各パラメーターを受け取る新しいテーマを作成します。このテーマは、指定された背景色に対してコントラストの高い前景色 (黒または白) を自動的に選択して割り当てます。
 
 ```scss
 $custom-panel-theme: expansion-panel-theme(
-  $expanded-margin: 10px,
-  $body-color: #282885,
-  $header-focus-background: #efefef
+  $header-background: #011627,
+  $body-background: #f0ece7,
+  $expanded-margin: 10px
 );
 ```
 
