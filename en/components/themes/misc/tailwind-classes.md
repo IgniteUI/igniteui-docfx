@@ -53,18 +53,6 @@ If your project uses `sass` for styling, you should import the `theme.scss` from
 
 > Ensure the import path resolves correctly from `node_modules`.
 
-## Choosing a Theme Preset
-If you haven’t already included a theme in your project—or if you'd like to apply a specific set of theme variables—you can use one of the available [predefined themes](https://www.infragistics.com/products/ignite-ui-angular/angular/components/themes/sass/global-themes#available-themes).
-To apply a preset, simply include its path in your `angular.json` file:
-
-```json
-"styles": [
-    "src/styles.css",
-    "node_modules/igniteui-theming/tailwind/presets/material-light.css"
-],
-```
->You can swap `material-light.css` with any other preset available in the `igniteui-theming/tailwind/presets/` directory.
-
 ## Using Ignite UI Custom Utility Classes
 The `igniteui-theming` package includes a custom Tailwind configuration that exposes Ignite UI design tokens through utility classes. These include support for:
 
@@ -107,6 +95,17 @@ Each class applies all necessary font settings, spacing, and sizing according to
 >[!NOTE]
 >These custom typography utilities only work outside of `ig-typography`. If you have to set the `ig-typography` CSS class on a top-level element, these styles won't apply.
 <div class="divider--half"></div>
+
+## Sample
+
+In the following sample you can see a fully custom card, built entirely using Tailwind utility classes, including our `custom utility classes` for `shadows`, `colors` and `typography`. On the other side we have an `igx-card` component. While it provides a clean layout and accessibility features, its theming is driven by the Ignite UI theming engine, which limits direct styling with Tailwind classes due to CSS specificity.
+
+> 🔧 If you need more control over styling the Ignite UI Components, we recommend using the available `CSS custom properties` or the `Component Themes`.
+
+<code-view style="height: 440px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/theming/tailwind-sample" alt="Tailwind Card Example">
+</code-view>
 
 ## Summary
 With just a few configuration steps, you can combine Tailwind’s utility-first approach with Ignite UI’s robust design system. This integration allows you to rapidly build consistent, themed UI components using well-defined tokens for color, elevation, and typography—right from your HTML.
