@@ -41,14 +41,14 @@ In your main stylesheet (`styles.css` or `styles.scss`), import Tailwind and the
 
 ```css
 @import "tailwindcss";
-@import "igniteui-theming/tailwind/theme.css";
+@import "igniteui-theming/tailwind/theme";
 ```
 
-If your project uses `sass` for styling, you should import the `theme.scss` from the sass folder.
+If your project uses `sass` for styling:
 
 ```scss
 @import "tailwindcss";
-@import "igniteui-theming/sass/tailwind/theme.scss";
+@use "igniteui-theming/tailwind/theme";
 ```
 
 > Ensure the import path resolves correctly from `node_modules`.
