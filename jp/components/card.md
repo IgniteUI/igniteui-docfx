@@ -337,14 +337,13 @@ Card のスタイル設定を始めるには、すべてのテーマ関数とコ
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
-最も単純なアプローチに従って、[`card-theme`]({environment:sassApiUrl}/index.html#function-card-theme) を拡張する新しいテーマを作成し、カードのアイテムをスタイル設定するいくつかのパラメーターを受け取ります。
+
+最もシンプルな方法として、[`card-theme`]({environment:sassApiUrl}/index.html#function-card-theme) を拡張し、少数のスタイル パラメーターのみを指定して新しいテーマを作成します。`$background` パラメーターのみを指定した場合でも、適切な前景色 (黒または白) が自動的に選ばれて割り当てられます。
 
 ```scss
 $colorful-card: card-theme(
   $background: #011627,
-  $header-text-color: #fefefe,
   $subtitle-text-color: #ecaa53,
-  $content-text-color: #fefefe
 );
 ```
 

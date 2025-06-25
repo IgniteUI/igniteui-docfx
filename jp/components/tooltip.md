@@ -292,7 +292,7 @@ export class AppModule {}
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`tooltip-theme`]({environment:sassApiUrl}/index.html#function-tooltip-theme) を拡張する新しいテーマを作成し、`$text-color`、`$background`、`$border-radius` パラメーターを受け取る方法です。
+最もシンプルな方法として、[`tooltip-theme`]({environment:sassApiUrl}/index.html#function-tooltip-theme) を拡張する新しいテーマを作成し、`$text-color`、`$background`、`$border-radius` パラメーターを指定します。
 
 ```scss
 $dark-tooltip: tooltip-theme(

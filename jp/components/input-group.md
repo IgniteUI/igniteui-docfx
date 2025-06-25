@@ -449,18 +449,16 @@ constructor(fb: FormBuilder) {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-次に、[`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme) を拡張する新しいテーマを作成し、変更するパラメーターを渡します。
+入力グループの外観をカスタマイズするには、[`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme) を拡張して新しいテーマを作成します。この方法では、変更したいパラメーターだけを上書きし、その他のスタイルはベース テーマが自動的に処理します。
+
+境界線や背景の色など、いくつかのコアパラメーターを指定するだけでも、一貫した状態ベースのスタイル (ホバー、フォーカスなど) が適用された、完全なスタイルの入力グループを作成できます。
+
+例:
 
 ```scss
 $custom-input-group: input-group-theme(
-  $filled-text-color: #288a54,
-  $focused-text-color: #174f30,
-  $idle-text-color: #288a54,
-  $idle-bottom-line-color: #288a54,
-  $interim-bottom-line-color: #288a54,
-  $hover-bottom-line-color: #288a54,
-  $focused-secondary-color: #174f30,
-  $box-background: #eeeeee
+    $box-background: #57a5cd,
+    $border-color: #57a5cd,
 );
 ```
 
@@ -472,12 +470,19 @@ $custom-input-group: input-group-theme(
 
 ### デモ
 
-
-<code-view style="height:120px"
+<code-view style="height:230px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-style" >
 </code-view>
+
+>[!NOTE]
+>ページ内に `box`、`border`、`line`、`search` といった複数のタイプの input-group が存在する場合は、特定のタイプごとにテーマ変数のスコープを設定するのが最適です。
+<br>例:<br>
+box スタイルの入力には `.igx-input-group--box` を使用します。
+search 入力をターゲットにする場合は `.igx-input-group--search` を使用します。
+このようにすることで、異なる入力タイプ間のスタイル競合を防げます。
+たとえば、グローバルにダーク `$box-background` を設定すると、border や line 入力のボーダーが白になり、視認できなくなる可能性があります。
 
 <div class="divider--half"></div>
 
