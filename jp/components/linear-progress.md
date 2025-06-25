@@ -253,11 +253,10 @@ public decrementProgress() {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法として、[`progress-linear-theme`]({environment:sassApiUrl}/index.html#function-progress-linear-theme) を拡張し、`$track-color`、`$fill-color-default` および `$text-color パラメーターを受け取る新しいテーマを作成する方法があります。
+最もシンプルな方法として、[`progress-linear-theme`]({environment:sassApiUrl}/index.html#function-progress-linear-theme) を拡張し、`$fill-color-default` と `$text-color` のパラメーターのみをオーバーライドするテーマを作成します。
 
 ```scss
 $custom-theme: progress-linear-theme(
-  $track-color: #d3d3d3,
   $fill-color-default: #ecaa53,
   $text-color: #ecaa53,
 );

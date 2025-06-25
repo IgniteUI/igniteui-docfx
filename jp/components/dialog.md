@@ -261,19 +261,25 @@ params: {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-[`dialog-theme`]({environment:sassApiUrl}/index.html#function-dialog-theme) を拡張する新しいテーマを作成し、ダイアログのスタイルを設定できるさまざまなパラメーターを受け取ります。
+最もシンプルな方法として、[`dialog-theme`]({environment:sassApiUrl}/index.html#function-dialog-theme) を拡張し、ダイアログをスタイリングするためのパラメーターを指定して新しいテーマを作成します。`$background` を設定するだけで、前景用のプロパティに対して適切なコントラストの色が自動的に選ばれます。必要に応じて手動で指定することも可能です。
 
 ```scss
 $my-dialog-theme: dialog-theme(
   $background: #011627,
-  $title-color: #ECAA53,
-  $message-color: #FEFEFE,
-  $border-radius: .3,
+  $title-color: #ecaa53,
+  $border-radius: 5px,
 );
 ```
 
 > [!NOTE]
 > ダイアログ ウィンドウのコンテンツの一部として使用される追加コンポーネント ([`IgxButton`](button.md) など) をスタイルするには、それぞれのコンポーネントに固有の追加テーマを作成し、ダイアログ ウィンドウのスコープ内のみに配置する必要があります (残りのアプリケーションの影響を受けません)。
+
+```scss
+$custom-button: contained-button-theme(
+  $background: #ecaa53,
+  $foreground: #011627,
+);
+```
 
 ダイアログウィンドウは [`IgxOverlayService`](overlay.md) を使用するため、カスタム テーマがスタイルを設定するダイアログ ウィンドウに届くように、ダイアログ ウィンドウが表示されたときに DOM に配置される特定のアウトレットを提供します。
 

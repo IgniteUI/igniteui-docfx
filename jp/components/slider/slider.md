@@ -363,8 +363,9 @@ public type = SliderType.RANGE;
     [tickLabelsOrientation]="labelsOrientation">
 </igx-slider>
 ```
+
 [`TickLabelsOrientation`]({environment:angularApiUrl}/enums/ticklabelsorientation.html#range) を [`BottomToTop`]({environment:angularApiUrl}/enums/ticklabelsorientation.html) に設定してすべての表示ラベルを回転します。
-```
+
 ```typescript
 ... 
 {
@@ -492,23 +493,15 @@ public type = SliderType.RANGE;
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-次に、`slider-theme` を拡張する新しいテーマを作成し、変更するパラメーターを渡します。
+次に、`slider-theme` を拡張する新しいテーマを作成し、変更するパラメーターを渡します。`$track-color` または `$thumb-color` パラメーターのみを指定することで、テーマはトラックおよびつまみのすべての関連色と、そのインタラクション状態に応じた色を自動的に生成します。
+
+より細かくコントロールしたい場合は、目盛りの色やラベルなどの追加プロパティをオーバーライドすることもできます。
 
 ```scss
 $custom-slider-theme: slider-theme(
-  $track-color: #ff7400,
-  $track-hover-color: #ff7400,
-
   $thumb-color: #ff7400,
-
-  $base-track-color: #ddd,
-  $base-track-hover-color: #ccc,
-
   $tick-label-color: #b246c2,
-  $tick-label-color-tall: #ff7400,
-
-  $tick-color: #b246c2,
-  $tick-color-tall: #ff7400,
+  $tick-color: #b246c2
 );
 ```
 

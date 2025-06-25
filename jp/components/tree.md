@@ -340,16 +340,16 @@ Ignite UI for Angular IgxTree は、サーバーから最小限のデータの�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も単純なアプローチに従って、[tree-theme]({environment:sassApiUrl}/index.html#function-tree-theme) を拡張し、変更したいパラメーターを渡す新しいテーマを作成します。
+最もシンプルな方法として、[tree-theme]({environment:sassApiUrl}/index.html#function-tree-theme) を拡張し、新しいテーマを作成します。`$background` パラメーターだけを指定すれば、テーマがその他すべての必要なカラーを自動的に計算してくれます。他のプロパティをオーバーライドしてカスタマイズすることも可能です。
+
 ```scss
 $custom-tree-theme: tree-theme(
-  $background-selected: #ffe6cc,
-  $background-active: #ecaa53,
-  $background-active-selected: #ff8c1a
+  $background: #ecaa53,
 );
 ```
 
 最後にコンポーネントのテーマを含めます。
+
 ```scss
 @include css-vars($custom-tree-theme);
 ```

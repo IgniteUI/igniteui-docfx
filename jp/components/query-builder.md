@@ -284,6 +284,7 @@ this.ordersFields = [
 ```scss
 
 $custom-query-builder: query-builder-theme(
+  $schema: $dark-material-schema,
   $background: #292826,
   ...
 );
@@ -292,25 +293,24 @@ $custom-query-builder: query-builder-theme(
 Query Builder 内には、ボタン、チップ、ドロップダウン、入力など、他のコンポーネントがあるため、それぞれに個別のテーマを作成する必要があります。
 
 ```scss
-$custom-button: button-theme(
+$custom-button: flat-button-theme(
   $schema: $dark-material-schema,
-  $background: #292826,
   $foreground: #ffcd0f,
-  ...
 );
 
 $custom-input-group: input-group-theme(
+  $schema: $dark-material-schema,
   $focused-secondary-color: #ffcd0f
 );
 
 $custom-chip: chip-theme(
+  $schema: $dark-material-schema,
   $background: #ffcd0f,
-  $text-color: #292826
 );
 
-$custom-icon-button: icon-button-theme(
-  $background: #ffcd0f,
-  $foreground: #292826
+$custom-icon-button: outlined-icon-button-theme(
+  $schema: $dark-material-schema,
+  $foreground: #ffcd0f,
 );
 ```
 

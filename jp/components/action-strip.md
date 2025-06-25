@@ -91,7 +91,7 @@ Ignite UI for Angular Action Strip モジュールまたはディレクティブ
 </div>
 ```
 
-デフォルトでアクション ストリップは表示されますが、これは [`hidden`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#hidden) の @Input プロパティで設定できます。
+デフォルトでアクション ストリップは表示されませんが、これは [`hidden`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#hidden) の @Input プロパティで設定できます。
 
 ### メニューのルック アンド フィール
 
@@ -175,11 +175,9 @@ Ignite UI for Angular Action Strip モジュールまたはディレクティブ
 
 ```scss
 $custom-strip: action-strip-theme(
-  $background: rgba(150, 133, 143, 0.4),
-  $actions-background: rgba(109, 121, 147, 0.6),
-  $icon-color: null,
-  $delete-action: null,
-  $actions-border-radius: 0,
+  $background: rgba(109, 121, 147, 0.2),
+  $actions-background: rgba(#011627, 0.9),
+  $actions-border-radius: 0
 );
 ```
 

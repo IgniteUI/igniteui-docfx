@@ -466,22 +466,12 @@ export class CalendarSample9Component {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) を拡張する新しいテーマを作成し、デフォルト テーマのいくつかのパラメーターを受け取る方法です。
+最もシンプルな方法として、[`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) を拡張し、`$header-background` と `$content-background` のみを指定して新しいテーマを作成します。これにより、インタラクション状態に応じた色やコントラストのある前景色が自動的に算出されます。必要に応じて任意のテーマ パラメーターをオーバーライドすることも可能です。
 
 ```scss
 $custom-calendar-theme: calendar-theme(
-  $header-background: #345779,
-  $content-background: #fdfdfd,
-  $header-foreground: #ffffff,
-  $date-current-foreground: #2dabe8,
-  $navigation-color: #2dabe8,
-  $date-selected-foreground: #fdfdfd,
-  $date-current-background: #fdfdfd,
-  $navigation-hover-color: #345779,
-  $ym-current-foreground: #2dabe8,
-  $ym-hover-foreground: #2dabe8,
-  $picker-foreground: #2dabe8,
-  $picker-hover-foreground: #345779,
+  $header-background: #ecaa53,
+  $content-background: #011627,
 );
 ```
 
