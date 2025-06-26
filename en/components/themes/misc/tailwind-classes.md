@@ -85,6 +85,7 @@ You can find all the shadow-related utility classes provided by Tailwind [here](
 <br>
 
 #### Typography custom utility styles
+To apply the font, add the `font-ig` class to a top-level element. You can also define the base font size using the `text-base` utility class.
 We provide custom utility classes for each typography level (e.g., h1, h2, body-1). Use them like so:
 
 ```html
@@ -98,14 +99,17 @@ Each class applies all necessary font settings, spacing, and sizing according to
 
 ## Sample
 
-In the following sample you can see a fully custom card, built entirely using Tailwind utility classes, including our `custom utility classes` for `shadows`, `colors` and `typography`. On the other side we have an `igx-card` component. While it provides a clean layout and accessibility features, its theming is driven by the Ignite UI theming engine, which limits direct styling with Tailwind classes due to CSS specificity.
+In the sample below, you’ll see a 404 page built entirely with Tailwind utility classes, including our `custom utilities` for `shadows`, `colors`, and `typography`. Currently, styling Ignite UI components is somewhat limited because the theming engine's styles have higher specificity.
 
-> 🔧 If you need more control over styling the Ignite UI Components, we recommend using the available `CSS custom properties` or the `Component Themes`.
+> If you need more control over styling the Ignite UI Components, we recommend using the available `CSS custom properties` or the `Component Themes`.
 
 <code-view style="height: 440px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/theming/tailwind-sample" alt="Tailwind Card Example">
+           iframe-src="{environment:demosBaseUrl}/theming/tailwind-sample" alt="Tailwind Sample">
 </code-view>
+
+>[!NOTE]
+>This sample is fictional and fully custom, it’s not part of the Ignite UI component library.
 
 ## Summary
 With just a few configuration steps, you can combine Tailwind’s utility-first approach with Ignite UI’s robust design system. This integration allows you to rapidly build consistent, themed UI components using well-defined tokens for color, elevation, and typography—right from your HTML.
