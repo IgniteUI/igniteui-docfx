@@ -245,6 +245,40 @@ $custom-icon-theme: icon-theme(
            iframe-src="{environment:demosBaseUrl}/data-display/icon-styling" alt="Angular Icon の例">
 </code-view>
 
+### SVG の制限
+
+カスタム SVG アイコンを使用する場合、[`icon-theme`]({environment:sassApiUrl}/index.html#function-icon-theme) は `<svg>` 要素自体の色のみを適用および上書きできることに注意することが重要です。SVG 内に `<path>`、`<rect>`、`<circle>`、`<g>` などの子要素が含まれており、それらにハードコードされたカラー値が設定されている場合、その色はテーマから上書きできません。
+
+例:
+
+```html
+<svg>
+    <path fill="#050d42"/>
+</svg>
+```
+
+このような場合、アイコンは常に `<path>` 要素内で定義された `#050d42` の色を使用し、テーマで指定された色は反映されません。
+
+```html
+<svg fill="#050d42">
+    <path .../>
+</svg>
+```
+
+ここでは、塗りつぶしの色が `<svg>` 要素に適用されているため、[`icon-theme`]({environment:sassApiUrl}/index.html#function-icon-theme) で提供されるカスタム カラーで上書きできます。
+
+アイコン全体を [`icon-theme`]({environment:sassApiUrl}/index.html#function-icon-theme) を使用してスタイル設定できるように、SVG 子要素にハードコードされた色を使用しないことをお勧めします。ただし、子要素にハードコードされた色を適用する場合は、Ignite UI のカラー変数を使用することもできます。
+
+```html
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <!-- This element uses the theme color from the igx-icon component -->
+  <path d="M12 2L15 8H9L12 2Z" />
+
+  <!-- This element uses an accent color from Ignite UI palette -->
+  <circle cx="12" cy="17" r="4" fill="var(--ig-primary-500)" />
+</svg>
+```
+
 ### カスタム サイズ変更
 
 `igx-icon` を直接ターゲットとして `--size` 変数を使用することができます。
