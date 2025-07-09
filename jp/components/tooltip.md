@@ -12,7 +12,6 @@ _language: ja
 
 ## Angular Tooltip の例
 
-
 <code-view style="height:150px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/tooltip-simple" alt="Angular Tooltip の例">
@@ -55,20 +54,24 @@ import { IGX_TOOLTIP_DIRECTIVES, IgxAvatarComponent } from 'igniteui-angular';
 // import { IGX_TOOLTIP_DIRECTIVES, IgxAvatarComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
-    selector: 'app-home',
-    template: `
-    <igx-avatar class="avatar" #target="tooltipTarget" [igxTooltipTarget]="tooltipRef"
-                src="assets/images/avatar/10.jpg" size="medium" shape="circle">
+  selector: 'app-home',
+  template: `
+    <igx-avatar
+      class="avatar"
+      #target="tooltipTarget"
+      [igxTooltipTarget]="tooltipRef"
+      src="assets/images/avatar/10.jpg"
+      size="medium"
+      shape="circle"
+    >
     </igx-avatar>
 
-    <div #tooltipRef="tooltip" igxTooltip>
-        Her name is Madelyn James
-    </div>
-    `,
-    styleUrls: ['home.component.scss'],
-    standalone: true,
-    imports: [IGX_TOOLTIP_DIRECTIVES, IgxAvatarComponent]
-    /* or imports: [IgxTooltipDirective, IgxTooltipTargetDirective, IgxAvatarComponent] */
+    <div #tooltipRef="tooltip" igxTooltip>Her name is Madelyn James</div>
+  `,
+  styleUrls: ['home.component.scss'],
+  standalone: true,
+  imports: [IGX_TOOLTIP_DIRECTIVES, IgxAvatarComponent],
+  /* or imports: [IgxTooltipDirective, IgxTooltipTargetDirective, IgxAvatarComponent] */
 })
 export class HomeComponent {}
 ```
@@ -93,6 +96,7 @@ export class AppModule {}
 ```
 
 ### ツールチップ ターゲット
+
 avatar をターゲットにして、[`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブを設定し、ツールチップを持つ要素としてマークします。
 
 - [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは [`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) ディレクティブを拡張します。
@@ -101,12 +105,18 @@ avatar をターゲットにして、[`igxTooltipTarget`]({environment:angularAp
 ```html
 <!--simpleTooltip.component.html-->
 
-<igx-avatar class="avatar" #target="tooltipTarget" igxTooltipTarget
-            src="assets/images/avatar/10.jpg" size="medium" shape="circle">
+<igx-avatar
+  class="avatar"
+  #target="tooltipTarget"
+  igxTooltipTarget
+  src="assets/images/avatar/10.jpg"
+  size="medium"
+  shape="circle">
 </igx-avatar>
 ```
 
 ### ツールチップ
+
 ツールチップ要素を作成します。シンプルなテキスト ツールチップを作成するためテキストを含む標準 div 要素を定義し、ツールチップとしてマークされる [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブを設定します。
 
 - [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブは [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) ディレクティブを拡張します。
@@ -115,24 +125,26 @@ avatar をターゲットにして、[`igxTooltipTarget`]({environment:angularAp
 ```html
 <!--simpleTooltip.component.html-->
 
-<div #tooltipRef="tooltip" igxTooltip>
-    Her name is Madelyn James
-</div>
+<div #tooltipRef="tooltip" igxTooltip>Her name is Madelyn James</div>
 ```
 
 ### ツールチップをターゲットにアタッチ
+
 ここまででターゲットとツールチップを定義しました。ツールチップ参照を [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) セレクターに割り当てます。
 
 ```html
 <!--simpleTooltip.component.html-->
 
-<igx-avatar class="avatar" #target="tooltipTarget" [igxTooltipTarget]="tooltipRef"
-            src="assets/images/avatar/10.jpg" size="medium" shape="circle">
+<igx-avatar
+  class="avatar"
+  #target="tooltipTarget"
+  [igxTooltipTarget]="tooltipRef"
+  src="assets/images/avatar/10.jpg"
+  size="medium"
+  shape="circle">
 </igx-avatar>
 
-<div #tooltipRef="tooltip" igxTooltip>
-    Her name is Madelyn James
-</div>
+<div #tooltipRef="tooltip" igxTooltip>Her name is Madelyn James</div>
 ```
 
 すべて適切に設定できると、[Tooltip デモ](#angular-tooltip-の例) セクションで示されるデモサンプルを確認することができます。
@@ -168,38 +180,38 @@ export class AppModule {}
 /* richTooltip.component.css */
 
 .location:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .map {
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 252px;
-    background-image: url(assets/images/card/media/infragisticsMap.png);
-    border: 1px solid #D4D4D4;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 252px;
+  background-image: url(assets/images/card/media/infragisticsMap.png);
+  border: 1px solid #d4d4d4;
 }
 
 .locationTooltip {
-    width: 310px;
-    background-color: var(--igx-grays-700);
-    padding: 3px;
-    font-size: 13px;
+  width: 310px;
+  background-color: var(--igx-grays-700);
+  padding: 3px;
+  font-size: 13px;
 }
 
 .locationTooltipContent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
-    margin-right: 10px;
-    min-width: 25px;
-    width: 45px;
-    height: 45px;
+  margin-right: 10px;
+  min-width: 25px;
+  width: 45px;
+  height: 45px;
 }
 ```
 
@@ -209,9 +221,13 @@ export class AppModule {}
 <!--richTooltip.component.html-->
 
 <div class="map">
-    <igx-icon class="location" [style.color]="'blue'" fontSet="material"
-    [igxTooltipTarget]="locationTooltip">location_on</igx-icon>
-    ...
+  <igx-icon
+    class="location"
+    [style.color]="'blue'"
+    fontSet="material"
+    [igxTooltipTarget]="locationTooltip"
+    >location_on</igx-icon>
+  ...
 </div>
 ```
 
@@ -221,27 +237,33 @@ export class AppModule {}
 <!--richTooltip.component.html-->
 
 <div class="wrapper">
-    <div class="map">
-        <igx-icon class="location" [style.color]="'blue'" fontSet="material"
-        [igxTooltipTarget]="locationTooltip">location_on</igx-icon>
+  <div class="map">
+    <igx-icon
+      class="location"
+      [style.color]="'blue'"
+      fontSet="material"
+      [igxTooltipTarget]="locationTooltip"
+      >location_on</igx-icon>
 
-        <div class="locationTooltip" #locationTooltip="tooltip" igxTooltip>
-            <div class="locationTooltipContent">
-                <igx-avatar class="logo" src="assets/images/card/avatars/igLogo.png"
-                    size="medium" shape="square"></igx-avatar>
-                <div>
-                    <div>Infragistics Inc. HQ</div>
-                    <div>2 Commerce Dr, Cranbury, NJ 08512, USA</div>
-                </div>
-            </div>
+    <div class="locationTooltip" #locationTooltip="tooltip" igxTooltip>
+      <div class="locationTooltipContent">
+        <igx-avatar
+          class="logo"
+          src="assets/images/card/avatars/igLogo.png"
+          size="medium"
+          shape="square">
+        </igx-avatar>
+        <div>
+          <div>Infragistics Inc. HQ</div>
+          <div>2 Commerce Dr, Cranbury, NJ 08512, USA</div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
-
 ```
 
 上記をすべて完了すると場所とツールチップは以下のようになります。
-
 
 <code-view style="height:300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -251,6 +273,7 @@ export class AppModule {}
 <div class="divider--half"></div>
 
 ## オーバーレイ構成
+
 [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) および [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは、[`IgxOverlayService`](overlay.md) を使用して各ツールチップ要素を開くか閉じるかします。
 
 [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは、[`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaySettings) プロパティ ([`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) から継承します。) を公開し、ツールチップ アニメーション、UI 状の配置などのカスタマイズが可能です。プロパティを設定しない場合は、デフォルト オーバーレイ設定が使用されます。
@@ -269,13 +292,13 @@ export class AppModule {}
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`tooltip-theme`]({environment:sassApiUrl}/index.html#function-tooltip-theme) を拡張する新しいテーマを作成し、`$text-color`、`$background`、`$border-radius` パラメーターを受け取る方法です。
+最もシンプルな方法として、[`tooltip-theme`]({environment:sassApiUrl}/index.html#function-tooltip-theme) を拡張する新しいテーマを作成し、`$text-color`、`$background`、`$border-radius` パラメーターを指定します。
 
 ```scss
 $dark-tooltip: tooltip-theme(
-    $text-color: #ECAA53,
-    $background: #011627,
-    $border-radius: 6px
+  $text-color: #ecaa53,
+  $background: #011627,
+  $border-radius: 6px,
 );
 ```
 
@@ -285,63 +308,27 @@ $dark-tooltip: tooltip-theme(
 ツールチップは [`IgxOverlayService`](overlay.md) を使用するため、スタイル設定するツールチップにカスタム テーマが適用されるよう、ダイアログ ウィンドウが表示されたときに DOM に配置される特定のアウトレットを提供します。
 
 ```html
-<igx-avatar #target="tooltipTarget" [igxTooltipTarget]="tooltipRef"
-            [igxToggleOutlet]="outlet">
+<igx-avatar
+  #target="tooltipTarget"
+  [igxTooltipTarget]="tooltipRef"
+  [igxToggleOutlet]="outlet"
+>
 </igx-avatar>
 
 <div #outlet="overlay-outlet" igxOverlayOutlet>
-    <div #tooltipRef="tooltip" igxTooltip>
-        Her name is Madelyn James
-    </div>
+  <div #tooltipRef="tooltip" igxTooltip>Her name is Madelyn James</div>
 </div>
 ```
 
-> [!NOTE]
-> [`IgxOverlayService`](overlay.md) を使用して表示される要素にテーマを提供するためのさまざまなオプションの詳細については、[オーバーレイ スタイリングのトピック](overlay-styling.md)をご覧ください。
-
-### テーマを含む
-
-<div class="divider"></div>
-
 最後にコンポーネントのテーマをアプリケーションに**含めます**。
-
-`$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
-
-```scss
- @include tooltip($dark-tooltip);
-```
->[!NOTE]
->コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
-
-```scss
-:host {
-     ::ng-deep {
-        @include tooltip($dark-tooltip);
-    }
-}
-```
-
-<div class="divider"></div>
-
-`$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
 
 ```scss
 @include css-vars($dark-tooltip);
 ```
 
->[!NOTE]
->コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合においても、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
-
-```scss
-:host {
-    @include css-vars($dark-tooltip);
-}
-```
-
 スタイル設定されたツールチップは以下のようになります。
 
 ### デモ
-
 
 <code-view style="height:200px" 
            no-theming
@@ -356,13 +343,14 @@ $dark-tooltip: tooltip-theme(
 [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブを持つ要素には、自動生成された [`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id) プロパティ (開発者によって設定されていない場合)、ツールチップ [`role`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#role)、およびツールチップが表示されているかどうかに応じて自動的に更新される **aria-hidden** 属性があります。ターゲットの **aria-describedby** 属性をそれぞれのツールチップの [`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id) に設定することにより、ツールチップ要素への参照が提供されます。エンドユーザーがツールチップへアクセスしたときにツールチップのコンテンツにアクセスするために必要な情報であるスクリーン リーダーを提供します。
 
 以下の状況では十分な注意が必要です。
+
 - ツールチップのコンテンツは非常に複雑なため自動翻訳できません。
 - ツールチップは、ビルトインではなく手動で実装された動作とともに使用されます (手動による表示/非表示など)。
 - ターゲット要素はフォーカスできません。
 
 ## API リファレンス
 
-このトピックでは、ページ要素にツールチップを作成する方法について学習しました。アプリケーションのデザインを改善するために、アイコンやアバターなどその他の Ignite UI for Angular コンポーネントも使用しました。各 API は以下の通りです。  
+このトピックでは、ページ要素にツールチップを作成する方法について学習しました。アプリケーションのデザインを改善するために、アイコンやアバターなどその他の Ignite UI for Angular コンポーネントも使用しました。各 API は以下の通りです。
 
 * [IgxTooltipDirective]({environment:angularApiUrl}/classes/igxtooltipdirective.html)
 * [IgxTooltipTargetDirective]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html)

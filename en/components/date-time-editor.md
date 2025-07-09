@@ -6,7 +6,6 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 # Angular Date Time Editor Directive
 <p class="highlight">The Ignite UI for Angular Date Time Editor Directive allows the user to set and edit the date and time in a chosen input element. The user can edit the date or time portion, using an editable masked input. Additionally, one can specify a desired display and input format, as well as min and max values to utilize validation.</p>
-<div class="divider"></div>
 
 ## Angular Date Time Editor Directive Example
 
@@ -109,7 +108,7 @@ Time-only strings are normally not defined in the `ECMA` specification, however 
 ##### Full ISO string
 If a full `ISO` string is bound, the directive will parse it only if all elements required by [`Date.parse`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse#date_time_string_format) are provided.
 
-All falsy values, including `InvalidDate` will be parsed as `null`. Incomplete date-only, time-only, or full `ISO` strings will be parsed as `InvalidDate`.
+All false values, including `InvalidDate` will be parsed as `null`. Incomplete date-only, time-only, or full `ISO` strings will be parsed as `InvalidDate`.
 
 ### Keyboard Navigation
 Date Time Editor Directive has intuitive keyboard navigation that makes it easy to increment, decrement, or jump through different DateParts among others without having to touch the mouse.
@@ -126,6 +125,7 @@ Date Time Editor Directive has intuitive keyboard navigation that makes it easy 
 The [`IgxDateTimeEditor`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) supports different display and input formats.
 
 It uses Angular's [`DatePipe`](https://angular.io/api/common/DatePipe), which allows it to support predefined format options, such as `shortDate` and `longDate`. It can also accept a constructed format string using characters supported by the `DatePipe`, e.g. `EE/MM/yyyy`. Notice that formats like `shortDate`, `longDate`, etc., can be used as [`displayFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#displayFormat) only. Also, if no [`displayFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#displayFormat) is provided, the editor will use the [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputformat) as its [`displayFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#displayFormat).
+Alternatively, if the [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputFormat) property is not set, the input format will be inferred from the [`displayFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#displayFormat) in case it can be parsed as containing numeric date-time parts only.
 
 To set a specific input format, pass it as a string to the IgxDateTimeEditor directive. This will set both the expected user input format and the [mask](mask.md) for the editor. Additionally, the [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputFormat) is locale based, so if none is provided, the editor will default to the one used by the browser.
 

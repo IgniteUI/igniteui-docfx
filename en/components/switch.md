@@ -5,8 +5,8 @@ _keywords: Angular Switch component, Angular Switch control, Ignite UI for Angul
 ---
 
 # Angular Switch Component Overview
+
 <p class="highlight">The Ignite UI for Angular Switch component is a binary choice selection component that behaves similarly to the switch component in iOS.</p>
-<div class="divider"></div>
 
 ## Angular Switch Example
 
@@ -53,15 +53,11 @@ import { IgxSwitchComponent } from 'igniteui-angular';
 // import { IgxSwitchComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
-    selector: 'app-home',
-    template: `
-    <igx-switch [checked]="true">
-        Simple switch
-    </igx-switch>
-    `,
-    styleUrls: ['home.component.scss'],
-    standalone: true,
-    imports: [IgxSwitchComponent]
+  selector: 'app-home',
+  template: ` <igx-switch [checked]="true"> Simple switch </igx-switch> `,
+  styleUrls: ['home.component.scss'],
+  standalone: true,
+  imports: [IgxSwitchComponent],
 })
 export class HomeComponent {}
 ```
@@ -75,9 +71,7 @@ At its core the switch component allows for toggling between on/off state. The d
 To get a simple switch as the one in the demo, add the following code inside the component template:
 
 ```html
-<igx-switch [checked]="true">
-    Simple switch
-</igx-switch>
+<igx-switch [checked]="true"> Simple switch </igx-switch>
 ```
 
 ### Switch properties
@@ -93,13 +87,14 @@ public settings = [
     { name: 'Device visibility', state: false}
 ];
 ```
+
 Enhance the component template by adding a switch for each setting and then binding the corresponding property:
 
 ```html
 <!--toggle.component.html-->
 
 <igx-switch *ngFor="let setting of settings" [checked]="setting.state">
-    {{ setting.name }}
+  {{ setting.name }}
 </igx-switch>
 ```
 
@@ -107,24 +102,22 @@ Add some styles:
 
 ```scss
 :host {
-    display: flex;
-    flex-flow: column nowrap;
-    padding: 16px;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 16px;
 }
 
 igx-switch {
-    margin-top: 24px;
+  margin-top: 24px;
 }
 ```
 
 And the final result should be something like that:
 
-
 <code-view style="height: 200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/switch-sample-2" >
 </code-view>
-
 
 ### Label Positioning
 
@@ -145,58 +138,24 @@ To get started with styling the switch, we need to import the `index` file, wher
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
-Then, we create a new theme that extends the [`switch-theme`]({environment:sassApiUrl}/index.html#function-switch-theme) and use some of its parameters to style the switch's items:
+Then, we create a new theme that extends the [`switch-theme`]({environment:sassApiUrl}/index.html#function-switch-theme) and by providing just two parameters - `$thumb-off-color` and `$thumb-on-color` you can get a fully styled switch, as the theme generates all the rest of the necessary colors based on these two, you can of course override any of the other parameters for a customized look:
 
 ```scss
-// in styles.scss
 $custom-switch-theme: switch-theme(
-    $thumb-on-color: #ECAA53,
-    $track-on-color: #F0CB9C
+  $thumb-off-color: #7cadd5,
+  $thumb-on-color: #ecaa53,
 );
 ```
 
-### Including Themes
-
-<div class="divider"></div>
-
 The last step is to **include** the component theme in our application.
-
-If `$legacy-support` is set to `true`, include the **component theme** like that:
-
-```scss
- @include switch($custom-switch-theme);
-```
->[!NOTE]
->If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
-
-```scss
-:host {
-    ::ng-deep {
-        @include switch($custom-switch-theme);
-    }
-}
-```
-
-<div class="divider"></div>
-
-If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
 
 ```scss
 @include css-vars($custom-switch-theme);
 ```
 
->[!NOTE]
->If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
-
-```scss
-:host {
-    @include css-vars($custom-switch-theme);
-}
-```
 ### Demo
-
 
 <code-view style="height: 200px" 
            no-theming
@@ -204,19 +163,21 @@ If `$legacy-support` is set to `false`(default), include the component **css var
            iframe-src="{environment:demosBaseUrl}/data-entries/switch-styling" >
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## API References
+
 <div class="divider--half"></div>
 
 * [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
 * [IgxSwitchComponent Styles]({environment:sassApiUrl}/index.html#function-switch-theme)
 
 ## Theming Dependencies
+
 * [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.

@@ -1,27 +1,47 @@
 # Material から Bootstrap テーマへの切り替え
+
 バージョン `9.0` 以降、コンポーネントには [Bootstrap 4](https://getbootstrap.com/)  および [ng-bootstrap](https://ng-bootstrap.github.io/#/home) に基づいて構築された新しいテーマが含まれます。
-`Material` から `Bootstrap` へ切り替えるには、定義済みのミックスインの 1 つを使用できます。
+`Material` から `Bootstrap` に切り替えるには、[theme]({environment:sassApiUrl}/index.html#mixin-theme) 組み込みのミキシンを使用します。
 
 ## Bootstrap Light テーマ
+
 ```scss
 @use "igniteui-angular/theming" as *;
 
-// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 @include core();
-@include bootstrap-light-theme($light-bootstrap-palette);
+@include theme(
+  $palette: $light-bootstrap-palette,
+  $schema: $light-bootstrap-schema
+);
+
+// We can also include the Indigo font and font scaling
+@include typography(
+  $font-family: $bootstrap-typeface,
+  $type-scale: $bootstrap-type-scale
+);
 ```
 
 ## Bootstrap Dark テーマ
+
 ```scss
 @use "igniteui-angular/theming" as *;
 
-// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 @include core();
-@include bootstrap-dark-theme($dark-bootstrap-palette);
+@include theme(
+  $palette: $dark-bootstrap-palette,
+  $schema: $dark-bootstrap-schema
+);
+
+@include typography(
+  $font-family: $bootstrap-typeface,
+  $type-scale: $bootstrap-type-scale
+);
 ```
 
 ## API の概要
-* [Light テーマ]({environment:sassApiUrl}/index.html#mixin-bootstrap-light-theme)
-* [Dark テーマ]({environment:sassApiUrl}/index.html#mixin-bootstrap-dark-theme)
+
+* [グローバル テーマ]({environment:sassApiUrl}/index.html#mixin-theme)

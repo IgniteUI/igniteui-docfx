@@ -16,8 +16,6 @@ Angular Select は、事前定義された値のリストから 1 つの値を�
            iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-1" alt="Angular Select の例">
 </code-view>
 
-
-
 ## Ignite UI for Angular Select を使用した作業の開始
 
 Ignite UI for Angular Select コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
@@ -150,6 +148,7 @@ Select コンポーネントは、[入力グループ](input-group.md)に適用�
 ### 選択項目のグループ化
 項目グループを視覚的に分離するために、Select コンポーネントは、項目を `<igx-select-item-group>` にラップすることで項目のグループ化をサポートします。
 これは、コンポーネントを宣言するために反復可能な階層データに適しています。以下の例では、各グループには `label` と `items` のコレクションがあります。
+
 ```typescript
 public greengrocery: Array<{ label: string, items: Array<{ type: string, origin: string }> }> = [
     { label: 'Fruits', items: [
@@ -356,17 +355,44 @@ export class MyClass implements OnInit {
 }
 ```
 >[!NOTE]
->テンプレートと同様に関数 `open` の引数としてカスタム設定を渡す場合、`igx-select` は関数 `open` で提供されるものを使用します。ただし、`opening` または `opened` などのインターナル イベントにバインドした場合は、`igx-select` はテンプレートの設定を使用します。
+>テンプレートと同様に関数 `open` 引数としてカスタム設定を渡す場合、`igx-select` は関数 `open` 提供されるものを使用します。ただし、`opening` たは `opened` などのインターナル イベントにバインドした場合は、`igx-select` はテンプレートの設定を使用します。
 
 ## スタイル設定
-各コンポーネントには独自のテーマがあります。
 
-Select のスタイルを設定するには、それに含まれるコンポーネントのスタイルを設定します。この場合、[input-group-theme]({environment:sassApiUrl}/index.html#function-input-group-theme) と [drop-down-theme]({environment:sassApiUrl}/index.html#function-drop-down-theme) の両方を使用する必要があります。
+各コンポーネントには独自のテーマ関数があります。
 
-これら 2 つのコンポーネントのスタイル設定については、[`Input Group`](input-group.md#スタイル設定) および [`Drop Down`](drop-down.md#スタイル設定) のスタイル設定セクションを参照してください。
+Select コンポーネントのスタイルを設定するには、それに含まれるコンポーネントのスタイルを設定します。この場合、[input-group-theme]({environment:sassApiUrl}/index.html#function-input-group-theme) と [drop-down-theme]({environment:sassApiUrl}/index.html#function-drop-down-theme) を使用する必要があります。
+[`Input Group`](input-group.md#スタイル設定) と [`Drop Down`](drop-down.md#スタイル設定) のスタイル設定セクションを参照して、これら 2 つのコンポーネントのスタイル設定方法をより深く理解してください。
 
-> [!NOTE]
-> [**IgxSelectComponent**]({environment:angularApiUrl}/classes/igxselectcomponent.html) は、[IgxOverlay](overlay.md) を使用して、`igx-select-items` リスト コンテナーを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[`IgxOverlay スタイル ガイド`](overlay-styling.md)を確認してください。
+また、Select コンポーネントのボタンのスタイル設定にのみ使用される [`select-theme`]({environment:sassApiUrl}/index.html#function-select-theme) 関数もあります。 <br>
+Select コンポーネントのボタンのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
+
+```scss
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+最もシンプルな方法として、[`select-theme`]({environment:sassApiUrl}/index.html#function-select-theme) を拡張し、`$toggle-button-background` のみを提供して新しいテーマを作成します。theme 関数は、この単一の値に基づいて、さまざまな状態に対応するすべての背景色と前景色を自動的に計算します。
+
+```scss
+$custom-select-theme: select-theme(
+  $toggle-button-background: #57a5cd,
+);
+```
+
+最後には、カスタム ラジオ テーマをアプリケーションに渡します。
+
+```scss
+@include css-vars($custom-select-theme);
+```
+
+<code-view style="height: 220px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-entries/select-styling" >
+</code-view>
+
 
 <div class="divider--half"></div>
 

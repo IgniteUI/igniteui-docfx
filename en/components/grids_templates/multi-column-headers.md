@@ -272,95 +272,22 @@ Following the simplest approach, we create a new theme that extends the [`grid-t
 
 ```scss
 $custom-theme: grid-theme(
-    $header-background: #e0f3ff,
-    $header-text-color: #e41c77,
-    $header-border-width: 1px,
-    $header-border-style: solid,
-    $header-border-color: rgba(0, 0, 0, 0.08)
+  $header-background: #e0f3ff,
+  $header-text-color: #e41c77,
+  $header-border-width: 1px,
+  $header-border-style: solid,
+  $header-border-color: rgba(0, 0, 0, 0.08)
 );
 ```
+
+>[!NOTE]
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
+
 The last step is to **include** the component mixins: 
 
 ```scss
-@include grid($custom-theme);
+@include css-vars($custom-theme);
 ```
-
->[!NOTE]
- >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
-
- ```scss
-:host {
-    ::ng-deep {
-        @include grid($custom-theme);
-    }
-}
-```
-
-### Defining a color palette
-
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
-
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
-
-```scss
-$light-blue-color: #e0f3ff;
-$deep-pink-color: #e41c77;
-
-$custom-palette: palette($primary: $light-blue-color, $deep-pink-color);
-```
-
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
-
-```scss
-$custom-theme: grid-theme(
-    $header-background: color($custom-palette, "primary", 500),
-    $header-text-color: color($custom-palette, "secondary", 500),
-    $header-border-width: 1px,
-    $header-border-style: solid,
-    $header-border-color: color($custom-palette, "grays", 200)
-);
-```
-
->[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
-
-### Using Schemas
-
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/sass/schemas.md). A **schema** is a recipe of a theme.
-
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`_light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid):  
-
-```scss
-// Extending the light grid schema
-$custom-grid-schema: extend($_light-grid,
-    (
-        header-background: (igx-color:('primary', 500)),
-        header-text-color: (igx-color:('secondary', 500)),
-        header-border-width: 1px,
-        header-border-style: solid,
-        header-border-color: (igx-color:('grays', 200))
-    )
-);
-```
-
-In order to apply our custom schema we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
-
-```scss
-Extending the global light-schema
-$my-custom-schema: extend($light-schema, 
-    (
-        igx-grid: $custom-grid-schema
-    )
-);
-
-// Defining our custom theme with the custom schema
-$custom-theme: grid-theme(
-  $palette: $custom-palette,
-  $schema: $my-custom-schema
-);
-```
-
-Don't forget to include the themes in the same way as it was demonstrated above.
 
 @@if (igxName === 'IgxGrid') {
 ### Demo
@@ -398,14 +325,6 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 >[!NOTE]
 >The sample will not be affected by the selected global theme from `Change Theme`.
-
-## Known Issues and Limitations
-
-- Using @@igComponent with multi-column headers on IE11 requires the explicit import of the array polyfill in polyfill.ts of the angular application.
-
-    ```typescript
-    import 'core-js/es7/array';
-    ```
 
 ## API References
 <div class="divider--half"></div>

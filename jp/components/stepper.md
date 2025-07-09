@@ -318,44 +318,34 @@ Ignite UI for Angular は、さまざまなキーボード操作をエンドユ�
 Stepper コンポーネントは、ローコード [ドラッグアンドドロップ App Builder™](https://jp.infragistics.com/products/appbuilder) でも使用できます。
 
 ## Angular Stepper のスタイル設定
+
 [Ignite UI for Angular テーマ](themes/index.md)を使用して、`igx-stepper` の外観を変更できます。 
 
 はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。 
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法として、[stepper-theme]({environment:sassApiUrl}/index.html#function-stepper-theme) を拡張する新しいテーマを作成し、変更するパラメーターを渡す方法があります。 
+最もシンプルな方法として、[stepper-theme]({environment:sassApiUrl}/index.html#function-stepper-theme) を拡張し、少数のベース パラメーターのみを指定して新しいテーマを作成します。テーマは、状態固有の色やアクセス可能なコントラストの前景など、必要なすべてのスタイルを自動的に生成します。外観をさらに調整したい場合は、他の任意のパラメーターをオーバーライドすることも可能です。
+
 ```scss
-$custom-stepper-theme: stepper-theme(
-    $current-title-color: #351e65,
-    $current-subtitle-color: #5f4691,
-    $step-separator-style: "solid"
+$stepper-theme: stepper-theme(
+  $step-background: #351e65,
+  $current-indicator-background: #f6cd28,
+
+  $border-radius-step-header: 16px,
+  $border-radius-indicator: 10px 4px 10px 4px,
 );
-
 ```
-
-### CSS 変数の使用
 
 最後にコンポーネントのテーマを含めます。
+
 ```scss
-:host {
-    @include css-vars($custom-stepper-theme);
-}
-```
-
-### テーマ オーバーライドの使用
-
-IE11 のような古いブラウザー用にコンポーネントのスタイルを設定するには、CSS 変数がサポートされていないため、別の方法を使用する必要があります。
-
-コンポーネントが [Emulated](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`解除する`必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。: 
-```scss
-:host {
-    ::ng-deep {
-        @include stepper($custom-stepper-theme);    
-    }
-}
+@include css-vars($custom-stepper-theme);
 ```
 
 ### デモ

@@ -2,7 +2,7 @@
 title: Angular チャート パフォーマンス | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular チャート パフォーマンス
 _keywords: Angular Charts, Performance, Infragistics, Angular チャート, パフォーマンス, インフラジスティックス
-mentionedTypes: ["DomainChart", "CategoryChart", "FinancialChart", "XamDataChart"]
+mentionedTypes: ["DomainChart", "CategoryChart", "FinancialChart", "XamDataChart", "FinancialChartVolumeType", "FinancialChartZoomSliderType"]
 namespace: Infragistics.Controls.Charts
 _language: ja
 ---
@@ -75,11 +75,9 @@ export class MultiDataSources {
         const dataSource1: any[] = [];
         dataSource1.push({ "Year": "1996", "Value": 148 });
         dataSource1.push({ "Year": "2000", "Value": 142 });
-
         const dataSource2: any[] = [];
         dataSource2.push({ "Year": "1996", "Value": 110 });
         dataSource2.push({ "Year": "2000", "Value": 115 });
-
         const multipleSources: any[] = [dataSource1, dataSource2];
         return multipleSources;
     }
@@ -313,16 +311,16 @@ this.LineSeries.Resolution = 10;
 
 ### ズーム スライダー
 
-[`zoomSliderType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#zoomSliderType) オプションを `None` に設定すると、チャート パフォーマンスを向上し、その他のインジケーターおよびボリューム ペインのために垂直スペースを利用可能になります。
+[`zoomSliderType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#zoomSliderType) オプションを [`None`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#None) に設定すると、チャート パフォーマンスを向上し、その他のインジケーターおよびボリューム ペインのために垂直スペースを利用可能になります。
 
 ### ボリューム タイプ
 
 [`volumeType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#volumeType) プロパティの設定はチャート パフォーマンスに次の影響を与える可能性があります:
 
-*   `None` - ボリューム ペインが表示されないため、最も簡易です。
-*   `Line` - 描画するのにより手間がかかるボリューム タイプです。データ ポイントの大量を描画するか、複数のデータ ソースをプロットする場合に使用することをお勧めします。
-*   `Area` - `Line` ボリューム タイプより描画に手間がかかります。
-*   [`IgxColumn`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_grids_grids.igxcolumn.html) - `Area` ボリューム タイプより描画に手間がかかります。1 つ ～ 3 つの株のボリューム データを描画する場合にお勧めします。
+*   [`None`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#None) - ボリューム ペインが表示されないため、最も簡易です。
+*   [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#Line) - 描画するのにより手間がかかるボリューム タイプです。データ ポイントの大量を描画するか、複数のデータ ソースをプロットする場合に使用することをお勧めします。
+*   [`Area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#Area) - [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#Line) ボリューム タイプより描画に手間がかかります。
+*   [`Column`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#Column) - [`Area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#Area) ボリューム タイプより描画に手間がかかります。1 つ ～ 3 つの株のボリューム データを描画する場合にお勧めします。
 
 ## データ チャートのパフォーマンス
 

@@ -229,14 +229,14 @@ Angular Card に表示する画像や動画は、`igx-card-media` タグで囲�
 
 ```scss
 .h-sample-column {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 1 0%;
 
-    igx-card-header {
-        padding-bottom: 0;
-    }
+  igx-card-header {
+      padding-bottom: 0;
+  }
 }
 ```
 
@@ -337,55 +337,22 @@ Card のスタイル設定を始めるには、すべてのテーマ関数とコ
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
-最も単純なアプローチに従って、[`card-theme`]({environment:sassApiUrl}/index.html#function-card-theme) を拡張する新しいテーマを作成し、カードのアイテムをスタイル設定するいくつかのパラメーターを受け取ります。
+
+最もシンプルな方法として、[`card-theme`]({environment:sassApiUrl}/index.html#function-card-theme) を拡張し、少数のスタイル パラメーターのみを指定して新しいテーマを作成します。`$background` パラメーターのみを指定した場合でも、適切な前景色 (黒または白) が自動的に選ばれて割り当てられます。
 
 ```scss
 $colorful-card: card-theme(
-    $background: #011627,
-    $header-text-color: #FEFEFE,
-    $subtitle-text-color: #ECAA53,
-    $content-text-color: #FEFEFE
+  $background: #011627,
+  $subtitle-text-color: #ecaa53,
 );
 ```
-ご覧のとおり、`card-theme` は、アイテムの基本的なスタイル設定に役立ついくつかのパラメーターを公開しています。 
 
-### テーマを含む
-
-<div class="divider"></div>
+ご覧のとおり、`card-theme` は、アイテムの基本的なスタイル設定に役立ついくつかのパラメーターを公開しています。
 
 最後の手順は、コンポーネントのテーマを**含める**ことです。
 
-`$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
-
-```scss
- @include card($colorful-card);
-```
->[!NOTE]
->コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
-
-```scss
-:host {
-     ::ng-deep {
-        @include card($colorful-card);
-    }
-}
-```
-
-<div class="divider"></div>
-
-`$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
-
 ```scss
 @include css-vars($colorful-card);
-```
-
->[!NOTE]
->コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
-
-```scss
-:host {
-    @include css-vars($colorful-card);
-}
 ```
 
 ### Angular Card のデモ

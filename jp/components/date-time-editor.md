@@ -1,13 +1,12 @@
 ---
-title: 日時エディター ディレクティブ - ネイティブ Angular | Ignite UI for Angular
+title: 日付/時刻エディター ディレクティブ - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular Date Time Editor ディレクティブでは、Date オブジェクトによって日付と時刻を処理できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Date Time Editor ディレクティブAngular Date Time ディレクティブ コントロール, Date Time Editor, Angular Date Time ディレクティブ
 _language: ja
 ---
 
-# Angular Date Time Editor (日時エディター) ディレクティブ
+# Angular Date Time Editor (日付/時刻エディター) ディレクティブ
 <p class="highlight">Ignite UI for Angular Date Time Editor ディレクティブでは、選択された入力要素で日付と時刻を設定および編集できます。ユーザーは、編集可能なマスク入力によって日付または時間部分を編集できます。さらに、検証に最小値と最大値だけでなく、希望の表示形式および入力形式の設定を指定できます。</p>
-<div class="divider"></div>
 
 ## Angular Date Time Editor の例
 
@@ -72,7 +71,7 @@ Ignite UI for Angular Date Time Editor モジュールまたはディレクテ�
 
 ## Ignite UI for Angular Date Time Editor ディレクティブの使用
 
-input 要素を日時エディターとして使用するには、igxDateTimeEditor ディレクティブと有効なdateオブジェクトを値として設定します。エディターの外観を完全にするには、入力要素を [igx-input-group](input-group.md) にラップします。これにより、[`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html)、[`igxLabel`](label-input.md)、[`igx-prefix`](input-group.md#prefix-および-suffix)、[`igx-suffix`](input-group.md#prefix-および-suffix)、[`igx-hint`](input-group.md#hint) ディレクティブを利用できるだけでなく、フォーム入力を扱うときの一般的なシナリオに対処できます。
+input 要素を日付/時刻エディターとして使用するには、igxDateTimeEditor ディレクティブと有効なdateオブジェクトを値として設定します。エディターの外観を完全にするには、入力要素を [igx-input-group](input-group.md) にラップします。これにより、[`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html)、[`igxLabel`](label-input.md)、[`igx-prefix`](input-group.md#prefix-および-suffix)、[`igx-suffix`](input-group.md#prefix-および-suffix)、[`igx-hint`](input-group.md#hint) ディレクティブを利用できるだけでなく、フォーム入力を扱うときの一般的なシナリオに対処できます。
 
 ### バインディング
 以下は、Date オブジェクトを [`value`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#value) として設定する基本的な構成シナリオです。
@@ -109,7 +108,7 @@ public date = new Date();
 ##### 完全な ISO 文字列
 完全な `ISO` 文字列がバインドされている場合、ディレクティブは [`Date.parse`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse#date_time_string_format) に必要なすべての要素が指定されている場合にのみそれを解析します。
 
-`InvalidDate` を含むすべての falsy 値は `null` として解析されます。不完全な日付のみ、時刻のみ、または完全な `ISO` 文字列は `InvalidDate` として解析されます。
+`InvalidDate` を含むすべての false 値は `null` として解析されます。不完全な日付のみ、時刻のみ、または完全な `ISO` 文字列は `InvalidDate` として解析されます。
 
 ### キーボード ナビゲーション
 Date Time Editor ディレクティブには直感的なキーボード ナビゲーション機能があり、マウス操作なしでさまざまな DatePart を移動、インクリメント、デクリメントなどができます。
@@ -118,7 +117,7 @@ Date Time Editor ディレクティブには直感的なキーボード ナビ�
 
 - <kbd>上矢印</kbd> / <kbd>下矢印</kbd> - 日付部分を増減します。関連する [`spinLoop`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#spinLoop) を参照してください。
 
-- <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>;</kbd> - エディターの現在の日時を設定します。
+- <kbd>Ctrl</kbd> / <kbd>Cmd</kbd> + <kbd>;</kbd> - エディターの現在の日付/時刻を設定します。
 
 ## 例
 
@@ -126,6 +125,7 @@ Date Time Editor ディレクティブには直感的なキーボード ナビ�
 [`IgxDateTimeEditor`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) は、さまざまな表示および入力の形式をサポートします。
 
 Angular の [`DatePipe`](https://angular.io/api/common/DatePipe) を使用しており、`shortDate` や `longDate` などの事前定義された形式オプションをサポートできます。また、`DatePipe` でサポートされている文字を使用して構築されたフォーマット文字列を受け入れることもできます。例えば、`EE/MM/yyyy` です。`shortDate`、`longDate` などの形式は、[`displayFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#displayFormat) としてのみ使用できることに注意してください。また、[`displayFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#displayFormat) が指定されていない場合、エディターは [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputFormat) を [`displayFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#displayFormat) として使用します。
+あるいは、[`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputFormat) プロパティが設定されていない場合、入力形式は [`displayFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#displayFormat) から数値の日付と時刻の部分のみを含む形式として解析できる場合に推測されます。
 
 特定の入力形式を設定するには、文字列として IgxDateTimeEditor ディレクティブに渡します。これにより、予期されるユーザー入力形式とエディターの[マスク](mask.md)の両方が設定されます。さらに、[`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputFormat) はロケール ベースであるため、何も指定されていない場合、ピッカーはデフォルトでブラウザーで使用されるものになります。
 
@@ -172,7 +172,7 @@ public maxDate = new Date(2020, 11, 1);
 [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#minValue) および [`minValue`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#minValue) 入力は、タイプ `string` にすることもできます。 [ISO 文字列へのバインド](#iso)を参照してください。
 
 ### 増加および減少 <a name="increment-decrement"></a>
-[`igxDateTimeEditor`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) ディレクティブは、公開 [`increment`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#increment) および [`decrement`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#decrement) メソッドを公開します。これらは、現在設定されている日時の特定の [`DatePart`]({environment:angularApiUrl}/enums/datepart.html) を増加または減少し、いくつかの方法で使用できます。
+[`igxDateTimeEditor`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) ディレクティブは、公開 [`increment`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#increment) および [`decrement`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#decrement) メソッドを公開します。これらは、現在設定されている日付/時刻の特定の [`DatePart`]({environment:angularApiUrl}/enums/datepart.html) を増加または減少し、いくつかの方法で使用できます。
 
 最初のシナリオでは、特定の [`DatePart`]({environment:angularApiUrl}/enums/datepart.html) がメソッドに渡されない場合、デフォルトの [`DatePart`]({environment:angularApiUrl}/enums/datepart.html) は指定された [`inputFormat`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#inputFormat) と内部ディレクティブの実装に基づいて増加または減少します。2 番目のシナリオでは、さまざまな要件に適合する可能性があるため、操作する [`DatePart`]({environment:angularApiUrl}/enums/datepart.html) を明示的に指定できます。
 また、どちらのメソッドも、増加/減少手順を設定するために使用できるタイプ `number` のオプションの `delta` パラメーターを受け入れます。
@@ -185,7 +185,7 @@ public maxDate = new Date(2020, 11, 1);
 
 <div class="divider--half"></div>
 
-さらに、`spinDelta` はタイプ [`DatePartDeltas`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) の入力プロパティであり、各日時セグメントに異なるデルタを適用するために使用できます。これは、キーボードで回転するとき、および [`increment`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#increment) メソッドと [`decrement`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#decrement) メソッドで回転するときに適用されます。ただし、`spinDelta` よりも優先されるため `delta` パラメーターが指定されていない場合に限ります。
+さらに、`spinDelta` はタイプ [`DatePartDeltas`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) の入力プロパティであり、各日付/時刻セグメントに異なるデルタを適用するために使用できます。これは、キーボードで回転するとき、および [`increment`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#increment) メソッドと [`decrement`]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html#decrement) メソッドで回転するときに適用されます。ただし、`spinDelta` よりも優先されるため `delta` パラメーターが指定されていない場合に限ります。
 
 ### Angular フォーム
 Date Time Editor ディレクティブは、コア FormsModule [`NgModel`](https://angular.io/api/forms/NgModel) と [`ReactiveFormsModule`](https://angular.io/api/forms/ReactiveFormsModule) (FormControl、FormGroup など) のすべてのフォーム ディレクティブをサポートします。これには、[フォーム `Validators`](https://angular.io/api/forms/Validators)機能も含まれます。次の例は、テンプレート駆動型フォームで `required` バリデータを使用する方法を示しています。

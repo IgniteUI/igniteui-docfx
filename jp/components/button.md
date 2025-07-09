@@ -12,6 +12,7 @@ Angular Button ディレクティブは、アクション可能なボタンを�
 Ignite UI for Angular Button ディレクティブを任意の button、span、div、または anchor 要素に適用して高機能なボタンを構成できます。Flat ボタン、Contained ボタン、Outlined ボタン、FAB (フローティング アクション ボタン) の Angular ボタン タイプを使用できます。カスタマイズ可能な色、テーマを作成して Angular ボタン スタイルを変更するオプション、ユーザーがボタンのサイズを選択できるようにするオプションなどを提供します。
 
 ## Angular Button の例
+
 以下の Angular Button の例を作成して、さまざまなボタン タイプが境界線でスタイル設定されている場合、または透明な背景が適用されている場合にどのように表示されるかを示します。
 
 <div class="divider--half"></div>
@@ -136,13 +137,13 @@ Contained ボタンを作成するには、`igxButton` プロパティの値を�
 
 ```html
 <button class="btn" igxButton="fab">
-    <span>like</span>
-    <igx-icon fontSet="material">favorite</igx-icon>
+  <span>like</span>
+  <igx-icon fontSet="material">favorite</igx-icon>
 </button>
 ```
 
->[!NOTE]
->拡張 FAB テキストを適切にスタイルするには、`<span>` または `<div>` タグを使用します。
+> [!NOTE]
+> 拡張 FAB テキストを適切にスタイルするには、`<span>` または `<div>` タグを使用します。
 
 <div class="sample-container loading" style="height: 100px">
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-6">
@@ -168,7 +169,7 @@ Contained ボタンを作成するには、`igxButton` プロパティの値を�
 
 ```html
 <button igxButton="contained" igxRipple="white" [igxRippleCentered]="true" [igxRippleDuration]="2000">
-    Ripple
+  Ripple
 </button>
 ```
 
@@ -182,7 +183,7 @@ Contained ボタンを作成するには、`igxButton` プロパティの値を�
 
 ```html
 <span igxButton="contained" igxButtonColor="white" igxButtonBackground="#72da67" igxRipple="white">
-    Span
+  Span
 </span>
 ```
 
@@ -244,24 +245,27 @@ protected get sizeStyle() {
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/buttons-display-density" alt="Angular Button の例">
 </code-view>
+
 <div class="divider--half"></div>
 
-## Angular ボタンのスタイル設定
+## スタイル設定
 
 ボタンのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @use "igniteui-angular/theming" as *;
-// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
+
 次に、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) を拡張し、それぞれのホバーとフォーカス パラメーターと共に `$foreground` と `$background` パラメーターを受け入れる新しいテーマを作成します。
 
 次のマークアップを前提として:
 
 ```html
 <div class="my-contained-btn">
-    <button igxButton="contained">Contained button</button>
+  <button igxButton="contained">Contained button</button>
 </div>
 ```
 
@@ -269,44 +273,54 @@ protected get sizeStyle() {
 
 ```scss
 $custom-button-theme: button-theme(
-    $foreground: #fdfdfd,
-    $hover-foreground: #fdfdfd,
-    $focus-foreground: #fdfdfd,
-    $background: #345779,
-    $hover-background: #2e4d6b,
-    $focus-background: #2e4d6b,
-    $disabled-foreground: #2e4d6b
+  $foreground: #fdfdfd,
+  $hover-foreground: #fdfdfd,
+  $focus-foreground: #fdfdfd,
+  $background: #345779,
+  $hover-background: #2e4d6b,
+  $focus-background: #2e4d6b,
+  $disabled-foreground: #2e4d6b,
 );
 ```
 
 ボタンのスタイル設定に使用できるパラメーターの完全なリストについては、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) セクションを参照してください。
 
-### CSS 変数の使用 
-
 最後には、カスタム ボタン テーマをアプリケーションに渡します。 
 
 ```scss
-.my-contained-btn {
-    @include css-vars($custom-button-theme);
+.button-sample {
+  @include css-vars($custom-button-theme);
 }
 ```
 
-### テーマ オーバーライドの使用
+特定のタイプのボタン (`flat`、`outlined`、`contained`、`fab`) のみをスタイリングすることもできます。
+そのためには、次のようなタイプ別のテーマ関数を使用します: [`flat-button-theme`]({environment:sassApiUrl}/index.html#function-flat-button-theme)、[`outlined-button-theme`]({environment:sassApiUrl}/index.html#function-outlined-button-theme)、[`contained-button-theme`]({environment:sassApiUrl}/index.html#function-contained-button-theme)、[`fab-button-theme`]({environment:sassApiUrl}/index.html#function-fab-button-theme)。
 
-Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。
-コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
+例として、以下のようなマークアップがあるとします。
+
+```html
+<div class="my-contained-btn">
+  <button igxButton="contained">Contained button</button>
+</div>
+<div class="my-flat-btn">
+  <button igxButton="flat">Flat button</button>
+</div>
+```
+
+`contained` ボタンのみをスタイリングしたい場合は、[`contained-button-theme`]({environment:sassApiUrl}/index.html#function-flat-button-theme) 関数を使用します。
 
 ```scss
-:host {
-     ::ng-deep {
-        .my-contained-btn {
-            @include button($custom-button-theme);
-        }
-    }
-}
+$custom-contained-theme: contained-button-theme(
+  $background: #348ae0,
+);
 ```
 
+新たに追加されたタイプ別テーマ関数により、ボタンのスタイリングがより簡単になりました。上記の例のように、[`contained-button-theme`]({environment:sassApiUrl}/index.html#function-contained-button-theme) および [`fab-button-theme`]({environment:sassApiUrl}/index.html#function-fab-button-theme) では、`$background` パラメーターに色を指定するだけで、他のすべての状態用の色やテキストの色が自動的に生成されます。テキストの色は、新しく追加された [`adaptive-contrast`]({environment:sassApiUrl}/index.html#function-adaptive-contrast) 関数によって、指定された背景に対して黒か白のどちらがより良いコントラストを持つかを計算して決定されます。
+
+[`flat-button-theme`]({environment:sassApiUrl}/index.html#function-flat-button-theme) および [`outlined-button-theme`]({environment:sassApiUrl}/index.html#function-outlined-button-theme) では、状態用の色も自動的に生成されますが、これらは `$background` ではなく `$foreground` パラメーターに基づいて計算されます。
+
 ### デモ
+
 <code-view style="height: 100px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -330,6 +344,7 @@ button {
   <button igxButton="raised"></button>
 </div>
 ```
+
 ```scss
 .my-app {
   --igx-button-size: 50px;
@@ -340,7 +355,7 @@ button {
 
 ```scss
 button {
-    --ig-size: var(--ig-size-large);
+  --ig-size: var(--ig-size-large);
 }
 ```
 
@@ -349,6 +364,7 @@ button {
 <div class="divider--half"></div>
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
@@ -358,6 +374,7 @@ button {
 * [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。

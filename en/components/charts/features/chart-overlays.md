@@ -68,6 +68,26 @@ The following sample demonstrates usage of the different [`valueLines`]({environ
 
 You can also plot built-in financial overlays and indicators in Angular [Stock Chart](../types/stock-chart.md).
 
+## Chart Overlay Text (Beta)
+
+The Angular [`IgxValueOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvalueoverlaycomponent.html), [`IgxValueLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvaluelayercomponent.html), and all Data Annotation Layers can render custom overlay text inside plot area of the XamDataChart component. You can use this overlay text to annotate important events (e.g. company quarter reports) on x-axis or important values on y-axis in relationship to the layers.
+
+For example, you can use `DataAnnotationSliceLayer`, [`IgxValueOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvalueoverlaycomponent.html), and [`IgxValueLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvaluelayercomponent.html) to show overlay text.
+
+<code-view style="height: 600px" alt="Angular Multiple Overlay Text"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
+                    iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/data-annotation-multiple-with-overlay-text"
+                                                 github-src="charts/data-chart/data-annotation-multiple-with-overlay-text">
+</code-view>
+
+
+### Styling Overlay Text
+
+This code example shows how to style and customize Overlay Text on
+the `DataAnnotationSliceLayer`, [`IgxValueOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvalueoverlaycomponent.html), and [`IgxValueLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvaluelayercomponent.html).
+
+<div class="divider--half"></div>
+
 ## Additional Resources
 
 You can find more information about related chart types in these topics:
@@ -92,3 +112,10 @@ The following is a list of API members mentioned in the above sections:
 *   [`IgxValueLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvaluelayercomponent.html)
 *   [`ValueLayerValueMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.valuelayervaluemode.html)
 *   [`valueLines`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#valueLines)
+*   `OverlayText`
+*   `TargetAxis`
+*   `OverlayTextMemberPath`
+*   `OverlayTextColor`
+*   `OverlayTextBackground`
+*   `OverlayTextBorderColor`
+*   `OverlayTextLocation`

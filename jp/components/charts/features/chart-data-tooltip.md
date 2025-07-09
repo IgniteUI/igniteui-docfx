@@ -81,7 +81,7 @@ Ignite UI for Angular では、**DataToolTip** は、シリーズの値とタイ
 
 ## Angular データ チャートのデータ ツールチップのグループ化
 
-`DataLegendGroup` は、すべてのタイプのシリーズで、データ凡例内のシリーズ グループを分類する文字列に設定できます。各グループには、別のシリーズ グループが表示される前に、独自の集計行が表示されます。デフォルトでは、DataLegend はグループ名を非表示にしますが、`GroupRowVisible` プロパティを true に設定するとグループ名を表示できます。データ ツールチップ レイヤーで [`groupingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatatooltiplayercomponent.html#groupingMode) を 「Grouped」 に設定し、[`labelDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#labelDisplayMode) を 「Visible」 に設定する必要があります。
+[`dataLegendGroup`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriescomponent.html#dataLegendGroup) は、すべてのタイプのシリーズで、データ凡例内のシリーズ グループを分類する文字列に設定できます。各グループには、別のシリーズ グループが表示される前に、独自の集計行が表示されます。デフォルトでは、DataLegend はグループ名を非表示にしますが、[`groupRowVisible`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#groupRowVisible) プロパティを true に設定するとグループ名を表示できます。データ ツールチップ レイヤーで [`groupingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatatooltiplayercomponent.html#groupingMode) を 「Grouped」 に設定し、[`labelDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#labelDisplayMode) を 「Visible」 に設定する必要があります。
 
 <code-view style="height: 450px" alt="Angular データ ツールチップのグループ化"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -127,6 +127,12 @@ Ignite UI for Angular では、**DataToolTip** は、シリーズの値とタイ
 </code-view>
 
 
+## レイアウト モード
+
+凡例項目は、[`layoutMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#layoutMode) プロパティを使って垂直または表形式の構造に配置できます。デフォルト値は `Table` で、以前のリリースと同じ外観と操作性を維持します。
+
+例: <img src="../../../images/general/layout_mode.png" />
+
 ## Angular データ ツールチップのスタイル設定
 
 **DataToolTip** は、各タイプの列をスタイル設定するためのプロパティを提供します。これらの各プロパティ名は、Title、Label、Value、Units で始まり、テキストの色、フォント、およびマージンのスタイルを設定できます。たとえば、これらのそれぞれのテキストの色を設定する場合は、[`dataToolTipTitleTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipTitleTextColor)、[`dataToolTipLabelTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipLabelTextColor)、[`dataToolTipValueTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueTextColor)、および [`dataToolTipUnitsTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipUnitsTextColor) プロパティを設定します。
@@ -143,7 +149,7 @@ Ignite UI for Angular では、**DataToolTip** は、シリーズの値とタイ
 ツールチップのグループ化部分を含むいくつかのプロパティが公開されています。
 
 *   `GroupTextMargin`
-*   `GroupTextColor`
+*   [`groupTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#groupTextColor)
 *   `GroupTextFontSize`
 *   `GroupTextFontFamily`
 *   `GroupTextFontStyle`

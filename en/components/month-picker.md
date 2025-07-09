@@ -182,61 +182,20 @@ To get started with styling the month picker, we need to import the `index` file
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
-The month picker uses the calendar's theme, so we have to create a new theme that extends the [`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) and use some of its parameters to style the month picker's items:
+The month picker uses the calendar's theme, so we have to create a new theme that extends the [`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme). To style the month picker's items, you can set the `$content-background` parameter. Optionally, you can also set `$header-background` if you want to override the rest of the properties.
+These two parameters act as the foundation for the theme and are used to automatically generate the appropriate background and foreground colors for all interaction states, such as hover, selected, and active.
 
 ```scss
 $my-calendar-theme: calendar-theme(
   $border-radius: 15px,
-  $content-background: #011627,
-  $picker-background-color: #011627,
-  $month-current-text-color: #ECAA53,
-  $month-hover-background: #ECAA53,
-  $year-current-text-color: #ECAA53,
-  $year-hover-text-color: #D37B08,
-  $picker-arrow-color: #ECAA53,
-  $picker-text-hover-color: #D37B08,
-  $picker-arrow-hover-color: #D37B08,
-  $picker-text-color: #ECAA53
+  $content-background: #57a5cd,
 );
 ```
 
-### Including themes
-
-<div class="divider"></div>
-
 The next step is to **include** the component theme in our application.
-
-If `$legacy-support` is set to `true`, include the **component theme** like that:
-
-```scss
- @include calendar($my-calendar-theme);
-```
->[!NOTE]
->If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
-
-```scss
-:host {
-     ::ng-deep {
-        @include calendar($my-calendar-theme);
-    }
-}
-```
-
-<div class="divider"></div>
-
-If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
 
 ```scss
 @include css-vars($my-calendar-theme);
-```
-
->[!NOTE]
->If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
-
-```scss
-:host {
-    @include css-vars($my-calendar-theme);
-}
 ```
 
 After everything's done, your component should look like this:
@@ -244,7 +203,7 @@ After everything's done, your component should look like this:
 ### Demo
 
 
-<code-view style="height: 600px" 
+<code-view style="height: 350px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-styling" >
@@ -258,7 +217,6 @@ After everything's done, your component should look like this:
 * [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
 * [IgxCalendarComponent Styles]({environment:sassApiUrl}/index.html#function-calendar-theme)
 
-<div class="divider--half"></div>
 
 ## Theming Dependencies
 <div class="divider--half"></div>

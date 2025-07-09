@@ -9,7 +9,6 @@ _language: ja
 <p class="highlight">Angular Checkbox は、標準の HTML 入力タイプのチェックボックスの拡張であり、同様の機能を提供しますが、アニメーションや Material Design のスタイル設定などでのみ強化されています。これにより、ユーザーは主にフォームや調査で、1 つまたは複数の事前定義されたオプションを選択できます。
 
 Ignite UI for Angular Checkbox コンポーネントは、特定の条件のバイナリ選択を可能にする選択コントロールです。ネイティブ ブラウザーのチェックボックスと同様に動作します。提供される機能には、スタイル設定オプション、テーマ、チェック状態、チェックなし状態、不確定状態などがあります。</p>
-<div class="divider"></div>
 
 ## Angular Checkbox の例
 以下の Angular Checkbox の例で、実際のチェックボックスを参照してください。
@@ -121,6 +120,7 @@ igx-checkbox {
     margin-top: 16px;
 }
 ```
+
 以下は結果です。
 
 <code-view style="height: 200px"
@@ -225,7 +225,7 @@ public toggleAll() {
 </code-view>
 
 
-## Angular Checkbox のスタイル設定
+## スタイル設定
 
 チェックボックスのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
@@ -236,58 +236,24 @@ public toggleAll() {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-チェックボックスはカレンダーのテーマを使用するため、[`checkbox-theme`]({environment:sassApiUrl}/index.html#function-checkbox-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用してチェックボックスの項目をスタイル設定します。
+次に、[`checkbox-theme`]({environment:sassApiUrl}/index.html#function-checkbox-theme) を拡張して新しいテーマを作成し、チェックボックス要素をスタイリングします。`$empty-color` と `$fill-color` を指定することで、必要な状態色やコントラストのある前景色が自動的に計算されます。必要に応じて、他のパラメーターをカスタム値でオーバーライドすることもできます。
 
 ```scss
 // in styles.scss
 $custom-checkbox-theme: checkbox-theme(
-    $border-radius: 10px,
-    $label-color: #011627,
-    $empty-color: #ECAA53,
-    $fill-color: #ECAA53,
-    $tick-color: #011627,
+  $empty-color: #ecaa53,
+  $fill-color: #ecaa53,
+  $border-radius: 5px
 );
 ```
 
-### テーマを含む
-
-<div class="divider"></div>
-
-最後にコンポーネントのテーマをアプリケーションに含めます。
-
-`$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
-
-```scss
- @include checkbox($custom-checkbox-theme);
-```
->[!NOTE]
->コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
-
-```scss
-:host {
-     ::ng-deep {
-        @include checkbox($custom-checkbox-theme);
-    }
-}
-```
-
-<div class="divider"></div>
-
-`$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
+最後にコンポーネントのテーマをアプリケーションに**含めます**。
 
 ```scss
 @include css-vars($custom-checkbox-theme);
 ```
 
->[!NOTE]
->コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合においても、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
-
-```scss
-:host {
-    @include css-vars($custom-checkbox-theme);
-}
-```
-### Demo
+### デモ
 
 
 <code-view style="height: 100px"

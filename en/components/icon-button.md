@@ -147,25 +147,40 @@ Users can choose one of the three predefined `igxIconButton` sizes by using the 
 
 As you can see from the sample above, we can also use the `igxIconButton` directive to turn elements like `span` and `div` into Ignite UI for Angular styled icon buttons. 
 
-## Angular Icon Button Styling
+## Icon Button Styling
 
 Following the simplest approach, we use CSS variables to customize the appearance of the icon button:
 
 ```scss
 [igxIconButton="contained"] {
-    --background: #011627;
-    --foreground: #fefefe;
-    --hover-foreground: #011627dc;
-    --hover-background: #ecaa53;
-    --focus-foreground: #011627dc;
-    --focus-background: #ecaa53;
-    --focus-border-color: #0116276c;
-    --active-foreground: #011627dc;
-    --active-background: #ecaa53;
+  --background: #011627;
+  --foreground: #fefefe;
+  --hover-foreground: #011627dc;
+  --hover-background: #ecaa53;
+  --focus-foreground: #011627dc;
+  --focus-background: #ecaa53;
+  --focus-border-color: #0116276c;
+  --active-foreground: #011627dc;
+  --active-background: #ecaa53;
 }
 ```
 
 Take a look at the [`icon-button-theme`]({environment:sassApiUrl}/index.html#function-icon-button-theme) section for a complete list of available parameters for styling any type of icon button.
+
+You can also choose to style only buttons of a specific type - `flat`, `outlined` or `contained`.
+To do this, you can use the new type-specific theme functions: [`flat-icon-button-theme`]({environment:sassApiUrl}/index.html#function-flat-icon-button-theme), [`outlined-icon-button-theme`]({environment:sassApiUrl}/index.html#function-outlined-icon-button-theme) and [`contained-icon-button-theme`]({environment:sassApiUrl}/index.html#function-contained-icon-button-theme)
+
+Here’s an example of using the `contained-icon-button-theme` function to define a custom theme in SCSS:
+
+```scss
+@use "igniteui-angular/theming" as *;
+
+$custom-contained: contained-icon-button-theme(
+    $background: #ECAA53,
+);
+```
+
+This will generate a fully themed `contained icon button`, including appropriate foreground and background colors for its various states like hover, focus, and active.
 
 <code-view style="height: 100px"
            no-theming

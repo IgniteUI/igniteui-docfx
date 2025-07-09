@@ -273,95 +273,22 @@ _language: ja
 
 ```scss
 $custom-theme: grid-theme(
-    $header-background: #e0f3ff,
-    $header-text-color: #e41c77,
-    $header-border-width: 1px,
-    $header-border-style: solid,
-    $header-border-color: rgba(0, 0, 0, 0.08)
+  $header-background: #e0f3ff,
+  $header-text-color: #e41c77,
+  $header-border-width: 1px,
+  $header-border-style: solid,
+  $header-border-color: rgba(0, 0, 0, 0.08)
 );
 ```
+
+>[!NOTE]
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックをご覧ください。
+
 最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。 
 
 ```scss
-@include grid($custom-theme);
+@include css-vars($custom-theme);
 ```
-
->[!NOTE]
- >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
-
- ```scss
-:host {
-    ::ng-deep {
-        @include grid($custom-theme);
-    }
-}
-```
-
-### カラーパレットの定義
-
-上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) と [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
-
-`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
-
-```scss
-$light-blue-color: #e0f3ff;
-$deep-pink-color: #e41c77;
-
-$custom-palette: palette($primary: $light-blue-color, $deep-pink-color);
-```
-
-次に [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取得できます。
-
-```scss
-$custom-theme: grid-theme(
-    $header-background: color($custom-palette, "primary", 500),
-    $header-text-color: color($custom-palette, "secondary", 500),
-    $header-border-width: 1px,
-    $header-border-style: solid,
-    $header-border-color: color($custom-palette, "grays", 200)
-);
-```
-
->[!NOTE]
->`igx-color` と `igx-palette` は色の生成や取得のための関数です。使い方の詳細については [`パレット`](../themes/palettes.md) のトピックをご覧ください。
-
-### スキーマの使用
-
-テーマ エンジンを使用して[**スキーマ**](../themes/sass/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法です。
-
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`_light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid)) の 1 つを拡張します。  
-
-```scss
-// Extending the light grid schema
-$custom-grid-schema: extend($_light-grid,
-    (
-        header-background: (igx-color:('primary', 500)),
-        header-text-color: (igx-color:('secondary', 500)),
-        header-border-width: 1px,
-        header-border-style: solid,
-        header-border-color: (igx-color:('grays', 200))
-    )
-);
-```
-
-カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを拡張する必要があります。これは基本的にカスタム スキーマでコンポーネントをポイントし、その後それぞれのコンポーネントテーマに追加するものです。
-
-```scss
-Extending the global light-schema
-$my-custom-schema: extend($light-schema, 
-    (
-        igx-grid: $custom-grid-schema
-    )
-);
-
-// Defining our custom theme with the custom schema
-$custom-theme: grid-theme(
-  $palette: $custom-palette,
-  $schema: $my-custom-schema
-);
-```
-
-上記と同じ方法でテーマを含める必要があることに注意してください。
 
 @@if (igxName === 'IgxGrid') {
 ### デモ
@@ -398,15 +325,7 @@ $custom-theme: grid-theme(
 }
 
 >[!NOTE]
->このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
-
-## 既知の問題と制限
-
-- IE11 で複数列ヘッダーの @@igComponent コンポーネントを使用するには、Angular アプリケーションの polyfill.ts に配列ポリフィルを明示的にインポートする必要があります。
-
-    ```typescript
-    import 'core-js/es7/array';
-    ```
+>このサンプルは、`Change Theme` (テーマの変更) から選択したグローバル テーマに影響を受けません。
 
 ## API リファレンス
 <div class="divider--half"></div>

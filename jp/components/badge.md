@@ -109,7 +109,7 @@ igx-badge {
 }
 ```
 
-### Badge の形状
+### バッジの形状
 
 `shape` 属性の値を `square` に設定することで、バッジの形状を変更できます。デフォルトでは、バッジの形状は `rounded` です。
 
@@ -119,7 +119,21 @@ igx-badge {
 
 すべて適切に設定すると、ブラウザ上で以上のデモ サンプルを確認することができます。
 
-### バッジ アイコン
+### バッジのサイズ
+
+バッジのサイズは `--size` 変数を使用して制御できます。これにより、バッジのサイズが両方向に比例して調整されます。ただし、テキスト値を含むバッジでは、フォント サイズと行の高さに `caption` タイポグラフィ スタイルが使用されることに注意してください。そのため、テキストを含むバッジの `--size` を 16 px 未満の値に設定する場合は、そのタイポグラフィも変更する必要があります。
+
+Example:
+```scss
+igx-badge {
+  --size: 12px;
+
+  font-size: calc(var(--size) / 2);
+  line-height: normal;
+}
+```
+
+### バッジのアイコン
 
 `igx-badge` コンポーネントは、マテリアル アイコンに加えて[マテリアル アイコン拡張](../components/material-icons-extended.md)およびその他のカスタム アイコン セットの使用もサポートしています。マテリアル アイコン拡張セットからバッジ コンポーネントにアイコンを追加するには、まずそのアイコンを登録する必要があります。
 
@@ -285,58 +299,20 @@ Badge のスタイル設定は、すべてのテーマ関数とコンポーネ�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`badge-theme`]({environment:sassApiUrl}/index.html#function-badge-theme) を拡張する新しいテーマを作成し、バッジの項目をスタイル設定するいくつかのパラメーターを受け取る方法です。
+最も簡単な方法は、[`badge-theme`]({environment:sassApiUrl}/index.html#function-badge-theme) を拡張する新しいテーマを作成し、バッジの項目をスタイル設定するいくつかのパラメーターを受け取る方法です。`$background-color` を設定すると、`$icon-color` と `$text-color` は、背景色とのコントラストが高い黒または白に自動的に割り当てられます。なお、`$border-radius` プロパティはバッジの `shape` が `square` に設定されている場合のみ適用されます。
 
 ```scss
 $custom-badge-theme: badge-theme(
-    $border-color: white,
-    $border-width: 1px,
-    $icon-color: white,
-    $text-color: black,
-    $shadow: 3px 2px 5px 0px rgba(0,0,0,0.4)
+  $background-color: #57a5cd,
+  $border-radius: 4px
 );
 ```
 
-### テーマを含む
-
-<div class="divider"></div>
-
-最後にコンポーネントのテーマをアプリケーションに含めます。
-
-`$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
-
-```scss
- @include badge($custom-badge-theme);
-```
->[!NOTE]
->コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
-
-```scss
-:host {
-     ::ng-deep {
-        @include badge($custom-badge-theme);
-    }
-}
-```
-
-<div class="divider"></div>
-
-`$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
+新しいテーマを含めるには、`css-vars` ミックスインを使用します。
 
 ```scss
 @include css-vars($custom-badge-theme);
 ```
-
->[!NOTE]
->コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合においても、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
-
-```scss
-:host {
-    @include css-vars($custom-badge-theme);
-}
-```
-
-テーマを上記と同じ方法で含めることに注意してください。
 
 ### デモ
 

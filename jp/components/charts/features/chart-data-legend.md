@@ -89,6 +89,14 @@ OHLC 価格の **TypicalPrice** (標準価格) とパーセンテージの **Cha
 
 また、[`IgxDataLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html) の `UnitText` プロパティを使用して、すべての Unit 列に表示されるテキストを変更できます。
 
+## レイアウト モード
+
+凡例項目は、[`layoutMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#layoutMode) プロパティを使って垂直または表形式の構造に配置できます。デフォルト値は `Table` で、以前のリリースと同じ外観と操作性を維持します。
+
+例:
+
+<img src="../../../images/general/layout_mode.png" />
+
 ## Angular データ凡例のスタイル設定
 
 [`IgxDataLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html) は、各タイプの列をスタイル設定するためのプロパティを提供します。これらの各プロパティの名前は、**Title**、**Label**、**Value**、または **Units** で始まります。テキストの色、フォント、余白のスタイルを設定できます。たとえば、すべての列のテキストの色を設定する場合は、[`titleTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#titleTextColor)、[`labelTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#labelTextColor)、[`valueTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#valueTextColor)、および [`unitsTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#unitsTextColor) プロパティを設定します。次の例は、上記のスタイル設定プロパティの使用法を示しています:
@@ -125,8 +133,8 @@ OHLC 価格の **TypicalPrice** (標準価格) とパーセンテージの **Cha
 
 ## Angular データ凡例のグループ化
 
-`DataLegendGroup` は、すべてのタイプのシリーズで、データ凡例内のシリーズ グループを分類する文字列に設定できます。各グループには、別のシリーズ グループが表示される前に、独自の集計行が表示されます。
-デフォルトでは、DataLegend はグループ名を非表示にしますが、`GroupRowVisible` プロパティを true に設定するとグループ名を表示できます。
+[`dataLegendGroup`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriescomponent.html#dataLegendGroup) は、すべてのタイプのシリーズで、データ凡例内のシリーズ グループを分類する文字列に設定できます。各グループには、別のシリーズ グループが表示される前に、独自の集計行が表示されます。
+デフォルトでは、DataLegend はグループ名を非表示にしますが、[`groupRowVisible`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#groupRowVisible) プロパティを true に設定するとグループ名を表示できます。
 
 <code-view style="height: 450px" alt="Angular データ凡例のグループ化"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -141,7 +149,7 @@ OHLC 価格の **TypicalPrice** (標準価格) とパーセンテージの **Cha
 
 *   `GroupRowMargin`
 *   `GroupTextMargin`
-*   `GroupTextColor`
+*   [`groupTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#groupTextColor)
 *   `GroupTextFontSize`
 *   `GroupTextFontFamily`
 *   `GroupTextFontStyle`

@@ -308,25 +308,25 @@ import {
 ...
 
 const routes: Routes = [
-    {
-        path: '',
-        pathMatch: 'full',
-        redirectTo: '/tabs-routing'
-    },
-    {
-        path: 'tabs-routing',
-        component: TabsRoutingComponent,
-        children: [
-            { path: 'view1', component: TabsRoutingView1Component },
-            { path: 'view2', component: TabsRoutingView2Component },
-            { path: 'view3', component: TabsRoutingView3Component },
-        ]
-    }
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: '/tabs-routing'
+  },
+  {
+    path: 'tabs-routing',
+    component: TabsRoutingComponent,
+    children: [
+        { path: 'view1', component: TabsRoutingView1Component },
+        { path: 'view2', component: TabsRoutingView2Component },
+        { path: 'view3', component: TabsRoutingView3Component },
+      ]
+  }
 ];
 
 @NgModule({
-    exports: [RouterModule],
-    imports: [RouterModule.forRoot(appRoutes)]
+  exports: [RouterModule],
+  imports: [RouterModule.forRoot(appRoutes)]
 })
 export class AppRoutingModule { }
 ```
@@ -392,20 +392,19 @@ export class AppRoutingModule { }
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-次に、[`tabs-theme`]({environment:sassApiUrl}/index.html#function-tabs-theme) を拡張する新しいテーマを作成し、タブグループのスタイルを設定できるさまざまなプロパティを受け取ります。
+最もシンプルな方法として、[`tabs-theme`]({environment:sassApiUrl}/index.html#function-tabs-theme) を拡張する新しいテーマを作成します。`$item-background` や `$item-active-color` などの少数のベース パラメーターを指定することで、最小限の労力でタブのスタイルを設定できます。テーマは、さまざまなインタラクション状態に必要なすべての背景色と前景色を自動的に生成します。
+
+追加のパラメーターをオーバーライドして、外観をさらに微調整することもできます。
 
 ```scss
 $dark-tabs: tabs-theme(
-    $item-text-color: #F4D45C,
-    $item-background: #292826,
-    $item-hover-background: #F4D45C,
-    $item-hover-color: #292826,
-    $item-active-color: #F4D45C,
-    $item-active-icon-color: #F4D45C,
-    $indicator-color: #F4D45C,
-    $tab-ripple-color: #F4D45C
+  $item-background: #292826,
+  $item-active-color: #F4D45C,
 );
 ```
+
+>[!NOTE]
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](themes/sass/palettes.md)のトピックをご覧ください。
 
 次に、[`tabs-theme`]({environment:sassApiUrl}/index.html#function-tabs-theme) を拡張する新しいテーマを作成し、タブグループのスタイルを設定できるさまざまなプロパティを受け取ります。
 
@@ -418,55 +417,13 @@ $dark-tabs: tabs-theme(
 @include css-vars($dark-tabs);
 ```
 
-CSS 変数をサポートしないブラウザー (IE 11 など) をターゲットにしている場合、テーマ コンポーネント ミックスインを使用してデフォルト テーマを上書きできます。
-
-```scss
-:host {
-  ::ng-deep {
-    @include tabs($dark-tabs);
-  }
-}
-```
-### パレットおよび色
-
-上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して色に関してより高い柔軟性を実現することができます。
-
-`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
-
-```scss
-$yellow-color: #F4D45C;
-$black-color: #292826;
-
-$dark-palette: palette(
-  $primary: $black-color,
-  $secondary: $yellow-color,
-  $grays: #fff
-);
-```
-
-[`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用して、パレットから簡単に取得することができます。
-
-```scss
-$dark-tabs: tabs-theme(
-    $palette: $dark-palette,
-    $item-text-color: color($dark-palette, "secondary", 400),
-    $item-background: color($dark-palette, "primary", 400),
-    $item-hover-background: color($dark-palette, "secondary", 400),
-    $item-hover-color: color($dark-palette, "primary", 400),
-    $item-active-color: color($dark-palette, "secondary", 400),
-    $item-active-icon-color: color($dark-palette, "secondary", 400),
-    $indicator-color: color($dark-palette, "secondary", 400),
-    $tab-ripple-color: color($dark-palette, "secondary", 400)
-);
-```
-
+### デモ
 
 <code-view style="height: 250px; border: 1px solid #ededed"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/tabs-style" >
 </code-view>
-
 
 <div class="divider--half"></div>
 

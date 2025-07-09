@@ -7,8 +7,6 @@ _keywords: angular slider, angular slider component, angular range slider compon
 # Angular Slider Component Overview
 <p class="highlight">The Ignite UI for Angular Slider is a form component which allows selection in a given range by moving a thumb along a track. The track can be defined as continuous or stepped and the slider can be configured so users can choose between single value and range (lower and upper value) slider types.</p>
 
-<div class="divider"></div>
-
 ## Angular Slider Example
 
 <code-view style="height: 250px" 
@@ -481,55 +479,43 @@ In the **tickLabel** callback above, we are rounding the **value** of every **pr
            iframe-src="{environment:demosBaseUrl}/interactions/slider-tick-labels-template" >
 </code-view>
 
-
 ## Styling
-Lets change the default styles of our slider component by creating a new theme for it.
+
+To customize the Slider, you first need to import the `index` file, where all styling functions and mixins are located.
+
+```scss
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+Next, we have to create a new theme that extends the `slider-theme` and pass the parameters which we'd like to change. By providing just the `$track-color` or `$thumb-color` parameter, the theme will automatically generate all related colors for the track and thumb, and their various interaction states.
+
+You can also override additional properties, such as tick colors and labels, for more precise control.
+
+```scss
+$custom-slider-theme: slider-theme(
+  $thumb-color: #ff7400,
+  $tick-label-color: #b246c2,
+  $tick-color: #b246c2
+);
+```
+
+The last step is to include the newly created component theme in our application.
+
+```scss
+@include css-vars($custom-slider-theme);
+```
 
 ### Demo
-This is the final result from applying our new theme.
 
+This is the final result from applying our new theme.
 
 <code-view style="height: 240px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-styling-sample" >
 </code-view>
-
-
-### Creating a component theme
-First we need to [create a custom palette](../themes/palettes.md)
-Now let's create our component theme and pass that custom palette to it.
-```scss
-// In app-slider-styling.component.scss
-
-// Create slider theme.
-$custom-slider-theme: slider-theme(
-    $track-color: #ff7400,
-    $track-hover-color: #ff7400,
-
-    $thumb-color: #ff7400,
-
-    $base-track-color: #ddd,
-    $base-track-hover-color: #ccc,
-
-    $tick-label-color: #b246c2,
-    $tick-label-color-tall: #ff7400,
-
-    $tick-color: #b246c2,
-    $tick-color-tall: #ff7400,
-);
-```
-
-#### Applying the component theme
-Now to apply the component theme all that's left is to include `css-vars` mixin and pass the `$custom-slider-theme` map.
-```scss
-// In app-slider-styling.component.scss
-
-// Pass our custom-slider-theme to `css-vars` mixin.
-// The `:host` here makes sure that all the theming will affect only this slider component.
-:host {
-  @include css-vars($custom-slider-theme);
-}
-```
 
 ## API References
 <div class="divider--half"></div>

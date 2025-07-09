@@ -6,6 +6,7 @@ _language: ja
 ---
 
 # Angular Switch (スイッチ) コンポーネントの概要
+
 <p class="highlight">Ignite UI for Angular Switch コンポーネントは iOS の switch コンポーネントと同様に動作するバイナリ選択コンポーネントです。</p>
 <div class="divider"></div>
 
@@ -54,15 +55,11 @@ import { IgxSwitchComponent } from 'igniteui-angular';
 // import { IgxSwitchComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
-    selector: 'app-home',
-    template: `
-    <igx-switch [checked]="true">
-        Simple switch
-    </igx-switch>
-    `,
-    styleUrls: ['home.component.scss'],
-    standalone: true,
-    imports: [IgxSwitchComponent]
+  selector: 'app-home',
+  template: ` <igx-switch [checked]="true"> Simple switch </igx-switch> `,
+  styleUrls: ['home.component.scss'],
+  standalone: true,
+  imports: [IgxSwitchComponent],
 })
 export class HomeComponent {}
 ```
@@ -76,9 +73,7 @@ Ignite UI for Angular Switch モジュールまたはコンポーネントをイ
 デモのようにシンプルなスイッチを作成するには、コンポーネントのテンプレートに以下のコードを追加します。
 
 ```html
-<igx-switch [checked]="true">
-    Simple switch
-</igx-switch>
+<igx-switch [checked]="true"> Simple switch </igx-switch>
 ```
 
 ### Switch プロパティ
@@ -94,13 +89,14 @@ public settings = [
     { name: 'Device visibility', state: false}
 ];
 ```
+
 コンポーネント テンプレートに各設定のためのスイッチを追加し、相対するプロパティにバインドします。
 
 ```html
 <!--toggle.component.html-->
 
 <igx-switch *ngFor="let setting of settings" [checked]="setting.state">
-    {{ setting.name }}
+  {{ setting.name }}
 </igx-switch>
 ```
 
@@ -108,24 +104,22 @@ public settings = [
 
 ```scss
 :host {
-    display: flex;
-    flex-flow: column nowrap;
-    padding: 16px;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 16px;
 }
 
 igx-switch {
-    margin-top: 24px;
+  margin-top: 24px;
 }
 ```
 
 結果は以下のようになります。
 
-
 <code-view style="height: 200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/switch-sample-2" >
 </code-view>
-
 
 ### ラベル位置
 
@@ -148,56 +142,22 @@ igx-switch {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-次に、[`switch-theme`]({environment:sassApiUrl}/index.html#function-switch-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用してスイッチの項目をスタイル設定します。
+次に、[`switch-theme`]({environment:sassApiUrl}/index.html#function-switch-theme) を拡張して新しいテーマを作成します。`$thumb-off-color` と `$thumb-on-color` の 2 つのパラメーターを指定するだけで、完全なスタイルのスイッチが生成されます。その他のパラメーターをオーバーライドして、外観をさらにカスタマイズすることも可能です。
 
 ```scss
-// in styles.scss
 $custom-switch-theme: switch-theme(
-    $thumb-on-color: #ECAA53,
-    $track-on-color: #F0CB9C
+  $thumb-off-color: #7cadd5,
+  $thumb-on-color: #ecaa53,
 );
 ```
 
-### テーマを含む
-
-<div class="divider"></div>
-
-最後にコンポーネントのテーマをアプリケーションに含めます。
-
-`$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
-
-```scss
- @include switch($custom-switch-theme);
-```
->[!NOTE]
->コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
-
-```scss
-:host {
-    ::ng-deep {
-        @include switch($custom-switch-theme);
-    }
-}
-```
-
-<div class="divider"></div>
-
-`$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
+最後にコンポーネントのテーマをアプリケーションに**含めます**。
 
 ```scss
 @include css-vars($custom-switch-theme);
 ```
 
->[!NOTE]
->コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合においても、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
-
-```scss
-:host {
-    @include css-vars($custom-switch-theme);
-}
-```
 ### デモ
-
 
 <code-view style="height: 200px" 
            no-theming
@@ -205,19 +165,21 @@ $custom-switch-theme: switch-theme(
            iframe-src="{environment:demosBaseUrl}/data-entries/switch-styling" >
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
 * [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
 * [IgxSwitchComponent スタイル]({environment:sassApiUrl}/index.html#function-switch-theme)
 
 ## テーマの依存関係
+
 * [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。

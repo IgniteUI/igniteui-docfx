@@ -183,61 +183,21 @@ Month Picker のスタイル設定を始めるには、すべてのテーマ関�
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
-Month Picker はカレンダーのテーマを使用するため、[`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) を拡張する新しいテーマを作成し、そのパラメーターを使用して Month Picker の項目をスタイル設定します。
+
+月ピッカーはカレンダーのテーマを使用するため、[`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) を拡張した新しいテーマを作成する必要があります。月ピッカーの項目にスタイルを設定するには、`$content-background` パラメーターを設定します。オプションで、残りのプロパティをオーバーライドする場合は、`$header-background` を設定することもできます。
+これら 2 つのパラメーターはテーマの基礎となり、ホバー、選択、アクティブなどすべての状態に応じた適切な背景色および前景色を自動的に生成します。
 
 ```scss
 $my-calendar-theme: calendar-theme(
   $border-radius: 15px,
-  $content-background: #011627,
-  $picker-background-color: #011627,
-  $month-current-text-color: #ECAA53,
-  $month-hover-background: #ECAA53,
-  $year-current-text-color: #ECAA53,
-  $year-hover-text-color: #D37B08,
-  $picker-arrow-color: #ECAA53,
-  $picker-text-hover-color: #D37B08,
-  $picker-arrow-hover-color: #D37B08,
-  $picker-text-color: #ECAA53
+  $content-background: #57a5cd,
 );
 ```
 
-### テーマを含む
-
-<div class="divider"></div>
-
-次にコンポーネントのテーマをアプリケーションに含めます。
-
-`$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
-
-```scss
- @include calendar($my-calendar-theme);
-```
->[!NOTE]
->コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
-
-```scss
-:host {
-     ::ng-deep {
-        @include calendar($my-calendar-theme);
-    }
-}
-```
-
-<div class="divider"></div>
-
-`$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
+次にコンポーネントのテーマをアプリケーションに**含めます**。
 
 ```scss
 @include css-vars($my-calendar-theme);
-```
-
->[!NOTE]
->コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合においても、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
-
-```scss
-:host {
-    @include css-vars($my-calendar-theme);
-}
 ```
 
 すべて設定できると、結果は以下のようになります。
@@ -245,7 +205,7 @@ $my-calendar-theme: calendar-theme(
 ### デモ
 
 
-<code-view style="height: 600px" 
+<code-view style="height: 350px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-styling" >
@@ -259,7 +219,6 @@ $my-calendar-theme: calendar-theme(
 * [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
 * [IgxCalendarComponent スタイル]({environment:sassApiUrl}/index.html#function-calendar-theme)
 
-<div class="divider--half"></div>
 
 ## テーマの依存関係
 <div class="divider--half"></div>

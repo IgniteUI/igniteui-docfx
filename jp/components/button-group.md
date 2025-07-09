@@ -6,6 +6,7 @@ _language: ja
 ---
 
 # Angular Button Group (ボタン グループ) コンポーネントの概要
+
 <p class="highlight">Angular Button Group コンポーネントは、ボタンを水平/垂直配置、単一/複数選択、オン/オフ切り替えが可能なスタイルのボタン グループに組織するために使用します。</p>
 
 ## Angular Button Group の例
@@ -66,7 +67,7 @@ import { IGX_BUTTON_GROUP_DIRECTIVES, IgxIconComponent } from 'igniteui-angular'
         <button igxButton>
             <igx-icon>format_align_right</igx-icon>
         </button>
-        <button igxButton [selected]="true">
+        <button igxButton selected>
             <igx-icon>format_align_justify</igx-icon>
         </button>
     </igx-buttongroup>
@@ -90,24 +91,25 @@ Ignite UI for Angular Button Group モジュールまたはディレクティブ
 ```html
 <!-- sample.component.html -->
 <igx-buttongroup>
-    <button igxButton>
-        <igx-icon>format_align_left</igx-icon>
-    </button>
-    <button igxButton>
-        <igx-icon>format_align_center</igx-icon>
-    </button>
-    <button igxButton>
-        <igx-icon>format_align_right</igx-icon>
-    </button>
-    <button igxButton [selected]="true">
-        <igx-icon>format_align_justify</igx-icon>
-    </button>
+  <button igxButton>
+    <igx-icon>format_align_left</igx-icon>
+  </button>
+  <button igxButton>
+    <igx-icon>format_align_center</igx-icon>
+  </button>
+  <button igxButton>
+    <igx-icon>format_align_right</igx-icon>
+  </button>
+  <button igxButton selected>
+    <igx-icon>format_align_justify</igx-icon>
+  </button>
 </igx-buttongroup>
 ```
 
 ## 例
 
 ### 配置
+
 [`alignment`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#alignment) プロパティを使用して、ボタン グループ内のボタンの方向を設定します。
 
 ```typescript
@@ -123,13 +125,12 @@ public alignment = ButtonGroupAlignment.vertical;
 ```html
 <!-- sample.component.html -->
 <igx-buttongroup [alignment]="alignment">
-    <button igxButton>Sofia</button>
-    <button igxButton>London</button>
-    <button igxButton [selected]="true">New York</button>
-    <button igxButton>Tokyo</button>
+  <button igxButton>Sofia</button>
+  <button igxButton>London</button>
+  <button igxButton selected>New York</button>
+  <button igxButton>Tokyo</button>
 </igx-buttongroup>
 ```
-
 
 <code-view style="height: 220px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -141,6 +142,7 @@ public alignment = ButtonGroupAlignment.vertical;
 ### 選択
 
 `igx-buttongroup` 選択を構成するには、その [selectionMode]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#selectionMode) プロパティを使用できます。このプロパティは、次の 3 つのモードを受け入れます:
+
 - **single** - ボタン グループのデフォルトの選択モードです。ユーザーは単一のボタンを選択/選択解除できます。
 - **singleRequired** - ラジオ グループの動作を模倣します。選択できるボタンは 1 つだけであり、最初に選択すると、ユーザーの操作を通じて選択を解除することはできません。
 - **multi** - グループ内の複数のボタンを選択または選択解除できます。
@@ -152,14 +154,14 @@ public alignment = ButtonGroupAlignment.vertical;
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-4" >
 </code-view>
 
-
 ### サイズ
+
 `--ig-size` CSS カスタム プロパティを使用して、ボタン グループのサイズを制御できます。
 
 ```scss
 /* sample.component.scss */
 igx-buttongroup {
-    --ig-size: var(--ig-size-small);
+  --ig-size: var(--ig-size-small);
 }
 ```
 
@@ -168,14 +170,13 @@ igx-buttongroup {
 <igx-buttongroup></igx-buttongroup>
 ```
 
-
 <code-view style="height: 80px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-5" >
 </code-view>
 
-
 ### カスタム トグル ボタン
+
 [`values`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html#values) プロパティを使用して、ボタン グループ内のカスタムボタンの配列を設定します。
 
 ```typescript
@@ -241,12 +242,10 @@ public ngOnInit() {
 <igx-buttongroup [selectionMode]="'multi'" [values]="bordersButtons"></igx-buttongroup>
 ```
 
-
 <code-view style="height: 90px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-3" >
 </code-view>
-
 
 ## スタイル設定
 
@@ -259,44 +258,20 @@ public ngOnInit() {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`button-group-theme`]({environment:sassApiUrl}/index.html#function-button-group-theme) を拡張し、さまざまな状態のボタン グループの項目をスタイルするパラメーターを受け取る新しいテーマを作成する方法です。
+最もシンプルな方法として、[`button-group-theme`]({environment:sassApiUrl}/index.html#function-button-group-theme) を拡張し、`$item-background` のみを指定して新しいテーマを作成します。これにより、インタラクション状態の色、前景色、境界線の色が自動的に算出されます。必要に応じて任意のテーマ パラメーターをオーバーライドすることも可能です。
 
 ```scss
 $custom-button-group: button-group-theme(
-    $item-text-color: #fdfdfd,
-    $item-background: #2f4d6a,
-    $item-hover-text-color: #fdfdfd,
-    $item-hover-background: #1f3347,
-    $item-selected-text-color: #fdfdfd,
-    $item-selected-background: #1f3347,
-    $item-selected-hover-background: #1f3347,
-    $disabled-text-color: gray,
-    $disabled-background-color: lightgray
+  $item-background: #57a5cd,
 );
 ```
 
 ご覧のとおり、`button-group-theme` は、項目の基本的なスタイル設定に役立ついくつかのパラメーターを公開しています。ボタン固有のパラメーターを変更する場合は、`button-theme` を拡張する新しいテーマを作成し、それぞれのボタン グループのクラスの下でスコープできます。
 
-### CSS 変数の使用
-
 最後にコンポーネントのテーマを含めます。
 
 ```scss
 @include css-vars($custom-button-group);
-```
-
-### テーマ オーバーライドの使用
-
-Internet Explorer 11 などの古いブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチを用いる必要があります。 
-
-コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
-
-```scss
-:host {
-    ::ng-deep {
-        @include button-group($custom-button-group);
-    }
-}
 ```
 
 ### デモ
@@ -308,8 +283,8 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-style" >
 </code-view>
 
-
 ## API リファレンス
+
 <div class="divider--half"></div>
 
 * [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
@@ -318,15 +293,16 @@ Internet Explorer 11 などの古いブラウザーのコンポーネントを�
 * [IgxButton スタイル]({environment:sassApiUrl}/index.html#function-button-theme)
 
 ## テーマの依存関係
+
 * [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
 * [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
 * [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
-

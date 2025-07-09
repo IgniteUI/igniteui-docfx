@@ -20,7 +20,7 @@ Angular Accordion は、単一のコンテナーに表示されるクリック�
 
 <code-view style="height:460px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/accordion-sample-1" alt="Angular Avatar の例">
+           iframe-src="{environment:demosBaseUrl}/layouts/accordion-sample-1" alt="Angular Accordion の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -55,9 +55,11 @@ export class AppModule {}
 
 ```typescript
 // home.component.ts
+
 ...
 import { IGX_ACCORDION_DIRECTIVES } from 'igniteui-angular';
 // import { IGX_ACCORDION_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
+
 @Component({
     selector: 'app-home',
     template: `
@@ -238,7 +240,7 @@ Angular [Accordion コンポーネント]({environment:angularApiUrl}/classes/ig
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/accordion-sample-2" alt="Angular Avatar の例">
+           iframe-src="{environment:demosBaseUrl}/layouts/accordion-sample-2" alt="Angular Accordion の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -259,8 +261,9 @@ Ignite UI for Angular Accordion のキーボード ナビゲーションは、�
  - <kbd>Home</kbd> - Accordion の最初の有効なパネルに移動します
  - <kbd>END</kbd> - Accordion の最後の有効なパネルに移動します
 
-## Angular Accordion のスタイル設定
-[Accordion]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) は、基になる[パネル]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)のコンテナーとしてのみ機能します。スタイルは、[IgxExpansionPanel トピックのスタイル設定セクション](expansion-panel.md#スタイル設定)で説明されているように、パネルのテーマから直接適用できます。
+## スタイル設定
+
+[`Accordion`]({environment:angularApiUrl}/classes/igxaccordioncomponent.html) は、基になる[`パネル`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)のコンテナーとしてのみ機能します。スタイルは、[`IgxExpansionPanel トピックのスタイル設定セクション`](expansion-panel.md#スタイル設定)で説明されているように、パネルのテーマから直接適用できます。
 
 設計上、`igx-accordion` 内に配置される場合、展開されたパネルにマージンが設定されます。変更するために、igx-expansion-panel テーマ内で公開されるプロパティがあります。
 テーマ エンジンによって公開される関数を利用するには、スタイル ファイルに `index` ファイルをインポートする必要があります。
@@ -272,33 +275,29 @@ Ignite UI for Angular Accordion のキーボード ナビゲーションは、�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-[expansion-panel-theme]({environment:sassApiUrl}/index.html#function-expansion-panel-theme) を拡張する新しいテーマを作成し、`$expanded-margin` パラメーターを受け取ります。 
+最もシンプルな方法として、[`expansion-panel-theme`]({environment:sassApiUrl}/index.html#function-expansion-panel-theme) を拡張し、`$header-background`、`$body-color`、および `$expanded-margin` の各パラメーターを受け取る新しいテーマを作成します。このテーマは、指定された背景色に対してコントラストの高い前景色 (黒または白) を自動的に選択して割り当てます。
+
 ```scss
 $custom-panel-theme: expansion-panel-theme(
-    $expanded-margin: 0px
+  $header-background: #011627,
+  $body-background: #f0ece7,
+  $expanded-margin: 10px
 );
 ```
-### CSS 変数の使用
 
 最後にコンポーネントのテーマを含めます。
+
 ```scss
-:host {
-    @include css-vars($custom-panel-theme);
-}
+@include css-vars($custom-panel-theme);
 ```
 
-### テーマ オーバーライドの使用
+### デモ
 
-Internet Explorer 11 のコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチが必要です。
+<code-view style="height:350px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/accordion-style" alt="Angular Accordion スタイルの例">
+</code-view>
 
-コンポーネントが [Emulated](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を`解除する`必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` を `:host` セレクターでラップしてください。 
-```scss
-:host {
-    ::ng-deep {
-        @include expansion-panel($custom-panel-theme);    
-    }
-}
-```
 ## API リファレンス
 * [IgxAccordion API]({environment:angularApiUrl}/classes/igxaccordioncomponent.html)
 * [IgxExpansionPanel API]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)

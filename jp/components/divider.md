@@ -8,7 +8,6 @@ _language: ja
 # Angular Divider (デバイダー) コンポーネントの概要
 
 <p class="highlight">デバイダー コンポーネントは、コンテンツを水平と垂直の両方向に分割できます。</p>
-<div class="divider"></div>
 
 ## Angular Divider の例
 
@@ -117,7 +116,7 @@ Ignite UI for Angular Divider モジュールまたはディレクティブを�
 </code-view>
 
 
-`middle` 属性の値が誤った値に設定されている場合、または属性がそれ以外で省略されている場合は、デバイダーは左側にのみ設定されます。
+`middle` 属性の値が false 値に設定されている場合、または属性がそれ以外で省略されている場合は、デバイダーは左側にのみ設定されます。
 
 ## API リファレンス
 <div class="divider--half"></div>

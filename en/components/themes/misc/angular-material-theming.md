@@ -101,7 +101,7 @@ To get started with styling components using the Ignite UI theming engine, creat
 
 ### Color Palettes
 
-Ignite UI for Angular's [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) function produces a color palette map including three sub-palettes for the `primary`, `secondary` and `gray` shades as well as five additional colors for `info`, `success`, `warn`, `error` and `surface`. For each color variant, our theming engine automatically generates text contrast colors at build-time, that are also included in the palette. Below, you can see the predefined light material palette:
+Ignite UI for Angular's [`palette`]({environment:sassApiUrl}/index.html#function-igx-palette) function produces a color palette map including three sub-palettes for the `primary`, `secondary` and `gray` shades as well as five additional colors for `info`, `success`, `warn`, `error` and `surface`. For each color variant, our theming engine automatically generates text contrast colors at runtime, that are also included in the palette. Below, you can see the predefined light material palette:
 
 ```scss
 $igx-light-palette: palette(

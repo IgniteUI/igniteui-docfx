@@ -8,10 +8,10 @@ _keywords: angular splitter, angular splitterコンポーネント, angular 分�
 
 Ignite UI for Angular Splitter コンポーネントはレイアウトを作成し、サイズ変更、展開、縮小が可能な複数の垂直方向または水平方向に配置されたペインに分割できます。これらの操作は、ペイン間のスプリッター バーで公開される UI によって実行されます。以下のデモでシンプルなスプリッター レイアウトを示します。
 
-## Angular スプリッターの例
+## Angular Splitter の例
 
 <code-view style="height: 400px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/splitter-horizontal-sample" alt="Angular スプリッターの例">
 </code-view>
 
@@ -219,18 +219,16 @@ public typeVertical = SplitterType.Vertical;
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-スプリッターのデフォルトのスタイルを変更するには、[`splitter-theme`]({environment:sassApiUrl}/index.html#function-splitter-theme) を拡張して新しいテーマを作成します。
+スプリッターのデフォルトのスタイルを変更するには、[`splitter-theme`]({environment:sassApiUrl}/index.html#function-splitter-theme) を拡張して新しいテーマを作成します。基本的なパラメーターを提供するだけで、インタラクション状態に必要なすべてのスタイルが自動生成されます。
 
 ```scss
 // In splitter-styling-sample.component.scss
 
 $splitter-theme: splitter-theme(
-    $bar-color: #011627,
-    $handle-color: #ECAA53,
-    $expander-color: #ECAA53,
-    $border-radius: 0,
-    $focus-color: #ECAA53,
-    $size: 4px
+  $bar-color: #011627,
+  $handle-color: #ecaa53,
+  $expander-color: #ecaa53,
+  $size: 4px
 );
 ```
 
@@ -240,21 +238,6 @@ $splitter-theme: splitter-theme(
 
 ```scss
 @include css-vars($custom-splitter-theme);
-```
-
-### テーマ オーバーライドの使用
-
-Internet Explorer 11 のコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチが必要です。 
-
-コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。一方、カスタム テーマが他のコンポーネントのに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
-
-```scss
-:host {
-    ::ng-deep {
-        // Custom splitter theme を `igx-splitter` ミックスインに渡します
-        @include splitter($custom-splitter-theme);
-    }
-}
 ```
 
 ### デモ
@@ -288,6 +271,7 @@ igx-splitter {
   --igx-splitter-size: 10px;
 }
 ```
+
 
 ## API リファレンス
 <div class="divider--half"></div>

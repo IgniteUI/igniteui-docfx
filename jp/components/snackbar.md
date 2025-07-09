@@ -5,8 +5,7 @@ _keywords: Angular Snackbar コンポーネント, Angular Snackbar コントロ
 _language: ja
 ---
 # Angular Snackbar (スナックバー) コンポーネントの概要
-<p class="highlight">Ignite UI for Angular Snackbar コンポーネントは、アクションを含むことができる単一行のメッセージで操作のフィードバックを提供します。SnackBar メッセージがその他の画面要素の上に表示され、画面の中央下に配置されます。</p>
-<div class="divider"></div>
+<p class="highlight">Ignite UI for Angular Snackbar コンポーネントは、アクションを含むことができる単一行のメッセージで操作のフィードバックを提供します。Snackbar メッセージがその他の画面要素の上に表示され、画面の中央下に配置されます。</p>
 
 ## Angular Snackbar の例
 <div class="divider--half"></div>
@@ -126,7 +125,7 @@ public close(element) {
 </code-view>
 
 ### 表示時間
-[`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displayTime) でミリ秒間隔に設定し、Snackbar コンポーネントが表示される時間を設定します。デフォルトでは 4000 ミリ秒に設定されています。 
+[`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displayTime) でミリ秒間隔に設定し、Snackbar コンポーネントが表示される時間を設定します。デフォルトでは 4000 ミリ秒に設定されています。
 
 ### Snackbar のカスタマイズ
 Snackbar の内容をカスタマイズして、メッセージやボタンよりも複雑な要素を表示することもできます。たとえば、ファイルの読み込み中にスナックバーを表示したい場合は、読み込みアニメーションをそのコンテンツに追加することができます。
@@ -255,167 +254,65 @@ public restore() {
            iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" >
 </code-view>
 
-### オーバーレイ設定
-[`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html) は、[オーバーレイ設定]({environment:angularApiUrl}/interfaces/overlaysettings.html)を使用してコンテナーの位置を制御します。デフォルト設定は、カスタム オーバーレイ設定を定義し、それらをスナックバーの `open()` メソッドに渡すことで変更できます。
-
-```typescript
-public customSettings: OverlaySettings = {
-    positionStrategy: new GlobalPositionStrategy(
-        { 
-            horizontalDirection: HorizontalAlignment.Left,
-            verticalDirection: VerticalAlignment.Top
-        }),
-    modal: true,
-    closeOnOutsideClick: true,
-};
-
-snackbar.open(customSettings);
-```
-
-ユーザーは、スナックバーが表示されたときに DOM に配置される特定のアウトレットを提供することもできます。
+### 配置
+[`positionSettings`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#positionSettings) プロパティを使用すると、Snackbar の表示位置を構成します。デフォルトで、ページの下に表示されます。以下のサンプルで、通知が上位置に表示されます。
 
 ```html
-<igx-snackbar [outlet]="igxBodyOverlayOutlet"></igx-snackbar>
-<div #igxBodyOverlayOutlet igxOverlayOutlet></div>
+<!--sample.component.html-->
+<button igxButton="contained" (click)="open(snackbar)">Show notification on top</button>
+<igx-snackbar #snackbar>Notification displayed</igx-snackbar>
 ```
-## スタイル設定
 
+```typescript
+// sample.component.ts
+import { VerticalAlignment, HorizontalAlignment } from 'igniteui-angular';
+// import { VerticalAlignment, HorizontalAlignment } from '@infragistics/igniteui-angular'; for licensed package
+...
+public open(snackbar) {
+    snackbar.positionSettings.verticalDirection = VerticalAlignment.Top;
+    snackbar.positionSettings.horizontalDirection = HorizontalAlignment.Right;
+    snackbar.open();
+}
+...
+```
+
+## スタイル設定
 スナックバーのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する index ファイルをインポートする必要があります。
 
 ```scss
 @use "igniteui-angular/theming" as *;
 
-// 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-```
+``` 
 
 最も簡単な方法は、[`snackbar-theme`]({environment:sassApiUrl}/index.html#function-snackbar-theme) を拡張する新しいテーマを作成し、`$text-color`、`$background`、`$button-color`、`$border-radius` パラメーターを受け取る方法です。
 
 ```scss
 $dark-snackbar: snackbar-theme(
-    $text-color: #FFCD0F,
-    $background: #292826,
-    $button-color: #FFCD0F,
-    $border-radius: 12px
-);
-```
-
-### テーマを含む
-
-<div class="divider"></div>
-
-最後にコンポーネントのテーマを含めます。
-
-`$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
-
-```scss
- @include snackbar($igx-snackbar-theme);
-```
->[!NOTE]
->コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
-
-```scss
-:host {
-     ::ng-deep {
-        @include snackbar($igx-snackbar-theme);
-    }
-}
-```
-
-<div class="divider"></div>
-
-`$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
-
-```scss
-@include css-vars($igx-snackbar-theme);
-```
-
->[!NOTE]
->コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
-
-```scss
-:host {
-    @include css-vars($igx-snackbar-theme);
-}
-```
-
-### カラーパレットの定義
-
-上記のように色の値をハードコーディングする代わりに、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用することによって色に関してより高い柔軟性を持つことができます。
-
-`igx-palette` は渡された一次色と二次色に基づいてカラーパレットを生成します。
-
-```scss
-$yellow-color: #FFCD0F;
-$black-color: #292826;
-
-$dark-palette: palette($primary: $black-color, $secondary: $yellow-color);
-```
-
-また [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) を使用してパレットから簡単に色を取り出すことができます。 
-
-```scss
-$dark-snackbar: snackbar-theme(
-    $text-color: color($dark-palette, "secondary", 400),
-    $background: color($dark-palette, "primary", 400),
-    $button-color: color($dark-palette, "secondary", 400),
-    $border-radius: 12px
+  $text-color: #ffcd0f,
+  $background: #292826,
+  $button-color: #ffcd0f,
+  $border-radius: 12px
 );
 ```
 
 >[!NOTE]
->`igx-color` および `igx-palette` は、色を生成および取得するための重要な機能です。使い方の詳細については[`パレット`](themes/palettes.md)のトピックを参照してください。
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](themes/sass/palettes.md)のトピックをご覧ください。
 
-### スキーマの使用
-
-テーマ エンジンを使用して[**スキーマ**](themes/sass/schemas.md)の利点を活用でき、堅牢で柔軟な構造を構築できます。**スキーマ**はテーマを使用する方法のことです。
-
-すべてのコンポーネントに提供されている 2 つの定義済みスキーマ (ここでは [`dark-snackbar`]({environment:sassApiUrl}/index.html#variable-_dark-snackbar) の 1 つを拡張します。 
+最後にコンポーネントのテーマをアプリケーションに**含めます**。
 
 ```scss
-//  Extending the dark snackbar schema
-$dark-snackbar-schema: extend($_dark-snackbar,
-    (
-        text-color:(
-           color: ("secondary", 400)
-        ),
-        background: (
-           color: ("primary", 400)
-        ),
-        button-color: (
-           color: ("secondary", 400)
-        ),
-        border-radius: 12px
-    )
-);
+@include css-vars($dark-snackbar);
 ```
-
-カスタム スキーマを適用するには、グローバル ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) または [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)) の 1 つを**拡張する**必要があります。これは基本的にカスタム スキーマでコンポーネントを指し示し、その後それぞれのコンポーネント テーマに追加するものです。
-
-```scss
-// Extending the global dark-schema
-$custom-dark-schema: extend($dark-schema,(
-   snackbar: $dark-snackbar-schema
-));
-
-// Defining snackbar theme with the global dark schema
-$dark-snackbar: snackbar-theme(
-  $palette: $dark-palette,
-  $schema: $custom-dark-schema
-);
-```
-
-上記と同じ方法でテーマを含める必要があることに注意してください。
 
 ### デモ
-
 
 <code-view style="height: 150px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/notifications/snackbar-style" >
 </code-view>
-
 
 <div class="divider--half"></div>
 

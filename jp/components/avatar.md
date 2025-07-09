@@ -93,8 +93,8 @@ Ignite UI for Angular Avatar コンポーネントには、3 つの形状 (正�
 // avatar.component.scss
 
 igx-avatar {
-    background: #e41c77;
-    color: #000000;
+  background: #e41c77;
+  color: #000000;
 }
 
 ```
@@ -151,50 +151,30 @@ Avatar のスタイル設定を始めるには、すべてのテーマ関数と�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`avatar-theme`]({environment:sassApiUrl}/index.html#function-avatar-theme) を拡張する新しいテーマを作成し、`$background`、`$color` と `$border-radius` パラメーターを受け取る方法です。
+最もシンプルな方法として、[`avatar-theme`]({environment:sassApiUrl}/index.html#function-avatar-theme) を拡張し、`$background` および `$border-radius` パラメーターを指定して新しいテーマを作成します。`$color` (または `$icon-color`) は、指定された背景に対してよりコントラストの高い色 (黒または白) が自動的に設定されます。なお、`$border-radius` プロパティはアバターの `shape` が `rounded` に設定されている場合のみ適用されます。
 
 次のマークアップを前提として:
 
 ```html
-<div class="initials-avatar">
-    <igx-avatar>BA</igx-avatar>
+<div class="avatar-sample initials">
+  <igx-avatar initials="JS" shape="rounded" size="medium"></igx-avatar>
 </div>
 ```
 
-テーマを作成する必要があります:
+以下のアバター テーマを作成します。
 
 ```scss
 $custom-avatar-theme: avatar-theme(
-    $background: #72da67,
-    $color: #000000,
-    $border-radius: 16px
+  $background: #72da67,
+  $border-radius: 16px
 );
 ```
-
-### CSS 変数の使用
 
 最後にアバターのカスタム テーマを渡します。
 
 ```scss
-.initials-avatar {
-    @include css-vars($custom-avatar-theme);
-}
-```
-
-### ミックスインの使用
-
-Internet Explorer 11 以前などブラウザーのコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチが必要です。 
-
-コンポーネントが [`Emulated`](./themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。一方、カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
-
-```scss
-:host {
-    ::ng-deep {
-        // Custom avatar theme を `igx-avatar` ミックスインに渡します
-        .initials-avatar {
-            @include avatar($custom-avatar-theme);
-        }
-    }
+.initials {
+  @include css-vars($custom-avatar-theme);
 }
 ```
 
@@ -234,7 +214,7 @@ size 属性が適用されていない場合は、事前定義されたサイズ
 
 ```scss
 igx-avatar {
-    --ig-size: var(--ig-size-small);
+  --ig-size: var(--ig-size-small);
 }
 ```
 

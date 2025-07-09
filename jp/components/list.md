@@ -548,45 +548,61 @@ export class ContactListComponent {
 
 ## リスト項目の選択
 
-リスト項目は選択状態を提供しません。しかし、アプリケーションで選択された項目を追跡する必要がある場合、どのようにしてそれを実現できるかの例を示します。必要なのは、コンポーネントのどこか、またはリストがバインドされているデータの中で、状態を追跡することです。
+リスト項目には、どの項目が「選択」されているかを追跡するのに役立つ `selected` プロパティがあります。このプロパティを使用すると、各項目の選択状態を識別および管理できます。
 
-以下は、リストにバインドされているデータの状態追跡に基づいて、テーマのセカンダリ 500 カラーをリストの背景色に適用する例です。
+以下の例は、`selected` プロパティを使用したときに項目の視覚スタイルがどのように変化するかを示しています。
 
 <code-view style="height: 420px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-item-selection" >
 </code-view>
 
-`selected` プロパティを各データ メンバーに追加します。デフォルトは `false` です。リスト項目がクリックされたら、データ コレクション内のすべての `selected` プロパティをリセットしたあと、クリックされた項目に対応するデータの `selected` プロパティを `true` に設定します。選択したロパティに基づいて、選択されたときの背景を定義している css クラスをリスト項目に適用します。
+デフォルトで、`selected` プロパティは `false` に設定されています。各リスト項目の `(click)` イベントにバインドされたインライン式を使用して値を切り替えることができ、クリックされるたびに項目の視覚的な状態を効果的に切り替えることができます。
 
 ```html
 <igx-list>
-    <igx-list-item isHeader="true">Contacts</igx-list-item>
-    <igx-list-item [ngClass]="contact.selected ? 'selected' : ''"
-                    (click)="selectItem(contact)"
-                    *ngFor="let contact of contacts | igxFilter: filterContacts;">
+    <igx-list-item [isHeader]="true">Contacts</igx-list-item>
+    @for (contact of contacts | igxFilter: filterContacts; track contact) {
+      <igx-list-item [selected]="contact.selected" (click)="contact.selected = !contact.selected">
         <igx-avatar igxListThumbnail [src]="contact.photo" shape="circle"></igx-avatar>
         <span igxListLineTitle>{{ contact.name }}</span>
         <span igxListLineSubTitle>{{ contact.phone }}</span>
-        <igx-icon igxListAction [style.color]="contact.isFavorite ? 'orange' : 'lightgray'" (click)="toggleFavorite(contact, $event)">star</igx-icon>
-    </igx-list-item>
-</igx-list>
+        <igx-icon igxListAction [style.color]="contact.isFavorite ? 'orange' : 'lightgray'" igxRipple="pink"
+          [igxRippleCentered]="true" (click)="toggleFavorite(contact, $event)"
+        (mousedown)="mousedown($event)">star</igx-icon>
+      </igx-list-item>
+    }
+  </igx-list>
 ```
 
-```typescript
-public selectItem(item) {
-    if (!item.selected) {
-        this.contacts.forEach(c => c.selected = false);
-        item.selected = true;
-    }
-}
-```
+リスト項目には、選択した要素のさまざまな部分のスタイルを設定するために使用できるいくつかの CSS 変数も公開されています。
+
+- `--item-background-selected`
+- `--item-text-color-selected`
+- `--item-title-color-selected`
+- `--item-action-color-selected`
+- `--item-subtitle-color-selected`
+- `--item-thumbnail-color-selected`
 
 ```scss
-.selected {
-    background-color: hsla(var(--igx-secondary-500))
+igx-list-item {
+  --item-background-selected: var(--ig-secondary-500);
+  --item-title-color-selected: var(--ig-secondary-500-contrast);
+  --item-subtitle-color-selected: var(--ig-info-100);
 }
 ```
+
+リストのテーマ変数を使用する場合は、リスト項目の選択状態のスタイルを設定できるパラメーターが用意されています。これらのパラメーターの詳細については、[`list-theme`]({environment:sassApiUrl}/index.html#function-list-theme) を参照してください。
+
+<div class="divider--half"></div>
+
+## Chat コンポーネント
+以下のサンプルは、**IgxList** を使用して作成したシンプルなチャットです。
+
+<code-view style="height: 650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/lists/list-chat-sample" >
+</code-view>
 
 <div class="divider--half"></div>
 
@@ -601,29 +617,28 @@ public selectItem(item) {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-次に、コンポーネントのテーマを作成します。
+最もシンプルな方法として、[`list-theme`]({environment:sassApiUrl}/index.html#function-list-theme) を拡張し、`$background` パラメーターだけを指定することで、状態ごとのカラーや適切なコントラストの前景色が自動的に計算されます。必要に応じて手動で指定することも可能です。
 
 ```scss
-:host ::ng-deep {
-    $my-list-theme: list-theme(
-        $background: #0568ab
-    );
-
-    @include list($my-list-theme);
-}
+$my-list-theme: list-theme(
+  $background: #57a5cd
+);
 ```
-以下は上記コードの結果です。
 
+リストのスタイル設定に使用できるパラメーターの完全なリストについては、[`list-theme`]({environment:sassApiUrl}/index.html#function-list-theme) セクションを参照してください。
+
+最後にコンポーネントのテーマを**含めます**。
+
+```scss
+@include css-vars($my-list-theme);
+```
+
+以下は上記コードの結果です。
 
 <code-view style="height: 365px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-8" >
 </code-view>
-
-<div class="divider--half"></div>
-
-> [!NOTE]
-> コンポーネントの .scss ファイルにコンポーネントテーマを作成する場合、表示のカプセル化を渡すために `::ng-deep` を使用する必要があります。そうでない場合、新しいテーマが動作しません。詳細は、[コンポーネント テーマ](../components/themes/sass/component-themes.md#表示のカプセル化) トピックを参照してください。
 
 リスト コンポーネントに変更できるパラメーターの完全なリストについては、[IgxListComponent スタイル]({environment:sassApiUrl}/index.html#function-list-theme)を参照してください。
 

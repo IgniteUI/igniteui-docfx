@@ -238,7 +238,7 @@ public mode = PickerInteractionMode.Dialog;
 <igx-time-picker [mode]="mode"></igx-time-picker>
 ```
 
-または、タイムピッカーで [`モード`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) を次のように変更します。
+または、タイムピッカーで [`mode`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#mode) を次のように変更します。
 
 ```html
 <!--timePickerDropdown.component.html-->
@@ -262,6 +262,7 @@ Time Picker コンポーネントは、さまざまな表示形式と入力形�
 表示形式は、編集モードでの値の形式であり、リストされている Angular [DatePipe](https://angular.io/api/common/DatePipe) 形式の 1 つにすることができます。これにより、`shortTime` や `longTime` などの事前定義されたフォーマット オプションをサポートできます。
 
 入力形式は、編集モードでないときの値の形式と、時間部分がドロップダウン/ダイアログに表示される形式です。`inputFormat` プロパティは、DatePipe でサポートされている文字を使用して構築されたフォーマット文字列を受け入れます。`hh:mm:ss` ですが、`shortTime` や `longTime` などの事前定義されたフォーマット オプションはサポートしていません。`inputFormat` プロパティが定義されていない場合、デフォルトで `hh:mm tt` になります。
+あるいは、[`inputFormat`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#inputFormat) プロパティが設定されていない場合、入力形式は [`displayFormat`]({environment:angularApiUrl}/classes/igxtimepickercomponent.html#displayFormat) から数値の日付と時刻の部分のみを含む形式として解析できる場合に推測されます。
 
 ```html
 <igx-time-picker
@@ -384,12 +385,10 @@ Time Picker のスタイル設定は、すべてのテーマ関数とコンポ�
 
 ```scss
 $my-time-picker-theme: time-picker-theme(
-  $text-color: #E4C8A5,
-  $hover-text-color: #ECAA53,
-  $selected-text-color: #ECAA53,
-  $header-background: #ECAA53,
-  $header-hour-text-color: #011627,
-  $header-time-period-color: #011627,
+  $text-color: #e4c8a5,
+  $hover-text-color: #ecaa53,
+  $selected-text-color: #ecaa53,
+  $header-background: #ecaa53,
   $background-color: #011627
 );
 ```
@@ -420,42 +419,19 @@ Time Picker の項目がコンポーネントのホスト**内**に適切にレ�
 >[!NOTE]
 >[`IgxOverlayService`](overlay.md) を使用して表示される要素にテーマを提供するためのさまざまなオプションの詳細については、[オーバーレイ スタイリングのトピック](overlay-styling.md)をご覧ください。
 
-### テーマを含む
-
-<div class="divider"></div>
-
-最後にコンポーネントのテーマを**含めます**。
-
-`$legacy-support` が `true` に設定されている場合、**テーマ**を以下のように含めます。
 
 ```scss
- @include time-picker($my-time-picker-theme);
+ @include css-vars($my-time-picker-theme);
 ```
->[!NOTE]
+
+>[!WARNING]
 >コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
 :host {
-     ::ng-deep {
-        @include time-picker($my-time-picker-theme);
-    }
-}
-```
-
-<div class="divider"></div>
-
-`$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
-
-```scss
-@include css-vars($my-time-picker-theme);
-```
-
->[!NOTE]
->コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合においても、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
-
-```scss
-:host {
+  ::ng-deep {
     @include css-vars($my-time-picker-theme);
+  }
 }
 ```
 
@@ -492,6 +468,7 @@ Time Picker の項目がコンポーネントのホスト**内**に適切にレ�
 * [リアクティブ フォームの統合](angular-reactive-form-validation.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
+
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 * [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
 
