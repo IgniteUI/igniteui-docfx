@@ -257,7 +257,7 @@ To get started with styling the button group, we need to import the `index` file
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`button-group-theme`]({environment:sassApiUrl}/index.html#function-button-group-theme) and specifying just the `$item-background`. Based on this value, the theme will automatically compute appropriate state colors, contrast foregrounds, and borders for the button group. Of course, you're still free to override any of the theme parameters with custom values if needed.
+Following the simplest approach, we create a new theme that extends the [`button-group-theme`]({environment:sassApiUrl}/themes#function-button-group-theme) and specifying just the `$item-background`. Based on this value, the theme will automatically compute appropriate state colors, contrast foregrounds, and borders for the button group. Of course, you're still free to override any of the theme parameters with custom values if needed.
 
 ```scss
 $custom-button-group: button-group-theme(
@@ -286,15 +286,15 @@ The last step is to include the component's theme.
 <div class="divider--half"></div>
 
 * [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
-* [IgxButtonGroup Styles]({environment:sassApiUrl}/index.html#function-button-group-theme)
+* [IgxButtonGroup Styles]({environment:sassApiUrl}/themes#function-button-group-theme)
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxButton Styles]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxButton Styles]({environment:sassApiUrl}/themes#function-button-theme)
 
 ## Theming Dependencies
 
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ## Additional Resources
 

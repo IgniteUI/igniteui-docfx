@@ -279,7 +279,7 @@ To get started with styling the selection, we need to import the `index` file, w
 
 ### Define colors
 
-Once done, we can make use of the [`contrast-color`]({environment:sassApiUrl}/index.html#function-contrast-color) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. With them, we define the colors we would like to use for our selection range:
+Once done, we can make use of the [`contrast-color`]({environment:sassApiUrl}/palettes#function-contrast-color) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. With them, we define the colors we would like to use for our selection range:
 
 ```scss
 $text-color: contrast-color($color: 'primary', $variant: 900);
@@ -292,7 +292,7 @@ $border-yellow: #f2c43c;
 
 ### Create custom theme
 
-Next we create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) passing our `text-color`, `background-color` and `border-yellow` variables as `$cell-selected-text-color`, `$cell-selected-background` and `$cell-active-border-color`, respectively:
+Next we create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) passing our `text-color`, `background-color` and `border-yellow` variables as `$cell-selected-text-color`, `$cell-selected-background` and `$cell-active-border-color`, respectively:
 
 ```scss
 $custom-grid-theme: grid-theme(
@@ -355,7 +355,7 @@ With the custom theme applied, the selected grid cells are highlighted with our 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow API]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

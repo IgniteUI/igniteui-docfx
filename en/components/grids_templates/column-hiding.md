@@ -470,7 +470,7 @@ To get started with styling the column actions component, we need to import the 
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-By using the simplest approach, we create a new theme that extends the [`column-actions-theme`]({environment:sassApiUrl}/index.html#function-column-actions-theme) and accepts the `$title-color` and the `$background-color` parameters.
+By using the simplest approach, we create a new theme that extends the [`column-actions-theme`]({environment:sassApiUrl}/themes#function-column-actions-theme) and accepts the `$title-color` and the `$background-color` parameters.
 
 ```scss
 $custom-column-actions-theme: column-actions-theme(
@@ -489,9 +489,9 @@ $custom-button: button-theme(
 ```
 
 >[!NOTE]
->Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
-In this example we only changed the text-color of the flat buttons and the button disabled color, but the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) provides way more parameters to control the button style.
+In this example we only changed the text-color of the flat buttons and the button disabled color, but the [`button-theme`]({environment:sassApiUrl}/themes#function-button-theme) provides way more parameters to control the button style.
 
 The last step is to **include** the component mixins, each with its respective theme: 
 
@@ -566,7 +566,7 @@ In this article we learned how to use the built-in column hiding UI in the @@igC
 The column hiding UI has a few more APIs to explore, which are listed below.
 
 * [IgxColumnActionsComponent]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html)
-* [IgxColumnActionsComponent Styles]({environment:sassApiUrl}/index.html#function-column-actions-theme)
+* [IgxColumnActionsComponent Styles]({environment:sassApiUrl}/themes#function-column-actions-theme)
 
 Additional components and/or directives with relative APIs that were used:
 
@@ -592,8 +592,8 @@ Additional components and/or directives with relative APIs that were used:
 
 Styles:
 
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
-* [IgxRadioComponent Styles]({environment:sassApiUrl}/index.html#function-radio-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
+* [IgxRadioComponent Styles]({environment:sassApiUrl}/themes#function-radio-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

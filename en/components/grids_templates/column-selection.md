@@ -133,7 +133,7 @@ $custom-grid-theme: grid-theme(
 ```
 }
 
-The [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) accepts several parameters but those are the five responsible for changing the appearance of all selected columns:
+The [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) accepts several parameters but those are the five responsible for changing the appearance of all selected columns:
 - **$row-selected-background** - sets the background of the selected fraction.
 - **$row-selected-text-color** - sets the text color of the selected fraction
 - **$row-selected-hover-background** - sets the color of the hovered cell or bunch of cells.
@@ -167,7 +167,7 @@ The column selection UI has a few more APIs to explore, which are listed below.
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) properties:
 * [columnSelection]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnSelection)

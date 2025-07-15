@@ -286,7 +286,7 @@ Using the [`Ignite UI for Angular Theming`](themes/index.md), we can greatly alt
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`combo-theme`]({environment:sassApiUrl}/index.html#function-combo-theme). By setting the `$toggle-button-background`, the theme automatically determines suitable state colors and contrast foregrounds for the button. You can also specify additional parameters, such as `$search-separator-border-color`:
+Following the simplest approach, we create a new theme that extends the [`combo-theme`]({environment:sassApiUrl}/themes#function-combo-theme). By setting the `$toggle-button-background`, the theme automatically determines suitable state colors and contrast foregrounds for the button. You can also specify additional parameters, such as `$search-separator-border-color`:
 
 ```scss
 $custom-combo-theme: combo-theme(
@@ -349,7 +349,7 @@ The last step is to include the component's theme.
 <div class="divider--half"></div>
 
 * [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
-* [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#function-combo-theme)
+* [IgxComboComponent Styles]({environment:sassApiUrl}/themes#function-combo-theme)
 
 Additional [angular components](https://www.infragistics.com/products/ignite-ui-angular) and/or directives with relative APIs that were used:
 
@@ -358,10 +358,10 @@ Additional [angular components](https://www.infragistics.com/products/ignite-ui-
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
 
 ## Theming Dependencies
-* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-drop-down-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxCheckbox Theme]({environment:sassApiUrl}/index.html#function-checkbox-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxCheckbox Theme]({environment:sassApiUrl}/themes#function-checkbox-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>
