@@ -249,7 +249,25 @@ If all went well, you should see something like the following in the browser:
 
 ## Styling
 
-To get started with styling the button, we need to import the `index` file, where all the theme functions and component mixins live:
+Following the simplest approach, you can use CSS variables to customize the appearance of the button:
+
+```css
+.igx-button {
+    --background: #ff4d4f;
+    --hover-background: #ff7875;
+    --active-background: #d9363e;
+    --focus-visible-background: #ff4d4f;
+    --focus-visible-foreground: #fff;
+}
+```
+
+By changing the values of these CSS variables, you can alter the entire look of the button.
+
+<div class="divider--half"></div>
+
+Another way to style the button is by using **Sass**, along with our [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) function.
+
+To start styling the button using **Sass**, first import the `index` file, which includes all theme functions and component mixins:
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -258,7 +276,7 @@ To get started with styling the button, we need to import the `index` file, wher
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) and accepts the `$foreground` and the `$background` parameters with their respective hover and focus parameters.
+Then, create a new theme that extends the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) and accepts the `$foreground` and `$background` parameters, along with their respective hover and focus parameters.
 
 Given the following markup:
 
@@ -268,27 +286,27 @@ Given the following markup:
 </div>
 ```
 
-We need to create a theme:
+We need to create the following theme:
 
 ```scss
 $custom-button-theme: button-theme(
-  $foreground: #fdfdfd,
-  $hover-foreground: #fdfdfd,
-  $focus-foreground: #fdfdfd,
-  $background: #345779,
-  $hover-background: #2e4d6b,
-  $focus-background: #2e4d6b,
-  $disabled-foreground: #2e4d6b,
+    $foreground: #fdfdfd,
+    $hover-foreground: #fdfdfd,
+    $focus-foreground: #fdfdfd,
+    $background: #345779,
+    $hover-background: #2e4d6b,
+    $focus-background: #2e4d6b,
+    $disabled-foreground: #2e4d6b,
 );
 ```
 
 Take a look at the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) section for a complete list of available parameters for styling any type of button.
 
-The last step is to pass the custom button theme in our application:
+Finally, **include** the custom theme in your application:
 
 ```scss
 .button-sample {
-  @include css-vars($custom-button-theme);
+    @include css-vars($custom-button-theme);
 }
 ```
 
@@ -310,7 +328,7 @@ If you want to style only the `contained` button, you can use the [`contained-bu
 
 ```scss
 $custom-contained-theme: contained-button-theme(
-  $background: #348ae0,
+    $background: #348ae0,
 );
 ```
 
@@ -318,13 +336,16 @@ With the new type-specific theme functions, styling buttons is now easier. For [
 
 For [`flat-button-theme`]({environment:sassApiUrl}/index.html#function-flat-button-theme) and [`outlined-button-theme`]({environment:sassApiUrl}/index.html#function-outlined-button-theme) functions, the button state colors are also automatically generated and applied, but they are derived from the supplied `$foreground` parameter instead of `$background`.
 
-### Demo
+In the sample below, you can see how using the button component with customized CSS variables allows you to create a design that visually resembles the button used in the [`Ant`](https://ant.design/components/button?theme=light#button-demo-color-variant) design system. 
 
-<code-view style="height: 100px"
+<code-view style="height: 260px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/buttons-style" >
 </code-view>
+
+> [!NOTE]
+> The sample uses the [Bootstrap Light](themes/sass/schemas.md#predefined-schemas) schema.
 
 ### Custom sizing
 

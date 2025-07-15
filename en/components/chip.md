@@ -480,7 +480,23 @@ If everything's set up correctly, you should see this in your browser:
 
 ## Styling
 
-To get started with styling the chip, we need to import the `index` file, where all the theme functions and component mixins live:
+Following the simplest approach, you can use CSS variables to customize the appearance of the chip:
+
+```css
+igx-chip {
+    --background: #cd201f;
+    --hover-background: #cd201f;
+    --focus-background: #9f1717;
+    --text-color: #fff;
+}
+```
+By changing the values of these CSS variables, you can alter the entire look of the chip component.
+
+<div class="divider--half"></div>
+
+Another way to style the chip is by using **Sass**, along with our [`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme) function.
+
+To start styling the chip using **Sass**, first import the `index` file, which includes all theme functions and component mixins:
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -489,24 +505,24 @@ To get started with styling the chip, we need to import the `index` file, where 
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme) and accepts some parameters that style the chip's items. By specifying the `$background` or the `$selected-background`, the theme automatically calculates appropriate state colors and contrast foregrounds. You can still override any other parameter with custom values as needed.
+Then, create a new theme that extends the [`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme) function and setting its parameters to style the chip component. By specifying the `$background` or the `$selected-background`, the theme automatically calculates appropriate state colors and contrast foregrounds. You can still override any additional parameters with custom values as needed.
 
 ```scss
-$custom-theme: chip-theme(
-  $background: #57a5cd,
-  $selected-background: #ecaa53,
-  $remove-icon-color: #d81414,
-  $border-radius: 5px,
+$custom-chip-theme: chip-theme(
+    $background: #57a5cd,
+    $selected-background: #ecaa53,
+    $remove-icon-color: #d81414,
+    $border-radius: 5px,
 );
 ```
 
-The last step is to **include** the component theme in our application.
+Finally, **include** the custom theme in your application:
 
 ```scss
-@include css-vars($custom-theme);
+@include css-vars($custom-chip-theme);
 ```
 
-### Demo
+In the sample below, you can see how using the chip component with customized CSS variables allows you to create a design that visually resembles the chip used in the [`Ant`](https://ant.design/components/tag?theme=light#tag-demo-icon) design system. 
 
 <code-view style="height:100px" 
            no-theming
