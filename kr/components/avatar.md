@@ -15,7 +15,7 @@ _language: kr
 
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/avatar-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/layouts/avatar-sample-3/" >
 </code-view>
 
 <div class="divider--half"></div>

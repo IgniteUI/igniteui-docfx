@@ -13,7 +13,7 @@ We have created this basic Angular Date Range Picker example to show you the com
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/basic-daterangepicker" alt="Angular Date Range Picker Example">
+           iframe-src="{environment:demosBaseUrl}/scheduling/basic-daterangepicker/" alt="Angular Date Range Picker Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -127,7 +127,7 @@ The Angular Date Range Picker component also allows configuring two separate inp
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-start-end" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-start-end/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -190,7 +190,7 @@ The [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdater
 
 <code-view style="height:500px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-mode" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-mode/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -203,7 +203,7 @@ The Date Range Picker’s action buttons can be templated using the [`igxPickerA
 
 <code-view style="height:500px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-range-buttons" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-range-buttons/" >
 </code-view>
 
 ### Keyboard Navigation
@@ -298,7 +298,7 @@ When using two separate inputs, it is possible to set the model and required pro
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-validation" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-validation/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -443,7 +443,7 @@ Regarding style scoping, you should refer to both styling sections [Overlay Scop
 <code-view style="height:600px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/styled-daterangepicker" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/styled-daterangepicker/" >
 </code-view>
 
 
@@ -453,7 +453,7 @@ The demo below defines a form for flight tickets that uses the [`IgxDateRangePic
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/flight-booking" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/flight-booking/" >
 </code-view>
 
 <div class="divider--half"></div>

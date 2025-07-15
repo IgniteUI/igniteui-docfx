@@ -32,7 +32,7 @@ The Ignite UI for Angular @@igComponent provides an [`IgxColumnActionsComponent`
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-column-hiding-toolbar-sample" alt="Angular @@igComponent Column Hiding Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-column-hiding-toolbar-sample/" alt="Angular @@igComponent Column Hiding Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -41,7 +41,7 @@ The Ignite UI for Angular @@igComponent provides an [`IgxColumnActionsComponent`
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding-toolbar" alt="Angular @@igComponent Column Hiding Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding-toolbar/" alt="Angular @@igComponent Column Hiding Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -50,7 +50,7 @@ The Ignite UI for Angular @@igComponent provides an [`IgxColumnActionsComponent`
 
 <code-view style="height:570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-hiding" alt="Angular @@igComponent Column Hiding Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-hiding/" alt="Angular @@igComponent Column Hiding Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -443,7 +443,7 @@ If all went well, this is how our column hiding UI component should look like:
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-column-hiding-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-column-hiding-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -452,7 +452,7 @@ If all went well, this is how our column hiding UI component should look like:
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -528,7 +528,7 @@ The last step is to **include** the component mixins, each with its respective t
 <code-view style="height:600px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-column-hiding-style" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-column-hiding-style/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -538,7 +538,7 @@ The last step is to **include** the component mixins, each with its respective t
 <code-view style="height:600px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding-style/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -548,7 +548,7 @@ The last step is to **include** the component mixins, each with its respective t
 <code-view style="height:570px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-column-hiding-style" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-column-hiding-style/" >
 </code-view>
 
 <div class="divider--half"></div>

@@ -17,7 +17,7 @@ In this topic we will use [`igxList`]({environment:angularApiUrl}/classes/igxlis
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/services/transaction-base" alt="Angular How to use the Transaction service Example">
+           iframe-src="{environment:demosBaseUrl}/services/transaction-base/" alt="Angular How to use the Transaction service Example">
 </code-view>
 
 <div class="divider--half"></div>

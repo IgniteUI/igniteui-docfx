@@ -14,7 +14,7 @@ The Ignite UI for Angular Action Strip component provides an overlay area contai
 
 <code-view style="height: 400px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/action-strip-paragraph" alt="Angular Action Strip Example">
+           iframe-src="{environment:demosBaseUrl}/menus/action-strip-paragraph/" alt="Angular Action Strip Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -114,7 +114,7 @@ For scenarios where more than three action items will be shown, it is best to us
 
 <code-view style="height: 400px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/action-strip-paragraph-menu" >
+           iframe-src="{environment:demosBaseUrl}/menus/action-strip-paragraph-menu/" >
 </code-view>
 
 ### Reusing the Action Strip
@@ -153,7 +153,7 @@ This can be utilized via grid action components and we are providing two default
 
 <code-view style="height: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-action-strip" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-action-strip/" >
 </code-view>
 
 > [!NOTE]
@@ -189,7 +189,7 @@ The last step is to include the newly created component theme in our application
 <code-view style="height: 400px;" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/action-strip-styling" >
+           iframe-src="{environment:demosBaseUrl}/menus/action-strip-styling/" >
 </code-view>
 
 ## API and Style References

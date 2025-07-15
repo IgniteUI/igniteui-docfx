@@ -333,7 +333,7 @@ this.state.setState(state, ['filtering', 'rowIslands']);
 
 <code-view style="height:763px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-state" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-state/" >
 </code-view>
 
 }
@@ -343,7 +343,7 @@ this.state.setState(state, ['filtering', 'rowIslands']);
 
 <code-view style="height:1010px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-state" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-state/" >
 </code-view>
 
 }
@@ -353,7 +353,7 @@ this.state.setState(state, ['filtering', 'rowIslands']);
 
 <code-view style="height:715px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-state" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-state/" >
 </code-view>
 
 }
@@ -362,7 +362,7 @@ this.state.setState(state, ['filtering', 'rowIslands']);
 
 <code-view style="height:820px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-state-persistence" >
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-state-persistence/" >
 </code-view>
 
 }
@@ -412,7 +412,7 @@ public restoreState() {
 ```
 <code-view style="height: 580px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-noop-persistence" alt="Angular Pivot Noop Grid State Persistence Example">
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-noop-persistence/" alt="Angular Pivot Noop Grid State Persistence Example">
 </code-view>
 
 }
@@ -458,7 +458,7 @@ public restoreState() {
 <code-view style="height: 580px" 
            explicit-editor="stackblitz"
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-state-persistence" alt="Angular Grid State Persistence Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-state-persistence/" alt="Angular Grid State Persistence Example">
 </code-view>
 
 }

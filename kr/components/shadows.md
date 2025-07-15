@@ -231,7 +231,7 @@ Here is The result from the above code snippets:
 
 <code-view style="height: 350px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/theming/shadows-sample" >
+           iframe-src="{environment:demosBaseUrl}/theming/shadows-sample/" >
 </code-view>
 
 <div class="divider--half"></div>

@@ -13,7 +13,7 @@ _keywords: Angular Toggle directive, Angular Toggle control, Angular Toggle Comp
 
 <code-view style="height: 370px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-1" alt="Angular Toggle Example">
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-1/" alt="Angular Toggle Example">
 </code-view>
 
 
@@ -147,7 +147,7 @@ This is how our toggle should look like now:
 
 <code-view style="height: 370px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/toggle" >
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle/" >
 </code-view>
 
 
@@ -175,7 +175,7 @@ After these changes the toggle should work exactly in the same way.
 
 <code-view style="height: 370px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-2/" >
 </code-view>
 
 
@@ -201,7 +201,7 @@ If all went well, it will look like this:
 
 <code-view style="height: 370px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-3/" >
 </code-view>
 
 
@@ -231,7 +231,7 @@ public offsetToggleSet() {
 
 <code-view style="height: 370px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-4/" >
 </code-view>
 
 

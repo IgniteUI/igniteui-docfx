@@ -13,7 +13,7 @@ _keywords: Angular Virtual ForOf Directive, Native Angular Components Suite, Ang
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/igx-for-sample-1" alt="Angular Virtual For Directive Example">
+           iframe-src="{environment:demosBaseUrl}/data-display/igx-for-sample-1/" alt="Angular Virtual For Directive Example">
 </code-view>
 
 <div class="divider"></div>
@@ -131,7 +131,7 @@ Virtualization works similarly to Paging by slicing the data into smaller chucks
 
 <code-view style="height: 240px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/igx-for-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-display/igx-for-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>

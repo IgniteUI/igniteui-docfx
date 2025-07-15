@@ -16,7 +16,7 @@ It can be used as a stand-alone component as well as in combination with the Ang
 
 <code-view style="height: 870px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-datasource" alt="Angular Pivot Grid with Pivot Selector Example">
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-datasource/" alt="Angular Pivot Grid with Pivot Selector Example">
 </code-view>
 
 # Angular Pivot Grid Configuration
@@ -217,7 +217,7 @@ Resulting in the following view, which groups the Product Categories unique colu
 
 <code-view style="height: 530px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-basic" alt="Angular Pivot Grid Basic Example">
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-basic/" alt="Angular Pivot Grid Basic Example">
 </code-view>
 
 

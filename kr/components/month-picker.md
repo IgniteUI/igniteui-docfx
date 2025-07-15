@@ -14,7 +14,7 @@ What you see here is a basic Angular Month Picker example with a the component's
 
 <code-view style="height: 620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-1/" >
 </code-view>
 
 
@@ -104,7 +104,7 @@ Here is an example of modifying the default format options of the month picker:
 
 <code-view style="height: 600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-2/" >
 </code-view>
 
 
@@ -132,7 +132,7 @@ Here is an example of localizing the month picker component:
 
 <code-view style="height: 620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-3/" >
 </code-view>
 
 

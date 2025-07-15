@@ -15,7 +15,7 @@ The Ignite UI for Angular Input and Label directives are used to create single-l
 
 <code-view style="height:100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>

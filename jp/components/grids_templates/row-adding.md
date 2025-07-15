@@ -34,7 +34,7 @@ _canonicalLink: grid/row-adding
 
 <code-view style="height:520px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-add-row" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-add-row/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -43,7 +43,7 @@ _canonicalLink: grid/row-adding
 
 <code-view style="height:520px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-add-row" alt="Angular @@igComponent 行追加の例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-add-row/" alt="Angular @@igComponent 行追加の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -52,7 +52,7 @@ _canonicalLink: grid/row-adding
    
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-add-row" alt="Angular @@igComponent 行追加の例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-add-row/" alt="Angular @@igComponent 行追加の例">
 </code-view>
 
 <div class="divider--half"></div>

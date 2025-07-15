@@ -21,7 +21,7 @@ Drop Down items are **virtualized**, which guarantees smooth work, even if the [
 
 <code-view style="height: 400px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo" >
+           iframe-src="{environment:demosBaseUrl}/lists/combo/" >
 </code-view>
 
 <div class="divider--half"></div>

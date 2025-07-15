@@ -30,7 +30,7 @@ While browsers natively provide content search functionality, most of the time t
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-search-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-search-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -39,7 +39,7 @@ While browsers natively provide content search functionality, most of the time t
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-search" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-search/" >
 </code-view>
 
 <div class="divider--half"></div>

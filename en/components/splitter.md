@@ -12,7 +12,7 @@ The Ignite UI for Angular Splitter component provides the ability to create layo
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/splitter-horizontal-sample" alt="Angular Splitter Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/splitter-horizontal-sample/" alt="Angular Splitter Example">
 </code-view>
 
 
@@ -127,7 +127,7 @@ You can make the splitter collapsible or not by showing or hiding the splitter's
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/splitter-collapsible-sample" >
+           iframe-src="{environment:demosBaseUrl}/layouts/splitter-collapsible-sample/" >
 </code-view>
 
 ### Configuring panes
@@ -191,7 +191,7 @@ public typeVertical = SplitterType.Vertical;
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/splitter-nested-sample" >
+           iframe-src="{environment:demosBaseUrl}/layouts/splitter-nested-sample/" >
 </code-view>
 
 
@@ -246,7 +246,7 @@ This is the final result from applying your new theme.
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/splitter-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/layouts/splitter-styling-sample/" >
 </code-view>
 
 ### Custom sizing

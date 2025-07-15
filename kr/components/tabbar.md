@@ -18,7 +18,7 @@ _language: kr
 
 <code-view style="height: 600px; width: 400px; border: 1px solid gray;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/tabbar" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabbar/" >
 </code-view>
 
 
@@ -56,7 +56,7 @@ If all went well, you should see the following in your browser:
 
 <code-view style="height: 200px; width: 300px; border: 1px solid gray;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-1/" >
 </code-view>
 
 
@@ -157,7 +157,7 @@ After these modifications our Bottom Navigation should look similar to this:
 
 <code-view style="height: 350px; width: 300px; border: 1px solid gray;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-2/" >
 </code-view>
 
 

@@ -15,7 +15,7 @@ _language: kr
 
 <code-view style="height:605px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby/" >
 </code-view>
 
 
@@ -117,7 +117,7 @@ Groups that span multiple pages are split between them. The group row is visible
 
 <code-view style="height:605px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-paging" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-paging/" >
 </code-view>
 
 
@@ -284,7 +284,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 <code-view style="height:570px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-styling" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-styling/" >
 </code-view>
 
 

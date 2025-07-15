@@ -14,7 +14,7 @@ This Angular drop down example demonstrates the basic functionalities of a drop 
 
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-1" alt="Angular Drop Down Example">
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-1/" alt="Angular Drop Down Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -144,7 +144,7 @@ export class MyDropDownComponent {
 
 <code-view style="height: 200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -190,7 +190,7 @@ If the sample is configured properly, a list of countries should be displayed as
 
 <code-view style="height: 310px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-3/" >
 </code-view>
 
 ### Grouping hierarchical data
@@ -265,7 +265,7 @@ You can see the results in the sample below:
 
 <code-view style="height: 310px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-5/" >
 </code-view>
 
 ### Drop Down as menu
@@ -330,7 +330,7 @@ export class MyMenuComponent {
 
 <code-view style="height: 240px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-menu" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-menu/" >
 </code-view>
 
 ### Multi-Level Drop Down menu
@@ -398,7 +398,7 @@ The result from the above configurations could be seen in the below sample.
 
 <code-view style="height:400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-multi-level-menu">
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-multi-level-menu/">
 </code-view>
 
 > [!NOTE]
@@ -464,7 +464,7 @@ export class InputDropDownComponent {
 
 <code-view style="height:220px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-4/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -529,7 +529,7 @@ The last step is to pass the custom drop-down theme to a class or element select
 <code-view style="height:350px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-styling" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-styling/" >
 </code-view>
 
 <div class="divider--half"></div>

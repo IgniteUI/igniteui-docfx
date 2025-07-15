@@ -18,7 +18,7 @@ Ignite UI for Angular Excel Exporter サービスは、Microsoft® Excel® 形�
 <code-view style="height: 100px;" 
            data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz"
-           iframe-src="{environment:demosBaseUrl}/services/export-excel" alt="Angular Excel Exporter の例">
+           iframe-src="{environment:demosBaseUrl}/services/export-excel/" alt="Angular Excel Exporter の例">
 </code-view>
 
 <div class="divider--half"></div>

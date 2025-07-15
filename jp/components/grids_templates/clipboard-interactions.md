@@ -25,7 +25,7 @@ _language: ja
 
 <code-view style="height:635px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-clipboard-operations-sample" alt="Angular @@igComponent クリップボード操作の例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-clipboard-operations-sample/" alt="Angular @@igComponent クリップボード操作の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -34,7 +34,7 @@ _language: ja
 
 <code-view style="height:635px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-clipboard-operations-sample" alt="Angular @@igComponent クリップボード操作の例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-clipboard-operations-sample/" alt="Angular @@igComponent クリップボード操作の例">
 </code-view>
 
 <div class="divider--half"></div>

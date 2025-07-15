@@ -20,7 +20,7 @@ We’ve created this Angular Query Builder example to show you the default funct
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-request-sample"
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-request-sample/"
            alt="Angular Query Builder Overview Example">
 </code-view>
 
@@ -344,7 +344,7 @@ The last step is to **include** the new component themes using the `css-vars` mi
 <code-view style="height:530px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-style" >
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-style/" >
 </code-view>
 
 > [!NOTE]

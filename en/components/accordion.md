@@ -19,7 +19,7 @@ In it, you can see how to define an `igx-accrodion` and its [expansion panels]({
 
 <code-view style="height:460px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/accordion-sample-1" alt="Angular Accordion Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/accordion-sample-1/" alt="Angular Accordion Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -203,7 +203,7 @@ The sample below demonstrates how elaborate filtering options can be implemented
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/accordion-sample-3" alt="Angular Accoridon Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/accordion-sample-3/" alt="Angular Accoridon Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -239,7 +239,7 @@ You can see the result below.
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/accordion-sample-2" alt="Angular Accordion Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/accordion-sample-2/" alt="Angular Accordion Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -294,7 +294,7 @@ The last step is to include the component's theme.
 
 <code-view style="height:350px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/accordion-style" alt="Angular Accordion Style Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/accordion-style/" alt="Angular Accordion Style Example">
 </code-view>
 
 ## API Reference

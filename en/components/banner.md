@@ -10,7 +10,7 @@ _keywords: Angular Banner component, Angular Banner control, Ignite UI for Angul
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-1" alt="Angular Banner Example">
+           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-1/" alt="Angular Banner Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -150,7 +150,7 @@ The `IgxBannerModule` exposes a directive for templating the banner buttons - [`
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-2/" >
 </code-view>
 
 
@@ -185,7 +185,7 @@ export class MyBannerComponent {
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-3/" >
 </code-view>
 
 
@@ -250,7 +250,7 @@ Finally, we will add a `toast`, displaying a message about the WiFi state. The r
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/banner-advanced-sample" >
+           iframe-src="{environment:demosBaseUrl}/notifications/banner-advanced-sample/" >
 </code-view>
 
 
@@ -285,7 +285,7 @@ The last step is to pass the custom banner theme:
 <code-view style="height: 530px" 
            no-themin
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/banner-styling" >
+           iframe-src="{environment:demosBaseUrl}/notifications/banner-styling/" >
 </code-view>
 
 

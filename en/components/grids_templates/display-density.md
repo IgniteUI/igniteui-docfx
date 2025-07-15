@@ -33,7 +33,7 @@ _canonicalLink: grid/display-density
 
 <code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-displayDensity" alt="Angular @@igComponent Size Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-displayDensity/" alt="Angular @@igComponent Size Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -42,7 +42,7 @@ _canonicalLink: grid/display-density
 
 <code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-display-density" alt="Angular @@igComponent Size Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-display-density/" alt="Angular @@igComponent Size Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -51,7 +51,7 @@ _canonicalLink: grid/display-density
 
 <code-view style="height:680px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-density" alt="Angular @@igComponent Size Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-density/" alt="Angular @@igComponent Size Example">
 </code-view>
 
 <div class="divider--half"></div>

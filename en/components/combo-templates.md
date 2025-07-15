@@ -14,7 +14,7 @@ The Ignite UI for Angular ComboBox Component allows defining custom templates fo
 
 <code-view style="height: 450px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-template" alt="Angular Combo Templates Example">
+           iframe-src="{environment:demosBaseUrl}/lists/combo-template/" alt="Angular Combo Templates Example">
 </code-view>
 
 

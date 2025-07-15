@@ -12,7 +12,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <code-view style="height: 85px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-1" alt="Angular Button Group Example">
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-1/" alt="Angular Button Group Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -133,7 +133,7 @@ public alignment = ButtonGroupAlignment.vertical;
 
 <code-view style="height: 220px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -150,7 +150,7 @@ The sample below demonstrates the exposed `igx-buttongroup` selection modes:
 
 <code-view style="height: 170px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-4/" >
 </code-view>
 
 ### Size
@@ -171,7 +171,7 @@ igx-buttongroup {
 
 <code-view style="height: 80px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-5/" >
 </code-view>
 
 ### Custom toggle buttons
@@ -243,7 +243,7 @@ public ngOnInit() {
 
 <code-view style="height: 90px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-3/" >
 </code-view>
 
 ## Styling
@@ -278,7 +278,7 @@ The last step is to include the component's theme.
 <code-view style="height: 200px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-style" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-style/" >
 </code-view>
 
 ## API References
