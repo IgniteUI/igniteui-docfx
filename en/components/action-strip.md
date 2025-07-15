@@ -200,7 +200,7 @@ For more detailed information regarding the Action Strip API, refer to the follo
 
 The following built-in CSS styles helped us achieve this Action Strip layout:
 
-* [`IgxActionStripComponent Styles`]({environment:sassApiUrl}/index.html#function-action-strip-theme)
+* [`IgxActionStripComponent Styles`]({environment:sassApiUrl}/themes#function-action-strip-theme)
 
 Additional components and/or directives that can be used within the Action Strip:
 
@@ -213,10 +213,10 @@ Additional components and/or directives that can be used within the Action Strip
 
 ## Theming Dependencies
 
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
-* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-drop-down-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
+* [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## Additional Resources
 

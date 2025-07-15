@@ -150,7 +150,7 @@ To get started with styling the avatar, we need to import the `index` file, wher
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`avatar-theme`]({environment:sassApiUrl}/index.html#function-avatar-theme) providing values for the `$background` and `$border-radius` parameters. The `$color` (or `$icon-color`) is automatically set to either black or white, depending on which offers better contrast with the specified background. Note that the `$border-radius` property only takes effect when the avatar's `shape` is set to `rounded`.
+Following the simplest approach, we create a new theme that extends the [`avatar-theme`]({environment:sassApiUrl}/themes#function-avatar-theme) providing values for the `$background` and `$border-radius` parameters. The `$color` (or `$icon-color`) is automatically set to either black or white, depending on which offers better contrast with the specified background. Note that the `$border-radius` property only takes effect when the avatar's `shape` is set to `rounded`.
 
 Given the following markup:
 
@@ -228,8 +228,8 @@ Learn more about it in the [Size](display-density.md) article.
 
 
 ## Theming Dependencies
-* [IgxAvatar Theme]({environment:sassApiUrl}/index.html#function-avatar-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxAvatar Theme]({environment:sassApiUrl}/themes.html#function-avatar-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/themes.html#function-icon-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

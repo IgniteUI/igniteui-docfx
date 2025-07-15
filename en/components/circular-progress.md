@@ -238,7 +238,7 @@ To get started with styling the circular progress bar, we need to import the `in
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`progress-circular-theme`]({environment:sassApiUrl}/index.html#function-progress-circular-theme) and accepts the `$base-circle-color` and the `$fill-color-default` parameters.
+Following the simplest approach, we create a new theme that extends the [`progress-circular-theme`]({environment:sassApiUrl}/themes#function-progress-circular-theme) and accepts the `$base-circle-color` and the `$fill-color-default` parameters.
 
 ```scss
 $custom-theme: progress-circular-theme(
@@ -268,4 +268,4 @@ The last step is to **include** the component theme in our application.
 <div class="divider--half"></div>
 
 * [IgxCircularProgressBarComponent]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html)
-* [IgxCircularProgressBarComponent Styles]({environment:sassApiUrl}/index.html#function-progress-circular-theme)
+* [IgxCircularProgressBarComponent Styles]({environment:sassApiUrl}/themes#function-progress-circular-theme)
