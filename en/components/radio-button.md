@@ -146,7 +146,30 @@ The final result would be something like that:
 
 ## Styling
 
-To get started with styling the radio buttons, we need to import the `index` file, where all the theme functions and component mixins live:
+Following the simplest approach, you can use CSS variables to customize the appearance of the radio button:
+
+```css
+igx-radio {
+    --empty-color: #556b81;
+    --label-color: #131e29;
+    --fill-color: #0064d9;
+    --focus-outline-color: #0032a5;
+}
+
+igx-radio:hover {
+    --empty-fill-color: #e3f0ff;
+    --empty-color: #0064d9;
+    --hover-color: transparent;
+}
+```
+
+By changing the values of these CSS variables, you can alter the entire look of the component.
+
+<div class="divider--half"></div>
+
+Another way to style the radio button is by using **Sass**, along with our [`radio-theme`]({environment:sassApiUrl}/index.html#function-radio-theme) function.
+
+To start styling the radio button using **Sass**, first import the `index` file, which includes all theme functions and component mixins:
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -155,25 +178,30 @@ To get started with styling the radio buttons, we need to import the `index` fil
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`radio-theme`]({environment:sassApiUrl}/index.html#function-radio-theme). By providing just two key parameters — `$empty-color` and `$fill-color` — you can generate a fully styled radio button. These values serve as the foundation for the theme, by providing them it will automatically compute all the required foreground and background colors for various states (e.g., hover, selected, disabled).
+Then, create a new theme that extends the [`radio-theme`]({environment:sassApiUrl}/index.html#function-radio-theme) function. By providing just two key parameters — `$empty-color` and `$fill-color` — you can generate a fully styled radio button. These values serve as the foundation for the theme, by providing them it will automatically compute all the required foreground and background colors for various states (e.g., hover, selected, disabled).
 
 ```scss
 $custom-radio-theme: radio-theme(
-  $empty-color:  #345779,
-  $fill-color: #2dabe8,
+    $empty-color:  #345779,
+    $fill-color: #2dabe8,
 );
 ```
 
-The last step is to pass the custom radio theme in our application:
+Finally, **include** the custom theme in your application:
 
 ```scss
 @include css-vars($custom-radio-theme);
 ```
 
+In the sample below, you can see how using the radio button with customized CSS variables allows you to create a design that visually resembles the radio button used in the [`SAP UI5`](https://ui5.sap.com/#/entity/sap.m.RadioButton/sample/sap.m.sample.RadioButton) design system. 
+
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-styling-sample" >
 </code-view>
+
+> [!NOTE]
+> The sample uses the [Fluent Light](themes/sass/schemas.md#predefined-schemas) schema.
 
 <div class="divider--half"></div>
 
