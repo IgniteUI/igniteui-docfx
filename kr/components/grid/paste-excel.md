@@ -25,7 +25,7 @@ Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcom
 
 <code-view style="height: 570px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-paste" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-paste/" >
 </code-view>
 
 <div class="divider"></div>

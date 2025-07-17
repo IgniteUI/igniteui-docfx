@@ -19,7 +19,7 @@ Angular Autocomplete は、入力中に候補のリストから項目を簡単�
 
 <code-view style="height: 400px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/autocomplete" alt="Angular Autocomplete の例">
+           iframe-src="{environment:demosBaseUrl}/data-entries/autocomplete/" alt="Angular Autocomplete の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -217,7 +217,7 @@ export class AutocompleteComponent {
 
 <code-view style="height: 500px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/movie" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/movie/" >
 </code-view>
 
 

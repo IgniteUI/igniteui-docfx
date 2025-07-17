@@ -16,7 +16,7 @@ In this Angular Simple ComboBox example, you can see how users can select the ch
 
 <code-view style="height: 500px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-main" alt="Angular Simple ComboBox Example">
+           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-main/" alt="Angular Simple ComboBox Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -140,7 +140,7 @@ export class MySimpleComboComponent implements OnInit {
 
 <code-view style="height: 480px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-usage" >
+           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-usage/" >
 </code-view>
 
 
@@ -238,7 +238,7 @@ The following sample demonstrates a scenario where the [igx-simple-combo]({envir
 
 <code-view style="height: 620px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-cascading" alt="Angular Cascading Scenario Example">
+           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-cascading/" alt="Angular Cascading Scenario Example">
 </code-view>
 
 
@@ -315,7 +315,7 @@ The sample below demonstrates remote binding using the [dataPreLoad]({environmen
 
 <code-view style="height: 400px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-remote" alt="Angular Simple Combo Remote Binding Example">
+           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-remote/" alt="Angular Simple Combo Remote Binding Example">
 </code-view>
 
 ## Styling
@@ -379,7 +379,7 @@ The last step is to include the component's theme.
 <code-view style="height:500px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-styling" >
+           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-styling/" >
 </code-view>
 
 

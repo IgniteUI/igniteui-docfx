@@ -13,7 +13,7 @@ The sample below demonstrates how `Grid` works with nested `Cascading Combos`.
 @@if (igxName === 'IgxGrid') {
 <code-view style="height:500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-cascading-combos" alt="Angular @@igComponent Batch Editing and Transactions Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-cascading-combos/" alt="Angular @@igComponent Batch Editing and Transactions Example">
 </code-view>
 }
 

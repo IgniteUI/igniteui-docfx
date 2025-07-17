@@ -85,7 +85,7 @@ Now, the combo's list of items are properly rendered **inside** of our component
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/overlay-styling-simple" >
+           iframe-src="{environment:demosBaseUrl}/interactions/overlay-styling-simple/" >
 </code-view>
 
 

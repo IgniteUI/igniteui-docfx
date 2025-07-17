@@ -32,7 +32,7 @@ This can be achieved by setting the [`IgxColumnComponent`]({environment:angularA
 <code-view style="height:530px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-cell-styling" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-cell-styling/" >
 </code-view>
 
 }
@@ -41,7 +41,7 @@ This can be achieved by setting the [`IgxColumnComponent`]({environment:angularA
 <code-view style="height:600px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-conditional-cell-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-conditional-cell-style/" >
 </code-view>
 
 }

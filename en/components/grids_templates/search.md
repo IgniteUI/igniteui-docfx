@@ -34,7 +34,7 @@ The following example represents @@igComponent with search input box that allows
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-search-sample" alt="Angular Search Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-search-sample/" alt="Angular Search Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -43,7 +43,7 @@ The following example represents @@igComponent with search input box that allows
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-search" alt="Angular Search Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-search/" alt="Angular Search Example">
 </code-view>
 
 <div class="divider--half"></div>

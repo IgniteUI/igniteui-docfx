@@ -11,7 +11,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <code-view style="height:100px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/datetime-basic" alt="Angular Date Time Editor Directive Example">
+           iframe-src="{environment:demosBaseUrl}/scheduling/datetime-basic/" alt="Angular Date Time Editor Directive Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -180,7 +180,7 @@ Also, both methods accept an optional `delta` parameter of type `number` which c
 You may compare both in the following sample:
 <code-view style="height:150px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/datetime-advanced" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/datetime-advanced/" >
 </code-view>
 
 <div class="divider--half"></div>

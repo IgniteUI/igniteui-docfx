@@ -12,7 +12,7 @@ Below is a basic Angular Select example. It has a simple contextual menu that di
 
 <code-view style="height: 300px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-1" alt="Angular Select Example">
+           iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-1/" alt="Angular Select Example">
 </code-view>
 
 ## Getting Started with Ignite UI for Angular Select
@@ -137,7 +137,7 @@ The Select component supports the following directives applicable to the [Input 
 ```
 <code-view style="height: 350px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/select-input-directives" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/select-input-directives/" >
 </code-view>
 
 >[!NOTE]
@@ -185,7 +185,7 @@ Then in your template file you can iterate over the objects and access their ite
 
 <code-view style="height: 400px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-2/" >
 </code-view>
 
 ### Header & Footer
@@ -243,7 +243,7 @@ In this example, there are both header and footer ng-templates defined. In the h
 ```
 <code-view style="height: 610px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/select-header-footer" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/select-header-footer/" >
 </code-view>
 
 
@@ -320,7 +320,7 @@ You can see that we create a [*PositionSettings*]({environment:angularApiUrl}/in
 
 <code-view style="height: 260px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-4/" >
 </code-view>
 
 
@@ -385,7 +385,7 @@ The last step is to pass the custom radio theme in our application:
 
 <code-view style="height: 220px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/select-styling" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/select-styling/" >
 </code-view>
 
 

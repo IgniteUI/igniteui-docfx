@@ -30,7 +30,7 @@ _keywords: column headers, ignite ui for angular, infragistics
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/multi-column-headers" >
+           iframe-src="{environment:demosBaseUrl}/grid/multi-column-headers/" >
 </code-view>
 
 }
@@ -38,7 +38,7 @@ _keywords: column headers, ignite ui for angular, infragistics
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-headers" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-headers/" >
 </code-view>
 
 }
@@ -46,7 +46,7 @@ _keywords: column headers, ignite ui for angular, infragistics
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column/" >
 </code-view>
 
 }

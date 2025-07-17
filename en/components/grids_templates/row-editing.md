@@ -26,7 +26,7 @@ The following sample demonstrates how to enable row editing in the @@igComponent
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-row-editing" alt="Angular @@igComponent Row Editing Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-row-editing/" alt="Angular @@igComponent Row Editing Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -35,7 +35,7 @@ The following sample demonstrates how to enable row editing in the @@igComponent
 
 <code-view style="height:590px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-row-edit" alt="Angular @@igComponent Row Editing Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-row-edit/" alt="Angular @@igComponent Row Editing Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -44,7 +44,7 @@ The following sample demonstrates how to enable row editing in the @@igComponent
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-editing" alt="Angular @@igComponent Row Editing Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-editing/" alt="Angular @@igComponent Row Editing Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -413,7 +413,7 @@ After styling the banner and buttons, we also define a custom style for [the cel
 <code-view style="height:560px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-row-edit-style" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-row-edit-style/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -424,7 +424,7 @@ After styling the banner and buttons, we also define a custom style for [the cel
 <code-view style="height:560px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-edit-style" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-edit-style/" >
 </code-view>
 
 }
@@ -435,7 +435,7 @@ After styling the banner and buttons, we also define a custom style for [the cel
 <code-view style="height:560px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-row-edit-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-row-edit-style/" >
 </code-view>
 
 }

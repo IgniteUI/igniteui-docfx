@@ -22,7 +22,7 @@ The following article demonstrates how to use both Ignite UI and Angular Materia
 
 <code-view style="height: 1100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/theming/angular-sample" >
+           iframe-src="{environment:demosBaseUrl}/theming/angular-sample/" >
 </code-view>
 
 <div class="divider--half"></div>

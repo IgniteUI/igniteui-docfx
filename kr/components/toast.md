@@ -13,7 +13,7 @@ _language: kr
 
 <code-view style="height: 500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -118,7 +118,7 @@ public open(toast) {
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-5/" >
 </code-view>
 
 

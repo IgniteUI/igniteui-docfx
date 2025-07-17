@@ -16,7 +16,7 @@ The Angular Carousel demo you see below shows slides containing only images. Weâ
 
 <code-view style="height: 550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/carousel" alt="Angular Carousel Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/carousel/" alt="Angular Carousel Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -244,7 +244,7 @@ This carousel is going to contain slides with forms and images:
 
 <code-view style="height: 700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/carousel-with-components-sample" >
+           iframe-src="{environment:demosBaseUrl}/layouts/carousel-with-components-sample/" >
 </code-view>
 
 
@@ -273,7 +273,7 @@ The demo below demonstrates the different types of animations, which the carouse
 
 <code-view style="height: 700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/carousel-animations-sample" >
+           iframe-src="{environment:demosBaseUrl}/layouts/carousel-animations-sample/" >
 </code-view>
 
 
@@ -373,7 +373,7 @@ These configurions will have the following result:
 
 <code-view style="height: 700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/carousel-no-navigation-sample" >
+           iframe-src="{environment:demosBaseUrl}/layouts/carousel-no-navigation-sample/" >
 </code-view>
 
 

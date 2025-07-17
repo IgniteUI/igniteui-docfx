@@ -13,7 +13,7 @@ Ignite UI for Angular の [`IgxTextHighlightDirective`]({environment:angularApiU
 
 <code-view style="height: 260px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-1" alt="Angular TextHighlight ディレクティブの例">
+           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-1/" alt="Angular TextHighlight ディレクティブの例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -249,7 +249,7 @@ export class HomeComponent {
 
 <code-view style="height: 260px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-1" >
+           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-1/" >
 </code-view>
 
 <div class="divider"></div>
@@ -344,7 +344,7 @@ export class HomeComponent {
 
 <code-view style="height: 400px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-2" >
+           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-2/" >
 </code-view>
 
 <div class="divider"></div>
@@ -436,7 +436,7 @@ $dark-highlight: highlight-theme(
 <code-view style="height: 300px;" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-style" >
+           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-style/" >
 </code-view>
 
 <div class="divider"></div>

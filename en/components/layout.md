@@ -14,7 +14,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <code-view style="height: 580px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/layout-sample" alt="Angular Layout Manager Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/layout-sample/" alt="Angular Layout Manager Example">
 </code-view>
 
 
@@ -32,7 +32,7 @@ Use [`igxLayoutDir`]({environment:angularApiUrl}/classes/igxlayoutdirective.html
 
 <code-view style="height: 180px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/layout-direction-row" >
+           iframe-src="{environment:demosBaseUrl}/layouts/layout-direction-row/" >
 </code-view>
 
 
@@ -44,7 +44,7 @@ Use [`igxLayoutDir`]({environment:angularApiUrl}/classes/igxlayoutdirective.html
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/layout-direction-column" >
+           iframe-src="{environment:demosBaseUrl}/layouts/layout-direction-column/" >
 </code-view>
 
 
@@ -61,7 +61,7 @@ Customize the order of the element by using `igxFlexOrder`.
 
 <code-view style="height: 110px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/layout-custom-order" >
+           iframe-src="{environment:demosBaseUrl}/layouts/layout-custom-order/" >
 </code-view>
 
 
@@ -73,7 +73,7 @@ Use [`igxLayoutJustify`]({environment:angularApiUrl}/classes/igxlayoutdirective.
 
 <code-view style="height: 180px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/layout-content-space" >
+           iframe-src="{environment:demosBaseUrl}/layouts/layout-content-space/" >
 </code-view>
 
 
@@ -84,7 +84,7 @@ Use [`igxLayoutJustify`]({environment:angularApiUrl}/classes/igxlayoutdirective.
 
 <code-view style="height: 180px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/layout-justify-content" >
+           iframe-src="{environment:demosBaseUrl}/layouts/layout-justify-content/" >
 </code-view>
 
 
@@ -95,7 +95,7 @@ Use [`igxLayoutItemAlign`]({environment:angularApiUrl}/classes/igxlayoutdirectiv
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/layout-align-items" >
+           iframe-src="{environment:demosBaseUrl}/layouts/layout-align-items/" >
 </code-view>
 
 
@@ -106,7 +106,7 @@ Use [`igxLayoutWrap`]({environment:angularApiUrl}/classes/igxlayoutdirective.htm
 
 <code-view style="height: 180px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/layout-wrap" >
+           iframe-src="{environment:demosBaseUrl}/layouts/layout-wrap/" >
 </code-view>
 
 >[!NOTE]

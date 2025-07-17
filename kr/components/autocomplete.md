@@ -20,7 +20,7 @@ The following sample demonstrates simple use of the `igx-autocomplete` directive
 
 <code-view style="height: 400px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/autocomplete" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/autocomplete/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -202,7 +202,7 @@ The following sample demonstrates an autocomplete, which allows selecting a cine
 
 <code-view style="height: 650px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/movie" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/movie/" >
 </code-view>
 
 
@@ -232,7 +232,7 @@ For the purpose of the sample there is a delay in the data loading, in order to 
 
 <code-view style="height: 400px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/autocomplete-remote" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/autocomplete-remote/" >
 </code-view>
 
 <div class="divider--half"></div>

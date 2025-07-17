@@ -12,7 +12,7 @@ _keywords: Angular Circular Progress component, Angular Circular Progress contro
 
 <code-view style="height:100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/circular-progressbar" alt="Angular Circular Progress Example">
+           iframe-src="{environment:demosBaseUrl}/data-display/circular-progressbar/" alt="Angular Circular Progress Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -102,7 +102,7 @@ The final result should be:
 
 <code-view style="height:100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/circular-indeterminate-progressbar" >
+           iframe-src="{environment:demosBaseUrl}/data-display/circular-indeterminate-progressbar/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -222,7 +222,7 @@ After reproducing the steps above, you should get this as a result:
 
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/circular-dynamic-sample" >
+           iframe-src="{environment:demosBaseUrl}/data-display/circular-dynamic-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -260,7 +260,7 @@ The last step is to **include** the component theme in our application.
 <code-view style="height:100px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/circular-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/data-display/circular-styling-sample/" >
 </code-view>
 
 ## API

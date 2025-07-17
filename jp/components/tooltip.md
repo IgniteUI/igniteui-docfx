@@ -14,7 +14,7 @@ _language: ja
 
 <code-view style="height:150px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-simple" alt="Angular Tooltip の例">
+           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-simple/" alt="Angular Tooltip の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -267,7 +267,7 @@ export class AppModule {}
 
 <code-view style="height:300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-rich" >
+           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-rich/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -333,7 +333,7 @@ $dark-tooltip: tooltip-theme(
 <code-view style="height:200px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-style" >
+           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-style/" >
 </code-view>
 
 <div class="divider--half"></div>

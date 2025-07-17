@@ -32,7 +32,7 @@ With deferred grid column resizing, the user will see a temporary resize indicat
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-resizing-sample" alt="Angular @@igComponent Column Resizing Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-resizing-sample/" alt="Angular @@igComponent Column Resizing Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -41,7 +41,7 @@ With deferred grid column resizing, the user will see a temporary resize indicat
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-resizing" alt="Angular @@igComponent Column Resizing Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-resizing/" alt="Angular @@igComponent Column Resizing Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -253,7 +253,7 @@ This approach is more performance optimized than auto-sizing post initialization
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-columnAutoResizing-sample" alt="Angular @@igComponent Column Resizing Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-columnAutoResizing-sample/" alt="Angular @@igComponent Column Resizing Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -262,7 +262,7 @@ This approach is more performance optimized than auto-sizing post initialization
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-columnAutoSizing-sample" alt="Angular @@igComponent Column Resizing Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-columnAutoSizing-sample/" alt="Angular @@igComponent Column Resizing Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -271,7 +271,7 @@ This approach is more performance optimized than auto-sizing post initialization
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-columnAutosizing-sample" alt="Angular @@igComponent Column Resizing Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-columnAutosizing-sample/" alt="Angular @@igComponent Column Resizing Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -311,7 +311,7 @@ The last step is to **include** the component mixins with its respective theme:
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-resize-line-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-resize-line-styling-sample/" >
 </code-view>
 
 }
@@ -320,7 +320,7 @@ The last step is to **include** the component mixins with its respective theme:
 <code-view style="height:550px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-resize-line-styling" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-resize-line-styling/" >
 </code-view>
 
 }
@@ -329,7 +329,7 @@ The last step is to **include** the component mixins with its respective theme:
 <code-view style="height:550px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-resize-line-styling" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-resize-line-styling/" >
 </code-view>
 
 }

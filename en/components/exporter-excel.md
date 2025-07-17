@@ -18,7 +18,7 @@ The Ignite UI for Angular Excel Exporter service can export data in Microsoft® 
 <code-view style="height: 100px;" 
            data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz"
-           iframe-src="{environment:demosBaseUrl}/services/export-excel" alt="Angular Excel Exporter Example">
+           iframe-src="{environment:demosBaseUrl}/services/export-excel/" alt="Angular Excel Exporter Example">
 </code-view>
 
 <div class="divider--half"></div>

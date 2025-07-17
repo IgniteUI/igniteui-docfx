@@ -576,7 +576,7 @@ configuration. Same goes for grouping and editing operations with or without tra
 
 <code-view style="height:460px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding-2"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding-2/"
            alt="Angular grid nested data example">
 </code-view>
 
@@ -681,7 +681,7 @@ And the result from this configuration is:
 
 <code-view style="height:460px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding/"
            alt="Angular grid nested data binding example">
 </code-view>
 
@@ -763,7 +763,7 @@ And the result is:
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-composite-data-binding"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-composite-data-binding/"
            alt="Angular grid composite data binding example">
 </code-view>
 

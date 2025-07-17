@@ -12,7 +12,7 @@ _keywords: Angular Avatar component, Angular Avatar control, Ignite UI for Angul
 
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/avatar-sample-3" alt="Angular Avatar Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/avatar-sample-3/" alt="Angular Avatar Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -183,7 +183,7 @@ If all went well, you should see something like the following in the browser:
 <code-view style="height:120px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/avatar-styling" >
+           iframe-src="{environment:demosBaseUrl}/layouts/avatar-styling/" >
 </code-view>
 
 ### Custom sizing

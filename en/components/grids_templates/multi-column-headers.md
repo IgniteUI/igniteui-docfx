@@ -32,7 +32,7 @@ _canonicalLink: grid/multi-column-headers
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/multi-column-headers" alt="Angular @@igComponent Multi-column Headers Overview Example">
+           iframe-src="{environment:demosBaseUrl}/grid/multi-column-headers/" alt="Angular @@igComponent Multi-column Headers Overview Example">
 </code-view>
 
 }
@@ -40,7 +40,7 @@ _canonicalLink: grid/multi-column-headers
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-headers" alt="Angular @@igComponent Multi-column Headers Overview Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-headers/" alt="Angular @@igComponent Multi-column Headers Overview Example">
 </code-view>
 
 }
@@ -48,7 +48,7 @@ _canonicalLink: grid/multi-column-headers
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column" alt="Angular @@igComponent Multi-column Headers Overview Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column/" alt="Angular @@igComponent Multi-column Headers Overview Example">
 </code-view>
 
 }
@@ -236,7 +236,7 @@ The following sample demonstrates how to implement collapsible column groups usi
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/multi-column-header-template" >
+           iframe-src="{environment:demosBaseUrl}/grid/multi-column-header-template/" >
 </code-view>
 
 }
@@ -244,7 +244,7 @@ The following sample demonstrates how to implement collapsible column groups usi
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-header-template" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-header-template/" >
 </code-view>
 
 }
@@ -252,7 +252,7 @@ The following sample demonstrates how to implement collapsible column groups usi
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-template" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-template/" >
 </code-view>
 
 }
@@ -296,7 +296,7 @@ The last step is to **include** the component mixins:
 <code-view style="height:500px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/multi-column-headers-styling" >
+           iframe-src="{environment:demosBaseUrl}/grid/multi-column-headers-styling/" >
 </code-view>
 
 }
@@ -307,7 +307,7 @@ The last step is to **include** the component mixins:
 <code-view style="height:500px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-headers-styling" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-headers-styling/" >
 </code-view>
 
 }
@@ -318,7 +318,7 @@ The last step is to **include** the component mixins:
 <code-view style="height:500px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-styling" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-styling/" >
 </code-view>
 
 }

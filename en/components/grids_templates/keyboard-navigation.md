@@ -107,7 +107,7 @@ Practice all of the above mentioned actions in the demo sample below. Focus any 
 
 <code-view style="height:470px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-keyboardnav-guide" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-keyboardnav-guide/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -116,7 +116,7 @@ Practice all of the above mentioned actions in the demo sample below. Focus any 
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hgrid-keyboard-guide" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hgrid-keyboard-guide/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -125,7 +125,7 @@ Practice all of the above mentioned actions in the demo sample below. Focus any 
 
 <code-view style="height:470px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tgrid-keyboardnav-guide" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tgrid-keyboardnav-guide/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -250,7 +250,7 @@ Use the demo below to try out the custom scenarios that we just implemented:
 
 <code-view style="height:400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-custom-keyboard-navigation" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-custom-keyboard-navigation/" >
 </code-view>
 
 }
@@ -278,7 +278,7 @@ Use the demo below to try out the custom scenarios that we just implemented:
 
 <code-view style="height:520px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-custom-kb-navigation" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-custom-kb-navigation/" >
 </code-view>
 
 }
@@ -303,7 +303,7 @@ Use the demo below to try out the custom scenarios that we just implemented:
 
 <code-view style="height:520px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-keyboard-navigation" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-keyboard-navigation/" >
 </code-view>
 
 }

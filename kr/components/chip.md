@@ -14,7 +14,7 @@ _language: kr
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/chip-sample" >
+           iframe-src="{environment:demosBaseUrl}/data-display/chip-sample/" >
 </code-view>
 
 
@@ -313,7 +313,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 <code-view style="height:650px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/chip-styling" >
+           iframe-src="{environment:demosBaseUrl}/data-display/chip-styling/" >
 </code-view>
 
 

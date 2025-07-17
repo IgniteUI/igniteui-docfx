@@ -14,7 +14,7 @@ This example presents the grouping capabilities of a large amount of data. Dragg
 
 <code-view style="height:605px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby" alt="Angular Grid Group By Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby/" alt="Angular Grid Group By Example">
 </code-view>
 
 
@@ -179,7 +179,7 @@ Groups that span multiple pages are split between them. The group row is visible
 
 <code-view style="height:605px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-paging" alt="Angular grid group by with paging example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-paging/" alt="Angular grid group by with paging example">
 </code-view>
 
 
@@ -217,7 +217,7 @@ The sample below demonstrates custom grouping by `Date`, where the date values a
 
 <code-view style="height:605px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-custom" alt="Angular custom group by example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-custom/" alt="Angular custom group by example">
 </code-view>
 
 
@@ -467,7 +467,7 @@ In our example, we need to use `::ng-deep` for our chip theme:
 <code-view style="height:570px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-styling" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-styling/" >
 </code-view>
 
 >[!NOTE]

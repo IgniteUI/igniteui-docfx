@@ -32,7 +32,7 @@ Ignite UI for Angular の [@@igxName]({environment:angularApiUrl}/classes/@@igTy
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-2" alt="Angular @@igComponent 仮想化とパフォーマンスの例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-2/" alt="Angular @@igComponent 仮想化とパフォーマンスの例">
 </code-view>
 
 }
@@ -41,7 +41,7 @@ Ignite UI for Angular の [@@igxName]({environment:angularApiUrl}/classes/@@igTy
 
 <code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-lod" alt="Angular @@igComponent 仮想化とパフォーマンスの例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-lod/" alt="Angular @@igComponent 仮想化とパフォーマンスの例">
 </code-view>
 
 <div class="divider--half"></div>

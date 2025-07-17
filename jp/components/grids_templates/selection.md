@@ -35,7 +35,7 @@ Ignite UI for Angular @@igComponent を使用して、さまざまなイベン�
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-cell-selection" alt="Angular Grid 選択の例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-cell-selection/" alt="Angular Grid 選択の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -45,7 +45,7 @@ Ignite UI for Angular @@igComponent を使用して、さまざまなイベン�
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-cell-selection" alt="Angular Grid 選択の例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-cell-selection/" alt="Angular Grid 選択の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -54,7 +54,7 @@ Ignite UI for Angular @@igComponent を使用して、さまざまなイベン�
 
 <code-view style="height:750px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-cell-selection" alt="Angular Grid 選択の例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-cell-selection/" alt="Angular Grid 選択の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -191,7 +191,7 @@ IgxGrid はコピーされたデータを取得し、コンテナー要素に貼
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-contextmenu-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-contextmenu-sample/" >
 </code-view>
 
 <div class="divider--half"></div>

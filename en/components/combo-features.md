@@ -15,7 +15,7 @@ The following demo demonstrates some of the combobox features that are enabled/d
 
 <code-view style="height: 440px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-features" alt="Angular Combo Features Example">
+           iframe-src="{environment:demosBaseUrl}/lists/combo-features/" alt="Angular Combo Features Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -129,7 +129,7 @@ If everything is set up correctly, the combobox's list will display centered, us
 
 <code-view style="height: 440px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-overlay" >
+           iframe-src="{environment:demosBaseUrl}/lists/combo-overlay/" >
 </code-view>
 
 

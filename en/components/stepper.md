@@ -14,7 +14,7 @@ Note that the fourth step in our Angular stepper demo gets enabled only if the u
 
 <code-view style="height: 725px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/stepper-overview-sample" alt="Angular Stepper Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/stepper-overview-sample/" alt="Angular Stepper Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -23,7 +23,7 @@ Here is the a sample demonstrating how to achieve the above functionality using 
 
 <code-view style="height: 725px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/stepper-sample-reactive-forms" alt="Angular Stepper Example with Reactive Forms">
+           iframe-src="{environment:demosBaseUrl}/layouts/stepper-sample-reactive-forms/" alt="Angular Stepper Example with Reactive Forms">
 </code-view>
 
 ## Getting Started with Ignite UI for Angular Stepper
@@ -165,7 +165,7 @@ The sample below demonstrates how stepper [orientation]({environment:angularApiU
 
 <code-view style="height: 528px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/stepper-label-position-and-orientation-sample" alt="Angular Stepper Orientation Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/stepper-label-position-and-orientation-sample/" alt="Angular Stepper Orientation Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -195,7 +195,7 @@ The following example demonstrates how to configure a linear stepper:
 
 <code-view style="height: 430px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/stepper-linear-sample" alt="Angular Linear Stepper Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/stepper-linear-sample/" alt="Angular Linear Stepper Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -257,7 +257,7 @@ The sample below demonstrates all exposed step types and how they could be chang
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/stepper-steptypes-sample" alt="Angular Step Types Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/stepper-steptypes-sample/" alt="Angular Step Types Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -353,7 +353,7 @@ The sample below demonstrates a simple styling applied through the [Ignite UI fo
 
 <code-view style="height: 264px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/stepper-styling-sample" alt="Angular Stepper Styling Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/stepper-styling-sample/" alt="Angular Stepper Styling Example">
 </code-view>
 
 <div class="divider--half"></div>

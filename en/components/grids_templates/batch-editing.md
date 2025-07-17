@@ -27,7 +27,7 @@ The following sample demonstrates a scenario, where the @@igObjectRef has [`batc
 @@if (igxName === 'IgxGrid') {
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-batch-editing" alt="Angular @@igComponent Batch Editing and Transactions Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-batch-editing/" alt="Angular @@igComponent Batch Editing and Transactions Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -35,7 +35,7 @@ The following sample demonstrates a scenario, where the @@igObjectRef has [`batc
 @@if (igxName === 'IgxTreeGrid') {
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-batchediting" alt="Angular @@igComponent Batch Editing and Transactions Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-batchediting/" alt="Angular @@igComponent Batch Editing and Transactions Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -43,7 +43,7 @@ The following sample demonstrates a scenario, where the @@igObjectRef has [`batc
 @@if (igxName === 'IgxHierarchicalGrid') {
 <code-view style="height:680px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-batch-editing" alt="Angular @@igComponent Batch Editing and Transactions Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-batch-editing/" alt="Angular @@igComponent Batch Editing and Transactions Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -236,7 +236,7 @@ Deleting a parent node in `@@igComponent` has some peculiarities. If you are usi
 
 <code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/remote-paging-batch-editing" >
+           iframe-src="{environment:demosBaseUrl}/grid/remote-paging-batch-editing/" >
 </code-view>
 
 }

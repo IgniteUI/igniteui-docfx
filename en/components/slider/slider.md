@@ -11,7 +11,7 @@ _keywords: angular slider, angular slider component, angular range slider compon
 
 <code-view style="height: 250px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-1" alt="Angular Slider Example">
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-1/" alt="Angular Slider Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -133,7 +133,7 @@ We should now see two-way data binding between our two components.
 
 <code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-3/" >
 </code-view>
 
 
@@ -170,7 +170,7 @@ If the sample is configured properly, dragging the slider thumb should update th
 
 <code-view style="height: 140px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-2/" >
 </code-view>
 
 
@@ -226,7 +226,7 @@ export class SampleComponent {
 
 <code-view style="height: 200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-4/" >
 </code-view>
 
 >[!NOTE]
@@ -252,7 +252,7 @@ This can be done by setting [`lowerBound`]({environment:angularApiUrl}/classes/i
 
 <code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-5/" >
 </code-view>
 
 
@@ -290,7 +290,7 @@ public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
 
 <code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-6" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-6/" >
 </code-view>
 
 
@@ -340,7 +340,7 @@ public type = SliderType.RANGE;
 
 <code-view style="height: 180px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/discrete-slider-ticks-bottom" >
+           iframe-src="{environment:demosBaseUrl}/interactions/discrete-slider-ticks-bottom/" >
 </code-view>
 
 
@@ -375,7 +375,7 @@ We also rotate all viable labels by setting the [`TickLabelsOrientation`]({envir
 
 <code-view style="height: 200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-ticks-bottomtotop-labels" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-ticks-bottomtotop-labels/" >
 </code-view>
 
 
@@ -406,7 +406,7 @@ This mirrors the visualization of the **ticks** and displays them above and belo
 
 <code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-secondary-ticks-mirror" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-secondary-ticks-mirror/" >
 </code-view>
 
 
@@ -431,7 +431,7 @@ This example show how the tick labels and the thumb label works together.
 
 <code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-timeframe" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-timeframe/" >
 </code-view>
 
 
@@ -476,7 +476,7 @@ In the **tickLabel** callback above, we are rounding the **value** of every **pr
 
 <code-view style="height: 180px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-tick-labels-template" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-tick-labels-template/" >
 </code-view>
 
 ## Styling
@@ -514,7 +514,7 @@ This is the final result from applying our new theme.
 
 <code-view style="height: 240px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-styling-sample/" >
 </code-view>
 
 ## API References

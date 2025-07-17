@@ -14,7 +14,7 @@ _language: ja
 @@if (igxName === 'IgxGrid') {
 <code-view style="height:500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-cascading-combos" alt="Angular @@igComponent 一括編集とトランザクションの例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-cascading-combos/" alt="Angular @@igComponent 一括編集とトランザクションの例">
 </code-view>
 }
 
