@@ -196,7 +196,7 @@ To get started with styling the paginator, we need to import the `index` file, w
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`paginator-theme`]({environment:sassApiUrl}/index.html#function-paginator-theme) and accepts the `$text-color`, `$background-color` and the `$border-color` parameters.
+Following the simplest approach, we create a new theme that extends the [`paginator-theme`]({environment:sassApiUrl}/themes#function-paginator-theme) and accepts the `$text-color`, `$background-color` and the `$border-color` parameters.
 
 ```scss
 $dark-paginator: paginator-theme(
@@ -220,7 +220,7 @@ $dark-button: icon-button-theme(
 ```
 
 >[!NOTE]
->Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 The last step is to **include** the component mixins, each with its respective theme:
 
@@ -288,8 +288,8 @@ The last step is to **include** the component mixins, each with its respective t
 
 ## API References
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
-* [IgxGridPaginator Styles]({environment:sassApiUrl}/index.html#function-paginator-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
+* [IgxGridPaginator Styles]({environment:sassApiUrl}/themes#function-paginator-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>
