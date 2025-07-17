@@ -157,7 +157,7 @@ export class AccordionComponent {
 }
 ```
 
-As you can see, we are using [`slideInLeft`]({environment:sassApiUrl}/index.html#mixin-slide-in-left) and [`slideOutRight`]({environment:sassApiUrl}/index.html#mixin-slide-out-right) animations from our [**inbuilt suite of animations**]({environment:sassApiUrl}/index.html#animations) to make the component content appear from the left side and disappear to the right when collapsing the content. We further customize the animations by overriding some of the animations' parameters.
+As you can see, we are using [`slideInLeft`]({environment:sassApiUrl}/animations#mixin-slide-in-left) and [`slideOutRight`]({environment:sassApiUrl}/animations#mixin-slide-out-right) animations from our [**inbuilt suite of animations**]({environment:sassApiUrl}/animations) to make the component content appear from the left side and disappear to the right when collapsing the content. We further customize the animations by overriding some of the animations' parameters.
 
 The following snippet demonstrates passing the animation settings to the component:
 
@@ -275,7 +275,7 @@ In order to take advantage of the functions exposed by the theming engine, we ha
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`expansion-panel-theme`]({environment:sassApiUrl}/index.html#function-expansion-panel-theme) and accepts a `$header-background`, `$body-color` and `$expanded-margin` parameters. The theme automatically assigns foreground colors, either black or white, based on which provides better contrast with the specified backgrounds.
+Following the simplest approach, we create a new theme that extends the [`expansion-panel-theme`]({environment:sassApiUrl}/themes#function-expansion-panel-theme) and accepts a `$header-background`, `$body-color` and `$expanded-margin` parameters. The theme automatically assigns foreground colors, either black or white, based on which provides better contrast with the specified backgrounds.
 
 ```scss
 $custom-panel-theme: expansion-panel-theme(
@@ -302,7 +302,7 @@ The last step is to include the component's theme.
 * [IgxExpansionPanel API]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)
 * [IgxExpansionPanelHeader API]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html)
 * [IgxExpansionPanelBody API]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html)
-* [IgxExpansionPanel Styles]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel)
+* [IgxExpansionPanel Styles]({environment:sassApiUrl}/themes#mixin-igx-expansion-panel)
 
 
 ## Additional Resources

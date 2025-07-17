@@ -261,7 +261,7 @@ To get started with styling the dialog window, we need to import the `index` fil
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`dialog-theme`]({environment:sassApiUrl}/index.html#function-dialog-theme) and accepts parameters that style the dialog. By providing the `$background`, the theme automatically selects suitable contrast colors for the foreground properties. However, you can still manually define them if desired.
+Following the simplest approach, we create a new theme that extends the [`dialog-theme`]({environment:sassApiUrl}/themes#function-dialog-theme) and accepts parameters that style the dialog. By providing the `$background`, the theme automatically selects suitable contrast colors for the foreground properties. However, you can still manually define them if desired.
 
 ```scss
 $my-dialog-theme: dialog-theme(
@@ -328,15 +328,15 @@ The last step is to **include** the component theme in our application.
 <div class="divider--half"></div>
 
 * [IgxDialogComponent]({environment:angularApiUrl}/classes/igxdialogcomponent.html)
-* [IgxDialogComponent Styles]({environment:sassApiUrl}/index.html#function-dialog-theme)
+* [IgxDialogComponent Styles]({environment:sassApiUrl}/themes#function-dialog-theme)
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## Theming Dependencies
 
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## Additional Resources
 

@@ -385,7 +385,7 @@ Additional components and/or directives with relative APIs that were used:
 
 Styles:
 
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 * [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-input-group-theme)
 * [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-icon-theme)
 * [IgxRippleDirective Styles]({environment:sassApiUrl}/index.html#function-ripple-theme)

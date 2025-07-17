@@ -288,7 +288,7 @@ To get started with the styling of the @@igComponent column resize line, we need
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-The simplest approach to achieve this is to create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts many parameters as well as the `$resize-line-color` parameter.
+The simplest approach to achieve this is to create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) and accepts many parameters as well as the `$resize-line-color` parameter.
 
 ``` scss
 $custom-grid-theme: grid-theme(
@@ -297,7 +297,7 @@ $custom-grid-theme: grid-theme(
 ```
 
 >[!NOTE]
->Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 The last step is to **include** the component mixins with its respective theme:
 
@@ -342,7 +342,7 @@ The last step is to **include** the component mixins with its respective theme:
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#mixin-grid)
 
 ## Additional Resources
 <div class="divider--half"></div>

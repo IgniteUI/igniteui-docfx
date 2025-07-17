@@ -328,7 +328,7 @@ Once we've imported the themes file, we can create custom themes.
 
 #### Define the theme
 
-We can now define a custom [`banner theme`]({environment:sassApiUrl}/index.html#function-banner-theme) that will affect our Row Editing background and make use of one of the predefined palettes namely `$purple-palette` :
+We can now define a custom [`banner theme`]({environment:sassApiUrl}/themes#function-banner-theme) that will affect our Row Editing background and make use of one of the predefined palettes namely `$purple-palette` :
 
 ```scss
 $banner-theme: banner-theme(
@@ -337,11 +337,11 @@ $banner-theme: banner-theme(
 );
 ```
 
-Here we are using `my-banner-palette` in conjunction with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) (exposed by the theme library) for generating our colors.
+Here we are using `my-banner-palette` in conjunction with [`igx-color`]({environment:sassApiUrl}/palettes#function-color) (exposed by the theme library) for generating our colors.
 
 ### Include the theme
 
-All we have to do now is apply the theme with a Sass `@include` statement. We pass our newly defined `$banner-theme` through the [`css-vars mixin`]({environment:sassApiUrl}/index.html#mixin-css-vars):
+All we have to do now is apply the theme with a Sass `@include` statement. We pass our newly defined `$banner-theme` through the [`css-vars mixin`]({environment:sassApiUrl}/themes#mixin-css-vars):
 
 ```scss
 @include css-vars($banner-theme);
@@ -386,7 +386,7 @@ To further customize our Row Editing overlay, we can pass a custom template so w
 </@@igSelector>
 ```
 
-After we've defined our custom buttons, we can make use of the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) to style them. You can learn more about `igx-button` styling [here](../button.md#styling). We can create a custom theme for our `Done` and `Cancel`:
+After we've defined our custom buttons, we can make use of the [`button-theme`]({environment:sassApiUrl}/themes#function-button-theme) to style them. You can learn more about `igx-button` styling [here](../button.md#styling). We can create a custom theme for our `Done` and `Cancel`:
 
 ```scss
 // custom.component.scss
