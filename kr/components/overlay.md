@@ -105,7 +105,7 @@ In the below demo, we can pass the [IgxCard](card.md#card-demo) through the over
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" >
+           iframe-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -190,7 +190,7 @@ Using the [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlayset
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-2" >
+           iframe-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-2/" >
 </code-view>
 
 <div class="divider--half"></div>

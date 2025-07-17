@@ -13,7 +13,7 @@ _language: ja
 
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/avatar-sample-3" alt="Angular Avatar の例">
+           iframe-src="{environment:demosBaseUrl}/layouts/avatar-sample-3/" alt="Angular Avatar の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -184,7 +184,7 @@ $custom-avatar-theme: avatar-theme(
 <code-view style="height:120px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/avatar-styling" >
+           iframe-src="{environment:demosBaseUrl}/layouts/avatar-styling/" >
 </code-view>
 
 ### カスタム サイズ変更

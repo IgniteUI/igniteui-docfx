@@ -14,7 +14,7 @@ Drag and drop icon to reposition it.
 
 <code-view style="height:325px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/icons-sample" alt="Angular Drag and Drop Example">
+           iframe-src="{environment:demosBaseUrl}/interactions/icons-sample/" alt="Angular Drag and Drop Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -153,7 +153,7 @@ Drag the dialog using the handle in the following demo.
 
 <code-view style="height:325px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/drag-dialog-sample" >
+           iframe-src="{environment:demosBaseUrl}/interactions/drag-dialog-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -176,7 +176,7 @@ Reorder items in the list using the drag handle. While dragging a list item othe
 
 <code-view style="height:380px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/list-reorder-sample" >
+           iframe-src="{environment:demosBaseUrl}/interactions/list-reorder-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -262,7 +262,7 @@ Drag e-mails on the right into the folders on the left.
 
 <code-view style="height:340px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/email-sample" >
+           iframe-src="{environment:demosBaseUrl}/interactions/email-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -280,7 +280,7 @@ Drag items around the kanban board.
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/kanban-sample" >
+           iframe-src="{environment:demosBaseUrl}/interactions/kanban-sample/" >
 </code-view>
 
 <div class="divider--half"></div>

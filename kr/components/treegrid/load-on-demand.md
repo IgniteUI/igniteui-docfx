@@ -14,7 +14,7 @@ Ignite UI for Angular [`IgxTreeGrid`]({environment:angularApiUrl}/classes/igxtre
 
 <code-view style="height:450px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-load-on-demand" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-load-on-demand/" >
 </code-view>
 
 <div class="divider--half"></div>

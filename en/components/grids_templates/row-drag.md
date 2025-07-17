@@ -32,7 +32,7 @@ In Ignite UI for Angular @@igComponent, **RowDrag** is initialized on the root `
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-row-drag-base" alt="Angular @@igComponent Row Drag Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-row-drag-base/" alt="Angular @@igComponent Row Drag Example">
 </code-view>
 
 }
@@ -41,7 +41,7 @@ In Ignite UI for Angular @@igComponent, **RowDrag** is initialized on the root `
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-drag-base" alt="Angular @@igComponent Row Drag Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-drag-base/" alt="Angular @@igComponent Row Drag Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -51,7 +51,7 @@ In Ignite UI for Angular @@igComponent, **RowDrag** is initialized on the root `
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-row-drag-base" alt="Angular @@igComponent Row Drag Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-row-drag-base/" alt="Angular @@igComponent Row Drag Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -240,7 +240,7 @@ The result of the configuration can be seem below in a `@@igSelector` with row d
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-multiple-row-drag" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-multiple-row-drag/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -249,7 +249,7 @@ The result of the configuration can be seem below in a `@@igSelector` with row d
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-multi-row-drag" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-multi-row-drag/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -279,7 +279,7 @@ The drag ghost can be templated on every grid level, making it possible to have 
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-row-drag" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-row-drag/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -344,7 +344,7 @@ The result of the configuration can be seem below:
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-row-drag-to-grid" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-row-drag-to-grid/" >
 </code-view>
 
 
@@ -355,7 +355,7 @@ The result of the configuration can be seem below:
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-drag" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-drag/" >
 </code-view>
 
 
@@ -366,7 +366,7 @@ The result of the configuration can be seem below:
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-drag" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-drag/" >
 </code-view>
 
 
@@ -383,7 +383,7 @@ Try to drag moons from the grid and drop them to their corresponding planets. Ro
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-row-drag" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-row-drag/" >
 </code-view>
 
 
@@ -592,7 +592,7 @@ Holding onto the drag icon will allow you to move a row anywhere in the grid:
 
 <code-view style="height:830px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-row-reorder" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-row-reorder/" >
 </code-view>
 
 }
@@ -601,7 +601,7 @@ Notice that we also have row selection enabled and we preserve the selection whe
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-reordering" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-reordering/" >
 </code-view>
 
 }
@@ -610,7 +610,7 @@ Notice that we also have row selection enabled and we preserve the selection whe
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-row-reorder" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-row-reorder/" >
 </code-view>
 
 }
@@ -850,7 +850,7 @@ Following is the example of both scenarios described above - showing a drop indi
 
 <code-view style="height:830px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-drop-indicator" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-drop-indicator/" >
 </code-view>
 }
 

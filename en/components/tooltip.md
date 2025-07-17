@@ -13,7 +13,7 @@ While most tooltips have a limited number of available positions, with the [`igx
 
 <code-view style="height:150px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-simple" alt="Angular Tooltip Example">
+           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-simple/" alt="Angular Tooltip Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -267,7 +267,7 @@ If all went well, this is how our location and tooltip should look like:
 
 <code-view style="height:300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-rich" >
+           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-rich/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -333,7 +333,7 @@ So now our styled tooltip should look like this:
 <code-view style="height:200px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-style" >
+           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-style/" >
 </code-view>
 
 <div class="divider--half"></div>

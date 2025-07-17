@@ -15,7 +15,7 @@ Multi-column headers allow you to have multiple levels of nested columns and col
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-collapsible-groups" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-collapsible-groups/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -25,7 +25,7 @@ Multi-column headers allow you to have multiple levels of nested columns and col
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-collapsible-groups" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-collapsible-groups/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -34,7 +34,7 @@ Multi-column headers allow you to have multiple levels of nested columns and col
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-collapsible-column-groups" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-collapsible-column-groups/" >
 </code-view>
 
 <div class="divider--half"></div>

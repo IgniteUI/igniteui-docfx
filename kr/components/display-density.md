@@ -15,7 +15,7 @@ Using the [DisplayDensityToken]({environment:angularApiUrl}/index.html#displayde
 
 <code-view style="height: 250px; width: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/theming/density" >
+           iframe-src="{environment:demosBaseUrl}/theming/density/" >
 </code-view>
 
 <div class="divider--half"></div>

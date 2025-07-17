@@ -30,7 +30,7 @@ The Angular UI grid in Ignite UI for Angular has a **summaries** feature that fu
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-summary" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-summary/" >
 </code-view>
 
 }
@@ -38,7 +38,7 @@ The Angular UI grid in Ignite UI for Angular has a **summaries** feature that fu
 
 <code-view style="height:750px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary/" >
 </code-view>
 
 }
@@ -46,7 +46,7 @@ The Angular UI grid in Ignite UI for Angular has a **summaries** feature that fu
   
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary/" >
 </code-view>
 
 }
@@ -299,7 +299,7 @@ class MySummary extends IgxNumberSummaryOperand {
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-alldata-summaries" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-alldata-summaries/" >
 </code-view>
 
 }
@@ -307,7 +307,7 @@ class MySummary extends IgxNumberSummaryOperand {
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-allData-summary" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-allData-summary/" >
 </code-view>
 
 }
@@ -315,7 +315,7 @@ class MySummary extends IgxNumberSummaryOperand {
   
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-allData-summary" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-allData-summary/" >
 </code-view>
 
 }
@@ -342,7 +342,7 @@ class MySummary extends IgxNumberSummaryOperand {
 
 <code-view style="height:720px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-summary" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-summary/" >
 </code-view>
 
 }
@@ -366,7 +366,7 @@ class MySummary extends IgxNumberSummaryOperand {
 
 <code-view style="height:720px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary2" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary2/" >
 </code-view>
 
 }

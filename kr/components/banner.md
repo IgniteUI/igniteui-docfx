@@ -15,7 +15,7 @@ The Ignite UI for Angular Banner Component provides a way to easily display a pr
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-4/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -61,7 +61,7 @@ The banner appears relative to where the element was inserted in the page templa
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-1/" >
 </code-view>
 
 
@@ -170,7 +170,7 @@ The results of the templated banner can be seen in the below demo:
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-2/" >
 </code-view>
 
 
@@ -207,7 +207,7 @@ export class MyBannerComponent {
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-3/" >
 </code-view>
 
 

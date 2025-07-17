@@ -13,7 +13,7 @@ _language: kr
 
 <code-view style="height:300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/dialog" >
+           iframe-src="{environment:demosBaseUrl}/interactions/dialog/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -56,7 +56,7 @@ To add alert, in the template of our email component we can add the following co
 
 <code-view style="height:250px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -81,7 +81,7 @@ To add standard dialog, in the template of our file manager component we can add
 
 <code-view style="height:250px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -122,7 +122,7 @@ Also we can add two groups of label and input decorated with the [**igxLabel**](
 
 <code-view style="height:300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-3/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -151,7 +151,7 @@ Dialog title area can be customized using `igxDialogTitle` directive or `igx-dia
 
 <code-view style="height:300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/custom-dialog-sample" >
+           iframe-src="{environment:demosBaseUrl}/interactions/custom-dialog-sample/" >
 </code-view>
 
 <div class="divider--half"></div>

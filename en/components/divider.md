@@ -15,7 +15,7 @@ By default the divider is a solid horizontal line.
 
 <code-view style="height:207px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-1" alt="Angular Divider Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-1/" alt="Angular Divider Example">
 </code-view>
 
 ## Getting Started with Ignite UI for Angular Divider
@@ -76,7 +76,7 @@ By adding the `vertical` attribute and setting its value to `true`, you can chan
 
 <code-view style="height:238px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-2/" >
 </code-view>
 
 
@@ -90,7 +90,7 @@ To change the default look simply use the `type` attribute of the divider and se
 
 <code-view style="height:187px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-3/" >
 </code-view>
 
 
@@ -111,7 +111,7 @@ To inset the divider, set the `middle` attribute of the divider to `true` and pr
 
 <code-view style="height:311px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-4/" >
 </code-view>
 
 

@@ -42,7 +42,7 @@ The sample below demonstrates the three types of @@igComponent's **column select
 
 <code-view style="height:570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-selection" alt="Angular Column Selection Example">
+           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-selection/" alt="Angular Column Selection Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -70,7 +70,7 @@ The default selection mode is `none`. If set to `single` or `multiple` all of th
 
 <code-view style="height:570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-group-selection" >
+           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-group-selection/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -153,7 +153,7 @@ The last step is to include the custom `igx-grid` theme.
 
 <code-view style="height:570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-selection-styles" >
+           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-selection-styles/" >
 </code-view>
 
 >[!NOTE]

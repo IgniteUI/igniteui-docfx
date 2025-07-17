@@ -12,7 +12,7 @@ The Ignite UI Dock Manager component provides means to manage the layout of your
 
 <code-view style="height: 600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/dock-manager-sample" alt="Angular Dock Manager Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/dock-manager-sample/" alt="Angular Dock Manager Example">
 </code-view>
 
 

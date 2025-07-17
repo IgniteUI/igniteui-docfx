@@ -14,7 +14,7 @@ _keywords: Angular Radio Group component, Angular Radio Group control, Ignite UI
 
 <code-view style="height: 120px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-1" alt="Angular Radio & Radio Group Example">
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-1/" alt="Angular Radio & Radio Group Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -141,7 +141,7 @@ The final result would be something like that:
 
 <code-view style="height: 550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-2/" >
 </code-view>
 
 ## Styling
@@ -172,7 +172,7 @@ The last step is to pass the custom radio theme in our application:
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/radio-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-styling-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -185,7 +185,7 @@ The last step is to pass the custom radio theme in our application:
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/radio-group-sample" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-group-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -249,7 +249,7 @@ public alignment = RadioGroupAlignment.vertical;
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/radio-group-vertical" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-group-vertical/" >
 </code-view>
 
 <div class="divider--half"></div>

@@ -15,7 +15,7 @@ Ignite UI for Angular ComboBox コンポーネントでは、ヘッダー、フ�
 
 <code-view style="height: 450px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-template" alt="Angular コンボボックス テンプレートの例">
+           iframe-src="{environment:demosBaseUrl}/lists/combo-template/" alt="Angular コンボボックス テンプレートの例">
 </code-view>
 
 

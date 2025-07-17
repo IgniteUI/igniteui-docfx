@@ -39,7 +39,7 @@ or just any other custom content. The toolbar and the predefined UI components s
 
 <code-view style="height:420px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-1/" >
 </code-view>
 
 }
@@ -47,7 +47,7 @@ or just any other custom content. The toolbar and the predefined UI components s
 
 <code-view style="height:420px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-4" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-4/" >
 </code-view>
 
 }
@@ -55,7 +55,7 @@ or just any other custom content. The toolbar and the predefined UI components s
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-title" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-title/" >
 </code-view>
 
 }
@@ -160,7 +160,7 @@ Listed below are the main features of the toolbar with example code for each of 
 
 <code-view style="height:420px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-2/" >
 </code-view>
 
 }
@@ -168,7 +168,7 @@ Listed below are the main features of the toolbar with example code for each of 
 
 <code-view style="height:420px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-1" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-1/" >
 </code-view>
 
 }
@@ -176,7 +176,7 @@ Listed below are the main features of the toolbar with example code for each of 
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-options" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-options/" >
 </code-view>
 
 }
@@ -251,7 +251,7 @@ public toolbarExportingHandler(args) {
 
 <code-view style="height:420px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-3/" >
 </code-view>
 
 <div class="divider"></div>
@@ -260,7 +260,7 @@ public toolbarExportingHandler(args) {
 
 <code-view style="height:420px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-2" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-2/" >
 </code-view>
 
 <div class="divider"></div>
@@ -295,7 +295,7 @@ public toolbarExportingHandler(args) {
 
 <code-view style="height:420px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-4/" >
 </code-view>
 
 <div class="divider"></div>
@@ -304,7 +304,7 @@ public toolbarExportingHandler(args) {
 
 <code-view style="height:420px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-3" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-3/" >
 </code-view>
 
 <div class="divider"></div>
@@ -313,7 +313,7 @@ public toolbarExportingHandler(args) {
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-custom" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-custom/" >
 </code-view>
 
 <div class="divider"></div>

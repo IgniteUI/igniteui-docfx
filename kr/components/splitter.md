@@ -12,7 +12,7 @@ The Ignite UI for Angular Splitter component provides the ability to create layo
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/splitter-horizontal-sample" >
+           iframe-src="{environment:demosBaseUrl}/layouts/splitter-horizontal-sample/" >
 </code-view>
 
 
@@ -130,7 +130,7 @@ public typeVertical = SplitterType.Vertical;
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/splitter-nested-sample" >
+           iframe-src="{environment:demosBaseUrl}/layouts/splitter-nested-sample/" >
 </code-view>
 
 
@@ -199,7 +199,7 @@ This is the final result from applying your new theme.
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/splitter-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/layouts/splitter-styling-sample/" >
 </code-view>
 
 

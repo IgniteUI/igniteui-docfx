@@ -21,7 +21,7 @@ The following example specifies the animation duration set to 5 seconds.
 
 <code-view style="height:400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/circular-progressbar" >
+           iframe-src="{environment:demosBaseUrl}/data-display/circular-progressbar/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -116,7 +116,7 @@ And now if we set up everything correctly we should have the folllowing displaye
 
 <code-view style="height:400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/circular-progressbar" >
+           iframe-src="{environment:demosBaseUrl}/data-display/circular-progressbar/" >
 </code-view>
 
 <div class="divider--half"></div>

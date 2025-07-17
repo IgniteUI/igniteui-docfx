@@ -16,7 +16,7 @@ The [`IgxExpansionPanel`]({environment:angularApiUrl}/classes/igxexpansionpanelc
 
 <code-view style="height: 450px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -96,7 +96,7 @@ You can see the results below:
 
 <code-view style="height: 450px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-1/" >
 </code-view>
 
 
@@ -151,7 +151,7 @@ Below we have the results:
 
 <code-view style="height: 400px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-2/" >
 </code-view>
 
 
@@ -244,7 +244,7 @@ After applying all of the changes to our initial component, here is the final re
 
 <code-view style="height: 550px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-3/" >
 </code-view>
 
 
@@ -341,7 +341,7 @@ You can see the results below:
 
 <code-view style="height: 350px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-6" >
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-6/" >
 </code-view>
 
 
@@ -518,7 +518,7 @@ You can see the results below:
 
 <code-view style="height: 550px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-5/" >
 </code-view>
 
 
@@ -620,7 +620,7 @@ You can see the results below:
 
 <code-view style="height: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-7" >
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-7/" >
 </code-view>
 
 

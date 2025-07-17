@@ -27,12 +27,12 @@ Additionally, a way to prevent the drop-down from closing on chip deletion would
 ### Demo
 <code-view style="height: 560px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-tree-hierarchical-selection" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-tree-hierarchical-selection/" >
 </code-view>
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-tree-grid-hierarchical-selection">
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-tree-grid-hierarchical-selection/">
 </code-view>
 
 >[!NOTE]

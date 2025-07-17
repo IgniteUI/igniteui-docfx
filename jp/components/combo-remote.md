@@ -16,7 +16,7 @@ Ignite UI for Angular ComboBox コンポーネントは、コンボボックス�
 
 <code-view style="height: 400px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-remote" alt="Angular コンボボックス リモート バインディングの例">
+           iframe-src="{environment:demosBaseUrl}/lists/combo-remote/" alt="Angular コンボボックス リモート バインディングの例">
 </code-view>
 
 

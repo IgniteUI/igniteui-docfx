@@ -16,7 +16,7 @@ Using the `--ig-size` custom CSS property, you can configure the size on an appl
 ## Angular Size Example
 <code-view style="height: 250px; width: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/theming/density" alt="Angular Size Example">
+           iframe-src="{environment:demosBaseUrl}/theming/density/" alt="Angular Size Example">
 </code-view>
 
 <div class="divider--half"></div>

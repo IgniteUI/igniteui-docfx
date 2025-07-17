@@ -17,7 +17,7 @@ We've created this simple Angular Expansion Panel Example using Ignite UI Angula
 
 <code-view style="height: 320px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -151,7 +151,7 @@ Below we have the results:
 
 <code-view style="height: 320px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-2/" >
 </code-view>
 
 
@@ -206,7 +206,7 @@ Lets see the result from all the above changes:
 
 <code-view style="height: 460px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-3/" >
 </code-view>
 
 
@@ -287,7 +287,7 @@ To find out more on how you can use Ignite UI theming engine [`click here`](them
 <code-view style="height: 440px;" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-styling" >
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-styling/" >
 </code-view>
 
 ## Angular Expansion Panel Animations 
@@ -350,7 +350,7 @@ You can see the results below:
 
 <code-view style="height: 380px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-5/" >
 </code-view>
 
 

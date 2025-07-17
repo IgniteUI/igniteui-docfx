@@ -14,7 +14,7 @@ size 設定の表示は、大規模データセットのビジュアル表示を
 ## Angular サイズの例
 <code-view style="height: 250px; width: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/theming/density" alt="Angular サイズの例">
+           iframe-src="{environment:demosBaseUrl}/theming/density/" alt="Angular サイズの例">
 </code-view>
 
 <div class="divider--half"></div>

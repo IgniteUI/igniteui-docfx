@@ -30,7 +30,7 @@ In Ignite UI for Angular @@igComponent, data sorting is enabled on a per-column 
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-sample/" >
 </code-view>
 
 }
@@ -38,7 +38,7 @@ In Ignite UI for Angular @@igComponent, data sorting is enabled on a per-column 
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-sorting" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-sorting/" >
 </code-view>
 
 }
@@ -46,7 +46,7 @@ In Ignite UI for Angular @@igComponent, data sorting is enabled on a per-column 
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sorting" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sorting/" >
 </code-view>
 
 }
