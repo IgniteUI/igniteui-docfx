@@ -228,8 +228,8 @@ Learn more about it in the [Size](display-density.md) article.
 
 
 ## Theming Dependencies
-* [IgxAvatar Theme]({environment:sassApiUrl}/themes.html#function-avatar-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/themes.html#function-icon-theme)
+* [IgxAvatar Theme]({environment:sassApiUrl}/themes#function-avatar-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>
