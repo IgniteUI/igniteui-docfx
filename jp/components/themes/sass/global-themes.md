@@ -101,7 +101,7 @@ $allowed: (igx-avatar, igx-badge);
 
 また、Material、Fluent、Indigo、Bootstrap の 4 つのテーマには、*__light__* バージョンと *__dark__* バージョンも用意されています。 
 
-いずれかのバージョンを使用するには、[theme]({environment:sassApiUrl}/index.html#mixin-theme) ミックスインに渡すだけです。
+いずれかのバージョンを使用するには、[theme]({environment:sassApiUrl}/themes#mixin-theme) ミックスインに渡すだけです。
 
 *__Light__*
 ```scss

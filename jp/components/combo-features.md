@@ -207,7 +207,7 @@ export class ComboDemo {
 <div class="divider--half"></div>
 
 * [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
-* [IgxComboComponent スタイル]({environment:sassApiUrl}/index.html#function-combo-theme)
+* [IgxComboComponent スタイル]({environment:sassApiUrl}/themes#function-combo-theme)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 * [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)

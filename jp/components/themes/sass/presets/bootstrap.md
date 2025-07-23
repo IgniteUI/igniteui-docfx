@@ -1,7 +1,7 @@
 # Material から Bootstrap テーマへの切り替え
 
 バージョン `9.0` 以降、コンポーネントには [Bootstrap 4](https://getbootstrap.com/)  および [ng-bootstrap](https://ng-bootstrap.github.io/#/home) に基づいて構築された新しいテーマが含まれます。
-`Material` から `Bootstrap` に切り替えるには、[theme]({environment:sassApiUrl}/index.html#mixin-theme) 組み込みのミキシンを使用します。
+`Material` から `Bootstrap` に切り替えるには、[theme]({environment:sassApiUrl}/themes#mixin-theme) 組み込みのミキシンを使用します。
 
 ## Bootstrap Light テーマ
 
@@ -44,4 +44,4 @@
 
 ## API の概要
 
-* [グローバル テーマ]({environment:sassApiUrl}/index.html#mixin-theme)
+* [グローバル テーマ]({environment:sassApiUrl}/themes#mixin-theme)

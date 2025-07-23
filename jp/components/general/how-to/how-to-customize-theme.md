@@ -80,7 +80,7 @@ $custom-palette: palette(
 );
 ```
 
-ご覧のように、コード生成は特定の `@include light-theme($light-material-palette);` (これは[デフォルト テーマ](../../themes/sass/presets/material.md)と[カラー パレット](../../themes/palettes.md))から、一般的な [`theme()`]({environment:sassApiUrl}/index.html#mixin-theme) include に変わり、パラメーターとしてカスタム カラー パレットとテーマ構造のための [dark material schema](../../themes/sass/schemas.md) が提供されるようになりました。実行中の Angular アプリの結果は以下のようになります。
+ご覧のように、コード生成は特定の `@include light-theme($light-material-palette);` (これは[デフォルト テーマ](../../themes/sass/presets/material.md)と[カラー パレット](../../themes/palettes.md))から、一般的な [`theme()`]({environment:sassApiUrl}/themes#mixin-theme) include に変わり、パラメーターとしてカスタム カラー パレットとテーマ構造のための [dark material schema](../../themes/sass/schemas.md) が提供されるようになりました。実行中の Angular アプリの結果は以下のようになります。
 
 <img class="responsive-img"  src="../../../images/general/theming-walkthrough/getting-started-dark-app.png" />
 
@@ -187,8 +187,8 @@ $custom-palette-light: palette(
 ```
 
 >[!NOTE]
-> [`css-vars()`]({environment:sassApiUrl}/index.html#mixin-css-vars) を使用してすべてのテーマ変数を再度含める代わりに、`igx-grid-toolbar` テーマ オーバーライドを 2 つの変数のみをオーバーライドするように切り替えました。
-> すべてのテーマ変数は[対応する sass api ドキュメント]({environment:sassApiUrl}/index.html#function-grid-toolbar-theme)で見つけることができ、sass 変数と同等ですが、`$` の代わりに `--` を前に付けます。
+> [`css-vars()`]({environment:sassApiUrl}/themes#mixin-css-vars) を使用してすべてのテーマ変数を再度含める代わりに、`igx-grid-toolbar` テーマ オーバーライドを 2 つの変数のみをオーバーライドするように切り替えました。
+> すべてのテーマ変数は[対応する sass api ドキュメント]({environment:sassApiUrl}/themes#function-grid-toolbar-theme)で見つけることができ、sass 変数と同等ですが、`$` の代わりに `--` を前に付けます。
 
 結果は、ライト OS テーマで次のようになります。
 
@@ -222,13 +222,13 @@ Ignite UI テーマは、複数の次元のテーマを抽象化し、非常に�
 
 <img class="responsive-img"  src="../../../images/general/theming-walkthrough/optimizing-initial-build.png" />
 
-ご覧のとおり、アプリケーションのテーマは 400kb をわずかに超えていますが、圧縮して転送すると、約 40kb になります。これは大きくありませんが、より最適化できますか? Ignite UI for Angular スイートのすべてのコンポーネントを使用しない限り、答えは「イエス」です。`@include theme()` を呼び出すと、すべてのコンポーネント テーマが取り込まれますが、何を除外するかを関数に伝えるメカニズムがあります。テーマ ミックスインには [`$exclude`]({environment:sassApiUrl}/index.html#mixin-theme) パラメーターがあり、コンポーネント名を配列として受け取り、ビルド時にテーマから除外します。パッケージで利用可能なすべてのコンポーネントを見つけて一覧表示するのは簡単ではないため、使用するすべてのコンポーネントを一覧表示できるようにすることをお勧めします。完全なコンポーネント リストを変数として公開します。これには、次の操作を行うとアクセスできます。
+ご覧のとおり、アプリケーションのテーマは 400kb をわずかに超えていますが、圧縮して転送すると、約 40kb になります。これは大きくありませんが、より最適化できますか? Ignite UI for Angular スイートのすべてのコンポーネントを使用しない限り、答えは「イエス」です。`@include theme()` を呼び出すと、すべてのコンポーネント テーマが取り込まれますが、何を除外するかを関数に伝えるメカニズムがあります。テーマ ミックスインには [`$exclude`]({environment:sassApiUrl}/themes#mixin-theme) パラメーターがあり、コンポーネント名を配列として受け取り、ビルド時にテーマから除外します。パッケージで利用可能なすべてのコンポーネントを見つけて一覧表示するのは簡単ではないため、使用するすべてのコンポーネントを一覧表示できるようにすることをお勧めします。完全なコンポーネント リストを変数として公開します。これには、次の操作を行うとアクセスできます。
 
 ```scss
 @use "@infragistics/igniteui-angular/theming" as *;
 ```
 
-コンポーネント配列は `$components` にあり、この例のように、使用するコンポーネントで[このリスト]({environment:sassApiUrl}/index.html#variable-light-schema)を削減し、残りをすべて除外できます。
+コンポーネント配列は `$components` にあり、この例のように、使用するコンポーネントで[このリスト]({environment:sassApiUrl}/themes#variable-dark-material-schema)を削減し、残りをすべて除外できます。
 
 ```scss
 $include: (

@@ -258,7 +258,7 @@ public ngOnInit() {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`button-group-theme`]({environment:sassApiUrl}/index.html#function-button-group-theme) を拡張し、`$item-background` のみを指定して新しいテーマを作成します。これにより、インタラクション状態の色、前景色、境界線の色が自動的に算出されます。必要に応じて任意のテーマ パラメーターをオーバーライドすることも可能です。
+最もシンプルな方法として、[`button-group-theme`]({environment:sassApiUrl}/themes#function-button-group-theme) を拡張し、`$item-background` のみを指定して新しいテーマを作成します。これにより、インタラクション状態の色、前景色、境界線の色が自動的に算出されます。必要に応じて任意のテーマ パラメーターをオーバーライドすることも可能です。
 
 ```scss
 $custom-button-group: button-group-theme(
@@ -288,15 +288,15 @@ $custom-button-group: button-group-theme(
 <div class="divider--half"></div>
 
 * [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
-* [IgxButtonGroup スタイル]({environment:sassApiUrl}/index.html#function-button-group-theme)
+* [IgxButtonGroup スタイル]({environment:sassApiUrl}/themes#function-button-group-theme)
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxButton スタイル]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxButton スタイル]({environment:sassApiUrl}/themes#function-button-theme)
 
 ## テーマの依存関係
 
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ## その他のリソース
 
