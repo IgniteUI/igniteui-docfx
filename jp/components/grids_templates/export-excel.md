@@ -321,7 +321,7 @@ this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions('
 使用したその他のコンポーネント:
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 
 <div class="divider"></div>
 

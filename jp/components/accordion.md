@@ -158,7 +158,7 @@ export class AccordionComponent {
 }
 ```
 
-[**ビルトイン アニメーション スイート**]({environment:sassApiUrl}/index.html#animations)の [`slideInLeft`]({environment:sassApiUrl}/index.html#mixin-slide-in-left) アニメーションと [`slideOutRight`]({environment:sassApiUrl}/index.html#mixin-slide-out-right) アニメーションを使用して、コンテンツを折りたたむとコンポーネントのコンテンツが左側から表示され、右側に消えるようにします。アニメーションのパラメーターをオーバーライドして、アニメーションをさらにカスタマイズします。
+[**ビルトイン アニメーション スイート**]({environment:sassApiUrl}/animations)の [`slideInLeft`]({environment:sassApiUrl}/animations#mixin-slide-in-left) アニメーションと [`slideOutRight`]({environment:sassApiUrl}/animations#mixin-slide-out-right) アニメーションを使用して、コンテンツを折りたたむとコンポーネントのコンテンツが左側から表示され、右側に消えるようにします。アニメーションのパラメーターをオーバーライドして、アニメーションをさらにカスタマイズします。
 
 以下のスニペットは、アニメーション設定をコンポーネントに渡す方法を示しています。
 
@@ -275,7 +275,7 @@ Ignite UI for Angular Accordion のキーボード ナビゲーションは、�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`expansion-panel-theme`]({environment:sassApiUrl}/index.html#function-expansion-panel-theme) を拡張し、`$header-background`、`$body-color`、および `$expanded-margin` の各パラメーターを受け取る新しいテーマを作成します。このテーマは、指定された背景色に対してコントラストの高い前景色 (黒または白) を自動的に選択して割り当てます。
+最もシンプルな方法として、[`expansion-panel-theme`]({environment:sassApiUrl}/themes#function-expansion-panel-theme) を拡張し、`$header-background`、`$body-color`、および `$expanded-margin` の各パラメーターを受け取る新しいテーマを作成します。このテーマは、指定された背景色に対してコントラストの高い前景色 (黒または白) を自動的に選択して割り当てます。
 
 ```scss
 $custom-panel-theme: expansion-panel-theme(
@@ -303,7 +303,7 @@ $custom-panel-theme: expansion-panel-theme(
 * [IgxExpansionPanel API]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)
 * [IgxExpansionPanelHeader API]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html)
 * [IgxExpansionPanelBody API]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html)
-* [IgxExpansionPanel スタイル]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel)
+* [IgxExpansionPanel スタイル]({environment:sassApiUrl}/themes#mixin-igx-expansion-panel)
 
 
 ## その他のリソース

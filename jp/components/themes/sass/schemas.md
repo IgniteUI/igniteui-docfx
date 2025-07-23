@@ -52,7 +52,7 @@ $light-avatar: (
 );
 ```
 
-上記の例では、コンポーネント スキーマが [Avatar テーマ]({environment:sassApiUrl}/index.html#function-avatar-theme) で使用するプロパティを定義します。具体的なカラー パレット マップを参照せずに、アバターが使用するカラーを指定します。
+上記の例では、コンポーネント スキーマが [Avatar テーマ]({environment:sassApiUrl}/themes#function-avatar-theme) で使用するプロパティを定義します。具体的なカラー パレット マップを参照せずに、アバターが使用するカラーを指定します。
 
 以下は、`background` プロパティの例です。アバターのテーマにデフォルトの背景を指示します。
 
@@ -158,8 +158,8 @@ $indigo-avatar: map.get($light-indigo-schema, avatar);
 * [Avatar スキーマ]({environment:sassApiUrl}/index.html#variable-_light-avatar)
 * [Light コンポーネント スキーマ]({environment:sassApiUrl}/index.html#variable-light-schema)
 * [Dark コンポーネント スキーマ]({environment:sassApiUrl}/index.html#variable-dark-schema)
-* [グローバル テーマ]({environment:sassApiUrl}/index.html#mixin-theme)
-* [Avatar テーマ]({environment:sassApiUrl}/index.html#function-avatar-theme)
+* [グローバル テーマ]({environment:sassApiUrl}/themes#mixin-theme)
+* [Avatar テーマ]({environment:sassApiUrl}/themes#function-avatar-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

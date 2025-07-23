@@ -160,7 +160,7 @@ Ignite UI for Angular Ripple モジュールまたはディレクティブをイ
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-次に、[`ripple-theme`]({environment:sassApiUrl}/index.html#function-ripple-theme) を拡張し、必要に応じてリップルをカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成します。
+次に、[`ripple-theme`]({environment:sassApiUrl}/themes#function-ripple-theme) を拡張し、必要に応じてリップルをカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成します。
 
 ```scss
 $custom-ripple-theme: ripple-theme(
@@ -190,7 +190,7 @@ $custom-ripple-theme: ripple-theme(
 <div class="divider--half"></div>
 
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
-* [IgxRipple スタイル]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxRipple スタイル]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

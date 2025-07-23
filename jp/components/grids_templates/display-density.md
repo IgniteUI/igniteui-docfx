@@ -295,7 +295,7 @@ protected get sizeStyle() {
 <div class="divider--half"></div>
 
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 
 <div class="divider--half"></div>

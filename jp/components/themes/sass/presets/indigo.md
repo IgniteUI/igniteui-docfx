@@ -1,7 +1,7 @@
 # Material から Indigo テーマへの切り替え
 バージョン `10.1` 以降、インフラジスティックスのコンポーネントでは、独自のデザイン言語に基づいて構築された新しいテーマが含まれます。
  
-`Material` から `Indigo` に切り替えるには、[theme]({environment:sassApiUrl}/index.html#mixin-theme) 組み込みのミキシンを使用します。
+`Material` から `Indigo` に切り替えるには、[theme]({environment:sassApiUrl}/themes#mixin-theme) 組み込みのミキシンを使用します。
 
 ## Indigo Light テーマ
 
@@ -44,4 +44,4 @@
 
 ## API の概要
 
-* [グローバル テーマ]({environment:sassApiUrl}/index.html#mixin-theme)
+* [グローバル テーマ]({environment:sassApiUrl}/themes#mixin-theme)

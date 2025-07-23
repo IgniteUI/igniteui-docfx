@@ -338,7 +338,7 @@ Card のスタイル設定を始めるには、すべてのテーマ関数とコ
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`card-theme`]({environment:sassApiUrl}/index.html#function-card-theme) を拡張し、少数のスタイル パラメーターのみを指定して新しいテーマを作成します。`$background` パラメーターのみを指定した場合でも、適切な前景色 (黒または白) が自動的に選ばれて割り当てられます。
+最もシンプルな方法として、[`card-theme`]({environment:sassApiUrl}/themes#function-card-theme) を拡張し、少数のスタイル パラメーターのみを指定して新しいテーマを作成します。`$background` パラメーターのみを指定した場合でも、適切な前景色 (黒または白) が自動的に選ばれて割り当てられます。
 
 ```scss
 $colorful-card: card-theme(
@@ -376,7 +376,7 @@ $colorful-card: card-theme(
 
 以下の定義済み CSS スタイルを使用してカード レイアウトを構成しました。
 
-* [`IgxCardComponent スタイル`]({environment:sassApiUrl}/index.html#function-card-theme)
+* [`IgxCardComponent スタイル`]({environment:sassApiUrl}/themes#function-card-theme)
 
 使用したその他のコンポーネントとディレクティブ
 
@@ -387,16 +387,16 @@ $colorful-card: card-theme(
 
 スタイル:
 
-* [`IgxAvatarComponent スタイル`]({environment:sassApiUrl}/index.html#function-avatar-theme)
-* [`IgxIconComponent スタイル`]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [`IgxButtonDirective スタイル`]({environment:sassApiUrl}/index.html#function-button-theme)
+* [`IgxAvatarComponent スタイル`]({environment:sassApiUrl}/themes#function-avatar-theme)
+* [`IgxIconComponent スタイル`]({environment:sassApiUrl}/themes#function-icon-theme)
+* [`IgxButtonDirective スタイル`]({environment:sassApiUrl}/themes#function-button-theme)
 
 <div class="divider"></div>
 
 ## テーマの依存関係
-* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxAvatar テーマ]({environment:sassApiUrl}/index.html#function-avatar-theme)
-* [IgxIconTheme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxAvatar テーマ]({environment:sassApiUrl}/themes#function-avatar-theme)
+* [IgxIconTheme]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## その他のリソース
 

@@ -386,12 +386,12 @@ public clearSearch() {
 
 スタイル:
 
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
-* [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/index.html#function-input-group-theme)
-* [IgxIconComponent スタイル]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxRippleDirective スタイル]({environment:sassApiUrl}/index.html#function-ripple-theme)
-* [IgxButtonDirective スタイル]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxChipComponent スタイル]({environment:sassApiUrl}/index.html#function-chip-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+* [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/themes#function-input-group-theme)
+* [IgxIconComponent スタイル]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxRippleDirective スタイル]({environment:sassApiUrl}/themes#function-ripple-theme)
+* [IgxButtonDirective スタイル]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxChipComponent スタイル]({environment:sassApiUrl}/themes#function-chip-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

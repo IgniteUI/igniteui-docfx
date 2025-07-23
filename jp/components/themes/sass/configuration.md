@@ -23,7 +23,7 @@ _language: ja
 
 Ignite UI for Angular テーマには、アプリケーション内のすべてのスクロールバーの幅や色を変更できるカスタム スクロールバー スタイルが付属しています。含まれているスタイルを適用するには、ルート アプリ コンポーネントを含む要素に `ig-scrollbar` クラスを設定してください。
 
-スクロールバーをさらにカスタマイズするには、[`scrollbar-theme`]({environment:sassApiUrl}/index.html#function-scrollbar-theme) 関数を使用して新しいスクロールバー スタイルを作成します。この関数は、スクロールバーのスタイル変更に関する引数を受け入れます。スクロールバーのサイズ、カラー、境界線、最小高さなどをカスタマイズできます。
+スクロールバーをさらにカスタマイズするには、[`scrollbar-theme`]({environment:sassApiUrl}/themes#function-scrollbar-theme) 関数を使用して新しいスクロールバー スタイルを作成します。この関数は、スクロールバーのスタイル変更に関する引数を受け入れます。スクロールバーのサイズ、カラー、境界線、最小高さなどをカスタマイズできます。
 
 ```scss
 // app.component.scss
