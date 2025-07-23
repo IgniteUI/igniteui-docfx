@@ -449,7 +449,7 @@ constructor(fb: FormBuilder) {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-入力グループの外観をカスタマイズするには、[`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme) を拡張して新しいテーマを作成します。この方法では、変更したいパラメーターだけを上書きし、その他のスタイルはベース テーマが自動的に処理します。
+入力グループの外観をカスタマイズするには、[`input-group-theme`]({environment:sassApiUrl}/themes#function-input-group-theme) を拡張して新しいテーマを作成します。この方法では、変更したいパラメーターだけを上書きし、その他のスタイルはベース テーマが自動的に処理します。
 
 境界線や背景の色など、いくつかのコアパラメーターを指定するだけでも、一貫した状態ベースのスタイル (ホバー、フォーカスなど) が適用された、完全なスタイルの入力グループを作成できます。
 
@@ -493,11 +493,11 @@ search 入力をターゲットにする場合は `.igx-input-group--search` を
 * [IgxHintDirective]({environment:angularApiUrl}/classes/igxhintdirective.html)
 * [IgxInputGroup タイプ]({environment:angularApiUrl}/index.html#IgxInputGroupType)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/themes#function-input-group-theme)
 
 ## テーマの依存関係
-* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

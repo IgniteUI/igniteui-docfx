@@ -157,7 +157,7 @@ Banner コンポーネントを表示するには、ボタン クリックで [`
 
 ### カスタム アニメーションの適用
 
-Banner コンポーネントには、アニメーションのオープンとクローズのカスタム設定を適用できる [`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationSettings) プロパティがあります。開発者は、自分で定義したアニメーションと、[`アニメーション スイート`]({environment:sassApiUrl}/index.html)のアニメーションから選択できます。バナーで使用されるデフォルト アニメーションは、`growVerIn` が開始、`growVerOut` が終了です。 
+Banner コンポーネントには、アニメーションのオープンとクローズのカスタム設定を適用できる [`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationSettings) プロパティがあります。開発者は、自分で定義したアニメーションと、[`アニメーション スイート`]({environment:sassApiUrl}/animations)のアニメーションから選択できます。バナーで使用されるデフォルト アニメーションは、`growVerIn` が開始、`growVerOut` が終了です。 
 
 スライドインまたはスライドアウトするためにバナーが使用するアニメーションを変更します。
 
@@ -266,7 +266,7 @@ export class MyBannerComponent {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`banner-theme`]({environment:sassApiUrl}/index.html#function-banner-theme) を拡張し、`$banner-background` のみを指定して新しいテーマを作成します。指定された値に基づき、`$banner-message-color` および `$banner-illustration-color` は背景とのコントラストが高い黒または白に自動的に設定されます。
+最もシンプルな方法として、[`banner-theme`]({environment:sassApiUrl}/themes#function-banner-theme) を拡張し、`$banner-background` のみを指定して新しいテーマを作成します。指定された値に基づき、`$banner-message-color` および `$banner-illustration-color` は背景とのコントラストが高い黒または白に自動的に設定されます。
 
 ```scss
 $custom-banner-theme: banner-theme(
@@ -275,7 +275,7 @@ $custom-banner-theme: banner-theme(
 ```
 
 >[!NOTE]
->上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](themes/sass/palettes.md)のトピックをご覧ください。
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/palettes#function-palette) および [`color`]({environment:sassApiUrl}/palettes#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](themes/sass/palettes.md)のトピックをご覧ください。
 
 最後にバナーのカスタム テーマを渡します。
 
@@ -297,7 +297,7 @@ $custom-banner-theme: banner-theme(
 
 * [IgxBannerComponent]({environment:angularApiUrl}/classes/igxbannercomponent.html)
 * [IgxBannerActionsDirective]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html)
-* [IgxBannerComponent スタイル]({environment:sassApiUrl}/index.html#function-banner-theme)
+* [IgxBannerComponent スタイル]({environment:sassApiUrl}/themes#function-banner-theme)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
@@ -307,10 +307,10 @@ $custom-banner-theme: banner-theme(
 * [IgxToastComponent]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
-* [IgxExpansionPanel テーマ]({environment:sassApiUrl}/index.html#function-expansion-panel-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
+* [IgxExpansionPanel テーマ]({environment:sassApiUrl}/themes#function-expansion-panel-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

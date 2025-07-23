@@ -392,7 +392,7 @@ export class TabbarRoutingModule { }
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-次に、[`bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-bottom-nav-theme) を拡張する新しいテーマを作成し、タブグループのスタイルを設定できるさまざまなパラメーターを受け取ります。
+次に、[`bottom-nav-theme`]({environment:sassApiUrl}/themes#function-bottom-nav-theme) を拡張する新しいテーマを作成し、タブグループのスタイルを設定できるさまざまなパラメーターを受け取ります。
 
 ```scss
 $dark-bottom-nav: bottom-nav-theme(
@@ -402,9 +402,9 @@ $dark-bottom-nav: bottom-nav-theme(
 ```
 
 >[!NOTE]
->上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](themes/sass/palettes.md)のトピックをご覧ください。
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/palettes#function-palette) および [`color`]({environment:sassApiUrl}/palettes#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](themes/sass/palettes.md)のトピックをご覧ください。
 
-[`bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-bottom-nav-theme) は、tabs コンポーネントのスタイル設定で多くのパラメーターが利用できます。
+[`bottom-nav-theme`]({environment:sassApiUrl}/themes#function-bottom-nav-theme) は、tabs コンポーネントのスタイル設定で多くのパラメーターが利用できます。
 
 > [!NOTE]
 > 項目のコンテンツの一部として使用される追加コンポーネントをスタイルするには、それぞれのコンポーネントに固有の追加テーマを作成する必要があります。
@@ -430,12 +430,12 @@ $dark-bottom-nav: bottom-nav-theme(
 <div class="divider--half"></div>
 
 * [IgxBottomNavComponent]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html)
-* [IgxBottomNavComponent スタイル]({environment:sassApiUrl}/index.html#function-bottom-nav-theme)
+* [IgxBottomNavComponent スタイル]({environment:sassApiUrl}/themes#function-bottom-nav-theme)
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

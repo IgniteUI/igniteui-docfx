@@ -542,7 +542,7 @@ $my-dark-palette: palette(
 $my-dark-color: color($my-dark-palette, 'surface');
 ```
 
-[`grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-grid-toolbar-theme) を拡張する新しいテーマを作成し、`$background-color` と `$title-text-color` パラメーターを変更します。
+[`grid-toolbar-theme`]({environment:sassApiUrl}/themes#function-grid-toolbar-theme) を拡張する新しいテーマを作成し、`$background-color` と `$title-text-color` パラメーターを変更します。
 
 ```scss
 $dark-grid-toolbar-theme: grid-toolbar-theme(
@@ -552,7 +552,7 @@ $dark-grid-toolbar-theme: grid-toolbar-theme(
 );
 ```
 
-ツールバーの列操作メニューにテーマを設定するには、[`column-actions-theme`]({environment:sassApiUrl}/index.html#function-column-actions-theme) コンポーネントのテーマを変更する必要があります。
+ツールバーの列操作メニューにテーマを設定するには、[`column-actions-theme`]({environment:sassApiUrl}/themes#function-column-actions-theme) コンポーネントのテーマを変更する必要があります。
 
 ```scss
 $dark-column-actions-theme: column-actions-theme(
@@ -650,7 +650,7 @@ $dark-checkbox-theme: checkbox-theme(
 
 スタイル:
 
-* [`@@igxNameComponent スタイル`]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [`@@igxNameComponent スタイル`]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ## その他のリソース
 

@@ -198,7 +198,7 @@ IgxHierarchicalGrid の子グリッドの実装方法および DI スコープ�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-最も簡単な方法で [`paginator-theme`]({environment:sassApiUrl}/index.html#function-paginator-theme) を拡張し `$text-color`、`$background-color` および `$border-color` パラメータを受け入れる新しいテーマを作成します。
+最も簡単な方法で [`paginator-theme`]({environment:sassApiUrl}/themes#function-paginator-theme) を拡張し `$text-color`、`$background-color` および `$border-color` パラメータを受け入れる新しいテーマを作成します。
 
 ```scss
 $dark-paginator: paginator-theme(
@@ -222,7 +222,7 @@ $dark-button: icon-button-theme(
 ```
 
 >[!NOTE]
->上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックをご覧ください。
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/palettes#function-palette) および [`color`]({environment:sassApiUrl}/palettes#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックをご覧ください。
 
 最後にそれぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。
 
@@ -290,8 +290,8 @@ $dark-button: icon-button-theme(
 
 ## API リファレンス
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
-* [IgxGridPaginator スタイル]({environment:sassApiUrl}/index.html#function-paginator-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+* [IgxGridPaginator スタイル]({environment:sassApiUrl}/themes#function-paginator-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

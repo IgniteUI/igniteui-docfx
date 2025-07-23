@@ -10,7 +10,7 @@ _language: ja
 <div class="divider"></div>
 
 ## 概要
-境界半径は、コンポーネントの[テーマ スキーマ](https://github.com/IgniteUI/igniteui-theming/blob/18f878033898e1b6a3bb0ed28993e9a4037d1a80/sass/themes/schemas/components/light/_toast.scss#L44)で定義されます (以下の例を参照)。この方法で定義されたコンポーネントの境界半径は、[theme]({environment:sassApiUrl}/index.html#mixin-theme) ミックスインの `$roundness` パラメーター、または `--ig-radius-factor` と呼ばれる単一の CSS 変数を介して制御できます。
+境界半径は、コンポーネントの[テーマ スキーマ](https://github.com/IgniteUI/igniteui-theming/blob/18f878033898e1b6a3bb0ed28993e9a4037d1a80/sass/themes/schemas/components/light/_toast.scss#L44)で定義されます (以下の例を参照)。この方法で定義されたコンポーネントの境界半径は、[theme]({environment:sassApiUrl}/themes#mixin-theme) ミックスインの `$roundness` パラメーター、または `--ig-radius-factor` と呼ばれる単一の CSS 変数を介して制御できます。
 
 ```scss
 $light-toast: extend(

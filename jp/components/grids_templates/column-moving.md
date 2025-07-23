@@ -185,7 +185,7 @@ public onColumnMovingEnd(event) {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-最も簡単な方法は、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張して `$ghost-header-background`、`$ghost-header-text-color`、`$ghost-header-icon-color` パラメーターを受け入れる新しいテーマを作成します。
+最も簡単な方法は、[`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) を拡張して `$ghost-header-background`、`$ghost-header-text-color`、`$ghost-header-icon-color` パラメーターを受け入れる新しいテーマを作成します。
 
 ```scss
 // Define dark theme for the column moving
@@ -197,7 +197,7 @@ $dark-grid-column-moving-theme: grid-theme(
 ```
 
 >[!NOTE]
->上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックをご覧ください。
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/palettes#function-palette) および [`color`]({environment:sassApiUrl}/palettes#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックをご覧ください。
 
 最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。
 
