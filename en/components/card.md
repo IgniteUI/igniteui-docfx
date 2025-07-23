@@ -336,7 +336,7 @@ To get started with styling the card, we need to import the `index` file, where 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
-Following the simplest approach, we create a new theme that extends the [`card-theme`]({environment:sassApiUrl}/index.html#function-card-theme) and providing just a few styling parameters. If you only specify the `$background` parameter, the appropriate foreground colors will be automatically chosen, either black or white, based on which offers better contrast with the background.
+Following the simplest approach, we create a new theme that extends the [`card-theme`]({environment:sassApiUrl}/themes#function-card-theme) and providing just a few styling parameters. If you only specify the `$background` parameter, the appropriate foreground colors will be automatically chosen, either black or white, based on which offers better contrast with the background.
 
 ```scss
 $colorful-card: card-theme(
@@ -373,7 +373,7 @@ For more detailed information regarding the card's API, refer to the following l
 
 The following built-in CSS styles helped us achieve this card layout:
 
-* [`IgxCardComponent Styles`]({environment:sassApiUrl}/index.html#function-card-theme)
+* [`IgxCardComponent Styles`]({environment:sassApiUrl}/themes#function-card-theme)
 
 Additional components and/or directives that were used:
 
@@ -384,16 +384,16 @@ Additional components and/or directives that were used:
 
 Styles:
 
-* [`IgxAvatarComponent Styles`]({environment:sassApiUrl}/index.html#function-avatar-theme)
-* [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [`IgxButtonDirective Styles`]({environment:sassApiUrl}/index.html#function-button-theme)
+* [`IgxAvatarComponent Styles`]({environment:sassApiUrl}/themes#function-avatar-theme)
+* [`IgxIconComponent Styles`]({environment:sassApiUrl}/themes#function-icon-theme)
+* [`IgxButtonDirective Styles`]({environment:sassApiUrl}/themes#function-button-theme)
 
 <div class="divider"></div>
 
 ## Theming Dependencies
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxAvatar Theme]({environment:sassApiUrl}/index.html#function-avatar-theme)
-* [IgxIconTheme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxAvatar Theme]({environment:sassApiUrl}/themes#function-avatar-theme)
+* [IgxIconTheme]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## Additional Resources
 
