@@ -168,8 +168,8 @@ CSS 変数を使用する間は、`::ng-deep` 擬似セレクターは必要あ�
 
 <div class="divider--half"></div>
 
-- [グローバル テーマ]({environment:sassApiUrl}/index.html#mixin-theme)
-- [Avatar テーマ]({environment:sassApiUrl}/index.html#function-avatar-theme)
+- [グローバル テーマ]({environment:sassApiUrl}/themes#mixin-theme)
+- [Avatar テーマ]({environment:sassApiUrl}/themes#function-avatar-theme)
 
 ## その他のリソース
 

@@ -11,9 +11,9 @@ _language: ja
 
 ## Sass Animations
 
-### キーフレーム Mixin
+### キーフレーム ミックスイン
 
-Ignite UI for Angular [keyframes]({environment:sassApiUrl}/index.html#mixin-keyframes) ミックスインは、新しいキーフレーム アニメーションを登録するために使用されます。ミックスイン はパラメーターとしてキーフレーム アニメーションの名前を取得し、グローバル キーフレーム レジスタ リストに追加します。同じキーフレーム アニメーションを複数回含む場合、エクスポートされた CSS でキーフレームは複製されません。
+Ignite UI for Angular [keyframes]({environment:sassApiUrl}/animations#mixin-keyframes) ミックスインは、新しいキーフレーム アニメーションを登録するために使用されます。ミックスイン はパラメーターとしてキーフレーム アニメーションの名前を取得し、グローバル キーフレーム レジスタ リストに追加します。同じキーフレーム アニメーションを複数回含む場合、エクスポートされた CSS でキーフレームは複製されません。
 
 例えば、以下を実行する場合、
 
@@ -49,9 +49,9 @@ Ignite UI for Angular [keyframes]({environment:sassApiUrl}/index.html#mixin-keyf
 ```
 <div class="divider--half"></div>
 
-### アニメーション Mixin
+### アニメーション ミックスイン
 
-[аnimation]({environment:sassApiUrl}/index.html#mixin-animation) ミックスインは、パラメーターとして渡されたアニメーション プロパティのリストを使用して要素をアニメーション化するための機能を果たします。ユーザーは、`名前`、`期間`、`遅延`、`方向`、`繰り返し回数`などのアニメーション プロパティを指定できます。複数のキーフレーム アニメーションを `animation` ミックスインに渡すことができます。
+[аnimation]({environment:sassApiUrl}/animations#mixin-animation) ミックスインは、パラメーターとして渡されたアニメーション プロパティのリストを使用して要素をアニメーション化するための機能を果たします。ユーザーは、`name`、`duration`、`delay`、`direction`、`iteration count` などのアニメーション プロパティを指定できます。複数のキーフレーム アニメーションを `animation` ミックスインに渡すことができます。
 
 ```scss
 //include the 'fade-in-top' keyframes animation mixin
@@ -94,7 +94,7 @@ Sass キーフレームとアニメーション ミックスインの他に、�
 
 ### 使用方法
 
-Ignite UI for Angular アニメーションは、`フェード`、`フリップ`、`成長`、`その他`、`回転`、`スケール`、`スライド`、`スウィング`などの視覚効果に基づいて 8 つのカテゴリに分類されます。各グループは異なるパラメーター セットを受け取り、含まれるアニメーションの動作を変更できます。各アニメーションは、Angular が提供する [`animation`](https://angular.io/api/animations/animation) 関数によって生成される [`AnimationReferenceMetadata`](https://angular.io/api/animations/AnimationReferenceMetadata) オブジェクトです。
+Ignite UI for Angular アニメーションは、`fade`、`flip`、`grow`、`miscellaneous`、`rotate`、`scale`、`slide`、`swing` などの視覚効果に基づいて 8 つのカテゴリに分類されます。各グループは異なるパラメーター セットを受け取り、含まれるアニメーションの動作を変更できます。各アニメーションは、Angular が提供する [`animation`](https://angular.io/api/animations/animation) 関数によって生成される [`AnimationReferenceMetadata`](https://angular.io/api/animations/AnimationReferenceMetadata) オブジェクトです。
 
 パラメーターがアタッチされている場合、デフォルト値として機能します。アニメーションが [`useAnimation`](https://angular.io/api/animations/useAnimation) 関数によって呼び出された場合、パラメーター値を直接渡すことができます。渡されたパラメーター値のいずれかがない場合、デフォルト値が使用されます。
 
@@ -154,7 +154,7 @@ useAnimation(fadeIn, {
 ## API リファレンス
 <div class="divider"></div>
 
-* [Animations]({environment:sassApiUrl}/index.html)
+* [Animations]({environment:sassApiUrl}/animations)
 * [AnimationSettings]({environment:angularApiUrl}/interfaces/animationsettings.html)
 * [IAnimationParams]({environment:angularApiUrl}/interfaces/ianimationparams.html)
 

@@ -822,16 +822,16 @@ platformBrowserDynamic()
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-input-group-theme)
-* [IgxChip テーマ]({environment:sassApiUrl}/index.html#function-chip-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
-* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-overlay-theme)
-* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-drop-down-theme)
-* [IgxCalendar テーマ]({environment:sassApiUrl}/index.html#function-calendar-theme)
-* [IgxSnackBar テーマ]({environment:sassApiUrl}/index.html#function-snackbar-theme)
-* [IgxBadge テーマ]({environment:sassApiUrl}/index.html#function-badge-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxInputGroup テーマ]({environment:sassApiUrl}/themes#function-input-group-theme)
+* [IgxChip テーマ]({environment:sassApiUrl}/themes#function-chip-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/themes#function-overlay-theme)
+* [IgxDropDown テーマ]({environment:sassApiUrl}/themes#function-drop-down-theme)
+* [IgxCalendar テーマ]({environment:sassApiUrl}/themes#function-calendar-theme)
+* [IgxSnackBar テーマ]({environment:sassApiUrl}/themes#function-snackbar-theme)
+* [IgxBadge テーマ]({environment:sassApiUrl}/themes#function-badge-theme)
 
 ## ビデオ チュートリアル
 Angular データ グリッドの作成について詳しくは、このビデオ チュートリアルをご覧ください:

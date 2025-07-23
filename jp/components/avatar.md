@@ -151,7 +151,7 @@ Avatar のスタイル設定を始めるには、すべてのテーマ関数と�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`avatar-theme`]({environment:sassApiUrl}/index.html#function-avatar-theme) を拡張し、`$background` および `$border-radius` パラメーターを指定して新しいテーマを作成します。`$color` (または `$icon-color`) は、指定された背景に対してよりコントラストの高い色 (黒または白) が自動的に設定されます。なお、`$border-radius` プロパティはアバターの `shape` が `rounded` に設定されている場合のみ適用されます。
+最もシンプルな方法として、[`avatar-theme`]({environment:sassApiUrl}/themes#function-avatar-theme) を拡張し、`$background` および `$border-radius` パラメーターを指定して新しいテーマを作成します。`$color` (または `$icon-color`) は、指定された背景に対してよりコントラストの高い色 (黒または白) が自動的に設定されます。なお、`$border-radius` プロパティはアバターの `shape` が `rounded` に設定されている場合のみ適用されます。
 
 次のマークアップを前提として:
 
@@ -229,8 +229,8 @@ igx-avatar {
 
 
 ## テーマの依存関係
-* [IgxAvatar テーマ]({environment:sassApiUrl}/index.html#function-avatar-theme)
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxAvatar テーマ]({environment:sassApiUrl}/themes#function-avatar-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

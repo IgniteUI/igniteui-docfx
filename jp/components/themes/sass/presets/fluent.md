@@ -2,7 +2,7 @@
 
 バージョン `8.2` 以降、インフラジスティックスのコンポーネントでは、[Microsoft Fluent デザイン システム](https://www.microsoft.com/design/fluent/) に基づいて構築された新しいテーマが含まれます。
  
-`Material` から `Fluent` に切り替えるには、[theme]({environment:sassApiUrl}/index.html#mixin-theme) 組み込みのミキシンを使用します。
+`Material` から `Fluent` に切り替えるには、[theme]({environment:sassApiUrl}/themes#mixin-theme) 組み込みのミキシンを使用します。
 
 Word および Excel パレットもサポートしています。これらを使用するには、2 つの _**light**_ マップ `$light-fluent-excel-palette`、`$light-fluent-word-palette` のいずれか、または 2 つの _**dark**_ マップ `dark-fluent-excel-palette`、`$light-fluent-word-palette` のいずれかを `theme` ミックスインに渡すだけです。
 
@@ -47,4 +47,4 @@ Word および Excel パレットもサポートしています。これらを�
 
 ## API の概要
 
-* [グローバル テーマ]({environment:sassApiUrl}/index.html#mixin-theme)
+* [グローバル テーマ]({environment:sassApiUrl}/themes#mixin-theme)
