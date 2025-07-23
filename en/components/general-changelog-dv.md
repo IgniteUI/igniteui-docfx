@@ -16,7 +16,27 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 
 *   [Ignite UI for Angular CHANGELOG.md at Github](https://github.com/IgniteUI/igniteui-angular/blob/master)
 
-## **19.1.0**
+## **20.0.1 (July 2025)**
+
+### Bug Fixes
+
+| Bug Number | Control | Description      |
+|------------|---------|------------------|
+|36448|IgxRadialGauge|Radial label format properties do not work. (eg. Title, SubTitles)|
+
+### {Package Charts}
+
+*   Add `MaximumExtent` and `MaximumExtentPercentage` properties for use with axis labels.
+
+## **19.0.1 (February 2025)**
+
+### igniteui-angular-maps (Geographic Map)
+
+> \[!Note]
+> As of June 30, 2025 all Microsoft Bing Maps for Enterprise Basic (Free) accounts will be retired. If you're still using an unpaid Basic Account and key, now is the time to act to avoid service disruptions. Bing Maps for Enterprise license holders can continue to use Bing Maps in their applications until June 30,2028.
+> For more details please visit:
+
+[Microsoft Bing Blogs](https://blogs.bing.com/maps/2025-06/Bing-Maps-for-Enterprise-Basic-Account-shutdown-June-30,2025)
 
 ### igniteui-angular-charts (Charts)
 
