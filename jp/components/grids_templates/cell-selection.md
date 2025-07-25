@@ -279,7 +279,7 @@ expectedData = [
 
 ### 色の定義
 
-完了後、[`contrast-color`]({environment:sassApiUrl}/index.html#function-contrast-color) と [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用できます。これらの関数を使用して、選択範囲に使用する色を定義します。
+完了後、[`contrast-color`]({environment:sassApiUrl}/palettes#function-contrast-color) と [`color`]({environment:sassApiUrl}/palettes#function-color) 関数を使用できます。これらの関数を使用して、選択範囲に使用する色を定義します。
 
 ```scss
 $text-color: contrast-color($color: 'primary', $variant: 900);
@@ -292,7 +292,7 @@ $border-yellow: #f2c43c;
 
 ### カスタム テーマの作成
 
-次に、`text-color`、`background-color`、`border-yellow` 変数をそれぞれ `$cell-selected-text-color`、`$cell-selected-background`、`$cell-active-border-color` として渡して、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張する新しいテーマを作成します。
+次に、`text-color`、`background-color`、`border-yellow` 変数をそれぞれ `$cell-selected-text-color`、`$cell-selected-background`、`$cell-active-border-color` として渡して、[`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) を拡張する新しいテーマを作成します。
 
 ```scss
 $custom-grid-theme: grid-theme(
@@ -355,7 +355,7 @@ $custom-grid-theme: grid-theme(
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow API]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

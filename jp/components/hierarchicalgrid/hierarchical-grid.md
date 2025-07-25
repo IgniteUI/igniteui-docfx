@@ -304,7 +304,7 @@ igxGrid を使用して [CRUD 操作を構築する方法](../general/how-to/how
 
 ## スタイル設定
 
-igxHierarchicalGrid を使用すると、[`Ignite UI for Angular テーマ ライブラリ`](../themes/sass/component-themes.md) でスタイルを設定できます。[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
+igxHierarchicalGrid を使用すると、[`Ignite UI for Angular テーマ ライブラリ`](../themes/sass/component-themes.md) でスタイルを設定できます。[`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
 
 以下の手順では、igxHierarchicalGrid スタイルをカスタマイズする手順を実行しています。     
 
@@ -319,7 +319,7 @@ igxHierarchicalGrid を使用すると、[`Ignite UI for Angular テーマ ラ�
 ```
 
 ### カスタム テーマの定義
-次に、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張し、必要に応じて階層グリッドをカスタマイズするために必要なパラメーターを受け取る新しいテーマを作成します。
+次に、[`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) を拡張し、必要に応じて階層グリッドをカスタマイズするために必要なパラメーターを受け取る新しいテーマを作成します。
 
  >[!NOTE]
  >特定の `sass` 階層グリッド機能はありません。
@@ -340,7 +340,7 @@ $custom-theme: grid-theme(
 ```
 
 >[!NOTE]
->上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックをご覧ください。
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/palettes#function-palette) および [`color`]({environment:sassApiUrl}/palettes#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックをご覧ください。
 
 ### カスタム テーマの適用
 テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。
@@ -400,17 +400,17 @@ platformBrowserDynamic()
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-input-group-theme)
-* [IgxChip テーマ]({environment:sassApiUrl}/index.html#function-chip-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
-* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-overlay-theme)
-* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-drop-down-theme)
-* [IgxCalendar テーマ]({environment:sassApiUrl}/index.html#function-calendar-theme)
-* [IgxActionStrip テーマ]({environment:sassApiUrl}/index.html#function-action-strip-theme)
-* [IgxSnackBar テーマ]({environment:sassApiUrl}/index.html#function-snackbar-theme)
-* [IgxBadge テーマ]({environment:sassApiUrl}/index.html#function-badge-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxInputGroup テーマ]({environment:sassApiUrl}/themes#function-input-group-theme)
+* [IgxChip テーマ]({environment:sassApiUrl}/themes#function-chip-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/themes#function-overlay-theme)
+* [IgxDropDown テーマ]({environment:sassApiUrl}/themes#function-drop-down-theme)
+* [IgxCalendar テーマ]({environment:sassApiUrl}/themes#function-calendar-theme)
+* [IgxActionStrip テーマ]({environment:sassApiUrl}/themes#function-action-strip-theme)
+* [IgxSnackBar テーマ]({environment:sassApiUrl}/themes#function-snackbar-theme)
+* [IgxBadge テーマ]({environment:sassApiUrl}/themes#function-badge-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

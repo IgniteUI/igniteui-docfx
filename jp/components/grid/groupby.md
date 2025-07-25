@@ -313,7 +313,7 @@ public sortByGroup() {
 
 ## スタイル設定
 
-igxGridを使用すると、[`Ignite UI for Angular テーマ ライブラリ`](../themes/sass/component-themes.md)でスタイルを設定できます。グリッドの [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
+igxGridを使用すると、[`Ignite UI for Angular テーマ ライブラリ`](../themes/sass/component-themes.md)でスタイルを設定できます。グリッドの [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
 
 以下の手順では、グリッドの Group By スタイルをカスタマイズする手順を実行しています。
 
@@ -330,7 +330,7 @@ igxGridを使用すると、[`Ignite UI for Angular テーマ ライブラリ`](
 
 ### カスタム テーマの定義
 
-次に、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張し、必要に応じて Group By をカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成します。Group By 機能で使用されるため、[`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme) を拡張する必要もあります。
+次に、[`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) を拡張し、必要に応じて Group By をカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成します。Group By 機能で使用されるため、[`chip-theme`]({environment:sassApiUrl}/themes#function-chip-theme) を拡張する必要もあります。
 
 ```scss
 
@@ -360,7 +360,7 @@ $custom-chips-theme: chip-theme(
 
 ### カスタム カラー パレットの定義
 
-上記で説明したアプローチでは、色の値がハード コーディングされていました。または、柔軟性を高めるために [`palette`]({environment:sassApiUrl}/index.html#function-palette)、[`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用することもできます。
+上記で説明したアプローチでは、色の値がハード コーディングされていました。または、柔軟性を高めるために [`palette`]({environment:sassApiUrl}/palettes#function-palette)、[`color`]({environment:sassApiUrl}/palettes#function-color) 関数を使用することもできます。
 `palette` は、指定されたプライマリ カラー、セカンダリ カラー、およびサーフェス カラーに基づいてカラー パレットを生成します。
 
 ```scss
@@ -400,7 +400,7 @@ $custom-chips-theme: chip-theme(
 
 ### カスタム スキーマの定義
 さらに進んで、[**スキーマ**](../themes/sass/schemas.md)のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。
-すべてのコンポーネントに提供される 2 つの事前定義されたスキーマの 1 つを拡張します。この場合、[`light-grid`]({environment:sassApiUrl}/index.html#variable-light-grid) を使用します。
+すべてのコンポーネントに提供される 2 つの事前定義されたスキーマの 1 つを拡張します。この場合、[`light-grid`]({environment:sassApiUrl}/schemas#variable-light-material-schema) を使用します。
 
 ```scss
 $custom-grid-schema: extend(
@@ -419,7 +419,7 @@ $custom-grid-schema: extend(
 );
 ```
 
-カスタム スキーマを適用するには、[`light`]({environment:sassApiUrl}/index.html#variable-light-material-schema) グローバルまたは [`dark`]({environment:sassApiUrl}/index.html#variable-dark-material-schema) グローバルを拡張する必要があります。プロセス全体が実際にコンポーネントにカスタム スキーマを提供し、その後、それぞれのコンポーネントテーマに追加します。
+カスタム スキーマを適用するには、[`light`]({environment:sassApiUrl}/schemas#variable-light-material-schema)  グローバルまたは [`dark`]({environment:sassApiUrl}/schemas#variable-dark-material-schema) グローバルを拡張する必要があります。プロセス全体が実際にコンポーネントにカスタム スキーマを提供し、その後、それぞれのコンポーネントテーマに追加します。
 
 ```scss
 $my-custom-schema: extend(
@@ -487,12 +487,12 @@ $custom-theme: grid-theme(
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGroupByRow]({environment:angularApiUrl}/classes/igxgroupbyrow.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 * [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IGroupByExpandState]({environment:angularApiUrl}/interfaces/igroupbyexpandstate.html)
 * [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
-* [IgxChipComponent スタイル]({environment:sassApiUrl}/index.html#function-chip-theme)
+* [IgxChipComponent スタイル]({environment:sassApiUrl}/themes#function-chip-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

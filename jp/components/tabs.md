@@ -392,7 +392,7 @@ export class AppRoutingModule { }
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`tabs-theme`]({environment:sassApiUrl}/index.html#function-tabs-theme) を拡張する新しいテーマを作成します。`$item-background` や `$item-active-color` などの少数のベース パラメーターを指定することで、最小限の労力でタブのスタイルを設定できます。テーマは、さまざまなインタラクション状態に必要なすべての背景色と前景色を自動的に生成します。
+最もシンプルな方法として、[`tabs-theme`]({environment:sassApiUrl}/themes#function-tabs-theme) を拡張する新しいテーマを作成します。`$item-background` や `$item-active-color` などの少数のベース パラメーターを指定することで、最小限の労力でタブのスタイルを設定できます。テーマは、さまざまなインタラクション状態に必要なすべての背景色と前景色を自動的に生成します。
 
 追加のパラメーターをオーバーライドして、外観をさらに微調整することもできます。
 
@@ -404,9 +404,9 @@ $dark-tabs: tabs-theme(
 ```
 
 >[!NOTE]
->上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](themes/sass/palettes.md)のトピックをご覧ください。
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/palettes#function-palette) および [`color`]({environment:sassApiUrl}/palettes#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](themes/sass/palettes.md)のトピックをご覧ください。
 
-次に、[`tabs-theme`]({environment:sassApiUrl}/index.html#function-tabs-theme) を拡張する新しいテーマを作成し、タブグループのスタイルを設定できるさまざまなプロパティを受け取ります。
+次に、[`tabs-theme`]({environment:sassApiUrl}/themes#function-tabs-theme) を拡張する新しいテーマを作成し、タブグループのスタイルを設定できるさまざまなプロパティを受け取ります。
 
 > [!NOTE]
 > タブのコンテンツの一部として使用されるコンポーネントをスタイルするには、それぞれのコンポーネントに固有の追加テーマを作成する必要があります。
@@ -433,15 +433,15 @@ $dark-tabs: tabs-theme(
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
 * [IgxTabsComponent]({environment:angularApiUrl}/classes/igxtabscomponent.html)
-* [IgxTabsComponent スタイル]({environment:sassApiUrl}/index.html#function-tabs-theme)
+* [IgxTabsComponent スタイル]({environment:sassApiUrl}/themes#function-tabs-theme)
 * [IgxTabItemComponent]({environment:angularApiUrl}/classes/igxtabitemcomponent.html)
 * [IgxTabHeaderComponent]({environment:angularApiUrl}/classes/igxtabheadercomponent.html)
 * [IgxTabContentComponent]({environment:angularApiUrl}/classes/igxtabcontentcomponent.html)
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
-* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

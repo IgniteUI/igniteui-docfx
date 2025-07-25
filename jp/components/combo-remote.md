@@ -80,7 +80,7 @@ export class RemoteService {
            (closing)="onClosing()"
            (opened)="onOpened()"
            (closed)="onClosed()"
-           [filterable]="true">
+           [disableFiltering]="false">
 </igx-combo>
 ```
 
@@ -228,7 +228,7 @@ export class ComboRemoteComponent implements OnInit {
 <div class="divider--half"></div>
 
 * [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
-* [IgxComboComponent スタイル]({environment:sassApiUrl}/index.html#function-combo-theme)
+* [IgxComboComponent スタイル]({environment:sassApiUrl}/themes#function-combo-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

@@ -292,7 +292,7 @@ export class AppModule {}
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`tooltip-theme`]({environment:sassApiUrl}/index.html#function-tooltip-theme) を拡張する新しいテーマを作成し、`$text-color`、`$background`、`$border-radius` パラメーターを指定します。
+最もシンプルな方法として、[`tooltip-theme`]({environment:sassApiUrl}/themes#function-tooltip-theme) を拡張する新しいテーマを作成し、`$text-color`、`$background`、`$border-radius` パラメーターを指定します。
 
 ```scss
 $dark-tooltip: tooltip-theme(
@@ -364,9 +364,9 @@ $dark-tooltip: tooltip-theme(
 
 スタイル:
 
-* [IgxTooltipDirective スタイル]({environment:sassApiUrl}/index.html#function-tooltip-theme)
-* [IgxAvatarComponent スタイル]({environment:sassApiUrl}/index.html#function-avatar-theme)
-* [IgxIconComponent スタイル]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxTooltipDirective スタイル]({environment:sassApiUrl}/themes#function-tooltip-theme)
+* [IgxAvatarComponent スタイル]({environment:sassApiUrl}/themes#function-avatar-theme)
+* [IgxIconComponent スタイル]({environment:sassApiUrl}/themes#function-icon-theme)
 
 <div class="divider"></div>
 

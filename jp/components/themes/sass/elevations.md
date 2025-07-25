@@ -108,8 +108,8 @@ $elevations: (
 
 ## API リファレンス
 
-* [エレベーションの作成]({environment:sassApiUrl}/index.html#function-elevations)
-* [エレベーションの取得]({environment:sassApiUrl}/index.html#function-elevation)
+* [エレベーションの作成]({environment:sassApiUrl}/elevations#function-elevations)
+* [エレベーションの取得]({environment:sassApiUrl}/elevations#function-elevation)
 
 
 ## その他のリソース
