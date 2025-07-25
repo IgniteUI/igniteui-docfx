@@ -156,7 +156,7 @@ public selectedColor: string = this.colors[3].hex;
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`radio-theme`]({environment:sassApiUrl}/index.html#function-radio-theme) を拡張する新しいテーマを作成します。`$empty-color` と `$fill-color` の 2 つの主要パラメーターを指定することで、完全なスタイルのラジオ ボタンを生成できます。これらの値はテーマの基盤となり、指定することでホバー、選択、無効など、さまざまな状態に必要な前景色および背景色が自動的に計算されます。
+最もシンプルな方法として、[`radio-theme`]({environment:sassApiUrl}/themes#function-radio-theme) を拡張する新しいテーマを作成します。`$empty-color` と `$fill-color` の 2 つの主要パラメーターを指定することで、完全なスタイルのラジオ ボタンを生成できます。これらの値はテーマの基盤となり、指定することでホバー、選択、無効など、さまざまな状態に必要な前景色および背景色が自動的に計算されます。
 
 ```scss
 $custom-radio-theme: radio-theme(
@@ -262,11 +262,11 @@ public alignment = RadioGroupAlignment.vertical;
 
 * [IgxRadioGroupDirective]({environment:angularApiUrl}/classes/igxradiogroupdirective.html)
 * [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
-* [IgxRadioComponent スタイル]({environment:sassApiUrl}/index.html#function-radio-theme)
+* [IgxRadioComponent スタイル]({environment:sassApiUrl}/themes#function-radio-theme)
 
 ## テーマの依存関係
 
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

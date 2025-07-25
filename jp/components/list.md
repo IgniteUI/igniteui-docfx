@@ -592,7 +592,7 @@ igx-list-item {
 }
 ```
 
-リストのテーマ変数を使用する場合は、リスト項目の選択状態のスタイルを設定できるパラメーターが用意されています。これらのパラメーターの詳細については、[`list-theme`]({environment:sassApiUrl}/index.html#function-list-theme) を参照してください。
+リストのテーマ変数を使用する場合は、リスト項目の選択状態のスタイルを設定できるパラメーターが用意されています。これらのパラメーターの詳細については、[`list-theme`]({environment:sassApiUrl}/themes#function-list-theme) を参照してください。
 
 <div class="divider--half"></div>
 
@@ -617,7 +617,7 @@ igx-list-item {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`list-theme`]({environment:sassApiUrl}/index.html#function-list-theme) を拡張し、`$background` パラメーターだけを指定することで、状態ごとのカラーや適切なコントラストの前景色が自動的に計算されます。必要に応じて手動で指定することも可能です。
+最もシンプルな方法として、[`list-theme`]({environment:sassApiUrl}/themes#function-list-theme) を拡張し、`$background` パラメーターだけを指定することで、状態ごとのカラーや適切なコントラストの前景色が自動的に計算されます。必要に応じて手動で指定することも可能です。
 
 ```scss
 $my-list-theme: list-theme(
@@ -625,7 +625,7 @@ $my-list-theme: list-theme(
 );
 ```
 
-リストのスタイル設定に使用できるパラメーターの完全なリストについては、[`list-theme`]({environment:sassApiUrl}/index.html#function-list-theme) セクションを参照してください。
+リストのスタイル設定に使用できるパラメーターの完全なリストについては、[`list-theme`]({environment:sassApiUrl}/themes#function-list-theme) セクションを参照してください。
 
 最後にコンポーネントのテーマを**含めます**。
 
@@ -640,28 +640,28 @@ $my-list-theme: list-theme(
            iframe-src="{environment:demosBaseUrl}/lists/list-sample-8" >
 </code-view>
 
-リスト コンポーネントに変更できるパラメーターの完全なリストについては、[IgxListComponent スタイル]({environment:sassApiUrl}/index.html#function-list-theme)を参照してください。
+リスト コンポーネントに変更できるパラメーターの完全なリストについては、[IgxListComponent スタイル]({environment:sassApiUrl}/themes#function-list-theme)を参照してください。
 
 ## API リファレンス
 
 この記事では Angular List コンポーネントについて説明しました。アバターおよびアイコンの Ignite UI for Angular コンポーネントを使用して連絡先項目のリストを作成し、カスタム項目レイアウトを作成してスタイル設定、更にリスト フィルタリングを追加しました。以下は、List コンポーネントのその他の API です。
 
 * [IgxListComponent API]({environment:angularApiUrl}/classes/igxlistcomponent.html)
-* [IgxListComponent スタイル]({environment:sassApiUrl}/index.html#function-list-theme)
+* [IgxListComponent スタイル]({environment:sassApiUrl}/themes#function-list-theme)
 * [IgxListItemComponent API]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 
 使用したその他の Angular コンポーネント:
 
 * [IgxAvatarComponent API]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
-* [IgxAvatarComponent スタイル]({environment:sassApiUrl}/index.html#function-avatar-theme)
+* [IgxAvatarComponent スタイル]({environment:sassApiUrl}/themes#function-avatar-theme)
 * [IgxIconComponent API]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxIconComponent スタイル]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxIconComponent スタイル]({environment:sassApiUrl}/themes#function-icon-theme)
 
 <div class="divider"></div>
 
 ## テーマの依存関係
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
-* [IgxAvatar テーマ]({environment:sassApiUrl}/index.html#function-avatar-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
+* [IgxAvatar テーマ]({environment:sassApiUrl}/themes#function-avatar-theme)
 
 ## その他のリソース
 

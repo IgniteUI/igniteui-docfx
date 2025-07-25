@@ -289,10 +289,10 @@ $my-palette: palette(
 ```
 
 ## API リファレンス
-* [パレット]({environment:sassApiUrl}/index.html#function-palette)
-* [パレット カラーの取得]({environment:sassApiUrl}/index.html#function-color)
-* [コントラスト カラーの取得]({environment:sassApiUrl}/index.html#function-contrast-color)
-* [カラー クラスの生成]({environment:sassApiUrl}/index.html#mixin-color-classes)
+* [パレット]({environment:sassApiUrl}/palettes#function-palette)
+* [パレット カラーの取得]({environment:sassApiUrl}/palettes#function-color) 
+* [コントラスト カラーの取得]({environment:sassApiUrl}/palettes#function-contrast-color)
+* [カラー クラスの生成]({environment:sassApiUrl}/utilities#mixin-color-classes)
 * [スキーマ](./schemas.md)
 
 ## その他のリソース

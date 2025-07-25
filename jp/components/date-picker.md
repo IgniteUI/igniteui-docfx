@@ -297,7 +297,7 @@ IgxDatePicker と [`IgxTimePicker`](time-picker.md) を一緒に使用する場�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Angular Date Picker はカレンダーのテーマを使用しているため、[`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) を拡張して新しいテーマを作成します。`$header-background` を指定することで、他のプロパティの視覚的なバランスとアクセシビリティを保つための色が自動的に算出されます。
+Angular Date Picker はカレンダーのテーマを使用しているため、[`calendar-theme`]({environment:sassApiUrl}/themes#function-calendar-theme) を拡張して新しいテーマを作成します。`$header-background` を指定することで、他のプロパティの視覚的なバランスとアクセシビリティを保つための色が自動的に算出されます。
 
 ```scss
 $custom-datepicker-theme: calendar-theme(
@@ -334,19 +334,19 @@ $custom-datepicker-theme: calendar-theme(
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
 * [IgxDateTimeEditorDirective]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html)
 * [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
-* [IgxCalendarComponent スタイル]({environment:sassApiUrl}/index.html#function-calendar-theme)
-* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxCalendarComponent スタイル]({environment:sassApiUrl}/themes#function-calendar-theme)
+* [IgxOverlay スタイル]({environment:sassApiUrl}/themes#function-overlay-theme)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
 ## テーマの依存関係
 <div class="divider--half"></div>
 
-* [IgxCalendar テーマ]({environment:sassApiUrl}/index.html#function-calendar-theme)
-* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-overlay-theme)
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-input-group-theme)
-* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-drop-down-theme)
+* [IgxCalendar テーマ]({environment:sassApiUrl}/themes#function-calendar-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/themes#function-overlay-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxInputGroup テーマ]({environment:sassApiUrl}/themes#function-input-group-theme)
+* [IgxDropDown テーマ]({environment:sassApiUrl}/themes#function-drop-down-theme)
 
 
 ## その他のリソース
