@@ -6,18 +6,21 @@ _language: kr
 mentionedTypes: ["XamGeographicMap", "ShapefileConverter"]
 ---
 
+NOTE: As of June 30, 2025 all Microsoft Bing Maps for Enterprise Basic (Free) accounts will be retired. If you're still using an unpaid Basic Account and key, now is the time to act to avoid service disruptions. Bing Maps for Enterprise license holders can continue to use Bing Maps in their applications until June 30,2028.
+
+For more details:
+
+[Microsoft Bing Blogs](https://blogs.bing.com/maps/2025-06/Bing-Maps-for-Enterprise-Basic-Account-shutdown-June-30,2025)
+
 # Angular Binding Imagery from Bing Maps
 
 Bing Maps is Microsoft’s® licensed geographic imagery mapping service. This geographic imagery service is accessible directly on the <a href="http://www.bing.com/maps" target="_blank">www.bing.com/maps</a>  web site. The Ignite UI for Angular map component displays geographic imagery from Bing Maps in the map’s background content using the [`IgxBingMapsMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxbingmapsmapimagery.html) class. However, by default the map component displays geographic imagery from the Open Street Maps in the map background content requiring you to configure the control to display Bing Maps’ geographic imagery. Prior to using Bing Maps’ geographic imagery, you must register and obtain a Bing Map API key from <a href="http://www.bingmapsportal.coms" target="_blank">www.bingmapsportal.com</a> You must use the Bing Maps’ API key to set the BingMapsMapImagery object’s ApiKey property.
 
 ## Demo
 
-<code-view style="height: 500px" alt="Angular geo map display bing imagery"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/display-bing-imagery"
-                                                 github-src="maps/geo-map/display-bing-imagery">
-</code-view>
+<!-- `sample="/maps/geo-map/display-bing-imagery", height="500", alt="Angular geo map display bing imagery"` -->
 
+<img src="../images/general/BingMapsImagery.png" />
 
 <div class="divider--half"></div>
 

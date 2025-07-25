@@ -27,6 +27,12 @@ The map's Series property is used to support rendering an unlimited number of ge
 
 The map provides customizable navigation behaviors for navigating map content using mouse, keyboard, or code-behind.
 
+NOTE: As of June 30, 2025 all Microsoft Bing Maps for Enterprise Basic (Free) accounts will be retired. If you're still using an unpaid Basic Account and key, now is the time to act to avoid service disruptions. Bing Maps for Enterprise license holders can continue to use Bing Maps in their applications until June 30,2028.
+
+For more details:
+
+[Microsoft Bing Blogs](https://blogs.bing.com/maps/2025-06/Bing-Maps-for-Enterprise-Basic-Account-shutdown-June-30,2025)
+
 <!-- Angular, React, WebComponents -->
 
 ## Dependencies
