@@ -124,7 +124,7 @@ $theme-colors: (
 );
 ```
 
-Ignite UI for Angular の [`palette`]({environment:sassApiUrl}/index.html#function-palette) 関数は、`primary`、`secondary`、`gray`、`info`、`success`、`warn`、`error` の各カラーとそのカラー バリエーションを含むカラー パレット マップを生成します。定義済みの bootstrap パレットは 7 カラーで構成されます。
+Ignite UI for Angular の [`palette`]({environment:sassApiUrl}/palettes#function-palette) 関数は、`primary`、`secondary`、`gray`、`info`、`success`、`warn`、`error` の各カラーとそのカラー バリエーションを含むカラー パレット マップを生成します。定義済みの bootstrap パレットは 7 カラーで構成されます。
 
 ```scss
 $bootstrap-palette: palette(
@@ -140,7 +140,7 @@ $bootstrap-palette: palette(
 
 ご覧の通り、Bootstrap パレットのほとんどのカラーは、Ignite UI for Angular の Bootstrap パレットで定義されたカラーと重複しています。したがって、Bootstrap テーマのカラーを light (明るい) または dark (暗い) bootstrap palette カラーにマップできます。
 
-最初に、[`$light-bootstrap-palette`]({environment:sassApiUrl}/index.html#variable-light-bootstrap-palette) から値を抽出する Sass 変数を定義します。
+最初に、[`$light-bootstrap-palette`]({environment:sassApiUrl}/palettes#variable-light-bootstrap-palette) から値を抽出する Sass 変数を定義します。
 
 ```scss
 // Colors from the Ignite UI light bootstrap color palette
@@ -177,7 +177,7 @@ $dark-secondary: color($custom-dark-palette, "secondary");
 
 #### Light モード
 
-Ignite UI for Angular には、[Bootstrap 4](https://getbootstrap.com/) ライブラリに基づいて構築された定義済みのテーマがあります。これらを使用するには、まず `core` ミックスインを含めて、次に定義済みテーマ ミックスイン ([bootstrap-light-theme]({environment:sassApiUrl}/index.html#mixin-bootstrap-light-theme)) を含める必要があります。定義済みの bootstrap パレット ([$light-bootstrap-palette]({environment:sassApiUrl}/index.html#variable-light-bootstrap-palette)) も使用します。
+Ignite UI for Angular には、[Bootstrap 4](https://getbootstrap.com/) ライブラリに基づいて構築された定義済みのテーマがあります。これらを使用するには、まず `core` ミックスインを含めて、次に定義済みテーマ ミックスイン ([bootstrap-light-theme]({environment:sassApiUrl}/themes#mixin-bootstrap-light-theme)) を含める必要があります。定義済みの bootstrap パレット ([$light-bootstrap-palette]({environment:sassApiUrl}/palettes#variable-light-bootstrap-palette)) も使用します。
 
 アプリケーションの背景色は、host 要素で明示的に設定する必要があります。サンプルでは、渡されたパレットの `surface` カラーを使用します。
 
@@ -336,7 +336,7 @@ Bootstrap `navbar` は背景色に CSS クラスを使用します。サンプ�
 
 ### タイポグラフィ
 
-Ignite UI for Angular は、テーマごとに 4 つのデフォルト タイプ スケールを公開します。これは、[`typography`]({environment:sassApiUrl}/index.html#mixin-typography) ミックスイン内でアプリケーションのグローバル タイポグラフィ スタイルを定義するために使用できます。この例では、bootstrap で定義済みの `typeface` および `type-scale` を適用しますが、必要に応じてカスタムの書体を作成できます。 
+Ignite UI for Angular は、テーマごとに 4 つのデフォルト タイプ スケールを公開します。これは、[`typography`]({environment:sassApiUrl}/typography#mixin-typography) ミックスイン内でアプリケーションのグローバル タイポグラフィ スタイルを定義するために使用できます。この例では、bootstrap で定義済みの `typeface` および `type-scale` を適用しますが、必要に応じてカスタムの書体を作成できます。 
 
 ```scss
 :host {
@@ -347,12 +347,12 @@ Ignite UI for Angular は、テーマごとに 4 つのデフォルト タイプ
 ## API リファレンス
 <div class="divider--half"></div>
 
-* [Light Bootstrap パレット]({environment:sassApiUrl}/index.html#variable-light-bootstrap-palette)
-* [Dark Bootstrap パレット]({environment:sassApiUrl}/index.html#variable-dark-bootstrap-palette)
-* [Light Bootstrap テーマ]({environment:sassApiUrl}/index.html#mixin-bootstrap-light-theme)
-* [Dark Bootstrap テーマ]({environment:sassApiUrl}/index.html#mixin-bootstrap-dark-theme)
-* [Palette Function]({environment:sassApiUrl}/index.html#function-palette)
-* [Typography Mixin]({environment:sassApiUrl}/index.html#mixin-typography)
+* [Light Bootstrap パレット]({environment:sassApiUrl}/palettes#variable-light-bootstrap-palette)
+* [Dark Bootstrap パレット]({environment:sassApiUrl}/palettes#variable-dark-bootstrap-palette)
+* [Light Bootstrap テーマ]({environment:sassApiUrl}/themes#mixin-bootstrap-light-theme)
+* [Dark Bootstrap テーマ]({environment:sassApiUrl}/themes#mixin-bootstrap-dark-theme)
+* [Palette Function]({environment:sassApiUrl}/palettes#function-palette)
+* [Typography Mixin]({environment:sassApiUrl}/typography#mixin-typography)
 
 関連トピック: 
 

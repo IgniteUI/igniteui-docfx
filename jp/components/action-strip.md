@@ -201,7 +201,7 @@ $custom-strip: action-strip-theme(
 
 以下の定義済み CSS スタイルを使用してアクション ストリップ レイアウトを構成しました。
 
-* [`IgxActionStripComponent スタイル`]({environment:sassApiUrl}/index.html#function-action-strip-theme)
+* [`IgxActionStripComponent スタイル`]({environment:sassApiUrl}/themes#function-action-strip-theme)
 
 アクション ストリップで使用できるその他のコンポーネントとディレクティブ。
 
@@ -214,10 +214,10 @@ $custom-strip: action-strip-theme(
 
 ## テーマの依存関係
 
-* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
-* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-drop-down-theme)
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
+* [IgxDropDown テーマ]({environment:sassApiUrl}/themes#function-drop-down-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## その他のリソース
 

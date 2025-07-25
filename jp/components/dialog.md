@@ -261,7 +261,7 @@ params: {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`dialog-theme`]({environment:sassApiUrl}/index.html#function-dialog-theme) を拡張し、ダイアログをスタイリングするためのパラメーターを指定して新しいテーマを作成します。`$background` を設定するだけで、前景用のプロパティに対して適切なコントラストの色が自動的に選ばれます。必要に応じて手動で指定することも可能です。
+最もシンプルな方法として、[`dialog-theme`]({environment:sassApiUrl}/themes#function-dialog-theme) を拡張し、ダイアログをスタイリングするためのパラメーターを指定して新しいテーマを作成します。`$background` を設定するだけで、前景用のプロパティに対して適切なコントラストの色が自動的に選ばれます。必要に応じて手動で指定することも可能です。
 
 ```scss
 $my-dialog-theme: dialog-theme(
@@ -328,15 +328,15 @@ $custom-button: contained-button-theme(
 <div class="divider--half"></div>
 
 * [IgxDialogComponent]({environment:angularApiUrl}/classes/igxdialogcomponent.html)
-* [IgxDialogComponent スタイル]({environment:sassApiUrl}/index.html#function-dialog-theme)
+* [IgxDialogComponent スタイル]({environment:sassApiUrl}/themes#function-dialog-theme)
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxOverlay スタイル]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## テーマの依存関係
 
-* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
-* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## その他のリソース
 
