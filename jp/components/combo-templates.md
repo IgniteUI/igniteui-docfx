@@ -15,7 +15,7 @@ Ignite UI for Angular ComboBox コンポーネントでは、ヘッダー、フ�
 
 <code-view style="height: 450px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-template" alt="Angular コンボボックス テンプレートの例">
+           iframe-src="{environment:demosBaseUrl}/lists/combo-template/" alt="Angular コンボボックス テンプレートの例">
 </code-view>
 
 
@@ -146,7 +146,7 @@ export class AppModule {}
 <div class="divider--half"></div>
 
 * [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
-* [IgxComboComponent スタイル]({environment:sassApiUrl}/index.html#function-combo-theme)
+* [IgxComboComponent スタイル]({environment:sassApiUrl}/themes#function-combo-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

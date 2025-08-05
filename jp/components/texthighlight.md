@@ -13,7 +13,7 @@ Ignite UI for Angular の [`IgxTextHighlightDirective`]({environment:angularApiU
 
 <code-view style="height: 260px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-1" alt="Angular TextHighlight ディレクティブの例">
+           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-1/" alt="Angular TextHighlight ディレクティブの例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -249,7 +249,7 @@ export class HomeComponent {
 
 <code-view style="height: 260px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-1" >
+           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-1/" >
 </code-view>
 
 <div class="divider"></div>
@@ -344,7 +344,7 @@ export class HomeComponent {
 
 <code-view style="height: 400px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-2" >
+           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-2/" >
 </code-view>
 
 <div class="divider"></div>
@@ -360,7 +360,7 @@ export class HomeComponent {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`highlight-theme`]({environment:sassApiUrl}/index.html#function-highlight-theme) を拡張する新しいテーマを作成し、`$resting-background`、`$resting-color`、`$active-background` と `$active-color` パラメーターを受け取る方法です。
+最も簡単な方法は、[`highlight-theme`]({environment:sassApiUrl}/themes#function-highlight-theme) を拡張する新しいテーマを作成し、`$resting-background`、`$resting-color`、`$active-background` と `$active-color` パラメーターを受け取る方法です。
 
 ```scss
 $dark-highlight: highlight-theme(
@@ -388,7 +388,7 @@ $dark-highlight: highlight-theme(
 
 ### カスタム スタイル
 
-[`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) ディレクティブの [`cssClass`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#cssclass) と [`activeCssClass`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#activecssclass) 入力を利用できます。これらのクラスを [`highlight-theme`]({environment:sassApiUrl}/index.html#function-highlight-theme) のスタイルと組み合わせて、優れたユーザー エクスペリエンスを提供できます。
+[`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) ディレクティブの [`cssClass`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#cssclass) と [`activeCssClass`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#activecssclass) 入力を利用できます。これらのクラスを [`highlight-theme`]({environment:sassApiUrl}/themes#function-highlight-theme) のスタイルと組み合わせて、優れたユーザー エクスペリエンスを提供できます。
 
 プロパティを持ついくつかの CSS クラスを作成し、上記の入力を使用してそれらを添付します。
 
@@ -436,7 +436,7 @@ $dark-highlight: highlight-theme(
 <code-view style="height: 300px;" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-style" >
+           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-style/" >
 </code-view>
 
 <div class="divider"></div>
@@ -450,7 +450,7 @@ TextHighlight ディレクティブの API に関する詳細な情報は、以�
 使用したその他のコンポーネント:
 
 * [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [`IgxInputGroupComponent スタイル`]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [`IgxInputGroupComponent スタイル`]({environment:sassApiUrl}/themes#function-input-group-theme)
 <div class="divider"></div>
 
 ## その他のリソース

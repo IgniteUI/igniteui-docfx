@@ -15,7 +15,7 @@ The sample below demonstrates remote binding using the [dataPreLoad]({environmen
 
 <code-view style="height: 400px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-remote" alt="Angular Combo Remote Binding Example">
+           iframe-src="{environment:demosBaseUrl}/lists/combo-remote/" alt="Angular Combo Remote Binding Example">
 </code-view>
 
 
@@ -79,7 +79,7 @@ When data is returned from a service as an observable, we can set it to the comb
            (closing)="onClosing()"
            (opened)="onOpened()"
            (closed)="onClosed()"
-           [filterable]="true">
+           [disableFiltering]="false">
 </igx-combo>
 ```
 
@@ -227,7 +227,7 @@ When the combobox is bound to remote data, setting value/selected items through 
 <div class="divider--half"></div>
 
 * [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
-* [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#function-combo-theme)
+* [IgxComboComponent Styles]({environment:sassApiUrl}/themes#function-combo-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

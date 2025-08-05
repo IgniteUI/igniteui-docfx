@@ -13,7 +13,7 @@ The sample below demonstrates how `Grid` works with nested `Cascading Combos`.
 @@if (igxName === 'IgxGrid') {
 <code-view style="height:500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-cascading-combos" alt="Angular @@igComponent Batch Editing and Transactions Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-cascading-combos/" alt="Angular @@igComponent Batch Editing and Transactions Example">
 </code-view>
 }
 
@@ -86,9 +86,9 @@ The [`id`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.htm
 <div class="divider--half"></div>
 
 * [IgxSimpleComboComponent]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html)
-* [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#function-combo-theme)
+* [IgxComboComponent Styles]({environment:sassApiUrl}/themes#function-combo-theme)
 * [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
-* [IgxLinearProgressBarComponent Styles]({environment:sassApiUrl}/index.html#function-progress-linear-theme)
+* [IgxLinearProgressBarComponent Styles]({environment:sassApiUrl}/themes#function-progress-linear-theme)
 
 ## Additional Resources
 

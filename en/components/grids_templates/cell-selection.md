@@ -34,7 +34,7 @@ The sample below demonstrates the three types of @@igComponent's **cell selectio
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-cell-selection" alt="Angular Cell Selection Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-cell-selection/" alt="Angular Cell Selection Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -44,7 +44,7 @@ The sample below demonstrates the three types of @@igComponent's **cell selectio
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-cell-selection" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-cell-selection/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -53,7 +53,7 @@ The sample below demonstrates the three types of @@igComponent's **cell selectio
 
 <code-view style="height:750px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-cell-selection" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-cell-selection/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -80,7 +80,7 @@ How to select cells:
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-cell-selection" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-cell-selection/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -91,7 +91,7 @@ How to select cells:
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -279,7 +279,7 @@ To get started with styling the selection, we need to import the `index` file, w
 
 ### Define colors
 
-Once done, we can make use of the [`contrast-color`]({environment:sassApiUrl}/index.html#function-contrast-color) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. With them, we define the colors we would like to use for our selection range:
+Once done, we can make use of the [`contrast-color`]({environment:sassApiUrl}/palettes#function-contrast-color) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. With them, we define the colors we would like to use for our selection range:
 
 ```scss
 $text-color: contrast-color($color: 'primary', $variant: 900);
@@ -292,7 +292,7 @@ $border-yellow: #f2c43c;
 
 ### Create custom theme
 
-Next we create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) passing our `text-color`, `background-color` and `border-yellow` variables as `$cell-selected-text-color`, `$cell-selected-background` and `$cell-active-border-color`, respectively:
+Next we create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) passing our `text-color`, `background-color` and `border-yellow` variables as `$cell-selected-text-color`, `$cell-selected-background` and `$cell-active-border-color`, respectively:
 
 ```scss
 $custom-grid-theme: grid-theme(
@@ -319,7 +319,7 @@ With the custom theme applied, the selected grid cells are highlighted with our 
 <code-view style="height:620px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-cell-selection-style" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-cell-selection-style/" >
 </code-view>
 
 }
@@ -330,7 +330,7 @@ With the custom theme applied, the selected grid cells are highlighted with our 
 <code-view style="height:620px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-cell-style" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-cell-style/" >
 </code-view>
 
 }
@@ -342,7 +342,7 @@ With the custom theme applied, the selected grid cells are highlighted with our 
 <code-view style="height:620px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection-style/" >
 </code-view>
 
 }
@@ -355,7 +355,7 @@ With the custom theme applied, the selected grid cells are highlighted with our 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow API]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

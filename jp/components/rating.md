@@ -17,7 +17,7 @@ Ignite UI Angular Star Rating コンポーネントは、igniteui-webcomponents 
 
 <code-view style="height: 550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-with-rating" alt="Angular Rating の例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-with-rating/" alt="Angular Rating の例">
 </code-view>
 
 
@@ -111,7 +111,7 @@ export class HomeComponent {
 
 <code-view style="height: 550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/rating-form" alt="Angular Rating の例">
+           iframe-src="{environment:demosBaseUrl}/data-entries/rating-form/" alt="Angular Rating の例">
 </code-view>
 
 Rating コンポーネントの使用方法の詳細については、[このトピック]({environment:infragisticsBaseUrl}/products/ignite-ui-web-components/web-components/components/inputs/rating.html)を参照してください。

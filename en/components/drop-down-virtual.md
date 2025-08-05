@@ -12,7 +12,7 @@ The Ignite UI for Angular Drop Down component can fully integrate with the [`Igx
 
 <code-view style="height:320px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-virtual" alt="Angular Virtual Drop Down Example">
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-virtual/" alt="Angular Virtual Drop Down Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -247,7 +247,7 @@ The result of the above configuration is a drop-down that dynamically loads the 
 
 <code-view style="height:400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-remote" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-remote/" >
 </code-view>
 
 <div class="divider--half"></div>

@@ -26,7 +26,7 @@ The following sample demonstrates how to enable row editing in the @@igComponent
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-row-editing" alt="Angular @@igComponent Row Editing Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-row-editing/" alt="Angular @@igComponent Row Editing Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -35,7 +35,7 @@ The following sample demonstrates how to enable row editing in the @@igComponent
 
 <code-view style="height:590px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-row-edit" alt="Angular @@igComponent Row Editing Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-row-edit/" alt="Angular @@igComponent Row Editing Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -44,7 +44,7 @@ The following sample demonstrates how to enable row editing in the @@igComponent
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-editing" alt="Angular @@igComponent Row Editing Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-editing/" alt="Angular @@igComponent Row Editing Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -328,7 +328,7 @@ Once we've imported the themes file, we can create custom themes.
 
 #### Define the theme
 
-We can now define a custom [`banner theme`]({environment:sassApiUrl}/index.html#function-banner-theme) that will affect our Row Editing background and make use of one of the predefined palettes namely `$purple-palette` :
+We can now define a custom [`banner theme`]({environment:sassApiUrl}/themes#function-banner-theme) that will affect our Row Editing background and make use of one of the predefined palettes namely `$purple-palette` :
 
 ```scss
 $banner-theme: banner-theme(
@@ -337,11 +337,11 @@ $banner-theme: banner-theme(
 );
 ```
 
-Here we are using `my-banner-palette` in conjunction with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) (exposed by the theme library) for generating our colors.
+Here we are using `my-banner-palette` in conjunction with [`igx-color`]({environment:sassApiUrl}/palettes#function-color) (exposed by the theme library) for generating our colors.
 
 ### Include the theme
 
-All we have to do now is apply the theme with a Sass `@include` statement. We pass our newly defined `$banner-theme` through the [`css-vars mixin`]({environment:sassApiUrl}/index.html#mixin-css-vars):
+All we have to do now is apply the theme with a Sass `@include` statement. We pass our newly defined `$banner-theme` through the [`css-vars mixin`]({environment:sassApiUrl}/themes#mixin-css-vars):
 
 ```scss
 @include css-vars($banner-theme);
@@ -386,7 +386,7 @@ To further customize our Row Editing overlay, we can pass a custom template so w
 </@@igSelector>
 ```
 
-After we've defined our custom buttons, we can make use of the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) to style them. You can learn more about `igx-button` styling [here](../button.md#styling). We can create a custom theme for our `Done` and `Cancel`:
+After we've defined our custom buttons, we can make use of the [`button-theme`]({environment:sassApiUrl}/themes#function-button-theme) to style them. You can learn more about `igx-button` styling [here](../button.md#styling). We can create a custom theme for our `Done` and `Cancel`:
 
 ```scss
 // custom.component.scss
@@ -413,7 +413,7 @@ After styling the banner and buttons, we also define a custom style for [the cel
 <code-view style="height:560px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-row-edit-style" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-row-edit-style/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -424,7 +424,7 @@ After styling the banner and buttons, we also define a custom style for [the cel
 <code-view style="height:560px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-edit-style" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-edit-style/" >
 </code-view>
 
 }
@@ -435,7 +435,7 @@ After styling the banner and buttons, we also define a custom style for [the cel
 <code-view style="height:560px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-row-edit-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-row-edit-style/" >
 </code-view>
 
 }

@@ -13,7 +13,7 @@ _language: kr
 
 <code-view style="height:220px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-4/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -74,7 +74,7 @@ If the sample is configured properly, a dropdown with several options should be 
 
 <code-view style="height: 200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-1/" >
 </code-view>
 
 
@@ -111,7 +111,7 @@ export class MyDropDownComponent {
 
 <code-view style="height: 200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-2/" >
 </code-view>
 
 
@@ -157,7 +157,7 @@ If the sample is configured properly, a list  of countries should be displayed a
 
 <code-view style="height: 298px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-3/" >
 </code-view>
 
 
@@ -235,7 +235,7 @@ You can see the results in the sample below:
 
 <code-view style="height: 298px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-5/" >
 </code-view>
 
 
@@ -294,7 +294,7 @@ export class MyMenuComponent {
 
 <code-view style="height: 280px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-menu" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-menu/" >
 </code-view>
 
 
@@ -358,7 +358,7 @@ export class InputDropDownComponent {
 
 <code-view style="height:220px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-4/" >
 </code-view>
 
 <div class="divider--half"></div>

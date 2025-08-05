@@ -49,7 +49,7 @@ public handleRowSelection(event: IRowSelectionEventArgs) {
 
 <code-view style="height:700px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-selection" alt="Angular Row Selection Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-selection/" alt="Angular Row Selection Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -58,7 +58,7 @@ public handleRowSelection(event: IRowSelectionEventArgs) {
 
 <code-view style="height:700px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-selection" alt="Angular Row Selection Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-selection/" alt="Angular Row Selection Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -67,7 +67,7 @@ public handleRowSelection(event: IRowSelectionEventArgs) {
 
 <code-view style="height:710px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection" alt="Angular Row Selection Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection/" alt="Angular Row Selection Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -447,7 +447,7 @@ This demo shows the usage of custom header and row selectors. The latter uses `r
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-selection-template-numbering" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-selection-template-numbering/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -456,7 +456,7 @@ This demo shows the usage of custom header and row selectors. The latter uses `r
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-selection-template-numbers" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-selection-template-numbers/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -465,7 +465,7 @@ This demo shows the usage of custom header and row selectors. The latter uses `r
 
 <code-view style="height:610px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection-template-numbers" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection-template-numbers/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -477,7 +477,7 @@ This demo uses custom templates to resemble Excel-like header and row selectors.
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-selection-template-excel" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-selection-template-excel/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -489,7 +489,7 @@ This demo prevents some rows from being selected using the `rowSelectionChanging
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-conditional-row-selectors" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-conditional-row-selectors/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -498,7 +498,7 @@ This demo prevents some rows from being selected using the `rowSelectionChanging
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-conditional-row-selectors" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-conditional-row-selectors/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -507,7 +507,7 @@ This demo prevents some rows from being selected using the `rowSelectionChanging
 
 <code-view style="height:630px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-conditional-row-selectors" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-conditional-row-selectors/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -518,7 +518,7 @@ This demo prevents some rows from being selected using the `rowSelectionChanging
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow API]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

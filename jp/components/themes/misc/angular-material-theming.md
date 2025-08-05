@@ -24,7 +24,7 @@ Ignite UI for Angular は、マテリアル ベースの UI ウィジェット�
 
 <code-view style="height: 1100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/theming/angular-sample" >
+           iframe-src="{environment:demosBaseUrl}/theming/angular-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -103,7 +103,7 @@ Ignite UI テーマ エンジンを使用してコンポーネントのスタイ
 
 ### カラー パレット
 
-Ignite UI for Angular の [`palette`]({environment:sassApiUrl}/index.html#function-palette) 関数は、`primary`、`secondary`、`gray` の 3 つのサブパレットと、`info`、`success`、`warn`、`error` および `surface` の 5 つの追加カラーを含むカラー パレット マップを生成します。テーマ エンジンは、カラー バリエーションごとに、実行時にテキストのコントラスト カラーを自動的に生成します。これもパレットに含まれています。以下に、事前定義されたライト マテリアル パレットを示します:
+Ignite UI for Angular の [`palette`]({environment:sassApiUrl}/palettes#function-palette) 関数は、`primary`、`secondary`、`gray` の 3 つのサブパレットと、`info`、`success`、`warn`、`error` および `surface` の 5 つの追加カラーを含むカラー パレット マップを生成します。テーマ エンジンは、カラー バリエーションごとに、実行時にテキストのコントラスト カラーを自動的に生成します。これもパレットに含まれています。以下に、事前定義されたライト マテリアル パレットを示します:
 
 ```scss
 $igx-light-palette: palette(
@@ -234,7 +234,7 @@ $custom-mat-dark-theme: mat.define-dark-theme((
 
 `light` モードと `dark` モードを切り替えるために、ボタン クリックで変更されるカスタム `dark` クラスを追加します。スタイルシート ファイルに、各クラスにスコープされた異なるカラー パレットを含めます。
 
-Ignite UI for Angular には、[マテリアル デザイン](https://material.io/design)に基づいて事前定義されたテーマが付属しています。それらを使用するには、最初に `core` ミックスインを含め、次に組み込みのテーマ ミックスイン ([theme]({environment:sassApiUrl}/index.html#mixin-theme)) を含める必要があります。また、事前定義されたマテリアル パレット - [$light-material-palette]({environment:sassApiUrl}/index.html#variable-light-material-palette) および [$dark-material-palette]({environment:sassApiUrl}/index.html#variable-dark-material-palette) も使用します。 
+Ignite UI for Angular には、[マテリアル デザイン](https://material.io/design)に基づいて事前定義されたテーマが付属しています。それらを使用するには、最初に `core` ミックスインを含め、次に組み込みのテーマ ミックスイン ([theme]({environment:sassApiUrl}/themes#mixin-theme)) を含める必要があります。また、事前定義されたマテリアル パレット - [$light-material-palette]({environment:sassApiUrl}/palettes#variable-light-material-palette) および [$dark-material-palette]({environment:sassApiUrl}/palettes#variable-dark-material-palette) も使用します。 
 
 Angular Material コンポーネントの場合、前述のカスタム マテリアル テーマに `core` ミックスインを含めてから、`all-component-themes` ミックスインを含める必要があります。
 
@@ -361,7 +361,7 @@ Angular Material `toolbar` は背景色に CSS クラスを使用します。サ
 
 ### Angular コンポーネントのタイポグラフィ
 
-Ignite UI for Angular は、テーマごとに 4 つのデフォルト タイプ スケールを公開します。これは、[`typography`]({environment:sassApiUrl}/index.html#mixin-typography) ミックスイン内でアプリケーションのグローバル タイポグラフィ スタイルを定義するために使用できます。この例では、material で定義済みの `typeface` および `type-scale` を適用しますが、必要に応じてカスタムの書体を作成できます。 
+Ignite UI for Angular は、テーマごとに 4 つのデフォルト タイプ スケールを公開します。これは、[`typography`]({environment:sassApiUrl}/typography#mixin-typography) ミックスイン内でアプリケーションのグローバル タイポグラフィ スタイルを定義するために使用できます。この例では、material で定義済みの `typeface` および `type-scale` を適用しますが、必要に応じてカスタムの書体を作成できます。 
 
 ```scss
 :host {
@@ -395,12 +395,12 @@ $custom-mat-light-theme: mat.define-light-theme((
 ## API リファレンス
 <div class="divider--half"></div>
 
-* [Light Material パレット]({environment:sassApiUrl}/index.html#variable-light-material-palette)
-* [Dark Material パレット]({environment:sassApiUrl}/index.html#variable-dark-material-palette)
-* [Light Material テーマ]({environment:sassApiUrl}/index.html#mixin-light-theme)
-* [Dark Material テーマ]({environment:sassApiUrl}/index.html#mixin-dark-theme)
-* [Palette Function]({environment:sassApiUrl}/index.html#function-igx-palette)
-* [Typography Mixin]({environment:sassApiUrl}/index.html#mixin-typography)
+* [Light Material パレット]({environment:sassApiUrl}/palettes#variable-light-material-palette)
+* [Dark Material パレット]({environment:sassApiUrl}/palettes#variable-dark-material-palette)
+* [Light Material テーマ]({environment:sassApiUrl}/themes#mixin-light-theme)
+* [Dark Material テーマ]({environment:sassApiUrl}/themes#mixin-dark-theme)
+* [Palette Function]({environment:sassApiUrl}/palettes#function-palette)
+* [Typography Mixin]({environment:sassApiUrl}/typography#mixin-typography)
 
 関連トピック: 
 

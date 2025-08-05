@@ -122,7 +122,7 @@ Ignite UI for Angular Divider モジュールまたはディレクティブを�
 <div class="divider--half"></div>
 
 * [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
-* [IgxDividerDirective スタイル]({environment:sassApiUrl}/index.html#function-divider-theme)
+* [IgxDividerDirective スタイル]({environment:sassApiUrl}/themes#function-divider-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

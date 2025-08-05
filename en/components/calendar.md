@@ -21,7 +21,7 @@ We created the following Angular Calendar example using the Ignite UI for Angula
 
 <code-view style="height: 480px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-5" alt="Angular Calendar Example">
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-5/" alt="Angular Calendar Example">
 </code-view>
 
 
@@ -108,7 +108,7 @@ We can easily change the default mode using the [`selection`]({environment:angul
 
 <code-view style="height: 360px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-1/" >
 </code-view>
 
 
@@ -125,7 +125,7 @@ Following the same approach, we can switch to range selection mode:
 
 <code-view style="height: 480px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-8" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-8/" >
 </code-view>
 
 
@@ -175,7 +175,7 @@ If everything went well, we should now have a calendar with customized dates dis
 
 <code-view style="height: 580px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-2/" >
 </code-view>
 
 
@@ -206,7 +206,7 @@ These configurations should have the following result:
 
 <code-view style="height: 420px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-6" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-6/" >
 </code-view>
 
 
@@ -257,7 +257,7 @@ The following demo illustrates a calendar with a vacation request option:
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-7" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-7/" >
 </code-view>
 
 
@@ -275,7 +275,7 @@ The following demo illustrates a calendar with enabled week numbers:
 
 <code-view style="height: 380px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-1/" >
 </code-view>
 
 
@@ -318,7 +318,7 @@ Use the demo below to play around (change selection, navigate through months and
 
 <code-view style="height: 420px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-3/" >
 </code-view>
 
 
@@ -330,7 +330,7 @@ There are separate views provided by the `IgxCalendarModule` that can be used in
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-days-view" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-days-view/" >
 </code-view>
 
 
@@ -339,7 +339,7 @@ There are separate views provided by the `IgxCalendarModule` that can be used in
 
 <code-view style="height: 290px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-months-view" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-months-view/" >
 </code-view>
 
 
@@ -348,7 +348,7 @@ There are separate views provided by the `IgxCalendarModule` that can be used in
 
 <code-view style="height: 320px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-years-view" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-years-view/" >
 </code-view>
 
 
@@ -407,7 +407,7 @@ Multi-view calendar supports all three types of selection. Use the [`monthsViewN
 
 <code-view style="height: 500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/multiview-calendar" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/multiview-calendar/" >
 </code-view>
 
 ## Calendar Orientation
@@ -451,7 +451,7 @@ export class CalendarSample9Component {
 
 <code-view style="height: 750px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-9" alt="Angular Calendar Orientation Example">
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-9/" alt="Angular Calendar Orientation Example">
 </code-view>
 
 ## Styling
@@ -465,7 +465,7 @@ To get started with styling the calendar, we need to import the `index` file, wh
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) and by specifying just the `$header-background` and `$content-background` parameters, the theme will automatically compute appropriate state colors and contrast foregrounds. Of course, you're still free to override any of the theme parameters with custom values if needed.
+Following the simplest approach, we create a new theme that extends the [`calendar-theme`]({environment:sassApiUrl}/themes#function-calendar-theme) and by specifying just the `$header-background` and `$content-background` parameters, the theme will automatically compute appropriate state colors and contrast foregrounds. Of course, you're still free to override any of the theme parameters with custom values if needed.
 
 ```scss
 $custom-calendar-theme: calendar-theme(
@@ -483,7 +483,7 @@ The last step is to pass the custom calendar theme:
 <code-view style="height:500px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-styling-sample/" >
 </code-view>
 
 
@@ -491,7 +491,7 @@ The last step is to pass the custom calendar theme:
 <div class="divider--half"></div>
 
 * [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
-* [IgxCalendarComponent Styles]({environment:sassApiUrl}/index.html#function-calendar-theme)
+* [IgxCalendarComponent Styles]({environment:sassApiUrl}/themes#function-calendar-theme)
 * [DateRangeType]({environment:angularApiUrl}/enums/daterangetype.html)
 * [DateRangeDescriptor]({environment:angularApiUrl}/interfaces/daterangedescriptor.html)
 

@@ -24,7 +24,7 @@ Multi-column headers allow you to have multiple levels of nested columns and col
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-collapsible-groups" alt="Angular Grid Collapsible Column Groups Overview Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-collapsible-groups/" alt="Angular Grid Collapsible Column Groups Overview Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -34,7 +34,7 @@ Multi-column headers allow you to have multiple levels of nested columns and col
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-collapsible-groups" alt="Angular Grid Collapsible Column Groups Overview Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-collapsible-groups/" alt="Angular Grid Collapsible Column Groups Overview Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -43,7 +43,7 @@ Multi-column headers allow you to have multiple levels of nested columns and col
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-collapsible-column-groups" alt="Angular Grid Collapsible Column Groups Overview Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-collapsible-column-groups/" alt="Angular Grid Collapsible Column Groups Overview Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -151,7 +151,7 @@ Another way to achieve this behavior is to use the igxCollapsibleIndicator direc
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/themes#mixin-grid)
 
 ## Additional Resources
 <div class="divider--half"></div>

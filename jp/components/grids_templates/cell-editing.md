@@ -515,7 +515,7 @@ export class MyHGridEventsComponent {
 
 ## スタイル設定
 
-@@igxName で [`Ignite UI for Angular テーマ ライブラリ`](../themes/sass/component-themes.md)を使用してセルのスタイルを設定できます。グリッドの [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) は、ユーザーがグリッドのさまざまな側面をスタイル設定できる広範なプロパティを公開します。
+@@igxName で [`Ignite UI for Angular テーマ ライブラリ`](../themes/sass/component-themes.md)を使用してセルのスタイルを設定できます。グリッドの [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) は、ユーザーがグリッドのさまざまな側面をスタイル設定できる広範なプロパティを公開します。
 
 以下の手順では、編集モードでグリッドのセルのスタイルを設定する方法と、それらのスタイルの範囲を設定する方法について説明します。
 
@@ -550,7 +550,7 @@ $color-palette: palette(
 
 ### テーマの定義
 
-これで、パレットを使用してテーマを定義できます。セルは [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) によってスタイル設定されているため、それを使用して @@igxName のテーマを生成できます。
+これで、パレットを使用してテーマを定義できます。セルは [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) によってスタイル設定されているため、それを使用して @@igxName のテーマを生成できます。
 
 ```scss
 $custom-grid-theme: grid-theme(
@@ -608,15 +608,15 @@ $custom-grid-theme: grid-theme(
 ## API リファレンス
 
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
-* [IgxDatePickerComponent スタイル]({environment:sassApiUrl}/index.html#function-date-picker-theme)
+* [IgxDatePickerComponent スタイル]({environment:sassApiUrl}/themes#function-date-picker-theme)
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
-* [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/index.html#function-checkbox-theme)
+* [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/themes#function-checkbox-theme)
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxOverlay スタイル]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 
 ## その他のリソース

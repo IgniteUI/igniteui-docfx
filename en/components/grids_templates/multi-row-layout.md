@@ -13,7 +13,7 @@ Multi-row Layout extends the rendering capabilities of the `igxGridComponent`. T
 
 <code-view style="height:755px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout" alt="Angular Multi-row Layout Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout/" alt="Angular Multi-row Layout Example">
 </code-view>
 
 
@@ -104,7 +104,7 @@ The demo below adds additional navigation down/up via the <kbd>Enter</kbd> and <
 
 <code-view style="height:605px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-mrl-custom-navigation" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-mrl-custom-navigation/" >
 </code-view>
 
 
@@ -127,7 +127,7 @@ By default we have set the same columns as our previous sample, but it can be cl
 </div>
 
 ## Styling
-The igxGrid allows styling through the [`Ignite UI for Angular Theme Library`](../themes/sass/component-themes.md). The [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
+The igxGrid allows styling through the [`Ignite UI for Angular Theme Library`](../themes/sass/component-themes.md). The [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
 
 In the below steps, we are going through the steps of customizing the grid's Multi-row Layout styling.     
 
@@ -142,7 +142,7 @@ To begin the customization of the Multi-row Layout feature, you need to import t
 ``` 
 
 ### Defining custom theme
-Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the parameters, required to customize the feature layout as desired.   
+Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) and accepts the parameters, required to customize the feature layout as desired.   
 
 ```scss
 $custom-theme: grid-theme(
@@ -158,7 +158,7 @@ $custom-theme: grid-theme(
 ```    
 
 >[!NOTE]
->Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 ### Applying the custom theme
 The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file:  
@@ -177,7 +177,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 <code-view style="height:755px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout-styling" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout-styling/" >
 </code-view>
 
 >[!NOTE]
@@ -188,7 +188,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 <div class="divider--half"></div>
 
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 * [IgxColumnLayoutComponent]({environment:angularApiUrl}/classes/igxcolumnlayoutcomponent.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 <div class="divider--half"></div>

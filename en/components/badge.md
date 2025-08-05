@@ -11,7 +11,7 @@ _keywords: Angular Badge component, Angular Badge control, Ignite UI for Angular
 
 <code-view style="height:100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-2" alt="Angular Badge Example">
+           iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-2/" alt="Angular Badge Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -153,7 +153,7 @@ Then, just specify the icon name and family as follows:
 
 <code-view style="height: 100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/badge-icon" >
+           iframe-src="{environment:demosBaseUrl}/data-display/badge-icon/" >
 </code-view>
 
 ### Badge in List
@@ -283,7 +283,7 @@ If the sample is configured properly, a list of members should be displayed and 
 
 <code-view style="height: 280px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-3/" >
 </code-view>
 
 ## Styling
@@ -297,7 +297,7 @@ To get started with styling the badges, we need to import the `index` file, wher
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`badge-theme`]({environment:sassApiUrl}/index.html#function-badge-theme) and accepts some parameters that style the badge's items. When you set the `$background-color`, the `$icon-color` and `$text-color` are automatically assigned based on which offers better contrast—black or white. Note that the `$border-radius` property only takes effect when the badge's `shape` is set to `square`.
+Following the simplest approach, we create a new theme that extends the [`badge-theme`]({environment:sassApiUrl}/themes#function-badge-theme) and accepts some parameters that style the badge's items. When you set the `$background-color`, the `$icon-color` and `$text-color` are automatically assigned based on which offers better contrast—black or white. Note that the `$border-radius` property only takes effect when the badge's `shape` is set to `square`.
 
 ```scss
 $custom-badge-theme: badge-theme(
@@ -317,7 +317,7 @@ To include the new theme we use the `css-vars` mixin:
 <code-view style="height:340px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/badge-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/data-display/badge-styling-sample/" >
 </code-view>
 
 
@@ -326,13 +326,13 @@ To include the new theme we use the `css-vars` mixin:
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
 * [IgxBadgeComponent]({environment:angularApiUrl}/classes/igxbadgecomponent.html)
-* [IgxBadgeComponent Styles]({environment:sassApiUrl}/index.html#function-badge-theme)
+* [IgxBadgeComponent Styles]({environment:sassApiUrl}/themes#function-badge-theme)
 * [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
 * [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 * [IgxBadgeType]({environment:angularApiUrl}/index.html#IgxBadgeType)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

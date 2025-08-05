@@ -34,7 +34,7 @@ Ignite UI for Angular @@igComponent は、デフォルトおよび編集テン�
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-column-data-types" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-column-data-types/" >
 </code-view>
 }
 @@if (igxName === 'IgxTreeGrid') {

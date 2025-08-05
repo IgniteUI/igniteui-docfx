@@ -151,7 +151,7 @@ See the demo that was built following the guidance. Play around with it and try 
 
 <code-view style="height:410px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-crud" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-crud/" >
 </code-view>
 
 # Customizations

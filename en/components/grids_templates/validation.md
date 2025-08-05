@@ -29,7 +29,7 @@ The following sample demonstrates how to use the prebuilt `required`, `email` an
 @@if (igxName === 'IgxGrid') {
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-validator-service" alt="Angular @@igComponent Validation Basic Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-validator-service/" alt="Angular @@igComponent Validation Basic Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -37,7 +37,7 @@ The following sample demonstrates how to use the prebuilt `required`, `email` an
 @@if (igxName === 'IgxTreeGrid') {
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validator-service" alt="Angular @@igComponent Validation Basic Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validator-service/" alt="Angular @@igComponent Validation Basic Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -45,7 +45,7 @@ The following sample demonstrates how to use the prebuilt `required`, `email` an
 @@if (igxName === 'IgxHierarchicalGrid') {
 <code-view style="height:680px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validator-service" alt="Angular @@igComponent Validation Basic Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validator-service/" alt="Angular @@igComponent Validation Basic Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -204,7 +204,7 @@ The below example demonstrates the above-mentioned customization options.
 @@if (igxName === 'IgxGrid') {
 <code-view style="height:570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-validator-service-extended" alt="Angular @@igComponent Custom Validation Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-validator-service-extended/" alt="Angular @@igComponent Custom Validation Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -212,7 +212,7 @@ The below example demonstrates the above-mentioned customization options.
 @@if (igxName === 'IgxTreeGrid') {
 <code-view style="height:570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validator-service-extended" alt="Angular @@igComponent Custom Validation Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validator-service-extended/" alt="Angular @@igComponent Custom Validation Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -220,7 +220,7 @@ The below example demonstrates the above-mentioned customization options.
 @@if (igxName === 'IgxHierarchicalGrid') {
 <code-view style="height:640px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validator-service-extended" alt="Angular @@igComponent Custom Validation Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validator-service-extended/" alt="Angular @@igComponent Custom Validation Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -550,7 +550,7 @@ The below sample demonstrates the cross-field validation in action.
 
 <code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-cross-field-validator-service" alt="Angular @@igComponent Cross-field Validation Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-cross-field-validator-service/" alt="Angular @@igComponent Cross-field Validation Example">
 </code-view>
 }
 
@@ -560,7 +560,7 @@ The below sample demonstrates cross-field validation in a Hierarchical Grid for 
 
 <code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-cross-field-validation" alt="Angular @@igComponent Cross-field Validation Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-cross-field-validation/" alt="Angular @@igComponent Cross-field Validation Example">
 </code-view>
 }
 
@@ -569,7 +569,7 @@ The below sample demonstrates the cross-field validation in action.
 
 <code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-cross-field-validator-service" alt="Angular @@igComponent Cross-field Validation Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-cross-field-validator-service/" alt="Angular @@igComponent Cross-field Validation Example">
 </code-view>
 }
 
@@ -688,7 +688,7 @@ public cellStyles = {
 <code-view style="height:560px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-validation-style" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-validation-style/" >
 </code-view>
 }
 
@@ -697,7 +697,7 @@ public cellStyles = {
 <code-view style="height:630px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validation-style" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validation-style/" >
 </code-view>
 
 }
@@ -708,7 +708,7 @@ public cellStyles = {
 <code-view style="height:560px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validation-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validation-style/" >
 </code-view>
 
 }

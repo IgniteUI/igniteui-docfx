@@ -32,7 +32,7 @@ Ignite UI for Angular @@igComponent component provides a great data manipulation
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-editing" alt="Angular @@igComponent cell editing and edit templates Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-editing/" alt="Angular @@igComponent cell editing and edit templates Example">
 </code-view>
 
 }
@@ -40,7 +40,7 @@ Ignite UI for Angular @@igComponent component provides a great data manipulation
 
 <code-view style="height:950px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-editing" alt="Angular @@igComponent cell editing and edit templates Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-editing/" alt="Angular @@igComponent cell editing and edit templates Example">
 </code-view>
 
 }
@@ -48,7 +48,7 @@ Ignite UI for Angular @@igComponent component provides a great data manipulation
 
 <code-view style="height:660px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing" alt="Angular @@igComponent cell editing and edit templates Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing/" alt="Angular @@igComponent cell editing and edit templates Example">
 </code-view>
 
 }
@@ -163,7 +163,7 @@ This code is used in the sample below which implements an [`IgxSelectComponent`]
 
 <code-view style="height:625px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-select" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-select/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -259,7 +259,7 @@ Please check the full sample for further reference:
 <code-view style="height:550px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-editing-excel-style" alt="Angular Grid Excel Style Editing Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-editing-excel-style/" alt="Angular Grid Excel Style Editing Example">
 </code-view>
 
 
@@ -490,7 +490,7 @@ The result of the above validation being applied to our `@@igSelector` can be se
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-editing-events" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-editing-events/" >
 </code-view>
 
 }
@@ -498,7 +498,7 @@ The result of the above validation being applied to our `@@igSelector` can be se
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-editing-events" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-editing-events/" >
 </code-view>
 
 }
@@ -506,7 +506,7 @@ The result of the above validation being applied to our `@@igSelector` can be se
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing-events" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing-events/" >
 </code-view>
 
 }
@@ -514,7 +514,7 @@ The result of the above validation being applied to our `@@igSelector` can be se
 
 ## Styling
 
-The @@igxName allows for its cells to be styled through the [`Ignite UI for Angular Theme Library`](../themes/sass/component-themes.md). The grid's [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) exposes a wide range of properties, which allow users to style many different aspects of the grid.
+The @@igxName allows for its cells to be styled through the [`Ignite UI for Angular Theme Library`](../themes/sass/component-themes.md). The grid's [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) exposes a wide range of properties, which allow users to style many different aspects of the grid.
 
 In the below steps, we are going to go over how you can style the grid's cell in edit mode and how you can scope those styles.
 
@@ -548,7 +548,7 @@ $color-palette: palette(
 
 ### Defining themes
 
-We can now define the theme using our palette. The cells are styled by the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme), so we can use that to generate a theme for our @@igxName:
+We can now define the theme using our palette. The cells are styled by the [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme), so we can use that to generate a theme for our @@igxName:
 
 ```scss
 $custom-grid-theme: grid-theme(
@@ -576,7 +576,7 @@ In addition to the steps above, we can also style the controls that are used for
 <code-view style="height:650px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-editing-style" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-editing-style/" >
 </code-view>
 
 }
@@ -585,7 +585,7 @@ In addition to the steps above, we can also style the controls that are used for
 <code-view style="height:950px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-editing-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-editing-style/" >
 </code-view>
 
 }
@@ -594,7 +594,7 @@ In addition to the steps above, we can also style the controls that are used for
 <code-view style="height:660px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing-style" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing-style/" >
 </code-view>
 
 }
@@ -606,15 +606,15 @@ In addition to the steps above, we can also style the controls that are used for
 ## API References
 
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
-* [IgxDatePickerComponent Styles]({environment:sassApiUrl}/index.html#function-date-picker-theme)
+* [IgxDatePickerComponent Styles]({environment:sassApiUrl}/themes#function-date-picker-theme)
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
-* [IgxCheckboxComponent Styles]({environment:sassApiUrl}/index.html#function-checkbox-theme)
+* [IgxCheckboxComponent Styles]({environment:sassApiUrl}/themes#function-checkbox-theme)
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 
 ## Additional Resources

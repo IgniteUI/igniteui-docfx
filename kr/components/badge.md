@@ -13,7 +13,7 @@ _language: kr
 
 <code-view style="height:280px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-3/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -126,7 +126,7 @@ If the sample is configured properly, a list with members' name and status shoul
 
 <code-view style="height: 280px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-1/" >
 </code-view>
 
 
@@ -158,7 +158,7 @@ Let's add an avatar in front of every chat member. To do this, put another div e
 
 <code-view style="height: 280px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-2/" >
 </code-view>
 
 
@@ -209,7 +209,7 @@ If the sample is configured properly, a list of members should be displayed and 
 
 <code-view style="height: 280px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-3/" >
 </code-view>
 
 

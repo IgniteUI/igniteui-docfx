@@ -12,7 +12,7 @@ _keywords: Angular Chip, Angular Chip Component, Angular Chip Area, Angular Chip
 
 <code-view style="height: 100px; padding-top: 10px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/chip-simple" alt="Angular Chip Example">
+           iframe-src="{environment:demosBaseUrl}/data-display/chip-simple/" alt="Angular Chip Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -190,7 +190,7 @@ If everything went well, you should see this in your browser:
 
 <code-view style="height: 100px; padding-top: 10px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/chip-simple" >
+           iframe-src="{environment:demosBaseUrl}/data-display/chip-simple/" >
 </code-view>
 
 ### Chip Templates
@@ -318,7 +318,7 @@ If everything went well, you should see this in your browser:
 
 <code-view style="height: 100px; padding-top: 10px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/chip-simple" >
+           iframe-src="{environment:demosBaseUrl}/data-display/chip-simple/" >
 </code-view>
 
 ## Chip Area
@@ -475,7 +475,7 @@ If everything's set up correctly, you should see this in your browser:
 
 <code-view style="height: 100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/chip-area-sample" >
+           iframe-src="{environment:demosBaseUrl}/data-display/chip-area-sample/" >
 </code-view>
 
 ## Styling
@@ -489,7 +489,7 @@ To get started with styling the chip, we need to import the `index` file, where 
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme) and accepts some parameters that style the chip's items. By specifying the `$background` or the `$selected-background`, the theme automatically calculates appropriate state colors and contrast foregrounds. You can still override any other parameter with custom values as needed.
+Following the simplest approach, we create a new theme that extends the [`chip-theme`]({environment:sassApiUrl}/themes#function-chip-theme) and accepts some parameters that style the chip's items. By specifying the `$background` or the `$selected-background`, the theme automatically calculates appropriate state colors and contrast foregrounds. You can still override any other parameter with custom values as needed.
 
 ```scss
 $custom-theme: chip-theme(
@@ -511,7 +511,7 @@ The last step is to **include** the component theme in our application.
 <code-view style="height:100px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/chip-styling" >
+           iframe-src="{environment:demosBaseUrl}/data-display/chip-styling/" >
 </code-view>
 
 ### Custom sizing
@@ -551,12 +551,12 @@ Learn more about it in the [Size](display-density.md) article.
 ## API
 
 * [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
-* [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-chip-theme)
+* [IgxChipComponent Styles]({environment:sassApiUrl}/themes#function-chip-theme)
 * [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
 
 ## Theming Dependencies
 
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## References
 

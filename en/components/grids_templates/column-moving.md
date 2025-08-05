@@ -47,7 +47,7 @@ The @@igComponent component in Ignite UI for Angular provides the **Column Movin
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-moving-sample" alt="Angular @@igComponent Column Moving Overview Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-moving-sample/" alt="Angular @@igComponent Column Moving Overview Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -56,7 +56,7 @@ The @@igComponent component in Ignite UI for Angular provides the **Column Movin
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-moving" alt="Angular @@igComponent Column Moving Overview Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-moving/" alt="Angular @@igComponent Column Moving Overview Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -65,7 +65,7 @@ The @@igComponent component in Ignite UI for Angular provides the **Column Movin
 
 <code-view style="height:660px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-moving" alt="Angular @@igComponent Column Moving Overview Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-moving/" alt="Angular @@igComponent Column Moving Overview Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -184,7 +184,7 @@ To get started with styling the @@igComponent column moving headers, we need to 
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the `$ghost-header-background`, `$ghost-header-text-color` and the `$ghost-header-icon-color` parameters.
+Following the simplest approach, we create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) and accepts the `$ghost-header-background`, `$ghost-header-text-color` and the `$ghost-header-icon-color` parameters.
 
 ```scss
 // Define dark theme for the column moving
@@ -196,7 +196,7 @@ $dark-grid-column-moving-theme: grid-theme(
 ```
 
 >[!NOTE]
->Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 The last step is to **include** the component mixins with its respective theme:
 
@@ -211,7 +211,7 @@ The last step is to **include** the component mixins with its respective theme:
 <code-view style="height:650px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-moving-styled-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-moving-styled-sample/" >
 </code-view>
 
 }
@@ -221,7 +221,7 @@ The last step is to **include** the component mixins with its respective theme:
 <code-view style="height:650px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-moving-styled" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-moving-styled/" >
 </code-view>
 
 }
@@ -231,7 +231,7 @@ The last step is to **include** the component mixins with its respective theme:
 <code-view style="height:660px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-moving-styled" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-moving-styled/" >
 </code-view>
 
 }

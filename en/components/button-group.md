@@ -12,7 +12,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <code-view style="height: 85px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-1" alt="Angular Button Group Example">
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-1/" alt="Angular Button Group Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -133,7 +133,7 @@ public alignment = ButtonGroupAlignment.vertical;
 
 <code-view style="height: 220px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -150,7 +150,7 @@ The sample below demonstrates the exposed `igx-buttongroup` selection modes:
 
 <code-view style="height: 170px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-4/" >
 </code-view>
 
 ### Size
@@ -171,7 +171,7 @@ igx-buttongroup {
 
 <code-view style="height: 80px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-5/" >
 </code-view>
 
 ### Custom toggle buttons
@@ -243,7 +243,7 @@ public ngOnInit() {
 
 <code-view style="height: 90px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-3/" >
 </code-view>
 
 ## Styling
@@ -257,7 +257,7 @@ To get started with styling the button group, we need to import the `index` file
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`button-group-theme`]({environment:sassApiUrl}/index.html#function-button-group-theme) and specifying just the `$item-background`. Based on this value, the theme will automatically compute appropriate state colors, contrast foregrounds, and borders for the button group. Of course, you're still free to override any of the theme parameters with custom values if needed.
+Following the simplest approach, we create a new theme that extends the [`button-group-theme`]({environment:sassApiUrl}/themes#function-button-group-theme) and specifying just the `$item-background`. Based on this value, the theme will automatically compute appropriate state colors, contrast foregrounds, and borders for the button group. Of course, you're still free to override any of the theme parameters with custom values if needed.
 
 ```scss
 $custom-button-group: button-group-theme(
@@ -278,7 +278,7 @@ The last step is to include the component's theme.
 <code-view style="height: 200px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-style" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-style/" >
 </code-view>
 
 ## API References
@@ -286,15 +286,15 @@ The last step is to include the component's theme.
 <div class="divider--half"></div>
 
 * [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
-* [IgxButtonGroup Styles]({environment:sassApiUrl}/index.html#function-button-group-theme)
+* [IgxButtonGroup Styles]({environment:sassApiUrl}/themes#function-button-group-theme)
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxButton Styles]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxButton Styles]({environment:sassApiUrl}/themes#function-button-theme)
 
 ## Theming Dependencies
 
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ## Additional Resources
 

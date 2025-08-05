@@ -270,7 +270,7 @@ $custom-panel-theme: expansion-panel-theme(
 ```
 
 >[!NOTE]
->[`テーマ`](themes/sass/component-themes.md) エンジンを介したスタイル設定に使用可能なすべてのパラメーターを確認するには、[`API ヘルプ`]({environment:sassApiUrl}/index.html#function-expansion-panel-theme)を参照してください。
+>[`テーマ`](themes/sass/component-themes.md) エンジンを介したスタイル設定に使用可能なすべてのパラメーターを確認するには、[`API ヘルプ`]({environment:sassApiUrl}/themes#function-expansion-panel-theme)を参照してください。
 
 ### コンポーネント テーマの適用
 コンポーネント テーマを適用するには、`css-vars` ミックスインをインクルードし、`$custom-panel-theme` マップを渡します。
@@ -327,7 +327,7 @@ export class ExpansionPanelComponent {
     }
 }
 ```
-[**ビルトイン アニメーション スイート**]({environment:sassApiUrl}/index.html#animations) の [`slideInLeft`]({environment:sassApiUrl}/index.html#mixin-slide-in-left) アニメーションと [`slideOutRight`]({environment:sassApiUrl}/index.html#mixin-slide-out-right) アニメーションを使用して、コンテンツを折りたたむとコンポーネントのコンテンツが左側からより動的に表示され、右側から消えるようにします。既存のパラメーターを使用したい特定のパラメーターでオーバーライドします。
+[**ビルトイン アニメーション スイート**]({environment:sassApiUrl}/animations) の [`slideInLeft`]({environment:sassApiUrl}/animations#mixin-slide-in-left) アニメーションと [`slideOutRight`]({environment:sassApiUrl}/animations#mixin-slide-out-right) アニメーションを使用して、コンテンツを折りたたむとコンポーネントのコンテンツが左側からより動的に表示され、右側から消えるようにします。既存のパラメーターを使用したい特定のパラメーターでオーバーライドします。
 
 サンプルは、ユーザー情報とキー ポイントをここに表示してアニメーション設定をコンポーネントに渡します:
 `[animationSettings] = "animationSettingsCustom"`
@@ -362,8 +362,8 @@ export class ExpansionPanelComponent {
 * [IgxExpansionPanel API]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)
 * [IgxExpansionPanelHeader API]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html)
 * [IgxExpansionPanelBody API]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html)
-* [IgxExpansionPanel スタイル]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel)
+* [IgxExpansionPanel スタイル]({environment:sassApiUrl}/themes#mixin-igx-expansion-panel)
 
 ## テーマの依存関係
-* [IgxExpansionPanel テーマ]({environment:sassApiUrl}/index.html#function-expansion-panel-theme)
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxExpansionPanel テーマ]({environment:sassApiUrl}/themes#function-expansion-panel-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)

@@ -16,7 +16,7 @@ Using the `--ig-size` custom CSS property, you can configure the size on an appl
 ## Angular Size Example
 <code-view style="height: 250px; width: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/theming/density" alt="Angular Size Example">
+           iframe-src="{environment:demosBaseUrl}/theming/density/" alt="Angular Size Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -79,13 +79,13 @@ Now any time the value of `--ig-size` changes, `.my-elem` will change its size.
 ## API References
 <div class="divider"></div>
 
-* [Themes - Sizable Mixin]({environment:sassApiUrl}/index.html#mixin-sizable)
-* [Themes - Sizable Function]({environment:sassApiUrl}/index.html#function-sizable)
+* [Themes - Sizable Mixin]({environment:sassApiUrl}/themes#mixin-sizable)
+* [Themes - Sizable Function]({environment:sassApiUrl}/themes#function-sizable)
 
 ### Sizing and Spacing Functions
-* [Utilities - Pad]({environment:sassApiUrl}/index.html#function-pad)
-* [Utilities - Pad Inline]({environment:sassApiUrl}/index.html#function-pad-inline)
-* [Utilities - Pad Block]({environment:sassApiUrl}/index.html#function-pad-block)
+* [Utilities - Pad]({environment:sassApiUrl}/utilities#function-pad)
+* [Utilities - Pad Inline]({environment:sassApiUrl}/utilities#function-pad-inline)
+* [Utilities - Pad Block]({environment:sassApiUrl}/utilities#function-pad-block)
 
 ## Additional Resources
 <div class="divider--half"></div>

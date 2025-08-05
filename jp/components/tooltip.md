@@ -14,7 +14,7 @@ _language: ja
 
 <code-view style="height:150px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-simple" alt="Angular Tooltip の例">
+           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-simple/" alt="Angular Tooltip の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -267,7 +267,7 @@ export class AppModule {}
 
 <code-view style="height:300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-rich" >
+           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-rich/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -292,7 +292,7 @@ export class AppModule {}
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`tooltip-theme`]({environment:sassApiUrl}/index.html#function-tooltip-theme) を拡張する新しいテーマを作成し、`$text-color`、`$background`、`$border-radius` パラメーターを指定します。
+最もシンプルな方法として、[`tooltip-theme`]({environment:sassApiUrl}/themes#function-tooltip-theme) を拡張する新しいテーマを作成し、`$text-color`、`$background`、`$border-radius` パラメーターを指定します。
 
 ```scss
 $dark-tooltip: tooltip-theme(
@@ -333,7 +333,7 @@ $dark-tooltip: tooltip-theme(
 <code-view style="height:200px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-style" >
+           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-style/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -364,9 +364,9 @@ $dark-tooltip: tooltip-theme(
 
 スタイル:
 
-* [IgxTooltipDirective スタイル]({environment:sassApiUrl}/index.html#function-tooltip-theme)
-* [IgxAvatarComponent スタイル]({environment:sassApiUrl}/index.html#function-avatar-theme)
-* [IgxIconComponent スタイル]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxTooltipDirective スタイル]({environment:sassApiUrl}/themes#function-tooltip-theme)
+* [IgxAvatarComponent スタイル]({environment:sassApiUrl}/themes#function-avatar-theme)
+* [IgxIconComponent スタイル]({environment:sassApiUrl}/themes#function-icon-theme)
 
 <div class="divider"></div>
 

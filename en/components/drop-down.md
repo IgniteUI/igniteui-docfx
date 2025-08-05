@@ -14,7 +14,7 @@ This Angular drop down example demonstrates the basic functionalities of a drop 
 
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-1" alt="Angular Drop Down Example">
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-1/" alt="Angular Drop Down Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -144,7 +144,7 @@ export class MyDropDownComponent {
 
 <code-view style="height: 200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -190,7 +190,7 @@ If the sample is configured properly, a list of countries should be displayed as
 
 <code-view style="height: 310px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-3/" >
 </code-view>
 
 ### Grouping hierarchical data
@@ -265,7 +265,7 @@ You can see the results in the sample below:
 
 <code-view style="height: 310px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-5/" >
 </code-view>
 
 ### Drop Down as menu
@@ -330,7 +330,7 @@ export class MyMenuComponent {
 
 <code-view style="height: 240px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-menu" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-menu/" >
 </code-view>
 
 ### Multi-Level Drop Down menu
@@ -398,7 +398,7 @@ The result from the above configurations could be seen in the below sample.
 
 <code-view style="height:400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-multi-level-menu">
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-multi-level-menu/">
 </code-view>
 
 > [!NOTE]
@@ -464,7 +464,7 @@ export class InputDropDownComponent {
 
 <code-view style="height:220px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-4/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -505,7 +505,7 @@ Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`drop-down-theme`]({environment:sassApiUrl}/index.html#function-drop-down-theme) and accepts some of the default theme's parameters. When you provide a certain background color, the theme automatically calculates the state colors and appropriate contrasting foregrounds. By setting the `$background` property, you'll get a fully styled dropdown.
+Following the simplest approach, we create a new theme that extends the [`drop-down-theme`]({environment:sassApiUrl}/themes#function-drop-down-theme) and accepts some of the default theme's parameters. When you provide a certain background color, the theme automatically calculates the state colors and appropriate contrasting foregrounds. By setting the `$background` property, you'll get a fully styled dropdown.
 
 ```scss
 $custom-drop-down-theme: drop-down-theme(
@@ -529,7 +529,7 @@ The last step is to pass the custom drop-down theme to a class or element select
 <code-view style="height:350px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-styling" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-styling/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -537,16 +537,16 @@ The last step is to pass the custom drop-down theme to a class or element select
 ## API Summary
 
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
-* [IgxDropDownComponent Styles]({environment:sassApiUrl}/index.html#function-drop-down-theme)
+* [IgxDropDownComponent Styles]({environment:sassApiUrl}/themes#function-drop-down-theme)
 * [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html).
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
 * [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
-* [IgxDividerDirective Styles]({environment:sassApiUrl}/index.html#function-divider-theme)
+* [IgxDividerDirective Styles]({environment:sassApiUrl}/themes#function-divider-theme)
 
 ## Theming Dependencies
 
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## Additional Resources
 

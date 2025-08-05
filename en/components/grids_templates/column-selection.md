@@ -42,7 +42,7 @@ The sample below demonstrates the three types of @@igComponent's **column select
 
 <code-view style="height:570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-selection" alt="Angular Column Selection Example">
+           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-selection/" alt="Angular Column Selection Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -70,7 +70,7 @@ The default selection mode is `none`. If set to `single` or `multiple` all of th
 
 <code-view style="height:570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-group-selection" >
+           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-group-selection/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -133,7 +133,7 @@ $custom-grid-theme: grid-theme(
 ```
 }
 
-The [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) accepts several parameters but those are the five responsible for changing the appearance of all selected columns:
+The [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) accepts several parameters but those are the five responsible for changing the appearance of all selected columns:
 - **$row-selected-background** - sets the background of the selected fraction.
 - **$row-selected-text-color** - sets the text color of the selected fraction
 - **$row-selected-hover-background** - sets the color of the hovered cell or bunch of cells.
@@ -153,7 +153,7 @@ The last step is to include the custom `igx-grid` theme.
 
 <code-view style="height:570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-selection-styles" >
+           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-selection-styles/" >
 </code-view>
 
 >[!NOTE]
@@ -167,7 +167,7 @@ The column selection UI has a few more APIs to explore, which are listed below.
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) properties:
 * [columnSelection]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnSelection)

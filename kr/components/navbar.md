@@ -16,7 +16,7 @@ The Ignite UI for Angular [`IgxNavbarComponent`]({environment:angularApiUrl}/cla
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navbar" >
+           iframe-src="{environment:demosBaseUrl}/menus/navbar/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -95,7 +95,7 @@ If all went well, you should see the following in your browser:
 
 <code-view style="height: 330px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -136,7 +136,7 @@ Finally, this is how our navbar should look like with its custom action icon:
 
 <code-view style="height: 330px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>

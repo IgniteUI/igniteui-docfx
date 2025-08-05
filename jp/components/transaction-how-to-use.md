@@ -18,7 +18,7 @@ Ignite UI for Angular グリッドコンポーネントの [`igxTransactionServi
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/services/transaction-base" alt="Angular トランザクション サービスの使用方法の例">
+           iframe-src="{environment:demosBaseUrl}/services/transaction-base/" alt="Angular トランザクション サービスの使用方法の例">
 </code-view>
 
 <div class="divider--half"></div>

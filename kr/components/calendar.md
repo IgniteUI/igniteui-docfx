@@ -15,7 +15,7 @@ The Ignite UI for Angular Calendar component is developed as a native [Angular c
 
 <code-view style="height: 730px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-5/" >
 </code-view>
 
 
@@ -63,7 +63,7 @@ Notice that the calendar header is not rendered when the selection is either `mu
 
 <code-view style="height: 730px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-1/" >
 </code-view>
 
 
@@ -114,7 +114,7 @@ Great, we should now have a calendar with customized dates display that also cha
 
 <code-view style="height: 570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-2/" >
 </code-view>
 
 
@@ -157,7 +157,7 @@ Use the demo below to play around (change selection, navigate through months and
 
 <code-view style="height: 460px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-3/" >
 </code-view>
 
 
@@ -239,7 +239,7 @@ Having implemented this conditional templating and date parsing we should get co
 
 <code-view style="height: 570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-4/" >
 </code-view>
 
 
@@ -281,7 +281,7 @@ This is the result.
 
 <code-view style="height: 480px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-6" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-6/" >
 </code-view>
 
 
@@ -334,7 +334,7 @@ Result:
 
 <code-view style="height: 540px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-7" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-7/" >
 </code-view>
 
 
@@ -347,7 +347,7 @@ Result:
 
 <code-view style="height: 540px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/multiview-calendar" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/multiview-calendar/" >
 </code-view>
 
 
@@ -360,7 +360,7 @@ There are separate views provided by the [`IgxCalendarModule`]({environment:angu
 
 <code-view style="height: 540px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-views" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-views/" >
 </code-view>
 
 

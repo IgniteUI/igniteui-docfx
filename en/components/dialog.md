@@ -11,7 +11,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-1" alt="Angular Dialog Window Example">
+           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-1/" alt="Angular Dialog Window Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -119,7 +119,7 @@ To create a standard dialog, in the template of our file manager component, we a
 
 <code-view style="height:250px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -168,7 +168,7 @@ We add two input groups consisting of a label and and input decorated with the [
 
 <code-view style="height:300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-3/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -261,7 +261,7 @@ To get started with styling the dialog window, we need to import the `index` fil
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`dialog-theme`]({environment:sassApiUrl}/index.html#function-dialog-theme) and accepts parameters that style the dialog. By providing the `$background`, the theme automatically selects suitable contrast colors for the foreground properties. However, you can still manually define them if desired.
+Following the simplest approach, we create a new theme that extends the [`dialog-theme`]({environment:sassApiUrl}/themes#function-dialog-theme) and accepts parameters that style the dialog. By providing the `$background`, the theme automatically selects suitable contrast colors for the foreground properties. However, you can still manually define them if desired.
 
 ```scss
 $my-dialog-theme: dialog-theme(
@@ -319,7 +319,7 @@ The last step is to **include** the component theme in our application.
 
 <code-view style="height:300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/dialog-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/interactions/dialog-styling-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -328,15 +328,15 @@ The last step is to **include** the component theme in our application.
 <div class="divider--half"></div>
 
 * [IgxDialogComponent]({environment:angularApiUrl}/classes/igxdialogcomponent.html)
-* [IgxDialogComponent Styles]({environment:sassApiUrl}/index.html#function-dialog-theme)
+* [IgxDialogComponent Styles]({environment:sassApiUrl}/themes#function-dialog-theme)
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## Theming Dependencies
 
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## Additional Resources
 

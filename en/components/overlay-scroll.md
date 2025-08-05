@@ -66,7 +66,7 @@ The demo below illustrates the difference between the separate [`scrollStrategie
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/overlay-scroll-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/interactions/overlay-scroll-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -79,7 +79,7 @@ The [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.h
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/overlay-scroll-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/interactions/overlay-scroll-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
