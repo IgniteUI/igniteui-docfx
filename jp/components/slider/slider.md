@@ -524,7 +524,7 @@ $custom-slider-theme: slider-theme(
 <div class="divider--half"></div>
 
 * [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)
-* [IgxSliderComponent スタイル]({environment:sassApiUrl}/index.html#function-slider-theme)
+* [IgxSliderComponent スタイル]({environment:sassApiUrl}/themes#function-slider-theme)
 * [SliderType]({environment:angularApiUrl}/variables/IgxSliderType-1.html)
 * [IRangeSliderValue]({environment:angularApiUrl}/interfaces/irangeslidervalue.html)
 * [TicksOrientation]({environment:angularApiUrl}/classes/IgxSliderComponent.html#ticksOrientation)

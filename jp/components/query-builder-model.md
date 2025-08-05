@@ -223,7 +223,7 @@ SELECT * FROM Suppliers WHERE supplierId IN (
 <div class="divider--half"></div>
 
 * [IgxQueryBuilderComponent API]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html)
-* [IgxQueryBuilderComponent スタイル]({environment:sassApiUrl}/index.html#function-query-builder-theme)
+* [IgxQueryBuilderComponent スタイル]({environment:sassApiUrl}/themes#function-query-builder-theme)
 
 ## その他のリソース
 

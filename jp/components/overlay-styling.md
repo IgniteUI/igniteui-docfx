@@ -15,7 +15,7 @@ _language: ja
 
 ## オーバーレイ コンポーネントのスタイル設定
 
-ほとんどの場合、[グローバル](themes/sass/global-themes.md) テーマのスタイルはオーバーレイ アウトレットの影響を受けません。例として、グローバル [`css-vars`]({environment:sassApiUrl}/index.html#mixin-css-vars) ミックスインで[スタイル設定された](drop-down.md#スタイル設定)ドロップダウンを見てみましょう。
+ほとんどの場合、[グローバル](themes/sass/global-themes.md) テーマのスタイルはオーバーレイ アウトレットの影響を受けません。例として、グローバル [`css-vars`]({environment:sassApiUrl}/themes#mixin-css-vars) ミックスインで[スタイル設定された](drop-down.md#スタイル設定)ドロップダウンを見てみましょう。
 
 ```html
 <!-- overlay-styling.component.html -->
@@ -93,7 +93,7 @@ export class OverlayStylingComponent {
 ## オーバーレイのスタイル設定
 
 `ViewEncapsulation` がオーバーレイの `outlet` プロパティとどのように連携するかを説明しました。次にオーバーレイ ラッパー自体のスタイルを設定する方法を示します。
-[`overlay-theme`]({environment:sassApiUrl}/index.html#function-overlay-theme) は、単一のプロパティ - `$background-color` を公開します。これは、オーバーレイが `modal: true` に設定されている場合、背景の色に影響します。
+[`overlay-theme`]({environment:sassApiUrl}/themes#function-overlay-theme) は、単一のプロパティ - `$background-color` を公開します。これは、オーバーレイが `modal: true` に設定されている場合、背景の色に影響します。
 
 ### グローバル スタイル
 
@@ -137,7 +137,7 @@ $my-overlay-theme: overlay-theme(
 
 ## API リファレンス
 * [IgniteUI for Angular - テーマ ライブラリ](themes/index.md)
-* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxOverlay スタイル]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## その他のリソース
 * [IgniteUI for Angular - テーマ ライブラリ](themes/index.md)

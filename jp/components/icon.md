@@ -222,7 +222,7 @@ npm i xmlhttprequest
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`icon-theme`]({environment:sassApiUrl}/index.html#function-icon-theme) を拡張し、必要に応じてアイコンをカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成する方法です。
+最も簡単な方法は、[`icon-theme`]({environment:sassApiUrl}/themes#function-icon-theme) を拡張し、必要に応じてアイコンをカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成する方法です。
 
 ```scss
 $custom-icon-theme: icon-theme(
@@ -247,7 +247,7 @@ $custom-icon-theme: icon-theme(
 
 ### SVG の制限
 
-カスタム SVG アイコンを使用する場合、[`icon-theme`]({environment:sassApiUrl}/index.html#function-icon-theme) は `<svg>` 要素自体の色のみを適用および上書きできることに注意することが重要です。SVG 内に `<path>`、`<rect>`、`<circle>`、`<g>` などの子要素が含まれており、それらにハードコードされたカラー値が設定されている場合、その色はテーマから上書きできません。
+カスタム SVG アイコンを使用する場合、[`icon-theme`]({environment:sassApiUrl}/themes#function-icon-theme) は `<svg>` 要素自体の色のみを適用および上書きできることに注意することが重要です。SVG 内に `<path>`、`<rect>`、`<circle>`、`<g>` などの子要素が含まれており、それらにハードコードされたカラー値が設定されている場合、その色はテーマから上書きできません。
 
 例:
 
@@ -265,9 +265,9 @@ $custom-icon-theme: icon-theme(
 </svg>
 ```
 
-ここでは、塗りつぶしの色が `<svg>` 要素に適用されているため、[`icon-theme`]({environment:sassApiUrl}/index.html#function-icon-theme) で提供されるカスタム カラーで上書きできます。
+ここでは、塗りつぶしの色が `<svg>` 要素に適用されているため、[`icon-theme`]({environment:sassApiUrl}/themes#function-icon-theme) で提供されるカスタム カラーで上書きできます。
 
-アイコン全体を [`icon-theme`]({environment:sassApiUrl}/index.html#function-icon-theme) を使用してスタイル設定できるように、SVG 子要素にハードコードされた色を使用しないことをお勧めします。ただし、子要素にハードコードされた色を適用する場合は、Ignite UI のカラー変数を使用することもできます。
+アイコン全体を [`icon-theme`]({environment:sassApiUrl}/themes#function-icon-theme) を使用してスタイル設定できるように、SVG 子要素にハードコードされた色を使用しないことをお勧めします。ただし、子要素にハードコードされた色を適用する場合は、Ignite UI のカラー変数を使用することもできます。
 
 ```html
 <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -318,7 +318,7 @@ igx-icon {
 <div class="divider--half"></div>
 
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxIconComponent スタイル]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxIconComponent スタイル]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## その他のリソース
 

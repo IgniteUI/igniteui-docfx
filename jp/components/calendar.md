@@ -466,7 +466,7 @@ export class CalendarSample9Component {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) を拡張し、`$header-background` と `$content-background` のみを指定して新しいテーマを作成します。これにより、インタラクション状態に応じた色やコントラストのある前景色が自動的に算出されます。必要に応じて任意のテーマ パラメーターをオーバーライドすることも可能です。
+最もシンプルな方法として、[`calendar-theme`]({environment:sassApiUrl}/themes#function-calendar-theme) を拡張し、`$header-background` と `$content-background` のみを指定して新しいテーマを作成します。これにより、インタラクション状態に応じた色やコントラストのある前景色が自動的に算出されます。必要に応じて任意のテーマ パラメーターをオーバーライドすることも可能です。
 
 ```scss
 $custom-calendar-theme: calendar-theme(
@@ -492,7 +492,7 @@ $custom-calendar-theme: calendar-theme(
 <div class="divider--half"></div>
 
 * [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
-* [IgxCalendarComponent スタイル]({environment:sassApiUrl}/index.html#function-calendar-theme)
+* [IgxCalendarComponent スタイル]({environment:sassApiUrl}/themes#function-calendar-theme)
 * [DateRangeType]({environment:angularApiUrl}/enums/daterangetype.html)
 * [DateRangeDescriptor]({environment:angularApiUrl}/interfaces/daterangedescriptor.html)
 

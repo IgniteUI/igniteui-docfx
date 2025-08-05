@@ -175,7 +175,7 @@ Angular Stepper モジュールまたはディレクティブをインポート�
 - [**active**]({environment:angularApiUrl}/classes/igxstepcomponent.html#active) - ステップが現在表示されているかどうかを決定します。設計上、ユーザーが明示的にステップの active 属性を `true` に設定しない場合、最初の有効なステップがアクティブになります。
 - [**disabled**]({environment:angularApiUrl}/classes/igxstepcomponent.html#disabled) - ステップが操作可能かどうかを決定します。デフォルトでは、ステップの disabled 属性は `false` に設定されています。
 - [**optional**]({environment:angularApiUrl}/classes/igxstepcomponent.html#optional) - デフォルトで、ステップの optional 属性は `false` に設定されます。リニア ステッパーのステップの有効性が必要ない場合、オプションの属性を有効にして、ステップの有効性とは関係なく前進できます。
-- [**completed**]({environment:angularApiUrl}/classes/igxstepcomponent.html#completed) - デフォルトでは、ステップの completed 属性は `false` を返します。ユーザーは、completed 属性を必要に応じて設定することにより、このデフォルトの completed 動作をオーバーライドできます。ステップが完了済みとしてマークされると、ステップ ヘッダーのスタイルがデフォルトで変更されるだけでなく、完了したステップと次のステップの間の進捗線のスタイルも変更されます。両方のスタイルは、公開された [CSS 変数]({environment:sassApiUrl}/index.html#function-stepper-theme)を使用して変更できます。
+- [**completed**]({environment:angularApiUrl}/classes/igxstepcomponent.html#completed) - デフォルトでは、ステップの completed 属性は `false` を返します。ユーザーは、completed 属性を必要に応じて設定することにより、このデフォルトの completed 動作をオーバーライドできます。ステップが完了済みとしてマークされると、ステップ ヘッダーのスタイルがデフォルトで変更されるだけでなく、完了したステップと次のステップの間の進捗線のスタイルも変更されます。両方のスタイルは、公開された [CSS 変数]({environment:sassApiUrl}/themes#function-stepper-theme)を使用して変更できます。
 
 [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) は、双方向バインド可能な [**isValid**]({environment:angularApiUrl}/classes/igxstepcomponent.html#isValid) プロパティで各ステップの検証ロジックを設定できます。その値に基づいて、ユーザーがリニア ステッパー モードで前に進むことができるかどうかが決定されます。
 デフォルトで、ステップの [isValid]({environment:angularApiUrl}/classes/igxstepcomponent.html#isValid) プロパティは `true` に設定されます。
@@ -330,7 +330,7 @@ Stepper コンポーネントは、ローコード [ドラッグアンドドロ�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[stepper-theme]({environment:sassApiUrl}/index.html#function-stepper-theme) を拡張し、少数のベース パラメーターのみを指定して新しいテーマを作成します。テーマは、状態固有の色やアクセス可能なコントラストの前景など、必要なすべてのスタイルを自動的に生成します。外観をさらに調整したい場合は、他の任意のパラメーターをオーバーライドすることも可能です。
+最もシンプルな方法として、[stepper-theme]({environment:sassApiUrl}/themes#function-stepper-theme) を拡張し、少数のベース パラメーターのみを指定して新しいテーマを作成します。テーマは、状態固有の色やアクセス可能なコントラストの前景など、必要なすべてのスタイルを自動的に生成します。外観をさらに調整したい場合は、他の任意のパラメーターをオーバーライドすることも可能です。
 
 ```scss
 $stepper-theme: stepper-theme(

@@ -299,7 +299,7 @@ Badge のスタイル設定は、すべてのテーマ関数とコンポーネ�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`badge-theme`]({environment:sassApiUrl}/index.html#function-badge-theme) を拡張する新しいテーマを作成し、バッジの項目をスタイル設定するいくつかのパラメーターを受け取る方法です。`$background-color` を設定すると、`$icon-color` と `$text-color` は、背景色とのコントラストが高い黒または白に自動的に割り当てられます。なお、`$border-radius` プロパティはバッジの `shape` が `square` に設定されている場合のみ適用されます。
+最も簡単な方法は、[`badge-theme`]({environment:sassApiUrl}/themes#function-badge-theme) を拡張する新しいテーマを作成し、バッジの項目をスタイル設定するいくつかのパラメーターを受け取る方法です。`$background-color` を設定すると、`$icon-color` と `$text-color` は、背景色とのコントラストが高い黒または白に自動的に割り当てられます。なお、`$border-radius` プロパティはバッジの `shape` が `square` に設定されている場合のみ適用されます。
 
 ```scss
 $custom-badge-theme: badge-theme(
@@ -328,13 +328,13 @@ $custom-badge-theme: badge-theme(
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
 * [IgxBadgeComponent]({environment:angularApiUrl}/classes/igxbadgecomponent.html)
-* [IgxBadgeComponent スタイル]({environment:sassApiUrl}/index.html#function-badge-theme)
+* [IgxBadgeComponent スタイル]({environment:sassApiUrl}/themes#function-badge-theme)
 * [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
 * [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 * [IgxBadgeType]({environment:angularApiUrl}/index.html#IgxBadgeType)
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>
