@@ -99,9 +99,9 @@ Each class applies all necessary font settings, spacing, and sizing according to
 
 ## Sample
 
-In the sample below, you’ll see a 404 page built entirely with Tailwind utility classes, including our `custom utilities` for `shadows`, `colors`, and `typography`. Currently, styling Ignite UI components is somewhat limited because the theming engine's styles have higher specificity.
+In the sample below, you’ll see a 404 page built entirely with Tailwind utility classes, including our `custom utilities` for `shadows`, `colors`, and `typography`.
 
-> If you need more control over styling the Ignite UI Components, we recommend using the available `CSS custom properties` or the `Component Themes`.
+> You can see how to style each component by checking out the **Styling** section in its respective documentation topic.
 
 <code-view style="height: 610px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
