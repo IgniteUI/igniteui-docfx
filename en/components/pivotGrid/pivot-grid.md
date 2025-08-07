@@ -21,7 +21,7 @@ The following is an Angular Pivot Grid example in combination with the Angular P
 
 <code-view style="height: 870px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-datasource" alt="Angular Pivot Grid with Pivot Selector Example">
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-datasource/" alt="Angular Pivot Grid with Pivot Selector Example">
 </code-view>
 
 ## Getting started with Ignite UI for Angular Pivot Grid
@@ -295,7 +295,7 @@ Resulting in the following view, which groups the Product Categories unique colu
 
 <code-view style="height: 530px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-basic" alt="Angular Pivot Grid Basic Example">
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-basic/" alt="Angular Pivot Grid Basic Example">
 </code-view>
 
 And if you want to streamline the entire app development process, you can try out our [WYSIWYG App Builder™](https://www.infragistics.com/products/appbuilder) for your next Angular app. 

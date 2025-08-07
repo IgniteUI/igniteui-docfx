@@ -14,7 +14,7 @@ _language: ja
 
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/switch-sample-1" alt="Angular Switch の例">
+           iframe-src="{environment:demosBaseUrl}/data-entries/switch-sample-1/" alt="Angular Switch の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -118,7 +118,7 @@ igx-switch {
 
 <code-view style="height: 200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/switch-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/switch-sample-2/" >
 </code-view>
 
 ### ラベル位置
@@ -142,7 +142,7 @@ igx-switch {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-次に、[`switch-theme`]({environment:sassApiUrl}/index.html#function-switch-theme) を拡張して新しいテーマを作成します。`$thumb-off-color` と `$thumb-on-color` の 2 つのパラメーターを指定するだけで、完全なスタイルのスイッチが生成されます。その他のパラメーターをオーバーライドして、外観をさらにカスタマイズすることも可能です。
+次に、[`switch-theme`]({environment:sassApiUrl}/themes#function-switch-theme) を拡張して新しいテーマを作成します。`$thumb-off-color` と `$thumb-on-color` の 2 つのパラメーターを指定するだけで、完全なスタイルのスイッチが生成されます。その他のパラメーターをオーバーライドして、外観をさらにカスタマイズすることも可能です。
 
 ```scss
 $custom-switch-theme: switch-theme(
@@ -162,7 +162,7 @@ $custom-switch-theme: switch-theme(
 <code-view style="height: 200px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/switch-styling" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/switch-styling/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -172,11 +172,11 @@ $custom-switch-theme: switch-theme(
 <div class="divider--half"></div>
 
 * [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
-* [IgxSwitchComponent スタイル]({environment:sassApiUrl}/index.html#function-switch-theme)
+* [IgxSwitchComponent スタイル]({environment:sassApiUrl}/themes#function-switch-theme)
 
 ## テーマの依存関係
 
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ## その他のリソース
 

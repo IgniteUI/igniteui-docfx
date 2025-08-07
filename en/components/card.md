@@ -16,7 +16,7 @@ Below you can see a basic sample of a well-crafted Ignite UI for Angular Card wi
 
 <code-view style="height: 500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-0" alt="Angular Card Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-0/" alt="Angular Card Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -255,7 +255,7 @@ If everything went well, our card should look like this:
 
 <code-view style="height: 220px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-2/" >
 </code-view>
 
 
@@ -294,7 +294,7 @@ Below is an example showing how you can create a semi-horizontal card, where we 
 
 <code-view style="height: 270px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-3/" >
 </code-view>
 
 
@@ -336,7 +336,7 @@ To get started with styling the card, we need to import the `index` file, where 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
-Following the simplest approach, we create a new theme that extends the [`card-theme`]({environment:sassApiUrl}/index.html#function-card-theme) and providing just a few styling parameters. If you only specify the `$background` parameter, the appropriate foreground colors will be automatically chosen, either black or white, based on which offers better contrast with the background.
+Following the simplest approach, we create a new theme that extends the [`card-theme`]({environment:sassApiUrl}/themes#function-card-theme) and providing just a few styling parameters. If you only specify the `$background` parameter, the appropriate foreground colors will be automatically chosen, either black or white, based on which offers better contrast with the background.
 
 ```scss
 $colorful-card: card-theme(
@@ -358,7 +358,7 @@ The last step is to **include** the component theme in our application.
 <code-view style="height: 486px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/card-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/layouts/card-styling-sample/" >
 </code-view>
 
 
@@ -373,7 +373,7 @@ For more detailed information regarding the card's API, refer to the following l
 
 The following built-in CSS styles helped us achieve this card layout:
 
-* [`IgxCardComponent Styles`]({environment:sassApiUrl}/index.html#function-card-theme)
+* [`IgxCardComponent Styles`]({environment:sassApiUrl}/themes#function-card-theme)
 
 Additional components and/or directives that were used:
 
@@ -384,16 +384,16 @@ Additional components and/or directives that were used:
 
 Styles:
 
-* [`IgxAvatarComponent Styles`]({environment:sassApiUrl}/index.html#function-avatar-theme)
-* [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [`IgxButtonDirective Styles`]({environment:sassApiUrl}/index.html#function-button-theme)
+* [`IgxAvatarComponent Styles`]({environment:sassApiUrl}/themes#function-avatar-theme)
+* [`IgxIconComponent Styles`]({environment:sassApiUrl}/themes#function-icon-theme)
+* [`IgxButtonDirective Styles`]({environment:sassApiUrl}/themes#function-button-theme)
 
 <div class="divider"></div>
 
 ## Theming Dependencies
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxAvatar Theme]({environment:sassApiUrl}/index.html#function-avatar-theme)
-* [IgxIconTheme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxAvatar Theme]({environment:sassApiUrl}/themes#function-avatar-theme)
+* [IgxIconTheme]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## Additional Resources
 

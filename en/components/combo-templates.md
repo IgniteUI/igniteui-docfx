@@ -14,7 +14,7 @@ The Ignite UI for Angular ComboBox Component allows defining custom templates fo
 
 <code-view style="height: 450px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-template" alt="Angular Combo Templates Example">
+           iframe-src="{environment:demosBaseUrl}/lists/combo-template/" alt="Angular Combo Templates Example">
 </code-view>
 
 
@@ -145,7 +145,7 @@ When used with templates, the `igxComboClearIcon` and the `igxComboToggleIcon` s
 <div class="divider--half"></div>
 
 * [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
-* [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#function-combo-theme)
+* [IgxComboComponent Styles]({environment:sassApiUrl}/themes#function-combo-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

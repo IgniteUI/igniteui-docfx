@@ -14,7 +14,7 @@ This topic demonstrates how to configure Load on Demand by requesting data from 
 
 <code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-lod" alt="Angular Hierarchical Grid Load On Demand Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-lod/" alt="Angular Hierarchical Grid Load On Demand Example">
 </code-view>
 
 <div class="divider--half"></div>

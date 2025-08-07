@@ -112,20 +112,20 @@ import { IgxActionStripModule } from 'igniteui-angular';
 @@if (igxName === 'IgxGrid') {
 <code-view style="height: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-action-strip" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-action-strip/" >
 </code-view>
 }
 @@if (igxName === 'IgxTreeGrid') {
 <code-view style="height: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-action-strip" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-action-strip/" >
 </code-view>
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 <code-view style="height: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-action-strip" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-action-strip/" >
 </code-view>
 }
 

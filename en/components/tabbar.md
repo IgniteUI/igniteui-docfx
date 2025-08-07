@@ -18,7 +18,7 @@ _keywords: Angular Bottom Nav component, Angular Bottom Navigation control, Igni
 
 <code-view style="height: 200px; width: 400px; border: 1px solid #D4D4D4;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-1" alt="Angular Bottom Navigation Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-1/" alt="Angular Bottom Navigation Example">
 </code-view>
 
 
@@ -234,7 +234,7 @@ After these modifications our Bottom Navigation should look similar to this:
 
 <code-view style="height: 350px; width: 300px; border: 1px solid #D4D4D4;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-2/" >
 </code-view>
 
 
@@ -376,7 +376,7 @@ The approach described above is used by the following sample to demonstrate rout
 
 <code-view style="height: 250px; width: 500px; border: 1px solid #D4D4D4;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-3/" >
 </code-view>
 
 
@@ -420,7 +420,7 @@ The last step is to **include** the component theme in our application.
 <code-view style="height: 350px; width: 300px; border: 1px solid #D4D4D4;"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-style" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-style/" >
 </code-view>
 
 <div class="divider--half"></div>

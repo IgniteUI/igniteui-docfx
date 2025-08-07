@@ -18,7 +18,7 @@ The Angular Autocomplete example below generates a dropdown suggestion list as u
 
 <code-view style="height: 400px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/autocomplete" alt="Angular Autocomplete Example">
+           iframe-src="{environment:demosBaseUrl}/data-entries/autocomplete/" alt="Angular Autocomplete Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -216,7 +216,7 @@ If everything went right, you should see this in your browser:
 
 <code-view style="height: 500px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/movie" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/movie/" >
 </code-view>
 
 
@@ -255,7 +255,7 @@ The `drop-down` component, used as provider for suggestions, will expose the fol
 ## Styling
 Every component has its own theme.
 
-To get the `igxAutocomplete` styled, you have to style its containing components. In our case, these are the [input-group-theme]({environment:sassApiUrl}/index.html#function-input-group-theme) and the [drop-down-theme]({environment:sassApiUrl}/index.html#function-drop-down-theme).
+To get the `igxAutocomplete` styled, you have to style its containing components. In our case, these are the [input-group-theme]({environment:sassApiUrl}/themes#function-input-group-theme) and the [drop-down-theme]({environment:sassApiUrl}/themes#function-drop-down-theme).
 
 Take a look at the [`igxInputGroup`](input-group.md#styling) and the [`igxDropdown`](drop-down.md#styling) styling sections to get a better understanding of how to style those two components.
 

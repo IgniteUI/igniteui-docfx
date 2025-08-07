@@ -19,7 +19,7 @@ Angular Autocomplete は、入力中に候補のリストから項目を簡単�
 
 <code-view style="height: 400px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/autocomplete" alt="Angular Autocomplete の例">
+           iframe-src="{environment:demosBaseUrl}/data-entries/autocomplete/" alt="Angular Autocomplete の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -217,7 +217,7 @@ export class AutocompleteComponent {
 
 <code-view style="height: 500px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/movie" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/movie/" >
 </code-view>
 
 
@@ -256,7 +256,7 @@ export class AutocompleteComponent {
 ## スタイル設定
 各コンポーネントには独自のテーマがあります。
 
-`igxAutocomplete` のスタイルを設定するには、それに含まれるコンポーネントのスタイルを設定します。この場合、[input-group-theme]({environment:sassApiUrl}/index.html#function-input-group-theme) と [drop-down-theme]({environment:sassApiUrl}/index.html#function-drop-down-theme) を使用します。 
+`igxAutocomplete` のスタイルを設定するには、それに含まれるコンポーネントのスタイルを設定します。この場合、[input-group-theme]({environment:sassApiUrl}/themes#function-input-group-theme) と [drop-down-theme]({environment:sassApiUrl}/themes#function-drop-down-theme) を使用します。 
 
 これら 2 つのコンポーネントのスタイル設定については、[`igxInputGroup`](input-group.md#スタイル設定) および [`igxDropdown`](drop-down.md#スタイル設定) のスタイル設定セクションを参照してください。
 
@@ -269,8 +269,8 @@ export class AutocompleteComponent {
 
 
 ## テーマの依存関係
-* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-drop-down-theme)
-* [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [IgxDropDown テーマ]({environment:sassApiUrl}/themes#function-drop-down-theme)
+* [IgxInputGroup テーマ]({environment:sassApiUrl}/themes#function-input-group-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

@@ -12,7 +12,7 @@ _keywords: Angular Snackbar component, Angular Snackbar control, Ignite UI for A
 
 <code-view style="height: 140px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-1" alt="Angular Snackbar Example">
+           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-1/" alt="Angular Snackbar Example">
 </code-view>
 
 
@@ -120,7 +120,7 @@ If the sample is configured properly, the first snackbar appears when the button
 
 <code-view style="height: 230px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2/" >
 </code-view>
 
 ### Display Time
@@ -179,7 +179,7 @@ As a result, a message and three loading dots appear in the snackbar.
 
 <code-view style="height: 170px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-5/" >
 </code-view>
 
 
@@ -250,7 +250,7 @@ public restore() {
 
 <code-view style="height: 350px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4/" >
 </code-view>
 
 ### Positioning
@@ -310,7 +310,7 @@ The last step is to **include** the component theme in our application.
 <code-view style="height: 150px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-style" >
+           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-style/" >
 </code-view>
 
 <div class="divider--half"></div>

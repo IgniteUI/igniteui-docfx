@@ -13,7 +13,7 @@ We have created this basic Angular Date Range Picker example to show you the com
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/basic-daterangepicker" alt="Angular Date Range Picker Example">
+           iframe-src="{environment:demosBaseUrl}/scheduling/basic-daterangepicker/" alt="Angular Date Range Picker Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -127,7 +127,7 @@ The Angular Date Range Picker component also allows configuring two separate inp
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-start-end" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-start-end/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -190,7 +190,7 @@ The [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdater
 
 <code-view style="height:500px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-mode" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-mode/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -203,7 +203,7 @@ The Date Range Picker’s action buttons can be templated using the [`igxPickerA
 
 <code-view style="height:500px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-range-buttons" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-range-buttons/" >
 </code-view>
 
 ### Keyboard Navigation
@@ -298,7 +298,7 @@ When using two separate inputs, it is possible to set the model and required pro
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-validation" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-validation/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -373,7 +373,7 @@ To get started with styling the `igxDateRangePicker`, we need to import the `ind
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-The Date Range Picker Component exposes `date-range-picker-theme` and utilizes several components and directives, including `igxInputGroupComponent`, `igxCalendar` and `igxOverlay`. Any global styling for the aforementioned components and directives will affect the `igxDateRangeComponent`. As the Date Range Picker Component uses the input group and calendar themes, we have to create new themes that extend the [`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) and [`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme) and use some of their parameters to style the date range picker in conjunction with the date range picker theme. We will use a single custom color palette to define the colors to use across all themes:
+The Date Range Picker Component exposes `date-range-picker-theme` and utilizes several components and directives, including `igxInputGroupComponent`, `igxCalendar` and `igxOverlay`. Any global styling for the aforementioned components and directives will affect the `igxDateRangeComponent`. As the Date Range Picker Component uses the input group and calendar themes, we have to create new themes that extend the [`calendar-theme`]({environment:sassApiUrl}/themes#function-calendar-theme) and [`input-group-theme`]({environment:sassApiUrl}/themes#function-input-group-theme) and use some of their parameters to style the date range picker in conjunction with the date range picker theme. We will use a single custom color palette to define the colors to use across all themes:
 
 ```scss
 // COMMON
@@ -443,7 +443,7 @@ Regarding style scoping, you should refer to both styling sections [Overlay Scop
 <code-view style="height:600px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/styled-daterangepicker" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/styled-daterangepicker/" >
 </code-view>
 
 
@@ -453,7 +453,7 @@ The demo below defines a form for flight tickets that uses the [`IgxDateRangePic
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/flight-booking" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/flight-booking/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -463,18 +463,18 @@ The demo below defines a form for flight tickets that uses the [`IgxDateRangePic
 
 * [IgxDateRangePickerComponent]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html)
 * [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
-* [IgxCalendarComponent Styles]({environment:sassApiUrl}/index.html#function-calendar-theme)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxCalendarComponent Styles]({environment:sassApiUrl}/themes#function-calendar-theme)
+* [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
 ## Theming Dependencies
 
-* [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-calendar-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-input-group-theme)
-* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-drop-down-theme)
+* [IgxCalendar Theme]({environment:sassApiUrl}/themes#function-calendar-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxInputGroup Theme]({environment:sassApiUrl}/themes#function-input-group-theme)
+* [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
 
 ## Additional Resources
 Related topics:

@@ -12,7 +12,7 @@ With only a few lines of code, users can easily localize the strings in Ignite U
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/services/localization-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/services/localization-sample-1/" >
 </code-view>
 
 

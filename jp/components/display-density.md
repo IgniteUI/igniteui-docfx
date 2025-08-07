@@ -14,7 +14,7 @@ size 設定の表示は、大規模データセットのビジュアル表示を
 ## Angular サイズの例
 <code-view style="height: 250px; width: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/theming/density" alt="Angular サイズの例">
+           iframe-src="{environment:demosBaseUrl}/theming/density/" alt="Angular サイズの例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -77,13 +77,13 @@ Ignite UI for Angular は、`--ig-size` CSS プロパティの変更に反応す
 ## API リファレンス
 <div class="divider"></div>
 
-* [テーマ - Sizable Mixin]({environment:sassApiUrl}/index.html#mixin-sizable)
-* [テーマ - Sizable Function]({environment:sassApiUrl}/index.html#function-sizable)
+* [テーマ - Sizable Mixin]({environment:sassApiUrl}/themes#mixin-sizable)
+* [テーマ - Sizable Function]({environment:sassApiUrl}/themes#function-sizable)
 
 ### サイズと間隔の関数
-* [ユーティリティ - Pad]({environment:sassApiUrl}/index.html#function-pad)
-* [ユーティリティ - Pad Inline]({environment:sassApiUrl}/index.html#function-pad-inline)
-* [ユーティリティ - Pad Block]({environment:sassApiUrl}/index.html#function-pad-block)
+* [ユーティリティ - Pad]({environment:sassApiUrl}/utilities#function-pad)
+* [ユーティリティ - Pad Inline]({environment:sassApiUrl}/utilities#function-pad-inline)
+* [ユーティリティ - Pad Block]({environment:sassApiUrl}/utilities#function-pad-block)
 
 ## その他のリソース
 <div class="divider--half"></div>

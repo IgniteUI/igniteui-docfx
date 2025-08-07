@@ -32,7 +32,7 @@ The Ignite UI for Angular @@igComponent supports remote data operations such as 
 
 <code-view style="height:500px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-remote-filtering" alt="Angular @@igComponent Remote Data Operations Overview Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-remote-filtering/" alt="Angular @@igComponent Remote Data Operations Overview Example">
 </code-view>
 
 }
@@ -42,7 +42,7 @@ The Ignite UI for Angular @@igComponent supports remote data operations such as 
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-remote-filtering" alt="Angular @@igComponent Remote Data Operations Overview Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-remote-filtering/" alt="Angular @@igComponent Remote Data Operations Overview Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -104,7 +104,7 @@ When requesting data, you need to utilize the [`IForOfState`]({environment:angul
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-4" alt="Angular @@igComponent Remote Data Operations Overview Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-4/" alt="Angular @@igComponent Remote Data Operations Overview Example">
 </code-view>
 
 
@@ -163,7 +163,7 @@ public handlePreLoad() {
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-5/" >
 </code-view>
 
 
@@ -325,7 +325,7 @@ public columnValuesStrategy = (column: ColumnType,
 
 <code-view style="height:800px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-load-on-demand" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-load-on-demand/" >
 </code-view>
 
 }
@@ -350,7 +350,7 @@ public columnValuesStrategy = (column: ColumnType,
 
 <code-view style="height:800px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-load-on-demand" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-load-on-demand/" >
 </code-view>
 
 }
@@ -390,7 +390,7 @@ this.remoteValuesService.getColumnData(
 
 <code-view style="height:800px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-load-on-demand" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-load-on-demand/" >
 </code-view>
 
 }
@@ -590,7 +590,7 @@ public paginate(page: number) {
 
 <code-view style="height:620px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/remote-paging-default-template" >
+           iframe-src="{environment:demosBaseUrl}/grid/remote-paging-default-template/" >
 </code-view>
 
 }
@@ -598,7 +598,7 @@ public paginate(page: number) {
 
 <code-view style="height:560px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-remote-paging-default-template" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-remote-paging-default-template/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -607,7 +607,7 @@ public paginate(page: number) {
 
 <code-view style="height:580px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/remote-paging-default-template" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/remote-paging-default-template/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -774,7 +774,7 @@ After all the changes above, the following result will be achieved.
 
 <code-view style="height:620px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-remote-paging-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-remote-paging-sample/" >
 </code-view>
 
 }
@@ -782,7 +782,7 @@ After all the changes above, the following result will be achieved.
 
 <code-view style="height:560px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-remote-paging" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-remote-paging/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -791,7 +791,7 @@ After all the changes above, the following result will be achieved.
 
 <code-view style="height:580px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-remote-paging" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-remote-paging/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -805,7 +805,7 @@ In some cases you may want to define your own paging behavior and this is when w
 
 <code-view style="height:620px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-custom-remote-paging-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-custom-remote-paging-sample/" >
 </code-view>
 
 
@@ -908,7 +908,7 @@ As you can see in the **paginate** method, custom pagination logic is performed,
 
 <code-view style="height:620px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/remote-paging-batch-editing" >
+           iframe-src="{environment:demosBaseUrl}/grid/remote-paging-batch-editing/" >
 </code-view>
 
 }
@@ -927,7 +927,7 @@ As you can see in the **paginate** method, custom pagination logic is performed,
 
 * [IgxPaginatorComponent API]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html)
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

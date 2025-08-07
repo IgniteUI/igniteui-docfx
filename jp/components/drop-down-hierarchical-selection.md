@@ -28,12 +28,12 @@ DOM からチップを削除し、ツリー/グリッドから項目を選択解
 ### デモ
 <code-view style="height: 560px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-tree-hierarchical-selection" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-tree-hierarchical-selection/" >
 </code-view>
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-tree-grid-hierarchical-selection">
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-tree-grid-hierarchical-selection/">
 </code-view>
 
 >[!NOTE]

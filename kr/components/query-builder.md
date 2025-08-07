@@ -16,7 +16,7 @@ The [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybui
 
 <code-view style="height:530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder/query-builder-main" alt="Angular Query Builder Example">
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder/query-builder-main/" alt="Angular Query Builder Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -360,7 +360,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <code-view style="height:530px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder/query-builder-style" >
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder/query-builder-style/" >
 </code-view>
 
 >[!NOTE]

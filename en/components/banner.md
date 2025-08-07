@@ -10,7 +10,7 @@ _keywords: Angular Banner component, Angular Banner control, Ignite UI for Angul
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-1" alt="Angular Banner Example">
+           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-1/" alt="Angular Banner Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -150,13 +150,13 @@ The `IgxBannerModule` exposes a directive for templating the banner buttons - [`
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-2/" >
 </code-view>
 
 
 ### Applying custom animations
 
-The banner component comes with the [`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationSettings) property that allows applying custom opening and closing animations. Developers can choose between self-defined animations, and those from our [`Animation suite`]({environment:sassApiUrl}/index.html). The default ones, used by the banner, are `growVerIn` for entering and `growVerOut` for exiting.
+The banner component comes with the [`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationSettings) property that allows applying custom opening and closing animations. Developers can choose between self-defined animations, and those from our [`Animation suite`]({environment:sassApiUrl}/animations). The default ones, used by the banner, are `growVerIn` for entering and `growVerOut` for exiting.
 
 Let's change the animations that our banner uses, so that it slides in and out:
 
@@ -185,7 +185,7 @@ export class MyBannerComponent {
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-3/" >
 </code-view>
 
 
@@ -250,7 +250,7 @@ Finally, we will add a `toast`, displaying a message about the WiFi state. The r
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/banner-advanced-sample" >
+           iframe-src="{environment:demosBaseUrl}/notifications/banner-advanced-sample/" >
 </code-view>
 
 
@@ -265,7 +265,7 @@ First, in order to use the functions exposed by the theme engine, we need to imp
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`banner-theme`]({environment:sassApiUrl}/index.html#function-banner-theme) and specifying just the `$banner-background`. Based on this value, the `$banner-message-color` and `$banner-illustration-color` are automatically set to black or white, depending on which provides better contrast with the background.
+Following the simplest approach, we create a new theme that extends the [`banner-theme`]({environment:sassApiUrl}/themes#function-banner-theme) and specifying just the `$banner-background`. Based on this value, the `$banner-message-color` and `$banner-illustration-color` are automatically set to black or white, depending on which provides better contrast with the background.
 
 ```scss
 $custom-banner-theme: banner-theme(
@@ -274,7 +274,7 @@ $custom-banner-theme: banner-theme(
 ```
 
 >[!NOTE]
->Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 The last step is to pass the custom banner theme:
 
@@ -285,7 +285,7 @@ The last step is to pass the custom banner theme:
 <code-view style="height: 530px" 
            no-themin
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/banner-styling" >
+           iframe-src="{environment:demosBaseUrl}/notifications/banner-styling/" >
 </code-view>
 
 
@@ -296,7 +296,7 @@ The last step is to pass the custom banner theme:
 
 * [IgxBannerComponent]({environment:angularApiUrl}/classes/igxbannercomponent.html)
 * [IgxBannerActionsDirective]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html)
-* [IgxBannerComponent Styles]({environment:sassApiUrl}/index.html#function-banner-theme)
+* [IgxBannerComponent Styles]({environment:sassApiUrl}/themes#function-banner-theme)
 
 Additional components and/or directives with relative APIs that were used:
 
@@ -306,10 +306,10 @@ Additional components and/or directives with relative APIs that were used:
 * [IgxToastComponent]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
-* [IgxExpansionPanel Theme]({environment:sassApiUrl}/index.html#function-expansion-panel-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
+* [IgxExpansionPanel Theme]({environment:sassApiUrl}/themes#function-expansion-panel-theme)
 
 
 ## Additional Resources

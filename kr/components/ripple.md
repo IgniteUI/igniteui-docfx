@@ -13,7 +13,7 @@ _language: kr
 
 <code-view style="height: 558px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -200,7 +200,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 <code-view style="height:700px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/ripple-styling" >
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-styling/" >
 </code-view>
 
 

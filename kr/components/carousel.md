@@ -51,7 +51,7 @@ This is enough to have the carousel instantiated on our page, let's have a look 
 
 <code-view style="height: 230px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/carousel-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/layouts/carousel-sample-1/" >
 </code-view>
 
 ### Displaying slides using the ngFor directive
@@ -109,7 +109,7 @@ Let's see what we have now, sure looks better with the arrows standing out clear
 
 <code-view style="height: 600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/carousel-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/layouts/carousel-sample-2/" >
 </code-view>
 
 
@@ -200,7 +200,7 @@ Following all the steps above brings us a nice and functional carousel that the 
 
 <code-view style="height: 550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/carousel-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/layouts/carousel-sample-3/" >
 </code-view>
 
 

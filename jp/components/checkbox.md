@@ -15,7 +15,7 @@ Ignite UI for Angular Checkbox コンポーネントは、特定の条件のバ�
 
 <code-view style="height: 100px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-sample-1" alt="Angular Checkbox の例">
+           iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-sample-1/" alt="Angular Checkbox の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -125,7 +125,7 @@ igx-checkbox {
 
 <code-view style="height: 200px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-sample-2/" >
 </code-view>
 
 ### ラベル配置
@@ -221,7 +221,7 @@ public toggleAll() {
 
 <code-view style="height: 200px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-sample-3/" >
 </code-view>
 
 
@@ -236,7 +236,7 @@ public toggleAll() {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-次に、[`checkbox-theme`]({environment:sassApiUrl}/index.html#function-checkbox-theme) を拡張して新しいテーマを作成し、チェックボックス要素をスタイリングします。`$empty-color` と `$fill-color` を指定することで、必要な状態色やコントラストのある前景色が自動的に計算されます。必要に応じて、他のパラメーターをカスタム値でオーバーライドすることもできます。
+次に、[`checkbox-theme`]({environment:sassApiUrl}/themes#function-checkbox-theme) を拡張して新しいテーマを作成し、チェックボックス要素をスタイリングします。`$empty-color` と `$fill-color` を指定することで、必要な状態色やコントラストのある前景色が自動的に計算されます。必要に応じて、他のパラメーターをカスタム値でオーバーライドすることもできます。
 
 ```scss
 // in styles.scss
@@ -259,7 +259,7 @@ $custom-checkbox-theme: checkbox-theme(
 <code-view style="height: 100px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-styling" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-styling/" >
 </code-view>
 
 
@@ -269,11 +269,11 @@ $custom-checkbox-theme: checkbox-theme(
 <div class="divider--half"></div>
 
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
-* [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/index.html#function-checkbox-theme)
+* [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/themes#function-checkbox-theme)
 * [LabelPosition]({environment:angularApiUrl}/enums/labelposition.html)
 
 ## テーマの依存関係
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-riple-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-riple-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

@@ -12,7 +12,7 @@ The Ignite UI for Angular Input and Label directives are used to decorate and st
 
 <code-view style="height:100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-1" alt="Angular Label & Input Example">
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-1/" alt="Angular Label & Input Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -103,7 +103,7 @@ We can validate an `input` using the [`required`]({environment:angularApiUrl}/cl
 
 <code-view style="height:100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -161,7 +161,7 @@ If you want the text in an input element, marked with `igxInput`, to be selected
 
 <code-view style="height: 130px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/input-text-selection" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-text-selection/" >
 </code-view>
 
 <div class="divider--half"></div>

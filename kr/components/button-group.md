@@ -12,7 +12,7 @@ The [**igx-buttongroup**]({environment:angularApiUrl}/classes/igxbuttongroupcomp
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -71,7 +71,7 @@ igx-buttongroup{
 
 <code-view style="height: 164px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -97,7 +97,7 @@ Use the the [`multiSelection`]({environment:angularApiUrl}/classes/igxbuttongrou
 
 <code-view style="height: 60px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-4/" >
 </code-view>
 
 
@@ -140,7 +140,7 @@ public selectDensity(event) {
 
 <code-view style="height: 60px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-5/" >
 </code-view>
 
 
@@ -214,7 +214,7 @@ public ngOnInit() {
 
 <code-view style="height: 60px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-3/" >
 </code-view>
 
 

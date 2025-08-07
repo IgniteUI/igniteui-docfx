@@ -14,7 +14,7 @@ _language: ja
 @@if (igxName === 'IgxGrid') {
 <code-view style="height:500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-cascading-combos" alt="Angular @@igComponent 一括編集とトランザクションの例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-cascading-combos/" alt="Angular @@igComponent 一括編集とトランザクションの例">
 </code-view>
 }
 
@@ -87,9 +87,9 @@ public countryChanging(event: IComboSelectionChangeEventArgs) {
 <div class="divider--half"></div>
 
 * [IgxSimpleComboComponent]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html)
-* [IgxComboComponent スタイル]({environment:sassApiUrl}/index.html#function-combo-theme)
+* [IgxComboComponent スタイル]({environment:sassApiUrl}/themes#function-combo-theme)
 * [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
-* [IgxLinearProgressBarComponent スタイル]({environment:sassApiUrl}/index.html#function-progress-linear-theme)
+* [IgxLinearProgressBarComponent スタイル]({environment:sassApiUrl}/themes#function-progress-linear-theme)
 
 ## その他のリソース
 

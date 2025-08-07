@@ -113,7 +113,7 @@ The following sample demonstrates the editing execution sequence in action:
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-editing-lifecycle" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-editing-lifecycle/" >
 </code-view>
 
 }
@@ -121,7 +121,7 @@ The following sample demonstrates the editing execution sequence in action:
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-editing-lifecycle" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-editing-lifecycle/" >
 </code-view>
 
 }
@@ -129,7 +129,7 @@ The following sample demonstrates the editing execution sequence in action:
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-editing-lifecycle" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-editing-lifecycle/" >
 </code-view>
 
 }
@@ -164,15 +164,15 @@ public onSorting(event: ISortingEventArgs) {
 ## API References
 
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
-* [IgxDatePickerComponent Styles]({environment:sassApiUrl}/index.html#function-igx-date-picker-theme)
+* [IgxDatePickerComponent Styles]({environment:sassApiUrl}/themes#function-date-picker-theme)
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
-* [IgxCheckboxComponent Styles]({environment:sassApiUrl}/index.html#function-checkbox-theme)
+* [IgxCheckboxComponent Styles]({environment:sassApiUrl}/themes#function-checkbox-theme)
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 
 ## Additional Resources

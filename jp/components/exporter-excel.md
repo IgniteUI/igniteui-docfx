@@ -18,7 +18,7 @@ Ignite UI for Angular Excel Exporter サービスは、Microsoft® Excel® 形�
 <code-view style="height: 100px;" 
            data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz"
-           iframe-src="{environment:demosBaseUrl}/services/export-excel" alt="Angular Excel Exporter の例">
+           iframe-src="{environment:demosBaseUrl}/services/export-excel/" alt="Angular Excel Exporter の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -109,7 +109,7 @@ Grid Excel エクスポーター:
 
 その他の使用されたコンポーネント:
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 
 <div class="divider"></div>
 

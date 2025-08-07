@@ -18,7 +18,7 @@ The Ignite UI for Angular Excel Exporter service can export data in Microsoft® 
 <code-view style="height: 100px;" 
            data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz"
-           iframe-src="{environment:demosBaseUrl}/services/export-excel" alt="Angular Excel Exporter Example">
+           iframe-src="{environment:demosBaseUrl}/services/export-excel/" alt="Angular Excel Exporter Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -109,7 +109,7 @@ Grids Excel Exporters:
 
 Additional components that were used:
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
 <div class="divider"></div>
 

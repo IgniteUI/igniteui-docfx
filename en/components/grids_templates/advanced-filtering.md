@@ -25,7 +25,7 @@ The Advanced filtering provides a dialog which allows the creation of groups wit
 
 <code-view style="height:530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-advanced-filtering" alt="Angular @@igComponent Advanced Filtering Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-advanced-filtering/" alt="Angular @@igComponent Advanced Filtering Example">
 </code-view>
 
 }
@@ -33,7 +33,7 @@ The Advanced filtering provides a dialog which allows the creation of groups wit
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-advanced-filtering" alt="Angular @@igComponent Advanced Filtering Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-advanced-filtering/" alt="Angular @@igComponent Advanced Filtering Example">
 </code-view>
 
 }
@@ -41,7 +41,7 @@ The Advanced filtering provides a dialog which allows the creation of groups wit
 
 <code-view style="height:630px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-advanced-filtering" alt="Angular @@igComponent Advanced Filtering Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-advanced-filtering/" alt="Angular @@igComponent Advanced Filtering Example">
 </code-view>
 
 }
@@ -181,7 +181,7 @@ As you see the demo above the Advanced filtering dialog is hosted in an overlay 
 
 <code-view style="height:750px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-external-advanced-filtering" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-external-advanced-filtering/" >
 </code-view>
 
 }
@@ -190,7 +190,7 @@ As you see the demo above the Advanced filtering dialog is hosted in an overlay 
 
 <code-view style="height:750px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-external-advanced-filtering" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-external-advanced-filtering/" >
 </code-view>
 
 }
@@ -199,7 +199,7 @@ As you see the demo above the Advanced filtering dialog is hosted in an overlay 
 
 <code-view style="height:750px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-advanced-filtering" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-advanced-filtering/" >
 </code-view>
 
 }
@@ -280,54 +280,56 @@ $custom-drop-down: drop-down-theme(
 ```
 
 >[!NOTE]
->Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
-In this example we only changed some of the parameters for the listed components, but the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme), [`button-group-theme`]({environment:sassApiUrl}/index.html#function-button-group-theme), [`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme), [`drop-down-theme`]({environment:sassApiUrl}/index.html#function-drop-down-theme), [`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme) themes provide way more parameters to control their respective styling.
+In this example we only changed some of the parameters for the listed components, but the [`button-theme`]({environment:sassApiUrl}/themes#function-button-theme), [`button-group-theme`]({environment:sassApiUrl}/themes#function-button-group-theme), [`chip-theme`]({environment:sassApiUrl}/themes#function-chip-theme), [`drop-down-theme`]({environment:sassApiUrl}/themes#function-drop-down-theme), [`input-group-theme`]({environment:sassApiUrl}/themes#function-input-group-theme) themes provide way more parameters to control their respective styling.
 
 The last step is to **include** the component mixins, each with its respective theme. We will also add some styles for other elements inside the advanced filtering dialog.
 
 ```scss
-@include css-vars($custom-grid);
-igx-advanced-filtering-dialog {
-  @include css-vars($custom-button);
-  @include css-vars($custom-button-group);
-  @include css-vars($custom-input-group);
-  @include css-vars($custom-chip);
-  @include css-vars($custom-drop-down);
+    @include css-vars($custom-grid);
 
-  .igx-filter-empty__title {
-    color: #ffcd0f
-  }
+    igx-advanced-filtering-dialog {
+        @include css-vars($custom-button);
+        @include css-vars($custom-button-group);
+        @include css-vars($custom-input-group);
+        @include css-vars($custom-chip);
+        @include css-vars($custom-drop-down);
 
-  .igx-advanced-filter__header {
-    color: #ffcd0f
-  }
+        .igx-filter-empty__title {
+            color: #ffcd0f
+        }
 
-  .igx-filter-tree__expression-actions igx-icon {
-    color: #ffcd0f
-  }
+        .igx-advanced-filter__header {
+            color: #ffcd0f
+        }
 
-  .igx-filter-tree__expression-actions igx-icon:hover {
-    color: #ffe482
-  }
+        .igx-filter-tree__expression-actions igx-icon {
+            color: #ffcd0f
+        }
 
-  .igx-filter-tree__expression-actions igx-icon:focus {
-    color: #ffe482
-  }
+        .igx-filter-tree__expression-actions igx-icon:hover {
+            color: #ffe482
+        }
 
-  .igx-filter-contextual-menu {
-    border: 1px solid #ffcd0f
-  }
+        .igx-filter-tree__expression-actions igx-icon:focus {
+            color: #ffe482
+        }
 
-  .igx-filter-contextual-menu__close-btn {
-    position: absolute !important;
-    background: #292826 !important;
-    border-color: #ffcd0f !important;
-  }
+        .igx-filter-contextual-menu {
+            border: 1px solid #ffcd0f
+        }
 
-  .igx-input-group__input::placeholder {
-    color: gray;
-  }
+        .igx-filter-contextual-menu__close-btn {
+            position: absolute !important;
+            background: #292826 !important;
+            border-color: #ffcd0f !important;
+        }
+
+        .igx-input-group__input::placeholder {
+            color: gray;
+        }
+    }
 }
 ```
 
@@ -393,7 +395,7 @@ igx-advanced-filtering-dialog {
 <code-view style="height:530px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-advanced-filtering-style" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-advanced-filtering-style/" >
 </code-view>
 
 }
@@ -402,7 +404,7 @@ igx-advanced-filtering-dialog {
 <code-view style="height:510px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-advanced-filtering-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-advanced-filtering-style/" >
 </code-view>
 
 }
@@ -411,7 +413,7 @@ igx-advanced-filtering-dialog {
 <code-view style="height:630px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-advanced-filtering-style" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-advanced-filtering-style/" >
 </code-view>
 
 }
@@ -425,7 +427,7 @@ igx-advanced-filtering-dialog {
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

@@ -34,7 +34,7 @@ _language: kr
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-resizing-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-resizing-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -43,7 +43,7 @@ _language: kr
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-resizing" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-resizing/" >
 </code-view>
 
 <div class="divider--half"></div>

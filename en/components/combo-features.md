@@ -15,7 +15,7 @@ The following demo demonstrates some of the combobox features that are enabled/d
 
 <code-view style="height: 440px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-features" alt="Angular Combo Features Example">
+           iframe-src="{environment:demosBaseUrl}/lists/combo-features/" alt="Angular Combo Features Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -46,7 +46,7 @@ export class AppModule {}
 <div class="combo-container">
     <igx-combo #combo [data]="lData" displayKey="field" valueKey="field"
         [allowCustomValues]="customValues"
-        [filterable]="filterable"
+        [disableFiltering]="disableFiltering"
         [showSearchCaseIcon]="showSearchCaseIcon"
         [disabled]="disabled">
     </igx-combo>
@@ -55,8 +55,8 @@ export class AppModule {}
     <igx-switch [(ngModel)]="customValues">Allow Custom Values</igx-switch>
     <igx-switch (change)="enableGroups($event)">Enable Grouping</igx-switch>
     <igx-switch [(ngModel)]="disabled">Disable Combo</igx-switch>
-    <igx-switch [(ngModel)]="filterable">Enable Filtering</igx-switch>
-    <igx-switch *ngIf="filterable" [(ngModel)]="showSearchCaseIcon">Show Case-sensitive Icon</igx-switch>
+    <igx-switch [(ngModel)]="disableFiltering">Disable Filtering</igx-switch>
+    <igx-switch *ngIf="!disableFiltering" [(ngModel)]="showSearchCaseIcon">Show Case-sensitive Icon</igx-switch>
 </div>
 ```
 
@@ -66,7 +66,7 @@ Note that grouping is enabled/disabled by setting the [groupKey]({environment:an
 ```typescript
     @ViewChild('combo', { read: IgxComboComponent }) public combo: IgxComboComponent;
 
-    public filterable = true;
+    public disableFiltering = false;
     public showSearchCaseIcon = true;
     public customValues = true;
     public disabled = false;
@@ -129,7 +129,7 @@ If everything is set up correctly, the combobox's list will display centered, us
 
 <code-view style="height: 440px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-overlay" >
+           iframe-src="{environment:demosBaseUrl}/lists/combo-overlay/" >
 </code-view>
 
 
@@ -139,12 +139,12 @@ If everything is set up correctly, the combobox's list will display centered, us
 > The combobox component uses the [AutoPositionStrategy]({environment:angularApiUrl}/classes/autopositionstrategy.html) as a default position strategy.
 
 ### Filtering
-By default, filtering in the combobox is enabled. It can be disabled by setting the [filterable]({environment:angularApiUrl}/classes/igxcombocomponent.html#filterable) property to false.
+By default, filtering in the combobox is enabled. It can be disabled by setting the [disableFiltering]({environment:angularApiUrl}/classes/igxcombocomponent.html#disableFiltering) property to true.
 
 Filtering options can be further enhanced by enabling the search case sensitivity. To display the case-sensitive icon in the search input, set the [showSearchCaseIcon]({environment:angularApiUrl}/classes/IgxComboComponent.html#showSearchCaseIcon) property to true:
 
 ```html
-<igx-combo [filterable]="false" [showSearchCaseIcon]="true"></igx-combo>
+<igx-combo [disableFiltering]="true" [showSearchCaseIcon]="true"></igx-combo>
 ```
 
 <div class="divider--half"></div>
@@ -206,7 +206,7 @@ export class ComboDemo {
 <div class="divider--half"></div>
 
 * [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
-* [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#function-combo-theme)
+* [IgxComboComponent Styles]({environment:sassApiUrl}/themes#function-combo-theme)
 
 Additional components and/or directives with relative APIs that were used:
 * [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)

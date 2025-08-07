@@ -576,7 +576,7 @@ configuration. Same goes for grouping and editing operations with or without tra
 
 <code-view style="height:460px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding-2"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding-2/"
            alt="Angular grid nested data example">
 </code-view>
 
@@ -681,7 +681,7 @@ And the result from this configuration is:
 
 <code-view style="height:460px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding/"
            alt="Angular grid nested data binding example">
 </code-view>
 
@@ -763,7 +763,7 @@ And the result is:
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-composite-data-binding"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-composite-data-binding/"
            alt="Angular grid composite data binding example">
 </code-view>
 
@@ -826,16 +826,16 @@ platformBrowserDynamic()
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-input-group-theme)
-* [IgxChip Theme]({environment:sassApiUrl}/index.html#function-chip-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
-* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-drop-down-theme)
-* [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-calendar-theme)
-* [IgxSnackBar Theme]({environment:sassApiUrl}/index.html#function-snackbar-theme)
-* [IgxBadge Theme]({environment:sassApiUrl}/index.html#function-badge-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxInputGroup Theme]({environment:sassApiUrl}/themes#function-input-group-theme)
+* [IgxChip Theme]({environment:sassApiUrl}/themes#function-chip-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
+* [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
+* [IgxCalendar Theme]({environment:sassApiUrl}/themes#function-calendar-theme)
+* [IgxSnackBar Theme]({environment:sassApiUrl}/themes#function-snackbar-theme)
+* [IgxBadge Theme]({environment:sassApiUrl}/themes#function-badge-theme)
 
 ## Tutorial video
 Learn more about creating an Angular data grid in our short tutorial video:

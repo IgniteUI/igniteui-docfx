@@ -152,7 +152,7 @@ igxGrid のデフォルトの展開インジケーターは次のとおりです
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/index.html#mixin-igx-grid)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#mixin-grid)
 
 ## その他のリソース
 <div class="divider--half"></div>

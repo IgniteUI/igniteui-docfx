@@ -15,7 +15,7 @@ _language: kr
 
 <code-view style="height:320px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-virtual" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-virtual/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -132,7 +132,7 @@ You can view the configured example below:
 
 <code-view style="height:320px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-virtual" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-virtual/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -251,7 +251,7 @@ The result of the above configuration is a drop-down that dynamically loads the 
 
 <code-view style="height:400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-remote" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-remote/" >
 </code-view>
 
 <div class="divider--half"></div>

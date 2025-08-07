@@ -31,7 +31,7 @@ Ignite UI for Angular @@igComponent component provides a great data manipulation
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-editing" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-editing/" >
 </code-view>
 
 }
@@ -39,7 +39,7 @@ Ignite UI for Angular @@igComponent component provides a great data manipulation
 
 <code-view style="height:950px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-editing" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-editing/" >
 </code-view>
 
 }
@@ -47,7 +47,7 @@ Ignite UI for Angular @@igComponent component provides a great data manipulation
 
 <code-view style="height:660px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing/" >
 </code-view>
 
 }

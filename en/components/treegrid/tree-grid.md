@@ -327,7 +327,7 @@ The last step is to **include** the component theme in our application.
 <code-view style="height:600px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-style" alt="Angular tree grid styling demo">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-style/" alt="Angular tree grid styling demo">
 </code-view>
 
 >[!NOTE]

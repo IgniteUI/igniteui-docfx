@@ -13,7 +13,7 @@ _language: ja
 
 <code-view style="height: 620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-1" alt="Angular Month Picker の例">
+           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-1/" alt="Angular Month Picker の例">
 </code-view>
 
 ## Ignite UI for Angular Month Picker を使用した作業の開始
@@ -148,7 +148,7 @@ Month Picker コンポーネントのローカライズとスタイル設定の�
 
 <code-view style="height: 680px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-3/" >
 </code-view>
 
 
@@ -184,7 +184,7 @@ Month Picker のスタイル設定を始めるには、すべてのテーマ関�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-月ピッカーはカレンダーのテーマを使用するため、[`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) を拡張した新しいテーマを作成する必要があります。月ピッカーの項目にスタイルを設定するには、`$content-background` パラメーターを設定します。オプションで、残りのプロパティをオーバーライドする場合は、`$header-background` を設定することもできます。
+月ピッカーはカレンダーのテーマを使用するため、[`calendar-theme`]({environment:sassApiUrl}/themes#function-calendar-theme) を拡張した新しいテーマを作成する必要があります。月ピッカーの項目にスタイルを設定するには、`$content-background` パラメーターを設定します。オプションで、残りのプロパティをオーバーライドする場合は、`$header-background` を設定することもできます。
 これら 2 つのパラメーターはテーマの基礎となり、ホバー、選択、アクティブなどすべての状態に応じた適切な背景色および前景色を自動的に生成します。
 
 ```scss
@@ -208,7 +208,7 @@ $my-calendar-theme: calendar-theme(
 <code-view style="height: 350px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-styling" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-styling/" >
 </code-view>
 
 
@@ -217,14 +217,14 @@ $my-calendar-theme: calendar-theme(
 
 * [IgxMonthPickerComponent]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html)
 * [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
-* [IgxCalendarComponent スタイル]({environment:sassApiUrl}/index.html#function-calendar-theme)
+* [IgxCalendarComponent スタイル]({environment:sassApiUrl}/themes#function-calendar-theme)
 
 
 ## テーマの依存関係
 <div class="divider--half"></div>
 
-* [IgxCalendar テーマ]({environment:sassApiUrl}/index.html#function-calendar-theme)
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxCalendar テーマ]({environment:sassApiUrl}/themes#function-calendar-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

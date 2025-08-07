@@ -35,7 +35,7 @@ In Ignite UI for Angular @@igComponent, data sorting is enabled on a per-column 
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-sample" alt="Angular @@igComponent Sorting Overview Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-sample/" alt="Angular @@igComponent Sorting Overview Example">
 </code-view>
 
 }
@@ -45,7 +45,7 @@ Additionally there is a custom context menu added for sorting using **@@igSelect
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-sorting" alt="Angular @@igComponent Sorting Overview Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-sorting/" alt="Angular @@igComponent Sorting Overview Example">
 </code-view>
 
 }
@@ -55,7 +55,7 @@ Additionally there is a custom context menu added for sorting using **@@igSelect
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sorting" alt="Angular @@igComponent Sorting Overview Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sorting/" alt="Angular @@igComponent Sorting Overview Example">
 </code-view>
 
 }
@@ -84,7 +84,7 @@ The **@@igxName** provides a solution for this problem by indicating the index o
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-indicators" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-indicators/" >
 </code-view>
 
 }
@@ -276,7 +276,7 @@ The last step is to **include** the component mixins:
 <code-view style="height:550px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-styling" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-styling/" >
 </code-view>
 
 }
@@ -287,7 +287,7 @@ The last step is to **include** the component mixins:
 <code-view style="height:550px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-sorting-styling" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-sorting-styling/" >
 </code-view>
 
 }
@@ -298,7 +298,7 @@ The last step is to **include** the component mixins:
 <code-view style="height:510px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sorting-styling" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sorting-styling/" >
 </code-view>
 
 }

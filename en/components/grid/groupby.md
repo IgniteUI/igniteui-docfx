@@ -14,7 +14,7 @@ This example presents the grouping capabilities of a large amount of data. Dragg
 
 <code-view style="height:605px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby" alt="Angular Grid Group By Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby/" alt="Angular Grid Group By Example">
 </code-view>
 
 
@@ -179,7 +179,7 @@ Groups that span multiple pages are split between them. The group row is visible
 
 <code-view style="height:605px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-paging" alt="Angular grid group by with paging example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-paging/" alt="Angular grid group by with paging example">
 </code-view>
 
 
@@ -217,7 +217,7 @@ The sample below demonstrates custom grouping by `Date`, where the date values a
 
 <code-view style="height:605px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-custom" alt="Angular custom group by example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-custom/" alt="Angular custom group by example">
 </code-view>
 
 
@@ -312,7 +312,7 @@ public sortByGroup() {
 
 ## Styling
 
-The igxGrid allows styling through the [`Ignite UI for Angular Theme Library`](../themes/sass/component-themes.md). The grid's [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
+The igxGrid allows styling through the [`Ignite UI for Angular Theme Library`](../themes/sass/component-themes.md). The grid's [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
 
 In the below steps, we are going through the steps of customizing the grid's Group By styling.
 
@@ -329,7 +329,7 @@ To begin the customization of the Group By feature, you need to import the `inde
 
 ### Defining custom theme
 
-Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the parameters, required to customize the Group By as desired. You also need to extend the [`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme), because it's used in the Group By feature.
+Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) and accepts the parameters, required to customize the Group By as desired. You also need to extend the [`chip-theme`]({environment:sassApiUrl}/themes#function-chip-theme), because it's used in the Group By feature.
 
 ```scss
 
@@ -359,7 +359,7 @@ $custom-chips-theme: chip-theme(
 
 ### Defining a custom color palette
 
-In the approach that we described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions.   
+In the approach that we described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions.   
 `palette` generates a color palette, based on provided primary, secondary and surface colors.  
 
 ```scss
@@ -397,11 +397,11 @@ $custom-chips-theme: chip-theme(
 ```
 ### Defining custom schemas
 You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/sass/schemas.md). The **schema** is the recipe of a theme. 
-Extend one of the two predefined schemas, that are provided for every component. In our case, we would use [`light-grid`]({environment:sassApiUrl}/index.html#variable-light-grid).   
+Extend one of the two predefined schemas, that are provided for every component. In our case, we would use [`light-grid`]({environment:sassApiUrl}/schemas#variable-light-material-schema).   
 
 ```scss
 $custom-grid-schema: extend(
-  $light-grid,
+  map.get('grid', $light-material-schema),
   (
     group-row-background: (color:('secondary', 100)),
     group-row-selected-background: (color:('primary', 400)),
@@ -415,7 +415,7 @@ $custom-grid-schema: extend(
   )
 );
 ```
-In order for the custom schema to be applied, either ([`light`]({environment:sassApiUrl}/index.html#variable-light-material-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-material-schema)) globals has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respective component theme afterwards.   
+In order for the custom schema to be applied, either ([`light`]({environment:sassApiUrl}/schemas#variable-light-material-schema) or [`dark`]({environment:sassApiUrl}/schemas#variable-dark-material-schema)) globals has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respective component theme afterwards.   
 
 ```scss
 $my-custom-schema: extend(
@@ -467,7 +467,7 @@ In our example, we need to use `::ng-deep` for our chip theme:
 <code-view style="height:570px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-styling" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-styling/" >
 </code-view>
 
 >[!NOTE]
@@ -483,12 +483,12 @@ In our example, we need to use `::ng-deep` for our chip theme:
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGroupByRow]({environment:angularApiUrl}/classes/igxgroupbyrow.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 * [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IGroupByExpandState]({environment:angularApiUrl}/interfaces/igroupbyexpandstate.html)
 * [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
-* [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-chip-theme)
+* [IgxChipComponent Styles]({environment:sassApiUrl}/themes#function-chip-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

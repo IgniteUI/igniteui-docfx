@@ -13,7 +13,7 @@ Ignite UI for Angular Icon Button ディレクティブを任意のアイコン�
 
 <code-view style="height: 70px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/icon-button-overview" alt="Angular Icon Button の例">
+           iframe-src="{environment:demosBaseUrl}/data-entries/icon-button-overview/" alt="Angular Icon Button の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -141,7 +141,7 @@ public ngOnInit() {
 
 <code-view style="height: 70px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/icon-button-size" alt="Angular Icon Button サイズの例">
+           iframe-src="{environment:demosBaseUrl}/data-entries/icon-button-size/" alt="Angular Icon Button サイズの例">
 </code-view>
 <div class="divider--half"></div>
 
@@ -166,10 +166,10 @@ public ngOnInit() {
 }
 ```
 
-ボタンのスタイル設定に使用できるパラメーターの完全なリストについては、[`icon-button-theme`]({environment:sassApiUrl}/index.html#function-icon-button-theme) セクションを参照してください。
+ボタンのスタイル設定に使用できるパラメーターの完全なリストについては、[`icon-button-theme`]({environment:sassApiUrl}/themes#function-icon-button-theme) セクションを参照してください。
 
 特定のタイプのアイコン ボタン (`flat`、`outlined`、`contained`) のみをスタイリングすることもできます。
-そのためには、次のタイプ別テーマ関数を使用します: [`flat-icon-button-theme`]({environment:sassApiUrl}/index.html#function-flat-icon-button-theme)、[`outlined-icon-button-theme`]({environment:sassApiUrl}/index.html#function-outlined-icon-button-theme)、[`contained-icon-button-theme`]({environment:sassApiUrl}/index.html#function-contained-icon-button-theme)。
+そのためには、次のタイプ別テーマ関数を使用します: [`flat-icon-button-theme`]({environment:sassApiUrl}/themes#function-flat-icon-button-theme)、[`outlined-icon-button-theme`]({environment:sassApiUrl}/themes#function-outlined-icon-button-theme)、[`contained-icon-button-theme`]({environment:sassApiUrl}/themes#function-contained-icon-button-theme)。
 
 以下は、`contained-icon-button-theme` 関数を使用して SCSS でカスタム テーマを定義する例です。
 
@@ -186,7 +186,7 @@ $custom-contained: contained-icon-button-theme(
 <code-view style="height: 100px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/icon-button-styling" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/icon-button-styling/" >
 </code-view>
 <div class="divider--half"></div>
 
@@ -194,7 +194,7 @@ $custom-contained: contained-icon-button-theme(
 <div class="divider--half"></div>
 
 * [IgxIconButtonDirective]({environment:angularApiUrl}/classes/igxiconbuttondirective.html)
-* [IgxIconButton スタイル]({environment:sassApiUrl}/index.html#function-icon-button-theme)
+* [IgxIconButton スタイル]({environment:sassApiUrl}/themes#function-icon-button-theme)
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
 
 ## その他のリソース

@@ -17,7 +17,7 @@ _language: ja
 
 <code-view style="height: 350px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" alt="Angular Overlay の例">
+           iframe-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1/" alt="Angular Overlay の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -137,7 +137,7 @@ Overlay サービスの [`attach()`]({environment:angularApiUrl}/classes/igxover
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" >
+           iframe-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -204,7 +204,7 @@ const connectedOverlaySettings = IgxOverlayService.createRelativeOverlaySettings
 
 <code-view style="height: 750px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/overlay-preset-settings-sample" >
+           iframe-src="{environment:demosBaseUrl}/interactions/overlay-preset-settings-sample/" >
 </code-view>
 
 
@@ -274,7 +274,7 @@ export class MyOverlayComponent implements OnDestroy {
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-2" >
+           iframe-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -339,7 +339,7 @@ export class ExampleComponent {
 
 ## API リファレンス
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
-* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxOverlay スタイル]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ### その他のリソース
 * [配置方法](overlay-position.md)
