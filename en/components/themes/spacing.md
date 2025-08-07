@@ -49,7 +49,7 @@ The spacing system revolves around several key CSS custom properties:
 
 Components use CSS custom properties to automatically detect their current size:
 
-- `--is-small` - Set to 1 when component is small-sized, 0 otherwise
+- `--is-small` - Set to 1 when component is small-sized, 0 otherwise.
 - `--is-medium` - Set to 1 when component is medium-sized, 0 otherwise  
 - `--is-large` - Set to 1 when component is large-sized, 0 otherwise
 - `--component-size` - Numeric value indicating current size (1=small, 2=medium, 3=large)
