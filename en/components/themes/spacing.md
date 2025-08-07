@@ -18,7 +18,7 @@ Ignite UI for Angular provides a sophisticated spacing system that scales dynami
 
 The spacing system in Ignite UI is closely tied to component sizing. Components can have three different sizes:
 - **Small** - Compact spacing for dense layouts
-- **Medium** - Default balanced spacing  
+- **Medium** - Default balanced spacing.  
 - **Large** - Comfortable spacing for touch-friendly interfaces
 
 The spacing automatically adapts based on which size is active, ensuring consistent visual hierarchy throughout your application.
