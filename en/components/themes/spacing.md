@@ -1,6 +1,6 @@
 ---
 title: Spacing | Ignite UI for Angular 
-_description: The Ignite UI for Angular provides a way of adjusting the paddings and margins with ease on application or component level. 
+_description: The Ignite UI for Angular provides a way of adjusting paddings and margins with ease on application or component level. 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Components, Native Angular Controls, Native Angular Components Library, spacing, padding, margin
 ---
 
