@@ -897,6 +897,8 @@
   new: false
 - name: Size
   href: display-density.md
+- name: Spacing
+  href: themes/spacing.md
 - name: Sass
   new: false
   items:
