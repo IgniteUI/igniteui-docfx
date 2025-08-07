@@ -67,7 +67,7 @@ The theming system defines three size constants:
 
 - `--ig-size-small` (value: 1)
 - `--ig-size-medium` (value: 2)  
-- `--ig-size-large` (value: 3)
+- `--ig-size-large` (value: 3).
 
 ## Incorporating Size in Your Own Components
 
