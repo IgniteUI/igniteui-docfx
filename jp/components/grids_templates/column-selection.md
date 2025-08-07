@@ -134,7 +134,7 @@ $custom-grid-theme: grid-theme(
 ```
 }
 
-[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) はいくつかのパラメーターを受け入れますが、選択したすべての列の外観を変更するのは以下の 5 つです。
+[`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) はいくつかのパラメーターを受け入れますが、選択したすべての列の外観を変更するのは以下の 5 つです。
 - **$row-selected-background**- 選択した部分の背景を設定します。
 - **$row-selected-text-color** - 選択した部分のテキスト色を設定します。
 - **$row-selected-hover-background** - ホバーされたセルまたは複数のセルの色を設定します。
@@ -168,7 +168,7 @@ $custom-grid-theme: grid-theme(
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumnomponent.html)
 * [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) プロパティ:
 * [columnSelection]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnselection)

@@ -491,7 +491,7 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme) を拡張して新しいテーマを作成し、チップの項目をスタイリングします。`$background` または `$selected-background` を指定することで、状態に応じた色や前景色が自動的に計算されます。必要に応じて、他のパラメーターをカスタム値でオーバーライドすることもできます。
+最もシンプルな方法として、[`chip-theme`]({environment:sassApiUrl}/themes#function-chip-theme) を拡張して新しいテーマを作成し、チップの項目をスタイリングします。`$background` または `$selected-background` を指定することで、状態に応じた色や前景色が自動的に計算されます。必要に応じて、他のパラメーターをカスタム値でオーバーライドすることもできます。
 
 ```scss
 $custom-theme: chip-theme(
@@ -553,12 +553,12 @@ igx-chip {
 ## API
 
 * [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
-* [IgxChipComponent スタイル]({environment:sassApiUrl}/index.html#function-chip-theme)
+* [IgxChipComponent スタイル]({environment:sassApiUrl}/themes#function-chip-theme)
 * [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
 
 ## テーマの依存関係
 
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## 参照
 

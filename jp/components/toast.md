@@ -188,7 +188,7 @@ Toast のスタイル設定を始めるには、すべてのテーマ関数と�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`toast-theme`]({environment:sassApiUrl}/index.html#function-toast-theme) を拡張する新しいテーマを作成し、`$background`、`$text-color`、`$border-radius` パラメーターを指定します。
+最もシンプルな方法として、[`toast-theme`]({environment:sassApiUrl}/themes#function-toast-theme) を拡張する新しいテーマを作成し、`$background`、`$text-color`、`$border-radius` パラメーターを指定します。
 
 ```scss
 $custom-toast-theme: toast-theme(
@@ -199,7 +199,7 @@ $custom-toast-theme: toast-theme(
 ```
 
 >[!NOTE]
->上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](themes/sass/palettes.md)のトピックをご覧ください。
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/palettes#function-palette) および [`color`]({environment:sassApiUrl}/palettes#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](themes/sass/palettes.md)のトピックをご覧ください。
 
 最後に Toast のカスタム テーマを設定します。
 
@@ -221,7 +221,7 @@ $custom-toast-theme: toast-theme(
 <div class="divider--half"></div>
 
 * [IgxToastComponent]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
-* [IgxToastComponent スタイル]({environment:sassApiUrl}/index.html#function-toast-theme)
+* [IgxToastComponent スタイル]({environment:sassApiUrl}/themes#function-toast-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

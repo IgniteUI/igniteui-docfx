@@ -79,7 +79,7 @@ $custom-palette: palette(
 );
 ```
 
-As you can see, the code generation changed from the specific `@include light-theme($light-material-palette);`, which is the [default theme](../../themes/sass/presets/material.md) and [color palette](../../themes/palettes.md), to a generic [`theme()`]({environment:sassApiUrl}/index.html#mixin-theme) include, which provides as parameters our custom color palette and a [dark material schema](../../themes/sass/schemas.md) for the theming structure. The running Angular app result looks like this now:
+As you can see, the code generation changed from the specific `@include light-theme($light-material-palette);`, which is the [default theme](../../themes/sass/presets/material.md) and [color palette](../../themes/palettes.md), to a generic [`theme()`]({environment:sassApiUrl}/themes#mixin-theme) include, which provides as parameters our custom color palette and a [dark material schema](../../themes/sass/schemas.md) for the theming structure. The running Angular app result looks like this now:
 
 <img class="responsive-img"  src="../../../images/general/theming-walkthrough/getting-started-dark-app.png" />
 
@@ -186,8 +186,8 @@ Then our theme definition will go in the general scope, which we will use for th
 ```
 
 >[!NOTE]
-> I have switched the `igx-grid-toolbar` theme override to overriding just two of its variables, instead of reincluding all of the theme variables using [`css-vars()`]({environment:sassApiUrl}/index.html#mixin-css-vars). 
-> All theme variables can be found in the [corresponding sass api doc]({environment:sassApiUrl}/index.html#function-grid-toolbar-theme) and are equivalent to the sass variables, but prefixed with `--` instead of `$`.
+> I have switched the `igx-grid-toolbar` theme override to overriding just two of its variables, instead of reincluding all of the theme variables using [`css-vars()`]({environment:sassApiUrl}/themes#mixin-css-vars). 
+> All theme variables can be found in the [corresponding sass api doc]({environment:sassApiUrl}/themes#function-grid-toolbar-theme) and are equivalent to the sass variables, but prefixed with `--` instead of `$`.
 
 And the result now looks like this with light OS theme:
 
@@ -221,13 +221,13 @@ After making some customizations, we're going to build the application we genera
 
 <img class="responsive-img"  src="../../../images/general/theming-walkthrough/optimizing-initial-build.png" />
 
-As you can see, the application theme is slightly over 400kb, which comes down to ~40kb when compressed and transferred over. This is not large, but can it be more optimal? The answer is yes, unless every single component from the Ignite UI for Angular suite is used. Calling `@include theme()` brings in all of the component themes, but we have a mechanism for telling the function what to exclude. There's an [`$exclude`]({environment:sassApiUrl}/index.html#mixin-theme) parameter to the theming mixin, which takes component names as an array and excludes those from the theme at build time. Since it's not so easy to find and list all of the components available in the package, it's preferable if you can just list all of the components you use. We expose the full component list as a varialble, which you have access to once you
+As you can see, the application theme is slightly over 400kb, which comes down to ~40kb when compressed and transferred over. This is not large, but can it be more optimal? The answer is yes, unless every single component from the Ignite UI for Angular suite is used. Calling `@include theme()` brings in all of the component themes, but we have a mechanism for telling the function what to exclude. There's an [`$exclude`]({environment:sassApiUrl}/themes#mixin-theme) parameter to the theming mixin, which takes component names as an array and excludes those from the theme at build time. Since it's not so easy to find and list all of the components available in the package, it's preferable if you can just list all of the components you use. We expose the full component list as a varialble, which you have access to once you
 
 ```scss
 @use "@infragistics/igniteui-angular/theming" as *;
 ```
 
-The components array is found at `$components` and you can reduce [this list]({environment:sassApiUrl}/index.html#variable-light-schema) with the components you use and exclude all the rest, like in this example:
+The components array is found at `$components` and you can reduce [this list]({environment:sassApiUrl}/themes#variable-dark-material-schema) with the components you use and exclude all the rest, like in this example:
 
 ```scss
 $include: (

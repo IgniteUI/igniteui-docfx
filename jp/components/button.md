@@ -259,7 +259,7 @@ protected get sizeStyle() {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-次に、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) を拡張し、それぞれのホバーとフォーカス パラメーターと共に `$foreground` と `$background` パラメーターを受け入れる新しいテーマを作成します。
+次に、[`button-theme`]({environment:sassApiUrl}/themes#function-button-theme) を拡張し、それぞれのホバーとフォーカス パラメーターと共に `$foreground` と `$background` パラメーターを受け入れる新しいテーマを作成します。
 
 次のマークアップを前提として:
 
@@ -283,7 +283,7 @@ $custom-button-theme: button-theme(
 );
 ```
 
-ボタンのスタイル設定に使用できるパラメーターの完全なリストについては、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) セクションを参照してください。
+ボタンのスタイル設定に使用できるパラメーターの完全なリストについては、[`button-theme`]({environment:sassApiUrl}/themes#function-button-theme) セクションを参照してください。
 
 最後には、カスタム ボタン テーマをアプリケーションに渡します。 
 
@@ -294,7 +294,7 @@ $custom-button-theme: button-theme(
 ```
 
 特定のタイプのボタン (`flat`、`outlined`、`contained`、`fab`) のみをスタイリングすることもできます。
-そのためには、次のようなタイプ別のテーマ関数を使用します: [`flat-button-theme`]({environment:sassApiUrl}/index.html#function-flat-button-theme)、[`outlined-button-theme`]({environment:sassApiUrl}/index.html#function-outlined-button-theme)、[`contained-button-theme`]({environment:sassApiUrl}/index.html#function-contained-button-theme)、[`fab-button-theme`]({environment:sassApiUrl}/index.html#function-fab-button-theme)。
+そのためには、次のようなタイプ別のテーマ関数を使用します: [`flat-button-theme`]({environment:sassApiUrl}/themes#function-flat-button-theme)、[`outlined-button-theme`]({environment:sassApiUrl}/themes#function-outlined-button-theme)、[`contained-button-theme`]({environment:sassApiUrl}/themes#function-contained-button-theme)、[`fab-button-theme`]({environment:sassApiUrl}/themes#function-fab-button-theme)。
 
 例として、以下のようなマークアップがあるとします。
 
@@ -307,7 +307,7 @@ $custom-button-theme: button-theme(
 </div>
 ```
 
-`contained` ボタンのみをスタイリングしたい場合は、[`contained-button-theme`]({environment:sassApiUrl}/index.html#function-flat-button-theme) 関数を使用します。
+`contained` ボタンのみをスタイリングしたい場合は、[`contained-button-theme`]({environment:sassApiUrl}/themes#function-flat-button-theme) 関数を使用します。
 
 ```scss
 $custom-contained-theme: contained-button-theme(
@@ -315,9 +315,9 @@ $custom-contained-theme: contained-button-theme(
 );
 ```
 
-新たに追加されたタイプ別テーマ関数により、ボタンのスタイリングがより簡単になりました。上記の例のように、[`contained-button-theme`]({environment:sassApiUrl}/index.html#function-contained-button-theme) および [`fab-button-theme`]({environment:sassApiUrl}/index.html#function-fab-button-theme) では、`$background` パラメーターに色を指定するだけで、他のすべての状態用の色やテキストの色が自動的に生成されます。テキストの色は、新しく追加された [`adaptive-contrast`]({environment:sassApiUrl}/index.html#function-adaptive-contrast) 関数によって、指定された背景に対して黒か白のどちらがより良いコントラストを持つかを計算して決定されます。
+新たに追加されたタイプ別テーマ関数により、ボタンのスタイリングがより簡単になりました。上記の例のように、[`contained-button-theme`]({environment:sassApiUrl}/themes#function-contained-button-theme) および [`fab-button-theme`]({environment:sassApiUrl}/themes#function-fab-button-theme) では、`$background` パラメーターに色を指定するだけで、他のすべての状態用の色やテキストの色が自動的に生成されます。テキストの色は、新しく追加された [`adaptive-contrast`]({environment:sassApiUrl}/color#function-adaptive-contrast) 関数によって、指定された背景に対して黒か白のどちらがより良いコントラストを持つかを計算して決定されます。
 
-[`flat-button-theme`]({environment:sassApiUrl}/index.html#function-flat-button-theme) および [`outlined-button-theme`]({environment:sassApiUrl}/index.html#function-outlined-button-theme) では、状態用の色も自動的に生成されますが、これらは `$background` ではなく `$foreground` パラメーターに基づいて計算されます。
+[`flat-button-theme`]({environment:sassApiUrl}/themes#function-flat-button-theme) および [`outlined-button-theme`]({environment:sassApiUrl}/themes#function-outlined-button-theme) では、状態用の色も自動的に生成されますが、これらは `$background` ではなく `$foreground` パラメーターに基づいて計算されます。
 
 ### デモ
 
@@ -368,7 +368,7 @@ button {
 <div class="divider--half"></div>
 
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxButton スタイル]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxButton スタイル]({environment:sassApiUrl}/themes#function-button-theme)
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
 * [IgxIconButtonDirective]({environment:angularApiUrl}/classes/igxiconbuttondirective.html)
 * [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)

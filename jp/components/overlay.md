@@ -339,7 +339,7 @@ export class ExampleComponent {
 
 ## API リファレンス
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
-* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxOverlay スタイル]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ### その他のリソース
 * [配置方法](overlay-position.md)

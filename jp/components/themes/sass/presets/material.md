@@ -68,4 +68,4 @@ $my-color-palette: palette(
 
 ## API の概要
 
-* [グローバル テーマ]({environment:sassApiUrl}/index.html#mixin-theme)
+* [グローバル テーマ]({environment:sassApiUrl}/themes#mixin-theme)

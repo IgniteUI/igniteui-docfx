@@ -219,7 +219,7 @@ public typeVertical = SplitterType.Vertical;
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-スプリッターのデフォルトのスタイルを変更するには、[`splitter-theme`]({environment:sassApiUrl}/index.html#function-splitter-theme) を拡張して新しいテーマを作成します。基本的なパラメーターを提供するだけで、インタラクション状態に必要なすべてのスタイルが自動生成されます。
+スプリッターのデフォルトのスタイルを変更するには、[`splitter-theme`]({environment:sassApiUrl}/themes#function-splitter-theme) を拡張して新しいテーマを作成します。基本的なパラメーターを提供するだけで、インタラクション状態に必要なすべてのスタイルが自動生成されます。
 
 ```scss
 // In splitter-styling-sample.component.scss
@@ -279,13 +279,13 @@ igx-splitter {
 * [IgxSplitterComponent]({environment:angularApiUrl}/classes/igxsplittercomponent.html)
 * [IgxSplitterPaneComponent]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html)
 * [SplitterType]({environment:angularApiUrl}/enums/splittertype.html)
-* [IgxSplitterComponent スタイル]({environment:sassApiUrl}/index.html#function-splitter-theme)
+* [IgxSplitterComponent スタイル]({environment:sassApiUrl}/themes#function-splitter-theme)
 
 <div class="divider--half"></div>
 
 ## テーマの依存関係
-* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-drop-down-theme)
-* [IgxIcon スタイル]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxDropDown テーマ]({environment:sassApiUrl}/themes#function-drop-down-theme)
+* [IgxIcon スタイル]({environment:sassApiUrl}/themes#function-icon-theme)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 

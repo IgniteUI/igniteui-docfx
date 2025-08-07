@@ -340,7 +340,7 @@ Ignite UI for Angular IgxTree は、サーバーから最小限のデータの�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[tree-theme]({environment:sassApiUrl}/index.html#function-tree-theme) を拡張し、新しいテーマを作成します。`$background` パラメーターだけを指定すれば、テーマがその他すべての必要なカラーを自動的に計算してくれます。他のプロパティをオーバーライドしてカスタマイズすることも可能です。
+最もシンプルな方法として、[tree-theme]({environment:sassApiUrl}/themes#function-tree-theme) を拡張し、新しいテーマを作成します。`$background` パラメーターだけを指定すれば、テーマがその他すべての必要なカラーを自動的に計算してくれます。他のプロパティをオーバーライドしてカスタマイズすることも可能です。
 
 ```scss
 $custom-tree-theme: tree-theme(
