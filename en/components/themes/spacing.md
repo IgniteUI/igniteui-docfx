@@ -31,7 +31,7 @@ The spacing system revolves around several key CSS custom properties:
 
 - `--ig-spacing` - The base spacing multiplier (default: 1)
 - `--ig-spacing-small` - Spacing for small-sized components
-- `--ig-spacing-medium` - Spacing for medium-sized components  
+- `--ig-spacing-medium` - Spacing for medium-sized components.  
 - `--ig-spacing-large` - Spacing for large-sized components
 
 ### Directional Spacing Properties
