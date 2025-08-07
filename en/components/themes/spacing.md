@@ -119,3 +119,20 @@ The spacing system uses multipliers to scale base values:
 - Directional multipliers like `--ig-spacing-inline` allow you to scale horizontal and vertical spacing independently
 
 This cascading approach ensures consistent spacing relationships while giving you fine-grained control through CSS custom properties alone.
+
+## API References
+* [Utilities - Pad]({environment:sassApiUrl}/utilities#function-pad)
+* [Utilities - Pad Inline]({environment:sassApiUrl}/utilities#function-pad-inline)
+* [Utilities - Pad Block]({environment:sassApiUrl}/utilities#function-pad-block)
+
+### Sizing Functions and Mixins
+* [Themes - Sizable Mixin]({environment:sassApiUrl}/themes#mixin-sizable)
+* [Themes - Sizable Function]({environment:sassApiUrl}/themes#function-sizable)
+
+## Additional Resources
+<div class="divider--half"></div>
+
+Our community is active and always welcoming to new ideas.
+
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
