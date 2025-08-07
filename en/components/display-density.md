@@ -56,7 +56,7 @@ Components use several CSS custom properties to detect and respond to size chang
 
 - `--component-size` - Maps the global `--ig-size` to a numeric value (1=small, 2=medium, 3=large)
 - `--is-small` - Set to 1 when component is small-sized, 0 otherwise
-- `--is-medium` - Set to 1 when component is medium-sized, 0 otherwise  
+- `--is-medium` - Set to 1 when component is medium-sized, 0 otherwise.  
 - `--is-large` - Set to 1 when component is large-sized, 0 otherwise
 
 These variables are automatically calculated using mathematical CSS expressions and change whenever `--ig-size` is modified.
