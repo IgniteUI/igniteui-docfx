@@ -51,7 +51,7 @@ Components use CSS custom properties to automatically detect their current size:
 
 - `--is-small` - Set to 1 when component is small-sized, 0 otherwise.
 - `--is-medium` - Set to 1 when component is medium-sized, 0 otherwise  
-- `--is-large` - Set to 1 when component is large-sized, 0 otherwise
+- `--is-large` - Set to 1 when component is large-sized, 0 otherwise.
 - `--component-size` - Numeric value indicating current size (1=small, 2=medium, 3=large)
 
 These variables are automatically managed by the theming system and change based on the component's size setting, controlled by `--ig-size`.
