@@ -149,17 +149,17 @@ The methods from above return a **number** value (the number of times the @@igCo
 ### Display results count
 Let's also display the position of the current occurrence, along with the total results count! We can do this by using the grid's `lastSearchInfo` property. This property is automatically updated when using the **find** methods.
 
-- The `@@igObjectRef.lastSearchInfo.matchInfoCache.length` value will give us the total results count.
+- The `@@igObjectRef.lastSearchInfo.matchCount` value will give us the total results count.
 - The `@@igObjectRef.lastSearchInfo.activeMatchIndex` value will give us the index position of the current occurrence (match).
 
 ```html
 <!--searchgrid.component.html-->
 
-<div class="resultsText" *ngIf="@@igObjectRef.lastSearchInfo">
-    <span *ngIf="@@igObjectRef.lastSearchInfo.matchInfoCache.length > 0">
-        {{ @@igObjectRef.lastSearchInfo.activeMatchIndex + 1 }} of {{ @@igObjectRef.lastSearchInfo.matchInfoCache.length }} results
+<div class="resultsText">
+    <span *ngIf="@@igObjectRef.lastSearchInfo.matchCount > 0">
+        {{ @@igObjectRef.lastSearchInfo.activeMatchIndex + 1 }} of {{ @@igObjectRef.lastSearchInfo.matchCount }} results
     </span>
-    <span *ngIf="@@igObjectRef.lastSearchInfo.matchInfoCache.length == 0">
+    <span *ngIf="@@igObjectRef.lastSearchInfo.matchCount == 0">
         No results
     </span>
 </div>
@@ -305,11 +305,11 @@ On the right in our input group, let's create three separate containers with the
 <!--searchgrid.component.html-->
 
 <igx-suffix *ngIf="searchText.length > 0">
-    <div class="resultsText" *ngIf="@@igObjectRef.lastSearchInfo">
-        <span *ngIf="@@igObjectRef.lastSearchInfo.matchInfoCache.length > 0">
-            {{ @@igObjectRef.lastSearchInfo.activeMatchIndex + 1 }} of {{ @@igObjectRef.lastSearchInfo.matchInfoCache.length }} results
+    <div class="resultsText">
+        <span *ngIf="@@igObjectRef.lastSearchInfo.matchCount > 0">
+            {{ @@igObjectRef.lastSearchInfo.activeMatchIndex + 1 }} of {{ @@igObjectRef.lastSearchInfo.matchCount }} results
         </span>
-        <span *ngIf="@@igObjectRef.lastSearchInfo.matchInfoCache.length == 0">
+        <span *ngIf="@@igObjectRef.lastSearchInfo.matchCount == 0">
             No results
         </span>
     </div>
