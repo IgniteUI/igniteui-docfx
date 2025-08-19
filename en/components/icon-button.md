@@ -189,6 +189,45 @@ This will generate a fully themed `contained icon button`, including appropriate
 </code-view>
 <div class="divider--half"></div>
 
+### Styling with Tailwind
+
+You can style the icon button using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `igxIconButton`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Each component styling utility class begins with the schema name as a prefix, choose from `material`, `fluent`, `bootstrap`, or `indigo` for light themes, or `dark-material`, `dark-fluent`, and so on for dark themes. This sets the schema for your custom theme.
+
+The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+
+You can also override any other CSS variable using `arbitrary properties`, as shown below for the `active-background` variable in the contained icon button:
+
+```html
+<div class="wrapper">
+    <div class="button-sample">
+        <button class="!material-flat-icon-button-color-[#7B9E89]" igxIconButton="flat">
+            <igx-icon>home</igx-icon>
+        </button>
+    </div>
+    <div class="button-sample">
+        <button class="!material-contained-icon-button-color-[#7B9E89] ![--active-background:#4F6A5A]" igxIconButton="contained">
+            <igx-icon>home</igx-icon>
+        </button>
+    </div>
+    <div class="button-sample">
+        <button class="!material-outlined-icon-button-color-[#7B9E89]" igxIconButton="outlined">
+            <igx-icon>home</igx-icon>
+        </button>
+    </div>
+</div>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your icon buttons should look like this:
+
+<div class="sample-container loading" style="height:100px">
+    <iframe id="icon-buttons-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/data-entries/icon-button-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
 ## API References
 <div class="divider--half"></div>
 

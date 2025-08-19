@@ -484,6 +484,47 @@ For instance, setting a dark `$box-background` globally could cause the borders 
 
 <div class="divider--half"></div>
 
+### Styling with Tailwind
+
+You can style the input using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `igx-input-group`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Each component styling utility class begins with the schema name as a prefix, choose from `material`, `fluent`, `bootstrap`, or `indigo` for light themes, or `dark-material`, `dark-fluent`, and so on for dark themes. This sets the schema for your custom theme.
+
+The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+
+You can also override any other CSS variable using `arbitrary properties`, as shown below for the `focused-secondary-color`:
+
+```html
+<article class="sample-column">
+    <igx-input-group class="!material-input-box-background-[#A3C7B2] ![--focused-secondary-color:#3A5444]" type="box">
+        <igx-prefix>+359</igx-prefix>
+        <label igxLabel for="phone">Phone</label>
+        <input type="tel" igxInput name="phone" />
+        <igx-suffix>
+            <igx-icon>phone</igx-icon>
+        </igx-suffix>
+        <igx-hint position="start">Ex.: +359 888 123 456</igx-hint>
+    </igx-input-group>
+
+    <igx-input-group class="!material-input-border-color-[#7B9E89]" type="border">
+        ...
+    </igx-input-group>
+
+    <igx-input-group class="!material-input-search-background-[#A3C7B2] ![--focused-secondary-color:#3A5444]" type="search">
+        ...
+    </igx-input-group>
+</article>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your inputs should look like this:
+
+<div class="sample-container loading" style="height:350px">
+    <iframe id="input-group-tailwind-style-iframe" data-src='{environment:demosBaseUrl}/data-entries/input-group-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
 ## API References
 <div class="divider--half"></div>
 

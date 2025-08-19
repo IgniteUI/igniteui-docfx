@@ -336,6 +336,35 @@ The last step is to include the component's theme.
 
 <div class="divider--half"></div>
 
+### Styling with Tailwind
+
+You can style the combo using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `igx-combo`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Each component styling utility class begins with the schema name as a prefix, choose from `material`, `fluent`, `bootstrap`, or `indigo` for light themes, or `dark-material`, `dark-fluent`, and so on for dark themes. This sets the schema for your custom theme.
+
+The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+
+>[!NOTE]
+>You can style only the combo’s own properties through the `igx-combo` tag. To style the components used inside the combo, apply their respective theme functions as shown above.
+
+You can also override any other CSS variable using `arbitrary properties`, as shown below for the `clear-button-foreground` variable:
+
+```html
+<igx-combo
+class="!material-combo-toggle-button-[#99BAA6]
+![--clear-button-foreground:#99BAA6]"
+...></igx-combo>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your combo should look like this:
+
+<div class="sample-container loading" style="height:410px">
+    <iframe id="combo-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/lists/combo-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
 ## Known Issues
 
 - The combobox input that displays the selected items is not editable. However, due to browser specifics in FireFox, the cursor is visible.

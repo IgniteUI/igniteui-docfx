@@ -290,6 +290,33 @@ To find out more on how you can use Ignite UI theming engine [`click here`](them
            iframe-src="{environment:demosBaseUrl}/layouts/expansion-styling/" >
 </code-view>
 
+### Styling with Tailwind
+
+You can style the expansion panel using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `igx-expansion-panel`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Each component styling utility class begins with the schema name as a prefix, choose from `material`, `fluent`, `bootstrap`, or `indigo` for light themes, or `dark-material`, `dark-fluent`, and so on for dark themes. This sets the schema for your custom theme.
+
+The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+
+You can also override any other CSS variable using `arbitrary properties`, as shown below for the `body-background` variable:
+
+```html
+<igx-expansion-panel
+class="!material-expansion-panel-header-background-[#4F6A5A]
+![--body-background:#A3C7B2]">
+    ...
+</igx-expansion-panel>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your expansion panel should look like this:
+
+<div class="sample-container loading" style="height:440px">
+    <iframe id="expansion-panel-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/expansion-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
 ## Angular Expansion Panel Animations 
 ### Using specific animation
 It is possible to use other than default animation when expanding and collapsing the component.
