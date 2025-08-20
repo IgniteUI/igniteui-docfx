@@ -201,7 +201,7 @@ class="!material-radio-color-[#576E60] ![--fill-color:#7B9E89]"
 
 At the end your radio button should look like this:
 
-<div class="sample-container loading" style="height:250px">
+<div class="sample-container loading" style="height:300px">
     <iframe id="radio-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-tailwind-styling-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
