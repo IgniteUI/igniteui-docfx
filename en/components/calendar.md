@@ -465,7 +465,7 @@ To get started with styling the calendar, we need to import the `index` file, wh
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme) and by specifying just the `$header-background` and `$content-background` parameters, the theme will automatically compute appropriate state colors and contrast foregrounds. Of course, you're still free to override any of the theme parameters with custom values if needed.
+Following the simplest approach, we create a new theme that extends the [`calendar-theme`]({environment:sassApiUrl}/themes#function-calendar-theme) and by specifying just the `$header-background` and `$content-background` parameters, the theme will automatically compute appropriate state colors and contrast foregrounds. Of course, you're still free to override any of the theme parameters with custom values if needed.
 
 ```scss
 $custom-calendar-theme: calendar-theme(
@@ -492,7 +492,7 @@ In the sample below, you can see how using the calendar with customized CSS vari
 <div class="divider--half"></div>
 
 * [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
-* [IgxCalendarComponent Styles]({environment:sassApiUrl}/index.html#function-calendar-theme)
+* [IgxCalendarComponent Styles]({environment:sassApiUrl}/themes#function-calendar-theme)
 * [DateRangeType]({environment:angularApiUrl}/enums/daterangetype.html)
 * [DateRangeDescriptor]({environment:angularApiUrl}/interfaces/daterangedescriptor.html)
 

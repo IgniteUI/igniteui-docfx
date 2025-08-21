@@ -361,10 +361,10 @@ export class MyClass implements OnInit {
 
 各コンポーネントには独自のテーマ関数があります。
 
-Select コンポーネントのスタイルを設定するには、それに含まれるコンポーネントのスタイルを設定します。この場合、[input-group-theme]({environment:sassApiUrl}/index.html#function-input-group-theme) と [drop-down-theme]({environment:sassApiUrl}/index.html#function-drop-down-theme) を使用する必要があります。
+Select コンポーネントのスタイルを設定するには、それに含まれるコンポーネントのスタイルを設定します。この場合、[input-group-theme]({environment:sassApiUrl}/themes#function-input-group-theme) と [drop-down-theme]({environment:sassApiUrl}/themes#function-drop-down-theme) を使用する必要があります。
 [`Input Group`](input-group.md#スタイル設定) と [`Drop Down`](drop-down.md#スタイル設定) のスタイル設定セクションを参照して、これら 2 つのコンポーネントのスタイル設定方法をより深く理解してください。
 
-また、Select コンポーネントのボタンのスタイル設定にのみ使用される [`select-theme`]({environment:sassApiUrl}/index.html#function-select-theme) 関数もあります。 <br>
+また、Select コンポーネントのボタンのスタイル設定にのみ使用される [`select-theme`]({environment:sassApiUrl}/themes#function-select-theme) 関数もあります。 <br>
 Select コンポーネントのボタンのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
@@ -374,7 +374,7 @@ Select コンポーネントのボタンのスタイル設定を始めるには�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`select-theme`]({environment:sassApiUrl}/index.html#function-select-theme) を拡張し、`$toggle-button-background` のみを提供して新しいテーマを作成します。theme 関数は、この単一の値に基づいて、さまざまな状態に対応するすべての背景色と前景色を自動的に計算します。
+最もシンプルな方法として、[`select-theme`]({environment:sassApiUrl}/themes#function-select-theme) を拡張し、`$toggle-button-background` のみを提供して新しいテーマを作成します。theme 関数は、この単一の値に基づいて、さまざまな状態に対応するすべての背景色と前景色を自動的に計算します。
 
 ```scss
 $custom-select-theme: select-theme(
@@ -408,10 +408,10 @@ $custom-select-theme: select-theme(
 * [PositionSettings]({environment:angularApiUrl}/interfaces/positionsettings.html)
 
 ## テーマの依存関係
-* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-drop-down-theme)
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-overlay-theme)
-* [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [IgxDropDown テーマ]({environment:sassApiUrl}/themes#function-drop-down-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/themes#function-overlay-theme)
+* [IgxInputGroup テーマ]({environment:sassApiUrl}/themes#function-input-group-theme)
 
 ## その他のリソース
 * [NgModel](https://angular.io/api/forms/NgModel)

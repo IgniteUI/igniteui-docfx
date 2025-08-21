@@ -506,7 +506,7 @@ export class InputDropDownComponent {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`drop-down-theme`]({environment:sassApiUrl}/index.html#function-drop-down-theme) を拡張し、既定のテーマ パラメーターの一部を指定することで、新しいテーマを作成します。背景色を指定するだけで、インタラクション状態の色や適切な前景色が自動的に計算されます。`$background` プロパティを設定すると、完全にスタイル設定されたドロップダウンが表示されます。
+最もシンプルな方法として、[`drop-down-theme`]({environment:sassApiUrl}/themes#function-drop-down-theme) を拡張し、既定のテーマ パラメーターの一部を指定することで、新しいテーマを作成します。背景色を指定するだけで、インタラクション状態の色や適切な前景色が自動的に計算されます。`$background` プロパティを設定すると、完全にスタイル設定されたドロップダウンが表示されます。
 
 ```scss
 $custom-drop-down-theme: drop-down-theme(
@@ -537,15 +537,15 @@ $custom-drop-down-theme: drop-down-theme(
 
 ## API リファレンス
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) 
-* [IgxDropDownComponent スタイル]({environment:sassApiUrl}/index.html#function-drop-down-theme)
+* [IgxDropDownComponent スタイル]({environment:sassApiUrl}/themes#function-drop-down-theme)
 * [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay スタイル]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxOverlay スタイル]({environment:sassApiUrl}/themes#function-overlay-theme)
 * [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
-* [IgxDividerDirective スタイル]({environment:sassApiUrl}/index.html#function-divider-theme)
+* [IgxDividerDirective スタイル]({environment:sassApiUrl}/themes#function-divider-theme)
 
 ## テーマの依存関係
-* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## その他のリソース
 

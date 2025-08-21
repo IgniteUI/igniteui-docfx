@@ -276,7 +276,7 @@ To start styling the button using **Sass**, first import the `index` file, which
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Then, create a new theme that extends the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) and accepts the `$foreground` and `$background` parameters, along with their respective hover and focus parameters.
+Following the simplest approach, we create a new theme that extends the [`button-theme`]({environment:sassApiUrl}/themes#function-button-theme) and accepts the `$foreground` and the `$background` parameters with their respective hover and focus parameters.
 
 Given the following markup:
 
@@ -300,7 +300,7 @@ $custom-button-theme: button-theme(
 );
 ```
 
-Take a look at the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) section for a complete list of available parameters for styling any type of button.
+Take a look at the [`button-theme`]({environment:sassApiUrl}/themes#function-button-theme) section for a complete list of available parameters for styling any type of button.
 
 Finally, **include** the custom theme in your application:
 
@@ -311,7 +311,7 @@ Finally, **include** the custom theme in your application:
 ```
 
 You can also choose to style only buttons of a specific type - `flat`, `outlined`, `contained`, or `fab`.
-To do this, you can use the new type-specific theme functions: [`flat-button-theme`]({environment:sassApiUrl}/index.html#function-flat-button-theme), [`outlined-button-theme`]({environment:sassApiUrl}/index.html#function-outlined-button-theme), [`contained-button-theme`]({environment:sassApiUrl}/index.html#function-contained-button-theme), and [`fab-button-theme`]({environment:sassApiUrl}/index.html#function-fab-button-theme)
+To do this, you can use the new type-specific theme functions: [`flat-button-theme`]({environment:sassApiUrl}/themes#function-flat-button-theme), [`outlined-button-theme`]({environment:sassApiUrl}/themes#function-outlined-button-theme), [`contained-button-theme`]({environment:sassApiUrl}/themes#function-contained-button-theme), and [`fab-button-theme`]({environment:sassApiUrl}/themes#function-fab-button-theme)
 
 For example, given the following markup:
 
@@ -324,7 +324,7 @@ For example, given the following markup:
 </div>
 ```
 
-If you want to style only the `contained` button, you can use the [`contained-button-theme`]({environment:sassApiUrl}/index.html#function-flat-button-theme) function:
+If you want to style only the `contained` button, you can use the [`contained-button-theme`]({environment:sassApiUrl}/themes#function-flat-button-theme) function:
 
 ```scss
 $custom-contained-theme: contained-button-theme(
@@ -332,9 +332,9 @@ $custom-contained-theme: contained-button-theme(
 );
 ```
 
-With the new type-specific theme functions, styling buttons is now easier. For [`contained-button-theme`]({environment:sassApiUrl}/index.html#function-contained-button-theme) and [`fab-button-theme`]({environment:sassApiUrl}/index.html#function-fab-button-theme) functions (as shown in the example above), you only need to provide a color to the `$background` parameter. All other button state and text colors will then be automatically generated and applied based on that value. The text color is determined by the newly added [`adaptive-contrast`]({environment:sassApiUrl}/index.html#function-adaptive-contrast) function, which calculates whether black or white provides better contrast against the supplied background color.
+With the new type-specific theme functions, styling buttons is now easier. For [`contained-button-theme`]({environment:sassApiUrl}/themes#function-contained-button-theme) and [`fab-button-theme`]({environment:sassApiUrl}/themes#function-fab-button-theme) functions (as shown in the example above), you only need to provide a color to the `$background` parameter. All other button state and text colors will then be automatically generated and applied based on that value. The text color is determined by the newly added [`adaptive-contrast`]({environment:sassApiUrl}/color#function-adaptive-contrast) function, which calculates whether black or white provides better contrast against the supplied background color.
 
-For [`flat-button-theme`]({environment:sassApiUrl}/index.html#function-flat-button-theme) and [`outlined-button-theme`]({environment:sassApiUrl}/index.html#function-outlined-button-theme) functions, the button state colors are also automatically generated and applied, but they are derived from the supplied `$foreground` parameter instead of `$background`.
+For [`flat-button-theme`]({environment:sassApiUrl}/themes#function-flat-button-theme) and [`outlined-button-theme`]({environment:sassApiUrl}/themes#function-outlined-button-theme) functions, the button state colors are also automatically generated and applied, but they are derived from the supplied `$foreground` parameter instead of `$background`.
 
 In the sample below, you can see how using the button component with customized CSS variables allows you to create a design that visually resembles the button used in the [`Ant`](https://ant.design/components/button?theme=light#button-demo-color-variant) design system. 
 
@@ -388,7 +388,7 @@ Learn more about it in the [Size](display-density.md) article.
 <div class="divider--half"></div>
 
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxButton Styles]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxButton Styles]({environment:sassApiUrl}/themes#function-button-theme)
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
 * [IgxIconButtonDirective]({environment:angularApiUrl}/classes/igxiconbuttondirective.html)
 * [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)

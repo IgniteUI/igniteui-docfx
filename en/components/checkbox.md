@@ -244,7 +244,7 @@ To start styling the checkbox using **Sass**, first import the `index` file, whi
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Then, create a new theme by extending the [`checkbox-theme`]({environment:sassApiUrl}/index.html#function-checkbox-theme) function and setting its parameters to style the checkbox element. By specifying the `$empty-color` and `$fill-color`, the theme automatically calculates the appropriate state colors and contrast foregrounds. You can still override any other parameters with custom values as needed.
+Then, we create a new theme that extends the [`checkbox-theme`]({environment:sassApiUrl}/themes#function-checkbox-theme) and setting parameters to style the checkbox elements. By specifying the `$empty-color` and `$fill-color`, the theme automatically calculates appropriate state colors and contrast foregrounds. You can still override any other parameter with custom values as needed.
 
 ```scss
 // in styles.scss
@@ -278,11 +278,11 @@ In the sample below, you can see how using the checkbox component with customize
 <div class="divider--half"></div>
 
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
-* [IgxCheckboxComponent Styles]({environment:sassApiUrl}/index.html#function-checkbox-theme)
+* [IgxCheckboxComponent Styles]({environment:sassApiUrl}/themes#function-checkbox-theme)
 * [LabelPosition]({environment:angularApiUrl}/enums/labelposition.html)
 
 ## Theming Dependencies
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-igx-riple-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/themes#function-riple-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

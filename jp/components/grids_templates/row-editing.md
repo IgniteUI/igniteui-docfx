@@ -330,7 +330,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 
 #### テーマの定義
 
-行編集の背景にカスタムの [`banner テーマ`]({environment:sassApiUrl}/index.html#function-banner-theme)を定義して、定義済みのパレットの 1 つである `$purple-palette` を使用することができます。
+行編集の背景にカスタムの [`banner テーマ`]({environment:sassApiUrl}/themes#function-banner-theme)を定義して、定義済みのパレットの 1 つである `$purple-palette` を使用することができます。
 
 ```scss
 $banner-theme: banner-theme(
@@ -343,7 +343,7 @@ $banner-theme: banner-theme(
 
 ### テーマを含む
 
-次に Sass `@include` ステートメントを使用してテーマを適用します。新しく定義された `$banner-theme` を [`css-vars mixin`]({environment:sassApiUrl}/index.html#mixin-css-vars) で渡します。
+次に Sass `@include` ステートメントを使用してテーマを適用します。新しく定義された `$banner-theme` を [`css-vars mixin`]({environment:sassApiUrl}/themes#mixin-css-vars) で渡します。
 
 ```scss
 @include css-vars($banner-theme);
@@ -388,7 +388,7 @@ $banner-theme: banner-theme(
 </@@igSelector>
 ```
 
-カスタム ボタンを定義した後は、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) を使用してスタイルを設定できます。[こちら](../button.md#スタイル設定)で `igx-button` のスタイリングについてさらに学ぶことができます。`[完了]` と `[キャンセル]` のカスタム テーマを作成できます。
+カスタム ボタンを定義した後は、[`button-theme`]({environment:sassApiUrl}/themes#function-button-theme) を使用してスタイルを設定できます。[こちら](../button.md#スタイル設定)で `igx-button` のスタイリングについてさらに学ぶことができます。`[完了]` と `[キャンセル]` のカスタム テーマを作成できます。
 
 ```scss
 // custom.component.scss

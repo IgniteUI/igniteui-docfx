@@ -687,7 +687,7 @@ editDone(evt) {
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#mixin-grid)
 
 ## Additional Resources
 <div class="divider--half"></div>

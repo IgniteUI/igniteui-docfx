@@ -151,7 +151,7 @@ Another way to achieve this behavior is to use the igxCollapsibleIndicator direc
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-grid)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/themes#mixin-grid)
 
 ## Additional Resources
 <div class="divider--half"></div>

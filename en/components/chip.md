@@ -505,7 +505,7 @@ To start styling the chip using **Sass**, first import the `index` file, which i
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Then, create a new theme that extends the [`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme) function and setting its parameters to style the chip component. By specifying the `$background` or the `$selected-background`, the theme automatically calculates appropriate state colors and contrast foregrounds. You can still override any additional parameters with custom values as needed.
+Following the simplest approach, we create a new theme that extends the [`chip-theme`]({environment:sassApiUrl}/themes#function-chip-theme) and accepts some parameters that style the chip's items. By specifying the `$background` or the `$selected-background`, the theme automatically calculates appropriate state colors and contrast foregrounds. You can still override any other parameter with custom values as needed.
 
 ```scss
 $custom-chip-theme: chip-theme(
@@ -567,12 +567,12 @@ Learn more about it in the [Size](display-density.md) article.
 ## API
 
 * [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
-* [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-chip-theme)
+* [IgxChipComponent Styles]({environment:sassApiUrl}/themes#function-chip-theme)
 * [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
 
 ## Theming Dependencies
 
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## References
 

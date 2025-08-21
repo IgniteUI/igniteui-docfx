@@ -269,7 +269,7 @@ $custom-panel-theme: expansion-panel-theme(
 ```
 
 >[!NOTE]
-> To see all the available parameters for styling trough the [`theming`](themes/sass/component-themes.md) engine check the [`API documentation`]({environment:sassApiUrl}/index.html#function-expansion-panel-theme)
+> To see all the available parameters for styling trough the [`theming`](themes/sass/component-themes.md) engine check the [`API documentation`]({environment:sassApiUrl}/themes#function-expansion-panel-theme)
 
 ### Applying the Component Theme
 
@@ -327,7 +327,7 @@ export class ExpansionPanelComponent {
     }
 }
 ```
-As you can see, we are going to use [`slideInLeft`]({environment:sassApiUrl}/index.html#mixin-slide-in-left) and [`slideOutRight`]({environment:sassApiUrl}/index.html#mixin-slide-out-right) animations from our [**inbuilt suite of animations**]({environment:sassApiUrl}/index.html#animations) to make the component content appear more dramatically from the left side and disappear on the right when collapsing the content. In the process, we override some of the existing parameters with the specific ones we want to use.
+As you can see, we are going to use [`slideInLeft`]({environment:sassApiUrl}/animations#mixin-slide-in-left) and [`slideOutRight`]({environment:sassApiUrl}/animations#mixin-slide-out-right) animations from our [**inbuilt suite of animations**]({environment:sassApiUrl}/index.html#animations) to make the component content appear more dramatically from the left side and disappear on the right when collapsing the content. In the process, we override some of the existing parameters with the specific ones we want to use.
 
 The sample shows some user information and the key point here is passing the animation settings to the component like:
 `[animationSettings] = "animationSettingsCustom"`
@@ -362,8 +362,8 @@ See the [igxAccordion topic](accordion.md)
 * [IgxExpansionPanel API]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)
 * [IgxExpansionPanelHeader API]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html)
 * [IgxExpansionPanelBody API]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html)
-* [IgxExpansionPanel Styles]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel)
+* [IgxExpansionPanel Styles]({environment:sassApiUrl}/themes#mixin-expansion-panel)
 
 ## Theming Dependencies
-* [IgxExpansionPanel Theme]({environment:sassApiUrl}/index.html#function-expansion-panel-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxExpansionPanel Theme]({environment:sassApiUrl}/themes#function-expansion-panel-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)

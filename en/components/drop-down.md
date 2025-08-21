@@ -505,7 +505,7 @@ Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`drop-down-theme`]({environment:sassApiUrl}/index.html#function-drop-down-theme) and accepts some of the default theme's parameters. When you provide a certain background color, the theme automatically calculates the state colors and appropriate contrasting foregrounds. By setting the `$background` property, you'll get a fully styled dropdown.
+Following the simplest approach, we create a new theme that extends the [`drop-down-theme`]({environment:sassApiUrl}/themes#function-drop-down-theme) and accepts some of the default theme's parameters. When you provide a certain background color, the theme automatically calculates the state colors and appropriate contrasting foregrounds. By setting the `$background` property, you'll get a fully styled dropdown.
 
 ```scss
 $custom-drop-down-theme: drop-down-theme(
@@ -537,16 +537,16 @@ The last step is to pass the custom drop-down theme to a class or element select
 ## API Summary
 
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
-* [IgxDropDownComponent Styles]({environment:sassApiUrl}/index.html#function-drop-down-theme)
+* [IgxDropDownComponent Styles]({environment:sassApiUrl}/themes#function-drop-down-theme)
 * [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html).
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
 * [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
-* [IgxDividerDirective Styles]({environment:sassApiUrl}/index.html#function-divider-theme)
+* [IgxDividerDirective Styles]({environment:sassApiUrl}/themes#function-divider-theme)
 
 ## Theming Dependencies
 
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## Additional Resources
 
