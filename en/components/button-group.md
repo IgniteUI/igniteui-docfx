@@ -281,6 +281,35 @@ The last step is to include the component's theme.
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-style/" >
 </code-view>
 
+### Styling with Tailwind
+
+You can style the button group using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `<igx-button-group>`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Each component styling utility class begins with the schema name as a prefix, choose from `material`, `fluent`, `bootstrap`, or `indigo` for light themes, or `dark-material`, `dark-fluent`, and so on for dark themes. This sets the schema for your custom theme.
+
+The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+
+You can also override any other CSS variable using `arbitrary properties`, as shown below for the `shadow` variable:
+
+```html
+<igx-buttongroup
+class="!material-button-group-color-[#7B9E89] ![--shadow:var(--ig-elevation-4)]">
+    <button igxButton igxRipple="white">Sofia</button>
+    <button igxButton igxRipple="white">London</button>
+    <button igxButton igxRipple="white">New York</button>
+    <button igxButton igxRipple="white" disabled>Tokyo</button>
+</igx-buttongroup>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your button group should look like this:
+
+<div class="sample-container loading" style="height:100px">
+    <iframe id="button-group-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/data-entries/button-group-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
 ## API References
 
 <div class="divider--half"></div>

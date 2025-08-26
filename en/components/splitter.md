@@ -249,6 +249,35 @@ This is the final result from applying your new theme.
            iframe-src="{environment:demosBaseUrl}/layouts/splitter-styling-sample/" >
 </code-view>
 
+### Styling with Tailwind
+
+You can style the splitter using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `igx-splitter`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Each component styling utility class begins with the schema name as a prefix, choose from `material`, `fluent`, `bootstrap`, or `indigo` for light themes, or `dark-material`, `dark-fluent`, and so on for dark themes. This sets the schema for your custom theme.
+
+The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+
+You can also override any other CSS variable using `arbitrary properties`, as shown below for the `size` variable:
+
+```html
+<igx-splitter
+class="!material-splitter-color-[#7B9E89]
+![--size:7px]"
+...
+>
+...
+</igx-splitter>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your splitter should look like this:
+
+<div class="sample-container loading" style="height:400px">
+    <iframe id="splitter-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/splitter-tailwind-styling-sample/' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
 ### Custom sizing
 
 You can either use the `--size` variable, targeting the `igx-splitter` directly:

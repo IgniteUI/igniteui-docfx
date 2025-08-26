@@ -326,6 +326,55 @@ For [`flat-button-theme`]({environment:sassApiUrl}/themes#function-flat-button-t
            iframe-src="{environment:demosBaseUrl}/data-entries/buttons-style/" >
 </code-view>
 
+### Styling with Tailwind
+
+You can style the buttons using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `igxButton`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Each component styling utility class begins with the schema name as a prefix, choose from `material`, `fluent`, `bootstrap`, or `indigo` for light themes, or `dark-material`, `dark-fluent`, and so on for dark themes. This sets the schema for your custom theme.
+
+The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+
+You can also override any other CSS variable using `arbitrary properties`, as shown below for the `active-background` variable in the contained button:
+
+```html
+<div class="buttons-sample">
+  <div class="button-sample">
+    <button igxButton="flat"
+    class="!material-flat-button-color-[#7B9E89]">
+      Flat Button
+    </button>
+  </div>
+  <div class="button-sample">
+    <button igxButton="contained"
+    class="!material-contained-button-color-[#7B9E89] ![--active-background:#4F6A5A]"
+    >
+      Contained Button
+    </button>
+  </div>
+  <div class="button-sample">
+    <button igxButton="outlined"
+    class="!material-outlined-button-color-[#7B9E89]">
+      Outlined Button
+    </button>
+  </div>
+  <div class="button-sample">
+    <button igxButton="fab"
+    class="!material-fab-button-color-[#7B9E89]">
+      Fab Button
+    </button>
+  </div>
+</div>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your buttons should look like this:
+
+<div class="sample-container loading" style="height:100px">
+    <iframe id="buttons-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/data-entries/buttons-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
 ### Custom sizing
 
 You can change the button height either by using the `--size` variable, targeting the `button` directly:
