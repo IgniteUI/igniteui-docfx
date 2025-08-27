@@ -237,7 +237,7 @@ When a Date Range Picker has two separate inputs for start and end dates, it doe
 </igx-date-range-picker>
 ```
 
-### Custom & Predefined Date Ranges
+### Custom And Predefined Date Ranges
 
 You can also add custom date range chips to the calendar pop-up for faster range selection using the [`customRanges`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#customRanges) property. For example, you can create a custom date range chip to quickly select the range for the upcoming 7 days, ending with the current date. In addition, by setting the [`usePredefinedRanges`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#usePredefinedRanges) property, a set of predefined ranges chips will be displayed along with the custom ones.
 
@@ -292,7 +292,7 @@ If the [`inputFormat`]({environment:angularApiUrl}/classes/igxdaterangepickercom
 > The `IgxDateRangePicker` now supports IME input. When composition ends, the control converts the wide-character numbers to ASCII characters.
 
 ### Forms and Validation
-The Date Range Picker Component supports all directives from the core [FormsModule](https://angular.io/api/forms/FormsModule), [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) ([`FormControl`](https://angular.io/api/forms/FormControl), [`FormGroup`](https://angular.io/api/forms/FormGroup), etc.). This also includes the [Forms Validators](https://angular.io/api/forms/Validators) functions. In addition, the component's [min and max values](#min-and-max-values) also act as form validators.
+The Date Range Picker Component supports all directives from the core [FormsModule](https://angular.io/api/forms/FormsModule), [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) ([`FormControl`](https://angular.io/api/forms/FormControl), [`FormGroup`](https://angular.io/api/forms/FormGroup), etc.). This also includes the [Forms Validators](https://angular.io/api/forms/Validators) functions. In addition, the component's [min and max values](#min-and-max-values) and [disabledDates](#disabled-and-special-dates) also act as form validators.
 
 The [NgModel](https://angular.io/api/forms/NgModel) and validators can be set on the [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) or on the individual start and end date inputs.
 
@@ -387,7 +387,7 @@ The `IgxDateRangePickerComponent` is also a validator which means it controls it
 </div>
 ```
 
-### Disabled & Special dates
+### Disabled And Special dates
 
 You also have the ability to set disabled dates in the calendar to narrow the range of dates the user can choose from. To set the disabled dates, you can use the [`disabledDates`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#disabledDates) property.
 
@@ -452,7 +452,7 @@ You can further customize the pop-up calendar using various properties. More inf
 </igx-date-range-picker>
 ```
 
-The title, header and subheader parts of the calendar header can be customized by leveraging the `igxCalendarHeader`, `igxCalendarSubheader` and the `igxCalendarHeaderTitle` template directives, for example:
+The header, subheader and title parts of the calendar header can be customized by leveraging the `igxCalendarHeader`, `igxCalendarSubheader` and the `igxCalendarHeaderTitle` template directives, for example:
 
 ```html
 <igx-date-range-picker [value]="date">
