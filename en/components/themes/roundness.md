@@ -10,7 +10,7 @@ Ignite UI for Angular allows you to customize the shape of components by adjusti
 ## Overview
 Many Ignite UI components have predefined minimum and maximum border-radius values, which can be adjusted using the `--ig-radius-factor` CSS variable.
 
-When you set `--ig-radius-factor` to 0, the component uses its minimum border-radius and will appear more block-like with sharp corners. When set to 1, the component uses its maximum predefined border-radius and will appear fully.
+When you set `--ig-radius-factor` to 0, the component uses its minimum border-radius and will appear more block-like with sharp corners. When set to 1, the component uses its maximum predefined border-radius and will appear rounded.
 
 Here is a list of the components that have predefined minimum and maximum border-radius values and can be modified using the `--ig-radius-factor` variable: <br>
 • [Action Strip](../action-strip.md) • [Button](../button.md) • [Button Group](../button-group.md) • [Calendar](../calendar.md) • [Card](../card.md) • [Carousel](../carousel.md) • [Checkbox](../checkbox.md) • [Chip](../chip.md) • [Combo](../combo.md) • [Date Picker](../date-picker.md) • [Date Range Picker](../date-range-picker.md) • [Grid](../grid/grid.md) • [Input Group](../input-group.md) • [Linear Progress](../linear-progress.md) • [List](../list.md) • [Month Picker](../month-picker.md) • [Navigation Drawer](../navdrawer.md) • [Radio](../radio-button.md) • [Ripple](../ripple.md) • [Snackbar](../snackbar.md) • [Switch](../switch.md) • [Toast](../toast.md)
