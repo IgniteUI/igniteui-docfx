@@ -12,7 +12,7 @@ The Ignite UI for Angular @@igComponent provides a Cell Merging feature that com
 
 <code-view style="height:755px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-cell-merging" alt="Angular Cell Merging Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-cell-mergе-sample" alt="Angular Cell Merging Example">
 </code-view>
 
 ## Enabling and Using Cell Merging
@@ -24,35 +24,41 @@ Cell merging in the grid is controlled at two levels:
 ### Grid Merge Mode
 The grid exposes a `cellMergeMode` property that accepts values from the `GridCellMergeMode` enum:
  - `always` - Merges any adjacent cells that meet the merging condition, regardless of sort state.
- - `onSort` - Merges adjacent cells only when the column is sorted.
+ - `onSort` - Merges adjacent cells only when the column is sorted **(default value)**.
 
 ```html
-<@@igSelector [data]="data" [cellMergeMode]="GridCellMergeMode.always">
+<@@igSelector [data]="data" [cellMergeMode]="cellMergeMode">
     ...
 </@@igSelector>
+```
+```ts
+protected cellMergeMode: GridCellMergeMode = 'always';
 ```
 
 ### Column Merge Toggle
 At the column level, merging can be enabled or disabled with the `merge` property.
 
 ```html
-<igx-column field="Category" [merge]="true"></igx-column>
-<igx-column field="Product" [merge]="false"></igx-column>
+<igx-column field="OrderID" [merge]="true"></igx-column>
+<igx-column field="ShipperName" [merge]="false"></igx-column>
 ```
 
 In the above example:
- - The **Category** column will merge adjacent duplicate values.
- - The **Product** column will render normally without merging.
+ - The **OrderID** column will merge adjacent duplicate values.
+ - The **ShipperName** column will render normally without merging.
 
  ### Combined Example
 
  ```html
-<@@igSelector [data]="data" [cellMergeMode]="GridCellMergeMode.onSort" [autoGenerate]="false">
-    <igx-column field="Category" header="Category" [merge]="true"></igx-column>
-    <igx-column field="Product" header="Product" [merge]="true"></igx-column>
-    <igx-column field="Price" header="Price"></igx-column>
+<@@igSelector [data]="data" [cellMergeMode]="cellMergeMode" [autoGenerate]="false">
+    <igx-column field="OrderID" header="Order ID" [merge]="true"></igx-column>
+    <igx-column field="ShipperName" header="Shipper Name" [merge]="true"></igx-column>
+    <igx-column field="Salesperson" header="Salesperson"></igx-column>
 </@@igSelector>
  ```
+ ```ts
+protected cellMergeMode: GridCellMergeMode = 'onSort';
+```
 Here, the grid is set to merge only when columns are sorted, and both Category and Product columns are configured for merging.
 
 ## Custom Merge Conditions
@@ -83,10 +89,14 @@ If you only want to customize part of the behavior (for example, the comparer lo
 
 ```ts
 export class MyCustomStrategy extends DefaultMergeStrategy {
+    /* Merge only cells within their respective projects */
     public override comparer(prevRecord: any, record: any, field: string): boolean {
-    // Example: merge cells if values match AND are not empty
-    return prevRecord[field] === record[field] && prevRecord[field] !== '';
-  }
+        const a = prevRecord[field];
+        const b = record[field];
+        const projA = prevRecord['ProjectName'];
+        const projB = record['ProjectName'];
+        return a === b && projA === projB;
+    }
 }
 ```
 
@@ -94,13 +104,34 @@ export class MyCustomStrategy extends DefaultMergeStrategy {
 Once defined, assign the strategy to the grid through the `mergeStrategy` property:
 ```html
 <@@igSelector [data]="data" [mergeStrategy]="customStrategy">
-  <igx-column field="Category" [merge]="true"></igx-column>
-  <igx-column field="Product" [merge]="true"></igx-column>
+  <igx-column field="ActionID" [merge]="true"></igx-column>
+  <igx-column field="ProjectName" [merge]="true"></igx-column>
 </@@igSelector>
 ```
 ```ts
-public customStrategy = new MyCustomStrategy();
+protected customStrategy = new MyCustomStrategy();
 ```
+@@if(igxName === 'IgxGrid'){
+### Demo
+<code-view style="height:755px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-cell-mergе-custom-sample" alt="Angular Cell Merging Example">
+</code-view>
+}
+
+## Feature Integration 
+Due to the specific behavior of merged cells it has to be noted how exactly it ties together with some of the other features of the grid:
+- **Expand/Collapse**: if a feature (such as master-detail, grouping, etc.) generates a non-data row, then the cell merging is interrupted and the group will be split.
+- **Excel export**: merged cells remain merged when exported to Excel.
+- **Column pinning**: cells remain merged when a column is pinned and are displayed in the pinned area.
+- **Row pinning**: cells merge only withing their containing area, i.e. cells of pinned rows merge only with cells of other pinned rows, while cells of unpinned rows merge only with cells of unpinned rows.
+- **Navigation/Activation**: when a cell is active, all merged cells in the same row become single cells, i.e. their merge sequence is broken. This also includes activation via keyboard navigation.
+
+>[!NOTE]
+> If a merged cell is clicked, the closest cell from the merge sequence will become active.
+
+- **Updating/Editing**: since activation breaks the merge sequence, only a single cell will be in edit mode.
+- **Row selection**: if selected rows intersect merged cells, all related merged cells should be marked as part of the selection.
 
 ## Limitations
 |Known Limitations| Description|
