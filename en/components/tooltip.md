@@ -187,7 +187,7 @@ public overlaySettings: OverlaySettings = {
 ```
 
 > [!NOTE]
-> Any property that is set through the [`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) will override the same property from the default overlay settings and will have a direct impact on the tooltip.
+> Any property that is set through the [`positionSettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#positionsettings) or [`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) will override the same property from the default settings and will have a direct impact on the tooltip.
 
 ### Additional Properties
 
@@ -225,6 +225,65 @@ Additionally, you can add an arrow indicator to the tooltip by using the [`hasAr
 
 ```html
 <igx-icon [igxTooltipTarget]="tooltipRef" [hasArrow]="true">
+  info
+</igx-icon>
+
+<div #tooltipRef="tooltip" igxTooltip>Her name is Madelyn James</div>
+```
+
+The arrow element is positioned based on the provided position settings. If the directions and starting points do not correspond to any of the [predefined position values](#predefined-position-values), the arrow is positioned in the top middle side of the tooltip (default tooltip position `bottom`).
+
+#### Predefined position values
+
+| Position     | Horizontal Direction          | Horizontal Start Point         | Vertical Direction            | Vertical Start Point           |
+|--------------|-------------------------------|--------------------------------|-------------------------------|--------------------------------|
+| top          | HorizontalAlignment.Center    | HorizontalAlignment.Center     | VerticalAlignment.Top         | VerticalAlignment.Top          |
+| top-start    | HorizontalAlignment.Right     | HorizontalAlignment.Left       | VerticalAlignment.Top         | VerticalAlignment.Top          |
+| top-end      | HorizontalAlignment.Left      | HorizontalAlignment.Right      | VerticalAlignment.Top         | VerticalAlignment.Top          |
+| bottom       | HorizontalAlignment.Center    | HorizontalAlignment.Center     | VerticalAlignment.Bottom      | VerticalAlignment.Bottom       |
+| bottom-start | HorizontalAlignment.Right     | HorizontalAlignment.Left       | VerticalAlignment.Bottom      | VerticalAlignment.Bottom       |
+| bottom-end   | HorizontalAlignment.Left      | HorizontalAlignment.Right      | VerticalAlignment.Bottom      | VerticalAlignment.Bottom       |
+| right        | HorizontalAlignment.Right     | HorizontalAlignment.Right      | VerticalAlignment.Middle      | VerticalAlignment.Middle       |
+| right-start  | HorizontalAlignment.Right     | HorizontalAlignment.Right      | VerticalAlignment.Bottom      | VerticalAlignment.Top          |
+| right-end    | HorizontalAlignment.Right     | HorizontalAlignment.Right      | VerticalAlignment.Top         | VerticalAlignment.Bottom       |
+| left         | HorizontalAlignment.Left      | HorizontalAlignment.Left       | VerticalAlignment.Middle      | VerticalAlignment.Middle       |
+| left-start   | HorizontalAlignment.Left      | HorizontalAlignment.Left       | VerticalAlignment.Bottom      | VerticalAlignment.Top          |
+| left-end     | HorizontalAlignment.Left      | HorizontalAlignment.Left       | VerticalAlignment.Top         | VerticalAlignment.Bottom       |
+
+
+#### Customizing the arrow's position
+
+To customize the arrow's position, you can override the `positionArrow(arrow: HTMLElement, arrowFit: ArrowFit)` method.
+
+For example:
+
+```ts
+export class CustomStrategy extends TooltipPositioningStrategy {
+  constructor(settings?: PositionSettings) {
+    super(settings);
+  }
+
+  public override positionArrow(arrow: HTMLElement, arrowFit: ArrowFit): void {
+    Object.assign(arrow.style, {
+      left: '-0.25rem',
+      transform: 'rotate(-45deg)',
+      [arrowFit.direction]: '-0.25rem',
+    });
+  }
+}
+
+public overlaySettings: OverlaySettings = {
+  positionStrategy: new CustomStrategy({
+    horizontalDirection: HorizontalAlignment.Right,
+    horizontalStartPoint: HorizontalAlignment.Right,
+    verticalDirection: VerticalAlignment.Bottom,
+    verticalStartPoint: VerticalAlignment.Bottom,
+  })
+};
+```
+
+```html
+<igx-icon [igxTooltipTarget]="tooltipRef" [hasArrow]="true" [overlaySettings]="overlaySettings">
   info
 </igx-icon>
 
@@ -423,66 +482,10 @@ Extra care should be taken in the following scenarios:
 
 ## Notes and Limitations
 
-The [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive uses the `TooltipPositionStrategy` to position the tooltip and arrow element. If a custom [`positionStrategy`]({environment:angularApiUrl}/interfaces/overlaysettings.html#positioningStrategy) is used and [`hasArrow`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hasarrow) is set to `true`, the custom strategy should extend the `TooltipPositionStrategy`. Otherwise, the arrow will not be displayed.
+| Limitation                          | Description|
+| ----------------------------------- | ---------- |
+| Custom position strategy with arrow | The [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive uses the `TooltipPositionStrategy` to position the tooltip and arrow element. If a custom [`positionStrategy`]({environment:angularApiUrl}/interfaces/overlaysettings.html#positioningStrategy) is used and [`hasArrow`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hasarrow) is set to `true`, the custom strategy should extend the `TooltipPositionStrategy`. Otherwise, the arrow will not be displayed.|
 
-The arrow element is positioned based on the provided position settings. If the directions and starting points do not correspond to any of the [predefined position values](#predefined-position-values), the arrow is positioned in the top middle side of the tooltip (default tooltip position `bottom`).
-
-#### Predefined position values
-
-| Position     | Horizontal Direction          | Horizontal Start Point         | Vertical Direction            | Vertical Start Point           |
-|--------------|-------------------------------|--------------------------------|-------------------------------|--------------------------------|
-| top          | HorizontalAlignment.Center    | HorizontalAlignment.Center     | VerticalAlignment.Top         | VerticalAlignment.Top          |
-| top-start    | HorizontalAlignment.Right     | HorizontalAlignment.Left       | VerticalAlignment.Top         | VerticalAlignment.Top          |
-| top-end      | HorizontalAlignment.Left      | HorizontalAlignment.Right      | VerticalAlignment.Top         | VerticalAlignment.Top          |
-| bottom       | HorizontalAlignment.Center    | HorizontalAlignment.Center     | VerticalAlignment.Bottom      | VerticalAlignment.Bottom       |
-| bottom-start | HorizontalAlignment.Right     | HorizontalAlignment.Left       | VerticalAlignment.Bottom      | VerticalAlignment.Bottom       |
-| bottom-end   | HorizontalAlignment.Left      | HorizontalAlignment.Right      | VerticalAlignment.Bottom      | VerticalAlignment.Bottom       |
-| right        | HorizontalAlignment.Right     | HorizontalAlignment.Right      | VerticalAlignment.Middle      | VerticalAlignment.Middle       |
-| right-start  | HorizontalAlignment.Right     | HorizontalAlignment.Right      | VerticalAlignment.Bottom      | VerticalAlignment.Top          |
-| right-end    | HorizontalAlignment.Right     | HorizontalAlignment.Right      | VerticalAlignment.Top         | VerticalAlignment.Bottom       |
-| left         | HorizontalAlignment.Left      | HorizontalAlignment.Left       | VerticalAlignment.Middle      | VerticalAlignment.Middle       |
-| left-start   | HorizontalAlignment.Left      | HorizontalAlignment.Left       | VerticalAlignment.Bottom      | VerticalAlignment.Top          |
-| left-end     | HorizontalAlignment.Left      | HorizontalAlignment.Left       | VerticalAlignment.Top         | VerticalAlignment.Bottom       |
-
-
-#### Customizing the arrow's position
-
-To customize the arrow's position, you can override the `positionArrow(arrow: HTMLElement, arrowFit: ArrowFit)` method.
-
-For example:
-
-```ts
-export class CustomStrategy extends TooltipPositioningStrategy {
-  constructor(settings?: PositionSettings) {
-    super(settings);
-  }
-
-  public override positionArrow(arrow: HTMLElement, arrowFit: ArrowFit): void {
-    Object.assign(arrow.style, {
-      left: '-0.25rem',
-      transform: 'rotate(-45deg)',
-      [arrowFit.direction]: '-0.25rem',
-    });
-  }
-}
-
-public overlaySettings: OverlaySettings = {
-  positionStrategy: new CustomStrategy({
-    horizontalDirection: HorizontalAlignment.Right,
-    horizontalStartPoint: HorizontalAlignment.Right,
-    verticalDirection: VerticalAlignment.Bottom,
-    verticalStartPoint: VerticalAlignment.Bottom,
-  })
-};
-```
-
-```html
-<igx-icon [igxTooltipTarget]="tooltipRef" [hasArrow]="true" [overlaySettings]="overlaySettings">
-  info
-</igx-icon>
-
-<div #tooltipRef="tooltip" igxTooltip>Her name is Madelyn James</div>
-```
 
 ## API References
 
