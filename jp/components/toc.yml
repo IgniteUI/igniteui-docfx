@@ -903,6 +903,9 @@
   new: false
 - name: サイズ
   href: display-density.md
+- name: スペーシング
+  href: themes/spacing.md
+  new: true
 - name: Sass
   new: false
   items:

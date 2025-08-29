@@ -267,6 +267,96 @@ _language: ja
 ---
 }
 
+## グリッド セルのスペーシング制御
+
+[**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) は、[size](display-density.md) 設定に基づいて内部のスペーシングを自動的に適応させます。さらに、CSS カスタム プロパティを使用することで、グリッドのヘッダー セルやボディ セルのパディングやマージンをカスタマイズすることができます。
+
+### グローバル グリッド スペーシング
+
+アプリケーション内のすべてのグリッド セルでスペーシングを縮小または拡大する場合:
+
+```css
+/* Reduce all grid spacing by 20% */
+igx-grid {
+    --ig-spacing: 0.8;
+}
+
+/* Increase spacing for better touch accessibility */
+igx-grid {
+    --ig-spacing: 1.2;
+}
+```
+
+### グリッド固有のスペーシング
+
+特定のグリッド インスタンスのスペーシングを調整する場合:
+
+```css
+/* Make a particular grid more compact */
+.my-compact-grid {
+    --ig-spacing: 0.6;
+}
+
+/* Give a specific grid more breathing room */
+.my-spacious-grid {
+    --ig-spacing: 1.4;
+}
+```
+
+### 方向別スペーシング制御
+
+水平方向と垂直方向のスペーシングを個別に制御することができます:
+
+```css
+/* Reduce only horizontal spacing (left/right padding) */
+.my-grid {
+    --ig-spacing-inline: 0.5;
+    --ig-spacing-block: 1.0; /* Keep vertical spacing normal */
+}
+
+/* Adjust vertical spacing for tighter row spacing */
+.my-grid {
+    --ig-spacing-inline: 1.0; /* Keep horizontal spacing normal */
+    --ig-spacing-block: 0.7; /* Reduce vertical spacing (if applicable) */
+}
+```
+
+### サイズ固有のスペーシング
+
+グリッドの表示密度に応じて異なるスペーシング乗数を適用できます:
+
+```css
+.my-grid {
+    /* Compact density gets very tight spacing */
+    --ig-spacing-small: 0.5;
+    
+    /* Medium density uses normal spacing */
+    --ig-spacing-medium: 1.0;
+    
+    /* Comfortable density gets extra spacing */
+    --ig-spacing-large: 1.3;
+}
+```
+
+### ヘッダー セルとボディ セルのスペーシング
+
+スペーシング プロパティはヘッダー セルとボディ セルの両方に影響しますが、必要に応じて個別にターゲット指定することも可能です。
+
+```css
+/* Reduce padding in header cells specifically */
+.my-grid igx-grid-header {
+    --ig-spacing: 0.7;
+}
+
+/* Adjust spacing in data cells */
+.my-grid igx-grid-cell {
+    --ig-spacing: 0.9;
+}
+```
+
+> [!Note]
+> これらのスペーシング調整は、グリッドの表示密度と組み合わせて機能します。スペーシング乗数は、グリッドが compact、cosy または comfortable のどの密度モードであるかに応じて決定される基準スペーシング値に適用されます。
+
 ## API リファレンス
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
