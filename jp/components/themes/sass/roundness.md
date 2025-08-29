@@ -1,5 +1,5 @@
 ---
-title: 丸み
+title: 丸み Sass
 _description: Ignite UI for Angular は、border-radius を変更してコンポーネントの形を変更できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ 
 _language: ja
