@@ -211,6 +211,35 @@ public pinningConfig: IPinningConfig = { columns: ColumnPinningPosition.End };
 
 }
 
+Additionally, you can specify each column pinning location separately, allowing you to pin columns to both sides of the grid for greater convenience and easier optimization of data sets. Please refer to the demo bellow for further reference. In order to pin a column, please either select a column by clicking on a header and use the pin buttons added ot the toolbar, or simply drag a column to another pinned one.
+
+@@if (igxName === 'IgxGrid') {
+
+<code-view style="height:510px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-pinning-both-sides" >
+</code-view>
+
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+
+<code-view style="height:510px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-both-sides-pinning" >
+</code-view>
+
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+
+<code-view style="height:510px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-both-sides-pinning" >
+</code-view>
+
+}
+
 ## Custom Column Pinning UI
 
 You can define your custom UI and change the pin state of the columns via the related API.
