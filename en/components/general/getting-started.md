@@ -154,35 +154,33 @@ npm start
 
 ### Add components manually
 
-#### Import modules
+As of Angular 19, standalone components are the default way to build Angular apps, removing the need for `NgModules` and simplifying the process of adding components significantly. So let's use this to add an [**igxGrid**](../grid/grid.md) component to our app.
 
-First we have to import the respective modules of the components we want to use in the **app.module.ts** file. We will go ahead and do this for the [**igxGrid**](../grid/grid.md)! Please note that some components have animations depending on BrowserAnimationsModule, so let’s import that one as well:
+Before we start though, please note that some components have animations that require a provider as part of the `bootstrapApplication` call.
 
 ```typescript
-// app.module.ts
+// main.ts
 
+import { appConfig } from './app/app.config';
+import { AppComponent } from './app/app.component';
+
+bootstrapApplication(AppComponent, appConfig)
+  .catch((err) => console.error(err));
+```
+
+```typescript
+// app/app.config.ts
+
+import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
-// Here we import the IgxGridModule, so we can use the igxGrid!
-import { IgxGridModule } from 'igniteui-angular';
-// import { IgxGridModule } from '@infragistics/igniteui-angular'; for licensed package
+const providers: Provider = [
+  importProvidersFrom(BrowserModule),
+  provideAnimations()
+];
 
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    IgxGridModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+export const appConfig: ApplicationConfig = { providers };
 ```
 
 #### Use components
@@ -206,17 +204,19 @@ We are now ready to use the igxGrid in our markup! Let's go ahead and define it 
 </div>
 ```
 
-We will also define the data of the grid and the title of our application that are referenced from the **app.component.ts**:
+We will also define the data of the grid and the title of our application that are referenced from the **app.component.ts**. As we are using standalone components we simply have to add the `IgxGridComponent` class to our app's imports, alongside any other components used in the template. In our example, as we are defining columns, we also have to add the `IgxColumnComponent` to the import array.
 
 ```typescript
 // app.component.ts
 
 import { Component } from '@angular/core';
+import { IgxGridComponent, IgxColumnComponent } from 'igniteui-angular';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  imports: [IgxGridComponent, IgxColumnComponent]
 })
 export class AppComponent {
   localData = [
