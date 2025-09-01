@@ -236,7 +236,7 @@ public toggleAll() {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-次に、[`checkbox-theme`]({environment:sassApiUrl}/index.html#function-checkbox-theme) を拡張して新しいテーマを作成し、チェックボックス要素をスタイリングします。`$empty-color` と `$fill-color` を指定することで、必要な状態色やコントラストのある前景色が自動的に計算されます。必要に応じて、他のパラメーターをカスタム値でオーバーライドすることもできます。
+次に、[`checkbox-theme`]({environment:sassApiUrl}/themes#function-checkbox-theme) を拡張して新しいテーマを作成し、チェックボックス要素をスタイリングします。`$empty-color` と `$fill-color` を指定することで、必要な状態色やコントラストのある前景色が自動的に計算されます。必要に応じて、他のパラメーターをカスタム値でオーバーライドすることもできます。
 
 ```scss
 // in styles.scss
@@ -269,11 +269,11 @@ $custom-checkbox-theme: checkbox-theme(
 <div class="divider--half"></div>
 
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
-* [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/index.html#function-checkbox-theme)
+* [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/themes#function-checkbox-theme)
 * [LabelPosition]({environment:angularApiUrl}/enums/labelposition.html)
 
 ## テーマの依存関係
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-igx-riple-theme)
+* [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-riple-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

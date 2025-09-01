@@ -8,16 +8,19 @@ _language: ja
 
 # Angular Bing Maps 画像の表示
 
+注: 2025 年 6 月 30 日をもって、すべての Microsoft Bing Maps for Enterprise Basic (無料) アカウントはすべて廃止されます。無料の Basic アカウントおよびキーをご利用中の場合は、サービスの中断を回避するために今すぐ対応する必要があります。Bing Maps for Enterprise の有償ライセンスをお持ちの方は、2028 年 6 月 30 日までアプリケーション内で Bing Maps を引き続きご利用いただけます。
+
+詳細は以下をご覧ください:
+
+[Microsoft Bing ブログ](https://blogs.bing.com/maps/2025-06/Bing-Maps-for-Enterprise-Basic-Account-shutdown-June-30,2025)
+
 [`IgxBingMapsMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxbingmapsmapimagery.html) は、Microsoft® 社が提供する地理的画像マッピング サービスです。世界の地理的画像タイルを 3 以上提供します。この地理的画像サービスは、<a href="http://www.bing.com/maps" target="_blank">www.bing.com/maps</a> に直接アクセスして利用できます。Ignite UI for Angular マップ コンポーネントは、[`IgxBingMapsMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxbingmapsmapimagery.html) クラスを使用して、地図の背景コンテンツに Bing Maps の地理的画像を表示します。
 
 ## Angular Bing Maps 画像の表示の例
 
-<code-view style="height: 500px" alt="Angular Bing Maps 画像の表示の例"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/display-bing-imagery"
-                                                 github-src="maps/geo-map/display-bing-imagery">
-</code-view>
+<!-- `sample="/maps/geo-map/display-bing-imagery", height="500", alt="Angular Bing Maps 画像の表示の例"` -->
 
+<img src="../images/general/BingMapsImagery.png" />
 
 <div class="divider--half"></div>
 

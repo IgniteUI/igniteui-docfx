@@ -287,7 +287,7 @@ public singleSelection(event: IComboSelectionChangeEventArgs) {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`combo-theme`]({environment:sassApiUrl}/index.html#function-combo-theme) を拡張する新しいテーマを作成します。`$toggle-button-background` を設定することで、新しいテーマがボタンに対する状態色や前景色を自動的に決定します。必要に応じて、`$search-separator-border-color` などの追加パラメーターを指定することも可能です。
+最もシンプルな方法として、[`combo-theme`]({environment:sassApiUrl}/themes#function-combo-theme) を拡張する新しいテーマを作成します。`$toggle-button-background` を設定することで、新しいテーマがボタンに対する状態色や前景色を自動的に決定します。必要に応じて、`$search-separator-border-color` などの追加パラメーターを指定することも可能です。
 
 ```scss
 $custom-combo-theme: combo-theme(
@@ -350,7 +350,7 @@ $custom-checkbox-theme: checkbox-theme(
 <div class="divider--half"></div>
 
 * [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
-* [IgxComboComponent スタイル]({environment:sassApiUrl}/index.html#function-combo-theme)
+* [IgxComboComponent スタイル]({environment:sassApiUrl}/themes#function-combo-theme)
 
 その他の [Angular コンポーネント](https://jp.infragistics.com/products/ignite-ui-angular)およびディレクティブ (またはそのいずれか) で使用した API:
 
@@ -359,10 +359,10 @@ $custom-checkbox-theme: checkbox-theme(
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
 
 ## テーマの依存関係
-* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-drop-down-theme)
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxCheckbox テーマ]({environment:sassApiUrl}/index.html#function-checkbox-theme)
-* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxDropDown テーマ]({environment:sassApiUrl}/themes#function-drop-down-theme)
+* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxCheckbox テーマ]({environment:sassApiUrl}/themes#function-checkbox-theme)
+* [IgxOverlay テーマ]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## その他のリソース
 <div class="divider--half"></div>

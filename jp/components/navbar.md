@@ -281,7 +281,7 @@ Navbar のタイトルにカスタム コンテンツを提供する場合は、
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`navbar-theme`]({environment:sassApiUrl}/index.html#function-navbar-theme) を拡張し、`$background` および `$idle-icon-color` パラメータのみを提供する新しいテーマを作成します。テーマは、さまざまなインタラクション状態に必要なすべての背景色と前景色を自動的に計算します。より細かい制御を行いたい場合は、個別のプロパティをオーバーライドすることも可能です。
+最もシンプルな方法として、[`navbar-theme`]({environment:sassApiUrl}/themes#function-navbar-theme) を拡張し、`$background` および `$idle-icon-color` パラメータのみを提供する新しいテーマを作成します。テーマは、さまざまなインタラクション状態に必要なすべての背景色と前景色を自動的に計算します。より細かい制御を行いたい場合は、個別のプロパティをオーバーライドすることも可能です。
 
 ```scss
 $custom-navbar-theme: navbar-theme(
@@ -291,7 +291,7 @@ $custom-navbar-theme: navbar-theme(
 ```
 
 >[!NOTE]
->上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](themes/sass/palettes.md)のトピックをご覧ください。
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/palettes#function-palette) および [`color`]({environment:sassApiUrl}/palettes#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](themes/sass/palettes.md)のトピックをご覧ください。
 
 最後に、新しく作成されたテーマを `css-vars` ミックスインに渡します。
 
@@ -316,17 +316,17 @@ $custom-navbar-theme: navbar-theme(
 * [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
 * [IgxNavbarActionDirective]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html)
 * [IgxNavbarTitleDirective]({environment:angularApiUrl}/classes/igxnavbartitledirective.html)
-* [IgxNavbarComponent スタイル]({environment:sassApiUrl}/index.html#function-navbar-theme)
+* [IgxNavbarComponent スタイル]({environment:sassApiUrl}/themes#function-navbar-theme)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxIconComponent スタイル]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxIconComponent スタイル]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## テーマの依存関係
 
-* [IgxIconComponent テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxButtonComponent テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxIconComponent テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxButtonComponent テーマ]({environment:sassApiUrl}/themes#function-button-theme)
 
 ### その他のリソース
 

@@ -253,7 +253,7 @@ public decrementProgress() {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`progress-linear-theme`]({environment:sassApiUrl}/index.html#function-progress-linear-theme) を拡張し、`$fill-color-default` と `$text-color` のパラメーターのみをオーバーライドするテーマを作成します。
+最もシンプルな方法として、[`progress-linear-theme`]({environment:sassApiUrl}/themes#function-progress-linear-theme) を拡張し、`$fill-color-default` と `$text-color` のパラメーターのみをオーバーライドするテーマを作成します。
 
 ```scss
 $custom-theme: progress-linear-theme(
@@ -283,5 +283,5 @@ $custom-theme: progress-linear-theme(
 <div class="divider--half"></div>
 
 * [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
-* [IgxLinearProgressBarComponent スタイル]({environment:sassApiUrl}/index.html#function-progress-linear-theme)
+* [IgxLinearProgressBarComponent スタイル]({environment:sassApiUrl}/themes#function-progress-linear-theme)
 * [IgxTextAlign]({environment:angularApiUrl}/enums/igxtextalign.html)

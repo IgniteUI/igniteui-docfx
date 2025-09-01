@@ -286,7 +286,7 @@ public open(snackbar) {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-最も簡単な方法は、[`snackbar-theme`]({environment:sassApiUrl}/index.html#function-snackbar-theme) を拡張する新しいテーマを作成し、`$text-color`、`$background`、`$button-color`、`$border-radius` パラメーターを受け取る方法です。
+最も簡単な方法は、[`snackbar-theme`]({environment:sassApiUrl}/themes#function-snackbar-theme) を拡張する新しいテーマを作成し、`$text-color`、`$background`、`$button-color`、`$border-radius` パラメーターを受け取る方法です。
 
 ```scss
 $dark-snackbar: snackbar-theme(
@@ -298,7 +298,7 @@ $dark-snackbar: snackbar-theme(
 ```
 
 >[!NOTE]
->上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](themes/sass/palettes.md)のトピックをご覧ください。
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/palettes#function-palette) および [`color`]({environment:sassApiUrl}/palettes#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](themes/sass/palettes.md)のトピックをご覧ください。
 
 最後にコンポーネントのテーマをアプリケーションに**含めます**。
 
@@ -323,7 +323,7 @@ $dark-snackbar: snackbar-theme(
 
 スタイル:
 
-* [`IgxSnackbarComponent スタイル`]({environment:sassApiUrl}/index.html#function-snackbar-theme)
+* [`IgxSnackbarComponent スタイル`]({environment:sassApiUrl}/themes#function-snackbar-theme)
 
 ## その他のリソース
 
