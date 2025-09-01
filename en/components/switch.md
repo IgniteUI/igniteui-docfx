@@ -131,7 +131,33 @@ If the `labelPosition` is not set, the label will be positioned after the switch
 
 ## Styling
 
-To get started with styling the switch, we need to import the `index` file, where all the theme functions and component mixins live:
+Following the simplest approach, you can use CSS variables to customize the appearance of the switch:
+
+```css
+igx-switch {
+    --thumb-on-color: #e3f0ff;
+    --thumb-off-color: #fff;
+    --track-on-color: #0064d9;
+    --track-off-color: #788fa6;
+    --track-on-hover-color: #0058bf;
+    --border-radius-track: 1rem;
+    --focus-outline-color: #0032a5;
+    --border-on-color: transparent;
+    --border-color: transparent;
+}
+
+igx-switch:hover {
+    --track-off-color: #637d97;
+}
+```
+
+By changing the values of these CSS variables, you can alter the entire look of the switch component.
+
+<div class="divider--half"></div>
+
+Another way to style the switch is by using **Sass**, along with our [`switch-theme`]({environment:sassApiUrl}/index.html#function-switch-theme) function.
+
+To start styling the switch using **Sass**, first import the `index` file, which includes all theme functions and component mixins:
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -140,28 +166,31 @@ To get started with styling the switch, we need to import the `index` file, wher
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Then, we create a new theme that extends the [`switch-theme`]({environment:sassApiUrl}/index.html#function-switch-theme) and by providing just two parameters - `$thumb-off-color` and `$thumb-on-color` you can get a fully styled switch, as the theme generates all the rest of the necessary colors based on these two, you can of course override any of the other parameters for a customized look:
+Then, create a new theme by extending the [`switch-theme`]({environment:sassApiUrl}/index.html#function-switch-theme) function. By providing just two parameters - `$thumb-off-color` and `$thumb-on-color` — you can generate a fully styled switch. The theme automatically calculates all the necessary state colors based on these values. You can, of course, override any of the other parameters for a customized look.
 
 ```scss
 $custom-switch-theme: switch-theme(
-  $thumb-off-color: #7cadd5,
-  $thumb-on-color: #ecaa53,
+    $thumb-off-color: #7cadd5,
+    $thumb-on-color: #ecaa53,
 );
 ```
 
-The last step is to **include** the component theme in our application.
+Finally, **include** the custom theme in your application:
 
 ```scss
 @include css-vars($custom-switch-theme);
 ```
 
-### Demo
+In the sample below, you can see how using the switch component with customized CSS variables allows you to create a design that visually resembles the switch used in the [`SAP UI5`](https://ui5.sap.com/#/entity/sap.m.Switch/sample/sap.m.sample.Switch) design system. 
 
 <code-view style="height: 200px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/switch-styling" >
 </code-view>
+
+> [!NOTE]
+> The sample uses the [Fluent Light](themes/sass/schemas.md#predefined-schemas) schema.
 
 <div class="divider--half"></div>
 
