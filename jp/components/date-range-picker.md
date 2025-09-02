@@ -14,7 +14,7 @@ Angular Date Range Picker は、ユーザーが開始日と終了日の値を簡
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/basic-daterangepicker" alt="Angular Date Range Picker 例">
+           iframe-src="{environment:demosBaseUrl}/scheduling/basic-daterangepicker/" alt="Angular Date Range Picker 例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -128,7 +128,7 @@ Angular Date Range Picker コンポーネントは、開始日と終了日の 2 
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-start-end" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-start-end/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -191,7 +191,7 @@ Date Range Picker に開始日と終了日の 2 つの入力がある場合、�
 
 <code-view style="height:500px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-mode" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-mode/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -204,7 +204,7 @@ Date Range Picker のアクション ボタンは、[`igxPickerActions`]({enviro
 
 <code-view style="height:500px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-range-buttons" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-range-buttons/" >
 </code-view>
 
 ### キーボード ナビゲーション
@@ -299,7 +299,7 @@ Date Range Picker コンポーネントは、コア FormsModule [NgModel](https:
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-validation" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-validation/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -444,7 +444,7 @@ $custom-calendar-theme: calendar-theme(
 <code-view style="height:600px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/styled-daterangepicker" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/styled-daterangepicker/" >
 </code-view>
 
 
@@ -454,7 +454,7 @@ $custom-calendar-theme: calendar-theme(
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/flight-booking" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/flight-booking/" >
 </code-view>
 
 <div class="divider--half"></div>

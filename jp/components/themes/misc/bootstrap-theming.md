@@ -20,7 +20,7 @@ Ignite UI for Angular は、マテリアル ベースの UI ウィジェット�
 
 <code-view style="height: 1000px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/theming/bootstrap-sample" >
+           iframe-src="{environment:demosBaseUrl}/theming/bootstrap-sample/" >
 </code-view>
 
 <div class="divider--half"></div>

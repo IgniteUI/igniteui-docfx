@@ -33,7 +33,7 @@ _language: ja
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/multi-column-headers" alt="Angular @@igComponent 複数列ヘッダーの例">
+           iframe-src="{environment:demosBaseUrl}/grid/multi-column-headers/" alt="Angular @@igComponent 複数列ヘッダーの例">
 </code-view>
 
 }
@@ -41,7 +41,7 @@ _language: ja
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-headers" alt="Angular @@igComponent 複数列ヘッダーの例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-headers/" alt="Angular @@igComponent 複数列ヘッダーの例">
 </code-view>
 
 }
@@ -49,7 +49,7 @@ _language: ja
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column" alt="Angular @@igComponent 複数列ヘッダーの例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column/" alt="Angular @@igComponent 複数列ヘッダーの例">
 </code-view>
 
 }
@@ -237,7 +237,7 @@ _language: ja
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/multi-column-header-template" >
+           iframe-src="{environment:demosBaseUrl}/grid/multi-column-header-template/" >
 </code-view>
 
 }
@@ -245,7 +245,7 @@ _language: ja
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-header-template" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-header-template/" >
 </code-view>
 
 }
@@ -253,7 +253,7 @@ _language: ja
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-template" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-template/" >
 </code-view>
 
 }
@@ -297,7 +297,7 @@ $custom-theme: grid-theme(
 <code-view style="height:500px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/multi-column-headers-styling" >
+           iframe-src="{environment:demosBaseUrl}/grid/multi-column-headers-styling/" >
 </code-view>
 
 }
@@ -308,7 +308,7 @@ $custom-theme: grid-theme(
 <code-view style="height:500px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-headers-styling" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-headers-styling/" >
 </code-view>
 
 }
@@ -319,7 +319,7 @@ $custom-theme: grid-theme(
 <code-view style="height:500px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-styling" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-styling/" >
 </code-view>
 
 }
