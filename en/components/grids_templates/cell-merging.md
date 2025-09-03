@@ -61,16 +61,16 @@ In the above example:
  - The **OrderID** column will merge adjacent duplicate values.
  - The **ShipperName** column will render normally without merging.
 
- ### Combined Example
+### Combined Example
 
- ```html
+```html
 <@@igSelector [data]="data" [cellMergeMode]="cellMergeMode" [autoGenerate]="false">
     <igx-column field="OrderID" header="Order ID" [merge]="true"></igx-column>
     <igx-column field="ShipperName" header="Shipper Name" [merge]="true"></igx-column>
     <igx-column field="Salesperson" header="Salesperson"></igx-column>
 </@@igSelector>
- ```
- ```ts
+```
+```ts
 protected cellMergeMode: GridCellMergeMode = 'onSort';
 ```
 Here, the grid is set to merge only when columns are sorted, and both Category and Product columns are configured for merging.
