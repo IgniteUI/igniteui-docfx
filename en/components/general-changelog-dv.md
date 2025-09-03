@@ -24,9 +24,13 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 |------------|---------|------------------|
 |36448|IgxRadialGauge|Radial label format properties do not work. (eg. Title, SubTitles)|
 
-### {Package Charts}
+### igniteui-angular-charts (Charts)
 
 *   Add `MaximumExtent` and `MaximumExtentPercentage` properties for use with axis labels.
+
+## **20.0.0 (June 2025)**
+
+*   Angular 20 support.
 
 ## **19.0.1 (February 2025)**
 
