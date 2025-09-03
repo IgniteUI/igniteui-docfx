@@ -590,7 +590,7 @@ $custom-list: list-theme(
 
 In this example we only changed some of the parameters for the listed components, but the [`button-theme`]({environment:sassApiUrl}/themes#function-button-theme), [`checkbox-theme`]({environment:sassApiUrl}/themes#function-checkbox-theme), [`drop-down-theme`]({environment:sassApiUrl}/themes#function-drop-down-theme), [`input-group-theme`]({environment:sassApiUrl}/themes#function-input-group-theme), [`list-theme`]({environment:sassApiUrl}/themes#function-list-theme) themes provide way more parameters to control their respective styling.
 
-The last step is to **include** the component mixins, each with its respective theme. We will also set the color property for the input's placeholder.
+The last step is to **include** each component’s custom theme. We will also set the color property for the input's placeholder.
 
 ```scss
 @include css-vars($custom-grid);
