@@ -135,7 +135,9 @@ protected customStrategy = new MyCustomStrategy();
 
 ## Feature Integration 
 Due to the specific behavior of merged cells it has to be noted how exactly it ties together with some of the other features of the grid:
+@@if(igxName === 'IgxGrid'){
 - **Expand/Collapse**: if a feature (such as master-detail, grouping, etc.) generates a non-data row, then the cell merging is interrupted and the group will be split.
+}
 - **Excel export**: merged cells remain merged when exported to Excel.
 - **Column pinning**: cells remain merged when a column is pinned and are displayed in the pinned area.
 - **Row pinning**: cells merge only withing their containing area, i.e. cells of pinned rows merge only with cells of other pinned rows, while cells of unpinned rows merge only with cells of unpinned rows.
@@ -147,10 +149,12 @@ Due to the specific behavior of merged cells it has to be noted how exactly it t
 - **Updating/Editing**: since activation breaks the merge sequence, only a single cell will be in edit mode.
 - **Row selection**: if selected rows intersect merged cells, all related merged cells should be marked as part of the selection.
 
+@@if(igxName === 'IgxGrid'){
 ## Limitations
 |Known Limitations| Description|
 | --- | --- |
 | Cell merging is not supported in combination with Multi-row Layout. | Both span complex layouts that don't make sense when combined. A warning will be thrown if such invalid configuration is detected. |
+}
 
 ## API References
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
