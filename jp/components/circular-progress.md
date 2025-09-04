@@ -13,7 +13,7 @@ _language: ja
 
 <code-view style="height:100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/circular-progressbar" alt="Angular Circular Progress の例">
+           iframe-src="{environment:demosBaseUrl}/data-display/circular-progressbar/" alt="Angular Circular Progress の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -103,7 +103,7 @@ Ignite UI for Angular Progress Bar モジュールまたはディレクティブ
 
 <code-view style="height:100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/circular-indeterminate-progressbar" >
+           iframe-src="{environment:demosBaseUrl}/data-display/circular-indeterminate-progressbar/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -223,7 +223,7 @@ $custom-theme: progress-circular-theme(
 
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/circular-dynamic-sample" >
+           iframe-src="{environment:demosBaseUrl}/data-display/circular-dynamic-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -261,7 +261,7 @@ $custom-theme: progress-circular-theme(
 <code-view style="height:100px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/circular-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/data-display/circular-styling-sample/" >
 </code-view>
 
 ## API

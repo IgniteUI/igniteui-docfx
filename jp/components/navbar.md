@@ -13,7 +13,7 @@ Ignite UI for Angular [`IgxNavbarComponent`]({environment:angularApiUrl}/classes
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navbar" alt="Angular Navbar の例">
+           iframe-src="{environment:demosBaseUrl}/menus/navbar/" alt="Angular Navbar の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -128,7 +128,7 @@ export class AppModule {}
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -171,7 +171,7 @@ export class AppModule {}
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -212,7 +212,7 @@ export class NavbarSample3Component {
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-3/" >
 </code-view>
 
 > [!NOTE]
@@ -265,7 +265,7 @@ Navbar のタイトルにカスタム コンテンツを提供する場合は、
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navbar-custom-title" >
+           iframe-src="{environment:demosBaseUrl}/menus/navbar-custom-title/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -304,7 +304,7 @@ $custom-navbar-theme: navbar-theme(
 <code-view style="height: 150px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navbar-style" >
+           iframe-src="{environment:demosBaseUrl}/menus/navbar-style/" >
 </code-view>
 
 <div class="divider--half"></div>

@@ -16,7 +16,7 @@ _language: ja
 
 <code-view style="height:207px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-1" alt="Angular Divider の例">
+           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-1/" alt="Angular Divider の例">
 </code-view>
 
 ## Ignite UI for Angular Divider を使用した作業の開始
@@ -77,7 +77,7 @@ Ignite UI for Angular Divider モジュールまたはディレクティブを�
 
 <code-view style="height:238px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-2/" >
 </code-view>
 
 
@@ -91,7 +91,7 @@ Ignite UI for Angular Divider モジュールまたはディレクティブを�
 
 <code-view style="height:187px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-3/" >
 </code-view>
 
 
@@ -112,7 +112,7 @@ Ignite UI for Angular Divider モジュールまたはディレクティブを�
 
 <code-view style="height:311px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-4/" >
 </code-view>
 
 

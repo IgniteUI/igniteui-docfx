@@ -32,7 +32,7 @@ _language: ja
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-row-pinning" alt="Angular #@@igComponent 行ピン固定の例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-row-pinning/" alt="Angular #@@igComponent 行ピン固定の例">
 </code-view>
 
 }
@@ -40,7 +40,7 @@ _language: ja
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-pinning" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-pinning/" >
 </code-view>
 
 }
@@ -48,7 +48,7 @@ _language: ja
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-pinning" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-pinning/" >
 </code-view>
 
 }
@@ -294,7 +294,7 @@ public togglePinning(row: IgxGridRow, event) {
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-row-pinning-extra-column" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-row-pinning-extra-column/" >
 </code-view>
 
 }
@@ -302,7 +302,7 @@ public togglePinning(row: IgxGridRow, event) {
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-pinning-extra-column" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-pinning-extra-column/" >
 </code-view>
 
 }
@@ -310,7 +310,7 @@ public togglePinning(row: IgxGridRow, event) {
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-pinning-extra-column" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-pinning-extra-column/" >
 </code-view>
 
 }
@@ -369,7 +369,7 @@ public onDropAllowed(args) {
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-row-pinning-drag" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-row-pinning-drag/" >
 </code-view>
 
 
@@ -436,7 +436,7 @@ $custom-grid-theme: grid-theme(
 <code-view style="height:540px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-row-pinning-styling" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-row-pinning-styling/" >
 </code-view>
 
 }
@@ -445,7 +445,7 @@ $custom-grid-theme: grid-theme(
 <code-view style="height:540px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-pinning-styling" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-pinning-styling/" >
 </code-view>
 
 }
@@ -454,7 +454,7 @@ $custom-grid-theme: grid-theme(
 <code-view style="height:540px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-pinning-styling" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-pinning-styling/" >
 </code-view>
 
 }

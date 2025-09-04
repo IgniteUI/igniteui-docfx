@@ -22,7 +22,7 @@ Ignite UI for Angular Calendar パッケージを使用して、次の Angular C
 
 <code-view style="height: 480px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-5" alt="Angular Calendar の例">
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-5/" alt="Angular Calendar の例">
 </code-view>
 
 
@@ -109,7 +109,7 @@ Ignite UI for Angular Calendar モジュールまたはディレクティブを�
 
 <code-view style="height: 360px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-1/" >
 </code-view>
 
 
@@ -126,7 +126,7 @@ Ignite UI for Angular Calendar モジュールまたはディレクティブを�
 
 <code-view style="height: 480px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-8" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-8/" >
 </code-view>
 
 
@@ -176,7 +176,7 @@ public ngOnInit() {
 
 <code-view style="height: 580px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-2/" >
 </code-view>
 
 
@@ -207,7 +207,7 @@ export class CalendarSample6Component {
 
 <code-view style="height: 480px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-6" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-6/" >
 </code-view>
 
 
@@ -258,7 +258,7 @@ export class CalendarSample7Component {
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-7" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-7/" >
 </code-view>
 
 
@@ -276,7 +276,7 @@ export class CalendarSample7Component {
 
 <code-view style="height: 380px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-1/" >
 </code-view>
 
 
@@ -319,7 +319,7 @@ public activeViewChanged(event: CalendarView) {
 
 <code-view style="height: 420px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-3/" >
 </code-view>
 
 
@@ -331,7 +331,7 @@ public activeViewChanged(event: CalendarView) {
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-days-view" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-days-view/" >
 </code-view>
 
 
@@ -340,7 +340,7 @@ public activeViewChanged(event: CalendarView) {
 
 <code-view style="height: 290px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-months-view" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-months-view/" >
 </code-view>
 
 
@@ -349,7 +349,7 @@ public activeViewChanged(event: CalendarView) {
 
 <code-view style="height: 320px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-years-view" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-years-view/" >
 </code-view>
 
 
@@ -408,7 +408,7 @@ Tab キーを使用してページを移動する場合、*igxCalendarComponent*
 
 <code-view style="height: 500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/multiview-calendar" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/multiview-calendar/" >
 </code-view>
 
 ## カレンダーの方向
@@ -452,7 +452,7 @@ export class CalendarSample9Component {
 
 <code-view style="height: 750px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-9" alt="Angular Calendar の方向の例">
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-9/" alt="Angular Calendar の方向の例">
 </code-view>
 
 ## スタイル設定
@@ -484,7 +484,7 @@ $custom-calendar-theme: calendar-theme(
 <code-view style="height:500px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-styling-sample/" >
 </code-view>
 
 

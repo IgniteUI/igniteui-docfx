@@ -22,7 +22,7 @@ Ignite UI for Angular [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabsco
 
 <code-view style="height: 250px; border: 1px solid #ededed;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-3" alt="Angular Tabs Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-3/" alt="Angular Tabs の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -148,7 +148,7 @@ Ignite UI for Angular Tabs モジュールまたはディレクティブをイ�
 
 <code-view style="height: 200px; border: 1px solid #ededed;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-1" alt="Angular Tabs の例">
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-1/" alt="Angular Tabs の例">
 </code-view>
 
 
@@ -166,7 +166,7 @@ Ignite UI for Angular Tabs モジュールまたはディレクティブをイ�
 
 <code-view style="height: 250px; border: 1px solid #ededed"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabs-alignment" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-alignment/" >
 </code-view>
 
 
@@ -226,7 +226,7 @@ Ignite UI for Angular Tabs モジュールまたはディレクティブをイ�
 
 <code-view style="height: 250px; border: 1px solid #ededed;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-3/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -254,7 +254,7 @@ Ignite UI for Angular Tabs モジュールまたはディレクティブをイ�
 
 <code-view style="height: 250px; border: 1px solid #ededed;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabs-header-prefix-suffix" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-header-prefix-suffix/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -374,7 +374,7 @@ export class AppRoutingModule { }
 
 <code-view style="height: 250px; border: 1px solid #ededed"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-4/" >
 </code-view>
 
 > [!NOTE]
@@ -422,7 +422,7 @@ $dark-tabs: tabs-theme(
 <code-view style="height: 250px; border: 1px solid #ededed"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabs-style" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-style/" >
 </code-view>
 
 <div class="divider--half"></div>

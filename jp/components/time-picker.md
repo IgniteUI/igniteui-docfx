@@ -17,7 +17,7 @@ _language: ja
 
 <code-view style="height:540px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-dropdown" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-dropdown/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -157,7 +157,7 @@ public date: Date = new Date();
 
 <code-view style="height: 600px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-5/" >
 </code-view>
 
 ## カスタム動作ボタン
@@ -193,7 +193,7 @@ public selectNow(timePicker: IgxTimePickerComponent) {
 
 <code-view style="height: 600px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-6" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-6/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -249,7 +249,7 @@ public mode = PickerInteractionMode.Dialog;
 
 <code-view style="height: 600px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1" alt="Angular Time Picker Example">
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1/" alt="Angular Time Picker の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -344,7 +344,7 @@ public onValidationFailed() {
 
 <code-view style="height: 540px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-4/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -356,7 +356,7 @@ public onValidationFailed() {
 
 <code-view style="height: 540px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/template-driven-form" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/template-driven-form/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -365,7 +365,7 @@ public onValidationFailed() {
 
 <code-view style="height: 540px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/reactive-form" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/reactive-form/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -440,7 +440,7 @@ Time Picker の項目がコンポーネントのホスト**内**に適切にレ�
 <code-view style="height: 600px;"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-styling" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-styling/" >
 </code-view>
 
 <div class="divider--half"></div>

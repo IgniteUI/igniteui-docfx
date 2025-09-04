@@ -35,7 +35,7 @@ _language: ja
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-resizing-sample" alt="Angular @@igComponent 列サイズ変更の例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-resizing-sample/" alt="Angular @@igComponent 列サイズ変更の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -44,7 +44,7 @@ _language: ja
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-resizing" alt="Angular @@igComponent 列サイズ変更の例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-resizing/" alt="Angular @@igComponent 列サイズ変更の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -53,7 +53,7 @@ _language: ja
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
-           iframe-src="{environment:lobDemosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing" alt="Angular @@igComponent 列サイズ変更の例">
+           iframe-src="{environment:lobDemosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing/" alt="Angular @@igComponent 列サイズ変更の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -256,7 +256,7 @@ column.autosize();
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-columnAutoResizing-sample" alt="Angular @@igComponent 列のサイズ変更の例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-columnAutoResizing-sample/" alt="Angular @@igComponent 列のサイズ変更の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -265,7 +265,7 @@ column.autosize();
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-columnAutoSizing-sample" alt="Angular @@igComponent 列のサイズ変更の例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-columnAutoSizing-sample/" alt="Angular @@igComponent 列のサイズ変更の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -274,7 +274,7 @@ column.autosize();
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-columnAutosizing-sample" alt="Angular @@igComponent 列のサイズ変更の例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-columnAutosizing-sample/" alt="Angular @@igComponent 列のサイズ変更の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -314,7 +314,7 @@ $custom-grid-theme: grid-theme(
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-resize-line-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-resize-line-styling-sample/" >
 </code-view>
 
 }
@@ -323,7 +323,7 @@ $custom-grid-theme: grid-theme(
 <code-view style="height:550px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-resize-line-styling" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-resize-line-styling/" >
 </code-view>
 
 }
@@ -332,7 +332,7 @@ $custom-grid-theme: grid-theme(
 <code-view style="height:550px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-resize-line-styling" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-resize-line-styling/" >
 </code-view>
 
 }

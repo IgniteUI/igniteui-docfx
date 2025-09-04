@@ -17,7 +17,7 @@ Ignite UI for Angular Date Picker コンポーネントを使用すると、ユ�
 <!-- TODO: datepicker sample with several options enabled -->
 <code-view style="height: 550px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" alt="Angular Date Picker の例">
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1/" alt="Angular Date Picker の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -202,7 +202,7 @@ export class SampleFormComponent {
 ```
 <code-view style="height: 540px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -219,7 +219,7 @@ export class SampleFormComponent {
 
 <code-view style="height: 680px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-3/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -254,7 +254,7 @@ IgxDatePicker と [`IgxTimePicker`](time-picker.md) を一緒に使用する場�
 
 <code-view style="height: 540px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/template-driven-form" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/template-driven-form/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -263,7 +263,7 @@ IgxDatePicker と [`IgxTimePicker`](time-picker.md) を一緒に使用する場�
 
 <code-view style="height: 540px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/reactive-form" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/reactive-form/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -325,7 +325,7 @@ $custom-datepicker-theme: calendar-theme(
 <code-view style="height:500px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-styling-sample/" >
 </code-view>
 
 ## API リファレンス

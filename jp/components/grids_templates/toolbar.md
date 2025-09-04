@@ -34,7 +34,7 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナーとな�
 
 <code-view style="height:420px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-1" alt="Angular ツールバー グリッドの例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-1/" alt="Angular ツールバー グリッドの例">
 </code-view>
 
 }
@@ -42,7 +42,7 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナーとな�
 
 <code-view style="height:420px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-4" alt="Angular ツールバー グリッドの例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-4/" alt="Angular ツールバー グリッドの例">
 </code-view>
 
 }
@@ -50,7 +50,7 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナーとな�
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-title" alt="Angular ツールバー グリッドの例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-title/" alt="Angular ツールバー グリッドの例">
 </code-view>
 
 }
@@ -186,7 +186,7 @@ IgxHierarchicalGrid の子グリッドの実装方法および DI スコープ�
 
 <code-view style="height:630px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-2/" >
 </code-view>
 
 }
@@ -194,7 +194,7 @@ IgxHierarchicalGrid の子グリッドの実装方法および DI スコープ�
 
 <code-view style="height:500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-1" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-1/" >
 </code-view>
 
 }
@@ -202,7 +202,7 @@ IgxHierarchicalGrid の子グリッドの実装方法および DI スコープ�
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-options" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-options/" >
 </code-view>
 
 }
@@ -411,7 +411,7 @@ configureExport(args: IGridToolbarExportEventArgs) {
 
 <code-view style="height:420px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-3/" >
 </code-view>
 
 <div class="divider"></div>
@@ -420,7 +420,7 @@ configureExport(args: IGridToolbarExportEventArgs) {
 
 <code-view style="height:420px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-2" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-2/" >
 </code-view>
 
 <div class="divider"></div>
@@ -436,7 +436,7 @@ configureExport(args: IGridToolbarExportEventArgs) {
 
 <code-view style="height: 370px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/exporting-visualization" >
+           iframe-src="{environment:demosBaseUrl}/grid/exporting-visualization/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -445,7 +445,7 @@ configureExport(args: IGridToolbarExportEventArgs) {
 
 <code-view style="height: 370px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-exporting-visualization" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-exporting-visualization/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -494,7 +494,7 @@ configureExport(args: IGridToolbarExportEventArgs) {
 
 <code-view style="height:420px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-4/" >
 </code-view>
 
 <div class="divider"></div>
@@ -503,7 +503,7 @@ configureExport(args: IGridToolbarExportEventArgs) {
 
 <code-view style="height:420px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-3" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-3/" >
 </code-view>
 
 <div class="divider"></div>
@@ -512,7 +512,7 @@ configureExport(args: IGridToolbarExportEventArgs) {
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-custom" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-custom/" >
 </code-view>
 
 <div class="divider"></div>
@@ -606,7 +606,7 @@ $dark-checkbox-theme: checkbox-theme(
 <code-view style="height:510px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-style" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-style/" >
 </code-view>
 
 <div class="divider"></div>
@@ -616,7 +616,7 @@ $dark-checkbox-theme: checkbox-theme(
 <code-view style="height:420px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-style/" >
 </code-view>
 
 <div class="divider"></div>
@@ -626,7 +626,7 @@ $dark-checkbox-theme: checkbox-theme(
 <code-view style="height:530px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-style" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-style/" >
 </code-view>
 
 <div class="divider"></div>

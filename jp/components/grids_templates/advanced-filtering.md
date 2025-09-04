@@ -26,7 +26,7 @@ _language: ja
 
 <code-view style="height:530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-advanced-filtering" alt="Angular @@igComponent 高度なフィルタリングの例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-advanced-filtering/" alt="Angular @@igComponent 高度なフィルタリングの例">
 </code-view>
 
 }
@@ -34,7 +34,7 @@ _language: ja
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-advanced-filtering" alt="Angular @@igComponent 高度なフィルタリングの例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-advanced-filtering/" alt="Angular @@igComponent 高度なフィルタリングの例">
 </code-view>
 
 }
@@ -42,7 +42,7 @@ _language: ja
 
 <code-view style="height:630px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-advanced-filtering" alt="Angular @@igComponent 高度なフィルタリングの例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-advanced-filtering/" alt="Angular @@igComponent 高度なフィルタリングの例">
 </code-view>
 
 }
@@ -182,7 +182,7 @@ ngAfterViewInit(): void {
 
 <code-view style="height:750px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-external-advanced-filtering" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-external-advanced-filtering/" >
 </code-view>
 
 }
@@ -191,7 +191,7 @@ ngAfterViewInit(): void {
 
 <code-view style="height:750px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-external-advanced-filtering" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-external-advanced-filtering/" >
 </code-view>
 
 }
@@ -200,7 +200,7 @@ ngAfterViewInit(): void {
 
 <code-view style="height:750px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-advanced-filtering" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-advanced-filtering/" >
 </code-view>
 
 }
@@ -397,7 +397,7 @@ igx-advanced-filtering-dialog {
 <code-view style="height:530px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-advanced-filtering-style" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-advanced-filtering-style/" >
 </code-view>
 
 }
@@ -406,7 +406,7 @@ igx-advanced-filtering-dialog {
 <code-view style="height:510px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-advanced-filtering-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-advanced-filtering-style/" >
 </code-view>
 
 }
@@ -415,7 +415,7 @@ igx-advanced-filtering-dialog {
 <code-view style="height:630px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-advanced-filtering-style" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-advanced-filtering-style/" >
 </code-view>
 
 }

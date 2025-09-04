@@ -11,7 +11,7 @@ _language: ja
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-1" alt="Angular Banner の例">
+           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-1/" alt="Angular Banner の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -151,7 +151,7 @@ Banner コンポーネントを表示するには、ボタン クリックで [`
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-2/" >
 </code-view>
 
 
@@ -186,7 +186,7 @@ export class MyBannerComponent {
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-3/" >
 </code-view>
 
 
@@ -251,7 +251,7 @@ export class MyBannerComponent {
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/banner-advanced-sample" >
+           iframe-src="{environment:demosBaseUrl}/notifications/banner-advanced-sample/" >
 </code-view>
 
 
@@ -286,7 +286,7 @@ $custom-banner-theme: banner-theme(
 <code-view style="height: 530px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/banner-styling" >
+           iframe-src="{environment:demosBaseUrl}/notifications/banner-styling/" >
 </code-view>
 
 

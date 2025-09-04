@@ -33,7 +33,7 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-column-hiding-toolbar-sample" alt="Angular @@igComponent 列非表示の例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-column-hiding-toolbar-sample/" alt="Angular @@igComponent 列非表示の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -42,7 +42,7 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding-toolbar" alt="Angular @@igComponent 列非表示の例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding-toolbar/" alt="Angular @@igComponent 列非表示の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -51,7 +51,7 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 
 <code-view style="height:570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-hiding" alt="Angular @@igComponent 列非表示の例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-hiding/" alt="Angular @@igComponent 列非表示の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -444,7 +444,7 @@ export class AppModule {}
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-column-hiding-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-column-hiding-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -453,7 +453,7 @@ export class AppModule {}
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -529,7 +529,7 @@ $custom-button: button-theme(
 <code-view style="height:600px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-column-hiding-style" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-column-hiding-style/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -539,7 +539,7 @@ $custom-button: button-theme(
 <code-view style="height:600px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding-style/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -549,7 +549,7 @@ $custom-button: button-theme(
 <code-view style="height:570px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-column-hiding-style" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-column-hiding-style/" >
 </code-view>
 
 <div class="divider--half"></div>

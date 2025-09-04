@@ -121,7 +121,7 @@ public activeRowCondition = (row: RowType) => this.grid?.navigation.activeNode?.
 
 <code-view style="height:620px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-rowClasses-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-rowClasses-sample/" >
 </code-view>
 
 }
@@ -129,14 +129,14 @@ public activeRowCondition = (row: RowType) => this.grid?.navigation.activeNode?.
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-classes" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-classes/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-row-classes" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-row-classes/" >
 </code-view>
 }
 <div class="divider--half"></div>
@@ -233,7 +233,7 @@ public childRowStyles = {
 
 <code-view style="height:530px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-rowStyles-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-rowStyles-sample/" >
 </code-view>
 
 }
@@ -241,14 +241,14 @@ public childRowStyles = {
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-styles-sample" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-styles-sample/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-row-styles" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-row-styles/" >
 </code-view>
 }
 <div class="divider--half"></div>
@@ -414,7 +414,7 @@ public grammyClasses = {
 
 <code-view style="height:530px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-cell-styling" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-cell-styling/" >
 </code-view>
 
 }
@@ -423,7 +423,7 @@ public grammyClasses = {
 <code-view style="height:600px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-conditional-cell-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-conditional-cell-style/" >
 </code-view>
 
 }
@@ -620,7 +620,7 @@ public updateCSS(css: string) {
 
 <code-view style="height:530px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-cell-cellStyling" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-cell-cellStyling/" >
 </code-view>
 
 }
@@ -628,7 +628,7 @@ public updateCSS(css: string) {
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-cell-cellStyling" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-cell-cellStyling/" >
 </code-view>
 
 }

@@ -16,7 +16,7 @@ Angular ComboBox コンポーネントは、編集可能な機能を提供する
 
 <code-view style="height: 400px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-main" alt="Angular ComboBox の例">
+           iframe-src="{environment:demosBaseUrl}/lists/combo-main/" alt="Angular ComboBox の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -139,7 +139,7 @@ export class MyCombo {
 
 <code-view style="height: 550px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-valuekey" >
+           iframe-src="{environment:demosBaseUrl}/lists/combo-valuekey/" >
 </code-view>
 
 
@@ -156,7 +156,7 @@ export class MyCombo {
 
 <code-view style="height: 600px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-binding" >
+           iframe-src="{environment:demosBaseUrl}/lists/combo-binding/" >
 </code-view>
 
 
@@ -331,7 +331,7 @@ $custom-checkbox-theme: checkbox-theme(
 <code-view style="height:410px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-styling" >
+           iframe-src="{environment:demosBaseUrl}/lists/combo-styling/" >
 </code-view>
 
 

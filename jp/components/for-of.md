@@ -14,7 +14,7 @@ _language: ja
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/igx-for-sample-1" alt="Angular 仮想スクロール ディレクティブの例">
+           iframe-src="{environment:demosBaseUrl}/data-display/igx-for-sample-1/" alt="Angular 仮想スクロール ディレクティブの例">
 </code-view>
 
 <div class="divider"></div>
@@ -132,7 +132,7 @@ Ignite UI for Angular ForOf モジュールまたはディレクティブをイ�
 
 <code-view style="height: 240px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/igx-for-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-display/igx-for-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>

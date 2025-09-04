@@ -15,7 +15,7 @@ _language: ja
 
 <code-view style="height: 100px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-5" alt="Angular Ripple の例">
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-5/" alt="Angular Ripple の例">
 </code-view>
 
 <p style="margin: 0;padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
@@ -95,7 +95,7 @@ Ignite UI for Angular Ripple モジュールまたはディレクティブをイ
 
 <code-view style="height: 100px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-6" alt="Angular Ripple の例">
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-6/" alt="Angular Ripple の例">
 </code-view>
 
 ### 中央揃えのリップル エフェクト
@@ -110,7 +110,7 @@ Ignite UI for Angular Ripple モジュールまたはディレクティブをイ
 
 <code-view style="height: 100px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-3" alt="Angular Ripple の例">
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-3/" alt="Angular Ripple の例">
 </code-view>
 
 ### リップルの期間
@@ -125,7 +125,7 @@ Ignite UI for Angular Ripple モジュールまたはディレクティブをイ
 
 <code-view style="height: 100px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-4" alt="Angular Ripple の例">
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-4/" alt="Angular Ripple の例">
 </code-view>
 
 ### リップルの対象要素
@@ -143,7 +143,7 @@ Ignite UI for Angular Ripple モジュールまたはディレクティブをイ
 
 <code-view style="height: 350px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-2" alt="Angular Ripple の例">
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-2/" alt="Angular Ripple の例">
 </code-view>
 
 > [!NOTE]
@@ -182,7 +182,7 @@ $custom-ripple-theme: ripple-theme(
 <code-view style="height:200px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/ripple-styling" alt="Angular Ripple の例">
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-styling/" alt="Angular Ripple の例">
 </code-view>
 
 ## API リファレンス

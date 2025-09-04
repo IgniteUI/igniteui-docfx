@@ -13,7 +13,7 @@ _language: ja
 
 <code-view style="height: 85px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-1" alt="Angular Button Group の例">
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-1/" alt="Angular Button Group の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -134,7 +134,7 @@ public alignment = ButtonGroupAlignment.vertical;
 
 <code-view style="height: 220px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -151,7 +151,7 @@ public alignment = ButtonGroupAlignment.vertical;
 
 <code-view style="height: 170px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-4/" >
 </code-view>
 
 ### サイズ
@@ -172,7 +172,7 @@ igx-buttongroup {
 
 <code-view style="height: 80px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-5/" >
 </code-view>
 
 ### カスタム トグル ボタン
@@ -244,7 +244,7 @@ public ngOnInit() {
 
 <code-view style="height: 90px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-3/" >
 </code-view>
 
 ## スタイル設定
@@ -280,7 +280,7 @@ $custom-button-group: button-group-theme(
 <code-view style="height: 200px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-style" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/button-group-style/" >
 </code-view>
 
 ## API リファレンス

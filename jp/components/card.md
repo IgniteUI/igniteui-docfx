@@ -17,7 +17,7 @@ Angular Card は、タイトル テキスト、説明、画像スタイル、CTA
 
 <code-view style="height: 500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-0" alt="Angular Card の例">
+           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-0/" alt="Angular Card の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -256,7 +256,7 @@ Angular Card に表示する画像や動画は、`igx-card-media` タグで囲�
 
 <code-view style="height: 220px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-2/" >
 </code-view>
 
 
@@ -295,7 +295,7 @@ Angular Card に表示する画像や動画は、`igx-card-media` タグで囲�
 
 <code-view style="height: 270px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-3/" >
 </code-view>
 
 
@@ -361,7 +361,7 @@ $colorful-card: card-theme(
 <code-view style="height: 486px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/card-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/layouts/card-styling-sample/" >
 </code-view>
 
 

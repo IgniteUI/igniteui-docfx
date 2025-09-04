@@ -14,7 +14,7 @@ _language: ja
 
 <code-view style="height: 500px; border: 1px solid #D4D4D4;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-simple" alt="Angular Navigation Drawer 例">
+           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-simple/" alt="Angular Navigation Drawer 例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -257,7 +257,7 @@ export class AppComponent  {
 
 <code-view style="height: 500px; border: 1px solid #D4D4D4;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-pin" >
+           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-pin/" >
 </code-view>
 
 Drawer は `flex-basis` をホスト要素に適用すると、残りのコンテンツが残りの幅に合わせます。
@@ -305,7 +305,7 @@ Drawer は `flex-basis` をホスト要素に適用すると、残りのコン�
 
 <code-view style="height: 400px; border: 1px solid #D4D4D4;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-mini" >
+           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-mini/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -383,7 +383,7 @@ import { RouterModule } from '@angular/router';
 
 <code-view style="height: 400px; border: 1px solid #D4D4D4;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-routing" >
+           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-routing/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -444,7 +444,7 @@ export const menusRoutes: Routes = [
 
 <code-view style="height: 400px; border: 1px solid #D4D4D4;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-hierarchical" >
+           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-hierarchical/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -492,7 +492,7 @@ $custom-theme: navdrawer-theme(
 <code-view style="height: 400px; border: 1px solid #D4D4D4;" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-styling" >
+           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-styling/" >
 </code-view>
 
 <div class="divider--half"></div>

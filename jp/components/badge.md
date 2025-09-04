@@ -13,7 +13,7 @@ _language: ja
 
 <code-view style="height:100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-2" alt="Angular Badge の例">
+           iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-2/" alt="Angular Badge の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -155,7 +155,7 @@ export class BadgeIconComponent implements OnInit {
 
 <code-view style="height: 100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/badge-icon" >
+           iframe-src="{environment:demosBaseUrl}/data-display/badge-icon/" >
 </code-view>
 
 ### リストのバッジ
@@ -285,7 +285,7 @@ class Member {
 
 <code-view style="height: 280px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-3/" >
 </code-view>
 
 ## スタイル設定
@@ -319,7 +319,7 @@ $custom-badge-theme: badge-theme(
 <code-view style="height:340px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/badge-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/data-display/badge-styling-sample/" >
 </code-view>
 
 

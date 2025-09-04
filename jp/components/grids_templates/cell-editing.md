@@ -33,7 +33,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-editing" alt="Angular @@igComponent セル編集とセル テンプレートの例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-editing/" alt="Angular @@igComponent セル編集とセル テンプレートの例">
 </code-view>
 
 }
@@ -41,7 +41,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 
 <code-view style="height:950px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-editing" alt="Angular @@igComponent セル編集とセル テンプレートの例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-editing/" alt="Angular @@igComponent セル編集とセル テンプレートの例">
 </code-view>
 
 }
@@ -49,7 +49,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 
 <code-view style="height:660px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing" alt="Angular @@igComponent セル編集とセル テンプレートの例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing/" alt="Angular @@igComponent セル編集とセル テンプレートの例">
 </code-view>
 
 }
@@ -164,7 +164,7 @@ public updateCell() {
 
 <code-view style="height:625px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-select" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-select/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -260,7 +260,7 @@ return dataView.findIndex((rec, index) => index > currentRowIndex && this.isEdit
 <code-view style="height:550px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-editing-excel-style" alt="Angular Grid Excel スタイル編集の例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-editing-excel-style/" alt="Angular Grid Excel スタイル編集の例">
 </code-view>
 
 
@@ -491,7 +491,7 @@ export class MyHGridEventsComponent {
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-editing-events" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-editing-events/" >
 </code-view>
 
 }
@@ -499,7 +499,7 @@ export class MyHGridEventsComponent {
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-editing-events" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-editing-events/" >
 </code-view>
 
 }
@@ -507,7 +507,7 @@ export class MyHGridEventsComponent {
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing-events" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing-events/" >
 </code-view>
 
 }
@@ -578,7 +578,7 @@ $custom-grid-theme: grid-theme(
 <code-view style="height:650px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-editing-style" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-editing-style/" >
 </code-view>
 
 }
@@ -587,7 +587,7 @@ $custom-grid-theme: grid-theme(
 <code-view style="height:950px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-editing-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-editing-style/" >
 </code-view>
 
 }
@@ -596,7 +596,7 @@ $custom-grid-theme: grid-theme(
 <code-view style="height:660px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing-style" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing-style/" >
 </code-view>
 
 }

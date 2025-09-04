@@ -35,7 +35,7 @@ Angular @@igComponent 検索により、データのコレクション内の値�
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-search-sample" alt="Angular 検索の例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-search-sample/" alt="Angular 検索の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -44,7 +44,7 @@ Angular @@igComponent 検索により、データのコレクション内の値�
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-search" alt="Angular 検索の例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-search/" alt="Angular 検索の例">
 </code-view>
 
 <div class="divider--half"></div>

@@ -114,7 +114,7 @@ Angular リアクティブ フォーム検証の例では、必要なフィー�
 
 <code-view style="height: 850px;"
     data-demos-base-url="{environment:demosBaseUrl}"
-    iframe-src="{environment:demosBaseUrl}/data-entries/reactive-forms"
+    iframe-src="{environment:demosBaseUrl}/data-entries/reactive-forms/"
     alt="Angular リアクティブ フォーム統合の例">
 </code-view>
 
