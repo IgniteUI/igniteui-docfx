@@ -535,33 +535,27 @@ To get started with styling the Excel Style Filtering dialog, we need to import 
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-The excel style filtering dialog takes its background color from the grid's theme, using the `filtering-row-background` parameter. In order to change the background we need to create a custom theme:
+The Excel Style Filtering dialog takes its background color from the grid's theme, using the `filtering-row-background` parameter. Additionally, there are specific Excel Style Filtering parameters available for customizing the text color of elements within the dialog. To change the overall style of the dialog, you need to create a custom theme.
 
 ```scss
 $custom-grid: grid-theme(
-  $filtering-row-background: #ffcd0f
+  $filtering-row-background: #ffcd0f,
+  $excel-filtering-header-foreground: #292826,
+  $excel-filtering-subheader-foreground: #292826,
+  $excel-filtering-actions-foreground: #006400,
+  $excel-filtering-actions-hover-foreground: #ffcd0f,
+  $excel-filtering-actions-disabled-foreground: #9e9e9e
 );
 ```
 
 We obviously have a lot more components inside the excel like filtering dialog, such as buttons, checkboxes, a list and even a drop-down. In order to style them, we need to create a separate theme for each one:
 
 ```scss
-$dark-button: button-theme(
+$custom-button: button-theme(
   $background: #ffcd0f,
   $foreground: #292826,
   $hover-background: #292826,
   $hover-foreground: #ffcd0f
-);
-
-$dark-input-group: input-group-theme(
-  $box-background: #ffcd0f,
-  $idle-text-color: #292826,
-  $focused-text-color: #292826,
-  $filled-text-color: #292826
-);
-
-$custom-list: list-theme(
-  $background: #ffcd0f
 );
 
 $custom-checkbox: checkbox-theme(
@@ -577,6 +571,18 @@ $custom-drop-down: drop-down-theme(
   $hover-item-background: #292826,
   $hover-item-text-color: #ffcd0f
 );
+
+$custom-input-group: input-group-theme(
+  $box-background: #ffcd0f,
+  $idle-text-color: #292826,
+  $focused-text-color: #292826,
+  $filled-text-color: #292826
+);
+
+$custom-list: list-theme(
+  $background: #ffcd0f
+);
+
 ```
 
 >[!NOTE]
@@ -584,18 +590,18 @@ $custom-drop-down: drop-down-theme(
 
 In this example we only changed some of the parameters for the listed components, but the [`button-theme`]({environment:sassApiUrl}/themes#function-button-theme), [`checkbox-theme`]({environment:sassApiUrl}/themes#function-checkbox-theme), [`drop-down-theme`]({environment:sassApiUrl}/themes#function-drop-down-theme), [`input-group-theme`]({environment:sassApiUrl}/themes#function-input-group-theme), [`list-theme`]({environment:sassApiUrl}/themes#function-list-theme) themes provide way more parameters to control their respective styling.
 
-The last step is to **include** the component mixins, each with its respective theme. We will also set the color property for the input's placeholder.
+The last step is to **include** each component’s custom theme. We will also set the color property for the input's placeholder.
 
 ```scss
-@include css-vars($custom-drop-down);
 @include css-vars($custom-grid);
+@include css-vars($custom-drop-down);
 
 .igx-excel-filter, 
 .igx-excel-filter__secondary {
-  @include css-vars($dark-button);
-  @include css-vars($dark-input-group);
-  @include css-vars($custom-list);
+  @include css-vars($custom-button);
   @include css-vars($custom-checkbox);
+  @include css-vars($custom-input-group);
+  @include css-vars($custom-list);
 
   .igx-input-group__input::placeholder {
     color: #ffcd0f;
@@ -612,15 +618,16 @@ The last step is to **include** the component mixins, each with its respective t
 ```scss
 :host {
   ::ng-deep {
-    @include css-vars($custom-drop-down);
     @include css-vars($custom-grid);
+    @include css-vars($custom-drop-down);
+
 
     .igx-excel-filter,
     .igx-excel-filter__secondary {
-      @include css-vars($dark-button);
-      @include css-vars($dark-input-group);
-      @include css-vars($custom-list);
+      @include css-vars($custom-button);
       @include css-vars($custom-checkbox);
+      @include css-vars($custom-input-group);
+      @include css-vars($custom-list);
       
       .igx-input-group__input::placeholder {
         color: #ffcd0f;
