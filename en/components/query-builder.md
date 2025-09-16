@@ -352,6 +352,41 @@ The last step is to **include** the new component themes using the `css-vars` mi
 
 <div class="divider--half"></div>
 
+### Styling with Tailwind
+
+You can style the query builder using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `igx-query-builder`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both light and dark theme variants. To use the light theme, the class should start with `light-*`, for the dark theme, use `dark-*`.
+
+The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+
+>[!NOTE]
+>You can style only the query builder’s own properties through the `igx-query-builder` tag. To style the components used inside the query builder, apply their respective theme functions as shown above.
+
+You can also override any other CSS variable using `arbitrary properties`, as shown below for the `label-foreground` variable:
+
+```html
+<igx-query-builder class="!material-query-builder-background-[#90B69F] ![--label-foreground:#121E17]" ...>
+</igx-query-builder>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your query builder should look like this:
+
+<div class="sample-container loading" style="height:500px">
+    <iframe id="query-builder-tailwind-style-iframe" data-src='{environment:demosBaseUrl}/interactions/query-builder-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
 You can also streamline your Angular app development using [WYSIWYG App Builder™](https://www.infragistics.com/products/appbuilder) with real UI components.
 
 ## API References

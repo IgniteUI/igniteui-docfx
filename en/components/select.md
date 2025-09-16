@@ -388,6 +388,43 @@ The last step is to pass the custom radio theme in our application:
            iframe-src="{environment:demosBaseUrl}/data-entries/select-styling/" >
 </code-view>
 
+### Styling with Tailwind
+
+You can style the select using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `igx-select`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both light and dark theme variants. To use the light theme, the class should start with `light-*`, for the dark theme, use `dark-*`.
+
+The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+
+>[!NOTE]
+>You can style only the select’s own properties through the `igx-select` tag. To style the components used inside the select, apply their respective theme functions as shown above.
+
+You can also override any other CSS variable using `arbitrary properties`, as shown below for the `toggle-button-background-focus` variable:
+
+```html
+<igx-select
+class="!material-select-toggle-button-[#99BAA6]
+![toggle-button-background-focus:#7B9E89]"
+...></igx-select>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your select should look like this:
+
+<div class="sample-container loading" style="height:220px">
+    <iframe id="select-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/data-entries/select-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
 
 <div class="divider--half"></div>
 

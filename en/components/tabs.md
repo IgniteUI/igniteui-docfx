@@ -425,6 +425,41 @@ The last step is to **include** the component theme in our application.
            iframe-src="{environment:demosBaseUrl}/layouts/tabs-style/" >
 </code-view>
 
+### Styling with Tailwind
+
+You can style the tabs using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `igx-tabs`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both light and dark theme variants. To use the light theme, the class should start with `light-*`, for the dark theme, use `dark-*`.
+
+The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+
+You can also override any other CSS variable using `arbitrary properties`, as shown below for the `item-active-icon-color` and `item-active-color` variables:
+
+```html
+<igx-tabs
+class="!material-tabs-background-[#355753]
+![--item-active-icon-color:#ff9641]
+![--item-active-color:#ff9641]">
+</igx-tabs>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your tabs should look like this:
+
+<div class="sample-container loading" style="height:200px">
+    <iframe id="tabs-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
 <div class="divider--half"></div>
 
 ## API References

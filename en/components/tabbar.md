@@ -423,6 +423,37 @@ The last step is to **include** the component theme in our application.
            iframe-src="{environment:demosBaseUrl}/layouts/tabbar-style/" >
 </code-view>
 
+### Styling with Tailwind
+
+You can style the bottom nav using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `<igx-bottom-nav>`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both light and dark theme variants. To use the light theme, the class should start with `light-*`, for the dark theme, use `dark-*`.
+
+The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+
+You can also override any other CSS variable using `arbitrary properties`, as shown below for the `icon-selected-color` and `label-selected-color` variables:
+
+```html
+<igx-bottom-nav class="!material-bottom-nav-background-[#011627] ![--icon-selected-color:#FF8040] ![--label-selected-color:#FF8040]">
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your bottom nav should look like this:
+
+<div class="sample-container loading" style="height:340px">
+    <iframe id="tabbar-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/tabbar-tailwind-style' style="height: 350px; width: 300px; border: 1px solid #D4D4D4;" seamless class="lazyload"></iframe>
+</div>
+
 <div class="divider--half"></div>
 
 ## API References
