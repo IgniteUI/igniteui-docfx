@@ -898,6 +898,9 @@
 - name: タイポグラフィ
   href: themes/typography.md
   new: false
+- name: 丸み
+  href: themes/roundness.md
+  new: false
 - name: サイズ
   href: display-density.md
 - name: Sass
