@@ -362,7 +362,7 @@ export class ExpansionPanelComponent {
 * [IgxExpansionPanel API]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)
 * [IgxExpansionPanelHeader API]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html)
 * [IgxExpansionPanelBody API]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html)
-* [IgxExpansionPanel スタイル]({environment:sassApiUrl}/themes#mixin-igx-expansion-panel)
+* [IgxExpansionPanel スタイル]({environment:sassApiUrl}/themes#mixin-expansion-panel)
 
 ## テーマの依存関係
 * [IgxExpansionPanel テーマ]({environment:sassApiUrl}/themes#function-expansion-panel-theme)

@@ -895,6 +895,9 @@
 - name: Typography
   href: themes/typography.md
   new: false
+- name: Roundness
+  href: themes/roundness.md
+  new: false
 - name: Size
   href: display-density.md
 - name: Spacing
@@ -1166,7 +1169,7 @@
 - name: Date Range Picker
   href: date-range-picker.md
   new: false
-  updated: false
+  updated: true
 - name: Month Picker
   href: month-picker.md
   new: false
