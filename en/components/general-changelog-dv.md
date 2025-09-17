@@ -18,6 +18,10 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 
 ## **20.0.1 (July 2025)**
 
+### igniteui-angular-maps (Geographic Map)
+
+*   New [Azure Maps](geo-map-display-azure-imagery.md). This is a new geographic imagery mapping service provided by Microsoft® for the Infragistics Geographic Map.
+
 ### Bug Fixes
 
 | Bug Number | Control | Description      |
