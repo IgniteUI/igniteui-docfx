@@ -36,7 +36,7 @@ Ignite UI for Angular @@igComponent では、列レベルでのデータ ソー�
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-sample" alt="Angular @@igComponent ソートの例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-sample/" alt="Angular @@igComponent ソートの例">
 </code-view>
 
 }
@@ -46,7 +46,7 @@ Ignite UI for Angular @@igComponent では、列レベルでのデータ ソー�
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-sorting" alt="Angular @@igComponent ソートの例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-sorting/" alt="Angular @@igComponent ソートの例">
 </code-view>
 
 }
@@ -56,7 +56,7 @@ Ignite UI for Angular @@igComponent では、列レベルでのデータ ソー�
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sorting" alt="Angular @@igComponent ソートの例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sorting/" alt="Angular @@igComponent ソートの例">
 </code-view>
 
 }
@@ -85,7 +85,7 @@ Ignite UI for Angular @@igComponent では、列レベルでのデータ ソー�
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-indicators" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-indicators/" >
 </code-view>
 
 }
@@ -277,7 +277,7 @@ $custom-theme: grid-theme(
 <code-view style="height:550px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-styling" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-styling/" >
 </code-view>
 
 }
@@ -288,7 +288,7 @@ $custom-theme: grid-theme(
 <code-view style="height:550px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-sorting-styling" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-sorting-styling/" >
 </code-view>
 
 }
@@ -299,7 +299,7 @@ $custom-theme: grid-theme(
 <code-view style="height:510px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sorting-styling" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sorting-styling/" >
 </code-view>
 
 }

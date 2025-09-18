@@ -12,7 +12,7 @@ Ignite UI for Angular Splitter コンポーネントはレイアウトを作成�
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/splitter-horizontal-sample" alt="Angular スプリッターの例">
+           iframe-src="{environment:demosBaseUrl}/layouts/splitter-horizontal-sample/" alt="Angular スプリッターの例">
 </code-view>
 
 
@@ -127,7 +127,7 @@ public type = SplitterType.Horizontal;
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/splitter-collapsible-sample" >
+           iframe-src="{environment:demosBaseUrl}/layouts/splitter-collapsible-sample/" >
 </code-view>
 
 ### ペインの構成
@@ -191,7 +191,7 @@ public typeVertical = SplitterType.Vertical;
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:dvDemosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/splitter-nested-sample" >
+           iframe-src="{environment:demosBaseUrl}/layouts/splitter-nested-sample/" >
 </code-view>
 
 
@@ -246,7 +246,7 @@ $splitter-theme: splitter-theme(
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/splitter-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/layouts/splitter-styling-sample/" >
 </code-view>
 
 ### カスタム サイズ変更

@@ -16,7 +16,7 @@ _language: ja
 
 <code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-lod" alt="Angular 階層グリッド ロードオンデマンドの例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-lod/" alt="Angular 階層グリッド ロードオンデマンドの例">
 </code-view>
 
 <div class="divider--half"></div>

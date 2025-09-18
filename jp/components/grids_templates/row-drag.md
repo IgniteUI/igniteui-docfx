@@ -33,7 +33,7 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-row-drag-base" alt="Angular @@igComponent 行ドラッグの例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-row-drag-base/" alt="Angular @@igComponent 行ドラッグの例">
 </code-view>
 
 }
@@ -42,7 +42,7 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-drag-base" alt="Angular @@igComponent 行ドラッグの例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-drag-base/" alt="Angular @@igComponent 行ドラッグの例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -52,7 +52,7 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-row-drag-base" alt="Angular @@igComponent 行ドラッグの例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-row-drag-base/" alt="Angular @@igComponent 行ドラッグの例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -241,7 +241,7 @@ export class @@igxNameRowDragComponent {
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-multiple-row-drag" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-multiple-row-drag/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -250,7 +250,7 @@ export class @@igxNameRowDragComponent {
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-multi-row-drag" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-multi-row-drag/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -280,7 +280,7 @@ export class @@igxNameRowDragComponent {
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-row-drag" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-row-drag/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -345,7 +345,7 @@ enum DragIcon {
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-row-drag-to-grid" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-row-drag-to-grid/" >
 </code-view>
 
 
@@ -356,7 +356,7 @@ enum DragIcon {
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-drag" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-drag/" >
 </code-view>
 
 
@@ -367,7 +367,7 @@ enum DragIcon {
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-drag" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-drag/" >
 </code-view>
 
 
@@ -384,7 +384,7 @@ enum DragIcon {
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-row-drag" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-row-drag/" >
 </code-view>
 
 
@@ -593,7 +593,7 @@ export class HGridRowReorderComponent {
 
 <code-view style="height:830px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-row-reorder" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-row-reorder/" >
 </code-view>
 
 }
@@ -602,7 +602,7 @@ export class HGridRowReorderComponent {
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-reordering" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-reordering/" >
 </code-view>
 
 }
@@ -611,7 +611,7 @@ export class HGridRowReorderComponent {
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-row-reorder" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-row-reorder/" >
 </code-view>
 
 }
@@ -850,7 +850,7 @@ class MyGridScrollComponent {
 
 <code-view style="height:830px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-drop-indicator" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-drop-indicator/" >
 </code-view>
 }
 

@@ -14,7 +14,7 @@ _language: ja
 
 <code-view style="height: 370px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-1" alt="Angular Toggle の例">
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-1/" alt="Angular Toggle の例">
 </code-view>
 
 
@@ -148,7 +148,7 @@ export class Class {
 
 <code-view style="height: 370px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/toggle" >
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle/" >
 </code-view>
 
 
@@ -176,7 +176,7 @@ export class Class {
 
 <code-view style="height: 370px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-2/" >
 </code-view>
 
 
@@ -202,7 +202,7 @@ export class Class {
 
 <code-view style="height: 370px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-3/" >
 </code-view>
 
 
@@ -232,7 +232,7 @@ public offsetToggleSet() {
 
 <code-view style="height: 370px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-4/" >
 </code-view>
 
 

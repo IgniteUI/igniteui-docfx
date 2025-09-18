@@ -21,7 +21,7 @@ Angular Query Builder は、[Angular コンポーネント](https://jp.infragist
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-request-sample"
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-request-sample/"
            alt="Angular Query Builder 概要の例">
 </code-view>
 
@@ -265,7 +265,7 @@ this.ordersFields = [
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-template-sample" alt="Angular Query Builder テンプレートの例">
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-template-sample/" alt="Angular Query Builder テンプレートの例">
 </code-view>
 
 ## スタイル設定
@@ -345,7 +345,7 @@ $custom-icon-button: outlined-icon-button-theme(
 <code-view style="height:530px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-style" >
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-style/" >
 </code-view>
 
 > [!NOTE]

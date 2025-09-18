@@ -13,7 +13,7 @@ _language: ja
 
 <code-view style="height: 140px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-1" alt="Angular Snackbar の例">
+           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-1/" alt="Angular Snackbar の例">
 </code-view>
 
 
@@ -121,7 +121,7 @@ public close(element) {
 
 <code-view style="height: 230px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2/" >
 </code-view>
 
 ### 表示時間
@@ -180,7 +180,7 @@ Snackbar の内容をカスタマイズして、メッセージやボタンよ�
 
 <code-view style="height: 170px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-5/" >
 </code-view>
 
 
@@ -251,7 +251,7 @@ public restore() {
 
 <code-view style="height: 350px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4/" >
 </code-view>
 
 ### 配置
@@ -311,7 +311,7 @@ $dark-snackbar: snackbar-theme(
 <code-view style="height: 150px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-style" >
+           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-style/" >
 </code-view>
 
 <div class="divider--half"></div>

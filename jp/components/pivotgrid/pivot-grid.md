@@ -22,7 +22,7 @@ Angular ピボット グリッド コンポーネントは、ピボット テー
 
 <code-view style="height: 870px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-datasource" alt="Angular ピボット セレクターを備えたピボット グリッドの例">
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-datasource/" alt="Angular ピボット セレクターを備えたピボット グリッドの例">
 </code-view>
 
 ## Ignite UI for Angular Pivot Grid を使用した作業の開始
@@ -295,7 +295,7 @@ public data = [
 
 <code-view style="height: 530px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-basic" alt="Angular ピボット グリッドの基本例">
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-basic/" alt="Angular ピボット グリッドの基本例">
 </code-view>
 
 また、アプリ開発プロセス全体を合理化したい場合は、次回の Angular アプリ開発から [WYSIWYG App Builder™](https://jp.infragistics.com/products/appbuilder) を試すことができます。

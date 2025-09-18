@@ -17,7 +17,7 @@ Angular Single Select ComboBox コンポーネントは、単一の選択を可�
 
 <code-view style="height: 500px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-main" alt="Angular Simple ComboBox の例">
+           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-main/" alt="Angular Simple ComboBox の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -141,7 +141,7 @@ export class MySimpleComboComponent implements OnInit {
 
 <code-view style="height: 480px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-usage" >
+           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-usage/" >
 </code-view>
 
 
@@ -239,7 +239,7 @@ Simple ComboBox が開かれ、リスト項目がフォーカスされている�
 
 <code-view style="height: 620px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-cascading" alt="Angular カスケーディングの例">
+           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-cascading/" alt="Angular カスケーディングの例">
 </code-view>
 
 
@@ -316,7 +316,7 @@ Ignite UI for Angular Simple ComboBox コンポーネントは、コンボボッ
 
 <code-view style="height: 400px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-remote" alt="Angular Simple Combo リモート バインディングの例">
+           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-remote/" alt="Angular Simple Combo リモート バインディングの例">
 </code-view>
 
 ## スタイル設定
@@ -380,7 +380,7 @@ $custom-drop-down-theme: drop-down-theme(
 <code-view style="height:500px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-styling" >
+           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-styling/" >
 </code-view>
 
 

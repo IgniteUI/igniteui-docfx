@@ -117,7 +117,7 @@ Angular Date Range Picker コンポーネントは、開始日と終了日の 2 
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-start-end" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-start-end/" >
 </code-view>
 
 ### ポップアップ モード

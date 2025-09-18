@@ -153,35 +153,33 @@ npm start
 
 ### コンポーネントの自動追加
 
-#### モジュールのインポート
+Angular 19 以降では、スタンドアロン コンポーネントが Angular アプリを構築するためのデフォルトの方法となり、`NgModules` が不要になりました。これにより、コンポーネントの追加プロセスが大幅に簡略化されます。ここでは、この仕組みを利用してアプリに [**igxGrid**](../grid/grid.md) コンポーネントを追加してみましょう。
 
-はじめに **app.module.ts** ファイルで使用するコンポーネントの各モジュールをインポートする必要があります。[**igxGrid**](../grid/grid.md) で実行します。BrowserAnimationsModule によってはアニメーションのあるコンポーネントがあることに注意してください。さっそくインポートしてみましょう。
+開始する前にご注意ください。一部のコンポーネントにはアニメーションがあり、それらを利用するには `bootstrapApplication` 呼び出しの一部としてプロバイダーが必要です。
 
 ```typescript
-// app.module.ts
+// main.ts
 
+import { appConfig } from './app/app.config';
+import { AppComponent } from './app/app.component';
+
+bootstrapApplication(AppComponent, appConfig)
+  .catch((err) => console.error(err));
+```
+
+```typescript
+// app/app.config.ts
+
+import { ApplicationConfig, importProvidersFrom } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
-// Here we import the IgxGridModule, so we can use the igxGrid!
-import { IgxGridModule } from 'igniteui-angular';
-// import { IgxGridModule } from '@infragistics/igniteui-angular'; for licensed package
+const providers: Provider = [
+  importProvidersFrom(BrowserModule),
+  provideAnimations()
+];
 
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    IgxGridModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+export const appConfig: ApplicationConfig = { providers };
 ```
 
 #### コンポーネントの使用
@@ -205,17 +203,19 @@ igxGrid をマークアップで使用する準備ができました。**app.com
 </div>
 ```
 
-**app.component.ts** から参照されるグリッド データとアプリケーションのタイトルを定義します。
+**app.component.ts** から参照されるグリッド データとアプリケーションのタイトルを定義します。スタンドアロン コンポーネントを使用している場合、テンプレート内で使用するコンポーネントを含め、`IgxGridComponent` クラスをアプリの imports に追加するだけで済みます。例では列を定義しているため、`IgxColumnComponent` も import 配列に追加する必要があります。
 
 ```typescript
 // app.component.ts
 
 import { Component } from '@angular/core';
+import { IgxGridComponent, IgxColumnComponent } from 'igniteui-angular';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  imports: [IgxGridComponent, IgxColumnComponent]
 })
 export class AppComponent {
   localData = [

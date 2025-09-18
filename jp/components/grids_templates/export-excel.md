@@ -63,7 +63,7 @@ Excel Exporter サービスは @@igxName のデータを MS Excel へエクス�
 <code-view style="height: 800px;" 
            data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz"
-           iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1" alt="Angular Excel Exporter の例">
+           iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1/" alt="Angular Excel Exporter の例">
 </code-view>
 
 }
@@ -72,7 +72,7 @@ Excel Exporter サービスは @@igxName のデータを MS Excel へエクス�
 <code-view style="height: 350px;" 
            data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz"
-           iframe-src="{environment:demosBaseUrl}/services/export-excel-tree-grid-sample" alt="Angular Excel Exporter の例">
+           iframe-src="{environment:demosBaseUrl}/services/export-excel-tree-grid-sample/" alt="Angular Excel Exporter の例">
 </code-view>
 
 }
@@ -81,7 +81,7 @@ Excel Exporter サービスは @@igxName のデータを MS Excel へエクス�
 <code-view style="height: 600px;" 
         data-demos-base-url="{environment:demosBaseUrl}"
         explicit-editor="stackblitz"
-        iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-export" alt="Angular Excel Exporter の例">
+        iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-export/" alt="Angular Excel Exporter の例">
 </code-view>
 
 }
@@ -90,7 +90,7 @@ Excel Exporter サービスは @@igxName のデータを MS Excel へエクス�
 <code-view style="height: 600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            explicit-editor="stackblitz"
-           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-export" alt="Angular Excel Exporter の例">
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-export/" alt="Angular Excel Exporter の例">
 </code-view>
 
 }
@@ -184,7 +184,7 @@ public exportButtonHandler() {
 <code-view style="height: 800px;" 
            data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz" 
-           iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1" alt="Angular Grouped Data Excel Exporter の例">
+           iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1/" alt="Angular Grouped Data Excel Exporter の例">
 </code-view>
 
 }
@@ -205,7 +205,7 @@ public exportButtonHandler() {
 <code-view style="height: 800px;" 
            data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz"
-           iframe-src="{environment:demosBaseUrl}/grid/multi-column-headers-export" alt="Angular Multi-Column Headers Export">
+           iframe-src="{environment:demosBaseUrl}/grid/multi-column-headers-export/" alt="Angular Multi-Column Headers Export">
 </code-view>
 }
 
@@ -213,7 +213,7 @@ public exportButtonHandler() {
 <code-view style="height: 800px;" 
            data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-headers-export" alt="Angular Multi-Column Headers Export">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-headers-export/" alt="Angular Multi-Column Headers Export">
 </code-view>
 }
 
@@ -221,7 +221,7 @@ public exportButtonHandler() {
 <code-view style="height: 800px;" 
            data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-export" alt="Angular Multi-Column Headers Export">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-export/" alt="Angular Multi-Column Headers Export">
 </code-view>
 }
 

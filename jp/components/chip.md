@@ -13,7 +13,7 @@ _language: ja
 
 <code-view style="height: 100px; padding-top: 10px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/chip-simple" alt="Angular Chip の例">
+           iframe-src="{environment:demosBaseUrl}/data-display/chip-simple/" alt="Angular Chip の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -192,7 +192,7 @@ public chipRemoved(event: IBaseChipEventArgs) {
 
 <code-view style="height: 100px; padding-top: 10px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/chip-simple" >
+           iframe-src="{environment:demosBaseUrl}/data-display/chip-simple/" >
 </code-view>
 
 ### Chip テンプレート
@@ -320,7 +320,7 @@ public chipRemoved(event: IBaseChipEventArgs) {
 
 <code-view style="height: 100px; padding-top: 10px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/chip-simple" >
+           iframe-src="{environment:demosBaseUrl}/data-display/chip-simple/" >
 </code-view>
 
 ## Chip Area
@@ -477,7 +477,7 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
 
 <code-view style="height: 100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/chip-area-sample" >
+           iframe-src="{environment:demosBaseUrl}/data-display/chip-area-sample/" >
 </code-view>
 
 ## スタイル設定
@@ -513,7 +513,7 @@ $custom-theme: chip-theme(
 <code-view style="height:100px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/chip-styling" >
+           iframe-src="{environment:demosBaseUrl}/data-display/chip-styling/" >
 </code-view>
 
 ### カスタム サイズ変更

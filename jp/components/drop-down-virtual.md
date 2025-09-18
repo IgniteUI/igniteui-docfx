@@ -13,7 +13,7 @@ Ignite UI for Angular Drop Down コンポーネントは、選択可能な項目
 
 <code-view style="height:320px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-virtual" alt="Angular 仮想ドロップダウンの例">
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-virtual/" alt="Angular 仮想ドロップダウンの例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -248,7 +248,7 @@ export class DropDownRemoteComponent implements OnInit, OnDestroy {
 
 <code-view style="height:400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-remote" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-remote/" >
 </code-view>
 
 <div class="divider--half"></div>

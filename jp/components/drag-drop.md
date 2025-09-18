@@ -15,7 +15,7 @@ _language: ja
 
 <code-view style="height:325px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/icons-sample" alt="Angular Drag and Drop の例">
+           iframe-src="{environment:demosBaseUrl}/interactions/icons-sample/" alt="Angular Drag and Drop の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -155,7 +155,7 @@ Angular アプリケーション内の要素をある場所から他の場所へ
 
 <code-view style="height:325px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/drag-dialog-sample" >
+           iframe-src="{environment:demosBaseUrl}/interactions/drag-dialog-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -178,7 +178,7 @@ Angular アプリケーション内の要素をある場所から他の場所へ
 
 <code-view style="height:380px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/list-reorder-sample" >
+           iframe-src="{environment:demosBaseUrl}/interactions/list-reorder-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -265,7 +265,7 @@ public onDropped(event) {
 
 <code-view style="height:340px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/email-sample" >
+           iframe-src="{environment:demosBaseUrl}/interactions/email-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -283,7 +283,7 @@ public onDropped(event) {
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/kanban-sample" >
+           iframe-src="{environment:demosBaseUrl}/interactions/kanban-sample/" >
 </code-view>
 
 <div class="divider--half"></div>

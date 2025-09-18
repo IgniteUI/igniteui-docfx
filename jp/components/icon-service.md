@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
 
 <code-view style="height: 180px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/icon-service" alt="Icon Service の例">
+           iframe-src="{environment:demosBaseUrl}/data-display/icon-service/" alt="Icon Service の例">
 </code-view>
 
 ### アイコン ファミリの追加

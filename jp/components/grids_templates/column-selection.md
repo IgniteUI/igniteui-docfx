@@ -43,7 +43,7 @@ _language: ja
 
 <code-view style="height:570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-selection" alt="Angular 列選択の例">
+           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-selection/" alt="Angular 列選択の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -71,7 +71,7 @@ _language: ja
 
 <code-view style="height:570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-group-selection" >
+           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-group-selection/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -154,7 +154,7 @@ $custom-grid-theme: grid-theme(
 
 <code-view style="height:570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-selection-styles" >
+           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-selection-styles/" >
 </code-view>
 
 >[!NOTE]

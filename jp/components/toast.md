@@ -13,7 +13,7 @@ _language: ja
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-2" alt="Angular Toast の例">
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-2/" alt="Angular Toast の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -128,7 +128,7 @@ public showMessage() {
 
 <code-view style="height: 450px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-3/" >
 </code-view>
 
 ### 表示期間
@@ -172,7 +172,7 @@ public open(toast) {
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-5/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -212,7 +212,7 @@ $custom-toast-theme: toast-theme(
 <code-view style="height: 600px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/toast-style" >
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-style/" >
 </code-view>
 
 <div class="divider--half"></div>

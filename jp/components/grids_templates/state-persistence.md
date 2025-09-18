@@ -37,7 +37,7 @@ _language: ja
 
 # @@igComponent の状態保持
 
-igxGridState ディレクティブによって開発者がグリッドの状態を簡単に保存および復元できます。[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) ディレクティブがグリッドに適用されると、[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getState) および [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setState) メソッドが公開され、開発者はこれを使用して、あらゆるシナリオで状態の永続化を実現できます。
+igxGridState ディレクティブによって開発者がグリッドの状態を簡単に保存および復元できます。[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) ディレクティブがグリッドに適用されると、[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getState) および [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setState) メソッドが公開され、開発者はこれを使用して、あらゆるシナリオで状態の保持を実現できます。
 
 ## サポートされている機能
 [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) ディレクティブは、以下の機能の状態の保存および復元をサポートします。
@@ -337,7 +337,7 @@ this.state.setState(state, ['filtering', 'rowIslands']);
 
 <code-view style="height:763px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-state" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-state/" >
 </code-view>
 
 }
@@ -347,7 +347,7 @@ this.state.setState(state, ['filtering', 'rowIslands']);
 
 <code-view style="height:1010px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-state" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-state/" >
 </code-view>
 
 }
@@ -357,7 +357,7 @@ this.state.setState(state, ['filtering', 'rowIslands']);
 
 <code-view style="height:715px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-state" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-state/" >
 </code-view>
 
 }
@@ -366,7 +366,7 @@ this.state.setState(state, ['filtering', 'rowIslands']);
 
 <code-view style="height:820px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-state-persistence" >
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-state-persistence/" >
 </code-view>
 
 }
@@ -416,7 +416,7 @@ public restoreState() {
 ```
 <code-view style="height: 580px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-noop-persistence" alt="Angular Pivot Noop Grid State Persistence Example">
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-noop-persistence/" alt="Angular ピボット Noop グリッド状態の保持の例">
 </code-view>
 
 }
@@ -463,7 +463,7 @@ public restoreState() {
 <code-view style="height: 580px" 
            explicit-editor="stackblitz"
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-state-persistence" alt="Angular Grid 状態保持の例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-state-persistence/" alt="Angular Grid 状態保持の例">
 </code-view>
 
 }

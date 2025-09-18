@@ -108,7 +108,7 @@ _language: ja
 
 <code-view style="height:470px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-keyboardnav-guide" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-keyboardnav-guide/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -117,7 +117,7 @@ _language: ja
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hgrid-keyboard-guide" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hgrid-keyboard-guide/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -126,7 +126,7 @@ _language: ja
 
 <code-view style="height:470px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tgrid-keyboardnav-guide" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tgrid-keyboardnav-guide/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -254,7 +254,7 @@ public customKeydown(args: IGridKeydownEventArgs) {
 
 <code-view style="height:400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-custom-keyboard-navigation" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-custom-keyboard-navigation/" >
 </code-view>
 
 }
@@ -282,7 +282,7 @@ public customKeydown(args: IGridKeydownEventArgs) {
 
 <code-view style="height:520px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-custom-kb-navigation" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-custom-kb-navigation/" >
 </code-view>
 
 }
@@ -309,7 +309,7 @@ public customKeydown(args: IGridKeydownEventArgs) {
 
 <code-view style="height:520px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-keyboard-navigation" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-keyboard-navigation/" >
 </code-view>
 
 }

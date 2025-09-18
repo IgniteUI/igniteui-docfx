@@ -12,7 +12,7 @@ _language: ja
 
 <code-view style="height:100px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-1" alt="Angular Input Group の例">
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-1/" alt="Angular Input Group の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -100,7 +100,7 @@ Ignite UI for Angular Input Group モジュールまたはディレクティブ�
 
 <code-view style="height:110px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-3" alt="Angular Input Group の例">
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-3/" alt="Angular Input Group の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -123,7 +123,7 @@ Ignite UI for Angular Input Group モジュールまたはディレクティブ�
 ヒントを追加した phone フィールドは以下のようになります。
 <code-view style="height:110px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-4" alt="Angular Input Group の例">
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-4/" alt="Angular Input Group の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -157,7 +157,7 @@ Ignite UI for Angular は、`type="file"` の入力スタイルも提供し、�
 
 <code-view style="height:695px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-5/" >
 </code-view>
 
 ### Input Group テーマ
@@ -173,7 +173,7 @@ Ignite UI for Angular Input Group コンポーネントは、Angular 14 のデ�
 
 <code-view style="height:770px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/typed-form" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/typed-form/" >
 </code-view>
 
 ## 検証
@@ -248,7 +248,7 @@ Ignite UI for Angular Input Group コンポーネントは、Angular 14 のデ�
 
 <code-view style="height:480px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/template-driven-form-validation" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/template-driven-form-validation/" >
 </code-view>
 
 ### リアクティブ フォーム
@@ -322,7 +322,7 @@ public get password() {
 
 <code-view style="height:480px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/reactive-form-validation" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/reactive-form-validation/" >
 </code-view>
 
 ### カスタム バリデータ
@@ -435,7 +435,7 @@ constructor(fb: FormBuilder) {
 
 <code-view style="height:480px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/reactive-form-custom-validation" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/reactive-form-custom-validation/" >
 </code-view>
 
 ## スタイル設定
@@ -473,7 +473,7 @@ $custom-input-group: input-group-theme(
 <code-view style="height:230px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-style" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-style/" >
 </code-view>
 
 >[!NOTE]

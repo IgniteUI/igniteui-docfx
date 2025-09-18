@@ -15,7 +15,7 @@ Ignite UI for Angular Action Strip コンポーネントは、ホバーなどの
 
 <code-view style="height: 400px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/action-strip-paragraph" alt="Angular Action Strip の例">
+           iframe-src="{environment:demosBaseUrl}/menus/action-strip-paragraph/" alt="Angular Action Strip の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -115,7 +115,7 @@ Ignite UI for Angular Action Strip モジュールまたはディレクティブ
 
 <code-view style="height: 400px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/action-strip-paragraph-menu" >
+           iframe-src="{environment:demosBaseUrl}/menus/action-strip-paragraph-menu/" >
 </code-view>
 
 ### アクション ストリップの再利用
@@ -154,7 +154,7 @@ Ignite UI for Angular Action Strip モジュールまたはディレクティブ
 
 <code-view style="height: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-action-strip" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-action-strip/" >
 </code-view>
 
 > [!NOTE]
@@ -190,7 +190,7 @@ $custom-strip: action-strip-theme(
 <code-view style="height: 400px;" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/action-strip-styling" >
+           iframe-src="{environment:demosBaseUrl}/menus/action-strip-styling/" >
 </code-view>
 
 ## API と スタイル リファレンス

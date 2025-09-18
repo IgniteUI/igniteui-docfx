@@ -28,7 +28,7 @@ _canonicalLink: grid/row-editing
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-row-editing" alt="Angular @@igComponent 行編集の例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-row-editing/" alt="Angular @@igComponent 行編集の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -37,7 +37,7 @@ _canonicalLink: grid/row-editing
 
 <code-view style="height:590px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-row-edit" alt="Angular @@igComponent 行編集の例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-row-edit/" alt="Angular @@igComponent 行編集の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -46,7 +46,7 @@ _canonicalLink: grid/row-editing
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-editing" alt="Angular @@igComponent 行編集の例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-editing/" alt="Angular @@igComponent 行編集の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -415,7 +415,7 @@ $button-theme: button-theme(
 <code-view style="height:560px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-row-edit-style" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-row-edit-style/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -426,7 +426,7 @@ $button-theme: button-theme(
 <code-view style="height:560px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-edit-style" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-edit-style/" >
 </code-view>
 
 }
@@ -437,7 +437,7 @@ $button-theme: button-theme(
 <code-view style="height:560px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-row-edit-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-row-edit-style/" >
 </code-view>
 
 }
