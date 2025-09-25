@@ -808,6 +808,9 @@
     - name: Binding Multiple Sources
       href: geo-map-binding-multiple-sources.md
       new: false
+    - name: Displaying Azure Imagery
+      href: geo-map-display-azure-imagery.md
+      new: true
     - name: Displaying Bing Imagery
       href: geo-map-display-bing-imagery.md
       new: false
