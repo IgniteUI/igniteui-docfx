@@ -419,7 +419,7 @@ $custom-grid-schema: extend(
 );
 ```
 
-カスタム スキーマを適用するには、[`light`]({environment:sassApiUrl}/schemas#variable-light-material-schema)  グローバルまたは [`dark`]({environment:sassApiUrl}/schemas#variable-dark-material-schema) グローバルを拡張する必要があります。プロセス全体が実際にコンポーネントにカスタム スキーマを提供し、その後、それぞれのコンポーネントテーマに追加します。
+カスタム スキーマを適用するには、[`light`]({environment:sassApiUrl}/schemas#variable-light-material-schema) グローバルまたは [`dark`]({environment:sassApiUrl}/schemas#variable-dark-material-schema) グローバルを拡張する必要があります。プロセス全体が実際にコンポーネントにカスタム スキーマを提供し、その後、それぞれのコンポーネントテーマに追加します。
 
 ```scss
 $my-custom-schema: extend(
