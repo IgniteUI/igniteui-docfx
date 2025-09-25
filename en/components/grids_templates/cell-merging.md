@@ -155,6 +155,20 @@ protected customStrategy = new MyCustomStrategy();
            iframe-src="{environment:demosBaseUrl}/grid/grid-cellMerge-custom" alt="Angular Cell Merging Example with Custom Condition">
 </code-view>
 }
+@@if(igxName === 'IgxHierarchicalGrid'){
+### Demo
+<code-view style="height:755px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-cell-merge-custom" alt="Angular Cell Merging Example with Custom Condition">
+</code-view>
+}
+@@if(igxName === 'IgxTreeGrid'){
+### Demo
+<code-view style="height:755px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/tree-grid/treegrid-cell-merge-custom" alt="Angular Cell Merging Example with Custom Condition">
+</code-view>
+}
 
 ## Feature Integration 
 Due to the specific behavior of merged cells it has to be noted how exactly it ties together with some of the other features of the grid:
