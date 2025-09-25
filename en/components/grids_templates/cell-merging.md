@@ -166,7 +166,7 @@ protected customStrategy = new MyCustomStrategy();
 ### Demo
 <code-view style="height:755px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/tree-grid/treegrid-cell-merge-custom" alt="Angular Cell Merging Example with Custom Condition">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-cell-merge-custom" alt="Angular Cell Merging Example with Custom Condition">
 </code-view>
 }
 
