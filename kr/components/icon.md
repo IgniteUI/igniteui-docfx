@@ -14,7 +14,7 @@ _language: kr
 
 <code-view style="height: 384px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/icon-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/data-display/icon-sample-1/" >
 </code-view>
 
 
@@ -104,7 +104,7 @@ public ngOnInit() {
 
 <code-view style="height: 50px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/svg-icon-sample" >
+           iframe-src="{environment:demosBaseUrl}/data-display/svg-icon-sample/" >
 </code-view>
 
 ### Styling
@@ -203,7 +203,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 <code-view style="height:320px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/icon-styling" >
+           iframe-src="{environment:demosBaseUrl}/data-display/icon-styling/" >
 </code-view>
 
 

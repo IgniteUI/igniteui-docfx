@@ -13,7 +13,7 @@ _language: ja
 
 <code-view style="height:50px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar" alt="Angular Linear Progress の例">
+           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar/" alt="Angular Linear Progress の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -102,7 +102,7 @@ Ignite UI for Angular Progress Bar モジュールまたはディレクティブ
 
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -178,7 +178,7 @@ public positionEnd: IgxTextAlign = IgxTextAlign.END;
 
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -237,7 +237,7 @@ public decrementProgress() {
 
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/linear-dynamic-sample" >
+           iframe-src="{environment:demosBaseUrl}/data-display/linear-dynamic-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -275,7 +275,7 @@ $custom-theme: progress-linear-theme(
 <code-view style="height:50px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-styling" >
+           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-styling/" >
 </code-view>
 
 ## API

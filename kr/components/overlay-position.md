@@ -108,7 +108,7 @@ Changing the horizontal and/or vertical direction of the positioning settings de
 
 <code-view style="height: 500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/overlay-position-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/interactions/overlay-position-sample-1/" >
 </code-view>
 
 <div class="divider"></div>
@@ -142,7 +142,7 @@ In the demo below, the overlay element will position itself starting from the ta
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/overlay-position-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/interactions/overlay-position-sample-2/" >
 </code-view>
 
 <div class="divider"></div>

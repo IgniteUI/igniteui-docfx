@@ -15,7 +15,7 @@ Ignite UI for Angular Checkbox コンポーネントは、特定の条件のバ�
 
 <code-view style="height: 100px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-sample-1" alt="Angular Checkbox の例">
+           iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-sample-1/" alt="Angular Checkbox の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -125,7 +125,7 @@ igx-checkbox {
 
 <code-view style="height: 200px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-sample-2/" >
 </code-view>
 
 ### ラベル配置
@@ -221,7 +221,7 @@ public toggleAll() {
 
 <code-view style="height: 200px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-sample-3/" >
 </code-view>
 
 
@@ -259,7 +259,7 @@ $custom-checkbox-theme: checkbox-theme(
 <code-view style="height: 100px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-styling" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-styling/" >
 </code-view>
 
 

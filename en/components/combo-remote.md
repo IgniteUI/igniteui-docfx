@@ -15,7 +15,7 @@ The sample below demonstrates remote binding using the [dataPreLoad]({environmen
 
 <code-view style="height: 400px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-remote" alt="Angular Combo Remote Binding Example">
+           iframe-src="{environment:demosBaseUrl}/lists/combo-remote/" alt="Angular Combo Remote Binding Example">
 </code-view>
 
 
@@ -79,7 +79,7 @@ When data is returned from a service as an observable, we can set it to the comb
            (closing)="onClosing()"
            (opened)="onOpened()"
            (closed)="onClosed()"
-           [filterable]="true">
+           [disableFiltering]="false">
 </igx-combo>
 ```
 

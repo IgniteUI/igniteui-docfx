@@ -12,7 +12,7 @@ _language: ja
 
 <code-view style="height:100px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/datetime-basic" alt="Angular Date Time Editor 例">
+           iframe-src="{environment:demosBaseUrl}/scheduling/datetime-basic/" alt="Angular Date Time Editor 例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -180,7 +180,7 @@ public maxDate = new Date(2020, 11, 1);
 以下のサンプルで両方を比較できます。
 <code-view style="height:150px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/datetime-advanced" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/datetime-advanced/" >
 </code-view>
 
 <div class="divider--half"></div>

@@ -11,7 +11,7 @@ The Ignite UI for Angular Date Picker Component lets users pick a single date th
 <!-- TODO: datepicker sample with several options enabled -->
 <code-view style="height: 550px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" alt="Angular Date Picker Example">
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1/" alt="Angular Date Picker Example">
 </code-view>
 <div class="divider--half"></div>
 
@@ -159,7 +159,7 @@ The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepicker
 ```
 <code-view style="height: 540px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -175,7 +175,7 @@ More information about these can be found in the [`IgxDateTimeEditor`](date-time
 
 <code-view style="height: 680px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-3/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -209,7 +209,7 @@ To achieve that in template driven forms, use the `ngModel` to bind both compone
 
 <code-view style="height: 540px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/template-driven-form" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/template-driven-form/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -218,7 +218,7 @@ In reactive forms, we can handle the [`valueChange`]({environment:angularApiUrl}
 
 <code-view style="height: 540px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/reactive-form" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/reactive-form/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -298,7 +298,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 <code-view style="height:500px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-styling-sample/" >
 </code-view>
 
 ## API References

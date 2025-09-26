@@ -15,7 +15,7 @@ _language: kr
 
 <code-view style="height: 384px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -110,7 +110,7 @@ The Ignite UI for Angular Radio Group directive provides a grouping container th
 
 <code-view style="height: 320px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/radio-group-sample" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-group-sample/" >
 </code-view>
 
 <div class="divider--half"></div>

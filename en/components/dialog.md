@@ -11,7 +11,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-1" alt="Angular Dialog Window Example">
+           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-1/" alt="Angular Dialog Window Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -119,7 +119,7 @@ To create a standard dialog, in the template of our file manager component, we a
 
 <code-view style="height:250px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -168,7 +168,7 @@ We add two input groups consisting of a label and and input decorated with the [
 
 <code-view style="height:300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-3/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -319,7 +319,7 @@ The last step is to **include** the component theme in our application.
 
 <code-view style="height:300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/dialog-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/interactions/dialog-styling-sample/" >
 </code-view>
 
 <div class="divider--half"></div>

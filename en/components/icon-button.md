@@ -12,7 +12,7 @@ The Ignite UI for Angular Icon Button directive is intended to turn any icon int
 
 <code-view style="height: 70px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/icon-button-overview" alt="Angular Icon Button Example">
+           iframe-src="{environment:demosBaseUrl}/data-entries/icon-button-overview/" alt="Angular Icon Button Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -140,7 +140,7 @@ Users can choose one of the three predefined `igxIconButton` sizes by using the 
 
 <code-view style="height: 70px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/icon-button-size" alt="Angular Icon Button Size Example">
+           iframe-src="{environment:demosBaseUrl}/data-entries/icon-button-size/" alt="Angular Icon Button Size Example">
 </code-view>
 <div class="divider--half"></div>
 
@@ -185,7 +185,7 @@ This will generate a fully themed `contained icon button`, including appropriate
 <code-view style="height: 100px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/icon-button-styling" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/icon-button-styling/" >
 </code-view>
 <div class="divider--half"></div>
 

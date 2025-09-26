@@ -32,7 +32,7 @@ The following sample demonstrates how to enable native row adding in the @@igCom
 
 <code-view style="height:520px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-add-row" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-add-row/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -41,7 +41,7 @@ The following sample demonstrates how to enable native row adding in the @@igCom
 
 <code-view style="height:520px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-add-row" alt="Angular @@igComponent Row Adding Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-add-row/" alt="Angular @@igComponent Row Adding Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -50,7 +50,7 @@ The following sample demonstrates how to enable native row adding in the @@igCom
    
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-add-row" alt="Angular @@igComponent Row Adding Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-add-row/" alt="Angular @@igComponent Row Adding Example">
 </code-view>
 
 <div class="divider--half"></div>

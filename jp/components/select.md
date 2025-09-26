@@ -13,7 +13,7 @@ Angular Select は、事前定義された値のリストから 1 つの値を�
 
 <code-view style="height: 300px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-1" alt="Angular Select の例">
+           iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-1/" alt="Angular Select の例">
 </code-view>
 
 ## Ignite UI for Angular Select を使用した作業の開始
@@ -139,7 +139,7 @@ Select コンポーネントは、[入力グループ](input-group.md)に適用�
 ```
 <code-view style="height: 350px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/select-input-directives" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/select-input-directives/" >
 </code-view>
 
 >[!NOTE]
@@ -188,7 +188,7 @@ public greengrocery: Array<{ label: string, items: Array<{ type: string, origin:
 
 <code-view style="height: 400px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-2/" >
 </code-view>
 
 ### ヘッダーとフッター
@@ -248,7 +248,7 @@ public greengrocery: Array<{ label: string, items: Array<{ type: string, origin:
 ```
 <code-view style="height: 610px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/select-header-footer" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/select-header-footer/" >
 </code-view>
 
 
@@ -325,7 +325,7 @@ export class MyClass implements OnInit {
 
 <code-view style="height: 260px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-4/" >
 </code-view>
 
 
@@ -390,7 +390,7 @@ $custom-select-theme: select-theme(
 
 <code-view style="height: 220px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/select-styling" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/select-styling/" >
 </code-view>
 
 

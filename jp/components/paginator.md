@@ -18,7 +18,7 @@ Ignite UI for Angular Paginator を使用すると、データセットを複数
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/pagination/main-pagination" alt="Angular Paginator の例">
+           iframe-src="{environment:demosBaseUrl}/pagination/main-pagination/" alt="Angular Paginator の例">
 </code-view>
 
 <div class="divider--half"></div>

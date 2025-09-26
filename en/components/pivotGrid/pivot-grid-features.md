@@ -20,7 +20,7 @@ The Pivot Grid component has additional features and functionalities related to 
 
 <code-view style="height: 870px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-features" alt="Angular Pivot Grid with Pivot Selector Example">
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-features/" alt="Angular Pivot Grid with Pivot Selector Example">
 </code-view>
 
 ## Dimensions filtering
@@ -177,7 +177,7 @@ public pivotUI: IPivotUISettings = { rowLayout: PivotRowLayoutType.Horizontal, h
 
 <code-view style="height: 870px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-layout" alt="Angular Pivot Grid with Horizontal Row Dimensions Layout">
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-layout/" alt="Angular Pivot Grid with Horizontal Row Dimensions Layout">
 </code-view>
 
 ## Interactions

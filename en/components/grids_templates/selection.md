@@ -34,7 +34,7 @@ The sample below demonstrates the three types of @@igComponent's **cell selectio
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-cell-selection" alt="Angular Grid Selection Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-cell-selection/" alt="Angular Grid Selection Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -44,7 +44,7 @@ The sample below demonstrates the three types of @@igComponent's **cell selectio
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-cell-selection" alt="Angular Grid Selection Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-cell-selection/" alt="Angular Grid Selection Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -53,7 +53,7 @@ The sample below demonstrates the three types of @@igComponent's **cell selectio
 
 <code-view style="height:750px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-cell-selection" alt="Angular Grid Selection Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-cell-selection/" alt="Angular Grid Selection Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -190,7 +190,7 @@ The template we are going to use to combine the grid with the context menu:
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-contextmenu-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-contextmenu-sample/" >
 </code-view>
 
 <div class="divider--half"></div>

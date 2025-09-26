@@ -14,7 +14,7 @@ _language: ja
 
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/switch-sample-1" alt="Angular Switch の例">
+           iframe-src="{environment:demosBaseUrl}/data-entries/switch-sample-1/" alt="Angular Switch の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -118,7 +118,7 @@ igx-switch {
 
 <code-view style="height: 200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/switch-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/switch-sample-2/" >
 </code-view>
 
 ### ラベル位置
@@ -162,7 +162,7 @@ $custom-switch-theme: switch-theme(
 <code-view style="height: 200px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/switch-styling" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/switch-styling/" >
 </code-view>
 
 <div class="divider--half"></div>

@@ -35,7 +35,7 @@ The Excel Exporter service can export data to excel from the @@igxName. The data
 
 <code-view style="height: 300px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1/" >
 </code-view>
 
 }
@@ -43,7 +43,7 @@ The Excel Exporter service can export data to excel from the @@igxName. The data
 
 <code-view style="height: 350px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/services/export-excel-tree-grid-sample" >
+           iframe-src="{environment:demosBaseUrl}/services/export-excel-tree-grid-sample/" >
 </code-view>
 
 }

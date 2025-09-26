@@ -24,7 +24,7 @@ Copy to clipboard operations are now available in the @@igComponent. This functi
 
 <code-view style="height:635px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-clipboard-operations-sample" alt="Angular @@igComponent Clipboard Interactions Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-clipboard-operations-sample/" alt="Angular @@igComponent Clipboard Interactions Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -33,7 +33,7 @@ Copy to clipboard operations are now available in the @@igComponent. This functi
 
 <code-view style="height:635px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-clipboard-operations-sample" alt="Angular @@igComponent Clipboard Interactions Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-clipboard-operations-sample/" alt="Angular @@igComponent Clipboard Interactions Example">
 </code-view>
 
 <div class="divider--half"></div>

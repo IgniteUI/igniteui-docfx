@@ -12,7 +12,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <code-view style="height: 75px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/icon-sample-1" alt="Angular Icon Example">
+           iframe-src="{environment:demosBaseUrl}/data-display/icon-sample-1/" alt="Angular Icon Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -144,7 +144,7 @@ public ngOnInit() {
 
 <code-view style="height: 70px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/svg-icon-sample" >
+           iframe-src="{environment:demosBaseUrl}/data-display/svg-icon-sample/" >
 </code-view>
 
 ## Material Symbols
@@ -180,7 +180,7 @@ Now, we are ready to add the desired icon into our markup and customize it using
 
 <code-view style="height: 70px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/material-symbols" >
+           iframe-src="{environment:demosBaseUrl}/data-display/material-symbols/" >
 </code-view>
 
 To learn more about Material Symbols styles please visit their [`official documentation`](https://fonts.google.com/icons).
@@ -242,7 +242,7 @@ The last step is to pass the custom icon theme in our application:
 <code-view style="height:75px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/icon-styling" alt="Angular Icon Example">
+           iframe-src="{environment:demosBaseUrl}/data-display/icon-styling/" alt="Angular Icon Example">
 </code-view>
 
 ### SVG Limitations

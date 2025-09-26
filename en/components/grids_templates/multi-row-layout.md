@@ -13,7 +13,7 @@ Multi-row Layout extends the rendering capabilities of the `igxGridComponent`. T
 
 <code-view style="height:755px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout" alt="Angular Multi-row Layout Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout/" alt="Angular Multi-row Layout Example">
 </code-view>
 
 
@@ -104,7 +104,7 @@ The demo below adds additional navigation down/up via the <kbd>Enter</kbd> and <
 
 <code-view style="height:605px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-mrl-custom-navigation" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-mrl-custom-navigation/" >
 </code-view>
 
 
@@ -177,7 +177,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 <code-view style="height:755px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout-styling" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout-styling/" >
 </code-view>
 
 >[!NOTE]

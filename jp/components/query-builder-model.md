@@ -15,7 +15,7 @@ Angular Query Builder は、シリアル化/逆シリアル化可能な JSON 形
 <code-view style="height:700px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-request-sample" >
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-request-sample/" >
 </code-view>
 
 ## クエリ ビルダー モデル
@@ -215,7 +215,7 @@ SELECT * FROM Suppliers WHERE supplierId IN (
 <code-view style="height:700px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-sql-sample" >
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-sql-sample/" >
 </code-view>
 
 ## API リファレンス

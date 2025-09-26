@@ -13,7 +13,7 @@ Ignite UI for Angular Input および Label ディレクティブを使用する
 
 <code-view style="height:100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-1" alt="Angular Label および Input の例">
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-1/" alt="Angular Label および Input の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -103,7 +103,7 @@ Label および Input ディレクティブのデフォルト スタイル設定
 
 <code-view style="height:100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -161,7 +161,7 @@ public user = {
 
 <code-view style="height: 130px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/input-text-selection" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-text-selection/" >
 </code-view>
 
 <div class="divider--half"></div>

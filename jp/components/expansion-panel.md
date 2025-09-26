@@ -18,7 +18,7 @@ Ignite UI Angular を使用して、この単純な Angular Expansion Panel の�
 
 <code-view style="height: 320px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -152,7 +152,7 @@ export class ExpansionPanelComponent {
 
 <code-view style="height: 320px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-2/" >
 </code-view>
 
 
@@ -207,7 +207,7 @@ Angular Expansion Panel は、パネルの縮小時に「更に表示」を描�
 
 <code-view style="height: 460px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-3/" >
 </code-view>
 
 
@@ -287,7 +287,7 @@ Ignite UI テーマ エンジンの使用方法の詳細については、[`こ�
 <code-view style="height: 440px;" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-styling" >
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-styling/" >
 </code-view>
 
 ## Angular Expansion Panel のアニメーション
@@ -350,7 +350,7 @@ export class ExpansionPanelComponent {
 
 <code-view style="height: 380px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-5/" >
 </code-view>
 
 

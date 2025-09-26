@@ -12,7 +12,7 @@ What you see here is a basic Angular Month Picker example with a the component's
 
 <code-view style="height: 620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-1" alt="Angular Month Picker Example">
+           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-1/" alt="Angular Month Picker Example">
 </code-view>
 
 ## Getting Started with Ignite UI for Angular Month Picker
@@ -147,7 +147,7 @@ Here is an example of localizing and formatting the month picker component:
 
 <code-view style="height: 680px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-3/" >
 </code-view>
 
 
@@ -206,7 +206,7 @@ After everything's done, your component should look like this:
 <code-view style="height: 350px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-styling" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-styling/" >
 </code-view>
 
 
