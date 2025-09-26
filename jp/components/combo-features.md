@@ -16,7 +16,7 @@ Ignite UI for Angular ComboBox コントロールは、データと値のバイ�
 
 <code-view style="height: 440px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-features" alt="Angular コンボボックス機能の例">
+           iframe-src="{environment:demosBaseUrl}/lists/combo-features/" alt="Angular コンボボックス機能の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -130,7 +130,7 @@ export class CustomOverlayCombo {
 
 <code-view style="height: 440px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-overlay" >
+           iframe-src="{environment:demosBaseUrl}/lists/combo-overlay/" >
 </code-view>
 
 

@@ -14,7 +14,7 @@ Ignite UI for Angular List コンポーネントは項目の行を表示し、�
 
 <code-view style="height: 513px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-sample-4" alt="Angular List の例">
+           iframe-src="{environment:demosBaseUrl}/lists/list-sample-4/" alt="Angular List の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -112,7 +112,7 @@ Ignite UI for Angular List モジュールまたはディレクティブをイ�
 
 <code-view style="height: 100px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/lists/list-sample-5/" >
 </code-view>
 
 
@@ -140,7 +140,7 @@ Ignite UI for Angular List モジュールまたはディレクティブをイ�
 
 <code-view style="height: 300px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-sample-6" >
+           iframe-src="{environment:demosBaseUrl}/lists/list-sample-6/" >
 </code-view>
 
 
@@ -164,7 +164,7 @@ Ignite UI for Angular List モジュールまたはディレクティブをイ�
 
 <code-view style="height: 200px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/lists/list-sample-2/" >
 </code-view>
 
 
@@ -217,7 +217,7 @@ public contacts = [{
 
 <code-view style="height: 400px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/lists/list-sample-3/" >
 </code-view>
 
 
@@ -364,7 +364,7 @@ protected get sizeStyle() {
 
 <code-view style="height: 513px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/lists/list-sample-4/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -477,7 +477,7 @@ public leftPanPerformed(args) {
 
 <code-view style="height: 500px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-sample-7" >
+           iframe-src="{environment:demosBaseUrl}/lists/list-sample-7/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -554,7 +554,7 @@ export class ContactListComponent {
 
 <code-view style="height: 420px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-item-selection" >
+           iframe-src="{environment:demosBaseUrl}/lists/list-item-selection/" >
 </code-view>
 
 デフォルトで、`selected` プロパティは `false` に設定されています。各リスト項目の `(click)` イベントにバインドされたインライン式を使用して値を切り替えることができ、クリックされるたびに項目の視覚的な状態を効果的に切り替えることができます。
@@ -601,7 +601,7 @@ igx-list-item {
 
 <code-view style="height: 650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-chat-sample" >
+           iframe-src="{environment:demosBaseUrl}/lists/list-chat-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -637,7 +637,7 @@ $my-list-theme: list-theme(
 
 <code-view style="height: 365px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-sample-8" >
+           iframe-src="{environment:demosBaseUrl}/lists/list-sample-8/" >
 </code-view>
 
 リスト コンポーネントに変更できるパラメーターの完全なリストについては、[IgxListComponent スタイル]({environment:sassApiUrl}/themes#function-list-theme)を参照してください。
