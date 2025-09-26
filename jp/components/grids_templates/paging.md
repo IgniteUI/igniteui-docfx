@@ -26,7 +26,7 @@ _language: ja
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-paging-sample" alt="Angular ページネーションの例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-paging-sample/" alt="Angular ページネーションの例">
 </code-view>
 
 }
@@ -34,7 +34,7 @@ _language: ja
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-paging" alt="Angular ページネーションの例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-paging/" alt="Angular ページネーションの例">
 </code-view>
 
 }
@@ -42,7 +42,7 @@ _language: ja
 
 <code-view style="height:580px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging" alt="Angular ページネーションの例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging/" alt="Angular ページネーションの例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -157,14 +157,14 @@ IgxHierarchicalGrid の子グリッドの実装方法および DI スコープ�
 @@if (igxName === 'IgxGrid') {
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-pager-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-pager-sample/" >
 </code-view>
 }
 
 @@if (igxName === 'IgxTreeGrid') {
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-reusable-paginator" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-reusable-paginator/" >
 </code-view>
 }
 
@@ -172,7 +172,7 @@ IgxHierarchicalGrid の子グリッドの実装方法および DI スコープ�
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-reusable-paginator" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-reusable-paginator/" >
 </code-view>
 }
 
@@ -259,7 +259,7 @@ $dark-button: icon-button-theme(
 <code-view style="height:560px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/custom-grid-paging-style" >
+           iframe-src="{environment:demosBaseUrl}/grid/custom-grid-paging-style/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -271,7 +271,7 @@ $dark-button: icon-button-theme(
 <code-view style="height:560px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging-style" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging-style/" >
 </code-view>
 
 }
@@ -283,7 +283,7 @@ $dark-button: icon-button-theme(
 <code-view style="height:560px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-paging-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-paging-style/" >
 </code-view>
 
 }

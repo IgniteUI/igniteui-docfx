@@ -21,7 +21,7 @@ _language: ja
 
 <code-view style="height: 870px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-features" alt="Angular ピボット セレクターを備えたピボット グリッドの例">
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-features/" alt="Angular ピボット セレクターを備えたピボット グリッドの例">
 </code-view>
 
 ## ディメンション フィルタリング
@@ -177,7 +177,7 @@ public pivotUI: IPivotUISettings = { rowLayout: PivotRowLayoutType.Horizontal, h
 
 <code-view style="height: 870px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-layout" alt="水平行ディメンション レイアウトの Angular ピボット グリッド">
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-layout/" alt="水平行ディメンション レイアウトの Angular ピボット グリッド">
 </code-view>
 
 ## インタラクション

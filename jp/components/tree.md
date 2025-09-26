@@ -19,7 +19,7 @@ Angular Tree コンポーネントを使用すると、ユーザーは親子関�
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/lists/tree-basic-sample" alt="Angular Tree の例">
+           iframe-src="{environment:demosBaseUrl}/lists/tree-basic-sample/" alt="Angular Tree の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -325,7 +325,7 @@ Ignite UI for Angular IgxTree は、サーバーから最小限のデータの�
 ### デモ
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/lists/tree-advanced-sample" alt="Tree ロードオンデマンドの例">
+           iframe-src="{environment:demosBaseUrl}/lists/tree-advanced-sample/" alt="Tree ロードオンデマンドの例">
 </code-view>
 
 ユーザーが展開アイコンをクリックすると、ロード アイコンに変わります。[Loading]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#loading) プロパティが `false` に解決されると、読み込みインジケーターが消え、子が読み込まれます。
@@ -358,7 +358,7 @@ $custom-tree-theme: tree-theme(
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/lists/tree-styling" alt="Tree のスタイル設定">
+           iframe-src="{environment:demosBaseUrl}/lists/tree-styling/" alt="Tree のスタイル設定">
 </code-view>
 
 ## 既知の問題と制限

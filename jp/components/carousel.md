@@ -17,7 +17,7 @@ Angular Carousel コンポーネントを使用すると、アニメーション
 
 <code-view style="height: 550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/carousel" alt="Angular Carousel の例">
+           iframe-src="{environment:demosBaseUrl}/layouts/carousel/" alt="Angular Carousel の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -245,7 +245,7 @@ Angular カスタム カルーセル インジケーターを追加するには�
 
 <code-view style="height: 700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/carousel-with-components-sample" >
+           iframe-src="{environment:demosBaseUrl}/layouts/carousel-with-components-sample/" >
 </code-view>
 
 
@@ -274,7 +274,7 @@ Angular カスタム カルーセル インジケーターを追加するには�
 
 <code-view style="height: 700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/carousel-animations-sample" >
+           iframe-src="{environment:demosBaseUrl}/layouts/carousel-animations-sample/" >
 </code-view>
 
 
@@ -374,7 +374,7 @@ Carousel [アニメーション](carousel.md#angular-carousel-のアニメーシ
 
 <code-view style="height: 700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/carousel-no-navigation-sample" >
+           iframe-src="{environment:demosBaseUrl}/layouts/carousel-no-navigation-sample/" >
 </code-view>
 
 

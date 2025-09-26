@@ -28,7 +28,7 @@ _language: ja
 @@if (igxName === 'IgxGrid') {
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-batch-editing" alt="Angular @@igComponent 一括編集とトランザクションの例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-batch-editing/" alt="Angular @@igComponent 一括編集とトランザクションの例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -36,7 +36,7 @@ _language: ja
 @@if (igxName === 'IgxTreeGrid') {
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-batchediting" alt="Angular @@igComponent 一括編集とトランザクションの例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-batchediting/" alt="Angular @@igComponent 一括編集とトランザクションの例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -44,7 +44,7 @@ _language: ja
 @@if (igxName === 'IgxHierarchicalGrid') {
 <code-view style="height:680px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-batch-editing" alt="Angular @@igComponent 一括編集とトランザクションの例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-batch-editing/" alt="Angular @@igComponent 一括編集とトランザクションの例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -237,7 +237,7 @@ export class HierarchicalGridBatchEditingSampleComponent {
 
 <code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/remote-paging-batch-editing" >
+           iframe-src="{environment:demosBaseUrl}/grid/remote-paging-batch-editing/" >
 </code-view>
 
 }

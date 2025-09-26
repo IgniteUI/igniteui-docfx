@@ -15,7 +15,7 @@ Ignite UI for Angular Table または UI Grid の Group By 動作は、列の値
 
 <code-view style="height:605px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby" alt="Angular Grid グループ化の例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby/" alt="Angular Grid グループ化の例">
 </code-view>
 
 
@@ -180,7 +180,7 @@ export interface IGroupByRecord {
 
 <code-view style="height:605px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-paging" alt="Angular ページングでグループ化の例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-paging/" alt="Angular ページングでグループ化の例">
 </code-view>
 
 
@@ -218,7 +218,7 @@ igxGrid では、列ごとまたはグループ化式ごとにカスタム グ�
 
 <code-view style="height:605px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-custom" alt="Angular カスタム グループ化の例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-custom/" alt="Angular カスタム グループ化の例">
 </code-view>
 
 
@@ -471,7 +471,7 @@ $custom-theme: grid-theme(
 <code-view style="height:570px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-styling" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-styling/" >
 </code-view>
 
 >[!NOTE]
