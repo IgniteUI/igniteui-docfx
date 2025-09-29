@@ -48,7 +48,7 @@ Ignite UI for Angular の @@igComponent のコンポーネントは、標準ド�
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-moving-sample" alt="Angular @@igComponent 列移動の例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-moving-sample/" alt="Angular @@igComponent 列移動の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -57,7 +57,7 @@ Ignite UI for Angular の @@igComponent のコンポーネントは、標準ド�
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-moving" alt="Angular @@igComponent 列移動の例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-moving/" alt="Angular @@igComponent 列移動の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -66,7 +66,7 @@ Ignite UI for Angular の @@igComponent のコンポーネントは、標準ド�
 
 <code-view style="height:660px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-moving" alt="Angular @@igComponent 列移動の例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-moving/" alt="Angular @@igComponent 列移動の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -212,7 +212,7 @@ $dark-grid-column-moving-theme: grid-theme(
 <code-view style="height:650px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-moving-styled-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-moving-styled-sample/" >
 </code-view>
 
 }
@@ -222,7 +222,7 @@ $dark-grid-column-moving-theme: grid-theme(
 <code-view style="height:650px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-moving-styled" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-moving-styled/" >
 </code-view>
 
 }
@@ -232,7 +232,7 @@ $dark-grid-column-moving-theme: grid-theme(
 <code-view style="height:660px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-moving-styled" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-moving-styled/" >
 </code-view>
 
 }

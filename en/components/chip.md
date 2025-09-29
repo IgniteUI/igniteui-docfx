@@ -12,7 +12,7 @@ _keywords: Angular Chip, Angular Chip Component, Angular Chip Area, Angular Chip
 
 <code-view style="height: 100px; padding-top: 10px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/chip-simple" alt="Angular Chip Example">
+           iframe-src="{environment:demosBaseUrl}/data-display/chip-simple/" alt="Angular Chip Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -190,7 +190,7 @@ If everything went well, you should see this in your browser:
 
 <code-view style="height: 100px; padding-top: 10px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/chip-simple" >
+           iframe-src="{environment:demosBaseUrl}/data-display/chip-simple/" >
 </code-view>
 
 ### Chip Templates
@@ -318,7 +318,7 @@ If everything went well, you should see this in your browser:
 
 <code-view style="height: 100px; padding-top: 10px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/chip-simple" >
+           iframe-src="{environment:demosBaseUrl}/data-display/chip-simple/" >
 </code-view>
 
 ## Chip Area
@@ -475,7 +475,7 @@ If everything's set up correctly, you should see this in your browser:
 
 <code-view style="height: 100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/chip-area-sample" >
+           iframe-src="{environment:demosBaseUrl}/data-display/chip-area-sample/" >
 </code-view>
 
 ## Styling
@@ -527,7 +527,7 @@ In the sample below, you can see how using the chip component with customized CS
 <code-view style="height:100px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/chip-styling" >
+           iframe-src="{environment:demosBaseUrl}/data-display/chip-styling/" >
 </code-view>
 
 ### Custom sizing

@@ -14,7 +14,7 @@ _language: ja
 
 <code-view style="height:755px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout" alt="Angular 複数行レイアウトの例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout/" alt="Angular 複数行レイアウトの例">
 </code-view>
 
 
@@ -105,7 +105,7 @@ _language: ja
 
 <code-view style="height:605px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-mrl-custom-navigation" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-mrl-custom-navigation/" >
 </code-view>
 
 
@@ -178,7 +178,7 @@ $custom-theme: grid-theme(
 <code-view style="height:755px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout-styling" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout-styling/" >
 </code-view>
 
 >[!NOTE]

@@ -14,7 +14,7 @@ size 設定の表示は、大規模データセットのビジュアル表示を
 ## Angular サイズの例
 <code-view style="height: 250px; width: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/theming/density" alt="Angular サイズの例">
+           iframe-src="{environment:demosBaseUrl}/theming/density/" alt="Angular サイズの例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -44,35 +44,84 @@ igx-input-group {
 }
 ```
 
-## 独自のコンポーネントとレイアウトにサイズを組み込む
+## CSS カスタム プロパティによるサイズの理解
 
-Ignite UI for Angular は、`--ig-size` CSS プロパティの変更に反応するレイアウトを実装できるようにするいくつかの Sass 関数とミックスインを公開します。
+Ignite UI のサイズ設定システムは、CSS カスタム プロパティのセットを通じて機能し、コンポーネントの寸法やスペーシングを自動的に調整します。`--ig-size ` プロパティを変更すると、コンポーネントはその変更を自動的に検出し、適切なサイズ値を適用します。
 
-以下は、`--ig-size` の値に基づいて要素の幅と高さを変更する方法の例です。
+### サイズ検出用変数
 
+コンポーネントは以下の CSS カスタム プロパティを利用してサイズ変更を検出し、それに応じて動作します。
+
+- `--component-size` - グローバル `--ig-size` を数値にマッピングします (1=small、2=medium、3=large)
+- `--is-small` - コンポーネントが Small の場合は 1、それ以外は 0
+- `--is-medium` - コンポーネントが Medium の場合は 1、それ以外は 0
+- `--is-large` - コンポーネントが Large の場合は 1、それ以外は 0
+
+これらの変数は CSS の数式を用いて自動的に計算され、`--ig-size` が変更されるたびに更新されます。
+
+### サイズ定数
+
+テーマ設定システムでは、次の 3 つのサイズ定数が定義されています。
+
+- `--ig-size-small` (値: 1)
+- `--ig-size-medium` (値: 2)
+- `--ig-size-large` (値: 3)
+
+## カスタム コンポーネントへのサイズ対応の組み込み
+
+Ignite UI の Sass ユーティリティを使用すると、カスタム コンポーネントをサイズ変更に対応させることができます。これらのユーティリティは、必要な CSS カスタム プロパティや数式を裏側で自動生成します。
+
+### Sizable ミックスインと関数の使用
+
+グローバル サイズ設定に応答するコンポーネントを作成する方法は次のとおりです。
 
 ```html
-<div class="my-elem"></div>
+<div class="my-responsive-element"></div>
 ```
 
 ```scss
 @use "igniteui-angular/theming" as *;
 
-.my-elem {
-    // Make the element sizable
+.my-responsive-element {
+    // The sizable mixin sets up size detection CSS custom properties
     @include sizable();
 
-    // Define the default size of the element and hook it to the `--ig-size` property
+    // Connect to the global size system
     --component-size: var(--ig-size, var(--ig-size-large));
 
-    // Define sizes for small (10px), medium (20px), and large (30px)
+    // Use the sizable function for responsive sizing
     --size: #{sizable(10px, 20px, 30px)};
     width: var(--size);
     height: var(--size);
 }
 ```
 
-これで、`--ig-size` の値が変更されるたびに、`.my-elem` のサイズが変更されます。
+### Sizable システムの仕組み
+
+`@include sizable()` を使用すると、現在のコンポーネントサイズを検出する CSS カスタム プロパティが生成されます。
+
+```css
+.my-responsive-element {
+    --is-large: clamp(0, (var(--component-size, 1) + 1) - var(--ig-size-large, 3), 1);
+    --is-medium: min(
+        clamp(0, (var(--component-size, 1) + 1) - var(--ig-size-medium, 2), 1),
+        clamp(0, var(--ig-size-large, 3) - var(--component-size, 1), 1)
+    );
+    --is-small: clamp(0, var(--ig-size-medium, 2) - var(--component-size, 1), 1);
+}
+```
+
+`sizable(10px, 20px, 30px)` 関数は、現在のサイズ設定に基づいて適切な値を自動的に選択する CSS 式を生成します。
+
+```css
+--size: max(
+    calc(var(--is-large, 1) * 30px),
+    calc(var(--is-medium, 1) * 20px), 
+    calc(var(--is-small, 1) * 10px)
+);
+```
+
+この仕組みでは、`clamp()`、`min()`、`max()`、`calc()` 関数を組み合わせた数式的アプローチにより、コンポーネントは現在の `--ig-size` 設定に基づいて自動的にサイズ値を切り替えることができます。
 
 ## API リファレンス
 <div class="divider"></div>

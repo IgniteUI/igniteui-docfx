@@ -12,7 +12,7 @@ By applying the [`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective
 
 <code-view style="height: 100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-2" alt="Angular Mask Example">
+           iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-2/" alt="Angular Mask Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -154,7 +154,7 @@ public clear() {
 
 <code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-3/" >
 </code-view>
 
 
@@ -195,7 +195,7 @@ private notify(snackbar, message, input) {
 
 <code-view style="height: 120px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -287,7 +287,7 @@ As a result, a '%' sign should be appended to the value on blur (i.e. when the u
 
 <code-view style="height: 100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-4/" >
 </code-view>
 
 
@@ -311,7 +311,7 @@ value = null;
 
 <code-view style="height: 100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-5/" >
 </code-view>
 
 

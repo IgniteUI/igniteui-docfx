@@ -16,7 +16,7 @@ Below you can see a basic sample of a well-crafted Ignite UI for Angular Card wi
 
 <code-view style="height: 500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-0" alt="Angular Card Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-0/" alt="Angular Card Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -255,7 +255,7 @@ If everything went well, our card should look like this:
 
 <code-view style="height: 220px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-2/" >
 </code-view>
 
 
@@ -294,7 +294,7 @@ Below is an example showing how you can create a semi-horizontal card, where we 
 
 <code-view style="height: 270px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-3/" >
 </code-view>
 
 
@@ -375,7 +375,7 @@ In the sample below, you can see how using the card component with customized CS
 <code-view style="height: 400px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/card-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/layouts/card-styling-sample/" >
 </code-view>
 
 ### Summary

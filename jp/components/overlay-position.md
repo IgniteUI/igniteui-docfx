@@ -13,7 +13,7 @@ _language: ja
 
 <code-view style="height: 350px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" alt="Angular 配置ストラテジの例">
+           iframe-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1/" alt="Angular 配置ストラテジの例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -104,7 +104,7 @@ this._overlayId = this.overlayService.attach(MyDynamicCardComponent, this.viewCo
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/overlay-position-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/interactions/overlay-position-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -135,7 +135,7 @@ this._overlayId = this.overlayService.attach(MyDynamicCardComponent, this.viewCo
 
 <code-view style="height: 500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/overlay-position-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/interactions/overlay-position-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -151,7 +151,7 @@ overlay.attach(element, { positionStrategy: myPositionStrategy });
 
 <code-view style="height: 500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/overlay-position-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/interactions/overlay-position-sample-3/" >
 </code-view>
 
 <div class="divider--half"></div>

@@ -32,7 +32,7 @@ Ignite UI for Angular @@igComponent component provides a great data manipulation
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-editing" alt="Angular @@igComponent cell editing and edit templates Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-editing/" alt="Angular @@igComponent cell editing and edit templates Example">
 </code-view>
 
 }
@@ -40,7 +40,7 @@ Ignite UI for Angular @@igComponent component provides a great data manipulation
 
 <code-view style="height:950px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-editing" alt="Angular @@igComponent cell editing and edit templates Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-editing/" alt="Angular @@igComponent cell editing and edit templates Example">
 </code-view>
 
 }
@@ -48,7 +48,7 @@ Ignite UI for Angular @@igComponent component provides a great data manipulation
 
 <code-view style="height:660px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing" alt="Angular @@igComponent cell editing and edit templates Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing/" alt="Angular @@igComponent cell editing and edit templates Example">
 </code-view>
 
 }
@@ -163,7 +163,7 @@ This code is used in the sample below which implements an [`IgxSelectComponent`]
 
 <code-view style="height:625px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-select" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-select/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -259,7 +259,7 @@ Please check the full sample for further reference:
 <code-view style="height:550px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-editing-excel-style" alt="Angular Grid Excel Style Editing Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-editing-excel-style/" alt="Angular Grid Excel Style Editing Example">
 </code-view>
 
 
@@ -490,7 +490,7 @@ The result of the above validation being applied to our `@@igSelector` can be se
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-editing-events" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-editing-events/" >
 </code-view>
 
 }
@@ -498,7 +498,7 @@ The result of the above validation being applied to our `@@igSelector` can be se
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-editing-events" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-editing-events/" >
 </code-view>
 
 }
@@ -506,7 +506,7 @@ The result of the above validation being applied to our `@@igSelector` can be se
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing-events" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing-events/" >
 </code-view>
 
 }
@@ -576,7 +576,7 @@ In addition to the steps above, we can also style the controls that are used for
 <code-view style="height:650px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-editing-style" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-editing-style/" >
 </code-view>
 
 }
@@ -585,7 +585,7 @@ In addition to the steps above, we can also style the controls that are used for
 <code-view style="height:950px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-editing-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-editing-style/" >
 </code-view>
 
 }
@@ -594,7 +594,7 @@ In addition to the steps above, we can also style the controls that are used for
 <code-view style="height:660px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing-style" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-editing-style/" >
 </code-view>
 
 }

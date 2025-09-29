@@ -18,7 +18,7 @@ We have created the Angular Button example below to show you how different butto
 
 <code-view style="height: 150px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-sample-1" alt="Angular Button Example">
+           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-sample-1/" alt="Angular Button Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -242,7 +242,7 @@ If all went well, you should see something like the following in the browser:
 
 <code-view style="height: 150px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-display-density" alt="Angular Button Example">
+           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-display-density/" alt="Angular Button Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -341,7 +341,7 @@ In the sample below, you can see how using the button component with customized 
 <code-view style="height: 260px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-style" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-style/" >
 </code-view>
 
 > [!NOTE]

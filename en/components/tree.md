@@ -18,7 +18,7 @@ In this basic Angular Tree example, you can see how to define an `igx-tree` and 
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/lists/tree-basic-sample" alt="Angular Tree Example">
+           iframe-src="{environment:demosBaseUrl}/lists/tree-basic-sample/" alt="Angular Tree Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -324,7 +324,7 @@ The Ignite UI for Angular IgxTree can be rendered in such way that it requires t
 ### Demo
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/lists/tree-advanced-sample" alt="Tree Load On Demand Example">
+           iframe-src="{environment:demosBaseUrl}/lists/tree-advanced-sample/" alt="Tree Load On Demand Example">
 </code-view>
 
 After the user clicks the expand icon, it is replaced by a loading indicator. When the [loading]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#loading) property resolves to `false`, the loading indicator disappears and the children are loaded.
@@ -356,7 +356,7 @@ The last step is to include the component's theme.
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/lists/tree-styling" alt="Tree Styling">
+           iframe-src="{environment:demosBaseUrl}/lists/tree-styling/" alt="Tree Styling">
 </code-view>
 
 ## Known Issues and Limitations

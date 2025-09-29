@@ -17,7 +17,7 @@ In this Angular Simple ComboBox example, you can see how users can select the ch
 
 <code-view style="height: 400px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-main" alt="Angular Simple ComboBox Example">
+           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-main/" alt="Angular Simple ComboBox Example">
 </code-view>
 
 
@@ -104,7 +104,7 @@ export class MySimpleComboComponent {
 
 <code-view style="height: 550px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-usage" >
+           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-usage/" >
 </code-view>
 
 
@@ -202,7 +202,7 @@ The following sample demonstrates a scenario where the [igx-simple-combo]({envir
 
 <code-view style="height: 540px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-cascading" alt="Angular Cascading Scenario Example">
+           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-cascading/" alt="Angular Cascading Scenario Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -323,7 +323,7 @@ The last step is to include the component's theme.
 <code-view style="height:410px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-styling" >
+           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-styling/" >
 </code-view>
 
 

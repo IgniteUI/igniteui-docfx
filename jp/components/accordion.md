@@ -20,7 +20,7 @@ Angular Accordion は、単一のコンテナーに表示されるクリック�
 
 <code-view style="height:460px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/accordion-sample-1" alt="Angular Accordion の例">
+           iframe-src="{environment:demosBaseUrl}/layouts/accordion-sample-1/" alt="Angular Accordion の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -204,7 +204,7 @@ Angular [Accordion コンポーネント]({environment:angularApiUrl}/classes/ig
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/accordion-sample-3" alt="Angular Accoridon の例">
+           iframe-src="{environment:demosBaseUrl}/layouts/accordion-sample-3/" alt="Angular Accoridon の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -240,7 +240,7 @@ Angular [Accordion コンポーネント]({environment:angularApiUrl}/classes/ig
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/accordion-sample-2" alt="Angular Accordion の例">
+           iframe-src="{environment:demosBaseUrl}/layouts/accordion-sample-2/" alt="Angular Accordion の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -295,7 +295,7 @@ $custom-panel-theme: expansion-panel-theme(
 
 <code-view style="height:350px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/accordion-style" alt="Angular Accordion スタイルの例">
+           iframe-src="{environment:demosBaseUrl}/layouts/accordion-style/" alt="Angular Accordion スタイルの例">
 </code-view>
 
 ## API リファレンス

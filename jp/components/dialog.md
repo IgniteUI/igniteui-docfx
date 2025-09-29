@@ -12,7 +12,7 @@ _language: ja
 
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-1" alt="Angular Dialog の例">
+           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-1/" alt="Angular Dialog の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -118,7 +118,7 @@ Ignite UI for Angular Dialog Window モジュールまたはディレクティ�
 
 <code-view style="height:250px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -167,7 +167,7 @@ Ignite UI for Angular Dialog Window モジュールまたはディレクティ�
 
 <code-view style="height:300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-3/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -319,7 +319,7 @@ $custom-button: contained-button-theme(
 
 <code-view style="height:300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/dialog-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/interactions/dialog-styling-sample/" >
 </code-view>
 
 <div class="divider--half"></div>

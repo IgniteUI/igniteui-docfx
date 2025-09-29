@@ -12,7 +12,7 @@ The [`IgxTextHighlightDirective`]({environment:angularApiUrl}/classes/igxtexthig
 
 <code-view style="height: 260px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-1" alt="Angular TextHighlight Directive Example">
+           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-1/" alt="Angular TextHighlight Directive Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -248,7 +248,7 @@ If the sample is configured properly, the final result should look like that:
 
 <code-view style="height: 260px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-1" >
+           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-1/" >
 </code-view>
 
 <div class="divider"></div>
@@ -343,7 +343,7 @@ export class HomeComponent {
 
 <code-view style="height: 400px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-2" >
+           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-2/" >
 </code-view>
 
 <div class="divider"></div>
@@ -435,7 +435,7 @@ As mentioned earlier, we can even combine them with a theme:
 <code-view style="height: 300px;" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-style" >
+           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-style/" >
 </code-view>
 
 <div class="divider"></div>

@@ -13,7 +13,7 @@ _language: ja
 
 <code-view style="height: 100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-2" alt="Angular Mask の例">
+           iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-2/" alt="Angular Mask の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -155,7 +155,7 @@ public clear() {
 
 <code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-3/" >
 </code-view>
 
 
@@ -196,7 +196,7 @@ private notify(snackbar, message, input) {
 
 <code-view style="height: 120px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -288,7 +288,7 @@ public inputFormat = new InputFormatPipe();
 
 <code-view style="height: 100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-4/" >
 </code-view>
 
 
@@ -312,7 +312,7 @@ value = null;
 
 <code-view style="height: 100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-5/" >
 </code-view>
 
 

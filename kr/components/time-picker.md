@@ -15,7 +15,7 @@ In general, users can enter a preferred time either through text input or by cho
 
 <code-view style="height: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -53,7 +53,7 @@ And here's our templated Ignite UI for Angular Time Picker:
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -76,7 +76,7 @@ And there we have it:
 
 <code-view style="height: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -107,7 +107,7 @@ The result is as follows:
 
 <code-view style="height: 580px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-8" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-8/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -124,7 +124,7 @@ And there we have it:
 
 <code-view style="height: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-3/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -175,7 +175,7 @@ And there we have it:
 
 <code-view style="height: 540px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-4/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -215,7 +215,7 @@ And there we have it:
 
 <code-view style="height:540px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-dropdown" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-dropdown/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -253,7 +253,7 @@ And there we have it:
 
 <code-view style="height: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-5/" >
 </code-view>
 
 
@@ -300,7 +300,7 @@ And there we have it, a re-templated Ignite UI for Angular Time Picker with drop
 
 <code-view style="height: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-6" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-6/" >
 </code-view>
 
 
@@ -337,7 +337,7 @@ The result is as follows:
 
 <code-view style="height: 580px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-7" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-7/" >
 </code-view>
 
 <div class="divider--half"></div>

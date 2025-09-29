@@ -14,7 +14,7 @@ See the checkbox in action in the following Angular Checkbox example below.
 
 <code-view style="height: 100px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-sample-1" alt="Angular Checkbox Example">
+           iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-sample-1/" alt="Angular Checkbox Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -118,7 +118,7 @@ igx-checkbox {
 The final result would be something like that:
 <code-view style="height: 200px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-sample-2/" >
 </code-view>
 ### Label Positioning
 You can position the label using the checkbox's [`labelPosition`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#labelPosition) property:
@@ -205,7 +205,7 @@ public toggleAll() {
 After all that is done, our application should look like this:
 <code-view style="height: 200px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-sample-3/" >
 </code-view>
 
 
@@ -266,7 +266,7 @@ In the sample below, you can see how using the checkbox component with customize
 <code-view style="height: 100px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-styling" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-styling/" >
 </code-view>
 
 > [!NOTE]

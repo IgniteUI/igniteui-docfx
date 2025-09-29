@@ -12,7 +12,7 @@ _keywords: Angular Toast component, Angular Toast control, Ignite UI for Angular
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-2" alt="Angular Toast Example">
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-2/" alt="Angular Toast Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -127,7 +127,7 @@ In the other two components you can see in action how to pass different messages
 
 <code-view style="height: 450px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-3/" >
 </code-view>
 
 ### Display Time
@@ -171,7 +171,7 @@ public open(toast) {
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-5/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -211,7 +211,7 @@ The last step is to pass the custom toast theme:
 <code-view style="height: 600px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/toast-style" >
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-style/" >
 </code-view>
 
 <div class="divider--half"></div>

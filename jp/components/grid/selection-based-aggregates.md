@@ -43,7 +43,7 @@ const dates = data.filter(rec => isDate(rec));
 
 <code-view style="height: 560px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-selection-custom-summaries" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-selection-custom-summaries/" >
 </code-view>
 
 

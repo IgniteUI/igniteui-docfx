@@ -32,7 +32,7 @@ The sample below demonstrates @@igComponent's **Quick filtering** user experienc
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-filtering-sample" alt="Angular @@igComponent Filtering Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-filtering-sample/" alt="Angular @@igComponent Filtering Example">
 </code-view>
 
 }
@@ -40,7 +40,7 @@ The sample below demonstrates @@igComponent's **Quick filtering** user experienc
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering" alt="Angular @@igComponent Filtering Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering/" alt="Angular @@igComponent Filtering Example">
 </code-view>
 
 }
@@ -48,7 +48,7 @@ The sample below demonstrates @@igComponent's **Quick filtering** user experienc
 
 <code-view style="height:610px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering" alt="Angular @@igComponent Filtering Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering/" alt="Angular @@igComponent Filtering Example">
 </code-view>
 
 }
@@ -457,7 +457,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-filter-conditions" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-filter-conditions/" >
 </code-view>
 
 }
@@ -465,7 +465,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering-custom" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering-custom/" >
 </code-view>
 
 }
@@ -473,7 +473,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
    
 <code-view style="height:610px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-custom-filtering" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-custom-filtering/" >
 </code-view>
 
 }
@@ -485,7 +485,7 @@ You can add a template marked with `igxFilterCellTemplate` in order to retemplat
 
 <code-view style="height:500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-filtering-template-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-filtering-template-sample/" >
 </code-view>
 
 }
@@ -493,7 +493,7 @@ You can add a template marked with `igxFilterCellTemplate` in order to retemplat
 
 <code-view style="height:500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering-template" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering-template/" >
 </code-view>
 
 }
@@ -501,7 +501,7 @@ You can add a template marked with `igxFilterCellTemplate` in order to retemplat
    
 <code-view style="height:610px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering-template" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering-template/" >
 </code-view>
 
 }
@@ -617,7 +617,7 @@ The last step is to **include** the component mixins, each with its respective t
 <code-view style="height:500px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-filtering-style" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-filtering-style/" >
 </code-view>
 
 }
@@ -626,7 +626,7 @@ The last step is to **include** the component mixins, each with its respective t
 <code-view style="height:500px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering-style/" >
 </code-view>
 
 }
@@ -635,7 +635,7 @@ The last step is to **include** the component mixins, each with its respective t
 <code-view style="height:650px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering-style" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering-style/" >
 </code-view>
 
 }

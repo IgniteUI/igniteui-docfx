@@ -12,7 +12,7 @@ The **Ignite UI for Angular Theming** provides you the ability to customize them
 
 <code-view style="height: 650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/theming/theme-chooser" >
+           iframe-src="{environment:demosBaseUrl}/theming/theme-chooser/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -38,7 +38,7 @@ The result from the above code snippet looks like this:
 
 <code-view style="height: 650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/theming/default-theme-sample" >
+           iframe-src="{environment:demosBaseUrl}/theming/default-theme-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -202,7 +202,7 @@ And the result is:
 
 <code-view style="height: 650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/theming/dark-theme-sample" >
+           iframe-src="{environment:demosBaseUrl}/theming/dark-theme-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -307,7 +307,7 @@ Now we can easily change our defined themes with only a `click` event:
 
 <code-view style="height: 650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/theming/theme-chooser" >
+           iframe-src="{environment:demosBaseUrl}/theming/theme-chooser/" >
 </code-view>
 
 <div class="divider--half"></div>

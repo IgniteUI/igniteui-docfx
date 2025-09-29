@@ -15,7 +15,7 @@ Angular ステッパー デモの 4 番目のステップは、2 番目のステ
 
 <code-view style="height: 725px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/stepper-overview-sample" alt="Angular Stepper の例">
+           iframe-src="{environment:demosBaseUrl}/layouts/stepper-overview-sample/" alt="Angular Stepper の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -24,7 +24,7 @@ Angular ステッパー デモの 4 番目のステップは、2 番目のステ
 
 <code-view style="height: 725px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/stepper-sample-reactive-forms" alt="リアクティブ フォームを使用した Angular Stepper の例">
+           iframe-src="{environment:demosBaseUrl}/layouts/stepper-sample-reactive-forms/" alt="リアクティブ フォームを使用した Angular Stepper の例">
 </code-view>
 
 ## Ignite UI for Angular Stepper を使用した作業の開始
@@ -165,7 +165,7 @@ Angular Stepper モジュールまたはディレクティブをインポート�
 
 <code-view style="height: 528px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/stepper-label-position-and-orientation-sample" alt="Angular Stepper 向きの例">
+           iframe-src="{environment:demosBaseUrl}/layouts/stepper-label-position-and-orientation-sample/" alt="Angular Stepper 向きの例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -195,7 +195,7 @@ Angular Stepper モジュールまたはディレクティブをインポート�
 
 <code-view style="height: 430px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/stepper-linear-sample" alt="Angular Linear Stepper の例">
+           iframe-src="{environment:demosBaseUrl}/layouts/stepper-linear-sample/" alt="Angular Linear Stepper の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -257,7 +257,7 @@ Ignite UI for Angular Stepper では、タイトル、インジケーターな�
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/stepper-steptypes-sample" alt="Angular ステップ タイプの例">
+           iframe-src="{environment:demosBaseUrl}/layouts/stepper-steptypes-sample/" alt="Angular ステップ タイプの例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -353,7 +353,7 @@ $stepper-theme: stepper-theme(
 
 <code-view style="height: 264px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/stepper-linear-sample" alt="Angular Linear Stepper スタイル設定の例">
+           iframe-src="{environment:demosBaseUrl}/layouts/stepper-linear-sample/" alt="Angular Linear Stepper スタイル設定の例">
 </code-view>
 
 <div class="divider--half"></div>

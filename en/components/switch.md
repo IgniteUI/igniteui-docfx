@@ -12,7 +12,7 @@ _keywords: Angular Switch component, Angular Switch control, Ignite UI for Angul
 
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/switch-sample-1" alt="Angular Switch Example">
+           iframe-src="{environment:demosBaseUrl}/data-entries/switch-sample-1/" alt="Angular Switch Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -116,7 +116,7 @@ And the final result should be something like that:
 
 <code-view style="height: 200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/switch-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/switch-sample-2/" >
 </code-view>
 
 ### Label Positioning
@@ -186,7 +186,7 @@ In the sample below, you can see how using the switch component with customized 
 <code-view style="height: 200px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/switch-styling" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/switch-styling/" >
 </code-view>
 
 > [!NOTE]

@@ -13,7 +13,7 @@ While most tooltips have a limited number of available positions, with the [`igx
 
 <code-view style="height:150px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-simple" alt="Angular Tooltip Example">
+           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-simple/" alt="Angular Tooltip Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -153,7 +153,142 @@ If everything went well, you should see the sample shown in the [Tooltip Demo](#
 What if we want to control the amount of time that should pass before showing and hiding the tooltip? For this purpose we can use the [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showDelay) and the [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hideDelay) properties of the [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive. Both properties are of type **number** and take time in milliseconds.
 
 > [!NOTE]
-> The built-in UI interaction behavior of the [`IgxTooltipTargetDirective`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) and its respective API methods work by taking [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showDelay) and [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hideDelay) property values into account. Showing and hiding the tooltip through the API of the [`IgxTooltipDirective`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) does not take the [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showDelay) and [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hideDelay) property values into account. If necessary, such logic would have to be implemented manually according to the application's specifics.
+> The built-in UI interaction behavior of the [`IgxTooltipTargetDirective`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) works by taking [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showDelay) and [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hideDelay) property values into account. Showing and hiding the tooltip through the API or the API of the [`IgxTooltipDirective`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) does NOT take the [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showDelay) and [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hideDelay) property values into account. If necessary, such logic would have to be implemented manually according to the application's specifics.
+
+### Overlay configuration
+
+Both the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) and [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directives use the [`IgxOverlayService`](overlay.md) to open and close the respective tooltip element.
+
+The [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive exposes a [`positionSettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#positionSettings) property, which can be used to customize the animations of our tooltip, its position in the UI and a lot more! If this property is not set, then default position settings will be used.
+
+To further customize the tooltip, use the [`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) property (inherited from the [`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)).
+
+```html
+<igx-icon [igxTooltipTarget]="tooltipRef" [positionSettings]="positionSettings" [overlaySettings]="overlaySettings">
+  info
+</igx-icon>
+
+<div #tooltipRef="tooltip" igxTooltip>Her name is Madelyn James</div>
+```
+```ts
+public positionSettings: PositionSettings = {
+  horizontalDirection: HorizontalAlignment.Left,
+  horizontalStartPoint: HorizontalAlignment.Left,
+  verticalDirection: VerticalAlignment.Top,
+  verticalStartPoint: VerticalAlignment.Bottom,
+  openAnimation: useAnimation(slideInTop, { params: { duration: '2000ms' } }),
+  closeAnimation: useAnimation(slideOutBottom, { params: { duration: '2000ms'} }),
+  offset: 10
+}
+
+public overlaySettings: OverlaySettings = {
+  closeOnEscape: false,
+};
+```
+
+> [!NOTE]
+> Any property that is set through the [`positionSettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#positionsettings) or [`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) will override the same property from the default settings and will have a direct impact on the tooltip.
+
+### Additional Properties
+
+Apart from the properties we've already covered, the [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) offers a variety of additional properties that allow you to further configure the tooltip's behavior and appearance.
+
+You can make the tooltip "sticky" using the [`sticky`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#sticky) property, which adds a close button and keeps the tooltip visible until the user closes it manually - either by clicking the close button or pressing the `Esc` key. This behavior overrides the default hover behavior, preventing the tooltip from disappearing when the user stops hovering over the target element.
+
+```html
+<igx-icon [igxTooltipTarget]="tooltipRef" [sticky]="true">
+  info
+</igx-icon>
+
+<div #tooltipRef="tooltip" igxTooltip>Her name is Madelyn James</div>
+```
+
+To customize the default close button, use the [`closeButtonTemplate`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#closebuttontemplate) property.
+
+```html
+
+<igx-icon [igxTooltipTarget]="tooltipRef" [sticky]="true" [closeButtonTemplate]="customTemplate">
+  info
+</igx-icon>
+
+<ng-template #customTemplate>
+  <igx-icon>cancel</igx-icon>
+</ng-template>
+
+<div #tooltipRef="tooltip" igxTooltip>Her name is Madelyn James</div>
+```
+
+> [!NOTE]
+> Any custom content added via the `closeButtonTemplate` is rendered only when the tooltip is in sticky mode.
+
+Additionally, you can add an arrow indicator to the tooltip by using the [`hasArrow`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hasarrow) property.
+
+```html
+<igx-icon [igxTooltipTarget]="tooltipRef" [hasArrow]="true">
+  info
+</igx-icon>
+
+<div #tooltipRef="tooltip" igxTooltip>Her name is Madelyn James</div>
+```
+
+The arrow element is positioned based on the provided position settings. If the directions and starting points do not correspond to any of the [predefined position values](#predefined-position-values), the arrow is positioned in the top middle side of the tooltip (default tooltip position `bottom`).
+
+#### Predefined position values
+
+| Position     | Horizontal Direction          | Horizontal Start Point         | Vertical Direction            | Vertical Start Point           |
+|--------------|-------------------------------|--------------------------------|-------------------------------|--------------------------------|
+| top          | HorizontalAlignment.Center    | HorizontalAlignment.Center     | VerticalAlignment.Top         | VerticalAlignment.Top          |
+| top-start    | HorizontalAlignment.Right     | HorizontalAlignment.Left       | VerticalAlignment.Top         | VerticalAlignment.Top          |
+| top-end      | HorizontalAlignment.Left      | HorizontalAlignment.Right      | VerticalAlignment.Top         | VerticalAlignment.Top          |
+| bottom       | HorizontalAlignment.Center    | HorizontalAlignment.Center     | VerticalAlignment.Bottom      | VerticalAlignment.Bottom       |
+| bottom-start | HorizontalAlignment.Right     | HorizontalAlignment.Left       | VerticalAlignment.Bottom      | VerticalAlignment.Bottom       |
+| bottom-end   | HorizontalAlignment.Left      | HorizontalAlignment.Right      | VerticalAlignment.Bottom      | VerticalAlignment.Bottom       |
+| right        | HorizontalAlignment.Right     | HorizontalAlignment.Right      | VerticalAlignment.Middle      | VerticalAlignment.Middle       |
+| right-start  | HorizontalAlignment.Right     | HorizontalAlignment.Right      | VerticalAlignment.Bottom      | VerticalAlignment.Top          |
+| right-end    | HorizontalAlignment.Right     | HorizontalAlignment.Right      | VerticalAlignment.Top         | VerticalAlignment.Bottom       |
+| left         | HorizontalAlignment.Left      | HorizontalAlignment.Left       | VerticalAlignment.Middle      | VerticalAlignment.Middle       |
+| left-start   | HorizontalAlignment.Left      | HorizontalAlignment.Left       | VerticalAlignment.Bottom      | VerticalAlignment.Top          |
+| left-end     | HorizontalAlignment.Left      | HorizontalAlignment.Left       | VerticalAlignment.Top         | VerticalAlignment.Bottom       |
+
+
+#### Customizing the arrow's position
+
+To customize the arrow's position, you can override the `positionArrow(arrow: HTMLElement, arrowFit: ArrowFit)` method.
+
+For example:
+
+```ts
+export class CustomStrategy extends TooltipPositioningStrategy {
+  constructor(settings?: PositionSettings) {
+    super(settings);
+  }
+
+  public override positionArrow(arrow: HTMLElement, arrowFit: ArrowFit): void {
+    Object.assign(arrow.style, {
+      left: '-0.25rem',
+      transform: 'rotate(-45deg)',
+      [arrowFit.direction]: '-0.25rem',
+    });
+  }
+}
+
+public overlaySettings: OverlaySettings = {
+  positionStrategy: new CustomStrategy({
+    horizontalDirection: HorizontalAlignment.Right,
+    horizontalStartPoint: HorizontalAlignment.Right,
+    verticalDirection: VerticalAlignment.Bottom,
+    verticalStartPoint: VerticalAlignment.Bottom,
+  })
+};
+```
+
+```html
+<igx-icon [igxTooltipTarget]="tooltipRef" [hasArrow]="true" [overlaySettings]="overlaySettings">
+  info
+</igx-icon>
+
+<div #tooltipRef="tooltip" igxTooltip>Her name is Madelyn James</div>
+```
 
 ## Rich tooltip
 
@@ -267,19 +402,10 @@ If all went well, this is how our location and tooltip should look like:
 
 <code-view style="height:300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-rich" >
+           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-rich/" >
 </code-view>
 
 <div class="divider--half"></div>
-
-## Overlay configuration
-
-Both the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) and [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directives use the [`IgxOverlayService`](overlay.md) to open and close the respective tooltip element.
-
-The [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive exposes an [`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) property (inherited from the [`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)), which can be used to customize the animations of our tooltip, its position in the UI and a lot more! If this property is not set, then default overlay settings will be used.
-
-> [!NOTE]
-> Any property that is set through the [`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) will override the same property from the default overlay settings and will have a direct impact on the tooltip.
 
 ## Styling
 
@@ -333,20 +459,33 @@ So now our styled tooltip should look like this:
 <code-view style="height:200px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-style" >
+           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-style/" >
 </code-view>
 
 <div class="divider--half"></div>
 
 ## Accessibility
 
-Elements with the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) directive have an autogenerated [`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id) property (if not set by the developer), a tooltip [`role`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#role) and the **aria-hidden** attribute that is automatically updated depending on whether the tooltip is visible or not. By setting the **aria-describedby** attribute of the target to its respective tooltip's [`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id), a reference will be provided to the tooltip element. This provides screen readers the information needed to read out the tooltip's contents when the end-user triggers the tooltip.
+The [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) is built with accessibility in mind and includes the following properties and ARIA attributes:
+
+- [`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id) property - autogenerated if not set by the developer.
+- [`role`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#role) - When the tooltip is in its default behavior, `role="tooltip"` is applied. If the [`sticky`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#sticky) property is enabled, the role changes to `status`.
+- `aria-hidden` - automatically updated depending on whether the tooltip is visible or not.
+
+By setting the **aria-describedby** attribute of the target to its respective tooltip's [`id`]({environment:angularApiUrl}/classes/igxtooltipdirective.html#id), a reference will be provided to the tooltip element. This provides screen readers the information needed to read out the tooltip's contents when the end-user triggers the tooltip.
 
 Extra care should be taken in the following scenarios:
 
 - The tooltip's content is too complex to be automatically interpreted.
 - The tooltip is used with a manually implemented behavior (e.g. manually show/hide) instead of the built-in one.
 - The target element is unfocusable.
+
+## Notes and Limitations
+
+| Limitation                          | Description|
+| ----------------------------------- | ---------- |
+| Custom position strategy with arrow | The [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive uses the `TooltipPositionStrategy` to position the tooltip and arrow element. If a custom [`positionStrategy`]({environment:angularApiUrl}/interfaces/overlaysettings.html#positioningStrategy) is used and [`hasArrow`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hasarrow) is set to `true`, the custom strategy should extend the `TooltipPositionStrategy`. Otherwise, the arrow will not be displayed.|
+
 
 ## API References
 

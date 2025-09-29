@@ -13,7 +13,7 @@ Ignite UI for Angular Icon Button ディレクティブを任意のアイコン�
 
 <code-view style="height: 70px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/icon-button-overview" alt="Angular Icon Button の例">
+           iframe-src="{environment:demosBaseUrl}/data-entries/icon-button-overview/" alt="Angular Icon Button の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -141,7 +141,7 @@ public ngOnInit() {
 
 <code-view style="height: 70px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/icon-button-size" alt="Angular Icon Button サイズの例">
+           iframe-src="{environment:demosBaseUrl}/data-entries/icon-button-size/" alt="Angular Icon Button サイズの例">
 </code-view>
 <div class="divider--half"></div>
 
@@ -186,7 +186,7 @@ $custom-contained: contained-icon-button-theme(
 <code-view style="height: 100px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/icon-button-styling" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/icon-button-styling/" >
 </code-view>
 <div class="divider--half"></div>
 

@@ -13,7 +13,7 @@ The [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabscomponent.html) comp
 
 <code-view style="height: 250px; width: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-3/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -56,7 +56,7 @@ If the sample is configured properly, the final result should look like that:
 
 <code-view style="height: 200px; width: 600px; border: 1px solid gray;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-1/" >
 </code-view>
 
 
@@ -99,7 +99,7 @@ Nevertheless what type of tabs you have chosen, the tab header width is limited 
 
 <code-view style="height: 450px; width: 800px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-2/" >
 </code-view>
 
 
@@ -158,7 +158,7 @@ If the sample is configured properly, the tabs should look like the following ex
 
 <code-view style="height: 250px; width: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-3/" >
 </code-view>
 
 
@@ -289,7 +289,7 @@ public ngOnInit() {
 
 <code-view style 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-4/" >
 </code-view>
 
 
@@ -380,7 +380,7 @@ const routes: Routes = [
 
 <code-view style 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-5/" >
 </code-view>
 
 

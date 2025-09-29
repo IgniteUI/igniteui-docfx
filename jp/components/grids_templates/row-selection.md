@@ -50,7 +50,7 @@ public handleRowSelection(event: IRowSelectionEventArgs) {
 
 <code-view style="height:700px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-selection" alt="Angular 行選択の例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-selection/" alt="Angular 行選択の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -59,7 +59,7 @@ public handleRowSelection(event: IRowSelectionEventArgs) {
 
 <code-view style="height:700px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-selection" alt="Angular 行選択の例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-selection/" alt="Angular 行選択の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -68,7 +68,7 @@ public handleRowSelection(event: IRowSelectionEventArgs) {
 
 <code-view style="height:710px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection" alt="Angular 行選択の例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection/" alt="Angular 行選択の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -448,7 +448,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-selection-template-numbering" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-selection-template-numbering/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -457,7 +457,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-selection-template-numbers" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-selection-template-numbers/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -466,7 +466,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 
 <code-view style="height:610px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection-template-numbers" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection-template-numbers/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -478,7 +478,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-selection-template-excel" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-selection-template-excel/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -490,7 +490,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-conditional-row-selectors" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-conditional-row-selectors/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -499,7 +499,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-conditional-row-selectors" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-conditional-row-selectors/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -508,7 +508,7 @@ public childSelectedRows = ['Initiation', 'Emergency'];
 
 <code-view style="height:630px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-conditional-row-selectors" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-conditional-row-selectors/" >
 </code-view>
 
 <div class="divider--half"></div>

@@ -26,7 +26,7 @@ This section shows the accessibility (ARIA) support of the framework as well as 
 
 <code-view style="height: 600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-rtl-sample" alt="Angular RTL Support Example">
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-rtl-sample/" alt="Angular RTL Support Example">
 </code-view>
 
 
