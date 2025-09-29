@@ -328,7 +328,25 @@ You can justify the buttons so that they are laid out across the entire axis, no
 ```
 
 ## Styling
-To get started with styling the card, we need to import the `index` file, where all the theme functions and component mixins live:
+
+Following the simplest approach, you can use CSS variables to customize the appearance of the card:
+
+```css
+igx-card {
+    --border-radius: 8px;
+    --outline-color: #f0f0f0;
+    --background: #bfbfbf;
+    --header-text-color: #000;
+}
+```
+
+By changing the values of these CSS variables, you can alter the entire look of the card component.
+
+<div class="divider--half"></div>
+
+Another way to style the card is by using **Sass**, along with our [`card-theme`]({environment:sassApiUrl}/index.html#function-card-theme) function.
+
+To start styling the card using **Sass**, first import the `index` file, which includes all theme functions and component mixins:
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -336,33 +354,32 @@ To get started with styling the card, we need to import the `index` file, where 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
+
 Following the simplest approach, we create a new theme that extends the [`card-theme`]({environment:sassApiUrl}/themes#function-card-theme) and providing just a few styling parameters. If you only specify the `$background` parameter, the appropriate foreground colors will be automatically chosen, either black or white, based on which offers better contrast with the background.
 
 ```scss
-$colorful-card: card-theme(
-  $background: #011627,
-  $subtitle-text-color: #ecaa53,
+$custom-card-theme: card-theme(
+    $background: #011627,
+    $subtitle-text-color: #ecaa53,
 );
 ```
-As seen, the `card-theme` exposes some useful parameters for basic styling of its items. 
 
-The last step is to **include** the component theme in our application.
+Finally, **include** the custom theme in your application:
 
 ```scss
-@include css-vars($colorful-card);
+@include css-vars($custom-card-theme);
 ```
 
-### Angular Card Demo
+In the sample below, you can see how using the card component with customized CSS variables allows you to create a design that visually resembles the card used in the [`Ant`](https://ant.design/components/card?theme=light#card-demo-meta) design system. 
 
-
-<code-view style="height: 486px" 
+<code-view style="height: 400px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/card-styling-sample/" >
 </code-view>
 
-
 ### Summary
+
 In this article we covered a lot of ground with the card component. First, we created a very simple card with text content only. Then added some images to make the card a bit more appealing. We used some additional Ignite UI for Angular components inside our card, avatar, buttons and icons, to enrich the experience and add some functionality. And finally, we changed the card's theme by setting some exposed theme colors, creating custom palettes and extending schemas. 
 The card component is capable of displaying more different layouts worth exploring in the Card Demo in the beginning of this article.
 
