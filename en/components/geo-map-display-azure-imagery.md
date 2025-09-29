@@ -64,6 +64,6 @@ The following table summarized properties of the `AzureMapsImagery` class:
 
 ## API References
 
-*   `AzureMapsImagery`
+*   `AzureMapsImageryStyle`
 *   `AzureMapsImagery`
 *   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html)
