@@ -19,7 +19,7 @@ Ignite UI for Angular Button ディレクティブを任意の button、span、d
 
 <code-view style="height: 150px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-sample-1" alt="Angular Button の例">
+           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-sample-1/" alt="Angular Button の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -243,7 +243,7 @@ protected get sizeStyle() {
 
 <code-view style="height: 150px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-display-density" alt="Angular Button の例">
+           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-display-density/" alt="Angular Button の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -324,7 +324,7 @@ $custom-contained-theme: contained-button-theme(
 <code-view style="height: 100px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-style" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-style/" >
 </code-view>
 
 ### カスタム サイズ変更

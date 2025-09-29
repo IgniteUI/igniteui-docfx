@@ -19,7 +19,7 @@ _language: ja
 
 <code-view style="height: 200px; width: 400px; border: 1px solid #D4D4D4;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-1" alt="Angular Bottom Navigation の例">
+           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-1/" alt="Angular Bottom Navigation の例">
 </code-view>
 
 
@@ -235,7 +235,7 @@ Bottom Navigation は以下のようになります。
 
 <code-view style="height: 350px; width: 300px; border: 1px solid #D4D4D4;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-2/" >
 </code-view>
 
 
@@ -377,7 +377,7 @@ export class TabbarRoutingModule { }
 
 <code-view style="height: 250px; width: 500px; border: 1px solid #D4D4D4;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-3/" >
 </code-view>
 
 
@@ -421,7 +421,7 @@ $dark-bottom-nav: bottom-nav-theme(
 <code-view style="height: 350px; width: 300px; border: 1px solid #D4D4D4;"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-style" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-style/" >
 </code-view>
 
 <div class="divider--half"></div>

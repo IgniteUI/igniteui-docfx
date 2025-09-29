@@ -13,7 +13,7 @@ _language: ja
 
 <code-view style="height: 75px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/icon-sample-1" alt="Angular Icon の例">
+           iframe-src="{environment:demosBaseUrl}/data-display/icon-sample-1/" alt="Angular Icon の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -145,7 +145,7 @@ public ngOnInit() {
 
 <code-view style="height: 70px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/svg-icon-sample" >
+           iframe-src="{environment:demosBaseUrl}/data-display/svg-icon-sample/" >
 </code-view>
 
 ## マテリアル シンボル
@@ -181,7 +181,7 @@ public ngOnInit() {
 
 <code-view style="height: 70px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/material-symbols" >
+           iframe-src="{environment:demosBaseUrl}/data-display/material-symbols/" >
 </code-view>
 
 マテリアル シンボル スタイルの詳細については、[`公式ドキュメント`](https://fonts.google.com/icons)をご覧ください。
@@ -242,7 +242,7 @@ $custom-icon-theme: icon-theme(
 <code-view style="height:75px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/icon-styling" alt="Angular Icon の例">
+           iframe-src="{environment:demosBaseUrl}/data-display/icon-styling/" alt="Angular Icon の例">
 </code-view>
 
 ### SVG の制限

@@ -15,7 +15,7 @@ _language: ja
 
 <code-view style="height: 580px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/layout-sample" alt="Angular Layout Manager 例">
+           iframe-src="{environment:demosBaseUrl}/layouts/layout-sample/" alt="Angular Layout Manager 例">
 </code-view>
 
 
@@ -33,7 +33,7 @@ _language: ja
 
 <code-view style="height: 180px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/layout-direction-row" >
+           iframe-src="{environment:demosBaseUrl}/layouts/layout-direction-row/" >
 </code-view>
 
 
@@ -45,7 +45,7 @@ _language: ja
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/layout-direction-column" >
+           iframe-src="{environment:demosBaseUrl}/layouts/layout-direction-column/" >
 </code-view>
 
 
@@ -62,7 +62,7 @@ _language: ja
 
 <code-view style="height: 110px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/layout-custom-order" >
+           iframe-src="{environment:demosBaseUrl}/layouts/layout-custom-order/" >
 </code-view>
 
 
@@ -74,7 +74,7 @@ _language: ja
 
 <code-view style="height: 180px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/layout-content-space" >
+           iframe-src="{environment:demosBaseUrl}/layouts/layout-content-space/" >
 </code-view>
 
 
@@ -85,7 +85,7 @@ _language: ja
 
 <code-view style="height: 180px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/layout-justify-content" >
+           iframe-src="{environment:demosBaseUrl}/layouts/layout-justify-content/" >
 </code-view>
 
 
@@ -96,7 +96,7 @@ _language: ja
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/layout-align-items" >
+           iframe-src="{environment:demosBaseUrl}/layouts/layout-align-items/" >
 </code-view>
 
 
@@ -107,7 +107,7 @@ _language: ja
 
 <code-view style="height: 180px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/layout-wrap" >
+           iframe-src="{environment:demosBaseUrl}/layouts/layout-wrap/" >
 </code-view>
 
 

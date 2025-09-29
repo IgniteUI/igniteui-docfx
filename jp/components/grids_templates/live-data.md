@@ -26,7 +26,7 @@ _language: ja
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
-           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs?theme-switch=false" alt="Angular 更新のライブデ例">
+           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs?theme-switch=false/" alt="Angular 更新のライブデ例">
 </code-view>
 
 
@@ -71,7 +71,7 @@ igxGrid コンポーネントは、サーバーからの高頻度の更新を簡
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
-           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs-dock-manager/grid-finjs-dock-manager" alt="サービスを使用した Angular ライブ データ更新の例">
+           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs-dock-manager/grid-finjs-dock-manager/" alt="サービスを使用した Angular ライブ データ更新の例">
 </code-view>
 
 ### ハブ接続の開始
@@ -151,7 +151,7 @@ this.hubConnection.invoke('updateparameters', frequency, volume, live, updateAll
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
-           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs" alt="Angular 更新のライブデ例">
+           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs/" alt="Angular 更新のライブデ例">
 </code-view>
 
 

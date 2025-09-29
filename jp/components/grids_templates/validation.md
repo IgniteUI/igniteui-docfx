@@ -30,7 +30,7 @@ Angular Forms 検証ディレクティブは、`IgxColumn` で直接動作する
 @@if (igxName === 'IgxGrid') {
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-validator-service" alt="Angular @@igComponent 検証の基本例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-validator-service/" alt="Angular @@igComponent 検証の基本例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -38,7 +38,7 @@ Angular Forms 検証ディレクティブは、`IgxColumn` で直接動作する
 @@if (igxName === 'IgxTreeGrid') {
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validator-service" alt="Angular @@igComponent 検証の基本例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validator-service/" alt="Angular @@igComponent 検証の基本例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -46,7 +46,7 @@ Angular Forms 検証ディレクティブは、`IgxColumn` で直接動作する
 @@if (igxName === 'IgxHierarchicalGrid') {
 <code-view style="height:680px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validator-service" alt="Angular @@igComponent 検証の基本例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validator-service/" alt="Angular @@igComponent 検証の基本例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -205,7 +205,7 @@ public cellEdit(evt) {
 @@if (igxName === 'IgxGrid') {
 <code-view style="height:570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-validator-service-extended" alt="Angular @@igComponent カスタム検証の例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-validator-service-extended/" alt="Angular @@igComponent カスタム検証の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -213,7 +213,7 @@ public cellEdit(evt) {
 @@if (igxName === 'IgxTreeGrid') {
 <code-view style="height:570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validator-service-extended" alt="Angular @@igComponent カスタム検証の例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validator-service-extended/" alt="Angular @@igComponent カスタム検証の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -221,7 +221,7 @@ public cellEdit(evt) {
 @@if (igxName === 'IgxHierarchicalGrid') {
 <code-view style="height:640px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validator-service-extended" alt="Angular @@igComponent カスタム検証の例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validator-service-extended/" alt="Angular @@igComponent カスタム検証の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -551,7 +551,7 @@ public stateMessage(cell: CellType) {
 
 <code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-cross-field-validator-service" alt="Angular @@igComponent クロス フィールド検証の例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-cross-field-validator-service/" alt="Angular @@igComponent クロス フィールド検証の例">
 </code-view>
 }
 
@@ -561,7 +561,7 @@ public stateMessage(cell: CellType) {
 
 <code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-cross-field-validation" alt="Angular @@igComponent クロス フィールド検証の例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-cross-field-validation/" alt="Angular @@igComponent クロス フィールド検証の例">
 </code-view>
 }
 
@@ -570,7 +570,7 @@ public stateMessage(cell: CellType) {
 
 <code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-cross-field-validator-service" alt="Angular @@igComponent クロス フィールド検証の例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-cross-field-validator-service/" alt="Angular @@igComponent クロス フィールド検証の例">
 </code-view>
 }
 
@@ -689,7 +689,7 @@ public cellStyles = {
 <code-view style="height:560px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-validation-style" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-validation-style/" >
 </code-view>
 }
 
@@ -698,7 +698,7 @@ public cellStyles = {
 <code-view style="height:630px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validation-style" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validation-style/" >
 </code-view>
 
 }
@@ -709,7 +709,7 @@ public cellStyles = {
 <code-view style="height:560px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validation-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validation-style/" >
 </code-view>
 
 }
