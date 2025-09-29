@@ -12,7 +12,7 @@ _language: ja
 
 <code-view style="height: 250px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-1" alt="Angular Slider 例">
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-1/" alt="Angular Slider の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -134,7 +134,7 @@ export class SampleComponent {
 
 <code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-3/" >
 </code-view>
 
 
@@ -171,7 +171,7 @@ public volume = 20;
 
 <code-view style="height: 140px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-2/" >
 </code-view>
 
 
@@ -227,7 +227,7 @@ export class SampleComponent {
 
 <code-view style="height: 200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-4/" >
 </code-view>
 
 >[!NOTE]
@@ -254,7 +254,7 @@ export class SampleComponent {
 
 <code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-5/" >
 </code-view>
 
 
@@ -292,7 +292,7 @@ public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
 
 <code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-6" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-6/" >
 </code-view>
 
 
@@ -342,7 +342,7 @@ public type = SliderType.RANGE;
 
 <code-view style="height: 180px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/discrete-slider-ticks-bottom" >
+           iframe-src="{environment:demosBaseUrl}/interactions/discrete-slider-ticks-bottom/" >
 </code-view>
 
 
@@ -378,7 +378,7 @@ public type = SliderType.RANGE;
 
 <code-view style="height: 200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-ticks-bottomtotop-labels" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-ticks-bottomtotop-labels/" >
 </code-view>
 
 
@@ -409,7 +409,7 @@ public type = SliderType.RANGE;
 
 <code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-secondary-ticks-mirror" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-secondary-ticks-mirror/" >
 </code-view>
 
 
@@ -434,7 +434,7 @@ public type = SliderType.RANGE;
 
 <code-view style="height: 160px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-timeframe" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-timeframe/" >
 </code-view>
 
 
@@ -479,7 +479,7 @@ public type = SliderType.RANGE;
 
 <code-view style="height: 180px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-tick-labels-template" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-tick-labels-template/" >
 </code-view>
 
 ## スタイル設定
@@ -517,7 +517,7 @@ $custom-slider-theme: slider-theme(
 
 <code-view style="height: 240px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-styling-sample/" >
 </code-view>
 
 ## API リファレンス

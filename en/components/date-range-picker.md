@@ -131,18 +131,6 @@ By default, when clicked, the [`IgxDateRangePickerComponent`]({environment:angul
            iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-mode" >
 </code-view>
 
-### Popup modes
-
-By default, when clicked, the [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) opens its calendar pop-up in `dropdown` mode. Alternatively, the calendar can be opened in `dialog` mode by setting the `Mode` property to `dialog`.
-```html
-<igx-date-range-picker [mode]="'dialog'"></igx-date-range-picker>
-```
-
-<code-view style="height:700px"
-           data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-mode" >
-</code-view>
-
 <div class="divider--half"></div>
 
 In a default configuration with a single read-only input, the calendar can be opened by clicking anywhere in the input, including the calendar icon. When there are two separate inputs for start and end date, and in dropdown mode, the calendar can only be opened from the calendar icon, since both inputs are editable by default. For two inputs in `dialog` mode, clicking anywhere in the input opens the calendar

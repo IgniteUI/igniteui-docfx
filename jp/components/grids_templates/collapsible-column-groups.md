@@ -25,7 +25,7 @@ _language: ja
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-collapsible-groups" alt="Angular グリッド列グループの縮小の例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-collapsible-groups/" alt="Angular グリッド列グループの縮小の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -35,7 +35,7 @@ _language: ja
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-collapsible-groups" alt="Angular グリッド列グループの縮小の例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-collapsible-groups/" alt="Angular グリッド列グループの縮小の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -44,7 +44,7 @@ _language: ja
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-collapsible-column-groups" alt="Angular グリッド列グループの縮小の例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-collapsible-column-groups/" alt="Angular グリッド列グループの縮小の例">
 </code-view>
 
 <div class="divider--half"></div>

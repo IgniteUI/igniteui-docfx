@@ -49,7 +49,7 @@ _language: ja
 
 <code-view style="height:850px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
-           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs" alt="Angular Tree Grid グループ化の例">
+           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs/" alt="Angular Tree Grid グループ化の例">
 </code-view>
 
 <div class="divider--half"></div>

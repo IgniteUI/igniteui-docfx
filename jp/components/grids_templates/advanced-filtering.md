@@ -26,7 +26,7 @@ _language: ja
 
 <code-view style="height:530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-advanced-filtering" alt="Angular @@igComponent 高度なフィルタリングの例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-advanced-filtering/" alt="Angular @@igComponent 高度なフィルタリングの例">
 </code-view>
 
 }
@@ -34,7 +34,7 @@ _language: ja
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-advanced-filtering" alt="Angular @@igComponent 高度なフィルタリングの例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-advanced-filtering/" alt="Angular @@igComponent 高度なフィルタリングの例">
 </code-view>
 
 }
@@ -42,7 +42,7 @@ _language: ja
 
 <code-view style="height:630px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-advanced-filtering" alt="Angular @@igComponent 高度なフィルタリングの例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-advanced-filtering/" alt="Angular @@igComponent 高度なフィルタリングの例">
 </code-view>
 
 }
@@ -182,7 +182,7 @@ ngAfterViewInit(): void {
 
 <code-view style="height:750px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-external-advanced-filtering" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-external-advanced-filtering/" >
 </code-view>
 
 }
@@ -191,7 +191,7 @@ ngAfterViewInit(): void {
 
 <code-view style="height:750px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-external-advanced-filtering" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-external-advanced-filtering/" >
 </code-view>
 
 }
@@ -200,7 +200,7 @@ ngAfterViewInit(): void {
 
 <code-view style="height:750px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-advanced-filtering" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-advanced-filtering/" >
 </code-view>
 
 }
@@ -244,147 +244,54 @@ ngAfterViewInit(): void {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Excel スタイルのフィルタリング ダイアログは、`filtering-row-background` パラメーターを使用して、グリッドのテーマから背景色を取得します。背景を変更するには、カスタム テーマを作成する必要があります。
+高度なフィルタリング ダイアログは [`IgxQueryBuilder`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) コンポーネントを使用するため、[`query-builder-theme`]({environment:sassApiUrl}/themes#query-builder-theme) を使用してスタイルを設定できます。ヘッダー タイトルのスタイルを設定するには、[`query-builder-theme`]({environment:sassApiUrl}/themes#query-builder-theme) を拡張するカスタム テーマを作成し、`$header-foreground` パラメーターを設定します。
 
 ```scss
-$custom-grid: grid-theme(
-  $filtering-row-background: #ffcd0f
-);
-```
-
-ボタン、チップ、ドロップダウン、入力など、高度なフィルタリング ダイアログ内に他のコンポーネントがあるため、それぞれに個別のテーマを作成する必要があります。
-
-```scss
-$custom-button: button-theme(
-  $disabled-color: gray,
-  ...
-);
-
-$custom-button-group: button-group-theme(
-  $item-background:  #292826,
-  ...
-);
-
-$custom-input-group: input-group-theme(
-  $box-background: #4a4a4a,
-  ...
-);
-
-$custom-chip: chip-theme(
-  $background: #ffcd0f,
-  ...
-);
-
-$custom-drop-down: drop-down-theme(
-  $background-color: #292826,
-  ...
+$custom-query-builder: query-builder-theme(
+  $header-foreground: #512da8
 );
 ```
 
 >[!NOTE]
 >上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/palettes#function-palette) および [`color`]({environment:sassApiUrl}/palettes#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックをご覧ください。
 
-この例では、リストされたコンポーネントのパラメーターの一部のみを変更しましたが、[`button-theme`]({environment:sassApiUrl}/themes#function-button-theme)、[`button-group-theme`]({environment:sassApiUrl}/themes#function-button-group-theme)、[`chip-theme`]({environment:sassApiUrl}/themes#function-chip-theme)、[`drop-down-theme`]({environment:sassApiUrl}/themes#function-drop-down-theme)、[`input-group-theme`]({environment:sassApiUrl}/themes#function-input-group-theme) テーマは、それぞれのスタイルを制御するために多数のパラメーターを提供します。
-
-最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。また、高度なフィルタリング ダイアログ内の他の要素のスタイルを追加します。
+最後にコンポーネントのテーマをアプリケーションに**含めます**。
 
 ```scss
-@include css-vars($custom-grid);
+$custom-query-builder: query-builder-theme(
+  $header-foreground: #512da8,
+  $color-expression-group-and:  #eb0000,
+  $color-expression-group-or: #0000f3,
+  $subquery-header-background: var(--ig-gray-300),
+  $subquery-border-color: var(--ig-warn-500),
+  $subquery-border-radius: rem(4px)
+);
 
 igx-advanced-filtering-dialog {
-  @include css-vars($custom-button);
-  @include css-vars($custom-button-group);
-  @include css-vars($custom-input-group);
-  @include css-vars($custom-chip);
-  @include css-vars($custom-drop-down);
-
-  .igx-filter-empty__title {
-    color: #ffcd0f
-  }
-
-  .igx-advanced-filter__header {
-    color: #ffcd0f
-  }
-
-  .igx-filter-tree__expression-actions igx-icon {
-    color: #ffcd0f
-  }
-
-  .igx-filter-tree__expression-actions igx-icon:hover {
-    color: #ffe482
-  }
-
-  .igx-filter-tree__expression-actions igx-icon:focus {
-    color: #ffe482
-  }
-
-  .igx-filter-contextual-menu {
-    border: 1px solid #ffcd0f
-  }
-
-  .igx-filter-contextual-menu__close-btn {
-    position: absolute !important;
-    background: #292826 !important;
-    border-color: #ffcd0f !important;
-  }
-
-  .igx-input-group__input::placeholder {
-    color: gray;
-        }
-    }
+  @include css-vars($custom-query-builder);
 }
 ```
 
 >[!NOTE]
->カスタム テーマが高度なフィルタリング ダイアログにネストされたコンポーネントのみに影響するように、コンポーネントのほとんどのミックスインを `advanced-filtering-dialog` 内にスコープします。そうでない場合、アプリケーション内の他のボタン、チップ、入力、ドロップダウンも影響を受けます。
+>作成した **query-builder-theme** を `igx-advanced-filtering-dialog` 内に含めることで、このカスタム テーマは高度なフィルタリング ダイアログ内のクエリ ビルダーにのみに影響します。そうしない場合、アプリケーション内の他のクエリ ビルダー コンポーネントにも影響します。
 
 >[!NOTE]
 >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
 
 ```scss
+$custom-query-builder: query-builder-theme(
+  $header-foreground: #512da8,
+  $color-expression-group-and:  #eb0000,
+  $color-expression-group-or: #0000f3,
+  $subquery-header-background: var(--ig-gray-300),
+  $subquery-border-color: var(--ig-warn-500),
+  $subquery-border-radius: rem(4px)
+);
+
 :host {
   ::ng-deep {
-    @include css-vars($custom-drop-down);
-    @include css-vars($custom-grid);
     igx-advanced-filtering-dialog {
-      @include css-vars($custom-button);
-      @include css-vars($custom-button-group);
-      @include css-vars($custom-input-group);
-      @include css-vars($custom-chip);
-
-      .igx-input-group__input::placeholder {
-        color: gray;
-      }
-
-      .igx-filter-empty__title {
-        color: #ffcd0f
-      }
-
-      .igx-advanced-filter__header {
-        color: #ffcd0f
-      }
-
-      .igx-filter-tree__expression-actions igx-icon {
-        color: #ffcd0f
-      }
-
-      .igx-filter-tree__expression-actions igx-icon:hover {
-        color: #ffe482
-      }
-
-      .igx-filter-tree__expression-actions igx-icon:focus {
-        color: #ffe482
-      }
-
-      .igx-filter-contextual-menu {
-        border: 1px solid #ffcd0f
-      }
-      
-      .igx-filter-contextual-menu__close-btn {
-        position: absolute !important;
-        background: #292826 !important;
-        border-color: #ffcd0f !important;
-      }
+      @include css-vars($custom-query-builder);
     }
   }
 }
@@ -397,7 +304,7 @@ igx-advanced-filtering-dialog {
 <code-view style="height:530px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-advanced-filtering-style" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-advanced-filtering-style/" >
 </code-view>
 
 }
@@ -406,7 +313,7 @@ igx-advanced-filtering-dialog {
 <code-view style="height:510px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-advanced-filtering-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-advanced-filtering-style/" >
 </code-view>
 
 }
@@ -415,7 +322,7 @@ igx-advanced-filtering-dialog {
 <code-view style="height:630px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-advanced-filtering-style" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-advanced-filtering-style/" >
 </code-view>
 
 }

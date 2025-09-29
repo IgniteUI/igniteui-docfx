@@ -42,7 +42,7 @@ SignalR はいくつかの転送を利用し、クライアントとサーバー
 
 <code-view style="height:700px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs-dock-manager/grid-finjs-dock-manager" alt="サービスを使用した Angular ライブデータ更新の例">
+           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs-dock-manager/grid-finjs-dock-manager/" alt="サービスを使用した Angular ライブデータ更新の例">
 </code-view>
 
 ## SignalR サーバーの構成

@@ -242,147 +242,54 @@ To get started with styling the Advanced Filtering dialog, we need to import the
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-The advanced filtering dialog takes its background color from the grid's theme, using the `filtering-row-background` parameter. In order to change the background we need to create a custom theme:
+Since the Advanced Filtering dialog uses the [`IgxQueryBuilder`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) component, you can use the [`query-builder-theme`]({environment:sassApiUrl}/themes#query-builder-theme) to style it. To style the header title, you can create a custom theme that extends the [`query-builder-theme`]({environment:sassApiUrl}/themes#query-builder-theme) and set the `$header-foreground` parameter.
 
 ```scss
-$custom-grid: grid-theme(
-  $filtering-row-background: #ffcd0f
-);
-```
-
-Since we have other components inside the advanced filtering dialog, such as buttons, chips, dropdowns and inputs, we need to create a separate theme for each one:
-
-```scss
-$custom-button: button-theme(
-  $disabled-color: gray,
-  ...
-);
-
-$custom-button-group: button-group-theme(
-  $item-background:  #292826,
-  ...
-);
-
-$custom-input-group: input-group-theme(
-  $box-background: #4a4a4a,
-  ...
-);
-
-$custom-chip: chip-theme(
-  $background: #ffcd0f,
-  ...
-);
-
-$custom-drop-down: drop-down-theme(
-  $background-color: #292826,
-  ...
+$custom-query-builder: query-builder-theme(
+  $header-foreground: #512da8
 );
 ```
 
 >[!NOTE]
 >Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
-In this example we only changed some of the parameters for the listed components, but the [`button-theme`]({environment:sassApiUrl}/themes#function-button-theme), [`button-group-theme`]({environment:sassApiUrl}/themes#function-button-group-theme), [`chip-theme`]({environment:sassApiUrl}/themes#function-chip-theme), [`drop-down-theme`]({environment:sassApiUrl}/themes#function-drop-down-theme), [`input-group-theme`]({environment:sassApiUrl}/themes#function-input-group-theme) themes provide way more parameters to control their respective styling.
-
-The last step is to **include** the component mixins, each with its respective theme. We will also add some styles for other elements inside the advanced filtering dialog.
+The last step is to **include** the component theme in our application.
 
 ```scss
-    @include css-vars($custom-grid);
+$custom-query-builder: query-builder-theme(
+  $header-foreground: #512da8,
+  $color-expression-group-and:  #eb0000,
+  $color-expression-group-or: #0000f3,
+  $subquery-header-background: var(--ig-gray-300),
+  $subquery-border-color: var(--ig-warn-500),
+  $subquery-border-radius: rem(4px)
+);
 
-    igx-advanced-filtering-dialog {
-        @include css-vars($custom-button);
-        @include css-vars($custom-button-group);
-        @include css-vars($custom-input-group);
-        @include css-vars($custom-chip);
-        @include css-vars($custom-drop-down);
-
-        .igx-filter-empty__title {
-            color: #ffcd0f
-        }
-
-        .igx-advanced-filter__header {
-            color: #ffcd0f
-        }
-
-        .igx-filter-tree__expression-actions igx-icon {
-            color: #ffcd0f
-        }
-
-        .igx-filter-tree__expression-actions igx-icon:hover {
-            color: #ffe482
-        }
-
-        .igx-filter-tree__expression-actions igx-icon:focus {
-            color: #ffe482
-        }
-
-        .igx-filter-contextual-menu {
-            border: 1px solid #ffcd0f
-        }
-
-        .igx-filter-contextual-menu__close-btn {
-            position: absolute !important;
-            background: #292826 !important;
-            border-color: #ffcd0f !important;
-        }
-
-        .igx-input-group__input::placeholder {
-            color: gray;
-        }
-    }
+igx-advanced-filtering-dialog {
+  @include css-vars($custom-query-builder);
 }
 ```
 
 >[!NOTE]
->We scope most of the components' mixins within `advanced-filtering-dialog`, so that these custom themes will affect only components nested in the advanced filtering dialog. Otherwise, other buttons, chips, inputs and dropdowns in the application would be affected too.
+>We include the created **query-builder-theme** within `igx-advanced-filtering-dialog`, so that this custom theme will affect only the query builder nested in the advanced filtering dialog. Otherwise other query builder components in the application would be affected too.
 
 >[!NOTE]
 >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
 
 ```scss
+$custom-query-builder: query-builder-theme(
+  $header-foreground: #512da8,
+  $color-expression-group-and:  #eb0000,
+  $color-expression-group-or: #0000f3,
+  $subquery-header-background: var(--ig-gray-300),
+  $subquery-border-color: var(--ig-warn-500),
+  $subquery-border-radius: rem(4px)
+);
+
 :host {
   ::ng-deep {
-    @include css-vars($custom-drop-down);
-    @include css-vars($custom-grid);
     igx-advanced-filtering-dialog {
-      @include css-vars($custom-button);
-      @include css-vars($custom-button-group);
-      @include css-vars($custom-input-group);
-      @include css-vars($custom-chip);
-
-      .igx-input-group__input::placeholder {
-        color: gray;
-      }
-
-      .igx-filter-empty__title {
-        color: #ffcd0f
-      }
-
-      .igx-advanced-filter__header {
-        color: #ffcd0f
-      }
-
-      .igx-filter-tree__expression-actions igx-icon {
-        color: #ffcd0f
-      }
-
-      .igx-filter-tree__expression-actions igx-icon:hover {
-        color: #ffe482
-      }
-
-      .igx-filter-tree__expression-actions igx-icon:focus {
-        color: #ffe482
-      }
-
-      .igx-filter-contextual-menu {
-        border: 1px solid #ffcd0f
-      }
-      
-      .igx-filter-contextual-menu__close-btn {
-        position: absolute !important;
-        background: #292826 !important;
-        border-color: #ffcd0f !important;
-      }
+      @include css-vars($custom-query-builder);
     }
   }
 }
