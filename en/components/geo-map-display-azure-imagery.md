@@ -40,9 +40,9 @@ import { IgxAzureMapsImagery } from 'igniteui-angular-maps';
 // ...
 const tileSource = new IgxAzureMapsImagery();
 tileSource.apiKey = "YOUR_Azure_MAPS_API_KEY";
-tileSource.imageryStyle = AzureMapsImagery.Satellite; // or
-tileSource.imageryStyle = AzureMapsImagery.TerraOverlay; // or
-tileSource.imageryStyle = AzureMapsImagery.Road; //or Traffic & Weather etc.
+tileSource.imageryStyle = AzureMapsImageryStyle.Satellite; // or
+tileSource.imageryStyle = AzureMapsImageryStyle.TerraOverlay; // or
+tileSource.imageryStyle = AzureMapsImageryStyle.Road; //or Traffic & Weather etc.
 
 this.map.backgroundContent = tileSource;
 ```
