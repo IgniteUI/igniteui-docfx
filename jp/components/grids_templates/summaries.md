@@ -35,7 +35,7 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-summary" alt="Angular @@igComponent 集計の例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-summary/" alt="Angular @@igComponent 集計の例">
 </code-view>
 
 }
@@ -43,7 +43,7 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
 
 <code-view style="height:750px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary" alt="Angular @@igComponent 集計の例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary/" alt="Angular @@igComponent 集計の例">
 </code-view>
 
 }
@@ -51,7 +51,7 @@ Ignite UI for Angular の Angular UI グリッドには、グループ フッタ
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary" alt="Angular @@igComponent 集計の例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary/" alt="Angular @@igComponent 集計の例">
 </code-view>
 
 }
@@ -370,7 +370,7 @@ class MySummary extends IgxNumberSummaryOperand {
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-alldata-summaries" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-alldata-summaries/" >
 </code-view>
 
 }
@@ -378,7 +378,7 @@ class MySummary extends IgxNumberSummaryOperand {
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-allData-summary" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-allData-summary/" >
 </code-view>
 
 }
@@ -386,7 +386,7 @@ class MySummary extends IgxNumberSummaryOperand {
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-allData-summary" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-allData-summary/" >
 </code-view>
 
 }
@@ -413,7 +413,7 @@ class MySummary extends IgxNumberSummaryOperand {
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-summary-template" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-summary-template/" >
 </code-view>
 
 }
@@ -421,7 +421,7 @@ class MySummary extends IgxNumberSummaryOperand {
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-summary-template" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-summary-template/" >
 </code-view>
 
 }
@@ -429,7 +429,7 @@ class MySummary extends IgxNumberSummaryOperand {
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hgrid-summary-template" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hgrid-summary-template/" >
 </code-view>
 
 }
@@ -528,19 +528,19 @@ class MySummary extends IgxNumberSummaryOperand {
 @@if (igxName === 'IgxGrid') {
 <code-view style="height:850px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-disable-summaries" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-disable-summaries/" >
 </code-view>
 }
 @@if (igxName === 'IgxTreeGrid') {
 <code-view style="height:950px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-disable-summaries" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-disable-summaries/" >
 </code-view>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <code-view style="height:850px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-disable-summaries" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-disable-summaries/" >
 </code-view>
 }
 
@@ -566,19 +566,19 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
 @@if (igxName === 'IgxGrid') {
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-summary-formatter" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-summary-formatter/" >
 </code-view>
 }
 @@if (igxName === 'IgxTreeGrid') {
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-summary-formatter" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-summary-formatter/" >
 </code-view>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-summary-formatter" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-summary-formatter/" >
 </code-view>
 }
 
@@ -607,7 +607,7 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
 
 <code-view style="height:720px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-summary" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-summary/" >
 </code-view>
 
 }
@@ -634,7 +634,7 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
 
 <code-view style="height:720px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary2" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary2/" >
 </code-view>
 
 }
@@ -649,14 +649,14 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
 @@if (igxName === 'IgxGrid') {
 <code-view style="height:770px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-summary-export" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-summary-export/" >
 </code-view>
 }
 
 @@if (igxName === 'IgxTreeGrid') {
 <code-view style="height:780px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary-export" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary-export/" >
 </code-view>
 }
 
@@ -664,7 +664,7 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
 @@if (igxName === 'IgxHierarchicalGrid') {
 <code-view style="height:760px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary-export" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary-export/" >
 </code-view>
 }
 
@@ -754,7 +754,7 @@ $custom-theme: grid-summary-theme(
 <code-view style="height:710px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-summary-styling" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-summary-styling/" >
 </code-view>
 
 }
@@ -765,7 +765,7 @@ $custom-theme: grid-summary-theme(
 <code-view style="height:710px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary-styling" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary-styling/" >
 </code-view>
 
 }
@@ -776,7 +776,7 @@ $custom-theme: grid-summary-theme(
 <code-view style="height:710px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary-styling" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary-styling/" >
 </code-view>
 
 }

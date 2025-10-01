@@ -15,7 +15,7 @@ _language: ja
 
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-1" alt="Angular Drop Down の例">
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-1/" alt="Angular Drop Down の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -145,7 +145,7 @@ export class MyDropDownComponent {
 
 <code-view style="height: 200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -191,7 +191,7 @@ export class MyDropDownComponent {
 
 <code-view style="height: 310px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-3/" >
 </code-view>
 
 ### 階層データのグループ化
@@ -266,7 +266,7 @@ export class MyCustomDropDownComponent {
 
 <code-view style="height: 310px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-5/" >
 </code-view>
 
 ### ドロップダウン メニュー
@@ -331,7 +331,7 @@ export class MyMenuComponent {
 
 <code-view style="height: 240px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-menu" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-menu/" >
 </code-view>
 
 ### 複数レベルのドロップダウン メニュー
@@ -399,7 +399,7 @@ public ngAfterViewInit(): void {
 
 <code-view style="height:400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-multi-level-menu">
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-multi-level-menu/">
 </code-view>
 
 > [!NOTE]
@@ -465,7 +465,7 @@ export class InputDropDownComponent {
 
 <code-view style="height:220px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-4/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -530,7 +530,7 @@ $custom-drop-down-theme: drop-down-theme(
 <code-view style="height:350px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-styling" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-styling/" >
 </code-view>
 
 <div class="divider--half"></div>
