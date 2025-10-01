@@ -15,7 +15,7 @@ _language: ja
 
 <code-view style="height: 120px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-1" alt="Angular Radio & Radio Group の例">
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-1/" alt="Angular Radio & Radio Group の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -142,7 +142,7 @@ public selectedColor: string = this.colors[3].hex;
 
 <code-view style="height: 550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-2/" >
 </code-view>
 
 ## スタイル設定
@@ -173,7 +173,7 @@ $custom-radio-theme: radio-theme(
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/radio-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-styling-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -187,7 +187,7 @@ $custom-radio-theme: radio-theme(
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/radio-group-sample" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-group-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -251,7 +251,7 @@ public alignment = RadioGroupAlignment.vertical;
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/radio-group-vertical" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-group-vertical/" >
 </code-view>
 
 <div class="divider--half"></div>

@@ -26,7 +26,7 @@ _keywords: aria support, aria サポート, a11y, ignite ui for angular, infragi
 
 <code-view style="height: 600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-rtl-sample" alt="Angular RTL Support Example">
+           iframe-src="{environment:demosBaseUrl}/scheduling/calendar-rtl-sample/" alt="Angular RTL サポートの例">
 </code-view>
 
 

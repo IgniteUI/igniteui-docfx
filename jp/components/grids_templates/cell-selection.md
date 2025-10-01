@@ -35,7 +35,7 @@ _language: ja
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-cell-selection" alt="Angular セル選択の例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-cell-selection/" alt="Angular セル選択の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -45,7 +45,7 @@ _language: ja
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-cell-selection" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-cell-selection/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -54,7 +54,7 @@ _language: ja
 
 <code-view style="height:750px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-cell-selection" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-cell-selection/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -81,7 +81,7 @@ _language: ja
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-cell-selection" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-cell-selection/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -92,7 +92,7 @@ _language: ja
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -319,7 +319,7 @@ $custom-grid-theme: grid-theme(
 <code-view style="height:620px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-cell-selection-style" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-cell-selection-style/" >
 </code-view>
 
 }
@@ -330,7 +330,7 @@ $custom-grid-theme: grid-theme(
 <code-view style="height:620px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-cell-style" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-cell-style/" >
 </code-view>
 
 }
@@ -342,7 +342,7 @@ $custom-grid-theme: grid-theme(
 <code-view style="height:620px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection-style/" >
 </code-view>
 
 }
