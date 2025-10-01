@@ -330,6 +330,62 @@ The Ignite UI for Angular IgxTree can be rendered in such way that it requires t
 After the user clicks the expand icon, it is replaced by a loading indicator. When the [loading]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#loading) property resolves to `false`, the loading indicator disappears and the children are loaded.
 
 ## Styling
+
+### Tree Theme Dependencies
+
+When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
+
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>Primary Property</th>
+      <th>Dependent Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+      <td><details><summary><strong>$background</strong></summary></details></td>
+      <td>$foreground</td>
+      <td>The color used for the tree node content.</td>
+    </tr>
+    <tr class="dependent"><td></td><td>$background-selected</td><td>The background color used for the selected tree node.</td></tr>
+    <tr class="dependent"><td></td><td>$hover-color</td><td>The background color used for the tree node on hover.</td></tr>
+    <tr class="dependent"><td></td><td>$background-active</td><td>The background color used for the active tree node.</td></tr>
+    <tr class="dependent"><td></td><td>$background-disabled</td><td>The background color used for the tree node in disabled state.</td></tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+      <td><details><summary><strong>$background-selected</strong></summary></details></td>
+      <td>$foreground-selected</td>
+      <td>The color used for the content of the selected tree node.</td>
+    </tr>
+    <tr class="dependent"><td></td><td>$hover-selected-color</td><td>The background color used for the selected tree node on hover.</td></tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+      <td><details><summary><strong>$background-active</strong></summary></details></td>
+      <td>$foreground-active</td>
+      <td>The color used for the content of the active tree node.</td>
+    </tr>
+    <tr class="dependent"><td></td><td>$background-active-selected</td><td>The background color used for the active selected tree node.</td></tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+      <td><strong>$background-active-selected</strong></td>
+      <td>$foreground-active-selected</td>
+      <td>The color used for the content of the active selected tree node.</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+      <td><strong>$background-disabled</strong></td>
+      <td>$foreground-disabled</td>
+      <td>The color used for the content of the disabled tree node.</td>
+    </tr>
+  </tbody>
+</table>
+
 Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the tree appearance. First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file: 
 
 ```scss
@@ -361,9 +417,9 @@ The last step is to include the component's theme.
 
 ### Styling with Tailwind
 
-You can style the tree using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `igx-tree-node`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+You can style the tree using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
 
-Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+Along with the Tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
 
 ```scss
 @import "tailwindcss";
@@ -371,24 +427,27 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 @use 'igniteui-theming/tailwind/utilities/material.css';
 ```
 
-The utility file includes both light and dark theme variants. To use the light theme, the class should start with `light-*`, for the dark theme, use `dark-*`.
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-tree`, `dark-tree`.
 
-The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+Once applied, these classes enable dynamic theme calculations. You can then override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
-You can also override any other CSS variable using `arbitrary properties`, as shown below for the `border-color` variable:
+You can find the full list of properties in the [IgxTree Theme]({environment:sassApiUrl}/themes#function-tree-theme). The syntax is as follows:
 
 ```html
 <igx-tree class="tree-root">
-@for (type of data; track type) {
-    <igx-tree-node class="!material-tree-background-[#81B698] ![--border-color:#D07A7A]">
-    {{ type.Name }}
-    @for (value of type.Children; track value) {
-        <igx-tree-node class="!material-tree-background-[#81B698] ![--border-color:#D07A7A]">
-        {{ value.Name }}
-        </igx-tree-node>
+    @for (type of data; track type) {
+      <igx-tree-node class="!light-tree ![--background:#81B698]">
+        {{ type.Name }}
+        @for (value of type.Children; track value) {
+          <igx-tree-node class="!light-tree ![--background:#81B698]">
+            {{ value.Name }}
+          </igx-tree-node>
+        }
+      </igx-tree-node>
     }
-    </igx-tree-node>
-}
 </igx-tree>
 ```
 

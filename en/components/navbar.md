@@ -271,6 +271,37 @@ If we want to provide a custom content for a navbar's title, we can achieve this
 
 ## Styling
 
+### Navbar Theme Dependencies
+
+When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
+
+<table class="collapsible-table">
+    <thead>
+      <tr>
+        <th>Primary Property</th>
+        <th>Dependent Property</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody class="group">
+      <tr class="primary">
+        <td><details><summary><strong>$background</strong></summary></details></td>
+        <td>$text-color</td>
+        <td>The navbar text color</td>
+      </tr>
+      <tr class="dependent"><td></td><td>$idle-icon-color</td><td>The navbar idle icon color</td></tr>
+      <tr class="dependent"><td></td><td>$hover-icon-color</td><td>The navbar hover icon color</td></tr>
+      <tr class="dependent"><td></td><td>$border-color (changes for indigo variant only)</td><td>The navbar border color</td></tr>
+    </tbody>
+    <tbody class="group">
+      <tr class="primary">
+        <td><strong>$idle-icon-color</strong></td>
+        <td>$hover-icon-color</td>
+        <td>The navbar hover icon color</td>
+      </tr>
+    </tbody>
+</table>
+
 To get started with styling the navbar, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
@@ -310,7 +341,7 @@ The last step is to pass the newly created theme to the `css-vars` mixin:
 
 ### Styling with Tailwind
 
-You can style the navbar using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `igx-navbar`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+You can style the navbar using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
 
 Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
 
@@ -320,14 +351,17 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 @use 'igniteui-theming/tailwind/utilities/material.css';
 ```
 
-The utility file includes both light and dark theme variants. To use the light theme, the class should start with `light-*`, for the dark theme, use `dark-*`.
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-navbar`, `dark-navbar`.
 
-The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
-You can also override any other CSS variable using `arbitrary properties`, as shown below for the `text-color` variable:
+You can find the full list of properties in the [navbar-theme]({environment:sassApiUrl}/themes#function-navbar-theme). The syntax is as follows:
 
 ```html
-<igx-navbar class="!material-navbar-background-[#7B9E89] ![--text-color:#121E17]" title="Sample App">
+<igx-navbar class="!light-navbar ![--background:#7B9E89] ![--text-color:#121E17]" title="Sample App">
   ...
 </igx-navbar>
 ```

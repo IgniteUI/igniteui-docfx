@@ -319,6 +319,87 @@ The Stepper Component is also available in the low-code, [drag and drop App Buil
 
 ## Angular Stepper Styling
 
+### Stepper Theme Dependencies
+
+When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
+
+<table class="collapsible-table">
+    <thead>
+        <tr>
+        <th>Primary Property</th>
+        <th>Dependent Property</th>
+        <th>Description</th>
+        </tr>
+    </thead>
+    <tbody class="group">
+        <tr class="primary">
+        <td><details><summary><strong>$step-background</strong></summary></details></td>
+        <td>$step-hover-background</td>
+        <td>The background of the step header on hover</td>
+        </tr>
+        <tr class="dependent"><td></td><td>$step-focus-background</td><td>The background of the step header on focus</td></tr>
+        <tr class="dependent"><td></td><td>$indicator-background</td><td>The background color of the step indicator</td></tr>
+        <tr class="dependent"><td></td><td>$title-color</td><td>The color of the step title</td></tr>
+        <tr class="dependent"><td></td><td>$subtitle-color</td><td>The color of the step subtitle</td></tr>
+        <tr class="dependent"><td></td><td>$current-step-background</td><td>The background of the current step header</td></tr>
+        <tr class="dependent"><td></td><td>$invalid-step-background</td><td>The background of the invalid step header</td></tr>
+        <tr class="dependent"><td></td><td>$complete-step-background</td><td>The background of the complete step header</td></tr>
+        <tr class="dependent"><td></td><td>$disabled-indicator-background</td><td>The indicator background of the disabled step</td></tr>
+        <tr class="dependent"><td></td><td>$disabled-title-color</td><td>The title color of the disabled step</td></tr>
+        <tr class="dependent"><td></td><td>$disabled-subtitle-color</td><td>The subtitle color of the disabled step</td></tr>
+        <tr class="dependent"><td></td><td>$step-separator-color</td><td>The separator border color between steps</td></tr>
+    </tbody>
+    <tbody class="group">
+        <tr class="primary">
+        <td><details><summary><strong>$indicator-background</strong></summary></details></td>
+        <td>$indicator-outline</td>
+        <td>The outline color of the step indicator</td>
+        </tr>
+        <tr class="dependent"><td></td><td>$indicator-color</td><td>The text color of the step indicator</td></tr>
+    </tbody>
+    <tbody class="group">
+        <tr class="primary">
+        <td><details><summary><strong>$current-step-background</strong></summary></details></td>
+        <td>$current-step-hover-background</td>
+        <td>The background of the current step header on hover</td>
+        </tr>
+        <tr class="dependent"><td></td><td>$current-step-focus-background</td><td>The background of the current step header on focus</td></tr>
+        <tr class="dependent"><td></td><td>$current-indicator-background</td><td>The background color of the current step indicator</td></tr>
+        <tr class="dependent"><td></td><td>$current-title-color</td><td>The color of the current step title</td></tr>
+        <tr class="dependent"><td></td><td>$current-subtitle-color</td><td>The color of the current step subtitle</td></tr>
+    </tbody>
+    <tbody class="group">
+        <tr class="primary">
+        <td><details><summary><strong>$invalid-indicator-background</strong></summary></details></td>
+        <td>$invalid-indicator-outline</td>
+        <td>The outline color of the invalid step indicator</td>
+        </tr>
+        <tr class="dependent"><td></td><td>$invalid-indicator-color</td><td>The color of the invalid step indicator</td></tr>
+        <tr class="dependent"><td></td><td>$invalid-title-color</td><td>The color of the invalid step title</td></tr>
+        <tr class="dependent"><td></td><td>$invalid-subtitle-color</td><td>The color of the invalid step subtitle</td></tr>
+        <tr class="dependent"><td></td><td>$invalid-title-hover-color</td><td>The color of the invalid step title on hover</td></tr>
+        <tr class="dependent"><td></td><td>$invalid-subtitle-hover-color</td><td>The color of the invalid step subtitle on hover</td></tr>
+        <tr class="dependent"><td></td><td>$invalid-title-focus-color</td><td>The color of the invalid step title on focus</td></tr>
+        <tr class="dependent"><td></td><td>$invalid-subtitle-focus-color</td><td>The color of the invalid step subtitle on focus</td></tr>
+    </tbody>
+    <tbody class="group">
+        <tr class="primary">
+        <td><details><summary><strong>$complete-step-background</strong></summary></details></td>
+        <td>$complete-step-hover-background</td>
+        <td>The background of the complete step header on hover</td>
+        </tr>
+        <tr class="dependent"><td></td><td>$complete-step-focus-background</td><td>The background of the complete step header on focus</td></tr>
+        <tr class="dependent"><td></td><td>$complete-indicator-background</td><td>The background color of the complete step indicator</td></tr>
+        <tr class="dependent"><td></td><td>$complete-indicator-color</td><td>The color of the completed step indicator</td></tr>
+        <tr class="dependent"><td></td><td>$complete-title-color</td><td>The color of the complete step title</td></tr>
+        <tr class="dependent"><td></td><td>$complete-subtitle-color</td><td>The color of the complete step subtitle</td></tr>
+        <tr class="dependent"><td></td><td>$complete-title-hover-color</td><td>The color of the complete step title on hover</td></tr>
+        <tr class="dependent"><td></td><td>$complete-subtitle-hover-color</td><td>The color of the complete step subtitle on hover</td></tr>
+        <tr class="dependent"><td></td><td>$complete-title-focus-color</td><td>The color of the complete step title on focus</td></tr>
+        <tr class="dependent"><td></td><td>$complete-subtitle-focus-color</td><td>The color of the complete step subtitle on focus</td></tr>
+    </tbody>
+</table>
+
 Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the `igx-stepper` appearance. 
 
 First, in order to use the functions exposed by the theme engine, we need to import the `index` file in our style file: 
@@ -358,7 +439,7 @@ The sample below demonstrates a simple styling applied through the [Ignite UI fo
 
 ### Styling with Tailwind
 
-You can style the stepper using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `igx-stepper`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+You can style the stepper using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
 
 Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
 
@@ -368,19 +449,19 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 @use 'igniteui-theming/tailwind/utilities/material.css';
 ```
 
-The utility file includes both light and dark theme variants. To use the light theme, the class should start with `light-*`, for the dark theme, use `dark-*`.
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-stepper`, `dark-stepper`.
 
-The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
-You can also override any other CSS variable using `arbitrary properties`, as shown below for the `border-radius-step-header` variable:
+You can find the full list of properties in the [stepper-theme]({environment:sassApiUrl}/themes#function-stepper-theme). The syntax is as follows:
 
 ```html
 <igx-stepper
-class="!material-stepper-step-background-[#7B9E89]
-![--border-radius-step-header:6px]"
-...
->
-...
+  class="!light-stepper ![--step-background:#7B9E89] ![--border-radius-step-header:6px]">
+  ...
 </igx-stepper>
 ```
 

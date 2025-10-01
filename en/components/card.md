@@ -328,6 +328,44 @@ You can justify the buttons so that they are laid out across the entire axis, no
 ```
 
 ## Styling
+
+### Card Theme Dependencies
+
+Changing the `$background` property automatically updates the following dependent properties:
+
+<table class="collapsible-table">
+    <thead>
+        <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody class="group">
+        <tr class="primary">
+            <td><strong>$background</strong></td>
+            <td>$header-text-color</td>
+            <td>The text color of the card title.</td>
+            </tr>
+            <tr>
+            <td></td>
+            <td>$subtitle-text-color</td>
+            <td>The text color of the card subtitle.</td>
+            </tr>
+            <tr>
+            <td></td>
+            <td>$content-text-color</td>
+            <td>The text color of the card content.</td>
+            </tr>
+            <tr>
+            <td></td>
+            <td>$actions-text-color</td>
+            <td>The text color of the card buttons.</td>
+            </tr>
+        </tr>
+    </tbody>
+</table>
+
 To get started with styling the card, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
@@ -336,6 +374,7 @@ To get started with styling the card, we need to import the `index` file, where 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
+
 Following the simplest approach, we create a new theme that extends the [`card-theme`]({environment:sassApiUrl}/themes#function-card-theme) and providing just a few styling parameters. If you only specify the `$background` parameter, the appropriate foreground colors will be automatically chosen, either black or white, based on which offers better contrast with the background.
 
 ```scss
@@ -363,7 +402,7 @@ The last step is to **include** the component theme in our application.
 
 ### Styling with Tailwind
 
-You can style the card using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `igx-card`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+You can style the `card` using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
 
 Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
 
@@ -373,15 +412,22 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 @use 'igniteui-theming/tailwind/utilities/material.css';
 ```
 
-The utility file includes both light and dark theme variants. To use the light theme, the class should start with `light-*`, for the dark theme, use `dark-*`.
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-card`, `dark-card`.
 
-The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
-You can also override any other CSS variable using `arbitrary properties`, as shown below for the `subtitle-text-color` variable:
+You can find the full list of properties in the [card-theme]({environment:sassApiUrl}/themes#function-card-theme). The syntax is as follows:
 
 ```html
-<igx-card class="!material-card-background-[#193625] ![--subtitle-text-color:#ECAA53]" elevated>
-    ...
+<igx-card
+class="!light-card
+![--background:#193625]
+![--subtitle-text-color:#ECAA53]"
+elevated>
+...
 </igx-card>
 ```
 

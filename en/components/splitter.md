@@ -210,6 +210,30 @@ Keyboard navigation is available by default in the splitter component. When you 
 - `Ctrl + Arrow Right` - Expands/Collapses a pane in a horizontal splitter
 
 ## Styling
+
+### Splitter Theme Dependencies
+
+When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
+
+<table>
+    <thead>
+      <tr>
+        <th>Primary Property</th>
+        <th>Dependent Property</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="primary">
+        <td><strong>$bar-color</strong></td>
+        <td>$handle-color</td>
+        <td>The color for the bar drag handle</td>
+      </tr>
+      <tr class="dependent"><td></td><td>$expander-color</td><td>The color for the arrow expander</td></tr>
+      <tr class="dependent"><td></td><td>$focus-color</td><td>The color used for focused splitter bar</td></tr>
+    </tbody>
+</table>
+
 To get started with styling the **igxSplitter** component, you need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
@@ -251,7 +275,7 @@ This is the final result from applying your new theme.
 
 ### Styling with Tailwind
 
-You can style the splitter using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `igx-splitter`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+You can style the splitter using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
 
 Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
 
@@ -261,53 +285,24 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 @use 'igniteui-theming/tailwind/utilities/material.css';
 ```
 
-The utility file includes both light and dark theme variants. To use the light theme, the class should start with `light-*`, for the dark theme, use `dark-*`.
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-splitter`, `dark-splitter`.
 
-The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
-You can also override any other CSS variable using `arbitrary properties`, as shown below for the `size` variable:
+You can find the full list of properties in the [splitter-theme]({environment:sassApiUrl}/themes#function-splitter-theme). The syntax is as follows:
 
 ```html
 <igx-splitter
-class="!material-splitter-color-[#7B9E89]
-![--size:7px]"
-...
->
-...
+  class="!light-splitter ![--bar-color:#7B9E89]">
+  ...
 </igx-splitter>
 ```
 
 >[!NOTE]
 >The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
-
-At the end your splitter should look like this:
-
-<div class="sample-container loading" style="height:400px">
-    <iframe id="splitter-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/splitter-tailwind-styling-sample/' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
-</div>
-
-### Custom sizing
-
-You can either use the `--size` variable, targeting the `igx-splitter` directly:
-
-```scss
-igx-splitter {
-  --size: 10px;
-}
-```
-
-Or you can use the universal `--igx-splitter-size` variable to target all instances:
-
-```html
-<div class="my-app">
-  <igx-splitter></igx-splitter>
-</div>
-```
-```scss
-.my-app {
-  --igx-splitter-size: 10px;
-}
-```
 
 
 ## API References

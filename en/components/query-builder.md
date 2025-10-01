@@ -269,6 +269,33 @@ We’ve created this Angular Query Builder example to show you the templating an
 
 ## Styling
 
+### Query Builder Theme Dependencies
+
+When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
+
+<table class="collapsible-table">
+    <thead>
+      <tr>
+        <th>Primary Property</th>
+        <th>Dependent Property</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody class="group">
+      <tr class="primary">
+        <td><details><summary><strong>$background</strong></summary></details></td>
+        <td>$label-foreground</td>
+        <td>The color for query builder labels "from" & "select"</td>
+      </tr>
+      <tr class="dependent"><td></td><td>$header-background</td><td>The background color of the query builder header</td></tr>
+      <tr class="dependent"><td></td><td>$header-foreground</td><td>The foreground color of the query builder header</td></tr>
+      <tr class="dependent"><td></td><td>$subquery-header-background</td><td>The background color of the subquery header</td></tr>
+      <tr class="dependent"><td></td><td>$subquery-border-color</td><td>The border color of the query block</td></tr>
+      <tr class="dependent"><td></td><td>$separator-color</td><td>The separator color of the query block</td></tr>
+      <tr class="dependent"><td></td><td>$header-border (Bootstrap only)</td><td>The border color of the query builder header</td></tr>
+    </tbody>
+</table>
+
 To get started with styling the Query Builder, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
@@ -354,7 +381,7 @@ The last step is to **include** the new component themes using the `css-vars` mi
 
 ### Styling with Tailwind
 
-You can style the query builder using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `igx-query-builder`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+You can style the query builder using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
 
 Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
 
@@ -364,17 +391,19 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 @use 'igniteui-theming/tailwind/utilities/material.css';
 ```
 
-The utility file includes both light and dark theme variants. To use the light theme, the class should start with `light-*`, for the dark theme, use `dark-*`.
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-query-builder`, `dark-query-builder`.
 
-The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
->[!NOTE]
->You can style only the query builder’s own properties through the `igx-query-builder` tag. To style the components used inside the query builder, apply their respective theme functions as shown above.
-
-You can also override any other CSS variable using `arbitrary properties`, as shown below for the `label-foreground` variable:
+You can find the full list of properties in the [query-builder-theme]({environment:sassApiUrl}/themes#function-query-builder-theme). The syntax is as follows:
 
 ```html
-<igx-query-builder class="!material-query-builder-background-[#90B69F] ![--label-foreground:#121E17]" ...>
+<igx-query-builder
+  class="!light-query-builder ![--background:#90B69F]">
+  ...
 </igx-query-builder>
 ```
 

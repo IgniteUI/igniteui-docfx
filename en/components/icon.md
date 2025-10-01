@@ -315,7 +315,7 @@ Learn more about it in the [Size](display-density.md) article.
 
 ### Styling with Tailwind
 
-You can style the icon using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `igx-icon`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+You can style the `icon` using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
 
 Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
 
@@ -325,14 +325,17 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 @use 'igniteui-theming/tailwind/utilities/material.css';
 ```
 
-The utility file includes both light and dark theme variants. To use the light theme, the class should start with `light-*`, for the dark theme, use `dark-*`.
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-icon`, `dark-icon`.
 
-The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
-You can also override any other CSS variable using `arbitrary properties`, as shown below for the `size` variable:
+You can find the full list of properties in the [icon-theme]({environment:sassApiUrl}/index.html#function-icon-theme). The syntax is as follows:
 
 ```html
- <igx-icon class="!material-icon-color-[#7B9E89] ![--size:48px]">person</igx-icon>
+<igx-icon class="!light-icon ![--color:#7B9E89] ![--size:48px]">person</igx-icon>
 ```
 
 >[!NOTE]

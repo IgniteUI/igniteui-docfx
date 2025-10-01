@@ -277,6 +277,68 @@ When combobox is opened, allow custom values are enabled and add item button is 
 
 ## Styling
 
+### Combo Theme Dependencies
+
+When you modify a primary property, all related dependent properties are updated automatically:
+
+<table class="collapsible-table">
+    <thead>
+        <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody class="group">
+        <tr class="primary">
+            <td><strong>$empty-list-background</strong></td>
+            <td>$empty-list-placeholder-color</td>
+            <td>The combo placeholder text color.</td>
+        </tr>
+        <tr class="primary">
+            <td><details><summary><strong>$toggle-button-background</strong></summary></details></td>
+            <td>$toggle-button-foreground</td>
+            <td>The combo toggle button foreground color.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$toggle-button-background-focus</td>
+            <td>The combo toggle button background color when focused.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$toggle-button-background-focus--border</td>
+            <td>The combo toggle button background color when focused (border variant).</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$toggle-button-foreground-filled</td>
+            <td>The combo toggle button foreground color when filled.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$toggle-button-background-disabled</td>
+            <td>The combo toggle button background color when disabled.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$toggle-button-foreground-disabled</td>
+            <td>The combo toggle button foreground color when disabled.</td>
+        </tr>
+        <tr class="primary">
+            <td><strong>$toggle-button-background-focus</strong></td>
+            <td>$toggle-button-foreground-focus</td>
+            <td>The combo toggle button foreground color when focused.</td>
+        </tr>
+        <tr class="primary">
+            <td><strong>$clear-button-background-focus</strong></td>
+            <td>$clear-button-foreground-focus</td>
+            <td>The combo clear button foreground color when focused.</td>
+        </tr>
+    </tbody>
+</table>
+
+
 Using the [`Ignite UI for Angular Theming`](themes/index.md), we can greatly alter the combobox appearance. First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file:
 
 ```scss
@@ -338,7 +400,7 @@ The last step is to include the component's theme.
 
 ### Styling with Tailwind
 
-You can style the combo using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `igx-combo`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+You can style the `combo` using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
 
 Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
 
@@ -348,18 +410,19 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 @use 'igniteui-theming/tailwind/utilities/material.css';
 ```
 
-The utility file includes both light and dark theme variants. To use the light theme, the class should start with `light-*`, for the dark theme, use `dark-*`.
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-combo`, `dark-combo`.
 
-The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
->[!NOTE]
->You can style only the combo’s own properties through the `igx-combo` tag. To style the components used inside the combo, apply their respective theme functions as shown above.
-
-You can also override any other CSS variable using `arbitrary properties`, as shown below for the `clear-button-foreground` variable:
+You can find the full list of properties in the [combo-theme]({environment:sassApiUrl}/themes#function-combo-theme). The syntax is as follows:
 
 ```html
 <igx-combo
-class="!material-combo-toggle-button-[#99BAA6]
+class="!light-combo
+![--toggle-button-background:#99BAA6]
 ![--clear-button-foreground:#99BAA6]"
 ...></igx-combo>
 ```

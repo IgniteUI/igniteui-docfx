@@ -481,6 +481,185 @@ In the **tickLabel** callback above, we are rounding the **value** of every **pr
 
 ## Styling
 
+### Slider Theme Dependencies
+When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
+
+<div class="theme-switcher-wrapper">
+  <input type="radio" name="theme" id="material" checked>
+  <label for="material" class="switch-label">Material</label>
+  <input type="radio" name="theme" id="fluent">
+  <label for="fluent" class="switch-label">Fluent</label>
+  <input type="radio" name="theme" id="bootstrap">
+  <label for="bootstrap" class="switch-label">Bootstrap</label>
+  <input type="radio" name="theme" id="indigo">
+  <label for="indigo" class="switch-label">Indigo</label>
+
+  <div class="tables">
+    <!-- Material Theme Table -->
+    <div class="theme-table material">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$track-color</strong></summary></details></td>
+            <td>$thumb-color</td>
+            <td>The color of the thumb.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$base-track-color</td><td>The base background color of the track.</td></tr>
+          <tr class="dependent"><td></td><td>$track-hover-color</td><td>The color of the track on hover.</td></tr>
+          <tr class="dependent"><td></td><td>$disabled-fill-track-color</td><td>The base fill track color when disabled.</td></tr>
+          <tr class="dependent"><td></td><td>$label-background-color</td><td>The background color of the bubble label.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$thumb-color</strong></summary></details></td>
+            <td>$track-color</td>
+            <td>The color of the track</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$disabled-thumb-color</td><td>The thumb color when it is disabled.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$base-track-color</strong></summary></details></td>
+            <td>$base-track-hover-color</td>
+            <td>The base track color on hover.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$track-step-color</td><td>The color of the track steps.</td></tr>
+          <tr class="dependent"><td></td><td>$disabled-base-track-color</td><td>The base track color when disabled.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="theme-table fluent">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$thumb-border-color</strong></summary></details></td>
+            <td>$track-color</td>
+            <td>The color of the track</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$thumb-border-hover-color</td><td>The thumb border color when hovered.</td></tr>
+          <tr class="dependent"><td></td><td>$thumb-focus-color</td><td>The focus color of the thumb.</td></tr>
+          <tr class="dependent"><td></td><td>$thumb-disabled-border-color</td><td>The thumb border color when disabled.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$track-color</strong></summary></details></td>
+            <td>$thumb-border-color</td>
+            <td>The thumb border color</td>
+          </tr>
+           <tr class="dependent"><td></td><td>$track-hover-color</td><td>The color of the track on hover.</td></tr>
+          <tr class="dependent"><td></td><td>$disabled-fill-track-color</td><td>The base fill track color when disabled.</td></tr>
+          <tr class="dependent"><td></td><td>$label-background-color</td><td>The background color of the bubble label.</td></tr>
+          <tr class="dependent"><td></td><td>$label-text-color</td><td>The text color of the bubble label.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$base-track-color</strong></summary></details></td>
+            <td>$base-track-hover-color</td>
+            <td>The base track color on hover.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$track-step-color</td><td>The color of the track steps.</td></tr>
+          <tr class="dependent"><td></td><td>$disabled-base-track-color</td><td>The base track color when disabled.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="theme-table bootstrap">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$thumb-color</strong></summary></details></td>
+            <td>$thumb-border-color</td>
+            <td>The thumb border color.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$thumb-focus-color</td><td>The focus color of the thumb.</td></tr>
+          <tr class="dependent"><td></td><td>$track-color</td><td>The color of the track.</td></tr>
+          <tr class="dependent"><td></td><td>$label-background-color</td><td>The background color of the bubble label.</td></tr>
+          <tr class="dependent"><td></td><td>$label-text-color</td><td>The text color of the bubble label.</td></tr>
+          <tr class="dependent"><td></td><td>$disabled-thumb-color</td><td>The thumb color when it is disabled.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$track-color</strong></summary></details></td>
+            <td>$track-hover-color</td>
+            <td>The color of the track on hover.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$disabled-fill-track-color</td><td>The fill track color when disabled.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$base-track-color</strong></summary></details></td>
+            <td>$base-track-hover-color</td>
+            <td>The base track color on hover.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$track-step-color</td><td>The color of the track steps.</td></tr>
+          <tr class="dependent"><td></td><td>$disabled-base-track-color</td><td>The base track color when disabled.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="theme-table indigo">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$thumb-border-color</strong></summary></details></td>
+            <td>$track-color</td>
+            <td>The color of the track.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$thumb-border-hover-color</td><td>The thumb border color when hovered.</td></tr>
+          <tr class="dependent"><td></td><td>$thumb-focus-color</td><td>The focus color of the thumb.</td></tr>
+          <tr class="dependent"><td></td><td>$thumb-disabled-border-color</td><td>The thumb border color when disabled.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$track-color</strong></summary></details></td>
+            <td>$thumb-border-color</td>
+            <td>The thumb border color.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$track-hover-color</td><td>The color of the track on hover.</td></tr>
+          <tr class="dependent"><td></td><td>$disabled-fill-track-color</td><td>The base fill track color when disabled.</td></tr>
+          <tr class="dependent"><td></td><td>$label-background-color</td><td>The background color of the bubble label.</td></tr>
+          <tr class="dependent"><td></td><td>$label-text-color</td><td>The text color of the bubble label.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$base-track-color</strong></summary></details></td>
+            <td>$base-track-hover-color</td>
+            <td>The base track color on hover.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$track-step-color</td><td>The color of the track steps.</td></tr>
+          <tr class="dependent"><td></td><td>$disabled-base-track-color</td><td>The base track color when disabled.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
 To customize the Slider, you first need to import the `index` file, where all styling functions and mixins are located.
 
 ```scss
@@ -519,7 +698,7 @@ This is the final result from applying our new theme.
 
 ### Styling with Tailwind
 
-You can style the slider using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `igx-slider`. Be sure to [set up Tailwind](../themes/misc/tailwind-classes.md) first.
+You can style the `slider` using our custom Tailwind utility classes. Make sure to [set up Tailwind](../themes/misc/tailwind-classes.md) first.
 
 Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
 
@@ -529,16 +708,19 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 @use 'igniteui-theming/tailwind/utilities/material.css';
 ```
 
-The utility file includes both light and dark theme variants. To use the light theme, the class should start with `light-*`, for the dark theme, use `dark-*`.
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-slider`, `dark-slider`.
 
-The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
-You can also override any other CSS variable using `arbitrary properties`, as shown below for the `track-step-color` variable:
+You can find the full list of properties in the [IgxSlider Theme]({environment:sassApiUrl}/themes#function-slider-theme). The syntax is as follows:
 
 ```html
 <igx-slider
-class="!material-slider-color-[#7B9E89]
-![--track-step-color:#B9375D]">
+class="!light-slider ![--thumb-color:#7B9E89]"
+>
 </igx-slider>
 ```
 

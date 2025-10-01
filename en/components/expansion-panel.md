@@ -237,6 +237,58 @@ $my-color-palette: palette(
 );
 ```
 
+### Expansion Panel Theme Dependencies
+
+Changing the `$header-background` and `$body-background` properties automatically updates the following dependent properties:
+
+<table class="collapsible-table">
+    <thead>
+        <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody class="group">
+        <tr class="primary">
+            <td><details><summary><strong>$header-background</strong></summary></details></td>
+            <td>$header-title-color</td>
+            <td>The panel header title text color.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$header-icon-color</td>
+            <td>The panel header icon color.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$header-description-color</td>
+            <td>The panel header description text color.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$header-focus-background</td>
+            <td>The panel header focus background color.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$disabled-text-color</td>
+            <td>The panel disabled text color.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$disabled-description-color</td>
+            <td>The panel disabled header description text color.</td>
+        </tr>
+        <tr class="primary">
+            <td><strong>$body-background</strong></td>
+            <td>$body-color</td>
+            <td>The panel body text color.</td>
+        </tr>
+    </tbody>
+</table>
+
+
 ### Creating the Component Theme
 
 Now let's create our component theme and pass the `$my-color-palette` palette from the above sniped.
@@ -292,7 +344,7 @@ To find out more on how you can use Ignite UI theming engine [`click here`](them
 
 ### Styling with Tailwind
 
-You can style the expansion panel using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `igx-expansion-panel`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+You can style the expansion panel using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
 
 Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
 
@@ -302,17 +354,22 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 @use 'igniteui-theming/tailwind/utilities/material.css';
 ```
 
-The utility file includes both light and dark theme variants. To use the light theme, the class should start with `light-*`, for the dark theme, use `dark-*`.
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-expansion-panel` classes for the light theme.
+- Use `dark-expansion-panel` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-expansion-panel`, `dark-expansion-panel`.
 
-The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
-You can also override any other CSS variable using `arbitrary properties`, as shown below for the `body-background` variable:
+You can find the full list of properties in the [expansion-panel-theme]({environment:sassApiUrl}/themes#function-expansion-panel-theme). The syntax is as follows:
 
 ```html
 <igx-expansion-panel
-class="!material-expansion-panel-header-background-[#4F6A5A]
-![--body-background:#A3C7B2]">
-    ...
+  class="!light-expansion-panel
+  ![--header-background:#4F6A5A]
+  ![--body-background:#A3C7B2]"
+>
+  ...
 </igx-expansion-panel>
 ```
 

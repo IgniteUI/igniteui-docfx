@@ -178,6 +178,32 @@ public open(toast) {
 
 ## Styling
 
+### Toast Theme Dependencies
+
+When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
+
+<table>
+  <thead>
+    <tr>
+      <th>Primary Property</th>
+      <th>Dependent Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>$background</strong></td>
+      <td>$text-color</td>
+      <td>The text-color used for the toast.</td>
+    </tr>
+    <tr>
+      <td><strong>$text-color</strong></td>
+      <td>$border-color</td>
+      <td>The border-color used for the toast.</td>
+    </tr>
+  </tbody>
+</table>
+
 To get started with styling the toast, we need to import the index file, where all the theme functions and component mixins live:
 
 ```scss
@@ -216,7 +242,7 @@ The last step is to pass the custom toast theme:
 
 ### Styling with Tailwind
 
-You can style the toast using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `igx-toast`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+You can style the toast using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
 
 Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
 
@@ -226,18 +252,19 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 @use 'igniteui-theming/tailwind/utilities/material.css';
 ```
 
-The utility file includes both light and dark theme variants. To use the light theme, the class should start with `light-*`, for the dark theme, use `dark-*`.
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-toast`, `dark-toast`.
 
-The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
-You can also override any other CSS variable using `arbitrary properties`, as shown below for the `border-radius` variable:
+You can find the full list of properties in the [IgxToast Theme]({environment:sassApiUrl}/themes#function-toast-theme). The syntax is as follows:
 
 ```html
 <igx-toast
-class="!material-toast-background-[#90B69F]
-![--border-radius:6px]"
-...>
-    This is the toast message.
+  class="!light-toast ![--background:#90B69F]">
+  ...
 </igx-toast>
 ```
 

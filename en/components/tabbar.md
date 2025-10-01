@@ -382,6 +382,63 @@ The approach described above is used by the following sample to demonstrate rout
 
 ## Styles
 
+### Bottom Nav Theme Dependencies
+
+When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
+
+<!-- TabBar Theme Table -->
+<table>
+    <thead>
+        <tr>
+        <th>Primary Property</th>
+        <th>Dependent Property</th>
+        <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td><strong>$background</strong></td>
+        <td>$label-color</td>
+        <td>The label color used in idle state.</td>
+        </tr>
+        <tr>
+        <td><strong>$label-color</strong></td>
+        <td>$icon-color</td>
+        <td>The icon color used in idle state.</td>
+        </tr>
+        <tr>
+        <td></td>
+        <td>$label-disabled-color</td>
+        <td>The disabled color of the label.</td>
+        </tr>
+        <tr>
+        <td><strong>$icon-color</strong></td>
+        <td>$label-color</td>
+        <td>The label color used in idle state.</td>
+        </tr>
+        <tr>
+        <td><strong>$label-disabled-color</strong></td>
+        <td>$icon-disabled-color</td>
+        <td>The disabled color of the icon.</td>
+        </tr>
+        <tr>
+        <td><strong>$icon-disabled-color</strong></td>
+        <td>$label-disabled-color</td>
+        <td>The disabled color of the label.</td>
+        </tr>
+        <tr>
+        <td><strong>$label-selected-color</strong></td>
+        <td>$icon-selected-color</td>
+        <td>The icon color used in selected state.</td>
+        </tr>
+        <tr>
+        <td><strong>$icon-selected-color</strong></td>
+        <td>$label-selected-color</td>
+        <td>The label color used in selected state.</td>
+        </tr>
+    </tbody>
+</table>
+
 To get started with styling the tabs, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
@@ -425,9 +482,9 @@ The last step is to **include** the component theme in our application.
 
 ### Styling with Tailwind
 
-You can style the bottom nav using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `<igx-bottom-nav>`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+You can style the bottom navigation using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
 
-Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+Along with the Tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
 
 ```scss
 @import "tailwindcss";
@@ -435,14 +492,23 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 @use 'igniteui-theming/tailwind/utilities/material.css';
 ```
 
-The utility file includes both light and dark theme variants. To use the light theme, the class should start with `light-*`, for the dark theme, use `dark-*`.
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-bottom-nav`, `dark-bottom-nav`.
 
-The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
-You can also override any other CSS variable using `arbitrary properties`, as shown below for the `icon-selected-color` and `label-selected-color` variables:
+You can find the full list of properties in the [IgxBottomNav Theme]({environment:sassApiUrl}/index.html#function-bottom-nav-theme). The syntax is as follows:
 
 ```html
-<igx-bottom-nav class="!material-bottom-nav-background-[#011627] ![--icon-selected-color:#FF8040] ![--label-selected-color:#FF8040]">
+<igx-bottom-nav
+    class="!light-bottom-nav
+    ![--background:#011627]
+    ![--icon-selected-color:#FF8040] 
+    ![--label-selected-color:#FF8040]">
+    ...
+</igx-bottom-nav>
 ```
 
 >[!NOTE]

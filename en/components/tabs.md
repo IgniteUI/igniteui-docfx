@@ -383,6 +383,325 @@ The above code creates an `igx-tabs` component with three tab items. Each tab it
 
 ## Styles
 
+### Tabs Theme Dependencies
+
+When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
+
+<div class="theme-switcher-wrapper">
+  <input type="radio" name="theme" id="material" checked>
+  <label for="material" class="switch-label">Material</label>
+  <input type="radio" name="theme" id="fluent">
+  <label for="fluent" class="switch-label">Fluent</label>
+  <input type="radio" name="theme" id="bootstrap">
+  <label for="bootstrap" class="switch-label">Bootstrap</label>
+  <input type="radio" name="theme" id="indigo">
+  <label for="indigo" class="switch-label">Indigo</label>
+
+  <div class="tables">
+    <div class="theme-table material">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-background</strong></summary></details></td>
+            <td>$item-active-background</td>
+            <td>The color used for the active/focused tab background.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-text-color</td><td>The color used for the tab text color.</td></tr>
+          <tr class="dependent"><td></td><td>$item-icon-color</td><td>The color used for the tab icon.</td></tr>
+          <tr class="dependent"><td></td><td>$item-hover-background</td><td>The background used for the tabs on hover.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>The color used for the active tab indicator.</td></tr>
+          <tr class="dependent"><td></td><td>$button-background</td><td>The color used for the button background.</td></tr>
+          <tr class="dependent"><td></td><td>$button-hover-background</td><td>The color used for the button background on hover.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-active-background</strong></summary></details></td>
+            <td>$item-active-icon-color</td>
+            <td>The color used for the active tab icon.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-active-color</td><td>The color used for the active tabs text.</td></tr>
+          <tr class="dependent"><td></td><td>$tab-ripple-color</td><td>The color used for the button background.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-text-color</strong></summary></details></td>
+            <td>$item-hover-color</td>
+            <td>The text color used for the tabs on hover if no `$item-hover-background` is provided</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-icon-color</td><td>The color used for the tab icon if no `$item-background` is provided</td></tr>
+          <tr class="dependent"><td></td><td>$item-active-color</td><td>The color used for the active tabs text if no `$item-active-background` is provided</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>The color used for the active tab indicator if no `$item-background` is provided</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-icon-color</strong></summary></details></td>
+            <td>$item-hover-icon-color</td>
+            <td>The color used for the tab icon on hover.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-active-icon-color</td><td>The color used for the active tab icon.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>The color used for the active tab indicator.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-background</strong></summary></details></td>
+            <td>$button-hover-background</td>
+            <td>The color used for the button background on hover.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-color</td><td>The color used for the button icon/text color.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-color</strong></summary></details></td>
+            <td>$button-disabled-color</td>
+            <td>The color used for the disabled button icon/text.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-ripple-color</td><td>The color used for the button background on hover.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><strong>$button-hover-background</strong></td>
+            <td>$button-hover-color</td>
+            <td>The color used for the button icon/text color on hover.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="theme-table fluent">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-background</strong></summary></details></td>
+            <td>$item-active-background</td>
+            <td>The color used for the active/focused tab background.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-text-color</td><td>The color used for the tab text color.</td></tr>
+          <tr class="dependent"><td></td><td>$item-icon-color</td><td>The color used for the tab icon.</td></tr>
+          <tr class="dependent"><td></td><td>$item-hover-background</td><td>The background used for the tabs on hover.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>The color used for the active tab indicator.</td></tr>
+          <tr class="dependent"><td></td><td>$button-background</td><td>The color used for the button background.</td></tr>
+          <tr class="dependent"><td></td><td>$button-hover-background</td><td>The color used for the button background on hover.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-active-background</strong></summary></details></td>
+            <td>$item-active-icon-color</td>
+            <td>The color used for the active tab icon.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-active-color</td><td>The color used for the active tabs text.</td></tr>
+          <tr class="dependent"><td></td><td>$tab-ripple-color</td><td>The color used for the button background.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-text-color</strong></summary></details></td>
+            <td>$item-hover-color</td>
+            <td>The text color used for the tabs on hover if no `$item-hover-background` is provided</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-icon-color</td><td>The color used for the tab icon if no `$item-background` is provided</td></tr>
+          <tr class="dependent"><td></td><td>$item-active-color</td><td>The color used for the active tabs text if no `$item-active-background` is provided</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>The color used for the active tab indicator if no `$item-background` is provided</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-icon-color</strong></summary></details></td>
+            <td>$item-hover-icon-color</td>
+            <td>The color used for the tab icon on hover.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-active-icon-color</td><td>The color used for the active tab icon.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>The color used for the active tab indicator.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-background</strong></summary></details></td>
+            <td>$button-hover-background</td>
+            <td>The color used for the button background on hover.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-color</td><td>The color used for the button icon/text color.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-color</strong></summary></details></td>
+            <td>$button-disabled-color</td>
+            <td>The color used for the disabled button icon/text.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-ripple-color</td><td>The color used for the button background on hover.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><strong>$button-hover-background</strong></td>
+            <td>$button-hover-color</td>
+            <td>The color used for the button icon/text color on hover.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="theme-table bootstrap">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-background</strong></summary></details></td>
+            <td>$item-active-background</td>
+            <td>The color used for the active/focused tab background.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-text-color</td><td>The color used for the tab text color.</td></tr>
+          <tr class="dependent"><td></td><td>$item-icon-color</td><td>The color used for the tab icon.</td></tr>
+          <tr class="dependent"><td></td><td>$item-hover-background</td><td>The background used for the tabs on hover.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>The color used for the active tab indicator.</td></tr>
+          <tr class="dependent"><td></td><td>$button-background</td><td>The color used for the button background.</td></tr>
+          <tr class="dependent"><td></td><td>$button-hover-background</td><td>The color used for the button background on hover.</td></tr>
+          <tr class="dependent"><td></td><td>$border-color</td><td>The border color of the tabs.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-active-background</strong></summary></details></td>
+            <td>$item-active-icon-color</td>
+            <td>The color used for the active tab icon.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-active-color</td><td>The color used for the active tabs text.</td></tr>
+          <tr class="dependent"><td></td><td>$tab-ripple-color</td><td>The color used for the button background.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-text-color</strong></summary></details></td>
+            <td>$item-hover-color</td>
+            <td>The text color used for the tabs on hover if no `$item-hover-background` is provided</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-icon-color</td><td>The color used for the tab icon if no `$item-background` is provided</td></tr>
+          <tr class="dependent"><td></td><td>$button-color</td><td>The color used for the button icon/text color if no `$button-background` is provided (non-material)</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-icon-color</strong></summary></details></td>
+            <td>$item-hover-icon-color</td>
+            <td>The color used for the tab icon on hover if no `$item-hover-background` is provided</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-text-color</td><td>The color used for the tab text color if no `$item-background` is provided</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-background</strong></summary></details></td>
+            <td>$button-hover-background</td>
+            <td>The color used for the button background on hover.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-color</td><td>The color used for the button icon/text color.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-color</strong></summary></details></td>
+            <td>$button-hover-color</td>
+            <td>The color used for the button icon/text color on hover if no `$button-background` is provided</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-disabled-color</td><td>The color used for the disabled button icon/text.</td></tr>
+          <tr class="dependent"><td></td><td>$button-ripple-color</td><td>The color used for the button background on hover.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><strong>$button-hover-background</strong></td>
+            <td>$button-hover-color</td>
+            <td>The color used for the button icon/text color on hover.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="theme-table indigo">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-background</strong></summary></details></td>
+            <td>$item-active-background</td>
+            <td>The color used for the active/focused tab background.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-text-color</td><td>The color used for the tab text color.</td></tr>
+          <tr class="dependent"><td></td><td>$item-icon-color</td><td>The color used for the tab icon.</td></tr>
+          <tr class="dependent"><td></td><td>$item-hover-background</td><td>The background used for the tabs on hover.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>The color used for the active tab indicator.</td></tr>
+          <tr class="dependent"><td></td><td>$button-background</td><td>The color used for the button background.</td></tr>
+          <tr class="dependent"><td></td><td>$button-hover-background</td><td>The color used for the button background on hover.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-active-background</strong></summary></details></td>
+            <td>$item-active-icon-color</td>
+            <td>The color used for the active tab icon.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-active-color</td><td>The color used for the active tabs text.</td></tr>
+          <tr class="dependent"><td></td><td>$tab-ripple-color</td><td>The color used for the button background.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-text-color</strong></summary></details></td>
+            <td>$item-hover-color</td>
+            <td>The text color used for the tabs on hover if no `$item-hover-background` is provided</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-icon-color</td><td>The color used for the tab icon if no `$item-background` is provided</td></tr>
+          <tr class="dependent"><td></td><td>$item-active-color</td><td>The color used for the active tabs text if no `$item-active-background` is provided</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>The color used for the active tab indicator if no `$item-background` is provided</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-icon-color</strong></summary></details></td>
+            <td>$item-hover-icon-color</td>
+            <td>The color used for the tab icon on hover.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-active-icon-color</td><td>The color used for the active tab icon.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>The color used for the active tab indicator.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-background</strong></summary></details></td>
+            <td>$button-hover-background</td>
+            <td>The color used for the button background on hover.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-color</td><td>The color used for the button icon/text color.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-color</strong></summary></details></td>
+            <td>$button-disabled-color</td>
+            <td>The color used for the disabled button icon/text.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-ripple-color</td><td>The color used for the button background on hover.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><strong>$button-hover-background</strong></td>
+            <td>$button-hover-color</td>
+            <td>The color used for the button icon/text color on hover.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
 To get started with styling the tabs, we need to import the theming module, where all the theme functions and component mixins live:
 
 ```scss
@@ -427,7 +746,7 @@ The last step is to **include** the component theme in our application.
 
 ### Styling with Tailwind
 
-You can style the tabs using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `igx-tabs`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+You can style the tabs using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
 
 Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
 
@@ -437,17 +756,22 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 @use 'igniteui-theming/tailwind/utilities/material.css';
 ```
 
-The utility file includes both light and dark theme variants. To use the light theme, the class should start with `light-*`, for the dark theme, use `dark-*`.
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-tabs`, `dark-tabs`.
 
-The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
-You can also override any other CSS variable using `arbitrary properties`, as shown below for the `item-active-icon-color` and `item-active-color` variables:
+You can find the full list of properties in the [IgxTabs Theme]({environment:sassApiUrl}/themes#function-tabs-theme). The syntax is as follows:
 
 ```html
 <igx-tabs
-class="!material-tabs-background-[#355753]
-![--item-active-icon-color:#ff9641]
-![--item-active-color:#ff9641]">
+  class="!light-tabs
+  ![--item-background:#011627]
+  ![--item-active-icon-color:#FF8040]
+  ![--item-active-color:#FF8040]">
+  ...
 </igx-tabs>
 ```
 

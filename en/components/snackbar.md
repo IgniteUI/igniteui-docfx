@@ -276,6 +276,29 @@ public open(snackbar) {
 ```
 
 ## Styling
+
+### Snackbar Theme Dependencies
+
+When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
+
+<table>
+    <thead>
+        <tr>
+        <th>Primary Property</th>
+        <th>Dependent Property</th>
+        <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="primary">
+        <td><strong>$background</strong></td>
+        <td>$text-color</td>
+        <td>The text color used in the snackbar</td>
+        </tr>
+        <tr class="dependent"><td></td><td>$button-color</td><td>The button color used in the snackbar</td></tr>
+    </tbody>
+</table>
+
 To get started with styling the snackbar, we need to import the index file, where all the theme functions and component mixins live:
 
 ```scss
@@ -317,7 +340,7 @@ The last step is to **include** the component theme in our application.
 
 ### Styling with Tailwind
 
-You can style the snackbar using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `igx-snackbar`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+You can style the snackbar using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
 
 Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
 
@@ -327,19 +350,20 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 @use 'igniteui-theming/tailwind/utilities/material.css';
 ```
 
-The utility file includes both light and dark theme variants. To use the light theme, the class should start with `light-*`, for the dark theme, use `dark-*`.
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-snackbar`, `dark-snackbar`.
 
-The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
-You can also override any other CSS variable using `arbitrary properties`, as shown below for the `button-color` variable:
+You can find the full list of properties in the [snackbar-theme]({environment:sassApiUrl}/themes#function-snackbar-theme). The syntax is as follows:
 
 ```html
 <igx-snackbar
-class="!material-snackbar-background-[#7B9E89]
-![--button-color:#DD0D4B]"
-...
->
-    Message sent
+  class="!light-snackbar ![--background:#7B9E89]
+  ![--button-color:#DD0D4B]">
+  ...
 </igx-snackbar>
 ```
 

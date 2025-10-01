@@ -248,6 +248,159 @@ public ngOnInit() {
 
 ## Styling
 
+### Button Group Theme Dependencies
+
+When you set a value for the `$item-background` property, all related dependent properties listed in the table below are automatically updated to maintain visual consistency. The table shows which properties are affected when you customize the primary property.
+
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>Primary Property</th>
+      <th>Dependent Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <!-- group for item-background -->
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$item-background</strong></summary></details>
+      </td>
+      <td>$item-hover-background</td>
+      <td>The hover background color for items.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-selected-background</td>
+      <td>The selected item background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-focused-background</td>
+      <td>The focused item background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-background-color</td>
+      <td>The disabled item background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-border-color</td>
+      <td>The border color for items.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-text-color</td>
+      <td>The text color for items.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$idle-shadow-color</td>
+      <td>The idle shadow color for items.</td>
+    </tr>
+  </tbody>
+
+  <!-- group for item-hover-background -->
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$item-hover-background</strong></summary></details>
+      </td>
+      <td>$item-selected-hover-background</td>
+      <td>The selected item hover background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-focused-hover-background</td>
+      <td>The focused hover background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-hover-text-color</td>
+      <td>The text color for hovered items.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-hover-icon-color</td>
+      <td>The icon color for hovered items.</td>
+    </tr>
+  </tbody>
+
+  <!-- group for item-selected-background -->
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$item-selected-background</strong></summary></details>
+      </td>
+      <td>$item-selected-focus-background</td>
+      <td>The selected item focus background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-selected-background</td>
+      <td>The disabled selected background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-selected-text-color</td>
+      <td>The text color for selected items.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-selected-icon-color</td>
+      <td>The icon color for selected items.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-selected-hover-text-color</td>
+      <td>The text color for selected hover items.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-selected-hover-icon-color</td>
+      <td>The icon color for selected hover items.</td>
+    </tr>
+  </tbody>
+
+  <!-- group for item-border-color -->
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$item-border-color</strong></summary></details>
+      </td>
+      <td>$item-hover-border-color</td>
+      <td>The border color for hovered items.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-focused-border-color</td>
+      <td>The border color for focused items.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-selected-border-color</td>
+      <td>The border color for selected items.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-selected-hover-border-color</td>
+      <td>The border color for selected hover items.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-disabled-border</td>
+      <td>The border color for disabled items.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-selected-border-color</td>
+      <td>The border color for disabled selected items.</td>
+    </tr>
+  </tbody>
+</table>
+
 To get started with styling the button group, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
@@ -283,7 +436,7 @@ The last step is to include the component's theme.
 
 ### Styling with Tailwind
 
-You can style the button group using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `<igx-button-group>`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+You can style the `button-group` using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
 
 Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
 
@@ -293,20 +446,21 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 @use 'igniteui-theming/tailwind/utilities/material.css';
 ```
 
-The utility file includes both light and dark theme variants. To use the light theme, the class should start with `light-*`, for the dark theme, use `dark-*`.
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-button-group`, `dark-button-group`.
 
-The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
-You can also override any other CSS variable using `arbitrary properties`, as shown below for the `shadow` variable:
+You can find the full list of properties in the [button-group-theme]({environment:sassApiUrl}/themes#function-button-group-theme). The syntax is as follows:
 
 ```html
-<igx-buttongroup
-class="!material-button-group-color-[#7B9E89] ![--shadow:var(--ig-elevation-4)]">
-    <button igxButton igxRipple="white">Sofia</button>
-    <button igxButton igxRipple="white">London</button>
-    <button igxButton igxRipple="white">New York</button>
-    <button igxButton igxRipple="white" disabled>Tokyo</button>
-</igx-buttongroup>
+<igx-button-group
+class="!light-button-group ![--item-background:#7B9E89]"
+>
+...
+</igx-button-group>
 ```
 
 >[!NOTE]

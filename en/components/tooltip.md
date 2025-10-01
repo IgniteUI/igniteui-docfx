@@ -338,9 +338,9 @@ So now our styled tooltip should look like this:
 
 ### Styling with Tailwind
 
-You can style the tooltip using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `igxTooltip`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+You can style the tooltip using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
 
-Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+Along with the Tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
 
 ```scss
 @import "tailwindcss";
@@ -348,19 +348,21 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 @use 'igniteui-theming/tailwind/utilities/material.css';
 ```
 
-The utility file includes both light and dark theme variants. To use the light theme, the class should start with `light-*`, for the dark theme, use `dark-*`.
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-tooltip`, `dark-tooltip`.
 
-The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+Once applied, these classes enable dynamic theme calculations. You can then override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
-You can also override any other CSS variable using `arbitrary properties`, as shown below for the `border-radius` variable:
+You can find the full list of properties in the [IgxTooltip Theme]({environment:sassApiUrl}/themes#function-tooltip-theme). The syntax is as follows:
 
 ```html
 <div
-class="!material-tooltip-background-[#90B69F]
-![--border-radius:6px]"
-#tooltipRef="tooltip"
-igxTooltip>
-    Her name is Madelyn James
+  class="!light-tooltip ![--background:#90B69F]"
+  #tooltipRef="tooltip"
+  igxTooltip>
+  Her name is Madelyn James
 </div>
 ```
 

@@ -141,6 +141,32 @@ You should see something like this:
 
 ## Styling
 
+### Avatar Theme Dependencies
+
+Changing the `$background` property automatically updates the following dependent properties:
+
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>Primary Property</th>
+      <th>Dependent Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+      <td><strong>$background</strong></td>
+      <td>$color</td>
+      <td>The text color used of the avatar.</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>$icon-color</td>
+      <td>The icon color used of the avatar.</td>
+    </tr>
+  </tbody>
+</table>
+
 To get started with styling the avatar, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
@@ -188,7 +214,7 @@ If all went well, you should see something like the following in the browser:
 
 ### Styling with Tailwind
 
-You can style the avatar using our custom Tailwind utility classes, which apply the appropriate theme for you. To do this, simply add the corresponding class to your `<igx-avatar>`. Be sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+You can style the `avatar` using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
 
 Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
 
@@ -198,16 +224,20 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 @use 'igniteui-theming/tailwind/utilities/material.css';
 ```
 
-The utility file includes both light and dark theme variants. To use the light theme, the class should start with `light-*`, for the dark theme, use `dark-*`.
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-avatar`, `dark-avatar`.
 
-The value inside square brackets defines the color and can be any valid CSS color format, such as a HEX code, CSS variable, RGB, etc.
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
-You can also override any other CSS variable using `arbitrary properties`, as shown below for the `color` variable:
+You can find the full list of properties in the [avatar-theme]({environment:sassApiUrl}/themes#function-avatar-theme). The syntax is as follows:
 
 ```html
 <igx-avatar
-class="!light-avatar-background-[#FF4E00] ![--color:#011627]"
-initials="DY" shape="rounded">
+class="!light-avatar ![--background:#FF4E00]"
+initials="DY"
+shape="rounded">
 </igx-avatar>
 ```
 
