@@ -6,7 +6,7 @@ mentionedTypes: ["DomainChart", "CategoryChart", "CrosshairLayer", "FinalValueLa
 namespace: Infragistics.Controls.Charts
 ---
 
-# Angular Chart Data Annotations (Beta)
+# Angular Chart Data Annotations <label class="badge badge--preview">PREVIEW</label>
 
 In the Angular chart, the data annotation layers allow you to annotate data plotted in Data Chart with sloped lines, vertical/horizontal lines (aka axis slices), vertical/horizontal strips (targeting specific axis), rectangles, and even parallelograms (aka bands). With data-binding supported, you can create as many annotations as you want to customize your charts. Also, you can combine different annotation layers and you can overlay text inside of plot area to annotated important events, patterns, and regions in your data.
 
