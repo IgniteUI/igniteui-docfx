@@ -7,7 +7,7 @@ mentionedTypes: ["XamGeographicMap", "AzureMapsImagery", "GeographicTileSeries"]
 
 # Angular Displaying Imagery from Azure Maps <label class="badge badge--preview">PREVIEW</label>
 
-The Angular `AzureMapsImagery` is geographic imagery mapping service provided by Microsoft®. It provides several styles of geographic imagery tiles of the world. This geographic imagery service is accessible directly on the <a href="https://azure.microsoft.com/en-us/products/azure-maps" target="_blank">www.azure.microsoft.com</a> web site. The Ignite UI for Angular map component can display geographic imagery from Azure Maps in the map’s background content using the `AzureMapsImagery` class.
+The Angular [`IgxAzureMapsImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxazuremapsimagery.html) is geographic imagery mapping service provided by Microsoft®. It provides several styles of geographic imagery tiles of the world. This geographic imagery service is accessible directly on the <a href="https://azure.microsoft.com/en-us/products/azure-maps" target="_blank">www.azure.microsoft.com</a> web site. The Ignite UI for Angular map component can display geographic imagery from Azure Maps in the map’s background content using the [`IgxAzureMapsImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxazuremapsimagery.html) class.
 
 ## Angular Displaying Imagery from Azure Maps Example
 
@@ -24,7 +24,7 @@ The Angular `AzureMapsImagery` is geographic imagery mapping service provided by
 
 ## Code Snippet
 
-The following code snippet shows how to display geographic imagery tiles from Azure Maps in Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html) using `AzureMapsImagery` class.
+The following code snippet shows how to display geographic imagery tiles from Azure Maps in Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html) using [`IgxAzureMapsImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxazuremapsimagery.html) class.
 
 ```html
 <igx-geographic-map #map
@@ -67,7 +67,7 @@ This design allows you to build richer maps, for example:
 
 ## Code Snippet
 
-The following code snippet shows how to display geographic imagery tiles ontop of a background imagery joining eg. traffic with a dark grey map for the Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html) using `AzureMapsImagery` and [`IgxGeographicTileSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographictileseriescomponent.html) classes.
+The following code snippet shows how to display geographic imagery tiles ontop of a background imagery joining eg. traffic with a dark grey map for the Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html) using [`IgxAzureMapsImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxazuremapsimagery.html) and [`IgxGeographicTileSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographictileseriescomponent.html) classes.
 
 ```html
 <igx-geographic-map #map height="100%" width="100%" zoomable="true">
@@ -101,32 +101,15 @@ export class AppComponent implements AfterViewInit {
 
 ## Properties
 
-The following table summarizes properties of the `AzureMapsImagery` class:
+The following table summarizes properties of the [`IgxAzureMapsImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxazuremapsimagery.html) class:
 
 | Property Name  | Property Type   | Description   |
 |----------------|-----------------|---------------|
-|`ApiKey`|string|Represents the property for setting an API key required for the Azure Maps imagery service. You must obtain this key from the <a href="https://azure.microsoft.com/en-us/products/azure-maps" target="_blank">azure.microsoft.com</a> website.|
-|`ImageryStyle`|`AzureMapsImageryStyle`|Represents the property for setting the Azure Maps imagery tiles map style. This property can be set to the following `AzureMapsImageryStyle` enumeration values:
-
-<ul>
-  <li>Satellite - Specifies the Satellite map style without road or labels overlay</li>
-  <li>Road - Specifies the Aerial map style with road and labels overlay</li>
-  <li>TerraOverlay - Specifies a terrain map style with shaded relief to highlight elevation and landscape features</li>
-  <li>LabelsRoadOverlay - One of several overlays of city labels without an aerial overlay</li>
-  <li>DarkGrey - Specifies a dark grey basemap style for contrast and highlighting overlays</li>
-  <li>HybridRoadOverlay - Satellite background combined with road and label overlays</li>
-  <li>HybridDarkGreyOverlay - Satellite background combined with dark grey label overlays</li>
-  <li>LabelsDarkGreyOverlay - One of several overlays of city labels over a dark grey basemap</li>
-  <li>TrafficDelayOverlay - Displays traffic delays and congestion areas in real time</li>
-  <li>TrafficAbsoluteOverlay - Displays current traffic speeds as absolute values</li>
-  <li>TrafficReducedOverlay - Displays reduced traffic flow with light-based visualization</li>
-  <li>TrafficRelativeOverlay - Displays traffic speeds relative to normal conditions</li>
-  <li>WeatherRadarOverlay - Displays near real-time radar imagery of precipitation</li>
-  <li>WeatherInfraredOverlay - Displays infrared satellite imagery of cloud cover</li>
-</ul>
+|[`apiKey`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxazuremapsimagery.html#apiKey)|string|Represents the property for setting an API key required for the Azure Maps imagery service. You must obtain this key from the <a href="https://azure.microsoft.com/en-us/products/azure-maps" target="_blank">azure.microsoft.com</a> website.|
+|[`imageryStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxazuremapsimagery.html#imageryStyle)|[`AzureMapsImageryStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_maps.azuremapsimagerystyle.html)|Represents the property for setting the Azure Maps imagery tiles map style. This property can be set to the following [`AzureMapsImageryStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_maps.azuremapsimagerystyle.html) enumeration values:<ul><li>Satellite - Specifies the Satellite map style without road or labels overlay</li><li>Road - Specifies the Aerial map style with road and labels overlay</li><li>TerraOverlay - Specifies a terrain map style with shaded relief to highlight elevation and landscape features</li><li>LabelsRoadOverlay - One of several overlays of city labels without an aerial overlay</li><li>DarkGrey - Specifies a dark grey basemap style for contrast and highlighting overlays</li><li>HybridRoadOverlay - Satellite background combined with road and label overlays</li><li>HybridDarkGreyOverlay - Satellite background combined with dark grey label overlays</li><li>LabelsDarkGreyOverlay - One of several overlays of city labels over a dark grey basemap</li><li>TrafficDelayOverlay - Displays traffic delays and congestion areas in real time</li><li>TrafficAbsoluteOverlay - Displays current traffic speeds as absolute values</li><li>TrafficReducedOverlay - Displays reduced traffic flow with light-based visualization</li><li>TrafficRelativeOverlay - Displays traffic speeds relative to normal conditions</li><li>WeatherRadarOverlay - Displays near real-time radar imagery of precipitation</li><li>WeatherInfraredOverlay - Displays infrared satellite imagery of cloud cover</li></ul>
 
 ## API References
 
-*   `AzureMapsImageryStyle`
-*   `AzureMapsImagery`
+*   [`AzureMapsImageryStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_maps.azuremapsimagerystyle.html)
+*   [`IgxAzureMapsImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxazuremapsimagery.html)
 *   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html)
