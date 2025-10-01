@@ -16,11 +16,77 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 
 *   [Ignite UI for Angular CHANGELOG.md at Github](https://github.com/IgniteUI/igniteui-angular/blob/master)
 
-## **20.0.1 (July 2025)**
+## **20.1.0 (September 2025)**
 
 ### igniteui-angular-maps (Geographic Map)
 
-*   <label class="badge badge--preview">PREVIEW</label> [Azure Maps](geo-map-display-azure-imagery.md). This is a new geographic imagery mapping service provided by Microsoft® for the Infragistics Geographic Map.
+#### Azure Map Imagery Support (Preview)
+
+The `GeographicMap` now supports Azure-based map imagery, allowing developers to display detailed, dynamic maps across multiple application types. You can combine multiple map layers, visualize geographic data, and create interactive mapping experiences with ease.
+
+Note: Support for Bing Maps imagery is being phased out. Existing enterprise keys can still be used to access Bing Maps, ensuring your current applications continue to function while you transition to Azure maps.
+
+Explore some of the publicly available [Azure maps here](https://azure.microsoft.com/en-us/products/azure-maps).
+
+### igniteui-angular-charts (Charts)
+
+#### New Axis Label Events (Preview)
+
+The following events have been added to the `DataChart` to allow you to detect different operations on the axis labels:
+
+*   `LabelMouseDown`
+*   `LabelMouseUp`
+*   `LabelMouseEnter`
+*   `LabelMouseLeave`
+*   `LabelMouseMove`
+*   `LabelMouseClick`
+
+#### Companion Axis (Preview)
+
+Added `CompanionAxis` properties to the X and Y axis that allow you to quickly create a clone of an existing axis. When enabled using the `CompanionAxisEnabled` property, this will default the cloned axis to the opposite position of the chart and you can then configure that axes' properties.
+
+#### RadialPieSeries Inset Outlines (Preview)
+
+There is a new property called `UseInsetOutlines` to control how outlines on the [`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxradialpieseriescomponent.html) are rendered. Setting this value to **true** will inset the outlines within the slice shape, whereas a **false** (default) value will place the outlines half-in half-out along the edge of the slice shape.
+
+### Enhancements
+
+#### IgxBulletGraph
+
+*   Added new `LabelsVisible` property (Preview)
+
+#### Charts
+
+*   New properties added to the DataToolTipLayer, ItemToolTipLayer, and CategoryToolTipLayer to aid in styling: `ToolTipBackground`, `ToolTipBorderBrush`, and `ToolTipBorderThickness`
+
+*   New properties added to the DataLegend to aid in styling: `ContentBackground`, `ContentBorderBrush`, and `ContentBorderThickness`. The `ContentBorderBrush` and `ContentBorderThickness` default to transparent and 0 respectively, so in order to see these borders, you will need to set these properties.
+
+*   Added a new property to [`IgxChartMouseEventArgs`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxchartmouseeventargs.html) called `WorldPosition` that provides the world relative position of the mouse. This position will be a value between 0 and 1 for both the X and Y axis within the axis space.
+
+*   Added [`highlightingFadeOpacity`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriescomponent.html#highlightingFadeOpacity) to [`IgxSeriesViewerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html) and [`IgxDomainChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html). This allows you to configure the opacity applied to highlighted series.
+
+*   Expose `CalloutLabelUpdating` event for domain charts.
+
+#### IgxDataGrid
+
+*   Added new property called `stopPropagation` to DataGrid which prevents mouse events from bubbling to parent elements
+
+#### IgxLinearGauge
+
+*   Added new `LabelsVisible` property (Preview)
+
+### Bug Fixes
+
+| Bug Number | Control | Description |
+|------------|---------|-------------|
+|27304|IgxDataChart|Zoom rectangle is not positioned the same as the background rectangle|
+|30600|IgxDoughnutChart|No textStyle property for either the chart or series (pie chart has this)|
+|31624|IgxCategoryChart|Resizing the containing window of the IgxCategoryChart causes the chart to fail to render the series|
+|33861|Excel Library|Adding line chart corrupts excel File for German culture|
+|37930|IgxDataChart|Data Annotation Overlay Text Color not working|
+|38231|IgxGrid|Unpinned column does not return to the original position if hidden columns exist|
+
+## **20.0.1 (August 2025)**
 
 ### Bug Fixes
 

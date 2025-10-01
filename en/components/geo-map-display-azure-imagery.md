@@ -106,24 +106,7 @@ The following table summarizes properties of the `AzureMapsImagery` class:
 | Property Name  | Property Type   | Description   |
 |----------------|-----------------|---------------|
 |`ApiKey`|string|Represents the property for setting an API key required for the Azure Maps imagery service. You must obtain this key from the <a href="https://azure.microsoft.com/en-us/products/azure-maps" target="_blank">azure.microsoft.com</a> website.|
-|`ImageryStyle`|`AzureMapsImageryStyle`|Represents the property for setting the Azure Maps imagery tiles map style. This property can be set to the following `AzureMapsImageryStyle` enumeration values:
-
-<ul>
-  <li>Satellite - Specifies the Satellite map style without road or labels overlay</li>
-  <li>Road - Specifies the Aerial map style with road and labels overlay</li>
-  <li>TerraOverlay - Specifies a terrain map style with shaded relief to highlight elevation and landscape features</li>
-  <li>LabelsRoadOverlay - One of several overlays of city labels without an aerial overlay</li>
-  <li>DarkGrey - Specifies a dark grey basemap style for contrast and highlighting overlays</li>
-  <li>HybridRoadOverlay - Satellite background combined with road and label overlays</li>
-  <li>HybridDarkGreyOverlay - Satellite background combined with dark grey label overlays</li>
-  <li>LabelsDarkGreyOverlay - One of several overlays of city labels over a dark grey basemap</li>
-  <li>TrafficDelayOverlay - Displays traffic delays and congestion areas in real time</li>
-  <li>TrafficAbsoluteOverlay - Displays current traffic speeds as absolute values</li>
-  <li>TrafficReducedOverlay - Displays reduced traffic flow with light-based visualization</li>
-  <li>TrafficRelativeOverlay - Displays traffic speeds relative to normal conditions</li>
-  <li>WeatherRadarOverlay - Displays near real-time radar imagery of precipitation</li>
-  <li>WeatherInfraredOverlay - Displays infrared satellite imagery of cloud cover</li>
-</ul>
+|`ImageryStyle`|`AzureMapsImageryStyle`|Represents the property for setting the Azure Maps imagery tiles map style. This property can be set to the following `AzureMapsImageryStyle` enumeration values:<ul><li>Satellite - Specifies the Satellite map style without road or labels overlay</li><li>Road - Specifies the Aerial map style with road and labels overlay</li><li>TerraOverlay - Specifies a terrain map style with shaded relief to highlight elevation and landscape features</li><li>LabelsRoadOverlay - One of several overlays of city labels without an aerial overlay</li><li>DarkGrey - Specifies a dark grey basemap style for contrast and highlighting overlays</li><li>HybridRoadOverlay - Satellite background combined with road and label overlays</li><li>HybridDarkGreyOverlay - Satellite background combined with dark grey label overlays</li><li>LabelsDarkGreyOverlay - One of several overlays of city labels over a dark grey basemap</li><li>TrafficDelayOverlay - Displays traffic delays and congestion areas in real time</li><li>TrafficAbsoluteOverlay - Displays current traffic speeds as absolute values</li><li>TrafficReducedOverlay - Displays reduced traffic flow with light-based visualization</li><li>TrafficRelativeOverlay - Displays traffic speeds relative to normal conditions</li><li>WeatherRadarOverlay - Displays near real-time radar imagery of precipitation</li><li>WeatherInfraredOverlay - Displays infrared satellite imagery of cloud cover</li></ul>
 
 ## API References
 
