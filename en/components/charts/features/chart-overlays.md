@@ -68,7 +68,7 @@ The following sample demonstrates usage of the different [`valueLines`]({environ
 
 You can also plot built-in financial overlays and indicators in Angular [Stock Chart](../types/stock-chart.md).
 
-## Chart Overlay Text (Beta)
+## Chart Overlay Text <label class="badge badge--preview">PREVIEW</label>
 
 The Angular [`IgxValueOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvalueoverlaycomponent.html), [`IgxValueLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvaluelayercomponent.html), and all Data Annotation Layers can render custom overlay text inside plot area of the XamDataChart component. You can use this overlay text to annotate important events (e.g. company quarter reports) on x-axis or important values on y-axis in relationship to the layers.
 
