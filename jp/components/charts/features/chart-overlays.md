@@ -69,7 +69,7 @@ Angular チャート コンポーネントは、値の線を使用して、最�
 
 Angular [株価チャート](../types/stock-chart.md)に組み込みのファイナンシャル オーバーレイとインジケーターをプロットすることもできます。
 
-## チャート オーバーレイ テキスト (ベータ版)
+## チャート オーバーレイ テキスト <label class="badge badge--preview">PREVIEW</label>
 
 Angular [`IgxValueOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvalueoverlaycomponent.html)、[`IgxValueLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvaluelayercomponent.html)、およびすべてのデータ注釈レイヤーは、XamDataChart コンポーネントのプロット領域内にカスタム オーバーレイ テキストを描画できます。このオーバーレイ テキストを使用すると、レイヤーとの関係において、x 軸上の重要なイベント (例: 企業の四半期決算) または y 軸上の重要な値に注釈を付けることができます。
 
