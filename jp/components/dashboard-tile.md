@@ -6,7 +6,7 @@ mentionedTypes: ["Toolbar", "CategoryChart", "XamDataChart", "XamRadialGauge", "
 _language: ja
 ---
 
-# Angular Dashboard Tile (ダッシュボード タイル) の概要
+# Angular Dashboard Tile (ダッシュボード タイル) <label class="badge badge--preview">PREVIEW</label>
 
 Angular Dashboard Tile は、データ ソース コレクション/配列または単一のデータ ポイントを分析して、表示する最も適切な視覚化を決定する自動データ視覚化コンポーネントです。また、埋め込みの [`IgxToolbarComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html) で提供される一連のツールを使用して、さまざまな方法で表示される視覚化を変更できます。
 
