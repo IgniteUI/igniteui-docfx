@@ -49,6 +49,10 @@ Added `CompanionAxis` properties to the X and Y axis that allow you to quickly c
 
 There is a new property called [`useInsetOutlines`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#useInsetOutlines) to control how outlines on the [`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxradialpieseriescomponent.html) are rendered. Setting this value to **true** will inset the outlines within the slice shape, whereas a **false** (default) value will place the outlines half-in half-out along the edge of the slice shape.
 
+**Breaking Changes**
+
+*   A fix was made due to an issue where the `PlotAreaPosition` and `ChartPosition` properties on [`IgxChartMouseEventArgs`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxchartmouseeventargs.html) class were reversed. This will change the values that [`plotAreaPosition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxchartmouseeventargs.html#plotAreaPosition) and [`chartPosition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxchartmouseeventargs.html#chartPosition) return.
+
 ### Enhancements
 
 #### IgxBulletGraph
@@ -80,7 +84,6 @@ There is a new property called [`useInsetOutlines`]({environment:dvApiBaseUrl}/p
 |31624|IgxCategoryChart|Resizing the containing window of the IgxCategoryChart causes the chart to fail to render the series|
 |33861|Excel Library|Adding line chart corrupts excel File for German culture|
 |37930|IgxDataChart|Data Annotation Overlay Text Color not working|
-|38101|IgbDataChart|Fix for issue where PlotAreaPosition and ChartPosition properties on ChartMouseEventArgs class were reversed
 |38231|IgxGrid|Unpinned column does not return to the original position if hidden columns exist|
 
 ## **20.0.1 (August 2025)**
