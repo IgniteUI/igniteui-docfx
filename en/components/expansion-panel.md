@@ -211,31 +211,7 @@ Lets see the result from all the above changes:
 
 
 
-## Styling  
-
-### Palettes & Colors
-Fist we create a custom palette which can later be passed to our component:
-```scss
-// In real life, this should be in our main sass file so we can share the palette between all components. 
-// In our case, it's in the component SCSS file "expansion-styling.component.scss".
-
-@use "igniteui-angular/theming" as *;
-
-// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
-// @import '~igniteui-angular/lib/core/styles/themes/index';
-
-// Add your brand colors.
-$my-primary-color:#353a4b;
-$my-secondary-color: #ffd351;
-$my-surface-color: #efefef;
-
-// Create custom palette.
-$my-color-palette: palette(
-  $primary: $my-primary-color,
-  $secondary: $my-secondary-color,
-  $surface: $my-surface-color
-);
-```
+## Styling 
 
 ### Expansion Panel Theme Dependencies
 
@@ -288,6 +264,29 @@ Changing the `$header-background` and `$body-background` properties automaticall
     </tbody>
 </table>
 
+### Palettes & Colors
+Fist we create a custom palette which can later be passed to our component:
+```scss
+// In real life, this should be in our main sass file so we can share the palette between all components. 
+// In our case, it's in the component SCSS file "expansion-styling.component.scss".
+
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+
+// Add your brand colors.
+$my-primary-color:#353a4b;
+$my-secondary-color: #ffd351;
+$my-surface-color: #efefef;
+
+// Create custom palette.
+$my-color-palette: palette(
+  $primary: $my-primary-color,
+  $secondary: $my-secondary-color,
+  $surface: $my-surface-color
+);
+```
 
 ### Creating the Component Theme
 
@@ -355,8 +354,8 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 ```
 
 The utility file includes both `light` and `dark` theme variants.
-- Use `light-expansion-panel` classes for the light theme.
-- Use `dark-expansion-panel` classes for the dark theme.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-expansion-panel`, `dark-expansion-panel`.
 
 Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).

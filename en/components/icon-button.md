@@ -447,8 +447,8 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 ```
 
 The utility file includes both `light` and `dark` theme variants.
-- Use `light-icon-button` classes for the light theme.
-- Use `dark-icon-button` classes for the dark theme.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-icon-button`, `dark-icon-button`.
 
 Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).

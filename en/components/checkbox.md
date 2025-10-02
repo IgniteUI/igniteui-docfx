@@ -215,7 +215,7 @@ After all that is done, our application should look like this:
 
 When you modify a primary property, all related dependent properties are updated automatically:
 
-<table>
+<table class="collapsible-table">
     <thead>
         <tr>
             <th>Primary Property</th>
@@ -225,59 +225,76 @@ When you modify a primary property, all related dependent properties are updated
     </thead>
     <tbody class="group">
         <tr class="primary">
-            <td><strong>$empty-color</strong></td>
+            <td>
+                <details><summary><strong>$empty-color</strong></summary>
+                </details>
+            </td>
             <td>$empty-color-hover</td>
             <td>The unchecked border color on hover.</td>
         </tr>
-        <tr>
+        <tr class="dependent">
             <td></td>
             <td>$focus-outline-color (indigo variant only)</td>
             <td>The focus outline color for indigo variant.</td>
         </tr>
+    </tbody>
+    <tbody class="group">
         <tr class="primary">
-            <td><strong>$fill-color</strong></td>
+            <td>
+                <details><summary><strong>$fill-color</strong></summary>
+                </details>
+            </td>
             <td>$fill-color-hover</td>
             <td>The checked border and fill colors on hover.</td>
         </tr>
-        <tr>
+        <tr class="dependent">
             <td></td>
             <td>$tick-color</td>
             <td>The checked mark color.</td>
         </tr>
-        <tr>
+        <tr class="dependent">
             <td></td>
             <td>$focus-border-color</td>
             <td>The focus border color.</td>
         </tr>
-        <tr>
+        <tr class="dependent">
             <td></td>
             <td>$disabled-indeterminate-color</td>
             <td>The disabled border and fill colors in indeterminate state.</td>
         </tr>
-        <tr>
+        <tr class="dependent">
             <td></td>
             <td>$focus-outline-color (bootstrap variant only)</td>
             <td>The focus outline color for bootstrap variant.</td>
         </tr>
-        <tr>
+        <tr class="dependent">
             <td></td>
             <td>$focus-outline-color-focused (indigo variant only)</td>
             <td>The focus outline color for focused state in indigo variant.</td>
         </tr>
+    </tbody>
+    <tbody class="group">
         <tr class="primary">
-            <td><strong>$label-color</strong></td>
-            <td>$label-color-hover</td>
-            <td>The text color for the label on hover.</td>
-        </tr>
-        <tr class="primary">
-            <td><strong>$error-color</strong></td>
+            <td>
+                <details><summary><strong>$error-color</strong></summary>
+                </details>
+            </td>
             <td>$error-color-hover</td>
             <td>The border and fill colors in invalid state on hover.</td>
         </tr>
-        <tr>
+        <tr class="dependent">
             <td></td>
             <td>$focus-outline-color-error</td>
             <td>The focus outline color in error state.</td>
+        </tr>
+    </tbody>
+    <tbody class="group">
+        <tr class="primary">
+            <td>
+                <strong>$label-color</strong>
+            </td>
+            <td>$label-color-hover</td>
+            <td>The text color for the label on hover.</td>
         </tr>
     </tbody>
 </table>
