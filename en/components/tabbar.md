@@ -386,7 +386,6 @@ The approach described above is used by the following sample to demonstrate rout
 
 When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
 
-<!-- TabBar Theme Table -->
 <table>
     <thead>
         <tr>

@@ -485,120 +485,118 @@ If everything's set up correctly, you should see this in your browser:
 When you modify a primary property, all related dependent properties are updated automatically:
 
 <table class="collapsible-table">
-    <thead>
-        <tr>
-            <th>Primary Property</th>
-            <th>Dependent Property</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody class="group">
-        <tr class="primary">
-            <td><details><summary><strong>$background</strong></summary></details></td>
-            <td>$text-color</td>
-            <td>The chip text color.</td>
-        </tr>
-        <tr class="dependent">
-            <td></td>
-            <td>$border-color</td>
-            <td>The chip border color.</td>
-        </tr>
-        <tr class="dependent">
-            <td></td>
-            <td>$hover-background</td>
-            <td>The chip text hover color.</td>
-        </tr>
-        <tr class="dependent">
-            <td></td>
-            <td>$hover-text-color</td>
-            <td>The chip hover background color.</td>
-        </tr>
-        <tr class="dependent">
-            <td></td>
-            <td>$focus-background</td>
-            <td>The chip focus background color.</td>
-        </tr>
-        <tr class="dependent">
-            <td></td>
-            <td>$selected-background</td>
-            <td>The chip selected background color.</td>
-        </tr>
-      </tbody>
-      <tbody class="group">
-        <tr class="primary">
-            <td><details><summary><strong>$focus-background</strong></summary></details></td>
-            <td>$focus-text-color</td>
-            <td>The chip text focus color.</td>
-        </tr>
-        <tr class="dependent">
-            <td></td>
-            <td>$focus-outline-color (bootstrap &amp; indigo variants only)</td>
-            <td>The chip focus outline color.</td>
-        </tr>
-      </tbody>
-      <tbody class="group">
-        <tr class="primary">
-            <td><details><summary><strong>$selected-background</strong></summary></details></td>
-            <td>$selected-text-color</td>
-            <td>The selected chip text color.</td>
-        </tr>
-        <tr class="dependent">
-            <td></td>
-            <td>$selected-border-color</td>
-            <td>The selected chip border color.</td>
-        </tr>
-        <tr class="dependent">
-            <td></td>
-            <td>$hover-selected-background</td>
-            <td>The selected chip hover background color.</td>
-        </tr>
-      </tbody>
-      <tbody class="group">
-        <tr class="primary">
-            <td><details><summary><strong>$hover-selected-background</strong></summary></details></td>
-            <td>$hover-selected-text-color</td>
-            <td>The selected chip hover text color.</td>
-        </tr>
-        <tr class="dependent">
-            <td></td>
-            <td>$hover-selected-border-color</td>
-            <td>The selected chip hover border color.</td>
-        </tr>
-        <tr class="dependent">
-            <td></td>
-            <td>$focus-selected-background</td>
-            <td>The selected chip focus background color.</td>
-        </tr>
-      </tbody>
-      <tbody class="group">
-        <tr class="primary">
-            <td><details><summary><strong>$focus-selected-background</strong></summary></details></td>
-            <td>$focus-selected-text-color</td>
-            <td>The selected chip text focus color.</td>
-        </tr>
-        <tr class="dependent">
-            <td></td>
-            <td>$focus-selected-border-color</td>
-            <td>The selected chip focus border color.</td>
-        </tr>
-        <tr class="dependent">
-            <td></td>
-            <td>$focus-selected-outline-color (bootstrap &amp; indigo variants only)</td>
-            <td>The chip focus outline color in selected state.</td>
-        </tr>
-      </tbody>
-      <tbody class="group">
-        <tr class="primary">
-            <td><details><summary><strong>$border-color</strong></summary></details></td>
-            <td>$hover-border-color</td>
-            <td>The chip hover border color.</td>
-        </tr>
-        <tr class="dependent">
-            <td></td>
-            <td>$focus-border-color</td>
-            <td>The chip focus border color.</td>
-        </tr>
-    </tbody>
+  <thead>
+      <tr>
+          <th>Primary Property</th>
+          <th>Dependent Property</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+        <td><details><summary><strong>$background</strong></summary></details></td>
+        <td>$text-color</td>
+        <td>The chip text color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$border-color</td>
+        <td>The chip border color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$hover-background</td>
+        <td>The chip text hover color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$hover-border-color</td>
+        <td>The chip hover border color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$hover-text-color</td>
+        <td>The chip hover background color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$focus-background</td>
+        <td>The chip focus background color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$selected-background</td>
+        <td>The chip selected background color.</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+        <td><details><summary><strong>$focus-background</strong></summary></details></td>
+        <td>$focus-text-color</td>
+        <td>The chip text focus color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$focus-border-color</td>
+        <td>The chip focus border color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$focus-outline-color (bootstrap &amp; indigo variants only)</td>
+        <td>The chip focus outline color.</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+        <td><details><summary><strong>$selected-background</strong></summary></details></td>
+        <td>$selected-text-color</td>
+        <td>The selected chip text color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$selected-border-color</td>
+        <td>The selected chip border color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$hover-selected-background</td>
+        <td>The selected chip hover background color.</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+        <td><details><summary><strong>$hover-selected-background</strong></summary></details></td>
+        <td>$hover-selected-text-color</td>
+        <td>The selected chip hover text color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$hover-selected-border-color</td>
+        <td>The selected chip hover border color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$focus-selected-background</td>
+        <td>The selected chip focus background color.</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+        <td><details><summary><strong>$focus-selected-background</strong></summary></details></td>
+        <td>$focus-selected-text-color</td>
+        <td>The selected chip text focus color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$focus-selected-border-color</td>
+        <td>The selected chip focus border color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$focus-selected-outline-color (bootstrap &amp; indigo variants only)</td>
+        <td>The chip focus outline color in selected state.</td>
+    </tr>
+  </tbody>
 </table>
 
 To get started with styling the chip, we need to import the `index` file, where all the theme functions and component mixins live:

@@ -496,6 +496,122 @@ When the `allowItemsFocus` property is enabled, the drop down items gain tab ind
 
 ## Styling
 
+### Dropdown Theme Dependencies
+
+When you modify a primary property, all related dependent properties are updated automatically:
+
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>Primary Property</th>
+      <th>Dependent Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$background-color</strong></summary></details>
+      </td>
+      <td>$item-text-color</td>
+      <td>The drop-down item text color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$hover-item-background</td>
+      <td>The drop-down hover item background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focused-item-background</td>
+      <td>The drop-down focused item background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focused-item-text-color</td>
+      <td>The drop-down focused item text color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-item-background</td>
+      <td>The drop-down selected item background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-item-text-color</td>
+      <td>The drop-down disabled item text color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$header-text-color</td>
+      <td>The drop-down header text color.</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$item-text-color</strong></summary></details>
+      </td>
+      <td>$item-icon-color</td>
+      <td>The drop-down item icon color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$hover-item-text-color</td>
+      <td>The drop-down item hover text color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$hover-item-icon-color</td>
+      <td>The drop-down item hover icon color.</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$selected-item-background</strong></summary></details>
+      </td>
+      <td>$selected-item-text-color</td>
+      <td>The drop-down selected item text color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-item-icon-color</td>
+      <td>The drop-down selected item icon color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-hover-item-background</td>
+      <td>The drop-down selected item hover background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-hover-item-text-color</td>
+      <td>The drop-down selected item hover text color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-hover-item-icon-color</td>
+      <td>The drop-down selected item hover icon color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-focus-item-background</td>
+      <td>The drop-down selected item focus background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-focus-item-text-color</td>
+      <td>The drop-down selected item focus text color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focused-item-border-color</td>
+      <td>The drop-down item focused border color.</td>
+    </tr>
+  </tbody>
+</table>
+
 Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the drop-down appearance. First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file:
 
 ```scss
