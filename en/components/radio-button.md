@@ -146,7 +146,7 @@ The final result would be something like that:
 
 ## Styling
 
-### Radio Theme Dependencies
+### Radio Theme Property Map
 
 When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
 

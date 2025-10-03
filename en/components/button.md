@@ -249,7 +249,7 @@ If all went well, you should see something like the following in the browser:
 
 ## Styling
 
-### Button Theme Dependencies
+### Button Theme Property Map
 
 When you modify a primary property, all related dependent properties are updated automatically:
 

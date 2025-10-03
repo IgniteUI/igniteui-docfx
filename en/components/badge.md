@@ -288,7 +288,7 @@ If the sample is configured properly, a list of members should be displayed and 
 
 ## Styling
 
-### Badge Theme Dependencies
+### Badge Theme Property Map
 
 Changing the `$background-color` property automatically updates the following dependent properties:
 

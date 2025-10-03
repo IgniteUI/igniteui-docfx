@@ -331,7 +331,7 @@ After the user clicks the expand icon, it is replaced by a loading indicator. Wh
 
 ## Styling
 
-### Tree Theme Dependencies
+### Tree Theme Property Map
 
 When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
 

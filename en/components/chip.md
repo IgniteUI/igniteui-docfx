@@ -480,7 +480,7 @@ If everything's set up correctly, you should see this in your browser:
 
 ## Styling
 
-### Chip Theme Dependencies
+### Chip Theme Property Map
 
 When you modify a primary property, all related dependent properties are updated automatically:
 

@@ -277,7 +277,7 @@ public open(snackbar) {
 
 ## Styling
 
-### Snackbar Theme Dependencies
+### Snackbar Theme Property Map
 
 When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
 

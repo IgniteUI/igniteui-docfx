@@ -277,7 +277,7 @@ When combobox is opened, allow custom values are enabled and add item button is 
 
 ## Styling
 
-### Combo Theme Dependencies
+### Combo Theme Property Map
 
 When you modify a primary property, all related dependent properties are updated automatically:
 

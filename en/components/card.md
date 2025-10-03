@@ -329,7 +329,7 @@ You can justify the buttons so that they are laid out across the entire axis, no
 
 ## Styling
 
-### Card Theme Dependencies
+### Card Theme Property Map
 
 Changing the `$background` property automatically updates the following dependent properties:
 

@@ -382,7 +382,7 @@ The approach described above is used by the following sample to demonstrate rout
 
 ## Styles
 
-### Bottom Nav Theme Dependencies
+### Bottom Nav Theme Property Map
 
 When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
 

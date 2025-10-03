@@ -211,7 +211,7 @@ Keyboard navigation is available by default in the splitter component. When you 
 
 ## Styling
 
-### Splitter Theme Dependencies
+### Splitter Theme Property Map
 
 When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
 

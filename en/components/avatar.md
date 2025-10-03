@@ -141,7 +141,7 @@ You should see something like this:
 
 ## Styling
 
-### Avatar Theme Dependencies
+### Avatar Theme Property Map
 
 Changing the `$background` property automatically updates the following dependent properties:
 

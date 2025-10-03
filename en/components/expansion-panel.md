@@ -213,7 +213,7 @@ Lets see the result from all the above changes:
 
 ## Styling 
 
-### Expansion Panel Theme Dependencies
+### Expansion Panel Theme Property Map
 
 Changing the `$header-background` and `$body-background` properties automatically updates the following dependent properties:
 

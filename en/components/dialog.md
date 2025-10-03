@@ -252,7 +252,7 @@ By default when the dialog is opened the Tab key focus is trapped within it, i.e
 
 ## Styling
 
-### Dialog Theme Dependencies
+### Dialog Theme Property Map
 
 Changing the `$background` property automatically updates the following dependent properties:
 

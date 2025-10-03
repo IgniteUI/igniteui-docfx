@@ -481,7 +481,7 @@ In the **tickLabel** callback above, we are rounding the **value** of every **pr
 
 ## Styling
 
-### Slider Theme Dependencies
+### Slider Theme Property Map
 When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
 
 <div class="theme-switcher-wrapper">

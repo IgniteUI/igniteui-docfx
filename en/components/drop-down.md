@@ -496,7 +496,7 @@ When the `allowItemsFocus` property is enabled, the drop down items gain tab ind
 
 ## Styling
 
-### Dropdown Theme Dependencies
+### Dropdown Theme Property Map
 
 When you modify a primary property, all related dependent properties are updated automatically:
 

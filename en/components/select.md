@@ -354,7 +354,7 @@ export class MyClass implements OnInit {
 
 ## Styling
 
-### Select Theme Dependencies
+### Select Theme Property Map
 
 When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
 

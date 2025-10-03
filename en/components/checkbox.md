@@ -211,7 +211,7 @@ After all that is done, our application should look like this:
 
 ## Styling
 
-### Checkbox Theme Dependencies
+### Checkbox Theme Property Map
 
 When you modify a primary property, all related dependent properties are updated automatically:
 

@@ -319,7 +319,7 @@ The Stepper Component is also available in the low-code, [drag and drop App Buil
 
 ## Angular Stepper Styling
 
-### Stepper Theme Dependencies
+### Stepper Theme Property Map
 
 When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
 

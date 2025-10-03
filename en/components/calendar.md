@@ -456,7 +456,7 @@ export class CalendarSample9Component {
 
 ## Styling
 
-### Calendar Theme Dependencies
+### Calendar Theme Property Map
 
 When you modify the `$header-background` and `$content-background` properties, all related theme properties are automatically adjusted to ensure your calendar component is styled consistently. See the tables below for a detailed overview of which theme properties are affected.
 

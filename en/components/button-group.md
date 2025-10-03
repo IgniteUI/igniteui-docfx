@@ -248,7 +248,7 @@ public ngOnInit() {
 
 ## Styling
 
-### Button Group Theme Dependencies
+### Button Group Theme Property Map
 
 When you set a value for the `$item-background` property, all related dependent properties listed in the table below are automatically updated to maintain visual consistency. The table shows which properties are affected when you customize the primary property.
 

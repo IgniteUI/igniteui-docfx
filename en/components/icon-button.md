@@ -149,7 +149,7 @@ As you can see from the sample above, we can also use the `igxIconButton` direct
 
 ## Icon Button Styling
 
-### Icon Button Theme Dependencies
+### Icon Button Theme Property Map
 
 When you modify a primary property, all related dependent properties are updated automatically:
 

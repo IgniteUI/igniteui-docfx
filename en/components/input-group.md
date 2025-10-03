@@ -438,7 +438,7 @@ The below sample demonstrates how the built-in validators could be used in combi
 
 ## Styling
 
-### Input Group Theme Dependencies
+### Input Group Theme Property Map
 
 When you modify a primary property, all related dependent properties are updated automatically:
 

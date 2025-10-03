@@ -131,7 +131,7 @@ If the `labelPosition` is not set, the label will be positioned after the switch
 
 ## Styling
 
-### Switch Theme Dependencies
+### Switch Theme Property Map
 
 When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
 

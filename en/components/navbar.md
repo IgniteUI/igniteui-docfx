@@ -271,7 +271,7 @@ If we want to provide a custom content for a navbar's title, we can achieve this
 
 ## Styling
 
-### Navbar Theme Dependencies
+### Navbar Theme Property Map
 
 When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
 

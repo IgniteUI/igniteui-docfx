@@ -269,7 +269,7 @@ We’ve created this Angular Query Builder example to show you the templating an
 
 ## Styling
 
-### Query Builder Theme Dependencies
+### Query Builder Theme Property Map
 
 When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
 

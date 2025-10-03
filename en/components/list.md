@@ -609,7 +609,7 @@ The following sample demonstrates how to create a simple chat component using **
 
 ## Styling
 
-### List Theme Dependencies
+### List Theme Property Map
 
 When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
 
