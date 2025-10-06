@@ -253,7 +253,7 @@ To get started with styling the linear progress bar, we need to import the `inde
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`progress-linear-theme`]({environment:sassApiUrl}/index.html#function-progress-linear-theme) and override the `$fill-color-default` and `$text-color` parameters.
+Following the simplest approach, we create a new theme that extends the [`progress-linear-theme`]({environment:sassApiUrl}/themes#function-progress-linear-theme) and override the `$fill-color-default` and `$text-color` parameters.
 
 ```scss
 $custom-theme: progress-linear-theme(
@@ -283,5 +283,5 @@ The last step is to **include** the component theme in our application.
 <div class="divider--half"></div>
 
 * [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
-* [IgxLinearProgressBarComponent Styles]({environment:sassApiUrl}/index.html#function-progress-linear-theme)
+* [IgxLinearProgressBarComponent Styles]({environment:sassApiUrl}/themes#function-progress-linear-theme)
 * [IgxTextAlign]({environment:angularApiUrl}/enums/igxtextalign.html)

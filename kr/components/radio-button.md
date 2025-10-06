@@ -153,7 +153,7 @@ public fruits = ["Apple", "Mango", "Banana", "Orange"];
 
 * [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
 * [IgxRadioGroupDirective]({environment:angularApiUrl}/classes/igxradiogroupdirective.html)
-* [IgxRadioComponent Styles]({environment:sassApiUrl}/index.html#function-radio-theme)
+* [IgxRadioComponent Styles]({environment:sassApiUrl}/themes#function-radio-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>

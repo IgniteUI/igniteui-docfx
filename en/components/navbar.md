@@ -280,7 +280,7 @@ To get started with styling the navbar, we need to import the `index` file, wher
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`navbar-theme`]({environment:sassApiUrl}/index.html#function-navbar-theme) and provide just the `$background` and `$idle-icon-color` parameters. The theme will automatically compute all of the necessary background and foreground colors for various interaction states. If need, you can also manually override specific properties for finer control over the appearance.
+Following the simplest approach, we create a new theme that extends the [`navbar-theme`]({environment:sassApiUrl}/themes#function-navbar-theme) and provide just the `$background` and `$idle-icon-color` parameters. The theme will automatically compute all of the necessary background and foreground colors for various interaction states. If need, you can also manually override specific properties for finer control over the appearance.
 
 ```scss
 $custom-navbar-theme: navbar-theme(
@@ -290,7 +290,7 @@ $custom-navbar-theme: navbar-theme(
 ```
 
 >[!NOTE]
->Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 The last step is to pass the newly created theme to the `css-vars` mixin:
 
@@ -315,17 +315,17 @@ The last step is to pass the newly created theme to the `css-vars` mixin:
 * [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
 * [IgxNavbarActionDirective]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html)
 * [IgxNavbarTitleDirective]({environment:angularApiUrl}/classes/igxnavbartitledirective.html)
-* [IgxNavbarComponent Styles]({environment:sassApiUrl}/index.html#function-navbar-theme)
+* [IgxNavbarComponent Styles]({environment:sassApiUrl}/themes#function-navbar-theme)
 
 Additional components and/or directives with relative APIs that were used:
 
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## Theming Dependencies
 
-* [IgxIconComponent Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxButtonComponent Theme]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxIconComponent Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxButtonComponent Theme]({environment:sassApiUrl}/themes#function-button-theme)
 
 ## Additional Resources
 

@@ -252,7 +252,7 @@ To get started with styling the date picker, we need to import the `index` file,
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-The date picker uses the calendar's theme, so we have to create a new theme that extends the [`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme) and use some of its parameters to style the date picker's items:
+The date picker uses the calendar's theme, so we have to create a new theme that extends the [`igx-calendar-theme`]({environment:sassApiUrl}/themes#function-igx-calendar-theme) and use some of its parameters to style the date picker's items:
 
 ```scss
 $custom-datepicker-theme: igx-calendar-theme(
@@ -307,19 +307,19 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
 * [IgxDateTimeEditorDirective]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html)
 * [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
-* [IgxCalendarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxCalendarComponent Styles]({environment:sassApiUrl}/themes#function-igx-calendar-theme)
+* [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-igx-overlay-theme)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
 ## Theming Dependencies
 <div class="divider--half"></div>
 
-* [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
-* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxCalendar Theme]({environment:sassApiUrl}/themes#function-igx-calendar-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-igx-overlay-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-igx-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/themes#function-igx-button-theme)
+* [IgxInputGroup Theme]({environment:sassApiUrl}/themes#function-igx-input-group-theme)
+* [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-igx-drop-down-theme)
 
 
 ## Additional Resources

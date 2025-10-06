@@ -339,7 +339,7 @@ $banner-theme: banner-theme(
 );
 ```
 
-ここでは、色を生成するために `my-banner-palette` を [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) (テーマ ライブラリによって公開) と共に使用しています。
+ここでは、色を生成するために `my-banner-palette` を [`igx-color`]({environment:sassApiUrl}/palettes#function-color) (テーマ ライブラリによって公開) と共に使用しています。
 
 ### テーマを含む
 

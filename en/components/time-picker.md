@@ -380,7 +380,7 @@ To get started with styling the time picker, we need to import the `index` file,
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`time-picker-theme`]({environment:sassApiUrl}/index.html#function-dialog-theme) and accepts parameters that style the time picker.
+Following the simplest approach, we create a new theme that extends the [`time-picker-theme`]({environment:sassApiUrl}/themes#function-dialog-theme) and accepts parameters that style the time picker.
 
 ```scss
 $my-time-picker-theme: time-picker-theme(
@@ -449,15 +449,15 @@ Now, the time picker's items are properly rendered **inside** of our component's
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [IgxTimePickerComponent]({environment:angularApiUrl}/classes/igxtimepickercomponent.html)
-* [IgxTimePickerComponent Styles]({environment:sassApiUrl}/index.html#function-time-picker-theme)
+* [IgxTimePickerComponent Styles]({environment:sassApiUrl}/themes#function-time-picker-theme)
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## Theming Dependencies
-* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-input-group-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxInputGroup Theme]({environment:sassApiUrl}/themes#function-input-group-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## Additional Resources
 * [Date Time Editor](date-time-editor.md)

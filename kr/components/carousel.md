@@ -242,9 +242,9 @@ Given this configuration, the router matches that URL to the given route path **
 <div class="divider--half"></div>
 
 * [IgxCarouselComponent]({environment:angularApiUrl}/classes/igxcarouselcomponent.html)
-* [IgxCarouselComponent Styles]({environment:sassApiUrl}/index.html#function-carousel-theme)
+* [IgxCarouselComponent Styles]({environment:sassApiUrl}/themes#function-carousel-theme)
 * [IgxSlideComponent]({environment:angularApiUrl}/classes/igxslidecomponent.html)
 * [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
-* [IgxLinearProgressBarComponent Styles]({environment:sassApiUrl}/index.html#function-progress-linear-theme)
+* [IgxLinearProgressBarComponent Styles]({environment:sassApiUrl}/themes#function-progress-linear-theme)
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxButton Styles]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxButton Styles]({environment:sassApiUrl}/themes#function-button-theme)

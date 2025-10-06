@@ -268,8 +268,8 @@ Take a look at the [`igxInputGroup`](input-group.md#styling) and the [`igxDropdo
 
 
 ## Theming Dependencies
-* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-drop-down-theme)
-* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
+* [IgxInputGroup Theme]({environment:sassApiUrl}/themes#function-input-group-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>
