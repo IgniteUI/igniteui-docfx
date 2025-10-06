@@ -156,7 +156,7 @@ Angular ツールバーには、`Target` プロパティが含まれています
 
 ### データ URL アイコン
 
-svg を追加するのと同様に、`RegisterIconFromDataURL` を介して URL からアイコン画像を追加することもできます。メソッドの 3 番目のパラメーターは、文字列 URL を入力するために使用されます。
+svg を追加するのと同様に、[`registerIconFromDataURL`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html#registerIconFromDataURL) を介して URL からアイコン画像を追加することもできます。メソッドの 3 番目のパラメーターは、文字列 URL を入力するために使用されます。
 
 次のスニペットは、アイコンを追加する両方の方法を示しています。
 
