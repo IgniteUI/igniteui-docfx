@@ -285,7 +285,7 @@ To get started with styling the snackbar, we need to import the index file, wher
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`snackbar-theme`]({environment:sassApiUrl}/index.html#function-snackbar-theme) and accepts the `$text-color`, `$background`, `$button-color` and the `$border-radius` parameters.
+Following the simplest approach, we create a new theme that extends the [`snackbar-theme`]({environment:sassApiUrl}/themes#function-snackbar-theme) and accepts the `$text-color`, `$background`, `$button-color` and the `$border-radius` parameters.
 
 ```scss
 $dark-snackbar: snackbar-theme(
@@ -297,7 +297,7 @@ $dark-snackbar: snackbar-theme(
 ```
 
 >[!NOTE]
->Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 The last step is to **include** the component theme in our application.
 
@@ -322,7 +322,7 @@ In this article we learned how to use and configure the [`IgxSnackbarComponent`]
 
 Styles:
 
-* [`IgxSnackbarComponent Styles`]({environment:sassApiUrl}/index.html#function-snackbar-theme)
+* [`IgxSnackbarComponent Styles`]({environment:sassApiUrl}/themes#function-snackbar-theme)
 
 ## Additional Resources
 

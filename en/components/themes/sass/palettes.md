@@ -288,10 +288,10 @@ $my-palette: palette(
 ```
 
 ## API Reference
-* [Palettes]({environment:sassApiUrl}/index.html#function-palette)
-* [Getting Palette Colors]({environment:sassApiUrl}/index.html#function-color)
-* [Getting Contrast Colors]({environment:sassApiUrl}/index.html#function-contrast-color)
-* [Generating Color Classes]({environment:sassApiUrl}/index.html#mixin-color-classes)
+* [Palettes]({environment:sassApiUrl}/palettes#function-palette)
+* [Getting Palette Colors]({environment:sassApiUrl}/palettes#function-color)
+* [Getting Contrast Colors]({environment:sassApiUrl}/palettes#function-contrast-color)
+* [Generating Color Classes]({environment:sassApiUrl}/utilities#mixin-color-classes)
 * [Schemas](./schemas.md)
 
 ## Additional Resources

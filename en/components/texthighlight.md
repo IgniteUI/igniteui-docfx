@@ -359,7 +359,7 @@ The [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdir
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`highlight-theme`]({environment:sassApiUrl}/index.html#function-highlight-theme) and accepts the `$resting-background`, `$resting-color`, `$active-background` and the `$active-color` parameters.
+Following the simplest approach, we create a new theme that extends the [`highlight-theme`]({environment:sassApiUrl}/themes#function-highlight-theme) and accepts the `$resting-background`, `$resting-color`, `$active-background` and the `$active-color` parameters.
 
 ```scss
 $dark-highlight: highlight-theme(
@@ -387,7 +387,7 @@ The last step is to **include** the newly created theme.
 
 ### Custom styles
 
-Let's say we want to provide an even richer styling to our highlighted text parts. In order to do this, we can take advantage of the [`cssClass`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#cssclass) and the [`activeCssClass`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#activecssclass) inputs of the [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) directive. We can combine these classes with the styles from the [`highlight-theme`]({environment:sassApiUrl}/index.html#function-highlight-theme) and provide an awesome experience to our users!
+Let's say we want to provide an even richer styling to our highlighted text parts. In order to do this, we can take advantage of the [`cssClass`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#cssclass) and the [`activeCssClass`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#activecssclass) inputs of the [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) directive. We can combine these classes with the styles from the [`highlight-theme`]({environment:sassApiUrl}/themes#function-highlight-theme) and provide an awesome experience to our users!
 
 All we have to do is create a couple of css classes with some properties and attach them by using the inputs from above:
 
@@ -449,7 +449,7 @@ For more detailed information regarding the TextHighlight directive's API, refer
 Additional components that were used:
 
 * [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [`IgxInputGroupComponent Styles`]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [`IgxInputGroupComponent Styles`]({environment:sassApiUrl}/themes#function-input-group-theme)
 <div class="divider"></div>
 
 ## Additional Resources
