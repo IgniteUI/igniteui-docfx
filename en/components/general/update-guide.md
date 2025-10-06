@@ -968,7 +968,7 @@ $__legacy-libsass: true;
         ```
     As you can see, since the `button-theme` params now have the same names for each button type, we have to scope our button themes to a CSS selector in order to have different colors for different types.
 
-    Here you can see all the [available properties](https://www.infragistics.com/products/ignite-ui-angular/docs/sass/latest/index.html#function-button-theme) of the `button-theme`
+    Here you can see all the [available properties]({environment:sassApiUrl}/themes#function-button-theme) of the `button-theme`
 
     * The `typography` mixin is no longer implicitly included with `core`. To use our typography styles you have to include the mixin explicitly after `core` and before `theme`:
 
