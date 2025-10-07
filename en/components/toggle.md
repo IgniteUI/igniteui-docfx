@@ -248,7 +248,7 @@ Additional components and/or directives with relative APIs that were used:
 * [igxNavigationService]({environment:angularApiUrl}/classes/igxnavigationservice.html)
 
 ## Theming Dependencies
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 
 ## Additional Resources

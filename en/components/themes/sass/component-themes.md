@@ -167,8 +167,8 @@ The above instance could also be achieved without using any Sass. All we need to
 
 <div class="divider--half"></div>
 
-- [Global Theme]({environment:sassApiUrl}/index.html#mixin-theme)
-- [Avatar Theme]({environment:sassApiUrl}/index.html#function-avatar-theme)
+- [Global Theme]({environment:sassApiUrl}/themes#mixin-theme)
+- [Avatar Theme]({environment:sassApiUrl}/themes#function-avatar-theme)
 
 ## Additional Resources
 

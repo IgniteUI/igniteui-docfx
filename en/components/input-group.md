@@ -447,7 +447,7 @@ The first thing we need to do, in order to get started with the input group styl
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-To customize the appearance of input groups, you can create a new theme by extending the [`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme). This approach allows you to override only the parameters you want to change, while the rest are automatically handled by the base theme.
+To customize the appearance of input groups, you can create a new theme by extending the [`input-group-theme`]({environment:sassApiUrl}/themes#function-input-group-theme). This approach allows you to override only the parameters you want to change, while the rest are automatically handled by the base theme.
 
 Even by specifying just a few core parameters—like colors for the border or background—you'll get a fully styled input group with consistent state-based styles (hover, focus, etc.) applied for you.
 
@@ -491,11 +491,11 @@ For instance, setting a dark `$box-background` globally could cause the borders 
 * [IgxHintDirective]({environment:angularApiUrl}/classes/igxhintdirective.html)
 * [IgxInputGroup Types]({environment:angularApiUrl}/index.html#IgxInputGroupType)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/themes#function-input-group-theme)
 
 ## Theming Dependencies
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>
