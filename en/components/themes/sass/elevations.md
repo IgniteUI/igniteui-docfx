@@ -107,8 +107,8 @@ The elevation levels are also used in theme schema declarations. More on that in
 
 ## API References
 
-* [Creating Elevations]({environment:sassApiUrl}/index.html#function-elevations)
-* [Retrieving Elevations]({environment:sassApiUrl}/index.html#function-elevation)
+* [Creating Elevations]({environment:sassApiUrl}/elevations#mixin-elevations)
+* [Retrieving Elevations]({environment:sassApiUrl}/elevations#function-elevation)
 
 
 ## Additional Resources

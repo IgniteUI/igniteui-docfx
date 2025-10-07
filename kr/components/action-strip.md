@@ -144,7 +144,7 @@ For more detailed information regarding the Action Strip API, refer to the follo
 
 The following built-in CSS styles helped us achieve this Action Strip layout:
 
-* [`IgxActionStripComponent Styles`]({environment:sassApiUrl}/index.html#function-action-strip-theme)
+* [`IgxActionStripComponent Styles`]({environment:sassApiUrl}/themes#function-action-strip-theme)
 
 Additional components and/or directives that can be used within the Action Strip:
 

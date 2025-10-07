@@ -205,8 +205,8 @@ As a bonus, any Ignite UI for Angular theme built with the `$igx-legacy-support`
 <div class="divider"></div>
 
 ### API Overview
-* [Global Theme]({environment:sassApiUrl}/index.html#mixin-theme)
-* [Avatar Theme]({environment:sassApiUrl}/index.html#function-igx-avatar)
+* [Global Theme]({environment:sassApiUrl}/themes#mixin-theme)
+* [Avatar Theme]({environment:sassApiUrl}/themes#function-avatar-theme)
 
 <div class="divider--half"></div>
 

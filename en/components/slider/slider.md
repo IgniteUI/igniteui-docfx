@@ -521,7 +521,7 @@ This is the final result from applying our new theme.
 <div class="divider--half"></div>
 
 * [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)
-* [IgxSliderComponent Styles]({environment:sassApiUrl}/index.html#function-slider-theme)
+* [IgxSliderComponent Styles]({environment:sassApiUrl}/themes#function-slider-theme)
 * [SliderType]({environment:angularApiUrl}/variables/IgxSliderType-1.html)
 * [IRangeSliderValue]({environment:angularApiUrl}/interfaces/irangeslidervalue.html)
 * [TicksOrientation]({environment:angularApiUrl}/classes/IgxSliderComponent.html#ticksOrientation)
