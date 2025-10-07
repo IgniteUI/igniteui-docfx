@@ -16,11 +16,77 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 
 *   [Ignite UI for Angular CHANGELOG.md at Github](https://github.com/IgniteUI/igniteui-angular/blob/master)
 
-## **20.0.1 (July 2025)**
+## **20.1.0 (September 2025)**
 
 ### igniteui-angular-maps (Geographic Map)
 
-*   New [Azure Maps](geo-map-display-azure-imagery.md). This is a new geographic imagery mapping service provided by Microsoft® for the Infragistics Geographic Map.
+#### <label class="badge badge--preview">PREVIEW</label> Azure Map Imagery Support
+
+The `GeographicMap` now supports Azure-based map imagery, allowing developers to display detailed, dynamic maps across multiple application types. You can combine multiple map layers, visualize geographic data, and create interactive mapping experiences with ease.
+
+Note: Support for Bing Maps imagery is being phased out. Existing enterprise keys can still be used to access Bing Maps, ensuring your current applications continue to function while you transition to Azure maps.
+
+Explore some of the publicly available [Azure maps here](https://azure.microsoft.com/en-us/products/azure-maps).
+
+### igniteui-angular-charts (Charts)
+
+#### <label class="badge badge--preview">PREVIEW</label> New Axis Label Events
+
+The following events have been added to the `DataChart` to allow you to detect different operations on the axis labels:
+
+*   `LabelMouseDown`
+*   `LabelMouseUp`
+*   `LabelMouseEnter`
+*   `LabelMouseLeave`
+*   `LabelMouseMove`
+*   `LabelMouseClick`
+
+#### <label class="badge badge--preview">PREVIEW</label> Companion Axis
+
+Added `CompanionAxis` properties to the X and Y axis that allow you to quickly create a clone of an existing axis. When enabled using the `CompanionAxisEnabled` property, this will default the cloned axis to the opposite position of the chart and you can then configure that axes' properties.
+
+#### <label class="badge badge--preview">PREVIEW</label> RadialPieSeries Inset Outlines
+
+There is a new property called [`useInsetOutlines`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#useInsetOutlines) to control how outlines on the [`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxradialpieseriescomponent.html) are rendered. Setting this value to **true** will inset the outlines within the slice shape, whereas a **false** (default) value will place the outlines half-in half-out along the edge of the slice shape.
+
+**Breaking Changes**
+
+*   A fix was made due to an issue where the `PlotAreaPosition` and `ChartPosition` properties on [`IgxChartMouseEventArgs`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxchartmouseeventargs.html) class were reversed. This will change the values that [`plotAreaPosition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxchartmouseeventargs.html#plotAreaPosition) and [`chartPosition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxchartmouseeventargs.html#chartPosition) return.
+
+### Enhancements
+
+#### IgxBulletGraph
+
+*   <label class="badge badge--preview">PREVIEW</label> Added new `LabelsVisible` property
+
+#### Charts
+
+*   New properties added to the DataToolTipLayer, ItemToolTipLayer, and CategoryToolTipLayer to aid in styling: `ToolTipBackground`, `ToolTipBorderBrush`, and `ToolTipBorderThickness`
+
+*   New properties added to the DataLegend to aid in styling: `ContentBackground`, `ContentBorderBrush`, and `ContentBorderThickness`. The `ContentBorderBrush` and `ContentBorderThickness` default to transparent and 0 respectively, so in order to see these borders, you will need to set these properties.
+
+*   Added a new property to [`IgxChartMouseEventArgs`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxchartmouseeventargs.html) called [`worldPosition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxchartmouseeventargs.html#worldPosition) that provides the world relative position of the mouse. This position will be a value between 0 and 1 for both the X and Y axis within the axis space.
+
+*   Added [`highlightingFadeOpacity`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#highlightingFadeOpacity) to [`IgxSeriesViewerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html) and [`IgxDomainChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html). This allows you to configure the opacity applied to highlighted series.
+
+*   Expose `CalloutLabelUpdating` event for domain charts.
+
+#### IgxLinearGauge
+
+*   <label class="badge badge--preview">PREVIEW</label> Added new `LabelsVisible` property
+
+### Bug Fixes
+
+| Bug Number | Control | Description |
+|------------|---------|-------------|
+|27304|IgxDataChart|Zoom rectangle is not positioned the same as the background rectangle|
+|30600|IgxDoughnutChart|No textStyle property for either the chart or series (pie chart has this)|
+|31624|IgxCategoryChart|Resizing the containing window of the IgxCategoryChart causes the chart to fail to render the series|
+|33861|Excel Library|Adding line chart corrupts excel File for German culture|
+|37930|IgxDataChart|Data Annotation Overlay Text Color not working|
+|38231|IgxGrid|Unpinned column does not return to the original position if hidden columns exist|
+
+## **20.0.1 (August 2025)**
 
 ### Bug Fixes
 
@@ -30,7 +96,7 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 
 ### igniteui-angular-charts (Charts)
 
-*   Add `MaximumExtent` and `MaximumExtentPercentage` properties for use with axis labels.
+*   Added <label class="badge badge--new">NEW</label> `MaximumExtent` and `MaximumExtentPercentage` properties for use with axis labels.
 
 ## **20.0.0 (June 2025)**
 
@@ -48,20 +114,20 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 
 ### igniteui-angular-charts (Charts)
 
-*   New [Chart Data Annotations](charts/features/chart-data-annotations.md)
-    *   Data Annotation Band Layer (Beta)
-    *   Data Annotation Line Layer (Beta)
-    *   Data Annotation Rect Layer (Beta)
-    *   Data Annotation Slice Layer (Beta)
-    *   Data Annotation Strip Layer (Beta)
+*   Added <label class="badge badge--preview">PREVIEW</label> [Chart Data Annotations](charts/features/chart-data-annotations.md) layers:
+    *   Data Annotation Band Layer
+    *   Data Annotation Line Layer
+    *   Data Annotation Rect Layer
+    *   Data Annotation Slice Layer
+    *   Data Annotation Strip Layer
 
-*   The [Data Tooltip](charts/features/chart-data-tooltip.md) and [Data Legend](charts/features/chart-data-legend.md) expose a new `LayoutMode` property that you can use to layout the contents of the tooltip or legend in a table or vertical layout structure.
+*   The [Data Tooltip](charts/features/chart-data-tooltip.md) and [Data Legend](charts/features/chart-data-legend.md) expose <label class="badge badge--preview">PREVIEW</label> `LayoutMode` property that you can use to layout the contents of the tooltip or legend in a table or vertical layout structure.
 
-*   The [`defaultInteraction`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#defaultInteraction) property of the charts has been updated to include a new enumeration - `DragSelect` in which the dragged preview Rect will select the points contained within. (Beta)
+*   <label class="badge badge--preview">PREVIEW</label> The [`defaultInteraction`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#defaultInteraction) property of the charts has been updated to include a new enumeration - `DragSelect` in which the dragged preview Rect will select the points contained within.
 
-*   The [ValueOverlay and ValueLayer](charts/features/chart-overlays.md), in addition to the new [Chart Data Annotations](charts/features/chart-data-annotations.md) listed above now expose an `OverlayText` property that can be used to overlay additional annotation text in the plot area. These appearance of these annotations can be configured by using the many OverlayText-prefixed properties. For example, the `OverlayTextBrush` property will configure the color of the overlay text. (Beta)
+*   <label class="badge badge--preview">PREVIEW</label> The [ValueOverlay and ValueLayer](charts/features/chart-overlays.md), in addition to the <label class="badge badge--preview">PREVIEW</label> [Chart Data Annotations](charts/features/chart-data-annotations.md) listed above now expose an `OverlayText` property that can be used to overlay additional annotation text in the plot area. These appearance of these annotations can be configured by using the many OverlayText-prefixed properties. For example, the `OverlayTextBrush` property will configure the color of the overlay text.
 
-*   New [Trendline Layer](charts/features/chart-trendlines.md) series type that allows you to apply a single trend line per trend line layer to a particular series. This allows the usage of multiple trend lines on a single series since you can have multiple [TrendlineLayer](charts/features/chart-overlays.md) series types in the chart.
+*   <label class="badge badge--new">NEW</label> [Trendline Layer](charts/features/chart-trendlines.md) series type that allows you to apply a single trend line per trend line layer to a particular series. This allows the usage of multiple trend lines on a single series since you can have multiple [TrendlineLayer](charts/features/chart-overlays.md) series types in the chart.
 
 ### igniteui-angular-dashboards (Dashboards)
 
@@ -99,8 +165,8 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 #### Toolbar
 
 *   Added new `GroupHeaderTextStyle` property to [`IgxToolbarComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html) and [`IgxToolPanelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolpanelcomponent.html). If set, it will apply to all [`IgxToolActionGroupHeaderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactiongroupheadercomponent.html) actions.
-*   Added new property on [`IgxToolActionComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html) called [`titleHorizontalAlignment`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#titleHorizontalAlignment) which controls the horizontal alignment of the title text.
-*   Added new property on [`IgxToolActionSubPanelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionsubpanelcomponent.html) called `ItemSpacing` which controls the spacing between items inside the panel.
+*   Added new property on [`IgxToolActionComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html) called [`titleHorizontalAlignment`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#titleHorizontalAlignment) which controls the horizontal alignment of the title text.
+*   Added new property on [`IgxToolActionSubPanelComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionsubpanelcomponent.html) called [`itemSpacing`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactionsubpanelcomponent.html#itemSpacing) which controls the spacing between items inside the panel.
 
 ### Bug Fixes
 
@@ -129,21 +195,17 @@ The following table lists the bug fixes made for the Ignite UI for Angular tools
 
 ### igniteui-angular-charts (Charts)
 
-DashboardTile (Beta)
-
-*   New [Dashboard Tile](dashboard-tile.md) component is a container control that analyzes and visualizes a bound ItemsSource collection or single point and returns an appropriate data visualization based on the schema and count of the data. This control utilizes a built-in [Toolbar](menus/toolbar.md) component to allow you to make changes to the visualization at runtime, allowing you to see many different visualizations of your data with minimal code.
+*   <label class="badge badge--preview">PREVIEW</label> [Dashboard Tile](dashboard-tile.md) component is a container control that analyzes and visualizes a bound ItemsSource collection or single point and returns an appropriate data visualization based on the schema and count of the data. This control utilizes a built-in [Toolbar](menus/toolbar.md) component to allow you to make changes to the visualization at runtime, allowing you to see many different visualizations of your data with minimal code.
 
 ### igniteui-angular-charts (Inputs)
 
-*   New ColorEditor (Beta) & Toolbar ToolAction (Beta)
-
-This new [Color Editor](inputs/color-editor.md) can be used as a standalone color picker and is now integrated into the [Toolbar](menus/toolbar.md) component to update visualizations at runtime.
+*   <label class="badge badge--preview">PREVIEW</label> [Color Editor](inputs/color-editor.md) can be used as a standalone color picker and is now integrated into <label class="badge badge--preview">PREVIEW</label> ToolAction of [Toolbar](menus/toolbar.md) component to update visualizations at runtime.
 
 ## **18.1.0 (September 2024)**
 
 *   [Data Pie Chart](charts/types/data-pie-chart.md) - The [`IgxDataPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiechartcomponent.html) is a new component that renders a pie chart. This component works similarly to the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html), in that it will automatically detect the properties on your underlying data model while allowing selection, highlighting, animation and legend support via the ItemLegend component.
 
-*   New [Proportional Category Angle Axis](charts/types/radial-chart.md) - New axes for the Radial Pie Series in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html), to plot slices similar to a pie chart, a type of data visualization where data points are represented as segments within a circular graph.
+*   <label class="badge badge--new">NEW</label> [Proportional Category Angle Axis](charts/types/radial-chart.md) - New axes for the Radial Pie Series in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html), to plot slices similar to a pie chart, a type of data visualization where data points are represented as segments within a circular graph.
 
 *   [`IgxToolbarComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html)
 
@@ -168,7 +230,7 @@ This new [Color Editor](inputs/color-editor.md) can be used as a standalone colo
 
 <!---->
 
-*   [Chart Selection](charts/features/chart-data-selection.md) - New series selection styling. This is adopted broadly across all category, financial and radial series for [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) and [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html). Series can be clicked and shown a different color, brightened or faded, and focus outlines. Manage which items are effected through individual series or entire data item. Multiple series and markers are supported. Useful for illustrating various differences or similarities between values of a partcular dataitem. Also  `SelectedSeriesItemsChanged` event and [`selectedSeriesItems`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#selectedSeriesItems) are available for additional help to build out robust business requirements surrouding other actions that can take place within an application such as a popup or other screen with data analysis based on the selection.
+*   [Chart Selection](charts/features/chart-data-selection.md) - New series selection styling. This is adopted broadly across all category, financial and radial series for [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) and [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html). Series can be clicked and shown a different color, brightened or faded, and focus outlines. Manage which items are effected through individual series or entire data item. Multiple series and markers are supported. Useful for illustrating various differences or similarities between values of a particular data item. Also  `SelectedSeriesItemsChanged` event and [`selectedSeriesItems`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#selectedSeriesItems) are available for additional help to build out robust business requirements surrounding other actions that can take place within an application such as a popup or other screen with data analysis based on the selection.
 
 *   [Treemap Highlighting](charts/types/treemap-chart.md#angular-treemap-highlighting) - Now exposes a [`highlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#highlightingMode) property that allows you to configure the mouse-over highlighting of the items in the tree map. This property takes two options: `Brighten` where the highlight will apply to the item that you hover the mouse over only, and `FadeOthers` where the highlight of the hovered item will remain the same, but everything else will fade out. This highlight is animated, and can be controlled using the [`highlightingTransitionDuration`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#highlightingTransitionDuration) property.
 
@@ -191,7 +253,7 @@ This new [Color Editor](inputs/color-editor.md) can be used as a standalone colo
 
 <!---->
 
-*   [Chart Selection](charts/features/chart-data-selection.md) - New series selection styling. This is adopted broadly across all category, financial and radial series for [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) and [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html). Series can be clicked and shown a different color, brightened or faded, and focus outlines. Manage which items are effected through individual series or entire data item. Multiple series and markers are supported. Useful for illustrating various differences or similarities between values of a partcular dataitem. Also  `SelectedSeriesItemsChanged` event and [`selectedSeriesItems`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#selectedSeriesItems) are available for additional help to build out robust business requirements surrouding other actions that can take place within an application such as a popup or other screen with data analysis based on the selection.
+*   [Chart Selection](charts/features/chart-data-selection.md) - New series selection styling. This is adopted broadly across all category, financial and radial series for [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) and [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html). Series can be clicked and shown a different color, brightened or faded, and focus outlines. Manage which items are effected through individual series or entire data item. Multiple series and markers are supported. Useful for illustrating various differences or similarities between values of a particular data item. Also  `SelectedSeriesItemsChanged` event and [`selectedSeriesItems`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#selectedSeriesItems) are available for additional help to build out robust business requirements surrounding other actions that can take place within an application such as a popup or other screen with data analysis based on the selection.
 
 *   [Treemap Highlighting](charts/types/treemap-chart.md#angular-treemap-highlighting) - Now exposes a [`highlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#highlightingMode) property that allows you to configure the mouse-over highlighting of the items in the tree map. This property takes two options: `Brighten` where the highlight will apply to the item that you hover the mouse over only, and `FadeOthers` where the highlight of the hovered item will remain the same, but everything else will fade out. This highlight is animated, and can be controlled using the [`highlightingTransitionDuration`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#highlightingTransitionDuration) property.
 
@@ -233,7 +295,7 @@ This new [Color Editor](inputs/color-editor.md) can be used as a standalone colo
 
 ## **17.0.0 (November 2023)**
 
-### igniteui-angular (Toolbar - Beta)
+### igniteui-angular - Toolbar - <label class="badge badge--preview">PREVIEW</label>
 
 *   Save tool action has been added to save the chart to an image via the clipboard.
 *   Vertical orientation has been added via the toolbar's [`orientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html#orientation) property. By default the toolbar is horizontal, now the toolbar can be shown in vertical orientation where the tools will popup to the left/right respectfully.
@@ -243,7 +305,7 @@ This new [Color Editor](inputs/color-editor.md) can be used as a standalone colo
 
 ### New Components
 
-*   [Toolbar](menus/toolbar.md) - Beta. This component is a companion container for UI operations to be used primarily with our charting components. The toolbar will dynamically update with a preset of properties and tool items when linked to our [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) or [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) components. You'll be able to create custom tools for your project allowing end users to provide changes, offering an endless amount of customization.
+*   <label class="badge badge--preview">PREVIEW</label> [Toolbar](menus/toolbar.md) - This component is a companion container for UI operations to be used primarily with our charting components. The toolbar will dynamically update with a preset of properties and tool items when linked to our [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) or [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) components. You'll be able to create custom tools for your project allowing end users to provide changes, offering an endless amount of customization.
 
 ### igniteui-angular-charts (Charts)
 
@@ -430,7 +492,7 @@ Import statements have been simplified to use just package names instead of full
 | <a href="https://www.npmjs.com/package/igniteui-angular-spreadsheet/v/8.2.12" target="_blank">igniteui-angular-spreadsheet</a> | [Spreadsheet](spreadsheet-overview.md) |
 | <a href="https://www.npmjs.com/package/igniteui-angular-maps/v/8.2.12" target="_blank">igniteui-angular-maps</a> | [Geo Map](geo-map.md), [Treemap](charts/types/treemap-chart.md)  |
 | <a href="https://www.npmjs.com/package/igniteui-angular-gauges/v/8.2.12" target="_blank">igniteui-angular-gauges</a> |  [Bullet Graph](bullet-graph.md), [Linear Gauge](linear-gauge.md), [Radial Gauge](radial-gauge.md)   |
-| <a href="https://www.npmjs.com/package/igniteui-angular-charts/v/8.2.12" target="_blank">igniteui-angular-charts</a>| Category Chart, Data Chart, Donut Chart, Financial Chart], Pie Chart, [Zoom Slider](zoomslider-overview.md)  |
+| <a href="https://www.npmjs.com/package/igniteui-angular-charts/v/8.2.12" target="_blank">igniteui-angular-charts</a>| Category Chart, Data Chart, Donut Chart, Financial Chart, Pie Chart, [Zoom Slider](zoomslider-overview.md)  |
 | <a href="https://www.npmjs.com/package/igniteui-angular-core/v/8.2.12" target="_blank">igniteui-angular-core</a> | all classes and enums  |
 
 *   Code After Changes

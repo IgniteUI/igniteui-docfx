@@ -7,7 +7,7 @@ namespace: Infragistics.Controls
 _language: ja
 ---
 
-# Angular Color Editor (カラー エディター) の概要 (プレビュー)
+# Angular Color Editor (カラー エディター) の概要 <label class="badge badge--preview">PREVIEW</label>
 
 Ignite UI for Angular Color Editor は軽量のカラー ピッカー コンポーネントです。Color Editor は、ブラッシ アイコンをクリックすると開きます。RGBA 値と 16 進値の両方を、下部にある目的の色から取得できます。これらの値は、3 つのスライダーが変更されると更新されます。中央のボックスは、彩度と明度を調整するために設計されており、隣接する 2つ のスライダーで rgb 値と輝度値を調整できます。RGB は (1～255) の範囲で登録されます。明度は (0～1) の範囲で登録されます。
 
