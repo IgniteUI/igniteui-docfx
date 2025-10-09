@@ -289,17 +289,17 @@ row.delete();
 ### API 참조
 
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameComponent 스타일]({environment:sassApiUrl}/themes#function-grid-theme)
 * [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
 * [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
-* [IgxDatePickerComponent 스타일]({environment:sassApiUrl}/index.html#function-igx-date-picker-theme)
+* [IgxDatePickerComponent 스타일]({environment:sassApiUrl}/themes#function-igx-date-picker-theme)
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
-* [IgxCheckboxComponent 스타일]({environment:sassApiUrl}/index.html#function-checkbox-theme)
+* [IgxCheckboxComponent 스타일]({environment:sassApiUrl}/themes#function-checkbox-theme)
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay 스타일]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxOverlay 스타일]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 
 ### 추가 리소스

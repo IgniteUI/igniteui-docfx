@@ -327,7 +327,7 @@ export class ExpansionPanelComponent {
     }
 }
 ```
-As you can see, we are going to use [`slideInLeft`]({environment:sassApiUrl}/animations#mixin-slide-in-left) and [`slideOutRight`]({environment:sassApiUrl}/animations#mixin-slide-out-right) animations from our [**inbuilt suite of animations**]({environment:sassApiUrl}/index.html#animations) to make the component content appear more dramatically from the left side and disappear on the right when collapsing the content. In the process, we override some of the existing parameters with the specific ones we want to use.
+As you can see, we are going to use [`slideInLeft`]({environment:sassApiUrl}/animations#mixin-slide-in-left) and [`slideOutRight`]({environment:sassApiUrl}/animations#mixin-slide-out-right) animations from our [**inbuilt suite of animations**]({environment:sassApiUrl}/animations) to make the component content appear more dramatically from the left side and disappear on the right when collapsing the content. In the process, we override some of the existing parameters with the specific ones we want to use.
 
 The sample shows some user information and the key point here is passing the animation settings to the component like:
 `[animationSettings] = "animationSettingsCustom"`

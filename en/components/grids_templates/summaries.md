@@ -711,7 +711,7 @@ To get started with styling the sorting behavior, we need to import the `index` 
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`grid-summary-theme`]({environment:sassApiUrl}/index.html#function-grid-summary-theme) and accepts the `$background-color`, `$focus-background-color`, `$label-color`, `$result-color`, `$pinned-border-width`, `$pinned-border-style` and `$pinned-border-color` parameters.
+Following the simplest approach, we create a new theme that extends the [`grid-summary-theme`]({environment:sassApiUrl}/themes#function-grid-summary-theme) and accepts the `$background-color`, `$focus-background-color`, `$label-color`, `$result-color`, `$pinned-border-width`, `$pinned-border-style` and `$pinned-border-color` parameters.
 
 ```scss
 $custom-theme: grid-summary-theme(
@@ -726,7 +726,7 @@ $custom-theme: grid-summary-theme(
 ```
 
 >[!NOTE]
->Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 The last step is to **include** the component custom theme:
 
@@ -782,8 +782,8 @@ The last step is to **include** the component custom theme:
 ## API References
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
-* [@@igxNameSummaries Styles]({environment:sassApiUrl}/index.html#function-grid-summary-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
+* [@@igxNameSummaries Styles]({environment:sassApiUrl}/themes#function-grid-summary-theme)
 * [IgxSummaryOperand]({environment:angularApiUrl}/classes/igxsummaryoperand.html)
 * [IgxNumberSummaryOperand]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html)
 * [IgxDateSummaryOperand]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html)
