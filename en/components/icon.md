@@ -332,7 +332,7 @@ The utility file includes both `light` and `dark` theme variants.
 
 Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
-You can find the full list of properties in the [icon-theme]({environment:sassApiUrl}/index.html#function-icon-theme). The syntax is as follows:
+You can find the full list of properties in the [icon-theme]({environment:sassApiUrl}/themes#function-icon-theme). The syntax is as follows:
 
 ```html
 <igx-icon class="!light-icon ![--color:#7B9E89] ![--size:48px]">person</igx-icon>

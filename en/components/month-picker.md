@@ -228,7 +228,7 @@ The utility file includes both `light` and `dark` theme variants. The month pick
 
 Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
-You can find the full list of properties in the [calendar-theme]({environment:sassApiUrl}/index.html#function-calendar-theme). The syntax is as follows:
+You can find the full list of properties in the [calendar-theme]({environment:sassApiUrl}/themes#function-calendar-theme). The syntax is as follows:
 
 ```html
 <igx-month-picker

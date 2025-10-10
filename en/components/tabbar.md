@@ -498,7 +498,7 @@ The utility file includes both `light` and `dark` theme variants.
 
 Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
-You can find the full list of properties in the [IgxBottomNav Theme]({environment:sassApiUrl}/index.html#function-bottom-nav-theme). The syntax is as follows:
+You can find the full list of properties in the [IgxBottomNav Theme]({environment:sassApiUrl}/themes#function-bottom-nav-theme). The syntax is as follows:
 
 ```html
 <igx-bottom-nav
