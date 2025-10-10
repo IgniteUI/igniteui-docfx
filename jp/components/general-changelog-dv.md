@@ -21,7 +21,7 @@ Ignite UI for Angular の各バージョンのすべての重要な変更は、�
 
 ### igniteui-angular-maps (地理マップ)
 
-#### Azure マップ画像のサポート (プレビュー)
+#### <label class="badge badge--preview">PREVIEW</label> Azure マップ画像のサポート
 
 `GeographicMap` は、 Azure ベースのマップ画像をサポートし、開発者は複数のアプリケーション タイプにわたって詳細かつ動的なマップを表示できるようになりました。複数のマップ レイヤーを組み合わせて地理データを視覚化し、インタラクティブなマッピング エクスペリエンスを簡単に作成できます。
 
@@ -31,7 +31,7 @@ Ignite UI for Angular の各バージョンのすべての重要な変更は、�
 
 ### igniteui-angular-charts (チャート)
 
-#### 新しい軸ラベル イベント (プレビュー)
+#### <label class="badge badge--preview">PREVIEW</label> 新しい軸ラベル イベント
 
 軸ラベルに対するさまざまな操作を検出できるように、次のイベントが `DataChart` に追加されました。
 
@@ -42,19 +42,23 @@ Ignite UI for Angular の各バージョンのすべての重要な変更は、�
 *   `LabelMouseMove`
 *   `LabelMouseClick`
 
-#### 対応軸 (プレビュー)
+#### <label class="badge badge--preview">PREVIEW</label> 対応軸
 
 X 軸と Y 軸に `CompanionAxis` プロパティが追加され、既存の軸を簡単に複製できるようになりました。`CompanionAxisEnabled` プロパティを有効にすると、複製された軸はチャートの反対側に配置され、そこから各軸プロパティを設定できます。
 
-#### RadialPieSeries インセット アウトライン (プレビュー)
+#### <label class="badge badge--preview">PREVIEW</label> RadialPieSeries インセット アウトライン
 
 [`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxradialpieseriescomponent.html) のアウトライン レンダリング方法を制御するために [`useInsetOutlines`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxradialpieseriescomponent.html#useInsetOutlines) プロパティが追加されました。**true** に設定すると、アウトラインがスライス形状の内側に描画され、**false** (既定値) に設定すると、アウトラインはスライス形状の端に半分内側・半分外側で描画されます。
+
+**重大な変更**
+
+*   [`IgxChartMouseEventArgs`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxchartmouseeventargs.html) クラスの [`plotAreaPosition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxchartmouseeventargs.html#plotAreaPosition) プロパティと [`chartPosition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxchartmouseeventargs.html#chartPosition) プロパティが逆になっている問題が修正されました。これにより、[`plotAreaPosition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxchartmouseeventargs.html#plotAreaPosition) と [`chartPosition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxchartmouseeventargs.html#chartPosition) が返す値が変更されます。
 
 ### 機能拡張
 
 #### IgxBulletGraph
 
-*   新しい `LabelsVisible` プロパティが追加されました。(プレビュー)
+*   <label class="badge badge--preview">PREVIEW</label> 新しい `LabelsVisible` プロパティが追加されました。
 
 #### チャート
 
@@ -62,19 +66,15 @@ X 軸と Y 軸に `CompanionAxis` プロパティが追加され、既存の軸�
 
 *   DataLegend にスタイル設定用の新しいプロパティが追加されました: `ContentBackground`、`ContentBorderBrush`、および `ContentBorderThickness`。`ContentBorderBrush` と `ContentBorderThickness` はそれぞれ既定で transparent と 0 に設定されているため、境界線を表示するにはこれらのプロパティを設定する必要があります。
 
-*   マウスのワールド相対位置を提供する `WorldPosition` という新しいプロパティが [`IgxChartMouseEventArgs`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxchartmouseeventargs.html) に追加されました。この位置は、軸空間内の X 軸と Y 軸の両方に対して 0 から 1 の間の値になります。
+*   マウスのワールド相対位置を提供する [`worldPosition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxchartmouseeventargs.html#worldPosition) という新しいプロパティが [`IgxChartMouseEventArgs`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxchartmouseeventargs.html) に追加されました。この位置は、軸空間内の X 軸と Y 軸の両方に対して 0 から 1 の間の値になります。
 
 *   [`IgxSeriesViewerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html) と [`IgxDomainChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html) に [`highlightingFadeOpacity`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#highlightingFadeOpacity) が追加されました。ハイライト表示されたシリーズに適用される不透明度を設定できます。
 
 *   ドメイン チャートの `CalloutLabelUpdating` イベントを公開しました。
 
-#### IgxDataGrid
-
-*   DataGrid に新しいプロパティ `stopPropagation` が追加されました。これにより、マウス イベントが親要素へバブリングするのを防止できます。
-
 #### IgxLinearGauge
 
-*   新しい `LabelsVisible` プロパティが追加されました。(プレビュー)
+*   <label class="badge badge--preview">PREVIEW</label> 新しい `LabelsVisible` プロパティが追加されました。
 
 ### バグ修正
 

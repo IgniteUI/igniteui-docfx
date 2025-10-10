@@ -155,9 +155,8 @@ $indigo-avatar: map.get($light-indigo-schema, avatar);
 内部でスキーマを使用してバリエーションを作成し、結果として Material、Bootstrap、Fluent、および Indigo のテーマがあらかじめバンドルされています。
 
 ## API の概要
-* [Avatar スキーマ]({environment:sassApiUrl}/index.html#variable-_light-avatar)
-* [Light コンポーネント スキーマ]({environment:sassApiUrl}/index.html#variable-light-schema)
-* [Dark コンポーネント スキーマ]({environment:sassApiUrl}/index.html#variable-dark-schema)
+* [Light コンポーネント スキーマ]({environment:sassApiUrl}/schemas#variable-light-material-schema)
+* [Dark コンポーネント スキーマ]({environment:sassApiUrl}/schemas#variable-dark-material-schema)
 * [グローバル テーマ]({environment:sassApiUrl}/themes#mixin-theme)
 * [Avatar テーマ]({environment:sassApiUrl}/themes#function-avatar-theme)
 

@@ -447,7 +447,7 @@ To get started with styling the tabs, we need to import the `index` file, where 
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-bottom-nav-theme) and accepts various parameters that allow us to style the tab groups.
+Following the simplest approach, we create a new theme that extends the [`bottom-nav-theme`]({environment:sassApiUrl}/themes#function-bottom-nav-theme) and accepts various parameters that allow us to style the tab groups.
 
 ```scss
 $dark-bottom-nav: bottom-nav-theme(
@@ -457,9 +457,9 @@ $dark-bottom-nav: bottom-nav-theme(
 ```
 
 >[!NOTE]
->Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
-If we take a look at the [`bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-bottom-nav-theme), we will notice that there are even more parameters available to us in order to style our bottom navigation component!
+If we take a look at the [`bottom-nav-theme`]({environment:sassApiUrl}/themes#function-bottom-nav-theme), we will notice that there are even more parameters available to us in order to style our bottom navigation component!
 
 > [!NOTE]
 > In order to style any additional components that are used as part of an item's content, an additional theme should be created that is specific to the respective component.
@@ -525,12 +525,12 @@ At the end your bottom nav should look like this:
 <div class="divider--half"></div>
 
 * [IgxBottomNavComponent]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html)
-* [IgxBottomNavComponent Styles]({environment:sassApiUrl}/index.html#function-bottom-nav-theme)
+* [IgxBottomNavComponent Styles]({environment:sassApiUrl}/themes#function-bottom-nav-theme)
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

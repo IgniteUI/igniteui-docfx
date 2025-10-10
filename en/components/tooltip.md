@@ -418,7 +418,7 @@ To get started with styling the tooltip, we need to import the `index` file, whe
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`tooltip-theme`]({environment:sassApiUrl}/index.html#function-tooltip-theme) and provide the `$text-color`, `$background` and the `$border-radius` parameters.
+Following the simplest approach, we create a new theme that extends the [`tooltip-theme`]({environment:sassApiUrl}/themes#function-tooltip-theme) and provide the `$text-color`, `$background` and the `$border-radius` parameters.
 
 ```scss
 $dark-tooltip: tooltip-theme(
@@ -542,9 +542,9 @@ Additional components and/or directives that were used:
 
 Styles:
 
-* [IgxTooltipDirective Styles]({environment:sassApiUrl}/index.html#function-tooltip-theme)
-* [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-avatar-theme)
-* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxTooltipDirective Styles]({environment:sassApiUrl}/themes#function-tooltip-theme)
+* [IgxAvatarComponent Styles]({environment:sassApiUrl}/themes#function-avatar-theme)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/themes#function-icon-theme)
 
 <div class="divider"></div>
 

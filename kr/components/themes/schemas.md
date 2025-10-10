@@ -37,7 +37,7 @@ $_light-avatar: (
 );
 ```
 
-As you can see from the example above, the component schema defines the properties the [Avatar Theme]({environment:sassApiUrl}/index.html#function-avatar-theme) consumes. It just prescribes the colors the avatar should use, without having to resolve them beforehand.
+As you can see from the example above, the component schema defines the properties the [Avatar Theme]({environment:sassApiUrl}/themes#function-avatar-theme) consumes. It just prescribes the colors the avatar should use, without having to resolve them beforehand.
 
 Let's take the `icon-background` property for example. It tells the avatar theme what the default background should be for each new __igx-avatar__ of type __icon__. 
 
@@ -121,11 +121,10 @@ The good thing about schemas is they allow you to modify the global theme before
 Another great feature of theme schemas is that you can have as many as you want and swap them as you wish. **For instance, we use schemas internally to provide both light and dark themes by default. This allows you to switch the entire look of your application.**
 
 ### API Overview
-* [Light Avatar Schema]({environment:sassApiUrl}/index.html#variable-_light-avatar)
-* [Light Components Schema]({environment:sassApiUrl}/index.html#variable-light-schema)
-* [Dark Components Schema]({environment:sassApiUrl}/index.html#variable-dark-schema)
-* [Global Theme]({environment:sassApiUrl}/index.html#mixin-theme)
-* [Avatar Theme]({environment:sassApiUrl}/index.html#function-avatar-theme)
+* [Light Components Schema]({environment:sassApiUrl}/palettes#variable-light-material-schema)
+* [Dark Components Schema]({environment:sassApiUrl}/palettes#variable-dark-material-schema)
+* [Global Theme]({environment:sassApiUrl}/themes#mixin-theme)
+* [Avatar Theme]({environment:sassApiUrl}/themes#function-avatar-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>

@@ -394,10 +394,10 @@ When [allowItemsFocus]({environment:angularApiUrl}/classes/igxdropdowncomponent.
 
 ### API Summary
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) 
-* [IgxDropDownComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-drop-down)
+* [IgxDropDownComponent Styles]({environment:sassApiUrl}/themes#function-drop-down-theme)
 * [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html).
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ### Additional Resources
 

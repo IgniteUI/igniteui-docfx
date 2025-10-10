@@ -176,7 +176,7 @@ The results of the templated banner can be seen in the below demo:
 
 ### Applying custom animations
 
-The banner component also exposes an `Input` property that allows setting custom opening and closing animations in the [`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationsettings). Developers can pass custom animations - either self-defined, or those from our [`IgniteUI for Angular animation suite`]({environment:sassApiUrl}/index.html). The default animations used by the banner are `growVerIn` for entry and `growVerOut` for exiting.
+The banner component also exposes an `Input` property that allows setting custom opening and closing animations in the [`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationsettings). Developers can pass custom animations - either self-defined, or those from our [`IgniteUI for Angular animation suite`]({environment:sassApiUrl}/animations). The default animations used by the banner are `growVerIn` for entry and `growVerOut` for exiting.
 
 Let's change the animations that our banner uses, so that it slides in.
 
@@ -238,4 +238,4 @@ export class MyBannerComponent {
 ## API Reference
 
 * [IgxBannerComponent]({environment:angularApiUrl}/classes/igxbannercomponent.html)
-* [IgxBannerComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-banner)
+* [IgxBannerComponent Theme]({environment:sassApiUrl}/themes#function-banner-theme)

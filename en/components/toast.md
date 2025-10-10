@@ -213,7 +213,7 @@ To get started with styling the toast, we need to import the index file, where a
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`toast-theme`]({environment:sassApiUrl}/index.html#function-toast-theme) and provide the `$background`, `$text-color` and `$border-radius` parameters.
+Following the simplest approach, we create a new theme that extends the [`toast-theme`]({environment:sassApiUrl}/themes#function-toast-theme) and provide the `$background`, `$text-color` and `$border-radius` parameters.
 
 ```scss
 $custom-toast-theme: toast-theme(
@@ -224,7 +224,7 @@ $custom-toast-theme: toast-theme(
 ```
 
 >[!NOTE]
->Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 The last step is to pass the custom toast theme:
 
@@ -283,7 +283,7 @@ At the end your toast should look like this:
 <div class="divider--half"></div>
 
 * [IgxToastComponent]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
-* [IgxToastComponent Styles]({environment:sassApiUrl}/index.html#function-toast-theme)
+* [IgxToastComponent Styles]({environment:sassApiUrl}/themes#function-toast-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

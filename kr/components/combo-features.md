@@ -155,7 +155,7 @@ Defining a combo's groupKey option will group the items, according to the provid
 <div class="divider--half"></div>
 
 * IgxComboComponent [**API Reference**]({environment:angularApiUrl}/classes/igxcombocomponent.html) and
-[**Themes Reference**]({environment:sassApiUrl}/index.html#themes-mixin-igx-combo).
+[**Themes Reference**]({environment:sassApiUrl}/themes#function-combo-theme).
 
 ## Additional Resources
 <div class="divider--half"></div>

@@ -353,13 +353,13 @@ Additional components and/or directives that were used:
 
 Styles:
 
-* [IgxTooltipDirective Styles]({environment:sassApiUrl}/index.html#function-tooltip-theme)
-* [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-avatar-theme)
-* [IgxButtonDirective Styles]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxCardComponent Styles]({environment:sassApiUrl}/index.html#function-card-theme)
-* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxSliderComponent Styles]({environment:sassApiUrl}/index.html#function-slider-theme)
-* [IgxSwitchComponent Styles]({environment:sassApiUrl}/index.html#function-switch-theme)
+* [IgxTooltipDirective Styles]({environment:sassApiUrl}/themes#function-tooltip-theme)
+* [IgxAvatarComponent Styles]({environment:sassApiUrl}/themes#function-avatar-theme)
+* [IgxButtonDirective Styles]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxCardComponent Styles]({environment:sassApiUrl}/themes#function-card-theme)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxSliderComponent Styles]({environment:sassApiUrl}/themes#function-slider-theme)
+* [IgxSwitchComponent Styles]({environment:sassApiUrl}/themes#function-switch-theme)
 
 <div class="divider"></div>
 
