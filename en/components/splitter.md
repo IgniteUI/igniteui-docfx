@@ -210,6 +210,30 @@ Keyboard navigation is available by default in the splitter component. When you 
 - `Ctrl + Arrow Right` - Expands/Collapses a pane in a horizontal splitter
 
 ## Styling
+
+### Splitter Theme Property Map
+
+When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
+
+<table>
+    <thead>
+      <tr>
+        <th>Primary Property</th>
+        <th>Dependent Property</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="primary">
+        <td><strong>$bar-color</strong></td>
+        <td>$handle-color</td>
+        <td>The color for the bar drag handle</td>
+      </tr>
+      <tr class="dependent"><td></td><td>$expander-color</td><td>The color for the arrow expander</td></tr>
+      <tr class="dependent"><td></td><td>$focus-color</td><td>The color used for focused splitter bar</td></tr>
+    </tbody>
+</table>
+
 To get started with styling the **igxSplitter** component, you need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
@@ -249,28 +273,36 @@ This is the final result from applying your new theme.
            iframe-src="{environment:demosBaseUrl}/layouts/splitter-styling-sample/" >
 </code-view>
 
-### Custom sizing
+### Styling with Tailwind
 
-You can either use the `--size` variable, targeting the `igx-splitter` directly:
+You can style the splitter using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
 
 ```scss
-igx-splitter {
-  --size: 10px;
-}
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
 ```
 
-Or you can use the universal `--igx-splitter-size` variable to target all instances:
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-splitter`, `dark-splitter`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [splitter-theme]({environment:sassApiUrl}/themes#function-splitter-theme). The syntax is as follows:
 
 ```html
-<div class="my-app">
-  <igx-splitter></igx-splitter>
-</div>
+<igx-splitter
+  class="!light-splitter ![--bar-color:#7B9E89]">
+  ...
+</igx-splitter>
 ```
-```scss
-.my-app {
-  --igx-splitter-size: 10px;
-}
-```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
 
 
 ## API References
