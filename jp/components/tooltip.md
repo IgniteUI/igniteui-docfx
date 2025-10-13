@@ -282,11 +282,11 @@ export class AppModule {}
 ツールチップを表示または非表示にするまでの時間を制御する場合は、[`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブの [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showDelay) と [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hideDelay) プロパティを使用します。両プロパティは型 **number** でミリセカンドでタイムスパンを取得できます。
 
 > [!NOTE]
-> ビルトイン UI インタラクションの動作と [`IgxTooltipTargetDirective`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) および [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showDelay) と [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hideDelay) プロパティ値を考慮します。API または [`IgxTooltipDirective`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) の API によるツールチップを表示および非表示は、[`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showDelay) と [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hideDelay) プロパティ値を考慮しません。必要な場合、ロジックはアプリケーションの仕様を手動で実装する必要があります。
+> [`IgxTooltipTargetDirective`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) の組み込み UI インタラクションは、[`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showDelay) および [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hideDelay) プロパティの値を考慮して動作します。一方で、API からツールチップを表示または非表示にする場合や [`IgxTooltipDirective`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) の API を使用する場合、[`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showDelay) や [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hideDelay) は考慮されません。必要な場合、ロジックはアプリケーションの仕様を手動で実装する必要があります。
 
 ### オーバーレイ構成
 
-[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) および [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは、[`IgxOverlayService`](overlay.md) を使用して各ツールチップ要素を開くか閉じるかします。
+[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) と [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) の両ディレクティブは、内部的に [`IgxOverlayService`](overlay.md) を使用してツールチップ要素を開閉します。
 
 [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは [`positionSettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#positionSettings) プロパティを公開しており、ツールチップのアニメーション、UI 上での配置などをカスタマイズできます。未設定の場合はデフォルトの配置設定が適用されます。
 
@@ -316,7 +316,7 @@ public overlaySettings: OverlaySettings = {
 ```
 
 > [!NOTE]
-> [`positionSettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#positionsettings) または [`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) で設定したプロパティは、デフォルト オーバーレイ設定の同じプロパティをオーバーライドし、ツールチップに直接影響があります。
+> [`positionSettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#positionsettings) または [`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) で設定したプロパティは、デフォルト設定の同じプロパティをオーバーライドし、ツールチップの動作に直接影響します。
 
 ### 追加のプロパティ
 
