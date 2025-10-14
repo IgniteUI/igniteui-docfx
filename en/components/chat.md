@@ -354,9 +354,9 @@ This allows you to style the `Chat` to match your brand without replacing its fu
 - `NgChatTemplates`
 - `ChatMessage`
 - `ChatMessageAttachment`
-- [`Styling & Themes`](../themes/overview.md)
+- [`Styling & Themes`](./themes/index.md)
 
 ## Additional Resources
-
-* [{ProductName} **Forums**]({ForumsLink})
-* [{ProductName} **GitHub**]({GithubLink})
+Our community is active and always welcoming to new ideas.
+* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
