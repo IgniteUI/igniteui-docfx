@@ -1081,6 +1081,7 @@
 - name: Tooltip
   href: tooltip.md
   new: false
+  updated: true
 - name: Overlay
   href: overlay.md
   new: false
