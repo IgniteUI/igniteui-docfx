@@ -354,6 +354,31 @@ export class MyClass implements OnInit {
 
 ## Styling
 
+### Select Theme Property Map
+
+When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
+
+<table class="collapsible-table">
+    <thead>
+        <tr>
+        <th>Primary Property</th>
+        <th>Dependent Property</th>
+        <th>Description</th>
+        </tr>
+    </thead>
+    <tbody class="group">
+        <tr class="primary">
+        <td><details><summary><strong>$toggle-button-background</strong></summary></details></td>
+        <td>$toggle-button-foreground</td>
+        <td>Foreground color of the toggle button</td>
+        </tr>
+        <tr class="dependent"><td></td><td>$toggle-button-foreground-filled</td><td>Foreground color when toggle button is filled</td></tr>
+        <tr class="dependent"><td></td><td>$toggle-button-background-focus</td><td>Background color when focused</td></tr>
+        <tr class="dependent"><td></td><td>$toggle-button-background-focus--border (bootstrap/indigo)</td><td>Background when focused in border variant (Bootstrap/Indigo)</td></tr>
+        <tr class="dependent"><td></td><td>$toggle-button-foreground-focus</td><td>Foreground color when toggle button is focused</td></tr>
+    </tbody>
+</table>
+
 Every component has its own theme function.
 
 To get the Select component styled, you have to style its containing components. In our case, these are the [input-group-theme]({environment:sassApiUrl}/themes#function-input-group-theme) and the [drop-down-theme]({environment:sassApiUrl}/themes#function-drop-down-theme).
@@ -387,6 +412,43 @@ The last step is to pass the custom radio theme in our application:
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/select-styling/" >
 </code-view>
+
+### Styling with Tailwind
+
+You can style the select using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-select`, `dark-select`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [select-theme]({environment:sassApiUrl}/themes#function-select-theme). The syntax is as follows:
+
+```html
+<igx-select
+  class="!light-select ![--toggle-button-background:#99BAA6]">
+  ...
+</igx-select>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your select should look like this:
+
+<div class="sample-container loading" style="height:220px">
+    <iframe id="select-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/data-entries/select-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 
 <div class="divider--half"></div>

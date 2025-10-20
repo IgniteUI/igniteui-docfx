@@ -483,6 +483,45 @@ So now our styled tooltip should look like this:
            iframe-src="{environment:demosBaseUrl}/interactions/tooltip-style/" >
 </code-view>
 
+### Styling with Tailwind
+
+You can style the tooltip using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the Tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-tooltip`, `dark-tooltip`.
+
+Once applied, these classes enable dynamic theme calculations. You can then override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [IgxTooltip Theme]({environment:sassApiUrl}/themes#function-tooltip-theme). The syntax is as follows:
+
+```html
+<div
+  class="!light-tooltip ![--background:#90B69F]"
+  #tooltipRef="tooltip"
+  igxTooltip>
+  Her name is Madelyn James
+</div>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your tooltip should look like this:
+
+<div class="sample-container loading" style="height:100px">
+    <iframe id="tooltip-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/interactions/tooltip-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
 <div class="divider--half"></div>
 
 ## Accessibility

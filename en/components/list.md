@@ -607,7 +607,205 @@ The following sample demonstrates how to create a simple chat component using **
 
 <div class="divider--half"></div>
 
-## Applying theme to the list component
+## Styling
+
+### List Theme Property Map
+
+When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
+
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>Primary Property</th>
+      <th>Dependent Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <!-- group for background -->
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <strong>$background</strong>
+      </td>
+      <td>$header-background</td>
+      <td>The list header background color.</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>$item-background</td>
+      <td>The list item background color.</td>
+    </tr>
+  </tbody>
+
+  <!-- group for header-background -->
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <strong>$header-background</strong>
+      </td>
+      <td>$header-text-color</td>
+      <td>The list header text color.</td>
+    </tr>
+  </tbody>
+
+  <!-- group for item-background -->
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$item-background</strong></summary></details>
+      </td>
+      <td>$background</td>
+      <td>The list background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$header-background</td>
+      <td>The list header background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-background-hover</td>
+      <td>The list item hover background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-text-color</td>
+      <td>The list item text color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-title-color</td>
+      <td>The list item title color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-action-color</td>
+      <td>The list item action color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-thumbnail-color</td>
+      <td>The list item thumbnail color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-subtitle-color</td>
+      <td>The list item subtitle color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$border-color</td>
+      <td>The list border color. (Fluent/Bootstrap only)</td>
+    </tr>
+  </tbody>
+
+  <!-- group for item-background-hover -->
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$item-background-hover</strong></summary></details>
+      </td>
+      <td>$item-background-active</td>
+      <td>The active list item background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-text-color-hover</td>
+      <td>The list item hover text color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-title-color-hover</td>
+      <td>The list item hover title color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-action-color-hover</td>
+      <td>The list item hover action color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-thumbnail-color-hover</td>
+      <td>The list item hover thumbnail color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-subtitle-color-hover</td>
+      <td>The list item hover subtitle color.</td>
+    </tr>
+  </tbody>
+
+  <!-- group for item-background-active -->
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$item-background-active</strong></summary></details>
+      </td>
+      <td>$item-background-selected</td>
+      <td>The selected list item background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-text-color-active</td>
+      <td>The active list item text color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-title-color-active</td>
+      <td>The active list item title color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-action-color-active</td>
+      <td>The active list item action color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-thumbnail-color-active</td>
+      <td>The active list item thumbnail color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-subtitle-color-active</td>
+      <td>The active list item subtitle color.</td>
+    </tr>
+  </tbody>
+
+  <!-- group for item-background-selected -->
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$item-background-selected</strong></summary></details>
+      </td>
+      <td>$item-text-color-selected</td>
+      <td>The selected list item text color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-title-color-selected</td>
+      <td>The selected list item title color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-action-color-selected</td>
+      <td>The selected list item action color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-thumbnail-color-selected</td>
+      <td>The selected list item thumbnail color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-subtitle-color-selected</td>
+      <td>The selected list item subtitle color.</td>
+    </tr>
+  </tbody>
+</table>
+
+> **Note:** The actual results may vary depending on the theme variant.
+
 
 Let's see how we can change the background of our list. First we need to import index.scss in to our component .scss file.
 
@@ -642,6 +840,42 @@ The result is the following:
 </code-view>
 
 For full list of parameters that you can change for the list component please refer to: [IgxListComponent Styles]({environment:sassApiUrl}/themes#function-list-theme)
+
+### Styling with Tailwind
+
+You can style the list using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-list`, `dark-list`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [list-theme]({environment:sassApiUrl}/themes#function-list-theme). The syntax is as follows:
+
+```html
+<igx-list class="!light-list ![--background:#81B698] ![--item-background:#A3C7B2]">
+    ...
+</igx-list>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your list should look like this:
+
+<div class="sample-container loading" style="height:400px">
+    <iframe id="list-tailwind-style-iframe" data-src='{environment:demosBaseUrl}/lists/list-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ## API References
 

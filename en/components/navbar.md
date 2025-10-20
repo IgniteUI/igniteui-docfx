@@ -271,6 +271,37 @@ If we want to provide a custom content for a navbar's title, we can achieve this
 
 ## Styling
 
+### Navbar Theme Property Map
+
+When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
+
+<table class="collapsible-table">
+    <thead>
+      <tr>
+        <th>Primary Property</th>
+        <th>Dependent Property</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody class="group">
+      <tr class="primary">
+        <td><details><summary><strong>$background</strong></summary></details></td>
+        <td>$text-color</td>
+        <td>The navbar text color</td>
+      </tr>
+      <tr class="dependent"><td></td><td>$idle-icon-color</td><td>The navbar idle icon color</td></tr>
+      <tr class="dependent"><td></td><td>$hover-icon-color</td><td>The navbar hover icon color</td></tr>
+      <tr class="dependent"><td></td><td>$border-color (changes for indigo variant only)</td><td>The navbar border color</td></tr>
+    </tbody>
+    <tbody class="group">
+      <tr class="primary">
+        <td><strong>$idle-icon-color</strong></td>
+        <td>$hover-icon-color</td>
+        <td>The navbar hover icon color</td>
+      </tr>
+    </tbody>
+</table>
+
 To get started with styling the navbar, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
@@ -307,6 +338,42 @@ The last step is to pass the newly created theme to the `css-vars` mixin:
 </code-view>
 
 <div class="divider--half"></div>
+
+### Styling with Tailwind
+
+You can style the navbar using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-navbar`, `dark-navbar`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [navbar-theme]({environment:sassApiUrl}/themes#function-navbar-theme). The syntax is as follows:
+
+```html
+<igx-navbar class="!light-navbar ![--background:#7B9E89] ![--text-color:#121E17]" title="Sample App">
+  ...
+</igx-navbar>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your navbar should look like this:
+
+<div class="sample-container loading" style="height:120px">
+    <iframe id="navbar-tailwind-style-iframe" data-src='{environment:demosBaseUrl}/menus/navbar-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ## API References
 

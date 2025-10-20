@@ -131,6 +131,237 @@ If the `labelPosition` is not set, the label will be positioned after the switch
 
 ## Styling
 
+### Switch Theme Property Map
+
+When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
+
+<div class="theme-switcher-wrapper">
+  <!-- Theme Switcher Radios and Labels -->
+  <input type="radio" name="theme" id="material" checked>
+  <label for="material" class="switch-label">Material</label>
+  <input type="radio" name="theme" id="fluent">
+  <label for="fluent" class="switch-label">Fluent</label>
+  <input type="radio" name="theme" id="bootstrap">
+  <label for="bootstrap" class="switch-label">Bootstrap</label>
+  <input type="radio" name="theme" id="indigo">
+  <label for="indigo" class="switch-label">Indigo</label>
+
+  <div class="tables">
+    <!-- Material Theme Table -->
+    <div class="theme-table material">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$track-off-color</strong></summary></details></td>
+            <td>$thumb-off-color</td>
+            <td>Thumb color when switch is off</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$track-disabled-color</td><td>Track color when switch is disabled</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$thumb-off-color</strong></summary></details></td>
+            <td>$track-off-color</td>
+            <td>Track color when switch is off</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$thumb-disabled-color</td><td>Thumb color when switch is disabled</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$track-on-color</strong></summary></details></td>
+            <td>$thumb-on-color</td>
+            <td>Thumb color when switch is on</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$track-on-hover-color</td><td>Track color when switch is on and hovered</td></tr>
+          <tr class="dependent"><td></td><td>$track-on-disabled-color</td><td>Track color when switch is on and disabled</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$thumb-on-color</strong></summary></details></td>
+            <td>$track-on-color</td>
+            <td>Track color when switch is on</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$thumb-on-disabled-color</td><td>Thumb color when switch is on and disabled</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Fluent Theme Table -->
+    <div class="theme-table fluent">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$thumb-off-color</strong></summary></details></td>
+            <td>$border-color</td>
+            <td>Border color derived from thumb off color</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$thumb-off-hover-color</td><td>Thumb color on hover</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$border-color</strong></summary></details></td>
+            <td>$thumb-off-color</td>
+            <td>Thumb off color derived from border color</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$border-hover-color</td><td>Border color on hover</td></tr>
+          <tr class="dependent"><td></td><td>$border-disabled-color</td><td>Border color when disabled</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$track-off-color</strong></summary></details></td>
+            <td>$thumb-off-color</td>
+            <td>Thumb off color derived from track off color</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$border-hover-color</td><td>Border color on hover</td></tr>
+          <tr class="dependent"><td></td><td>$track-disabled-color</td><td>Track color when disabled</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$track-on-color</strong></summary></details></td>
+            <td>$thumb-on-color</td>
+            <td>Thumb color when switch is on</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$thumb-on-disabled-color</td><td>The color of the thumb when the switch is on and disabled</td></tr>
+          <tr class="dependent"><td></td><td>$border-on-color</td><td>The border color when the switch is on</td></tr>
+          <tr class="dependent"><td></td><td>$border-on-hover-color</td><td>Border color when switch is on and hovered</td></tr>
+          <tr class="dependent"><td></td><td>$track-on-hover-color</td><td>Track color when switch is on and hovered</td></tr>
+          <tr class="dependent"><td></td><td>$track-on-disabled-color</td><td>Track color when on and disabled</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="theme-table bootstrap">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$thumb-off-color</strong></summary></details></td>
+            <td>$border-color</td>
+            <td>Border color derived from thumb off color</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$thumb-off-hover-color</td><td>Thumb color on hover</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$border-color</strong></summary></details></td>
+            <td>$thumb-off-color</td>
+            <td>Thumb off color derived from border color</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$border-hover-color</td><td>Border color on hover</td></tr>
+          <tr class="dependent"><td></td><td>$border-disabled-color</td><td>Border color when disabled</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$track-off-color</strong></summary></details></td>
+            <td>$thumb-off-color</td>
+            <td>Thumb off color derived from track off color</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$border-hover-color</td><td>Border color on hover</td></tr>
+          <tr class="dependent"><td></td><td>$track-disabled-color</td><td>Track color when disabled</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$track-on-color</strong></summary></details></td>
+            <td>$thumb-on-color</td>
+            <td>Thumb color when switch is on</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$thumb-on-disabled-color</td><td>The color of the thumb when the switch is on and disabled</td></tr>
+          <tr class="dependent"><td></td><td>$border-on-color</td><td>The border color when the switch is on</td></tr>
+          <tr class="dependent"><td></td><td>$border-on-hover-color</td><td>Border color when switch is on and hovered</td></tr>
+          <tr class="dependent"><td></td><td>$track-on-hover-color</td><td>Track color when switch is on and hovered</td></tr>
+          <tr class="dependent"><td></td><td>$track-on-disabled-color</td><td>Track color when on and disabled</td></tr>
+          <tr class="dependent"><td></td><td>$focus-fill-color</td><td>Fill color when switch is focused</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$focus-fill-color</strong></summary></details></td>
+            <td>$focus-outline-color</td>
+            <td>Outline color derived from focus fill</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$focus-fill-hover-color</td><td>Focus fill color when hovered</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="theme-table indigo">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$thumb-off-color</strong></summary></details></td>
+            <td>$border-color</td>
+            <td>Border color derived from thumb off color</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$thumb-off-hover-color</td><td>Thumb color on hover</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$border-color</strong></summary></details></td>
+            <td>$thumb-off-color</td>
+            <td>Thumb off color derived from border color</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$border-hover-color</td><td>Border color on hover</td></tr>
+          <tr class="dependent"><td></td><td>$border-disabled-color</td><td>Border color when disabled</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$track-off-color</strong></summary></details></td>
+            <td>$thumb-off-color</td>
+            <td>Thumb off color derived from track off color</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$border-hover-color</td><td>Border color on hover</td></tr>
+          <tr class="dependent"><td></td><td>$track-disabled-color</td><td>Track color when disabled</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$track-on-color</strong></summary></details></td>
+            <td>$thumb-on-color</td>
+            <td>Thumb color when switch is on</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$thumb-on-disabled-color</td><td>The color of the thumb when the switch is on and disabled</td></tr>
+          <tr class="dependent"><td></td><td>$border-on-color</td><td>The border color when the switch is on</td></tr>
+          <tr class="dependent"><td></td><td>$track-on-hover-color</td><td>Track color when switch is on and hovered</td></tr>
+          <tr class="dependent"><td></td><td>$track-on-disabled-color</td><td>Track color when on and disabled</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$border-on-color</strong></summary></details></td>
+            <td>$border-on-hover-color</td>
+            <td>Border color when switch is on and hovered</td>
+          </tr>
+          <tr class="dependent">
+            <td></td><td>$focus-outlined-color-focused</td><td>The focus outlined color for focused state</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
 To get started with styling the switch, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
@@ -162,6 +393,44 @@ The last step is to **include** the component theme in our application.
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/switch-styling/" >
 </code-view>
+
+### Styling with Tailwind
+
+You can style the switch using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-switch`, `dark-switch`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [IgxSwitch Theme]({environment:sassApiUrl}/themes#function-switch-theme). The syntax is as follows:
+
+```html
+<igx-switch
+  class="!light-switch ![--thumb-on-color:#FF4E00]"
+  [checked]="true">
+  ...
+</igx-switch>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your switch should look like this:
+
+<div class="sample-container loading" style="height:200px">
+    <iframe id="switch-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/data-entries/switch-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 <div class="divider--half"></div>
 
