@@ -451,7 +451,7 @@ The utility file includes both `light` and `dark` theme variants.
 - Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-icon-button`, `dark-icon-button`.
 
-Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
 You can find the full list of properties in the [icon-button-theme]({environment:sassApiUrl}/themes#function-icon-button-theme). The syntax is as follows:
 

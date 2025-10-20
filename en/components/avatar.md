@@ -157,12 +157,12 @@ Changing the `$background` property automatically updates the following dependen
     <tr class="primary">
       <td><strong>$background</strong></td>
       <td>$color</td>
-      <td>The text color used of the avatar.</td>
+      <td>The text color used for the avatar.</td>
     </tr>
     <tr>
       <td></td>
       <td>$icon-color</td>
-      <td>The icon color used of the avatar.</td>
+      <td>The icon color used for the avatar.</td>
     </tr>
   </tbody>
 </table>
@@ -229,7 +229,7 @@ The utility file includes both `light` and `dark` theme variants.
 - Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-avatar`, `dark-avatar`.
 
-Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
 You can find the full list of properties in the [avatar-theme]({environment:sassApiUrl}/themes#function-avatar-theme). The syntax is as follows:
 

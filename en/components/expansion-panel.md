@@ -265,7 +265,7 @@ Changing the `$header-background` and `$body-background` properties automaticall
 </table>
 
 ### Palettes & Colors
-Fist we create a custom palette which can later be passed to our component:
+First we create a custom palette which can later be passed to our component:
 ```scss
 // In real life, this should be in our main sass file so we can share the palette between all components. 
 // In our case, it's in the component SCSS file "expansion-styling.component.scss".
@@ -358,7 +358,7 @@ The utility file includes both `light` and `dark` theme variants.
 - Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-expansion-panel`, `dark-expansion-panel`.
 
-Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
 You can find the full list of properties in the [expansion-panel-theme]({environment:sassApiUrl}/themes#function-expansion-panel-theme). The syntax is as follows:
 

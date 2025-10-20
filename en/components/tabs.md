@@ -502,7 +502,7 @@ When you modify a primary property, all related dependent properties are automat
             <td>The color used for the active tab icon.</td>
           </tr>
           <tr class="dependent"><td></td><td>$item-active-color</td><td>The color used for the active tabs text.</td></tr>
-          <tr class="dependent"><td></td><td>$tab-ripple-color</td><td>The color used for the button background.</td></tr>
+          <tr class="dependent"><td></td><td>$tab-ripple-color</td><td>The ripple color for the tab interaction.</td></tr>
         </tbody>
         <tbody class="group">
           <tr class="primary">
@@ -761,7 +761,7 @@ The utility file includes both `light` and `dark` theme variants.
 - Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-tabs`, `dark-tabs`.
 
-Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
 You can find the full list of properties in the [IgxTabs Theme]({environment:sassApiUrl}/themes#function-tabs-theme). The syntax is as follows:
 

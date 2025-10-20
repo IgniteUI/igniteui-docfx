@@ -290,7 +290,7 @@ The utility file includes both `light` and `dark` theme variants.
 - Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-splitter`, `dark-splitter`.
 
-Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
 You can find the full list of properties in the [splitter-theme]({environment:sassApiUrl}/themes#function-splitter-theme). The syntax is as follows:
 
@@ -304,6 +304,29 @@ You can find the full list of properties in the [splitter-theme]({environment:sa
 >[!NOTE]
 >The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
 
+### Custom sizing
+
+You can either use the `--size` variable, targeting the `igx-splitter` directly:
+
+```scss
+igx-splitter {
+  --size: 10px;
+}
+```
+
+Or you can use the universal `--igx-splitter-size` variable to target all instances:
+
+```html
+<div class="my-app">
+  <igx-splitter></igx-splitter>
+</div>
+```
+
+```scss
+.my-app {
+  --igx-splitter-size: 10px;
+}
+```
 
 ## API References
 <div class="divider--half"></div>

@@ -202,7 +202,6 @@ After everything's done, your component should look like this:
 
 ### Demo
 
-
 <code-view style="height: 350px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
@@ -226,7 +225,7 @@ The utility file includes both `light` and `dark` theme variants. The month pick
 - Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-calendar`, `dark-calendar`.
 
-Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
 You can find the full list of properties in the [calendar-theme]({environment:sassApiUrl}/themes#function-calendar-theme). The syntax is as follows:
 
@@ -241,7 +240,7 @@ class="!light-calendar
 >[!NOTE]
 >The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
 
-At the end your monthpicker should look like this:
+At the end your month picker should look like this:
 
 <div class="sample-container loading" style="height:400px">
     <iframe id="month-picker-tailwind-style-iframe" data-src='{environment:demosBaseUrl}/scheduling/monthpicker-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>

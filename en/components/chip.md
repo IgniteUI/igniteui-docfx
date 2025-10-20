@@ -506,7 +506,7 @@ When you modify a primary property, all related dependent properties are updated
     <tr class="dependent">
         <td></td>
         <td>$hover-background</td>
-        <td>The chip text hover color.</td>
+        <td>The chip hover background color.</td>
     </tr>
     <tr class="dependent">
         <td></td>
@@ -516,7 +516,7 @@ When you modify a primary property, all related dependent properties are updated
     <tr class="dependent">
         <td></td>
         <td>$hover-text-color</td>
-        <td>The chip hover background color.</td>
+        <td>The chip hover text color.</td>
     </tr>
     <tr class="dependent">
         <td></td>
@@ -650,7 +650,7 @@ The utility file includes both `light` and `dark` theme variants.
 - Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-chip`, `dark-chip`.
 
-Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
 You can find the full list of properties in the [chip-theme]({environment:sassApiUrl}/themes#function-chip-theme). The syntax is as follows:
 

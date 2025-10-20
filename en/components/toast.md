@@ -244,7 +244,7 @@ The last step is to pass the custom toast theme:
 
 You can style the toast using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
 
-Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+Along with the Tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
 
 ```scss
 @import "tailwindcss";
@@ -257,7 +257,7 @@ The utility file includes both `light` and `dark` theme variants.
 - Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-toast`, `dark-toast`.
 
-Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
 You can find the full list of properties in the [IgxToast Theme]({environment:sassApiUrl}/themes#function-toast-theme). The syntax is as follows:
 

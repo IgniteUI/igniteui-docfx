@@ -1497,9 +1497,9 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 The utility file includes both `light` and `dark` theme variants.
 - Use `light-*` classes for the light theme.
 - Use `dark-*` classes for the dark theme.
-- Append the component name after the prefix. Because the button has types, the classes are used like so, e.g., `light-contained-button`, `light-flat-button` `dark-outlined-button`, `dark-fab-button`, etc..
+- Append the component name after the prefix. Because the button has types, the classes are used like so, e.g., `light-contained-button`, `light-flat-button` `dark-outlined-button`, `dark-fab-button`, etc.
 
-Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the semicolon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
 
 You can find the full list of properties in the [button-theme]({environment:sassApiUrl}/themes#function-button-theme) which reflect differently in the different variants, the primary property for the `flat` and `outlined` buttons is `$foreground` and for the `contained` and `fab` buttons is `$background`. The syntax is as follows:
 
