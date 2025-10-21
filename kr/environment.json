@@ -2,7 +2,7 @@
     "development": {
         "demosBaseUrl": "http://localhost:4200",
         "dvDemosBaseUrl": "http://localhost:4200",
-        "lobDemosBaseUrl":"http://localhost:4200",
+        "lobDemosBaseUrl":"http://localhost:4200/",
         "crmDemoBaseUrl": "http://localhost:4200",
         "infragisticsBaseUrl": "https://staging.infragistics.co.kr",
         "angularApiUrl": "https://staging.infragistics.com/products/ignite-ui-angular/docs/typescript/latest",
@@ -15,7 +15,7 @@
     "staging": {
         "demosBaseUrl": "https://staging.infragistics.co.kr/angular-demos",
         "dvDemosBaseUrl": "https://staging.infragistics.co.kr/angular-demos-dv",
-        "lobDemosBaseUrl":"https://staging.infragistics.co.kr/angular-demos-lob",
+        "lobDemosBaseUrl":"https://staging.infragistics.co.kr/angular-demos-lob/",
         "crmDemoBaseUrl": "https://staging.infragistics.co.kr/angular-demos-grid-crm",
         "infragisticsBaseUrl": "https://staging.infragistics.co.kr",
         "angularApiUrl": "https://staging.infragistics.com/products/ignite-ui-angular/docs/typescript/latest",
@@ -28,7 +28,7 @@
     "production": {
         "demosBaseUrl": "https://www.infragistics.co.kr/angular-demos",
         "dvDemosBaseUrl": "https://www.infragistics.co.kr/angular-demos-dv",
-        "lobDemosBaseUrl":"https://www.infragistics.co.kr/angular-demos-lob",
+        "lobDemosBaseUrl":"https://www.infragistics.co.kr/angular-demos-lob/",
         "crmDemoBaseUrl": "https://www.infragistics.co.kr/angular-demos-grid-crm",
         "infragisticsBaseUrl": "https://www.infragistics.co.kr",
         "angularApiUrl": "https://www.infragistics.com/products/ignite-ui-angular/docs/typescript/latest",
