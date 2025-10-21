@@ -409,28 +409,27 @@ When you modify a primary property, all related dependent properties are automat
             <td>$button-hover-background</td>
             <td>The background color of the button on hover.</td>
           </tr>
-           <tr class="dependent"><td></td><td>$button-arrow-color</td><td>The color of the button arrow.</td></tr>
+          <tr class="dependent"><td></td><td>$button-arrow-color</td><td>The color of the button arrow.</td></tr>
           <tr class="dependent"><td></td><td>$button-disabled-background</td><td>The background color of the button when disabled.</td></tr>
-        </tbody>
-        <tbody class="group">
           <tr class="primary">
             <td><details><summary><strong>$button-hover-background</strong></summary></details></td>
             <td>$button-hover-arrow-color</td>
             <td>The color of the button arrow on hover.</td>
           </tr>
-        </tbody>
-        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-disabled-background</strong></summary></details></td>
+            <td>$button-disabled-arrow-color</td>
+            <td>The color of the button arrow when disabled.</td>
+          </tr>
           <tr class="primary">
             <td><details><summary><strong>$button-hover-arrow-color</strong></summary></details></td>
             <td>$button-focus-arrow-color</td>
             <td>The color of the button arrow when focused.</td>
           </tr>
-        </tbody>
-        <tbody class="group">
           <tr class="primary">
-            <td><details><summary><strong>$button-disabled-background</strong></summary></details></td>
-            <td>$button-disabled-arrow-color</td>
-            <td>The color of the button arrow when disabled.</td>
+            <td><details><summary><strong>$button-focus-arrow-color</strong></summary></details></td>
+            <td>$button-focus-border-color</td>
+            <td>The border color of the button when focused.</td>
           </tr>
         </tbody>
         <tbody class="group">
@@ -458,13 +457,6 @@ When you modify a primary property, all related dependent properties are automat
           </tr>
           <tr class="dependent"><td></td><td>$indicator-active-border-color</td><td>The color of the indicator border color when active.</td></tr>
         </tbody>
-        <tbody class="group">
-          <tr class="primary">
-            <td><details><summary><strong>$button-focus-arrow-color</strong></summary></details></td>
-            <td>$button-focus-border-color</td>
-            <td>The border color of the button when focused.</td>
-          </tr>
-        </tbody>
       </table>
     </div>
    <!-- Fluent Theme Table -->
@@ -486,28 +478,22 @@ When you modify a primary property, all related dependent properties are automat
           <tr class="dependent"><td></td><td>$button-arrow-color</td><td>The color of the button arrow.</td></tr>
           <tr class="dependent"><td></td><td>$button-disabled-background</td><td>The background color of the button when disabled.</td></tr>
           <tr class="dependent"><td></td><td>$button-focus-border-color</td><td>The border color of the button when focused.</td></tr>
-         </tbody>
-        <tbody class="group">
           <tr class="primary">
             <td><details><summary><strong>$button-hover-background</strong></summary></details></td>
             <td>$button-hover-arrow-color</td>
             <td>The color of the button arrow on hover.</td>
           </tr>
-        </tbody>
-        <tbody class="group">
-          <tr class="primary">
-            <td><details><summary><strong>$button-hover-arrow-color</strong></summary></details></td>
-            <td>$button-focus-arrow-color</td>
-            <td>The color of the button arrow when focused.</td>
-          </tr>
-        </tbody>
-        <tbody class="group">
           <tr class="primary">
             <td><details><summary><strong>$button-disabled-background</strong></summary></details></td>
             <td>$button-disabled-arrow-color</td>
             <td>The color of the button arrow when disabled.</td>
           </tr>
-        </tbody>
+          <tr class="primary">
+            <td><details><summary><strong>$button-hover-arrow-color</strong></summary></details></td>
+            <td>$button-focus-arrow-color</td>
+            <td>The color of the button arrow when focused.</td>
+          </tr>
+         </tbody>
         <tbody class="group">
           <tr class="primary">
             <td><details><summary><strong>$indicator-background</strong></summary></details></td>
@@ -554,26 +540,20 @@ When you modify a primary property, all related dependent properties are automat
           <tr class="dependent"><td></td><td>$button-arrow-color</td><td>The color of the button arrow.</td></tr>
           <tr class="dependent"><td></td><td>$button-disabled-background</td><td>The background color of the button when disabled.</td></tr>
           <tr class="dependent"><td></td><td>$button-focus-border-color</td><td>The border color of the button when focused.</td></tr>
-        </tbody>
-        <tbody class="group">
           <tr class="primary">
             <td><details><summary><strong>$button-hover-background</strong></summary></details></td>
             <td>$button-hover-arrow-color</td>
             <td>The color of the button arrow on hover.</td>
           </tr>
-        </tbody>
-        <tbody class="group">
-          <tr class="primary">
-            <td><details><summary><strong>$button-hover-arrow-color</strong></summary></details></td>
-            <td>$button-focus-arrow-color</td>
-            <td>The color of the button arrow when focused.</td>
-          </tr>
-        </tbody>
-        <tbody class="group">
           <tr class="primary">
             <td><details><summary><strong>$button-disabled-background</strong></summary></details></td>
             <td>$button-disabled-arrow-color</td>
             <td>The color of the button arrow when disabled.</td>
+          </tr>
+          <tr class="primary">
+            <td><details><summary><strong>$button-hover-arrow-color</strong></summary></details></td>
+            <td>$button-focus-arrow-color</td>
+            <td>The color of the button arrow when focused.</td>
           </tr>
         </tbody>
         <tbody class="group">
@@ -622,33 +602,25 @@ When you modify a primary property, all related dependent properties are automat
           <tr class="dependent"><td></td><td>$button-border-color</td><td>The border color of the button.</td></tr>
           <tr class="dependent"><td></td><td>$button-arrow-color</td><td>The color of the button arrow.</td></tr>
           <tr class="dependent"><td></td><td>$button-disabled-background</td><td>The background color of the button when disabled.</td></tr>
-        </tbody>
-        <tbody class="group">
-          <tr class="primary">
-            <td><details><summary><strong>$button-border-color</strong></summary></details></td>
-            <td>$button-hover-border-color</td>
-            <td>The border color of the button on hover.</td>
-          </tr>
-        </tbody>
-        <tbody class="group">
           <tr class="primary">
             <td><details><summary><strong>$button-hover-background</strong></summary></details></td>
             <td>$button-hover-arrow-color</td>
             <td>The color of the button arrow on hover.</td>
           </tr>
-        </tbody>
-        <tbody class="group">
-          <tr class="primary">
-            <td><details><summary><strong>$button-hover-arrow-color</strong></summary></details></td>
-            <td>$button-focus-arrow-color</td>
-            <td>The color of the button arrow when focused.</td>
-          </tr>
-        </tbody>
-        <tbody class="group">
           <tr class="primary">
             <td><details><summary><strong>$button-disabled-background</strong></summary></details></td>
             <td>$button-disabled-arrow-color</td>
             <td>The color of the button arrow when disabled.</td>
+          </tr>
+          <tr class="primary">
+            <td><details><summary><strong>$button-border-color</strong></summary></details></td>
+            <td>$button-hover-border-color</td>
+            <td>The border color of the button on hover.</td>
+          </tr>
+          <tr class="primary">
+            <td><details><summary><strong>$button-hover-arrow-color</strong></summary></details></td>
+            <td>$button-focus-arrow-color</td>
+            <td>The color of the button arrow when focused.</td>
           </tr>
         </tbody>
         <tbody class="group">
@@ -675,8 +647,6 @@ When you modify a primary property, all related dependent properties are automat
           </tr>
           <tr class="dependent"><td></td><td>$indicator-active-border-color</td><td>The color of the indicator border color when active.</td></tr>
           <tr class="dependent"><td></td><td>$button-focus-border-color</td><td>The border color of the button when focused.</td></tr>
-        </tbody>
-        <tbody class="group">
           <tr class="primary">
             <td><details><summary><strong>$indicator-active-hover-dot-color</strong></summary></details></td>
             <td>$indicator-focus-color</td>
