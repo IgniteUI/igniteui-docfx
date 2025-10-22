@@ -27,60 +27,13 @@ Currently, Ignite UI for Angular ships with resource strings for the following l
 
 ### Locale
 
-By locale we refer to the regional formatting for dates, numbers and some strings related to them. Previously you had to import [Angular's global variants ](https://angular.dev/guide/i18n/import-global-variants) of the locale data they provide in order to be able to use it in your app. This is no longer the case and this comes built in our localization by default and you won't need to import and register anything for it to work. 
+By locale, we will refer to the general strings defining the different languages and regions on Earth. In our case they are based on the [BCP 47](https://developer.mozilla.org/en-US/docs/Glossary/BCP_47_language_tag) tag definition and most of the basic ones are described in the [IANA Language Subtag Registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry) and for a list of languages you can also `refer to [ISO 639 language standard](https://www.loc.gov/standards/iso639-2/).
 
-Since we are just introducing this feature, the Angular's way is still available and very much working as before and is still the default way, if you are already using it. 
+It affects both the formatting of the dates and numbers and the localized resource strings that our components use. The default locale for the Ignite UI for Angular components is `en-US`. 
 
-If you are just starting though, only the default `en-US` locale will use the Angular's formatting. Any other locale you use will default to the new way, because you will probably missing the Angular's locale data anyway. That's why we have the `toggleIgxAngularLocalization` method, which will make sure that even for `en-US` you use the new localization, even you have the Angular's locale data imported:
+#### Global API
 
-```ts
-toggleIgxAngularLocalization(false);
-```
-
-This will make sure later on, when use set the current locale that all Ignite UI for Angular components use the new implementation:
-
-```ts
-setCurrentI18n('ja');
-```
-
-If you would like to check what the current locale is, you can use:
-
-```ts
-getCurrentI18n();
-```
-
-### Localized resource strings
-
-All components in Ignite UI for Angular render in English by default and they can render most of the general strings used in one of the listed available languages. There are three ways you can achieve that globally or per component as well. For any language that is not currently available, custom translation can be provided for each resource string that is available through our API.
-
-The translations for the component strings are stored in resource strings and they will need to registered in our localization system so that the component can use them.
-
-First to achieve that it is needed to install the `igniteui-i18n-resources` package, which contains the localized resource strings for all languages:
-
-```
-npm install igniteui-i18n-resources --save-dev
-```
-
->Note: Currently the names for the new resource string from the `igniteui-i18n-resources` and old `gniteui-angular-i18n` package are the same. So make sure to check which ones are you using, because the old ones are not compatible with the new ones.
-
-After that you will need to register each language you would like to have applied to them. Lets say German and Japanese:
-
-```ts
-import { ResourceStringsDE, ResourceStringsJA } from 'igniteui-i18n-resources';
-
-registerI18n(ResourceStringsDE, 'de');
-registerI18n(ResourceStringsJA, 'ja');
-```
-
-You will also need to provide to which language tag they will apply to. If no tag is provided, it will set the resources for the currently selected language and region.
-
-It is important to note, that the tag provided need to be valid and adhere to the [BCP 47](https://developer.mozilla.org/en-US/docs/Glossary/BCP_47_language_tag) tag definition and most of the basic ones are described in the [IANA Language Subtag Registry](https://www.iana.org/assignments/language-subtag-registry/language-subtag-registry) and for a list of languages you can refer to [ISO 639 language standard](https://www.loc.gov/standards/iso639-2/).
-
-Only the language and the region provided are taken into account from the tag, since these are the most commonly used. The region is separated by `-` but is usually on second or third position. For example, `en-US` and `en-GB` or `en-Latn-US`.
-
-#### Global localization using Ignite UI API
-
-With this approach, you can change localization for all Ignite UI for Angular components used in your application. Since you should already have the desired languages your app will use register as per described at the top of this section, the only thing left is to set the current language. Be default it is `en-US`:
+With this approach, you can change localization for all Ignite UI for Angular components used in your application using the `setCurrentI18n` method, that comes with the `igniteui-angular` package.
 
 ```ts
 setCurrentI18n('de');
@@ -103,7 +56,6 @@ setCurrentI18n('es-MX');
 setCurrentI18n('es-AR');
 ```
 
-
 #### `lang` attribute
 
 With this approach we have the ability to set localization through the `lang` global attribute of the `HTML` tag. If is being watched and if it is changed all rendered components will update their resource strings to the currently set language. All rules regarding the tag used applied as described above.
@@ -123,13 +75,128 @@ With this approach we have the ability to set localization through the `lang` gl
 
 You can use also Angular's built in [LOCALE_ID](https://angular.dev/api/core/LOCALE_ID) token the set the locale for the whole application. The tag provided will work the same way for our components compared to how our API handles.
 
+#### Per component
+
+Each component will also have its own `locale` property, that you can specify and it will then not be affected by the global locale. 
+
+```html
+<igx-grid [data]="data" locale="ja">
+    <igx-column field="ProductName" header="Product Name" [groupable]="true"></igx-column>
+    <igx-column field="QuantityPerUnit" header="Quantity Per Unit" [groupable]="true"></igx-column>
+</igx-grid>
+```
+
+### Formatting
+
+Locale like mentioned affects the formatting in all Ignite UI for Angular components that render dates, numbers and some strings related to them. Previously you had to import [Angular's global variants ](https://angular.dev/guide/i18n/import-global-variants) of the locale data they provide in order to be able to use it in your app. This is no longer the case and this comes built in our localization by default and you won't need to import and register anything for it to work. 
+
+Since we are just introducing this feature, the Angular's way is still available and very much working as before and is still the default way, if you are already using it. 
+
+If you are just starting though, only the default `en-US` locale will use the Angular's formatting. Any other locale you use will default to the new way, because you will probably be missing the Angular's locale data anyway. That's why we have the `toggleIgxAngularLocalization` method, which will make sure that even for `en-US` you use the new localization, even if you have the Angular's locale data imported:
+
+```ts
+toggleIgxAngularLocalization(false);
+```
+
+#### Date formats
+
+Components like the IgxGrid or IgxDatePicker allow for specifying date format (for the grid per column). The lists bellow show the available options that you can set or build your own custom format.
+
+Available predefined format options:
+
+| Option | Equivalent to | Examples (given in en-US locale) |
+| ------ | --------------| --------------------------------|
+| 'short' | 'M/d/yy, h:mm a' | 6/15/15, 9:03 AM |
+| 'medium' | 'MMM d, y, h:mm:ss a' | Jun 15, 2015, 9:03:01 AM |
+| 'long' | 'MMMM d, y, h:mm:ss a z' | June 15, 2015 at 9:03:01 AM GMT+1 |
+| 'full' | 'EEEE, MMMM d, y, h:mm:ss a zzzz' | Monday, June 15, 2015 at 9:03:01 AM GMT+01:00 |
+| 'shortDate' | 'M/d/yy' | 6/15/15 |
+| 'mediumDate' | 'MMM d, y' | Jun 15, 2015 |
+| 'longDate' | 'MMMM d, y' | June 15, 2015 |
+| 'fullDate' | 'EEEE, MMMM d, y' | Monday, June 15, 2015 |
+| 'shortTime' | 'h:mm a' | 9:03 AM |
+| 'mediumTime' | 'h:mm:ss a' | 9:03:01 AM |
+| 'longTime' | 'h:mm:ss a z' | 9:03:01 AM GMT+1 |
+| 'fullTime' | 'h:mm:ss a zzzz' | 9:03:01 AM GMT+01:00 |
+
+Custom format options:
+
+| Date field | Value | Description | Example |
+|-|-|-|-|
+| Weekday | c, cc, ccc, E, EE, EEE | Short version of the weekday | Tue |
+| | cccc, EEEE | Long version of the weekday | Tuesday |
+| | ccccc, EEEEE | Narrow version of the weekday | T |
+| Day| d | Numeric display (single digit when possible) | 1, 10 |
+| | dd | 2-digit always (zero padded) | 01, 10 |
+| Month | M, L | Numeric display (single digit when possible) | 8, 12 |
+| | MM, LL | 2-digit always (zero padded) | 08, 12 |
+| | MMM, LLL | Short month name | Oct |
+| | MMMM, LLLL | Long month name | October |
+| | MMMMM, LLLLL | Narrow month name | O |
+| Year | y, yyy, yyyy | Numeric display | 1, 24, 632, 2025 |
+| | yy | 2-digit display (zero padded when possible) | 01, 24, 32, 25 |
+| ISO 8601 year  | Y, YYY, YYYY | Numeric display | 1, 24, 632, 2025 |
+| | YY | 2-digit display (zero padded when possible) | 01, 24, 32, 25 |
+| Era | G, GG, GGG | Short display | AD, BC |
+| | GGGG | Long display |  Anno Domini, Before Christ|
+| | GGGGG | Narrow display | A, B |
+| Minute | m | Numeric (single digit when possible) | 1, 5, 22 |
+| | mm | 2-digit display (zero padded)| 01, 05, 22 |
+| Hour 1-12 | h | Numeric (single digit when possible) | 8, 12 |
+| | hh | 2-digit (zero padded) | 08, 13 |
+| Hour 0-23 | H | Numeric (single digit when possible) | 8, 21 |
+| | HH | 2-digit  (zero padded)| 08, 21 |
+| Hour 0-11 | K | Numeric (single digit when possible) | 0, 11 |
+| | KK | 2-digit (zero padded) | 00, 11 |
+| Second | s | Numeric (single digit when possible) | 0...59 |
+| | ss | 2-digit (zero padded) | 00...59 |
+| Fractional seconds | S | Numeric for 1 digit | 0...9 |
+| | SS | Numeric for 2 digits | 00...99 |
+| | SSS | Numeric for 3 digits | 000...999 |
+| Period of time - abbreviated | a, t | Lower case always | am, pm |
+| | aa, aaa, tt, ttt | Upper case always | AM, PM |
+| | aaaa, tttt | Case based on locale | am, pm, AM, PM |
+| | aaaaa, ttttt | Narrow lower case always | a, p |
+| Period of time - extended | b, bb, bbb, B, BB, BBB | Short display. Based on `Intl` locale | en-GB: at night |
+| | bbbb, BBBB | Long display. Based on `Intl` locale| en-GB: at night |
+| | bbbbb, BBBBB | Narrow display. Based on `Intl` locale | en-GB: at night |
+| Timezone | z, zz, zzz, Z, ZZ, ZZZ, O, OO, OOO | Short display | GMT+4 | 
+| | zzzz, ZZZZ, OOOO | Long display | GMT+0430 |
+
+### Localized resource strings
+
+All components in Ignite UI for Angular render in English by default and they can be rendered in any of the listed languages at the top as well. There are three ways you can achieve that globally and one way per component. For any language that is not currently available, custom translation can be provided for each resource string that is available through our API.
+
+The translations for the component strings are stored in resource strings and they will need to registered in our localization system so that the component can use them.
+
+First to achieve that it is needed to install the `igniteui-i18n-resources` package, which contains the localized resource strings for all languages:
+
+```
+npm install igniteui-i18n-resources --save-dev
+```
+
+>Note: Currently the names for the new resources from the `igniteui-i18n-resources` and old `igniteui-angular-i18n` package are the same. So make sure to check which ones are you using, because the old ones are not compatible with the new API.
+
+After that you will need to register each language you would like to have applied to them. Lets say German and Japanese:
+
+```ts
+import { ResourceStringsDE, ResourceStringsJA } from 'igniteui-i18n-resources';
+
+registerI18n(ResourceStringsDE, 'de');
+registerI18n(ResourceStringsJA, 'ja');
+```
+
+You will also need to provide to which locale they will apply to. If no tag is provided, it will set the resources for the currently selected locale's language and script/region.
+
+The language, region and script provided by the locales are taken into account, since these are the most commonly used. They are separated by `-` but are usually on second and third position. For example, `en-US` and `en-GB` or `en-Latn-US`.
+
 ### Customize a component
 
 If you would like to have specific component in your app use either the already registered resources globally but with different localization or completely replace the resource strings for it, you can do that the following way.
 
-#### Set component localization
+#### Language and formatting
 
-If you would like to set different from the global localization for a component, you can do that be setting the `locale` property. The will affect the language of the resource strings used as well, since they are tied together.
+If you would like to set different from the global localization for a component, you can do that be setting the `locale` property. The will affect the language of the resource strings used as well as the formatting, since they are tied together.
 
 With this approach you should already have the available resource strings globally registered:
 
@@ -139,7 +206,7 @@ import { ResourceStringsJA } from 'igniteui-i18n-resources';
 registerI18n(ResourceStringsJA, 'ja');
 ```
 
-By setting the `locale` property of the component, this will override the global locale and language currently in use:
+By setting the `locale` property of the component, this will override the global locale currently in use:
 
 ```html
 <igx-grid [data]="data" locale="ja">
@@ -148,9 +215,9 @@ By setting the `locale` property of the component, this will override the global
 </igx-grid>
 ```
 
-##### Replace resource strings only
+##### Language only
 
-If you would like to change only the language, without changing the locale, you can even set the resource strings of each component using the `resourceStrings` property, which will override the globally used ones:
+If you would like to change only the language of the componnet, without changing the locale, you can even set the resource strings of each component using the `resourceStrings` property, which will override the globally used ones:
 
 ```html
 <igx-grid [data]="data" [resourceStrings]="resourcesDE">
@@ -159,7 +226,7 @@ If you would like to change only the language, without changing the locale, you 
 </igx-grid>
 ```
 
-You will need to make sure you use the correct resource string type for the component you would like to override it for. Each component has its own set of resource strings. In this case for the grid and German:
+You will need to make sure you use the correct resource string type for the component you would like to override it with. Each component has its own set of resource strings. In this case for the grid in German:
 
 ```ts
 import { GridResourceStringsDE } from 'igniteui-i18n-resources';
@@ -168,13 +235,13 @@ import { GridResourceStringsDE } from 'igniteui-i18n-resources';
 public resourcesDE = GridResourceStringsDE;
 ```
 
-#### Custom localized resource strings
+### Custom localized resource strings
 
 If you would like to localize your app and we do not provide resource strings for the language you use and would like to provide your own translation, you can always use custom resource string. You can do that globally or per component(using `resourceStrings` property).
 
 >Note: Feel free to contribute to the [`igniteui-i18n-resources`](https://github.com/IgniteUI/igniteui-i18n/tree/master/projects/igniteui-i18n-resources) package with more languages!
 
-If you would like to check the current resource strings used for all components combined, you can use the `getCurrentResourceStrings` method:
+If you would like to check the current resource strings used for all components in your app combined, you can use the `getCurrentResourceStrings` method:
 
 ```ts
 const resources = getCurrentResourceStrings();
