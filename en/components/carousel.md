@@ -411,6 +411,7 @@ When you modify a primary property, all related dependent properties are automat
           </tr>
           <tr class="dependent"><td></td><td>$button-arrow-color</td><td>The color of the button arrow.</td></tr>
           <tr class="dependent"><td></td><td>$button-disabled-background</td><td>The background color of the button when disabled.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-focus-color <br> (When $indicator-background is not provided)</td><td>The color of the indicator when focused.</td></tr>
           <tr class="primary">
             <td><strong>$button-hover-background</strong></td>
             <td>$button-hover-arrow-color</td>
@@ -435,19 +436,11 @@ When you modify a primary property, all related dependent properties are automat
         <tbody class="group">
           <tr class="primary">
             <td><details><summary><strong>$indicator-background</strong></summary></details></td>
-            <td>$indicator-dot-color</td>
-            <td>The color of the indicator dot.</td>
+            <td>$indicator-border-color</td>
+            <td>The color of the indicator border.</td>
           </tr>
           <tr class="dependent"><td></td><td>$indicator-active-dot-color</td><td>The color of the indicator dot when active.</td></tr>
           <tr class="dependent"><td></td><td>$indicator-focus-color</td><td>The color of the indicator when focused.</td></tr>
-        </tbody>
-        <tbody class="group">
-          <tr class="primary">
-            <td><details><summary><strong>$indicator-dot-color</strong></summary></details></td>
-            <td>$indicator-hover-dot-color</td>
-            <td>The color of the indicator dot on hover.</td>
-          </tr>
-          <tr class="dependent"><td></td><td>$indicator-border-color</td><td>The color of the indicator border color.</td></tr>
         </tbody>
         <tbody class="group">
           <tr class="primary">
@@ -455,7 +448,12 @@ When you modify a primary property, all related dependent properties are automat
             <td>$indicator-active-hover-dot-color</td>
             <td>The color of the indicator when active and hovered.</td>
           </tr>
-          <tr class="dependent"><td></td><td>$indicator-active-border-color</td><td>The color of the indicator border color when active.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-active-border-color</td><td>The color of the indicator border when active.</td></tr>
+          <tr class="primary">
+            <td><strong>$indicator-dot-color</strong></td>
+            <td>$indicator-hover-dot-color</td>
+            <td>The color of the indicator dot on hover.</td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -478,6 +476,7 @@ When you modify a primary property, all related dependent properties are automat
           <tr class="dependent"><td></td><td>$button-arrow-color</td><td>The color of the button arrow.</td></tr>
           <tr class="dependent"><td></td><td>$button-disabled-background</td><td>The background color of the button when disabled.</td></tr>
           <tr class="dependent"><td></td><td>$button-focus-border-color</td><td>The border color of the button when focused.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-focus-color <br> (When $indicator-background is not provided)</td><td>The color of the indicator when focused.</td></tr>
           <tr class="primary">
             <td><strong>$button-hover-background</strong></td>
             <td>$button-hover-arrow-color</td>
@@ -497,19 +496,11 @@ When you modify a primary property, all related dependent properties are automat
         <tbody class="group">
           <tr class="primary">
             <td><details><summary><strong>$indicator-background</strong></summary></details></td>
-            <td>$indicator-dot-color</td>
-            <td>The color of the indicator dot.</td>
+            <td>$indicator-border-color</td>
+            <td>The color of the indicator border.</td>
           </tr>
           <tr class="dependent"><td></td><td>$indicator-active-dot-color</td><td>The color of the indicator dot when active.</td></tr>
           <tr class="dependent"><td></td><td>$indicator-focus-color</td><td>The color of the indicator when focused.</td></tr>
-        </tbody>
-        <tbody class="group">
-          <tr class="primary">
-            <td><details><summary><strong>$indicator-dot-color</strong></summary></details></td>
-            <td>$indicator-hover-dot-color</td>
-            <td>The color of the indicator dot on hover.</td>
-          </tr>
-          <tr class="dependent"><td></td><td>$indicator-border-color</td><td>The color of the indicator border color.</td></tr>
         </tbody>
         <tbody class="group">
           <tr class="primary">
@@ -517,7 +508,12 @@ When you modify a primary property, all related dependent properties are automat
             <td>$indicator-active-hover-dot-color</td>
             <td>The color of the indicator when active and hovered.</td>
           </tr>
-          <tr class="dependent"><td></td><td>$indicator-active-border-color</td><td>The color of the indicator border color when active.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-active-border-color</td><td>The color of the indicator border when active.</td></tr>
+          <tr class="primary">
+            <td><strong>$indicator-dot-color</strong></td>
+            <td>$indicator-hover-dot-color</td>
+            <td>The color of the indicator dot on hover.</td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -540,6 +536,7 @@ When you modify a primary property, all related dependent properties are automat
           <tr class="dependent"><td></td><td>$button-arrow-color</td><td>The color of the button arrow.</td></tr>
           <tr class="dependent"><td></td><td>$button-disabled-background</td><td>The background color of the button when disabled.</td></tr>
           <tr class="dependent"><td></td><td>$button-focus-border-color</td><td>The border color of the button when focused.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-focus-color <br> (When $indicator-background is not provided)</td><td>The color of the indicator when focused.</td></tr>
           <tr class="primary">
             <td><strong>$button-hover-background</strong></td>
             <td>$button-hover-arrow-color</td>
@@ -559,19 +556,11 @@ When you modify a primary property, all related dependent properties are automat
         <tbody class="group">
           <tr class="primary">
             <td><details><summary><strong>$indicator-background</strong></summary></details></td>
-            <td>$indicator-dot-color</td>
-            <td>The color of the indicator dot.</td>
+            <td>$indicator-border-color</td>
+            <td>The color of the indicator border.</td>
           </tr>
           <tr class="dependent"><td></td><td>$indicator-active-dot-color</td><td>The color of the indicator dot when active.</td></tr>
           <tr class="dependent"><td></td><td>$indicator-focus-color</td><td>The color of the indicator when focused.</td></tr>
-        </tbody>
-        <tbody class="group">
-          <tr class="primary">
-            <td><details><summary><strong>$indicator-dot-color</strong></summary></details></td>
-            <td>$indicator-hover-dot-color</td>
-            <td>The color of the indicator dot on hover.</td>
-          </tr>
-          <tr class="dependent"><td></td><td>$indicator-border-color</td><td>The color of the indicator border color.</td></tr>
         </tbody>
         <tbody class="group">
           <tr class="primary">
@@ -579,7 +568,12 @@ When you modify a primary property, all related dependent properties are automat
             <td>$indicator-active-hover-dot-color</td>
             <td>The color of the indicator when active and hovered.</td>
           </tr>
-          <tr class="dependent"><td></td><td>$indicator-active-border-color</td><td>The color of the indicator border color when active.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-active-border-color</td><td>The color of the indicator border when active.</td></tr>
+          <tr class="primary">
+            <td><strong>$indicator-dot-color</strong></td>
+            <td>$indicator-hover-dot-color</td>
+            <td>The color of the indicator dot on hover.</td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -602,6 +596,7 @@ When you modify a primary property, all related dependent properties are automat
           <tr class="dependent"><td></td><td>$button-border-color</td><td>The border color of the button.</td></tr>
           <tr class="dependent"><td></td><td>$button-arrow-color</td><td>The color of the button arrow.</td></tr>
           <tr class="dependent"><td></td><td>$button-disabled-background</td><td>The background color of the button when disabled.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-active-dot-color <br> (When $indicator-background is not provided)</td><td>The color of the indicator dot when active.</td></tr>
           <tr class="primary">
             <td><strong>$button-hover-background</strong></td>
             <td>$button-hover-arrow-color</td>
@@ -637,7 +632,7 @@ When you modify a primary property, all related dependent properties are automat
             <td>$indicator-hover-dot-color</td>
             <td>The color of the indicator dot on hover.</td>
           </tr>
-          <tr class="dependent"><td></td><td>$indicator-border-color</td><td>The color of the indicator border color.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-border-color</td><td>The color of the indicator border.</td></tr>
         </tbody>
         <tbody class="group">
           <tr class="primary">
@@ -645,7 +640,7 @@ When you modify a primary property, all related dependent properties are automat
             <td>$indicator-active-hover-dot-color</td>
             <td>The color of the indicator when active and hovered.</td>
           </tr>
-          <tr class="dependent"><td></td><td>$indicator-active-border-color</td><td>The color of the indicator border color when active.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-active-border-color</td><td>The color of the indicator border when active.</td></tr>
           <tr class="dependent"><td></td><td>$button-focus-border-color</td><td>The border color of the button when focused.</td></tr>
           <tr class="primary">
             <td><strong>$indicator-active-hover-dot-color</strong></td>
