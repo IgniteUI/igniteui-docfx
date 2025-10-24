@@ -817,6 +817,9 @@
     - name: Binding Multiple Sources
       href: geo-map-binding-multiple-sources.md
       new: false
+    - name: Displaying Azure Imagery
+      href: geo-map-display-azure-imagery.md
+      new: true
     - name: Displaying Bing Imagery
       href: geo-map-display-bing-imagery.md
       new: false
@@ -963,6 +966,9 @@
     - name: Misc
       new: false
       items:
+      - name: Using Tailwind Custom Classes
+        href: themes/misc/tailwind-classes.md
+        new: true
       - name: Printing styles
         href: themes/misc/printing-styles.md
         new: false
@@ -1075,6 +1081,7 @@
 - name: Tooltip
   href: tooltip.md
   new: false
+  updated: true
 - name: Overlay
   href: overlay.md
   new: false

@@ -339,7 +339,7 @@ public toolbarExportingHandler(args) {
 
 스타일:
 
-* [`@@igxNameComponent 스타일`]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [`@@igxNameComponent 스타일`]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ### 추가 리소스
 

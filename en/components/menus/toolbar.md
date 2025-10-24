@@ -155,7 +155,7 @@ When adding tools manually, icons can be assigned using the `RenderIconFromText`
 
 ### Data URL Icons
 
-Similarly to adding svg, you can also add an Icon image from a URL via the `RegisterIconFromDataURL`. The method's third parameter would be used to enter a string URL.
+Similarly to adding svg, you can also add an Icon image from a URL via the [`registerIconFromDataURL`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html#registerIconFromDataURL). The method's third parameter would be used to enter a string URL.
 
 The following snippet shows both methods of adding an Icon.
 

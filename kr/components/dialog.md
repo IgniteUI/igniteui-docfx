@@ -160,9 +160,9 @@ Dialog title area can be customized using `igxDialogTitle` directive or `igx-dia
 <div class="divider--half"></div>
 
 * [IgxDialogComponent]({environment:angularApiUrl}/classes/igxdialogcomponent.html)
-* [IgxDialogComponent Styles]({environment:sassApiUrl}/index.html#function-dialog-theme)
+* [IgxDialogComponent Styles]({environment:sassApiUrl}/themes#function-dialog-theme)
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ### Additional Resources
 

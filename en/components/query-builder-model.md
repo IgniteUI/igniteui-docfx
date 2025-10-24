@@ -222,7 +222,7 @@ Now we can set the `expressionsTree` property of the `IgxQueryBuilderComponent` 
 <div class="divider--half"></div>
 
 * [IgxQueryBuilderComponent API]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html)
-* [IgxQueryBuilderComponent Styles]({environment:sassApiUrl}/index.html#function-query-builder-theme)
+* [IgxQueryBuilderComponent Styles]({environment:sassApiUrl}/themes#function-query-builder-theme)
 
 ## Additional Resources
 

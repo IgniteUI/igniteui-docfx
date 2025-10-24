@@ -100,7 +100,7 @@ $allowed: (igx-avatar, igx-badge);
 
 We also provide *__light__* and *__dark__*  versions for our four themes - Material, Fluent, Indigo, Bootstrap. 
 
-To use any of the versions, you would simply need to pass it to our [theme]({environment:sassApiUrl}/index.html#mixin-theme) mixin:
+To use any of the versions, you would simply need to pass it to our [theme]({environment:sassApiUrl}/themes#mixin-theme) mixin:
 
 *__Light__*
 ```scss
