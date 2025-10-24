@@ -149,7 +149,136 @@ avatar をターゲットにして、[`igxTooltipTarget`]({environment:angularAp
 
 すべて適切に設定できると、[Tooltip デモ](#angular-tooltip-の例) セクションで示されるデモサンプルを確認することができます。
 
-### 設定の表示/非表示
+### 高機能なツールチップ
+
+ツールチップのコンテンツは単なるテキスト以上のものになります。ツールチップはマークアップ内の通常の要素であるため、必要な要素を追加し、それに応じてスタイルを設定することで、そのコンテンツを強化できます。
+
+[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) を活用し、マップの特定の場所について詳細な情報を提供します。単純な div を使用してマップを表示し、ツールチップのロゴに [`IgxAvatar`](avatar.md)、マップの場所アイコンに [`IgxIcon`](icon.md) を使用します。この目的のためには、各モジュールを取得する必要があります。  
+
+```typescript
+// app.module.ts
+
+import { IgxTooltipModule, IgxAvatarModule, IgxIconModule } from 'igniteui-angular';
+// import { IgxTooltipModule, IgxAvatarModule, IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
+
+@NgModule({
+    ...
+    imports: [IgxTooltipModule, IgxAvatarModule, IgxIconModule],
+})
+export class AppModule {}
+```
+
+アプリケーションには以下のスタイルを使用します。
+
+```css
+/* richTooltip.component.css */
+
+.location:hover {
+  cursor: pointer;
+}
+
+.map {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 252px;
+  background-image: url(assets/images/card/media/infragisticsMap.png);
+  border: 1px solid #d4d4d4;
+}
+
+.locationTooltip {
+  width: 310px;
+  background-color: var(--igx-grays-700);
+  padding: 3px;
+  font-size: 13px;
+}
+
+.locationTooltipContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 10px;
+  min-width: 25px;
+  width: 45px;
+  height: 45px;
+}
+```
+
+マップを作成しましょう。マップの背景画像がある単純な div を使用します。更に場所の配置を示すアイコンを追加します。場所の詳細を提供するためにアイコンがツールチップのターゲットになります。
+
+```html
+<!--richTooltip.component.html-->
+
+<div class="map">
+  <igx-icon
+    class="location"
+    [style.color]="'blue'"
+    fontSet="material"
+    [igxTooltipTarget]="locationTooltip"
+    >location_on</igx-icon>
+  ...
+</div>
+```
+
+次にツールチップを作成します。コンテンツは、テキスト情報要素とアバターで構成されるコンテナーを作成します。ツールチップをターゲットにアタッチして CSS スタイルを使用します。
+
+```html
+<!--richTooltip.component.html-->
+
+<div class="wrapper">
+  <div class="map">
+    <igx-icon
+      class="location"
+      [style.color]="'blue'"
+      fontSet="material"
+      [igxTooltipTarget]="locationTooltip"
+      >location_on</igx-icon>
+
+    <div class="locationTooltip" #locationTooltip="tooltip" igxTooltip>
+      <div class="locationTooltipContent">
+        <igx-avatar
+          class="logo"
+          src="assets/images/card/avatars/igLogo.png"
+          size="medium"
+          shape="square">
+        </igx-avatar>
+        <div>
+          <div>Infragistics Inc. HQ</div>
+          <div>2 Commerce Dr, Cranbury, NJ 08512, USA</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+上記をすべて完了すると場所とツールチップは以下のようになります。
+
+<code-view style="height:300px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-rich/" >
+</code-view>
+
+<div class="divider--half"></div>
+
+### 高度な例
+
+ツールチップは他のコンポーネントとシームレスに統合され、内部にコンポーネントを含む高度なツールチップを作成できます。次の例では、[`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html)、[`IgxAvatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html)、[`IgxIcon`]({environment:angularApiUrl}/classes/igxiconcomponent.html)、[`IgxBadge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html)、[`IgxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html)、[`IgxCard`]({environment:angularApiUrl}/classes/igxcardcomponent.html) および [`IgxCategoryChart`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) コンポーネントを使用して説明的なツールチップを作成する方法を示しています。
+
+<code-view style="height:640px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-advanced/" >
+</code-view>
+
+<div class="divider--half"></div>
+
+### 遅延の表示/非表示の設定
+
 ツールチップを表示または非表示にするまでの時間を制御する場合は、[`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブの [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showDelay) と [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hideDelay) プロパティを使用します。両プロパティは型 **number** でミリセカンドでタイムスパンを取得できます。
 
 > [!NOTE]
@@ -251,6 +380,15 @@ public overlaySettings: OverlaySettings = {
 | left-end     | HorizontalAlignment.Left      | HorizontalAlignment.Left       | VerticalAlignment.Top         | VerticalAlignment.Bottom       |
 
 
+次の例では、すべての配置オプションと矢印の配置動作の実際のデモを見ることができます。
+
+<code-view style="height:220px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-placement/" >
+</code-view>
+
+<div class="divider--half"></div>
+
 #### 矢印の配置をカスタマイズする
 
 矢印の配置をカスタマイズするには、`positionArrow(arrow: HTMLElement, arrowFit: ArrowFit)` メソッドをオーバーライドできます。
@@ -289,123 +427,6 @@ public overlaySettings: OverlaySettings = {
 
 <div #tooltipRef="tooltip" igxTooltip>Her name is Madelyn James</div>
 ```
-
-## 高機能なツールチップ
-
-コンテンツのカスタマイズやスタイル設定が [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブで簡単にできます。ツールチップはマークアップの標準要素であるため、必要な要素を追加してコンテンツを改善や状況に応じたスタイル設定が可能です。
-
-[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) を活用し、マップの特定の場所について詳細な情報を提供します。単純な div を使用してマップを表示し、ツールチップのロゴに [`IgxAvatar`](avatar.md)、マップの場所アイコンに [`IgxIcon`](icon.md) を使用します。この目的のためには、各モジュールを取得する必要があります。  
-
-```typescript
-// app.module.ts
-
-import { IgxTooltipModule, IgxAvatarModule, IgxIconModule } from 'igniteui-angular';
-// import { IgxTooltipModule, IgxAvatarModule, IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
-
-@NgModule({
-    ...
-    imports: [IgxTooltipModule, IgxAvatarModule, IgxIconModule],
-})
-export class AppModule {}
-```
-
-アプリケーションには以下のスタイルを使用します。
-
-```css
-/* richTooltip.component.css */
-
-.location:hover {
-  cursor: pointer;
-}
-
-.map {
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 200px;
-  height: 252px;
-  background-image: url(assets/images/card/media/infragisticsMap.png);
-  border: 1px solid #d4d4d4;
-}
-
-.locationTooltip {
-  width: 310px;
-  background-color: var(--igx-grays-700);
-  padding: 3px;
-  font-size: 13px;
-}
-
-.locationTooltipContent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo {
-  margin-right: 10px;
-  min-width: 25px;
-  width: 45px;
-  height: 45px;
-}
-```
-
-マップを作成しましょう。マップの背景画像がある単純な div を使用します。更に場所の位置を示すアイコンを追加します。場所の詳細を提供するためにアイコンがツールチップのターゲットになります。
-
-```html
-<!--richTooltip.component.html-->
-
-<div class="map">
-  <igx-icon
-    class="location"
-    [style.color]="'blue'"
-    fontSet="material"
-    [igxTooltipTarget]="locationTooltip"
-    >location_on</igx-icon>
-  ...
-</div>
-```
-
-次にツールチップを作成します。コンテンツは、テキスト情報要素とアバターで構成されるコンテナーを作成します。ツールチップをターゲットにアタッチして CSS スタイルを使用します。
-
-```html
-<!--richTooltip.component.html-->
-
-<div class="wrapper">
-  <div class="map">
-    <igx-icon
-      class="location"
-      [style.color]="'blue'"
-      fontSet="material"
-      [igxTooltipTarget]="locationTooltip"
-      >location_on</igx-icon>
-
-    <div class="locationTooltip" #locationTooltip="tooltip" igxTooltip>
-      <div class="locationTooltipContent">
-        <igx-avatar
-          class="logo"
-          src="assets/images/card/avatars/igLogo.png"
-          size="medium"
-          shape="square">
-        </igx-avatar>
-        <div>
-          <div>Infragistics Inc. HQ</div>
-          <div>2 Commerce Dr, Cranbury, NJ 08512, USA</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-```
-
-上記をすべて完了すると場所とツールチップは以下のようになります。
-
-<code-view style="height:300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-rich/" >
-</code-view>
-
-<div class="divider--half"></div>
 
 ## スタイル設定
 
