@@ -14,7 +14,7 @@ _language: kr
 
 <code-view style="height: 384px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/icon-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/data-display/icon-sample-1/" >
 </code-view>
 
 
@@ -104,11 +104,11 @@ public ngOnInit() {
 
 <code-view style="height: 50px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/svg-icon-sample" >
+           iframe-src="{environment:demosBaseUrl}/data-display/svg-icon-sample/" >
 </code-view>
 
 ### Styling
-The igxIcon allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The icon's [theme]({environment:sassApiUrl}/index.html#function-icon-theme) exposes a property that allows customization of the color of the component.
+The igxIcon allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The icon's [theme]({environment:sassApiUrl}/themes#function-icon-theme) exposes a property that allows customization of the color of the component.
 
 #### Importing global theme
 To begin styling of the predefined icon layout, you need to import the `index` file, where all styling functions and mixins are located.  
@@ -117,7 +117,7 @@ To begin styling of the predefined icon layout, you need to import the `index` f
 ```   
 
 #### Defining custom theme
-You can easily create a new theme, that extends the [`icon-theme`]({environment:sassApiUrl}/index.html#function-icon-theme) and accepts the parameters, required to customize the icon as desired.   
+You can easily create a new theme, that extends the [`icon-theme`]({environment:sassApiUrl}/themes#function-icon-theme) and accepts the parameters, required to customize the icon as desired.   
    
 
 ```scss
@@ -128,7 +128,7 @@ $custom-theme: icon-theme(
 ```   
 
 #### Defining a custom color palette
-In the approach, that was described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
+In the approach, that was described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions.   
 `igx-palette` generates a color palette, based on provided primary and secondary colors.  
 
 ```scss
@@ -203,7 +203,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 <code-view style="height:320px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/icon-styling" >
+           iframe-src="{environment:demosBaseUrl}/data-display/icon-styling/" >
 </code-view>
 
 
@@ -215,7 +215,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 <div class="divider--half"></div>
 
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>

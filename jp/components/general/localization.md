@@ -16,7 +16,7 @@ _language: ja
 <code-view style="height:550px" 
            explicit-editor="csb"
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/services/localization-all-resources" 
+           iframe-src="{environment:demosBaseUrl}/services/localization-all-resources/" 
            alt="Angular ローカライズの例">
 </code-view>
 

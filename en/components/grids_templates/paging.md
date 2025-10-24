@@ -24,7 +24,7 @@ The following example represents @@igComponent pagination and exposes the option
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-paging-sample" alt="Angular Pagination Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-paging-sample/" alt="Angular Pagination Example">
 </code-view>
 
 }
@@ -32,7 +32,7 @@ The following example represents @@igComponent pagination and exposes the option
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-paging" alt="Angular Pagination Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-paging/" alt="Angular Pagination Example">
 </code-view>
 
 }
@@ -40,7 +40,7 @@ The following example represents @@igComponent pagination and exposes the option
 
 <code-view style="height:580px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging" alt="Angular Pagination Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging/" alt="Angular Pagination Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -155,14 +155,14 @@ Due to certain limitations in how the child grids of an IgxHierarchicalGrid are 
 @@if (igxName === 'IgxGrid') {
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-pager-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-pager-sample/" >
 </code-view>
 }
 
 @@if (igxName === 'IgxTreeGrid') {
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-reusable-paginator" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-reusable-paginator/" >
 </code-view>
 }
 
@@ -170,7 +170,7 @@ Due to certain limitations in how the child grids of an IgxHierarchicalGrid are 
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-reusable-paginator" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-reusable-paginator/" >
 </code-view>
 }
 
@@ -257,7 +257,7 @@ The last step is to **include** the component mixins, each with its respective t
 <code-view style="height:560px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/custom-grid-paging-style" >
+           iframe-src="{environment:demosBaseUrl}/grid/custom-grid-paging-style/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -269,7 +269,7 @@ The last step is to **include** the component mixins, each with its respective t
 <code-view style="height:560px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging-style" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging-style/" >
 </code-view>
 
 }
@@ -281,7 +281,7 @@ The last step is to **include** the component mixins, each with its respective t
 <code-view style="height:560px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-paging-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-paging-style/" >
 </code-view>
 
 }

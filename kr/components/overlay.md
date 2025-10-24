@@ -105,7 +105,7 @@ In the below demo, we can pass the [IgxCard](card.md#card-demo) through the over
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1" >
+           iframe-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -190,7 +190,7 @@ Using the [`overlaySettings`] ({environment:angularApiUrl}/interfaces/overlayset
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-2" >
+           iframe-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -252,7 +252,7 @@ export class ExampleComponent {
 ## API
 
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## Assumptions and Limitations</a>
 If you show the overlay in an outlet, and if the outlet is child of element with transform, perspective or filter css set you will be not able to show modal overlay. The reason for this is when one of above mentioned css properties is set the browser creates a new containing block and the overlay is limited to this containing block, as described [here](https://developer.mozilla.org/en-US/docs/Web/CSS/position#fixed).

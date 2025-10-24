@@ -12,7 +12,7 @@ What you see here is a basic Angular Month Picker example with a the component's
 
 <code-view style="height: 620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-1" alt="Angular Month Picker Example">
+           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-1/" alt="Angular Month Picker Example">
 </code-view>
 
 ## Getting Started with Ignite UI for Angular Month Picker
@@ -147,7 +147,7 @@ Here is an example of localizing and formatting the month picker component:
 
 <code-view style="height: 680px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-3/" >
 </code-view>
 
 
@@ -182,7 +182,7 @@ To get started with styling the month picker, we need to import the `index` file
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
-The month picker uses the calendar's theme, so we have to create a new theme that extends the [`calendar-theme`]({environment:sassApiUrl}/index.html#function-calendar-theme). To style the month picker's items, you can set the `$content-background` parameter. Optionally, you can also set `$header-background` if you want to override the rest of the properties.
+The month picker uses the calendar's theme, so we have to create a new theme that extends the [`calendar-theme`]({environment:sassApiUrl}/themes#function-calendar-theme). To style the month picker's items, you can set the `$content-background` parameter. Optionally, you can also set `$header-background` if you want to override the rest of the properties.
 These two parameters act as the foundation for the theme and are used to automatically generate the appropriate background and foreground colors for all interaction states, such as hover, selected, and active.
 
 ```scss
@@ -206,7 +206,7 @@ After everything's done, your component should look like this:
 <code-view style="height: 350px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-styling" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-styling/" >
 </code-view>
 
 
@@ -215,14 +215,14 @@ After everything's done, your component should look like this:
 
 * [IgxMonthPickerComponent]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html)
 * [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
-* [IgxCalendarComponent Styles]({environment:sassApiUrl}/index.html#function-calendar-theme)
+* [IgxCalendarComponent Styles]({environment:sassApiUrl}/themes#function-calendar-theme)
 
 
 ## Theming Dependencies
 <div class="divider--half"></div>
 
-* [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-calendar-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxCalendar Theme]({environment:sassApiUrl}/themes#function-calendar-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

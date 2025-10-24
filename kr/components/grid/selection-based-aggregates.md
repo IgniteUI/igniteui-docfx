@@ -44,7 +44,7 @@ Change the selection to see summaries of the currently selected range.
 
 <code-view style="height: 560px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-selection-custom-summaries" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-selection-custom-summaries/" >
 </code-view>
 
 
@@ -52,7 +52,7 @@ Change the selection to see summaries of the currently selected range.
 
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)    
 * [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)    
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)     
+* [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)     
 
 ### Additional Resources
 <div class="divider--half"></div>    

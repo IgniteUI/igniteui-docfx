@@ -19,7 +19,7 @@ The exporting functionality is encapsulated in the [`IgxCsvExporterService`]({en
 
 <code-view style="height: 150px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/services/export-csv" >
+           iframe-src="{environment:demosBaseUrl}/services/export-csv/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -115,7 +115,7 @@ public exportButtonHandler() {
 
 <code-view style="height: 300px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/services/export-csv-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/services/export-csv-sample-1/" >
 </code-view>
 
 
@@ -167,7 +167,7 @@ The CSV Exporter service has a few more APIs to explore, which are listed below.
 Additional components that were used:
 
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
 <div class="divider"></div>
 

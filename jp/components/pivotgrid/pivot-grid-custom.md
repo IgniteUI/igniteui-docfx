@@ -20,7 +20,7 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 次の例は、データがすでに集計されているシナリオの処理方法と、その構造がどのように見えるかを示しています:
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-noop" alt="Angular ピボット グリッドのカスタム定義済み集計の例">
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-noop/" alt="Angular ピボット グリッドのカスタム定義済み集計の例">
 </code-view>
 
 ユーザーは、ピボット グリッドに既に集計されたデータをフィードすることで、特定のシナリオを実現できます。データがどのように表示されるかについていくつかの要件があり、ピボット ビューの階層に関するいくつかの詳細があります。たとえば、`rows` ディメンションで階層を宣言するには、次のようにします:

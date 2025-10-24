@@ -14,7 +14,7 @@ In Ignite UI for Angular, [`igxForOf`]({environment:angularApiUrl}/classes/igxfo
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/igx-for-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/data-display/igx-for-sample-1/" >
 </code-view>
 
 

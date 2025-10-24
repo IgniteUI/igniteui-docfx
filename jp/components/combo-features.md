@@ -16,7 +16,7 @@ Ignite UI for Angular ComboBox コントロールは、データと値のバイ�
 
 <code-view style="height: 440px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-features" alt="Angular コンボボックス機能の例">
+           iframe-src="{environment:demosBaseUrl}/lists/combo-features/" alt="Angular コンボボックス機能の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -47,7 +47,7 @@ export class AppModule {}
 <div class="combo-container">
     <igx-combo #combo [data]="lData" displayKey="field" valueKey="field"
         [allowCustomValues]="customValues"
-        [filterable]="filterable"
+        [disableFiltering]="disableFiltering"
         [showSearchCaseIcon]="showSearchCaseIcon"
         [disabled]="disabled">
     </igx-combo>
@@ -56,8 +56,8 @@ export class AppModule {}
     <igx-switch [(ngModel)]="customValues">Allow Custom Values</igx-switch>
     <igx-switch (change)="enableGroups($event)">Enable Grouping</igx-switch>
     <igx-switch [(ngModel)]="disabled">Disable Combo</igx-switch>
-    <igx-switch [(ngModel)]="filterable">Enable Filtering</igx-switch>
-    <igx-switch *ngIf="filterable" [(ngModel)]="showSearchCaseIcon">Show Case-sensitive Icon</igx-switch>
+    <igx-switch [(ngModel)]="disableFiltering">Disable Filtering</igx-switch>
+    <igx-switch *ngIf="!disableFiltering" [(ngModel)]="showSearchCaseIcon">Show Case-sensitive Icon</igx-switch>
 </div>
 ```
 
@@ -67,7 +67,7 @@ export class AppModule {}
 ```typescript
     @ViewChild('combo', { read: IgxComboComponent }) public combo: IgxComboComponent;
 
-    public filterable = true;
+    public disableFiltering = false;
     public showSearchCaseIcon = true;
     public customValues = true;
     public disabled = false;
@@ -130,7 +130,7 @@ export class CustomOverlayCombo {
 
 <code-view style="height: 440px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-overlay" >
+           iframe-src="{environment:demosBaseUrl}/lists/combo-overlay/" >
 </code-view>
 
 
@@ -140,12 +140,12 @@ export class CustomOverlayCombo {
 > コンボボックス コンポーネントは、デフォルトの配置ストラテジとして [AutoPositionStrategy]({environment:angularApiUrl}/classes/autopositionstrategy.html) を使用します。
 
 ### フィルタリング
-コンボボックスのフィルタリングがデフォルトで有効になります。無効にするには、[filterable]({environment:angularApiUrl}/classes/igxcombocomponent.html#filterable) プロパティを false に設定します。
+コンボボックスのフィルタリングがデフォルトで有効になります。無効にするには、[disableFiltering]({environment:angularApiUrl}/classes/igxcombocomponent.html#disableFiltering) プロパティを true に設定します。
 
 フィルタリング オプションは、検索の大文字と小文字の区別を有効にすることでさらに拡張できます。大文字と小文字を区別するアイコンを検索入力に表示するには、[showSearchCaseIcon]({environment:angularApiUrl}/classes/IgxComboComponent.html#showSearchCaseIcon) プロパティを true に設定します。
 
 ```html
-<igx-combo [filterable]="false" [showSearchCaseIcon]="true"></igx-combo>
+<igx-combo [disableFiltering]="true" [showSearchCaseIcon]="true"></igx-combo>
 ```
 
 <div class="divider--half"></div>

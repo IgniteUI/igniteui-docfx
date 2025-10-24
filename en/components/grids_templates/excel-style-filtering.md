@@ -24,7 +24,7 @@ The grid Excel filtering provides an Excel like filtering UI for any Angular tab
 
 <code-view style="height:950px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-1" alt="Angular @@igComponent Excel Style Filtering Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-1/" alt="Angular @@igComponent Excel Style Filtering Example">
 </code-view>
 
 }
@@ -32,7 +32,7 @@ The grid Excel filtering provides an Excel like filtering UI for any Angular tab
 
 <code-view style="height:950px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-1" alt="Angular @@igComponent Excel Style Filtering Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-1/" alt="Angular @@igComponent Excel Style Filtering Example">
 </code-view>
 
 }
@@ -40,7 +40,7 @@ The grid Excel filtering provides an Excel like filtering UI for any Angular tab
 
 <code-view style="height:950px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-1" alt="Angular @@igComponent Excel Style Filtering Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-1/" alt="Angular @@igComponent Excel Style Filtering Example">
 </code-view>
 
 }
@@ -182,7 +182,7 @@ In the sample below 'Artist' column have all three features enabled, 'Debut' hav
 
 <code-view style="height:900px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-2/" >
 </code-view>
 
 }
@@ -190,7 +190,7 @@ In the sample below 'Artist' column have all three features enabled, 'Debut' hav
 
 <code-view style="height:900px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-2/" >
 </code-view>
 
 }
@@ -198,7 +198,7 @@ In the sample below 'Artist' column have all three features enabled, 'Debut' hav
 
 <code-view style="height:900px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-2/" >
 </code-view>
 
 }
@@ -327,7 +327,7 @@ You could also re-template the Excel style filtering icon in the column header u
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-3/" >
 </code-view>
 
 }
@@ -335,7 +335,7 @@ You could also re-template the Excel style filtering icon in the column header u
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-3/" >
 </code-view>
 
 }
@@ -343,7 +343,7 @@ You could also re-template the Excel style filtering icon in the column header u
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-3/" >
 </code-view>
 
 }
@@ -373,7 +373,7 @@ By default, the @@igComponent component filters the data based on the original c
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-formatted-filtering-strategy" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-formatted-filtering-strategy/" >
 </code-view>
 
 }
@@ -382,7 +382,7 @@ By default, the @@igComponent component filters the data based on the original c
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-formatted-filtering-strategy" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-formatted-filtering-strategy/" >
 </code-view>
 
 }
@@ -391,7 +391,7 @@ By default, the @@igComponent component filters the data based on the original c
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-formatted-filtering-strategy" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-formatted-filtering-strategy/" >
 </code-view>
 
 }
@@ -407,7 +407,7 @@ By default, the Excel Style Filtering dialog displays the items in a list view. 
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-tree-filter-view" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-tree-filter-view/" >
 </code-view>
 }
 
@@ -421,7 +421,7 @@ As you see at the demos above the default appearance of the Excel Style filterin
 
 <code-view style="height:670px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-external-excel-style-filtering" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-external-excel-style-filtering/" >
 </code-view>
 
 }
@@ -430,7 +430,7 @@ As you see at the demos above the default appearance of the Excel Style filterin
 
 <code-view style="height:670px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-external-excel-style-filtering" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-external-excel-style-filtering/" >
 </code-view>
 
 }
@@ -439,7 +439,7 @@ As you see at the demos above the default appearance of the Excel Style filterin
 
 <code-view style="height:670px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-excel-style-filtering" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-excel-style-filtering/" >
 </code-view>
 
 }
@@ -501,7 +501,7 @@ However, elements that go outside of the grid (e.g. Excel Style filter) will con
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-external-outlet" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-external-outlet/" >
 </code-view>
 
 }
@@ -510,7 +510,7 @@ However, elements that go outside of the grid (e.g. Excel Style filter) will con
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-external-outlet" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-external-outlet/" >
 </code-view>
 
 }
@@ -519,7 +519,7 @@ However, elements that go outside of the grid (e.g. Excel Style filter) will con
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-outlet" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-outlet/" >
 </code-view>
 
 }
@@ -644,7 +644,7 @@ The last step is to **include** each component’s custom theme. We will also se
 <code-view style="height:950px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-style" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-style/" >
 </code-view>
 
 }
@@ -653,7 +653,7 @@ The last step is to **include** each component’s custom theme. We will also se
 <code-view style="height:950px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-style/" >
 </code-view>
 
 }
@@ -662,7 +662,7 @@ The last step is to **include** each component’s custom theme. We will also se
 <code-view style="height:950px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-style" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-style/" >
 </code-view>
 
 }

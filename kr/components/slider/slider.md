@@ -13,7 +13,7 @@ _language: kr
 
 <code-view style="height: 250px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -66,7 +66,7 @@ If the sample is configured properly, dragging the slider thumb should update th
 
 <code-view style="height: 140px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-2/" >
 </code-view>
 
 
@@ -115,7 +115,7 @@ If the sample is configured properly, dragging the slider thumb should update th
 
 <code-view style="height: 170px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-3/" >
 </code-view>
 
 
@@ -149,7 +149,7 @@ class PriceRange {
 
 <code-view style="height: 120px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-4/" >
 </code-view>
 
 
@@ -164,7 +164,7 @@ In some cases, values near to the minimum and maximum are not appropriate. You c
 
 <code-view style="height: 120px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-5/" >
 </code-view>
 
 
@@ -212,7 +212,7 @@ If the sample is configured properly, the final result should look like that:
 
 <code-view style="height: 250px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-1/" >
 </code-view>
 
 
@@ -252,7 +252,7 @@ public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
 
 <code-view style="height: 250px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-6" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-6/" >
 </code-view>
 
 
@@ -275,7 +275,7 @@ The [context]({environment:angularApiUrl}/classes/igxslidercomponent.html#contex
 <div class="divider--half"></div>
 
 * [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)
-* [IgxSliderComponent Styles]({environment:sassApiUrl}/index.html#function-slider-theme)
+* [IgxSliderComponent Styles]({environment:sassApiUrl}/themes#function-slider-theme)
 * [SliderType]({environment:angularApiUrl}/enums/slidertype.html)
 * [IRangeSliderValue]({environment:angularApiUrl}/interfaces/irangeslidervalue.html)
 

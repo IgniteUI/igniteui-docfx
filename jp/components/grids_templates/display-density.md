@@ -34,7 +34,7 @@ _language: ja
 
 <code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-displayDensity" alt="Angular @@igComponent サイズの例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-displayDensity/" alt="Angular @@igComponent サイズの例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -43,7 +43,7 @@ _language: ja
 
 <code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-display-density" alt="Angular @@igComponent サイズの例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-display-density/" alt="Angular @@igComponent サイズの例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -52,7 +52,7 @@ _language: ja
 
 <code-view style="height:680px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-density" alt="Angular @@igComponent サイズの例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-density/" alt="Angular @@igComponent サイズの例">
 </code-view>
 
 <div class="divider--half"></div>

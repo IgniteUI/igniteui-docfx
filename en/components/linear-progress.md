@@ -12,7 +12,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <code-view style="height:50px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar" alt="Angular Linear Progress Example">
+           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar/" alt="Angular Linear Progress Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -101,7 +101,7 @@ So if we set up everything correctly, you should see the following in your brows
 
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -177,7 +177,7 @@ Let's take a look at how this turned out:
 
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -237,7 +237,7 @@ After completing the steps above, our progress bar should look like this:
 
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/linear-dynamic-sample" >
+           iframe-src="{environment:demosBaseUrl}/data-display/linear-dynamic-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -253,7 +253,7 @@ To get started with styling the linear progress bar, we need to import the `inde
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`progress-linear-theme`]({environment:sassApiUrl}/index.html#function-progress-linear-theme) and override the `$fill-color-default` and `$text-color` parameters.
+Following the simplest approach, we create a new theme that extends the [`progress-linear-theme`]({environment:sassApiUrl}/themes#function-progress-linear-theme) and override the `$fill-color-default` and `$text-color` parameters.
 
 ```scss
 $custom-theme: progress-linear-theme(
@@ -275,7 +275,7 @@ The last step is to **include** the component theme in our application.
 <code-view style="height:50px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-styling" >
+           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-styling/" >
 </code-view>
 
 ## API
@@ -283,5 +283,5 @@ The last step is to **include** the component theme in our application.
 <div class="divider--half"></div>
 
 * [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
-* [IgxLinearProgressBarComponent Styles]({environment:sassApiUrl}/index.html#function-progress-linear-theme)
+* [IgxLinearProgressBarComponent Styles]({environment:sassApiUrl}/themes#function-progress-linear-theme)
 * [IgxTextAlign]({environment:angularApiUrl}/enums/igxtextalign.html)

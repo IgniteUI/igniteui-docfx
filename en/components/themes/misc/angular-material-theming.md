@@ -22,7 +22,7 @@ The following article demonstrates how to use both Ignite UI and Angular Materia
 
 <code-view style="height: 1100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/theming/angular-sample" >
+           iframe-src="{environment:demosBaseUrl}/theming/angular-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -101,7 +101,7 @@ To get started with styling components using the Ignite UI theming engine, creat
 
 ### Color Palettes
 
-Ignite UI for Angular's [`palette`]({environment:sassApiUrl}/index.html#function-igx-palette) function produces a color palette map including three sub-palettes for the `primary`, `secondary` and `gray` shades as well as five additional colors for `info`, `success`, `warn`, `error` and `surface`. For each color variant, our theming engine automatically generates text contrast colors at runtime, that are also included in the palette. Below, you can see the predefined light material palette:
+Ignite UI for Angular's [`palette`]({environment:sassApiUrl}/palettes#function-palette) function produces a color palette map including three sub-palettes for the `primary`, `secondary` and `gray` shades as well as five additional colors for `info`, `success`, `warn`, `error` and `surface`. For each color variant, our theming engine automatically generates text contrast colors at runtime, that are also included in the palette. Below, you can see the predefined light material palette:
 
 ```scss
 $igx-light-palette: palette(
@@ -232,7 +232,7 @@ $custom-mat-dark-theme: mat.define-dark-theme((
 
 In order to switch between `light` and `dark` mode, we are adding a custom `dark` class which will be changed on button click. In our stylesheet file, we are going to include different color palettes scoped to each class.
 
-Ignite UI for Angular comes with predefined themes inspired by the [Material Design](https://material.io/design). To use them, first, you have to include our `core` mixin and then our built-in theme mixin - [theme]({environment:sassApiUrl}/index.html#mixin-theme). We will also make use of our predefined material palettes - [$light-material-palette]({environment:sassApiUrl}/index.html#variable-light-material-palette) and [$dark-material-palette]({environment:sassApiUrl}/index.html#variable-dark-material-palette).
+Ignite UI for Angular comes with predefined themes inspired by the [Material Design](https://material.io/design). To use them, first, you have to include our `core` mixin and then our built-in theme mixin - [theme]({environment:sassApiUrl}/themes#mixin-theme). We will also make use of our predefined material palettes - [$light-material-palette]({environment:sassApiUrl}/palettes#variable-light-material-palette) and [$dark-material-palette]({environment:sassApiUrl}/palettes#variable-dark-material-palette).
 
 For the Angular Material components, we also need to include their `core` mixin and then the `all-component-themes` mixin with the aforementioned custom material themes. 
 
@@ -359,7 +359,7 @@ Then, add a CSS class to your navbar component following the pattern "bg - color
 
 ### Angular Components Typography
 
-Ignite UI for Angular exposes four default type scales for each of its themes, which can be used inside the [`typography`]({environment:sassApiUrl}/index.html#mixin-typography) mixin to define the global typography styles of an application. In our example, we are going to apply the material predifined `typeface` and `type-scale` but you can create custom ones if you wish. 
+Ignite UI for Angular exposes four default type scales for each of its themes, which can be used inside the [`typography`]({environment:sassApiUrl}/typography#mixin-typography) mixin to define the global typography styles of an application. In our example, we are going to apply the material predifined `typeface` and `type-scale` but you can create custom ones if you wish. 
 
 ```scss
 :host {
@@ -393,12 +393,12 @@ Check Angular Material [`Typography documentation`](https://material.angular.io/
 ## API References
 <div class="divider--half"></div>
 
-* [Light Material Palette]({environment:sassApiUrl}/index.html#variable-light-material-palette)
-* [Dark Material Palette]({environment:sassApiUrl}/index.html#variable-dark-material-palette)
-* [Light Material Theme]({environment:sassApiUrl}/index.html#mixin-light-theme)
-* [Dark Material Theme]({environment:sassApiUrl}/index.html#mixin-dark-theme)
-* [Palette Function]({environment:sassApiUrl}/index.html#function-igx-palette)
-* [Typography Mixin]({environment:sassApiUrl}/index.html#mixin-typography)
+* [Light Material Palette]({environment:sassApiUrl}/palettes#variable-light-material-palette)
+* [Dark Material Palette]({environment:sassApiUrl}/palettes#variable-dark-material-palette)
+* [Light Material Theme]({environment:sassApiUrl}/themes#mixin-light-theme)
+* [Dark Material Theme]({environment:sassApiUrl}/themes#mixin-dark-theme)
+* [Palette Function]({environment:sassApiUrl}/palettes#function-palette)
+* [Typography Mixin]({environment:sassApiUrl}/typography#mixin-typography)
 
 Related topics: 
 

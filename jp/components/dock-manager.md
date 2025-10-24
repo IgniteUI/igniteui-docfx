@@ -13,7 +13,7 @@ Ignite UI Dock Manager コンポーネントは、ペインでアプリケーシ
 
 <code-view style="height: 600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/dock-manager-sample" alt="Angular ドック マネージャーの例">
+           iframe-src="{environment:demosBaseUrl}/layouts/dock-manager-sample/" alt="Angular ドック マネージャーの例">
 </code-view>
 
 

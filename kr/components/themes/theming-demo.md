@@ -12,7 +12,7 @@ The **Ignite UI for Angular Theming** provides you the ability to customize them
 
 <code-view style="height: 650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/theme-chooser" >
+           iframe-src="{environment:demosBaseUrl}/theme-chooser/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -38,7 +38,7 @@ The result from the above code snippet looks like this:
 
 <code-view style="height: 650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/default-theme-sample" >
+           iframe-src="{environment:demosBaseUrl}/default-theme-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -112,7 +112,7 @@ Now lets define the **component themes** that we are going to apply:
 #### Defining Component Themes
 <div class="divider--half"></div>
 
-[**grid-theme**]({environment:sassApiUrl}/index.html#function-grid-theme)
+[**grid-theme**]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ```scss
 // Define dark theme for the dialog
@@ -128,7 +128,7 @@ $dark-grid-theme: grid-theme(
 );
 ```
 
-- [**dialog-theme**]({environment:sassApiUrl}/index.html#function-dialog-theme)
+- [**dialog-theme**]({environment:sassApiUrl}/themes#function-dialog-theme)
 
 ```scss
 
@@ -142,7 +142,7 @@ $dark-dialog-theme: dialog-theme(
 
 ```
 
-- [**input-group-theme**]({environment:sassApiUrl}/index.html#function-input-group-theme)
+- [**input-group-theme**]({environment:sassApiUrl}/themes#function-input-group-theme)
 
 ```scss
 // Define dark theme for the input-group
@@ -202,7 +202,7 @@ And the result is:
 
 <code-view style="height: 650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/dark-theme-sample" >
+           iframe-src="{environment:demosBaseUrl}/dark-theme-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -307,19 +307,19 @@ Now we can easily change our defined themes with only a `click` event:
 
 <code-view style="height: 650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/theme-chooser" >
+           iframe-src="{environment:demosBaseUrl}/theme-chooser/" >
 </code-view>
 
 <div class="divider--half"></div>
 
 ### API
 
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
-* [IgxGrid Filtering Styles]({environment:sassApiUrl}/index.html#function-igx-grid-filtering-theme)
-* [IgxGrid Paginator Styles]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme)
-* [IgxDialogComponent Styles]({environment:sassApiUrl}/index.html#function-dialog-theme)
-* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-input-group-theme) 
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
+* [IgxGrid Filtering Styles]({environment:sassApiUrl}/themes#function-igx-grid-filtering-theme)
+* [IgxGrid Paginator Styles]({environment:sassApiUrl}/themes#function-igx-grid-paginator-theme)
+* [IgxDialogComponent Styles]({environment:sassApiUrl}/themes#function-dialog-theme)
+* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/themes#function-input-group-theme) 
+* [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>

@@ -7,16 +7,19 @@ mentionedTypes: ["XamGeographicMap", "BingMapsMapImagery"]
 
 # Angular Displaying Imagery from Bing Maps
 
+NOTE: As of June 30, 2025 all Microsoft Bing Maps for Enterprise Basic (Free) accounts will be retired. If you're still using an unpaid Basic Account and key, now is the time to act to avoid service disruptions. Bing Maps for Enterprise license holders can continue to use Bing Maps in their applications until June 30,2028.
+
+For more details:
+
+[Microsoft Bing Blogs](https://blogs.bing.com/maps/2025-06/Bing-Maps-for-Enterprise-Basic-Account-shutdown-June-30,2025)
+
 The Angular [`IgxBingMapsMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxbingmapsmapimagery.html) is geographic imagery mapping service provided by Microsoft® company. It provides 3 styles of geographic imagery tiles of the world. This geographic imagery service is accessible directly on the <a href="http://www.bing.com/maps" target="_blank">www.bing.com/maps</a> web site. The Ignite UI for Angular map component can display geographic imagery from Bing Maps in the map’s background content using the [`IgxBingMapsMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxbingmapsmapimagery.html) class.
 
 ## Angular Displaying Imagery from Bing Maps Example
 
-<code-view style="height: 500px" alt="Angular Displaying Imagery from Bing Maps Example"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/display-bing-imagery"
-                                                 github-src="maps/geo-map/display-bing-imagery">
-</code-view>
+<!-- `sample="/maps/geo-map/display-bing-imagery", height="500", alt="Angular Displaying Imagery from Bing Maps Example"` -->
 
+<img src="../images/general/BingMapsImagery.png" />
 
 <div class="divider--half"></div>
 

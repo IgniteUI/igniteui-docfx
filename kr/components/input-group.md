@@ -13,7 +13,7 @@ Input groups in the Ignite UI for Angular controls allow developers to create ea
 
 <code-view style="height:800px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-6" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-6/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -93,7 +93,7 @@ Our inputs could be styled differently by using the [`type`]({environment:angula
 
 <code-view style="height:695px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-5/" >
 </code-view>
 
 
@@ -101,7 +101,7 @@ Our inputs could be styled differently by using the [`type`]({environment:angula
 * [IgxHintDirective]({environment:angularApiUrl}/classes/igxhintdirective.html)
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/themes#function-input-group-theme)
 
 ### Additional Resources
 Related topics:

@@ -34,7 +34,7 @@ The following example represents @@igComponent with search input box that allows
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-search-sample" alt="Angular Search Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-search-sample/" alt="Angular Search Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -43,7 +43,7 @@ The following example represents @@igComponent with search input box that allows
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-search" alt="Angular Search Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-search/" alt="Angular Search Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -386,11 +386,11 @@ Additional components and/or directives with relative APIs that were used:
 Styles:
 
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
-* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-input-group-theme)
-* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxRippleDirective Styles]({environment:sassApiUrl}/index.html#function-ripple-theme)
-* [IgxButtonDirective Styles]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-chip-theme)
+* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/themes#function-input-group-theme)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxRippleDirective Styles]({environment:sassApiUrl}/themes#function-ripple-theme)
+* [IgxButtonDirective Styles]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxChipComponent Styles]({environment:sassApiUrl}/themes#function-chip-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

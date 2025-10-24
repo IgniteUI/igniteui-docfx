@@ -21,7 +21,7 @@ This is a basic example of Angular Nested Tabs where we have one tab within anot
 
 <code-view style="height: 250px; border: 1px solid #ededed;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-3" alt="Angular Tabs Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-3/" alt="Angular Tabs Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -147,7 +147,7 @@ If the sample is configured properly, the final result should look like that:
 
 <code-view style="height: 200px; border: 1px solid #ededed;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-1" alt="Angular Tabs Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-1/" alt="Angular Tabs Example">
 </code-view>
 
 
@@ -165,7 +165,7 @@ Sample below demonstrates how tabs get aligned when switching between `tabAlignm
 
 <code-view style="height: 250px; border: 1px solid #ededed"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabs-alignment" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-alignment/" >
 </code-view>
 
 
@@ -226,7 +226,7 @@ If the sample is configured properly, the tabs should look like the following ex
 
 <code-view style="height: 250px; border: 1px solid #ededed;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-3/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -254,7 +254,7 @@ You can also add you own custom tab header's prefix and suffix simply by using `
 
 <code-view style="height: 250px; border: 1px solid #ededed;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabs-header-prefix-suffix" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-header-prefix-suffix/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -374,7 +374,7 @@ The above code creates an `igx-tabs` component with three tab items. Each tab it
 
 <code-view style="height: 250px; border: 1px solid #ededed"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-sample-4/" >
 </code-view>
 
 > [!NOTE]
@@ -392,7 +392,7 @@ To get started with styling the tabs, we need to import the theming module, wher
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`tabs-theme`]({environment:sassApiUrl}/index.html#function-tabs-theme). By passing just a few base parameters—such as `$item-background` and `$item-active-color`—you can style your tabs with minimal effort. The theme will automatically generate all necessary background and foreground colors for the various interaction states.
+Following the simplest approach, we create a new theme that extends the [`tabs-theme`]({environment:sassApiUrl}/themes#function-tabs-theme). By passing just a few base parameters—such as `$item-background` and `$item-active-color`—you can style your tabs with minimal effort. The theme will automatically generate all necessary background and foreground colors for the various interaction states.
 
 You can, of course, override any additional parameters to further fine-tune the appearance.
 
@@ -404,9 +404,9 @@ $dark-tabs: tabs-theme(
 ```
 
 >[!NOTE]
->Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
-If we take a look at the [`tabs-theme`]({environment:sassApiUrl}/index.html#function-tabs-theme), we will notice that there are even more properties available to us in order to style our tabs.
+If we take a look at the [`tabs-theme`]({environment:sassApiUrl}/themes#function-tabs-theme), we will notice that there are even more properties available to us in order to style our tabs.
 
 > [!NOTE]
 > In order to style any component used as part of a tab content, additional themes should be created specific to the respective component.
@@ -422,7 +422,7 @@ The last step is to **include** the component theme in our application.
 <code-view style="height: 250px; border: 1px solid #ededed"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabs-style" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabs-style/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -433,15 +433,15 @@ The last step is to **include** the component theme in our application.
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
 * [IgxTabsComponent]({environment:angularApiUrl}/classes/igxtabscomponent.html)
-* [IgxTabsComponent Styles]({environment:sassApiUrl}/index.html#function-tabs-theme)
+* [IgxTabsComponent Styles]({environment:sassApiUrl}/themes#function-tabs-theme)
 * [IgxTabItemComponent]({environment:angularApiUrl}/classes/igxtabitemcomponent.html)
 * [IgxTabHeaderComponent]({environment:angularApiUrl}/classes/igxtabheadercomponent.html)
 * [IgxTabContentComponent]({environment:angularApiUrl}/classes/igxtabcontentcomponent.html)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

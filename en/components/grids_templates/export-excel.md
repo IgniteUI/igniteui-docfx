@@ -59,7 +59,7 @@ The Excel Exporter service can export data to excel from the @@igxName. The data
 <code-view style="height: 800px;" 
            data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz"
-           iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1" alt="Angular Excel Exporter Example">
+           iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1/" alt="Angular Excel Exporter Example">
 </code-view>
 
 }
@@ -68,7 +68,7 @@ The Excel Exporter service can export data to excel from the @@igxName. The data
 <code-view style="height: 350px;" 
            data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz"
-           iframe-src="{environment:demosBaseUrl}/services/export-excel-tree-grid-sample" alt="Angular Excel Exporter Example">
+           iframe-src="{environment:demosBaseUrl}/services/export-excel-tree-grid-sample/" alt="Angular Excel Exporter Example">
 </code-view>
 
 }
@@ -77,7 +77,7 @@ The Excel Exporter service can export data to excel from the @@igxName. The data
 <code-view style="height: 600px;" 
         data-demos-base-url="{environment:demosBaseUrl}"
         explicit-editor="stackblitz"
-        iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-export" alt="Angular Excel Exporter Example">
+        iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-export/" alt="Angular Excel Exporter Example">
 </code-view>
 
 }
@@ -86,7 +86,7 @@ The Excel Exporter service can export data to excel from the @@igxName. The data
 <code-view style="height: 600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            explicit-editor="stackblitz"
-           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-export" alt="Angular Excel Exporter Example">
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-export/" alt="Angular Excel Exporter Example">
 </code-view>
 
 }
@@ -179,7 +179,7 @@ To export grouped data you just need to group the @@igComponent by one or more c
 <code-view style="height: 800px;" 
            data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz" 
-           iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1" alt="Angular Grouped Data Excel Exporter Example">
+           iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1/" alt="Angular Grouped Data Excel Exporter Example">
 </code-view>
 
 }
@@ -200,7 +200,7 @@ It is now possible to export @@igComponent with defined [multi-column headers](m
 <code-view style="height: 800px;" 
            data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz"
-           iframe-src="{environment:demosBaseUrl}/grid/multi-column-headers-export" alt="Angular Multi-Column Headers Export">
+           iframe-src="{environment:demosBaseUrl}/grid/multi-column-headers-export/" alt="Angular Multi-Column Headers Export">
 </code-view>
 }
 
@@ -208,7 +208,7 @@ It is now possible to export @@igComponent with defined [multi-column headers](m
 <code-view style="height: 800px;" 
            data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-headers-export" alt="Angular Multi-Column Headers Export">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-headers-export/" alt="Angular Multi-Column Headers Export">
 </code-view>
 }
 
@@ -216,7 +216,7 @@ It is now possible to export @@igComponent with defined [multi-column headers](m
 <code-view style="height: 800px;" 
            data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-export" alt="Angular Multi-Column Headers Export">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-export/" alt="Angular Multi-Column Headers Export">
 </code-view>
 }
 

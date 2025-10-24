@@ -14,7 +14,7 @@ The Button directive within Ignite UI for Angular is intended to be used on any 
 
 <code-view style="height: 436px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -178,7 +178,7 @@ And the final result:
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-display-density" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/buttons-display-density/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -187,7 +187,7 @@ And the final result:
 <div class="divider--half"></div>
 
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxButton Styles]({environment:sassApiUrl}/index.html#function-button-theme)
+* [IgxButton Styles]({environment:sassApiUrl}/themes#function-button-theme)
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
 
 ### Additional Resources

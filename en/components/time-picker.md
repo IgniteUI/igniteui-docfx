@@ -16,7 +16,7 @@ In general, users can enter a preferred time either through text input or by cho
 
 <code-view style="height:540px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-dropdown" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-dropdown/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -156,7 +156,7 @@ And here's our templated Ignite UI for Angular Time Picker:
 
 <code-view style="height: 600px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-5/" >
 </code-view>
 
 ## Custom action buttons
@@ -192,7 +192,7 @@ And there we have it, a re-templated time picker with dropdown, custom actions a
 
 <code-view style="height: 600px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-6" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-6/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -248,7 +248,7 @@ In dialog mode, the dialog header displays the currently selected time in the pi
 
 <code-view style="height: 600px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1" alt="Angular Time Picker Example">
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-1/" alt="Angular Time Picker Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -343,7 +343,7 @@ And there we have it:
 
 <code-view style="height: 540px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-sample-4/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -355,7 +355,7 @@ To achieve that in template driven forms, use the `ngModel` to bind both compone
 
 <code-view style="height: 540px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/template-driven-form" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/template-driven-form/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -364,7 +364,7 @@ In reactive forms, we can handle the [`valueChange`]({environment:angularApiUrl}
 
 <code-view style="height: 540px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/reactive-form" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/reactive-form/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -380,7 +380,7 @@ To get started with styling the time picker, we need to import the `index` file,
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`time-picker-theme`]({environment:sassApiUrl}/index.html#function-dialog-theme) and accepts parameters that style the time picker.
+Following the simplest approach, we create a new theme that extends the [`time-picker-theme`]({environment:sassApiUrl}/themes#function-dialog-theme) and accepts parameters that style the time picker.
 
 ```scss
 $my-time-picker-theme: time-picker-theme(
@@ -437,7 +437,7 @@ Now, the time picker's items are properly rendered **inside** of our component's
 <code-view style="height: 600px;"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-styling" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/timepicker-styling/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -449,15 +449,15 @@ Now, the time picker's items are properly rendered **inside** of our component's
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [IgxTimePickerComponent]({environment:angularApiUrl}/classes/igxtimepickercomponent.html)
-* [IgxTimePickerComponent Styles]({environment:sassApiUrl}/index.html#function-time-picker-theme)
+* [IgxTimePickerComponent Styles]({environment:sassApiUrl}/themes#function-time-picker-theme)
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## Theming Dependencies
-* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-input-group-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxInputGroup Theme]({environment:sassApiUrl}/themes#function-input-group-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## Additional Resources
 * [Date Time Editor](date-time-editor.md)

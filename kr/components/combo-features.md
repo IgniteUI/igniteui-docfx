@@ -18,7 +18,7 @@ The following demo demonstrates some of the combo features that are enabled/disa
 
 <code-view style="height: 440px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-features" >
+           iframe-src="{environment:demosBaseUrl}/lists/combo-features/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -155,7 +155,7 @@ Defining a combo's groupKey option will group the items, according to the provid
 <div class="divider--half"></div>
 
 * IgxComboComponent [**API Reference**]({environment:angularApiUrl}/classes/igxcombocomponent.html) and
-[**Themes Reference**]({environment:sassApiUrl}/index.html#themes-mixin-igx-combo).
+[**Themes Reference**]({environment:sassApiUrl}/themes#function-combo-theme).
 
 ## Additional Resources
 <div class="divider--half"></div>

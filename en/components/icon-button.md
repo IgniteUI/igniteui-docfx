@@ -12,7 +12,7 @@ The Ignite UI for Angular Icon Button directive is intended to turn any icon int
 
 <code-view style="height: 70px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/icon-button-overview" alt="Angular Icon Button Example">
+           iframe-src="{environment:demosBaseUrl}/data-entries/icon-button-overview/" alt="Angular Icon Button Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -140,7 +140,7 @@ Users can choose one of the three predefined `igxIconButton` sizes by using the 
 
 <code-view style="height: 70px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/icon-button-size" alt="Angular Icon Button Size Example">
+           iframe-src="{environment:demosBaseUrl}/data-entries/icon-button-size/" alt="Angular Icon Button Size Example">
 </code-view>
 <div class="divider--half"></div>
 
@@ -165,10 +165,10 @@ Following the simplest approach, we use CSS variables to customize the appearanc
 }
 ```
 
-Take a look at the [`icon-button-theme`]({environment:sassApiUrl}/index.html#function-icon-button-theme) section for a complete list of available parameters for styling any type of icon button.
+Take a look at the [`icon-button-theme`]({environment:sassApiUrl}/themes#function-icon-button-theme) section for a complete list of available parameters for styling any type of icon button.
 
 You can also choose to style only buttons of a specific type - `flat`, `outlined` or `contained`.
-To do this, you can use the new type-specific theme functions: [`flat-icon-button-theme`]({environment:sassApiUrl}/index.html#function-flat-icon-button-theme), [`outlined-icon-button-theme`]({environment:sassApiUrl}/index.html#function-outlined-icon-button-theme) and [`contained-icon-button-theme`]({environment:sassApiUrl}/index.html#function-contained-icon-button-theme)
+To do this, you can use the new type-specific theme functions: [`flat-icon-button-theme`]({environment:sassApiUrl}/themes#function-flat-icon-button-theme), [`outlined-icon-button-theme`]({environment:sassApiUrl}/themes#function-outlined-icon-button-theme) and [`contained-icon-button-theme`]({environment:sassApiUrl}/themes#function-contained-icon-button-theme)
 
 Here’s an example of using the `contained-icon-button-theme` function to define a custom theme in SCSS:
 
@@ -185,7 +185,7 @@ This will generate a fully themed `contained icon button`, including appropriate
 <code-view style="height: 100px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/icon-button-styling" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/icon-button-styling/" >
 </code-view>
 <div class="divider--half"></div>
 
@@ -193,7 +193,7 @@ This will generate a fully themed `contained icon button`, including appropriate
 <div class="divider--half"></div>
 
 * [IgxIconButtonDirective]({environment:angularApiUrl}/classes/igxiconbuttondirective.html)
-* [IgxIconButton Styles]({environment:sassApiUrl}/index.html#function-icon-button-theme)
+* [IgxIconButton Styles]({environment:sassApiUrl}/themes#function-icon-button-theme)
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
 
 ## Additional Resources

@@ -266,6 +266,9 @@
     - name: 状態保持
       href: grid/state-persistence.md
       updated: false
+    - name: セル結合
+      href: grid/cell-merging.md
+      new: true
 - name: Tree Grid
   href: treegrid/tree-grid.md
   new: false
@@ -407,6 +410,9 @@
     - name: 状態保持
       href: treegrid/state-persistence.md
       new: false
+    - name: セル結合
+      href: treegrid/cell-merging.md
+      new: true
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical-grid.md
   new: false
@@ -543,6 +549,9 @@
     - name: 状態保持
       href: hierarchicalgrid/state-persistence.md
       new: false
+    - name: セル結合
+      href: hierarchicalgrid/cell-merging.md
+      new: true
 - name: Pivot Grid
   href: pivotgrid/pivot-grid.md
   new: false
@@ -810,6 +819,9 @@
     - name: 複数ソースのバインド
       href: geo-map-binding-multiple-sources.md
       new: false
+    - name: Azure 画像の表示
+      href: geo-map-display-azure-imagery.md
+      new: true
     - name: Bing 画像の表示
       href: geo-map-display-bing-imagery.md
       new: false
@@ -903,6 +915,9 @@
   new: false
 - name: サイズ
   href: display-density.md
+- name: スペーシング
+  href: themes/spacing.md
+  new: true
 - name: Sass
   new: false
   items:
@@ -954,6 +969,9 @@
     - name: その他
       new: false
       items:
+      - name: Tailwind カスタム クラスの使用
+        href: themes/misc/tailwind-classes.md
+        new: true
       - name: 印刷スタイル
         href: themes/misc/printing-styles.md
         new: false

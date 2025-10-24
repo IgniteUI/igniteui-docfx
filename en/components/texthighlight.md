@@ -12,7 +12,7 @@ The [`IgxTextHighlightDirective`]({environment:angularApiUrl}/classes/igxtexthig
 
 <code-view style="height: 260px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-1" alt="Angular TextHighlight Directive Example">
+           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-1/" alt="Angular TextHighlight Directive Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -248,7 +248,7 @@ If the sample is configured properly, the final result should look like that:
 
 <code-view style="height: 260px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-1" >
+           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-1/" >
 </code-view>
 
 <div class="divider"></div>
@@ -343,7 +343,7 @@ export class HomeComponent {
 
 <code-view style="height: 400px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-2" >
+           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-2/" >
 </code-view>
 
 <div class="divider"></div>
@@ -359,7 +359,7 @@ The [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdir
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`highlight-theme`]({environment:sassApiUrl}/index.html#function-highlight-theme) and accepts the `$resting-background`, `$resting-color`, `$active-background` and the `$active-color` parameters.
+Following the simplest approach, we create a new theme that extends the [`highlight-theme`]({environment:sassApiUrl}/themes#function-highlight-theme) and accepts the `$resting-background`, `$resting-color`, `$active-background` and the `$active-color` parameters.
 
 ```scss
 $dark-highlight: highlight-theme(
@@ -387,7 +387,7 @@ The last step is to **include** the newly created theme.
 
 ### Custom styles
 
-Let's say we want to provide an even richer styling to our highlighted text parts. In order to do this, we can take advantage of the [`cssClass`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#cssclass) and the [`activeCssClass`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#activecssclass) inputs of the [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) directive. We can combine these classes with the styles from the [`highlight-theme`]({environment:sassApiUrl}/index.html#function-highlight-theme) and provide an awesome experience to our users!
+Let's say we want to provide an even richer styling to our highlighted text parts. In order to do this, we can take advantage of the [`cssClass`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#cssclass) and the [`activeCssClass`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html#activecssclass) inputs of the [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html) directive. We can combine these classes with the styles from the [`highlight-theme`]({environment:sassApiUrl}/themes#function-highlight-theme) and provide an awesome experience to our users!
 
 All we have to do is create a couple of css classes with some properties and attach them by using the inputs from above:
 
@@ -435,7 +435,7 @@ As mentioned earlier, we can even combine them with a theme:
 <code-view style="height: 300px;" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-style" >
+           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-style/" >
 </code-view>
 
 <div class="divider"></div>
@@ -449,7 +449,7 @@ For more detailed information regarding the TextHighlight directive's API, refer
 Additional components that were used:
 
 * [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [`IgxInputGroupComponent Styles`]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [`IgxInputGroupComponent Styles`]({environment:sassApiUrl}/themes#function-input-group-theme)
 <div class="divider"></div>
 
 ## Additional Resources

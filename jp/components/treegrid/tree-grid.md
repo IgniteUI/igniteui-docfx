@@ -328,7 +328,7 @@ $custom-theme: grid-theme(
 <code-view style="height:600px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-style" alt="Angular ツリー グリッド スタイル設定のデモ">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-style/" alt="Angular ツリー グリッド スタイル設定のデモ">
 </code-view>
 
 >[!NOTE]
@@ -381,7 +381,7 @@ platformBrowserDynamic()
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 * [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 
 ## テーマの依存関係

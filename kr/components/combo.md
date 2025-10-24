@@ -21,7 +21,7 @@ Drop Down items are **virtualized**, which guarantees smooth work, even if the [
 
 <code-view style="height: 400px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo" >
+           iframe-src="{environment:demosBaseUrl}/lists/combo/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -111,8 +111,8 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 <div class="divider--half"></div>
 
 * [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
-* [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#themes-mixin-igx-combo)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxComboComponent Styles]({environment:sassApiUrl}/themes#function-combo-theme)
+* [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## Known Issues
 

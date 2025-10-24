@@ -32,7 +32,7 @@ or just any other custom content. The toolbar and the predefined UI components s
 
 <code-view style="height:420px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-1" alt="Angular Toolbar Grid Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-1/" alt="Angular Toolbar Grid Example">
 </code-view>
 
 }
@@ -40,7 +40,7 @@ or just any other custom content. The toolbar and the predefined UI components s
 
 <code-view style="height:420px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-4" alt="Angular Toolbar Grid Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-4/" alt="Angular Toolbar Grid Example">
 </code-view>
 
 }
@@ -48,7 +48,7 @@ or just any other custom content. The toolbar and the predefined UI components s
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-title" alt="Angular Toolbar Grid Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-title/" alt="Angular Toolbar Grid Example">
 </code-view>
 
 }
@@ -187,7 +187,7 @@ Listed below are the main features of the toolbar with example code for each of 
 
 <code-view style="height:630px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-2/" >
 </code-view>
 
 }
@@ -195,7 +195,7 @@ Listed below are the main features of the toolbar with example code for each of 
 
 <code-view style="height:500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-1" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-1/" >
 </code-view>
 
 }
@@ -203,7 +203,7 @@ Listed below are the main features of the toolbar with example code for each of 
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-options" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-options/" >
 </code-view>
 
 }
@@ -419,7 +419,7 @@ The following sample demonstrates how to customize the exported files:
 
 <code-view style="height:420px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-3/" >
 </code-view>
 
 <div class="divider"></div>
@@ -428,7 +428,7 @@ The following sample demonstrates how to customize the exported files:
 
 <code-view style="height:420px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-2" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-2/" >
 </code-view>
 
 <div class="divider"></div>
@@ -445,7 +445,7 @@ The sample below has significant amount of data. While the data is being exporte
 
 <code-view style="height: 370px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/exporting-visualization" >
+           iframe-src="{environment:demosBaseUrl}/grid/exporting-visualization/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -454,7 +454,7 @@ The sample below has significant amount of data. While the data is being exporte
 
 <code-view style="height: 370px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-exporting-visualization" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-exporting-visualization/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -504,7 +504,7 @@ The following sample demonstrates how to add an additional button to the toolbar
 
 <code-view style="height:420px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-4/" >
 </code-view>
 
 <div class="divider"></div>
@@ -513,7 +513,7 @@ The following sample demonstrates how to add an additional button to the toolbar
 
 <code-view style="height:420px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-3" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-3/" >
 </code-view>
 
 <div class="divider"></div>
@@ -522,7 +522,7 @@ The following sample demonstrates how to add an additional button to the toolbar
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-custom" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-custom/" >
 </code-view>
 
 <div class="divider"></div>
@@ -552,7 +552,7 @@ $my-dark-palette: palette(
 $my-dark-color: color($my-dark-palette, 'surface');
 ```
 
-Now, create a new theme that extends the [`grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-grid-toolbar-theme) and modify the `$background-color` and the `$title-text-color` parameters.
+Now, create a new theme that extends the [`grid-toolbar-theme`]({environment:sassApiUrl}/themes#function-grid-toolbar-theme) and modify the `$background-color` and the `$title-text-color` parameters.
 
 ```scss
 $dark-grid-toolbar-theme: grid-toolbar-theme(
@@ -562,7 +562,7 @@ $dark-grid-toolbar-theme: grid-toolbar-theme(
 );
 ```
 
-To theme the column actions menus of the toolbar, we have to change the theme of the [`column-actions-theme`]({environment:sassApiUrl}/index.html#function-igx-column-actionsr-theme) component.
+To theme the column actions menus of the toolbar, we have to change the theme of the [`column-actions-theme`]({environment:sassApiUrl}/themes#function-igx-column-actionsr-theme) component.
 
 ```scss
 $dark-column-actions-theme: column-actions-theme(
@@ -616,7 +616,7 @@ The last step is to **include** the newly created themes.
 <code-view style="height:510px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-style" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-style/" >
 </code-view>
 
 <div class="divider"></div>
@@ -626,7 +626,7 @@ The last step is to **include** the newly created themes.
 <code-view style="height:420px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-style/" >
 </code-view>
 
 <div class="divider"></div>
@@ -636,7 +636,7 @@ The last step is to **include** the newly created themes.
 <code-view style="height:530px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-style" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-style/" >
 </code-view>
 
 <div class="divider"></div>
@@ -660,7 +660,7 @@ The Grid Toolbar service has a few more APIs to explore, which are listed below.
 
 Styles:
 
-* [`@@igxNameComponent Styles`]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [`@@igxNameComponent Styles`]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ## Additional Resources
 

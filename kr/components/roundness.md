@@ -22,7 +22,7 @@ $_light-button: (
 );
 ```
 
-As you can see from the example above, the component schema for [Button theme]({environment:sassApiUrl}/index.html#function-button-theme) defines the default border-radius for all types of buttons.
+As you can see from the example above, the component schema for [Button theme]({environment:sassApiUrl}/themes#function-button-theme) defines the default border-radius for all types of buttons.
 
 Let's look at how things work. 
 The default value for "flat-border-radius" is set to 0.2 which in the end will be resolved to 4px, it is actually a fraction between 0 and 20px where 0 is the minimum border-radius and 20px is the maximum. 
@@ -53,7 +53,7 @@ The result from the above code snippets is:
 
 <code-view style="height: 350px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/theming/shadows-sample" >
+           iframe-src="{environment:demosBaseUrl}/theming/shadows-sample/" >
 </code-view>
 
 <div class="divider--half"></div>

@@ -113,7 +113,7 @@ The following sample demonstrates the editing execution sequence in action:
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-editing-lifecycle" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-editing-lifecycle/" >
 </code-view>
 
 }
@@ -121,7 +121,7 @@ The following sample demonstrates the editing execution sequence in action:
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-editing-lifecycle" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-editing-lifecycle/" >
 </code-view>
 
 }
@@ -129,7 +129,7 @@ The following sample demonstrates the editing execution sequence in action:
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-editing-lifecycle" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-editing-lifecycle/" >
 </code-view>
 
 }

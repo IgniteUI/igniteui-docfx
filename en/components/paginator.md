@@ -17,7 +17,7 @@ The following Angular Pagination example shows a Paginator template demonstratin
 
 <code-view style="height: 600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/pagination/main-pagination" alt="Angular Paginator Example">
+           iframe-src="{environment:demosBaseUrl}/pagination/main-pagination/" alt="Angular Paginator Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -187,7 +187,7 @@ public ngOnInit(): void {
 
 ## API References
 * [IgxPaginator API]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html)
-* [IgxPaginator Styles]({environment:sassApiUrl}/index.html#function-paginator-theme)
+* [IgxPaginator Styles]({environment:sassApiUrl}/themes#function-paginator-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

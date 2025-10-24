@@ -13,7 +13,7 @@ The [`IgxTextHighlight`]({environment:angularApiUrl}/classes/igxtexthighlightdir
 
 <code-view style="height: 260px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-1" >
+           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -179,7 +179,7 @@ If the sample is configured properly, the final result should look like that:
 
 <code-view style="height: 260px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-1" >
+           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-1/" >
 </code-view>
 
 
@@ -264,7 +264,7 @@ All the rest of the code in the .ts file is identical to the single container ex
 
 <code-view style="height: 400px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-2" >
+           iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-2/" >
 </code-view>
 
 
@@ -278,7 +278,7 @@ For more detailed information regarding the TextHighlight directive's API, refer
 Additional components that were used:
 
 * [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [`IgxInputGroupComponent Styles`]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [`IgxInputGroupComponent Styles`]({environment:sassApiUrl}/themes#function-input-group-theme)
 <div class="divider"></div>
 
 ### Additional Resources

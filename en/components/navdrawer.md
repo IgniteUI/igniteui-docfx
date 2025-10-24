@@ -14,7 +14,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <code-view style="height: 500px; border: 1px solid #D4D4D4;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-simple" alt="Angular Navigation Drawer Example">
+           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-simple/" alt="Angular Navigation Drawer Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -258,7 +258,7 @@ Now the changed example should look like that:
 
 <code-view style="height: 500px; border: 1px solid #D4D4D4;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-pin" >
+           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-pin/" >
 </code-view>
 
 The drawer applies `flex-basis` on its host element, allowing the rest of the content to take up the remaining width.
@@ -307,7 +307,7 @@ The mini variant is commonly used in a persistent setup, so we've set `pin` and 
 
 <code-view style="height: 400px; border: 1px solid #D4D4D4;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-mini" >
+           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-mini/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -386,7 +386,7 @@ After all the steps above are completed, your app should look like that:
 
 <code-view style="height: 400px; border: 1px solid #D4D4D4;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-routing" >
+           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-routing/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -447,7 +447,7 @@ The example below presents the capabilities of a hierarchical structure by using
 
 <code-view style="height: 400px; border: 1px solid #D4D4D4;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-hierarchical" >
+           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-hierarchical/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -463,7 +463,7 @@ To get started with styling the navigation drawer, we need to import the `index`
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`navdrawer-theme`]({environment:sassApiUrl}/index.html#function-navdrawer-theme) and accepts a few parameters that style the navdrawer's items:
+Following the simplest approach, we create a new theme that extends the [`navdrawer-theme`]({environment:sassApiUrl}/themes#function-navdrawer-theme) and accepts a few parameters that style the navdrawer's items:
 
 ```scss
 $custom-theme: navdrawer-theme(
@@ -495,7 +495,7 @@ The last step is to **include** the component theme in our application.
 <code-view style="height: 400px; border: 1px solid #D4D4D4;" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-styling" >
+           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-styling/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -503,4 +503,4 @@ The last step is to **include** the component theme in our application.
 ## API and Style References
 
 * [IgxNavigationDrawerComponent API]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html)
-* [IgxNavigationDrawerComponent Styles]({environment:sassApiUrl}/index.html#function-navdrawer-theme)
+* [IgxNavigationDrawerComponent Styles]({environment:sassApiUrl}/themes#function-navdrawer-theme)

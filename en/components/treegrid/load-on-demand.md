@@ -13,7 +13,7 @@ The Ignite UI for Angular [`IgxTreeGrid`]({environment:angularApiUrl}/classes/ig
 
 <code-view style="height:450px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-load-on-demand" alt="Angular Tree Grid Load On Demand Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-load-on-demand/" alt="Angular Tree Grid Load On Demand Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -71,7 +71,7 @@ If you want to provide your own custom loading indicator, you may create an ng-t
 <div class="divider--half"></div>
 
 * [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-grid-theme)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ### Additional Resources
 

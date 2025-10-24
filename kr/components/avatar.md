@@ -15,7 +15,7 @@ _language: kr
 
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/avatar-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/layouts/avatar-sample-3/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -106,7 +106,7 @@ Analogically, the avatar can display an icon via the [`icon`]({environment:angul
 <div class="divider--half"></div>
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
-* [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-avatar-theme)
+* [IgxAvatarComponent Styles]({environment:sassApiUrl}/themes#function-avatar-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>

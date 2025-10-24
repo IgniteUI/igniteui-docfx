@@ -49,7 +49,7 @@ _language: ja
 
 <code-view style="height:850px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
-           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs" alt="Angular Tree Grid グループ化の例">
+           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs/" alt="Angular Tree Grid グループ化の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -102,7 +102,7 @@ public sorting = IgxGroupedTreeGridSorting.instance();
 
 <code-view style="height:850px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-group-by-load-on-demand" alt="Angular Tree Grid グループ化 ロード オン デマンドの例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-group-by-load-on-demand/" alt="Angular Tree Grid グループ化 ロード オン デマンドの例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -170,7 +170,7 @@ private reloadData() {
 <div class="divider--half"></div>
 
 * [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ### その他のリソース
 

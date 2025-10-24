@@ -12,7 +12,7 @@ The Ignite UI for Angular Splitter component provides the ability to create layo
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/splitter-horizontal-sample" >
+           iframe-src="{environment:demosBaseUrl}/layouts/splitter-horizontal-sample/" >
 </code-view>
 
 
@@ -130,7 +130,7 @@ public typeVertical = SplitterType.Vertical;
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/splitter-nested-sample" >
+           iframe-src="{environment:demosBaseUrl}/layouts/splitter-nested-sample/" >
 </code-view>
 
 
@@ -155,7 +155,7 @@ To get started with styling the **igxSplitter** component, you need to import th
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-You can change the default styles of the splitter by creating a new theme that extends the [`splitter-theme`]({environment:sassApiUrl}/index.html#function-splitter-theme).
+You can change the default styles of the splitter by creating a new theme that extends the [`splitter-theme`]({environment:sassApiUrl}/themes#function-splitter-theme).
 
 ```scss
 // In splitter-styling-sample.component.scss
@@ -199,7 +199,7 @@ This is the final result from applying your new theme.
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/splitter-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/layouts/splitter-styling-sample/" >
 </code-view>
 
 
@@ -209,7 +209,7 @@ This is the final result from applying your new theme.
 * [IgxSplitterComponent]({environment:angularApiUrl}/classes/igxsplittercomponent.html)
 * [IgxSplitterPaneComponent]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html)
 * [SplitterType]({environment:angularApiUrl}/enums/splittertype.html)
-* [IgxSplitterComponent Styles]({environment:sassApiUrl}/index.html#function-splitter-theme)
+* [IgxSplitterComponent Styles]({environment:sassApiUrl}/themes#function-splitter-theme)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

@@ -11,7 +11,7 @@ _keywords: Angular Badge component, Angular Badge control, Ignite UI for Angular
 
 <code-view style="height:100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-2" alt="Angular Badge Example">
+           iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-2/" alt="Angular Badge Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -153,7 +153,7 @@ Then, just specify the icon name and family as follows:
 
 <code-view style="height: 100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/badge-icon" >
+           iframe-src="{environment:demosBaseUrl}/data-display/badge-icon/" >
 </code-view>
 
 ### Badge in List
@@ -283,7 +283,7 @@ If the sample is configured properly, a list of members should be displayed and 
 
 <code-view style="height: 280px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-3/" >
 </code-view>
 
 ## Styling
@@ -317,7 +317,7 @@ To include the new theme we use the `css-vars` mixin:
 <code-view style="height:340px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/badge-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/data-display/badge-styling-sample/" >
 </code-view>
 
 

@@ -573,7 +573,7 @@ interface AminoAcid {
 
 <code-view style="height:460px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding-2" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -677,7 +677,7 @@ export const EMPLOYEE_DATA = [
 
 <code-view style="height:460px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-nested-data-binding/"
            alt="Angular Grid ネストされたデータ バインディングの例">
 </code-view>
 
@@ -760,7 +760,7 @@ export const DATA: any[] = [
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-composite-data-binding"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-composite-data-binding/"
            alt="Angular Grid 複合データ バインディングの例">
 </code-view>
 
@@ -816,7 +816,7 @@ platformBrowserDynamic()
 
 ## API リファレンス
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)

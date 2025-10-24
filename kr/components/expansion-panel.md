@@ -16,7 +16,7 @@ The [`IgxExpansionPanel`]({environment:angularApiUrl}/classes/igxexpansionpanelc
 
 <code-view style="height: 450px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -69,7 +69,7 @@ In the below example, we can create a small collapsible component that hold a bi
 </igx-expansion-panel>
 
 ```
-The [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) exposes the [`.igx-expansion-panel`]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel) class which we can use to style the component:
+The [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) exposes the [`.igx-expansion-panel`]({environment:sassApiUrl}/themes#function-expansion-panel-theme) class which we can use to style the component:
 
 ```css
 <!-- expansion-panel.component.css -->
@@ -96,7 +96,7 @@ You can see the results below:
 
 <code-view style="height: 450px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-1/" >
 </code-view>
 
 
@@ -151,7 +151,7 @@ Below we have the results:
 
 <code-view style="height: 400px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-2/" >
 </code-view>
 
 
@@ -244,7 +244,7 @@ After applying all of the changes to our initial component, here is the final re
 
 <code-view style="height: 550px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-3/" >
 </code-view>
 
 
@@ -293,7 +293,7 @@ export class ExpansionPanelComponent {
     }
 }
 ```
-As you can see, we are going to use [`slideInLeft`]({environment:sassApiUrl}/index.html#mixin-slide-in-left) and [`slideOutRight`]({environment:sassApiUrl}/index.html#mixin-slide-out-right) animations from our [**inbuilt suite of animations**]({environment:sassApiUrl}/index.html#animations) to make the component content appear more dramatically from the left side and disappear on the right when collapsing the content. In the process, we override some of the existing parameters with the specific ones we want to use.
+As you can see, we are going to use [`slideInLeft`]({environment:sassApiUrl}/animations#mixin-slide-in-left) and [`slideOutRight`]({environment:sassApiUrl}/animations#mixin-slide-out-right) animations from our [**inbuilt suite of animations**]({environment:sassApiUrl}/animations) to make the component content appear more dramatically from the left side and disappear on the right when collapsing the content. In the process, we override some of the existing parameters with the specific ones we want to use.
 
 The sample shows some user information and the key point here is passing the animation settings to the component like:
 `[animationSettings] = "animationSettingsCustom"`
@@ -341,7 +341,7 @@ You can see the results below:
 
 <code-view style="height: 350px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-6" >
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-6/" >
 </code-view>
 
 
@@ -518,7 +518,7 @@ You can see the results below:
 
 <code-view style="height: 550px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-5/" >
 </code-view>
 
 
@@ -620,7 +620,7 @@ You can see the results below:
 
 <code-view style="height: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-7" >
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-7/" >
 </code-view>
 
 
@@ -628,4 +628,4 @@ You can see the results below:
 * [IgxExpansionPanel API]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)
 * [IgxExpansionPanelHeader API]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html)
 * [IgxExpansionPanelBody API]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html)
-* [IgxExpansionPanel Styles]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel)
+* [IgxExpansionPanel Styles]({environment:sassApiUrl}/themes#function-expansion-panel-theme)

@@ -32,7 +32,7 @@ The Angular UI grid in Ignite UI for Angular has a **summaries** feature that fu
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-summary" alt="Angular @@igComponent Summaries Overview Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-summary/" alt="Angular @@igComponent Summaries Overview Example">
 </code-view>
 
 }
@@ -40,7 +40,7 @@ The Angular UI grid in Ignite UI for Angular has a **summaries** feature that fu
 
 <code-view style="height:750px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary" alt="Angular @@igComponent Summaries Overview Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary/" alt="Angular @@igComponent Summaries Overview Example">
 </code-view>
 
 }
@@ -48,7 +48,7 @@ The Angular UI grid in Ignite UI for Angular has a **summaries** feature that fu
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary" alt="Angular @@igComponent Summaries Overview Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary/" alt="Angular @@igComponent Summaries Overview Example">
 </code-view>
 
 }
@@ -368,7 +368,7 @@ class MySummary extends IgxNumberSummaryOperand {
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-alldata-summaries" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-alldata-summaries/" >
 </code-view>
 
 }
@@ -376,7 +376,7 @@ class MySummary extends IgxNumberSummaryOperand {
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-allData-summary" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-allData-summary/" >
 </code-view>
 
 }
@@ -384,7 +384,7 @@ class MySummary extends IgxNumberSummaryOperand {
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-allData-summary" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-allData-summary/" >
 </code-view>
 
 }
@@ -411,7 +411,7 @@ When a default summary is defined, the height of the summary area is calculated 
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-summary-template" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-summary-template/" >
 </code-view>
 
 }
@@ -419,7 +419,7 @@ When a default summary is defined, the height of the summary area is calculated 
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-summary-template" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-summary-template/" >
 </code-view>
 
 }
@@ -427,7 +427,7 @@ When a default summary is defined, the height of the summary area is calculated 
 
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hgrid-summary-template" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hgrid-summary-template/" >
 </code-view>
 
 }
@@ -526,19 +526,19 @@ At runtime, summaries can also be dynamically disabled using the `disabledSummar
 @@if (igxName === 'IgxGrid') {
 <code-view style="height:850px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-disable-summaries" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-disable-summaries/" >
 </code-view>
 }
 @@if (igxName === 'IgxTreeGrid') {
 <code-view style="height:950px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-disable-summaries" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-disable-summaries/" >
 </code-view>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <code-view style="height:850px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-disable-summaries" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-disable-summaries/" >
 </code-view>
 }
 
@@ -564,19 +564,19 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
 @@if (igxName === 'IgxGrid') {
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-summary-formatter" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-summary-formatter/" >
 </code-view>
 }
 @@if (igxName === 'IgxTreeGrid') {
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-summary-formatter" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-summary-formatter/" >
 </code-view>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-summary-formatter" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-summary-formatter/" >
 </code-view>
 }
 
@@ -605,7 +605,7 @@ The [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.ht
 
 <code-view style="height:720px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-summary" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-summary/" >
 </code-view>
 
 }
@@ -632,7 +632,7 @@ The [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.ht
 
 <code-view style="height:720px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary2" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary2/" >
 </code-view>
 
 }
@@ -647,14 +647,14 @@ The [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/IgxExcelExpo
 @@if (igxName === 'IgxGrid') {
 <code-view style="height:770px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-summary-export" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-summary-export/" >
 </code-view>
 }
 
 @@if (igxName === 'IgxTreeGrid') {
 <code-view style="height:780px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary-export" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary-export/" >
 </code-view>
 }
 
@@ -662,7 +662,7 @@ The [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/IgxExcelExpo
 @@if (igxName === 'IgxHierarchicalGrid') {
 <code-view style="height:760px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary-export" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary-export/" >
 </code-view>
 }
 
@@ -711,7 +711,7 @@ To get started with styling the sorting behavior, we need to import the `index` 
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`grid-summary-theme`]({environment:sassApiUrl}/index.html#function-grid-summary-theme) and accepts the `$background-color`, `$focus-background-color`, `$label-color`, `$result-color`, `$pinned-border-width`, `$pinned-border-style` and `$pinned-border-color` parameters.
+Following the simplest approach, we create a new theme that extends the [`grid-summary-theme`]({environment:sassApiUrl}/themes#function-grid-summary-theme) and accepts the `$background-color`, `$focus-background-color`, `$label-color`, `$result-color`, `$pinned-border-width`, `$pinned-border-style` and `$pinned-border-color` parameters.
 
 ```scss
 $custom-theme: grid-summary-theme(
@@ -726,7 +726,7 @@ $custom-theme: grid-summary-theme(
 ```
 
 >[!NOTE]
->Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 The last step is to **include** the component custom theme:
 
@@ -752,7 +752,7 @@ The last step is to **include** the component custom theme:
 <code-view style="height:710px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-summary-styling" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-summary-styling/" >
 </code-view>
 
 }
@@ -763,7 +763,7 @@ The last step is to **include** the component custom theme:
 <code-view style="height:710px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary-styling" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary-styling/" >
 </code-view>
 
 }
@@ -774,7 +774,7 @@ The last step is to **include** the component custom theme:
 <code-view style="height:710px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary-styling" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary-styling/" >
 </code-view>
 
 }
@@ -782,8 +782,8 @@ The last step is to **include** the component custom theme:
 ## API References
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
-* [@@igxNameSummaries Styles]({environment:sassApiUrl}/index.html#function-grid-summary-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
+* [@@igxNameSummaries Styles]({environment:sassApiUrl}/themes#function-grid-summary-theme)
 * [IgxSummaryOperand]({environment:angularApiUrl}/classes/igxsummaryoperand.html)
 * [IgxNumberSummaryOperand]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html)
 * [IgxDateSummaryOperand]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html)

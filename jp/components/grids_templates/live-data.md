@@ -26,7 +26,7 @@ _language: ja
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
-           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs?theme-switch=false" alt="Angular 更新のライブデ例">
+           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs?theme-switch=false/" alt="Angular 更新のライブデ例">
 </code-view>
 
 
@@ -71,7 +71,7 @@ igxGrid コンポーネントは、サーバーからの高頻度の更新を簡
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
-           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs-dock-manager/grid-finjs-dock-manager" alt="サービスを使用した Angular ライブ データ更新の例">
+           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs-dock-manager/grid-finjs-dock-manager/" alt="サービスを使用した Angular ライブ データ更新の例">
 </code-view>
 
 ### ハブ接続の開始
@@ -120,7 +120,7 @@ this.hubConnection.invoke('updateparameters', frequency, volume, live, updateAll
 
 ## API リファレンス
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
@@ -151,7 +151,7 @@ this.hubConnection.invoke('updateparameters', frequency, volume, live, updateAll
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
-           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs" alt="Angular 更新のライブデ例">
+           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs/" alt="Angular 更新のライブデ例">
 </code-view>
 
 
@@ -163,7 +163,7 @@ this.hubConnection.invoke('updateparameters', frequency, volume, live, updateAll
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 

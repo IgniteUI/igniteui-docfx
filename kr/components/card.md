@@ -17,7 +17,7 @@ The Ignite UI for Angular [`IgxCardComponent`]({environment:angularApiUrl}/class
 
 <code-view style="height: 930px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/card" >
+           iframe-src="{environment:demosBaseUrl}/layouts/card/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -61,7 +61,7 @@ If all went well, you should see the following card in your browser:
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-1/" >
 </code-view>
 
 
@@ -110,7 +110,7 @@ At this point the card should look similar to the following:
 
 <code-view style="height: 480px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-2/" >
 </code-view>
 
 
@@ -177,7 +177,7 @@ Easy, right? Let's see how it turned out in the browser:
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/layouts/card-sample-3/" >
 </code-view>
 
 
@@ -193,7 +193,7 @@ For more detailed information regarding the card's API, refer to the following l
 
 The following built-in CSS styles helped us achieve this card layout:
 
-* [`IgxCardComponent Styles`]({environment:sassApiUrl}/index.html#function-card-theme)
+* [`IgxCardComponent Styles`]({environment:sassApiUrl}/themes#function-card-theme)
 
 Additional components and/or directives that were used:
 
@@ -203,9 +203,9 @@ Additional components and/or directives that were used:
 
 Styles:
 
-* [`IgxAvatarComponent Styles`]({environment:sassApiUrl}/index.html#function-avatar-theme)
-* [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [`IgxButtonDirective Styles`]({environment:sassApiUrl}/index.html#function-button-theme)
+* [`IgxAvatarComponent Styles`]({environment:sassApiUrl}/themes#function-avatar-theme)
+* [`IgxIconComponent Styles`]({environment:sassApiUrl}/themes#function-icon-theme)
+* [`IgxButtonDirective Styles`]({environment:sassApiUrl}/themes#function-button-theme)
 
 <div class="divider"></div>
 

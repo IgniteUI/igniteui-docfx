@@ -12,7 +12,7 @@ _keywords: Angular Snackbar component, Angular Snackbar control, Ignite UI for A
 
 <code-view style="height: 140px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-1" alt="Angular Snackbar Example">
+           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-1/" alt="Angular Snackbar Example">
 </code-view>
 
 
@@ -120,7 +120,7 @@ If the sample is configured properly, the first snackbar appears when the button
 
 <code-view style="height: 230px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2/" >
 </code-view>
 
 ### Display Time
@@ -179,7 +179,7 @@ As a result, a message and three loading dots appear in the snackbar.
 
 <code-view style="height: 170px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-5/" >
 </code-view>
 
 
@@ -250,7 +250,7 @@ public restore() {
 
 <code-view style="height: 350px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4/" >
 </code-view>
 
 ### Positioning
@@ -285,7 +285,7 @@ To get started with styling the snackbar, we need to import the index file, wher
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`snackbar-theme`]({environment:sassApiUrl}/index.html#function-snackbar-theme) and accepts the `$text-color`, `$background`, `$button-color` and the `$border-radius` parameters.
+Following the simplest approach, we create a new theme that extends the [`snackbar-theme`]({environment:sassApiUrl}/themes#function-snackbar-theme) and accepts the `$text-color`, `$background`, `$button-color` and the `$border-radius` parameters.
 
 ```scss
 $dark-snackbar: snackbar-theme(
@@ -297,7 +297,7 @@ $dark-snackbar: snackbar-theme(
 ```
 
 >[!NOTE]
->Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 The last step is to **include** the component theme in our application.
 
@@ -310,7 +310,7 @@ The last step is to **include** the component theme in our application.
 <code-view style="height: 150px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-style" >
+           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-style/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -322,7 +322,7 @@ In this article we learned how to use and configure the [`IgxSnackbarComponent`]
 
 Styles:
 
-* [`IgxSnackbarComponent Styles`]({environment:sassApiUrl}/index.html#function-snackbar-theme)
+* [`IgxSnackbarComponent Styles`]({environment:sassApiUrl}/themes#function-snackbar-theme)
 
 ## Additional Resources
 

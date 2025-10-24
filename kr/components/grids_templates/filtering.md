@@ -30,7 +30,7 @@ Angular grid filtering enables you to display only the records which meet specif
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-filtering-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-filtering-sample/" >
 </code-view>
 
 }
@@ -38,7 +38,7 @@ Angular grid filtering enables you to display only the records which meet specif
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering/" >
 </code-view>
 
 }
@@ -46,7 +46,7 @@ Angular grid filtering enables you to display only the records which meet specif
 
 <code-view style="height:610px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering/" >
 </code-view>
 
 }
@@ -308,7 +308,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-filter-conditions" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-filter-conditions/" >
 </code-view>
 
 }
@@ -316,7 +316,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering-custom" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering-custom/" >
 </code-view>
 
 }
@@ -324,7 +324,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
    
 <code-view style="height:610px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-custom-filtering" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-custom-filtering/" >
 </code-view>
 
 }
@@ -336,7 +336,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 
 <code-view style="height:500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-filtering-template-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-filtering-template-sample/" >
 </code-view>
 
 }
@@ -344,7 +344,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 
 <code-view style="height:500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering-template" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering-template/" >
 </code-view>
 
 }
@@ -352,7 +352,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
    
 <code-view style="height:610px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering-template" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering-template/" >
 </code-view>
 
 }
@@ -378,7 +378,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameComponent 스타일]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ### 추가 리소스
 <div class="divider--half"></div>

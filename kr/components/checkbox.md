@@ -13,7 +13,7 @@ _language: kr
 
 <code-view style="height: 200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -91,7 +91,7 @@ The final result would be something like that:
 <div class="divider--half"></div>
 
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
-* [IgxCheckboxComponent Styles]({environment:sassApiUrl}/index.html#function-checkbox-theme)
+* [IgxCheckboxComponent Styles]({environment:sassApiUrl}/themes#function-checkbox-theme)
 * [LabelPosition]({environment:angularApiUrl}/enums/labelposition.html)
 
 ### Additional Resources

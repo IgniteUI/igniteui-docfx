@@ -15,7 +15,7 @@ _language: kr
 
 <code-view style="height: 477px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/lists/list-sample-4/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -70,7 +70,7 @@ If all went great, this is how our empty list should look like:
 
 <code-view style="height: 100px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/lists/list-sample-5/" >
 </code-view>
 
 
@@ -99,7 +99,7 @@ Sometimes there may be a delay in your data loading. In this case you can set th
 
 <code-view style="height: 300px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-sample-6" >
+           iframe-src="{environment:demosBaseUrl}/lists/list-sample-6/" >
 </code-view>
 
 
@@ -123,7 +123,7 @@ If all went well, you should see the following in your browser:
 
 <code-view style="height: 200px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/lists/list-sample-2/" >
 </code-view>
 
 
@@ -191,7 +191,7 @@ After all that our list should now look like that:
 
 <code-view style="height: 400px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/lists/list-sample-3/" >
 </code-view>
 
 
@@ -368,7 +368,7 @@ And here's the result of all that work:
 
 <code-view style="height: 477px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/lists/list-sample-4/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -514,7 +514,7 @@ Now try panning the list items for yourself:
 
 <code-view style="height: 500px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-sample-7" >
+           iframe-src="{environment:demosBaseUrl}/lists/list-sample-7/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -590,7 +590,7 @@ Here's an example, in which we apply a background color to the list according to
 
 <code-view style="height: 420px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-item-selection" >
+           iframe-src="{environment:demosBaseUrl}/lists/list-item-selection/" >
 </code-view>
 
 What we are doing is we are adding an additional `selected` property to each data member, which defaults to `false`. Upon list item click, we're resetting all the `selected` properties in the data collection and setting the one corresponding to the clicked item to `true`. Based on the selected property, we're applying a css class to the list item which gives it the selected background.
@@ -631,15 +631,15 @@ public selectItem(item) {
 In this article we covered a lot of ground with the list component. We created a list of contact items. Used some additional Ignite UI for Angular components inside our list items, like avatars and icons. Created some custom item layout and styled it. Finally, we added list filtering. The list component has a few more APIs to explore, which are listed below.
 
 * [IgxListComponent API]({environment:angularApiUrl}/classes/igxlistcomponent.html)
-* [IgxListComponent Styles]({environment:sassApiUrl}/index.html#function-list-theme)
+* [IgxListComponent Styles]({environment:sassApiUrl}/themes#function-list-theme)
 * [IgxListItemComponent API]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 
 Additional components that were used:
 
 * [IgxAvatarComponent API]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
-* [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-avatar-theme)
+* [IgxAvatarComponent Styles]({environment:sassApiUrl}/themes#function-avatar-theme)
 * [IgxIconComponent API]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/themes#function-icon-theme)
 
 <div class="divider"></div>
 

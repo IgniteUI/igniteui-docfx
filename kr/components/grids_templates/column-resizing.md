@@ -34,7 +34,7 @@ _language: kr
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-resizing-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-resizing-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -43,7 +43,7 @@ _language: kr
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-resizing" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-resizing/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -248,7 +248,7 @@ column.autosize();
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#mixin-igx-grid)
+* [@@igxNameComponent 스타일]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ### 추가 리소스
 <div class="divider--half"></div>

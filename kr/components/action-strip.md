@@ -16,7 +16,7 @@ The Ignite UI for Angular Action Strip component provides an overlay area contai
 
 <code-view style="height: 400px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/action-strip-paragraph" >
+           iframe-src="{environment:demosBaseUrl}/menus/action-strip-paragraph/" >
 </code-view>
 
 
@@ -59,7 +59,7 @@ For scenarios where more than three action items will be shown, it is best to us
 
 <code-view style="height: 400px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/action-strip-paragraph-menu" >
+           iframe-src="{environment:demosBaseUrl}/menus/action-strip-paragraph-menu/" >
 </code-view>
 
 
@@ -95,7 +95,7 @@ This can be utilized via grid action components and we are providing two default
 
 <code-view style="height: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-action-strip" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-action-strip/" >
 </code-view>
 
 
@@ -132,7 +132,7 @@ When `$legacy-support` is set to `true`, include the component theme like this:
 <code-view style="height: 400px;" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/action-strip-styling" >
+           iframe-src="{environment:demosBaseUrl}/menus/action-strip-styling/" >
 </code-view>
 
 
@@ -144,7 +144,7 @@ For more detailed information regarding the Action Strip API, refer to the follo
 
 The following built-in CSS styles helped us achieve this Action Strip layout:
 
-* [`IgxActionStripComponent Styles`]({environment:sassApiUrl}/index.html#function-action-strip-theme)
+* [`IgxActionStripComponent Styles`]({environment:sassApiUrl}/themes#function-action-strip-theme)
 
 Additional components and/or directives that can be used within the Action Strip:
 

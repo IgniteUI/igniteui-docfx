@@ -13,7 +13,7 @@ _language: ja
 
 <code-view style="height: 620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-1" alt="Angular Month Picker の例">
+           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-1/" alt="Angular Month Picker の例">
 </code-view>
 
 ## Ignite UI for Angular Month Picker を使用した作業の開始
@@ -148,7 +148,7 @@ Month Picker コンポーネントのローカライズとスタイル設定の�
 
 <code-view style="height: 680px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-3/" >
 </code-view>
 
 
@@ -208,7 +208,7 @@ $my-calendar-theme: calendar-theme(
 <code-view style="height: 350px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-styling" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-styling/" >
 </code-view>
 
 

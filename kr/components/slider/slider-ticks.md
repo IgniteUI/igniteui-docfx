@@ -44,7 +44,7 @@ public type = SliderType.RANGE;
 
 <code-view style="height: 140px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/discrete-slider-ticks-bottom" >
+           iframe-src="{environment:demosBaseUrl}/interactions/discrete-slider-ticks-bottom/" >
 </code-view>
 
 
@@ -99,7 +99,7 @@ export class PriceRange {
 
 <code-view style="height: 240px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-ticks-bottomtotop-labels" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-ticks-bottomtotop-labels/" >
 </code-view>
 
 
@@ -134,7 +134,7 @@ The two buttons above are used just to control/update slider's **value**, but le
 
 <code-view style="height: 140px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-secondary-ticks-mirror" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-secondary-ticks-mirror/" >
 </code-view>
 
 
@@ -158,7 +158,7 @@ public ticksOrientation = TicksOrientation.Top;
 
 <code-view style="height: 140px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-primary-ticks-top" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-primary-ticks-top/" >
 </code-view>
 
 
@@ -182,7 +182,7 @@ The feature has been aligned with the **labels view** feature as well. Let's see
 
 <code-view style="height: 140px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-timeframe" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-timeframe/" >
 </code-view>
 
 
@@ -227,7 +227,7 @@ From the **tackLabel** callback above, we can see that every **primary** tick **
 
 <code-view style="height: 140px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/slider-tick-labels-template" >
+           iframe-src="{environment:demosBaseUrl}/interactions/slider-tick-labels-template/" >
 </code-view>
 
 
@@ -235,7 +235,7 @@ From the **tackLabel** callback above, we can see that every **primary** tick **
 <div class="divider--half"></div>
 
 * [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)
-* [IgxSliderComponent Styles]({environment:sassApiUrl}/index.html#function-slider-theme)
+* [IgxSliderComponent Styles]({environment:sassApiUrl}/themes#function-slider-theme)
 * [IRangeSliderValue]({environment:angularApiUrl}/interfaces/irangeslidervalue.html)
 * [SliderType]({environment:angularApiUrl}/enums/slidertype.html)
 * [TicksOrientation]({environment:angularApiUrl}/enums/ticksorientation.html)

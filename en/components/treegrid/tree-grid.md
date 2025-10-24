@@ -281,7 +281,7 @@ See the [Grid Sizing](sizing.md) topic.
 
 ## Styling
 
-The Tree Grid allows styling through the [`Ignite UI for Angular Theme Library`](../themes/sass/component-themes.md). The tree grid's [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) exposes a wide variety of properties, which allows the customization of all the tree grid's features.
+The Tree Grid allows styling through the [`Ignite UI for Angular Theme Library`](../themes/sass/component-themes.md). The tree grid's [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) exposes a wide variety of properties, which allows the customization of all the tree grid's features.
 
 To get started with styling the Tree Grid, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -292,7 +292,7 @@ To get started with styling the Tree Grid, we need to import the `index` file, w
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the parameters, required to customize the tree grid as desired.
+Following the simplest approach, we create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) and accepts the parameters, required to customize the tree grid as desired.
 
 >[!NOTE]
 >There is no specific `sass` tree grid function.
@@ -313,7 +313,7 @@ $custom-theme: grid-theme(
 ```
 
 >[!NOTE]
->Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 The last step is to **include** the component theme in our application.
 
@@ -327,7 +327,7 @@ The last step is to **include** the component theme in our application.
 <code-view style="height:600px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-style" alt="Angular tree grid styling demo">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-style/" alt="Angular tree grid styling demo">
 </code-view>
 
 >[!NOTE]
@@ -380,20 +380,20 @@ platformBrowserDynamic()
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-grid-theme)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 * [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-input-group-theme)
-* [IgxChip Theme]({environment:sassApiUrl}/index.html#function-chip-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
-* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-drop-down-theme)
-* [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-calendar-theme)
-* [IgxSnackBar Theme]({environment:sassApiUrl}/index.html#function-snackbar-theme)
-* [IgxBadge Theme]({environment:sassApiUrl}/index.html#function-badge-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxInputGroup Theme]({environment:sassApiUrl}/themes#function-input-group-theme)
+* [IgxChip Theme]({environment:sassApiUrl}/themes#function-chip-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
+* [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
+* [IgxCalendar Theme]({environment:sassApiUrl}/themes#function-calendar-theme)
+* [IgxSnackBar Theme]({environment:sassApiUrl}/themes#function-snackbar-theme)
+* [IgxBadge Theme]({environment:sassApiUrl}/themes#function-badge-theme)
 
 
 ## Additional Resources

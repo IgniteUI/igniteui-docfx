@@ -265,6 +265,9 @@
     - name: State Persistence
       href: grid/state-persistence.md
       updated: false
+    - name: Cell Merging
+      href: grid/cell-merging.md
+      new: true
 - name: Tree Grid
   href: treegrid/tree-grid.md
   new: false
@@ -406,6 +409,9 @@
     - name: State Persistence
       href: treegrid/state-persistence.md
       new: false
+    - name: Cell Merging
+      href: treegrid/cell-merging.md
+      new: true
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical-grid.md
   new: false
@@ -542,6 +548,9 @@
     - name: State Persistence
       href: hierarchicalgrid/state-persistence.md
       new: false
+    - name: Cell Merging
+      href: hierarchicalgrid/cell-merging.md
+      new: true
 - name: Pivot Grid
   href: pivotGrid/pivot-grid.md
   new: false
@@ -808,6 +817,9 @@
     - name: Binding Multiple Sources
       href: geo-map-binding-multiple-sources.md
       new: false
+    - name: Displaying Azure Imagery
+      href: geo-map-display-azure-imagery.md
+      new: true
     - name: Displaying Bing Imagery
       href: geo-map-display-bing-imagery.md
       new: false
@@ -900,6 +912,9 @@
   new: false
 - name: Size
   href: display-density.md
+- name: Spacing
+  href: themes/spacing.md
+  new: true
 - name: Sass
   new: false
   items:
@@ -1066,6 +1081,7 @@
 - name: Tooltip
   href: tooltip.md
   new: false
+  updated: true
 - name: Overlay
   href: overlay.md
   new: false
@@ -1166,7 +1182,7 @@
 - name: Date Range Picker
   href: date-range-picker.md
   new: false
-  updated: false
+  updated: true
 - name: Month Picker
   href: month-picker.md
   new: false

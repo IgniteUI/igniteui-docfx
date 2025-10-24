@@ -14,7 +14,7 @@ _keywords: Angular Radio Group component, Angular Radio Group control, Ignite UI
 
 <code-view style="height: 120px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-1" alt="Angular Radio & Radio Group Example">
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-1/" alt="Angular Radio & Radio Group Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -141,7 +141,7 @@ The final result would be something like that:
 
 <code-view style="height: 550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-2/" >
 </code-view>
 
 ## Styling
@@ -155,7 +155,7 @@ To get started with styling the radio buttons, we need to import the `index` fil
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`radio-theme`]({environment:sassApiUrl}/index.html#function-radio-theme). By providing just two key parameters — `$empty-color` and `$fill-color` — you can generate a fully styled radio button. These values serve as the foundation for the theme, by providing them it will automatically compute all the required foreground and background colors for various states (e.g., hover, selected, disabled).
+Following the simplest approach, we create a new theme that extends the [`radio-theme`]({environment:sassApiUrl}/themes#function-radio-theme). By providing just two key parameters — `$empty-color` and `$fill-color` — you can generate a fully styled radio button. These values serve as the foundation for the theme, by providing them it will automatically compute all the required foreground and background colors for various states (e.g., hover, selected, disabled).
 
 ```scss
 $custom-radio-theme: radio-theme(
@@ -172,7 +172,7 @@ The last step is to pass the custom radio theme in our application:
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/radio-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-styling-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -185,7 +185,7 @@ The last step is to pass the custom radio theme in our application:
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/radio-group-sample" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-group-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -249,7 +249,7 @@ public alignment = RadioGroupAlignment.vertical;
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/radio-group-vertical" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-group-vertical/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -260,11 +260,11 @@ public alignment = RadioGroupAlignment.vertical;
 
 * [IgxRadioGroupDirective]({environment:angularApiUrl}/classes/igxradiogroupdirective.html)
 * [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
-* [IgxRadioComponent Styles]({environment:sassApiUrl}/index.html#function-radio-theme)
+* [IgxRadioComponent Styles]({environment:sassApiUrl}/themes#function-radio-theme)
 
 ## Theming Dependencies
 
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ## Additional Resources
 

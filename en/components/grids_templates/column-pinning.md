@@ -31,7 +31,7 @@ A column or multiple columns can be pinned to the left or right side of the Angu
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-toolbar-pinning" alt="Angular @@igComponent Column Pinning  Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-toolbar-pinning/" alt="Angular @@igComponent Column Pinning  Example">
 </code-view>
 
 }
@@ -39,7 +39,7 @@ A column or multiple columns can be pinned to the left or right side of the Angu
 
 <code-view style="height:630px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-pinning" alt="Angular @@igComponent Column Pinning  Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-pinning/" alt="Angular @@igComponent Column Pinning  Example">
 </code-view>
 
 }
@@ -47,7 +47,7 @@ A column or multiple columns can be pinned to the left or right side of the Angu
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-pinning" alt="Angular @@igComponent Column Pinning  Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-pinning/" alt="Angular @@igComponent Column Pinning  Example">
 </code-view>
 
 }
@@ -188,7 +188,7 @@ public pinningConfig: IPinningConfig = { columns: ColumnPinningPosition.End };
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-right-pinning" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-right-pinning/" >
 </code-view>
 
 }
@@ -197,7 +197,7 @@ public pinningConfig: IPinningConfig = { columns: ColumnPinningPosition.End };
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sample-right-pinning" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sample-right-pinning/" >
 </code-view>
 
 }
@@ -206,7 +206,36 @@ public pinningConfig: IPinningConfig = { columns: ColumnPinningPosition.End };
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-sample-right-pinning" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-sample-right-pinning/" >
+</code-view>
+
+}
+
+Additionally, you can specify each column pinning location separately, allowing you to pin columns to both sides of the grid for greater convenience and easier optimization of data sets. Please refer to the demo bellow for further reference. In order to pin a column, please either select a column by clicking on a header and use the pin buttons added ot the toolbar, or simply drag a column to another pinned one.
+
+@@if (igxName === 'IgxGrid') {
+
+<code-view style="height:510px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-pinning-both-sides" >
+</code-view>
+
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+
+<code-view style="height:510px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-both-sides-pinning" >
+</code-view>
+
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+
+<code-view style="height:510px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-both-sides-pinning" >
 </code-view>
 
 }
@@ -310,7 +339,7 @@ public toggleColumn(col: ColumnType) {
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-pinning" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-pinning/" >
 </code-view>
 
 }
@@ -318,7 +347,7 @@ public toggleColumn(col: ColumnType) {
 
 <code-view style="height:630px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-pinning" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-pinning/" >
 </code-view>
 
 }
@@ -326,7 +355,7 @@ public toggleColumn(col: ColumnType) {
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-pinning" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-pinning/" >
 </code-view>
 
 }
@@ -382,7 +411,7 @@ The easiest way to apply your theme is with a `sass` `@include` statement in the
 <code-view style="height:506px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-pinning-styling" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-pinning-styling/" >
 </code-view>
 
 >[!NOTE]

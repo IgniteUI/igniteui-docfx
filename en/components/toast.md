@@ -12,7 +12,7 @@ _keywords: Angular Toast component, Angular Toast control, Ignite UI for Angular
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-2" alt="Angular Toast Example">
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-2/" alt="Angular Toast Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -127,7 +127,7 @@ In the other two components you can see in action how to pass different messages
 
 <code-view style="height: 450px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-3/" >
 </code-view>
 
 ### Display Time
@@ -171,7 +171,7 @@ public open(toast) {
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-5/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -187,7 +187,7 @@ To get started with styling the toast, we need to import the index file, where a
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-Following the simplest approach, we create a new theme that extends the [`toast-theme`]({environment:sassApiUrl}/index.html#function-toast-theme) and provide the `$background`, `$text-color` and `$border-radius` parameters.
+Following the simplest approach, we create a new theme that extends the [`toast-theme`]({environment:sassApiUrl}/themes#function-toast-theme) and provide the `$background`, `$text-color` and `$border-radius` parameters.
 
 ```scss
 $custom-toast-theme: toast-theme(
@@ -198,7 +198,7 @@ $custom-toast-theme: toast-theme(
 ```
 
 >[!NOTE]
->Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 The last step is to pass the custom toast theme:
 
@@ -211,7 +211,7 @@ The last step is to pass the custom toast theme:
 <code-view style="height: 600px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/toast-style" >
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-style/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -220,7 +220,7 @@ The last step is to pass the custom toast theme:
 <div class="divider--half"></div>
 
 * [IgxToastComponent]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
-* [IgxToastComponent Styles]({environment:sassApiUrl}/index.html#function-toast-theme)
+* [IgxToastComponent Styles]({environment:sassApiUrl}/themes#function-toast-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

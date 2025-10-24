@@ -31,7 +31,7 @@ In Ignite UI for Angular, the [@@igxName]({environment:angularApiUrl}/classes/@@
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-2" alt="Angular @@igComponent Virtualization and Performance Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-2/" alt="Angular @@igComponent Virtualization and Performance Example">
 </code-view>
 
 }
@@ -40,7 +40,7 @@ In Ignite UI for Angular, the [@@igxName]({environment:angularApiUrl}/classes/@@
 
 <code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-lod" alt="Angular @@igComponent Virtualization and Performance Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-lod/" alt="Angular @@igComponent Virtualization and Performance Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -79,7 +79,7 @@ Without information about the sizes of the container and the items before render
 
 ## API References
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxForOfDirective]({environment:angularApiUrl}/classes/igxforofdirective.html)
 * [IForOfState]({environment:angularApiUrl}/interfaces/iforofstate.html)

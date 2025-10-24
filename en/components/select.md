@@ -12,7 +12,7 @@ Below is a basic Angular Select example. It has a simple contextual menu that di
 
 <code-view style="height: 300px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-1" alt="Angular Select Example">
+           iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-1/" alt="Angular Select Example">
 </code-view>
 
 ## Getting Started with Ignite UI for Angular Select
@@ -137,7 +137,7 @@ The Select component supports the following directives applicable to the [Input 
 ```
 <code-view style="height: 350px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/select-input-directives" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/select-input-directives/" >
 </code-view>
 
 >[!NOTE]
@@ -185,7 +185,7 @@ Then in your template file you can iterate over the objects and access their ite
 
 <code-view style="height: 400px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-2/" >
 </code-view>
 
 ### Header & Footer
@@ -243,7 +243,7 @@ In this example, there are both header and footer ng-templates defined. In the h
 ```
 <code-view style="height: 610px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/select-header-footer" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/select-header-footer/" >
 </code-view>
 
 
@@ -320,7 +320,7 @@ You can see that we create a [*PositionSettings*]({environment:angularApiUrl}/in
 
 <code-view style="height: 260px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/select-sample-4/" >
 </code-view>
 
 
@@ -356,10 +356,10 @@ export class MyClass implements OnInit {
 
 Every component has its own theme function.
 
-To get the Select component styled, you have to style its containing components. In our case, these are the [input-group-theme]({environment:sassApiUrl}/index.html#function-input-group-theme) and the [drop-down-theme]({environment:sassApiUrl}/index.html#function-drop-down-theme).
+To get the Select component styled, you have to style its containing components. In our case, these are the [input-group-theme]({environment:sassApiUrl}/themes#function-input-group-theme) and the [drop-down-theme]({environment:sassApiUrl}/themes#function-drop-down-theme).
 Take a look at the [`Input Group`](input-group.md#styling) and the [`Drop Down`](drop-down.md#styling) styling sections to get a better understanding of how to style those two components.
 
-We also have a [`select-theme`]({environment:sassApiUrl}/index.html#function-select-theme) function which is used only for styling the button of our Select component. <br>
+We also have a [`select-theme`]({environment:sassApiUrl}/themes#function-select-theme) function which is used only for styling the button of our Select component. <br>
 To get started with styling the Select component button, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
@@ -369,7 +369,7 @@ To get started with styling the Select component button, we need to import the `
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`select-theme`]({environment:sassApiUrl}/index.html#function-select-theme) and provide only the `$toggle-button-background` parameter. The theme function will automatically calculate all corresponding background and foreground colors for the different states based on this single value.
+Following the simplest approach, we create a new theme that extends the [`select-theme`]({environment:sassApiUrl}/themes#function-select-theme) and provide only the `$toggle-button-background` parameter. The theme function will automatically calculate all corresponding background and foreground colors for the different states based on this single value.
 
 ```scss
 $custom-select-theme: select-theme(
@@ -385,7 +385,7 @@ The last step is to pass the custom radio theme in our application:
 
 <code-view style="height: 220px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/select-styling" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/select-styling/" >
 </code-view>
 
 
@@ -403,10 +403,10 @@ The last step is to pass the custom radio theme in our application:
 * [PositionSettings]({environment:angularApiUrl}/interfaces/positionsettings.html)
 
 ## Theming Dependencies
-* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-drop-down-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
-* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
+* [IgxInputGroup Theme]({environment:sassApiUrl}/themes#function-input-group-theme)
 
 ## Additional Resources
 * [NgModel](https://angular.io/api/forms/NgModel)

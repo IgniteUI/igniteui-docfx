@@ -13,7 +13,7 @@ _language: kr
 
 <code-view style="height: 558px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -106,7 +106,7 @@ for other browsers.
 > Use a relatively positioned element for the ripple animation. You can also use [`igxRippleTarget`]({environment:angularApiUrl}/classes/igxrippledirective.html#rippletarget) to target a child element.
 
 ### Styling
-The igxRipple allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The ripple's [theme]({environment:sassApiUrl}/index.html#function-ripple-theme) exposes a property that allows customization of the color of the effect.        
+The igxRipple allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The ripple's [theme]({environment:sassApiUrl}/themes#function-ripple-theme) exposes a property that allows customization of the color of the effect.        
 
 #### Importing global theme
 To begin styling of the predefined ripple color, you need to import the `index` file, where all styling functions and mixins are located.  
@@ -115,7 +115,7 @@ To begin styling of the predefined ripple color, you need to import the `index` 
 ```   
 
 #### Defining custom theme
-You can easily create a new theme, that extends the [`ripple-theme`]({environment:sassApiUrl}/index.html#function-ripple-theme) and accepts the parameters, required to customize the ripple as desired.
+You can easily create a new theme, that extends the [`ripple-theme`]({environment:sassApiUrl}/themes#function-ripple-theme) and accepts the parameters, required to customize the ripple as desired.
 
 ```scss
 $custom-theme: ripple-theme(
@@ -124,7 +124,7 @@ $custom-theme: ripple-theme(
 ```   
 
 #### Defining a custom color palette
-In the approach, that was described above, the color value was hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
+In the approach, that was described above, the color value was hardcoded. Alternatively, you can achieve greater flexibility, using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions.   
 `igx-palette` generates a color palette, based on provided primary and secondary colors.  
 
 ```scss
@@ -137,7 +137,7 @@ $custom-palette: palette(
 );
 ```   
 
-After the custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.   
+After the custom palette has been generated, the `color` function can be used to obtain different varieties of the primary and the secondary colors.   
 
 ```scss
 $custom-theme: ripple-theme(
@@ -200,7 +200,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 <code-view style="height:700px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/ripple-styling" >
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-styling/" >
 </code-view>
 
 
@@ -208,7 +208,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 <div class="divider--half"></div>
 
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
-* [IgxRipple Styles]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxRipple Styles]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>

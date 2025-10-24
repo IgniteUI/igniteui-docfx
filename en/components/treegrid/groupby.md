@@ -101,7 +101,7 @@ public sorting = IgxGroupedTreeGridSorting.instance();
 
 <code-view style="height:850px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-group-by-load-on-demand" alt="Angular Tree Grid Group By Load On Demand Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-group-by-load-on-demand/" alt="Angular Tree Grid Group By Load On Demand Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -169,7 +169,7 @@ private reloadData() {
 <div class="divider--half"></div>
 
 * [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-grid-theme)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ### Additional Resources
 

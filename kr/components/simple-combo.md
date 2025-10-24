@@ -17,7 +17,7 @@ In this Angular Simple ComboBox example, you can see how users can select the ch
 
 <code-view style="height: 400px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-main" alt="Angular Simple ComboBox Example">
+           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-main/" alt="Angular Simple ComboBox Example">
 </code-view>
 
 
@@ -104,7 +104,7 @@ export class MySimpleComboComponent {
 
 <code-view style="height: 550px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-usage" >
+           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-usage/" >
 </code-view>
 
 
@@ -202,7 +202,7 @@ The following sample demonstrates a scenario where the [igx-simple-combo]({envir
 
 <code-view style="height: 540px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-cascading" alt="Angular Cascading Scenario Example">
+           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-cascading/" alt="Angular Cascading Scenario Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -274,7 +274,7 @@ Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter
 @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [combo-theme]({environment:sassApiUrl}/index.html#function-combo-theme) and accepts the `$search-separator-border-color` parameter:
+Following the simplest approach, we create a new theme that extends the [combo-theme]({environment:sassApiUrl}/themes#function-combo-theme) and accepts the `$search-separator-border-color` parameter:
 ```scss
 $custom-simple-combo-theme: combo-theme(
     $empty-list-background: #1a5214
@@ -323,7 +323,7 @@ The last step is to include the component's theme.
 <code-view style="height:410px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-styling" >
+           iframe-src="{environment:demosBaseUrl}/lists/simple-combo-styling/" >
 </code-view>
 
 
@@ -340,7 +340,7 @@ The last step is to include the component's theme.
 <div class="divider--half"></div>
 
 * [IgxSimpleComboComponent]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html)
-* [IgxComboComponent Styles]({environment:sassApiUrl}/index.html#function-combo-theme)
+* [IgxComboComponent Styles]({environment:sassApiUrl}/themes#function-combo-theme)
 
 Additional components and/or directives with relative APIs that were used:
 
@@ -348,9 +348,9 @@ Additional components and/or directives with relative APIs that were used:
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
 ## Theming Dependencies
-* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-drop-down-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

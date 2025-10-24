@@ -25,7 +25,7 @@ _language: ja
 
 <code-view style="height:950px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-1" alt="Angular @@igComponent Excel スタイル フィルタリングの例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-1/" alt="Angular @@igComponent Excel スタイル フィルタリングの例">
 </code-view>
 
 }
@@ -33,7 +33,7 @@ _language: ja
 
 <code-view style="height:950px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-1" alt="Angular @@igComponent Excel スタイル フィルタリングの例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-1/" alt="Angular @@igComponent Excel スタイル フィルタリングの例">
 </code-view>
 
 }
@@ -41,7 +41,7 @@ _language: ja
 
 <code-view style="height:950px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-1" alt="Angular @@igComponent Excel スタイル フィルタリングの例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-1/" alt="Angular @@igComponent Excel スタイル フィルタリングの例">
 </code-view>
 
 }
@@ -183,7 +183,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 <code-view style="height:900px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-2/" >
 </code-view>
 
 }
@@ -191,7 +191,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 <code-view style="height:900px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-2/" >
 </code-view>
 
 }
@@ -199,7 +199,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 <code-view style="height:900px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-2/" >
 </code-view>
 
 }
@@ -328,7 +328,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-3/" >
 </code-view>
 
 }
@@ -336,7 +336,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-3/" >
 </code-view>
 
 }
@@ -344,7 +344,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-3/" >
 </code-view>
 
 }
@@ -374,7 +374,7 @@ Excel スタイル フィルタリング ダイアログ内のリスト項目は
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-formatted-filtering-strategy" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-formatted-filtering-strategy/" >
 </code-view>
 
 }
@@ -383,7 +383,7 @@ Excel スタイル フィルタリング ダイアログ内のリスト項目は
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-formatted-filtering-strategy" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-formatted-filtering-strategy/" >
 </code-view>
 
 }
@@ -392,7 +392,7 @@ Excel スタイル フィルタリング ダイアログ内のリスト項目は
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-formatted-filtering-strategy" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-formatted-filtering-strategy/" >
 </code-view>
 
 }
@@ -407,7 +407,7 @@ Excel スタイル フィルタリング ダイアログ内のリスト項目は
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-tree-filter-view" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-tree-filter-view/" >
 </code-view>
 }
 
@@ -421,7 +421,7 @@ Excel スタイル フィルタリング ダイアログ内のリスト項目は
 
 <code-view style="height:670px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-external-excel-style-filtering" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-external-excel-style-filtering/" >
 </code-view>
 
 }
@@ -430,7 +430,7 @@ Excel スタイル フィルタリング ダイアログ内のリスト項目は
 
 <code-view style="height:670px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-external-excel-style-filtering" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-external-excel-style-filtering/" >
 </code-view>
 
 }
@@ -439,7 +439,7 @@ Excel スタイル フィルタリング ダイアログ内のリスト項目は
 
 <code-view style="height:670px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-excel-style-filtering" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-excel-style-filtering/" >
 </code-view>
 
 }
@@ -501,7 +501,7 @@ Excel スタイル フィルタリング コンポーネントを設定するに
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-external-outlet" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-external-outlet/" >
 </code-view>
 
 }
@@ -510,7 +510,7 @@ Excel スタイル フィルタリング コンポーネントを設定するに
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-external-outlet" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-external-outlet/" >
 </code-view>
 
 }
@@ -519,7 +519,7 @@ Excel スタイル フィルタリング コンポーネントを設定するに
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-outlet" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-outlet/" >
 </code-view>
 
 }
@@ -535,33 +535,27 @@ Excel スタイル フィルタリング コンポーネントを設定するに
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Excel スタイルのフィルタリング ダイアログは、`filtering-row-background` パラメーターを使用して、グリッドのテーマから背景色を取得します。背景を変更するには、カスタム テーマを作成する必要があります。
+Excel スタイル フィルタリング ダイアログは、`filtering-row-background` パラメーターを使用して、グリッドのテーマから背景色を取得します。さらに、このダイアログ内の要素のテキスト色をカスタマイズするための専用の Excel スタイル フィルタリング パラメーターも用意されています。ダイアログ全体のスタイルを変更するには、カスタム テーマを作成する必要があります。
 
 ```scss
 $custom-grid: grid-theme(
-  $filtering-row-background: #ffcd0f
+  $filtering-row-background: #ffcd0f,
+  $excel-filtering-header-foreground: #292826,
+  $excel-filtering-subheader-foreground: #292826,
+  $excel-filtering-actions-foreground: #006400,
+  $excel-filtering-actions-hover-foreground: #ffcd0f,
+  $excel-filtering-actions-disabled-foreground: #9e9e9e
 );
 ```
 
 ボタン、チェックボックス、リスト、さらにはドロップダウンなど、フィルタリング ダイアログのような Excel 内には明らかに多くのコンポーネントがあります。スタイルを設定するには、それぞれに個別のテーマを作成する必要があります。
 
 ```scss
-$dark-button: button-theme(
+$custom-button: button-theme(
   $background: #ffcd0f,
   $foreground: #292826,
   $hover-background: #292826,
   $hover-foreground: #ffcd0f
-);
-
-$dark-input-group: input-group-theme(
-  $box-background: #ffcd0f,
-  $idle-text-color: #292826,
-  $focused-text-color: #292826,
-  $filled-text-color: #292826
-);
-
-$custom-list: list-theme(
-  $background: #ffcd0f
 );
 
 $custom-checkbox: checkbox-theme(
@@ -577,6 +571,18 @@ $custom-drop-down: drop-down-theme(
   $hover-item-background: #292826,
   $hover-item-text-color: #ffcd0f
 );
+
+$custom-input-group: input-group-theme(
+  $box-background: #ffcd0f,
+  $idle-text-color: #292826,
+  $focused-text-color: #292826,
+  $filled-text-color: #292826
+);
+
+$custom-list: list-theme(
+  $background: #ffcd0f
+);
+
 ```
 
 >[!NOTE]
@@ -584,18 +590,18 @@ $custom-drop-down: drop-down-theme(
 
 この例では、リストされたコンポーネントのパラメーターの一部のみを変更しましたが、[`button-theme`]({environment:sassApiUrl}/themes#function-button-theme)、[`checkbox-theme`]({environment:sassApiUrl}/themes#function-checkbox-theme)、[`drop-down-theme`]({environment:sassApiUrl}/themes#function-drop-down-theme)、[`input-group-theme`]({environment:sassApiUrl}/themes#function-input-group-theme)、[`list-theme`]({environment:sassApiUrl}/themes#function-list-theme) テーマは、それぞれのスタイルを制御するためのより多くのパラメーターを提供します。
 
-最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。また、入力のプレース ホルダーの色プロパティを設定します。
+最後にコンポーネントのカスタム テーマを**含めます**。また、入力のプレース ホルダーの色プロパティを設定します。
 
 ```scss
-@include css-vars($custom-drop-down);
 @include css-vars($custom-grid);
+@include css-vars($custom-drop-down);
 
 .igx-excel-filter, 
 .igx-excel-filter__secondary {
-  @include css-vars($dark-button);
-  @include css-vars($dark-input-group);
-  @include css-vars($custom-list);
+  @include css-vars($custom-button);
   @include css-vars($custom-checkbox);
+  @include css-vars($custom-input-group);
+  @include css-vars($custom-list);
 
   .igx-input-group__input::placeholder {
     color: #ffcd0f;
@@ -612,15 +618,16 @@ $custom-drop-down: drop-down-theme(
 ```scss
 :host {
   ::ng-deep {
-    @include css-vars($custom-drop-down);
     @include css-vars($custom-grid);
+    @include css-vars($custom-drop-down);
+
 
     .igx-excel-filter,
     .igx-excel-filter__secondary {
-      @include css-vars($dark-button);
-      @include css-vars($dark-input-group);
-      @include css-vars($custom-list);
+      @include css-vars($custom-button);
       @include css-vars($custom-checkbox);
+      @include css-vars($custom-input-group);
+      @include css-vars($custom-list);
       
       .igx-input-group__input::placeholder {
         color: #ffcd0f;
@@ -637,7 +644,7 @@ $custom-drop-down: drop-down-theme(
 <code-view style="height:950px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-style" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-style/" >
 </code-view>
 
 }
@@ -646,7 +653,7 @@ $custom-drop-down: drop-down-theme(
 <code-view style="height:950px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-style/" >
 </code-view>
 
 }
@@ -655,7 +662,7 @@ $custom-drop-down: drop-down-theme(
 <code-view style="height:950px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-style" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-style/" >
 </code-view>
 
 }

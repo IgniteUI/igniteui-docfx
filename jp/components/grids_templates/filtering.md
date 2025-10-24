@@ -33,7 +33,7 @@ IgniteUI for [Angular @@igComponent コンポーネント](https://jp.infragisti
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-filtering-sample" alt="Angular @@igComponent フィルタリングの例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-filtering-sample/" alt="Angular @@igComponent フィルタリングの例">
 </code-view>
 
 }
@@ -41,7 +41,7 @@ IgniteUI for [Angular @@igComponent コンポーネント](https://jp.infragisti
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering" alt="Angular @@igComponent フィルタリングの例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering/" alt="Angular @@igComponent フィルタリングの例">
 </code-view>
 
 }
@@ -49,7 +49,7 @@ IgniteUI for [Angular @@igComponent コンポーネント](https://jp.infragisti
 
 <code-view style="height:610px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering" alt="Angular @@igComponent フィルタリングの例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering/" alt="Angular @@igComponent フィルタリングの例">
 </code-view>
 
 }
@@ -458,7 +458,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-filter-conditions" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-filter-conditions/" >
 </code-view>
 
 }
@@ -466,7 +466,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering-custom" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering-custom/" >
 </code-view>
 
 }
@@ -474,7 +474,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
    
 <code-view style="height:610px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-custom-filtering" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-custom-filtering/" >
 </code-view>
 
 }
@@ -486,7 +486,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 
 <code-view style="height:500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-filtering-template-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-filtering-template-sample/" >
 </code-view>
 
 }
@@ -494,7 +494,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 
 <code-view style="height:500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering-template" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering-template/" >
 </code-view>
 
 }
@@ -502,7 +502,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
    
 <code-view style="height:610px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering-template" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering-template/" >
 </code-view>
 
 }
@@ -618,7 +618,7 @@ $dark-button: button-theme(
 <code-view style="height:500px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-filtering-style" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-filtering-style/" >
 </code-view>
 
 }
@@ -627,7 +627,7 @@ $dark-button: button-theme(
 <code-view style="height:500px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering-style/" >
 </code-view>
 
 }
@@ -636,7 +636,7 @@ $dark-button: button-theme(
 <code-view style="height:650px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering-style" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering-style/" >
 </code-view>
 
 }

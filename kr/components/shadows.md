@@ -152,7 +152,7 @@ Shadows are used to establish and maintain functional boundaries between Documen
 
 The following section demonstrates how to set elevation to a component. In the example, we are using the card component.
 
-Firs apply the [elevation]({environment:sassApiUrl}/index.html#function-elevation) to the card by doing the following
+Firs apply the [elevation]({environment:sassApiUrl}/elevations#function-elevation) to the card by doing the following
 
 ```scss
 $myCard: card-theme(
@@ -231,7 +231,7 @@ Here is The result from the above code snippets:
 
 <code-view style="height: 350px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/theming/shadows-sample" >
+           iframe-src="{environment:demosBaseUrl}/theming/shadows-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -242,7 +242,7 @@ Here is The result from the above code snippets:
 
 ### API 참조
 
-* [ELEVATION]({environment:sassApiUrl}/index.html#function-elevation)
-* [ELEVATIONS]({environment:sassApiUrl}/index.html#function-elevations)
+* [ELEVATION]({environment:sassApiUrl}/elevations#function-elevation)
+* [ELEVATIONS]({environment:sassApiUrl}/elevations#mixin-elevations)
 
 

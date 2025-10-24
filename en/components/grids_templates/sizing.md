@@ -266,11 +266,101 @@ The difference is that for the child grid, when `height` is set to percentages, 
 ---
 }
 
+## Grid Cell Spacing Control
+
+The [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) automatically adapts its internal spacing based on the [size](display-density.md) setting. You can further customize the padding and margins in grid header and body cells using CSS custom properties for spacing control.
+
+### Global Grid Spacing
+
+To reduce or increase spacing across all grid cells in your application:
+
+```css
+/* Reduce all grid spacing by 20% */
+igx-grid {
+    --ig-spacing: 0.8;
+}
+
+/* Increase spacing for better touch accessibility */
+igx-grid {
+    --ig-spacing: 1.2;
+}
+```
+
+### Grid-Specific Spacing
+
+To adjust spacing for a specific grid instance:
+
+```css
+/* Make a particular grid more compact */
+.my-compact-grid {
+    --ig-spacing: 0.6;
+}
+
+/* Give a specific grid more breathing room */
+.my-spacious-grid {
+    --ig-spacing: 1.4;
+}
+```
+
+### Directional Spacing Control
+
+You can control horizontal and vertical spacing independently:
+
+```css
+/* Reduce only horizontal spacing (left/right padding) */
+.my-grid {
+    --ig-spacing-inline: 0.5;
+    --ig-spacing-block: 1.0; /* Keep vertical spacing normal */
+}
+
+/* Adjust vertical spacing for tighter row spacing */
+.my-grid {
+    --ig-spacing-inline: 1.0; /* Keep horizontal spacing normal */
+    --ig-spacing-block: 0.7; /* Reduce vertical spacing (if applicable) */
+}
+```
+
+### Size-Specific Spacing
+
+Different spacing multipliers can be applied based on the grid's display density:
+
+```css
+.my-grid {
+    /* Compact density gets very tight spacing */
+    --ig-spacing-small: 0.5;
+    
+    /* Medium density uses normal spacing */
+    --ig-spacing-medium: 1.0;
+    
+    /* Comfortable density gets extra spacing */
+    --ig-spacing-large: 1.3;
+}
+```
+
+### Header vs Body Cell Spacing
+
+While the spacing properties affect both header and body cells, you can target them specifically if needed:
+
+```css
+/* Reduce padding in header cells specifically */
+.my-grid igx-grid-header {
+    --ig-spacing: 0.7;
+}
+
+/* Adjust spacing in data cells */
+.my-grid igx-grid-cell {
+    --ig-spacing: 0.9;
+}
+```
+
+> [!Note]
+> These spacing adjustments work in conjunction with the grid's display density. The spacing multipliers are applied to the base spacing values that are already determined by whether the grid is in compact, cozy, or comfortable density mode.
+
 ## API References
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow API]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

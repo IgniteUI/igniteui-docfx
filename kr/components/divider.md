@@ -17,7 +17,7 @@ By default the divider is a solid horizontal line.
 
 <code-view style="height:207px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-1/" >
 </code-view>
 
 
@@ -36,7 +36,7 @@ By adding the `vertical` attribute and setting its value to `true`, you can chan
 
 <code-view style="height:238px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-2/" >
 </code-view>
 
 
@@ -50,7 +50,7 @@ To change the default look simply use the `type` attribute of the divider and se
 
 <code-view style="height:187px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-3/" >
 </code-view>
 
 
@@ -71,7 +71,7 @@ To inset the divider, set the `middle` attribute of the divider to `true` and pr
 
 <code-view style="height:311px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/layouts/divider-sample-4/" >
 </code-view>
 
 
@@ -81,7 +81,7 @@ If the value of the `middle` attribute is set to a falsy value, or if the attrib
 <div class="divider--half"></div>
 
 * [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
-* [IgxDividerDirective Styles]({environment:sassApiUrl}/index.html#function-divider-theme)
+* [IgxDividerDirective Styles]({environment:sassApiUrl}/themes#function-divider-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>

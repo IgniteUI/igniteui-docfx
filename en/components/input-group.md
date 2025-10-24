@@ -11,7 +11,7 @@ The `IgxInputGroupComponent` allows the user to enhance input elements like inpu
 
 <code-view style="height:100px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-1" alt="Angular Input Group Example">
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-1/" alt="Angular Input Group Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -99,7 +99,7 @@ The `igx-prefix` or `igxPrefix` and `igx-suffix` or `igxSuffix` directives can c
 
 <code-view style="height:110px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-3" alt="Angular Input Group Example">
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-3/" alt="Angular Input Group Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -122,7 +122,7 @@ The [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) dire
 This is how the phone field with hint looks:
 <code-view style="height:110px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-4" alt="Angular Input Group Example">
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-4/" alt="Angular Input Group Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -155,7 +155,7 @@ Ignite UI for Angular also provides styling for the input of `type="file"` and i
 
 <code-view style="height:695px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-5/" >
 </code-view>
 
 ### Input Group Theme
@@ -171,7 +171,7 @@ The Ignite UI for Angular Input Group component can be used inside strictly type
 
 <code-view style="height:770px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/typed-form" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/typed-form/" >
 </code-view>
 
 ## Validation
@@ -246,7 +246,7 @@ The result from the above configurations could be seen in the below sample. Star
 
 <code-view style="height:480px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/template-driven-form-validation" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/template-driven-form-validation/" >
 </code-view>
 
 ### Reactive Forms
@@ -320,7 +320,7 @@ The result from the above configurations could be seen in the below sample. Simi
 
 <code-view style="height:480px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/reactive-form-validation" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/reactive-form-validation/" >
 </code-view>
 
 ### Custom Validators
@@ -433,7 +433,7 @@ The below sample demonstrates how the built-in validators could be used in combi
 
 <code-view style="height:480px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/reactive-form-custom-validation" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/reactive-form-custom-validation/" >
 </code-view>
 
 ## Styling
@@ -447,7 +447,7 @@ The first thing we need to do, in order to get started with the input group styl
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-To customize the appearance of input groups, you can create a new theme by extending the [`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme). This approach allows you to override only the parameters you want to change, while the rest are automatically handled by the base theme.
+To customize the appearance of input groups, you can create a new theme by extending the [`input-group-theme`]({environment:sassApiUrl}/themes#function-input-group-theme). This approach allows you to override only the parameters you want to change, while the rest are automatically handled by the base theme.
 
 Even by specifying just a few core parameters—like colors for the border or background—you'll get a fully styled input group with consistent state-based styles (hover, focus, etc.) applied for you.
 
@@ -471,7 +471,7 @@ The last step is to include the newly created theme:
 <code-view style="height:230px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-style" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-style/" >
 </code-view>
 
 >[!NOTE]
@@ -491,11 +491,11 @@ For instance, setting a dark `$box-background` globally could cause the borders 
 * [IgxHintDirective]({environment:angularApiUrl}/classes/igxhintdirective.html)
 * [IgxInputGroup Types]({environment:angularApiUrl}/index.html#IgxInputGroupType)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-input-group-theme)
+* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/themes#function-input-group-theme)
 
 ## Theming Dependencies
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

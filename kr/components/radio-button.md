@@ -15,7 +15,7 @@ _language: kr
 
 <code-view style="height: 384px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -110,7 +110,7 @@ The Ignite UI for Angular Radio Group directive provides a grouping container th
 
 <code-view style="height: 320px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/radio-group-sample" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/radio-group-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -153,7 +153,7 @@ public fruits = ["Apple", "Mango", "Banana", "Orange"];
 
 * [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
 * [IgxRadioGroupDirective]({environment:angularApiUrl}/classes/igxradiogroupdirective.html)
-* [IgxRadioComponent Styles]({environment:sassApiUrl}/index.html#function-radio-theme)
+* [IgxRadioComponent Styles]({environment:sassApiUrl}/themes#function-radio-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>

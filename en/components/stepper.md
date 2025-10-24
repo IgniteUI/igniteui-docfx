@@ -14,7 +14,7 @@ Note that the fourth step in our Angular stepper demo gets enabled only if the u
 
 <code-view style="height: 725px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/stepper-overview-sample" alt="Angular Stepper Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/stepper-overview-sample/" alt="Angular Stepper Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -23,7 +23,7 @@ Here is the a sample demonstrating how to achieve the above functionality using 
 
 <code-view style="height: 725px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/stepper-sample-reactive-forms" alt="Angular Stepper Example with Reactive Forms">
+           iframe-src="{environment:demosBaseUrl}/layouts/stepper-sample-reactive-forms/" alt="Angular Stepper Example with Reactive Forms">
 </code-view>
 
 ## Getting Started with Ignite UI for Angular Stepper
@@ -165,7 +165,7 @@ The sample below demonstrates how stepper [orientation]({environment:angularApiU
 
 <code-view style="height: 528px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/stepper-label-position-and-orientation-sample" alt="Angular Stepper Orientation Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/stepper-label-position-and-orientation-sample/" alt="Angular Stepper Orientation Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -175,7 +175,7 @@ The sample below demonstrates how stepper [orientation]({environment:angularApiU
 - [**active**]({environment:angularApiUrl}/classes/igxstepcomponent.html#active) - Determines whether the step is the currently displayed. By design, if the user does not explicitly set some step’s active attribute to `true`, the initial active step would be the first non-disabled step.
 - [**disabled**]({environment:angularApiUrl}/classes/igxstepcomponent.html#disabled) - Determines whether the step is interactable. By default, the disabled attribute of a step is set to `false`.
 - [**optional**]({environment:angularApiUrl}/classes/igxstepcomponent.html#optional) - By default, the optional attribute of a step is set to `false`. If validity of a step in linear stepper is not required, then the optional attribute can be enabled in order to be able to move forward independently from the step validity.
-- [**completed**]({environment:angularApiUrl}/classes/igxstepcomponent.html#completed) - By default, the completed attribute of a step returns `false`. The user, however, can override this default completed behavior by setting the completed attribute as needed. When step is marked as completed not only that the style of the step header is changed by default, but also the style of the progress line between the completed step and the next one. Both styles could be modified using the exposed [CSS variables]({environment:sassApiUrl}/index.html#function-stepper-theme).
+- [**completed**]({environment:angularApiUrl}/classes/igxstepcomponent.html#completed) - By default, the completed attribute of a step returns `false`. The user, however, can override this default completed behavior by setting the completed attribute as needed. When step is marked as completed not only that the style of the step header is changed by default, but also the style of the progress line between the completed step and the next one. Both styles could be modified using the exposed [CSS variables]({environment:sassApiUrl}/themes#function-stepper-theme).
 
 The [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) gives you the opportunity to set validation logic for each step through the two-way bindable [**isValid**]({environment:angularApiUrl}/classes/igxstepcomponent.html#isValid) property. Based on its value it is decided whether the user will have the ability to move forward in linear stepper mode.
 By default, the [isValid]({environment:angularApiUrl}/classes/igxstepcomponent.html#isValid) property of a step is set to `true`.
@@ -195,7 +195,7 @@ The following example demonstrates how to configure a linear stepper:
 
 <code-view style="height: 430px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/stepper-linear-sample" alt="Angular Linear Stepper Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/stepper-linear-sample/" alt="Angular Linear Stepper Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -257,7 +257,7 @@ The sample below demonstrates all exposed step types and how they could be chang
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/stepper-steptypes-sample" alt="Angular Step Types Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/stepper-steptypes-sample/" alt="Angular Step Types Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -330,7 +330,7 @@ First, in order to use the functions exposed by the theme engine, we need to imp
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [stepper-theme]({environment:sassApiUrl}/index.html#function-stepper-theme) and provide just a few base parameters. The theme will automatically generate all required styles, including state-specific colors and accessible contrasting foregrounds. You can also override any of the available parameters if you want more control over the appearance.
+Following the simplest approach, we create a new theme that extends the [stepper-theme]({environment:sassApiUrl}/themes#function-stepper-theme) and provide just a few base parameters. The theme will automatically generate all required styles, including state-specific colors and accessible contrasting foregrounds. You can also override any of the available parameters if you want more control over the appearance.
 
 ```scss
 $stepper-theme: stepper-theme(
@@ -353,7 +353,7 @@ The sample below demonstrates a simple styling applied through the [Ignite UI fo
 
 <code-view style="height: 264px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/stepper-styling-sample" alt="Angular Stepper Styling Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/stepper-styling-sample/" alt="Angular Stepper Styling Example">
 </code-view>
 
 <div class="divider--half"></div>

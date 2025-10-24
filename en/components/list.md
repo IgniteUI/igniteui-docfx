@@ -13,7 +13,7 @@ The following example represents a list populated with contacts with a _name_ an
 
 <code-view style="height: 513px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-sample-4" alt="Angular List Example">
+           iframe-src="{environment:demosBaseUrl}/lists/list-sample-4/" alt="Angular List Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -111,7 +111,7 @@ If all went great, this is how our empty list should look like:
 
 <code-view style="height: 100px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/lists/list-sample-5/" >
 </code-view>
 
 
@@ -139,7 +139,7 @@ Sometimes there may be a delay in your data loading. In this case you can set th
 
 <code-view style="height: 300px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-sample-6" >
+           iframe-src="{environment:demosBaseUrl}/lists/list-sample-6/" >
 </code-view>
 
 
@@ -163,7 +163,7 @@ If all went well, you should see the following in your browser:
 
 <code-view style="height: 200px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/lists/list-sample-2/" >
 </code-view>
 
 
@@ -217,7 +217,7 @@ After all that our Angular list should now look like that:
 
 <code-view style="height: 400px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/lists/list-sample-3/" >
 </code-view>
 
 
@@ -364,7 +364,7 @@ And here's the result of all that work:
 
 <code-view style="height: 513px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/lists/list-sample-4/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -477,7 +477,7 @@ Now try panning the list items for yourself:
 
 <code-view style="height: 500px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-sample-7" >
+           iframe-src="{environment:demosBaseUrl}/lists/list-sample-7/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -555,7 +555,7 @@ Here's an example illustrating how the visual style of the items changes when us
 
 <code-view style="height: 420px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-item-selection" >
+           iframe-src="{environment:demosBaseUrl}/lists/list-item-selection/" >
 </code-view>
 
 By default, the `selected` property is set to `false`. We can toggle its value using an inline expression bound to the `(click)` event on each list item, effectively switching the visual state of the item each time it's clicked.
@@ -593,7 +593,7 @@ igx-list-item {
 }
 ```
 
-If you prefer to use the list theming function, there are parameters available that allow you to style the selected state of the list items. You can find more information about these parameters here: [`list-theme`]({environment:sassApiUrl}/index.html#function-list-theme)
+If you prefer to use the list theming function, there are parameters available that allow you to style the selected state of the list items. You can find more information about these parameters here: [`list-theme`]({environment:sassApiUrl}/themes#function-list-theme)
 
 <div class="divider--half"></div>
 
@@ -602,7 +602,7 @@ The following sample demonstrates how to create a simple chat component using **
 
 <code-view style="height: 650px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-chat-sample" >
+           iframe-src="{environment:demosBaseUrl}/lists/list-chat-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -618,7 +618,7 @@ Let's see how we can change the background of our list. First we need to import 
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`list-theme`]({environment:sassApiUrl}/index.html#function-list-theme) and by passing only the `$background` parameter, the theme will automatically calculate the state colors and appropriate contrasting foregrounds. However, you can still manually define them if desired.
+Following the simplest approach, we create a new theme that extends the [`list-theme`]({environment:sassApiUrl}/themes#function-list-theme) and by passing only the `$background` parameter, the theme will automatically calculate the state colors and appropriate contrasting foregrounds. However, you can still manually define them if desired.
 
 ```scss
 $my-list-theme: list-theme(
@@ -626,7 +626,7 @@ $my-list-theme: list-theme(
 );
 ```
 
-Take a look at the [`list-theme`]({environment:sassApiUrl}/index.html#function-list-theme) section for a complete list of available parameters for styling the list.
+Take a look at the [`list-theme`]({environment:sassApiUrl}/themes#function-list-theme) section for a complete list of available parameters for styling the list.
 
 The last step is to **include** the newly created themes.
 
@@ -638,31 +638,31 @@ The result is the following:
 
 <code-view style="height: 365px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/list-sample-8" >
+           iframe-src="{environment:demosBaseUrl}/lists/list-sample-8/" >
 </code-view>
 
-For full list of parameters that you can change for the list component please refer to: [IgxListComponent Styles]({environment:sassApiUrl}/index.html#function-list-theme)
+For full list of parameters that you can change for the list component please refer to: [IgxListComponent Styles]({environment:sassApiUrl}/themes#function-list-theme)
 
 ## API References
 
 In this article we covered a lot of ground with the Angular list component. We created a list of contact items. Used some additional Ignite UI for Angular components inside our list items, like avatars and icons. Created some custom item layout and styled it. Finally, we added list filtering. The list component has a few more APIs to explore, which are listed below.
 
 * [IgxListComponent API]({environment:angularApiUrl}/classes/igxlistcomponent.html)
-* [IgxListComponent Styles]({environment:sassApiUrl}/index.html#function-list-theme)
+* [IgxListComponent Styles]({environment:sassApiUrl}/themes#function-list-theme)
 * [IgxListItemComponent API]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 
 Additional Angular components that were used:
 
 * [IgxAvatarComponent API]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
-* [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-avatar-theme)
+* [IgxAvatarComponent Styles]({environment:sassApiUrl}/themes#function-avatar-theme)
 * [IgxIconComponent API]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/themes#function-icon-theme)
 
 <div class="divider"></div>
 
 ## Theming Dependencies
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
-* [IgxAvatar Theme]({environment:sassApiUrl}/index.html#function-avatar-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
+* [IgxAvatar Theme]({environment:sassApiUrl}/themes#function-avatar-theme)
 
 ## Additional Resources
 

@@ -32,7 +32,7 @@ Ignite UI for Angular에서 [@@igxName]({environment:angularApiUrl}/classes/@@ig
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-2/" >
 </code-view>
 
 }
@@ -41,7 +41,7 @@ Ignite UI for Angular에서 [@@igxName]({environment:angularApiUrl}/classes/@@ig
 
 <code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-lod" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-lod/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -70,7 +70,7 @@ Ignite UI for Angular에서 [@@igxName]({environment:angularApiUrl}/classes/@@ig
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-4/" >
 </code-view>
 
 
@@ -118,7 +118,7 @@ public processData() {
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-remote-filtering" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-remote-filtering/" >
 </code-view>
 
 }
@@ -163,7 +163,7 @@ public processData() {
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-remote-filtering" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-remote-filtering/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -185,7 +185,7 @@ public processData() {
 
 ### API 참조
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameComponent 스타일]({environment:sassApiUrl}/themes#function-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxForOfDirective]({environment:angularApiUrl}/classes/igxforofdirective.html)
 * [IForOfState]({environment:angularApiUrl}/interfaces/iforofstate.html)

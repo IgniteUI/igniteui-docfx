@@ -18,7 +18,7 @@ The Ignite UI for Angular is a complete set of Material-based UI Widgets, Compon
 
 <code-view style="height: 1000px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/theming/bootstrap-sample" >
+           iframe-src="{environment:demosBaseUrl}/theming/bootstrap-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -122,7 +122,7 @@ $theme-colors: (
 );
 ```
 
-Ignite UI for Angular's [`palette`]({environment:sassApiUrl}/index.html#function-palette) function generates a color palette map including `primary`, `secondary`, `gray`, `info`, `success`, `warn`, and `error` colors and their color variants. Our predefined bootstrap palette in turn consists of seven colors:
+Ignite UI for Angular's [`palette`]({environment:sassApiUrl}/palettes#function-palette) function generates a color palette map including `primary`, `secondary`, `gray`, `info`, `success`, `warn`, and `error` colors and their color variants. Our predefined bootstrap palette in turn consists of seven colors:
 
 ```scss
 $bootstrap-palette: palette(
@@ -138,7 +138,7 @@ $bootstrap-palette: palette(
 
 As you can see most of the colors in the Bootstrap palette overlap with the colors defined in the Bootstrap palette of Ignite UI for Angular. Hence, we can simply map the Bootstrap theme colors to our light or dark bootstrap palette colors.
 
-First, we are going to define Sass variables that extract values from the [`$light-bootstrap-palette`]({environment:sassApiUrl}/index.html#variable-light-bootstrap-palette):
+First, we are going to define Sass variables that extract values from the [`$light-bootstrap-palette`]({environment:sassApiUrl}/palettes#variable-light-bootstrap-palette):
 
 ```scss
 // Colors from the Ignite UI light bootstrap color palette
@@ -175,7 +175,7 @@ In order to switch between `light` and `dark` mode, we are adding a custom class
 
 #### Light mode
 
-Ignite UI for Angular comes with predefined themes inspired by the [Bootstrap 4](https://getbootstrap.com/) library. To use them, first, you have to include our `core` mixin and then our built-in theme mixin - [bootstrap-light-theme]({environment:sassApiUrl}/index.html#mixin-bootstrap-light-theme). We will also make use of our predefined bootstrap palette - [$light-bootstrap-palette]({environment:sassApiUrl}/index.html#variable-light-bootstrap-palette).
+Ignite UI for Angular comes with predefined themes inspired by the [Bootstrap 4](https://getbootstrap.com/) library. To use them, first, you have to include our `core` mixin and then our built-in theme mixin - [bootstrap-light-theme]({environment:sassApiUrl}/themes#mixin-bootstrap-light-theme). We will also make use of our predefined bootstrap palette - [$light-bootstrap-palette]({environment:sassApiUrl}/palettes#variable-light-bootstrap-palette).
 
 The background color for our application needs to be set explicitly on the host element. In our sample, we want to use the `surface` color of the passed palette.
 
@@ -334,7 +334,7 @@ Then, add a CSS class to your navbar component following the pattern "bg - color
 
 ### Typography
 
-Ignite UI for Angular exposes four default type scales for each of its themes, which can be used inside the [`typography`]({environment:sassApiUrl}/index.html#mixin-typography) mixin to define the global typography styles of an application. In our example, we are going to apply the bootstrap predifined `typeface` and `type-scale` but you can create custom ones if you wish. 
+Ignite UI for Angular exposes four default type scales for each of its themes, which can be used inside the [`typography`]({environment:sassApiUrl}/typography#mixin-typography) mixin to define the global typography styles of an application. In our example, we are going to apply the bootstrap predifined `typeface` and `type-scale` but you can create custom ones if you wish. 
 
 ```scss
 :host {
@@ -345,12 +345,12 @@ Ignite UI for Angular exposes four default type scales for each of its themes, w
 ## API References
 <div class="divider--half"></div>
 
-* [Light Bootstrap Palette]({environment:sassApiUrl}/index.html#variable-light-bootstrap-palette)
-* [Dark Bootstrap Palette]({environment:sassApiUrl}/index.html#variable-dark-bootstrap-palette)
-* [Light Bootstrap Theme]({environment:sassApiUrl}/index.html#mixin-bootstrap-light-theme)
-* [Dark Bootstrap Theme]({environment:sassApiUrl}/index.html#mixin-bootstrap-dark-theme)
-* [Palette Function]({environment:sassApiUrl}/index.html#function-palette)
-* [Typography Mixin]({environment:sassApiUrl}/index.html#mixin-typography)
+* [Light Bootstrap Palette]({environment:sassApiUrl}/palettes#variable-light-bootstrap-palette)
+* [Dark Bootstrap Palette]({environment:sassApiUrl}/palettes#variable-dark-bootstrap-palette)
+* [Light Bootstrap Theme]({environment:sassApiUrl}/themes#mixin-bootstrap-light-theme)
+* [Dark Bootstrap Theme]({environment:sassApiUrl}/themes#mixin-bootstrap-dark-theme)
+* [Palette Function]({environment:sassApiUrl}/palettes#function-palette)
+* [Typography Mixin]({environment:sassApiUrl}/typography#mixin-typography)
 
 Related topics: 
 

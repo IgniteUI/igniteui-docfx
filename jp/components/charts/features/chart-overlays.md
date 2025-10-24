@@ -69,11 +69,11 @@ Angular チャート コンポーネントは、値の線を使用して、最�
 
 Angular [株価チャート](../types/stock-chart.md)に組み込みのファイナンシャル オーバーレイとインジケーターをプロットすることもできます。
 
-## チャート オーバーレイ テキスト (ベータ版)
+## チャート オーバーレイ テキスト <label class="badge badge--preview">PREVIEW</label>
 
 Angular [`IgxValueOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvalueoverlaycomponent.html)、[`IgxValueLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvaluelayercomponent.html)、およびすべてのデータ注釈レイヤーは、XamDataChart コンポーネントのプロット領域内にカスタム オーバーレイ テキストを描画できます。このオーバーレイ テキストを使用すると、レイヤーとの関係において、x 軸上の重要なイベント (例: 企業の四半期決算) または y 軸上の重要な値に注釈を付けることができます。
 
-たとえば、`DataAnnotationSliceLayer`、[`IgxValueOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvalueoverlaycomponent.html)、[`IgxValueLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvaluelayercomponent.html) を使用してオーバーレイ テキストを表示できます。
+たとえば、[`IgxDataAnnotationSliceLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdataannotationslicelayercomponent.html)、[`IgxValueOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvalueoverlaycomponent.html)、[`IgxValueLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvaluelayercomponent.html) を使用してオーバーレイ テキストを表示できます。
 
 <code-view style="height: 600px" alt="Angular 複数のオーバーレイ テキスト"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -84,7 +84,7 @@ Angular [`IgxValueOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-
 
 ### オーバーレイ テキストのスタイル設定
 
-このコード例は、`DataAnnotationSliceLayer`、[`IgxValueOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvalueoverlaycomponent.html)、および [`IgxValueLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvaluelayercomponent.html) 上のオーバーレイ テキストのスタイルを設定およびカスタマイズする方法を示しています。
+このコード例は、[`IgxDataAnnotationSliceLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdataannotationslicelayercomponent.html)、[`IgxValueOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvalueoverlaycomponent.html)、および [`IgxValueLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvaluelayercomponent.html) 上のオーバーレイ テキストのスタイルを設定およびカスタマイズする方法を示しています。
 
 <div class="divider--half"></div>
 
@@ -112,10 +112,10 @@ Angular [`IgxValueOverlayComponent`]({environment:dvApiBaseUrl}/products/ignite-
 *   [`IgxValueLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvaluelayercomponent.html)
 *   [`ValueLayerValueMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.valuelayervaluemode.html)
 *   [`valueLines`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#valueLines)
-*   `OverlayText`
+*   [`overlayText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvalueoverlaycomponent.html#overlayText)
 *   `TargetAxis`
 *   `OverlayTextMemberPath`
-*   `OverlayTextColor`
-*   `OverlayTextBackground`
-*   `OverlayTextBorderColor`
-*   `OverlayTextLocation`
+*   [`overlayTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvalueoverlaycomponent.html#overlayTextColor)
+*   [`overlayTextBackground`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvalueoverlaycomponent.html#overlayTextBackground)
+*   [`overlayTextBorderColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvalueoverlaycomponent.html#overlayTextBorderColor)
+*   [`overlayTextLocation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxvalueoverlaycomponent.html#overlayTextLocation)

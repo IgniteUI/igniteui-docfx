@@ -14,7 +14,7 @@ Ignite UI for Angular Hierarchical Data Grid は、階層表形式データの�
 
 <code-view style="height:520px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing" alt="Angular 階層グリッドの例">
+           iframe-src="{environment:lobDemosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing/" alt="Angular 階層グリッドの例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -359,7 +359,7 @@ $custom-theme: grid-theme(
 <code-view style="height:505px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-styling" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-styling/" >
 </code-view>
 
 >[!NOTE]
@@ -394,7 +394,7 @@ platformBrowserDynamic()
 * [IgxHierarchicalGridComponent]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)
 * [IgxRowIslandComponent]({environment:angularApiUrl}/classes/igxrowislandcomponent.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)

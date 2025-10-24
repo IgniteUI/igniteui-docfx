@@ -78,7 +78,7 @@ Changing these variants, you can completely overhaul the entire palette.
 
 >[!WARNING]
 > Some components do not use colors from the palettes. In those instances, you will have to target the component CSS variables directly to modify their colors.
-> To find out which palette colors are used by what component, take a look at the [Components Documentation]({environment:sassApiUrl}/index.html#variable-_light-avatar).
+> To find out which palette colors are used by what component, take a look at the [Components Documentation]({environment:sassApiUrl}/themes).
 
 Likewise, changing the `elevations`(shadows) is just as easy. We include 25 elevation levels (0-24).
 Here's a simplified version of what those variables look like:
@@ -97,7 +97,7 @@ Here's a simplified version of what those variables look like:
 }
 ```
 
-These are essentially stacked CSS [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) declarations. You can replace them with any other valid `box-shadow` value. The higher the elevation level number is, the bigger the shadow is. Again, different components use different elevation levels, to find out which elevation levels are used by which component, take look at the [Components Documentation]({environment:sassApiUrl}/index.html#variable-_light-avatar). We will take a deeper look at elevations in the [Elevations](./elevations.md) of the documentation.
+These are essentially stacked CSS [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) declarations. You can replace them with any other valid `box-shadow` value. The higher the elevation level number is, the bigger the shadow is. Again, different components use different elevation levels, to find out which elevation levels are used by which component, take look at the [Components Documentation]({environment:sassApiUrl}/themes). We will take a deeper look at elevations in the [Elevations](./elevations.md) of the documentation.
 
 ## Configuration
 

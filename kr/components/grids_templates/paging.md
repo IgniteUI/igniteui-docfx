@@ -33,7 +33,7 @@ Ignite UI for Angular @@igComponent에서 **Paging**은 루트 `@@igSelector` �
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-paging-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-paging-sample/" >
 </code-view>
 
 }
@@ -41,7 +41,7 @@ Ignite UI for Angular @@igComponent에서 **Paging**은 루트 `@@igSelector` �
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-paging" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-paging/" >
 </code-view>
 
 }
@@ -49,7 +49,7 @@ Ignite UI for Angular @@igComponent에서 **Paging**은 루트 `@@igSelector` �
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -445,7 +445,7 @@ public changeTemplate() {
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-remote-paging-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-remote-paging-sample/" >
 </code-view>
 
 }
@@ -453,7 +453,7 @@ public changeTemplate() {
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-remote-paging" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-remote-paging/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -494,8 +494,8 @@ Integration between Paging and Group By is described in the [Group By](groupby.h
 
 ### API 참조
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-grid-theme)
-* [IgxGridPaginator 스타일]({environment:sassApiUrl}/index.html#function-paginator-theme)
+* [@@igxNameComponent 스타일]({environment:sassApiUrl}/themes#function-grid-theme)
+* [IgxGridPaginator 스타일]({environment:sassApiUrl}/themes#function-paginator-theme)
 
 ### 추가 리소스
 <div class="divider--half"></div>

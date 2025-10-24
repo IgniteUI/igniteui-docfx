@@ -12,7 +12,7 @@ The Ignite UI for Angular Splitter component provides the ability to create layo
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/splitter-horizontal-sample" alt="Angular Splitter Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/splitter-horizontal-sample/" alt="Angular Splitter Example">
 </code-view>
 
 
@@ -127,7 +127,7 @@ You can make the splitter collapsible or not by showing or hiding the splitter's
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/splitter-collapsible-sample" >
+           iframe-src="{environment:demosBaseUrl}/layouts/splitter-collapsible-sample/" >
 </code-view>
 
 ### Configuring panes
@@ -191,7 +191,7 @@ public typeVertical = SplitterType.Vertical;
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/splitter-nested-sample" >
+           iframe-src="{environment:demosBaseUrl}/layouts/splitter-nested-sample/" >
 </code-view>
 
 
@@ -219,7 +219,7 @@ To get started with styling the **igxSplitter** component, you need to import th
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
 
-You can change the default styles of the splitter by creating a new theme that extends the [`splitter-theme`]({environment:sassApiUrl}/index.html#function-splitter-theme). By providing just the base parameters, the theme will automatically generate all necessary styles for the interaction states.
+You can change the default styles of the splitter by creating a new theme that extends the [`splitter-theme`]({environment:sassApiUrl}/themes#function-splitter-theme). By providing just the base parameters, the theme will automatically generate all necessary styles for the interaction states.
 
 ```scss
 // In splitter-styling-sample.component.scss
@@ -246,7 +246,7 @@ This is the final result from applying your new theme.
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/splitter-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/layouts/splitter-styling-sample/" >
 </code-view>
 
 ### Custom sizing
@@ -279,13 +279,13 @@ Or you can use the universal `--igx-splitter-size` variable to target all instan
 * [IgxSplitterComponent]({environment:angularApiUrl}/classes/igxsplittercomponent.html)
 * [IgxSplitterPaneComponent]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html)
 * [SplitterType]({environment:angularApiUrl}/enums/splittertype.html)
-* [IgxSplitterComponent Styles]({environment:sassApiUrl}/index.html#function-splitter-theme)
+* [IgxSplitterComponent Styles]({environment:sassApiUrl}/themes#function-splitter-theme)
 
 <div class="divider--half"></div>
 
 ## Theming Dependencies
-* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-drop-down-theme)
-* [IgxIcon Styles]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
+* [IgxIcon Styles]({environment:sassApiUrl}/themes#function-icon-theme)
 
 Our community is active and always welcoming to new ideas.
 * [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
