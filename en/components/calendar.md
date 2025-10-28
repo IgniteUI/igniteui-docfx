@@ -480,12 +480,13 @@ The last step is to pass the custom calendar theme:
  @include css-vars($custom-calendar-theme);
 ```
 
-<code-view style="height:500px" 
+In the sample below, you can see how using the calendar with customized CSS variables allows you to create a design that visually resembles the calendar used in the [`SAP UI5`](https://ui5.sap.com/#/entity/sap.ui.unified.Calendar/sample/sap.ui.unified.sample.CalendarSingleDaySelection) design system. 
+
+<code-view style="height:350px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-styling-sample/" >
 </code-view>
-
 
 ## API References
 <div class="divider--half"></div>

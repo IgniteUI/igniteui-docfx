@@ -211,7 +211,31 @@ After all that is done, our application should look like this:
 
 ## Styling
 
-To get started with styling the checkbox, we need to import the `index` file, where all the theme functions and component mixins live:
+Following the simplest approach, you can use CSS variables to customize the appearance of the checkbox:
+
+```css
+igx-checkbox {
+    --tick-color: #0064d9;
+    --tick-color-hover: #e3f0ff;
+    --fill-color: transparent;
+    --fill-color-hover: #e3f0ff;
+    --label-color: #131e29;
+    --focus-outline-color: #0032a5;
+    --border-radius: 0.25rem;
+}
+
+igx-checkbox:hover {
+    --empty-fill-color: #e3f0ff;
+}
+```
+
+By changing the values of these CSS variables, you can alter the entire look of the checkbox component.
+
+<div class="divider--half"></div>
+
+Another way to style the checkbox is by using **Sass**, along with our [`checkbox-theme`]({environment:sassApiUrl}/index.html#function-checkbox-theme) function.
+
+To start styling the checkbox using **Sass**, first import the `index` file, which includes all theme functions and component mixins:
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -225,20 +249,19 @@ Then, we create a new theme that extends the [`checkbox-theme`]({environment:sas
 ```scss
 // in styles.scss
 $custom-checkbox-theme: checkbox-theme(
-  $empty-color: #ecaa53,
-  $fill-color: #ecaa53,
-  $border-radius: 5px
+    $empty-color: #ecaa53,
+    $fill-color: #ecaa53,
+    $border-radius: 5px
 );
 ```
 
-The last step is to **include** the component theme in our application.
+Finally, **include** the custom theme in your application:
 
 ```scss
 @include css-vars($custom-checkbox-theme);
 ```
 
-### Demo
-
+In the sample below, you can see how using the checkbox component with customized CSS variables allows you to create a design that visually resembles the checkbox used in the [`SAP UI5`](https://ui5.sap.com/#/entity/sap.m.CheckBox/sample/sap.m.sample.CheckBox) design system. 
 
 <code-view style="height: 100px"
            no-theming
@@ -246,6 +269,8 @@ The last step is to **include** the component theme in our application.
            iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-styling/" >
 </code-view>
 
+> [!NOTE]
+> The sample uses the [Fluent Light](themes/sass/schemas.md#predefined-schemas) schema.
 
 <div class="divider--half"></div>
 
