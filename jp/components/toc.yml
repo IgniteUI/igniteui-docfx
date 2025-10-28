@@ -1083,6 +1083,7 @@
   href: toggle.md
 - name: Tooltip
   href: tooltip.md
+  updated: true
   new: false
 - name: Overlay
   href: overlay.md
