@@ -202,12 +202,49 @@ After everything's done, your component should look like this:
 
 ### Demo
 
-
 <code-view style="height: 350px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-styling/" >
 </code-view>
+
+### Styling with Tailwind
+
+You can style the `month picker` using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants. The month picker is styled through the calendar theme, so you have to use the calendar utility class
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-calendar`, `dark-calendar`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [calendar-theme]({environment:sassApiUrl}/themes#function-calendar-theme). The syntax is as follows:
+
+```html
+<igx-month-picker
+class="!light-calendar
+![--header-background:#4F6A5A]
+![--content-background:#A3C7B2]">
+</igx-month-picker>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your month picker should look like this:
+
+<div class="sample-container loading" style="height:400px">
+    <iframe id="month-picker-tailwind-style-iframe" data-src='{environment:demosBaseUrl}/scheduling/monthpicker-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 
 ## API References
