@@ -252,7 +252,7 @@ If all went well, you should see something like the following in the browser:
 Following the simplest approach, you can use CSS variables to customize the appearance of the button:
 
 ```css
-.igx-button {
+[igxButton] {
     --background: #ff4d4f;
     --hover-background: #ff7875;
     --active-background: #d9363e;
