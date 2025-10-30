@@ -160,7 +160,7 @@ First, in order to use the functions exposed by the theme engine, we need to imp
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-You can easily create a new theme, that extends the [`ripple-theme`]({environment:sassApiUrl}/index.html#function-ripple-theme) and accepts the parameters, required to customize the ripple as desired.
+You can easily create a new theme, that extends the [`ripple-theme`]({environment:sassApiUrl}/themes#function-ripple-theme) and accepts the parameters, required to customize the ripple as desired.
 
 ```scss
 $custom-ripple-theme: ripple-theme(
@@ -190,7 +190,7 @@ The next step is to pass the custom ripple theme:
 <div class="divider--half"></div>
 
 - [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
-- [IgxRipple Styles]({environment:sassApiUrl}/index.html#function-ripple-theme)
+- [IgxRipple Styles]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ## Additional Resources
 

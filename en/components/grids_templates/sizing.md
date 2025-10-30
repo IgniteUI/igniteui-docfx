@@ -360,7 +360,7 @@ While the spacing properties affect both header and body cells, you can target t
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow API]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>

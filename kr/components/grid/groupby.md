@@ -142,7 +142,7 @@ Integration between Group By and Summaries is described in the [Summaries](summa
 
 ### Styling
 
-The igxGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
+The igxGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The grid's [theme]({environment:sassApiUrl}/themes#function-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
 
 In the below steps, we are going through the steps of customizing the grid's Group By styling.
 
@@ -156,7 +156,7 @@ To begin the customization of the Group By feature, you need to import the `inde
 
 #### Defining custom theme
 
-Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the parameters, required to customize the Group By as desired. You also need to extend the [`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme), because it's used in the Group By feature.
+Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) and accepts the parameters, required to customize the Group By as desired. You also need to extend the [`chip-theme`]({environment:sassApiUrl}/themes#function-chip-theme), because it's used in the Group By feature.
 
 ```scss
 
@@ -188,7 +188,7 @@ $custom-chips-theme: chip-theme(
 
 #### Defining a custom color palette
 
-In the approach that we described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
+In the approach that we described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions.   
 `igx-palette` generates a color palette, based on provided primary and secondary colors.  
 
 ```scss
@@ -298,12 +298,12 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGroupByRow](({environment:angularApiUrl}/classes/igxgroupbyrow.html)
-* [IgxGridComponent 스타일]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [IgxGridComponent 스타일]({environment:sassApiUrl}/themes#function-grid-theme)
 * [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IGroupByExpandState]({environment:angularApiUrl}/interfaces/igroupbyexpandstate.html)
 * [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
-* [IgxChipComponent 스타일]({environment:sassApiUrl}/index.html#function-chip-theme)
+* [IgxChipComponent 스타일]({environment:sassApiUrl}/themes#function-chip-theme)
 
 ### 추가 리소스
 <div class="divider--half"></div>

@@ -23,9 +23,9 @@ Angular Spreadsheet コンポネントは、セルの編集、グリッド線と
 
 ## セル編集の構成
 
-ユーザーがセルの値を編集して新しい入力を確認すると、スプレッドシートの構成に応じて、[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html) コントロールに <kbd>Enter</kbd> キーを押すと現在アクティブなセルに隣接するセルに移動できます。
+ユーザーがセルの値を編集して新しい入力を確認すると、スプレッドシートの構成に応じて、[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html) コントロールに <kbd>ENTER</kbd> キーを押すと現在アクティブなセルに隣接するセルに移動できます。
 
-この <kbd>Enter</kbd> キーナビゲーションを有効にするために、[`isEnterKeyNavigationEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html#isEnterKeyNavigationEnabled) プロパティを **true** に設定できます。false に設定すると、<kbd>Enter</kbd> キーを押してもアクティブ セルは変わりません。
+この <kbd>ENTER</kbd> キーナビゲーションを有効にするために、[`isEnterKeyNavigationEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html#isEnterKeyNavigationEnabled) プロパティを **true** に設定できます。false に設定すると、<kbd>ENTER</kbd> キーを押してもアクティブ セルは変わりません。
 
 Enter キーを押したときに移動する隣接セルの方向は、[`enterKeyNavigationDirection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html#enterKeyNavigationDirection) プロパティを `Down`、`Up`、`Left`、`Right` に設定して構成することもできます。
 
@@ -88,9 +88,9 @@ this.spreadsheet.areHeadersVisible = false;
 
 [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html) コントロールは、コントロールが「終了モード」にあるかどうかを構成することによって、ワークシートのセル間のナビゲーションを構成できます。終了モードは、矢印キーを押すと、アクティブなセルが、押された矢印キーの方向に応じて、現在のセルからデータが隣接するセルの行または列の末尾に移動する機能です。この機能は、大規模なデータ ブロックの最後まですばやく移動する際に役立ちます。
 
-たとえば、終了モードになっているときに、100x100 の大きなデータブロックをクリックして`右`矢印キーを押すと、現在の行の右端に移動し、データのある一番右の列に移動します。この操作の後、[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html) は終了モードから飛び出します。
+たとえば、終了モードになっているときに、100x100 の大きなデータブロックをクリックして <kbd>→</kbd> 矢印キーを押すと、現在の行の右端に移動し、データのある一番右の列に移動します。この操作の後、[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html) は終了モードから飛び出します。
 
-ユーザーが <kbd>End</kbd> キーを押すと、実行時に終了モードが有効になりますが、スプレッドシート コントロールの [`isInEndMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html#isInEndMode) プロパティを設定することでプログラムで設定できます。
+ユーザーが <kbd>END</kbd> キーを押すと、実行時に終了モードが有効になりますが、スプレッドシート コントロールの [`isInEndMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html#isInEndMode) プロパティを設定することでプログラムで設定できます。
 
 以下のコード スニペットは、[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html) を終了モードで開始させる方法を示しています。
 
@@ -115,11 +115,11 @@ this.spreadsheet.activeWorksheet.unprotect();
 
 ## 選択の設定
 
-[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html) コントロールは、コントロールで許可されている選択の種類を設定できます。その後、ユーザーが修飾キー (**Shift** または **Ctrl**)  を押します。これは、スプレッドシートの [`selectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html#selectionMode) プロパティを次のいずれかの値に設定することによって行われます。
+[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html) コントロールは、コントロールで許可されている選択の種類を設定できます。その後、ユーザーが修飾キー (<kbd>SHIFT</kbd> または <kbd>CTRL</kbd>)  を押します。これは、スプレッドシートの [`selectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html#selectionMode) プロパティを次のいずれかの値に設定することによって行われます。
 
-*   `AddToSelection`: マウスでドラッグするときに Ctrl キーを押す必要はありません。新しいセル範囲が [`SpreadsheetSelection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.spreadsheetselection.html) オブジェクトの [`cellRanges`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.spreadsheetselection.html#cellRanges) コレクションに追加され、モードに入った後に最初の矢印キーナビゲーションで範囲が追加されます。シフト+F8 を押すとモードに入ります。
+*   `AddToSelection`: マウスでドラッグするときに <kbd>CTRL</kbd> キーを押す必要はありません。新しいセル範囲が [`SpreadsheetSelection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.spreadsheetselection.html) オブジェクトの [`cellRanges`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.spreadsheetselection.html#cellRanges) コレクションに追加され、モードに入った後に最初の矢印キーナビゲーションで範囲が追加されます。シフト+F8 を押すとモードに入ります。
 *   `ExtendSelection`: [`SpreadsheetSelection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.spreadsheetselection.html) オブジェクトの [`cellRanges`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.spreadsheetselection.html#cellRanges) コレクション内の選択範囲は、マウスを使用してセルを選択するかキーボードで移動すると更新されます。
-*   `Normal`: セルまたはセルの範囲を選択するためにマウスをドラッグすると選択が置き換えられます。同様に、キーボードで移動すると新しい選択範囲が作成されます。Ctrl キーを押したままマウスを使用することで新しい範囲を追加できます。また、Shift キーを押したままマウスでクリックする、あるいはキーボードで移動することでアクティブ セルを含む選択範囲を変更できます。
+*   `Normal`: セルまたはセルの範囲を選択するためにマウスをドラッグすると選択が置き換えられます。同様に、キーボードで移動すると新しい選択範囲が作成されます。<kbd>CTRL</kbd> キーを押したままマウスを使用することで新しい範囲を追加できます。また、<kbd>SHIFT</kbd> キーを押したままマウスでクリックする、あるいはキーボードで移動することでアクティブ セルを含む選択範囲を変更できます。
 
 上記の説明で述べた [`SpreadsheetSelection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.spreadsheetselection.html) オブジェクトは、[`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html) コントロールの [`activeSelection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html#activeSelection) プロパティを使用して取得できます。
 

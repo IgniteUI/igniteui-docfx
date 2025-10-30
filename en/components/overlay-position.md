@@ -201,4 +201,4 @@ overlay.setOffset(this._overlayId, deltaX, deltaY, OffsetMode.Set);
 * [Scroll Strategies](overlay-scroll.md)
 * [Styling Topic](overlay-styling.md)
 * [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)

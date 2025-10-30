@@ -51,7 +51,7 @@ $light-avatar: (
 );
 ```
 
-As you can see from the example above, the component schema defines the properties the [Avatar Theme]({environment:sassApiUrl}/index.html#function-avatar-theme) consumes. It just prescribes the colors the avatar should use, without referencing a concrete color palette map.
+As you can see from the example above, the component schema defines the properties the [Avatar Theme]({environment:sassApiUrl}/themes#function-avatar-theme) consumes. It just prescribes the colors the avatar should use, without referencing a concrete color palette map.
 
 Let's take the `background` property for example. It tells the avatar theme what the default background should be. 
 
@@ -154,11 +154,10 @@ Although schemas require a deeper knowledge of our theming library compared to t
 We use schemas internally to create variations that result in different pre-bundled themes for Material, Bootstrap, Fluent, and Indigo.
 
 ## API Overview
-* [Avatar Schema]({environment:sassApiUrl}/index.html#variable-_light-avatar)
-* [Light Components Schema]({environment:sassApiUrl}/index.html#variable-light-schema)
-* [Dark Components Schema]({environment:sassApiUrl}/index.html#variable-dark-schema)
-* [Global Theme]({environment:sassApiUrl}/index.html#mixin-theme)
-* [Avatar Theme]({environment:sassApiUrl}/index.html#function-avatar-theme)
+* [Light Components Schema]({environment:sassApiUrl}/schemas#variable-light-material-schema)
+* [Dark Components Schema]({environment:sassApiUrl}/schemas#variable-dark-material-schema)
+* [Global Theme]({environment:sassApiUrl}/themes#mixin-theme)
+* [Avatar Theme]({environment:sassApiUrl}/themes#function-avatar-theme)
 
 ## Additional Resources
 <div class="divider--half"></div>
