@@ -12,7 +12,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Keyframes Mixin
 
-The Ignite UI for Angular [keyframes]({environment:sassApiUrl}/index.html#mixin-keyframes) mixin is used to register new keyframes animations. The mixin takes the name of a keyframes animation as a parameter and adds it to the global keyframe register list. In that way, the keyframes will not be duplicated in the exported CSS when including the same keyframes animation several times.
+The Ignite UI for Angular [keyframes]({environment:sassApiUrl}/animations#mixin-keyframes) mixin is used to register new keyframes animations. The mixin takes the name of a keyframes animation as a parameter and adds it to the global keyframe register list. In that way, the keyframes will not be duplicated in the exported CSS when including the same keyframes animation several times.
 
 For instance, doing this:
 
@@ -50,7 +50,7 @@ Here's an example of creating a new animation mixin that can be used with our `a
 
 ### Animation Mixin
 
-The [animation]({environment:sassApiUrl}/index.html#mixin-animation) mixin serves as a vessel for animating elements using a list of animation properties passed as parameters. Users can specify animation properties like `name`, `duration`, `delay`, `direction`, `iteration count`, etc. Multiple keyframe animations can be passed to the `animation` mixin.
+The [animation]({environment:sassApiUrl}/animations#mixin-animation) mixin serves as a vessel for animating elements using a list of animation properties passed as parameters. Users can specify animation properties like `name`, `duration`, `delay`, `direction`, `iteration count`, etc. Multiple keyframe animations can be passed to the `animation` mixin.
 
 ```scss
 //include the 'fade-in-top' keyframes animation mixin
@@ -65,7 +65,7 @@ The [animation]({environment:sassApiUrl}/index.html#mixin-animation) mixin serve
 
 ### Timing Functions
 
-We include a list of pre-baked timing functions to use with our keyframes mixins. Read the [documentation]({environment:sassApiUrl}/index.html) to find the full list of timing functions.
+We include a list of pre-baked timing functions to use with our keyframes mixins. Read the [documentation]({environment:sassApiUrl}/animations) to find the full list of timing functions.
 
 <div class="sample-container loading" style="height: 270px">
     <iframe id="animations-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/theming/animations-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -153,7 +153,7 @@ useAnimation(fadeIn, {
 ## API References
 <div class="divider"></div>
 
-* [Animations]({environment:sassApiUrl}/index.html)
+* [Animations]({environment:sassApiUrl}/animations)
 * [AnimationSettings]({environment:angularApiUrl}/interfaces/animationsettings.html)
 * [IAnimationParams]({environment:angularApiUrl}/interfaces/ianimationparams.html)
 

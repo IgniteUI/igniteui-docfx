@@ -93,10 +93,8 @@ The value of `$igx-legacy-support` is quite important as it determines how compo
 The general rule of thumb regarding what the value of `$legacy-support` should be is dictated by whether you will be including support for Internet Explorer 11 or not. If you want to include support for IE11 set the `$legacy-support` value to `true` (default), otherwise setting its value to `false` will force CSS variables for theming.
 
 ### API Overview
-* [Global Theme]({environment:sassApiUrl}/index.html#mixin-theme)
-* [Light Theme]({environment:sassApiUrl}/index.html#mixin-igx-light-theme)
-* [Dark Theme]({environment:sassApiUrl}/index.html#mixin-dark-theme)
-* [Palette]({environment:sassApiUrl}/index.html#function-igx-palette)
+* [Global Theme]({environment:sassApiUrl}/themes#mixin-theme)
+* [Palette]({environment:sassApiUrl}/palettes#function-palette)
 
 <div class="divider--half"></div>
 

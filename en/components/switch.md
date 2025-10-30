@@ -140,7 +140,7 @@ To get started with styling the switch, we need to import the `index` file, wher
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Then, we create a new theme that extends the [`switch-theme`]({environment:sassApiUrl}/index.html#function-switch-theme) and by providing just two parameters - `$thumb-off-color` and `$thumb-on-color` you can get a fully styled switch, as the theme generates all the rest of the necessary colors based on these two, you can of course override any of the other parameters for a customized look:
+Then, we create a new theme that extends the [`switch-theme`]({environment:sassApiUrl}/themes#function-switch-theme) and by providing just two parameters - `$thumb-off-color` and `$thumb-on-color` you can get a fully styled switch, as the theme generates all the rest of the necessary colors based on these two, you can of course override any of the other parameters for a customized look:
 
 ```scss
 $custom-switch-theme: switch-theme(
@@ -170,11 +170,11 @@ The last step is to **include** the component theme in our application.
 <div class="divider--half"></div>
 
 * [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
-* [IgxSwitchComponent Styles]({environment:sassApiUrl}/index.html#function-switch-theme)
+* [IgxSwitchComponent Styles]({environment:sassApiUrl}/themes#function-switch-theme)
 
 ## Theming Dependencies
 
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
+* [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ## Additional Resources
 

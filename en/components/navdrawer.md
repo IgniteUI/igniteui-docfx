@@ -463,7 +463,7 @@ To get started with styling the navigation drawer, we need to import the `index`
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`navdrawer-theme`]({environment:sassApiUrl}/index.html#function-navdrawer-theme) and accepts a few parameters that style the navdrawer's items:
+Following the simplest approach, we create a new theme that extends the [`navdrawer-theme`]({environment:sassApiUrl}/themes#function-navdrawer-theme) and accepts a few parameters that style the navdrawer's items:
 
 ```scss
 $custom-theme: navdrawer-theme(
@@ -503,4 +503,4 @@ The last step is to **include** the component theme in our application.
 ## API and Style References
 
 * [IgxNavigationDrawerComponent API]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html)
-* [IgxNavigationDrawerComponent Styles]({environment:sassApiUrl}/index.html#function-navdrawer-theme)
+* [IgxNavigationDrawerComponent Styles]({environment:sassApiUrl}/themes#function-navdrawer-theme)

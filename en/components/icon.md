@@ -222,7 +222,7 @@ To get started with styling the icons, we need to import the `index` file, where
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`icon-theme`]({environment:sassApiUrl}/index.html#function-icon-theme) and accepts the parameters, required to customize the icon as desired.
+Following the simplest approach, we create a new theme that extends the [`icon-theme`]({environment:sassApiUrl}/themes#function-icon-theme) and accepts the parameters, required to customize the icon as desired.
 
 ```scss
 $custom-icon-theme: icon-theme(
@@ -247,7 +247,7 @@ The last step is to pass the custom icon theme in our application:
 
 ### SVG Limitations
 
-It’s important to note that when using custom SVG icons, the [`icon-theme`]({environment:sassApiUrl}/index.html#function-icon-theme) can apply and overwrite colors only on the `<svg>` element itself. If the SVG contains child elements such as `<path>`, `<rect>`, `<circle>`, `<g>`, etc., with hardcoded color values, those colors cannot be overridden by the theme.
+It’s important to note that when using custom SVG icons, the [`icon-theme`]({environment:sassApiUrl}/themes#function-icon-theme) can apply and overwrite colors only on the `<svg>` element itself. If the SVG contains child elements such as `<path>`, `<rect>`, `<circle>`, `<g>`, etc., with hardcoded color values, those colors cannot be overridden by the theme.
 
 For example:
 
@@ -265,9 +265,9 @@ In this case, the icon will always use the `#050d42` color defined in the `<path
 </svg>
 ```
 
-Here, the fill color is applied to the `<svg>` element, so it can be overridden with custom color provided via [`icon-theme`]({environment:sassApiUrl}/index.html#function-icon-theme).
+Here, the fill color is applied to the `<svg>` element, so it can be overridden with custom color provided via [`icon-theme`]({environment:sassApiUrl}/themes#function-icon-theme).
 
-We recommend not using hardcoded colors on SVG child elements so the icon can be styled entirely using the [`icon-theme`]({environment:sassApiUrl}/index.html#function-icon-theme). However, if you still want to apply hardcoded colors to child elements, you can also use the Ignite UI color variables.
+We recommend not using hardcoded colors on SVG child elements so the icon can be styled entirely using the [`icon-theme`]({environment:sassApiUrl}/themes#function-icon-theme). However, if you still want to apply hardcoded colors to child elements, you can also use the Ignite UI color variables.
 
 ```html
 <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -318,7 +318,7 @@ Learn more about it in the [Size](display-density.md) article.
 <div class="divider--half"></div>
 
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## Additional Resources
 

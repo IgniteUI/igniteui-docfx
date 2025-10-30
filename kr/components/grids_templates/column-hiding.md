@@ -429,7 +429,7 @@ export class AppModule {}
 열 숨기기 UI에는 아래에 나열된 몇 가지 API가 추가로 포함되어 있습니다.
 
 * [IgxColumnHidingComponent]({environment:angularApiUrl}/classes/igxcolumnhidingcomponent.html)
-* [IgxColumnHidingComponent 스타일]({environment:sassApiUrl}/index.html#function-igx-column-hiding-theme)
+* [IgxColumnHidingComponent 스타일]({environment:sassApiUrl}/themes#function-igx-column-hiding-theme)
 
 사용된 상대 API가 있는 추가 컴포넌트 및/또는 지시문:
 
@@ -448,8 +448,8 @@ export class AppModule {}
 
 스타일:
 
-* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-grid-theme)
-* [IgxRadioComponent 스타일]({environment:sassApiUrl}/index.html#function-radio-theme)
+* [@@igxNameComponent 스타일]({environment:sassApiUrl}/themes#function-grid-theme)
+* [IgxRadioComponent 스타일]({environment:sassApiUrl}/themes#function-radio-theme)
 
 ### 추가 리소스
 <div class="divider--half"></div>

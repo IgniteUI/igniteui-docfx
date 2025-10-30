@@ -552,7 +552,7 @@ $my-dark-palette: palette(
 $my-dark-color: color($my-dark-palette, 'surface');
 ```
 
-Now, create a new theme that extends the [`grid-toolbar-theme`]({environment:sassApiUrl}/index.html#function-grid-toolbar-theme) and modify the `$background-color` and the `$title-text-color` parameters.
+Now, create a new theme that extends the [`grid-toolbar-theme`]({environment:sassApiUrl}/themes#function-grid-toolbar-theme) and modify the `$background-color` and the `$title-text-color` parameters.
 
 ```scss
 $dark-grid-toolbar-theme: grid-toolbar-theme(
@@ -562,7 +562,7 @@ $dark-grid-toolbar-theme: grid-toolbar-theme(
 );
 ```
 
-To theme the column actions menus of the toolbar, we have to change the theme of the [`column-actions-theme`]({environment:sassApiUrl}/index.html#function-igx-column-actionsr-theme) component.
+To theme the column actions menus of the toolbar, we have to change the theme of the [`column-actions-theme`]({environment:sassApiUrl}/themes#function-igx-column-actionsr-theme) component.
 
 ```scss
 $dark-column-actions-theme: column-actions-theme(
@@ -660,7 +660,7 @@ The Grid Toolbar service has a few more APIs to explore, which are listed below.
 
 Styles:
 
-* [`@@igxNameComponent Styles`]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [`@@igxNameComponent Styles`]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ## Additional Resources
 

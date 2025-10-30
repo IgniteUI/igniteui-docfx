@@ -35,9 +35,9 @@ Ignite UI for Angular チャートを使用すると、マウス、キーボー�
 
 Angular データ チャートのナビゲーションは、タッチ、マウスまたはキーボードのいずれかを使用して発生します。以下の操作は、デフォルトで以下のタッチ、マウスまたはキーボード操作を使用して呼び出すことができます。
 
-*   **パン**: キーボードの矢印キーを使用するか、Shift キーを押したまま、マウスでクリックしてドラッグするか、タッチで指を押して移動します。
-*   **ズームイン**: キーボードの PageUp キーを使用するか、マウスホイールを上に回転させるか、ピンチしてタッチでズームインします。
-*   **ズームアウト**: キーボードの PageDown キーを使用するか、マウスホイールを下に回転させるか、ピンチしてタッチでズームアウトします。
+*   **パン**: キーボードの <kbd>🡐</kbd> <kbd>🡒</kbd> <kbd>🡑</kbd> <kbd>🡓</kbd> 矢印キーを使用するか、<kbd>SHIFT</kbd> キーを押したまま、マウスでクリックしてドラッグするか、タッチで指を押して移動します。
+*   **ズームイン**: キーボードの <kbd>PAGE UP</kbd> キーを使用するか、マウスホイールを上に回転させるか、ピンチしてタッチでズームインします。
+*   **ズームアウト**: キーボードの <kbd>PAGE DOWN</kbd> キーを使用するか、マウスホイールを下に回転させるか、ピンチしてタッチでズームアウトします。
 *   **チャート プロット領域に合わせる**: キーボードのホームキーを使用します。これに対するマウスまたはタッチ操作はありません。
 *   **領域ズーム**: [`defaultInteraction`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#defaultInteraction) プロパティをデフォルトの `DragZoom` に設定して、プロット領域内でマウスをクリックしてドラッグします。
 
@@ -45,10 +45,10 @@ Angular データ チャートのナビゲーションは、タッチ、マウ�
 
 | 修飾値 | 対応するキー |
 | ---------------|------------------ |
-| `Shift`        | <kbd>Shift</kbd> |
-| `Control`      | <kbd>Ctrl</kbd> |
-| `Windows`      | <kbd>Win</kbd> |
-| `Apple`        | <kbd>Apple</kbd> |
+| `Shift`        | <kbd>SHIFT</kbd> |
+| `Control`      | <kbd>CTRL</kbd> |
+| `Windows`      | <kbd>WIN</kbd> |
+| `Apple`        | <kbd>APPLE</kbd> |
 | `None`         | なし |
 
 ## スクロールバーを使用したチャート ナビゲーション

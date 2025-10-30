@@ -165,10 +165,10 @@ Following the simplest approach, we use CSS variables to customize the appearanc
 }
 ```
 
-Take a look at the [`icon-button-theme`]({environment:sassApiUrl}/index.html#function-icon-button-theme) section for a complete list of available parameters for styling any type of icon button.
+Take a look at the [`icon-button-theme`]({environment:sassApiUrl}/themes#function-icon-button-theme) section for a complete list of available parameters for styling any type of icon button.
 
 You can also choose to style only buttons of a specific type - `flat`, `outlined` or `contained`.
-To do this, you can use the new type-specific theme functions: [`flat-icon-button-theme`]({environment:sassApiUrl}/index.html#function-flat-icon-button-theme), [`outlined-icon-button-theme`]({environment:sassApiUrl}/index.html#function-outlined-icon-button-theme) and [`contained-icon-button-theme`]({environment:sassApiUrl}/index.html#function-contained-icon-button-theme)
+To do this, you can use the new type-specific theme functions: [`flat-icon-button-theme`]({environment:sassApiUrl}/themes#function-flat-icon-button-theme), [`outlined-icon-button-theme`]({environment:sassApiUrl}/themes#function-outlined-icon-button-theme) and [`contained-icon-button-theme`]({environment:sassApiUrl}/themes#function-contained-icon-button-theme)
 
 Here’s an example of using the `contained-icon-button-theme` function to define a custom theme in SCSS:
 
@@ -193,7 +193,7 @@ This will generate a fully themed `contained icon button`, including appropriate
 <div class="divider--half"></div>
 
 * [IgxIconButtonDirective]({environment:angularApiUrl}/classes/igxiconbuttondirective.html)
-* [IgxIconButton Styles]({environment:sassApiUrl}/index.html#function-icon-button-theme)
+* [IgxIconButton Styles]({environment:sassApiUrl}/themes#function-icon-button-theme)
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
 
 ## Additional Resources
