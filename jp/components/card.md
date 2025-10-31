@@ -329,7 +329,25 @@ Angular Card の操作領域では、すでに説明したコンテンツに追�
 ```
 
 ## スタイル設定
-Card のスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
+
+最も簡単な方法は、CSS 変数を使用してカードの外観をカスタマイズする方法です。
+
+```css
+igx-card {
+    --border-radius: 8px;
+    --outline-color: #f0f0f0;
+    --background: #bfbfbf;
+    --header-text-color: #000;
+}
+```
+
+これらの CSS 変数の値を変更することで、カード コンポーネントの全体的な外観を変更できます。
+
+<div class="divider--half"></div>
+
+カードにスタイルを設定する別の方法は、**Sass** と [`card-theme`]({environment:sassApiUrl}/index.html#function-card-theme) 関数を使用することです。
+
+**Sass** を使用してカードのスタイル設定を開始するには、まずすべてのテーマ関数とコンポーネント ミックスインを含む `index` ファイルをインポートします。
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -341,29 +359,25 @@ Card のスタイル設定を始めるには、すべてのテーマ関数とコ
 最もシンプルな方法として、[`card-theme`]({environment:sassApiUrl}/themes#function-card-theme) を拡張し、少数のスタイル パラメーターのみを指定して新しいテーマを作成します。`$background` パラメーターのみを指定した場合でも、適切な前景色 (黒または白) が自動的に選ばれて割り当てられます。
 
 ```scss
-$colorful-card: card-theme(
-  $background: #011627,
-  $subtitle-text-color: #ecaa53,
+$custom-card-theme: card-theme(
+    $background: #011627,
+    $subtitle-text-color: #ecaa53,
 );
 ```
 
-ご覧のとおり、`card-theme` は、アイテムの基本的なスタイル設定に役立ついくつかのパラメーターを公開しています。
-
-最後の手順は、コンポーネントのテーマを**含める**ことです。
+最後に、カスタム テーマをアプリケーションに**含めます**。
 
 ```scss
-@include css-vars($colorful-card);
+@include css-vars($custom-card-theme);
 ```
 
-### Angular Card のデモ
+以下のサンプルでは、カスタマイズした CSS 変数を使用したカード コンポーネントが、[`Ant`](https://ant.design/components/card?theme=light#card-demo-meta) デザイン システムのカードに視覚的に似たデザインを実現している様子を確認できます。 
 
-
-<code-view style="height: 486px" 
+<code-view style="height: 400px"  
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/card-styling-sample/" >
 </code-view>
-
 
 ### まとめ
 このトピックでは Card コンポーネントの詳細について説明しました。最初にテキスト コンテンツのみを含むベーシックなカードを作成しました。次に画像を追加しました。他の Ignite UI for Angular コンポーネントをカードで使用して、アバター、ボタン、およびアイコンを追加して機能性を向上しました。最後に公開されたテーマの色を設定してカスタムパレットを作成、スキーマを拡張してカードのテーマを変更しました。

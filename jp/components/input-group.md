@@ -6,6 +6,7 @@ _language: ja
 ---
 
 # Angular Input Group (入力グループ) コンポーネントの概要
+
 `IgxInputGroupComponent` は、ユーザーが input、select、textarea などの入力要素を拡張することを可能にします。これは、テキスト、アイコン、ボタン、カスタム バリデーション、フローティング ラベルなどのカスタム コンテンツを、プレフィックス、サフィックス、またはヒントとして、それらの両側に追加することで実現できます。
 
 ## Angular Input Group の例
@@ -84,9 +85,11 @@ Ignite UI for Angular Input Group モジュールまたはディレクティブ�
 ## Angular Input Group の使用
 
 ### Label および Input
+
 [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html)、[`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) ディレクティブとその検証、データ バインディング、API については、[このトピック](label-input.md)を参照してください。
 
 ### Prefix および Suffix
+
 `igx-prefix` / `igxPrefix` および `igx-suffix` / `igxSuffix` ディレクティブは、HTML 要素、文字列、アイコン、またはその他のコンポーネントを含むことができます。以下のサンプルでは、文字列 **prefix** とアイコン **suffix** を持つ新しい入力フィールドを作成します。
 
 ```html
@@ -106,6 +109,7 @@ Ignite UI for Angular Input Group モジュールまたはディレクティブ�
 <div class="divider--half"></div>
 
 ### Hint
+
 [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) ディレクティブは、入力の下に配置されるヘルパー テキストを提供します。[`position`]({environment:angularApiUrl}/classes/igxhintdirective.html#position) プロパティの値に応じて、入力の開始または終了の位置に配置できます。以下は、phone 入力にヒントを追加します。
 
 ```html
@@ -129,6 +133,7 @@ Ignite UI for Angular Input Group モジュールまたはディレクティブ�
 <div class="divider--half"></div>
 
 ### Input タイプと Input グループ タイプ トークン
+
 入力グループのスタイルは、[`igxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) コンポーネントの [`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) プロパティを使用して変更できます。サポートされている入力グループ コンポーネントは、`line` (タイプが指定されていない場合のデフォルト)、`border`、`box` および `search` です。`line`、`border` および `box` タイプは、マテリアル デザイン テーマ専用に作成されています。これらのタイプを他のテーマで設定しても、入力グループの外観には影響しません。
 
 特定の型を宣言的に設定する例:
@@ -169,6 +174,7 @@ Ignite UI for Angular は、`type="file"` の入力スタイルも提供し、�
 ```
 
 ### 型指定されたフォーム
+
 Ignite UI for Angular Input Group コンポーネントは、Angular 14 のデフォルトの厳密に型指定されたリアクティブ フォーム内で使用できます。型指定されたフォームの詳細については、[Angular 公式ドキュメント](https://angular.io/guide/typed-forms)をご覧ください。
 
 <code-view style="height:770px"
@@ -177,9 +183,11 @@ Ignite UI for Angular Input Group コンポーネントは、Angular 14 のデ�
 </code-view>
 
 ## 検証
+
 次のサンプルは、[テンプレート駆動フォーム](https://angular.io/guide/forms)または[リアクティブ フォーム](https://angular.io/guide/reactive-forms)を使用する場合に入力検証を構成する方法を示しています。
 
 ### テンプレート駆動フォーム
+
 テンプレート駆動のフォーム検証は、検証属性 (`required`、`minlength` など) を `input` 要素に追加することによって実現されます。
 
 ```html
@@ -252,6 +260,7 @@ Ignite UI for Angular Input Group コンポーネントは、Angular 14 のデ�
 </code-view>
 
 ### リアクティブ フォーム
+
 コンポーネント クラスのフォーム コントロール モデルにバリデーター関数を直接追加することにより、リアクティブなフォーム検証が実現されます。コンポーネント クラスでコントロールを作成したら、テンプレートのフォーム コントロール要素に関連付ける必要があります。
 
 ```ts
@@ -326,6 +335,7 @@ public get password() {
 </code-view>
 
 ### カスタム バリデータ
+
 一部の入力フィールドではカスタム検証が必要な場合があり、これはカスタム バリデータを介して実現できます。値が無効な場合、バリデータは特定のエラー メッセージを表示するために使用できる一連のエラーを生成します。
 
 以下は、入力されたメール アドレスに定義済みの値が含まれているかどうかを検証し、値が発生する場所に基づいてさまざまなエラーを生成する、単純なカスタム リアクティブ フォーム バリデータの例です。
@@ -367,6 +377,7 @@ private emailValidator(val: string): ValidatorFn {
 ```
 
 ### クロス フィールド検証
+
 場合によっては、1 つのコントロールの検証が別のコントロールの値に依存することがあります。単一のカスタム バリデータで両方のコントロールを評価するには、共通の祖先コントロール (`FormGroup` など) で検証を実行する必要があります。バリデータは、`FormGroup` の `get` メソッドを呼び出して子コントロールを取得し、値を比較します。検証に失敗すると、`FormGroup` に対して一連のエラーを生成します。
 
 これにより、フォームの状態のみが無効に設定されます。コントロールの状態を設定するには、[`setErrors`](https://angular.io/api/forms/AbstractControl#seterrors) メソッドを使用して、生成したエラーを手動で追加します。次に、検証が成功すると、[`setValue`](https://angular.io/api/forms/AbstractControl#setvalue) メソッドを使用してエラーを削除できます。このメソッドは、指定された値に対してコントロールの検証を再実行します。
@@ -468,13 +479,16 @@ $custom-input-group: input-group-theme(
 @include css-vars($custom-input-group);
 ```
 
-### デモ
+以下のサンプルでは、カスタマイズした CSS 変数を使用した入力グループが、[`Carbon`](https://carbondesignsystem.com/components/text-input/usage/#live-demo) デザイン システムの入力グループに視覚的に似たデザインを実現している様子を確認できます。
 
 <code-view style="height:230px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-style/" >
 </code-view>
+
+> [!NOTE]
+> サンプルでは、[Indigo Light](themes/sass/schemas.md#predefined-schemas) スキーマを使用します。
 
 >[!NOTE]
 >ページ内に `box`、`border`、`line`、`search` といった複数のタイプの input-group が存在する場合は、特定のタイプごとにテーマ変数のスコープを設定するのが最適です。

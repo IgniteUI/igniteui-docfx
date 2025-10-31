@@ -133,7 +133,33 @@ igx-switch {
 
 ## スタイル設定
 
-スイッチのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
+最も簡単な方法は、CSS 変数を使用してスイッチの外観をカスタマイズする方法です。
+
+```css
+igx-switch {
+    --thumb-on-color: #e3f0ff;
+    --thumb-off-color: #fff;
+    --track-on-color: #0064d9;
+    --track-off-color: #788fa6;
+    --track-on-hover-color: #0058bf;
+    --border-radius-track: 1rem;
+    --focus-outline-color: #0032a5;
+    --border-on-color: transparent;
+    --border-color: transparent;
+}
+
+igx-switch:hover {
+    --track-off-color: #637d97;
+}
+```
+
+これらの CSS 変数の値を変更することで、スイッチ コンポーネントの全体的な外観を変更できます。
+
+<div class="divider--half"></div>
+
+スイッチにスタイルを設定する別の方法は、**Sass** と [`switch-theme`]({environment:sassApiUrl}/index.html#function-switch-theme) 関数を使用することです。
+
+**Sass** を使用してスイッチのスタイル設定を開始するには、まずすべてのテーマ関数とコンポーネント ミックスインを含む `index` ファイルをインポートします。
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -146,24 +172,27 @@ igx-switch {
 
 ```scss
 $custom-switch-theme: switch-theme(
-  $thumb-off-color: #7cadd5,
-  $thumb-on-color: #ecaa53,
+    $thumb-off-color: #7cadd5,
+    $thumb-on-color: #ecaa53,
 );
 ```
 
-最後にコンポーネントのテーマをアプリケーションに**含めます**。
+最後に、カスタム テーマをアプリケーションに**含めます**。
 
 ```scss
 @include css-vars($custom-switch-theme);
 ```
 
-### デモ
+以下のサンプルでは、カスタマイズした CSS 変数を使用したスイッチ コンポーネントが、[`SAP UI5`](https://ui5.sap.com/#/entity/sap.m.Switch/sample/sap.m.sample.Switch) デザイン システムのスイッチに視覚的に似たデザインを実現している様子を確認できます。
 
 <code-view style="height: 200px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/switch-styling/" >
 </code-view>
+
+> [!NOTE]
+> サンプルでは、[Fluent Light](themes/sass/schemas.md#predefined-schemas) スキーマを使用します。
 
 <div class="divider--half"></div>
 
