@@ -376,7 +376,356 @@ These configurions will have the following result:
            iframe-src="{environment:demosBaseUrl}/layouts/carousel-no-navigation-sample/" >
 </code-view>
 
+## Angular Carousel Styling
 
+### Carousel Theme Property Map
+
+When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
+
+<div class="theme-switcher-wrapper">
+  <input type="radio" name="theme" id="material" checked>
+  <label for="material" class="switch-label">Material</label>
+  <input type="radio" name="theme" id="fluent">
+  <label for="fluent" class="switch-label">Fluent</label>
+  <input type="radio" name="theme" id="bootstrap">
+  <label for="bootstrap" class="switch-label">Bootstrap</label>
+  <input type="radio" name="theme" id="indigo">
+  <label for="indigo" class="switch-label">Indigo</label>
+
+  <div class="tables">
+    <!-- Material Theme Table -->
+    <div class="theme-table material">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-background</strong></summary></details></td>
+            <td>$button-hover-background</td>
+            <td>The background color of the button on hover.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-arrow-color</td><td>The color of the button arrow.</td></tr>
+          <tr class="dependent"><td></td><td>$button-disabled-background</td><td>The background color of the button when disabled.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-focus-color <br> (When $indicator-background is not provided)</td><td>The color of the indicator when focused.</td></tr>
+          <tr class="primary">
+            <td><strong>$button-hover-background</strong></td>
+            <td>$button-hover-arrow-color</td>
+            <td>The color of the button arrow on hover.</td>
+          </tr>
+          <tr class="primary">
+            <td><strong>$button-disabled-background</strong></td>
+            <td>$button-disabled-arrow-color</td>
+            <td>The color of the button arrow when disabled.</td>
+          </tr>
+          <tr class="primary">
+            <td><strong>$button-hover-arrow-color</strong></td>
+            <td>$button-focus-arrow-color</td>
+            <td>The color of the button arrow when focused.</td>
+          </tr>
+          <tr class="primary">
+            <td><strong>$button-focus-arrow-color</strong></td>
+            <td>$button-focus-border-color</td>
+            <td>The border color of the button when focused.</td>
+          </tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$indicator-background</strong></summary></details></td>
+            <td>$indicator-border-color</td>
+            <td>The color of the indicator border.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$indicator-active-dot-color</td><td>The color of the indicator dot when active.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-focus-color</td><td>The color of the indicator when focused.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$indicator-active-dot-color</strong></summary></details></td>
+            <td>$indicator-active-hover-dot-color</td>
+            <td>The color of the indicator when active and hovered.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$indicator-active-border-color</td><td>The color of the indicator border when active.</td></tr>
+          <tr class="primary">
+            <td><strong>$indicator-dot-color</strong></td>
+            <td>$indicator-hover-dot-color</td>
+            <td>The color of the indicator dot on hover.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+   <!-- Fluent Theme Table -->
+    <div class="theme-table fluent">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-background</strong></summary></details></td>
+            <td>$button-hover-background</td>
+            <td>The background color of the button on hover.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-arrow-color</td><td>The color of the button arrow.</td></tr>
+          <tr class="dependent"><td></td><td>$button-disabled-background</td><td>The background color of the button when disabled.</td></tr>
+          <tr class="dependent"><td></td><td>$button-focus-border-color</td><td>The border color of the button when focused.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-focus-color <br> (When $indicator-background is not provided)</td><td>The color of the indicator when focused.</td></tr>
+          <tr class="primary">
+            <td><strong>$button-hover-background</strong></td>
+            <td>$button-hover-arrow-color</td>
+            <td>The color of the button arrow on hover.</td>
+          </tr>
+          <tr class="primary">
+            <td><strong>$button-disabled-background</strong></td>
+            <td>$button-disabled-arrow-color</td>
+            <td>The color of the button arrow when disabled.</td>
+          </tr>
+          <tr class="primary">
+            <td><strong>$button-hover-arrow-color</strong></td>
+            <td>$button-focus-arrow-color</td>
+            <td>The color of the button arrow when focused.</td>
+          </tr>
+         </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$indicator-background</strong></summary></details></td>
+            <td>$indicator-border-color</td>
+            <td>The color of the indicator border.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$indicator-active-dot-color</td><td>The color of the indicator dot when active.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-focus-color</td><td>The color of the indicator when focused.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$indicator-active-dot-color</strong></summary></details></td>
+            <td>$indicator-active-hover-dot-color</td>
+            <td>The color of the indicator when active and hovered.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$indicator-active-border-color</td><td>The color of the indicator border when active.</td></tr>
+          <tr class="primary">
+            <td><strong>$indicator-dot-color</strong></td>
+            <td>$indicator-hover-dot-color</td>
+            <td>The color of the indicator dot on hover.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Bootstrap Theme Table -->
+    <div class="theme-table bootstrap">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-background</strong></summary></details></td>
+            <td>$button-hover-background</td>
+            <td>The background color of the button on hover.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-arrow-color</td><td>The color of the button arrow.</td></tr>
+          <tr class="dependent"><td></td><td>$button-disabled-background</td><td>The background color of the button when disabled.</td></tr>
+          <tr class="dependent"><td></td><td>$button-focus-border-color</td><td>The border color of the button when focused.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-focus-color <br> (When $indicator-background is not provided)</td><td>The color of the indicator when focused.</td></tr>
+          <tr class="primary">
+            <td><strong>$button-hover-background</strong></td>
+            <td>$button-hover-arrow-color</td>
+            <td>The color of the button arrow on hover.</td>
+          </tr>
+          <tr class="primary">
+            <td><strong>$button-disabled-background</strong></td>
+            <td>$button-disabled-arrow-color</td>
+            <td>The color of the button arrow when disabled.</td>
+          </tr>
+          <tr class="primary">
+            <td><strong>$button-hover-arrow-color</strong></td>
+            <td>$button-focus-arrow-color</td>
+            <td>The color of the button arrow when focused.</td>
+          </tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$indicator-background</strong></summary></details></td>
+            <td>$indicator-border-color</td>
+            <td>The color of the indicator border.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$indicator-active-dot-color</td><td>The color of the indicator dot when active.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-focus-color</td><td>The color of the indicator when focused.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$indicator-active-dot-color</strong></summary></details></td>
+            <td>$indicator-active-hover-dot-color</td>
+            <td>The color of the indicator when active and hovered.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$indicator-active-border-color</td><td>The color of the indicator border when active.</td></tr>
+          <tr class="primary">
+            <td><strong>$indicator-dot-color</strong></td>
+            <td>$indicator-hover-dot-color</td>
+            <td>The color of the indicator dot on hover.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Indigo Theme Table -->
+    <div class="theme-table indigo">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-background</strong></summary></details></td>
+            <td>$button-hover-background</td>
+            <td>The background color of the button on hover.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-border-color</td><td>The border color of the button.</td></tr>
+          <tr class="dependent"><td></td><td>$button-arrow-color</td><td>The color of the button arrow.</td></tr>
+          <tr class="dependent"><td></td><td>$button-disabled-background</td><td>The background color of the button when disabled.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-active-dot-color <br> (When $indicator-background is not provided)</td><td>The color of the indicator dot when active.</td></tr>
+          <tr class="primary">
+            <td><strong>$button-hover-background</strong></td>
+            <td>$button-hover-arrow-color</td>
+            <td>The color of the button arrow on hover.</td>
+          </tr>
+          <tr class="primary">
+            <td><strong>$button-disabled-background</strong></td>
+            <td>$button-disabled-arrow-color</td>
+            <td>The color of the button arrow when disabled.</td>
+          </tr>
+          <tr class="primary">
+            <td><strong>$button-border-color</strong></td>
+            <td>$button-hover-border-color</td>
+            <td>The border color of the button on hover.</td>
+          </tr>
+          <tr class="primary">
+            <td><strong>$button-hover-arrow-color</strong></td>
+            <td>$button-focus-arrow-color</td>
+            <td>The color of the button arrow when focused.</td>
+          </tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$indicator-background</strong></summary></details></td>
+            <td>$indicator-dot-color</td>
+            <td>The color of the indicator dot.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$indicator-active-dot-color</td><td>The color of the indicator dot when active.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$indicator-dot-color</strong></summary></details></td>
+            <td>$indicator-hover-dot-color</td>
+            <td>The color of the indicator dot on hover.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$indicator-border-color</td><td>The color of the indicator border.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$indicator-active-dot-color</strong></summary></details></td>
+            <td>$indicator-active-hover-dot-color</td>
+            <td>The color of the indicator when active and hovered.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$indicator-active-border-color</td><td>The color of the indicator border when active.</td></tr>
+          <tr class="dependent"><td></td><td>$button-focus-border-color</td><td>The border color of the button when focused.</td></tr>
+          <tr class="primary">
+            <td><strong>$indicator-active-hover-dot-color</strong></td>
+            <td>$indicator-focus-color</td>
+            <td>The color of the indicator when focused.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the `carousel` appearance. 
+
+First, in order to use the functions exposed by the theme engine, we need to import the `index` file in our style file: 
+
+```scss
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+Following the simplest approach, we create a new theme that extends the [carousel-theme]({environment:sassApiUrl}/themes#function-carousel-theme), and by providing just a few base parameters like `$button-background` and `$indicator-background`, the theme will generate the appropriate state-specific colors and contrasting foregrounds. You can also override any of the available parameters if you want more control over the appearance.
+
+```scss
+$carousel-theme: carousel-theme(
+  $button-background: #7c32dd,
+  $indicator-background: #7c32dd,
+);
+```
+
+The last step is to include the component's theme.
+
+```scss
+@include css-vars($carousel-theme);
+```
+
+### Demo
+
+The sample below demonstrates a simple styling applied through the [Ignite UI for Angular Theming](themes/index.md).
+
+<code-view style="height: 310px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/carousel-styling-sample/" alt="Angular Carousel Styling Example">
+</code-view>
+
+### Styling with Tailwind
+
+You can style the `carousel` using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-carousel`, `dark-carousel`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [carousel-theme]({environment:sassApiUrl}/themes#function-carousel-theme). The syntax is as follows:
+
+```html
+<igx-carousel class="!light-carousel
+![--indicator-background:#a7b6de] 
+![--button-background:#a7b6de] 
+![--indicator-border-color:#3E4853]">
+  ...
+</igx-carousel>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your carousel should look like this:
+
+<div class="sample-container loading" style="height:310px">
+    <iframe id="carousel-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/carousel-tailwind-sample/' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ## Accessibility
 ### WAI-ARIA Roles, States, and Properties

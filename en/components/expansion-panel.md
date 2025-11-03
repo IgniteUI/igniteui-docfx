@@ -211,10 +211,61 @@ Lets see the result from all the above changes:
 
 
 
-## Styling  
+## Styling 
+
+### Expansion Panel Theme Property Map
+
+Changing the `$header-background` and `$body-background` properties automatically updates the following dependent properties:
+
+<table class="collapsible-table">
+    <thead>
+        <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody class="group">
+        <tr class="primary">
+            <td><details><summary><strong>$header-background</strong></summary></details></td>
+            <td>$header-title-color</td>
+            <td>The panel header title text color.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$header-icon-color</td>
+            <td>The panel header icon color.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$header-description-color</td>
+            <td>The panel header description text color.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$header-focus-background</td>
+            <td>The panel header focus background color.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$disabled-text-color</td>
+            <td>The panel disabled text color.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$disabled-description-color</td>
+            <td>The panel disabled header description text color.</td>
+        </tr>
+        <tr class="primary">
+            <td><strong>$body-background</strong></td>
+            <td>$body-color</td>
+            <td>The panel body text color.</td>
+        </tr>
+    </tbody>
+</table>
 
 ### Palettes & Colors
-Fist we create a custom palette which can later be passed to our component:
+First we create a custom palette which can later be passed to our component:
 ```scss
 // In real life, this should be in our main sass file so we can share the palette between all components. 
 // In our case, it's in the component SCSS file "expansion-styling.component.scss".
@@ -289,6 +340,46 @@ To find out more on how you can use Ignite UI theming engine [`click here`](them
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/expansion-styling/" >
 </code-view>
+
+### Styling with Tailwind
+
+You can style the expansion panel using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-expansion-panel`, `dark-expansion-panel`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [expansion-panel-theme]({environment:sassApiUrl}/themes#function-expansion-panel-theme). The syntax is as follows:
+
+```html
+<igx-expansion-panel
+  class="!light-expansion-panel
+  ![--header-background:#4F6A5A]
+  ![--body-background:#A3C7B2]"
+>
+  ...
+</igx-expansion-panel>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your expansion panel should look like this:
+
+<div class="sample-container loading" style="height:440px">
+    <iframe id="expansion-panel-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/expansion-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ## Angular Expansion Panel Animations 
 ### Using specific animation

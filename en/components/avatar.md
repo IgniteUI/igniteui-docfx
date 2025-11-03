@@ -141,6 +141,32 @@ You should see something like this:
 
 ## Styling
 
+### Avatar Theme Property Map
+
+Changing the `$background` property automatically updates the following dependent properties:
+
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>Primary Property</th>
+      <th>Dependent Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+      <td><strong>$background</strong></td>
+      <td>$color</td>
+      <td>The text color used for the avatar.</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>$icon-color</td>
+      <td>The icon color used for the avatar.</td>
+    </tr>
+  </tbody>
+</table>
+
 To get started with styling the avatar, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
@@ -185,6 +211,44 @@ If all went well, you should see something like the following in the browser:
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/avatar-styling/" >
 </code-view>
+
+### Styling with Tailwind
+
+You can style the `avatar` using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-avatar`, `dark-avatar`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [avatar-theme]({environment:sassApiUrl}/themes#function-avatar-theme). The syntax is as follows:
+
+```html
+<igx-avatar
+class="!light-avatar ![--background:#FF4E00]"
+initials="DY"
+shape="rounded">
+</igx-avatar>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your avatar should look like this:
+
+<div class="sample-container loading" style="height:100px">
+    <iframe id="avatar-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ### Custom sizing
 

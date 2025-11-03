@@ -277,6 +277,68 @@ When combobox is opened, allow custom values are enabled and add item button is 
 
 ## Styling
 
+### Combo Theme Property Map
+
+When you modify a primary property, all related dependent properties are updated automatically:
+
+<table class="collapsible-table">
+    <thead>
+        <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody class="group">
+        <tr class="primary">
+            <td><strong>$empty-list-background</strong></td>
+            <td>$empty-list-placeholder-color</td>
+            <td>The combo placeholder text color.</td>
+        </tr>
+        <tr class="primary">
+            <td><details><summary><strong>$toggle-button-background</strong></summary></details></td>
+            <td>$toggle-button-foreground</td>
+            <td>The combo toggle button foreground color.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$toggle-button-background-focus</td>
+            <td>The combo toggle button background color when focused.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$toggle-button-background-focus--border</td>
+            <td>The combo toggle button background color when focused (border variant).</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$toggle-button-foreground-filled</td>
+            <td>The combo toggle button foreground color when filled.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$toggle-button-background-disabled</td>
+            <td>The combo toggle button background color when disabled.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$toggle-button-foreground-disabled</td>
+            <td>The combo toggle button foreground color when disabled.</td>
+        </tr>
+        <tr class="primary">
+            <td><strong>$toggle-button-background-focus</strong></td>
+            <td>$toggle-button-foreground-focus</td>
+            <td>The combo toggle button foreground color when focused.</td>
+        </tr>
+        <tr class="primary">
+            <td><strong>$clear-button-background-focus</strong></td>
+            <td>$clear-button-foreground-focus</td>
+            <td>The combo clear button foreground color when focused.</td>
+        </tr>
+    </tbody>
+</table>
+
+
 Using the [`Ignite UI for Angular Theming`](themes/index.md), we can greatly alter the combobox appearance. First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file:
 
 ```scss
@@ -335,6 +397,44 @@ The last step is to include the component's theme.
 
 
 <div class="divider--half"></div>
+
+### Styling with Tailwind
+
+You can style the `combo` using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-combo`, `dark-combo`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [combo-theme]({environment:sassApiUrl}/themes#function-combo-theme). The syntax is as follows:
+
+```html
+<igx-combo
+class="!light-combo
+![--toggle-button-background:#99BAA6]
+![--clear-button-foreground:#99BAA6]"
+...></igx-combo>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your combo should look like this:
+
+<div class="sample-container loading" style="height:410px">
+    <iframe id="combo-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/lists/combo-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ## Known Issues
 
