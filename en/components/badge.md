@@ -288,6 +288,32 @@ If the sample is configured properly, a list of members should be displayed and 
 
 ## Styling
 
+### Badge Theme Property Map
+
+Changing the `$background-color` property automatically updates the following dependent properties:
+
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>Primary Property</th>
+      <th>Dependent Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+      <td><strong>$background-color</strong></td>
+      <td>$icon-color</td>
+      <td>The color used for icons in the badge.</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>$text-color</td>
+      <td>The color used for text in the badge.</td>
+    </tr>
+  </tbody>
+</table>
+
 To get started with styling the badges, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
@@ -320,6 +346,41 @@ To include the new theme we use the `css-vars` mixin:
            iframe-src="{environment:demosBaseUrl}/data-display/badge-styling-sample/" >
 </code-view>
 
+### Styling with Tailwind
+
+You can style the `badge` using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-badge`, `dark-badge`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [badge-theme]({environment:sassApiUrl}/themes#function-badge-theme). The syntax is as follows:
+
+```html
+<igx-badge
+class="!light-badge ![--background:#FF4E00] ![--border-radius:4px]">
+</igx-badge>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your badges should look like this:
+
+<div class="sample-container loading" style="height:340px">
+    <iframe id="badge-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/data-display/badge-tailwind-styling-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ## API References
 <div class="divider--half"></div>

@@ -456,6 +456,308 @@ export class CalendarSample9Component {
 
 ## Styling
 
+### Calendar Theme Property Map
+
+When you modify the `$header-background` and `$content-background` properties, all related theme properties are automatically adjusted to ensure your calendar component is styled consistently. See the tables below for a detailed overview of which theme properties are affected.
+
+<div class="theme-switcher-wrapper">
+<!-- Theme Switcher Radios and Labels -->
+<input type="radio" name="theme" id="material" checked>
+<label for="material" class="switch-label">Material</label>
+<input type="radio" name="theme" id="fluent">
+<label for="fluent" class="switch-label">Fluent</label>
+<input type="radio" name="theme" id="bootstrap">
+<label for="bootstrap" class="switch-label">Bootstrap</label>
+<input type="radio" name="theme" id="indigo">
+<label for="indigo" class="switch-label">Indigo</label>
+
+<div class="tables">
+    <!-- Material Theme Table -->
+    <div class="theme-table material">
+        <table class="collapsible-table">
+            <thead>
+                <tr>
+                    <th>Primary Property</th>
+                    <th>Dependent Property</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody class="group">
+                <tr class="primary">
+                    <td><details><summary><strong>$header-background</strong></summary></details></td>
+                    <td>$header-foreground</td>
+                    <td>Text color for the calendar header</td>
+                </tr>
+                <tr class="dependent"><td></td><td>$picker-hover-foreground</td><td>Picker hover foreground</td></tr>
+                <tr class="dependent"><td></td><td>$picker-focus-foreground</td><td>Picker focus foreground</td></tr>
+                <tr class="dependent"><td></td><td>$navigation-hover-color</td><td>Hover color for navigation</td></tr>
+                <tr class="dependent"><td></td><td>$navigation-focus-color</td><td>Focus color for navigation</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-background</td><td>Background for selected dates</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-current-background</td><td>Selected current date background</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-foreground</td><td>Foreground for selected dates</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-current-foreground</td><td>Foreground for selected current date</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-current-border-color</td><td>Border color for selected current date</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-special-border-color</td><td>Border color for selected special dates</td></tr>
+                <tr class="dependent"><td></td><td>$ym-selected-background</td><td>Year/month selected background</td></tr>
+                <tr class="dependent"><td></td><td>$ym-selected-hover-background</td><td>Hover background for year/month selected date</td></tr>
+                <tr class="dependent"><td></td><td>$ym-selected-current-background</td><td>Current selected year/month background</td></tr>
+                <tr class="dependent"><td></td><td>$ym-selected-current-hover-background</td><td>Hover background for current selected year/month</td></tr>
+                <tr class="dependent"><td></td><td>$ym-selected-foreground</td><td>Foreground for selected year/month</td></tr>
+                <tr class="dependent"><td></td><td>$ym-selected-hover-foreground</td><td>Hover foreground for selected year/month</td></tr>
+                <tr class="dependent"><td></td><td>$ym-selected-current-foreground</td><td>Foreground for current selected year/month</td></tr>
+                <tr class="dependent"><td></td><td>$ym-selected-current-hover-foreground</td><td>Hover foreground for current selected year/month</td></tr>
+            </tbody>
+            <tbody class="group">
+                <tr class="primary">
+                    <td><details><summary><strong>$content-background</strong></summary></details></td>
+                    <td>$content-foreground</td>
+                    <td>Text and icon color inside calendar content area</td>
+                </tr>
+                <tr class="dependent"><td></td><td>$weekend-color</td><td>Color for weekend dates</td></tr>
+                <tr class="dependent"><td></td><td>$inactive-color</td><td>Color for dates outside active range</td></tr>
+                <tr class="dependent"><td></td><td>$weekday-color</td><td>Color for weekday labels</td></tr>
+                <tr class="dependent"><td></td><td>$picker-background</td><td>Picker background</td></tr>
+                <tr class="dependent"><td></td><td>$date-hover-background</td><td>Background for hovered dates</td></tr>
+                <tr class="dependent"><td></td><td>$date-hover-foreground</td><td>Foreground for hovered dates</td></tr>
+                <tr class="dependent"><td></td><td>$date-focus-background</td><td>Background for focused dates</td></tr>
+                <tr class="dependent"><td></td><td>$date-focus-foreground</td><td>Foreground for focused dates</td></tr>
+                <tr class="dependent"><td></td><td>$date-current-background</td><td>Background for the current date</td></tr>
+                <tr class="dependent"><td></td><td>$date-current-foreground</td><td>Foreground for the current date</td></tr>
+                <tr class="dependent"><td></td><td>$date-current-border-color</td><td>Border color for the current date</td></tr>
+                <tr class="dependent"><td></td><td>$ym-current-background</td><td>Year/month current background</td></tr>
+                <tr class="dependent"><td></td><td>$ym-current-hover-background</td><td>Hover background for current year/month</td></tr>
+                <tr class="dependent"><td></td><td>$ym-current-foreground</td><td>Foreground for current year/month</td></tr>
+                <tr class="dependent"><td></td><td>$ym-current-hover-foreground</td><td>Hover foreground for current year/month</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-range-background</td><td>Selected range background</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-range-foreground</td><td>Foreground for selected date ranges</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-current-range-background</td><td>Background for selected current date ranges</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-current-range-hover-background</td><td>Hover background for selected current date ranges</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-current-range-focus-background</td><td>Focus background for selected current date ranges</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-current-range-foreground</td><td>Foreground for selected current date ranges</td></tr>
+                <tr class="dependent"><td></td><td>$date-special-foreground</td><td>Foreground for special dates</td></tr>
+                <tr class="dependent"><td></td><td>$date-special-border-color</td><td>Border color for special dates</td></tr>
+                <tr class="dependent"><td></td><td>$date-special-hover-border-color</td><td>Hover border color for special dates</td></tr>
+                <tr class="dependent"><td></td><td>$date-special-focus-foreground</td><td>Focus foreground for special dates</td></tr>
+                <tr class="dependent"><td></td><td>$date-special-range-foreground</td><td>Foreground for special date ranges</td></tr>
+                <tr class="dependent"><td></td><td>$date-special-range-border-color</td><td>Border color for special date ranges</td></tr>
+                <tr class="dependent"><td></td><td>$date-special-range-hover-background</td><td>Hover background for special date ranges</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-special-border-color</td><td>Border color for selected special dates</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-special-hover-border-color</td><td>Hover border color for selected special dates</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-special-focus-border-color</td><td>Focus border color for selected special dates</td></tr>
+                <tr class="dependent"><td></td><td>$date-disabled-foreground</td><td>Foreground for disabled dates</td></tr>
+                <tr class="dependent"><td></td><td>$date-disabled-range-foreground</td><td>Foreground for disabled ranges</td></tr>
+            </tbody>
+            <tbody class="group">
+                <tr class="primary">
+                    <td><details><summary><strong>$date-border-radius</strong></summary></details></td>
+                    <td>$date-range-border-radius</td>
+                    <td>Controls the border radius for date ranges.</td>
+                </tr>
+                <tr class="dependent"><td></td><td>$date-current-border-radius</td><td>Controls the border radius for the current date.</td></tr>
+                <tr class="dependent"><td></td><td>$date-special-border-radius</td><td>Controls the border radius for special dates.</td></tr>
+                <tr class="dependent"><td></td><td>$date-border-radius</td><td>If not specified and <code>$date-range-border-radius</code> is set, uses the value of <code>$date-range-border-radius</code>.</td></tr>
+            </tbody>
+        </div>
+        <!-- Fluent Theme Table -->
+        <div class="theme-table fluent">
+            <table class="collapsible-table">
+                <thead>
+                    <tr>
+                        <th>Primary Property</th>
+                        <th>Dependent Property</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody class="group">
+                    <tr class="primary">
+                        <td><details><summary><strong>$header-background</strong></summary></details></td>
+                        <td>$header-foreground</td>
+                        <td>Text color for the calendar header</td>
+                    </tr>
+                    <tr class="dependent"><td></td><td>$picker-hover-foreground</td><td>Picker hover foreground</td></tr>
+                    <tr class="dependent"><td></td><td>$picker-focus-foreground</td><td>Picker focus foreground</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-background</td><td>Background for the current date</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-hover-foreground</td><td>Hover foreground for the current date</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-focus-foreground</td><td>Focus foreground for the current date</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-current-foreground</td><td>Foreground for the currently selected date</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-current-hover-foreground</td><td>Hover foreground for the currently selected date</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-current-focus-foreground</td><td>Focus foreground for the currently selected date</td></tr>
+                    <tr class="dependent"><td></td><td>$date-special-border-color</td><td>Border color for special dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-special-hover-foreground</td><td>Hover foreground for special dates</td></tr>
+                </tbody>
+                <tbody class="group">
+                    <tr class="primary">
+                        <td><details><summary><strong>$content-background</strong></summary></details></td>
+                        <td>$content-foreground</td>
+                        <td>Text and icon color inside calendar content area</td>
+                    </tr>
+                    <tr class="dependent"><td></td><td>$weekend-color</td><td>Color for weekend dates</td></tr>
+                    <tr class="dependent"><td></td><td>$inactive-color</td><td>Color for dates outside active range</td></tr>
+                    <tr class="dependent"><td></td><td>$weekday-color</td><td>Color for weekday labels</td></tr>
+                    <tr class="dependent"><td></td><td>$picker-background</td><td>Picker background</td></tr>
+                    <tr class="dependent"><td></td><td>$date-hover-background</td><td>Background for hovered dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-hover-foreground</td><td>Foreground for hovered dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-focus-background</td><td>Background for focused dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-focus-foreground</td><td>Foreground for focused dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-background</td><td>Background for selected dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-hover-background</td><td>Hover background for selected dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-focus-background</td><td>Focus background for selected dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-foreground</td><td>Foreground for selected dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-hover-foreground</td><td>Hover foreground for selected dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-focus-foreground</td><td>Focus foreground for selected dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-range-background</td><td>Background for selected date ranges</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-range-foreground</td><td>Foreground for selected date ranges</td></tr>
+                    <tr class="dependent"><td></td><td>$date-disabled-foreground</td><td>Foreground for disabled dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-disabled-range-foreground</td><td>Foreground for disabled ranges</td></tr>
+                </tbody>
+                <tbody class="group">
+                    <tr class="primary">
+                        <td><details><summary><strong>$date-border-radius</strong></summary></details></td>
+                        <td>$date-range-border-radius</td>
+                        <td>Controls the border radius for date ranges.</td>
+                    </tr>
+                    <tr class="dependent"><td></td><td>$date-current-border-radius</td><td>Controls the border radius for the current date.</td></tr>
+                    <tr class="dependent"><td></td><td>$date-special-border-radius</td><td>Controls the border radius for special dates.</td></tr>
+                    <tr class="dependent"><td></td><td>$date-border-radius</td><td>If not specified and <code>$date-range-border-radius</code> is set, uses the value of <code>$date-range-border-radius</code>.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Bootstrap Theme Table -->
+        <div class="theme-table bootstrap">
+            <table class="collapsible-table">
+                <thead>
+                    <tr>
+                        <th>Primary Property</th>
+                        <th>Dependent Property</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody class="group">
+                    <tr class="primary">
+                        <td><details><summary><strong>$header-background</strong></summary></details></td>
+                        <td>$header-foreground</td>
+                        <td>Text color for the calendar header</td>
+                    </tr>
+                    <tr class="dependent"><td></td><td>$picker-background</td><td>Picker background</td></tr>
+                    <tr class="dependent"><td></td><td>$picker-hover-foreground</td><td>Picker hover foreground</td></tr>
+                    <tr class="dependent"><td></td><td>$weekday-color</td><td>Color for weekday labels</td></tr>
+                    <tr class="dependent"><td></td><td>$picker-focus-foreground</td><td>Picker focus foreground</td></tr>
+                    <tr class="dependent"><td></td><td>$date-special-border-color</td><td>Border color for special dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-special-focus-foreground</td><td>Focus foreground for special dates</td></tr>
+                </tbody>
+                <tbody class="group">
+                    <tr class="primary">
+                        <td><details><summary><strong>$content-background</strong></summary></details></td>
+                        <td>$content-foreground</td>
+                        <td>Text and icon color inside calendar content area</td>
+                    </tr>
+                    <tr class="dependent"><td></td><td>$weekend-color</td><td>Color for weekend dates</td></tr>
+                    <tr class="dependent"><td></td><td>$inactive-color</td><td>Color for dates outside active range</td></tr>
+                    <tr class="dependent"><td></td><td>$weekday-color</td><td>Color for weekday labels</td></tr>
+                    <tr class="dependent"><td></td><td>$date-hover-background</td><td>Background for hovered dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-hover-foreground</td><td>Foreground for hovered dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-focus-background</td><td>Background for focused dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-focus-foreground</td><td>Foreground for focused dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-background</td><td>Background for the current date</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-foreground</td><td>Foreground for the current date</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-border-color</td><td>Border color for the current date</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-background</td><td>Background for selected dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-current-background</td><td>Background for the currently selected date</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-foreground</td><td>Foreground for selected dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-current-foreground</td><td>Foreground for the currently selected date</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-special-border-color</td><td>Border color for selected special dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-special-hover-border-color</td><td>Hover border color for selected special dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-special-focus-border-color</td><td>Focus border color for selected special dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-range-background</td><td>Background for selected date ranges</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-range-foreground</td><td>Foreground for selected date ranges</td></tr>
+                    <tr class="dependent"><td></td><td>$date-disabled-foreground</td><td>Foreground for disabled dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-disabled-range-foreground</td><td>Foreground for disabled ranges</td></tr>
+                </tbody>
+                <tbody class="group">
+                    <tr class="primary">
+                        <td><details><summary><strong>$date-border-radius</strong></summary></details></td>
+                        <td>$date-range-border-radius</td>
+                        <td>Controls the border radius for date ranges.</td>
+                    </tr>
+                    <tr class="dependent"><td></td><td>$date-current-border-radius</td><td>Controls the border radius for the current date.</td></tr>
+                    <tr class="dependent"><td></td><td>$date-special-border-radius</td><td>Controls the border radius for special dates.</td></tr>
+                    <tr class="dependent"><td></td><td>$date-border-radius</td><td>If not specified and <code>$date-range-border-radius</code> is set, uses the value of <code>$date-range-border-radius</code>.</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Indigo Theme Table -->
+        <div class="theme-table indigo">
+            <table class="collapsible-table">
+                <thead>
+                    <tr>
+                        <th>Primary Property</th>
+                        <th>Dependent Property</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody class="group">
+                    <tr class="primary">
+                        <td><details><summary><strong>$header-background</strong></summary></details></td>
+                        <td>$header-foreground</td>
+                        <td>Text color for the calendar header</td>
+                    </tr>
+                    <tr class="dependent"><td></td><td>$picker-background</td><td>Picker background</td></tr>
+                    <tr class="dependent"><td></td><td>$picker-hover-foreground</td><td>Picker hover foreground</td></tr>
+                    <tr class="dependent"><td></td><td>$picker-focus-foreground</td><td>Picker focus foreground</td></tr>
+                    <tr class="dependent"><td></td><td>$navigation-hover-color</td><td>Navigation hover color</td></tr>
+                    <tr class="dependent"><td></td><td>$navigation-focus-color</td><td>Navigation focus color</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-background</td><td>Background for the current date</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-border-color</td><td>Border color for the current date</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-hover-background</td><td>Background for hovered current date</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-hover-border-color</td><td>Border color for hovered current date</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-focus-background</td><td>Background for focused current date</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-focus-border-color</td><td>Border color for focused current date</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-foreground</td><td>Foreground for the current date</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-hover-foreground</td><td>Foreground for hovered current date</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-focus-foreground</td><td>Foreground for focused current date</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-current-border-color</td><td>Border color for the currently selected date</td></tr>
+                </tbody>
+                <tbody class="group">
+                    <tr class="primary">
+                        <td><details><summary><strong>$content-background</strong></summary></details></td>
+                        <td>$content-foreground</td>
+                        <td>Text and icon color inside calendar content area</td>
+                    </tr>
+                    <tr class="dependent"><td></td><td>$weekend-color</td><td>Color for weekend dates</td></tr>
+                    <tr class="dependent"><td></td><td>$inactive-color</td><td>Color for dates outside active range</td></tr>
+                    <tr class="dependent"><td></td><td>$weekday-color</td><td>Color for weekday labels</td></tr>
+                    <tr class="dependent"><td></td><td>$date-hover-background</td><td>Background for hovered dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-hover-foreground</td><td>Foreground for hovered dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-focus-background</td><td>Background for focused dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-focus-foreground</td><td>Foreground for focused dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-background</td><td>Background for selected dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-current-background</td><td>Background for the currently selected date</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-foreground</td><td>Foreground for selected dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-current-foreground</td><td>Foreground for the currently selected date</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-current-border-color</td><td>Border color for the currently selected date</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-range-background</td><td>Background for selected date ranges</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-range-foreground</td><td>Foreground for selected date ranges</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-current-range-background</td><td>Background for the current date in a selected range</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-current-range-hover-background</td><td>Hover background for the current date in a selected range</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-current-range-foreground</td><td>Foreground for the current date in a selected range</td></tr>
+                    <tr class="dependent"><td></td><td>$date-disabled-foreground</td><td>Foreground for disabled dates</td></tr>
+                    <tr class="dependent"><td></td><td>$date-disabled-range-foreground</td><td>Foreground for disabled ranges</td></tr>
+                </tbody>
+                <tbody class="group">
+                    <tr class="primary">
+                        <td><details><summary><strong>$date-border-radius</strong></summary></details></td>
+                        <td>$date-range-border-radius</td>
+                        <td>Controls the border radius for date ranges.</td>
+                    </tr>
+                    <tr class="dependent"><td></td><td>$date-current-border-radius</td><td>Controls the border radius for the current date.</td></tr>
+                    <tr class="dependent"><td></td><td>$date-special-border-radius</td><td>Controls the border radius for special dates.</td></tr>
+                    <tr class="dependent"><td></td><td>$date-border-radius</td><td>If not specified and <code>$date-range-border-radius</code> is set, uses the value of <code>$date-range-border-radius</code>.</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div><!-- .theme-switcher-wrapper -->
+
 To get started with styling the calendar, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
@@ -486,6 +788,44 @@ The last step is to pass the custom calendar theme:
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-styling-sample/" >
 </code-view>
 
+### Styling with Tailwind
+
+You can style the `calendar` using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-calendar`, `dark-calendar`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [calendar-theme]({environment:sassApiUrl}/themes#function-calendar-theme). The syntax is as follows:
+
+```html
+<igx-calendar
+class="!light-calendar
+![--header-background:#4F6A5A]
+![--content-background:#A3C7B2]"
+[weekStart]="1">
+</igx-calendar>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your calendar should look like this:
+
+<div class="sample-container loading" style="height:500px">
+    <iframe id="calendar-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-tailwind-styling-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ## API References
 <div class="divider--half"></div>

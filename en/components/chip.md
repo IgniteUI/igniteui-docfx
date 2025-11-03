@@ -480,6 +480,125 @@ If everything's set up correctly, you should see this in your browser:
 
 ## Styling
 
+### Chip Theme Property Map
+
+When you modify a primary property, all related dependent properties are updated automatically:
+
+<table class="collapsible-table">
+  <thead>
+      <tr>
+          <th>Primary Property</th>
+          <th>Dependent Property</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+        <td><details><summary><strong>$background</strong></summary></details></td>
+        <td>$text-color</td>
+        <td>The chip text color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$border-color</td>
+        <td>The chip border color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$hover-background</td>
+        <td>The chip hover background color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$hover-border-color</td>
+        <td>The chip hover border color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$hover-text-color</td>
+        <td>The chip hover text color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$focus-background</td>
+        <td>The chip focus background color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$selected-background</td>
+        <td>The chip selected background color.</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+        <td><details><summary><strong>$focus-background</strong></summary></details></td>
+        <td>$focus-text-color</td>
+        <td>The chip text focus color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$focus-border-color</td>
+        <td>The chip focus border color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$focus-outline-color (bootstrap &amp; indigo variants only)</td>
+        <td>The chip focus outline color.</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+        <td><details><summary><strong>$selected-background</strong></summary></details></td>
+        <td>$selected-text-color</td>
+        <td>The selected chip text color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$selected-border-color</td>
+        <td>The selected chip border color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$hover-selected-background</td>
+        <td>The selected chip hover background color.</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+        <td><details><summary><strong>$hover-selected-background</strong></summary></details></td>
+        <td>$hover-selected-text-color</td>
+        <td>The selected chip hover text color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$hover-selected-border-color</td>
+        <td>The selected chip hover border color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$focus-selected-background</td>
+        <td>The selected chip focus background color.</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+        <td><details><summary><strong>$focus-selected-background</strong></summary></details></td>
+        <td>$focus-selected-text-color</td>
+        <td>The selected chip text focus color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$focus-selected-border-color</td>
+        <td>The selected chip focus border color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$focus-selected-outline-color (bootstrap &amp; indigo variants only)</td>
+        <td>The chip focus outline color in selected state.</td>
+    </tr>
+  </tbody>
+</table>
+
 To get started with styling the chip, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
@@ -513,6 +632,47 @@ The last step is to **include** the component theme in our application.
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/chip-styling/" >
 </code-view>
+
+### Styling with Tailwind
+
+You can style the chip using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-chip`, `dark-chip`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [chip-theme]({environment:sassApiUrl}/themes#function-chip-theme). The syntax is as follows:
+
+```html
+<igx-chip
+  class="!light-chip
+  ![--background:#99BAA6]
+  ![--remove-icon-color:#C92828]"
+  ...
+>
+  {{chip.text}}
+</igx-chip>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your chips should look like this:
+
+<div class="sample-container loading" style="height:80px">
+    <iframe id="chip-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/data-display/chip-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ### Custom sizing
 

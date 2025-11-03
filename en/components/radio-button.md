@@ -146,6 +146,54 @@ The final result would be something like that:
 
 ## Styling
 
+### Radio Theme Property Map
+
+When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
+
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>Primary Property</th>
+      <th>Dependent Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+      <td><details><summary><strong>$empty-color</strong></summary></details></td>
+      <td>$hover-color</td>
+      <td>Border and dot colors on hover</td>
+    </tr>
+    <tr class="dependent"><td></td><td>$focus-outline-color (indigo)</td><td>Focus outline color (Indigo theme)</td></tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+      <td><details><summary><strong>$fill-color</strong></summary></details></td>
+      <td>$fill-color-hover</td>
+      <td>Checked dot color on hover</td>
+    </tr>
+    <tr class="dependent"><td></td><td>$fill-hover-border-color (non-bootstrap)</td><td>Checked border color on hover</td></tr>
+    <tr class="dependent"><td></td><td>$focus-border-color (bootstrap)</td><td>Focus border color</td></tr>
+    <tr class="dependent"><td></td><td>$focus-outline-color (bootstrap)</td><td>Focus outlined color</td></tr>
+    <tr class="dependent"><td></td><td>$focus-outline-color-filled (indigo)</td><td>Focus outline color when radio is filled</td></tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+      <td><strong>$label-color</strong></td>
+      <td>$label-color-hover</td>
+      <td>Label text color on hover</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+      <td><details><summary><strong>$error-color</strong></summary></details></td>
+      <td>$error-color-hover</td>
+      <td>Label, border, and dot color in invalid state on hover</td>
+    </tr>
+    <tr class="dependent"><td></td><td>$focus-outline-color-error</td><td>Focus outline color in invalid state</td></tr>
+  </tbody>
+</table>
+
 To get started with styling the radio buttons, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
@@ -176,6 +224,46 @@ The last step is to pass the custom radio theme in our application:
 </code-view>
 
 <div class="divider--half"></div>
+
+### Styling with Tailwind
+
+You can style the `radio button` using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-radio`, `dark-radio`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [radio-theme]({environment:sassApiUrl}/themes#function-radio-theme). The syntax is as follows:
+
+
+```html
+<igx-radio
+class="!light-radio ![--empty-color:#576E60] ![--fill-color:#7B9E89]"
+...
+>
+  New York
+</igx-radio>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your radio button should look like this:
+
+<div class="sample-container loading" style="height:300px">
+    <iframe id="radio-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-tailwind-styling-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ## Radio Group
 

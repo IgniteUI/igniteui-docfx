@@ -328,6 +328,44 @@ You can justify the buttons so that they are laid out across the entire axis, no
 ```
 
 ## Styling
+
+### Card Theme Property Map
+
+Changing the `$background` property automatically updates the following dependent properties:
+
+<table class="collapsible-table">
+    <thead>
+        <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody class="group">
+        <tr class="primary">
+            <td><strong>$background</strong></td>
+            <td>$header-text-color</td>
+            <td>The text color of the card title.</td>
+            </tr>
+            <tr>
+            <td></td>
+            <td>$subtitle-text-color</td>
+            <td>The text color of the card subtitle.</td>
+            </tr>
+            <tr>
+            <td></td>
+            <td>$content-text-color</td>
+            <td>The text color of the card content.</td>
+            </tr>
+            <tr>
+            <td></td>
+            <td>$actions-text-color</td>
+            <td>The text color of the card buttons.</td>
+            </tr>
+        </tr>
+    </tbody>
+</table>
+
 To get started with styling the card, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
@@ -336,6 +374,7 @@ To get started with styling the card, we need to import the `index` file, where 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ``` 
+
 Following the simplest approach, we create a new theme that extends the [`card-theme`]({environment:sassApiUrl}/themes#function-card-theme) and providing just a few styling parameters. If you only specify the `$background` parameter, the appropriate foreground colors will be automatically chosen, either black or white, based on which offers better contrast with the background.
 
 ```scss
@@ -361,6 +400,45 @@ The last step is to **include** the component theme in our application.
            iframe-src="{environment:demosBaseUrl}/layouts/card-styling-sample/" >
 </code-view>
 
+### Styling with Tailwind
+
+You can style the `card` using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-card`, `dark-card`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [card-theme]({environment:sassApiUrl}/themes#function-card-theme). The syntax is as follows:
+
+```html
+<igx-card
+class="!light-card
+![--background:#193625]
+![--subtitle-text-color:#ECAA53]"
+elevated>
+...
+</igx-card>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your card should look like this:
+
+<div class="sample-container loading" style="height:500px">
+    <iframe id="card-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/card-tailwind-styling-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ### Summary
 In this article we covered a lot of ground with the card component. First, we created a very simple card with text content only. Then added some images to make the card a bit more appealing. We used some additional Ignite UI for Angular components inside our card, avatar, buttons and icons, to enrich the experience and add some functionality. And finally, we changed the card's theme by setting some exposed theme colors, creating custom palettes and extending schemas. 

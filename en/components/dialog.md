@@ -252,6 +252,39 @@ By default when the dialog is opened the Tab key focus is trapped within it, i.e
 
 ## Styling
 
+### Dialog Theme Property Map
+
+Changing the `$background` property automatically updates the following dependent properties:
+
+<table class="collapsible-table">
+    <thead>
+        <tr>
+        <th>Primary Property</th>
+        <th>Dependent Property</th>
+        <th>Description</th>
+        </tr>
+    </thead>
+    <tbody class="group">
+        <tr class="primary">
+        <td>
+            <details><summary><strong>$background</strong></summary></details>
+        </td>
+        <td>$title-color</td>
+        <td>The dialog title text color.</td>
+        </tr>
+        <tr class="dependent">
+        <td></td>
+        <td>$message-color</td>
+        <td>The dialog message text color.</td>
+        </tr>
+        <tr class="dependent">
+        <td></td>
+        <td>$border-color</td>
+        <td>The border color used for dialog component.</td>
+        </tr>
+    </tbody>
+</table>
+
 To get started with styling the dialog window, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
