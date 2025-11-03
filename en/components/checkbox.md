@@ -211,6 +211,96 @@ After all that is done, our application should look like this:
 
 ## Styling
 
+### Checkbox Theme Property Map
+
+When you modify a primary property, all related dependent properties are updated automatically:
+
+<table class="collapsible-table">
+    <thead>
+        <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody class="group">
+        <tr class="primary">
+            <td>
+                <details><summary><strong>$empty-color</strong></summary>
+                </details>
+            </td>
+            <td>$empty-color-hover</td>
+            <td>The unchecked border color on hover.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$focus-outline-color (indigo variant only)</td>
+            <td>The focus outline color for indigo variant.</td>
+        </tr>
+    </tbody>
+    <tbody class="group">
+        <tr class="primary">
+            <td>
+                <details><summary><strong>$fill-color</strong></summary>
+                </details>
+            </td>
+            <td>$fill-color-hover</td>
+            <td>The checked border and fill colors on hover.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$tick-color</td>
+            <td>The checked mark color.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$focus-border-color</td>
+            <td>The focus border color.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$disabled-indeterminate-color</td>
+            <td>The disabled border and fill colors in indeterminate state.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$focus-outline-color (bootstrap variant only)</td>
+            <td>The focus outline color for bootstrap variant.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$focus-outline-color-focused (indigo variant only)</td>
+            <td>The focus outline color for focused state in indigo variant.</td>
+        </tr>
+    </tbody>
+    <tbody class="group">
+        <tr class="primary">
+            <td>
+                <details><summary><strong>$error-color</strong></summary>
+                </details>
+            </td>
+            <td>$error-color-hover</td>
+            <td>The border and fill colors in invalid state on hover.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$focus-outline-color-error</td>
+            <td>The focus outline color in error state.</td>
+        </tr>
+    </tbody>
+    <tbody class="group">
+        <tr class="primary">
+            <td>
+                <strong>$label-color</strong>
+            </td>
+            <td>$label-color-hover</td>
+            <td>The text color for the label on hover.</td>
+        </tr>
+    </tbody>
+</table>
+
+> **Note:** The actual results may vary depending on the theme variant.
+
 To get started with styling the checkbox, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
@@ -246,6 +336,45 @@ The last step is to **include** the component theme in our application.
            iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-styling/" >
 </code-view>
 
+### Styling with Tailwind
+
+You can style the `checkbox` using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-checkbox`, `dark-checkbox`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [checkbox-theme]({environment:sassApiUrl}/themes#function-checkbox-theme). The syntax is as follows:
+
+```html
+<igx-checkbox
+class="!light-checkbox
+![--empty-color:#7B9E89]
+![--fill-color:#7B9E89]"
+[checked]="true">
+    Styled checkbox
+</igx-checkbox>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your checkbox should look like this:
+
+<div class="sample-container loading" style="height:50px">
+    <iframe id="checkbox-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/data-entries/checkbox-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 <div class="divider--half"></div>
 

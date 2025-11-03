@@ -382,6 +382,62 @@ The approach described above is used by the following sample to demonstrate rout
 
 ## Styles
 
+### Bottom Nav Theme Property Map
+
+When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
+
+<table>
+    <thead>
+        <tr>
+        <th>Primary Property</th>
+        <th>Dependent Property</th>
+        <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td><strong>$background</strong></td>
+        <td>$label-color</td>
+        <td>The label color used in idle state.</td>
+        </tr>
+        <tr>
+        <td><strong>$label-color</strong></td>
+        <td>$icon-color</td>
+        <td>The icon color used in idle state.</td>
+        </tr>
+        <tr>
+        <td></td>
+        <td>$label-disabled-color</td>
+        <td>The disabled color of the label.</td>
+        </tr>
+        <tr>
+        <td><strong>$icon-color</strong></td>
+        <td>$label-color</td>
+        <td>The label color used in idle state.</td>
+        </tr>
+        <tr>
+        <td><strong>$label-disabled-color</strong></td>
+        <td>$icon-disabled-color</td>
+        <td>The disabled color of the icon.</td>
+        </tr>
+        <tr>
+        <td><strong>$icon-disabled-color</strong></td>
+        <td>$label-disabled-color</td>
+        <td>The disabled color of the label.</td>
+        </tr>
+        <tr>
+        <td><strong>$label-selected-color</strong></td>
+        <td>$icon-selected-color</td>
+        <td>The icon color used in selected state.</td>
+        </tr>
+        <tr>
+        <td><strong>$icon-selected-color</strong></td>
+        <td>$label-selected-color</td>
+        <td>The label color used in selected state.</td>
+        </tr>
+    </tbody>
+</table>
+
 To get started with styling the tabs, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
@@ -422,6 +478,46 @@ The last step is to **include** the component theme in our application.
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/tabbar-style/" >
 </code-view>
+
+### Styling with Tailwind
+
+You can style the bottom navigation using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the Tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-bottom-nav`, `dark-bottom-nav`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [IgxBottomNav Theme]({environment:sassApiUrl}/themes#function-bottom-nav-theme). The syntax is as follows:
+
+```html
+<igx-bottom-nav
+    class="!light-bottom-nav
+    ![--background:#011627]
+    ![--icon-selected-color:#FF8040] 
+    ![--label-selected-color:#FF8040]">
+    ...
+</igx-bottom-nav>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your bottom nav should look like this:
+
+<div class="sample-container loading" style="height:340px">
+    <iframe id="tabbar-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/tabbar-tailwind-style' style="height: 350px; width: 300px; border: 1px solid #D4D4D4;" seamless class="lazyload"></iframe>
+</div>
 
 <div class="divider--half"></div>
 
