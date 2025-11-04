@@ -431,7 +431,7 @@ We're importing the `Injectable` decorator which is an [essential ingredient](ht
 
 **Note**: Before Angular 5 the `HttpClient` was located in `@angular/http` and was named `Http`.
 
-Since we will receive a JSON response containing an array of records, we may as well help ourselves by specifing what kind of data we're expecting to be returned in the observable by defining an interface with the correct shape. Type checking is always recommended and can save you some headaches down the road.
+Since we will receive a JSON response containing an array of records, we may as well help ourselves by specifying what kind of data we're expecting to be returned in the observable by defining an interface with the correct shape. Type checking is always recommended and can save you some headaches down the road.
 
 ```typescript
 // northwind.service.ts
@@ -539,7 +539,7 @@ and in the template of the component:
 
 ## Complex Data Binding
 
-The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) supports binding to complex objects (inluding nesting deeper than one level) through a "path" of properties in the data record.
+The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) supports binding to complex objects (including nesting deeper than one level) through a "path" of properties in the data record.
 
 Take a look at the following data model:
 ```typescript

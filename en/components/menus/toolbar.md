@@ -151,7 +151,7 @@ Save to Image Action
 
 ### SVG Icons
 
-When adding tools manually, icons can be assigned using the `RenderIconFromText` method. There are three paramters to pass in this method. The first is the icon collection name defined on the tool eg. [`iconCollectionName`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#iconCollectionName). The second is the name of the icon defined on the tool eg. [`iconName`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#iconName), followed by adding the SVG string.
+When adding tools manually, icons can be assigned using the `RenderIconFromText` method. There are three parameters to pass in this method. The first is the icon collection name defined on the tool eg. [`iconCollectionName`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#iconCollectionName). The second is the name of the icon defined on the tool eg. [`iconName`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#iconName), for example 'Undo'.
 
 ### Data URL Icons
 

@@ -267,7 +267,7 @@ Once we have the definition that corresponds to the preceding rule, we are ready
 > Please take into account the fact that when [`labelsView`]({environment:angularApiUrl}/classes/igxslidercomponent.html#labelsView) is enabled, your control over the [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxValue), [`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minValue) and [`step`]({environment:angularApiUrl}/classes/igxslidercomponent.html#step) inputs will be taken. 
 
 Another important factor is the way that the `slider` handles the update process when `labelsView` is enabled.
-It simply operates with the `index(es)` of the colleciton, which respectively means that the `value`, `lowerBound` and `upperBound` **properties** control the `track` by following/setting them (`index(es)`).
+It simply operates with the `index(es)` of the collection, which respectively means that the `value`, `lowerBound` and `upperBound` **properties** control the `track` by following/setting them (`index(es)`).
 
 ```html
 <!--sample.component.html-->
@@ -296,7 +296,7 @@ public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
 
 As we see from the sample above, setting `boundaries` is still a valid operation. Addressing [`lowerBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerbound) and [`upperBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperbound), limits the range you can slide through.
 
-### Lables templating
+### Labels templating
 During the showcase above, we've intentionally shown how we can provide our custom `label` template, by using both  [igxSliderThumbFrom]({environment:angularApiUrl}/interfaces/igxSliderThumbFrom.html) and [igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) directives. Intuitively we can assume that [igxSliderThumbFrom]({environment:angularApiUrl}/interfaces/igxSliderThumbFrom.html) corresponds to the  [lowerLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerLabel) and [igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) to the [upperLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperLabel). <br>
 The [context]({environment:angularApiUrl}/classes/igxslidercomponent.html#context) here gives us implicitly a reference to the `value` **input** property and explicitly a reference to the `labels` **input** if `labelsView` is enabled.
 
@@ -411,7 +411,9 @@ This mirrors the visualization of the **ticks** and displays them above and belo
 
 
 > [!NOTE]
-> When the [`ticksOrientaion`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksOrientaion) is set to **Top** or **Mirror** and there are visible **tick labels** the **thumb label** is hidden intentionally. This prevents a bad user experience and overlapping between the two labels.
+### Orientation
+
+> When the [`ticksOrientation`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksOrientation) is set to **Top** or **Mirror** and there are visible **tick labels** the **thumb label** is hidden intentionally. This prevents a bad user experience and overlapping between the two labels.
 
 ### Slider ticks with labels view
 This example show how the tick labels and the thumb label works together.

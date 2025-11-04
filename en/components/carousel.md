@@ -369,7 +369,7 @@ syncing the components by hooking up on carousel's [`slideChanged`]({environment
     });
   }
 ```
-These configurions will have the following result:
+These configurations will have the following result:
 
 <code-view style="height: 700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 

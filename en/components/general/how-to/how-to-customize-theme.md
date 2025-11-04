@@ -221,7 +221,7 @@ After making some customizations, we're going to build the application we genera
 
 <img class="responsive-img"  src="../../../images/general/theming-walkthrough/optimizing-initial-build.png" />
 
-As you can see, the application theme is slightly over 400kb, which comes down to ~40kb when compressed and transferred over. This is not large, but can it be more optimal? The answer is yes, unless every single component from the Ignite UI for Angular suite is used. Calling `@include theme()` brings in all of the component themes, but we have a mechanism for telling the function what to exclude. There's an [`$exclude`]({environment:sassApiUrl}/themes#mixin-theme) parameter to the theming mixin, which takes component names as an array and excludes those from the theme at build time. Since it's not so easy to find and list all of the components available in the package, it's preferable if you can just list all of the components you use. We expose the full component list as a varialble, which you have access to once you
+As you can see, the application theme is slightly over 400kb, which comes down to ~40kb when compressed and transferred over. This is not large, but can it be more optimal? The answer is yes, unless every single component from the Ignite UI for Angular suite is used. Calling `@include theme()` brings in all of the component themes, but we have a mechanism for telling the function what to exclude. There's an [`$exclude`]({environment:sassApiUrl}/themes#mixin-theme) parameter to the theming mixin, which takes component names as an array and excludes those from the theme at build time. Since it's not so easy to find and list all of the components available in the package, it's preferable if you can just list all of the components you use. We expose the full component list as a variable, which you have access to once you
 
 ```scss
 @use "@infragistics/igniteui-angular/theming" as *;
@@ -399,7 +399,7 @@ The result in terms of build is the following:
 
 <img class="responsive-img"  src="../../../images/general/theming-walkthrough/optimizing-after-module-lazyload.png" />
 
-As you can see, our top-level `styles.css` came down to a little over 70kb, which is a little less than 6kb when compressed. We started at ~428kb, ~40kb compressed and managed to bring this down about 7 times in terms of compressed size. The rest is being delievered only when the view containing the `igx-tree-grid` and `igx-combo` components is being loaded.
+As you can see, our top-level `styles.css` came down to a little over 70kb, which is a little less than 6kb when compressed. We started at ~428kb, ~40kb compressed and managed to bring this down about 7 times in terms of compressed size. The rest is being delivered only when the view containing the `igx-tree-grid` and `igx-combo` components is being loaded.
 
 ## Additional Resources
 

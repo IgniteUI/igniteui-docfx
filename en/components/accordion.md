@@ -203,7 +203,7 @@ The sample below demonstrates how elaborate filtering options can be implemented
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/accordion-sample-3/" alt="Angular Accoridon Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/accordion-sample-3/" alt="Angular Accordion Example">
 </code-view>
 
 <div class="divider--half"></div>

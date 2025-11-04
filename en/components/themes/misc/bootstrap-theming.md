@@ -334,7 +334,7 @@ Then, add a CSS class to your navbar component following the pattern "bg - color
 
 ### Typography
 
-Ignite UI for Angular exposes four default type scales for each of its themes, which can be used inside the [`typography`]({environment:sassApiUrl}/typography#mixin-typography) mixin to define the global typography styles of an application. In our example, we are going to apply the bootstrap predifined `typeface` and `type-scale` but you can create custom ones if you wish. 
+Ignite UI for Angular exposes four default type scales for each of its themes, which can be used inside the [`typography`]({environment:sassApiUrl}/typography#mixin-typography) mixin to define the global typography styles of an application. In our example, we are going to apply the bootstrap predefined `typeface` and `type-scale` but you can create custom ones if you wish. 
 
 ```scss
 :host {

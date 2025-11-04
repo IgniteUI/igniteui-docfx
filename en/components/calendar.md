@@ -153,7 +153,7 @@ Let's go ahead and try those along with other customizations from the `IgxCalend
     [formatViews]="formatViews">
 </igx-calendar>
 ```
-All property values should be set in the AppCоmponent file:
+All property values should be set in the AppComponent file:
 
 ```typescript
 // app.component.ts

@@ -96,7 +96,7 @@ export class MyCustomComponent {
 }
 ```
 
-Both factory classes can be extended and overriden in the DI hierarchy (using the `providers` array) in order to provide your own, custom implementation. This, combined with the fact that all of the classes the get instantiated by the factories are also public, gives you a lot of control over what's provided to the components that use transaction implementations internally.
+Both factory classes can be extended and overridden in the DI hierarchy (using the `providers` array) in order to provide your own, custom implementation. This, combined with the fact that all of the classes the get instantiated by the factories are also public, gives you a lot of control over what's provided to the components that use transaction implementations internally.
 
 For example, to override the transaction service used internally by the `IgxGridComponent`, you can do the following:
 

@@ -95,7 +95,7 @@ export class Class {
 }
 ```
 
-Then in the template of our component, we can apply the directive on the element we want to be togglable: 
+Then in the template of our component, we can apply the directive on the element we want to be toggleable: 
 
 ```html
 <!--template.component.html-->

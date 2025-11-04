@@ -173,7 +173,7 @@ The [`IgxDataLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-ang
 
 Some of the events exposes a [`IgxDataLegendStylingRowEventArgs`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendstylingroweventargs.html) parameter as its arguments, which lets you customize each item's text, text color, and the overall visibility of the row. The event arguments also expose event-specific properties. For example, since the `StyleSeriesRow` event fires for each series, the event arguments will return the series index and series title for the row that represents the series.
 
-`StyleSummaryColumn` and `SeriesStyleColumn` events expose a [`IgxDataLegendStylingColumnEventArgs`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendstylingcolumneventargs.html) parameter as its arguments, for customizing each field in the series. The event arguments also expose event-specific properties such as column index and value member related properies about the columns.
+`StyleSummaryColumn` and `SeriesStyleColumn` events expose a [`IgxDataLegendStylingColumnEventArgs`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendstylingcolumneventargs.html) parameter as its arguments, for customizing each field in the series. The event arguments also expose event-specific properties such as column index and value member related properties about the columns.
 
 <code-view style="height: 450px" alt="Angular Data Legend Styling"
            data-demos-base-url="{environment:dvDemosBaseUrl}"

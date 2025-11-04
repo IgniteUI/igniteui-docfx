@@ -37,7 +37,7 @@ export class CRUDService {
       return this.http.get(`${this.serverURL}\api\entities`);
   }
 
-  /** Gets entity with corrresponding id */
+  /** Gets entity with corresponding id */
   public getRecord(id) {
       return this.http.get(`${this.serverURL}\api\entities\${id}`);
   }
@@ -96,7 +96,7 @@ constructor(private crudService: CRUDService) { }
 
 public rowDeleted(event: IRowDataEventArgs) {
     this._crudService.delete(event.data).subscribe((rec) => {
-        // notification or do any adittional handling
+        // notification or do any additional handling
         this.snackbar.open(`Row with ID of ${rec.ID} was deleted.`);
     });
 }
@@ -167,7 +167,7 @@ The rich Grid API allows you to customize the editing process in almost any way 
 - [**Rich API**](how-to-perform-crud.md#editing-api)
 
 ## Batch Editing
- - Enable **Batch Editing** to keep your updates on the client, and commit all of them with single request. Batch updating is enabled bysetting `batchEditing` option to true:
+ - Enable **Batch Editing** to keep your updates on the client, and commit all of them with a single request. Batch updating is enabled by setting the `batchEditing` option to true:
  ```html
  <igx-grid [batchEditing]="'true'" ...>
  ```

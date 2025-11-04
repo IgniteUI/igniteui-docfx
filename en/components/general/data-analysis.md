@@ -81,7 +81,7 @@ Keep in mind (sample related):
 
 You can start using this functionality by following the steps below. Keep in mind that **igniteui-angular-extras** package is only available through our [private npm feed](https://packages.infragistics.com/npm/js-licensed/). If you have a [valid commercial license](ignite-ui-licensing.md#license-agreements), you will have access to the private feed.
 
-Lets start with:
+Let's start with:
 
 - Installing the package in your application
 ```cmd
@@ -163,7 +163,7 @@ Understanding conditional formatting - it allows for applying formatting such as
 
 <img class="responsive-img" src="../../images/general/top-10-percent.png" />
 
-- `Greater than` - This preset marks all values `Greater than the avarege`
+- `Greater than` - This preset marks all values `Greater than the average`
 - `Duplicate values` - Marks all duplicate values.
 - `Unique values` - All cell values that are unique will be marked (`blue` background color).
 
@@ -200,8 +200,8 @@ Understanding conditional formatting - it allows for applying formatting such as
 | `formatter`: **string** | An **input** property, which sets/gets the current formatting type |
 | `formatColors` | An **input** property, which sets/gets the current formatting colors | `val`: *IFormatColors* |
 | `onFormattersReady`| An **event**, which emits the applicable `formatting types` for the selected data, when they are determined. |
-| `formatCells` | Applies conditional formatting for the selected cells. Usage: <br/> **this.conditonalFormatting.formatCells(ConditionalFormattingType.dataBars)** | `formatterName`: **string**, `formatRange`?: [GridSelectionRange]({environment:angularApiUrl}/interfaces/gridselectionrange.html) [ ], <br /> `reset`: boolean (**true** by default) |
-| `clearFormatting` | Removes the conditional formatting from the selected cells. Usage: <br /> **this.conditonalFormatting.clearFormatting()** |
+| `formatCells` | Applies conditional formatting for the selected cells. Usage: <br/> **this.conditionalFormatting.formatCells(ConditionalFormattingType.dataBars)** | `formatterName`: **string**, `formatRange`?: [GridSelectionRange]({environment:angularApiUrl}/interfaces/gridselectionrange.html) [ ], <br /> `reset`: boolean (**true** by default) |
+| `clearFormatting` | Removes the conditional formatting from the selected cells. Usage: <br /> **this.conditionalFormatting.clearFormatting()** |
 
 ### IgxChartIntegrationDirective
 <div class="divider--half"></div>

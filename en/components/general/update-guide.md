@@ -54,7 +54,7 @@ For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from th
 ## From 17.2.x to 18.0.x
 
 ### Breaking changes
-- In version 18.0.x the depracated `displayDensity` property is removed in favor of the custom CSS property `--ig-size`. For further reference please see the update guide [from 16.0.x to 16.1.x](#from-160x-to-161x).
+- In version 18.0.x the deprecated `displayDensity` property is removed in favor of the custom CSS property `--ig-size`. For further reference please see the update guide [from 16.0.x to 16.1.x](#from-160x-to-161x).
 
 ### General
 - `IgxPivotGrid`
@@ -492,7 +492,7 @@ Here's how that will affect existing code:
 ## From 13.1.x to 13.2.x
 
 ### Themes
-- **Breaking Change** - All RTL specific stylesheets have been removed. Ignite UI themes now support RTL directon by default. Users who have previously used `*-rtl.css` specific themes must switch to the regular theme files.
+- **Breaking Change** - All RTL specific stylesheets have been removed. Ignite UI themes now support RTL direction by default. Users who have previously used `*-rtl.css` specific themes must switch to the regular theme files.
 
 ## From 13.0.x to 13.1.x
 
@@ -526,7 +526,7 @@ Here's how that will affect existing code:
     - **Breaking Change** - Upon adding of `igx-toolbar` component, now you should manually specify which features you want to enable - Column Hiding, Pinning, Excel Exporting. Advanced Filtering may be enabled through the `allowAdvancedFiltering` input property on the grid, but it is recommended to enable it declaratively with markup, as with the other features.
     - **Breaking Change** - The `rowSelected` event is renamed to `rowSelectionChanging` to better reflect its function.
     - **Breaking Change** - The `columnSelected` event is renamed to `columnSelectionChanging` to better reflect its function.
-    - **Breaking Change** - `columnsCollection` is removed. Use `columns` instead. If at certain ocasions `columns` return empty array, query the columns using `ViewChildren` and access those in `ngAfterViewInit`:
+    - **Breaking Change** - `columnsCollection` is removed. Use `columns` instead. If at certain occasions `columns` return empty array, query the columns using `ViewChildren` and access those in `ngAfterViewInit`:
         ```typescript
         @ViewChildren(IgxColumnComponent, { read: IgxColumnComponent })
         public columns: QueryList<IgxColumnComponent>;
@@ -589,7 +589,7 @@ Here's how that will affect existing code:
 ```
 
 * Sass Modules:
-The theming engine has switched to [Sass modules](https://sass-lang.com/documentation/at-rules/use). This change means all theming library functions(comopnent themes, etc.), mixins(component mixins, etc.), and variables are now being `forwarded` from a single file. To correctly use the Sass theming library, your project should utilize Dart Sass version 1.33.0 or later and change all imports of the theming library from:
+The theming engine has switched to [Sass modules](https://sass-lang.com/documentation/at-rules/use). This change means all theming library functions (component themes, etc.), mixins (component mixins, etc.), and variables are now being `forwarded` from a single file. To correctly use the Sass theming library, your project should utilize Dart Sass version 1.33.0 or later and change all imports of the theming library from:
 
 ```scss
 // free version
@@ -677,7 +677,7 @@ $my-dark-palette: palette(
 
 Likewise, light themes require a darker shade of gray and a light color schema.
 
-If you've not excluded any component themes from the global theme but you still want to create your own custom replacement themes using the `css-vars` mixin, make sure the theme is passed the correct palette and correspoding schema:
+If you've not excluded any component themes from the global theme but you still want to create your own custom replacement themes using the `css-vars` mixin, make sure the theme is passed the correct palette and corresponding schema:
 
 ```scss
 $my-custom-grid: grid-theme(
@@ -729,7 +729,7 @@ $my-custom-grid: grid-theme(
 @include grid($my-custom-grid);
 ```
 
-To get a better grasp on the Sass Moule System, you can read [this great article](https://css-tricks.com/introducing-sass-modules/) by [Miriam Suzanne](https://css-tricks.com/author/miriam/);
+To get a better grasp on the Sass Module System, you can read [this great article](https://css-tricks.com/introducing-sass-modules/) by [Miriam Suzanne](https://css-tricks.com/author/miriam/);
 
 ## From 12.0.x to 12.1.x
 ### Grids
@@ -1058,7 +1058,7 @@ The [**IgxTabsComponent**]({environment:angularApiUrl}/classes/igxtabscomponent.
     * The `id`, `groups`, `viewTabs`, `contentTabs` and `tabs` properties were removed. Currently, the [`items`]({environment:angularApiUrl}/classes/igxtabscomponent.html#items) property returns the collection of tabs.
     * The following properties were changed:
         * The tab item's `isSelected` property was renamed to [`selected`]({environment:angularApiUrl}/classes/igxtabitemcomponent.html#selected).
-        * The `selectedTabItem` property was shortten to [`selectedItem`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedItem).
+        * The `selectedTabItem` property was shortened to [`selectedItem`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedItem).
         * The `type` property, with its contentFit and fixed options, is no longer available. The header sizing & positioning mode is currently controlled by the [`tabAlignment`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabAlignment) input property which accepts four different values - start (default), center, end and justify. The old `contentFit` type corresponds to the current `start` alignment value and the old `fixed` type - to the current `justify` value.
     * The `tabItemSelected` and `tabItemDeselected` events were removed. We introduced three new events, [`selectedIndexChanging`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedIndexChanging), [`selectedIndexChange`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedindexchange) and [`selectedItemChange`]({environment:angularApiUrl}/classes/igxtabscomponent.html#selectedIndexChange), which provide more flexibility and control over the tabs' selection. Unfortunately, having an adequate migration for these event changes is complicated to say the least, so any errors should be handled at project level.
 

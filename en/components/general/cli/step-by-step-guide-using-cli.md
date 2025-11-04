@@ -37,7 +37,7 @@ First you will be prompted to enter a name for your application:
 
 ![](../../../images/general/ig-step-by-step-new-project-name.png)
 
-After selecting `Angular` as a freamework, you will be prompted to choose the type of the project that is to be generated:
+After selecting `Angular` as a framework, you will be prompted to choose the type of the project that is to be generated:
 <img class="responsive-img"  src="../../../images/general/ig-step-by-step-project-type-cli.png" />
 
 Then you will be guided to choose one of the available project templates. You can create an empty project, project with side navigation or [authentication project](auth-template.md) with basic authentication module. Navigate through the available options using the arrow keys and press ENTER to confirm the selection:
@@ -70,11 +70,11 @@ For some templates, like `Custom Grid`, for example you will be provided with a 
 
 ![](../../../images/general/ig-step-by-step-component-features.png)
 
-If you choose to add a scenario to your application you will also get a list of the available [scenario templates](component-templates.md#scenario-templates):
+If you choose to add a scenario to your application, you will also get a list of the available [scenario templates](component-templates.md#scenario-templates):
 
 <img class="responsive-img"  src="../../../images/general/ig-step-by-step-scenario-templates.png" />
 
-After adding a template to your application, you will be asked weather you want to complete the process or to proceed with adding more controls. When you choose to complete the process, the required packages will be installed (on project creation) and the application will be served and opened in your default browser.
+After adding a template to your application, you will be asked whether you want to complete the process or proceed with adding more controls. When you choose to complete the process, the required packages will be installed (on project creation) and the application will be served and opened in your default browser.
 
-You can always add more Ignite UI for Angular views to your application at latter moment using the [`add`](getting-started-with-cli.md#add-template) command using the following syntax:
+You can always add more Ignite UI for Angular views to your application at a later moment using the [`add`](getting-started-with-cli.md#add-template) command with the following syntax:
 `ig add [template] [name]`.

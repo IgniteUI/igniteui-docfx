@@ -811,7 +811,7 @@ class MyGridScrollComponent {
 
 We'll still be subscribing to the `dragMove` event of the specific row in the way we did in the previous example. Since `dragMove` is fired only when the cursor actually moves, we want to have a nice and simple way to auto-scroll the grid when the row is at one of the edges, but the user **does not** move the mouse. We'll an additional method which will setup an `interval`, auto-scrolling the grid every `500ms`.
 
-We create and subscribe to the `interval` when the pointer reaches the grid's edge and we `unsubscribe` from that `interval` everytime the mouse moves or the row is dropped (regardless of cursor position).
+We create and subscribe to the `interval` when the pointer reaches the grid's edge and we `unsubscribe` from that `interval` every time the mouse moves or the row is dropped (regardless of cursor position).
 
 ```typescript
 class MyGridScrollComponent {

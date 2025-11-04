@@ -284,7 +284,7 @@ Here's a breakdown of all icons as used by each component:
 | -------------------- | ------------------------------------------------------------------------------ |
 | **add**              | Used in excel-filter menu to add filter entry.                                 |
 | **arrow_back**       | Used in various UI elements for moving a column backwards.                     |
-| **arrow_drop_down**  | Used in various buttons to indicate togglable menus.                           |
+| **arrow_drop_down**  | Used in various buttons to indicate toggleable menus.                           |
 | **arrow_forward**    | Used in various UI elements for moving a column forwards.                      |
 | **cancel**           | Used in various UI elements for canceling operations.                          |
 | **chevron_right**    | Used to indicate expandable menus, like in the excel style filtering.          |
@@ -293,7 +293,7 @@ Here's a breakdown of all icons as used by each component:
 | **drag_indicator**   | Used to show a handle to indicate an item can be dragged.                      |
 | **error**            | Used in editable cells to indicate erroneous data input.                       |
 | **expand_more**      | Used by the excel filtering menu to indicate the addition of more filters.     |
-| **file_dowload**     | Used by the excel filter exporter.                                             |
+| **file_download**     | Used by the excel filter exporter.                                             |
 | **filter_***         | Used for various filtering operands.                                           |
 | **group_work**       | Used by the group-by drop area.                                                |
 | **hide**             | Used by various UI elements for hiding columns.                                |

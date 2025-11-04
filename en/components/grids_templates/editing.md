@@ -23,7 +23,7 @@ _canonicalLink: grid/editing
 }
 
 <style>
-    /* Fix for the overlapping right side-affix when the screen is shrinked */
+    /* Fix for the overlapping right side-affix when the screen is shrunk */
     .table-responsive {
         width:63vw;
     }
@@ -102,7 +102,7 @@ The grid exposes a wide array of events that provide greater control over the ed
 | [`rowEditDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditDone) | If `rowEditing` is enabled, fires **after** a row has been edited and new row's value has been **committed**. | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
 | [`rowEditExit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditExit) | If `rowEditing` is enabled, fires when a row **exits edit mode** | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
 
-### Event cancelation
+### Event cancellation
  - `RowEditEnter` - Neither Row nor Cell will enter edit mode.
  - `CellEditEnter` - Prevents entering cell edit. If [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowEditable) is enabled, row edit will be triggered, although cell edit will remain forbidden.
  - `CellEdit` - Allowed Cell/Row edit, hitting **Done** button or **Enter** won't commit the value or row transaction. Cell editing and Row editing won't be closed until **Cancel** button is clicked.

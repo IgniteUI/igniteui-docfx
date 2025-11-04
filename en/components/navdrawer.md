@@ -173,7 +173,7 @@ export class AppComponent {
 }
 ```
 
-There are various ways to open and close the drawer. Input properties can be bound to app state, programatic access to the API in the component using a [`@ViewChild(IgxNavigationDrawerComponent)`](https://angular.io/api/core/ViewChild) reference or even in this case using the `#drawer` [template reference variable](https://angular.io/guide/template-syntax#ref-vars):
+There are various ways to open and close the drawer. Input properties can be bound to app state, programmatic access to the API in the component using a [`@ViewChild(IgxNavigationDrawerComponent)`](https://angular.io/api/core/ViewChild) reference or even in this case using the `#drawer` [template reference variable](https://angular.io/guide/template-syntax#ref-vars):
 
 ```html
 <button (click)="drawer.toggle()">Menu</button>

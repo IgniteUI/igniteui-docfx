@@ -237,7 +237,7 @@ The search value of a condition can be templated using the [`igxQueryBuilderSear
 
 ### Formatter
 
-In order to change the appearance of the search value in the chip displayed when a condition is not in edit mode, you can set a formatter function to the fields array. The search value and selected condition could be acccessed through the value and rowData arguments as follows:
+In order to change the appearance of the search value in the chip displayed when a condition is not in edit mode, you can set a formatter function to the fields array. The search value and selected condition could be accessed through the value and rowData arguments as follows:
 
 ```ts
 this.ordersFields = [

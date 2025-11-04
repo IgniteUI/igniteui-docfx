@@ -9,7 +9,7 @@ Angular Query Builder provides a serializable/deserializable JSON format model, 
 
 ## Overview
 
-This Angular Query Builder example demonstartes how the [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) expression tree could be used to request data from an endpoint [Northwind WebAPI](https://data-northwind.indigo.design/swagger/index.html) and set it as an [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) data source.
+This Angular Query Builder example demonstrates how the [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) expression tree could be used to request data from an endpoint [Northwind WebAPI](https://data-northwind.indigo.design/swagger/index.html) and set it as an [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) data source.
 
 <code-view style="height:700px" 
            no-theming
