@@ -5,6 +5,7 @@ _keywords: Ignite UI for Angular, Tailwind CSS, Angular styling, Angular theming
 ---
 
 # Tailwind CSS Integration with Ignite UI for Angular
+
 <p class="highlight">Ignite UI for Angular offers full theming customization through CSS variables and a powerful Sass engine. In this guide, you'll learn how to integrate Tailwind CSS into an Angular project and enhance it with custom utility classes provided by the `igniteui-theming` package. These classes expose Ignite UI design tokens for colors, shadows, and typography, enabling a seamless utility-first styling experience.</p>
 <br>
 
@@ -18,6 +19,7 @@ _keywords: Ignite UI for Angular, Tailwind CSS, Angular styling, Angular theming
 > ```
 
 ### 1. Install Tailwind
+
 Install tailwind using the following command:
 
 ```cmd
@@ -37,6 +39,7 @@ Create a `.postcssrc.json` file in the root of your project and add the `@tailwi
 ```
 
 ### 3.Import Tailwind CSS
+
 In your main stylesheet (`styles.css` or `styles.scss`), import Tailwind and the Ignite UI Tailwind theme configuration.
 
 ```css
@@ -54,6 +57,7 @@ If your project uses `sass` for styling:
 > Ensure the import path resolves correctly from `node_modules`.
 
 ## Using Ignite UI Custom Utility Classes
+
 The `igniteui-theming` package includes a custom Tailwind configuration that exposes Ignite UI design tokens through utility classes. These include support for:
 
 - Colors and contrast colors
@@ -65,7 +69,9 @@ The `igniteui-theming` package includes a custom Tailwind configuration that exp
 Let’s look at how to use each.
 
 #### Color Utility Classes
+
 Use Ignite UI color tokens directly in your HTML:
+
 ```html
 <h1 class="bg-primary-500 text-primary-500-contrast">This is a title</h1>
 ```
@@ -85,12 +91,14 @@ You can find all the shadow-related utility classes provided by Tailwind [here](
 <br>
 
 #### Typography custom utility styles
+
 To apply the font, add the `font-ig` class to a top-level element. You can also define the base font size using the `text-base` utility class.
 We provide custom utility classes for each typography level (e.g., h1, h2, body-1). Use them like so:
 
 ```html
 <p class="type-style-h3">This paragraph gets the h3 styles</p>
 ```
+
 Each class applies all necessary font settings, spacing, and sizing according to the [Ignite UI type scale](https://www.infragistics.com/products/ignite-ui-angular/angular/components/themes/typography).
 
 >[!NOTE]
@@ -103,8 +111,8 @@ In the sample below, you’ll see a 404 page built entirely with Tailwind utilit
 
 > You can see how to style each component by checking out the **Styling** section in its respective documentation topic.
 
-<code-view style="height: 610px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 610px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/theming/tailwind-sample" alt="Tailwind Sample">
 </code-view>
 
@@ -112,6 +120,7 @@ In the sample below, you’ll see a 404 page built entirely with Tailwind utilit
 >This sample is fictional and fully custom, it’s not part of the Ignite UI component library.
 
 ## Summary
+
 With just a few configuration steps, you can combine Tailwind’s utility-first approach with Ignite UI’s robust design system. This integration allows you to rapidly build consistent, themed UI components using well-defined tokens for color, elevation, and typography—right from your HTML.
 
 ## Additional Resources
@@ -119,5 +128,5 @@ With just a few configuration steps, you can combine Tailwind’s utility-first 
 <br>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

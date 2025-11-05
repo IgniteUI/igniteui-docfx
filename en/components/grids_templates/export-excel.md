@@ -1,33 +1,41 @@
 @@if (igxName === 'IgxGrid') {
 ---
+
 title: Angular Grid Export to Excel - Ignite UI for Angular
 _description: With Ignite UI Excel Exporter you can make client Excel functionality more convenient & simpler. This format allows features like filtering, sorting, etc.
 _keywords: data export, ignite ui for angular, infragistics
 ---
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
+
 title: Angular Tree Grid Export to Excel - Ignite UI for Angular
 _description: With Ignite UI Excel Exporter you can make client Excel functionality more convenient & simpler. This format allows features like filtering, sorting, etc.
 _keywords: data export, ignite ui for angular, infragistics
 _canonicalLink: grid/export-excel
 ---
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
+
 title: Angular Hierarchical Grid Export to Excel - Ignite UI for Angular
 _description: With Ignite UI Excel Exporter you can make client Excel functionality more convenient & simpler. This format allows features like filtering, sorting, etc.
 _keywords: data export, ignite ui for angular, infragistics
 _canonicalLink: grid/export-excel
 ---
+
 }
 @@if (igxName === 'IgxPivotGrid') {
 ---
+
 title: Angular Pivot Grid Export to Excel - Ignite UI for Angular
 _description: With Ignite UI Excel Exporter you can make client Excel functionality more convenient & simpler. This format allows features like filtering, sorting, etc.
 _keywords: data export, ignite ui for angular, infragistics
 _canonicalLink: grid/export-excel
 ---
+
 }
 
 # Angular @@igComponent Export to Excel Service
@@ -56,7 +64,7 @@ The Excel Exporter service can export data to excel from the @@igxName. The data
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height: 800px;" 
+<code-view style="height: 800px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz"
            iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1/" alt="Angular Excel Exporter Example">
@@ -65,7 +73,7 @@ The Excel Exporter service can export data to excel from the @@igxName. The data
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height: 350px;" 
+<code-view style="height: 350px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz"
            iframe-src="{environment:demosBaseUrl}/services/export-excel-tree-grid-sample/" alt="Angular Excel Exporter Example">
@@ -74,7 +82,7 @@ The Excel Exporter service can export data to excel from the @@igxName. The data
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height: 600px;" 
+<code-view style="height: 600px;"
         data-demos-base-url="{environment:demosBaseUrl}"
         explicit-editor="stackblitz"
         iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-export/" alt="Angular Excel Exporter Example">
@@ -83,8 +91,8 @@ The Excel Exporter service can export data to excel from the @@igxName. The data
 }
 @@if (igxName === 'IgxPivotGrid') {
 
-<code-view style="height: 600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz"
            iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-export/" alt="Angular Excel Exporter Example">
 </code-view>
@@ -115,17 +123,21 @@ export class AppModule {}
 To initiate an export process you may use the handler of a button in your component's template.
 
 @@if (igxName !== 'IgxPivotGrid') {
+
 ```html
 <@@igSelector #@@igObjectRef [data]="localData" [autoGenerate]="true"></@@igSelector>
 <button (click)="exportButtonHandler()">Export @@igxName to Excel</button>
 ```
+
 }
 
 @@if (igxName === 'IgxPivotGrid') {
+
 ```html
 <@@igSelector #@@igObjectRef [data]="localData" [pivotConfiguration]="pivotConfig"></@@igSelector>
 <button (click)="exportButtonHandler()">Export @@igxName to Excel</button>
 ```
+
 }
 
 You may access the exporter service by defining an argument of type [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) in the component's constructor and the Angular framework will provide an instance of the service. To export some data in MS Excel format you need to invoke the exporter service's [`export`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html#export) method and pass the @@igxName component as first argument.
@@ -160,9 +172,10 @@ If all went well, you should see the @@igxName component and a button under it. 
 }
 
 @@if (igxName !== 'IgxPivotGrid') {
+
 ## Export All Data
 
-There are some cases when you might be using remote operations like *Paging* and the Grid won't have access to all of its data. In these cases, we recommend using the [Excel Export Service](../exporter-excel.md) and pass the whole data collection, if available. Example:
+There are some cases when you might be using remote operations like _Paging_ and the Grid won't have access to all of its data. In these cases, we recommend using the [Excel Export Service](../exporter-excel.md) and pass the whole data collection, if available. Example:
 
 ```ts
 public exportButtonHandler() {
@@ -171,14 +184,15 @@ public exportButtonHandler() {
 ```
 
 @@if (igxName === 'IgxGrid') {
+
 ## Export Grouped Data
 
 To export grouped data you just need to group the @@igComponent by one or more columns. The browser will download a file named "ExportedDataFile.xlsx" which contains the data from the @@igComponent component in MS Excel format grouped by the selected column. Example:
 
 
-<code-view style="height: 800px;" 
+<code-view style="height: 800px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           explicit-editor="stackblitz" 
+           explicit-editor="stackblitz"
            iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1/" alt="Angular Grouped Data Excel Exporter Example">
 </code-view>
 
@@ -197,7 +211,7 @@ It is now possible to export @@igComponent with defined [multi-column headers](m
 }
 
 @@if (igxName === 'IgxGrid') {
-<code-view style="height: 800px;" 
+<code-view style="height: 800px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz"
            iframe-src="{environment:demosBaseUrl}/grid/multi-column-headers-export/" alt="Angular Multi-Column Headers Export">
@@ -205,15 +219,15 @@ It is now possible to export @@igComponent with defined [multi-column headers](m
 }
 
 @@if (igxName === 'IgxTreeGrid') {
-<code-view style="height: 800px;" 
+<code-view style="height: 800px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           explicit-editor="stackblitz" 
+           explicit-editor="stackblitz"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-headers-export/" alt="Angular Multi-Column Headers Export">
 </code-view>
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
-<code-view style="height: 800px;" 
+<code-view style="height: 800px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-export/" alt="Angular Multi-Column Headers Export">
@@ -273,9 +287,11 @@ this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions('
 }
 
 When you are exporting data from the @@igComponent component, the export process takes in account features like row filtering and column hiding and exports only the data visible in the @@igComponent. You can configure the exporter service to include filtered rows or hidden columns by setting properties on the [`IgxExcelExporterOptions`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html) object.
+
 ## Known Limitations
 
 @@if (igxName === 'IgxGrid') {
+
 |Limitation|Description|
 |--- |--- |
 |Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns.|
@@ -283,6 +299,7 @@ When you are exporting data from the @@igComponent component, the export process
 }
 
 @@if (igxName === 'IgxTreeGrid') {
+
 |Limitation|Description|
 |--- |--- |
 |Hierarchy levels|The excel exporter service can create up to 8 levels of hierarchy.|
@@ -291,6 +308,7 @@ When you are exporting data from the @@igComponent component, the export process
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 |Limitation|Description|
 |--- |--- |
 |Hierarchy levels|The excel exporter service can create up to 8 levels of hierarchy.|
@@ -300,6 +318,7 @@ When you are exporting data from the @@igComponent component, the export process
 }
 
 @@if (igxName === 'IgxPivotGrid') {
+
 |Limitation|Description|
 |--- |--- |
 |Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns.|
@@ -310,13 +329,13 @@ When you are exporting data from the @@igComponent component, the export process
 
 The Excel Exporter service has a few more APIs to explore, which are listed below.
 
-* [IgxExcelExporterService API]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)
-* [IgxExcelExporterOptions API]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html)
+- [IgxExcelExporterService API]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)
+- [IgxExcelExporterOptions API]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html)
 
 Additional components that were used:
 
-* [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
+- [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
 <div class="divider"></div>
 
@@ -325,5 +344,5 @@ Additional components that were used:
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

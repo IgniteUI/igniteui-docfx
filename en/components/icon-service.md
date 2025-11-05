@@ -5,6 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Angular Icon Service Overview
+
 <p class="highlight">The Ignite UI for Angular Icon Service allows developers to add new icons from various sources to their UIs.</p>
 
 ## Introduction
@@ -27,8 +28,8 @@ export class AppComponent implements OnInit {
 }
 ```
 
-<code-view style="height: 180px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 180px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/icon-service/" alt="Icon Service Example">
 </code-view>
 
@@ -51,7 +52,7 @@ iconService.setFamily('material', { className: 'material-icons', type: 'liga' })
 iconService.setFamily('fa-solid', { className: 'fas', type: 'font', prefix: 'fa' });
 ```
 
-The example above creates two icon families: 'material' and 'fa-solid'. Their types are different, the `material` family is registered as `liga`, while the `fa-solid` family is registered as `font`. The difference between the two is how the `igx-icon` component would go about rendering them. Typically, [Font Awesome](https://fontawesome.com/) uses class names to specify code points to a __font__ family, hence why we set its type to `font`. Anytime we have to rely on code points to render icons, we should set the type to `font`. The [Material Icons](https://material.io/icons) family is still a font family, however, the standard way to display an icon is to provide a `ligature` name, instead of a class name pointing to a specific code point. For that reason, we need to set the type to `liga`. There's a third family type - `svg`, it is reserved for icon families that will be comprised of SVGs that are registered through the Icon Service.
+The example above creates two icon families: 'material' and 'fa-solid'. Their types are different, the `material` family is registered as `liga`, while the `fa-solid` family is registered as `font`. The difference between the two is how the `igx-icon` component would go about rendering them. Typically, [Font Awesome](https://fontawesome.com/) uses class names to specify code points to a **font** family, hence why we set its type to `font`. Anytime we have to rely on code points to render icons, we should set the type to `font`. The [Material Icons](https://material.io/icons) family is still a font family, however, the standard way to display an icon is to provide a `ligature` name, instead of a class name pointing to a specific code point. For that reason, we need to set the type to `liga`. There's a third family type - `svg`, it is reserved for icon families that will be comprised of SVGs that are registered through the Icon Service.
 
 Having registered the two font families above, we can now consume their icons in a standardized way via the `igx-icon` component:
 
@@ -63,6 +64,7 @@ Having registered the two font families above, we can now consume their icons in
 You might have noticed that for the `material` family we use the ligature `name` as name, while in the case of the `fa-solid` family we specify the `className` for name, which is `fa-car` but drop the `fa-` prefix as it has been specified when we registered the icon family in the previous step.
 
 ### Adding SVG Icons
+
 The Ignite UI for Angular Icon Service allows us to associate SVG images with families and give them names so that they can be included via the `igx-icon` component in the same way as font-based icons. The SVGs should be resolved via either strings or via absolute URI to the SVG asset.
 
 ```ts
@@ -83,6 +85,7 @@ Later in markup:
 Note that we are adding custom SVG icons to families of type `liga` and `font`. This is possible because the `addSvgIcon` and `addSvgIconFromText` methods register the icons as `svg` type implicitly, allowing the `igx-icon` component to correctly render the SVG.
 
 ## Meta Families
+
 The Ignite UI for Angular Icon Service allows us to create pseudo family maps that combine icons added via either setting a family of font icons or adding SVGs under a common umbrella so that it's easier to reference them.
 
 ```ts
@@ -102,6 +105,7 @@ Later in markup:
 ```
 
 ## Icon Retrieval
+
 It is possible to get an icon for a given `family` and icon `name` in order to read the original icon `type`, `name`, `family`, and `className`.
 
 ```ts
@@ -249,12 +253,14 @@ Here's a breakdown of all icons as used by each component:
 | **carousel_next** | Used for navigating between slides. |
 
 #### Chip
+
 | Icon         | Description                               |
 | ------------ | ----------------------------------------- |
 | **selected** | Used to indicate that a chip is selected. |
 | **remove**   | Used for the remove button.               |
 
 #### Combo (incl. Simple Combo)
+
 | Icon               | Description                                                  |
 | ------------------ | ------------------------------------------------------------ |
 | **case_sensitive** | Used to indicate and toggle case-sensitive filtering.        |
@@ -263,23 +269,27 @@ Here's a breakdown of all icons as used by each component:
 | **input_collapse** | Used for the toggle button when the combo menu is expanded.  |
 
 #### Date Picker
+
 | Icon            | Description                                          |
 | --------------- | ---------------------------------------------------- |
 | **today**       | Used for the toggle button that triggers the picker. |
 | **input_clear** | Used for the clear button.                           |
 
 #### Date Range Picker
+
 | Icon           | Description                                          |
 | -------------- | ---------------------------------------------------- |
 | **date_range** | Used for the toggle button that triggers the picker. |
 
 #### Expansion Panel
+
 | Icon         | Description                                                   |
 |------------- | ------------------------------------------------------------- |
 | **expand**   | Used for the toggle button that triggers the expanded state.  |
 | **collapse** | Used for the toggle button that triggers the collapsed state. |
 
 #### Grid
+
 | Icon                 | Description                                                                    |
 | -------------------- | ------------------------------------------------------------------------------ |
 | **add**              | Used in excel-filter menu to add filter entry.                                 |
@@ -318,11 +328,13 @@ Here's a breakdown of all icons as used by each component:
 | **view_column**      | Used by the pivot data selector.                                               |
 
 #### Input Group
+
 | Icon            | Description                                          |
 | --------------- | ---------------------------------------------------- |
 | **input_clear** | Used for the clear button.                           |
 
 #### Paginator
+
 | Icon           | Description                                                  |
 | -------------- | ------------------------------------------------------------ |
 | **first_page** | Used by the button used for navigating to the first page.    |
@@ -331,6 +343,7 @@ Here's a breakdown of all icons as used by each component:
 | **next**       | Used by the button used for navigating to the next page.     |
 
 #### Query Builder
+
 | Icon         | Description                                                  |
 | ------------ | ------------------------------------------------------------ |
 | **add**      | Used by the button for adding new filter entries.            |
@@ -343,12 +356,14 @@ Here's a breakdown of all icons as used by each component:
 
 
 #### Select
+
 | Icon               | Description                                                   |
 | ------------------ | -----------------------------------------------------------   |
 | **input_expand**   | Used for the toggle button when the select menu is collapsed. |
 | **input_collapse** | Used for the toggle button when the select menu is expanded.  |
 
 #### Tabs
+
 | Icon         | Description                                                 |
 | ------------ | ----------------------------------------------------------- |
 | **prev**     | Used by the button used for navigating to the previous tab. |
@@ -356,11 +371,13 @@ Here's a breakdown of all icons as used by each component:
 
 
 #### Time Picker
+
 | Icon         | Description                                          |
 | ------------ | ---------------------------------------------------- |
 | **clock**    | Used for the toggle button that triggers the picker. |
 
 #### Tree
+
 | Icon              | Description                                          |
 | ----------------- | ---------------------------------------------------- |
 | **tree_expand**   | Used for the toggle button that triggers the picker. |
@@ -377,6 +394,7 @@ setFamily(name: string, meta: IconFamilyMeta): IgxIconService;
 ```
 
 ### Icon References
+
 Set ONLY if NOT already present the icon map:
 
 ```ts
@@ -384,35 +402,42 @@ addIconRef(name: string, family: string, icon: IconMeta): void;
 ```
 
 Set an Icon reference in the icon map (overridden if already present):
+
 ```ts
 setIconRef(name: string, family: string, icon: IconMeta): void;
 ```
 
 Get and Icon reference
+
 ```ts
 getIconRef(family: string, name: string): IconReference;
 ```
 
 ### SVG Icons
+
 From URI:
+
 ```ts
 addSvgIcon(name: string, url: string, family: string, stripMeta = false): void;
 ```
 
 From string:
+
 ```ts
 addSvgIconFromText(name: string, iconText: string, family: string, stripMeta = false): void;
 ```
 
 ## API References
+
 <div class="divider--half"></div>
 
-* [IgxIconService]({environment:angularApiUrl}/classes/igxiconservice.html)
+- [IgxIconService]({environment:angularApiUrl}/classes/igxiconservice.html)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

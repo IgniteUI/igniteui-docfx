@@ -19,6 +19,7 @@ The guide is divided into the following topics and has included video tutorials:
 Before you begin on your path of learning Angular, you’ll need to install the prerequisites for modern web app dev with Angular.  This section covers using the Node.js package manager, installing the Visual Studio Code IDE, and a few of the basic concepts that are necessary for modern web development. Check out the [video tutorial](https://youtu.be/dhjrAPPad54) for this topic.
 
 #### [Create your UI with Angular components](create-ui-with-components.md)
+
 Creating a UI in Angular is very similar to how we would create one in WPF. We normally use user controls, represented by the UserControl class. A UserControl groups markup and code into a reusable container, allowing the same interface and functionality to be used in several different places.  Understanding components in Angular is key to the rest of this series – so let’s get started by understanding how WPF components translate to components in Angular. Check out the [video tutorial](https://youtu.be/z1SZUezpRXY) for this topic.
 
 #### [One-way data binding in Angular](one-way-binding.md)
@@ -49,5 +50,5 @@ In WPF, in order to layout the elements in your application, you need to put the
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

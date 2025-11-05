@@ -5,6 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Printing styles
+
 <p class="highlight">The Ignite UI for Angular theming engine provides some default printing styles, which make sure that our components have at least the bare minimum to look the same on paper as they appear on the web page.</p>
 <div class="divider--half"></div>
 
@@ -14,8 +15,9 @@ In order to make sure that the components will be fully visible on the paper, yo
 
 By `default` the `printing styles` are incorporated in the `compiled CSS`.
 If you are not planning to print, we suggest you turn them off in order to reduce the size of the outputted CSS.
- 
+
 You can do that in your theme `SCSS` file:
+
 ```scss
 @use "igniteui-angular/theming" as *;
 
@@ -29,12 +31,13 @@ You can do that in your theme `SCSS` file:
 @include theme($default-palette);
 ```
 
-Since **v13.2** we decided not to hide any component by default since we don't know what parts you want to be visible on paper, we leave that for you to decide.   
+Since **v13.2** we decided not to hide any component by default since we don't know what parts you want to be visible on paper, we leave that for you to decide.
 
 In order to remove a piece or a whole component from the printed page, you can either add the class .igx-no-print to the element/component you don't want to print, or if you don't have access to the DOM you can directly target that element tag or class and set its display: none.
 
 Let's say that you can't' accesses a button in the DOM to put `.igx-no-print` on it.
 You can still hide that button from printing styles using SCSS.
+
 ```scss
 @media print {
     [igxButton] {

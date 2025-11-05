@@ -6,12 +6,12 @@ _keywords: Angular Chip, Angular Chip Component, Angular Chip Area, Angular Chip
 
 # Angular Chip Component Overview
 
-[`The Angular Chip component`]({environment:angularApiUrl}/classes/igxchipcomponent.html) is a visual element that displays information in an oval container. The component has various properties - it can be templated, deleted, and selected. Multiple chips can be reordered and visually connected to each other, using the chip area as a container. 
+[`The Angular Chip component`]({environment:angularApiUrl}/classes/igxchipcomponent.html) is a visual element that displays information in an oval container. The component has various properties - it can be templated, deleted, and selected. Multiple chips can be reordered and visually connected to each other, using the chip area as a container.
 
 ## Angular Chip Example
 
-<code-view style="height: 100px; padding-top: 10px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px; padding-top: 10px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/chip-simple/" alt="Angular Chip Example">
 </code-view>
 
@@ -25,7 +25,7 @@ To get started with the Ignite UI for Angular Chip component, first you need to 
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the **IgxChipsModule** in the **app.module.ts** file:
 
@@ -188,8 +188,8 @@ public chipRemoved(event: IBaseChipEventArgs) {
 
 If everything went well, you should see this in your browser:
 
-<code-view style="height: 100px; padding-top: 10px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px; padding-top: 10px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/chip-simple/" >
 </code-view>
 
@@ -313,11 +313,12 @@ public chipRemoved(event: IBaseChipEventArgs) {
     this.changeDetectionRef.detectChanges();
 }
 ```
+
 If everything went well, you should see this in your browser:
 
 
-<code-view style="height: 100px; padding-top: 10px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px; padding-top: 10px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/chip-simple/" >
 </code-view>
 
@@ -473,8 +474,8 @@ If everything's set up correctly, you should see this in your browser:
 
 ### Demo
 
-<code-view style="height: 100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/chip-area-sample/" >
 </code-view>
 
@@ -627,9 +628,9 @@ The last step is to **include** the component theme in our application.
 
 ### Demo
 
-<code-view style="height:100px" 
+<code-view style="height:100px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/chip-styling/" >
 </code-view>
 
@@ -646,6 +647,7 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 ```
 
 The utility file includes both `light` and `dark` theme variants.
+
 - Use `light-*` classes for the light theme.
 - Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-chip`, `dark-chip`.
@@ -710,18 +712,18 @@ Learn more about it in the [Size](display-density.md) article.
 
 ## API
 
-* [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
-* [IgxChipComponent Styles]({environment:sassApiUrl}/themes#function-chip-theme)
-* [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
+- [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
+- [IgxChipComponent Styles]({environment:sassApiUrl}/themes#function-chip-theme)
+- [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
 
 ## Theming Dependencies
 
-* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## References
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

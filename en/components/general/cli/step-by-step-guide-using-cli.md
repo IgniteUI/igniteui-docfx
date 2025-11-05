@@ -5,6 +5,7 @@ _keywords: angular cli, ignite ui for angular, infragistics
 ---
 
 # Step-by-Step Guide using Ignite UI CLI
+
 If you want to get a guided experience through the available options, you can initialize the step by step mode that will help you create and setup your new application, as well as update project previously created with the [Ignite UI CLI](getting-started-with-cli.md).
 
 To start the guide using the Ignite UI CLI, simply run the `ig` command:
@@ -12,7 +13,9 @@ To start the guide using the Ignite UI CLI, simply run the `ig` command:
 ```bash
 ig
 ```
+
 or
+
 ```bash
 ig new
 ```
@@ -26,9 +29,8 @@ This will activate the step by step mode and you will be asked a series of quest
     </a>
 </div>
 
-> [!Note] 
+> [!Note]
 > Step by step mode relies on `Inquirer.js`, see [supported terminals](https://github.com/SBoudrias/Inquirer.js#support-os-terminals)
-
 
 
 ## Create new project
@@ -57,9 +59,11 @@ After completing the above steps the application structure will be generated, gi
 Ignite UI CLI supports multiple component templates, as well as some more elaborated scenario templates, that can be added to a project. This mode can be activated either after completing project creation or inside an existing project using the commands below.
 
 When using Ignite UI CLI, run the `add` command:
-```bash	
+
+```bash
 ig add
 ```
+
 In case you choose to add a new control, you will be provided with a [list of the available templates](component-templates.md#component-templates), grouped in categories.
 
 ![](../../../images/general/ig-step-by-step-template-group.png)

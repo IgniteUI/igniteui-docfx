@@ -12,8 +12,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 This Angular drop down example demonstrates the basic functionalities of a drop down list. Click on it to expand the preset options, select an item, and then close the drop down.
 
-<code-view style="height:200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-1/" alt="Angular Drop Down Example">
 </code-view>
 
@@ -27,7 +27,7 @@ To get started with the Ignite UI for Angular Drop Down component, first you nee
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxDropDownModule` in your **app.module.ts** file.
 
@@ -142,8 +142,8 @@ export class MyDropDownComponent {
 }
 ```
 
-<code-view style="height: 200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-2/" >
 </code-view>
 
@@ -188,8 +188,8 @@ export class MyDropDownComponent {
 
 If the sample is configured properly, a list of countries should be displayed as a group under European Union header, France as a non-interactive item, and Bulgaria as a selected item:
 
-<code-view style="height: 310px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 310px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-3/" >
 </code-view>
 
@@ -263,8 +263,8 @@ The group also has the additional functionality of disabling items inside of its
 
 You can see the results in the sample below:
 
-<code-view style="height: 310px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 310px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-5/" >
 </code-view>
 
@@ -328,8 +328,8 @@ export class MyMenuComponent {
 }
 ```
 
-<code-view style="height: 240px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 240px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-menu/" >
 </code-view>
 
@@ -396,8 +396,8 @@ public ngAfterViewInit(): void {
 
 The result from the above configurations could be seen in the below sample.
 
-<code-view style="height:400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-multi-level-menu/">
 </code-view>
 
@@ -462,8 +462,8 @@ export class InputDropDownComponent {
 }
 ```
 
-<code-view style="height:220px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:220px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-4/" >
 </code-view>
 
@@ -642,9 +642,9 @@ The last step is to pass the custom drop-down theme to a class or element select
 
 ### Demo
 
-<code-view style="height:350px" 
+<code-view style="height:350px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-styling/" >
 </code-view>
 
@@ -652,21 +652,21 @@ The last step is to pass the custom drop-down theme to a class or element select
 
 ## API Summary
 
-* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
-* [IgxDropDownComponent Styles]({environment:sassApiUrl}/themes#function-drop-down-theme)
-* [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html).
-* [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
-* [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
-* [IgxDividerDirective Styles]({environment:sassApiUrl}/themes#function-divider-theme)
+- [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
+- [IgxDropDownComponent Styles]({environment:sassApiUrl}/themes#function-drop-down-theme)
+- [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html).
+- [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
+- [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
+- [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
+- [IgxDividerDirective Styles]({environment:sassApiUrl}/themes#function-divider-theme)
 
 ## Theming Dependencies
 
-* [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
+- [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## Additional Resources
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

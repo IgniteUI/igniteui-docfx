@@ -192,8 +192,8 @@ The ranges are visual elements that highlight a specified range of values on a s
 
 The tick marks serve as a visual division of the scale into intervals in order to increase the readability of the bullet graph.
 
-*   Major tick marks – The major tick marks are used as primary delimiters on the scale. The frequency they appear at, their extents and style can be controlled by setting their corresponding properties.
-*   Minor tick marks – The minor tick marks represent helper tick marks, which might be used to additionally improve the readability of the scale and can be customized in a way similar to the major ones.
+- Major tick marks – The major tick marks are used as primary delimiters on the scale. The frequency they appear at, their extents and style can be controlled by setting their corresponding properties.
+- Minor tick marks – The minor tick marks represent helper tick marks, which might be used to additionally improve the readability of the scale and can be customized in a way similar to the major ones.
 
 ```html
 <igx-bullet-graph
@@ -376,12 +376,12 @@ For your convenience, all above code snippets are combined into one code block b
 
 The following is a list of API members mentioned in the above sections:
 
-*   [`IgxBulletGraphComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxbulletgraphcomponent.html)
-*   [`IgxLinearGraphRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargraphrangecomponent.html)
+- [`IgxBulletGraphComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxbulletgraphcomponent.html)
+- [`IgxLinearGraphRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargraphrangecomponent.html)
 
 ## Additional Resources
 
 You can find more information about other types of gauges in these topics:
 
-*   [Linear Gauge](linear-gauge.md)
-*   [Radial Gauge](radial-gauge.md)
+- [Linear Gauge](linear-gauge.md)
+- [Radial Gauge](radial-gauge.md)

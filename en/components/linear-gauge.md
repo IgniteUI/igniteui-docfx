@@ -373,12 +373,12 @@ For your convenience, all above code snippets are combined into one code block b
 
 The following is a list of API members mentioned in the above sections:
 
-*   [`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargaugecomponent.html)
-*   [`IgxLinearGraphRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargraphrangecomponent.html)
+- [`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargaugecomponent.html)
+- [`IgxLinearGraphRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargraphrangecomponent.html)
 
 ## Additional Resources
 
 You can find more information about other types of gauges in these topics:
 
-*   [Bullet Graph](bullet-graph.md)
-*   [Radial Gauge](radial-gauge.md)
+- [Bullet Graph](bullet-graph.md)
+- [Radial Gauge](radial-gauge.md)

@@ -5,10 +5,12 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Roundness
+
 <p class="highlight">Ignite UI for Angular allows you to change the shape of components by setting their roundness to a value between 0 and 1.</p>
 <div class="divider"></div>
 
 ## Overview
+
 Border radius is defined in the [theme schema](https://github.com/IgniteUI/igniteui-theming/blob/18f878033898e1b6a3bb0ed28993e9a4037d1a80/sass/themes/schemas/components/light/_toast.scss#L44) of the component (see the example below). The border radius for any component defined in this manner can then be controlled via the `$roundness` parameter of the [theme]({environment:sassApiUrl}/themes#mixin-theme) mixin or a single CSS variable called `--ig-radius-factor`.
 
 ```scss
@@ -38,6 +40,7 @@ As you can see from the example, the component schema for the [Toast]({environme
 ```
 
 ### How to use?
+
 Let's see how we can change the default values for the toast from the example above.
 
 If you want the toast to still be affected by the `$roundness` or the `--ig-radius-factor` variable in the resulting theme, use the `border-radius` function provided by the Ignite UI for Angular package.
@@ -59,18 +62,20 @@ igx-toast {
 }
 ```
 
-We can also use the `border-radius` mixin to directly assign the border-radius property to elements. 
+We can also use the `border-radius` mixin to directly assign the border-radius property to elements.
 
 ```scss
 button {
     @include border-radius(rem(4px), rem(4px), rem(16px));
 }
 ```
+
 Now the `border-radius` on the button will be affected by the `$roundness` and `--ig-radius-factor` variables.
 
 <div class="divider--half"></div>
 
 ### Baseline border radius values
+
 The table below shows an excerpt of some of the component border radius values as defined in the Material schema.
 
 | **Component**          | **Min/Max Radius** | **Default Radius** |
@@ -102,5 +107,5 @@ Please refer to the [Schema]({environment:sassApiUrl}/schemas) documentation for
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

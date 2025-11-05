@@ -5,15 +5,18 @@ _keywords: angular, signalr, .net core, infragistics
 ---
 
 # Real-time Web App with ASP.NET Core SignalR
-In this topic, we’ll see how to create applications for both *streaming* and *receiving* data with **ASP.NET Core SignalR**. 
+
+In this topic, we’ll see how to create applications for both _streaming_ and _receiving_ data with **ASP.NET Core SignalR**.
 
 What you'll need:
+
 - A basic knowledge of ASP.NET Core and Angular.
 - .NET Core 3.1 installed and IDE such as Visual Studio.
 
 What you'll know by the end of this article:
+
 - How to add and use SignalR.
-- How to open Client connection and use the *method invocation* concept to stream data per Client.
+- How to open Client connection and use the _method invocation_ concept to stream data per Client.
 - How to consume the SignalR service with Angular application by using Observables.
 
 SignalR takes advantage of several transports and it automatically selects the best available transport given the client and server's capabilities - [WebSockets, Server Send Events or Long-polling](https://stackoverflow.com/a/12855533/2940502).
@@ -37,6 +40,7 @@ It's like a handshake, the Client and Server agree on what to use and they use i
   title="Real-time Web App with Web Sockets" />
 
 ## SignalR Example
+
 The purpose of this demo is to showcase a financial screen board with a Real-time data stream using [ASP.NET Core SignalR](https://dotnet.microsoft.com/apps/aspnet/signalr).
 
 <code-view style="height:700px"
@@ -47,8 +51,9 @@ The purpose of this demo is to showcase a financial screen board with a Real-tim
 ## SignalR Server Configuration
 
 ### Create ASP.NET Core App
+
 Let's see how to set up the ASP.NET Core SignalR application.
-In Visual Studio from *File* >> *New project* choose ASP.NET Core Web Application and follow the setup. Feel free to follow [the official Microsoft documentation tutorial](https://docs.microsoft.com/en-us/aspnet/core/tutorials/signalr?view=aspnetcore-3.1&tabs=visual-studio) if you experience any configuration difficulties.
+In Visual Studio from _File_ >> _New project_ choose ASP.NET Core Web Application and follow the setup. Feel free to follow [the official Microsoft documentation tutorial](https://docs.microsoft.com/en-us/aspnet/core/tutorials/signalr?view=aspnetcore-3.1&tabs=visual-studio) if you experience any configuration difficulties.
 
 <img style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px); max-width: calc(100% - 400px);"
   src="../../../images/general/how-to/create-new-project.jpg"
@@ -60,6 +65,7 @@ In Visual Studio from *File* >> *New project* choose ASP.NET Core Web Applicatio
 ### SignalR Config Setup
 
 Add the following code to the [Startup.cs file](https://github.com/IgniteUI/finjs-web-api/blob/master/WebAPI/Startup.cs):
+
 - Endpoint part of the `Configure` method.
 
 ```cs
@@ -95,6 +101,7 @@ Now, let's set up additional basic configuration. Open the [properties/launchSet
     }
   }
 ```
+
 Our server-side project will run on `localhost:5001` and the client side will run on `localhost:4200`, so in order to establish communication between those two, we need to enable CORS. Let’s open the [Startup.cs](https://github.com/IgniteUI/finjs-web-api/blob/master/WebAPI/Startup.cs#L31) class and modify it:
 
 ```cs
@@ -118,11 +125,13 @@ public void ConfigureServices(IServiceCollection services)
 ```
 
 If you experience a specific problem with enabling Cross-origin resource sharing, check out the [official Microsoft topic](https://docs.microsoft.com/en-us/aspnet/core/signalr/security?view=aspnetcore-5.0#cross-origin-resource-sharing).
-### SignalR Hub Setup
-Let's start by explaining what is a [SignalR hub?](https://docs.microsoft.com/en-us/aspnet/core/signalr/hubs?view=aspnetcore-5.0#what-is-a-signalr-hub)
-The SignalR Hub API enables you to call methods on connected clients from the server. In the server code, you define methods that are called by the client. In SignalR there is this concept called *Invocation* - you can actually be calling the hub from the client with a particular method. In the client code, you define methods that are called from the server.
 
-The actual hub lives on the server-side. Imagine you have *Clients* and *the Hub* is between all of them. You can say something to all the Clients with `Clients.All.doWork()` by invoking a method on the hub. This will goes to all connected clients. Also, you can communicate with only one client, which is the Caller, because he is the caller of that particular method.
+### SignalR Hub Setup
+
+Let's start by explaining what is a [SignalR hub?](https://docs.microsoft.com/en-us/aspnet/core/signalr/hubs?view=aspnetcore-5.0#what-is-a-signalr-hub)
+The SignalR Hub API enables you to call methods on connected clients from the server. In the server code, you define methods that are called by the client. In SignalR there is this concept called _Invocation_ - you can actually be calling the hub from the client with a particular method. In the client code, you define methods that are called from the server.
+
+The actual hub lives on the server-side. Imagine you have _Clients_ and _the Hub_ is between all of them. You can say something to all the Clients with `Clients.All.doWork()` by invoking a method on the hub. This will goes to all connected clients. Also, you can communicate with only one client, which is the Caller, because he is the caller of that particular method.
 
 <img style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc; min-width: calc(100% - 650px); max-width: calc(100% - 400px);"
   src="../../../images/general/how-to/ws-hub-callers.jpg"
@@ -130,13 +139,14 @@ The actual hub lives on the server-side. Imagine you have *Clients* and *the Hub
   alt="SignalR Hub Setup with callers"
   title="SignalR Hub Setup with callers" />
 
-We've created a [StreamHub class](https://github.com/IgniteUI/finjs-web-api/blob/d493f159e0a6f14b5ffea3e893f543f057fdc92a/WebAPI/Models/StreamHub.cs#L9) that inherits the base Hub class, which is responsible for managing connections, groups, and messaging. It's good to keep in mind that the Hub class is stateless and each new invocation of a certain method is in a new instance of this class. It's useless to save state in instance properties, rather we suggest using static properties, in our case we use static key-value pair collection to store data for each connected client. 
+We've created a [StreamHub class](https://github.com/IgniteUI/finjs-web-api/blob/d493f159e0a6f14b5ffea3e893f543f057fdc92a/WebAPI/Models/StreamHub.cs#L9) that inherits the base Hub class, which is responsible for managing connections, groups, and messaging. It's good to keep in mind that the Hub class is stateless and each new invocation of a certain method is in a new instance of this class. It's useless to save state in instance properties, rather we suggest using static properties, in our case we use static key-value pair collection to store data for each connected client.
 
-Other useful properties of this class are *Clients*, *Context*, and *Groups*. They can help you to manage certain behavior based on the unique *ConnectionID*. Also, this class provides you with the following useful methods:
+Other useful properties of this class are _Clients_, _Context_, and _Groups_. They can help you to manage certain behavior based on the unique _ConnectionID_. Also, this class provides you with the following useful methods:
+
 - OnConnectedAsync() - Called when a new connection is established with the hub.
 - OnDisconnectedAsync(Exception) - Called when a connection with the hub is terminated.
 
-They allow us to perform any additional logic when a connection is established or closed. In our application, we've also added *UpdateParameters* method that gets a *Context connection ID* and use it to send back data at a certain interval. As you can see we communicate over a unique *ConnectionID* which prevents a streaming intervention from other Clients.
+They allow us to perform any additional logic when a connection is established or closed. In our application, we've also added _UpdateParameters_ method that gets a _Context connection ID_ and use it to send back data at a certain interval. As you can see we communicate over a unique _ConnectionID_ which prevents a streaming intervention from other Clients.
 
 ```cs
 public async void UpdateParameters(int interval, int volume, bool live = false, bool updateAll = true)
@@ -272,6 +282,7 @@ public ngOnInit() {
 }
 ...
 ```
+
 ### Grid Data Binding
 
 As we have seen so far in our client code we set up a listener for `transferdata` event, which receives as an argument the updated data array. To pass the newly received data to our grid we use an observable. To set that, we need to bind the grid's data source to the data observable like so:

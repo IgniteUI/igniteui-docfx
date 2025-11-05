@@ -21,13 +21,15 @@ yarn global add igniteui-cli
 ```
 
 ### Using guided experience
-The shortest and easiest way to bootstrap an application is to use the [step by step guide using Ignite UI CLI](step-by-step-guide-using-cli.md). 
+
+The shortest and easiest way to bootstrap an application is to use the [step by step guide using Ignite UI CLI](step-by-step-guide-using-cli.md).
 
 To activate the guide using the Ignite UI CLI run:
 
 ```cmd
 ig
 ```
+
 or
 
 ```cmd
@@ -129,7 +131,7 @@ Additionally, you can specify **arguments** to control the theme or skip package
     <code>--template</code>
   </p>
   <p>
-    Use this option if there are different project templates for a specific framework type. 
+    Use this option if there are different project templates for a specific framework type.
     Currently this option is available only for Ignite UI for Angular igx-ts project types.</p>
 </details>
 
@@ -154,7 +156,7 @@ Additionally, you can specify the module in which the component will be register
   </p>
   <p>
     <i>note: module argument is applicable only in Angular projects.</i>
-  </p> 
+  </p>
   <p>
     Path to the module.ts file, relative to the /src/app/ folder, for the module where the new component should be registered:
   </p>
@@ -180,6 +182,7 @@ ig start
 ```
 
 ## Ignite UI CLI Commands
+
 A full list of the available Ignite UI CLI commands and their usage (like passing flags, etc.), can be found at the [Ignite UI CLI wiki pages](https://github.com/IgniteUI/igniteui-cli/wiki):
 
 | Command | Alias | Description |

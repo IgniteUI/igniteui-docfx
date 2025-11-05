@@ -1,25 +1,31 @@
 @@if (igxName === 'IgxGrid') {
 ---
+
 title: Row Dragging in Angular Data Grid - Ignite UI for Angular
 _description: Row dragging in Angular Data Grid is used to quickly rearrange rows by dragging them with the mouse. See how to configure row dragging in your project.
 _keywords: angular drag component, material component, ignite ui for angular, infragistics
 ---
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
+
 title: Row Dragging in Angular Tree Grid - Ignite UI for Angular
 _description: Row dragging in Angular Tree Grid is used to quickly rearrange rows by dragging them with the mouse. See how to configure row dragging in your project.
 _keywords: angular drag component, material component, ignite ui for angular, infragistics
 _canonicalLink: grid/row-drag
 ---
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
+
 title: Row Dragging in Angular Hierarchical Grid - Ignite UI for Angular
 _description: Row dragging in Angular Hierarchical Grid is used to quickly rearrange rows by dragging them with the mouse. See how to configure row dragging in your project.
 _keywords: angular drag component, material component, ignite ui for angular, infragistics
 _canonicalLink: grid/row-drag
 ---
+
 }
 
 # Row Dragging in Angular @@igComponent
@@ -30,8 +36,8 @@ In Ignite UI for Angular @@igComponent, **RowDrag** is initialized on the root `
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-row-drag-base/" alt="Angular @@igComponent Row Drag Example">
 </code-view>
 
@@ -39,8 +45,8 @@ In Ignite UI for Angular @@igComponent, **RowDrag** is initialized on the root `
 
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-drag-base/" alt="Angular @@igComponent Row Drag Example">
 </code-view>
 
@@ -49,8 +55,8 @@ In Ignite UI for Angular @@igComponent, **RowDrag** is initialized on the root `
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-row-drag-base/" alt="Angular @@igComponent Row Drag Example">
 </code-view>
 
@@ -66,7 +72,8 @@ In order to enable row-dragging for your `@@igSelector`, all you need to do is s
  ...
 </@@igSelector>
 ```
-Clicking on the drag-handle and *moving the cursor* while holding down the button will cause the grid's [`rowDragStart`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragStart) event to fire. Releasing the click at any time will cause [`rowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragEnd) event to fire.
+
+Clicking on the drag-handle and _moving the cursor_ while holding down the button will cause the grid's [`rowDragStart`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragStart) event to fire. Releasing the click at any time will cause [`rowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragEnd) event to fire.
 
 Below, you can find a walkthrough on how to configure an `@@igSelector` to support row dragging and how to properly handle the drop event.
 
@@ -79,7 +86,7 @@ In this example, we'll handle dragging a row from one grid to another, removing 
 
 ### Drop Areas
 
-Enabling row-dragging was pretty easy, but now we have to configure how we'll handle row-*dropping*.
+Enabling row-dragging was pretty easy, but now we have to configure how we'll handle row-_dropping_.
 We can define where we want our rows to be dropped using the [`igxDrop` directive](../drag-drop.md).
 
 First we need to import the `IgxDragDropModule` in our app module:
@@ -96,6 +103,7 @@ import { ..., IgxDragDropModule } from 'igniteui-angular';
 Then, in our template, we define a drop-area using the directive's selector:
 
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <div class="drop-area" igxDrop (enter)="onEnterAllowed($event)" (leave)="onLeaveAllowed($event)"
 (dropped)="onDropAllowed($event)">
@@ -103,9 +111,11 @@ Then, in our template, we define a drop-area using the directive's selector:
     <div>Drag a row here to delete it</div>
 </div>
 ```
+
 }
 @@if (igxName === 'IgxGrid') {
 In this case, our drop-area will be a whole second grid where we'll drop the rows.
+
 ```html
 <igx-grid #targetGrid igxDrop [data]="data2" [autoGenerate]="false" [emptyGridTemplate]="dragHereTemplate"
     (enter)="onEnterAllowed($event)" (leave)="onLeaveAllowed($event)" (dropped)="onDropAllowed($event)" [primaryKey]="'ID'">
@@ -120,6 +130,7 @@ Since the grid will initially be empty, we also define a template that will be m
     Drop a row to add it to the grid
 </ng-template>
 ```
+
 }
 
 You may enable animation when a row is dropped on a non-droppable area using the `animation` parameter of the [`rowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragEnd) event. If set to true, the dragged row will animate back to its' original position when dropped over a non-droppable area.
@@ -140,7 +151,7 @@ export class @@igxNameRowDragComponent {
 
 Once we've defined our drop-area in the template, we have to declare our handlers for the `igxDrop`'s [`enter`]({environment:angularApiUrl}/classes/igxdropdirective.html#enter), [`leave`]({environment:angularApiUrl}/classes/igxdropdirective.html#leave) and [`dropped`]({environment:angularApiUrl}/classes/igxdropdirective.html#dropped) events in our component's `.ts` file.
 
-First, let's take a look at our `enter` and `leave` handlers. In those methods, we just want to change the icon of the drag's *ghost* so we can indicate to the user that they are above an area that allows them to drop the row:
+First, let's take a look at our `enter` and `leave` handlers. In those methods, we just want to change the icon of the drag's _ghost_ so we can indicate to the user that they are above an area that allows them to drop the row:
 
 ```typescript
 export class @@igxNameRowDragComponent {
@@ -162,27 +173,33 @@ export class @@igxNameRowDragComponent {
     }
 }
 ```
+
 The `changeGhostIcon` **private** method just changes the icon inside of the drag ghost. The logic in the method finds the element that contains the icon (using the `igx-grid__drag-indicator` class that is applied to the drag-indicator container), changing the element's inner text to the passed one.
 The icons themselves are from the [`material` font set](https://material.io/tools/icons/) and are defined in a separate **`enum`**:
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
+
 ```typescript
 enum DragIcon {
     DEFAULT = 'drag_indicator',
     ALLOW = 'remove'
 }
 ```
+
 }
 @@if (igxName === 'IgxGrid') {
+
 ```typescript
 enum DragIcon {
     DEFAULT = 'drag_indicator',
     ALLOW = 'add'
 }
 ```
+
 }
 
-Next, we have to define what should happen when the user actually *drops* the row inside of the drop-area.
+Next, we have to define what should happen when the user actually _drops_ the row inside of the drop-area.
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
+
 ```typescript
 export class @@igxNameRowDragComponent {
 
@@ -198,6 +215,7 @@ Once the row is dropped, we just call the row's [`delete()`]({environment:angula
 }
 
 @@if (igxName === 'IgxGrid') {
+
 ```typescript
 export class @@igxNameRowDragComponent {
     @ViewChild('sourceGrid', { read: IgxGridComponent }) public sourceGrid: IgxGridComponent;
@@ -211,6 +229,7 @@ export class @@igxNameRowDragComponent {
 ```
 
 We define a reference to each of our grids via the `ViewChild` decorator and the handle the drop as follows:
+
 - add a row to the `targetGrid` that contains the data of the row being dropped
 - remove the dragged row from the `sourceGrid`
 }
@@ -219,7 +238,9 @@ We define a reference to each of our grids via the `ViewChild` decorator and the
 > When using row data from the event arguments (`args.dragData.data`) or any other row property, note that the entire row is passed in the arguments as a reference, which means that you must clone the data you need, if you want to distinguish it from the one in the source grid.
 
 ### Templating the drag ghost
+
 The drag ghost can be templated using the `IgxRowDragGhost` directive, applied to a `<ng-template>` inside of the `@@igSelector`'s body:
+
 ```html
 <@@igSelector>
 ...
@@ -238,8 +259,8 @@ The result of the configuration can be seem below in a `@@igSelector` with row d
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-multiple-row-drag/" >
 </code-view>
 
@@ -247,8 +268,8 @@ The result of the configuration can be seem below in a `@@igSelector` with row d
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-multi-row-drag/" >
 </code-view>
 
@@ -277,8 +298,8 @@ The drag ghost can be templated on every grid level, making it possible to have 
 </@@igSelector>
 ```
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-row-drag/" >
 </code-view>
 
@@ -286,8 +307,10 @@ The drag ghost can be templated on every grid level, making it possible to have 
 }
 
 ### Templating the drag icon
+
 The drag handle icon can be templated using the grid's [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragIndicatorIconTemplate). In the example we're building, let's change the icon from the default one (`drag_indicator`) to `drag_handle`.
 To do so, we can use the `igxDragIndicatorIcon` to pass a template inside of the `@@igSelector`'s body:
+
 ```html
 <@@igSelector>
 ...
@@ -299,6 +322,7 @@ To do so, we can use the `igxDragIndicatorIcon` to pass a template inside of the
 ```
 
 Once we've set the new icon template, we also need to adjust the `DEFAULT` icon in our `DragIcon enum`, so it's properly change by the `changeIcon` method:
+
 ```typescript
 enum DragIcon {
     DEFAULT = "drag_handle",
@@ -307,8 +331,11 @@ enum DragIcon {
 ```
 
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
+
 ### Styling the drop area
+
 Once our drop handlers are properly configured, all that's left is to style our drop area a bit:
+
 ```css
 .drop-area {
     width: 160px;
@@ -340,10 +367,11 @@ The result of the configuration can be seem below:
 }
 
 #### Example Demo
+
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-row-drag-to-grid/" >
 </code-view>
 
@@ -353,71 +381,80 @@ The result of the configuration can be seem below:
 
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-drag/" >
 </code-view>
 
 
-<div class="divider--half"></div> 
+<div class="divider--half"></div>
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-drag/" >
 </code-view>
 
 
-<div class="divider--half"></div> 
+<div class="divider--half"></div>
 }
 
 ## Application Demo
+
 @@if (igxName === 'IgxGrid') {
 
 ### Using Row Drag Events
+
 The following demo demonstrates how to use row drag event information to change both states of a custom component, where the row is dropped, and the source grid itself.
 Try to drag moons from the grid and drop them to their corresponding planets. Row drag ghost background is dynamically changed, depending on the hovered planet. If you succeed then the row in the grid will be selected and dragging will be disabled for it. Clicking planets will give you useful information.
 
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-row-drag/" >
 </code-view>
 
 
-> [!NOTE] 
+> [!NOTE]
 > The classes applied to the row drag ghost, used in the demo above, are using ::ng-deep modifier, because row drag is an internal grid feature and cannot be accessed on application level, due to the CSS encapsulation.
 }
 
 ### Row Reordering Demo
+
 With the help of the grid's row drag events and the `igxDrop` directive, you can create a grid that allows you to reorder rows by dragging them.
 
 Since all of the actions will be happening _inside_ of the grid's body, that's where you have to attach the `igxDrop` directive:
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid #grid [data]="data" [rowDraggable]="true" [primaryKey]="'ID'" igxDrop (dropped)="onDropAllowed($event)">
     ...
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid igxPreventDocumentScroll  #treeGrid [data]="localData" [rowDraggable]="true" foreignKey="ParentID"
     [primaryKey]="'ID'" (rowDragStart)="rowDragStart($event)" igxDrop (dropped)="dropInGrid($event)">
     ...
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid #grid [data]="localData" [primaryKey]="'id'"
     [rowDraggable]="true" (rowDragStart)="rowDragStart($event)" igxDrop (dropped)="rowDrop($event)">
     ...
 </igx-hierarchical-grid>
 ```
+
 }
 
 
@@ -426,21 +463,23 @@ Since all of the actions will be happening _inside_ of the grid's body, that's w
 
 Once `rowDraggable` is enabled and a drop zone has been defined, you need to implement a simple handler for the drop event. When a row is dragged, check the following:
 @@if (igxName === 'IgxGrid') {
-  - Was the row dropped inside of the grid?
-  - If so, on which _other_ row was the dragged row dropped?
-  - Once you've found the _target_ row, swap the records' places in the `data` array
+
+- Was the row dropped inside of the grid?
+- If so, on which _other_ row was the dragged row dropped?
+- Once you've found the _target_ row, swap the records' places in the `data` array
 }
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
-  - Is the row expanded? If so, collapse it.
-  - Was the row dropped inside of the grid?
-  - If so, on which _other_ row was the dragged row dropped?
-  - Once you've found the _target_ row, swap the records' places in the `data` array
-  - Was the row initially selected? If so, mark it as selected.
+- Is the row expanded? If so, collapse it.
+- Was the row dropped inside of the grid?
+- If so, on which _other_ row was the dragged row dropped?
+- Once you've found the _target_ row, swap the records' places in the `data` array
+- Was the row initially selected? If so, mark it as selected.
 }
 
 Below, you can see this implemented in the component's `.ts` file:
 
 @@if (igxName === 'IgxGrid') {
+
 ```typescript
 export class GridRowReorderComponent {
     public onDropAllowed(args) {
@@ -465,8 +504,10 @@ export class GridRowReorderComponent {
     }
 }
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
 export class TreeGridRowReorderComponent {
     public rowDragStart(args: any): void {
@@ -532,8 +573,10 @@ export class TreeGridRowReorderComponent {
     }
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```typescript
 export class HGridRowReorderComponent {
     public rowDragStart(args: any): void {
@@ -584,14 +627,15 @@ export class HGridRowReorderComponent {
     }
 }
 ```
+
 }
 
 With these few easy steps, you've configured a grid that allows reordering rows via drag/drop! You can see the above code in action in the following demo.
 @@if (igxName === 'IgxGrid') {
 Holding onto the drag icon will allow you to move a row anywhere in the grid:
 
-<code-view style="height:830px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:830px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-row-reorder/" >
 </code-view>
 
@@ -599,8 +643,8 @@ Holding onto the drag icon will allow you to move a row anywhere in the grid:
 @@if (igxName === 'IgxTreeGrid') {
 Notice that we also have row selection enabled and we preserve the selection when dropping the dragged row.
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-reordering/" >
 </code-view>
 
@@ -608,8 +652,8 @@ Notice that we also have row selection enabled and we preserve the selection whe
 @@if (igxName === 'IgxHierarchicalGrid') {
 Notice that we also have row selection enabled and we preserve the selection when dropping the dragged row.
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-row-reorder/" >
 </code-view>
 
@@ -617,6 +661,7 @@ Notice that we also have row selection enabled and we preserve the selection whe
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {
+
 ### Improving UX in row drag scenarios
 
 Being able to obtain the row index which is currently below the cursor provides you with the opportunity to build rich custom functionalities and to improve the UX of your application. For example, you can change the drag ghost or display a drop indicator, based on the position of the dragged row over the grid. Another useful behavior that you can achieve that way is to scroll the grid up or down while dragging a row, when reaching the border of the grid.
@@ -624,6 +669,7 @@ Being able to obtain the row index which is currently below the cursor provides 
 Below you can find example snippets of a couple of custom implementations you can achieve by knowing the row's position.
 
 #### Changing the drag ghost based on cursor position
+
 In the snippets below you see how you can change the text inside the drag ghost to display the name of the hovered row.
 
 First, you specify a template which you'd like to use for the drag ghost. The `dropName` property will dynamically change, getting the name of the row over which the cursor is hovering:
@@ -654,7 +700,7 @@ class MyRowGhostComponent {
 ```
 
 Finally, we create a method that will be used to handle the [`IgxDragDirective.dragMove`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragMove) event (emitted for the dragged row). The method will change the value of the property used in the `igxRowDragGhost` template and force a rerender.
-We want to subscribe to the `dragMove` event only of the specific row we're dragging and unsub from it (to prevent memory leaks) each time a row is dropped.
+We want to subscribe to the `dragMove` event only of the specific row we're dragging and unsubscribe from it (to prevent memory leaks) each time a row is dropped.
 
 ```typescript
 class MyRowGhostComponent {
@@ -772,7 +818,6 @@ private changeHighlightedElement(newElement: HTMLElement) {
 ```
 
 
-
 <div class="divider--half"></div>
 
 #### Scrolling the grid on row drag
@@ -848,8 +893,8 @@ class MyGridScrollComponent {
 
 Following is the example of both scenarios described above - showing a drop indicator and scrolling the viewport when border's edge is reached.
 
-<code-view style="height:830px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:830px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-drop-indicator/" >
 </code-view>
 }
@@ -862,18 +907,19 @@ Currently, there are no known limitations for the `rowDraggable` directive.
 
 ## API References
 
-* [rowDraggable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDraggable)
-* [rowDragStart]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragStart)
-* [rowDragEnd]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragEnd)
-* [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [rowDraggable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDraggable)
+- [rowDragStart]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragStart)
+- [rowDragEnd]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragEnd)
+- [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [@@igComponent Overview](@@igMainTopic.md)
+- [@@igComponent Overview](@@igMainTopic.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

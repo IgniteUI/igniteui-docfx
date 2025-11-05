@@ -81,6 +81,7 @@ export class ReplacePipe implements PipeTransform {
 ```html
 <span>{{ name | replace:" ":"-" }}</span>
 ```
+
 > [!NOTE]
 > Note that in order to be able to use the pipe in the component's html template, you have to add it to the module declarations.
 
@@ -88,12 +89,13 @@ export class ReplacePipe implements PipeTransform {
 > An important difference between the Angular pipe and the WPF converter is that the Angular pipe works only for one-way binding unlike the WPF converter which has [ConvertBack](https://docs.microsoft.com/en-us/dotnet/api/system.windows.data.ivalueconverter.convertback?view=netframework-4.8) method.
 
 ## Additional Resources
-* [Desktop to Web: Transforming Data with Angular Pipes](https://www.youtube.com/watch?v=Gmz5kio50FE&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j&index=9)
-* [Angular Pipes](https://angular.io/guide/pipes)
-* [List of Predefined Angular Pipes](https://angular.io/api?type=pipe)
+
+- [Desktop to Web: Transforming Data with Angular Pipes](https://www.youtube.com/watch?v=Gmz5kio50FE&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j&index=9)
+- [Angular Pipes](https://angular.io/guide/pipes)
+- [List of Predefined Angular Pipes](https://angular.io/api?type=pipe)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

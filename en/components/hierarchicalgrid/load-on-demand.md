@@ -12,8 +12,8 @@ This topic demonstrates how to configure Load on Demand by requesting data from 
 
 ## Angular Hierarchical Grid Load On Demand Example
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-lod/" alt="Angular Hierarchical Grid Load On Demand Example">
 </code-view>
 
@@ -36,7 +36,7 @@ We will easily set the data of the root grid after getting its data from the end
 
 When a row is expanded for the first time, a new child `IgxHierarchicalGrid` is rendered for it and we need to get the reference for the newly created grid to set its data. That is why each [`IgxRowIsland`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html) component provides the [`gridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#gridCreated) event that is fired when a new child grid is created for that specific row island. We can use that to get the reference we need for the new grid, request its data from the endpoint, and apply it.
 
-We can use one method for all row islands since the endpoint only needs the key of the row island, the primary key of the parent row, and its unique identifier. All this information can be accessed directly from the event arguments. 
+We can use one method for all row islands since the endpoint only needs the key of the row island, the primary key of the parent row, and its unique identifier. All this information can be accessed directly from the event arguments.
 
 #### Setup of loading indication
 
@@ -153,7 +153,7 @@ We will be communicating with the endpoint over HTTP protocol using the XMLHttpR
 
 #### Getting root grid data
 
-The [Northwind WebAPI](https://data-northwind.indigo.design/swagger/index.html) provides us with a POST endpoint that accepts an `IFilteringExpressionsTree` as a parameter and we will use it in order to take advantage of the Advanced Filtering functionality in the `IgxHierarchicalGrid` and filter records in the root grid. We will do this in `refreshRootGridData` method: 
+The [Northwind WebAPI](https://data-northwind.indigo.design/swagger/index.html) provides us with a POST endpoint that accepts an `IFilteringExpressionsTree` as a parameter and we will use it in order to take advantage of the Advanced Filtering functionality in the `IgxHierarchicalGrid` and filter records in the root grid. We will do this in `refreshRootGridData` method:
 
 ```typescript
 public refreshRootGridData() {
@@ -213,17 +213,17 @@ private buildUrl(event: IGridCreatedEventArgs) {
 
 ### API References
 
-* [IgxHierarchicalGridComponent]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)
-* [IgxRowIslandComponent]({environment:angularApiUrl}/classes/igxrowislandcomponent.html)
+- [IgxHierarchicalGridComponent]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)
+- [IgxRowIslandComponent]({environment:angularApiUrl}/classes/igxrowislandcomponent.html)
 
 ### Additional Resources
 
 <div class="divider--half"></div>
 
-* [Hierarchical Grid Component](hierarchical-grid.md)
+- [Hierarchical Grid Component](hierarchical-grid.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

@@ -9,6 +9,7 @@ _keywords: angular hierarchical data grid, angular hierarchical table, angular h
 The Ignite UI for Angular Hierarchical Data Grid is used to display and manipulate hierarchical tabular data. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating, column moving, column pinning, export to Excel and CSV, and more. The Hierarchical Grid builds upon the Flat Grid Component and extends its functionality by allowing the users to expand or collapse the rows of the parent grid, revealing corresponding child grids, when more detailed information is needed.
 
 ## Angular Hierarchical Data Grid Example
+
 In this angular grid example you can see how users can visualize hierarchical sets of data and use cell templating to add other visual components like [Sparkline](../charts/types/sparkline-chart.md).
 
 <code-view style="height:520px"
@@ -29,7 +30,7 @@ To get started with the Ignite UI for Angular Hierarchical Data Grid component, 
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](../general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](../general/getting-started.md) topic.
 
 The next step is to import the `IgxHierarchicalGridModule` in your **app.module.ts** file.
 
@@ -122,6 +123,7 @@ export const singers = [{
     }]
 }];
 ```
+
 Each `igx-row-island` should specify the key of the property that holds the children data.
 
 ```html
@@ -134,6 +136,7 @@ Each `igx-row-island` should specify the key of the property that holds the chil
     </igx-row-island>
 </igx-hierarchical-grid>
 ```
+
 > [!NOTE]
 > Note that instead of `data` the user configures only the `key` that the `igx-hierarchical-grid` needs to read to set the data automatically.
 
@@ -308,6 +311,7 @@ The igxHierarchicalGrid allows styling through the [`Ignite UI for Angular Theme
 In the below steps, we are going through the steps of customizing the igxHierarchicalGrid styling.
 
 ### Importing global theme
+
 To begin the customization of the hierarchical grid, you need to import the `index` file, where all styling functions and mixins are located.
 
 ```scss
@@ -315,9 +319,10 @@ To begin the customization of the hierarchical grid, you need to import the `ind
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 ### Defining custom theme
+
 Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) and accepts the parameters, required to customize the hierarchical grid as desired.
 
  >[!NOTE]
@@ -342,6 +347,7 @@ $custom-theme: grid-theme(
 >Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 ### Applying the custom theme
+
 The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file:
 
 ```scss
@@ -364,7 +370,7 @@ This way, due to Angular's [`ViewEncapsulation`](https://angular.io/api/core/Com
 
 ## Performance (Experimental)
 
-The `igxHierarchicalGrid`'s design allows it to take advantage of the Event Coalescing feature that has Angular introduced. This feature allows for improved performance with roughly around **`20%`** in terms of interactions and responsiveness. This feature can be enabled on application level by simply setting the `ngZoneEventCoalescing ` and `ngZoneRunCoalescing` properties to `true` in the `bootstrapModule` method:
+The `igxHierarchicalGrid`'s design allows it to take advantage of the Event Coalescing feature that has Angular introduced. This feature allows for improved performance with roughly around **`20%`** in terms of interactions and responsiveness. This feature can be enabled on application level by simply setting the `ngZoneEventCoalescing` and `ngZoneRunCoalescing` properties to `true` in the `bootstrapModule` method:
 
 ```typescript
 platformBrowserDynamic()
@@ -389,43 +395,45 @@ platformBrowserDynamic()
 
 ## API References
 
-* [IgxHierarchicalGridComponent]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)
-* [IgxRowIslandComponent]({environment:angularApiUrl}/classes/igxrowislandcomponent.html)
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
-* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
+- [IgxHierarchicalGridComponent]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)
+- [IgxRowIslandComponent]({environment:angularApiUrl}/classes/igxrowislandcomponent.html)
+- [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+- [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+- [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
+- [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
-* [IgxInputGroup Theme]({environment:sassApiUrl}/themes#function-input-group-theme)
-* [IgxChip Theme]({environment:sassApiUrl}/themes#function-chip-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
-* [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
-* [IgxCalendar Theme]({environment:sassApiUrl}/themes#function-calendar-theme)
-* [IgxActionStrip Theme]({environment:sassApiUrl}/themes#function-action-strip-theme)
-* [IgxSnackBar Theme]({environment:sassApiUrl}/themes#function-snackbar-theme)
-* [IgxBadge Theme]({environment:sassApiUrl}/themes#function-badge-theme)
+
+- [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxInputGroup Theme]({environment:sassApiUrl}/themes#function-input-group-theme)
+- [IgxChip Theme]({environment:sassApiUrl}/themes#function-chip-theme)
+- [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
+- [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
+- [IgxCalendar Theme]({environment:sassApiUrl}/themes#function-calendar-theme)
+- [IgxActionStrip Theme]({environment:sassApiUrl}/themes#function-action-strip-theme)
+- [IgxSnackBar Theme]({environment:sassApiUrl}/themes#function-snackbar-theme)
+- [IgxBadge Theme]({environment:sassApiUrl}/themes#function-badge-theme)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [Grid Sizing](sizing.md)
-* [Virtualization and Performance](virtualization.md)
-* [Paging](paging.md)
-* [Filtering](filtering.md)
-* [Sorting](sorting.md)
-* [Summaries](summaries.md)
-* [Column Moving](column-moving.md)
-* [Column Pinning](column-pinning.md)
-* [Column Resizing](column-resizing.md)
-* [Selection](selection.md)
+- [Grid Sizing](sizing.md)
+- [Virtualization and Performance](virtualization.md)
+- [Paging](paging.md)
+- [Filtering](filtering.md)
+- [Sorting](sorting.md)
+- [Summaries](summaries.md)
+- [Column Moving](column-moving.md)
+- [Column Pinning](column-pinning.md)
+- [Column Resizing](column-resizing.md)
+- [Selection](selection.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

@@ -1,28 +1,35 @@
 @@if (igxName === 'IgxGrid') {
 ---
+
 title: Conditional Cell Styling in Angular Data Grid - Ignite UI for Angular
 _description: Let users identify different cells quickly. Define a variety of cell styles. Use the conditional cell styling in Angular Data grid to make cells stand out.
 _keywords: conditional styling, ignite ui for angular, infragistics
 ---
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
+
 title: Conditional Cell Styling in Angular Tree Grid - Ignite UI for Angular
 _description: Let users identify different cells quickly. Define a variety of cell styles. Use the conditional cell styling in Angular Data grid to make cells stand out.
 _keywords: conditional styling, ignite ui for angular, infragistics
 _canonicalLink: grid/conditional-cell-styling
 ---
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Conditional Cell Styling in Angular Hierarchical Grid - Ignite UI for Angular 
+
+title: Conditional Cell Styling in Angular Hierarchical Grid - Ignite UI for Angular
 _description: Let users identify different cells quickly. Define a variety of cell styles. Use the conditional cell styling in Angular Data grid to make cells stand out.
 _keywords: conditional styling, ignite ui for angular, infragistics
 _canonicalLink: grid/conditional-cell-styling
 ---
+
 }
 
 # Angular @@igComponent Conditional Styling
+
 If you need to provide any custom styling in the @@igxName component, you can do it on either row or cell level.
 
 ## @@igComponent Conditional Row Styling
@@ -30,6 +37,7 @@ If you need to provide any custom styling in the @@igxName component, you can do
 The @@igxName component in Ignite UI for Angular provides two ways to **conditional styling of rows** based on custom rules.
 
 @@if (igxName === 'IgxGrid') {
+
 - By setting [`rowClasses`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowClasses) input on the @@igxName component;
 - By setting [`rowStyles`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowStyles) input on the @@igxName component;
 }
@@ -45,6 +53,7 @@ The @@igxName component in Ignite UI for Angular provides two ways to **conditio
 Further in this topic wi will cover both of them in more details.
 
 ### Using rowClasses
+
 @@if (igxName === 'IgxGrid') {
 You can conditionally style the @@igxName rows by setting the [`rowClasses`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowClasses) input and define custom rules.
 }
@@ -56,27 +65,33 @@ You can conditionally style the @@igxName rows by setting the [`rowClasses`]({en
 }
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <!-- sample.component.html -->
 <igx-grid #grid [data]="data" [height]="'600px'" [width]="'100%'" [rowClasses]="rowClasses">
     ...
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid'){
+
 ```html
 <!-- sample.component.html -->
 <igx-tree-grid #treeGrid [data]="data" [height]="'600px'" [width]="'100%'" [rowClasses]="rowClasses">
     ...
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid  #hierarchicalGrid class="hgrid" [data]="localData" [height]="'580px'" [width]="'100%'" [rowStyles]="rowStyles">
     ...
 </igx-hierarchical-grid>
 ```
+
 }
 
 @@if (igxName === 'IgxGrid') {
@@ -109,6 +124,7 @@ public activeRowCondition = (row: RowType) => this.grid?.navigation.activeNode?.
  }
 }
 ```
+
 > [!NOTE]
 > Use **`::ng-deep`** or **`ViewEncapsulation.None`** to force the custom styles down through the current component and its children.
 
@@ -140,6 +156,7 @@ public activeRowCondition = (row: RowType) => this.grid?.navigation.activeNode?.
 
 
 ### Using rowStyles
+
 Columns now expose the `rowStyles` property which allows conditional styling of the data rows. Similar to `rowClasses` it accepts an object literal where the keys are style properties and the values are expressions for evaluation. Also, you can apply regular styling (without any conditions).
 
 > The callback signature for both `rowStyles` and `rowClasses` is:
@@ -151,6 +168,7 @@ Columns now expose the `rowStyles` property which allows conditional styling of 
 Let's define our styles:
 
 @@if (igxName === 'IgxGrid') {
+
 ```typescript
 // component.ts
 public rowStyles = {
@@ -167,6 +185,7 @@ public rowStyles = {
     ...
 </igx-grid>
 ```
+
 }
 
 @@if (igxName === 'IgxTreeGrid'){
@@ -196,6 +215,7 @@ public rowStyles = {
     ...
 </igx-tree-grid>
 ```
+
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -221,6 +241,7 @@ public childRowStyles = {
     ...
 </igx-hierarchical-grid>
 ```
+
 }
 
 
@@ -252,7 +273,9 @@ public childRowStyles = {
 
 
 ## @@igComponent Conditional Cell Styling
+
 ## Overview
+
 The @@igxName component in Ignite UI for Angular provides two ways to **conditional styling of cells** based on custom rules.
 
 - By setting the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) input [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellClasses) to an object literal containing key-value pairs. The key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value. The result is a convenient material styling of the cell.
@@ -282,30 +305,38 @@ private downFontCondition = (rowData: any, columnKey: any): boolean => {
 ```
 
 ### Using cellClasses
+
 You can conditionally style the @@igxName cells by setting the [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellClasses) input and define custom rules.
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <!-- sample.component.html -->
 <igx-column field="BeatsPerMinute" dataType="number" [cellClasses]="beatsPerMinuteClasses"></igx-column>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid'){
+
 ```html
 <!-- sample.component.html -->
 <igx-column field="UnitPrice" header="Unit Price" [dataType]="'currency'" [pipeArgs]="formatOptions" [cellClasses]="priceClasses"></igx-column>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <!-- sample.component.html -->
 <igx-column field="GrammyNominations" header="Grammy Nominations" dataType="number" [cellClasses]="grammyClasses"></igx-column>
 ```
+
 }
 
 The [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellClasses) input accepts an object literal, containing key-value pairs, where the key is the name of the CSS class, while the value is either a callback function that returns a boolean, or boolean value.
 
 @@if (igxName === 'IgxGrid') {
+
 ```typescript
 // sample.component.ts
 
@@ -336,8 +367,10 @@ public beatsPerMinuteClasses = {
     }
 }
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid'){
+
 ```typescript
 // sample.component.ts
 
@@ -368,8 +401,10 @@ public priceClasses = {
     }
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```typescript
 // sample.component.ts
 
@@ -400,6 +435,7 @@ public grammyClasses = {
     }
 }
 ```
+
 }
 
 > [!NOTE]
@@ -446,9 +482,11 @@ public styles = {
 ```
 
 ### Using cellStyles
+
 Columns now expose the `cellStyles` property which allows conditional styling of the column cells. Similar to `cellClasses` it accepts an object literal where the keys are style properties and the values are expressions for evaluation. Also, you can apply regular styling with ease (without any conditions).
 
 In the [sample above](#demo) we've created:
+
 - Two different styles that will be applied based on the column index.
 - You will also change the `text color` based on even/odd rows.
 
@@ -478,6 +516,7 @@ public evenColStyles = {
 On `ngOnInit` we will add the `cellStyles` configuration for each column of the predefined `columns` collection, which is used to create the @@igxName columns dynamically.
 
 @@if (igxName === 'IgxGrid') {
+
 ```ts
 // component.ts
 public ngOnInit() {
@@ -493,8 +532,10 @@ public ngOnInit() {
     this.applyCSS();
 }
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```ts
 // component.ts
 public ngOnInit() {
@@ -509,8 +550,10 @@ public ngOnInit() {
     this.applyCSS();
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```ts
 // component.ts
 public ngOnInit() {
@@ -526,7 +569,9 @@ public ngOnInit() {
     this.applyCSS();
 }
 ```
+
 }
+
 ```ts
 public applyCSS() {
     this.columns.forEach((column, index) => {
@@ -542,6 +587,7 @@ public updateCSS(css: string) {
 ```
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 // component.html
 <igx-grid
@@ -556,8 +602,10 @@ public updateCSS(css: string) {
     </igx-column>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 //component.html
 <igx-tree-grid
@@ -571,8 +619,10 @@ public updateCSS(css: string) {
     </igx-column>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid #hierarchicalGrid [data]="localdata"    
     [autoGenerate]="false"
@@ -584,6 +634,7 @@ public updateCSS(css: string) {
     </igx-column>
 </igx-hierarchical-grid>
 ```
+
 }
 
 
@@ -654,6 +705,7 @@ editDone(evt) {
 ```
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid #grid1 [data]="data" height="500px" width="100%" (onCellEdit)="editDone($event)">
   <igx-column field="Col1" dataType="number" [cellClasses]="backgroundClasses"></igx-column>
@@ -661,8 +713,10 @@ editDone(evt) {
   <igx-column field="Col3" header="Col3" dataType="string" [cellClasses]="backgroundClasses"></igx-column>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid #grid1 [data]="data" height="500px" width="100%" (onCellEdit)="editDone($event)">
   <igx-column field="Col1" dataType="number" [cellClasses]="backgroundClasses"></igx-column>
@@ -670,8 +724,10 @@ editDone(evt) {
   <igx-column field="Col3" header="Col3" dataType="string" [cellClasses]="backgroundClasses"></igx-column>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid #grid1 [data]="data" height="500px" width="100%" (onCellEdit)="editDone($event)">
   <igx-column field="Col1" dataType="number" [cellClasses]="backgroundClasses"></igx-column>
@@ -679,38 +735,41 @@ editDone(evt) {
   <igx-column field="Col3" header="Col3" dataType="string" [cellClasses]="backgroundClasses"></igx-column>
 </igx-hierarchical-grid>
 ```
+
 }
 
 
 ## API References
+
 <div class="divider--half"></div>
 
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#mixin-grid)
+- [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+- [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#mixin-grid)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [@@igComponent overview](@@igMainTopic.md)
-* [Virtualization and Performance](virtualization.md)
-* [Editing](editing.md)
-* [Paging](paging.md)
-* [Filtering](filtering.md)
-* [Sorting](sorting.md)
-* [Summaries](summaries.md)
-* [Column Moving](column-moving.md)
-* [Column Pinning](column-pinning.md)
-* [Column Resizing](column-resizing.md)
-* [Column Hiding](column-hiding.md)
-* [Selection](selection.md)
-* [Searching](search.md)
-* [Toolbar](toolbar.md)
-* [Multi-column Headers](multi-column-headers.md)
-* [Size](display-density.md)
+- [@@igComponent overview](@@igMainTopic.md)
+- [Virtualization and Performance](virtualization.md)
+- [Editing](editing.md)
+- [Paging](paging.md)
+- [Filtering](filtering.md)
+- [Sorting](sorting.md)
+- [Summaries](summaries.md)
+- [Column Moving](column-moving.md)
+- [Column Pinning](column-pinning.md)
+- [Column Resizing](column-resizing.md)
+- [Column Hiding](column-hiding.md)
+- [Selection](selection.md)
+- [Searching](search.md)
+- [Toolbar](toolbar.md)
+- [Multi-column Headers](multi-column-headers.md)
+- [Size](display-density.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

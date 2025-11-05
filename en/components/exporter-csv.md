@@ -16,9 +16,9 @@ The exporting functionality is encapsulated in the [`IgxCsvExporterService`]({en
 ## Angular CSV Exporter Example
 
 
-<code-view style="height: 150px;" 
+<code-view style="height: 150px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           explicit-editor="stackblitz" 
+           explicit-editor="stackblitz"
            iframe-src="{environment:demosBaseUrl}/services/export-csv/" alt="Angular CSV Exporter Example">
 </code-view>
 
@@ -117,19 +117,19 @@ public exportButtonHandler() {
 ```
 
 
-<code-view style="height: 300px;" 
+<code-view style="height: 300px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz"
            iframe-src="{environment:demosBaseUrl}/services/export-csv-sample-1/" >
 </code-view>
 
 
-
 ## Customizing the Exported Format
 
 The CSV Exporter supports several types of exporting formats. The export format may be specified:
-* as a second argument of the [`IgxCsvExporterOptions`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html) objects's constructor
-* using the [`IgxCsvExporterOptions`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html) object's [`fileType`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html#filetype) property
+
+- as a second argument of the [`IgxCsvExporterOptions`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html) objects's constructor
+- using the [`IgxCsvExporterOptions`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html) object's [`fileType`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html#filetype) property
 
 Different export formats have different file extensions and value delimiters. The following table maps the export formats and their respective file extensions and delimiters:
 
@@ -166,13 +166,13 @@ When you are exporting data from [**IgxGrid**](grid/grid.md) the export process 
 
 The CSV Exporter service has a few more APIs to explore, which are listed below.
 
-* [IgxCsvExporterService API]({environment:angularApiUrl}/classes/igxcsvexporterservice.html)
-* [IgxCsvExporterOptions API]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html)
+- [IgxCsvExporterService API]({environment:angularApiUrl}/classes/igxcsvexporterservice.html)
+- [IgxCsvExporterOptions API]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html)
 
 Additional components that were used:
 
-* [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+- [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
 <div class="divider"></div>
 
@@ -181,5 +181,5 @@ Additional components that were used:
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

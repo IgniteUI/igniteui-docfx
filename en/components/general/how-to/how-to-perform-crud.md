@@ -7,10 +7,11 @@ _keywords: angular, crud, crud operations, infragistics, crud tutorial
 # What is CRUD
 
 CRUD is an acronym in computer programming that stands for the CREATE, READ, UPDATE, DELETE operations that can be performed against a data collection. In computer world, talking about CRUD applications, is a main difference compared to applications that provide read-only data to users.
+
 # Angular CRUD
 
 While talking about Angular CRUD, or CRUD operations in Angular, it is important to note that the data storage is on a remote server. The Angular application can not directly access the data layer, so it needs to communicate with it through a Web API that provides endpoints for the CRUD operations, i.e.:
- 
+
 | API | Operation | HTTP methods |
 |-----|-----------| ----------- |
 | "api/entities" | READ all entities | GET |
@@ -64,7 +65,7 @@ What the above service is missing is configuration for filtering/sorting/paging,
 For more examples and guidance, refer to the [HTTP Services](https://angular.io/tutorial/toh-pt6) tutorial in the official Angular documentation.
 
 
-# CRUD Operations with Grid 
+# CRUD Operations with Grid
 
 Enabling CRUD in the Grid means providing UI for the users to perform these CRUD operations from within the grid. This is quite easy - the Grid provides [**Cell Editing**](../../grid/cell-editing.md), [**Row Editing**](../../grid/row-editing.md), [**Row Adding**](../../grid/row-adding.md) and **Row Deleting** UI out of the box, and powerful API to do this on your own. Next, we want to take the result of each editing action and communicate it to the corresponding method in our CRUD service, thus preserving all changes to the original database. By completing this, we may say the grid is CRUD enabled.
 
@@ -72,8 +73,8 @@ Enabling CRUD in the Grid means providing UI for the users to perform these CRUD
 This section is written as HOW-TO tutorial on enabling CRUD operations in Grid, accompanied by code snippets that you can take and copy paste in your code.
 
 
-
 ## How to
+
 Let's first enable the rowEditing behavior, bring the UI we need for the editing actions, benefiting from the `IgxActionStrip` (see more about the [`IgxActionStrip`](../../action-strip.md)), and attach event handlers:
 
 ```html
@@ -110,7 +111,7 @@ public rowEditDone(event: IGridEditDoneEventArgs) {
 }
 ```
 
-In the above example, we only call the corresponding methods and pass the data that is read from the event arguments. Most API endpoints will return the updated/added/deleted entity, which indicates that the request was successful. 
+In the above example, we only call the corresponding methods and pass the data that is read from the event arguments. Most API endpoints will return the updated/added/deleted entity, which indicates that the request was successful.
 
 A good practice is to add validation, notifying the users that all actions have been completed successfully or that an error has occurred. In such case, you may want to pass handlers for the error and complete notifications too:
 
@@ -149,29 +150,33 @@ this._crudService.delete(event.data).subscribe({
 
 See the demo that was built following the guidance. Play around with it and try the examples for customization to fit your scenario in the best possible way.
 
-<code-view style="height:410px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:410px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-crud/" >
 </code-view>
 
 # Customizations
+
 The rich Grid API allows you to customize the editing process in almost any way in order to fit your needs. This includes, but is not limited to:
- - [**Batch Editing**](how-to-perform-crud.md#batch-editing): Enable Batch Editing to batch all updates, and commit everything with single request.
- - [**Templating**](how-to-perform-crud.md#templates): Add templates for cell editing, or use your own external UI for row/cell editing, row adding and row deleting.
- - [**Events**](how-to-perform-crud.md#events): Monitor the editing flow and react accordingly. Attach event handlers for all events emitted during editing, will allow you to do:
-    - data validation per cell
-    - data validation per row
-    - prompt user for expected type of input
-    - cancel further processing, based on business rules
-    - manual committing of the changes
+
+- [**Batch Editing**](how-to-perform-crud.md#batch-editing): Enable Batch Editing to batch all updates, and commit everything with single request.
+- [**Templating**](how-to-perform-crud.md#templates): Add templates for cell editing, or use your own external UI for row/cell editing, row adding and row deleting.
+- [**Events**](how-to-perform-crud.md#events): Monitor the editing flow and react accordingly. Attach event handlers for all events emitted during editing, will allow you to do:
+  - data validation per cell
+  - data validation per row
+  - prompt user for expected type of input
+  - cancel further processing, based on business rules
+  - manual committing of the changes
 - [**Rich API**](how-to-perform-crud.md#editing-api)
 
 ## Batch Editing
- - Enable **Batch Editing** to keep your updates on the client, and commit all of them with a single request. Batch updating is enabled by setting the `batchEditing` option to true:
+
+- Enable **Batch Editing** to keep your updates on the client, and commit all of them with a single request. Batch updating is enabled by setting the `batchEditing` option to true:
+
  ```html
  <igx-grid [batchEditing]="'true'" ...>
  ```
- 
+
 Go to [Batch Editing](../../grid/batch-editing.md) for more details and demo samples.
 
 ## Templates
@@ -195,6 +200,7 @@ If you want to provide a custom template which will be applied when a cell is in
 For more information and demos, see the [Cell Editing](../../grid/cell-editing.md) topic.
 
 ## Events
+
 The grid exposes a wide array of events that provide greater control over the editing experience. These events are fired during the [**Row Editing**](../../grid/row-editing.md) and [**Cell Editing**](../../grid/cell-editing.md) lifecycle - when starting, committing or canceling the editing action.
 
  | Event | Description | Arguments | Cancellable |
@@ -211,9 +217,11 @@ The grid exposes a wide array of events that provide greater control over the ed
 Go to [Events](../../grid/editing.md#event-arguments-and-sequence) for more details and demo samples.
 
 ## Editing API
+
 Updating data in the grid is achieved through methods exposed both by the grid:
+
 - [`updateRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#updateRow)
-- [`updateCell`]({environment:angularApiUrl}/classes/igxgridcomponent.html#updateCell) 
+- [`updateCell`]({environment:angularApiUrl}/classes/igxgridcomponent.html#updateCell)
 - [`deleteRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deleteRow)
 - [`addRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#addRow)
 
@@ -236,22 +244,16 @@ this.grid.getRowByKey(rowID).delete();
 More details and information about using the grid API can be found in the [Cell Editing CRUD Operations](../../grid/cell-editing.md#crud-operations) section.
 
 # Takeaway
+
 Enabling CRUD in a robust way is major milestone for any data-driven application. In order to streamline the entire process, we've built the IgxGrid with the CRUD capabilities in mind, providing out-of-the-box UI and flexible APIs. How will this benefit you? It will save you lots of time when implementing CRUD against any database out there. And when we talk about modern-day data-driven apps, it all comes down to robustness, speed, and flexibility.
 
 # API References
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
-* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [`IgxActionStripComponent API`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html)
-* [`IgxGridActionsBaseDirective `]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html)
-* [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html)
-* [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html)
 
-
-
-
-
-
-
-
+- [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+- [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
+- [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
+- [`IgxActionStripComponent API`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html)
+- [`IgxGridActionsBaseDirective`]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html)
+- [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html)
+- [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html)
 

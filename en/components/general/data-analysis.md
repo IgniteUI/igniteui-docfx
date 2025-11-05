@@ -59,9 +59,11 @@ Data analysis is the process of examining, transforming, and arranging data in a
 >This functionality will be introduced in **Ignite UI for Angular** as external package in order to ease the configuration and limit the required code at minimum
 
 ## Data Analysis with DockManager
+
 Go ahead and perform a `cell range selection` or `column selection` in order to enable the `Chart types view` based on the selected data. This view is part of [Dock Manager's](../dock-manager.md) right pane. From there you can:
- - Choose specific chart type and visualize it in separate pane.
- - Or use the `Data Analysis` context button to show different text formatting options.
+
+- Choose specific chart type and visualize it in separate pane.
+- Or use the `Data Analysis` context button to show different text formatting options.
 
 <div class="sample-container loading" style="height: 580px;">
     <iframe id="data-analysis-dock-manager" frameborder="0" seamless width="100%" height="100%" src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis-dock-manager" onload="onSampleIframeContentLoaded(this);" class="no-theming"></iframe>
@@ -73,6 +75,7 @@ Go ahead and perform a `cell range selection` or `column selection` in order to 
 > The [Dock Manager Web component](../dock-manager.md) provides means to manage the layout of the application through panes, and allowing the end-users to customize it further by pinning, resizing, moving and hiding panes. After selecting data, go ahead and create a couple of charts and pin them (by dragging) to the available areas
 
 Keep in mind (sample related):
+
 - On new data selection chart data will be updated.
 - If multi-cell range selection is applied, only the `Text formatting` functionality will be available.
 - If selected data is not compatible for any of the charts - an "Incompatible data" warning message will be shown.
@@ -84,11 +87,13 @@ You can start using this functionality by following the steps below. Keep in min
 Let's start with:
 
 - Installing the package in your application
+
 ```cmd
 npm install @infragistics/igniteui-angular-extras
 ```
 
 - Installing the package peer dependencies
+
 ```cmd
 npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angular-charts
 ```
@@ -104,9 +109,11 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
     </igx-paginator>
 </igx-grid>
 ```
+
 And that's it! You can now perform **cell range selection** and follow the data analysis flow.
 
 ## Data Analysis Button
+
 The data analysis button is the outlet to visualize your selected data in various ways:
 
 <img class="responsive-img" src="../../images/general/data-analysis-button.png" />
@@ -116,6 +123,7 @@ This way every range selection performed in the grid can be easily analyzed in a
 The button is rendered on every range selection at the **bottom-right** of the selection and hides when the selection is inactive. Horizontal and vertical scrolling reposition the button so that it is always rendered at its designated position.
 
 ## Chart Integration
+
 This section introduces Grid's integration with charting functionality, which allows the end user to visualize a chart based on Grid's selected data and choose different chart types if needed.
 
 The chart will be shown by selecting a range of cells and by clicking on the show analysis button.
@@ -130,6 +138,7 @@ The chart will be shown by selecting a range of cells and by clicking on the sho
 <button class="full-screen-btn" onclick='window.open("{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis")'>View in full screen</button>
 
 We currently support the following Chart types:
+
 - [Column Chart](../charts/types/column-chart.md),
 [Area Chart](../charts/types/stacked-chart.md),
 [Line Chart](../charts/types/line-chart.md),
@@ -142,11 +151,13 @@ We currently support the following Chart types:
  In order to show meaningful Bubble Chart we disable the preview when the data is not in valid format.
 
 ## Conditional Cell Formatting
+
 If you have a Grid with thousands of rows of data it would be very difficult to see patterns and trends just from examining the raw information. Similar to charts and sparklines, `Conditional formatting` provides another way to visualize data and make it easier to understand.
 
 Understanding conditional formatting - it allows for applying formatting such as colors and data bars to cells based on `their value` in the range selection. The [sample below](#demo) demonstrates how you can configure the Grid to apply `Conditional Formatting`. It depends on the `Conditional formatting selection type` what condition `rules` will be shown. Below you will find the predefined styles (presets) that you can use in order to quickly apply conditional formatting to your data. The formatting of a range gets cleared when performing formatting on different range or through the clear button. The clear button is only active when there is an applied formatting.
 
 ### Number range selection
+
 - `Data Bars` - Data bars can help you spot larger and smaller numbers, such as top-selling and bottom-selling products. This preset makes it very easy to visualize values in a range of selected cells. A longer bar represents a higher value. A cell that holds  value of 0 has no data bar all other cells are filled proportionally. Positive values are with `green` color  and  negative values will be `red`
 
 <img class="responsive-img" src="../../images/general/data-bars-formatting.png" />
@@ -172,6 +183,7 @@ Understanding conditional formatting - it allows for applying formatting such as
 - `Empty`- Marks all cells with `undefined` values
 
 ### Text range selection
+
 - `Text contains` - Marks all cells that contain the cell value from the `top-left most selected cell`. Example:
 
 <img class="responsive-img" src="../../images/general/contains-formatting.png" />
@@ -191,6 +203,7 @@ Understanding conditional formatting - it allows for applying formatting such as
 ## Data Analysis Package API
 
 ### IgxConditionalFormattingDirective
+
 <div class="divider--half"></div>
 
 | API | Description | Arguments |
@@ -198,12 +211,13 @@ Understanding conditional formatting - it allows for applying formatting such as
 | `ConditionalFormattingType` | An **enum**, which represents the conditional formatting types |
 | `IFormatColors` | An **interface**, which represents the formatting colors |
 | `formatter`: **string** | An **input** property, which sets/gets the current formatting type |
-| `formatColors` | An **input** property, which sets/gets the current formatting colors | `val`: *IFormatColors* |
+| `formatColors` | An **input** property, which sets/gets the current formatting colors | `val`: _IFormatColors_ |
 | `onFormattersReady`| An **event**, which emits the applicable `formatting types` for the selected data, when they are determined. |
 | `formatCells` | Applies conditional formatting for the selected cells. Usage: <br/> **this.conditionalFormatting.formatCells(ConditionalFormattingType.dataBars)** | `formatterName`: **string**, `formatRange`?: [GridSelectionRange]({environment:angularApiUrl}/interfaces/gridselectionrange.html) [ ], <br /> `reset`: boolean (**true** by default) |
 | `clearFormatting` | Removes the conditional formatting from the selected cells. Usage: <br /> **this.conditionalFormatting.clearFormatting()** |
 
 ### IgxChartIntegrationDirective
+
 <div class="divider--half"></div>
 
 | API | Description | Arguments |
@@ -212,15 +226,15 @@ Understanding conditional formatting - it allows for applying formatting such as
 | `OPTIONS_TYPE` | An **enum**, representing the supported options type, which can be applied to a chart component|
 | `IOptions` | An **interface** for chart property options |
 | `chartFactory`| Creates a chart component, based on the provided chart type. Usage: <br /> **this.chartIntegration.chartFactory(CHART_TYPE.COLUMN_GROUPED, this.viewContainerRef)** | `type`: **any[ ]**, viewContainerRef: [`ViewContainerRef`](https://angular.io/api/core/ViewContainerRef) |
-| `setChartComponentOptions` | Sets property options to a chart component. Usage: <br /> **this.chartIntegration.setChartComponentOptions(CHART_TYPE.PIE, OPTIONS_TYPE.CHART, {allowSliceExplosion: true, sliceClick: (evt) => { evt.args.isExploded = !evt.args.isExploded; } })** | `chart`: *CHART_TYPE*, `optionsType`: *OPTIONS_TYPE*, `options`: *IOptions* |
+| `setChartComponentOptions` | Sets property options to a chart component. Usage: <br /> **this.chartIntegration.setChartComponentOptions(CHART_TYPE.PIE, OPTIONS_TYPE.CHART, {allowSliceExplosion: true, sliceClick: (evt) => { evt.args.isExploded = !evt.args.isExploded; } })** | `chart`: _CHART_TYPE_, `optionsType`: _OPTIONS_TYPE_, `options`: _IOptions_ |
 | `getAvailableCharts` | Returns the enabled chart types |
-| `enableCharts` | Enables the provided chart types. By default all chart types are enabled | `types`: *CHART_TYPE* [ ] |
-| `disableCharts` | Disables the provided chart types | `types`: *CHART_TYPE* [ ] |
-| `onChartTypesDetermined` | An **event**, emitted when the chart types, applicable for the `chartData`, are determined. This event emits an object of type `IDeterminedChartTypesArgs`, which has 2 properties: <br /> `chartsAvailabilty`: *Map<CHART_TYPE, boolean>* - the enabled/disabled chart types, <br /> `chartsForCreation`: *CHART_TYPE[]* - the applicable chart types for the `chartData` |
+| `enableCharts` | Enables the provided chart types. By default all chart types are enabled | `types`: _CHART_TYPE_ [ ] |
+| `disableCharts` | Disables the provided chart types | `types`: _CHART_TYPE_ [ ] |
+| `onChartTypesDetermined` | An **event**, emitted when the chart types, applicable for the `chartData`, are determined. This event emits an object of type `IDeterminedChartTypesArgs`, which has 2 properties: <br /> `chartsAvailabilty`: _Map<CHART_TYPE, boolean>_ - the enabled/disabled chart types, <br /> `chartsForCreation`: _CHART_TYPE[]_ - the applicable chart types for the `chartData` |
 | `onChartCreationDone` | An event, emitted when a chart is created. This event emits the chart component, which is created |
 | `chartData`: **any[ ]** | An **input** property, which sets/gets the data for the charts | `selectedData`: **any[ ]** |
 | `useLegend`: **boolean** | An **input**, which enables/disables the legend usage for all chart types. By default it is set to **true** |
-| `defaultLabelMemberPath`: **string** | An **input** property, which sets/gets the default label member path for the charts. By default the label member path will be determined, based on the provided data. <br />( **if the provided data records have properties with string values, the first string property name of the first data record in the `chartData` will be selected as a label member path for the charts, if not, the label member path will have value *'Index'*.** ) <br/> |
+| `defaultLabelMemberPath`: **string** | An **input** property, which sets/gets the default label member path for the charts. By default the label member path will be determined, based on the provided data. <br />( **if the provided data records have properties with string values, the first string property name of the first data record in the `chartData` will be selected as a label member path for the charts, if not, the label member path will have value _'Index'_.** ) <br/> |
 | `scatterChartYAxisValueMemberPath`: **string** | An **input** property, which sets/gets the default radius member path for the scatter bubble chart. **If not set, the default Y axis value member path will be the first numeric property name of the first data record in the `chartData`** | `path`: **string** |
 | `bubbleChartRadiusMemberPath`: **string** | An **input** property, which sets/gets the default radius member path for the scatter bubble chart. **If not set, the default radius member path will be the second numeric property name of the first data record in the `chartData`** | `path`: **string** |
 
@@ -229,9 +243,9 @@ Understanding conditional formatting - it allows for applying formatting such as
 
 <div class="divider--half"></div>
 
-* [Angular Universal guide](https://angular.io/guide/universal)
-* [Ignite UI Starter Kit](https://github.com/IgniteUI/ng-universal-example)
-* [Server-side rendering terminology](https://developers.google.com/web/updates/2019/02/rendering-on-the-web)
-* [Getting started with Ignite UI for Angular](getting-started.md)
-* [Ignite UI CLI Guide](cli/step-by-step-guide-using-cli.md)
-* [Ignite UI for Angular Schematics Guide](cli/step-by-step-guide-using-angular-schematics.md)
+- [Angular Universal guide](https://angular.io/guide/universal)
+- [Ignite UI Starter Kit](https://github.com/IgniteUI/ng-universal-example)
+- [Server-side rendering terminology](https://developers.google.com/web/updates/2019/02/rendering-on-the-web)
+- [Getting started with Ignite UI for Angular](getting-started.md)
+- [Ignite UI CLI Guide](cli/step-by-step-guide-using-cli.md)
+- [Ignite UI for Angular Schematics Guide](cli/step-by-step-guide-using-angular-schematics.md)

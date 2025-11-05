@@ -12,8 +12,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <div class="divider--half"></div>
 
-<code-view style="height: 500px; border: 1px solid #D4D4D4;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 500px; border: 1px solid #D4D4D4;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-simple/" alt="Angular Navigation Drawer Example">
 </code-view>
 
@@ -27,7 +27,7 @@ To get started with the Ignite UI for Angular Navigation Drawer component, first
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The first step is to import the `IgxNavigationDrawerModule` inside our **app.module.ts** file.
 
@@ -256,8 +256,8 @@ Here's how that would look applied to the previous example:
 
 Now the changed example should look like that:
 
-<code-view style="height: 500px; border: 1px solid #D4D4D4;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 500px; border: 1px solid #D4D4D4;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-pin/" >
 </code-view>
 
@@ -305,8 +305,8 @@ The mini variant is commonly used in a persistent setup, so we've set `pin` and 
 </igx-nav-drawer>
 ```
 
-<code-view style="height: 400px; border: 1px solid #D4D4D4;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px; border: 1px solid #D4D4D4;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-mini/" >
 </code-view>
 
@@ -373,7 +373,7 @@ import { RouterModule } from '@angular/router';
 @NgModule([
     imports: [
         RouterModule,
-		RouterModule.forRoot([
+  RouterModule.forRoot([
             {path: 'avatar', component: NavDrawerRoutingComponent},
             {path: 'badge', component: NavDrawerRoutingComponent},
             {path: 'button-group', component: NavDrawerRoutingComponent}
@@ -384,8 +384,8 @@ import { RouterModule } from '@angular/router';
 
 After all the steps above are completed, your app should look like that:
 
-<code-view style="height: 400px; border: 1px solid #D4D4D4;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px; border: 1px solid #D4D4D4;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-routing/" >
 </code-view>
 
@@ -445,8 +445,8 @@ There's also child routing extracted from the `children` property of the routes.
 
 The example below presents the capabilities of a hierarchical structure by using predefined data with topic names and links. The structure allows users to easily generate functional and detailed navigations and to have the ability to define each element whether to be displayed as a link or as an indicator.
 
-<code-view style="height: 400px; border: 1px solid #D4D4D4;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px; border: 1px solid #D4D4D4;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-hierarchical/" >
 </code-view>
 
@@ -490,11 +490,11 @@ The last step is to **include** the component theme in our application.
     @include css-vars($custom-theme);
   }
 }
-```        
+```
 
-<code-view style="height: 400px; border: 1px solid #D4D4D4;" 
+<code-view style="height: 400px; border: 1px solid #D4D4D4;"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-styling/" >
 </code-view>
 
@@ -502,5 +502,5 @@ The last step is to **include** the component theme in our application.
 
 ## API and Style References
 
-* [IgxNavigationDrawerComponent API]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html)
-* [IgxNavigationDrawerComponent Styles]({environment:sassApiUrl}/themes#function-navdrawer-theme)
+- [IgxNavigationDrawerComponent API]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html)
+- [IgxNavigationDrawerComponent Styles]({environment:sassApiUrl}/themes#function-navdrawer-theme)

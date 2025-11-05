@@ -30,7 +30,7 @@ Then navigate in the command prompt to the folder where you want your applicatio
 ng new demo-app
 ```
 
-We are going to be prompted "Would we like to add Angular routing?". For this demo we will choose NO. Next, we are asked which stylesheet format would we like to use. We are going to stick with the basic CSS for now. It takes a few minutes, but eventually the process will complete and your new application will be created on the disk. 
+We are going to be prompted "Would we like to add Angular routing?". For this demo we will choose NO. Next, we are asked which stylesheet format would we like to use. We are going to stick with the basic CSS for now. It takes a few minutes, but eventually the process will complete and your new application will be created on the disk.
 
 Now we have to change directories to the demo-app folder that was just created and execute a command to open Visual Studio Code.
 
@@ -61,6 +61,7 @@ In WPF we have a `packages.config` file which defines all our dependencies to nu
 Let's take a look at the `References` folder. In WPF we have a `References` node in our solution that shows all the references that are added to this project. In an Angular application that is actually going to be the `nodes_module` folder. Coming from WPF, you may be surprised how many dependencies an Angular project has. These are populated by using `npm`.
 
 Unfortunately, here the similarities end. Let us look at some of the other generated files and folders:
+
 - `e2e` - stands for end-to-end testing and contains integration tests or tests with real-world scenarios like a login process.
 - `src` - most of the application's code is located here.
 - `assets` - contains your images or any other assets.
@@ -102,11 +103,12 @@ Your first Angular application should look like this:
 <img class="responsive-img" src="../../../images/general/First_angular_app.png" />
 
 ## Additional Resources
-* [Desktop to Web: Create your first Angular App](https://www.youtube.com/watch?v=dhjrAPPad54&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j)
-* [Angular Application Shell](https://angular.io/tutorial/toh-pt0)
+
+- [Desktop to Web: Create your first Angular App](https://www.youtube.com/watch?v=dhjrAPPad54&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j)
+- [Angular Application Shell](https://angular.io/tutorial/toh-pt0)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

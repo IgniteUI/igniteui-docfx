@@ -12,6 +12,7 @@ The typography in Ignite UI for Angular is modeled after the [Material Type Syst
 </p>
 
 ## Overview
+
 The type system is a **_type scale_** consisting of **_13 different category type styles_** used across most components. All of the scale categories are completely reusable and adjustable by the end user.
 
 Here's a list of all 13 category styles as defined for the Material Theme in Ignite UI for Angular:
@@ -37,6 +38,7 @@ Here's a list of all 13 category styles as defined for the Material Theme in Ign
 Each theme defines its own type scale. This means each one of the themes we ship - Material, Fluent, Bootstrap, and Indigo will have its own type scale. They all share the same _scale categories_, but can have different font family, weight, size, text transform, letter spacing, and line height.
 
 ## Usage
+>
 > [!IMPORTANT]
 > By default we don't apply any typography styles. To use our typography in your application you have to set the `ig-typography` CSS class on a top-level element. All of its children will then use our typography styles.
 

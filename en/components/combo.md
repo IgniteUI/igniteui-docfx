@@ -23,13 +23,14 @@ In this Angular ComboBox example, you can see how users can filter items and per
 ## Angular ComboBox Features
 
 The combobox control exposes the following features:
- * Data Binding - local data and [remote data](combo-remote.md)
- * [Value Binding](combo-features.md#data-binding)
- * [Filtering](combo-features.md#filtering)
- * [Grouping](combo-features.md#grouping)
- * [Custom Values](combo-features.md#custom-values)
- * [Templates](combo-templates.md)
- * Integration with [Template Driven Forms](input-group.md) and [Reactive Forms](angular-reactive-form-validation.md)
+
+- Data Binding - local data and [remote data](combo-remote.md)
+- [Value Binding](combo-features.md#data-binding)
+- [Filtering](combo-features.md#filtering)
+- [Grouping](combo-features.md#grouping)
+- [Custom Values](combo-features.md#custom-values)
+- [Templates](combo-templates.md)
+- Integration with [Template Driven Forms](input-group.md) and [Reactive Forms](angular-reactive-form-validation.md)
 
 ## Getting Started with Ignite UI for Angular ComboBox
 
@@ -39,7 +40,7 @@ To get started with the Ignite UI for Angular ComboBox component, first you need
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxComboModule` in your **app.module.ts** file.
 
@@ -105,8 +106,8 @@ Our combobox is now bound to the array of cities, but we still haven't told the 
 
 Since the combobox is bound to an array of complex data (i.e. objects), we need to specify a property that the control will use to handle the selected items. The control exposes two `@Input` properties - [valueKey]({environment:angularApiUrl}/classes/IgxComboComponent.html#valueKey) and [displayKey]({environment:angularApiUrl}/classes/IgxComboComponent.html#displayKey):
 
- - `valueKey` - *Optional, recommended for object arrays* - Specifies which property of the data entries will be stored for the combobox's selection. If `valueKey` is omitted, the combobox value will use references to the data entries (i.e. the selection will be an array of entries from `igxCombo.data`).
- - `displayKey` - *Required for object arrays* - Specifies which property will be used for the items' text. If no value is specified for `displayKey`, the combobox will use the specified `valueKey` (if any).
+- `valueKey` - _Optional, recommended for object arrays_ - Specifies which property of the data entries will be stored for the combobox's selection. If `valueKey` is omitted, the combobox value will use references to the data entries (i.e. the selection will be an array of entries from `igxCombo.data`).
+- `displayKey` - _Required for object arrays_ - Specifies which property will be used for the items' text. If no value is specified for `displayKey`, the combobox will use the specified `valueKey` (if any).
 
 In our case, we want the combobox to display the `name` of each city and the combobox value to store the `id` of each city. Therefore, we are providing these properties to the combobox's `displayKey` and `valueKey`, respectively:
 
@@ -243,9 +244,11 @@ public singleSelection(event: IComboSelectionChangeEventArgs) {
 ## Keyboard Navigation
 
 When combobox is closed and focused:
+
 - `ArrowDown` or `Alt` + `ArrowDown` will open the combobox's drop down and will move focus to the search input.
 
 When combobox is opened and search input is focused:
+
 - `ArrowUp` or `Alt` + `ArrowUp` will close the combobox's drop down and will move focus to the closed combobox.
 
 - `ArrowDown` will move focus from the search input to the first list item. If the list is empty and custom values are enabled will move it to the Add new item button.
@@ -254,6 +257,7 @@ When combobox is opened and search input is focused:
 > Any other key stroke will be handled by the input.
 
 When combobox is opened and list item is focused:
+
 - `ArrowDown` will move to the next list item. If the active item is the last one in the list and custom values are enabled, the focus will be moved to the Add item button.
 
 - `ArrowUp` will move to the previous list item. If the active item is the first one in the list, the focus will be moved back to the search input.
@@ -346,7 +350,7 @@ Using the [`Ignite UI for Angular Theming`](themes/index.md), we can greatly alt
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 Following the simplest approach, we create a new theme that extends the [`combo-theme`]({environment:sassApiUrl}/themes#function-combo-theme). By setting the `$toggle-button-background`, the theme automatically determines suitable state colors and contrast foregrounds for the button. You can also specify additional parameters, such as `$search-separator-border-color`:
 
@@ -411,6 +415,7 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 ```
 
 The utility file includes both `light` and `dark` theme variants.
+
 - Use `light-*` classes for the light theme.
 - Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-combo`, `dark-combo`.
@@ -446,34 +451,37 @@ At the end your combo should look like this:
 > The combobox uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for the combobox. For more details see [`igxForOf Known Issues`](for-of.md#known-limitations) section.
 
 ## API Summary
+
 <div class="divider--half"></div>
 
-* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
-* [IgxComboComponent Styles]({environment:sassApiUrl}/themes#function-combo-theme)
+- [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
+- [IgxComboComponent Styles]({environment:sassApiUrl}/themes#function-combo-theme)
 
 Additional [angular components](https://www.infragistics.com/products/ignite-ui-angular) and/or directives with relative APIs that were used:
 
-* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
-* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
+- [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
+- [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+- [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
 
 ## Theming Dependencies
-* [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
-* [IgxCheckbox Theme]({environment:sassApiUrl}/themes#function-checkbox-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
+
+- [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
+- [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxCheckbox Theme]({environment:sassApiUrl}/themes#function-checkbox-theme)
+- [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [ComboBox Features](combo-features.md)
-* [ComboBox Remote Binding](combo-remote.md)
-* [ComboBox Templates](combo-templates.md)
-* [Template Driven Forms Integration](input-group.md)
-* [Reactive Forms Integration](angular-reactive-form-validation.md)
-* [Single Select ComboBox](simple-combo.md)
+- [ComboBox Features](combo-features.md)
+- [ComboBox Remote Binding](combo-remote.md)
+- [ComboBox Templates](combo-templates.md)
+- [Template Driven Forms Integration](input-group.md)
+- [Reactive Forms Integration](angular-reactive-form-validation.md)
+- [Single Select ComboBox](simple-combo.md)
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

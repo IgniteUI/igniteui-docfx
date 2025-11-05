@@ -104,7 +104,7 @@ $my-primary-800-text: contrast-color($my-palette, "primary", 600);
 
 If you've included the _"igniteui-angular.css"_ file in your application project, now is a good time to remove it. We are going to use our own _"my-app-theme.scss"_ file to generate our own theme.
 
-Let's start from our very first example on this page. This time, though, we're going to be including two mixins `core` and `theme`; For now `core` doesn't accept any arguments. `theme`, however, does accept a few - `$palette`, `$schema`, `$exclude`, `$roundness`, `$elevation`, `$elevations`. For now, we'll only talk about the `$palette` argument. 
+Let's start from our very first example on this page. This time, though, we're going to be including two mixins `core` and `theme`; For now `core` doesn't accept any arguments. `theme`, however, does accept a few - `$palette`, `$schema`, `$exclude`, `$roundness`, `$elevation`, `$elevations`. For now, we'll only talk about the `$palette` argument.
 
 > [!IMPORTANT]
 > Including `core` before `theme` is essential. The `core` mixin provides all base definitions needed for `theme` to work.
@@ -133,7 +133,6 @@ $my-color-palette: palette(
 ```
 
 That's it. Your application will now use the colors from your newly generated palette.
-
 
 
 In its current state, the defining custom typography is limited to changing the `font family` of the application. We'll be updating this functionality with subsequent releases. Our intent is to provide a robust way to customize the typography in your application.

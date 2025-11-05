@@ -10,8 +10,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Angular Icon Example
 
-<code-view style="height: 75px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 75px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/icon-sample-1/" alt="Angular Icon Example">
 </code-view>
 
@@ -25,7 +25,7 @@ To get started with the Ignite UI for Angular Icon component, first you need to 
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxIconModule` in your **app.module.ts** file.
 
@@ -125,9 +125,9 @@ You can also use an SVG image as an icon. First, inject the [`IgxIconService`]({
 
 Use the [`addSvgIcon`]({environment:angularApiUrl}/classes/igxiconservice.html#addSvgIcon) method to import the SVG file in cache. When the SVG is cached, it can be used anywhere in the application. The icon name and file URL path are the method's mandatory parameters; family can be specified as well. After that, you can use the SVG files in the HTML markup. Alternatively, you can use the `addSvgIconFromText` method to import an SVG file, providing the SVG text content instead of the file URL.
 
-* Have in mind that if there are two icons with the same name and the same family, the SVG icon will be displayed with priority.
-* It is better not to provide image width and height in the SVG file.
-* You may need additional polyfill scripts ("polyfills") for Internet Explorer.
+- Have in mind that if there are two icons with the same name and the same family, the SVG icon will be displayed with priority.
+- It is better not to provide image width and height in the SVG file.
+- You may need additional polyfill scripts ("polyfills") for Internet Explorer.
 
 ```typescript
 constructor(private iconService: IgxIconService) { }
@@ -142,8 +142,8 @@ public ngOnInit() {
 <igx-icon name="contains" family="filter-icons"></igx-icon>
 ```
 
-<code-view style="height: 70px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 70px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/svg-icon-sample/" >
 </code-view>
 
@@ -178,8 +178,8 @@ Now, we are ready to add the desired icon into our markup and customize it using
 }
 ```
 
-<code-view style="height: 70px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 70px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/material-symbols/" >
 </code-view>
 
@@ -239,9 +239,9 @@ The last step is to pass the custom icon theme in our application:
 
 ### Demo
 
-<code-view style="height:75px" 
+<code-view style="height:75px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/icon-styling/" alt="Angular Icon Example">
 </code-view>
 
@@ -326,6 +326,7 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 ```
 
 The utility file includes both `light` and `dark` theme variants.
+
 - Use `light-*` classes for the light theme.
 - Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-icon`, `dark-icon`.
@@ -351,8 +352,8 @@ At the end your icon should look like this:
 
 <div class="divider--half"></div>
 
-* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxIconComponent Styles]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+- [IgxIconComponent Styles]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## Additional Resources
 
@@ -360,5 +361,5 @@ At the end your icon should look like this:
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

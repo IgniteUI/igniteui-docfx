@@ -1,17 +1,21 @@
 @@if(igxName==='IgxGrid'){
 ---
+
 title: Editing Rows in Angular Data Grid - Ignite UI for Angular
 _description: Want to enable row editing in Angular Data Grid? Need a powerful API for CRUD operations? Try our Ignite UI for Angular Data Grid rows editing component!
 _keywords: row editing, igniteui for angular, infragistics
 ---
+
 }
 @@if(igxName!=='IgxGrid'){
 ---
+
 title: Editing Rows in Angular @@igComponent - Ignite UI for Angular
 _description: Want to enable row editing in Angular @@igComponent? Need a powerful API for CRUD operations? Try our Ignite UI for Angular Data Grid rows editing component!
 _keywords: row editing, igniteui for angular, infragistics
 _canonicalLink: grid/row-editing
 ---
+
 }
 
 # Angular @@igComponent Row Editing
@@ -73,6 +77,7 @@ export class AppModule {}
 
 Then define a @@igComponent with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable) set to true:
 @@if (igxName ==='IgxGrid') {
+
 ```html
 <igx-grid [data]="data" [primaryKey]="'ProductID'" width="100%" height="500px" [rowEditable]="true">
     <igx-column field="ProductID" header="Product ID" editable="false"></igx-column>
@@ -87,8 +92,10 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
     <igx-column field="Discontinued" header="Discontinued" [dataType]="'boolean'"></igx-column>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid [data]="data" [primaryKey]="EmployeID" [foreignKey]="PID"
                [rowEditable]="true" [rowSelection]="'multiple'" [moving]="true">
@@ -103,8 +110,10 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
     </igx-column>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid [data]="localdata" [autoGenerate]="false" [rowEditable]="true">
     <igx-column field="Artist" [editable]="true" [dataType]="'string'"></igx-column>
@@ -136,6 +145,7 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
     </igx-row-island>
 </igx-hierarchical-grid>
 ```
+
 }
 
 > [!NOTE]
@@ -145,6 +155,7 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
 > It's not needed to enable editing for individual columns. Using the [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable) property in the @@igComponent, will mean that all rows, with defined `field` property, excluding primary one, will be editable. If you want to disable editing for specific column, then you set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to `false`.
 
 @@if (igxName === 'IgxGrid') {
+
 ```typescript
 import { Component, ViewChild } from '@angular/core';
 import { data } from './data';
@@ -166,9 +177,11 @@ export class GridRowEditSampleComponent {
     }
 }
 ```
+
 }
 
 @@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IgxTreeGridComponent } from 'igniteui-angular';
@@ -199,8 +212,10 @@ export class TreeGridRowEditSampleComponent implements OnInit {
     }
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IgxRowIslandComponent, IgxHierarchicalGridComponent } from 'igniteui-angular';
@@ -227,6 +242,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
     }
 }
 ```
+
 }
 
 > [!NOTE]
@@ -252,9 +268,9 @@ export class HGridRowEditingSampleComponent implements OnInit {
 
 - If row is in edit mode and @@igComponent is scrolled so that row goes outside the visible area, the latter will be still in edit mode. When @@igComponent is scrolled, so that the row is visible again, the row will be still in edit mode. When clicked outside the @@igComponent, the cell will also stay in edit mode.
 
-- When perform *sorting*, *filtering*, *searching* and *hiding* operations, will revert all current changes in the row and row will exit edit mode.
+- When perform _sorting_, _filtering_, _searching_ and _hiding_ operations, will revert all current changes in the row and row will exit edit mode.
 
-- When perform *paging*, *resizing*, *pinning* and *moving* operations, will exit edit mode and will submit latest value.
+- When perform _paging_, _resizing_, _pinning_ and _moving_ operations, will exit edit mode and will submit latest value.
 
 - Each modified cell gets edited style until row edit is finished. This is the behavior, when @@igComponent is not provided with transactions. When transactions are available - then cell edit style is applied until all the changes are committed.
 
@@ -275,6 +291,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 - Summaries will be updated after row edit is finished. Same is valid for the other features like sorting, filtering, etc.
 
 @@if (igxName === 'IgxGrid') {
+
 - Expanding and collapsing grouped rows will not terminate editing for the current row.
 }
 
@@ -287,18 +304,19 @@ The `rowChangesCount` property is exposed and it holds the count of the changed 
 
 ```html
 <ng-template igxRowEditText let-rowChangesCount>
-	Changes: {{rowChangesCount}}
+ Changes: {{rowChangesCount}}
 </ng-template>
  ```
 
 ### Customizing Buttons
+
 Customizing the buttons of the row editing overlay is possible using the `igxRowEditActionsDirective`.
 If you want the buttons to be part of the keyboard navigation, then each on of them should have the `igxRowEditTabStopDirective`.
 
  ```html
  <ng-template igxRowEditActions let-endRowEdit>
-	<button igxButton igxRowEditTabStop (click)="endRowEdit(false)">Cancel</button>
-	<button igxButton igxRowEditTabStop (click)="endRowEdit(true)">Apply</button>
+ <button igxButton igxRowEditTabStop (click)="endRowEdit(false)">Cancel</button>
+ <button igxButton igxRowEditTabStop (click)="endRowEdit(true)">Apply</button>
 </ng-template>
  ```
 
@@ -446,34 +464,35 @@ After styling the banner and buttons, we also define a custom style for [the cel
 ## Known Issues and Limitations
 
 - When the grid has no `primaryKey` set and remote data scenarios are enabled (when paging, sorting, filtering, scrolling trigger requests to a remote server to retrieve the data to be displayed in the grid), a row will lose the following state after a data request completes:
-    * Row Selection
-    * Row Expand/collapse
-    * Row Editing
-    * Row Pinning
+  - Row Selection
+  - Row Expand/collapse
+  - Row Editing
+  - Row Pinning
 
 ## API References
 
-* [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable)
-* [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditEnter)
-* [onRowEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEdit)
-* [rowEditDone]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditDone)
-* [onRowEditCancel]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditCancel)
-* [endEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#endEdit)
-* [field]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field)
-* [editable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable)
-* [primaryKey]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primaryKey)
-* [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable)
+- [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditEnter)
+- [onRowEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEdit)
+- [rowEditDone]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditDone)
+- [onRowEditCancel]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditCancel)
+- [endEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#endEdit)
+- [field]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field)
+- [editable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable)
+- [primaryKey]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primaryKey)
+- [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [Build CRUD operations with igxGrid](../general/how-to/how-to-perform-crud.md)
-* [@@igComponent Overview](@@igMainTopic.md)
-* [@@igComponent Editing](editing.md)
-* [@@igComponent Transactions](batch-editing.md)
+- [Build CRUD operations with igxGrid](../general/how-to/how-to-perform-crud.md)
+- [@@igComponent Overview](@@igMainTopic.md)
+- [@@igComponent Editing](editing.md)
+- [@@igComponent Transactions](batch-editing.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

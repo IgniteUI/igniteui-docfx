@@ -129,8 +129,8 @@ The following example shows a comparison of the highest grossing worldwide film 
 
 You can find more information about related chart features in these topics:
 
-*   [Axis Gridlines](chart-axis-gridlines.md)
-*   [Axis Layout](chart-axis-layouts.md)
+- [Axis Gridlines](chart-axis-gridlines.md)
+- [Axis Layout](chart-axis-layouts.md)
 
 ## API References
 

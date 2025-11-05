@@ -6,7 +6,7 @@ _keywords: angular single selection combobox, angular combobox component, angula
 
 # Angular Single Select ComboBox Component Overview
 
-The Angular Single Select ComboBox component is a modification of [ComboBox component](combo.md) that allows single selection. We call it "simple combo". Due to high demand for single-selection mode for the original ComboBox component, we created an extension component which offers an editable search input that allows users to choose an option from a predefined list of items and to input custom values. 
+The Angular Single Select ComboBox component is a modification of [ComboBox component](combo.md) that allows single selection. We call it "simple combo". Due to high demand for single-selection mode for the original ComboBox component, we created an extension component which offers an editable search input that allows users to choose an option from a predefined list of items and to input custom values.
 
 ## Angular Simple ComboBox Example
 
@@ -40,7 +40,7 @@ To get started with the Ignite UI for Angular Simple ComboBox component, first y
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxSimpleComboModule` in your **app.module.ts** file.
 
@@ -103,8 +103,8 @@ Our simple combobox is now bound to the array of cities.
 
 Since the simple combobox is bound to an array of complex data (i.e. objects), we need to specify a property that the control will use to handle the selected items. The control exposes two `@Input` properties - [valueKey]({environment:angularApiUrl}/classes/IgxSimpleComboComponent.html#valueKey) and [displayKey]({environment:angularApiUrl}/classes/IgxSimpleComboComponent.html#displayKey):
 
- - `valueKey` - *Optional, recommended for object arrays* - Specifies which property of the data entries will be stored for the simple combobox's selection. If `valueKey` is omitted, the simple combobox value will use references to the data entries (i.e. the selection will be an array of entries from `igxSimpleCombo.data`).
- - `displayKey` - *Required for object arrays* - Specifies which property will be used for the items' text. If no value is specified for `displayKey`, the simple combobox will use the specified `valueKey` (if any).
+- `valueKey` - _Optional, recommended for object arrays_ - Specifies which property of the data entries will be stored for the simple combobox's selection. If `valueKey` is omitted, the simple combobox value will use references to the data entries (i.e. the selection will be an array of entries from `igxSimpleCombo.data`).
+- `displayKey` - _Required for object arrays_ - Specifies which property will be used for the items' text. If no value is specified for `displayKey`, the simple combobox will use the specified `valueKey` (if any).
 
 In our case, we want the simple combobox to display the `name` of each city and its value to store the `id` of each city. Therefore, we are binding these properties as values to the simple combobox's `displayKey` and `valueKey`, respectively:
 
@@ -205,15 +205,17 @@ Binding to the event can be done through the proper `@Output` property on the `i
 ## Keyboard Navigation
 
 When the simple combobox is closed and focused:
+
 - `ArrowDown` or `Alt` + `ArrowDown` will open the simple combobox's dropdown.
 
 > [!NOTE]
 > Any other key stroke will be handled by the input.
 
 When the simple combobox is opened and an item in the list is focused:
+
 - `ArrowDown` will move to the next list item. If the active item is the last one in the list and custom values are enabled, the focus will be moved to the Add item button.
 
-- `ArrowUp` will move to the previous list item. If the active item is the first one in the list, the focus will be moved back to the search input while also selecting all of the text in the input. 
+- `ArrowUp` will move to the previous list item. If the active item is the first one in the list, the focus will be moved back to the search input while also selecting all of the text in the input.
 
 - `End` will move to the last list item.
 
@@ -247,6 +249,7 @@ Check out our [Angular Grid with Cascading Combos Sample](../components/grid/cas
 <div class="divider--half"></div>
 
 ### Template Configuration
+
 The API of the simple combobox is used to get the selected item from one component and load the data source for the next one, as well as clear the selection and data source when needed.
 
 ```html
@@ -275,6 +278,7 @@ The API of the simple combobox is used to get the selected item from one compone
 ```
 
 ### Component Definition
+
 ```typescript
 export class SimpleComboCascadingComponent implements OnInit {
     public selectedCountry: Country;
@@ -311,6 +315,7 @@ export class SimpleComboCascadingComponent implements OnInit {
 The Ignite UI for Angular Simple ComboBox Component exposes an API that allows binding a combobox to a remote service and retrieving data on demand.
 
 ### Demo
+
 The sample below demonstrates remote binding using the [dataPreLoad]({environment:angularApiUrl}/classes/IgxSimpleComboComponent.html#dataPreLoad) property to load new chunk of remote data and following the steps described in [ComboBox Remote Binding](combo-remote.md):
 
 <code-view style="height: 400px;"
@@ -396,31 +401,34 @@ The last step is to include the component's theme.
 > The simple combobox uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for the simple combobox. For more details see [igxForOf Known Issues](for-of.md#known-limitations) section.
 
 ## API Summary
+
 <div class="divider--half"></div>
 
-* [IgxSimpleComboComponent]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html)
-* [IgxComboComponent Styles]({environment:sassApiUrl}/themes#function-combo-theme)
+- [IgxSimpleComboComponent]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html)
+- [IgxComboComponent Styles]({environment:sassApiUrl}/themes#function-combo-theme)
 
 Additional components and/or directives with relative APIs that were used:
 
-* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
-* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+- [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
+- [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
 ## Theming Dependencies
-* [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
+
+- [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
+- [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [ComboBox Features](combo-features.md)
-* [ComboBox Remote Binding](combo-remote.md)
-* [ComboBox Templates](combo-templates.md)
-* [Template Driven Forms Integration](input-group.md)
-* [Reactive Forms Integration](angular-reactive-form-validation.md)
+- [ComboBox Features](combo-features.md)
+- [ComboBox Remote Binding](combo-remote.md)
+- [ComboBox Templates](combo-templates.md)
+- [Template Driven Forms Integration](input-group.md)
+- [Reactive Forms Integration](angular-reactive-form-validation.md)
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

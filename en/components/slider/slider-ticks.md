@@ -8,20 +8,22 @@ _keywords: tick marks, igniteui for angular, infragistics
 
 
 ### API References
+
 <div class="divider--half"></div>
 
-* [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)
-* [IgxSliderComponent Styles]({environment:sassApiUrl}/themes#function-slider-theme)
-* [IRangeSliderValue]({environment:angularApiUrl}/interfaces/irangeslidervalue.html)
-* [SliderType]({environment:angularApiUrl}/enums/slidertype.html)
+- [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)
+- [IgxSliderComponent Styles]({environment:sassApiUrl}/themes#function-slider-theme)
+- [IRangeSliderValue]({environment:angularApiUrl}/interfaces/irangeslidervalue.html)
+- [SliderType]({environment:angularApiUrl}/enums/slidertype.html)
 
 
 ### Additional Resources
 
-* [Slider overview](slider.md)
+- [Slider overview](slider.md)
 
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

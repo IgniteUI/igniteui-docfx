@@ -11,8 +11,8 @@ Infragistics provides a private NuGet feed for licensed users to consume and add
 
 This topic contains the following sections:
 
--   Adding the Infragistics NuGet Feed with Visual Studio
--   Adding the Infragistics NuGet Feed with the NuGet CLI
+- Adding the Infragistics NuGet Feed with Visual Studio
+- Adding the Infragistics NuGet Feed with the NuGet CLI
 
 ## Adding with Visual Studio
 
@@ -22,8 +22,8 @@ This topic contains the following sections:
 
 2 - In the **Package Sources** section, add a new package source by clicking the **plus icon** in the top right corner of the dialog.
 
--   Set the Name to **Infragistics**
--   Set the Source to **<https://packages.infragistics.com/nuget/licensed>**
+- Set the Name to **Infragistics**
+- Set the Source to **<https://packages.infragistics.com/nuget/licensed>**
 
     Click the **Update** button, and then click **OK** to close the dialog.
 

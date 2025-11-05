@@ -5,9 +5,10 @@ _keywords: Angular Tabs component, Angular Tabs control, Angular Tabs, Angular T
 ---
 
 # Angular Tabs Component Overview
-Ignite UI for Angular Tabs is a full-featured user interface component that has the primary purpose to organize and group related content in a single tabbed view, thus saving space and making content more comprehensible. It packs different features like animations, templating, customization options, and others. 
 
-Tabs in Angular are extremely useful when you’re building a web page with plenty of content that must be fitted into categories and displayed in a concise and space-efficient way. 
+Ignite UI for Angular Tabs is a full-featured user interface component that has the primary purpose to organize and group related content in a single tabbed view, thus saving space and making content more comprehensible. It packs different features like animations, templating, customization options, and others.
+
+Tabs in Angular are extremely useful when you’re building a web page with plenty of content that must be fitted into categories and displayed in a concise and space-efficient way.
 
 <p class="highlight">
 
@@ -17,7 +18,7 @@ The [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabscomponent.html) comp
 
 ## Angular Tabs Example
 
-This is a basic example of Angular Nested Tabs where we have one tab within another where only one view can be seen at the time. Using nested tabs in Angular, we can display information in a better, structured way. 
+This is a basic example of Angular Nested Tabs where we have one tab within another where only one view can be seen at the time. Using nested tabs in Angular, we can display information in a better, structured way.
 
 <code-view style="height: 250px; border: 1px solid #ededed;"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -34,7 +35,7 @@ To get started with the Ignite UI for Angular Tabs component, first you need to 
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxTabsModule` in your **app.module.ts** file.
 
@@ -154,7 +155,9 @@ If the sample is configured properly, the final result should look like that:
 <div class="divider"></div>
 
 ## Angular Tabs Alignment
+
 `IgxTabs` [`tabAlignment`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabAlignment) input property controls how tabs are positioned and arranged. It accepts four different values - start, center, end and justify.
+
 - **Start** (default): the width of the tab header depends on the content (label, icon, both) and all tabs have equal padding. First tab is aligned to the tabs container left side.
 - **Center**: the width of the tab header depends on the content and occupies the tabs container center. If the space is not enough to fit all items, scroll buttons are displayed.
 - **End**: the width of the tab header depends on the content and all tabs have equal padding. Last tab is aligned to the tabs container right side.
@@ -709,7 +712,7 @@ To get started with styling the tabs, we need to import the theming module, wher
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 Following the simplest approach, we create a new theme that extends the [`tabs-theme`]({environment:sassApiUrl}/themes#function-tabs-theme). By passing just a few base parameters—such as `$item-background` and `$item-active-color`—you can style your tabs with minimal effort. The theme will automatically generate all necessary background and foreground colors for the various interaction states.
 
@@ -757,6 +760,7 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 ```
 
 The utility file includes both `light` and `dark` theme variants.
+
 - Use `light-*` classes for the light theme.
 - Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-tabs`, `dark-tabs`.
@@ -787,25 +791,28 @@ At the end your tabs should look like this:
 <div class="divider--half"></div>
 
 ## API References
+
 <div class="divider"></div>
 
-* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
-* [IgxTabsComponent]({environment:angularApiUrl}/classes/igxtabscomponent.html)
-* [IgxTabsComponent Styles]({environment:sassApiUrl}/themes#function-tabs-theme)
-* [IgxTabItemComponent]({environment:angularApiUrl}/classes/igxtabitemcomponent.html)
-* [IgxTabHeaderComponent]({environment:angularApiUrl}/classes/igxtabheadercomponent.html)
-* [IgxTabContentComponent]({environment:angularApiUrl}/classes/igxtabcontentcomponent.html)
+- [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+- [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
+- [IgxTabsComponent]({environment:angularApiUrl}/classes/igxtabscomponent.html)
+- [IgxTabsComponent Styles]({environment:sassApiUrl}/themes#function-tabs-theme)
+- [IgxTabItemComponent]({environment:angularApiUrl}/classes/igxtabitemcomponent.html)
+- [IgxTabHeaderComponent]({environment:angularApiUrl}/classes/igxtabheadercomponent.html)
+- [IgxTabContentComponent]({environment:angularApiUrl}/classes/igxtabcontentcomponent.html)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
+
+- [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

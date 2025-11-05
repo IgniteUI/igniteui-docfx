@@ -8,7 +8,7 @@ _keywords: Ignite UI for Angular, Customizing Ignite UI Theming, Optimizing Igni
 
 This article will walk you through the details of customizing Ignite UI for Angular application theming and optimizing the size of the produced stylesheet. The article shows details of how the Ignite UI for Angular theming engine works and presents advanced usage of it. The article is very useful for both making full customization of the component styles, such that your Angular application is tailored to match your desired look and feel, and for making your application optimal for deployment by reducing the style sizes down to only what is used by the app.
 
->[!NOTE] 
+>[!NOTE]
 > This document describes the theming system in Ignite UI for Angular from version 15 forward. Examples include both using the Sass APIs provided by the theming engine and exposed CSS variables.
 
 ## Getting Started
@@ -83,7 +83,7 @@ As you can see, the code generation changed from the specific `@include light-th
 
 <img class="responsive-img"  src="../../../images/general/theming-walkthrough/getting-started-dark-app.png" />
 
-We want to dig deeper and customize a specific [component theme](../../themes/sass/component-themes.md) in our application and we will do this by bringing in the CSS variables for an individual component theme, in this case the grid toolbar theme. 
+We want to dig deeper and customize a specific [component theme](../../themes/sass/component-themes.md) in our application and we will do this by bringing in the CSS variables for an individual component theme, in this case the grid toolbar theme.
 
 ```scss
 @include core();
@@ -186,7 +186,7 @@ Then our theme definition will go in the general scope, which we will use for th
 ```
 
 >[!NOTE]
-> I have switched the `igx-grid-toolbar` theme override to overriding just two of its variables, instead of reincluding all of the theme variables using [`css-vars()`]({environment:sassApiUrl}/themes#mixin-css-vars). 
+> I have switched the `igx-grid-toolbar` theme override to overriding just two of its variables, instead of reincluding all of the theme variables using [`css-vars()`]({environment:sassApiUrl}/themes#mixin-css-vars).
 > All theme variables can be found in the [corresponding sass api doc]({environment:sassApiUrl}/themes#function-grid-toolbar-theme) and are equivalent to the sass variables, but prefixed with `--` instead of `$`.
 
 And the result now looks like this with light OS theme:
@@ -204,11 +204,11 @@ And this is how it looks with dark OS theme:
 
 Ignite UI theming abstracts multiple dimensions of theming and provides for very robust retheming capabilities. Developers and designers can take advantage of the theming engine APIs to make tailored visual design for their applications, which gives them unique look and feel when using Ignite UI for Angular. The theming engine also exposes variables from each of the dimensions, which can be used to apply theming to the rest of the application structure, which is not directly built with Ignite UI for Angular components as UI. The dimensions exposed for modifications are:
 
- * [Colors](../../themes/sass/palettes.md) (color palette)
- * [Shape](../../themes/sass/roundness.md) (borders and radiuses)
- * [Elevations](../../themes/sass/elevations.md) (shadows)
- * [Typography](../../themes/sass/typography.md) (fonts and font sizes)
- * [Size](../../display-density.md) (the size of information that is fitted on the screen)
+- [Colors](../../themes/sass/palettes.md) (color palette)
+- [Shape](../../themes/sass/roundness.md) (borders and radiuses)
+- [Elevations](../../themes/sass/elevations.md) (shadows)
+- [Typography](../../themes/sass/typography.md) (fonts and font sizes)
+- [Size](../../display-density.md) (the size of information that is fitted on the screen)
 
 >[!NOTE]
 > If you really want a fully custom visual design, you will need to modify all of the supported theming dimensions and you will take full advantage of the Sass APIs.
@@ -412,5 +412,5 @@ Related topics:
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

@@ -97,7 +97,7 @@ Here is the final result in the browser:
 
 <img class="responsive-img" src="../../../images/general/angular_wrappanel.png" />
 
-If you want to achieve a result similar to a WrapPanel with Orientation="Vertical", you have to set the [`flex-direction`](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp) property to `column`. The [`flex-flow`](https://www.w3schools.com/cssref/css3_pr_flex-flow.asp) property is a shorthand property for setting both the `flex-direction` and `flex-wrap` properties. 
+If you want to achieve a result similar to a WrapPanel with Orientation="Vertical", you have to set the [`flex-direction`](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp) property to `column`. The [`flex-flow`](https://www.w3schools.com/cssref/css3_pr_flex-flow.asp) property is a shorthand property for setting both the `flex-direction` and `flex-wrap` properties.
 
 ```css
 .flex-container {
@@ -233,13 +233,14 @@ Here is the full CSS and the final result in the browser:
 The `grid-row` and `grid-column` properties are shorthand properties for the [`grid-row-start`](https://www.w3schools.com/cssref/pr_grid-row-start.asp), [`grid-row-end`](https://www.w3schools.com/cssref/pr_grid-row-end.asp), [`grid-column-start`](https://www.w3schools.com/cssref/pr_grid-column-start.asp) and [`grid-column-end`](https://www.w3schools.com/cssref/pr_grid-column-end.asp) properties. You could learn more about the CSS Grid container and item properties in the tutorials in the **Additional Resources** section.
 
 ## Additional Resources
-* [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp)
-* [CSS Grid Intro](https://www.w3schools.com/css/css_grid.asp)
-* [CSS Grid Container](https://www.w3schools.com/css/css_grid_container.asp)
-* [CSS Grid Item](https://www.w3schools.com/css/css_grid_item.asp)
+
+- [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp)
+- [CSS Grid Intro](https://www.w3schools.com/css/css_grid.asp)
+- [CSS Grid Container](https://www.w3schools.com/css/css_grid_container.asp)
+- [CSS Grid Item](https://www.w3schools.com/css/css_grid_item.asp)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

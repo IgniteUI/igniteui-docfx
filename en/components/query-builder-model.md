@@ -5,28 +5,32 @@ _keywords: Angular Query Builder component, Angular Query Builder control, Ignit
 ---
 
 # Using the Query Builder Model
+
 Angular Query Builder provides a serializable/deserializable JSON format model, making it easy to build SQL queries.
 
 ## Overview
 
 This Angular Query Builder example demonstrates how the [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) expression tree could be used to request data from an endpoint [Northwind WebAPI](https://data-northwind.indigo.design/swagger/index.html) and set it as an [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) data source.
 
-<code-view style="height:700px" 
+<code-view style="height:700px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/query-builder-request-sample" >
 </code-view>
 
 ## Query Builder Model
+
 In order to set an expression tree to the [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html), you need to define a[`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html). Each [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) should have filtering logic that represents how a data record should resolve against the tree and depending on the use case, you could pass a field name, entity name, and an array of return fields. If all fields in a certain entity should be returned, the `returnFields` property could be set to ['*']:
 
 ```ts
 const tree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'Entity A', ['*']);
 ```
+
 Once the root [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) is created, adding conditions, groups or subqueries, could be done by setting its `filteringOperands` property to an array of [`IFilteringExpression`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) (single expression or a group) or [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) (subquery).
 Each [`IFilteringExpression`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) and [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) should have a `fieldName` that is the name of the column where the filtering expression is placed, and either a `condition` of type [`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html) or a `conditionName`. If required, you could also set a `searchVal`, `searchTree` of type [`IExpressionTree`]({environment:angularApiUrl}/interfaces/iexpressiontree.html), and `ignoreCase` properties.
 
 - Defining a simple **expression**:
+
 ```ts
 tree.filteringOperands.push({
             fieldName: 'Name',
@@ -36,6 +40,7 @@ tree.filteringOperands.push({
 ```
 
 - Defining a **group** of expressions:
+
 ```ts
 const group = new FilteringExpressionsTree(FilteringLogic.Or, undefined, 'Entity A', ['*']);
 group.filteringOperands.push({
@@ -51,6 +56,7 @@ tree.filteringOperands.push(group);
 ```
 
 - Defining a **subquery**:
+
 ```ts
 const innerTree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'Entity B', ['Number']);
 innerTree.filteringOperands.push({
@@ -66,20 +72,22 @@ innerTree.filteringOperands.push({
 ```
 
 The model can be serialized/deserialized in JSON format, making it easily transferable between client and server:
+
 ```ts
 JSON.stringify(tree, null, 2);
 ```
 
 ## Using Sub-Queries
 
-In the context of the [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) the *IN / NOT-IN* operators are used with the newly exposed subquery functionality in the *WHERE* clause.
+In the context of the [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) the _IN / NOT-IN_ operators are used with the newly exposed subquery functionality in the _WHERE_ clause.
 
 > [!Note]
-> A subquery is a query nested inside another query used to retrieve data that will be used as a condition for the outer query. 
+> A subquery is a query nested inside another query used to retrieve data that will be used as a condition for the outer query.
 
-Selecting the *IN / NOT-IN* operator in a `FilteringExpression` would create a subquery. After choosing an entity and a column to return, it checks if the value in the specified column in the outer query matches or not any of the values returned by the subquery.
+Selecting the _IN / NOT-IN_ operator in a `FilteringExpression` would create a subquery. After choosing an entity and a column to return, it checks if the value in the specified column in the outer query matches or not any of the values returned by the subquery.
 
 The following expression tree:
+
 ```ts
 const innerTree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'Products', ['supplierId']);
 innerTree.filteringOperands.push({
@@ -95,13 +103,16 @@ tree.filteringOperands.push({
     searchTree: innerTree
 });
 ```
+
 Could be serialized by calling:
+
 ```ts
 JSON.stringify(tree, null, 2);
 ```
 
 This would be transferred as:
-``` 
+
+```
 {
   "filteringOperands": [
     {
@@ -150,7 +161,7 @@ Let's take a look at a practical example of how the Ignite UI for Angular Query 
 
 In the sample below we have 3 `entities` with names 'Suppliers', 'Categories' and 'Products'.
 
-Let's say we want to find all suppliers who supply products which belong to the 'Beverages' category. Since the data is distributed across all entities, we can take advantage of the *IN* operator and accomplish the task by creating subqueries. Each subquery is represented by a `FilteringExpressionsTree` and can be converted to a SQL query through the `transformExpressionTreeToSqlQuery(tree: IExpressionTree)` method.
+Let's say we want to find all suppliers who supply products which belong to the 'Beverages' category. Since the data is distributed across all entities, we can take advantage of the _IN_ operator and accomplish the task by creating subqueries. Each subquery is represented by a `FilteringExpressionsTree` and can be converted to a SQL query through the `transformExpressionTreeToSqlQuery(tree: IExpressionTree)` method.
 
 First, we create а `categoriesTree` which will return the `categoryId` for the record where `name` is `Beverages`. This is the innermost subquery:
 
@@ -211,9 +222,9 @@ SELECT * FROM Suppliers WHERE supplierId IN (
 
 Now we can set the `expressionsTree` property of the `IgxQueryBuilderComponent` to `suppliersTree`. Furthermore, every change to the query triggers a new request to the endpoint and the resulting data shown in the grid is refreshed.
 
-<code-view style="height:700px" 
+<code-view style="height:700px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/query-builder-sql-sample" >
 </code-view>
 
@@ -221,13 +232,13 @@ Now we can set the `expressionsTree` property of the `IgxQueryBuilderComponent` 
 
 <div class="divider--half"></div>
 
-* [IgxQueryBuilderComponent API]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html)
-* [IgxQueryBuilderComponent Styles]({environment:sassApiUrl}/themes#function-query-builder-theme)
+- [IgxQueryBuilderComponent API]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html)
+- [IgxQueryBuilderComponent Styles]({environment:sassApiUrl}/themes#function-query-builder-theme)
 
 ## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

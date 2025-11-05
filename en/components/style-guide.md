@@ -38,17 +38,20 @@
 </div>
 
 ### badges
+
 <div class="sg-flex-row sg-align-i-center sg-badges">
     <div class="new__badge">NEW</div>
     <div class="updated__badge">UPDATED</div>
 </div>
 
 ### Bold, italic and scratched
+
 This text is **bold**.  
-This text is *italic*.  
+This text is _italic_.  
 This text is ~~scratched~~.
 
 ### Headings
+
 <div class="h1"> Header text h1</div>
 <div class="h2"> Header text h2</div>
 <div class="h3"> Header text h3</div>
@@ -58,8 +61,8 @@ This text is ~~scratched~~.
 
 ### Paragraph
 
-By default Markdown adds paragraphs at double line breaks. 
-Single line breaks by themselves are simply wrapped together into a single line. 
+By default Markdown adds paragraphs at double line breaks.
+Single line breaks by themselves are simply wrapped together into a single line.
 If you want to have soft <a href="#">returns</a> that break a single line, add two spaces at the end of the line.
 
 This line has a paragraph break at the end (empty line after).
@@ -67,7 +70,7 @@ This line has a paragraph break at the end (empty line after).
 Theses two lines should display as a single
 line because there's no double space at the end.
 
-The following line has a soft break at the end (two spaces at end)   
+The following line has a soft break at the end (two spaces at end)
 This line should be following on the very next line.
 This line has a paragraph break at the end (empty line after).
 
@@ -80,6 +83,7 @@ This line has a paragraph break at the end (empty line after).
 [Internal link](#colors)
 
 ### Block Quotes
+>
 > <div class="h4">Headers break on their own</div>
 
 > Note that headers don't need line continuation characters
@@ -88,20 +92,23 @@ Only text lines require the double spaces for single line breaks.
 
 ### Unordered Lists
 
-* Item 1
-* Item 2
-* Item 3
+- Item 1
+- Item 2
+- Item 3
 
 ### Ordered Lists
+
 1. **Item 1**  
    Item 1 is really something
 2. **Item 2**  
    Item two is really something else
 
 ### Inline Code
+
 Structured statements like for `x =1 to 10` loop <a href="#"><code>structures</code></a> can be codified using single back ticks.
 
 ### Code Blocks
+
 ```scss
 :host {
     ::ng-deep {
@@ -112,6 +119,7 @@ Structured statements like for `x =1 to 10` loop <a href="#"><code>structures</c
 ```
 
 ### Alerts
+>
 > [!WARNING]
 > This is some Note Text  
 > that spreads across two lines
@@ -123,6 +131,7 @@ Structured statements like for `x =1 to 10` loop <a href="#"><code>structures</c
 > Don't forget to screw on your hat!
 
 ### Table
+
 | test | test                                                    | test | test | test |
 |------|---------------------------------------------------------|------|------|------|
 | val  | Using the Table menu set the desired size of the table. | val  | val  | val  |
@@ -131,6 +140,7 @@ Structured statements like for `x =1 to 10` loop <a href="#"><code>structures</c
 
 
 ### Page pagination
+
 <ul class="pagination">
     <li class="page-item first disabled">
         <a class="page-link">First</a>
@@ -155,7 +165,8 @@ Structured statements like for `x =1 to 10` loop <a href="#"><code>structures</c
     </li>
 </ul>
 
-### Details 
+### Details
+
 <div class="fancy-details">
     <details>
         <summary>summary text</summary>
