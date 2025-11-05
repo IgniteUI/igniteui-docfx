@@ -227,7 +227,32 @@ public toggleAll() {
 
 ## スタイル設定
 
-チェックボックスのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
+
+最も簡単な方法は、CSS 変数を使用してチェックボックスの外観をカスタマイズする方法です。
+
+```css
+igx-checkbox {
+    --tick-color: #0064d9;
+    --tick-color-hover: #e3f0ff;
+    --fill-color: transparent;
+    --fill-color-hover: #e3f0ff;
+    --label-color: #131e29;
+    --focus-outline-color: #0032a5;
+    --border-radius: 0.25rem;
+}
+
+igx-checkbox:hover {
+    --empty-fill-color: #e3f0ff;
+}
+```
+
+これらの CSS 変数の値を変更することで、チェックボックス コンポーネントの全体的な外観を変更できます。
+
+<div class="divider--half"></div>
+
+チェックボックスにスタイルを設定する別の方法は、**Sass** と [`checkbox-theme`]({environment:sassApiUrl}/index.html#function-checkbox-theme) 関数を使用することです。
+
+**Sass** を使用してチェックボックスのスタイル設定を開始するには、まずすべてのテーマ関数とコンポーネント ミックスインを含む `index` ファイルをインポートします。
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -241,20 +266,19 @@ public toggleAll() {
 ```scss
 // in styles.scss
 $custom-checkbox-theme: checkbox-theme(
-  $empty-color: #ecaa53,
-  $fill-color: #ecaa53,
-  $border-radius: 5px
+    $empty-color: #ecaa53,
+    $fill-color: #ecaa53,
+    $border-radius: 5px
 );
 ```
 
-最後にコンポーネントのテーマをアプリケーションに**含めます**。
+最後に、カスタム テーマをアプリケーションに**含めます**。
 
 ```scss
 @include css-vars($custom-checkbox-theme);
 ```
 
-### デモ
-
+以下のサンプルでは、カスタマイズした CSS 変数を使用したチェックボックス コンポーネントが、[`SAP UI5`](https://ui5.sap.com/#/entity/sap.m.CheckBox/sample/sap.m.sample.CheckBox) デザイン システムのチェックボックスに視覚的に似たデザインを実現している様子を確認できます。
 
 <code-view style="height: 100px"
            no-theming
@@ -262,6 +286,8 @@ $custom-checkbox-theme: checkbox-theme(
            iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-styling/" >
 </code-view>
 
+> [!NOTE]
+> サンプルでは、[Fluent Light](themes/sass/schemas.md#predefined-schemas) スキーマを使用します。
 
 <div class="divider--half"></div>
 

@@ -147,7 +147,30 @@ public selectedColor: string = this.colors[3].hex;
 
 ## スタイル設定
 
-ラジオ ボタンのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
+最も簡単な方法は、CSS 変数を使用してラジオ ボタンの外観をカスタマイズする方法です。
+
+```css
+igx-radio {
+    --empty-color: #556b81;
+    --label-color: #131e29;
+    --fill-color: #0064d9;
+    --focus-outline-color: #0032a5;
+}
+
+igx-radio:hover {
+    --empty-fill-color: #e3f0ff;
+    --empty-color: #0064d9;
+    --hover-color: transparent;
+}
+```
+
+これらの CSS 変数の値を変更することで、コンポーネントの全体的な外観を変更できます。
+
+<div class="divider--half"></div>
+
+ラジオ ボタンにスタイルを設定する別の方法は、**Sass** と [`radio-theme`]({environment:sassApiUrl}/index.html#function-radio-theme) 関数を使用することです。
+
+**Sass** を使用してラジオ ボタンのスタイル設定を開始するには、まずすべてのテーマ関数とコンポーネント ミックスインを含む `index` ファイルをインポートします。
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -160,21 +183,26 @@ public selectedColor: string = this.colors[3].hex;
 
 ```scss
 $custom-radio-theme: radio-theme(
-  $empty-color:  #345779,
-  $fill-color: #2dabe8,
+    $empty-color:  #345779,
+    $fill-color: #2dabe8,
 );
 ```
 
-最後には、カスタム ラジオ テーマをアプリケーションに渡します。
+最後に、カスタム テーマをアプリケーションに**含めます**。
 
 ```scss
 @include css-vars($custom-radio-theme);
 ```
 
+以下のサンプルでは、カスタマイズした CSS 変数を使用したラジオ ボタンが、[`SAP UI5`](https://ui5.sap.com/#/entity/sap.m.RadioButton/sample/sap.m.sample.RadioButton) デザイン システムのラジオ ボタンに視覚的に似たデザインを実現している様子を確認できます。 
+
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-styling-sample/" >
 </code-view>
+
+> [!NOTE]
+> サンプルでは、[Fluent Light](themes/sass/schemas.md#predefined-schemas) スキーマを使用します。
 
 <div class="divider--half"></div>
 
