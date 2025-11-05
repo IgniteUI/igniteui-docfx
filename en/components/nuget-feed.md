@@ -18,7 +18,7 @@ This topic contains the following sections:
 
 1 - In Visual Studio, select **Tools → NuGet Package Manager → Package Manager Settings**.
 
-<img src="../images/nuget-package-manager-setting-menu-item.jpg" />
+<img src="../images/nuget-package-manager-setting-menu-item.jpg" alt="NuGet Package Manager Setting Menu Item" />
 
 2 - In the **Package Sources** section, add a new package source by clicking the **plus icon** in the top right corner of the dialog.
 
@@ -27,7 +27,7 @@ This topic contains the following sections:
 
     Click the **Update** button, and then click **OK** to close the dialog.
 
-<img src="../images/nuget-package-manager-package-sources-ig-server.jpg" />
+<img src="../images/nuget-package-manager-package-sources-ig-server.jpg" alt="NuGet Package Manager Package Sources - Infragistics Server" />
 
 > [!Note]
 > When adding a NuGet package from this source for the first time, you will be prompted for your Infragistics credentials.

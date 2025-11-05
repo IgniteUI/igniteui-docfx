@@ -158,7 +158,7 @@ In order to group already existing conditions, first you need to add a new group
 >[!NOTE]
 >Chips from one query tree cannot be dragged in another, e.g. from parent to inner and vice versa.
 
-<img class="responsive-img"  src="../images/general/query-builder-drag-and-drop.gif" />
+<img class="responsive-img" alt="Animated Example of Query Builder Drag and Drop using the Mouse" src="../images/general/query-builder-drag-and-drop.gif" />
 
 ## Keyboard interaction
 
@@ -172,7 +172,7 @@ In order to group already existing conditions, first you need to add a new group
 >[!NOTE]
 >Keyboard reordering provides the same functionality as mouse Drag & Drop. Once a chip is moved, user has to confirm the new position or cancel the reorder.
 
-<img class="responsive-img"  src="../images/general/query-builder-keyboard-drag-and-drop.gif" />
+<img class="responsive-img" alt="Animated Example of Keyboard Drag and Drop Using the Ignite UI for Angular Query Builder" src="../images/general/query-builder-keyboard-drag-and-drop.gif" />
 
 ## Templating
 

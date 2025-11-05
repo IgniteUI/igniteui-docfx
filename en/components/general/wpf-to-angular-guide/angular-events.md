@@ -86,7 +86,7 @@ onInputKeyup(message) {
 }
 ```
 
-### Responding to Events of a Component
+## Responding to Events of a Component
 
 In WPF, when you create your own custom controls, often you need to extend or modify some base events like this:
 

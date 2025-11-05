@@ -8,7 +8,7 @@ _keywords: angular, crud, crud operations, infragistics, crud tutorial
 
 CRUD is an acronym in computer programming that stands for the CREATE, READ, UPDATE, DELETE operations that can be performed against a data collection. In computer world, talking about CRUD applications, is a main difference compared to applications that provide read-only data to users.
 
-# Angular CRUD
+## Angular CRUD
 
 While talking about Angular CRUD, or CRUD operations in Angular, it is important to note that the data storage is on a remote server. The Angular application can not directly access the data layer, so it needs to communicate with it through a Web API that provides endpoints for the CRUD operations, i.e.:
 
@@ -65,7 +65,7 @@ What the above service is missing is configuration for filtering/sorting/paging,
 For more examples and guidance, refer to the [HTTP Services](https://angular.io/tutorial/toh-pt6) tutorial in the official Angular documentation.
 
 
-# CRUD Operations with Grid
+## CRUD Operations with Grid
 
 Enabling CRUD in the Grid means providing UI for the users to perform these CRUD operations from within the grid. This is quite easy - the Grid provides [**Cell Editing**](../../grid/cell-editing.md), [**Row Editing**](../../grid/row-editing.md), [**Row Adding**](../../grid/row-adding.md) and **Row Deleting** UI out of the box, and powerful API to do this on your own. Next, we want to take the result of each editing action and communicate it to the corresponding method in our CRUD service, thus preserving all changes to the original database. By completing this, we may say the grid is CRUD enabled.
 
@@ -154,7 +154,7 @@ See the demo that was built following the guidance. Play around with it and try 
            iframe-src="{environment:demosBaseUrl}/grid/grid-crud/" >
 </code-view>
 
-# Customizations
+## Customizations
 
 The rich Grid API allows you to customize the editing process in almost any way in order to fit your needs. This includes, but is not limited to:
 
@@ -242,11 +242,11 @@ this.grid.getRowByKey(rowID).delete();
 
 More details and information about using the grid API can be found in the [Cell Editing CRUD Operations](../../grid/cell-editing.md#crud-operations) section.
 
-# Takeaway
+## Takeaway
 
 Enabling CRUD in a robust way is major milestone for any data-driven application. In order to streamline the entire process, we've built the IgxGrid with the CRUD capabilities in mind, providing out-of-the-box UI and flexible APIs. How will this benefit you? It will save you lots of time when implementing CRUD against any database out there. And when we talk about modern-day data-driven apps, it all comes down to robustness, speed, and flexibility.
 
-# API References
+## API References
 
 - [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 - [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)

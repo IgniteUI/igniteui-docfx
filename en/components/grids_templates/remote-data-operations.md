@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD003 MD024 -->
 @@if (igxName === 'IgxGrid') {
 ---
 
@@ -230,6 +231,7 @@ public noopSortStrategy = NoopSortingStrategy.instance();
 
 ### Remote Sorting/Filtering Demo
 
+<!-- markdownlint-disable-next-line MD051 -->
 You can see the result of the code from above at the beginning of this article in the [Demo](#angular-grid-remote-data-operations-overview-example) section.
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -292,6 +294,7 @@ The remote filtering will have to be performed over the flat collection directly
 
 ### Remote Filtering Demo
 
+<!-- markdownlint-disable-next-line MD051 -->
 You can see the result of the code from above at the beginning of this article in the [Demo](#angular-tree-grid-remote-data-operations-overview-example) section.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {

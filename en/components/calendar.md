@@ -432,12 +432,12 @@ Multi-view calendar supports all three types of selection. Use the [`monthsViewN
 
 The orientation settings allows users to choose how the header and the view of the calendar are displayed.
 
-#### Header Orientation Options
+### Header Orientation Options
 
 You can change the header orientation to place the header of the calendar to be either horizontal(above the calendar view) or vertical(on the side of the calendar view).
 To do that, use the `[headerOrientation]` property, setting it respectively to `horizontal` or `vertical`
 
-#### View Orientation Options
+### View Orientation Options
 
 You can set the view orientation to place the months in the calendar either horizontally(side by side) or vertically(above one another).
 To do that, use the `[orientation]` property, setting it respectively to `horizontal` or `vertical`.

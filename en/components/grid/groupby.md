@@ -482,7 +482,7 @@ In our example, we need to use `::ng-deep` for our chip theme:
 
 |Limitation|Description|
 |--- |--- |
-|Maximum amount of grouped columns is 10. | If more than 10 columns are grouped an error is thrown.
+|Maximum amount of grouped columns is 10. | If more than 10 columns are grouped an error is thrown. |
 
 ## API References
 

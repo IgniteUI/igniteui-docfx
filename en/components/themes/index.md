@@ -105,7 +105,7 @@ These are essentially stacked CSS [`box-shadow`](https://developer.mozilla.org/e
 
 There are several variables that allow you to configure the global behavior of the theme:
 
-#### Roundness
+### Roundness
 
 To configure the radius factor of all components you can change the value of the `--ig-radius-factor` variable. The default value is 1, meaning the default radius factor is used across component themes.
 
@@ -118,7 +118,7 @@ Example:
 }
 ```
 
-#### Elevation Factor
+### Elevation Factor
 
 To configure the elevation factor of all components you can change the value of the `--ig-elevation-factor` variable. The default value is 1, meaning the default elevations are used across component themes.
 

@@ -230,7 +230,7 @@ Here's a breakdown of all icons as used by each component:
 }
 </style>
 
-#### Action Strip
+### Action Strip
 
 | Icon          | Description              |
 | ------------- | ------------------------ |
@@ -238,28 +238,28 @@ Here's a breakdown of all icons as used by each component:
 | **add_row**   | Used by the popup menu.  |
 | **more_vert** | Used by the popup menu.  |
 
-#### Calendar
+### Calendar
 
 | Icon           | Description                                             |
 | -------------- | ------------------------------------------------------- |
 | **arrow_prev** | Used by the header for navigating between months/years. |
 | **arrow_next** | Used by the header for navigating between months/years. |
 
-#### Carousel
+### Carousel
 
 | Icon              | Description                         |
 | ----------------- | ----------------------------------- |
 | **carousel_prev** | Used for navigating between slides. |
 | **carousel_next** | Used for navigating between slides. |
 
-#### Chip
+### Chip
 
 | Icon         | Description                               |
 | ------------ | ----------------------------------------- |
 | **selected** | Used to indicate that a chip is selected. |
 | **remove**   | Used for the remove button.               |
 
-#### Combo (incl. Simple Combo)
+### Combo (incl. Simple Combo)
 
 | Icon               | Description                                                  |
 | ------------------ | ------------------------------------------------------------ |
@@ -268,27 +268,27 @@ Here's a breakdown of all icons as used by each component:
 | **input_expand**   | Used for the toggle button when the combo menu is collapsed. |
 | **input_collapse** | Used for the toggle button when the combo menu is expanded.  |
 
-#### Date Picker
+### Date Picker
 
 | Icon            | Description                                          |
 | --------------- | ---------------------------------------------------- |
 | **today**       | Used for the toggle button that triggers the picker. |
 | **input_clear** | Used for the clear button.                           |
 
-#### Date Range Picker
+### Date Range Picker
 
 | Icon           | Description                                          |
 | -------------- | ---------------------------------------------------- |
 | **date_range** | Used for the toggle button that triggers the picker. |
 
-#### Expansion Panel
+### Expansion Panel
 
 | Icon         | Description                                                   |
 |------------- | ------------------------------------------------------------- |
 | **expand**   | Used for the toggle button that triggers the expanded state.  |
 | **collapse** | Used for the toggle button that triggers the collapsed state. |
 
-#### Grid
+### Grid
 
 | Icon                 | Description                                                                    |
 | -------------------- | ------------------------------------------------------------------------------ |
@@ -327,13 +327,13 @@ Here's a breakdown of all icons as used by each component:
 | **unfold_more**      | Used by the hierarchical grid to expand all rows.                              |
 | **view_column**      | Used by the pivot data selector.                                               |
 
-#### Input Group
+### Input Group
 
 | Icon            | Description                                          |
 | --------------- | ---------------------------------------------------- |
 | **input_clear** | Used for the clear button.                           |
 
-#### Paginator
+### Paginator
 
 | Icon           | Description                                                  |
 | -------------- | ------------------------------------------------------------ |
@@ -342,7 +342,7 @@ Here's a breakdown of all icons as used by each component:
 | **prev**       | Used by the button used for navigating to the previous page. |
 | **next**       | Used by the button used for navigating to the next page.     |
 
-#### Query Builder
+### Query Builder
 
 | Icon         | Description                                                  |
 | ------------ | ------------------------------------------------------------ |
@@ -355,14 +355,14 @@ Here's a breakdown of all icons as used by each component:
 | **filter_*** | Used for various filtering operands.                         |
 
 
-#### Select
+### Select
 
 | Icon               | Description                                                   |
 | ------------------ | -----------------------------------------------------------   |
 | **input_expand**   | Used for the toggle button when the select menu is collapsed. |
 | **input_collapse** | Used for the toggle button when the select menu is expanded.  |
 
-#### Tabs
+### Tabs
 
 | Icon         | Description                                                 |
 | ------------ | ----------------------------------------------------------- |
@@ -370,13 +370,13 @@ Here's a breakdown of all icons as used by each component:
 | **next**     | Used by the button used for navigating to the next tab.     |
 
 
-#### Time Picker
+### Time Picker
 
 | Icon         | Description                                          |
 | ------------ | ---------------------------------------------------- |
 | **clock**    | Used for the toggle button that triggers the picker. |
 
-#### Tree
+### Tree
 
 | Icon              | Description                                          |
 | ----------------- | ---------------------------------------------------- |

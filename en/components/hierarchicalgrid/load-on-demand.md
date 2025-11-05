@@ -189,7 +189,7 @@ public ngAfterViewInit() {
 
 Next we will define how we should build our URL for the GET request in order to get the data for our child grids. This is the visual representation of the relations between the tables:
 
-<img class="responsive-img" src="../../images/hgrid-database.jpg" />
+<img class="responsive-img" alt="Relational Hierarchical Database" src="../../images/hgrid-database.jpg" />
 
 Finally, we need to implement our `gridCreated` method that will request data for any new child grid created. It will be similar to getting the root level grid data, just this time we will use the data provided in the event [`gridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#gridCreated) and build our URL with it:
 

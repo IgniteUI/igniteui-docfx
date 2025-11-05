@@ -15,7 +15,7 @@ _keywords: ignite ui for angular, getting started, angular components
 
 <div>
     <div style="display:inline-block;width:45%;text-align:center;">
-      <img src="../../images/general/nodejs.svg"
+      <img src="../../images/general/nodejs.svg" alt="NodeJS"
            style="display:flex;max-height:100px;margin:auto auto 20px auto;" />
       <a target="_blank" href="https://nodejs.org/en/download/" class="no-external-icon"
          style="color:white;background-color:#09f;text-decoration:none;font-weight:700;font-size:16px;padding: 5px 15px 5px 15px;">
@@ -23,7 +23,7 @@ _keywords: ignite ui for angular, getting started, angular components
       </a>
     </div>
     <div style="display:inline-block;width:45%;text-align:center;">
-      <img src="../../images/general/vs-code.svg"
+      <img src="../../images/general/vs-code.svg" alt="Visual Studio Code"
            style="display:flex;max-height:100px;margin:auto auto 20px auto;" />
       <a target="_blank" href="https://code.visualstudio.com/download" class="no-external-icon"
          style="color:white;background-color:#09f;text-decoration:none;font-weight:700;font-size:16px;padding: 5px 15px 5px 15px;">
@@ -123,7 +123,7 @@ ig
 <div style="display:inline-block;">
     <a style="background: url(../../images/general/buildCLIapp.gif); display:flex; justify-content:center; width: 80vw; max-width:540px; min-height:315px;"
        href="https://youtu.be/QK_NsdtdA70" target="_blank">
-        <img src="../../images/general/play.svg" style="vertical-align: middle;" />
+        <img src="../../images/general/play.svg" alt="Play Video" style="vertical-align: middle;" />
     </a>
     <p style="text-align:center;">Building Your First Ignite UI CLI App</p>
 </div>
@@ -258,7 +258,7 @@ ng serve
 The final result should look something like this:
 
 
-<img class="responsive-img"  src="../../images/general/igniteui-project.png" />
+<img class="responsive-img" src="../../images/general/igniteui-project.png" alt="Ignite UI Project" />
 
 
 ## API References

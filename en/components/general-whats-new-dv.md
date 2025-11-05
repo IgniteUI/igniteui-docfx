@@ -18,9 +18,9 @@ This release introduces several new and improved visual design and configuration
 
 eg.
 
-| <img class="responsive-img" src="../images/chartDefaults1.png" /> | <img class="responsive-img" src="../images/chartDefaults2.png" /> |
+| <img class="responsive-img" src="../images/chartDefaults1.png"  alt="Chart Defaults 1" /> | <img class="responsive-img" src="../images/chartDefaults2.png" alt="Chart Defaults 2" /> |
 | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
-| <img class="responsive-img" src="../images/chartDefaults3.png" /> | <img class="responsive-img" src="../images/chartDefaults4.png" /> |
+| <img class="responsive-img" src="../images/chartDefaults3.png" alt="Chart Defaults 3" /> | <img class="responsive-img" src="../images/chartDefaults4.png" alt="Chart Defaults 4" /> |
 
 <div class="divider--half"></div>
 

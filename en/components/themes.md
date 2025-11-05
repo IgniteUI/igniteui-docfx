@@ -8,28 +8,28 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 With only a few lines of code, users can easily change the theming for their components. Being developed through SASS, the API use is low-difficulty and offers restyling of one component, multiple components, or the entire suite.
 
-### The Essence of a Theme
+## The Essence of a Theme
 
 Since **IgniteUI for Angular** bases its component designs on the **<a href="https://material.io/guidelines/material-design/introduction.html" target="_blank">Material Design Guidelines</a>**, we try to get as close as possible to colors, sizes, and overall look and feel of our components to those created by Google.
 
 Our approach to theming is based around several simple concepts.
 
-#### Palettes
+### Palettes
 
 The first concept is the one of palettes of colors. As in any visual tool, colors are the main difference between one application and another. The Material Design Guidelines prescribe predefined palettes of colors that range in hue and lightness for a base color. There's a good reason for that. They really want to ensure good color matching and contrast between the background colors and the foreground text colors. This is great, but limiting at the same time. If you wanted to have your own custom palette that matches your branding, you would be out of luck. We recognize this is a problem, so we invented an algorithm that would generate Material-like palettes from base colors you provide. Even more, we also generate contrast text colors for each hue in the palette.
 
-#### Themes
+### Themes
 
 The second concept is the one of themes. Palettes, wouldn't do much good if they weren't used by a theme. So we have themes for each component, and a global one, that styles the entire application and every component in it. You simply pass your generated palette to the global theme, we take care of the rest. You can, of course, style each component individually to your liking. We will take a closer look at how to do that later in this article.
 
-#### Typography
+### Typography
 
 The last concept revolves around typography. Although we have a default typeface choice, we really want to give you the power to style your application in every single way. Typography is such an important part of that. We provide a method for changing the font family, the sizes and weights for headings, subheadings and paragraph texts in your app.
 
 > [!NOTE]
 > Theming **requires** [**Sass**](https://github.com/sass/node-sass).
 
-### Generating Color Palettes
+## Generating Color Palettes
 
 Our theming library is based on Sass. If you used the **<a href="https://github.com/IgniteUI/igniteui-cli" target="_blank">Ignite UI CLI</a>** to bootstrap your app, you can specify the style in the **angular.json** config to _scss_, the CLI will take care of compiling the Sass styles for you. If you haven't used Ignite UI CLI then you have to configure your builder to compile Sass styles for you.
 
@@ -63,7 +63,7 @@ Got it? Good! But how does one access any of the colors in the palette?
 
 <div class="divider"></div>
 
-#### Getting Sub-Palette Colors
+### Getting Sub-Palette Colors
 
 We provide a function that is easy to remember and use `color`. It takes three arguments - `palette`, `color`, and `variant`;
 
@@ -85,7 +85,7 @@ $my-warning-color: color($my-color-palette, "warn");
 
 <div class="divider"></div>
 
-#### Getting Contrast Text Colors
+### Getting Contrast Text Colors
 
 Similar to how we get sub-palette colors, there's a way to get the contrast text color for each of the colors in the sub-palettes.
 
@@ -100,7 +100,7 @@ $my-primary-800-text: contrast-color($my-palette, "primary", 600);
 }
 ```
 
-### Generating a Theme
+## Generating a Theme
 
 If you've included the _"igniteui-angular.css"_ file in your application project, now is a good time to remove it. We are going to use our own _"my-app-theme.scss"_ file to generate our own theme.
 

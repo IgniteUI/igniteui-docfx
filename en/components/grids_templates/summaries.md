@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD003 MD024 -->
 @@if (igxName === 'IgxGrid') {
 ---
 
@@ -727,15 +728,15 @@ The exported file includes a hidden column that holds the level of each `DataRec
 
 In the table below, you can find the corresponding Excel formula for each of the default summaries.
 
-Data Type | Function | Excel Function |
+| Data Type | Function | Excel Function |
 |:--------|:--------:|:---------------|
-`string`, `boolean` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
-`number`, `currency`, `percent` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
+|`string`, `boolean` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
+|`number`, `currency`, `percent` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
 || min| ="Min: "&MIN(IF(start:end=recordLevel, rangeStart:rangeEnd)) |
 || max | ="Max: "&MAX(IF(start:end=recordLevel, rangeStart:rangeEnd)) |
 || average | ="Avg: "&AVERAGEIF(start:end, recordLevel, rangeStart:rangeEnd) |
 || sum | ="Sum: "&SUMIF(start:end, recordLevel, rangeStart:rangeEnd) |
-`date` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
+|`date` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
 || earliest | ="Earliest: "& TEXT(MIN(IF(start:end=recordLevel, rangeStart:rangeEnd)), format) |
 || latest | ="Latest: "&TEXT(MAX(IF(start:end=recordLevel, rangeStart:rangeEnd)), format) |
 

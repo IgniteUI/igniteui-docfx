@@ -80,19 +80,19 @@ Follow our [`Getting Started`](../../general/getting-started.md) topic for a com
 
 Let's see how our demo sample is done. It is a mixture of Ignite UI and NG Bootstrap components, styled to fit nicely in one application. The navigation in our example is created using the bootstrap [`navbar`](https://getbootstrap.com/docs/4.0/components/navbar/) together with [`igx-buttons`]({environment:angularApiUrl}/classes/igxbuttondirective.html) and [`igx-avatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html). The [`dropdown`](https://ng-bootstrap.github.io/#/components/dropdown/examples) under the Campaigns button is also taken from the bootstrap library. Below the nav, we are using the [`igx-card`]({environment:angularApiUrl}/classes/igxcardcomponent.html) component to display some statistics. Within the cards, we have placed multiple items - [`igx-avatars`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) and [`igx-icons`]({environment:angularApiUrl}/classes/igxiconcomponent.html) as well as bootstrap [`buttons`](https://getbootstrap.com/docs/4.0/components/buttons/) and [`ngb-ratings`](https://ng-bootstrap.github.io/#/components/rating/examples).
 
-<img src="../../../images/igx-cards.png" width="100%">
+<img src="../../../images/igx-cards.png" alt="Ignite UI for Angular Cards" width="100%">
 
 Clicking on the `More` buttons, you will see the [`igx-dialog`]({environment:angularApiUrl}/classes/igxdialogcomponent.html):
 
-<img src="../../../images/igx-dialog.png" width="100%">
+<img src="../../../images/igx-dialog.png" alt="Ignite UI for Angular Dialog" width="100%">
 
 Next, we have added an [`ngb-accordion`](https://ng-bootstrap.github.io/#/components/accordion/examples) showing information about credit cards. Inside its content, there is an [`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html) and `igx-button`.
 
-<img src="../../../images/ngb-accordion.png" width="100%">
+<img src="../../../images/ngb-accordion.png" alt="NG Bootstrap Accordion" width="100%">
 
 Finally, we inserted an Ignite UI for Angular `icon button` in the top right corner, that changes the theme of the whole app:  
 
-<img src="../../../images/dark-variant.png" width="100%">
+<img src="../../../images/dark-variant.png" alt="Dark Variant Theme" width="100%">
 
 ## Styling
 

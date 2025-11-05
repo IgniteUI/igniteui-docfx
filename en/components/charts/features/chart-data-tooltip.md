@@ -133,7 +133,7 @@ Legend items can be positioned in a vertical or table structure via the [`layout
 
 eg.
 
-<img src="../../../images/general/layout_mode.png" />
+<img src="../../../images/general/layout_mode.png" alt="Layout Mode" />
 
 ## Angular Data Tooltip Styling
 

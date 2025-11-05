@@ -87,7 +87,7 @@ You are not locked into a single visualization when you bind the `DataSource`, a
 
 The visualization or properties of the visualization are also configurable using the [`IgxToolbarComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html) at the top of the control. This [`IgxToolbarComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html) has the default tools for the current visualization with the addition of four Dashboard Tile specific ones, highlighted below:
 
-<img src="../images/dashboard-tile-toolbar.png" />
+<img src="../images/dashboard-tile-toolbar.png" alt="Dashboard Tile Toolbar" />
 
 From left to right:
 

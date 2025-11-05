@@ -12,7 +12,7 @@ When it comes to control the appearance of the visual tree elements’ appearanc
 
 In this topic, we are going to demonstrate the following three structural directives - `ngIf`, `ngSwitch` and `ngFor`. As one can tell from their names, each of these can be compared to a C# structure. The `ngIf` is the same thing as an "if-else" C# code block, the `ngSwitch` is the same thing as the C# switch-case statement and, lastly, the `ngFor` is the exact same thing as a C# "for-loop".
 
-### `ngIf` Directive
+## `ngIf` Directive
 
 Let’s explore each of these directives, starting with the `ngIf`. This directive allows us to show or hide elements based on a boolean condition. We will start by creating a "div" element with an "h2" tag containing a name.
 
@@ -85,7 +85,7 @@ Now, another way we can write this is we can say "**isFirstName; then firstname;
 
 If we change "isFirstName" to true, the first name will be rendered in the browser. And one final tip on using the `ngIf` directive is that the expression is not limited to a single property - you can actually use multiple properties and/or functions as long as the expression as a whole returns a boolean result. For example we can even use logical operators such as `" && isValid || getIsValidName()"`.
 
-### `ngSwitch` Directive
+## `ngSwitch` Directive
 
 The next directive we will discuss is the `ngSwitch` directive. This allows us to compare one expression to multiple expressions to decide which templates to add or remove.
 Let’s say we have "h2" elements that represent makes of cars – Chevy, Ford and GMC. We would like to display only one of these items based on a value of a "make" property which we have defined in our typescript file with a default value of "Chevy". To achieve this we need to use the `ngSwitch` directive with the following syntax `[ngSwitch] = expression` where expression is our "make" property. Adding this to the "div" element wrapping the "h2" tags is not enough. Like in WPF, we need to add some "case" statements to each "h2" element. The syntax for that is `*ngSwitchCase = expression`. In this case, we are comparing directly against text, so we will add single quotes around the value which means that the final result would be `*ngSwitchCase = "'Chevy'"` /similar for the other two values/.
@@ -110,7 +110,7 @@ Once we save that, we are only going to see the Chevy option rendered in the bro
 
 In this case, if we are looking for Lambo, we don't have the Lambo option, so we switch to the default case which is “Not found”, and “Not found” is rendered in our browser. One thing we need to point out is that these are expressions so we can use even a function as long as it returns a result that matches the expression we are passing in. Pretty simple!
 
-### `ngFor` Directive
+## `ngFor` Directive
 
 Next up is the `ngFor` directive. This directive allows us to iterate through a collection of objects and add a template for each item in that collection. Let's start by adding a collection of objects in our typescript file. We are going to call this an array of makes and add Chevy, Ford, GMC and Dodge. Next we will create a "div" and for each "div" we're going to create an "h2" tag that lists out the name of that make. To do that we are going to use the `ngFor` directive - the syntax for that `*ngFor="let make of makes"`. That provides us the ability to use interpolation to use the "make" property that is defined via the "let make" portion of the expression and print that out in the "h2" tag.
 

@@ -68,7 +68,7 @@ The `igniteui-theming` package includes a custom Tailwind configuration that exp
 
 Let’s look at how to use each.
 
-#### Color Utility Classes
+### Color Utility Classes
 
 Use Ignite UI color tokens directly in your HTML:
 
@@ -79,7 +79,7 @@ Use Ignite UI color tokens directly in your HTML:
 You can explore Tailwind's full color system in the [Tailwind color documentation](https://tailwindcss.com/docs/color), and apply it using the Ignite UI-provided class names.
 <br>
 
-#### Shadow utility classes
+### Shadow utility classes
 
 You can add depth using any of the predefined [elevation levels](https://www.infragistics.com/products/ignite-ui-angular/angular/components/themes/elevations) (from 0 to 24):
 
@@ -90,7 +90,7 @@ You can add depth using any of the predefined [elevation levels](https://www.inf
 You can find all the shadow-related utility classes provided by Tailwind in the [Tailwind box shadow documentation](https://tailwindcss.com/docs/box-shadow)
 <br>
 
-#### Typography custom utility styles
+### Typography custom utility styles
 
 To apply the font, add the `font-ig` class to a top-level element. You can also define the base font size using the `text-base` utility class.
 We provide custom utility classes for each typography level (e.g., h1, h2, body-1). Use them like so:

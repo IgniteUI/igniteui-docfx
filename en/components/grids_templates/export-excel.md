@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD003 MD024 -->
 @@if (igxName === 'IgxGrid') {
 ---
 
@@ -295,6 +296,7 @@ When you are exporting data from the @@igComponent component, the export process
 |--- |--- |
 |Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns.|
 |Cell Styling|The excel exporter service does not support exporting a custom style applied to a cell component. In such scenarios we recommend using the [Excel Library](../excel-library.md).|
+
 }
 
 @@if (igxName === 'IgxTreeGrid') {
@@ -304,6 +306,7 @@ When you are exporting data from the @@igComponent component, the export process
 |Hierarchy levels|The excel exporter service can create up to 8 levels of hierarchy.|
 |Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns.|
 |Cell Styling|The excel exporter service does not support exporting a custom style applied to a cell component. In such scenarios we recommend using the [Excel Library](../excel-library.md).|
+
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -314,6 +317,7 @@ When you are exporting data from the @@igComponent component, the export process
 |Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns.|
 |Exporting pinned columns|In the exported Excel file, the pinned columns will not be frozen but will be displayed in the same order as they appear in the grid.|
 |Cell Styling|The excel exporter service does not support exporting a custom style applied to a cell component. In such scenarios we recommend using the [Excel Library](../excel-library.md).|
+
 }
 
 @@if (igxName === 'IgxPivotGrid') {
@@ -322,6 +326,7 @@ When you are exporting data from the @@igComponent component, the export process
 |--- |--- |
 |Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns.|
 |Cell Styling|The excel exporter service does not support exporting a custom style applied to a cell component. In such scenarios we recommend using the [Excel Library](../excel-library.md).|
+
 }
 
 ## API References

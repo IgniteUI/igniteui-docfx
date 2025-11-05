@@ -6,6 +6,8 @@ mentionedTypes: ["SeriesViewer", "XYChart", "DomainChart", "XamDataChart", "Tool
 namespace: Infragistics.Controls.Charts
 ---
 
+<!-- markdownlint-disable MD024 -->
+
 # Ignite UI for Angular Changelog
 
 All notable changes for each version of Ignite UI for Angular are documented on this page.
@@ -154,9 +156,9 @@ There is a new property called [`useInsetOutlines`]({environment:dvApiBaseUrl}/p
 
 | Bug Number | Control | Description      |
 |------------|---------|------------------|
-|37023|IgxDataChart|Tooltips are cut-off/offscreen if overflow hidden is set.
-|37244|Excel|Custom Data Validation is not working.
-|37685|IgxSpreadsheet|Poor rendering of numbers formatted with Arial font.
+|37023|IgxDataChart|Tooltips are cut-off/offscreen if overflow hidden is set. |
+|37244|Excel|Custom Data Validation is not working. |
+|37685|IgxSpreadsheet|Poor rendering of numbers formatted with Arial font. |
 
 ## **19.0.1 (February 2025)**
 
@@ -440,8 +442,8 @@ for example:
 
 |   |   |
 |---|---|
-| <img class="responsive-img" src="../images/chartDefaults1.png" /> | <img class="responsive-img" src="../images/chartDefaults2.png" /> |
-| <img class="responsive-img" src="../images/chartDefaults3.png" /> | <img class="responsive-img" src="../images/chartDefaults4.png" /> |
+| <img class="responsive-img" src="../images/chartDefaults1.png" alt="Chart Defaults 1" /> | <img class="responsive-img" src="../images/chartDefaults2.png" alt="Chart Defaults 2" /> |
+| <img class="responsive-img" src="../images/chartDefaults3.png" alt="Chart Defaults 3" /> | <img class="responsive-img" src="../images/chartDefaults4.png" alt="Chart Defaults 4" /> |
 
 #### Chart Legend
 

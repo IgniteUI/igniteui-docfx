@@ -19,7 +19,7 @@ The Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ig
 - [`getGeographicPoint`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html#getGeographicPoint)
 - [`getPixelPoint`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html#getPixelPoint)
 
-# Angular Geographic Series Types
+## Angular Geographic Series Types
 
 The Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html) has 7 types of series and they have the `ItemsSource` property for data binding.
 

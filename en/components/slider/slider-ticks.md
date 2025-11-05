@@ -7,7 +7,7 @@ _keywords: tick marks, igniteui for angular, infragistics
 # Usage
 
 
-### API References
+## API References
 
 <div class="divider--half"></div>
 
@@ -17,7 +17,7 @@ _keywords: tick marks, igniteui for angular, infragistics
 - [SliderType]({environment:angularApiUrl}/enums/slidertype.html)
 
 
-### Additional Resources
+## Additional Resources
 
 - [Slider overview](slider.md)
 

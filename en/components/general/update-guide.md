@@ -4,6 +4,8 @@ _description: Check out this article on updating how to update to a newer versio
 _keywords: ignite ui for angular, update, npm package, material components
 ---
 
+<!-- markdownlint-disable MD024 -->
+
 # Update Guide
 
 In the Ignite UI for Angular [versioning](https://github.com/IgniteUI/igniteui-angular/wiki/Ignite-UI-for-Angular-versioning) the first number always matches the major version of Angular the code supports and the second is dedicated for major version releases. Breaking changes may be introduced between major releases.
@@ -920,22 +922,22 @@ If for any reason you see Sass compilation errors saying `math.div` is not a kno
 
 1. Update to the latest version of Angular using `ng update` - Angular 12.1.0+ uses the dart-sass compiler by default.
 
-```sh
-ng update [options]
-```
+    ```sh
+    ng update [options]
+    ```
 
-If for some reason you don't use the Ignite UI/Angular CLI, you'd need to replace `node-sass` with `sass` in your Node project.
+    If for some reason you don't use the Ignite UI/Angular CLI, you'd need to replace `node-sass` with `sass` in your Node project.
 
-```sh
-npm uninstall node-sass
-npm install sass --save-dev
-```
+    ```sh
+    npm uninstall node-sass
+    npm install sass --save-dev
+    ```
 
 2. If for some reason you cannot upgrade to the latest version of Angular using the method above, you can fall back to the old Sass division method by setting a global flag in your Sass file:
 
-```scss
-$__legacy-libsass: true;
-```
+    ```scss
+    $__legacy-libsass: true;
+    ```
 
 ## From 11.1.x to 12.0.x
 
@@ -989,6 +991,7 @@ $__legacy-libsass: true;
     <button igxButton="raised">Raised button</button>
     <button igxButton="outlined">Outlined button</button>
     ```
+
     ```scss
     $my-button-theme: button-theme(
         $raised-background: red,
@@ -997,7 +1000,9 @@ $__legacy-libsass: true;
 
     @include css-vars($my-button-theme);
     ```
+
     You have to create a separate theme for each button type and scope it to a CSS selector.
+
     ```html
     <div class="my-raised-btn">
     <button igxButton="raised">Raised button</button>
@@ -1024,6 +1029,7 @@ $__legacy-libsass: true;
         @include css-vars($my-outlined-button);
     }
     ```
+
     As you can see, since the `button-theme` params now have the same names for each button type, we have to scope our button themes to a CSS selector in order to have different colors for different types.
 
     Here you can see all the [available properties]({environment:sassApiUrl}/themes#function-button-theme) of the `button-theme`

@@ -116,7 +116,7 @@ And that's it! You can now perform **cell range selection** and follow the data 
 
 The data analysis button is the outlet to visualize your selected data in various ways:
 
-<img class="responsive-img" src="../../images/general/data-analysis-button.png" />
+<img class="responsive-img" src="../../images/general/data-analysis-button.png" alt="Data analysis button" />
 
 This way every range selection performed in the grid can be easily analyzed in a single click.
 
@@ -160,23 +160,23 @@ Understanding conditional formatting - it allows for applying formatting such as
 
 - `Data Bars` - Data bars can help you spot larger and smaller numbers, such as top-selling and bottom-selling products. This preset makes it very easy to visualize values in a range of selected cells. A longer bar represents a higher value. A cell that holds  value of 0 has no data bar all other cells are filled proportionally. Positive values are with `green` color  and  negative values will be `red`
 
-<img class="responsive-img" src="../../images/general/data-bars-formatting.png" />
+<img class="responsive-img" src="../../images/general/data-bars-formatting.png" alt="Data bars formatting" />
 
 
 > `Lowest threshold` - Below 33% of the maximum cell value in range selection.
 > `Highest threshold` - Above 66% of the maximum cell value in range selection.
 
-<img class="responsive-img" src="../../images/general/color-scale-formatting.png" />
+<img class="responsive-img" src="../../images/general/color-scale-formatting.png" alt="Color scale formatting" />
 
 - `Top 10%` - Use this preset to highlight the values which are equivalent to top 10% of the selected data.
 
-<img class="responsive-img" src="../../images/general/top-10-percent.png" />
+<img class="responsive-img" src="../../images/general/top-10-percent.png" alt="Top 10% formatting" />
 
 - `Greater than` - This preset marks all values `Greater than the average`
 - `Duplicate values` - Marks all duplicate values.
 - `Unique values` - All cell values that are unique will be marked (`blue` background color).
 
-<img class="responsive-img" src="../../images/general/unique-values-formatting.png" />
+<img class="responsive-img" src="../../images/general/unique-values-formatting.png" alt="Unique values formatting" />
 
 - `Empty`- Marks all cells with `undefined` values
 
@@ -184,7 +184,7 @@ Understanding conditional formatting - it allows for applying formatting such as
 
 - `Text contains` - Marks all cells that contain the cell value from the `top-left most selected cell`. Example:
 
-<img class="responsive-img" src="../../images/general/contains-formatting.png" />
+<img class="responsive-img" src="../../images/general/contains-formatting.png" alt="Text contains formatting" />
 
 - `Duplicate values` - Marks all duplicate values.
 - `Unique values` - All cell values that are unique will be marked (`blue` background color).
@@ -206,13 +206,13 @@ Understanding conditional formatting - it allows for applying formatting such as
 
 | API | Description | Arguments |
 |---------|:-------------:|-----------:|
-| `ConditionalFormattingType` | An **enum**, which represents the conditional formatting types |
-| `IFormatColors` | An **interface**, which represents the formatting colors |
-| `formatter`: **string** | An **input** property, which sets/gets the current formatting type |
+| `ConditionalFormattingType` | An **enum**, which represents the conditional formatting types | |
+| `IFormatColors` | An **interface**, which represents the formatting colors | |
+| `formatter`: **string** | An **input** property, which sets/gets the current formatting type | |
 | `formatColors` | An **input** property, which sets/gets the current formatting colors | `val`: _IFormatColors_ |
-| `onFormattersReady`| An **event**, which emits the applicable `formatting types` for the selected data, when they are determined. |
+| `onFormattersReady`| An **event**, which emits the applicable `formatting types` for the selected data, when they are determined. | |
 | `formatCells` | Applies conditional formatting for the selected cells. Usage: <br/> **this.conditionalFormatting.formatCells(ConditionalFormattingType.dataBars)** | `formatterName`: **string**, `formatRange`?: [GridSelectionRange]({environment:angularApiUrl}/interfaces/gridselectionrange.html) [ ], <br /> `reset`: boolean (**true** by default) |
-| `clearFormatting` | Removes the conditional formatting from the selected cells. Usage: <br /> **this.conditionalFormatting.clearFormatting()** |
+| `clearFormatting` | Removes the conditional formatting from the selected cells. Usage: <br /> **this.conditionalFormatting.clearFormatting()** | |
 
 ### IgxChartIntegrationDirective
 
@@ -220,19 +220,19 @@ Understanding conditional formatting - it allows for applying formatting such as
 
 | API | Description | Arguments |
 |---------|-------------|-----------|
-| `CHART_TYPE` | An **enum**, representing the supported chart types |
-| `OPTIONS_TYPE` | An **enum**, representing the supported options type, which can be applied to a chart component|
-| `IOptions` | An **interface** for chart property options |
+| `CHART_TYPE` | An **enum**, representing the supported chart types | |
+| `OPTIONS_TYPE` | An **enum**, representing the supported options type, which can be applied to a chart component| |
+| `IOptions` | An **interface** for chart property options | |
 | `chartFactory`| Creates a chart component, based on the provided chart type. Usage: <br /> **this.chartIntegration.chartFactory(CHART_TYPE.COLUMN_GROUPED, this.viewContainerRef)** | `type`: **any[ ]**, viewContainerRef: [`ViewContainerRef`](https://angular.io/api/core/ViewContainerRef) |
 | `setChartComponentOptions` | Sets property options to a chart component. Usage: <br /> **this.chartIntegration.setChartComponentOptions(CHART_TYPE.PIE, OPTIONS_TYPE.CHART, {allowSliceExplosion: true, sliceClick: (evt) => { evt.args.isExploded = !evt.args.isExploded; } })** | `chart`: _CHART_TYPE_, `optionsType`: _OPTIONS_TYPE_, `options`: _IOptions_ |
-| `getAvailableCharts` | Returns the enabled chart types |
+| `getAvailableCharts` | Returns the enabled chart types | |
 | `enableCharts` | Enables the provided chart types. By default all chart types are enabled | `types`: _CHART_TYPE_ [ ] |
 | `disableCharts` | Disables the provided chart types | `types`: _CHART_TYPE_ [ ] |
-| `onChartTypesDetermined` | An **event**, emitted when the chart types, applicable for the `chartData`, are determined. This event emits an object of type `IDeterminedChartTypesArgs`, which has 2 properties: <br /> `chartsAvailabilty`: _Map<CHART_TYPE, boolean>_ - the enabled/disabled chart types, <br /> `chartsForCreation`: _CHART_TYPE[]_ - the applicable chart types for the `chartData` |
-| `onChartCreationDone` | An event, emitted when a chart is created. This event emits the chart component, which is created |
+| `onChartTypesDetermined` | An **event**, emitted when the chart types, applicable for the `chartData`, are determined. This event emits an object of type `IDeterminedChartTypesArgs`, which has 2 properties: <br /> `chartsAvailabilty`: _Map<CHART_TYPE, boolean>_ - the enabled/disabled chart types, <br /> `chartsForCreation`: _CHART_TYPE[]_ - the applicable chart types for the `chartData` | |
+| `onChartCreationDone` | An event, emitted when a chart is created. This event emits the chart component, which is created | |
 | `chartData`: **any[ ]** | An **input** property, which sets/gets the data for the charts | `selectedData`: **any[ ]** |
-| `useLegend`: **boolean** | An **input**, which enables/disables the legend usage for all chart types. By default it is set to **true** |
-| `defaultLabelMemberPath`: **string** | An **input** property, which sets/gets the default label member path for the charts. By default the label member path will be determined, based on the provided data. <br />( **if the provided data records have properties with string values, the first string property name of the first data record in the `chartData` will be selected as a label member path for the charts, if not, the label member path will have value _'Index'_.** ) <br/> |
+| `useLegend`: **boolean** | An **input**, which enables/disables the legend usage for all chart types. By default it is set to **true** | |
+| `defaultLabelMemberPath`: **string** | An **input** property, which sets/gets the default label member path for the charts. By default the label member path will be determined, based on the provided data. <br />( **if the provided data records have properties with string values, the first string property name of the first data record in the `chartData` will be selected as a label member path for the charts, if not, the label member path will have value _'Index'_.** ) <br/> | |
 | `scatterChartYAxisValueMemberPath`: **string** | An **input** property, which sets/gets the default radius member path for the scatter bubble chart. **If not set, the default Y axis value member path will be the first numeric property name of the first data record in the `chartData`** | `path`: **string** |
 | `bubbleChartRadiusMemberPath`: **string** | An **input** property, which sets/gets the default radius member path for the scatter bubble chart. **If not set, the default radius member path will be the second numeric property name of the first data record in the `chartData`** | `path`: **string** |
 

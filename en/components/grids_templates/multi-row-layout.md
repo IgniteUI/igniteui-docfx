@@ -51,7 +51,7 @@ The declaration of Multi-row Layout is achieved through [`igx-column-layout`]({e
 
 The result of the above configuration can be seen on the screenshot below:
 
-<img src="../../images/multi-row-layout-1.png" style="width: 100%"/>
+<img src="../../images/multi-row-layout-1.png" alt="Multi-row Layout Example" style="width: 100%"/>
 
 
 > [!Note]

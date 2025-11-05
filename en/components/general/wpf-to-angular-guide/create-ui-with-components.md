@@ -12,14 +12,14 @@ When it comes to creating user interface in an Angular application you can use a
 
 Creating a UI in Angular is very similar to how we would create one in WPF. We normally use user controls, represented by the UserControl class. A `UserControl` groups markup and code into a reusable container, allowing the same interface and functionality to be used in several different places. This user control will have a .xaml file for the UI markup and a C# file for the logic, and then it may even have a resource dictionary, which would contain any type of styling information for this user control. While in Angular, we use what's called a `Component`. A component has an html file, which is used for any UI markup. It has a typescript file, which is used for its properties and logic, and then it uses a CSS file for all its styling information. Let's go ahead and see just how similar these two are.
 
-<img class="responsive-img" src="../../../images/general/component_structure.png" />
+<img class="responsive-img" src="../../../images/general/component_structure.png" alt="Component Structure" />
 
 On the left side, we have a WPF application, with a user control called `Sample`. It also has a resource dictionary called `SampleResources` that contains styling information.
 On the right side, we have an Angular application with an `AppComponent`. Let's go ahead and compare the Angular app component to that of the sample user control in the WPF application.
 
 Start by opening up the app component typescript file. We can think of this file as the code behind of the component, and the reason we think that way is because if we come over to the WPF and open up the Sample.xaml.cs, the code behind of the `Sample` user control, we can see a lot of similarities.
 
-<img class="responsive-img" src="../../../images/general/component_code_behind.png" />
+<img class="responsive-img" src="../../../images/general/component_code_behind.png" alt="Component Code Behind" />
 
 First we can see that we have a class that we're exporting called `AppComponent`. Now, this AppComponent also has a property in it called title. So within this class we're going to define all the properties, methods and events required for our component to run. This is extremely similar if not the exact same of a user control. We can see that we have a class, in this case called `Sample`, and within this class, we're going to define all the properties, methods and events required for the user control to function.
 
@@ -31,7 +31,7 @@ Now, let's hop back inside of the component decorator.
 - Next, on line 5, we have what's called a template URL. This is pointing to a file called `app.component.html` - the html file that represents the visual rendering of this component. This is extremely similar to the `Sample.xaml` file of the user control in WPF, where the xaml is the markup that represents how this control is going to render.
 - On line 6, we see the style URLs. The style URL is pointing to a CSS file. This file represents the styling information of the component. So if we open up the `app.component.css` file, we can see that there's no styling information in here, but we can think of the CSS file as a direct mapping to a resource dictionary. The resource dictionary in XAML will contain all the styling information for the user control or elements within the user control, so that it renders according to our design. That is the exact same thing that you would do in CSS.
 
-### Generate a component
+## Generate a component
 
 Now that we've seen just how similar an Angular component is to a WPF user control, let's create a new component and add it to our application. If you're a desktop developer, in WPF when you want to add a new user control, you simply right click in your project and say **Add > User Control**. Well, of course if you try to do the same thing in Visual Studio Code, you do not have that option. You only have new file, new folder. That means we have to hop into our terminal and use the Angular CLI to generate our component. So let's toggle a terminal by typing `Control + Backtick`. In the terminal we just type **NG G** for generate, **C** for component, and then provide a name for our component, e.g. `sample`.
 
@@ -41,7 +41,7 @@ ng g c sample
 
 When the command completes, you'll notice a number of things have happened. First, we have a new folder with the same name we have given to our component. We also have four new files - an html file, a SPEC file, a typescript file, and a CSS file. We also made an update to the `app.module.ts` file.
 
-<img class="responsive-img" src="../../../images/general/sample_component.png" />
+<img class="responsive-img" src="../../../images/general/sample_component.png" alt="Sample Component" />
 
 Look at the `sample` folder which contains our newly created component. We can see that all three files that are required for a component are there plus this extra SPEC file. This is actually a test file which we do not need for this article, so we're not going to bother with it now. We also made a modification to the app.module.ts, in which it added the sample component to the `declarations` section of our NgModule.
 > [!NOTE]
@@ -60,7 +60,7 @@ Let's go ahead and open up the html file where we can see a paragraph stating `s
 </div>
 ```
 
-### Run the application
+## Run the application
 
 By typing `npm start` in the terminal, it will compile and build our application and launch it inside the browser. If all went well, our application should be running in the browser. We have `welcome to app` - the markup from the app component and then `sample works!`. This is the markup from our sample component that we just added.
 Let's now change our sample component a little by changing the text to 'This sample works very well!'.

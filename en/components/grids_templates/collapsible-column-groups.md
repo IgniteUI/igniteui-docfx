@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD003 MD024 -->
 @@if(igxName==='IgxGrid') {
 ---
 
@@ -104,11 +105,11 @@ The initial state of the column group which is specified as collapsible is `[exp
 
 Default expand indicator for the igxGrid is the following:
 
- <img class="responsive-img" src="../../images/general/expand_indicator.png" style="width: 450px; height: 130px"/>
+ <img class="responsive-img" src="../../images/general/expand_indicator.png" alt="Expand Indicator" style="width: 450px; height: 130px"/>
 
 Default collapse indicator for the igxGrid is the following:
 
-<img class="responsive-img" src="../../images/general/collapsed_indicator.png" style="width: 400px; height: 130px"/>
+<img class="responsive-img" src="../../images/general/collapsed_indicator.png" alt="Collapsed Indicator" style="width: 400px; height: 130px"/>
 
 Also, if you need to change the default expand/collapse indicator, we provide two easy ways to do so - via an input property or through a directive.
 

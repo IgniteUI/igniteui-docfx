@@ -14,7 +14,7 @@ When creating Ignite UI for Angular project with Angular Schematics or Ignite UI
 
 You can select an authentication project either when going through the Step by step experience after selection 'Ignite UI for Angular' project type:
 
-<img class="responsive-img" src="../../../images/general/cli-igx-side-auth.png" />
+<img class="responsive-img" src="../../../images/general/cli-igx-side-auth.png" alt="Step by step experience" />
 
 Or through the new command:
 
@@ -32,11 +32,11 @@ ng new "Auth Project" --collection="@igniteui/angular-schematics" --template=sid
 
 This template builds upon the Side Navigation default and adds a profile page and a login section to the app's nav bar that will display a login button or an avatar of the logged in user:
 
-<img class="responsive-img" src="../../../images/general/igx-side-auth-login-bar.png" />
+<img class="responsive-img" src="../../../images/general/igx-side-auth-login-bar.png" alt="Login bar" />
 
 The login bar also integrates dialogs to sign in or up:
 
-<img class="responsive-img" src="../../../images/general/igx-side-auth-login-dialogs.png" />
+<img class="responsive-img" src="../../../images/general/igx-side-auth-login-dialogs.png" alt="Login dialogs" />
 
 The project also supports various [external authentication providers](#add-a-third-party-social-provider).
 
@@ -110,7 +110,7 @@ export class AppModule {
 
 This will automatically enable the respective button in the login dialog:
 
-<img class="responsive-img" src="../../../images/general/igx-side-auth-login-google.png" />
+<img class="responsive-img" src="../../../images/general/igx-side-auth-login-google.png" alt="Google login button" />
 
 You can do the same with [Microsoft](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-protocols-oidc) following this guide:
 
@@ -123,7 +123,7 @@ https://developers.facebook.com/docs/apps/#register
 
 As you enable providers, all buttons will become active:
 
-<img class="responsive-img" src="../../../images/general/igx-side-auth-login-social.png" />
+<img class="responsive-img" src="../../../images/general/igx-side-auth-login-social.png" alt="Social login options" />
 
 ### Provider details
 

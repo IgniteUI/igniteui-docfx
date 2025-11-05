@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD003 MD024 -->
 @@if(igxName === 'IgxGrid'){
 ---
 
