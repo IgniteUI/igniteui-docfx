@@ -481,12 +481,13 @@ $custom-calendar-theme: calendar-theme(
  @include css-vars($custom-calendar-theme);
 ```
 
-<code-view style="height:500px" 
+以下のサンプルでは、カスタマイズした CSS 変数を使用したカレンダー コンポーネントが、[`SAP UI5`](https://ui5.sap.com/#/entity/sap.ui.unified.Calendar/sample/sap.ui.unified.sample.CalendarSingleDaySelection) デザイン システムのカレンダーに視覚的に似たデザインを実現している様子を確認できます。 
+
+<code-view style="height:350px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-styling-sample/" >
 </code-view>
-
 
 ## API リファレンス
 <div class="divider--half"></div>

@@ -97,7 +97,7 @@ button {
 | **Tooltip**            |  0 / 16px          | 4px                |
 | **Toast**              |  0 / 26px          | 26px               |
 
-各テーマのデフォルトおよび最小/最大半径値を確認するには、各コンポーネントの [スキーマ]({environment:sassApiUrl}) ドキュメントを参照してください。
+各テーマのデフォルトおよび最小/最大半径値を確認するには、各コンポーネントの [スキーマ]({environment:sassApiUrl}/schemas) ドキュメントを参照してください。
 
 <div class="divider--half"></div>
 
