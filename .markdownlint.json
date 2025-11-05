@@ -14,7 +14,7 @@
   "MD022": true,
   "MD023": true,
   "MD024": { "siblings_only": true },
-  "MD025": true,
+  "MD025": { "front_matter_title": "" },
   "MD026": { "punctuation": ".,;:" },
   "MD027": true,
   "MD028": true,

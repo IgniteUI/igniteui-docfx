@@ -38,7 +38,9 @@ This topic contains the following sections:
 2 - Open a command prompt in the folder path of the `nuget.exe` file you just downloaded.
 3 - Execute the following command
 
-    nuget sources add -name "Infragistics" -source "https://packages.infragistics.com/nuget/licensed" -username "your login email" -password "your password"
+```bash
+nuget sources add -name "Infragistics" -source "https://packages.infragistics.com/nuget/licensed" -username "your login email" -password "your password"
+```
 
 > [!Note]
 > The password will be stored encrypted in the NuGet config file and can only be decrypted in the same user context as it was encrypted. The default location of the config file can be found here `%AppData%\NuGet\NuGet.config`

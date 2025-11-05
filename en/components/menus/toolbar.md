@@ -202,6 +202,7 @@ public toolbarCustomIconOnViewInit(): void {
 }
 ```
 
+```razor
 @code {
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -239,7 +240,7 @@ By default the Angular Toolbar is shown horizontally, but it also has the abilit
 <igx-toolbar orientation="Vertical" />
 ```
 
-The following example demonstrates the vertical orientation of the Angular Toolbar. <code-view style="height: 600px" alt="Angular Verical Orientation"
+The following example demonstrates the vertical orientation of the Angular Toolbar. <code-view style="height: 600px" alt="Angular Vertical Orientation"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/toolbar/layout-in-vertical-orientation"
                                                  github-src="charts/toolbar/layout-in-vertical-orientation">

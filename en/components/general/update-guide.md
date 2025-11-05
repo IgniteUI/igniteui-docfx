@@ -299,7 +299,7 @@ When selected row is deleted from the grid component, `rowSelectionChanging` eve
 
     **Example**
 
-```scss
+    ```scss
     $my-select: select-theme(
         $toggle-button-background: red,
         $toggle-button-foreground: #fff,
@@ -312,11 +312,11 @@ When selected row is deleted from the grid component, `rowSelectionChanging` eve
 
     @include css-vars($my-select);
     @include css-vars($my-combo);
-```
+    ```
 
     **Example**
 
-```css
+    ```css
     .igx-select {
         --igx-select-toggle-button-background: red;
         --igx-select-toggle-button-foreground: #fff;
@@ -326,7 +326,7 @@ When selected row is deleted from the grid component, `rowSelectionChanging` eve
         --igx-combo-toggle-button-background: red;
         --igx-combo-toggle-button-foreground: #fff;
     }
-```
+    ```
 
 ## From 14.2.x to 15.0.x
 
@@ -568,42 +568,42 @@ Here's how that will affect existing code:
   - **Breaking Change** - The `columnSelected` event is renamed to `columnSelectionChanging` to better reflect its function.
   - **Breaking Change** - `columnsCollection` is removed. Use `columns` instead. If at certain occasions `columns` return empty array, query the columns using `ViewChildren` and access those in `ngAfterViewInit`:
 
-        ```typescript
-        @ViewChildren(IgxColumnComponent, { read: IgxColumnComponent })
-        public columns: QueryList<IgxColumnComponent>;
-        ```
+    ```typescript
+    @ViewChildren(IgxColumnComponent, { read: IgxColumnComponent })
+    public columns: QueryList<IgxColumnComponent>;
+    ```
 
   - **Breaking change** - when applying a custom directive on the grid, inject the `IGX_GRID_BASE` token in the constructor in order to get reference to the hosting grid:
 
-        ```html
-        <igx-grid customDirective ...></igx-grid>
-        ```
+    ```html
+    <igx-grid customDirective ...></igx-grid>
+    ```
 
-        ```typescript
-        @Directive({
-            selector: '[customDirective]'
-        })
-        export class customDirective {
+    ```typescript
+    @Directive({
+        selector: '[customDirective]'
+    })
+    export class customDirective {
 
-        constructor(@Host() @Optional() @Inject(IGX_GRID_BASE) grid: IgxGridBaseDirective) { }
-        ```
+    constructor(@Host() @Optional() @Inject(IGX_GRID_BASE) grid: IgxGridBaseDirective) { }
+    ```
 
 - `RowDirective`, `RowType`
   - **Breaking Change** - `rowData` and `rowID` properties are removed from `RowDirective` and from classes implementing the `RowType` interface. Use `data` and `key` instead. Use `ng update` for automatic migration. Automatic migration will not be able to pick up some examples from templates, where the template context object is not typed:
 
-        ```html
-        <ng-template igxCell let-cell="cell">
-            <span>{{ cell.rowID }}</span>
-            <span>{{ cell.row.rowData.ProductID }}</span>
-        </ng-template>
-        ```
+    ```html
+    <ng-template igxCell let-cell="cell">
+        <span>{{ cell.rowID }}</span>
+        <span>{{ cell.row.rowData.ProductID }}</span>
+    </ng-template>
+    ```
 
-        Update such templates manually to
+    Update such templates manually to
 
-        ```html
-        <span>{{ cell.key }}</span>
-        <span>{{ cell.row.data.ProductID }}</span>
-        ```
+    ```html
+    <span>{{ cell.key }}</span>
+    <span>{{ cell.row.data.ProductID }}</span>
+    ```
 
 - `igxGrid`
   - Exposed a `groupStrategy` input that functions similarly to `sortStrategy`, allowing customization of the grouping behavior of the grid.
@@ -948,82 +948,82 @@ $__legacy-libsass: true;
 
     For example, this:
 
-        ```scss
-        $avatar-theme: avatar-theme(
-            $initials-background: blue,
-            $initials-color: orange,
-            $icon-background: blue,
-            $icon-color: orange,
-        );
+    ```scss
+    $avatar-theme: avatar-theme(
+        $initials-background: blue,
+        $initials-color: orange,
+        $icon-background: blue,
+        $icon-color: orange,
+    );
 
-        @include avatar($avatar-theme);
-        ```
+    @include avatar($avatar-theme);
+    ```
 
     Needs to be transformed into this:
 
-        ```scss
-        $initials-avatar: avatar-theme(
-            $background: blue,
-            $color: orange,
-        );
+    ```scss
+    $initials-avatar: avatar-theme(
+        $background: blue,
+        $color: orange,
+    );
 
-        $icon-avatar: avatar-theme(
-            $background: blue,
-            $color: orange,
-        );
+    $icon-avatar: avatar-theme(
+        $background: blue,
+        $color: orange,
+    );
 
-        .initials-avatar {
-            @include avatar($initials-avatar);
-        }
+    .initials-avatar {
+        @include avatar($initials-avatar);
+    }
 
-        .icon-avatar {
-            @include avatar($icon-avatar);
-        }
-        ```
+    .icon-avatar {
+        @include avatar($icon-avatar);
+    }
+    ```
 
   - `IgxButton` theme has been simplified. The number of theme params (`button-theme`) has been reduced significantly and no longer includes prefixed parameters (`flat-*`, `raised-*`, etc.). Updates performed with `ng update` will migrate existing button themes, but some additional tweaking may be required to account for the absence of prefixed params.
 
     In order to achieve the same result as from the code snippet below.
 
-        ```html
-        <button igxButton="raised">Raised button</button>
-        <button igxButton="outlined">Outlined button</button>
-        ```
-        ```scss
-        $my-button-theme: button-theme(
-            $raised-background: red,
-            $outlined-outline-color: green
-        );
+    ```html
+    <button igxButton="raised">Raised button</button>
+    <button igxButton="outlined">Outlined button</button>
+    ```
+    ```scss
+    $my-button-theme: button-theme(
+        $raised-background: red,
+        $outlined-outline-color: green
+    );
 
-        @include css-vars($my-button-theme);
-        ```
+    @include css-vars($my-button-theme);
+    ```
     You have to create a separate theme for each button type and scope it to a CSS selector.
-        ```html
-        <div class="my-raised-btn">
-            <button igxButton="raised">Raised button</button>
-        </div>
-        <div class="my-outlined-btn">
-            <button igxButton="outlined">Outlined button</button>
-        </div>
-        ```
+    ```html
+    <div class="my-raised-btn">
+    <button igxButton="raised">Raised button</button>
+    </div>
+    <div class="my-outlined-btn">
+        <button igxButton="outlined">Outlined button</button>
+    </div>
+    ```
 
-        ```scss
-        $my-raised-button: button-theme(
-            $background: red
-        );
+    ```scss
+    $my-raised-button: button-theme(
+        $background: red
+    );
 
-        $my-outlined-button: button-theme(
-            $border-color: red
-        );
+    $my-outlined-button: button-theme(
+        $border-color: red
+    );
 
-        .my-raised-btn {
-            @include css-vars($my-raised-button);
-         }
+    .my-raised-btn {
+        @include css-vars($my-raised-button);
+     }
 
-        .my-outlined-btn {
-            @include css-vars($my-outlined-button);
-        }
-        ```
+    .my-outlined-btn {
+        @include css-vars($my-outlined-button);
+    }
+    ```
     As you can see, since the `button-theme` params now have the same names for each button type, we have to scope our button themes to a CSS selector in order to have different colors for different types.
 
     Here you can see all the [available properties]({environment:sassApiUrl}/themes#function-button-theme) of the `button-theme`
@@ -1284,40 +1284,40 @@ The `ng update` process will update all enumeration names, like `AvatarType`, `T
 - IgxDrag
   - Since `hideBaseOnDrag` and `visible` inputs are being deprecated, in order to achieve the same functionality in your application, you can use any way of hiding the base element that Angular provides. One example is setting the `visibility` style to `hidden`, since it will only make in invisible and keep its space that it takes in the DOM:
 
-        ```html
-        <div igxDrag [ngStyle]="{ 'visibility': targetDragged ? 'hidden' : 'visible' }"
-            (dragStart)="onDragStarted($event)" (dragEnd)="onDragEnded($event)">
-            Drag me!
-        </div>
-        ```
+    ```html
+    <div igxDrag [ngStyle]="{ 'visibility': targetDragged ? 'hidden' : 'visible' }"
+        (dragStart)="onDragStarted($event)" (dragEnd)="onDragEnded($event)">
+        Drag me!
+    </div>
+    ```
 
-        ```typescript
-        public targetDragged = false;
+    ```typescript
+    public targetDragged = false;
 
-        public onDragStarted(event) {
-            this.targetDragged = true;
-        }
+    public onDragStarted(event) {
+        this.targetDragged = true;
+    }
 
-        public onDragEnded(event) {
-            this.targetDragged = false;
-        }
-        ```
+    public onDragEnded(event) {
+        this.targetDragged = false;
+    }
+    ```
 
   - Since `animateOnRelease` and `dropFinished()` are also being deprecated, any `dropFinished()` method usage should be replaced with `transitionToOrigin()`. Otherwise you would need to call `transitionToOrigin()` depending on when you would want the dragged element to transition back to its original location. Note that  if the dragged element DOM position is changed, then its original location will also change based on that.
 
 - IgxDrop
   - Due to the default drop strategy provided with the `IxgDrop` directive is no longer applied by default, in order to continue having the same behavior, you need to set the new input `dropStrategy` to be the provided `IgxAppendDropStrategy` implementation.
 
-        ```html
-        <div igxDrop [dropStrategy]="appendStrategy"></div>
-        ```
+    ```html
+    <div igxDrop [dropStrategy]="appendStrategy"></div>
+    ```
 
-        ```typescript
-        import { IgxAppendDropStrategy } from 'igniteui-angular';
-        // import { IgxAppendDropStrategy } from '@infragistics/igniteui-angular'; for licensed package
+    ```typescript
+    import { IgxAppendDropStrategy } from 'igniteui-angular';
+    // import { IgxAppendDropStrategy } from '@infragistics/igniteui-angular'; for licensed package
 
-        public appendStrategy = IgxAppendDropStrategy;
-        ```
+    public appendStrategy = IgxAppendDropStrategy;
+    ```
 
   - Any use of interfaces `IgxDropEnterEventArgs` and `IgxDropLeaveEventArgs` should be replaced with `IDragBaseEventArgs`.
   - Also any use of the  `IgxDropEventArgs` interface should be replaced with `IDropDroppedEventArgs`.
@@ -1326,20 +1326,20 @@ The `ng update` process will update all enumeration names, like `AvatarType`, `T
   - `IRowDragStartEventArgs` and `IRowDragEndEventArgs` have argument's name changed in order to be more clear to what it relates to. `owner` argument is renamed to `dragDirective`.
     The `owner` argument now provides a reference to the owner component. If your code was like:
 
-        ```typescript
-        public dragStart(event) {
-            const directive = event.owner;
-        }
-        ```
+    ```typescript
+    public dragStart(event) {
+        const directive = event.owner;
+    }
+    ```
 
-        From version 8.2.x it should be updated to:
+    From version 8.2.x it should be updated to:
 
-        ```typescript
-        public dragStart(event) {
-            const directive = event.dragDirective;
-            const grid = event.owner;
-        }
-        ```
+    ```typescript
+    public dragStart(event) {
+        const directive = event.dragDirective;
+        const grid = event.owner;
+    }
+    ```
 
 - IgxCombo
   - The way that the [`igx-combo`](../combo.md) handles selection and data binding is changed.
