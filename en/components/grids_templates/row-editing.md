@@ -150,7 +150,6 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
 
 > [!NOTE]
 > Setting primary key is mandatory for row editing operations.
-
 > [!NOTE]
 > It's not needed to enable editing for individual columns. Using the [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable) property in the @@igComponent, will mean that all rows, with defined `field` property, excluding primary one, will be editable. If you want to disable editing for specific column, then you set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to `false`.
 
@@ -328,7 +327,7 @@ The Row Editing overlay is a composite element - its UI is comprised of a couple
     - [`igx-button`](../button.md)s are rendered in the default template (for the `Done` and `Cancel` buttons).
 
 In the below example, we will make use of those two components' styling options, [`button styling`](../button.md#styling) & [`banner-styling`](../banner.md#styling), to customize the experience of our @@igxName's Row Editing.
-We will also style the current cell's editor and background to make it more distinct. You can learn more about cell styling [here](cell-editing.md#styling).
+We will also style the current cell's editor and background to make it more distinct. You can learn more about cell styling in the [Cell Styling section](cell-editing.md#styling).
 
 ### Import theme
 
@@ -404,7 +403,7 @@ To further customize our Row Editing overlay, we can pass a custom template so w
 </@@igSelector>
 ```
 
-After we've defined our custom buttons, we can make use of the [`button-theme`]({environment:sassApiUrl}/themes#function-button-theme) to style them. You can learn more about `igx-button` styling [here](../button.md#styling). We can create a custom theme for our `Done` and `Cancel`:
+After we've defined our custom buttons, we can make use of the [`button-theme`]({environment:sassApiUrl}/themes#function-button-theme) to style them. You can learn more about `igx-button` styling in the [Button Styling documentation](../button.md#styling). We can create a custom theme for our `Done` and `Cancel`:
 
 ```scss
 // custom.component.scss

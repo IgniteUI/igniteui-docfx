@@ -45,7 +45,6 @@ Currently, the @@igxName introduces the following tab stops:
 >[!NOTE]
 > Due to this change, navigating between the cells with <kbd>tab</kbd> and <kbd>Shift + Tab</kbd> is no longer supported in the @@igxName.
 > Pressing the <kbd>Tab</kbd> key now goes through the tab stops in the following order: **GroupBy** / **Toolbar** -> **Headers** -> **Body** -> **Summaries** -> **Footer / Paginator**.
-
 >[!NOTE]
 > Exposing any **focusable** element into the **@@igxName** body via template may introduce **side effects** in the keyboard navigation, since the default
 > browser behavior is not prevented. It is the developer's responsibility to prevent or modify it appropriately.

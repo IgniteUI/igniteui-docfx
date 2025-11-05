@@ -84,7 +84,6 @@ export class ReplacePipe implements PipeTransform {
 
 > [!NOTE]
 > Note that in order to be able to use the pipe in the component's html template, you have to add it to the module declarations.
-
 > [!NOTE]
 > An important difference between the Angular pipe and the WPF converter is that the Angular pipe works only for one-way binding unlike the WPF converter which has [ConvertBack](https://docs.microsoft.com/en-us/dotnet/api/system.windows.data.ivalueconverter.convertback?view=netframework-4.8) method.
 

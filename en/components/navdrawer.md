@@ -139,7 +139,6 @@ The [`igxRipple`](ripple.md) directive completes the look and feel:
 ```
 
 > An additional template decorated with `igxDrawerMini` directive can be provided for the alternative [Mini variant](#mini-variant) as closed state.
-
 > [!NOTE]
 > The Navigation Drawer can float above the content or be pinned alongside it. By default the drawer switches between those modes depending on the viewport size. See [Modes](#modes) for more information.
 

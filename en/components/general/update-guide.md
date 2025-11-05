@@ -125,7 +125,7 @@ import { IgxIconButtonDirective } from 'igniteui-angular';
 
 ### General
 
-- In 17.0 Angular have removed the `@nguniversal/*` packages. If the project uses these packages a standard `ng update` call will cause an error in the `igniteui-angular` migrations due to improperly modified `package-lock.json` - more details can be found [here](https://github.com/IgniteUI/igniteui-angular/issues/13668). To update to `17.0.x` one of the following additional steps needs to be taken:
+- In 17.0 Angular have removed the `@nguniversal/*` packages. If the project uses these packages a standard `ng update` call will cause an error in the `igniteui-angular` migrations due to improperly modified `package-lock.json` - more details can be found in [issue #13668](https://github.com/IgniteUI/igniteui-angular/issues/13668). To update to `17.0.x` one of the following additional steps needs to be taken:
   - Delete the `package-lock.json` file before running `ng update`
   - Run `npm dedupe --legacy-peer-deps` before running `ng update igniteui-angular`
 

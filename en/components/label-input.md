@@ -168,7 +168,7 @@ If you want the text in an input element, marked with `igxInput`, to be selected
 
 ## Input Group
 
-The Ignite UI for Angular Input Group component helps developers to create easy-to-use and aesthetic forms. For further information, you can read the separate topic [here](input-group.md).
+The Ignite UI for Angular Input Group component helps developers to create easy-to-use and aesthetic forms. For further information, you can read the [Input Group documentation](input-group.md).
 
 ## API References
 

@@ -216,7 +216,6 @@ export class ComboRemoteComponent implements OnInit {
 
 > [!Note]
 > Anytime new data is loaded, we update the `totalItemCount` property, in order to have proper size of the list's scroll bar. In that case, the service returns total size using the property `@odata.count`.
-
 > [!Note]
 > A service needs to be included as a provider.
 

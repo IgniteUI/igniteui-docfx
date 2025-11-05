@@ -212,7 +212,7 @@ The public GitHub repository of the [ASP.NET Core Application could be found her
 ## Create SignalR Client Library
 
 We will create an Angular project in order to consume the SignalR service.
-Github repository with the actual application can be found [here](https://github.com/IgniteUI/igniteui-angular-samples/tree/master/projects/app-lob/src/app/grid-finjs-dock-manager).
+The [GitHub repository with the actual application](https://github.com/IgniteUI/igniteui-angular-samples/tree/master/projects/app-lob/src/app/grid-finjs-dock-manager) can be found in the igniteui-angular-samples repository.
 
 First, start by installing SignalR:
 

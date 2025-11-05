@@ -125,7 +125,6 @@ _canonicalLink: grid/state-persistence
 >[!NOTE]
 > The [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) directive does not take care of templates. Go to [Restoring Column](state-persistence.md#restoring-columns) section to see how to restore column templates.
 }
-
 >[!NOTE]
 > The `Row Selection`  feature requires the [`primaryKey`]({environment:angularApiUrl}/classes/IgxGridComponent.html#primaryKey) property to be set, so it can be stored/restored correctly.
 

@@ -15,7 +15,7 @@ It is important to know all the [legal terms and conditions](https://www.infragi
 
 If your trial has ended or your subscription [has expired](http://www.infragistics.com/renewal), each developer on your team using Ignite UI will need to [purchase](https://www.infragistics.com/how-to-buy/product-pricing) a subscription. This will enable you to use our private npm feed hosted on <https://packages.infragistics.com/npm/js-licensed/> for development. There you will find the latest versions of the Ignite UI for Angular packages. If you have a current subscription, you can use this private feed and you will have access to the full version of Ignite UI for Angular.
 
-For detailed explanation of the Ignite UI license agreement and terms of use, [click here](https://www.infragistics.com/legal/license/igultimate-la).
+For detailed explanation of the Ignite UI license agreement and terms of use, refer to the [Infragistics Ultimate License Agreement](https://www.infragistics.com/legal/license/igultimate-la).
 
 Infragistics offers free, non-commercial, not-for-resale (NFR) licenses for the following:
 
@@ -35,7 +35,7 @@ Infragistics Ignite UI for Angular is available as a npm package and you can add
 
 Infragistics Ignite UI Dock Manager Web Component is available as a separate npm package and by installing it you will start using the [Ignite UI Dock Manager Web Component Trial version](https://www.infragistics.com/products/ignite-ui-angular) of the product.
 
-> More information on how to start using the Ignite UI for Angular npm package can be found in [this topic](getting-started.md#installing-ignite-ui-for-angular). Additional information on Ignite UI Dock Manager Web Component can be found [here](../dock-manager.md).
+> More information on how to start using the Ignite UI for Angular npm package can be found in [this topic](getting-started.md#installing-ignite-ui-for-angular). Additional information on Ignite UI Dock Manager Web Component can be found in the [Dock Manager documentation](../dock-manager.md).
 
 ### Upgrading packages using our Angular Schematics or Ignite UI CLI
 
@@ -100,7 +100,6 @@ You will be asked to provide the username and the password that you use for logg
 
 >[!NOTE]
 > `npm` is disallowing the use of the `"@"` symbol inside your username as it is considered as being "not safe for the net". Because your username is actually the email that you use for your Infragistics account it always contains the symbol `"@"`. That's why you must escape this limitation by replacing the `"@"` symbol with `"!!"` (two exclamation marks). For example, if your username is `"username@example.com"` when asked about your username you should provide the following input: `"username!!example.com"`.
-
 > [!NOTE]
 > **macOS shell behavior**: If you're using macOS and setting the `:_auth` token manually via `npm config set`, make sure to **wrap the token in double quotes** like this:
 >

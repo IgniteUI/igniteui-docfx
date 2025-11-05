@@ -169,7 +169,6 @@ this.@@igObjectRef.clearSort();
 
 > [!NOTE]
 > The [`sortStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortStrategy) of the **@@igComponent** is of different type compared to the [`sortStrategy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortStrategy) of the **column**, since they work in different scopes and expose different parameters.
-
 > [!NOTE]
 > The sorting operation **DOES NOT** change the underlying data source of the @@igComponent.
 

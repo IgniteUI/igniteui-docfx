@@ -349,7 +349,6 @@ platformBrowserDynamic()
 
 >[!NOTE]
 > This is still in experimental feature for the `igxTreeGrid`. This means that there might be some unexpected behaviors in the Tree Grid. In case of encountering any such behavior, please contact us on our [Github](https://github.com/IgniteUI/igniteui-angular/discussions) page.
-
 >[!NOTE]
 > Enabling it can affects other parts of an Angular application that the `igxTreeGrid` is not related to.
 

@@ -131,7 +131,6 @@ this._crudService.delete(event.data).subscribe({
 
 > [!NOTE]
 > The above examples are based on the default grid UI for editing actions. Another valid approach is if you provide your own external UI. In such case, responding to user interactions with the UI should work with the grid editing API (**make sure the grid has a primaryKey set**). See [**API**](how-to-perform-crud.md#editing-api) section for reference.
-
 > [!NOTE]
 > Make sure to follow best practices and prevent any differences in your local data compared to the server database. For example - you may decide to first make a request to the server to delete a record, but if the request fails, do not delete the data on the local grid data:
 

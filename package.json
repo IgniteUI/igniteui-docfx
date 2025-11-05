@@ -13,7 +13,8 @@
     "build-staging": "cross-env NODE_ENV=staging gulp build",
     "build-production": "cross-env NODE_ENV=production gulp build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "verify": "cspell \"en/components/**/*.md\"",
+    "verify": "npm run spellcheck && npm run lint:md",
+    "spellcheck": "cspell \"en/components/**/*.md\"",
     "lint:md": "markdownlint \"en/components/**/*.md\"",
     "lint:md:fix": "markdownlint \"en/components/**/*.md\" --fix",
     "postinstall": "dotnet tool restore --ignore-failed-sources && gulp copyGitHooks"

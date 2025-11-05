@@ -98,7 +98,7 @@ And now let's sum up: every child column has three states:
 - Can be visible, when its parent is collapsed;
 - Can be hidden, when its parent is collapsed;
 
-The initial state of the column group which is specified as collapsible is `[expanded]="true"`. But you can easily change this behavour by setting the property `[expanded]="false"`.
+The initial state of the column group which is specified as collapsible is `[expanded]="true"`. But you can easily change this behavior by setting the property `[expanded]="false"`.
 
 ## Expand/Collapse indicator template
 

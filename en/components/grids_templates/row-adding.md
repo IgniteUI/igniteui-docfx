@@ -164,7 +164,6 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
 
 > [!NOTE]
 > Setting primary key is mandatory for row adding operations.
-
 > [!NOTE]
 > Every column excluding the primary key one is editable in the row adding UI by default. If you want to disable editing for a specific column, then you have to set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to `false`.
 

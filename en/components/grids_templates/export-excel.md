@@ -165,7 +165,6 @@ If all went well, you should see the @@igxName component and a button under it. 
 
 > [!NOTE]
 > Expand/collapse indicators in Excel are shown based on the hierarchy of the last dimension of the Pivot Grid.
-
 > [!NOTE]
 > The exported @@igComponent will not be formatted as a table, since Excel tables do not support multiple row headers.
 

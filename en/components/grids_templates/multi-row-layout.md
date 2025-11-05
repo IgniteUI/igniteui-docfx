@@ -91,7 +91,6 @@ IgxGridComponent with Multi-Row Layouts provides build-in keyboard navigation.
 
 > [!Note]
 > Navigation through cells which span on multiple rows or columns is done with accordance to the starting navigation cell and will allow returning to the starting cell using the key for the opposite direction. The same approach is used when navigating through group rows.
-
 > [!Note]
 > Selection and multi cell selection are working on layout, meaning that when a cell is active, its layout will be selected. Also all features of multiple selection like drag selection are applicable and will work per layout not per cell.
 

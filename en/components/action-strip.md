@@ -147,7 +147,6 @@ This can be utilized via grid action components and we are providing two default
 
 > [!NOTE]
 > These components inherit [`IgxGridActionsBaseDirective`]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html) and when creating a custom grid action component, it should also inherit `IgxGridActionsBaseDirective`.
-
 > [!NOTE]
 > When `IgxActionStripComponent` is a child component of the grid, hovering a row will automatically show the UI.
 
@@ -157,7 +156,7 @@ This can be utilized via grid action components and we are providing two default
 </code-view>
 
 > [!NOTE]
-> More information about how to use ActionStrip in the grid component could be found [here](/components/grid/row-actions.html).
+> More information about how to use ActionStrip in the grid component could be found in the [Grid Row Actions documentation](/components/grid/row-actions.html).
 
 ## Styling
 

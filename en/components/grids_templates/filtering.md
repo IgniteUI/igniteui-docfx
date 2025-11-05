@@ -639,7 +639,6 @@ The last step is to **include** the component mixins, each with its respective t
 
 >[!NOTE]
 >We include the created **button-theme** and **input-group-theme** within `.igx-grid__filtering-row`, so that only the filtering row buttons and its input group would be styled. Otherwise other buttons and input groups in the grid would be affected too.
-
 >[!NOTE]
 >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
 

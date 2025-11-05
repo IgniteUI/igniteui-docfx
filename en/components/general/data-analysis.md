@@ -162,10 +162,8 @@ Understanding conditional formatting - it allows for applying formatting such as
 
 <img class="responsive-img" src="../../images/general/data-bars-formatting.png" />
 
-- `Color Scale` - The shade of the color represents the value in the cell. The cells that hold values below the `*Lowest threshold` will be colored in `red`. The cells that are above the `*Highest threshold` will be colored in `green`. And all the cells that are between the `Lowest` and `Highest threshold` will be colored in `yellow`.
 
 > `Lowest threshold` - Below 33% of the maximum cell value in range selection.
-
 > `Highest threshold` - Above 66% of the maximum cell value in range selection.
 
 <img class="responsive-img" src="../../images/general/color-scale-formatting.png" />

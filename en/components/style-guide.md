@@ -85,7 +85,6 @@ This line has a paragraph break at the end (empty line after).
 ### Block Quotes
 >
 > <div class="h4">Headers break on their own</div>
-
 > Note that headers don't need line continuation characters
 as they are block elements and automatically break.
 Only text lines require the double spaces for single line breaks.
@@ -123,10 +122,8 @@ Structured statements like for `x =1 to 10` loop <a href="#"><code>structures</c
 > [!WARNING]
 > This is some Note Text  
 > that spreads across two lines
-
 > [!NOTE]
 > Singe line NOTE.
-
 > [!IMPORTANT]
 > Don't forget to screw on your hat!
 

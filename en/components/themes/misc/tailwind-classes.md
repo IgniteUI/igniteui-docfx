@@ -76,7 +76,7 @@ Use Ignite UI color tokens directly in your HTML:
 <h1 class="bg-primary-500 text-primary-500-contrast">This is a title</h1>
 ```
 
-You can explore Tailwind’s full color system [here](https://tailwindcss.com/docs/color), and apply it using the Ignite UI-provided class names.
+You can explore Tailwind's full color system in the [Tailwind color documentation](https://tailwindcss.com/docs/color), and apply it using the Ignite UI-provided class names.
 <br>
 
 #### Shadow utility classes
@@ -87,7 +87,7 @@ You can add depth using any of the predefined [elevation levels](https://www.inf
 <div class="shadow-elevation-8">Elevated container</div>
 ```
 
-You can find all the shadow-related utility classes provided by Tailwind [here](https://tailwindcss.com/docs/box-shadow)
+You can find all the shadow-related utility classes provided by Tailwind in the [Tailwind box shadow documentation](https://tailwindcss.com/docs/box-shadow)
 <br>
 
 #### Typography custom utility styles

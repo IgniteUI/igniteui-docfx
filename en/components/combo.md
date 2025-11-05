@@ -387,7 +387,6 @@ The last step is to include the component's theme.
 
 > [!NOTE]
 > The [`IgxCombo`]({environment:angularApiUrl}/classes/igxcombocomponent.html) component uses the [`IgxOverlay`](overlay.md) service to hold and display the combobox items list container. To properly scope your styles you might have to use an [`OverlaySetting.outlet`]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet). For more details check the [`IgxOverlay Styling Guide`](overlay-styling.md). Also is necessary to use `::ng-deep` when we are styling the components.
-
 > [!Note]
 > The default `type` of the `IgxCombo` is `box` unlike the [`IgxSelect`](select.md) where it is `line`.
 

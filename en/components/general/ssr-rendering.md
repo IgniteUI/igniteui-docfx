@@ -17,7 +17,7 @@ All Angular applications run in the client's browser and often this may result i
 
 ## How it works?
 
-With Angular SSR, you will serve a static version of your apps' landing page, while at the same time the full Angular application loads in the background. The landing page will be pure HTML and will be displayed even if the JavaScript is disabled. More about Server Rendering you can find [here](https://developers.google.com/web/updates/2019/02/rendering-on-the-web).
+With Angular SSR, you will serve a static version of your apps' landing page, while at the same time the full Angular application loads in the background. The landing page will be pure HTML and will be displayed even if the JavaScript is disabled. More about Server Rendering you can find in the [Rendering on the Web guide](https://developers.google.com/web/updates/2019/02/rendering-on-the-web).
 
 ## Usage
 

@@ -85,7 +85,7 @@ Now that you have the Ignite UI for Angular Input Group module or directives imp
 
 ### Label & Input
 
-You can read about the [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html) and [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) directives as well as their validation, data binding and API in a separate topic [here](label-input.md).
+You can read about the [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html) and [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) directives as well as their validation, data binding and API in the [Label & Input documentation](label-input.md).
 
 ### Prefix & Suffix
 

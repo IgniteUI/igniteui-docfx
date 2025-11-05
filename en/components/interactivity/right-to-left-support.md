@@ -57,7 +57,6 @@ or
 
 > [!NOTE]
 > Currently the `Igx-Grid` component only has partial(visual) RTL support.
-
 > [!NOTE]
 >
 > ### Breaking Changes in version 13.2.0

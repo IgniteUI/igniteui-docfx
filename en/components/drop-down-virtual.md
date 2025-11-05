@@ -244,7 +244,7 @@ export class DropDownRemoteComponent implements OnInit, OnDestroy {
 }
 ```
 
-Inside of the `ngAfterViewInit` hook, we call to get data for the initial state and subscribe to the `igxForOf` directive's [`chunkPreload`]({environment:angularApiUrl}/classes/igxforofdirective.html#chunkPreload) emitter. This subscription will be responsible for fetching data everytime the loaded chunk changes. We use `pipe(takeUntil(this.destroy$))` so we can easily unsubscribe from the emitter on component destroy.
+Inside of the `ngAfterViewInit` hook, we call to get data for the initial state and subscribe to the `igxForOf` directive's [`chunkPreload`]({environment:angularApiUrl}/classes/igxforofdirective.html#chunkPreload) emitter. This subscription will be responsible for fetching data every time the loaded chunk changes. We use `pipe(takeUntil(this.destroy$))` so we can easily unsubscribe from the emitter on component destroy.
 
 ### Remote Virtualization - Demo
 

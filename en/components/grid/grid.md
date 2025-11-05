@@ -414,7 +414,6 @@ const POJO = [{
 
 >[!WARNING]
 >**The key values must not contain arrays**.
-
 >If you use [autoGenerate]({environment:angularApiUrl}/classes/igxgridcomponent.html#autoGenerate) columns **the data keys must be identical.**
 
 ## Angular Grid Data Binding
@@ -812,7 +811,6 @@ platformBrowserDynamic()
 
 >[!NOTE]
 > This is still in experimental feature for the `IgxGridComponent`. This means that there might be some unexpected behaviors in the Grid. In case of encountering any such behavior, please contact us on our [Github](https://github.com/IgniteUI/igniteui-angular/discussions) page.
-
 >[!NOTE]
 > Enabling it can affects other parts of an Angular application that the `IgxGridComponent` is not related to.
 
