@@ -13,6 +13,10 @@
     "build-staging": "cross-env NODE_ENV=staging gulp build",
     "build-production": "cross-env NODE_ENV=production gulp build",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "verify": "npm run spellcheck && npm run lint:md",
+    "spellcheck": "cspell \"en/components/**/*.md\"",
+    "lint:md": "markdownlint \"en/components/**/*.md\"",
+    "lint:md:fix": "markdownlint \"en/components/**/*.md\" --fix",
     "postinstall": "dotnet tool restore --ignore-failed-sources && gulp copyGitHooks"
   },
   "author": "Infragistics",
@@ -24,6 +28,7 @@
     "@stackblitz/sdk": "^1.11.0",
     "browser-sync": "^3.0.3",
     "cross-env": "^7.0.3",
+    "cspell": "^9.2.2",
     "del": "^5.1.0",
     "gulp": "^5.0.0",
     "gulp-autoprefixer": "^7.0.1",
@@ -31,6 +36,7 @@
     "gulp-file-include": "^2.1.1",
     "gulp-replace": "^1.1.3",
     "gulp-shell": "^0.7.1",
+    "markdownlint-cli": "^0.45.0",
     "slash": "^3.0.0",
     "yargs": "^17.7.2"
   }

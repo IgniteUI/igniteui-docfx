@@ -6,7 +6,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 # Size
 
-Size configuration can significantly improve the visual representation of large amounts of data. In Ignite UI for Angular, we provide a pre-defined set of options: 
+Size configuration can significantly improve the visual representation of large amounts of data. In Ignite UI for Angular, we provide a pre-defined set of options:
+
 - **large**
 - **medium**
 - **small**
@@ -14,8 +15,9 @@ Size configuration can significantly improve the visual representation of large 
 Using the `--ig-size` custom CSS property, you can configure the size on an application or a component level.
 
 ## Angular Size Example
-<code-view style="height: 250px; width: 600px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+
+<code-view style="height: 250px; width: 600px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/theming/density/" alt="Angular Size Example">
 </code-view>
 
@@ -126,20 +128,23 @@ The `sizable(10px, 20px, 30px)` function generates a CSS expression that automat
 This mathematical approach using `clamp()`, `min()`, `max()`, and `calc()` functions allows components to automatically switch between size values based on the current `--ig-size` setting.
 
 ## API References
+
 <div class="divider"></div>
 
-* [Themes - Sizable Mixin]({environment:sassApiUrl}/themes#mixin-sizable)
-* [Themes - Sizable Function]({environment:sassApiUrl}/themes#function-sizable)
+- [Themes - Sizable Mixin]({environment:sassApiUrl}/themes#mixin-sizable)
+- [Themes - Sizable Function]({environment:sassApiUrl}/themes#function-sizable)
 
 ### Sizing and Spacing Functions
-* [Utilities - Pad]({environment:sassApiUrl}/utilities#function-pad)
-* [Utilities - Pad Inline]({environment:sassApiUrl}/utilities#function-pad-inline)
-* [Utilities - Pad Block]({environment:sassApiUrl}/utilities#function-pad-block)
+
+- [Utilities - Pad]({environment:sassApiUrl}/utilities#function-pad)
+- [Utilities - Pad Inline]({environment:sassApiUrl}/utilities#function-pad-inline)
+- [Utilities - Pad Block]({environment:sassApiUrl}/utilities#function-pad-block)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

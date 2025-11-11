@@ -18,6 +18,7 @@ The `treeGridGrouping` pipe groups the data based on the provided parameters and
 ```
 
 The pipe arguments are the following:
+
 - groupingExpressions - an array of [`IGroupingExpression`]({environment:angularApiUrl}/interfaces/igroupingexpression.html) objects which contains information about the fields used to generate the hierarchy and the sorting details for each group
 - groupKey - a string value for the name of the generated hierarchy column
 - childDataKey - a string value for the field where the child collection of the generated parent rows is stored
@@ -35,6 +36,7 @@ The UI component with selector `igx-tree-grid-group-by-area` handles the UI inte
 ```
 
 The component's inputs are the following:
+
 - grid - `IgxTreeGridComponent` that is used for the grouping
 - expressions - an array of [`IGroupingExpression`]({environment:angularApiUrl}/interfaces/igroupingexpression.html) objects which contains the fields used to generate the hierarchy
 - hideGroupedColumns - a boolean value indicating whether to hide the columns by which grouping was performed
@@ -46,16 +48,16 @@ The component's inputs are the following:
 
 ## Angular Tree Grid Group By Example
 
-<code-view style="height:850px" 
-           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+<code-view style="height:850px"
+           data-demos-base-url="{environment:lobDemosBaseUrl}"
            iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs" alt="Angular Tree Grid Group By Example">
 </code-view>
 
 <div class="divider--half"></div>
 
-#### Implementation
+### Implementation
 
-In this sample we are using the `treeGridGrouping` pipe and the UI component with selector `igx-tree-grid-group-by-area` for the grouping. The data is grouped by the **"category"**, **"type"** and **"contract"** fields. The resulting hierarchy is displayed in the newly created **"categories"** column. The pipe also calculates aggregated values for the generated parent rows for the **"price"**, **"change"** and **"changeP"** columns. 
+In this sample we are using the `treeGridGrouping` pipe and the UI component with selector `igx-tree-grid-group-by-area` for the grouping. The data is grouped by the **"category"**, **"type"** and **"contract"** fields. The resulting hierarchy is displayed in the newly created **"categories"** column. The pipe also calculates aggregated values for the generated parent rows for the **"price"**, **"change"** and **"changeP"** columns.
 
 ```html
 <igx-tree-grid #grid1
@@ -99,14 +101,14 @@ public sorting = IgxGroupedTreeGridSorting.instance();
 
 ## Angular Tree Grid Group By Load On Demand Example
 
-<code-view style="height:850px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:850px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-group-by-load-on-demand/" alt="Angular Tree Grid Group By Load On Demand Example">
 </code-view>
 
 <div class="divider--half"></div>
 
-#### Implementation
+### Implementation
 
 In this sample, data is loaded in portions. Initially, only the top level categories are displayed, then child data is served once a parent row is expanded. For more information on this approach, please refer to the [Tree Grid Load On Demand](load-on-demand.md) topic. The data is grouped by the **"ShipCountry"**, **"ShipCity"** and **"Discontinued"** fields and the resulting hierarchy is displayed in a separate column. The grouping is performed on a remote service - the data is modified and corresponding child and parent keys are assigned that are used to display the final data in a hierarchical view. For more information on how this service works you can take a look at the `TreeGridGroupingLoadOnDemandService` class in the `remoteService.ts` file.
 
@@ -168,19 +170,19 @@ private reloadData() {
 
 <div class="divider--half"></div>
 
-* [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
+- [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ### Additional Resources
 
 <div class="divider--half"></div>
 
-* [TreeGrid overview](tree-grid.md)
-* [TreeGrid Summaries](summaries.md)
-* [Grid Summaries](../grid/summaries.md)
+- [TreeGrid overview](tree-grid.md)
+- [TreeGrid Summaries](summaries.md)
+- [Grid Summaries](../grid/summaries.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

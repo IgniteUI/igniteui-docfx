@@ -9,7 +9,7 @@ The Tile Manager component enables the display of content in individual tiles. I
 
 ## Angular Tile Manager Example
 
-The following Ignite UI for Angular Tile Manager Example shows the component in action. 
+The following Ignite UI for Angular Tile Manager Example shows the component in action.
 
 <code-view style="height:752px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -37,6 +37,7 @@ import { defineComponents, IgcTileManagerComponent } from 'igniteui-webcomponent
 
 defineComponents(IgcTileManagerComponent);
 ```
+
 You also need to include the `CUSTOM_ELEMENTS_SCHEMA` schema in your component's configuration
 
 ```typescript
@@ -52,9 +53,10 @@ Now you can start with a basic configuration of the Angular Tile Manager.
 
 ## Usage
 
-The Tile Manager provides a base tile layout behavior, managing the placement of tiles in maximized or normal state. The tiles can be sized independently of each other and used to form complex layouts. End users can reorder tiles by dragging and dropping them, providing a flexible and intuitive experience. 
+The Tile Manager provides a base tile layout behavior, managing the placement of tiles in maximized or normal state. The tiles can be sized independently of each other and used to form complex layouts. End users can reorder tiles by dragging and dropping them, providing a flexible and intuitive experience.
 
 The Tile Manager offers two components that we can use:
+
 - `IgcTileComponent` - This component represents an individual tile displayed within the Tile Manager.
 - `IgcTileManagerComponent` - This is the main component that contains all of the tile components, serving as the container for the entire tile layout.
 
@@ -72,6 +74,6 @@ The Tile Manager offers two components that we can use:
 </igc-tile-manager>
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*Getting Started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_Getting Started_](general/getting-started.md) topic.
 
 For further information on the usage of the Tile Manager component, you can check out [this topic]({environment:infragisticsBaseUrl}/products/ignite-ui-web-components/web-components/components/layouts/tile-manager.html).

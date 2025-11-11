@@ -10,8 +10,8 @@ The Ignite UI for Angular [`IgxNavbarComponent`]({environment:angularApiUrl}/cla
 
 ## Angular Navbar Example
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navbar/" alt="Angular Navbar Example">
 </code-view>
 
@@ -25,7 +25,7 @@ To get started with the Ignite UI for Angular Navbar component, first you need t
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The first step is to import the `IgxNavbarModule` inside our **app.module.ts** file.
 
@@ -125,8 +125,8 @@ Next, we need to update our template with an icon button for each of the options
 
 If all went well, you should see the following in your browser:
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-1/" >
 </code-view>
 
@@ -168,8 +168,8 @@ What if we want to use a custom template for our app navigation on the left-most
 
 Finally, this is how our navbar should look like with its custom action button icon:
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-2/" >
 </code-view>
 
@@ -209,8 +209,8 @@ export class NavbarSample3Component {
 
 If the sample is configured properly, you should see the following in your browser:
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-3/" >
 </code-view>
 
@@ -262,8 +262,8 @@ If we want to provide a custom content for a navbar's title, we can achieve this
 > [!NOTE]
 > If [`igx-navbar-title`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) or [`igxNavbarTitle`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) is provided, the default [`title`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#title) will not be used.
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navbar-custom-title/" >
 </code-view>
 
@@ -331,9 +331,9 @@ The last step is to pass the newly created theme to the `css-vars` mixin:
 
 ### Demo
 
-<code-view style="height: 150px" 
+<code-view style="height: 150px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navbar-style/" >
 </code-view>
 
@@ -352,6 +352,7 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 ```
 
 The utility file includes both `light` and `dark` theme variants.
+
 - Use `light-*` classes for the light theme.
 - Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-navbar`, `dark-navbar`.
@@ -379,25 +380,25 @@ At the end your navbar should look like this:
 
 <div class="divider--half"></div>
 
-* [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
-* [IgxNavbarActionDirective]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html)
-* [IgxNavbarTitleDirective]({environment:angularApiUrl}/classes/igxnavbartitledirective.html)
-* [IgxNavbarComponent Styles]({environment:sassApiUrl}/themes#function-navbar-theme)
+- [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
+- [IgxNavbarActionDirective]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html)
+- [IgxNavbarTitleDirective]({environment:angularApiUrl}/classes/igxnavbartitledirective.html)
+- [IgxNavbarComponent Styles]({environment:sassApiUrl}/themes#function-navbar-theme)
 
 Additional components and/or directives with relative APIs that were used:
 
-* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxIconComponent Styles]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+- [IgxIconComponent Styles]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## Theming Dependencies
 
-* [IgxIconComponent Theme]({environment:sassApiUrl}/themes#function-icon-theme)
-* [IgxButtonComponent Theme]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxIconComponent Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxButtonComponent Theme]({environment:sassApiUrl}/themes#function-button-theme)
 
 ## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

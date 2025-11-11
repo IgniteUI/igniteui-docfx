@@ -111,8 +111,8 @@ You can specify the region to apply the filter by using the [`setRegion`]({envir
 
 Below is a list of methods and their descriptions that you can use to add a filter to a worksheet:
 
-| Method			| Description     																	|
-| ------------- 	|:-------------:																	|
+| Method   | Description                      |
+| -------------  |:-------------:                 |
 |[`applyAverageFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetfiltersettings.html#applyAverageFilter)|Represents a filter which can filter data based on whether the data is below or above the average of the entire data range.|
 |[`applyDatePeriodFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetfiltersettings.html#applyDatePeriodFilter)|Represents a filter which can filter dates in a Month, or quarter of any year.|
 |[`applyFillFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetfiltersettings.html#applyFillFilter)|Represents a filter which will filter cells based on their background fills. This filter specifies a single CellFill. Cells of with this fill will be visible in the data range. All other cells will be hidden.|
@@ -191,16 +191,16 @@ worksheet.sortSettings.sortConditions().addItem(new RelativeIndex(0), new Ordere
 
 You can protect a worksheet by calling the [`protect`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbook.html#protect) method on the [`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetcell.html#worksheet) object. This method exposes many nullable `bool` parameters that allow you to restrict or allow the following user operations:
 
-*   Editing of cells.
-*   Editing of objects such as shapes, comments, charts, or other controls.
-*   Editing of scenarios.
-*   Filtering of data.
-*   Formatting of cells.
-*   Inserting, deleting, and formatting of columns.
-*   Inserting, deleting, and formatting of rows.
-*   Inserting of hyperlinks.
-*   Sorting of data.
-*   Usage of pivot tables.
+- Editing of cells.
+- Editing of objects such as shapes, comments, charts, or other controls.
+- Editing of scenarios.
+- Filtering of data.
+- Formatting of cells.
+- Inserting, deleting, and formatting of columns.
+- Inserting, deleting, and formatting of rows.
+- Inserting of hyperlinks.
+- Sorting of data.
+- Usage of pivot tables.
 
 You can remove worksheet protection by calling the [`unprotect`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbook.html#unprotect) method on the [`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetcell.html#worksheet) object.
 
@@ -238,18 +238,18 @@ format.cellFormat.font.colorInfo = new WorkbookColorInfo(color);
 
 ## API References
 
-*   [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetcell.html#cellFormat)
-*   [`ColorScaleConditionalFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.colorscaleconditionalformat.html)
-*   [`conditionalFormats`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheet.html#conditionalFormats)
-*   [`DataBarConditionalFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.databarconditionalformat.html)
-*   [`displayOptions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheet.html#displayOptions)
-*   [`filterSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheet.html#filterSettings)
-*   [`showGridlines`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.displayoptions.html#showGridlines)
-*   [`showRowAndColumnHeaders`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.displayoptions.html#showRowAndColumnHeaders)
-*   [`sortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheet.html#sortSettings)
-*   [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.sheet.html#workbook)
-*   [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetcell.html)
-*   [`WorksheetColumn`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetcolumn.html)
-*   [`WorksheetFilterSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetfiltersettings.html)
-*   [`WorksheetSortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetsortsettings.html)
-*   [`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetcell.html#worksheet)
+- [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetcell.html#cellFormat)
+- [`ColorScaleConditionalFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.colorscaleconditionalformat.html)
+- [`conditionalFormats`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheet.html#conditionalFormats)
+- [`DataBarConditionalFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.databarconditionalformat.html)
+- [`displayOptions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheet.html#displayOptions)
+- [`filterSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheet.html#filterSettings)
+- [`showGridlines`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.displayoptions.html#showGridlines)
+- [`showRowAndColumnHeaders`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.displayoptions.html#showRowAndColumnHeaders)
+- [`sortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheet.html#sortSettings)
+- [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.sheet.html#workbook)
+- [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetcell.html)
+- [`WorksheetColumn`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetcolumn.html)
+- [`WorksheetFilterSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetfiltersettings.html)
+- [`WorksheetSortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetsortsettings.html)
+- [`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetcell.html#worksheet)

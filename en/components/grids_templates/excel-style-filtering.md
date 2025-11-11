@@ -1,17 +1,22 @@
+<!-- markdownlint-disable MD003 MD024 -->
 @@if(igxName === 'IgxGrid'){
 ---
+
 title: Excel Style Filtering in Angular Data Grid- Ignite UI for Angular
 _description: Learn how to configure Excel filtering in Angular Data Grid. You can enable/disable various options and customize the Excel style filter menu the way you want.
 _keywords: excel like filter, igniteui for angular, infragistics
 ---
+
 }
 @@if(igxName !== 'IgxGrid'){
 ---
+
 title: Excel Style Filtering in Angular @@igComponent - Ignite UI for Angular
 _description: Learn how to configure Excel filtering in Angular @@igComponent. You can enable/disable various options and customize the Excel style filter menu the way you want.
 _keywords: excel like filter, igniteui for angular, infragistics
 _canonicalLink: grid/excel-style-filtering
 ---
+
 }
 
 # Excel Filtering in Angular @@igComponent
@@ -22,24 +27,24 @@ The grid Excel filtering provides an Excel like filtering UI for any Angular tab
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:950px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:950px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-1/" alt="Angular @@igComponent Excel Style Filtering Example">
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:950px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:950px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-1/" alt="Angular @@igComponent Excel Style Filtering Example">
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:950px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:950px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-1/" alt="Angular @@igComponent Excel Style Filtering Example">
 </code-view>
 
@@ -52,22 +57,28 @@ The grid Excel filtering provides an Excel like filtering UI for any Angular tab
 To turn on the grid excel filtering, two inputs should be set. The [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowFiltering) should be set to `true` and the [`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterMode) should be set to `excelStyleFilter`.
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid [data]="data" [autoGenerate]="true" [allowFiltering]="true" [filterMode]="'excelStyleFilter'">
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid [data]="data" [autoGenerate]="true" [allowFiltering]="true" [filterMode]="'excelStyleFilter'">
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid [data]="data" [autoGenerate]="true" [allowFiltering]="true" [filterMode]="'excelStyleFilter'">
 </igx-hierarchical-grid>
 ```
+
 }
 
 ## Interactions
@@ -90,6 +101,7 @@ To apply a filter with different expressions, you can click the **Text filter**,
 Sorting, pinning and hiding features can be removed from the filter menu using the corresponding inputs: [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable), [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected), [`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablePinning), [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disableHiding).
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="650px" width="100%" [moving]="true" [allowFiltering]="true" [filterMode]="'excelStyleFilter'">
     <igx-column field="ProductName" header="Product Name" [sortable]="true" [dataType]="'string'">
@@ -110,6 +122,7 @@ Sorting, pinning and hiding features can be removed from the filter menu using t
 In the sample below **Product Name** and **Discontinued** columns have all four features enabled, **Quantity Per Unit** have all three disabled, **Unit Price** has only sorting and **Order Date** has only pinning and hiding and all are [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable).
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid #treegrid1 [data]="data" [autoGenerate]="false" height="480px" width="100%" [moving]="true" [allowFiltering]="true"
     primaryKey="ID" foreignKey="ParentID" filterMode="excelStyleFilter">
@@ -134,6 +147,7 @@ In the sample below **Product Name** and **Discontinued** columns have all four 
 In the sample below 'Order Product', 'Category' and 'Units' columns have all three features enabled, 'Price' have all three disabled, 'Order Date' and 'Delivered' have only pinning and hiding.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false" [moving]="true" [allowFiltering]='true' filterMode="excelStyleFilter"
     [height]="'650px'" [width]="'100%'" [rowHeight]="'65px'" #hierarchicalGrid>
@@ -180,24 +194,24 @@ In the sample below 'Artist' column have all three features enabled, 'Debut' hav
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:900px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:900px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-2/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:900px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:900px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-2/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:900px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:900px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-2/" >
 </code-view>
 
@@ -208,6 +222,7 @@ In the sample below 'Artist' column have all three features enabled, 'Debut' hav
 ## Templates
 
 If you want to further customize the Excel style filter menu without disabling the column features you could use custom templates. The Excel Style filter menu provides two directives for templating:
+
 - `IgxExcelStyleColumnOperationsTemplateDirective` - re-templates the area with all column operations like sorting, pinning, etc.
 - `IgxExcelStyleFilterOperationsTemplateDirective` - re-templates the area with all filter specific operations.
 
@@ -216,6 +231,7 @@ You could either re-template only one of those areas or both of them. You could 
 The following code demonstrates how to define a custom Excel style filter menu using the [`igx-excel-style-header`]({environment:angularApiUrl}/classes/igxexcelstyleheadercomponent.html), [`igx-excel-style-sorting`]({environment:angularApiUrl}/classes/igxexcelstylesortingcomponent.html) and [`igx-excel-style-search`]({environment:angularApiUrl}/classes/igxexcelstylesearchcomponent.html) components.
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="650px" width="100%" [allowFiltering]="true" [filterMode]="'excelStyleFilter'">
 
@@ -241,6 +257,7 @@ The following code demonstrates how to define a custom Excel style filter menu u
 
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid #treegrid1 [data]="data" [autoGenerate]="false" height="480px" width="100%" [allowFiltering]="true"
     primaryKey="ID" foreignKey="ParentID" filterMode="excelStyleFilter">
@@ -267,6 +284,7 @@ The following code demonstrates how to define a custom Excel style filter menu u
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false" [allowFiltering]='true' filterMode="excelStyleFilter"
     [height]="'650px'" [width]="'100%'" [rowHeight]="'65px'" #hierarchicalGrid>
@@ -325,30 +343,31 @@ You could also re-template the Excel style filtering icon in the column header u
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-3/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-3/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-3/" >
 </code-view>
 
 }
 
 Here is the full list of Excel style filtering components that you could use:
+
 - [`igx-excel-style-header`]({environment:angularApiUrl}/classes/igxexcelstyleheadercomponent.html)
 - [`igx-excel-style-sorting`]({environment:angularApiUrl}/classes/igxexcelstylesortingcomponent.html)
 - [`igx-excel-style-moving`]({environment:angularApiUrl}/classes/igxexcelstylemovingcomponent.html)
@@ -371,8 +390,8 @@ By default, the @@igComponent component filters the data based on the original c
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-formatted-filtering-strategy/" >
 </code-view>
 
@@ -380,8 +399,8 @@ By default, the @@igComponent component filters the data based on the original c
 
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-formatted-filtering-strategy/" >
 </code-view>
 
@@ -389,8 +408,8 @@ By default, the @@igComponent component filters the data based on the original c
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-formatted-filtering-strategy/" >
 </code-view>
 
@@ -401,12 +420,13 @@ By default, the @@igComponent component filters the data based on the original c
 
 
 @@if (igxName === 'IgxTreeGrid') {
+
 ## Tree Filter View
 
 By default, the Excel Style Filtering dialog displays the items in a list view. In order to display them in a tree view you can use the [`TreeGridFilteringStrategy`]({environment:angularApiUrl}/classes/treegridfilteringstrategy.html) and specify an array of column field names. Filter items will be displayed in a tree view for the specified columns and in a list view for all other columns. The following sample demonstrates how to show filter items in a tree view for the first column:
 
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-tree-filter-view/" >
 </code-view>
 }
@@ -419,8 +439,8 @@ As you see at the demos above the default appearance of the Excel Style filterin
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:670px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:670px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-external-excel-style-filtering/" >
 </code-view>
 
@@ -428,8 +448,8 @@ As you see at the demos above the default appearance of the Excel Style filterin
 
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:670px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:670px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-external-excel-style-filtering/" >
 </code-view>
 
@@ -437,8 +457,8 @@ As you see at the demos above the default appearance of the Excel Style filterin
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:670px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:670px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-excel-style-filtering/" >
 </code-view>
 
@@ -452,6 +472,7 @@ As you see at the demos above the default appearance of the Excel Style filterin
 In order to configure the Excel style filtering component, you should set its [`column`]({environment:angularApiUrl}/classes/igxgridexcelstylefilteringcomponent.html#column) property to one of the @@igComponent's columns. In the sample above, we have bound the [`column`]({environment:angularApiUrl}/classes/igxgridexcelstylefilteringcomponent.html#column) property to the value of an IgxSelectComponent that displays the @@igComponent's columns.
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-select #gridColums value="ProductID">
    <label igxLabel>Columns:</label>
@@ -463,8 +484,10 @@ In order to configure the Excel style filtering component, you should set its [`
 <igx-grid-excel-style-filtering [column]="grid1.getColumnByName(gridColums.value)">
 </igx-grid-excel-style-filtering>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-select #gridColums value="ID">
    <label igxLabel>Columns:</label>
@@ -476,8 +499,10 @@ In order to configure the Excel style filtering component, you should set its [`
 <igx-grid-excel-style-filtering [column]="treegrid1.getColumnByName(gridColums.value)">
 </igx-grid-excel-style-filtering>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-select #gridColums value="Artist">
    <label igxLabel>Columns:</label>
@@ -489,6 +514,7 @@ In order to configure the Excel style filtering component, you should set its [`
 <igx-grid-excel-style-filtering [column]="hierarchicalgrid1.getColumnByName(gridColums.value)">
 </igx-grid-excel-style-filtering>
 ```
+
 }
 
 ## External Outlet
@@ -497,10 +523,11 @@ The @@igComponent's [`z-index`](https://developer.mozilla.org/en-US/docs/Web/CSS
 However, elements that go outside of the grid (e.g. Excel Style filter) will conflict with outside elements with the same `z-index` (e.g. having two grids one under another) resulting in false rendering. The solution for this issue is to set the [`outlet`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#outlet) property to an external outlet directive which allows the overlay elements to always appear on top.
 
 ### Demo
+
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-external-outlet/" >
 </code-view>
 
@@ -508,8 +535,8 @@ However, elements that go outside of the grid (e.g. Excel Style filter) will con
 
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-external-outlet/" >
 </code-view>
 
@@ -517,8 +544,8 @@ However, elements that go outside of the grid (e.g. Excel Style filter) will con
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-outlet/" >
 </code-view>
 
@@ -533,7 +560,7 @@ To get started with styling the Excel Style Filtering dialog, we need to import 
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 The Excel Style Filtering dialog takes its background color from the grid's theme, using the `filtering-row-background` parameter. Additionally, there are specific Excel Style Filtering parameters available for customizing the text color of elements within the dialog. To change the overall style of the dialog, you need to create a custom theme.
 
@@ -611,7 +638,6 @@ The last step is to **include** each component’s custom theme. We will also se
 
 >[!NOTE]
 >We scope most of the components' mixins within `.igx-excel-filter` and `.igx-excel-filter__secondary`, so that these custom themes will affect only components nested in the excel style filtering dialog and all of its sub-dialogs. Otherwise other buttons, checkboxes, input-groups and lists would be affected too.
-
 >[!NOTE]
 >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
 
@@ -641,27 +667,27 @@ The last step is to **include** each component’s custom theme. We will also se
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:950px" 
+<code-view style="height:950px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-style/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:950px" 
+<code-view style="height:950px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-style/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:950px" 
+<code-view style="height:950px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-style/" >
 </code-view>
 
@@ -672,27 +698,29 @@ The last step is to **include** each component’s custom theme. We will also se
 <div class="divider--half"></div>
 
 ## API References
+
 <div class="divider--half"></div>
 
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+- [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [@@igComponent overview](@@igMainTopic.md)
-* [Virtualization and Performance](virtualization.md)
-* [Paging](paging.md)
-* [Sorting](sorting.md)
-* [Summaries](summaries.md)
-* [Column Moving](column-moving.md)
-* [Column Pinning](column-pinning.md)
-* [Column Resizing](column-resizing.md)
-* [Selection](selection.md)
+- [@@igComponent overview](@@igMainTopic.md)
+- [Virtualization and Performance](virtualization.md)
+- [Paging](paging.md)
+- [Sorting](sorting.md)
+- [Summaries](summaries.md)
+- [Column Moving](column-moving.md)
+- [Column Pinning](column-pinning.md)
+- [Column Resizing](column-resizing.md)
+- [Selection](selection.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

@@ -10,8 +10,8 @@ The Ignite UI for Angular Input and Label directives are used to decorate and st
 
 ## Angular Label & Input Example
 
-<code-view style="height:100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-1/" alt="Angular Label & Input Example">
 </code-view>
 
@@ -25,7 +25,7 @@ To get started with the Ignite UI for Angular Label and Input directives, first 
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxInputGroupModule` in your **app.module.ts** file.
 
@@ -101,8 +101,8 @@ We can validate an `input` using the [`required`]({environment:angularApiUrl}/cl
 </igx-input-group>
 ```
 
-<code-view style="height:100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-2/" >
 </code-view>
 
@@ -159,8 +159,8 @@ If you want the text in an input element, marked with `igxInput`, to be selected
 > [!NOTE]
 > To use the [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) directive, you have to import the [`IgxTextSelectionModule`]({environment:angularApiUrl}/classes/igxtextselectionmodule.html).
 
-<code-view style="height: 130px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 130px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-text-selection/" >
 </code-view>
 
@@ -168,15 +168,15 @@ If you want the text in an input element, marked with `igxInput`, to be selected
 
 ## Input Group
 
-The Ignite UI for Angular Input Group component helps developers to create easy-to-use and aesthetic forms. For further information, you can read the separate topic [here](input-group.md).
+The Ignite UI for Angular Input Group component helps developers to create easy-to-use and aesthetic forms. For further information, you can read the [Input Group documentation](input-group.md).
 
 ## API References
 
 <div class="divider--half"></div>
 
-* [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
-* [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
-* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+- [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
+- [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
+- [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
 ## Additional Resources
 
@@ -184,9 +184,9 @@ The Ignite UI for Angular Input Group component helps developers to create easy-
 
 Related topics:
 
-* [Input Group](input-group.md)
+- [Input Group](input-group.md)
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

@@ -28,7 +28,7 @@ To get started with the Ignite UI for Angular Ripple directive, first you need t
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxRippleModule` in the **app.module.ts** file.
 
@@ -179,9 +179,9 @@ The next step is to pass the custom ripple theme:
 
 ### Demo
 
-<code-view style="height:200px" 
+<code-view style="height:200px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/ripple-styling/" alt="Angular Ripple Example">
 </code-view>
 

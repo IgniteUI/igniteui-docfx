@@ -1,25 +1,32 @@
+<!-- markdownlint-disable MD003 MD024 -->
 @@if (igxName === 'IgxGrid') {
 ---
+
 title: Angular Multi-column Headers - Ignite UI for Angular
 _description: Start grouping column headers by placing them under a common hierarchical header with the help of Ignite UI for Angular grid and combine them into multi headers.
 _keywords: column headers, ignite ui for angular, infragistics
 ---
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
+
 title: Angular Multi-column Headers - Ignite UI for Angular
 _description: SStart grouping column headers by placing them under a common hierarchical header with the help of Ignite UI for Angular grid and combine them into multi headers.
 _keywords: column headers, ignite ui for angular, infragistics
 _canonicalLink: grid/multi-column-headers
 ---
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
+
 title: Angular Multi-column Headers - Ignite UI for Angular
 _description: Start grouping column headers by placing them under a common hierarchical header with the help of Ignite UI for Angular grid and combine them into multi headers.
 _keywords: column headers, ignite ui for angular, infragistics
 _canonicalLink: grid/multi-column-headers
 ---
+
 }
 
 # Angular @@igComponent Multi-column Headers Overview
@@ -30,24 +37,24 @@ _canonicalLink: grid/multi-column-headers
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/multi-column-headers/" alt="Angular @@igComponent Multi-column Headers Overview Example">
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-headers/" alt="Angular @@igComponent Multi-column Headers Overview Example">
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column/" alt="Angular @@igComponent Multi-column Headers Overview Example">
 </code-view>
 
@@ -56,6 +63,7 @@ _canonicalLink: grid/multi-column-headers
 The declaration of `Multi-column header` could be achieved by wrapping a set of columns into [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) component with [`header`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#header) title passed.
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid [data]="data" [allowFiltering]="true">
     <igx-column-group header="Contact Information">
@@ -65,8 +73,10 @@ The declaration of `Multi-column header` could be achieved by wrapping a set of 
     </igx-column-group>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID">
     <igx-column-group header="Contact Information">
@@ -76,8 +86,10 @@ The declaration of `Multi-column header` could be achieved by wrapping a set of 
     </igx-column-group>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid [data]="localdata" [moving]="true" [allowFiltering]="true">
     <igx-column field="CustomerID" sortable="true" resizable="true"></igx-column>
@@ -95,11 +107,13 @@ The declaration of `Multi-column header` could be achieved by wrapping a set of 
     </igx-column-group>
 </igx-hierarchical-grid>
 ```
+
 }
 
 For achieving `n-th` level of nested headers, the declaration above should be followed. So by nesting [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) leads to the desired result.
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid [data]="data" [allowFiltering]="true" [moving]="true">
     <igx-column-group header="General Information">
@@ -111,8 +125,10 @@ For achieving `n-th` level of nested headers, the declaration above should be fo
     </igx-column-group>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [moving]="true">
     <igx-column-group [pinned]="false" header="General Information">
@@ -125,8 +141,10 @@ For achieving `n-th` level of nested headers, the declaration above should be fo
     </igx-column-group>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid [data]="localdata" [allowFiltering]="true" [moving]="true">
     <igx-column field="CustomerID" sortable="true" resizable="true"></igx-column>
@@ -139,6 +157,7 @@ For achieving `n-th` level of nested headers, the declaration above should be fo
     </igx-column-group>
 </igx-hierarchical-grid>
 ```
+
 }
 
 Every [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) supports [`moving`](column-moving.md), [`pinning`](column-pinning.md) and [`hiding`](column-hiding.md).
@@ -149,6 +168,7 @@ Every [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcom
 > When `columns/column-groups` are not wrapped by current `group` which means they are **top level** `columns`, moving is allowed between whole visible columns.
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid [data]="data" [allowFiltering]="true" [moving]="true">
     <igx-column-group [pinned]="true" header="General Information">
@@ -159,8 +179,10 @@ Every [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcom
     <igx-column sortable="true" resizable="true" field="PostalCode"></igx-column>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [moving]="true">
     <igx-column-group header="Contact Information">
@@ -171,8 +193,10 @@ Every [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcom
     <igx-column field="Age" dataType="number" [sortable]="true" [resizable]="true"></igx-column>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid [data]="localdata" [allowFiltering]="true" [moving]="true">
     <igx-column field="CustomerID" sortable="true" resizable="true"></igx-column>
@@ -186,6 +210,7 @@ Every [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcom
     ...
 </igx-hierarchical-grid>
 ```
+
 }
 
 ## Multi-column Header Template
@@ -234,24 +259,24 @@ The following sample demonstrates how to implement collapsible column groups usi
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/multi-column-header-template/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-header-template/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-template/" >
 </code-view>
 
@@ -266,7 +291,7 @@ To get started with styling the sorting behavior, we need to import the `index` 
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 Following the simplest approach, we create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) and accepts the `$header-background`, `$header-text-color`, `$header-border-width`, `$header-border-style` and `$header-border-color` parameters.
 
@@ -283,41 +308,44 @@ $custom-theme: grid-theme(
 >[!NOTE]
 >Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
-The last step is to **include** the component mixins: 
+The last step is to **include** the component mixins:
 
 ```scss
 @include css-vars($custom-theme);
 ```
 
 @@if (igxName === 'IgxGrid') {
+
 ### Demo
 
 
-<code-view style="height:500px" 
+<code-view style="height:500px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/multi-column-headers-styling/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ### Demo
 
 
-<code-view style="height:500px" 
+<code-view style="height:500px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-headers-styling/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ### Demo
 
 
-<code-view style="height:500px" 
+<code-view style="height:500px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-styling/" >
 </code-view>
 
@@ -327,28 +355,31 @@ The last step is to **include** the component mixins:
 >The sample will not be affected by the selected global theme from `Change Theme`.
 
 ## API References
+
 <div class="divider--half"></div>
 
-* [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
-* [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
+- [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
+
 <div class="divider--half"></div>
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [@@igComponent overview](@@igMainTopic.md)
-* [Virtualization and Performance](virtualization.md)
-* [Paging](paging.md)
-* [Filtering](filtering.md)
-* [Sorting](sorting.md)
-* [Summaries](summaries.md)
-* [Column Resizing](column-resizing.md)
-* [Selection](selection.md)
+- [@@igComponent overview](@@igMainTopic.md)
+- [Virtualization and Performance](virtualization.md)
+- [Paging](paging.md)
+- [Filtering](filtering.md)
+- [Sorting](sorting.md)
+- [Summaries](summaries.md)
+- [Column Resizing](column-resizing.md)
+- [Selection](selection.md)
 @@if (igxName === 'IgxGrid') {* [Group by](groupby.md)}
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

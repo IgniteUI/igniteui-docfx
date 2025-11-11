@@ -1,30 +1,37 @@
+<!-- markdownlint-disable MD003 MD024 -->
 @@if (igxName === 'IgxGrid') {
 ---
+
 title: Angular Grid Search Filter - Ignite UI for Angular
 _description: Perform fast grid search with Ignite UI for Angular Data grid. It allows instant content search in the virtualized data of the Grid, while delivering better UX.
 _keywords: Content search, ignite ui for angular, infragistics
 ---
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
+
 title: Angular Tree Grid Search Filter - Ignite UI for Angular
 _description: Perform fast grid search with Ignite UI for Angular Tree grid. It allows instant content search in the virtualized data of the Grid, while delivering better UX.
 _keywords: Content search, ignite ui for angular, infragistics
 _canonicalLink: grid/search
 ---
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
+
 title: Angular Hierarchical Grid Search Filter - Ignite UI for Angular
 _description: Perform fast grid search with Ignite UI for Angular Hierarchical grid. It allows instant content search in the virtualized data of the Grid, while delivering better UX.
 _keywords: Content search, ignite ui for angular, infragistics
 _canonicalLink: grid/search
 ---
+
 }
 
 # Angular @@igComponent Search Filter
 
-Angular @@igComponent search enables the process of finding values in the collection of data. We make it easier to setup this functionality and it can be implemented with search input box, buttons, keyboard navigation and other useful features for an even better user experience. While browsers natively provide content search functionality, most of the time the @@igComponent virtualizes its columns and rows that are out of view. In these cases, the native grid search is unable to search data in the virtualized cells, since they are not part of the DOM. We have extended the Ignite UI for Angular table-based grid with a **search API** that allows you to search through the **virtualized content** of the @@igComponent. 
+Angular @@igComponent search enables the process of finding values in the collection of data. We make it easier to setup this functionality and it can be implemented with search input box, buttons, keyboard navigation and other useful features for an even better user experience. While browsers natively provide content search functionality, most of the time the @@igComponent virtualizes its columns and rows that are out of view. In these cases, the native grid search is unable to search data in the virtualized cells, since they are not part of the DOM. We have extended the Ignite UI for Angular table-based grid with a **search API** that allows you to search through the **virtualized content** of the @@igComponent.
 
 ## Angular Search Example
 
@@ -32,8 +39,8 @@ The following example represents @@igComponent with search input box that allows
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-search-sample/" alt="Angular Search Example">
 </code-view>
 
@@ -41,8 +48,8 @@ The following example represents @@igComponent with search input box that allows
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-search/" alt="Angular Search Example">
 </code-view>
 
@@ -55,9 +62,11 @@ The following example represents @@igComponent with search input box that allows
 ## Angular Search Usage
 
 ### Grid setup
+
 Let's start by creating our grid and binding it to our data. We will also add some custom styles for the components we will be using!
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <!--searchgrid.component.html-->
 
@@ -70,8 +79,10 @@ Let's start by creating our grid and binding it to our data. We will also add so
     <igx-column [field]="'Date'" dataType="date" [sortable]="true"></igx-column>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <!--searchgrid.component.html-->
 
@@ -83,12 +94,14 @@ Let's start by creating our grid and binding it to our data. We will also add so
     <igx-column [field]="'HireDate'" dataType="date" [sortable]="true"></igx-column>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <!-- TODO -->
 }
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
+
 ```css
 /* searchgrid.component.css */
 
@@ -112,6 +125,7 @@ Let's start by creating our grid and binding it to our data. We will also add so
     margin-left: 5px;
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <!-- TODO -->
@@ -132,6 +146,7 @@ public exactMatch: boolean = false;
 Now let's create our search input! By binding our **searchText** as ngModel to our newly created input and subscribe to the ngModelChange event, we can detect every single **searchText** modification by the user. This will allow us to use the @@igComponent's [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findNext) and [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findPrev) methods to highlight all the occurrences of the **searchText** and scroll to the next/previous one (depending on which method we have invoked).
 
 Both the [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findNext) and the [`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findPrev) methods have three arguments:
+
 - `text`: **string** (the text we are searching for)
 - (optional) `caseSensitive`: **boolean** (should the search be case sensitive or not, default value is false)
 - (optional) `exactMatch`: **boolean** (should the search be by an exact match or not, default value is false)
@@ -147,6 +162,7 @@ The methods from above return a **number** value (the number of times the @@igCo
 ```
 
 ### Display results count
+
 Let's also display the position of the current occurrence, along with the total results count! We can do this by using the grid's `lastSearchInfo` property. This property is automatically updated when using the **find** methods.
 
 - The `@@igObjectRef.lastSearchInfo.matchInfoCache.length` value will give us the total results count.
@@ -299,6 +315,7 @@ public clearSearch() {
 ```
 
 On the right in our input group, let's create three separate containers with the following purposes:
+
 - For displaying the search results.
 
 ```html
@@ -315,6 +332,7 @@ On the right in our input group, let's create three separate containers with the
     </div>
 </igx-suffix>
 ```
+
 - For displaying a couple of chips that toggle the **caseSensitive** and the **exactMatch** properties. We have replaced the checkboxes with two stylish chips that change color based on these properties. Whenever a chip is clicked, we invoke its respective handler - **updateSearch** or **updateExactSearch** depending on which chip has been clicked.
 
 ```html
@@ -333,6 +351,7 @@ On the right in our input group, let's create three separate containers with the
     </div>
     ...
 ```
+
 - For the search navigation buttons, we have transformed our inputs into ripple styled buttons with material icons. The handlers for the click events remain the same - invoking the [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findNext)/[`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findPrev) methods.
 
 ```html
@@ -363,51 +382,54 @@ On the right in our input group, let's create three separate containers with the
 In this article we implemented our own search bar for the @@igComponent with some additional functionality when it comes to navigating between the search results. We also used some additional Ignite UI for Angular components like icons, chips and inputs. The search API is listed below.
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) methods:
--   [findNext]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findNext)
--   [findPrev]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findPrev)
--   [clearSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearSearch)
--   [refreshSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#refreshSearch)
+
+- [findNext]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findNext)
+- [findPrev]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findPrev)
+- [clearSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearSearch)
+- [refreshSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#refreshSearch)
 
 [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) methods:
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) properties:
--   [searchable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#searchable)
+
+- [searchable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#searchable)
 
 [ISearchInfo]({environment:angularApiUrl}/interfaces/isearchinfo.html)
 
 Additional components and/or directives with relative APIs that were used:
 
-* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
-* [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
+- [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+- [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+- [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
+- [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+- [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
 
 Styles:
 
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
-* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/themes#function-input-group-theme)
-* [IgxIconComponent Styles]({environment:sassApiUrl}/themes#function-icon-theme)
-* [IgxRippleDirective Styles]({environment:sassApiUrl}/themes#function-ripple-theme)
-* [IgxButtonDirective Styles]({environment:sassApiUrl}/themes#function-button-theme)
-* [IgxChipComponent Styles]({environment:sassApiUrl}/themes#function-chip-theme)
+- [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxInputGroupComponent Styles]({environment:sassApiUrl}/themes#function-input-group-theme)
+- [IgxIconComponent Styles]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxRippleDirective Styles]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxButtonDirective Styles]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxChipComponent Styles]({environment:sassApiUrl}/themes#function-chip-theme)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [@@igComponent overview](@@igMainTopic.md)
-* [Virtualization and Performance](virtualization.md)
-* [Filtering](filtering.md)
-* [Paging](paging.md)
-* [Sorting](sorting.md)
-* [Summaries](summaries.md)
-* [Column Moving](column-moving.md)
-* [Column Pinning](column-pinning.md)
-* [Column Resizing](column-resizing.md)
-* [Selection](selection.md)
+- [@@igComponent overview](@@igMainTopic.md)
+- [Virtualization and Performance](virtualization.md)
+- [Filtering](filtering.md)
+- [Paging](paging.md)
+- [Sorting](sorting.md)
+- [Summaries](summaries.md)
+- [Column Moving](column-moving.md)
+- [Column Pinning](column-pinning.md)
+- [Column Resizing](column-resizing.md)
+- [Selection](selection.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

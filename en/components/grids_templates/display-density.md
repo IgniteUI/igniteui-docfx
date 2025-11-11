@@ -1,25 +1,32 @@
+<!-- markdownlint-disable MD003 MD024 -->
 @@if (igxName === 'IgxGrid') {
 ---
+
 title:  Angular Grid Size - Ignite UI for Angular
 _description: Learn how to apply size capabilities to the Data grid component. You can use a set of compact view options in the Ignite UI for Angular.
 _keywords: material density, size, igniteui for angular, infragistics
 ---
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
+
 title:  Angular Grid Size - Ignite UI for Angular
 _description: Learn how to apply size capabilities to the Tree grid component. You can use a set of compact view options in the Ignite UI for Angular.
 _keywords: material density, size igniteui for angular, infragistics
 _canonicalLink: grid/display-density
 ---
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
+
 title:  Angular Grid Size - Ignite UI for Angular
 _description: Learn how to apply size capabilities to the Hierarchical grid component. You can use a set of compact view options in the Ignite UI for Angular.
 _keywords: material density, size, igniteui for angular, infragistics
 _canonicalLink: grid/display-density
 ---
+
 }
 
 # Angular @@igComponent Size
@@ -31,8 +38,8 @@ _canonicalLink: grid/display-density
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-displayDensity/" alt="Angular @@igComponent Size Example">
 </code-view>
 
@@ -40,8 +47,8 @@ _canonicalLink: grid/display-density
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-display-density/" alt="Angular @@igComponent Size Example">
 </code-view>
 
@@ -49,8 +56,8 @@ _canonicalLink: grid/display-density
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:680px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:680px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-density/" alt="Angular @@igComponent Size Example">
 </code-view>
 
@@ -67,9 +74,10 @@ As you can see in the demo above, the [**@@igxName**]({environment:angularApiUrl
 ```
 
 And now let's see in details how each option reflects on the @@igComponent component. When you switch between different sizes the height of each @@igComponent element and the corresponding paddings will be changed. Also if you want to apply custom column [**width**]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width), please consider the fact that it must be bigger than the sum of left and right padding.
- - **--ig-size-large** - this is the default @@igComponent size with the lowest intense and row height equal to `50px`. Left and Right paddings are `24px`; Minimal column [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) is `80px`;
- - **--ig-size-medium** - this is the middle size with `40px` row height. Left and Right paddings are `16px`; Minimal column [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) is `64px`;
- - **--ig-size-small** - this is the smallest size with `32px` row height. Left and Right paddings are `12px`; Minimal column [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) is `56px`;
+
+- **--ig-size-large** - this is the default @@igComponent size with the lowest intense and row height equal to `50px`. Left and Right paddings are `24px`; Minimal column [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) is `80px`;
+- **--ig-size-medium** - this is the middle size with `40px` row height. Left and Right paddings are `16px`; Minimal column [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) is `64px`;
+- **--ig-size-small** - this is the smallest size with `32px` row height. Left and Right paddings are `12px`; Minimal column [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) is `56px`;
 
 > [!NOTE]
 > Please keep in mind that currently you **can not** override any of the sizes.
@@ -111,6 +119,7 @@ public ngOnInit() {
 Now we can add the markup.
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <div class="density-chooser">
     <igx-buttongroup [values]="sizes" (selected)="selectSize($event)"></igx-buttongroup>
@@ -165,8 +174,10 @@ Now we can add the markup.
     </igx-column-group>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <div class="density-chooser">
     <igx-buttongroup [values]="sizes" (selected)="selectSize($event)"></igx-buttongroup>
@@ -213,8 +224,10 @@ Now we can add the markup.
     </igx-column-group>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <div class="density-chooser">
     <igx-buttongroup [values]="sizes" (selected)="selectSize($event)"></igx-buttongroup>
@@ -254,6 +267,7 @@ Now we can add the markup.
 
 </igx-hierarchical-grid>
 ```
+
 }
 
 Finally, let's provide the necessary logic in order to actually apply the size:
@@ -276,8 +290,9 @@ protected get sizeStyle() {
 Another option that [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) provides for you, in order to be able to change the height of the rows in the @@igComponent, is the property [`rowHeight`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowheight). So let's see in action how this property affects the @@igComponent layout along with the `--ig-size` CSS variable.
 
 Please keep in mind the following:
- - `--ig-size` CSS variable will have **NO** impact on row height **if there is [rowHeight]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowheight) specified**;
- - `--ig-size` will **affect all of the rest elements in the @@igComponent**, as it has been described above;
+
+- `--ig-size` CSS variable will have **NO** impact on row height **if there is [rowHeight]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowheight) specified**;
+- `--ig-size` will **affect all of the rest elements in the @@igComponent**, as it has been described above;
 
 And now we can extend our sample and add [`rowHeight`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowHeight) property to the @@igComponent:
 
@@ -287,34 +302,35 @@ And now we can extend our sample and add [`rowHeight`]({environment:angularApiUr
  ..............
  </@@igSelector>
  ```
+
 <div class="divider--half"></div>
 
 ## API References
 
 <div class="divider--half"></div>
 
-* [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+- [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 
 <div class="divider--half"></div>
 
 ## Additional Resources
 
-* [@@igComponent overview](@@igMainTopic.md)
-* [Virtualization and Performance](virtualization.md)
-* [Editing](editing.md)
-* [Paging](paging.md)
-* [Filtering](filtering.md)
-* [Sorting](sorting.md)
-* [Summaries](summaries.md)
-* [Column Pinning](column-pinning.md)
-* [Column Resizing](column-resizing.md)
-* [Selection](selection.md)
+- [@@igComponent overview](@@igMainTopic.md)
+- [Virtualization and Performance](virtualization.md)
+- [Editing](editing.md)
+- [Paging](paging.md)
+- [Filtering](filtering.md)
+- [Sorting](sorting.md)
+- [Summaries](summaries.md)
+- [Column Pinning](column-pinning.md)
+- [Column Resizing](column-resizing.md)
+- [Selection](selection.md)
 @@if (igxName !== 'IgxHierarchicalGrid') {* [Searching](search.md)}
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

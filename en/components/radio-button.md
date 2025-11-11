@@ -12,8 +12,8 @@ _keywords: Angular Radio Group component, Angular Radio Group control, Ignite UI
 
 ## Angular Radio & Radio Group Example
 
-<code-view style="height: 120px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 120px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-1/" alt="Angular Radio & Radio Group Example">
 </code-view>
 
@@ -27,7 +27,7 @@ To get started with the Ignite UI for Angular Radio Button component, first you 
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxRadioModule` in the **app.module.ts** file.
 
@@ -139,8 +139,8 @@ Pay attention that if you don't use the `NgModel` directive in a two-way data bi
 
 The final result would be something like that:
 
-<code-view style="height: 550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-2/" >
 </code-view>
 
@@ -218,8 +218,8 @@ The last step is to pass the custom radio theme in our application:
 @include css-vars($custom-radio-theme);
 ```
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-styling-sample/" >
 </code-view>
 
@@ -238,6 +238,7 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 ```
 
 The utility file includes both `light` and `dark` theme variants.
+
 - Use `light-*` classes for the light theme.
 - Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-radio`, `dark-radio`.
@@ -271,8 +272,8 @@ At the end your radio button should look like this:
 
 ### Demo
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-group-sample/" >
 </code-view>
 
@@ -335,8 +336,8 @@ public alignment = RadioGroupAlignment.vertical;
 </igx-radio-group>
 ```
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-group-vertical/" >
 </code-view>
 
@@ -346,13 +347,13 @@ public alignment = RadioGroupAlignment.vertical;
 
 <div class="divider--half"></div>
 
-* [IgxRadioGroupDirective]({environment:angularApiUrl}/classes/igxradiogroupdirective.html)
-* [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
-* [IgxRadioComponent Styles]({environment:sassApiUrl}/themes#function-radio-theme)
+- [IgxRadioGroupDirective]({environment:angularApiUrl}/classes/igxradiogroupdirective.html)
+- [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
+- [IgxRadioComponent Styles]({environment:sassApiUrl}/themes#function-radio-theme)
 
 ## Theming Dependencies
 
-* [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ## Additional Resources
 
@@ -360,5 +361,5 @@ public alignment = RadioGroupAlignment.vertical;
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

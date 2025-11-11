@@ -4,14 +4,16 @@ _description: Easily integrate a brief, single-line message within your mobile a
 _keywords: Angular Snackbar component, Angular Snackbar control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
 ---
 # Angular Snackbar Component Overview
+
 <p class="highlight">The Ignite UI for Angular Snackbar component provides feedback about an operation with a single-line message, which can include an action. The Snackbar message appears above all other elements and is positioned at the bottom center of the screen.</p>
 
 ## Angular Snackbar Example
+
 <div class="divider--half"></div>
 
 
-<code-view style="height: 140px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 140px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-1/" alt="Angular Snackbar Example">
 </code-view>
 
@@ -26,7 +28,7 @@ To get started with the Ignite UI for Angular Snackbar component, first you need
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxSnackbarModule` in your **app.module.ts** file.
 
@@ -73,6 +75,7 @@ Now that you have the Ignite UI for Angular Snackbar module or component importe
 ## Using the Angular Snackbar
 
 ### Show Snackbar
+
 In order to display the snackbar component, use its [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) method and call it on a button click.
 
 ```html
@@ -83,6 +86,7 @@ In order to display the snackbar component, use its [`open()`]({environment:angu
     <igx-snackbar #snackbar>Message deleted</igx-snackbar>
 </div>
 ```
+
 If the sample is configured properly, you should see the demo sample. A snackbar appears displaying a text message when the button is clicked.
 As you can see in the code snippet above, one way to set the massage displayed in the snackbar is to use the content projection. But if you need to switch the value programmatically based on some custom logic you can just pass the value as a parameter to the [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) method.
 
@@ -97,6 +101,7 @@ As you can see in the code snippet above, one way to set the massage displayed i
 ```
 
 ### Hide/Auto Hide
+
 Once opened, the snackbar disappears after a period specified by the [`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displayTime) input which is set initially to 4000 milliseconds. This behavior is enabled by default but you can change it by setting [`autoHide`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#autoHide) to **false**. In this way, the snackbar will remain visible. Using the snackbar [`close()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#close) method, you can close the component in the code.
 
 ```html
@@ -116,17 +121,19 @@ public close(element) {
 }
 ```
 
-If the sample is configured properly, the first snackbar appears when the button is clicked, showing both the *message* and *action button*. The auto-hide feature is disabled and the snackbar disappears on 'CLOSE' button click. Another snackbar passes a different message through the [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) method and hides it when the *display time* expires. The third component passes a message as a param to the [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) method and adds an icon using content projection.
+If the sample is configured properly, the first snackbar appears when the button is clicked, showing both the _message_ and _action button_. The auto-hide feature is disabled and the snackbar disappears on 'CLOSE' button click. Another snackbar passes a different message through the [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) method and hides it when the _display time_ expires. The third component passes a message as a param to the [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) method and adds an icon using content projection.
 
-<code-view style="height: 230px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 230px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2/" >
 </code-view>
 
 ### Display Time
+
 Use [`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displayTime) and set it to an interval in milliseconds to configure how long the snackbar component is visible. By default, as we said, it's initially set to 4000 milliseconds.
 
 ### Customize Snackbar
+
 We can also customize the content of the Snackbar to display more complex elements than a message and a button. If we want to show the snackbar while loading a file, for example, a loading animation could be added to its content.
 
 ```html
@@ -177,13 +184,14 @@ We can also customize the content of the Snackbar to display more complex elemen
 As a result, a message and three loading dots appear in the snackbar.
 
 
-<code-view style="height: 170px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 170px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-5/" >
 </code-view>
 
 
 ### Snackbar in list
+
 Having all main snackbar features covered, we can integrate this component in a more interesting scenario. We can use the snackbar to provide a notification and the ability to revert actions.
 
 Let’s create a list with contacts that can be deleted. When an item is deleted, a snackbar is displayed containing a message and a button to undo the action.
@@ -248,12 +256,13 @@ public restore() {
 }
 ```
 
-<code-view style="height: 350px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 350px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4/" >
 </code-view>
 
 ### Positioning
+
 Use [`positionSettings`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#positionSettings) property to configure where the snackbar appears. By default, it is displayed at the bottom of the page. In the sample below, we set notification to appear at the top position.
 
 ```html
@@ -306,7 +315,7 @@ To get started with styling the snackbar, we need to import the index file, wher
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 Following the simplest approach, we create a new theme that extends the [`snackbar-theme`]({environment:sassApiUrl}/themes#function-snackbar-theme) and accepts the `$text-color`, `$background`, `$button-color` and the `$border-radius` parameters.
 
@@ -330,9 +339,9 @@ The last step is to **include** the component theme in our application.
 
 ### Demo
 
-<code-view style="height: 150px" 
+<code-view style="height: 150px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/snackbar-style/" >
 </code-view>
 
@@ -351,6 +360,7 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 ```
 
 The utility file includes both `light` and `dark` theme variants.
+
 - Use `light-*` classes for the light theme.
 - Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-snackbar`, `dark-snackbar`.
@@ -377,18 +387,19 @@ At the end your snackbar should look like this:
 </div>
 
 ## API References
+
 In this article we learned how to use and configure the [`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html). For more details in regards its API, take a look at the links below:
 
-* [`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html)
+- [`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html)
 
 Styles:
 
-* [`IgxSnackbarComponent Styles`]({environment:sassApiUrl}/themes#function-snackbar-theme)
+- [`IgxSnackbarComponent Styles`]({environment:sassApiUrl}/themes#function-snackbar-theme)
 
 ## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

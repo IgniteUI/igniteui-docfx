@@ -5,6 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Angular Input Group Component Overview
+
 The `IgxInputGroupComponent` allows the user to enhance input elements like input, select, textarea, etc. This can be achieved by adding custom content like text, icons, buttons, custom validation, floating label, etc., on either side of them, as a prefix, suffix, or hint.
 
 ## Angular Input Group Example
@@ -24,7 +25,7 @@ To get started with the Ignite UI for Angular Input Group component, first you n
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxInputGroupModule` in your **app.module.ts** file.
 
@@ -83,9 +84,11 @@ Now that you have the Ignite UI for Angular Input Group module or directives imp
 ## Using the Angular Input Group
 
 ### Label & Input
-You can read about the [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html) and [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) directives as well as their validation, data binding and API in a separate topic [here](label-input.md).
+
+You can read about the [`igxLabel`]({environment:angularApiUrl}/classes/igxlabeldirective.html) and [`igxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) directives as well as their validation, data binding and API in the [Label & Input documentation](label-input.md).
 
 ### Prefix & Suffix
+
 The `igx-prefix` or `igxPrefix` and `igx-suffix` or `igxSuffix` directives can contain or be attached to HTML elements, strings, icons or even other components. In the following sample we will create a new input field with a string **prefix** and an icon **suffix**:
 
 ```html
@@ -105,6 +108,7 @@ The `igx-prefix` or `igxPrefix` and `igx-suffix` or `igxSuffix` directives can c
 <div class="divider--half"></div>
 
 ### Hints
+
 The [`igx-hint`]({environment:angularApiUrl}/classes/igxhintdirective.html) directive provides a helper text placed below the input. It can be at the beginning or at the end of the input depending on the value of the [`position`]({environment:angularApiUrl}/classes/igxhintdirective.html#position) property. Let's add a hint to our phone input:
 
 ```html
@@ -128,8 +132,10 @@ This is how the phone field with hint looks:
 <div class="divider--half"></div>
 
 ### Input Types & Input Group Type Token
+
 The input group styles can be altered by using the [`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) property of the [`igxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) component. The input group component supports the following types: `line` (default if type is not specified), `border`, `box`, and `search`. The `line`, `border`, and `box` types are made specifically for the `Material Design` themes. Setting those types with other themes will not have any effect on how the input group looks.
 An example of setting a specific type declaratively:
+
 ```html
 <igx-input-group type="border">
 ```
@@ -167,6 +173,7 @@ The input group component supports several themes - `material`, `fluent`, `boots
 ```
 
 ### Typed Forms
+
 The Ignite UI for Angular Input Group component can be used inside strictly typed reactive forms which are the default ones as of Angular 14. To find out more about the typed forms, you can check [Angular official documentation](https://angular.io/guide/typed-forms).
 
 <code-view style="height:770px"
@@ -175,9 +182,11 @@ The Ignite UI for Angular Input Group component can be used inside strictly type
 </code-view>
 
 ## Validation
+
 The following samples demonstrate how to configure input validation when using [template-driven](https://angular.io/guide/forms) or [reactive forms](https://angular.io/guide/reactive-forms).
 
 ### Template-Driven Forms
+
 Template-driven form validation is achieved by adding validation attributes, i.e., `required`, `minlength`, etc., to the `input` element.
 
 ```html
@@ -250,6 +259,7 @@ The result from the above configurations could be seen in the below sample. Star
 </code-view>
 
 ### Reactive Forms
+
 Reactive form validation is achieved by adding validator functions directly to the form control model in the component class. After creating the control in the component class, it should be associated with a form control element in the template.
 
 ```ts
@@ -263,6 +273,7 @@ constructor(fb: FormBuilder) {
     });
 }
 ```
+
 ```html
 <form [formGroup]="registrationForm">
     <igx-input-group>
@@ -297,6 +308,7 @@ public get password() {
     return this.registrationForm.get('password');
 }
 ```
+
 ```html
 <form [formGroup]="registrationForm">
     ...
@@ -324,6 +336,7 @@ The result from the above configurations could be seen in the below sample. Simi
 </code-view>
 
 ### Custom Validators
+
 Some input fields may require custom validation and this could be achieved via custom validators. When the value is invalid, the validator will generate a set of errors that could be used to display a specific error message.
 
 Below is an example of a simple custom reactive form validator that validates if the entered email address contains a predefined value and generates different errors based on where the value occurs.
@@ -365,6 +378,7 @@ private emailValidator(val: string): ValidatorFn {
 ```
 
 ### Cross-Field Validation
+
 In some scenarios, the validation of one control may depend on the value of another one. To evaluate both controls in a single custom validator the validation should be performed in a common ancestor control, i.e., the `FormGroup`. The validator retrieves the child controls by calling the `FormGroup`'s `get` method, compares the values and if the validation fails, a set of errors is generated for the `FormGroup`.
 
 This will set only the form's state to invalid. To set the control's state, we could use the [`setErrors`](https://angular.io/api/forms/AbstractControl#seterrors) method and add the generated errors manually. Then, when the validation is successful, the errors could be removed by using the [`setValue`](https://angular.io/api/forms/AbstractControl#setvalue) method that will rerun the control's validation for the provided value.
@@ -798,6 +812,7 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 ```
 
 The utility file includes both `light` and `dark` theme variants.
+
 - Use `light-*` classes for the light theme.
 - Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-input-group`, `dark-input-group`.
@@ -838,27 +853,30 @@ At the end your inputs should look like this:
 </div>
 
 ## API References
+
 <div class="divider--half"></div>
 
-* [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
-* [IgxHintDirective]({environment:angularApiUrl}/classes/igxhintdirective.html)
-* [IgxInputGroup Types]({environment:angularApiUrl}/index.html#IgxInputGroupType)
-* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/themes#function-input-group-theme)
+- [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
+- [IgxHintDirective]({environment:angularApiUrl}/classes/igxhintdirective.html)
+- [IgxInputGroup Types]({environment:angularApiUrl}/index.html#IgxInputGroupType)
+- [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+- [IgxInputGroupComponent Styles]({environment:sassApiUrl}/themes#function-input-group-theme)
 
 ## Theming Dependencies
-* [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+
+- [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
 Related topics:
 
-* [Label & Input](label-input.md)
-* [Reactive Forms Integration](angular-reactive-form-validation.md)
+- [Label & Input](label-input.md)
+- [Reactive Forms Integration](angular-reactive-form-validation.md)
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

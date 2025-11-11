@@ -5,6 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Animations
+
 <p class="highlight">Ignite UI for Angular includes over 100+ pre-built animations specially designed for a better user experience.</p>
 <div class="divider"></div>
 
@@ -46,6 +47,7 @@ Here's an example of creating a new animation mixin that can be used with our `a
     }
 } 
 ```
+
 <div class="divider--half"></div>
 
 ### Animation Mixin
@@ -61,6 +63,7 @@ The [animation]({environment:sassApiUrl}/animations#mixin-animation) mixin serve
     @include animation('fade-in-top' 3s $ease-out-quad infinite);
 }
 ```
+
 <div class="divider--half"></div>
 
 ### Timing Functions
@@ -126,20 +129,22 @@ animations: [
 ### Timing Functions
 
 Ignite UI for Angular includes a set of timing functions that can be used to ease in or out an animation. There are three main timing function groups - [EaseIn]({environment:angularApiUrl}/enums/easein.html), [EaseOut]({environment:angularApiUrl}/enums/easeout.html), and [EaseInOut]({environment:angularApiUrl}/enums/easeinout.html), each containing the following timings:
-  - quad
-  - cubic
-  - quart
-  - quint
-  - sine
-  - expo
-  - circ
-  - back
+
+- quad
+- cubic
+- quart
+- quint
+- sine
+- expo
+- circ
+- back
 
 To use a specific timing function, import it first:
 
-``` typescript 
+``` typescript
 import { EaseOut } from "igniteui-angular/animations/easings";
 ```
+
 and then use it as value for the easing param in any animation:
 
 ``` typescript
@@ -151,16 +156,18 @@ useAnimation(fadeIn, {
 ```
 
 ## API References
+
 <div class="divider"></div>
 
-* [Animations]({environment:sassApiUrl}/animations)
-* [AnimationSettings]({environment:angularApiUrl}/interfaces/animationsettings.html)
-* [IAnimationParams]({environment:angularApiUrl}/interfaces/ianimationparams.html)
+- [Animations]({environment:sassApiUrl}/animations)
+- [AnimationSettings]({environment:angularApiUrl}/interfaces/animationsettings.html)
+- [IAnimationParams]({environment:angularApiUrl}/interfaces/ianimationparams.html)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
