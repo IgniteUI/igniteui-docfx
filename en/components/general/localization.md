@@ -10,9 +10,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 >Note: As of 20.2.0 this is the recommended way of applying localization to the Ignite UI for Angular components.
 
-With this new localization even less requirements are need to change the localization strings and locale for the Ignite UI Angular components.
+With this new localization we provide more features with less requirements for the localization strings and it includes formatting for all available locales, based on `Intl`.
 
-Currently, Ignite UI for Angular ships with resource strings for the following languages: `Bulgarian`, `Czech`, `Danish`, `Dutch`, `English`, `French`, `German`, `Hungarian`, `Italian`, `Japanese`, `Korean`, `Norwegian`, `Polish`, `Portuguese`, `Romanian`, `Spanish`, `Swedish`, `Turkish`, `Traditional Chinese (zh-Hant)` and `Simplified Chinese (zh-Hans)`. These are available via the `igniteui-i18n-resources` package, except for English which comes as a default localization in `igniteui-angular`.
+Currently, Ignite UI for Angular ships with resource strings for the following languages: `Bulgarian`, `Czech`, `Danish`, `Dutch`, `English`, `French`, `German`, `Hungarian`, `Italian`, `Japanese`, `Korean`, `Norwegian`, `Polish`, `Portuguese`, `Romanian`, `Spanish`, `Swedish`, `Turkish`, `Traditional Chinese (zh-Hant)` and `Simplified Chinese (zh-Hans)`. These are available via the `igniteui-angular-i18n` package, except for English which comes as a default localization in `igniteui-angular`.
 
 ### Angular Localization Example
 
@@ -23,7 +23,7 @@ Currently, Ignite UI for Angular ships with resource strings for the following l
            alt="Angular Localization Example">
 </code-view>
 
->Note: Hindi (HI) included in the sample is only for illustrational purposes and to emphasize on the possibility to pass a custom localization object. In this sample, it contains only several localized strings for the summary. More details at [Utilize own localized resources](#utilize-own-localized-resources) section below.
+>Note: Hindi (HI) included in the sample is only for illustrational purposes and to emphasize on the possibility to pass a custom localization object. In this sample, it contains only several localized strings for the summary. More details at [Custom localized resource strings](#custom-localized-resource-strings) section below.
 
 ### Locale
 
@@ -31,30 +31,19 @@ By locale, we will refer to the general strings defining the different languages
 
 It affects both the formatting of the dates and numbers and the localized resource strings that our components use. The default locale for the Ignite UI for Angular components is `en-US`. 
 
+There are several ways that you can set locale. Either globally or per component.
+
 #### Global API
 
-With this approach, you can change localization for all Ignite UI for Angular components used in your application using the `setCurrentI18n` method, that comes with the `igniteui-angular` package.
+You can set the locale that will be used globally using the `setCurrentI18n` method, that comes from the `igniteui-angular` package. It will affect both formatting and resource strings used in all of our components.
 
 ```ts
 setCurrentI18n('de');
 ```
 
-The tag you use should be a valid tag and match the language and region for the tag your used to register the resources. Like described earlier, it doesn't need to be the exact same string which means if you registered for `de` tag, the following options would also return the resources assigned to it:
+We support the full range of possible locales supported by `Intl`. If you provide a locale that is not valid or supported, it will use the default `en-US` locale for the time being, until you change it to a valid one.
 
-```ts
-setCurrentI18n('DE');
-setCurrentI18n('de-DE');
-setCurrentI18n('ger');
-```
-
-Or for example is users request different region, but you have one translation for all regions, it will still return the available language, despite the region. If you've registered Spanish as `es`, it will apply for all regions and return the same results:
-
-```ts
-setCurrentI18n('es');
-setCurrentI18n('es-ES');
-setCurrentI18n('es-MX');
-setCurrentI18n('es-AR');
-```
+In general you should register your resources under the languages, regions and scripts for the tags you plan to use, so that your components are localized as well. For more see [Regions and Scripts](#regions-and-scripts) section.
 
 #### `lang` attribute
 
@@ -92,10 +81,15 @@ Locale like mentioned affects the formatting in all Ignite UI for Angular compon
 
 Since we are just introducing this feature, the Angular's way is still available and very much working as before and is still the default way, if you are already using it. 
 
-If you are just starting though, only the default `en-US` locale will use the Angular's formatting. Any other locale you use will default to the new way, because you will probably be missing the Angular's locale data anyway. That's why we have the `toggleIgxAngularLocalization` method, which will make sure that even for `en-US` you use the new localization, even if you have the Angular's locale data imported:
+If you are just starting though, you will only need to add the `provideIgniteIntl()` method to your app config, which will make sure that you use the new formatting, even if you have the Angular's locale data imported:
 
 ```ts
-toggleIgxAngularLocalization(false);
+export const appConfig: ApplicationConfig = {
+    providers: [
+        //...
+        provideIgniteIntl()
+    ]
+};
 ```
 
 #### Date formats
@@ -169,26 +163,32 @@ All components in Ignite UI for Angular render in English by default and they ca
 
 The translations for the component strings are stored in resource strings and they will need to registered in our localization system so that the component can use them.
 
-First to achieve that it is needed to install the `igniteui-i18n-resources` package, which contains the localized resource strings for all languages:
+First to achieve that it is needed to install the same old `igniteui-angular-i18n` package, which contains the localized resource strings for all languages:
 
 ```
-npm install igniteui-i18n-resources --save-dev
+npm install igniteui-angular-i18n --save-dev
 ```
 
->Note: Currently the names for the new resources from the `igniteui-i18n-resources` and old `igniteui-angular-i18n` package are the same. So make sure to check which ones are you using, because the old ones are not compatible with the new API.
-
-After that you will need to register each language you would like to have applied to them. Lets say German and Japanese:
+After that you will need to register each language you would like to have available to them. Lets say German and Japanese:
 
 ```ts
-import { ResourceStringsDE, ResourceStringsJA } from 'igniteui-i18n-resources';
+import { IgxResourceStringsDE, IgxResourceStringsJA } from 'igniteui-angular-i18n';
 
-registerI18n(ResourceStringsDE, 'de');
-registerI18n(ResourceStringsJA, 'ja');
+registerI18n(IgxResourceStringsDE, 'de');
+registerI18n(IgxResourceStringsJA, 'ja');
 ```
 
-You will also need to provide to which locale they will apply to. If no tag is provided, it will set the resources for the currently selected locale's language and script/region.
+You will also need to provide to which locale they will apply to. If not a valid tag is provided, it will set the resources for the default 'en-US' locale.
 
-The language, region and script provided by the locales are taken into account, since these are the most commonly used. They are separated by `-` but are usually on second and third position. For example, `en-US` and `en-GB` or `en-Latn-US`.
+#### Regions and scripts
+
+We take into account the `language + region` or `language + script` from the locale you used to register your resources, since these are the most commonly used. They are separated by `-` and region/script are usually are defined on a second or third position. For example, `en-US` and `en-GB` or `en-Latn`. 
+
+If you do not use region or script, the resources you register will apply to all locales that use the `en` language, for example. That is unless you define resources for the regions and scripts as well. Then only for those you have not defined, will return the resources for `en` in this case.
+
+The script for us has higher priority than the region when registering resources. We recommend in general to use either region or script, without mixing them and using both at the same time. That way it is easier to manage and know which one you have available and should be used, based on the locale you set.
+
+Anyway, if you happen to use them both, lets take for example the `en` language with `GB` region and `Latn` script. If you define resources for both region and script like `en-GB` and `en-Latn`, and later on you set your locale, having both region and script to `en-Latn-GB`, we will take the resources from the script one first. If it is not available, then we will return the available region, unless you explicitly set your locale to `en-Latn`, of course. If you have for none of them registered resources, we will take the default for `en` if available.
 
 ### Customize a component
 
@@ -201,9 +201,9 @@ If you would like to set different from the global localization for a component,
 With this approach you should already have the available resource strings globally registered:
 
 ```ts
-import { ResourceStringsJA } from 'igniteui-i18n-resources';
+import { IgxResourceStringsJA } from 'igniteui-angular-i18n';
 
-registerI18n(ResourceStringsJA, 'ja');
+registerI18n(IgxResourceStringsJA, 'ja');
 ```
 
 By setting the `locale` property of the component, this will override the global locale currently in use:
@@ -217,7 +217,7 @@ By setting the `locale` property of the component, this will override the global
 
 ##### Language only
 
-If you would like to change only the language of the componnet, without changing the locale, you can even set the resource strings of each component using the `resourceStrings` property, which will override the globally used ones:
+If you would like to change only the language of the component, without changing the locale, you can even set the resource strings of each component using the `resourceStrings` property, which will override the globally used ones:
 
 ```html
 <igx-grid [data]="data" [resourceStrings]="resourcesDE">
@@ -229,7 +229,7 @@ If you would like to change only the language of the componnet, without changing
 You will need to make sure you use the correct resource string type for the component you would like to override it with. Each component has its own set of resource strings. In this case for the grid in German:
 
 ```ts
-import { GridResourceStringsDE } from 'igniteui-i18n-resources';
+import { GridResourceStringsDE } from 'igniteui-angular-i18n';
 
 // Inside App Component:
 public resourcesDE = GridResourceStringsDE;
@@ -237,20 +237,14 @@ public resourcesDE = GridResourceStringsDE;
 
 ### Custom localized resource strings
 
-If you would like to localize your app and we do not provide resource strings for the language you use and would like to provide your own translation, you can always use custom resource string. You can do that globally or per component(using `resourceStrings` property).
+If you would like to localize your app, but we do not provide resource strings for the language you use and would like to provide your own translation, you can always provide custom resource string. You can do that globally or per component(using the `resourceStrings` property).
 
->Note: Feel free to contribute to the [`igniteui-i18n-resources`](https://github.com/IgniteUI/igniteui-i18n/tree/master/projects/igniteui-i18n-resources) package with more languages!
-
-If you would like to check the current resource strings used for all components in your app combined, you can use the `getCurrentResourceStrings` method:
-
-```ts
-const resources = getCurrentResourceStrings();
-```
+>Note: Feel free to contribute to the [`igniteui-i18n-resources`](https://github.com/IgniteUI/igniteui-i18n/tree/master/projects/igniteui-i18n-resources) package with more languages. The `igniteui-angular-i18n` are based on them.
 
 You can use the provided `IResourceStrings` type for all components to get typings for the resource stings used:
 
 ```ts
-import { IResourceStrings } from 'igniteui-i18n-resources';
+import { IResourceStrings } from 'igniteui-angular';
 
 export const customResourcesForAll: IResourceStrings = {
     //...
@@ -258,10 +252,10 @@ export const customResourcesForAll: IResourceStrings = {
 registerI18n(customResourcesForAll, 'custom');
 ```
 
-Or for a specific component separately:
+Or for a specific component separately, in this case the grids:
 
 ```ts
-import { IGridResourceStrings } from 'igniteui-i18n-resources';
+import { IGridResourceStrings } from 'igniteui-angular';
 
 export const customGridResources: IGridResourceStrings = {
     grid_summary_count: 'गणना',
@@ -276,7 +270,7 @@ export const customGridResources: IGridResourceStrings = {
 You can even mix however you want the already existing resource strings with the ones you want to customize, even for the default English language:
 
 ```ts
-import { IResourceStrings, CalendarResourceStringsEN, DatePickerResourceStringsEN } from 'igniteui-i18n-resources';
+import { IResourceStrings, CalendarResourceStringsEN, DatePickerResourceStringsEN } from 'igniteui-angular';
 
 export const customResources: IResourceStrings = Object.assign(
     {},
@@ -297,25 +291,25 @@ registerI18n(customResources, 'en');
 
 ### Available resource strings
 
-* [ResourceStringsBG](https://github.com/IgniteUI/igniteui-i18n/tree/master/projects/igniteui-i18n-resources/src/i18n/BG/resources.ts)
-* [ResourceStringsCS](https://github.com/IgniteUI/igniteui-i18n/tree/master/projects/igniteui-i18n-resources/src/i18n/CS/resources.ts)
-* [ResourceStringsDA](https://github.com/IgniteUI/igniteui-i18n/tree/master/projects/igniteui-i18n-resources/src/i18n/DA/resources.ts)
-* [ResourceStringsDE](https://github.com/IgniteUI/igniteui-i18n/tree/master/projects/igniteui-i18n-resources/src/i18n/DE/resources.ts)
-* [ResourceStringsES](https://github.com/IgniteUI/igniteui-i18n/tree/master/projects/igniteui-i18n-resources/src/i18n/ES/resources.ts) 
-* [ResourceStringsFR](https://github.com/IgniteUI/igniteui-i18n/tree/master/projects/igniteui-i18n-resources/src/i18n/FR/resources.ts) 
-* [ResourceStringsHU](https://github.com/IgniteUI/igniteui-i18n/tree/master/projects/igniteui-i18n-resources/src/i18n/HU/resources.ts)
-* [ResourceStringsIT](https://github.com/IgniteUI/igniteui-i18n/tree/master/projects/igniteui-i18n-resources/src/i18n/IT/resources.ts) 
-* [ResourceStringsJA](https://github.com/IgniteUI/igniteui-i18n/tree/master/projects/igniteui-i18n-resources/src/i18n/JA/resources.ts) 
-* [ResourceStringsKO](https://github.com/IgniteUI/igniteui-i18n/tree/master/projects/igniteui-i18n-resources/src/i18n/KO/resources.ts)
-* [ResourceStringsNB](https://github.com/IgniteUI/igniteui-i18n/tree/master/projects/igniteui-i18n-resources/src/i18n/NB/resources.ts)
-* [ResourceStringsNL](https://github.com/IgniteUI/igniteui-i18n/tree/master/projects/igniteui-i18n-resources/src/i18n/NL/resources.ts)
-* [ResourceStringsPL](https://github.com/IgniteUI/igniteui-i18n/tree/master/projects/igniteui-i18n-resources/src/i18n/PL/resources.ts)
-* [ResourceStringsPT](https://github.com/IgniteUI/igniteui-i18n/tree/master/projects/igniteui-i18n-resources/src/i18n/PT/resources.ts)
-* [ResourceStringsRO](https://github.com/IgniteUI/igniteui-i18n/tree/master/projects/igniteui-i18n-resources/src/i18n/RO/resources.ts)
-* [ResourceStringsSV](https://github.com/IgniteUI/igniteui-i18n/tree/master/projects/igniteui-i18n-resources/src/i18n/SV/resources.ts)
-* [ResourceStringsTR](https://github.com/IgniteUI/igniteui-i18n/tree/master/projects/igniteui-i18n-resources/src/i18n/TR/resources.ts)
-* [ResourceStringsZHHANS](https://github.com/IgniteUI/igniteui-i18n/tree/master/projects/igniteui-i18n-resources/src/i18n/ZH-HANS/resources.ts) 
-* [ResourceStringsZHHANT](https://github.com/IgniteUI/igniteui-i18n/tree/master/projects/igniteui-i18n-resources/src/i18n/ZH-HANT/resources.ts) 
+* [IgxResourceStringsBG](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/BG/resources.ts)
+* [IgxResourceStringsCS](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/CS/resources.ts)
+* [IgxResourceStringsDA](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/DA/resources.ts)
+* [IgxResourceStringsDE](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/DE/resources.ts)
+* [IgxResourceStringsES](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/ES/resources.ts) 
+* [IgxResourceStringsFR](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/FR/resources.ts) 
+* [IgxResourceStringsHU](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/HU/resources.ts)
+* [IgxResourceStringsIT](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/IT/resources.ts) 
+* [IgxResourceStringsJA](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/JA/resources.ts) 
+* [IgxResourceStringsKO](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/KO/resources.ts)
+* [IgxResourceStringsNB](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/NB/resources.ts)
+* [IgxResourceStringsNL](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/NL/resources.ts)
+* [IgxResourceStringsPL](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/PL/resources.ts)
+* [IgxResourceStringsPT](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/PT/resources.ts)
+* [IgxResourceStringsRO](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/RO/resources.ts)
+* [IgxResourceStringsSV](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/SV/resources.ts)
+* [IgxResourceStringsTR](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/TR/resources.ts)
+* [IgxResourceStringsZHHANS](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/ZH-HANS/resources.ts) 
+* [IgxResourceStringsZHHANT](https://github.com/IgniteUI/igniteui-angular/tree/master/projects/igniteui-angular-i18n/src/i18n/ZH-HANT/resources.ts) 
 
 
 ## Legacy Localization (i18n)

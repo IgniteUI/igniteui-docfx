@@ -9,8 +9,8 @@
   new: false
 - name: Localization (i18n)
   href: general/localization.md
-  new: true
-  updated: false
+  new: false
+  updated: true
 - name: Getting started
   href: general/getting-started.md
   new: false
