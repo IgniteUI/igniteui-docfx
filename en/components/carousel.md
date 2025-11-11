@@ -5,30 +5,33 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Angular Carousel Component Overview
-<p class="highlight">Ignite UI for Angular Carousel is a responsive, lightweight component that provides the most flexible way to create slideshow-like web experience for users who navigate back and forth through a collection of images with text slides, links, and other html elements. 
+
+<p class="highlight">Ignite UI for Angular Carousel is a responsive, lightweight component that provides the most flexible way to create slideshow-like web experience for users who navigate back and forth through a collection of images with text slides, links, and other html elements.
 
 The Angular Carousel component allows you to use animations, slide transitions, and customization so you can easily tweak the interface and build Angular custom carousel.
 </p>
 <div class="divider"></div>
 
 ## Angular Carousel Example
+
 The Angular Carousel demo you see below shows slides containing only images. We’ve enabled navigation buttons allowing users to easily move from one slide to another – going back and forth.
 
-<code-view style="height: 550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/carousel/" alt="Angular Carousel Example">
 </code-view>
 
 <div class="divider--half"></div>
 
 ## Getting Started with Ignite UI for Angular Carousel
+
 To get started with the Ignite UI for Angular Carousel component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
 ```cmd
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the **IgxCarouselModule** in our **app.module.ts** file:
 
@@ -81,14 +84,16 @@ export class HomeComponent {}
 Now that you have the Ignite UI for Angular Carousel module or directives imported, you can start using the `igx-carousel` component.
 
 ## Using the Angular Carousel Component
+
 The Ignite UI for Angular Carousel component can be used as a full-screen element or situated inside another component. Also, the slides may feature any valid html content inside, including other Angular components.
 
 In this section we will go through the setup of the above defined **demo**.
 
 ### Adding slides with *ngFor
+
 <div class="divider--half"></div>
 
-If we have slides with the same type of content, the easiest approach is to use *\*ngFor* to add them in the template.
+If we have slides with the same type of content, the easiest approach is to use _\*ngFor_ to add them in the template.
 
 Since our slides are going to contain only images, we are going to create an array of objects in the **ts** file and use it to populate the **igx-carousel** with slides:
 
@@ -114,12 +119,14 @@ export class HomeComponent {
     </igx-carousel>
 </div>
 ```
+
 ## Angular Carousel Custom Examples
 
 ### Configuring IgxCarousel
+
 <div class="divider--half"></div>
 
-By default, the Carousel in Angular has its [`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop) input property set to `true` (*looping occurs when the first slide comes after the last by navigating using the Next action, or when the last slide comes after the first by using the Previous action*). The looping behavior can be disabled by setting the value of the [`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop) input to `false`.
+By default, the Carousel in Angular has its [`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop) input property set to `true` (_looping occurs when the first slide comes after the last by navigating using the Next action, or when the last slide comes after the first by using the Previous action_). The looping behavior can be disabled by setting the value of the [`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop) input to `false`.
 
 ```html
 <igx-carousel [loop]="false">
@@ -152,6 +159,7 @@ The [`IgxCarousel`]({environment:angularApiUrl}/classes/igxcarouselcomponent.htm
 ```
 
 ### Custom indicators
+
 <div class="divider--half"></div>
 
 To add Angular custom carousel indicators we will have to use the [IgxCarouselIndicatorDirective]({environment:angularApiUrl}/classes/igxcarouselindicatordirective.html), like this:
@@ -185,9 +193,11 @@ To achieve this we will use the [IgxCarouselPrevButtonDirective]({environment:an
 ```
 
 ### Slide containing other components
+
 <div class="divider--half"></div>
 
 This carousel is going to contain slides with forms and images:
+
 ```html
 ...
   <div class="carousel-container">
@@ -242,11 +252,10 @@ This carousel is going to contain slides with forms and images:
 #### Demo
 
 
-<code-view style="height: 700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/carousel-with-components-sample/" >
 </code-view>
-
 
 
 ## Angular Carousel Animations
@@ -263,6 +272,7 @@ The animations are configured through the [animationType]({environment:angularAp
 </igx-carousel>
 
 ```
+
 Setting `none` to the `animationType` input disables carousel's animations.
 
 
@@ -271,14 +281,14 @@ Setting `none` to the `animationType` input disables carousel's animations.
 The demo below demonstrates the different types of animations, which the carousel supports.
 
 
-<code-view style="height: 700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/carousel-animations-sample/" >
 </code-view>
 
 
-
 ## Navigation
+
 <div class="divider--half"></div>
 
 Transition and navigation are the most important carousel features.
@@ -286,6 +296,7 @@ Transition and navigation are the most important carousel features.
 The navigation in the carousel can be handled by the user through navigation buttons, keyboard navigation and pan interaction on mobile devices.
 
 ### Pan gestures
+
 <div class="divider--half"></div>
 
 By default, the carousel can be used on any touch-enabled device. This is optional and can be changed by setting the [gesturesSupport]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#gesturesSupport) property to `false`.
@@ -293,17 +304,19 @@ By default, the carousel can be used on any touch-enabled device. This is option
 The carousel [animations](carousel.md#angular-carousel-animations) are fully supported on touch devices, which makes the carousel consistent with any platform and great when used in progressive web applications ([PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)).
 
 ### Keyboard navigation
+
 <div class="divider--half"></div>
 
-* Navigation buttons
-    * `Space`/`Enter` key - navigates to the next/previous slide.
-* Indicators
-    * `Arrow Left` key - navigates to the previous (next in Right-to-Left mode) slide.
-    * `Arrow Right` key - navigates to the next (previous in Right-to-Left mode) slide.
-    * `Home` key - navigates to the first (last in Right-to-Left mode) slide.
-    * `End` key - navigates to the last (first in Right-to-Left mode) slide.
+- Navigation buttons
+  - `Space`/`Enter` key - navigates to the next/previous slide.
+- Indicators
+  - `Arrow Left` key - navigates to the previous (next in Right-to-Left mode) slide.
+  - `Arrow Right` key - navigates to the next (previous in Right-to-Left mode) slide.
+  - `Home` key - navigates to the first (last in Right-to-Left mode) slide.
+  - `End` key - navigates to the last (first in Right-to-Left mode) slide.
 
 ### Automatic transitioning
+
 <div class="divider--half"></div>
 
 The **IgxCarousel** can be easily configured to change the slides automatically, without any user interaction. This way you can create your own slideshow by only setting a transition interval to the [interval]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#interval) property, which determines the amount of time in milliseconds between slides transition.
@@ -312,17 +325,19 @@ The **IgxCarousel** can be easily configured to change the slides automatically,
 >The automatic slide transitioning is not entirely user-independent by default. Positioning the mouse pointer over a slide will interrupt the current slide transition until the mouse pointer leaves the slide area. This can be prevented by setting [pause]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#pause) property to `false`.
 
 ## Advanced Example
+
 <div class="divider--half"></div>
 
 Let's create a fully automated carousel with looping enabled. Each slide will be synced with a [list item]({environment:angularApiUrl}/classes/igxlistitemcomponent.html) in a list. Clicking on a list item will trigger a slide change.
 
 
 To achieve this goal, we have to do the following configurations to the carousel:
- - disable `gesturesSupport`
- - disable the `navigation` buttons
- - disable the carousel `indicators`
- - disable the `pause` on user interaction with the slide
- - add transition `interval`
+
+- disable `gesturesSupport`
+- disable the `navigation` buttons
+- disable the carousel `indicators`
+- disable the `pause` on user interaction with the slide
+- add transition `interval`
 
 Our carousel will look like this in the template:
 
@@ -337,9 +352,11 @@ Our carousel will look like this in the template:
 </div>
 ...
 ```
+
 We are ready with the carousel configuration. Now we need only to add a [list](list.md) component and sync the both components:
 
 adding [IgxList]({environment:angularApiUrl}/classes/igxlistcomponent.html):
+
 ```html
 ...
 <div class="list-wrapper">
@@ -352,6 +369,7 @@ adding [IgxList]({environment:angularApiUrl}/classes/igxlistcomponent.html):
 </div>
 ...
 ```
+
 syncing the components by hooking up on carousel's [`slideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#slideChanged) and list's [itemClicked]({environment:angularApiUrl}/classes/igxlistcomponent.html#itemClicked) events:
 
 >[!NOTE]
@@ -369,10 +387,11 @@ syncing the components by hooking up on carousel's [`slideChanged`]({environment
     });
   }
 ```
-These configurions will have the following result:
 
-<code-view style="height: 700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+These configurations will have the following result:
+
+<code-view style="height: 700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/carousel-no-navigation-sample/" >
 </code-view>
 
@@ -653,9 +672,9 @@ When you modify a primary property, all related dependent properties are automat
   </div>
 </div>
 
-Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the `carousel` appearance. 
+Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the `carousel` appearance.
 
-First, in order to use the functions exposed by the theme engine, we need to import the `index` file in our style file: 
+First, in order to use the functions exposed by the theme engine, we need to import the `index` file in our style file:
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -683,8 +702,8 @@ The last step is to include the component's theme.
 
 The sample below demonstrates a simple styling applied through the [Ignite UI for Angular Theming](themes/index.md).
 
-<code-view style="height: 310px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 310px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/carousel-styling-sample/" alt="Angular Carousel Styling Example">
 </code-view>
 
@@ -701,6 +720,7 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 ```
 
 The utility file includes both `light` and `dark` theme variants.
+
 - Use `light-*` classes for the light theme.
 - Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-carousel`, `dark-carousel`.
@@ -728,52 +748,63 @@ At the end your carousel should look like this:
 </div>
 
 ## Accessibility
+
 ### WAI-ARIA Roles, States, and Properties
- * The Carousel base element role is [`region`](https://www.w3.org/TR/wai-aria-1.1/#region) - section containing content that is relevant to specific purpose and users will likely want to be able to navigate easily.
- * Carousel indicators are with role [`tab`](https://www.w3.org/TR/wai-aria-1.1/#tab) -  grouping label providing a mechanism for selecting the tab content that is to be rendered to the user
- * The element that serves as the container for the set of tabs (carousel indicators) role is set to [`tablist`](https://www.w3.org/TR/wai-aria-1.1/#tab).
- * Each slide element is set with role [`tabpanel`](https://www.w3.org/TR/wai-aria-1.1/#tabpanel).
- * The element that serves as the container for the set of igx-slides is set with [aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live)="polite". Both options are
-   - **off**: if the carousel is automatically rotating.
-   - **polite**: if the carousel is NOT automatically rotating.
+
+- The Carousel base element role is [`region`](https://www.w3.org/TR/wai-aria-1.1/#region) - section containing content that is relevant to specific purpose and users will likely want to be able to navigate easily.
+- Carousel indicators are with role [`tab`](https://www.w3.org/TR/wai-aria-1.1/#tab) -  grouping label providing a mechanism for selecting the tab content that is to be rendered to the user
+- The element that serves as the container for the set of tabs (carousel indicators) role is set to [`tablist`](https://www.w3.org/TR/wai-aria-1.1/#tab).
+- Each slide element is set with role [`tabpanel`](https://www.w3.org/TR/wai-aria-1.1/#tabpanel).
+- The element that serves as the container for the set of igx-slides is set with [aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live)="polite". Both options are
+  - **off**: if the carousel is automatically rotating.
+  - **polite**: if the carousel is NOT automatically rotating.
 
 ### ARIA support
+
 #### **Carousel component**
 
-##### **Attributes**:
- * [aria-roledescription](https://www.w3.org/TR/wai-aria-1.1/#aria-roledescription) set to 'carousel'.
- * [aria-selected](https://www.w3.org/TR/wai-aria/states_and_properties#aria-selected)- set to *true* or *false* based on the active slide.
- * [aria-controls](https://www.w3.org/TR/wai-aria-1.1/#aria-controls) - set a slide index whose content is controlled by the current element.
- * [aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live) - used to set the priority with which screen reader should treat updates to live regions - the possible settings are: **off** and **polite**. The default setting is **polite**. When the [interval]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#interval) option set, the **aria-live** attribute would be set to **off**.
- * [aria-label](https://www.w3.org/TR/wai-aria/states_and_properties#aria-label) slide based.
- * aria-label (buttons)
-   - aria-label - for previous slide.
-   - aria-label - for next slide.
+##### **Attributes**
+
+- [aria-roledescription](https://www.w3.org/TR/wai-aria-1.1/#aria-roledescription) set to 'carousel'.
+- [aria-selected](https://www.w3.org/TR/wai-aria/states_and_properties#aria-selected)- set to _true_ or _false_ based on the active slide.
+- [aria-controls](https://www.w3.org/TR/wai-aria-1.1/#aria-controls) - set a slide index whose content is controlled by the current element.
+- [aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live) - used to set the priority with which screen reader should treat updates to live regions - the possible settings are: **off** and **polite**. The default setting is **polite**. When the [interval]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#interval) option set, the **aria-live** attribute would be set to **off**.
+- [aria-label](https://www.w3.org/TR/wai-aria/states_and_properties#aria-label) slide based.
+- aria-label (buttons)
+  - aria-label - for previous slide.
+  - aria-label - for next slide.
 
 #### **Slide component**
-##### **Roles**:
- * [attr.role="tabpanel"](https://www.w3.org/TR/wai-aria-1.1/#tabpanel) -  container for the resources associated with a tab, where each tab is contained in a tablist.
 
-##### **Attributes**:
- * id - follows the pattern "panel-${this.index}"
- * [aria-labelledby](https://www.w3.org/TR/wai-aria/#aria-labelledby) follows the pattern "tab-${this.index}-${this.total}"
- * [aria-selected](https://www.w3.org/TR/wai-aria-1.1/#aria-selected) set **active** slide. Indicates the current **selected** state of a particular slide element.
+##### **Roles**
+
+- [attr.role="tabpanel"](https://www.w3.org/TR/wai-aria-1.1/#tabpanel) -  container for the resources associated with a tab, where each tab is contained in a tablist.
+
+##### **Attributes**
+
+- id - follows the pattern "panel-${this.index}"
+- [aria-labelledby](https://www.w3.org/TR/wai-aria/#aria-labelledby) follows the pattern "tab-${this.index}-${this.total}"
+- [aria-selected](https://www.w3.org/TR/wai-aria-1.1/#aria-selected) set **active** slide. Indicates the current **selected** state of a particular slide element.
 
 ## API References
+
 <div class="divider--half"></div>
 
-* [IgxCarouselComponent]({environment:angularApiUrl}/classes/igxcarouselcomponent.html)
-* [IgxCarouselComponent Styles]({environment:sassApiUrl}/themes#function-carousel-theme)
-* [IgxSlideComponent]({environment:angularApiUrl}/classes/igxslidecomponent.html)
-* [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
-* [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
+- [IgxCarouselComponent]({environment:angularApiUrl}/classes/igxcarouselcomponent.html)
+- [IgxCarouselComponent Styles]({environment:sassApiUrl}/themes#function-carousel-theme)
+- [IgxSlideComponent]({environment:angularApiUrl}/classes/igxslidecomponent.html)
+- [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
+- [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+
+- [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

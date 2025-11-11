@@ -15,7 +15,7 @@ _keywords: ignite ui for angular, getting started, angular components
 
 <div>
     <div style="display:inline-block;width:45%;text-align:center;">
-      <img src="../../images/general/nodejs.svg"
+      <img src="../../images/general/nodejs.svg" alt="NodeJS"
            style="display:flex;max-height:100px;margin:auto auto 20px auto;" />
       <a target="_blank" href="https://nodejs.org/en/download/" class="no-external-icon"
          style="color:white;background-color:#09f;text-decoration:none;font-weight:700;font-size:16px;padding: 5px 15px 5px 15px;">
@@ -23,7 +23,7 @@ _keywords: ignite ui for angular, getting started, angular components
       </a>
     </div>
     <div style="display:inline-block;width:45%;text-align:center;">
-      <img src="../../images/general/vs-code.svg"
+      <img src="../../images/general/vs-code.svg" alt="Visual Studio Code"
            style="display:flex;max-height:100px;margin:auto auto 20px auto;" />
       <a target="_blank" href="https://code.visualstudio.com/download" class="no-external-icon"
          style="color:white;background-color:#09f;text-decoration:none;font-weight:700;font-size:16px;padding: 5px 15px 5px 15px;">
@@ -46,9 +46,10 @@ To create an Angular application with the Angular CLI, open your preferred termi
 ```cmd
 ng new <project name> --style=scss
 ```
+
 You can specify the file extension or preprocessor to use for your application's style files with the `--style` option. We recommend using SCSS since our components' styles are based on the [Ignite UI for Angular theming library](../themes.md). Later on, when you install the Ignite UI for Angular package, your application will be configured to use the default styling theme which can be then easily customized either for all or for specific component instances.
 
-Thereafter you can install the Ignite UI for Angular package, along with all of its dependencies, font imports and styles references to your project, by running the following command: 
+Thereafter you can install the Ignite UI for Angular package, along with all of its dependencies, font imports and styles references to your project, by running the following command:
 
 ```cmd
 ng add igniteui-angular
@@ -67,24 +68,29 @@ Following is a quick overview of the steps that you need to perform in order to 
 ```bash
 ng g @igniteui/angular-schematics:upgrade-packages
 ```
+
 or if using `igniteui-cli`:
 
 ```bash
 ig upgrade-packages
 ```
+
 The schematic will take care of switching the package dependencies of the project and update source references.
 [You'll be asked to login to our npm registry if not already setup](ignite-ui-licensing.md#how-to-setup-your-environment-to-use-the-private-npm-feed-step-by-step-guide).
 
 #### Login to our npm registry with a new setup
+
 The approach described above covers only the scenarios where Ignite UI for Angular Trial package is already installed. If you are performing a new setup of a project or just starting with using Ignite UI for Angular, follow the guidance below.
 
 It's very important to [perform a correct setup of the private npm feed environment](ignite-ui-licensing.md#how-to-setup-your-environment-to-use-the-private-npm-feed-step-by-step-guide), by:
+
 - Ensuring a valid setup of the private registry.
 - Log in to our private feed using npm by specifying a non-trial user account and password.
 
 Details on the entire process [could be found here](ignite-ui-licensing.md#how-to-setup-your-environment-to-use-the-private-npm-feed-step-by-step-guide).
 
 ### Quick Start with Angular Schematics & Ignite UI  CLI
+
 To create an application from scratch and configure it to use the Ignite UI for Angular components you can use either the Ignite UI for Angular Schematics or the Ignite UI CLI. The first step is to install the respective package globally as follows:
 
 ```cmd
@@ -100,10 +106,13 @@ npm install -g igniteui-cli
 Our [guided experience using the Ignite UI CLI](cli/step-by-step-guide-using-cli.md) or [Ignite UI for Angular Schematics](cli/step-by-step-guide-using-angular-schematics.md) is the easiest way to bootstrap a configured application.
 
 To activate the guide using the Ignite UI for Angular Schematics run:
+
 ```cmd
 ng new --collection="@igniteui/angular-schematics"
 ```
+
 or run the following command in case you are using the CLI tool:
+
 ```cmd
 ig
 ```
@@ -114,7 +123,7 @@ ig
 <div style="display:inline-block;">
     <a style="background: url(../../images/general/buildCLIapp.gif); display:flex; justify-content:center; width: 80vw; max-width:540px; min-height:315px;"
        href="https://youtu.be/QK_NsdtdA70" target="_blank">
-        <img src="../../images/general/play.svg" style="vertical-align: middle;" />
+        <img src="../../images/general/play.svg" alt="Play Video" style="vertical-align: middle;" />
     </a>
     <p style="text-align:center;">Building Your First Ignite UI CLI App</p>
 </div>
@@ -128,6 +137,7 @@ We are now ready to start using Ignite UI for Angular components!
 ### Add components automatically
 
 #### Import modules and use components
+
 Now we can add new components to our application using either the `component` schematic or the `add` command:
 
 ```cmd
@@ -248,26 +258,26 @@ ng serve
 The final result should look something like this:
 
 
-<img class="responsive-img"  src="../../images/general/igniteui-project.png" />
-
+<img class="responsive-img" src="../../images/general/igniteui-project.png" alt="Ignite UI Project" />
 
 
 ## API References
 
 In this article we learned how to create our own Ignite UI for Angular application from scratch by taking advantage of the fully-automated process of Ignite UI for Angular projects creation in the Ignite UI CLI. We also learned and how to add Ignite UI for Angular to an existing application by using the Angular CLI. We designed our own page by including the [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) to it, which itself offers some awesome features, which you can take a look at by referring to the navigation menu.
 
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+- [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli)
-* [Ignite UI CLI Commands](https://github.com/IgniteUI/igniteui-cli/wiki#available-commands)
-* [Grid overview](../grid/grid.md)
+- [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli)
+- [Ignite UI CLI Commands](https://github.com/IgniteUI/igniteui-cli/wiki#available-commands)
+- [Grid overview](../grid/grid.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

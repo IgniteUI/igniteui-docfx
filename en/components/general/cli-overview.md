@@ -5,6 +5,7 @@ _keywords: igniteui for angular, angular schematics, cli, infragistics
 ---
 
 # Angular Schematics & Ignite UI CLI
+
 Our CLI tools provide project templates pre-configured for Ignite UI for Angular that help you get your next app off the ground in record time. A selection of views with Ignite UI for Angular components that can be further added to projects provide a substantial productivity boost for developers.
 
 [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli) is a stand-alone command-line tool for creating and scaffolding applications for a variety of frameworks. You can find more information and examples about its usage in the [Getting Started with Ignite UI CLI](./cli/getting-started-with-cli.md) topic.

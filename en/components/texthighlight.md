@@ -10,8 +10,8 @@ The [`IgxTextHighlightDirective`]({environment:angularApiUrl}/classes/igxtexthig
 
 ## Angular Text Highlight Directive Example
 
-<code-view style="height: 260px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 260px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-1/" alt="Angular TextHighlight Directive Example">
 </code-view>
 
@@ -25,7 +25,7 @@ To get started with the Ignite UI for Angular Text Highlight directive, first yo
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxTextHighlightModule` in your **app.module.ts** file.
 
@@ -246,8 +246,8 @@ export class HomeComponent {
 
 If the sample is configured properly, the final result should look like that:
 
-<code-view style="height: 260px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 260px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-1/" >
 </code-view>
 
@@ -341,8 +341,8 @@ export class HomeComponent {
 }
 ```
 
-<code-view style="height: 400px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-2/" >
 </code-view>
 
@@ -432,9 +432,9 @@ As mentioned earlier, we can even combine them with a theme:
 
 ### Demo
 
-<code-view style="height: 300px;" 
+<code-view style="height: 300px;"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-style/" >
 </code-view>
 
@@ -444,20 +444,21 @@ As mentioned earlier, we can even combine them with a theme:
 
 For more detailed information regarding the TextHighlight directive's API, refer to the following link:
 
-* [`IgxTextHighlight API`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html)
+- [`IgxTextHighlight API`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html)
 
 Additional components that were used:
 
-* [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [`IgxInputGroupComponent Styles`]({environment:sassApiUrl}/themes#function-input-group-theme)
+- [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+- [`IgxInputGroupComponent Styles`]({environment:sassApiUrl}/themes#function-input-group-theme)
+
 <div class="divider"></div>
 
 ## Additional Resources
 
-* [Grid Search](grid/search.md)
+- [Grid Search](grid/search.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

@@ -1,46 +1,51 @@
+<!-- markdownlint-disable MD003 MD024 -->
 @@if(igxName === 'IgxGrid'){
 ---
+
 title: Advanced Filtering in Angular Data Grid - Ignite UI for Angular
 _description: Learn how to configure advanced filter of data with the Angular table. The grid advanced filtering is more convenient and engaging than ever.
 _keywords: advanced filter, igniteui for angular, infragistics
 ---
+
 }
 @@if(igxName !== 'IgxGrid'){
 ---
+
 title: Advanced Filtering in Angular Data Grid - Ignite UI for Angular
 _description: Learn how to configure advanced filter of data with the Angular table. The grid advanced filtering is more convenient and engaging than ever.
 _keywords: advanced filter, igniteui for angular, infragistics
 _canonicalLink: grid/advanced-filtering
 ---
+
 }
 
 
 # Angular @@igComponent Advanced Filtering
 
-The Advanced filtering provides a dialog which allows the creation of groups with filtering conditions across all columns for any [Angular table](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/grid) like the @@igComponent. 
+The Advanced filtering provides a dialog which allows the creation of groups with filtering conditions across all columns for any [Angular table](https://www.infragistics.com/products/ignite-ui-angular/angular/components/grid/grid) like the @@igComponent.
 
 ## Angular @@igComponent Advanced Filtering Example
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:530px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:530px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-advanced-filtering/" alt="Angular @@igComponent Advanced Filtering Example">
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-advanced-filtering/" alt="Angular @@igComponent Advanced Filtering Example">
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:630px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:630px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-advanced-filtering/" alt="Angular @@igComponent Advanced Filtering Example">
 </code-view>
 
@@ -59,30 +64,37 @@ In order to filter the data once you are ready with creating the filtering condi
 To enable the advanced filtering, the [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowAdvancedFiltering) input property should be set to `true`.
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid [data]="data" [autoGenerate]="true" [allowAdvancedFiltering]="true">
     <igx-grid-toolbar></igx-grid-toolbar>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid [data]="data" [autoGenerate]="true" [allowAdvancedFiltering]="true">
     <igx-grid-toolbar></igx-grid-toolbar>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid [data]="data" [autoGenerate]="true" [allowAdvancedFiltering]="true">
     <igx-grid-toolbar></igx-grid-toolbar>
 </igx-hierarchical-grid>
 ```
+
 }
 
 The advanced filtering generates a [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) which is stored in the [`advancedFilteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#advancedFilteringExpressionsTree) input property. You could use this property to set an initial state of the advanced filtering.
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
+
 ```typescript
 ngAfterViewInit(): void {
     const tree = new FilteringExpressionsTree(FilteringLogic.And);
@@ -110,9 +122,11 @@ ngAfterViewInit(): void {
     this.@@igObjectRef.advancedFilteringExpressionsTree = tree;
 }
 ```
+
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```TypeScript
 ngAfterViewInit(): void {
     const tree = new FilteringExpressionsTree(FilteringLogic.Or);
@@ -140,7 +154,7 @@ ngAfterViewInit(): void {
 }
 ```
 
-The advanced filtering in the `IgxHierarchicalGrid` can be used to filter root grid data based on child grids data using the *IN / NOT-IN* operators. This way, subqueries can be created to define more complex filtering logic. More information about this functionality can be found in [`Query Builder's Using Sub-Queries section`](../query-builder-model.md#using-sub-queries). Here's a sample [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) with a subquery:
+The advanced filtering in the `IgxHierarchicalGrid` can be used to filter root grid data based on child grids data using the _IN / NOT-IN_ operators. This way, subqueries can be created to define more complex filtering logic. More information about this functionality can be found in [`Query Builder's Using Sub-Queries section`](../query-builder-model.md#using-sub-queries). Here's a sample [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) with a subquery:
 
 ```TypeScript
 ngAfterViewInit(): void {
@@ -179,8 +193,8 @@ As you see the demo above the Advanced filtering dialog is hosted in an overlay 
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:750px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:750px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-external-advanced-filtering/" >
 </code-view>
 
@@ -188,8 +202,8 @@ As you see the demo above the Advanced filtering dialog is hosted in an overlay 
 
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:750px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:750px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-external-advanced-filtering/" >
 </code-view>
 
@@ -197,8 +211,8 @@ As you see the demo above the Advanced filtering dialog is hosted in an overlay 
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:750px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:750px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-advanced-filtering/" >
 </code-view>
 
@@ -209,25 +223,31 @@ As you see the demo above the Advanced filtering dialog is hosted in an overlay 
 It's super easy to configure the advanced filtering to work outside of the @@igComponent. All you need to do is to create the dialog and set its [`grid`]({environment:angularApiUrl}/classes/igxgridtoolbaradvancedfilteringcomponent.html#grid) property:
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-advanced-filtering-dialog [grid]="grid1">
 </igx-advanced-filtering-dialog>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-advanced-filtering-dialog [grid]="treegrid1">
 </igx-advanced-filtering-dialog>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-advanced-filtering-dialog [grid]="hierarchicalGrid">
 </igx-advanced-filtering-dialog>
 ```
+
 }
 
-You can also see how our [drag and drop App Builder™](https://www.infragistics.com/products/appbuilder) can streamline the entire design-to-Angular-code story. 
+You can also see how our [drag and drop App Builder™](https://www.infragistics.com/products/appbuilder) can streamline the entire design-to-Angular-code story.
 <div class="divider--half"></div>
 
 
@@ -240,7 +260,7 @@ To get started with styling the Advanced Filtering dialog, we need to import the
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 Since the Advanced Filtering dialog uses the [`IgxQueryBuilder`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) component, you can use the [`query-builder-theme`]({environment:sassApiUrl}/themes#query-builder-theme) to style it. To style the header title, you can create a custom theme that extends the [`query-builder-theme`]({environment:sassApiUrl}/themes#query-builder-theme) and set the `$header-foreground` parameter.
 
@@ -272,7 +292,6 @@ igx-advanced-filtering-dialog {
 
 >[!NOTE]
 >We include the created **query-builder-theme** within `igx-advanced-filtering-dialog`, so that this custom theme will affect only the query builder nested in the advanced filtering dialog. Otherwise other query builder components in the application would be affected too.
-
 >[!NOTE]
 >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
 
@@ -299,27 +318,27 @@ $custom-query-builder: query-builder-theme(
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:530px" 
+<code-view style="height:530px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-advanced-filtering-style/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:510px" 
+<code-view style="height:510px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-advanced-filtering-style/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:630px" 
+<code-view style="height:630px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-advanced-filtering-style/" >
 </code-view>
 
@@ -330,29 +349,31 @@ $custom-query-builder: query-builder-theme(
 <div class="divider--half"></div>
 
 ## API References
+
 <div class="divider--half"></div>
 
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+- [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [@@igComponent overview](@@igMainTopic.md)
-* [Filtering](filtering.md)
-* [Excel Style Filtering](excel-style-filtering.md)
-* [Virtualization and Performance](virtualization.md)
-* [Paging](paging.md)
-* [Sorting](sorting.md)
-* [Summaries](summaries.md)
-* [Column Moving](column-moving.md)
-* [Column Pinning](column-pinning.md)
-* [Column Resizing](column-resizing.md)
-* [Selection](selection.md)
+- [@@igComponent overview](@@igMainTopic.md)
+- [Filtering](filtering.md)
+- [Excel Style Filtering](excel-style-filtering.md)
+- [Virtualization and Performance](virtualization.md)
+- [Paging](paging.md)
+- [Sorting](sorting.md)
+- [Summaries](summaries.md)
+- [Column Moving](column-moving.md)
+- [Column Pinning](column-pinning.md)
+- [Column Resizing](column-resizing.md)
+- [Selection](selection.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

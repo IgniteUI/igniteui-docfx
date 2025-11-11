@@ -44,4 +44,4 @@ In order to switch from `Material` to `Bootstrap`, you can use the [theme]({envi
 
 ## API Overview
 
-* [Global Theme]({environment:sassApiUrl}/themes#mixin-theme)
+- [Global Theme]({environment:sassApiUrl}/themes#mixin-theme)

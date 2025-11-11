@@ -6,12 +6,12 @@ _keywords: Angular Chip, Angular Chip Component, Angular Chip Area, Angular Chip
 
 # Angular Chip Component Overview
 
-[`The Angular Chip component`]({environment:angularApiUrl}/classes/igxchipcomponent.html) is a visual element that displays information in an oval container. The component has various properties - it can be templated, deleted, and selected. Multiple chips can be reordered and visually connected to each other, using the chip area as a container. 
+[`The Angular Chip component`]({environment:angularApiUrl}/classes/igxchipcomponent.html) is a visual element that displays information in an oval container. The component has various properties - it can be templated, deleted, and selected. Multiple chips can be reordered and visually connected to each other, using the chip area as a container.
 
 ## Angular Chip Example
 
-<code-view style="height: 100px; padding-top: 10px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px; padding-top: 10px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/chip-simple/" alt="Angular Chip Example">
 </code-view>
 
@@ -25,7 +25,7 @@ To get started with the Ignite UI for Angular Chip component, first you need to 
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the **IgxChipsModule** in the **app.module.ts** file:
 
@@ -87,7 +87,7 @@ The [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.ht
 
 ### Selection
 
-<img class="responsive-img"  src="../images/chip/selecting_default.gif" />
+<img class="responsive-img"  src="../images/chip/selecting_default.gif" alt="Selecting Default" />
 
 Selection can be enabled by setting the [`selectable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectable) input property to `true`. When selecting a chip, the [`selectedChanging`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectedChanging) event is fired. It provides the new [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) value so you can get the new state and the original event in [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalEvent) that triggered the selection change. If this is not done through user interaction but instead is done by setting the [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) property programmatically, the [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalEvent) argument has a value of `null`.
 
@@ -100,7 +100,7 @@ Selection can be enabled by setting the [`selectable`]({environment:angularApiUr
 
 ### Removing
 
-<img class="responsive-img"  src="../images/chip/removing_default.gif" />
+<img class="responsive-img"  src="../images/chip/removing_default.gif" alt="Removing Default" />
 
 Removing can be enabled by setting the [`removable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removable) input to `true`. When enabled, a remove button is rendered at the end of the chip. When removing a chip, the [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) event is emitted.
 
@@ -188,8 +188,8 @@ public chipRemoved(event: IBaseChipEventArgs) {
 
 If everything went well, you should see this in your browser:
 
-<code-view style="height: 100px; padding-top: 10px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px; padding-top: 10px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/chip-simple/" >
 </code-view>
 
@@ -199,7 +199,7 @@ All of the [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcompo
 
 You can template the `prefix` and the `suffix` of the chip, using the `IgxPrefix` and the `IgxSuffix` directives:
 
-<img class="responsive-img"  src="../images/chip/prefix_suffix.jpg" />
+<img class="responsive-img"  src="../images/chip/prefix_suffix.jpg" alt="Chip Prefix and Suffix" />
 
 ```html
 <igx-chip>
@@ -211,7 +211,7 @@ You can template the `prefix` and the `suffix` of the chip, using the `IgxPrefix
 
 You can customize the size of the chip, using the [`--ig-size`] CSS variable. By default it is set to `var(--ig-size-large)`. It can also be set to `var(--ig-size-medium)` or `var(--ig-size-small)`, while everything inside the chip retains its relative positioning:
 
-<img class="responsive-img"  src="../images/chip/density.jpg" />
+<img class="responsive-img"  src="../images/chip/density.jpg" alt="Chip Density" />
 
 ```html
 <igx-chip>Hi! My name is Chip!</igx-chip>
@@ -228,7 +228,7 @@ You can customize the size of the chip, using the [`--ig-size`] CSS variable. By
 
 You can customize the `select icon`, using the [`selectIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selecticon) input. It accepts values of type `TemplateRef` and overrides the default icon while retaining the same functionality.
 
-<img class="responsive-img"  src="../images/chip/selecting_custom.gif" />
+<img class="responsive-img"  src="../images/chip/selecting_custom.gif" alt="Selecting Custom" />
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [selectable]="true" [selectIcon]="mySelectIcon">
@@ -243,7 +243,7 @@ You can customize the `select icon`, using the [`selectIcon`]({environment:angul
 
 You can customize the `remove icon`, using the [`removeIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removeIcon) input. It takes a value of type `TemplateRef` and renders it instead of the default remove icon.
 
-<img class="responsive-img"  src="../images/chip/remove_icons.jpg" />
+<img class="responsive-img"  src="../images/chip/remove_icons.jpg" alt="Remove Icons" />
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [removable]="true" [removeIcon]="myRemoveIcon">
@@ -313,11 +313,12 @@ public chipRemoved(event: IBaseChipEventArgs) {
     this.changeDetectionRef.detectChanges();
 }
 ```
+
 If everything went well, you should see this in your browser:
 
 
-<code-view style="height: 100px; padding-top: 10px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px; padding-top: 10px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/chip-simple/" >
 </code-view>
 
@@ -327,7 +328,7 @@ The [`IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareaco
 
 ### Reorder Chips
 
-<img class="responsive-img"  src="../images/chip/dragging.gif" />
+<img class="responsive-img"  src="../images/chip/dragging.gif" alt="Dragging" />
 
 The chip can be dragged by the end-user in order to change its position. The dragging is disabled by default but can be enabled using the [`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#draggable) input property. You need to handle the actual chip reordering manually. This is where the chip area comes in handy since it provides the [`reorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#reorder) event that returns the new order when a chip is dragged over another chip.
 
@@ -361,15 +362,15 @@ The chip can be focused using the `Tab` key or by clicking on it. When the chips
 
   - <kbd>LEFT</kbd> - Moves the focus to the chip on the left.
 
-    <img class="responsive-img"  src="../images/chip/arrow_left_key.gif" />
+    <img class="responsive-img"  src="../images/chip/arrow_left_key.gif" alt="Arrow Left Key" />
 
   - <kbd>RIGHT</kbd> - Moves the focus to the chip on the right.
 
-    <img class="responsive-img"  src="../images/chip/arrow_right_key.gif" />
+    <img class="responsive-img"  src="../images/chip/arrow_right_key.gif" alt="Arrow Right Key" />
 
   - <kbd>SPACE</kbd> - Toggles chip selection if it is selectable.
 
-    <img class="responsive-img"  src="../images/chip/space_key.gif" />
+    <img class="responsive-img"  src="../images/chip/space_key.gif" alt="Space Key" />
 
   - <kbd>DELETE</kbd> - Triggers the [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) event for the [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) so the chip deletion can be handled manually.
   - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - Triggers [`reorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#reorder) event for the [`igxChipArea`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) when the currently focused chip should move position to the left.
@@ -473,8 +474,8 @@ If everything's set up correctly, you should see this in your browser:
 
 ### Demo
 
-<code-view style="height: 100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/chip-area-sample/" >
 </code-view>
 
@@ -627,9 +628,9 @@ The last step is to **include** the component theme in our application.
 
 ### Demo
 
-<code-view style="height:100px" 
+<code-view style="height:100px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/chip-styling/" >
 </code-view>
 
@@ -646,6 +647,7 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 ```
 
 The utility file includes both `light` and `dark` theme variants.
+
 - Use `light-*` classes for the light theme.
 - Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-chip`, `dark-chip`.
@@ -710,18 +712,18 @@ Learn more about it in the [Size](display-density.md) article.
 
 ## API
 
-* [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
-* [IgxChipComponent Styles]({environment:sassApiUrl}/themes#function-chip-theme)
-* [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
+- [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
+- [IgxChipComponent Styles]({environment:sassApiUrl}/themes#function-chip-theme)
+- [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
 
 ## Theming Dependencies
 
-* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## References
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

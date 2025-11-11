@@ -10,8 +10,8 @@ _keywords: Angular Switch component, Angular Switch control, Ignite UI for Angul
 
 ## Angular Switch Example
 
-<code-view style="height:200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/switch-sample-1/" alt="Angular Switch Example">
 </code-view>
 
@@ -25,7 +25,7 @@ To get started with the Ignite UI for Angular Switch component, first you need t
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxSwitchModule` in your **app.module.ts** file.
 
@@ -114,8 +114,8 @@ igx-switch {
 
 And the final result should be something like that:
 
-<code-view style="height: 200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/switch-sample-2/" >
 </code-view>
 
@@ -388,9 +388,9 @@ The last step is to **include** the component theme in our application.
 
 ### Demo
 
-<code-view style="height: 200px" 
+<code-view style="height: 200px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/switch-styling/" >
 </code-view>
 
@@ -407,6 +407,7 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 ```
 
 The utility file includes both `light` and `dark` theme variants.
+
 - Use `light-*` classes for the light theme.
 - Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-switch`, `dark-switch`.
@@ -438,12 +439,12 @@ At the end your switch should look like this:
 
 <div class="divider--half"></div>
 
-* [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
-* [IgxSwitchComponent Styles]({environment:sassApiUrl}/themes#function-switch-theme)
+- [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
+- [IgxSwitchComponent Styles]({environment:sassApiUrl}/themes#function-switch-theme)
 
 ## Theming Dependencies
 
-* [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ## Additional Resources
 
@@ -451,5 +452,5 @@ At the end your switch should look like this:
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

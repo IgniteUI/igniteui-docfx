@@ -11,8 +11,8 @@ While most tooltips have a limited number of available positions, with the [`igx
 
 ## Angular Tooltip Example
 
-<code-view style="height:150px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:150px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/tooltip-simple/" alt="Angular Tooltip Example">
 </code-view>
 
@@ -26,7 +26,7 @@ To get started with the Ignite UI for Angular Tooltip directive, first you need 
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxTooltipModule` in your **app.module.ts** file.
 
@@ -258,8 +258,8 @@ Now for the tooltip! For its content, we will create a container that will be po
 
 If all went well, this is how our location and tooltip should look like:
 
-<code-view style="height:300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/tooltip-rich/" >
 </code-view>
 
@@ -270,8 +270,8 @@ If all went well, this is how our location and tooltip should look like:
 The tooltip integrates seamlessly with other components, allowing you to create advanced tooltips that contain components within them.
 In the following example, you can see how we create descriptive tooltips by using the [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html), [`IgxAvatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html), [`IgxIcon`]({environment:angularApiUrl}/classes/igxiconcomponent.html), [`IgxBadge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html), [`IgxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html), [`IgxCard`]({environment:angularApiUrl}/classes/igxcardcomponent.html) and [`IgxCategoryChart`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) components.
 
-<code-view style="height:640px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:640px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/tooltip-advanced/" >
 </code-view>
 
@@ -299,6 +299,7 @@ To further customize the tooltip, use the [`overlaySettings`]({environment:angul
 
 <div #tooltipRef="tooltip" igxTooltip>Her name is Madelyn James</div>
 ```
+
 ```ts
 public positionSettings: PositionSettings = {
   horizontalDirection: HorizontalAlignment.Left,
@@ -382,8 +383,8 @@ The arrow element is positioned based on the provided position settings. If the 
 
 In the following example, you can see a demonstration of all position options and the arrow positioning behavior in action:
 
-<code-view style="height:220px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:220px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/tooltip-placement/" >
 </code-view>
 
@@ -477,9 +478,9 @@ So now our styled tooltip should look like this:
 
 ### Demo
 
-<code-view style="height:200px" 
+<code-view style="height:200px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/tooltip-style/" >
 </code-view>
 
@@ -496,6 +497,7 @@ Along with the Tailwind import in your global stylesheet, you can apply the desi
 ```
 
 The utility file includes both `light` and `dark` theme variants.
+
 - Use `light-*` classes for the light theme.
 - Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-tooltip`, `dark-tooltip`.
@@ -551,21 +553,21 @@ Extra care should be taken in the following scenarios:
 
 In this article we learned how to create, configure and style awesome tooltips for the elements on our page! We also used some additional Ignite UI for Angular components like icons and avatars to improve on the design of our application! The respective APIs are listed below:
 
-* [IgxTooltipDirective]({environment:angularApiUrl}/classes/igxtooltipdirective.html)
-* [IgxTooltipTargetDirective]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html)
+- [IgxTooltipDirective]({environment:angularApiUrl}/classes/igxtooltipdirective.html)
+- [IgxTooltipTargetDirective]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html)
 
 Additional components and/or directives that were used:
 
-* [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
-* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxToggleDirective]({environment:angularApiUrl}/classes/igxtoggledirective.html)
-* [IgxToggleActionDirective]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)
+- [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
+- [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+- [IgxToggleDirective]({environment:angularApiUrl}/classes/igxtoggledirective.html)
+- [IgxToggleActionDirective]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)
 
 Styles:
 
-* [IgxTooltipDirective Styles]({environment:sassApiUrl}/themes#function-tooltip-theme)
-* [IgxAvatarComponent Styles]({environment:sassApiUrl}/themes#function-avatar-theme)
-* [IgxIconComponent Styles]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxTooltipDirective Styles]({environment:sassApiUrl}/themes#function-tooltip-theme)
+- [IgxAvatarComponent Styles]({environment:sassApiUrl}/themes#function-avatar-theme)
+- [IgxIconComponent Styles]({environment:sassApiUrl}/themes#function-icon-theme)
 
 <div class="divider"></div>
 
@@ -574,5 +576,5 @@ Styles:
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

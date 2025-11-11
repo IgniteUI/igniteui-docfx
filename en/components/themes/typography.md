@@ -12,6 +12,7 @@ The typography in Ignite UI for Angular is modeled after the [Material Type Syst
 </p>
 
 ## Overview
+
 The type system is a **_type scale_** consisting of **_13 different category type styles_** used across most components. All of the scale categories are completely reusable and adjustable by the end user.
 
 Here's a list of all 13 category styles as defined for the Material Theme in Ignite UI for Angular:
@@ -34,9 +35,10 @@ Here's a list of all 13 category styles as defined for the Material Theme in Ign
 
 <div class="divider"></div>
 
-Each theme defines its own type scale. This means each one of the themes we ship - Material, Fluent, Boostrap, and Indigo will have its own type scale. They all share the same _scale categories_, but can have different font family, weight, size, text transform, letter spacing, and line height.
+Each theme defines its own type scale. This means each one of the themes we ship - Material, Fluent, Bootstrap, and Indigo will have its own type scale. They all share the same _scale categories_, but can have different font family, weight, size, text transform, letter spacing, and line height.
 
 ## Usage
+>
 > [!IMPORTANT]
 > By default we don't apply any typography styles. To use our typography in your application you have to set the `ig-typography` CSS class on a top-level element. All of its children will then use our typography styles.
 
@@ -71,7 +73,7 @@ To change the font family in all components, all you have to do is overwrite the
 
 ## Type Styles
 
-The type styles are used internally by most of the components in Ignite UI for Angular. For instance, the documentation says the button component uses the button type style. This means that we can modify the typography of the button component by ovewriting the included `--ig-button-*` CSS variables.
+The type styles are used internally by most of the components in Ignite UI for Angular. For instance, the documentation says the button component uses the button type style. This means that we can modify the typography of the button component by overwriting the included `--ig-button-*` CSS variables.
 
 Let's say we want to change the text of the button in the Material Theme to always be lowercase.
 

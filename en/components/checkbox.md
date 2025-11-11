@@ -5,11 +5,13 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Angular Checkbox Component Overview
+
 <p class="highlight">Angular Checkbox is an extension of the standard HTML input type checkbox, providing similar functionality, only enhanced with things like animations and Material Design styling. It enables users to choose one or several predefined options, mostly in forms and surveys.
 
 The Ignite UI for Angular Checkbox component is a selection control that allows users to make a binary choice for a certain condition. It behaves similarly to the native browser checkbox. Some of the features it offers are styling options, themes, checked, unchecked, and indeterminate states, and others.</p>
 
 ## Angular Checkbox Example
+
 See the checkbox in action in the following Angular Checkbox example below.
 
 <code-view style="height: 100px"
@@ -27,7 +29,7 @@ To get started with the Ignite UI for Angular Checkbox component, first you need
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxCheckboxModule` in the **app.module.ts** file:
 
@@ -70,6 +72,7 @@ export class HomeComponent {}
 Now that you have the Ignite UI for Angular Checkbox module or component imported, you can start using the `igx-checkbox` component.
 
 ## Using the Angular Checkbox Component
+
 To make the checkbox in the demo, add the following code inside the component template:
 
 ```html
@@ -79,8 +82,10 @@ To make the checkbox in the demo, add the following code inside the component te
 ```
 
 ### Checkbox properties
+
 Let's enhance the code above by binding the checkbox properties to some data. Say, we have an array of task objects, each having two properties: description and done. You can bind the checkbox component [`checked`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#checked) property to the underlying task object done property. Analogically, you can bind the [`value`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#value) property to description.
 Optionally, you can also bind the [`change`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#change) event and add some custom logic in the provided event handler method.
+
 ```typescript
 // tasks.component.ts
 @Component({...})
@@ -96,14 +101,18 @@ export class HomeComponent {
     }
 }
 ```
+
 Enhance the component template by adding a checkbox for each task and then setting the corresponding property bindings:
+
 ```html
 <!--tasks.component.html-->
 <igx-checkbox *ngFor="let task of tasks" [checked]="task.done">
     {{ task.description }}
 </igx-checkbox>
 ```
+
 Add some styles:
+
 ```scss
 //task.component.scss
 :host {
@@ -115,13 +124,17 @@ igx-checkbox {
     margin-top: 16px;
 }
 ```
+
 The final result would be something like that:
 <code-view style="height: 200px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-sample-2/" >
 </code-view>
+
 ### Label Positioning
+
 You can position the label using the checkbox's [`labelPosition`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#labelPosition) property:
+
 ```html
 <igx-checkbox labelPosition="before"></igx-checkbox>
 ```
@@ -152,7 +165,9 @@ All done
     {{ task.description }}
 </igx-checkbox>
 ```
+
 Next, we're going to indent the subtasks, so it's more visual that they are part of the same group.
+
 ```scss
 // app.component.scss
 :host {
@@ -167,7 +182,9 @@ igx-checkbox.tasks {
     padding-left: 10px;
 }
 ```
+
 And finally, we'll create the logic of our application:
+
 ```ts
 // app.component.ts
 public tasks = [
@@ -202,6 +219,7 @@ public toggleAll() {
     }
 }
 ```
+
 After all that is done, our application should look like this:
 <code-view style="height: 200px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -349,6 +367,7 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 ```
 
 The utility file includes both `light` and `dark` theme variants.
+
 - Use `light-*` classes for the light theme.
 - Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-checkbox`, `dark-checkbox`.
@@ -379,19 +398,22 @@ At the end your checkbox should look like this:
 <div class="divider--half"></div>
 
 ## API References
+
 <div class="divider--half"></div>
 
-* [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
-* [IgxCheckboxComponent Styles]({environment:sassApiUrl}/themes#function-checkbox-theme)
-* [LabelPosition]({environment:angularApiUrl}/enums/labelposition.html)
+- [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
+- [IgxCheckboxComponent Styles]({environment:sassApiUrl}/themes#function-checkbox-theme)
+- [LabelPosition]({environment:angularApiUrl}/enums/labelposition.html)
 
 ## Theming Dependencies
-* [IgxRipple Theme]({environment:sassApiUrl}/themes#function-riple-theme)
+
+- [IgxRipple Theme]({environment:sassApiUrl}/themes#function-riple-theme)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

@@ -1,17 +1,22 @@
+<!-- markdownlint-disable MD003 MD024 -->
 @@if(igxName==='IgxGrid') {
 ---
+
 title: Collapsible Column Groups in Angular Data Grid - Infragistics
 _description: Take advantage of the capability to show\hide smaller and concise set of data with the use of collapsible column groups in our Angular Data Grid. Try it now!
 _keywords: collapsible column headers, ignite ui for angular, infragistics
 ---
+
 }
 @@if(igxName!=='IgxGrid') {
 ---
+
 title: Collapsible Column Groups in Angular @@igComponent - Infragistics
 _description: Take advantage of the capability to show\hide smaller and concise set of data with the use of collapsible column groups in our Angular @@igComponent. Try it now!
 _keywords: collapsible column headers, ignite ui for angular, infragistics
 _canonicalLink: grid/collapsible-column-groups
 ---
+
 }
 
 # Collapsible Column Groups in Angular Data Grid
@@ -22,8 +27,8 @@ Multi-column headers allow you to have multiple levels of nested columns and col
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-collapsible-groups/" alt="Angular Grid Collapsible Column Groups Overview Example">
 </code-view>
 
@@ -32,8 +37,8 @@ Multi-column headers allow you to have multiple levels of nested columns and col
 
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-collapsible-groups/" alt="Angular Grid Collapsible Column Groups Overview Example">
 </code-view>
 
@@ -41,8 +46,8 @@ Multi-column headers allow you to have multiple levels of nested columns and col
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-collapsible-column-groups/" alt="Angular Grid Collapsible Column Groups Overview Example">
 </code-view>
 
@@ -56,13 +61,14 @@ To get started with the @@igxName and the **Collapsible multi-column headers** ,
 ```cmd
 ng add igniteui-angular
 ```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](../general/getting-started.md) topic.
 
-The next step is to import the `@@igxNameModule` in the app.module.ts file. Also, we strongly suggest that you take a brief look at [*multi-column groups*](./multi-column-headers.md) topic, to see more detailed information on how to setup the column groups in your grid.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](../general/getting-started.md) topic.
+
+The next step is to import the `@@igxNameModule` in the app.module.ts file. Also, we strongly suggest that you take a brief look at [_multi-column groups_](./multi-column-headers.md) topic, to see more detailed information on how to setup the column groups in your grid.
 
 ## Usage
 
-*Collapsible Column Groups* is a part of the multi-column headers feature which provides a way to collapse/expand a column group to a smaller set of data. When a column group is collapsed, a subset of the columns will be shown to the end-user and the other child columns of the group will hide. Each collapsed/expanded column can be bound to the grid data source, or it may be unbound, thus calculated.
+_Collapsible Column Groups_ is a part of the multi-column headers feature which provides a way to collapse/expand a column group to a smaller set of data. When a column group is collapsed, a subset of the columns will be shown to the end-user and the other child columns of the group will hide. Each collapsed/expanded column can be bound to the grid data source, or it may be unbound, thus calculated.
 
 In order to define a column group as `collapsible`, you need to set the property to `[collapsible]="true"` and also keep in mind that you need to define the property `visibleWhenCollapsed` to at least two child columns: at least one column must be visible when the group is collapsed (`[visibleWhenCollapsed]="true"`) and at least one column must be hidden when the group is expanded (`[visibleWhenCollapsed]="false"`), otherwise the **collapsible functionality will be disabled**. If  `visibleWhenCollapsed` is not specified for some of the child columns, then this column will be always visible no matter whether the parent state is expanded or collapsed.
 
@@ -88,23 +94,25 @@ So let's see the markup below:
 ```
 
 And now let's sum up: every child column has three states:
--	Can be always visible, no matter the expanded state of its parent;
--	Can be visible, when its parent is collapsed;
--	Can be hidden, when its parent is collapsed;
 
-The initial state of the column group which is specified as collapsible is `[expanded]="true"`. But you can easily change this behavour by setting the property `[expanded]="false"`.
+- Can be always visible, no matter the expanded state of its parent;
+- Can be visible, when its parent is collapsed;
+- Can be hidden, when its parent is collapsed;
+
+The initial state of the column group which is specified as collapsible is `[expanded]="true"`. But you can easily change this behavior by setting the property `[expanded]="false"`.
 
 ## Expand/Collapse indicator template
 
 Default expand indicator for the igxGrid is the following:
 
- <img class="responsive-img" src="../../images/general/expand_indicator.png" style="width: 450px; height: 130px"/>
+ <img class="responsive-img" src="../../images/general/expand_indicator.png" alt="Expand Indicator" style="width: 450px; height: 130px"/>
 
 Default collapse indicator for the igxGrid is the following:
 
-<img class="responsive-img" src="../../images/general/collapsed_indicator.png" style="width: 400px; height: 130px"/>
+<img class="responsive-img" src="../../images/general/collapsed_indicator.png" alt="Collapsed Indicator" style="width: 400px; height: 130px"/>
 
 Also, if you need to change the default expand/collapse indicator, we provide two easy ways to do so - via an input property or through a directive.
+
 ### Using an input property
 
 You can define custom expand/collapse template and provide it to each of the collapsible column groups using **collapsibleIndicatorTemplate** input property. Check the markup below:
@@ -122,6 +130,7 @@ You can define custom expand/collapse template and provide it to each of the col
     </igx-column-group>
 </igx-column-group>
 ```
+
 ### Using igxCollapsibleIndicator directive
 
 Another way to achieve this behavior is to use the igxCollapsibleIndicator directive as shown in the example below:
@@ -147,27 +156,29 @@ Another way to achieve this behavior is to use the igxCollapsibleIndicator direc
 
 
 ## API References
+
 <div class="divider--half"></div>
 
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/themes#mixin-grid)
+- [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+- [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+- [IgxGridComponent Styles]({environment:sassApiUrl}/themes#mixin-grid)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [@@igComponent overview](@@igMainTopic.md)
-* [Virtualization and Performance](virtualization.md)
-* [Paging](paging.md)
-* [Filtering](filtering.md)
-* [Sorting](sorting.md)
-* [Summaries](summaries.md)
-* [Column Moving](column-moving.md)
-* [Column Pinning](column-pinning.md)
-* [Selection](selection.md)
+- [@@igComponent overview](@@igMainTopic.md)
+- [Virtualization and Performance](virtualization.md)
+- [Paging](paging.md)
+- [Filtering](filtering.md)
+- [Sorting](sorting.md)
+- [Summaries](summaries.md)
+- [Column Moving](column-moving.md)
+- [Column Pinning](column-pinning.md)
+- [Selection](selection.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
