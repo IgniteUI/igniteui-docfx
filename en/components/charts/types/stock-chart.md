@@ -29,38 +29,38 @@ You can create Stock Chart using the [`IgxFinancialChartComponent`]({environment
 
 The typical stock chart is represented with ticker data in a candlestick chart which is used for the technical analysis of the price ranges. A candlestick chart compares the high and low prices of a day to the open and close of the ticker symbol.
 
-- The body of the candlestick chart shows the open and close trade values (O/C).
-- The wicks of the candlestick chart show the high and low trade prices (H/L).
-- The distance between the top and bottom of the ticker value is the day range of the ticker price.
-- The candlestick chart ticker value is hollow when the asset closed higher than it opened.
-- The candlestick chart ticker value is filled when the asset closed lower than it opened.
-- A black or red candle represents a price with a lower closing price than the prior candle's close.
-- A white or green candle represents a higher closing price than the prior candle's close.
+*   The body of the candlestick chart shows the open and close trade values (O/C).
+*   The wicks of the candlestick chart show the high and low trade prices (H/L).
+*   The distance between the top and bottom of the ticker value is the day range of the ticker price.
+*   The candlestick chart ticker value is hollow when the asset closed higher than it opened.
+*   The candlestick chart ticker value is filled when the asset closed lower than it opened.
+*   A black or red candle represents a price with a lower closing price than the prior candle's close.
+*   A white or green candle represents a higher closing price than the prior candle's close.
 
 The Stock Chart can be set to display one of the following:
 
-- Candlestick Chart
-- Bar Chart
-- Column Chart
-- Line Chart
+*   Candlestick Chart
+*   Bar Chart
+*   Column Chart
+*   Line Chart
 
 As a Stock Chart is meant to allow the user to perform data analysis functions, it includes interactive elements such as:
 
-- Time-based Filters
-- Prices View
-- Volume View
-- Indicators View
-- Trend Lines
-- Navigation / Zoombar View
+*   Time-based Filters
+*   Prices View
+*   Volume View
+*   Indicators View
+*   Trend Lines
+*   Navigation / Zoombar View
 
-### Stock Chart Data Structure
+### Stock Chart Data Structure:
 
-- The data source must be an array or a list of data items.
-- The data source must contain at least one data item.
-- All data items must contain at least one date-time (or string) column that represents the date of the ticker data.
-- All data items must contain 1 numeric column for Bar, Line, and Column chart.
-- All data items must contain 4 numeric columns for Open, High, Low, Close (OHLC) for a Candlestick chart.
-- All data items must contain 5 numeric columns for Open, High, Low, Close and Volume for a Candlestick chart.
+*   The data source must be an array or a list of data items.
+*   The data source must contain at least one data item.
+*   All data items must contain at least one date-time (or string) column that represents the date of the ticker data.
+*   All data items must contain 1 numeric column for Bar, Line, and Column chart.
+*   All data items must contain 4 numeric columns for Open, High, Low, Close (OHLC) for a Candlestick chart.
+*   All data items must contain 5 numeric columns for Open, High, Low, Close and Volume for a Candlestick chart.
 
 ## Angular Stock Chart with Multiple Series
 
@@ -122,10 +122,10 @@ Note: When using the ordinal X axis mode, the CalloutsXMemberPath should point t
 
 The following panes are available:
 
-- Price Pane - Renders prices using Line, Candlestick, Bar (OHLC), trendlines and financial overlays.
-- Indicator Pane - Renders all the financial indicators in a separate chart while the BollingerBands and PriceChannel overlays are rendered in the Price Pane because they share the same values range on Y-Axis.
-- Volume Pane - Renders stocks volumes using Column, Line, and Area chart types below all above panes.
-- Zoom Pane - Controls the zoom of all the panes and it is always rendered at bottom of the chart.
+*   Price Pane - Renders prices using Line, Candlestick, Bar (OHLC), trendlines and financial overlays.
+*   Indicator Pane - Renders all the financial indicators in a separate chart while the BollingerBands and PriceChannel overlays are rendered in the Price Pane because they share the same values range on Y-Axis.
+*   Volume Pane - Renders stocks volumes using Column, Line, and Area chart types below all above panes.
+*   Zoom Pane - Controls the zoom of all the panes and it is always rendered at bottom of the chart.
 
 ### Indicator Pane
 
@@ -165,19 +165,19 @@ In this example, the stock chart is plotting revenue for United States.
 
 You can find more information about related chart features in these topics:
 
-- [Chart Animations](../features/chart-animations.md)
-- [Chart Annotations](../features/chart-annotations.md)
-- [Chart Navigation](../features/chart-navigation.md)
-- [Chart Trendlines](../features/chart-trendlines.md)
-- [Chart Performance](../features/chart-performance.md)
+*   [Chart Animations](../features/chart-animations.md)
+*   [Chart Annotations](../features/chart-annotations.md)
+*   [Chart Navigation](../features/chart-navigation.md)
+*   [Chart Trendlines](../features/chart-trendlines.md)
+*   [Chart Performance](../features/chart-performance.md)
 
 ## API References
 
 The following table lists API members mentioned in the above sections:
 
-- [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#chartType)
-- [`crosshairsSnapToData`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#crosshairsSnapToData)
-- `ItemsSource`
-- [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html)
-- [`indicatorTypes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#indicatorTypes)
-- [`zoomSliderType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#zoomSliderType)
+*   [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#chartType)
+*   [`crosshairsSnapToData`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#crosshairsSnapToData)
+*   `ItemsSource`
+*   [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html)
+*   [`indicatorTypes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#indicatorTypes)
+*   [`zoomSliderType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#zoomSliderType)

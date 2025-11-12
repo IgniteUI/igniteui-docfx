@@ -29,47 +29,47 @@ You can create Angular Bar Chart in the [`IgxDataChartComponent`]({environment:d
 
 Angular Bar Chart includes several variants based on your data or how you want to tell the correct story with your data. These include:
 
-- Grouped Bar Chart
-- Stacked Bar Chart
-- Polar Bar Chart
-- Stacked 100 Bar Chart
+*   Grouped Bar Chart
+*   Stacked Bar Chart
+*   Polar Bar Chart
+*   Stacked 100 Bar Chart
 
 ### Bar Chart Use Cases
 
 There are several common use cases for choosing a Bar Chart:
 
-- You need to show trends over time or a numeric value change in a category of data.
-- You need to compare data values of 1 or more data series.
-- You want to show a part-to-whole comparison.
-- You want to show top or bottom percentage of categories.
-- Analyzing multiple data points grouped in sub-categories (Stacked Bar).
+*   You need to show trends over time or a numeric value change in a category of data.
+*   You need to compare data values of 1 or more data series.
+*   You want to show a part-to-whole comparison.
+*   You want to show top or bottom percentage of categories.
+*   Analyzing multiple data points grouped in sub-categories (Stacked Bar).
 
 These use cases are commonly used for the following scenarios:
 
-- Sales Management.
-- Inventory Management.
-- Stock Charts.
-- Any String Value Comparing a Numeric Value or Time-Series Value.
+*   Sales Management.
+*   Inventory Management.
+*   Stock Charts.
+*   Any String Value Comparing a Numeric Value or Time-Series Value.
 
-### Bar Chart Best Practices
+### Bar Chart Best Practices:
 
-- Start you numeric Axis at 0.
-- Use a single color for the bars.
-- Be sure the space separating each bar is 1/2 the width of the bar itself.
-- Be sure ranking or comparing ordered categories (items) are sorted in increasing or decreasing order.
-- Right-align category values on the Y-Axis (left side labels of chart) for readability.
+*   Start you numeric Axis at 0.
+*   Use a single color for the bars.
+*   Be sure the space separating each bar is 1/2 the width of the bar itself.
+*   Be sure ranking or comparing ordered categories (items) are sorted in increasing or decreasing order.
+*   Right-align category values on the Y-Axis (left side labels of chart) for readability.
 
 ### When Not to Use Bar Chart
 
-- You have too much data so the Y-Axis can't fit in the space or is not legible.
-- You need a detailed Time-Series analysis  - consider a [Line Chart](line-chart.md) with a Time-Series for this type of data.
+*   You have too much data so the Y-Axis can't fit in the space or is not legible.
+*   You need a detailed Time-Series analysis  - consider a [Line Chart](line-chart.md) with a Time-Series for this type of data.
 
-### Bar Chart Data Structure
+### Bar Chart Data Structure:
 
-- The data source must be an array or a list of data items.
-- The data source must contain at least one data item.
-- The list must contain at least one data column (string or date time).
-- The list must contain at least one numeric data column.
+*   The data source must be an array or a list of data items.
+*   The data source must contain at least one data item.
+*   The list must contain at least one data column (string or date time).
+*   The list must contain at least one numeric data column.
 
 <div class="divider--half"></div>
 
@@ -148,20 +148,20 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 You can find more information about related chart types in these topics:
 
-- [Area Chart](area-chart.md)
-- [Column Chart](column-chart.md)
-- [Line Chart](line-chart.md)
-- [Spline Chart](spline-chart.md)
-- [Stacked Chart](stacked-chart.md)
+*   [Area Chart](area-chart.md)
+*   [Column Chart](column-chart.md)
+*   [Line Chart](line-chart.md)
+*   [Spline Chart](spline-chart.md)
+*   [Stacked Chart](stacked-chart.md)
 
 ## API References
 
 The following table lists API members mentioned in the above sections:
 
-- [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)
-- `ItemsSource`
-- [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxbarseriescomponent.html)
-- [`IgxCalloutLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcalloutlayercomponent.html)
-- [`IgxStackedBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstackedbarseriescomponent.html)
-- [`IgxStacked100BarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstacked100barseriescomponent.html)
-- [`IgxStackedBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstackedbarseriescomponent.html)
+*   [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)
+*   `ItemsSource`
+*   [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxbarseriescomponent.html)
+*   [`IgxCalloutLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcalloutlayercomponent.html)
+*   [`IgxStackedBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstackedbarseriescomponent.html)
+*   [`IgxStacked100BarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstacked100barseriescomponent.html)
+*   [`IgxStackedBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstackedbarseriescomponent.html)

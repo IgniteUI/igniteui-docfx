@@ -29,30 +29,30 @@ Pie Charts are appropriate for small data sets and are easy to read at a glance.
 
 The Angular Data Pie Chart includes interactive features that give the viewer tools to analyze data, like:
 
-- Legends
-- Slice Selection
-- Slice Highlighting
-- Chart Animations
+*   Legends
+*   Slice Selection
+*   Slice Highlighting
+*   Chart Animations
 
 Best Practices for a Pie Chart:
 
-- Comparing slices or segments as percentage values in proportion to a total value or whole.
-- Showing how a group of categories is broken into smaller segments.
-- Presenting small, non-hierarchical data sets (less than 6 to 8 segments of data).
-- Ensuring data segments add up to 100%.
-- Arranging the order of data from largest (highest) to smallest (least).
-- Using standard presentation techniques such as starting in the 12 o'clock position and continuing clockwise.
-- Ensuring the color palette is distinguishable for segments/slices of the parts.
-- Considering data labels in segments vs. legends for ease of reading.
-- Choosing an alternative chart to Pie such as Bar or Ring based on ease of comprehension.
-- Avoiding positioning multiple pie charts next to each other for comparative analysis.
+*   Comparing slices or segments as percentage values in proportion to a total value or whole.
+*   Showing how a group of categories is broken into smaller segments.
+*   Presenting small, non-hierarchical data sets (less than 6 to 8 segments of data).
+*   Ensuring data segments add up to 100%.
+*   Arranging the order of data from largest (highest) to smallest (least).
+*   Using standard presentation techniques such as starting in the 12 o'clock position and continuing clockwise.
+*   Ensuring the color palette is distinguishable for segments/slices of the parts.
+*   Considering data labels in segments vs. legends for ease of reading.
+*   Choosing an alternative chart to Pie such as Bar or Ring based on ease of comprehension.
+*   Avoiding positioning multiple pie charts next to each other for comparative analysis.
 
 Do Not Use Pie Chart When:
 
-- Comparing change over time —use a Bar, Line or Area chart.
-- Requiring precise data comparison —use a Bar, Line or Area chart.
-- You have more than 6 or 8 segments (high data volume) — consider a Bar, Line or Area chart if it works for your data story.
-- It would be easier for the viewer to perceive the value difference in a Bar chart.
+*   Comparing change over time —use a Bar, Line or Area chart.
+*   Requiring precise data comparison —use a Bar, Line or Area chart.
+*   You have more than 6 or 8 segments (high data volume) — consider a Bar, Line or Area chart if it works for your data story.
+*   It would be easier for the viewer to perceive the value difference in a Bar chart.
 
 ## Angular Data Pie Chart Legend
 
@@ -108,17 +108,17 @@ The main two options of the [`selectionBehavior`]({environment:dvApiBaseUrl}/pro
 
 The [`selectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#selectionMode) property exposes an enumeration that determines how the pie chart slices respond to being selected. The following are the options of that enumeration and what they do:
 
-- [`Brighten`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#Brighten): The selected slices will be highlighted.
-- [`FadeOthers`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#FadeOthers): The selected slices will remain their same color and others will fade.
-- [`FocusColorFill`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#FocusColorFill): The selected slices will change their background to the FocusBrush of the chart.
-- [`FocusColorOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#FocusColorOutline): The selected slices will have an outline with the color defined by the FocusBrush of the chart.
-- [`FocusColorThickOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#FocusColorThickOutline): The selected slices will have an outline with the color defined by the FocusBrush of the chart. The thickness of this outline can be configured via the Thickness property of the control as well.
-- [`GrayscaleOthers`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#GrayscaleOthers): The unselected slices will have a gray color filter applied to them.
-- [`None`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#None): There is no effect on the selected slices.
-- [`SelectionColorFill`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#SelectionColorFill): The selected slices will change their background to the SelectionBrush of the chart.
-- [`SelectionColorOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#SelectionColorOutline): The selected slices will have an outline with the color defined by the SelectionBrush of the chart.
-- [`SelectionColorThickOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#SelectionColorThickOutline): The selected slices will have an outline with the color defined by the FocusBrush of the chart. The thickness of this outline can be configured via the Thickness property of the control as well.
-- [`ThickOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#ThickOutline): The selected slices will apply an outline with the thickness dependent on the Thickness property of the chart.
+*   [`Brighten`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#Brighten): The selected slices will be highlighted.
+*   [`FadeOthers`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#FadeOthers): The selected slices will remain their same color and others will fade.
+*   [`FocusColorFill`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#FocusColorFill): The selected slices will change their background to the FocusBrush of the chart.
+*   [`FocusColorOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#FocusColorOutline): The selected slices will have an outline with the color defined by the FocusBrush of the chart.
+*   [`FocusColorThickOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#FocusColorThickOutline): The selected slices will have an outline with the color defined by the FocusBrush of the chart. The thickness of this outline can be configured via the Thickness property of the control as well.
+*   [`GrayscaleOthers`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#GrayscaleOthers): The unselected slices will have a gray color filter applied to them.
+*   [`None`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#None): There is no effect on the selected slices.
+*   [`SelectionColorFill`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#SelectionColorFill): The selected slices will change their background to the SelectionBrush of the chart.
+*   [`SelectionColorOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#SelectionColorOutline): The selected slices will have an outline with the color defined by the SelectionBrush of the chart.
+*   [`SelectionColorThickOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#SelectionColorThickOutline): The selected slices will have an outline with the color defined by the FocusBrush of the chart. The thickness of this outline can be configured via the Thickness property of the control as well.
+*   [`ThickOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#ThickOutline): The selected slices will apply an outline with the thickness dependent on the Thickness property of the chart.
 
 When a slice is selected, its underlying data item will be added to the SelectedSeriesItems collection of the chart. As such, the XamDataPieChart exposes the SelectedSeriesItemsChanged event to detect when a slice has been selected and this collection is changed.
 
@@ -139,18 +139,18 @@ The [`IgxDataPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-a
 
 First, the [`highlightingBehavior`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#highlightingBehavior) enumerated property determines how a slice will be highlighted. The following are the options of that property and what they do:
 
-- [`DirectlyOver`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.serieshighlightingbehavior.html#DirectlyOver): The slices are only highlighted when the mouse is directly over them.
-- [`NearestItems`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.serieshighlightingbehavior.html#NearestItems): The nearest slice to the mouse position will be highlighted.
-- [`NearestItemsAndSeries`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.serieshighlightingbehavior.html#NearestItemsAndSeries): The nearest slice and series to the mouse position will be highlighted.
-- [`NearestItemsRetainMainShapes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.serieshighlightingbehavior.html#NearestItemsRetainMainShapes): The nearest items to the mouse position will be highlighted and the main shapes of the series will not be de-emphasized.
+*   [`DirectlyOver`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.serieshighlightingbehavior.html#DirectlyOver): The slices are only highlighted when the mouse is directly over them.
+*   [`NearestItems`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.serieshighlightingbehavior.html#NearestItems): The nearest slice to the mouse position will be highlighted.
+*   [`NearestItemsAndSeries`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.serieshighlightingbehavior.html#NearestItemsAndSeries): The nearest slice and series to the mouse position will be highlighted.
+*   [`NearestItemsRetainMainShapes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.serieshighlightingbehavior.html#NearestItemsRetainMainShapes): The nearest items to the mouse position will be highlighted and the main shapes of the series will not be de-emphasized.
 
 The [`highlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#highlightingMode) enumerated property determines how the data pie chart slices respond to being highlighted. The following are the options of that property and what they do:
 
-- [`Brighten`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#Brighten): The series will have its color brightened when the mouse position is over or near it.
-- `BrightenSpecific`: The specific slice will have its color brightened when the mouse position is over or near it.
-- [`FadeOthers`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#FadeOthers): The series will retain its color when the mouse position is over or near it, while the others will appear faded.
-- `FadeOthersSpecific`: The specific slice will retain its color when the mouse position is over or near it, while the others will appear faded.
-- [`None`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#None): The series and slices will not be highlighted.
+*   [`Brighten`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#Brighten): The series will have its color brightened when the mouse position is over or near it.
+*   `BrightenSpecific`: The specific slice will have its color brightened when the mouse position is over or near it.
+*   [`FadeOthers`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#FadeOthers): The series will retain its color when the mouse position is over or near it, while the others will appear faded.
+*   `FadeOthersSpecific`: The specific slice will retain its color when the mouse position is over or near it, while the others will appear faded.
+*   [`None`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#None): The series and slices will not be highlighted.
 
 The following example demonstrates the mouse highlighting behaviors of the [`IgxDataPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiechartcomponent.html) component:
 
@@ -197,19 +197,19 @@ The following sample demonstrates the usage of animation in the [`IgxDataPieChar
 
 ## Additional Resources
 
-- [Donut Chart](donut-chart.md)
-- [Polar Chart](polar-chart.md)
-- [Radial Chart](radial-chart.md)
+*   [Donut Chart](donut-chart.md)
+*   [Polar Chart](polar-chart.md)
+*   [Radial Chart](radial-chart.md)
 
 ## API References
 
 The following table lists API members mentioned in the above sections:
 
-- [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiechartcomponent.html#chartType)
-- [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryThreshold)
-- [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryType)
-- [`selectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#selectionMode)
-- [`selectionBehavior`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#selectionBehavior)
+*   [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiechartcomponent.html#chartType)
+*   [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryThreshold)
+*   [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryType)
+*   [`selectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#selectionMode)
+*   [`selectionBehavior`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#selectionBehavior)
 
 |Chart Type       | Control Name   | API Members |
 |-----------------|----------------|------------ |

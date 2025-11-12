@@ -18,6 +18,9 @@ The Infragistics Angular Excel Engine's [`WorksheetChart`]({environment:dvApiBas
 </code-view>
 
 
+> \[!Note]
+> The XLSX format is required. Other formats are not supported at this time.
+
 <div class="divider--half"></div>
 
 ## Usage
@@ -40,9 +43,9 @@ chart.setSourceData("A2:M6", true);
 
 ## API References
 
-- `AddChart`
-- `Area`
-- [`IgxColumnComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_grids_grids.igxcolumncomponent.html)
-- `Line`
-- `Pie`
-- [`WorksheetChart`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetchart.html)
+*   `AddChart`
+*   `Area`
+*   [`IgxColumnComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_grids_grids.igxcolumncomponent.html)
+*   `Line`
+*   `Pie`
+*   [`WorksheetChart`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetchart.html)
