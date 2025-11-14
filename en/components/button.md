@@ -263,9 +263,8 @@ Following the simplest approach, you can use CSS variables to customize the appe
 
 By changing the values of these CSS variables, you can alter the entire look of the button.
 
-<div class="divider--half"></div>
+Another way to style the button is by using **Sass**, along with our type-specific theme functions: [`flat-button-theme`]({environment:sassApiUrl}/themes#function-flat-button-theme), [`outlined-button-theme`]({environment:sassApiUrl}/themes#function-outlined-button-theme), [`contained-button-theme`]({environment:sassApiUrl}/themes#function-contained-button-theme), and [`fab-button-theme`]({environment:sassApiUrl}/themes#function-fab-button-theme). Each of them will target only the buttons of that specific type.
 
-Another way to style the button is by using **Sass**, along with our [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) function.
 
 To start styling the button using **Sass**, first import the `index` file, which includes all theme functions and component mixins:
 
@@ -276,7 +275,7 @@ To start styling the button using **Sass**, first import the `index` file, which
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`button-theme`]({environment:sassApiUrl}/themes#function-button-theme) and accepts the `$foreground` and the `$background` parameters with their respective hover and focus parameters.
+Next, create a new theme that extends the type-specific theme function for the type of button you are styling. In this example, we will use the [`contained-button-theme`]({environment:sassApiUrl}/themes#function-contained-button-theme) function and pass values to the `$foreground` and the `$background` parameters, along with their respective hover and active parameters.
 
 Given the following markup:
 
@@ -286,53 +285,30 @@ Given the following markup:
 </div>
 ```
 
-We need to create the following theme:
+You can create the following theme:
 
 ```scss
-$custom-button-theme: button-theme(
-    $foreground: #fdfdfd,
-    $hover-foreground: #fdfdfd,
-    $focus-foreground: #fdfdfd,
-    $background: #345779,
-    $hover-background: #2e4d6b,
-    $focus-background: #2e4d6b,
-    $disabled-foreground: #2e4d6b,
+$custom-contained-theme: contained-button-theme(
+    $background: #f9f0ff,
+    $foreground: #722ed1,
+    $hover-background: #efdbff,
+    $hover-foreground: #9254de,
+    $active-foreground: #531dab,
+    $active-background: #dfc2fa,
 );
 ```
 
-Take a look at the [`button-theme`]({environment:sassApiUrl}/themes#function-button-theme) section for a complete list of available parameters for styling any type of button.
+Take a look at the [`contained-button-theme`]({environment:sassApiUrl}/themes#function-contained-button-theme) section for a complete list of available parameters for styling the contained-type buttons.
 
 Finally, **include** the custom theme in your application:
 
 ```scss
-.button-sample {
-    @include css-vars($custom-button-theme);
+.my-contained-btn {
+    @include css-vars($custom-contained-theme);
 }
 ```
 
-You can also choose to style only buttons of a specific type - `flat`, `outlined`, `contained`, or `fab`.
-To do this, you can use the new type-specific theme functions: [`flat-button-theme`]({environment:sassApiUrl}/themes#function-flat-button-theme), [`outlined-button-theme`]({environment:sassApiUrl}/themes#function-outlined-button-theme), [`contained-button-theme`]({environment:sassApiUrl}/themes#function-contained-button-theme), and [`fab-button-theme`]({environment:sassApiUrl}/themes#function-fab-button-theme)
-
-For example, given the following markup:
-
-```html
-<div class="my-contained-btn">
-  <button igxButton="contained">Contained button</button>
-</div>
-<div class="my-flat-btn">
-  <button igxButton="flat">Flat button</button>
-</div>
-```
-
-If you want to style only the `contained` button, you can use the [`contained-button-theme`]({environment:sassApiUrl}/themes#function-flat-button-theme) function:
-
-```scss
-$custom-contained-theme: contained-button-theme(
-    $background: #348ae0,
-);
-```
-
-With the new type-specific theme functions, styling buttons is now easier. For [`contained-button-theme`]({environment:sassApiUrl}/themes#function-contained-button-theme) and [`fab-button-theme`]({environment:sassApiUrl}/themes#function-fab-button-theme) functions (as shown in the example above), you only need to provide a color to the `$background` parameter. All other button state and text colors will then be automatically generated and applied based on that value. The text color is determined by the newly added [`adaptive-contrast`]({environment:sassApiUrl}/color#function-adaptive-contrast) function, which calculates whether black or white provides better contrast against the supplied background color.
+With the type-specific theme functions, styling buttons is much easier. For [`contained-button-theme`]({environment:sassApiUrl}/themes#function-contained-button-theme) and [`fab-button-theme`]({environment:sassApiUrl}/themes#function-fab-button-theme) functions, you only need to provide a color value to the `$background` parameter. All other button state and text colors (if they are not provided) will then be automatically generated and applied based on that value. The text color is determined by the newly added [`adaptive-contrast`]({environment:sassApiUrl}/color#function-adaptive-contrast) function, which calculates whether black or white provides better contrast against the supplied background color.
 
 For [`flat-button-theme`]({environment:sassApiUrl}/themes#function-flat-button-theme) and [`outlined-button-theme`]({environment:sassApiUrl}/themes#function-outlined-button-theme) functions, the button state colors are also automatically generated and applied, but they are derived from the supplied `$foreground` parameter instead of `$background`.
 
