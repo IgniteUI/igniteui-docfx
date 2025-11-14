@@ -15,7 +15,7 @@ The Batch Editing feature of the @@igxName is based on the [`HierarchicalTransac
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-In order to use the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) with [`@@igxName`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html), but have it accumulating separate transaction logs for each island, a service factory should be provided instead. One is exported and ready for use as [`IgxHierarchicalTransactionServiceFactory`]({environment:angularApiUrl}/index.html#igxhierarchicaltransactionservicefactory). 
+In order to use the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) with [`@@igxName`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html), but have it accumulating separate transaction logs for each island, a service factory should be provided instead. One is exported and ready for use as [`IgxHierarchicalTransactionServiceFactory`]({environment:angularApiUrl}/index.html#igxhierarchicaltransactionservicefactory).
 }
 
 Below is a detailed example of how is Batch Editing enabled for the @@igComponent component.
@@ -25,24 +25,24 @@ Below is a detailed example of how is Batch Editing enabled for the @@igComponen
 The following sample demonstrates a scenario, where the @@igObjectRef has [`batchEditing`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#batchEditing) enabled and has row editing enabled. The latter will ensure that transaction will be added after the entire row edit is confirmed.
 
 @@if (igxName === 'IgxGrid') {
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-batch-editing/" alt="Angular @@igComponent Batch Editing and Transactions Example">
 </code-view>
 
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-batchediting/" alt="Angular @@igComponent Batch Editing and Transactions Example">
 </code-view>
 
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<code-view style="height:680px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:680px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-batch-editing/" alt="Angular @@igComponent Batch Editing and Transactions Example">
 </code-view>
 
@@ -83,6 +83,7 @@ This will ensure a proper instance of `Transaction` service is provided for the 
 After batch editing is enabled, define a `@@igxName` with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable) set to true and bind:
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid #grid [batchEditing]="true" [data]="data" [primaryKey]="'ProductID'" width="100%" height="500px"
     [rowEditable]="true">
@@ -96,8 +97,10 @@ After batch editing is enabled, define a `@@igxName` with bound data source and 
 ...
 
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid #treeGrid [batchEditing]="true" [data]="data" primaryKey="employeeID" foreignKey="PID"
     width ="100%" height ="500px" rowEditable=true>
@@ -111,8 +114,10 @@ After batch editing is enabled, define a `@@igxName` with bound data source and 
         (click)="openCommitDialog()">Commit</button>
 ...
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid #hierarchicalGrid [batchEditing]="true" [data]="data" [primaryKey]="'Artist'"
     [height]="'580px'" [width]="'100%'" [rowEditable]="true" >
@@ -136,6 +141,7 @@ After batch editing is enabled, define a `@@igxName` with bound data source and 
 ...
 
 ```
+
 }
 
 @@if (igxName === 'IgxGrid') {
@@ -163,9 +169,11 @@ export class GridBatchEditingSampleComponent {
     }
 }
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 The following code demonstrates the usage of the [`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) API - undo, redo, commit.
+
 ```typescript
 export class TreeGridBatchEditingSampleComponent {
     @ViewChild('treeGrid', { read: IgxTreeGridComponent }) public treeGrid: IgxTreeGridComponent;
@@ -188,6 +196,7 @@ export class TreeGridBatchEditingSampleComponent {
     }
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 The following code demonstrates the usage of the [`transactions`]({environment:angularApiUrl}/classes/igxtransactionservice.html#) API - undo, redo, commit.
@@ -216,9 +225,10 @@ export class HierarchicalGridBatchEditingSampleComponent {
     }
 }
 ```
+
 }
 
-> [!NOTE] 
+> [!NOTE]
 > The transactions API won't handle end of edit and you'd need to do it by yourself. Otherwise, `@@igComponent` would stay in edit mode. One way to do that is by calling [`endEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#endEdit) in the respective method.
 
 @@if (igxName === 'IgxTreeGrid') {
@@ -234,38 +244,40 @@ Deleting a parent node in `@@igComponent` has some peculiarities. If you are usi
 
 [Check out the full demo configuration](remote-data-operations.md#remote-paging-with-batch-editing)
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/remote-paging-batch-editing/" >
 </code-view>
 
 }
+
 ## API References
 
 @@if (igxName === 'IgxGrid') {
-* [transactions]({environment:angularApiUrl}/classes/@@igTypeDoc.html#transactions)
-* [igxTransactionService]({environment:angularApiUrl}/classes/igxtransactionservice.html)
+
+- [transactions]({environment:angularApiUrl}/classes/@@igTypeDoc.html#transactions)
+- [igxTransactionService]({environment:angularApiUrl}/classes/igxtransactionservice.html)
 }
 @@if (igxName === 'IgxTreeGrid') {
-* [HierarchicalTransactionService]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) 
-* [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable)
-* [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+- [HierarchicalTransactionService]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html)
+- [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable)
+- [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
+- [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-* [igxHierarchicalTransactionServiceFactory]({environment:angularApiUrl}/index.html#igxhierarchicaltransactionservicefactory)
+- [igxHierarchicalTransactionServiceFactory]({environment:angularApiUrl}/index.html#igxhierarchicaltransactionservicefactory)
 }
 
 ## Additional Resources
 
-* [Build CRUD operations with igxGrid](../general/how-to/how-to-perform-crud.md)
-* [@@igComponent Overview](@@igMainTopic.md)
-* [@@igComponent Editing](editing.md)
-* [@@igComponent Row Editing](row-editing.md)
-* [@@igComponent Row Adding](row-adding.md)
+- [Build CRUD operations with igxGrid](../general/how-to/how-to-perform-crud.md)
+- [@@igComponent Overview](@@igMainTopic.md)
+- [@@igComponent Editing](editing.md)
+- [@@igComponent Row Editing](row-editing.md)
+- [@@igComponent Row Adding](row-adding.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

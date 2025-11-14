@@ -5,12 +5,13 @@ _keywords: Angular Badge component, Angular Badge control, Ignite UI for Angular
 ---
 
 # Angular Badge Component Overview
+
 <p class="highlight">Angular Badge is a component used in conjunction with avatars, navigation menus, or other components in an application when a visual notification is needed. Badges are usually  designed as icons with a predefined style to communicate information, success, warnings, or errors.</p>
 
 ## Angular Badge Example
 
-<code-view style="height:100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-2/" alt="Angular Badge Example">
 </code-view>
 
@@ -23,9 +24,10 @@ To get started with the Ignite UI for Angular Badge component, first you need to
 ```cmd
 ng add igniteui-angular
 ```
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
 
-The next step is to import the `IgxBadgeModule` in your **app.module.ts** file. 
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
+
+The next step is to import the `IgxBadgeModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -64,6 +66,7 @@ export class HomeComponent {}
 Now that you have the Ignite UI for Angular Badge module or component imported, you can start with a basic configuration of the `igx-badge` component.
 
 ## Using the Angular Badge Component
+
 Let's see how the demo sample is done. It's a simple success badge on an avatar. To build that, we need to import the `IgxAvatarModule`, along with the `IgxBadgeModule`:
 
 ```typescript
@@ -81,7 +84,7 @@ import { IgxBadgeModule, IgxAvatarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-*Alternatively, as of `16.0.0` you can import the `IgxBadgeComponent` and `IgxAvatarComponent` as standalone dependencies.*
+_Alternatively, as of `16.0.0` you can import the `IgxBadgeComponent` and `IgxAvatarComponent` as standalone dependencies._
 
 Next, we will add those components to our template:
 
@@ -122,6 +125,7 @@ If everything's done right, you should see the demo sample shown above in your b
 The size of the badge can be controlled using the `--size` variable. It will make sure that the badge sizes proportionally in both directions. Keep in mind, however, that badges containing text values use the `caption` typography style for its font-size and line-height. For that reason, when setting the `--size` of a badge containing text to values below 16px, you will also need to modify its typography.
 
 Example:
+
 ```scss
 igx-badge {
   --size: 12px;
@@ -133,7 +137,7 @@ igx-badge {
 
 ### Badge Icon
 
-In addition to material icons, the `igx-badge` component also supports usage of [Material Icons Extended](../components/material-icons-extended.md) and any other custom icon set. To add an icon from the material icons extended set inside your badge component, first you have to register it: 
+In addition to material icons, the `igx-badge` component also supports usage of [Material Icons Extended](../components/material-icons-extended.md) and any other custom icon set. To add an icon from the material icons extended set inside your badge component, first you have to register it:
 
 ```ts
 export class BadgeIconComponent implements OnInit { 
@@ -145,14 +149,14 @@ export class BadgeIconComponent implements OnInit {
 }
 ```
 
-Then, just specify the icon name and family as follows: 
+Then, just specify the icon name and family as follows:
 
-```html 
+```html
 <igx-badge icon="heart-monitor" iconSet="imx-icons"></igx-badge>
 ```
 
-<code-view style="height: 100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/badge-icon/" >
 </code-view>
 
@@ -183,7 +187,7 @@ export class AppModule {}
 >[!NOTE]
 >The [`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) has [`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) and [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) inputs to configure the badge look. You can set the icon by providing its name from the official [material icons set](https://material.io/icons/). The badge type can be set to either [`default`]({environment:angularApiUrl}/enums/type.html#default), [`info`]({environment:angularApiUrl}/enums/type.html#info), [`success`]({environment:angularApiUrl}/enums/type.html#success), [`warning`]({environment:angularApiUrl}/enums/type.html#warning), or [`error`]({environment:angularApiUrl}/enums/type.html#error). Depending on the type, a specific background color is applied.
 
-In our sample, [`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) and [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) are bound to model properties named *icon* and *type*.
+In our sample, [`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) and [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) are bound to model properties named _icon_ and _type_.
 
 Next, we're adding the contacts in our template:
 
@@ -281,8 +285,8 @@ Position the badge in its parent container:
 
 If the sample is configured properly, a list of members should be displayed and every member has an avatar and a badge, showing its current state.
 
-<code-view style="height: 280px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 280px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-3/" >
 </code-view>
 
@@ -321,7 +325,7 @@ To get started with styling the badges, we need to import the `index` file, wher
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 Following the simplest approach, we create a new theme that extends the [`badge-theme`]({environment:sassApiUrl}/themes#function-badge-theme) and accepts some parameters that style the badge's items. When you set the `$background-color`, the `$icon-color` and `$text-color` are automatically assigned based on which offers better contrast—black or white. Note that the `$border-radius` property only takes effect when the badge's `shape` is set to `square`.
 
@@ -340,9 +344,9 @@ To include the new theme we use the `css-vars` mixin:
 
 ### Demo
 
-<code-view style="height:340px" 
+<code-view style="height:340px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/badge-styling-sample/" >
 </code-view>
 
@@ -359,6 +363,7 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 ```
 
 The utility file includes both `light` and `dark` theme variants.
+
 - Use `light-*` classes for the light theme.
 - Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-badge`, `dark-badge`.
@@ -383,21 +388,25 @@ At the end your badges should look like this:
 </div>
 
 ## API References
+
 <div class="divider--half"></div>
 
-* [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
-* [IgxBadgeComponent]({environment:angularApiUrl}/classes/igxbadgecomponent.html)
-* [IgxBadgeComponent Styles]({environment:sassApiUrl}/themes#function-badge-theme)
-* [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
-* [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
-* [IgxBadgeType]({environment:angularApiUrl}/index.html#IgxBadgeType)
+- [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
+- [IgxBadgeComponent]({environment:angularApiUrl}/classes/igxbadgecomponent.html)
+- [IgxBadgeComponent Styles]({environment:sassApiUrl}/themes#function-badge-theme)
+- [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
+- [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
+- [IgxBadgeType]({environment:angularApiUrl}/index.html#IgxBadgeType)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+
+- [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

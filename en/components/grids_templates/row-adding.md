@@ -1,18 +1,23 @@
+<!-- markdownlint-disable MD003 MD024 -->
 @@if(igxName==='IgxGrid') {
 ---
+
 title: Adding Rows in Angular Data Grid - Ignite UI for Angular
 _description: Learn how to use and customize the built-in row adding functionality with Ignite UI for Angular. CRUD capabilities and Intuitive grid row adding. See examples!
 _keywords: row adding, igniteui for angular, infragistics
 ---
+
 }
 
 @@if(igxName!=='IgxGrid') {
 ---
+
 title: Adding Rows in Angular @@igComponent - Ignite UI for Angular
 _description: Learn how to use and customize the built-in row adding functionality with Ignite UI for Angular. CRUD capabilities and Intuitive grid row adding. See examples!
 _keywords: row adding, igniteui for angular, infragistics
 _canonicalLink: grid/row-adding
 ---
+
 }
 
 # Adding Rows in Angular @@igComponent
@@ -30,8 +35,8 @@ The following sample demonstrates how to enable native row adding in the @@igCom
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:520px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:520px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-add-row/" >
 </code-view>
 
@@ -39,17 +44,17 @@ The following sample demonstrates how to enable native row adding in the @@igCom
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:520px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:520px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-add-row/" alt="Angular @@igComponent Row Adding Example">
 </code-view>
 
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-   
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-add-row/" alt="Angular @@igComponent Row Adding Example">
 </code-view>
 
@@ -77,6 +82,7 @@ export class AppModule {}
 Then define a @@igComponent with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable) set to true and an [Action Strip](../action-strip.md) component with editing actions enabled. The [`addRow`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html#addRow) input controls the visibility of the button that spawns the row adding UI.
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid [data]="data" [primaryKey]="'ProductID'" [autoGenerate]="false" [rowEditable]="true">
     <igx-column field="ProductID" header="Product ID" dataType="number"></igx-column>
@@ -91,8 +97,10 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
     </igx-action-strip>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid igxPreventDocumentScroll [data]="data"
     primaryKey="ID" foreignKey="ParentID" [rowEditable]="true">
@@ -111,8 +119,10 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
     </igx-action-strip>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid igxPreventDocumentScroll [data]="localdata"
     [autoGenerate]="false" [primaryKey]="'Debut'" [rowEditable]="true">
@@ -150,11 +160,11 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
     </igx-row-island>
 </igx-hierarchical-grid>
 ```
+
 }
 
 > [!NOTE]
 > Setting primary key is mandatory for row adding operations.
-
 > [!NOTE]
 > Every column excluding the primary key one is editable in the row adding UI by default. If you want to disable editing for a specific column, then you have to set the [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) column's input to `false`.
 
@@ -176,16 +186,20 @@ The internal [`IgxBaseTransactionService`]({environment:angularApiUrl}/classes/i
 Using `beginAddRowById` requires you to specify the row to use as context for the operation by its rowID (PK). The method then functions as though the end-user clicked on the add row action strip button for the specified row, spawning the UI under it.@@if (igxName === 'IgxTreeGrid') { The second parameter controls if the row is added as a child to the context row or as a sibling.} You can also make the UI spawn as the very first row in the grid by passing `null` for the first parameter.
 
 @@if (igxName !== 'IgxTreeGrid') {
+
 ```typescript
 this.grid.beginAddRowById('ALFKI');  // spawns the add row UI under the row with PK 'ALFKI'
 this.grid.beginAddRowById(null);     // spawns the add row UI as the first record
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
 this.treeGrid.beginAddRowById('ALFKI', true);   // spawns the add row UI to add a child for the row with PK 'ALFKI'
 this.treeGrid.beginAddRowById(null);            // spawns the add row UI as the first record
 ```
+
 }
 
 @@if (igxName !== 'IgxTreeGrid') {
@@ -195,6 +209,7 @@ The `beginAddRowByIndex` method works similarly but requires you to specify the 
 this.grid.beginAddRowByIndex(10);   // spawns the add row UI at index 10
 this.grid.beginAddRowByIndex(0);    // spawns the add row UI as the first record
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 The `beginAddRowByIndex` method works similarly but the row to use as context is specified by index.
@@ -203,6 +218,7 @@ The `beginAddRowByIndex` method works similarly but the row to use as context is
 this.treeGrid.beginAddRowByIndex(10, true);   // spawns the add row UI to add a child for the row at index 10
 this.treeGrid.beginAddRowByIndex(null);       // spawns the add row UI as the first record
 ```
+
 }
 
 ## Positioning
@@ -249,20 +265,22 @@ Customizing the text of the row adding overlay is possible using the `igxRowAddT
 
 ```html
 <ng-template igxRowAddText>
-	Adding Row
+ Adding Row
 </ng-template>
  ```
 
 ### Customizing Buttons
+
 Customizing the buttons of the row editing overlay is possible using the `igxRowEditActionsDirective`.
 If you want the buttons to be part of the keyboard navigation, then each on of them should have the `igxRowEditTabStopDirective`.
 
  ```html
  <ng-template igxRowEditActions let-endRowEdit>
-	<button igxButton igxRowEditTabStop (click)="endRowEdit(false)">Cancel</button>
-	<button igxButton igxRowEditTabStop (click)="endRowEdit(true)">Apply</button>
+ <button igxButton igxRowEditTabStop (click)="endRowEdit(false)">Cancel</button>
+ <button igxButton igxRowEditTabStop (click)="endRowEdit(true)">Apply</button>
 </ng-template>
  ```
+
 > [!NOTE]
 > Using `igxRowEditActions` directive will change edit actions for both editing and adding overlay buttons.
 
@@ -290,26 +308,27 @@ The row adding UI comprises the buttons in the `IgxActionStrip` editing actions,
 
 ## API References
 
-* [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable)
-* [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditEnter)
-* [onRowEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEdit)
-* [rowEditDone]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditDone)
-* [onRowEditCancel]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditCancel)
-* [endEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#endEdit)
-* [primaryKey]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primaryKey)
-* [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [IgxActionStripComponent]({environment:angularApiUrl}/classes/igxactionstripcomponent.html)
-* [IgxGridEditingActionsComponent]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html)
+- [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable)
+- [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditEnter)
+- [onRowEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEdit)
+- [rowEditDone]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditDone)
+- [onRowEditCancel]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditCancel)
+- [endEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#endEdit)
+- [primaryKey]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primaryKey)
+- [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [IgxActionStripComponent]({environment:angularApiUrl}/classes/igxactionstripcomponent.html)
+- [IgxGridEditingActionsComponent]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [@@igComponent Overview](@@igMainTopic.md)
-* [@@igComponent Editing](editing.md)
-* [@@igComponent Transactions](batch-editing.md)
+- [@@igComponent Overview](@@igMainTopic.md)
+- [@@igComponent Editing](editing.md)
+- [@@igComponent Transactions](batch-editing.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

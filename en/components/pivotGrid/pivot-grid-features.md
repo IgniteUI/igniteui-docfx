@@ -10,6 +10,7 @@ The pivot and flat grid component classes inherit from a common base and thus sh
 
 >[!NOTE]
 >Some features do not have meaningful behavior in the context of a pivot table and therefore cannot be enabled for `IgxPivotGrid`. These include:
+>
 > - CRUD operations
 > - Grouping
 > - Row/Column Pinning
@@ -18,8 +19,8 @@ The pivot and flat grid component classes inherit from a common base and thus sh
 
 The Pivot Grid component has additional features and functionalities related to its dimensions as described below.
 
-<code-view style="height: 870px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 870px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-features/" alt="Angular Pivot Grid with Pivot Selector Example">
 </code-view>
 
@@ -116,6 +117,7 @@ The Pivot Grid supports single selection which is enabled just like in the base 
 In case there are multiple row or column dimensions which would create groups that span multiple rows/columns, selection is applied to all cells that belong to the selected group.
 
 ## Super Compact Mode
+
 The `IgxPivotGrid` component provides a `superCompactMode` `@Input`. It is suitable for cases that require a lot of cells to be present on the screen at once. If enabled the option ignores the `ig-size` variable for the pivot grid. Enabling `superCompactMode` also sets the `ig-size` variable to `ig-size-small` for each child component(like `IgxChip`) that does not have the `superCompactMode` option.
 
 ```html
@@ -129,6 +131,7 @@ When a `column` dimension defines a hierarchy, the pivot grid will render additi
 ## Row Dimensions Headers
 
 As of version `18.0.0` the IgniteUI for Angular row dimension value headers can be enabled through `pivotUI` option:
+
 ```html
 <igx-pivot-grid [pivotUI]="{ showRowHeaders: true }">
 </igx-pivot-grid>
@@ -136,7 +139,7 @@ As of version `18.0.0` the IgniteUI for Angular row dimension value headers can 
 
 ## Row Dimension Layout
 
-The `IgxPivotGridComponent` supports two ways of row dimension rendering. This can be controlled by setting the `pivotUI` option's `rowLayout` property. 
+The `IgxPivotGridComponent` supports two ways of row dimension rendering. This can be controlled by setting the `pivotUI` option's `rowLayout` property.
 
 ```html
   <igx-pivot-grid [pivotUI]="pivotUI">
@@ -149,7 +152,7 @@ public pivotUI: IPivotUISettings = { rowLayout: PivotRowLayoutType.Horizontal };
 
 The default layout of the grid is `Vertical`. In this mode the hierarchy of dimensions expands vertically. The alternative would be `Horizontal`. In this mode, the children of a single row dimension when expanded are shown horizontally in the same parent multi row layout. In the sample bellow you can toggle between the two modes to compare them.
 
-Note that in the `Horizontal` mode, the parent row dimension aggregates are not visible unless the parent row is collapsed. 
+Note that in the `Horizontal` mode, the parent row dimension aggregates are not visible unless the parent row is collapsed.
 To show the parent dimension in a row summary, the `horizontalSummary` property can be enabled for the related dimension.
 
 ```ts
@@ -172,11 +175,12 @@ Additionally the position of the summary can be changed via the `horizontalSumma
 ```ts
 public pivotUI: IPivotUISettings = { rowLayout: PivotRowLayoutType.Horizontal, horizontalSummariesPosition: PivotSummaryPosition.Bottom };
 ```
+
 >[!NOTE]
 > The row summary related options - `horizontalSummary` and  `horizontalSummariesPosition` are applicable only for the `Horizontal` layout mode.
 
-<code-view style="height: 870px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 870px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-layout/" alt="Angular Pivot Grid with Horizontal Row Dimensions Layout">
 </code-view>
 
@@ -188,6 +192,7 @@ Keyboard navigation in `IgxPivotGrid` works similarly to the one in `IgxGrid`. T
 The keyboard arrows allow navigating the active element within the current area only.
 
 ### Dimensions drag & drop
+
 The dimensions are represented by chips, which can be dragged & dropped.
 All chips can change their order within their area by drag & drop.
 The chips from `rows`, `column`, `filter`(dimension chips) can be moved from any of those areas to any other and at any place.
@@ -197,19 +202,21 @@ Chips from these areas can not be moved to the `values` area and chips from the 
 >The chips from the Pivot Grid can not be moved to the Pivot Data Selector and items from the Pivot Data Selector can not be moved to the Pivot Grid.
 
 ## API References
-* [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
-* [IgxPivotDataSelectorComponent]({environment:angularApiUrl}/classes/igxpivotdataselectorcomponent.html)
+
+- [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
+- [IgxPivotDataSelectorComponent]({environment:angularApiUrl}/classes/igxpivotdataselectorcomponent.html)
 
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [Angular Pivot Grid Overview](pivot-grid.md)
-* [Angular Pivot Grid Custom Aggregations](pivot-grid-custom.md)
+- [Angular Pivot Grid Overview](pivot-grid.md)
+- [Angular Pivot Grid Custom Aggregations](pivot-grid-custom.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
 

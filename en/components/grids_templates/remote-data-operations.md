@@ -1,25 +1,32 @@
+<!-- markdownlint-disable MD003 MD024 -->
 @@if (igxName === 'IgxGrid') {
 ---
+
 title: Angular Grid Remote Data Operations - Ignite UI for Angular
 _description: Start using Angular remote data operations like remote filtering, remote sorting, and remote scrolling to load data from a server with Ignite UI for Angular.
 _keywords: angular remote data operations, ignite ui for angular, infragistics
 ---
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
+
 title: Angular Tree Remote Data Operations - Ignite UI for Angular
 _description: Start using Angular remote data operations like remote filtering, remote sorting, and remote scrolling to load data from a server with Ignite UI for Angular.
 _keywords: angular remote data operations, ignite ui for angular, infragistics
 _canonicalLink: grid/remote-data-operations
 ---
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
+
 title: Angular Hierarchical Grid Remote Data Operations - Ignite UI for Angular
 _description: Start using Angular remote data operations like remote filtering, remote sorting, and remote scrolling to load data from a server with Ignite UI for Angular.
 _keywords: angular remote data operations, ignite ui for angular, infragistics
 _canonicalLink: grid/remote-data-operations
 ---
+
 }
 
 # Angular @@igComponent Remote Data Operations
@@ -27,6 +34,7 @@ _canonicalLink: grid/remote-data-operations
 The Ignite UI for Angular @@igComponent supports remote data operations such as remote virtualization, remote sorting, remote filtering and others. This allows the developer to perform these tasks on a server, retrieve the data that is produced and display it in the @@igComponent.
 
 @@if (igxName === 'IgxGrid') {
+
 ## Angular @@igComponent Remote Data Operations Overview Example
 
 
@@ -37,6 +45,7 @@ The Ignite UI for Angular @@igComponent supports remote data operations such as 
 
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ## Angular @@igComponent Remote Data Operations Overview Example
 
 
@@ -55,6 +64,7 @@ By default, the @@igComponent uses its own logic for performing data operations.
 You can perform these tasks remotely and feed the resulting data to the @@igComponent by taking advantage of certain inputs and events, which are exposed by the @@igComponent.
 
 @@if (igxName === 'IgxGrid') {
+
 ## Remote Virtualization
 
 The [@@igxName]({environment:angularApiUrl}/classes/@@igTypeDoc.html) supports the scenario in which the data chunks are requested from a remote service, exposing the behavior implemented in the [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html) directive it uses internally.
@@ -108,10 +118,9 @@ When requesting data, you need to utilize the [`IForOfState`]({environment:angul
 </code-view>
 
 
-
 ## Infinite Scroll
 
- A popular design for scenarios requiring fetching data by chunks from an end-point is the so-called infinite scroll. For data grids, it is characterised by continuous increase of the loaded data triggered by the end-user scrolling all the way to the bottom. The next paragraphs explain how you can use the available API to easily achieve infinite scrolling in `IgxGrid`.
+ A popular design for scenarios requiring fetching data by chunks from an end-point is the so-called infinite scroll. For data grids, it is characterized by continuous increase of the loaded data triggered by the end-user scrolling all the way to the bottom. The next paragraphs explain how you can use the available API to easily achieve infinite scrolling in `IgxGrid`.
 
 To implement infinite scroll, you have to fetch the data in chunks. The data that is already fetched should be stored locally and you have to determine the length of a chunk and how many chunks there are. You also have to keep a track of the last visible data row index in the grid. In this way, using the `startIndex` and `chunkSize` properties, you can determine if the user scrolls up and you have to show them already fetched data or scrolls down and you have to fetch more data from the end-point.
 
@@ -222,9 +231,11 @@ public noopSortStrategy = NoopSortingStrategy.instance();
 
 ### Remote Sorting/Filtering Demo
 
+<!-- markdownlint-disable-next-line MD051 -->
 You can see the result of the code from above at the beginning of this article in the [Demo](#angular-grid-remote-data-operations-overview-example) section.
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ### Remote Filtering
 
 To provide remote filtering, you need to subscribe to the [`filteringExpressionsTreeChange`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringExpressionsTreeChange) output so that you make the appropriate request based on the arguments received. Let's use a flat collection as a data source for our Tree Grid by providing a [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primaryKey) and a [`foreignKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#foreignKey).
@@ -283,18 +294,23 @@ The remote filtering will have to be performed over the flat collection directly
 
 ### Remote Filtering Demo
 
+<!-- markdownlint-disable-next-line MD051 -->
 You can see the result of the code from above at the beginning of this article in the [Demo](#angular-tree-grid-remote-data-operations-overview-example) section.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
  <!-- TODO -->
 ## Unique Column Values Strategy
+
 }
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
+
 ### Unique Column Values Strategy
+
 }
 
 The list items inside the Excel Style Filtering dialog represent the unique values for the respective column. The @@igComponent generates these values based on its data source by default. In case of remote filtering, the grid data does not contain all the data from the server. In order to provide the unique values manually and load them on demand, we can take advantage of the @@igComponent's [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniqueColumnValuesStrategy) input. This input is actually a method that provides three arguments:
+
 - **column**  - The respective column instance.
 - **filteringExpressionsTree** - The filtering expressions tree, which is reduced based on the respective column.
 - **done** - Callback that should be called with the newly generated column values when they are retrieved from the server.
@@ -305,6 +321,7 @@ The developer can manually generate the necessary unique column values based on 
 > When the [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniqueColumnValuesStrategy) input is provided, the default unique values generating process in the excel style filtering will not be used.
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid #grid1 [data]="data" [filterMode]="'excelStyleFilter'" [uniqueColumnValuesStrategy]="columnValuesStrategy">
     ...
@@ -330,6 +347,7 @@ public columnValuesStrategy = (column: ColumnType,
 
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid #treeGrid [data]="data" [filterMode]="'excelStyleFilter'" [uniqueColumnValuesStrategy]="columnValuesStrategy">
     ...
@@ -355,6 +373,7 @@ public columnValuesStrategy = (column: ColumnType,
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid #hierarchicalGrid [primaryKey]="'Artist'" [data]="data" [filterMode]="'excelStyleFilter'"
                        [uniqueColumnValuesStrategy]="singersColumnValuesStrategy">
@@ -444,8 +463,10 @@ export class RemotePagingService {
     }
 }
 ```
+
 After declaring the service, we need to create a component, which will be responsible for the @@igComponent construction and data subscription.
 @@if (igxName === 'IgxGrid') {
+
 ```typescript
 export class RemotePagingGridSample implements OnInit, AfterViewInit, OnDestroy {
     public data: Observable<any[]>;
@@ -469,8 +490,10 @@ export class RemotePagingGridSample implements OnInit, AfterViewInit, OnDestroy 
     }
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```typescript
 export class HGridRemotePagingSampleComponent implements OnInit, AfterViewInit, OnDestroy {
     public data: BehaviorSubject<any> = new BehaviorSubject([]);
@@ -494,28 +517,33 @@ export class HGridRemotePagingSampleComponent implements OnInit, AfterViewInit, 
     }
 }
 ```
+
 }
 }
 @@if (igxName === 'IgxTreeGrid') {
 In this sample we will demonstrate how to display a certain number of root records per page no matter how many child records they have. In order to cancel the built-in Tree Grid paging algorithm, which displays a certain number of records no matter their level (root or child), we have to set the [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) property to `Number.MAX_SAFE_INTEGER`.
+
 ```html
 <igx-tree-grid #treeGrid ...>
         <igx-paginator [perPage]="maxPerPage">
         </igx-paginator>
 ...
 ```
+
 ```typescript
 public maxPerPage = Number.MAX_SAFE_INTEGER;
 ```
+
 }
 
-Now we can choose between setting-up our own *custom paging template* or using the default one that the `igx-paginator` provides. Let's first take a look what is necessary to set-up remote paging by using the *default paging template*.
+Now we can choose between setting-up our own _custom paging template_ or using the default one that the `igx-paginator` provides. Let's first take a look what is necessary to set-up remote paging by using the _default paging template_.
 
 ### Remote paging with default template
 
-If you want to use the *default paging template* you need to set the Paginator's [`totalRecords`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#totalRecords) property, only then the grid will be able to calculate the *total page number* based on total remote records. When performing a remote pagination the Paginator will pass to the Grid only the data for the current page, so the grid will not try to paginate the provided data source. That's why we should set Grid's [`pagingMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingMode) property to *GridPagingMode.remote*. Also it is necessary to either subscribe to [`pagingDone`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#pagingDone) or [`perPageChange`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPageChange) events in order to fetch the data from your remote service, it depends on the use case which event will be used.
+If you want to use the _default paging template_ you need to set the Paginator's [`totalRecords`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#totalRecords) property, only then the grid will be able to calculate the _total page number_ based on total remote records. When performing a remote pagination the Paginator will pass to the Grid only the data for the current page, so the grid will not try to paginate the provided data source. That's why we should set Grid's [`pagingMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingMode) property to _GridPagingMode.remote_. Also it is necessary to either subscribe to [`pagingDone`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#pagingDone) or [`perPageChange`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPageChange) events in order to fetch the data from your remote service, it depends on the use case which event will be used.
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid #grid1 [data]="data | async" [isLoading]="isLoading" [pagingMode]="mode">
     <igx-column field="ID"></igx-column>
@@ -525,8 +553,10 @@ If you want to use the *default paging template* you need to set the Paginator's
     </igx-paginator>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" [pagingMode]="mode">
     <igx-column field="Name"></igx-column>
@@ -536,8 +566,10 @@ If you want to use the *default paging template* you need to set the Paginator's
     </igx-paginator>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid #hierarchicalGrid [primaryKey]="'CustomerID'" [pagingMode]="mode">
     <igx-column field="CustomerID"></igx-column>
@@ -547,6 +579,7 @@ If you want to use the *default paging template* you need to set the Paginator's
     </igx-paginator>
 </igx-hierarchical-grid>
 ```
+
 }
 
 ```typescript
@@ -618,6 +651,7 @@ public paginate(page: number) {
 When we define a custom paginator content we need to define the content in a way to get the data only for the requested page and to pass the correct **skip** and **top** parameters to the remote service according to the selected page and items [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage). We are going to use the `<igx-paginator>` in order to ease our example configuration, along with the [`IgxPageSizeSelectorComponent`]({environment:angularApiUrl}/classes/IgxPageSizeSelectorComponent.html) and [`IgxPageNavigationComponent`]({environment:angularApiUrl}/classes/IgxPageNavigationComponent.html) that were introduced - `igx-page-size` will add the per page dropdown and label and `igx-page-nav` will add the navigation action buttons and labels.
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-paginator #paginator
     [totalRecords]="totalCount"
@@ -627,9 +661,9 @@ When we define a custom paginator content we need to define the content in a way
     (pageChange)="paginate($event)"
     (perPageChange)="perPageChange($event)">
     <igx-paginator-content>
-	    <igx-page-size></igx-page-size>
+     <igx-page-size></igx-page-size>
         [This is my custom content]
-	    <igx-page-nav></igx-page-nav>
+     <igx-page-nav></igx-page-nav>
     </igx-paginator-content>
 </igx-paginator>
 ```
@@ -662,8 +696,10 @@ public perPageChange(perPage: number) {
     this.remoteService.getData(skip, top);
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-paginator #paginator
     [totalRecords]="totalCount"
@@ -679,6 +715,7 @@ public perPageChange(perPage: number) {
     </igx-paginator-content>
 </igx-paginator>
 ```
+
 ```typescript
 @ViewChild('hierarchicalGrid', { static: true }) public hierarchicalGrid: IgxHierarchicalGridComponent;
 
@@ -704,8 +741,10 @@ public ngAfterViewInit() {
 }
 
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-paginator #paginator
     [totalRecords]="totalCount"
@@ -729,33 +768,40 @@ public paginate(page: number) {
     this.remoteService.getData(skip, top);
 }
 ```
+
 }
 
 >[!NOTE]
 > In order the Remote Paging to be configured properly a `GridPagingMode.Remote` should be set:
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid #grid1 [data]="data | async" width="100%" height="580px" [pagingMode]="mode"></igx-grid>
 ...
 public mode = GridPagingMode.Remote;
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid #hierarchicalGrid [data]="data | async" [primaryKey]="'CustomerID'"
     [height]="'550px'" [width]="'100%'" [pagingMode]="mode"></igx-hierarchical-grid>
 ...
 public mode = GridPagingMode.Remote;
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content"
         expansionDepth="0" width="100%" height="540px" [pagingMode]="mode"></igx-tree-grid>
 ...
 public mode = GridPagingMode.Remote;
 ```
+
 }
 
 The last step will be to declare the paginator content based on your requirements.
@@ -798,6 +844,7 @@ After all the changes above, the following result will be achieved.
 }
 
 @@if (igxName === 'IgxGrid') {
+
 ### Remote Paging with custom paginator
 
 In some cases you may want to define your own paging behavior and this is when we can take advantage of the Paging template and add our custom logic along with it. We are going to extend the Remote Paging example in order to demonstrate this:
@@ -855,6 +902,7 @@ public paginate(page: number, recalculate = false) {
     this.buttonDeselection(this.page, this.totalPages);
 }
 ```
+
 }
 
 @@if (igxName === 'IgxGrid') {
@@ -877,7 +925,7 @@ public ngOnInit() {
 ```
 
 In order to handle this use case properly, we need to implement some custom logic.
-First, we have to know the total number of records that are on the server. Given that, we calculate the total number of data pages on the server (see `this._totalPagesOnServer `) and based on its value, we will implement the custom pagination logic.
+First, we have to know the total number of records that are on the server. Given that, we calculate the total number of data pages on the server (see `this._totalPagesOnServer`) and based on its value, we will implement the custom pagination logic.
 
 ```typescript
 
@@ -916,35 +964,37 @@ As you can see in the **paginate** method, custom pagination logic is performed,
 ## Known Issues and Limitations
 
 - When the grid has no `primaryKey` set and remote data scenarios are enabled (when paging, sorting, filtering, scrolling trigger requests to a remote server to retrieve the data to be displayed in the grid), a row will lose the following state after a data request completes:
-    * Row Selection
-    * Row Expand/collapse
-    * Row Editing
-    * Row Pinning
--  In remote data scenarios, when the grid has a `primaryKey` set, [`rowSelectionChanging.oldSelection`]({environment:angularApiUrl}/interfaces/IRowSelectionEventArgs.html#oldSelection) event argument will not contain the full row data object for the rows that are currently out of the data view. In this case, `rowSelectionChanging.oldSelection` object will contain only one property, which is the `primaryKey` field. For the rest of the rows, currently in the data view, `rowSelectionChanging.oldSelection` will contain the whole row data.
+  - Row Selection
+  - Row Expand/collapse
+  - Row Editing
+  - Row Pinning
+- In remote data scenarios, when the grid has a `primaryKey` set, [`rowSelectionChanging.oldSelection`]({environment:angularApiUrl}/interfaces/IRowSelectionEventArgs.html#oldSelection) event argument will not contain the full row data object for the rows that are currently out of the data view. In this case, `rowSelectionChanging.oldSelection` object will contain only one property, which is the `primaryKey` field. For the rest of the rows, currently in the data view, `rowSelectionChanging.oldSelection` will contain the whole row data.
 
 ## API References
+
 <div class="divider--half"></div>
 
-* [IgxPaginatorComponent API]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html)
-* [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxPaginatorComponent API]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html)
+- [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [Paging](paging.md)
-* [@@igComponent overview](@@igMainTopic.md)
-* [Virtualization and Performance](virtualization.md)
-* [Filtering](filtering.md)
-* [Sorting](sorting.md)
-* [Summaries](summaries.md)
-* [Column Moving](column-moving.md)
-* [Column Pinning](column-pinning.md)
-* [Column Resizing](column-resizing.md)
-* [Selection](selection.md)
+- [Paging](paging.md)
+- [@@igComponent overview](@@igMainTopic.md)
+- [Virtualization and Performance](virtualization.md)
+- [Filtering](filtering.md)
+- [Sorting](sorting.md)
+- [Summaries](summaries.md)
+- [Column Moving](column-moving.md)
+- [Column Pinning](column-pinning.md)
+- [Column Resizing](column-resizing.md)
+- [Selection](selection.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

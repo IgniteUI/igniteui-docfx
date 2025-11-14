@@ -10,8 +10,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Angular Button Group Example
 
-<code-view style="height: 85px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 85px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-1/" alt="Angular Button Group Example">
 </code-view>
 
@@ -25,7 +25,7 @@ To get started with the Ignite UI for Angular Button Group component, first you 
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxButtonGroupModule` in your **app.module.ts** file.
 
@@ -131,8 +131,8 @@ public alignment = ButtonGroupAlignment.vertical;
 </igx-buttongroup>
 ```
 
-<code-view style="height: 220px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 220px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-2/" >
 </code-view>
 
@@ -148,8 +148,8 @@ In order to configure the `igx-buttongroup` selection, you could use its [select
 
 The sample below demonstrates the exposed `igx-buttongroup` selection modes:
 
-<code-view style="height: 170px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 170px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-4/" >
 </code-view>
 
@@ -169,8 +169,8 @@ igx-buttongroup {
 <igx-buttongroup></igx-buttongroup>
 ```
 
-<code-view style="height: 80px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 80px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-5/" >
 </code-view>
 
@@ -241,8 +241,8 @@ public ngOnInit() {
 <igx-buttongroup [selectionMode]="'multi'" [values]="bordersButtons"></igx-buttongroup>
 ```
 
-<code-view style="height: 90px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 90px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-3/" >
 </code-view>
 
@@ -428,9 +428,9 @@ The last step is to include the component's theme.
 
 ### Demo
 
-<code-view style="height: 200px" 
+<code-view style="height: 200px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-style/" >
 </code-view>
 
@@ -447,6 +447,7 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 ```
 
 The utility file includes both `light` and `dark` theme variants.
+
 - Use `light-*` classes for the light theme.
 - Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-button-group`, `dark-button-group`.
@@ -476,16 +477,16 @@ At the end your button group should look like this:
 
 <div class="divider--half"></div>
 
-* [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
-* [IgxButtonGroup Styles]({environment:sassApiUrl}/themes#function-button-group-theme)
-* [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxButton Styles]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
+- [IgxButtonGroup Styles]({environment:sassApiUrl}/themes#function-button-group-theme)
+- [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+- [IgxButton Styles]({environment:sassApiUrl}/themes#function-button-theme)
 
 ## Theming Dependencies
 
-* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ## Additional Resources
 
@@ -493,5 +494,5 @@ At the end your button group should look like this:
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

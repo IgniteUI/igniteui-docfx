@@ -10,8 +10,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Angular Linear Progress Example
 
-<code-view style="height:50px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:50px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar/" alt="Angular Linear Progress Example">
 </code-view>
 
@@ -25,7 +25,7 @@ To get started with the Ignite UI for Angular Linear Progress component, first y
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxProgressBarModule` in the **app.module.ts** file:
 
@@ -99,8 +99,8 @@ Let's see how we can create different types of progress bars that can be both st
 
 So if we set up everything correctly, you should see the following in your browser:
 
-<code-view style="height:200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-1/" >
 </code-view>
 
@@ -175,8 +175,8 @@ public positionEnd: IgxTextAlign = IgxTextAlign.END;
 
 Let's take a look at how this turned out:
 
-<code-view style="height:200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-2/" >
 </code-view>
 
@@ -184,7 +184,6 @@ Let's take a look at how this turned out:
 
 > [!NOTE]
 > If the [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) input value is not defined, the progress update is **1% of the [`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) value**. In case you want the progress to be faster, the [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) value should be greater than (**[`max`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#max) * 1%**), respectfully for slower progress the [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) should be less than the default progress update.
-
 > [!NOTE]
 > If the [`step`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#step) value is defined greater than the [`value`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#value) input, there is only one update, which gets **the value that is passed for progress update**.
 
@@ -235,8 +234,8 @@ public decrementProgress() {
 
 After completing the steps above, our progress bar should look like this:
 
-<code-view style="height:200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/linear-dynamic-sample/" >
 </code-view>
 
@@ -272,9 +271,9 @@ The last step is to **include** the component theme in our application.
 
 ### Demo
 
-<code-view style="height:50px" 
+<code-view style="height:50px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-styling/" >
 </code-view>
 
@@ -282,6 +281,6 @@ The last step is to **include** the component theme in our application.
 
 <div class="divider--half"></div>
 
-* [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
-* [IgxLinearProgressBarComponent Styles]({environment:sassApiUrl}/themes#function-progress-linear-theme)
-* [IgxTextAlign]({environment:angularApiUrl}/enums/igxtextalign.html)
+- [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
+- [IgxLinearProgressBarComponent Styles]({environment:sassApiUrl}/themes#function-progress-linear-theme)
+- [IgxTextAlign]({environment:angularApiUrl}/enums/igxtextalign.html)

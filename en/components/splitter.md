@@ -10,8 +10,8 @@ The Ignite UI for Angular Splitter component provides the ability to create layo
 
 ## Angular Splitter Example
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/splitter-horizontal-sample/" alt="Angular Splitter Example">
 </code-view>
 
@@ -26,7 +26,7 @@ To get started with the Ignite UI for Angular Splitter component, first you need
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxSplitterModule` in your **app.module.ts** file.
 
@@ -96,9 +96,11 @@ Now that you have the Ignite UI for Angular Splitter module or directives import
 ### Orientation
 
 The splitter can be vertical or horizontal, which is defined by the [`type`]({environment:angularApiUrl}/classes/igxsplittercomponent.html#type) input. The default value is Vertical.
+
 ```typescript
 public type = SplitterType.Horizontal;
 ```
+
 ```html
 <igx-splitter [type]="type">
     <igx-splitter-pane>
@@ -125,14 +127,15 @@ You can make the splitter collapsible or not by showing or hiding the splitter's
 </igx-splitter>
 ```
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/splitter-collapsible-sample/" >
 </code-view>
 
 ### Configuring panes
 
 The **igxSplitterPane** component contains several input properties. You can set the initial pane size by using the [`size`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#size) input property. The [`minSize`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#minSize) and [`maxSize`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#maxSize) input properties can be used to set the minimum or maximum allowed size of the pane. Resizing beyond `minSize` and `maxSize` is not allowed.
+
 ```html
 <igx-splitter>
     <igx-splitter-pane size='300px' minSize='100px'>
@@ -143,7 +146,9 @@ The **igxSplitterPane** component contains several input properties. You can set
     </igx-splitter-pane>
 </igx-splitter>
 ```
+
 You can also forbid the resizing of a pane by setting its [`resizable`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#resizable) input property to **false**.
+
 ```html
 <igx-splitter>
     <igx-splitter-pane [resizable]='false'>
@@ -158,10 +163,12 @@ You can also forbid the resizing of a pane by setting its [`resizable`]({environ
 ### Nested panes
 
 You can nest splitter components to create a more complex layout inside a splitter pane.
+
 ```typescript
 public typeHorizontal = SplitterType.Horizontal;
 public typeVertical = SplitterType.Vertical;
 ```
+
 ```html
 <igx-splitter style='height: 30vh;' [type]='typeHorizontal' >
     <igx-splitter-pane>
@@ -189,8 +196,8 @@ public typeVertical = SplitterType.Vertical;
 
 ### Demo
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/splitter-nested-sample/" >
 </code-view>
 
@@ -200,6 +207,7 @@ public typeVertical = SplitterType.Vertical;
 Keyboard navigation is available by default in the splitter component. When you focus a splitter bar and press one of the following key combinations, the described behavior is performed.
 
 ### Key combinations
+
 - `Arrow Up` - Moves the splitter bar _up_ in a vertical splitter
 - `Arrow Down` - Moves the splitter bar _down_ in a vertical splitter
 - `Arrow Left` - Moves the splitter bar _left_ in a horizontal splitter
@@ -241,7 +249,7 @@ To get started with styling the **igxSplitter** component, you need to import th
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 You can change the default styles of the splitter by creating a new theme that extends the [`splitter-theme`]({environment:sassApiUrl}/themes#function-splitter-theme). By providing just the base parameters, the theme will automatically generate all necessary styles for the interaction states.
 
@@ -256,7 +264,7 @@ $splitter-theme: splitter-theme(
 );
 ```
 
-### Using CSS Variables 
+### Using CSS Variables
 
 The next step is to pass the custom splitter theme:
 
@@ -265,11 +273,12 @@ The next step is to pass the custom splitter theme:
 ```
 
 ### Demo
+
 This is the final result from applying your new theme.
 
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/splitter-styling-sample/" >
 </code-view>
 
@@ -286,6 +295,7 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 ```
 
 The utility file includes both `light` and `dark` theme variants.
+
 - Use `light-*` classes for the light theme.
 - Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-splitter`, `dark-splitter`.
@@ -329,20 +339,23 @@ Or you can use the universal `--igx-splitter-size` variable to target all instan
 ```
 
 ## API References
+
 <div class="divider--half"></div>
 
-* [IgxSplitterComponent]({environment:angularApiUrl}/classes/igxsplittercomponent.html)
-* [IgxSplitterPaneComponent]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html)
-* [SplitterType]({environment:angularApiUrl}/enums/splittertype.html)
-* [IgxSplitterComponent Styles]({environment:sassApiUrl}/themes#function-splitter-theme)
+- [IgxSplitterComponent]({environment:angularApiUrl}/classes/igxsplittercomponent.html)
+- [IgxSplitterPaneComponent]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html)
+- [SplitterType]({environment:angularApiUrl}/enums/splittertype.html)
+- [IgxSplitterComponent Styles]({environment:sassApiUrl}/themes#function-splitter-theme)
 
 <div class="divider--half"></div>
 
 ## Theming Dependencies
-* [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
-* [IgxIcon Styles]({environment:sassApiUrl}/themes#function-icon-theme)
+
+- [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
+- [IgxIcon Styles]({environment:sassApiUrl}/themes#function-icon-theme)
 
 Our community is active and always welcoming to new ideas.
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
 

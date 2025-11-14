@@ -18,8 +18,8 @@ The [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybui
 
 We’ve created this Angular Query Builder example to show you the default functionalities of the Angular Query Builder component. Click the plus button to add conditions, “and” group as well as “or” group. Grouping or ungrouping expressions as well as re-ordering could be achieved via the Drag&Drop functionality.
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/query-builder-request-sample/"
            alt="Angular Query Builder Overview Example">
 </code-view>
@@ -34,7 +34,7 @@ To get started with the Ignite UI for Angular Query Builder component, first you
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxQueryBuilderModule` in the **app.module.ts** file.
 
@@ -88,7 +88,7 @@ Now that you have the Ignite UI for Angular Query Builder module or directives i
 
 ## Using the Angular Query Builder
 
-If no expression tree is initially set, you start by choosing an entity and which of its fields the query should return. After that, conditions or sub-groups can be added. 
+If no expression tree is initially set, you start by choosing an entity and which of its fields the query should return. After that, conditions or sub-groups can be added.
 
 In order to add a condition you select a field, an operand based on the field data type and a value if the operand is not unary. The operands `In` and `Not In` will allow you to create an inner query with conditions for a different entity instead of simply providing a value. Once the condition is committed, a chip with the condition information appears. By clicking or hovering the chip, you have the options to modify it or add another condition or group right after it.
 
@@ -149,7 +149,8 @@ The `expressionTree` is a two-way bindable property which means a corresponding 
 
 ## Expressions Dragging
 
-Condition chips can be easily repositioned using mouse [*Drag & Drop*](drag-drop.md) or [*Keyboard reordering*](#keyboard-interaction) approaches. With those, users can adjust their query logic dynamically.
+Condition chips can be easily repositioned using mouse [_Drag & Drop_](drag-drop.md) or [_Keyboard reordering_](#keyboard-interaction) approaches. With those, users can adjust their query logic dynamically.
+
 - Dragging a chip does not modify its condition/contents, only its position.
 - Chip can also be dragged along groups and subgroups. For example, grouping/ungrouping expressions is achieved via the Expressions Dragging functionality.
 In order to group already existing conditions, first you need to add a new group through the 'add' group button. Then via dragging, the required expressions can be moved to that group. In order to ungroup, you could drag all conditions outside their current group and once the last condition is moved out, the group will be deleted.
@@ -157,20 +158,21 @@ In order to group already existing conditions, first you need to add a new group
 >[!NOTE]
 >Chips from one query tree cannot be dragged in another, e.g. from parent to inner and vice versa.
 
-<img class="responsive-img"  src="../images/general/query-builder-drag-and-drop.gif" />
+<img class="responsive-img" alt="Animated Example of Query Builder Drag and Drop using the Mouse" src="../images/general/query-builder-drag-and-drop.gif" />
 
 ## Keyboard interaction
 
 **Key Combinations**
- - <kbd>Tab</kbd> / <kbd>Shift + Tab</kbd> - navigates to the next/previous chip, drag indicator, remove button, 'add' expression button.
- - <kbd>Arrow Down</kbd>/<kbd>Arrow Up</kbd> - when chip's drag indicator is focused, the chip can be moved up/down.
- - <kbd>Space</kbd> / <kbd>Enter</kbd> - focused expression enters edit mode. If chip is been moved, this confirms it's new position.
- - <kbd>Esc</kbd> - chip's reordering is canceled and it returns to it's original position.
+
+- <kbd>Tab</kbd> / <kbd>Shift + Tab</kbd> - navigates to the next/previous chip, drag indicator, remove button, 'add' expression button.
+- <kbd>Arrow Down</kbd>/<kbd>Arrow Up</kbd> - when chip's drag indicator is focused, the chip can be moved up/down.
+- <kbd>Space</kbd> / <kbd>Enter</kbd> - focused expression enters edit mode. If chip is been moved, this confirms it's new position.
+- <kbd>Esc</kbd> - chip's reordering is canceled and it returns to it's original position.
 
 >[!NOTE]
 >Keyboard reordering provides the same functionality as mouse Drag & Drop. Once a chip is moved, user has to confirm the new position or cancel the reorder.
 
-<img class="responsive-img"  src="../images/general/query-builder-keyboard-drag-and-drop.gif" />
+<img class="responsive-img" alt="Animated Example of Keyboard Drag and Drop Using the Ignite UI for Angular Query Builder" src="../images/general/query-builder-keyboard-drag-and-drop.gif" />
 
 ## Templating
 
@@ -180,7 +182,7 @@ The Ignite UI for Angular Query Builder Component allows defining templates for 
 
 By default the [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) header would not be displayed. In order to define such, the [`IgxQueryBuilderHeaderComponent`]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html) should be added inside of the `igx-query-builder`.
 
-Then, for setting the header title could be used the [`title`]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html#title) input and passing content inside of the `igx-query-builder-header` allows templating the query builder header. 
+Then, for setting the header title could be used the [`title`]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html#title) input and passing content inside of the `igx-query-builder-header` allows templating the query builder header.
 
  The code snippet below illustrates how to do this:
 
@@ -237,7 +239,7 @@ The search value of a condition can be templated using the [`igxQueryBuilderSear
 
 ### Formatter
 
-In order to change the appearance of the search value in the chip displayed when a condition is not in edit mode, you can set a formatter function to the fields array. The search value and selected condition could be acccessed through the value and rowData arguments as follows:
+In order to change the appearance of the search value in the chip displayed when a condition is not in edit mode, you can set a formatter function to the fields array. The search value and selected condition could be accessed through the value and rowData arguments as follows:
 
 ```ts
 this.ordersFields = [
@@ -262,8 +264,8 @@ this.ordersFields = [
 
 We’ve created this Angular Query Builder example to show you the templating and formatter functionalities for the header and the search value of the Angular Query Builder component.
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/query-builder-template-sample" alt="Angular Query Builder Templates Example">
 </code-view>
 
@@ -368,9 +370,9 @@ The last step is to **include** the new component themes using the `css-vars` mi
 
 ### Demo
 
-<code-view style="height:530px" 
+<code-view style="height:530px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/query-builder-style/" >
 </code-view>
 
@@ -392,6 +394,7 @@ Along with the tailwind import in your global stylesheet, you can apply the desi
 ```
 
 The utility file includes both `light` and `dark` theme variants.
+
 - Use `light-*` classes for the light theme.
 - Use `dark-*` classes for the dark theme.
 - Append the component name after the prefix, e.g., `light-query-builder`, `dark-query-builder`.
@@ -422,15 +425,15 @@ You can also streamline your Angular app development using [WYSIWYG App Builder�
 
 <div class="divider--half"></div>
 
-* [IgxQueryBuilderComponent API]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html)
-* [IgxQueryBuilderHeaderComponent]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html)
-* [IgxQueryBuilderSearchValueTemplateDirective]({environment:angularApiUrl}/classes/igxquerybuildersearchvaluetemplatedirective.html)
-* [IgxQueryBuilderComponent Styles]({environment:sassApiUrl}/themes#function-query-builder-theme)
+- [IgxQueryBuilderComponent API]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html)
+- [IgxQueryBuilderHeaderComponent]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html)
+- [IgxQueryBuilderSearchValueTemplateDirective]({environment:angularApiUrl}/classes/igxquerybuildersearchvaluetemplatedirective.html)
+- [IgxQueryBuilderComponent Styles]({environment:sassApiUrl}/themes#function-query-builder-theme)
 
 ## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

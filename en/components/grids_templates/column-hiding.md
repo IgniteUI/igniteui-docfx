@@ -1,25 +1,32 @@
+<!-- markdownlint-disable MD003 MD024 -->
 @@if (igxName === 'IgxGrid') {
 ---
+
 title: Column Hiding in Angular Data Grid - Ignite UI for Angular
 _description: Learn how to use the Column Hiding feature that allows users to change the visible state of the columns directly through the UI of the Ignite Material UI table.
 _keywords: column hiding, ignite ui for angular, infragistics
 ---
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
+
 title: Column Hiding in Angular Tree Grid - Ignite UI for Angular
 _description: Learn how to use the Column Hiding feature that allows users to change the visible state of the columns directly through the UI of the Ignite Material UI table.
 _keywords: column hiding, ignite ui for angular, infragistics
 _canonicalLink: grid/column-hiding
 ---
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
+
 title: Column Hiding in Angular Hierarchical Grid - Ignite UI for Angular
 _description: Learn how to use the Column Hiding feature that allows users to change the visible state of the columns directly through the UI of the Ignite Material UI table.
 _keywords: column hiding, ignite ui for angular, infragistics
 _canonicalLink: grid/column-hiding
 ---
+
 }
 
 # Angular @@igComponent Column Hiding
@@ -30,8 +37,8 @@ The Ignite UI for Angular @@igComponent provides an [`IgxColumnActionsComponent`
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-column-hiding-toolbar-sample/" alt="Angular @@igComponent Column Hiding Example">
 </code-view>
 
@@ -39,8 +46,8 @@ The Ignite UI for Angular @@igComponent provides an [`IgxColumnActionsComponent`
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding-toolbar/" alt="Angular @@igComponent Column Hiding Example">
 </code-view>
 
@@ -48,8 +55,8 @@ The Ignite UI for Angular @@igComponent provides an [`IgxColumnActionsComponent`
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:570px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:570px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-hiding/" alt="Angular @@igComponent Column Hiding Example">
 </code-view>
 
@@ -58,9 +65,11 @@ The Ignite UI for Angular @@igComponent provides an [`IgxColumnActionsComponent`
 }
 
 ## @@igComponent Setup
+
 Let's start by creating our @@igComponent and binding it to our data. We will also enable both filtering and sorting for the columns.
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <!--columnHiding.component.html-->
 
@@ -77,8 +86,10 @@ Let's start by creating our @@igComponent and binding it to our data. We will al
     <igx-column [field]="'Phone'" dataType="string" [sortable]="true"></igx-column>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <!--columnHiding.component.html-->
 
@@ -97,8 +108,10 @@ Let's start by creating our @@igComponent and binding it to our data. We will al
     <igx-column [field]="'Phone'" dataType="string" [sortable]="true"></igx-column>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid class="hgrid" [data]="localdata"
         [height]="'560px'" [width]="'100%'" columnWidth="200px" [allowFiltering]="true" #hGrid>
@@ -137,6 +150,7 @@ Let's start by creating our @@igComponent and binding it to our data. We will al
 
 </igx-hierarchical-grid>
 ```
+
 }
 
 ## Toolbar's Column Hiding UI
@@ -145,6 +159,7 @@ The built-in Column Hiding UI is placed inside an [`IgxDropDownComponent`]({envi
 For this purpose all we have to do is set both the [`IgxGridToolbarActionsComponent`]({environment:angularApiUrl}/classes/igxgridtoolbaractionscomponent.html) and the [`IgxGridToolbarHidingComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html) inside of the @@igComponent. We will also add a title to our toolbar by using the [`IgxGridToolbarTitleComponent`]({environment:angularApiUrl}/classes/igxgridtoolbartitlecomponent.html) and a custom style for our @@igComponent's wrapper.
 
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <!--columnHiding.component.html-->
 <div class="hgrid-sample">
@@ -159,6 +174,7 @@ For this purpose all we have to do is set both the [`IgxGridToolbarActionsCompon
  </igx-hierarchical-grid>
 </div>
 ```
+
 ```css
 /* columnHiding.component.css */
 .photo {
@@ -169,9 +185,11 @@ For this purpose all we have to do is set both the [`IgxGridToolbarActionsCompon
     margin: 1px
 }
 ```
+
 }
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
+
 ```html
 <!--columnHiding.component.html-->
 
@@ -195,6 +213,7 @@ For this purpose all we have to do is set both the [`IgxGridToolbarActionsCompon
     margin: 10px;
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
@@ -205,6 +224,7 @@ The @@igComponent provides us with some useful properties when it comes to using
 By using the `igx-grid-toolbar-hiding` [`title`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#title) property, we will set the title that is displayed inside the dropdown button in the toolbar.
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
+
 ```html
 <!--columnHiding.component.html-->
 
@@ -219,8 +239,10 @@ By using the `igx-grid-toolbar-hiding` [`title`]({environment:angularApiUrl}/cla
     </@@igSelector>
 </div>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <div class="hgrid-sample">
     <igx-hierarchical-grid class="hgrid" [data]="localdata">
@@ -233,6 +255,7 @@ By using the `igx-grid-toolbar-hiding` [`title`]({environment:angularApiUrl}/cla
  </igx-hierarchical-grid>
 </div>
 ```
+
 }
 
 By using the [`columnsAreaMaxHeight`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#columnsAreaMaxHeight) property of the IgxGridToolbarHidingComponent, we can set the maximum height of the area that contains the column actions. This way if we have a lot of actions and not all of them can fit in the container, a scrollbar will appear, which will allow us to scroll to any action we want.
@@ -245,7 +268,7 @@ public ngAfterViewInit() {
 }
 ```
 
-In order to use the expanded set of functionalities for the column hiding UI, we can use the IgxColumnActionsComponent's [`columnsAreaMaxHeight `]({environment:angularApiUrl}/classes/IgxColumnActionsComponent.html#columnsAreaMaxHeight) property. This way we can use it according to our application's requirements.
+In order to use the expanded set of functionalities for the column hiding UI, we can use the IgxColumnActionsComponent's [`columnsAreaMaxHeight`]({environment:angularApiUrl}/classes/IgxColumnActionsComponent.html#columnsAreaMaxHeight) property. This way we can use it according to our application's requirements.
 
 You can see the result of the code from above at the beginning of this article in the Angular Column Hiding Example section.
 
@@ -275,6 +298,7 @@ export class AppModule {}
 Now let's create our [`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html). In our application, we will place it next to the grid (which is not the case with the toolbar's column hiding UI, where the component is inside a dropdown by design). We will also set the [`columns`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#columns) property of the component to the columns of our @@igComponent and include some custom styles to make our application look even better!
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <!--columnHiding.component.html-->
 
@@ -288,8 +312,10 @@ Now let's create our [`IgxColumnActionsComponent`]({environment:angularApiUrl}/c
     </@@igSelector>
 </div>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <!--columnHiding.component.html-->
 
@@ -303,9 +329,11 @@ Now let's create our [`IgxColumnActionsComponent`]({environment:angularApiUrl}/c
     </@@igSelector>
 </div>
 ```
+
 }
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
+
 ```css
 /* columnHiding.component.css */
 
@@ -343,6 +371,7 @@ Now let's create our [`IgxColumnActionsComponent`]({environment:angularApiUrl}/c
     margin-left: 30px;    
 }
 ```
+
 }
 
 ### Add title and filter prompt
@@ -406,9 +435,11 @@ Now all we have to do is bind the [`checked`]({environment:angularApiUrl}/classe
 ```
 
 ### Disable hiding of a column
+
 We can easily prevent the user from being able to hide columns through the column hiding UI by simply setting their [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disableHiding) property to true.
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <!--columnHiding.component.html-->
 
@@ -421,8 +452,10 @@ We can easily prevent the user from being able to hide columns through the colum
     </igx-grid>
 </div>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <!--columnHiding.component.html-->
 
@@ -435,14 +468,15 @@ We can easily prevent the user from being able to hide columns through the colum
     </igx-tree-grid>
 </div>
 ```
+
 }
 
 If all went well, this is how our column hiding UI component should look like:
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-column-hiding-sample/" >
 </code-view>
 
@@ -450,8 +484,8 @@ If all went well, this is how our column hiding UI component should look like:
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding/" >
 </code-view>
 
@@ -468,7 +502,7 @@ To get started with styling the column actions component, we need to import the 
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 By using the simplest approach, we create a new theme that extends the [`column-actions-theme`]({environment:sassApiUrl}/themes#function-column-actions-theme) and accepts the `$title-color` and the `$background-color` parameters.
 
@@ -493,7 +527,7 @@ $custom-button: button-theme(
 
 In this example we only changed the text-color of the flat buttons and the button disabled color, but the [`button-theme`]({environment:sassApiUrl}/themes#function-button-theme) provides way more parameters to control the button style.
 
-The last step is to **include** the component mixins, each with its respective theme: 
+The last step is to **include** the component mixins, each with its respective theme:
 
 ```scss
 @include css-vars($custom-column-actions-theme);
@@ -505,7 +539,6 @@ The last step is to **include** the component mixins, each with its respective t
 
 >[!NOTE]
 >We include the created **button-theme** within `.igx-column-actions`, so that only the column hiding buttons would be styled. Otherwise other buttons in the grid would be affected too.
-
 >[!NOTE]
 >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep` for the components inside the column action component (buttons, checkboxes ...etc):
 
@@ -525,9 +558,9 @@ The last step is to **include** the component mixins, each with its respective t
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:600px" 
+<code-view style="height:600px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-column-hiding-style/" >
 </code-view>
 
@@ -535,9 +568,9 @@ The last step is to **include** the component mixins, each with its respective t
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:600px" 
+<code-view style="height:600px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding-style/" >
 </code-view>
 
@@ -545,9 +578,9 @@ The last step is to **include** the component mixins, each with its respective t
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:570px" 
+<code-view style="height:570px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-column-hiding-style/" >
 </code-view>
 
@@ -565,52 +598,58 @@ In this article we learned how to use the built-in column hiding UI in the @@igC
 
 The column hiding UI has a few more APIs to explore, which are listed below.
 
-* [IgxColumnActionsComponent]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html)
-* [IgxColumnActionsComponent Styles]({environment:sassApiUrl}/themes#function-column-actions-theme)
+- [IgxColumnActionsComponent]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html)
+- [IgxColumnActionsComponent Styles]({environment:sassApiUrl}/themes#function-column-actions-theme)
 
 Additional components and/or directives with relative APIs that were used:
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) properties:
-* [hiddenColumnsCount]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddenColumnsCount)
+
+- [hiddenColumnsCount]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddenColumnsCount)
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) properties:
-* [disableHiding]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding)
+
+- [disableHiding]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding)
 
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) properties:
-* [showProgress]({environment:angularApiUrl}/classes/IgxGridToolbarComponent.html#showProgress)
+
+- [showProgress]({environment:angularApiUrl}/classes/IgxGridToolbarComponent.html#showProgress)
 
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) components:
-* [IgxGridToolbarTitleComponent]({environment:angularApiUrl}/classes/igxgridtoolbartitlecomponent.html)
-* [IgxGridToolbarActionsComponent]({environment:angularApiUrl}/classes/igxgridtoolbaractionscomponent.html)
+
+- [IgxGridToolbarTitleComponent]({environment:angularApiUrl}/classes/igxgridtoolbartitlecomponent.html)
+- [IgxGridToolbarActionsComponent]({environment:angularApiUrl}/classes/igxgridtoolbaractionscomponent.html)
 
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) methods:
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) events:
-* [columnVisibilityChanged]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnVisibilityChanged)
+
+- [columnVisibilityChanged]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnVisibilityChanged)
 
 [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
 
 Styles:
 
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
-* [IgxRadioComponent Styles]({environment:sassApiUrl}/themes#function-radio-theme)
+- [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxRadioComponent Styles]({environment:sassApiUrl}/themes#function-radio-theme)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [@@igComponent overview](@@igMainTopic.md)
-* [Virtualization and Performance](virtualization.md)
-* [Filtering](filtering.md)
-* [Paging](paging.md)
-* [Sorting](sorting.md)
-* [Summaries](summaries.md)
-* [Column Pinning](column-pinning.md)
-* [Column Resizing](column-resizing.md)
-* [Selection](selection.md)
+- [@@igComponent overview](@@igMainTopic.md)
+- [Virtualization and Performance](virtualization.md)
+- [Filtering](filtering.md)
+- [Paging](paging.md)
+- [Sorting](sorting.md)
+- [Summaries](summaries.md)
+- [Column Pinning](column-pinning.md)
+- [Column Resizing](column-resizing.md)
+- [Selection](selection.md)
 @@if (igxName !== 'IgxHierarchicalGrid') {* [Searching](search.md)}
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

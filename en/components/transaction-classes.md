@@ -10,7 +10,7 @@ _keywords: batch editing, igniteui for angular, infragistics
 
 The Transaction is the main building block of the [Transaction service]({environment:angularApiUrl}/classes/igxtransactionservice.html). The Transaction is actually every operation that you execute on the data. The [`Transaction`]({environment:angularApiUrl}/interfaces/transaction.html) interface defines three properties: [`id`]({environment:angularApiUrl}/interfaces/transaction.html#id), [`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue) and [`type`]({environment:angularApiUrl}/interfaces/transaction.html#type).
 
-The [`id`]({environment:angularApiUrl}/interfaces/transaction.html#id) of the Transaction should be unique per data record and defines the record that this transaction is affecting. The [`type`]({environment:angularApiUrl}/enums/transactiontype.html#type) may be any of the three transaction types: `ADD`, `DELETE` and `UPDATE`, depending what operation you execute. The [`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue) contains the value of the new record in case you are adding an `ADD` transaction. If you are updating an existing record, the [`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue) would contain the changes only. You may have several transactions of `UPDATE` type with same id. If you are deleting a record, the [`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue) will contain the value of the deleted record. 
+The [`id`]({environment:angularApiUrl}/interfaces/transaction.html#id) of the Transaction should be unique per data record and defines the record that this transaction is affecting. The [`type`]({environment:angularApiUrl}/enums/transactiontype.html#type) may be any of the three transaction types: `ADD`, `DELETE` and `UPDATE`, depending what operation you execute. The [`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue) contains the value of the new record in case you are adding an `ADD` transaction. If you are updating an existing record, the [`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue) would contain the changes only. You may have several transactions of `UPDATE` type with same id. If you are deleting a record, the [`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue) will contain the value of the deleted record.
 
 You can see an example of how adding each type of transaction looks like in the [How to use the Transaction service](transaction-how-to-use.md) topic.
 
@@ -27,13 +27,14 @@ With the accumulated state being a partial object, we can also use the service t
 The [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) has no undo stack so it does not provide undo/redo functionality.
 
 A detailed example of how you may use [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) to enable Row Editing is provided in the following topics:
-* [Grid Row Editing](grid/row-editing.md)
-* [Tree Grid Row Editing](treegrid/row-editing.md)
-* [Hierarchical Grid Row Editing](hierarchicalgrid/row-editing.md)
+
+- [Grid Row Editing](grid/row-editing.md)
+- [Tree Grid Row Editing](treegrid/row-editing.md)
+- [Hierarchical Grid Row Editing](hierarchicalgrid/row-editing.md)
 
 ## General information on igxTransactionService and igxHierarchicalTransactionService
 
-[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) and [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) are injectable middlewares, that implement the [`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html) interface. A component may use those to accumulate changes without affecting the underlying data. The provider exposes API to *access*, *manipulate* (undo and redo) and *discard or commit* one or all changes to the data.
+[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) and [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) are injectable middlewares, that implement the [`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html) interface. A component may use those to accumulate changes without affecting the underlying data. The provider exposes API to _access_, _manipulate_ (undo and redo) and _discard or commit_ one or all changes to the data.
 
 In a more concrete example, [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) and [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) can work with both cell editing and row editing of the [`IgxGrid`](grid/grid.md). The transaction for the cell edit is added when the cell exits edit mode. When row editing starts the grid sets its transaction service in pending state by calling [`startPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#startpending). Each edited cell is added to the pending transaction log and is not added to the main transaction log. When the row exits edit mode all the changes are added to the main transaction log and to the undo log as a single transaction.
 
@@ -48,7 +49,8 @@ If you want your component to use transactions when making data operation, you n
 The [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) provides an undo stack so you may get advantage of the undo/redo functionality. The Undo stack is actually an array that contains arrays of transactions. When using the [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html), you may check the [`canUndo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#canundo) accessor in order to understand if there are any transactions in the Undo stack. If there are - you may use the [`undo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#undo) method to remove the last transaction and [`redo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#redo) to apply the last undone transaction.
 
 You may find a detailed example of how igxGrid with Batch Editing is implemented in the following topic:
-* [Grid Batch Editing](grid/batch-editing.md)
+
+- [Grid Batch Editing](grid/batch-editing.md)
 
 ## Using igxHierarchicalTransactionService
 
@@ -57,6 +59,7 @@ You may find a detailed example of how igxGrid with Batch Editing is implemented
 The [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) is designed to handle the relations between parents and children (use this when you have a hierarchical data structure, as in [`igxTreeGrid`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html), for example). The service ensures that a new record will be added to the place you expect when adding an `ADD` transaction. When you delete a parent record, its' children will be promoted to the higher level of hierarchy, or will be deleted with their parent, depending on implementation. You can see the [`cascadeOnDelete`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#cascadeondelete) property of the tree grid for a concrete example - depending on the value, deleting a parent record will have different effects on its children.
 
 In your application, you may want to handle the scenario where the user tries to add a child record to a parent record that is already deleted and is waiting for the transaction to be committed. The Transaction Service will not allow adding a record to a parent that is to be deleted and an error message will be shown in the Console. However, you may check if a parent is to be deleted and implement your own alert to the user using the following code:
+
 ```typescript
     const state = this.transactions.getState(parentRecordID);
     if (state && state.type === TransactionType.DELETE) {
@@ -65,13 +68,16 @@ In your application, you may want to handle the scenario where the user tries to
 ```
 
 You may find a detailed examples of how [`igxTreeGrid`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) and [`igxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) with Batch Editing are implemented in the following topics:
-* [Tree Grid Batch Editing](treegrid/batch-editing.md)
-* [Hierarchical Grid Batch Editing](hierarchicalgrid/batch-editing.md)
+
+- [Tree Grid Batch Editing](treegrid/batch-editing.md)
+- [Hierarchical Grid Batch Editing](hierarchicalgrid/batch-editing.md)
 
 ## Transaction Factory
+
 In the concrete implementation of transactions inside of Ignite UI for Angular grids, a factory is used in order to instantiate the proper transaction service, depending on the value of the grid's [`batchEditing`]({environment:angularApiUrl}/classes/igxgridcomponent.html#batchediting). There are two separate transaction factories - the [`IgxFlatTransactionFactory`]({environment:angularApiUrl}/classes/igxflatransactionfactory.html) (used for [`Grid`](grid/batch-editing.md) and [`Hierarchical Grid`](hierarchicalgrid/batch-editing.md)) and [`IgxHierarchicalTransactionFactory`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionfactory.html) (used for [Tree Grid](treegrid/batch-editing.md)). Both classes expose only one method - `create` - which returns a new instance of the proper [type](#general-information-on-igxtransactionservice-and-igxhierarchicaltransactionservice). The parameter passed (`TRANSACTION_TYPE`) is internally used - `None` is used when `batchEditing` is **false** and `Base` - when batch editing is enabled. An `enum` is used (instead of a `true` - `false` flag), as it allows to be expanded upon.
 
 ## Using Transaction Factory
+
 Both [`IgxFlatTransactionFactory`]({environment:angularApiUrl}/classes/igxflatransactionfactory.html) and [`IgxHierarchicalTransactionFactory`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionfactory.html) are provided in `root` and are exposed in the public API. If you want to instantiate a new instance of a transaction service, depending on some arbitrary check, you can use a transaction factory.
 
 In the below example, you can see how you can instantiate different transaction services depending on an arbitrary (`hasUndo`) flag:
@@ -96,7 +102,7 @@ export class MyCustomComponent {
 }
 ```
 
-Both factory classes can be extended and overriden in the DI hierarchy (using the `providers` array) in order to provide your own, custom implementation. This, combined with the fact that all of the classes the get instantiated by the factories are also public, gives you a lot of control over what's provided to the components that use transaction implementations internally.
+Both factory classes can be extended and overridden in the DI hierarchy (using the `providers` array) in order to provide your own, custom implementation. This, combined with the fact that all of the classes the get instantiated by the factories are also public, gives you a lot of control over what's provided to the components that use transaction implementations internally.
 
 For example, to override the transaction service used internally by the `IgxGridComponent`, you can do the following:
 
@@ -145,11 +151,12 @@ export class GridViewComponent {
 Now, when `batchEditing` is set to `true`, the grid will receive an instance of `CustomTransactionService`.
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [Transaction Service API]({environment:angularApiUrl}/interfaces/transactionservice.html)
-* [Transaction Service](transaction.md)
-* [How to use the Transaction service](transaction-how-to-use.md)
-* [Grid Batch Editing](grid/batch-editing.md)
-* [Tree Grid Batch Editing](treegrid/batch-editing.md)
-* [Hierarchical Grid Batch Editing](hierarchicalgrid/batch-editing.md)
+- [Transaction Service API]({environment:angularApiUrl}/interfaces/transactionservice.html)
+- [Transaction Service](transaction.md)
+- [How to use the Transaction service](transaction-how-to-use.md)
+- [Grid Batch Editing](grid/batch-editing.md)
+- [Tree Grid Batch Editing](treegrid/batch-editing.md)
+- [Hierarchical Grid Batch Editing](hierarchicalgrid/batch-editing.md)

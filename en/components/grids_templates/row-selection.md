@@ -1,25 +1,32 @@
+<!-- markdownlint-disable MD003 MD024 -->
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Select Row - Ignite UI for Angular 
+
+title: Angular Grid Select Row - Ignite UI for Angular
 _description: Enable row selection to improve UX and let users manage single or multiple rows. See how easy it is to configure Row data select with Ignite UI.
 _keywords: data select, igniteui for angular, infragistics
 ---
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Grid Select Row - Ignite UI for Angular 
+
+title: Angular Grid Select Row - Ignite UI for Angular
 _description: Enable row selection to improve UX and let users manage single or multiple rows. See how easy it is to configure Row data select with Ignite UI.
 _keywords: data select, igniteui for angular, infragistics
 _canonicalLink: grid/row-selection
 ---
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Grid Select Row - Ignite UI for Angular 
+
+title: Angular Grid Select Row - Ignite UI for Angular
 _description: Enable row selection to improve UX and let users manage single or multiple rows. See how easy it is to configure Row data select with Ignite UI.
 _keywords: data select, igniteui for angular, infragistics
 _canonicalLink: grid/row-selection
 ---
+
 }
 
 # Angular @@igComponent Row Selection
@@ -74,17 +81,19 @@ public handleRowSelection(event: IRowSelectionEventArgs) {
 }
 
 ## Setup
+
 In order to setup row selection in the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html), you just need to set the **rowSelection** property. This property accepts **GridSelectionMode** enumeration. **GridSelectionMode** exposes the following @@if(igxName !== 'IgxTreeGrid'){three modes: **none**, **single** and **multiple**}@@if(igxName === 'IgxTreeGrid'){four modes: **none**, **single**, **multiple** and **multipleCascade**}. Below we will take a look at each of them in more detail.
 
 ### None Selection
 
-In the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) by default row selection is disabled, otherwise *([rowSelection]="'none'")*. So you can **not** select or deselect a row through interaction with the @@igComponent UI, the only way to complete these actions is to use the provided API methods.
+In the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) by default row selection is disabled, otherwise _([rowSelection]="'none'")_. So you can **not** select or deselect a row through interaction with the @@igComponent UI, the only way to complete these actions is to use the provided API methods.
 
 ### Single Selection
 
-Single row selection can now be easily set up, the only thing you need to do, is to set `[rowSelection] = '"single"'` property. This gives you the opportunity to **select only one row within a grid**. You can select a row by clicking on a cell or pressing the *space* key when you focus on a cell of the row, and of course you can select a row by clicking on the row selector field. When row is selected or deselected **rowSelectionChanging** event is emitted.
+Single row selection can now be easily set up, the only thing you need to do, is to set `[rowSelection] = '"single"'` property. This gives you the opportunity to **select only one row within a grid**. You can select a row by clicking on a cell or pressing the _space_ key when you focus on a cell of the row, and of course you can select a row by clicking on the row selector field. When row is selected or deselected **rowSelectionChanging** event is emitted.
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <!-- selectionExample.component.html -->
 
@@ -92,6 +101,7 @@ Single row selection can now be easily set up, the only thing you need to do, is
           (rowSelectionChanging)="handleRowSelection($event)" [allowFiltering]="true">
 </igx-grid>
 ```
+
 ```typescript
 /* selectionExample.component.ts */
 
@@ -101,8 +111,10 @@ public handleRowSelection(args) {
     }
 }
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <!-- selectionExample.component.html -->
 
@@ -110,6 +122,7 @@ public handleRowSelection(args) {
             [rowSelection]="'single'" [allowFiltering]="true" (rowSelectionChanging)="handleRowSelection($event)">
 </igx-tree-grid>
 ```
+
 ```typescript
 /* selectionExample.component.ts */
 
@@ -119,13 +132,16 @@ public handleRowSelection(event) {
     }
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid [data]="localdata" [autoGenerate]="true"
         [rowSelection]="'single'" (rowSelectionChanging)="handleRowSelection($event)">
 </igx-hierarchical-grid>
 ```
+
 ```typescript
 /* selectionExample.component.ts */
 
@@ -135,13 +151,15 @@ public handleRowSelection(event) {
     }
 }
 ```
+
 }
 
 ### Multiple Selection
 
-To enable multiple row selection in the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) just set the [`rowSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelection) property to `multiple`. This will enable a row selector field on each row and in the @@igComponent header. The row selector allows users to select multiple rows, with the selection persisting through scrolling, paging, and data operations, such as sorting and filtering. The row also can be selected by clicking on a cell or by pressing the *space* key when a cell is focused. If you have selected one row and click on another while holding the *shift* key, this will select the whole range of rows. In this selection mode, when you click on a single row, the previous selected rows will be deselected. If you *click* while holding the *ctrl* key, the row will be toggled and the previous selection will be preserved.
+To enable multiple row selection in the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) just set the [`rowSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelection) property to `multiple`. This will enable a row selector field on each row and in the @@igComponent header. The row selector allows users to select multiple rows, with the selection persisting through scrolling, paging, and data operations, such as sorting and filtering. The row also can be selected by clicking on a cell or by pressing the _space_ key when a cell is focused. If you have selected one row and click on another while holding the _shift_ key, this will select the whole range of rows. In this selection mode, when you click on a single row, the previous selected rows will be deselected. If you _click_ while holding the _ctrl_ key, the row will be toggled and the previous selection will be preserved.
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <!-- selectionExample.component.html -->
 
@@ -152,6 +170,7 @@ To enable multiple row selection in the [`@@igSelector`]({environment:angularApi
 
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <!-- selectionExample.component.html -->
 
@@ -162,15 +181,20 @@ To enable multiple row selection in the [`@@igSelector`]({environment:angularApi
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="true"
         [rowSelection]="'multiple'" (rowSelectionChanging)="handleRowSelection($event)">
 </igx-hierarchical-grid>
 ```
+
 }
 @@if(igxName === 'IgxTreeGrid'){
+
 ### Cascade Selection
-To enable cascade row selection in the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) just set the [`rowSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelection) property to `multipleCascade`. This will enable a row selector field on each row and in the @@igComponent header. The row selector allows users to select multiple rows which would select all children in the tree below. The selection persists through scrolling, paging, and data operations, such as sorting and filtering. The row can also be selected by clicking on a cell or by pressing the *space* key when a cell is focused. If you have selected one row and *click* on another while holding the *shift* key, the selection of a parent record will select all of its children even if they are not in the selected range. In this selection mode, when you *click* on a single row, the previously selected rows will be deselected. If you *click* while holding the *ctrl* key, the row and its children will be toggled and the previous selection will be preserved.
+
+To enable cascade row selection in the [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) just set the [`rowSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelection) property to `multipleCascade`. This will enable a row selector field on each row and in the @@igComponent header. The row selector allows users to select multiple rows which would select all children in the tree below. The selection persists through scrolling, paging, and data operations, such as sorting and filtering. The row can also be selected by clicking on a cell or by pressing the _space_ key when a cell is focused. If you have selected one row and _click_ on another while holding the _shift_ key, the selection of a parent record will select all of its children even if they are not in the selected range. In this selection mode, when you _click_ on a single row, the previously selected rows will be deselected. If you _click_ while holding the _ctrl_ key, the row and its children will be toggled and the previous selection will be preserved.
+
 ```html
 <!-- selectionExample.component.html -->
 
@@ -178,6 +202,7 @@ To enable cascade row selection in the [`@@igSelector`]({environment:angularApiU
         [rowSelection]="'multipleCascade'" [allowFiltering]="true" (rowSelectionChanging)="handleRowSelection($event)">
 </igx-tree-grid>
 ```
+
 In this mode a parent's selection state entirely depends on the selection state of its children. When a parent has some selected and some deselected children, its checkbox is in an indeterminate state.
 }
 
@@ -193,14 +218,15 @@ In this mode a parent's selection state entirely depends on the selection state 
 
 **Notes**
 @@if (igxName !== 'IgxTreeGrid') {
-* In order to have proper row selection and cell selection, while @@igComponent has remote virtualization, a [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) should be provided.
+
+- In order to have proper row selection and cell selection, while @@igComponent has remote virtualization, a [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primarykey) should be provided.
 }
 @@if (igxName !== 'IgxTreeGrid') {
-* When the @@igComponent has remote virtualization, then clicking the header checkbox will select/deselect all records that are currently in the grid. When new data is loaded in the @@igComponent on demand, newly added rows will not be selected and it is a limitation, so you should handle that behavior by yourself and you can select these rows by using the provided API methods.
+- When the @@igComponent has remote virtualization, then clicking the header checkbox will select/deselect all records that are currently in the grid. When new data is loaded in the @@igComponent on demand, newly added rows will not be selected and it is a limitation, so you should handle that behavior by yourself and you can select these rows by using the provided API methods.
 }
-* Row selection will trigger [`rowSelectionChanging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelectionChanging) event. This event gives you information about the *new selection*, *old selection*, the rows that have been *added* and *removed* from the old selection. Also the event is *cancellable*, so this allows you to prevent selection.
-* When row selection is enabled row selectors are displayed, but if you don't want to show them, you can set `[hideRowSelectors] = true`.
-* When you switch between row selection modes at runtime, this will clear the previous row selection state.
+- Row selection will trigger [`rowSelectionChanging`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowSelectionChanging) event. This event gives you information about the _new selection_, _old selection_, the rows that have been _added_ and _removed_ from the old selection. Also the event is _cancellable_, so this allows you to prevent selection.
+- When row selection is enabled row selectors are displayed, but if you don't want to show them, you can set `[hideRowSelectors] = true`.
+- When you switch between row selection modes at runtime, this will clear the previous row selection state.
 
 
 ## API usage
@@ -210,6 +236,7 @@ In this mode a parent's selection state entirely depends on the selection state 
 The code snippet below can be used to select one or multiple rows simultaneously (via [`primaryKey`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primaryKey)); Additionally, the second parameter of this method is a boolean property through which you may choose whether the previous row selection will be cleared or not. The previous selection is preserved by default.
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
+
 ```html
 <!-- selectionExample.component.html -->
 
@@ -219,8 +246,10 @@ The code snippet below can be used to select one or multiple rows simultaneously
 ...
 <button (click)="this.@@igObjectRef.selectRows([1,2,5], true)">Select 1,2 and 5</button> // select rows and clear previous selection state
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <!-- selectionExample.component.html -->
 
@@ -230,11 +259,13 @@ The code snippet below can be used to select one or multiple rows simultaneously
 ...
 <button (click)="this.@@igObjectRef.selectRows([1,2,5], false)">Select 1,2 and 5</button> // select rows and preserve previous selection state
 ```
+
 }
 
 This will add the rows which correspond to the data entries with IDs 1, 2 and 5 to the @@igComponent selection.
 
 ### Deselect rows
+
 If you need to deselect rows programmatically, you can use the `deselectRows(rowIds: [])` method.
 
 ```html
@@ -248,7 +279,9 @@ If you need to deselect rows programmatically, you can use the `deselectRows(row
 ```
 
 ### Row selection event
+
 When there is some change in the row selection **[`rowSelectionChanging`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowSelectionChanging)** event is emitted. **`rowSelectionChanging`** exposes the following arguments:
+
 - `oldSelection`  - array of row's data that contains the previous state of the row selection.
 - `newSelection` - array of row's data that match the new state of the row selection.
 - `added` - array of row's data that are currently added to the selection.
@@ -270,6 +303,7 @@ In remote data scenarios, when the grid has a `primaryKey` set, [`rowSelectionCh
 ...
 </@@igSelector>
 ```
+
 ```typescript
 /* selectionExample.component.ts */
 
@@ -280,14 +314,17 @@ public handleRowSelectionChange(args) {
 ```
 
 ### Select all rows
-Another useful API method that [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) provides is `selectAll(onlyFilteredData)`. By default this method will select all data rows, but if filtering is applied, it will select only the rows that match the filter criteria. But if you call the method with *false* parameter, `selectAll(false)` will always select all data in the grid, even if filtering is applied.
+
+Another useful API method that [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) provides is `selectAll(onlyFilteredData)`. By default this method will select all data rows, but if filtering is applied, it will select only the rows that match the filter criteria. But if you call the method with _false_ parameter, `selectAll(false)` will always select all data in the grid, even if filtering is applied.
 >[!NOTE]
 > Keep in mind that `selectAll()` will not select the rows that are deleted.
 
 ### Deselect all rows
-[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) provides `deselectAll(onlyFilteredData)` method, which by default will deselect all data rows, but if filtering is applied will deselect only the rows that match the filter criteria. But if you call the method with *false* parameter, `deselectAll(false)` will always clear all row selection state even if filtering is applied.
+
+[`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) provides `deselectAll(onlyFilteredData)` method, which by default will deselect all data rows, but if filtering is applied will deselect only the rows that match the filter criteria. But if you call the method with _false_ parameter, `deselectAll(false)` will always clear all row selection state even if filtering is applied.
 
 ### How to get selected rows
+
 If you need to see which rows are currently selected, you can get their row IDs with the `selectedRows` getter.
 
 ```typescript
@@ -300,9 +337,11 @@ public getSelectedRows() {
 Additionally, assigning row IDs to `selectedRows` will allow you to change the grid's selection state.
 
 @@if (igxName === 'IgxGrid') {
+
 ```typescript
 public mySelectedRows = [1, 2, 3]; // an array of row IDs
 ```
+
 ```html
 <igx-grid primaryKey="ProductID" rowSelection="multiple" [autoGenerate]="false" [mySelectedRows]="selectedRows" [data]="data">
     <igx-column [field]="'ProductID'"></igx-column>
@@ -310,27 +349,33 @@ public mySelectedRows = [1, 2, 3]; // an array of row IDs
     <igx-column [field]="'UnitsInStock'"></igx-column>
 </igx-grid>
 ```
+
 }
 
 @@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
 public mySelectedRows = ['Johnathan Winchester', 'Ana Sanders']; // an array of row IDs
 ```
+
 ```html
 <igx-tree-grid primaryKey="ID" rowSelection="multiple" [autoGenerate]="false" [selectedRows]="mySelectedRows" [data]="data">
     <igx-column [field]="'Name'"></igx-column>
     <igx-column [field]="'Title'"></igx-column>
 </igx-tree-grid>
 ```
+
 }
 
 
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```typescript
 // arrays of row IDs
 public mySelectedRows = ['Naomi Yepes', 'Ahmad Nazeri'];
 public childSelectedRows = ['Initiation', 'Emergency'];
 ```
+
 ```html
 <igx-hierarchical-grid primaryKey="Artist" rowSelection="multiple" [autoGenerate]="false" [selectedRows]="mySelectedRows" [data]="data">
     <igx-column field="Artist"></igx-column>
@@ -340,17 +385,21 @@ public childSelectedRows = ['Initiation', 'Emergency'];
     </igx-row-island>
 </igx-hierarchical-grid>
 ```
+
 }
 
 ### Row selector templates
+
 You can template header and row selectors in the @@igComponent and also access their contexts which provide useful functionality for different scenarios.
 
 By default, the @@igComponent **handles all row selection interactions** on the row selector's parent container or on the row itself, leaving just the state visualization for the template. Overriding the base functionality should generally be done using the [`rowSelectionChanging` event](#row-selection-event). In case you implement a custom template with a `click` handler which overrides the base functionality, you should stop the event's propagation to preserve the correct row state.
 
 #### Row template
+
 To create a custom row selector template,  within the `@@igSelector`, declare an `<ng-template>` with `igxRowSelector` directive. From the template you can access the implicitly provided context variable, with properties that give you information about the row's state.
 
 The `selected` property shows whether the current row is selected or not while the `index` property can be used to access the row index.
+
 ```html
 <ng-template igxRowSelector let-rowContext>
     {{ rowContext.index }}
@@ -362,11 +411,13 @@ The `selected` property shows whether the current row is selected or not while t
 ```
 
 The `rowID` property can be used to get a reference of an `@@igSelector` row. This is useful when you implement a `click` handler on the row selector element.
+
 ```html
 <ng-template igxRowSelector let-rowContext>
     <igx-checkbox (click)="onSelectorClick($event, rowContext.key)"></igx-checkbox>
 </ng-template>
 ```
+
 In the above example we are using an `igx-checkbox` and we bind `rowContext.selected` to its `checked` property. See this in action in our [`Row Numbering Demo`](#row-numbering-demo).
 
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -375,9 +426,11 @@ In the above example we are using an `igx-checkbox` and we bind `rowContext.sele
 }
 
 ### Header template
+
 To create a custom header selector template, within the @@igComponent, declare an `<ng-template>` with `igxHeadSelector` directive. From the template you can access the implicitly provided context variable, with properties that give you information about the header's state.
 
 The `selectedCount` property shows you how many rows are currently selected while `totalCount` shows you how many rows there are in the @@igComponent in total.
+
 ```html
 <ng-template igxHeadSelector let-headContext>
     {{ headContext.selectedCount }} / {{ headContext.totalCount  }}
@@ -386,6 +439,7 @@ The `selectedCount` property shows you how many rows are currently selected whil
 
 The `selectedCount` and `totalCount` properties can be used to determine if the head selector should be checked or indeterminate (partially selected).
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid [data]="gridData" primaryKey="ProductID" rowSelection="multiple">
     <!-- ... -->
@@ -397,9 +451,11 @@ The `selectedCount` and `totalCount` properties can be used to determine if the 
     </ng-template>
 </igx-grid>
 ```
+
 }
 
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid [data]="tGridData" primaryKey="ProductID" childDataKey="Products">
     <!-- ... -->
@@ -411,9 +467,11 @@ The `selectedCount` and `totalCount` properties can be used to determine if the 
     </ng-template>
 </igx-tree-grid>
 ```
+
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid [data]="hGridData" primaryKey="ProductID">
     <ng-template igxHeadSelector let-headContext>
@@ -433,6 +491,7 @@ The `selectedCount` and `totalCount` properties can be used to determine if the 
     </igx-row-island>
 </igx-hierarchical-grid>
 ```
+
 Each hierarchy level in an `@@igSelector` can have its own row and header templating.
 }
 
@@ -442,6 +501,7 @@ Each hierarchy level in an `@@igSelector` can have its own row and header templa
 }
 
 ### Row Numbering Demo
+
 This demo shows the usage of custom header and row selectors. The latter uses `rowContext.index` to display row numbers and an `igx-checkbox` bound to `rowContext.selected`.
 @@if (igxName === 'IgxGrid') {
 
@@ -472,7 +532,9 @@ This demo shows the usage of custom header and row selectors. The latter uses `r
 }
 
 @@if (igxName === 'IgxGrid') {
+
 ### Excel Style Row Selectors Demo
+
 This demo uses custom templates to resemble Excel-like header and row selectors.
 
 <code-view style="height:550px"
@@ -484,6 +546,7 @@ This demo uses custom templates to resemble Excel-like header and row selectors.
 }
 
 ### Conditional Selection Demo
+
 This demo prevents some rows from being selected using the `rowSelectionChanging` event and a custom template with disabled checkbox for non-selectable rows.
 @@if (igxName === 'IgxGrid') {
 
@@ -515,28 +578,29 @@ This demo prevents some rows from being selected using the `rowSelectionChanging
 
 ## API References
 
-* [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow API]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
-* [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
+- [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+@@if (igxName !== 'IgxTreeGrid') {_[IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {_ [IgxTreeGridRow API]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
+- [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
+- [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [@@igComponent overview](@@igMainTopic.md)
-* [Selection](selection.md)
-* [Cell selection](cell-selection.md)
-* [Paging](paging.md)
-* [Filtering](filtering.md)
-* [Sorting](sorting.md)
-* [Summaries](summaries.md)
-* [Column Moving](column-moving.md)
-* [Column Pinning](column-pinning.md)
-* [Column Resizing](column-resizing.md)
-* [Virtualization and Performance](virtualization.md)
+- [@@igComponent overview](@@igMainTopic.md)
+- [Selection](selection.md)
+- [Cell selection](cell-selection.md)
+- [Paging](paging.md)
+- [Filtering](filtering.md)
+- [Sorting](sorting.md)
+- [Summaries](summaries.md)
+- [Column Moving](column-moving.md)
+- [Column Pinning](column-pinning.md)
+- [Column Resizing](column-resizing.md)
+- [Virtualization and Performance](virtualization.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

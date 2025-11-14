@@ -4,12 +4,13 @@ _description: Easily integrate a short, non-intrusive message (along with option
 _keywords: Angular Banner component, Angular Banner control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Angular UI Components
 ---
 # Angular Banner Component Overview
+
 <p class="highlight">Angular Banner Component provides a way to easily display a prominent message to your application's users in a way that is less transient than a snackbar and less obtrusive than a dialog. The Banner can also be configured to display custom action buttons and an icon.</p>
 
 ## Angular Banner Example
 
-<code-view style="height: 530px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 530px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-1/" alt="Angular Banner Example">
 </code-view>
 
@@ -23,9 +24,9 @@ To get started with the Ignite UI for Angular Banner component, first you need t
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
-The next step is to import the `IgxBannerModule` in your **app.module.ts** file. 
+The next step is to import the `IgxBannerModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
@@ -148,8 +149,8 @@ The `IgxBannerModule` exposes a directive for templating the banner buttons - [`
 ```
 
 
-<code-view style="height: 530px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 530px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-2/" >
 </code-view>
 
@@ -183,14 +184,15 @@ export class MyBannerComponent {
 ```
 
 
-<code-view style="height: 530px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 530px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-3/" >
 </code-view>
 
 
 ### Binding to events
-The banner component emits events when changing its state - [`opening`]({environment:angularApiUrl}/classes/igxbannercomponent.html#opening) and [`opened`]({environment:angularApiUrl}/classes/igxbannercomponent.html#opened) are called when the banner is shown (before and after, resp.), while [`closing`]({environment:angularApiUrl}/classes/igxbannercomponent.html#closing) and [`closed`]({environment:angularApiUrl}/classes/igxbannercomponent.html#closed) are emitted when the banner is closed. The *ing* events (`opening`, `closing`) are cancelable - they use the `ICancelEventArgs` interface and the emitted object has a `cancel` property. If the `cancel` property is set to true, the corresponding end action and event will not be triggered - e.g. if we cancel `opening`, the banner's `open` method will not finish and the banner will not be shown.
+
+The banner component emits events when changing its state - [`opening`]({environment:angularApiUrl}/classes/igxbannercomponent.html#opening) and [`opened`]({environment:angularApiUrl}/classes/igxbannercomponent.html#opened) are called when the banner is shown (before and after, resp.), while [`closing`]({environment:angularApiUrl}/classes/igxbannercomponent.html#closing) and [`closed`]({environment:angularApiUrl}/classes/igxbannercomponent.html#closed) are emitted when the banner is closed. The _ing_ events (`opening`, `closing`) are cancelable - they use the `ICancelEventArgs` interface and the emitted object has a `cancel` property. If the `cancel` property is set to true, the corresponding end action and event will not be triggered - e.g. if we cancel `opening`, the banner's `open` method will not finish and the banner will not be shown.
 
 To cancel an event, bind it to the emitted object and set its `cancel` property to `true`.
 
@@ -200,6 +202,7 @@ To cancel an event, bind it to the emitted object and set its `cancel` property 
         ...
     </igx-banner>
 ```
+
 ```typescript
 // banner.component.ts
 ...
@@ -210,6 +213,7 @@ export class MyBannerComponent {
     }
 }
 ```
+
 > [!NOTE]
 > If the changes above are applied, the banner will never open, as the opening event is always cancelled.
 
@@ -248,22 +252,22 @@ The banner will also have a WiFi icon in the navbar. As the subscription fires o
 Finally, we will add a `toast`, displaying a message about the WiFi state. The results of the templated banner can be seen in the demo below:
 
 
-<code-view style="height: 530px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 530px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/banner-advanced-sample/" >
 </code-view>
 
 
 ## Styling
 
-First, in order to use the functions exposed by the theme engine, we need to import the index file in our style file: 
+First, in order to use the functions exposed by the theme engine, we need to import the index file in our style file:
 
 ```scss
 @use "igniteui-angular/theming" as *;
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 Following the simplest approach, we create a new theme that extends the [`banner-theme`]({environment:sassApiUrl}/themes#function-banner-theme) and specifying just the `$banner-background`. Based on this value, the `$banner-message-color` and `$banner-illustration-color` are automatically set to black or white, depending on which provides better contrast with the background.
 
@@ -282,9 +286,9 @@ The last step is to pass the custom banner theme:
 @include css-vars($custom-banner-theme);
 ```
 
-<code-view style="height: 530px" 
-           no-themin
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 530px"
+           no-theming
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/banner-styling/" >
 </code-view>
 
@@ -292,29 +296,33 @@ The last step is to pass the custom banner theme:
 <div class="divider--half"></div>
 
 ## API Reference
+
 <div class="divider--half"></div>
 
-* [IgxBannerComponent]({environment:angularApiUrl}/classes/igxbannercomponent.html)
-* [IgxBannerActionsDirective]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html)
-* [IgxBannerComponent Styles]({environment:sassApiUrl}/themes#function-banner-theme)
+- [IgxBannerComponent]({environment:angularApiUrl}/classes/igxbannercomponent.html)
+- [IgxBannerActionsDirective]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html)
+- [IgxBannerComponent Styles]({environment:sassApiUrl}/themes#function-banner-theme)
 
 Additional components and/or directives with relative APIs that were used:
 
-* [IgxCardComponent]({environment:angularApiUrl}/classes/igxcardcomponent.html)
-* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
-* [IgxToastComponent]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
+- [IgxCardComponent]({environment:angularApiUrl}/classes/igxcardcomponent.html)
+- [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+- [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
+- [IgxToastComponent]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
-* [IgxExpansionPanel Theme]({environment:sassApiUrl}/themes#function-expansion-panel-theme)
+
+- [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxExpansionPanel Theme]({environment:sassApiUrl}/themes#function-expansion-panel-theme)
 
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
