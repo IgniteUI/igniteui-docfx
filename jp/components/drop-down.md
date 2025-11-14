@@ -497,6 +497,122 @@ export class InputDropDownComponent {
 
 ## スタイル設定
 
+### Dropdown テーマのプロパティ マップ
+
+プライマリ プロパティを変更すると、関連するすべての依存プロパティが自動的に更新されます。
+
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>プライマリ プロパティ</th>
+      <th>依存プロパティ</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$background-color</strong></summary></details>
+      </td>
+      <td>$item-text-color</td>
+      <td>ドロップダウン項目のテキストの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$hover-item-background</td>
+      <td>ドロップダウン ホバー項目の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focused-item-background</td>
+      <td>ドロップダウン フォーカスされた項目の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focused-item-text-color</td>
+      <td>ドロップダウン フォーカスされた項目のテキストの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-item-background</td>
+      <td>ドロップダウン選択された項目の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-item-text-color</td>
+      <td>ドロップダウンが無効にされた項目のテキストの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$header-text-color</td>
+      <td>ドロップダウン ヘッダー テキストの色</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$item-text-color</strong></summary></details>
+      </td>
+      <td>$item-icon-color</td>
+      <td>ドロップダウン項目のアイコンの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$hover-item-text-color</td>
+      <td>ドロップダウン項目のホバーのテキストの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$hover-item-icon-color</td>
+      <td>ドロップダウン項目のホバーのアイコンの色</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$selected-item-background</strong></summary></details>
+      </td>
+      <td>$selected-item-text-color</td>
+      <td>ドロップダウン選択された項目のテキストの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-item-icon-color</td>
+      <td>選択されたドロップダウン項目のアイコンの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-hover-item-background</td>
+      <td>ドロップダウン選択された項目ホバーの背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-hover-item-text-color</td>
+      <td>ドロップダウン選択された項目ホバーのテキストの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-hover-item-icon-color</td>
+      <td>選択されたドロップダウン項目のホバーのアイコンの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-focus-item-background</td>
+      <td>ドロップダウン選択された項目フォーカスの背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-focus-item-text-color</td>
+      <td>ドロップダウン選択された項目フォーカスのテキストの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focused-item-border-color</td>
+      <td>ドロップダウン項目のフォーカス境界線の色</td>
+    </tr>
+  </tbody>
+</table>
+
 [Ignite UI for Angular テーマ](themes/index.md) を使用して、ドロップダウンの外観を変更できます。はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。
 
 ```scss
@@ -506,7 +622,7 @@ export class InputDropDownComponent {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`drop-down-theme`]({environment:sassApiUrl}/themes#function-drop-down-theme) を拡張し、既定のテーマ パラメーターの一部を指定することで、新しいテーマを作成します。背景色を指定するだけで、インタラクション状態の色や適切な前景色が自動的に計算されます。`$background` プロパティを設定すると、完全にスタイル設定されたドロップダウンが表示されます。
+最もシンプルな方法として、[`drop-down-theme`]({environment:sassApiUrl}/themes#function-drop-down-theme) を拡張し、既定のテーマ パラメーターの一部を指定することで、新しいテーマを作成します。背景の色を指定するだけで、インタラクション状態の色や適切な前景の色が自動的に計算されます。`$background` プロパティを設定すると、完全にスタイル設定されたドロップダウンが表示されます。
 
 ```scss
 $custom-drop-down-theme: drop-down-theme(

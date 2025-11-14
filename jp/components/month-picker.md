@@ -185,7 +185,7 @@ Month Picker のスタイル設定を始めるには、すべてのテーマ関�
 ```
 
 月ピッカーはカレンダーのテーマを使用するため、[`calendar-theme`]({environment:sassApiUrl}/themes#function-calendar-theme) を拡張した新しいテーマを作成する必要があります。月ピッカーの項目にスタイルを設定するには、`$content-background` パラメーターを設定します。オプションで、残りのプロパティをオーバーライドする場合は、`$header-background` を設定することもできます。
-これら 2 つのパラメーターはテーマの基礎となり、ホバー、選択、アクティブなどすべての状態に応じた適切な背景色および前景色を自動的に生成します。
+これら 2 つのパラメーターはテーマの基礎となり、ホバー、選択、アクティブなどすべての状態に応じた適切な背景の色および前景の色を自動的に生成します。
 
 ```scss
 $my-calendar-theme: calendar-theme(
@@ -204,12 +204,49 @@ $my-calendar-theme: calendar-theme(
 
 ### デモ
 
-
 <code-view style="height: 350px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-styling/" >
 </code-view>
+
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して、`month picker` のスタイルを設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。 月ピッカーはカレンダー テーマでスタイルされるため、カレンダーのユーティリティ クラスを使用する必要があります。
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-calendar`、`dark-calendar`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[calendar-theme]({environment:sassApiUrl}/themes#function-calendar-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-month-picker
+class="!light-calendar
+![--header-background:#4F6A5A]
+![--content-background:#A3C7B2]">
+</igx-month-picker>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、month picker は次のようになります:
+
+<div class="sample-container loading" style="height:400px">
+    <iframe id="month-picker-tailwind-style-iframe" data-src='{environment:demosBaseUrl}/scheduling/monthpicker-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 
 ## API リファレンス

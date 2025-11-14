@@ -606,7 +606,205 @@ igx-list-item {
 
 <div class="divider--half"></div>
 
-## List コンポーネントにテーマの適用
+## スタイル設定
+
+### List テーマのプロパティ マップ
+
+プライマリ プロパティを変更すると、関連するすべての依存プロパティが自動的に更新され、変更が反映されます。
+
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>プライマリ プロパティ</th>
+      <th>依存プロパティ</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+
+  <!-- group for background -->
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <strong>$background</strong>
+      </td>
+      <td>$header-background</td>
+      <td>リスト ヘッダーの背景の色</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>$item-background</td>
+      <td>リスト項目の背景の色</td>
+    </tr>
+  </tbody>
+
+  <!-- group for header-background -->
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <strong>$header-background</strong>
+      </td>
+      <td>$header-text-color</td>
+      <td>リスト ヘッダーのテキストの色</td>
+    </tr>
+  </tbody>
+
+  <!-- group for item-background -->
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$item-background</strong></summary></details>
+      </td>
+      <td>$background</td>
+      <td>リストの背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$header-background</td>
+      <td>リスト ヘッダーの背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-background-hover</td>
+      <td>リスト項目ホバー 背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-text-color</td>
+      <td>リスト項目テキストの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-title-color</td>
+      <td>リスト項目タイトルの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-action-color</td>
+      <td>リスト項目アクションの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-thumbnail-color</td>
+      <td>リスト項目サムネイルの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-subtitle-color</td>
+      <td>リスト項目サブタイトルの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$border-color</td>
+      <td>リストの境界線の色 (Fluent/Bootstrap のみ)</td>
+    </tr>
+  </tbody>
+
+  <!-- group for item-background-hover -->
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$item-background-hover</strong></summary></details>
+      </td>
+      <td>$item-background-active</td>
+      <td>アクティブ リスト項目の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-text-color-hover</td>
+      <td>リスト項目ホバー テキストの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-title-color-hover</td>
+      <td>リスト項目ホバー タイトルの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-action-color-hover</td>
+      <td>リスト項目ホバー アクションの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-thumbnail-color-hover</td>
+      <td>リスト項目ホバー サムネイルの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-subtitle-color-hover</td>
+      <td>リスト項目ホバー サブタイトルの色</td>
+    </tr>
+  </tbody>
+
+  <!-- group for item-background-active -->
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$item-background-active</strong></summary></details>
+      </td>
+      <td>$item-background-selected</td>
+      <td>選択されたリスト項目の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-text-color-active</td>
+      <td>アクティブ リスト項目テキストの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-title-color-active</td>
+      <td>アクティブ リスト項目タイトルの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-action-color-active</td>
+      <td>アクティブ リスト項目アクションの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-thumbnail-color-active</td>
+      <td>アクティブ リスト項目サムネイルの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-subtitle-color-active</td>
+      <td>アクティブ リスト項目サブタイトルの色</td>
+    </tr>
+  </tbody>
+
+  <!-- group for item-background-selected -->
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$item-background-selected</strong></summary></details>
+      </td>
+      <td>$item-text-color-selected</td>
+      <td>選択されたリスト項目のテキストの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-title-color-selected</td>
+      <td>選択されたリスト項目のタイトルの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-action-color-selected</td>
+      <td>選択されたリスト項目のアクションの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-thumbnail-color-selected</td>
+      <td>選択されたリスト項目のサムネイルの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-subtitle-color-selected</td>
+      <td>選択されたリスト項目のサブタイトルの色</td>
+    </tr>
+  </tbody>
+</table>
+
+> *注:* 実際の結果はテーマのバリエーションによって異なる場合があります。
+
 
 以下は、リストの背景を変更する方法を説明します。まず、index.scss をコンポーネントの .scss ファイルにインポートします。
 
@@ -617,7 +815,7 @@ igx-list-item {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`list-theme`]({environment:sassApiUrl}/themes#function-list-theme) を拡張し、`$background` パラメーターだけを指定することで、状態ごとのカラーや適切なコントラストの前景色が自動的に計算されます。必要に応じて手動で指定することも可能です。
+最もシンプルな方法として、[`list-theme`]({environment:sassApiUrl}/themes#function-list-theme) を拡張し、`$background` パラメーターだけを指定することで、状態ごとのカラーや適切なコントラストの前景の色が自動的に計算されます。必要に応じて手動で指定することも可能です。
 
 ```scss
 $my-list-theme: list-theme(
@@ -641,6 +839,42 @@ $my-list-theme: list-theme(
 </code-view>
 
 リスト コンポーネントに変更できるパラメーターの完全なリストについては、[IgxListComponent スタイル]({environment:sassApiUrl}/themes#function-list-theme)を参照してください。
+
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して list をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-list`、`dark-list`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[list-theme]({environment:sassApiUrl}/themes#function-list-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-list class="!light-list ![--background:#81B698] ![--item-background:#A3C7B2]">
+    ...
+</igx-list>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、list は次のようになります:
+
+<div class="sample-container loading" style="height:400px">
+    <iframe id="list-tailwind-style-iframe" data-src='{environment:demosBaseUrl}/lists/list-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ## API リファレンス
 
