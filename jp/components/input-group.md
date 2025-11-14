@@ -451,6 +451,306 @@ constructor(fb: FormBuilder) {
 
 ## スタイル設定
 
+### Input Group テーマのプロパティ マップ
+
+プライマリ プロパティを変更すると、関連するすべての依存プロパティが自動的に更新されます。
+
+<div class="theme-switcher-wrapper">
+  <!-- Theme Switcher Radios and Labels -->
+  <input type="radio" name="theme" id="material" checked>
+  <label for="material" class="switch-label">Material</label>
+  <input type="radio" name="theme" id="fluent">
+  <label for="fluent" class="switch-label">Fluent</label>
+  <input type="radio" name="theme" id="bootstrap">
+  <label for="bootstrap" class="switch-label">Bootstrap</label>
+  <input type="radio" name="theme" id="indigo">
+  <label for="indigo" class="switch-label">Indigo</label>
+
+  <div class="tables">
+    <!-- Material Theme Table -->
+    <div class="theme-table material">
+        <table class="collapsible-table">
+            <thead>
+                <tr>
+                    <th>プライマリ プロパティ</th>
+                    <th>依存プロパティ</th>
+                    <th>説明</th>
+                </tr>
+            </thead>
+            <tbody class="group">
+                <tr class="primary">
+                    <td><details><summary><strong>$box-background</strong></summary></details></td>
+                    <td>$box-background-hover</td>
+                    <td>入力ボックスのホバー背景</td>
+                </tr>
+                <tr class="dependent"><td></td><td>$box-background-focus</td><td>入力ボックスのフォーカス背景</td></tr>
+                <tr class="dependent"><td></td><td>$box-disabled-background</td><td>無効な背景</td></tr>
+                <tr class="dependent"><td></td><td>$placeholder-color</td><td>プレースホルダー テキストの色</td></tr>
+                <tr class="dependent"><td></td><td>$hover-placeholder-color</td><td>プレースホルダー テキストのホバー色</td></tr>
+                <tr class="dependent"><td></td><td>$idle-text-color</td><td>デフォルトのテキストの色</td></tr>
+                <tr class="dependent"><td></td><td>$filled-text-color</td><td>入力済みの入力ボックスのテキストの色</td></tr>
+                <tr class="dependent"><td></td><td>$filled-text-hover-color</td><td>ホバー時の入力済みの入力テキストの色</td></tr>
+                <tr class="dependent"><td></td><td>$focused-text-color</td><td>フォーカス時の入力ボックスのテキストの色</td></tr>
+                <tr class="dependent"><td></td><td>$idle-secondary-color</td><td>アイドル時のセカンダリ テキストの色</td></tr>
+                <tr class="dependent"><td></td><td>$input-prefix-color</td><td>入力ボックス内のプレフィックスのテキストの色</td></tr>
+                <tr class="dependent"><td></td><td>$input-prefix-color--filled</td><td>入力済みの入力ボックス内のプレフィックスのテキストの色</td></tr>
+                <tr class="dependent"><td></td><td>$input-prefix-color--focused</td><td>フォーカス時の入力ボックス内のプレフィックスのテキストの色</td></tr>
+                <tr class="dependent"><td></td><td>$input-suffix-color</td><td>入力ボックス内のサフィックスのテキストの色</td></tr>
+                <tr class="dependent"><td></td><td>$input-suffix-color--filled</td><td>入力済みの入力ボックス内のサフィックスのテキストの色</td></tr>
+                <tr class="dependent"><td></td><td>$input-suffix-color--focused</td><td>フォーカス時の入力ボックス内のサフィックスのテキストの色</td></tr>
+                <tr class="dependent"><td></td><td>$disabled-placeholder-color</td><td>無効な入力ボックスのプレースホルダーの色</td></tr>
+                <tr class="dependent"><td></td><td>$disabled-text-color</td><td>無効な入力ボックスのテキストの色</td></tr>
+            </tbody>
+            <tbody class="group">
+                <tr class="primary">
+                    <td><details><summary><strong>$idle-bottom-line-color</strong></summary></details></td>
+                    <td>$hover-bottom-line-color</td>
+                    <td>入力ボックスの下にある下線のホバー色</td>
+                </tr>
+                <tr class="dependent"><td></td><td>$focused-bottom-line-color</td><td>フォーカス時の下線の色</td></tr>
+                <tr class="dependent"><td></td><td>$focused-secondary-color</td><td>フォーカス時のラベルの色</td></tr>
+                <tr class="dependent"><td></td><td>$border-color</td><td>Border タイプの入力グループのための境界線の色</td></tr>
+                <tr class="dependent"><td></td><td>$focused-border-color</td><td>Border タイプの入力グループのフォーカス入力境界線の色</td></tr>
+            </tbody>
+            <tbody class="group">
+                <tr class="primary">
+                    <td><details><summary><strong>$border-color</strong></summary></details></td>
+                    <td>$hover-border-color</td>
+                    <td>入力ボックスの境界線のホバー色</td>
+                </tr>
+                <tr class="dependent"><td></td><td>$focused-border-color</td><td>フォーカス時の入力ボックスの境界線の色</td></tr>
+                <tr class="dependent"><td></td><td>$focused-secondary-color</td><td>フォーカス時のラベルの色</td></tr>
+            </tbody>
+            <tbody class="group">
+                <tr class="primary">
+                    <td><details><summary><strong>$input-prefix-background</strong></summary></details></td>
+                    <td>$input-prefix-color</td><td>入力ボックス内のプレフィックスのテキストの色</td>
+                </tr>
+                <tr class="dependent"><td></td><td>$input-prefix-background--filled</td>
+                    <td>入力済みの入力プレフィックスの背景の色</td></tr>
+                <tr class="dependent"><td></td><td>$input-prefix-background--focused</td><td>フォーカス時の入力プレフィックスの背景の色</td></tr>
+            </tbody>
+            <tbody class="group">
+                <tr class="primary">
+                    <td><details><summary><strong>$input-suffix-background</strong></summary></details></td>
+                    <td>$input-suffix-color</td><td>入力ボックス内のサフィックスのテキストの色</td>
+                </tr>
+                <tr class="dependent"><td></td><td>$input-suffix-background--filled</td>
+                    <td>入力済みの入力サフィックスの背景の色</td></tr>
+                <tr class="dependent"><td></td><td>$input-suffix-background--focused</td><td>フォーカス時の入力サフィックスの背景の色</td></tr>
+            </tbody>
+            <tbody class="group">
+                <tr class="primary">
+                    <td><details><summary><strong>$search-background</strong></summary></details></td>
+                    <td>$placeholder-color</td>
+                    <td>検索入力内のプレースホルダー テキストの色</td>
+                </tr>
+                <tr class="dependent"><td></td><td>$hover-placeholder-color</td><td>プレースホルダー テキストのホバー色</td></tr>
+                <tr class="dependent"><td></td><td>$idle-text-color</td><td>検索入力のテキストの色</td></tr>
+                <tr class="dependent"><td></td><td>$idle-secondary-color</td><td>アイドル時のセカンダリ テキストの色</td></tr>
+                <tr class="dependent"><td></td><td>$filled-text-color</td><td>入力済みの検索入力のテキストの色</td></tr>
+                <tr class="dependent"><td></td><td>$filled-text-hover-color</td><td>入力済みの検索入力のホバー時テキストの色</td></tr>
+                <tr class="dependent"><td></td><td>$focused-text-color</td><td>フォーカス時の検索入力のテキストの色</td></tr>
+                <tr class="dependent"><td></td><td>$input-prefix-color</td><td>検索入力内のプレフィックスの色</td></tr>
+                <tr class="dependent"><td></td><td>$input-suffix-color</td><td>検索入力内のサフィックスの色</td></tr>
+                <tr class="dependent"><td></td><td>$input-prefix-color--filled</td><td>入力済みの検索入力内のプレフィックスの色</td></tr>
+                <tr class="dependent"><td></td><td>$input-suffix-color--filled</td><td>入力済みの検索入力内のサフィックスの色</td></tr>
+                <tr class="dependent"><td></td><td>$input-prefix-color--focused</td><td>フォーカス時の検索入力内のプレフィックスの色</td></tr>
+                <tr class="dependent"><td></td><td>$input-suffix-color--focused</td><td>フォーカス時の検索入力内のサフィックスの色</td></tr>
+                <tr class="dependent"><td></td><td>$search-disabled-background</td><td>無効な検索入力の背景</td></tr>
+                <tr class="dependent"><td></td><td>$disabled-placeholder-color</td><td>無効なプレースホルダーの色</td></tr>
+                <tr class="dependent"><td></td><td>$disabled-text-color</td><td>無効なテキストの色</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Fluent Theme Table -->
+    <div class="theme-table fluent">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>プライマリ プロパティ</th>
+            <th>依存プロパティ</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+            <tr class="primary">
+                <td><details><summary><strong>$border-color</strong></summary></details></td>
+                <td>$hover-border-color</td>
+                <td>入力ボックスの境界線のホバー色</td>
+            </tr>
+            <tr class="dependent"><td></td><td>$focused-border-color</td><td>フォーカス時の入力ボックスの境界線の色</td></tr>
+            <tr class="dependent"><td></td><td>$focused-secondary-color</td><td>フォーカス時のラベルの色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$input-prefix-background</strong></summary></details></td>
+            <td>$input-suffix-background</td>
+            <td>アイドル時の入力サフィックスの背景の色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$input-prefix-color</td><td>入力ボックス内のプレフィックスのテキストの色</td></tr>
+          <tr class="dependent"><td></td><td>$input-prefix-color--filled</td><td>入力済みの入力ボックス内のプレフィックスのテキストの色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$input-suffix-background</strong></summary></details></td>
+            <td>$input-prefix-background</td>
+            <td>アイドル時の入力プレフィックスの背景の色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$input-suffix-color</td><td>入力ボックス内のサフィックスのテキストの色</td></tr>
+          <tr class="dependent"><td></td><td>$input-suffix-color--filled</td><td>入力済みの入力ボックス内のサフィックスのテキストの色</td></tr>
+        </tbody>
+        <tbody class="group">
+            <tr class="primary">
+                <td><details><summary><strong>$search-background</strong></summary></details></td>
+                <td>$placeholder-color</td>
+                <td>検索入力内のプレースホルダー テキストの色</td>
+            </tr>
+            <tr class="dependent"><td></td><td>$hover-placeholder-color</td><td>プレースホルダー テキストのホバー色</td></tr>
+            <tr class="dependent"><td></td><td>$idle-secondary-color</td><td>アイドル時のセカンダリ テキストの色</td></tr>
+            <tr class="dependent"><td></td><td>$idle-text-color</td><td>検索入力のテキストの色</td></tr>
+            <tr class="dependent"><td></td><td>$filled-text-color</td><td>入力済みの検索入力のテキストの色</td></tr>
+            <tr class="dependent"><td></td><td>$filled-text-hover-color</td><td>入力済みの検索入力のホバー時テキストの色</td></tr>
+            <tr class="dependent"><td></td><td>$focused-text-color</td><td>フォーカス時の検索入力のテキストの色</td></tr>
+            <tr class="dependent"><td></td><td>$input-prefix-color</td><td>検索入力内のプレフィックスの色</td></tr>
+            <tr class="dependent"><td></td><td>$input-suffix-color</td><td>検索入力内のサフィックスの色</td></tr>
+            <tr class="dependent"><td></td><td>$input-prefix-color--filled</td><td>入力済みの検索入力内のプレフィックスの色</td></tr>
+            <tr class="dependent"><td></td><td>$input-suffix-color--filled</td><td>入力済みの検索入力内のサフィックスの色</td></tr>
+            <tr class="dependent"><td></td><td>$input-prefix-color--focused</td><td>フォーカス時の検索入力内のプレフィックスの色</td></tr>
+            <tr class="dependent"><td></td><td>$input-suffix-color--focused</td><td>フォーカス時の検索入力内のサフィックスの色</td></tr>
+            <tr class="dependent"><td></td><td>$search-disabled-background</td><td>無効な検索入力の背景</td></tr>
+            <tr class="dependent"><td></td><td>$disabled-placeholder-color</td><td>無効なプレースホルダーの色</td></tr>
+            <tr class="dependent"><td></td><td>$disabled-text-color</td><td>無効なテキストの色</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Bootstrap Theme Table -->
+    <div class="theme-table bootstrap">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>プライマリ プロパティ</th>
+            <th>依存プロパティ</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+            <tr class="primary">
+                <td><details><summary><strong>$border-color</strong></summary></details></td>
+                <td>$focused-border-color</td>
+                <td>フォーカス時の入力ボックスの境界線の色</td>
+            </tr>
+            <tr class="dependent"><td></td><td>$focused-secondary-color</td><td>フォーカス時のラベルの色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$input-prefix-background</strong></summary></details></td>
+            <td>$input-suffix-background</td>
+            <td>アイドル時の入力サフィックスの背景の色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$input-prefix-color</td><td>入力ボックス内のプレフィックスのテキストの色</td></tr>
+          <tr class="dependent"><td></td><td>$input-prefix-color--filled</td><td>入力済みの入力ボックス内のプレフィックスのテキストの色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$input-suffix-background</strong></summary></details></td>
+            <td>$input-prefix-background</td>
+            <td>アイドル時の入力プレフィックスの背景の色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$input-suffix-color</td><td>入力ボックス内のサフィックスのテキストの色</td></tr>
+          <tr class="dependent"><td></td><td>$input-suffix-color--filled</td><td>入力済みの入力ボックス内のサフィックスのテキストの色</td></tr>
+        </tbody>
+        <tbody class="group">
+            <tr class="primary">
+                <td><details><summary><strong>$search-background</strong></summary></details></td>
+                <td>$placeholder-color</td>
+                <td>検索入力内のプレースホルダー テキストの色</td>
+            </tr>
+            <tr class="dependent"><td></td><td>$hover-placeholder-color</td><td>プレースホルダー テキストのホバー色</td></tr>
+            <tr class="dependent"><td></td><td>$idle-secondary-color</td><td>アイドル時のセカンダリ テキストの色</td></tr>
+            <tr class="dependent"><td></td><td>$idle-text-color</td><td>検索入力のテキストの色</td></tr>
+            <tr class="dependent"><td></td><td>$filled-text-color</td><td>入力済みの検索入力のテキストの色</td></tr>
+            <tr class="dependent"><td></td><td>$filled-text-hover-color</td><td>入力済みの検索入力のホバー時テキストの色</td></tr>
+            <tr class="dependent"><td></td><td>$focused-text-color</td><td>フォーカス時の検索入力のテキストの色</td></tr>
+            <tr class="dependent"><td></td><td>$input-prefix-color</td><td>検索入力内のプレフィックスの色</td></tr>
+            <tr class="dependent"><td></td><td>$input-suffix-color</td><td>検索入力内のサフィックスの色</td></tr>
+            <tr class="dependent"><td></td><td>$input-prefix-color--filled</td><td>入力済みの検索入力内のプレフィックスの色</td></tr>
+            <tr class="dependent"><td></td><td>$input-suffix-color--filled</td><td>入力済みの検索入力内のサフィックスの色</td></tr>
+            <tr class="dependent"><td></td><td>$input-prefix-color--focused</td><td>フォーカス時の検索入力内のプレフィックスの色</td></tr>
+            <tr class="dependent"><td></td><td>$input-suffix-color--focused</td><td>フォーカス時の検索入力内のサフィックスの色</td></tr>
+            <tr class="dependent"><td></td><td>$search-disabled-background</td><td>無効な検索入力の背景</td></tr>
+            <tr class="dependent"><td></td><td>$disabled-placeholder-color</td><td>無効なプレースホルダーの色</td></tr>
+            <tr class="dependent"><td></td><td>$disabled-text-color</td><td>無効なテキストの色</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Indigo Theme Table -->
+    <div class="theme-table indigo">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>プライマリ プロパティ</th>
+            <th>依存プロパティ</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+            <tr class="primary">
+                <td><details><summary><strong>$idle-bottom-line-color</strong></summary></details></td>
+                <td>$hover-bottom-line-color</td>
+                <td>入力ボックスの下にある下線のホバー色</td>
+            </tr>
+            <tr class="dependent"><td></td><td>$focused-bottom-line-color</td><td>フォーカス時の下線の色</td></tr>
+        </tbody>
+        <tbody class="group">
+            <tr class="primary">
+                <td><details><summary><strong>$border-color</strong></summary></details></td>
+                <td>$hover-border-color</td>
+                <td>入力ボックスの境界線のホバー色</td>
+            </tr>
+            <tr class="dependent"><td></td><td>$focused-border-color</td><td>フォーカス時の入力ボックスの境界線の色</td></tr>
+        </tbody>
+        <tbody class="group">
+            <tr class="primary">
+                <td><details><summary><strong>$input-prefix-background</strong></summary></details></td>
+                <td>$input-prefix-color</td><td>入力ボックス内のプレフィックスのテキストの色</td>
+            </tr>
+            <tr class="dependent"><td></td><td>$input-prefix-background--filled</td>
+                <td>入力済みの入力プレフィックスの背景の色</td></tr>
+            <tr class="dependent"><td></td><td>$input-prefix-background--focused</td><td>フォーカス時の入力プレフィックスの背景の色</td></tr>
+        </tbody>
+        <tbody class="group">
+            <tr class="primary">
+                <td><details><summary><strong>$input-suffix-background</strong></summary></details></td>
+                <td>$input-suffix-color</td><td>入力ボックス内のサフィックスのテキストの色</td>
+            </tr>
+            <tr class="dependent"><td></td><td>$input-suffix-background--filled</td>
+                <td>入力済みの入力サフィックスの背景の色</td></tr>
+            <tr class="dependent"><td></td><td>$input-suffix-background--focused</td><td>フォーカス時の入力サフィックスの背景の色</td></tr>
+        </tbody>
+        <tbody class="group">
+            <tr class="primary">
+                <td><details><summary><strong>$search-background</strong></summary></details></td>
+                <td>$placeholder-color</td>
+                <td>検索入力内のプレースホルダー テキストの色</td>
+            </tr>
+            <tr class="dependent"><td></td><td>$hover-placeholder-color</td><td>プレースホルダー テキストのホバー色</td></tr>
+            <tr class="dependent"><td></td><td>$box-background-hover</td><td>ホバー時の検索入力の背景</td></tr>
+            <tr class="dependent"><td></td><td>$idle-text-color</td><td>検索入力のテキストの色</td></tr>
+            <tr class="dependent"><td></td><td>$filled-text-color</td><td>入力済みの検索入力のテキストの色</td></tr>
+            <tr class="dependent"><td></td><td>$filled-text-hover-color</td><td>入力済みの検索入力のホバー時テキストの色</td></tr>
+            <tr class="dependent"><td></td><td>$focused-text-color</td><td>フォーカス時の検索入力のテキストの色</td></tr>
+            <tr class="dependent"><td></td><td>$input-prefix-color</td><td>検索入力内のプレフィックスの色</td></tr>
+            <tr class="dependent"><td></td><td>$input-suffix-color</td><td>検索入力内のサフィックスの色</td></tr>
+            <tr class="dependent"><td></td><td>$search-disabled-background</td><td>無効な検索入力の背景</td></tr>
+            <tr class="dependent"><td></td><td>$disabled-placeholder-color</td><td>無効なプレースホルダーの色</td></tr>
+            <tr class="dependent"><td></td><td>$disabled-text-color</td><td>無効なテキストの色</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
 入力グループのスタイル設定を開始するには、`index` ファイルをスタイルファイルに含めます。
 
 ```scss
@@ -479,16 +779,13 @@ $custom-input-group: input-group-theme(
 @include css-vars($custom-input-group);
 ```
 
-以下のサンプルでは、カスタマイズした CSS 変数を使用した入力グループが、[`Carbon`](https://carbondesignsystem.com/components/text-input/usage/#live-demo) デザイン システムの入力グループに視覚的に似たデザインを実現している様子を確認できます。
+### デモ
 
 <code-view style="height:230px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-style/" >
 </code-view>
-
-> [!NOTE]
-> サンプルでは、[Indigo Light](themes/sass/schemas.md#predefined-schemas) スキーマを使用します。
 
 >[!NOTE]
 >ページ内に `box`、`border`、`line`、`search` といった複数のタイプの input-group が存在する場合は、特定のタイプごとにテーマ変数のスコープを設定するのが最適です。
@@ -499,6 +796,58 @@ search 入力をターゲットにする場合は `.igx-input-group--search` を
 たとえば、グローバルにダーク `$box-background` を設定すると、border や line 入力のボーダーが白になり、視認できなくなる可能性があります。
 
 <div class="divider--half"></div>
+
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して input group をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-input-group`、`dark-input-group`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[input-group-theme]({environment:sassApiUrl}/themes#function-input-group-theme) で確認できます。構文は次のとおりです:
+
+```html
+<article class="sample-column">
+    <igx-input-group class="!light-input-group ![--box-background:#A3C7B2] ![--focused-secondary-color:#3A5444]" type="box">
+        <igx-prefix>+359</igx-prefix>
+        <label igxLabel for="phone">Phone</label>
+        <input type="tel" igxInput name="phone" />
+        <igx-suffix>
+            <igx-icon>phone</igx-icon>
+        </igx-suffix>
+        <igx-hint position="start">Ex.: +359 888 123 456</igx-hint>
+    </igx-input-group>
+
+    <igx-input-group class="!light-input-group ![--border-color:#7B9E89]" type="border">
+        ...
+    </igx-input-group>
+
+    <igx-input-group class="!light-input-group ![--search-background:#A3C7B2] ![--focused-secondary-color:#3A5444]" type="search">
+        ...
+    </igx-input-group>
+</article>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、input group は次のようになります:
+
+<div class="sample-container loading" style="height:350px">
+    <iframe id="input-group-tailwind-style-iframe" data-src='{environment:demosBaseUrl}/data-entries/input-group-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ## API リファレンス
 <div class="divider--half"></div>

@@ -483,6 +483,45 @@ $dark-tooltip: tooltip-theme(
            iframe-src="{environment:demosBaseUrl}/interactions/tooltip-style/" >
 </code-view>
 
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して tooltip をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-tooltip`、`dark-tooltip`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。 `任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。 コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[IgxTooltip テーマ]({environment:sassApiUrl}/themes#function-tooltip-theme) で確認できます。構文は次のとおりです:
+
+```html
+<div
+  class="!light-tooltip ![--background:#90B69F]"
+  #tooltipRef="tooltip"
+  igxTooltip>
+  Her name is Madelyn James
+</div>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、tooltip は次のようになります:
+
+<div class="sample-container loading" style="height:100px">
+    <iframe id="tooltip-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/interactions/tooltip-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
 <div class="divider--half"></div>
 
 ## ユーザー補助

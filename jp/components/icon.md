@@ -313,6 +313,40 @@ igx-icon {
 
 詳細については、[サイズ](display-density.md)の記事をご覧ください。
 
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して `icon` をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-icon`、`dark-icon`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[icon-theme]({environment:sassApiUrl}/themes#function-icon-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-icon class="!light-icon ![--color:#7B9E89] ![--size:48px]">person</igx-icon>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、icon は次のようになります:
+
+<div class="sample-container loading" style="height:60px">
+    <iframe id="icon-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/data-display/icon-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
 ## API リファレンス
 
 <div class="divider--half"></div>

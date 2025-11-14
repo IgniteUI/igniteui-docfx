@@ -482,23 +482,126 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
 
 ## スタイル設定
 
-最も簡単な方法は、CSS 変数を使用してチップの外観をカスタマイズする方法です。
+### Chip テーマのプロパティ マップ
 
-```css
-igx-chip {
-    --background: #cd201f;
-    --hover-background: #cd201f;
-    --focus-background: #9f1717;
-    --text-color: #fff;
-}
-```
-これらの CSS 変数の値を変更することで、チップ コンポーネントの全体的な外観を変更できます。
+プライマリ プロパティを変更すると、関連するすべての依存プロパティが自動的に更新されます。
 
-<div class="divider--half"></div>
+<table class="collapsible-table">
+  <thead>
+      <tr>
+          <th>プライマリ プロパティ</th>
+          <th>依存プロパティ</th>
+          <th>説明</th>
+      </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+        <td><details><summary><strong>$background</strong></summary></details></td>
+        <td>$text-color</td>
+        <td>チップのテキストの色</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$border-color</td>
+        <td>チップの境界線の色</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$hover-background</td>
+        <td>チップ ホバーの背景の色</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$hover-border-color</td>
+        <td>ホバー時のチップの境界線の色</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$hover-text-color</td>
+        <td>ホバー時のチップのテキストの色</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$focus-background</td>
+        <td>チップのフォーカスの背景の色</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$selected-background</td>
+        <td>選択時のチップの背景の色</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+        <td><details><summary><strong>$focus-background</strong></summary></details></td>
+        <td>$focus-text-color</td>
+        <td>チップのテキスト フォーカスの色</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$focus-border-color</td>
+        <td>チップのフォーカス境界線の色</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$focus-outline-color (bootstrap および indigo バリエーションのみ)</td>
+        <td>チップのフォーカス アウトラインの色</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+        <td><details><summary><strong>$selected-background</strong></summary></details></td>
+        <td>$selected-text-color</td>
+        <td>選択されたチップのテキストの色</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$selected-border-color</td>
+        <td>選択されたチップの境界線の色</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$hover-selected-background</td>
+        <td>選択されたチップのホバーの背景の色</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+        <td><details><summary><strong>$hover-selected-background</strong></summary></details></td>
+        <td>$hover-selected-text-color</td>
+        <td>選択されたチップのホバー テキストの色</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$hover-selected-border-color</td>
+        <td>選択されたチップのホバー境界線の色</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$focus-selected-background</td>
+        <td>選択されたチップのフォーカスの背景の色</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+        <td><details><summary><strong>$focus-selected-background</strong></summary></details></td>
+        <td>$focus-selected-text-color</td>
+        <td>選択されたチップのテキスト フォーカスの色</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$focus-selected-border-color</td>
+        <td>選択されたチップのフォーカス境界線の色</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$focus-selected-outline-color (bootstrap および indigo バリエーションのみ)</td>
+        <td>選択時のチップのフォーカス アウトライン色</td>
+    </tr>
+  </tbody>
+</table>
 
-チップにスタイルを設定する別の方法は、**Sass** と [`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme) 関数を使用することです。
-
-**Sass** を使用してチップのスタイル設定を開始するには、まずすべてのテーマ関数とコンポーネント ミックスインを含む `index` ファイルをインポートします。
+チップのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントのミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -507,10 +610,10 @@ igx-chip {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`chip-theme`]({environment:sassApiUrl}/themes#function-chip-theme) を拡張して新しいテーマを作成し、チップの項目をスタイリングします。`$background` または `$selected-background` を指定することで、状態に応じた色や前景色が自動的に計算されます。必要に応じて、他のパラメーターをカスタム値でオーバーライドすることもできます。
+最もシンプルな方法として、[`chip-theme`]({environment:sassApiUrl}/themes#function-chip-theme) を拡張して新しいテーマを作成し、チップの項目をスタイリングします。`$background` または `$selected-background` を指定することで、状態に応じた色や前景の色が自動的に計算されます。必要に応じて、他のパラメーターをカスタム値でオーバーライドすることもできます。
 
 ```scss
-$custom-chip-theme: chip-theme(
+$custom-theme: chip-theme(
     $background: #57a5cd,
     $selected-background: #ecaa53,
     $remove-icon-color: #d81414,
@@ -518,19 +621,60 @@ $custom-chip-theme: chip-theme(
 );
 ```
 
-最後に、カスタム テーマをアプリケーションに**含めます**。
+最後にコンポーネントのテーマをアプリケーションに**含めます**。
 
 ```scss
-@include css-vars($custom-chip-theme);
+@include css-vars($custom-theme);
 ```
 
-以下のサンプルでは、カスタマイズした CSS 変数を使用したチップ コンポーネントが、[`Ant`](https://ant.design/components/tag?theme=light#tag-demo-icon) デザイン システムのチップに視覚的に似たデザインを実現している様子を確認できます。 
+### デモ
 
 <code-view style="height:100px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-display/chip-styling/" >
 </code-view>
+
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して chip  をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-chip`、`dark-chip`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[chip-theme]({environment:sassApiUrl}/themes#function-chip-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-chip
+  class="!light-chip
+  ![--background:#99BAA6]
+  ![--remove-icon-color:#C92828]"
+  ...
+>
+  {{chip.text}}
+</igx-chip>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、chip は次のようになります:
+
+<div class="sample-container loading" style="height:80px">
+    <iframe id="chip-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/data-display/chip-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ### カスタム サイズ変更
 
