@@ -17,6 +17,45 @@ The Grid Lite component is a free, open-source JavaScript data grid built as a W
 
 Grid Lite is designed to give you the core features that you need to deliver a beautiful data grid / data table experience in your apps. Designed for performance and beauty, the Grid Lite component will work in any framework, on any platform.
 
+Angular <a href="https://custom-elements-everywhere.com/#angular" target="_blank">supports</a> custom elements, so you can use Grid Lite with ease.
+
+## Installation
+
+To add Grid Lite to your Angular application, install the package from npm.
+
+```shell
+npm install igc-grid-lite
+```
+
+## Configuration
+
+Before starting the application, make sure to import and pass the custom element schema as shown below.
+
+```typescript
+// app.component.ts
+
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { IgcGridLite, ColumnConfiguration } from 'igc-grid-lite';
+
+IgcGridLite.register();
+
+@Component({
+  ...
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  template: `
+    <main>
+      <igc-grid-lite [columns]="columns" [data]="products">
+      </igc-grid-lite>
+    </main>
+  `
+})
+export class AppComponent {
+  columns: ColumnConfiguration<Products> = [...];
+  products: Products[] = [...];
+}
+
+```
+
 ## Performance Built In
 
 Row-level virtualization allows you to render unlimited amounts of data with smooth scrolling.
