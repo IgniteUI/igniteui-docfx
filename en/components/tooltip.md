@@ -288,9 +288,9 @@ What if we want to control the amount of time that should pass before showing an
 
 By default, the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) is triggered only while hovering over the [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html). However, you can change this behavior using the [`showTriggers`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showTriggers) and [`hideTriggers`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hideTriggers) properties, which allow you to control when the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) appears and disappears. These properties accept event names as values—such as `click`, `focus`, or `keypress`—letting you trigger the [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) in different scenarios.
 
-<code-view style="height:540px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-triggers/" >
+<code-view style="height:540px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-triggers/">
 </code-view>
 
 > [!NOTE]
