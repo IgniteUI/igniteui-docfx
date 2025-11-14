@@ -31,7 +31,7 @@ ng add igniteui-angular
 
 Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-The next step is to import the **IgxCarouselModule** in our **app.module.ts** file:
+次に、**app.module.ts** ファイルに `IgxCarouselModule` をインポートします。
 
 >[!NOTE]
 >このコンポーネントは、**オプションで** [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) を利用できます。タッチ操作が正しく動作するために、アプリケーションのルート モジュールにインポートできます。
@@ -377,7 +377,356 @@ Carousel [アニメーション](carousel.md#angular-carousel-のアニメーシ
            iframe-src="{environment:demosBaseUrl}/layouts/carousel-no-navigation-sample/" >
 </code-view>
 
+## Angular Carousel のスタイル設定
 
+### Carousel テーマのプロパティ マップ
+
+プライマリ プロパティを変更すると、関連するすべての依存プロパティが自動的に更新され、変更が反映されます。
+
+<div class="theme-switcher-wrapper">
+  <input type="radio" name="theme" id="material" checked>
+  <label for="material" class="switch-label">Material</label>
+  <input type="radio" name="theme" id="fluent">
+  <label for="fluent" class="switch-label">Fluent</label>
+  <input type="radio" name="theme" id="bootstrap">
+  <label for="bootstrap" class="switch-label">Bootstrap</label>
+  <input type="radio" name="theme" id="indigo">
+  <label for="indigo" class="switch-label">Indigo</label>
+
+  <div class="tables">
+    <!-- Material Theme Table -->
+    <div class="theme-table material">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>プライマリ プロパティ</th>
+            <th>依存プロパティ</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-background</strong></summary></details></td>
+            <td>$button-hover-background</td>
+            <td>ホバー時のボタンの背景色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-arrow-color</td><td>ボタン矢印の色</td></tr>
+          <tr class="dependent"><td></td><td>$button-disabled-background</td><td>無効状態のボタンの背景色</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-focus-color <br> ($indicator-background が指定されていない場合)</td><td>フォーカス時のインジケーターの色</td></tr>
+          <tr class="primary">
+            <td><strong>$button-hover-background</strong></td>
+            <td>$button-hover-arrow-color</td>
+            <td>ホバー時のボタン矢印の色</td>
+          </tr>
+          <tr class="primary">
+            <td><strong>$button-disabled-background</strong></td>
+            <td>$button-disabled-arrow-color</td>
+            <td>無効状態のボタン矢印の色</td>
+          </tr>
+          <tr class="primary">
+            <td><strong>$button-hover-arrow-color</strong></td>
+            <td>$button-focus-arrow-color</td>
+            <td>フォーカス時のボタン矢印の色</td>
+          </tr>
+          <tr class="primary">
+            <td><strong>$button-focus-arrow-color</strong></td>
+            <td>$button-focus-border-color</td>
+            <td>フォーカス時のボタンの境界線の色</td>
+          </tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$indicator-background</strong></summary></details></td>
+            <td>$indicator-border-color</td>
+            <td>インジケーターの境界線の色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$indicator-active-dot-color</td><td>アクティブ時のインジケーターの点の色</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-focus-color</td><td>フォーカス時のインジケーターの色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$indicator-active-dot-color</strong></summary></details></td>
+            <td>$indicator-active-hover-dot-color</td>
+            <td>アクティブかつホバー時のインジケーターの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$indicator-active-border-color</td><td>アクティブ時のインジケーターの境界線の色</td></tr>
+          <tr class="primary">
+            <td><strong>$indicator-dot-color</strong></td>
+            <td>$indicator-hover-dot-color</td>
+            <td>ホバー時のインジケーターの点の色</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+   <!-- Fluent Theme Table -->
+    <div class="theme-table fluent">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>プライマリ プロパティ</th>
+            <th>依存プロパティ</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-background</strong></summary></details></td>
+            <td>$button-hover-background</td>
+            <td>ホバー時のボタンの背景色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-arrow-color</td><td>ボタン矢印の色</td></tr>
+          <tr class="dependent"><td></td><td>$button-disabled-background</td><td>無効状態のボタンの背景色</td></tr>
+          <tr class="dependent"><td></td><td>$button-focus-border-color</td><td>フォーカス時のボタンの境界線の色</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-focus-color <br> ($indicator-background が指定されていない場合)</td><td>フォーカス時のインジケーターの色</td></tr>
+          <tr class="primary">
+            <td><strong>$button-hover-background</strong></td>
+            <td>$button-hover-arrow-color</td>
+            <td>ホバー時のボタン矢印の色</td>
+          </tr>
+          <tr class="primary">
+            <td><strong>$button-disabled-background</strong></td>
+            <td>$button-disabled-arrow-color</td>
+            <td>無効状態のボタン矢印の色</td>
+          </tr>
+          <tr class="primary">
+            <td><strong>$button-hover-arrow-color</strong></td>
+            <td>$button-focus-arrow-color</td>
+            <td>フォーカス時のボタン矢印の色</td>
+          </tr>
+         </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$indicator-background</strong></summary></details></td>
+            <td>$indicator-border-color</td>
+            <td>インジケーターの境界線の色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$indicator-active-dot-color</td><td>アクティブ時のインジケーターの点の色</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-focus-color</td><td>フォーカス時のインジケーターの色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$indicator-active-dot-color</strong></summary></details></td>
+            <td>$indicator-active-hover-dot-color</td>
+            <td>アクティブかつホバー時のインジケーターの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$indicator-active-border-color</td><td>アクティブ時のインジケーターの境界線の色</td></tr>
+          <tr class="primary">
+            <td><strong>$indicator-dot-color</strong></td>
+            <td>$indicator-hover-dot-color</td>
+            <td>ホバー時のインジケーターの点の色</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Bootstrap Theme Table -->
+    <div class="theme-table bootstrap">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>プライマリ プロパティ</th>
+            <th>依存プロパティ</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-background</strong></summary></details></td>
+            <td>$button-hover-background</td>
+            <td>ホバー時のボタンの背景色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-arrow-color</td><td>ボタン矢印の色</td></tr>
+          <tr class="dependent"><td></td><td>$button-disabled-background</td><td>無効状態のボタンの背景色</td></tr>
+          <tr class="dependent"><td></td><td>$button-focus-border-color</td><td>フォーカス時のボタンの境界線の色</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-focus-color <br> ($indicator-background が指定されていない場合)</td><td>フォーカス時のインジケーターの色</td></tr>
+          <tr class="primary">
+            <td><strong>$button-hover-background</strong></td>
+            <td>$button-hover-arrow-color</td>
+            <td>ホバー時のボタン矢印の色</td>
+          </tr>
+          <tr class="primary">
+            <td><strong>$button-disabled-background</strong></td>
+            <td>$button-disabled-arrow-color</td>
+            <td>無効状態のボタン矢印の色</td>
+          </tr>
+          <tr class="primary">
+            <td><strong>$button-hover-arrow-color</strong></td>
+            <td>$button-focus-arrow-color</td>
+            <td>フォーカス時のボタン矢印の色</td>
+          </tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$indicator-background</strong></summary></details></td>
+            <td>$indicator-border-color</td>
+            <td>インジケーターの境界線の色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$indicator-active-dot-color</td><td>アクティブ時のインジケーターの点の色</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-focus-color</td><td>フォーカス時のインジケーターの色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$indicator-active-dot-color</strong></summary></details></td>
+            <td>$indicator-active-hover-dot-color</td>
+            <td>アクティブかつホバー時のインジケーターの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$indicator-active-border-color</td><td>アクティブ時のインジケーターの境界線の色</td></tr>
+          <tr class="primary">
+            <td><strong>$indicator-dot-color</strong></td>
+            <td>$indicator-hover-dot-color</td>
+            <td>ホバー時のインジケーターの点の色</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Indigo Theme Table -->
+    <div class="theme-table indigo">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>プライマリ プロパティ</th>
+            <th>依存プロパティ</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-background</strong></summary></details></td>
+            <td>$button-hover-background</td>
+            <td>ホバー時のボタンの背景色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-border-color</td><td>ボタンの境界線の色</td></tr>
+          <tr class="dependent"><td></td><td>$button-arrow-color</td><td>ボタン矢印の色</td></tr>
+          <tr class="dependent"><td></td><td>$button-disabled-background</td><td>無効状態のボタンの背景色</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-active-dot-color <br> ($indicator-background が指定されていない場合)</td><td>アクティブ時のインジケーターの点の色</td></tr>
+          <tr class="primary">
+            <td><strong>$button-hover-background</strong></td>
+            <td>$button-hover-arrow-color</td>
+            <td>ホバー時のボタン矢印の色</td>
+          </tr>
+          <tr class="primary">
+            <td><strong>$button-disabled-background</strong></td>
+            <td>$button-disabled-arrow-color</td>
+            <td>無効状態のボタン矢印の色</td>
+          </tr>
+          <tr class="primary">
+            <td><strong>$button-border-color</strong></td>
+            <td>$button-hover-border-color</td>
+            <td>ホバー時のボタンの境界線の色</td>
+          </tr>
+          <tr class="primary">
+            <td><strong>$button-hover-arrow-color</strong></td>
+            <td>$button-focus-arrow-color</td>
+            <td>フォーカス時のボタン矢印の色</td>
+          </tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$indicator-background</strong></summary></details></td>
+            <td>$indicator-dot-color</td>
+            <td>インジケーターの点の色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$indicator-active-dot-color</td><td>アクティブ時のインジケーターの点の色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$indicator-dot-color</strong></summary></details></td>
+            <td>$indicator-hover-dot-color</td>
+            <td>ホバー時のインジケーターの点の色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$indicator-border-color</td><td>インジケーターの境界線の色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$indicator-active-dot-color</strong></summary></details></td>
+            <td>$indicator-active-hover-dot-color</td>
+            <td>アクティブかつホバー時のインジケーターの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$indicator-active-border-color</td><td>アクティブ時のインジケーターの境界線の色</td></tr>
+          <tr class="dependent"><td></td><td>$button-focus-border-color</td><td>フォーカス時のボタンの境界線の色</td></tr>
+          <tr class="primary">
+            <td><strong>$indicator-active-hover-dot-color</strong></td>
+            <td>$indicator-focus-color</td>
+            <td>フォーカス時のインジケーターの色</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+[Ignite UI for Angular テーマ](themes/index.md)を使用して、`carousel` の外観を変更できます。 
+
+はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。 
+
+```scss
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+最もシンプルな方法として、[carousel-theme]({environment:sassApiUrl}/themes#function-carousel-theme) を拡張した新しいテーマを作成し、`$button-background` や `$indicator-background` などのいくつかの基本パラメーターを指定するだけで、テーマは適切な状態別カラーとコントラストのある前景色を自動生成します。外観をさらに調整したい場合は、他の任意のパラメーターをオーバーライドすることも可能です。
+
+```scss
+$carousel-theme: carousel-theme(
+  $button-background: #7c32dd,
+  $indicator-background: #7c32dd,
+);
+```
+
+最後にコンポーネントのテーマを含めます。
+
+```scss
+@include css-vars($carousel-theme);
+```
+
+### デモ
+
+以下のサンプルは、[Ignite UI for Angular テーマ](themes/index.md)で適用されるシンプルなスタイル設定を示します。
+
+<code-view style="height: 310px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/layouts/carousel-styling-sample/" alt="Angular Carousel スタイル設定の例">
+</code-view>
+
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して `carousel` をスタイル設定できます。最初に必ず [Tailwind](themes/misc/tailwind-classes.md) を設定してください。
+
+グローバル スタイルシートに tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-carousel`、`dark-carousel`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+すべてのプロパティのリストは、[carousel-theme]({environment:sassApiUrl}/themes#function-carousel-theme) にあります。構文は次のとおりです:
+
+```html
+<igx-carousel class="!light-carousel
+![--indicator-background:#a7b6de] 
+![--button-background:#a7b6de] 
+![--indicator-border-color:#3E4853]">
+  ...
+</igx-carousel>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、carousel は次のようになります:
+
+<div class="sample-container loading" style="height:310px">
+    <iframe id="carousel-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/carousel-tailwind-sample/' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ## ユーザー補助
 ### WAI-ARIA の役割、状態、およびプロパティ
