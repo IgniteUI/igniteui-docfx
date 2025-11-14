@@ -250,23 +250,1161 @@ protected get sizeStyle() {
 
 ## スタイル設定
 
-最も簡単な方法は、CSS 変数を使用してボタンの外観をカスタマイズする方法です。
+### Button テーマのプロパティ マップ
 
-```css
-[igxButton] {
-    --background: #ff4d4f;
-    --hover-background: #ff7875;
-    --active-background: #d9363e;
-    --focus-visible-background: #ff4d4f;
-    --focus-visible-foreground: #fff;
-}
-```
+プライマリ プロパティを変更すると、関連するすべての依存プロパティが自動的に更新されます。
 
-これらの CSS 変数の値を変更することで、ボタンの全体的な外観を変更できます。
+<div class="theme-switcher-wrapper">
+<input type="radio" name="theme" id="material" checked>
+<label for="material" class="switch-label">Material</label>
+<input type="radio" name="theme" id="fluent">
+<label for="fluent" class="switch-label">Fluent</label>
+<input type="radio" name="theme" id="bootstrap">
+<label for="bootstrap" class="switch-label">Bootstrap</label>
+<input type="radio" name="theme" id="indigo">
+<label for="indigo" class="switch-label">Indigo</label>
+<div class="tables">
+  <div class="theme-table material">
+    <h3>Material テーマ</h3>
+    <h4>Flat ボタン</h4>
+    <table class="collapsible-table">
+      <thead>
+        <tr>
+          <th>プライマリ プロパティ</th>
+          <th>依存プロパティ</th>
+          <th>説明</th>
+        </tr>
+      </thead>
+      <tbody class="group">
+        <tr class="primary">
+          <td><details><summary><strong>$foreground</strong></summary></details></td>
+          <td>$hover-background</td>
+          <td>ホバー時のボタンの背景の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$focus-background</td>
+          <td>フォーカス時のボタンの背景の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$focus-hover-background</td>
+          <td>フォーカス + ホバー時のボタンの背景の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$active-background</td>
+          <td>アクティブ時のボタンの背景の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$hover-foreground</td>
+          <td>ホバー時のボタンの前景の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$icon-color-hover</td>
+          <td>ホバー時のボタンのアイコンの色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$focus-foreground</td>
+          <td>フォーカス時のボタンの前景の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$focus-hover-foreground</td>
+          <td>フォーカス + ホバー時のボタンの前景の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$active-foreground</td>
+          <td>アクティブなボタンの前景の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$focus-visible-background</td>
+          <td>フォーカスが表示されている時の背景</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$focus-visible-foreground</td>
+          <td>フォーカスが表示されている時の前景</td>
+        </tr>
+      </tbody>
+    </table>
+    <h4>Contained ボタン</h4>
+    <table class="collapsible-table">
+      <thead>
+        <tr>
+          <th>プライマリ プロパティ</th>
+          <th>依存プロパティ</th>
+          <th>説明</th>
+        </tr>
+      </thead>
+      <tbody class="group">
+        <tr class="primary">
+          <td><details><summary><strong>$background</strong></summary></details></td>
+          <td>$foreground</td>
+          <td>背景に基づいた前景</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$icon-color</td>
+          <td>背景に基づいたアイコンの色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$hover-background</td>
+          <td>ホバー時の背景の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$hover-foreground</td>
+          <td>ホバー時の前景</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$icon-color-hover</td>
+          <td>ホバー時のアイコンの色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$focus-background</td>
+          <td>フォーカス時の背景の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$focus-foreground</td>
+          <td>フォーカス時の前景</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$focus-hover-background</td>
+          <td>フォーカス + ホバー背景</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$focus-hover-foreground</td>
+          <td>フォーカス + ホバー時の前景</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$active-background</td>
+          <td>アクティブ時の背景の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$active-foreground</td>
+          <td>アクティブ時の前景の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$focus-visible-background</td>
+          <td>フォーカスが表示されている時の背景</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$focus-visible-foreground</td>
+          <td>フォーカスが表示されている時の前景</td>
+        </tr>
+      </tbody>
+    </table>
+    <h4>Outlined ボタン</h4>
+    <table class="collapsible-table">
+      <thead>
+        <tr>
+          <th>プライマリ プロパティ</th>
+          <th>依存プロパティ</th>
+          <th>説明</th>
+        </tr>
+      </thead>
+      <tbody class="group">
+        <tr class="primary">
+          <td><details><summary><strong>$foreground</strong></summary></details></td>
+          <td>$hover-background</td>
+          <td>ホバー時のボタンの背景の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$focus-background</td>
+          <td>フォーカス時のボタンの背景の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$focus-hover-background</td>
+          <td>フォーカス + ホバー時のボタンの背景の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$active-background</td>
+          <td>アクティブ時のボタンの背景の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$hover-foreground</td>
+          <td>ホバー時のボタンの前景の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$icon-color-hover</td>
+          <td>ホバー時のボタンのアイコンの色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$focus-foreground</td>
+          <td>フォーカス時のボタンの前景の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$focus-hover-foreground</td>
+          <td>フォーカス + ホバー時のボタンの前景の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$active-foreground</td>
+          <td>アクティブなボタンの前景の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$focus-visible-background</td>
+          <td>フォーカスが表示されている時の背景</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$focus-visible-foreground</td>
+          <td>フォーカスが表示されている時の前景</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$border-color</td>
+          <td>アウトライン ボタンの境界線の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$hover-border-color</td>
+          <td>ホバー時のアウトライン ボタンの境界線の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$focus-border-color</td>
+          <td>フォーカス時のアウトライン ボタンの境界線の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$focus-visible-border-color</td>
+          <td>フォーカスが表示されている時のアウトライン ボタンの境界線の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$active-border-color</td>
+          <td>アクティブ時のアウトライン ボタンの境界線の色</td>
+        </tr>
+      </tbody>
+    </table>
+    <h4>FAB ボタン</h4>
+    <table class="collapsible-table">
+      <thead>
+        <tr>
+          <th>プライマリ プロパティ</th>
+          <th>依存プロパティ</th>
+          <th>説明</th>
+        </tr>
+      </thead>
+      <tbody class="group">
+        <tr class="primary">
+          <td><details><summary><strong>$background</strong></summary></details></td>
+          <td>$foreground</td>
+          <td>背景に基づいた前景</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$icon-color</td>
+          <td>背景に基づいたアイコンの色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$hover-background</td>
+          <td>ホバー時の背景の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$hover-foreground</td>
+          <td>ホバー時の前景</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$icon-color-hover</td>
+          <td>ホバー時のアイコンの色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$focus-background</td>
+          <td>フォーカス時の背景の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$focus-foreground</td>
+          <td>フォーカス時の前景</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$active-background</td>
+          <td>アクティブ時の背景の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$active-foreground</td>
+          <td>アクティブ時の前景の色</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$focus-hover-background</td>
+          <td>フォーカス + ホバー背景</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$focus-hover-foreground</td>
+          <td>フォーカス + ホバー時の前景</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$focus-visible-background</td>
+          <td>フォーカスが表示されている時の背景</td>
+        </tr>
+        <tr class="dependent">
+          <td></td>
+          <td>$focus-visible-foreground</td>
+          <td>フォーカスが表示されている時の前景</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-<div class="divider--half"></div>
+<div class="theme-table fluent">
+<h3>Fluent テーマ</h3>
+<h4>Flat ボタン</h4>
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>プライマリ プロパティ</th>
+      <th>依存プロパティ</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+      <td><details><summary><strong>$foreground</strong></summary></details></td>
+      <td>$hover-background</td>
+      <td>ホバー時のボタンの背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-background</td>
+      <td>フォーカス時のボタンの背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-hover-background</td>
+      <td>フォーカス + ホバー時のボタンの背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$active-background</td>
+      <td>アクティブ時のボタンの背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$hover-foreground</td>
+      <td>ホバー時のボタンの前景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$icon-color-hover</td>
+      <td>ホバー時のボタンのアイコンの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-foreground</td>
+      <td>フォーカス時のボタンの前景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-hover-foreground</td>
+      <td>フォーカス + ホバー時のボタンの前景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$active-foreground</td>
+      <td>アクティブなボタンの前景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-visible-foreground</td>
+      <td>フォーカスが表示されている時の前景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-visible-border-color</td>
+      <td>フォーカスが表示されている時の境界線の色</td>
+    </tr>
+  </tbody>
+</table>
+<h4>Contained ボタン</h4>
+<table class="collapsible-table">
+<thead><tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr></thead>
+<tbody class="group">
+<tr class="primary"><td><details><summary><strong>$background</strong></summary></details></td><td>$foreground</td><td>背景に基づいた前景</td></tr>
+<tr class="dependent"><td></td><td>$icon-color</td><td>背景に基づいたアイコンの色</td></tr>
+<tr class="dependent"><td></td><td>$hover-background</td><td>ホバー時の背景の色</td></tr>
+<tr class="dependent"><td></td><td>$focus-background</td><td>フォーカス時の背景の色</td></tr>
+<tr class="dependent"><td></td><td>$active-background</td><td>アクティブ時の背景の色</td></tr>
+<tr class="dependent"><td></td><td>$hover-foreground</td><td>ホバー時の前景</td></tr>
+<tr class="dependent"><td></td><td>$icon-color-hover</td><td>ホバー時のアイコンの色</td></tr>
+<tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時の前景</td></tr>
+<tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブ時の前景の色</td></tr>
+<tr class="dependent"><td></td><td>$focus-hover-background</td><td>フォーカス + ホバー背景</td></tr>
+<tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカス + ホバー時の前景</td></tr>
+<tr class="dependent"><td></td><td>$focus-visible-background</td><td>フォーカスが表示されている時の背景</td></tr>
+<tr class="dependent"><td></td><td>$focus-visible-foreground</td><td>フォーカスが表示されている時の前景</td></tr>
+<tr class="dependent"><td></td><td>$focus-visible-border-color</td><td>フォーカスが表示されている時の境界線の色</td></tr>
+</tbody>
+</table>
+<h4>Outlined ボタン</h4>
+<table class="collapsible-table">
+<thead><tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr></thead>
+<tbody class="group">
+<tr class="primary"><td><details><summary><strong>$foreground</strong></summary></details></td><td>$hover-background</td><td>ホバー時のアウトライン ボタンの背景の色</td></tr>
+<tr class="dependent"><td></td><td>$focus-background</td><td>フォーカス時のアウトライン ボタンの背景の色</td></tr>
+<tr class="dependent"><td></td><td>$focus-hover-background</td><td>フォーカス + ホバー時のアウトライン ボタンの背景の色</td></tr>
+<tr class="dependent"><td></td><td>$active-background</td><td>アクティブ時のアウトライン ボタンの背景の色</td></tr>
+<tr class="dependent"><td></td><td>$hover-foreground</td><td>ホバー時のアウトライン ボタンの前景の色</td></tr>
+<tr class="dependent"><td></td><td>$icon-color-hover</td><td>ホバー時のアウトライン ボタンのアイコンの色</td></tr>
+<tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時のアウトライン ボタンの前景の色</td></tr>
+<tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカス + ホバー時のアウトライン ボタンの前景の色</td></tr>
+<tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブなアウトライン ボタンの前景の色</td></tr>
+<tr class="dependent"><td></td><td>$focus-visible-foreground</td><td>フォーカスが表示されている時のアウトライン ボタンの前景の色</td></tr>
+<tr class="dependent"><td></td><td>$focus-visible-border-color</td><td>フォーカスが表示されている時のアウトライン ボタンの境界線の色</td></tr>
+<tr class="dependent"><td></td><td>$border-color</td><td>アウトライン ボタンの境界線の色</td></tr>
+<tr class="dependent"><td></td><td>$hover-border-color</td><td>ホバー時のアウトライン ボタンの境界線の色</td></tr>
+<tr class="dependent"><td></td><td>$focus-border-color</td><td>フォーカス時のアウトライン ボタンの境界線の色</td></tr>
+<tr class="dependent"><td></td><td>$active-border-color</td><td>アクティブなアウトライン ボタンの境界線の色</td></tr>
+</tbody>
+</table>
+<h4>FAB ボタン</h4>
+<table class="collapsible-table">
+<thead><tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr></thead>
+<tbody class="group">
+<tr class="primary"><td><details><summary><strong>$background</strong></summary></details></td><td>$foreground</td><td>背景に基づいた前景</td></tr>
+<tr class="dependent"><td></td><td>$icon-color</td><td>背景に基づいたアイコンの色</td></tr>
+<tr class="dependent"><td></td><td>$hover-background</td><td>ホバー時の背景の色</td></tr>
+<tr class="dependent"><td></td><td>$hover-foreground</td><td>ホバー時の前景</td></tr>
+<tr class="dependent"><td></td><td>$icon-color-hover</td><td>ホバー時のアイコンの色</td></tr>
+<tr class="dependent"><td></td><td>$active-background</td><td>アクティブ時の背景の色</td></tr>
+<tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブ時の前景の色</td></tr>
+<tr class="dependent"><td></td><td>$focus-background</td><td>フォーカス時の背景の色</td></tr>
+<tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時の前景</td></tr>
+<tr class="dependent"><td></td><td>$focus-hover-background</td><td>フォーカス + ホバー背景</td></tr>
+<tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカス + ホバー時の前景</td></tr>
+<tr class="dependent"><td></td><td>$focus-visible-background</td><td>フォーカスが表示されている時の背景</td></tr>
+<tr class="dependent"><td></td><td>$focus-visible-foreground</td><td>フォーカスが表示されている時の前景</td></tr>
+<tr class="dependent"><td></td><td>$focus-visible-border-color</td><td>フォーカスが表示されている時の境界線の色</td></tr>
+</tbody>
+</table>
+</div>
 
-ボタンにスタイルを設定する別の方法は、**Sass** と [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) 関数を使用することです。
+<div class="theme-table bootstrap">
+<h3>Bootstrap テーマ</h3>
+<h4>Flat ボタン</h4>
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>プライマリ プロパティ</th>
+      <th>依存プロパティ</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+      <td><details><summary><strong>$foreground</strong></summary></details></td>
+      <td>$hover-foreground</td>
+      <td>ホバー時のボタンの前景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$icon-color-hover</td>
+      <td>ホバー時のボタンのアイコンの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-foreground</td>
+      <td>フォーカス時のボタンの前景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-hover-foreground</td>
+      <td>フォーカス + ホバー時のボタンの前景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$active-foreground</td>
+      <td>アクティブなボタンの前景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-visible-foreground</td>
+      <td>フォーカスが表示されている時の前景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-visible-border-color</td>
+      <td>フォーカスが表示されている時の境界線の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-foreground</td>
+      <td>無効なボタンの前景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-icon-color</td>
+      <td>無効なボタンのアイコンの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$shadow-color</td>
+      <td>シャドウの色</td>
+    </tr>
+  </tbody>
+</table>
+<h4>Contained ボタン</h4>
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>プライマリ プロパティ</th>
+      <th>依存プロパティ</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+      <td><details><summary><strong>$background</strong></summary></details></td>
+      <td>$foreground</td>
+      <td>背景に基づいた前景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$icon-color</td>
+      <td>背景に基づいたアイコンの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$hover-background</td>
+      <td>ホバー時の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-background</td>
+      <td>フォーカス時の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$active-background</td>
+      <td>アクティブ時の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$hover-foreground</td>
+      <td>ホバー時の前景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$icon-color-hover</td>
+      <td>ホバー時のアイコンの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-foreground</td>
+      <td>フォーカス時の前景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-hover-background</td>
+      <td>フォーカス + ホバー背景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-hover-foreground</td>
+      <td>フォーカス + ホバー時の前景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-visible-background</td>
+      <td>フォーカスが表示されている時の背景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-visible-foreground</td>
+      <td>フォーカスが表示されている時の前景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$active-foreground</td>
+      <td>アクティブ時の前景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$shadow-color</td>
+      <td>シャドウの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-background</td>
+      <td>無効な背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-foreground</td>
+      <td>無効な前景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-icon-color</td>
+      <td>無効なアイコンの色</td>
+    </tr>
+  </tbody>
+</table>
+<h4>Outlined ボタン</h4>
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>プライマリ プロパティ</th>
+      <th>依存プロパティ</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+      <td><details><summary><strong>$foreground</strong></summary></details></td>
+      <td>$hover-background</td>
+      <td>ホバー時のボタンの背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-background</td>
+      <td>フォーカス時のボタンの背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-hover-background</td>
+      <td>フォーカス + ホバー時のボタンの背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$active-background</td>
+      <td>アクティブ時のボタンの背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$hover-foreground</td>
+      <td>ホバー時のボタンの前景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$icon-color-hover</td>
+      <td>ホバー時のボタンのアイコンの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-foreground</td>
+      <td>フォーカス時のボタンの前景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-hover-foreground</td>
+      <td>フォーカス + ホバー時のボタンの前景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$active-foreground</td>
+      <td>アクティブなボタンの前景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-visible-background</td>
+      <td>フォーカスが表示されている時の背景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-visible-foreground</td>
+      <td>フォーカスが表示されている時の前景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-visible-border-color</td>
+      <td>フォーカスが表示されている時の境界線の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-foreground</td>
+      <td>無効なボタンの前景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-icon-color</td>
+      <td>無効なボタンのアイコンの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-border-color</td>
+      <td>無効なボタンの境界線の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$hover-border-color</td>
+      <td>ホバー時の境界線の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-border-color</td>
+      <td>フォーカス時の境界線の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-visible-border-color</td>
+      <td>フォーカス表示の境界線の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$active-border-color</td>
+      <td>アクティブ時の境界線の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$shadow-color</td>
+      <td>シャドウの色</td>
+    </tr>
+  </tbody>
+</table>
+<h4>FAB ボタン</h4>
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>プライマリ プロパティ</th>
+      <th>依存プロパティ</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+      <td><details><summary><strong>$background</strong></summary></details></td>
+      <td>$foreground</td>
+      <td>背景に基づいた前景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$icon-color</td>
+      <td>背景に基づいたアイコンの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$hover-background</td>
+      <td>ホバー時の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-background</td>
+      <td>フォーカス時の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$active-background</td>
+      <td>アクティブ時の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-background</td>
+      <td>無効な背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$hover-foreground</td>
+      <td>ホバー時の前景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$icon-color-hover</td>
+      <td>ホバー時のアイコンの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-foreground</td>
+      <td>フォーカス時の前景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-hover-background</td>
+      <td>フォーカス + ホバー背景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-hover-foreground</td>
+      <td>フォーカス + ホバー時の前景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-visible-background</td>
+      <td>フォーカスが表示されている時の背景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-visible-foreground</td>
+      <td>フォーカスが表示されている時の前景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$active-foreground</td>
+      <td>アクティブ時の前景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$shadow-color</td>
+      <td>シャドウの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-foreground</td>
+      <td>無効な前景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-icon-color</td>
+      <td>無効なアイコンの色</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="theme-table indigo">
+<h3>Indigo テーマ</h3>
+<h4>Flat ボタン</h4>
+<table class="collapsible-table"><thead><tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr></thead><tbody class="group">
+<tr class="primary"><td><details><summary><strong>$foreground</strong></summary></details></td><td>$hover-background</td><td>ホバー時のボタンの背景の色</td></tr>
+<tr class="dependent"><td></td><td>$focus-background</td><td>フォーカス時のボタンの背景の色</td></tr>
+<tr class="dependent"><td></td><td>$focus-hover-background</td><td>フォーカス + ホバー時のボタンの背景の色</td></tr>
+<tr class="dependent"><td></td><td>$active-background</td><td>アクティブ時のボタンの背景の色</td></tr>
+<tr class="dependent"><td></td><td>$hover-foreground</td><td>ホバー時のボタンの前景の色</td></tr>
+<tr class="dependent"><td></td><td>$icon-color-hover</td><td>ホバー時のボタンのアイコンの色</td></tr>
+<tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時のボタンの前景の色</td></tr>
+<tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカス + ホバー時のボタンの前景の色</td></tr>
+<tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブなボタンの前景の色</td></tr>
+<tr class="dependent"><td></td><td>$focus-visible-foreground</td><td>フォーカスが表示されている時の前景</td></tr>
+<tr class="dependent"><td></td><td>$disabled-foreground</td><td>無効な前景の色</td></tr>
+<tr class="dependent"><td></td><td>$disabled-icon-color</td><td>無効なアイコンの色</td></tr>
+<tr class="dependent"><td></td><td>$shadow-color</td><td>シャドウの色</td></tr>
+</tbody>
+</table>
+<h4>Contained ボタン</h4>
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>プライマリ プロパティ</th>
+      <th>依存プロパティ</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+      <td><details><summary><strong>$background</strong></summary></details></td>
+      <td>$foreground</td>
+      <td>背景に基づいた前景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$icon-color</td>
+      <td>背景に基づいたアイコンの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$hover-background</td>
+      <td>ホバー時の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-background</td>
+      <td>フォーカス時の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$active-background</td>
+      <td>アクティブ時の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$hover-foreground</td>
+      <td>ホバー時の前景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$icon-color-hover</td>
+      <td>ホバー時のアイコンの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-foreground</td>
+      <td>フォーカス時の前景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-hover-background</td>
+      <td>フォーカス + ホバー背景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-hover-foreground</td>
+      <td>フォーカス + ホバー時の前景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-visible-background</td>
+      <td>フォーカスが表示されている時の背景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-visible-foreground</td>
+      <td>フォーカスが表示されている時の前景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$active-foreground</td>
+      <td>アクティブ時の前景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$shadow-color</td>
+      <td>シャドウの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-background</td>
+      <td>無効な背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-foreground</td>
+      <td>無効な前景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-icon-color</td>
+      <td>無効なアイコンの色</td>
+    </tr>
+  </tbody>
+</table>
+<h4>Outlined ボタン</h4>
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>プライマリ プロパティ</th>
+      <th>依存プロパティ</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+      <td><details><summary><strong>$foreground</strong></summary></details></td>
+      <td>$hover-background</td>
+      <td>ホバー時のボタンの背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-background</td>
+      <td>フォーカス時のボタンの背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-hover-background</td>
+      <td>フォーカス + ホバー時のボタンの背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$active-background</td>
+      <td>アクティブ時のボタンの背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$hover-foreground</td>
+      <td>ホバー時のボタンの前景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$icon-color-hover</td>
+      <td>ホバー時のボタンのアイコンの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-foreground</td>
+      <td>フォーカス時のボタンの前景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-hover-foreground</td>
+      <td>フォーカス + ホバー時のボタンの前景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$active-foreground</td>
+      <td>アクティブなボタンの前景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-visible-background</td>
+      <td>フォーカスが表示されている時の背景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-visible-foreground</td>
+      <td>フォーカスが表示されている時の前景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-visible-border-color</td>
+      <td>フォーカスが表示されている時の境界線の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$border-color</td>
+      <td>境界線の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$hover-border-color</td>
+      <td>ホバー時の境界線の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-border-color</td>
+      <td>フォーカス時の境界線の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-visible-border-color</td>
+      <td>フォーカス表示の境界線の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$active-border-color</td>
+      <td>アクティブ時の境界線の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$shadow-color</td>
+      <td>シャドウの色</td>
+    </tr>
+  </tbody>
+</table>
+<h4>FAB ボタン</h4>
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>プライマリ プロパティ</th>
+      <th>依存プロパティ</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+      <td><details><summary><strong>$background</strong></summary></details></td>
+      <td>$foreground</td>
+      <td>背景に基づいた前景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$icon-color</td>
+      <td>背景に基づいたアイコンの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$hover-background</td>
+      <td>ホバー時の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-background</td>
+      <td>フォーカス時の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$active-background</td>
+      <td>アクティブ時の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-background</td>
+      <td>無効な背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$hover-foreground</td>
+      <td>ホバー時の前景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$icon-color-hover</td>
+      <td>ホバー時のアイコンの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-foreground</td>
+      <td>フォーカス時の前景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-hover-background</td>
+      <td>フォーカス + ホバー背景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-hover-foreground</td>
+      <td>フォーカス + ホバー時の前景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-visible-background</td>
+      <td>フォーカスが表示されている時の背景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focus-visible-foreground</td>
+      <td>フォーカスが表示されている時の前景</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$active-foreground</td>
+      <td>アクティブ時の前景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$shadow-color</td>
+      <td>シャドウの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-foreground</td>
+      <td>無効な前景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-icon-color</td>
+      <td>無効なアイコンの色</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+
+> **注:** 結果の依存プロパティは、選択したテーマ (Material、Fluent、Bootstrap、Indigo) によって若干異なる場合があります。
 
 **Sass** を使用してボタンのスタイル設定を開始するには、まずすべてのテーマ関数とコンポーネント ミックスインを含む `index` ファイルをインポートします。
 
@@ -337,16 +1475,76 @@ $custom-contained-theme: contained-button-theme(
 
 [`flat-button-theme`]({environment:sassApiUrl}/themes#function-flat-button-theme) および [`outlined-button-theme`]({environment:sassApiUrl}/themes#function-outlined-button-theme) では、状態用の色も自動的に生成されますが、これらは `$background` ではなく `$foreground` パラメーターに基づいて計算されます。
 
-以下のサンプルでは、カスタマイズした CSS 変数を使用したボタン コンポーネントが、[`Ant`](https://ant.design/components/button?theme=light#button-demo-color-variant) デザイン システムのボタンに視覚的に似たデザインを実現している様子を確認できます。 
+### デモ
 
-<code-view style="height: 260px"
+<code-view style="height: 100px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/buttons-style/" >
 </code-view>
 
-> [!NOTE]
-> サンプルでは、[Bootstrap Light](themes/sass/schemas.md#predefined-schemas) スキーマを使用します。
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して `button` をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します。 ボタンにはタイプがあるため、クラスは次のように使用されます: `light-contained-button`、`light-flat-button`、`dark-outlined-button`、`dark-fab-button`。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは [button-theme]({environment:sassApiUrl}/themes#function-button-theme) で確認できます。これはさまざまなバリエーションで異なって反映されます。`flat` ボタンと `outlined` ボタンの主なプロパティは `$foreground` で、`contained` ボタンと `fab` ボタンの主なプロパティは `$background` です。構文は次のとおりです:
+
+```html
+<div class="buttons-sample">
+  <div class="button-sample">
+    <button
+    igxButton="flat"
+    class="!light-flat-button ![--foreground:#7B9E89]">
+      Flat Button
+    </button>
+  </div>
+  <div class="button-sample">
+    <button
+    igxButton="contained"
+    class="!light-contained-button ![--background:#7B9E89]">
+      Contained Button
+    </button>
+  </div>
+  <div class="button-sample">
+    <button
+    igxButton="outlined"
+    class="!light-outlined-button ![--foreground:#7B9E89]">
+      Outlined Button
+    </button>
+  </div>
+  <div class="button-sample">
+    <button
+    igxButton="fab"
+    class="!light-fab-button ![--background:#7B9E89]">
+      Fab Button
+    </button>
+  </div>
+</div>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、button は次のようになります:
+
+<div class="sample-container loading" style="height:100px">
+    <iframe id="buttons-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/data-entries/buttons-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ### カスタム サイズ変更
 

@@ -319,6 +319,87 @@ Stepper コンポーネントは、ローコード [ドラッグアンドドロ�
 
 ## Angular Stepper のスタイル設定
 
+### Stepper テーマのプロパティ マップ
+
+プライマリ プロパティを変更すると、関連するすべての依存プロパティが自動的に更新され、変更が反映されます。
+
+<table class="collapsible-table">
+    <thead>
+        <tr>
+        <th>プライマリ プロパティ</th>
+        <th>依存プロパティ</th>
+        <th>説明</th>
+        </tr>
+    </thead>
+    <tbody class="group">
+        <tr class="primary">
+        <td><details><summary><strong>$step-background</strong></summary></details></td>
+        <td>$step-hover-background</td>
+        <td>ホバー時のステップ ヘッダーの背景</td>
+        </tr>
+        <tr class="dependent"><td></td><td>$step-focus-background</td><td>フォーカス時のステップ ヘッダーの背景</td></tr>
+        <tr class="dependent"><td></td><td>$indicator-background</td><td>ステップ インジケーターの背景の色</td></tr>
+        <tr class="dependent"><td></td><td>$title-color</td><td>ステップのタイトルの色</td></tr>
+        <tr class="dependent"><td></td><td>$subtitle-color</td><td>ステップのサブタイトルの色</td></tr>
+        <tr class="dependent"><td></td><td>$current-step-background</td><td>現在のステップ ヘッダーの背景</td></tr>
+        <tr class="dependent"><td></td><td>$invalid-step-background</td><td>入力が不正なステップ ヘッダーの背景</td></tr>
+        <tr class="dependent"><td></td><td>$complete-step-background</td><td>完了したステップ ヘッダーの背景</td></tr>
+        <tr class="dependent"><td></td><td>$disabled-indicator-background</td><td>無効なステップのインジケーターの背景</td></tr>
+        <tr class="dependent"><td></td><td>$disabled-title-color</td><td>無効なステップ タイトルの色</td></tr>
+        <tr class="dependent"><td></td><td>$disabled-subtitle-color</td><td>無効なステップ サブタイトルの色</td></tr>
+        <tr class="dependent"><td></td><td>$step-separator-color</td><td>ステップ間の区切りの境界線の色</td></tr>
+    </tbody>
+    <tbody class="group">
+        <tr class="primary">
+        <td><details><summary><strong>$indicator-background</strong></summary></details></td>
+        <td>$indicator-outline</td>
+        <td>ステップ インジケーターのアウトラインの色</td>
+        </tr>
+        <tr class="dependent"><td></td><td>$indicator-color</td><td>ステップ インジケーターのテキストの色</td></tr>
+    </tbody>
+    <tbody class="group">
+        <tr class="primary">
+        <td><details><summary><strong>$current-step-background</strong></summary></details></td>
+        <td>$current-step-hover-background</td>
+        <td>現在のステップ ヘッダーのホバー時の背景</td>
+        </tr>
+        <tr class="dependent"><td></td><td>$current-step-focus-background</td><td>現在のステップ ヘッダーのフォーカス時の背景</td></tr>
+        <tr class="dependent"><td></td><td>$current-indicator-background</td><td>現在のステップ インジケーターの背景の色</td></tr>
+        <tr class="dependent"><td></td><td>$current-title-color</td><td>現在のステップ タイトルの色</td></tr>
+        <tr class="dependent"><td></td><td>$current-subtitle-color</td><td>現在のステップ サブタイトルの色</td></tr>
+    </tbody>
+    <tbody class="group">
+        <tr class="primary">
+        <td><details><summary><strong>$invalid-indicator-background</strong></summary></details></td>
+        <td>$invalid-indicator-outline</td>
+        <td>入力が不正なステップ インジケーターのアウトラインの色</td>
+        </tr>
+        <tr class="dependent"><td></td><td>$invalid-indicator-color</td><td>入力が不正なステップ インジケーターの色</td></tr>
+        <tr class="dependent"><td></td><td>$invalid-title-color</td><td>入力が不正なステップ タイトルの色</td></tr>
+        <tr class="dependent"><td></td><td>$invalid-subtitle-color</td><td>入力が不正なステップ サブタイトルの色</td></tr>
+        <tr class="dependent"><td></td><td>$invalid-title-hover-color</td><td>入力が不正なステップタイトルのホバー時の色</td></tr>
+        <tr class="dependent"><td></td><td>$invalid-subtitle-hover-color</td><td>入力が不正なステップ サブタイトルのホバー時の色</td></tr>
+        <tr class="dependent"><td></td><td>$invalid-title-focus-color</td><td>入力が不正なステップ タイトルのフォーカス時の色</td></tr>
+        <tr class="dependent"><td></td><td>$invalid-subtitle-focus-color</td><td>入力が不正なステップ サブタイトルのフォーカス時の色</td></tr>
+    </tbody>
+    <tbody class="group">
+        <tr class="primary">
+        <td><details><summary><strong>$complete-step-background</strong></summary></details></td>
+        <td>$complete-step-hover-background</td>
+        <td>完了したステップ ヘッダーのホバー時の背景</td>
+        </tr>
+        <tr class="dependent"><td></td><td>$complete-step-focus-background</td><td>完了したステップ ヘッダーのフォーカス時の背景</td></tr>
+        <tr class="dependent"><td></td><td>$complete-indicator-background</td><td>完了したステップ インジケーターの背景の色</td></tr>
+        <tr class="dependent"><td></td><td>$complete-indicator-color</td><td>完了したステップ インジケーターの色</td></tr>
+        <tr class="dependent"><td></td><td>$complete-title-color</td><td>完了したステップ タイトルの色</td></tr>
+        <tr class="dependent"><td></td><td>$complete-subtitle-color</td><td>完了したステップ サブタイトルの色</td></tr>
+        <tr class="dependent"><td></td><td>$complete-title-hover-color</td><td>完了したステップ タイトルのホバー時の色</td></tr>
+        <tr class="dependent"><td></td><td>$complete-subtitle-hover-color</td><td>完了したステップ サブタイトルのホバー時の色</td></tr>
+        <tr class="dependent"><td></td><td>$complete-title-focus-color</td><td>完了したステップ タイトルのフォーカス時の色</td></tr>
+        <tr class="dependent"><td></td><td>$complete-subtitle-focus-color</td><td>完了したステップ サブタイトルのフォーカス時の色</td></tr>
+    </tbody>
+</table>
+
 [Ignite UI for Angular テーマ](themes/index.md)を使用して、`igx-stepper` の外観を変更できます。 
 
 はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。 
@@ -353,8 +434,45 @@ $stepper-theme: stepper-theme(
 
 <code-view style="height: 264px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/stepper-linear-sample/" alt="Angular Linear Stepper スタイル設定の例">
+           iframe-src="{environment:demosBaseUrl}/layouts/stepper-styling-sample/" alt="Angular Stepper スタイル設定の例">
 </code-view>
+
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して stepper をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-splitter`、`dark-splitter`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[stepper-theme]({environment:sassApiUrl}/themes#function-stepper-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-stepper
+  class="!light-stepper ![--step-background:#7B9E89] ![--border-radius-step-header:6px]">
+  ...
+</igx-stepper>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、stepper は次のようになります:
+
+<div class="sample-container loading" style="height:200px">
+    <iframe id="stepper-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/stepper-tailwind-styling-sample/' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 <div class="divider--half"></div>
 

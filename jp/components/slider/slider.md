@@ -484,6 +484,185 @@ public type = SliderType.RANGE;
 
 ## スタイル設定
 
+### Slider テーマのプロパティ マップ
+プライマリ プロパティを変更すると、関連するすべての依存プロパティが自動的に更新され、変更が反映されます。
+
+<div class="theme-switcher-wrapper">
+  <input type="radio" name="theme" id="material" checked>
+  <label for="material" class="switch-label">Material</label>
+  <input type="radio" name="theme" id="fluent">
+  <label for="fluent" class="switch-label">Fluent</label>
+  <input type="radio" name="theme" id="bootstrap">
+  <label for="bootstrap" class="switch-label">Bootstrap</label>
+  <input type="radio" name="theme" id="indigo">
+  <label for="indigo" class="switch-label">Indigo</label>
+
+  <div class="tables">
+    <!-- Material Theme Table -->
+    <div class="theme-table material">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>プライマリ プロパティ</th>
+            <th>依存プロパティ</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$track-color</strong></summary></details></td>
+            <td>$thumb-color</td>
+            <td>つまみの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$base-track-color</td><td>トラックのベース背景の色</td></tr>
+          <tr class="dependent"><td></td><td>$track-hover-color</td><td>ホバー時のトラックの色</td></tr>
+          <tr class="dependent"><td></td><td>$disabled-fill-track-color</td><td>無効なトラックの基本の塗りつぶしの色</td></tr>
+          <tr class="dependent"><td></td><td>$label-background-color</td><td>バブル ラベルの背景の色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$thumb-color</strong></summary></details></td>
+            <td>$track-color</td>
+            <td>トラックの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$disabled-thumb-color</td><td>無効時のつまみの境界線の色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$base-track-color</strong></summary></details></td>
+            <td>$base-track-hover-color</td>
+            <td>ホバー時の基本トラックの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$track-step-color</td><td>トラック ステップの色</td></tr>
+          <tr class="dependent"><td></td><td>$disabled-base-track-color</td><td>無効なトラックの基本の色</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="theme-table fluent">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>プライマリ プロパティ</th>
+            <th>依存プロパティ</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$thumb-border-color</strong></summary></details></td>
+            <td>$track-color</td>
+            <td>トラックの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$thumb-border-hover-color</td><td>ホバー時のつまみの境界線の色</td></tr>
+          <tr class="dependent"><td></td><td>$thumb-focus-color</td><td>つまみのフォーカス色</td></tr>
+          <tr class="dependent"><td></td><td>$thumb-disabled-border-color</td><td>無効なつまみの境界線の色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$track-color</strong></summary></details></td>
+            <td>$thumb-border-color</td>
+            <td>つまみの境界線の色</td>
+          </tr>
+           <tr class="dependent"><td></td><td>$track-hover-color</td><td>ホバー時のトラックの色</td></tr>
+          <tr class="dependent"><td></td><td>$disabled-fill-track-color</td><td>無効なトラックの基本の塗りつぶしの色</td></tr>
+          <tr class="dependent"><td></td><td>$label-background-color</td><td>バブル ラベルの背景の色</td></tr>
+          <tr class="dependent"><td></td><td>$label-text-color</td><td>バブル ラベルのテキストの色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$base-track-color</strong></summary></details></td>
+            <td>$base-track-hover-color</td>
+            <td>ホバー時の基本トラックの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$track-step-color</td><td>トラック ステップの色</td></tr>
+          <tr class="dependent"><td></td><td>$disabled-base-track-color</td><td>無効なトラックの基本の色</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="theme-table bootstrap">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>プライマリ プロパティ</th>
+            <th>依存プロパティ</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$thumb-color</strong></summary></details></td>
+            <td>$thumb-border-color</td>
+            <td>つまみの境界線の色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$thumb-focus-color</td><td>つまみのフォーカス色</td></tr>
+          <tr class="dependent"><td></td><td>$track-color</td><td>トラックの色</td></tr>
+          <tr class="dependent"><td></td><td>$label-background-color</td><td>バブル ラベルの背景の色</td></tr>
+          <tr class="dependent"><td></td><td>$label-text-color</td><td>バブル ラベルのテキストの色</td></tr>
+          <tr class="dependent"><td></td><td>$disabled-thumb-color</td><td>無効時のつまみの境界線の色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$track-color</strong></summary></details></td>
+            <td>$track-hover-color</td>
+            <td>ホバー時のトラックの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$disabled-fill-track-color</td><td>無効なトラックの塗りつぶしの色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$base-track-color</strong></summary></details></td>
+            <td>$base-track-hover-color</td>
+            <td>ホバー時の基本トラックの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$track-step-color</td><td>トラック ステップの色</td></tr>
+          <tr class="dependent"><td></td><td>$disabled-base-track-color</td><td>無効なトラックの基本の色</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="theme-table indigo">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>プライマリ プロパティ</th>
+            <th>依存プロパティ</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$thumb-border-color</strong></summary></details></td>
+            <td>$track-color</td>
+            <td>トラックの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$thumb-border-hover-color</td><td>ホバー時のつまみの境界線の色</td></tr>
+          <tr class="dependent"><td></td><td>$thumb-focus-color</td><td>つまみのフォーカス色</td></tr>
+          <tr class="dependent"><td></td><td>$thumb-disabled-border-color</td><td>無効なつまみの境界線の色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$track-color</strong></summary></details></td>
+            <td>$thumb-border-color</td>
+            <td>つまみの境界線の色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$track-hover-color</td><td>ホバー時のトラックの色</td></tr>
+          <tr class="dependent"><td></td><td>$disabled-fill-track-color</td><td>無効なトラックの基本の塗りつぶしの色</td></tr>
+          <tr class="dependent"><td></td><td>$label-background-color</td><td>バブル ラベルの背景の色</td></tr>
+          <tr class="dependent"><td></td><td>$label-text-color</td><td>バブル ラベルのテキストの色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$base-track-color</strong></summary></details></td>
+            <td>$base-track-hover-color</td>
+            <td>ホバー時の基本トラックの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$track-step-color</td><td>トラック ステップの色</td></tr>
+          <tr class="dependent"><td></td><td>$disabled-base-track-color</td><td>無効なトラックの基本の色</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
 スライダーをカスタマイズするには、すべてのスタイリング関数とミックスインが置かれている `index` ファイルをインポートする必要があります。
 
 ```scss
@@ -519,6 +698,43 @@ $custom-slider-theme: slider-theme(
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/interactions/slider-styling-sample/" >
 </code-view>
+
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して `slider` をスタイル設定できます。まず [Tailwind を設定して](../themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-slider`、`dark-slider`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは [IgxSlider テーマ]({environment:sassApiUrl}/themes#function-slider-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-slider
+class="!light-slider ![--thumb-color:#7B9E89]"
+>
+</igx-slider>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、slider は次のようになります:
+
+<div class="sample-container loading" style="height:100px">
+    <iframe id="slider-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-tailwind-styling-sample/' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ## API リファレンス
 <div class="divider--half"></div>
