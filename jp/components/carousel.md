@@ -408,52 +408,52 @@ Carousel [アニメーション](carousel.md#angular-carousel-のアニメーシ
           <tr class="primary">
             <td><details><summary><strong>$button-background</strong></summary></details></td>
             <td>$button-hover-background</td>
-            <td>ホバー時のボタンの背景色。</td>
+            <td>ホバー時のボタンの背景の色</td>
           </tr>
           <tr class="dependent"><td></td><td>$button-arrow-color</td><td>ボタン矢印の色</td></tr>
-          <tr class="dependent"><td></td><td>$button-disabled-background</td><td>無効状態のボタンの背景色。</td></tr>
-          <tr class="dependent"><td></td><td>$indicator-focus-color <br> ($indicator-background が指定されていない場合)</td><td>フォーカス時のインジケーターの色。</td></tr>
+          <tr class="dependent"><td></td><td>$button-disabled-background</td><td>無効状態のボタンの背景の色</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-focus-color <br> ($indicator-background が指定されていない場合)</td><td>フォーカス時のインジケーターの色</td></tr>
           <tr class="primary">
             <td><strong>$button-hover-background</strong></td>
             <td>$button-hover-arrow-color</td>
-            <td>ホバー時のボタン矢印の色。</td>
+            <td>ホバー時のボタン矢印の色</td>
           </tr>
           <tr class="primary">
             <td><strong>$button-disabled-background</strong></td>
             <td>$button-disabled-arrow-color</td>
-            <td>無効状態のボタン矢印の色。</td>
+            <td>無効状態のボタン矢印の色</td>
           </tr>
           <tr class="primary">
             <td><strong>$button-hover-arrow-color</strong></td>
             <td>$button-focus-arrow-color</td>
-            <td>フォーカス時のボタン矢印の色。</td>
+            <td>フォーカス時のボタン矢印の色</td>
           </tr>
           <tr class="primary">
             <td><strong>$button-focus-arrow-color</strong></td>
             <td>$button-focus-border-color</td>
-            <td>フォーカス時のボタンの境界線の色。</td>
+            <td>フォーカス時のボタンの境界線の色</td>
           </tr>
         </tbody>
         <tbody class="group">
           <tr class="primary">
             <td><details><summary><strong>$indicator-background</strong></summary></details></td>
             <td>$indicator-border-color</td>
-            <td>インジケーターの境界線の色。</td>
+            <td>インジケーターの境界線の色</td>
           </tr>
-          <tr class="dependent"><td></td><td>$indicator-active-dot-color</td><td>アクティブ時のインジケーターの点の色。</td></tr>
-          <tr class="dependent"><td></td><td>$indicator-focus-color</td><td>フォーカス時のインジケーターの色。</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-active-dot-color</td><td>アクティブ時のインジケーターの点の色</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-focus-color</td><td>フォーカス時のインジケーターの色</td></tr>
         </tbody>
         <tbody class="group">
           <tr class="primary">
             <td><details><summary><strong>$indicator-active-dot-color</strong></summary></details></td>
             <td>$indicator-active-hover-dot-color</td>
-            <td>アクティブかつホバー時のインジケーターの色。</td>
+            <td>アクティブかつホバー時のインジケーターの色</td>
           </tr>
-          <tr class="dependent"><td></td><td>$indicator-active-border-color</td><td>アクティブ時のインジケーターの境界線の色。</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-active-border-color</td><td>アクティブ時のインジケーターの境界線の色</td></tr>
           <tr class="primary">
             <td><strong>$indicator-dot-color</strong></td>
             <td>$indicator-hover-dot-color</td>
-            <td>ホバー時のインジケーターの点の色。</td>
+            <td>ホバー時のインジケーターの点の色</td>
           </tr>
         </tbody>
       </table>
@@ -472,48 +472,48 @@ Carousel [アニメーション](carousel.md#angular-carousel-のアニメーシ
           <tr class="primary">
             <td><details><summary><strong>$button-background</strong></summary></details></td>
             <td>$button-hover-background</td>
-            <td>ホバー時のボタンの背景色。</td>
+            <td>ホバー時のボタンの背景の色</td>
           </tr>
           <tr class="dependent"><td></td><td>$button-arrow-color</td><td>ボタン矢印の色</td></tr>
-          <tr class="dependent"><td></td><td>$button-disabled-background</td><td>無効状態のボタンの背景色。</td></tr>
-          <tr class="dependent"><td></td><td>$button-focus-border-color</td><td>フォーカス時のボタンの境界線の色。</td></tr>
-          <tr class="dependent"><td></td><td>$indicator-focus-color <br> ($indicator-background が指定されていない場合)</td><td>フォーカス時のインジケーターの色。</td></tr>
+          <tr class="dependent"><td></td><td>$button-disabled-background</td><td>無効状態のボタンの背景の色</td></tr>
+          <tr class="dependent"><td></td><td>$button-focus-border-color</td><td>フォーカス時のボタンの境界線の色</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-focus-color <br> ($indicator-background が指定されていない場合)</td><td>フォーカス時のインジケーターの色</td></tr>
           <tr class="primary">
             <td><strong>$button-hover-background</strong></td>
             <td>$button-hover-arrow-color</td>
-            <td>ホバー時のボタン矢印の色。</td>
+            <td>ホバー時のボタン矢印の色</td>
           </tr>
           <tr class="primary">
             <td><strong>$button-disabled-background</strong></td>
             <td>$button-disabled-arrow-color</td>
-            <td>無効状態のボタン矢印の色。</td>
+            <td>無効状態のボタン矢印の色</td>
           </tr>
           <tr class="primary">
             <td><strong>$button-hover-arrow-color</strong></td>
             <td>$button-focus-arrow-color</td>
-            <td>フォーカス時のボタン矢印の色。</td>
+            <td>フォーカス時のボタン矢印の色</td>
           </tr>
          </tbody>
         <tbody class="group">
           <tr class="primary">
             <td><details><summary><strong>$indicator-background</strong></summary></details></td>
             <td>$indicator-border-color</td>
-            <td>インジケーターの境界線の色。</td>
+            <td>インジケーターの境界線の色</td>
           </tr>
-          <tr class="dependent"><td></td><td>$indicator-active-dot-color</td><td>アクティブ時のインジケーターの点の色。</td></tr>
-          <tr class="dependent"><td></td><td>$indicator-focus-color</td><td>フォーカス時のインジケーターの色。</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-active-dot-color</td><td>アクティブ時のインジケーターの点の色</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-focus-color</td><td>フォーカス時のインジケーターの色</td></tr>
         </tbody>
         <tbody class="group">
           <tr class="primary">
             <td><details><summary><strong>$indicator-active-dot-color</strong></summary></details></td>
             <td>$indicator-active-hover-dot-color</td>
-            <td>アクティブかつホバー時のインジケーターの色。</td>
+            <td>アクティブかつホバー時のインジケーターの色</td>
           </tr>
-          <tr class="dependent"><td></td><td>$indicator-active-border-color</td><td>アクティブ時のインジケーターの境界線の色。</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-active-border-color</td><td>アクティブ時のインジケーターの境界線の色</td></tr>
           <tr class="primary">
             <td><strong>$indicator-dot-color</strong></td>
             <td>$indicator-hover-dot-color</td>
-            <td>ホバー時のインジケーターの点の色。</td>
+            <td>ホバー時のインジケーターの点の色</td>
           </tr>
         </tbody>
       </table>
@@ -532,48 +532,48 @@ Carousel [アニメーション](carousel.md#angular-carousel-のアニメーシ
           <tr class="primary">
             <td><details><summary><strong>$button-background</strong></summary></details></td>
             <td>$button-hover-background</td>
-            <td>ホバー時のボタンの背景色。</td>
+            <td>ホバー時のボタンの背景の色</td>
           </tr>
           <tr class="dependent"><td></td><td>$button-arrow-color</td><td>ボタン矢印の色</td></tr>
-          <tr class="dependent"><td></td><td>$button-disabled-background</td><td>無効状態のボタンの背景色。</td></tr>
-          <tr class="dependent"><td></td><td>$button-focus-border-color</td><td>フォーカス時のボタンの境界線の色。</td></tr>
-          <tr class="dependent"><td></td><td>$indicator-focus-color <br> ($indicator-background が指定されていない場合)</td><td>フォーカス時のインジケーターの色。</td></tr>
+          <tr class="dependent"><td></td><td>$button-disabled-background</td><td>無効状態のボタンの背景の色</td></tr>
+          <tr class="dependent"><td></td><td>$button-focus-border-color</td><td>フォーカス時のボタンの境界線の色</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-focus-color <br> ($indicator-background が指定されていない場合)</td><td>フォーカス時のインジケーターの色</td></tr>
           <tr class="primary">
             <td><strong>$button-hover-background</strong></td>
             <td>$button-hover-arrow-color</td>
-            <td>ホバー時のボタン矢印の色。</td>
+            <td>ホバー時のボタン矢印の色</td>
           </tr>
           <tr class="primary">
             <td><strong>$button-disabled-background</strong></td>
             <td>$button-disabled-arrow-color</td>
-            <td>無効状態のボタン矢印の色。</td>
+            <td>無効状態のボタン矢印の色</td>
           </tr>
           <tr class="primary">
             <td><strong>$button-hover-arrow-color</strong></td>
             <td>$button-focus-arrow-color</td>
-            <td>フォーカス時のボタン矢印の色。</td>
+            <td>フォーカス時のボタン矢印の色</td>
           </tr>
         </tbody>
         <tbody class="group">
           <tr class="primary">
             <td><details><summary><strong>$indicator-background</strong></summary></details></td>
             <td>$indicator-border-color</td>
-            <td>インジケーターの境界線の色。</td>
+            <td>インジケーターの境界線の色</td>
           </tr>
-          <tr class="dependent"><td></td><td>$indicator-active-dot-color</td><td>アクティブ時のインジケーターの点の色。</td></tr>
-          <tr class="dependent"><td></td><td>$indicator-focus-color</td><td>フォーカス時のインジケーターの色。</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-active-dot-color</td><td>アクティブ時のインジケーターの点の色</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-focus-color</td><td>フォーカス時のインジケーターの色</td></tr>
         </tbody>
         <tbody class="group">
           <tr class="primary">
             <td><details><summary><strong>$indicator-active-dot-color</strong></summary></details></td>
             <td>$indicator-active-hover-dot-color</td>
-            <td>アクティブかつホバー時のインジケーターの色。</td>
+            <td>アクティブかつホバー時のインジケーターの色</td>
           </tr>
-          <tr class="dependent"><td></td><td>$indicator-active-border-color</td><td>アクティブ時のインジケーターの境界線の色。</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-active-border-color</td><td>アクティブ時のインジケーターの境界線の色</td></tr>
           <tr class="primary">
             <td><strong>$indicator-dot-color</strong></td>
             <td>$indicator-hover-dot-color</td>
-            <td>ホバー時のインジケーターの点の色。</td>
+            <td>ホバー時のインジケーターの点の色</td>
           </tr>
         </tbody>
       </table>
@@ -592,61 +592,61 @@ Carousel [アニメーション](carousel.md#angular-carousel-のアニメーシ
           <tr class="primary">
             <td><details><summary><strong>$button-background</strong></summary></details></td>
             <td>$button-hover-background</td>
-            <td>ホバー時のボタンの背景色。</td>
+            <td>ホバー時のボタンの背景の色</td>
           </tr>
-          <tr class="dependent"><td></td><td>$button-border-color</td><td>ボタンの境界線の色。</td></tr>
+          <tr class="dependent"><td></td><td>$button-border-color</td><td>ボタンの境界線の色</td></tr>
           <tr class="dependent"><td></td><td>$button-arrow-color</td><td>ボタン矢印の色</td></tr>
-          <tr class="dependent"><td></td><td>$button-disabled-background</td><td>無効状態のボタンの背景色。</td></tr>
-          <tr class="dependent"><td></td><td>$indicator-active-dot-color <br> ($indicator-background が指定されていない場合)</td><td>アクティブ時のインジケーターの点の色。</td></tr>
+          <tr class="dependent"><td></td><td>$button-disabled-background</td><td>無効状態のボタンの背景の色</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-active-dot-color <br> ($indicator-background が指定されていない場合)</td><td>アクティブ時のインジケーターの点の色</td></tr>
           <tr class="primary">
             <td><strong>$button-hover-background</strong></td>
             <td>$button-hover-arrow-color</td>
-            <td>ホバー時のボタン矢印の色。</td>
+            <td>ホバー時のボタン矢印の色</td>
           </tr>
           <tr class="primary">
             <td><strong>$button-disabled-background</strong></td>
             <td>$button-disabled-arrow-color</td>
-            <td>無効状態のボタン矢印の色。</td>
+            <td>無効状態のボタン矢印の色</td>
           </tr>
           <tr class="primary">
             <td><strong>$button-border-color</strong></td>
             <td>$button-hover-border-color</td>
-            <td>ホバー時のボタンの境界線の色。</td>
+            <td>ホバー時のボタンの境界線の色</td>
           </tr>
           <tr class="primary">
             <td><strong>$button-hover-arrow-color</strong></td>
             <td>$button-focus-arrow-color</td>
-            <td>フォーカス時のボタン矢印の色。</td>
+            <td>フォーカス時のボタン矢印の色</td>
           </tr>
         </tbody>
         <tbody class="group">
           <tr class="primary">
             <td><details><summary><strong>$indicator-background</strong></summary></details></td>
             <td>$indicator-dot-color</td>
-            <td>インジケーターの点の色。</td>
+            <td>インジケーターの点の色</td>
           </tr>
-          <tr class="dependent"><td></td><td>$indicator-active-dot-color</td><td>アクティブ時のインジケーターの点の色。</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-active-dot-color</td><td>アクティブ時のインジケーターの点の色</td></tr>
         </tbody>
         <tbody class="group">
           <tr class="primary">
             <td><details><summary><strong>$indicator-dot-color</strong></summary></details></td>
             <td>$indicator-hover-dot-color</td>
-            <td>ホバー時のインジケーターの点の色。</td>
+            <td>ホバー時のインジケーターの点の色</td>
           </tr>
-          <tr class="dependent"><td></td><td>$indicator-border-color</td><td>インジケーターの境界線の色。</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-border-color</td><td>インジケーターの境界線の色</td></tr>
         </tbody>
         <tbody class="group">
           <tr class="primary">
             <td><details><summary><strong>$indicator-active-dot-color</strong></summary></details></td>
             <td>$indicator-active-hover-dot-color</td>
-            <td>アクティブかつホバー時のインジケーターの色。</td>
+            <td>アクティブかつホバー時のインジケーターの色</td>
           </tr>
-          <tr class="dependent"><td></td><td>$indicator-active-border-color</td><td>アクティブ時のインジケーターの境界線の色。</td></tr>
-          <tr class="dependent"><td></td><td>$button-focus-border-color</td><td>フォーカス時のボタンの境界線の色。</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-active-border-color</td><td>アクティブ時のインジケーターの境界線の色</td></tr>
+          <tr class="dependent"><td></td><td>$button-focus-border-color</td><td>フォーカス時のボタンの境界線の色</td></tr>
           <tr class="primary">
             <td><strong>$indicator-active-hover-dot-color</strong></td>
             <td>$indicator-focus-color</td>
-            <td>フォーカス時のインジケーターの色。</td>
+            <td>フォーカス時のインジケーターの色</td>
           </tr>
         </tbody>
       </table>
@@ -665,7 +665,7 @@ Carousel [アニメーション](carousel.md#angular-carousel-のアニメーシ
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[carousel-theme]({environment:sassApiUrl}/themes#function-carousel-theme) を拡張した新しいテーマを作成し、`$button-background` や `$indicator-background` などのいくつかの基本パラメーターを指定するだけで、テーマは適切な状態別カラーとコントラストのある前景色を自動生成します。外観をさらに調整したい場合は、他の任意のパラメーターをオーバーライドすることも可能です。
+最もシンプルな方法として、[carousel-theme]({environment:sassApiUrl}/themes#function-carousel-theme) を拡張した新しいテーマを作成し、`$button-background` や `$indicator-background` などのいくつかの基本パラメーターを指定するだけで、テーマは適切な状態別カラーとコントラストのある前景の色を自動生成します。外観をさらに調整したい場合は、他の任意のパラメーターをオーバーライドすることも可能です。
 
 ```scss
 $carousel-theme: carousel-theme(

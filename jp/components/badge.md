@@ -183,7 +183,7 @@ export class AppModule {}
 ```
 
 >[!NOTE]
->[`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) には、バッジの外観を構成するための [`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) および [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) 入力があります。公式の[マテリアル アイコン セット](https://material.io/icons/)から名前を指定して、アイコンを設定できます。バッジタイプは、[`default`]({environment:angularApiUrl}/enums/type.html#default)、[`info`]({environment:angularApiUrl}/enums/type.html#info)、[`success`]({environment:angularApiUrl}/enums/type.html#success)、[`warning`]({environment:angularApiUrl}/enums/type.html#warning)、または [`error`]({environment:angularApiUrl}/enums/type.html#error) のいずれかに設定できます。その型により、特定の背景色が適用されます。
+>[`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) には、バッジの外観を構成するための [`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) および [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) 入力があります。公式の[マテリアル アイコン セット](https://material.io/icons/)から名前を指定して、アイコンを設定できます。バッジタイプは、[`default`]({environment:angularApiUrl}/enums/type.html#default)、[`info`]({environment:angularApiUrl}/enums/type.html#info)、[`success`]({environment:angularApiUrl}/enums/type.html#success)、[`warning`]({environment:angularApiUrl}/enums/type.html#warning)、または [`error`]({environment:angularApiUrl}/enums/type.html#error) のいずれかに設定できます。その型により、特定の背景の色が適用されます。
 
 サンプルでは、[`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) と [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) が icon と type という名前のモデルプロパティにバインドされています。
 
@@ -290,6 +290,32 @@ class Member {
 
 ## スタイル設定
 
+### Badge テーマのプロパティ マップ
+
+`$background-color` プロパティを変更すると、次の依存プロパティが自動的に更新されます。
+
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>プライマリ プロパティ</th>
+      <th>依存プロパティ</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+      <td><strong>$background-color</strong></td>
+      <td>$icon-color</td>
+      <td>バッジ内のアイコンの色</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>$text-color</td>
+      <td>バッジ内のテキストの色</td>
+    </tr>
+  </tbody>
+</table>
+
 Badge のスタイル設定は、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
@@ -299,7 +325,7 @@ Badge のスタイル設定は、すべてのテーマ関数とコンポーネ�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`badge-theme`]({environment:sassApiUrl}/themes#function-badge-theme) を拡張する新しいテーマを作成し、バッジの項目をスタイル設定するいくつかのパラメーターを受け取る方法です。`$background-color` を設定すると、`$icon-color` と `$text-color` は、背景色とのコントラストが高い黒または白に自動的に割り当てられます。なお、`$border-radius` プロパティはバッジの `shape` が `square` に設定されている場合のみ適用されます。
+最も簡単な方法は、[`badge-theme`]({environment:sassApiUrl}/themes#function-badge-theme) を拡張する新しいテーマを作成し、バッジの項目をスタイル設定するいくつかのパラメーターを受け取る方法です。`$background-color` を設定すると、`$icon-color` と `$text-color` は、背景の色とのコントラストが高い黒または白に自動的に割り当てられます。なお、`$border-radius` プロパティはバッジの `shape` が `square` に設定されている場合のみ適用されます。
 
 ```scss
 $custom-badge-theme: badge-theme(
@@ -322,6 +348,41 @@ $custom-badge-theme: badge-theme(
            iframe-src="{environment:demosBaseUrl}/data-display/badge-styling-sample/" >
 </code-view>
 
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して `badge` をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-badge`、`dark-badge`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[badge-theme]({environment:sassApiUrl}/themes#function-badge-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-badge
+class="!light-badge ![--background:#FF4E00] ![--border-radius:4px]">
+</igx-badge>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、badge は次のようになります:
+
+<div class="sample-container loading" style="height:340px">
+    <iframe id="badge-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/data-display/badge-tailwind-styling-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ## API リファレンス
 <div class="divider--half"></div>

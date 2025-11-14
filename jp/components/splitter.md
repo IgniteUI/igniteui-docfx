@@ -210,6 +210,30 @@ public typeVertical = SplitterType.Vertical;
 - `Ctrl + 右矢印` - 水平スプリッターでペインを展開/縮小
 
 ## スタイル設定
+
+### Splitter テーマのプロパティ マップ
+
+プライマリ プロパティを変更すると、関連するすべての依存プロパティが自動的に更新され、変更が反映されます。
+
+<table>
+    <thead>
+      <tr>
+        <th>プライマリ プロパティ</th>
+        <th>依存プロパティ</th>
+        <th>説明</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="primary">
+        <td><strong>$bar-color</strong></td>
+        <td>$handle-color</td>
+        <td>バーのドラッグ ハンドルの色</td>
+      </tr>
+      <tr class="dependent"><td></td><td>$expander-color</td><td>矢印拡張の色</td></tr>
+      <tr class="dependent"><td></td><td>$focus-color</td><td>フォーカス時のスプリッター バーの色</td></tr>
+    </tbody>
+</table>
+
 **igxSplitter** コンポーネントのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
@@ -249,6 +273,37 @@ $splitter-theme: splitter-theme(
            iframe-src="{environment:demosBaseUrl}/layouts/splitter-styling-sample/" >
 </code-view>
 
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して splitter をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-splitter`、`dark-splitter`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[splitter-theme]({environment:sassApiUrl}/themes#function-splitter-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-splitter
+  class="!light-splitter ![--bar-color:#7B9E89]">
+  ...
+</igx-splitter>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
 ### カスタム サイズ変更
 
 `igx-splitter` を直接ターゲットとして `--size` 変数を使用することができます。
@@ -266,12 +321,12 @@ igx-splitter {
   <igx-splitter></igx-splitter>
 </div>
 ```
+
 ```scss
 .my-app {
   --igx-splitter-size: 10px;
 }
 ```
-
 
 ## API リファレンス
 <div class="divider--half"></div>

@@ -252,6 +252,39 @@ params: {
 
 ## スタイル設定
 
+### Dialog テーマのプロパティ マップ
+
+`$background` プロパティを変更すると、次の依存プロパティが自動的に更新されます。
+
+<table class="collapsible-table">
+    <thead>
+        <tr>
+        <th>プライマリ プロパティ</th>
+        <th>依存プロパティ</th>
+        <th>説明</th>
+        </tr>
+    </thead>
+    <tbody class="group">
+        <tr class="primary">
+        <td>
+            <details><summary><strong>$background</strong></summary></details>
+        </td>
+        <td>$title-color</td>
+        <td>ダイアログ タイトル テキストの色</td>
+        </tr>
+        <tr class="dependent">
+        <td></td>
+        <td>$message-color</td>
+        <td>ダイアログ メッセージ テキストの色</td>
+        </tr>
+        <tr class="dependent">
+        <td></td>
+        <td>$border-color</td>
+        <td>ダイアログ コンポーネントに使用される境界線の色</td>
+        </tr>
+    </tbody>
+</table>
+
 ダイアログ ウィンドウのスタイル設定は、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをはじめにインポートする必要があります。
 
 ```scss

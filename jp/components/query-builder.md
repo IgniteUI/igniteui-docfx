@@ -270,6 +270,33 @@ this.ordersFields = [
 
 ## スタイル設定
 
+### Query Builder テーマのプロパティ マップ
+
+プライマリ プロパティを変更すると、関連するすべての依存プロパティが自動的に更新され、変更が反映されます。
+
+<table class="collapsible-table">
+    <thead>
+      <tr>
+        <th>プライマリ プロパティ</th>
+        <th>依存プロパティ</th>
+        <th>説明</th>
+      </tr>
+    </thead>
+    <tbody class="group">
+      <tr class="primary">
+        <td><details><summary><strong>$background</strong></summary></details></td>
+        <td>$label-foreground</td>
+        <td>クエリ ビルダーのラベル 「from」 と 「select」 の色</td>
+      </tr>
+      <tr class="dependent"><td></td><td>$header-background</td><td>クエリ ビルダー ヘッダーの背景の色</td></tr>
+      <tr class="dependent"><td></td><td>$header-foreground</td><td>クエリ ビルダー ヘッダーの前景の色</td></tr>
+      <tr class="dependent"><td></td><td>$subquery-header-background</td><td>サブクエリ ヘッダーの背景の色</td></tr>
+      <tr class="dependent"><td></td><td>$subquery-border-color</td><td>クエリ ブロックの境界線の色</td></tr>
+      <tr class="dependent"><td></td><td>$separator-color</td><td>クエリ ブロックのセパレーターの色</td></tr>
+      <tr class="dependent"><td></td><td>$header-border (Bootstrap のみ)</td><td>クエリ ビルダーの、ヘッダーの境界線の色</td></tr>
+    </tbody>
+</table>
+
 クエリ ビルダーのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
@@ -279,7 +306,7 @@ this.ordersFields = [
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-クエリ ビルダーは、`background` パラメーターを使用して、そのテーマから背景色を取得します。背景を変更するには、カスタム テーマを作成する必要があります。
+クエリ ビルダーは、`background` パラメーターを使用して、そのテーマから背景の色を取得します。背景を変更するには、カスタム テーマを作成する必要があります。
 
 ```scss
 
@@ -290,7 +317,7 @@ $custom-query-builder: query-builder-theme(
 );
 ```
 
-Query Builder 内には、ボタン、チップ、ドロップダウン、入力など、他のコンポーネントがあるため、それぞれに個別のテーマを作成する必要があります。
+クエリ ビルダー内には、ボタン、チップ、ドロップダウン、入力など、他のコンポーネントがあるため、それぞれに個別のテーマを作成する必要があります。
 
 ```scss
 $custom-button: flat-button-theme(
@@ -352,6 +379,43 @@ $custom-icon-button: outlined-icon-button-theme(
 > サンプルは、`Change Theme` (テーマの変更) で選択したグローバル テーマの影響を受けません。
 
 <div class="divider--half"></div>
+
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して、query builder のスタイルを設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-query-builder`、`dark-query-builder`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[query-builder-theme]({environment:sassApiUrl}/themes#function-query-builder-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-query-builder
+  class="!light-query-builder ![--background:#90B69F]">
+  ...
+</igx-query-builder>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、query builder は次のようになります:
+
+<div class="sample-container loading" style="height:500px">
+    <iframe id="query-builder-tailwind-style-iframe" data-src='{environment:demosBaseUrl}/interactions/query-builder-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 [WYSIWYG App Builder™](https://jp.infragistics.com/products/appbuilder) と実際の UI コンポーネントを使用して、Angular アプリ開発を効率化することもできます。
 
