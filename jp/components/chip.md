@@ -482,7 +482,23 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
 
 ## スタイル設定
 
-チップのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントのミックスインが存在する `index` ファイルをインポートする必要があります。
+最も簡単な方法は、CSS 変数を使用してチップの外観をカスタマイズする方法です。
+
+```css
+igx-chip {
+    --background: #cd201f;
+    --hover-background: #cd201f;
+    --focus-background: #9f1717;
+    --text-color: #fff;
+}
+```
+これらの CSS 変数の値を変更することで、チップ コンポーネントの全体的な外観を変更できます。
+
+<div class="divider--half"></div>
+
+チップにスタイルを設定する別の方法は、**Sass** と [`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme) 関数を使用することです。
+
+**Sass** を使用してチップのスタイル設定を開始するには、まずすべてのテーマ関数とコンポーネント ミックスインを含む `index` ファイルをインポートします。
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -494,21 +510,21 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
 最もシンプルな方法として、[`chip-theme`]({environment:sassApiUrl}/themes#function-chip-theme) を拡張して新しいテーマを作成し、チップの項目をスタイリングします。`$background` または `$selected-background` を指定することで、状態に応じた色や前景色が自動的に計算されます。必要に応じて、他のパラメーターをカスタム値でオーバーライドすることもできます。
 
 ```scss
-$custom-theme: chip-theme(
-  $background: #57a5cd,
-  $selected-background: #ecaa53,
-  $remove-icon-color: #d81414,
-  $border-radius: 5px,
+$custom-chip-theme: chip-theme(
+    $background: #57a5cd,
+    $selected-background: #ecaa53,
+    $remove-icon-color: #d81414,
+    $border-radius: 5px,
 );
 ```
 
-最後にコンポーネントのテーマをアプリケーションに**含めます**。
+最後に、カスタム テーマをアプリケーションに**含めます**。
 
 ```scss
-@include css-vars($custom-theme);
+@include css-vars($custom-chip-theme);
 ```
 
-### デモ
+以下のサンプルでは、カスタマイズした CSS 変数を使用したチップ コンポーネントが、[`Ant`](https://ant.design/components/tag?theme=light#tag-demo-icon) デザイン システムのチップに視覚的に似たデザインを実現している様子を確認できます。 
 
 <code-view style="height:100px" 
            no-theming
