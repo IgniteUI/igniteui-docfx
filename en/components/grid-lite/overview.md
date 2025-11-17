@@ -24,7 +24,7 @@ Angular <a href="https://custom-elements-everywhere.com/#angular" target="_blank
 To add Grid Lite to your Angular application, install the package from npm.
 
 ```shell
-npm install igc-grid-lite
+npm install igniteui-grid-lite
 ```
 
 ## Configuration
@@ -35,7 +35,7 @@ Before starting the application, make sure to import and pass the custom element
 // app.component.ts
 
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { IgcGridLite, ColumnConfiguration } from 'igc-grid-lite';
+import { IgcGridLite, ColumnConfiguration } from 'igniteui-grid-lite';
 
 IgcGridLite.register();
 

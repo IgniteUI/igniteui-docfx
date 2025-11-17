@@ -40,7 +40,7 @@ In the sample below, you can preview all the default base themes.
 
 ## Creating custom themes
 
-Aside from the default themes shipped with the `igc-grid-lite` package, you can also create and modify your own to match your project identity and branding.
+Aside from the default themes shipped with the `igniteui-grid-lite` package, you can also create and modify your own to match your project identity and branding.
 
 ---
 
@@ -100,4 +100,4 @@ Here is an example showcasing the custom theming from above.
 
 Our community is active and always welcoming to new ideas.
 
-* [Grid Lite  **GitHub**](https://github.com/IgniteUI/igc-grid-lite)
+* [Grid Lite  **GitHub**](https://github.com/IgniteUI/igniteui-grid-lite)

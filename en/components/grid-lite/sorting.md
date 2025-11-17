@@ -177,7 +177,7 @@ For example here is a Lit-based sample:
   ];
 
   render() {
-    return html`<igc=grid-lite .sortExpressions=${sortState}></igc-grid-lite>`
+    return html`<igc-grid-lite .sortExpressions=${sortState}></igc-grid-lite>`
   }
 }
 ```
@@ -272,4 +272,4 @@ The following example mocks remote sorting operation, reflecting the REST endpoi
 
 Our community is active and always welcoming to new ideas.
 
-* [Grid Lite  **GitHub**](https://github.com/IgniteUI/igc-grid-lite)
+* [Grid Lite  **GitHub**](https://github.com/IgniteUI/igniteui-grid-lite)
