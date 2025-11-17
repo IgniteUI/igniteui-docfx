@@ -781,7 +781,7 @@ The last step is to include the newly created theme:
 @include css-vars($custom-input-group);
 ```
 
-### Demo
+In the sample below, you can see how using the input group with customized CSS variables allows you to create a design that visually resembles the one used in the [`Carbon`](https://carbondesignsystem.com/components/text-input/usage/#live-demo) design system.
 
 <code-view style="height:230px"
            no-theming
@@ -789,6 +789,8 @@ The last step is to include the newly created theme:
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-style/" >
 </code-view>
 
+>[!NOTE]
+>The sample uses the [Indigo Light](themes/sass/schemas.md#predefined-schemas) schema.
 >[!NOTE]
 >If your page includes multiple types of input groups — such as `box`, `border`, `line`, or `search` — it's best to scope your theme variables to the specific input group type.
 <br>For example:<br>

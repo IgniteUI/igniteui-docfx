@@ -612,21 +612,21 @@ To get started with styling the chip, we need to import the `index` file, where 
 Following the simplest approach, we create a new theme that extends the [`chip-theme`]({environment:sassApiUrl}/themes#function-chip-theme) and accepts some parameters that style the chip's items. By specifying the `$background` or the `$selected-background`, the theme automatically calculates appropriate state colors and contrast foregrounds. You can still override any other parameter with custom values as needed.
 
 ```scss
-$custom-theme: chip-theme(
-  $background: #57a5cd,
-  $selected-background: #ecaa53,
-  $remove-icon-color: #d81414,
-  $border-radius: 5px,
+$custom-chip-theme: chip-theme(
+    $background: #57a5cd,
+    $selected-background: #ecaa53,
+    $remove-icon-color: #d81414,
+    $border-radius: 5px,
 );
 ```
 
-The last step is to **include** the component theme in our application.
+Finally, **include** the custom theme in your application:
 
 ```scss
-@include css-vars($custom-theme);
+@include css-vars($custom-chip-theme);
 ```
 
-### Demo
+In the sample below, you can see how using the chip component with customized CSS variables allows you to create a design that visually resembles the chip used in the [`Ant`](https://ant.design/components/tag?theme=light#tag-demo-icon) design system.
 
 <code-view style="height:100px"
            no-theming

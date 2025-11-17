@@ -207,12 +207,12 @@ Following the simplest approach, we create a new theme that extends the [`radio-
 
 ```scss
 $custom-radio-theme: radio-theme(
-  $empty-color:  #345779,
-  $fill-color: #2dabe8,
+    $empty-color:  #345779,
+    $fill-color: #2dabe8,
 );
 ```
 
-The last step is to pass the custom radio theme in our application:
+Finally, **include** the custom theme in your application:
 
 ```scss
 @include css-vars($custom-radio-theme);
@@ -222,6 +222,9 @@ The last step is to pass the custom radio theme in our application:
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-styling-sample/" >
 </code-view>
+
+> [!NOTE]
+> The sample uses the [Fluent Light](themes/sass/schemas.md#predefined-schemas) schema.
 
 <div class="divider--half"></div>
 
