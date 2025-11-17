@@ -621,13 +621,13 @@ $custom-theme: chip-theme(
 );
 ```
 
-最後にコンポーネントのテーマをアプリケーションに**含めます**。
+最後に、カスタム テーマをアプリケーションに**含めます**。
 
 ```scss
-@include css-vars($custom-theme);
+@include css-vars($custom-chip-theme);
 ```
 
-### デモ
+以下のサンプルでは、カスタマイズした CSS 変数を使用したチップ コンポーネントが、[`Ant`](https://ant.design/components/tag?theme=light#tag-demo-icon) デザイン システムのチップに視覚的に似たデザインを実現している様子を確認できます。 
 
 <code-view style="height:100px" 
            no-theming

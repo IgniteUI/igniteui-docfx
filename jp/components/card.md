@@ -389,13 +389,12 @@ $colorful-card: card-theme(
 最後にコンポーネントのテーマをアプリケーションに**含めます**。
 
 ```scss
-@include css-vars($colorful-card);
+@include css-vars($custom-card-theme);
 ```
 
 ### Angular Card デモ
 
-
-<code-view style="height: 486px" 
+<code-view style="height: 400px"  
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/card-styling-sample/" >

@@ -1424,27 +1424,27 @@ Given the following markup:
 </div>
 ```
 
-We need to create a theme:
+We need to create the following theme:
 
 ```scss
 $custom-button-theme: button-theme(
-  $foreground: #fdfdfd,
-  $hover-foreground: #fdfdfd,
-  $focus-foreground: #fdfdfd,
-  $background: #345779,
-  $hover-background: #2e4d6b,
-  $focus-background: #2e4d6b,
-  $disabled-foreground: #2e4d6b,
+    $foreground: #fdfdfd,
+    $hover-foreground: #fdfdfd,
+    $focus-foreground: #fdfdfd,
+    $background: #345779,
+    $hover-background: #2e4d6b,
+    $focus-background: #2e4d6b,
+    $disabled-foreground: #2e4d6b,
 );
 ```
 
 Take a look at the [`button-theme`]({environment:sassApiUrl}/themes#function-button-theme) section for a complete list of available parameters for styling any type of button.
 
-The last step is to pass the custom button theme in our application:
+Finally, **include** the custom theme in your application:
 
 ```scss
 .button-sample {
-  @include css-vars($custom-button-theme);
+    @include css-vars($custom-button-theme);
 }
 ```
 
@@ -1466,7 +1466,7 @@ If you want to style only the `contained` button, you can use the [`contained-bu
 
 ```scss
 $custom-contained-theme: contained-button-theme(
-  $background: #348ae0,
+    $background: #348ae0,
 );
 ```
 
@@ -1474,9 +1474,9 @@ With the new type-specific theme functions, styling buttons is now easier. For [
 
 For [`flat-button-theme`]({environment:sassApiUrl}/themes#function-flat-button-theme) and [`outlined-button-theme`]({environment:sassApiUrl}/themes#function-outlined-button-theme) functions, the button state colors are also automatically generated and applied, but they are derived from the supplied `$foreground` parameter instead of `$background`.
 
-### Demo
+In the sample below, you can see how using the button component with customized CSS variables allows you to create a design that visually resembles the button used in the [`Ant`](https://ant.design/components/button?theme=light#button-demo-color-variant) design system. 
 
-<code-view style="height: 100px"
+<code-view style="height: 260px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/buttons-style/" >

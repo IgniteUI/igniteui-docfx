@@ -779,13 +779,16 @@ $custom-input-group: input-group-theme(
 @include css-vars($custom-input-group);
 ```
 
-### デモ
+以下のサンプルでは、カスタマイズした CSS 変数を使用した入力グループが、[`Carbon`](https://carbondesignsystem.com/components/text-input/usage/#live-demo) デザイン システムの入力グループに視覚的に似たデザインを実現している様子を確認できます。
 
 <code-view style="height:230px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-style/" >
 </code-view>
+
+> [!NOTE]
+> サンプルでは、[Indigo Light](themes/sass/schemas.md#predefined-schemas) スキーマを使用します。
 
 >[!NOTE]
 >ページ内に `box`、`border`、`line`、`search` といった複数のタイプの input-group が存在する場合は、特定のタイプごとにテーマ変数のスコープを設定するのが最適です。

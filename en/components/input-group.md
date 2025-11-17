@@ -767,7 +767,7 @@ To customize the appearance of input groups, you can create a new theme by exten
 Even by specifying just a few core parameters—like colors for the border or background—you'll get a fully styled input group with consistent state-based styles (hover, focus, etc.) applied for you.
 
 Here’s a simple example:
-
+ 
 ```scss
 $custom-input-group: input-group-theme(
     $box-background: #57a5cd,
@@ -781,13 +781,16 @@ The last step is to include the newly created theme:
 @include css-vars($custom-input-group);
 ```
 
-### Demo
+In the sample below, you can see how using the input group with customized CSS variables allows you to create a design that visually resembles the one used in the [`Carbon`](https://carbondesignsystem.com/components/text-input/usage/#live-demo) design system. 
 
 <code-view style="height:230px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-style/" >
 </code-view>
+
+> [!NOTE]
+> The sample uses the [Indigo Light](themes/sass/schemas.md#predefined-schemas) schema.
 
 >[!NOTE]
 >If your page includes multiple types of input groups — such as `box`, `border`, `line`, or `search` — it's best to scope your theme variables to the specific input group type.
