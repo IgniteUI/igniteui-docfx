@@ -343,7 +343,7 @@ $custom-checkbox-theme: checkbox-theme(
 @include css-vars($custom-checkbox-theme);
 ```
 
-### デモ
+以下のサンプルでは、カスタマイズした CSS 変数を使用したチェックボックス コンポーネントが、[`SAP UI5`](https://ui5.sap.com/#/entity/sap.m.CheckBox/sample/sap.m.sample.CheckBox) デザイン システムのチェックボックスに視覚的に似たデザインを実現している様子を確認できます。
 
 <code-view style="height: 100px"
            no-theming
@@ -394,6 +394,7 @@ class="!light-checkbox
 <div class="divider--half"></div>
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
@@ -401,9 +402,11 @@ class="!light-checkbox
 * [LabelPosition]({environment:angularApiUrl}/enums/labelposition.html)
 
 ## テーマの依存関係
+
 * [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-riple-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。

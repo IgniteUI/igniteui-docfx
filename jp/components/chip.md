@@ -613,7 +613,7 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
 最もシンプルな方法として、[`chip-theme`]({environment:sassApiUrl}/themes#function-chip-theme) を拡張して新しいテーマを作成し、チップの項目をスタイリングします。`$background` または `$selected-background` を指定することで、状態に応じた色や前景の色が自動的に計算されます。必要に応じて、他のパラメーターをカスタム値でオーバーライドすることもできます。
 
 ```scss
-$custom-theme: chip-theme(
+$custom-chip-theme: chip-theme(
     $background: #57a5cd,
     $selected-background: #ecaa53,
     $remove-icon-color: #d81414,
@@ -648,6 +648,7 @@ $custom-theme: chip-theme(
 ```
 
 ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
 - `light-*` クラスはライト テーマ用です。
 - `dark-*` クラスはダーク テーマ用です。
 - プレフィックスの後にコンポーネント名を追加します (例: `light-chip`、`dark-chip`)。

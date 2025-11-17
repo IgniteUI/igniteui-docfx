@@ -274,6 +274,7 @@ constructor(fb: FormBuilder) {
     });
 }
 ```
+
 ```html
 <form [formGroup]="registrationForm">
     <igx-input-group>
@@ -308,6 +309,7 @@ public get password() {
     return this.registrationForm.get('password');
 }
 ```
+
 ```html
 <form [formGroup]="registrationForm">
     ...
@@ -813,6 +815,7 @@ search 入力をターゲットにする場合は `.igx-input-group--search` を
 ```
 
 ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
 - `light-*` クラスはライト テーマ用です。
 - `dark-*` クラスはダーク テーマ用です。
 - プレフィックスの後にコンポーネント名を追加します (例: `light-input-group`、`dark-input-group`)。
@@ -853,6 +856,7 @@ search 入力をターゲットにする場合は `.igx-input-group--search` を
 </div>
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
@@ -862,6 +866,7 @@ search 入力をターゲットにする場合は `.igx-input-group--search` を
 * [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/themes#function-input-group-theme)
 
 ## テーマの依存関係
+
 * [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
 * [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
 

@@ -219,8 +219,6 @@ $custom-radio-theme: radio-theme(
 @include css-vars($custom-radio-theme);
 ```
 
-以下のサンプルでは、カスタマイズした CSS 変数を使用したラジオ ボタンが、[`SAP UI5`](https://ui5.sap.com/#/entity/sap.m.RadioButton/sample/sap.m.sample.RadioButton) デザイン システムのラジオ ボタンに視覚的に似たデザインを実現している様子を確認できます。 
-
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-styling-sample/" >
