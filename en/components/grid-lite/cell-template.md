@@ -142,4 +142,4 @@ export interface GridLiteCellContext<
 
 Our community is active and always welcoming to new ideas.
 
-* [Grid Lite  **GitHub**](https://github.com/IgniteUI/igniteui-grid-lite-lite)
+* [Grid Lite  **GitHub**](https://github.com/IgniteUI/igniteui-grid-lite)
