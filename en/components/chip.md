@@ -626,7 +626,7 @@ Finally, **include** the custom theme in your application:
 @include css-vars($custom-chip-theme);
 ```
 
-In the sample below, you can see how using the chip component with customized CSS variables allows you to create a design that visually resembles the chip used in the [`Ant`](https://ant.design/components/tag?theme=light#tag-demo-icon) design system. 
+In the sample below, you can see how using the chip component with customized CSS variables allows you to create a design that visually resembles the chip used in the [`Ant`](https://ant.design/components/tag?theme=light#tag-demo-icon) design system.
 
 <code-view style="height:100px"
            no-theming

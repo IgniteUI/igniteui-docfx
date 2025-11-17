@@ -345,7 +345,7 @@ Finally, **include** the custom theme in your application:
 @include css-vars($custom-checkbox-theme);
 ```
 
-In the sample below, you can see how using the checkbox component with customized CSS variables allows you to create a design that visually resembles the checkbox used in the [`SAP UI5`](https://ui5.sap.com/#/entity/sap.m.CheckBox/sample/sap.m.sample.CheckBox) design system. 
+In the sample below, you can see how using the checkbox component with customized CSS variables allows you to create a design that visually resembles the checkbox used in the [`SAP UI5`](https://ui5.sap.com/#/entity/sap.m.CheckBox/sample/sap.m.sample.CheckBox) design system.
 
 <code-view style="height: 100px"
            no-theming

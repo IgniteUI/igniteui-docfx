@@ -398,7 +398,7 @@ Finally, **include** the custom theme in your application:
 @include css-vars($custom-card-theme);
 ```
 
-In the sample below, you can see how using the card component with customized CSS variables allows you to create a design that visually resembles the card used in the [`Ant`](https://ant.design/components/card?theme=light#card-demo-meta) design system. 
+In the sample below, you can see how using the card component with customized CSS variables allows you to create a design that visually resembles the card used in the [`Ant`](https://ant.design/components/card?theme=light#card-demo-meta) design system.
 
 
 <code-view style="height: 486px"
