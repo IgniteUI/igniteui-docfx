@@ -789,9 +789,8 @@ In the sample below, you can see how using the input group with customized CSS v
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-style/" >
 </code-view>
 
-> [!NOTE]
-> The sample uses the [Indigo Light](themes/sass/schemas.md#predefined-schemas) schema.
-
+>[!NOTE]
+>The sample uses the [Indigo Light](themes/sass/schemas.md#predefined-schemas) schema.
 >[!NOTE]
 >If your page includes multiple types of input groups — such as `box`, `border`, `line`, or `search` — it's best to scope your theme variables to the specific input group type.
 <br>For example:<br>
