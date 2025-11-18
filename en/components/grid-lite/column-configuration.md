@@ -10,8 +10,6 @@ namespace: Infragistics.Controls
 
 The columns are defined with the **`columns`** property which has the type **`ColumnConfiguration<T>[]`**. **`key`** is the only required property for the **`ColumnConfiguration<T>`** as the column identifier. It is also the property that is used to map and render the relevant data in the grid rows.
 
-
-
 ```typescript
 const accountColumn: ColumnConfiguration<T> = {
   key: 'account',
@@ -21,16 +19,12 @@ const accountColumn: ColumnConfiguration<T> = {
 };
 ```
 
-
-
 >[!NOTE]
 >As a rule of thumb, the **column** prop should keep the same reference between renders. The columns are designed to be definitions and to rarely change once the grid is mounted, unless explicitly requested. Otherwise, you take the risk of losing state such as width, renderers, etc. and additional render cycles which may lead to performance degradation. Depending on the technology stack which you use, you can create the array outside the appropriate render function/mechanism or memoize it.
 
 ## Configuration based on the data source
 
 The grid supports inferring the column configuration based on the provided data source. It tries to infer the appropriate **`key`** and **`type`** props based on records in the data.
-
-
 
 ```typescript
 const data: Record[] = [
@@ -43,11 +37,7 @@ const data: Record[] = [
 <igc-grid-lite auto-generate .data=${data}></igc-grid-lite>
 ```
 
-
-
 The previous snippet will result in the following column configuration for the grid:
-
-
 
 ```typescript
 [
@@ -56,8 +46,6 @@ The previous snippet will result in the following column configuration for the g
   { key: 'ts', type: 'number' },
 ];
 ```
-
-
 
 Useful for a quick render of some data without any additional customizations.
 
@@ -76,8 +64,6 @@ in the grid width.
 
 To change the width of column, use the **`width`** property of the **`ColumnConfiguration`** object.
 
-
-
 ```typescript
 {
   ...
@@ -85,15 +71,11 @@ To change the width of column, use the **`width`** property of the **`ColumnConf
 }
 ```
 
-
-
 The property accepts <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numbers_lengths_and_percentages" target="_blank">valid CSS length units</a>.
 
 ### Hiding columns
 
 Columns can be hidden/shown by setting the **hidden** property to of the column configuration object.
-
-
 
 ```typescript
 {
@@ -102,13 +84,9 @@ Columns can be hidden/shown by setting the **hidden** property to of the column 
 }
 ```
 
-
-
 ### Column resize
 
 Each column of the Grid Lite component can be configured to be resizable by setting the **`resizable`** property in the column definition.
-
-
 
 ```typescript
 {
@@ -116,8 +94,6 @@ Each column of the Grid Lite component can be configured to be resizable by sett
   resizable: true
 }
 ```
-
-
 
 If a column is set to be resizable, you can drag the right size of the column header to either increase/decrease  the column width. Double-clicking on the resize area will trigger auto-sizing of the column where it will try set its width according to the largest content of its cells/header.
 
@@ -140,11 +116,11 @@ In the sample below you can try out the different column properties and how they
 
 ## Additional Resources
 
-* [Data Binding](binding.md)
-* [Sorting](sorting.md)
-* [Filtering](filtering.md)
-* [Theming & Styling](theming.md)
+- [Data Binding](binding.md)
+- [Sorting](sorting.md)
+- [Filtering](filtering.md)
+- [Theming & Styling](theming.md)
 
 Our community is active and always welcoming to new ideas.
 
-* [Grid Lite  **GitHub**](https://github.com/IgniteUI/igniteui-grid-lite)
+- [Grid Lite  **GitHub**](https://github.com/IgniteUI/igniteui-grid-lite)

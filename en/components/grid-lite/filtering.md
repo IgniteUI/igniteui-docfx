@@ -107,8 +107,6 @@ grid.clearFilter();
 
 The **`filterExpressions`** property is very similar in behavior to the **`filter()`** method call. It exposes a declarative way to control filter state in the grid, but the most useful property is the ability to set initial filter state when the Grid Lite component is first rendered.
 
-
-
 For example here is a Lit-based sample:
 
 ```typescript
@@ -125,11 +123,7 @@ For example here is a Lit-based sample:
 }
 ```
 
-
-
 It can be used to get the current filter state of the component and do additional processing depending on another state in your application.
-
-
 
 ```typescript
 const state = grid.filterExpressions;
@@ -137,14 +131,11 @@ const state = grid.filterExpressions;
 saveUserFilterState(state);
 ```
 
-
-
 ## Events
 
 When a filter operation is performed through the UI, the component emits a custom **`filtering`** event. The **`detail`** property is the sort expression which will be applied by the Grid Lite. The event is cancellable and if cancelled will prevent the current filter operation.
 
 After the grid applies the new filter state, a **`filtered`** event is emitted. It contains the filter state for the column which was the target of the operation and it is not cancellable.
-
 
 ```typescript
 grid.addEventListener('filtering', (event: CustomEvent<GridLiteFilteringEvent<T>>) => { ... });
@@ -162,8 +153,6 @@ In cases where filtering must be done remotely or you want to save the current s
 the Grid Lite exposes a hook where you can implement and customize this behavior.
 
 Using the **`dataPipelineConfiguration`** property, you can provide a custom hook which will be called each time a filter operation is about to run. The callback is passed a **`DataPipelineParams`** object.
-
-
 
 ```typescript
 export type DataPipelineParams<T extends object> = {
@@ -195,7 +184,6 @@ The following example mocks remote filter operation, reflecting the REST endpoin
            iframe-src="{environment:demosBaseUrl}/grid-lite/filtering-pipeline" alt="Angular Grid Lite Filtering Config Remote">
 </code-view>
 
-
 <!-- TODO ## API References
 ## API References
 
@@ -205,9 +193,9 @@ The following example mocks remote filter operation, reflecting the REST endpoin
 
 ## Additional Resources
 
-* [Column Configuration](column-configuration.md)
-* [Sorting](sorting.md)
+- [Column Configuration](column-configuration.md)
+- [Sorting](sorting.md)
 
 Our community is active and always welcoming to new ideas.
 
-* [Grid Lite  **GitHub**](https://github.com/IgniteUI/igniteui-grid-lite)
+- [Grid Lite  **GitHub**](https://github.com/IgniteUI/igniteui-grid-lite)

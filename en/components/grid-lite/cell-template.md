@@ -12,21 +12,15 @@ By default, the grid uses the key of the column to render the value as a string 
 
 To achieve that, set the **`cellTemplate`** property of the column.
 
-
-
 ```typescript
 {
   cellTemplate?: (params: GridLiteCellContext<T, K>) => TemplateResult;
 }
 ```
 
-
-
 ## Use as a formatter function
 
 For the simple scenario where some formatting is required, one can just return the formatted value. Here is an example for displaying a number value to a locale currency format:
-
-
 
 ```typescript
 const { format: asCurrency } = new Intl.NumberFormat('en-EN', { style: 'currency', currency: 'EUR' });
@@ -39,13 +33,9 @@ const { format: asCurrency } = new Intl.NumberFormat('en-EN', { style: 'currency
 }
 ```
 
-
-
 You can combine values different fields from the data source as well.
 <!-- TODO: 
 Refer to the API documentation for **`GridLiteCellContext`** for more information. -->
-
-
 
 ```typescript
 const { format: asCurrency } = new Intl.NumberFormat('en-EN', { style: 'currency', currency: 'EUR' });
@@ -58,7 +48,6 @@ const { format: asCurrency } = new Intl.NumberFormat('en-EN', { style: 'currency
 }
 ```
 
-
 ## Custom DOM templates
 
 Aside from using the **`cellTemplate`** property as a value formatter, you can also create your own DOM template, which
@@ -69,8 +58,6 @@ We've decided to re-use the functionality provided by <a href="https://lit.dev/"
 DOM fragments.
 
 You can template any standard DOM elements as well as web components from other libraries.
-
-
 
 ```typescript
 // Import the `html` tag function from the Lit package.
@@ -83,8 +70,6 @@ import { html } from "lit";
   ...
 }
 ```
-
-
 
 >[!NOTE]
 >Keep in mind the more complex and involved the template is, the greater the performance cost. Avoid complex DOM structures if performance is important.
@@ -135,11 +120,11 @@ export interface GridLiteCellContext<
 
 ## Additional Resources
 
-* [Column Configuration](column-configuration.md)
-* [Sorting](sorting.md)
-* [Filtering](filtering.md)
-* [Theming & Styling](theming.md)
+- [Column Configuration](column-configuration.md)
+- [Sorting](sorting.md)
+- [Filtering](filtering.md)
+- [Theming & Styling](theming.md)
 
 Our community is active and always welcoming to new ideas.
 
-* [Grid Lite  **GitHub**](https://github.com/IgniteUI/igniteui-grid-lite)
+- [Grid Lite  **GitHub**](https://github.com/IgniteUI/igniteui-grid-lite)

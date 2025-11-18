@@ -14,8 +14,6 @@ Similar to the cell templates, column headers can also be customized to better f
 
 By default the column uses the **`key`** configuration property for label text. To customize the label, set the **`headerText`** property to a more human readable format.
 
-
-
 ```typescript
 {
   key: 'price',
@@ -30,11 +28,8 @@ By default the column uses the **`key`** configuration property for label text. 
 
 Similar to the cell template, you can also pass a custom template renderer and create your own DOM inside the column header.
 
-
-
 ```typescript
 import { html } from 'lit';
-
 
 {
   key: 'rating',
@@ -56,10 +51,10 @@ import { html } from 'lit';
 
 ## Additional Resources
 
-* [Column Configuration](column-configuration.md)
-* [Cell Template](cell-template.md)
-* [Theming & Styling](theming.md)
+- [Column Configuration](column-configuration.md)
+- [Cell Template](cell-template.md)
+- [Theming & Styling](theming.md)
 
 Our community is active and always welcoming to new ideas.
 
-* [Grid Lite  **GitHub**](https://github.com/IgniteUI/igniteui-grid-lite)
+- [Grid Lite  **GitHub**](https://github.com/IgniteUI/igniteui-grid-lite)

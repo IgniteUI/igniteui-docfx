@@ -58,11 +58,11 @@ the column collection is reset, and a new data source is bound to the grid.
 
 ## Additional Resources
 
-* [Column Configuration](column-configuration.md)
-* [Sorting](sorting.md)
-* [Filtering](filtering.md)
-* [Theming & Styling](theming.md)
+- [Column Configuration](column-configuration.md)
+- [Sorting](sorting.md)
+- [Filtering](filtering.md)
+- [Theming & Styling](theming.md)
 
 Our community is active and always welcoming to new ideas.
 
-* [Grid Lite  **GitHub**](https://github.com/IgniteUI/igniteui-grid-lite)
+- [Grid Lite  **GitHub**](https://github.com/IgniteUI/igniteui-grid-lite)

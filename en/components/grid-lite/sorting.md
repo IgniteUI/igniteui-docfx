@@ -10,7 +10,6 @@ namespace: Infragistics.Controls
 
 The Grid Lite supports sorting operations on its data source. Data sorting is controlled on per-column level, allowing you to have sortable and non-sortable columns, while the grid itself controls certain sort behaviors. By default, sorting on a column is disabled unless explicitly configured with the **`sort`** property of the column configuration object.
 
-
 ```typescript
 {
   key: 'price',
@@ -19,7 +18,6 @@ The Grid Lite supports sorting operations on its data source. Data sorting is co
 ```
 
 The **`sort`** property can be either a simple boolean or a **`ColumnSortConfiguration`** object which exposes additional configuration options:
-
 
 ```typescript
 {
@@ -49,13 +47,9 @@ The **`sort`** property can be either a simple boolean or a **`ColumnSortConfigu
 
 The grid supports both single and multi-column sorting. Multi-column is enabled by default and can be configured through the **`sortConfiguration`** property of the grid.
 
-
-
 ```typescript
 grid.sortConfiguration = { multiple: false, triState: true };
 ```
-
-
 
 >[!NOTE]
 >The single/multi-column sorting behavior controls how end-users interact with the Grid lite. Sorting through the API with multiple expression will still work when single sorting is enabled.
@@ -94,8 +88,6 @@ The following sample shows the grid **`sortConfiguration`** combinations and how
 
 The building block for sort operations in the Grid Lite component is the **`SortExpression`** which has the following properties:
 
-
-
 ```typescript
 type SortExpression<T> = {
   /**
@@ -119,8 +111,6 @@ type SortExpression<T> = {
 };
 ```
 
-
-
 The grid consumes these expressions for its sort API methods and configuration and produces them for events and its sorting state when
 an end-user interacts with the component. See below for additional information.
 
@@ -129,8 +119,6 @@ an end-user interacts with the component. See below for additional information.
 The Grid Lite component exposes two main approaches for applying sort operations from its API. Either through the **`GridLite.sort()`**/**`GridLite.clearSort()`** methods or through the **`Grid.Lite.sortExpressions`** property.
 
 The **`sort()`** method accepts either a single expression or an array of sort expression and then sorts the grid data based on those expressions.
-
-
 
 ```typescript
 // Single
@@ -143,12 +131,8 @@ grid.sort([
 ]);
 ```
 
-
-
 The **`clearSort()`** method, as the name implies, clears the sort state of a single column or the whole grid component, depending
 on the passed arguments.
-
-
 
 ```typescript
 // Clear the sort state for the `price` column.
@@ -158,14 +142,10 @@ grid.clearSort('price');
 grid.clearSort();
 ```
 
-
-
 ### Initial sorting state
 
 The **`sortExpressions`** property is very similar in behavior to the **`sort()`** method call. It exposes a declarative way to control
 sort state in the grid, but the most useful property is the ability to set initial sort state when the Grid Lite is first rendered.
-
-
 
 For example here is a Lit-based sample:
 
@@ -182,11 +162,7 @@ For example here is a Lit-based sample:
 }
 ```
 
-
-
 It can be used to get the current sort state of the component and do additional processing depending on another state in your application.
-
-
 
 ```typescript
 const state = grid.sortExpressions;
@@ -194,22 +170,16 @@ const state = grid.sortExpressions;
 saveUserSortState(state);
 ```
 
-
-
 ## Events
 
 When a sorting operation is performed through the UI, the component emits a custom **`sorting`** event. The **`detail`** property is the sort expression which will be applied by the Grid Lite. The event is cancellable and if cancelled will stop the current sort operation.
 
 After the grid applies the new sorting state, a **`sorted`** event is emitted. It contains the expression which was used in the last sort operation and it is not cancellable.
 
-
-
 ```typescript
 grid.addEventListener('sorting', (event: CustomEvent<SortExpression<T>>) => { ... });
 grid.addEventListener('sorted', (event: CustomEvent<SortExpression<T>>) => { ... });
 ```
-
-
 
 In the following sample, when you try to sort the **Name** and **Rating** columns, the operation will be cancelled. Watch the event log below to see it in action.
 
@@ -223,8 +193,6 @@ In the following sample, when you try to sort the **Name** and **Rating** column
 In cases where sorting must be done remotely or you want to save the current state/data to a server somewhere, the Grid Lite exposes a hook where you can implement and customize this behavior.
 
 Using the **`dataPipelineConfiguration`** property, you can provide a custom hook which will be called each time a sort operation is about to run. The callback is passed a **`DataPipelineParams`** object.
-
-
 
 ```typescript
 export type DataPipelineParams<T extends object> = {
@@ -247,8 +215,6 @@ export type DataPipelineParams<T extends object> = {
 grid.dataPipelineConfiguration = { sort: (params: DataPipelineParams<T>) => T[] | Promise<T[]> };
 ```
 
-
-
 The custom callback can be async as the grid will wait for it until it resolves.
 
 The following example mocks remote sorting operation, reflecting the REST endpoint generated based on the sort state of the component.
@@ -267,9 +233,9 @@ The following example mocks remote sorting operation, reflecting the REST endpoi
 
 ## Additional Resources
 
-* [Column Configuration](column-configuration.md)
-* [Filtering](filtering.md)
+- [Column Configuration](column-configuration.md)
+- [Filtering](filtering.md)
 
 Our community is active and always welcoming to new ideas.
 
-* [Grid Lite  **GitHub**](https://github.com/IgniteUI/igniteui-grid-lite)
+- [Grid Lite  **GitHub**](https://github.com/IgniteUI/igniteui-grid-lite)

@@ -97,10 +97,10 @@ Here is an example showcasing the custom theming from above.
 
 ## Additional Resources
 
-* [Column Configuration](column-configuration.md)
-* [Filtering](filtering.md)
-* [Sorting](sorting.md)
+- [Column Configuration](column-configuration.md)
+- [Filtering](filtering.md)
+- [Sorting](sorting.md)
 
 Our community is active and always welcoming to new ideas.
 
-* [Grid Lite  **GitHub**](https://github.com/IgniteUI/igniteui-grid-lite)
+- [Grid Lite  **GitHub**](https://github.com/IgniteUI/igniteui-grid-lite)
