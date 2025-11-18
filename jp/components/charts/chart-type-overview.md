@@ -2,6 +2,7 @@
 title: Angular チャートおよびグラフ ライブラリ | データ可視化 | インフラジスティックス | Ignite UI for Angular
 _description: Angular アプリの数百万のデータ ポイントでミリ秒の更新機能を使用して、あらゆるタイプのデータ、ビジネス、ファイナンシャル、科学、および散布を視覚化します。
 _keywords: Angular Charts, Chart, Infragistics, Angular チャート, チャート, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 

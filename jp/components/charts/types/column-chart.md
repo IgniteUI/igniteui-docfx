@@ -2,6 +2,7 @@
 title: Angular 縦棒チャート | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular 縦棒チャート
 _keywords: Angular Charts, Column Chart, Column Graph, Vertical Bar Chart, Infragistics, Angular チャート, 縦棒チャート, 縦棒グラフ, 垂直棒チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ["DomainChart", "CategoryChart", "XamDataChart", "ColumnSeries", "WaterfallSeries", "StackedColumnSeries", "Stacked100ColumnSeries", "RangeColumnSeries", "RadialColumnSeries", "CategoryChartType", "Series"]
 namespace: Infragistics.Controls.Charts
 _language: ja

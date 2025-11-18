@@ -2,7 +2,9 @@
 title: Angular 軸レイアウト | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular 軸レイアウト
 _keywords: Angular Axis, Layouts, Infragistics, Angular 軸, レイアウト, インフラジスティックス
-mentionedTypes: []
+_license: commercial
+mentionedTypes: ["CategoryChart", "XamDataChart", "AxisLabelLocation", "CategoryXAxis", "CategoryYAxis", "NumericYAxis", "NumericXAxis"]
+namespace: Infragistics.Controls.Charts
 _language: ja
 ---
 

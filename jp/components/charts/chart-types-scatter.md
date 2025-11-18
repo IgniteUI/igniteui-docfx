@@ -2,12 +2,12 @@
 title: Angular 散布図 | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular 散布図
 _keywords: Angular Charts, Scatter Chart, Infragistics, Angular チャート, 散布図, インフラジスティックス
+_license: commercial
 mentionedTypes: ["XamDataChart"]
 _language: ja
 ---
 
 # Angular 散布図
-
 Angular 散布図は、複数の異なるデータのシリーズの項目間の関係を示すマーカーを表示、または x および y 座標を使用してデータ項目をプロットするために使用されるシリーズのグループです。データ ポイントの x 座標および y 座標は、2 つの数値データ列で決定されます。散布シリーズは、データの不均等な散らばりやデータの塊に注意が向けられます。これらのタイプのシリーズは、科学データのプロットによく用いられ、予測結果からの収集データの偏差を強調表示できます。散布シリーズは、データを時シリーズに (データが時系列でない場合であっても) 構成するためにも使用できます。
 
 ## Angular 散布マーカー チャート

@@ -2,6 +2,7 @@
 title: Angular ステップ チャート | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular ステップ チャート
 _keywords: Angular Charts, Step Chart, Infragistics, Angular チャート, ステップ チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ["XamCategoryChart", "XamDataChart"]
 _language: ja
 ---

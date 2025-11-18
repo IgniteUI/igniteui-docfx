@@ -2,7 +2,9 @@
 title: Angular 軸グリッド線 | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular 軸グリッド線
 _keywords: Angular Axis, Gridlines, Infragistics, Angular 軸, グリッド線, インフラジスティックス
-mentionedTypes: []
+_license: commercial
+mentionedTypes: ["CategoryChart", "XamDataChart", "CategoryXAxis", "CategoryYAxis", "NumericYAxis", "NumericXAxis"]
+namespace: Infragistics.Controls.Charts
 _language: ja
 ---
 

@@ -2,6 +2,7 @@
 title: Angular シェープ チャート | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular シェープ チャート
 _keywords: Angular Charts, Shape Chart, Infragistics, Angular チャート, シェープ チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ["XamDataChart"]
 _language: ja
 ---
