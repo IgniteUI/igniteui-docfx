@@ -111,6 +111,33 @@
   href: grids-and-lists.md
   header: true
   updated: false
+- name: Grid Lite
+  href: grid-lite/overview.md
+  new: true
+  updated: false
+  items:
+    - name: Column Configuration
+      href: grid-lite/column-configuration.md
+      new: true
+      items:
+        - name: Cell Template
+          href: grid-lite/cell-template.md
+          new: true
+        - name: Header Template
+          href: grid-lite/header-template.md
+          new: true
+    - name: Data Binding
+      href: grid-lite/binding.md
+      new: true
+    - name: Filtering Overview
+      href: grid-lite/filtering.md
+      new: true
+    - name: Sorting
+      href: grid-lite/sorting.md
+      new: true
+    - name: Styling & Theming
+      href: grid-lite/theming.md
+      new: true
 - name: Data Grid
   href: grid/grid.md
   new: false
