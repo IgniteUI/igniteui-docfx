@@ -1,7 +1,8 @@
 ---
-title: Angular Linear Gauge | Data Visualization Tools | Infragistics
+title: Angular Linear Gauge | Data Visualization Tools | Infragistics | commercial license
 _description: Use Infragistics' Angular linear gauge control to visualize data with a simple and concise view. Learn about the Ignite UI for Angular linear gauge configurable elements!
 _keywords: linear gauge, Ignite UI for Angular, Infragistics, animation, labels, needle, scales, ranges, tick marks
+_license: commercial
 mentionedTypes: ["XamLinearGauge"]
 namespace: Infragistics.Controls.Gauges
 ---

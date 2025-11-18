@@ -1,7 +1,8 @@
 ---
-title: Angular Navbar Component – Ignite UI for Angular | Infragistics
+title: Angular Navbar Component – Ignite UI for Angular | Infragistics | MIT license
 _description: Ignite UI for Angular Navbar control provides optimal UI experience with seamless integration to allow users to move within an application smoothly.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Angular NavBar component, Angular Navbar control, Angular Navigation Bar, Angular Navigation Bar component
+_license: MIT
 ---
 
 # Angular Navbar Component Overview

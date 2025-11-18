@@ -1,7 +1,8 @@
 ---
-title: Angular Select Component - Ignite UI for Angular
+title: Angular Select Component - Ignite UI for Angular - MIT license 
 _description: Learn how to configure Angular Select Component. Angular Select provides an input with Angular dropdown list, allowing single item selection of the Angular Combobox. Try it now.
 _keywords:  angular select, angular select component, angular forms, angular form select component, angular ui components, igniteui for angular, infragistics
+_license: MIT
 ---
 
 # Angular Select Component Overview

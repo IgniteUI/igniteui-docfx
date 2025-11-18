@@ -1,7 +1,8 @@
 ---
-title: Angular Map | Data Visualization Tools | Binding JSON Files | Infragistics
+title: Angular Map | Data Visualization Tools | Binding JSON Files | Infragistics | commercial license
 _description: Learn how to use Infragistics' Angular map to display data that contains geographic locations from view models or geographic locations loaded from JSON files. View Ignite UI for Angular map demos!
 _keywords: Angular map, JSON files, Ignite UI for Angular, Infragistics, data binding
+_license: commercial
 mentionedTypes: ["XamGeographicMap", "Series"]
 namespace: Infragistics.Controls.Maps
 ---

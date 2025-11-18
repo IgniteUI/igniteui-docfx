@@ -1,7 +1,8 @@
 ---
-title: Angular Ripple Directive – Ignite UI for Angular | Infragistics
+title: Angular Ripple Directive – Ignite UI for Angular | Infragistics | MIT license
 _description: With Ignite UI for Angular Ripple directive, developers can define an area which received a ripple animation effect for powerful UI enhancement.
 _keywords: Angular Ripple component, Angular Ripple Directive, Angular Ripple control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
+_license: MIT
 ---
 
 # Angular Ripple Directive Overview

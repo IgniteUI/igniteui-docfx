@@ -1,7 +1,8 @@
 ---
-title: ComboBox Templates
+title: ComboBox Templates - MIT license 
 _description: Custom templates for different areas of the igx-combo component can be defined, including items, header, footer, empty list and adding button.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Combo components, Angular Templates, Angular Combo Templates
+_license: MIT
 ---
 
 # ComboBox Templates

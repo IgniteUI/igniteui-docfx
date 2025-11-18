@@ -1,7 +1,8 @@
 ---
-title: Angular Tree Component - Ignite UI for Angular
+title: Angular Tree Component - Ignite UI for Angular | MIT license
 _description: With Ignite UI for Angular Tree component, you can display hierarchical data in a tree-view structure, customize nodes easily and load data on demand. Try for FREE
 _keywords: angular tree, angular tree component, angular tree view, angular tree view component, angular ui components, ignite ui for angular, UI controls, infragistics
+_license: MIT
 ---
 <style type="text/css">
     code-view .codesandbox-btn {

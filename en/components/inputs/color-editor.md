@@ -1,7 +1,8 @@
 ---
-title: Angular Color Editor | Color Editor | Infragistics
+title: Angular Color Editor | Color Editor | Infragistics | commercial license
 _description: Color Editor component provides an easily configurable option to change colors for any desirable component or aspect of your application.
 _keywords: Angular Color Editor, Ignite UI for Angular, Infragistics
+_license: commercial
 mentionedTypes: ["ColorEditor"]
 namespace: Infragistics.Controls
 ---

@@ -1,7 +1,8 @@
 ---
-title: Angular Dialog Window Component
+title: Angular Dialog Window Component - MIT license 
 _description: Whether building informative dialogs or data manipulation windows, Ignite UI for Angular Dialog Window component can manage information shown in real-time for fast capability.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Angular Dialog Window component, Angular Dialog Window control, Angular Dialog Component
+_license: MIT
 ---
 
 # Angular Dialog Window Component Overview

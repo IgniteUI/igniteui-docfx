@@ -1,7 +1,8 @@
 ---
-title: Angular Excel Library| Using Worksheets | Infragistics
+title: Angular Excel Library| Using Worksheets | Infragistics | commercial license
 _description: Use Infragistics' Angular excel library to input data by working with the worksheet's row and cells and setting their corresponding values. Easily transfer data from Ignite UI for Angular excel to your application!
 _keywords: Excel library, worksheet, Ignite UI for Angular, Infragistics
+_license: commercial
 mentionedTypes: ["Workbook", "Worksheet", "WorksheetCell", "DisplayOptions", "WorksheetFilterSettings", "IWorksheetCellFormat"]
 ---
 

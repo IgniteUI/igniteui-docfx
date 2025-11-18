@@ -1,7 +1,8 @@
 ---
-title: Angular Grid Cell Merging - Ignite UI for Angular
+title: Angular Grid Cell Merging - Ignite UI for Angular - commercial license
 _description: Position and size columns in a more powerful way, using the multi-row layout functionality in the Ignite UI for Angular Data Grid. Check out examples and demos!
 _keywords: angular cell merging, cell merging, ignite ui for angular
+_license: commercial
 ---
 
 # Angular Cell Merging

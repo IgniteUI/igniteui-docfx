@@ -1,7 +1,8 @@
 ---
-title: Angular Chart Data Annotations | Data Visualization | Infragistics
+title: Angular Chart Data Annotations | Data Visualization | Infragistics | commercial license
 _description: Infragistics' Angular Chart Data Annotations
 _keywords: Angular Charts, Data Annotations, Infragistics
+_license: commercial
 mentionedTypes: ["DomainChart", "CategoryChart", "CrosshairLayer", "FinalValueLayer", "CalloutLayer"]
 namespace: Infragistics.Controls.Charts
 ---

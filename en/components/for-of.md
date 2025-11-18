@@ -1,7 +1,8 @@
 ---
-title: Angular Virtual For Directive 
+title: Angular Virtual For Directive - MIT license  
 _description: Ignite UI for Angular now exposes a virtual igxFor directive similar to ngFor, which virtualizes DOM object rendering by visualizing only the visible chunks of the data in the DOM.
 _keywords: Angular Virtual ForOf Directive, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Virtualization, Performance, Virtual directive, Angular Virtual For
+_license: MIT
 ---
 
 # Angular Virtual ForOf Directive Overview

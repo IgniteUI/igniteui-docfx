@@ -1,7 +1,8 @@
 ---
-title: Angular Grid Group By | Group by multiple fields | Infragistics
+title: Angular Grid Group By | Group by multiple fields | Infragistics | commercial license
 _description: Configure angular group by that allows visualizing of data records in Angular table, visualize the grouped data in separate and convenient column group.
 _keywords: angular group by, igniteui for angular, infragistics
+_license: commercial
 ---
 
 # Angular Grid Group By

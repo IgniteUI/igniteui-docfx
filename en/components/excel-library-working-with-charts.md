@@ -1,7 +1,8 @@
 ---
-title: Angular Excel Library| Working with Charts | Infragistics
+title: Angular Excel Library| Working with Charts | Infragistics | commercial license
 _description: Use the Infragistics' Angular excel library's chart feature to add visual charting representations of data trends across regions of cells in a worksheet. Visualize Ignite UI for Angular excel data in over 70 chart types!
 _keywords: Excel library, charts,  Ignite UI for Angular, Infragistics
+_license: commercial
 mentionedTypes: ["Workbook", "Worksheet"]
 ---
 

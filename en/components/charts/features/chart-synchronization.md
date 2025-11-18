@@ -1,7 +1,8 @@
 ---
-title: Angular Data Chart | Data Visualization Tools | Synchronization | Infragistics
+title: Angular Data Chart | Data Visualization Tools | Synchronization | Infragistics | commercial license
 _description: Synchronize between multiple Infragistics' Angular charts controls including zooming, panning and crosshair events. Learn about our Ignite UI for Angular graph synchronization capabilities!
 _keywords: Angular charts, data chart, synchronization, Ignite UI for Angular, Infragistics
+_license: commercial
 mentionedTypes: ["XamDataChart"]
 namespace: Infragistics.Controls.Charts
 ---

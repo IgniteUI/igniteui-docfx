@@ -1,8 +1,10 @@
 ---
-title: Angular Banner Component – Ignite UI for Angular | Infragistics
+title: Angular Banner Component – Ignite UI for Angular | Infragistics | MIT license
 _description: Easily integrate a short, non-intrusive message (along with optional actions) using Ignite UI for Angular Banner component.
 _keywords: Angular Banner component, Angular Banner control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Angular UI Components
+_license: MIT
 ---
+
 # Angular Banner Component Overview
 <p class="highlight">Angular Banner Component provides a way to easily display a prominent message to your application's users in a way that is less transient than a snackbar and less obtrusive than a dialog. The Banner can also be configured to display custom action buttons and an icon.</p>
 

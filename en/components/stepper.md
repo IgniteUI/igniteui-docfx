@@ -1,7 +1,8 @@
 ---
-title: Angular Stepper Component – Ignite UI for Angular
+title: Angular Stepper Component – Ignite UI for Angular - MIT license 
 _description: Use the Angular Stepper component to visualize content as a process and show its progress by dividing the content into logical steps. Learn how to do it.
 _keywords: Angular Stepper component, Angular Wizard Component, Angular Stepper Control, Angular Wizard Control, Angular UI Components, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Infragistics
+_license: MIT
 ---
 
 # Angular Stepper Component Overview

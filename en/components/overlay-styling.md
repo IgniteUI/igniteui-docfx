@@ -1,7 +1,8 @@
 ---
-title: Angular Overlay Styling
+title: Angular Overlay Styling | MIT license
 _description: A detailed walkthrough that explains how to properly apply and scope styles to elements that are displayed using the IgniteUI for Angular Overlay Service.
 _keywords: Ignite UI for Angular, Angular Overlay Service, Angular UI controls, Overlay Service, View Encapsulation Example, Sass scoped styles in Angular, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
+_license: MIT
 ---
 
 # Overlay Styling

@@ -1,7 +1,8 @@
 ---
-title: Angular Chart Performance | Data Visualization | Infragistics
+title: Angular Chart Performance | Data Visualization | Infragistics | commercial license
 _description: Infragistics' Angular Chart Performance
 _keywords: Angular Charts, Performance, Infragistics
+_license: commercial
 mentionedTypes: ["DomainChart", "CategoryChart", "FinancialChart", "XamDataChart", "FinancialChartVolumeType", "FinancialChartZoomSliderType"]
 namespace: Infragistics.Controls.Charts
 ---

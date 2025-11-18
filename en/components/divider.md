@@ -1,7 +1,8 @@
 ---
-title: Angular Divider Component
+title: Angular Divider Component - MIT license 
 _description: Ignite UI for Angular Divider component enables users to separate content both horizontally and vertically.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Angular Divider component, Angular Divider directive, Angular Divider control
+_license: MIT
 ---
 
 # Angular Divider Component Overview

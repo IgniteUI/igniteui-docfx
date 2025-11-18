@@ -1,7 +1,8 @@
 ---
-title: Angular Calendar Component – Ignite UI for Angular 
+title: Angular Calendar Component – Ignite UI for Angular | MIT license 
 _description: With Angular Calendar Component, users can create intuitive calendars for applications to display date information using three different selection modes. Try it Now
 _keywords: angular calendar, angular calendar component, angular UI components, angular UI library, ignite ui for angular
+_license: MIT
 ---
 
 # Angular Calendar Component Overview

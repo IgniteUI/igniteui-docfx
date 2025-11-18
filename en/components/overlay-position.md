@@ -1,6 +1,7 @@
 ---
-title: Angular Overlay Service - Positioning Strategies
+title: Angular Overlay Service - Positioning Strategies - MIT license 
 _description: Explanation and example about the Overlay Service's IPositionStrategy interface and the classes that implement it.
+_license: MIT
 ---
 
 # Positioning Strategies

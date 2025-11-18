@@ -1,7 +1,8 @@
 ---
-title: Angular Autocomplete Component – Ignite UI for Angular
+title: Angular Autocomplete Component – Ignite UI for Angular - MIT license 
 _description: The Angular Autocomplete directive offers a way to enhance a text input by showing a panel of suggested options provided by the developer. Try it now.
 _keywords: Angular Autocomplete component, Angular Autocomplete directive, Angular Autocomplete control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
+_license: MIT
 ---
 
 # Angular Autocomplete Directive Overview

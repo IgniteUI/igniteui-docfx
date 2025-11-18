@@ -1,7 +1,8 @@
 ---
-title: Tick Marks | Thumb Track |  Ignite UI for Angular | Infragistics
+title: Tick Marks | Thumb Track |  Ignite UI for Angular | Infragistics | MIT license
 _description: Learn how to configure the Ignite UI for Angular slider tick marks, and improve your data visualization by using angular slider step with convenient thumb track
 _keywords: tick marks, igniteui for angular, infragistics
+_license: MIT
 ---
 
 # Usage

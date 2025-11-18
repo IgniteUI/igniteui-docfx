@@ -1,7 +1,8 @@
 ---
-title:  Row actions in Angular Data Grid - Ignite UI for Angular 
+title:  Row actions in Angular Data Grid - Ignite UI for Angular - commercial license 
 _description: The grid component in Ignite UI for Angular provides the ability to use ActionStrip and utilize CRUD for row/cell components and row pinning.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular ActionStrip components, Angular ActionStrip directives, Angular ActionStrip controls
+_license: commercial
 ---
 @@if (igxName === 'IgxGrid') {
 # Row Actions in Angular Data Grid

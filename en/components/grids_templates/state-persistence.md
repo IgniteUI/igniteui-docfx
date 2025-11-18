@@ -1,32 +1,36 @@
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid State Persistence - Ignite UI for Angular
+title: Angular Grid State Persistence - Ignite UI for Angular - commercial license
 _description: Easily save and restore the grid state, using our comprehensive Ignite UI toolset for Angular. Learn how to restore columns, explore usage, and see demos!
 _keywords: state persistence, ignite ui for angular, infragistics
+_license: commercial
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid State Persistence - Ignite UI for Angular
+title: Angular Tree Grid State Persistence - Ignite UI for Angular - commercial license
 _description: Easily save and restore the grid state, using our comprehensive Ignite UI toolset for Angular. Learn how to restore columns, explore usage, and see demos!
 _keywords: state persistence, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/state-persistence
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid State Persistence - Ignite UI for Angular
+title: Angular Hierarchical Grid State Persistence - Ignite UI for Angular - commercial license
 _description: Easily save and restore the grid state, using our comprehensive Ignite UI toolset for Angular. Learn how to restore columns, explore usage, and see demos!
 _keywords: state persistence, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/state-persistence
 ---
 }
 
 @@if (igxName === 'IgxPivotGrid') {
 ---
-title: Angular Pivot Grid State Persistence - Ignite UI for Angular
+title: Angular Pivot Grid State Persistence - Ignite UI for Angular - commercial license
 _description: Easily save and restore the grid state, using our comprehensive Ignite UI toolset for Angular. Learn how to restore configuration, explore usage, and see demos!
 _keywords: state persistence, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/state-persistence
 ---
 }

@@ -1,7 +1,8 @@
 ---
-title: Angular Text Highlight Directive | Ignite UI for Angular
+title: Angular Text Highlight Directive | Ignite UI for Angular | MIT license
 _description: The Ignite UI for Angular TextHighlight directive can be used to highlight parts of text and have an active highlight on one of them.
 _keywords: Angular TextHighlight Directive, Angular Text Highlight Directive, IgxTextHighlight Directive, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Components, Angular UI Components, Native Angular Components Library
+_license: MIT
 ---
 
 # Angular Text Highlight Directive Overview

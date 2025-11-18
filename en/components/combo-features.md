@@ -1,7 +1,8 @@
 ---
-title: ComboBox Features
+title: ComboBox Features - MIT license 
 _description: Combo control exposes several of features including data and value binding, custom values, filtering, grouping, etc.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Combo components, Angular Features, Angular Combo Features, Angular Combo Data Binding, Angular Combo Value Binding, Angular Combo Data Filtering, Angular Combo Grouping, Angular Combo Custom Values
+_license: MIT
 ---
 
 # ComboBox Features

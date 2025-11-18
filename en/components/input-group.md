@@ -1,7 +1,8 @@
 ---
-title: Angular Input Group Component | Ignite UI for Angular
+title: Angular Input Group Component | Ignite UI for Angular | MIT license
 _description: The Input Group component in Ignite UI for Angular allows for easy-to-use and aesthetic forms, simplicity with inputting data, and provides mitigation for handling validation and errors.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Native Angular Components, Angular Label component, Angular Label control, Angular Input component, Angular Input control, Input component, Input control, Label component, Label control, Angular Input Group component, Angular Input Group control, Angular Input directive, Angular Label directive, Angular Forms, Angular Reactive Forms, Angular Form Validation
+_license: MIT
 ---
 
 # Angular Input Group Component Overview
