@@ -1,7 +1,8 @@
 ---
-title: Angular Donut Chart | Data Visualization | Infragistics
+title: Angular Donut Chart | Data Visualization | Infragistics | commercial license
 _description: Infragistics' Angular Donut Chart
 _keywords: Angular Charts, Donut Chart, Donut Chart, Infragistics
+_license: commercial
 mentionedTypes: ["XamDoughnutChart", "DoughnutChart"]
 namespace: Infragistics.Controls.Charts
 ---

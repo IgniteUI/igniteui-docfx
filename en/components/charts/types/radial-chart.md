@@ -1,7 +1,8 @@
 ---
-title: Angular Radial Chart | Data Visualization | Infragistics
+title: Angular Radial Chart | Data Visualization | Infragistics | commercial license
 _description: Infragistics' Angular Radial Chart
 _keywords: Angular Charts, Radial Chart, Infragistics
+_license: commercial
 mentionedTypes: ["XamDataChart", "RadialLineSeries", "Series"]
 namespace: Infragistics.Controls.Charts
 ---

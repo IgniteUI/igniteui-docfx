@@ -1,7 +1,8 @@
 ---
-title: Angular Spline Chart | Data Visualization | Infragistics
+title: Angular Spline Chart | Data Visualization | Infragistics | commercial license
 _description: Infragistics' Angular Spline Chart
 _keywords: Angular Charts, Spline Chart, Infragistics
+_license: commercial
 mentionedTypes: ["DomainChart", "CategoryChart", "XamDataChart", "SplineSeries", "StackedSplineSeries", "Stacked100SplineSeries", "Series", "CategoryChartType"]
 ---
 
