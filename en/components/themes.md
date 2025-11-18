@@ -1,7 +1,8 @@
 ---
-title: Theming Component - Native Angular | Ignite UI for Angular
+title: Theming Component - Native Angular | Ignite UI for Angular | MIT license
 _description: The Ignite UI for Angular Theming component was developed through SASS with a low-difficulty API that offers restyling of one component, multiple components, or the entire suite.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Theming Component, Angular Theming
+_license: MIT
 ---
 
 # Themes

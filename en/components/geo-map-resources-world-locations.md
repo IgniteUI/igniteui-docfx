@@ -1,7 +1,8 @@
 ---
-title: Angular Map | World Locations | Data Source | Infragistics
+title: Angular Map | World Locations | Data Source | Infragistics | commercial license
 _description: Use Infragistics' Angular JavaScript map data utility to generate geographic locations of cities and capitals of countries. View Ignite UI for Angular map demos!
 _keywords: Angular map, map data, Ignite UI for Angular, Infragistics
+_license: commercial
 mentionedTypes: ["XamGeographicMap"]
 ---
 

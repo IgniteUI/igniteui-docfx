@@ -1,29 +1,29 @@
 <!-- markdownlint-disable MD003 MD024 -->
 @@if (igxName === 'IgxGrid') {
 ---
-
-title: Angular Grid Select Row - Ignite UI for Angular
+title: Angular Grid Select Row - Ignite UI for Angular - commercial license 
 _description: Enable row selection to improve UX and let users manage single or multiple rows. See how easy it is to configure Row data select with Ignite UI.
 _keywords: data select, igniteui for angular, infragistics
+_license: commercial
 ---
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-
-title: Angular Grid Select Row - Ignite UI for Angular
+title: Angular Grid Select Row - Ignite UI for Angular - commercial license
 _description: Enable row selection to improve UX and let users manage single or multiple rows. See how easy it is to configure Row data select with Ignite UI.
 _keywords: data select, igniteui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/row-selection
 ---
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-
-title: Angular Grid Select Row - Ignite UI for Angular
+title: Angular Grid Select Row - Ignite UI for Angular - commercial license 
 _description: Enable row selection to improve UX and let users manage single or multiple rows. See how easy it is to configure Row data select with Ignite UI.
 _keywords: data select, igniteui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/row-selection
 ---
 

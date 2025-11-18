@@ -1,7 +1,8 @@
 ---
-title: Angular Chart Highlighting | Data Visualization | Infragistics
+title: Angular Chart Highlighting | Data Visualization | Infragistics | commercial license
 _description: Infragistics' Angular Chart Highlighting
 _keywords: Angular Charts, Highlighting, Infragistics
+_license: commercial
 mentionedTypes: ["CategoryChart"]
 namespace: Infragistics.Controls.Charts
 ---

@@ -1,7 +1,8 @@
 ---
-title: Angular Map | Data Visualization Tools | Shape Polygon Series | Infragistics
+title: Angular Map | Data Visualization Tools | Shape Polygon Series | Infragistics | commercial license
 _description: Use Infragistics Angular map's shape polygon series to render shapes of countries or regions defined by geographic locations. Learn more about Ignite UI for Angular map's series!
 _keywords: Angular map, shape polygon series, Ignite UI for Angular, Infragistics
+_license: commercial
 mentionedTypes: ["XamGeographicMap", "ShapefileConverter", "Series", "GeographicShapeSeriesBase"]
 ---
 

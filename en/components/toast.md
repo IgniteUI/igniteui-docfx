@@ -1,7 +1,8 @@
 ---
-title: Angular Toast Component – Ignite UI for Angular | Infragistics
+title: Angular Toast Component – Ignite UI for Angular | Infragistics | MIT license
 _description: With Ignite UI for Angular Toast component, users can provide quick, non-interactive messages to end users within their application.
 _keywords: Angular Toast component, Angular Toast control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
+_license: MIT
 ---
 
 # Angular Toast Component Overview

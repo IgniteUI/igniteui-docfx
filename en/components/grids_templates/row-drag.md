@@ -1,29 +1,29 @@
 <!-- markdownlint-disable MD003 MD024 -->
 @@if (igxName === 'IgxGrid') {
 ---
-
-title: Row Dragging in Angular Data Grid - Ignite UI for Angular
+title: Row Dragging in Angular Data Grid - Ignite UI for Angular - commercial license
 _description: Row dragging in Angular Data Grid is used to quickly rearrange rows by dragging them with the mouse. See how to configure row dragging in your project.
 _keywords: angular drag component, material component, ignite ui for angular, infragistics
+_license: commercial
 ---
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-
-title: Row Dragging in Angular Tree Grid - Ignite UI for Angular
+title: Row Dragging in Angular Tree Grid - Ignite UI for Angular - commercial license
 _description: Row dragging in Angular Tree Grid is used to quickly rearrange rows by dragging them with the mouse. See how to configure row dragging in your project.
 _keywords: angular drag component, material component, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/row-drag
 ---
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-
-title: Row Dragging in Angular Hierarchical Grid - Ignite UI for Angular
+title: Row Dragging in Angular Hierarchical Grid - Ignite UI for Angular - commercial license
 _description: Row dragging in Angular Hierarchical Grid is used to quickly rearrange rows by dragging them with the mouse. See how to configure row dragging in your project.
 _keywords: angular drag component, material component, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/row-drag
 ---
 

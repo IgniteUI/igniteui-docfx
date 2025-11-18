@@ -1,7 +1,8 @@
 ---
-title: Angular Chart Trendlines | Data Visualization | Infragistics
+title: Angular Chart Trendlines | Data Visualization | Infragistics | commercial license
 _description: Infragistics' Angular Chart Trendlines
 _keywords: Angular Charts, Trendlines, Infragistics
+_license: commercial
 mentionedTypes: ["DomainChart", "FinancialChart", "CategoryChart", "XamDataChart", "TrendLineType"]
 namespace: Infragistics.Controls.Charts
 ---

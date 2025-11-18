@@ -1,29 +1,29 @@
 <!-- markdownlint-disable MD003 MD024 -->
 @@if (igxName === 'IgxGrid') {
 ---
-
-title: Angular Grid Keyboard Navigation - Ignite UI for Angular
+title: Angular Grid Keyboard Navigation - Ignite UI for Angular - commercial license
 _description: Learn how to use Grid Keyboard Navigation with Ignite UI for Angular. With Keyboard interaction, users can quickly navigate between cells, rows, and columns.
 _keywords: keyboard navigation, ignite ui for angular, infragistics
+_license: commercial
 ---
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-
-title: Angular Tree Grid Keyboard Navigation - Ignite UI for Angular
+title: Angular Tree Grid Keyboard Navigation - Ignite UI for Angular - commercial license
 _description: Learn how to use Tree Grid Keyboard Navigation with Ignite UI for Angular. With Keyboard interaction, users can quickly navigate between cells, rows, and columns.
 _keywords: keyboard navigation, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/keyboard-navigation
 ---
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-
-title: Angular Hierarchical Grid Keyboard Navigation - Ignite UI for Angular
+title: Angular Hierarchical Grid Keyboard Navigation - Ignite UI for Angular - commercial license
 _description: Learn how to use Hierarchical Grid Keyboard Navigation with Ignite UI for Angular. With Keyboard interaction, users can quickly navigate between cells, rows, and columns.
 _keywords: keyboard navigation, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/keyboard-navigation
 ---
 

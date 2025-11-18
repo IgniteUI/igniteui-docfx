@@ -1,7 +1,8 @@
 ---
-title: Batch Editing and Transactions in Angular @@igComponent Grid - Infragistics
+title: Batch Editing and Transactions in Angular @@igComponent Grid - Infragistics - commercial license
 _description: Perform data manipulation without affecting the underlying data with @@igComponent Batch Editing and Angular CRUD, using Angular Data Grid. See demos & examples!
 _keywords: angular crud, ignite ui for angular, infragistics
+_license: commercial
 ---
 
 # Angular @@igComponent Batch Editing and Transactions

@@ -1,7 +1,8 @@
 ---
-title: Angular Tooltip Component | Ignite UI for Angular
+title: Angular Tooltip Component | Ignite UI for Angular | MIT license
 _description: The Ignite UI for Angular Tooltip and Tooltip Target directives feature the ability to create a tooltip and attach it to an element.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tooltip directives, Angular Tooltip controls, Angular Tooltip, tooltip, tooltip target
+_license: MIT
 ---
 
 # Angular Tooltip Directive Overview

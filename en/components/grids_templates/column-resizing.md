@@ -1,29 +1,29 @@
 <!-- markdownlint-disable MD003 MD024 -->
 @@if (igxName === 'IgxGrid') {
 ---
-
-title: Angular Grid Column Resizing - Ignite UI for Angular
+title: Angular Grid Column Resizing - Ignite UI for Angular - commercial license
 _description: Start using Angular Grid Column Resizing in order to change the grid column width in an instant. Angular drag resizing has never been so easy. Try for free!
 _keywords: grid column resizing, igniteui for angular, infragistics
+_license: commercial
 ---
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-
-title: Angular Tree Grid Column Resizing - Ignite UI for Angular
+title: Angular Tree Grid Column Resizing - Ignite UI for Angular - commercial license
 _description: Start using Angular Tree Grid Column Resizing in order to change the grid column width in an instant. Angular drag resizing has never been so easy. Try for free!
 _keywords: grid column resizing, igniteui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/column-resizing
 ---
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-
-title: Angular Hierarchical Grid Column Resizing - Ignite UI for Angular
+title: Angular Hierarchical Grid Column Resizing - Ignite UI for Angular - commercial license
 _description: Start using Angular Hierarchical Grid Column Resizing in order to change the grid column width in an instant. Angular drag resizing has never been so easy. Try for free!
 _keywords: grid column resizing, igniteui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/column-resizing
 ---
 

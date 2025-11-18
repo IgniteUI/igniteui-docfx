@@ -1,29 +1,29 @@
 <!-- markdownlint-disable MD003 MD024 -->
 @@if (igxName === 'IgxGrid') {
 ---
-
-title: Angular Grid Cell Selection - Ignite UI for Angular
+title: Angular Grid Cell Selection - Ignite UI for Angular - commercial license
 _description: Check how easy it is to use cell data selection using variety of events, rich API or mouse interactions. The Grid supports 3 modes for cell selection. Try it now!
 _keywords: data select, igniteui for angular, infragistics
+_license: commercial
 ---
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-
-title: Angular Tree Grid Cell Selection - Ignite UI for Angular
+title: Angular Tree Grid Cell Selection - Ignite UI for Angular - commercial license
 _description: Check how easy it is to use cell data selection using variety of events, rich API or mouse interactions. The Grid supports 3 modes for cell selection. Try it now!
 _keywords: data select, igniteui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/cell-selection
 ---
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-
-title: Angular Hierarchical Grid Cell Selection - Ignite UI for Angular
+title: Angular Hierarchical Grid Cell Selection - Ignite UI for Angular - commercial license 
 _description: Check how easy it is to use cell data selection using variety of events, rich API or mouse interactions. The Grid supports 3 modes for cell selection. Try it now!
 _keywords: data select, igniteui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/cell-selection
 ---
 

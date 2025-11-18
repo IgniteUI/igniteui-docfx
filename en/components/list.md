@@ -1,7 +1,8 @@
 ---
-title: Angular List View | Angular List Example | Infragistics
+title: Angular List View | Angular List Example | Infragistics | MIT license
 _description: The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Try it for FREE
 _keywords: angular list, ignite ui for angular, angular list component, angular list view, angular list view component, angular ui components
+_license: MIT
 ---
 
 # Angular List View Component Overview

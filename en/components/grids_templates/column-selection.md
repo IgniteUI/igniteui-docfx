@@ -1,29 +1,29 @@
 <!-- markdownlint-disable MD003 MD024 -->
 @@if (igxName === 'IgxGrid') {
 ---
-
-title: Angular Grid Column Selection - Ignite UI for Angular
+title: Angular Grid Column Selection - Ignite UI for Angular - commercial license
 _description: Learn how to configure column selection with Ignite UI for Angular Data grid. This makes grid interactions much easier and faster than ever.
 _keywords: column selection, igniteui for angular, infragistics
+_license: commercial
 ---
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-
-title: Angular Tree Grid Column Selection - Ignite UI for Angular
+title: Angular Tree Grid Column Selection - Ignite UI for Angular - commercial license
 _description: Learn how to configure column selection with Ignite UI for Angular Tree grid. This makes grid interactions much easier and faster than ever.
 _keywords: column selection, igniteui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/column-selection
 ---
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-
-title: Angular Hierarchical Grid Column Selection - Ignite UI for Angular
+title: Angular Hierarchical Grid Column Selection - Ignite UI for Angular - commercial license
 _description: Learn how to configure column selection with Ignite UI for Angular Hierarchical grid. This makes grid interactions much easier and faster than ever.
 _keywords: column selection, igniteui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/column-selection
 ---
 

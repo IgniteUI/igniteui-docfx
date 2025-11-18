@@ -1,7 +1,8 @@
 ---
-title: Angular Chart Highlight Filter | Data Visualization | Infragistics
+title: Angular Chart Highlight Filter | Data Visualization | Infragistics | commercial license
 _description: Infragistics' Angular Chart Highlight Filter
 _keywords: Angular Charts, Highlighting, Filtering, Infragistics
+_license: commercial
 mentionedTypes: ["CategoryChart", "XamDataChart", "Series", "HighlightedValuesDisplayMode"]
 namespace: Infragistics.Controls.Charts
 ---
