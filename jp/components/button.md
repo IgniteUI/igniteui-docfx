@@ -250,7 +250,25 @@ protected get sizeStyle() {
 
 ## スタイル設定
 
-ボタンのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
+最も簡単な方法は、CSS 変数を使用してボタンの外観をカスタマイズする方法です。
+
+```css
+[igxButton] {
+    --background: #ff4d4f;
+    --hover-background: #ff7875;
+    --active-background: #d9363e;
+    --focus-visible-background: #ff4d4f;
+    --focus-visible-foreground: #fff;
+}
+```
+
+これらの CSS 変数の値を変更することで、ボタンの全体的な外観を変更できます。
+
+<div class="divider--half"></div>
+
+ボタンにスタイルを設定する別の方法は、**Sass** と [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) 関数を使用することです。
+
+**Sass** を使用してボタンのスタイル設定を開始するには、まずすべてのテーマ関数とコンポーネント ミックスインを含む `index` ファイルをインポートします。
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -269,27 +287,27 @@ protected get sizeStyle() {
 </div>
 ```
 
-テーマを作成する必要があります:
+次のテーマを作成する必要があります:
 
 ```scss
 $custom-button-theme: button-theme(
-  $foreground: #fdfdfd,
-  $hover-foreground: #fdfdfd,
-  $focus-foreground: #fdfdfd,
-  $background: #345779,
-  $hover-background: #2e4d6b,
-  $focus-background: #2e4d6b,
-  $disabled-foreground: #2e4d6b,
+    $foreground: #fdfdfd,
+    $hover-foreground: #fdfdfd,
+    $focus-foreground: #fdfdfd,
+    $background: #345779,
+    $hover-background: #2e4d6b,
+    $focus-background: #2e4d6b,
+    $disabled-foreground: #2e4d6b,
 );
 ```
 
 ボタンのスタイル設定に使用できるパラメーターの完全なリストについては、[`button-theme`]({environment:sassApiUrl}/themes#function-button-theme) セクションを参照してください。
 
-最後には、カスタム ボタン テーマをアプリケーションに渡します。 
+最後に、カスタム テーマをアプリケーションに**含めます**。
 
 ```scss
 .button-sample {
-  @include css-vars($custom-button-theme);
+    @include css-vars($custom-button-theme);
 }
 ```
 
@@ -311,7 +329,7 @@ $custom-button-theme: button-theme(
 
 ```scss
 $custom-contained-theme: contained-button-theme(
-  $background: #348ae0,
+    $background: #348ae0,
 );
 ```
 
@@ -319,13 +337,16 @@ $custom-contained-theme: contained-button-theme(
 
 [`flat-button-theme`]({environment:sassApiUrl}/themes#function-flat-button-theme) および [`outlined-button-theme`]({environment:sassApiUrl}/themes#function-outlined-button-theme) では、状態用の色も自動的に生成されますが、これらは `$background` ではなく `$foreground` パラメーターに基づいて計算されます。
 
-### デモ
+以下のサンプルでは、カスタマイズした CSS 変数を使用したボタン コンポーネントが、[`Ant`](https://ant.design/components/button?theme=light#button-demo-color-variant) デザイン システムのボタンに視覚的に似たデザインを実現している様子を確認できます。 
 
-<code-view style="height: 100px"
+<code-view style="height: 260px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/buttons-style/" >
 </code-view>
+
+> [!NOTE]
+> サンプルでは、[Bootstrap Light](themes/sass/schemas.md#predefined-schemas) スキーマを使用します。
 
 ### カスタム サイズ変更
 
