@@ -46,7 +46,7 @@ the column collection is reset, and a new data source is bound to the grid.
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid=lite/data-binding" alt="Angular Grid Lite Data Binding Example">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/data-binding-dynamic" alt="Angular Grid Lite Data Binding Example">
 </code-view>
 
 <!-- TODO ## API References

@@ -12,7 +12,7 @@ The Grid Lite component is a free, open-source JavaScript data grid built as a W
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid=lite/app-sample-main" alt="Angular Grid Lite App Sample Main">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/overview" alt="Angular Grid Lite App Sample Main">
 </code-view>
 
 Grid Lite is designed to give you the core features that you need to deliver a beautiful data grid / data table experience in your apps. Designed for performance and beauty, the Grid Lite component will work in any framework, on any platform.

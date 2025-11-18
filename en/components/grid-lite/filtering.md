@@ -33,7 +33,10 @@ The **`filter`** property can be either a simple boolean or a
 }
 ```
 
-`sample="/{ComponentSample}/filtering-config", height="600", alt="Angular Grid Lite Filtering Config"`
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid-lite/filtering-simple" alt="Angular Grid Lite Filtering Config">
+</code-view>
 
 ## Filter model
 
@@ -150,7 +153,7 @@ grid.addEventListener('filtered', (event: CustomEvent<GridLiteFilteredEvent<T>>)
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid=lite/filtering-config-events" alt="Angular Grid Lite Filtering Config Events">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/filtering-events" alt="Angular Grid Lite Filtering Config Events">
 </code-view>
 
 ## Remote filter operations
@@ -189,7 +192,7 @@ The following example mocks remote filter operation, reflecting the REST endpoin
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid=lite/filtering-config-remote" alt="Angular Grid Lite Filtering Config Remote">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/filtering-pipeline" alt="Angular Grid Lite Filtering Config Remote">
 </code-view>
 
 

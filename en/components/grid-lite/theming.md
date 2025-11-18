@@ -31,12 +31,15 @@ As a rule of thumb, you can always copy the `themes` folder to your assets direc
 | Indigo    | Light   | node_modules/igniteui-webcomponents/themes/light/indigo.css    |
 | Indigo    | Dark    | node_modules/igniteui-webcomponents/themes/dark/indigo.css     |
 
+<!--
 In the sample below, you can preview all the default base themes.
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid=lite/styling-config-themes" alt="Angular Grid Lite Styling Config Themes">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/styling-config-themes" alt="Angular Grid Lite Styling Config Themes">
 </code-view>
+
+-->
 
 ## Creating custom themes
 
@@ -83,7 +86,7 @@ Here is an example showcasing the custom theming from above.
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid=lite/styling-custom-theme" alt="Angular Grid Lite Styling Custom Theme">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/styling-custom" alt="Angular Grid Lite Styling Custom Theme">
 </code-view>
 
 <!-- TODO ## API References
