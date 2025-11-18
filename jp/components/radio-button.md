@@ -224,6 +224,9 @@ $custom-radio-theme: radio-theme(
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-styling-sample/" >
 </code-view>
 
+> [!NOTE]
+> サンプルでは、[Fluent Light](themes/sass/schemas.md#predefined-schemas) スキーマを使用します。
+
 <div class="divider--half"></div>
 
 ### Tailwind によるスタイル設定

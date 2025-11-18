@@ -274,6 +274,7 @@ constructor(fb: FormBuilder) {
     });
 }
 ```
+
 ```html
 <form [formGroup]="registrationForm">
     <igx-input-group>
@@ -308,6 +309,7 @@ public get password() {
     return this.registrationForm.get('password');
 }
 ```
+
 ```html
 <form [formGroup]="registrationForm">
     ...
@@ -779,13 +781,16 @@ $custom-input-group: input-group-theme(
 @include css-vars($custom-input-group);
 ```
 
-### デモ
+以下のサンプルでは、カスタマイズした CSS 変数を使用した入力グループが、[`Carbon`](https://carbondesignsystem.com/components/text-input/usage/#live-demo) デザイン システムの入力グループに視覚的に似たデザインを実現している様子を確認できます。
 
 <code-view style="height:230px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-style/" >
 </code-view>
+
+> [!NOTE]
+> サンプルでは、[Indigo Light](themes/sass/schemas.md#predefined-schemas) スキーマを使用します。
 
 >[!NOTE]
 >ページ内に `box`、`border`、`line`、`search` といった複数のタイプの input-group が存在する場合は、特定のタイプごとにテーマ変数のスコープを設定するのが最適です。
@@ -810,6 +815,7 @@ search 入力をターゲットにする場合は `.igx-input-group--search` を
 ```
 
 ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
 - `light-*` クラスはライト テーマ用です。
 - `dark-*` クラスはダーク テーマ用です。
 - プレフィックスの後にコンポーネント名を追加します (例: `light-input-group`、`dark-input-group`)。
@@ -850,6 +856,7 @@ search 入力をターゲットにする場合は `.igx-input-group--search` を
 </div>
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
@@ -859,6 +866,7 @@ search 入力をターゲットにする場合は `.igx-input-group--search` を
 * [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/themes#function-input-group-theme)
 
 ## テーマの依存関係
+
 * [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
 * [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
 

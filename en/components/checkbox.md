@@ -333,20 +333,19 @@ Then, we create a new theme that extends the [`checkbox-theme`]({environment:sas
 ```scss
 // in styles.scss
 $custom-checkbox-theme: checkbox-theme(
-  $empty-color: #ecaa53,
-  $fill-color: #ecaa53,
-  $border-radius: 5px
+    $empty-color: #ecaa53,
+    $fill-color: #ecaa53,
+    $border-radius: 5px
 );
 ```
 
-The last step is to **include** the component theme in our application.
+Finally, **include** the custom theme in your application:
 
 ```scss
 @include css-vars($custom-checkbox-theme);
 ```
 
-### Demo
-
+In the sample below, you can see how using the checkbox component with customized CSS variables allows you to create a design that visually resembles the checkbox used in the [`SAP UI5`](https://ui5.sap.com/#/entity/sap.m.CheckBox/sample/sap.m.sample.CheckBox) design system.
 
 <code-view style="height: 100px"
            no-theming

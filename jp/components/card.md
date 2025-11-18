@@ -384,18 +384,19 @@ $colorful-card: card-theme(
     $subtitle-text-color: #ecaa53,
 );
 ```
-ご覧のとおり、`card-theme` は項目の基本的なスタイル設定に役立ついくつかのパラメーターを公開しています。 
+
+ご覧のとおり、`card-theme` は項目の基本的なスタイル設定に役立ついくつかのパラメーターを公開しています。
 
 最後にコンポーネントのテーマをアプリケーションに**含めます**。
 
 ```scss
-@include css-vars($colorful-card);
+@include css-vars($custom-card-theme);
 ```
 
-### Angular Card デモ
+以下のサンプルでは、カスタマイズした CSS 変数を使用したカード コンポーネントが、[`Ant`](https://ant.design/components/card?theme=light#card-demo-meta) デザイン システムのカードに視覚的に似たデザインを実現している様子を確認できます。
 
 
-<code-view style="height: 486px" 
+<code-view style="height: 486px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/card-styling-sample/" >
@@ -414,6 +415,7 @@ $colorful-card: card-theme(
 ```
 
 ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
 - `light-*` クラスはライト テーマ用です。
 - `dark-*` クラスはダーク テーマ用です。
 - プレフィックスの後にコンポーネント名を追加します (例: `light-card`、`dark-card`)。
