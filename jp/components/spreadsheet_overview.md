@@ -2,6 +2,7 @@
 title: Angular スプレッドシート | テーブルとスプレッドシート コンポーネント | インフラジスティックス
 _description: Angular スプレッドシート コントロールを使用して、Excel ドキュメントと編集機能をアプリケーションに直接埋め込みます。データ可視化を向上させます。
 _keywords: Excel Spreadsheet, Ignite UI for Angular, Infragistics, Excel スプレッドシート, インフラジスティックス
+
 _language: ja
 mentionedTypes: ['Spreadsheet']
 ---

@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | 範囲チャート | データ バインディング | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用して、範囲エリア、範囲柱状などの範囲チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
 _keywords: Angular charts, data chart, range charts, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 範囲チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---

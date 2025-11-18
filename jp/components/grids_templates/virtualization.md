@@ -3,6 +3,7 @@
 title: Angular Grid の仮想化とパフォーマンス - Ignite UI for Angular
 _description: Ignite UI for Angular の仮想化ディレクティブは、大規模なデータセットを処理する際のグリッドのスピードとパフォーマンスの背後にあるコア メカニズムです。無料でお試しください。 
 _keywords: angular データ グリッド, グリッド パフォーマンス, テータ テーブル仮想化, ignite ui for angular
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular Grid の仮想化とパフォーマンス - Ignite UI for Angular
 _description: Ignite UI for Angular の仮想化ディレクティブは、大規模なデータセットを処理する際のグリッドのスピードとパフォーマンスの背後にあるコア メカニズムです。無料でお試しください。 
 _keywords: angular データ グリッド, グリッド パフォーマンス, テータ テーブル仮想化, ignite ui for angular
+_license: commercial
 _language: ja
 ---
 }
@@ -19,6 +21,7 @@ _language: ja
 title: Angular Grid の仮想化とパフォーマンス - Ignite UI for Angular
 _description: Ignite UI for Angular の仮想化ディレクティブは、大規模なデータセットを処理する際のグリッドのスピードとパフォーマンスの背後にあるコア メカニズムです。無料でお試しください。
 _keywords: angular データ グリッド, グリッド パフォーマンス, テータ テーブル仮想化, ignite ui for angular
+_license: commercial
 _language: ja
 ---
 }

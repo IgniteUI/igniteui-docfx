@@ -2,6 +2,7 @@
 title: Angular ファイナンシャル チャート | 構成オプション | インフラジスティックス
 _description: ナビゲーション、価格ペイン、オーバーレイ、インジケーター、ボリューム ペイン、トレンドライン、タイトル、サブタイトル、凡例の設定など、インフラジスティックスの Angular ファイナンシャル チャート コントロールの機能の使用方法をについて説明します。Ignite UI for Angular ファイナンシャル グラフのサンプルを是非お試しください!
 _keywords: Angular charts, financial chart, stock chart, trendlines, indicators, Ignite UI for Angular, Infragistics, Angular チャート, ファイナンシャル チャート, 株価チャート, ドレンドライン, インジケーター, インフラジスティックス
+_license: commercial
 mentionedTypes: ['FinancialChart', 'FinancialOverlayType']
 _language: ja
 ---

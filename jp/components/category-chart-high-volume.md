@@ -2,6 +2,7 @@
 title: Angular チャートおよびグラフ | データ可視化ツール | 大量データ | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールのパフォーマンスを最適化する方法を学びます。Ignite UI for Angular グラフのパフォーマンスを改善します!
 _keywords: Angular charts, category chart, performance, Ignite UI for Angular, Infragistics, data binding, Angular チャート, カテゴリ チャート, パフォーマンス, インフラジスティックス、データ バインディング
+_license: commercial
 mentionedTypes: ['CategoryChart']
 _language: ja
 ---

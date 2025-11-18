@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | データソース | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用して、積層型棒、積層型エリアなどの積層型チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
 _keywords: Angular charts, data chart, stacked chart, Ignite UI for Angular, Infragistics, data source, Angular チャート, データ チャート, 積層型チャート, インフラジスティックス, データソース
+_license: commercial
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---

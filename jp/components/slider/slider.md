@@ -2,6 +2,7 @@
 title: Angular Slider |  Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular の Angular Slider でつまみラックを使用して、特定の範囲で選択を構成する方法を紹介します。
 _keywords: angular slider, angular sliderコンポーネント, angular range slider コンポーネント, angular range input コンポーネント, angular ui コンポーネント, igniteui for angular, インフラジスティックス
+_license: MIT
 _language: ja
 ---
 

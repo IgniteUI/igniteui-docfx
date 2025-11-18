@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | トレンドライン | インフラジスティックス
 _description: インフラジスティックスの $Platform Short$ チャートのトレンドラインを使用して、シリーズにバインドされたデータのトレンドを識別します。Ignite UI for Angular グラフのトレンドライン機能をお試しください!
 _keywords: Angular charts, data chart, trendlines, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, トレンドライン, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart', 'AreaSeries', 'BarSeries','ColumnSeries', 'PointSeries','SplineSeries','StepAreaSeries','WaterfallSeries']
 _language: ja
 ---

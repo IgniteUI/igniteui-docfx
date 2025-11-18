@@ -2,6 +2,7 @@
 title: Angular Circular Progress コンポーネント
 _description: Ignite UI for Angular Circular Progress インジケーター コンポーネントは、丸形で進行状況を表示し、カスタマイズできるコンポーネントです。
 _keywords: Angular Circular Progress コンポーネント, Angular Circular Progress コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, Angular UI コンポーネント
+_license: MIT
 _language: ja
 ---
 

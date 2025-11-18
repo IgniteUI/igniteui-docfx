@@ -2,6 +2,7 @@
 title: Toggle コンポーネント - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular Toggle ディレクティブを使用すると、トグル コンテナーを開く、操作、アニメーションに適用、および閉じることができます。
 _keywords: Angular Toggle ディレクティブ, Angular Toggle コントロール, Angular Toggle コンポーネント, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
+_license: MIT
 _language: ja
 ---
 

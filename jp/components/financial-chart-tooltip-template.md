@@ -2,6 +2,7 @@
 title: Angular ファイナンシャル チャート | ツールチップ テンプレート | インフラジスティックス
 _description: インフラジスティックスの Angular ファイナンシャル チャートのツールチップを使用して重要なデータを表示します。Ignite UI for Angular グラフ チュートリアルを是非お試しください!
 _keywords: Angular charts, financial chart, stock chart, tooltip templates, Ignite UI for Angular, Infragistics, Angular チャート, ファイナンシャル チャート, 株価チャート, ツールチップ テンプレート, インフラジスティックス
+_license: commercial
 mentionedTypes: ['FinancialChart']
 _language: ja
 ---

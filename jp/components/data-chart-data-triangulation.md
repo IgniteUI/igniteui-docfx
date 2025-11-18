@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | 三角形分割 | データ バインディング | インフラジスティックス
 _description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
 _keywords: Angular charts, data chart, triangulation, Ignite UI for Angular, data binding Infragistics, Angular チャート, データ チャート, 三角形分割, データ バインディング インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---

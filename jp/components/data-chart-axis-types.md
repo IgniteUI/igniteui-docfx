@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | 軸タイプ | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用して、数値、カテゴリ、日付時間軸などのさまざまな軸タイプを通じてデータをプロットします。Ignite UI for Angular グラフ軸について説明します。
 _keywords: Angular charts, data chart, axis, types, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 軸, タイプ, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart', 'CategoryXAxis', 'NumericYAxis', 'CategoryDateTimeXAxis']
 _language: ja
 ---

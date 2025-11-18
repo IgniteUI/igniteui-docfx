@@ -2,6 +2,7 @@
 title: 仮想スクロール ディレクティブ
 _description: Ignite UI for Angular は ngFor と同様の仮想 igxFor ディレクティブを公開します。DOM でデータの表示されている部分のみを可視化すると DOM オブジェクトの描画が仮想化されます。
 _keywords: Angular Virtual ForOf ディレクティブ, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ, 仮想化, パフォーマンス, 仮想ディレクティブ, Angular 仮想 For
+_license: MIT
 _language: ja
 ---
 

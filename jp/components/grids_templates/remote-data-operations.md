@@ -3,6 +3,7 @@
 title: Angular Grid のリモートデータ操作 - Ignite UI for Angular
 _description: リモート フィルタリング、リモートソート、リモート スクロールなどの Angular リモート データ操作を使用して、Ignite UI for Angularのサーバーからデータをロードします。
 _keywords: angular リモート データ操作, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular Tree のリモートデータ操作 - Ignite UI for Angular
 _description: リモート フィルタリング、リモートソート、リモート スクロールなどの Angular リモート データ操作を使用して、Ignite UI for Angularのサーバーからデータをロードします。
 _keywords: angular リモート データ操作, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -19,6 +21,7 @@ _language: ja
 title: Angular Hierarchical Grid のリモートデータ操作 - Ignite UI for Angular
 _description: リモート フィルタリング、リモートソート、リモート スクロールなどの Angular リモート データ操作を使用して、Ignite UI for Angularのサーバーからデータをロードします。
 _keywords: angular リモート データ操作, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }

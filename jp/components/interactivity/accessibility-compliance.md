@@ -2,6 +2,7 @@
 title: Ignite UI for Angular アクセシビリティの遵守 | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular のアクセシビリティ準拠 - 第 508 条の遵守、WCAG および ARIA。
 _keywords: accessibility, Angular, ignite ui for Angular, infragistics, アクセシビリティ準拠, インフラジスティックス
+_license: MIT
 mentionedTypes: []
 _language: ja
 ---

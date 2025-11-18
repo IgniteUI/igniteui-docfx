@@ -2,6 +2,7 @@
 title: Angular Button コンポーネント – Ignite UI for Angular
 _description: Ignite UI for Angular Button コンポーネントで規格のボタンに定義済みテキスト、画像、およびその他の機能を追加します。今すぐお試しください。
 _keywords: Angular Button コンポーネント, Angular Button コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, Angular UI コンポーネント
+_license: MIT
 _language: ja
 ---
 

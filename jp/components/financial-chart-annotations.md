@@ -2,6 +2,7 @@
 title: Angular ファイナンシャル チャート | 注釈 | インフラジスティックス
 _description: インフラジスティックスの Angular ファイナンシャル チャート コントロールを使用して、十字線レイヤー、最終値レイヤー、コールアウト レイヤーなどの注釈をチャート軸に追加できます。Ignite UI for Angular でチャートと可視化を向上させます。
 _keywords: Angular charts, financial chart, stock chart, callout layer, final value, crosshair, Ignite UI for Angular, Infragistics, Angular チャート, ファイナンシャル チャート, 株価チャート, コールアウト レイヤー, 最終値, 十字線, インフラジスティックス
+_license: commercial
 mentionedTypes: ['FinancialChart']
 _language: ja
 ---

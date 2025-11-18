@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | ファイナンシャル OHLC シリーズ | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用してファイナンシャル OHLC チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
 _keywords: Angular charts, data chart, financial OHLC chart, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, ファイナンシャル OHLC チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart', 'FinancialPriceSeries','PriceDisplayType','CategoryXAxis']
 _language: ja
 ---

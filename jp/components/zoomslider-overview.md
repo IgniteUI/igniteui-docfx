@@ -2,6 +2,7 @@
 title: Angular ズームスライダー | データ可視化ツール | ナビゲーション | ズーム | データ チャート | データ バインディング | インフラジスティックス
 _description: インフラジスティックスの Angular ズームスライダー コントロールを使用して、最小値と最大値を表す 2 つのハンドルのデータ サブセットを簡単に表示します。Ignite UI for Angular ズームスライダーでデータの可視化を向上させます。
 _keywords: zoom slider, Ignite UI for Angular, Infragistics, data chart, ズームスライダー, インフラジスティックス, データ チャート
+_license: commercial
 mentionedTypes: ["ZoomSlider", "XamDataChart"]
 _language: ja
 ---

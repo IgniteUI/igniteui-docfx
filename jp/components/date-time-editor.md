@@ -2,6 +2,7 @@
 title: 日付/時刻エディター ディレクティブ - ネイティブ Angular | Ignite UI for Angular
 _description: Ignite UI for Angular Date Time Editor ディレクティブでは、Date オブジェクトによって日付と時刻を処理できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Date Time Editor ディレクティブAngular Date Time ディレクティブ コントロール, Date Time Editor, Angular Date Time ディレクティブ
+_license: MIT
 _language: ja
 ---
 

@@ -2,6 +2,7 @@
 title: Angular Excel ライブラリ | データ スプレッドシートとテーブル | インフラジスティックス
 _description: インフラジスティックスの Angular Excel ライブラリは、Microsoft Excel 機能を使用してスプレッドシート データを使用した作業が可能になります。Ignite UI for Angular Excel ライブラリを使用して Excel からアプリケーションにデータを簡単に転送できる方法について説明します。
 _keywords: Excel library, Ignite UI for Angular, Infragistics, workbook, Excel ライブラリ, ワークブック, インフラジスティックス
+_license: commercial
 mentionedTypes: ["Workbook", "Worksheet", "Cell", "Formula"]
 _language: ja
 ---

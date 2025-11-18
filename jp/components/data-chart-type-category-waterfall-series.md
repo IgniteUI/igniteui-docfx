@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | ウォーターフォール  チャート | データ バインディング | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用してウォーターフォール  チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
 _keywords: Angular charts, data chart, waterfall chart, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, ウォーター フォール チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---

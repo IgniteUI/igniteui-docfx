@@ -2,6 +2,7 @@
 title: Angular Avatar コンポーネント
 _description: Ignite UI for Angular の Avatar コントロールは、プロファイル ボタンなどのアプリケーションのインスタンスに画像、マテリアル アイコン、またはイニシャルを追加できます。
 _keywords: Angular Avatar コンポーネント, Angular Avatar コントロール, Ignite UI for Angular, Angular UI コンポーネント
+_license: MIT
 _language: ja
 ---
 

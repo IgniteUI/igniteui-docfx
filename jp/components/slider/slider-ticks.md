@@ -2,6 +2,7 @@
 title: 目盛り | つまみトラック |  Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular Slider 目盛りを設定する方法を紹介し、便利なつまみトラックで Angular スライダー ステップを使用してデータ可視化を向上します。
 _keywords: 目盛り, igniteui for angular, インフラジスティックス
+_license: MIT
 _language: ja
 ---
 

@@ -2,6 +2,7 @@
 title: Angular Accordion – 完全機能の縮小可能なパネル - インフラジスティックス
 _description: Angular Accordion は、アコーディオン メニューで垂直方向に展開可能なパネルを作成するために使用します。Ignite UI for Angular Accordion コンポーネントで実行方法をお試しください。
 _keywords: angular accordion, angular accordion コンポーネント, angular アコーディオン, angular アコーディオン コンポーネント, angular アコーディオンの例, ignite ui for angular, angular UI コンポーネント, infragistics, インフラジスティックス
+_license: MIT
 _language: ja
 ---
 

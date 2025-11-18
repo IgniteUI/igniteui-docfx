@@ -2,6 +2,7 @@
 title: Excel コンポーネントの統合 - ネイティブ Angular | Ignite UI for Angular
 _description: ユーザーは編集やオフライン プレゼンテーション用にデータをエクスポートできます。Ignite UI for Angular コンポーネントと統合した Excel 形式でエクスポートできます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Grid, Angular Data Grid, Angular Grid コントロール, Angular Grid コンポーネント, Excel エクスポート, Angular Excel コンポーネント, Angular エクスポート Excel
+_license: commercial
 _language: ja
 ---
 

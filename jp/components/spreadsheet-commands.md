@@ -2,6 +2,7 @@
 title: Angular スプレッドシート | コマンド | インフラジスティックス
 _description: インフラジスティックスの Angular スプレッドシート コントロールのさまざまな機能をアクティブにするためのコマンドを実行できます。Ignite UI for Angular スプレッドシートで ZoomIn や ZoomOut などのコマンドを使用できます。
 _keywords: Spreadsheet, commands, Ignite UI for Angular, Infragistics, スプレッドシート, コマンド, インフラジスティックス
+_license: commercial
 mentionedTypes: ["Spreadsheet", "SpreadsheetAction"]
 _language: ja
 ---

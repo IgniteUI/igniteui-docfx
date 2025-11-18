@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | データソース | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用して、高密度散布シリーズを作成します。Ignite UI for Angular グラフ タイプについて説明します。
 _keywords: Angular charts, data chart, high density scatter, Ignite UI for Angular, Infragistics, data source, Angular チャート, データ チャート, 高密度散布, インフラジスティックス, データソース
+_license: commercial
 mentionedTypes: ['XamDataChart', 'PolarBase']
 _language: ja
 ---

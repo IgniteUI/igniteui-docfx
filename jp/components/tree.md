@@ -2,6 +2,7 @@
 title: Angular Tree コンポーネント - Ignite UI for Angular
 _description: Ignite UI for Angular Tree コンポーネントを使用すると、階層データをツリービュー構造で表示したり、ノードを簡単にカスタマイズしたり、オンデマンドでデータを読み込んだりできます。無料でお試しください。
 _keywords: angular tree, angular tree コンポーネント, angular tree view, angular tree view コンポーネント, angular ui コンポーネント, ignite ui for angular, UI コントロール, インフラジスティックス
+_license: MIT
 _language: ja
 ---
 <style type="text/css">

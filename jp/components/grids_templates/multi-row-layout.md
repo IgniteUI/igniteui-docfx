@@ -2,6 +2,7 @@
 title: Angular Grid の複数行レイアウト - Ignite UI for Angular
 _description: Ignite UI for Angular Data Grid の複数行レイアウト機能を使用して、列をより強力な方法で配置およびサイズ設定します。デモと例をお試しください。	
 _keywords: angular 複数行レイアウト, マテリアル行レイアウト, ignite ui for angular
+_license: commercial
 _language: ja	
 ---
 
