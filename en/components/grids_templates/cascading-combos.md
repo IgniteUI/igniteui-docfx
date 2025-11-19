@@ -1,5 +1,5 @@
 ---
-title: Cascading combos in Angular @@igComponent Grid - Infragistics - commercial license
+title: Cascading combos in Angular @@igComponent Grid - Infragistics
 _description: Grid with Cascading Combos. See the sample here.
 _keywords: angular cascading combos with grid, ignite ui for angular, infragistics
 _license: commercial

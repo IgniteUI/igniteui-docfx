@@ -1,5 +1,5 @@
 ---
-title: Angular Chart Highlight Filter | Data Visualization | Infragistics | commercial license
+title: Angular Chart Highlight Filter | Data Visualization | Infragistics
 _description: Infragistics' Angular Chart Highlight Filter
 _keywords: Angular Charts, Highlighting, Filtering, Infragistics
 _license: commercial

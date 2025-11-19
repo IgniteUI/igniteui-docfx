@@ -1,5 +1,5 @@
 ---
-title: Angular Stacked Chart | Data Visualization | Infragistics | commercial license
+title: Angular Stacked Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Stacked Chart
 _keywords: Angular Charts, Stacked Chart, Stacked 100% Chart, Infragistics
 _license: commercial

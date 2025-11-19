@@ -1,5 +1,5 @@
 ---
-title: Angular Excel Like Grid - Paste Form Excel - Infragistics - commercial license 
+title: Angular Excel Like Grid - Paste Form Excel - Infragistics 
 _description: Configure the Angular Grid to paste data from excel, by using rich and performant API with less code, and use the rich API do export selected grid data easily.
 _keywords: export selected, igniteui for angular, infragistics
 _license: commercial

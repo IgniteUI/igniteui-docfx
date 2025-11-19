@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Editing - Ignite UI for Angular - commercial license
+title: Angular Grid Editing - Ignite UI for Angular
 _description: Get a powerful public API and an easy way to perform data manipulations like creating, updating, or deleting records. See the Angular data grid editing options!
 _keywords: data manipulation, ignite ui for angular, infragistics
 _license: commercial
@@ -10,7 +10,7 @@ _license: commercial
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Editing - Ignite UI for Angular - commercial license
+title: Angular Tree Grid Editing - Ignite UI for Angular
 _description: Get a powerful public API and an easy way to perform data manipulations like creating, updating, or deleting records. See the Angular data grid editing options!
 _keywords: data manipulation, ignite ui for angular, infragistics
 _license: commercial
@@ -20,7 +20,7 @@ _canonicalLink: grid/editing
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Editing - Ignite UI for Angular - commercial license
+title: Angular Hierarchical Grid Editing - Ignite UI for Angular
 _description: Get a powerful public API and an easy way to perform data manipulations like creating, updating, or deleting records. See the Angular data grid editing options!
 _keywords: data manipulation, ignite ui for angular, infragistics
 _license: commercial

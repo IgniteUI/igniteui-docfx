@@ -1,5 +1,5 @@
 ---
-title: Angular Data Aggregations | Data Visualization | Infragistics | commercial license
+title: Angular Data Aggregations | Data Visualization | Infragistics
 _description: Infragistics' Angular Data Aggregations
 _keywords: Angular Charts, Markers, Infragistics
 _license: commercial

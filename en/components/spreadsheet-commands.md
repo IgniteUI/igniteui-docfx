@@ -1,5 +1,5 @@
 ---
-title: Angular Spreadsheet | Commands | Infragistics | commercial license
+title: Angular Spreadsheet | Commands | Infragistics
 _description: Perform commands to activate different features of Infragistics' Angular spreadsheet control. Learn commands such as ZoomIn and ZoomOut with Ignite UI for Angular spreadsheet!
 _keywords: Spreadsheet, commands, Ignite UI for Angular, Infragistics
 _license: commercial

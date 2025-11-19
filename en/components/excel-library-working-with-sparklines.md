@@ -1,5 +1,5 @@
 ---
-title: Angular Excel Library| Working with Sparklines | Infragistics | commercial license
+title: Angular Excel Library| Working with Sparklines | Infragistics
 _description: Use sparkline charts in Infragistics' Angular excel library to visual data trends across a region of cells in your worksheet. View Ignite UI for Angular excel engine tutorials!
 _keywords: Excel library, sparkline chart, Ignite UI for Angular, Infragistics
 _license: commercial

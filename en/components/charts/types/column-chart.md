@@ -1,5 +1,5 @@
 ---
-title: Angular Column Chart | Data Visualization | Infragistics | commercial license
+title: Angular Column Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Column Chart
 _keywords: Angular Charts, Column Chart, Column Graph, Vertical Bar Chart, Infragistics
 _license: commercial

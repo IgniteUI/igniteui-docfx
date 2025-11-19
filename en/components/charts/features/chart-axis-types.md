@@ -1,5 +1,5 @@
 ---
-title: Angular Axis Types | Data Visualization | Infragistics | commercial license
+title: Angular Axis Types | Data Visualization | Infragistics
 _description: Infragistics' Angular Axis Types
 _keywords: Angular Axis, Options, Title, Labels, Gap, Overlap, Range, Scale, Mode, Infragistics
 _license: commercial

@@ -1,5 +1,5 @@
 ---
-title: Angular Shape Chart | Data Visualization | Infragistics | commercial license
+title: Angular Shape Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Shape Chart
 _keywords: Angular Charts, Shape Chart, Infragistics
 _license: commercial

@@ -1,5 +1,5 @@
 ---
-title: Angular Chart Overlays | Data Visualization Tools | Value Overlay | Infragistics | commercial license
+title: Angular Chart Overlays | Data Visualization Tools | Value Overlay | Infragistics
 _description: Use Infragistics Ignite UI for Angular chart control's value overlay feature to place horizontal or vertical lines at a single numeric value. Learn about our Ignite UI for Angular graph types!
 _keywords: Angular charts, data chart, value overlay, Ignite UI for Angular, Infragistics
 _license: commercial

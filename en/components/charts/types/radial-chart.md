@@ -1,5 +1,5 @@
 ---
-title: Angular Radial Chart | Data Visualization | Infragistics | commercial license
+title: Angular Radial Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Radial Chart
 _keywords: Angular Charts, Radial Chart, Infragistics
 _license: commercial

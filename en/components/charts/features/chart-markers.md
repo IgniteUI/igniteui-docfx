@@ -1,5 +1,5 @@
 ---
-title: Angular Chart Markers | Data Visualization | Infragistics | commercial license
+title: Angular Chart Markers | Data Visualization | Infragistics
 _description: Infragistics' Angular Chart Markers
 _keywords: Angular Charts, Markers, Infragistics
 _license: commercial

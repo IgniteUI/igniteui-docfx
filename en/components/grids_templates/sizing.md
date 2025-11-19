@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Sizing - Ignite UI for Angular - commercial license
+title: Angular Grid Sizing - Ignite UI for Angular
 _description: Understand how the Angular grid sizing works and learn how to use the width and height in order to accommodate the different scenarios that users can have.
 _keywords: angular grid sizing, igniteui for angular, infragistics
 _license: commercial
@@ -10,7 +10,7 @@ _license: commercial
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Sizing - Ignite UI for Angular - commercial license
+title: Angular Tree Grid Sizing - Ignite UI for Angular
 _description: Understand how the Angular grid sizing works and learn how to use the width and height in order to accommodate the different scenarios that users can have.
 _keywords: angular grid sizing, igniteui for angular, infragistics
 _license: commercial
@@ -20,7 +20,7 @@ _canonicalLink: grid/sizing
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Sizing - Ignite UI for Angular - commercial license
+title: Angular Hierarchical Grid Sizing - Ignite UI for Angular
 _description: Understand how the Angular grid sizing works and learn how to use the width and height in order to accommodate the different scenarios that users can have.
 _keywords:  angular grid sizing, igniteui for angular, infragistics
 _license: commercial

@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Sorting - Ignite UI for Angular - commercial license
+title: Angular Grid Sorting - Ignite UI for Angular
 _description: Get started with the Angular sorting feature of Ignite for Angular UI grid! Configure a mix of sortable columns & change the display order of data records.
 _keywords: angular sort, ignite ui for angular, infragistics
 _license: commercial
@@ -10,7 +10,7 @@ _license: commercial
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Sorting - Ignite UI for Angular - commercial license
+title: Angular Tree Grid Sorting - Ignite UI for Angular
 _description: Get started with the Angular sorting feature of Ignite for Angular UI grid! Configure a mix of sortable columns & change the display order of data records.
 _keywords: angular sort, ignite ui for angular, infragistics
 _license: commercial
@@ -20,7 +20,7 @@ _canonicalLink: grid/sorting
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Sorting - Ignite UI for Angular - commercial license
+title: Angular Hierarchical Grid Sorting - Ignite UI for Angular
 _description: Get started with the Angular sorting feature of Ignite for Angular UI grid! Configure a mix of sortable columns & change the display order of data records.
 _keywords: angular sort, ignite ui for angular, infragistics
 _license: commercial

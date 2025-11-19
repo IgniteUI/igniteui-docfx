@@ -1,5 +1,5 @@
 ---
-title: Angular Chart Data Legend | Data Visualization Tools | Infragistics | commercial license
+title: Angular Chart Data Legend | Data Visualization Tools | Infragistics
 _description: Use Infragistics Ignite UI for Angular chart with the data legend!
 _keywords: Angular charts, chart legend, legend, legend types, Ignite UI for Angular, Infragistics
 _license: commercial
