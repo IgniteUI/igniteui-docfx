@@ -27,42 +27,42 @@ You can create the Angular Pie Chart in the [`IgxPieChartComponent`]({environmen
 
 Pie Charts are appropriate for small data sets and are easy to read at a glance. Pie charts are just one type of part-to-whole visualization. Others include:
 
-- Pie
-- Doughnut (Ring)
-- Funnel
-- Stacked Area
-- Stacked 100% Area (Stacked Percentage Area)
-- Stacked Bar
-- Stacked 100% Bar (Stacked Percentage Bar)
-- Treemap
-- Waterfall
+*   Pie
+*   Doughnut (Ring)
+*   Funnel
+*   Stacked Area
+*   Stacked 100% Area (Stacked Percentage Area)
+*   Stacked Bar
+*   Stacked 100% Bar (Stacked Percentage Bar)
+*   Treemap
+*   Waterfall
 
 The Angular Pie Chart includes interactive features that give the viewer tools to analyze data, like:
 
-- Legends
-- Slice Explosion
-- Slice Selection
-- Chart Animations
+*   Legends
+*   Slice Explosion
+*   Slice Selection
+*   Chart Animations
 
 Best Practices for a Pie Chart:
 
-- Comparing slices or segments as percentage values in proportion to a total value or whole.
-- Showing how a group of categories is broken into smaller segments.
-- Presenting small, non-hierarchical data sets (less than 6 to 8 segments of data).
-- Ensuring data segments add up to 100%.
-- Arranging the order of data from largest (highest) to smallest (least).
-- Using standard presentation techniques such as starting in the 12 o'clock position and continuing clockwise.
-- Ensuring the color palette is distinguishable for segments/slices of the parts.
-- Considering data labels in segments vs. legends for ease of reading.
-- Choosing an alternative chart to Pie such as Bar or Ring based on ease of comprehension.
-- Avoiding positioning multiple pie charts next to each other for comparative analysis.
+*   Comparing slices or segments as percentage values in proportion to a total value or whole.
+*   Showing how a group of categories is broken into smaller segments.
+*   Presenting small, non-hierarchical data sets (less than 6 to 8 segments of data).
+*   Ensuring data segments add up to 100%.
+*   Arranging the order of data from largest (highest) to smallest (least).
+*   Using standard presentation techniques such as starting in the 12 o'clock position and continuing clockwise.
+*   Ensuring the color palette is distinguishable for segments/slices of the parts.
+*   Considering data labels in segments vs. legends for ease of reading.
+*   Choosing an alternative chart to Pie such as Bar or Ring based on ease of comprehension.
+*   Avoiding positioning multiple pie charts next to each other for comparative analysis.
 
 Do Not Use Pie Chart When:
 
-- Comparing change over time —use a Bar, Line or Area chart.
-- Requiring precise data comparison —use a Bar, Line or Area chart.
-- You have more than 6 or 8 segments (high data volume) — consider a Bar, Line or Area chart if it works for your data story.
-- It would be easier for the viewer to perceive the value difference in a Bar chart.
+*   Comparing change over time —use a Bar, Line or Area chart.
+*   Requiring precise data comparison —use a Bar, Line or Area chart.
+*   You have more than 6 or 8 segments (high data volume) — consider a Bar, Line or Area chart if it works for your data story.
+*   It would be easier for the viewer to perceive the value difference in a Bar chart.
 
 ## Angular Pie Chart Legend
 
@@ -119,16 +119,16 @@ There is a property called [`selectionMode`]({environment:dvApiBaseUrl}/products
 
 The pie chart supports three different selection modes.
 
-- Single - When the mode is set to single, only one slice can be selected at a time. When you select a new slice the previously selected slice will be deselected and the new one will become selected.
-- Multiple - When the mode is set to Multiple, many slices can be selected at once. If you click on a slice, it will become selected and clicking on a different slice will also select that slice leaving the previous slice selected.
-- Manual - When the mode is set to Manual, selection is disabled.
+*   Single - When the mode is set to single, only one slice can be selected at a time. When you select a new slice the previously selected slice will be deselected and the new one will become selected.
+*   Multiple - When the mode is set to Multiple, many slices can be selected at once. If you click on a slice, it will become selected and clicking on a different slice will also select that slice leaving the previous slice selected.
+*   Manual - When the mode is set to Manual, selection is disabled.
 
 The pie chart has 4 events associated with selection:
 
-- SelectedItemChanging
-- SelectedItemChanged
-- SelectedItemsChanging
-- SelectedItemsChanged
+*   SelectedItemChanging
+*   SelectedItemChanged
+*   SelectedItemsChanging
+*   SelectedItemsChanged
 
 The events that end in “Changing” are cancelable events which means you can stop the selection of a slice by setting the event argument property `Cancel` to true. When set to true the associated property will not update and the slice will not become selected. This is useful for scenarios where you want to keep users from being able to select certain slices based on the data inside it.
 
@@ -186,20 +186,20 @@ The Radial Pie Chart belongs to a group of Radial Charts and uses belongs to a g
 
 ## Additional Resources
 
-- [Donut Chart](donut-chart.md)
-- [Polar Chart](polar-chart.md)
-- [Radial Chart](radial-chart.md)
+*   [Donut Chart](donut-chart.md)
+*   [Polar Chart](polar-chart.md)
+*   [Radial Chart](radial-chart.md)
 
 ## API References
 
 The following table lists API members mentioned in the above sections:
 
-- [`legendItemBadgeTemplate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#legendItemBadgeTemplate)
-- [`legendItemTemplate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#legendItemTemplate)
-- [`legendLabelMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#legendLabelMemberPath)
-- [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#othersCategoryThreshold)
-- [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#othersCategoryType)
-- [`selectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#selectionMode)
+*   [`legendItemBadgeTemplate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#legendItemBadgeTemplate)
+*   [`legendItemTemplate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#legendItemTemplate)
+*   [`legendLabelMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#legendLabelMemberPath)
+*   [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#othersCategoryThreshold)
+*   [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#othersCategoryType)
+*   [`selectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#selectionMode)
 
 |Chart Type       | Control Name   | API Members |
 |-----------------|----------------|------------ |

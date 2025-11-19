@@ -85,9 +85,9 @@ HighlightedHighMemberPath, HighlightedLowMemberPath, HighlightedOpenMemberPath, 
 
 You can find more information about related chart features in these topics:
 
-- [Chart Highlighting](chart-highlighting.md)
-- [Chart Data Tooltip](chart-data-tooltip.md)
-- [Chart Data Aggregations](chart-data-aggregations.md)
+*   [Chart Highlighting](chart-highlighting.md)
+*   [Chart Data Tooltip](chart-data-tooltip.md)
+*   [Chart Data Aggregations](chart-data-aggregations.md)
 
 ## API References
 

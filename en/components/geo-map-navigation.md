@@ -24,8 +24,8 @@ Navigation in the [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/produ
 
 You navigate map content within geographic region bound by these coordinates:
 
-- horizontally from 180°E (negative) to 180°W (positive) longitudes
-- vertically from 85°S (negative) to 85°N (positive) latitudes
+*   horizontally from 180°E (negative) to 180°W (positive) longitudes
+*   vertically from 85°S (negative) to 85°N (positive) latitudes
 
 This code snippet shows how navigate the map using geographic coordinates:
 
@@ -33,8 +33,8 @@ This code snippet shows how navigate the map using geographic coordinates:
 
 Also, you can navigate map content within window rectangle bound by these relative coordinates:
 
-- horizontally from 0.0 to 1.0 values
-- vertically from 0.0 to 1.0 values
+*   horizontally from 0.0 to 1.0 values
+*   vertically from 0.0 to 1.0 values
 
 This code snippet shows how navigate the map using relative window coordinates:
 
@@ -55,7 +55,7 @@ The following table summarizes properties that can be used in navigation of the 
 
 ## API References
 
-- [`actualWindowRect`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#actualWindowRect)
-- [`windowRect`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#windowRect)
-- [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html)
-- [`zoomable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html#zoomable)
+*   [`actualWindowRect`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#actualWindowRect)
+*   [`windowRect`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#windowRect)
+*   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html)
+*   [`zoomable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html#zoomable)
