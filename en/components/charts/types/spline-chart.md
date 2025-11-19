@@ -1,5 +1,5 @@
 ---
-title: Angular Spline Chart | Data Visualization | Infragistics | commercial license
+title: Angular Spline Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Spline Chart
 _keywords: Angular Charts, Spline Chart, Infragistics
 _license: commercial

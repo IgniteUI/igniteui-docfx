@@ -1,5 +1,5 @@
 ---
-title: Angular Chart Annotations | Data Visualization | Infragistics | commercial license
+title: Angular Chart Annotations | Data Visualization | Infragistics
 _description: Infragistics' Angular Chart Annotations
 _keywords: Angular Charts, Annotations, Infragistics
 _license: commercial

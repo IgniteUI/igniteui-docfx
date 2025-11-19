@@ -1,5 +1,5 @@
 ---
-title: Angular Axis Options | Data Visualization | Infragistics | commercial license
+title: Angular Axis Options | Data Visualization | Infragistics
 _description: Infragistics' Angular Axis Options
 _keywords: Angular Axis, Options, Title, Labels, Gap, Overlap, Range, Scale, Mode, Infragistics
 _license: commercial

@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if (igxName === 'IgxGrid') {
 ---
-title: Cell Editing in Angular Data Grid - Ignite UI for Angular - commercial license
+title: Cell Editing in Angular Data Grid - Ignite UI for Angular
 _description: The Grid is using in-cell editing. It has a default cell editing template, but it also lets you define your own custom templates for update-data action. Try it now!
 _keywords: data manipulation, ignite ui for angular, infragistics, excel editing
 _license: commercial
@@ -10,7 +10,7 @@ _license: commercial
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Cell Editing in Angular TreeGrid - Ignite UI for Angular - commercial license
+title: Cell Editing in Angular TreeGrid - Ignite UI for Angular
 _description: The Grid is using in-cell editing. It has a default cell editing template, but it also lets you define your own custom templates for update-data action. Try it now!
 _keywords: data manipulation, ignite ui for angular, infragistics
 _license: commercial
@@ -20,7 +20,7 @@ _canonicalLink: grid/cell-editing
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Cell Editing in Angular HierarchicalGrid - Ignite UI for Angular - commercial license
+title: Cell Editing in Angular HierarchicalGrid - Ignite UI for Angular
 _description: The Grid is using in-cell editing. It has a default cell editing template, but it also lets you define your own custom templates for update-data action. Try it now!
 _keywords: data manipulation, ignite ui for angular, infragistics
 _license: commercial

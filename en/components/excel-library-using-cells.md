@@ -1,5 +1,5 @@
 ---
-title: Angular Excel Library| Using Cells | Infragistics | commercial license
+title: Angular Excel Library| Using Cells | Infragistics
 _description: Learn how to perform operations on Infragistics' Angular excel library's cells such as accessing them, adding formulas and comments, merging cells and formatting cells. View Ignite UI for Angular excel demos!
 _keywords: Excel library,  cell operations, Ignite UI for Angular, Infragistics
 _license: commercial

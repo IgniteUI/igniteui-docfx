@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if (igxName === 'IgxGrid') {
 ---
-title: Column Reordering & Moving in Angular Data Grid - Infragistics - commercial license
+title: Column Reordering & Moving in Angular Data Grid - Infragistics
 _description: Set custom column order & enable columns reordering via drag/drop mouse or touch gestures, or by using the Angular Column Moving API. Try Ignite UI for Angular!
 _keywords: column order, igniteui for angular, infragistics
 _license: commercial
@@ -10,7 +10,7 @@ _license: commercial
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Column Reordering & Moving in Angular Tree Grid - Infragistics - commercial license
+title: Column Reordering & Moving in Angular Tree Grid - Infragistics
 _description: Set custom column order & enable columns reordering via drag/drop mouse or touch gestures, or by using the Angular Column Moving API. Try Ignite UI for Angular!
 _keywords: column order, igniteui for angular, infragistics
 _license: commercial
@@ -20,7 +20,7 @@ _canonicalLink: grid/column-moving
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Column Reordering & Moving in Angular Hierarchical Grid - Infragistics - commercial license
+title: Column Reordering & Moving in Angular Hierarchical Grid - Infragistics
 _description: Set custom column order & enable columns reordering via drag/drop mouse or touch gestures, or by using the Angular Column Moving API. Try Ignite UI for Angular!
 _keywords: column order, igniteui for angular, infragistics
 _license: commercial

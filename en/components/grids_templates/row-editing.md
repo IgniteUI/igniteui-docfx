@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if(igxName==='IgxGrid'){
 ---
-title: Editing Rows in Angular Data Grid - Ignite UI for Angular - commercial license
+title: Editing Rows in Angular Data Grid - Ignite UI for Angular
 _description: Want to enable row editing in Angular Data Grid? Need a powerful API for CRUD operations? Try our Ignite UI for Angular Data Grid rows editing component!
 _keywords: row editing, igniteui for angular, infragistics
 _license: commercial
@@ -10,7 +10,7 @@ _license: commercial
 }
 @@if(igxName!=='IgxGrid'){
 ---
-title: Editing Rows in Angular @@igComponent - Ignite UI for Angular - commercial license
+title: Editing Rows in Angular @@igComponent - Ignite UI for Angular
 _description: Want to enable row editing in Angular @@igComponent? Need a powerful API for CRUD operations? Try our Ignite UI for Angular Data Grid rows editing component!
 _keywords: row editing, igniteui for angular, infragistics
 _license: commercial

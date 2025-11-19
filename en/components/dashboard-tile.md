@@ -1,5 +1,5 @@
 ---
-title: Angular Dashboard Tile Component | Ignite UI for Angular | commercial license
+title: Angular Dashboard Tile Component | Ignite UI for Angular
 _description: See how you can easily get started with Angular Dashboard Tile Component.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Dashboard components, Angular Dashboard Tile controls
 _license: commercial

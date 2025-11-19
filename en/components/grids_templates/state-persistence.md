@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid State Persistence - Ignite UI for Angular - commercial license
+title: Angular Grid State Persistence - Ignite UI for Angular
 _description: Easily save and restore the grid state, using our comprehensive Ignite UI toolset for Angular. Learn how to restore columns, explore usage, and see demos!
 _keywords: state persistence, ignite ui for angular, infragistics
 _license: commercial
@@ -10,7 +10,7 @@ _license: commercial
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid State Persistence - Ignite UI for Angular - commercial license
+title: Angular Tree Grid State Persistence - Ignite UI for Angular
 _description: Easily save and restore the grid state, using our comprehensive Ignite UI toolset for Angular. Learn how to restore columns, explore usage, and see demos!
 _keywords: state persistence, ignite ui for angular, infragistics
 _license: commercial
@@ -20,7 +20,7 @@ _canonicalLink: grid/state-persistence
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid State Persistence - Ignite UI for Angular - commercial license
+title: Angular Hierarchical Grid State Persistence - Ignite UI for Angular
 _description: Easily save and restore the grid state, using our comprehensive Ignite UI toolset for Angular. Learn how to restore columns, explore usage, and see demos!
 _keywords: state persistence, ignite ui for angular, infragistics
 _license: commercial
@@ -31,7 +31,7 @@ _canonicalLink: grid/state-persistence
 
 @@if (igxName === 'IgxPivotGrid') {
 ---
-title: Angular Pivot Grid State Persistence - Ignite UI for Angular - commercial license
+title: Angular Pivot Grid State Persistence - Ignite UI for Angular
 _description: Easily save and restore the grid state, using our comprehensive Ignite UI toolset for Angular. Learn how to restore configuration, explore usage, and see demos!
 _keywords: state persistence, ignite ui for angular, infragistics
 _license: commercial

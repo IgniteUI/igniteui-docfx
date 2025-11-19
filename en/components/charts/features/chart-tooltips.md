@@ -1,5 +1,5 @@
 ---
-title: Angular Chart Tooltips | Data Visualization | Infragistics | commercial license
+title: Angular Chart Tooltips | Data Visualization | Infragistics
 _description: Infragistics' Angular Chart Tooltips
 _keywords: Angular Charts, Tooltips, Infragistics
 _license: commercial

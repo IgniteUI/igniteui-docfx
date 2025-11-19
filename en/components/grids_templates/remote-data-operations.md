@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if (igxName === 'IgxGrid') {
 ---
-title: Angular Grid Remote Data Operations - Ignite UI for Angular - commercial license
+title: Angular Grid Remote Data Operations - Ignite UI for Angular
 _description: Start using Angular remote data operations like remote filtering, remote sorting, and remote scrolling to load data from a server with Ignite UI for Angular.
 _keywords: angular remote data operations, ignite ui for angular, infragistics
 _license: commercial
@@ -10,7 +10,7 @@ _license: commercial
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Remote Data Operations - Ignite UI for Angular - commercial license
+title: Angular Tree Remote Data Operations - Ignite UI for Angular
 _description: Start using Angular remote data operations like remote filtering, remote sorting, and remote scrolling to load data from a server with Ignite UI for Angular.
 _keywords: angular remote data operations, ignite ui for angular, infragistics
 _license: commercial
@@ -20,7 +20,7 @@ _canonicalLink: grid/remote-data-operations
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid Remote Data Operations - Ignite UI for Angular - commercial license
+title: Angular Hierarchical Grid Remote Data Operations - Ignite UI for Angular
 _description: Start using Angular remote data operations like remote filtering, remote sorting, and remote scrolling to load data from a server with Ignite UI for Angular.
 _keywords: angular remote data operations, ignite ui for angular, infragistics
 _license: commercial

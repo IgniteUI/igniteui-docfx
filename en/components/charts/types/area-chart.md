@@ -1,5 +1,5 @@
 ---
-title: Angular Area Chart | Data Visualization | Infragistics | commercial license
+title: Angular Area Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Area Chart
 _keywords: Angular Charts, Area Chart, Infragistics
 _license: commercial
