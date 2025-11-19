@@ -263,8 +263,9 @@ Following the simplest approach, you can use CSS variables to customize the appe
 
 By changing the values of these CSS variables, you can alter the entire look of the button.
 
-Another way to style the button is by using **Sass**, along with our type-specific theme functions: [`flat-button-theme`]({environment:sassApiUrl}/themes#function-flat-button-theme), [`outlined-button-theme`]({environment:sassApiUrl}/themes#function-outlined-button-theme), [`contained-button-theme`]({environment:sassApiUrl}/themes#function-contained-button-theme), and [`fab-button-theme`]({environment:sassApiUrl}/themes#function-fab-button-theme). Each of them will target only the buttons of that specific type.
+Another way to style the button is by using **Sass**, along with our type-specific theme functions: [`flat-button-theme`]({environment:sassApiUrl}/themes#function-flat-button-theme), [`outlined-button-theme`]({environment:sassApiUrl}/themes#function-outlined-button-theme), [`contained-button-theme`]({environment:sassApiUrl}/themes#function-contained-button-theme), and [`fab-button-theme`]({environment:sassApiUrl}/themes#function-fab-button-theme). 
 
+Each of them will target only the buttons of that specific type.
 
 To start styling the button using **Sass**, first import the `index` file, which includes all theme functions and component mixins:
 
@@ -308,7 +309,12 @@ Finally, **include** the custom theme in your application:
 }
 ```
 
-With the type-specific theme functions, styling buttons is much easier. For [`contained-button-theme`]({environment:sassApiUrl}/themes#function-contained-button-theme) and [`fab-button-theme`]({environment:sassApiUrl}/themes#function-fab-button-theme) functions, you only need to provide a color value to the `$background` parameter. All other button state and text colors (if they are not provided) will then be automatically generated and applied based on that value. The text color is determined by the newly added [`adaptive-contrast`]({environment:sassApiUrl}/color#function-adaptive-contrast) function, which calculates whether black or white provides better contrast against the supplied background color.
+With the type-specific theme functions, styling buttons is much easier.
+
+For [`contained-button-theme`]({environment:sassApiUrl}/themes#function-contained-button-theme) and [`fab-button-theme`]({environment:sassApiUrl}/themes#function-fab-button-theme) functions, you only need to provide a color value to the `$background` parameter. 
+All other button state and text colors (if they are not provided) will then be automatically generated and applied based on that value. 
+
+The text color is determined by the newly added [`adaptive-contrast`]({environment:sassApiUrl}/color#function-adaptive-contrast) function, which calculates whether black or white provides better contrast against the supplied background color.
 
 For [`flat-button-theme`]({environment:sassApiUrl}/themes#function-flat-button-theme) and [`outlined-button-theme`]({environment:sassApiUrl}/themes#function-outlined-button-theme) functions, the button state colors are also automatically generated and applied, but they are derived from the supplied `$foreground` parameter instead of `$background`.
 
