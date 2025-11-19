@@ -1,7 +1,7 @@
-<!-- markdownlint-disable MD003 -->
+<!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if(igxName==='IgxGrid') {
 ---
-title: Angular Grid Toolbar - Ignite UI for Angular - commercial license 
+title: Angular Grid Toolbar - Ignite UI for Angular - commercial license
 _description: Use Angular Data Grid Toolbar for essential UI operations. Hosts different UI controls for the Grid’s features - column hiding, pinning, excel exporting, etc.
 _keywords: angular toolbar, igniteui for angular, infragistics
 _license: commercial

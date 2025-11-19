@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD003 MD024 -->
+<!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if (igxName === 'IgxGrid') {
 ---
 title: Column Data Types in Angular - Ignite UI for Angular - commercial license
