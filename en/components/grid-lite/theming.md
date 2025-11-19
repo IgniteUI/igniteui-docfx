@@ -1,7 +1,8 @@
 ---
-title: Angular Grid Lite Theming
-_description: Styling the Grid Lite. See demos & examples!
+title: Angular Grid Lite Theming | Ignite UI for Angular | MIT license
+_description: Styling the Grid Lite in Ignite UI for Angular happens easily and quickly. See demos and examples! Try our open-source components and build your next app.
 _keywords: styling, theming, {Platform}, {ComponentKeywords}, {ProductName}, Infragistics
+_license: MIT
 mentionedTypes: [{ComponentApiMembers}]
 namespace: Infragistics.Controls
 ---
