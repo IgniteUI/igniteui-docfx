@@ -14,6 +14,7 @@ The Ignite UI for Angular Grid Lite component is part of Infragistics’ new ope
 The Angular Grid Lite delivers essential data-display functionality with minimal overhead and the performance users expect. It is designed for developers who need fast, lightweight data presentation without the complexity of an enterprise grid.
 
 Angular Grid Lite features:
+
 - Column Filtering
 - Hiding
 - Resizing
