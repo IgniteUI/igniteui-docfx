@@ -1,5 +1,5 @@
 ---
-title: Angular Drag and Drop | IgniteUI for Angular | インフラジスティックス
+title: Angular Drag and Drop | IgniteUI for Angular | インフラジスティックス | MITライセンス
 _description: Ignite UI for Angular Drag and Drop ディレクティブを使用してページの要素のドラッグ実行する方法を紹介します。
 _keywords: Angular Drag and Drop, Angular Drag and Drop ディレクティブ, Angular UI コントロール, Ignite UI for Angular, インフラジスティックス
 _license: MIT

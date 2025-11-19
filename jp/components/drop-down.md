@@ -1,5 +1,5 @@
 ---
-title: Angular Drop Down コンポーネント –  Ignite UI For Angular
+title: Angular Drop Down コンポーネント –  Ignite UI For Angular - MITライセンス
 _description: インタラクティブ機能を追加し、アプリ内の項目のスクロール可能なリストにスタイル設定オプションを表示します。今すぐ Ignite UI for Angular の Drop Down コンポーネントをお試しください。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Drop Down コンポーネント, Angular Drop Down コントロール
 _license: MIT
