@@ -1,5 +1,5 @@
 ---
-title: Angular Excel Library| Data Spreadsheet | Infragistics | commercial license
+title: Angular Excel Library| Data Spreadsheet | Infragistics
 _description: Use the Excel Library to work with spreadsheet data using Microsoft Excel features. Easily transfer data from excel to your application.
 _keywords: Excel library, Ignite UI for Angular, Infragistics
 _license: commercial

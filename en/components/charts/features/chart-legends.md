@@ -1,5 +1,5 @@
 ---
-title: Angular Chart Legends | Data Visualization Tools | Infragistics | commercial license
+title: Angular Chart Legends | Data Visualization Tools | Infragistics
 _description: Use Infragistics Ignite UI for Angular chart with legends in horizontal or vertical orientation!
 _keywords: Angular charts, chart legend, legend, legend types, Ignite UI for Angular, Infragistics
 _license: commercial

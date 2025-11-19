@@ -1,5 +1,5 @@
 ---
-title: Angular Bubble Chart | Data Visualization | Infragistics | commercial license
+title: Angular Bubble Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Bubble Chart
 _keywords: Angular Charts, Bubble Chart, Infragistics
 _license: commercial

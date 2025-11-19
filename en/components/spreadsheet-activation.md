@@ -1,5 +1,5 @@
 ---
-title: Angular Spreadsheet | Activation | Infragistics | commercial license
+title: Angular Spreadsheet | Activation | Infragistics
 _description: Learn how to use the activation feature of the  Angular spreadsheet control which is split between the cells, panes and worksheets. Check out the Ignite UI for Angular spreadsheet demos!
 _keywords: Excel Spreadsheet, activation, Ignite UI for Angular, Infragistics
 _license: commercial

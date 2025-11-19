@@ -1,5 +1,5 @@
 ---
-title: Angular Spreadsheet | Configuring | Cell | Formula | Navigation | Selection | Infragistics | commercial license
+title: Angular Spreadsheet | Configuring | Cell | Formula | Navigation | Selection | Infragistics
 _description: Learn how configuring your Angular spreadsheets with Ignite UI for Angular helps you better chart data. Improve your data visualization with Infragistics!
 _keywords: Excel Spreadsheet,  Ignite UI for Angular, Infragistics
 _license: commercial

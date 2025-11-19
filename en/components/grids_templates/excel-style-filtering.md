@@ -1,7 +1,7 @@
 <!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if(igxName === 'IgxGrid'){
 ---
-title: Excel Style Filtering in Angular Data Grid- Ignite UI for Angular - commercial license
+title: Excel Style Filtering in Angular Data Grid- Ignite UI for Angular
 _description: Learn how to configure Excel filtering in Angular Data Grid. You can enable/disable various options and customize the Excel style filter menu the way you want.
 _keywords: excel like filter, igniteui for angular, infragistics
 _license: commercial
@@ -10,7 +10,7 @@ _license: commercial
 }
 @@if(igxName !== 'IgxGrid'){
 ---
-title: Excel Style Filtering in Angular @@igComponent - Ignite UI for Angular - commercial license
+title: Excel Style Filtering in Angular @@igComponent - Ignite UI for Angular
 _description: Learn how to configure Excel filtering in Angular @@igComponent. You can enable/disable various options and customize the Excel style filter menu the way you want.
 _keywords: excel like filter, igniteui for angular, infragistics
 _license: commercial

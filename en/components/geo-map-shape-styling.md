@@ -1,5 +1,5 @@
 ---
-title: Angular Map | Data Visualization Tools | Shape Styling | Conditional Formatting | Infragistics | commercial license
+title: Angular Map | Data Visualization Tools | Shape Styling | Conditional Formatting | Infragistics
 _description: Learn how to apply custom styling to Infragistics' Angular map's shape series. Check out Ignite UI for Angular map tutorials!
 _keywords: Angular map, custom styling, Ignite UI for Angular, Infragistics, conditional formatting, shape styling
 _license: commercial

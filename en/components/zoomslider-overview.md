@@ -1,5 +1,5 @@
 ---
-title: Angular ZoomSlider | Data Visualization Tools | Navigation | Zooming | DataChart | Data Binding | Infragistics | commercial license
+title: Angular ZoomSlider | Data Visualization Tools | Navigation | Zooming | DataChart | Data Binding | Infragistics
 _description: Use Infragistics' Angular zoom slider control to easily display a subset of data with two handles representing minimum and maximum values. Improve your data visualization with Ignite UI for Angular zoom slider!
 _keywords: zoom slider, Ignite UI for Angular, Infragistics, data chart
 _license: commercial
