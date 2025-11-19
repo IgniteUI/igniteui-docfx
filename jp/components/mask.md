@@ -1,5 +1,5 @@
 ---
-title: Mask ディレクティブ - ネイティブ Angular | Ignite UI for Angular
+title: Mask ディレクティブ - ネイティブ Angular | Ignite UI for Angular | MITライセンス
 _description: Ignite UI for Angular Mask ディレクティブを使用すると、構成可能なマスク ルールに基づいてユーザー入力を制御し、表示される値を書式設定できます。入力オプションも構成できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント, Angular, ネイティブ Angular コンポーネント スィート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Mask ディレクティブ, マスク, ディレクティブ, マスク エディター, Angular Mask エディター
 _license: MIT

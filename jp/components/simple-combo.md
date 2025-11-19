@@ -1,5 +1,5 @@
 ---
-title: 単一選択 ComboBox コンポーネント
+title: 単一選択 ComboBox コンポーネント - MITライセンス
 _description: Ignite UI for Angular ComboBox は、基本的な HTML 入力、選択、フィルタリング、およびカスタム ドロップダウン リストの機能を組み合わせた強力な入力を提供します。無料でお試しください。
 _keywords: angular 単一選択 combobox, angular combobox コンポーネント, angular 単一選択 combobox コンポーネント, angular combo, angular ui コンポーネント, ignite ui for angular, インフラジスティックス
 _license: MIT

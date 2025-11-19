@@ -1,5 +1,5 @@
 ---
-title: Angular スプリッター | 分割されたペイン |  Ignite UI for Angular | インフラジスティックス
+title: Angular スプリッター | 分割されたペイン |  Ignite UI for Angular | インフラジスティックス | MITライセンス
 _description: Angular Splitter コンポーネントを使用して、ビューを水平または垂直に複数の縮小可能なスプリット ペインに分割する単純な分割レイアウトを作成します。
 _keywords: angular splitter, angular splitterコンポーネント, angular 分割ビュー コンポーネント, angular ui コンポーネント, igniteui for angular, インフラジスティックス
 _license: MIT

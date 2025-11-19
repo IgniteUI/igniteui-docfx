@@ -1,5 +1,5 @@
 ---
-title: Snackbar コンポーネント
+title: Snackbar コンポーネント - MITライセンス
 _description: Ignite UI for Angular Snackbar を使用すると、単一行メッセージをモバイルおよびデスクトップ アプリケーションに含みます。
 _keywords: Angular Snackbar コンポーネント, Angular Snackbar コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
 _license: MIT

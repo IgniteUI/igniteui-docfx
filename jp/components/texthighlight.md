@@ -1,5 +1,5 @@
 ---
-title: Angular Text Highlight ディレクティブ | Ignite UI for Angular
+title: Angular Text Highlight ディレクティブ | Ignite UI for Angular | MITライセンス
 _description: Ignite UI for Angular TextHighlight ディレクティブは、テキスト部分のハイライトやアクティブ ハイライトがあります。
 _keywords: Angular TextHighlight ディレクティブ, Angular Text Highlight ディレクティブ, IgxTextHighlight ディレクティブ, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コンポーネント, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
 _license: MIT

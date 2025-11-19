@@ -1,5 +1,5 @@
 ---
-title: Angular Banner コンポーネント
+title: Angular Banner コンポーネント - MITライセンス
 _description: Ignite UI for Angular Banner コンポーネントは、簡単に非侵入型メッセージをオプション操作と統合できます。
 _keywords: Angular Banner コンポーネント, Angular Banner コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Angular UI コンポーネント
 _license: MIT

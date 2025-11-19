@@ -1,5 +1,5 @@
 ---
-title: Radio と Radio Group
+title: Radio と Radio Group - MITライセンス
 _description: Ignite UI for Angular Radio Button コントロールおよび Radio Group コントロールは、テンプレート主導およびリアクティブ フォームで選択可能なオプションのリストを表示します。
 _keywords: Angular Radio Group コンポーネント, Angular Radio Group コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
 _license: MIT
