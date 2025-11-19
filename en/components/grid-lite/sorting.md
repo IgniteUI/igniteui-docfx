@@ -1,7 +1,8 @@
 ---
-title: Angular Grid Lite Sorting
-_description: Sort operations, sort customization and remote sorting for {ComponentTitle}. See demos & examples!
+title: Angular Grid Lite Sorting | Ignite UI for Angular | MIT license
+_description: Try Angular Grid Lite with sort operations, sort customization, and remote sorting for Angular Grid Lite. See demos and examples and build your next app.
 _keywords: sorting, {Platform}, {ComponentKeywords}, {ProductName}, Infragistics
+_license: MIT
 mentionedTypes: [{ComponentApiMembers}]
 namespace: Infragistics.Controls
 ---

@@ -1,7 +1,8 @@
 ---
-title: Angular Grid Lite Filtering
-_description: Filter operations, filter customization and remote filtering for {ComponentTitle}. See demos & examples!
+title: Angular Grid Lite Filtering | Ignite UI for Angular | MIT license
+_description: Filter operations, filter customization, and remote filtering for Angular Grid Lite. Create apps with our open-source Angular Grid Lite. Try it now.
 _keywords: filtering, {Platform}, {ComponentKeywords}, {ProductName}, Infragistics
+_license: MIT
 mentionedTypes: [{ComponentApiMembers}]
 namespace: Infragistics.Controls
 ---

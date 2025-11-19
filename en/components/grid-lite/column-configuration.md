@@ -1,7 +1,8 @@
 ---
-title: Angular Grid Lite Cell Template
-_description: Grid Lite column configuration and column properties. See demos & examples!
+title: Angular Grid Lite Cell Template | Ignite UI for Angular | MIT license
+_description: Grid Lite column configuration and column properties. Try our open-source Angular Grid Lite - lightweight and packed with essential features.
 _keywords: column configuration, {Platform}, {ComponentKeywords}, {ProductName}, Infragistics
+_license: MIT
 mentionedTypes: [{ComponentApiMembers}]
 namespace: Infragistics.Controls
 ---
