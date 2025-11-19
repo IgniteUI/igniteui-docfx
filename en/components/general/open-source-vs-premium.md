@@ -18,7 +18,7 @@ They are ideal for lightweight applications that need essential functionality wi
 
 Our Ignite UI Premium components come with advanced enterprise features and are used for complex applications requiring high-performance and richer functionality. Premium components include:
 
-### Grids with advanced components:
+### Grids with advanced components
 
 - Data Grid, Hierarchical Grid, Tree Grid, Pivot Grid
 - Dock Manager

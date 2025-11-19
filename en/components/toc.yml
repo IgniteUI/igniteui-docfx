@@ -748,101 +748,132 @@
     - name: Activation
       href: spreadsheet-activation.md
       new: false
+      premium: true
     - name: Chart Adapter
       href: spreadsheet-chart-adapter.md
       new: false
+      premium: true
     - name: Clipboard
       href: spreadsheet-clipboard.md
       new: false
+      premium: true
     - name: Conditional Formatting
       href: spreadsheet-conditional-formatting.md
       new: false
+      premium: true
     - name: Configuring Spreadsheet
       href: spreadsheet-configuring.md
       new: false
+      premium: true
     - name: Commands
       href: spreadsheet-commands.md
       new: false
+      premium: true
     - name: Data Validation
       href: spreadsheet-data-validation.md
       new: false
+      premium: true
     - name: Hyperlinks
       href: spreadsheet-hyperlinks.md
       new: false
+      premium: true
     - name: Excel Utility
       href: excel-utility.md
       new: false
+      premium: true
 - name: Dashboards
   header: true
 - name: Dashboard Tile
   href: dashboard-tile.md
   preview: true
+  premium: true
 - name: Charts
   href: charts/chart-overview.md
   header: true
 - name: Area Chart
   href: charts/types/area-chart.md
   new: false
+  premium: true
 - name: Bar Chart
   href: charts/types/bar-chart.md
   new: false
+  premium: true
 - name: Bubble Chart
   href: charts/types/bubble-chart.md
   new: false
+  premium: true
 - name: Column Chart
   href: charts/types/column-chart.md
   new: false
+  premium: true
 - name: Composite Chart
   href: charts/types/composite-chart.md
   new: false
+  premium: true
 - name: Data Pie Chart
   href: charts/types/data-pie-chart.md
   new: true
+  premium: true
 - name: Donut Chart
   href: charts/types/donut-chart.md
   new: false
+  premium: true
 - name: Financial / Stock Chart
   href: charts/types/stock-chart.md
   new: false
+  premium: true
 - name: Line Chart
   href: charts/types/line-chart.md
   updated: false
+  premium: true
 - name: Pie Chart
   href: charts/types/pie-chart.md
   new: false
+  premium: true
 - name: Point Chart
   href: charts/types/point-chart.md
   new: false
+  premium: true
 - name: Polar Chart
   href: charts/types/polar-chart.md
   new: false
+  premium: true
 - name: Radial Chart
   href: charts/types/radial-chart.md
   new: false
+  premium: true
 - name: Scatter Chart
   href: charts/types/scatter-chart.md
   new: false
+  premium: true
 - name: Shape Chart
   href: charts/types/shape-chart.md
   new: false
+  premium: true
 - name: Spline Chart
   href: charts/types/spline-chart.md
   new: false
+  premium: true
 - name: Sparkline Chart
   href: charts/types/sparkline-chart.md
   new: false
+  premium: true
 - name: Stacked Chart
   href: charts/types/stacked-chart.md
   new: false
+  premium: true
 - name: Step Chart
   href: charts/types/step-chart.md
   new: false
+  premium: true
 - name: Treemap
   href: charts/types/treemap-chart.md
   new: false
+  premium: true
 - name: Chart API
   href: charts/chart-api.md
   updated: false
+  premium: true
 - name: Chart Features
   href: charts/chart-features.md
   new: false
@@ -850,99 +881,130 @@
     - name: Axis Gridlines
       href: charts/features/chart-axis-gridlines.md
       updated: false
+      premium: true
     - name: Axis Layouts
       href: charts/features/chart-axis-layouts.md
       new: false
+      premium: true
     - name: Axis Options
       href: charts/features/chart-axis-options.md
       new: false
+      premium: true
     - name: Axis Types
       href: charts/features/chart-axis-types.md
       new: false
+      premium: true
     - name: Chart Animations
       href: charts/features/chart-animations.md
       new: false
+      premium: true
     - name: Chart Annotations
       href: charts/features/chart-annotations.md
       new: false
+      premium: true
     - name: Charting in Dashboards
       href: dashboard-tile.md
       new: true
+      premium: true
     - name: Chart Data Aggregations
       href: charts/features/chart-data-aggregations.md
       new: false
+      premium: true
     - name: Chart Data Filtering
       href: charts/features/chart-data-filtering.md
       new: true
+      premium: true
     - name: Chart Data Legend
       href: charts/features/chart-data-legend.md
       new: false
+      premium: true
     - name: Chart Data Annotations
       href: charts/features/chart-data-annotations.md
       new: true
+      premium: true
     - name: Chart Data Tooltip
       href: charts/features/chart-data-tooltip.md
       new: false
+      premium: true
     - name: Chart Data Selection
       href: charts/features/chart-data-selection.md
       new: true
+      premium: true
     - name: Chart Highlight Filter
       href: charts/features/chart-highlight-filter.md
       new: false
+      premium: true
     - name: Chart Highlighting
       href: charts/features/chart-highlighting.md
       new: false
+      premium: true
     - name: Chart Markers
       href: charts/features/chart-markers.md
       new: false
+      premium: true
     - name: Chart Navigation
       href: charts/features/chart-navigation.md
       new: false
+      premium: true
     - name: Chart Overlays
       href: charts/features/chart-overlays.md
       updated: false
+      premium: true
     - name: Chart Performance
       href: charts/features/chart-performance.md
       new: false
+      premium: true
     - name: Chart Synchronization
       href: charts/features/chart-synchronization.md
       new: false
+      premium: true
     - name: Chart Tooltips
       href: charts/features/chart-tooltips.md
       new: false
+      premium: true
     - name: Chart Trendlines
       href: charts/features/chart-trendlines.md
-      updated: false      
+      updated: false
+      premium: true
     - name: Zoom Slider
       href: zoomslider-overview.md
       new: false
+      premium: true
 - name: Maps
   href: geo-map.md
   header: true
 - name: Geographic Area Map
   href: geo-map-type-scatter-area-series.md
   new: false
+  premium: true
 - name: Geographic Contour Map
   href: geo-map-type-scatter-contour-series.md
   new: false
+  premium: true
 - name: Geographic High Density Map
   href: geo-map-type-scatter-density-series.md
   new: false
+  premium: true
 - name: Geographic Bubble Map
   href: geo-map-type-scatter-bubble-series.md
   new: false
+  premium: true
 - name: Geographic Symbol Map
   href: geo-map-type-scatter-symbol-series.md
   new: false
+  premium: true
 - name: Geographic Polygon Map
   href: geo-map-type-shape-polygon-series.md
   new: false
+  premium: true
 - name: Geographic Polyline Map
   href: geo-map-type-shape-polyline-series.md
   new: false
+  premium: true
 - name: Geographic Map API
   href: maps/map-api.md
   new: false
+  premium: true
 - name: Geographic Map Features
   href: geo-map.md
   new: false
@@ -950,57 +1012,75 @@
     - name: Binding CSV File
       href: geo-map-binding-data-csv.md
       new: false
+      premium: true
     - name: Binding JSON File
       href: geo-map-binding-data-json-points.md
       new: false
+      premium: true
     - name: Binding Data Model
       href: geo-map-binding-data-model.md
       new: false
+      premium: true
     - name: Binding Shape File
       href: geo-map-binding-shp-file.md
       new: false
+      premium: true
     - name: Binding Multiple Shapes
       href: geo-map-binding-multiple-shapes.md
       new: false
+      premium: true
     - name: Binding Multiple Sources
       href: geo-map-binding-multiple-sources.md
       new: false
+      premium: true
     - name: Displaying Azure Imagery
       href: geo-map-display-azure-imagery.md
       new: true
+      premium: true
     - name: Displaying Bing Imagery
       href: geo-map-display-bing-imagery.md
       new: false
+      premium: true
     - name: Displaying Esri Imagery
       href: geo-map-display-esri-imagery.md
       new: false
+      premium: true
     - name: Displaying Heat Imagery
       href: geo-map-display-heat-imagery.md
       new: false
+      premium: true
     - name: Displaying OSM Imagery
       href: geo-map-display-osm-imagery.md
       new: false
+      premium: true
     - name: Navigating Map Content
       href: geo-map-navigation.md
       new: false
+      premium: true
     - name: Shape Files Reference
       href: geo-map-shape-files-reference.md
       new: false
+      premium: true
     - name: Shape Styling
       href: geo-map-shape-styling.md
       new: false
+      premium: true
     - name: Shape Styling Utility
       href: geo-map-resources-shape-styling-utility.md
       new: false
+      premium: true
     - name: World Connections
       href: geo-map-resources-world-connections.md
       new: false
+      premium: true
     - name: World Locations
       href: geo-map-resources-world-locations.md
       new: false
+      premium: true
     - name: World Utility
       href: geo-map-resources-world-util.md
       new: false
+      premium: true
 - name: Frameworks
   header: true
 - name: Excel Library
@@ -1010,35 +1090,45 @@
     - name: Using Cells
       href: excel-library-using-cells.md
       new: false
+      premium: true
     - name: Using Tables
       href: excel-library-using-tables.md
       new: false
+      premium: true
     - name: Using Workbooks
       href: excel-library-using-workbooks.md
       new: false
+      premium: true
     - name: Using Worksheets
       href: excel-library-using-worksheets.md
       new: false
+      premium: true
     - name: Working with Charts
       href: excel-library-working-with-charts.md
       new: false
+      premium: true
     - name: Working with Sparklines
       href: excel-library-working-with-sparklines.md
       new: false
+      premium: true
     - name: Excel Utility
       href: excel-utility.md
       new: false
+      premium: true
 - name: Gauges
   header: true
 - name: Bullet Graph
   href: bullet-graph.md
   new: false
+  premium: true
 - name: Linear Gauge
   href: linear-gauge.md
   new: false
+  premium: true
 - name: Radial Gauge
   href: radial-gauge.md
   new: false
+  premium: true
 
 - name: Styling & Themes
   header: true
@@ -1300,6 +1390,7 @@
   href: dock-manager.md
   new: false
   updated: false
+  premium: true
 - name: Tile Manager
   href: tile-manager.md
   new: true
@@ -1344,9 +1435,11 @@
 - name: CSV Exporter
   href: exporter-csv.md
   new: false
+  premium: true
 - name: Excel Exporter
   href: exporter-excel.md
   new: false
+  premium: true
 - name: Transaction Service
   href: transaction.md
   new: false
@@ -1355,6 +1448,8 @@
       href: transaction-classes.md
       new: false
       updated: false
+      premium: true
     - name: How to use the Transaction Service
       href: transaction-how-to-use.md
       new: false
+      premium: true
