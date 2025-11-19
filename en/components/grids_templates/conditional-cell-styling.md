@@ -1,29 +1,29 @@
-<!-- markdownlint-disable MD003 MD024 -->
+<!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if (igxName === 'IgxGrid') {
 ---
-
-title: Conditional Cell Styling in Angular Data Grid - Ignite UI for Angular
+title: Conditional Cell Styling in Angular Data Grid - Ignite UI for Angular - commercial license
 _description: Let users identify different cells quickly. Define a variety of cell styles. Use the conditional cell styling in Angular Data grid to make cells stand out.
 _keywords: conditional styling, ignite ui for angular, infragistics
+_license: commercial
 ---
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-
-title: Conditional Cell Styling in Angular Tree Grid - Ignite UI for Angular
+title: Conditional Cell Styling in Angular Tree Grid - Ignite UI for Angular - commercial license
 _description: Let users identify different cells quickly. Define a variety of cell styles. Use the conditional cell styling in Angular Data grid to make cells stand out.
 _keywords: conditional styling, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/conditional-cell-styling
 ---
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-
-title: Conditional Cell Styling in Angular Hierarchical Grid - Ignite UI for Angular
+title: Conditional Cell Styling in Angular Hierarchical Grid - Ignite UI for Angular - commercial license
 _description: Let users identify different cells quickly. Define a variety of cell styles. Use the conditional cell styling in Angular Data grid to make cells stand out.
 _keywords: conditional styling, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/conditional-cell-styling
 ---
 

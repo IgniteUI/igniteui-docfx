@@ -2,6 +2,7 @@
 title: Angular コンボ | データ可視化ツール | インフラジスティックス
 _description: インフラジスティックスの Angular コンボ コンポーネントは、データを表示するのに最適なチャートを選択するのに役立ちます。Ignite UI for Angular でグラフと視覚化を改善します!
 _keywords: Angular combo, drop down, Ignite UI for Angular, Infragistics, Angular コンボ, ドロップダウン, インフラジスティックス
+_license: MIT
 mentionedTypes: []
 _language: ja
 ---

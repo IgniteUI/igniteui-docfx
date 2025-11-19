@@ -2,6 +2,7 @@
 title: Angular Excel ライブラリ | チャートの使用 | インフラジスティックス
 _description: インフラジスティックスの Angular Excel ライブラリのチャート機能を使用して、ワークシートのセル領域全体のデータ トレンドをチャートで表示します。Ignite UI for Angular Excel データを 70 種類以上のチャート タイプで可視化できます。
 _keywords: Excel library, charts,  Ignite UI for Angular, Infragistics, Excel ライブラリ, チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ["Workbook", "Worksheet"]
 _language: ja
 ---

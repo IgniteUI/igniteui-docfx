@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | 財務指標 (縦棒) | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用して財務指標 (縦棒) を表示します。Ignite UI for Angular グラフ タイプについて説明します。
 _keywords: Angular charts, data chart, financial column indicators, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 縦棒型の財務指標, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart', 'FinancialPriceSeries']
 _language: ja
 ---

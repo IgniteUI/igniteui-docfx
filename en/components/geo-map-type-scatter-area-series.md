@@ -1,7 +1,8 @@
 ---
-title: Angular Map | Data Visualization Tools | Scatter Area Series | Data Binding | Infragistics
+title: Angular Map | Data Visualization Tools | Scatter Area Series | Data Binding | Infragistics | commercial license
 _description: Use Infragistics Angular map's scatter area series to draw a colored area surface based on a triangulation of longitude and latitude data with a numeric value assigned to each point. Learn more about Ignite UI for Angular map's series!
 _keywords: Angular map, scatter area series, Ignite UI for Angular, Infragistics
+_license: commercial
 mentionedTypes: ["XamGeographicMap","GeographicScatterAreaSeries","CustomPaletteColorScale", "Series"]
 ---
 

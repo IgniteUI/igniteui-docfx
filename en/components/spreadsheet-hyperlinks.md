@@ -1,7 +1,8 @@
 ---
-title: Angular Spreadsheet | Hyperlinks | Infragistics
+title: Angular Spreadsheet | Hyperlinks | Infragistics | commercial license
 _description: Use Infragistics' Angular spreadsheet control to display hyperlinks in the Excel workbook, which can link to websites, file directories and other worksheets. View Ignite UI for Angular spreadsheet tutorials!
 _keywords: Excel Spreadsheet, hyperlinks, Ignite UI for Angular, Infragistics
+_license: commercial
 mentionedTypes: ["Spreadsheet"]
 ---
 

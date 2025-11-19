@@ -3,6 +3,7 @@
 title: Angular Grid の集計 - Ignite UI for Angular
 _description: 列のグループ フッターで Angular Grid 集計を構成し、オプションを使用して Ignite UI for Angular テーブルにカスタム Angular テンプレートを設定します。
 _keywords: angular grid 集計, ignite ui for angular, infragistics
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular Grid の集計 - Ignite UI for Angular
 _description: 列のグループ フッターで Angular Grid 集計を構成し、オプションを使用して Ignite UI for Angular テーブルにカスタム Angular テンプレートを設定します。
 _keywords: angular grid 集計, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/summaries
 _language: ja
 ---
@@ -20,6 +22,7 @@ _language: ja
 title: Angular Grid の集計 - Ignite UI for Angular
 _description: 列のグループ フッターで Angular Grid 集計を構成し、オプションを使用して Ignite UI for Angular テーブルにカスタム Angular テンプレートを設定します。
 _keywords: angular grid 集計, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/summaries
 _language: ja
 ---

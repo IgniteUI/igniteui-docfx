@@ -1,7 +1,8 @@
 ---
-title: Angular Map | Data Visualization Tools | Binding Geographic Data Models | Infragistics
+title: Angular Map | Data Visualization Tools | Binding Geographic Data Models | Infragistics | commercial license
 _description: Use Infragistics' Angular JavaScript map to display geo-spatial data from shape files and/or geographic locations from data models on geographic imagery maps. View Ignite UI for Angular map demos!
 _keywords: Angular map, binding data models, Ignite UI for Angular, Infragistics, data binding
+_license: commercial
 mentionedTypes: ["XamGeographicMap", "GeographicScatterAreaSeries", "GeographicHighDensityScatterSeries", "GeographicProportionalSymbolSeries", "GeographicScatterAreaSeries", "GeographicContourLineSeries", "GeographicShapeSeries", "GeographicPolylineSeries", "Series", "GeographicShapeSeriesBase"]
 namespace: Infragistics.Controls.Maps
 ---

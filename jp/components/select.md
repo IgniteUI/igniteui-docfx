@@ -2,6 +2,7 @@
 title: Angular Select コンポーネント - IgniteUI for Angular
 _description: Angular Select コンポーネントを構成する方法について説明します。Angular Select は、Angular ドロップダウン リストを備えた入力を提供し、Angular Combobox の単一項目選択を可能にします。今すぐお試しください。
 _keywords: angular select, angular select コンポーネント, angular フォーム, angular フォーム select コンポーネント, angular ui コンポーネント, igniteui for angular, インフラジスティックス
+_license: MIT
 _language: ja
 ---
 

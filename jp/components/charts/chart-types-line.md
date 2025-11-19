@@ -2,6 +2,7 @@
 title: Angular 折れ線チャート | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular 折れ線チャート
 _keywords: Angular Charts, Line Chart, Infragistics, Angular チャート, 折れ線チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ["XamCategoryChart", "XamDataChart"]
 _language: ja
 ---

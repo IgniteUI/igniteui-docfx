@@ -1,7 +1,8 @@
 ---
-title: Angular Map | Data Visualization Tools | Displaying Open Street Maps Imagery | Infragistics
+title: Angular Map | Data Visualization Tools | Displaying Open Street Maps Imagery | Infragistics | commercial license
 _description: Use Infragistics' Angular to display imagery from OSM maps. View Ignite UI for Angular map tutorials!
 _keywords: Angular map, OSM, Ignite UI for Angular, Infragistics, imagery tile source, map background
+_license: commercial
 mentionedTypes: ["XamGeographicMap"]
 ---
 

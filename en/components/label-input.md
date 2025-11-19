@@ -1,7 +1,8 @@
 ---
-title: Angular Label and Input Directives
+title: Angular Label and Input Directives - MIT license 
 _description: With Ignite UI for Angular Label and Input directives, developers can decorate and style single-line or multi-line input elements, add additional CSS styles and integrate with other controls.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Angular Label component, Angular Label control, Angular Input component, Angular Input control, Input component, Input control, Label component, Label control, Angular Input directive, Angular Label directive, Angular Forms, Angular Reactive Forms, Angular Form Validation
+_license: MIT
 ---
 
 # Angular Label & Input Directives Overview

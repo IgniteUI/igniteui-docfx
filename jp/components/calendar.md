@@ -2,6 +2,7 @@
 title: Angular Calendar コンポーネント – Ignite UI for Angular
 _description: Angular Calendar コンポーネントを使用すると、ユーザーはアプリケーション用の直感的なカレンダーを作成して、3 つの異なる選択モードを使用して日付情報を表示できます。今すぐお試しください。
 _keywords: angular calendar, angular calendar コンポーネント, angular UI コンポーネント, angular UI ライブラリ, ignite ui for angular
+_license: MIT
 _language: ja
 ---
 

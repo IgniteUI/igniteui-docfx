@@ -1,7 +1,8 @@
 ---
-title: Angular Chart Animations | Data Visualization | Infragistics
+title: Angular Chart Animations | Data Visualization | Infragistics | commercial license 
 _description: Infragistics' Angular Chart Animations
 _keywords: Angular Charts, Animations, Infragistics
+_license: commercial
 mentionedTypes: ["CategoryChart"]
 namespace: Infragistics.Controls.Charts
 ---

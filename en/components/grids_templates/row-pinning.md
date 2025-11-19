@@ -1,29 +1,29 @@
-<!-- markdownlint-disable MD003 MD024 -->
+<!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if (igxName === 'IgxGrid') {
 ---
-
-title: Row Pinning in Angular Data Grid - Ignite UI for Angular
+title: Row Pinning in Angular Data Grid - Ignite UI for Angular - commercial license
 _description: Use the Angular Row pinning feature to lock rows with a rich and easy to use API. Let users pin rows in a particular order or duplicate them in a special area.
 _keywords: lock row, ignite ui for angular, infragistics
+_license: commercial
 ---
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-
-title: Row Pinning in Angular Tree Grid - Ignite UI for Angular
+title: Row Pinning in Angular Tree Grid - Ignite UI for Angular - commercial license
 _description: Use the Angular Row pinning feature to lock rows with a rich and easy to use API. Let users pin rows in a particular order or duplicate them in a special area.
 _keywords: lock row, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/row-pinning
 ---
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-
-title: Row Pinning in Angular Hierarchical Grid - Ignite UI for Angular
+title: Row Pinning in Angular Hierarchical Grid - Ignite UI for Angular - commercial license
 _description: Use the Angular Row pinning feature to lock rows with a rich and easy to use API. Let users pin rows in a particular order or duplicate them in a special area.
 _keywords: lock row, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/row-pinning
 ---
 

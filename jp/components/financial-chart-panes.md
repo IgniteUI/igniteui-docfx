@@ -2,6 +2,7 @@
 title: Angular ファイナンシャル チャート | ペイン | インフラジスティックス
 _description: インフラジスティックスの Angular ファイナンシャル チャート コントロールのペイン (価格ペイン、インジケーター ペイン、ボリューム ペイン、ズーム ペインなど) を使用して、財務データを表示します。Ignite UI for Angular ファイナンシャル チャートのペインを是非お試しください。
 _keywords: Angular charts, financial chart, stock chart, panes, Ignite UI for Angular, Infragistics, Angular チャート, ファイナンシャル チャート, 株価チャート, ペイン, インフラジスティックス
+_license: commercial
 mentionedTypes: ['FinancialChart', 'FinancialChartYAxisMode']
 _language: ja
 ---

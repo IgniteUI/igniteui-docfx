@@ -1,7 +1,8 @@
 ---
-title: Angular Radio and Radio Group – Ignite UI for Angular | Infragistics
+title: Angular Radio and Radio Group – Ignite UI for Angular | Infragistics | MIT license
 _description: With Ignite UI for Angular Radio Button and Radio Group controls, developers can seamlessly present lists of options for users to select for better UI in template-driven and reactive forms.
 _keywords: Angular Radio Group component, Angular Radio Group control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
+_license: MIT
 ---
 
 # Angular Radio & Radio Group Component Overview

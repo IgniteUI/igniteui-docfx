@@ -15,6 +15,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "verify": "npm run spellcheck && npm run lint:md",
     "spellcheck": "cspell \"en/components/**/*.md\"",
+    "lint:tmpls:md": "markdownlint \"en/components/grids_templates/*.md\"",
     "lint:md": "markdownlint \"en/components/**/*.md\"",
     "lint:md:fix": "markdownlint \"en/components/**/*.md\" --fix",
     "postinstall": "dotnet tool restore --ignore-failed-sources && gulp copyGitHooks"
@@ -22,7 +23,7 @@
   "author": "Infragistics",
   "license": "ISC",
   "dependencies": {
-    "igniteui-docfx-template": "^3.11.0"
+    "igniteui-docfx-template": "^3.12.0"
   },
   "devDependencies": {
     "@stackblitz/sdk": "^1.11.0",

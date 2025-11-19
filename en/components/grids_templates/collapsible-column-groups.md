@@ -1,19 +1,19 @@
-<!-- markdownlint-disable MD003 MD024 -->
+<!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if(igxName==='IgxGrid') {
 ---
-
-title: Collapsible Column Groups in Angular Data Grid - Infragistics
+title: Collapsible Column Groups in Angular Data Grid - Infragistics - commercial license
 _description: Take advantage of the capability to show\hide smaller and concise set of data with the use of collapsible column groups in our Angular Data Grid. Try it now!
 _keywords: collapsible column headers, ignite ui for angular, infragistics
+_license: commercial
 ---
 
 }
 @@if(igxName!=='IgxGrid') {
 ---
-
-title: Collapsible Column Groups in Angular @@igComponent - Infragistics
+title: Collapsible Column Groups in Angular @@igComponent - Infragistics - commercial license
 _description: Take advantage of the capability to show\hide smaller and concise set of data with the use of collapsible column groups in our Angular @@igComponent. Try it now!
 _keywords: collapsible column headers, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/collapsible-column-groups
 ---
 

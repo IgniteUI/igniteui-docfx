@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | 軸位置 | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用すると、チャート プロット エリアに関連して軸の位置を指定できます。2 つの軸を持つ Ignite UI for Angular グラフを作成します!
 _keywords: Angular charts, data chart, axis locations, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 軸位置, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---

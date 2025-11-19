@@ -2,6 +2,7 @@
 title: Angular ファイナンシャル チャート | 軸のタイプ | インフラジスティックス
 _description: 軸間隔、軸ラベル、軸モード、軸範囲、軸スケール、軸目盛、軸タイトルなどのインフラジスティックス  Angular チャート コントロールの軸を設定する方法を説明します。Ignite UI for Angular ファイナンシャル グラフのサンプルを是非お試しください!
 _keywords: Angular charts, financial chart, stock chart, financial axis, Ignite UI for Angular, Axis type, Infragistics, チャート, ファイナンシャル チャート, 株価チャート, 財務軸, 軸タイプ, インフラジスティックス
+_license: commercial
 mentionedTypes: ['FinancialChart']
 _language: ja
 ---

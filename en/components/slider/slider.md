@@ -1,7 +1,8 @@
 ---
-title: Angular Slider |  Ignite UI for Angular | Infragistics
+title: Angular Slider |  Ignite UI for Angular | Infragistics | MIT license
 _description: Learn how to configure a selection in a given range by using the thumb track with Angular Slider part of Ignite UI for Angular. Choose between singe and range slider types
 _keywords: angular slider, angular slider component, angular range slider component, angular range input component, angular ui components, igniteui for angular, infragistics
+_license: MIT
 ---
 
 # Angular Slider Component Overview

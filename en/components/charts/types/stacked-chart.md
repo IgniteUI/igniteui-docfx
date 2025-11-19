@@ -1,7 +1,8 @@
 ---
-title: Angular Stacked Chart | Data Visualization | Infragistics
+title: Angular Stacked Chart | Data Visualization | Infragistics | commercial license
 _description: Infragistics' Angular Stacked Chart
 _keywords: Angular Charts, Stacked Chart, Stacked 100% Chart, Infragistics
+_license: commercial
 mentionedTypes: ["XamDataChart", "StackedAreaSeries", "Stacked100AreaSeries", "StackedBarSeries", "Stacked100BarSeries", "StackedColumnSeries", "Stacked100ColumnSeries", "StackedLineSeries", "Stacked100LineSeries", "StackedSplineSeries", "Stacked100SplineSeries", "StackedSplineAreaSeries", "Stacked100SplineAreaSeries", "Series"]
 namespace: Infragistics.Controls.Charts
 ---

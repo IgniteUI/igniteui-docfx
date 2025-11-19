@@ -1,7 +1,8 @@
 ---
-title: Angular Badge Component – Ignite UI for Angular | Infragistics
+title: Angular Badge Component – Ignite UI for Angular | Infragistics | MIT license
 _description: Display an active count or icon in a predefined style to decorate other components anywhere in an application with Ignite UI for Angular Badge control.
-_keywords: Angular Badge component, Angular Badge control, Ignite UI for Angular, Angular UI Components 
+_keywords: Angular Badge component, Angular Badge control, Ignite UI for Angular, Angular UI Components
+_license: MIT 
 ---
 
 # Angular Badge Component Overview

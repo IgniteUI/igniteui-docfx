@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化 | インフラジスティックス
 _description: 複数の視覚的要素のインスタンスを表示する Angular データ チャートを簡単に作成して、複合チャート ビューを作成します。今日から始められます。
 _keywords: data chart, Angular component, Angular chart, Ignite UI for Angular, charting component, データ チャート, Angular コンポーネント, Angular チャート, チャート作成コンポーネント
+_license: commercial
 mentionedTypes: ['XamDataChart', 'SeriesType']
 _language: ja
 ---

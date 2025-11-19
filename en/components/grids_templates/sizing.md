@@ -1,29 +1,29 @@
-<!-- markdownlint-disable MD003 MD024 -->
+<!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if (igxName === 'IgxGrid') {
 ---
-
-title: Angular Grid Sizing - Ignite UI for Angular
+title: Angular Grid Sizing - Ignite UI for Angular - commercial license
 _description: Understand how the Angular grid sizing works and learn how to use the width and height in order to accommodate the different scenarios that users can have.
 _keywords: angular grid sizing, igniteui for angular, infragistics
+_license: commercial
 ---
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-
-title: Angular Tree Grid Sizing - Ignite UI for Angular
+title: Angular Tree Grid Sizing - Ignite UI for Angular - commercial license
 _description: Understand how the Angular grid sizing works and learn how to use the width and height in order to accommodate the different scenarios that users can have.
 _keywords: angular grid sizing, igniteui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/sizing
 ---
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-
-title: Angular Hierarchical Grid Sizing - Ignite UI for Angular
+title: Angular Hierarchical Grid Sizing - Ignite UI for Angular - commercial license
 _description: Understand how the Angular grid sizing works and learn how to use the width and height in order to accommodate the different scenarios that users can have.
 _keywords:  angular grid sizing, igniteui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/sizing
 ---
 
@@ -335,10 +335,10 @@ Different spacing multipliers can be applied based on the grid's display density
 .my-grid {
     /* Compact density gets very tight spacing */
     --ig-spacing-small: 0.5;
-    
+
     /* Medium density uses normal spacing */
     --ig-spacing-medium: 1.0;
-    
+
     /* Comfortable density gets extra spacing */
     --ig-spacing-large: 1.3;
 }

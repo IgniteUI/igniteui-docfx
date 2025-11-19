@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | 散布ポリゴン チャート | データ バインディング | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用して散布ポリゴン チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
 _keywords: Angular charts, data chart, scatter polygon charts, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 散布ポリゴン チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart','ShapeColumnSeries','ScatterPolygonSeries']
 _language: ja
 ---

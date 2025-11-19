@@ -3,6 +3,7 @@
 title: Angular Grid の列サイズ変更 - Ignite UI for Angular
 _description: Angular Grid の列サイズ変更を使用して、グリッド列の幅を瞬時に変更できます。Angular ドラッグ サイズ変更が大変使いやすくなりました。無料でお試しください。
 _keywords: grid 列サイズ変更, igniteui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -12,6 +13,7 @@ title: Angular Tree Grid の列サイズ変更 - Ignite UI for Angular
 _description: Angular Tree Grid の列サイズ変更を使用して、グリッド列の幅を瞬時に変更できます。Angular ドラッグ サイズ変更が大変使いやすくなりました。無料でお試しください。
 _keywords: grid 列サイズ変更, igniteui for angular, インフラジスティックス
 _canonicalLink: grid/column-resizing
+_license: commercial
 _language: ja
 ---
 }
@@ -21,6 +23,7 @@ title: Angular Hierarchical Grid の列サイズ変更 - Ignite UI for Angular
 _description: Angular Hierarchical Grid の列サイズ変更を使用して、グリッド列の幅を瞬時に変更できます。Angular ドラッグ サイズ変更が大変使いやすくなりました。無料でお試しください。
 _keywords: grid 列サイズ変更, igniteui for angular, インフラジスティックス
 _canonicalLink: grid/column-resizing
+_license: commercial
 _language: ja
 ---
 }

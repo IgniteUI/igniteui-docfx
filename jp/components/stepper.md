@@ -2,6 +2,7 @@
 title: Angular Stepper コンポーネント - Ignite UI for Angular
 _description: Angular Stepper コンポーネントを使用してコンテンツをプロセスとして可視化し、コンテンツを論理的なステップに分割して進行状況を表示します。使用方法について説明します。
 _keywords: Angular Stepper コンポーネント, Angular ウィザード コンポーネント, Angular Stepper コントロール, Angular ウィザード コントロール, Angular UI コンポーネント, Ignite UI for Angular, UI コンポーネント, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, インフラジスティックス
+_license: MIT
 _language: ja
 ---
 

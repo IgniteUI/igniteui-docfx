@@ -1,7 +1,8 @@
 ---
-title: Angular Chart Markers | Data Visualization | Infragistics
+title: Angular Chart Markers | Data Visualization | Infragistics | commercial license
 _description: Infragistics' Angular Chart Markers
 _keywords: Angular Charts, Markers, Infragistics
+_license: commercial
 mentionedTypes: ["CategoryChart", "CategoryChartType", "MarkerType"]
 namespace: Infragistics.Controls.Charts
 ---

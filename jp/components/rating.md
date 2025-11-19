@@ -2,6 +2,7 @@
 title: Angular 星評価コンポーネント – Ignite UI for Angular
 _description: Angular 星評価コンポーネントを使用すると、ユーザーはフィードバックをすばやく表示して提供できます。任意の Angular アプリおよび Angular フォームで評価コンポーネントを使用できます。今すぐお試しください。
 _keywords: Angular Rating コンポーネント, Angular Rating コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
+_license: MIT
 _language: ja
 ---
 # Angular Star Rating (星評価) の概要

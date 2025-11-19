@@ -3,6 +3,7 @@
 title:  Angular Grid のサイズ - Ignite UI for Angular
 _description: Data Grid コンポーネントにサイズ機能を適用する方法を説明します。Ignite UI for Angular のコンパクト ビュー オプションのセットを使用できます。
 _keywords: material density, size, igniteui for angular, infragistics, マテリアル密度
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title:  Angular Grid のサイズ - Ignite UI for Angular
 _description: Tree Grid コンポーネントにサイズ機能を適用する方法を説明します。Ignite UI for Angular のコンパクト ビュー オプションのセットを使用できます。
 _keywords: material density, size, igniteui for angular, infragistics, マテリアル密度
+_license: commercial
 _language: ja
 ---
 }
@@ -19,6 +21,7 @@ _language: ja
 title:  Angular Grid のサイズ - Ignite UI for Angular
 _description: Hierarchical Grid コンポーネントにサイズ機能を適用する方法を説明します。Ignite UI for Angular のコンパクト ビュー オプションのセットを使用できます。
 _keywords: material density, size, igniteui for angular, infragistics, マテリアル密度
+_license: commercial
 _language: ja
 ---
 }

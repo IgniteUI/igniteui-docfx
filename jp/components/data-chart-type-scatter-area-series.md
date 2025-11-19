@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | 散布エリア チャート | データ バインディング | インフラジスティックス
 _description: Infragistics Ignite UI for Angular は散布エリア シリーズを提供します。Ignite UI for Angular 散布エリア シリーズについて説明します。
 _keywords: Angular charts, data chart, scatter area charts, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 散布図エリア チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart','ScatterAreaSeries','ScatterContourSeries']
 _language: ja
 ---

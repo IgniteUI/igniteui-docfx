@@ -1,7 +1,8 @@
 ---
-title: Angular Map | Data Visualization Tools | Map Overview | Infragistics
+title: Angular Map | Data Visualization Tools | Map Overview | Infragistics | commercial license
 _description: Use Infragistics' Angular JavaScript map to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps. View the Ignite UI for Angular map demos!
 _keywords: Angular map, geographic map, imagery tiles, Ignite UI for Angular, Infragistics
+_license: commercial
 mentionedTypes: ["XamGeographicMap", "Series"]
 ---
 

@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | 軸共有 | インフラジスティックス
 _description: インフラジスティックスの $Platform Short$ チャート コントロールにより、複数の軸を同じプロット エリアに表示できます。複数の軸を持つ Ignite UI for Angular グラフを作成します!
 _keywords: Angular charts, data chart, axis sharing, Ignite UI for Angular, Infragistics, multiple axes, Angular チャート, データ チャート, 軸共有, インフラジスティックス, 複数軸
+_license: commercial
 mentionedTypes: ['XamDataChart', 'CategoryXAxis', 'NumericYAxis', 'CategoryDateTimeXAxis']
 _language: ja
 ---

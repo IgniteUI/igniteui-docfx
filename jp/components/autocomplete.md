@@ -2,6 +2,7 @@
 title: オートコンプリート ディレクティブ
 _description: Angular Autocomplete ディレクティブは、候補オプションのパネルを表示することにより、テキスト入力を向上する方法を提供します。今すぐお試しください。
 _keywords: Angular Autocomplete コンポーネント, Angular Autocomplete ディレクティブ, Angular Autocomplete コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
+_license: MIT
 _language: ja
 ---
 

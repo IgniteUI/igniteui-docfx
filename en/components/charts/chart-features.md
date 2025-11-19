@@ -1,7 +1,8 @@
 ---
-title: Angular Chart Features | Data Visualization | Infragistics
+title: Angular Chart Features | Data Visualization | Infragistics | commercial license
 _description: Infragistics' Angular Chart Features
 _keywords: Angular Charts, Features, Infragistics
+_license: commercial
 mentionedTypes: ["FinancialChart", "CategoryChart", "XamDataChart"]
 ---
 

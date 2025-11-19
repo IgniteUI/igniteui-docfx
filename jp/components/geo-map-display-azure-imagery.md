@@ -2,6 +2,7 @@
 title: Angular マップ | データ可視化ツール | Azure 画像の表示 | インフラジスティックス
 _description: Infragistics の Angular を使用して Microsoft Azure Maps からの画像を表示します。Angular マップのチュートリアルを是非お試しください!
 _keywords: Angular map, azure maps, Ignite UI for Angular, Infragistics, imagery tile source, map background, Angular マップ, azure マップ, インフラジスティックス, 画像タイル ソース, マップ背景
+_license: commercial
 mentionedTypes: ["XamGeographicMap", "AzureMapsImagery", "GeographicTileSeries"]
 _language: ja
 ---

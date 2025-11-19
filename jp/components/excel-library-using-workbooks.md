@@ -2,6 +2,7 @@
 title: Angular Excel ライブラリ | ワークブックの使用 | インフラジスティックス
 _description: インフラジスティックスの Angular Excel ライブラリを使用してワークブックおよびワークシートを作成し、データを入力して日付を Microsoft®Excel にエクスポートします。詳細については、Ignite UI for Angular Excel のチュートリアルを参照してください。
 _keywords: Excel library, workbooks, Ignite UI for Angular, Infragistics, Excel ライブラリ, ワークブック, インフラジスティックス
+_license: commercial
 mentionedTypes: ["Workbook"]
 _language: ja
 ---

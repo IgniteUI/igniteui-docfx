@@ -1,7 +1,8 @@
 ---
-title: Angular Data Chart | Data Visualization Tools | Navigation | Infragistics
+title: Angular Data Chart | Data Visualization Tools | Navigation | Infragistics | commercial license
 _description: Navigate Infragistics' Angular charts by panning right and left and zooming horizontally and vertically using mouse or touch. Learn about Ignite UI for Angular graph navigation capabilities!
 _keywords: Angular charts, data chart, navigation, Ignite UI for Angular, Infragistics
+_license: commercial
 mentionedTypes: ["XamDataChart", "CategoryChart", "FinancialChart", "ModifierKeys"]
 namespace: Infragistics.Controls.Charts
 ---

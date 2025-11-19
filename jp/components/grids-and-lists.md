@@ -2,6 +2,7 @@
 title: Angular Grids & Tables | 最速の Angular UI グリッド | インフラジスティックス
 _description: 高速な Angular グリッドとテーブルをお探しですか? Ignite UI for Angular は、Angular ネイティブでマテリアル ベースの UI データ グリッドとテーブルの完全なライブラリを提供します。詳しい情報をご覧ください。
 _keywords: angular data grid, インフラジスティックス, jp.infragistics.com
+_license: commercial
 _language: ja
 ---
 <style>

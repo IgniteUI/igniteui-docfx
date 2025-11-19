@@ -1,7 +1,8 @@
 ---
-title: Angular Chart Data Legend | Data Visualization Tools | Infragistics
+title: Angular Chart Data Legend | Data Visualization Tools | Infragistics | commercial license
 _description: Use Infragistics Ignite UI for Angular chart with the data legend!
 _keywords: Angular charts, chart legend, legend, legend types, Ignite UI for Angular, Infragistics
+_license: commercial
 mentionedTypes: ["XamCategoryChart", "XamDataLegend", "Series", "DataLegendSummaryType", "DataAbbreviationMode" ]
 namespace: Infragistics.Controls.Charts
 ---

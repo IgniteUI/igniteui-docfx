@@ -2,6 +2,7 @@
 title: Angular スプレッドシート | チャート アダプター | インフラジスティックス
 _description: インフラジスティックスの Angular スプレッドシート コントロールに縦棒、折れ線、エリアなどのチャートを表示します。Ignite UI for Angular スプレッドシートにチャートを統合する方法について説明します。
 _keywords: Excel Spreadsheet, chart adapter, Ignite UI for Angular, Infragistics, Excel スプレッドシート、チャート アダプター, インフラジスティックス
+_license: commercial
 mentionedTypes: ["Spreadsheet", "Worksheet", "WorksheetShapeCollection", "WorksheetChart"]
 _language: ja
 ---

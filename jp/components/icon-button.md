@@ -2,6 +2,7 @@
 title: Angular Icon Button コンポーネント – Ignite UI for Angular
 _description: 標準のアイコンをボタン機能で向上します。今すぐお試しください。
 _keywords: Angular Icon Button コンポーネント, Angular Icon Button コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, Angular UI コンポーネント
+_license: MIT
 _language: ja
 ---
 

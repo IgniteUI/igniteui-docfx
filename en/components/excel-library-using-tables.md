@@ -1,7 +1,8 @@
 ---
-title: Angular Excel Library| Using Tables | Infragistics
+title: Angular Excel Library| Using Tables | Infragistics | commercial license
 _description: Use Infragistics' Angular excel library's table functionality to format your data in rows and columns. View Ignite UI for Angular excel tutorials for more information!
 _keywords: Excel library, tables, Ignite UI for Angular, Infragistics
+_license: commercial
 mentionedTypes: ["Workbook", "WorksheetTable", "Worksheet", "SortSettings"]
 ---
 

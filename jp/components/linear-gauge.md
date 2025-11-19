@@ -2,6 +2,7 @@
 title: Angular リニア ゲージ | データ可視化ツール | インフラジスティックス
 _description: インフラジスティックスの Angular リニア ゲージ コントロールを使用して、シンプルで簡潔なビューでデータを可視化します。Ignite UI for Angular リニア ゲージの設定可能な要素について説明します。
 _keywords: linear gauge, Ignite UI for Angular, Infragistics, animation, labels, needle, scales, ranges, tick marks, リニア ゲージ, インフラジスティックス, アニメーション, ラベル, 針, スケール, 範囲, 目盛
+_license: MIT
 mentionedTypes: ["XamLinearGauge"]
 namespace: Infragistics.Controls.Gauges
 _language: ja

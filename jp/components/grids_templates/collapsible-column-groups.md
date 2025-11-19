@@ -3,6 +3,7 @@
 title: Angular Data Grid の縮小可能な列グループ - インフラジスティックス
 _description: Angular Data Grid の縮小可能な列グループを使用して、より小さく簡潔なデータのセットを表示/非表示にする機能を利用します。今すぐお試しください。
 _keywords: 列ヘッダーの縮小, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular @@igComponent の縮小可能な列グループ - インフラジスティックス
 _description: Angular @@igComponent の縮小可能な列グループを使用して、より小さく簡潔なデータのセットを表示/非表示にする機能を利用します。今すぐお試しください。
 _keywords: 列ヘッダーの縮小, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }

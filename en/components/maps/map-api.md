@@ -1,7 +1,8 @@
 ---
-title: Angular Chart API | Data Visualization Tools | Infragistics
+title: Angular Chart API | Data Visualization Tools | Infragistics | commercial license
 _description: Use Infragistics Ignite UI for Angular map provides useful API to configure and styles map visuals
 _keywords: Angular maps, geographic, map API, API, Ignite UI for Angular,
+_license: commercial
 mentionedTypes: ["XamGeographicMap", "Series", "SeriesViewer", "GeographicSymbolSeries", "GeographicProportionalSymbolSeries", "GeographicShapeSeries", "GeographicHighDensityScatterSeries", "GeographicScatterAreaSeries", "GeographicContourLineSeries", "GeographicShapeSeriesBase"]
 namespace: Infragistics.Controls.Maps
 ---

@@ -2,6 +2,7 @@
 title: Angular Chip コンポーネント - Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular Chip コンポーネントは入力、属性、または操作を表す小さい要素を提供します。
 _keywords: Angular Chip, Angular Chip コンポーネント, Angular Chip Area, Angular Chip Area, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular UI コンポーネント
+_license: MIT
 _language: ja
 ---
 

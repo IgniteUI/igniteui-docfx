@@ -1,7 +1,8 @@
 ---
-title: Angular Point Chart | Data Visualization | Infragistics
+title: Angular Point Chart | Data Visualization | Infragistics | commercial license
 _description: Infragistics' Angular Point Chart
 _keywords: Angular Charts, Point Chart, Infragistics
+_license: commercial
 mentionedTypes: ["DomainChart", "CategoryChart", "CategoryChartType", "Legend", "Series"]
 namespace: Infragistics.Controls.Charts
 ---

@@ -1,7 +1,8 @@
 ---
-title: Angular Pivot Grid & Table – Ignite UI for Angular
+title: Angular Pivot Grid & Table – Ignite UI for Angular - commercial license
 _description: Create fast, responsive Angular pivot grids and tables with Ignite UI for Angular. Perform complex analysis and apply data sorting, grouping, or filtering.
 _keywords: angular pivot grid, angular pivot grid component, angular pivot table, angular pivot table component, angular pivot data table, Angular pivot table, angular ui components, ignite ui for angular
+_license: commercial
 ---
 
 # Angular Pivot Grid Component Overview

@@ -1,7 +1,8 @@
 ---
-title: Angular Chart Data Selection | Data Visualization Tools | Infragistics
+title: Angular Chart Data Selection | Data Visualization Tools | Infragistics | commercial license
 _description: Use Infragistics Ignite UI for Angular chart with the data selection!
 _keywords: Angular charts, chart data, selection, data selection, Ignite UI for Angular, Infragistics
+_license: commercial
 _language: en
 mentionedTypes: ["XamDataChart", "Legend", "CategoryChart", "FinancialChart", "XamDataLegend", "DataToolTipLayer"]
 namespace: Infragistics.Controls.Charts

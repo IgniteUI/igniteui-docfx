@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | タイトルとサブタイトル | インフラジスティックス
 _description: インフラジスティックスの Angular チャートのタイトルとサブタイトルを使用して、上部セクションに情報を追加します。Ignite UI for Angular グラフのタイトルとサブタイトル機能をお試しください!
 _keywords: Angular charts, data chart, chart title, chart subtitle, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, チャート サブタイトル, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---

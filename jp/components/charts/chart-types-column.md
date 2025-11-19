@@ -2,6 +2,7 @@
 title: Angular 縦棒チャート | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular 縦棒チャート
 _keywords: Angular Charts, Column Chart, Infragistics, Angular チャート, 縦棒チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ["XamCategoryChart", "XamDataChart"]
 _language: ja
 ---

@@ -1,7 +1,8 @@
 ---
-title: Angular Drop Down Component –  Ignite UI For Angular
+title: Angular Drop Down Component –  Ignite UI For Angular - MIT license 
 _description: Add interactivity and see styling options to a scrollable list of items in your app. Get started using the Drop Down Component in Ignite UI for Angular now.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Angular Drop Down component, Angular Drop Down control
+_license: MIT
 ---
 
 # Angular Drop Down Component Overview

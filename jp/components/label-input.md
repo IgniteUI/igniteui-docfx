@@ -2,6 +2,7 @@
 title: Label & Input ディレクティブ
 _description: Ignite UI for Angular Label および Input ディレクティブを使用すると、単一行または複数行の入力要素を装飾およびスタイル設定し、CSS スタイルを追加し、その他のコントロールと統合できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Label コンポーネント, Angular Label コントロール, Angular Input コンポーネント, Angular Input コントロール, Input コンポーネント, Input コントロール, Label コンポーネント, Label コントロール, Angular Input ディレクティブ, Angular Label ディレクティブ, Angular Forms, Angular Reactive Forms, Angular フォームの検証
+_license: MIT
 _language: ja
 ---
 

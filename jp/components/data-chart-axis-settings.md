@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | 軸設定 | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールにより、軸ラベル、タイトル、目盛り、範囲、グリッド線、ギャップ、オーバーラップの構成を完全に制御できます。Ignite UI for Angular グラフ軸について説明します。
 _keywords: Angular charts, data chart, axis settings, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 軸設定, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart', 'CategoryXAxis', 'NumericYAxis', 'CategoryDateTimeXAxis']
 _language: ja
 ---

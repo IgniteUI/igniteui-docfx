@@ -2,6 +2,7 @@
 title: Ignite UI for Angular フレームワーク & 機能 | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular によって ARIA アクセシビリティと文字表記の方向を設定する方法を説明します。
 _keywords: aria support, aria サポート, a11y, ignite ui for angular, infragistics, インフラジスティックス
+_license: MIT
 ---
 
 # 右から左 (RTL) サポート

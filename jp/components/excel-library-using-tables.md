@@ -2,6 +2,7 @@
 title: Angular Excel ライブラリ | テーブルの使用 | インフラジスティックス
 _description: インフラジスティックスの Angular Excel ライブラリのテーブル機能を使用して、行と列のデータを書式設定します。詳細については、Ignite UI for Angular Excel のチュートリアルを参照してください。
 _keywords: Excel library, tables, Ignite UI for Angular, Infragistics, Excel ライブラリ, テーブル, インフラジスティックス
+_license: commercial
 mentionedTypes: ["Workbook", "WorksheetTable", "Worksheet", "SortSettings"]
 _language: ja
 ---

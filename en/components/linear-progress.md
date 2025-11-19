@@ -1,7 +1,8 @@
 ---
-title: Angular Linear Progress Component
+title: Angular Linear Progress Component - MIT license 
 _description: Display a progress bar and customize its appearance with endless color and striping options with Ignite UI for Angular Linear Progress Bar component.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Angular Linear Progress component, Angular Linear Progress control
+_license: MIT
 ---
 
 # Angular Linear Progress Component Overview

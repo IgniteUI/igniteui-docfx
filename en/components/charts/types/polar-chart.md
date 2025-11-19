@@ -1,7 +1,8 @@
 ---
-title: Angular Polar Chart | Data Visualization | Infragistics
+title: Angular Polar Chart | Data Visualization | Infragistics | commercial license
 _description: Infragistics' Angular Polar Chart
 _keywords: Angular Charts, Polar Chart, Infragistics
+_license: commercial
 mentionedTypes: ["XamDataChart", "PolarAreaSeries", "Series"]
 namespace: Infragistics.Controls.Charts
 ---

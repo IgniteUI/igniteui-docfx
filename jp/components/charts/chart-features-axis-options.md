@@ -2,7 +2,9 @@
 title: Angular 軸オプション | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular 軸オプション
 _keywords: Angular Axis, Options, Infragistics, Angular 軸, オプション, インフラジスティックス
-mentionedTypes: []
+_license: commercial
+mentionedTypes: ["CategoryChart", "XamDataChart", "AxisLabelSettings", "CategoryXAxis", "CategoryYAxis", "NumericYAxis", "NumericXAxis", "TimeXAxis"]
+namespace: Infragistics.Controls.Charts
 _language: ja
 ---
 

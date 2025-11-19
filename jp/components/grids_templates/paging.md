@@ -3,6 +3,7 @@
 title: Angular Grid ページング | Angular ページネーション テーブル | インフラジスティックス
 _description: Angular ページネーションを構成して Ignite UI の Angular テーブルにカスタム ページを作成し、さまざまな Angular イベントで要求されたページのデータを取得します。
 _keywords: angular ページネーション, igniteui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular Grid ページング | Angular ページネーション テーブル | インフラジスティックス
 _description: Angular ページネーションを構成して Ignite UI の Angular テーブルにカスタム ページを作成し、さまざまな Angular イベントで要求されたページのデータを取得します。
 _keywords: angular ページネーション, igniteui for angular, インフラジスティックス
+_license: commercial
 _canonicalLink: grid/paging
 _language: ja
 ---

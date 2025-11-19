@@ -2,6 +2,7 @@
 title: アクション ストリップ
 _description: アクション ストリップは、1 つ以上のアクションのテンプレート領域を表します。アクション ストリップはオーバーレイするため、相対コンテナー内に配置する必要があります。
 _keywords: Angular Action Strip コンポーネント, Angular Action Strip ディレクティブ, Angular Action Strip コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Angular UI コンポーネント
+_license: MIT
 _language: ja
 ---
 

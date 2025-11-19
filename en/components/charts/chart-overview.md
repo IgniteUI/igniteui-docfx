@@ -1,7 +1,8 @@
 ---
-title: Angular Charts & Graphs Library | Ignite UI for Angular
+title: Angular Charts & Graphs Library | Ignite UI for Angular | commercial license
 _description: Ignite UI for Angular Charts & Graphs is an extensive library of data visualizations that enable stunning, interactive charts for your web and mobile apps. Try for FREE.
 _keywords: Angular Charts, Chart, Infragistics
+_license: commercial
 mentionedTypes: ["DomainChart", "FinancialChart", "CategoryChart", "XamDataChart", "CategoryChartType"]
 ---
 

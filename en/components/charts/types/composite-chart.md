@@ -1,7 +1,8 @@
 ---
-title: Angular Composite Chart | Combo Chart| Data Visualization | Infragistics
+title: Angular Composite Chart | Combo Chart| Data Visualization | Infragistics | commercial license
 _description: Infragistics' Angular Composite Chart
 _keywords: Angular Charts, Composite Chart, Combo Chart, Infragistics
+_license: commercial
 mentionedTypes: ["XamDataChart", "Series"]
 namespace: Infragistics.Controls.Charts
 ---

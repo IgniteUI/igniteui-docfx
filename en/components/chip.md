@@ -1,7 +1,8 @@
 ---
-title: Angular Chip Component – Ignite UI for Angular | Infragistics
+title: Angular Chip Component – Ignite UI for Angular | Infragistics | MIT license
 _description: The Ignite UI for Angular Chip component provide compact elements that represent an input, attribute, or action.
 _keywords: Angular Chip, Angular Chip Component, Angular Chip Area, Angular Chip Area Component, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular UI Components
+_license: MIT
 ---
 
 # Angular Chip Component Overview

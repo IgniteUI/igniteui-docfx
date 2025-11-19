@@ -1,7 +1,8 @@
 ---
-title: Angular Drag and Drop | IgniteUI for Angular | Infragistics
+title: Angular Drag and Drop | IgniteUI for Angular | Infragistics | MIT license
 _description: Learn how to use Angular drag and drop directives to perform dragging of elements around the page.
 _keywords: Angular Drag and Drop, Angular Drag and Drop Directives, Angular UI components, Ignite UI for Angular, Infragistics
+_license: MIT
 ---
 
 # Angular Drag and Drop Directives Overview

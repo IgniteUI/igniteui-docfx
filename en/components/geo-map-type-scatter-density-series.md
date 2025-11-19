@@ -1,10 +1,10 @@
 ---
-title: Angular Map | Data Visualization Tools | Scatter High Density Series | Data Binding | Infragistics
+title: Angular Map | Data Visualization Tools | Scatter High Density Series | Data Binding | Infragistics | commercial license
 _description: Use Infragistics Angular map's scatter high density series to bind and show scatter data ranging from hundreds to millions of data points requiring exceedingly little loading time. Learn more about Ignite UI for Angular map's series!
 _keywords: Angular map, scatter high density series, Ignite UI for Angular, Infragistics
+_license: commercial
 mentionedTypes: ["XamGeographicMap", "Series"]
 ---
-
 # Angular Geographic High Density Map
 
 In Angular map component, you can use the [`IgxGeographicHighDensityScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographichighdensityscatterseriescomponent.html) to bind and show scatter data ranging from hundreds to millions of data points requiring exceedingly little loading time.

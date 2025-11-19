@@ -1,7 +1,8 @@
 ---
-title: Angular Switch Component – Ignite UI for Angular | Infragistics
+title: Angular Switch Component – Ignite UI for Angular | Infragistics | MIT license
 _description: Ignite UI for Angular Switch component enables developers to use binary on/off or true/false data input functions within their applications.
 _keywords: Angular Switch component, Angular Switch control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
+_license: MIT
 ---
 
 # Angular Switch Component Overview

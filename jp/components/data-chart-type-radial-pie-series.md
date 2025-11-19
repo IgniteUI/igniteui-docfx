@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | ラジアル円チャート | データ バインディング | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用してラジアル円チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
 _keywords: Angular charts, data chart, radial pie charts,  Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, ラジアル円チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart','RadialPieSeries']
 _language: ja
 ---

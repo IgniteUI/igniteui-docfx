@@ -2,6 +2,7 @@
 title: Angular ページレイアウトの管理 | タイル マネージャー | Ignite UI | インフラジスティックス
 _description: Ignite UI for Angular Tile Manager コンポーネントを使用すると、コンテンツを個々のタイルに表示できます。
 _keywords: Angular ページ レイアウトの管理, Ignite UI for Angular, UI コントロール, Angular ウィジェット, Web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular タイル マネージャー, インフラジスティックス, タイル, Angular タイル マネージャー コンポーネント, Angular タイル マネージャー コントロール
+_license: MIT
 _language: ja
 ---
 # Angular Tile Manager (タイル マネージャー) の概要
