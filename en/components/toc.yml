@@ -150,18 +150,23 @@
     - name: Row Actions
       href: grid/row-actions.md
       new: false
+      premium: true
     - name: Live Data / Real-Time
       href: grid/live-data.md
       new: false
+      premium: true
     - name: Virtualization and performance
       href: grid/virtualization.md
       new: false
+      premium: true
     - name: Remote Data Operations
       href: grid/remote-data-operations.md
       new: false
+      premium: true
     - name: Column Data Types
       href: grid/column-types.md
       new: false
+      premium: true
     - name: Editing
       href: grid/editing.md
       new: false
@@ -169,30 +174,38 @@
         - name: Cell Editing
           href: grid/cell-editing.md
           updated: false
+          premium: true
         - name: Row Editing
           href: grid/row-editing.md
           new: false
+          premium: true
         - name: Row Adding
           href: grid/row-adding.md
           new: false
+          premium: true
         - name: Batch Editing
           href: grid/batch-editing.md
           updated: false
           new: false
+          premium: true
         - name: Validation
           href: grid/validation.md
           new: false
+          premium: true
         - name: Grid with Cascading combos
           href: grid/cascading-combos.md
           new: false
+          premium: true
     - name: Row Drag
       href: grid/row-drag.md
       updated: false
       new: false
+      premium: true
     - name: Paging
       href: grid/paging.md
       new: false
       updated: false
+      premium: true
     - name: Filtering
       href: grid/filtering.md
       new: false
@@ -200,38 +213,48 @@
         - name: Excel Style Filtering
           href: grid/excel-style-filtering.md
           updated: false
+          premium: true
         - name: Advanced Filtering
           href: grid/advanced-filtering.md
           new: false
+          premium: true
     - name: Sorting
       href: grid/sorting.md
       updated: false
+      premium: true
     - name: Group By
       href: grid/groupby.md
       new: false
       updated: false
+      premium: true
     - name: Summaries
       href: grid/summaries.md
       updated: false
+      premium: true
     - name: Column Moving
       href: grid/column-moving.md
       new: false
       updated: false
+      premium: true
     - name: Column Pinning
       href: grid/column-pinning.md
       new: false
       updated: false
+      premium: true
     - name: Row Pinning
       href: grid/row-pinning.md
       new: false
       updated: false
+      premium: true
     - name: Column Resizing
       href: grid/column-resizing.md
       updated: false
       new: false
+      premium: true
     - name: Column Hiding
       href: grid/column-hiding.md
       new: false
+      premium: true
     - name: Selection
       href: grid/selection.md
       new: false
@@ -239,65 +262,84 @@
         - name: Row selection
           href: grid/row-selection.md
           new: false
+          premium: true
         - name: Cell selection
           href: grid/cell-selection.md
           new: false
+          premium: true
         - name: Selection-based Aggregates
           href: grid/selection-based-aggregates.md
           new: false
+          premium: true
         - name: Column Selection
           href: grid/column-selection.md
           new: false
+          premium: true
     - name: Searching
       href: grid/search.md
       new: false
+      premium: true
     - name: Toolbar
       href: grid/toolbar.md
       new: false
       updated: false
+      premium: true
     - name: Export to Excel
       href: grid/export-excel.md
       new: false
       updated: false
+      premium: true
     - name: Paste from Excel
       href: grid/paste-excel.md
       new: false
+      premium: true
     - name: Multi-column Headers
       href: grid/multi-column-headers.md
       new: false
+      premium: true
     - name: Collapsible Column Groups
       href: grid/collapsible-column-groups.md
       new: false
+      premium: true
     - name: Size
       href: grid/display-density.md
       new: false
       updated: false
+      premium: true
     - name: Conditional Styling
       href: grid/conditional-cell-styling.md
       new: false
       updated: false
+      premium: true
     - name: Keyboard navigation
       href: grid/keyboard-navigation.md
       new: false
       updated: false
+      premium: true
     - name: Multi-row Layout
       href: grid/multi-row-layout.md
       new: false
+      premium: true
     - name: Clipboard Interactions
       href: grid/clipboard-interactions.md
       new: false
+      premium: true
     - name: Sizing
       href: grid/sizing.md
       new: false
+      premium: true
     - name: Master-Detail Grid
       href: grid/master-detail.md
       new: false
+      premium: true
     - name: State Persistence
       href: grid/state-persistence.md
       updated: false
+      premium: true
     - name: Cell Merging
       href: grid/cell-merging.md
       new: true
+      premium: true
 - name: Tree Grid
   href: treegrid/tree-grid.md
   new: false
@@ -306,21 +348,27 @@
     - name: Row Actions
       href: treegrid/row-actions.md
       new: false
+      premium: true
     - name: Live Data / Real-Time
       href: treegrid/live-data.md
       new: false
+      premium: true
     - name: Virtualization and performance
       href: treegrid/virtualization.md
       new: false
+      premium: true
     - name: Remote Data Operations
       href: treegrid/remote-data-operations.md
       new: false
+      premium: true
     - name: Column Data types
       href: treegrid/column-types.md
       new: false
+      premium: true
     - name: Load On Demand
       href: treegrid/load-on-demand.md
       new: false
+      premium: true
     - name: Editing
       href: treegrid/editing.md
       new: false
@@ -328,26 +376,33 @@
         - name: Cell Editing
           href: treegrid/cell-editing.md
           updated: false
+          premium: true
         - name: Row Editing
           href: treegrid/row-editing.md
           new: false
+          premium: true
         - name: Row Adding
           href: treegrid/row-adding.md
           new: false
+          premium: true
         - name: Batch Editing
           href: treegrid/batch-editing.md
           updated: false
           new: false
+          premium: true
         - name: Validation
           href: treegrid/validation.md
           new: false
+          premium: true
     - name: Row Drag
       href: treegrid/row-drag.md
       new: false
+      premium: true
     - name: Paging
       href: treegrid/paging.md
       new: false
       updated: false
+      premium: true
     - name: Filtering
       href: treegrid/filtering.md
       new: false
@@ -355,36 +410,45 @@
       - name: Excel Style Filtering
         href: treegrid/excel-style-filtering.md
         updated: false
+        premium: true
       - name: Advanced Filtering
         href: treegrid/advanced-filtering.md
         new: false
+        premium: true
     - name: Sorting
       href: treegrid/sorting.md
       updated: false
+      premium: true
     - name: Summaries
       href: treegrid/summaries.md
       new: false
       updated: false
+      premium: true
     - name: Column Moving
       href: treegrid/column-moving.md
       new: false
       updated: false
+      premium: true
     - name: Column Pinning
       href: treegrid/column-pinning.md
       new: false
       updated: false
+      premium: true
     - name: Row Pinning
       href: treegrid/row-pinning.md
       new: false
       updated: false
+      premium: true
     - name: Column Resizing
       href: treegrid/column-resizing.md
       updated: false
       new: false
+      premium: true
     - name: Column Hiding
       href: treegrid/column-hiding.md
       new: false
       updated: false
+      premium: true
     - name: Selection
       href: treegrid/selection.md
       new: false
@@ -392,56 +456,72 @@
         - name: Row selection
           href: treegrid/row-selection.md
           new: false
+          premium: true
         - name: Cell selection
           href: treegrid/cell-selection.md
           new: false
+          premium: true
         - name: Column Selection
           href: treegrid/column-selection.md
           new: false
+          premium: true
     - name: Searching
       href: treegrid/search.md
       new: false
+      premium: true
     - name: Toolbar
       href: treegrid/toolbar.md
       new: false
       updated: false
+      premium: true
     - name: Export to Excel
       href: treegrid/export-excel.md
       new: false
       updated: false
+      premium: true
     - name: Multi-column Headers
       href: treegrid/multi-column-headers.md
       new: false
+      premium: true
     - name: Collapsible Column Groups
       href: treegrid/collapsible-column-groups.md
       new: false
+      premium: true
     - name: Size
       href: treegrid/display-density.md
       new: false
+      premium: true
     - name: Conditional Styling
       href: treegrid/conditional-cell-styling.md
       new: false
       updated: false
+      premium: true
     - name: Group By
       href: treegrid/groupby.md
       updated: false
       new: false
+      premium: true
     - name: Keyboard navigation
       href: treegrid/keyboard-navigation.md
       new: false
       updated: false
+      premium: true
     - name: Clipboard Interactions
       href: treegrid/clipboard-interactions.md
       new: false
+      premium: true
     - name: Sizing
       href: treegrid/sizing.md
       new: false
+      premium: true
     - name: State Persistence
       href: treegrid/state-persistence.md
       new: false
+      premium: true
     - name: Cell Merging
       href: treegrid/cell-merging.md
       new: true
+      premium: true
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical-grid.md
   new: false
@@ -450,19 +530,24 @@
     - name: Row Actions
       href: hierarchicalgrid/row-actions.md
       new: false
+      premium: true
     - name: Virtualization and performance
       href: hierarchicalgrid/virtualization.md
       new: false
+      premium: true
     - name: Remote Data Operations
       href: hierarchicalgrid/remote-data-operations.md
       new: false
+      premium: true
     - name: Column Data types
       href: hierarchicalgrid/column-types.md
       new: false
+      premium: true
     - name: Load on Demand
       href: hierarchicalgrid/load-on-demand.md
       new: false
       updated: true
+      premium: true
     - name: Editing
       href: hierarchicalgrid/editing.md
       new: false
@@ -470,30 +555,38 @@
         - name: Cell Editing
           href: hierarchicalgrid/cell-editing.md
           updated: false
+          premium: true
         - name: Row Editing
           href: hierarchicalgrid/row-editing.md
           new: false
+          premium: true
         - name: Row Adding
           href: hierarchicalgrid/row-adding.md
           new: false
+          premium: true
         - name: Batch Editing
           href: hierarchicalgrid/batch-editing.md
           updated: false
           new: false
+          premium: true
         - name: Validation
           href: hierarchicalgrid/validation.md
           new: false
+          premium: true
     - name: Export to Excel
       href: hierarchicalgrid/export-excel.md
       new: false
       updated: false
+      premium: true
     - name: Row Drag
       href: hierarchicalgrid/row-drag.md
       new: false
+      premium: true
     - name: Paging
       href: hierarchicalgrid/paging.md
       new: false
       updated: false
+      premium: true
     - name: Filtering
       href: hierarchicalgrid/filtering.md
       new: false
@@ -501,36 +594,45 @@
       - name: Excel Style Filtering
         href: hierarchicalgrid/excel-style-filtering.md
         updated: false
+        premium: true
       - name: Advanced Filtering
         href: hierarchicalgrid/advanced-filtering.md
         new: false
         updated: true
+        premium: true
     - name: Sorting
       href: hierarchicalgrid/sorting.md
       updated: false
+      premium: true
     - name: Summaries
       href: hierarchicalgrid/summaries.md
       new: false
       updated: false
+      premium: true
     - name: Column Moving
       href: hierarchicalgrid/column-moving.md
       new: false
       updated: false
+      premium: true
     - name: Column Pinning
       href: hierarchicalgrid/column-pinning.md
       new: false
       updated: false
+      premium: true
     - name: Row Pinning
       href: hierarchicalgrid/row-pinning.md
       new: false
+      premium: true
     - name: Column Resizing
       href: hierarchicalgrid/column-resizing.md
       updated: false
       new: false
+      premium: true
     - name: Column Hiding
       href: hierarchicalgrid/column-hiding.md
       new: false
       updated: false
+      premium: true
     - name: Selection
       href: hierarchicalgrid/selection.md
       new: false
@@ -538,12 +640,15 @@
         - name: Row selection
           href: hierarchicalgrid/row-selection.md
           new: false
+          premium: true
         - name: Cell selection
           href: hierarchicalgrid/cell-selection.md
           new: false
+          premium: true
         - name: Column Selection
           href: hierarchicalgrid/column-selection.md
           new: false
+          premium: true
     # Not yet fully implemented for igxHGrid
     # - name: Searching
     #   href: hierarchicalgrid/search.md
@@ -552,19 +657,24 @@
       href: hierarchicalgrid/toolbar.md
       new: false
       updated: false
+      premium: true
     - name: Multi-column Headers
       href: hierarchicalgrid/multi-column-headers.md
       new: false
+      premium: true
     - name: Collapsible Column Groups
       href: hierarchicalgrid/collapsible-column-groups.md
       new: false
+      premium: true
     - name: Conditional Styling
       href: hierarchicalgrid/conditional-cell-styling.md
       new: false
       updated: false
+      premium: true
     - name: Size
       href: hierarchicalgrid/display-density.md
       new: false
+      premium: true
     # - name: Conditional Cell Styling
     #   href: hierarchicalgrid/conditional-cell-styling.md
     #   new: true
@@ -572,15 +682,19 @@
       href: hierarchicalgrid/keyboard-navigation.md
       new: false
       updated: false
+      premium: true
     - name: Sizing
       href: hierarchicalgrid/sizing.md
       new: false
+      premium: true
     - name: State Persistence
       href: hierarchicalgrid/state-persistence.md
       new: false
+      premium: true
     - name: Cell Merging
       href: hierarchicalgrid/cell-merging.md
       new: true
+      premium: true
 - name: Pivot Grid
   href: pivotGrid/pivot-grid.md
   new: false
@@ -590,17 +704,21 @@
       href: pivotGrid/export-excel.md
       new: false
       updated: true
+      premium: true
     - name: Pivot Grid Features
       href: pivotGrid/pivot-grid-features.md
       updated: true
       new: false
+      premium: true
     - name: Pivot Grid Remote Operations
       href: pivotGrid/pivot-grid-custom.md
       new: false
+      premium: true
     - name: State Persistence
       href: pivotGrid/state-persistence.md
       new: false
       updated: true
+      premium: true
 - name: Tree
   href: tree.md
   new: false
