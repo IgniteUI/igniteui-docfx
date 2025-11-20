@@ -20,7 +20,7 @@ Our Ignite UI Premium components come with advanced enterprise features and are 
 
 ### Grids with advanced components
 
-- Data Grid, Hierarchical Grid, Tree Grid, Pivot Grid
+ - [Data Grid](../grid/grid.md){.new-tab}, Hierarchical Grid, Tree Grid, Pivot Grid
 - Dock Manager
 - Query Builder
 - Charting library

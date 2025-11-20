@@ -47,8 +47,13 @@
         ],
         "fileMetadataFiles": [],
         "template": [
-            "../node_modules/igniteui-docfx-template/template"
+            "../node_modules/igniteui-docfx-template/template",
+            "../custom-template"
         ],
+        "markdownEngineName": "markdig",
+        "markdownEngineProperties": {
+            "markdigExtensions": ["attributes"]
+        },
         "noLangKeyword": false,
         "keepFileLink": false,
         "cleanupCacheHistory": true,

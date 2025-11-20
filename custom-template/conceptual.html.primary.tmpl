@@ -1,0 +1,37 @@
+{{!Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license.}}
+{{!master(layout/_master.tmpl)}}
+{{{rawTitle}}}
+{{{conceptual}}}
+<script>
+// Auto-apply and enforce new-tab behavior for marked links (override template).
+(function(){
+  function applyNewTabBehavior(){
+    var links = document.querySelectorAll('a.new-tab, a[data-new-tab="true"]');
+    links.forEach(function(a){
+      a.setAttribute('target','_blank');
+      if(!a.hasAttribute('rel')) a.setAttribute('rel','noopener noreferrer');
+    });
+  }
+  document.addEventListener('DOMContentLoaded', applyNewTabBehavior);
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a.new-tab, a[data-new-tab="true"]');
+    if(a){
+      e.preventDefault();
+      e.stopPropagation();
+      if(e.stopImmediatePropagation) e.stopImmediatePropagation();
+      window.open(a.href, '_blank', 'noopener');
+    }
+  }, true);
+  document.addEventListener('keydown', function(e){
+    if((e.key === 'Enter' || e.key === ' ') && document.activeElement){
+      var a = document.activeElement.closest && document.activeElement.closest('a.new-tab, a[data-new-tab="true"]');
+      if(a){
+        e.preventDefault();
+        e.stopPropagation();
+        if(e.stopImmediatePropagation) e.stopImmediatePropagation();
+        window.open(a.href, '_blank', 'noopener');
+      }
+    }
+  }, true);
+})();
+</script>
