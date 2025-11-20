@@ -7,7 +7,7 @@ mentionedTypes: [{ComponentApiMembers}]
 namespace: Infragistics.Controls
 ---
 
-# Column cell template
+# Column Cell Template
 
 By default, the grid uses the key of the column to render the value as a string inside the cell. This is fine for basic scenarios, but if you want to customize the rendered output or the final output is a combination of different data fields, you should use a cell template renderer.
 
@@ -19,7 +19,7 @@ To achieve that, set the **`cellTemplate`** property of the column.
 }
 ```
 
-## Use as a formatter function
+## Use as a Formatter Function
 
 For the simple scenario where some formatting is required, one can just return the formatted value. Here is an example for displaying a number value to a locale currency format:
 
@@ -49,7 +49,7 @@ const { format: asCurrency } = new Intl.NumberFormat('en-EN', { style: 'currency
 }
 ```
 
-## Custom DOM templates
+## Custom DOM Templates
 
 Aside from using the **`cellTemplate`** property as a value formatter, you can also create your own DOM template, which
 will be rendered inside the cell container.
@@ -75,7 +75,7 @@ import { html } from "lit";
 >[!NOTE]
 >Keep in mind the more complex and involved the template is, the greater the performance cost. Avoid complex DOM structures if performance is important.
 
-## Cell context object
+## Cell Context Object
 
 The custom cell renderer is passed an **`GridLiteCellContext`** object as a parameter with the following props:
 
