@@ -3,33 +3,37 @@
 {{{rawTitle}}}
 {{{conceptual}}}
 <script>
-// Auto-apply and enforce new-tab behavior for marked links (override template).
+// Auto-apply new-tab behavior for marked links.
+// Usage in markdown: [Link Text](url){.new-tab}
 (function(){
-  function applyNewTabBehavior(){
-    var links = document.querySelectorAll('a.new-tab, a[data-new-tab="true"]');
-    links.forEach(function(a){
-      a.setAttribute('target','_blank');
-      if(!a.hasAttribute('rel')) a.setAttribute('rel','noopener noreferrer');
-    });
-  }
-  document.addEventListener('DOMContentLoaded', applyNewTabBehavior);
+  // Intercept clicks on new-tab links and force them to open in new window
   document.addEventListener('click', function(e){
-    var a = e.target.closest && e.target.closest('a.new-tab, a[data-new-tab="true"]');
-    if(a){
+    var link = e.target.closest('a.new-tab, a[data-new-tab="true"]');
+    if (link && link.href) {
+      if (!/^https?:\/\//i.test(link.href) && !/^\//.test(link.href) && !/^\.\.?\//.test(link.href)) {
+        console.warn('new-tab: Blocked potentially unsafe URL:', link.href);
+        return;
+      }
       e.preventDefault();
       e.stopPropagation();
-      if(e.stopImmediatePropagation) e.stopImmediatePropagation();
-      window.open(a.href, '_blank', 'noopener');
+      window.open(link.href, '_blank', 'noopener,noreferrer');
+      return false;
     }
   }, true);
+
+  // Also handle keyboard navigation (Enter/Space on focused links)
   document.addEventListener('keydown', function(e){
-    if((e.key === 'Enter' || e.key === ' ') && document.activeElement){
-      var a = document.activeElement.closest && document.activeElement.closest('a.new-tab, a[data-new-tab="true"]');
-      if(a){
+    if ((e.key === 'Enter' || e.key === ' ') && document.activeElement) {
+      var link = document.activeElement.closest('a.new-tab, a[data-new-tab="true"]');
+      if (link && link.href) {
+        if (!/^https?:\/\//i.test(link.href) && !/^\//.test(link.href) && !/^\.\.?\//.test(link.href)) {
+          console.warn('new-tab: Blocked potentially unsafe URL:', link.href);
+          return;
+        }
         e.preventDefault();
         e.stopPropagation();
-        if(e.stopImmediatePropagation) e.stopImmediatePropagation();
-        window.open(a.href, '_blank', 'noopener');
+        window.open(link.href, '_blank', 'noopener,noreferrer');
+        return false;
       }
     }
   }, true);
