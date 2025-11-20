@@ -20,13 +20,13 @@ Our Ignite UI Premium components come with advanced enterprise features and are 
 
 ### Grids with advanced components
 
- - [Data Grid](../grid/grid.md){.new-tab}, Hierarchical Grid, Tree Grid, Pivot Grid
-- Dock Manager
-- Query Builder
-- Charting library
-- Maps library
-- Excel Library
-- Spreadsheet
+ - [Data Grid](../grid/grid.md){.new-tab}, [Hierarchical Grid](../hierarchicalgrid/hierarchical-grid.md){.new-tab}, [Tree Grid](../treegrid/tree-grid.md){.new-tab}, [Pivot Grid](../pivotGrid/pivot-grid.md){.new-tab}
+- [Dock Manager](../dock-manager.md){.new-tab}
+- [Query Builder](../query-builder.md){.new-tab}
+- [Charting library](../charts/chart-overview.md){.new-tab}
+- [Maps library](../geo-map.md)
+- [Excel Library](../excel-library.md){.new-tab}
+- [Spreadsheet](../spreadsheet-overview.md){.new-tab}
 - Gauges
 
 All the Premium components can be evaluated locally and even tested in production with watermarking. However, a commercial license is required for customer-facing deployments and for unlocking the full power of the advanced Grids, Charts, and other Premium controls.
