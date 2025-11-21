@@ -1410,7 +1410,7 @@ To style the button you can use our type-specific theme functions: [`flat-button
 
 Each of them will target only the buttons of that specific type.
 
-To get started with styling the button, first import the `index` file, which includes all theme functions and component mixins:
+To get started with styling the button, first import the themes module, which includes all theme functions and component mixins:
 
 ```scss
 @use "igniteui-angular/theming" as *;
