@@ -47,8 +47,7 @@
         ],
         "fileMetadataFiles": [],
         "template": [
-            "../node_modules/igniteui-docfx-template/template",
-            "../custom-template"
+            "../node_modules/igniteui-docfx-template/template"
         ],
         "markdownEngineName": "markdig",
         "markdownEngineProperties": {
