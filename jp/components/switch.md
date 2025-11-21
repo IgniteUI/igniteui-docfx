@@ -1,7 +1,8 @@
 ---
-title: Switch コンポーネント
+title: Switch コンポーネント | MITライセンス
 _description: Ignite UI for Angular Switch コンポーネントはアプリケーションにバイナリ有効/無効または true/false のデータ入力関数を追加します。
 _keywords: Angular Switch コンポーネント, Angular Switch コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
+_license: MIT
 _language: ja
 ---
 

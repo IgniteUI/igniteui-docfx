@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | 散布 HD チャート | データ バインディング | インフラジスティックス
 _description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
 _keywords: data chart, Ignite UI for Angular, Infragistics, データ チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---

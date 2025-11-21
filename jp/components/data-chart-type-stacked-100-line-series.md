@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | 積層 100 折れ線チャート | データ バインディング | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用して積層 100 折れ線チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
 _keywords: Angular charts, data chart, stacked 100 line, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 積層 100 折れ線チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart','Stacked100LineSeries']
 namespace: Infragistics.Controls.Charts
 _language: ja

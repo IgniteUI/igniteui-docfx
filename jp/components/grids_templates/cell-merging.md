@@ -2,6 +2,7 @@
 title: Angular Grid のセル結合 - Ignite UI for Angular
 _description: Ignite UI for Angular Data Grid の複数行レイアウト機能を使用して、列をより強力な方法で配置およびサイズ設定します。デモと例をお試しください。
 _keywords: angular cell merging, cell merging, ignite ui for angular, セルの結合, セルの結合
+_license: commercial
 _language: ja
 ---
 

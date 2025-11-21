@@ -1,7 +1,8 @@
 ---
-title: Angular Expansion Panel – Ignite UI for Angular
+title: Angular Expansion Panel – Ignite UI for Angular - MITライセンス
 _description: Angular 展開パネルは、縮小と展開の 2 つの状態を持つ、簡単に設定できる拡張可能なコンポーネントを提供します。今すぐお試しください。
 _keywords: angular expansion panel, angular expansion panel コンポーネント, angular UI コンポーネント, igniteui for angular, インフラジスティックス
+_license: MIT
 _language: ja
 ---
 # Angular Expansion Panel (展開パネル) コンポーネントの概要

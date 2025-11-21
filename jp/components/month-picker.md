@@ -1,7 +1,8 @@
 ---
-title: Angular Month Picker コンポーネント – Ignite UI for Angular
+title: Angular Month Picker コンポーネント – Ignite UI for Angular - MITライセンス
 _description: Angular Month Picker コンポーネントは、カレンダー ビューで年や月を簡単で直感的な選択できます。今すぐお試しください。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Month Picker コンポーネント, Angular Month Picker コントロール
+_license: MIT
 _language: ja
 ---
 

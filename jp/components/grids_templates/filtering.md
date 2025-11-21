@@ -3,6 +3,7 @@
 title: Angular Grid のフィルター - Ignite UI for Angular
 _description: Angular フィルターを使用して、Ignite UI for Angular で特定のデータを返します。データ型の Excel スタイル フィルタリングを含む高度なフィルタリング オプションをお試しください。
 _keywords: angular フィルター, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular フィルター | フィルタリング可能なデータ ツリー グリッド | インフラジスティックス
 _description: Angular フィルターを使用して、Ignite UI for Angular で特定のデータを返します。データ型の Excel スタイル フィルタリングを含む高度なフィルタリング オプションをお試しください。
 _keywords: angular フィルター, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -19,6 +21,7 @@ _language: ja
 title: Angular Hierarchical Grid のフィルター - Ignite UI for Angular
 _description: Angular フィルターを使用して、Ignite UI for Angular で特定のデータを返します。データ型の Excel スタイル フィルタリングを含む高度なフィルタリング オプションをお試しください。
 _keywords: angular フィルター, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -633,9 +636,6 @@ $dark-button: button-theme(
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
    
-<code-view style="height:650px" 
-           no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering-style/" >
 </code-view>
 

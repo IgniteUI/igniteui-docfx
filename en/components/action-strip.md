@@ -1,7 +1,8 @@
 ---
-title: Angular Action Strip Component – Ignite UI for Angular | Infragistics
+title: Angular Action Strip Component – Ignite UI for Angular | Infragistics | MIT license 
 _description: The Action Strip represents a template area for one or more actions. The Action Strip requires to be inside a relative container, as it is going to overlay it.
 _keywords: Angular Action Strip component, Angular Action Strip directive, Angular Action Strip control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Angular UI Components
+_license: MIT
 ---
 
 # Angular Action Strip Directive Overview

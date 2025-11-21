@@ -2,6 +2,7 @@
 title: Angular ドーナツ チャート | 階層データの可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular ドーナツ チャート コントロールを使用して、複数の変数を同心円で表示し、階層データを可視化します。詳細については、Ignite UI for Angular ドーナツ チャートのサンプルを参照してください。
 _keywords: Angular charts, doughnut chart, Ignite UI for Angular, Infragistics, data binding, slice selection, slice explosion, animation, multiple rings, Angular チャート, ドーナツ チャート, データ バインディング, スライス選択, スライス切り離し, アニメーション, 複数リング, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDoughnutChart']
 _language: ja
 ---

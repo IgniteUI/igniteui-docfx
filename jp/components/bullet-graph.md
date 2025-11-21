@@ -2,6 +2,7 @@
 title: Angular ブレット グラフ | データ可視化ツール | インフラジスティックス
 _description: インフラジスティックスの Angular ブレット グラフ コントロールを使用すると、範囲を表示し、複数の測定値を比較するダッシュボードを作成できます。インフラジスティックスのデータ視覚化ツールを是非お試しください!
 _keywords: Angular Bullet Graph, animation, labels, needle, scales, ranges, tick marks, Infragistics, ブレット グラフ, インフラジスティックス, Angular ブレット グラフ, アニメーション, ラベル, ニードル, スケール, 範囲, 目盛, インフラジスティックス
+_license: commercial
 mentionedTypes: ["XamBulletGraph"]
 namespace: Infragistics.Controls.Gauges
 _language: ja

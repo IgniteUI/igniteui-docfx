@@ -1,7 +1,8 @@
 ---
-title: 拡張されたマテリアル アイコン
+title: 拡張されたマテリアル アイコン | MITライセンス
 _description: Ignite UI for Angular は、マテリアル アイコン セットを拡張して、デザイナーや開発者に幅広いアイコンを提供しています。 
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール、ネイティブ Angular コンポーネント ライブラリ, Angular Icon コンポーネント, Angular Icon コントロール, 拡張されたマテリアル アイコン
+_license: MIT
 ---
 
 # 拡張されたマテリアル アイコン

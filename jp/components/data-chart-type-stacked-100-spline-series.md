@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | 積層型 100 スプライン チャート | データ バインディング | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用して積層型 100 スプライン チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
 _keywords: Angular charts, data chart, stacked 100 spline charts, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 積層型 100 スプライン チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart','Stacked100SplineSeries']
 namespace: Infragistics.Controls.Charts
 _language: ja

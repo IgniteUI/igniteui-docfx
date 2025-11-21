@@ -2,6 +2,7 @@
 title: Angular Sparkline | Data Visualization Tools | Infragistics
 _description: Use Infragistics' Angular sparkline chart control to render in a small scale layout such as a grid cell or stand alone. Learn about the Ignite UI for Angular sparkline chart configurable elements!
 _keywords: Sparkline, Ignite UI for Angular, Infragistics, WinLoss, Area, Column
+_license: commercial
 mentionedTypes: ['XamSparkline', 'SparklineDisplayType', 'TrendLineType']
 ---
 

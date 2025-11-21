@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | 注釈 | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用すると、コールアウト レイヤー、十字線レイヤー、最終値レイヤーなどのチャート シリーズに注釈を追加できます。Ignite UI for Angular を使用してグラフと視覚化を改善します。
 _keywords: Angular charts, data chart, annotations, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 注釈, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---

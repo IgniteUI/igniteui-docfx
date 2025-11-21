@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | 折れ線チャート | データ バインディング | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用して折れ線チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
 _keywords: Angular charts, data chart, line chart, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 折れ線チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---

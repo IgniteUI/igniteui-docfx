@@ -2,6 +2,7 @@
 title: Angular チャートおよびグラフ | データ可視化ツール | 構成オプション | インフラジスティックス
 _description: マーカー、タイトル、サブタイトル、アニメーションの設定など、インフラジスティックスの Angular チャート コントロール機能の使用方法を学びます。インフラジスティックスの Ignite UI for Angular グラフ デモを是非お試しください!
 _keywords: Angular charts, category chart, annotations, Ignite UI for Angular, Infragistics, Angular チャート, カテゴリ チャート, 注釈, インフラジスティックス
+_license: commercial
 mentionedTypes: ['CategoryChart','CategoryTransitionInMode']
 _language: ja
 ---

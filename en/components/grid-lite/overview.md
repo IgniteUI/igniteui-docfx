@@ -1,21 +1,35 @@
 ---
-title: Angular Grid Lite Overview
-_description: Grid Lite features overview
+title: Angular Grid Lite Overview | Ignite UI for Angular | MIT license
+_description: Create apps with our open-source Angular Grid Lite. It’s lightweight and packed with essential features - filtering, hiding, sorting, and more. Try now.
 _keywords: overview, {Platform}, {ComponentKeywords}, {ProductName}, Infragistics
+_license: MIT
 mentionedTypes: [{ComponentApiMembers}]
 namespace: Infragistics.Controls
 ---
 
 # Open Source JavaScript Grid for Any Project
 
-The Grid Lite component is a free, open-source JavaScript data grid built as a Web Component, which means you can use it dependency-free with or without a web framework.
+The Ignite UI for Angular Grid Lite component is part of Infragistics’ new open-source UI component set that will be actively supported and maintained. It is open-source JavaScript data grid built as a Web Component, which means you can use it dependency-free with or without a web framework. There are 40+ OSS controls now available under the MIT license across Angular, React, Blazor, and Web Components.
+
+The Angular Grid Lite delivers essential data-display functionality with minimal overhead and the performance users expect. It is designed for developers who need fast, lightweight data presentation without the complexity of an enterprise grid.
+
+Angular Grid Lite features:
+
+- Column Filtering
+- Hiding
+- Resizing
+- Sorting
+- Row Virtualization
+- Accessibility
+- Themes And Styling
+- Column Data Types
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid-lite/overview" alt="Angular Grid Lite App Sample Main">
 </code-view>
 
-Grid Lite is designed to give you the core features that you need to deliver a beautiful data grid / data table experience in your apps. Designed for performance and beauty, the Grid Lite component will work in any framework, on any platform.
+Grid Lite controls are completely free, MIT licensed, as a part of our initiative to make Ignite UI more open, transparent, and accessible. However, if your project scales and grows in complexity and functionality, and you require an enterprise-grade application, we have an upgrade strategy for transitioning from the Grid Lite to the full-featured and advanced Data Grid.  
 
 Angular <a href="https://custom-elements-everywhere.com/#angular" target="_blank">supports</a> custom elements, so you can use Grid Lite with ease.
 

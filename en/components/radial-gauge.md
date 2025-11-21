@@ -2,6 +2,7 @@
 title: Angular Radial Gauge Chart | Data Visualization Tools | Infragistics
 _description: Use Infragistics' Angular radial gauge control to create engaging data visualizations and dashboards and show off KPIs with rich style and interactivity. Learn about the Ignite UI for Angular radial gauge configurable elements!
 _keywords: Radial Gauge, Ignite UI for Angular, Infragistics, animation, labels, needle, scales, ranges, tick marks
+_license: commercial
 mentionedTypes: ["XamRadialGauge", "XamRadialGaugeRange"]
 namespace: Infragistics.Controls.Gauges
 ---

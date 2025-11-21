@@ -2,6 +2,7 @@
 title: Angular Map | Data Visualization Tools | Binding Multiple Data Shapes | Infragistics
 _description: Use Infragistics' Angular to add multiple geographic series objects to overlay a few shapefiles with geo-spacial data. View Ignite UI for Angular map tutorials!
 _keywords: Angular map, shape files, Ignite UI for Angular, Infragistics, data binding
+_license: commercial
 mentionedTypes: ["XamGeographicMap", "ShapefileConverter", "Series", "GeographicShapeSeriesBase"]
 namespace: Infragistics.Controls.Maps
 ---

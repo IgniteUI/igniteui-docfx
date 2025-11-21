@@ -1,7 +1,8 @@
 ---
-title: Time Picker コンポーネント - ネイティブ Angular | Ignite UI for Angular
+title: Time Picker コンポーネント - ネイティブ Angular | Ignite UI for Angular | MITライセンス
 _description: Ignite UI for Angular Time Picker コンポーネントを使用すると、スピン ボタンがあるダイアログから時間を選択し、入力フィールドに値が設定されます。今すぐお試しください。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Time Picker コンポーネント, Angular Time Picker コントロール、Time Picker, Angular Time Picker
+_license: MIT
 _language: ja
 ---
 

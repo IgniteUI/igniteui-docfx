@@ -1,29 +1,29 @@
-<!-- markdownlint-disable MD003 MD024 -->
+<!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if (igxName === 'IgxGrid') {
 ---
-
 title: Column Hiding in Angular Data Grid - Ignite UI for Angular
 _description: Learn how to use the Column Hiding feature that allows users to change the visible state of the columns directly through the UI of the Ignite Material UI table.
 _keywords: column hiding, ignite ui for angular, infragistics
+_license: commercial
 ---
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-
 title: Column Hiding in Angular Tree Grid - Ignite UI for Angular
 _description: Learn how to use the Column Hiding feature that allows users to change the visible state of the columns directly through the UI of the Ignite Material UI table.
 _keywords: column hiding, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/column-hiding
 ---
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-
 title: Column Hiding in Angular Hierarchical Grid - Ignite UI for Angular
 _description: Learn how to use the Column Hiding feature that allows users to change the visible state of the columns directly through the UI of the Ignite Material UI table.
 _keywords: column hiding, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/column-hiding
 ---
 

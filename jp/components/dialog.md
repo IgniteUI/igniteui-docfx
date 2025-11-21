@@ -1,7 +1,8 @@
 ---
-title: Dialog Window コンポーネント
+title: Dialog Window コンポーネント - MITライセンス
 _description: Ignite UI for Angular Dialog Window コンポーネントを使用すると、情報ダイアログまたはデータ変換ウィンドウを作成し、リアルタイムで情報を表示して管理できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Angular UI コンポーネント, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Dialog Window コンポーネント, Angular Dialog Window コントロール, Angular Dialog コンポーネント
+_license: MIT
 _language: ja
 ---
 

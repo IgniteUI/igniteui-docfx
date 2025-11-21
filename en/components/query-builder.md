@@ -2,6 +2,7 @@
 title: Angular Query Builder Component - Ignite UI for Angular
 _description: Angular Query Builder allows users to build complex custom queries in angular apps with a great UI experience. Try it Now.
 _keywords: Angular Query Builder component, Angular Query Builder control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
+_license: commercial
 ---
 
 # Angular Query Builder Component Overview

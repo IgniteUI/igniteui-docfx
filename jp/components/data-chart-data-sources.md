@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | データソース | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用して、柱状、エリア、棒、円、ドーナツなど、さまざまな種類のチャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
 _keywords: Angular charts, data chart, Ignite UI for Angular, Infragistics, data sources, Angular チャート, データ チャート, インフラジスティックス, データソース
+_license: commercial
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---

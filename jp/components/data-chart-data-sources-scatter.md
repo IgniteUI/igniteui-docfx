@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | データソース | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用して、散布エリア、散布バブル、散布等高線などの散布図を作成します。Ignite UI for Angular グラフ タイプについて説明します。
 _keywords: Angular charts, data chart, scatter chart, Ignite UI for Angular, Infragistics, data source, Angular チャート, データ チャート, 散布図, インフラジスティックス, データソース
+_license: commercial
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---

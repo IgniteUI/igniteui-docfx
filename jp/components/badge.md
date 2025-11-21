@@ -1,7 +1,8 @@
 ---
-title: Angular Badge コンポーネント
+title: Angular Badge コンポーネント - MITライセンス
 _description: Ignite UI for Angular の Badge コントロールは、アプリケーションでその他のコンポーネントを装飾するために定義済みスタイルでアクティブ カウントまたはアイコンを表示します。
 _keywords: Angular Badge コンポーネント, Angular Badge コントロール, Ignite UI for Angular, Angular UI コンポーネント
+_license: MIT
 _language: ja
 ---
 

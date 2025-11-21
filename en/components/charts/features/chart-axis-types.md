@@ -2,6 +2,7 @@
 title: Angular Axis Types | Data Visualization | Infragistics
 _description: Infragistics' Angular Axis Types
 _keywords: Angular Axis, Options, Title, Labels, Gap, Overlap, Range, Scale, Mode, Infragistics
+_license: commercial
 mentionedTypes: ["DomainChart", "CategoryChart", "FinancialChart", "FinancialChartYAxisMode", "FinancialChartXAxisMode", "NumericYAxis", "CategoryXAxis"]
 namespace: Infragistics.Controls.Charts
 ---

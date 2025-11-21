@@ -1,7 +1,8 @@
 ---
-title: Angular Button Component – Ignite UI for Angular
+title: Angular Button Component – Ignite UI for Angular - MIT license 
 _description: Enhance standard buttons with built-in text, images and more features using Ignite UI for Angular Button component. Try it now.
 _keywords: Angular Button component, Angular Button control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Angular UI Components,
+_license: MIT
 ---
 
 # Angular Button Overview

@@ -1,7 +1,8 @@
 ---
-title: Angular Date Picker コンポーネント – Ignite UI for Angular
+title: Angular Date Picker コンポーネント – Ignite UI for Angular - MITライセンス
 _description: Ignite UI の Angular Date Picker コントロールのを使用して、カレンダーから Web アプリケーションに日付を選択する機能を使用する方法について説明します。今すぐお試しください。 
 _keywords: angular date picker, angular date picker コンポーネント, angular UI コンポーネント, ignite ui for angular
+_license: MIT
 _language: ja
 ---
 

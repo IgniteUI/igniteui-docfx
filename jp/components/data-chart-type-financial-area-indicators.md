@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | 財務指標 (エリア) | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用し財務指標 (エリア) を表示します。Ignite UI for Angular グラフ タイプについて説明します。
 _keywords: Angular charts, data chart, financial area indicators, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, エリア型の財務指標, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart', 'FinancialPriceSeries']
 _language: ja
 ---

@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | カテゴリ シリーズ | データ バインディング | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用して、エリア、横棒チャート、縦棒チャート、折れ線チャートなどのカテゴリ チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
 _keywords: Angular charts, data chart, category series, area, chart, bar chart, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, カテゴリ シリーズ, エリア, チャート, 棒チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---

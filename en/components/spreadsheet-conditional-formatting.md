@@ -2,6 +2,7 @@
 title: Angular Spreadsheet | Conditional Formatting | Infragistics
 _description: Use Infragistics' Angular spreadsheet control to conditionally format the cells of a worksheet. Check out Ignite UI for Angular spreadsheet demos!
 _keywords: Spreadsheet, conditional formatting, Ignite UI for Angular, Infragistics, Worksheet
+_license: commercial
 mentionedTypes: ["Spreadsheet", "ConditionalFormatCollection", "WorksheetCell", "Worksheet", "IWorksheetCellFormat"]
 ---
 

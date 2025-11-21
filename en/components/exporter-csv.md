@@ -2,6 +2,7 @@
 title: Export to CSV/TSV Component - Native Angular | Ignite UI for Angular
 _description: Users can export their data for editing or offline presentation can do so in CSV or TSV format with the Export to CSV/TSV Ignite UI for Angular component.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Data Grid, Angular Grid Control, Angular Grid Component, CSV Export, TSV Export
+_license: commercial
 ---
 
 # CSV Exporter

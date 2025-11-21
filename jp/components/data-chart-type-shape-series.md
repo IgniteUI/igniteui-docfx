@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | 散布シェイプ チャート | データ バインディング | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用して、散布ポリゴンシリーズや散布ポリラインシリーズなどのシェープ チャートを作成します。詳細については、以下のサンプルを参照してください。
 _keywords: Angular charts, data chart, shape charts, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, シェイプ チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart','ShapeColumnSeries','ScatterPolygonSeries','ScatterPolylineSeries']
 _language: ja
 ---

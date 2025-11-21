@@ -2,6 +2,7 @@
 title: Angular ファイナンシャル チャート | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular ファイナンシャル チャート
 _keywords: Angular Charts, Financial Chart, Infragistics, Angular チャート, ファイナンシャル チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ["XamFinancialChart"]
 _language: ja
 ---

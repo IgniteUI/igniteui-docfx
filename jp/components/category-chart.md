@@ -3,6 +3,7 @@ title: Angular カテゴリ チャート | データのチャート作成コン�
 _description: Angular カテゴリ チャート コンポーネントを使用して、データを解析し、データを表すための最適なチャート タイプを自動的に選択します。今日から始められます。
 _keywords: category chart, Angular component, Ignite UI for Angular, Angular charts, charting component, カテゴリ チャート, Angular コンポーネント, Angular チャート, チャート作成コンポーネント
 mentionedTypes: ['CategoryChart', 'CategoryChartType']
+_license: commercial
 _language: ja
 ---
 

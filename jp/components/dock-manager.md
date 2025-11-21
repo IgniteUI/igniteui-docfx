@@ -2,6 +2,7 @@
 title: Angular ページ レイアウトの管理 | ドック マネージャー | Ignite UI | インフラジスティックス
 _description: ピン固定、サイズ変更、移動、非表示が可能なペインでドック マネージャーを使用して Angular アプリケーションのレイアウトをカスタマイズする方法を説明します。
 _keywords: manage angular page layout, Ignite UI for Angular, Infragistics, Angular ページ レイアウトの管理, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 # ドック マネージャー

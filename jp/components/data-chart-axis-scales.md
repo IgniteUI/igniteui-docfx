@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | 軸スケール | インフラジスティックス
 _description: 同じプロット領域に視覚要素の複数インスタンスを表示するデータ チャートを作成し、複合チャートビューを作成します。
 _keywords: Angular charts, data chart, axis scales, Infragistics, Angular チャート, データ チャート, 軸スケール, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---

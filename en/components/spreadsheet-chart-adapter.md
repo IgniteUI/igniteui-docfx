@@ -2,6 +2,7 @@
 title: Angular Spreadsheet | Chart Adapter | Infragistics
 _description: Display charts such as column, line and area, in the Infragistics' Angular spreadsheet control. Learn how to integrate charts in Ignite UI for Angular spreadsheet!
 _keywords: Excel Spreadsheet, chart adapter, Ignite UI for Angular, Infragistics
+_license: commercial
 mentionedTypes: ["Spreadsheet", "Worksheet", "WorksheetShapeCollection", "WorksheetChart"]
 ---
 

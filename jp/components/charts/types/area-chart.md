@@ -2,6 +2,7 @@
 title: Angular エリア チャート | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular エリア チャート
 _keywords: Angular Charts, Area Chart, Infragistics, Angular チャート, エリア チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ["DomainChart", "CategoryChart", "XamDataChart", "CategoryChartType"]
 namespace: Infragistics.Controls.Charts
 _language: ja
@@ -187,6 +188,20 @@ Ignite UI for Angular ラジアル エリア チャートは[ラジアル チャ
 
 <code-view style="height: 600px" alt="Angular ラジアル エリア チャート"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
+iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
+iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
+iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
+iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
+iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
+iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
+iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
+iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
+iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
+iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
+iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
+iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
+iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
+iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
                                                  github-src="charts/data-chart/radial-area-chart">
 </code-view>

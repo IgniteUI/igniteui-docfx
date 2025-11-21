@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | 財務オーバーレイ | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用して財務オーバーレイを表示します。Ignite UI for Angular グラフ タイプについて説明します。
 _keywords: Angular charts, data chart, financial overlays, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 財務オーバーレイ, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart', 'FinancialPriceSeries']
 _language: ja
 ---

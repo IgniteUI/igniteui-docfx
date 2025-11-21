@@ -1,7 +1,8 @@
 ---
-title: Angular Combobox コンポーネント | データ バインディング ComboBox | インフラジスティックス
+title: Angular Combobox コンポーネント | データ バインディング ComboBox | インフラジスティックス | MITライセンス
 _description: Ignite UI for Angular ComboBox は、基本的な HTML 入力、選択、フィルタリング、およびカスタム ドロップダウン リストの機能を組み合わせた強力な入力を提供します。無料でお試しください。
 _keywords: angular combobox, angular combo コンポーネント, angular combobox コンポーネント, Angular UI コンポーネント, ignite ui for angular, インフラジスティックス
+_license: MIT
 _language: ja
 ---
 

@@ -2,6 +2,7 @@
 title: Angular チャートおよびグラフ | データ可視化ツール | 注釈 | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用すると、チャートに注釈を追加できます。Ignite UI for Angular を使用してグラフと視覚化を改善します。
 _keywords: Angular charts, category chart, annotations, Ignite UI for Angular, Infragistics, Angular チャート, カテゴリ チャート, 注釈, インフラジスティックス
+_license: commercial
 mentionedTypes: ['CategoryChart']
 _language: ja
 ---

@@ -2,6 +2,7 @@
 title: Angular リアクティブ フォームの検証 – Ignite UI for Angular
 _description: Angular フォームの検証は、ユーザーが Web フォームに入力した入力が正しいかどうかを検証するプロセスです。Ignite UI for Angular リアクティブ フォームでそれを行う方法を紹介します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Combo コンポーネント,  Angular リアクティブ フォーム, Angular フォーム
+_license: MIT
 _language: ja
 ---
 

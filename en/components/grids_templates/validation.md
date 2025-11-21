@@ -2,6 +2,7 @@
 title: Editing and Validation in Angular @@igComponent - Infragistics
 _description: Validate the input of the users in grid and notify them if it's valid or not while using Angular @@igComponent. See demos & examples!
 _keywords: angular validation, ignite ui for angular, infragistics
+_license: commercial
 ---
 
 # Angular @@igComponent Editing and Validation

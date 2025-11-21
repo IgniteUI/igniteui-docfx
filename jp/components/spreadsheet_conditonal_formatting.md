@@ -2,6 +2,7 @@
 title: Angular Spreadsheet | Grid コントロール | Ignite UI for Angular | 条件付き書式 | Infragistics |
 _description: スプレッドシート コントロールを使用して、Excel ドキュメントの作成と編集のエクスペリエンスをアプリケーションに直接埋め込むことができます。
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
+_license: commercial
 _language: ja
 ---
 

@@ -1,19 +1,19 @@
-<!-- markdownlint-disable MD003 MD024 -->
+<!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if(igxName === 'IgxGrid') {
 ---
-
 title: Angular Grid Paging | Angular Pagination Table | Infragistics
 _description: Configure Angular pagination and create custom pages in the Angular table by Ignite UI, get data for the requested pages with variety of angular events.
 _keywords: angular pagination, igniteui for angular, infragistics
+_license: commercial
 ---
 
 }
 @@if(igxName !== 'IgxGrid') {
 ---
-
 title: Angular Grid Paging | Angular Pagination Table | Infragistics
 _description: Configure Angular pagination and create custom pages in the Angular table by Ignite UI, get data for the requested pages with variety of angular events.
 _keywords: angular pagination, igniteui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/paging
 ---
 

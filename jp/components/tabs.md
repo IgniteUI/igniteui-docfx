@@ -1,7 +1,8 @@
 ---
-title: Tabs コンポーネント - ネイティブ Angular | Ignite UI for Angular
+title: Tabs コンポーネント - ネイティブ Angular | Ignite UI for Angular | MITライセンス
 _description: Ignite UI for Angular Tabs コンポーネントはタブを上側に配置し、複数のタブ項目がある場合にスクロールを許可します。今すぐお試しください。
 _keywords: Angular Tabs コンポーネント, Angular Tabs コントロール, Angular Tabs, Angular Tabbar コンポーネント, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コンポーネント, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
+_license: MIT
 _language: ja
 ---
 

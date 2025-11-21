@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | 値オーバーレイ | インフラジスティックス
 _description: Ignite UI for Angular チャート コントロールの値オーバーレイ機能を使用して、単一の数値に水平線または垂直線を配置します。Ignite UI for Angular グラフ タイプについて説明します。
 _keywords: Angular charts, data chart, value overlay, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 値オーバーレイ, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart', 'ColumnSeries', 'ValueOverlay']
 namespace: Infragistics.Controls.Charts
 _language: ja

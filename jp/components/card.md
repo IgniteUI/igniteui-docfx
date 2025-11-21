@@ -1,7 +1,8 @@
 ---
-title: Angular Card コンポーネント – Ignite UI for Angular
+title: Angular Card コンポーネント – Ignite UI for Angular - MITライセンス
 _description: Angular Card コンポーネントを使用して、詳細情報のエントリ ポイントとして、ダッシュボード、テキスト、画像、アイコン、ボタンなどを表示します。今すぐお試しください。
 _keywords: Angular Card コンポーネント, Angular Card コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
+_license: MIT
 _language: ja
 ---
 

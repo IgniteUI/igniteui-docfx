@@ -2,6 +2,7 @@
 title: クエリ ビルダー モデルの使用
 _description: Angular Query Builder は、シリアル化/逆シリアル化可能な JSON 形式モデルを提供し、SQL クエリを簡単に構築できるようにします。今すぐお試しください。
 _keywords: Angular Query Builder コンポーネント, Angular Query Builder コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブAngular コンポーネント ライブラリ
+_license: commercial
 _language: ja
 ---
 

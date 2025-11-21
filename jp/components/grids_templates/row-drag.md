@@ -3,6 +3,7 @@
 title: Angular Data Grid の行ドラッグ - Ignite UI for Angular
 _description: Angular Data Grid の行ドラッグは、マウスで行をすばやくドラッグして再配置します。プロジェクトで行ドラッグを構成する方法を説明します。
 _keywords: angular ドラッグ コンポーネント, マテリアル コンポーネント, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular Tree Grid の行ドラッグ - Ignite UI for Angular
 _description: Angular Tree Grid の行ドラッグは、マウスで行をすばやくドラッグして再配置します。プロジェクトで行ドラッグを構成する方法を説明します。
 _keywords: angular ドラッグ コンポーネント, マテリアル コンポーネント, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -19,6 +21,7 @@ _language: ja
 title: Angular Hierarchical Grid の行ドラッグ - Ignite UI for Angular
 _description: Angular Hierarchical Grid の行ドラッグは、マウスで行をすばやくドラッグして再配置します。プロジェクトで行ドラッグを構成する方法を説明します。
 _keywords: angular ドラッグ コンポーネント, マテリアル コンポーネント, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }

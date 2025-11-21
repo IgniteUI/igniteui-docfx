@@ -3,6 +3,7 @@
 title: Angular Data Grid の条件付きセルのスタイル設定 - Ignite UI for Angular
 _description: ユーザーが異なるセルをすばやく識別できるようにします。さまざまなセルのスタイル設定を定義します。Angular Data Grid の条件付きセル スタイル設定を使用してセルを目立たせます。
 _keywords: 条件付きのスタイル設定, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular Tree Grid の条件付きセルのスタイル設定 - Ignite UI for Angular
 _description: ユーザーが異なるセルをすばやく識別できるようにします。さまざまなセルのスタイル設定を定義します。Angular Data Grid の条件付きセル スタイル設定を使用してセルを目立たせます。
 _keywords: 条件付きのスタイル設定, ignite ui for angular, インフラジスティックス
+_license: commercial
 _canonicalLink: grid/conditional-cell-styling
 _language: ja
 ---
@@ -20,6 +22,7 @@ _language: ja
 title: Angular Hierarchical Grid の条件付きセルのスタイル設定 - Ignite UI for Angular 
 _description: ユーザーが異なるセルをすばやく識別できるようにします。さまざまなセルのスタイル設定を定義します。Angular Data Grid の条件付きセル スタイル設定を使用してセルを目立たせます。
 _keywords: 条件付きのスタイル設定, ignite ui for angular, インフラジスティックス
+_license: commercial
 _canonicalLink: grid/conditional-cell-styling
 _language: ja
 ---

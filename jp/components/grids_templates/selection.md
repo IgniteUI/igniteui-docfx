@@ -3,6 +3,7 @@
 title: Angular Grid の選択 - Ignite UI for Angular
 _description: Ignite UI for Angular グリッドでデータを選択は、さまざまなイベント、豊富な API、単一選択のような単純なマウス操作を使用して簡単に行うことができます。
 _keywords: data select, igniteui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular Tree Grid の選択 - Ignite UI for Angular 
 _description: Ignite UI for Angular グリッドでデータを選択は、さまざまなイベント、豊富な API、単一選択のような単純なマウス操作を使用して簡単に行うことができます。
 _keywords: data select, igniteui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -19,6 +21,7 @@ _language: ja
 title: Angular Hierarchical Grid の選択 - Ignite UI for Angular
 _description: Ignite UI for Angular グリッドでデータを選択は、さまざまなイベント、豊富な API、単一選択のような単純なマウス操作を使用して簡単に行うことができます。
 _keywords: data select, igniteui for angular, インフラジスティックス
+_license: commercial
 
 ---
 }

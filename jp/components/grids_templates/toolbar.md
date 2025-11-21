@@ -3,6 +3,7 @@
 title: Angular Grid Toolbar - Ignite UI for Angular 
 _description: 重要な UI 操作には Angular Data Grid Toolbar を使用します。列の非表示、ピン固定、Excel エクスポートなど、グリッドの機能にさまざまな UI コントロールをホストします。
 _keywords: angular ツールバー, igniteui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -12,6 +13,7 @@ _language: ja
 title: Angular Grid Toolbar - Ignite UI for Angular 
 _description: 重要な UI 操作には Angular @@igComponent Toolbar を使用します。列の非表示、ピン固定、Excel エクスポートなど、グリッドの機能にさまざまな UI コントロールをホストします。
 _keywords: angular ツールバー, igniteui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 _canonicalLink: grid/toolbar
 ---

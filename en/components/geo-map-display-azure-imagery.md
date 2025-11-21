@@ -2,6 +2,7 @@
 title: Angular Map | Data Visualization Tools | Displaying Azure Imagery | Infragistics
 _description: Use Infragistics' Angular to display imagery from Microsoft Azure Maps. View Ignite UI for Angular map tutorials!
 _keywords: Angular map, azure maps, Ignite UI for Angular, Infragistics, imagery tile source, map background
+_license: commercial
 mentionedTypes: ["XamGeographicMap", "AzureMapsImagery", "GeographicTileSeries"]
 ---
 

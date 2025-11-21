@@ -1,12 +1,13 @@
 ---
-title: Angular Grid Lite Filtering
-_description: Filter operations, filter customization and remote filtering for {ComponentTitle}. See demos & examples!
+title: Angular Grid Lite Filtering | Ignite UI for Angular | MIT license
+_description: Filter operations, filter customization, and remote filtering for Angular Grid Lite. Create apps with our open-source Angular Grid Lite. Try it now.
 _keywords: filtering, {Platform}, {ComponentKeywords}, {ProductName}, Infragistics
+_license: MIT
 mentionedTypes: [{ComponentApiMembers}]
 namespace: Infragistics.Controls
 ---
 
-# Angular Grid Lite Filter operations
+# Angular Grid Lite Filter Operations
 
 The Grid Lite supports filtering operations on its data source. Data filtering is controlled on per-column level, allowing you to have filterable and non-filterable columns. By default, filtering on a column is disabled unless explicitly configured with the **`filter`** property of the column configuration object.
 
@@ -38,7 +39,7 @@ The **`filter`** property can be either a simple boolean or a
            iframe-src="{environment:demosBaseUrl}/grid-lite/filtering-simple" alt="Angular Grid Lite Filtering Config">
 </code-view>
 
-## Filter model
+## Filter Model
 
 The building blocks for filter operations in the grid is the **`FilterExpression`** which has the following structure:
 
@@ -103,7 +104,7 @@ grid.clearFilter('age');
 grid.clearFilter();
 ```
 
-## Initial filter state
+## Initial Filter State
 
 The **`filterExpressions`** property is very similar in behavior to the **`filter()`** method call. It exposes a declarative way to control filter state in the grid, but the most useful property is the ability to set initial filter state when the Grid Lite component is first rendered.
 

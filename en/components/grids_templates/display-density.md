@@ -1,29 +1,29 @@
-<!-- markdownlint-disable MD003 MD024 -->
+<!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if (igxName === 'IgxGrid') {
 ---
-
 title:  Angular Grid Size - Ignite UI for Angular
 _description: Learn how to apply size capabilities to the Data grid component. You can use a set of compact view options in the Ignite UI for Angular.
 _keywords: material density, size, igniteui for angular, infragistics
+_license: commercial
 ---
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-
 title:  Angular Grid Size - Ignite UI for Angular
 _description: Learn how to apply size capabilities to the Tree grid component. You can use a set of compact view options in the Ignite UI for Angular.
 _keywords: material density, size igniteui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/display-density
 ---
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-
 title:  Angular Grid Size - Ignite UI for Angular
 _description: Learn how to apply size capabilities to the Hierarchical grid component. You can use a set of compact view options in the Ignite UI for Angular.
 _keywords: material density, size, igniteui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/display-density
 ---
 

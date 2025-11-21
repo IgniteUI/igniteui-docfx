@@ -2,6 +2,7 @@
 title: Angular Grid レイアウト| リアルタイム Angular テーブル | 軽量の Angular Web コンポーネント テーブル | インフラジスティックス
 _description: Angular Grid レイアウトは、コーディングや構成をほとんど行わずに、動的でタッチ レスポンシブなデータ グリッドを構築するのに役立ちます。Ignite UI for Angular の 30 日間無料トライアルをお試しください。
 _keywords: Angular data grid, infragistics, grids, Ignite UI for Angular, table, Angular データ グリッド, インフラジスティック, グリッド, テーブル
+_license: commercial
 _language: ja
 ---
 
