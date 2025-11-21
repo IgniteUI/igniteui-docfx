@@ -37,23 +37,23 @@ font.height = 16 * 20;
 
 Microsoft Excel® document properties provide information to help organize and keep track of your documents. You can use the Infragistics Angular Excel Library to set these properties using the [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbook.html) object’s [`documentProperties`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbook.html#documentProperties) property. The available properties are:
 
-- `Author`
+*   `Author`
 
-- `Title`
+*   `Title`
 
-- `Subject`
+*   `Subject`
 
-- `Keywords`
+*   `Keywords`
 
-- `Category`
+*   `Category`
 
-- `Status`
+*   `Status`
 
-- `Comments`
+*   `Comments`
 
-- `Company`
+*   `Company`
 
-- `Manager`
+*   `Manager`
 
 The following code demonstrates how to create a workbook and set its `title` and `status` document properties.
 
@@ -98,7 +98,7 @@ var protection = workbook.protection;
 
 ## API References
 
-- [`documentProperties`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbook.html#documentProperties)
-- [`WorkbookProtection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbookprotection.html)
-- [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbook.html)
-- [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbook.html)
+*   [`documentProperties`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbook.html#documentProperties)
+*   [`WorkbookProtection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbookprotection.html)
+*   [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbook.html)
+*   [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbook.html)

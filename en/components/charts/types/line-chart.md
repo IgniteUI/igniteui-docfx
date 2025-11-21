@@ -28,46 +28,46 @@ You can create the Angular Line Chart in the [`IgxCategoryChartComponent`]({envi
 
 ### Are Angular Line Charts right for your project?
 
-- Different than an [area chart](area-chart.md), the line chart does not fill the area between the X-Axis (bottom axis) and the line.
-- The Angular line chart is identical to the Angular [spline chart](spline-chart.md) in all aspects except that the line connecting data points does not have spline interpolation and smoothing for improved presentation of data.
+*   Different than an [area chart](area-chart.md), the line chart does not fill the area between the X-Axis (bottom axis) and the line.
+*   The Angular line chart is identical to the Angular [spline chart](spline-chart.md) in all aspects except that the line connecting data points does not have spline interpolation and smoothing for improved presentation of data.
 
 A Line Chart includes several variants based on your data or how you want to tell the correct story with your data. These include:
 
-- Layered Line Chart
-- Stacked Line Chart
-- Stepped Line Chart
-- Polar Line Chart
-- Stacked 100 Line Chart
+*   Layered Line Chart
+*   Stacked Line Chart
+*   Stepped Line Chart
+*   Polar Line Chart
+*   Stacked 100 Line Chart
 
 ### Line Chart Use Cases
 
 There are several common use cases for choosing a Line Chart:
 
-- Have a large, high-volume data set that fits well with the chart interactions like Panning, Zooming and Drill-down.
-- Need to compare the trends over time.
-- Want to show the difference between 2 or more data series.
-- Want to show cumulative part-to-whole comparisons of distinct categories.
-- Need to show data trends for one or more categories for comparative analysis.
-- Need to visualize detailed time-series data.
+*   Have a large, high-volume data set that fits well with the chart interactions like Panning, Zooming and Drill-down.
+*   Need to compare the trends over time.
+*   Want to show the difference between 2 or more data series.
+*   Want to show cumulative part-to-whole comparisons of distinct categories.
+*   Need to show data trends for one or more categories for comparative analysis.
+*   Need to visualize detailed time-series data.
 
-### Line Chart Best Practices
+### Line Chart Best Practices:
 
-- Always start the Y-Axis (left or right axis) at 0 so data comparison is accurate.
-- Order time-series data  from left to right.
-- Use visual attributes like solid lines to show a series of data.
+*   Always start the Y-Axis (left or right axis) at 0 so data comparison is accurate.
+*   Order time-series data  from left to right.
+*   Use visual attributes like solid lines to show a series of data.
 
 ### When Not to Use Line Chart
 
-- You have many (more than 7 or 10) series of data. Your goal is to ensure the chart is readable.
-- Time-series data has similar values (data over the same period), it makes overlapped lines impossible to differentiate.
+*   You have many (more than 7 or 10) series of data. Your goal is to ensure the chart is readable.
+*   Time-series data has similar values (data over the same period), it makes overlapped lines impossible to differentiate.
 
-### Line Chart Data Structure
+### Line Chart Data Structure:
 
-- The data source must be an array or a list of data items (for single series).
-- The data source must be an array of arrays or a list of lists (for multiple series).
-- The data source must contain at least one data item.
-- All data items must contain at least one data column (string or date time).
-- All data items must contain at least one numeric data column.
+*   The data source must be an array or a list of data items (for single series).
+*   The data source must be an array of arrays or a list of lists (for multiple series).
+*   The data source must contain at least one data item.
+*   All data items must contain at least one data column (string or date time).
+*   All data items must contain at least one numeric data column.
 
 ## Angular Line Chart with Single Series
 
@@ -208,12 +208,12 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 You can find more information about related chart types in these topics:
 
-- [Area Chart](area-chart.md)
-- [Column Chart](column-chart.md)
-- [Polar Chart](polar-chart.md)
-- [Radial Chart](radial-chart.md)
-- [Spline Chart](spline-chart.md)
-- [Stacked Chart](stacked-chart.md)
+*   [Area Chart](area-chart.md)
+*   [Column Chart](column-chart.md)
+*   [Polar Chart](polar-chart.md)
+*   [Radial Chart](radial-chart.md)
+*   [Spline Chart](spline-chart.md)
+*   [Stacked Chart](stacked-chart.md)
 
 ## API References
 

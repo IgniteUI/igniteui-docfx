@@ -16,33 +16,33 @@ The Ignite UI for Angular selection feature in Angular {ComponentTitle} allows u
 
 The default behavior [`selectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#selectionMode) turned off and requires opting into one of the following options. There are several selection modes available in the `{ComponentName}`:
 
-- **Auto**
-- **None**
-- **Brighten**
-- **FadeOthers**
-- **GrayscaleOthers**
-- **FocusColorThickOutline**
-- **FocusColorOutline**
-- **SelectionColorThickOutline**
-- **SelectionColorOutline**
-- **FocusColorFill**
-- **SelectionColorFill**
-- **ThickOutline**
+*   **Auto**
+*   **None**
+*   **Brighten**
+*   **FadeOthers**
+*   **GrayscaleOthers**
+*   **FocusColorThickOutline**
+*   **FocusColorOutline**
+*   **SelectionColorThickOutline**
+*   **SelectionColorOutline**
+*   **FocusColorFill**
+*   **SelectionColorFill**
+*   **ThickOutline**
 
 `Brighten` will fade the selected item while `FadeOthers` will cause the opposite effect occur.
-`GrayscaleOthers` will behave similarly to `FadeOthers` but instead show a gray color to the rest of the series. Note this will override any [`selectionBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#selectionBrush) setting.
+`GrayscaleOthers` will behave similarily to `FadeOthers` but instead show a gray color to the rest of the series. Note this will override any [`selectionBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#selectionBrush) setting.
 `SelectionColorOutline` and `SelectionColorThickOutline` will draw a border around the series.
 
-In conjunction, a [`selectionBehavior`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#selectionBehavior) is available to provide greater control on which items get selected. The default behavior for Auto is `PerSeriesAndDataItemMultiSelect`.
+In conjuction, a [`selectionBehavior`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#selectionBehavior) is available to provide greater control on which items get selected. The default behavior for Auto is `PerSeriesAndDataItemMultiSelect`.
 
-- **Auto**
-- **PerDataItemMultiSelect**
-- **PerDataItemSingleSelect**
-- **PerSeriesAndDataItemMultiSelect**
-- **PerSeriesAndDataItemSingleSelect**
-- **PerSeriesAndDataItemGlobalSingleSelect**
-- **PerSeriesMultiSelect**
-- **PerSeriesSingleSelect**
+*   **Auto**
+*   **PerDataItemMultiSelect**
+*   **PerDataItemSingleSelect**
+*   **PerSeriesAndDataItemMultiSelect**
+*   **PerSeriesAndDataItemSingleSelect**
+*   **PerSeriesAndDataItemGlobalSingleSelect**
+*   **PerSeriesMultiSelect**
+*   **PerSeriesSingleSelect**
 
 ## Configuring Selection via Color Fill
 
@@ -57,7 +57,7 @@ The following example shows the combination of both `SelectionColorFill` and `Au
 
 ## Configuring Multiple Selection
 
-Other selection modes offer various methods of selection. For example using [`selectionBehavior`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#selectionBehavior) with `PerDataItemMultiSelect` will affect all series in entire category when multiple series are present while allowing selection across categories. Compared to `PerDataItemSingleSelect`, only a single category of items can be selected at a time. This is useful if multiple series are bound to different datasources and provides greater control of selection between categories.
+Other selection modes offer various methods of selection. For example using [`selectionBehavior`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#selectionBehavior) with `PerDataItemMultiSelect` will effect all series in entire category when multiple series are present while allowing selection across categories. Compared to `PerDataItemSingleSelect`, only a single category of items can be selected at a time. This is useful if mutliple series are bound to different datasources and provides greater control of selection between categories.
 `PerSeriesAndDataItemGlobalSingleSelect` allows single series selection across all categories at a time.
 
 <code-view style="height: 450px" alt="Angular Category Chart Selection Multiple Modes Example"

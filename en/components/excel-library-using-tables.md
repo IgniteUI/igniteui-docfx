@@ -66,15 +66,15 @@ If the data in the table is subsequently changed or you change the `Hidden` prop
 
 The following are the filter types available to the columns of your [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html):
 
-- [`AverageFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.averagefilter.html) - Cells can be filtered based on whether they are above or below the average value of all cells in the column.
-- [`CustomFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.customfilter.html) - Cells can be filtered based on one or more custom conditions.
-- [`DatePeriodFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.dateperiodfilter.html) - Only cells with dates in a specific month or quarter of any year will be displayed.
-- [`FillFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.fillfilter.html) - Only cells with a specific fill will be displayed.
-- [`FixedValuesFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.fixedvaluesfilter.html) - Cells which only match specific display values or which fall within a specific group of dates/times will be displayed.
-- [`FontColorFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.fontcolorfilter.html) - Only cells with a specific font color will be displayed.
-- [`RelativeDateRangeFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.relativedaterangefilter.html) - Cells with date values can be filtered based on whether they occur within a relative time range of the date when the filter was applied, such as the next day or previous quarter.
-- [`TopOrBottomFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.toporbottomfilter.html) - This filter allows for filtering the top or bottom N values. It also allows filtering the top or bottom N% values.
-- [`YearToDateFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.yeartodatefilter.html) - Cells with date values can be filtered if they occur between the start of the year and the date on which the filter was applied.
+*   [`AverageFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.averagefilter.html) - Cells can be filtered based on whether they are above or below the average value of all cells in the column.
+*   [`CustomFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.customfilter.html) - Cells can be filtered based on one or more custom conditions.
+*   [`DatePeriodFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.dateperiodfilter.html) - Only cells with dates in a specific month or quarter of any year will be displayed.
+*   [`FillFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.fillfilter.html) - Only cells with a specific fill will be displayed.
+*   [`FixedValuesFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.fixedvaluesfilter.html) - Cells which only match specific display values or which fall within a specific group of dates/times will be displayed.
+*   [`FontColorFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.fontcolorfilter.html) - Only cells with a specific font color will be displayed.
+*   [`RelativeDateRangeFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.relativedaterangefilter.html) - Cells with date values can be filtered based on whether they occur within a relative time range of the date when the filter was applied, such as the next day or previous quarter.
+*   [`TopOrBottomFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.toporbottomfilter.html) - This filter allows for filtering the top or bottom N values. It also allows filtering the top or bottom N% values.
+*   [`YearToDateFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.yeartodatefilter.html) - Cells with date values can be filtered if they occur between the start of the year and the date on which the filter was applied.
 
 The following code snippet demonstrates how to apply an "above average" filter to a [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html)'s first column:
 
@@ -96,10 +96,10 @@ In addition to accessing sort conditions from the table columns, they are also e
 
 The following sort condition types are available to set on columns:
 
-- [`OrderedSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.orderedsortcondition.html) - Sort cells in an ascending or descending order based on their value.
-- [`CustomListSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.customlistsortcondition.html) - Sort cells in a defined order based on their text or display value. For example, this might be useful for sorting days as they appear on a calendar, rather than alphabetically.
-- [`FillSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.fillsortcondition.html) - Sort cells based on whether their fill is a specific pattern or gradient.
-- [`FontColorSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.fontcolorsortcondition.html) - Sort cells based on whether their font is a specific color.
+*   [`OrderedSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.orderedsortcondition.html) - Sort cells in an ascending or descending order based on their value.
+*   [`CustomListSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.customlistsortcondition.html) - Sort cells in a defined order based on their text or display value. For example, this might be useful for sorting days as they appear on a calendar, rather than alphabetically.
+*   [`FillSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.fillsortcondition.html) - Sort cells based on whether their fill is a specific pattern or gradient.
+*   [`FontColorSortCondition`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.fontcolorsortcondition.html) - Sort cells based on whether their font is a specific color.
 
 There is also a [`caseSensitive`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.sortsettings\`1.html#caseSensitive) property on the [`sortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#sortSettings) of the [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html) to determine whether strings should be sorted case sensitively or not.
 
@@ -118,13 +118,13 @@ table.sortSettings.sortConditions().addItem(table.columns(0), new OrderedSortCon
 
 ## API References
 
-- [`deleteColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#deleteColumns)
-- [`deleteDataRows`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#deleteDataRows)
-- [`FillFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.fillfilter.html)
-- [`insertColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#insertColumns)
-- [`insertDataRows`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#insertDataRows)
-- [`sortConditions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.sortsettings\`1.html#sortConditions)
-- [`sortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#sortSettings)
-- [`tables`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheet.html#tables)
-- [`WorksheetTableStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettablestyle.html)
-- [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html)
+*   [`deleteColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#deleteColumns)
+*   [`deleteDataRows`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#deleteDataRows)
+*   [`FillFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.fillfilter.html)
+*   [`insertColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#insertColumns)
+*   [`insertDataRows`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#insertDataRows)
+*   [`sortConditions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.sortsettings\`1.html#sortConditions)
+*   [`sortSettings`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html#sortSettings)
+*   [`tables`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheet.html#tables)
+*   [`WorksheetTableStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettablestyle.html)
+*   [`WorksheetTable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheettable.html)
