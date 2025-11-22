@@ -53,5 +53,5 @@ public zoomOut(): void {
 
 ## API References
 
-- `ExecuteAction`
-- `SpreadsheetAction`
+*   `ExecuteAction`
+*   `SpreadsheetAction`

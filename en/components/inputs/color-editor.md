@@ -57,8 +57,8 @@ The simplest way to start using the `ColorEditor` is as follows:
 
 The Color Editor component raises the following events:
 
-- valueChanged
-- valueChanging
+*   valueChanged
+*   valueChanging
 
 <!-- Angular -->
 
@@ -66,7 +66,7 @@ The Color Editor component raises the following events:
 @ViewChild("colorEditor", { static: true } )
 private colorEditor: IgxColorEditorComponent
 public ngAfterViewInit(): void 
-{ 
+{	
     this.colorEditor.valueChanged.subscribe(this.onValueChanged);
 }
 
@@ -81,9 +81,9 @@ public onValueChanged = (e: any) => {
 
 ## API References
 
-- `ColorEditor`
+*   `ColorEditor`
 
 ## Additional Resources
 
-- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+*   [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+*   [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
