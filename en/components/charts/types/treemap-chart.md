@@ -124,9 +124,9 @@ In the following example, the treemap demonstrates the ability of node highlight
 - [`highlightedValueMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#highlightedValueMemberPath): Specifies the name of the property in the datasource where the highlighted values are read.
 - [`highlightedValueOpacity`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#highlightedValueOpacity): Controls the opacity of the normal value behind the highlighted value.
 - [`highlightedValuesDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#highlightedValuesDisplayMode): Enables or disables highlighted values.
-  - Auto: The treemap decides what mode to use.
-  - Overlay: The treemap displays highlighted values over top the normal value with a slight opacity applied to the normal value.
-  - Hidden: The treemap does not show highlighted values.
+    - Auto: The treemap decides what mode to use.
+    - Overlay: The treemap displays highlighted values over top the normal value with a slight opacity applied to the normal value.
+    - Hidden: The treemap does not show highlighted values.
 
 <code-view style="height: 600px" alt="Angular Treemap Percent based Highlighting"
            data-demos-base-url="{environment:dvDemosBaseUrl}"

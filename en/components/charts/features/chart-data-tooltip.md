@@ -2,7 +2,7 @@
 title: Angular Chart Data Tooltip | Data Visualization Tools | Infragistics
 _description: Use Infragistics Ignite UI for Angular chart with the data tooltip layer!
 _keywords: Angular charts, chart legend, legend, legend types, Ignite UI for Angular, Infragistics
-license: commercial
+_license: commercial
 mentionedTypes: ["XamDataChart", "Legend", "CategoryChart", "FinancialChart", "XamDataLegend", "DataToolTipLayer"]
 namespace: Infragistics.Controls.Charts
 ---
@@ -51,20 +51,20 @@ The value column displays series values as abbreviated text which can be formatt
 The units column displays an abbreviation symbol and/or unit text, which can be set either on the **DataToolTip** by setting the [`dataToolTipUnitsText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipUnitsText) for all columns or using the following properties on each series in the chart:
 
 - Category Series (e.g. ColumnSeries)
-  - ValueMemberAsLegendUnit="K"
+    - ValueMemberAsLegendUnit="K"
 - Financial Price Series:
-  - OpenMemberAsLegendUnit="K"
-  - LowMemberAsLegendUnit="K"
-  - HighMemberAsLegendUnit="K"
-  - CloseMemberAsLegendUnit="K"
+    - OpenMemberAsLegendUnit="K"
+    - LowMemberAsLegendUnit="K"
+    - HighMemberAsLegendUnit="K"
+    - CloseMemberAsLegendUnit="K"
 - Range Series:
-  - LowMemberAsLegendUnit="K"
-  - HighMemberAsLegendUnit="K"
+    - LowMemberAsLegendUnit="K"
+    - HighMemberAsLegendUnit="K"
 - Radial Series:
-  - ValueMemberAsLegendUnit="km"
+    - ValueMemberAsLegendUnit="km"
 - Polar Series:
-  - RadiusMemberAsLegendUnit="km"
-  - AngleMemberAsLegendUnit="degrees"
+    - RadiusMemberAsLegendUnit="km"
+    - AngleMemberAsLegendUnit="degrees"
 
 For the above-listed properties, there are corresponding properties ending with **MemberAsLegendLabel** to determine the text in the label columns mentioned previously.
 
@@ -134,7 +134,7 @@ Legend items can be positioned in a vertical or table structure via the [`layout
 
 eg.
 
-<img src="../../../images/general/layout_mode.png" alt="Layout Mode" />
+<img src="../../../images/general/layout_mode.png" />
 
 ## Angular Data Tooltip Styling
 
