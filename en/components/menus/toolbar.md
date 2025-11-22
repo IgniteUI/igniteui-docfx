@@ -2,7 +2,7 @@
 title: Angular Toolbar Component | Ignite UI for Angular
 _description: See how you can easily get started with Angular Toolbar Component. Compatible with the Data Chart. Extend your .
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Toolbar components, Angular Toolbar controls
-_license: commercial
+_license: MIT
 mentionedTypes: ["Toolbar", "ToolAction", "DomainChart", "CategoryChart", "XamDataChart", "TrendLineType"]
 ---
 
@@ -152,7 +152,7 @@ Save to Image Action
 
 ### SVG Icons
 
-When adding tools manually, icons can be assigned using the `RenderIconFromText` method. There are three parameters to pass in this method. The first is the icon collection name defined on the tool eg. [`iconCollectionName`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#iconCollectionName). The second is the name of the icon defined on the tool eg. [`iconName`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#iconName), for example 'Undo'.
+When adding tools manually, icons can be assigned using the `RenderIconFromText` method. There are three parameters to pass in this method. The first is the icon collection name defined on the tool eg. [`iconCollectionName`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#iconCollectionName). The second is the name of the icon defined on the tool eg. [`iconName`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolactioncomponent.html#iconName), followed by adding the SVG string.
 
 ### Data URL Icons
 
@@ -203,7 +203,6 @@ public toolbarCustomIconOnViewInit(): void {
 }
 ```
 
-```razor
 @code {
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -219,10 +218,10 @@ public toolbarCustomIconOnViewInit(): void {
 
     public void ToolbarCustomIconOnViewInit()
     {
-     this.toolbar.EnsureReady().ContinueWith(new Action<Task>((e) =>
-     {
+      this.toolbar.EnsureReady().ContinueWith(new Action<Task>((e) =>
+      {
             this.toolbar.RegisterIconFromDataURLAsync("CustomCollection", "CustomIcon", "https://www.svgrepo.com/show/678/calculator.svg");
-     }));
+      }));
     }
 
 }

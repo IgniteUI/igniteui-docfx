@@ -66,7 +66,7 @@ The Color Editor component raises the following events:
 @ViewChild("colorEditor", { static: true } )
 private colorEditor: IgxColorEditorComponent
 public ngAfterViewInit(): void 
-{ 
+{	
     this.colorEditor.valueChanged.subscribe(this.onValueChanged);
 }
 

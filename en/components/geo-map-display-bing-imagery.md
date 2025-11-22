@@ -20,7 +20,7 @@ The Angular [`IgxBingMapsMapImagery`]({environment:dvApiBaseUrl}/products/ignite
 
 <!-- `sample="/maps/geo-map/display-bing-imagery", height="500", alt="Angular Displaying Imagery from Bing Maps Example"` -->
 
-<img src="../images/general/BingMapsImagery.png" alt="Angular Displaying Imagery from Bing Maps Example" />
+\<img src="../images/general/BingMapsImagery.png"alt="Angular Bing Maps Imagery" />
 
 <div class="divider--half"></div>
 

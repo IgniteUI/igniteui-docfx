@@ -19,6 +19,9 @@ The Infragistics Angular Excel Engine's [`WorksheetChart`]({environment:dvApiBas
 </code-view>
 
 
+> \[!Note]
+> The XLSX format is required. Other formats are not supported at this time.
+
 <div class="divider--half"></div>
 
 ## Usage

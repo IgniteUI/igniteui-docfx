@@ -45,13 +45,13 @@ The following sample depicts a [`IgxDataChartComponent`]({environment:dvApiBaseU
 
 The [`IgxTrendLineLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtrendlinelayercomponent.html) is a series type that is designed to display a single trendline type for a target series. The difference between this and the existing trendline features on the existing series types is that since the [`IgxTrendLineLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtrendlinelayercomponent.html) is a series type, you can add more than one of them to the [`IgxSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriescomponent.html) collection of the chart to have multiple trendlines attached to the same series. You can also have the trendline appear in the legend, which was not possible previously.
 
-### Trendline Layer Usage
+## Trendline Layer Usage
 
 The [`IgxTrendLineLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtrendlinelayercomponent.html) must be provided with a [`targetSeries`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtrendlinelayercomponent.html#targetSeries) and a [`trendLineType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtrendlinelayercomponent.html#trendLineType) in order to work properly. The different trendline types that are available are the same as the trendlines that are available on the series.
 
 If you would like to show the [`IgxTrendLineLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtrendlinelayercomponent.html) in the Legend, you can do so by setting the `UseLegend` property to `true`.
 
-### Styling the Trendline Layer
+## Styling the Trendline Layer
 
 By default, the [`IgxTrendLineLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtrendlinelayercomponent.html) renders with the same color as its [`targetSeries`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtrendlinelayercomponent.html#targetSeries) in a dashed line. This can be configured by using the various styling properties on the [`IgxTrendLineLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtrendlinelayercomponent.html).
 
