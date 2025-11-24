@@ -29,7 +29,7 @@ Our Ignite UI Premium components come with advanced enterprise features and are 
 - [Maps library](../geo-map.md)
 - [Excel Library](../excel-library.md)
 - [Spreadsheet](../spreadsheet-overview.md)
-- Guages - [Bullet Graph](../bullet-graph.md), [Linear Gauge](../linear-gauge.md) and [Radial Gauge](../radial-gauge.md)
+- Gauges - [Bullet Graph](../bullet-graph.md), [Linear Gauge](../linear-gauge.md) and [Radial Gauge](../radial-gauge.md)
 
 All Premium components are marked in the header of their topics with: ![alt text](../../images/premium-text.png)
 
