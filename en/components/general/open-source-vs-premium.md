@@ -12,6 +12,8 @@ Ignite UI for Angular offers two distinct paths for building modern, data-driven
 
 There are over 50+ UI components available under the MIT license, including [Grid Lite](../grid-lite/overview.md), Accordion, Avatar, Badge, Banner, Button, Calendar, Carousel, Checkbox, Chip, Combo, Date Picker, Drop Down, Input, List, Snackbar, and more. You can find the full list in the [Comparison Table for All Components](#comparison-table-for-all-components).
 
+All Open-Source componenta are marked in the header of their topics with: ![alt text](../../images/open-source-text.png)
+
 They are ideal for lightweight applications that need essential functionality without the overhead of enterprise features. You can use them freely in production, customize, fork, and contribute via GitHub. No license is required.
 
 ## Premium Components
@@ -28,6 +30,8 @@ Our Ignite UI Premium components come with advanced enterprise features and are 
 - [Excel Library](../excel-library.md)
 - [Spreadsheet](../spreadsheet-overview.md)
 - Guages - [Bullet Graph](../bullet-graph.md), [Linear Gauge](../linear-gauge.md) and [Radial Gauge](../radial-gauge.md)
+
+All Open-Source componenta are marked in the header of their topics with: ![alt text](../../images/premium-text.png)
 
 All the Premium components can be evaluated locally and even tested in production with watermarking. However, a commercial license is required for customer-facing deployments and for unlocking the full power of the advanced Grids, Charts, and other Premium controls.
 
