@@ -22,7 +22,7 @@ Ignite UI のプレミアムコンポーネントは、高度なエンタープ�
  
 ### 高度なコンポーネントを備えたグリッド群:
  
-- [データ グリッド](../grid/grid.md)、[階層グリッド](../hierarchicalgrid/hierarchical-grid.md)、[ツリー グリッド](../treegrid/tree-grid.md)、[ピボットグリッド](../pivotGrid/pivot-grid.md)  
+- [データ グリッド](../grid/grid.md)、[階層グリッド](../hierarchicalgrid/hierarchical-grid.md)、[ツリー グリッド](../treegrid/tree-grid.md)、[ピボットグリッド](../dock-manager.md)  
 - [ドックマネージャー](../pivotgrid/pivot-grid.md) 
 - [クエリビルダー](../query-builder.md)  
 - [チャートライブラリ](../charts/chart-overview.md)  
