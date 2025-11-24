@@ -125,11 +125,11 @@ The linear gauge can be modified to show a second needle. This will make the mai
 ```html
 <igx-linear-gauge
     #linearGauge
-    height="80px" 
+    height="80px"
     width="400px"
     value=70
-    minimumValue=0 
-    maximumValue=100 
+    minimumValue=0
+    maximumValue=100
     interval=10
     labelInterval=10
     labelExtent=0.025

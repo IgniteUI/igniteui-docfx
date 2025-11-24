@@ -44,10 +44,10 @@ Ability for axis annotations to automatically detect collisions and truncate to 
 
 | Bug Number | Control | Description |
 |------------|---------|-------------|
-|40136|Excel Library|FormulaParseException exception when loading an Excel workbook
-|40262|IgxSpreadsheet|#Circularity! is displayed when there are warnings. Request to match Excel - display a value eg. 0 instead
-|40458|IgxSpreadsheet|When using Arial font, the igx-spreadsheet cuts off text in the cells
-|40490|IgxDatePicker|Inputs by Autofill won't give any effects for a date picker
+|40136|Excel Library|FormulaParseException exception when loading an Excel workbook|
+|40262|IgxSpreadsheet|#Circularity! is displayed when there are warnings. Request to match Excel - display a value eg. 0 instead|
+|40458|IgxSpreadsheet|When using Arial font, the igx-spreadsheet cuts off text in the cells|
+|40490|IgxDatePicker|Inputs by Autofill won't give any effects for a date picker|
 
 ## **20.1.0 (September 2025)**
 
@@ -187,9 +187,9 @@ There is a new property called [`useInsetOutlines`]({environment:dvApiBaseUrl}/p
 
 | Bug Number | Control | Description      |
 |------------|---------|------------------|
-|37023 | `DataChart` | Tooltips are cut-off/offscreen if overflow hidden is set.
-|37685 | [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html) | Poor rendering of numbers formatted with Arial font.
-|37244 | Excel Library | Custom Data Validation is not working.
+|37023 | `DataChart` | Tooltips are cut-off/offscreen if overflow hidden is set.|
+|37685 | [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html) | Poor rendering of numbers formatted with Arial font.|
+|37244 | Excel Library | Custom Data Validation is not working.|
 
 ## **19.0.1 (February 2025)**
 
@@ -260,8 +260,6 @@ The following table lists the bug fixes made for the Ignite UI for Angular tools
 ### igniteui-angular-charts (Charts)
 
 - [Data Legend Grouping](charts/features/chart-data-legend.md#angular-data-legend-grouping) & [Data Tooltip Grouping](charts/features/chart-data-tooltip.md#angular-data-tooltip-grouping-for-data-chart) - New grouping feature added. The property `GroupRowVisible` toggles grouping with each series opting in can assign group text via the [`dataLegendGroup`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriescomponent.html#dataLegendGroup) property. If the same value is applied to more than one series then they will appear grouped. Useful for large datasets that need to be categorized and organized for all users.
-
-<!---->
 
 - [Chart Selection](charts/features/chart-data-selection.md) - New series selection styling. This is adopted broadly across all category, financial and radial series for [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) and [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html). Series can be clicked and shown a different color, brightened or faded, and focus outlines. Manage which items are effected through individual series or entire data item. Multiple series and markers are supported. Useful for illustrating various differences or similarities between values of a particular data item. Also  `SelectedSeriesItemsChanged` event and [`selectedSeriesItems`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#selectedSeriesItems) are available for additional help to build out robust business requirements surrounding other actions that can take place within an application such as a popup or other screen with data analysis based on the selection.
 
@@ -467,8 +465,8 @@ for example:
 
 |   |   |
 |---|---|
-| <img class="responsive-img" src="../images/chartDefaults1.png" /> | <img class="responsive-img" src="../images/chartDefaults2.png" /> |
-| <img class="responsive-img" src="../images/chartDefaults3.png" /> | <img class="responsive-img" src="../images/chartDefaults4.png" /> |
+| <img class="responsive-img" src="../images/chartDefaults1.png" alt="chartDefaults1" /> | <img class="responsive-img" src="../images/chartDefaults2.png" alt="chartDefaults2" /> |
+| <img class="responsive-img" src="../images/chartDefaults3.png" alt="chartDefaults3" /> | <img class="responsive-img" src="../images/chartDefaults4.png" alt="chartDefaults4" /> |
 
 #### Chart Legend
 
