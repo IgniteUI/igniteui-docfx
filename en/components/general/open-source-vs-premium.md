@@ -146,7 +146,7 @@ Start with Grid Lite for essential needs and seamlessly upgrade to the full-feat
 | Time Picker                       | ✅          | ✅      |
 | Toast                             | ✅          | ✅      |
 | Toggle                            | ✅          | ✅      |
-| Toolbar                           | ✅          | ✅      |
+| Toolbar                           | ❌          | ✅      |
 | Tooltip                           | ✅          | ✅      |
 | Tree                              | ✅          | ✅      |
 | Zoom Slider                       | ❌          | ✅      |
