@@ -2,6 +2,7 @@
 title: Angular データ集計 | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular データ集計
 _keywords: Angular Charts, Markers, Infragistics, Angular チャート, マーカー, インフラジスティックス
+_license: commercial
 mentionedTypes: ["DomainChart", "CategoryChart"]
 namespace: Infragistics.Controls.Charts
 _language: ja

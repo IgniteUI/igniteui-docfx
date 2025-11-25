@@ -2,6 +2,7 @@
 title: Angular ツリーマップ | データ可視化ツール | 方向 | レイアウト | データ バインディング | インフラジスティックス
 _description: インフラジスティックスの Angular ツリーマップ コントロールを使用して、複数のレベルをサポートするストリップ、長方形、およびスライスアンドダイス アルゴリズムのデータ ポイントの相対的なウェイトを表示します。Ignite UI for Angular ツリーマップについて説明します。
 _keywords: Angular Tree Map, Treemap, layout, orientation, Ignite UI for Angular, Infragistics, Angular ツリーマップ, ツリーマップ, レイアウト, 方向, インフラジスティックス
+_license: commercial
 mentionedTypes: ["Treemap", "TreemapOrientation", "TreemapLayoutType", "TreemapHighlightingMode", "TreemapHighlightedValueDisplayMode"]
 namespace: Infragistics.Controls.Charts
 _language: ja

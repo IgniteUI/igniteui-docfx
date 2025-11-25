@@ -2,6 +2,7 @@
 title: Angular チャートのデータの選択 | データ視覚化ツール | インフラジスティックス
 _description: インフラジスティックスの Ignite UI for Angular チャートでデータの選択をお試しください!
 _keywords: Angular charts, chart data, selection, data selection, Ignite UI for Angular, Infragistics, Angular チャート, チャート データ, 選択, データの選択, インフラジスティックス
+_license: commercial
 mentionedTypes: ["XamDataChart", "Legend", "CategoryChart", "FinancialChart", "XamDataLegend", "DataToolTipLayer"]
 namespace: Infragistics.Controls.Charts
 _language: ja

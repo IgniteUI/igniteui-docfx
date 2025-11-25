@@ -2,6 +2,7 @@
 title: Angular チャート データ ツールチップ | データ視覚化ツール | インフラジスティックス
 _description: データ ツールチップ レイヤーで Infragistics Ignite UI for Angular チャートをお試しください!
 _keywords: Angular charts, chart legend, legend, legend types, Ignite UI for Angular, Infragistics, Angular チャート, チャート凡例, 凡例, 凡例タイプ, インフラジスティックス
+_license: commercial
 mentionedTypes: ["XamDataChart", "Legend", "CategoryChart", "FinancialChart", "XamDataLegend", "DataToolTipLayer"]
 namespace: Infragistics.Controls.Charts
 _language: ja

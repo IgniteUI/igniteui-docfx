@@ -2,6 +2,7 @@
 title: Angular チャートのデータ凡例 | データ視覚化ツール | インフラジスティックス
 _description: インフラジスティックスの Ignite UI for Angular チャートでデータ凡例をお試しください!
 _keywords: Angular charts, chart legend, legend, legend types, Ignite UI for Angular, Infragistics, Angular チャート, チャート凡例, 凡例, 凡例タイプ, インフラジスティックス
+_license: commercial
 mentionedTypes: ["XamCategoryChart", "XamDataLegend", "Series", "DataLegendSummaryType", "DataAbbreviationMode" ]
 namespace: Infragistics.Controls.Charts
 _language: ja

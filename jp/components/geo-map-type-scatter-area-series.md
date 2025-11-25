@@ -2,7 +2,7 @@
 title: Angular マップ | データ可視化ツール | 散布エリア シリーズ | データ バインディング | インフラジスティックス
 _description: インフラジスティックスの Angular 散布エリア シリーズを使用して、各ポイントに割り当てられた数値を使い、経度および緯度データの三角測量に基づいて、色付きのエリア サーフェスを描画します。Ignite UI for Angular マップ シーリズについての詳細を表示します。
 _keywords: Angular map, scatter area series, Ignite UI for Angular, Infragistics, Angular マップ, 散布エリア シリーズ, インフラジスティックス
-
+_license: commercial
 mentionedTypes: ["XamGeographicMap","GeographicScatterAreaSeries","CustomPaletteColorScale", "Series"]
 _language: ja
 ---

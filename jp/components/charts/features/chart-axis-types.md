@@ -4,6 +4,7 @@ _description: インフラジスティックスの Angular 軸タイプ
 _keywords: Angular 軸, オプション, タイトル, ラベル, ギャップ, オーバーラップ, 範囲, スケール, モード, インフラジスティックス
 mentionedTypes: ["DomainChart", "CategoryChart", "FinancialChart", "FinancialChartYAxisMode", "FinancialChartXAxisMode", "NumericYAxis", "CategoryXAxis"]
 namespace: Infragistics.Controls.Charts
+_license: commercial
 _language: ja
 ---
 
