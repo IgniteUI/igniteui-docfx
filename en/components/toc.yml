@@ -966,6 +966,10 @@
       href: charts/features/chart-trendlines.md
       updated: false
       premium: true
+    - name: Chart User Annotations
+      href: charts/features/chart-user-annotations.md
+      preview: true
+      premium: true
     - name: Zoom Slider
       href: zoomslider-overview.md
       new: false
@@ -1351,6 +1355,7 @@
 - name: Toolbar
   href: menus/toolbar.md
   preview: true
+  premium: true
 - name: Navigation Drawer
   href: navdrawer.md
   updated: false
