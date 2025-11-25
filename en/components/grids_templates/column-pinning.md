@@ -244,7 +244,8 @@ public pinningConfig: IPinningConfig = { columns: ColumnPinningPosition.End };
 
 }
 
-Additionally, you can specify each column pinning location separately, allowing you to pin columns to both sides of the grid for greater convenience and easier optimization of data sets. Please refer to the demo bellow for further reference. In order to pin a column, please either select a column by clicking on a header and use the pin buttons added ot the toolbar, or simply drag a column to another pinned one.
+### Column Pinning on Both Sides
+Additionally, you can specify each column pinning location separately, allowing you to pin columns to both sides of the grid for greater convenience and easier optimization of data sets. Please refer to the demo below for further reference. In order to pin a column, please either select a column by clicking on a header and use the pin buttons added to the toolbar, or simply drag a column to another pinned one.
 
 @@if (igxName === 'IgxGrid') {
 
