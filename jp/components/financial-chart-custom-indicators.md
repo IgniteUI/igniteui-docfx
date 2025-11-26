@@ -2,6 +2,7 @@
 title: Angular ファイナンシャル チャート | データ可視化ツール | カスタム インジケーター | インフラジスティックス
 _description: 簡単な API を使用して財務データを可視化するには、ファイナンシャル チャート コンポーネントを使用します。詳細については、デモ、依存関係、使用方法、およびツールバーを参照してください。
 _keywords: Angular charts, financial chart, Ignite UI for Angular, Infragistics, Angular チャート, ファイナンシャル チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ['FinancialChart']
 _language: ja
 ---

@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | 凡例 | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールの凡例は、プロットされたデータに関連するコンテキスト情報を表示します。Ignite UI for Angular グラフ凡例をお試しください!
 _keywords: Angular charts, data chart, legend, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 凡例, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart', 'Infragistics.Controls.Charts.Legend']
 _language: ja
 ---

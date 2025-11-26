@@ -3,6 +3,7 @@
 title: Angular Grid の状態保持 - Ignite UI for Angular
 _description: 包括的な Ignite UI for Angular のツールセットを使用して、グリッドの状態を簡単に保存および復元できます。列の復元、使用方法、デモをご覧ください。
 _keywords: 状態保持, ignite ui for angular, infragistics, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular Tree Grid の状態保持 - Ignite UI for Angular
 _description: 包括的な Ignite UI for Angular のツールセットを使用して、グリッドの状態を簡単に保存および復元できます。列の復元、使用方法、デモをご覧ください。
 _keywords: 状態保持, ignite ui for angular, infragistics, インフラジスティックス
+_license: commercial
 _canonicalLink: grid/state-persistence
 _language: ja
 ---
@@ -20,6 +22,7 @@ _language: ja
 title: Angular Hierarchical Grid の状態保持 - Ignite UI for Angular
 _description: 包括的な Ignite UI for Angular のツールセットを使用して、グリッドの状態を簡単に保存および復元できます。列の復元、使用方法、デモをご覧ください。
 _keywords: 状態保持, ignite ui for angular, infragistics, インフラジスティックス
+_license: commercial
 _canonicalLink: grid/state-persistence
 _language: ja
 ---
@@ -30,6 +33,7 @@ _language: ja
 title: Angular Pivot Grid の状態保持 - Ignite UI for Angular
 _description: 包括的な Ignite UI for Angular のツールセットを使用して、グリッドの状態を簡単に保存および復元できます。構成の復元、使用方法、デモをご覧ください。
 _keywords: 状態保持, ignite ui for angular, インフラジスティックス
+_license: commercial
 _canonicalLink: grid/state-persistence
 _language: ja
 ---
@@ -482,10 +486,6 @@ state.setState(gridState.columnSelection);
 @@if (igxName === 'IgxPivotGrid') {
 * [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getState) メソッドは、JSON.stringify() メソッドを使用して、元のオブジェクトをJSON文字列に変換します。JSON.stringify() は関数をサポートされていないため、[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) ディレクティブはピボット ディメンション [`memberFunction`]({environment:angularApiUrl}/interfaces/IPivotDimension.html#memberFunction)、ピボット値 [`member`]({environment:angularApiUrl}/interfaces/IPivotValue.html#member)、[`formatter`]({environment:angularApiUrl}/interfaces/IPivotValue.html#formatter)、カスタム [`aggregate`]({environment:angularApiUrl}/interfaces/IPivotValue.html#aggregate) 関数、[`styles`]({environment:angularApiUrl}/interfaces/IPivotValue.html#styles) およびピボット構成ストラテジ ([`columnStrategy`]({environment:angularApiUrl}/interfaces/ipivotconfiguration.html#columnStrategy) と [`rowStrategy`]({environment:angularApiUrl}/interfaces/ipivotconfiguration.html#rowStrategy)) を無視します。
 }
-<div class="divider--half"></div>
-
-
-## API リファレンス
 
 @@if (igxName === 'IgxGrid') {
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)

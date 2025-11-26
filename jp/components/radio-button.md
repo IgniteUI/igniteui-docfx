@@ -1,7 +1,8 @@
 ---
-title: Radio と Radio Group
+title: Radio と Radio Group - MITライセンス
 _description: Ignite UI for Angular Radio Button コントロールおよび Radio Group コントロールは、テンプレート主導およびリアクティブ フォームで選択可能なオプションのリストを表示します。
 _keywords: Angular Radio Group コンポーネント, Angular Radio Group コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
+_license: MIT
 _language: ja
 ---
 
@@ -104,7 +105,7 @@ Ignite UI for Angular Radio Button モジュールまたはディレクティブ
 
 ### プロパティ
 
-上記のサンプルに 4 つのラジオ ボタンを追加し、各ボタンに特定の背景色を適用します。次に含まれる div 要素の backgroundColor プロパティをコンポーネントの selectedColor プロパティにバインドします。selectedColor は `NgModel` ディレクティブによって双方向バインディングが設定されるため、ユーザーが別のラジオ ボタン (色) を選択する際に値が更新されます。
+上記のサンプルに 4 つのラジオ ボタンを追加し、各ボタンに特定の背景の色を適用します。次に含まれる div 要素の backgroundColor プロパティをコンポーネントの selectedColor プロパティにバインドします。selectedColor は `NgModel` ディレクティブによって双方向バインディングが設定されるため、ユーザーが別のラジオ ボタン (色) を選択する際に値が更新されます。
 
 ```typescript
 // radiogroup.component.ts
@@ -147,7 +148,55 @@ public selectedColor: string = this.colors[3].hex;
 
 ## スタイル設定
 
-ラジオ ボタンのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
+### Radio テーマのプロパティ マップ
+
+プライマリ プロパティを変更すると、関連するすべての依存プロパティが自動的に更新され、変更が反映されます。
+
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>プライマリ プロパティ</th>
+      <th>依存プロパティ</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+      <td><details><summary><strong>$empty-color</strong></summary></details></td>
+      <td>$hover-color</td>
+      <td>ホバー時の境界線とドットの色</td>
+    </tr>
+    <tr class="dependent"><td></td><td>$focus-outline-color (indigo)</td><td>フォーカス アウトラインの色 (Indigo テーマ)</td></tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+      <td><details><summary><strong>$fill-color</strong></summary></details></td>
+      <td>$fill-color-hover</td>
+      <td>ホバー時のチェック済みドットの色</td>
+    </tr>
+    <tr class="dependent"><td></td><td>$fill-hover-border-color (non-bootstrap)</td><td>ホバー時のチェック済み境界線の色</td></tr>
+    <tr class="dependent"><td></td><td>$focus-border-color (bootstrap)</td><td>フォーカス時の境界線の色</td></tr>
+    <tr class="dependent"><td></td><td>$focus-outline-color (bootstrap)</td><td>フォーカス アウトラインの色</td></tr>
+    <tr class="dependent"><td></td><td>$focus-outline-color-filled (indigo)</td><td>選択時のラジオのフォーカス アウトラインの色</td></tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+      <td><strong>$label-color</strong></td>
+      <td>$label-color-hover</td>
+      <td>ホバー時のラベル テキストの色</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+      <td><details><summary><strong>$error-color</strong></summary></details></td>
+      <td>$error-color-hover</td>
+      <td>入力が不正な状態でのホバー時のラベル、境界線、ドットの色</td>
+    </tr>
+    <tr class="dependent"><td></td><td>$focus-outline-color-error</td><td>入力が不正な状態でのフォーカス アウトラインの色</td></tr>
+  </tbody>
+</table>
+
+ラジオ ボタンのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント mixins が存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -156,16 +205,16 @@ public selectedColor: string = this.colors[3].hex;
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`radio-theme`]({environment:sassApiUrl}/themes#function-radio-theme) を拡張する新しいテーマを作成します。`$empty-color` と `$fill-color` の 2 つの主要パラメーターを指定することで、完全なスタイルのラジオ ボタンを生成できます。これらの値はテーマの基盤となり、指定することでホバー、選択、無効など、さまざまな状態に必要な前景色および背景色が自動的に計算されます。
+最もシンプルな方法として、[`radio-theme`]({environment:sassApiUrl}/themes#function-radio-theme) を拡張する新しいテーマを作成します。`$empty-color` と `$fill-color` の 2 つの主要パラメーターを指定することで、完全なスタイルのラジオ ボタンを生成できます。これらの値はテーマの基盤となり、指定することでホバー、選択、無効など、さまざまな状態に必要な前景の色および背景の色が自動的に計算されます。
 
 ```scss
 $custom-radio-theme: radio-theme(
-  $empty-color:  #345779,
-  $fill-color: #2dabe8,
+    $empty-color:  #345779,
+    $fill-color: #2dabe8,
 );
 ```
 
-最後には、カスタム ラジオ テーマをアプリケーションに渡します。
+最後に、カスタム テーマをアプリケーションに**含めます**。
 
 ```scss
 @include css-vars($custom-radio-theme);
@@ -176,12 +225,54 @@ $custom-radio-theme: radio-theme(
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-styling-sample/" >
 </code-view>
 
+> [!NOTE]
+> サンプルでは、[Fluent Light](themes/sass/schemas.md#predefined-schemas) スキーマを使用します。
+
 <div class="divider--half"></div>
+
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して `radio button` をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-radio`、`dark-radio`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[radio-theme]({environment:sassApiUrl}/themes#function-radio-theme) で確認できます。構文は次のとおりです:
+
+
+```html
+<igx-radio
+class="!light-radio ![--empty-color:#576E60] ![--fill-color:#7B9E89]"
+...
+>
+  New York
+</igx-radio>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、radio button は次のようになります:
+
+<div class="sample-container loading" style="height:300px">
+    <iframe id="radio-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-tailwind-styling-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ## Radio Group
 
 <p class="highlight">Ignite UI for Angular Radio Group ディレクティブは、ラジオの子コンポーネントを制御できるグループ化コンテナーを提供し、テンプレート駆動型およびリアクティブ型のフォームをサポートします。</p>
-<div class="divider"></div>
 
 ### デモ
 
@@ -269,6 +360,7 @@ public alignment = RadioGroupAlignment.vertical;
 * [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。

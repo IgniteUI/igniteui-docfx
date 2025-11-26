@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | 極座標折れ線チャート | データ バインディング | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用して極座標折れ線チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
 _keywords: Angular charts, data chart, polar line charts, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 極座標折れ線チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart', 'PolarLineSeries']
 _language: ja
 ---

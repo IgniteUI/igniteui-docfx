@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | パフォーマンス | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用して数百万のデータ ポイントを超高速でレンダリングします。Ignite UI for Angular グラフの高パフォーマンスをお試しください!
 _keywords: Angular charts, data chart, navigation, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, パフォーマンス, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---

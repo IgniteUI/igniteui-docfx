@@ -1,7 +1,8 @@
 ---
-title: Angular Mask Directive Component | Ignite UI for Angular
+title: Angular Mask Directive Component | Ignite UI for Angular | MIT license
 _description: With the Mask Directive in Ignite UI for Angular, the developer can control user input and format the visible value based on configurable mask rules, providing different input options and ease in use and configuration.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Angular mask directive, Mask, Directive, Mask Editor, Angular Mask Editor
+_license: MIT
 ---
 
 # Angular Mask Directive Overview
@@ -10,8 +11,8 @@ By applying the [`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective
 
 ## Angular Mask Example
 
-<code-view style="height: 100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-2/" alt="Angular Mask Example">
 </code-view>
 
@@ -25,9 +26,9 @@ To get started with the Ignite UI for Angular Mask directive, first you need to 
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
-The next step is to import the `IgxMaskModule` and `IgxInputGroupModule` in your **app.module.ts** file. 
+The next step is to import the `IgxMaskModule` and `IgxInputGroupModule` in your **app.module.ts** file.
 
 >[!NOTE]
 >[`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) directive is used on an input of type **text**.
@@ -78,6 +79,7 @@ Now that you have the Ignite UI for Angular Mask module or directive imported, y
 ## Using the Angular Mask
 
 ### Supported Built-in Mask Rules
+
 <div class="divider--half"></div>
 
 | Mask Character | Description |
@@ -93,6 +95,7 @@ Now that you have the Ignite UI for Angular Mask module or directive imported, y
 | C | any keyboard character |
 
 ### Apply Mask on Input
+
 In the following example, we apply a phone number with an extension mask to an input.
 
 ```html
@@ -113,7 +116,8 @@ If configured properly, you should see the demo sample in your browser.
 > The `IgxMaskDirective` supports IME input and updates the mask when composition ends.
 
 ### Bind to Formatted/Raw Value
-Use the [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeLiterals) input to configure which input value (formatted or raw) to bind in your form when a specific mask is applied. By default, [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeLiterals) is set to *false* and the raw value is used.
+
+Use the [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeLiterals) input to configure which input value (formatted or raw) to bind in your form when a specific mask is applied. By default, [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeLiterals) is set to _false_ and the raw value is used.
 
 ```html
 <!--sample.component.html-->
@@ -152,13 +156,14 @@ public clear() {
 ```
 
 
-<code-view style="height: 160px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 160px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-3/" >
 </code-view>
 
 
 ### Validate Masked Values
+
 In addition to setting a mask to an input, you can validate the entered value as well. The following example implements masks, validation and notification for invalid data using the Mask directive and Snack Bar component.
 
 ```html
@@ -193,14 +198,15 @@ private notify(snackbar, message, input) {
 ```
 
 
-<code-view style="height: 120px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 120px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
 
 ### Text Selection
+
 You can force the component to select all of the input text on focus using [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html). Find more info on `igxTextSelection` at [Label & Input](label-input.md#focus--text-selection).
 
 Import the `IgxTextSelectionModule` in your **app.module.ts** file:
@@ -232,9 +238,11 @@ You can see how this works in the previous sample.
 >In order for the component to work properly, it is crucial to set `igxTextSelection` after the `igxMask` directive. The reason for this is both directives operate on the input `focus` event so text selection should happen after the mask is set.
 
 ### Apply additional formatting on focus and blur
+
 In addition to the default mask behavior, the user can implement his own custom pipes and take advantage of the [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedValuePipe) and [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayValuePipe) input properties, to transform the value to a desired output when the input gets or loses focus. This will not affect the underlying model value. Let's demonstrate how this can be achieved!
 
 Implement two pipes that will append/remove a '%' sign at the end of the displayed value:
+
 ```typescript
 @Pipe({ name: 'displayFormat' })
 export class DisplayFormatPipe implements PipeTransform {
@@ -267,6 +275,7 @@ public value = 100;
 public displayFormat = new DisplayFormatPipe();
 public inputFormat = new InputFormatPipe();
 ```
+
 ```html
 <igx-input-group>
     <label igxLabel>Increase</label>
@@ -285,18 +294,20 @@ public inputFormat = new InputFormatPipe();
 As a result, a '%' sign should be appended to the value on blur (i.e. when the user clicks outside the input) and will be removed once the input gets focus!
 
 
-<code-view style="height: 100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-4/" >
 </code-view>
 
 
 ### Adding a placeholder
+
 The user can also take advantage of the [`placeholder`]({environment:angularApiUrl}/classes/igxmaskdirective.html#placeholder) input property, which serves the purpose of the native input placeholder attribute. If no value is provided for the [`placeholder`]({environment:angularApiUrl}/classes/igxmaskdirective.html#placeholder), the value set for the mask is used.
 
 ```typescript
 value = null;
 ```
+
 ```html
 <igx-input-group>
     <label igxLabel>Date</label>
@@ -309,23 +320,26 @@ value = null;
 ```
 
 
-<code-view style="height: 100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-5/" >
 </code-view>
 
 
 ## API References
+
 <div class="divider--half"></div>
 
-* [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
-* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [IgxMaskDirective]({environment:angularApiUrl}/classes/igxmaskdirective.html)
-* [IgxSnackbarComponent]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html)
+- [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
+- [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+- [IgxMaskDirective]({environment:angularApiUrl}/classes/igxmaskdirective.html)
+- [IgxSnackbarComponent]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

@@ -969,7 +969,7 @@ $__legacy-libsass: true;
         ```
 ご覧のとおり、`button-theme` パラメーターはボタン タイプごとに同じ名前になっているため、タイプごとに異なる色を使用するには、ボタン テーマのスコープを CSS セレクターに設定する必要があります。
 
-ここでは、`button-theme` のすべての[利用可能なプロパティ](https://jp.infragistics.com/products/ignite-ui-angular/docs/sass/latest/index.html#function-button-theme)を確認できます。
+ここでは、`button-theme` のすべての[利用可能なプロパティ]({environment:sassApiUrl}/themes#function-button-theme)を確認できます。
 
 * `typography` ミックスインは `core` に暗黙的に含まれなくなりました。タイポグラフィ スタイルを使用するには、`core` の後と `theme` の前に ミックスインを明示的に含める必要があります。
 

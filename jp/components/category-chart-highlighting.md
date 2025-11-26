@@ -2,6 +2,7 @@
 title: Angular チャートおよびグラフ | データ可視化ツール | 強調表示 | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用すると、グラフの領域を強調表示できます。Ignite UI for Angular 強調表示機能について説明します。
 _keywords: Angular charts, category chart, Highlight Layers, Highlighting, Ignite UI for Angular, Infragistics, Angular チャート, カテゴリ チャート, 強調表示レイヤー, 強調表示, インフラジスティックス
+_license: commercial
 mentionedTypes: ['CategoryChart']
 _language: ja
 ---

@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | 積層 100 縦棒チャート | データ バインディング | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用して積層 100 縦棒チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
 _keywords: Angular charts, data chart, stacked 100 column charts, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 積層 100 縦棒チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart','Stacked100ColumnSeries']
 namespace: Infragistics.Controls.Charts
 _language: ja

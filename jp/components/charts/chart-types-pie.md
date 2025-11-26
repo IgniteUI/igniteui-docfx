@@ -2,6 +2,7 @@
 title: Angular 円チャート | データ可視化ツール | インフラジスティックス
 _description: Infragistics の Angular 円チャートを使用して、分類データを表示するカラフルな円チャートを作成します。
 _keywords: Angular charts, pie chart, Ignite UI for Angular, Infragistics, data binding, slice selection, slice explosion, animation, チャート, 円チャート, データ バインディング, スライス選択, スライス切り離し, アニメーション, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamPieChart','SliceSelectionMode','PieSliceOthersContext']
 _language: ja
 ---

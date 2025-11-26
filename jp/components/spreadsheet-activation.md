@@ -2,6 +2,7 @@
 title: Angular スプレッドシート | アクティブ化 | インフラジスティックス
 _description: セル、ペイン、およびワークシート間で分割される Angular スプレッドシート コントロールのアクティブ化を使用する方法について説明します。Ignite UI for Angular スプレッドシートのサンプルを是非お試しください!
 _keywords: Excel Spreadsheet, activation, Ignite UI for Angular, Infragistics, Excel スプレッドシート、アクティブ化, インフラジスティックス
+_license: commercial
 mentionedTypes: ["Spreadsheet"]
 _language: ja
 ---

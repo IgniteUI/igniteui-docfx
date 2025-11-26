@@ -5,6 +5,9 @@
 - name: Angular - 完全ガイド
   href: general/angular-grid-overview-guide.md
   new: false
+- name: オープンソース vs プレミアム
+  href: general/open-source-vs-premium.md
+  new: true
 - name: ライセンス
   href: general/ignite-ui-licensing.md
   new: false
@@ -1083,6 +1086,7 @@
   href: toggle.md
 - name: Tooltip
   href: tooltip.md
+  updated: true
   new: false
 - name: Overlay
   href: overlay.md

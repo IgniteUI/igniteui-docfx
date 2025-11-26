@@ -1,7 +1,8 @@
 ---
-title: Angular Calendar コンポーネント – Ignite UI for Angular
+title: Angular Calendar コンポーネント – Ignite UI for Angular - MITライセンス
 _description: Angular Calendar コンポーネントを使用すると、ユーザーはアプリケーション用の直感的なカレンダーを作成して、3 つの異なる選択モードを使用して日付情報を表示できます。今すぐお試しください。
 _keywords: angular calendar, angular calendar コンポーネント, angular UI コンポーネント, angular UI ライブラリ, ignite ui for angular
+_license: MIT
 _language: ja
 ---
 
@@ -361,7 +362,7 @@ Tab キーを使用してページを移動する場合、*igxCalendarComponent*
 - [翌月] ボタン
 - 日ビューの選択した日付、現在の日付、最初のフォーカス可能な (無効ではない) 日付
 
-複数の選択された日付を含む Angular Calendar では、最初の日付のみがタブ位置として導入されます。たとえば、Angular Calendar の複数選択が有効で、日付を選択した場合: **2020 年 10 月 13 日**、**2020 年 10 月 17 日**および **2020 年 10 月 21 日**のみは、タブ ナビゲーション中にアクセスできます。Angular Calendar 範囲ピッカーでは、選択した範囲の最初の日付のみがページ タブ シーケンスの一部になります。 
+複数の選択された日付を含む Angular Calendar では、最初の日付のみがタブ位置として導入されます。たとえば、Angular Calendar の複数選択が有効で、日付を選択した場合: **2020 年 10 月 13 日**、**2020 年 10 月 17 日**および **2020 年 10 月 21 日**のみは、タブ ナビゲーション中にアクセスできます。Angular Calendar 範囲ピッカーでは、選択した範囲の最初の日付のみがページ タブ シーケンスの一部になります。
 
 >[!NOTE]
 > *V10.2.0* からの動作変更- 日ビューの Tab キー ナビゲーションは使用できなくなりました。日付ビューの日付間を移動するには、矢印キーを使用します。
@@ -457,6 +458,308 @@ export class CalendarSample9Component {
 
 ## スタイル設定
 
+### Calendar テーマのプロパティ マップ
+
+`$header-background` プロパティと `$content-background` プロパティを変更すると、関連するすべての theme プロパティが自動的に調整され、カレンダー コンポーネントのスタイルが一貫して設定されます。影響を受ける theme プロパティの詳細な概要については、以下の表を参照してください。
+
+<div class="theme-switcher-wrapper">
+<!-- Theme Switcher Radios and Labels -->
+<input type="radio" name="theme" id="material" checked>
+<label for="material" class="switch-label">Material</label>
+<input type="radio" name="theme" id="fluent">
+<label for="fluent" class="switch-label">Fluent</label>
+<input type="radio" name="theme" id="bootstrap">
+<label for="bootstrap" class="switch-label">Bootstrap</label>
+<input type="radio" name="theme" id="indigo">
+<label for="indigo" class="switch-label">Indigo</label>
+
+<div class="tables">
+    <!-- Material Theme Table -->
+    <div class="theme-table material">
+        <table class="collapsible-table">
+            <thead>
+                <tr>
+                    <th>プライマリ プロパティ</th>
+                    <th>依存プロパティ</th>
+                    <th>説明</th>
+                </tr>
+            </thead>
+            <tbody class="group">
+                <tr class="primary">
+                    <td><details><summary><strong>$header-background</strong></summary></details></td>
+                    <td>$header-foreground</td>
+                    <td>カレンダー ヘッダーのテキストの色</td>
+                </tr>
+                <tr class="dependent"><td></td><td>$picker-hover-foreground</td><td>ピッカーのホバー前景</td></tr>
+                <tr class="dependent"><td></td><td>$picker-focus-foreground</td><td>ピッカーのフォーカス前景</td></tr>
+                <tr class="dependent"><td></td><td>$navigation-hover-color</td><td>ナビゲーションのホバー色</td></tr>
+                <tr class="dependent"><td></td><td>$navigation-focus-color</td><td>ナビゲーションのフォーカス色</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-background</td><td>選択された日付の背景</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-current-background</td><td>選択された日付の背景</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-foreground</td><td>選択した日付の前景</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-current-foreground</td><td>選択した現在の日付の前景</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-current-border-color</td><td>選択している現在の日付の境界線の色</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-special-border-color</td><td>選択している現在の特別な日付の境界線の色</td></tr>
+                <tr class="dependent"><td></td><td>$ym-selected-background</td><td>選択した年/月の背景</td></tr>
+                <tr class="dependent"><td></td><td>$ym-selected-hover-background</td><td>選択した日付の年/月のホバー背景</td></tr>
+                <tr class="dependent"><td></td><td>$ym-selected-current-background</td><td>現在選択されている年/月の背景</td></tr>
+                <tr class="dependent"><td></td><td>$ym-selected-current-hover-background</td><td>現在選択されている年/月のホバー背景</td></tr>
+                <tr class="dependent"><td></td><td>$ym-selected-foreground</td><td>選択した年/月の前景</td></tr>
+                <tr class="dependent"><td></td><td>$ym-selected-hover-foreground</td><td>選択した年/月のホバー前景</td></tr>
+                <tr class="dependent"><td></td><td>$ym-selected-current-foreground</td><td>現在選択されている年/月の前景</td></tr>
+                <tr class="dependent"><td></td><td>$ym-selected-current-hover-foreground</td><td>現在選択されている年/月のホバー前景</td></tr>
+            </tbody>
+            <tbody class="group">
+                <tr class="primary">
+                    <td><details><summary><strong>$content-background</strong></summary></details></td>
+                    <td>$content-foreground</td>
+                    <td>カレンダー コンテンツ領域内のテキストとアイコンの色</td>
+                </tr>
+                <tr class="dependent"><td></td><td>$weekend-color</td><td>週末の色</td></tr>
+                <tr class="dependent"><td></td><td>$inactive-color</td><td>有効範囲外の日付の色</td></tr>
+                <tr class="dependent"><td></td><td>$weekday-color</td><td>曜日ラベルの色</td></tr>
+                <tr class="dependent"><td></td><td>$picker-background</td><td>ピッカーの背景</td></tr>
+                <tr class="dependent"><td></td><td>$date-hover-background</td><td>ホバー時の日付の背景</td></tr>
+                <tr class="dependent"><td></td><td>$date-hover-foreground</td><td>ホバー時の日付の前景</td></tr>
+                <tr class="dependent"><td></td><td>$date-focus-background</td><td>フォーカス時の日付の背景</td></tr>
+                <tr class="dependent"><td></td><td>$date-focus-foreground</td><td>フォーカス時の日付の前景</td></tr>
+                <tr class="dependent"><td></td><td>$date-current-background</td><td>現在の日付の背景</td></tr>
+                <tr class="dependent"><td></td><td>$date-current-foreground</td><td>現在の日付の前景</td></tr>
+                <tr class="dependent"><td></td><td>$date-current-border-color</td><td>現在の日付の境界線の色</td></tr>
+                <tr class="dependent"><td></td><td>$ym-current-background</td><td>現在の年/月の背景</td></tr>
+                <tr class="dependent"><td></td><td>$ym-current-hover-background</td><td>現在の年/月のホバー時の背景</td></tr>
+                <tr class="dependent"><td></td><td>$ym-current-foreground</td><td>現在の年/月の前景</td></tr>
+                <tr class="dependent"><td></td><td>$ym-current-hover-foreground</td><td>現在の年/月のホバー時の前景</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-range-background</td><td>選択範囲の背景</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-range-foreground</td><td>選択した日付範囲の前景</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-current-range-background</td><td>現在選択されている日付範囲の背景</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-current-range-hover-background</td><td>現在選択されている日付範囲のホバー時の背景</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-current-range-focus-background</td><td>現在選択されている日付範囲のフォーカス時の背景</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-current-range-foreground</td><td>現在選択されている日付範囲の前景</td></tr>
+                <tr class="dependent"><td></td><td>$date-special-foreground</td><td>特別な日付の前景</td></tr>
+                <tr class="dependent"><td></td><td>$date-special-border-color</td><td>特別な日付の境界線の色</td></tr>
+                <tr class="dependent"><td></td><td>$date-special-hover-border-color</td><td>特別な日付のホバー境界線の色</td></tr>
+                <tr class="dependent"><td></td><td>$date-special-focus-foreground</td><td>特別な日付のフォーカス背景</td></tr>
+                <tr class="dependent"><td></td><td>$date-special-range-foreground</td><td>特別な日付範囲の前景</td></tr>
+                <tr class="dependent"><td></td><td>$date-special-range-border-color</td><td>特別な日付範囲の境界線の色</td></tr>
+                <tr class="dependent"><td></td><td>$date-special-range-hover-background</td><td>特別な日付範囲のホバー背景</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-special-border-color</td><td>選択している現在の特別な日付の境界線の色</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-special-hover-border-color</td><td>ホバー時の特別な日付 (選択) の境界線の色</td></tr>
+                <tr class="dependent"><td></td><td>$date-selected-special-focus-border-color</td><td>フォーカス時の特別な日付 (選択) の境界線の色</td></tr>
+                <tr class="dependent"><td></td><td>$date-disabled-foreground</td><td>無効な日付の前景</td></tr>
+                <tr class="dependent"><td></td><td>$date-disabled-range-foreground</td><td>無効な範囲の前景</td></tr>
+            </tbody>
+            <tbody class="group">
+                <tr class="primary">
+                    <td><details><summary><strong>$date-border-radius</strong></summary></details></td>
+                    <td>$date-range-border-radius</td>
+                    <td>日付範囲の境界の半径を制御します</td>
+                </tr>
+                <tr class="dependent"><td></td><td>$date-current-border-radius</td><td>現在の日付の境界線の半径を制御します</td></tr>
+                <tr class="dependent"><td></td><td>$date-special-border-radius</td><td>特別な日付の境界線の半径を制御します</td></tr>
+                <tr class="dependent"><td></td><td>$date-border-radius</td><td>指定されておらず、<code>$date-range-border-radius</code> が設定されている場合は、<code>$date-range-border-radius</code> の値が使用されます</td></tr>
+            </tbody>
+        </div>
+        <!-- Fluent Theme Table -->
+        <div class="theme-table fluent">
+            <table class="collapsible-table">
+                <thead>
+                    <tr>
+                        <th>プライマリ プロパティ</th>
+                        <th>依存プロパティ</th>
+                        <th>説明</th>
+                    </tr>
+                </thead>
+                <tbody class="group">
+                    <tr class="primary">
+                        <td><details><summary><strong>$header-background</strong></summary></details></td>
+                        <td>$header-foreground</td>
+                        <td>カレンダー ヘッダーのテキストの色</td>
+                    </tr>
+                    <tr class="dependent"><td></td><td>$picker-hover-foreground</td><td>ピッカーのホバー前景</td></tr>
+                    <tr class="dependent"><td></td><td>$picker-focus-foreground</td><td>ピッカーのフォーカス前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-background</td><td>現在の日付の背景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-hover-foreground</td><td>ホバー時の現在の日付の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-focus-foreground</td><td>フォーカス時の現在の日付の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-current-foreground</td><td>現在選択されている日付の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-current-hover-foreground</td><td>ホバー時の現在選択されている日付の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-current-focus-foreground</td><td>フォーカス時の現在選択されている日付の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-special-border-color</td><td>特別な日付の境界線の色</td></tr>
+                    <tr class="dependent"><td></td><td>$date-special-hover-foreground</td><td>特別な日付のホバー背景</td></tr>
+                </tbody>
+                <tbody class="group">
+                    <tr class="primary">
+                        <td><details><summary><strong>$content-background</strong></summary></details></td>
+                        <td>$content-foreground</td>
+                        <td>カレンダー コンテンツ領域内のテキストとアイコンの色</td>
+                    </tr>
+                    <tr class="dependent"><td></td><td>$weekend-color</td><td>週末の色</td></tr>
+                    <tr class="dependent"><td></td><td>$inactive-color</td><td>有効範囲外の日付の色</td></tr>
+                    <tr class="dependent"><td></td><td>$weekday-color</td><td>曜日ラベルの色</td></tr>
+                    <tr class="dependent"><td></td><td>$picker-background</td><td>ピッカーの背景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-hover-background</td><td>ホバー時の日付の背景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-hover-foreground</td><td>ホバー時の日付の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-focus-background</td><td>フォーカス時の日付の背景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-focus-foreground</td><td>フォーカス時の日付の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-background</td><td>選択された日付の背景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-hover-background</td><td>選択した日付のホバー背景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-focus-background</td><td>選択した日付のフォーカス背景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-foreground</td><td>選択した日付の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-hover-foreground</td><td>選択した日付のホバー前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-focus-foreground</td><td>選択した日付のフォーカス前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-range-background</td><td>選択した日付範囲の背景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-range-foreground</td><td>選択した日付範囲の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-disabled-foreground</td><td>無効な日付の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-disabled-range-foreground</td><td>無効な範囲の前景</td></tr>
+                </tbody>
+                <tbody class="group">
+                    <tr class="primary">
+                        <td><details><summary><strong>$date-border-radius</strong></summary></details></td>
+                        <td>$date-range-border-radius</td>
+                        <td>日付範囲の境界の半径を制御します</td>
+                    </tr>
+                    <tr class="dependent"><td></td><td>$date-current-border-radius</td><td>現在の日付の境界線の半径を制御します</td></tr>
+                    <tr class="dependent"><td></td><td>$date-special-border-radius</td><td>特別な日付の境界線の半径を制御します</td></tr>
+                    <tr class="dependent"><td></td><td>$date-border-radius</td><td>指定されておらず、<code>$date-range-border-radius</code> が設定されている場合は、<code>$date-range-border-radius</code> の値が使用されます</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Bootstrap Theme Table -->
+        <div class="theme-table bootstrap">
+            <table class="collapsible-table">
+                <thead>
+                    <tr>
+                        <th>プライマリ プロパティ</th>
+                        <th>依存プロパティ</th>
+                        <th>説明</th>
+                    </tr>
+                </thead>
+                <tbody class="group">
+                    <tr class="primary">
+                        <td><details><summary><strong>$header-background</strong></summary></details></td>
+                        <td>$header-foreground</td>
+                        <td>カレンダー ヘッダーのテキストの色</td>
+                    </tr>
+                    <tr class="dependent"><td></td><td>$picker-background</td><td>ピッカーの背景</td></tr>
+                    <tr class="dependent"><td></td><td>$picker-hover-foreground</td><td>ピッカーのホバー前景</td></tr>
+                    <tr class="dependent"><td></td><td>$weekday-color</td><td>曜日ラベルの色</td></tr>
+                    <tr class="dependent"><td></td><td>$picker-focus-foreground</td><td>ピッカーのフォーカス前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-special-border-color</td><td>特別な日付の境界線の色</td></tr>
+                    <tr class="dependent"><td></td><td>$date-special-focus-foreground</td><td>特別な日付のフォーカス背景</td></tr>
+                </tbody>
+                <tbody class="group">
+                    <tr class="primary">
+                        <td><details><summary><strong>$content-background</strong></summary></details></td>
+                        <td>$content-foreground</td>
+                        <td>カレンダー コンテンツ領域内のテキストとアイコンの色</td>
+                    </tr>
+                    <tr class="dependent"><td></td><td>$weekend-color</td><td>週末の色</td></tr>
+                    <tr class="dependent"><td></td><td>$inactive-color</td><td>有効範囲外の日付の色</td></tr>
+                    <tr class="dependent"><td></td><td>$weekday-color</td><td>曜日ラベルの色</td></tr>
+                    <tr class="dependent"><td></td><td>$date-hover-background</td><td>ホバー時の日付の背景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-hover-foreground</td><td>ホバー時の日付の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-focus-background</td><td>フォーカス時の日付の背景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-focus-foreground</td><td>フォーカス時の日付の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-background</td><td>現在の日付の背景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-foreground</td><td>現在の日付の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-border-color</td><td>現在の日付の境界線の色</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-background</td><td>選択された日付の背景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-current-background</td><td>現在選択されている日付の背景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-foreground</td><td>選択した日付の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-current-foreground</td><td>現在選択されている日付の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-special-border-color</td><td>選択している現在の特別な日付の境界線の色</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-special-hover-border-color</td><td>ホバー時の特別な日付 (選択) の境界線の色</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-special-focus-border-color</td><td>フォーカス時の特別な日付 (選択) の境界線の色</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-range-background</td><td>選択した日付範囲の背景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-range-foreground</td><td>選択した日付範囲の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-disabled-foreground</td><td>無効な日付の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-disabled-range-foreground</td><td>無効な範囲の前景</td></tr>
+                </tbody>
+                <tbody class="group">
+                    <tr class="primary">
+                        <td><details><summary><strong>$date-border-radius</strong></summary></details></td>
+                        <td>$date-range-border-radius</td>
+                        <td>日付範囲の境界の半径を制御します</td>
+                    </tr>
+                    <tr class="dependent"><td></td><td>$date-current-border-radius</td><td>現在の日付の境界線の半径を制御します</td></tr>
+                    <tr class="dependent"><td></td><td>$date-special-border-radius</td><td>特別な日付の境界線の半径を制御します</td></tr>
+                    <tr class="dependent"><td></td><td>$date-border-radius</td><td>指定されておらず、<code>$date-range-border-radius</code> が設定されている場合は、<code>$date-range-border-radius</code> の値が使用されます</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Indigo Theme Table -->
+        <div class="theme-table indigo">
+            <table class="collapsible-table">
+                <thead>
+                    <tr>
+                        <th>プライマリ プロパティ</th>
+                        <th>依存プロパティ</th>
+                        <th>説明</th>
+                    </tr>
+                </thead>
+                <tbody class="group">
+                    <tr class="primary">
+                        <td><details><summary><strong>$header-background</strong></summary></details></td>
+                        <td>$header-foreground</td>
+                        <td>カレンダー ヘッダーのテキストの色</td>
+                    </tr>
+                    <tr class="dependent"><td></td><td>$picker-background</td><td>ピッカーの背景</td></tr>
+                    <tr class="dependent"><td></td><td>$picker-hover-foreground</td><td>ピッカーのホバー前景</td></tr>
+                    <tr class="dependent"><td></td><td>$picker-focus-foreground</td><td>ピッカーのフォーカス前景</td></tr>
+                    <tr class="dependent"><td></td><td>$navigation-hover-color</td><td>ナビゲーションのホバー色</td></tr>
+                    <tr class="dependent"><td></td><td>$navigation-focus-color</td><td>ナビゲーションのフォーカス色</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-background</td><td>現在の日付の背景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-border-color</td><td>現在の日付の境界線の色</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-hover-background</td><td>現在の日付にホバーした時の背景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-hover-border-color</td><td>現在の日付にホバーした時の境界線の色</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-focus-background</td><td>現在の日付のフォーカス時の背景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-focus-border-color</td><td>現在の日付のフォーカス時の境界線の色</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-foreground</td><td>現在の日付の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-hover-foreground</td><td>現在の日付にホバーした時の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-current-focus-foreground</td><td>現在の日付のフォーカス時の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-current-border-color</td><td>現在選択されている日付の境界線の色</td></tr>
+                </tbody>
+                <tbody class="group">
+                    <tr class="primary">
+                        <td><details><summary><strong>$content-background</strong></summary></details></td>
+                        <td>$content-foreground</td>
+                        <td>カレンダー コンテンツ領域内のテキストとアイコンの色</td>
+                    </tr>
+                    <tr class="dependent"><td></td><td>$weekend-color</td><td>週末の色</td></tr>
+                    <tr class="dependent"><td></td><td>$inactive-color</td><td>有効範囲外の日付の色</td></tr>
+                    <tr class="dependent"><td></td><td>$weekday-color</td><td>曜日ラベルの色</td></tr>
+                    <tr class="dependent"><td></td><td>$date-hover-background</td><td>ホバー時の日付の背景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-hover-foreground</td><td>ホバー時の日付の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-focus-background</td><td>フォーカス時の日付の背景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-focus-foreground</td><td>フォーカス時の日付の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-background</td><td>選択された日付の背景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-current-background</td><td>現在選択されている日付の背景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-foreground</td><td>選択した日付の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-current-foreground</td><td>現在選択されている日付の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-current-border-color</td><td>現在選択されている日付の境界線の色</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-range-background</td><td>選択した日付範囲の背景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-range-foreground</td><td>選択した日付範囲の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-current-range-background</td><td>選択した範囲内の現在の日付の背景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-current-range-hover-background</td><td>ホバー時の選択した範囲内の日付の背景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-selected-current-range-foreground</td><td>選択した範囲内の現在の日付の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-disabled-foreground</td><td>無効な日付の前景</td></tr>
+                    <tr class="dependent"><td></td><td>$date-disabled-range-foreground</td><td>無効な範囲の前景</td></tr>
+                </tbody>
+                <tbody class="group">
+                    <tr class="primary">
+                        <td><details><summary><strong>$date-border-radius</strong></summary></details></td>
+                        <td>$date-range-border-radius</td>
+                        <td>日付範囲の境界の半径を制御します</td>
+                    </tr>
+                    <tr class="dependent"><td></td><td>$date-current-border-radius</td><td>現在の日付の境界線の半径を制御します</td></tr>
+                    <tr class="dependent"><td></td><td>$date-special-border-radius</td><td>特別な日付の境界線の半径を制御します</td></tr>
+                    <tr class="dependent"><td></td><td>$date-border-radius</td><td>指定されておらず、<code>$date-range-border-radius</code> が設定されている場合は、<code>$date-range-border-radius</code> の値が使用されます</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div><!-- .theme-switcher-wrapper -->
+
 カレンダーのスタイル設定を開始するには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
@@ -466,7 +769,7 @@ export class CalendarSample9Component {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`calendar-theme`]({environment:sassApiUrl}/themes#function-calendar-theme) を拡張し、`$header-background` と `$content-background` のみを指定して新しいテーマを作成します。これにより、インタラクション状態に応じた色やコントラストのある前景色が自動的に算出されます。必要に応じて任意のテーマ パラメーターをオーバーライドすることも可能です。
+最もシンプルな方法として、[`calendar-theme`]({environment:sassApiUrl}/themes#function-calendar-theme) を拡張し、`$header-background` と `$content-background` のみを指定して新しいテーマを作成します。これにより、インタラクション状態に応じた色やコントラストのある前景の色が自動的に算出されます。必要に応じて任意のテーマ パラメーターをオーバーライドすることも可能です。
 
 ```scss
 $custom-calendar-theme: calendar-theme(
@@ -481,12 +784,52 @@ $custom-calendar-theme: calendar-theme(
  @include css-vars($custom-calendar-theme);
 ```
 
-<code-view style="height:500px" 
+以下のサンプルでは、カスタマイズした CSS 変数を使用したカレンダー コンポーネントが、[`SAP UI5`](https://ui5.sap.com/#/entity/sap.ui.unified.Calendar/sample/sap.ui.unified.sample.CalendarSingleDaySelection) デザイン システムのカレンダーに視覚的に似たデザインを実現している様子を確認できます。 
+
+<code-view style="height:350px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-styling-sample/" >
 </code-view>
 
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して `calendar` をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-calendar`、`dark-calendar`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[calendar-theme]({environment:sassApiUrl}/themes#function-calendar-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-calendar
+class="!light-calendar
+![--header-background:#4F6A5A]
+![--content-background:#A3C7B2]"
+[weekStart]="1">
+</igx-calendar>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、calendar は次のようになります:
+
+<div class="sample-container loading" style="height:500px">
+    <iframe id="calendar-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/scheduling/calendar-tailwind-styling-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ## API リファレンス
 <div class="divider--half"></div>

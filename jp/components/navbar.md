@@ -1,7 +1,8 @@
 ---
-title: Navbar コンポーネント
+title: Navbar コンポーネント | MITライセンス
 _description: Ignite UI for Angular Navbar コントロールはアプリケーションでのスムーズな移動を可能にする UI コンポーネントです。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Navbar コンポーネント, Angular Navbar コントロール, Angular Navigation Bar, Angular Navigation Bar コンポーネント
+_license: MIT
 _language: ja
 ---
 
@@ -272,7 +273,38 @@ Navbar のタイトルにカスタム コンテンツを提供する場合は、
 
 ## スタイル設定
 
-ページネーターのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
+### Navbar テーマのプロパティ マップ
+
+プライマリ プロパティを変更すると、関連するすべての依存プロパティが自動的に更新され、変更が反映されます。
+
+<table class="collapsible-table">
+    <thead>
+      <tr>
+        <th>プライマリ プロパティ</th>
+        <th>依存プロパティ</th>
+        <th>説明</th>
+      </tr>
+    </thead>
+    <tbody class="group">
+      <tr class="primary">
+        <td><details><summary><strong>$background</strong></summary></details></td>
+        <td>$text-color</td>
+        <td>ナビゲーション バーのテキストの色</td>
+      </tr>
+      <tr class="dependent"><td></td><td>$idle-icon-color</td><td>ナビゲーション バーのアイドル アイコンの色</td></tr>
+      <tr class="dependent"><td></td><td>$hover-icon-color</td><td>ホバー時のナビゲーション バーのアイコンの色</td></tr>
+      <tr class="dependent"><td></td><td>$border-color (indigo バリエーションのみの変更)</td><td>ナビゲーション バーの境界線の色</td></tr>
+    </tbody>
+    <tbody class="group">
+      <tr class="primary">
+        <td><strong>$idle-icon-color</strong></td>
+        <td>$hover-icon-color</td>
+        <td>ホバー時のナビゲーション バーのアイコンの色</td>
+      </tr>
+    </tbody>
+</table>
+
+Navbar のスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -281,7 +313,7 @@ Navbar のタイトルにカスタム コンテンツを提供する場合は、
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`navbar-theme`]({environment:sassApiUrl}/themes#function-navbar-theme) を拡張し、`$background` および `$idle-icon-color` パラメータのみを提供する新しいテーマを作成します。テーマは、さまざまなインタラクション状態に必要なすべての背景色と前景色を自動的に計算します。より細かい制御を行いたい場合は、個別のプロパティをオーバーライドすることも可能です。
+最もシンプルな方法として、[`navbar-theme`]({environment:sassApiUrl}/themes#function-navbar-theme) を拡張し、`$background` および `$idle-icon-color` パラメータのみを提供する新しいテーマを作成します。テーマは、さまざまなインタラクション状態に必要なすべての背景の色と前景の色を自動的に計算します。より細かい制御を行いたい場合は、個別のプロパティをオーバーライドすることも可能です。
 
 ```scss
 $custom-navbar-theme: navbar-theme(
@@ -308,6 +340,42 @@ $custom-navbar-theme: navbar-theme(
 </code-view>
 
 <div class="divider--half"></div>
+
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して navbar をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-navbar`、`dark-navbar`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[navbar-theme]({environment:sassApiUrl}/themes#function-navbar-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-navbar class="!light-navbar ![--background:#7B9E89] ![--text-color:#121E17]" title="Sample App">
+  ...
+</igx-navbar>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、navbar は次のようになります:
+
+<div class="sample-container loading" style="height:120px">
+    <iframe id="navbar-tailwind-style-iframe" data-src='{environment:demosBaseUrl}/menus/navbar-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ## API リファレンス
 

@@ -3,6 +3,7 @@
 title: Angular Grid の行選択 - Ignite UI for Angular 
 _description: 行選択を有効にして UX を改善し、ユーザーが単一または複数の行を管理できるようにします。Ignite UI で行データ選択を簡単に構成できます。
 _keywords: データ選択, igniteui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular Grid の行選択 - Ignite UI for Angular 
 _description: 行選択を有効にして UX を改善し、ユーザーが単一または複数の行を管理できるようにします。Ignite UI で行データ選択を簡単に構成できます。
 _keywords: データ選択, igniteui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -19,6 +21,7 @@ _language: ja
 title: Angular Grid の行選択 - Ignite UI for Angular 
 _description: 行選択を有効にして UX を改善し、ユーザーが単一または複数の行を管理できるようにします。Ignite UI で行データ選択を簡単に構成できます。
 _keywords: データ選択, igniteui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }

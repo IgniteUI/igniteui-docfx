@@ -11,9 +11,10 @@ There are multiple versions of a project (called project templates) to choose fr
 When creating Ignite UI for Angular project with Angular Schematics or Ignite UI CLI you can select a template with an basic implementation of a client-side authentication module that require as little additional setup as possible to jump-start apps with user management.
 
 ## Create Authentication Project
+
 You can select an authentication project either when going through the Step by step experience after selection 'Ignite UI for Angular' project type:
 
-<img class="responsive-img" src="../../../images/general/cli-igx-side-auth.png" />
+<img class="responsive-img" src="../../../images/general/cli-igx-side-auth.png" alt="Step by step experience" />
 
 Or through the new command:
 
@@ -28,17 +29,19 @@ ng new "Auth Project" --collection="@igniteui/angular-schematics" --template=sid
 ```
 
 ## Description
+
 This template builds upon the Side Navigation default and adds a profile page and a login section to the app's nav bar that will display a login button or an avatar of the logged in user:
 
-<img class="responsive-img" src="../../../images/general/igx-side-auth-login-bar.png" />
+<img class="responsive-img" src="../../../images/general/igx-side-auth-login-bar.png" alt="Login bar" />
 
 The login bar also integrates dialogs to sign in or up:
 
-<img class="responsive-img" src="../../../images/general/igx-side-auth-login-dialogs.png" />
+<img class="responsive-img" src="../../../images/general/igx-side-auth-login-dialogs.png" alt="Login dialogs" />
 
-The project also supports various [external authentication providers](#add-a-third-party-social-provider). 
+The project also supports various [external authentication providers](#add-a-third-party-social-provider).
 
 ## In code
+
 Everything related to user management is under the `src/app/authentication` folder. Notable exports include:
 
 - `AuthenticationModule` in `authentication.module.ts` exports all components and services to the main app module.
@@ -51,12 +54,13 @@ Everything related to user management is under the `src/app/authentication` fold
 ## Required configuration
 
 The project is setup for a single page app with REST API services, so the `AuthenticationService` is used to send requests to the following URLs:
+
 - `/login` - login with username and password
 - `/register` - register with user details
 - `/extlogin` - passes along user info from external source
 
 All endpoints are expected to return an JSON Wen Token(JWT)
- or an error state with message. 
+ or an error state with message.
 
 > **Note:** For demonstration purposes the project has a `services/fake-backend.service.ts` that intercepts requests . The `BackendProvider` in `authentication.module.ts` should **not** be used in production. Both the provider and the file should be removed when development starts.
 
@@ -92,6 +96,7 @@ If you need to obtain one, for example for Google Account sign in, follow the pr
 Keep in mind, redirect URLs and allowed domain origins should be configured per provider to match the project. When creating the Google OAuth 2.0 client ID for development you can provide `http://localhost:4200/redirect-google` as the redirect URI. See [redirect URLs](#provider-details) for details.
 
 Once you have your ID (for example `123456789.apps.googleusercontent.com`) you can enable the Google provider for the project like so:
+
 ```ts
 // in app.module.ts
 export class AppModule {
@@ -102,9 +107,10 @@ export class AppModule {
   }
 }
 ```
+
 This will automatically enable the respective button in the login dialog:
 
-<img class="responsive-img" src="../../../images/general/igx-side-auth-login-google.png" />
+<img class="responsive-img" src="../../../images/general/igx-side-auth-login-google.png" alt="Google login button" />
 
 You can do the same with [Microsoft](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-protocols-oidc) following this guide:
 
@@ -117,7 +123,7 @@ https://developers.facebook.com/docs/apps/#register
 
 As you enable providers, all buttons will become active:
 
-<img class="responsive-img" src="../../../images/general/igx-side-auth-login-social.png" />
+<img class="responsive-img" src="../../../images/general/igx-side-auth-login-social.png" alt="Social login options" />
 
 ### Provider details
 

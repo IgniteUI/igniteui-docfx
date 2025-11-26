@@ -1,7 +1,8 @@
 ---
-title: Angular Icon Service – Ignite UI for Angular | インフラジスティックス
+title: Angular Icon Service – Ignite UI for Angular | インフラジスティックス | MITライセンス
 _description: Ignite UI for Angular Icon Service を使用して、様々なアイコンおよびフォント セットを統合して交互に使用し、カスタム色を定義できます。 
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Icon コンポーネント, Angular Icon コントロール, Angular Icon サービス
+_license: MIT
 _language: ja
 ---
 

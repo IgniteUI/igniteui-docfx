@@ -2,6 +2,7 @@
 title: Angular ファイナンシャル チャート | リアルタイム データ | インフラジスティックス
 _description: インフラジスティックスの Angular ファイナンシャル チャート コントロールを使用して数百万のデータ ポイントを高速に描画します。Ignite UI for Angular チャートの高いパフォーマンスを是非お試しください。
 _keywords: Angular charts, financial chart, stock chart, data binding, Ignite UI for Angular, Infragistics, Angular チャート, ファイナンシャル チャート, 株価チャート, データ バインディング, インフラジスティックス
+_license: commercial
 mentionedTypes: ['FinancialChart']
 _language: ja
 ---

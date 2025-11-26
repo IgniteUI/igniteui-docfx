@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | データソース | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用して、散布多角形や散布ポリラインなどのシェープ チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
 _keywords: Angular charts, data chart, shape chart, Ignite UI for Angular, Infragistics, data source, Angular チャート, データ チャート, シェープ チャート, インフラジスティックス, データソース
+_license: commercial
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---

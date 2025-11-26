@@ -2,6 +2,7 @@
 title: Angular エリア チャート | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular エリア チャート
 _keywords: Angular Charts, Area Chart, Infragistics, Angular チャート, エリア チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ["XamCategoryChart", "XamDataChart"]
 _language: ja
 ---

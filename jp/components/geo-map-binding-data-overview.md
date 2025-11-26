@@ -2,6 +2,7 @@
 title: Angular マップ | データ可視化ツール | データ バインディング | インフラジスティックス
 _description: インフラジスティックスの Angular マップ コンポーネントを使用して、ビュー モデルからの地理的位置を含むデータ、またはシェープ ファイルからロードされた地理空間データを地理的画像マップに表示します。Ignite UI for Angular マップのサンプルを是非お試しください!
 _keywords: Angular map, geo-spatial data, Ignite UI for Angular, Infragistics, data binding, Angular マップ, 地理空間のデータ, データ バインディング, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamGeographicMap']
 _language: ja
 ---

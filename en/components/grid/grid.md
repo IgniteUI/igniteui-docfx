@@ -2,6 +2,7 @@
 title: Angular Data Grid | Build Fast Angular Tables | Infragistics
 _description: Create super fast, responsive Angular data grids and tables with Ignite UI for Angular. Supports  editing, filtering, data binding and many more. Try it now!
 _keywords: angular data grid, angular grid component, angular data grid component, angular table component, angular data table component, angular table, angular UI components, ignite ui for angular
+_license: commercial
 ---
 
 <style>
@@ -44,9 +45,9 @@ _keywords: angular data grid, angular grid component, angular data grid componen
         <div class="tabbar-wrapper">
             <div class="tab-content">
                 <img class="b-lazy responsive-img"
-                    src="../../images/general/landing-grid-page.png" 
-                    data-src="../../images/general/landing-grid-page.png" 
-                    data-srcset="../../images/general/landing-grid-page.png 480w, ../../images/general/landing-grid-page.png 768w, ../../images/general/landing-grid-page.png 1100w" 
+                    src="../../images/general/landing-grid-page.png"
+                    data-src="../../images/general/landing-grid-page.png"
+                    data-srcset="../../images/general/landing-grid-page.png 480w, ../../images/general/landing-grid-page.png 768w, ../../images/general/landing-grid-page.png 1100w"
                     alt="Angular Data Grid"
                     title="Angular Data Grid">
                 </div>
@@ -79,7 +80,7 @@ To get started with the Ignite UI for Angular Data Grid component, first you nee
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](../general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](../general/getting-started.md) topic.
 
 The next step is to import the `IgxGridModule` in your **app.module.ts** file.
 
@@ -133,9 +134,11 @@ The **data** property binds the grid, in this case to local array of objects.
 The [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autoGenerate) property tells the `igx-grid` to auto generate the grid's [`IgxColumnComponent`s]({environment:angularApiUrl}/classes/igxcolumncomponent.html) based on the data source fields. It will also try to deduce the appropriate data type for the column if possible. Developers can also explicitly [define the columns](#angular-grid-column-configuration) and the mapping to the data source fields.
 
 ## Angular Bootstrap Grid Definition
+
 <p>Ignite UI for Angular includes a powerful bootstrap grid like flex-based layout system. Any modern application today is expected to follow a responsive web design approach, meaning it can gracefully adjust layout of HTML elements based on the device size, or from simply resizing the browser. An Angular bootstrap grid layout was the most used approach in the past, but a flex-based layout system like CSS grid has become more popular, as it works in any browser. The Ignite UI for Angular Layout Directive allows vertical and horizontal flow, including content / text wrapping, justification, and alignment. The Ignite UI for Angular grid supports a responsive layout using CSS, giving you the ultimate flexibility in how the grid behaves on resize. </p>
 
 ## Angular Grid Styling Configuration
+>
 > [!NOTE]
 > The [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) uses **css grid layout**, which is **not supported in IE without prefixing**, consequently it will not render properly.
 
@@ -157,6 +160,7 @@ To facilitate your work, apply the comment in the `src/styles.scss` file.
  ```
 
 ## Editable Grid Angular
+
 <p>Each operation for Angular grid editing includes Batch operations, meaning the API gives you the option to group edits into a single server call, or you can perform grid edit / update operations as they occur with grid interactions. Along with a great developer experience as an editable Angular grid with CRUD operations, the Angular grid includes Excel-like keyboard navigation. Common default grid navigation is included, plus the option to override any navigation option to meet the needs of your customers. An editable grid in Angular with a great navigation scheme is critical to any modern line of business application, with the Ignite UI grid we make it easy.</p>
 
 Following this topic you will learn more about [cell template](grid.md#cell-template) and [cell editing template](grid.md#cell-editing-template) and editing.
@@ -215,7 +219,7 @@ public contextObject = { firstProperty: 'testValue', secondProperty: 'testValue1
 ```
 
 >[!NOTE]
->Whenever a header template is used along with grouping/moving functionality the *column header area* becomes **draggable** and you cannot access the custom elements part of the header template until you mark them as **not draggable**. Example below.
+>Whenever a header template is used along with grouping/moving functionality the _column header area_ becomes **draggable** and you cannot access the custom elements part of the header template until you mark them as **not draggable**. Example below.
 
 ```html
 <igx-column #col field="ProductName" header="Product Name"
@@ -227,7 +231,8 @@ public contextObject = { firstProperty: 'testValue', secondProperty: 'testValue1
     </ng-template>
 </igx-column>
 ```
-As you can see, we are adding **draggable** attribute set to *false*.
+
+As you can see, we are adding **draggable** attribute set to _false_.
 
 ### Cell Template
 
@@ -358,6 +363,7 @@ const pipeArgs: IColumnPipeArgs = {
      digitsInfo: '1.1-2'
 }
 ```
+
 ```html
 <igx-column field="OrderDate" dataType="date" [pipeArgs]="pipeArgs"></igx-column>
 <igx-column field="UnitPrice" dataType="number" [pipeArgs]="pipeArgs"></igx-column>
@@ -406,9 +412,9 @@ const POJO = [{
   }];
 
 ```
+
 >[!WARNING]
 >**The key values must not contain arrays**.
-
 >If you use [autoGenerate]({environment:angularApiUrl}/classes/igxgridcomponent.html#autoGenerate) columns **the data keys must be identical.**
 
 ## Angular Grid Data Binding
@@ -431,7 +437,7 @@ We're importing the `Injectable` decorator which is an [essential ingredient](ht
 
 **Note**: Before Angular 5 the `HttpClient` was located in `@angular/http` and was named `Http`.
 
-Since we will receive a JSON response containing an array of records, we may as well help ourselves by specifing what kind of data we're expecting to be returned in the observable by defining an interface with the correct shape. Type checking is always recommended and can save you some headaches down the road.
+Since we will receive a JSON response containing an array of records, we may as well help ourselves by specifying what kind of data we're expecting to be returned in the observable by defining an interface with the correct shape. Type checking is always recommended and can save you some headaches down the road.
 
 ```typescript
 // northwind.service.ts
@@ -539,9 +545,10 @@ and in the template of the component:
 
 ## Complex Data Binding
 
-The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) supports binding to complex objects (inluding nesting deeper than one level) through a "path" of properties in the data record.
+The [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) supports binding to complex objects (including nesting deeper than one level) through a "path" of properties in the data record.
 
 Take a look at the following data model:
+
 ```typescript
 interface AminoAcid {
     name: string;
@@ -560,11 +567,14 @@ interface AminoAcid {
     ...
 }
 ```
+
 For example, in order to display the weights of a given amino acid in the grid the following snippet will suffice
+
 ```html
 <igx-column field="weight.molecular"></igx-column>
 <igx-column field="weight.residue"></igx-column>
 ```
+
 Refer to the sample below for additional information. This type of binding supports all
 the default functionality that you would expect from the grid.
 That is all sorting and filtering operations work out of the box without any additional
@@ -584,7 +594,7 @@ configuration. Same goes for grouping and editing operations with or without tra
 
 An alternative way to bind complex data, or to visualize composite data (from more than one column) in the **IgxGrid** is to use a custom body template for the column. Generally, one can:
     - use the `value` of the cell, that contains the nested data
-    - use the `cell` object in the template, from which to access the `row.data`, therefore retrieve any value from it, i.e `cell.row.data[field]` and `cell.row.data[field][nestedField]` 
+    - use the `cell` object in the template, from which to access the `row.data`, therefore retrieve any value from it, i.e `cell.row.data[field]` and `cell.row.data[field][nestedField]`
 
 and interpolate it those in the template.
 
@@ -644,6 +654,7 @@ export const EMPLOYEE_DATA = [
     },
 ...
 ```
+
 The custom template for the column, that will render the nested data:
 
 ```html
@@ -694,6 +705,7 @@ The flat data binding approach is similar to the one that we already described a
 Since the Angular grid is a component for **rendering**, **manipulating** and **preserving** data records, having access to **every data record** gives you the opportunity to customize the approach of handling it. The [`data`]({environment:angularApiUrl}/classes/igxgridrow.html#data) property provides you this opportunity.
 
 Below is the data that we are going to use:
+
 ```typescript
 export const DATA: any[] = [
     {
@@ -758,6 +770,7 @@ Keep in mind that with the above defined template you will not be able to make e
 </igx-column>
 ...
 ```
+
 And the result is:
 
 
@@ -770,12 +783,14 @@ And the result is:
 <div class="divider--half"></div>
 
 ## Keyboard Navigation
+
 Grid's keyboard navigation provides a rich variety of keyboard interactions for the user. It enhances accessibility and allows intuitive navigation through any type of elements inside (cell, row, column header, toolbar, footer, etc.).
 Check out these resources for more information:
- - [Grid Keyboard Navigation](../grid/keyboard-navigation.md)
- - [TreeGrid Keyboard Navigation](../treegrid/keyboard-navigation.md)
- - [Hierarchical Grid Keyboard Navigation](../hierarchicalgrid/keyboard-navigation.md)
- - [Blog post](https://www.infragistics.com/community/blogs/b/engineering/posts/grid-keyboard-navigation-accessibility) - Improving Usability, Accessibility and ARIA Compliance with Grid keyboard navigation
+
+- [Grid Keyboard Navigation](../grid/keyboard-navigation.md)
+- [TreeGrid Keyboard Navigation](../treegrid/keyboard-navigation.md)
+- [Hierarchical Grid Keyboard Navigation](../hierarchicalgrid/keyboard-navigation.md)
+- [Blog post](https://www.infragistics.com/community/blogs/b/engineering/posts/grid-keyboard-navigation-accessibility) - Improving Usability, Accessibility and ARIA Compliance with Grid keyboard navigation
 
 ## State Persistence
 
@@ -787,7 +802,7 @@ See the [Grid Sizing](sizing.md) topic.
 
 ## Performance (Experimental)
 
-The `IgxGridComponent`'s design allows it to take advantage of the Event Coalescing feature that has Angular introduced. This feature allows for improved performance with roughly around **`20%`** in terms of interactions and responsiveness. This feature can be enabled on application level by simply setting the `ngZoneEventCoalescing ` and `ngZoneRunCoalescing` properties to `true` in the `bootstrapModule` method:
+The `IgxGridComponent`'s design allows it to take advantage of the Event Coalescing feature that has Angular introduced. This feature allows for improved performance with roughly around **`20%`** in terms of interactions and responsiveness. This feature can be enabled on application level by simply setting the `ngZoneEventCoalescing` and `ngZoneRunCoalescing` properties to `true` in the `bootstrapModule` method:
 
 ```typescript
 platformBrowserDynamic()
@@ -797,7 +812,6 @@ platformBrowserDynamic()
 
 >[!NOTE]
 > This is still in experimental feature for the `IgxGridComponent`. This means that there might be some unexpected behaviors in the Grid. In case of encountering any such behavior, please contact us on our [Github](https://github.com/IgniteUI/igniteui-angular/discussions) page.
-
 >[!NOTE]
 > Enabling it can affects other parts of an Angular application that the `IgxGridComponent` is not related to.
 
@@ -810,8 +824,8 @@ platformBrowserDynamic()
 |Grid [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) does not depend on the column widths | The [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) of all columns does not determine the spanning of the grid itself. It is determined by the parent container dimensions or the defined grid's [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width).|
 |Grid nested in parent container | When grid's [`width`]({environment:angularApiUrl}/classes/igxgridcomponent.html#width) is not set and it is placed in a parent container with defined dimensions, the grid spans to this container.|
 |Grid `OnPush` ChangeDetectionStrategy |The grid operates with `ChangeDetectionStrategy.OnPush` so whenever some customization appears make sure that the grid is notified about the changes that happens.|
-| Columns have a minimum allowed column width. Depending on the value of [`--ig-size`] CSS variable, they are as follows: <br/>"small": 56px <br/> "medium": 64px <br/> "large ": 80px | If width less than the minimum allowed is set it will not affect the rendered elements. They will render with the minimum allowed width for the corresponding [`--ig-size`]. This may lead to an unexpected behavior with horizontal virtualization and is therefore not supported.
-| Row height is not affected by the height of cells that are not currently rendered in view. | Because of virtualization a column with a custom template (that changes the cell height) that is not in the view will not affect the row height. The row height will be affected only while the related column is scrolled in the view.
+| Columns have a minimum allowed column width. Depending on the value of [`--ig-size`] CSS variable, they are as follows: <br/>"small": 56px <br/> "medium": 64px <br/> "large ": 80px | If width less than the minimum allowed is set it will not affect the rendered elements. They will render with the minimum allowed width for the corresponding [`--ig-size`]. This may lead to an unexpected behavior with horizontal virtualization and is therefore not supported.|
+| Row height is not affected by the height of cells that are not currently rendered in view. | Because of virtualization a column with a custom template (that changes the cell height) that is not in the view will not affect the row height. The row height will be affected only while the related column is scrolled in the view. |
 
 > [!NOTE]
 > `igxGrid` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxGrid`. For more details see [igxForOf Known Issues](../for-of.md#known-limitations) section.
@@ -819,47 +833,51 @@ platformBrowserDynamic()
 <div class="divider--half"></div>
 
 ## API References
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
-* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
+
+- [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+- [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+- [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
+- [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
-* [IgxInputGroup Theme]({environment:sassApiUrl}/themes#function-input-group-theme)
-* [IgxChip Theme]({environment:sassApiUrl}/themes#function-chip-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
-* [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
-* [IgxCalendar Theme]({environment:sassApiUrl}/themes#function-calendar-theme)
-* [IgxSnackBar Theme]({environment:sassApiUrl}/themes#function-snackbar-theme)
-* [IgxBadge Theme]({environment:sassApiUrl}/themes#function-badge-theme)
+
+- [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxInputGroup Theme]({environment:sassApiUrl}/themes#function-input-group-theme)
+- [IgxChip Theme]({environment:sassApiUrl}/themes#function-chip-theme)
+- [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
+- [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
+- [IgxCalendar Theme]({environment:sassApiUrl}/themes#function-calendar-theme)
+- [IgxSnackBar Theme]({environment:sassApiUrl}/themes#function-snackbar-theme)
+- [IgxBadge Theme]({environment:sassApiUrl}/themes#function-badge-theme)
 
 ## Tutorial video
+
 Learn more about creating an Angular data grid in our short tutorial video:
 
 > [!Video https://www.youtube.com/embed/Xv_fQVQ8fmM]
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [Grid Sizing](sizing.md)
-* [Virtualization and Performance](virtualization.md)
-* [Paging](paging.md)
-* [Filtering](filtering.md)
-* [Sorting](sorting.md)
-* [Summaries](summaries.md)
-* [Column Moving](column-moving.md)
-* [Column Pinning](column-pinning.md)
-* [Column Resizing](column-resizing.md)
-* [Selection](selection.md)
-* [Column Data Types](column-types.md#default-template)
-* [Build CRUD operations with igxGrid](../general/how-to/how-to-perform-crud.md)
+- [Grid Sizing](sizing.md)
+- [Virtualization and Performance](virtualization.md)
+- [Paging](paging.md)
+- [Filtering](filtering.md)
+- [Sorting](sorting.md)
+- [Summaries](summaries.md)
+- [Column Moving](column-moving.md)
+- [Column Pinning](column-pinning.md)
+- [Column Resizing](column-resizing.md)
+- [Selection](selection.md)
+- [Column Data Types](column-types.md#default-template)
+- [Build CRUD operations with igxGrid](../general/how-to/how-to-perform-crud.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

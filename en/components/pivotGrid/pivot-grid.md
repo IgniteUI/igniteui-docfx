@@ -2,13 +2,14 @@
 title: Angular Pivot Grid & Table – Ignite UI for Angular
 _description: Create fast, responsive Angular pivot grids and tables with Ignite UI for Angular. Perform complex analysis and apply data sorting, grouping, or filtering.
 _keywords: angular pivot grid, angular pivot grid component, angular pivot table, angular pivot table component, angular pivot data table, Angular pivot table, angular ui components, ignite ui for angular
+_license: commercial
 ---
 
 # Angular Pivot Grid Component Overview
 
 Ignite UI for Angular Pivot Grid is one of our best [Angular Components](https://www.infragistics.com/products/ignite-ui-angular), representing a table of grouped values and aggregates that lets you organize and summarize data in a tabular form. It is a data summarization tool that is used to reorganize and summarize selected columns and rows of data coming from a spreadsheet or database table to obtain a desired report.
 
-## What is Angular Pivot Grid? 
+## What is Angular Pivot Grid?
 
 The Angular Pivot Grid component presents data in a pivot table and helps perform complex analysis on the supplied data set. This sophisticated Pivot Grid control is used for organizing, summarizing, and filtering large volumes of data which is later displayed in a cross-table format. Key features of an Angular Pivot Grid are row dimensions, column dimensions, aggregations, and filters.
 
@@ -32,7 +33,7 @@ To get started with the Ignite UI for Angular Pivot Grid component, first you ne
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](../general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](../general/getting-started.md) topic.
 
 The next step is to import the `IgxPivotGridModule` in your **app.module.ts** file.
 
@@ -103,6 +104,7 @@ Multiple sibling dimensions can be defined, which creates a more complex nested 
 The dimensions can be reordered or moved from one area to another via their corresponding chips using drag & drop.
 
 A dimension can also describe an expandable hierarchy via the `childLevel` property, for example:
+
 ```typescript
    {
             memberFunction: () => 'All',
@@ -116,18 +118,20 @@ A dimension can also describe an expandable hierarchy via the `childLevel` prope
     }
 
 ```
+
 In this case the dimension renders an expander in the related section of the grid (row or column) and allows the children to be expanded or collapsed as part of the hierarchy. By default the row dimensions are initially expanded. This behavior can be controlled with the `defaultExpandState` `@Input` of the pivot grid.
 
 ### Predefined dimensions
 
 As part of the pivot grid some additional predefined dimensions are exposed for easier configuration:
+
 - `IgxPivotDateDimension`
     Can be used for date fields. Describes the following hierarchy by default:
-    - All Periods
-    - Years
-    - Quarters
-    - Months
-    - Full Date
+  - All Periods
+  - Years
+  - Quarters
+  - Months
+  - Full Date
 
 It can be set for rows or columns, for example:
 
@@ -211,6 +215,7 @@ public static totalMax: PivotAggregation = (members, data: any) => {
     return data.map(x => x.UnitPrice * x.UnitsSold).reduce((a, b) => Math.max(a,b));
 };
 ```
+
 The pivot value also provides a `displayName` property. It can be used to display a custom name for this value in the column header.
 
 >[!NOTE]
@@ -298,9 +303,10 @@ Resulting in the following view, which groups the Product Categories unique colu
            iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-basic/" alt="Angular Pivot Grid Basic Example">
 </code-view>
 
-And if you want to streamline the entire app development process, you can try out our [WYSIWYG App Builder™](https://www.infragistics.com/products/appbuilder) for your next Angular app. 
+And if you want to streamline the entire app development process, you can try out our [WYSIWYG App Builder™](https://www.infragistics.com/products/appbuilder) for your next Angular app.
 
 ### Auto generate configuration
+
 The `autoGenerateConfig` property automatically generates dimensions and values based on the data source fields:
 
 - Numeric Fields:
@@ -329,18 +335,20 @@ This feature allows developers to quickly create a pivot view without manually s
 | Merging the dimension members is case sensitive| The pivot grid creates groups and merges the same (case sensitive) values. But the dimensions provide `memberFunction` and this can be changed there, the result of the `memberFunction` are compared and used as display value.|
 
 ## API References
-* [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
-* [IgxPivotDataSelectorComponent]({environment:angularApiUrl}/classes/igxpivotdataselectorcomponent.html)
+
+- [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
+- [IgxPivotDataSelectorComponent]({environment:angularApiUrl}/classes/igxpivotdataselectorcomponent.html)
 
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [Angular Pivot Grid Features](pivot-grid-features.md)
-* [Angular Pivot Grid Custom Aggregations](pivot-grid-custom.md)
+- [Angular Pivot Grid Features](pivot-grid-features.md)
+- [Angular Pivot Grid Custom Aggregations](pivot-grid-custom.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

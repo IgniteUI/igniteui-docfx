@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | ポイント チャート | データ バインディング | インフラジスティックス
 _description: インフラジスティックスの Angular チャートコ ントロールを使用して、散布マーカー チャート、散布バブル チャート、極座標散布チャートなどのポイント チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
 _keywords: Angular charts, data chart, point charts, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, ポイント チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---

@@ -3,6 +3,7 @@
 title: Angular Grid の検索フィルター - Ignite UI for Angular
 _description: Ignite UI for Angular Data Grid で高速グリッド検索を実行します。優れた UX を提供しながら、グリッドの仮想化データでコンテンツの即時検索が可能です。
 _keywords: コンテンツ検索, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular Tree Grid の検索フィルター - Ignite UI for Angular
 _description: Ignite UI for Angular Tree Grid で高速グリッド検索を実行します。優れた UX を提供しながら、グリッドの仮想化データでコンテンツの即時検索が可能です。
 _keywords: コンテンツ検索, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -19,6 +21,7 @@ _language: ja
 title: Angular Hierarchical Grid の検索フィルター - Ignite UI for Angular
 _description: Ignite UI for Angular Hierarchical Grid で高速グリッド検索を実行します。優れた UX を提供しながら、グリッドの仮想化データでコンテンツの即時検索が可能です。
 _keywords: コンテンツ検索, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }

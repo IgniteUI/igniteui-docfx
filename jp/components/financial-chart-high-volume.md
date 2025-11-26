@@ -2,6 +2,7 @@
 title: Angular ファイナンシャル チャート | 大規模データ | インフラジスティックス
 _description: インフラジスティックスの Angular ファイナンシャル チャート コントロールのパフォーマンスを最適化する方法について説明します。Ignite UI for Angular チャートのパフォーマンスを向上させます。
 _keywords: Angular charts, financial chart, stock chart, performance, Ignite UI for Angular, Infragistics, Angular チャート, ファイナンシャル チャート, 株価チャート, パフォーマンス, インフラジスティックス
+_license: commercial
 mentionedTypes: ['FinancialChart']
 _language: ja
 ---

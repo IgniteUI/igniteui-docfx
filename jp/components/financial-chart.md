@@ -2,6 +2,7 @@
 title: Angular ファイナンシャル チャート | React テーブルとコントロール | インフラジスティックス
 _description: 簡単な API を使用して財務データを可視化するには、Angular ファイナンシャル チャート コンポーネントを使用します。Ignite UI for Angular を使用して高速で編集可能なファイナンシャル チャートを作成できます。
 _keywords: Angular charts, financial chart, stock chart, Ignite UI for Angular, Infragistics, Angular チャート, ファイナンシャル チャート, 株価チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ['FinancialChart', 'FinancialChartType', 'FinancialOverlayType']
 _language: ja
 ---

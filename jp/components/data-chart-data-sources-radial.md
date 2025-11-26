@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | データソース | インフラジスティックス
 _description: ンフラジスティックスの Angular チャート コントロールを使用して、ラジアル領域、ラジアル折れ線、ラジアル散布などのラジアル チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
 _keywords: Angular charts, data chart, radial, Ignite UI for Angular, Infragistics, data source, Angular チャート, データ チャート, ラジアル, インフラジスティックス, データソース
+_license: commercial
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---

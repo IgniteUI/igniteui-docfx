@@ -2,6 +2,7 @@
 title: Infragistics NuGet フィード
 _description: インフラジスティックスの Angular コンポーネントの NuGet フィード。
 _keywords: Angular, NuGet, Feed, Infragistics, NuGet, フィード, インフラジスティックス
+_license: MIT
 mentionedTypes: []
 _language: ja
 ---

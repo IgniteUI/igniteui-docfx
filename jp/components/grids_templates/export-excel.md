@@ -3,6 +3,7 @@
 title: Angular Grid の Excel へのエクスポート - Ignite UI for Angular
 _description: Ignite UI Excel Exporter を使用すると、クライアント Excel の機能をより便利でシンプルにできます。この形式では、フィルタリングやソートなどの機能が使用できます。
 _keywords: データ エクスポート, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -12,6 +13,7 @@ title: Angular Tree Grid の Excel へのエクスポート - Ignite UI for Angu
 _description: Ignite UI Excel Exporter を使用すると、クライアント Excel の機能をより便利でシンプルにできます。この形式では、フィルタリングやソートなどの機能が使用できます。
 _keywords: データ エクスポート, ignite ui for angular, インフラジスティックス
 _canonicalLink: grid/export-excel
+_license: commercial
 _language: ja
 ---
 }
@@ -21,6 +23,7 @@ title: Angular Hierarchical Grid の Excel へのエクスポート - Ignite UI 
 _description: Ignite UI Excel Exporter を使用すると、クライアント Excel の機能をより便利でシンプルにできます。この形式では、フィルタリングやソートなどの機能が使用できます。
 _keywords: データ エクスポート, ignite ui for angular, インフラジスティックス
 _canonicalLink: grid/export-excel
+_license: commercial
 _language: ja
 ---
 }
@@ -30,6 +33,7 @@ title: Angular Pivot Grid の Excel へのエクスポート - Ignite UI for Ang
 _description: Ignite UI Excel Exporter を使用すると、クライアント Excel の機能をより便利でシンプルにできます。この形式では、フィルタリングやソートなどの機能が使用できます。
 _keywords: データ エクスポート, ignite ui for angular, インフラジスティックス
 _canonicalLink: grid/export-excel
+_license: commercial
 _language: ja
 ---
 }

@@ -2,6 +2,7 @@
 title: Angular チャート | データ可視化ツール | 横棒チャート | データ バインディング | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用して縦棒チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
 _keywords: Angular charts, data chart, column chart, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 縦棒チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---

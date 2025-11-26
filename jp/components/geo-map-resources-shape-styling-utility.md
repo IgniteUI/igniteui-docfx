@@ -2,6 +2,7 @@
 title: Angular マップ | シェープ マップのリソース | インフラジスティックス
 _description: インフラジスティックスの Angular JavaScript マップを使用して、シェイプ ファイルから地理空間データを読み込みます。Ignite UI for Angular マップのサンプルを是非お試しください!
 _keywords: Angular map, shape styling, conditional formatting, Ignite UI for Angular, Infragistics, Angular マップ, 図形スタイル, 条件付き書式, インフラジスティックス
+_license: commercial
 mentionedTypes: ["XamGeographicMap"]
 _language: ja
 ---

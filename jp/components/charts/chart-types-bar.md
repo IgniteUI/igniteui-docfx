@@ -2,6 +2,7 @@
 itle: Angular 棒チャート | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular 棒チャート
 _keywords: Angular Charts, Bar Chart, Infragistics, Angular チャート, 棒チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ["XamDataChart"]
 _language: ja
 ---

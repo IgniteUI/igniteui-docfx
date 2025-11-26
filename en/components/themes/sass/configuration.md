@@ -36,21 +36,24 @@ $my-scrollbar-theme: scrollbar-theme($sb-size: 16px, $sb-thumb-bg-color: pink, $
 <div class="divider"></div>
 
 ## Additional Resources
+
 Learn the concepts:
 
-* [Palettes](./palettes.md)
-* [Typography](./typography.md)
-* [Elevations](./elevations.md)
-* [Schemas](./schemas.md)
-* [Animations](./animations.md)
+- [Palettes](./palettes.md)
+- [Typography](./typography.md)
+- [Elevations](./elevations.md)
+- [Schemas](./schemas.md)
+- [Animations](./animations.md)
 
 Learn how to create application-wide themes:
-* [Application Themes](./global-themes.md)
+
+- [Application Themes](./global-themes.md)
 
 Learn how to create component-specific themes:
-* [Component Themes](./component-themes.md)
+
+- [Component Themes](./component-themes.md)
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

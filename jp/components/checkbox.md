@@ -1,7 +1,8 @@
 ---
-title: Angular Checkbox コンポーネント
+title: Angular Checkbox コンポーネント - MITライセンス
 _description: Ignite UI for Angular Checkbox コンポーネントは、特定の条件のバイナリ選択を許可する選択コントロールです。今すぐお試しください。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Checkbox コンポーネント, Angular Checkbox コントロール
+_license: MIT
 _language: ja
 ---
 
@@ -227,7 +228,97 @@ public toggleAll() {
 
 ## スタイル設定
 
-チェックボックスのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
+### Checkbox テーマのプロパティ マップ
+
+プライマリ プロパティを変更すると、関連するすべての依存プロパティが自動的に更新されます。
+
+<table class="collapsible-table">
+    <thead>
+        <tr>
+            <th>プライマリ プロパティ</th>
+            <th>依存プロパティ</th>
+            <th>説明</th>
+        </tr>
+    </thead>
+    <tbody class="group">
+        <tr class="primary">
+            <td>
+                <details><summary><strong>$empty-color</strong></summary>
+                </details>
+            </td>
+            <td>$empty-color-hover</td>
+            <td>ホバー時の未チェック境界線の色</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$focus-outline-color (indigo バリエーションのみ)</td>
+            <td>Indigo バリエーションのフォーカス アウトライン色</td>
+        </tr>
+    </tbody>
+    <tbody class="group">
+        <tr class="primary">
+            <td>
+                <details><summary><strong>$fill-color</strong></summary>
+                </details>
+            </td>
+            <td>$fill-color-hover</td>
+            <td>ホバー時にチェックされた境界線と塗りつぶしの色</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$tick-color</td>
+            <td>チェックされたマークの色</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$focus-border-color</td>
+            <td>フォーカス境界線の色</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$disabled-indeterminate-color</td>
+            <td>不確定な状態時の無効な境界線と塗りつぶし色</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$focus-outline-color (bootstrap バリエーションのみ)</td>
+            <td>Bootstrap バリエーションのフォーカス アウトライン色</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$focus-outline-color-focused (indigo バリエーションのみ)</td>
+            <td>Indigo バリエーションのフォーカス状態のフォーカス アウトライン色</td>
+        </tr>
+    </tbody>
+    <tbody class="group">
+        <tr class="primary">
+            <td>
+                <details><summary><strong>$error-color</strong></summary>
+                </details>
+            </td>
+            <td>$error-color-hover</td>
+            <td>ホバー時に無効な状態の境界線と塗りつぶしの色</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$focus-outline-color-error</td>
+            <td>エラー状態のフォーカス アウトライン色</td>
+        </tr>
+    </tbody>
+    <tbody class="group">
+        <tr class="primary">
+            <td>
+                <strong>$label-color</strong>
+            </td>
+            <td>$label-color-hover</td>
+            <td>ホバー時のラベルのテキストの色</td>
+        </tr>
+    </tbody>
+</table>
+
+> **注:** 実際の結果はテーマのバリエーションによって異なる場合があります。
+
+チェックボックスのスタイル設定を始めるには、すべてのテーマ関数とコンポーネント mixins が存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -236,25 +327,24 @@ public toggleAll() {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-次に、[`checkbox-theme`]({environment:sassApiUrl}/themes#function-checkbox-theme) を拡張して新しいテーマを作成し、チェックボックス要素をスタイリングします。`$empty-color` と `$fill-color` を指定することで、必要な状態色やコントラストのある前景色が自動的に計算されます。必要に応じて、他のパラメーターをカスタム値でオーバーライドすることもできます。
+次に、[`checkbox-theme`]({environment:sassApiUrl}/themes#function-checkbox-theme) を拡張して新しいテーマを作成し、チェックボックス要素をスタイリングします。`$empty-color` と `$fill-color` を指定することで、必要な状態色やコントラストのある前景の色が自動的に計算されます。必要に応じて、他のパラメーターをカスタム値でオーバーライドすることもできます。
 
 ```scss
 // in styles.scss
 $custom-checkbox-theme: checkbox-theme(
-  $empty-color: #ecaa53,
-  $fill-color: #ecaa53,
-  $border-radius: 5px
+    $empty-color: #ecaa53,
+    $fill-color: #ecaa53,
+    $border-radius: 5px
 );
 ```
 
-最後にコンポーネントのテーマをアプリケーションに**含めます**。
+最後に、カスタム テーマをアプリケーションに**含めます**。
 
 ```scss
 @include css-vars($custom-checkbox-theme);
 ```
 
-### デモ
-
+以下のサンプルでは、カスタマイズした CSS 変数を使用したチェックボックス コンポーネントが、[`SAP UI5`](https://ui5.sap.com/#/entity/sap.m.CheckBox/sample/sap.m.sample.CheckBox) デザイン システムのチェックボックスに視覚的に似たデザインを実現している様子を確認できます。
 
 <code-view style="height: 100px"
            no-theming
@@ -262,10 +352,50 @@ $custom-checkbox-theme: checkbox-theme(
            iframe-src="{environment:demosBaseUrl}/data-entries/checkbox-styling/" >
 </code-view>
 
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して `checkbox` をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-checkbox`、`dark-checkbox`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[checkbox-theme]({environment:sassApiUrl}/themes#function-checkbox-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-checkbox
+class="!light-checkbox
+![--empty-color:#7B9E89]
+![--fill-color:#7B9E89]"
+[checked]="true">
+    Styled checkbox
+</igx-checkbox>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、checkbox は次のようになります:
+
+<div class="sample-container loading" style="height:50px">
+    <iframe id="checkbox-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/data-entries/checkbox-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 <div class="divider--half"></div>
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
 * [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
@@ -273,9 +403,11 @@ $custom-checkbox-theme: checkbox-theme(
 * [LabelPosition]({environment:angularApiUrl}/enums/labelposition.html)
 
 ## テーマの依存関係
+
 * [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-riple-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。

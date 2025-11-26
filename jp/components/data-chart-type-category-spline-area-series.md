@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | スプライン エリア チャート | データ バインディング | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用してスプライン エリア チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
 _keywords: Angular charts, data chart, spine area chart, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, スプライン エリア チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart']
 _language: ja
 ---

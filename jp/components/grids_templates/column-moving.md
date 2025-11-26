@@ -3,6 +3,7 @@
 title: Angular Data Grid での列の並べ替えと移動 - インフラジスティックス
 _description: カスタム列順序を設定し、マウスのドラッグ/ドロップまたはタッチジェスチャ、または Angular Column Moving API を使用して列の並べ替えを有効にします。Ignite UI for Angular をお試しください。
 _keywords: column order, igniteui for angular, infragistics, 列順序
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular Tree Grid での列の並べ替えと移動 - インフラジスティックス
 _description: カスタム列順序を設定し、マウスのドラッグ/ドロップまたはタッチジェスチャ、または Angular Column Moving API を使用して列の並べ替えを有効にします。Ignite UI for Angular をお試しください。
 _keywords: column order, igniteui for angular, infragistics, 列順序, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -19,6 +21,7 @@ _language: ja
 title: Angular Hierarchical Grid での列の並べ替えと移動 - インフラジスティックス
 _description: カスタム列順序を設定し、マウスのドラッグ/ドロップまたはタッチジェスチャ、または Angular Column Moving API を使用して列の並べ替えを有効にします。Ignite UI for Angular をお試しください。
 _keywords: column order, igniteui for angular, infragistics, 列順序, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }

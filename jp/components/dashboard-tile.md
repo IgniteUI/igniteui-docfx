@@ -2,6 +2,7 @@
 title: Angular Dashboard Tile コンポーネント | Ignite UI for Angular
 _description: Angular Dashboard Tile コンポーネントを簡単に使い始める方法をご覧ください。
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Dashboard components, Angular Dashboard Tile controls, UI コントロール, Angular ウィジェット, Web ウィジェット, UI ウィジェット, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Dashboard コンポーネント, Angular Dashboard Tile コントロール
+_license: commercial
 mentionedTypes: ["Toolbar", "CategoryChart", "XamDataChart", "XamRadialGauge", "XamLinearGauge", "XamGeographicMap"]
 _language: ja
 ---

@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | 散布バブル チャート | データ バインディング | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用して散布バブル チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
 _keywords: Angular charts, data chart, scatter bubble charts, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 散布図バブル チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart','BubbleSeries']
 _language: ja
 ---

@@ -2,6 +2,7 @@
 title: Angular スプレッドシート | データ検証 | インフラジスティックス
 _description: インフラジスティックスの Angular スプレッドシート コントロールを使用して、組み込みのデータ検証を設定します。Ignite UI for Angular スプレッドシートのサンプルを是非お試しください!
 _keywords: Excel Spreadsheet, data validation, Ignite UI for Angular, Infragistics, Excel スプレッドシート、データ検証, インフラジスティックス
+_license: commercial
 _language: ja
 mentionedTypes: ['Spreadsheet']
 ---

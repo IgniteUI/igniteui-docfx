@@ -2,6 +2,7 @@
 title: Angular データ チャート | データ可視化ツール | 散布スプラインライン チャート | データ バインディング | インフラジスティックス
 _description: インフラジスティックスの Angular チャート コントロールを使用して散布スプライン チャートを作成します。Ignite UI for Angular グラフ タイプについて説明します。
 _keywords: Angular charts, data chart, scatter spline charts, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 散布スプライン チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamDataChart', 'ScatterSplineSeries']
 _language: ja
 ---

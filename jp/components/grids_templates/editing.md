@@ -4,6 +4,7 @@ title: Angular Grid の編集 - Ignite UI for Angular
 _description: 強力なパブリック API を使用し、レコードの作成、更新、削除などのデータ操作を簡単に実行できます。Angular データ グリッド編集オプションをお試しください。
 _keywords: データ操作, ignite ui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
+_license: commercial
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -12,6 +13,7 @@ title: Angular Tree Grid の編集 - Ignite UI for Angular
 _description: 強力なパブリック API を使用し、レコードの作成、更新、削除などのデータ操作を簡単に実行できます。Angular データ グリッド編集オプションをお試しください。
 _keywords: データ操作, ignite ui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
+_license: commercial
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -20,6 +22,7 @@ title: Angular Hierarchical Grid の編集 - Ignite UI for Angular
 _description: 強力なパブリック API を使用し、レコードの作成、更新、削除などのデータ操作を簡単に実行できます。Angular データ グリッド編集オプションをお試しください。
 _keywords: データ操作, ignite ui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
+_license: commercial
 ---
 }
 

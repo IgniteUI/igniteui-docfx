@@ -2,6 +2,7 @@
 title: Angular チャートおよびグラフ | データ可視化ツール | ツールチップ テンプレート | インフラジスティックス
 _description: インフラジスティックスの Angular チャートのツールチップを使用して、重要なデータを表示します。インフラジスティックスの Ignite UI for Angular グラフ チュートリアルを是非お試しください!
 _keywords: Angular charts, category chart, tooltip template, Ignite UI for Angular, Infragistics, Angular チャート, カテゴリ チャート, ツールチップ テンプレート, インフラジスティックス
+_license: commercial
 mentionedTypes: ['CategoryChart']
 _language: ja
 ---

@@ -1,7 +1,8 @@
 ---
-title: ComboBox リモート バインディング
+title: ComboBox リモート バインディング | MITライセンス
 _description: igx-combo は、コンボをリモートサービスにバインドしてデータをオンデマンドで取得する API を公開します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Combo コンポーネント, Angular Combo コントロール, Angular Combo リモート バインディング
+_license: MIT
 _language: ja
 ---
 

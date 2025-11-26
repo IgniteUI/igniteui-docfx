@@ -243,9 +243,9 @@ Ignite UI for Angular はコンポーネントのデザインを[マテリアル
 
 <div>
 <img class="b-lazy responsive-img" style="-webkit-box-shadow: 8px 9px 9px 5px #ccc; -moz-box-shadow: 8px 9px 9px 5px #ccc; box-shadow: 8px 9px 9px 5px #ccc;" 
-    src="../../images/general/ThemeingWidget1.gif" 
-    data-src="../../images/general/ThemeingWidget1.gif" 
-    data-srcset="../../images/general/ThemeingWidget1.gif 480w, ../../images/general/ThemeingWidget1.gif 768w, ../../images/general/ThemeingWidget1.gif 1100w" 
+    src="../../images/general/ThemingWidget1.gif" 
+    data-src="../../images/general/ThemingWidget1.gif" 
+    data-srcset="../../images/general/ThemingWidget1.gif 480w, ../../images/general/ThemingWidget1.gif 768w, ../../images/general/ThemingWidget1.gif 1100w" 
     alt="テーマ ウィジェットの例"
     title="テーマ ウィジェットは、Ignite UI のパワフルなテーマ フレームワークを使用しています。">
 </div>

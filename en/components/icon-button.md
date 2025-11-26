@@ -1,12 +1,13 @@
 ---
-title: Angular Icon Button Component – Ignite UI for Angular
+title: Angular Icon Button Component – Ignite UI for Angular - MIT license 
 _description: Enhance standard icons with button functionalities. Try it now.
 _keywords: Angular Icon Button component, Angular Icon Button control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Angular UI Components,
+_license: MIT
 ---
 
 # Angular Icon Button Overview
 
-The Ignite UI for Angular Icon Button directive is intended to turn any icon into a fully functional button. The `igxIconButton` comes in three types - flat, outlined, and contained which is the default one. 
+The Ignite UI for Angular Icon Button directive is intended to turn any icon into a fully functional button. The `igxIconButton` comes in three types - flat, outlined, and contained which is the default one.
 
 ## Angular Icon Button Example
 
@@ -25,7 +26,7 @@ To get started with the Ignite UI for Angular Icon Button directive, first you n
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxIconButtonDirective` as a standalone dependency:
 
@@ -134,9 +135,9 @@ public ngOnInit() {
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/svg-icon-button">
 </iframe></div>
 
-### Size 
+### Size
 
-Users can choose one of the three predefined `igxIconButton` sizes by using the `--ig-size` custom CSS property. By default, the size of the component is set medium. 
+Users can choose one of the three predefined `igxIconButton` sizes by using the `--ig-size` custom CSS property. By default, the size of the component is set medium.
 
 <code-view style="height: 70px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -145,9 +146,254 @@ Users can choose one of the three predefined `igxIconButton` sizes by using the 
 <div class="divider--half"></div>
 
 
-As you can see from the sample above, we can also use the `igxIconButton` directive to turn elements like `span` and `div` into Ignite UI for Angular styled icon buttons. 
+As you can see from the sample above, we can also use the `igxIconButton` directive to turn elements like `span` and `div` into Ignite UI for Angular styled icon buttons.
 
 ## Icon Button Styling
+
+### Icon Button Theme Property Map
+
+When you modify a primary property, all related dependent properties are updated automatically:
+
+<div class="theme-switcher-wrapper">
+ <input type="radio" name="theme" id="material" checked>
+ <label for="material" class="switch-label">Material</label>
+ <input type="radio" name="theme" id="fluent">
+ <label for="fluent" class="switch-label">Fluent</label>
+ <input type="radio" name="theme" id="bootstrap">
+ <label for="bootstrap" class="switch-label">Bootstrap</label>
+ <input type="radio" name="theme" id="indigo">
+ <label for="indigo" class="switch-label">Indigo</label>
+ <div class="tables">
+  <div class="theme-table material">
+   <h4>Flat Icon Button</h4>
+   <table class="collapsible-table">
+    <thead>
+     <tr><th>Primary Property</th><th>Dependent Property</th><th>Description</th></tr>
+    </thead>
+    <tbody class="group">
+     <tr class="primary"><td><details><summary><strong>$foreground</strong></summary></details></td><td>$hover-foreground</td><td>Hovered icon color</td></tr>
+     <tr class="dependent"><td></td><td>$focus-foreground</td><td>Focused icon color</td></tr>
+     <tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>Focus + hover icon color</td></tr>
+     <tr class="dependent"><td></td><td>$active-foreground</td><td>Active icon color</td></tr>
+     <tr class="dependent"><td></td><td>$hover-background</td><td>Background on hover</td></tr>
+     <tr class="dependent"><td></td><td>$focus-background</td><td>Background on focus</td></tr>
+     <tr class="dependent"><td></td><td>$focus-hover-background</td><td>Background on focus + hover</td></tr>
+     <tr class="dependent"><td></td><td>$active-background</td><td>Background on active</td></tr>
+    </tbody>
+   </table>
+   <h4>Contained Icon Button</h4>
+   <table class="collapsible-table">
+    <thead>
+     <tr><th>Primary Property</th><th>Dependent Property</th><th>Description</th></tr>
+    </thead>
+    <tbody class="group">
+     <tr class="primary"><td><details><summary><strong>$background</strong></summary></details></td><td>$foreground</td><td>Icon color</td></tr>
+     <tr class="dependent"><td></td><td>$hover-background</td><td>Background on hover</td></tr>
+     <tr class="dependent"><td></td><td>$focus-background</td><td>Background on focus</td></tr>
+     <tr class="dependent"><td></td><td>$focus-foreground</td><td>Focused icon color</td></tr>
+     <tr class="dependent"><td></td><td>$focus-hover-background</td><td>Background on focus + hover</td></tr>
+     <tr class="dependent"><td></td><td>$active-background</td><td>Background on active</td></tr>
+     <tr class="dependent"><td></td><td>$hover-foreground</td><td>Hovered icon color</td></tr>
+     <tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>Focus + hover icon color</td></tr>
+     <tr class="dependent"><td></td><td>$active-foreground</td><td>Active icon color</td></tr>
+     <tr class="dependent"><td></td><td>$shadow-color</td><td>Shadow on focus</td></tr>
+     <tr class="dependent"><td></td><td>$focus-border-color</td><td>Focus border color</td></tr>
+     <tr class="dependent"><td></td><td>$disabled-background</td><td>Disabled background</td></tr>
+     <tr class="dependent"><td></td><td>$disabled-foreground</td><td>Disabled icon color</td></tr>
+    </tbody>
+   </table>
+   <h4>Outlined Icon Button</h4>
+   <table class="collapsible-table">
+    <thead>
+     <tr><th>Primary Property</th><th>Dependent Property</th><th>Description</th></tr>
+    </thead>
+    <tbody class="group">
+     <tr class="primary"><td><details><summary><strong>$foreground</strong></summary></details></td><td>$hover-foreground</td><td>Hovered icon color</td></tr>
+     <tr class="dependent"><td></td><td>$focus-foreground</td><td>Focused icon color</td></tr>
+     <tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>Focus + hover icon color</td></tr>
+     <tr class="dependent"><td></td><td>$active-foreground</td><td>Active icon color</td></tr>
+     <tr class="dependent"><td></td><td>$hover-background</td><td>Background on hover</td></tr>
+     <tr class="dependent"><td></td><td>$focus-background</td><td>Background on focus</td></tr>
+     <tr class="dependent"><td></td><td>$focus-hover-background</td><td>Background on focus + hover</td></tr>
+     <tr class="dependent"><td></td><td>$active-background</td><td>Background on active</td></tr>
+     <tr class="dependent"><td></td><td>$border-color</td><td>Default border color</td></tr>
+     <tr class="dependent"><td></td><td>$focus-border-color</td><td>Focus border color</td></tr>
+    </tbody>
+   </table>
+  </div>
+        <div class="theme-table fluent">
+   <h4>Flat Icon Button</h4>
+   <table class="collapsible-table">
+   <thead>
+   <tr><th>Primary Property</th><th>Dependent Property</th><th>Description</th></tr>
+   </thead>
+   <tbody class="group">
+   <tr class="primary"><td><details><summary><strong>$foreground</strong></summary></details></td><td>$hover-foreground</td><td>Icon color on hover</td></tr>
+   <tr class="dependent"><td></td><td>$focus-foreground</td><td>Icon color when focused</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>Icon color when focused and hovered</td></tr>
+   <tr class="dependent"><td></td><td>$active-foreground</td><td>Icon color when active</td></tr>
+   <tr class="dependent"><td></td><td>$hover-background</td><td>Background color on hover</td></tr>
+   <tr class="dependent"><td></td><td>$focus-background</td><td>Background color on focus</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-background</td><td>Background color on focus and hover</td></tr>
+   <tr class="dependent"><td></td><td>$active-background</td><td>Background color when active</td></tr>
+   </tbody>
+   </table>
+   <h4>Contained Icon Button</h4>
+   <table class="collapsible-table">
+   <thead>
+   <tr><th>Primary Property</th><th>Dependent Property</th><th>Description</th></tr>
+   </thead>
+   <tbody class="group">
+   <tr class="primary"><td><details><summary><strong>$background</strong></summary></details></td><td>$foreground</td><td>Icon color</td></tr>
+   <tr class="dependent"><td></td><td>$hover-background</td><td>Background color on hover</td></tr>
+   <tr class="dependent"><td></td><td>$focus-background</td><td>Background color on focus</td></tr>
+   <tr class="dependent"><td></td><td>$focus-foreground</td><td>Icon color when focused</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-background</td><td>Background color on focus and hover</td></tr>
+   <tr class="dependent"><td></td><td>$active-background</td><td>Background color when active</td></tr>
+   <tr class="dependent"><td></td><td>$hover-foreground</td><td>Icon color on hover</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>Icon color when focused and hovered</td></tr>
+   <tr class="dependent"><td></td><td>$active-foreground</td><td>Icon color when active</td></tr>
+   <tr class="dependent"><td></td><td>$shadow-color</td><td>Shadow color on focus</td></tr>
+   <tr class="dependent"><td></td><td>$focus-border-color</td><td>Border color on focus</td></tr>
+   <tr class="dependent"><td></td><td>$disabled-background</td><td>Background color when disabled</td></tr>
+   <tr class="dependent"><td></td><td>$disabled-foreground</td><td>Icon color when disabled</td></tr>
+   </tbody>
+   </table>
+   <h4>Outlined Icon Button</h4>
+   <table class="collapsible-table">
+   <thead>
+   <tr><th>Primary Property</th><th>Dependent Property</th><th>Description</th></tr>
+   </thead>
+   <tbody class="group">
+   <tr class="primary"><td><details><summary><strong>$foreground</strong></summary></details></td><td>$hover-foreground</td><td>Icon color on hover</td></tr>
+   <tr class="dependent"><td></td><td>$focus-foreground</td><td>Icon color when focused</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>Icon color when focused and hovered</td></tr>
+   <tr class="dependent"><td></td><td>$active-foreground</td><td>Icon color when active</td></tr>
+   <tr class="dependent"><td></td><td>$hover-background</td><td>Background color on hover</td></tr>
+   <tr class="dependent"><td></td><td>$focus-background</td><td>Background color on focus</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-background</td><td>Background color on focus and hover</td></tr>
+   <tr class="dependent"><td></td><td>$active-background</td><td>Background color when active</td></tr>
+   <tr class="dependent"><td></td><td>$border-color</td><td>Border color</td></tr>
+   <tr class="dependent"><td></td><td>$focus-border-color</td><td>Border color on focus</td></tr>
+   </tbody>
+   </table>
+  </div>
+        <div class="theme-table bootstrap">
+   <h4>Flat Icon Button</h4>
+   <table class="collapsible-table">
+   <thead>
+   <tr><th>Primary Property</th><th>Dependent Property</th><th>Description</th></tr>
+   </thead>
+   <tbody class="group">
+   <tr class="primary"><td><details><summary><strong>$foreground</strong></summary></details></td><td>$hover-foreground</td><td>Icon color when hovered</td></tr>
+   <tr class="dependent"><td></td><td>$focus-foreground</td><td>Icon color when focused</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>Icon color when focused and hovered</td></tr>
+   <tr class="dependent"><td></td><td>$active-foreground</td><td>Icon color when active</td></tr>
+            <tr class="dependent"><td></td><td>$disabled-foreground</td><td>Icon color when disabled</td></tr>
+            <tr class="dependent"><td></td><td>$shadow-color</td><td>The shadow color of the icon button</td></tr>
+   </tbody>
+   </table>
+   <h4>Contained Icon Button</h4>
+   <table class="collapsible-table">
+   <thead>
+   <tr><th>Primary Property</th><th>Dependent Property</th><th>Description</th></tr>
+   </thead>
+   <tbody class="group">
+   <tr class="primary"><td><details><summary><strong>$background</strong></summary></details></td><td>$foreground</td><td>Icon color</td></tr>
+   <tr class="dependent"><td></td><td>$hover-background</td><td>Background color on hover</td></tr>
+   <tr class="dependent"><td></td><td>$focus-background</td><td>Background color on focus</td></tr>
+   <tr class="dependent"><td></td><td>$focus-foreground</td><td>Icon color when focused</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-background</td><td>Background color on focus and hover</td></tr>
+   <tr class="dependent"><td></td><td>$active-background</td><td>Background color when active</td></tr>
+   <tr class="dependent"><td></td><td>$hover-foreground</td><td>Icon color on hover</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>Icon color when focused and hovered</td></tr>
+   <tr class="dependent"><td></td><td>$active-foreground</td><td>Icon color when active</td></tr>
+   <tr class="dependent"><td></td><td>$shadow-color</td><td>Shadow color</td></tr>
+   <tr class="dependent"><td></td><td>$focus-border-color</td><td>Border color on focus</td></tr>
+   <tr class="dependent"><td></td><td>$disabled-background</td><td>Background color when disabled</td></tr>
+   <tr class="dependent"><td></td><td>$disabled-foreground</td><td>Icon color when disabled</td></tr>
+   </tbody>
+   </table>
+   <h4>Outlined Icon Button</h4>
+   <table class="collapsible-table">
+   <thead>
+   <tr><th>Primary Property</th><th>Dependent Property</th><th>Description</th></tr>
+   </thead>
+   <tbody class="group">
+   <tr class="primary"><td><details><summary><strong>$foreground</strong></summary></details></td><td>$hover-foreground</td><td>Icon color on hover</td></tr>
+   <tr class="dependent"><td></td><td>$focus-foreground</td><td>Icon color when focused</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>Icon color when focused and hovered</td></tr>
+   <tr class="dependent"><td></td><td>$active-foreground</td><td>Icon color when active</td></tr>
+   <tr class="dependent"><td></td><td>$hover-background</td><td>Background color on hover</td></tr>
+   <tr class="dependent"><td></td><td>$focus-background</td><td>Background color on focus</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-background</td><td>Background color on focus and hover</td></tr>
+   <tr class="dependent"><td></td><td>$active-background</td><td>Background color when active</td></tr>
+   <tr class="dependent"><td></td><td>$border-color</td><td>Border color</td></tr>
+   <tr class="dependent"><td></td><td>$focus-border-color</td><td>Border color on focus</td></tr>
+            <tr class="dependent"><td></td><td>$shadow-color</td><td>Shadow color</td></tr>
+            <tr class="dependent"><td></td><td>$disabled-foreground</td><td>Icon color when disabled</td></tr>
+            <tr class="dependent"><td></td><td>$disabled-border-color</td><td>The border of the icon button when disabled</td></tr>
+   </tbody>
+   </table>
+  </div>
+        <div class="theme-table indigo">
+   <h4>Flat Icon Button</h4>
+   <table class="collapsible-table">
+   <thead>
+   <tr><th>Primary Property</th><th>Dependent Property</th><th>Description</th></tr>
+   </thead>
+   <tbody class="group">
+   <tr class="primary"><td><details><summary><strong>$foreground</strong></summary></details></td><td>$hover-foreground</td><td>Icon color on hover</td></tr>
+   <tr class="dependent"><td></td><td>$focus-foreground</td><td>Icon color when focused</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>Icon color when focused and hovered</td></tr>
+   <tr class="dependent"><td></td><td>$active-foreground</td><td>Icon color when active</td></tr>
+            <tr class="dependent"><td></td><td>$disabled-foreground</td><td>Icon color when disabled</td></tr>
+   <tr class="dependent"><td></td><td>$hover-background</td><td>Background color on hover</td></tr>
+   <tr class="dependent"><td></td><td>$focus-background</td><td>Background color on focus</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-background</td><td>Background color on focus and hover</td></tr>
+   <tr class="dependent"><td></td><td>$active-background</td><td>Background color when active</td></tr>
+            <tr class="dependent"><td></td><td>$focus-border-color</td><td>Border color on focus</td></tr>
+   </tbody>
+   </table>
+   <h4>Contained Icon Button</h4>
+   <table class="collapsible-table">
+   <thead>
+   <tr><th>Primary Property</th><th>Dependent Property</th><th>Description</th></tr>
+   </thead>
+   <tbody class="group">
+   <tr class="primary"><td><details><summary><strong>$background</strong></summary></details></td><td>$foreground</td><td>Icon color</td></tr>
+   <tr class="dependent"><td></td><td>$hover-background</td><td>Background color on hover</td></tr>
+   <tr class="dependent"><td></td><td>$focus-background</td><td>Background color on focus</td></tr>
+   <tr class="dependent"><td></td><td>$focus-foreground</td><td>Icon color when focused</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-background</td><td>Background color on focus and hover</td></tr>
+   <tr class="dependent"><td></td><td>$active-background</td><td>Background color when active</td></tr>
+   <tr class="dependent"><td></td><td>$hover-foreground</td><td>Icon color on hover</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>Icon color when focused and hovered</td></tr>
+   <tr class="dependent"><td></td><td>$active-foreground</td><td>Icon color when active</td></tr>
+   <tr class="dependent"><td></td><td>$shadow-color</td><td>Shadow color</td></tr>
+   <tr class="dependent"><td></td><td>$focus-border-color</td><td>Border color on focus</td></tr>
+   <tr class="dependent"><td></td><td>$disabled-background</td><td>Background color when disabled</td></tr>
+   <tr class="dependent"><td></td><td>$disabled-foreground</td><td>Icon color when disabled</td></tr>
+   </tbody>
+   </table>
+   <h4>Outlined Icon Button</h4>
+   <table class="collapsible-table">
+   <thead>
+   <tr><th>Primary Property</th><th>Dependent Property</th><th>Description</th></tr>
+   </thead>
+   <tbody class="group">
+   <tr class="primary"><td><details><summary><strong>$foreground</strong></summary></details></td><td>$hover-foreground</td><td>Icon color on hover</td></tr>
+   <tr class="dependent"><td></td><td>$focus-foreground</td><td>Icon color when focused</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>Icon color when focused and hovered</td></tr>
+   <tr class="dependent"><td></td><td>$active-foreground</td><td>Icon color when active</td></tr>
+   <tr class="dependent"><td></td><td>$hover-background</td><td>Background color on hover</td></tr>
+   <tr class="dependent"><td></td><td>$border-color</td><td>Border color</td></tr>
+   <tr class="dependent"><td></td><td>$focus-border-color</td><td>Border color on focus</td></tr>
+   </tbody>
+   </table>
+  </div>
+ </div>
+</div>
 
 Following the simplest approach, we use CSS variables to customize the appearance of the icon button:
 
@@ -189,17 +435,56 @@ This will generate a fully themed `contained icon button`, including appropriate
 </code-view>
 <div class="divider--half"></div>
 
+### Styling with Tailwind
+
+You can style the icon button using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-icon-button`, `dark-icon-button`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [icon-button-theme]({environment:sassApiUrl}/themes#function-icon-button-theme). The syntax is as follows:
+
+```html
+<button igxIconButton class="!light-icon-button ![--icon-color:#FF4E00]">
+  <igx-icon>edit</igx-icon>
+</button>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your icon buttons should look like this:
+
+<div class="sample-container loading" style="height:100px">
+    <iframe id="icon-buttons-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/data-entries/icon-button-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
 ## API References
+
 <div class="divider--half"></div>
 
-* [IgxIconButtonDirective]({environment:angularApiUrl}/classes/igxiconbuttondirective.html)
-* [IgxIconButton Styles]({environment:sassApiUrl}/themes#function-icon-button-theme)
-* [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
+- [IgxIconButtonDirective]({environment:angularApiUrl}/classes/igxiconbuttondirective.html)
+- [IgxIconButton Styles]({environment:sassApiUrl}/themes#function-icon-button-theme)
+- [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
