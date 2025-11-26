@@ -107,11 +107,11 @@ Ignite UI for Angular スプライン チャートは、スプラインのスム
 
 関連するチャートタイプの詳細については、以下のトピックを参照してください。
 
-*   [エリア チャート](area-chart.md)
-*   [折れ線チャート](spline-chart.md)
-*   [極座標チャート](polar-chart.md)
-*   [ラジアル チャート](radial-chart.md)
-*   [積層型チャート](stacked-chart.md)
+- [エリア チャート](area-chart.md)
+- [折れ線チャート](spline-chart.md)
+- [極座標チャート](polar-chart.md)
+- [ラジアル チャート](radial-chart.md)
+- [積層型チャート](stacked-chart.md)
 
 ## API リファレンス
 
