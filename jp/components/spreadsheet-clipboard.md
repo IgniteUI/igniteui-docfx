@@ -2,6 +2,7 @@
 title: Angular スプレッドシート | クリップボード操作 | インフラジスティックス
 _description: インフラジスティックスの Angular スプレッドシート コントロール内でコピー、切り取り、貼り付けなどのクリップボード操作を使用します。Infragistics Ignite UI for Angular スプレッドシートのサンプルを是非お試しください!
 _keywords: Spreadsheet, clipboard operations, Ignite UI for Angular, Infragistics, スプレッドシート, クリップボード操作, インフラジスティックス
+_license: commercial
 mentionedTypes: ["Spreadsheet", "SpreadsheetAction", "SpreadsheetCommandType", "Command"]
 _language: ja
 ---
@@ -54,5 +55,5 @@ public paste(): void {
 
 ## API リファレンス
 
-*   `SpreadsheetAction`
-*   [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html)
+- `SpreadsheetAction`
+- [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html)

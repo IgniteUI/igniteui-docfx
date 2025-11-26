@@ -1,7 +1,8 @@
 ---
-title: Angular Carousel コンポーネント – Ignite UI for Angular
+title: Angular Carousel コンポーネント – Ignite UI for Angular - MITライセンス
 _description: Ignite UI for Angular Carousel コンポーネントを使用すると、スライド、カード、またはページに基づいたインターフェイスのコレクション間を移動できます。今すぐお試しください。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Carousel コンポーネント, Angular Carousel コントロール
+_license: MIT
 _language: ja
 ---
 
@@ -408,10 +409,10 @@ Carousel [アニメーション](carousel.md#angular-carousel-のアニメーシ
           <tr class="primary">
             <td><details><summary><strong>$button-background</strong></summary></details></td>
             <td>$button-hover-background</td>
-            <td>ホバー時のボタンの背景色</td>
+            <td>ホバー時のボタンの背景の色</td>
           </tr>
           <tr class="dependent"><td></td><td>$button-arrow-color</td><td>ボタン矢印の色</td></tr>
-          <tr class="dependent"><td></td><td>$button-disabled-background</td><td>無効状態のボタンの背景色</td></tr>
+          <tr class="dependent"><td></td><td>$button-disabled-background</td><td>無効状態のボタンの背景の色</td></tr>
           <tr class="dependent"><td></td><td>$indicator-focus-color <br> ($indicator-background が指定されていない場合)</td><td>フォーカス時のインジケーターの色</td></tr>
           <tr class="primary">
             <td><strong>$button-hover-background</strong></td>
@@ -472,10 +473,10 @@ Carousel [アニメーション](carousel.md#angular-carousel-のアニメーシ
           <tr class="primary">
             <td><details><summary><strong>$button-background</strong></summary></details></td>
             <td>$button-hover-background</td>
-            <td>ホバー時のボタンの背景色</td>
+            <td>ホバー時のボタンの背景の色</td>
           </tr>
           <tr class="dependent"><td></td><td>$button-arrow-color</td><td>ボタン矢印の色</td></tr>
-          <tr class="dependent"><td></td><td>$button-disabled-background</td><td>無効状態のボタンの背景色</td></tr>
+          <tr class="dependent"><td></td><td>$button-disabled-background</td><td>無効状態のボタンの背景の色</td></tr>
           <tr class="dependent"><td></td><td>$button-focus-border-color</td><td>フォーカス時のボタンの境界線の色</td></tr>
           <tr class="dependent"><td></td><td>$indicator-focus-color <br> ($indicator-background が指定されていない場合)</td><td>フォーカス時のインジケーターの色</td></tr>
           <tr class="primary">
@@ -532,10 +533,10 @@ Carousel [アニメーション](carousel.md#angular-carousel-のアニメーシ
           <tr class="primary">
             <td><details><summary><strong>$button-background</strong></summary></details></td>
             <td>$button-hover-background</td>
-            <td>ホバー時のボタンの背景色</td>
+            <td>ホバー時のボタンの背景の色</td>
           </tr>
           <tr class="dependent"><td></td><td>$button-arrow-color</td><td>ボタン矢印の色</td></tr>
-          <tr class="dependent"><td></td><td>$button-disabled-background</td><td>無効状態のボタンの背景色</td></tr>
+          <tr class="dependent"><td></td><td>$button-disabled-background</td><td>無効状態のボタンの背景の色</td></tr>
           <tr class="dependent"><td></td><td>$button-focus-border-color</td><td>フォーカス時のボタンの境界線の色</td></tr>
           <tr class="dependent"><td></td><td>$indicator-focus-color <br> ($indicator-background が指定されていない場合)</td><td>フォーカス時のインジケーターの色</td></tr>
           <tr class="primary">
@@ -592,11 +593,11 @@ Carousel [アニメーション](carousel.md#angular-carousel-のアニメーシ
           <tr class="primary">
             <td><details><summary><strong>$button-background</strong></summary></details></td>
             <td>$button-hover-background</td>
-            <td>ホバー時のボタンの背景色</td>
+            <td>ホバー時のボタンの背景の色</td>
           </tr>
           <tr class="dependent"><td></td><td>$button-border-color</td><td>ボタンの境界線の色</td></tr>
           <tr class="dependent"><td></td><td>$button-arrow-color</td><td>ボタン矢印の色</td></tr>
-          <tr class="dependent"><td></td><td>$button-disabled-background</td><td>無効状態のボタンの背景色</td></tr>
+          <tr class="dependent"><td></td><td>$button-disabled-background</td><td>無効状態のボタンの背景の色</td></tr>
           <tr class="dependent"><td></td><td>$indicator-active-dot-color <br> ($indicator-background が指定されていない場合)</td><td>アクティブ時のインジケーターの点の色</td></tr>
           <tr class="primary">
             <td><strong>$button-hover-background</strong></td>
@@ -665,7 +666,7 @@ Carousel [アニメーション](carousel.md#angular-carousel-のアニメーシ
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[carousel-theme]({environment:sassApiUrl}/themes#function-carousel-theme) を拡張した新しいテーマを作成し、`$button-background` や `$indicator-background` などのいくつかの基本パラメーターを指定するだけで、テーマは適切な状態別カラーとコントラストのある前景色を自動生成します。外観をさらに調整したい場合は、他の任意のパラメーターをオーバーライドすることも可能です。
+最もシンプルな方法として、[carousel-theme]({environment:sassApiUrl}/themes#function-carousel-theme) を拡張した新しいテーマを作成し、`$button-background` や `$indicator-background` などのいくつかの基本パラメーターを指定するだけで、テーマは適切な状態別カラーとコントラストのある前景の色を自動生成します。外観をさらに調整したい場合は、他の任意のパラメーターをオーバーライドすることも可能です。
 
 ```scss
 $carousel-theme: carousel-theme(
@@ -702,6 +703,7 @@ $carousel-theme: carousel-theme(
 ```
 
 ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
 - `light-*` クラスはライト テーマ用です。
 - `dark-*` クラスはダーク テーマ用です。
 - プレフィックスの後にコンポーネント名を追加します (例: `light-carousel`、`dark-carousel`)。

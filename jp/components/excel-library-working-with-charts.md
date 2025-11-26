@@ -2,6 +2,7 @@
 title: Angular Excel ライブラリ | チャートの使用 | インフラジスティックス
 _description: インフラジスティックスの Angular Excel ライブラリのチャート機能を使用して、ワークシートのセル領域全体のデータ トレンドをチャートで表示します。Ignite UI for Angular Excel データを 70 種類以上のチャート タイプで可視化できます。
 _keywords: Excel library, charts,  Ignite UI for Angular, Infragistics, Excel ライブラリ, チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ["Workbook", "Worksheet"]
 _language: ja
 ---
@@ -41,9 +42,9 @@ chart.setSourceData("A2:M6", true);
 
 ## API リファレンス
 
-*   `AddChart`
-*   `Area`
-*   [`IgxColumnComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_grids_grids.igxcolumncomponent.html)
-*   `Line`
-*   `Pie`
-*   [`WorksheetChart`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetchart.html)
+- `AddChart`
+- `Area`
+- [`IgxColumnComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_grids_grids.igxcolumncomponent.html)
+- `Line`
+- `Pie`
+- [`WorksheetChart`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetchart.html)

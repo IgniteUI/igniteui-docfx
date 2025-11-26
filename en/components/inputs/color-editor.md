@@ -2,6 +2,7 @@
 title: Angular Color Editor | Color Editor | Infragistics
 _description: Color Editor component provides an easily configurable option to change colors for any desirable component or aspect of your application.
 _keywords: Angular Color Editor, Ignite UI for Angular, Infragistics
+_license: commercial
 mentionedTypes: ["ColorEditor"]
 namespace: Infragistics.Controls
 ---
@@ -56,16 +57,16 @@ The simplest way to start using the `ColorEditor` is as follows:
 
 The Color Editor component raises the following events:
 
-*   valueChanged
-*   valueChanging
+- valueChanged
+- valueChanging
 
 <!-- Angular -->
 
 ```ts
 @ViewChild("colorEditor", { static: true } )
 private colorEditor: IgxColorEditorComponent
-public ngAfterViewInit(): void 
-{	
+public ngAfterViewInit(): void
+{
     this.colorEditor.valueChanged.subscribe(this.onValueChanged);
 }
 
@@ -80,9 +81,9 @@ public onValueChanged = (e: any) => {
 
 ## API References
 
-*   `ColorEditor`
+- `ColorEditor`
 
 ## Additional Resources
 
-*   [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-*   [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

@@ -5,11 +5,13 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Palettes
+
 <p class="highlight">The Ignite UI for Angular theming engine provides several powerful functions and mixins for generating and retrieving colors.</p>
 <div class="divider"></div>
 
 ## Overview
-Palettes in the context of Ignite UI for Angular are declared as [Sass Maps](https://sass-lang.com/documentation/values/maps) with the keys of those map being the palette colors (`primary`, `secondary`, `surface`, etc.). Each color is in turn a map itself and has all color variants listed as keys. The values assigned to those color variants are the actual colors used throughout all component themes. All palette maps are generated programatically by the palette function. The function accepts arguments for `primary`, `secondary`, `surface`, `gray`, `info`, `success`, `warn`, and `error` colors. The `primary` color is usually your brand color. It is mostly used to style static elements, such as the `igx-navbar` component. The `secondary` color is the one used on elements that are actionable, such as buttons, switches, sliders, etc.
+
+Palettes in the context of Ignite UI for Angular are declared as [Sass Maps](https://sass-lang.com/documentation/values/maps) with the keys of those map being the palette colors (`primary`, `secondary`, `surface`, etc.). Each color is in turn a map itself and has all color variants listed as keys. The values assigned to those color variants are the actual colors used throughout all component themes. All palette maps are generated programmatically by the palette function. The function accepts arguments for `primary`, `secondary`, `surface`, `gray`, `info`, `success`, `warn`, and `error` colors. The `primary` color is usually your brand color. It is mostly used to style static elements, such as the `igx-navbar` component. The `secondary` color is the one used on elements that are actionable, such as buttons, switches, sliders, etc.
 The `surface` color is the one used for background color of some components, such as cards, menus, date/time pickers, banners sheets, etc.. The only required arguments are the ones for `primary`, `secondary` and `surface` colors. We default the colors for `surface`, `gray`, `info`, `success`, `warn`, and `error` to a predefined set of our choosing.
 
 To get started with your first color palette, create an _scss_ file that would be the base file for your global theme. I will call mine _`_variables.scss`_.
@@ -147,6 +149,7 @@ $handmade-palette: (
 <div class="divider"></div>
 
 ## Predefined Palettes
+
 We provide predefined light and dark palettes, which you can use along with our schemas to create themes for your components:
 
 - Light Palettes
@@ -261,6 +264,7 @@ For instance, if you want to generate CSS classes that apply background color to
     $prefix: 'bg'
 );
 ```
+
 The above code will generate CSS classes for each color variant in the palette. For instance, the `500` color variant of the `primary` palette will be given the following class `.bg-primary-500`;
 
 ```html
@@ -271,7 +275,7 @@ The above code will generate CSS classes for each color variant in the palette. 
 
 ## CSS Variables
 
-When reading about the color palette in the [CSS Variables](../palettes.md) section of the documentation, you would've noticed that all palette colors are included as CSS variables. We do this internally every time we generate a theme using the `theme` mixin. The `theme` calls another mixin in its body - `palette`. It takes a palette and converts the colors in it into CSS variables. 
+When reading about the color palette in the [CSS Variables](../palettes.md) section of the documentation, you would've noticed that all palette colors are included as CSS variables. We do this internally every time we generate a theme using the `theme` mixin. The `theme` calls another mixin in its body - `palette`. It takes a palette and converts the colors in it into CSS variables.
 
 You use this mixin when you want your custom palette colors to be included as CSS variables.
 
@@ -288,15 +292,18 @@ $my-palette: palette(
 ```
 
 ## API Reference
-* [Palettes]({environment:sassApiUrl}/palettes#function-palette)
-* [Getting Palette Colors]({environment:sassApiUrl}/palettes#function-color)
-* [Getting Contrast Colors]({environment:sassApiUrl}/palettes#function-contrast-color)
-* [Generating Color Classes]({environment:sassApiUrl}/utilities#mixin-color-classes)
-* [Schemas](./schemas.md)
+
+- [Palettes]({environment:sassApiUrl}/palettes#function-palette)
+- [Getting Palette Colors]({environment:sassApiUrl}/palettes#function-color)
+- [Getting Contrast Colors]({environment:sassApiUrl}/palettes#function-contrast-color)
+- [Generating Color Classes]({environment:sassApiUrl}/utilities#mixin-color-classes)
+- [Schemas](./schemas.md)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

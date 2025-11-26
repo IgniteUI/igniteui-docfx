@@ -68,4 +68,4 @@ Since all individual components use the `$light-material-palette` by default, if
 
 ## API Overview
 
-* [Global Theme]({environment:sassApiUrl}/themes#mixin-theme)
+- [Global Theme]({environment:sassApiUrl}/themes#mixin-theme)

@@ -66,7 +66,7 @@ Ignite UI for Angular [keyframes]({environment:sassApiUrl}/animations#mixin-keyf
 
 ### タイミング関数
 
-キーフレーム ミックスインで使用するタイミング関数のリストが含まれています。タイミング関数の全てのリストの詳細は、[ドキュメント]({environment:sassApiUrl})をご覧ください。
+キーフレーム ミックスインで使用するタイミング関数のリストが含まれています。タイミング関数の全てのリストの詳細は、[ドキュメント]({environment:sassApiUrl}/animations)をご覧ください。
 
 <div class="sample-container loading" style="height: 270px">
     <iframe id="animations-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/theming/animations-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>

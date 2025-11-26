@@ -1,7 +1,8 @@
 ---
-title: オーバーレイ スタイリング
+title: オーバーレイ スタイリング - MITライセンス
 _description: IgniteUI for Angular Overlay Service は、表示される要素にスタイルを適切に適用およびスコープする方法についての詳細なチュートリアル。
 _keywords: Ignite UI for Angular, Angular Overlay Service, Angular UI controls, Overlay Service, View Encapsulation Example, Sass scoped styles in Angular, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
+_license: MIT
 _language: ja
 ---
 

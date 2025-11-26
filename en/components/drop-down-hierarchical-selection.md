@@ -1,7 +1,8 @@
 ---
-title: Multi-select Hierarchical Drop Down- Ignite UI for Angular
+title: Multi-select Hierarchical Drop Down- Ignite UI for Angular - MIT license 
 _description: Learn how to create a multi-select tree-style hierarchical drop-down with Ignite UI.
 _keywords: Multi-select drop-down, hierarchical selection, ignite ui for angular, infragistics
+_license: MIT
 ---
 
 # Multi-select Hierarchical Drop Down
@@ -25,13 +26,14 @@ To remove the chip from the DOM and deselect the item from the tree/grid, you ha
 Additionally, a way to prevent the drop-down from closing on chip deletion would be to check the event's composite path for an `igx-chip` node and then cancel the event in the `IgxDropDownComponent`'s [`closing`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#closing) event handler.
 
 ### Demo
-<code-view style="height: 560px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+
+<code-view style="height: 560px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-tree-hierarchical-selection/" >
 </code-view>
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-tree-grid-hierarchical-selection/">
 </code-view>
 
@@ -40,23 +42,24 @@ Additionally, a way to prevent the drop-down from closing on chip deletion would
 
 ## API References
 
-* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
-* [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
-* [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
-* [IgxTreeComponent]({environment:angularApiUrl}/classes/igxtreecomponent.html)
-* [IgxTreeNodeComponent]({environment:angularApiUrl}/classes/igxtreenodecomponent.html)
-* [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
+- [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
+- [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
+- [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
+- [IgxTreeComponent]({environment:angularApiUrl}/classes/igxtreecomponent.html)
+- [IgxTreeNodeComponent]({environment:angularApiUrl}/classes/igxtreenodecomponent.html)
+- [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
 
 ## Additional Resources
-<div class="divider--half"></div>    
-
-* [Drop Down overview](drop-down.md)
-* [Chip overview](chip.md)
-* [Tree overview](tree.md)
-* [Tree Grid overview](treegrid/tree-grid.md)
 
 <div class="divider--half"></div>
-Our community is active and always welcoming to new ideas.    
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)    
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)     
+- [Drop Down overview](drop-down.md)
+- [Chip overview](chip.md)
+- [Tree overview](tree.md)
+- [Tree Grid overview](treegrid/tree-grid.md)
+
+<div class="divider--half"></div>
+Our community is active and always welcoming to new ideas.
+
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

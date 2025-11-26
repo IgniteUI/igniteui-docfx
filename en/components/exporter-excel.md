@@ -2,6 +2,7 @@
 title: Export to Excel Component - Native Angular | Ignite UI for Angular
 _description: Users can export their data for editing or offline presentation can do so in Excel format with the Export to Excel Ignite UI for Angular component.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Controls, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Data Grid, Angular Grid Control, Angular Grid Component, Excel Export, Angular Excel Component, Angular Export Excel
+_license: commercial
 ---
 
 # Excel Exporter
@@ -15,7 +16,7 @@ The Ignite UI for Angular Excel Exporter service can export data in Microsoft® 
 ## Angular Excel Exporter Example
 
 
-<code-view style="height: 100px;" 
+<code-view style="height: 100px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz"
            iframe-src="{environment:demosBaseUrl}/services/export-excel/" alt="Angular Excel Exporter Example">
@@ -100,16 +101,18 @@ this.excelExportService.export(this.igxGrid1, new IgxExcelExporterOptions('Expor
 
 The Excel Exporter service has a few more APIs to explore, which are listed below.
 
-* [`IgxExcelExporterService API`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)
-* [`IgxExcelExporterOptions API`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html)
+- [`IgxExcelExporterService API`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)
+- [`IgxExcelExporterOptions API`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html)
 
 Grids Excel Exporters:
-* [`IgxGrid Excel Exporters`](grid/export-excel.md)
-* [`IgxTreeGrid Excel Exporters`](treegrid/export-excel.md)
+
+- [`IgxGrid Excel Exporters`](grid/export-excel.md)
+- [`IgxTreeGrid Excel Exporters`](treegrid/export-excel.md)
 
 Additional components that were used:
-* [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
+
+- [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+- [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
 <div class="divider"></div>
 
@@ -118,5 +121,5 @@ Additional components that were used:
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

@@ -2,6 +2,7 @@
 title: Angular チャート マーカー | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular チャート マーカー
 _keywords: Angular Charts, Markers, Infragistics, Angular チャート, マーカー, インフラジスティックス
+_license: commercial
 mentionedTypes: ["CategoryChart", "CategoryChartType", "MarkerType"]
 namespace: Infragistics.Controls.Charts
 _language: ja
@@ -43,14 +44,14 @@ Ignite UI for Angular マーカーは、カテゴリ チャートのプロット
 
 関連するチャート機能の詳細については、以下のトピックを参照してください。
 
-*   [チャート注釈](chart-annotations.md)
-*   [チャートのハイライト表示](chart-highlighting.md)
+- [チャート注釈](chart-annotations.md)
+- [チャートのハイライト表示](chart-highlighting.md)
 
 ## API リファレンス
 
 以下は、上記のセクションで説明した API メンバーのリストです。
 
-*   [`markerBrushes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#markerBrushes)
-*   [`markerOutlines`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#markerOutlines)
-*   [`MarkerType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.markertype.html)
-*   [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html)
+- [`markerBrushes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#markerBrushes)
+- [`markerOutlines`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#markerOutlines)
+- [`MarkerType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.markertype.html)
+- [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html)

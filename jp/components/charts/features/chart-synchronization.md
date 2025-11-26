@@ -2,6 +2,7 @@
 title: Angular  Angular データ チャート | データ可視化ツール | 同期化 | インフラジスティックス
 _description: ズーム操作、パン操作および十字線イベントを含む複数のインフラジスティックスの Angular チャート コントロール間で同期します。Ignite UI for Angular のグラフ同期機能について説明します。
 _keywords: Angular charts, data chart, synchronization, Ignite UI for Angular, Infragistics, Angular チャート, データ チャート, 同期化, インフラジスティックス
+_license: commercial
 mentionedTypes: ["XamDataChart"]
 namespace: Infragistics.Controls.Charts
 _language: ja
@@ -36,9 +37,9 @@ $ ProductName$ データ チャートを使用すると、複数のチャート�
 
 以下は、上記のセクションで説明した API メンバーのリストです。
 
-*   [`isHorizontalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html#isHorizontalZoomEnabled)
-*   [`isVerticalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html#isVerticalZoomEnabled)
-*   `SyncChannel`
-*   `SynchronizeHorizontally`
-*   `SynchronizeVertically`
-*   [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)
+- [`isHorizontalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html#isHorizontalZoomEnabled)
+- [`isVerticalZoomEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html#isVerticalZoomEnabled)
+- `SyncChannel`
+- `SynchronizeHorizontally`
+- `SynchronizeVertically`
+- [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)

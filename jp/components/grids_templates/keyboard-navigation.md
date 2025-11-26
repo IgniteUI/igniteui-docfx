@@ -3,6 +3,7 @@
 title: Angular Grid のキーボード ナビゲーション - Ignite UI for Angular
 _description: Ignite UI for Angular で Grid キーボード ナビゲーションを使用する方法を説明します。キーボード インタラクションでは、セル、行、列を簡単に移動できます。
 _keywords: keyboard navigation, ignite ui for angular, infragistics, キーボード ナビゲーション, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular Tree Grid のキーボード ナビゲーション - Ignite UI for Angular
 _description: Ignite UI for Angular で Tree Grid キーボード ナビゲーションを使用する方法を説明します。キーボード インタラクションでは、セル、行、列を簡単に移動できます。
 _keywords: keyboard navigation, ignite ui for angular, infragistics, キーボード ナビゲーション, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -19,6 +21,7 @@ _language: ja
 title: Angular Hierarchical Grid のキーボード ナビゲーション - Ignite UI for Angular
 _description: Ignite UI for Angular で Hierarchical Grid キーボード ナビゲーションを使用する方法を説明します。キーボード インタラクションでは、セル、行、列を簡単に移動できます。
 _keywords: keyboard navigation, ignite ui for angular, infragistics, キーボード ナビゲーション, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }

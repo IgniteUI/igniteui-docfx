@@ -3,6 +3,7 @@
 title: Angular Data Grid での行編集 - Ignite UI for Angular
 _description: Angular Data Grid で行編集を有効にし、CRUD 操作のための強力な API が必要な場合、Ignite UI for Angular Data Grid 行編集コンポーネントをお試しください。
 _keywords: row editing, igniteui for angular, インフラジスティックス・ジャパン株式会社
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular @@igComponent での行編集 - Ignite UI for Angular
 _description: Angular @@igComponent で行編集を有効にし、CRUD 操作のための強力な API が必要な場合、Ignite UI for Angular Data Grid 行編集コンポーネントをお試しください。
 _keywords: row editing, igniteui for angular, インフラジスティックス・ジャパン株式会社
+_license: commercial
 _language: ja
 _canonicalLink: grid/row-editing
 ---

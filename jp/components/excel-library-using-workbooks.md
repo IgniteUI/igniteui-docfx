@@ -2,6 +2,7 @@
 title: Angular Excel ライブラリ | ワークブックの使用 | インフラジスティックス
 _description: インフラジスティックスの Angular Excel ライブラリを使用してワークブックおよびワークシートを作成し、データを入力して日付を Microsoft®Excel にエクスポートします。詳細については、Ignite UI for Angular Excel のチュートリアルを参照してください。
 _keywords: Excel library, workbooks, Ignite UI for Angular, Infragistics, Excel ライブラリ, ワークブック, インフラジスティックス
+_license: commercial
 mentionedTypes: ["Workbook"]
 _language: ja
 ---
@@ -37,23 +38,23 @@ font.height = 16 * 20;
 
 Microsoft Excel® ドキュメント プロパティは、ドキュメントの整理やトラッキングを改善するための情報を提供します。[`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbook.html) オブジェクトの [`documentProperties`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbook.html#documentProperties) プロパティを使用してこれらのプロパティを設定するために、Infragistics Angular Excel Engine を使用できます。使用可能なプロパティは以下のとおりです。
 
-*   `Author`
+- `Author`
 
-*   `Title`
+- `Title`
 
-*   `Subject`
+- `Subject`
 
-*   `Keywords`
+- `Keywords`
 
-*   `Category`
+- `Category`
 
-*   `Status`
+- `Status`
 
-*   `Comments`
+- `Comments`
 
-*   `Company`
+- `Company`
 
-*   `Manager`
+- `Manager`
 
 以下のコードは、ブックを作成し、`title` および `status` ドキュメント プロパティを設定する方法を示します。
 
@@ -98,7 +99,7 @@ var protection = workbook.protection;
 
 ## API リファレンス
 
-*   [`documentProperties`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbook.html#documentProperties)
-*   [`WorkbookProtection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbookprotection.html)
-*   [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbook.html)
-*   [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbook.html)
+- [`documentProperties`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbook.html#documentProperties)
+- [`WorkbookProtection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbookprotection.html)
+- [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbook.html)
+- [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbook.html)

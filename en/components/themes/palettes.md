@@ -152,7 +152,8 @@ Palettes in Ignite UI for Angular dictate whether a theme is going to be light o
 
 To make this a bit clearer, below is a list of some `gray` and `surface` color variants in both a light and a dark theme;
 
-*Material Light:*
+_Material Light:_
+
 ```css
 :root {
   //...
@@ -165,7 +166,8 @@ To make this a bit clearer, below is a list of some `gray` and `surface` color v
 }
 ```
 
-*Material Dark:*
+_Material Dark:_
+
 ```css
 :root {
   //...
@@ -178,12 +180,12 @@ To make this a bit clearer, below is a list of some `gray` and `surface` color v
 }
 ```
 
-Be mindful when changing the `gray` and `surface` color variants as they are used in most components and have a big impact on their overall look and feel. 
+Be mindful when changing the `gray` and `surface` color variants as they are used in most components and have a big impact on their overall look and feel.
 
 ## Other Colors
 
 So far we've covered the `primary`, `secondary`, `gray`, and `surface` color variants and how you can override them. There are four more colors - `info`, `success`, `warn`, and `error`. They are usually used to set the colors in different states. For example, the `igx-input-group` component uses these colors in its input validation states.
-They can be changed as the other color variants, all we need to do it to set the `500` variant and all of the other varints will be generated.
+They can be changed as the other color variants, all we need to do it to set the `500` variant and all of the other variants will be generated.
 
 ```css
 :root {
@@ -202,5 +204,5 @@ Related topics:
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

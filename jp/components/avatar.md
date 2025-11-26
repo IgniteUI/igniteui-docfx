@@ -1,7 +1,8 @@
 ---
-title: Angular Avatar コンポーネント
+title: Angular Avatar コンポーネント - MITライセンス
 _description: Ignite UI for Angular の Avatar コントロールは、プロファイル ボタンなどのアプリケーションのインスタンスに画像、マテリアル アイコン、またはイニシャルを追加できます。
 _keywords: Angular Avatar コンポーネント, Angular Avatar コントロール, Ignite UI for Angular, Angular UI コンポーネント
+_license: MIT
 _language: ja
 ---
 
@@ -87,7 +88,7 @@ Ignite UI for Angular Avatar コンポーネントには、3 つの形状 (正�
 ```html
 <igx-avatar size="medium" initials="JS" shape="circle"></igx-avatar>
 ```
-`background` プロパティを使用して背景色を変更できます。また、`color` プロパティを使用してイニシャルの色を設定します。
+`background` プロパティを使用して背景の色を変更できます。また、`color` プロパティを使用してイニシャルの色を設定します。
 
 ```scss
 // avatar.component.scss
@@ -142,7 +143,33 @@ igx-avatar {
 
 ## スタイル設定
 
-Avatar のスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する index ファイルをインポートする必要があります。
+### Avatar テーマのプロパティ マップ
+
+`$background` プロパティを変更すると、次の依存プロパティが自動的に更新されます。
+
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>プライマリ プロパティ</th>
+      <th>依存プロパティ</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+      <td><strong>$background</strong></td>
+      <td>$color</td>
+      <td>アバターに使用されるテキストの色</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>$icon-color</td>
+      <td>アバターに使用されるアイコンの色</td>
+    </tr>
+  </tbody>
+</table>
+
+Avatar のスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -186,6 +213,45 @@ $custom-avatar-theme: avatar-theme(
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/layouts/avatar-styling/" >
 </code-view>
+
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して `avatar` をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-avatar`、`dark-avatar`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[avatar-theme]({environment:sassApiUrl}/themes#function-avatar-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-avatar
+class="!light-avatar ![--background:#FF4E00]"
+initials="DY"
+shape="rounded">
+</igx-avatar>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、avatar は次のようになります:
+
+<div class="sample-container loading" style="height:100px">
+    <iframe id="avatar-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/avatar-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ### カスタム サイズ変更
 

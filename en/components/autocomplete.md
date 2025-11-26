@@ -1,10 +1,12 @@
 ---
-title: Angular Autocomplete Component – Ignite UI for Angular
+title: Angular Autocomplete Component – Ignite UI for Angular - MIT license 
 _description: The Angular Autocomplete directive offers a way to enhance a text input by showing a panel of suggested options provided by the developer. Try it now.
 _keywords: Angular Autocomplete component, Angular Autocomplete directive, Angular Autocomplete control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
+_license: MIT
 ---
 
 # Angular Autocomplete Directive Overview
+
 Angular Autocomplete is a search box directive that enables users to easily find, filter and select an item from a list of suggestions while they type. Feature-rich, it supports seamless data binding, filtering, grouping, UI customization options, and other built-in functionalities so developers can create intuitive autocomplete search experience.
 
 <p class="highlight">
@@ -14,10 +16,10 @@ The [`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirec
 
 ## Angular Autocomplete Example
 
-The Angular Autocomplete example below generates a dropdown suggestion list as users start typing the name of a town in the input textbox. 
+The Angular Autocomplete example below generates a dropdown suggestion list as users start typing the name of a town in the input textbox.
 
-<code-view style="height: 400px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/autocomplete/" alt="Angular Autocomplete Example">
 </code-view>
 
@@ -31,7 +33,7 @@ To get started with the Ignite UI for Angular for [Angular Components](https://w
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the **IgxAutocompleteModule** and **IgxDropDownModule** in our **app.module**. If [`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) is applied on an [igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html), the **igxInputGroupModule** is also required:
 
@@ -92,6 +94,7 @@ export class HomeComponent {}
 Now that you have the Ignite UI for Angular Action Strip module or directive imported, you can start with a basic configuration of the `igxAutocomplete` component.
 
 ## Using the Angular Autocomplete
+
 In order to apply the autocomplete functionality to an input, add the `igxAutocomplete` directive, referencing the dropdown:
 
 ```html
@@ -136,6 +139,7 @@ export class AutocompletePipeStartsWith implements PipeTransform {
 >The [`igxAutocomplete`]({environment:angularApiUrl}/classes/igxautocompletedirective.html) uses the [`igxDropDown`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) as a provider for the available options, which means that all capabilities of the dropdown component can be used in the autocomplete.
 
 ### Disable Angular Autocomplete
+
 You can disable the Angular autocomplete by using the [`IgxAutocompleteDisabled`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#disabled) input:
 
 ```html
@@ -148,6 +152,7 @@ You can disable the Angular autocomplete by using the [`IgxAutocompleteDisabled`
 ```
 
 ### Autocomplete Settings
+
 The `igx-autocomplete` dropdown positioning, scrolling strategy, and outlet can be configured using the [`IgxAutocompleteSettings`]({environment:angularApiUrl}/classes/igxautocompletedirective.html#autocompleteSettings).
 
 In the following Angular Autocomplete example we will position the dropdown above the input and disable the opening and closing animations. We're using the `ConnectedPositioningStrategy` for this:
@@ -214,8 +219,8 @@ export class AutocompleteComponent {
 If everything went right, you should see this in your browser:
 
 
-<code-view style="height: 500px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 500px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/movie/" >
 </code-view>
 
@@ -223,36 +228,41 @@ If everything went right, you should see this in your browser:
 <div class="divider--half"></div>
 
 ## Keyboard Navigation
+
 <div class="divider--half"></div>
 
- - <kbd>⬆</kbd> / <kbd>⬇</kbd> or typing in the input will open the dropdown, if it's closed.
- - <kbd>⬇</kbd> - will move to the next dropdown item.
- - <kbd>⬆</kbd> - will move to the previous dropdown item.
- - <kbd>ENTER</kbd> will confirm the already selected item and will close the dropdown.
- - <kbd>ESC</kbd> will close the dropdown.
+- <kbd>⬆</kbd> / <kbd>⬇</kbd> or typing in the input will open the dropdown, if it's closed.
+- <kbd>⬇</kbd> - will move to the next dropdown item.
+- <kbd>⬆</kbd> - will move to the previous dropdown item.
+- <kbd>ENTER</kbd> will confirm the already selected item and will close the dropdown.
+- <kbd>ESC</kbd> will close the dropdown.
 
 >[!NOTE]
 >When the Angular autocomplete opens, then the first item on the list is automatically selected. The same is valid when the list is filtered.
 
-You can also see how our [WYSIWYG App Builder™](https://www.infragistics.com/products/appbuilder) streamlines the entire design-to-code story by 80% using real Angular components. 
+You can also see how our [WYSIWYG App Builder™](https://www.infragistics.com/products/appbuilder) streamlines the entire design-to-code story by 80% using real Angular components.
 
 ## Compatibility support
+
 Applying the `igxAutocomplete` directive will decorate the element with the following ARIA attributes:
- - role="combobox" - role of the element, where the directive is applied.
- - aria-autocomplete="list" - indicates that input completion suggestions are provided in the form of list
- - aria-haspopup="listbox" attribute to indicate that `igxAutocomplete` can pop-up a container to suggest values.
- - aria-expanded="true"/"false" - value depending on the collapsed state of the dropdown.
- - aria-owns="dropDownID" - id of the dropdown used for displaying suggestions.
- - aria-activedescendant="listItemId" - value is set to the id of the current active list element.
+
+- role="combobox" - role of the element, where the directive is applied.
+- aria-autocomplete="list" - indicates that input completion suggestions are provided in the form of list
+- aria-haspopup="listbox" attribute to indicate that `igxAutocomplete` can pop-up a container to suggest values.
+- aria-expanded="true"/"false" - value depending on the collapsed state of the dropdown.
+- aria-owns="dropDownID" - id of the dropdown used for displaying suggestions.
+- aria-activedescendant="listItemId" - value is set to the id of the current active list element.
 
 The `drop-down` component, used as provider for suggestions, will expose the following ARIA attributes:
- - role="listbox" - applied on the `igx-drop-down` component container
- - role="group" - applied on the `igx-drop-down-item-group` component container
- - role="option" - applied on the `igx-drop-down-item` component container
- - aria-disabled="true"/"false" applied on `igx-drop-down-item`, `igx-drop-down-item-group` component containers when they are disabled.
+
+- role="listbox" - applied on the `igx-drop-down` component container
+- role="group" - applied on the `igx-drop-down-item-group` component container
+- role="option" - applied on the `igx-drop-down-item` component container
+- aria-disabled="true"/"false" applied on `igx-drop-down-item`, `igx-drop-down-item-group` component containers when they are disabled.
 
 
 ## Styling
+
 Every component has its own theme.
 
 To get the `igxAutocomplete` styled, you have to style its containing components. In our case, these are the [input-group-theme]({environment:sassApiUrl}/themes#function-input-group-theme) and the [drop-down-theme]({environment:sassApiUrl}/themes#function-drop-down-theme).
@@ -260,25 +270,28 @@ To get the `igxAutocomplete` styled, you have to style its containing components
 Take a look at the [`igxInputGroup`](input-group.md#styling) and the [`igxDropdown`](drop-down.md#styling) styling sections to get a better understanding of how to style those two components.
 
 ## API Reference
+
 <div class="divider--half"></div>
 
-* [IgxAutocompleteDirective]({environment:angularApiUrl}/classes/igxautocompletedirective.html)
-* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
-* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+- [IgxAutocompleteDirective]({environment:angularApiUrl}/classes/igxautocompletedirective.html)
+- [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
+- [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
 
 ## Theming Dependencies
-* [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
-* [IgxInputGroup Theme]({environment:sassApiUrl}/themes#function-input-group-theme)
+
+- [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
+- [IgxInputGroup Theme]({environment:sassApiUrl}/themes#function-input-group-theme)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [IgxDropDown](drop-down.md)
-* [IgxInputGroup](input-group.md)
-* [Template Driven Forms Integration](input-group.md)
+- [IgxDropDown](drop-down.md)
+- [IgxInputGroup](input-group.md)
+- [Template Driven Forms Integration](input-group.md)
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

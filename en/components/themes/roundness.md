@@ -5,9 +5,11 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Roundness
+
 Ignite UI for Angular allows you to customize the shape of components by adjusting their roundness using a value between 0 and 1.
 
 ## Overview
+
 Many Ignite UI components have predefined minimum and maximum border-radius values, which can be adjusted using the `--ig-radius-factor` CSS variable.
 
 When you set `--ig-radius-factor` to 0, the component uses its minimum border-radius and will appear more block-like with sharp corners. When set to 1, the component uses its maximum predefined border-radius and will appear rounded.
@@ -46,8 +48,8 @@ igx-chip {
 
 You can see the difference between the minimum and maximum border-radius values in the example below:
 
-<code-view style="height: 210px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 210px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/theming/roundness" >
 </code-view>
 
@@ -59,5 +61,5 @@ Related topics:
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

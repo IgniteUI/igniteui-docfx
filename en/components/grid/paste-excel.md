@@ -2,6 +2,7 @@
 title: Angular Excel Like Grid - Paste Form Excel - Infragistics 
 _description: Configure the Angular Grid to paste data from excel, by using rich and performant API with less code, and use the rich API do export selected grid data easily.
 _keywords: export selected, igniteui for angular, infragistics
+_license: commercial
 ---
 
 # Angular Grid Paste from Excel
@@ -22,8 +23,8 @@ On the top there is a dropdown button with 2 options:
 The new data after the paste is decorated in Italic.
 
 
-<code-view style="height: 570px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 570px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-paste/" alt="Angular Paste from Excel Example">
 </code-view>
 
@@ -132,6 +133,7 @@ You should add the `paste-handler` directive (you can find its code in the next 
         }
     }
 ```
+
 <div class="divider"></div>
 
 ## Paste Handler Directive
@@ -218,15 +220,17 @@ export class PasteHandler {
 ```
 
 ## API References
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+
+- [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [Excel Exporter](export-excel.md) - Use the Excel Exporter service to export data to Excel from IgxGrid. It also provides the option to only export the selected data from the IgxGrid. The exporting functionality is encapsulated in the IgxExcelExporterService class and the data is exported in MS Excel table format. This format allows features like filtering, sorting, etc. To do this you need to invoke the IgxExcelExporterService's export method and pass the IgxGrid component as first argument.
+- [Excel Exporter](export-excel.md) - Use the Excel Exporter service to export data to Excel from IgxGrid. It also provides the option to only export the selected data from the IgxGrid. The exporting functionality is encapsulated in the IgxExcelExporterService class and the data is exported in MS Excel table format. This format allows features like filtering, sorting, etc. To do this you need to invoke the IgxExcelExporterService's export method and pass the IgxGrid component as first argument.
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

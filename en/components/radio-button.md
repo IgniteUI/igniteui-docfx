@@ -1,7 +1,8 @@
 ---
-title: Angular Radio and Radio Group – Ignite UI for Angular | Infragistics
+title: Angular Radio and Radio Group – Ignite UI for Angular | Infragistics | MIT license
 _description: With Ignite UI for Angular Radio Button and Radio Group controls, developers can seamlessly present lists of options for users to select for better UI in template-driven and reactive forms.
 _keywords: Angular Radio Group component, Angular Radio Group control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
+_license: MIT
 ---
 
 # Angular Radio & Radio Group Component Overview
@@ -12,8 +13,8 @@ _keywords: Angular Radio Group component, Angular Radio Group control, Ignite UI
 
 ## Angular Radio & Radio Group Example
 
-<code-view style="height: 120px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 120px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-1/" alt="Angular Radio & Radio Group Example">
 </code-view>
 
@@ -27,7 +28,7 @@ To get started with the Ignite UI for Angular Radio Button component, first you 
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxRadioModule` in the **app.module.ts** file.
 
@@ -139,37 +140,62 @@ Pay attention that if you don't use the `NgModel` directive in a two-way data bi
 
 The final result would be something like that:
 
-<code-view style="height: 550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-2/" >
 </code-view>
 
 ## Styling
 
-Following the simplest approach, you can use CSS variables to customize the appearance of the radio button:
+### Radio Theme Property Map
 
-```css
-igx-radio {
-    --empty-color: #556b81;
-    --label-color: #131e29;
-    --fill-color: #0064d9;
-    --focus-outline-color: #0032a5;
-}
+When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
 
-igx-radio:hover {
-    --empty-fill-color: #e3f0ff;
-    --empty-color: #0064d9;
-    --hover-color: transparent;
-}
-```
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>Primary Property</th>
+      <th>Dependent Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+      <td><details><summary><strong>$empty-color</strong></summary></details></td>
+      <td>$hover-color</td>
+      <td>Border and dot colors on hover</td>
+    </tr>
+    <tr class="dependent"><td></td><td>$focus-outline-color (indigo)</td><td>Focus outline color (Indigo theme)</td></tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+      <td><details><summary><strong>$fill-color</strong></summary></details></td>
+      <td>$fill-color-hover</td>
+      <td>Checked dot color on hover</td>
+    </tr>
+    <tr class="dependent"><td></td><td>$fill-hover-border-color (non-bootstrap)</td><td>Checked border color on hover</td></tr>
+    <tr class="dependent"><td></td><td>$focus-border-color (bootstrap)</td><td>Focus border color</td></tr>
+    <tr class="dependent"><td></td><td>$focus-outline-color (bootstrap)</td><td>Focus outlined color</td></tr>
+    <tr class="dependent"><td></td><td>$focus-outline-color-filled (indigo)</td><td>Focus outline color when radio is filled</td></tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+      <td><strong>$label-color</strong></td>
+      <td>$label-color-hover</td>
+      <td>Label text color on hover</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+      <td><details><summary><strong>$error-color</strong></summary></details></td>
+      <td>$error-color-hover</td>
+      <td>Label, border, and dot color in invalid state on hover</td>
+    </tr>
+    <tr class="dependent"><td></td><td>$focus-outline-color-error</td><td>Focus outline color in invalid state</td></tr>
+  </tbody>
+</table>
 
-By changing the values of these CSS variables, you can alter the entire look of the component.
-
-<div class="divider--half"></div>
-
-Another way to style the radio button is by using **Sass**, along with our [`radio-theme`]({environment:sassApiUrl}/index.html#function-radio-theme) function.
-
-To start styling the radio button using **Sass**, first import the `index` file, which includes all theme functions and component mixins:
+To get started with styling the radio buttons, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -193,10 +219,8 @@ Finally, **include** the custom theme in your application:
 @include css-vars($custom-radio-theme);
 ```
 
-In the sample below, you can see how using the radio button with customized CSS variables allows you to create a design that visually resembles the radio button used in the [`SAP UI5`](https://ui5.sap.com/#/entity/sap.m.RadioButton/sample/sap.m.sample.RadioButton) design system. 
-
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-styling-sample/" >
 </code-view>
 
@@ -205,14 +229,55 @@ In the sample below, you can see how using the radio button with customized CSS 
 
 <div class="divider--half"></div>
 
+### Styling with Tailwind
+
+You can style the `radio button` using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-radio`, `dark-radio`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [radio-theme]({environment:sassApiUrl}/themes#function-radio-theme). The syntax is as follows:
+
+
+```html
+<igx-radio
+class="!light-radio ![--empty-color:#576E60] ![--fill-color:#7B9E89]"
+...
+>
+  New York
+</igx-radio>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your radio button should look like this:
+
+<div class="sample-container loading" style="height:300px">
+    <iframe id="radio-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/data-entries/radio-tailwind-styling-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
 ## Radio Group
 
 <p class="highlight">The Ignite UI for Angular Radio Group directive provides a grouping container that allows better control over the child radio components and supports template-driven and reactive forms. </p>
 
 ### Demo
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-group-sample/" >
 </code-view>
 
@@ -275,8 +340,8 @@ public alignment = RadioGroupAlignment.vertical;
 </igx-radio-group>
 ```
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-group-vertical/" >
 </code-view>
 
@@ -286,13 +351,13 @@ public alignment = RadioGroupAlignment.vertical;
 
 <div class="divider--half"></div>
 
-* [IgxRadioGroupDirective]({environment:angularApiUrl}/classes/igxradiogroupdirective.html)
-* [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
-* [IgxRadioComponent Styles]({environment:sassApiUrl}/themes#function-radio-theme)
+- [IgxRadioGroupDirective]({environment:angularApiUrl}/classes/igxradiogroupdirective.html)
+- [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
+- [IgxRadioComponent Styles]({environment:sassApiUrl}/themes#function-radio-theme)
 
 ## Theming Dependencies
 
-* [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ## Additional Resources
 
@@ -300,5 +365,5 @@ public alignment = RadioGroupAlignment.vertical;
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

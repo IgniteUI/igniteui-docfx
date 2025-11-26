@@ -2,6 +2,7 @@
 title: Angular Tree Grid | Fastest Angular Tree Table | Infragistics
 _description: The Ignite UI for Angular Tree Grid is used to display and manipulate hierarchical or flat data with ease. Quickly bind your data with very little coding. Try it for FREE
 _keywords: angular tree grid, angular tree table, angular tree grid component, angular tree table component, angular ui components, igniteui for angular, infragistics
+_license: commercial
 ---
 
 # Angular Tree Grid Component Overview
@@ -27,7 +28,7 @@ To get started with the Ignite UI for Angular Tree Grid component, first you nee
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](../general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](../general/getting-started.md) topic.
 
 The next step is to import the `IgxTreeGridModule` in your **app.module.ts** file.
 
@@ -93,6 +94,7 @@ Regardless of which option is used for building the tree grid's hierarchy (child
 Initially the tree grid will expand all node levels and show them. This behavior can be configured using the [`expansionDepth`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#expansionDepth) property. By default its value is **Infinity** which means all node levels will be expanded. You may control the initial expansion depth by setting this property to a numeric value. For example **0** will show only root level nodes, **1** will show root level nodes and their child nodes and so on.
 
 ### Child Collection
+
 When we are using the **child collection** option, every data object contains a child collection, that is populated with items of the same type as the parent data object. This way every record in our tree grid will have a direct reference to any of its children. In this case the [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) property of our tree grid that contains the original data source will be a hierarchically defined collection.
 
 For this sample, let's use the following collection structure:
@@ -194,6 +196,7 @@ Finally, we will enable the toolbar of our tree grid, along with the column hidi
 You can see the result of the code from above at the beginning of this article in the [Angular Tree Grid Example](#angular-tree-grid-example) section.
 
 ### Primary and Foreign keys
+
 When we are using the **primary and foreign keys** option, every data object contains a primary key and a foreign key. The primary key is the unique identifier of the current data object and the foreign key is the unique identifier of its parent. In this case the [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) property of our tree grid that contains the original data source will be a flat collection.
 
 The following is an example of a component which contains a flat collection defined with primary and foreign keys relation:
@@ -290,7 +293,7 @@ To get started with styling the Tree Grid, we need to import the `index` file, w
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 Following the simplest approach, we create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) and accepts the parameters, required to customize the tree grid as desired.
 
@@ -337,7 +340,7 @@ The last step is to **include** the component theme in our application.
 
 ## Performance (Experimental)
 
-The `igxTreeGrid`'s design allows it to take advantage of the Event Coalescing feature that has Angular introduced. This feature allows for improved performance with roughly around **`20%`** in terms of interactions and responsiveness. This feature can be enabled on application level by simply setting the `ngZoneEventCoalescing ` and `ngZoneRunCoalescing` properties to `true` in the `bootstrapModule` method:
+The `igxTreeGrid`'s design allows it to take advantage of the Event Coalescing feature that has Angular introduced. This feature allows for improved performance with roughly around **`20%`** in terms of interactions and responsiveness. This feature can be enabled on application level by simply setting the `ngZoneEventCoalescing` and `ngZoneRunCoalescing` properties to `true` in the `bootstrapModule` method:
 
 ```typescript
 platformBrowserDynamic()
@@ -347,7 +350,6 @@ platformBrowserDynamic()
 
 >[!NOTE]
 > This is still in experimental feature for the `igxTreeGrid`. This means that there might be some unexpected behaviors in the Tree Grid. In case of encountering any such behavior, please contact us on our [Github](https://github.com/IgniteUI/igniteui-angular/discussions) page.
-
 >[!NOTE]
 > Enabling it can affects other parts of an Angular application that the `igxTreeGrid` is not related to.
 
@@ -376,36 +378,37 @@ platformBrowserDynamic()
 
 <div class="divider--half"></div>
 
-* [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
-* [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
+- [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
+- [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
+- [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
+- [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+- [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
-* [IgxInputGroup Theme]({environment:sassApiUrl}/themes#function-input-group-theme)
-* [IgxChip Theme]({environment:sassApiUrl}/themes#function-chip-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
-* [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
-* [IgxCalendar Theme]({environment:sassApiUrl}/themes#function-calendar-theme)
-* [IgxSnackBar Theme]({environment:sassApiUrl}/themes#function-snackbar-theme)
-* [IgxBadge Theme]({environment:sassApiUrl}/themes#function-badge-theme)
+
+- [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxInputGroup Theme]({environment:sassApiUrl}/themes#function-input-group-theme)
+- [IgxChip Theme]({environment:sassApiUrl}/themes#function-chip-theme)
+- [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
+- [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
+- [IgxCalendar Theme]({environment:sassApiUrl}/themes#function-calendar-theme)
+- [IgxSnackBar Theme]({environment:sassApiUrl}/themes#function-snackbar-theme)
+- [IgxBadge Theme]({environment:sassApiUrl}/themes#function-badge-theme)
 
 
 ## Additional Resources
 
 <div class="divider--half"></div>
 
-* [Grid Sizing](sizing.md)
-* [Data Grid](../grid/grid.md)
-* [Row Editing](row-editing.md)
+- [Grid Sizing](sizing.md)
+- [Data Grid](../grid/grid.md)
+- [Row Editing](row-editing.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

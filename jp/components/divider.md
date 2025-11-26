@@ -1,7 +1,8 @@
 ---
-title: Divider コンポーネント
+title: Divider コンポーネント | MITライセンス
 _description: Ignite UI for Angular Divider コンポーネントは、コンテンツを水平と垂直の両方向に分割できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Divider コンポーネント, Angular Divider ディレクティブ, Angular Divider コントロール
+_license: MIT
 _language: ja
 ---
 

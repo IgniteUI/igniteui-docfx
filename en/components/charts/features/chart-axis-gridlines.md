@@ -2,6 +2,7 @@
 title: Angular Axis Gridlines | Data Visualization | Infragistics
 _description: Infragistics' Angular Axis Gridlines
 _keywords: Angular Axis, Gridlines, Infragistics
+_license: commercial
 mentionedTypes: ["DomainChart", "CategoryChart", "XYChart", "DomainChart", "XamDataChart", "NumericXAxis", "NumericYAxis", "NumericAxisBase" ]
 namespace: Infragistics.Controls.Charts
 ---
@@ -110,8 +111,8 @@ You can customize how the axis tickmarks are displayed in our Angular chats by s
 
 You can find more information about related chart features in these topics:
 
-*   [Axis Layout](chart-axis-layouts.md)
-*   [Axis Options](chart-axis-options.md)
+- [Axis Layout](chart-axis-layouts.md)
+- [Axis Options](chart-axis-options.md)
 
 ## API References
 

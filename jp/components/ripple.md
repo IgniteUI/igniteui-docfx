@@ -1,7 +1,8 @@
 ---
-title: Ripple ディレクティブ
+title: Ripple ディレクティブ - MITライセンス
 _description: Ignite UI for Angular Ripple ディレクティブは、リップル アニメーション エフェクトが適用されている領域を定義できます。
 _keywords: Angular Ripple コンポーネント, Angular Ripple ディレクティブ, Angular Ripple コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
+_license: MIT
 _language: ja
 ---
 

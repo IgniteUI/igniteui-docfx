@@ -1,7 +1,8 @@
 ---
-title: Angular Combobox コンポーネント | データ バインディング ComboBox | インフラジスティックス
+title: Angular Combobox コンポーネント | データ バインディング ComboBox | インフラジスティックス | MITライセンス
 _description: Ignite UI for Angular ComboBox は、基本的な HTML 入力、選択、フィルタリング、およびカスタム ドロップダウン リストの機能を組み合わせた強力な入力を提供します。無料でお試しください。
 _keywords: angular combobox, angular combo コンポーネント, angular combobox コンポーネント, Angular UI コンポーネント, ignite ui for angular, インフラジスティックス
+_license: MIT
 _language: ja
 ---
 
@@ -278,6 +279,67 @@ public singleSelection(event: IComboSelectionChangeEventArgs) {
 
 ## スタイル設定
 
+### Combo テーマのプロパティ マップ
+
+プライマリ プロパティを変更すると、関連するすべての依存プロパティが自動的に更新されます。
+
+<table class="collapsible-table">
+    <thead>
+        <tr>
+            <th>プライマリ プロパティ</th>
+            <th>依存プロパティ</th>
+            <th>説明</th>
+        </tr>
+    </thead>
+    <tbody class="group">
+        <tr class="primary">
+            <td><strong>$empty-list-background</strong></td>
+            <td>$empty-list-placeholder-color</td>
+            <td>コンボ プレースホルダー テキストの色</td>
+        </tr>
+        <tr class="primary">
+            <td><details><summary><strong>$toggle-button-background</strong></summary></details></td>
+            <td>$toggle-button-foreground</td>
+            <td>コンボ トグル ボタンの前景の色</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$toggle-button-background-focus</td>
+            <td>フォーカス時のコンボ トグル ボタンの背景の色</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$toggle-button-background-focus--border</td>
+            <td>フォーカス時のコンボ トグル ボタン (border バリエーション) の背景の色</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$toggle-button-foreground-filled</td>
+            <td>オンの時のコンボ トグル ボタンの前景の色</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$toggle-button-background-disabled</td>
+            <td>無効なコンボ トグル ボタンの背景の色</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$toggle-button-foreground-disabled</td>
+            <td>無効なコンボ トグル ボタンの前景の色</td>
+        </tr>
+        <tr class="primary">
+            <td><strong>$toggle-button-background-focus</strong></td>
+            <td>$toggle-button-foreground-focus</td>
+            <td>フォーカス時のコンボ トグル ボタンの前景の色</td>
+        </tr>
+        <tr class="primary">
+            <td><strong>$clear-button-background-focus</strong></td>
+            <td>$clear-button-foreground-focus</td>
+            <td>フォーカス時のコンボ クリア ボタンの前景の色</td>
+        </tr>
+    </tbody>
+</table>
+
 [`Ignite UI for Angular テーマ`](themes/index.md)を使用して、コンボボックスの外観を変更できます。はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。
 
 ```scss
@@ -287,7 +349,7 @@ public singleSelection(event: IComboSelectionChangeEventArgs) {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`combo-theme`]({environment:sassApiUrl}/themes#function-combo-theme) を拡張する新しいテーマを作成します。`$toggle-button-background` を設定することで、新しいテーマがボタンに対する状態色や前景色を自動的に決定します。必要に応じて、`$search-separator-border-color` などの追加パラメーターを指定することも可能です。
+最もシンプルな方法として、[`combo-theme`]({environment:sassApiUrl}/themes#function-combo-theme) を拡張する新しいテーマを作成します。`$toggle-button-background` を設定することで、新しいテーマがボタンに対する状態色や前景の色を自動的に決定します。必要に応じて、`$search-separator-border-color` などの追加パラメーターを指定することも可能です。
 
 ```scss
 $custom-combo-theme: combo-theme(
@@ -336,6 +398,45 @@ $custom-checkbox-theme: checkbox-theme(
 
 
 <div class="divider--half"></div>
+
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して `combo` をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-combo`、`dark-combo`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[combo-theme]({environment:sassApiUrl}/themes#function-combo-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-combo
+class="!light-combo
+![--toggle-button-background:#99BAA6]
+![--clear-button-foreground:#99BAA6]"
+...></igx-combo>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、combo は次のようになります:
+
+<div class="sample-container loading" style="height:410px">
+    <iframe id="combo-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/lists/combo-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ## 既知の問題
 

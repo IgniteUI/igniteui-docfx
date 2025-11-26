@@ -3,6 +3,7 @@
 title: Angular Data Grid の行ピン固定 - Ignite UI for Angular
 _description: Angular の行ピン固定機能を使用して、豊富で使いやすい API で行をロックします。ユーザーが特定の順序で行をピン固定または特別な領域に複製することを許可します。
 _keywords: lock row, ignite ui for angular, infragistics, 行のロック, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular Tree Grid の行ピン固定 - Ignite UI for Angular
 _description: Angular の行ピン固定機能を使用して、豊富で使いやすい API で行をロックします。ユーザーが特定の順序で行をピン固定または特別な領域に複製することを許可します。
 _keywords: lock row, ignite ui for angular, infragistics, 行のロック, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -19,6 +21,7 @@ _language: ja
 title: Angular Hierarchical Grid の行ピン固定 - Ignite UI for Angular
 _description: Angular の行ピン固定機能を使用して、豊富で使いやすい API で行をロックします。ユーザーが特定の順序で行をピン固定または特別な領域に複製することを許可します。
 _keywords: lock row, ignite ui for angular, infragistics, 行のロック, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }

@@ -1,7 +1,8 @@
 ---
-title: Toast コンポーネント
+title: Toast コンポーネント | MITライセンス
 _description: Ignite UI for Angular Toast コンポーネントは、アプリケーションで非対話型メッセージをユーザーに表示できます。
 _keywords: Angular Toast コンポーネント, Angular Toast コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
+_license: MIT
 _language: ja
 ---
 
@@ -179,7 +180,33 @@ public open(toast) {
 
 ## スタイル設定
 
-Toast のスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する index ファイルをインポートする必要があります。
+### Toast テーマのプロパティ マップ
+
+プライマリ プロパティを変更すると、関連するすべての依存プロパティが自動的に更新され、変更が反映されます。
+
+<table>
+  <thead>
+    <tr>
+      <th>プライマリ プロパティ</th>
+      <th>依存プロパティ</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>$background</strong></td>
+      <td>$text-color</td>
+      <td>トーストに使用されるテキストの色</td>
+    </tr>
+    <tr>
+      <td><strong>$text-color</strong></td>
+      <td>$border-color</td>
+      <td>トーストに使用される境界線の色</td>
+    </tr>
+  </tbody>
+</table>
+
+Toast のスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -214,6 +241,44 @@ $custom-toast-theme: toast-theme(
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/notifications/toast-style/" >
 </code-view>
+
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して toast をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-toast`、`dark-toast`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[IgxToast テーマ]({environment:sassApiUrl}/themes#function-toast-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-toast
+  class="!light-toast ![--background:#90B69F]">
+  ...
+</igx-toast>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、toast は次のようになります:
+
+<div class="sample-container loading" style="height:200px">
+    <iframe id="toast-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/notifications/toast-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 <div class="divider--half"></div>
 

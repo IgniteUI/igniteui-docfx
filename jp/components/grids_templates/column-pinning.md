@@ -3,6 +3,7 @@
 title: Angular Grid の列ピン固定 - Ignite UI for Angular
 _description: アプリの開発時に Ignite UI for Angular のピン固定機能を使用して、豊富な API で簡単に列をロックまたは列の順序を変更できます。
 _keywords: lock column, ignite ui for angular, infragistics
+_license: commercial
 _language: ja 
 ---
 }
@@ -11,6 +12,7 @@ _language: ja 
 title: Angular Tree Grid の列ピン固定 - Ignite UI for Angular
 _description: アプリの開発時に Ignite UI for Angular のピン固定機能を使用して、豊富な API で簡単に列をロックまたは列の順序を変更できます。
 _keywords: lock column, ignite ui for angular, infragistics 
+_license: commercial
 _language: ja
 ---
 }
@@ -19,6 +21,7 @@ _language: ja
 title: Angular Hierarchical Grid の列ピン固定 - Ignite UI for Angular
 _description: アプリの開発時に Ignite UI for Angular のピン固定機能を使用して、豊富な API で簡単に列をロックまたは列の順序を変更できます。
 _keywords: lock column, ignite ui for angular, infragistics 
+_license: commercial
 _language: ja
 ---
 }

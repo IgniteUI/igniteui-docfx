@@ -1,17 +1,18 @@
 ---
-title: Angular Chip Component – Ignite UI for Angular | Infragistics
+title: Angular Chip Component – Ignite UI for Angular | Infragistics | MIT license
 _description: The Ignite UI for Angular Chip component provide compact elements that represent an input, attribute, or action.
 _keywords: Angular Chip, Angular Chip Component, Angular Chip Area, Angular Chip Area Component, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular UI Components
+_license: MIT
 ---
 
 # Angular Chip Component Overview
 
-[`The Angular Chip component`]({environment:angularApiUrl}/classes/igxchipcomponent.html) is a visual element that displays information in an oval container. The component has various properties - it can be templated, deleted, and selected. Multiple chips can be reordered and visually connected to each other, using the chip area as a container. 
+[`The Angular Chip component`]({environment:angularApiUrl}/classes/igxchipcomponent.html) is a visual element that displays information in an oval container. The component has various properties - it can be templated, deleted, and selected. Multiple chips can be reordered and visually connected to each other, using the chip area as a container.
 
 ## Angular Chip Example
 
-<code-view style="height: 100px; padding-top: 10px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px; padding-top: 10px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/chip-simple/" alt="Angular Chip Example">
 </code-view>
 
@@ -25,7 +26,7 @@ To get started with the Ignite UI for Angular Chip component, first you need to 
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the **IgxChipsModule** in the **app.module.ts** file:
 
@@ -87,7 +88,7 @@ The [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcomponent.ht
 
 ### Selection
 
-<img class="responsive-img"  src="../images/chip/selecting_default.gif" />
+<img class="responsive-img"  src="../images/chip/selecting_default.gif" alt="Selecting Default" />
 
 Selection can be enabled by setting the [`selectable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectable) input property to `true`. When selecting a chip, the [`selectedChanging`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selectedChanging) event is fired. It provides the new [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) value so you can get the new state and the original event in [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalEvent) that triggered the selection change. If this is not done through user interaction but instead is done by setting the [`selected`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#selected) property programmatically, the [`originalEvent`]({environment:angularApiUrl}/interfaces/ichipselecteventargs.html#originalEvent) argument has a value of `null`.
 
@@ -100,7 +101,7 @@ Selection can be enabled by setting the [`selectable`]({environment:angularApiUr
 
 ### Removing
 
-<img class="responsive-img"  src="../images/chip/removing_default.gif" />
+<img class="responsive-img"  src="../images/chip/removing_default.gif" alt="Removing Default" />
 
 Removing can be enabled by setting the [`removable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removable) input to `true`. When enabled, a remove button is rendered at the end of the chip. When removing a chip, the [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) event is emitted.
 
@@ -188,8 +189,8 @@ public chipRemoved(event: IBaseChipEventArgs) {
 
 If everything went well, you should see this in your browser:
 
-<code-view style="height: 100px; padding-top: 10px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px; padding-top: 10px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/chip-simple/" >
 </code-view>
 
@@ -199,7 +200,7 @@ All of the [`IgxChipComponent`]({environment:angularApiUrl}/classes/igxchipcompo
 
 You can template the `prefix` and the `suffix` of the chip, using the `IgxPrefix` and the `IgxSuffix` directives:
 
-<img class="responsive-img"  src="../images/chip/prefix_suffix.jpg" />
+<img class="responsive-img"  src="../images/chip/prefix_suffix.jpg" alt="Chip Prefix and Suffix" />
 
 ```html
 <igx-chip>
@@ -211,7 +212,7 @@ You can template the `prefix` and the `suffix` of the chip, using the `IgxPrefix
 
 You can customize the size of the chip, using the [`--ig-size`] CSS variable. By default it is set to `var(--ig-size-large)`. It can also be set to `var(--ig-size-medium)` or `var(--ig-size-small)`, while everything inside the chip retains its relative positioning:
 
-<img class="responsive-img"  src="../images/chip/density.jpg" />
+<img class="responsive-img"  src="../images/chip/density.jpg" alt="Chip Density" />
 
 ```html
 <igx-chip>Hi! My name is Chip!</igx-chip>
@@ -228,7 +229,7 @@ You can customize the size of the chip, using the [`--ig-size`] CSS variable. By
 
 You can customize the `select icon`, using the [`selectIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#selecticon) input. It accepts values of type `TemplateRef` and overrides the default icon while retaining the same functionality.
 
-<img class="responsive-img"  src="../images/chip/selecting_custom.gif" />
+<img class="responsive-img"  src="../images/chip/selecting_custom.gif" alt="Selecting Custom" />
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [selectable]="true" [selectIcon]="mySelectIcon">
@@ -243,7 +244,7 @@ You can customize the `select icon`, using the [`selectIcon`]({environment:angul
 
 You can customize the `remove icon`, using the [`removeIcon`]({environment:angularApiUrl}/classes/igxchipcomponent.html#removeIcon) input. It takes a value of type `TemplateRef` and renders it instead of the default remove icon.
 
-<img class="responsive-img"  src="../images/chip/remove_icons.jpg" />
+<img class="responsive-img"  src="../images/chip/remove_icons.jpg" alt="Remove Icons" />
 
 ```html
 <igx-chip *ngFor="let chip of chipList" [removable]="true" [removeIcon]="myRemoveIcon">
@@ -313,11 +314,12 @@ public chipRemoved(event: IBaseChipEventArgs) {
     this.changeDetectionRef.detectChanges();
 }
 ```
+
 If everything went well, you should see this in your browser:
 
 
-<code-view style="height: 100px; padding-top: 10px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px; padding-top: 10px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/chip-simple/" >
 </code-view>
 
@@ -327,7 +329,7 @@ The [`IgxChipsAreaComponent`]({environment:angularApiUrl}/classes/igxchipsareaco
 
 ### Reorder Chips
 
-<img class="responsive-img"  src="../images/chip/dragging.gif" />
+<img class="responsive-img"  src="../images/chip/dragging.gif" alt="Dragging" />
 
 The chip can be dragged by the end-user in order to change its position. The dragging is disabled by default but can be enabled using the [`draggable`]({environment:angularApiUrl}/classes/igxchipcomponent.html#draggable) input property. You need to handle the actual chip reordering manually. This is where the chip area comes in handy since it provides the [`reorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#reorder) event that returns the new order when a chip is dragged over another chip.
 
@@ -361,15 +363,15 @@ The chip can be focused using the `Tab` key or by clicking on it. When the chips
 
   - <kbd>LEFT</kbd> - Moves the focus to the chip on the left.
 
-    <img class="responsive-img"  src="../images/chip/arrow_left_key.gif" />
+    <img class="responsive-img"  src="../images/chip/arrow_left_key.gif" alt="Arrow Left Key" />
 
   - <kbd>RIGHT</kbd> - Moves the focus to the chip on the right.
 
-    <img class="responsive-img"  src="../images/chip/arrow_right_key.gif" />
+    <img class="responsive-img"  src="../images/chip/arrow_right_key.gif" alt="Arrow Right Key" />
 
   - <kbd>SPACE</kbd> - Toggles chip selection if it is selectable.
 
-    <img class="responsive-img"  src="../images/chip/space_key.gif" />
+    <img class="responsive-img"  src="../images/chip/space_key.gif" alt="Space Key" />
 
   - <kbd>DELETE</kbd> - Triggers the [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) event for the [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) so the chip deletion can be handled manually.
   - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - Triggers [`reorder`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html#reorder) event for the [`igxChipArea`]({environment:angularApiUrl}/classes/igxchipsareacomponent.html) when the currently focused chip should move position to the left.
@@ -473,30 +475,133 @@ If everything's set up correctly, you should see this in your browser:
 
 ### Demo
 
-<code-view style="height: 100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/chip-area-sample/" >
 </code-view>
 
 ## Styling
 
-Following the simplest approach, you can use CSS variables to customize the appearance of the chip:
+### Chip Theme Property Map
 
-```css
-igx-chip {
-    --background: #cd201f;
-    --hover-background: #cd201f;
-    --focus-background: #9f1717;
-    --text-color: #fff;
-}
-```
-By changing the values of these CSS variables, you can alter the entire look of the chip component.
+When you modify a primary property, all related dependent properties are updated automatically:
 
-<div class="divider--half"></div>
+<table class="collapsible-table">
+  <thead>
+      <tr>
+          <th>Primary Property</th>
+          <th>Dependent Property</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+        <td><details><summary><strong>$background</strong></summary></details></td>
+        <td>$text-color</td>
+        <td>The chip text color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$border-color</td>
+        <td>The chip border color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$hover-background</td>
+        <td>The chip hover background color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$hover-border-color</td>
+        <td>The chip hover border color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$hover-text-color</td>
+        <td>The chip hover text color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$focus-background</td>
+        <td>The chip focus background color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$selected-background</td>
+        <td>The chip selected background color.</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+        <td><details><summary><strong>$focus-background</strong></summary></details></td>
+        <td>$focus-text-color</td>
+        <td>The chip text focus color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$focus-border-color</td>
+        <td>The chip focus border color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$focus-outline-color (bootstrap &amp; indigo variants only)</td>
+        <td>The chip focus outline color.</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+        <td><details><summary><strong>$selected-background</strong></summary></details></td>
+        <td>$selected-text-color</td>
+        <td>The selected chip text color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$selected-border-color</td>
+        <td>The selected chip border color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$hover-selected-background</td>
+        <td>The selected chip hover background color.</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+        <td><details><summary><strong>$hover-selected-background</strong></summary></details></td>
+        <td>$hover-selected-text-color</td>
+        <td>The selected chip hover text color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$hover-selected-border-color</td>
+        <td>The selected chip hover border color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$focus-selected-background</td>
+        <td>The selected chip focus background color.</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+        <td><details><summary><strong>$focus-selected-background</strong></summary></details></td>
+        <td>$focus-selected-text-color</td>
+        <td>The selected chip text focus color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$focus-selected-border-color</td>
+        <td>The selected chip focus border color.</td>
+    </tr>
+    <tr class="dependent">
+        <td></td>
+        <td>$focus-selected-outline-color (bootstrap &amp; indigo variants only)</td>
+        <td>The chip focus outline color in selected state.</td>
+    </tr>
+  </tbody>
+</table>
 
-Another way to style the chip is by using **Sass**, along with our [`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme) function.
-
-To start styling the chip using **Sass**, first import the `index` file, which includes all theme functions and component mixins:
+To get started with styling the chip, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -522,13 +627,55 @@ Finally, **include** the custom theme in your application:
 @include css-vars($custom-chip-theme);
 ```
 
-In the sample below, you can see how using the chip component with customized CSS variables allows you to create a design that visually resembles the chip used in the [`Ant`](https://ant.design/components/tag?theme=light#tag-demo-icon) design system. 
+In the sample below, you can see how using the chip component with customized CSS variables allows you to create a design that visually resembles the chip used in the [`Ant`](https://ant.design/components/tag?theme=light#tag-demo-icon) design system.
 
-<code-view style="height:100px" 
+<code-view style="height:100px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/chip-styling/" >
 </code-view>
+
+### Styling with Tailwind
+
+You can style the chip using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-chip`, `dark-chip`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [chip-theme]({environment:sassApiUrl}/themes#function-chip-theme). The syntax is as follows:
+
+```html
+<igx-chip
+  class="!light-chip
+  ![--background:#99BAA6]
+  ![--remove-icon-color:#C92828]"
+  ...
+>
+  {{chip.text}}
+</igx-chip>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your chips should look like this:
+
+<div class="sample-container loading" style="height:80px">
+    <iframe id="chip-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/data-display/chip-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ### Custom sizing
 
@@ -566,18 +713,18 @@ Learn more about it in the [Size](display-density.md) article.
 
 ## API
 
-* [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
-* [IgxChipComponent Styles]({environment:sassApiUrl}/themes#function-chip-theme)
-* [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
+- [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
+- [IgxChipComponent Styles]({environment:sassApiUrl}/themes#function-chip-theme)
+- [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
 
 ## Theming Dependencies
 
-* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## References
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

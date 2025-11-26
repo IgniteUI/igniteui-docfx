@@ -45,4 +45,4 @@ In order to switch from `Material` to `Indigo`, you can use the [theme]({environ
 
 ## API Overview
 
-* [Global Theme]({environment:sassApiUrl}/themes#mixin-theme)
+- [Global Theme]({environment:sassApiUrl}/themes#mixin-theme)

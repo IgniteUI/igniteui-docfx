@@ -2,6 +2,7 @@
 title: Angular Composite Chart | Combo Chart| Data Visualization | Infragistics
 _description: Infragistics' Angular Composite Chart
 _keywords: Angular Charts, Composite Chart, Combo Chart, Infragistics
+_license: commercial
 mentionedTypes: ["XamDataChart", "Series"]
 namespace: Infragistics.Controls.Charts
 ---
@@ -25,18 +26,18 @@ The following example demonstrates how to create Composite Chart using [`IgxColu
 
 ## Additional Resources
 
-*   [Bar Chart](bar-chart.md)
-*   [Column Chart](column-chart.md)
+- [Bar Chart](bar-chart.md)
+- [Column Chart](column-chart.md)
 
 <!-- - [Gantt Chart](gantt-chart.md) -->
 
-*   [Line Chart](line-chart.md)
-*   [Stacked Chart](stacked-chart.md)
+- [Line Chart](line-chart.md)
+- [Stacked Chart](stacked-chart.md)
 
 ## API References
 
-*   [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategoryxaxiscomponent.html)
-*   [`IgxColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcolumnseriescomponent.html)
-*   [`IgxLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxlineseriescomponent.html)
-*   [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxnumericyaxiscomponent.html)
-*   [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)
+- [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategoryxaxiscomponent.html)
+- [`IgxColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcolumnseriescomponent.html)
+- [`IgxLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxlineseriescomponent.html)
+- [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxnumericyaxiscomponent.html)
+- [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)

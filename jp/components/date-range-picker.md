@@ -1,7 +1,8 @@
 ---
-title: Date Range Picker コンポーネント - ネイティブ Angular | Ignite UI for Angular
+title: Date Range Picker コンポーネント - ネイティブ Angular | Ignite UI for Angular | MITライセンス
 _description: Angular Date Range Picker コンポーネントを使用すると、開始日と終了日を定義して日付範囲を選択できます。カレンダー UI から範囲を選択できます。今すぐお試しください。 
 _keywords: Angular Date Range Picker, Date Range Picker, Date Picker, Angular Date Range Picker コンポーネント, Angular UI コンポーネント, Angular コンポーネント
+_license: MIT
 _language: ja
 ---
 
