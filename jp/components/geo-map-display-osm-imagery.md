@@ -47,5 +47,5 @@ this.map.backgroundContent = tileSource;
 
 ## API リファレンス
 
-*   `BackgroundContent`
-*   [`IgxOpenStreetMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxopenstreetmapimagery.html)
+- `BackgroundContent`
+- [`IgxOpenStreetMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxopenstreetmapimagery.html)

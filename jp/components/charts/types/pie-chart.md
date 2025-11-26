@@ -29,42 +29,42 @@ Ignite UI for Angular 円チャート (円グラフ) は、データセットの
 
 円チャートは小さいデータ セットに適していて、一目で読みやすくなります。円チャートは、部分対全体の可視化の一種です。その他:
 
-*   円
-*   ドーナツ (リング)
-*   ファンネル
-*   積層型エリア
-*   積層型 100% エリア (積層型パーセント エリア)
-*   積層型棒
-*   積層型 100% 棒 (積層型パーセント棒)
-*   ツリーマップ
-*   ウォーターフォール
+- 円
+- ドーナツ (リング)
+- ファンネル
+- 積層型エリア
+- 積層型 100% エリア (積層型パーセント エリア)
+- 積層型棒
+- 積層型 100% 棒 (積層型パーセント棒)
+- ツリーマップ
+- ウォーターフォール
 
 Angular 円チャートは、データを解析するためのビューアー ツールを提供するインタラクティブ機能を含みます。
 
-*   凡例
-*   スライスの分割
-*   スライスの選択
-*   チャート アニメーション
+- 凡例
+- スライスの分割
+- スライスの選択
+- チャート アニメーション
 
 円チャートのベスト プラクティス:
 
-*   スライスまたはセグメントを、合計値または全体に対するパーセンテージ値として比較する。
-*   カテゴリのグループがどのようにより小さなセグメントに分割されるかを表示する。
-*   小さい非階層データ セット (6 ～ 8 セグメント未満のデータ) を表示する。
-*   データ セグメントの合計が 100% になるようにする。
-*   データの順序を最大 (最高) から最小 (最低) に並べ替える。
-*   12 時の位置から始めて時計回りに進む標準的なプレゼンテーション方法を使用する。
-*   カラー パレットがセグメント/スライスで識別できるようにする。
-*   データラベルを読みやすくするため、セグメントと凡例のどちらに配置するべきか検討する。
-*   より分かりやすい表現のために、円の代わりに棒またはリング チャートを選択する。
-*   比較分析のために複数の円チャートを並べて配置しないようにする。
+- スライスまたはセグメントを、合計値または全体に対するパーセンテージ値として比較する。
+- カテゴリのグループがどのようにより小さなセグメントに分割されるかを表示する。
+- 小さい非階層データ セット (6 ～ 8 セグメント未満のデータ) を表示する。
+- データ セグメントの合計が 100% になるようにする。
+- データの順序を最大 (最高) から最小 (最低) に並べ替える。
+- 12 時の位置から始めて時計回りに進む標準的なプレゼンテーション方法を使用する。
+- カラー パレットがセグメント/スライスで識別できるようにする。
+- データラベルを読みやすくするため、セグメントと凡例のどちらに配置するべきか検討する。
+- より分かりやすい表現のために、円の代わりに棒またはリング チャートを選択する。
+- 比較分析のために複数の円チャートを並べて配置しないようにする。
 
 以下の場合に円チャートを使用しないでください。
 
-*   経時変化を比較する場合 - 棒チャート、折れ線チャート、またはエリア チャートを使用してください。
-*   正確なデータ比較が必要な場合 - 棒チャート、折れ線チャート、またはエリア チャートを使用してください。
-*   6 セグメントまたは 8 セグメント (大量のデータ) がある場合 - データ ストーリーに適した棒チャート、折れ線チャート、またはエリア チャートを検討してください。
-*   棒チャートで値の違いがわかりやすくなります。
+- 経時変化を比較する場合 - 棒チャート、折れ線チャート、またはエリア チャートを使用してください。
+- 正確なデータ比較が必要な場合 - 棒チャート、折れ線チャート、またはエリア チャートを使用してください。
+- 6 セグメントまたは 8 セグメント (大量のデータ) がある場合 - データ ストーリーに適した棒チャート、折れ線チャート、またはエリア チャートを検討してください。
+- 棒チャートで値の違いがわかりやすくなります。
 
 ## Angular 円チャートの凡例
 
@@ -121,16 +121,16 @@ Angular 円チャートは、データを解析するためのビューアー �
 
 円チャート コンポーネントは、選択モードを 3 つコンポーネントサポートします。
 
-*   Single - single モードに設定すると、一度に 1 つのスライスのみ選択します。他のスライスを選択すると、最初に選択したスライスは選択解除され、新しいスライスが選択されます。
-*   Multiple - Multiple モードに設定すると、一度に複数のスライスを選択します。スライスをクリックするとスライスが選択され、他のスライスをクリックすると、最初のスライスも、新しくクリックしたスライスも選択されます。
-*   手動 - Manual モードに設定すると、選択は無効化されます。
+- Single - single モードに設定すると、一度に 1 つのスライスのみ選択します。他のスライスを選択すると、最初に選択したスライスは選択解除され、新しいスライスが選択されます。
+- Multiple - Multiple モードに設定すると、一度に複数のスライスを選択します。スライスをクリックするとスライスが選択され、他のスライスをクリックすると、最初のスライスも、新しくクリックしたスライスも選択されます。
+- 手動 - Manual モードに設定すると、選択は無効化されます。
 
 円チャート コンポーネントには、選択機能に関連する 4 つのイベントがあります。
 
-*   SelectedItemChanging
-*   SelectedItemChanged
-*   SelectedItemsChanging
-*   SelectedItemsChanged
+- SelectedItemChanging
+- SelectedItemChanged
+- SelectedItemsChanging
+- SelectedItemsChanged
 
 「Changing」で終わるイベントはキャンセル可能なイベントです。すなわち、イベント引数プロパティ `Cancel` を true に設定することで、スライスの選択を停止します。True に設定すると、関連付けられたプロパティは更新されず、その結果スライスは選択されません。この設定はたとえば、スライスのデータによって一定のスライスの選択を無効化する場合に使用します。
 
@@ -188,20 +188,20 @@ Angular 円チャートは、データを解析するためのビューアー �
 
 ## その他のリソース
 
-*   [ドーナツ チャート](donut-chart.md)
-*   [極座標チャート](polar-chart.md)
-*   [ラジアル チャート](radial-chart.md)
+- [ドーナツ チャート](donut-chart.md)
+- [極座標チャート](polar-chart.md)
+- [ラジアル チャート](radial-chart.md)
 
 ## API リファレンス
 
 以下のテーブルは、上記のセクションで説明した API メンバーをリストします。
 
-*   [`legendItemBadgeTemplate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#legendItemBadgeTemplate)
-*   [`legendItemTemplate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#legendItemTemplate)
-*   [`legendLabelMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#legendLabelMemberPath)
-*   [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#othersCategoryThreshold)
-*   [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#othersCategoryType)
-*   [`selectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#selectionMode)
+- [`legendItemBadgeTemplate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#legendItemBadgeTemplate)
+- [`legendItemTemplate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#legendItemTemplate)
+- [`legendLabelMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#legendLabelMemberPath)
+- [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#othersCategoryThreshold)
+- [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#othersCategoryType)
+- [`selectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpiechartbasecomponent.html#selectionMode)
 
 | チャート タイプ       | コントロール名   | API メンバー |
 | -----------------|----------------|------------ |

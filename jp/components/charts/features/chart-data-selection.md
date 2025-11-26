@@ -16,18 +16,18 @@ Angular {ComponentTitle} の Ignite UI for Angular 選択機能を使用する�
 
 デフォルトの動作 [`selectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#selectionMode) はオフになっており、次のいずれかのオプションを選択する必要があります。`{ComponentName}` に使用可能な選択モードがいくつかあります。
 
-*   **Auto**
-*   **None**
-*   **Brighten**
-*   **FadeOthers**
-*   **GrayscaleOthers**
-*   **FocusColorThickOutline**
-*   **FocusColorOutline**
-*   **SelectionColorThickOutline**
-*   **SelectionColorOutline**
-*   **FocusColorFill**
-*   **SelectionColorFill**
-*   **ThickOutline**
+- **Auto**
+- **None**
+- **Brighten**
+- **FadeOthers**
+- **GrayscaleOthers**
+- **FocusColorThickOutline**
+- **FocusColorOutline**
+- **SelectionColorThickOutline**
+- **SelectionColorOutline**
+- **FocusColorFill**
+- **SelectionColorFill**
+- **ThickOutline**
 
 `Brighten` は選択した項目をフェードアウトしますが、`FadeOthers` は反対の効果を引き起こします。
 `GrayscaleOthers` は `FadeOthers` と同様に動作しますが、シリーズの残りの部分にはグレー色を表示します。これは [`selectionBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#selectionBrush) 設定をオーバーライドすることに注意してください。
@@ -35,14 +35,14 @@ Angular {ComponentTitle} の Ignite UI for Angular 選択機能を使用する�
 
 併せて、どの項目を選択するかをより細かく制御できる [`selectionBehavior`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#selectionBehavior) も利用できます。Auto のデフォルトの動作は `PerSeriesAndDataItemMultiSelect` です。
 
-*   **Auto**
-*   **PerDataItemMultiSelect**
-*   **PerDataItemSingleSelect**
-*   **PerSeriesAndDataItemMultiSelect**
-*   **PerSeriesAndDataItemSingleSelect**
-*   **PerSeriesAndDataItemGlobalSingleSelect**
-*   **PerSeriesMultiSelect**
-*   **PerSeriesSingleSelect**
+- **Auto**
+- **PerDataItemMultiSelect**
+- **PerDataItemSingleSelect**
+- **PerSeriesAndDataItemMultiSelect**
+- **PerSeriesAndDataItemSingleSelect**
+- **PerSeriesAndDataItemGlobalSingleSelect**
+- **PerSeriesMultiSelect**
+- **PerSeriesSingleSelect**
 
 ## Color Fill (塗りつぶし) による選択の設定
 

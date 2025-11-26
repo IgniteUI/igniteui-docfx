@@ -153,23 +153,23 @@ worksheet.columns(2).cellFormat.formatString = "\"$\"#,##0.00";
 
 [`CellFill`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.cellfill.html) クラスで静的なプロパティおよびメソッドを使用してすべての可能な塗りつぶしタイプを作成できます。以下の通りです:
 
-*   `NoColor` - 色なしの塗りつぶしを表すプロパティ。ワークシートの背景画像がある場合は透けて見えます。
+- `NoColor` - 色なしの塗りつぶしを表すプロパティ。ワークシートの背景画像がある場合は透けて見えます。
 
-*   `CreateSolidFill` - Solid のパターン スタイルと、メソッドで指定された [`color`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbookcolorinfo.html#color) または [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbookcolorinfo.html) に設定された背景色を持つ [`CellFillPattern`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.cellfillpattern.html) インスタンスを返します。
+- `CreateSolidFill` - Solid のパターン スタイルと、メソッドで指定された [`color`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbookcolorinfo.html#color) または [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbookcolorinfo.html) に設定された背景色を持つ [`CellFillPattern`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.cellfillpattern.html) インスタンスを返します。
 
-*   `CreatePatternFill` - 指定されたパターン スタイルと、背景とパターンの色に指定された [`color`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbookcolorinfo.html#color) または [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbookcolorinfo.html) 値がある [`CellFillPattern`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.cellfillpattern.html) インスタンスを返します。
+- `CreatePatternFill` - 指定されたパターン スタイルと、背景とパターンの色に指定された [`color`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbookcolorinfo.html#color) または [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbookcolorinfo.html) 値がある [`CellFillPattern`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.cellfillpattern.html) インスタンスを返します。
 
-*   `CreateLinearGradientFill` - 角度とグラデーション境界が指定された [`CellFillLinearGradient`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.cellfilllineargradient.html) インスタンスを返します。
+- `CreateLinearGradientFill` - 角度とグラデーション境界が指定された [`CellFillLinearGradient`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.cellfilllineargradient.html) インスタンスを返します。
 
-*   `CreateRectangularGradientFill` - 内側の長方形とグラデーション境界の左、上、右、下が指定された [`CellFillRectangularGradient`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.cellfillrectangulargradient.html) インスタンスを返します。内側の四角形値が指定されていない場合、セルの中心が内側の四角形として使用されます。
+- `CreateRectangularGradientFill` - 内側の長方形とグラデーション境界の左、上、右、下が指定された [`CellFillRectangularGradient`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.cellfillrectangulargradient.html) インスタンスを返します。内側の四角形値が指定されていない場合、セルの中心が内側の四角形として使用されます。
 
 以下は、作成可能なさまさまな塗りつぶしを表す派生タイプです。
 
-*   [`CellFillPattern`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.cellfillpattern.html) - 色なし、単色、パターン塗りつぶしのセル塗りつぶしを表すパターン。Excel の \[セルの書式設定] ダイアログの \[塗りつぶし] タブに、カラー セクションに直接対応する背景色の情報とパターンの色があります。
+- [`CellFillPattern`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.cellfillpattern.html) - 色なし、単色、パターン塗りつぶしのセル塗りつぶしを表すパターン。Excel の \[セルの書式設定] ダイアログの \[塗りつぶし] タブに、カラー セクションに直接対応する背景色の情報とパターンの色があります。
 
-*   [`CellFillLinearGradient`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.cellfilllineargradient.html) - 線状グラデーションの塗りつぶしを表します。角度 (左から右の線状グラデーションの時計回りの角度) と、グラデーションの長さに沿って 2 つ以上の色のトランジションを説明するグラデーション境界コレクションがあります。
+- [`CellFillLinearGradient`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.cellfilllineargradient.html) - 線状グラデーションの塗りつぶしを表します。角度 (左から右の線状グラデーションの時計回りの角度) と、グラデーションの長さに沿って 2 つ以上の色のトランジションを説明するグラデーション境界コレクションがあります。
 
-*   [`CellFillRectangularGradient`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.cellfillrectangulargradient.html) - 長方形グラデーションの塗りつぶしを表します。相対座標で、グラデーションが開始し、セルの端で終わる内側の四角形を説明する上、左、右、下の値があります。内側の四角形からセルの端までのパスに沿って 2 つ以上の色のトランジションを説明するグラデーション境界コレクションもあります。
+- [`CellFillRectangularGradient`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.cellfillrectangulargradient.html) - 長方形グラデーションの塗りつぶしを表します。相対座標で、グラデーションが開始し、セルの端で終わる内側の四角形を説明する上、左、右、下の値があります。内側の四角形からセルの端までのパスに沿って 2 つ以上の色のトランジションを説明するグラデーション境界コレクションもあります。
 
 以下のコード スニペットは、[`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetcell.html) で単色の塗りつぶしを作成する方法を示します。
 
@@ -185,41 +185,41 @@ worksheet.rows(0).cells(0).cellFormat.fill = cellFill;
 
 以下は色を定義する方法です。
 
-*   自動的な色 (WindowText システム カラー)
+- 自動的な色 (WindowText システム カラー)
 
-*   任意のユーザー定義の RGB カラー
+- 任意のユーザー定義の RGB カラー
 
-*   テーマの色
+- テーマの色
 
 RGB またはテーマの色が使用される場合、色を明るくする、または暗くするためにオプションの濃淡を適用できます。この濃淡は Microsoft Excel 2007 UI では直接設定できませんが、ユーザーに表示されるカラー パレットのさまざまな色が濃淡が適用された実際的なテーマの色になります。
 
 以下は各ワークブックと関連付けされた 12 色のテーマ色です。
 
-*   ライト 1
+- ライト 1
 
-*   ライト 2
+- ライト 2
 
-*   ダーク 1
+- ダーク 1
 
-*   ダーク 2
+- ダーク 2
 
-*   アクセント1
+- アクセント1
 
-*   アクセント2
+- アクセント2
 
-*   アクセント3
+- アクセント3
 
-*   アクセント4
+- アクセント4
 
-*   アクセント5
+- アクセント5
 
-*   アクセント6
+- アクセント6
 
-*   ハイパーリンク
+- ハイパーリンク
 
-*   表示済みハイパーリンク
+- 表示済みハイパーリンク
 
-*   これらはワークブックが作成されるときの既定値で、Excel を介してカスタマイズできます。
+- これらはワークブックが作成されるときの既定値で、Excel を介してカスタマイズできます。
 
 色は、シールされた不変クラスである [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbookcolorinfo.html) クラスで定義されます。このクラスには静的な `Automatic` プロパティがあり、自動的な色を返します。色またはテーマ値とオプションの濃淡で [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbookcolorinfo.html) インスタンスを作成することを可能にするさまざまなコンストラクタがあります。
 
@@ -297,27 +297,27 @@ worksheet.rows(0).cells(2).cellFormat.alignment = HorizontalCellAlignment.Center
 
 数字を表示して “General” または “@” を含む書式文字列を使用するとき、セルの幅に合った書式設定を見つけるさまざまな書式があります。以下は書式の例です。
 
-*   **Normal Value** - スペースに制限がない場合と同じように数字が表示されます。
+- **Normal Value** - スペースに制限がない場合と同じように数字が表示されます。
 
-*   **10 進数の削除** - 10 進数は、一致する書式が見つかるまで 1 つづつ削除されます。たとえば、値 12345.6789 値は以下の書式に一致するまで減らされます。12345.679、12345.68、12345.7、12346。最初の有効数字が 1 つだけ残るとこれは停止します。したがって、たとえば 0.0001234567890 のような値は 0.0001 に短縮されます。
+- **10 進数の削除** - 10 進数は、一致する書式が見つかるまで 1 つづつ削除されます。たとえば、値 12345.6789 値は以下の書式に一致するまで減らされます。12345.679、12345.68、12345.7、12346。最初の有効数字が 1 つだけ残るとこれは停止します。したがって、たとえば 0.0001234567890 のような値は 0.0001 に短縮されます。
 
-*   **指数、5 decimal digits** - 数字は 1.23457E+09 または 1.23457E-04 などの 0.00000E+00 の形式で表示されます。
+- **指数、5 decimal digits** - 数字は 1.23457E+09 または 1.23457E-04 などの 0.00000E+00 の形式で表示されます。
 
-*   **指数、4 decimal digits** - 数字は 1.23457E+09 または 1.23457E-04 などの 0.0000E+00 の形式で表示されます。
+- **指数、4 decimal digits** - 数字は 1.23457E+09 または 1.23457E-04 などの 0.0000E+00 の形式で表示されます。
 
-*   **指数、3 decimal digits** - 数字は 1.235E+09 または 1.235E-0 などの 0.000E+00 の形式で表示されます。
+- **指数、3 decimal digits** - 数字は 1.235E+09 または 1.235E-0 などの 0.000E+00 の形式で表示されます。
 
-*   **指数、2 decimal digits** - 数字は 1.23E+09 または 1.23E-04 などの 0.00E+00 の形式で表示されます。
+- **指数、2 decimal digits** - 数字は 1.23E+09 または 1.23E-04 などの 0.00E+00 の形式で表示されます。
 
-*   **指数、1 decimal digits** - 数字は 1.2E+09 または 1.2E-04 などの 0.0E+00 の形式で表示されます。
+- **指数、1 decimal digits** - 数字は 1.2E+09 または 1.2E-04 などの 0.0E+00 の形式で表示されます。
 
-*   **指数、0 decimal digits** - 数字は 1E+09 または 1E-04 などの 0E+00 の形式で表示されます。
+- **指数、0 decimal digits** - 数字は 1E+09 または 1E-04 などの 0E+00 の形式で表示されます。
 
-*   **四捨五入された値** - 最初の有効数字が数の 10 進部分にある場合、値は直近の整数値に丸められます。たとえば、値 0.0001234567890 の場合、0 に四捨五入され、セルに表示されるテキストは 0になります。
+- **四捨五入された値** - 最初の有効数字が数の 10 進部分にある場合、値は直近の整数値に丸められます。たとえば、値 0.0001234567890 の場合、0 に四捨五入され、セルに表示されるテキストは 0になります。
 
-*   **Hash marks** - 数の凝縮されたバージョンを表示できる場合、ハッシュ (#) がセルの幅一杯繰り返されます。
+- **Hash marks** - 数の凝縮されたバージョンを表示できる場合、ハッシュ (#) がセルの幅一杯繰り返されます。
 
-*   **Empty string** - ハッシュ マークでセルを埋められない場合、空の文字列が表示されるセル テキストとして返されます。
+- **Empty string** - ハッシュ マークでセルを埋められない場合、空の文字列が表示されるセル テキストとして返されます。
 
 数値の書式文字列に General または @ が含まれない場合、以下の段階のサイズ変更しかありません。普通の値、ハッシュ マーク、空の文字列。
 
@@ -340,20 +340,20 @@ var cellText = worksheet.rows(0).cells(0).getText();
 
 ## API リファレンス
 
-*   `Add`
-*   [`CellFillLinearGradient`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.cellfilllineargradient.html)
-*   [`CellFillPattern`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.cellfillpattern.html)
-*   [`CellFillRectangularGradient`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.cellfillrectangulargradient.html)
-*   [`CellFill`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.cellfill.html)
-*   [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetcell.html#cellFormat)
-*   [`displayOptions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheet.html#displayOptions)'
-*   [`formula`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetcell.html#formula)
-*   [`mergedCellsRegions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheet.html#mergedCellsRegions)
-*   [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbookcolorinfo.html)
-*   [`WorkbookStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbookstyle.html)
-*   [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.sheet.html#workbook)
-*   [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetcell.html)
-*   [`WorksheetColumn`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetcolumn.html)
-*   [`WorksheetRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetregion.html)
-*   [`WorksheetRow`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetrow.html)
-*   [`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetcell.html#worksheet)
+- `Add`
+- [`CellFillLinearGradient`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.cellfilllineargradient.html)
+- [`CellFillPattern`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.cellfillpattern.html)
+- [`CellFillRectangularGradient`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.cellfillrectangulargradient.html)
+- [`CellFill`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.cellfill.html)
+- [`cellFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetcell.html#cellFormat)
+- [`displayOptions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheet.html#displayOptions)'
+- [`formula`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetcell.html#formula)
+- [`mergedCellsRegions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheet.html#mergedCellsRegions)
+- [`WorkbookColorInfo`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbookcolorinfo.html)
+- [`WorkbookStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbookstyle.html)
+- [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.sheet.html#workbook)
+- [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetcell.html)
+- [`WorksheetColumn`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetcolumn.html)
+- [`WorksheetRegion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetregion.html)
+- [`WorksheetRow`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetrow.html)
+- [`worksheet`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetcell.html#worksheet)

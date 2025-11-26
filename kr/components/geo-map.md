@@ -39,9 +39,9 @@ For more details:
 
 To use the geographic map component, you need to first install these packages:
 
-*   **npm install --save igniteui-angular-core**
-*   **npm install --save igniteui-angular-charts**
-*   **npm install --save igniteui-angular-maps**
+- **npm install --save igniteui-angular-core**
+- **npm install --save igniteui-angular-charts**
+- **npm install --save igniteui-angular-maps**
 
 <!-- end: Angular, React, WebComponents -->
 

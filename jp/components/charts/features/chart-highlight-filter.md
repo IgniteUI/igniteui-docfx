@@ -87,9 +87,9 @@ HighlightedHighMemberPath, HighlightedLowMemberPath, HighlightedOpenMemberPath, 
 
 関連するチャート機能の詳細については、次のトピックを参照してください。
 
-*   [チャートのハイライト表示](chart-highlighting.md)
-*   [チャートのデータ ツールチップ](chart-data-tooltip.md)
-*   [チャートのデータ集計](chart-data-aggregations.md)
+- [チャートのハイライト表示](chart-highlighting.md)
+- [チャートのデータ ツールチップ](chart-data-tooltip.md)
+- [チャートのデータ集計](chart-data-aggregations.md)
 
 ## API リファレンス
 

@@ -112,8 +112,8 @@ _language: ja
 
 関連するチャート機能の詳細については、以下のトピックを参照してください。
 
-*   [軸レイアウト](chart-axis-layouts.md)
-*   [軸オプション](chart-axis-options.md)
+- [軸レイアウト](chart-axis-layouts.md)
+- [軸オプション](chart-axis-options.md)
 
 ## API リファレンス
 

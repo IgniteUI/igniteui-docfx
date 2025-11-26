@@ -50,9 +50,9 @@ Angular チャートは、数百万のデータ ポイントを描画し、そ�
 
 多数のデータ ポイント (10,000 以上など) を含むデータ ソースをプロットする必要がある場合は、その目的のために特別にデザインされた次のタイプのシリーズのいずれかで Angular [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) を使用することをお勧めします。
 
-*   [カテゴリ ポイント チャート](../types/point-chart.md) や[散布マーカー チャート](../types/scatter-chart.md#angular-散布マーカー-チャート) の代わりに[散布高密度チャート](../types/scatter-chart.md#angular-散布高密度チャート)
-*   [カテゴリ折れ線チャート](../types/line-chart.md#angular-折れ線チャートの例) や[散布折れ線チャート](../types/scatter-chart.md#angular-散布折れ線チャート) の代わりに[散布ポリライン チャート](../types/shape-chart.md#angular-散布ポリライン-チャート)
-*   [カテゴリ エリア チャート](../types/area-chart.md#angular-エリア-チャートの例) や[縦棒チャート](../types/column-chart.md#angular-縦棒チャートの例) の代わりに[散布ポリゴン チャート](../types/shape-chart.md#angular-散布ポリゴン-チャート)
+- [カテゴリ ポイント チャート](../types/point-chart.md) や[散布マーカー チャート](../types/scatter-chart.md#angular-散布マーカー-チャート) の代わりに[散布高密度チャート](../types/scatter-chart.md#angular-散布高密度チャート)
+- [カテゴリ折れ線チャート](../types/line-chart.md#angular-折れ線チャートの例) や[散布折れ線チャート](../types/scatter-chart.md#angular-散布折れ線チャート) の代わりに[散布ポリライン チャート](../types/shape-chart.md#angular-散布ポリライン-チャート)
+- [カテゴリ エリア チャート](../types/area-chart.md#angular-エリア-チャートの例) や[縦棒チャート](../types/column-chart.md#angular-縦棒チャートの例) の代わりに[散布ポリゴン チャート](../types/shape-chart.md#angular-散布ポリゴン-チャート)
 
 ### データ構造
 
@@ -318,10 +318,10 @@ this.LineSeries.Resolution = 10;
 
 [`volumeType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#volumeType) プロパティの設定はチャート パフォーマンスに次の影響を与える可能性があります:
 
-*   [`None`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#None) - ボリューム ペインが表示されないため、最も簡易です。
-*   [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#Line) - 描画するのにより手間がかかるボリューム タイプです。データ ポイントの大量を描画するか、複数のデータ ソースをプロットする場合に使用することをお勧めします。
-*   [`Area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#Area) - [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#Line) ボリューム タイプより描画に手間がかかります。
-*   [`Column`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#Column) - [`Area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#Area) ボリューム タイプより描画に手間がかかります。1 つ ～ 3 つの株のボリューム データを描画する場合にお勧めします。
+- [`None`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#None) - ボリューム ペインが表示されないため、最も簡易です。
+- [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#Line) - 描画するのにより手間がかかるボリューム タイプです。データ ポイントの大量を描画するか、複数のデータ ソースをプロットする場合に使用することをお勧めします。
+- [`Area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#Area) - [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#Line) ボリューム タイプより描画に手間がかかります。
+- [`Column`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#Column) - [`Area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#Area) ボリューム タイプより描画に手間がかかります。1 つ ～ 3 つの株のボリューム データを描画する場合にお勧めします。
 
 ## データ チャートのパフォーマンス
 
@@ -350,43 +350,43 @@ this.LineSeries.Resolution = 10;
 
 関連するチャート タイプの詳細については、以下のトピックを参照してください。
 
-*   [エリア チャート](../types/area-chart.md)
-*   [棒チャート](../types/bar-chart.md)
-*   [バブル チャート](../types/bubble-chart.md)
-*   [縦棒チャート](../types/column-chart.md)
-*   [ドーナツ チャート](../types/donut-chart.md)
-*   [円チャート](../types/pie-chart.md)
-*   [ポイント チャート](../types/point-chart.md)
-*   [極座標チャート](../types/polar-chart.md)
-*   [ラジアル チャート](../types/radial-chart.md)
-*   [シェープ チャート](../types/shape-chart.md)
-*   [スプライン チャート](../types/spline-chart.md)
-*   [散布図](../types/scatter-chart.md)
-*   [積層型チャート](../types/stacked-chart.md)
-*   [ステップ チャート](../types/step-chart.md)
-*   [株価チャート](../types/stock-chart.md)
-*   [チャート アニメーション](chart-animations.md)
-*   [チャート注釈](chart-annotations.md)
-*   [チャートのハイライト表示](chart-highlighting.md)
-*   [チャート マーカー](chart-markers.md)
-*   [チャート オーバーレイ](chart-overlays.md)
-*   [チャート トレンドライン](chart-trendlines.md)
+- [エリア チャート](../types/area-chart.md)
+- [棒チャート](../types/bar-chart.md)
+- [バブル チャート](../types/bubble-chart.md)
+- [縦棒チャート](../types/column-chart.md)
+- [ドーナツ チャート](../types/donut-chart.md)
+- [円チャート](../types/pie-chart.md)
+- [ポイント チャート](../types/point-chart.md)
+- [極座標チャート](../types/polar-chart.md)
+- [ラジアル チャート](../types/radial-chart.md)
+- [シェープ チャート](../types/shape-chart.md)
+- [スプライン チャート](../types/spline-chart.md)
+- [散布図](../types/scatter-chart.md)
+- [積層型チャート](../types/stacked-chart.md)
+- [ステップ チャート](../types/step-chart.md)
+- [株価チャート](../types/stock-chart.md)
+- [チャート アニメーション](chart-animations.md)
+- [チャート注釈](chart-annotations.md)
+- [チャートのハイライト表示](chart-highlighting.md)
+- [チャート マーカー](chart-markers.md)
+- [チャート オーバーレイ](chart-overlays.md)
+- [チャート トレンドライン](chart-trendlines.md)
 
 ## API リファレンス
 
 以下は、上記のセクションで説明した API メンバーのリストです。
 
-*   [`resolution`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#resolution)
-*   [`indicatorTypes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#indicatorTypes)
-*   [`overlayTypes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#overlayTypes)
-*   [`volumeType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#volumeType)
-*   [`zoomSliderType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#zoomSliderType)
-*   [`xAxisMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#xAxisMode)
-*   [`yAxisMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#yAxisMode)
-*   [`xAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#xAxisInterval)
-*   [`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#yAxisInterval)
-*   [`xAxisMinorInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#xAxisMinorInterval)
-*   [`yAxisMinorInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#yAxisMinorInterval)
-*   [`xAxisLabelVisibility`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxxychartcomponent.html#xAxisLabelVisibility)
-*   [`yAxisLabelVisibility`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxxychartcomponent.html#yAxisLabelVisibility)
-*   [`yAxisIsLogarithmic`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#yAxisIsLogarithmic)
+- [`resolution`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#resolution)
+- [`indicatorTypes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#indicatorTypes)
+- [`overlayTypes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#overlayTypes)
+- [`volumeType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#volumeType)
+- [`zoomSliderType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#zoomSliderType)
+- [`xAxisMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#xAxisMode)
+- [`yAxisMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#yAxisMode)
+- [`xAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#xAxisInterval)
+- [`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#yAxisInterval)
+- [`xAxisMinorInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#xAxisMinorInterval)
+- [`yAxisMinorInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#yAxisMinorInterval)
+- [`xAxisLabelVisibility`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxxychartcomponent.html#xAxisLabelVisibility)
+- [`yAxisLabelVisibility`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxxychartcomponent.html#yAxisLabelVisibility)
+- [`yAxisIsLogarithmic`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#yAxisIsLogarithmic)

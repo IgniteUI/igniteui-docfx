@@ -31,40 +31,40 @@ The Ignite UI for Angular ドーナツ チャートは[円チャート](pie-char
 
 ドーナツ チャートは小さなデータ セットに適しており、一目で読みやすいです。ドーナツ チャートは、部分から全体への視覚化の 1 つのタイプにすぎません。その他は次のとおりです。
 
-*   [円](pie-chart.md)
+- [円](pie-chart.md)
 
 <!-- - Funnel  -->
 
-*   [積層型エリア](area-chart.md)
-*   [積層型 100% エリア (積層型パーセンテージ エリア)](area-chart.md)
-*   [積層型棒](bar-chart.md)
-*   [積層型 100% 棒 (積層型パーセンテージ棒)](bar-chart.md)
-*   [ツリーマップ](treemap-chart.md)
-*   [ウォーターフォール](column-chart.md)
+- [積層型エリア](area-chart.md)
+- [積層型 100% エリア (積層型パーセンテージ エリア)](area-chart.md)
+- [積層型棒](bar-chart.md)
+- [積層型 100% 棒 (積層型パーセンテージ棒)](bar-chart.md)
+- [ツリーマップ](treemap-chart.md)
+- [ウォーターフォール](column-chart.md)
 
 Angular ドーナツ チャートには、次のようなデータを分析するためのビューア ツールを提供するインタラクティブ機能が含まれています。
 
-*   凡例
-*   スライスの分割
-*   スライスの選択
-*   チャート アニメーション
+- 凡例
+- スライスの分割
+- スライスの選択
+- チャート アニメーション
 
 ### ドーナツ チャートのベスト プラクティス:
 
-*   複数のデータ セットを使用して、データを輪に表示します。
-*   データをすばやく説明するために、ドーナツの穴の中に値やラベルなどの情報を配置します。
-*   スライスまたはセグメントを、合計値または全体に比例するパーセンテージ値として比較します。
-*   カテゴリのグループがどのように小さなセグメントに分割されるかを示します。
-*   データ セグメントの合計が 100% になるようにします。
-*   パーツのセグメント/スライスでカラー パレットを区別できるようにします。
+- 複数のデータ セットを使用して、データを輪に表示します。
+- データをすばやく説明するために、ドーナツの穴の中に値やラベルなどの情報を配置します。
+- スライスまたはセグメントを、合計値または全体に比例するパーセンテージ値として比較します。
+- カテゴリのグループがどのように小さなセグメントに分割されるかを示します。
+- データ セグメントの合計が 100% になるようにします。
+- パーツのセグメント/スライスでカラー パレットを区別できるようにします。
 
 ### 以下の場合にドーナツ チャートを使用しないでください:
 
-*   時間の経過に伴う変化の比較の場合 - [棒](bar-chart.md)、[折れ線](line-chart.md)、または[エリア](area-chart.md)チャートを使用します。
-*   正確なデータ比較が必要である場合 - [棒](bar-chart.md)、[折れ線](line-chart.md)、または[エリア](area-chart.md)チャートを使用します。
-*   6 つまたは 8 つを超えるセグメント (大量のデータ) がある場合 — データ ストーリーに適している場合は、[棒](bar-chart.md)、[折れ線](line-chart.md)、または[エリア](area-chart.md)チャートを検討してください。
-*   [棒](bar-chart.md)チャートで、ビューアが値の違いを認識しやすくなります。
-*   負のデータがある場合、これはドーナツ チャートで表すことができません。
+- 時間の経過に伴う変化の比較の場合 - [棒](bar-chart.md)、[折れ線](line-chart.md)、または[エリア](area-chart.md)チャートを使用します。
+- 正確なデータ比較が必要である場合 - [棒](bar-chart.md)、[折れ線](line-chart.md)、または[エリア](area-chart.md)チャートを使用します。
+- 6 つまたは 8 つを超えるセグメント (大量のデータ) がある場合 — データ ストーリーに適している場合は、[棒](bar-chart.md)、[折れ線](line-chart.md)、または[エリア](area-chart.md)チャートを検討してください。
+- [棒](bar-chart.md)チャートで、ビューアが値の違いを認識しやすくなります。
+- 負のデータがある場合、これはドーナツ チャートで表すことができません。
 
 ## ドーナツ チャート - スライスの選択
 
@@ -96,16 +96,16 @@ Angular ドーナツ チャートに複数の輪を表示して、各輪を異�
 
 関連するチャートタイプの詳細については、以下のトピックを参照してください。
 
-*   [円チャート](pie-chart.md)
-*   [極座標チャート](polar-chart.md)
-*   [ラジアル チャート](radial-chart.md)
+- [円チャート](pie-chart.md)
+- [極座標チャート](polar-chart.md)
+- [ラジアル チャート](radial-chart.md)
 
 ## API リファレンス
 
 以下のテーブルは、上記のセクションで説明した API メンバーをリストします。
 
-*   [`IgxDoughnutChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdoughnutchartcomponent.html)
-*   [`allowSliceExplosion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdoughnutchartcomponent.html#allowSliceExplosion)
-*   [`allowSliceSelection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdoughnutchartcomponent.html#allowSliceSelection)
-*   [`innerExtent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdoughnutchartcomponent.html#innerExtent)
-*   `SliceClick`
+- [`IgxDoughnutChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdoughnutchartcomponent.html)
+- [`allowSliceExplosion`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdoughnutchartcomponent.html#allowSliceExplosion)
+- [`allowSliceSelection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdoughnutchartcomponent.html#allowSliceSelection)
+- [`innerExtent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdoughnutchartcomponent.html#innerExtent)
+- `SliceClick`

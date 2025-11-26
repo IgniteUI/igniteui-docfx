@@ -35,10 +35,10 @@ import { IgxShapefileRecord } from 'igniteui-angular-core';
 
 次のコード例は、シェイプ スタイリングを設定する 4 つの異なる方法を提供する[シェイプ スタイリング ユーティリティ](geo-map-resources-shape-styling-utility.md) ファイルを使用していることに注意してください。
 
-*   [シェイプ比較スタイリング](#シェイプ比較スタイリング)
-*   [シェイプ ランダム スタイリング](#シェイプ-ランダム-スタイリング)
-*   [シェイプ範囲スタイリング](#シェイプ範囲スタイリング)
-*   [シェイプ スケール スタイリング](#シェイプ-スケール-スタイリング)
+- [シェイプ比較スタイリング](#シェイプ比較スタイリング)
+- [シェイプ ランダム スタイリング](#シェイプ-ランダム-スタイリング)
+- [シェイプ範囲スタイリング](#シェイプ範囲スタイリング)
+- [シェイプ スケール スタイリング](#シェイプ-スケール-スタイリング)
 
 ## シェイプ ランダム スタイリング
 
@@ -171,5 +171,5 @@ public onStylingShape(s: IgxGeographicShapeSeries, args: IgxStyleShapeEventArgs)
 
 ## API リファレンス
 
-*   [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicshapeseriescomponent.html)
-*   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html)
+- [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicshapeseriescomponent.html)
+- [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html)
