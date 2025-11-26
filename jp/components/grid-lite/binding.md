@@ -1,54 +1,52 @@
 ---
-title: Angular Grid Lite Data Binding | Ignite UI for Angular | MIT license
-_description: Data binding for Angular Grid Lite. Create apps with our open-source Angular Grid Lite. It’s lightweight and packed with essential features. Try now.
-_keywords: data binding, Infragistics
+title: Angular Grid Lite データ バインディング | Ignite UI for Angular | MIT ライセンス
+_description: Angular Grid Lite のデータ バインディング。オープンソースの Angular Grid Lite を使用してアプリを作成できます。軽量でありながら、必要な機能がすべて揃っています。今すぐお試しください。
+_keywords: データ バインディング, インフラジスティックス
 _license: MIT
 mentionedTypes: [{ComponentApiMembers}]
 namespace: Infragistics.Controls
 _language: ja
 ---
 
-# Angular Grid Lite Data Binding
+# Angular Grid Lite データ バインディング
 
-The Grid Lite accepts and array of plain objects as a data source. Each grid row is the rendered representation of a data record in the array with row cells being controlled by the column configuration.
+Grid Lite は、データ ソースとしてプレーン オブジェクトの配列を受け入れます。各グリッド行は配列内のデータ レコードをレンダリングしたもので、行のセルは列の設定に基づいて制御されます。
 
-When applying data transformations, such as sorting and filtering, the grid does not modify the original data reference. That is to say, data transformations will not be reflected in the original source. The grid does not track changes to the objects inside the data array, so direct modification of the data objects will not be reflected.
+データの変換 (ソートやフィルターなど) を適用する場合、グリッドは元のデータ参照を変更しません。つまり、データ変換は元のソースには反映されません。グリッドはデータ配列内のオブジェクトの変更を追跡しないため、データ オブジェクトを直接変更しても反映されません。
 
-## Change the Data Source at Runtime
+## 実行時にデータ ソースを変更する
 
-The component supports changing its data source at runtime. If the new source has a different "shape" than the previous one make sure to update your column configuration as well.
+コンポーネントは実行時にデータ ソースの変更をサポートします。新しいソースが前のものと異なる「形状」を持つ場合、列の設定も更新する必要があります。
 
 ```typescript
 grid.data = [...{
-  /** records follow */
+  /** レコードが続きます */
 }];
 
-// Update the column configuration to represent the new data.
+// 新しいデータを反映するように列の構成を更新します。
 grid.columns = [...];
 ```
 
-If the grid has **`autoGenerate`** enabled, it will "_infer_" the new column configuration only if the old one is reset.
+グリッドで **`autoGenerate`** 有効になっている場合、古い列設定をリセットした場合にのみ、新しい列設定を「推測します」。
 
 ```typescript
 grid.autoGenerate = true;
 
-/** Reset the previous column collection */
+/** 列定義 */
 grid.columns = [];
 
-/** After the new binding the grid will infer the column collection from the bound data. */
+/** 新しいバインディング後、グリッドはバインドされたデータから列コレクションを推論します。 */
 grid.data = [];
 ```
 
 >[!NOTE]
->The sort/filter states of the Grid Lite component are kept when changing the data source in this manner.
-Usually you will want to reset them by calling either **`clearSort()`** and/or **`clearFilter()`**.
+>Grid Lite のソート/フィルター状態は、この方法でデータ ソースを変更しても保持されます。通常は `clearSort()` または `clearFilter()` を呼び出してリセットすることをお勧めします。
 
-In the sample below, the grid has column auto-generation enabled. When you click on the switch data button,
-the column collection is reset, and a new data source is bound to the grid.
+以下のサンプルでは、グリッドに列の自動生成が有効になっています。データ切り替えボタンをクリックすると、列コレクションがリセットされ、新しいデータ ソースがグリッドにバインドされます。
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/data-binding-dynamic" alt="Angular Grid Lite Data Binding Example">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/data-binding-dynamic" alt="Angular Grid Lite データ バインディングの例">
 </code-view>
 
 <!-- TODO ## API References
@@ -58,13 +56,13 @@ the column collection is reset, and a new data source is bound to the grid.
 
 -->
 
-## Additional Resources
+## その他のリソース
 
-- [Column Configuration](column-configuration.md)
-- [Sorting](sorting.md)
-- [Filtering](filtering.md)
-- [Theming & Styling](theming.md)
+- [列の構成](column-configuration.md)
+- [ソート](sorting.md)
+- [フィルタリング](filtering.md)
+- [テーマ設定とスタイル設定](theming.md)
 
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-- [Grid Lite  **GitHub**](https://github.com/IgniteUI/igniteui-grid-lite)
+- [Grid Lite **GitHub**](https://github.com/IgniteUI/igniteui-grid-lite)

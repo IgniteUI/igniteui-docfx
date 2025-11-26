@@ -1,18 +1,18 @@
 ---
-title: Angular Grid Lite Cell Template | Ignite UI for Angular | MIT license
-_description: Configure and customize custom Grid Lite cell renderers. Create apps with our open-source Angular Grid Lite. Try now.
-_keywords: cell template, Infragistics
+title: Angular Grid Lite セル テンプレート | Ignite UI for Angular | MIT ライセンス
+_description: カスタム Grid Lite セル レンダラーを構成およびカスタマイズします。オープンソースの Angular Grid Lite を使用してアプリを作成できます。今すぐお試しください。
+_keywords: セル テンプレート, インフラジスティックス
 _license: MIT
 mentionedTypes: [{ComponentApiMembers}]
 namespace: Infragistics.Controls
 _language: ja
 ---
 
-# Column Cell Template
+# 列セル テンプレート
 
-By default, the grid uses the key of the column to render the value as a string inside the cell. This is fine for basic scenarios, but if you want to customize the rendered output or the final output is a combination of different data fields, you should use a cell template renderer.
+デフォルトでは、グリッドは列のキーを使用してセル内の値を文字列としてレンダリングします。基本的なシナリオではこれで問題ありませんが、レンダリング結果をカスタマイズしたい場合や、最終出力が異なるデータ フィールドの組み合わせである場合は、セル テンプレート レンダラーを使用します。
 
-To achieve that, set the **`cellTemplate`** property of the column.
+列の **`cellTemplate`** プロパティを設定することで、これを実現できます。
 
 ```typescript
 {
@@ -20,22 +20,22 @@ To achieve that, set the **`cellTemplate`** property of the column.
 }
 ```
 
-## Use as a Formatter Function
+## フォーマッタ関数として使用する
 
-For the simple scenario where some formatting is required, one can just return the formatted value. Here is an example for displaying a number value to a locale currency format:
+簡単なシナリオでは、必要に応じてフォーマット済みの値を返すだけで済みます。以下は数値をロケール通貨形式で表示する例です。
 
 ```typescript
 const { format: asCurrency } = new Intl.NumberFormat('en-EN', { style: 'currency', currency: 'EUR' });
 
 {
   ...
-  /** Return the custom currency format for a value `value = 123456.789` */
+  /** 値 `value = 123456.789` に対してカスタム通貨形式を返します。 */
   cellTemplate: (params) => asCurrency(params.value) // => "€123,456.79"
   ...
 }
 ```
 
-You can combine values different fields from the data source as well.
+データ ソース内の異なるフィールドの値を組み合わせることも可能です。
 <!-- TODO: 
 Refer to the API documentation for **`GridLiteCellContext`** for more information. -->
 
@@ -44,65 +44,61 @@ const { format: asCurrency } = new Intl.NumberFormat('en-EN', { style: 'currency
 
 {
   ...
-  /** Return the custom currency format for an order of 10 items where the price is 99.99 */
+  /** 価格が 99.99 の品目 10 個の注文に対してカスタム通貨形式を返します。 */
   cellTemplate: ({value, row}) => asCurrency(value * row.data.count) // => "€999.90"
   ...
 }
 ```
 
-## Custom DOM Templates
+## カスタム DOM テンプレート
 
-Aside from using the **`cellTemplate`** property as a value formatter, you can also create your own DOM template, which
-will be rendered inside the cell container.
+**`cellTemplate`** プロパティを値フォーマッタとして使用する以外に、独自の DOM テンプレートを作成することもできます。これはセルコンテナー内にレンダリングされます。
 
-We've decided to re-use the functionality provided by <a href="https://lit.dev/" target="_blank">Lit</a> and its
-<a href="https://lit.dev/docs/templates/expressions/" target="_blank">tagged template syntax</a> for building declarative
-DOM fragments.
+<a href="https://lit.dev/" target="_blank">Lit</a> の機能と<a href="https://lit.dev/docs/templates/expressions/" target="_blank">タグ付きテンプレート構文</a>を再利用して宣言的な DOM フラグメントを作成しています。
 
-You can template any standard DOM elements as well as web components from other libraries.
+標準の DOM 要素だけでなく、他のライブラリの Web コンポーネントもテンプレート化できます。
 
 ```typescript
-// Import the `html` tag function from the Lit package.
+// Lit パッケージから `html` タグ関数をインポートします。
 import { html } from "lit";
 
 {
   key: 'rating',
-  // Use another web component to represent the `rating` value in the grid
+  // グリッド内の `rating` 値を表すために別の Web コンポーネントを使用します。
   cellTemplate: ({ value }) => html`<igc-rating readonly value=${value}></igc-rating>`
   ...
 }
 ```
 
 >[!NOTE]
->Keep in mind the more complex and involved the template is, the greater the performance cost. Avoid complex DOM structures if performance is important.
+>テンプレートが複雑であればあるほど、パフォーマンス コストが増加します。パフォーマンスが重要な場合は複雑な DOM 構造を避けてください。
 
-## Cell Context Object
+## セル コンテキスト オブジェクト
 
-The custom cell renderer is passed an **`GridLiteCellContext`** object as a parameter with the following props:
-
+カスタム セル レンダラーには **`GridLiteCellContext`** オブジェクトがパラメータｖとして渡され、以下のプロパティを持ちます。
 
 ```typescript
 /**
- * Context object for the row cell template callback.
+ * 行セル テンプレート コールバックのコンテキスト オブジェクトです。
  */
 export interface GridLiteCellContext<
   T extends object,
   K extends Keys<T> = Keys<T>
 > {
   /**
-   * The cell element parent of the template.
+   * テンプレートのセル要素の親要素です。
    */
   parent: GridLiteCell<T>;
   /**
-   * The row element containing the cell.
+   * セルを含む行要素です。
    */
   row: GridLiteRow<T>;
   /**
-   * The current configuration for the column.
+   * この列の現在の構成です。
    */
   column: ColumnConfiguration<T, K>;
   /**
-   * The value from the data source for this cell.
+   * このセルに対するデータ ソースの値です。
    */
   value: PropertyType<T, K>;
 }
@@ -110,23 +106,23 @@ export interface GridLiteCellContext<
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/column-config-simple" alt="Angular Grid Lite Column Config Basic">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/column-config-simple" alt="Angular Grid Lite 列の基本構成">
 </code-view>
 
 <!-- TODO ## API References
 
-* `{ComponentName}`
-* `Column`
+- `{ComponentName}`
+- `Column`
 
 -->
 
-## Additional Resources
+## その他のリソース
 
-- [Column Configuration](column-configuration.md)
-- [Sorting](sorting.md)
-- [Filtering](filtering.md)
-- [Theming & Styling](theming.md)
+- [列の構成](column-configuration.md)
+- [ソート](sorting.md)
+- [フィルタリング](filtering.md)
+- [テーマ設定とスタイル設定](theming.md)
 
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-- [Grid Lite  **GitHub**](https://github.com/IgniteUI/igniteui-grid-lite)
+- [Grid Lite **GitHub**](https://github.com/IgniteUI/igniteui-grid-lite)

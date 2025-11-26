@@ -1,32 +1,32 @@
 ---
-title: Angular Grid Lite Cell Template | Ignite UI for Angular | MIT license
-_description: Grid Lite column configuration and column properties. Try our open-source Angular Grid Lite - lightweight and packed with essential features.
-_keywords: column configuration, {Platform}, {ComponentKeywords}, {ProductName}, Infragistics
+title: Angular Grid Lite 列の構成 | Ignite UI for Angular | MIT ライセンス
+_description: Grid Lite 列の構成と列のプロパティ。オープンソースの Angular Grid Lite をお試しください。軽量でありながら、必要な機能がすべて搭載されています。
+_keywords: 列の構成, インフラジスティックス
 _license: MIT
 mentionedTypes: [{ComponentApiMembers}]
 namespace: Infragistics.Controls
 _language: ja
 ---
 
-# Column Configuration
+# 列の構成
 
-The columns are defined with the **`columns`** property which has the type **`ColumnConfiguration<T>[]`**. **`key`** is the only required property for the **`ColumnConfiguration<T>`** as the column identifier. It is also the property that is used to map and render the relevant data in the grid rows.
+列は **`columns`** プロパティで定義され、タイプは **`ColumnConfiguration<T>[]`** です。**`key`** は、列識別子として **`ColumnConfiguration<T>`** に唯一必要なプロパティです。グリッド行内の関連データをマッピングしてレンダリングするためにも使用されます。
 
 ```typescript
 const accountColumn: ColumnConfiguration<T> = {
   key: 'account',
 
-  /* Additional configuration follows */
+  /* 追加の構成が続きます */
   ...
 };
 ```
 
 >[!NOTE]
->As a rule of thumb, the **column** prop should keep the same reference between renders. The columns are designed to be definitions and to rarely change once the grid is mounted, unless explicitly requested. Otherwise, you take the risk of losing state such as width, renderers, etc. and additional render cycles which may lead to performance degradation. Depending on the technology stack which you use, you can create the array outside the appropriate render function/mechanism or memoize it.
+>原則として、**Column** プロパティはレンダリング間で同じ参照を保持すべきです。列は定義として扱われ、グリッドのマウント後に変更するのは明示的に必要な場合のみが推奨されます。不要な変更を行うと、幅やレンダラーなどの状態が失われたり、追加のレンダー サイクルが発生してパフォーマンス低下につながる可能性があります。使用する技術スタックに応じて、配列を適切なレンダリング関数の外で作成するか、メモ化してください。
 
-## Configuration Based on the Data Source
+## データ ソースに基づく設定
 
-The grid supports inferring the column configuration based on the provided data source. It tries to infer the appropriate **`key`** and **`type`** props based on records in the data.
+グリッドは提供されたデータ ソースに基づき、列設定を推測できます。データ レコードに基づき適切な  **`key`** と **`type`** プロパティを推測します。
 
 ```typescript
 const data: Record[] = [
@@ -39,7 +39,7 @@ const data: Record[] = [
 <igc-grid-lite auto-generate .data=${data}></igc-grid-lite>
 ```
 
-The previous snippet will result in the following column configuration for the grid:
+前のスニペットを実行すると、グリッドの列構成は次のようになります:
 
 ```typescript
 [
@@ -49,22 +49,20 @@ The previous snippet will result in the following column configuration for the g
 ];
 ```
 
-Useful for a quick render of some data without any additional customizations.
+追加のカスタマイズを行わずに一部のデータをすばやくレンダリングする場合に便利です。
 
 >[!NOTE]
->This is a one-time operation which is executed when the grid is initially added to the DOM. Passing an empty data source or having a late bound data source (such as a HTTP request) will usually result in empty column configuration for the grid. This property is ignored if any existing column configuration already exists in the grid. See [the data binding topic](./binding.md) for additional information on auto-generating the column configuration based on the data source.
+>これはグリッドが初めて DOM に追加されたときに一度だけ実行されます。空のデータ ソースを渡すか、遅延バインドされたデータ ソース (HTTP リクエストなど) を使用すると、通常列設定は空になります。既存の列設定が存在する場合、このプロパティは無視されます。データ ソースに基づいて列構成を自動生成する方法の詳細については、[データ バインディング](./binding.md)のトピックを参照してください。
 
-## Additional Column Configuration
+## 追加の列設定
 
-The column configuration object exposes several more properties:
+列構成オブジェクトは、さらにいくつかのプロパティを公開します。
 
-### Column Width
+### 列の幅
 
-By default, the columns have a width of `minmax(136px, 1fr)` which translates to a minimum width of 136px and maximum of
-1 part of the available space in the Grid Lite. This way the columns are fluid and responsive accommodating for changes
-in the grid width.
+デフォルトでは列幅は `minmax(136px, 1fr)` で、最小 136px、最大は Grid Lite の利用可能幅の 1 単位です。この方法により、列は流動的でレスポンシブになり、グリッド幅の変更に対応できます。
 
-To change the width of column, use the **`width`** property of the **`ColumnConfiguration`** object.
+列の幅を変更するには、**`ColumnConfiguration`** オブジェクトの **`width`** プロパティを使用します。
 
 ```typescript
 {
@@ -73,11 +71,11 @@ To change the width of column, use the **`width`** property of the **`ColumnConf
 }
 ```
 
-The property accepts <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numbers_lengths_and_percentages" target="_blank">valid CSS length units</a>.
+このプロパティは<a href="https://developer.mozilla.org/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#数値、長さ、パーセント値" target="_blank">有効な CSS 長さ単位</a>を受け入れます.
 
-### Hiding Columns
+### 列の非表示
 
-Columns can be hidden/shown by setting the **hidden** property to of the column configuration object.
+列を非表示/表示するには、列構成オブジェクトの **hidden** プロパティを設定します。
 
 ```typescript
 {
@@ -88,7 +86,7 @@ Columns can be hidden/shown by setting the **hidden** property to of the column 
 
 ### Column Resize
 
-Each column of the Grid Lite component can be configured to be resizable by setting the **`resizable`** property in the column definition.
+Grid Lite コンポーネントの各列は、列定義で **`resizable`** プロパティを設定することでサイズ変更可能にできます。
 
 ```typescript
 {
@@ -97,32 +95,32 @@ Each column of the Grid Lite component can be configured to be resizable by sett
 }
 ```
 
-If a column is set to be resizable, you can drag the right size of the column header to either increase/decrease  the column width. Double-clicking on the resize area will trigger auto-sizing of the column where it will try set its width according to the largest content of its cells/header.
+列がサイズ変更可能に設定されている場合、列ヘッダー右端をドラッグして幅を増減できます。リサイズ領域をダブルクリックすると、自動調整がトリガーされ、セルやヘッダーの最大コンテンツに合わせて幅が設定されます。
 
 >[!NOTE]
->Columns with "fluid" widths (fr, %, etc.) can behave erratically when resizing in the grid is performed as they try to accommodate for the new dimensions. Depending on the application scenario, it may be better to use "hard" units so users don't experience layout shifts.
+>「流動的」幅 (fr、%、など) の列は、グリッドのリサイズ時に予期せぬ動作をする場合があります。アプリケーションのシナリオによっては、ユーザーがレイアウトのズレを経験しないように、「固定」単位を使用する方がよい場合があります。
 
-In the sample below you can try out the different column properties and how they reflect in the rendered grid.
+以下のサンプルでは、さまざまな列プロパティと、それがレンダリングされたグリッドにどのように反映されるかを試すことができます。
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/column-config-dynamic" alt="Angular Grid Lite Column Config Dynamic">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/column-config-dynamic" alt="Angular Grid Lite 列のダイナミック構成">
 </code-view>
 
 <!-- TODO ## API References
 
-* `{ComponentName}`
-* `Column`
+- `{ComponentName}`
+- `Column`
 
 -->
 
-## Additional Resources
+## その他のリソース
 
-- [Data Binding](binding.md)
-- [Sorting](sorting.md)
-- [Filtering](filtering.md)
-- [Theming & Styling](theming.md)
+- [データ バインディング](binding.md)
+- [ソート](sorting.md)
+- [フィルタリング](filtering.md)
+- [テーマ設定とスタイル設定](theming.md)
 
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-- [Grid Lite  **GitHub**](https://github.com/IgniteUI/igniteui-grid-lite)
+- [Grid Lite **GitHub**](https://github.com/IgniteUI/igniteui-grid-lite)

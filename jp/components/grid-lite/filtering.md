@@ -1,16 +1,16 @@
 ---
-title: Angular Grid Lite Filtering | Ignite UI for Angular | MIT license
-_description: Filter operations, filter customization, and remote filtering for Angular Grid Lite. Create apps with our open-source Angular Grid Lite. Try it now.
-_keywords: filtering, {Platform}, {ComponentKeywords}, {ProductName}, Infragistics
+title: Angular Grid Lite フィルタリング | Ignite UI for Angular | MIT ライセンス
+_description: Angular Grid Lite のフィルター操作、フィルターのカスタマイズ、およびリモート フィルタリング。オープンソースの Angular Grid Lite を使用してアプリを作成できます。今すぐお試しください。
+_keywords: フィルタリング, {Platform}, {ComponentKeywords}, {ProductName}, インフラジスティックス
 _license: MIT
 mentionedTypes: [{ComponentApiMembers}]
 namespace: Infragistics.Controls
 _language: ja
 ---
 
-# Angular Grid Lite Filter Operations
+# Angular Grid Lite フィルター操作
 
-The Grid Lite supports filtering operations on its data source. Data filtering is controlled on per-column level, allowing you to have filterable and non-filterable columns. By default, filtering on a column is disabled unless explicitly configured with the **`filter`** property of the column configuration object.
+Grid Lite は、データ ソースでのフィルター操作をサポートします。データ フィルタリングは列ごとに制御されるため、フィルタリング可能な列とフィルタリング不可能な列を設定できます。デフォルトでは、列構成オブジェクトの **`filter`** プロパティで明示的に構成されない限り、列のフィルタリングは無効になっています。
 
 ```typescript
 {
@@ -19,16 +19,15 @@ The Grid Lite supports filtering operations on its data source. Data filtering i
 }
 ```
 
-The **`filter`** property can be either a simple boolean or a
-**`ColumnFilterConfiguration`** object which exposes additional configuration options:
+**`filter`** プロパティは、単純なブール値、または追加の構成オプションを公開する **`ColumnFilterConfiguration`** オブジェクトのいずれかになります。
 
 ```typescript
 {
   key: 'price',
   filter: {
     /**
-     * For string data types controls whether the filter operations for this column will be case sensitive.
-     * By default, filter operations for string types are case insensitive.
+     * string データ タイプの場合、この列のフィルター操作で大文字と小文字を区別するかどうかを制御します。
+     * 既定では、string タイプのフィルター操作は大文字と小文字を区別しません。
      */
     caseSensitive: true;
   }
@@ -37,52 +36,51 @@ The **`filter`** property can be either a simple boolean or a
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/filtering-simple" alt="Angular Grid Lite Filtering Config">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/filtering-simple" alt="Angular Grid Lite フィルタリング構成">
 </code-view>
 
-## Filter Model
+## フィルター モデル
 
-The building blocks for filter operations in the grid is the **`FilterExpression`** which has the following structure:
+グリッド内のフィルター操作の構成要素は、次の構造を持つ **`FilterExpression`** です。
 
 ```typescript
 export interface FilterExpression<T, K extends Keys<T> = Keys<T>> {
   /**
-   * The target column for the filter operation.
+   * フィルター操作の対象となる列です。
    */
   key: K;
   /**
-   * The filter function which will be executed against the data records.
+   * データ レコードに対して実行されるフィルター関数です。
    */
   condition: FilterOperation<T[K]> | OperandKeys<T[K]>;
 
   /**
-   * The filtering value used in the filter condition function.
+   * フィルター条件関数で使用されるフィルター値です。
    *
    * @remarks
-   * Optional for unary conditions.
+   * フィルター条件関数で使用されるフィルター値です。
    */
   searchTerm?: T[K];
   /**
-   * Dictates how this expression should resolve in the filter operation in relation to
-   * other expressions.
+   * この式が他の式と関係してフィルター操作でどのように解決されるべきか
+   * を指定します。
    */
   criteria?: FilterCriteria;
   /**
-   * Whether the sort operation should be case sensitive.
+   * ソート操作で大文字と小文字を区別するかどうかを指定します。
    *
    * @remarks
-   * If not provided, the value is resolved based on the column filter configuration (if any).
+   * 指定されていない場合、値は列のフィルター構成 (存在する場合) に基づいて解決されます。
    */
   caseSensitive?: boolean;
 }
 ```
 
-## Filter API
+## フィルター API
 
-The Grid Lite exposes two main approaches for applying filter operations from its API. Either through the **`GridLite.filter()`**/**`GridLite.clearFilter()`** methods or through the **`Grid.Lite.filterExpressions`** property.
+Grid Lite は、API からフィルター操作を適用する 2 つの方法を提供します。**`GridLite.filter()`**/**`GridLite.clearFilter()`** メソッドまたは **`Grid.Lite.filterExpressions`** プロパティのいずれかを使用します。
 
-The **`filter()`** method accepts either a single expression or an array of filter expression and then filters the grid data
-based on those expressions.
+**`filter()`** メソッドは、単一の式またはフィルター式の配列を受け入れ、それらの式に基づいてグリッド データをフィルターします。
 
 ```typescript
 // Single
@@ -95,27 +93,27 @@ grid.filter([
 ]);
 ```
 
-The **`clearFilter()`** method, as the name implies, clears the filter state of a single column or the whole grid component, depending on the passed arguments.
+**`clearFilter()`** メソッドは、その名前が示すように、渡された引数に応じて、単一の列またはグリッド コンポーネント全体のフィルター状態をクリアします。
 
 ```typescript
-// Clear the filter state for the `age` column.
+// `age` 列のフィルター状態をクリアします。
 grid.clearFilter('age');
 
-// Clear the filter state of the grid.
+// グリッドのフィルター状態をクリアします。
 grid.clearFilter();
 ```
 
-## Initial Filter State
+## 初期のフィルター状態
 
-The **`filterExpressions`** property is very similar in behavior to the **`filter()`** method call. It exposes a declarative way to control filter state in the grid, but the most useful property is the ability to set initial filter state when the Grid Lite component is first rendered.
+**`filterExpressions`** プロパティの動作は、**`filter()`** メソッド呼び出しと非常に似ています。これはグリッド内のフィルター状態を制御する宣言的な方法を公開していますが、最も便利なプロパティは、Grid Lite コンポーネントが最初にレンダリングされるときに初期フィルター状態を設定できることです。
 
-For example here is a Lit-based sample:
+たとえば、Lit ベースのサンプルを次に示します。
 
 ```typescript
 {
   filterState: FilterExpression<User>[] = [
     { key: 'age', condition: 'greaterThan', searchTerm: 21 },
-    /** unary condition so `searchTerm` is not required */
+    /** 単項条件のため `searchTerm` は不要です。 */
     { key: 'active', condition: 'true' },
   ];
 
@@ -125,19 +123,19 @@ For example here is a Lit-based sample:
 }
 ```
 
-It can be used to get the current filter state of the component and do additional processing depending on another state in your application.
+これを使用すると、コンポーネントの現在のフィルター状態を取得し、アプリケーション内の別の状態に応じて追加の処理を実行できます。
 
 ```typescript
 const state = grid.filterExpressions;
-// Save the current filter state
+// 現在のフィルター状態を保存します。
 saveUserFilterState(state);
 ```
 
-## Events
+## イベント
 
-When a filter operation is performed through the UI, the component emits a custom **`filtering`** event. The **`detail`** property is the sort expression which will be applied by the Grid Lite. The event is cancellable and if cancelled will prevent the current filter operation.
+UI を通じてフィルター操作が実行されると、コンポーネントはカスタム **`filtering`** イベントを発行します。**`detail`** プロパティは、Grid Lite によって適用されるソート式です。イベントはキャンセル可能であり、キャンセルされると現在のフィルター操作が防止されます。
 
-After the grid applies the new filter state, a **`filtered`** event is emitted. It contains the filter state for the column which was the target of the operation and it is not cancellable.
+グリッドが新しいフィルター状態を適用すると、**`filtered`** イベントが発生します。対象列のフィルター状態を含み、このイベントはキャンセルできません。
 
 ```typescript
 grid.addEventListener('filtering', (event: CustomEvent<GridLiteFilteringEvent<T>>) => { ... });
@@ -146,28 +144,27 @@ grid.addEventListener('filtered', (event: CustomEvent<GridLiteFilteredEvent<T>>)
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/filtering-events" alt="Angular Grid Lite Filtering Config Events">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/filtering-events" alt="Angular Grid Lite フィルタリング構成イベント">
 </code-view>
 
-## Remote filter operations
+## リモート フィルター操作
 
-In cases where filtering must be done remotely or you want to save the current state/data to a server somewhere,
-the Grid Lite exposes a hook where you can implement and customize this behavior.
+フィルタリングをリモートで実行する必要がある場合、または現在の状態/データをどこかのサーバーに保存する必要がある場合、Grid Lite は、この動作を実装およびカスタマイズできるフックを公開します。
 
-Using the **`dataPipelineConfiguration`** property, you can provide a custom hook which will be called each time a filter operation is about to run. The callback is passed a **`DataPipelineParams`** object.
+**`dataPipelineConfiguration`** プロパティを使用すると、フィルター操作が実行されるたびに呼び出されるカスタム フックを提供できます。コールバックには **`DataPipelineParams`** オブジェクトが渡されます。
 
 ```typescript
 export type DataPipelineParams<T extends object> = {
   /**
-   * The current data state of the grid.
+   * グリッドの現在のデータ状態。
    */
   data: T[];
   /**
-   * The grid component itself.
+   * グリッド コンポーネント。
    */
   grid: GridLite<T>;
   /**
-   * The type of data operation being performed.
+   * 実行されるデータ操作のタイプ。
    */
   type: 'sort' | 'filter';
 };
@@ -177,27 +174,27 @@ export type DataPipelineParams<T extends object> = {
 grid.dataPipelineConfiguration = { filter: (params: DataPipelineParams<T>) => T[] | Promise<T[]> };
 ```
 
-The custom callback can be async as the grid will wait for it until it resolves.
+カスタム コールバックは、解決されるまでグリッドが待機するため、非同期にすることができます。
 
-The following example mocks remote filter operation, reflecting the REST endpoint generated based on the filter state of the component.
+次の例では、コンポーネントのフィルター状態に基づいて生成された REST エンドポイントを反映して、リモート フィルター操作をモックします。
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/filtering-pipeline" alt="Angular Grid Lite Filtering Config Remote">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/filtering-pipeline" alt="Angular Grid Lite フィルタリング リモート構成">
 </code-view>
 
 <!-- TODO ## API References
 ## API References
 
-* `{ComponentName}`
-* `Column`
+- `{ComponentName}`
+- `Column`
 -->
 
-## Additional Resources
+## その他のリソース
 
-- [Column Configuration](column-configuration.md)
-- [Sorting](sorting.md)
+- [列の構成](column-configuration.md)
+- [ソート](sorting.md)
 
-Our community is active and always welcoming to new ideas.
+コミュニティに参加して新しいアイデアをご提案ください。
 
-- [Grid Lite  **GitHub**](https://github.com/IgniteUI/igniteui-grid-lite)
+- [Grid Lite **GitHub**](https://github.com/IgniteUI/igniteui-grid-lite)
