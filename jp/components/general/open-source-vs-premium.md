@@ -24,13 +24,13 @@ Ignite UI のプレミアム コンポーネントは、高度なエンタープ
 
 ### 高度なコンポーネントを備えたグリッド群:
  
-- [データ グリッド](../grid/grid.md)、[階層グリッド](../hierarchicalgrid/hierarchical-grid.md)、[ツリー グリッド](../treegrid/tree-grid.md)、[ピボット グリッド](../pivotGrid/pivot-grid.md)  
-- [ドック マネージャー](../pivotgrid/pivot-grid.md) 
-- [クエリ ビルダー](../query-builder.md)  
-- [チャート ライブラリ](../charts/chart-overview.md)  
-- [マップ ライブラリ](../geo-map.md)  
-- [Excel ライブラリ](../excel-library.md)  
-- [スプレッドシート](../spreadsheet-overview.md)  
+- [データ グリッド](../grid/grid.md)、[階層グリッド](../hierarchicalgrid/hierarchical-grid.md)、[ツリー グリッド](../treegrid/tree-grid.md)、[ピボット グリッド](../pivotgrid/pivot-grid.md)
+- [ドック マネージャー](../dock-manager.md)
+- [クエリ ビルダー](../query-builder.md)
+- [チャート ライブラリ](../charts/chart-overview.md)
+- [マップ ライブラリ](../geo-map.md)
+- [Excel ライブラリ](../excel-library.md)
+- [スプレッドシート](../spreadsheet-overview.md)
 - ゲージ - [ブレットグラフ](../bullet-graph.md)、[リニアゲージ](../linear-gauge.md)および[ラジアルゲージ](../radial-gauge.md)
 
 すべてのプレミアム コンポーネントは、トピックのヘッダーに次のようにマークされます。![alt text](/jp/images/premium-text.png)
