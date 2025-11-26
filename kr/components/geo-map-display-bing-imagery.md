@@ -20,7 +20,7 @@ Bing Maps is Microsoft’s® licensed geographic imagery mapping service. This g
 
 <!-- `sample="/maps/geo-map/display-bing-imagery", height="500", alt="Angular geo map display bing imagery"` -->
 
-<img src="../images/general/BingMapsImagery.png" />
+<img src="../images/general/BingMapsImagery.png" alt="Angular Bing Maps Imagery"/>
 
 <div class="divider--half"></div>
 

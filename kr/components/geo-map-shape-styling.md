@@ -34,10 +34,10 @@ import { IgxShapefileRecord } from 'igniteui-angular-core';
 
 Note that the following code examples are using the [Shape Styling Utility](geo-map-resources-shape-styling-utility.md) file that provides four different ways of styling shapes:
 
-*   [Shape Comparison Styling](#shape-comparison-styling)
-*   [Shape Random Styling](#shape-random-styling)
-*   [Shape Range Styling](#shape-range-styling)
-*   [Shape Scale Styling](#shape-scale-styling)
+- [Shape Comparison Styling](#shape-comparison-styling)
+- [Shape Random Styling](#shape-random-styling)
+- [Shape Range Styling](#shape-range-styling)
+- [Shape Scale Styling](#shape-scale-styling)
 
 ## Shape Random Styling
 
