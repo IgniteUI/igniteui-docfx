@@ -116,7 +116,7 @@ public exportButtonHandler() {
 ```
 
 
-<code-view style="height: 300px;" 
+<code-view style="height: 600px;" 
            data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz"
            iframe-src="{environment:demosBaseUrl}/services/export-csv-sample-1/" >
