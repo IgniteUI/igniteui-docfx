@@ -131,8 +131,8 @@ Angular チャートの [`xAxisOverlap`]({environment:dvApiBaseUrl}/products/ign
 
 関連するチャート機能の詳細については、以下のトピックを参照してください。
 
-*   [軸グリッド線](chart-axis-gridlines.md)
-*   [軸レイアウト](chart-axis-layouts.md)
+- [軸グリッド線](chart-axis-gridlines.md)
+- [軸レイアウト](chart-axis-layouts.md)
 
 ## API リファレンス
 

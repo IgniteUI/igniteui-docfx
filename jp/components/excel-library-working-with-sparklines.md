@@ -20,15 +20,18 @@ Infragistics Angular Excel Library は、Excel ワークシートにスパーク
 </code-view>
 
 
+> \[!Note]
+> XLSX 形式は必要です。他の形式は現在サポートされていません。
+
 <div class="divider--half"></div>
 
 ## サポートされるスパークライン
 
 以下はサポートされる定義済スパークラインのタイプです。
 
-*   折れ線チャート
-*   列
-*   積層 (Win/Loss)
+- 折れ線チャート
+- 列
+- 積層 (Win/Loss)
 
 以下のコードは、sparklineGroups コレクションを使用してスパークラインをワークシートへ追加する方法を示します。
 
@@ -43,4 +46,4 @@ workbook.save(workbook, "Sparklines.xlsx");
 
 ## API リファレンス
 
-*   [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbook.html)
+- [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbook.html)

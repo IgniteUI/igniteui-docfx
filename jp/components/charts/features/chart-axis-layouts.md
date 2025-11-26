@@ -71,8 +71,8 @@ Angular [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-
 
 関連するチャート機能の詳細については、以下のトピックを参照してください。
 
-*   [軸グリッド線](chart-axis-gridlines.md)
-*   [軸オプション](chart-axis-options.md)
+- [軸グリッド線](chart-axis-gridlines.md)
+- [軸オプション](chart-axis-options.md)
 
 ## API リファレンス
 

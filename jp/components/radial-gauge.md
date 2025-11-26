@@ -389,12 +389,12 @@ export class AppModule {}
 
 以下は上記のセクションで説明した API メンバーのリストです。
 
-*   [`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html)
-*   [`IgxRadialGaugeRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugerangecomponent.html)
+- [`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html)
+- [`IgxRadialGaugeRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugerangecomponent.html)
 
 ## その他のリソース
 
 その他のゲージ タイプの詳細については、以下のトピックを参照してください。
 
-*   [ブレット グラフ](bullet-graph.md)
-*   [リニア ゲージ](linear-gauge.md)
+- [ブレット グラフ](bullet-graph.md)
+- [リニア ゲージ](linear-gauge.md)
