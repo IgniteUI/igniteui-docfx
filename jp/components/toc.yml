@@ -124,18 +124,23 @@
     - name: 行のアクション
       href: grid/row-actions.md
       new: false
+      premium: true
     - name: ライブ データ/リアルタイム更新
       href: grid/live-data.md
       new: false
+      premium: true
     - name: 仮想化とパフォーマンス
       href: grid/virtualization.md
       new: false
+      premium: true
     - name: リモート データ操作
       href: grid/remote-data-operations.md
       new: false
+      premium: true
     - name: 列のデータ型
       href: grid/column-types.md
       new: false
+      premium: true
     - name: 編集
       href: grid/editing.md
       new: false
@@ -143,30 +148,38 @@
         - name: セル編集
           href: grid/cell-editing.md
           updated: false
+          premium: true
         - name: 行編集
           href: grid/row-editing.md
           new: false
+          premium: true
         - name: 行追加
           href: grid/row-adding.md
           new: false
+          premium: true
         - name: 一括編集
           href: grid/batch-editing.md
           updated: false
           new: false
+          premium: true
         - name: 検証
           href: grid/validation.md
           new: false
+          premium: true
         - name: カスケード コンボを使用したグリッド
           href: grid/cascading-combos.md
           new: false
+          premium: true
     - name: 行ドラッグ
       href: grid/row-drag.md
       updated: false
       new: false
+      premium: true
     - name: ページング
       href: grid/paging.md
       new: false
       updated: false
+      premium: true
     - name: フィルタリング
       href: grid/filtering.md
       new: false
@@ -174,38 +187,48 @@
         - name: Excel スタイル フィルタリング
           href: grid/excel-style-filtering.md
           updated: false
+          premium: true
         - name: 高度なフィルタリング
           href: grid/advanced-filtering.md
           new: false
+          premium: true
     - name: ソート
       href: grid/sorting.md
       updated: false
+      premium: true
     - name: グループ化
       href: grid/groupby.md
       new: false
       updated: false
+      premium: true
     - name: 集計
       href: grid/summaries.md
       updated: false
+      premium: true
     - name: 列移動
       href: grid/column-moving.md
       new: false
       updated: false
+      premium: true
     - name: 列のピン固定
       href: grid/column-pinning.md
       new: false
       updated: false
+      premium: true
     - name: 行のピン固定
       href: grid/row-pinning.md
       new: false
       updated: false
+      premium: true
     - name: 列のサイズ変更
       href: grid/column-resizing.md
       updated: false
       new: false
+      premium: true
     - name: 列の非表示
       href: grid/column-hiding.md
       new: false
+      premium: true
     - name: 選択
       href: grid/selection.md
       new: false
@@ -213,65 +236,84 @@
         - name: 行選択
           href: grid/row-selection.md
           new: false
+          premium: true
         - name: セル選択
           href: grid/cell-selection.md
           new: false
+          premium: true
         - name: 選択に基づいた集計
           href: grid/selection-based-aggregates.md
           new: false
+          premium: true
         - name: 列選択
           href: grid/column-selection.md
           new: false
+          premium: true
     - name: 検索
       href: grid/search.md
       new: false
+      premium: true
     - name: ツールバー
       href: grid/toolbar.md
       new: false
       updated: false
+      premium: true
     - name: Excel エクスポート
       href: grid/export-excel.md
       new: false
       updated: false
+      premium: true
     - name: Excel からの貼り付け
       href: grid/paste-excel.md
       new: false
+      premium: true
     - name: 複数列ヘッダー
       href: grid/multi-column-headers.md
       new: false
+      premium: true
     - name: 列グループの折りたたみ
       href: grid/collapsible-column-groups.md
       new: false
+      premium: true
     - name: サイズ
       href: grid/display-density.md
       new: false
       updated: false
+      premium: true
     - name: 条件付きスタイル設定
       href: grid/conditional-cell-styling.md
       new: false
       updated: false
+      premium: true
     - name: キーボード ナビゲーション
       href: grid/keyboard-navigation.md
       new: false
       updated: false
+      premium: true
     - name: 複数行レイアウト
       href: grid/multi-row-layout.md
       new: false
+      premium: true
     - name: クリップボード操作
       href: grid/clipboard-interactions.md
       new: false
+      premium: true
     - name: サイズ変更
       href: grid/sizing.md
       new: false
+      premium: true
     - name: Grid Master-Detail
       href: grid/master-detail.md
       new: false
+      premium: true
     - name: 状態保持
       href: grid/state-persistence.md
       updated: false
+      premium: true
     - name: セル結合
       href: grid/cell-merging.md
       new: true
+      premium: true
 - name: Tree Grid
   href: treegrid/tree-grid.md
   new: false
@@ -280,21 +322,27 @@
     - name: 行のアクション
       href: treegrid/row-actions.md
       new: false
+      premium: true
     - name: ライブデータ/リアルタイム更新
       href: treegrid/live-data.md
       new: false
+      premium: true
     - name: 仮想化とパフォーマンス
       href: treegrid/virtualization.md
       new: false
+      premium: true
     - name: リモート データ操作
       href: treegrid/remote-data-operations.md
       new: false
+      premium: true
     - name: 列のデータ型
       href: treegrid/column-types.md
       new: false
+      premium: true
     - name: ロードオンデマンド
       href: treegrid/load-on-demand.md
       new: false
+      premium: true
     - name: 編集
       href: treegrid/editing.md
       new: false
@@ -302,26 +350,33 @@
         - name: セル編集
           href: treegrid/cell-editing.md
           updated: false
+          premium: true
         - name: 行編集
           href: treegrid/row-editing.md
           new: false
+          premium: true
         - name: 行追加
           href: treegrid/row-adding.md
           new: false
+          premium: true
         - name: 一括編集
           href: treegrid/batch-editing.md
           updated: false
           new: false
+          premium: true
         - name: 検証
           href: treegrid/validation.md
           new: false
+          premium: true
     - name: 行ドラッグ
       href: treegrid/row-drag.md
       new: false
+      premium: true
     - name: ページング
       href: treegrid/paging.md
       new: false
       updated: false
+      premium: true
     - name: フィルタリング
       href: treegrid/filtering.md
       new: false
@@ -329,36 +384,45 @@
       - name: Excel スタイル フィルタリング
         href: treegrid/excel-style-filtering.md
         updated: false
+        premium: true
       - name: 高度なフィルタリング
         href: treegrid/advanced-filtering.md
         new: false
+        premium: true
     - name: ソート
       href: treegrid/sorting.md
       updated: false
+      premium: true
     - name: 集計
       href: treegrid/summaries.md
       new: false
       updated: false
+      premium: true
     - name: 列移動
       href: treegrid/column-moving.md
       new: false
       updated: false
+      premium: true
     - name: 列のピン固定
       href: treegrid/column-pinning.md
       new: false
       updated: false
+      premium: true
     - name: 行のピン固定
       href: treegrid/row-pinning.md
       new: false
       updated: false
+      premium: true
     - name: 列のサイズ変更
       href: treegrid/column-resizing.md
       updated: false
       new: false
+      premium: true
     - name: 列の非表示
       href: treegrid/column-hiding.md
       new: false
       updated: false
+      premium: true
     - name: 選択
       href: treegrid/selection.md
       new: false
@@ -366,56 +430,72 @@
         - name: 行選択
           href: treegrid/row-selection.md
           new: false
+          premium: true
         - name: セル選択
           href: treegrid/cell-selection.md
           new: false
+          premium: true
         - name: 列選択
           href: treegrid/column-selection.md
           new: false
+          premium: true
     - name: 検索
       href: treegrid/search.md
       new: false
+      premium: true
     - name: ツールバー
       href: treegrid/toolbar.md
       new: false
       updated: false
+      premium: true
     - name: Excel エクスポート
       href: treegrid/export-excel.md
       new: false
       updated: false
+      premium: true
     - name: 複数列ヘッダー
       href: treegrid/multi-column-headers.md
       new: false
+      premium: true
     - name: 列グループの折りたたみ
       href: treegrid/collapsible-column-groups.md
       new: false
+      premium: true
     - name: サイズ
       href: treegrid/display-density.md
       new: false
+      premium: true
     - name: 条件付きスタイル設定
       href: treegrid/conditional-cell-styling.md
       new: false
       updated: false
+      premium: true
     - name: グループ化
       href: treegrid/groupby.md
       updated: false
       new: false
+      premium: true
     - name: キーボードナビゲーション
       href: treegrid/keyboard-navigation.md
       new: false
       updated: false
+      premium: true
     - name: クリップボード操作
       href: treegrid/clipboard-interactions.md
       new: false
+      premium: true
     - name: サイズ変更
       href: treegrid/sizing.md
       new: false
+      premium: true
     - name: 状態保持
       href: treegrid/state-persistence.md
       new: false
+      premium: true
     - name: セル結合
       href: treegrid/cell-merging.md
       new: true
+      premium: true
 - name: Hierarchical Grid
   href: hierarchicalgrid/hierarchical-grid.md
   new: false
@@ -424,19 +504,24 @@
     - name: 行のアクション
       href: hierarchicalgrid/row-actions.md
       new: false
+      premium: true
     - name: 仮想化とパフォーマンス
       href: hierarchicalgrid/virtualization.md
       new: false
+      premium: true
     - name: リモート データ操作
       href: hierarchicalgrid/remote-data-operations.md
       new: false
+      premium: true
     - name: 列のデータ型
       href: hierarchicalgrid/column-types.md
       new: false
+      premium: true
     - name: ロードオンデマンド
       href: hierarchicalgrid/load-on-demand.md
       new: false
       updated: true
+      premium: true
     - name: 編集
       href: hierarchicalgrid/editing.md
       new: false
@@ -444,30 +529,38 @@
         - name: セル編集
           href: hierarchicalgrid/cell-editing.md
           updated: false
+          premium: true
         - name: 行編集
           href: hierarchicalgrid/row-editing.md
           new: false
+          premium: true
         - name: 行追加
           href: hierarchicalgrid/row-adding.md
           new: false
+          premium: true
         - name: 一括編集
           href: hierarchicalgrid/batch-editing.md
           updated: false
           new: false
+          premium: true
         - name: 検証
           href: hierarchicalgrid/validation.md
           new: false
+          premium: true
     - name: Excel へエクスポート
       href: hierarchicalgrid/export-excel.md
       new: false
       updated: false
+      premium: true
     - name: 行ドラッグ
       href: hierarchicalgrid/row-drag.md
       new: false
+      premium: true
     - name: ページング
       href: hierarchicalgrid/paging.md
       new: false
       updated: false
+      premium: true
     - name: フィルタリング
       href: hierarchicalgrid/filtering.md
       new: false
@@ -475,36 +568,45 @@
       - name: Excel スタイル フィルタリング
         href: hierarchicalgrid/excel-style-filtering.md
         updated: false
+        premium: true
       - name: 高度なフィルタリング
         href: hierarchicalgrid/advanced-filtering.md
         new: false
         updated: true
+        premium: true
     - name: ソート
       href: hierarchicalgrid/sorting.md
       updated: false
+      premium: true
     - name: 集計
       href: hierarchicalgrid/summaries.md
       new: false
       updated: false
+      premium: true
     - name: 列移動
       href: hierarchicalgrid/column-moving.md
       new: false
       updated: false
+      premium: true
     - name: 列のピン固定
       href: hierarchicalgrid/column-pinning.md
       new: false
       updated: false
+      premium: true
     - name: 行のピン固定
       href: hierarchicalgrid/row-pinning.md
       new: false
+      premium: true
     - name: 列のサイズ変更
       href: hierarchicalgrid/column-resizing.md
       updated: false
       new: false
+      premium: true
     - name: 列の非表示
       href: hierarchicalgrid/column-hiding.md
       new: false
       updated: false
+      premium: true
     - name: 選択
       href: hierarchicalgrid/selection.md
       new: false
@@ -512,12 +614,15 @@
         - name: 行選択
           href: hierarchicalgrid/row-selection.md
           new: false
+          premium: true
         - name: セル選択
           href: hierarchicalgrid/cell-selection.md
           new: false
+          premium: true
         - name: 列選択
           href: hierarchicalgrid/column-selection.md
           new: false
+          premium: true
     # Not yet fully implemented for igxHGrid
     # - name: 検索
     #   href: hierarchicalgrid/search.md
@@ -526,19 +631,24 @@
       href: hierarchicalgrid/toolbar.md
       new: false
       updated: false
+      premium: true
     - name: 複数列ヘッダー
       href: hierarchicalgrid/multi-column-headers.md
       new: false
+      premium: true
     - name: 列グループの折りたたみ
       href: hierarchicalgrid/collapsible-column-groups.md
       new: false
+      premium: true
     - name: 条件付きスタイル設定
       href: hierarchicalgrid/conditional-cell-styling.md
       new: false
       updated: false
+      premium: true
     - name: サイズ
       href: hierarchicalgrid/display-density.md
       new: false
+      premium: true
     # - name: 条件付きセルのスタイル設定
     #   href: hierarchicalgrid/conditional-cell-styling.md
     #   new: true
@@ -546,15 +656,19 @@
       href: hierarchicalgrid/keyboard-navigation.md
       new: false
       updated: false
+      premium: true
     - name: サイズ変更
       href: hierarchicalgrid/sizing.md
       new: false
+      premium: true
     - name: 状態保持
       href: hierarchicalgrid/state-persistence.md
       new: false
+      premium: true
     - name: セル結合
       href: hierarchicalgrid/cell-merging.md
       new: true
+      premium: true
 - name: Pivot Grid
   href: pivotgrid/pivot-grid.md
   new: false
@@ -564,17 +678,48 @@
       href: pivotgrid/export-excel.md
       new: false
       updated: true
+      premium: true
     - name: ピボット グリッド機能
       href: pivotgrid/pivot-grid-features.md
       updated: true
       new: false
+      premium: true
     - name: ピボット グリッドのリモート処理とカスタマイズ
       href: pivotgrid/pivot-grid-custom.md
       new: false
+      premium: true
     - name: 状態保持
       href: pivotgrid/state-persistence.md
       new: false
       updated: true
+      premium: true
+- name: Grid Lite
+  href: grid-lite/overview.md
+  new: true
+  updated: false
+  items:
+    - name: 列の構成
+      href: grid-lite/column-configuration.md
+      new: true
+      items:
+        - name: セル テンプレート
+          href: grid-lite/cell-template.md
+          new: true
+        - name: ヘッダー テンプレート
+          href: grid-lite/header-template.md
+          new: true
+    - name: データ バインディング
+      href: grid-lite/binding.md
+      new: true
+    - name: フィルタリングの概要
+      href: grid-lite/filtering.md
+      new: true
+    - name: ソート
+      href: grid-lite/sorting.md
+      new: true
+    - name: スタイル設定とテーマ設定
+      href: grid-lite/theming.md
+      new: true
 - name: Tree
   href: tree.md
   new: false
@@ -604,101 +749,132 @@
     - name: アクティブ化
       href: spreadsheet-activation.md
       new: false
+      premium: true
     - name: チャート アダプター
       href: spreadsheet-chart-adapter.md
       new: false
+      premium: true
     - name: クリップボード
       href: spreadsheet-clipboard.md
       new: false
+      premium: true
     - name: 条件付き書式
       href: spreadsheet-conditional-formatting.md
       new: false
+      premium: true
     - name: Spreadsheet の構成
       href: spreadsheet-configuring.md
       new: false
+      premium: true
     - name: コマンド
       href: spreadsheet-commands.md
       new: false
+      premium: true
     - name: データ検証
       href: spreadsheet-data-validation.md
       new: false
+      premium: true
     - name: ハイパーリンク
       href: spreadsheet-hyperlinks.md
       new: false
+      premium: true
     - name: Excel ユーティリティ
       href: excel-utility.md
       new: false
+      premium: true
 - name: ダッシュボード
   header: true
 - name: ダッシュボード タイル
   href: dashboard-tile.md
   preview: true
+  premium: true
 - name: チャート
   href: charts/chart-overview.md
   header: true
 - name: エリア チャート
   href: charts/types/area-chart.md
   new: false
+  premium: true
 - name: 棒チャート
   href: charts/types/bar-chart.md
   new: false
+  premium: true
 - name: バブル チャート
   href: charts/types/bubble-chart.md
   new: false
+  premium: true
 - name: 縦棒チャート
   href: charts/types/column-chart.md
   new: false
+  premium: true
 - name: 複合チャート
   href: charts/types/composite-chart.md
   new: false
+  premium: true
 - name: データ円チャート
   href: charts/types/data-pie-chart.md
   new: true
+  premium: true
 - name: ドーナツ チャート
   href: charts/types/donut-chart.md
   new: false
+  premium: true
 - name: ファイナンシャル / 株価チャート
   href: charts/types/stock-chart.md
   new: false
+  premium: true
 - name: 折れ線チャート
   href: charts/types/line-chart.md
   updated: false
+  premium: true
 - name: 円チャート
   href: charts/types/pie-chart.md
   new: false
+  premium: true
 - name: ポイント チャート
   href: charts/types/point-chart.md
   new: false
+  premium: true
 - name: 極座標チャート
   href: charts/types/polar-chart.md
   new: false
+  premium: true
 - name: ラジアル チャート
   href: charts/types/radial-chart.md
   new: false
+  premium: true
 - name: 散布図
   href: charts/types/scatter-chart.md
   new: false
+  premium: true
 - name: シェープ チャート
   href: charts/types/shape-chart.md
   new: false
+  premium: true
 - name: スプライン チャート
   href: charts/types/spline-chart.md
   new: false
+  premium: true
 - name: スパークライン
   href: charts/types/sparkline-chart.md
   new: false
+  premium: true
 - name: 積層型チャート
   href: charts/types/stacked-chart.md
   new: false
+  premium: true
 - name: ステップ チャート
   href: charts/types/step-chart.md
   new: false
+  premium: true
 - name: ツリーマップ
   href: charts/types/treemap-chart.md
   new: false
+  premium: true
 - name: チャート API
   href: charts/chart-api.md
   updated: false
+  premium: true
 - name: チャート機能
   href: charts/chart-features.md
   new: false
@@ -706,99 +882,134 @@
     - name: 軸グリッド線
       href: charts/features/chart-axis-gridlines.md
       updated: false
+      premium: true
     - name: 軸レイアウト
       href: charts/features/chart-axis-layouts.md
       new: false
+      premium: true
     - name: 軸オプション
       href: charts/features/chart-axis-options.md
       new: false
+      premium: true
     - name: チャート軸タイプ
       href: charts/features/chart-axis-types.md
       new: false
+      premium: true
     - name: チャート アニメーション
       href: charts/features/chart-animations.md
       new: false
+      premium: true
     - name: チャートの注釈
       href: charts/features/chart-annotations.md
       new: false
+      premium: true
     - name: ダッシュボードでのチャート作成
       href: dashboard-tile.md
       new: true
+      premium: true
     - name: チャートのデータ集計
       href: charts/features/chart-data-aggregations.md
       new: false
+      premium: true
     - name: チャートのデータ フィルタリング
       href: charts/features/chart-data-filtering.md
       new: true
+      premium: true
     - name: チャート データ凡例
       href: charts/features/chart-data-legend.md
       new: false
+      premium: true
     - name: チャート データの注釈
       href: charts/features/chart-data-annotations.md
       new: true
+      premium: true
     - name: チャート データ ツールチップ
       href: charts/features/chart-data-tooltip.md
       new: false
+      premium: true
     - name: チャートのデータ選択
       href: charts/features/chart-data-selection.md
       new: true
+      premium: true
     - name: チャートのハイライト表示フィルター
       href: charts/features/chart-highlight-filter.md
       new: false
+      premium: true
     - name: チャートのハイライト表示
       href: charts/features/chart-highlighting.md
       new: false
+      premium: true
     - name: チャート マーカー
       href: charts/features/chart-markers.md
       new: false
+      premium: true
     - name: チャート ナビゲーション
       href: charts/features/chart-navigation.md
       new: false
+      premium: true
     - name: チャート オーバーレイ
       href: charts/features/chart-overlays.md
       updated: false
+      premium: true
     - name: チャートのパフォーマンス
       href: charts/features/chart-performance.md
       new: false
+      premium: true
     - name: チャートの同期
       href: charts/features/chart-synchronization.md
       new: false
+      premium: true
     - name: チャート ツールチップ
       href: charts/features/chart-tooltips.md
       new: false
+      premium: true
     - name: チャート トレンドライン
       href: charts/features/chart-trendlines.md
       updated: false
+      premium: true
+    - name: チャートのユーザー注釈
+      href: charts/features/chart-user-annotations.md
+      preview: true
+      premium: true
     - name: ズーム スライダー
       href: zoomslider-overview.md
       new: false
+      premium: true
 - name: マップ
   href: geo-map.md
   header: true
 - name: 地理エリア マップ
   href: geo-map-type-scatter-area-series.md
   new: false
+  premium: true
 - name: 地理等高線マップ
   href: geo-map-type-scatter-contour-series.md
   new: false
+  premium: true
 - name: 地理高密度マップ
   href: geo-map-type-scatter-density-series.md
   new: false
+  premium: true
 - name: 地理バブル マップ
   href: geo-map-type-scatter-bubble-series.md
   new: false
+  premium: true
 - name: 地理記号マップ
   href: geo-map-type-scatter-symbol-series.md
   new: false
+  premium: true
 - name: 地理ポリゴン マップ
   href: geo-map-type-shape-polygon-series.md
   new: false
+  premium: true
 - name: 地理ポリライン マップ
   href: geo-map-type-shape-polyline-series.md
   new: false
+  premium: true
 - name: 地理マップ API
   href: maps/map-api.md
   new: false
+  premium: true
 - name: マップ
   href: geo-map.md
   new: false
@@ -807,57 +1018,75 @@
     - name: CSV ファイルのバインド
       href: geo-map-binding-data-csv.md
       new: false
+      premium: true
     - name: JSON ファイルのバインド
       href: geo-map-binding-data-json-points.md
       new: false
+      premium: true
     - name: データモデルのバインド
       href: geo-map-binding-data-model.md
       new: false
+      premium: true
     - name: シェープファイルのバインド
       href: geo-map-binding-shp-file.md
       new: false
+      premium: true
     - name: 複数シェープのバインド
       href: geo-map-binding-multiple-shapes.md
       new: false
+      premium: true
     - name: 複数ソースのバインド
       href: geo-map-binding-multiple-sources.md
       new: false
+      premium: true
     - name: Azure 画像の表示
       href: geo-map-display-azure-imagery.md
       new: true
+      premium: true
     - name: Bing 画像の表示
       href: geo-map-display-bing-imagery.md
       new: false
+      premium: true
     - name: Esri 画像
       href: geo-map-display-esri-imagery.md
       new: false
+      premium: true
     - name: ヒート画像の表示
       href: geo-map-display-heat-imagery.md
       new: false
+      premium: true
     - name: OSM 画像の表示
       href: geo-map-display-osm-imagery.md
       new: false
+      premium: true
     - name: マップコンテンツのナビゲーション
       href: geo-map-navigation.md
       new: false
+      premium: true
     - name: シェープ ファイルの参照
       href: geo-map-shape-files-reference.md
       new: false
+      premium: true
     - name: シェイプのスタイル設定
       href: geo-map-shape-styling.md
       new: false
+      premium: true
     - name: シェイプ スタイリング ユーティリティ
       href: geo-map-resources-shape-styling-utility.md
       new: false
+      premium: true
     - name: ワールド コネクション
       href: geo-map-resources-world-connections.md
       new: false
+      premium: true
     - name: ワールド ロケーション
       href: geo-map-resources-world-locations.md
       new: false
+      premium: true
     - name: ワールド ユーティリティ
       href: geo-map-resources-world-util.md
       new: false
+      premium: true
 - name: フレームワーク
   header: true
 - name: Excel ライブラリ
@@ -867,36 +1096,46 @@
     - name: セルの使用
       href: excel-library-using-cells.md
       new: false
+      premium: true
     - name: テーブルの使用
       href: excel-library-using-tables.md
       new: false
+      premium: true
     - name: ワークブックの使用
       href: excel-library-using-workbooks.md
       new: false
+      premium: true
     - name: ワークシートの使用
       href: excel-library-using-worksheets.md
       new: false
+      premium: true
     - name: チャートを使用した作業
       href: excel-library-working-with-charts.md
       new: false
+      premium: true
     - name: スパークラインを使用した作業
       href: excel-library-working-with-sparklines.md
       new: false
+      premium: true
     - name: Excel ユーティリティ
       href: excel-utility.md
       new: false
+      premium: true
 - name: ゲージ
   header: true
   sortable: true
 - name: Bullet Graph
   href: bullet-graph.md
   new: false
+  premium: true
 - name: Linear Gauge
   href: linear-gauge.md
   new: false
+  premium: true
 - name: Radial Gauge
   href: radial-gauge.md
   new: false
+  premium: true
 
 - name: スタイルとテーマ
   header: true
@@ -1086,8 +1325,8 @@
   href: toggle.md
 - name: Tooltip
   href: tooltip.md
-  updated: true
   new: false
+  updated: true
 - name: Overlay
   href: overlay.md
   new: false
@@ -1119,6 +1358,7 @@
 - name: Toolbar
   href: menus/toolbar.md
   preview: true
+  premium: true
 - name: Navigation Drawer
   href: navdrawer.md
   updated: false
@@ -1158,6 +1398,7 @@
   href: dock-manager.md
   new: false
   updated: false
+  premium: true
 - name: Tile Manager
   href: tile-manager.md
   new: true
@@ -1188,7 +1429,7 @@
 - name: Date Range Picker
   href: date-range-picker.md
   new: false
-  updated: false
+  updated: true
 - name: Month Picker
   href: month-picker.md
   new: false
@@ -1202,9 +1443,11 @@
 - name: CSV エクスポーター
   href: exporter-csv.md
   new: false
+  premium: true
 - name: Excel エクスポーター
   href: exporter-excel.md
   new: false
+  premium: true
 - name: トランザクション サービス
   href: transaction.md
   new: false
@@ -1213,6 +1456,8 @@
       href: transaction-classes.md
       new: false
       updated: false
+      premium: true
     - name: トランザクション サービスの使用方法
       href: transaction-how-to-use.md
       new: false
+      premium: true

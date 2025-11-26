@@ -5,6 +5,7 @@ _keywords: Angular 軸, オプション, タイトル, ラベル, ギャップ, 
 _license: commercial
 mentionedTypes: ["DomainChart", "CategoryChart", "FinancialChart", "FinancialChartYAxisMode", "FinancialChartXAxisMode", "NumericYAxis", "CategoryXAxis"]
 namespace: Infragistics.Controls.Charts
+_license: commercial
 _language: ja
 ---
 
