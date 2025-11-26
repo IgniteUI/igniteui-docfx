@@ -2,6 +2,7 @@
 title: Angular チャート データ ツールチップ | データ視覚化ツール | インフラジスティックス
 _description: データ ツールチップ レイヤーで Infragistics Ignite UI for Angular チャートをお試しください!
 _keywords: Angular charts, chart legend, legend, legend types, Ignite UI for Angular, Infragistics, Angular チャート, チャート凡例, 凡例, 凡例タイプ, インフラジスティックス
+_license: commercial
 mentionedTypes: ["XamDataChart", "Legend", "CategoryChart", "FinancialChart", "XamDataLegend", "DataToolTipLayer"]
 namespace: Infragistics.Controls.Charts
 _language: ja
@@ -50,21 +51,21 @@ Ignite UI for Angular では、**DataToolTip** は、シリーズの値とタイ
 
 単位の列には、省略記号や単位のテキストが表示されます。これらは、すべての列に [`dataToolTipUnitsText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipUnitsText) を設定するか、チャートの各系列で次のプロパティを使用して、**DataToolTip** で設定できます:
 
-*   カテゴリ シリーズ (例: ColumnSeries):
-    *   ValueMemberAsLegendUnit="K"
-*   財務物価シリーズ:
-    *   OpenMemberAsLegendUnit="K"
-    *   LowMemberAsLegendUnit="K"
-    *   HighMemberAsLegendUnit="K"
-    *   CloseMemberAsLegendUnit="K"
-*   範囲シリーズ:
-    *   LowMemberAsLegendUnit="K"
-    *   HighMemberAsLegendUnit="K"
-*   ラジアル シリーズ:
-    *   ValueMemberAsLegendUnit="km"
-*   極座標シリーズ:
-    *   RadiusMemberAsLegendUnit="km"
-    *   AngleMemberAsLegendUnit="degrees"
+- カテゴリ シリーズ (例: ColumnSeries):
+  - ValueMemberAsLegendUnit="K"
+- 財務物価シリーズ:
+  - OpenMemberAsLegendUnit="K"
+  - LowMemberAsLegendUnit="K"
+  - HighMemberAsLegendUnit="K"
+  - CloseMemberAsLegendUnit="K"
+- 範囲シリーズ:
+  - LowMemberAsLegendUnit="K"
+  - HighMemberAsLegendUnit="K"
+- ラジアル シリーズ:
+  - ValueMemberAsLegendUnit="km"
+- 極座標シリーズ:
+  - RadiusMemberAsLegendUnit="km"
+  - AngleMemberAsLegendUnit="degrees"
 
 上記のプロパティには、前述のラベル列のテキストを決定するための **MemberAsLegendLabel** で終わる対応するプロパティがあります。
 
@@ -131,7 +132,7 @@ Ignite UI for Angular では、**DataToolTip** は、シリーズの値とタイ
 
 凡例項目は、[`layoutMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#layoutMode) プロパティを使って垂直または表形式の構造に配置できます。デフォルト値は `Table` で、以前のリリースと同じ外観と操作性を維持します。
 
-例: <img src="../../../images/general/layout_mode.png" />
+例: <img src="../../../images/general/layout_mode.png" alt="Layout Mode" />
 
 ## Angular データ ツールチップのスタイル設定
 
@@ -148,41 +149,41 @@ Ignite UI for Angular では、**DataToolTip** は、シリーズの値とタイ
 
 ツールチップのグループ化部分を含むいくつかのプロパティが公開されています。
 
-*   `GroupTextMargin`
-*   [`groupTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#groupTextColor)
-*   `GroupTextFontSize`
-*   `GroupTextFontFamily`
-*   `GroupTextFontStyle`
-*   `GroupTextFontStretch`
-*   `GroupTextFontWeight`
-*   `HeaderTextMargin`
-*   [`headerTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#headerTextColor)
-*   `HeaderTextFontSize`
-*   `HeaderTextFontFamily`
-*   `HeaderTextFontStyle`
-*   `HeaderTextFontStretch`
-*   `HeaderTextFontWeight`
+- `GroupTextMargin`
+- [`groupTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#groupTextColor)
+- `GroupTextFontSize`
+- `GroupTextFontFamily`
+- `GroupTextFontStyle`
+- `GroupTextFontStretch`
+- `GroupTextFontWeight`
+- `HeaderTextMargin`
+- [`headerTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#headerTextColor)
+- `HeaderTextFontSize`
+- `HeaderTextFontFamily`
+- `HeaderTextFontStyle`
+- `HeaderTextFontStretch`
+- `HeaderTextFontWeight`
 
 ## API リファレンス
 
-*   [`dataToolTipExcludedColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipExcludedColumns)
-*   [`dataToolTipGroupedPositionModeX`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipGroupedPositionModeX)
-*   [`dataToolTipGroupedPositionModeY`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipGroupedPositionModeY)
-*   [`dataToolTipGroupingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipGroupingMode)
-*   [`dataToolTipHeaderText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipHeaderText)
-*   [`dataToolTipIncludedColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipIncludedColumns)
-*   [`dataToolTipLabelTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipLabelTextColor)
-*   [`IgxDataToolTipLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatatooltiplayercomponent.html)
-*   [`dataToolTipSummaryTitleText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipSummaryTitleText)
-*   [`dataToolTipSummaryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipSummaryType)
-*   [`dataToolTipTitleTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipTitleTextColor)
-*   [`dataToolTipUnitsTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipUnitsTextColor)
-*   [`dataToolTipUnitsText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipUnitsText)
-*   [`dataToolTipValueFormatAbbreviation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueFormatAbbreviation)
-*   [`dataToolTipValueFormatCulture`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueFormatCulture)
-*   [`dataToolTipValueFormatMaxFractions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueFormatMaxFractions)
-*   [`dataToolTipValueFormatMaxFractions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueFormatMaxFractions)
-*   [`dataToolTipValueFormatMinFractions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueFormatMinFractions)
-*   [`dataToolTipValueFormatMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueFormatMode)
-*   [`dataToolTipValueTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueTextColor)
-*   `MemberAsLegendLabel`
+- [`dataToolTipExcludedColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipExcludedColumns)
+- [`dataToolTipGroupedPositionModeX`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipGroupedPositionModeX)
+- [`dataToolTipGroupedPositionModeY`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipGroupedPositionModeY)
+- [`dataToolTipGroupingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipGroupingMode)
+- [`dataToolTipHeaderText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipHeaderText)
+- [`dataToolTipIncludedColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipIncludedColumns)
+- [`dataToolTipLabelTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipLabelTextColor)
+- [`IgxDataToolTipLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatatooltiplayercomponent.html)
+- [`dataToolTipSummaryTitleText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipSummaryTitleText)
+- [`dataToolTipSummaryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipSummaryType)
+- [`dataToolTipTitleTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipTitleTextColor)
+- [`dataToolTipUnitsTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipUnitsTextColor)
+- [`dataToolTipUnitsText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipUnitsText)
+- [`dataToolTipValueFormatAbbreviation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueFormatAbbreviation)
+- [`dataToolTipValueFormatCulture`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueFormatCulture)
+- [`dataToolTipValueFormatMaxFractions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueFormatMaxFractions)
+- [`dataToolTipValueFormatMaxFractions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueFormatMaxFractions)
+- [`dataToolTipValueFormatMinFractions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueFormatMinFractions)
+- [`dataToolTipValueFormatMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueFormatMode)
+- [`dataToolTipValueTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueTextColor)
+- `MemberAsLegendLabel`

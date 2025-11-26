@@ -1,13 +1,16 @@
 ---
-title: Angular Select Component - Ignite UI for Angular
+title: Angular Select Component - Ignite UI for Angular - MIT license 
 _description: Learn how to configure Angular Select Component. Angular Select provides an input with Angular dropdown list, allowing single item selection of the Angular Combobox. Try it now.
 _keywords:  angular select, angular select component, angular forms, angular form select component, angular ui components, igniteui for angular, infragistics
+_license: MIT
 ---
 
 # Angular Select Component Overview
+
 Angular Select is a form component used for selecting a single value from a list of predefined values. The Angular Select Component provides functionality identical to the native HTML select element, but offers a lot more customization options. It is based on the [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) and supports all of its features, including templating, virtualization, and customizing the dropdown list items.
 
 ## Angular Select Example
+
 Below is a basic Angular Select example. It has a simple contextual menu that displays a list of several choices opening per click.
 
 <code-view style="height: 300px;"
@@ -23,7 +26,7 @@ To get started with the Ignite UI for Angular Select component, first you need t
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxSelectModule` in the **app.module.ts** file.
 
@@ -75,6 +78,7 @@ Now that you have the Ignite UI for Angular Select module or directives imported
 ## Using the Angular Select
 
 Add the `igx-select` along with a list of items to choose from. We use [`igx-select-item`]({environment:angularApiUrl}/classes/igxselectitemcomponent.html) to display the items that the `igx-select` contains.
+
 ```html
 <igx-select>
     <label igxLabel>Simple Select</label>
@@ -84,6 +88,7 @@ Add the `igx-select` along with a list of items to choose from. We use [`igx-sel
     <igx-select-item value="Mango">Mango</igx-select-item>
 </igx-select>
 ```
+
 Another way to do it would be to use a collection of items that we want to display using the [*ngFor](https://angular.io/api/common/NgForOf) structural directive:
 
 ```typescript
@@ -135,6 +140,7 @@ The Select component supports the following directives applicable to the [Input 
     </igx-select-item>
 </igx-select>
 ```
+
 <code-view style="height: 350px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/select-input-directives/" >
@@ -144,8 +150,10 @@ The Select component supports the following directives applicable to the [Input 
 >If no [`placeholder`]({environment:angularApiUrl}/classes/igxselectcomponent.html#placeholder) is specified for the Select component and there is no selection made, the `igxLabel` will transition and appear where you would expect the placeholder to be.
 
 ### Group Select Items
+
 To help visually separate item groups, the select component supports item grouping by wrapping items in an `<igx-select-item-group>`.
 This works best with hierarchical data that can be iterated to declare the components. In the following example, each group has a `label` and a collection of `items`:
+
 ```typescript
 public greengrocery: Array<{ label: string, items: Array<{ type: string, origin: string }> }> = [
     { label: 'Fruits', items: [
@@ -189,8 +197,10 @@ Then in your template file you can iterate over the objects and access their ite
 </code-view>
 
 ### Header & Footer
+
 Currently, there are no default header and footer templates for the Select component. However, you can add a header or a footer template by marking them respectively with `igxSelectHeader` or `igxSelectFooter`. As these are custom templates, you should define their styling as well.
 In this example, there are both header and footer ng-templates defined. In the header there is a basic filtering, implemented via [`igx-buttongroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html). The footer includes static summary of all of the items, based on the delivery method.
+
 ```html
 <igx-select>
     <label igxLabel>Pick your fruit</label>
@@ -241,6 +251,7 @@ In this example, there are both header and footer ng-templates defined. In the h
     </ng-template>
 </igx-select>
 ```
+
 <code-view style="height: 610px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/select-header-footer/" >
@@ -248,6 +259,7 @@ In this example, there are both header and footer ng-templates defined. In the h
 
 
 ### Custom Toggle Button in Angular Select
+
 You can customize the default toggle button, using the `igxSelectToggleIcon` directive or setting a `TemplateRef` to the [`toggleIconTemplate`]({environment:angularApiUrl}/classes/igxselectcomponent.html#toggleIconTemplate) property.
 
 ```html
@@ -271,12 +283,14 @@ You can customize the default toggle button, using the `igxSelectToggleIcon` dir
 - Select an item using the `Enter` or `Space` keys
 
 >[!NOTE]
->`igx-select` supports only *single* selection of items.
+>`igx-select` supports only _single_ selection of items.
 
-You can also try out the [drag and drop App Builder™](https://www.infragistics.com/products/appbuilder) to see how it automates certain processes and reduces the need for excessive hand coding when building your next Angular app. 
+You can also try out the [drag and drop App Builder™](https://www.infragistics.com/products/appbuilder) to see how it automates certain processes and reduces the need for excessive hand coding when building your next Angular app.
 
 ## Custom Overlay Settings
+
 You can create custom [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html). To do this you first define your template like so:
+
 ```html
 <igx-select [overlaySettings]="customOverlaySettings">
     <igx-select-item *ngFor="let item of items">
@@ -284,9 +298,11 @@ You can create custom [`OverlaySettings`]({environment:angularApiUrl}/interfaces
     </igx-select-item>
 </igx-select>
 ```
+
 - Where the `overlaySettings` property is bound to your custom settings.
 
 Inside your class, you would have something along the lines of:
+
 ```typescript
 export class MyClass implements OnInit {
     @ViewChild(IgxSelectComponent)
@@ -313,9 +329,10 @@ export class MyClass implements OnInit {
     }
 }
 ```
-You can see that we create a [*PositionSettings*]({environment:angularApiUrl}/interfaces/positionsettings.html) object that is directly passed to our [*ConnectedPositioningStrategy*]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html), it is not required to do it, but since we want to define a custom positioning, we use them to override the strategy's default settings.
 
-- You can set all settings inside of the [*ngOnInit*](https://angular.io/api/core/OnInit) hook and this will automatically affect your template upon the component's generation.
+You can see that we create a [_PositionSettings_]({environment:angularApiUrl}/interfaces/positionsettings.html) object that is directly passed to our [_ConnectedPositioningStrategy_]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html), it is not required to do it, but since we want to define a custom positioning, we use them to override the strategy's default settings.
+
+- You can set all settings inside of the [_ngOnInit_](https://angular.io/api/core/OnInit) hook and this will automatically affect your template upon the component's generation.
 
 
 <code-view style="height: 260px;"
@@ -325,6 +342,7 @@ You can see that we create a [*PositionSettings*]({environment:angularApiUrl}/in
 
 
 You can also pass in a customized [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html) object to the [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html#open)'s open function, where your template should look like this:
+
 ```html
 <igx-select>
     <igx-select-item *ngFor="let item of items">
@@ -336,6 +354,7 @@ You can also pass in a customized [OverlaySettings]({environment:angularApiUrl}/
 ```
 
 And you class has the following:
+
 ```typescript
 export class MyClass implements OnInit {
     /* -- */
@@ -349,17 +368,43 @@ export class MyClass implements OnInit {
     /* -- */
 }
 ```
+
 >[!NOTE]
 >If you pass in your custom settings both as an argument in the `open` function and in the template, `igx-select` will use the one provided in the `open` function. However, if you bind the settings to an internal event, such as `opening` or `opened` then `igx-select` will use the settings that are provided in the template.
 
 ## Styling
 
+### Select Theme Property Map
+
+When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
+
+<table class="collapsible-table">
+    <thead>
+        <tr>
+        <th>Primary Property</th>
+        <th>Dependent Property</th>
+        <th>Description</th>
+        </tr>
+    </thead>
+    <tbody class="group">
+        <tr class="primary">
+        <td><details><summary><strong>$toggle-button-background</strong></summary></details></td>
+        <td>$toggle-button-foreground</td>
+        <td>Foreground color of the toggle button</td>
+        </tr>
+        <tr class="dependent"><td></td><td>$toggle-button-foreground-filled</td><td>Foreground color when toggle button is filled</td></tr>
+        <tr class="dependent"><td></td><td>$toggle-button-background-focus</td><td>Background color when focused</td></tr>
+        <tr class="dependent"><td></td><td>$toggle-button-background-focus--border (bootstrap/indigo)</td><td>Background when focused in border variant (Bootstrap/Indigo)</td></tr>
+        <tr class="dependent"><td></td><td>$toggle-button-foreground-focus</td><td>Foreground color when toggle button is focused</td></tr>
+    </tbody>
+</table>
+
 Every component has its own theme function.
 
-To get the Select component styled, you have to style its containing components. In our case, these are the [input-group-theme]({environment:sassApiUrl}/index.html#function-input-group-theme) and the [drop-down-theme]({environment:sassApiUrl}/index.html#function-drop-down-theme).
+To get the Select component styled, you have to style its containing components. In our case, these are the [input-group-theme]({environment:sassApiUrl}/themes#function-input-group-theme) and the [drop-down-theme]({environment:sassApiUrl}/themes#function-drop-down-theme).
 Take a look at the [`Input Group`](input-group.md#styling) and the [`Drop Down`](drop-down.md#styling) styling sections to get a better understanding of how to style those two components.
 
-We also have a [`select-theme`]({environment:sassApiUrl}/index.html#function-select-theme) function which is used only for styling the button of our Select component. <br>
+We also have a [`select-theme`]({environment:sassApiUrl}/themes#function-select-theme) function which is used only for styling the button of our Select component. <br>
 To get started with styling the Select component button, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
@@ -369,7 +414,7 @@ To get started with styling the Select component button, we need to import the `
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`select-theme`]({environment:sassApiUrl}/index.html#function-select-theme) and provide only the `$toggle-button-background` parameter. The theme function will automatically calculate all corresponding background and foreground colors for the different states based on this single value.
+Following the simplest approach, we create a new theme that extends the [`select-theme`]({environment:sassApiUrl}/themes#function-select-theme) and provide only the `$toggle-button-background` parameter. The theme function will automatically calculate all corresponding background and foreground colors for the different states based on this single value.
 
 ```scss
 $custom-select-theme: select-theme(
@@ -388,32 +433,73 @@ The last step is to pass the custom radio theme in our application:
            iframe-src="{environment:demosBaseUrl}/data-entries/select-styling/" >
 </code-view>
 
+### Styling with Tailwind
+
+You can style the select using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-select`, `dark-select`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [select-theme]({environment:sassApiUrl}/themes#function-select-theme). The syntax is as follows:
+
+```html
+<igx-select
+  class="!light-select ![--toggle-button-background:#99BAA6]">
+  ...
+</igx-select>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your select should look like this:
+
+<div class="sample-container loading" style="height:220px">
+    <iframe id="select-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/data-entries/select-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
 
 <div class="divider--half"></div>
 
 ## API Reference
-* [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)
-* [IgxSelectItemComponent]({environment:angularApiUrl}/classes/igxselectitemcomponent.html)
-* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
-* [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)
-* [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [ConnectedPositioningStrategy]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html)
-* [GlobalPositionStrategy]({environment:angularApiUrl}/classes/globalpositionstrategy.html#constructor)
-* [AbsoluteScrollStrategy]({environment:angularApiUrl}/classes/absolutescrollstrategy.html)
-* [PositionSettings]({environment:angularApiUrl}/interfaces/positionsettings.html)
+
+- [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)
+- [IgxSelectItemComponent]({environment:angularApiUrl}/classes/igxselectitemcomponent.html)
+- [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
+- [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)
+- [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html)
+- [ConnectedPositioningStrategy]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html)
+- [GlobalPositionStrategy]({environment:angularApiUrl}/classes/globalpositionstrategy.html#constructor)
+- [AbsoluteScrollStrategy]({environment:angularApiUrl}/classes/absolutescrollstrategy.html)
+- [PositionSettings]({environment:angularApiUrl}/interfaces/positionsettings.html)
 
 ## Theming Dependencies
-* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-drop-down-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
-* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-input-group-theme)
+
+- [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
+- [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
+- [IgxInputGroup Theme]({environment:sassApiUrl}/themes#function-input-group-theme)
 
 ## Additional Resources
-* [NgModel](https://angular.io/api/forms/NgModel)
-* [ViewChild](https://angular.io/api/core/ViewChild)
-* [ngForOf](https://angular.io/api/common/NgForOf)
+
+- [NgModel](https://angular.io/api/forms/NgModel)
+- [ViewChild](https://angular.io/api/core/ViewChild)
+- [ngForOf](https://angular.io/api/common/NgForOf)
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

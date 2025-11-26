@@ -3,6 +3,7 @@
 title: Angular Grid のセル選択 - Ignite UI for Angular
 _description: さまざまなイベント、豊富な API、またはマウス操作を使用してセル データ選択を簡単に実行できます。Grid はセル選択で 3 つのモードをサポートします。今すぐお試しください。
 _keywords: データ選択, igniteui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular Tree Grid のセル選択 - Ignite UI for Angular
 _description: さまざまなイベント、豊富な API、またはマウス操作を使用してセル データ選択を簡単に実行できます。Grid はセル選択で 3 つのモードをサポートします。今すぐお試しください。
 _keywords: データ選択, igniteui for angular, infragistics
+_license: commercial
 _language: ja
 ---
 }
@@ -19,6 +21,7 @@ _language: ja
 title: Angular Hierarchical Grid のセル選択 - Ignite UI for Angular 
 _description: さまざまなイベント、豊富な API、またはマウス操作を使用してセル データ選択を簡単に実行できます。Grid はセル選択で 3 つのモードをサポートします。今すぐお試しください。
 _keywords: データ選択, igniteui for angular, infragistics
+_license: commercial
 _language: ja
 ---
 }
@@ -375,4 +378,4 @@ $custom-grid-theme: grid-theme(
 コミュニティに参加して新しいアイデアをご提案ください。
 
 * [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular) 
+* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

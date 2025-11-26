@@ -1,10 +1,12 @@
 ---
-title: Angular Overlay Styling
+title: Angular Overlay Styling | MIT license
 _description: A detailed walkthrough that explains how to properly apply and scope styles to elements that are displayed using the IgniteUI for Angular Overlay Service.
 _keywords: Ignite UI for Angular, Angular Overlay Service, Angular UI controls, Overlay Service, View Encapsulation Example, Sass scoped styles in Angular, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
+_license: MIT
 ---
 
 # Overlay Styling
+
 <p class="highlight">
 
 [`IgxOverlayService`](overlay.md) is used to display content above the page content. A lot of Ignite UI for Angular components use the overlay - [Drop Down](drop-down.md), [Combo](combo.md), [Date Picker](date-picker.md) and more - so it is important to understand how the overlay displays content.
@@ -14,7 +16,7 @@ To display the content above other elements, the service moves it into a special
 
 ## Styling Overlay Components
 
-In most cases [global](themes/sass/global-themes.md) theme styles are not affected by the overlay outlets. For example, let's take a look at a Drop Down, [styled](drop-down.md#styling) by the global [`css-vars`]({environment:sassApiUrl}/index.html#mixin-css-vars) mixin:
+In most cases [global](themes/sass/global-themes.md) theme styles are not affected by the overlay outlets. For example, let's take a look at a Drop Down, [styled](drop-down.md#styling) by the global [`css-vars`]({environment:sassApiUrl}/themes#mixin-css-vars) mixin:
 
 ```html
 <!-- overlay-styling.component.html -->
@@ -83,8 +85,8 @@ export class OverlayStylingComponent {
 Now, the combo's list of items are properly rendered **inside** of our component's host, which means that our custom theme will take effect:
 
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/overlay-styling-simple/" >
 </code-view>
 
@@ -92,7 +94,7 @@ Now, the combo's list of items are properly rendered **inside** of our component
 ## Styling The Overlay
 
 Now that we've covered how `ViewEncapsulation` works along with the overlay's `outlet` property, we can take a look at how we can style the overlay's wrapper itself.
-The [`overlay-theme`]({environment:sassApiUrl}/index.html#function-overlay-theme) exposes a single property - `$background-color`, which affects the color of the backdrop when the overlay is set to `modal: true`.
+The [`overlay-theme`]({environment:sassApiUrl}/themes#function-overlay-theme) exposes a single property - `$background-color`, which affects the color of the backdrop when the overlay is set to `modal: true`.
 
 ### Global Styles
 
@@ -119,7 +121,7 @@ Now **all** modal overlays will have a purple tint to their background.
     @include css-vars($my-overlay-theme);
   }
 }
-```        
+```
 
 ### Scoped Overlay Styles
 
@@ -135,11 +137,13 @@ When scoping a modal overlay, you need to move the overlay outlet, which has som
 ```
 
 ## API References
-* [IgniteUI for Angular - Theme Library](themes/index.md)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
+
+- [IgniteUI for Angular - Theme Library](themes/index.md)
+- [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## Additional Resources
-* [IgniteUI for Angular - Theme Library](themes/index.md)
-* [Overlay Main Topic](overlay.md)
-* [Position strategies](overlay-position.md)
-* [Scroll strategies](overlay-scroll.md)
+
+- [IgniteUI for Angular - Theme Library](themes/index.md)
+- [Overlay Main Topic](overlay.md)
+- [Position strategies](overlay-position.md)
+- [Scroll strategies](overlay-scroll.md)

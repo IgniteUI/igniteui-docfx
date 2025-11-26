@@ -1,7 +1,8 @@
 ---
-title: Dialog Window コンポーネント
+title: Dialog Window コンポーネント - MITライセンス
 _description: Ignite UI for Angular Dialog Window コンポーネントを使用すると、情報ダイアログまたはデータ変換ウィンドウを作成し、リアルタイムで情報を表示して管理できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Angular UI コンポーネント, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Dialog Window コンポーネント, Angular Dialog Window コントロール, Angular Dialog コンポーネント
+_license: MIT
 _language: ja
 ---
 
@@ -251,6 +252,39 @@ params: {
 デフォルトでは、ダイアログが開かれると、Tab キーのフォーカスがダイアログ内にトラップされます。つまり、ユーザーがフォーカス可能な要素をタブで移動し続けても、フォーカスは要素から離れません。フォーカスが最後の要素を離れると、最初の要素に移動します。その逆も同様です。Shift + Tab キーを押すと、フォーカスが最初の要素を離れると、最後の要素にフォーカスが移されます。ダイアログにフォーカス可能な要素が含まれていない場合、フォーカスはダイアログ コンテナー自体にトラップされます。この動作は、[`focusTrap`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#focusTrap) プロパティを設定することで変更できます。
 
 ## スタイル設定
+
+### Dialog テーマのプロパティ マップ
+
+`$background` プロパティを変更すると、次の依存プロパティが自動的に更新されます。
+
+<table class="collapsible-table">
+    <thead>
+        <tr>
+        <th>プライマリ プロパティ</th>
+        <th>依存プロパティ</th>
+        <th>説明</th>
+        </tr>
+    </thead>
+    <tbody class="group">
+        <tr class="primary">
+        <td>
+            <details><summary><strong>$background</strong></summary></details>
+        </td>
+        <td>$title-color</td>
+        <td>ダイアログ タイトル テキストの色</td>
+        </tr>
+        <tr class="dependent">
+        <td></td>
+        <td>$message-color</td>
+        <td>ダイアログ メッセージ テキストの色</td>
+        </tr>
+        <tr class="dependent">
+        <td></td>
+        <td>$border-color</td>
+        <td>ダイアログ コンポーネントに使用される境界線の色</td>
+        </tr>
+    </tbody>
+</table>
 
 ダイアログ ウィンドウのスタイル設定は、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをはじめにインポートする必要があります。
 

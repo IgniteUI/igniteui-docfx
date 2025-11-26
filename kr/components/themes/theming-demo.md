@@ -20,7 +20,7 @@ The **Ignite UI for Angular Theming** provides you the ability to customize them
 
 ### Default Theme
 
-There is a **default theme** that styles all the components in the **Ignite UI for Angular controls** and the first thing that we are going to do is to set it in the `styles.scss` file:
+There is a *_Default theme_* that styles all the components in the **Ignite UI for Angular controls** and the first thing that we are going to do is to set it in the `styles.scss` file:
 
 ```scss
 // import first the IgniteUI themes library
@@ -43,7 +43,7 @@ The result from the above code snippet looks like this:
 
 <div class="divider--half"></div>
 
-In case you have other preferences for the appearance of the components or the **default theme** doesn't match the interior of your application, you can use the  **Ignite UI for Angular Theming**, which is much easier, fun and efficient way for styling, than writing huge amount of CSS files.
+In case you have other preferences for the appearance of the components or the *_Default theme_* doesn't match the interior of your application, you can use the  **Ignite UI for Angular Theming**, which is much easier, fun and efficient way for styling, than writing huge amount of CSS files.
 
 ### Get Started
 
@@ -112,7 +112,7 @@ Now lets define the **component themes** that we are going to apply:
 #### Defining Component Themes
 <div class="divider--half"></div>
 
-[**grid-theme**]({environment:sassApiUrl}/index.html#function-grid-theme)
+[**grid-theme**]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ```scss
 // Define dark theme for the dialog
@@ -128,7 +128,7 @@ $dark-grid-theme: grid-theme(
 );
 ```
 
-- [**dialog-theme**]({environment:sassApiUrl}/index.html#function-dialog-theme)
+- [**dialog-theme**]({environment:sassApiUrl}/themes#function-dialog-theme)
 
 ```scss
 
@@ -142,7 +142,7 @@ $dark-dialog-theme: dialog-theme(
 
 ```
 
-- [**input-group-theme**]({environment:sassApiUrl}/index.html#function-input-group-theme)
+- [**input-group-theme**]({environment:sassApiUrl}/themes#function-input-group-theme)
 
 ```scss
 // Define dark theme for the input-group
@@ -314,12 +314,12 @@ Now we can easily change our defined themes with only a `click` event:
 
 ### API
 
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
-* [IgxGrid Filtering Styles]({environment:sassApiUrl}/index.html#function-igx-grid-filtering-theme)
-* [IgxGrid Paginator Styles]({environment:sassApiUrl}/index.html#function-igx-grid-paginator-theme)
-* [IgxDialogComponent Styles]({environment:sassApiUrl}/index.html#function-dialog-theme)
-* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/index.html#function-input-group-theme) 
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
+* [IgxGrid Filtering Styles]({environment:sassApiUrl}/themes#function-igx-grid-filtering-theme)
+* [IgxGrid Paginator Styles]({environment:sassApiUrl}/themes#function-igx-grid-paginator-theme)
+* [IgxDialogComponent Styles]({environment:sassApiUrl}/themes#function-dialog-theme)
+* [IgxInputGroupComponent Styles]({environment:sassApiUrl}/themes#function-input-group-theme) 
+* [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ### Additional Resources
 <div class="divider--half"></div>

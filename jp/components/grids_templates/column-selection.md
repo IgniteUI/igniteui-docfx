@@ -3,6 +3,7 @@
 title: Angular Grid の列選択 - Ignite UI for Angular
 _description: Ignite UI for Angular Data Grid で列選択を構成する方法を説明します。これにより、グリッドのインタラクションがより簡単かつ高速になります。
 _keywords: column selection, igniteui for angular, 列選択, infragistics, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular Tree Grid の列選択 - Ignite UI for Angular
 _description: Ignite UI for Angular Tree Grid で列選択を構成する方法を説明します。これにより、グリッドのインタラクションがより簡単かつ高速になります。。
 _keywords: column selection, igniteui for angular, 列選択, infragistics, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -19,6 +21,7 @@ _language: ja
 title: Angular Hierarchical Grid の列選択 - Ignite UI for Angular
 _description: Ignite UI for Angular Hierarchical Grid で列選択を構成する方法を説明します。これにより、グリッドのインタラクションがより簡単かつ高速になります。
 _keywords: column selection, igniteui for angular, 列選択, infragistics, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }

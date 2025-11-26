@@ -1,13 +1,15 @@
 ---
-title: Angular Tabs Component | Ignite UI for Angular
+title: Angular Tabs Component | Ignite UI for Angular | MIT license
 _description: The Ignite UI for Angular Tabs component places tabs at the top and allows for scrolling when there are multiple tab items on the screen. Try it now.
 _keywords: Angular Tabs component, Angular Tabs control, Angular Tabs, Angular Tabbar Component, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Components, Angular UI Components, Native Angular Components Library
+_license: MIT
 ---
 
 # Angular Tabs Component Overview
-Ignite UI for Angular Tabs is a full-featured user interface component that has the primary purpose to organize and group related content in a single tabbed view, thus saving space and making content more comprehensible. It packs different features like animations, templating, customization options, and others. 
 
-Tabs in Angular are extremely useful when you’re building a web page with plenty of content that must be fitted into categories and displayed in a concise and space-efficient way. 
+Ignite UI for Angular Tabs is a full-featured user interface component that has the primary purpose to organize and group related content in a single tabbed view, thus saving space and making content more comprehensible. It packs different features like animations, templating, customization options, and others.
+
+Tabs in Angular are extremely useful when you’re building a web page with plenty of content that must be fitted into categories and displayed in a concise and space-efficient way.
 
 <p class="highlight">
 
@@ -17,7 +19,7 @@ The [`igx-tabs`]({environment:angularApiUrl}/classes/igxtabscomponent.html) comp
 
 ## Angular Tabs Example
 
-This is a basic example of Angular Nested Tabs where we have one tab within another where only one view can be seen at the time. Using nested tabs in Angular, we can display information in a better, structured way. 
+This is a basic example of Angular Nested Tabs where we have one tab within another where only one view can be seen at the time. Using nested tabs in Angular, we can display information in a better, structured way.
 
 <code-view style="height: 250px; border: 1px solid #ededed;"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -34,7 +36,7 @@ To get started with the Ignite UI for Angular Tabs component, first you need to 
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxTabsModule` in your **app.module.ts** file.
 
@@ -154,7 +156,9 @@ If the sample is configured properly, the final result should look like that:
 <div class="divider"></div>
 
 ## Angular Tabs Alignment
+
 `IgxTabs` [`tabAlignment`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabAlignment) input property controls how tabs are positioned and arranged. It accepts four different values - start, center, end and justify.
+
 - **Start** (default): the width of the tab header depends on the content (label, icon, both) and all tabs have equal padding. First tab is aligned to the tabs container left side.
 - **Center**: the width of the tab header depends on the content and occupies the tabs container center. If the space is not enough to fit all items, scroll buttons are displayed.
 - **End**: the width of the tab header depends on the content and all tabs have equal padding. Last tab is aligned to the tabs container right side.
@@ -383,6 +387,325 @@ The above code creates an `igx-tabs` component with three tab items. Each tab it
 
 ## Styles
 
+### Tabs Theme Property Map
+
+When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
+
+<div class="theme-switcher-wrapper">
+  <input type="radio" name="theme" id="material" checked>
+  <label for="material" class="switch-label">Material</label>
+  <input type="radio" name="theme" id="fluent">
+  <label for="fluent" class="switch-label">Fluent</label>
+  <input type="radio" name="theme" id="bootstrap">
+  <label for="bootstrap" class="switch-label">Bootstrap</label>
+  <input type="radio" name="theme" id="indigo">
+  <label for="indigo" class="switch-label">Indigo</label>
+
+  <div class="tables">
+    <div class="theme-table material">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-background</strong></summary></details></td>
+            <td>$item-active-background</td>
+            <td>The color used for the active/focused tab background.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-text-color</td><td>The color used for the tab text color.</td></tr>
+          <tr class="dependent"><td></td><td>$item-icon-color</td><td>The color used for the tab icon.</td></tr>
+          <tr class="dependent"><td></td><td>$item-hover-background</td><td>The background used for the tabs on hover.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>The color used for the active tab indicator.</td></tr>
+          <tr class="dependent"><td></td><td>$button-background</td><td>The color used for the button background.</td></tr>
+          <tr class="dependent"><td></td><td>$button-hover-background</td><td>The color used for the button background on hover.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-active-background</strong></summary></details></td>
+            <td>$item-active-icon-color</td>
+            <td>The color used for the active tab icon.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-active-color</td><td>The color used for the active tabs text.</td></tr>
+          <tr class="dependent"><td></td><td>$tab-ripple-color</td><td>The color used for the button background.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-text-color</strong></summary></details></td>
+            <td>$item-hover-color</td>
+            <td>The text color used for the tabs on hover if no `$item-hover-background` is provided</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-icon-color</td><td>The color used for the tab icon if no `$item-background` is provided</td></tr>
+          <tr class="dependent"><td></td><td>$item-active-color</td><td>The color used for the active tabs text if no `$item-active-background` is provided</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>The color used for the active tab indicator if no `$item-background` is provided</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-icon-color</strong></summary></details></td>
+            <td>$item-hover-icon-color</td>
+            <td>The color used for the tab icon on hover.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-active-icon-color</td><td>The color used for the active tab icon.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>The color used for the active tab indicator.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-background</strong></summary></details></td>
+            <td>$button-hover-background</td>
+            <td>The color used for the button background on hover.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-color</td><td>The color used for the button icon/text color.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-color</strong></summary></details></td>
+            <td>$button-disabled-color</td>
+            <td>The color used for the disabled button icon/text.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-ripple-color</td><td>The color used for the button background on hover.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><strong>$button-hover-background</strong></td>
+            <td>$button-hover-color</td>
+            <td>The color used for the button icon/text color on hover.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="theme-table fluent">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-background</strong></summary></details></td>
+            <td>$item-active-background</td>
+            <td>The color used for the active/focused tab background.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-text-color</td><td>The color used for the tab text color.</td></tr>
+          <tr class="dependent"><td></td><td>$item-icon-color</td><td>The color used for the tab icon.</td></tr>
+          <tr class="dependent"><td></td><td>$item-hover-background</td><td>The background used for the tabs on hover.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>The color used for the active tab indicator.</td></tr>
+          <tr class="dependent"><td></td><td>$button-background</td><td>The color used for the button background.</td></tr>
+          <tr class="dependent"><td></td><td>$button-hover-background</td><td>The color used for the button background on hover.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-active-background</strong></summary></details></td>
+            <td>$item-active-icon-color</td>
+            <td>The color used for the active tab icon.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-active-color</td><td>The color used for the active tabs text.</td></tr>
+          <tr class="dependent"><td></td><td>$tab-ripple-color</td><td>The ripple color for the tab interaction.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-text-color</strong></summary></details></td>
+            <td>$item-hover-color</td>
+            <td>The text color used for the tabs on hover if no `$item-hover-background` is provided</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-icon-color</td><td>The color used for the tab icon if no `$item-background` is provided</td></tr>
+          <tr class="dependent"><td></td><td>$item-active-color</td><td>The color used for the active tabs text if no `$item-active-background` is provided</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>The color used for the active tab indicator if no `$item-background` is provided</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-icon-color</strong></summary></details></td>
+            <td>$item-hover-icon-color</td>
+            <td>The color used for the tab icon on hover.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-active-icon-color</td><td>The color used for the active tab icon.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>The color used for the active tab indicator.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-background</strong></summary></details></td>
+            <td>$button-hover-background</td>
+            <td>The color used for the button background on hover.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-color</td><td>The color used for the button icon/text color.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-color</strong></summary></details></td>
+            <td>$button-disabled-color</td>
+            <td>The color used for the disabled button icon/text.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-ripple-color</td><td>The color used for the button background on hover.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><strong>$button-hover-background</strong></td>
+            <td>$button-hover-color</td>
+            <td>The color used for the button icon/text color on hover.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="theme-table bootstrap">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-background</strong></summary></details></td>
+            <td>$item-active-background</td>
+            <td>The color used for the active/focused tab background.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-text-color</td><td>The color used for the tab text color.</td></tr>
+          <tr class="dependent"><td></td><td>$item-icon-color</td><td>The color used for the tab icon.</td></tr>
+          <tr class="dependent"><td></td><td>$item-hover-background</td><td>The background used for the tabs on hover.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>The color used for the active tab indicator.</td></tr>
+          <tr class="dependent"><td></td><td>$button-background</td><td>The color used for the button background.</td></tr>
+          <tr class="dependent"><td></td><td>$button-hover-background</td><td>The color used for the button background on hover.</td></tr>
+          <tr class="dependent"><td></td><td>$border-color</td><td>The border color of the tabs.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-active-background</strong></summary></details></td>
+            <td>$item-active-icon-color</td>
+            <td>The color used for the active tab icon.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-active-color</td><td>The color used for the active tabs text.</td></tr>
+          <tr class="dependent"><td></td><td>$tab-ripple-color</td><td>The color used for the button background.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-text-color</strong></summary></details></td>
+            <td>$item-hover-color</td>
+            <td>The text color used for the tabs on hover if no `$item-hover-background` is provided</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-icon-color</td><td>The color used for the tab icon if no `$item-background` is provided</td></tr>
+          <tr class="dependent"><td></td><td>$button-color</td><td>The color used for the button icon/text color if no `$button-background` is provided (non-material)</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-icon-color</strong></summary></details></td>
+            <td>$item-hover-icon-color</td>
+            <td>The color used for the tab icon on hover if no `$item-hover-background` is provided</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-text-color</td><td>The color used for the tab text color if no `$item-background` is provided</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-background</strong></summary></details></td>
+            <td>$button-hover-background</td>
+            <td>The color used for the button background on hover.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-color</td><td>The color used for the button icon/text color.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-color</strong></summary></details></td>
+            <td>$button-hover-color</td>
+            <td>The color used for the button icon/text color on hover if no `$button-background` is provided</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-disabled-color</td><td>The color used for the disabled button icon/text.</td></tr>
+          <tr class="dependent"><td></td><td>$button-ripple-color</td><td>The color used for the button background on hover.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><strong>$button-hover-background</strong></td>
+            <td>$button-hover-color</td>
+            <td>The color used for the button icon/text color on hover.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="theme-table indigo">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-background</strong></summary></details></td>
+            <td>$item-active-background</td>
+            <td>The color used for the active/focused tab background.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-text-color</td><td>The color used for the tab text color.</td></tr>
+          <tr class="dependent"><td></td><td>$item-icon-color</td><td>The color used for the tab icon.</td></tr>
+          <tr class="dependent"><td></td><td>$item-hover-background</td><td>The background used for the tabs on hover.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>The color used for the active tab indicator.</td></tr>
+          <tr class="dependent"><td></td><td>$button-background</td><td>The color used for the button background.</td></tr>
+          <tr class="dependent"><td></td><td>$button-hover-background</td><td>The color used for the button background on hover.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-active-background</strong></summary></details></td>
+            <td>$item-active-icon-color</td>
+            <td>The color used for the active tab icon.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-active-color</td><td>The color used for the active tabs text.</td></tr>
+          <tr class="dependent"><td></td><td>$tab-ripple-color</td><td>The color used for the button background.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-text-color</strong></summary></details></td>
+            <td>$item-hover-color</td>
+            <td>The text color used for the tabs on hover if no `$item-hover-background` is provided</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-icon-color</td><td>The color used for the tab icon if no `$item-background` is provided</td></tr>
+          <tr class="dependent"><td></td><td>$item-active-color</td><td>The color used for the active tabs text if no `$item-active-background` is provided</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>The color used for the active tab indicator if no `$item-background` is provided</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-icon-color</strong></summary></details></td>
+            <td>$item-hover-icon-color</td>
+            <td>The color used for the tab icon on hover.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-active-icon-color</td><td>The color used for the active tab icon.</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>The color used for the active tab indicator.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-background</strong></summary></details></td>
+            <td>$button-hover-background</td>
+            <td>The color used for the button background on hover.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-color</td><td>The color used for the button icon/text color.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-color</strong></summary></details></td>
+            <td>$button-disabled-color</td>
+            <td>The color used for the disabled button icon/text.</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-ripple-color</td><td>The color used for the button background on hover.</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><strong>$button-hover-background</strong></td>
+            <td>$button-hover-color</td>
+            <td>The color used for the button icon/text color on hover.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
 To get started with styling the tabs, we need to import the theming module, where all the theme functions and component mixins live:
 
 ```scss
@@ -390,9 +713,9 @@ To get started with styling the tabs, we need to import the theming module, wher
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
-Following the simplest approach, we create a new theme that extends the [`tabs-theme`]({environment:sassApiUrl}/index.html#function-tabs-theme). By passing just a few base parameters—such as `$item-background` and `$item-active-color`—you can style your tabs with minimal effort. The theme will automatically generate all necessary background and foreground colors for the various interaction states.
+Following the simplest approach, we create a new theme that extends the [`tabs-theme`]({environment:sassApiUrl}/themes#function-tabs-theme). By passing just a few base parameters—such as `$item-background` and `$item-active-color`—you can style your tabs with minimal effort. The theme will automatically generate all necessary background and foreground colors for the various interaction states.
 
 You can, of course, override any additional parameters to further fine-tune the appearance.
 
@@ -404,9 +727,9 @@ $dark-tabs: tabs-theme(
 ```
 
 >[!NOTE]
->Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
-If we take a look at the [`tabs-theme`]({environment:sassApiUrl}/index.html#function-tabs-theme), we will notice that there are even more properties available to us in order to style our tabs.
+If we take a look at the [`tabs-theme`]({environment:sassApiUrl}/themes#function-tabs-theme), we will notice that there are even more properties available to us in order to style our tabs.
 
 > [!NOTE]
 > In order to style any component used as part of a tab content, additional themes should be created specific to the respective component.
@@ -425,28 +748,72 @@ The last step is to **include** the component theme in our application.
            iframe-src="{environment:demosBaseUrl}/layouts/tabs-style/" >
 </code-view>
 
+### Styling with Tailwind
+
+You can style the tabs using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-tabs`, `dark-tabs`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [IgxTabs Theme]({environment:sassApiUrl}/themes#function-tabs-theme). The syntax is as follows:
+
+```html
+<igx-tabs
+  class="!light-tabs
+  ![--item-background:#011627]
+  ![--item-active-icon-color:#FF8040]
+  ![--item-active-color:#FF8040]">
+  ...
+</igx-tabs>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your tabs should look like this:
+
+<div class="sample-container loading" style="height:200px">
+    <iframe id="tabs-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
 <div class="divider--half"></div>
 
 ## API References
+
 <div class="divider"></div>
 
-* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
-* [IgxTabsComponent]({environment:angularApiUrl}/classes/igxtabscomponent.html)
-* [IgxTabsComponent Styles]({environment:sassApiUrl}/index.html#function-tabs-theme)
-* [IgxTabItemComponent]({environment:angularApiUrl}/classes/igxtabitemcomponent.html)
-* [IgxTabHeaderComponent]({environment:angularApiUrl}/classes/igxtabheadercomponent.html)
-* [IgxTabContentComponent]({environment:angularApiUrl}/classes/igxtabcontentcomponent.html)
+- [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+- [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
+- [IgxTabsComponent]({environment:angularApiUrl}/classes/igxtabscomponent.html)
+- [IgxTabsComponent Styles]({environment:sassApiUrl}/themes#function-tabs-theme)
+- [IgxTabItemComponent]({environment:angularApiUrl}/classes/igxtabitemcomponent.html)
+- [IgxTabHeaderComponent]({environment:angularApiUrl}/classes/igxtabheadercomponent.html)
+- [IgxTabContentComponent]({environment:angularApiUrl}/classes/igxtabcontentcomponent.html)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
+
+- [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

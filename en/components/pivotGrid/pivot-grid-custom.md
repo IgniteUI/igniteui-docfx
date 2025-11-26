@@ -2,6 +2,7 @@
 title: Angular Pivot Grid Custom Remote | Pivot Tables | Infragistics
 _description: Create fast, responsive Angular pivot grids and tables with Ignite UI for Angular. Perform complex data analysis via pivot data.
 _keywords: angular pivot grid, Angular pivot table, ignite ui for angular, pivot grid customization, pivot grid remote, pivot remote
+_license: commercial
 ---
 
 
@@ -17,8 +18,8 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 ```
 
 The following example show how to handle scenarios, where the data is already aggregated and how its structure should look like:
-<code-view style="height: 530px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 530px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-noop/" alt="Angular Pivot Grid Custom Predefined Aggregations Example">
 </code-view>
 
@@ -55,10 +56,11 @@ public aggregatedData = [
 ```
 
 The Pivot grid provides the object keys fields it uses to do its pivot calculations.
+
 - `children` - Field that stores children for hierarchy building. It represents a map from grouped values and all the pivotGridRecords that are based on that value. It can be utilized in very specific scenarios, where there is a need to do something while creating the hierarchies. No need to change this for common usage.
 - `records` - Field that stores reference to the original data records. Can be seen in the example from above - `AllProducts_records`. Avoid setting fields in the data with the same name as this property. If your data records has `records` property, you can specify different and unique value for it using the `pivotKeys`.
 - `aggregations` - Field that stores aggregation values. It's applied while creating the hierarchies and also it should not be changed for common scenarios.
-- `level` - Field that stores dimension level based on its hierarchy. Avoid setting fields in the data with the same name as this property. If your data records has `level` property, you can specify different and unique value for it using the `pivotKeys`. 
+- `level` - Field that stores dimension level based on its hierarchy. Avoid setting fields in the data with the same name as this property. If your data records has `level` property, you can specify different and unique value for it using the `pivotKeys`.
 - `columnDimensionSeparator` - Separator used when generating the unique column field values. It is the dash(`-`) from the example from above - `All-Bulgaria`.
 - `rowDimensionSeparator` - Separator used when generating the unique row field values. It is the underscore(`_`) from the example from above - `AllProducts_records`. It's used when creating the `records` and `level` field.
 
@@ -126,18 +128,20 @@ public noopSortStrategy = NoopSortingStrategy.instance();
 ```
 
 ## API References
-* [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
-* [IgxPivotDataSelectorComponent]({environment:angularApiUrl}/classes/igxpivotdataselectorcomponent.html)
+
+- [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
+- [IgxPivotDataSelectorComponent]({environment:angularApiUrl}/classes/igxpivotdataselectorcomponent.html)
 
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [Angular Pivot Grid Features](pivot-grid-features.md)
-* [Angular Pivot Grid Overview](pivot-grid.md)
+- [Angular Pivot Grid Features](pivot-grid-features.md)
+- [Angular Pivot Grid Overview](pivot-grid.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

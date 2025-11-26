@@ -2,12 +2,13 @@
 title: Angular Color Editor | カラー エディター | インフラジスティックス
 _description: Color Editor コンポーネントは、アプリケーションの任意のコンポーネントまたは側面の色を変更するための、簡単に構成可能なオプションを提供します。
 _keywords: Angular Color Editor, Ignite UI for Angular, Angular カラー エディター, インフラジスティックス
+_license: commercial
 mentionedTypes: ["ColorEditor"]
 namespace: Infragistics.Controls
 _language: ja
 ---
 
-# Angular Color Editor (カラー エディター) の概要 (プレビュー)
+# Angular Color Editor (カラー エディター) の概要 <label class="badge badge--preview">PREVIEW</label>
 
 Ignite UI for Angular Color Editor は軽量のカラー ピッカー コンポーネントです。Color Editor は、ブラッシ アイコンをクリックすると開きます。RGBA 値と 16 進値の両方を、下部にある目的の色から取得できます。これらの値は、3 つのスライダーが変更されると更新されます。中央のボックスは、彩度と明度を調整するために設計されており、隣接する 2つ のスライダーで rgb 値と輝度値を調整できます。RGB は (1～255) の範囲で登録されます。明度は (0～1) の範囲で登録されます。
 
@@ -57,16 +58,16 @@ npm install igniteui-angular-inputs
 
 Color Editor コンポーネントは、次のイベントを発生させます:
 
-*   valueChanged
-*   valueChanging
+- valueChanged
+- valueChanging
 
 <!-- Angular -->
 
 ```ts
 @ViewChild("colorEditor", { static: true } )
 private colorEditor: IgxColorEditorComponent
-public ngAfterViewInit(): void 
-{	
+public ngAfterViewInit(): void
+{
     this.colorEditor.valueChanged.subscribe(this.onValueChanged);
 }
 
@@ -81,9 +82,9 @@ public onValueChanged = (e: any) => {
 
 ## API リファレンス
 
-*   `ColorEditor`
+- `ColorEditor`
 
 ## その他のリソース
 
-*   [Ignite UI for Angular **フォーラム (英語)**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-*   [Ignite UI for Angular **GitHub (英語)**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム (英語)**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub (英語)**](https://github.com/IgniteUI/igniteui-angular)

@@ -2,6 +2,7 @@
 title: Tree Grid load on demand - Native Angular | Ignite UI for Angular
 _description: The Ignite UI for Angular Tree Grid provides the necessary tools to load child data on demand when a parent row is expanded. That way the volume of data would be greatly reduced and can be retrieved only when the user needs it.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tree Grid component, Angular Tree Table component, Angular Tree Grid control, Angular Tree Table control, Angular High Performance Tree Grid, Angular High Performance Tree Table, Tree Grid, Tree Table
+_license: commercial
 ---
 
 # Tree Grid Load On Demand
@@ -11,8 +12,8 @@ The Ignite UI for Angular [`IgxTreeGrid`]({environment:angularApiUrl}/classes/ig
 ## Angular Tree Grid Load On Demand Example
 
 
-<code-view style="height:450px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:450px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-load-on-demand/" alt="Angular Tree Grid Load On Demand Example">
 </code-view>
 
@@ -32,7 +33,7 @@ The Load on Demand feature is compatible with both types of Tree Grid data sourc
 The [`loadChildrenOnDemand`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#loadChildrenOnDemand) callback provides two parameters:
 
 - parentID - the ID of the parent row that is being expanded.
-- done - callback that should be called with the children when they are retrieved from the server. 
+- done - callback that should be called with the children when they are retrieved from the server.
 
 ```typescript
 public loadChildren = (parentID: any, done: (children: any[]) => void) => {
@@ -40,7 +41,7 @@ public loadChildren = (parentID: any, done: (children: any[]) => void) => {
 }
 ```
 
-After the user clicks the expand icon, it is replaced by a loading indicator. When the `done` callback is called, the loading indicator disappears and the children are loaded. The Tree Grid adds the children to the underlying data source and populates the necessary keys automatically. 
+After the user clicks the expand icon, it is replaced by a loading indicator. When the `done` callback is called, the loading indicator disappears and the children are loaded. The Tree Grid adds the children to the underlying data source and populates the necessary keys automatically.
 
 If you have a way to provide an information whether a row has children prior to its expanding, you could use the [`hasChildrenKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#hasChildrenKey) input property. This way you could provide a boolean property from the data objects which indicates whether an expansion indicator should be displayed.
 
@@ -70,18 +71,18 @@ If you want to provide your own custom loading indicator, you may create an ng-t
 
 <div class="divider--half"></div>
 
-* [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-grid-theme)
+- [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
+- [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ### Additional Resources
 
 <div class="divider--half"></div>
 
-* [Tree Grid overview](tree-grid.md)
-* [Tree Grid Virtualization and Performance](virtualization.md)
+- [Tree Grid overview](tree-grid.md)
+- [Tree Grid Virtualization and Performance](virtualization.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

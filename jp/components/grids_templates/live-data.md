@@ -3,6 +3,7 @@
 title: Angular Data Grid のライブ データ更新 - Ignite UI for Angular
 _description: Ignite UI for Angular Data Grid が、ユーザーの操作に応答し続けている間、1 秒あたり数千の更新を処理する方法を確認します。
 _keywords: angular データ グリッド, angular グリッド更新, angular ライブ データ
+_license: commercial
 _language: ja
 ---
 }
@@ -12,6 +13,7 @@ _language: ja
 title: Angular Tree Grid のライブ データ更新 - Ignite UI for Angular
 _description: Ignite UI for Angular Tree Grid が、ユーザーの操作に応答し続けている間、1 秒あたり数千の更新を処理する方法を確認します。
 _keywords: angular データ グリッド, angular グリッド更新, angular ライブ データ
+_license: commercial
 _language: ja
 ---
 }
@@ -120,7 +122,7 @@ this.hubConnection.invoke('updateparameters', frequency, volume, live, updateAll
 
 ## API リファレンス
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
@@ -163,7 +165,7 @@ this.hubConnection.invoke('updateparameters', frequency, volume, live, updateAll
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 

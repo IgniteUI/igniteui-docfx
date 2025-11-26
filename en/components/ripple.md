@@ -1,7 +1,8 @@
 ---
-title: Angular Ripple Directive – Ignite UI for Angular | Infragistics
+title: Angular Ripple Directive – Ignite UI for Angular | Infragistics | MIT license
 _description: With Ignite UI for Angular Ripple directive, developers can define an area which received a ripple animation effect for powerful UI enhancement.
 _keywords: Angular Ripple component, Angular Ripple Directive, Angular Ripple control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
+_license: MIT
 ---
 
 # Angular Ripple Directive Overview
@@ -28,7 +29,7 @@ To get started with the Ignite UI for Angular Ripple directive, first you need t
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxRippleModule` in the **app.module.ts** file.
 
@@ -160,7 +161,7 @@ First, in order to use the functions exposed by the theme engine, we need to imp
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-You can easily create a new theme, that extends the [`ripple-theme`]({environment:sassApiUrl}/index.html#function-ripple-theme) and accepts the parameters, required to customize the ripple as desired.
+You can easily create a new theme, that extends the [`ripple-theme`]({environment:sassApiUrl}/themes#function-ripple-theme) and accepts the parameters, required to customize the ripple as desired.
 
 ```scss
 $custom-ripple-theme: ripple-theme(
@@ -179,9 +180,9 @@ The next step is to pass the custom ripple theme:
 
 ### Demo
 
-<code-view style="height:200px" 
+<code-view style="height:200px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/ripple-styling/" alt="Angular Ripple Example">
 </code-view>
 
@@ -190,7 +191,7 @@ The next step is to pass the custom ripple theme:
 <div class="divider--half"></div>
 
 - [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
-- [IgxRipple Styles]({environment:sassApiUrl}/index.html#function-ripple-theme)
+- [IgxRipple Styles]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ## Additional Resources
 

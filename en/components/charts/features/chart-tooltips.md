@@ -2,6 +2,7 @@
 title: Angular Chart Tooltips | Data Visualization | Infragistics
 _description: Infragistics' Angular Chart Tooltips
 _keywords: Angular Charts, Tooltips, Infragistics
+_license: commercial
 mentionedTypes: ["DomainChart", "CategoryChart", "ToolTipType"]
 namespace: Infragistics.Controls.Charts
 ---
@@ -26,11 +27,11 @@ Angular Chart provide three types of tooltips that you can with tooltips enabled
 The [`toolTipType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#toolTipType) property is configurable and can be set to one of the following options:
 
 | Property Value     | Description  |
-| -------------------|----------------  |
-| [`Default`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.tooltiptype.html#Default)  Tooltip | Display a tooltip for a single item when the pointer is positioned over it.  |
-| [`Data`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.tooltiptype.html#Data) Tooltip | Display the data tooltips for all series in the chart.  |
-| [`Item`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.tooltiptype.html#Item)  Tooltip    | Display a tooltip for each data item in the category that the pointer is positioned over.  |
-| [`Category`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.tooltiptype.html#Category) Tooltip | Display a grouped tooltip for all data points in the category that the pointer is positioned over.  |
+| -------------------|----------------|
+| [`Default`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.tooltiptype.html#Default)  Tooltip | Display a tooltip for a single item when the pointer is positioned over it. |
+| [`Data`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.tooltiptype.html#Data) Tooltip | Display the data tooltips for all series in the chart. |
+| [`Item`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.tooltiptype.html#Item)  Tooltip    | Display a tooltip for each data item in the category that the pointer is positioned over. |
+| [`Category`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.tooltiptype.html#Category) Tooltip | Display a grouped tooltip for all data points in the category that the pointer is positioned over. |
 
 <div class="divider--half"></div>
 
@@ -68,18 +69,18 @@ This example shows how to create custom tooltips for each series in Angular Data
 
 You can find more information about related chart features in these topics:
 
-*   [Chart Annotations](chart-annotations.md)
-*   [Chart Markers](chart-markers.md)
+- [Chart Annotations](chart-annotations.md)
+- [Chart Markers](chart-markers.md)
 
 ## API References
 
 The [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) and [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html) components share the following API properties:
 
-*   [`toolTipType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#toolTipType)
+- [`toolTipType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#toolTipType)
 
 In the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) component, you can use the following API components and properties:
 
-*   [`IgxDataToolTipLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatatooltiplayercomponent.html)
-*   [`IgxItemToolTipLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxitemtooltiplayercomponent.html)
-*   [`IgxCategoryToolTipLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorytooltiplayercomponent.html)
-*   `ShowDefaultToolTip`
+- [`IgxDataToolTipLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatatooltiplayercomponent.html)
+- [`IgxItemToolTipLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxitemtooltiplayercomponent.html)
+- [`IgxCategoryToolTipLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorytooltiplayercomponent.html)
+- `ShowDefaultToolTip`

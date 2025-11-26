@@ -2,6 +2,7 @@
 title: Angular Map | Data Visualization Tools | Displaying Open Street Maps Imagery | Infragistics
 _description: Use Infragistics' Angular to display imagery from OSM maps. View Ignite UI for Angular map tutorials!
 _keywords: Angular map, OSM, Ignite UI for Angular, Infragistics, imagery tile source, map background
+_license: commercial
 mentionedTypes: ["XamGeographicMap"]
 ---
 
@@ -45,5 +46,5 @@ this.map.backgroundContent = tileSource;
 
 ## API References
 
-*   `BackgroundContent`
-*   [`IgxOpenStreetMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxopenstreetmapimagery.html)
+- `BackgroundContent`
+- [`IgxOpenStreetMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxopenstreetmapimagery.html)

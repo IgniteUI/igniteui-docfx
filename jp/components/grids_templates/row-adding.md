@@ -3,6 +3,7 @@
 title: Angular Data Grid での行追加 - Ignite UI for Angular
 _description: Ignite UI for Angular の組み込み行追加機能の使用方法とカスタマイズ方法を説明します。CRUD 機能と直感的なグリッド行追加。例を参照してください。
 _keywords: row adding, 行追加, igniteui for angular, infragistics, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -12,6 +13,7 @@ _language: ja
 title: Angular @@igComponent での行追加 - Ignite UI for Angular
 _description: Ignite UI for Angular の組み込み行追加機能の使用方法とカスタマイズ方法を説明します。CRUD 機能と直感的なグリッド行追加。例を参照してください。
 _keywords: row adding, 行追加, igniteui for angular, infragistics, インフラジスティックス
+_license: commercial
 _language: ja
 _canonicalLink: grid/row-adding
 ---

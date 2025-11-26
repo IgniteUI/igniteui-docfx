@@ -2,6 +2,7 @@
 title: Angular Tree Grid グループ化 | 複数のフィールドでグループ化 | インフラジスティックス
 _description: Angular グループを設定して Angular テーブルにデータ レコードを視覚化し、グループ化されたデータを個別の列グループに視覚化できます。
 _keywords: angular group by, igniteui for angular, infragistics, angular グループ化, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 
@@ -170,7 +171,7 @@ private reloadData() {
 <div class="divider--half"></div>
 
 * [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ### その他のリソース
 

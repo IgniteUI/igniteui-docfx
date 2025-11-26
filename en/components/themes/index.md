@@ -5,15 +5,17 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Theming
+
 Ignite UI for Angular allows you to modify the styles of all component themes using CSS variables. If you really wanted to dig deep, we provide a powerful Sass theming engine that allows you to create global component themes tailored to your specific design language that work in all modern browsers.
 
->[!NOTE] 
+>[!NOTE]
 > This document describes the theming system in Ignite UI for Angular from version 12 forward. Starting with version 12 **CSS variables are the recommended way to modify the global and component themes**.
 > You can still use the Sass theming library as you would've prior to version 12.
 
 ## Basic Usage
 
 Ignite UI for Angular includes the following themes as part of its package:
+
 - Material
 - Bootstrap
 - Fluent
@@ -72,13 +74,13 @@ If you wanted to change the primary and secondary colors, all you have to do is 
 }
 ```
 
-Let's break down the names of these color variables. The `ig` prefix is there as a unique identifier to indicate that this variable is part of an Ignite UI for Angular theme, `primary` is the color variable name, and `500` stands for the color variant. We will take a deeper look at palettes in the [Palettes](./palettes.md) section of the documentation. For now all you need to know is that we have several base color variables (primary, secondary, surface, success, info, etc.) that include different shades or _variants_ that are all generated from the main color variants. The `500` color variants that we set in the above example are considered the main variable color and all of the other variants for the given color variable are generated from the `500` variant. 
+Let's break down the names of these color variables. The `ig` prefix is there as a unique identifier to indicate that this variable is part of an Ignite UI for Angular theme, `primary` is the color variable name, and `500` stands for the color variant. We will take a deeper look at palettes in the [Palettes](./palettes.md) section of the documentation. For now all you need to know is that we have several base color variables (primary, secondary, surface, success, info, etc.) that include different shades or _variants_ that are all generated from the main color variants. The `500` color variants that we set in the above example are considered the main variable color and all of the other variants for the given color variable are generated from the `500` variant.
 
 Changing these variants, you can completely overhaul the entire palette.
 
 >[!WARNING]
 > Some components do not use colors from the palettes. In those instances, you will have to target the component CSS variables directly to modify their colors.
-> To find out which palette colors are used by what component, take a look at the [Components Documentation]({environment:sassApiUrl}/index.html#variable-_light-avatar).
+> To find out which palette colors are used by what component, take a look at the [Components Documentation]({environment:sassApiUrl}/themes).
 
 Likewise, changing the `elevations`(shadows) is just as easy. We include 25 elevation levels (0-24).
 Here's a simplified version of what those variables look like:
@@ -97,13 +99,13 @@ Here's a simplified version of what those variables look like:
 }
 ```
 
-These are essentially stacked CSS [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) declarations. You can replace them with any other valid `box-shadow` value. The higher the elevation level number is, the bigger the shadow is. Again, different components use different elevation levels, to find out which elevation levels are used by which component, take look at the [Components Documentation]({environment:sassApiUrl}/index.html#variable-_light-avatar). We will take a deeper look at elevations in the [Elevations](./elevations.md) of the documentation.
+These are essentially stacked CSS [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) declarations. You can replace them with any other valid `box-shadow` value. The higher the elevation level number is, the bigger the shadow is. Again, different components use different elevation levels, to find out which elevation levels are used by which component, take look at the [Components Documentation]({environment:sassApiUrl}/themes). We will take a deeper look at elevations in the [Elevations](./elevations.md) of the documentation.
 
 ## Configuration
 
 There are several variables that allow you to configure the global behavior of the theme:
 
-#### Roundness
+### Roundness
 
 To configure the radius factor of all components you can change the value of the `--ig-radius-factor` variable. The default value is 1, meaning the default radius factor is used across component themes.
 
@@ -116,7 +118,7 @@ Example:
 }
 ```
 
-#### Elevation Factor
+### Elevation Factor
 
 To configure the elevation factor of all components you can change the value of the `--ig-elevation-factor` variable. The default value is 1, meaning the default elevations are used across component themes.
 
@@ -208,5 +210,5 @@ Related topics:
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

@@ -1,7 +1,8 @@
 ---
-title: Angular Tree コンポーネント - Ignite UI for Angular
+title: Angular Tree コンポーネント | Ignite UI for Angular | MITライセンス
 _description: Ignite UI for Angular Tree コンポーネントを使用すると、階層データをツリービュー構造で表示したり、ノードを簡単にカスタマイズしたり、オンデマンドでデータを読み込んだりできます。無料でお試しください。
 _keywords: angular tree, angular tree コンポーネント, angular tree view, angular tree view コンポーネント, angular ui コンポーネント, ignite ui for angular, UI コントロール, インフラジスティックス
+_license: MIT
 _language: ja
 ---
 <style type="text/css">
@@ -322,16 +323,73 @@ IgxTree ナビゲーションは、W3C アクセシビリティ標準に準拠�
 ## Angular Tree ロードオンデマンド
 
 Ignite UI for Angular IgxTree は、サーバーから最小限のデータのみ取得して描画されるため、ユーザーにすばやくデータを表示できます。この動的データ読み込みアプローチでは、ユーザーがノードを展開した後にのみ、その特定の親ノードの子が取得されます。このメカニズムは、ロードオンデマンドであらゆるリモートデータとの設定が簡単にできます。
+
 ### デモ
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/lists/tree-advanced-sample/" alt="Tree ロードオンデマンドの例">
 </code-view>
 
-ユーザーが展開アイコンをクリックすると、ロード アイコンに変わります。[Loading]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#loading) プロパティが `false` に解決されると、読み込みインジケーターが消え、子が読み込まれます。
+ユーザーが展開アイコンをクリックすると、ロード アイコンに変わります。[loading]({environment:angularApiUrl}/classes/igxtreenodecomponent.html#loading) プロパティが `false` に解決されると、読み込みインジケーターが消え、子が読み込まれます。
 
-## Angular Tree スタイル設定
-[Ignite UI for Angular テーマ](themes/index.md) を使用すると、ツリーの外観を大幅に変更できます。はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。 
+## スタイル設定
+
+### Tree テーマのプロパティ マップ
+
+プライマリ プロパティを変更すると、関連するすべての依存プロパティが自動的に更新され、変更が反映されます。
+
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>プライマリ プロパティ</th>
+      <th>依存プロパティ</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+      <td><details><summary><strong>$background</strong></summary></details></td>
+      <td>$foreground</td>
+      <td>ツリー ノード コンテンツに使用される色</td>
+    </tr>
+    <tr class="dependent"><td></td><td>$background-selected</td><td>選択されたツリー ノードに使用される背景の色</td></tr>
+    <tr class="dependent"><td></td><td>$hover-color</td><td>ホバー時にツリー ノードに使用される背景の色</td></tr>
+    <tr class="dependent"><td></td><td>$background-active</td><td>アクティブ ツリー ノードに使用される背景の色</td></tr>
+    <tr class="dependent"><td></td><td>$background-disabled</td><td>無効な状態のツリー ノードに使用される背景の色</td></tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+      <td><details><summary><strong>$background-selected</strong></summary></details></td>
+      <td>$foreground-selected</td>
+      <td>選択したツリー ノードのコンテンツに使用される色</td>
+    </tr>
+    <tr class="dependent"><td></td><td>$hover-selected-color</td><td>ホバー時に選択されたツリー ノードに使用される背景の色</td></tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+      <td><details><summary><strong>$background-active</strong></summary></details></td>
+      <td>$foreground-active</td>
+      <td>アクティブ ツリー ノードのコンテンツに使用される色</td>
+    </tr>
+    <tr class="dependent"><td></td><td>$background-active-selected</td><td>アクティブな選択されたツリー ノードに使用される背景の色</td></tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+      <td><strong>$background-active-selected</strong></td>
+      <td>$foreground-active-selected</td>
+      <td>アクティブな選択されたツリー ノードのコンテンツに使用される色</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+      <td><strong>$background-disabled</strong></td>
+      <td>$foreground-disabled</td>
+      <td>無効なツリー ノードのコンテンツに使用される色</td>
+    </tr>
+  </tbody>
+</table>
+
+[Ignite UI for Angular テーマ](themes/index.md)を使用すると、ツリーの外観を大幅に変更できます。はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。 
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -360,6 +418,52 @@ $custom-tree-theme: tree-theme(
            data-demos-base-url="{environment:demosBaseUrl}" 
            iframe-src="{environment:demosBaseUrl}/lists/tree-styling/" alt="Tree のスタイル設定">
 </code-view>
+
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して tree をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-tooltip`、`dark-tooltip`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。 `任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。 コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは [IgxTree テーマ]({environment:sassApiUrl}/themes#function-tree-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-tree class="tree-root">
+    @for (type of data; track type) {
+      <igx-tree-node class="!light-tree ![--background:#81B698]">
+        {{ type.Name }}
+        @for (value of type.Children; track value) {
+          <igx-tree-node class="!light-tree ![--background:#81B698]">
+            {{ value.Name }}
+          </igx-tree-node>
+        }
+      </igx-tree-node>
+    }
+</igx-tree>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、tree は次のようになります:
+
+<div class="sample-container loading" style="height:400px">
+    <iframe id="tree-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/lists/tree-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ## 既知の問題と制限
 

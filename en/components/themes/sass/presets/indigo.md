@@ -2,7 +2,7 @@
 
 Since version `10.1` our components include a new theme inspired by our own design language.
 
-In order to switch from `Material` to `Indigo`, you can use the [theme]({environment:sassApiUrl}/index.html#mixin-theme) build-in mixin.
+In order to switch from `Material` to `Indigo`, you can use the [theme]({environment:sassApiUrl}/themes#mixin-theme) build-in mixin.
 
 ## Indigo Light Theme
 
@@ -45,4 +45,4 @@ In order to switch from `Material` to `Indigo`, you can use the [theme]({environ
 
 ## API Overview
 
-* [Global Theme]({environment:sassApiUrl}/index.html#mixin-theme)
+- [Global Theme]({environment:sassApiUrl}/themes#mixin-theme)

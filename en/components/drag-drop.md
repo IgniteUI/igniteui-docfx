@@ -1,10 +1,12 @@
 ---
-title: Angular Drag and Drop | IgniteUI for Angular | Infragistics
+title: Angular Drag and Drop | IgniteUI for Angular | Infragistics | MIT license
 _description: Learn how to use Angular drag and drop directives to perform dragging of elements around the page.
 _keywords: Angular Drag and Drop, Angular Drag and Drop Directives, Angular UI components, Ignite UI for Angular, Infragistics
+_license: MIT
 ---
 
 # Angular Drag and Drop Directives Overview
+
 <p class="highlight">The Ignite UI for Angular Drag and Drop directives enable dragging of elements around the page. The supported features include free dragging, using a drag handle, drag ghost, animations and multiple drop strategies.</p>
 
 ## Angular Drag and Drop Example
@@ -12,8 +14,8 @@ _keywords: Angular Drag and Drop, Angular Drag and Drop Directives, Angular UI c
 Drag and drop icon to reposition it.
 
 
-<code-view style="height:325px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:325px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/icons-sample/" alt="Angular Drag and Drop Example">
 </code-view>
 
@@ -27,7 +29,7 @@ To get started with the Ignite UI for Angular Drag and Drop directives, first yo
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxDragDropModule` in your **app.module.ts** file.
 
@@ -80,7 +82,7 @@ A drag operation starts when the end user swipes at least 5px in any direction. 
 
 When the dragging starts, the [`dragStart`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragStart) event is triggered. To prevent any actual movement to occur, the event can be canceled by setting the [`cancel`]({environment:angularApiUrl}/interfaces/idragstarteventargs.html#cancel) property to `true`.
 
-Before any actual movement is about to be performed, the [`dragMove`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragMove) event is also triggered, containing the last and next position of the pointer. It is triggered every time a movement is detected while dragging an element around. 
+Before any actual movement is about to be performed, the [`dragMove`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragMove) event is also triggered, containing the last and next position of the pointer. It is triggered every time a movement is detected while dragging an element around.
 
 After the user releases the mouse/touch the drag ghost element is removed from the DOM and the [`dragEnd`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragEnd) event will be emitted.
 
@@ -107,20 +109,20 @@ The ghost element by default is a copy of the base element the `igxDrag` is used
 
 ```html
 <div class="email-content flexlist"
-	igxDrag
-	[ghostTemplate]="customGhost">
-	<div class="sender">
-		{{email.sender}} 
-	</div>
-	<div class="email-title">
-		{{email.title}}
-	</div>
+ igxDrag
+ [ghostTemplate]="customGhost">
+ <div class="sender">
+  {{email.sender}} 
+ </div>
+ <div class="email-title">
+  {{email.title}}
+ </div>
 </div>
 <ng-template #customGhost>
-	<div class="dragGhost">
-		<igx-icon fontSet="material">email</igx-icon> 
-		Moving {{ draggedElements }} item{{ (draggedElements > 1 ? 's' : '')}}
-	</div>
+ <div class="dragGhost">
+  <igx-icon fontSet="material">email</igx-icon> 
+  Moving {{ draggedElements }} item{{ (draggedElements > 1 ? 's' : '')}}
+ </div>
 </ng-template>
 
 ```
@@ -151,8 +153,8 @@ You can specify an element that is a child of the `igxDrag` by which to drag, si
 
 Drag the dialog using the handle in the following demo.
 
-<code-view style="height:325px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:325px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/drag-dialog-sample/" >
 </code-view>
 
@@ -172,10 +174,10 @@ When the transition animation ends, if a ghost is created, it will be removed an
 
 You can have other types of animations that involve element transformations. That can be done like any other element either using the Angular Animations or straight CSS Animations to either the base `igxDrag` element or its ghost. If you want to apply them to the ghost, you would need to define a custom ghost and apply animations to its element.
 
-Reorder items in the list using the drag handle. While dragging a list item other list items will re-order with animation. 
+Reorder items in the list using the drag handle. While dragging a list item other list items will re-order with animation.
 
-<code-view style="height:380px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:380px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/list-reorder-sample/" >
 </code-view>
 
@@ -204,13 +206,13 @@ By default, the [`igxDrop`]({environment:angularApiUrl}/classes/igxdropdirective
 
 The `igxDrop` comes with 4 drop strategies which are: `Default`, `Prepend`, `Insert` and `Append`:
 
-* `Default` - does not perform any action when an element is dropped onto an `igxDrop` element and is implemented as a class named [`IgxDefaultDropStrategy`]({environment:angularApiUrl}/classes/igxdefaultdropstrategy.html).
+- `Default` - does not perform any action when an element is dropped onto an `igxDrop` element and is implemented as a class named [`IgxDefaultDropStrategy`]({environment:angularApiUrl}/classes/igxdefaultdropstrategy.html).
 
-* `Append` - always inserts the dropped element as a last child  and is implemented as a class named [`IgxAppendDropStrategy`]({environment:angularApiUrl}/classes/igxappenddropstrategy.html). 
+- `Append` - always inserts the dropped element as a last child  and is implemented as a class named [`IgxAppendDropStrategy`]({environment:angularApiUrl}/classes/igxappenddropstrategy.html).
 
-* `Prepend` - always inserts the dropped element as first child and is implemented as a class named [`IgxPrependDropStrategy`]({environment:angularApiUrl}/classes/igxprependdropstrategy.html).
+- `Prepend` - always inserts the dropped element as first child and is implemented as a class named [`IgxPrependDropStrategy`]({environment:angularApiUrl}/classes/igxprependdropstrategy.html).
 
-* `Insert` - inserts the dragged element at last position. If there is a child under the element when it was dropped though, the `igxDrag` instanced element will be inserted at that child's position and the other children will be shifted. It is implemented as a class named [`IgxInsertDropStrategy`]({environment:angularApiUrl}/classes/igxinsertdropstrategy.html).
+- `Insert` - inserts the dragged element at last position. If there is a child under the element when it was dropped though, the `igxDrag` instanced element will be inserted at that child's position and the other children will be shifted. It is implemented as a class named [`IgxInsertDropStrategy`]({environment:angularApiUrl}/classes/igxinsertdropstrategy.html).
 
 The way a strategy can be applied is by setting the `dropStrategy` input to one of the listed classes above. The value provided has to be a type and not an instance, since the `igxDrop` needs to create and manage the instance itself.
 
@@ -226,7 +228,7 @@ public appendStrategy = IgxAppendDropStrategy;
 
 When using a specific drop strategy, its behavior can be canceled in the [`dropped`]({environment:angularApiUrl}/classes/igxdropdirective.html#dropped) events by setting the `cancel` property to true. The `dropped` event is specific to the `igxDrop`. If you does not have drop strategy applied to the `igxDrop` canceling the event would have no side effects.
 
-*Example:*
+_Example:_
 
 ```html
 <div igxDrag></div>
@@ -243,6 +245,7 @@ public onDropped(event) {
 If you would like to implement your own drop logic, we advise binding to the `dropped` event and execute your logic there or extend the `IgxDefaultDropStrategy` class.
 
 ### Linking Drag to Drop Element
+
 Using the [`dragChannel`]({environment:angularApiUrl}/classes/igxdragdirective.html#dragChannel) and [`dropChannel`]({environment:angularApiUrl}/classes/igxdropdirective.html#dropChannel) input on respectively `igxDrag` and `igxDrop` directives, you can link different elements to interact only between each other. For example, if an `igxDrag` element needs to be constrained so it can be dropped on specific `igxDrop` element and not all available, this can easily be achieved by assigning them the same channel.
 
 
@@ -260,8 +263,8 @@ Using the [`dragChannel`]({environment:angularApiUrl}/classes/igxdragdirective.h
 Drag e-mails on the right into the folders on the left.
 
 
-<code-view style="height:340px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:340px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/email-sample/" >
 </code-view>
 
@@ -269,7 +272,7 @@ Drag e-mails on the right into the folders on the left.
 
 ## Advanced Configuration
 
-Since both `igxDrag` and `igxDrop` combined can be used in many different and complex application scenarios, the following example demonstrates how they can be used in an Kanban board. 
+Since both `igxDrag` and `igxDrop` combined can be used in many different and complex application scenarios, the following example demonstrates how they can be used in an Kanban board.
 
 The user could reorder the cards in each column. It is done by setting each card also a drop area, so we can detect when another card has entered its area and switch them around at runtime, to provide better user experience.
 
@@ -278,20 +281,21 @@ It won't be Kanban board without also the ability to switch cards between column
 Drag items around the kanban board.
 
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/kanban-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
 
 ## API
-* [IgxDragDirective]({environment:angularApiUrl}/classes/igxdragdirective.html)
-* [IgxDropDirective]({environment:angularApiUrl}/classes/igxdropdirective.html)
-* [IgxDefaultDropStrategy]({environment:angularApiUrl}/classes/igxdefaultdropstrategy.html)
-* [IgxAppendDropStrategy]({environment:angularApiUrl}/classes/igxappenddropstrategy.html)
-* [IgxPrependDropStrategy]({environment:angularApiUrl}/classes/igxprependdropstrategy.html)
-* [IgxInsertDropStrategy]({environment:angularApiUrl}/classes/igxinsertdropstrategy.html)
+
+- [IgxDragDirective]({environment:angularApiUrl}/classes/igxdragdirective.html)
+- [IgxDropDirective]({environment:angularApiUrl}/classes/igxdropdirective.html)
+- [IgxDefaultDropStrategy]({environment:angularApiUrl}/classes/igxdefaultdropstrategy.html)
+- [IgxAppendDropStrategy]({environment:angularApiUrl}/classes/igxappenddropstrategy.html)
+- [IgxPrependDropStrategy]({environment:angularApiUrl}/classes/igxprependdropstrategy.html)
+- [IgxInsertDropStrategy]({environment:angularApiUrl}/classes/igxinsertdropstrategy.html)
 
 ## References
 

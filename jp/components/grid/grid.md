@@ -2,6 +2,7 @@
 title: Angular Data Grid | 高速な Angular テーブルを構築する | インフラジスティックス
 _description: Ignite UI for Angular で超高速でレスポンシブな Angular データ グリッドとテーブルを作成します。編集、フィルタリング、データ バインディングなどをサポートします。今すぐお試しください。
 _keywords: angular data grid, angular grid コンポーネント, angular data grid コンポーネント, angular table コンポーネント, angular data table コンポーネント, angular table, angular UI コンポーネント, ignite ui for angular
+_license: commercial
 _language: ja
 ---
 
@@ -816,7 +817,7 @@ platformBrowserDynamic()
 
 ## API リファレンス
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-grid-theme)
+* [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)

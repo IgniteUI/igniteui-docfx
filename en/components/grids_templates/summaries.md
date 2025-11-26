@@ -1,25 +1,32 @@
+<!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid Summaries - Ignite UI for Angular
 _description: Configure Angular grid summaries in the group footer of the column and use the option to set custom angular template in the Ignite UI for Angular table
 _keywords: angular grid summaries, igniteui for angular, infragistics
+_license: commercial
 ---
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
 title: Angular Grid Summaries - Ignite UI for Angular
 _description: Configure Angular grid summaries in the group footer of the column and use the option to set custom angular template in the Ignite UI for Angular table
 _keywords: angular grid summaries, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/summaries
 ---
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
 title: Angular Grid Summaries - Ignite UI for Angular
 _description: Configure Angular grid summaries in the group footer of the column and use the option to set custom angular template in the Ignite UI for Angular table
 _keywords: angular grid summaries, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/summaries
 ---
+
 }
 
 # Angular @@igComponent Summaries
@@ -62,25 +69,29 @@ The Angular UI grid in Ignite UI for Angular has a **summaries** feature that fu
 
 
 For `string` and `boolean` [`data types`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#dataType), the following function is available:
- - count
+
+- count
 
 For `number`, `currency` and `percent` data types, the following functions are available:
- - count
- - min
- - max
- - average
- - sum
+
+- count
+- min
+- max
+- average
+- sum
 
 For `date` data type, the following functions are available:
- - count
- - earliest
- - latest
+
+- count
+- earliest
+- latest
 
 All available column data types could be found in the official [Column types topic](column-types.md#default-template).
 
 **@@igComponent summaries** are enabled per-column by setting [`hasSummary`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#hasSummary) property to `true`. It is also important to keep in mind that the summaries for each column are resolved according to the column data type. In the `@@igSelector` the default column data type is `string`, so if you want `number` or `date` specific summaries you should specify the [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) property as `number` or `date`. Note that the summary values will be displayed localized, according to the grid [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) and column [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs).
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)">
     <igx-column field="ProductID" header="Product ID" width="200px" [sortable]="true"></igx-column>
@@ -88,8 +99,10 @@ All available column data types could be found in the official [Column types top
     <igx-column field="ReorderLevel" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true"></igx-column>
 </@@igSelector>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)">
     <igx-column field="ID" header="Order ID" width="200px" [sortable]="true"></igx-column>
@@ -97,8 +110,10 @@ All available column data types could be found in the official [Column types top
     <igx-column field="Units" width="200px" [editable]="true" [dataType]="'number'" [hasSummary]="true"></igx-column>
 </@@igSelector>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false">
     <igx-column field="Artist" [hasSummary]='true'></igx-column>
@@ -114,11 +129,13 @@ All available column data types could be found in the official [Column types top
     <igx-column field="Grammy Awards" [hasSummary]='true' [dataType]="'number'"></igx-column>
 </igx-hierarchical-grid>
 ```
+
 }
 
 The other way to enable/disable summaries for a specific column or a list of columns is to use the public method [`enableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#enableSummaries)/[`disableSummaries`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#disableSummaries) of the **@@igSelector**.
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)" >
     <igx-column field="ProductID" header="Product ID" width="200px"  [sortable]="true"></igx-column>
@@ -128,6 +145,7 @@ The other way to enable/disable summaries for a specific column or a list of col
 <button (click)="enableSummary()">Enable Summary</button>
 <button (click)="disableSummary()">Disable Summary </button>
 ```
+
 ```typescript
 public enableSummary() {
     this.grid1.enableSummaries([
@@ -139,8 +157,10 @@ public disableSummary() {
     this.grid1.disableSummaries('ProductName');
 }
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)" >
     <igx-column field="ID" header="Order ID" width="200px" [sortable]="true"></igx-column>
@@ -151,6 +171,7 @@ public disableSummary() {
 <button (click)="enableSummary()">Enable Summary</button>
 <button (click)="disableSummary()">Disable Summary </button>
 ```
+
 ```typescript
 public enableSummary() {
     this.grid1.enableSummaries([
@@ -162,8 +183,10 @@ public disableSummary() {
     this.grid1.disableSummaries('Name');
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <@@igSelector #hierarchicalGrid [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)" >
   <igx-column field="Artist" [hasSummary]='true'></igx-column>
@@ -181,6 +204,7 @@ public disableSummary() {
 <button (click)="enableSummary()">Enable Summary</button>
 <button (click)="disableSummary()">Disable Summary </button>
 ```
+
 ```typescript
 public enableSummary() {
     this.hierarchicalGrid.enableSummaries([
@@ -192,12 +216,15 @@ public disableSummary() {
     this.hierarchicalGrid.disableSummaries('Photo');
 }
 ```
+
 }
 
 ## Custom @@igComponent Summaries
+
 If these functions do not fulfill your requirements you can provide a custom summary for the specific columns. In order to achieve this you have to override one of the base classes [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html), [`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html) or [`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) according to the column data type and your needs. This way you can redefine the existing function or you can add new functions. [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) class provides the default implementation only for the [`count`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#count) method. [`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html) extends [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) and provides implementation for the [`min`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#min), [`max`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#max), [`sum`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#sum) and [`average`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#average). [`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) extends [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) and additionally gives you [`earliest`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html#earliest) and [`latest`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html#latest).
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
+
 ```typescript
 import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from 'igniteui-angular';
 // import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from '@infragistics/igniteui-angular'; for licensed package
@@ -218,8 +245,10 @@ class MySummary extends IgxNumberSummaryOperand {
     }
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```typescript
 import { IgxRowIslandComponent, IgxHierarchicalGridComponent, IgxNumberSummaryOperand, IgxSummaryResult } from 'igniteui-angular';
 // import { IgxRowIslandComponent, IgxHierarchicalGridComponent, IgxNumberSummaryOperand, IgxSummaryResult } from '@infragistics/igniteui-angular'; for licensed package
@@ -241,10 +270,12 @@ class MySummary extends IgxNumberSummaryOperand {
     }
 }
 ```
+
 }
 
 As seen in the examples, the base classes expose the [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) method, so you can choose to get all default summaries and modify the result, or calculate entirely new summary results.
 The method returns a list of [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html).
+
 ```typescript
 interface IgxSummaryResult {
     key: string;
@@ -252,6 +283,7 @@ interface IgxSummaryResult {
     summaryResult: any;
 }
 ```
+
 and take optional parameters for calculating the summaries.
 See [Custom summaries, which access all data](#custom-summaries-which-access-all-data) section below.
 
@@ -259,6 +291,7 @@ See [Custom summaries, which access all data](#custom-summaries-which-access-all
 > In order to calculate the summary row height properly, the @@igComponent needs the [`operate`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#operate) method to always return an array of [`IgxSummaryResult`]({environment:angularApiUrl}/interfaces/igxsummaryresult.html) with the proper length even when the data is empty.
 @@if (igxName === 'IgxGrid') {
 And now let's add our custom summary to the column `UnitsInStock`. We will achieve that by setting the [`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) property to the class we create below.
+
 ```html
 <@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)" >
     <igx-column field="ProductID" width="200px"  [sortable]="true">
@@ -279,10 +312,12 @@ export class GridComponent implements OnInit {
     ....
 }
 ```
+
 }
 
 @@if (igxName === 'IgxTreeGrid') {
 And now let's add our custom summary to the column `UnitPrice`. We will achieve that by setting the [`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) property to the class we create below.
+
 ```html
 <@@igSelector #grid1 [data]="data" [autoGenerate]="false" height="800px" width="800px" (columnInit)="initColumn($event)">
     <igx-column field="ID" header="Order ID" width="200px" [sortable]="true"></igx-column>
@@ -299,10 +334,12 @@ export class GridComponent implements OnInit {
     ....
 }
 ```
+
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 And now let's add our custom summary to the column `GramyNominations`. We will achieve that by setting the [`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) property to the class we create below.
+
 ```html
  <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false">
     <igx-column field="Artist" [hasSummary]='true'></igx-column>
@@ -326,16 +363,20 @@ export class HGridSummarySampleComponent implements OnInit {
     ....
 }
 ```
+
 }
 
 ### Custom summaries, which access all data
+
  Now you can access all @@igComponent data inside the custom column summary. Two additional optional parameters are introduced in the IgxSummaryOperand `operate` method.
 As you can see in the code snippet below the operate method has the following three parameters:
+
 - columnData - gives you an array that contains the values only for the current column
 - allGridData - gives you the whole grid data source
 - fieldName - current column field
 
 @@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
 class MySummary extends IgxNumberSummaryOperand {
     constructor() {
@@ -348,8 +389,10 @@ class MySummary extends IgxNumberSummaryOperand {
     }
 }
 ```
+
 }
 @@if (igxName !== 'IgxTreeGrid') {
+
 ```typescript
 class MySummary extends IgxNumberSummaryOperand {
     constructor() {
@@ -362,6 +405,7 @@ class MySummary extends IgxNumberSummaryOperand {
     }
 }
 ```
+
 }
 
 @@if (igxName === 'IgxGrid') {
@@ -390,6 +434,7 @@ class MySummary extends IgxNumberSummaryOperand {
 }
 
 ### Summary Template
+
 `igxSummary` targets the column summary providing as a context the column summary results.
 
 ```html
@@ -441,6 +486,7 @@ This property can also be modified **dynamically at runtime** through code, prov
 The following examples illustrate how to use the `disabledSummaries` property to manage summaries for different columns and exclude specific default and custom summary types in the Ignite UI for Angular grid:
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <!-- default summaries -->
 <igx-column
@@ -462,11 +508,13 @@ The following examples illustrate how to use the `disabledSummaries` property to
 >
 </igx-column>
 ```
+
 For `UnitPrice`, default summaries like `count`, `sum`, and `average` are disabled, leaving others like `min` and `max` active.
 
 For `UnitsInStock`, custom summaries such as `total` and `totalDiscontinued` are excluded using the `disabledSummaries` property.
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <!-- custom summaries -->
 <igx-column
@@ -488,11 +536,13 @@ For `UnitsInStock`, custom summaries such as `total` and `totalDiscontinued` are
 >
 </igx-column>
 ```
+
 For `Units`, custom summaries such as `totalDelivered` and `totalNotDelivered` are excluded using the `disabledSummaries` property.
 
 For `UnitPrice`, default summaries like `count`, `sum`, and `average` are disabled, leaving others like `min` and `max` active.
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <!-- custom summaries -->
 <igx-column
@@ -516,6 +566,7 @@ For `UnitPrice`, default summaries like `count`, `sum`, and `average` are disabl
     [disabledSummaries]="['count', 'sum', 'average']"
 ></igx-column>
 ```
+
 For `Photo`, custom summaries such as `singersWithAwards` and `awards` are excluded using the `disabledSummaries` property.
 
 For `GrammyNominations` default summaries like `count`, `sum`, and `average` are disabled, leaving others like `min` and `max` active.
@@ -543,6 +594,7 @@ At runtime, summaries can also be dynamically disabled using the `disabledSummar
 }
 
 ## Formatting summaries
+
 By default, summary results, produced by the built-in summary operands, are localized and formatted according to the grid [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) and column [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs). When using custom operands, the `locale` and `pipeArgs` are not applied. If you want to change the default appearance of the summary results, you may format them using the [`summaryFormatter`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaryFormatter) property.
 
 ```typescript
@@ -581,18 +633,21 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
 }
 
 @@if (igxName === 'IgxGrid') {
+
 ## Summaries with Group By
 
 When you have grouped by columns, the @@igComponent allows you to change the summary position and calculation mode using the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryCalculationMode) and [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryPosition) properties. Along with these two properties the @@igxName exposes and [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showSummaryOnCollapse) property which allows you to determine whether the summary row stays visible when the group row that refers to is collapsed.
 
 The available values of the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryCalculationMode) property are:
- - rootLevelOnly - Summaries are calculated only for the root level.
- - childLevelsOnly - Summaries are calculated only for the child levels.
- - rootAndChildLevels - Summaries are calculated for both root and child levels. This is the default value.
+
+- rootLevelOnly - Summaries are calculated only for the root level.
+- childLevelsOnly - Summaries are calculated only for the child levels.
+- rootAndChildLevels - Summaries are calculated for both root and child levels. This is the default value.
 
 The available values of the [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryPosition) property are:
- - top - The summary row appears before the group by row children.
- - bottom - The summary row appears after the group by row children. This is the default value.
+
+- top - The summary row appears before the group by row children.
+- bottom - The summary row appears after the group by row children. This is the default value.
 
 The [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showSummaryOnCollapse) property is boolean. Its default value is set to **false**, which means that the summary row would be hidden when the group row is collapsed. If the property is set to **true** the summary row stays visible when group row is collapsed.
 
@@ -610,19 +665,22 @@ The [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.ht
 
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ## Child Summaries
 
 The @@igComponent supports separate summaries for the root nodes and for each nested child node level. Which summaries are shown is configurable using the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryCalculationMode) property. The child level summaries can be shown before or after the child nodes using the [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryPosition) property. Along with these two properties the @@igxName exposes and [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showSummaryOnCollapse) property which allows you to determine whether the summary row stays visible when the parent node that refers to is collapsed.
 
 
 The available values of the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryCalculationMode) property are:
- - rootLevelOnly - Summaries are calculated only for the root level nodes.
- - childLevelsOnly - Summaries are calculated only for the child levels.
- - rootAndChildLevels - Summaries are calculated for both root and child levels. This is the default value.
+
+- rootLevelOnly - Summaries are calculated only for the root level nodes.
+- childLevelsOnly - Summaries are calculated only for the child levels.
+- rootAndChildLevels - Summaries are calculated for both root and child levels. This is the default value.
 
 The available values of the [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryPosition) property are:
- - top - The summary row appears before the list of child rows.
- - bottom - The summary row appears after the list of child rows. This is the default value.
+
+- top - The summary row appears before the list of child rows.
+- bottom - The summary row appears after the list of child rows. This is the default value.
 
 The [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showSummaryOnCollapse) property is boolean. Its default value is set to **false**, which means that the summary row would be hidden when the parent row is collapsed. If the property is set to **true** the summary row stays visible when parent row is collapsed.
 
@@ -670,15 +728,15 @@ The exported file includes a hidden column that holds the level of each `DataRec
 
 In the table below, you can find the corresponding Excel formula for each of the default summaries.
 
-Data Type | Function | Excel Function |
+| Data Type | Function | Excel Function |
 |:--------|:--------:|:---------------|
-`string`, `boolean` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
-`number`, `currency`, `percent` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
+|`string`, `boolean` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
+|`number`, `currency`, `percent` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
 || min| ="Min: "&MIN(IF(start:end=recordLevel, rangeStart:rangeEnd)) |
 || max | ="Max: "&MAX(IF(start:end=recordLevel, rangeStart:rangeEnd)) |
 || average | ="Avg: "&AVERAGEIF(start:end, recordLevel, rangeStart:rangeEnd) |
 || sum | ="Sum: "&SUMIF(start:end, recordLevel, rangeStart:rangeEnd) |
-`date` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
+|`date` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
 || earliest | ="Earliest: "& TEXT(MIN(IF(start:end=recordLevel, rangeStart:rangeEnd)), format) |
 || latest | ="Latest: "&TEXT(MAX(IF(start:end=recordLevel, rangeStart:rangeEnd)), format) |
 
@@ -709,9 +767,9 @@ To get started with styling the sorting behavior, we need to import the `index` 
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
-Following the simplest approach, we create a new theme that extends the [`grid-summary-theme`]({environment:sassApiUrl}/index.html#function-grid-summary-theme) and accepts the `$background-color`, `$focus-background-color`, `$label-color`, `$result-color`, `$pinned-border-width`, `$pinned-border-style` and `$pinned-border-color` parameters.
+Following the simplest approach, we create a new theme that extends the [`grid-summary-theme`]({environment:sassApiUrl}/themes#function-grid-summary-theme) and accepts the `$background-color`, `$focus-background-color`, `$label-color`, `$result-color`, `$pinned-border-width`, `$pinned-border-style` and `$pinned-border-color` parameters.
 
 ```scss
 $custom-theme: grid-summary-theme(
@@ -726,7 +784,7 @@ $custom-theme: grid-summary-theme(
 ```
 
 >[!NOTE]
->Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/index.html#function-palette) and [`color`]({environment:sassApiUrl}/index.html#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 The last step is to **include** the component custom theme:
 
@@ -746,6 +804,7 @@ The last step is to **include** the component custom theme:
 ```
 
 @@if (igxName === 'IgxGrid') {
+
 ### Demo
 
 
@@ -757,6 +816,7 @@ The last step is to **include** the component custom theme:
 
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ### Demo
 
 
@@ -768,6 +828,7 @@ The last step is to **include** the component custom theme:
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ### Demo
 
 
@@ -781,32 +842,33 @@ The last step is to **include** the component custom theme:
 
 ## API References
 
-* [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
-* [@@igxNameSummaries Styles]({environment:sassApiUrl}/index.html#function-grid-summary-theme)
-* [IgxSummaryOperand]({environment:angularApiUrl}/classes/igxsummaryoperand.html)
-* [IgxNumberSummaryOperand]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html)
-* [IgxDateSummaryOperand]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html)
-* [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+- [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
+- [@@igxNameSummaries Styles]({environment:sassApiUrl}/themes#function-grid-summary-theme)
+- [IgxSummaryOperand]({environment:angularApiUrl}/classes/igxsummaryoperand.html)
+- [IgxNumberSummaryOperand]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html)
+- [IgxDateSummaryOperand]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html)
+- [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
+- [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [@@igComponent overview](@@igMainTopic.md)
-* [Column Data Types](column-types.md#default-template)
-* [Virtualization and Performance](virtualization.md)
-* [Paging](paging.md)
-* [Filtering](filtering.md)
-* [Sorting](sorting.md)
-* [Column Moving](column-moving.md)
-* [Column Pinning](column-pinning.md)
-* [Column Resizing](column-resizing.md)
-* [Selection](selection.md)
+- [@@igComponent overview](@@igMainTopic.md)
+- [Column Data Types](column-types.md#default-template)
+- [Virtualization and Performance](virtualization.md)
+- [Paging](paging.md)
+- [Filtering](filtering.md)
+- [Sorting](sorting.md)
+- [Column Moving](column-moving.md)
+- [Column Pinning](column-pinning.md)
+- [Column Resizing](column-resizing.md)
+- [Selection](selection.md)
 @@if (igxName === 'IgxGrid'){* [Selection-based Aggregates]({environment:angularApiUrl}/grid/selection-based-aggregates.html)}
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

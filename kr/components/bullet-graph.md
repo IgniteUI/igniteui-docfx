@@ -34,8 +34,8 @@ The features of the bullet graph include configurable orientation and direction,
 
 When installing the gauge package, the core package must also be installed.
 
-*   **npm install --save igniteui-angular-core**
-*   **npm install --save igniteui-angular-gauges**
+- **npm install --save igniteui-angular-core**
+- **npm install --save igniteui-angular-gauges**
 
 <!-- end: Angular, React, WebComponents -->
 
@@ -162,8 +162,8 @@ The ranges are visual elements that highlight a specified range of values on a s
 
 The tick marks serve as a visual division of the scale into intervals in order to increase the readability of the bullet graph.
 
-*   Major tick marks – The major tick marks are used as primary delimiters on the scale. The frequency they appear at, their extents and style can be controlled by setting their corresponding properties.
-*   Minor tick marks – The minor tick marks represent helper tick marks, which might be used to additionally improve the readability of the scale and can be customized in a way similar to the major ones.
+- Major tick marks – The major tick marks are used as primary delimiters on the scale. The frequency they appear at, their extents and style can be controlled by setting their corresponding properties.
+- Minor tick marks – The minor tick marks represent helper tick marks, which might be used to additionally improve the readability of the scale and can be customized in a way similar to the major ones.
 
 ```html
 <igx-bullet-graph

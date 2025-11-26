@@ -2,6 +2,7 @@
 title: Angular Axis Options | Data Visualization | Infragistics
 _description: Infragistics' Angular Axis Options
 _keywords: Angular Axis, Options, Title, Labels, Gap, Overlap, Range, Scale, Mode, Infragistics
+_license: commercial
 mentionedTypes: ["DomainChart", "CategoryChart", "FinancialChart", "FinancialChartYAxisMode", "FinancialChartXAxisMode", "NumericYAxis", "CategoryXAxis"]
 namespace: Infragistics.Controls.Charts
 ---
@@ -48,7 +49,7 @@ After setting the [`autoMarginAndAngleUpdateMode`]({environment:dvApiBaseUrl}/pr
 
 Custom label formats such as [`IgxNumberFormatSpecifier`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxnumberformatspecifier.html) and [`IgxDateTimeFormatSpecifier`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxdatetimeformatspecifier.html) can be added to each axis via the `XAxisLabelFormatSpecifier` and `YAxisLabelFormatSpecifier` collections. Commonly used for applying Intl.NumberFormat and Intl.DateTimeFormat language sensitive number, date and time formatting. In order for a custom format to be applied to the labels, the [`yAxisLabelFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxxychartcomponent.html#yAxisLabelFormat) or [`xAxisLabelFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxxychartcomponent.html#xAxisLabelFormat) need to be set to data item's property name on the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html), eg. `{Date}`. For the [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html) the number is the context because it uses a numeric axis, therefore this needs to be set to `{0}`.
 
-The following example formats the yAxis with a [`IgxNumberFormatSpecifier`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxnumberformatspecifier.html) to reprerent $USD prices for top box office movies in the United States.
+The following example formats the yAxis with a [`IgxNumberFormatSpecifier`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxnumberformatspecifier.html) to represent $USD prices for top box office movies in the United States.
 
 <code-view style="height: 450px" alt="Angular Format Specifiers for Axis Labels"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -129,8 +130,8 @@ The following example shows a comparison of the highest grossing worldwide film 
 
 You can find more information about related chart features in these topics:
 
-*   [Axis Gridlines](chart-axis-gridlines.md)
-*   [Axis Layout](chart-axis-layouts.md)
+- [Axis Gridlines](chart-axis-gridlines.md)
+- [Axis Layout](chart-axis-layouts.md)
 
 ## API References
 

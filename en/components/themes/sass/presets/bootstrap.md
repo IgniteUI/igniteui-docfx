@@ -1,7 +1,7 @@
 # Switching from Material to Bootstrap Theme
 
 Since version `9.0` our components include a new theme inspired by [Bootstrap 4](https://getbootstrap.com/) and [ng-bootstrap](https://ng-bootstrap.github.io/#/home).
-In order to switch from `Material` to `Bootstrap`, you can use the [theme]({environment:sassApiUrl}/index.html#mixin-theme) build-in mixin.
+In order to switch from `Material` to `Bootstrap`, you can use the [theme]({environment:sassApiUrl}/themes#mixin-theme) build-in mixin.
 
 ## Bootstrap Light Theme
 
@@ -44,4 +44,4 @@ In order to switch from `Material` to `Bootstrap`, you can use the [theme]({envi
 
 ## API Overview
 
-* [Global Theme]({environment:sassApiUrl}/index.html#mixin-theme)
+- [Global Theme]({environment:sassApiUrl}/themes#mixin-theme)

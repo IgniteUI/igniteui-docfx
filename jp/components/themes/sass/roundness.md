@@ -28,7 +28,7 @@ $light-toast: extend(
 );
 ```
 
-上記の例からわかるように、[Toast]({environment:sassApiUrl}/index.html#variable-light-toast) のコンポーネント スキーマは、境界半径を 3 つの値のリストとして定義します。最初の値はデフォルトの境界半径です (`$roundness` または `--ig-radius-factor` が宣言されていない場合など)。2 番目の値は、許容される最小境界半径を示します (`$roundness` または `--ig-radius-factor` が `0` に設定されている場合など)。3 番目の値は、許容される最大境界半径を示します(`$roundness` または `--ig-radius-factor` が `1` に設定されている場合など)。トースト コンポーネントでは、デフォルト値と最大値が一致します。`$roundness` または `--ig-radius Factor` に割り当てられた 0 から 1 までの値は、トーストの境界半径を最大値のパーセンテージとして設定します。たとえば、値を `.5` に設定すると、トースト コンポーネントの境界半径が、許容される最大境界半径の 50% になります (13 ピクセル)。
+上記の例からわかるように、[Toast]({environment:sassApiUrl}/themes#function-toast-theme) のコンポーネント スキーマは、境界半径を 3 つの値のリストとして定義します。最初の値はデフォルトの境界半径です (`$roundness` または `--ig-radius-factor` が宣言されていない場合など)。2 番目の値は、許容される最小境界半径を示します (`$roundness` または `--ig-radius-factor` が `0` に設定されている場合など)。3 番目の値は、許容される最大境界半径を示します(`$roundness` または `--ig-radius-factor` が `1` に設定されている場合など)。トースト コンポーネントでは、デフォルト値と最大値が一致します。`$roundness` または `--ig-radius Factor` に割り当てられた 0 から 1 までの値は、トーストの境界半径を最大値のパーセンテージとして設定します。たとえば、値を `.5` に設定すると、トースト コンポーネントの境界半径が、許容される最大境界半径の 50% になります (13 ピクセル)。
 
 ```scss
 // Make all components sharp by setting the roundness parameter to 0.
@@ -97,7 +97,7 @@ button {
 | **Tooltip**            |  0 / 16px          | 4px                |
 | **Toast**              |  0 / 26px          | 26px               |
 
-各テーマのデフォルトおよび最小/最大半径値を確認するには、各コンポーネントの [スキーマ]({environment:sassApiUrl}/index.html) ドキュメントを参照してください。
+各テーマのデフォルトおよび最小/最大半径値を確認するには、各コンポーネントの [スキーマ]({environment:sassApiUrl}/schemas) ドキュメントを参照してください。
 
 <div class="divider--half"></div>
 

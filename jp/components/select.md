@@ -1,7 +1,8 @@
 ---
-title: Angular Select コンポーネント - IgniteUI for Angular
+title: Angular Select コンポーネント - IgniteUI for Angular - MITライセンス
 _description: Angular Select コンポーネントを構成する方法について説明します。Angular Select は、Angular ドロップダウン リストを備えた入力を提供し、Angular Combobox の単一項目選択を可能にします。今すぐお試しください。
 _keywords: angular select, angular select コンポーネント, angular フォーム, angular フォーム select コンポーネント, angular ui コンポーネント, igniteui for angular, インフラジスティックス
+_license: MIT
 _language: ja
 ---
 
@@ -359,6 +360,31 @@ export class MyClass implements OnInit {
 
 ## スタイル設定
 
+### Select テーマのプロパティ マップ
+
+プライマリ プロパティを変更すると、関連するすべての依存プロパティが自動的に更新され、変更が反映されます。
+
+<table class="collapsible-table">
+    <thead>
+        <tr>
+        <th>プライマリ プロパティ</th>
+        <th>依存プロパティ</th>
+        <th>説明</th>
+        </tr>
+    </thead>
+    <tbody class="group">
+        <tr class="primary">
+        <td><details><summary><strong>$toggle-button-background</strong></summary></details></td>
+        <td>$toggle-button-foreground</td>
+        <td>トグル ボタンの前景の色</td>
+        </tr>
+        <tr class="dependent"><td></td><td>$toggle-button-foreground-filled</td><td>オンの時のトグル ボタンの前景の色</td></tr>
+        <tr class="dependent"><td></td><td>$toggle-button-background-focus</td><td>フォーカス時の背景の色</td></tr>
+        <tr class="dependent"><td></td><td>$toggle-button-background-focus--border (bootstrap/indigo)</td><td>border バリエーションでフォーカス時の背景 (Bootstrap/Indigo)</td></tr>
+        <tr class="dependent"><td></td><td>$toggle-button-foreground-focus</td><td>フォーカス時のトグル ボタンの前景の色</td></tr>
+    </tbody>
+</table>
+
 各コンポーネントには独自のテーマ関数があります。
 
 Select コンポーネントのスタイルを設定するには、それに含まれるコンポーネントのスタイルを設定します。この場合、[input-group-theme]({environment:sassApiUrl}/themes#function-input-group-theme) と [drop-down-theme]({environment:sassApiUrl}/themes#function-drop-down-theme) を使用する必要があります。
@@ -374,7 +400,7 @@ Select コンポーネントのボタンのスタイル設定を始めるには�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`select-theme`]({environment:sassApiUrl}/themes#function-select-theme) を拡張し、`$toggle-button-background` のみを提供して新しいテーマを作成します。theme 関数は、この単一の値に基づいて、さまざまな状態に対応するすべての背景色と前景色を自動的に計算します。
+最もシンプルな方法として、[`select-theme`]({environment:sassApiUrl}/themes#function-select-theme) を拡張し、`$toggle-button-background` のみを提供して新しいテーマを作成します。theme 関数は、この単一の値に基づいて、さまざまな状態に対応するすべての背景の色と前景の色を自動的に計算します。
 
 ```scss
 $custom-select-theme: select-theme(
@@ -392,6 +418,44 @@ $custom-select-theme: select-theme(
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/select-styling/" >
 </code-view>
+
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して select をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-select`、`dark-select`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[select-theme]({environment:sassApiUrl}/themes#function-select-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-select
+  class="!light-select ![--toggle-button-background:#99BAA6]">
+  ...
+</igx-select>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、select は次のようになります:
+
+<div class="sample-container loading" style="height:220px">
+    <iframe id="select-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/data-entries/select-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 
 <div class="divider--half"></div>

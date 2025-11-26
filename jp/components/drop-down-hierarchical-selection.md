@@ -1,7 +1,8 @@
 ---
-title: 複数選択の階層ドロップダウン - Ignite UI for Angular
+title: 複数選択の階層ドロップダウン - Ignite UI for Angular - MITライセンス
 _description: Ignite UI を使用して複数選択ツリー スタイルの階層ドロップダウンを作成する方法について説明します。
 _keywords: 複数選択ドロップダウン, 階層選択, ignite ui for angular, infragistics, インフラジスティックス
+_license: MIT
 _language: ja
 ---
 

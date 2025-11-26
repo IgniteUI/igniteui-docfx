@@ -2,11 +2,12 @@
 title: Angular Color Editor | Color Editor | Infragistics
 _description: Color Editor component provides an easily configurable option to change colors for any desirable component or aspect of your application.
 _keywords: Angular Color Editor, Ignite UI for Angular, Infragistics
+_license: commercial
 mentionedTypes: ["ColorEditor"]
 namespace: Infragistics.Controls
 ---
 
-# Angular Color Editor Overview (preview)
+# Angular Color Editor Overview <label class="badge badge--preview">PREVIEW</label>
 
 The Ignite UI for Angular Color Editor is a lightweight color picker component. The Color Editor can pop open by clicking the brush icon. Both the rgba and hex values can be obtained from the desired color along the bottom. These values will update when the three sliders are modified. The center box is designed for adjusting the saturation and brightness along with two adjacent sliders for adjusting the rgb and luminance values. Rgb registers between (1-255). The lightness registers between(0-1).
 
@@ -56,16 +57,16 @@ The simplest way to start using the `ColorEditor` is as follows:
 
 The Color Editor component raises the following events:
 
-*   valueChanged
-*   valueChanging
+- valueChanged
+- valueChanging
 
 <!-- Angular -->
 
 ```ts
 @ViewChild("colorEditor", { static: true } )
 private colorEditor: IgxColorEditorComponent
-public ngAfterViewInit(): void 
-{	
+public ngAfterViewInit(): void
+{
     this.colorEditor.valueChanged.subscribe(this.onValueChanged);
 }
 
@@ -80,9 +81,9 @@ public onValueChanged = (e: any) => {
 
 ## API References
 
-*   `ColorEditor`
+- `ColorEditor`
 
 ## Additional Resources
 
-*   [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-*   [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

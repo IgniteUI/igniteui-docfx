@@ -3,6 +3,7 @@
 title: Angular の複数列ヘッダー - Ignite UI for Angular
 _description: Ignite UI for Angular グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
 _keywords: column headers, ignite ui for angular, infragistics
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular の複数列ヘッダー - Ignite UI for Angular
 _description: SIgnite UI for Angular グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
 _keywords: column headers, ignite ui for angular, infragistics
+_license: commercial
 _language: ja
 ---
 }
@@ -19,6 +21,7 @@ _language: ja
 title: Angular の複数列ヘッダー - Ignite UI for Angular
 _description: Ignite UI for Angular グリッドを使用して列ヘッダーを共通の階層ヘッダーの下に配置し、それらを複数のヘッダーに結合することで、列ヘッダーのグループ化を開始します。
 _keywords: 列ヘッダー, ignite ui for angular, infragistics
+_license: commercial
 _language: ja
 ---
 }

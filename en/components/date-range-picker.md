@@ -1,7 +1,8 @@
 ---
-title: Angular Date Range Picker Component | Ignite UI for Angular
+title: Angular Date Range Picker Component | Ignite UI for Angular | MIT license
 _description: The Angular Date Range Picker component allows you to choose a date range by defining its start and end date. You can select a range from a calendar UI. Try it now. 
 _keywords: Angular Date Range Picker, Date Range Picker, Date Picker, Angular Date Range Picker Component, Angular UI Components, Angular component
+_license: MIT
 ---
 
 # Angular Date Range Picker Component Overview
@@ -9,6 +10,7 @@ _keywords: Angular Date Range Picker, Date Range Picker, Date Picker, Angular Da
 The Angular Date Range Picker is a lightweight component that includes a text input and a calendar pop-up, allowing users to easily select start and end dates. It is highly customizable to fit various application requirements, offering features such as date range restrictions, configurable date formats, and more.
 
 ## Angular Date Range Picker Example
+
 Below is a sample demonstrating the [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) component in action, where a calendar pop-up allows users to select start and end dates.
 
 <code-view style="height:600px"
@@ -27,7 +29,7 @@ To get started with the Ignite UI for Angular [`IgxDateRangePickerComponent`]({e
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxDateRangePickerModule` in your **app.module.ts** file.
 
@@ -76,6 +78,7 @@ Now that you have the Ignite UI for Angular Date Range Picker module or directiv
 ## Using the Angular Date Range Picker Component
 
 ### Display and Value
+
 To instantiate a date range picker in its default mode, use the following code:
 
 ```html
@@ -94,11 +97,13 @@ The picker offers two modes for displaying date values: single input and two inp
 When the calendar is visible a date range can be selected by choosing both a start and end date. Selecting a date will set both the start and end date and once a second date is chosen, it will set the end date. If a range is already selected, clicking any other date on the calendar will start a new range selection.
 
 To create a two-way data-binding, use `ngModel`:
+
 ```html
 <igx-date-range-picker [(ngModel)]="range"></igx-date-range-picker>
 ```
 
 ### Display Separate Editable Inputs
+
 The Angular Date Range Picker component also allows configuring two separate inputs for start and end date. This can be achieved by using the [`IgxDateRangeStartComponent`]({environment:angularApiUrl}/classes/igxdaterangestartcomponent.html) and [`IgxDateRangeEndComponent`]({environment:angularApiUrl}/classes/igxdaterangeendcomponent.html) as children of the date range picker, as shown in the demo below:
 
 ```html
@@ -111,6 +116,7 @@ The Angular Date Range Picker component also allows configuring two separate inp
     </igx-date-range-end>
 </igx-date-range-picker>
 ```
+
 - Both the [`IgxDateRangeStartComponent`]({environment:angularApiUrl}/classes/igxdaterangestartcomponent.html) and [`IgxDateRangeEndComponent`]({environment:angularApiUrl}/classes/igxdaterangeendcomponent.html) extend the existing [`IgxInputGroupComponent`](input-group.md). For such a configuration to work, defining an [`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) is required. In addition, all other components and directives available to the [`IgxInputGroupComponent`](input-group.md) can also be used.
 - In order to enable date editing for both inputs, you need to decorate them with [`igxDateTimeEditor`](date-time-editor.md) directive.
 
@@ -122,6 +128,7 @@ The Angular Date Range Picker component also allows configuring two separate inp
 ### Popup modes
 
 By default, when clicked, the [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) opens its calendar pop-up in `dropdown` mode. Alternatively, the calendar can be opened in `dialog` mode by setting the `Mode` property to `dialog`.
+
 ```html
 <igx-date-range-picker [mode]="'dialog'"></igx-date-range-picker>
 ```
@@ -143,7 +150,7 @@ The [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdater
 
 The available keyboard navigation options vary depending on whether the component is in single input or two inputs mode.
 
-**Two Inputs Mode:** 
+**Two Inputs Mode:**
 
 |Keys|Description|
 |----|-----------|
@@ -204,6 +211,7 @@ Or for two inputs:
 ```
 
 #### Toggle and clear icons
+
 In the default configuration, with a single read-only input, a default calendar icon is shown as a prefix and a clear icon - as a suffix. These icons can be changed or redefined using the [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) and [`IgxPickerClearComponent`]({environment:angularApiUrl}/classes/igxpickerclearcomponent.html). They can be decorated with either [`igxPrefix`](input-group.md#prefix--suffix) or [`igxSuffix`](input-group.md#prefix--suffix), which will define their position - at the start of the input or at the end respectively:
 
 ```html
@@ -265,7 +273,7 @@ public customRanges: CustomDateRange[] = [
 <igx-date-range-picker [usePredefinedRanges]="true" [customRanges]="customRanges"></igx-date-range-picker>
 ```
 
-In addition, custom content or actions can be templated using the [`igxPickerActions`]({environment:angularApiUrl}/classes/igxpickeractionsdirective.html) directive. The following demo shows the predefined and custom ranges along with the templated actions: 
+In addition, custom content or actions can be templated using the [`igxPickerActions`]({environment:angularApiUrl}/classes/igxpickeractionsdirective.html) directive. The following demo shows the predefined and custom ranges along with the templated actions:
 
 <code-view style="height:700px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -292,6 +300,7 @@ If the [`inputFormat`]({environment:angularApiUrl}/classes/igxdaterangepickercom
 > The `IgxDateRangePicker` now supports IME input. When composition ends, the control converts the wide-character numbers to ASCII characters.
 
 ### Forms and Validation
+
 The Date Range Picker Component supports all directives from the core [FormsModule](https://angular.io/api/forms/FormsModule), [NgModel](https://angular.io/api/forms/NgModel) and [ReactiveFormsModule](https://angular.io/api/forms/ReactiveFormsModule) ([`FormControl`](https://angular.io/api/forms/FormControl), [`FormGroup`](https://angular.io/api/forms/FormGroup), etc.). This also includes the [Forms Validators](https://angular.io/api/forms/Validators) functions. In addition, the component's [min and max values](#min-and-max-values) and [disabledDates](#disabled-and-special-dates) also act as form validators.
 
 The [NgModel](https://angular.io/api/forms/NgModel) and validators can be set on the [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) or on the individual start and end date inputs.
@@ -345,6 +354,7 @@ When using two separate inputs, it is possible to set the model and required pro
 <div class="divider--half"></div>
 
 ### Min and max values
+
 You can specify [`minValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#minValue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#maxValue) properties to restrict the user input by disabling calendar dates that are outside the range defined by those values.
 
 ```typescript
@@ -370,6 +380,7 @@ public maxDate = new Date(2020, 11, 1);
 ```
 
 The `IgxDateRangePickerComponent` is also a validator which means it controls its validity internally using `minValue` and `maxValue`. You can also access both of them through `ngModel`:
+
 ```html
 <igx-date-range-picker #dateRangePicker="ngModel" [(ngModel)]="range" required
     [minValue]="minDate" [maxValue]="maxDate">
@@ -478,7 +489,7 @@ To get started with styling the `igxDateRangePicker`, we need to import the `ind
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 The Date Range Picker Component exposes `date-range-picker-theme` and utilizes several components and directives, including `igxInputGroupComponent`, `igxCalendar` and `igxOverlay`. Any global styling for the aforementioned components and directives will affect the `igxDateRangeComponent`. As the Date Range Picker Component uses the input group and calendar themes, we have to create new themes that extend the [`calendar-theme`]({environment:sassApiUrl}/themes#function-calendar-theme) and [`input-group-theme`]({environment:sassApiUrl}/themes#function-input-group-theme) and use some of their parameters to style the date range picker in conjunction with the date range picker theme. We will use a single custom color palette to define the colors to use across all themes:
 
@@ -555,6 +566,7 @@ Regarding style scoping, you should refer to both styling sections [Overlay Scop
 
 
 ## Application Demo
+
 The demo below defines a form for flight tickets that uses the [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html). If no dates are selected, an [`IgxHint`]({environment:angularApiUrl}/classes/igxhintdirective.html) is used to display a validation error. The selection of the dates is restricted by the [`minValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#minValue) and [`maxValue`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html#maxValue) properties of the [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html)
 
 
@@ -566,31 +578,35 @@ The demo below defines a form for flight tickets that uses the [`IgxDateRangePic
 <div class="divider--half"></div>
 
 ## API References
+
 <div class="divider--half"></div>
 
-* [IgxDateRangePickerComponent]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html)
-* [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
-* [IgxCalendarComponent Styles]({environment:sassApiUrl}/themes#function-calendar-theme)
-* [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
-* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+- [IgxDateRangePickerComponent]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html)
+- [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
+- [IgxCalendarComponent Styles]({environment:sassApiUrl}/themes#function-calendar-theme)
+- [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
+- [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
 ## Theming Dependencies
 
-* [IgxCalendar Theme]({environment:sassApiUrl}/themes#function-calendar-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
-* [IgxInputGroup Theme]({environment:sassApiUrl}/themes#function-input-group-theme)
-* [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
+- [IgxCalendar Theme]({environment:sassApiUrl}/themes#function-calendar-theme)
+- [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
+- [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxInputGroup Theme]({environment:sassApiUrl}/themes#function-input-group-theme)
+- [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
 
 ## Additional Resources
+
 Related topics:
-* [Date Time Editor](date-time-editor.md)
-* [Label & Input](label-input.md)
-* [Reactive Forms Integration](angular-reactive-form-validation.md)
-* [Date Picker](date-picker.md)
+
+- [Date Time Editor](date-time-editor.md)
+- [Label & Input](label-input.md)
+- [Reactive Forms Integration](angular-reactive-form-validation.md)
+- [Date Picker](date-picker.md)
 
 
 Our community is active and always welcoming to new ideas.
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

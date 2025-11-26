@@ -5,6 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Animations
+
 <p class="highlight">Ignite UI for Angular includes over 100+ pre-built animations specially designed for a better user experience.</p>
 <div class="divider"></div>
 
@@ -12,7 +13,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ### Keyframes Mixin
 
-The Ignite UI for Angular [keyframes]({environment:sassApiUrl}/index.html#mixin-keyframes) mixin is used to register new keyframes animations. The mixin takes the name of a keyframes animation as a parameter and adds it to the global keyframe register list. In that way, the keyframes will not be duplicated in the exported CSS when including the same keyframes animation several times.
+The Ignite UI for Angular [keyframes]({environment:sassApiUrl}/animations#mixin-keyframes) mixin is used to register new keyframes animations. The mixin takes the name of a keyframes animation as a parameter and adds it to the global keyframe register list. In that way, the keyframes will not be duplicated in the exported CSS when including the same keyframes animation several times.
 
 For instance, doing this:
 
@@ -46,11 +47,12 @@ Here's an example of creating a new animation mixin that can be used with our `a
     }
 } 
 ```
+
 <div class="divider--half"></div>
 
 ### Animation Mixin
 
-The [animation]({environment:sassApiUrl}/index.html#mixin-animation) mixin serves as a vessel for animating elements using a list of animation properties passed as parameters. Users can specify animation properties like `name`, `duration`, `delay`, `direction`, `iteration count`, etc. Multiple keyframe animations can be passed to the `animation` mixin.
+The [animation]({environment:sassApiUrl}/animations#mixin-animation) mixin serves as a vessel for animating elements using a list of animation properties passed as parameters. Users can specify animation properties like `name`, `duration`, `delay`, `direction`, `iteration count`, etc. Multiple keyframe animations can be passed to the `animation` mixin.
 
 ```scss
 //include the 'fade-in-top' keyframes animation mixin
@@ -61,11 +63,12 @@ The [animation]({environment:sassApiUrl}/index.html#mixin-animation) mixin serve
     @include animation('fade-in-top' 3s $ease-out-quad infinite);
 }
 ```
+
 <div class="divider--half"></div>
 
 ### Timing Functions
 
-We include a list of pre-baked timing functions to use with our keyframes mixins. Read the [documentation]({environment:sassApiUrl}/index.html) to find the full list of timing functions.
+We include a list of pre-baked timing functions to use with our keyframes mixins. Read the [documentation]({environment:sassApiUrl}/animations) to find the full list of timing functions.
 
 <div class="sample-container loading" style="height: 270px">
     <iframe id="animations-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/theming/animations-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -126,20 +129,22 @@ animations: [
 ### Timing Functions
 
 Ignite UI for Angular includes a set of timing functions that can be used to ease in or out an animation. There are three main timing function groups - [EaseIn]({environment:angularApiUrl}/enums/easein.html), [EaseOut]({environment:angularApiUrl}/enums/easeout.html), and [EaseInOut]({environment:angularApiUrl}/enums/easeinout.html), each containing the following timings:
-  - quad
-  - cubic
-  - quart
-  - quint
-  - sine
-  - expo
-  - circ
-  - back
+
+- quad
+- cubic
+- quart
+- quint
+- sine
+- expo
+- circ
+- back
 
 To use a specific timing function, import it first:
 
-``` typescript 
+``` typescript
 import { EaseOut } from "igniteui-angular/animations/easings";
 ```
+
 and then use it as value for the easing param in any animation:
 
 ``` typescript
@@ -151,16 +156,18 @@ useAnimation(fadeIn, {
 ```
 
 ## API References
+
 <div class="divider"></div>
 
-* [Animations]({environment:sassApiUrl}/index.html)
-* [AnimationSettings]({environment:angularApiUrl}/interfaces/animationsettings.html)
-* [IAnimationParams]({environment:angularApiUrl}/interfaces/ianimationparams.html)
+- [Animations]({environment:sassApiUrl}/animations)
+- [AnimationSettings]({environment:angularApiUrl}/interfaces/animationsettings.html)
+- [IAnimationParams]({environment:angularApiUrl}/interfaces/ianimationparams.html)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
