@@ -1084,6 +1084,9 @@ When you modify a primary property, all related dependent properties are updated
   </tbody>
 </table>
 </div>
+Another way to style the button is by using **Sass**, along with our type-specific theme functions: [`flat-button-theme`]({environment:sassApiUrl}/themes#function-flat-button-theme), [`outlined-button-theme`]({environment:sassApiUrl}/themes#function-outlined-button-theme), [`contained-button-theme`]({environment:sassApiUrl}/themes#function-contained-button-theme), and [`fab-button-theme`]({environment:sassApiUrl}/themes#function-fab-button-theme). 
+
+Each of them will target only the buttons of that specific type.
 
 <div class="theme-table indigo">
 <h3>Indigo Theme</h3>
