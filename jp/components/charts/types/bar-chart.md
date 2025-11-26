@@ -31,47 +31,47 @@ Ignite UI for Angular 棒チャート、棒グラフ、または水平棒チャ�
 
 Angular 棒チャートには、データまたはデータを使用して正しいストーリーを伝える方法に基づいたいくつかの種類が含まれています:
 
-*   グループ化された棒チャート
-*   積層型棒チャート
-*   極座標型棒チャート
-*   積層型 100 棒チャート
+- グループ化された棒チャート
+- 積層型棒チャート
+- 極座標型棒チャート
+- 積層型 100 棒チャート
 
 ### 棒チャートのユースケース
 
 チャートを選択するための一般的なユースケースはいくつかあります:
 
-*   時間の経過に伴う傾向またはデータのカテゴリの数値の変化を表示したい場合
-*   1 つ以上のデータ系列のデータ値を比較したい場合
-*   部分と全体の比較を表示したい場合
-*   カテゴリの上位または下位のパーセンテージを表示したい場合
-*   サブカテゴリにグループ化された複数のデータ ポイントの分析 (積層型棒)
+- 時間の経過に伴う傾向またはデータのカテゴリの数値の変化を表示したい場合
+- 1 つ以上のデータ系列のデータ値を比較したい場合
+- 部分と全体の比較を表示したい場合
+- カテゴリの上位または下位のパーセンテージを表示したい場合
+- サブカテゴリにグループ化された複数のデータ ポイントの分析 (積層型棒)
 
 これらのユースケースは、一般的に次のシナリオで使用されます:
 
-*   セールス マネージメント
-*   インベントリ マネージメント
-*   株価チャート
-*   数値または時系列値を比較する任意の文字列値
+- セールス マネージメント
+- インベントリ マネージメント
+- 株価チャート
+- 数値または時系列値を比較する任意の文字列値
 
 ### 棒チャートのベスト プラクティス
 
-*   数値軸を 0 から開始します。
-*   棒には単色を使用します。
-*   各棒を区切るスペースが棒自体の幅の 1/2 であることを確認します。
-*   ランキング、または順序付けられたカテゴリ (項目) の比較は、昇順または降順でソートされていることを確認します。
-*   読みやすくするために、Y 軸 (チャートの左側のラベル) のカテゴリ値を右揃えにします。
+- 数値軸を 0 から開始します。
+- 棒には単色を使用します。
+- 各棒を区切るスペースが棒自体の幅の 1/2 であることを確認します。
+- ランキング、または順序付けられたカテゴリ (項目) の比較は、昇順または降順でソートされていることを確認します。
+- 読みやすくするために、Y 軸 (チャートの左側のラベル) のカテゴリ値を右揃えにします。
 
 ### 以下の場合に棒チャートを使用しないでください:
 
-*   データが多すぎるため、Y 軸がスペースに収まらないか、判読できません。
-*   詳細な時系列分析が必要なときは、時系列を含む[折れ線チャート](line-chart.md)を検討してください。
+- データが多すぎるため、Y 軸がスペースに収まらないか、判読できません。
+- 詳細な時系列分析が必要なときは、時系列を含む[折れ線チャート](line-chart.md)を検討してください。
 
 ### 棒チャートのデータ構造:
 
-*   データ ソースはデータ項目の配列またはリストである必要があります。
-*   データ ソースに少なくとも 1 つのデータ項目を含む必要があります。
-*   リストには、少なくとも 1 つのデータ列 (文字列または日時) が含まれている必要があります。
-*   リストには、少なくとも 1 つの数値データ列が含まれている必要があります。
+- データ ソースはデータ項目の配列またはリストである必要があります。
+- データ ソースに少なくとも 1 つのデータ項目を含む必要があります。
+- リストには、少なくとも 1 つのデータ列 (文字列または日時) が含まれている必要があります。
+- リストには、少なくとも 1 つの数値データ列が含まれている必要があります。
 
 <div class="divider--half"></div>
 
@@ -150,20 +150,20 @@ Angular 積層型 100% 棒チャートは、X 軸 (チャートの下のラベ�
 
 関連するチャートタイプの詳細については、以下のトピックを参照してください。
 
-*   [エリア チャート](area-chart.md)
-*   [縦棒チャート](column-chart.md)
-*   [折れ線チャート](line-chart.md)
-*   [スプライン チャート](spline-chart.md)
-*   [積層型チャート](stacked-chart.md)
+- [エリア チャート](area-chart.md)
+- [縦棒チャート](column-chart.md)
+- [折れ線チャート](line-chart.md)
+- [スプライン チャート](spline-chart.md)
+- [積層型チャート](stacked-chart.md)
 
 ## API リファレンス
 
 以下は、上記のセクションで説明されている API メンバーのリストです。
 
-*   [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)
-*   `ItemsSource`
-*   [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxbarseriescomponent.html)
-*   [`IgxCalloutLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcalloutlayercomponent.html)
-*   [`IgxStackedBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstackedbarseriescomponent.html)
-*   [`IgxStacked100BarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstacked100barseriescomponent.html)
-*   [`IgxStackedBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstackedbarseriescomponent.html)
+- [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)
+- `ItemsSource`
+- [`IgxBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxbarseriescomponent.html)
+- [`IgxCalloutLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcalloutlayercomponent.html)
+- [`IgxStackedBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstackedbarseriescomponent.html)
+- [`IgxStacked100BarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstacked100barseriescomponent.html)
+- [`IgxStackedBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstackedbarseriescomponent.html)
