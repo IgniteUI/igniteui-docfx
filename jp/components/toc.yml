@@ -967,10 +967,6 @@
       href: charts/features/chart-trendlines.md
       updated: false
       premium: true
-    - name: チャートのユーザー注釈
-      href: charts/features/chart-user-annotations.md
-      preview: true
-      premium: true
     - name: ズーム スライダー
       href: zoomslider-overview.md
       new: false
