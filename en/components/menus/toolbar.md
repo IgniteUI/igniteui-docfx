@@ -2,7 +2,7 @@
 title: Angular Toolbar Component | Ignite UI for Angular
 _description: See how you can easily get started with Angular Toolbar Component. Compatible with the Data Chart. Extend your .
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Toolbar components, Angular Toolbar controls
-_license: MIT
+_license: commercial
 mentionedTypes: ["Toolbar", "ToolAction", "DomainChart", "CategoryChart", "XamDataChart", "TrendLineType"]
 ---
 
