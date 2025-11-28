@@ -342,7 +342,7 @@ This allows you to style the `Chat` to match your brand without replacing its fu
 
 | Slot name             | Description                                                              |
 | --------------------- | ------------------------------------------------------------------------ |
-| "prefix"              | Slot for injecting content (e.g., avatar or icon) before the chat title. |
+| `prefix`              | Slot for injecting content (e.g., avatar or icon) before the chat title. |
 | "title"               | Slot for overriding the chat title content.                              |
 | "actions"             | Slot for injecting header actions (e.g., buttons, menus).                |
 | "suggestions-header"  | Slot for rendering a custom header for the suggestions list.             |
