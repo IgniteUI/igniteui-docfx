@@ -135,7 +135,7 @@ The following parts of the Chat can be customized:
 
 This level of granularity means you can tweak just one part (for example, how attachments look) without rewriting the entire chat layout.
 
-#### Example: Custom Message Content
+#### Custom Message Content
 
 ```html
 <igx-chat
