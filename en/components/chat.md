@@ -270,7 +270,7 @@ You can listen for these events and sync them with your backend:
 
 ## Styling
 
-The `Chat` component exposes both **CSS parts** and **slots** for fine-grained customization of its appearance and structure.
+The Chat component exposes both **CSS parts** and **slots** for fine-grained customization of its appearance and structure.
 
 ### CSS Parts
 
