@@ -1310,6 +1310,9 @@
 - name: Interactions
   header: true
   sortable: true
+- name: Chat
+  href: chat.md
+  new: true
 - name: Dialog Window
   href: dialog.md
 - name: Slider
