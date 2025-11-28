@@ -23,11 +23,13 @@ To get started, install Ignite UI for Angular package as well as the Ignite UI f
 ```cmd
 npm install igniteui-angular igniteui-webcomponents
 ```
+
 [`IgxChatComponent`]({environment:angularApiUrl}/classes/igxchatcomponent.html) provides Angular bindings (events, templates, DI, change detection, pipes), while the visual chat UI is rendered by the Web Component. Installing both ensures the chat behaves natively in Angular while leveraging the full Web Component UI.
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 Once installed, you can import the component in your project:
+
 ```ts
 import { Component } from '@angular/core';
 import { IgxChatComponent } from "igniteui-angular";
@@ -40,6 +42,7 @@ export class AppComponent { ... }
 
 ## Usage
 Define the chat options and bind them in your template:
+
 ```ts
 import { IgxChatComponent, IgxChatOptions  } from "igniteui-angular";
 
@@ -48,15 +51,18 @@ public options: IgxChatOptions  = {
   headerText: 'Support Chat',
 };
 ```
+
 ```html
 <igx-chat 
     [options]="options"
     [messages]="messages">
 </igx-chat>
 ```
+
 Here, the `currentUserId` property tells the component which messages are “outgoing” (sent by the current user) versus “incoming” (sent by others). The `headerText` provides a title for the chat window.
 
 Once rendered, you can programmatically add messages by updating the bound messages array:
+
 ```ts
 public addMessage() {    
     const newMessage = {
@@ -68,6 +74,7 @@ public addMessage() {
     this.messages = [...this.messages, newMessage ];
 }
 ```
+
 This approach makes it easy to plug the Chat into your own data source, such as a server endpoint, a chatbot engine, or a collaborative app backend.
 
 ### Inputs
@@ -91,8 +98,10 @@ public options: IgxChatOptions = {
   acceptedFiles="image/*,.pdf",
 };
 ```
+
 In this example, users will only be able to upload images and PDF files.
 If your use case does not require attachments, you can easily turn them off:
+
 ```ts
 public options: IgxChatOptions = {
   disableInputAttachments: true,
@@ -102,6 +111,7 @@ public options: IgxChatOptions = {
 ### Suggestions
 Quick reply suggestions provide users with pre-defined responses they can tap to reply instantly. This feature is particularly useful in chatbots, customer service flows, or when guiding users through a structured process.
 You can provide suggestions by binding an array of strings to the suggestions property. The `suggestions-position` attribute lets you control where they are displayed: either below the input area or below the messages list.
+
 ```ts
 public options: IgxChatOptions = {
   currentUserId: "me",
@@ -109,16 +119,19 @@ public options: IgxChatOptions = {
   suggestionsPosition: "below-input"
 };
 ```
+
 This approach helps streamline user interactions by reducing the need to type repetitive answers and improves the overall experience in guided conversations.
 
 ### Typing Indicator
 Conversations feel more natural when participants can see that the other person is typing. The Chat component provides this behavior through the `isTyping` property of the options object.
 When set to true, the chat shows a subtle typing indicator below the messages:
+
 ```ts
 public options: IgxChatOptions = {
   isTyping: true
 };
 ```
+
 This feature is typically toggled programmatically, for example when receiving a typing event from your backend service.
 
 ### Custom Templates
@@ -149,12 +162,14 @@ This level of granularity means you can tweak just one part (for example, how at
   </div>
 </ng-template>
 ```
+
 Here:
 - `let-message` exposes the message object.
-- The `igxChatMessageContext` directive ensures proper typing for message templates.
+- The [`igxChatMessageContext`]({environment:angularApiUrl}/classes/igxchatmessagecontextdirective.html) directive ensures proper typing for message templates.
 
 #### Example: Custom Input Area
 By default, the chat input is a text area. You can override it to provide a more tailored experience, such as adding a voice input button:
+
 ```html
 <igx-chat
   [options]="options"
@@ -176,6 +191,7 @@ The Chat component provides two templates which are useful when you want to keep
 
 For example, you might want to add a voice recording button after the upload button, or a menu of extra options after the send button.
 In the following example, the default upload button is preserved, but we add a microphone button next to it. On the other end, we remove the default send button and replace it with a custom Ask button and a “more” menu:
+
 ```html
 <igx-chat
   [options]="options"
@@ -194,6 +210,7 @@ In the following example, the default upload button is preserved, but we add a m
   <button class="icon-btn">⋮</button>
 </ng-template>
 ```
+
 In this setup:
 - The upload button remains in place.
 - A microphone button is added after it (inputActionsStart).
@@ -202,30 +219,35 @@ In this setup:
 This approach gives you full flexibility over the chat input bar, letting you add, remove, or reorder actions without rebuilding the input area from scratch.
 
 ### Markdown Support
-The Chat component includes built-in support for Markdown content through `fromMarkdown` pipe, which transforms message text into safe HTML. This allows you to display messages with formatted text, links, lists, and even syntax-highlighted code blocks, while ensuring that all rendered HTML is sanitized for security.
+The Chat component includes built-in support for Markdown content through [`fromMarkdown`]({environment:angularApiUrl}/classes/igxchatcomponent.html) pipe, which transforms message text into safe HTML. This allows you to display messages with formatted text, links, lists, and even syntax-highlighted code blocks, while ensuring that all rendered HTML is sanitized for security.
 
 > [!Note]
 > To use the Markdown renderer, you need to install the following peer dependencies in your project:
+
 ```cmd
 npm install marked marked-shiki shiki dompurify
 ```
+
 Markdown rendering is performed asynchronously for performance reasons, so the `fromMarkdown` pipe must be combined with Angular’s `async` pipe.
 
 Example — rendering markdown inside a template:
+
 ```html
 <ng-template #messageContent let-message igxChatMessageContext>
     <div [innerHTML]="message.text | fromMarkdown | async"></div>
 </ng-template>
 ```
+
 In this example:
 - Each message’s text property will be parsed as Markdown using the [marked](https://github.com/markedjs/marked) library.
 - The renderer sanitizes the output using [DOMPurify](https://github.com/cure53/DOMPurify)
 - Links automatically open in a new tab with safe rel attributes.
 
 #### Syntax Highlighting
-The `fromMarkdown` pipe also supports syntax highlighting for code blocks. When a message contains fenced code (```js ... ```), it will be rendered using [Shiki](https://shiki.matsu.io/), a high-fidelity code highlighter used by VS Code. By default, it includes highlighting for JavaScript, TypeScript, HTML, and CSS with the github-light theme.
+The `fromMarkdown` pipe also supports syntax highlighting for code blocks. When a message contains fenced code (```js...```), it will be rendered using [Shiki](https://shiki.matsu.io/), a high-fidelity code highlighter used by VS Code. By default, it includes highlighting for JavaScript, TypeScript, HTML, and CSS with the github-light theme.
 Example — when a message contains:
-```markdown 
+
+```markdown
 Here is a JavaScript example:
 \`\`\`ts
 function greet(name: string) {
@@ -233,6 +255,7 @@ function greet(name: string) {
 }
 \`\`\`
 ```
+
 The output inside the chat message will appear with:
 - Automatic syntax highlighting
 - Theme-aware styling (github-light / github-dark)
@@ -253,6 +276,7 @@ To integrate with your application logic, the Chat component emits a set of even
 - inputChange – when the input value changes.
 
 You can listen for these events and sync them with your backend:
+
 ```html
 <igx-chat
         [options]="options"
@@ -352,6 +376,7 @@ This allows you to style the `Chat` to match your brand without replacing its fu
 | `empty-state`         | Slot shown when there are no messages.                                   |
 
 These slots allow injecting custom UI into the header or suggestions area:
+
 ```html
 <igx-chat>
   <span slot="actions">
@@ -359,6 +384,7 @@ These slots allow injecting custom UI into the header or suggestions area:
   </span>
 </igx-chat>
 ```
+
 #### Root Style Adoption (adoptRootStyles)
 
 The Chat component's options include a special flag for advanced styling scenarios:
@@ -392,5 +418,5 @@ We highly recommend using the standard Web Component styling approaches before r
 
 ## Additional Resources
 Our community is active and always welcoming to new ideas.
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
