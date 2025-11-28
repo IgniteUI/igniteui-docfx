@@ -84,8 +84,8 @@ The Chat component exposes several key properties that let you control its state
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `messages`        | Array of messages (`IgcChatMessage[]`) displayed in the chat. You can bind to this to control which messages are shown.                                                  |
 | `draftMessage`    | The current unsent message, represented as an object containing `text` and optional `attachments`. This is useful for saving or restoring message drafts.            |
-| `options`         | Chat configuration (`IgxChatOptions`) such as current user ID, input placeholders, accepted file types, quick reply suggestions and typing behavior. |
-| `templates` | Custom Angular templates (`IgxChatTemplates`) for message content, input, attachments, and other parts of the chat UI.                                   |
+| `options`         | Chat configuration ([`IgxChatOptions`]({environment:angularApiUrl}/classes/igxchatoptions.html)) such as current user ID, input placeholders, accepted file types, quick reply suggestions and typing behavior. |
+| `templates` | Custom Angular templates ([`IgxChatTemplates`]({environment:angularApiUrl}/classes/igxchattemplates.html)) for message content, input, attachments, and other parts of the chat UI.                                   |
 
 These properties make it straightforward to synchronize the Chat’s UI with your application’s state and backend.
 
@@ -110,7 +110,7 @@ public options: IgxChatOptions = {
 
 ### Suggestions
 Quick reply suggestions provide users with pre-defined responses they can tap to reply instantly. This feature is particularly useful in chatbots, customer service flows, or when guiding users through a structured process.
-You can provide suggestions by binding an array of strings to the suggestions property. The `suggestions-position` attribute lets you control where they are displayed: either below the input area or below the messages list.
+You can provide suggestions by binding an array of strings to the suggestions property. The `suggestionsPosition` property lets you control where they are displayed: either below the input area or below the messages list.
 
 ```ts
 public options: IgxChatOptions = {
@@ -412,8 +412,11 @@ We highly recommend using the standard Web Component styling approaches before r
 ## API Reference
 
 - [`IgxChatComponent`]({environment:angularApiUrl}/classes/igxchatcomponent.html)
-- [`IgxChatOptions`]({environment:angularApiUrl}/classes/igxchatcomponent.html)
-- [`IgxChatTemplates`]({environment:angularApiUrl}/classes/igxchatcomponent.html)
+- [`IgxChatOptions`]({environment:angularApiUrl}/classes/igxchatoptions.html)
+- [`IgxChatTemplates`]({environment:angularApiUrl}/classes/igxchattemplates.html)
+- [`IgxChatMessageContextDirective`]({environment:angularApiUrl}/classes/igxchatmessagecontextdirective.html)
+- [`IgxChatInputContextDirective`]({environment:angularApiUrl}/classes/igxchatinputcontextdirective.html)
+- [`IgxChatAttachmentContextDirective`]({environment:angularApiUrl}/classes/igxchatattachmentcontextdirective.html)
 - [`Styling & Themes`](./themes/index.md)
 
 ## Additional Resources
