@@ -123,7 +123,7 @@ This feature is typically toggled programmatically, for example when receiving a
 
 ### Custom Templates
 While the Chat component works out of the box with its default UI, many applications need to customize the look and feel. For example, you might want to add read receipts, display avatars, or replace the input area with a voice recording button.
-The `Chat` component addresses this need using Angular templates. Templates are provided via the `templates` input and use strongly typed Angular directives.                   |
+The Chat component addresses this need using Angular templates. Templates are provided via the `templates` input and use strongly typed Angular directives.
 
 #### Available Templates
 The following parts of the Chat can be customized:
