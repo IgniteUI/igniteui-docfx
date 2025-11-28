@@ -71,7 +71,7 @@ public addMessage() {
 This approach makes it easy to plug the Chat into your own data source, such as a server endpoint, a chatbot engine, or a collaborative app backend.
 
 ### Inputs
-The `Chat` component exposes several key properties that let you control its state and configuration:
+The Chat component exposes several key properties that let you control its state and configuration:
 
 | Name              | Description                                                                                                                                                          |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
