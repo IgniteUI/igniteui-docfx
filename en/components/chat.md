@@ -150,8 +150,8 @@ This level of granularity means you can tweak just one part (for example, how at
 </ng-template>
 ```
 Here:
-- let-message exposes the message object.
-- The igxChatMessageContext directive ensures proper typing for message templates.
+- `let-message` exposes the message object.
+- The `igxChatMessageContext` directive ensures proper typing for message templates.
 
 #### Example: Custom Input Area
 By default, the chat input is a text area. You can override it to provide a more tailored experience, such as adding a voice input button:
