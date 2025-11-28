@@ -351,7 +351,7 @@ title, the placeholder for the component input and the height of the dropdown it
 }
 
 As with the rest of the toolbar actions, exporting is provided through a [Toolbar Exporter component]({environment:angularApiUrl}/classes/igxgridtoolbarexportercomponent.html) out of the box.
-The exporting component is using the respective service for the target data format ([Excel]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) [CSV]({environment:angularApiUrl}/classes/igxcsvexporterservice.html)[PDF]({environment:angularApiUrl}/classes/igxpdfexporterservice.html)). That means if the respective service is not provided through the dependency injection chain, the component
+The exporting component is using the respective service for the target data format ([Excel]({environment:angularApiUrl}/classes/igxexcelexporterservice.html), [CSV]({environment:angularApiUrl}/classes/igxcsvexporterservice.html), [PDF]({environment:angularApiUrl}/classes/igxpdfexporterservice.html)). That means if the respective service is not provided through the dependency injection chain, the component
 won't be able to export anything.
 If you need a refresher on the DI in Angular, check the [official guide](https://angular.io/guide/dependency-injection). Here is a sample snippet showing how to enable
 all export services for your application.
