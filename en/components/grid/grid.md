@@ -37,7 +37,7 @@ _license: commercial
 <div class="sample-content">
     <article class="sample-column">
         <div class="tabbar-wrapper">
-            <p>The Angular Data Grid is a component for displaying data in a tabular format. Modern grids are complex and are usually packed with a large set of features like data selection, excel style filtering, sorting, paging, grouping, templating, column moving, column pinning, exporting to Excel, CSV formats and more. </p>
+            <p>The Angular Data Grid is a component for displaying data in a tabular format. Modern grids are complex and are usually packed with a large set of features like data selection, excel style filtering, sorting, paging, grouping, templating, column moving, column pinning, exporting to Excel, CSV or PDF formats and more. </p>
             <p>Ignite UI Angular Data Grid covers all of these basic Grid features, but also advanced features like batch editing, state persistence, keyboard navigations and more. Ensuring seamless integration with various data sources, our component offers the best performance and scalability, making it ideal for apps handling large datasets or those requiring real-time updates fast.</p>
         </div>
     </article>
