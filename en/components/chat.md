@@ -170,7 +170,7 @@ By default, the chat input is a text area. You can override it to provide a more
 ```
 
 #### Example: Extending Input Actions
-The `Chat` component provides two templates which are useful when you want to keep the default actions (upload and send) but extend them with additional controls:
+The Chat component provides two templates which are useful when you want to keep the default actions (upload and send) but extend them with additional controls:
 - `inputActionsStart` – allows you to inject custom content after the built-in upload button.
 - `inputActionsEnd` – allows you to inject custom content after the built-in send button.
 
