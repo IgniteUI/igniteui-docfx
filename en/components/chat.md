@@ -237,7 +237,7 @@ The output inside the chat message will appear with:
 - Automatic syntax highlighting
 - Theme-aware styling (github-light / github-dark)
 - Proper indentation and monospaced font
-No additional configuration is required — the default themes are loaded automatically.
+- No additional configuration is required — the default themes are loaded automatically.
 
 ### Outputs (Events)
 To integrate with your application logic, the Chat component emits a set of events:
