@@ -26,7 +26,7 @@ The @@igComponent in Ignite UI for Angular provides an [`IgxGridToolbarComponent
 
 - Column Hiding
 - Column Pinning
-- Excel, CSV and PDF Exporting
+- Exporting to Excel, CSV and PDF
 - Advanced Filtering
 
 or just any other custom content. The toolbar and the predefined UI components support Angular events and expose API for developers.
