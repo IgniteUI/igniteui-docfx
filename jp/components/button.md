@@ -1407,6 +1407,10 @@ protected get sizeStyle() {
 
 > **注:** 結果の依存プロパティは、選択したテーマ (Material、Fluent、Bootstrap、Indigo) によって若干異なる場合があります。
 
+ボタンのスタイルを設定するには、タイプ固有のテーマ関数を使用できます: [`flat-button-theme`]({environment:sassApiUrl}/themes#function-flat-button-theme)、[`outlined-button-theme`]({environment:sassApiUrl}/themes#function-outlined-button-theme)、[`contained-button-theme`]({environment:sassApiUrl}/themes#function-contained-button-theme)、および [`fab-button-theme`]({environment:sassApiUrl}/themes#function-fab-button-theme)。
+
+各関数は、特定のタイプのボタンのみをターゲットにします。
+
 **Sass** を使用してボタンのスタイル設定を開始するには、まずすべてのテーマ関数とコンポーネント ミックスインを含む `index` ファイルをインポートします。
 
 ```scss
@@ -1416,7 +1420,7 @@ protected get sizeStyle() {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-次に、[`button-theme`]({environment:sassApiUrl}/themes#function-button-theme) を拡張し、それぞれのホバーとフォーカス パラメーターと共に `$foreground` と `$background` パラメーターを受け入れる新しいテーマを作成します。
+次に、スタイル設定するボタンのタイプ固有のテーマ機能を拡張する新しいテーマを作成します。この例では、[`contained-button-theme`]({environment:sassApiUrl}/themes#function-contained-button-theme) 関数を使用し、`$foreground` および `$background` パラメーターに、それぞれの hover および active パラメーターとともに値を渡します。
 
 次のマークアップを前提として:
 
@@ -1429,60 +1433,44 @@ protected get sizeStyle() {
 次のテーマを作成する必要があります:
 
 ```scss
-$custom-button-theme: button-theme(
-    $foreground: #fdfdfd,
-    $hover-foreground: #fdfdfd,
-    $focus-foreground: #fdfdfd,
-    $background: #345779,
-    $hover-background: #2e4d6b,
-    $focus-background: #2e4d6b,
-    $disabled-foreground: #2e4d6b,
+$custom-contained-theme: contained-button-theme(
+    $background: #f9f0ff,
+    $foreground: #722ed1,
+    $hover-background: #efdbff,
+    $hover-foreground: #9254de,
+    $active-foreground: #531dab,
+    $active-background: #dfc2fa,
 );
 ```
 
-ボタンのスタイル設定に使用できるパラメーターの完全なリストについては、[`button-theme`]({environment:sassApiUrl}/themes#function-button-theme) セクションを参照してください。
+contained タイプのボタンのスタイル設定に使用できるパラメーターの完全なリストについては、[`contained-button-theme`]({environment:sassApiUrl}/themes#function-contained-button-theme) セクションを参照してください。
 
 最後に、カスタム テーマをアプリケーションに**含めます**。
 
 ```scss
-.button-sample {
-    @include css-vars($custom-button-theme);
+.my-contained-btn {
+    @include css-vars($custom-contained-theme);
 }
 ```
 
-特定のタイプのボタン (`flat`、`outlined`、`contained`、`fab`) のみをスタイリングすることもできます。
-そのためには、次のようなタイプ別のテーマ関数を使用します: [`flat-button-theme`]({environment:sassApiUrl}/themes#function-flat-button-theme)、[`outlined-button-theme`]({environment:sassApiUrl}/themes#function-outlined-button-theme)、[`contained-button-theme`]({environment:sassApiUrl}/themes#function-contained-button-theme)、[`fab-button-theme`]({environment:sassApiUrl}/themes#function-fab-button-theme)。
+タイプ別テーマ関数により、ボタンのスタイリングがより簡単になりました。
 
-例として、以下のようなマークアップがあるとします。
+[`contained-button-theme`]({environment:sassApiUrl}/themes#function-contained-button-theme) 関数と [`fab-button-theme`]({environment:sassApiUrl}/themes#function-fab-button-theme) 関数の場合、`$background` パラメーターに色の値を指定するだけで済みます。他のすべてのボタンの状態とテキストの色 (指定されていない場合) は、その値に基づいて自動的に生成され、適用されます。
 
-```html
-<div class="my-contained-btn">
-  <button igxButton="contained">Contained button</button>
-</div>
-<div class="my-flat-btn">
-  <button igxButton="flat">Flat button</button>
-</div>
-```
-
-`contained` ボタンのみをスタイリングしたい場合は、[`contained-button-theme`]({environment:sassApiUrl}/themes#function-flat-button-theme) 関数を使用します。
-
-```scss
-$custom-contained-theme: contained-button-theme(
-    $background: #348ae0,
-);
-```
-
-新たに追加されたタイプ別テーマ関数により、ボタンのスタイリングがより簡単になりました。上記の例のように、[`contained-button-theme`]({environment:sassApiUrl}/themes#function-contained-button-theme) および [`fab-button-theme`]({environment:sassApiUrl}/themes#function-fab-button-theme) では、`$background` パラメーターに色を指定するだけで、他のすべての状態用の色やテキストの色が自動的に生成されます。テキストの色は、新しく追加された [`adaptive-contrast`]({environment:sassApiUrl}/color#function-adaptive-contrast) 関数によって、指定された背景に対して黒か白のどちらがより良いコントラストを持つかを計算して決定されます。
+テキストの色は、新しく追加された [`adaptive-contrast`]({environment:sassApiUrl}/color#function-adaptive-contrast) 関数によって、指定された背景に対して黒か白のどちらがより良いコントラストを持つかを計算して決定されます。
 
 [`flat-button-theme`]({environment:sassApiUrl}/themes#function-flat-button-theme) および [`outlined-button-theme`]({environment:sassApiUrl}/themes#function-outlined-button-theme) では、状態用の色も自動的に生成されますが、これらは `$background` ではなく `$foreground` パラメーターに基づいて計算されます。
 
-以下のサンプルでは、カスタマイズした CSS 変数を使用したボタン コンポーネントが、[`Ant`](https://ant.design/components/button?theme=light#button-demo-color-variant) デザイン システムのボタンに視覚的に似たデザインを実現している様子を確認できます。 
+以下のサンプルでは、カスタマイズした CSS 変数を使用したボタン コンポーネントが、[`Ant`](https://ant.design/components/button?theme=light#button-demo-color-variant) デザイン システムのボタンに視覚的に似たデザインを実現している様子を確認できます。
 
 <code-view style="height: 260px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/buttons-style/" >
 </code-view>
+
+> [!NOTE]
+> サンプルでは、[Bootstrap Light](themes/sass/schemas.md#predefined-schemas) スキーマを使用します。
 
 ### Tailwind によるスタイル設定
 
@@ -1497,6 +1485,7 @@ $custom-contained-theme: contained-button-theme(
 ```
 
 ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
 - `light-*` クラスはライト テーマ用です。
 - `dark-*` クラスはダーク テーマ用です。
 - プレフィックスの後にコンポーネント名を追加します。 ボタンにはタイプがあるため、クラスは次のように使用されます: `light-contained-button`、`light-flat-button`、`dark-outlined-button`、`dark-fab-button`。

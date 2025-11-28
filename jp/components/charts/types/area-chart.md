@@ -31,31 +31,31 @@ Ignite UI for Angular エリア チャートは、線の下の領域が塗りつ
 
 エリア チャートを選択するための一般的なユースケースはいくつかあります:
 
-*   パン、ズーム、ドリルダウンなどのチャート操作に適した大容量のデータセットを使用する場合。
-*   データの経時的なトレンドを比較する必要がある場合。
-*   2 つ以上のデータ シリーズの違いを表示したい場合。
-*   個別のカテゴリの部分対全体の累積比較を表示したい場合。
-*   比較解析のために 1 つ以上のカテゴリのデータ トレンドを表示する必要がある場合。
-*   時系列データの詳細を視覚化する必要がある場合。
+- パン、ズーム、ドリルダウンなどのチャート操作に適した大容量のデータセットを使用する場合。
+- データの経時的なトレンドを比較する必要がある場合。
+- 2 つ以上のデータ シリーズの違いを表示したい場合。
+- 個別のカテゴリの部分対全体の累積比較を表示したい場合。
+- 比較解析のために 1 つ以上のカテゴリのデータ トレンドを表示する必要がある場合。
+- 時系列データの詳細を視覚化する必要がある場合。
 
 ### エリア チャートのベスト プラクティス
 
-*   データ比較が正確になるように Y 軸 (左軸または右軸) を常に 0 から開始する。
-*   時系列データを左から右へ並べ替える。
-*   透明色を使用して、別の系列の背後にプロットされているデータがブロックされないようにする。
+- データ比較が正確になるように Y 軸 (左軸または右軸) を常に 0 から開始する。
+- 時系列データを左から右へ並べ替える。
+- 透明色を使用して、別の系列の背後にプロットされているデータがブロックされないようにする。
 
 ### 以下の場合にエリア チャートを使用しないでください:
 
-*   多くの (7 または 10 以上) シリーズのデータがある場合。チャートが読みやすいことを確認する必要があります。
-*   時系列データの値は類似している場合 (同じ期間のデータ)。これにより、重なり合った網掛け領域を区別できなくなります。
+- 多くの (7 または 10 以上) シリーズのデータがある場合。チャートが読みやすいことを確認する必要があります。
+- 時系列データの値は類似している場合 (同じ期間のデータ)。これにより、重なり合った網掛け領域を区別できなくなります。
 
 ### エリア チャートのデータ構造
 
-*   データ ソースはデータ項目の配列またはリスト (単一シリーズの場合) である必要があります。
-*   データ ソースは、配列の配列またはリストのリスト (複数シリーズの場合) である必要があります。
-*   データ ソースはデータ項目間に線を描画するために少なくともデータ項目を 2 つ以上含む必要があります。
-*   すべてのデータ項目には、少なくとも 1 つのデータ列 (文字列または日時) が含まれている必要があります。
-*   すべてのデータ項目には少なくとも 1 つの数値データ列が含まれている必要があります。
+- データ ソースはデータ項目の配列またはリスト (単一シリーズの場合) である必要があります。
+- データ ソースは、配列の配列またはリストのリスト (複数シリーズの場合) である必要があります。
+- データ ソースはデータ項目間に線を描画するために少なくともデータ項目を 2 つ以上含む必要があります。
+- すべてのデータ項目には、少なくとも 1 つのデータ列 (文字列または日時) が含まれている必要があります。
+- すべてのデータ項目には少なくとも 1 つの数値データ列が含まれている必要があります。
 
 ## 単一シリーズの Angular エリア チャート
 
@@ -188,20 +188,6 @@ Ignite UI for Angular ラジアル エリア チャートは[ラジアル チャ
 
 <code-view style="height: 600px" alt="Angular ラジアル エリア チャート"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
-iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
-iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
-iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
-iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
-iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
-iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
-iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
-iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
-iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
-iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
-iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
-iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
-iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
                                                  github-src="charts/data-chart/radial-area-chart">
 </code-view>
@@ -239,12 +225,12 @@ Angular 極座標スプライン エリア チャートは[極座標チャート
 
 関連するチャートタイプの詳細については、以下のトピックを参照してください。
 
-*   [棒チャート](bar-chart.md)
-*   [縦棒チャート](column-chart.md)
-*   [極座標チャート](polar-chart.md)
-*   [ラジアル チャート](radial-chart.md)
-*   [スプライン チャート](spline-chart.md)
-*   [積層型チャート](stacked-chart.md)
+- [棒チャート](bar-chart.md)
+- [縦棒チャート](column-chart.md)
+- [極座標チャート](polar-chart.md)
+- [ラジアル チャート](radial-chart.md)
+- [スプライン チャート](spline-chart.md)
+- [積層型チャート](stacked-chart.md)
 
 ## API リファレンス
 

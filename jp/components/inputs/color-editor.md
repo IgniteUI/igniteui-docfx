@@ -58,16 +58,16 @@ npm install igniteui-angular-inputs
 
 Color Editor コンポーネントは、次のイベントを発生させます:
 
-*   valueChanged
-*   valueChanging
+- valueChanged
+- valueChanging
 
 <!-- Angular -->
 
 ```ts
 @ViewChild("colorEditor", { static: true } )
 private colorEditor: IgxColorEditorComponent
-public ngAfterViewInit(): void 
-{	
+public ngAfterViewInit(): void
+{
     this.colorEditor.valueChanged.subscribe(this.onValueChanged);
 }
 
@@ -82,9 +82,9 @@ public onValueChanged = (e: any) => {
 
 ## API リファレンス
 
-*   `ColorEditor`
+- `ColorEditor`
 
 ## その他のリソース
 
-*   [Ignite UI for Angular **フォーラム (英語)**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-*   [Ignite UI for Angular **GitHub (英語)**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム (英語)**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub (英語)**](https://github.com/IgniteUI/igniteui-angular)

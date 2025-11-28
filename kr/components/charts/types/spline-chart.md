@@ -106,11 +106,11 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 You can find more information about related chart types in these topics:
 
-*   [Area Chart](area-chart.md)
-*   [Line Chart](spline-chart.md)
-*   [Polar Chart](polar-chart.md)
-*   [Radial Chart](radial-chart.md)
-*   [Stacked Chart](stacked-chart.md)
+- [Area Chart](area-chart.md)
+- [Line Chart](spline-chart.md)
+- [Polar Chart](polar-chart.md)
+- [Radial Chart](radial-chart.md)
+- [Stacked Chart](stacked-chart.md)
 
 ## API References
 

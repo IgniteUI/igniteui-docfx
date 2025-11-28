@@ -37,23 +37,23 @@ font.height = 16 * 20;
 
 Microsoft Excel® document properties provide information to help organize and keep track of your documents. You can use the Infragistics Excel Library to set these properties using the [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.sheet.html#workbook) object’s `documentProperties` property. The available properties are:
 
-*   `author`
+- `author`
 
-*   `title`
+- `title`
 
-*   `subject`
+- `subject`
 
-*   `keywords`
+- `keywords`
 
-*   `category`
+- `category`
 
-*   `status`
+- `status`
 
-*   `comments`
+- `comments`
 
-*   `company`
+- `company`
 
-*   `manager`
+- `manager`
 
 The following code demonstrates how to create a workbook and set its `title` and `status` document properties.
 
@@ -82,7 +82,7 @@ var workbook = new Workbook();
 workbook.protect(false, false);
 ```
 
-*   isProtected
+- isProtected
 
 Check if a workbook has protection. This read-only property returns true if the workbook has any protection set using the overloads of the Protect method.
 
@@ -91,7 +91,7 @@ var workbook = new Workbook();
 var protect = workbook.isProtected;
 ```
 
-*   protection
+- protection
 
 This read-only property returns an object of type WorkbookProtection which contains properties for obtaining each protection setting individually.
 
