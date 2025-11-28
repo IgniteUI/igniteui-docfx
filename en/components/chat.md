@@ -276,7 +276,7 @@ The Chat component exposes both **CSS parts** and **slots** for fine-grained cus
 
 | Part name                       | Description                                                                          |
 | ------------------------------- | ------------------------------------------------------------------------------------ |
-| "chat-container"                | Styles the main chat container.                                                      |
+| `chat-container`                | Styles the main chat container.                                                      |
 | "header"                        | Styles the chat header container.                                                    |
 | "prefix"                        | Styles the element before the chat title (e.g., avatar).                             |
 | "title"                         | Styles the chat header title.                                                        |
