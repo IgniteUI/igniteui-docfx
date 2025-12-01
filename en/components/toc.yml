@@ -1300,6 +1300,7 @@
 - name: Color Editor
   href: inputs/color-editor.md
   preview: true
+  premium: true
 - name: Text Highlight
   href: texthighlight.md
   new: false
