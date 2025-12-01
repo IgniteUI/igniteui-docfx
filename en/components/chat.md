@@ -167,7 +167,7 @@ Here:
 - `let-message` exposes the message object.
 - The [`igxChatMessageContext`]({environment:angularApiUrl}/classes/igxchatmessagecontextdirective.html) directive ensures proper typing for message templates.
 
-#### Example: Custom Input Area
+#### Custom Input Area
 By default, the chat input is a text area. You can override it to provide a more tailored experience, such as adding a voice input button:
 
 ```html
@@ -184,7 +184,7 @@ By default, the chat input is a text area. You can override it to provide a more
 </ng-template>
 ```
 
-#### Example: Extending Input Actions
+#### Extending Input Actions
 The Chat component provides two templates which are useful when you want to keep the default actions (upload and send) but extend them with additional controls:
 - `inputActionsStart` – allows you to inject custom content after the built-in upload button.
 - `inputActionsEnd` – allows you to inject custom content after the built-in send button.
@@ -221,13 +221,6 @@ This approach gives you full flexibility over the chat input bar, letting you ad
 ### Markdown Support
 The Chat component includes built-in support for Markdown content through [`fromMarkdown`]({environment:angularApiUrl}/classes/igxchatcomponent.html) pipe, which transforms message text into safe HTML. This allows you to display messages with formatted text, links, lists, and even syntax-highlighted code blocks, while ensuring that all rendered HTML is sanitized for security.
 
-> [!Note]
-> To use the Markdown renderer, you need to install the following peer dependencies in your project:
-
-```cmd
-npm install marked marked-shiki shiki dompurify
-```
-
 Markdown rendering is performed asynchronously for performance reasons, so the `fromMarkdown` pipe must be combined with Angular’s `async` pipe.
 
 Example — rendering markdown inside a template:
@@ -245,6 +238,7 @@ In this example:
 
 #### Syntax Highlighting
 The `fromMarkdown` pipe also supports syntax highlighting for code blocks. When a message contains fenced code (```js...```), it will be rendered using [Shiki](https://shiki.matsu.io/), a high-fidelity code highlighter used by VS Code. By default, it includes highlighting for JavaScript, TypeScript, HTML, and CSS with the github-light theme.
+
 Example — when a message contains:
 
 ```markdown
