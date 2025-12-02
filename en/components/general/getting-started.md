@@ -8,6 +8,8 @@ _keywords: ignite ui for angular, getting started, angular components
 
 [`Ignite UI for Angular`](https://github.com/IgniteUI/igniteui-angular) is a complete set of Material-based UI Widgets, Components & Sketch UI kits and supporting directives for Angular by Infragistics. It enables developers to build modern high-performance HTML5 & JavaScript apps for desktop browsers, mobile experiences and progressive web apps (PWA’s) targeting Google's Angular framework.
 
+Ignite UI for Angular is offered under a dual-license model, which allows for both commercial and permissive open-source use, depending on the components, modules, directives, and services being used. For more details, refer to the [Ignite UI Licensing](./ignite-ui-licensing.md) and [Open Source vs Premium](./open-source-vs-premium.md) topics.
+
 ## Prerequisites
 
 1. Install NodeJS.
@@ -35,7 +37,7 @@ _keywords: ignite ui for angular, getting started, angular components
 
 ## Installing Ignite UI for Angular
 
-The Ignite UI for Angular can be installed either wth the Angular CLI or with the Ignite UI CLI.
+Ignite UI for Angular can be installed either with the Angular CLI or with the Ignite UI CLI.
 
 ### Quick Start with the Angular CLI
 
@@ -55,11 +57,22 @@ Thereafter you can install the Ignite UI for Angular package, along with all of 
 ng add igniteui-angular
 ```
 
->[!NOTE]
-> You don't need to install the `igniteui-theming` package explicity, it comes with Ignite UI for Angular.
-> Keep in mind that with the command above you will install the Trial version of Ignite UI for Angular.
+In addition, you may want to include any number of Ignite UI's web components to your project, such as the open source Grid Lite, or the Dock Manager (commercial license)
 
-During the installation process you will be asked if you would like to enable polyfills for IE, Edge and Safari. This will install the `web-animations-js` package in your project, which is required if you use `AnimationBuilder` in your application and one of these browsers. You can also choose to add CSS library to reset HTML element styles across browsers and the `minireset.css` will be installed in your application.
+```cmd
+ng add igniteui-grid-lite
+ng add igniteui-dockmanager
+```
+
+The [Grid Lite component](../grid-lite/overview.md) is designed to provide a minimal set of features under MIT license that should serve a wide range of projects that need to display data in a simple tabular format. Its API resembles that of the commercial `IgxGrid` ensuring a simple and straightforward upgrade path.
+
+<!-- TODO: Add specific grid-lite -> igx-grid upgrade info here once available -->
+
+>[!NOTE]
+> You don't need to install the `igniteui-theming` package explicitly, it comes with Ignite UI for Angular.
+> Keep in mind that with the command above you will install the Trial version of any Ignite UI for Angular component under commercial license (such as `igxGrid`). 
+
+### Upgrading from Trial to Licensed
 
 If you want to start using the **Licensed Ignite UI for Angular package** it is strongly recommended to follow the [Upgrading packages guide with Schematics and Ignite UI CLI](ignite-ui-licensing.md#upgrading-packages-using-our-angular-schematics-or-ignite-ui-cli).
 
@@ -89,7 +102,7 @@ It's very important to [perform a correct setup of the private npm feed environm
 
 Details on the entire process [could be found here](ignite-ui-licensing.md#how-to-setup-your-environment-to-use-the-private-npm-feed-step-by-step-guide).
 
-### Quick Start with Angular Schematics & Ignite UI  CLI
+### Quick Start with Angular Schematics & Ignite UI CLI
 
 To create an application from scratch and configure it to use the Ignite UI for Angular components you can use either the Ignite UI for Angular Schematics or the Ignite UI CLI. The first step is to install the respective package globally as follows:
 
@@ -100,7 +113,7 @@ npm i -g @igniteui/angular-schematics
 or:
 
 ```cmd
-npm install -g igniteui-cli 
+npm install -g igniteui-cli
 ```
 
 Our [guided experience using the Ignite UI CLI](cli/step-by-step-guide-using-cli.md) or [Ignite UI for Angular Schematics](cli/step-by-step-guide-using-angular-schematics.md) is the easiest way to bootstrap a configured application.
@@ -118,7 +131,7 @@ ig
 ```
 
 >[!NOTE]
-> At some point during the steps execution [you'll be asked to login to our npm registry if not already setup](ignite-ui-licensing.md#how-to-setup-your-environment-to-use-the-private-npm-feed-step-by-step-guide). This is part of the Trial to License account setup.
+> At some point during the steps execution [you'll be asked to login to our npm registry if not already setup](ignite-ui-licensing.md#how-to-setup-your-environment-to-use-the-private-npm-feed-step-by-step-guide). This is part of the Trial to License account setup and is applicable if you plan to use any of the components under [commercial license](./open-source-vs-premium.md#comparison-table-for-all-components).
 
 <div style="display:inline-block;">
     <a style="background: url(../../images/general/buildCLIapp.gif); display:flex; justify-content:center; width: 80vw; max-width:540px; min-height:315px;"
@@ -238,6 +251,14 @@ export class AppComponent {
   title = 'My Ignite UI project';
 }
 ```
+<!-- TODO: Add this with the introduction of the upgrade process
+### Upgrading from Grid Lite to Commercial Grid
+
+`Grid Lite` is a great way to start with a free, open-source grid. However, as your application grows, you might need advanced features like Excel Export, Advanced Filtering, Master-Detail or the various grid flavors like `Tree Grid` or `Pivot Grid`. This means upgrading to commercial Ignite UI for Angular Grid component. We made this process simple and straightforward:
+
+- add steps
+
+Since the API is compatible, your grid configuration in the template usually doesn't need any changes!-->
 
 #### Run application
 
@@ -263,7 +284,7 @@ The final result should look something like this:
 
 ## API References
 
-In this article we learned how to create our own Ignite UI for Angular application from scratch by taking advantage of the fully-automated process of Ignite UI for Angular projects creation in the Ignite UI CLI. We also learned and how to add Ignite UI for Angular to an existing application by using the Angular CLI. We designed our own page by including the [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) to it, which itself offers some awesome features, which you can take a look at by referring to the navigation menu.
+In this article we learned how to create our own Ignite UI for Angular application from scratch by taking advantage of the fully-automated process of Ignite UI for Angular projects creation in the Ignite UI CLI. We also learned how to add Ignite UI for Angular to an existing application by using the Angular CLI. We designed our own page by including the [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) to it, which itself offers some awesome features, which you can take a look at by referring to the navigation menu.
 
 - [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 - [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
@@ -275,6 +296,7 @@ In this article we learned how to create our own Ignite UI for Angular applicati
 - [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli)
 - [Ignite UI CLI Commands](https://github.com/IgniteUI/igniteui-cli/wiki#available-commands)
 - [Grid overview](../grid/grid.md)
+- [Grid Lite overview](../grid-lite/overview.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
