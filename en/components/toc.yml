@@ -1445,6 +1445,10 @@
   href: exporter-excel.md
   new: false
   premium: true
+- name: PDF Exporter
+  href: exporter-pdf.md
+  new: true
+  premium: true
 - name: Transaction Service
   href: transaction.md
   new: false
