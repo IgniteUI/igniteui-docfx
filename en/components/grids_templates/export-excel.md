@@ -118,8 +118,8 @@ Here is the module setup in case you are targeting versions prior to v12.2.1:
 
 ```typescript
 // app.module.ts
-import { IgxExcelExporterService, IgxPdfExporterService } from 'igniteui-angular';
-// import { IgxExcelExporterService, IgxPdfExporterService } from '@infragistics/igniteui-angular'; for licensed package
+import { IgxExcelExporterService, IgxPdfExporterService } from 'igniteui-angular/grids/core';
+// import { IgxExcelExporterService, IgxPdfExporterService } from '@infragistics/igniteui-angular/grids/core'; for licensed package
 
 @NgModule({
   providers: [ IgxExcelExporterService, IgxPdfExporterService ]
@@ -159,8 +159,8 @@ Here is the code which will execute both export processes in the component's typ
 
 ```typescript
 // component.ts
-import { IgxExcelExporterService, IgxExcelExporterOptions, IgxPdfExporterService, IgxPdfExporterOptions } from 'igniteui-angular';
-import { @@igxNameComponent } from 'igniteui-angular';
+import { IgxExcelExporterService, IgxExcelExporterOptions, IgxPdfExporterService, IgxPdfExporterOptions } from 'igniteui-angular/grids/core';
+import { @@igxNameComponent } from 'igniteui-angular/grids/@@igMainTopic';
 
 @ViewChild('@@igObjectRef') public @@igObjectRef: @@igxNameComponent;
 
