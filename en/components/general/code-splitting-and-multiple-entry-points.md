@@ -318,7 +318,7 @@ ng update igniteui-angular --migrate-only --from=20.1.0 --to=21.0.0
 
 For detailed information about specific components and their APIs, refer to the component documentation:
 
-- [Grid](../grids/grid/overview.md)
-- [Tree Grid](../grids/tree-grid/overview.md)
-- [Hierarchical Grid](../grids/hierarchical-grid/overview.md)
-- [Pivot Grid](../grids/pivot-grid/overview.md)
+- [Grid](../grid/grid.md)
+- [Tree Grid](../treegrid/tree-grid.md)
+- [Hierarchical Grid](../hierarchicalgrid/hierarchical-grid.md)
+- [Pivot Grid](../pivotGrid/pivot-grid.md)
