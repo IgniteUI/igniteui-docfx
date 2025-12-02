@@ -60,6 +60,37 @@ Unfortunately not all changes can be automatically updated. Changes below are sp
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
+## From 20.x to 21.0.x
+
+### Multiple Entry Points Support
+
+Version 21.0.0 introduces **multiple entry points** for better tree-shaking and code splitting. The main entry point (`igniteui-angular`) remains fully backwards compatible, but migrating to granular entry points is recommended for optimal bundle sizes.
+
+**Key changes:**
+- Components organized into dedicated entry points (e.g., `igniteui-angular/grids/grid`, `igniteui-angular/button`)
+- Some components relocated (input directives, autocomplete, radio group)
+- Type rename: `Direction` → `CarouselAnimationDirection`
+
+**Migration:**
+
+When updating, you'll be prompted to migrate imports automatically:
+
+```cmd
+ng update igniteui-angular
+```
+
+Choose **"Yes"** when prompted, or migrate later with:
+
+```cmd
+ng update igniteui-angular --migrate-only --from=20.1.0 --to=21.0.0
+```
+
+For complete details on entry points, migration options, breaking changes, and usage examples, see the [Code Splitting and Multiple Entry Points guide](code-splitting-and-multiple-entry-points.md).
+
+### Dependency Injection Refactor
+
+All internal dependency injection now uses the `inject()` API. This generally doesn't affect application code, but if you extend Ignite UI components or services, you may need to update your constructors to use `inject()` instead of constructor parameters.
+
 ## From 17.2.x to 18.0.x
 
 ### Breaking changes
