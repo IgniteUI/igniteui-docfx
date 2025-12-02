@@ -257,7 +257,7 @@
       new: false
       updated: false
       premium: true
-    - name: Export to Excel and PDF
+    - name: Export services
       href: grid/export-excel.md
       new: false
       updated: true
@@ -447,7 +447,7 @@
       new: false
       updated: false
       premium: true
-    - name: Export to Excel and PDF
+    - name: Export services
       href: treegrid/export-excel.md
       new: false
       updated: true
@@ -546,7 +546,7 @@
           href: hierarchicalgrid/validation.md
           new: false
           premium: true
-    - name: Export to Excel and PDF
+    - name: Export services
       href: hierarchicalgrid/export-excel.md
       new: false
       updated: true
@@ -673,7 +673,7 @@
   new: false
   updated: true
   items:
-    - name: Export to Excel and PDF
+    - name: Export services
       href: pivotGrid/export-excel.md
       new: false
       updated: true
