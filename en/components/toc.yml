@@ -260,7 +260,7 @@
     - name: Export to Excel
       href: grid/export-excel.md
       new: false
-      updated: false
+      updated: true
       premium: true
     - name: Paste from Excel
       href: grid/paste-excel.md
@@ -450,7 +450,7 @@
     - name: Export to Excel
       href: treegrid/export-excel.md
       new: false
-      updated: false
+      updated: true
       premium: true
     - name: Multi-column Headers
       href: treegrid/multi-column-headers.md
@@ -549,7 +549,7 @@
     - name: Export to Excel
       href: hierarchicalgrid/export-excel.md
       new: false
-      updated: false
+      updated: true
       premium: true
     - name: Row Drag
       href: hierarchicalgrid/row-drag.md
