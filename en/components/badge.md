@@ -34,7 +34,7 @@ The next step is to import the `IgxBadgeModule` in your **app.module.ts** file.
 // app.module.ts
 
 ...
-import { IgxBadgeModule } from 'igniteui-angular';
+import { IgxBadgeModule } from 'igniteui-angular/badge';
 // import { IgxBadgeModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -51,7 +51,7 @@ Alternatively, as of `16.0.0` you can import the `IgxBadgeComponent` as a standa
 // home.component.ts
 
 ...
-import { IgxBadgeComponent } from 'igniteui-angular';
+import { IgxBadgeComponent } from 'igniteui-angular/badge';
 // import { IgxBadgeComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -73,7 +73,8 @@ Let's see how the demo sample is done. It's a simple success badge on an avatar.
 ```typescript
 // app.module.ts
 ...
-import { IgxBadgeModule, IgxAvatarModule } from 'igniteui-angular';
+import { IgxBadgeModule } from 'igniteui-angular/badge';
+import { IgxAvatarModule } from 'igniteui-angular/avatar';
 // import {  IgxBadgeModule, IgxAvatarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -171,11 +172,9 @@ To continue, include all needed modules and import them in the **app.module.ts**
 // app.module.ts
 
 ...
-import {
-    IgxListModule,
-    IgxAvatarModule,
-    IgxBadgeModule
-} from 'igniteui-angular';
+import { IgxListModule } from 'igniteui-angular/list';
+import { IgxAvatarModule } from 'igniteui-angular/avatar';
+import { IgxBadgeModule } from 'igniteui-angular/badge';
 // import { IgxListModule, IgxAvatarModule, IgxBadgeModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({

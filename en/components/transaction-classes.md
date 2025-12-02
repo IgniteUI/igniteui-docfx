@@ -83,7 +83,7 @@ Both [`IgxFlatTransactionFactory`]({environment:angularApiUrl}/classes/igxflatra
 In the below example, you can see how you can instantiate different transaction services depending on an arbitrary (`hasUndo`) flag:
 
 ```typescript
-import { IgxFlatTransactionFactory, TRANSACTION_TYPE } from 'igniteui-angular';
+import { IgxFlatTransactionFactory, TRANSACTION_TYPE } from 'igniteui-angular/grids/core';
 // import { IgxFlatTransactionFactory, TRANSACTION_TYPE } from '@infragistics/igniteui-angular'; for licensed package
 
 export class MyCustomComponent {
@@ -110,7 +110,7 @@ First, define a custom factory class
 
 ```typescript
 import { IgxFlatTransactionFactory, TRANSACTION_TYPE, IgxBaseTransactionService,
-TransactionService, Transaction, State } from 'igniteui-angular';
+TransactionService, Transaction, State } from 'igniteui-angular/grids/core';
 // import { IgxFlatTransactionFactory, TRANSACTION_TYPE, IgxBaseTransactionService,
 // TransactionService, Transaction, State } from '@infragistics/igniteui-angular'; for licensed package
 
@@ -133,7 +133,7 @@ export class CustomTransactionFactory extends IgxFlatTransactionFactory {
 Then, in your component's `providers` array, override the `IgxFlatTransactionFactory` (used by `igx-grid`) with your custom implementation.
 
 ```typescript
-import { IgxFlatTransactionFactory } from 'igniteui-angular';
+import { IgxFlatTransactionFactory } from 'igniteui-angular/grids/core';
 // import { IgxFlatTransactionFactory } from '@infragistics/igniteui-angular'; for licensed package
 import { CustomTransactionFactory } from '../custom-factory.ts';
 

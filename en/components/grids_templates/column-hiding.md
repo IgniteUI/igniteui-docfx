@@ -285,7 +285,7 @@ Let's say we want to manually define our [`IgxColumnActionsComponent`]({environm
 import {
     ...
     IgxColumnActionsModule 
-} from 'igniteui-angular';
+} from 'igniteui-angular/grids/core';
 // import { ..., IgxColumnActionsModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -404,7 +404,7 @@ Let's create a couple of nicely designed radio buttons for our options! We just 
 import {
     ...
     IgxRadioModule    
-} from 'igniteui-angular';
+} from 'igniteui-angular/radio';
 // import { ..., IgxRadioModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({

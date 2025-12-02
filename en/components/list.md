@@ -39,7 +39,7 @@ The next step is to import the `IgxListModule` in the **app.module.ts** file.
 // app.module.ts
 
 import { HammerModule } from '@angular/platform-browser';
-import { IgxListModule } from 'igniteui-angular';
+import { IgxListModule } from 'igniteui-angular/list';
 // import { IgxListModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -56,7 +56,7 @@ Alternatively, as of `16.0.0` you can import the `IgxListComponent` as a standal
 // home.component.ts
 
 import { HammerModule } from '@angular/platform-browser';
-import { IGX_LIST_DIRECTIVES } from 'igniteui-angular';
+import { IGX_LIST_DIRECTIVES } from 'igniteui-angular/list';
 // import { IGX_LIST_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -232,11 +232,9 @@ We can use some of our other components in conjunction with the [`IgxList`]({env
 // app.module.ts
 
 ...
-import {
-    IgxListModule,
-    IgxAvatarModule,
-    IgxIconModule
-} from 'igniteui-angular';
+import { IgxListModule } from 'igniteui-angular/list';
+import { IgxAvatarModule } from 'igniteui-angular/avatar';
+import { IgxIconModule } from 'igniteui-angular/icon';
 // import { IgxListModule, IgxAvatarModule, IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -319,7 +317,7 @@ Let's also allow the user to choose the size of the list by using the `--ig-size
 ```typescript
 // app.module.ts
 ...
-import { IgxButtonGroupModule } from 'igniteui-angular';
+import { IgxButtonGroupModule } from 'igniteui-angular/button-group';
 // import { IgxButtonGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -513,7 +511,8 @@ It's time to import the `IgxFilterModule` and the `IgxInputGroupModule` in our a
 ```typescript
 // app.module.ts
 ...
-import { IgxFilterModule, IgxInputGroupModule } from 'igniteui-angular';
+import { IgxFilterModule } from 'igniteui-angular/directives';
+import { IgxInputGroupModule } from 'igniteui-angular/input-group';
 // import { IgxFilterModule, IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -522,7 +521,7 @@ import { IgxFilterModule, IgxInputGroupModule } from 'igniteui-angular';
 
 // contacts.component.ts
 ...
-import { IgxFilterOptions } from 'igniteui-angular';
+import { IgxFilterOptions } from 'igniteui-angular/directives';
 // import { IgxFilterOptions } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({...})

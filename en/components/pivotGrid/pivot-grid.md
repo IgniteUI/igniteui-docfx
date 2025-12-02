@@ -40,7 +40,7 @@ The next step is to import the `IgxPivotGridModule` in your **app.module.ts** fi
 ```typescript
 // app.module.ts
 
-import { IgxPivotGridModule } from 'igniteui-angular';
+import { IgxPivotGridModule } from 'igniteui-angular/grids/pivot-grid';
 // import { IgxPivotGridModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -58,7 +58,7 @@ Alternatively, as of `16.0.0` you can import the `IgxPivotGridComponent` as a st
 ```typescript
 // home.component.ts
 
-import { IGX_PIVOT_GRID_DIRECTIVES } from 'igniteui-angular';
+import { IGX_PIVOT_GRID_DIRECTIVES } from 'igniteui-angular/grids/pivot-grid';
 // import { IGX_PIVOT_GRID_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

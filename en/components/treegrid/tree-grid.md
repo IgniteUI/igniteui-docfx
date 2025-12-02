@@ -35,7 +35,7 @@ The next step is to import the `IgxTreeGridModule` in your **app.module.ts** fil
 ```typescript
 // app.module.ts
 
-import { IgxTreeGridModule } from 'igniteui-angular';
+import { IgxTreeGridModule } from 'igniteui-angular/grids/tree-grid';
 // import { IgxTreeGridModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -53,7 +53,7 @@ Alternatively, as of `16.0.0` you can import the `IgxTreeGridComponent` as a sta
 ```typescript
 // home.component.ts
 
-import { IGX_TREE_GRID_DIRECTIVES } from 'igniteui-angular';
+import { IGX_TREE_GRID_DIRECTIVES } from 'igniteui-angular/grids/tree-grid';
 // import { IGX_TREE_GRID_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

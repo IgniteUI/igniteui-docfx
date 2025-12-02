@@ -34,7 +34,7 @@ The next step is to import the `IgxBannerModule` in your **app.module.ts** file.
 // app.module.ts
 
 ...
-import { IgxBannerModule } from 'igniteui-angular';
+import { IgxBannerModule } from 'igniteui-angular/banner';
 // import { IgxBannerModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -51,7 +51,7 @@ Alternatively, as of `16.0.0` you can import the `IgxBannerComponent` as a stand
 // home.component.ts
 
 ...
-import { IGX_BANNER_DIRECTIVES } from 'igniteui-angular';
+import { IGX_BANNER_DIRECTIVES } from 'igniteui-angular/banner';
 // import { IGX_BANNER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -172,7 +172,8 @@ Let's change the animations that our banner uses, so that it slides in and out:
 
 ```typescript
 // banner.component.ts
-import { IgxBannerComponent, slideInLeft, slideOutRight } from 'igniteui-angular'
+import { IgxBannerComponent } from 'igniteui-angular/banner';
+import { slideInLeft, slideOutRight } from 'igniteui-angular/animations'
 // import { IgxBannerComponent, slideInLeft, slideOutRight } from '@infragistics/igniteui-angular'; for licensed package
 ...
 export class MyBannerComponent {

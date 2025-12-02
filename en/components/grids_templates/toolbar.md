@@ -359,7 +359,7 @@ all export services for your application.
 ```typescript
 // app.module.ts
 
-import { IgxExcelExporterService, IgxCsvExporterService, IgxPdfExporterService } from 'igniteui-angular';
+import { IgxExcelExporterService, IgxCsvExporterService, IgxPdfExporterService } from 'igniteui-angular/grids/core';
 // import { IgxExcelExporterService, IgxCsvExporterService, IgxPdfExporterService } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({

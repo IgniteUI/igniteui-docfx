@@ -33,7 +33,7 @@ The first step is to import the `IgxNavbarModule` inside our **app.module.ts** f
 ```typescript
 // app.module.ts
 
-import { IgxNavbarModule } from 'igniteui-angular';
+import { IgxNavbarModule } from 'igniteui-angular/navbar';
 // import { IgxNavbarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -49,7 +49,7 @@ Alternatively, as of `16.0.0` you can import the `IgxNavbarComponent` as a stand
 ```typescript
 // home.component.ts
 
-import { IGX_NAVBAR_DIRECTIVES } from 'igniteui-angular';
+import { IGX_NAVBAR_DIRECTIVES } from 'igniteui-angular/navbar';
 // import { IGX_NAVBAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -96,7 +96,9 @@ We can make our app a little more functional by adding options for searching, fa
 // app.module.ts
 
 ...
-import { IgxNavbarModule, IgxIconButtonDirective, IgxIconModule } from 'igniteui-angular';
+import { IgxNavbarModule } from 'igniteui-angular/navbar';
+import { IgxIconButtonDirective } from 'igniteui-angular/button';
+import { IgxIconModule } from 'igniteui-angular/icon';
 // import { IgxNavbarModule, IgxButtonModule, IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({

@@ -30,7 +30,8 @@ The following demo demonstrates some of the combobox features that are enabled/d
 To get started with the combobox component, first you need to import the `IgxComboModule` in your **app.module.ts** file. Our sample also uses the [igx-switch]({environment:angularApiUrl}/classes/igxswitchcomponent.html) component to toggle combobox properties' values, so we will need the `IgxSwitchModule` as well:
 
 ```typescript
-import { IgxComboModule, IgxSwitchModule } from 'igniteui-angular';
+import { IgxComboModule } from 'igniteui-angular/combo';
+import { IgxSwitchModule } from 'igniteui-angular/switch';
 // import { IgxComboModule, IgxSwitchModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -203,7 +204,7 @@ You can set whether groups should be sorted in ascending or descending order. By
 
 ```typescript
 ...
-import { SortingDirection } from 'igniteui-angular'
+import { SortingDirection } from 'igniteui-angular/grids/core'
 // import { SortingDirection } from '@infragistics/igniteui-angular'; for licensed package
 
 export class ComboDemo {

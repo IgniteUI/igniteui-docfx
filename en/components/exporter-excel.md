@@ -32,7 +32,7 @@ To start using the IgniteUI Excel Exporter first import the [`IgxExcelExporterSe
 // app.module.ts
 
 ...
-import { IgxExcelExporterService } from 'igniteui-angular';
+import { IgxExcelExporterService } from 'igniteui-angular/grids/core';
 // import { IgxExcelExporterService } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -59,7 +59,7 @@ Here is the code which will execute the export process in the component's typesc
 // component.ts
 
 ...
-import { IgxExcelExporterService, IgxExcelExporterOptions } from 'igniteui-angular';
+import { IgxExcelExporterService, IgxExcelExporterOptions } from 'igniteui-angular/grids/core';
 // import { IgxExcelExporterService, IgxExcelExporterOptions } from '@infragistics/igniteui-angular'; for licensed package
 ...
 

@@ -38,7 +38,7 @@ The next step is to import the `IgxHierarchicalGridModule` in your **app.module.
 ```typescript
 // app.module.ts
 
-import { IgxHierarchicalGridModule } from 'igniteui-angular';
+import { IgxHierarchicalGridModule } from 'igniteui-angular/grids/hierarchical-grid';
 // import { IgxHierarchicalGridModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -56,7 +56,7 @@ Alternatively, as of `16.0.0` you can import the `IgxHierarchicalGridComponent` 
 ```typescript
 // home.component.ts
 
-import { IGX_HIERARCHICAL_GRID_DIRECTIVES } from 'igniteui-angular';
+import { IGX_HIERARCHICAL_GRID_DIRECTIVES } from 'igniteui-angular/grids/hierarchical-grid';
 // import { IGX_HIERARCHICAL_GRID_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

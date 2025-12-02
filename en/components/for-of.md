@@ -34,7 +34,7 @@ The next step is to import the `IgxForOfModule` in your **app.module.ts** file.
 ```typescript
 // app.module.ts
 
-import { IgxForOfModule } from 'igniteui-angular';
+import { IgxForOfModule } from 'igniteui-angular/directives';
 // import { IgxForOfModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -52,7 +52,7 @@ Alternatively, as of `16.0.0` you can import the `IgxForOfDirective` as a standa
 ```typescript
 // home.component.ts
 
-import { IgxForOfDirective } from 'igniteui-angular';
+import { IgxForOfDirective } from 'igniteui-angular/directives';
 // import { IgxForOfDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

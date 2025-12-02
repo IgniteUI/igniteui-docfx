@@ -44,7 +44,7 @@ The next step is to import the `IgxTabsModule` in your **app.module.ts** file.
 // app.module.ts
 
 ...
-import { IgxTabsModule } from 'igniteui-angular';
+import { IgxTabsModule } from 'igniteui-angular/tabs';
 // import { IgxTabsModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -60,7 +60,7 @@ Alternatively, as of `16.0.0` you can import the `IgxTabsComponent` as a standal
 ```typescript
 // home.component.ts
 
-import { IGX_TABS_DIRECTIVES } from 'igniteui-angular';
+import { IGX_TABS_DIRECTIVES } from 'igniteui-angular/tabs';
 // import { IGX_TABS_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

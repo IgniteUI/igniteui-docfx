@@ -34,7 +34,7 @@ The next step is to import the `IgxDateTimeEditorModule` in your **app.module.ts
 // app.module.ts
 
 ...
-import { IgxDateTimeEditorModule } from 'igniteui-angular';
+import { IgxDateTimeEditorModule } from 'igniteui-angular/date-time-editor';
 // import { IgxDateTimeEditorModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -50,7 +50,8 @@ Alternatively, as of `16.0.0` you can import the `IgxDateTimeEditorDirective` as
 ```typescript
 // home.component.ts
 
-import { IgxDateTimeEditorDirective, IGX_INPUT_GROUP_DIRECTIVES } from 'igniteui-angular';
+import { IgxDateTimeEditorDirective } from 'igniteui-angular/date-time-editor';
+import { IGX_INPUT_GROUP_DIRECTIVES } from 'igniteui-angular/input-group';
 // import { IgxDateTimeEditorDirective, IGX_INPUT_GROUP_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

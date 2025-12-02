@@ -38,7 +38,7 @@ The next step is to import the `IgxSnackbarModule` in your **app.module.ts** fil
 // app.module.ts
 
 ...
-import { IgxSnackbarModule } from 'igniteui-angular';
+import { IgxSnackbarModule } from 'igniteui-angular/snackbar';
 // import { IgxSnackbarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -54,7 +54,8 @@ Alternatively, as of `16.0.0` you can import the `IgxSnackbarComponent` as a sta
 ```typescript
 // home.component.ts
 
-import { IgxSnackbarComponent, IgxButtonDirective } from 'igniteui-angular';
+import { IgxSnackbarComponent } from 'igniteui-angular/snackbar';
+import { IgxButtonDirective } from 'igniteui-angular/button';
 // import { IgxSnackbarComponent, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -226,7 +227,7 @@ Let’s create a list with contacts that can be deleted. When an item is deleted
 //sample.component.ts
 
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IgxSnackbarComponent } from 'igniteui-angular';
+import { IgxSnackbarComponent } from 'igniteui-angular/snackbar';
 // import { IgxSnackbarComponent } from '@infragistics/igniteui-angular'; for licensed package
 ...
 @ViewChild(IgxSnackbarComponent)
@@ -275,7 +276,7 @@ Use [`positionSettings`]({environment:angularApiUrl}/classes/igxsnackbarcomponen
 
 ```typescript
 // sample.component.ts
-import { VerticalAlignment, HorizontalAlignment } from 'igniteui-angular';
+import { VerticalAlignment, HorizontalAlignment } from 'igniteui-angular/core';
 // import { VerticalAlignment, HorizontalAlignment } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public open(snackbar) {
