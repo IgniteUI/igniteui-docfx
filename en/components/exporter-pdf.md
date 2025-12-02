@@ -9,7 +9,7 @@ _license: commercial
 
 <p class="highlight">
 
-The Ignite UI for Angular PDF Exporter service can export data in PDF format from raw data or from the [**IgxGrid**](grid/grid.md), [**IgxTreeGrid**](treegrid/tree-grid.md) and [**IgxHierarchicalGrid**](hierarchicalgrid/hierarchical-grid.md) components. The exporting functionality is encapsulated in the [`IgxPdfExporterService`]({environment:angularApiUrl}/classes/igxpdfexporterservice.html) class and the data is exported in PDF format with support for multi-page documents, automatic page breaks, and customizable styling.
+The Ignite UI for Angular PDF Exporter service can export data in PDF format from raw data or from the [**IgxGrid**](grid/grid.md), [**IgxTreeGrid**](treegrid/tree-grid.md), [**IgxHierarchicalGrid**](hierarchicalgrid/hierarchical-grid.md) and [**IgxPivotGrid**](pivotGrid/pivot-grid.md) components. The exporting functionality is encapsulated in the [`IgxPdfExporterService`]({environment:angularApiUrl}/classes/igxpdfexporterservice.html) class and the data is exported in PDF format with support for multi-page documents, automatic page breaks,
 </p>
 <div class="divider"></div>
 
