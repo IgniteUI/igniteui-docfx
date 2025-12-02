@@ -29,7 +29,7 @@ The Ignite UI for Angular PDF Exporter service can export data in PDF format fro
 To start using the IgniteUI PDF Exporter first import the [`IgxPdfExporterService`]({environment:angularApiUrl}/classes/igxpdfexporterservice.html) in your component:
 
 ```typescript
-import { IgxPdfExporterService } from 'igniteui-angular';
+import { IgxPdfExporterService } from 'igniteui-angular/grid/core';
 
 // import { IgxPdfExporterService } from '@infragistics/igniteui-angular'; for licensed package
 
