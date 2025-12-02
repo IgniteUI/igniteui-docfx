@@ -70,7 +70,7 @@ The [Grid Lite component](../grid-lite/overview.md) is designed to provide a min
 
 >[!NOTE]
 > You don't need to install the `igniteui-theming` package explicitly, it comes with Ignite UI for Angular.
-> Keep in mind that with the command above you will install the Trial version of any Ignite UI for Angular component under commercial license (such as `igxGrid`). 
+> Keep in mind that with the command above you will install the Trial version of any Ignite UI for Angular component under commercial license (such as `igxGrid`).
 
 ### Upgrading from Trial to Licensed
 
