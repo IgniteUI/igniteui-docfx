@@ -25,6 +25,9 @@
   href: general/update-guide.md
   new: false
   updated: true
+- name: Multiple Entry Points
+  href: general/code-splitting-and-multiple-entry-points.md
+  new: true
 - name: Server-side rendering (SSR)
   href: general/ssr-rendering.md
   new: false
