@@ -26,6 +26,9 @@
   href: general/update-guide.md
   new: false
   updated: true
+- name: マルチ エントリ ポイント
+  href: general/code-splitting-and-multiple-entry-points.md
+  new: true
 - name: サーバー サイド レンダリング (SSR)
   href: general/ssr-rendering.md
   new: false
