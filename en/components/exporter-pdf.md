@@ -29,9 +29,9 @@ The Ignite UI for Angular PDF Exporter service provides powerful functionality t
 To start using the Ignite UI PDF Exporter, first import the [`IgxPdfExporterService`]({environment:angularApiUrl}/classes/igxpdfexporterservice.html) into your component:
 
 ```typescript
-import { IgxPdfExporterService } from 'igniteui-angular/grid/core';
+import { IgxPdfExporterService } from 'igniteui-angular/grids/core';
 
-// import { IgxPdfExporterService } from '@infragistics/igniteui-angular/grid/core'; for licensed package
+// import { IgxPdfExporterService } from '@infragistics/igniteui-angular/grids/core'; for licensed package
 
 @Component({
   ...
@@ -54,9 +54,9 @@ Here is the code that will execute the export process in the component's TypeScr
 
 ...
 import { Component, inject, signal } from '@angular/core';
-import { IgxPdfExporterService, IgxPdfExporterOptions } from 'igniteui-angular/grid/core';
+import { IgxPdfExporterService, IgxPdfExporterOptions } from 'igniteui-angular/grids/core';
 
-// import { IgxPdfExporterService, IgxPdfExporterOptions } from '@infragistics/igniteui-angular/grid/core'; for licensed package
+// import { IgxPdfExporterService, IgxPdfExporterOptions } from '@infragistics/igniteui-angular/grids/core'; for licensed package
 ...
 
 public localData = signal([
