@@ -1086,6 +1086,10 @@ protected get sizeStyle() {
 </table>
 </div>
 
+ボタンにスタイルを設定する別の方法は、**Sass** とタイプ別テーマ関数を使用することです。[`flat-button-theme`]({environment:sassApiUrl}/themes#function-flat-button-theme)、[`outlined-button-theme`]({environment:sassApiUrl}/themes#function-outlined-button-theme)、[`contained-button-theme`]({environment:sassApiUrl}/themes#function-contained-button-theme)、および [`fab-button-theme`]({environment:sassApiUrl}/themes#function-fab-button-theme)。
+
+それぞれは、特定のタイプのボタンのみをターゲットにします。
+
 <div class="theme-table indigo">
 <h3>Indigo テーマ</h3>
 <h4>Flat ボタン</h4>
