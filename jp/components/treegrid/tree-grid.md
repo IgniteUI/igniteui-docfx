@@ -12,7 +12,7 @@ Ignite UI for Angular Tree Grid は、階層データまたはフラットな自
 
 ## Angular ツリー グリッドの例
 
-この例では、ユーザーが階層データを表示する方法を確認できます。フィルタリングとソートのオプション、ピン固定と非表示、行の選択、Excel と csv へのエクスポート、[スパークライン](../sparkline.md)コンポーネントを使用したセル テンプレートが含まれています。さらに、[Angular 改ページ](paging.md)を使用したカスタム改ページの例を見ることができます。
+この例では、ユーザーが階層データを表示する方法を確認できます。フィルタリングとソートのオプション、ピン固定と非表示、行の選択、Excel、CSV および PDF へのエクスポート、[スパークライン](../sparkline.md)コンポーネントを使用したセル テンプレートが含まれています。さらに、[Angular 改ページ](paging.md)を使用したカスタム改ページの例を見ることができます。
 
 <code-view style="height:850px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"

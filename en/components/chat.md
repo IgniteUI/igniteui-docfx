@@ -84,8 +84,8 @@ The Chat component exposes several key properties that let you control its state
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `messages`        | Array of messages (`IgcChatMessage[]`) displayed in the chat. You can bind to this to control which messages are shown.                                                  |
 | `draftMessage`    | The current unsent message, represented as an object containing `text` and optional `attachments`. This is useful for saving or restoring message drafts.            |
-| `options`         | Chat configuration ([`IgxChatOptions`]({environment:angularApiUrl}/classes/igxchatoptions.html)) such as current user ID, input placeholders, accepted file types, quick reply suggestions and typing behavior. |
-| `templates` | Custom Angular templates ([`IgxChatTemplates`]({environment:angularApiUrl}/classes/igxchattemplates.html)) for message content, input, attachments, and other parts of the chat UI.                                   |
+| `options`         | Chat configuration ([`IgxChatOptions`]({environment:angularApiUrl}/types/igxchatoptions.html)) such as current user ID, input placeholders, accepted file types, quick reply suggestions and typing behavior. |
+| `templates` | Custom Angular templates ([`IgxChatTemplates`]({environment:angularApiUrl}/types/igxchattemplates.html)) for message content, input, attachments, and other parts of the chat UI.                                   |
 
 These properties make it straightforward to synchronize the Chat’s UI with your application’s state and backend.
 
@@ -219,7 +219,7 @@ In this setup:
 This approach gives you full flexibility over the chat input bar, letting you add, remove, or reorder actions without rebuilding the input area from scratch.
 
 ### Markdown Support
-The Chat component includes built-in support for Markdown content through [`fromMarkdown`]({environment:angularApiUrl}/classes/igxchatcomponent.html) pipe, which transforms message text into safe HTML. This allows you to display messages with formatted text, links, lists, and even syntax-highlighted code blocks, while ensuring that all rendered HTML is sanitized for security.
+The Chat component includes built-in support for Markdown content through `fromMarkdown` pipe, which transforms message text into safe HTML. This allows you to display messages with formatted text, links, lists, and even syntax-highlighted code blocks, while ensuring that all rendered HTML is sanitized for security.
 
 Markdown rendering is performed asynchronously for performance reasons, so the `fromMarkdown` pipe must be combined with Angular’s `async` pipe.
 
@@ -406,8 +406,8 @@ We highly recommend using the standard Web Component styling approaches before r
 ## API Reference
 
 - [`IgxChatComponent`]({environment:angularApiUrl}/classes/igxchatcomponent.html)
-- [`IgxChatOptions`]({environment:angularApiUrl}/classes/igxchatoptions.html)
-- [`IgxChatTemplates`]({environment:angularApiUrl}/classes/igxchattemplates.html)
+- [`IgxChatOptions`]({environment:angularApiUrl}/types/igxchatoptions.html)
+- [`IgxChatTemplates`]({environment:angularApiUrl}/types/igxchattemplates.html)
 - [`IgxChatMessageContextDirective`]({environment:angularApiUrl}/classes/igxchatmessagecontextdirective.html)
 - [`IgxChatInputContextDirective`]({environment:angularApiUrl}/classes/igxchatinputcontextdirective.html)
 - [`IgxChatAttachmentContextDirective`]({environment:angularApiUrl}/classes/igxchatattachmentcontextdirective.html)
