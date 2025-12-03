@@ -65,7 +65,7 @@ The sections below walk through setup, usage patterns, and tips for tailoring ea
 
 ## Angular Excel Exporter Example
 
-This live example demonstrates the standard Excel workflow for the @@igComponent—bound data, a single export button, and the resulting `.xlsx` file with preserved filtering and sorting state. Share it with stakeholders who want to preview the experience before wiring it into their application.
+This live example demonstrates the standard Excel and PDF export workflow for the @@igComponent—bound data, two export buttons (Excel and PDF), and the resulting `.xlsx` and `.pdf` files with preserved filtering and sorting state. Share it with stakeholders who want to preview the experience before wiring it into their application.
 
 @@if (igxName === 'IgxGrid') {
 
