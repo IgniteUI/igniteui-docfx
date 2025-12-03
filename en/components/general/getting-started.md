@@ -57,20 +57,33 @@ Thereafter you can install the Ignite UI for Angular package, along with all of 
 ng add igniteui-angular
 ```
 
-In addition, you may want to include any number of Ignite UI's web components to your project, such as the open source Grid Lite, or the Dock Manager (commercial license)
+>[!NOTE]
+> You don't need to install the `igniteui-theming` package explicitly, it comes with Ignite UI for Angular.
+
+>[!NOTE]
+> Keep in mind that with the command above you will install the Trial version of any Ignite UI for Angular component under commercial license (such as `igxGrid`).
+
+#### Additional packages
+
+In addition, you may want to include a number of Ignite UI components to your project, such as:
+
+- Grid Lite - Open-Source
+
+The [Grid Lite component](../grid-lite/overview.md) is designed to provide a minimal set of features under MIT license that should serve a wide range of projects that need essential data-display functionality with minimal overhead, and the performance users expect. It is designed for developers who need fast, lightweight data presentation without the complexity of an enterprise grid. Its API resembles that of the commercial `IgxGrid` ensuring a simple and straightforward upgrade path.
 
 ```cmd
 ng add igniteui-grid-lite
+```
+
+- Dock Manager - Premium
+
+The Ignite UI Dock Manager component provides means to manage the layout of your application through panes, allowing your end-users to customize it further by pinning, resizing, moving and hiding panes.
+
+```cmd
 ng add igniteui-dockmanager
 ```
 
-The [Grid Lite component](../grid-lite/overview.md) is designed to provide a minimal set of features under MIT license that should serve a wide range of projects that need to display data in a simple tabular format. Its API resembles that of the commercial `IgxGrid` ensuring a simple and straightforward upgrade path.
-
 <!-- TODO: Add specific grid-lite -> igx-grid upgrade info here once available -->
-
->[!NOTE]
-> You don't need to install the `igniteui-theming` package explicitly, it comes with Ignite UI for Angular.
-> Keep in mind that with the command above you will install the Trial version of any Ignite UI for Angular component under commercial license (such as `igxGrid`).
 
 ### Upgrading from Trial to Licensed
 
