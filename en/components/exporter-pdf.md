@@ -117,6 +117,10 @@ public exportButtonHandler() {
 }
 ```
 
+## Known Limitations
+
+Very wide grids can force PDF columns to shrink to fit the page. Apply column widths or hide low‑priority fields before exporting to keep the document legible.
+
 ## API References
 
 The PDF Exporter service has a few more APIs to explore, which are listed below.
