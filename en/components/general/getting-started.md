@@ -57,7 +57,7 @@ Thereafter you can install the Ignite UI for Angular package, along with all of 
 ng add igniteui-angular
 ```
 
-In addition, you may want to include any number of Ignite UI's web components to your project, such as the open source Grid Lite, or the Dock Manager (commercial license)
+In addition, you may want to include any number of Ignite UI's web components to your project, such as the open source Grid Lite, or the Dock Manager (commercial license).
 
 ```cmd
 ng add igniteui-grid-lite
