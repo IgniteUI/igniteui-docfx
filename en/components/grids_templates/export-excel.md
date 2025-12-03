@@ -8,8 +8,6 @@ _license: commercial
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
-title: Angular Tree Grid Export to Excel and PDF - Ignite UI for Angular
-_description: With Ignite UI Excel and PDF Exporters you can make client exports more convenient & simpler. These formats allow features like filtering, sorting, etc
 ---
 title: Angular Tree Grid Export to Excel and PDF - Ignite UI for Angular
 _description: With Ignite UI Excel and PDF Exporters you can make client exports more convenient & simpler. These formats allow features like filtering, sorting, etc
