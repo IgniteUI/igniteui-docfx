@@ -9,7 +9,7 @@ namespace: Infragistics.Controls
 
 # Open Source JavaScript Grid for Any Project
 
-The Ignite UI for Angular Grid Lite component is part of Infragistics’ new open-source UI component set that will be actively supported and maintained. It is open-source JavaScript data grid built as a Web Component, which means you can use it dependency-free with or without a web framework. There are 40+ OSS controls now available under the MIT license across Angular, React, Blazor, and Web Components.
+The Ignite UI for Angular Grid Lite component is part of Infragistics’ new open-source UI component set that will be actively supported and maintained. It is open-source JavaScript data grid built as a Web Component, which means you can use it dependency-free with or without a web framework. There are 50+ OSS controls now available under the MIT license across Angular, React, Blazor, and Web Components.
 
 The Angular Grid Lite delivers essential data-display functionality with minimal overhead and the performance users expect. It is designed for developers who need fast, lightweight data presentation without the complexity of an enterprise grid.
 
