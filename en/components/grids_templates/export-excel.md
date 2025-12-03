@@ -2,17 +2,18 @@
 @@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid Export to Excel and PDF - Ignite UI for Angular
-_description: With Ignite UI Excel and PDF Exporters you can make client exports more convenient & simpler. These formats allow features like filtering, sorting, etc.
+_description: With Ignite UI Excel and PDF Exporters you can make client exports more convenient & simpler. These formats allow features like filtering, sorting, etc
 _keywords: data export, ignite ui for angular, infragistics
 _license: commercial
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 title: Angular Tree Grid Export to Excel and PDF - Ignite UI for Angular
-_description: With Ignite UI Excel and PDF Exporters you can make client exports more convenient & simpler. These formats allow features like filtering, sorting, etc.
+_description: With Ignite UI Excel and PDF Exporters you can make client exports more convenient & simpler. These formats allow features like filtering, sorting, etc
 ---
 title: Angular Tree Grid Export to Excel and PDF - Ignite UI for Angular
-_description: With Ignite UI Excel and PDF Exporters you can make client exports more convenient & simpler. These formats allow features like filtering, sorting, etc.
+_description: With Ignite UI Excel and PDF Exporters you can make client exports more convenient & simpler. These formats allow features like filtering, sorting, etc
+_keywords: data export, ignite ui for angular, infragistics
 _license: commercial
 _canonicalLink: grid/export-excel
 ---
@@ -21,7 +22,7 @@ _canonicalLink: grid/export-excel
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
 title: Angular Hierarchical Grid Export to Excel and PDF - Ignite UI for Angular
-_description: With Ignite UI Excel and PDF Exporters you can make client exports more convenient & simpler. These formats allow features like filtering, sorting, etc.
+_description: With Ignite UI Excel and PDF Exporters you can make client exports more convenient & simpler. These formats allow features like filtering, sorting, etc
 _keywords: data export, ignite ui for angular, infragistics
 _license: commercial
 _canonicalLink: grid/export-excel
@@ -31,7 +32,7 @@ _canonicalLink: grid/export-excel
 @@if (igxName === 'IgxPivotGrid') {
 ---
 title: Angular Pivot Grid Export to Excel and PDF - Ignite UI for Angular
-_description: With Ignite UI Excel and PDF Exporters you can make client exports more convenient & simpler. These formats allow features like filtering, sorting, etc.
+_description: With Ignite UI Excel and PDF Exporters you can make client exports more convenient & simpler. These formats allow features like filtering, sorting, etc
 _keywords: data export, ignite ui for angular, infragistics
 _license: commercial
 _canonicalLink: grid/export-excel
