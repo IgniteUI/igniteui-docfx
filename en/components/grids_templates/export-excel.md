@@ -6,13 +6,13 @@ _description: With Ignite UI Excel and PDF Exporters you can make client exports
 _keywords: data export, ignite ui for angular, infragistics
 _license: commercial
 ---
-
 }
 @@if (igxName === 'IgxTreeGrid') {
+title: Angular Tree Grid Export to Excel and PDF - Ignite UI for Angular
+_description: With Ignite UI Excel and PDF Exporters you can make client exports more convenient & simpler. These formats allow features like filtering, sorting, etc.
 ---
 title: Angular Tree Grid Export to Excel and PDF - Ignite UI for Angular
 _description: With Ignite UI Excel and PDF Exporters you can make client exports more convenient & simpler. These formats allow features like filtering, sorting, etc.
-_keywords: data export, ignite ui for angular, infragistics
 _license: commercial
 _canonicalLink: grid/export-excel
 ---
@@ -111,25 +111,22 @@ This live example demonstrates the standard Excel and PDF export workflow for th
 Getting the exporters into your project takes only a few lines of code. Follow these steps and you will have reusable services that can create either Excel or PDF outputs on demand:
 
 1. Import the [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) and/or [`IgxPdfExporterService`]({environment:angularApiUrl}/classes/igxpdfexporterservice.html) in your root module.
-2. Provide the services (for earlier Angular versions) or rely on the tree-shakable providers available since v12.2.1.
-3. Inject whichever exporter you need and call its `export` method when the user requests a file.
-
-Here is the module setup in case you are targeting versions prior to v12.2.1:
+2. Inject whichever exporter you need and call its `export` method when the user requests a file.
 
 ```typescript
 // app.module.ts
 import { IgxExcelExporterService, IgxPdfExporterService } from 'igniteui-angular/grids/core';
 // import { IgxExcelExporterService, IgxPdfExporterService } from '@infragistics/igniteui-angular/grids/core'; for licensed package
 
-@NgModule({
-  providers: [ IgxExcelExporterService, IgxPdfExporterService ]
-})
+...
 
-export class AppModule {}
+private excelExportService = inject(IgxExcelExporterService);
+private pdfExportService = inject(IgxPdfExporterService);
+
 ```
 
 > [!Note]
-> In v12.2.1 and later, both exporter services are provided in root, so you can skip registering them in the `providers` array when building new Angular applications.
+> In v12.2.1 and later, `IgxExcelExporterService` is provided in root and does not need to be registered in the `providers` array. The PDF exporter was introduced in later versions and is available as an injectable service without any additional configuration.
 
 To initiate an export process you may use the handler of a button in your component's template.
 
@@ -164,8 +161,8 @@ import { @@igxNameComponent } from 'igniteui-angular/grids/@@igMainTopic';
 
 @ViewChild('@@igObjectRef') public @@igObjectRef: @@igxNameComponent;
 
-constructor(private excelExportService: IgxExcelExporterService, private pdfExportService: IgxPdfExporterService) {
-}
+private excelExportService = inject(IgxExcelExporterService);
+private pdfExportService = inject(IgxPdfExporterService);
 
 public exportButtonHandler() {
   this.excelExportService.export(this.@@igObjectRef, new IgxExcelExporterOptions('ExportedDataFile'));
