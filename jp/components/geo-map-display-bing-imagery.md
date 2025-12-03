@@ -21,7 +21,7 @@ _language: ja
 
 <!-- `sample="/maps/geo-map/display-bing-imagery", height="500", alt="Angular Bing Maps 画像の表示の例"` -->
 
-<img src="../images/general/BingMapsImagery.png" alt="Angular Bing Maps Imagery" />
+<img src="../images/general/BingMapsImagery.png" alt="Angular Bing Maps 画像" />
 
 <div class="divider--half"></div>
 
