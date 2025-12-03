@@ -25,7 +25,7 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナーとな�
 
  - 列の非表示
  - 列のピン固定
- - Excel エクスポート
+ - Excel、CSV、PDF へのエクスポート
  - 高度なフィルタリング
 
 ツールバーと事前定義された UI コンポーネントは、Angular イベントをサポートし、開発者向けに API を公開します。
@@ -320,18 +320,18 @@ constructor() {
 }
 
 残りのツールバー操作と同様に、エクスポートは、すぐに使用できる [Toolbar Exporter コンポーネント]({environment:angularApiUrl}/classes/igxgridtoolbarexportercomponent.html)を介して提供されます。
-エクスポート コンポーネントは、ターゲット データ形式 (Excel CSV) のそれぞれのサービスを使用しています。つまり、それぞれのサービスが依存関係挿入チェーンを通じて提供されない場合、コンポーネントは何もエクスポートできません。
+エクスポート コンポーネントは、ターゲット データ形式 ([Excel]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)、[CSV]({environment:angularApiUrl}/classes/igxcsvexporterservice.html)、[PDF]({environment:angularApiUrl}/classes/igxpdfexporterservice.html)) のそれぞれのサービスを使用しています。つまり、それぞれのサービスが依存関係挿入チェーンを通じて提供されない場合、コンポーネントは何もエクスポートできません。
 Angular の DI の復習が必要な場合は、[公式ガイド](https://angular.io/guide/dependency-injection)をご覧ください。これは、アプリケーションのすべてのエクスポート サービスを有効にする方法を示すサンプル スニペットです。
 
 ```typescript
 // app.module.ts
 
-import { IgxExcelExporterService, IgxCsvExporterService } from 'igniteui-angular';
-// import { IgxExcelExporterService, IgxCsvExporterService } from '@infragistics/igniteui-angular'; for licensed package
+import { IgxExcelExporterService, IgxCsvExporterService, IgxPdfExporterService } from 'igniteui-angular';
+// import { IgxExcelExporterService, IgxCsvExporterService, IgxPdfExporterService } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
-    providers: [IgxExcelExporterService, IgxCsvExporterService ]
+    providers: [IgxExcelExporterService, IgxCsvExporterService, IgxPdfExporterService ]
 })
 export class AppModule { ... }
 ```
@@ -349,16 +349,19 @@ export class AppModule { ... }
 <igx-grid-toolbar>
     <igx-grid-toolbar-actions>
         <igx-grid-toolbar-exporter
-            <!-- If active, enables the csv export entry in the dropdown UI -->
+            <!-- If active, enables the CSV export entry in the dropdown UI -->
             [exportCSV]="csvExportEnabled"
             <!-- If active, enables the excel export entry in the dropdown UI -->
             [exportExcel]="excelExportEnabled"
+            <!-- If active, enables the PDF export entry in the dropdown UI -->
+            [exportPDF]="pdfExportEnabled"
             <!-- The name of the generated export file without the file extension -->
             filename="exported_data"
         >
             Custom text for the exporter button
             <span excelText>Custom text for the excel export entry</span>
             <span csvText>Custom text for the CSV export entry</span>
+            <span pdfText>Custom text for the PDF export entry</span>
         </igx-grid-toolbar-exporter>
     </igx-grid-toolbar-actions>
 </igx-grid-toolbar>
