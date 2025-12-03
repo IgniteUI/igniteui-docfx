@@ -16,7 +16,7 @@ Ignite UI for Angular チャートでは、トレンドラインはトレンド�
 
 トレンドラインを有効にすると、ダッシュ配列を適用することもできます。これを行うには、`TrendLineDashArray` プロパティを数値の配列に設定します。数値配列は、トレンドラインの破線の長さを表します。
 
-# Angular チャート トレンドラインの例
+## Angular チャート トレンドラインの例
 
 次のサンプルは、**QuinticFit** トレンドラインが最初に適用された、2013 年から 2017 年までの Microsoft の株価トレンドを示す [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html) を示しています。適用されるトレンドラインのタイプを変更できるドロップダウンがあり、可能なすべてのトレンドライン タイプがそのドロップダウン内に一覧表示されます。
 
@@ -29,7 +29,7 @@ Ignite UI for Angular チャートでは、トレンドラインはトレンド�
 
 <div class="divider--half"></div>
 
-# Angular チャート トレンドラインのダッシュ配列の例
+## Angular チャート トレンドラインのダッシュ配列の例
 
 次のサンプルは、`TrendLineDashArray` プロパティを介して適用された **QuarticFit** 破線トレンドラインを持つ [`IgxFinancialPriceSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialpriceseriescomponent.html) を示す [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) を示しています。
 
@@ -42,17 +42,17 @@ Ignite UI for Angular チャートでは、トレンドラインはトレンド�
 
 <div class="divider--half"></div>
 
-# Angular チャートト レンドライン レイヤー
+## Angular チャートト レンドライン レイヤー
 
 [`IgxTrendLineLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtrendlinelayercomponent.html) は、ターゲット シリーズに対して単一のトレンドライン タイプを表示するように設計されたシリーズ タイプです。これと既存のシリーズ タイプの既存のトレンド ライン機能との違いは、[`IgxTrendLineLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtrendlinelayercomponent.html) はシリーズ タイプであるため、チャートの [`IgxSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriescomponent.html) コレクションに複数のトレンド ラインを追加して、同じシリーズに複数のトレンド ラインを添付できることです。また、これまでできなかったトレンドラインを凡例に表示する ことも可能です。
 
-### トレンドライン レイヤーの使用
+## トレンドライン レイヤーの使用
 
 [`IgxTrendLineLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtrendlinelayercomponent.html) が正しく動作するには、[`targetSeries`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtrendlinelayercomponent.html#targetSeries) と [`trendLineType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtrendlinelayercomponent.html#trendLineType) を指定する必要があります。利用可能なさまざまなトレンドラインのタイプは、シリーズで利用可能なトレンドラインと同じです。
 
 凡例に [`IgxTrendLineLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtrendlinelayercomponent.html) を表示する場合は、`UseLegend` プロパティを **true** に設定します。
 
-### トレンドライン レイヤーのスタイル設定
+## トレンドライン レイヤーのスタイル設定
 
 デフォルトでは、[`IgxTrendLineLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtrendlinelayercomponent.html) は [`targetSeries`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtrendlinelayercomponent.html#targetSeries) と同じ色の破線で描画されます。これは、[`IgxTrendLineLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtrendlinelayercomponent.html) のさまざまなスタイル設定プロパティを使用して構成できます。
 

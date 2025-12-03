@@ -66,9 +66,7 @@ Ignite UI for Angular ラジアル折れ線チャートは、データ ポイン
 
 ## Angular ラジアル チャートのスタイル設定
 
-ラジアル チャートを作成したら、線の色、マーカーの種類、またはそれらのマーカーのアウトライン色の変更など、スタイルをさらにカスタマイズしたい場合があります。
-
-この例は、[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) コントロールのスタイルをカスタマイズする方法を示しています。
+ラジアル チャートを作成したら、線の色、マーカーの種類、またはそれらのマーカーのアウトライン色の変更など、スタイルをさらにカスタマイズしたい場合があります。この例は、[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) コントロールのスタイルをカスタマイズする方法を示しています。
 
 <code-view style="height: 600px" alt="Angular ラジアル エリア チャートのスタイル設定"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
