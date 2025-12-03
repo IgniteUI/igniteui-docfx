@@ -7,12 +7,12 @@ mentionedTypes: ["XamGeographicMap", "AzureMapsImagery", "GeographicTileSeries"]
 _language: ja
 ---
 
-# Angular Azure Maps からの画像の表示 <label class="badge badge--preview">PREVIEW</label>
+# Angular Azure Maps からの画像 <label class="badge badge--preview">PREVIEW</label>
 
 Angular [`IgxAzureMapsImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxazuremapsimagery.html) は、Microsoft® が提供する地理的画像マッピング サービスです。
 世界の地理的画像タイルを複数のスタイルで供します。この地理的画像サービスは、<a href="https://azure.microsoft.com/ja-jp/products/azure-maps" target="_blank">www.azure.microsoft.com</a> ウェブサイトから直接アクセスできます。Ignite UI for Angular Map コンポーネントは、[`IgxAzureMapsImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxazuremapsimagery.html) クラスを使用して、地図の背景コンテンツに Azure Maps の地理的画像を表示します。
 
-## Angular Azure Maps からの画像の表示例
+## Angular Azure Maps からの画像の表示 - 概要
 
 <img src="../images/general/AzureMapsImagery.png" alt="AzureMapsImagery" />
 
@@ -25,7 +25,7 @@ Angular [`IgxAzureMapsImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-an
 </code-view>
 
 
-## コード スニペット
+## Angular Azure Maps からの画像の表示 - コード例
 
 以下のコード スニペットは、[`IgxAzureMapsImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxazuremapsimagery.html) クラスを使用して Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html) で Azure Maps からの地理的画像タイルを表示する方法を示します。
 
@@ -50,7 +50,7 @@ tileSource.imageryStyle = AzureMapsImageryStyle.Road; //or Traffic & Weather etc
 this.map.backgroundContent = tileSource;
 ```
 
-## Angular Azure Maps の画像上にタイル シリーズ オーバーレイを表示する例
+## Azure Maps からの画像オーバーレイ - 概要
 
 [`IgxGeographicTileSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographictileseriescomponent.html) を使用する際には、**ベース マップ スタイル** (例: **Satellite**, **Road**, **DarkGrey**) の上に**オーバーレイ** (交通情報、天気、ラベル) を重ね合わせることができます。例えば **Satellite** と **TerraOverlay** を組み合わせることで、地形を視覚化できます。
 
@@ -68,7 +68,7 @@ this.map.backgroundContent = tileSource;
 
 <div class="divider--half"></div>
 
-## コード スニペット
+## Azure Maps からの画像オーバーレイ - コード例
 
 次のコード スニペットは、[`IgxAzureMapsImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxazuremapsimagery.html) クラスと [`IgxGeographicTileSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographictileseriescomponent.html) クラスを使用して、Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html) の交通情報と濃い灰色のマップを結合した背景画像の上に地理画像タイルを表示する方法を示しています。
 
