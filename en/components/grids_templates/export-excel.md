@@ -114,7 +114,7 @@ Getting the exporters into your project takes only a few lines of code. Follow t
 2. Inject whichever exporter you need and call its `export` method when the user requests a file.
 
 ```typescript
-// app.module.ts
+// component.ts
 import { IgxExcelExporterService, IgxPdfExporterService } from 'igniteui-angular/grids/core';
 // import { IgxExcelExporterService, IgxPdfExporterService } from '@infragistics/igniteui-angular/grids/core'; for licensed package
 
