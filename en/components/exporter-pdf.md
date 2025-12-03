@@ -9,7 +9,7 @@ _license: commercial
 
 <p class="highlight">
 
-The Ignite UI for Angular PDF Exporter service can export data in PDF format from raw data or from the [**IgxGrid**](grid/grid.md), [**IgxTreeGrid**](treegrid/tree-grid.md), [**IgxHierarchicalGrid**](hierarchicalgrid/hierarchical-grid.md) and [**IgxPivotGrid**](pivotGrid/pivot-grid.md) components. The exporting functionality is encapsulated in the [`IgxPdfExporterService`]({environment:angularApiUrl}/classes/igxpdfexporterservice.html) class and the data is exported in PDF format with support for multi-page documents, automatic page breaks,
+The Ignite UI for Angular PDF Exporter service provides powerful functionality to export data in PDF format from various sources, including raw data arrays and advanced grid components such as [**IgxGrid**](grid/grid.md), [**IgxTreeGrid**](treegrid/tree-grid.md), [**IgxHierarchicalGrid**](hierarchicalgrid/hierarchical-grid.md), and [**IgxPivotGrid**](pivotGrid/pivot-grid.md). The exporting functionality is encapsulated in the [`IgxPdfExporterService`]({environment:angularApiUrl}/classes/igxpdfexporterservice.html) class, which enables seamless data export to PDF format with comprehensive features including multi-page document support, automatic page breaks, and customizable formatting options.
 </p>
 <div class="divider"></div>
 
@@ -26,12 +26,12 @@ The Ignite UI for Angular PDF Exporter service can export data in PDF format fro
 
 ## Usage
 
-To start using the IgniteUI PDF Exporter first import the [`IgxPdfExporterService`]({environment:angularApiUrl}/classes/igxpdfexporterservice.html) in your component:
+To start using the Ignite UI PDF Exporter, first import the [`IgxPdfExporterService`]({environment:angularApiUrl}/classes/igxpdfexporterservice.html) into your component:
 
 ```typescript
 import { IgxPdfExporterService } from 'igniteui-angular/grid/core';
 
-// import { IgxPdfExporterService } from '@infragistics/igniteui-angular'; for licensed package
+// import { IgxPdfExporterService } from '@infragistics/igniteui-angular/grid/core'; for licensed package
 
 @Component({
   ...
@@ -39,24 +39,24 @@ import { IgxPdfExporterService } from 'igniteui-angular/grid/core';
 export class AppComponent { ... }
 ```
 
-To initiate an export process you may use the handler of a button in your component's template.
+To initiate an export process, you can use a button click handler in your component's template.
 
 ```html
 <button (click)="exportButtonHandler()">Export Data to PDF</button>
 ```
 
-You may access [`IgxPdfExporterService`]({environment:angularApiUrl}/classes/igxpdfexporterservice.html) by using the `inject` function. To export some data in PDF format you need to invoke the exporter service's [`exportData`]({environment:angularApiUrl}/classes/igxpdfexporterservice.html#exportdata) method. This method accepts as a first argument the data you want to export and the second argument is of type [`IgxPdfExporterOptions`]({environment:angularApiUrl}/classes/igxpdfexporteroptions.html) and allows you to configure the export process.
+You can access the [`IgxPdfExporterService`]({environment:angularApiUrl}/classes/igxpdfexporterservice.html) by using the `inject` function. To export data in PDF format, you need to invoke the exporter service's [`exportData`]({environment:angularApiUrl}/classes/igxpdfexporterservice.html#exportdata) method. This method accepts the data you want to export as its first argument, and an [`IgxPdfExporterOptions`]({environment:angularApiUrl}/classes/igxpdfexporteroptions.html) instance as its second argument, which allows you to configure the export process.
 
-Here is the code which will execute the export process in the component's typescript file:
+Here is the code that will execute the export process in the component's TypeScript file:
 
 ```typescript
 // component.ts
 
 ...
 import { Component, inject, signal } from '@angular/core';
-import { IgxPdfExporterService, IgxPdfExporterOptions } from 'igniteui-angular';
+import { IgxPdfExporterService, IgxPdfExporterOptions } from 'igniteui-angular/grid/core';
 
-// import { IgxPdfExporterService, IgxPdfExporterOptions } from '@infragistics/igniteui-angular'; for licensed package
+// import { IgxPdfExporterService, IgxPdfExporterOptions } from '@infragistics/igniteui-angular/grid/core'; for licensed package
 ...
 
 public localData = signal([
@@ -77,9 +77,9 @@ If all went well, you should see an export button. When pressed, it will trigger
 
 ## Customizing the Exported Content
 
-In the above examples the PDF Exporter service was exporting all available data. There are situations in which you may want to skip exporting a row or even an entire column. To achieve this you may hook to the [`columnExporting`]({environment:angularApiUrl}/classes/igxpdfexporterservice.html#columnexporting) and/or [`rowExporting`]({environment:angularApiUrl}/classes/igxpdfexporterservice.html#rowexporting) events which are fired respectively for each column and/or each row and cancel the respective event by setting the event argument object's [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) property to `true`.
+In the above examples, the PDF Exporter service exports all available data. However, there are situations where you may want to skip exporting a row or an entire column. To achieve this, you can subscribe to the [`columnExporting`]({environment:angularApiUrl}/classes/igxpdfexporterservice.html#columnexporting) and/or [`rowExporting`]({environment:angularApiUrl}/classes/igxpdfexporterservice.html#rowexporting) events, which are fired for each column and/or each row respectively. You can then cancel the export by setting the event argument object's [`cancel`]({environment:angularApiUrl}/interfaces/irowexportingeventargs.html#cancel) property to `true`.
 
-The following example will exclude a column from the export if its header is "Age" and if its index is 1:
+The following example excludes a column from the export if its header is "Age" and its index is 1:
 
 ```typescript
 // component.ts
@@ -98,10 +98,10 @@ The [`IgxPdfExporterOptions`]({environment:angularApiUrl}/classes/igxpdfexporter
 
 - **pageOrientation**: Specifies the page orientation (`portrait` or `landscape`). Default is `landscape`.
 - **pageSize**: Specifies the page size (`a3`, `a4`, `a5`, `letter`, `legal`, etc.). Default is `a4`.
-- **showTableBorders**: Specifies whether to show table borders. Default is `true`.
-- **fontSize**: Specifies the font size for the table content. Default is `10`.
+- **showTableBorders**: Determines whether to display table borders. Default is `true`.
+- **fontSize**: Sets the font size for the table content. Default is `10`.
 
-Here is an example of how to configure these options:
+The following example demonstrates how to configure these options:
 
 ```typescript
 // component.ts
