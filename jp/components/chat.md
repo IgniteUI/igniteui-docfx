@@ -85,8 +85,8 @@ Chat コンポーネントは、その状態と構成を制御できるいくつ
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `messages`        | チャットに表示されるメッセージ (`IgcChatMessage[]`) の配列。表示するメッセージを制御するためにバインド可能。                                                  |
 | `draftMessage`    | 未送信メッセージ。`text` とオプションの `attachments` を含むオブジェクト。メッセージ下書きの保存や復元に便利。            |
-| `options`         | 現在のユーザー ID、入力プレースホルダー、許可されるファイル タイプ、クイック リプライサジェスト、入力遅延、カスタム レンダラーなどのチャット設定 ([`IgxChatOptions`]({environment:angularApiUrl}/classes/igxchatoptions.html))。  |
-| `templates` | メッセージ コンテンツ、入力、添付ファイル、その他のチャット UI 部分に対して、カスタム Angular テンプレート([`IgxChatTemplates`]({environment:angularApiUrl}/classes/igxchattemplates.html))。                                    |
+| `options`         | 現在のユーザー ID、入力プレースホルダー、許可されるファイル タイプ、クイック リプライサジェスト、入力遅延、カスタム レンダラーなどのチャット設定 ([`IgxChatOptions`]({environment:angularApiUrl}/types/igxchatoptions.html))。  |
+| `templates` | メッセージ コンテンツ、入力、添付ファイル、その他のチャット UI 部分に対して、カスタム Angular テンプレート([`IgxChatTemplates`]({environment:angularApiUrl}/types/igxchattemplates.html))。                                    |
 
 上記のプロパティを使用することで、Chat の UI をアプリケーションの状態やバックエンドと簡単に同期させることができます。
 
@@ -220,7 +220,7 @@ Chat コンポーネントには、デフォルトのアクション (アップ�
 この方法により、チャット入力バーの柔軟性が完全に向上し、入力領域を最初から再構築することなく、アクションを追加、削除、または並べ替えることができます。
 
 ### Markdown のサポート
-Chat コンポーネントには、[`fromMarkdown`]({environment:angularApiUrl}/classes/igxchatcomponent.html) パイプによる Markdown コンテンツの組み込みサポートがあり、メッセージ テキストを安全な HTML に変換します。これにより、書式付きテキスト、リンク、リスト、シンタックス ハイライト付きコードブロックを表示しつつ、安全に HTML をサニタイズできます。
+Chat コンポーネントには、`fromMarkdown` パイプによる Markdown コンテンツの組み込みサポートがあり、メッセージ テキストを安全な HTML に変換します。これにより、書式付きテキスト、リンク、リスト、シンタックス ハイライト付きコードブロックを表示しつつ、安全に HTML をサニタイズできます。
 
 Markdown のレンダリングはパフォーマンス上の理由から非同期で実行されるため、`fromMarkdown` パイプは Angular の `async` パイプと組み合わせて使用する必要があります。
 
@@ -407,8 +407,8 @@ Chat コンポーネントのオプションには、高度なスタイル設定
 ## API リファレンス
 
 - [`IgxChatComponent`]({environment:angularApiUrl}/classes/igxchatcomponent.html)
-- [`IgxChatOptions`]({environment:angularApiUrl}/classes/igxchatoptions.html)
-- [`IgxChatTemplates`]({environment:angularApiUrl}/classes/igxchattemplates.html)
+- [`IgxChatOptions`]({environment:angularApiUrl}/types/igxchatoptions.html)
+- [`IgxChatTemplates`]({environment:angularApiUrl}/types/igxchattemplates.html)
 - [`IgxChatMessageContextDirective`]({environment:angularApiUrl}/classes/igxchatmessagecontextdirective.html)
 - [`IgxChatInputContextDirective`]({environment:angularApiUrl}/classes/igxchatinputcontextdirective.html)
 - [`IgxChatAttachmentContextDirective`]({environment:angularApiUrl}/classes/igxchatattachmentcontextdirective.html)
