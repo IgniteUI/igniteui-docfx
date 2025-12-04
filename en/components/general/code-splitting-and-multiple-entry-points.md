@@ -31,7 +31,7 @@ With the new multiple entry points architecture, each component or group of rela
 
 ### Core Entry Points
 
-- `igniteui-angular/core` - Core utilities, services, and base types (e.g., `IgxOverlayService`, `DisplayDensity`)
+- `igniteui-angular/core` - Core utilities, services, and base types (e.g., `IgxOverlayService`)
 - `igniteui-angular/directives` - Common directives
 
 ### Component Entry Points
@@ -118,7 +118,6 @@ import {
   IgxTreeGridComponent,
   IgxInputDirective,
   IgxBottomNavComponent,
-  DisplayDensity, 
   Direction, 
   GridBaseAPIService,
   IgxOverlayService,
@@ -129,7 +128,7 @@ import {
 #### After (v21.0.0)
 
 ```typescript
-import { DisplayDensity, IgxOverlayService } from 'igniteui-angular/core';
+import { IgxOverlayService } from 'igniteui-angular/core';
 import { IFilteringExpression, GridBaseAPIService } from 'igniteui-angular/grids/core';
 import { IgxGridComponent } from 'igniteui-angular/grids/grid';
 import { IgxTreeGridComponent } from 'igniteui-angular/grids/tree-grid';
