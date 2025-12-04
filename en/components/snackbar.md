@@ -55,7 +55,7 @@ Alternatively, as of `16.0.0` you can import the `IgxSnackbarComponent` as a sta
 // home.component.ts
 
 import { IgxSnackbarComponent } from 'igniteui-angular/snackbar';
-import { IgxButtonDirective } from 'igniteui-angular/button';
+import { IgxButtonDirective } from 'igniteui-angular/directives';
 // import { IgxSnackbarComponent, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

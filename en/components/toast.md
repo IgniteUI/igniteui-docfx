@@ -53,7 +53,7 @@ Alternatively, as of `16.0.0` you can import the `IgxToastComponent` as a standa
 // home.component.ts
 
 import { IgxToastComponent } from 'igniteui-angular/toast';
-import { IgxButtonDirective } from 'igniteui-angular/button';
+import { IgxButtonDirective } from 'igniteui-angular/directives';
 // import { IgxToastComponent, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

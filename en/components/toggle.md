@@ -50,8 +50,8 @@ Alternatively, as of `16.0.0` you can import the `IgxToggleDirective` as a stand
 ```typescript
 // home.component.ts
 
-import { IgxToggleDirective } from 'igniteui-angular/directives';
-import { IgxButtonDirective } from 'igniteui-angular/button';
+import { IgxToggleDirective, IgxButtonDirective } from 'igniteui-angular/directives';
+
 // import { IgxToggleDirective, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

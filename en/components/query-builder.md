@@ -59,7 +59,7 @@ Alternatively, as of `16.0.0` you can import the `IgxQueryBuilderComponent` as a
 // home.component.ts
 
 import { IGX_QUERY_BUILDER_DIRECTIVES } from 'igniteui-angular/query-builder';
-import { FilteringExpressionsTree, FieldType } from 'igniteui-angular/grids/core';
+import { FilteringExpressionsTree, FieldType } from 'igniteui-angular/core';
 // import { IGX_QUERY_BUILDER_DIRECTIVES, FilteringExpressionsTree, FieldType } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

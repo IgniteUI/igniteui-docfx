@@ -55,7 +55,7 @@ Alternatively, as of `16.0.0` you can import the `IgxDropDownComponent` as a sta
 import { NgFor } from '@angular/common';
 import { IGX_DROP_DOWN_DIRECTIVES } from 'igniteui-angular/drop-down';
 import { IgxToggleActionDirective } from 'igniteui-angular/directives';
-import { IgxButtonDirective } from 'igniteui-angular/button';
+import { IgxButtonDirective } from 'igniteui-angular/directives';
 // import { IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

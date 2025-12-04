@@ -238,7 +238,7 @@ The default time picker mode is editable dropdown mode. To change the time picke
 ```typescript
 // timePickerDropdown.component.ts
 
-import { PickerInteractionMode } from 'igniteui-angular/time-picker';
+import { PickerInteractionMode } from 'igniteui-angular/core';
 // import { PickerInteractionMode } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public mode = PickerInteractionMode.Dialog;

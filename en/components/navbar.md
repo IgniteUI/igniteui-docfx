@@ -97,7 +97,7 @@ We can make our app a little more functional by adding options for searching, fa
 
 ...
 import { IgxNavbarModule } from 'igniteui-angular/navbar';
-import { IgxIconButtonDirective } from 'igniteui-angular/button';
+import { IgxIconButtonDirective } from 'igniteui-angular/directives';
 import { IgxIconModule } from 'igniteui-angular/icon';
 // import { IgxNavbarModule, IgxButtonModule, IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
 

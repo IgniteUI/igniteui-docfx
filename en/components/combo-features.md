@@ -204,7 +204,7 @@ You can set whether groups should be sorted in ascending or descending order. By
 
 ```typescript
 ...
-import { SortingDirection } from 'igniteui-angular/grids/core'
+import { SortingDirection } from 'igniteui-angular/core'
 // import { SortingDirection } from '@infragistics/igniteui-angular'; for licensed package
 
 export class ComboDemo {

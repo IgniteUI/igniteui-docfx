@@ -51,7 +51,7 @@ Alternatively, as of `16.0.0` you can import the `IgxDialogComponent` as a stand
 // home.component.ts
 
 import { IGX_DIALOG_DIRECTIVES } from 'igniteui-angular/dialog';
-import { IgxButtonDirective } from 'igniteui-angular/button';
+import { IgxButtonDirective } from 'igniteui-angular/directives';
 import { IgxRippleDirective } from 'igniteui-angular/directives';
 // import { IGX_DIALOG_DIRECTIVES, IgxButtonDirective, IgxRippleDirective } from '@infragistics/igniteui-angular'; for licensed package
 

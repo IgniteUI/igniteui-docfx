@@ -34,7 +34,7 @@ The next step is to import the `IgxIconButtonDirective` as a standalone dependen
 // home.component.ts
 
 ...
-import { IgxIconButtonDirective } from 'igniteui-angular/button';
+import { IgxIconButtonDirective } from 'igniteui-angular/directives';
 // import { IgxIconButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
