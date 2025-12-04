@@ -26,6 +26,9 @@
   href: general/update-guide.md
   new: false
   updated: true
+- name: マルチ エントリ ポイント
+  href: general/code-splitting-and-multiple-entry-points.md
+  new: true
 - name: サーバー サイド レンダリング (SSR)
   href: general/ssr-rendering.md
   new: false
@@ -1299,6 +1302,7 @@
 - name: Color Editor
   href: inputs/color-editor.md
   preview: true
+  premium: true
 - name: Text Highlight
   href: texthighlight.md
   new: false
@@ -1309,6 +1313,9 @@
 - name: インタラクション
   header: true
   sortable: true
+- name: Chat
+  href: chat.md
+  new: true
 - name: Dialog Window
   href: dialog.md
 - name: Slider
