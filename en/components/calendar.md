@@ -46,7 +46,7 @@ The next step is to import the `IgxCalendarModule` in your **app.module.ts** fil
 ...
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxCalendarModule } from 'igniteui-angular';
+import { IgxCalendarModule } from 'igniteui-angular/calendar';
 // import { IgxCalendarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -64,7 +64,7 @@ Alternatively, as of `16.0.0` you can import the `IgxCalendarComponent` as a sta
 
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IGX_CALENDAR_DIRECTIVES } from 'igniteui-angular';
+import { IGX_CALENDAR_DIRECTIVES } from 'igniteui-angular/calendar';
 // import { IGX_CALENDAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

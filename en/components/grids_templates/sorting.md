@@ -108,7 +108,7 @@ You can sort any column or a combination of columns through the @@igComponent AP
 @@if (igxName === 'IgxTreeGrid') {
 
 ```typescript
-import { SortingDirection } from 'igniteui-angular';
+import { SortingDirection } from 'igniteui-angular/grids/core';
 // import { SortingDirection } from '@infragistics/igniteui-angular'; for licensed package
 
 // Perform a case insensitive ascending sort on the ProductName column.
@@ -125,7 +125,7 @@ this.@@igObjectRef.sort([
 @@if (igxName !== 'IgxTreeGrid') {
 
 ```typescript
-import { SortingDirection } from 'igniteui-angular';
+import { SortingDirection } from 'igniteui-angular/grids/core';
 // import { SortingDirection } from '@infragistics/igniteui-angular'; for licensed package
 
 // Perform a case insensitive ascending sort on the ProductName column.

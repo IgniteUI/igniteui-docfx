@@ -40,7 +40,7 @@ The first step is to import the `IgxNavigationDrawerModule` inside our **app.mod
 ...
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxNavigationDrawerModule } from 'igniteui-angular';
+import { IgxNavigationDrawerModule } from 'igniteui-angular/navigation-drawer';
 // import { IgxNavigationDrawerModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -59,7 +59,9 @@ Alternatively, as of `16.0.0` you can import the `IgxNavigationDrawerComponent` 
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgFor } from '@angular/common';
-import { IGX_NAVIGATION_DRAWER_DIRECTIVES, IgxRippleDirective, IgxIconComponent } from 'igniteui-angular';
+import { IGX_NAVIGATION_DRAWER_DIRECTIVES } from 'igniteui-angular/navigation-drawer';
+import { IgxRippleDirective } from 'igniteui-angular/directives';
+import { IgxIconComponent } from 'igniteui-angular/icon';
 // import { IGX_NAVIGATION_DRAWER_DIRECTIVES, IgxRippleDirective, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -196,7 +198,7 @@ Also, if you want the drawer to close when you select an item from it, you can u
 ```ts
 /* app.component.ts */
 import { Component, ViewChild } from '@angular/core';
-import { IgxNavigationDrawerComponent } from 'igniteui-angular';
+import { IgxNavigationDrawerComponent } from 'igniteui-angular/navigation-drawer';
 // import { IgxNavigationDrawerComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({...})

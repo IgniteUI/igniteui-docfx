@@ -41,7 +41,7 @@ The next step is to import the `IgxBottomNavModule` in your **app.module.ts** fi
 // app.module.ts
 
 ...
-import { IgxBottomNavModule } from 'igniteui-angular';
+import { IgxBottomNavModule } from 'igniteui-angular/bottom-nav';
 // import { IgxBottomNavModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -57,7 +57,8 @@ Alternatively, as of `16.0.0` you can import the `IgxBottomNavComponent` as a st
 ```typescript
 // home.component.ts
 
-import { IGX_BOTTOM_NAV_DIRECTIVES, IgxIconComponent } from 'igniteui-angular';
+import { IGX_BOTTOM_NAV_DIRECTIVES } from 'igniteui-angular/bottom-nav';
+import { IgxIconComponent } from 'igniteui-angular/icon';
 // import { IGX_BOTTOM_NAV_DIRECTIVES, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

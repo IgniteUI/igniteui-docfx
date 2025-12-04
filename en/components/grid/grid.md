@@ -87,7 +87,7 @@ The next step is to import the `IgxGridModule` in your **app.module.ts** file.
 ```typescript
 // app.module.ts
 
-import { IgxGridModule } from 'igniteui-angular';
+import { IgxGridModule } from 'igniteui-angular/grids/grid';
 // import { IgxGridModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -105,7 +105,7 @@ Alternatively, as of `16.0.0` you can import the `IgxGridComponent` as a standal
 ```typescript
 // home.component.ts
 
-import { IGX_GRID_DIRECTIVES } from 'igniteui-angular';
+import { IGX_GRID_DIRECTIVES } from 'igniteui-angular/grids/grid';
 // import { IGX_GRID_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

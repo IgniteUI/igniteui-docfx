@@ -33,7 +33,7 @@ Once installed, you can import the component in your project:
 
 ```ts
 import { Component } from '@angular/core';
-import { IgxChatComponent } from "igniteui-angular";
+import { IgxChatComponent } from "igniteui-angular/chat";
 
 @Component({
   ...
@@ -45,7 +45,7 @@ export class AppComponent { ... }
 Define the chat options and bind them in your template:
 
 ```ts
-import { IgxChatComponent, IgxChatOptions  } from "igniteui-angular";
+import { IgxChatComponent, IgxChatOptions } from "igniteui-angular/chat";
 
 public options: IgxChatOptions  = {
   currentUserId: 'me',

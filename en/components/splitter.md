@@ -34,7 +34,7 @@ The next step is to import the `IgxSplitterModule` in your **app.module.ts** fil
 ```typescript
 // app.module.ts
 ...
-import { IgxSplitterModule } from 'igniteui-angular';
+import { IgxSplitterModule } from 'igniteui-angular/splitter';
 // import { IgxSplitterModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -50,7 +50,7 @@ Alternatively, as of `16.0.0` you can import the `IgxSplitterComponent` as a sta
 ```typescript
 // home.component.ts
 
-import { IGX_SPLITTER_DIRECTIVES } from 'igniteui-angular';
+import { IGX_SPLITTER_DIRECTIVES } from 'igniteui-angular/splitter';
 // import { IGX_SPLITTER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

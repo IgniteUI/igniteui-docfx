@@ -38,7 +38,7 @@ As the [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxda
 ```typescript
 // app.module.ts
 
-import { IgxDateRangePickerModule } from 'igniteui-angular';
+import { IgxDateRangePickerModule } from 'igniteui-angular/date-picker';
 // import { IgxDateRangePickerModule } from '@infragistics/igniteui-angular'; for licensed package
 
 import { HammerModule } from '@angular/platform-browser';
@@ -59,7 +59,7 @@ Alternatively, as of `16.0.0` you can import the [`IgxDateRangePickerComponent`]
 
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IGX_DATE_RANGE_PICKER_DIRECTIVES } from 'igniteui-angular';
+import { IGX_DATE_RANGE_PICKER_DIRECTIVES } from 'igniteui-angular/date-picker';
 // import { IGX_DATE_RANGE_PICKER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

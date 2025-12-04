@@ -36,7 +36,7 @@ Note that the `IgxInputGroupComponent` also depends on the Angular **FormsModule
 // app.module.ts
 
 import { FormsModule } from '@angular/forms';
-import { IgxInputGroupModule } from 'igniteui-angular';
+import { IgxInputGroupModule } from 'igniteui-angular/input-group';
 // import { IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 
@@ -54,7 +54,8 @@ Alternatively, as of `16.0.0` you can import the `IgxInputGroupComponent` as a s
 // home.component.ts
 
 import { FormsModule } from '@angular/forms';
-import { IGX_INPUT_GROUP_DIRECTIVES, IgxIconComponent } from 'igniteui-angular';
+import { IGX_INPUT_GROUP_DIRECTIVES } from 'igniteui-angular/input-group';
+import { IgxIconComponent } from 'igniteui-angular/icon';
 // import { IGX_INPUT_GROUP_DIRECTIVES, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

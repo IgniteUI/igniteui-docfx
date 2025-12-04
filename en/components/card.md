@@ -39,7 +39,7 @@ The next step is to import the `IgxCardModule` inside your **app.module.ts** fil
 ```typescript
 // app.module.ts
 ...
-import { IgxCardModule } from 'igniteui-angular';
+import { IgxCardModule } from 'igniteui-angular/card';
 // import { IgxCardModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -55,7 +55,7 @@ Alternatively, as of `16.0.0` you can import the `IgxCardComponent` as a standal
 ```typescript
 // home.component.ts
 
-import { IGX_CARD_DIRECTIVES } from 'igniteui-angular';
+import { IGX_CARD_DIRECTIVES } from 'igniteui-angular/card';
 // import { IGX_CARD_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
