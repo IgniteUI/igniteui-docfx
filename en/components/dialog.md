@@ -215,6 +215,7 @@ export class HomeComponent {
 
 ```typescript
 import { useAnimation } from '@angular/animations';
+import { slideInTop, slideOutBottom } from 'igniteui-angular/animations';
 import { PositionSettings, HorizontalAlignment, VerticalAlignment } from 'igniteui-angular';
 // import { PositionSettings, HorizontalAlignment, VerticalAlignment } from '@infragistics/igniteui-angular'; for licensed package
 
