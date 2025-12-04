@@ -49,6 +49,7 @@ Each component has its own entry point following the pattern `igniteui-angular/<
 - `igniteui-angular/calendar`
 - `igniteui-angular/card`
 - `igniteui-angular/carousel`
+- `igniteui-angular/chat`
 - `igniteui-angular/checkbox`
 - `igniteui-angular/chips`
 - `igniteui-angular/combo`
