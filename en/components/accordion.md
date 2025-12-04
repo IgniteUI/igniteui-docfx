@@ -42,7 +42,7 @@ The next step is to import the `IgxAccordionModule` in your **app.module.ts** fi
 // app.module.ts
 
 ...
-import { IgxAccordionModule } from 'igniteui-angular';
+import { IgxAccordionModule } from 'igniteui-angular/accordion';
 // import { IgxAccordionModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -59,7 +59,7 @@ Alternatively, as of `16.0.0` you can import the `IgxAccordionComponent` as a st
 // home.component.ts
 
 ...
-import { IGX_ACCORDION_DIRECTIVES } from 'igniteui-angular';
+import { IGX_ACCORDION_DIRECTIVES } from 'igniteui-angular/accordion';
 // import { IGX_ACCORDION_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -134,9 +134,8 @@ Angular Accordion supports animations for both expanding and collapsing actions 
 With regards to animation, you have two options. First, you could set the `animationSettings` property on the accordion component:
 
 ```typescript
-import { useAnimation } from '@angular/animations';
-import { slideInLeft, slideOutRight } from 'igniteui-angular';
-// import { slideInLeft, slideOutRight } from '@infragistics/igniteui-angular'; for licensed package
+import { useAnimation, slideInLeft, slideOutRight } from '@angular/animations';
+// import { useAnimation, slideInLeft, slideOutRight } from '@infragistics/igniteui-angular/animations'; for licensed package
 
 @Component({
     ...

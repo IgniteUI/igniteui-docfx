@@ -46,7 +46,7 @@ For a complete introduction to the Ignite UI for Angular, read the [_getting sta
 The next step is to import the `IgxComboModule` in your **app.module.ts** file.
 
 ```typescript
-import { IgxComboModule } from 'igniteui-angular';
+import { IgxComboModule } from 'igniteui-angular/combo';
 // import { IgxComboModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -64,7 +64,7 @@ Alternatively, as of `16.0.0` you can import the `IgxComboComponent` as a standa
 ```typescript
 // home.component.ts
 
-import { IGX_COMBO_DIRECTIVES } from 'igniteui-angular';
+import { IGX_COMBO_DIRECTIVES } from 'igniteui-angular/combo';
 // import { IGX_COMBO_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

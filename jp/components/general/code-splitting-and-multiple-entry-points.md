@@ -32,7 +32,7 @@ _language: ja
 
 ### コア エントリ ポイント
 
-- `igniteui-angular/core` - コア ユーティリティ、サービス、および基本タイプ (例: `IgxOverlayService`、`DisplayDensity`)
+- `igniteui-angular/core` - コア ユーティリティ、サービス、および基本タイプ (例: `IgxOverlayService`)
 - `igniteui-angular/directives` - 共通ディレクティブ
 
 ### コンポーネント エントリ ポイント
@@ -119,7 +119,6 @@ import {
   IgxTreeGridComponent,
   IgxInputDirective,
   IgxBottomNavComponent,
-  DisplayDensity, 
   Direction, 
   GridBaseAPIService,
   IgxOverlayService,
@@ -130,7 +129,7 @@ import {
 #### 以降 (バージョン 21.0.0)
 
 ```typescript
-import { DisplayDensity, IgxOverlayService } from 'igniteui-angular/core';
+import { IgxOverlayService } from 'igniteui-angular/core';
 import { IFilteringExpression, GridBaseAPIService } from 'igniteui-angular/grids/core';
 import { IgxGridComponent } from 'igniteui-angular/grids/grid';
 import { IgxTreeGridComponent } from 'igniteui-angular/grids/tree-grid';

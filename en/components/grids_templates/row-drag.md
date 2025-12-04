@@ -93,7 +93,7 @@ We can define where we want our rows to be dropped using the [`igxDrop` directiv
 First we need to import the `IgxDragDropModule` in our app module:
 
 ```typescript
-import { ..., IgxDragDropModule } from 'igniteui-angular';
+import { ..., IgxDragDropModule } from 'igniteui-angular/directives';
 // import { ..., IgxDragDropModule } from '@infragistics/igniteui-angular'; for licensed package
 ...
 @NgModule({

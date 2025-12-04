@@ -34,7 +34,7 @@ The next step is to import the `IgxProgressBarModule` in the **app.module.ts** f
 // app.module.ts
 
 ...
-import { IgxProgressBarModule } from 'igniteui-angular';
+import { IgxProgressBarModule } from 'igniteui-angular/progressbar';
 // import { IgxProgressBarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -50,7 +50,7 @@ Alternatively, as of `16.0.0` you can import the `IgxLinearProgressBarComponent`
 ```typescript
 // home.component.ts
 
-import { IGX_LINEAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular';
+import { IGX_LINEAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular/progressbar';
 // import { IGX_LINEAR_PROGRESS_BAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -166,7 +166,7 @@ Let's update our previous sample by using the aforementioned text properties. We
 And do not forget to import the [`IgxTextAlign`]({environment:angularApiUrl}/enums/igxtextalign.html) enumerator in your component if you're using the `textAlign` property.
 
 ```typescript
-import { ..., IgxTextAlign } from 'igniteui-angular';
+import { ..., IgxTextAlign } from 'igniteui-angular/progressbar';
 // import { ..., IgxTextAlign } from '@infragistics/igniteui-angular'; for licensed package
 ...
 

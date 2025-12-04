@@ -246,7 +246,7 @@ We will also define the data of the grid and the title of our application that a
 // app.component.ts
 
 import { Component } from '@angular/core';
-import { IgxGridComponent, IgxColumnComponent } from 'igniteui-angular';
+import { IgxGridComponent, IgxColumnComponent } from 'igniteui-angular/grids/grid';
 
 @Component({
   selector: 'app-root',

@@ -1,7 +1,8 @@
 ---
 title: Angular Chat | Ignite UI | Infragistics
 _description: With the Ignite UI for Angular Chat component, you can build interactive messaging experiences with support for messages, attachments, suggestions, typing indicators, and custom templates.  
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Chat components, Angular Chat controls  
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Chat components, Angular Chat controls
+_license: MIT
 mentionedTypes: ["Chat"]  
 ---
 
@@ -32,7 +33,7 @@ Once installed, you can import the component in your project:
 
 ```ts
 import { Component } from '@angular/core';
-import { IgxChatComponent } from "igniteui-angular";
+import { IgxChatComponent } from "igniteui-angular/chat";
 
 @Component({
   ...
@@ -44,7 +45,7 @@ export class AppComponent { ... }
 Define the chat options and bind them in your template:
 
 ```ts
-import { IgxChatComponent, IgxChatOptions  } from "igniteui-angular";
+import { IgxChatComponent, IgxChatOptions } from "igniteui-angular/chat";
 
 public options: IgxChatOptions  = {
   currentUserId: 'me',

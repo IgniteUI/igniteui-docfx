@@ -36,7 +36,7 @@ The next step is to import the `IgxToastModule` in your **app.module.ts** file.
 // app.module.ts
 
 ...
-import { IgxToastModule } from 'igniteui-angular';
+import { IgxToastModule } from 'igniteui-angular/toast';
 // import { IgxToastModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -52,7 +52,8 @@ Alternatively, as of `16.0.0` you can import the `IgxToastComponent` as a standa
 ```typescript
 // home.component.ts
 
-import { IgxToastComponent, IgxButtonDirective } from 'igniteui-angular';
+import { IgxToastComponent } from 'igniteui-angular/toast';
+import { IgxButtonDirective } from 'igniteui-angular/directives';
 // import { IgxToastComponent, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -165,7 +166,7 @@ Use [`positionSettings`]({environment:angularApiUrl}/classes/igxtoastcomponent.h
 
 ```typescript
 // sample.component.ts
-import { VerticalAlignment } from 'igniteui-angular';
+import { VerticalAlignment } from 'igniteui-angular/core';
 // import { VerticalAlignment } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public open(toast) {

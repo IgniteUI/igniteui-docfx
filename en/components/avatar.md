@@ -35,7 +35,7 @@ The next step is to import the `IgxAvatarModule` in your **app.module.ts** file.
 // app.module.ts
 
 ...
-import { IgxAvatarModule } from 'igniteui-angular';
+import { IgxAvatarModule } from 'igniteui-angular/avatar';
 // import { IgxAvatarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -52,7 +52,7 @@ Alternatively, as of `16.0.0` you can import the `IgxAvatarComponent` as a stand
 // home.component.ts
 
 ...
-import { IgxAvatarComponent } from 'igniteui-angular';
+import { IgxAvatarComponent } from 'igniteui-angular/avatar';
 // import { IgxAvatarComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

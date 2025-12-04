@@ -33,7 +33,7 @@ The next step is to import the `IgxTextHighlightModule` in your **app.module.ts*
 ```typescript
 // app.module.ts
 ...
-import { IgxTextHighlightModule } from 'igniteui-angular';
+import { IgxTextHighlightModule } from 'igniteui-angular/directives';
 // import { IgxTextHighlightModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -49,7 +49,7 @@ Alternatively, as of `16.0.0` you can import the `IgxTextHighlightDirective` as 
 ```typescript
 // home.component.ts
 
-import { IgxTextHighlightDirective, IgxTextHighlightService } from 'igniteui-angular';
+import { IgxTextHighlightDirective, IgxTextHighlightService } from 'igniteui-angular/directives';
 // import { IgxTextHighlightDirective, IgxTextHighlightService } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

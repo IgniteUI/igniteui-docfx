@@ -42,7 +42,7 @@ The next step is to import the `IgxQueryBuilderModule` in the **app.module.ts** 
 ```typescript
 // app.module.ts
 
-import { IgxQueryBuilderModule } from 'igniteui-angular';
+import { IgxQueryBuilderModule } from 'igniteui-angular/query-builder';
 // import { IgxQueryBuilderModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -58,7 +58,8 @@ Alternatively, as of `16.0.0` you can import the `IgxQueryBuilderComponent` as a
 ```typescript
 // home.component.ts
 
-import { IGX_QUERY_BUILDER_DIRECTIVES, FilteringExpressionsTree, FieldType } from 'igniteui-angular';
+import { IGX_QUERY_BUILDER_DIRECTIVES } from 'igniteui-angular/query-builder';
+import { FilteringExpressionsTree, FieldType } from 'igniteui-angular/core';
 // import { IGX_QUERY_BUILDER_DIRECTIVES, FilteringExpressionsTree, FieldType } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

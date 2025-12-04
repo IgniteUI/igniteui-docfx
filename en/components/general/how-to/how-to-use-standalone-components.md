@@ -13,7 +13,7 @@ Angular 14 introduced the concept of [standalone components](https://angular.io/
 Starting with Angular 16 and Ignite UI for Angular 16.0 you can now simply add the imports that your `standalone` component needs in the `imports` property. In the following example `IGX_GRID_DIRECTIVES` can be used to import all grid related components and directives.
 
 ```typescript
-import { IGX_GRID_DIRECTIVES } from 'igniteui-angular';
+import { IGX_GRID_DIRECTIVES } from 'igniteui-angular/grids/grid';
 
 @Component({
     selector: 'app-grid-sample',
@@ -26,7 +26,7 @@ import { IGX_GRID_DIRECTIVES } from 'igniteui-angular';
 But you can also import all components used by your `standalone` component individually. Example with the `IgxGridComponent` and `IgxColumnComponent` when only these two are used by another component is as follows.
 
 ```typescript
-import { IgxGridComponent, IgxColumnComponent } from 'igniteui-angular';
+import { IgxGridComponent, IgxColumnComponent } from 'igniteui-angular/grids/grid';
 
 @Component({
     selector: 'app-grid-sample',
@@ -40,7 +40,7 @@ In addition, as all existing modules are preserved but now only import and expor
 
 ```typescript
 // `NgModule` import of the `IgxGridModule` module, which is equivalent to IGX_GRID_DIRECTIVES in terms of exported components and directives.
-import { IgxGridModule } from 'igniteui-angular';
+import { IgxGridModule } from 'igniteui-angular/grids/grid';
 
 @Component({
     selector: 'app-grid-sample',

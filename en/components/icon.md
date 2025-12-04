@@ -33,7 +33,7 @@ The next step is to import the `IgxIconModule` in your **app.module.ts** file.
 ```typescript
 // app.module.ts
 
-import { IgxIconModule } from 'igniteui-angular';
+import { IgxIconModule } from 'igniteui-angular/icon';
 // import { IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -51,7 +51,7 @@ Alternatively, as of `16.0.0` you can import the `IgxIconComponent` as a standal
 ```typescript
 // home.component.ts
 
-import { IgxIconComponent } from 'igniteui-angular';
+import { IgxIconComponent } from 'igniteui-angular/icon';
 // import { IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

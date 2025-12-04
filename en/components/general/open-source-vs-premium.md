@@ -78,6 +78,7 @@ Start with Grid Lite for essential needs and seamlessly upgrade to the full-feat
 | Chart Step Line                   | ❌          | ✅      |
 | Chart Treemap                     | ❌          | ✅      |
 | Chart Waterfall                   | ❌          | ✅      |
+| Chat                              | ✅          | ✅      |
 | Checkbox                          | ✅          | ✅      |
 | Chip                              | ✅          | ✅      |
 | Chip Area                         | ✅          | ✅      |

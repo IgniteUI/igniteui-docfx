@@ -33,7 +33,7 @@ The next step is to import the **IgxChipsModule** in the **app.module.ts** file:
 ```typescript
 // app.module.ts
 
-import { IgxChipsModule } from 'igniteui-angular';
+import { IgxChipsModule } from 'igniteui-angular/chips';
 // import { IgxChipsModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -49,7 +49,7 @@ Alternatively, as of `16.0.0` you can import the `IgxChipComponent` as a standal
 ```typescript
 // home.component.ts
 
-import { IGX_CHIPS_DIRECTIVES } from 'igniteui-angular';
+import { IGX_CHIPS_DIRECTIVES } from 'igniteui-angular/chips';
 import { NgFor } from '@angular/common';
 // import { IGX_CHIPS_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
@@ -151,7 +151,7 @@ Dragging can be enabled by setting the [`draggable`]({environment:angularApiUrl}
 Then, we need to add the `chipList` and the function, that handles the [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) event:
 
 ```ts
-import { IBaseChipEventArgs } from 'igniteui-angular';
+import { IBaseChipEventArgs } from 'igniteui-angular/chips';
 // import { IBaseChipEventArgs } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public chipList = [
@@ -279,7 +279,7 @@ To create the demo sample below, we will use the features above:
 Then, we need to add the `chipList` and the function, that handles the [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) event:
 
 ```ts
-import { IBaseChipEventArgs } from 'igniteui-angular';
+import { IBaseChipEventArgs } from 'igniteui-angular/chips';
 // import { IBaseChipEventArgs } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public chipList = [
@@ -428,7 +428,7 @@ Resize the avatar to fit the chip:
 Add the `chipList` and the functions that handle the events:
 
 ```ts
-import { IBaseChipEventArgs, IChipsAreaReorderEventArgs } from 'igniteui-angular';
+import { IBaseChipEventArgs, IChipsAreaReorderEventArgs } from 'igniteui-angular/chips';
 // import { IBaseChipEventArgs, IChipsAreaReorderEventArgs } from '@infragistics/igniteui-angular'; for licensed package
 
 ...
