@@ -16,10 +16,11 @@ _language: ja
 Angular Tree コンポーネントを使用すると、ユーザーは親子関係を持つツリービュー構造で階層データを表現したり、対応するデータ モデルなしで静的なツリービュー構造を定義したりできます。その主な目的は、エンドユーザーが階層データ構造内を視覚化してナビゲートできるようにすることです。Ignite UI for Angular Tree コンポーネントは、ロード オン デマンド機能、項目のアクティブ化、組み込みのチェックボックス、組み込みのキーボード ナビゲーションなどによる項目のバイステートおよびトライステートのカスケード選択も提供します。
 
 ## Angular Tree の例
+
 この基本的な Angular Tree の例では、ノード階層を指定し、階層データセットを反復処理することにより、`igx-tree` とそのノードを定義する方法を確認できます。
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/tree-basic-sample/" alt="Angular Tree の例">
 </code-view>
 
@@ -32,15 +33,16 @@ Ignite UI for Angular Tree コンポーネントの使用を開始するには�
 ```cmd
 ng add igniteui-angular
 ```
+
 Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-次に、app.module ファイルに `IgxTreeModule` をインポートします。 
+次に、app.module ファイルに `IgxTreeModule` をインポートします。
 
 ```typescript
 // app.module.ts
 
 ...
-import { IgxTreeModule } from 'igniteui-angular';
+import { IgxTreeModule } from 'igniteui-angular/tree';
 // import { IgxTreeModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -56,7 +58,7 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IGX_TREE_DIRECTIVES } from 'igniteui-angular';
+import { IGX_TREE_DIRECTIVES } from 'igniteui-angular/tree';
 // import { IGX_TREE_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -102,13 +104,13 @@ Ignite UI for Angular Tree モジュールまたはディレクティブをイ�
 
 ```html
 <igx-tree>
-	<igx-tree-node *ngFor="let node of data" [data]="node" [expanded]="isNodeExpaded(node)" [selected]="isNodeSelected(node)">
-		{{ node.text }}
-		<img [src]="node.image" [alt]="node.imageAlt" />
-		<igx-tree-node *ngFor="let child of node.children" [data]="child" [expanded]="isNodeExpaded(child)" [selected]="isNodeSelected(child)">
+ <igx-tree-node *ngFor="let node of data" [data]="node" [expanded]="isNodeExpaded(node)" [selected]="isNodeSelected(node)">
+  {{ node.text }}
+  <img [src]="node.image" [alt]="node.imageAlt" />
+  <igx-tree-node *ngFor="let child of node.children" [data]="child" [expanded]="isNodeExpaded(child)" [selected]="isNodeSelected(child)">
             {{ child.text }}
-		</igx-tree-node>
-	</igx-tree-node>
+  </igx-tree-node>
+ </igx-tree-node>
 </igx-tree>
 ```
 
@@ -116,15 +118,15 @@ Ignite UI for Angular Tree モジュールまたはディレクティブをイ�
 
 ```html
 <igx-tree (nodeSelection)="handleSelectionEvent($event)">
-	<igx-tree-node *ngFor="let node of data" [data]="node" [(expanded)]="node.expanded" [(selected)]="node.selected">
-		{{ node.text }}
-		<img [src]="node.image" [alt]="node.imageAlt" />
-		<igx-tree-node *ngFor="let child of node.children" [data]="child">
-			<a igxTreeNodeLink [href]="child.url" target="_blank">
+ <igx-tree-node *ngFor="let node of data" [data]="node" [(expanded)]="node.expanded" [(selected)]="node.selected">
+  {{ node.text }}
+  <img [src]="node.image" [alt]="node.imageAlt" />
+  <igx-tree-node *ngFor="let child of node.children" [data]="child">
+   <a igxTreeNodeLink [href]="child.url" target="_blank">
                 {{ child.text }}
             </a>
-		</igx-tree-node>
-	</igx-tree-node>
+  </igx-tree-node>
+ </igx-tree-node>
 </igx-tree>
 ```
 
@@ -134,62 +136,65 @@ Ignite UI for Angular Tree モジュールまたはディレクティブをイ�
 
 ```html
 <igx-tree>
-	<igx-tree-node [expanded]="true" [selected]="false">
-		I am a parent node 1
-		<img src="hard_coded_src.webb" alt="Alt Text" />		
-		<igx-tree-node [expanded]="true" [selected]="false">
-			I am a child node 1
-			<igx-tree-node>
-				<a igxTreeNodeLink href="https://google.com" target="_blank">
-				    I am a child node of the child
-				</a>
-			</igx-tree-node>
-		</igx-tree-node>
-	</igx-tree-node>
+ <igx-tree-node [expanded]="true" [selected]="false">
+  I am a parent node 1
+  <img src="hard_coded_src.webb" alt="Alt Text" />  
+  <igx-tree-node [expanded]="true" [selected]="false">
+   I am a child node 1
+   <igx-tree-node>
+    <a igxTreeNodeLink href="https://google.com" target="_blank">
+        I am a child node of the child
+    </a>
+   </igx-tree-node>
+  </igx-tree-node>
+ </igx-tree-node>
 
-	<igx-tree-node [expanded]="false" [selected]="false">
-		I am a parent node 2
-		<img src="hard_coded_src.webb" alt="Alt Text" />
+ <igx-tree-node [expanded]="false" [selected]="false">
+  I am a parent node 2
+  <img src="hard_coded_src.webb" alt="Alt Text" />
         <igx-tree-node [expanded]="false" [selected]="false">
-			I am a child node 1
-		</igx-tree-node>
-	</igx-tree-node>
+   I am a child node 1
+  </igx-tree-node>
+ </igx-tree-node>
 
     <igx-tree-node [selected]="false" [disabled]="true">
-		I am a parent node 3
-	</igx-tree-node>
+  I am a parent node 3
+ </igx-tree-node>
 </igx-tree>
 ```
 
 ### リンクのあるノード
+
 ノードがリンクを描画する必要がある場合は、`IgxTreeNodeLink` ディレクティブを `<a>` タグに追加する必要があります。これにより、適切な aria ロールがノードの DOM 要素に割り当てられます。
 
 ```html
 <igx-tree>
-	<igx-tree-node *ngFor="let node of data" [data]="node" [expanded]="isNodeExpaded(node)" [selected]="isNodeSelected(node)">
-		{{ node.text }}
-		<img [src]="node.image" [alt]="node.imageAlt" />
-		<igx-tree-node *ngFor="let child of node.children" [data]="child">
+ <igx-tree-node *ngFor="let node of data" [data]="node" [expanded]="isNodeExpaded(node)" [selected]="isNodeSelected(node)">
+  {{ node.text }}
+  <img [src]="node.image" [alt]="node.imageAlt" />
+  <igx-tree-node *ngFor="let child of node.children" [data]="child">
             <a igxTreeNodeLink [href]="child.url" target="_blank">
                 {{ child.text }}
             </a>
-		</igx-tree-node>
-	</igx-tree-node>
+  </igx-tree-node>
+ </igx-tree-node>
 </igx-tree>
 ```
+
 ### ノードの操作
+
 [IgxTreeNodeComponent]({environment:angularApiUrl}/classes/igxtreenodecomponent.html) は、次の方法で展開または縮小することができます:
 - ノード展開インジケーター **(デフォルトの動作)** をクリックします。
 - `igx-tree` [toggleNodeOnClick]({environment:angularApiUrl}/classes/igxtreecomponent.html#toggleNodeOnClick) プロパティが `true` に設定されている場合、ノードをクリックします。
 
 ```html
 <igx-tree [toggleNodeOnClick]="true">
-	<igx-tree-node *ngFor="let node of data" [data]="node">
-		{{ node.text }}
-		<igx-tree-node *ngFor="let child of node.children" [data]="child">
+ <igx-tree-node *ngFor="let node of data" [data]="node">
+  {{ node.text }}
+  <igx-tree-node *ngFor="let child of node.children" [data]="child">
                 {{ child.text }}
-		</igx-tree-node>
-	</igx-tree-node>
+  </igx-tree-node>
+ </igx-tree-node>
 </igx-tree>
 ```
 
@@ -197,12 +202,12 @@ Ignite UI for Angular Tree モジュールまたはディレクティブをイ�
 
 ```html
 <igx-tree [singleBranchExpand]="true">
-	<igx-tree-node *ngFor="let node of data" [data]="node">
-		{{ node.text }}
-		<igx-tree-node *ngFor="let child of node.children" [data]="child">
+ <igx-tree-node *ngFor="let node of data" [data]="node">
+  {{ node.text }}
+  <igx-tree-node *ngFor="let child of node.children" [data]="child">
                 {{ child.text }}
-		</igx-tree-node>
-	</igx-tree-node>
+  </igx-tree-node>
+ </igx-tree-node>
 </igx-tree>
 ```
 
@@ -215,19 +220,22 @@ Ignite UI for Angular Tree モジュールまたはディレクティブをイ�
 - [**deselectAll**]({environment:angularApiUrl}/classes/igxtreecomponent.html#deselectAll) - すべてのノードの選択を解除します。ノード配列が渡されると、指定されたノードのみの選択が解除されます。nodeSelection イベントを発行しません。
 
 ### ノードの検索
+
 [findNodes]({environment:angularApiUrl}/classes/igxtreecomponent.html#findNodes) メソッドを使用して、IgxTree 内の特定のノードを見つけることができます。指定されたデータに一致するノードの配列を返します。
 複合主キーなど、より複雑なデータ構造シナリオでノードを検索する場合、データに基づいてノードを検索するための基準を指定するために、カスタム比較関数を渡すことができます。
+
 ```html
 <igx-tree>
-	<igx-tree-node *ngFor="let node of data" [data]="node" [expanded]="isNodeExpaded(node)" [selected]="isNodeSelected(node)">
-		{{ node.text }}
-		<img [src]="node.image" alt="node.imageAlt" />
-		<igx-tree-node *ngFor="let child of node.children" [data]="child" [expanded]="isNodeExpaded(child)" [selected]="isNodeSelected(child)">
+ <igx-tree-node *ngFor="let node of data" [data]="node" [expanded]="isNodeExpaded(node)" [selected]="isNodeSelected(node)">
+  {{ node.text }}
+  <img [src]="node.image" alt="node.imageAlt" />
+  <igx-tree-node *ngFor="let child of node.children" [data]="child" [expanded]="isNodeExpaded(child)" [selected]="isNodeSelected(child)">
             {{ child.text }}
-		</igx-tree-node>
-	</igx-tree-node>
+  </igx-tree-node>
+ </igx-tree-node>
 </igx-tree>
 ```
+
 ```typescript
 export class MyTreeViewComponent {
   public data: { [key: string]: any, valueKey: string } = MY_DATA;
@@ -241,8 +249,11 @@ export class MyTreeViewComponent {
   }
 }
 ```
+
 ### テンプレート
-ノードの再利用可能なテンプレートを作成するには、**`igx-tree` 内で** `<ng-template>` を宣言します。 
+
+ノードの再利用可能なテンプレートを作成するには、**`igx-tree` 内で** `<ng-template>` を宣言します。
+
 ```html
 <igx-tree>
     <igx-tree-node *ngFor="let node of data" [data]="node">
@@ -259,7 +270,9 @@ export class MyTreeViewComponent {
     </ng-template>
 </igx-tree>
 ```
+
 さらに、[expandIndicator]({environment:angularApiUrl}/classes/igxtreecomponent.html#expandIndicator) 入力を使用することにより、ノードの展開/縮小インジケーターの描画に使用されるカスタム テンプレートを設定できます。
+
 ```html
 <igx-tree>
     <igx-tree-node *ngFor="let node of data" [data]="node">
@@ -271,62 +284,73 @@ export class MyTreeViewComponent {
 ```
 
 ## Angular Tree の選択
+
 `igx-tree` でノード選択を設定するには、その [selection]({environment:angularApiUrl}/classes/igxtreecomponent.html#selection) プロパティを設定する必要があります。このプロパティは、**None**、**BiState**、**Cascading** の 3 つのモードを受け入れます。以下で、それぞれについて詳しく説明します。
 ### None
+
 `igx-tree` では、デフォルトでノードの選択が無効になっています。ユーザーは UI 操作を介してノードを選択または選択解除することはできませんが、これらのアクションは提供された API メソッドを介して実行できます。
 ### Bi-State
+
 `igx-tree` で bi-state ノードの選択を有効にするには、[selection]({environment:angularApiUrl}/classes/igxtreecomponent.html#selection) プロパティを **BiState** に設定するだけです。これにより、すべてのノードのチェックボックスが表示されます。各ノードには、選択されているまたは選択されていないの 2 つの状態があります。このモードは複数選択をサポートします
+
 ```html
 <igx-tree selection="BiState">
 </igx-tree>
 ```
+
 ### カスケード
-`igx-tree` でカスケード ノードの選択を有効にするには、selection プロパティを **Cascading** に設定するだけです。これにより、すべてのノードのチェックボックスが表示されます。 
+
+`igx-tree` でカスケード ノードの選択を有効にするには、selection プロパティを **Cascading** に設定するだけです。これにより、すべてのノードのチェックボックスが表示されます。
+
 ```html
 <igx-tree selection="Cascading">
 </igx-tree>
 ```
+
 このモードでは、親の選択状態はその子の選択状態に完全に依存します。親に選択された子と選択解除された子がある場合、そのチェックボックスは不確定な状態になります。
 
 ### Angular Tree のチェックボックス
+
 Angular Tree コンポーネントは、チェックボックスの組み込みサポートを提供し、ユーザーが複数の項目を選択できるようにします。
 
 TreeView チェックボックスには、部分的に選択された親ノードにのみ適用可能な tri-state モードもあります。このモードでは、すべてではないが一部の子ノードがチェックされると、親ノードは不確定状態になります。
 ## キーボード ナビゲーション
+
 IgxTree のキーボード ナビゲーションは、ユーザーにさまざまなキーボード操作を提供します。この機能はデフォルトで有効になっており、ユーザーはノード間を移動できます。
 
 IgxTree ナビゲーションは、W3C アクセシビリティ標準に準拠しており、使いやすいです。
 
 **キーの組み合わせ**
 
- - <kbd>下矢印</kbd> - 次に表示されているノードに移動します。
+- <kbd>下矢印</kbd> - 次に表示されているノードに移動します。
 ノードをアクティブとしてマークします。最後のノードの場合は何もしません。
- - <kbd>Ctrl + 下矢印</kbd> - 次に表示されているノードに移動します。最後のノードの場合は何もしません。
- - <kbd>上矢印</kbd> - 前に表示されていたノードに移動します。ノードをアクティブとしてマークします。最初のノードの場合は何もしません。
- - <kbd>Ctrl + 上矢印</kbd> - 前に表示されていたノードに移動します。最初のノードの場合は何もしません。
- - <kbd>左矢印</kbd> - 展開された親ノードの場合、ノードを縮小します。子ノードの場合、その親ノードに移動します。
- - <kbd>右矢印</kbd> - 展開された親ノードの場合、ノードの最初の子に移動します。縮小された親ノードの場合は、それを展開します。
- - <kbd>Home</kbd> - 最初のノードに移動します。
- - <kbd>End</kbd> - 最後に表示されたノードに移動します。
- - <kbd>Tab</kbd> - ツリーの外側にあるページ上の次のフォーカス可能な要素に移動します。
- - <kbd>Shift + Tab</kbd> - ツリーの外側で、ページ上の前のフォーカス可能な要素に移動します。
- - <kbd>Space</kbd> - 現在のノードの選択を切り替えます。ノードをアクティブとしてマークします。
- - <kbd>Shift + Space</kbd> - 選択が有効になっている場合、Shift キーを押しながら、アクティブなノードと Space を押したノードの間ですべてのノードの選択を切り替えます。
- - <kbd>Enter</kbd> - フォーカスされたノードをアクティブにします。ノードにリンクがある場合は、リンクを開きます。
- - <kbd>*</kbd> - ノードとすべての兄弟ノードを同じレベルで展開します。
+- <kbd>Ctrl + 下矢印</kbd> - 次に表示されているノードに移動します。最後のノードの場合は何もしません。
+- <kbd>上矢印</kbd> - 前に表示されていたノードに移動します。ノードをアクティブとしてマークします。最初のノードの場合は何もしません。
+- <kbd>Ctrl + 上矢印</kbd> - 前に表示されていたノードに移動します。最初のノードの場合は何もしません。
+- <kbd>左矢印</kbd> - 展開された親ノードの場合、ノードを縮小します。子ノードの場合、その親ノードに移動します。
+- <kbd>右矢印</kbd> - 展開された親ノードの場合、ノードの最初の子に移動します。縮小された親ノードの場合は、それを展開します。
+- <kbd>Home</kbd> - 最初のノードに移動します。
+- <kbd>End</kbd> - 最後に表示されたノードに移動します。
+- <kbd>Tab</kbd> - ツリーの外側にあるページ上の次のフォーカス可能な要素に移動します。
+- <kbd>Shift + Tab</kbd> - ツリーの外側で、ページ上の前のフォーカス可能な要素に移動します。
+- <kbd>Space</kbd> - 現在のノードの選択を切り替えます。ノードをアクティブとしてマークします。
+- <kbd>Shift + Space</kbd> - 選択が有効になっている場合、Shift キーを押しながら、アクティブなノードと Space を押したノードの間ですべてのノードの選択を切り替えます。
+- <kbd>Enter</kbd> - フォーカスされたノードをアクティブにします。ノードにリンクがある場合は、リンクを開きます。
+- <kbd>*</kbd> - ノードとすべての兄弟ノードを同じレベルで展開します。
 
 選択が有効になっている場合、エンドユーザーによるノードの選択は、描画されたチェックボックスを介してのみ許可されます。どちらの選択タイプでも複数選択できるため、次のマウスとキーボードの操作を利用できます。
 
- - <kbd>クリック</kbd> - ノード チェックボックスで実行すると、選択が有効になっている場合、にノードの選択を切り替えます。それ以外の場合は、ノードにフォーカスします。
- - <kbd>Shift + クリック</kbd> - ノード チェックボックスで実行すると、選択が有効になっている場合、Shift キーを押しながらアクティブなノードとクリックしたノードの間ですべてのノードの選択を切り替えます。
+- <kbd>クリック</kbd> - ノード チェックボックスで実行すると、選択が有効になっている場合、にノードの選択を切り替えます。それ以外の場合は、ノードにフォーカスします。
+- <kbd>Shift + クリック</kbd> - ノード チェックボックスで実行すると、選択が有効になっている場合、Shift キーを押しながらアクティブなノードとクリックしたノードの間ですべてのノードの選択を切り替えます。
 
 ## Angular Tree ロードオンデマンド
 
 Ignite UI for Angular IgxTree は、サーバーから最小限のデータのみ取得して描画されるため、ユーザーにすばやくデータを表示できます。この動的データ読み込みアプローチでは、ユーザーがノードを展開した後にのみ、その特定の親ノードの子が取得されます。このメカニズムは、ロードオンデマンドであらゆるリモートデータとの設定が簡単にできます。
 
 ### デモ
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/tree-advanced-sample/" alt="Tree ロードオンデマンドの例">
 </code-view>
 
@@ -389,7 +413,7 @@ Ignite UI for Angular IgxTree は、サーバーから最小限のデータの�
   </tbody>
 </table>
 
-[Ignite UI for Angular テーマ](themes/index.md)を使用すると、ツリーの外観を大幅に変更できます。はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。 
+[Ignite UI for Angular テーマ](themes/index.md)を使用すると、ツリーの外観を大幅に変更できます。はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -414,8 +438,8 @@ $custom-tree-theme: tree-theme(
 
 ### デモ
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/lists/tree-styling/" alt="Tree のスタイル設定">
 </code-view>
 
@@ -474,14 +498,16 @@ $custom-tree-theme: tree-theme(
 |FireFox のタブ ナビゲーション|ツリーにスクロールバーがある場合、キーボード ナビゲーションを介してツリーにタブで移動すると、最初に igx-tree-node 要素にフォーカスされます。これは FireFox のデフォルトの動作ですが、ツリーに明示的な `tabIndex = -1` を設定することで解決できます。
 
 ## API リファレンス
+
 <div class="divider"></div>
 
-* [IgxTreeComponent]({environment:angularApiUrl}/classes/igxtreecomponent.html)
-* [IgxTreeNodeComponent]({environment:angularApiUrl}/classes/igxtreenodecomponent.html)
+- [IgxTreeComponent]({environment:angularApiUrl}/classes/igxtreecomponent.html)
+- [IgxTreeNodeComponent]({environment:angularApiUrl}/classes/igxtreenodecomponent.html)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

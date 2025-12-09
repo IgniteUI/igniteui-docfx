@@ -170,7 +170,7 @@ h3#excel-library-for-the-angular-grid ~ h3{
         width: 70%;
         margin-right: auto;
     }
-    
+
     div.support-section:last-child:last-child{
         border-left: none;
     }
@@ -204,13 +204,13 @@ Ignite UI for Angular は、世界最速の仮想化された Angular データ 
 <code-view style="height:435px"
            explicit-editor="stackblitz"
            data-demos-base-url="{environment:crmDemoBaseUrl}"
-           iframe-src="{environment:crmDemoBaseUrl}/" 
+           iframe-src="{environment:crmDemoBaseUrl}/"
            alt="Angular Grid の例">
 </code-view>
 
 <div class="divider--half"></div>
 
-## Angular Data Grid の概要 
+## Angular Data Grid の概要
 
 Angular データ グリッドは、一連の行と列で表データを表示するために使用されるコンポーネントです。テーブルとも呼ばれるデータ グリッドは、Microsoft Excel などの一般的なソフトウェアでデスクトップの世界でよく知られています。グリッドはデスクトップ プラットフォームで長い間利用されてきますが、最近 Angular UI などの Web ア プリ UI の一部になりました。最新のグリッドは複雑で、データ バインディング、編集、Excel のようなフィルタリング、カスタム並べ替え、グループ化、行の並べ替え、行と列の固定、行の集計、Excel、CSV、PDF 形式のエクスポートなど、さまざまな機能が含まれる場合があります。
 
@@ -220,6 +220,7 @@ Angular データ グリッドは、一連の行と列で表データを表示�
 Angular データ グリッドは、大量のデータをすばやく保存して並べ替える必要がある場合に重要です。これには、大量の高速データを頻繁に使用する金融や保険などの業界が含まれます。  これらの企業の成功は、データ グリッドの機能とパフォーマンスに依存します。たとえば、在庫をマイクロ秒単位で決定する場合、データグ リッドが遅延時間やちらつきのない状態で実行する必要があります。
 
 ## 主要機能
+
 <div class="divider--half"></div>
 
 Ignite UI for Angular のデータ グリッドは、大量のリアルタイム データのみにとどまるものではありません。これは機能豊富な Angular グリッドであり、ごくわずかなコードだけでは実現できない機能を提供します。
@@ -256,6 +257,7 @@ Ignite UI for Angular のデータ グリッドは、大量のリアルタイム
 <div class="divider--half"></div>
 
 ### データの仮想化とパフォーマンス
+
 <div class="divider--half"></div>
 
 データ グリッドの列と行レベルの仮想化により、Angular グリッド内の無制限の行と列をシームレスにスクロールします。ローカルまたはリモートのデータソースのサポートにより、データがどこにあっても最高のパフォーマンスを得ることができます。ユーザーは Excel のようなスクロールを体験し、エンタープライズ スピード (ラグ、画面のちらつき、視覚的な遅延) なしで、パフォーマンスを損なうことなく最高のユーザー エクスペリエンス (UX) を提供します。
@@ -332,6 +334,7 @@ Ignite UI for Angular の各 Angular コンポーネントは、最新のアク�
 </div>
 
 ### Angular Grid の Excel ライブラリ
+
 <div class="feature">
     <div class="feature__image feature__image--right"><img class="b-lazy b-loaded responsive-img" title="Microsoft Excel のような機能のアイコン表示" src="https://static.infragistics.com/marketing/Website/products/Ignite-UI-for-Angular/ignite-ui-angular-grid-export-to-excel-2-1100.jpg?v=201808021304" alt="Angular Data Grid の Microsoft Excel のような機能のアイコン表示">
 </div>
@@ -344,6 +347,7 @@ Ignite UI for Angular の各 Angular コンポーネントは、最新のアク�
 
 
 ## Angular Grid の機能
+
 <div class="divider"></div>
 <div id="list-features-included">
 
@@ -431,6 +435,7 @@ Infragistics の Angular 製品の受賞歴のあるサポートにアクセス�
 <div class="divider--half"></div>
 
 ## Ignite UI for Angular 試用ライセンスおよび商用
+
 <div class="divider--half"></div>
 <p>Ignite UI for Angular は、サブスクリプション モデルで利用可能な商用ライセンス製品です。Ignite UI for Angular 製品は、<a class="no-external-icon" href="{environment:infragisticsBaseUrl}/free-downloads">30 日間トライアル版を無料でお試しいただけます。</a>試用期間が終了したら、弊社 Web サイトから<a class="no-external-icon" href="{environment:infragisticsBaseUrl}/how-to-buy/product-pricing">ライセンスを購入する</a>か、<a class="no-external-icon" href="{environment:infragisticsBaseUrl}/about-us/contact-us">お住まいの地域の営業担当者にお問い合わせください</a>。</p>
 
@@ -459,7 +464,7 @@ Infragistics の Angular 製品の受賞歴のあるサポートにアクセス�
     <div class="faqs-accordion h4">Infragistics Ignite UI for Angular Data Grid の価格について教えてください。</div>
     <div class="divider--half"></div>
     <div class="faqs-accordion-panel">
-    Angular コンポーネントは、Ignite UI バンドルの一部として含まれています。価格の詳細については、<a class="no-external-icon" href="{environment:infragisticsBaseUrl}/how-to-buy/product-pricing">価格ページ</a>を参照してください。 
+    Angular コンポーネントは、Ignite UI バンドルの一部として含まれています。価格の詳細については、<a class="no-external-icon" href="{environment:infragisticsBaseUrl}/how-to-buy/product-pricing">価格ページ</a>を参照してください。
     <div class="divider--half"></div>
     複数のプラットフォームでアプリケーションを開発する場合、WPF や Windows Forms などのデスクトップ プラットフォーム、Angular、Web コンポーネント、ASP.NET MVC、ASP.NET Core のすべての最新 Web ツールセットを含む完全なアプリ開発パッケージ Infragistics Ultimate を検討してください。
     <div class="divider--half"></div>

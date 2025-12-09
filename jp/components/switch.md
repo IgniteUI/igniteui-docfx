@@ -13,8 +13,8 @@ _language: ja
 
 ## Angular Switch の例
 
-<code-view style="height:200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/switch-sample-1/" alt="Angular Switch の例">
 </code-view>
 
@@ -36,7 +36,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 ...
-import { IgxSwitchModule } from 'igniteui-angular';
+import { IgxSwitchModule } from 'igniteui-angular/switch';
 // import { IgxSwitchModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -52,7 +52,7 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IgxSwitchComponent } from 'igniteui-angular';
+import { IgxSwitchComponent } from 'igniteui-angular/switch';
 // import { IgxSwitchComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -117,8 +117,8 @@ igx-switch {
 
 結果は以下のようになります。
 
-<code-view style="height: 200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/switch-sample-2/" >
 </code-view>
 
@@ -391,9 +391,9 @@ $custom-switch-theme: switch-theme(
 
 以下のサンプルでは、カスタマイズした CSS 変数を使用したスイッチ コンポーネントが、[`SAP UI5`](https://ui5.sap.com/#/entity/sap.m.Switch/sample/sap.m.sample.Switch) デザイン システムのスイッチに視覚的に似たデザインを実現している様子を確認できます。
 
-<code-view style="height: 200px" 
+<code-view style="height: 200px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/switch-styling/" >
 </code-view>
 
@@ -442,12 +442,12 @@ $custom-switch-theme: switch-theme(
 
 <div class="divider--half"></div>
 
-* [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
-* [IgxSwitchComponent スタイル]({environment:sassApiUrl}/themes#function-switch-theme)
+- [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
+- [IgxSwitchComponent スタイル]({environment:sassApiUrl}/themes#function-switch-theme)
 
 ## テーマの依存関係
 
-* [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ## その他のリソース
 
@@ -455,5 +455,5 @@ $custom-switch-theme: switch-theme(
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

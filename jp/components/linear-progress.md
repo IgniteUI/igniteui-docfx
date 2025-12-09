@@ -12,8 +12,8 @@ _language: ja
 
 ## Angular Linear Progress の例
 
-<code-view style="height:50px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:50px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar/" alt="Angular Linear Progress の例">
 </code-view>
 
@@ -35,7 +35,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 ...
-import { IgxProgressBarModule } from 'igniteui-angular';
+import { IgxProgressBarModule } from 'igniteui-angular/progressbar';
 // import { IgxProgressBarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -51,7 +51,7 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IGX_LINEAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular';
+import { IGX_LINEAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular/progressbar';
 // import { IGX_LINEAR_PROGRESS_BAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -101,8 +101,8 @@ Ignite UI for Angular Progress Bar モジュールまたはディレクティブ
 
 すべてが正しく構成されると、ブラウザーで以下が表示されます。
 
-<code-view style="height:200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-1/" >
 </code-view>
 
@@ -167,7 +167,7 @@ Ignite UI for Angular Progress Bar モジュールまたはディレクティブ
 `textAlign` プロパティを使用している場合、コンポーネントの [`IgxTextAlign`]({environment:angularApiUrl}/enums/igxtextalign.html) 列挙子をインポートする必要があります。
 
 ```typescript
-import { ..., IgxTextAlign } from 'igniteui-angular';
+import { ..., IgxTextAlign } from 'igniteui-angular/progressbar';
 // import { ..., IgxTextAlign } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
@@ -177,8 +177,8 @@ public positionEnd: IgxTextAlign = IgxTextAlign.END;
 
 以下は結果です。
 
-<code-view style="height:200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-2/" >
 </code-view>
 
@@ -236,8 +236,8 @@ public decrementProgress() {
 
 上記の手順が完了した後、プログレス バーは以下のようになります。
 
-<code-view style="height:200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/linear-dynamic-sample/" >
 </code-view>
 
@@ -273,9 +273,9 @@ $custom-theme: progress-linear-theme(
 
 ### デモ
 
-<code-view style="height:50px" 
+<code-view style="height:50px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-styling/" >
 </code-view>
 
@@ -283,6 +283,6 @@ $custom-theme: progress-linear-theme(
 
 <div class="divider--half"></div>
 
-* [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
-* [IgxLinearProgressBarComponent スタイル]({environment:sassApiUrl}/themes#function-progress-linear-theme)
-* [IgxTextAlign]({environment:angularApiUrl}/enums/igxtextalign.html)
+- [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
+- [IgxLinearProgressBarComponent スタイル]({environment:sassApiUrl}/themes#function-progress-linear-theme)
+- [IgxTextAlign]({environment:angularApiUrl}/enums/igxtextalign.html)

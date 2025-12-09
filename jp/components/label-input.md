@@ -12,8 +12,8 @@ Ignite UI for Angular Input および Label ディレクティブを使用する
 
 ## Angular Label および Input の例
 
-<code-view style="height:100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-1/" alt="Angular Label および Input の例">
 </code-view>
 
@@ -35,7 +35,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 import { FormsModule } from '@angular/forms';
-import { IgxInputGroupModule } from 'igniteui-angular';
+import { IgxInputGroupModule } from 'igniteui-angular/input-group';
 // import { IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 
@@ -53,7 +53,7 @@ export class AppModule {}
 // home.component.ts
 
 import { FormsModule } from '@angular/forms';
-import { IGX_INPUT_GROUP_DIRECTIVES } from 'igniteui-angular';
+import { IGX_INPUT_GROUP_DIRECTIVES } from 'igniteui-angular/input-group';
 // import { IGX_INPUT_GROUP_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -102,8 +102,8 @@ Label および Input ディレクティブのデフォルト スタイル設定
 </igx-input-group>
 ```
 
-<code-view style="height:100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-2/" >
 </code-view>
 
@@ -160,8 +160,8 @@ public user = {
 > [!NOTE]
 > [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) ディレクティブを使用するには、[`IgxTextSelectionModule`]({environment:angularApiUrl}/classes/igxtextselectionmodule.html) をインポートする必要があります。
 
-<code-view style="height: 130px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 130px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-text-selection/" >
 </code-view>
 
@@ -175,9 +175,9 @@ Ignite UI for Angular Input Group コンポーネントは、開発者が使い�
 
 <div class="divider--half"></div>
 
-* [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
-* [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
-* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+- [IgxLabelDirective]({environment:angularApiUrl}/classes/igxlabeldirective.html)
+- [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
+- [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
 ## その他のリソース
 
@@ -185,9 +185,9 @@ Ignite UI for Angular Input Group コンポーネントは、開発者が使い�
 
 関連トピック:
 
-* [Input Group](input-group.md)
+- [Input Group](input-group.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

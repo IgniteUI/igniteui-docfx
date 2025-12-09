@@ -7,13 +7,15 @@ _language: ja
 ---
 
 # Angular Month Picker (月ピッカー) コンポーネントの概要
+
 <p class="highlight">Angular Month Picker コンポーネントは、カレンダー ビューで年や月を簡単で直感的な選択できます。このコンポーネントを使用すると、その値を日付オブジェクトにバインドでき、月ピッカー コンポーネント UI を通じて日付オブジェクトの月と年の部分を変更できます。ローカリゼーションもサポートします。</p>
 
 ## Angular Month Picker の例
+
 こちらに表示されているのは、ユーザーが年と月を選択できるコンポーネントのデフォルト ビューを備えた基本的な Angular Month Picker の例です。
 
-<code-view style="height: 620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-1/" alt="Angular Month Picker の例">
 </code-view>
 
@@ -27,7 +29,7 @@ ng add igniteui-angular
 
 Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-はじめに、**app.module.ts** ファイルに `IgxCalendarModule` をインポートします。 
+はじめに、**app.module.ts** ファイルに `IgxCalendarModule` をインポートします。
 
 >[!NOTE]
 > [**IgxMonthPickerComponent**]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html) はタッチ操作の [`BrowserAnimationsModule`](https://angular.io/api/platform-browser/animations/BrowserAnimationsModule) と [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) (**オプション**) に依存関係があり、これらも AppModule に追加する必要があります。
@@ -37,7 +39,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 ...
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxCalendarModule } from 'igniteui-angular';
+import { IgxCalendarModule } from 'igniteui-angular/calendar';
 // import { IgxCalendarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -55,7 +57,7 @@ export class AppModule {}
 
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxMonthPickerComponent } from 'igniteui-angular';
+import { IgxMonthPickerComponent } from 'igniteui-angular/calendar';
 // import { IgxMonthPickerComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -86,6 +88,7 @@ Ignite UI for Angular Calendar モジュールまたは Month Picker コンポ�
 ```
 
 ### 日付の設定
+
 [`IgxMonthPickerComponent`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html) に日付を設定するには、[`value`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#value) 入力を設定します。
 
 ```typescript
@@ -109,6 +112,7 @@ public date: Date = new Date();
 ```
 
 ### 書式設定
+
 [`formatOptions`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#formatOptions) 入力を使用してマンスピッカーの表示形式を変更します。
 
 ```html
@@ -127,6 +131,7 @@ public numericFormatOptions = {
 ```
 
 ### ロカリぜーション
+
 [`locale`]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html#locale) 入力を使用して、Ignite UI for Angular Month Picker ローカリゼーションをカスタマイズします。
 
 ```html
@@ -147,35 +152,37 @@ public formatOptions = {
 
 Month Picker コンポーネントのローカライズとスタイル設定の例:
 
-<code-view style="height: 680px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 680px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-sample-3/" >
 </code-view>
 
 
 ## キーボード ナビゲーション
+
 - **igxMonthPicker** コンポーネントがフォーカスを持つ場合:
-    - <kbd>PageUp</kbd> キーは前の年に移動します。
-    - <kbd>PageDown</kbd> キーは次の年に移動します。
-    - <kbd>Home</kbd> キーは現在の年の最初の月にフォーカスします。
-    - <kbd>End</kbd> キーは現在の年の最初の月にフォーカスします。
-    - <kbd>Tab</kbd> キーはサブヘッダー ボタン間を移動します。
+  - <kbd>PageUp</kbd> キーは前の年に移動します。
+  - <kbd>PageDown</kbd> キーは次の年に移動します。
+  - <kbd>Home</kbd> キーは現在の年の最初の月にフォーカスします。
+  - <kbd>End</kbd> キーは現在の年の最初の月にフォーカスします。
+  - <kbd>Tab</kbd> キーはサブヘッダー ボタン間を移動します。
 
 - サブヘッダーで `<` (前) または `>` (次) の年ボタンのフォーカス時:
-    - <kbd>Space</kbd> または <kbd>Enter</kbd> キーは次または前の年のビューへスクロールします。
+  - <kbd>Space</kbd> または <kbd>Enter</kbd> キーは次または前の年のビューへスクロールします。
 
-- サブヘッダーの年ボタンのフォーカス時: 
-    - <kbd>Space</kbd> または <kbd>Enter</kbd> キーは年ビューを開きます。
-    - <kbd>右矢印</kbd> または <kbd>左矢印</kbd> は前の年または次の年のビューへスクロールします。
+- サブヘッダーの年ボタンのフォーカス時:
+  - <kbd>Space</kbd> または <kbd>Enter</kbd> キーは年ビューを開きます。
+  - <kbd>右矢印</kbd> または <kbd>左矢印</kbd> は前の年または次の年のビューへスクロールします。
 
-- 月ビュー内の月のフォーカス時: 
-    - 矢印キーで月を移動します。
-    - <kbd>Home</kbd> キーは月ビューの最初の月にフォーカスします。
-    - <kbd>End</kbd> キーは月ビューの最後の月にフォーカスします。
-    - <kbd>Enter</kbd> キーは現在フォーカスされた月を選択してビューを閉じ
-    - <kbd>Tab</kbd> キーは月を移動します。
+- 月ビュー内の月のフォーカス時:
+  - 矢印キーで月を移動します。
+  - <kbd>Home</kbd> キーは月ビューの最初の月にフォーカスします。
+  - <kbd>End</kbd> キーは月ビューの最後の月にフォーカスします。
+  - <kbd>Enter</kbd> キーは現在フォーカスされた月を選択してビューを閉じ
+  - <kbd>Tab</kbd> キーは月を移動します。
 
 ### スタイル設定
+
 Month Picker のスタイル設定を始めるには、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
@@ -205,9 +212,9 @@ $my-calendar-theme: calendar-theme(
 
 ### デモ
 
-<code-view style="height: 350px" 
+<code-view style="height: 350px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/monthpicker-styling/" >
 </code-view>
 
@@ -251,22 +258,25 @@ class="!light-calendar
 
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
-* [IgxMonthPickerComponent]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html)
-* [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
-* [IgxCalendarComponent スタイル]({environment:sassApiUrl}/themes#function-calendar-theme)
+- [IgxMonthPickerComponent]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html)
+- [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
+- [IgxCalendarComponent スタイル]({environment:sassApiUrl}/themes#function-calendar-theme)
 
 
 ## テーマの依存関係
+
 <div class="divider--half"></div>
 
-* [IgxCalendar テーマ]({environment:sassApiUrl}/themes#function-calendar-theme)
-* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxCalendar テーマ]({environment:sassApiUrl}/themes#function-calendar-theme)
+- [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

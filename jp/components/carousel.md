@@ -7,23 +7,26 @@ _language: ja
 ---
 
 # Angular Carousel (カルーセル) コンポーネントの概要
-<p class="highlight">Ignite UI for Angular Carousel は、レスポンシブで軽量なコンポーネントであり、テキスト スライド、リンク、およびその他の html 要素を含む画像のコレクションを前後に移動するユーザーに、スライドショーのような Web エクスペリエンスを作成する最も柔軟な方法を提供します。 
+
+<p class="highlight">Ignite UI for Angular Carousel は、レスポンシブで軽量なコンポーネントであり、テキスト スライド、リンク、およびその他の html 要素を含む画像のコレクションを前後に移動するユーザーに、スライドショーのような Web エクスペリエンスを作成する最も柔軟な方法を提供します。
 
 Angular Carousel コンポーネントを使用すると、アニメーション、スライド トランジション、およびカスタマイズを使用できるため、インターフェイスを簡単に微調整して Angular カスタム カルーセルを構築できます。
 </p>
 <div class="divider"></div>
 
 ## Angular Carousel の例
+
 以下に示す Angular Carousel のデモは、画像のみを含むスライドを示しています。ナビゲーション ボタンを有効にして、ユーザーがスライド間を簡単に移動できるようにしました。
 
-<code-view style="height: 550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/carousel/" alt="Angular Carousel の例">
 </code-view>
 
 <div class="divider--half"></div>
 
 ## Ignite UI for Angular Carousel を使用した作業の開始
+
 Ignite UI for Angular Carousel コンポーネントを使用した作業を開始するには、Ignite UI for Angular をインストールする必要があります。既存の Angular アプリケーションで、以下のコマンドを入力します。
 
 ```cmd
@@ -41,7 +44,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 import { HammerModule } from '@angular/platform-browser';
-import { IgxCarouselModule } from 'igniteui-angular';
+import { IgxCarouselModule } from 'igniteui-angular/carousel';
 // import { IgxCarouselModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -58,7 +61,7 @@ export class AppModule {}
 // home.component.ts
 
 import { HammerModule } from '@angular/platform-browser';
-import { IGX_CAROUSEL_DIRECTIVES } from 'igniteui-angular';
+import { IGX_CAROUSEL_DIRECTIVES } from 'igniteui-angular/carousel';
 // import { IGX_CAROUSEL_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -83,14 +86,16 @@ export class HomeComponent {}
 Ignite UI for Angular Carousel モジュールまたはディレクティブをインポートしたので、`igx-carousel` コンポーネントの使用を開始できます。
 
 ## Angular Carousel コンポーネントの使用
+
 Ignite UI for Angular Carousel コンポーネントを全画面要素またはコンポーネントの子に設定できます。また、スライドに有効な HTML コンテンツ、その他の Angular コンポーネントなども含めることができます。
 
 このセクションでは、上記で定義した **デモ** の設定を行います。
 
 ### *ngFor を使用してスライドを追加する
+
 <div class="divider--half"></div>
 
-同じ種類のコンテンツを含むスライドがある場合、最も簡単な方法は *\*ngFor* を使用してテンプレートに追加する方法です。
+同じ種類のコンテンツを含むスライドがある場合、最も簡単な方法は _\*ngFor_ を使用してテンプレートに追加する方法です。
 
 スライドには画像のみが含まれるので、**ts** ファイルにオブジェクトの配列を作成し、それを使用して **igx-carousel** にスライドを追加します。
 
@@ -116,9 +121,11 @@ export class HomeComponent {
     </igx-carousel>
 </div>
 ```
+
 ## Angular Carousel のカスタム例
 
 ### IgxCarousel の定義
+
 <div class="divider--half"></div>
 
 デフォルトでは、Angular のカルーセルの [`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop) 入力プロパティは `true` に設定されています (ループは、Next 動作でナビゲートするときに最初のスライドが最後のスライドの後に来るか、Previous 動作を使用して最後のスライドが最初のスライドの後に来るときに起こります)。ループ動作を無効にするには、[`loop`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#loop) 入力の値を `false` に設定します。
@@ -154,6 +161,7 @@ export class HomeComponent {
 ```
 
 ### カスタム インジケーター
+
 <div class="divider--half"></div>
 
 Angular カスタム カルーセル インジケーターを追加するには、以下のように [IgxCarouselIndicatorDirective]({environment:angularApiUrl}/classes/igxcarouselindicatordirective.html) を使用する必要があります。
@@ -187,9 +195,11 @@ Angular カスタム カルーセル インジケーターを追加するには�
 ```
 
 ### 他のコンポーネントを含むスライド
+
 <div class="divider--half"></div>
 
 このカルーセルには、フォームと画像を含むスライドが含まれます。
+
 ```html
 ...
   <div class="carousel-container">
@@ -244,8 +254,8 @@ Angular カスタム カルーセル インジケーターを追加するには�
 #### デモ
 
 
-<code-view style="height: 700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/carousel-with-components-sample/" >
 </code-view>
 
@@ -265,6 +275,7 @@ Angular カスタム カルーセル インジケーターを追加するには�
 </igx-carousel>
 
 ```
+
 `animationType` 入力に `none` を設定すると、カルーセルのアニメーションが無効になります。
 
 
@@ -273,14 +284,15 @@ Angular カスタム カルーセル インジケーターを追加するには�
 以下のデモは、カルーセルがサポートするさまざまなタイプのアニメーションを示しています。
 
 
-<code-view style="height: 700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/carousel-animations-sample/" >
 </code-view>
 
 
 
 ## ナビゲーション
+
 <div class="divider--half"></div>
 
 トランジションとナビゲーションは、最も重要なカルーセル機能です。
@@ -288,6 +300,7 @@ Angular カスタム カルーセル インジケーターを追加するには�
 カルーセル内のナビゲーションは、モバイル デバイスでのナビゲーション ボタン、キーボード ナビゲーション、パン操作を通じてユーザーが処理できます。
 
 ### パン ジェスチャ
+
 <div class="divider--half"></div>
 
 デフォルトでカルーセルはあらゆるタッチ対応デバイスに使用できます。これはオプションであり、[gesturesSupport]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#gesturesSupport) プロパティを `false` に設定して変更できます。
@@ -295,17 +308,19 @@ Angular カスタム カルーセル インジケーターを追加するには�
 Carousel [アニメーション](carousel.md#angular-carousel-のアニメーション)はタッチ デバイスで完全にサポートされているため、プラットホームに合わせてプログレッシブ Web アプリケーション ([PWA](https://developer.mozilla.org/ja/docs/Web/Progressive_web_apps)) を構築するための完璧なツールです。
 
 ### キーボード ナビゲーション
+
 <div class="divider--half"></div>
 
-* ナビゲーション ボタン
-    * `Space`/`Enter` キー - 次のスライド/前のスライドに移動します。
-* インジケーター
-    * `左矢印` キー - 前のスライド (右から左モードでは次) に移動します。
-    * `右矢印` キー - 次のスライド  (右から左モードでは前へ) に移動します。
-    * `Home` キー - 最初のスライド (右から左モードでは最後) に移動します。
-    * `End` キー - 最後のスライド (右から左モードでは最初) に移動します。
+- ナビゲーション ボタン
+  - `Space`/`Enter` キー - 次のスライド/前のスライドに移動します。
+- インジケーター
+  - `左矢印` キー - 前のスライド (右から左モードでは次) に移動します。
+  - `右矢印` キー - 次のスライド  (右から左モードでは前へ) に移動します。
+  - `Home` キー - 最初のスライド (右から左モードでは最後) に移動します。
+  - `End` キー - 最後のスライド (右から左モードでは最初) に移動します。
 
 ### 自動的なトランジション
+
 <div class="divider--half"></div>
 
 **IgxCarousel** は、ユーザーの操作なしでスライドを自動的に変更するように簡単に構成できます。この方法では、トランジション間隔を [interval]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#interval) プロパティに設定するだけで、スライドショーを作成できます。このプロパティは、スライド トランジション間の間隔 (ミリ秒)を決定します。
@@ -314,17 +329,18 @@ Carousel [アニメーション](carousel.md#angular-carousel-のアニメーシ
 >自動的なスライド トランジションは、デフォルトでユーザーに完全に依存しているわけではありません。スライドの上にマウス ポインターを置くと、マウス ポインターがスライド領域から出るまで、現在のスライド トランジションが中断されます。これは、[pause]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#pause) プロパティを `false` に設定することで防止できます。
 
 ## 高度な例
+
 <div class="divider--half"></div>
 
 ループを有効にして完全に自動化されたカルーセルを作成しましょう。各スライドは、リスト内の[リスト項目]({environment:angularApiUrl}/classes/igxlistitemcomponent.html) と同期されます。リスト項目をクリックすると、スライドの変更がトリガーされます。
 
 
 これを実現するには、カルーセルを以下のように構成する必要があります。
- - `gesturesSupport` を無効にします。
- - `navigation` ボタンを無効にします。
- - カルーセル `indicator` を無効にします。
- - ユーザーがスライドを操作すると `pause` を無効にします。
- - トランジション `interval` を追加します。
+- `gesturesSupport` を無効にします。
+- `navigation` ボタンを無効にします。
+- カルーセル `indicator` を無効にします。
+- ユーザーがスライドを操作すると `pause` を無効にします。
+- トランジション `interval` を追加します。
 
 カルーセル テンプレートは以下のようになります。
 
@@ -339,9 +355,11 @@ Carousel [アニメーション](carousel.md#angular-carousel-のアニメーシ
 </div>
 ...
 ```
+
 カルーセル構成の準備ができました。次に、[リスト](list.md) コンポーネントを追加して、両方のコンポーネントを同期します。
 
 [IgxList]({environment:angularApiUrl}/classes/igxlistcomponent.html) の追加:
+
 ```html
 ...
 <div class="list-wrapper">
@@ -354,6 +372,7 @@ Carousel [アニメーション](carousel.md#angular-carousel-のアニメーシ
 </div>
 ...
 ```
+
 カルーセルの [`slideChanged`]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#slideChanged) およびリストの [itemClicked]({environment:angularApiUrl}/classes/igxlistcomponent.html#itemClicked) イベントを処理し、コンポーネントを同期する方法:
 
 >[!NOTE]
@@ -371,10 +390,11 @@ Carousel [アニメーション](carousel.md#angular-carousel-のアニメーシ
     });
   }
 ```
+
 これらの構成の結果は以下のようになります。
 
-<code-view style="height: 700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/carousel-no-navigation-sample/" >
 </code-view>
 
@@ -655,9 +675,9 @@ Carousel [アニメーション](carousel.md#angular-carousel-のアニメーシ
   </div>
 </div>
 
-[Ignite UI for Angular テーマ](themes/index.md)を使用して、`carousel` の外観を変更できます。 
+[Ignite UI for Angular テーマ](themes/index.md)を使用して、`carousel` の外観を変更できます。
 
-はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。 
+はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -685,8 +705,8 @@ $carousel-theme: carousel-theme(
 
 以下のサンプルは、[Ignite UI for Angular テーマ](themes/index.md)で適用されるシンプルなスタイル設定を示します。
 
-<code-view style="height: 310px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 310px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/carousel-styling-sample/" alt="Angular Carousel スタイル設定の例">
 </code-view>
 
@@ -732,51 +752,58 @@ $carousel-theme: carousel-theme(
 
 ## ユーザー補助
 ### WAI-ARIA の役割、状態、およびプロパティ
- * Carousel の基本要素の役割は [`region`](https://www.w3.org/TR/wai-aria-1.1/#region) です。これは、ユーザーが簡単にナビゲートできるようにしたい特定の目的に関連するコンテンツを含むセクションです。
- * Carousel インジケーターの役割は [`tab`](https://www.w3.org/TR/wai-aria-1.1/#tab) です。これは、ユーザーに描画されるタブ コンテンツを選択するためのメカニズムを提供するグループ化ラベルです。
- * タブのセット (カルーセル インジケーター) 役割のコンテナーとして機能する要素は、[`tablist`](https://www.w3.org/TR/wai-aria-1.1/#tab) に設定されます。
- * 各スライド要素には、[`tabpanel`](https://www.w3.org/TR/wai-aria-1.1/#tabpanel) の役割が設定されています。
- * igx-slides のセットのコンテナーとして機能する要素は、[aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live)="polite" で設定されます。どちらのオプションも
-   - カルーセルが自動的に回転している場合、**off** になります。
-   - カルーセルが自動的に回転しない場合、**polite** になります。
+
+- Carousel の基本要素の役割は [`region`](https://www.w3.org/TR/wai-aria-1.1/#region) です。これは、ユーザーが簡単にナビゲートできるようにしたい特定の目的に関連するコンテンツを含むセクションです。
+- Carousel インジケーターの役割は [`tab`](https://www.w3.org/TR/wai-aria-1.1/#tab) です。これは、ユーザーに描画されるタブ コンテンツを選択するためのメカニズムを提供するグループ化ラベルです。
+- タブのセット (カルーセル インジケーター) 役割のコンテナーとして機能する要素は、[`tablist`](https://www.w3.org/TR/wai-aria-1.1/#tab) に設定されます。
+- 各スライド要素には、[`tabpanel`](https://www.w3.org/TR/wai-aria-1.1/#tabpanel) の役割が設定されています。
+- igx-slides のセットのコンテナーとして機能する要素は、[aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live)="polite" で設定されます。どちらのオプションも
+  - カルーセルが自動的に回転している場合、**off** になります。
+  - カルーセルが自動的に回転しない場合、**polite** になります。
 
 ### ARIA のサポート
 #### **Carousel コンポーネント**
 
-##### **属性**:
- * [aria-roledescription](https://www.w3.org/TR/wai-aria-1.1/#aria-roledescription) を 'carousel' に設定します。
- * [aria-selected](https://www.w3.org/TR/wai-aria/states_and_properties#aria-selected) - アクティブなスライドに基づいて *true* または *false* に設定します。
- * [aria-controls](https://www.w3.org/TR/wai-aria-1.1/#aria-controls) - コンテンツが現在の要素によって制御されるスライド インデックスを設定します。
- * [aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live) - スクリーン リーダーがライブ リージョンの更新を処理する優先度を設定するために使用されます。可能な設定は **off** および **polite** です。デフォルト設定は **polite** です。[interval]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#interval) オプションが設定されている場合、**aria-live** 属性は  **off** に設定されます。
- * スライドに基づく [aria-label](https://www.w3.org/TR/wai-aria/states_and_properties#aria-label)。
- * aria-label (ボタン)
-   - aria-label - 前のスライド用。
-   - aria-label - 次のスライド用。
+##### **属性**
+
+- [aria-roledescription](https://www.w3.org/TR/wai-aria-1.1/#aria-roledescription) を 'carousel' に設定します。
+- [aria-selected](https://www.w3.org/TR/wai-aria/states_and_properties#aria-selected) - アクティブなスライドに基づいて _true_ または _false_ に設定します。
+- [aria-controls](https://www.w3.org/TR/wai-aria-1.1/#aria-controls) - コンテンツが現在の要素によって制御されるスライド インデックスを設定します。
+- [aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live) - スクリーン リーダーがライブ リージョンの更新を処理する優先度を設定するために使用されます。可能な設定は **off** および **polite** です。デフォルト設定は **polite** です。[interval]({environment:angularApiUrl}/classes/igxcarouselcomponent.html#interval) オプションが設定されている場合、**aria-live** 属性は  **off** に設定されます。
+- スライドに基づく [aria-label](https://www.w3.org/TR/wai-aria/states_and_properties#aria-label)。
+- aria-label (ボタン)
+  - aria-label - 前のスライド用。
+  - aria-label - 次のスライド用。
 
 #### **Slide コンポーネント**
-##### **役割**:
- * [attr.role="tabpanel"](https://www.w3.org/TR/wai-aria-1.1/#tabpanel) - タブに関連付けられたリソースのコンテナー。各タブはタブ リストに含まれています。
+##### **役割**
 
-##### **属性**:
- * id - パターン "panel-${this.index}" に従います。
- * [aria-labelledby](https://www.w3.org/TR/wai-aria/#aria-labelledby) は、"tab-${this.index}-${this.total}" のパターンに従います。
- * [aria-selected](https://www.w3.org/TR/wai-aria-1.1/#aria-selected) は、**アクティブ** スライドを設定します。特定のスライド要素の現在の**選択された**状態を示します。
+- [attr.role="tabpanel"](https://www.w3.org/TR/wai-aria-1.1/#tabpanel) - タブに関連付けられたリソースのコンテナー。各タブはタブ リストに含まれています。
+
+##### **属性**
+
+- id - パターン "panel-${this.index}" に従います。
+- [aria-labelledby](https://www.w3.org/TR/wai-aria/#aria-labelledby) は、"tab-${this.index}-${this.total}" のパターンに従います。
+- [aria-selected](https://www.w3.org/TR/wai-aria-1.1/#aria-selected) は、**アクティブ** スライドを設定します。特定のスライド要素の現在の**選択された**状態を示します。
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
-* [IgxCarouselComponent]({environment:angularApiUrl}/classes/igxcarouselcomponent.html)
-* [IgxCarouselComponent スタイル]({environment:sassApiUrl}/themes#function-carousel-theme)
-* [IgxSlideComponent]({environment:angularApiUrl}/classes/igxslidecomponent.html)
-* [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
-* [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
+- [IgxCarouselComponent]({environment:angularApiUrl}/classes/igxcarouselcomponent.html)
+- [IgxCarouselComponent スタイル]({environment:sassApiUrl}/themes#function-carousel-theme)
+- [IgxSlideComponent]({environment:angularApiUrl}/classes/igxslidecomponent.html)
+- [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
+- [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+
+- [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

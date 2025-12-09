@@ -7,12 +7,13 @@ _language: ja
 ---
 
 # Angular Dialog Window (ダイアログ ウィンドウ) コンポーネントの概要
+
 <p class="highlight">Ignite UI for Angular Dialog Window コンポーネントをメッセージを表示するか、入力フォームを表示するために使用します。コンポーネントはアプリケーション コンテンツの中央上にダイアログ ウィンドウを開きます。キャンセル可能な規格の警告メッセージを提供できます。</p>
 
 ## Angular Dialog の例
 
-<code-view style="height:200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-1/" alt="Angular Dialog の例">
 </code-view>
 
@@ -34,7 +35,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 ...
-import { IgxDialogModule } from 'igniteui-angular';
+import { IgxDialogModule } from 'igniteui-angular/dialog';
 // import { IgxDialogModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -50,7 +51,9 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IGX_DIALOG_DIRECTIVES, IgxButtonDirective, IgxRippleDirective } from 'igniteui-angular';
+import { IGX_DIALOG_DIRECTIVES } from 'igniteui-angular/dialog';
+import { IgxButtonDirective } from 'igniteui-angular/directives';
+import { IgxRippleDirective } from 'igniteui-angular/directives';
 // import { IGX_DIALOG_DIRECTIVES, IgxButtonDirective, IgxRippleDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -81,7 +84,7 @@ Ignite UI for Angular Dialog Window モジュールまたはディレクティ�
 
 ### 通知ダイアログ
 
-通知のダイアログを作成するには、メールコンポーネントのテンプレートに以下のコードを追加します。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、[`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftButtonLabel) を設定し、[`leftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftButtonSelect) イベントを処理します。 
+通知のダイアログを作成するには、メールコンポーネントのテンプレートに以下のコードを追加します。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、[`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftButtonLabel) を設定し、[`leftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftButtonSelect) イベントを処理します。
 
 ```html
 <!--email.component.html-->
@@ -101,7 +104,7 @@ Ignite UI for Angular Dialog Window モジュールまたはディレクティ�
 
 ### 標準ダイアログ
 
-標準のダイアログを作成するには、ファイル マネージャー コンポーネントのテンプレートに以下のコードを追加します。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、[`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftButtonLabel)、[`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightButtonLabel) を設定し、[`leftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftButtonSelect) および [`rightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightButtonSelect) イベントを処理します。 
+標準のダイアログを作成するには、ファイル マネージャー コンポーネントのテンプレートに以下のコードを追加します。[`title`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#title)、[`message`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#message)、[`leftButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftButtonLabel)、[`rightButtonLabel`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightButtonLabel) を設定し、[`leftButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#leftButtonSelect) および [`rightButtonSelect`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#rightButtonSelect) イベントを処理します。
 
 ```html
 <!--file-manager.component.html-->
@@ -117,8 +120,8 @@ Ignite UI for Angular Dialog Window モジュールまたはディレクティ�
 ```
 
 
-<code-view style="height:250px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:250px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-2/" >
 </code-view>
 
@@ -166,14 +169,14 @@ Ignite UI for Angular Dialog Window モジュールまたはディレクティ�
 ```
 
 
-<code-view style="height:300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/dialog-sample-3/" >
 </code-view>
 
 <div class="divider--half"></div>
 
-### 位置とアニメーション設定 
+### 位置とアニメーション設定
 
 `igx-dialog` が表示される位置を変更するには、2 つの方法があります。
 
@@ -213,7 +216,7 @@ export class HomeComponent {
 
 ```typescript
 import { useAnimation } from '@angular/animations';
-import { PositionSettings, HorizontalAlignment, VerticalAlignment } from 'igniteui-angular';
+import { PositionSettings, HorizontalAlignment, VerticalAlignment } from 'igniteui-angular/core';
 // import { PositionSettings, HorizontalAlignment, VerticalAlignment } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({...})
@@ -230,7 +233,7 @@ export class HomeComponent {
 }
 ```
 
-> [!Note] 
+> [!Note]
 > 同じアプローチをアニメーション設定に使用する必要があります。`openAnimation` と `closeAnimation` プロパティを使用して、期間などのアニメーション パラメーターを定義します。
 
 `params` オブジェクトの例:
@@ -351,26 +354,27 @@ $custom-button: contained-button-theme(
 
 ### デモ
 
-<code-view style="height:300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/dialog-styling-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
 
 ## API まとめ
+
 <div class="divider--half"></div>
 
-* [IgxDialogComponent]({environment:angularApiUrl}/classes/igxdialogcomponent.html)
-* [IgxDialogComponent スタイル]({environment:sassApiUrl}/themes#function-dialog-theme)
-* [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay スタイル]({environment:sassApiUrl}/themes#function-overlay-theme)
+- [IgxDialogComponent]({environment:angularApiUrl}/classes/igxdialogcomponent.html)
+- [IgxDialogComponent スタイル]({environment:sassApiUrl}/themes#function-dialog-theme)
+- [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
+- [IgxOverlay スタイル]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## テーマの依存関係
 
-* [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
-* [IgxOverlay テーマ]({environment:sassApiUrl}/themes#function-overlay-theme)
+- [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxOverlay テーマ]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## その他のリソース
 
@@ -378,5 +382,5 @@ $custom-button: contained-button-theme(
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

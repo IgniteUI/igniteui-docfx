@@ -11,8 +11,8 @@ Ignite UI for Angular Splitter コンポーネントはレイアウトを作成�
 
 ## Angular Splitter の例
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/splitter-horizontal-sample/" alt="Angular スプリッターの例">
 </code-view>
 
@@ -34,7 +34,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 ```typescript
 // app.module.ts
 ...
-import { IgxSplitterModule } from 'igniteui-angular';
+import { IgxSplitterModule } from 'igniteui-angular/splitter';
 // import { IgxSplitterModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -50,7 +50,7 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IGX_SPLITTER_DIRECTIVES } from 'igniteui-angular';
+import { IGX_SPLITTER_DIRECTIVES } from 'igniteui-angular/splitter';
 // import { IGX_SPLITTER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -97,9 +97,11 @@ Ignite UI for Angular Splitter モジュールまたはディレクティブを�
 ### 方向
 
 スプリッターは、[`type`]({environment:angularApiUrl}/classes/igxsplittercomponent.html#type) 入力によって定義される垂直または水平にすることができます。デフォルト値は Vertical です。
+
 ```typescript
 public type = SplitterType.Horizontal;
 ```
+
 ```html
 <igx-splitter [type]="type">
     <igx-splitter-pane>
@@ -126,14 +128,15 @@ public type = SplitterType.Horizontal;
 </igx-splitter>
 ```
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/splitter-collapsible-sample/" >
 </code-view>
 
 ### ペインの構成
 
 **igxSplitterPane** コンポーネントには、いくつかのプロパティが含まれています。[`size`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#size) プロパティを使用してペインの初期サイズを設定できます。[`minSize`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#minSize) および [`maxSize`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#maxSize) プロパティを使用して、ペインの最小または最大サイズを設定できます。`minSize` および `maxSize` を超えるサイズ変更は許可されません。
+
 ```html
 <igx-splitter>
     <igx-splitter-pane size='300px' minSize='100px'>
@@ -144,7 +147,9 @@ public type = SplitterType.Horizontal;
     </igx-splitter-pane>
 </igx-splitter>
 ```
+
 [`resizable`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#resizable) プロパティを **false** に設定してペインのサイズ変更を禁止することもできます。
+
 ```html
 <igx-splitter>
     <igx-splitter-pane [resizable]='false'>
@@ -159,10 +164,12 @@ public type = SplitterType.Horizontal;
 ### ネストされたペイン
 
 スプリッター コンポーネントをネストして、スプリッター ペイン内により複雑なレイアウトを作成できます。
+
 ```typescript
 public typeHorizontal = SplitterType.Horizontal;
 public typeVertical = SplitterType.Vertical;
 ```
+
 ```html
 <igx-splitter style='height: 30vh;' [type]='typeHorizontal' >
     <igx-splitter-pane>
@@ -190,8 +197,8 @@ public typeVertical = SplitterType.Vertical;
 
 ### デモ
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/splitter-nested-sample/" >
 </code-view>
 
@@ -201,6 +208,7 @@ public typeVertical = SplitterType.Vertical;
 スプリッター コンポーネントではキーボード ナビゲーションがデフォルトで有効です。以下は、スプリッター バーをフォーカスして以下のキーの組み合わせを押した場合の動作を示します。
 
 ### キーの組み合わせ
+
 - `上矢印` - 垂直スプリッターでスプリッター バーを上へ移動
 - `下矢印` - 垂直スプリッターでスプリッター バーを下へ移動
 - `左矢印` - 水平スプリッターでスプリッター バーを左へ移動
@@ -257,7 +265,7 @@ $splitter-theme: splitter-theme(
 );
 ```
 
-### CSS 変数の使用 
+### CSS 変数の使用
 
 次に Splitter のカスタム テーマを渡します。
 
@@ -266,11 +274,12 @@ $splitter-theme: splitter-theme(
 ```
 
 ### デモ
+
 これは、新しいテーマを適用した結果です。
 
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/splitter-styling-sample/" >
 </code-view>
 
@@ -331,21 +340,23 @@ igx-splitter {
 ```
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
-* [IgxSplitterComponent]({environment:angularApiUrl}/classes/igxsplittercomponent.html)
-* [IgxSplitterPaneComponent]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html)
-* [SplitterType]({environment:angularApiUrl}/enums/splittertype.html)
-* [IgxSplitterComponent スタイル]({environment:sassApiUrl}/themes#function-splitter-theme)
+- [IgxSplitterComponent]({environment:angularApiUrl}/classes/igxsplittercomponent.html)
+- [IgxSplitterPaneComponent]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html)
+- [SplitterType]({environment:angularApiUrl}/enums/splittertype.html)
+- [IgxSplitterComponent スタイル]({environment:sassApiUrl}/themes#function-splitter-theme)
 
 <div class="divider--half"></div>
 
 ## テーマの依存関係
-* [IgxDropDown テーマ]({environment:sassApiUrl}/themes#function-drop-down-theme)
-* [IgxIcon スタイル]({environment:sassApiUrl}/themes#function-icon-theme)
+
+- [IgxDropDown テーマ]({environment:sassApiUrl}/themes#function-drop-down-theme)
+- [IgxIcon スタイル]({environment:sassApiUrl}/themes#function-icon-theme)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
 

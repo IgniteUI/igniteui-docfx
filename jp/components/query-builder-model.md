@@ -7,28 +7,32 @@ _language: ja
 ---
 
 # クエリ ビルダー モデルの使用
+
 Angular Query Builder は、シリアル化/逆シリアル化可能な JSON 形式モデルを提供し、SQL クエリを簡単に構築できるようにします。
 
 ## 概要
 
 この Angular クエリ ビルダーの例では、[`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) 式ツリーを使用してエンドポイント [Northwind WebAPI](https://data-northwind.indigo.design/swagger/index.html) からデータを要求し、それを [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) のデータ ソースとして設定する方法を示します。
 
-<code-view style="height:700px" 
+<code-view style="height:700px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/query-builder-request-sample/" >
 </code-view>
 
 ## クエリ ビルダー モデル
+
 [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) に式ツリーを設定するには、[`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) を定義する必要があります。各 [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) には、データ レコードがツリーに対してどのように解決されるかを表すフィルタリング ロジックが必要であり、ユース ケースに応じて、フィールド名、エンティティ名、および返却フィールドドの配列を渡すことができます。特定のエンティティ内のすべてのフィールドを返す必要がある場合は、`returnFields` プロパティを ['*'] に設定できます。
 
 ```ts
 const tree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'Entity A', ['*']);
 ```
+
 ルート [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) が作成されると、その `filteringOperands` プロパティを [`IFilteringExpression`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) (単一の式またはグループ) または [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) (サブクエリ) の配列に設定することで、条件、グループ、またはサブクエリを追加できます。
 各 [`IFilteringExpression`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) および [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) には、フィルタリング式が配置されている列の名前である `fieldName` と、[`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html) 型の `condition` または `conditionName` のいずれかが必要です。必要に応じて、`searchVal`、[`IExpressionTree`]({environment:angularApiUrl}/interfaces/iexpressiontree.html) タイプの `searchTree`、および `ignoreCase` プロパティを設定することもできます。
 
 - 簡単な**式**の定義:
+
 ```ts
 tree.filteringOperands.push({
             fieldName: 'Name',
@@ -38,6 +42,7 @@ tree.filteringOperands.push({
 ```
 
 - 式の**グループ**の定義:
+
 ```ts
 const group = new FilteringExpressionsTree(FilteringLogic.Or, undefined, 'Entity A', ['*']);
 group.filteringOperands.push({
@@ -53,6 +58,7 @@ tree.filteringOperands.push(group);
 ```
 
 - **サブクエリ**の定義:
+
 ```ts
 const innerTree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'Entity B', ['Number']);
 innerTree.filteringOperands.push({
@@ -68,20 +74,22 @@ innerTree.filteringOperands.push({
 ```
 
 モデルは JSON 形式でシリアル化/逆シリアル化できるため、クライアントとサーバー間で簡単に転送できます。
+
 ```ts
 JSON.stringify(tree, null, 2);
 ```
 
 ## サブクエリの使用
 
-[`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) のコンテキストでは、*IN / NOT-IN* 演算子は、*WHERE* 句で新しく公開されたサブクエリ機能とともに使用されます。
+[`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) のコンテキストでは、_IN / NOT-IN_ 演算子は、_WHERE_ 句で新しく公開されたサブクエリ機能とともに使用されます。
 
 > [!Note]
-> サブクエリは、外部クエリの条件として使用されるデータを取得するために使用される、別のクエリ内にネストされたクエリです。 
+> サブクエリは、外部クエリの条件として使用されるデータを取得するために使用される、別のクエリ内にネストされたクエリです。
 
-`FilteringExpression` で *IN / NOT-IN* 演算子を選択すると、サブクエリが作成されます。返すエンティティと列を選択した後、外部クエリの指定された列の値がサブクエリによって返される値のいずれかと一致するかどうかを確認します。
+`FilteringExpression` で _IN / NOT-IN_ 演算子を選択すると、サブクエリが作成されます。返すエンティティと列を選択した後、外部クエリの指定された列の値がサブクエリによって返される値のいずれかと一致するかどうかを確認します。
 
 次の式ツリーは:
+
 ```ts
 const innerTree = new FilteringExpressionsTree(FilteringLogic.And, undefined, 'Products', ['supplierId']);
 innerTree.filteringOperands.push({
@@ -97,13 +105,16 @@ tree.filteringOperands.push({
     searchTree: innerTree
 });
 ```
+
 次を呼び出すことでシリアル化できます:
+
 ```ts
 JSON.stringify(tree, null, 2);
 ```
 
 これは次のように転送されます:
-``` 
+
+```
 {
   "filteringOperands": [
     {
@@ -152,7 +163,7 @@ Ignite UI for Angular クエリ ビルダー コンポーネントを使用し�
 
 以下のサンプルには、「Suppliers」、「Categories」、「Products」 という名前の 3 つの`エンティティ`があります。
 
-「Beverages」 カテゴリに属する製品を供給するすべてのサプライヤーを見つけたいとします。データはすべてのエンティティに分散されているため、*IN* 演算子を活用し、サブクエリを作成することでタスクを実行できます。各サブクエリは `FilteringExpressionsTree` によって表され、`transformExpressionTreeToSqlQuery(tree: IExpressionTree)` メソッドを通じて SQL クエリに変換できます。
+「Beverages」 カテゴリに属する製品を供給するすべてのサプライヤーを見つけたいとします。データはすべてのエンティティに分散されているため、_IN_ 演算子を活用し、サブクエリを作成することでタスクを実行できます。各サブクエリは `FilteringExpressionsTree` によって表され、`transformExpressionTreeToSqlQuery(tree: IExpressionTree)` メソッドを通じて SQL クエリに変換できます。
 
 まず、`name` が `Beverages` であるレコードの `categoryId` を返す `categoriesTree` を作成します。これは最も内側のサブクエリです:
 
@@ -213,9 +224,9 @@ SELECT * FROM Suppliers WHERE supplierId IN (
 
 これで、`IgxQueryBuilderComponent` の `expressionsTree` プロパティを `suppliersTree` に設定できます。さらに、クエリが変更されるたびにエンドポイントへの新しいリクエストがトリガーされ、グリッドに表示される結果データが更新されます。
 
-<code-view style="height:700px" 
+<code-view style="height:700px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/query-builder-sql-sample/" >
 </code-view>
 
@@ -223,13 +234,13 @@ SELECT * FROM Suppliers WHERE supplierId IN (
 
 <div class="divider--half"></div>
 
-* [IgxQueryBuilderComponent API]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html)
-* [IgxQueryBuilderComponent スタイル]({environment:sassApiUrl}/themes#function-query-builder-theme)
+- [IgxQueryBuilderComponent API]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html)
+- [IgxQueryBuilderComponent スタイル]({environment:sassApiUrl}/themes#function-query-builder-theme)
 
 ## その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

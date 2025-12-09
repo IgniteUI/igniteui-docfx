@@ -67,7 +67,7 @@ export class AppModule {}
 Angular フォームでは、多くの場合、コンポーネントはその値を `ngModel` にバインドしたり、Angular の `ControlValueAccessor` インターフェイスの実装を必要とする `formControl` を使用したりできる必要があります。Ignite UI for Angular パッケージは、要素セレクターを使用してサポートされているウェブ コンポーネントにアタッチするディレクティブの形式で、このような実装を提供します。現在、サポートされているコンポーネントは `IgcRating` のみです。ディレクティブを使用するには、ライブラリから `IgcFormsModule` をインポートするだけです。
 
 ```typescript
-import { IgcFormsModule } from 'igniteui-angular';
+import { IgcFormsModule } from 'igniteui-angular/directives';
 // import { IgcFormsModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -87,7 +87,7 @@ export class AppModule { }
 // home.component.ts
 
 import { FormsModule } from '@angular/forms';
-import { IgcFormControlDirective } from 'igniteui-angular';
+import { IgcFormControlDirective } from 'igniteui-angular/directives';
 // import { IgcFormControlDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

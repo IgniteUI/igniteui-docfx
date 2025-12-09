@@ -8,7 +8,7 @@ _language: ja
 
 # Angular Button (ボタン) の概要
 
-Angular Button ディレクティブは、アクション可能なボタンを作成して Web ページ/アプリケーションに追加するために使用されます。簡単にカスタマイズでき、いくつかの組み込み機能を含むさまざまな Angular Button タイプがあります。デフォルトでは、AngularMaterial はネイティブの `<button>` および `<a>` 要素を使用して、アクセス可能なエクスペリエンスを提供します。 
+Angular Button ディレクティブは、アクション可能なボタンを作成して Web ページ/アプリケーションに追加するために使用されます。簡単にカスタマイズでき、いくつかの組み込み機能を含むさまざまな Angular Button タイプがあります。デフォルトでは、AngularMaterial はネイティブの `<button>` および `<a>` 要素を使用して、アクセス可能なエクスペリエンスを提供します。
 
 Ignite UI for Angular Button ディレクティブを任意の button、span、div、または anchor 要素に適用して高機能なボタンを構成できます。Flat ボタン、Contained ボタン、Outlined ボタン、FAB (フローティング アクション ボタン) の Angular ボタン タイプを使用できます。カスタマイズ可能な色、テーマを作成して Angular ボタン スタイルを変更するオプション、ユーザーがボタンのサイズを選択できるようにするオプションなどを提供します。
 
@@ -39,7 +39,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 
 ```typescript
 // app.module.ts
-import { IgxButtonModule } from 'igniteui-angular';
+import { IgxButtonModule } from 'igniteui-angular/button';
 // import { IgxButtonModule } from '@infragistics/igniteui-angular'; for licensed package
 @NgModule({
     imports: [
@@ -57,7 +57,7 @@ export class AppModule {}
 // home.component.ts
 
 ...
-import { IgxButtonDirective } from 'igniteui-angular';
+import { IgxButtonDirective } from 'igniteui-angular/button';
 // import { IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -112,7 +112,7 @@ Contained ボタンを作成するには、`igxButton` プロパティの値を�
 
 ### Icon ボタン
 
-バージョン `17.1.0` 以降、IgniteUI for Angular は、アイコンを完全に機能するボタンに変えることを目的とした新しい `igxIconButton` ディレクティブを公開します。*Icon Button* の詳細については[こちら](icon-button.md)を参照してください。
+バージョン `17.1.0` 以降、IgniteUI for Angular は、アイコンを完全に機能するボタンに変えることを目的とした新しい `igxIconButton` ディレクティブを公開します。_Icon Button_ の詳細については[こちら](icon-button.md)を参照してください。
 
 ```html
 <button igxIconButton="flat">
@@ -199,7 +199,7 @@ Contained ボタンを作成するには、`igxButton` プロパティの値を�
 ```typescript
 // app.module.ts
 ...
-import { IgxButtonGroupModule } from 'igniteui-angular';
+import { IgxButtonGroupModule } from 'igniteui-angular/button-group';
 // import { IgxButtonGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 @NgModule({
     imports: [
@@ -1580,11 +1580,11 @@ button {
 
 <div class="divider--half"></div>
 
-* [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxButton スタイル]({environment:sassApiUrl}/themes#function-button-theme)
-* [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
-* [IgxIconButtonDirective]({environment:angularApiUrl}/classes/igxiconbuttondirective.html)
-* [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
+- [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+- [IgxButton スタイル]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
+- [IgxIconButtonDirective]({environment:angularApiUrl}/classes/igxiconbuttondirective.html)
+- [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
 
 ## その他のリソース
 
@@ -1592,5 +1592,5 @@ button {
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

@@ -19,7 +19,7 @@ _language: ja
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-title: Angular Hierarchical Grid の条件付きセルのスタイル設定 - Ignite UI for Angular 
+title: Angular Hierarchical Grid の条件付きセルのスタイル設定 - Ignite UI for Angular
 _description: ユーザーが異なるセルをすばやく識別できるようにします。さまざまなセルのスタイル設定を定義します。Angular Data Grid の条件付きセル スタイル設定を使用してセルを目立たせます。
 _keywords: 条件付きのスタイル設定, ignite ui for angular, インフラジスティックス
 _license: commercial
@@ -29,6 +29,7 @@ _language: ja
 }
 
 # Angular @@igComponent 条件付きスタイル設定
+
 @@igxName コンポーネントでカスタム スタイルを提供する必要がある場合は、行レベルまたはセル レベルで行うことができます。
 
 ## @@igComponent 条件付き行のスタイル設定
@@ -51,6 +52,7 @@ Ignite UI for Angular の @@igxName コンポーネントは、カスタム ル�
 さらにこのトピックでは、両方について詳しく説明します。
 
 ### rowClasses の使用
+
 @@if (igxName === 'IgxGrid') {
 [`rowClasses`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowClasses) 入力を設定し、カスタム ルールを定義することで、@@igxName 行のスタイルを条件付きで設定できます。
 }
@@ -62,27 +64,33 @@ Ignite UI for Angular の @@igxName コンポーネントは、カスタム ル�
 }
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <!-- sample.component.html -->
 <igx-grid #grid [data]="data" [height]="'600px'" [width]="'100%'" [rowClasses]="rowClasses">
     ...
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid'){
+
 ```html
 <!-- sample.component.html -->
 <igx-tree-grid #treeGrid [data]="data" [height]="'600px'" [width]="'100%'" [rowClasses]="rowClasses">
     ...
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid  #hierarchicalGrid class="hgrid" [data]="localData" [height]="'580px'" [width]="'100%'" [rowStyles]="rowStyles">
     ...
 </igx-hierarchical-grid>
 ```
+
 }
 
 @@if (igxName === 'IgxGrid') {
@@ -115,6 +123,7 @@ public activeRowCondition = (row: RowType) => this.grid?.navigation.activeNode?.
  }
 }
 ```
+
 > [!NOTE]
 > **`::ng-deep`** または **`ViewEncapsulation.None`** を使用してカスタム スタイルを現在のコンポーネントとその子コンポーネントに適用します。
 
@@ -146,6 +155,7 @@ public activeRowCondition = (row: RowType) => this.grid?.navigation.activeNode?.
 
 
 ### rowStyles の使用
+
 列は、データ行の条件付きスタイル設定を可能にする `rowStyles` プロパティを公開するようになりました。`rowClasses` と同様、キーがスタイル プロパティであり、値が評価用の式であるオブジェクト リテラルを受け取ります。また、通常のスタイル設定 (条件なし) を適用することもできます。
 
 > `rowStyles` と `rowClasses` の両方のコールバック署名は次のとおりです:
@@ -157,6 +167,7 @@ public activeRowCondition = (row: RowType) => this.grid?.navigation.activeNode?.
 次にスタイルを定義します。
 
 @@if (igxName === 'IgxGrid') {
+
 ```typescript
 // component.ts
 public rowStyles = {
@@ -173,6 +184,7 @@ public rowStyles = {
     ...
 </igx-grid>
 ```
+
 }
 
 @@if (igxName === 'IgxTreeGrid'){
@@ -202,6 +214,7 @@ public rowStyles = {
     ...
 </igx-tree-grid>
 ```
+
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -227,6 +240,7 @@ public childRowStyles = {
     ...
 </igx-hierarchical-grid>
 ```
+
 }
 
 
@@ -259,6 +273,7 @@ public childRowStyles = {
 
 ## @@igComponent 条件付きセル スタイル設定
 ## 概要
+
 Ignite UI for Angular の @@igxName コンポーネントは、カスタム条件に基づいて 2 通りの条件付きセルのスタイル設定をサポートします。
 
 - [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) を設定して、キーと値のペアを含むオブジェクト リテラルに [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellClasses) を入力します。キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。その結果、セルのマテリアル スタイル設定が簡単にできます。
@@ -288,30 +303,38 @@ private downFontCondition = (rowData: any, columnKey: any): boolean => {
 ```
 
 ### cellClasses の使用
+
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellClasses) 入力を設定してカスタム条件を定義することにより、@@igxName の条件付きセルのスタイルを設定できます。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <!-- sample.component.html -->
 <igx-column field="BeatsPerMinute" dataType="number" [cellClasses]="beatsPerMinuteClasses"></igx-column>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid'){
+
 ```html
 <!-- sample.component.html -->
 <igx-column field="UnitPrice" header="Unit Price" [dataType]="'currency'" [pipeArgs]="formatOptions" [cellClasses]="priceClasses"></igx-column>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <!-- sample.component.html -->
 <igx-column field="GrammyNominations" header="Grammy Nominations" dataType="number" [cellClasses]="grammyClasses"></igx-column>
 ```
+
 }
 
 [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellClasses) 入力は、キーと値のペアを含むオブジェクト リテラルを受け取ります。キーは CSS クラスの名前です。値はブール値を返すコールバック関数またはブール値です。
 
 @@if (igxName === 'IgxGrid') {
+
 ```typescript
 // sample.component.ts
 
@@ -342,8 +365,10 @@ public beatsPerMinuteClasses = {
     }
 }
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid'){
+
 ```typescript
 // sample.component.ts
 
@@ -374,8 +399,10 @@ public priceClasses = {
     }
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```typescript
 // sample.component.ts
 
@@ -406,6 +433,7 @@ public grammyClasses = {
     }
 }
 ```
+
 }
 
 > [!NOTE]
@@ -452,6 +480,7 @@ public styles = {
 ```
 
 ### cellStyles の使用
+
 列の `cellStyles` プロパティを公開。列セルの条件付きスタイリングが可能になりました。`cellClasses` と同様、キーがスタイル プロパティであり、値が評価用の式であるオブジェクト リテラルを受け取ります。また、通常のスタイリングを簡単に適用できます (条件なし)。
 
 [上記のサンプル](#デモ)で作成した項目:
@@ -484,6 +513,7 @@ public evenColStyles = {
 `ngOnInit` で、@@igxName 列を動的に作成するために使用される事前定義 `columns` コレクションの各列に `cellStyles` 構成を追加します。
 
 @@if (igxName === 'IgxGrid') {
+
 ```ts
 // component.ts
 public ngOnInit() {
@@ -499,8 +529,10 @@ public ngOnInit() {
     this.applyCSS();
 }
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```ts
 // component.ts
 public ngOnInit() {
@@ -515,8 +547,10 @@ public ngOnInit() {
     this.applyCSS();
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```ts
 // component.ts
 public ngOnInit() {
@@ -532,7 +566,9 @@ public ngOnInit() {
     this.applyCSS();
 }
 ```
+
 }
+
 ```ts
 public applyCSS() {
     this.columns.forEach((column, index) => {
@@ -548,6 +584,7 @@ public updateCSS(css: string) {
 ```
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 // component.html
 <igx-grid
@@ -562,8 +599,10 @@ public updateCSS(css: string) {
     </igx-column>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 //component.html
 <igx-tree-grid
@@ -577,8 +616,10 @@ public updateCSS(css: string) {
     </igx-column>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid #hierarchicalGrid [data]="localdata"    
     [autoGenerate]="false"
@@ -590,6 +631,7 @@ public updateCSS(css: string) {
     </igx-column>
 </igx-hierarchical-grid>
 ```
+
 }
 
 
@@ -660,6 +702,7 @@ editDone(evt) {
 ```
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid #grid1 [data]="data" height="500px" width="100%" (onCellEdit)="editDone($event)">
   <igx-column field="Col1" dataType="number" [cellClasses]="backgroundClasses"></igx-column>
@@ -667,8 +710,10 @@ editDone(evt) {
   <igx-column field="Col3" header="Col3" dataType="string" [cellClasses]="backgroundClasses"></igx-column>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid #grid1 [data]="data" height="500px" width="100%" (onCellEdit)="editDone($event)">
   <igx-column field="Col1" dataType="number" [cellClasses]="backgroundClasses"></igx-column>
@@ -676,8 +721,10 @@ editDone(evt) {
   <igx-column field="Col3" header="Col3" dataType="string" [cellClasses]="backgroundClasses"></igx-column>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid #grid1 [data]="data" height="500px" width="100%" (onCellEdit)="editDone($event)">
   <igx-column field="Col1" dataType="number" [cellClasses]="backgroundClasses"></igx-column>
@@ -685,38 +732,41 @@ editDone(evt) {
   <igx-column field="Col3" header="Col3" dataType="string" [cellClasses]="backgroundClasses"></igx-column>
 </igx-hierarchical-grid>
 ```
+
 }
 
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#mixin-grid)
+- [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+- [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#mixin-grid)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [@@igComponent 概要](@@igMainTopic.md)
-* [仮想化とパフォーマンス](virtualization.md)
-* [編集](editing.md)
-* [ページング](paging.md)
-* [フィルタリング](filtering.md)
-* [ソート](sorting.md)
-* [集計](summaries.md)
-* [列の移動](column-moving.md)
-* [列のピン固定](column-pinning.md)
-* [列のサイズ変更](column-resizing.md)
-* [列の非表示](column-hiding.md)
-* [選択](selection.md)
-* [検索](search.md)
-* [ツールバー](toolbar.md)
-* [複数行ヘッダー](multi-column-headers.md)
-* [サイズ](display-density.md)
+- [@@igComponent 概要](@@igMainTopic.md)
+- [仮想化とパフォーマンス](virtualization.md)
+- [編集](editing.md)
+- [ページング](paging.md)
+- [フィルタリング](filtering.md)
+- [ソート](sorting.md)
+- [集計](summaries.md)
+- [列の移動](column-moving.md)
+- [列のピン固定](column-pinning.md)
+- [列のサイズ変更](column-resizing.md)
+- [列の非表示](column-hiding.md)
+- [選択](selection.md)
+- [検索](search.md)
+- [ツールバー](toolbar.md)
+- [複数行ヘッダー](multi-column-headers.md)
+- [サイズ](display-density.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

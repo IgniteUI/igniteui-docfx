@@ -10,7 +10,7 @@ _language: ja
 
 Ignite UI for Angular Pivot Grid は、当社の最高の [Angular コンポーネント](https://jp.infragistics.com/products/ignite-ui-angular)の 1 つであり、グループ化された値と集計のテーブルを表す UI コンポーネントであり、データを表形式で整理して要約することができます。これは、スプレッドシートまたはデータベース テーブルから取得したデータの選択された列と行を再編成および要約して、目的のレポートを取得するために使用されるデータ要約ツールです。
 
-## Angular ピボット グリッドの概要 
+## Angular ピボット グリッドの概要
 
 Angular ピボット グリッド コンポーネントは、ピボット テーブルにデータを表示し、提供されたデータセットに対して複雑な分析を実行するのに役立ちます。この洗練されたピボット グリッド コントロールは、後でクロス集計形式で表示される大量のデータを整理、集計、およびフィルタリングするために使用されます。Angular ピボット グリッドの主な機能は、行のディメンション、列のディメンション、集計、およびフィルターです。
 
@@ -41,7 +41,7 @@ Ignite UI for Angular については、「[はじめに](../general/getting-sta
 ```typescript
 // app.module.ts
 
-import { IgxPivotGridModule } from 'igniteui-angular';
+import { IgxPivotGridModule } from 'igniteui-angular/grids/pivot-grid';
 // import { IgxPivotGridModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -59,7 +59,7 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IGX_PIVOT_GRID_DIRECTIVES } from 'igniteui-angular';
+import { IGX_PIVOT_GRID_DIRECTIVES } from 'igniteui-angular/grids/pivot-grid';
 // import { IGX_PIVOT_GRID_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -105,6 +105,7 @@ Angular ピボット グリッド コンポーネントは、[`pivotConfiguratio
 ディメンションは、ドラッグアンドドロップを使用して、対応するチップを介して、ある領域から別の領域にソートしたり移動したりできます。
 
 ディメンションは、`childLevel` プロパティを介して拡張可能な階層を記述することもできます。例えば:
+
 ```typescript
    {
             memberFunction: () => 'All',
@@ -118,6 +119,7 @@ Angular ピボット グリッド コンポーネントは、[`pivotConfiguratio
     }
 
 ```
+
 この場合、ディメンションはグリッドの関連セクション (行または列) にエキスパンダーを描画し、階層の一部として子を展開または縮小ことができます。デフォルトでは、行のディメンションは最初に展開されます。この動作は、ピボット グリッドの `defaultExpandState` `@Input` を使用して制御できます。
 
 ### 事前定義されたディメンション
@@ -125,11 +127,11 @@ Angular ピボット グリッド コンポーネントは、[`pivotConfiguratio
 ピボット グリッドの一部として、構成を容易にするために、いくつかの追加の事前定義されたディメンションが公開されています:
 - `IgxPivotDateDimension`
     日付フィールドに使用できます。デフォルトで次の階層を記述します:
-    - すべての期間
-    - 年
-    - 四半期
-    - 月
-    - 完全な日付
+  - すべての期間
+  - 年
+  - 四半期
+  - 月
+  - 完全な日付
 
 次のように、行または列に設定できます:
 
@@ -213,6 +215,7 @@ public static totalMax: PivotAggregation = (members, data: any) => {
     return data.map(x => x.UnitPrice * x.UnitsSold).reduce((a, b) => Math.max(a,b));
 };
 ```
+
 ピボット値は、`displayName` プロパティも提供します。この値のカスタム名を列ヘッダーに表示するために使用できます。
 
 > [!NOTE]
@@ -302,6 +305,7 @@ public data = [
 また、アプリ開発プロセス全体を合理化したい場合は、次回の Angular アプリ開発から [WYSIWYG App Builder™](https://jp.infragistics.com/products/appbuilder) を試すことができます。
 
 ### 設定の自動生成
+
 `autoGenerateConfig` プロパティは、データ ソース フィールドに基づいてディメンションと値を自動的に生成します。
 
 - 数値フィールド:
@@ -330,18 +334,20 @@ public data = [
 | ディメンション メンバーのマージでは大文字と小文字が区別されます。| ピボット グリッドはグループを作成し、同じ (大文字と小文字を区別する) 値をマージします。ただし、ディメンションは `memberFunction` を提供し、これはそこで変更できます。`memberFunction` の結果が比較され、表示値として使用されます。|
 
 ## API リファレンス
-* [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
-* [IgxPivotDataSelectorComponent]({environment:angularApiUrl}/classes/igxpivotdataselectorcomponent.html)
+
+- [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
+- [IgxPivotDataSelectorComponent]({environment:angularApiUrl}/classes/igxpivotdataselectorcomponent.html)
 
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [Angular ピボット グリッド機能](pivot-grid-features.md)
-* [Angular ピボット グリッド カスタム集計](pivot-grid-custom.md)
+- [Angular ピボット グリッド機能](pivot-grid-features.md)
+- [Angular ピボット グリッド カスタム集計](pivot-grid-custom.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

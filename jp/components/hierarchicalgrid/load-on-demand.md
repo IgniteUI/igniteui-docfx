@@ -15,8 +15,8 @@ _language: ja
 
 ## Angular 階層グリッド ロードオンデマンドの例
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-lod/" alt="Angular 階層グリッド ロードオンデマンドの例">
 </code-view>
 
@@ -40,7 +40,7 @@ _language: ja
 
 行がはじめて展開されたときに新しく子グリッド `IgxHierarchicalGrid` が描画されるため、データを設定するために新しく作成されたグリッドの参照を取得する必要があります。そのため、各 [`IgxRowIsland`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html) コンポーネントは、特定の子アイランドに新しい子グリッドが作成されたときに発生する [`gridCreated`]({environment:angularApiUrl}/classes/igxrowislandcomponent.html#gridCreated) イベントを提供します。このイベントを使用して、新しいグリッドの参照を取得し、エンドポイントにデータを要求して適用することができます。
 
-エンドポイントには、行アイランドのキー、親行の主キー、およびその一意の識別子のみが必要なため、すべての行アイランドに対して同じメソッドを使用できます。このすべての情報は、イベント引数から直接アクセスできます。 
+エンドポイントには、行アイランドのキー、親行の主キー、およびその一意の識別子のみが必要なため、すべての行アイランドに対して同じメソッドを使用できます。このすべての情報は、イベント引数から直接アクセスできます。
 
 #### 読み込みインジケーターの設定
 
@@ -217,17 +217,17 @@ private buildUrl(event: IGridCreatedEventArgs) {
 
 ### API リファレンス
 
-* [IgxHierarchicalGridComponent]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)
-* [IgxRowIslandComponent]({environment:angularApiUrl}/classes/igxrowislandcomponent.html)
+- [IgxHierarchicalGridComponent]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)
+- [IgxRowIslandComponent]({environment:angularApiUrl}/classes/igxrowislandcomponent.html)
 
 ### その他のリソース
 
 <div class="divider--half"></div>
 
-* [Hierarchical Grid コンポーネント](hierarchical-grid.md)
+- [Hierarchical Grid コンポーネント](hierarchical-grid.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

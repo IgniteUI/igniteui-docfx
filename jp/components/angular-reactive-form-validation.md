@@ -6,13 +6,13 @@ _license: MIT
 _language: ja
 ---
 
-# Angular リアクティブ フォームの検証 
+# Angular リアクティブ フォームの検証
 
 ## Angular のリアクティブ フォームとは?
 
-Angular のリアクティブ フォームは、基になるフォーム オブジェクト モデルへの直接アクセスを提供し、フォーム入力を処理するための不変で明示的なアプローチを提供します。これらの入力の値は時間とともに変化するため、フォームの状態は、固定または柔軟性のない方法に依存したリアクティブ フォームによって管理されます。 
+Angular のリアクティブ フォームは、基になるフォーム オブジェクト モデルへの直接アクセスを提供し、フォーム入力を処理するための不変で明示的なアプローチを提供します。これらの入力の値は時間とともに変化するため、フォームの状態は、固定または柔軟性のない方法に依存したリアクティブ フォームによって管理されます。
 
-つまり、データ モデルに変更がトリガーされるたびに、いわゆる監視可能な演算子は、既存のデータ モデルを何度も更新するのではなく、新しいデータ モデルを返します。そして、それはフォームの状態をきれいに保ちます。 
+つまり、データ モデルに変更がトリガーされるたびに、いわゆる監視可能な演算子は、既存のデータ モデルを何度も更新するのではなく、新しいデータ モデルを返します。そして、それはフォームの状態をきれいに保ちます。
 
 Angular リアクティブ フォームは、次の理由により、非常にスケール可能で、再利用可能で、堅牢であると見なされます。
 
@@ -33,9 +33,9 @@ Angular のリアクティブ フォームは、不変または固定のデー�
 フォーム ロジックはコンポーネント クラスによって主導されるため、Angular リアクティブ フォームのデータ フローは適切に構造化されています。これにより、コンポーネント クラスの FormControl インスタンスに検証関数を直接追加できます。変更が発生するたびに、Angular はこれらの関数を呼び出します。
 
 
-## Angular フォーム検証とは? 
+## Angular フォーム検証とは?
 
-Angular フォーム検証は、ユーザーが Web フォームに入力した内容が正しく完全であるかどうかを検証する重要な技術プロセスです。テンプレート駆動型アプローチまたは Angular リアクティブ フォームを使用して検証を管理できます。入力内容に基づいて、フォームはユーザーが続行できるようにするか、特定のエラー メッセージを表示して、ユーザーがデータ入力のどこで問題が発生したかを知るのに役立ちます。 
+Angular フォーム検証は、ユーザーが Web フォームに入力した内容が正しく完全であるかどうかを検証する重要な技術プロセスです。テンプレート駆動型アプローチまたは Angular リアクティブ フォームを使用して検証を管理できます。入力内容に基づいて、フォームはユーザーが続行できるようにするか、特定のエラー メッセージを表示して、ユーザーがデータ入力のどこで問題が発生したかを知るのに役立ちます。
 
 どの検証が失敗したかに応じて、画面上のエラー メッセージはフィードバックを提供し、何が間違っているのか、何が正確にデータとして入力または再入力する必要があるのかを示します。一般に、アプリはフォームを使用して、ユーザーがサインアップ、ログイン、オンライン プロファイルの更新、機密情報の送信などのデータ入力タスクを実行できるようにします。
 
@@ -43,10 +43,10 @@ Angular は、フォーム入力の値が変更されるたびにフォーム検
 
 UI からのユーザー入力の検証は、テンプレート駆動型フォームまたは Angular リアクティブ フォームのいずれかを使用して実行できます。これらのフォームは両方とも、次の基本クラスに基づいて構築されています:
 
-* FormControl
-* FormGroup
-* FormArray
-* ControlValueAccessor
+- FormControl
+- FormGroup
+- FormArray
+- ControlValueAccessor
 
 ## Angular リアクティブ フォームの検証
 
@@ -183,13 +183,13 @@ export class MyComponent implements OnInit {
 
 関連トピック:
 
-* [Combo](combo.md)
-* [Select](select.md)
-* [Input Group](input-group.md)
-* [Date Picker](date-picker.md)
-* [Time Picker](time-picker.md)
+- [Combo](combo.md)
+- [Select](select.md)
+- [Input Group](input-group.md)
+- [Date Picker](date-picker.md)
+- [Time Picker](time-picker.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
