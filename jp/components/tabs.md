@@ -7,6 +7,7 @@ _language: ja
 ---
 
 # Angular Tabs (タブ) コンポーネントの概要
+
 Ignite UI for Angular Tabs は、関連するコンテンツを 1 つのタブ付きビューで整理およびグループ化することを主な目的とするフル機能のユーザー インターフェース コンポーネントです。これにより、スペースを節約し、コンテンツをよりわかりやすくします。アニメーション、テンプレート化、カスタマイズ オプションなどのさまざまな機能がパックされています。
 
 Angular のタブは、多くのコンテンツを含む Web ページをカテゴリに分類し、簡潔かつスペース効率の良い方法で表示する必要がある場合に非常に便利です。
@@ -44,7 +45,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 ...
-import { IgxTabsModule } from 'igniteui-angular';
+import { IgxTabsModule } from 'igniteui-angular/tabs';
 // import { IgxTabsModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -60,7 +61,7 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IGX_TABS_DIRECTIVES } from 'igniteui-angular';
+import { IGX_TABS_DIRECTIVES } from 'igniteui-angular/tabs';
 // import { IGX_TABS_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -156,6 +157,7 @@ Ignite UI for Angular Tabs モジュールまたはディレクティブをイ�
 <div class="divider"></div>
 
 ## Angular Tabs の配置
+
 `IgxTabs` [`tabAlignment`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabAlignment) 入力プロパティは、タブの配置と配置の方法を制御します。start、center、end、justify の 4 つの異なる値を受け入れます。
 - **Start** (デフォルト): タブ ヘッダーの幅はコンテンツ (ラベル、アイコン、両方) によって異なり、すべてのタブに同じパディングがあります。最初のタブは、タブ コンテナーの左側に配置されます。
 - **Center**: タブ ヘッダーの幅はコンテンツによって異なり、タブ コンテナーの中央を占めます。スペースが足りない場合、スクロール ボタンが表示されます。
@@ -179,7 +181,7 @@ Ignite UI for Angular Tabs モジュールまたはディレクティブをイ�
 > [!NOTE]
 > これまでアプリケーションで `igx-icon` を使用したことがない場合は、続行する前に必ず **app.module.ts** の `IgxIconModule` をインポートしてください。
 
-はじめに Material Icons をメイン アプリケーション フォルダーの 'styles.scss' ファイルにインポートします。次に、`igx-tab-header` の子として、`igxTabHeaderIcon` ディレクティブが設定された `igx-icon` を追加します。 
+はじめに Material Icons をメイン アプリケーション フォルダーの 'styles.scss' ファイルにインポートします。次に、`igx-tab-header` の子として、`igxTabHeaderIcon` ディレクティブが設定された `igx-icon` を追加します。
 
 ```css
 // styles.scss
@@ -789,25 +791,28 @@ $dark-tabs: tabs-theme(
 <div class="divider--half"></div>
 
 ## API リファレンス
+
 <div class="divider"></div>
 
-* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
-* [IgxTabsComponent]({environment:angularApiUrl}/classes/igxtabscomponent.html)
-* [IgxTabsComponent スタイル]({environment:sassApiUrl}/themes#function-tabs-theme)
-* [IgxTabItemComponent]({environment:angularApiUrl}/classes/igxtabitemcomponent.html)
-* [IgxTabHeaderComponent]({environment:angularApiUrl}/classes/igxtabheadercomponent.html)
-* [IgxTabContentComponent]({environment:angularApiUrl}/classes/igxtabcontentcomponent.html)
+- [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+- [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
+- [IgxTabsComponent]({environment:angularApiUrl}/classes/igxtabscomponent.html)
+- [IgxTabsComponent スタイル]({environment:sassApiUrl}/themes#function-tabs-theme)
+- [IgxTabItemComponent]({environment:angularApiUrl}/classes/igxtabitemcomponent.html)
+- [IgxTabHeaderComponent]({environment:angularApiUrl}/classes/igxtabheadercomponent.html)
+- [IgxTabContentComponent]({environment:angularApiUrl}/classes/igxtabcontentcomponent.html)
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
-* [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
+
+- [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

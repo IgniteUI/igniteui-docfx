@@ -20,13 +20,14 @@ _license: MIT
 
 現在、以下コンポーネントは RTL 機能の一部をサポートしています。
 
-* Grid (igx-grid)
+- Grid (igx-grid)
 
 ## RTL の例
+
 このセクションでは、フレームワークのアクセシビリティ (ARIA) サポートと、コンポーネントの`文字表記の方向`の簡単な管理を示します。
 
-<code-view style="height: 600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-rtl-sample/" alt="Angular RTL サポートの例">
 </code-view>
 

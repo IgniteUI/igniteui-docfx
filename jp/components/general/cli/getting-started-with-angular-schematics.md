@@ -6,11 +6,13 @@ _language: ja
 ---
 
 ## Ignite UI for Angular Schematics を使用した作業の開始
+
 はじめに [Ignite UI for Angular Schematics](https://github.com/IgniteUI/igniteui-cli/tree/master/packages/ng-schematics) をグローバルにインストールします。
 
 ```cmd
 npm i -g @igniteui/angular-schematics
 ```
+
 上記のインストールにより、schematics が `ng new` コマンドのコレクション パラメーターを使用できるようになります。
 
 `yarn` パッケージ マネージャーを使用している場合:
@@ -21,7 +23,7 @@ yarn global add @igniteui/angular-schematics
 
 ### ガイドの使用
 
-アプリケーションを最短でブートストラップする最も簡単な方法は、[Ignite UI for Angular Schematics を使用したステップ バイ ステップ ガイド](step-by-step-guide-using-angular-schematics.md)を使用する方法です。 
+アプリケーションを最短でブートストラップする最も簡単な方法は、[Ignite UI for Angular Schematics を使用したステップ バイ ステップ ガイド](step-by-step-guide-using-angular-schematics.md)を使用する方法です。
 
 Ignite UI for Angular Schematics を使用してガイドをアクティブにするには、次のコマンドを実行します。
 
@@ -121,7 +123,7 @@ ng add igniteui-angular
     <code>--template</code>
   </p>
   <p>
-    特定のフレームワーク タイプに異なるプロジェクト テンプレートがある場合、このオプションを使用します。 
+    特定のフレームワーク タイプに異なるプロジェクト テンプレートがある場合、このオプションを使用します。
     現在、このオプションは、Angular igx-ts プロジェクトタイプの Ignite UI でのみ使用できます。</p>
 </details>
 
@@ -134,6 +136,7 @@ Schematics には、Ignite UI for Angular コレクションと `component [temp
 ```cmd
 ng g @igniteui/angular-schematics:component grid newGrid
 ```
+
 すべての[利用可能なテンプレート](component-templates.md)のリスト。
 
 また、コンポーネントを登録するモジュールを指定するか、アプリ ナビゲーション ルートの自動生成をスキップできます。
@@ -145,7 +148,7 @@ ng g @igniteui/angular-schematics:component grid newGrid
   </p>
   <p>
     <i>注: module 引数は Angular プロジェクトにのみ適用できます。</i>
-  </p> 
+  </p>
   <p>
     新しいコンポーネントを登録するモジュールの、/src/app/ folder を基準とした module.ts ファイルのパス。
   </p>

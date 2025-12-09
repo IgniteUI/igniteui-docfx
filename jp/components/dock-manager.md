@@ -12,8 +12,8 @@ Ignite UI Dock Manager コンポーネントは、ペインでアプリケーシ
 ## Angular ドック マネージャーの例
 
 
-<code-view style="height: 600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/dock-manager-sample/" alt="Angular ドック マネージャーの例">
 </code-view>
 
@@ -22,6 +22,7 @@ Ignite UI Dock Manager コンポーネントは、ペインでアプリケーシ
 
 
 ## 使用方法
+
 ドック マネージャーは標準の [Web コンポーネント](https://developer.mozilla.org/ja-JP/docs/Web/Web_Components)であり、Angular アプリケーションで使用できます。
 
 以下の手順に従って、ドック マネージャーのパッケージを Angular プロジェクトに追加し、コンポーネントを使用するためにセットアップします。
@@ -43,6 +44,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 })
 export class AppModule {}
 ```
+
 `main.ts` ファイルの `defineCustomElements()` 関数を呼び出します。
 
 ```typescript

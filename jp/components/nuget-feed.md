@@ -13,8 +13,8 @@ Infragistics は製品版を使用するユーザーにプライベート NuGet 
 
 このトピックは、以下のセクションで構成されます。
 
--   Visual Studio で Infragistics NuGet フィードを追加
--   NuGet CLI で Infragistics NuGet フィードを追加
+- Visual Studio で Infragistics NuGet フィードを追加
+- NuGet CLI で Infragistics NuGet フィードを追加
 
 ## Visual Studio を使用した追加
 
@@ -24,8 +24,8 @@ Infragistics は製品版を使用するユーザーにプライベート NuGet 
 
 2 - [**パッケージ ソース**] セクションで、ダイアログの右上にある **[+]** アイコンをクリックして新しいパッケージ ソースを追加します。
 
--   名前を **Infragistics** に設定します。
--   ソースを **<https://packages.infragistics.com/nuget/licensed>** に設定します。
+- 名前を **Infragistics** に設定します。
+- ソースを **<https://packages.infragistics.com/nuget/licensed>** に設定します。
 
     [**更新**] ボタンをクリックし、[OK] をクリックしてダイアログを閉じます。
 

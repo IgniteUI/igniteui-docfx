@@ -122,18 +122,21 @@ Ignite UI のスペーシング システムは、コンポーネント サイ�
 このカスケード式の仕組みにより、一貫したスペーシング関係を維持しつつ、CSS カスタム プロパティだけで細かい制御が可能になります。
 
 ## API リファレンス
-* [ユーティリティ - Pad]({environment:sassApiUrl}/utilities#function-pad)
-* [ユーティリティ - Pad Inline]({environment:sassApiUrl}/utilities#function-pad-inline)
-* [ユーティリティ - Pad Block]({environment:sassApiUrl}/utilities#function-pad-block)
+
+- [ユーティリティ - Pad]({environment:sassApiUrl}/utilities#function-pad)
+- [ユーティリティ - Pad Inline]({environment:sassApiUrl}/utilities#function-pad-inline)
+- [ユーティリティ - Pad Block]({environment:sassApiUrl}/utilities#function-pad-block)
 
 ### サイズ関数とミックスイン
-* [テーマ - Sizable ミックスイン]({environment:sassApiUrl}/themes#mixin-sizable)
-* [テーマ - Sizable 関数]({environment:sassApiUrl}/themes#function-sizable)
+
+- [テーマ - Sizable ミックスイン]({environment:sassApiUrl}/themes#mixin-sizable)
+- [テーマ - Sizable 関数]({environment:sassApiUrl}/themes#function-sizable)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

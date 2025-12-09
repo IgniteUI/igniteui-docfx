@@ -6,12 +6,13 @@ _license: MIT
 _language: ja
 ---
 # Angular Banner (バナー) コンポーネントの概要
+
 <p class="highlight">Angular Banner コンポーネントは、スナックバーより長い時間の表示でダイアログより控えめのメッセージを簡単に表示できます。Banner にカスタム動作ボタンやアイコンの表示を設定できます。</p>
 
 ## Angular Banner の例
 
-<code-view style="height: 530px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 530px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-1/" alt="Angular Banner の例">
 </code-view>
 
@@ -33,7 +34,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 ...
-import { IgxBannerModule } from 'igniteui-angular';
+import { IgxBannerModule } from 'igniteui-angular/banner';
 // import { IgxBannerModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -50,7 +51,7 @@ export class AppModule {}
 // home.component.ts
 
 ...
-import { IGX_BANNER_DIRECTIVES } from 'igniteui-angular';
+import { IGX_BANNER_DIRECTIVES } from 'igniteui-angular/banner';
 // import { IGX_BANNER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -74,7 +75,7 @@ Ignite UI for Angular Banner モジュールまたはディレクティブをイ
 
 ### Banner の表示
 
-Banner コンポーネントを表示するには、ボタン クリックで [`open()`]({environment:angularApiUrl}/classes/igxbannercomponent.html#open) 呼び出します。バナーは、要素がページ テンプレートに挿入された場所にその他すべてのコンテンツを移動して表示されます。通常、閉じるためのユーザー操作をほとんど必要としない非侵入型コンテンツを表示します。 
+Banner コンポーネントを表示するには、ボタン クリックで [`open()`]({environment:angularApiUrl}/classes/igxbannercomponent.html#open) 呼び出します。バナーは、要素がページ テンプレートに挿入された場所にその他すべてのコンテンツを移動して表示されます。通常、閉じるためのユーザー操作をほとんど必要としない非侵入型コンテンツを表示します。
 
 ```html
 <!--banner.component.html-->
@@ -150,15 +151,15 @@ Banner コンポーネントを表示するには、ボタン クリックで [`
 ```
 
 
-<code-view style="height: 530px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 530px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-2/" >
 </code-view>
 
 
 ### カスタム アニメーションの適用
 
-Banner コンポーネントには、アニメーションのオープンとクローズのカスタム設定を適用できる [`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationSettings) プロパティがあります。開発者は、自分で定義したアニメーションと、[`アニメーション スイート`]({environment:sassApiUrl}/animations)のアニメーションから選択できます。バナーで使用されるデフォルト アニメーションは、`growVerIn` が開始、`growVerOut` が終了です。 
+Banner コンポーネントには、アニメーションのオープンとクローズのカスタム設定を適用できる [`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationSettings) プロパティがあります。開発者は、自分で定義したアニメーションと、[`アニメーション スイート`]({environment:sassApiUrl}/animations)のアニメーションから選択できます。バナーで使用されるデフォルト アニメーションは、`growVerIn` が開始、`growVerOut` が終了です。
 
 スライドインまたはスライドアウトするためにバナーが使用するアニメーションを変更します。
 
@@ -171,7 +172,8 @@ Banner コンポーネントには、アニメーションのオープンとク�
 
 ```typescript
 // banner.component.ts
-import { IgxBannerComponent, slideInLeft, slideOutRight } from 'igniteui-angular'
+import { IgxBannerComponent } from 'igniteui-angular/banner';
+import { slideInLeft, slideOutRight } from 'igniteui-angular/animations'
 // import { IgxBannerComponent, slideInLeft, slideOutRight } from '@infragistics/igniteui-angular'; for licensed package
 ...
 export class MyBannerComponent {
@@ -185,14 +187,15 @@ export class MyBannerComponent {
 ```
 
 
-<code-view style="height: 530px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 530px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-3/" >
 </code-view>
 
 
 ### イベントにバインド
-Banner コンポーネントは状態の変更時にイベントを発生します。[`opening`]({environment:angularApiUrl}/classes/igxbannercomponent.html#opening) と [`opened`]({environment:angularApiUrl}/classes/igxbannercomponent.html#opened) が Banner が表示される (前と後に) ときに呼び出されます。一方、[`closing`]({environment:angularApiUrl}/classes/igxbannercomponent.html#closing) と [`closed`]({environment:angularApiUrl}/classes/igxbannercomponent.html#closed) は Banner が閉じるときにエミットされます。*ing* イベント (`opening`、`closing`) はキャンセル可能です。`ICancelEventArgs` インターフェイスを使用してオブジェクトは `cancel` プロパティを持ちます。`cancel` プロパティを true に設定します。対応するエンド操作とイベントはトリガーされません。たとえば、`opening` をキャンセルした場合、Banner の `open` メソッドは完了せずに Banner が表示されません。
+
+Banner コンポーネントは状態の変更時にイベントを発生します。[`opening`]({environment:angularApiUrl}/classes/igxbannercomponent.html#opening) と [`opened`]({environment:angularApiUrl}/classes/igxbannercomponent.html#opened) が Banner が表示される (前と後に) ときに呼び出されます。一方、[`closing`]({environment:angularApiUrl}/classes/igxbannercomponent.html#closing) と [`closed`]({environment:angularApiUrl}/classes/igxbannercomponent.html#closed) は Banner が閉じるときにエミットされます。_ing_ イベント (`opening`、`closing`) はキャンセル可能です。`ICancelEventArgs` インターフェイスを使用してオブジェクトは `cancel` プロパティを持ちます。`cancel` プロパティを true に設定します。対応するエンド操作とイベントはトリガーされません。たとえば、`opening` をキャンセルした場合、Banner の `open` メソッドは完了せずに Banner が表示されません。
 
 発生したオブジェクトへバインドしたイベントをキャンセルするために `cancel` プロパティに `true` に設定します。
 
@@ -202,6 +205,7 @@ Banner コンポーネントは状態の変更時にイベントを発生しま�
         ...
     </igx-banner>
 ```
+
 ```typescript
 // banner.component.ts
 ...
@@ -212,6 +216,7 @@ export class MyBannerComponent {
     }
 }
 ```
+
 > [!NOTE]
 > 上記が適用されるとオープニング イベントが常にキャンセルされるため、Banner が開くことはありません。
 
@@ -250,8 +255,8 @@ export class MyBannerComponent {
 最後に、WiFi の状態に関するメッセージを表示する `toast` を追加します。以下はテンプレート化したバナーのデモです。
 
 
-<code-view style="height: 530px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 530px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/banner-advanced-sample/" >
 </code-view>
 
@@ -284,9 +289,9 @@ $custom-banner-theme: banner-theme(
 @include css-vars($custom-banner-theme);
 ```
 
-<code-view style="height: 530px" 
+<code-view style="height: 530px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/banner-styling/" >
 </code-view>
 
@@ -294,28 +299,31 @@ $custom-banner-theme: banner-theme(
 <div class="divider--half"></div>
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
-* [IgxBannerComponent]({environment:angularApiUrl}/classes/igxbannercomponent.html)
-* [IgxBannerActionsDirective]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html)
-* [IgxBannerComponent スタイル]({environment:sassApiUrl}/themes#function-banner-theme)
+- [IgxBannerComponent]({environment:angularApiUrl}/classes/igxbannercomponent.html)
+- [IgxBannerActionsDirective]({environment:angularApiUrl}/classes/igxbanneractionsdirective.html)
+- [IgxBannerComponent スタイル]({environment:sassApiUrl}/themes#function-banner-theme)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
-* [IgxCardComponent]({environment:angularApiUrl}/classes/igxcardcomponent.html)
-* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
-* [IgxToastComponent]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
+- [IgxCardComponent]({environment:angularApiUrl}/classes/igxcardcomponent.html)
+- [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+- [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
+- [IgxToastComponent]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
-* [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
-* [IgxExpansionPanel テーマ]({environment:sassApiUrl}/themes#function-expansion-panel-theme)
+
+- [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxExpansionPanel テーマ]({environment:sassApiUrl}/themes#function-expansion-panel-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

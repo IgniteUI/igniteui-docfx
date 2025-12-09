@@ -6,6 +6,7 @@ _language: ja
 ---
 
 # Bootstrap のテーマ
+
 <p class="highlight">
 
 Ignite UI for Angular テーマ エンジンは、Bootstrap のマークアップと CSS に基づいた人気のある [`NG Bootstrap`](https://ng-bootstrap.github.io/) などの他のコンポーネント ライブラリと組み合わせて使用できます。
@@ -18,8 +19,8 @@ Ignite UI for Angular は、マテリアル ベースの UI ウィジェット�
 
 ## デモ
 
-<code-view style="height: 1000px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 1000px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/theming/bootstrap-sample/" >
 </code-view>
 
@@ -29,13 +30,13 @@ Ignite UI for Angular は、マテリアル ベースの UI ウィジェット�
 
 ### NG Bootstrap の追加
 
-Angular CLI を使用しており、既存の Angular プロジェクトがある場合、以下のコマンドで NG Bootstrap をインストールできます。 
+Angular CLI を使用しており、既存の Angular プロジェクトがある場合、以下のコマンドで NG Bootstrap をインストールできます。
 
-```cmd 
+```cmd
 ng add @ng-bootstrap/ng-bootstrap
 ```
 
-インストール後、NG Bootstrap メイン モジュールを *app.module.ts* ファイルにインポートする必要があります。 
+インストール後、NG Bootstrap メイン モジュールを _app.module.ts_ ファイルにインポートする必要があります。
 
 ```ts
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -51,7 +52,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 これで、アプリケーションで NG Bootstrap コンポーネントを使用する準備が整いました。Bootstrap ライブラリの使用方法の詳細については、[`公式ドキュメント`](https://ng-bootstrap.github.io/#/getting-started)を参照してください。
 
-### Ignite UI for Angular の追加 
+### Ignite UI for Angular の追加
 
 Ignite UI for Angular パッケージをすべての依存関係、フォント インポート、およびスタイル参照と共にインストールするには、プロジェクトで以下のコマンドを実行します。
 
@@ -59,11 +60,11 @@ Ignite UI for Angular パッケージをすべての依存関係、フォント 
 ng add igniteui-angular
 ```
 
-次に、*app.module.ts* ファイルにそれぞれのモジュールをインポートして Ignite UI コンポーネントを使用できます。
+次に、_app.module.ts_ ファイルにそれぞれのモジュールをインポートして Ignite UI コンポーネントを使用できます。
 
 ```ts
 // manually addition of the Igx Avatar component 
-import { IgxAvatarModule } from 'igniteui-angular';
+import { IgxAvatarModule } from 'igniteui-angular/avatar';
 // import { IgxAvatarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -79,7 +80,7 @@ import { IgxAvatarModule } from 'igniteui-angular';
 
 ## コンポーネント
 
-デモ サンプルの実行方法を見てみましょう。Ignite UI コンポーネントと NG Bootstrap コンポーネントを組み合わせたもので、1 つのアプリケーションにうまく収まります。この例のナビゲーションは、[`igx-buttons`]({environment:angularApiUrl}/classes/igxbuttondirective.html) および [`igx-avatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) とともに bootstrap [`navbar`](https://getbootstrap.com/docs/4.0/components/navbar/) を使用して作成されます。[Campaigns] ボタンの下の [`dropdown`](https://ng-bootstrap.github.io/#/components/dropdown/examples) も bootstrap ライブラリから取得されます。ナビゲーションの下で、[`igx-card`]({environment:angularApiUrl}/classes/igxcardcomponent.html) コンポーネントを使用して統計を表示します。カード内に複数の項目を配置しました - [`igx-avatars`]({environment:angularApiUrl}/classes/igxavatarcomponent.html)、[`igx-icons`]({environment:angularApiUrl}/classes/igxiconcomponent.html)、[`buttons`](https://getbootstrap.com/docs/4.0/components/buttons/) および [`ngb-ratings`](https://ng-bootstrap.github.io/#/components/rating/examples)。 
+デモ サンプルの実行方法を見てみましょう。Ignite UI コンポーネントと NG Bootstrap コンポーネントを組み合わせたもので、1 つのアプリケーションにうまく収まります。この例のナビゲーションは、[`igx-buttons`]({environment:angularApiUrl}/classes/igxbuttondirective.html) および [`igx-avatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) とともに bootstrap [`navbar`](https://getbootstrap.com/docs/4.0/components/navbar/) を使用して作成されます。[Campaigns] ボタンの下の [`dropdown`](https://ng-bootstrap.github.io/#/components/dropdown/examples) も bootstrap ライブラリから取得されます。ナビゲーションの下で、[`igx-card`]({environment:angularApiUrl}/classes/igxcardcomponent.html) コンポーネントを使用して統計を表示します。カード内に複数の項目を配置しました - [`igx-avatars`]({environment:angularApiUrl}/classes/igxavatarcomponent.html)、[`igx-icons`]({environment:angularApiUrl}/classes/igxiconcomponent.html)、[`buttons`](https://getbootstrap.com/docs/4.0/components/buttons/) および [`ngb-ratings`](https://ng-bootstrap.github.io/#/components/rating/examples)。
 
 <img src="../../../images/igx-cards.png" width="100%">
 
@@ -97,7 +98,7 @@ import { IgxAvatarModule } from 'igniteui-angular';
 
 ## スタイル設定
 
-Ignite UI テーマ エンジンを使用してコンポーネントのスタイル設定を開始するには、グローバル テーマのベース ファイルとなる scss ファイルを作成します。このファイルを `_variables.scss` と呼びます。次に、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。 
+Ignite UI テーマ エンジンを使用してコンポーネントのスタイル設定を開始するには、グローバル テーマのベース ファイルとなる scss ファイルを作成します。このファイルを `_variables.scss` と呼びます。次に、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 // _variables.scss
@@ -105,7 +106,7 @@ Ignite UI テーマ エンジンを使用してコンポーネントのスタイ
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 ### パレット
 
@@ -209,7 +210,7 @@ Ignite UI for Angular には、[Bootstrap 4](https://getbootstrap.com/) ライ�
 }
 ```
 
-Ignite UI パレットに対応する値がない `$theme-colors` マップの `light` カラーと `dark` カラーは、当社の任意により、他の値に置き換えることができます。次に例を示します。 
+Ignite UI パレットに対応する値がない `$theme-colors` マップの `light` カラーと `dark` カラーは、当社の任意により、他の値に置き換えることができます。次に例を示します。
 
 ```scss
 $custom-light: color($light-bootstrap-palette, "gray", 100);
@@ -229,7 +230,7 @@ $custom-dark: color($light-bootstrap-palette, "gray", 800);
 
 #### Dark モード
 
-Dark バリエーションには、新しく作成した `$custom-dark-palette` を使用します。`dark` クラス スタイルに追加し、`$theme-colors` マップを新しい値で変更する必要があります。 
+Dark バリエーションには、新しく作成した `$custom-dark-palette` を使用します。`dark` クラス スタイルに追加し、`$theme-colors` マップを新しい値で変更する必要があります。
 
 Ignite UI for Angular のすべてのコンポーネントは渡されたパレット カラーを使用するため、追加の調整なしで dark モードにうまくフィットします。ただし、ng-bootstrap コンポーネントのスタイル設定を変更する必要があります。
 
@@ -336,7 +337,7 @@ Bootstrap `navbar` は背景色に CSS クラスを使用します。サンプ�
 
 ### タイポグラフィ
 
-Ignite UI for Angular は、テーマごとに 4 つのデフォルト タイプ スケールを公開します。これは、[`typography`]({environment:sassApiUrl}/typography#mixin-typography) ミックスイン内でアプリケーションのグローバル タイポグラフィ スタイルを定義するために使用できます。この例では、bootstrap で定義済みの `typeface` および `type-scale` を適用しますが、必要に応じてカスタムの書体を作成できます。 
+Ignite UI for Angular は、テーマごとに 4 つのデフォルト タイプ スケールを公開します。これは、[`typography`]({environment:sassApiUrl}/typography#mixin-typography) ミックスイン内でアプリケーションのグローバル タイポグラフィ スタイルを定義するために使用できます。この例では、bootstrap で定義済みの `typeface` および `type-scale` を適用しますが、必要に応じてカスタムの書体を作成できます。
 
 ```scss
 :host {
@@ -345,29 +346,31 @@ Ignite UI for Angular は、テーマごとに 4 つのデフォルト タイプ
 ```
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
-* [Light Bootstrap パレット]({environment:sassApiUrl}/palettes#variable-light-bootstrap-palette)
-* [Dark Bootstrap パレット]({environment:sassApiUrl}/palettes#variable-dark-bootstrap-palette)
-* [Light Bootstrap テーマ]({environment:sassApiUrl}/themes#mixin-bootstrap-light-theme)
-* [Dark Bootstrap テーマ]({environment:sassApiUrl}/themes#mixin-bootstrap-dark-theme)
-* [Palette Function]({environment:sassApiUrl}/palettes#function-palette)
-* [Typography Mixin]({environment:sassApiUrl}/typography#mixin-typography)
+- [Light Bootstrap パレット]({environment:sassApiUrl}/palettes#variable-light-bootstrap-palette)
+- [Dark Bootstrap パレット]({environment:sassApiUrl}/palettes#variable-dark-bootstrap-palette)
+- [Light Bootstrap テーマ]({environment:sassApiUrl}/themes#mixin-bootstrap-light-theme)
+- [Dark Bootstrap テーマ]({environment:sassApiUrl}/themes#mixin-bootstrap-dark-theme)
+- [Palette Function]({environment:sassApiUrl}/palettes#function-palette)
+- [Typography Mixin]({environment:sassApiUrl}/typography#mixin-typography)
 
-関連トピック: 
+関連トピック:
 
-* [パレット](../sass/palettes.md)
-* [コンポーネント テーマ](../sass/component-themes.md)
-* [タイポグラフィ](../sass/typography.md)
-* [Avatar コンポーネント](../../avatar.md)
-* [Button コンポーネント](../../button.md)
-* [Dialog コンポーネント](../../dialog.md)
-* [Icon コンポーネント](../../icon.md)
-* [List コンポーネント](../../list.md)
+- [パレット](../sass/palettes.md)
+- [コンポーネント テーマ](../sass/component-themes.md)
+- [タイポグラフィ](../sass/typography.md)
+- [Avatar コンポーネント](../../avatar.md)
+- [Button コンポーネント](../../button.md)
+- [Dialog コンポーネント](../../dialog.md)
+- [Icon コンポーネント](../../icon.md)
+- [List コンポーネント](../../list.md)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

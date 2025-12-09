@@ -12,8 +12,8 @@ _language: ja
 
 ## Angular Icon の例
 
-<code-view style="height: 75px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 75px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/icon-sample-1/" alt="Angular Icon の例">
 </code-view>
 
@@ -34,7 +34,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 ```typescript
 // app.module.ts
 
-import { IgxIconModule } from 'igniteui-angular';
+import { IgxIconModule } from 'igniteui-angular/icon';
 // import { IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -52,7 +52,7 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IgxIconComponent } from 'igniteui-angular';
+import { IgxIconComponent } from 'igniteui-angular/icon';
 // import { IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -127,9 +127,9 @@ SVG 画像はアイコンとして使用できます。はじめに [`IgxIconSer
 
 [`addSvgIcon`]({environment:angularApiUrl}/classes/igxiconservice.html#addSvgIcon) メソッドを SVG ファイルをキャッシュにインポートするために使用します。SVG をキャッシュした場合、アプリケーションのどこでも使用できるようになります。アイコン名とファイル URL がメソッドに必須のパラメーターです。ファミリも指定できます。HTML マークアップの SVG ファイルを使用できます。または `addSvgIconFromText` メソッドを使用して SVG ファイルをインポートして、SVC テキスト コンテンツを使用できます。
 
-* 同じ名前のアイコンが 2 つある場合に同じファミリ SVG アイコンが優先順位に従って表示されます。
-* SVG ファイルの画像の幅と高さは指定しないことをお勧めします。
-* 追加のポリフィル スクリプトがインターネット エクスプローラーで必要な場合があります。
+- 同じ名前のアイコンが 2 つある場合に同じファミリ SVG アイコンが優先順位に従って表示されます。
+- SVG ファイルの画像の幅と高さは指定しないことをお勧めします。
+- 追加のポリフィル スクリプトがインターネット エクスプローラーで必要な場合があります。
 
 ```typescript
 constructor(private iconService: IgxIconService) { }
@@ -144,8 +144,8 @@ public ngOnInit() {
 <igx-icon name="contains" family="filter-icons"></igx-icon>
 ```
 
-<code-view style="height: 70px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 70px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/svg-icon-sample/" >
 </code-view>
 
@@ -180,8 +180,8 @@ public ngOnInit() {
 }
 ```
 
-<code-view style="height: 70px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 70px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/material-symbols/" >
 </code-view>
 
@@ -240,9 +240,9 @@ $custom-icon-theme: icon-theme(
 
 ### デモ
 
-<code-view style="height:75px" 
+<code-view style="height:75px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/icon-styling/" alt="Angular Icon の例">
 </code-view>
 
@@ -353,8 +353,8 @@ igx-icon {
 
 <div class="divider--half"></div>
 
-* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxIconComponent スタイル]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+- [IgxIconComponent スタイル]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## その他のリソース
 
@@ -362,5 +362,5 @@ igx-icon {
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

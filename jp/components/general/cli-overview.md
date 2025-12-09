@@ -6,6 +6,7 @@ _language: ja
 ---
 
 ## Angular Schematics & Ignite UI CLI
+
 CLI ツールでは、Ignite UI for Angular の定義済みのプロジェクト テンプレートが含まれ、アプリ開発を効率的に行うことができます。プロジェクトにさらに追加できる Ignite UI for Angular コンポーネントを備えたビューの選択により、開発者の生産性が大幅に向上します。
 
 [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli) は、さまざまなフレームワーク用のアプリケーションを作成およびスキャフォールディングするためのスタンドアロン コマンドライン ツールです。使用方法の詳細と例については、[Ignite UI CLI を使用した作業の開始](./cli/getting-started-with-cli.md)トピックを参照してください。

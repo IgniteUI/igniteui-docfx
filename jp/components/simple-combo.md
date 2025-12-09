@@ -47,7 +47,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 次に、**app.module.ts** ファイルに `IgxSimpleComboModule` をインポートします。
 
 ```typescript
-import { IgxSimpleComboModule } from 'igniteui-angular';
+import { IgxSimpleComboModule } from 'igniteui-angular/simple-combo';
 // import { IgxSimpleComboModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -65,7 +65,7 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IGX_SIMPLE_COMBO_DIRECTIVES } from 'igniteui-angular';
+import { IGX_SIMPLE_COMBO_DIRECTIVES } from 'igniteui-angular/simple-combo';
 // import { IGX_SIMPLE_COMBO_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -105,8 +105,8 @@ export class MySimpleComboComponent implements OnInit {
 
 Simple ComboBox は複雑なデータ (つまりオブジェクト) の配列にバインドされているため、選択した項目を処理するためにコントロールが使用するプロパティを指定する必要があります。このコントロールは、[valueKey]({environment:angularApiUrl}/classes/IgxSimpleComboComponent.html#valueKey) と [displayKey]({environment:angularApiUrl}/classes/IgxSimpleComboComponent.html#displayKey) の 2 つの `@Input` プロパティを公開します:
 
- - `valueKey` - **オプション、オブジェクト配列に推奨** - Simple ComboBox の選択のためにデータ エントリのどのプロパティを保存するかを指定します。`valueKey` を省略すると、Simple ComboBox 値はデータ エントリへの参照を使用します (つまり、選択は `igxSimpleCombo.data` からのエントリの配列になります)。
- - `displayKey` - **オブジェクト配列に必要** - 項目のテキストに使用されるプロパティを指定します。`displayKey` に値が指定されていない場合、Simple ComboBox は指定された `valueKey` (存在する場合) を使用します。
+- `valueKey` - **オプション、オブジェクト配列に推奨** - Simple ComboBox の選択のためにデータ エントリのどのプロパティを保存するかを指定します。`valueKey` を省略すると、Simple ComboBox 値はデータ エントリへの参照を使用します (つまり、選択は `igxSimpleCombo.data` からのエントリの配列になります)。
+- `displayKey` - **オブジェクト配列に必要** - 項目のテキストに使用されるプロパティを指定します。`displayKey` に値が指定されていない場合、Simple ComboBox は指定された `valueKey` (存在する場合) を使用します。
 
 この場合、Simple ComboBox に各都市の `name` を表示し、Simple ComboBox の値に各都市の `id` を保存する必要があります。したがって、これらのプロパティを Simple ComboBox の `displayKey` と `valueKey` にそれぞれ提供します。
 
@@ -249,6 +249,7 @@ Simple ComboBox が開かれ、リスト項目がフォーカスされている�
 <div class="divider--half"></div>
 
 ### テンプレートの構成
+
 Simple ComboBox の API を使用して、あるコンポーネントから選択した項目を取得し、次のコンポーネントのデータ ソースを読み込んで、必要に応じて選択とデータ ソースをクリアします。
 
 ```html
@@ -277,6 +278,7 @@ Simple ComboBox の API を使用して、あるコンポーネントから選�
 ```
 
 ### コンポーネント定義
+
 ```typescript
 export class SimpleComboCascadingComponent implements OnInit {
     public selectedCountry: Country;
@@ -313,6 +315,7 @@ export class SimpleComboCascadingComponent implements OnInit {
 Ignite UI for Angular Simple ComboBox コンポーネントは、コンボボックスをリモート サービスにバインドし、要求に応じてデータを取得できる API を公開します。
 
 ### デモ
+
 以下のサンプルは、[dataPreLoad]({environment:angularApiUrl}/classes/IgxSimpleComboComponent.html#dataPreLoad) プロパティを使用してリモート データの新しいチャンクをロードし、[ComboBox リモート バインディング](combo-remote.md)で説明されている手順に従うリモート バインディングを示しています。
 
 <code-view style="height: 400px;"
@@ -398,31 +401,34 @@ $custom-drop-down-theme: drop-down-theme(
 > Simple ComboBox は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` 制限は Simple ComboBox に対して有効です。詳細については、[igxForOf 既知の制限](for-of.md#既知の制限) の既知の問題のセクションを参照してください。
 
 ## API まとめ
+
 <div class="divider--half"></div>
 
-* [IgxSimpleComboComponent]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html)
-* [IgxComboComponent スタイル]({environment:sassApiUrl}/themes#function-combo-theme)
+- [IgxSimpleComboComponent]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html)
+- [IgxComboComponent スタイル]({environment:sassApiUrl}/themes#function-combo-theme)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
-* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
-* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+- [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
+- [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
 ## テーマの依存関係
-* [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
+
+- [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
+- [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [コンボボックス コンポーネント](combo-features.md)
-* [コンボボックス リモート バインディング](combo-remote.md)
-* [コンボボックス テンプレート](combo-templates.md)
-* [テンプレート駆動フォームの統合](input-group.md)
-* [リアクティブ フォームの統合](angular-reactive-form-validation.md)
+- [コンボボックス コンポーネント](combo-features.md)
+- [コンボボックス リモート バインディング](combo-remote.md)
+- [コンボボックス テンプレート](combo-templates.md)
+- [テンプレート駆動フォームの統合](input-group.md)
+- [リアクティブ フォームの統合](angular-reactive-form-validation.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

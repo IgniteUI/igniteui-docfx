@@ -17,9 +17,9 @@ Ignite UI CSV Exporter サービスは、文字分割値 (CSV) 形式で生デ�
 ## Angular CSV Exporter の例
 
 
-<code-view style="height: 150px;" 
+<code-view style="height: 150px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           explicit-editor="stackblitz" 
+           explicit-editor="stackblitz"
            iframe-src="{environment:demosBaseUrl}/services/export-csv/" alt="Angular CSV Exporter の例">
 </code-view>
 
@@ -31,7 +31,7 @@ Ignite UI CSV Exporter をインスタンス化するには、[`IgxCsvExporterSe
 // app.module.ts
 
 ...
-import { IgxCsvExporterService } from 'igniteui-angular';
+import { IgxCsvExporterService } from 'igniteui-angular/grids/core';
 // import { IgxCsvExporterService } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -58,7 +58,7 @@ Exporter サービスにアクセスするには、コンポーネントのコ�
 // component.ts
 
 ...
-import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes } from 'igniteui-angular';
+import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes } from 'igniteui-angular/grids/core';
 // import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
@@ -95,7 +95,8 @@ CSV Exporter サービスも [**IgxGrid**](grid/grid.md) からのデータを C
 // component.ts
 
 ...
-import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes, IgxGridComponent } from 'igniteui-angular';
+import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes } from 'igniteui-angular/grids/core';
+import { IgxGridComponent } from 'igniteui-angular/grids/grid';
 // import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes, IgxGridComponent } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
@@ -117,7 +118,7 @@ public exportButtonHandler() {
 ```
 
 
-<code-view style="height: 300px;" 
+<code-view style="height: 300px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz"
            iframe-src="{environment:demosBaseUrl}/services/export-csv-sample-1/" >
@@ -128,8 +129,8 @@ public exportButtonHandler() {
 ## エクスポート形式のカスタマイズ
 
 CSV Exporter は複数のエクスポート形式タイプをサポートします。エクスポート形式は以下の方法で指定できます。
-* [`IgxCsvExporterOptions`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html) オブジェクトのコンストラクターの 2 番目の引数として指定。
-* [`IgxCsvExporterOptions`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html) オブジェクトの [`fileType`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html#filetype) プロパティを使用して指定。
+- [`IgxCsvExporterOptions`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html) オブジェクトのコンストラクターの 2 番目の引数として指定。
+- [`IgxCsvExporterOptions`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html) オブジェクトの [`fileType`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html#filetype) プロパティを使用して指定。
 
 別のエクスポート形式は別のファイル拡張子および区切り記号があります。以下の表はエクスポート形式を相対するファイル拡張子および区切り記号にマップします。
 
@@ -166,13 +167,13 @@ this.csvExportService.export(this.igxGrid1, new IgxCsvExporterOptions('ExportedD
 
 以下は、CSV Exporter サービスのその他の API です。
 
-* [IgxCsvExporterService API]({environment:angularApiUrl}/classes/igxcsvexporterservice.html)
-* [IgxCsvExporterOptions API]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html)
+- [IgxCsvExporterService API]({environment:angularApiUrl}/classes/igxcsvexporterservice.html)
+- [IgxCsvExporterOptions API]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html)
 
 使用したその他のコンポーネント:
 
-* [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+- [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 
 <div class="divider"></div>
 
@@ -181,5 +182,5 @@ this.csvExportService.export(this.igxGrid1, new IgxCsvExporterOptions('ExportedD
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

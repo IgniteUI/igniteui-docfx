@@ -20,8 +20,8 @@ _language: ja
 
 ピボット グリッド コンポーネントには、以下で説明するように、そのディメンションに関連する追加の機能があります。
 
-<code-view style="height: 870px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 870px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-features/" alt="Angular ピボット セレクターを備えたピボット グリッドの例">
 </code-view>
 
@@ -117,6 +117,7 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 複数の行/列にまたがるグループを作成する複数の行または列のディメンションがある場合、選択は、選択されたグループに属するすべてのセルに適用されます。
 
 ## スーパー コンパクト モード
+
 `IgxPivotGrid` コンポーネントは、`superCompactMode` `@Input` を提供します。一度にたくさんのセルが画面に表示させる必要がある場合に適しています。有効にすると、このオプションはピボット グリッドの `ig-size` 変数を無視します。`superCompactMode` を有効にすると、`superCompactMode` オプションがない子コンポーネント (`IgxChip` など) ごとに `ig-size` 変数が `ig-size-small` に設定されます。
 
 ```html
@@ -130,6 +131,7 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 ## 行ディメンションのヘッダー
 
 バージョン `18.0.0` 以降では、Ignite UI for Angular の幅値のヘッダーは `pivotUI` オプションを通じて有効にできます。
+
 ```html
 <igx-pivot-grid [pivotUI]="{ showRowHeaders: true }">
 </igx-pivot-grid>
@@ -173,11 +175,12 @@ rows: [
 ```ts
 public pivotUI: IPivotUISettings = { rowLayout: PivotRowLayoutType.Horizontal, horizontalSummariesPosition: PivotSummaryPosition.Bottom };
 ```
+
 >[!NOTE]
 > 行集計関連のオプション (`horizontalSummary` および `horizontalSummariesPosition`) は、`Horizontal` レイアウト モードにのみ適用されます。
 
-<code-view style="height: 870px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 870px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-layout/" alt="水平行ディメンション レイアウトの Angular ピボット グリッド">
 </code-view>
 
@@ -189,6 +192,7 @@ public pivotUI: IPivotUISettings = { rowLayout: PivotRowLayoutType.Horizontal, h
 キーボードの矢印を使用すると、現在の領域内でのみアクティブな要素をナビゲートできます。
 
 ### ディメンションのドラッグアンドドロップ
+
 ディメンションはチップで表現され、ドラッグアンドドロップが可能です。
 すべてのチップは、ドラッグアンドドロップでエリア内の順序を変更できます。
 `rows`、`column`、`filter` (ディメンション チップ) のチップは、これらの領域のいずれかから他の任意の場所に移動できます。
@@ -198,19 +202,21 @@ public pivotUI: IPivotUISettings = { rowLayout: PivotRowLayoutType.Horizontal, h
 >ピボット グリッドのチップをピボット データ セレクターに移動したり、ピボット データ セレクターの項目をピボット グリッドに移動したりすることはできません。
 
 ## API リファレンス
-* [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
-* [IgxPivotDataSelectorComponent]({environment:angularApiUrl}/classes/igxpivotdataselectorcomponent.html)
+
+- [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
+- [IgxPivotDataSelectorComponent]({environment:angularApiUrl}/classes/igxpivotdataselectorcomponent.html)
 
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [Angular ピボット グリッド機能](pivot-grid-features.md)
-* [Angular ピボット グリッド カスタム集計](pivot-grid-custom.md)
+- [Angular ピボット グリッド機能](pivot-grid-features.md)
+- [Angular ピボット グリッド カスタム集計](pivot-grid-custom.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
 

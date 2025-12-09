@@ -11,10 +11,11 @@ _language: ja
 <p class="highlight">Ignite UI for Angular Navigation Drawer コンポーネントはサイド ナビゲーション コンテナーです。コンテンツの上からスライドインまたはスライドアウト、もしくはコンテンツ内で展開/縮小するためにピン固定できます。ミニ バージョンが閉じている場合もナビゲーションへのクイック アクセスを提供します。Navigation Drawer はレスポンシブ モード選択およびタッチ ジェスチャをサポートします。コンテンツは、デフォルトのメニュー項目スタイル設定を使用する他、カスタマイズも可能です。</p>
 
 ## Angular Navigation Drawer の例
+
 <div class="divider--half"></div>
 
-<code-view style="height: 500px; border: 1px solid #D4D4D4;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 500px; border: 1px solid #D4D4D4;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-simple/" alt="Angular Navigation Drawer 例">
 </code-view>
 
@@ -30,7 +31,7 @@ ng add igniteui-angular
 
 Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-はじめに、**app.module.ts** ファイルに `IgxNavigationDrawerModule` をインポートします。 
+はじめに、**app.module.ts** ファイルに `IgxNavigationDrawerModule` をインポートします。
 
 > [!NOTE]
 > [`IgxNavigationDrawerComponent`]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html) はタッチ操作の [`BrowserAnimationsModule`](https://angular.io/api/platform-browser/animations/BrowserAnimationsModule) と [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) (**オプション**) に依存関係があり、これらも AppModule に追加する必要があります。
@@ -40,7 +41,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 ...
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxNavigationDrawerModule } from 'igniteui-angular';
+import { IgxNavigationDrawerModule } from 'igniteui-angular/navigation-drawer';
 // import { IgxNavigationDrawerModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -59,7 +60,9 @@ export class AppModule {}
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgFor } from '@angular/common';
-import { IGX_NAVIGATION_DRAWER_DIRECTIVES, IgxRippleDirective, IgxIconComponent } from 'igniteui-angular';
+import { IGX_NAVIGATION_DRAWER_DIRECTIVES } from 'igniteui-angular/navigation-drawer';
+import { IgxRippleDirective } from 'igniteui-angular/directives';
+import { IgxIconComponent } from 'igniteui-angular/icon';
 // import { IGX_NAVIGATION_DRAWER_DIRECTIVES, IgxRippleDirective, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -111,7 +114,7 @@ Ignite UI for Angular Navigation Drawer モジュールまたはディレクテ�
 ```
 
 Drawer のコンテンツを `igxDrawer` ディレクティブでデコレートした `<ng-template>` で設定します。
-任意のコンテンツをテンプレートに設定できますが、[`igxDrawerItem`]({environment:angularApiUrl}/classes/igxnavdraweritemdirective.html) ディレクティブ ([項目のスタイル](#スタイル設定)を参照) が定義済みのスタイル設定を項目に適用します。 
+任意のコンテンツをテンプレートに設定できますが、[`igxDrawerItem`]({environment:angularApiUrl}/classes/igxnavdraweritemdirective.html) ディレクティブ ([項目のスタイル](#スタイル設定)を参照) が定義済みのスタイル設定を項目に適用します。
 このディレクティブに 2 つの `@Input` プロパティがあります。
 
 - `active` - 項目を選択済みとしてスタイル設定します。
@@ -139,7 +142,7 @@ Drawer のコンテンツを `igxDrawer` ディレクティブでデコレート
 </div>
 ```
 
-> `igxDrawerMini` ディレクティブでデコレートした追加のテンプレートを閉じた状態の代わりの [Mini バリアント](#ミニ-バリアント)として提供できます。 
+> `igxDrawerMini` ディレクティブでデコレートした追加のテンプレートを閉じた状態の代わりの [Mini バリアント](#ミニ-バリアント)として提供できます。
 
 > [!NOTE]
 > Navigation Drawer はコンテンツの上にフローティングさせるか、隣に固定配置できます。デフォルトでは、ドロワーはビューポートのサイズに応じてこれらのモードを切り替えます。詳細は[モード](#モード)を参照してください。
@@ -155,7 +158,7 @@ Drawer のコンテンツを `igxDrawer` ディレクティブでデコレート
 }
 ```
 
-Navigation drawer に要素を追加して選択するためには、typescript ファイルを次のようにします。 
+Navigation drawer に要素を追加して選択するためには、typescript ファイルを次のようにします。
 
 ```ts
 /* app.component.ts */
@@ -183,6 +186,7 @@ Drawer を開く/閉じる方法が複数あります。入力プロパティを
 Navigation Drawer は [`igxNavigationService`]({environment:angularApiUrl}/classes/igxnavigationservice.html) とも統合し、[`igxToggleAction`](toggle.md#トグル自動操作) ディレクティブで id によって対象にされます。
 
 **app.component.html** の `<main>` を以下のコードと置き換えます。トグルをスタイル設定するために [`igxIconButton`](icon-button.md) および [Icon コンポーネント](icon.md)を追加します。
+
 ```html
 <main>
   <span igxIconButton="flat" igxToggleAction="navigation">
@@ -191,12 +195,12 @@ Navigation Drawer は [`igxNavigationService`]({environment:angularApiUrl}/class
 </main>
 ```
 
-また、ドロワーから項目を選択した際にドロワーを閉じる場合は、次のように [`@ViewChild(IgxNavigationDrawerComponent)`](https://angular.io/api/core/ViewChild) 参照を使用できます。 
+また、ドロワーから項目を選択した際にドロワーを閉じる場合は、次のように [`@ViewChild(IgxNavigationDrawerComponent)`](https://angular.io/api/core/ViewChild) 参照を使用できます。
 
 ```ts
 /* app.component.ts */
 import { Component, ViewChild } from '@angular/core';
-import { IgxNavigationDrawerComponent } from 'igniteui-angular';
+import { IgxNavigationDrawerComponent } from 'igniteui-angular/navigation-drawer';
 // import { IgxNavigationDrawerComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({...})
@@ -213,7 +217,7 @@ export class AppComponent  {
 }
 ```
 
-すべて適切に設定できると、ブラウザ上でデモサンプルを確認することができます。 
+すべて適切に設定できると、ブラウザ上でデモサンプルを確認することができます。
 
 <div class="divider--half"></div>
 
@@ -256,8 +260,8 @@ export class AppComponent  {
 
 結果は以下のようになります。
 
-<code-view style="height: 500px; border: 1px solid #D4D4D4;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 500px; border: 1px solid #D4D4D4;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-pin/" >
 </code-view>
 
@@ -288,6 +292,7 @@ Drawer は `flex-basis` をホスト要素に適用すると、残りのコン�
 このバリアントを使用するには、`igxDrawerMini` ディレクティブでデコレートしたミニ テンプレートを設定します。
 
 通常、ミニ バリアントが persistent セットアップで使用されるため、`pin` を設定し、レスポンシブしきい値を無効にしました。
+
 ```html
 <igx-nav-drawer id="navigation" [pin]="true" [pinThreshold]="0">
   <ng-template igxDrawer>
@@ -304,8 +309,8 @@ Drawer は `flex-basis` をホスト要素に適用すると、残りのコン�
 </igx-nav-drawer>
 ```
 
-<code-view style="height: 400px; border: 1px solid #D4D4D4;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px; border: 1px solid #D4D4D4;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-mini/" >
 </code-view>
 
@@ -371,7 +376,7 @@ import { RouterModule } from '@angular/router';
 @NgModule([
     imports: [
         RouterModule,
-		RouterModule.forRoot([
+  RouterModule.forRoot([
             {path: 'avatar', component: NavDrawerRoutingComponent},
             {path: 'badge', component: NavDrawerRoutingComponent},
             {path: 'button-group', component: NavDrawerRoutingComponent}
@@ -382,8 +387,8 @@ import { RouterModule } from '@angular/router';
 
 上記の手順が完了した後に、アプリは以下のようになります。
 
-<code-view style="height: 400px; border: 1px solid #D4D4D4;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px; border: 1px solid #D4D4D4;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-routing/" >
 </code-view>
 
@@ -443,8 +448,8 @@ export const menusRoutes: Routes = [
 
 以下の例は、トピック名とリンクを含む定義済みデータを使用して、階層構造の機能を示しています。この構造により、ユーザーは機能的で詳細なナビゲーションを簡単に生成し、各要素をリンクとして表示するかインジケーターとして表示するかを定義することができます。
 
-<code-view style="height: 400px; border: 1px solid #D4D4D4;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px; border: 1px solid #D4D4D4;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-hierarchical/" >
 </code-view>
 
@@ -488,11 +493,11 @@ $custom-theme: navdrawer-theme(
     @include css-vars($custom-theme);
   }
 }
-```        
+```
 
-<code-view style="height: 400px; border: 1px solid #D4D4D4;" 
+<code-view style="height: 400px; border: 1px solid #D4D4D4;"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-styling/" >
 </code-view>
 
@@ -500,5 +505,5 @@ $custom-theme: navdrawer-theme(
 
 ## API とスタイル リファレンス
 
-* [IgxNavigationDrawerComponent API]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html)
-* [IgxNavigationDrawerComponent スタイル]({environment:sassApiUrl}/themes#function-navdrawer-theme)
+- [IgxNavigationDrawerComponent API]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html)
+- [IgxNavigationDrawerComponent スタイル]({environment:sassApiUrl}/themes#function-navdrawer-theme)

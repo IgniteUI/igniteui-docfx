@@ -37,21 +37,22 @@ $my-scrollbar-theme: scrollbar-theme($sb-size: 16px, $sb-thumb-bg-color: pink, $
 <div class="divider"></div>
 
 ## その他のリソース
+
 概念の学習:
 
-* [パレット](./palettes.md)
-* [タイポグラフィ](./typography.md)
-* [エレベーション](./elevations.md)
-* [スキーマ](./schemas.md)
-* [アニメーション](./animations.md)
+- [パレット](./palettes.md)
+- [タイポグラフィ](./typography.md)
+- [エレベーション](./elevations.md)
+- [スキーマ](./schemas.md)
+- [アニメーション](./animations.md)
 
 アプリケーション全体のテーマを作成する方法の詳細:
-* [グローバル テーマ](./global-themes.md)
+- [グローバル テーマ](./global-themes.md)
 
 コンポーネント固有のテーマを作成する方法の詳細:
-* [コンポーネント テーマ](./component-themes.md)
+- [コンポーネント テーマ](./component-themes.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
