@@ -6,15 +6,15 @@ _license: commercial
 _language: ja
 ---
 
-###  ツリー グリッド ロードオンデマンド
+### ツリー グリッド ロードオンデマンド
 
 Ignite UI for Angular [`IgxTreeGrid`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) は、サーバーから最小限のデータのみ取得してレンダリングされるため、ユーザーにすばやくデータを表示できます。その後、ユーザーが行を展開した後にのみ、その特定の親行の子がロードされます。このメカニズムは、ロードオンデマンドであらゆるリモートデータとの設定が簡単にできます。
 
 ## Angular ツリー グリッド ロードオンデマンドの例
 
 
-<code-view style="height:450px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:450px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-load-on-demand/" alt="Angular ツリー グリッド ロードオンデマンドの例">
 </code-view>
 
@@ -34,7 +34,7 @@ Ignite UI for Angular [`IgxTreeGrid`]({environment:angularApiUrl}/classes/igxtre
 [`loadChildrenOnDemand`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#loadChildrenOnDemand) コールバックは、2 つのパラメーターを提供します。
 
 - parentID - 展開されている親行の ID。
-- done  - 子がサーバーから取得されたときに子と共に呼び出されるコールバック。 
+- done  - 子がサーバーから取得されたときに子と共に呼び出されるコールバック。
 
 ```typescript
 public loadChildren = (parentID: any, done: (children: any[]) => void) => {
@@ -42,7 +42,7 @@ public loadChildren = (parentID: any, done: (children: any[]) => void) => {
 }
 ```
 
-ユーザーが展開アイコンをクリックすると、ロード アイコンに変わります。`done` コールバックが呼び出されると、ロード インジケーターが消え、子が読み込まれます。ツリーグリッドは子を基になるデータソースに追加し、必要なキーを自動的に設定します。 
+ユーザーが展開アイコンをクリックすると、ロード アイコンに変わります。`done` コールバックが呼び出されると、ロード インジケーターが消え、子が読み込まれます。ツリーグリッドは子を基になるデータソースに追加し、必要なキーを自動的に設定します。
 
 行がその展開前に子を持つかどうかについての情報を提供する方法がある場合は、[`hasChildrenKey`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#hasChildrenKey) 入力プロパティを使用できます。このようにして、展開インジケータを表示するかどうかを示すデータオブジェクトからブール値プロパティを提供できます。
 
@@ -72,18 +72,18 @@ public loadChildren = (parentID: any, done: (children: any[]) => void) => {
 
 <div class="divider--half"></div>
 
-* [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
+- [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ### その他のリソース
 
 <div class="divider--half"></div>
 
-* [Tree Grid 概要](tree-grid.md)
-* [Tree Grid 可視化とパフォーマンス](virtualization.md)
+- [Tree Grid 概要](tree-grid.md)
+- [Tree Grid 可視化とパフォーマンス](virtualization.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

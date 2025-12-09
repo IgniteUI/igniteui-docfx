@@ -261,10 +261,10 @@
       new: false
       updated: false
       premium: true
-    - name: Excel エクスポート
+    - name: エクスポート サービス
       href: grid/export-excel.md
       new: false
-      updated: false
+      updated: true
       premium: true
     - name: Excel からの貼り付け
       href: grid/paste-excel.md
@@ -451,10 +451,10 @@
       new: false
       updated: false
       premium: true
-    - name: Excel エクスポート
+    - name: エクスポート サービス
       href: treegrid/export-excel.md
       new: false
-      updated: false
+      updated: true
       premium: true
     - name: 複数列ヘッダー
       href: treegrid/multi-column-headers.md
@@ -550,10 +550,10 @@
           href: hierarchicalgrid/validation.md
           new: false
           premium: true
-    - name: Excel へエクスポート
+    - name: エクスポート サービス
       href: hierarchicalgrid/export-excel.md
       new: false
-      updated: false
+      updated: true
       premium: true
     - name: 行ドラッグ
       href: hierarchicalgrid/row-drag.md
@@ -677,7 +677,7 @@
   new: false
   updated: true
   items:
-    - name: Excel へのエクスポート
+    - name: エクスポート サービス
       href: pivotgrid/export-excel.md
       new: false
       updated: true
@@ -969,6 +969,10 @@
     - name: チャート トレンドライン
       href: charts/features/chart-trendlines.md
       updated: false
+      premium: true
+    - name: チャートのユーザー注釈
+      href: charts/features/chart-user-annotations.md
+      preview: true
       premium: true
     - name: ズーム スライダー
       href: zoomslider-overview.md
@@ -1450,6 +1454,10 @@
 - name: Excel エクスポーター
   href: exporter-excel.md
   new: false
+  premium: true
+- name: PDF エクスポーター
+  href: exporter-pdf.md
+  new: true
   premium: true
 - name: トランザクション サービス
   href: transaction.md

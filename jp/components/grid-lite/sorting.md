@@ -133,6 +133,7 @@ grid.sort([
 ```
 
 The **`clearSort()`** メソッドは、その名の通り、単一列またはグリッド全体のソート状態をクリアします。引数に応じて挙動が変わります。
+
 ```typescript
 // `price` 列のソート状態をクリアします。
 grid.clearSort('price');

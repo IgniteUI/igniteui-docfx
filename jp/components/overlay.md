@@ -7,6 +7,7 @@ _language: ja
 ---
 
 # Overlay
+
 <p class="highlight">
 オーバーレイ サービスはアプリケーションの前景にコンテンツを動的な描画をサポートします。描画するコンテンツおよび描画方法 (配置、アニメーション、スクロールおよびクリック動作など) を構成できます。
 このオーバーレイ サービスは Toggle ディレクティブと完全に統合されています。
@@ -16,8 +17,8 @@ _language: ja
 ## Angular Overlay の例
 
 
-<code-view style="height: 350px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 350px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1/" alt="Angular Overlay の例">
 </code-view>
 
@@ -26,6 +27,7 @@ _language: ja
 ## はじめに
 
 はじめに、[`IgxOverlayService`]({environment:angularApiUrl}/classes/igxoverlayservice.html) をインポートし、コンポーネントへの参照をコンポーネントのコンストラクターに`注入`する必要があります。
+
 ```typescript
 
 import { Inject } from '@angular/core'
@@ -110,20 +112,21 @@ export class MyOverlayComponent {
     }
 }
 ```
+
 <div class="divider--half"></div>
 
 Overlay サービスの [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドには 2 つのオーバーロードがあります。
-  - `attach(element, settings?)`
-  - `attach(component, viewContainerRef, settings?)`
+- `attach(element, settings?)`
+- `attach(component, viewContainerRef, settings?)`
 
 オーバーロードの最初のパラメーターは必須でオーバーレイに表示されるコンテンツを表します。以下は、コンテンツを渡す場合の例です。
-  - コンポーネント定義 - コンポーネントを最初の引数として渡す場合、オーバーレイ サービスがそのコンポーネントの新しいインスタンスを作成し、その `ElementRef` を動的に `オーバーレイ` DOM にアタッチします。このメソッドは、2 番目の必須パラメーター `ViewContainerRef` に、作成されたコンポーネントのホスト ビューが挿入されるコンテナへの参照も受け入れます。
-  - `ElementRef` から既存の DOM 要素 (上記のサンプルを参照) - ページで既に描画されたビューはオーバーレイ サービスで渡して、オーバーレイ DOM で描画できます。
+- コンポーネント定義 - コンポーネントを最初の引数として渡す場合、オーバーレイ サービスがそのコンポーネントの新しいインスタンスを作成し、その `ElementRef` を動的に `オーバーレイ` DOM にアタッチします。このメソッドは、2 番目の必須パラメーター `ViewContainerRef` に、作成されたコンポーネントのホスト ビューが挿入されるコンテナへの参照も受け入れます。
+- `ElementRef` から既存の DOM 要素 (上記のサンプルを参照) - ページで既に描画されたビューはオーバーレイ サービスで渡して、オーバーレイ DOM で描画できます。
 
 どちらの場合も、[`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドは次のようになります:
-  - Angular から渡されるビューへの参照を取得します。
-  - ビューを DOM からデタッチし、そこにアンカーを追加します。
-  - 提供されている [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) を使用するか、デフォルトのオーバーレイにフォールバックして、ビューをオーバーレイに再アタッチします。
+- Angular から渡されるビューへの参照を取得します。
+- ビューを DOM からデタッチし、そこにアンカーを追加します。
+- 提供されている [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) を使用するか、デフォルトのオーバーレイにフォールバックして、ビューをオーバーレイに再アタッチします。
 
 次に [`show(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) を呼び出すと、開くアニメーションが再生され、添付されたコンテンツが表示されます。[`hide(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#hide) を呼び出すと、閉じるアニメーションが再生され、添付されているコンテンツが非表示になります。
 
@@ -132,12 +135,13 @@ Overlay サービスの [`attach()`]({environment:angularApiUrl}/classes/igxover
 <div class="divider--half"></div>
 
 ## コンポーネントのアタッチ
+
 閉じた後、ビューを DOM にある元の位置にアタッチします。以下のデモでは、[IgxCard](card.md#angular-card-の例) コンポーネントをオーバーレイ サービスの [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドに渡し、IDを生成します。次に、提供された ID で [`show()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッドを呼び出し、カードをモーダル コンテナーで DOM にアタッチします。
 
 
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-1/" >
 </code-view>
 
@@ -148,10 +152,11 @@ Overlay サービスの [`attach()`]({environment:angularApiUrl}/classes/igxover
 [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドは [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) 型のオブジェクトを受け取ります。このオブジェクトはコンテンツの表示方法を構成します。このオブジェクトが指定されていない場合、Overlay サービスは渡されたコンテンツを描画するためにデフォルト設定を使用します。
 
 たとえば、コンテンツを要素に相対的に配置するには、オーバーレイの [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#show) メソッドに別の [`target`]({environment:angularApiUrl}/interfaces/overlaysettings.html#target) と [`positioningStrategy`]({environment:angularApiUrl}/interfaces/overlaysettings.html#positionstrategy) ([`ConnectedPositioningStrategy`]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) など) を渡します。コンポーネントの表示方法を構成するには、最初に [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトを作成します。
+
 ```typescript
 // my-overlay-component.component.ts
 // import the ConnectedPositioningStategy class
-import { ConnectedPositioningStrategy } from 'igniteui-angular';
+import { ConnectedPositioningStrategy } from 'igniteui-angular/core';
 // import { ConnectedPositioningStrategy } from '@infragistics/igniteui-angular'; for licensed package
 ...
 export class MyOverlayComponent {
@@ -171,6 +176,7 @@ export class MyOverlayComponent {
     }
 }
 ```
+
 ```HTML
 <!-- my-overlay-component.component.html -->
 <div class='content'>
@@ -178,6 +184,7 @@ export class MyOverlayComponent {
 <button #myAnchorButton (click)="showInOverlay()">Show Overlay</button>
 </div>
 ```
+
 ボタンをクリックすると、ボタンに相対的に配置される `MyDynamicComponent` を表示します。
 
 ## プリセット オーバーレイ設定
@@ -203,8 +210,8 @@ const connectedOverlaySettings = IgxOverlayService.createRelativeOverlaySettings
 ### デモ
 
 
-<code-view style="height: 750px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 750px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/overlay-preset-settings-sample/" >
 </code-view>
 
@@ -218,10 +225,11 @@ const connectedOverlaySettings = IgxOverlayService.createRelativeOverlaySettings
 描画されたコンテンツが不要になったら、[`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) メソッドを呼び出す必要があります。このメソッドは、オーバーレイからコンテンツを削除し、該当する場合は、DOM 内の元の場所にコンテンツを再アタッチします。[`detach(id)`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detach) メソッドは、[`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドから生成された ID も必須パラメーターとして受け入れます。すべてのオーバーレイを削除するには、[`detachAll()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#detachAll) メソッドを呼び出すことができます。
 
 以前に定義されたオーバーレイ メソッドをオーバーレイ要素を表示して非表示するために変更できます。
+
 ```typescript
 // my-overlay-component.component.ts
 // add an import for the definion of ConnectedPositioningStategy class
-import { ConnectedPositioningStrategy } from 'igniteui-angular';
+import { ConnectedPositioningStrategy } from 'igniteui-angular/core';
 // import { ConnectedPositioningStrategy } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({...})
@@ -261,6 +269,7 @@ export class MyOverlayComponent implements OnDestroy {
     }
 }
 ```
+
 ```HTML
 <!-- my-overlay-component.component.html -->
 <div class='content'>
@@ -268,13 +277,14 @@ export class MyOverlayComponent implements OnDestroy {
     <button #myAnchorButton (click)="toggleOverlay()">Toggle Overlay</button>
 </div>
 ```
+
 ## アタッチ設定
 
 [`attach()`]({environment:angularApiUrl}/classes/igxoverlayservice.html#attach) メソッドの [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) パラメーターを使用してコンテンツの表示方法を変更できます。たとえば、コンテンツの配置、スクロールの動作、およびコンテナーがモーダルかどうかを設定できます。
 
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/overlay-sample-main-2/" >
 </code-view>
 
@@ -292,12 +302,15 @@ defaultOverlaySettings = {
     closeOnEscape: false
 };
 ```
+
 <div class="divider--half"></div>
 
 ## igxToggle との統合
+
 [`IgxToggleDirective`]({environment:angularApiUrl}/classes/igxtoggledirective.html) は [`IgxOverlayService`]({environment:angularApiUrl}/classes/igxoverlayservice.html) と完全に統合されます。コンテンツの切り替えで Toggle ディレクティブの [`toggle()`]({environment:angularApiUrl}/classes/igxtoggledirective.html#toggle) メソッドにカスタム オーバーレイ設定を渡すことができます。
 
 構成設定をトグルのメソッドに渡す方法は以下の例で紹介されます。
+
 ```html
 <!-- In example.component.html -->
 <div>
@@ -333,16 +346,20 @@ export class ExampleComponent {
     }
 }
 ```
+
 <div class="divider--half"></div>
 
 ## 仮定と制限
+
 アウトレットにオーバーレイを表示する際にアウトレットが CSS で変換、視点、またはフィルターが設定された要素の子である場合、モーダル オーバーレイが表示されません。これは、上記のいずれかの CSS プロパティが設定された際にブラウザーが新しく含まれるブロックを作成して[こちら](https://developer.mozilla.org/ja-JP/docs/Web/CSS/position#fixed)のようにオーバーレイがこのブロックに制限されるためです。
 
 ## API リファレンス
-* [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
-* [IgxOverlay スタイル]({environment:sassApiUrl}/themes#function-overlay-theme)
+
+- [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
+- [IgxOverlay スタイル]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ### その他のリソース
-* [配置方法](overlay-position.md)
-* [スクロール方法](overlay-scroll.md)
-* [スタイル設定](overlay-styling.md)
+
+- [配置方法](overlay-position.md)
+- [スクロール方法](overlay-scroll.md)
+- [スタイル設定](overlay-styling.md)

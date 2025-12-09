@@ -12,8 +12,8 @@ Ignite UI for Angular の [`IgxTextHighlightDirective`]({environment:angularApiU
 
 ## Angular Text Highlight ディレクティブの例
 
-<code-view style="height: 260px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 260px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-1/" alt="Angular TextHighlight ディレクティブの例">
 </code-view>
 
@@ -34,7 +34,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 ```typescript
 // app.module.ts
 ...
-import { IgxTextHighlightModule } from 'igniteui-angular';
+import { IgxTextHighlightModule } from 'igniteui-angular/directives';
 // import { IgxTextHighlightModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -50,7 +50,7 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IgxTextHighlightDirective, IgxTextHighlightService } from 'igniteui-angular';
+import { IgxTextHighlightDirective, IgxTextHighlightService } from 'igniteui-angular/directives';
 // import { IgxTextHighlightDirective, IgxTextHighlightService } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -248,8 +248,8 @@ export class HomeComponent {
 
 サンプルが正しく構成された場合、以下のような結果になります。
 
-<code-view style="height: 260px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 260px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-1/" >
 </code-view>
 
@@ -343,8 +343,8 @@ export class HomeComponent {
 }
 ```
 
-<code-view style="height: 400px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-2/" >
 </code-view>
 
@@ -372,7 +372,7 @@ $dark-highlight: highlight-theme(
 );
 ```
 
-`$resting-background` と `$resting-color` パラメーターは、`$active-background` と `$active-color` パラメーターに基づいてスタイル設定されるアクティブな強調表示の文字列以外、すべての強調表示に適用されます。 
+`$resting-background` と `$resting-color` パラメーターは、`$active-background` と `$active-color` パラメーターに基づいてスタイル設定されるアクティブな強調表示の文字列以外、すべての強調表示に適用されます。
 
 最後にコンポーネントのテーマを**含めます**。
 
@@ -434,9 +434,9 @@ $dark-highlight: highlight-theme(
 
 ### デモ
 
-<code-view style="height: 300px;" 
+<code-view style="height: 300px;"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/text-highlight-style/" >
 </code-view>
 
@@ -446,20 +446,20 @@ $dark-highlight: highlight-theme(
 
 TextHighlight ディレクティブの API に関する詳細な情報は、以下のリンクのトピックを参照してください。
 
-* [`IgxTextHighlight API`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html)
+- [`IgxTextHighlight API`]({environment:angularApiUrl}/classes/igxtexthighlightdirective.html)
 
 使用したその他のコンポーネント:
 
-* [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [`IgxInputGroupComponent スタイル`]({environment:sassApiUrl}/themes#function-input-group-theme)
+- [`IgxInputGroupComponent`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+- [`IgxInputGroupComponent スタイル`]({environment:sassApiUrl}/themes#function-input-group-theme)
 <div class="divider"></div>
 
 ## その他のリソース
 
-* [Grid 検索](grid/search.md)
+- [Grid 検索](grid/search.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

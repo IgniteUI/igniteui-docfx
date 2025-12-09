@@ -4,6 +4,7 @@ _description: Ignite UI for Angular Chat コンポーネントを使用すると
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Chat コンポーネント, Angular Chat コントロール
 mentionedTypes: ["Chat"]
 _language: ja
+_license: MIT
 ---
 
 # Angular Chat (チャット) の概要
@@ -33,7 +34,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 
 ```ts
 import { Component } from '@angular/core';
-import { IgxChatComponent } from "igniteui-angular";
+import { IgxChatComponent } from "igniteui-angular/chat";
 
 @Component({
   ...
@@ -42,10 +43,11 @@ export class AppComponent { ... }
 ```
 
 ## 使用方法
+
 チャット オプションを定義し、テンプレートにバインドします。
 
 ```ts
-import { IgxChatComponent, IgxChatOptions  } from "igniteui-angular";
+import { IgxChatComponent, IgxChatOptions } from "igniteui-angular/chat";
 
 public options: IgxChatOptions  = {
   currentUserId: 'me',
@@ -79,6 +81,7 @@ public addMessage() {
 この方法により、サーバー エンドポイント、チャットボット エンジン、コラボレーション アプリのバックエンドなど、任意のデータ ソースと簡単に統合できます。
 
 ### 入力
+
 Chat コンポーネントは、その状態と構成を制御できるいくつかの重要なプロパティを公開します。
 
 | 名前              | 説明                                                                                                                                                          |
@@ -91,6 +94,7 @@ Chat コンポーネントは、その状態と構成を制御できるいくつ
 上記のプロパティを使用することで、Chat の UI をアプリケーションの状態やバックエンドと簡単に同期させることができます。
 
 ### 添付
+
 モダンな会話ではテキストだけに限られません。Chat コンポーネントはファイル添付機能のサポートが組み込まれており、ユーザーは画像、ドキュメント、その他のファイルを共有できます。
 デフォルトでは入力領域に添付ボタンが表示されます。`acceptedFiles` プロパティで許可されるファイル タイプを制御可能です。
 
@@ -110,6 +114,7 @@ public options: IgxChatOptions = {
 ```
 
 ### サジェスト
+
 クイック リプライのサジェストは、ユーザーがすぐにタップして返信できる事前定義の応答を提供します。この機能は、チャットボットやカスタマー サービスのフロー、あるいはユーザーを構造化されたプロセスに案内する場合に特に有用です。
 サジェストは、文字列の配列を suggestions プロパティにバインドすることで提供できます。`suggestionsPosition` プロパティを使用すると、表示位置を入力領域の下またはメッセージ リストの下に制御できます。
 
@@ -124,6 +129,7 @@ public options: IgxChatOptions = {
 この方法により、繰り返し入力する必要が減り、ガイド付きの会話でユーザー体験を向上させることができます。
 
 ### 入力中インジケーター
+
 相手が入力中であることが見えると、会話はより自然に感じられます。Chat コンポーネントでは、オプション オブジェクトの `isTyping` プロパティを通じてこの動作を提供します。
 true に設定すると、メッセージ下にさりげない入力中インジケーターが表示されます。
 
@@ -136,10 +142,12 @@ public options: IgxChatOptions = {
 この機能は通常、バックエンド サービスからの入力イベントを受け取ったときなど、プログラムで切り替えます。
 
 ### カスタム テンプレート
+
 Chat コンポーネントはデフォルトの UI ですぐに使用できますが、多くのアプリケーションでは外観と操作性をカスタマイズする必要があります。たとえば、既読通知を追加したり、アバターを表示したり、入力領域を音声録音ボタンに置き換えたりする場合です。
 Chat コンポーネントは、このニーズに対して Angular テンプレートを使用して対応します。テンプレートは `templates` 入力プロパティ経由で提供され、強く型付けされた Angular ディレクティブを使用します。
 
 #### 利用可能なテンプレート
+
 Chat のカスタマイズ可能な部分は次の通りです:
 - Message レベル: message、messageHeader、messageContent、messageAttachments、messageActions
 - Attachment レベル: attachment、attachmentHeader、attachmentContent
@@ -169,6 +177,7 @@ Chat のカスタマイズ可能な部分は次の通りです:
 - [`igxChatMessageContext`]({environment:angularApiUrl}/classes/igxchatmessagecontextdirective.html) ディレクティブは、メッセージ テンプレートの適切な入力を保証します。
 
 #### 入力領域のカスタマイズ
+
 デフォルトでは、チャット入力はテキスト領域です。音声入力ボタンなど、より適した体験を提供するためにオーバーライドできます。
 
 ```html
@@ -186,6 +195,7 @@ Chat のカスタマイズ可能な部分は次の通りです:
 ```
 
 #### 入力アクションの拡張
+
 Chat コンポーネントには、デフォルトのアクション (アップロードと送信) を保持しつつ追加のコントロールを拡張できるテンプレートがあります:
 - `inputActionsStart` - デフォルトのアップロード ボタンの後にカスタム コンテンツを挿入可能
 - `inputActionsEnd` - デフォルトの送信ボタンの後にカスタム コンテンツを挿入可能
@@ -220,6 +230,7 @@ Chat コンポーネントには、デフォルトのアクション (アップ�
 この方法により、チャット入力バーの柔軟性が完全に向上し、入力領域を最初から再構築することなく、アクションを追加、削除、または並べ替えることができます。
 
 ### Markdown のサポート
+
 Chat コンポーネントには、`fromMarkdown` パイプによる Markdown コンテンツの組み込みサポートがあり、メッセージ テキストを安全な HTML に変換します。これにより、書式付きテキスト、リンク、リスト、シンタックス ハイライト付きコードブロックを表示しつつ、安全に HTML をサニタイズできます。
 
 Markdown のレンダリングはパフォーマンス上の理由から非同期で実行されるため、`fromMarkdown` パイプは Angular の `async` パイプと組み合わせて使用する必要があります。
@@ -238,6 +249,7 @@ Markdown のレンダリングはパフォーマンス上の理由から非同�
 - リンクは自動的に新しいタブで開き、安全な rel 属性が付与されます。
 
 #### 構文のハイライト表示
+
 `fromMarkdown` パイプはコード ブロックのシンタックス ハイライトにも対応しています。メッセージにフェンス付きコード (```js...```) が含まれている場合、VS Code でも使用されている高精度ハイライター [Shiki](https://shiki.matsu.io/) を使用してレンダリングされます。デフォルトでは JavaScript、TypeScript、HTML、CSS に対して github-light テーマでハイライト表示されます。
 
 例 - メッセージに次の内容が含まれている場合:
@@ -258,6 +270,7 @@ function greet(name: string) {
 - 追加の設定は不要で、既定のテーマは自動的に読み込まれます。
 
 ### 出力 (イベント)
+
 アプリケーション ロジックと統合するために、Chat コンポーネントは一連のイベントを発行します。
 - messageCreated - 新しいメッセージ作成時
 - messageReact - メッセージにリアクションした時
