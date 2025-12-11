@@ -16,6 +16,24 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 
 - [Ignite UI for Angular CHANGELOG.md at Github](https://github.com/IgniteUI/igniteui-angular/blob/master)
 
+## **20.2.1 (December 2025)**
+
+### Bug Fixes
+
+| Bug Number | Control | Description |
+|------------|---------|-------------|
+|33808|IgxDataChart|The scale set for IntervalType Ticks in TimeAxisInterval is not displayed|
+|34255|IgxDataChart|0.00001 scale tick marks are displayed overlapping each other|
+|38510|IgxDataChart|AssigningCategoryStyle event support for Stacked Series|
+
+### Enhancements
+
+#### Charts
+
+- Added LabelFormatOverride event to TimeXAxisLabelFormat so you can now override the formatting with an event at all time-formatting levels on the TimeXAxis.
+
+- Adjusted the schema generation to account for more items to make it more likely to find valid values for properties.
+
 ## **20.2.0 (November 2025)**
 
 ### igniteui-angular-charts (Charts)
