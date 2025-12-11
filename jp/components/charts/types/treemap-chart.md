@@ -47,7 +47,7 @@ Ignite UI for Angular ツリーマップ チャートは、ネストされた一
 - 正確な値を使用せずに、一目で迅速なデータ分析を提供したい場合長方形の相対的なサイズは、パターンや外れ値を非常に迅速に識別するのに役立ちます。
 - スペースを有効に使用したい場合ツリーマップは、数千の項目を同時に画面に表示することが可能となります。
 
-### 以下の場合にツリーマップを使用しないでください
+### 以下の場合にツリーマップを使用しないでください:
 
 - 正確な値を必要とするデータ ストーリーを説明している場合。
 - 負のデータ値がある場合。
@@ -88,7 +88,7 @@ Ignite UI for Angular ツリーマップ チャートは、ネストされた一
 - 項目を同じ値で色付けするグループ ベースのメカニズム。
 - 階級区分図に似たスケール ベースのメカニズムで、ノードの色をその値に基づいてマップします。
 
-### レイアウト方向
+### レイアウト方向:
 
 [`layoutOrientation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#layoutOrientation) プロパティによってユーザーは階層のノードが展開される方向を設定できます。
 
