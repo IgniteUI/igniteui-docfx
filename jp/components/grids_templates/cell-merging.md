@@ -15,19 +15,19 @@ Ignite UI for Angular の @@igComponent には、同じ値を持つ隣接セル�
 @@if(igxName === 'IgxGrid'){
 <code-view style="height:755px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-cellMerge" alt="Angular セル結合の例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-cellMerge/" alt="Angular セル結合の例">
 </code-view>
 }
 @@if(igxName === 'IgxHierarchicalGrid'){
 <code-view style="height:755px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-cell-merge" alt="Angular セル結合の例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-cell-merge/" alt="Angular セル結合の例">
 </code-view>
 }
 @@if(igxName === 'IgxTreeGrid'){
 <code-view style="height:755px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-cell-merge" alt="Angular セル結合の例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-cell-merge/" alt="Angular セル結合の例">
 </code-view>
 }
 
@@ -169,7 +169,7 @@ protected customStrategy = new MyCustomStrategy();
 
 <code-view style="height:755px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-cellMerge-custom" alt="カスタム条件付き Angular セル結合の例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-cellMerge-custom/" alt="カスタム条件付き Angular セル結合の例">
 </code-view>
 }
 

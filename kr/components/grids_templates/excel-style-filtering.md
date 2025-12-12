@@ -33,7 +33,7 @@ Ignite UI for Angular의 @@igComponent 컴포넌트는 Excel과 유사한 필터
 
 <code-view style="height:950px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-1/" >
 </code-view>
 
 }
@@ -41,7 +41,7 @@ Ignite UI for Angular의 @@igComponent 컴포넌트는 Excel과 유사한 필터
 
 <code-view style="height:950px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-1/" >
 </code-view>
 
 }
@@ -49,7 +49,7 @@ Ignite UI for Angular의 @@igComponent 컴포넌트는 Excel과 유사한 필터
 
 <code-view style="height:950px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-1/" >
 </code-view>
 
 }
@@ -193,7 +193,7 @@ Excel 스타일 필터링을 켜려면 2개의 입력을 설정해야 합니다.
 
 <code-view style="height:900px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-2/" >
 </code-view>
 
 }
@@ -201,7 +201,7 @@ Excel 스타일 필터링을 켜려면 2개의 입력을 설정해야 합니다.
 
 <code-view style="height:900px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-2/" >
 </code-view>
 
 }
@@ -209,7 +209,7 @@ Excel 스타일 필터링을 켜려면 2개의 입력을 설정해야 합니다.
 
 <code-view style="height:900px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-2/" >
 </code-view>
 
 }
@@ -324,7 +324,7 @@ Excel 스타일 필터링을 켜려면 2개의 입력을 설정해야 합니다.
 
 <code-view style="height:900px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-3/" >
 </code-view>
 
 }
@@ -332,7 +332,7 @@ Excel 스타일 필터링을 켜려면 2개의 입력을 설정해야 합니다.
 
 <code-view style="height:900px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-3/" >
 </code-view>
 
 }
@@ -340,7 +340,7 @@ Excel 스타일 필터링을 켜려면 2개의 입력을 설정해야 합니다.
 
 <code-view style="height:900px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-3/" >
 </code-view>
 
 }
