@@ -38,7 +38,7 @@ In the sample below, you can preview all the default base themes.
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/styling-config-themes" alt="Angular Grid Lite Styling Config Themes">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/styling-config-themes/" alt="Angular Grid Lite Styling Config Themes">
 </code-view>
 
 -->
@@ -88,7 +88,7 @@ $my-light-palette: palette(
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/styling-custom" alt="Angular Grid Lite スタイル設定のカスタム テーマ">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/styling-custom/" alt="Angular Grid Lite スタイル設定のカスタム テーマ">
 </code-view>
 
 <!-- TODO ## API References

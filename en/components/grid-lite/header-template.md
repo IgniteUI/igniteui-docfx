@@ -40,7 +40,7 @@ import { html } from 'lit';
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/column-config-headers" alt="Angular Grid Lite Column Config Headers">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/column-config-headers/" alt="Angular Grid Lite Column Config Headers">
 </code-view>
 
 <!-- TODO ## API References

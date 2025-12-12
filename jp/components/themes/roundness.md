@@ -51,7 +51,7 @@ igx-chip {
 
 <code-view style="height: 210px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/theming/roundness" >
+           iframe-src="{environment:demosBaseUrl}/theming/roundness/" >
 </code-view>
 
 ## その他のリソース

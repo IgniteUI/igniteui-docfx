@@ -41,7 +41,7 @@ The **`sort`** property can be either a simple boolean or a **`ColumnSortConfigu
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/sorting-simple" alt="Angular Grid Lite Sorting Config">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/sorting-simple/" alt="Angular Grid Lite Sorting Config">
 </code-view>
 
 ## Single and Multi-Sorting
@@ -82,7 +82,7 @@ The following sample shows the grid **`sortConfiguration`** combinations and how
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/sorting-grid-config" alt="Angular Grid Lite Sorting Config Grid">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/sorting-grid-config/" alt="Angular Grid Lite Sorting Config Grid">
 </code-view>
 
 ## Sort model
@@ -186,7 +186,7 @@ In the following sample, when you try to sort the **Name** and **Rating** column
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/sorting-events" alt="Angular Grid Lite Sorting Config Events">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/sorting-events/" alt="Angular Grid Lite Sorting Config Events">
 </code-view>
 
 ## Remote Sort Operations
@@ -222,7 +222,7 @@ The following example mocks remote sorting operation, reflecting the REST endpoi
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/sorting-pipeline" alt="Angular Grid Lite Sorting Config Pipeline">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/sorting-pipeline/" alt="Angular Grid Lite Sorting Config Pipeline">
 </code-view>
 
 <!-- TODO ## API References

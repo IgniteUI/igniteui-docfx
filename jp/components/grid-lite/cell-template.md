@@ -106,7 +106,7 @@ export interface GridLiteCellContext<
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/column-config-simple" alt="Angular Grid Lite 列の基本構成">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/column-config-simple/" alt="Angular Grid Lite 列の基本構成">
 </code-view>
 
 <!-- TODO ## API References

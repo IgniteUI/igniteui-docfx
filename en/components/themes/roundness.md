@@ -50,7 +50,7 @@ You can see the difference between the minimum and maximum border-radius values 
 
 <code-view style="height: 210px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/theming/roundness" >
+           iframe-src="{environment:demosBaseUrl}/theming/roundness/" >
 </code-view>
 
 ## Additional Resources

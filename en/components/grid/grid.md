@@ -64,7 +64,7 @@ Boston Marathon 2021 – In this angular grid example, you can see how users can
 <code-view style="height:700px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
            img-src="https://static.infragistics.com/marketing/Website/products/Ignite-UI-for-Angular/ignite-ui-angular-marathon-app"
-           iframe-src="{environment:lobDemosBaseUrl}/grid/grid" alt="Angular data grid example">
+           iframe-src="{environment:lobDemosBaseUrl}/grid/grid/" alt="Angular data grid example">
 </code-view>
 
 <div class="divider--half"></div>

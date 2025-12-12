@@ -122,7 +122,7 @@ The Angular Date Range Picker component also allows configuring two separate inp
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-start-end" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-start-end/" >
 </code-view>
 
 ### Popup modes
@@ -135,7 +135,7 @@ By default, when clicked, the [`IgxDateRangePickerComponent`]({environment:angul
 
 <code-view style="height:700px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-mode" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-mode/" >
 </code-view>
 
 <div class="divider--half"></div>

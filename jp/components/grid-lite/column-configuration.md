@@ -104,7 +104,7 @@ Grid Lite コンポーネントの各列は、列定義で **`resizable`** プ�
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/column-config-dynamic" alt="Angular Grid Lite 列のダイナミック構成">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/column-config-dynamic/" alt="Angular Grid Lite 列のダイナミック構成">
 </code-view>
 
 <!-- TODO ## API References

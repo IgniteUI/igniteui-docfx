@@ -26,7 +26,7 @@ Angular Grid Lite features:
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/overview" alt="Angular Grid Lite App Sample Main">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/overview/" alt="Angular Grid Lite App Sample Main">
 </code-view>
 
 Grid Lite controls are completely free, MIT licensed, as a part of our initiative to make Ignite UI more open, transparent, and accessible. However, if your project scales and grows in complexity and functionality, and you require an enterprise-grade application, we have an upgrade strategy for transitioning from the Grid Lite to the full-featured and advanced Data Grid.  

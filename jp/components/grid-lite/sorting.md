@@ -42,7 +42,7 @@ Grid Lite はデータ ソースに対してソート操作をサポートしま
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/sorting-simple" alt="Angular Grid Lite ソート構成">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/sorting-simple/" alt="Angular Grid Lite ソート構成">
 </code-view>
 
 ## 単一および複数列ソート
@@ -83,7 +83,7 @@ grid.sortConfiguration = { multiple: false, triState: true };
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/sorting-grid-config" alt="Angular Grid Lite Sorting Config Grid">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/sorting-grid-config/" alt="Angular Grid Lite Sorting Config Grid">
 </code-view>
 
 ## ソート モデル
@@ -184,7 +184,7 @@ grid.addEventListener('sorted', (event: CustomEvent<SortExpression<T>>) => { ...
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/sorting-events" alt="Angular Grid Lite ソート構成イベント">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/sorting-events/" alt="Angular Grid Lite ソート構成イベント">
 </code-view>
 
 ## リモート ソート操作
@@ -220,7 +220,7 @@ grid.dataPipelineConfiguration = { sort: (params: DataPipelineParams<T>) => T[] 
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/sorting-pipeline" alt="Angular Grid Lite ソート構成パイプライン">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/sorting-pipeline/" alt="Angular Grid Lite ソート構成パイプライン">
 </code-view>
 
 <!-- TODO ## API References

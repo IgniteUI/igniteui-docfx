@@ -14,19 +14,19 @@ The Ignite UI for Angular @@igComponent provides a Cell Merging feature that com
 @@if(igxName === 'IgxGrid'){
 <code-view style="height:755px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-cellMerge" alt="Angular Cell Merging Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-cellMerge/" alt="Angular Cell Merging Example">
 </code-view>
 }
 @@if(igxName === 'IgxHierarchicalGrid'){
 <code-view style="height:755px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-cell-merge" alt="Angular Cell Merging Example">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-cell-merge/" alt="Angular Cell Merging Example">
 </code-view>
 }
 @@if(igxName === 'IgxTreeGrid'){
 <code-view style="height:755px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-cell-merge" alt="Angular Cell Merging Example">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-cell-merge/" alt="Angular Cell Merging Example">
 </code-view>
 }
 
@@ -175,7 +175,7 @@ protected customStrategy = new MyCustomStrategy();
 
 <code-view style="height:755px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-cellMerge-custom" alt="Angular Cell Merging Example with Custom Condition">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-cellMerge-custom/" alt="Angular Cell Merging Example with Custom Condition">
 </code-view>
 }
 
