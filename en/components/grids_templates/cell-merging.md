@@ -19,13 +19,13 @@ The Ignite UI for Angular @@igComponent provides a Cell Merging feature that com
 }
 @@if(igxName === 'IgxHierarchicalGrid'){
 <code-view style="height:475px"
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-cell-merge" alt="Angular Cell Merging Example">
 </code-view>
 }
 @@if(igxName === 'IgxTreeGrid'){
 <code-view style="height:755px"
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-cell-merge" alt="Angular Cell Merging Example">
 </code-view>
 }
