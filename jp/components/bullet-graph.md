@@ -131,12 +131,12 @@ export class AppModule {}
 ```html
 <igx-bullet-graph
     #bulletGraph
-    height="80px" 
+    height="80px"
     width="400px"
-    value=70 
+    value=70
     targetValue=90
-    minimumValue=0 
-    maximumValue=100 
+    minimumValue=0
+    maximumValue=100
     interval=10
     labelInterval=10
     labelExtent=0.025
@@ -194,8 +194,8 @@ export class AppModule {}
 
 目盛は、ブレット グラフを読み取りやすくするために、目盛の間隔でスケールを分割して見せる役割を果たします。
 
-*   主目盛 - 主目盛は、スケールの主要な区切りとして使用されます。表示間隔、範囲、およびスタイルは、対応するプロパティを設定し制御できます。
-*   補助目盛 - 補助目盛は主目盛を補助し、スケールの数値を読み取りやすくするために追加して使用します。主目盛と同じ方法でカスタマイズできます。
+- 主目盛 - 主目盛は、スケールの主要な区切りとして使用されます。表示間隔、範囲、およびスタイルは、対応するプロパティを設定し制御できます。
+- 補助目盛 - 補助目盛は主目盛を補助し、スケールの数値を読み取りやすくするために追加して使用します。主目盛と同じ方法でカスタマイズできます。
 
 ```html
 <igx-bullet-graph
@@ -378,12 +378,12 @@ export class AppModule {}
 
 以下は上記のセクションで説明した API メンバーのリストです。
 
-*   [`IgxBulletGraphComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxbulletgraphcomponent.html)
-*   [`IgxLinearGraphRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargraphrangecomponent.html)
+- [`IgxBulletGraphComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxbulletgraphcomponent.html)
+- [`IgxLinearGraphRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargraphrangecomponent.html)
 
 ## その他のリソース
 
 その他のゲージ タイプの詳細については、以下のトピックを参照してください。
 
-*   [リニア ゲージ](linear-gauge.md)
-*   [ラジアル ゲージ](radial-gauge.md)
+- [リニア ゲージ](linear-gauge.md)
+- [ラジアル ゲージ](radial-gauge.md)

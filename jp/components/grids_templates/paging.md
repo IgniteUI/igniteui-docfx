@@ -19,6 +19,7 @@ _language: ja
 }
 
 # Angular @@igComponent ページネーション
+
 ページネーションは、大量のデータセットを類似したコンテンツを持つ一連のページに分割するために使用されます。Angular テーブルのページネーションにより、ユーザー エクスペリエンスとデータ操作が向上します。@@igComponent ページネーションは、列の追加と同様に、`igx-paginator` タグを定義することにより、グリッド ツリーに投影された個別のコンポーネントを介して構成できます。他の Angular テーブルと同様に、@@igComponent のページネーションはカスタム ページのテンプレートをサポートします。
 
 ## Angular ページネーションの例
@@ -62,6 +63,7 @@ _language: ja
 
 
 例:
+
 ```html
 <igx-paginator #paginator [totalRecords]="20">
     <igx-paginator-content>
@@ -82,6 +84,7 @@ _language: ja
 
 @@if (igxName === 'IgxGrid') {
 ## グループ化によるページング
+
 グループ行は、データ行とともにページング プロセスに関係します。それらは各ページのページ サイズにカウントされます。折りたたまれた行はページング プロセスに含まれません。
 ページングとグループ化の統合については、[グループ化](groupby.md#angular-grid-ページングでグループ化)のトピックで説明しています。
 }
@@ -98,6 +101,7 @@ _language: ja
     </igx-paginator>
 </igx-grid>
 ```
+
 }
 
 @@if (igxName === 'IgxTreeGrid') {
@@ -110,6 +114,7 @@ _language: ja
     </igx-paginator>
 </igx-tree-grid>
 ```
+
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -132,6 +137,7 @@ _language: ja
     <igx-paginator></igx-paginator>
 </igx-hierarchical-grid>
 ```
+
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -181,6 +187,7 @@ IgxHierarchicalGrid の子グリッドの実装方法および DI スコープ�
 <div class="divider--half"></div>
 
 ## リモート ページング
+
 リモート ページングは、データ取得を担当するサービスと、グリッドの構築とデータ サブスクリプションを担当するコンポーネントを宣言することで実現できます。詳細については、[`@@igComponent リモート データ操作`](remote-data-operations.md#リモート-ページング)トピックをご覧ください。
 
 @@if (igxName === 'IgxGrid') {
@@ -198,7 +205,7 @@ IgxHierarchicalGrid の子グリッドの実装方法および DI スコープ�
 
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 最も簡単な方法で [`paginator-theme`]({environment:sassApiUrl}/themes#function-paginator-theme) を拡張し `$text-color`、`$background-color` および `$border-color` パラメータを受け入れる新しいテーマを作成します。
 
@@ -291,26 +298,28 @@ $dark-button: icon-button-theme(
 }
 
 ## API リファレンス
-* [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
-* [IgxGridPaginator スタイル]({environment:sassApiUrl}/themes#function-paginator-theme)
+
+- [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxGridPaginator スタイル]({environment:sassApiUrl}/themes#function-paginator-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [@@igComponent 概要](@@igMainTopic.md)
-* [Paginator](../paginator.md)
-* [仮想化とパフォーマンス](virtualization.md)
-* [フィルタリング](filtering.md)
-* [ソート](sorting.md)
-* [集計](summaries.md)
-* [列移動](column-moving.md)
-* [列ピン固定](column-pinning.md)
-* [列サイズ変更](column-resizing.md)
-* [選択](selection.md)
+- [@@igComponent 概要](@@igMainTopic.md)
+- [Paginator](../paginator.md)
+- [仮想化とパフォーマンス](virtualization.md)
+- [フィルタリング](filtering.md)
+- [ソート](sorting.md)
+- [集計](summaries.md)
+- [列移動](column-moving.md)
+- [列ピン固定](column-pinning.md)
+- [列サイズ変更](column-resizing.md)
+- [選択](selection.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

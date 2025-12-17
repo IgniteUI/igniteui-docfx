@@ -8,9 +8,10 @@ _language: ja
 
 # Angular 階層グリッド コンポーネントの概要
 
-Ignite UI for Angular Hierarchical Data Grid は、階層表形式データの表示と操作に使用されます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイルのフィルタリング、ソート、ページング、テンプレート化、列の移動、列のピン固定、Excel および CSV へのエクスポートなどの豊富な機能セットを提供します。Hierarchical Grid は、Flat Grid コンポーネントをベースとして構築されており、親グリッドの行の展開/縮小、詳細な情報が必要な場合に対応する子グリッドを表示する機能を拡張しました。
+Ignite UI for Angular Hierarchical Data Grid は、階層表形式データの表示と操作に使用されます。最小限のコードでデータをすばやくバインドするか、さまざまなイベントを使用してさまざまな動作をカスタマイズします。このコンポーネントは、データ選択、Excel スタイルのフィルタリング、ソート、ページング、テンプレート化、列の移動、列のピン固定、Excel、CSV、PDF へのエクスポートなどの豊富な機能セットを提供します。Hierarchical Grid は、Flat Grid コンポーネントをベースとして構築されており、親グリッドの行の展開/縮小、詳細な情報が必要な場合に対応する子グリッドを表示する機能を拡張しました。
 
 ## Angular 階層グリッドの例
+
 この Angular グリッドの例では、ユーザーがデータの階層セットを視覚化し、セル テンプレートを使用して[スパークライン](../sparkline.md)などの他の視覚的コンポーネントを追加する方法を確認できます。
 
 <code-view style="height:520px"
@@ -38,7 +39,7 @@ Ignite UI for Angular については、「[はじめに](../general/getting-sta
 ```typescript
 // app.module.ts
 
-import { IgxHierarchicalGridModule } from 'igniteui-angular';
+import { IgxHierarchicalGridModule } from 'igniteui-angular/grids/hierarchical-grid';
 // import { IgxHierarchicalGridModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -56,7 +57,7 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IGX_HIERARCHICAL_GRID_DIRECTIVES } from 'igniteui-angular';
+import { IGX_HIERARCHICAL_GRID_DIRECTIVES } from 'igniteui-angular/grids/hierarchical-grid';
 // import { IGX_HIERARCHICAL_GRID_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -88,7 +89,7 @@ Ignite UI for Angular Hierarchical Grid モジュールまたはディレクテ�
 ## データ バインディング
 
 `igx-hierarchical-grid` は、`igx-grid` から派生し、ほとんどの機能を共有します。主要な違いは階層で複数レベルを定義できることです。`igx-row-island` と呼ばれる `igx-hierarchical-grid` の定義内の個別のタグで設定されます。`igx-row-island` コンポーネントは、特定レベルの各子グリッドの設定を定義します。レベルごとの複数行アイランドがサポートされます。
-階層グリッドで 2 通りのデータ バインドがサポートされます。 
+階層グリッドで 2 通りのデータ バインドがサポートされます。
 
 ### 階層データの使用
 
@@ -124,6 +125,7 @@ export const singers = [{
     }]
 }];
 ```
+
 各 `igx-row-island` は、子データを保持するプロパティのキーを指定します。
 
 ```html
@@ -136,6 +138,7 @@ export const singers = [{
     </igx-row-island>
 </igx-hierarchical-grid>
 ```
+
 > [!NOTE]
 > `data` の代わりにユーザーは、データを自動的に設定するめの読み込みに `igx-hierarchical-grid` が必要な `key` のみ設定します。
 
@@ -242,7 +245,7 @@ export class RemoteLoDService {
 
 ## 機能
 
-グリッド機能を有効にして `igx-row-island` マークアップを介して設定し、作成された各グリッドに適用されます。ランタイムに行アイランド インスタンスでオプションを変更すると生成した各グリッドで変更されます。 
+グリッド機能を有効にして `igx-row-island` マークアップを介して設定し、作成された各グリッドに適用されます。ランタイムに行アイランド インスタンスでオプションを変更すると生成した各グリッドで変更されます。
 
 ```html
 <igx-hierarchical-grid [data]="localData" [autoGenerate]="false"
@@ -277,16 +280,16 @@ export class RemoteLoDService {
 - 集計
 - 検索
 
-選択とナビゲーション機能は、`igx-hierarchical-grid` 全体でグローバルに作用します。 
+選択とナビゲーション機能は、`igx-hierarchical-grid` 全体でグローバルに作用します。
 
-- 選択 
+- 選択
     選択は、選択したセルを異なる 2 つの子グリッドで同時に表示することを許可しません。
 - ナビゲーション
     up/down へ移動するときに next/prev 要素が子グリッドの場合、ナビゲーションが関連子グリッド内で継続され、関連セルが選択済みにマークされ、フォーカスされます。子セルが現在の表示ビューポート以外にある場合にビューへスクロールされるため、選択したセルが常に表示されます。
 
 ## [すべて縮小] ボタン
 
-左上の角にある [すべて縮小] ボタンを押して Hierarchical Grid で展開されてる行を縮小できます。更に他のグリッドを含む各子グリッドと Hierarchical Grid にも同様のボタンがあり、階層の特定のグリッドのみ縮小することができます。 
+左上の角にある [すべて縮小] ボタンを押して Hierarchical Grid で展開されてる行を縮小できます。更に他のグリッドを含む各子グリッドと Hierarchical Grid にも同様のボタンがあり、階層の特定のグリッドのみ縮小することができます。
 
 ![](../../images/unfold_less_icon_screenshot.jpg)
 
@@ -305,12 +308,13 @@ igxGrid を使用して [CRUD 操作を構築する方法](../general/how-to/how
 
 ## スタイル設定
 
-igxHierarchicalGrid を使用すると、[`Ignite UI for Angular テーマ ライブラリ`](../themes/sass/component-themes.md) でスタイルを設定できます。[`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
+igxHierarchicalGrid を使用すると、[`Ignite UI for Angular テーマ ライブラリ`](../themes/sass/component-themes.md) でスタイルを設定できます。[`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。
 
-以下の手順では、igxHierarchicalGrid スタイルをカスタマイズする手順を実行しています。     
+以下の手順では、igxHierarchicalGrid スタイルをカスタマイズする手順を実行しています。
 
-### グローバル テーマのインポート   
-階層グリッドのカスタマイズは、すべてのスタイリング機能とミックスインが配置されている `index` ファイルをインポートする必要があります。 
+### グローバル テーマのインポート
+
+階層グリッドのカスタマイズは、すべてのスタイリング機能とミックスインが配置されている `index` ファイルをインポートする必要があります。
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -320,6 +324,7 @@ igxHierarchicalGrid を使用すると、[`Ignite UI for Angular テーマ ラ�
 ```
 
 ### カスタム テーマの定義
+
 次に、[`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) を拡張し、必要に応じて階層グリッドをカスタマイズするために必要なパラメーターを受け取る新しいテーマを作成します。
 
  >[!NOTE]
@@ -344,6 +349,7 @@ $custom-theme: grid-theme(
 >上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/palettes#function-palette) および [`color`]({environment:sassApiUrl}/palettes#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックをご覧ください。
 
 ### カスタム テーマの適用
+
 テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。
 
 ```scss
@@ -392,43 +398,45 @@ platformBrowserDynamic()
 
 ## API リファレンス
 
-* [IgxHierarchicalGridComponent]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)
-* [IgxRowIslandComponent]({environment:angularApiUrl}/classes/igxrowislandcomponent.html)
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
-* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
+- [IgxHierarchicalGridComponent]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)
+- [IgxRowIslandComponent]({environment:angularApiUrl}/classes/igxrowislandcomponent.html)
+- [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+- [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+- [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
+- [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
-* [IgxInputGroup テーマ]({environment:sassApiUrl}/themes#function-input-group-theme)
-* [IgxChip テーマ]({environment:sassApiUrl}/themes#function-chip-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
-* [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
-* [IgxOverlay テーマ]({environment:sassApiUrl}/themes#function-overlay-theme)
-* [IgxDropDown テーマ]({environment:sassApiUrl}/themes#function-drop-down-theme)
-* [IgxCalendar テーマ]({environment:sassApiUrl}/themes#function-calendar-theme)
-* [IgxActionStrip テーマ]({environment:sassApiUrl}/themes#function-action-strip-theme)
-* [IgxSnackBar テーマ]({environment:sassApiUrl}/themes#function-snackbar-theme)
-* [IgxBadge テーマ]({environment:sassApiUrl}/themes#function-badge-theme)
+
+- [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxInputGroup テーマ]({environment:sassApiUrl}/themes#function-input-group-theme)
+- [IgxChip テーマ]({environment:sassApiUrl}/themes#function-chip-theme)
+- [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxOverlay テーマ]({environment:sassApiUrl}/themes#function-overlay-theme)
+- [IgxDropDown テーマ]({environment:sassApiUrl}/themes#function-drop-down-theme)
+- [IgxCalendar テーマ]({environment:sassApiUrl}/themes#function-calendar-theme)
+- [IgxActionStrip テーマ]({environment:sassApiUrl}/themes#function-action-strip-theme)
+- [IgxSnackBar テーマ]({environment:sassApiUrl}/themes#function-snackbar-theme)
+- [IgxBadge テーマ]({environment:sassApiUrl}/themes#function-badge-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [グリッド サイズ変更](sizing.md)
-* [仮想化とパフォーマンス](virtualization.md)
-* [ページング](paging.md)
-* [フィルタリング](filtering.md)
-* [ソート](sorting.md)
-* [集計](summaries.md)
-* [列移動](column-moving.md)
-* [列のピン固定](column-pinning.md)
-* [列のサイズ変更](column-resizing.md)
-* [選択](selection.md)
+- [グリッド サイズ変更](sizing.md)
+- [仮想化とパフォーマンス](virtualization.md)
+- [ページング](paging.md)
+- [フィルタリング](filtering.md)
+- [ソート](sorting.md)
+- [集計](summaries.md)
+- [列移動](column-moving.md)
+- [列のピン固定](column-pinning.md)
+- [列のサイズ変更](column-resizing.md)
+- [選択](selection.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

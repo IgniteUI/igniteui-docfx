@@ -11,7 +11,7 @@ Tile Manager コンポーネントを使用すると、コンテンツを個々�
 
 ## Angular Tile Manager の例
 
-次の Ignite UI for Angular Tile Manager の例では、コンポーネントの動作を示しています。 
+次の Ignite UI for Angular Tile Manager の例では、コンポーネントの動作を示しています。
 
 <code-view style="height:752px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -39,6 +39,7 @@ import { defineComponents, IgcTileManagerComponent } from 'igniteui-webcomponent
 
 defineComponents(IgcTileManagerComponent);
 ```
+
 また、コンポーネントの構成に `CUSTOM_ELEMENTS_SCHEMA` スキーマを含める必要があります。
 
 ```typescript
@@ -54,7 +55,7 @@ export class AppComponent {
 
 ## 使用方法
 
-タイル マネージャーは、最大化状態または通常状態でのタイルの配置を管理する基本的なタイル レイアウト動作を提供します。タイルはそれぞれ独立してサイズを設定でき、複雑なレイアウトを構築できます。エンドユーザーはドラッグ アンド ドロップによる直感的な操作で柔軟にタイルを並べ替えることが可能です。 
+タイル マネージャーは、最大化状態または通常状態でのタイルの配置を管理する基本的なタイル レイアウト動作を提供します。タイルはそれぞれ独立してサイズを設定でき、複雑なレイアウトを構築できます。エンドユーザーはドラッグ アンド ドロップによる直感的な操作で柔軟にタイルを並べ替えることが可能です。
 
 タイル マネージャーでは、使用できる 2 つのコンポーネントが提供されます。
 - `IgcTileComponent` - このコンポーネントは、タイル マネージャー内に表示される個々のタイルを表します。

@@ -6,13 +6,16 @@ _language: ja
 ---
 
 # エレベーション
+
 <p class="highlight">エレベーションは、Document Object Model ツリーの間に境界線を描画し、機能のカプセル化を向上します。Sass テーマ ライブラリを使用してエレベーションのセットを作成できます。</p>
 <div class="divider"></div>
 
 ## 概要
+
 Ignite UI for Angular のエレベーションは、25 要素のマップとして宣言されています。各要素はキーと値のペアであり、キーはエレベーション レベル名 (0..24) であり、値は 3 つの `box-shadow` 宣言のリストです。シャドウの色を定義できる新しいエレベーションのセットを生成できます。さらに、エレベーション マップから特定のエレベーション レベルを取得するための関数を公開します。デフォルトでコンポーネント間で使用されるグローバル変数 `$elevations` を公開します。エレベーションに関連する CSS 変数の[ドキュメント](../elevations.md)を読んでいない場合は、先に進む前にまず読んでおくことをお勧めします。
 
 ## 使用方法
+
 次のセクションでは、カスタム エレベーションを作成および取得する方法を示します。
 
 ### エレベーションの構成
@@ -67,7 +70,7 @@ $my-elevation-1: elevation($name: 1);
 );
 ```
 
-`elevation` 関数はボックス シャドウのリストを返すため、その関数の戻り値を使用して、コンポーネント テーマの特定のエレベーションのみを変更できます。 
+`elevation` 関数はボックス シャドウのリストを返すため、その関数の戻り値を使用して、コンポーネント テーマの特定のエレベーションのみを変更できます。
 
 ```scss
 $card-theme: card-theme(
@@ -78,6 +81,7 @@ $card-theme: card-theme(
 ```
 
 `elevation` 関数を利用せずに、単純なボック スシャドウを渡すこともできます。
+
 ```scss
 $card-theme: card-theme(
     $resting-shadow: 0 10px 10px 10px #666
@@ -87,9 +91,11 @@ $card-theme: card-theme(
   @include css-vars($card-theme);
 }
 ```
+
 <div class="divider--half"></div>
 
-## カスタム エレベーション 
+## カスタム エレベーション
+
 `elevations` 関数によって生成された[マテリアル デザイン ガイドライン (英語)](https://material.io/design/environment/elevation.html)に準拠していないエレベーション マップを作成することができます。カスタム エレベーション マップに少なくとも 25 のエレベーション レベルが含まれていることを確認してください。テーマが正しく構築することを期待しているエレベーション マップのシグネチャは次のとおりです:
 
 ```scss
@@ -103,18 +109,20 @@ $elevations: (
 ```
 
 ## エレベーション スキーマの宣言
+
 エレベーション レベルは、テーマ スキーマの宣言でも使用されます。詳細については、ドキュメントの[スキーマ](schemas.md) セクションをご覧ください。
 <div class="divider--half"></div>
 
 ## API リファレンス
 
-* [エレベーションの作成]({environment:sassApiUrl}/elevations#function-elevations)
-* [エレベーションの取得]({environment:sassApiUrl}/elevations#function-elevation)
+- [エレベーションの作成]({environment:sassApiUrl}/elevations#function-elevations)
+- [エレベーションの取得]({environment:sassApiUrl}/elevations#function-elevation)
 
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

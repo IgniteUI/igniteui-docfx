@@ -13,8 +13,8 @@ _language: ja
 ## Angular Toggle の例
 
 
-<code-view style="height: 370px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 370px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-1/" alt="Angular Toggle の例">
 </code-view>
 
@@ -35,7 +35,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 ...
-import { IgxToggleModule } from 'igniteui-angular';
+import { IgxToggleModule } from 'igniteui-angular/directives';
 // import { IgxToggleModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -51,7 +51,8 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IgxToggleDirective, IgxButtonDirective } from 'igniteui-angular';
+import { IgxToggleDirective, IgxButtonDirective } from 'igniteui-angular/directives';
+
 // import { IgxToggleDirective, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -80,7 +81,7 @@ Ignite UI for Angular Toggle モジュールまたはディレクティブをイ
 トグルのコンテンツを表示および非表示にするには、[open]({environment:angularApiUrl}/classes/igxtoggledirective.html#open) および [close]({environment:angularApiUrl}/classes/igxtoggledirective.html#close) メソッドを使用します。
 
 ```typescript
-import { IgxToggleDirective } from 'igniteui-angular'
+import { IgxToggleDirective } from 'igniteui-angular/directives'
 // import { IgxToggleDirective } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
@@ -97,7 +98,7 @@ export class Class {
 }
 ```
 
-コンポーネントのテンプレートで、トグルを可能にする要素にディレクティブを適用します。 
+コンポーネントのテンプレートで、トグルを可能にする要素にディレクティブを適用します。
 
 ```html
 <!--template.component.html-->
@@ -109,11 +110,11 @@ export class Class {
 </div>
 ```
 
-## コード例 
+## コード例
 
-### 位置の変更 
+### 位置の変更
 
-次のサンプルでは、さまざまな配置方法を使用してコンテンツをボタンの下に表示します。 
+次のサンプルでは、さまざまな配置方法を使用してコンテンツをボタンの下に表示します。
 
 `igxToggle` ディレクティブは  [`IgxOverlayService`]({environment:angularApiUrl}/classes/igxoverlayservice.html) プロバイダーを使用します。`open`、`close`、`toggle` メソッドは、コンテンツの表示方法を制御するオプションのオーバーレイ設定を受け取ります。省略した場合は、上のサンプルのようにデフォルトのオーバーレイ設定が使用されます。
 
@@ -147,8 +148,8 @@ export class Class {
 トグルは以下のようになります。
 
 
-<code-view style="height: 370px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 370px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/toggle/" >
 </code-view>
 
@@ -175,8 +176,8 @@ export class Class {
 この変更後、トグルが以下のように動作します。
 
 
-<code-view style="height: 370px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 370px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-2/" >
 </code-view>
 
@@ -201,8 +202,8 @@ export class Class {
 すべて適切に設定できると、結果は以下のようになります。
 
 
-<code-view style="height: 370px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 370px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-3/" >
 </code-view>
 
@@ -231,31 +232,34 @@ public offsetToggleSet() {
 }
 ```
 
-<code-view style="height: 370px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 370px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-4/" >
 </code-view>
 
 
 ## API リファレンス
+
 <div class="divider"></div>
 
-* [IgxToggleDirective]({environment:angularApiUrl}/classes/igxtoggledirective.html)
-* [IgxToggleActionDirective]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)
+- [IgxToggleDirective]({environment:angularApiUrl}/classes/igxtoggledirective.html)
+- [IgxToggleActionDirective]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
-* [IgxOverlayOutletDirective]({environment:angularApiUrl}/classes/igxoverlayoutletdirective.html)
-* [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
-* [igxNavigationService]({environment:angularApiUrl}/classes/igxnavigationservice.html)
+- [IgxOverlayOutletDirective]({environment:angularApiUrl}/classes/igxoverlayoutletdirective.html)
+- [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
+- [igxNavigationService]({environment:angularApiUrl}/classes/igxnavigationservice.html)
 
 ## テーマの依存関係
-* [IgxOverlay テーマ]({environment:sassApiUrl}/themes#function-overlay-theme)
+
+- [IgxOverlay テーマ]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

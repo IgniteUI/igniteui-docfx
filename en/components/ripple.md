@@ -36,7 +36,7 @@ The next step is to import the `IgxRippleModule` in the **app.module.ts** file.
 ```typescript
 // app.module.ts
 
-import { IgxRippleModule } from 'igniteui-angular';
+import { IgxRippleModule } from 'igniteui-angular/directives';
 // import { IgxRippleModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -54,7 +54,8 @@ Alternatively, as of `16.0.0` you can import the `IgxRippleDirective` as standal
 ```typescript
 // home.component.ts
 
-import { IgxRippleDirective, IgxButtonDirective } from 'igniteui-angular';
+import { IgxRippleDirective, IgxButtonDirective } from 'igniteui-angular/directives';
+import { IgxButtonDirective } from 'igniteui-angular/button';
 // import { IgxRippleDirective, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

@@ -17,8 +17,8 @@ Ignite UI Expansion Panel [igx-expansion-panel]({environment:angularApiUrl}/clas
 
 Ignite UI Angular を使用して、この単純な Angular Expansion Panel の例を作成しました。以下にサンプルの動作を確認できます。
 
-<code-view style="height: 320px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 320px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-1/" >
 </code-view>
 
@@ -39,7 +39,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 ```typescript
 // app.module.ts
 ...
-import { IgxExpansionPanelModule } from 'igniteui-angular';
+import { IgxExpansionPanelModule } from 'igniteui-angular/expansion-panel';
 // import { IgxExpansionPanelModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -55,7 +55,7 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IGX_EXPANSION_PANEL_DIRECTIVES } from 'igniteui-angular';
+import { IGX_EXPANSION_PANEL_DIRECTIVES } from 'igniteui-angular/expansion-panel';
 // import { IGX_EXPANSION_PANEL_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -103,12 +103,13 @@ Ignite UI for Angular Expansion Panel モジュールまたはディレクティ
 
 
 ## プロパティ バインディングおよびイベント
-ロジックをコンポーネントに追加することによりパネルの現在の状態に基づいて `igx-expansion-panel-description` の表示/非表示を切り替えることができます。 
+
+ロジックをコンポーネントに追加することによりパネルの現在の状態に基づいて `igx-expansion-panel-description` の表示/非表示を切り替えることができます。
 これには、説明をコントロール [`collapsed`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#collapsed) プロパティへバインドします。
 
 ```typescript
 // in expansion-panel.component.ts
-import { IgxExpansionPanelComponent } from 'igniteui-angular';
+import { IgxExpansionPanelComponent } from 'igniteui-angular/expansion-panel';
 // import { IgxExpansionPanelComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({...})
@@ -133,6 +134,7 @@ export class ExpansionPanelComponent {
 
 以下のサンプル コードは、コンポーネントが縮小状態の場合のみ短い説明文を表示する場合の例です。
 コンポーネントの状態に応じてより複雑な機能を追加する場合、イベント エミッターにバインドすることもできます。
+
 ```typescript
 // in expansion-panel.component.ts
 
@@ -144,6 +146,7 @@ export class ExpansionPanelComponent {
     }
 }
 ```
+
 ```html
 <!-- in expansion-component.component.html -->
 <igx-expansion-panel (onExpanded)="handleExpansion($event)" (contentCollapsed)="handleCollapse($event)"></igx-expansion-panel>
@@ -151,13 +154,14 @@ export class ExpansionPanelComponent {
 
 以下は結果です。
 
-<code-view style="height: 320px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 320px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-2/" >
 </code-view>
 
 
 ## コンポーネントのカスタマイズ
+
 [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) によって[ヘッダー]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html)を簡単にカスタマイズできます。
 ヘッダー アイコンの位置は、`igx-expansion-panel-header` の [`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconPosition) 入力で設定します。アイコンの位置の可能なオプションは、**left**、**right**、**none** です。次のコードサンプルは、コンポーネントのボタンが右側に移動するように構成する方法を示しています。
 
@@ -168,11 +172,13 @@ export class ExpansionPanelComponent {
     ...
 </igx-expansion-panel>
 ```
+
 >[!NOTE]
 >[`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconPosition) プロパティは、`RTL` で使用できます。たとえば、**right** に表示するよう設定したアイコンは、RTL 設定時にヘッダーの左端に表示されます。
 
 コントロールのトグル状態のデフォルト アイコンをテンプレート化できます。
 `igx-expansion-panel-icon` タグでコンテンツを渡します。
+
 ```html
 <!-- in expansion-component.component.html -->
 <igx-expansion-panel>
@@ -186,11 +192,13 @@ export class ExpansionPanelComponent {
     ...
 </igx-expansion-panel>
 ```
+
 Angular Expansion Panel は、パネルの縮小時に「更に表示」を描画し、完全に展開した後に「簡易表示」を描画します。
 
 `IgxExpansionPanel` コントロールを使用すると、あらゆる種類のコンテンツを `igx-expansion-panel-body` 内に追加できます。[`IgxGrid`](grid/grid.md)、[`IgxCombo`](combo.md)、チャート、その他の展開パネルもレンダリングできます。
 
 展開パネルの本体にいくつかの基本的なマークアップを追加します。
+
 ```html
 <!-- in expansion-panel.component.html -->
 ...
@@ -206,8 +214,8 @@ Angular Expansion Panel は、パネルの縮小時に「更に表示」を描�
 
 以下は上記の変更の結果です。
 
-<code-view style="height: 460px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 460px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-3/" >
 </code-view>
 
@@ -267,7 +275,9 @@ Angular Expansion Panel は、パネルの縮小時に「更に表示」を描�
 </table>
 
 ### パレットおよび色
+
 はじめに、後でコンポーネントに渡すカスタム パレットを作成します。
+
 ```scss
 // In real life, this should be in our main sass file so we can share the palette between all components. 
 // In our case, it's in the component SCSS file "expansion-styling.component.scss".
@@ -325,6 +335,7 @@ $custom-panel-theme: expansion-panel-theme(
 >[`テーマ`](themes/sass/component-themes.md) エンジンを介したスタイル設定に使用可能なすべてのパラメーターを確認するには、[`API ヘルプ`]({environment:sassApiUrl}/themes#function-expansion-panel-theme)を参照してください。
 
 ### コンポーネント テーマの適用
+
 コンポーネント テーマを適用するには、`css-vars` ミックスインをインクルードし、`$custom-panel-theme` マップを渡します。
 
 ```scss
@@ -336,9 +347,9 @@ Ignite UI テーマ エンジンの使用方法の詳細については、[`こ�
 
 ### デモ
 
-<code-view style="height: 440px;" 
+<code-view style="height: 440px;"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/expansion-styling/" >
 </code-view>
 
@@ -355,6 +366,7 @@ Ignite UI テーマ エンジンの使用方法の詳細については、[`こ�
 ```
 
 ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
 - `light-*` クラスはライト テーマ用です。
 - `dark-*` クラスはダーク テーマ用です。
 - プレフィックスの後にコンポーネント名を追加します (例: `light-expansion-panel`、`dark-expansion-panel`)。
@@ -384,13 +396,15 @@ Ignite UI テーマ エンジンの使用方法の詳細については、[`こ�
 
 ## Angular Expansion Panel のアニメーション
 ### 特定のアニメーションの使用
+
 コンポーネントの展開や縮小時にデフォルトのアニメーション以外を使用することも可能です。
 上記のように igxExpansionPanel がすでに `app.module.ts` にインポートされていると仮定した場合、カスタム アニメーション設定オブジェクトを作成して Ignite UI for Angular Expansion Panel で使用するために設定します。[`useAnimation`](https://angular.io/api/animations/useAnimation) メソッドと特定のアニメーションが必要でアニメーションの設定をインポートして次のようなアニメーションの設定を定義します。
 
 ```typescript
 // expansion-panel.component.ts 内
 import { useAnimation } from '@angular/animations';
-import { IgxExpansionPanelComponent, slideInLeft, slideOutRight } from 'igniteui-angular';
+import { IgxExpansionPanelComponent } from 'igniteui-angular/expansion-panel';
+import { slideInLeft, slideOutRight } from 'igniteui-angular/animations';
 // import { IgxExpansionPanelComponent, slideInLeft, slideOutRight } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({...})
@@ -419,6 +433,7 @@ export class ExpansionPanelComponent {
     }
 }
 ```
+
 [**ビルトイン アニメーション スイート**]({environment:sassApiUrl}/animations) の [`slideInLeft`]({environment:sassApiUrl}/animations#mixin-slide-in-left) アニメーションと [`slideOutRight`]({environment:sassApiUrl}/animations#mixin-slide-out-right) アニメーションを使用して、コンテンツを折りたたむとコンポーネントのコンテンツが左側からより動的に表示され、右側から消えるようにします。既存のパラメーターを使用したい特定のパラメーターでオーバーライドします。
 
 サンプルは、ユーザー情報とキー ポイントをここに表示してアニメーション設定をコンポーネントに渡します:
@@ -440,8 +455,8 @@ export class ExpansionPanelComponent {
 
 以下は結果です。
 
-<code-view style="height: 380px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 380px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-5/" >
 </code-view>
 
@@ -451,11 +466,13 @@ export class ExpansionPanelComponent {
 [igxAccordion トピック](accordion.md)を参照してください。
 
 ## API リファレンス
-* [IgxExpansionPanel API]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)
-* [IgxExpansionPanelHeader API]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html)
-* [IgxExpansionPanelBody API]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html)
-* [IgxExpansionPanel スタイル]({environment:sassApiUrl}/themes#mixin-igx-expansion-panel)
+
+- [IgxExpansionPanel API]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)
+- [IgxExpansionPanelHeader API]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html)
+- [IgxExpansionPanelBody API]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html)
+- [IgxExpansionPanel スタイル]({environment:sassApiUrl}/themes#mixin-igx-expansion-panel)
 
 ## テーマの依存関係
-* [IgxExpansionPanel テーマ]({environment:sassApiUrl}/themes#function-expansion-panel-theme)
-* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+
+- [IgxExpansionPanel テーマ]({environment:sassApiUrl}/themes#function-expansion-panel-theme)
+- [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)

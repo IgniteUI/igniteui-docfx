@@ -7,9 +7,11 @@ _language: ja
 ---
 
 # Angular Select (選択) コンポーネントの概要
+
 Angular Select は、事前定義された値のリストから 1 つの値を選択するために使用されるフォーム コンポーネントです。Angular Select コンポーネントは、ネイティブ HTML select 要素と同じ機能を提供しますが、さらに多くのカスタマイズ オプションを提供します。これは [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) に基づいており、テンプレート、仮想化、ドロップダウン リスト項目のカスタマイズなどのすべての機能をサポートしています。
 
 ## Angular Select の例
+
 以下は基本的な Angular Select の例です。クリックごとに開く、いくつかの選択肢のリストを表示するシンプルなコンテキスト メニューがあります。
 
 <code-view style="height: 300px;"
@@ -32,7 +34,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 ```typescript
 // app.module.ts
 ...
-import { IgxSelectModule } from 'igniteui-angular';
+import { IgxSelectModule } from 'igniteui-angular/select';
 // import { IgxSelectModule } from '@infragistics/igniteui-angular'; for licensed package
 @NgModule({
     ...
@@ -48,7 +50,7 @@ export class AppModule {}
 // home.component.ts
 
 import { FormsModule } from '@angular/forms';
-import { IGX_SELECT_DIRECTIVES } from 'igniteui-angular';
+import { IGX_SELECT_DIRECTIVES } from 'igniteui-angular/select';
 // import { IGX_SELECT_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -77,6 +79,7 @@ Ignite UI for Angular Select モジュールまたはディレクティブをイ
 ## Angular Select の使用
 
 選択する項目のリストと共に `igx-select` を追加します。[`igx-select-item`]({environment:angularApiUrl}/classes/igxselectitemcomponent.html) を使用して、`igx-select` に含まれる項目を表示します。
+
 ```html
 <igx-select>
     <label igxLabel>Simple Select</label>
@@ -138,6 +141,7 @@ Select コンポーネントは、[入力グループ](input-group.md)に適用�
     </igx-select-item>
 </igx-select>
 ```
+
 <code-view style="height: 350px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/select-input-directives/" >
@@ -147,6 +151,7 @@ Select コンポーネントは、[入力グループ](input-group.md)に適用�
 >Select コンポーネントに [`placeholder`]({environment:angularApiUrl}/classes/igxselectcomponent.html#placeholder) が指定されておらず、選択も行われていない場合、`igxLabel` は遷移し、プレースホルダーが適切な場所に表示されます。
 
 ### 選択項目のグループ化
+
 項目グループを視覚的に分離するために、Select コンポーネントは、項目を `<igx-select-item-group>` にラップすることで項目のグループ化をサポートします。
 これは、コンポーネントを宣言するために反復可能な階層データに適しています。以下の例では、各グループには `label` と `items` のコレクションがあります。
 
@@ -193,6 +198,7 @@ public greengrocery: Array<{ label: string, items: Array<{ type: string, origin:
 </code-view>
 
 ### ヘッダーとフッター
+
 現在 Select コンポーネントにデフォルトのヘッダーとフッターのテンプレートはありません。ただし、ヘッダーまたはフッター テンプレートを追加するには、`igxSelectHeader` または `igxSelectFooter` でそれぞれマークします。これらはカスタム テンプレートであるため、スタイル設定も定義する必要があります。
 
 以下の例では、ヘッダーとフッターの両方の ng テンプレートが定義されています。ヘッダーには、[`igx-buttongroup`]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html) で実装された基本的なフィルタリングがあります。フッターには、配信方法に基づいて、すべての項目の静的な集計が含まれます。
@@ -247,6 +253,7 @@ public greengrocery: Array<{ label: string, items: Array<{ type: string, origin:
     </ng-template>
 </igx-select>
 ```
+
 <code-view style="height: 610px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/select-header-footer/" >
@@ -254,6 +261,7 @@ public greengrocery: Array<{ label: string, items: Array<{ type: string, origin:
 
 
 ### Angular Select のカスタム切り替えボタン
+
 `igxSelectToggleIcon` ディレクティブを使用するか、あるいは [`toggleIconTemplate`]({environment:angularApiUrl}/classes/igxselectcomponent.html#toggleIconTemplate) プロパティに `TemplateRef` を設定して、デフォルトの切り替えボタンをカスタマイズできます。
 
 ```html
@@ -282,7 +290,9 @@ public greengrocery: Array<{ label: string, items: Array<{ type: string, origin:
 また、[ドラッグアンドドロップ App Builder™](https://jp.infragistics.com/products/appbuilder) を試して、特定のプロセスを自動化し、次の Angular アプリを構築する際の過度の手動コーディングの必要性を減らす方法を確認することもできます。
 
 ## カスタム オーバーレイ設定
+
 カスタム [`OverlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html) を作成できます。テンプレートを以下のように定義します。
+
 ```html
 <igx-select [overlaySettings]="customOverlaySettings">
     <igx-select-item *ngFor="let item of items">
@@ -290,9 +300,11 @@ public greengrocery: Array<{ label: string, items: Array<{ type: string, origin:
     </igx-select-item>
 </igx-select>
 ```
+
 - `overlaySettings` プロパティがカスタム設定にバインドされます。
 
 クラスの内側に以下のようなコードがあります。
+
 ```typescript
 export class MyClass implements OnInit {
     @ViewChild(IgxSelectComponent)
@@ -319,6 +331,7 @@ export class MyClass implements OnInit {
     }
 }
 ```
+
 [ConnectedPositioningStrategy]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html) に直接渡す [PositionSettings]({environment:angularApiUrl}/interfaces/positionsettings.html) オブジェクトを作成しましたが必須ではありません。ただし、カスタム ポジショニングを定義するためにストラテジのデフォルト設定をオーバーライドします。
 
 - [ngOnInit](https://angular.io/api/core/OnInit) フックの内側にすべて設定できます。コンポーネントの生成時にテンプレートに自動的に反映します。
@@ -331,6 +344,7 @@ export class MyClass implements OnInit {
 
 
 テンプレートを以下のようにカスタマイズされた [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html) オブジェクトを [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html#open) の open 関数に渡すこともできます。
+
 ```html
 <igx-select>
     <igx-select-item *ngFor="let item of items">
@@ -342,6 +356,7 @@ export class MyClass implements OnInit {
 ```
 
 クラスには以下があります。
+
 ```typescript
 export class MyClass implements OnInit {
     /* -- */
@@ -355,6 +370,7 @@ export class MyClass implements OnInit {
     /* -- */
 }
 ```
+
 >[!NOTE]
 >テンプレートと同様に関数 `open` 引数としてカスタム設定を渡す場合、`igx-select` は関数 `open` 提供されるものを使用します。ただし、`opening` たは `opened` などのインターナル イベントにバインドした場合は、`igx-select` はテンプレートの設定を使用します。
 
@@ -432,6 +448,7 @@ $custom-select-theme: select-theme(
 ```
 
 ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
 - `light-*` クラスはライト テーマ用です。
 - `dark-*` クラスはダーク テーマ用です。
 - プレフィックスの後にコンポーネント名を追加します (例: `light-select`、`dark-select`)。
@@ -460,28 +477,31 @@ $custom-select-theme: select-theme(
 <div class="divider--half"></div>
 
 ## API リファレンス
-* [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)
-* [IgxSelectItemComponent]({environment:angularApiUrl}/classes/igxselectitemcomponent.html)
-* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
-* [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)
-* [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [ConnectedPositioningStrategy]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html)
-* [GlobalPositionStrategy]({environment:angularApiUrl}/classes/globalpositionstrategy.html#constructor)
-* [AbsoluteScrollStrategy]({environment:angularApiUrl}/classes/absolutescrollstrategy.html)
-* [PositionSettings]({environment:angularApiUrl}/interfaces/positionsettings.html)
+
+- [IgxSelectComponent]({environment:angularApiUrl}/classes/igxselectcomponent.html)
+- [IgxSelectItemComponent]({environment:angularApiUrl}/classes/igxselectitemcomponent.html)
+- [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
+- [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)
+- [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html)
+- [ConnectedPositioningStrategy]({environment:angularApiUrl}/classes/connectedpositioningstrategy.html)
+- [GlobalPositionStrategy]({environment:angularApiUrl}/classes/globalpositionstrategy.html#constructor)
+- [AbsoluteScrollStrategy]({environment:angularApiUrl}/classes/absolutescrollstrategy.html)
+- [PositionSettings]({environment:angularApiUrl}/interfaces/positionsettings.html)
 
 ## テーマの依存関係
-* [IgxDropDown テーマ]({environment:sassApiUrl}/themes#function-drop-down-theme)
-* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
-* [IgxOverlay テーマ]({environment:sassApiUrl}/themes#function-overlay-theme)
-* [IgxInputGroup テーマ]({environment:sassApiUrl}/themes#function-input-group-theme)
+
+- [IgxDropDown テーマ]({environment:sassApiUrl}/themes#function-drop-down-theme)
+- [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxOverlay テーマ]({environment:sassApiUrl}/themes#function-overlay-theme)
+- [IgxInputGroup テーマ]({environment:sassApiUrl}/themes#function-input-group-theme)
 
 ## その他のリソース
-* [NgModel](https://angular.io/api/forms/NgModel)
-* [ViewChild](https://angular.io/api/core/ViewChild)
-* [ngForOf](https://angular.io/api/common/NgForOf)
+
+- [NgModel](https://angular.io/api/forms/NgModel)
+- [ViewChild](https://angular.io/api/core/ViewChild)
+- [ngForOf](https://angular.io/api/common/NgForOf)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

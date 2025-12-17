@@ -14,8 +14,8 @@ _language: ja
 
 この Angular ドロップダウンの例は、ドロップダウン リストの基本的な機能を示しています。それをクリックしてプリセット オプションを展開し、項目を選択して、ドロップダウンを閉じます。
 
-<code-view style="height:200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-1/" alt="Angular Drop Down の例">
 </code-view>
 
@@ -37,7 +37,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 ...
-import { IgxDropDownModule } from 'igniteui-angular';
+import { IgxDropDownModule } from 'igniteui-angular/drop-down';
 // import { IgxDropDownModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -54,7 +54,9 @@ export class AppModule {}
 // home.component.ts
 
 import { NgFor } from '@angular/common';
-import { IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective } from 'igniteui-angular';
+import { IGX_DROP_DOWN_DIRECTIVES } from 'igniteui-angular/drop-down';
+import { IgxToggleActionDirective } from 'igniteui-angular/directives';
+import { IgxButtonDirective } from 'igniteui-angular/directives';
 // import { IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -144,8 +146,8 @@ export class MyDropDownComponent {
 }
 ```
 
-<code-view style="height: 200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-2/" >
 </code-view>
 
@@ -190,8 +192,8 @@ export class MyDropDownComponent {
 
 サンプルを正しく構成すると European Union ヘッダーの下に国の一覧がグループ形式で表示され、France は非インタラクティブな項目、そして Bulgaria は選択済みの項目として表示されます。
 
-<code-view style="height: 310px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 310px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-3/" >
 </code-view>
 
@@ -265,8 +267,8 @@ export class MyCustomDropDownComponent {
 
 以下のサンプルで結果を確認できます。
 
-<code-view style="height: 310px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 310px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-5/" >
 </code-view>
 
@@ -330,8 +332,8 @@ export class MyMenuComponent {
 }
 ```
 
-<code-view style="height: 240px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 240px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-menu/" >
 </code-view>
 
@@ -398,8 +400,8 @@ public ngAfterViewInit(): void {
 
 上記の構成の結果は、次のサンプルで確認できます。
 
-<code-view style="height:400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-multi-level-menu/">
 </code-view>
 
@@ -464,8 +466,8 @@ export class InputDropDownComponent {
 }
 ```
 
-<code-view style="height:220px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:220px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-4/" >
 </code-view>
 
@@ -644,29 +646,31 @@ $custom-drop-down-theme: drop-down-theme(
 
 ### デモ
 
-<code-view style="height:350px" 
+<code-view style="height:350px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-styling/" >
 </code-view>
 
 <div class="divider--half"></div>
 
 ## API リファレンス
-* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) 
-* [IgxDropDownComponent スタイル]({environment:sassApiUrl}/themes#function-drop-down-theme)
-* [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)
-* [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay スタイル]({environment:sassApiUrl}/themes#function-overlay-theme)
-* [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
-* [IgxDividerDirective スタイル]({environment:sassApiUrl}/themes#function-divider-theme)
+
+- [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
+- [IgxDropDownComponent スタイル]({environment:sassApiUrl}/themes#function-drop-down-theme)
+- [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)
+- [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
+- [IgxOverlay スタイル]({environment:sassApiUrl}/themes#function-overlay-theme)
+- [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
+- [IgxDividerDirective スタイル]({environment:sassApiUrl}/themes#function-divider-theme)
 
 ## テーマの依存関係
-* [IgxOverlay テーマ]({environment:sassApiUrl}/themes#function-overlay-theme)
+
+- [IgxOverlay テーマ]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## その他のリソース
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

@@ -7,13 +7,14 @@ _language: ja
 ---
 
 # Angular Toast (トースト) コンポーネントの概要
+
 <p class="highlight">Ignite UI for Angular Toast コンポーネントは、自動非表示でユーザーが閉じられない非対話型の情報および報告メッセージを表示できます。通知はページの上側、中央、または下側に表示できます。</p>
 
 ## Angular Toast の例
 
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-2/" alt="Angular Toast の例">
 </code-view>
 
@@ -36,7 +37,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 ...
-import { IgxToastModule } from 'igniteui-angular';
+import { IgxToastModule } from 'igniteui-angular/toast';
 // import { IgxToastModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -52,7 +53,8 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IgxToastComponent, IgxButtonDirective } from 'igniteui-angular';
+import { IgxToastComponent } from 'igniteui-angular/toast';
+import { IgxButtonDirective } from 'igniteui-angular/directives';
 // import { IgxToastComponent, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -76,6 +78,7 @@ Ignite UI for Angular Toast モジュールまたはコンポーネントをイ�
 ## Angular Toast の使用
 
 ### Toast の表示
+
 Toast コンポーネントを表示するには、ボタン クリックで [`open()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#open) メソッドを呼び出します。Toast コンテンツを要素内に渡すことができます。
 
 ```html
@@ -114,7 +117,8 @@ public showMessage() {
 ## 例
 
 ### 非表示/自動的に隠す
-開いた後は、[`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displayTime) に指定した時間期間後に非表示になります。デフォルト値は 4000 ミリ秒です。この動作はデフォルトで有効ですが、[`autoHide`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#autoHide) を **false** に設定して変更できます。このように、Toast は非表示になりません。Toast の [`close()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#close) メソッドを使用して、コンポーネントを閉じることができます。 
+
+開いた後は、[`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displayTime) に指定した時間期間後に非表示になります。デフォルト値は 4000 ミリ秒です。この動作はデフォルトで有効ですが、[`autoHide`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#autoHide) を **false** に設定して変更できます。このように、Toast は非表示になりません。Toast の [`close()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#close) メソッドを使用して、コンポーネントを閉じることができます。
 
 ```html
 <!--sample.component.html-->
@@ -127,12 +131,13 @@ public showMessage() {
 サンプルが正しく構成されると、[SHOW] ボタンをクリックしたときに Toast が表示されます。自動的に隠す機能が無効で、[HIDE] ボタンのクリックで Toast が非表示になります。
 他の 2 つのコンポーネントでは、[`open()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#open) メソッドを介してさまざまなメッセージを渡し、コンテンツ プロジェクションを使用する方法を実際に見ることができます。
 
-<code-view style="height: 450px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-3/" >
 </code-view>
 
 ### 表示期間
+
 [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displayTime) でミリ秒間隔に設定し、Toast コンポーネントが表示される期間を構成します。
 
 ```html
@@ -149,6 +154,7 @@ public showMessage() {
 </div>
 
 ### 配置
+
 [`positionSettings`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#positionSettings) を使用すると、Toast の表示位置を構成します。デフォルトで、ページの下に表示されます。以下のサンプルで、通知が上位置に表示されます。
 
 ```html
@@ -161,7 +167,7 @@ public showMessage() {
 
 ```typescript
 // sample.component.ts
-import { VerticalAlignment } from 'igniteui-angular';
+import { VerticalAlignment } from 'igniteui-angular/core';
 // import { VerticalAlignment } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public open(toast) {
@@ -171,8 +177,8 @@ public open(toast) {
 ...
 ```
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-5/" >
 </code-view>
 
@@ -236,9 +242,9 @@ $custom-toast-theme: toast-theme(
 
 ### デモ
 
-<code-view style="height: 600px" 
+<code-view style="height: 600px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/toast-style/" >
 </code-view>
 
@@ -255,6 +261,7 @@ $custom-toast-theme: toast-theme(
 ```
 
 ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
 - `light-*` クラスはライト テーマ用です。
 - `dark-*` クラスはダーク テーマ用です。
 - プレフィックスの後にコンポーネント名を追加します (例: `light-toast`、`dark-toast`)。
@@ -282,14 +289,16 @@ $custom-toast-theme: toast-theme(
 <div class="divider--half"></div>
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
-* [IgxToastComponent]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
-* [IgxToastComponent スタイル]({environment:sassApiUrl}/themes#function-toast-theme)
+- [IgxToastComponent]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
+- [IgxToastComponent スタイル]({environment:sassApiUrl}/themes#function-toast-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

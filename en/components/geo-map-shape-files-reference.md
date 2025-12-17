@@ -34,7 +34,7 @@ Before plotting geo-spatial data in the control, one should get familiar with th
 
 ## Shape Files Format
 
-The Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html) control uses popular [Shape Files](http://en.wikipedia.org/wiki/Shapefile#Overview) format as one of the sources for geo-spatial data. Shape files are usually shipped with other file types, generally files with  _.shp_, _.shx_, and _.dbf_  extensions.
+The Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html) control uses popular [Shape Files](http://en.wikipedia.org/wiki/Shapefile#Overview) format as one of the sources for geo-spatial data. Shape files are usually shipped with other file types, generally files with  **.shp**, **.shx**, and **.dbf** extensions.
 
 The following table provides basic information and purpose for each type of shape files.
 
@@ -71,29 +71,17 @@ The following list provides resource tools for editing shape files.
 The following list provides resources for obtaining shape files. Also, samples for the [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html) control are good source of shape files. These shape files are included in the installer for the Samples Browser.
 
 - [ESRI - World Map Data](http://www.esri.com/data/download/basemap/index.html)
-
 - [ESRI - Census 2010 Tiger/Line® - Shape Files](http://www.census.gov/geo/www/tiger/tgrshp2010/tgrshp2010.html)
-
 - [National Atlas of the United States – Shape Files](http://www.nationalatlas.gov/atlasftp.html)
-
 - [U.S. Census Bureau – Cartographic Boundary Files](http://www.census.gov/geo/www/cob/index.html)
-
 - [U.S. Census Bureau - 2007 Tiger/Line® - Shape Files](http://www.census.gov/cgi-bin/geo/shapefiles/national-files)
-
 - [U.S. Federal Executive Branch – Raw Data](https://explore.data.gov/catalog/raw/)
-
 - [NOAA – Shape Files](http://www.nws.noaa.gov/geodata/)
-
 - [CDC - Shape Files](http://wwwn.cdc.gov/epiinfo/script/shapefiles.aspx)
-
 - [Massachusetts Geographic Information System](http://www.mass.gov/mgis/massgis.htm)
-
 - [Geo Commons – Shape Files](http://geocommons.com/searches?query=shapefiles)
-
 - [Geo Community – Shape Files](http://data.geocomm.com/catalog/)
-
 - [RITA – NORTAD Files (Must-be converted to Shape Files)](http://www.bts.gov/publications/north_american_transportation_atlas_data/)
-
 - [MapCruzin – Shape Files](http://www.mapcruzin.com/download-free-arcgis-shapefiles.htm)
 
 ## Additional Resources

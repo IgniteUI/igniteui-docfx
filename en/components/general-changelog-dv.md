@@ -6,8 +6,6 @@ mentionedTypes: ["SeriesViewer", "XYChart", "DomainChart", "XamDataChart", "Tool
 namespace: Infragistics.Controls.Charts
 ---
 
-<!-- markdownlint-disable MD024 -->
-
 # Ignite UI for Angular Changelog
 
 All notable changes for each version of Ignite UI for Angular are documented on this page.
@@ -17,6 +15,57 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 > For changes specific to igniteui-angular components, please see CHANGELOG.MD.
 
 - [Ignite UI for Angular CHANGELOG.md at Github](https://github.com/IgniteUI/igniteui-angular/blob/master)
+
+## **20.2.1 (December 2025)**
+
+### Bug Fixes
+
+| Bug Number | Control | Description |
+|------------|---------|-------------|
+|33808|IgxDataChart|The scale set for IntervalType Ticks in TimeAxisInterval is not displayed|
+|34255|IgxDataChart|0.00001 scale tick marks are displayed overlapping each other|
+|38510|IgxDataChart|AssigningCategoryStyle event support for Stacked Series|
+
+### Enhancements
+
+#### Charts
+
+- Added LabelFormatOverride event to TimeXAxisLabelFormat so you can now override the formatting with an event at all time-formatting levels on the TimeXAxis.
+
+- Adjusted the schema generation to account for more items to make it more likely to find valid values for properties.
+
+## **20.2.0 (November 2025)**
+
+### igniteui-angular-charts (Charts)
+
+#### <label class="badge badge--preview">PREVIEW</label> User Annotations
+
+In Ignite UI for Angular, you can now annotate the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) with slice, strip, and point annotations at runtime using the new user annotations feature. This allows the end user to add more details to the plot such as calling out single important events such as company quarter reports by using the slice annotation or events that have a duration by using the strip annotation. You can also call out individual points on the plotted series by using the point annotation or any combination of these three.
+
+This is directly integrated with the available tools of the [`IgxToolbarComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html).
+
+<img class="responsive-img" src="../images/charts/data-chart-user-annotation-create.gif"
+alt="Angular user-annotation-create"/>
+
+#### <label class="badge badge--preview">PREVIEW</label> Collision Detection for Axis Annotations
+
+Ability for axis annotations to automatically detect collisions and truncate to fit better. To enable this feature you must set the following properties:
+
+- `ShouldAvoidAnnotationCollisions`
+- `ShouldAutoTruncateAnnotations`
+
+### igniteui-angular-maps (Geographic Map)
+
+- Azure Map Imagery is now RTM.
+
+### Bug Fixes
+
+| Bug Number | Control | Description |
+|------------|---------|-------------|
+|40136|Excel Library|FormulaParseException exception when loading an Excel workbook|
+|40262|IgxSpreadsheet|#Circularity! is displayed when there are warnings. Request to match Excel - display a value eg. 0 instead|
+|40458|IgxSpreadsheet|When using Arial font, the igx-spreadsheet cuts off text in the cells|
+|40490|IgxDatePicker|Inputs by Autofill won't give any effects for a date picker|
 
 ## **20.1.0 (September 2025)**
 
@@ -81,12 +130,12 @@ There is a new property called [`useInsetOutlines`]({environment:dvApiBaseUrl}/p
 
 | Bug Number | Control | Description |
 |------------|---------|-------------|
-|27304|IgxDataChart|Zoom rectangle is not positioned the same as the background rectangle|
-|30600|IgxDoughnutChart|No textStyle property for either the chart or series (pie chart has this)|
-|31624|IgxCategoryChart|Resizing the containing window of the IgxCategoryChart causes the chart to fail to render the series|
-|33861|Excel Library|Adding line chart corrupts excel File for German culture|
-|37930|IgxDataChart|Data Annotation Overlay Text Color not working|
-|38231|IgxGrid|Unpinned column does not return to the original position if hidden columns exist|
+|31624 | [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) | Resizing the containing window of the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) causes the chart to fail to render the series|
+|27304 | `DataChart` | Zoom rectangle is not positioned the same as the background rectangle|
+|37930 | `DataChart` | Data Annotation Overlay Text Color not working|
+|30600 | `DoughnutChart` | No textStyle property for either the chart or series (pie chart has this)|
+|38231 | `Grid` | Unpinned column does not return to the original position if hidden columns exist|
+|33861 | Excel Library | Adding line chart corrupts excel File for German culture|
 
 ## **20.0.1 (August 2025)**
 
@@ -94,7 +143,7 @@ There is a new property called [`useInsetOutlines`]({environment:dvApiBaseUrl}/p
 
 | Bug Number | Control | Description      |
 |------------|---------|------------------|
-|36448|IgxRadialGauge|Radial label format properties do not work. (eg. Title, SubTitles)|
+|36448 | `RadialGauge` | Radial label format properties do not work. (eg. Title, SubTitles)|
 
 ### igniteui-angular-charts (Charts)
 
@@ -104,7 +153,7 @@ There is a new property called [`useInsetOutlines`]({environment:dvApiBaseUrl}/p
 
 - Angular 20 support.
 
-## **19.0.1 (February 2025)**
+## **19.1.0 (April 2025)**
 
 ### igniteui-angular-maps (Geographic Map)
 
@@ -133,7 +182,7 @@ There is a new property called [`useInsetOutlines`]({environment:dvApiBaseUrl}/p
 
 ### igniteui-angular-dashboards (Dashboards)
 
-- The `DashboardTile` now supports propagating the aggregations from its DataGrid view to the chart visualization such as sorting, grouping, filtering and selection. This is currently supported by binding the `DataSource` of the `DashboardTile` to an instance of `LocalDataSource`.
+- The [`IgxDashboardTileComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_dashboards.igxdashboardtilecomponent.html) now supports propagating the aggregations from its DataGrid view to the chart visualization such as sorting, grouping, filtering and selection. This is currently supported by binding the `DataSource` of the [`IgxDashboardTileComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_dashboards.igxdashboardtilecomponent.html) to an instance of `LocalDataSource`.
 
 ### igniteui-angular
 
@@ -156,9 +205,9 @@ There is a new property called [`useInsetOutlines`]({environment:dvApiBaseUrl}/p
 
 | Bug Number | Control | Description      |
 |------------|---------|------------------|
-|37023|IgxDataChart|Tooltips are cut-off/offscreen if overflow hidden is set. |
-|37244|Excel|Custom Data Validation is not working. |
-|37685|IgxSpreadsheet|Poor rendering of numbers formatted with Arial font. |
+|37023 | `DataChart` | Tooltips are cut-off/offscreen if overflow hidden is set.|
+|37685 | [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html) | Poor rendering of numbers formatted with Arial font.|
+|37244 | Excel Library | Custom Data Validation is not working.|
 
 ## **19.0.1 (February 2025)**
 
@@ -176,18 +225,18 @@ The following table lists the bug fixes made for the Ignite UI for Angular tools
 
 | Bug Number | Control | Description      |
 |------------|---------|------------------|
-|26218|Excel Library|Chart's plot area right margin becomes narrower and fill pattern and fill foreground are gone just by loading an Excel file|
-|30286|IgxDataChart|Bubble Series tooltip content is switched to that of nearby bubble data in clicking a bubble|
-|32906|IgxDataChart|IgxDataChart is showing two xAxis on the top|
-|33605|IgxDataChart|ScatterLineSeries is not showing the color of the line correctly in the legend|
-|34053|IgxRadialGauge|The position of the scale label is shifted|
-|34083|Excel Library|TextOperatorConditionalFormat's is not loaded/saved properly if the text contains = in a template Excel file|
-|34776|IgxDataChart|Repeatedly showing and hiding the IgxDataChart causes memory leakage in JS Heap|
-|35495|Excel Library|Pictures in cells are lost when a template file is loaded|
-|35496|IgxSpreadsheet|Error when setting styles in Excel with images|
-|35498|IgxDataChart|Tooltips for the series specified in IncludedSeries are not displayed|
-|36176|Excel Library|Exception occurs when loading an Excel workbook that has a LET function|
-|36379|Excel Library|Colors with any alpha channel in an excel workbook fail to load|
+|30286 | `DataChart` | Bubble Series tooltip content is switched to that of nearby bubble data in clicking a bubble|
+|32906 | `DataChart` | `DataChart` is showing two xAxis on the top|
+|33605 | `DataChart` | ScatterLineSeries is not showing the color of the line correctly in the legend|
+|35498 | `DataChart` | Tooltips for the series specified in IncludedSeries are not displayed|
+|34776 | `DataChart` | Repeatedly showing and hiding the `DataChart` causes memory leakage in JS Heap|
+|34053 | `RadialGauge` | The position of the scale label is shifted|
+|35496 | [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html) | Error when setting styles in Excel with images|
+|36176 | Excel Library | Exception occurs when loading an Excel workbook that has a LET function|
+|36379 | Excel Library | Colors with any alpha channel in an excel workbook fail to load|
+|26218 | Excel Library | Chart's plot area right margin becomes narrower and fill pattern and fill foreground are gone just by loading an Excel file|
+|35495 | Excel Library | Pictures in cells are lost when a template file is loaded|
+|34083 | Excel Library | TextOperatorConditionalFormat's is not loaded/saved properly if the text contains = in a template Excel file|
 
 ## **19.0.0 (January 2025)**
 
@@ -230,8 +279,6 @@ The following table lists the bug fixes made for the Ignite UI for Angular tools
 
 - [Data Legend Grouping](charts/features/chart-data-legend.md#angular-data-legend-grouping) & [Data Tooltip Grouping](charts/features/chart-data-tooltip.md#angular-data-tooltip-grouping-for-data-chart) - New grouping feature added. The property `GroupRowVisible` toggles grouping with each series opting in can assign group text via the [`dataLegendGroup`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriescomponent.html#dataLegendGroup) property. If the same value is applied to more than one series then they will appear grouped. Useful for large datasets that need to be categorized and organized for all users.
 
-<!---->
-
 - [Chart Selection](charts/features/chart-data-selection.md) - New series selection styling. This is adopted broadly across all category, financial and radial series for [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) and [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html). Series can be clicked and shown a different color, brightened or faded, and focus outlines. Manage which items are effected through individual series or entire data item. Multiple series and markers are supported. Useful for illustrating various differences or similarities between values of a particular data item. Also  `SelectedSeriesItemsChanged` event and [`selectedSeriesItems`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#selectedSeriesItems) are available for additional help to build out robust business requirements surrounding other actions that can take place within an application such as a popup or other screen with data analysis based on the selection.
 
 - [Treemap Highlighting](charts/types/treemap-chart.md#angular-treemap-highlighting) - Now exposes a [`highlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#highlightingMode) property that allows you to configure the mouse-over highlighting of the items in the tree map. This property takes two options: `Brighten` where the highlight will apply to the item that you hover the mouse over only, and `FadeOthers` where the highlight of the hovered item will remain the same, but everything else will fade out. This highlight is animated, and can be controlled using the [`highlightingTransitionDuration`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#highlightingTransitionDuration) property.
@@ -244,12 +291,6 @@ The following table lists the bug fixes made for the Ignite UI for Angular tools
 
 - [`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html)
   - New label for the highlight needle. [`highlightLabelText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#highlightLabelText) and [`highlightLabelSnapsToNeedlePivot`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#highlightLabelSnapsToNeedlePivot) and many other styling related properties for the HighlightLabel were added.
-  - New [`opticalScalingEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#opticalScalingEnabled) and [`opticalScalingSize`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#opticalScalingSize) properties for the [`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html). This new feature will manage the size at which labels, titles, and subtitles of the gauge have 100% optical scaling. You can read more about this new feature in the [Optical Scaling section](radial-gauge.md#optical-scaling)
-  - New highlight needle was added. [`highlightValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#highlightValue) and [`highlightValueDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#highlightValueDisplayMode) when both are provided a value and 'Overlay' setting, this will make the main needle to appear faded and a new needle will appear.
-- [`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargaugecomponent.html)
-  - New highlight needle was added. [`highlightValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargaugecomponent.html#highlightValue) and [`highlightValueDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargaugecomponent.html#highlightValueDisplayMode) when both are provided a value and 'Overlay' setting, this will make the main needle to appear faded and a new needle will appear.
-- [`IgxBulletGraphComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxbulletgraphcomponent.html)
-  - The Performance bar will now reflect a difference between the value and new [`highlightValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxbulletgraphcomponent.html#highlightValue) when the [`highlightValueDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxbulletgraphcomponent.html#highlightValueDisplayMode) is applied to the 'Overlay' setting. The highlight value will show a filtered/subset completed measured percentage as a filled in color while the remaining bar's appearance will appear faded to the assigned value, illustrating the performance in real-time.
 
 ## **17.3.0 (March 2024)**
 
@@ -265,7 +306,7 @@ The following table lists the bug fixes made for the Ignite UI for Angular tools
 
 - [`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html)
   - New title/subtitle properties. [`titleText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#titleText), [`subtitleText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#subtitleText) will appear near the bottom the gauge. In addition, the various title/subtitle font properties were added such as `TitleFontSize`, `TitleFontFamily`, `TitleFontStyle`, `TitleFontWeight` and [`titleExtent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#titleExtent). Finally, the new [`titleDisplaysValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#titleDisplaysValue) will allow the value to correspond with the needle's position.
-  - New [`opticalScalingEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#opticalScalingEnabled) and [`opticalScalingSize`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#opticalScalingSize) properties for the [`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html). This new feature will manage the size at which labels, titles, and subtitles of the gauge have 100% optical scaling. You can read more about this new feature in the [Optical Scaling section](radial-gauge.md#optical-scaling)
+  - New [`opticalScalingEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#opticalScalingEnabled) and [`opticalScalingSize`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#opticalScalingSize) properties for the [`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html). This new feature will manage the size at which labels, titles, and subtitles of the gauge have 100% optical scaling. You can read more about this new feature in this [topic](radial-gauge.md#optical-scaling)
   - New highlight needle was added. [`highlightValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#highlightValue) and [`highlightValueDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#highlightValueDisplayMode) when both are provided a value and 'Overlay' setting, this will make the main needle to appear faded and a new needle will appear.
 - [`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargaugecomponent.html)
   - New highlight needle was added. [`highlightValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargaugecomponent.html#highlightValue) and [`highlightValueDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargaugecomponent.html#highlightValueDisplayMode) when both are provided a value and 'Overlay' setting, this will make the main needle to appear faded and a new needle will appear.
@@ -334,7 +375,7 @@ Added significant improvements to default behaviors, and refined the Category Ch
   - GroupSortDescriptions
 
 > \[!Note]
-> The Chart's [Aggregation](charts/features/chart-data-aggregations.md) will not work when using [`includedProperties`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#includedProperties) | [`excludedProperties`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#excludedProperties) because these properties are meant for non-aggregated data. Once you attempt to aggregate data these properties should no longer be used. The reason it does not work is because aggregation replaces the collection that is passed to the chart for render.  The include/exclude properties are designed to filter in/out properties of that data and those properties no longer exist in the new aggregated collection.
+> The Chart's [Aggregation](charts/features/chart-data-aggregations.md) will not work when using [`includedProperties`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#includedProperties) | [`excludedProperties`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#excludedProperties) because these properties are meant for non-aggregated data. Once you attempt to aggregate data these properties should no longer be used. The reason it does not work is because aggregation replaces the collection that is passed to the chart for render. The include/exclude properties are designed to filter in/out properties of that data and those properties no longer exist in the new aggregated collection.
 
 ## **13.2.0 (June 2022)**
 
@@ -442,8 +483,8 @@ for example:
 
 |   |   |
 |---|---|
-| <img class="responsive-img" src="../images/chartDefaults1.png" alt="Chart Defaults 1" /> | <img class="responsive-img" src="../images/chartDefaults2.png" alt="Chart Defaults 2" /> |
-| <img class="responsive-img" src="../images/chartDefaults3.png" alt="Chart Defaults 3" /> | <img class="responsive-img" src="../images/chartDefaults4.png" alt="Chart Defaults 4" /> |
+| <img class="responsive-img" src="../images/chartDefaults1.png" alt="chartDefaults1" /> | <img class="responsive-img" src="../images/chartDefaults2.png" alt="chartDefaults2" /> |
+| <img class="responsive-img" src="../images/chartDefaults3.png" alt="chartDefaults3" /> | <img class="responsive-img" src="../images/chartDefaults4.png" alt="chartDefaults4" /> |
 
 #### Chart Legend
 

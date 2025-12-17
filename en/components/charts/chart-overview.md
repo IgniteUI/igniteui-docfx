@@ -34,8 +34,7 @@ The Angular product has over 65 different chart and graph types for any scenario
 - Real-Time Streaming Support
 - High-Volume (Millions of Data Points) Support
 - Trends Lines and other Data Analysis features
-
-Built with a modular design of axis, markers, series, legend, and annotation layers, the Angular chart makes it easy to design a render any type of data story. Build a simple chart with a single data series, or build more complex data stories with multiple series of data, with multiple axis in composite views.
+    Built with a modular design of axis, markers, series, legend, and annotation layers, the Angular chart makes it easy to design a render any type of data story. Build a simple chart with a single data series, or build more complex data stories with multiple series of data, with multiple axis in composite views.
 
 ## Category and Financial Chart vs. Data Chart
 

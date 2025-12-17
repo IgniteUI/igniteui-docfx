@@ -31,7 +31,7 @@ npm install -g @angular/cli
 ng new demo-app
 ```
 
-「Angular ルーティングを追加しますか?」というプロンプトが表示されます。このデモでは、NO を選択します。次に、使用するスタイル シートの形式を決めます。ここでは、基本的な CSS を使用します。数分かかりますが、最終的にプロセスが完了し、新しいアプリケーションがディスク上に作成されます。 
+「Angular ルーティングを追加しますか?」というプロンプトが表示されます。このデモでは、NO を選択します。次に、使用するスタイル シートの形式を決めます。ここでは、基本的な CSS を使用します。数分かかりますが、最終的にプロセスが完了し、新しいアプリケーションがディスク上に作成されます。
 
 次に、作成した demo-app フォルダーにディレクトリを変更し、Visual Studio Code を開くコマンドを実行する必要があります。
 
@@ -103,11 +103,12 @@ npm start
 <img class="responsive-img" src="../../../images/general/First_angular_app.png" />
 
 ## その他のリソース
-* [デスクトップから Web: はじめての Angular アプリを作成](https://www.youtube.com/watch?v=dhjrAPPad54&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j)
-* [Angular アプリケーション シェル](https://angular.io/tutorial/toh-pt0)
+
+- [デスクトップから Web: はじめての Angular アプリを作成](https://www.youtube.com/watch?v=dhjrAPPad54&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j)
+- [Angular アプリケーション シェル](https://angular.io/tutorial/toh-pt0)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

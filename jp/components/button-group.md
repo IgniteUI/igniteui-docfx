@@ -12,8 +12,8 @@ _language: ja
 
 ## Angular Button Group の例
 
-<code-view style="height: 85px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 85px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-1/" alt="Angular Button Group の例">
 </code-view>
 
@@ -35,7 +35,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 ...
-import { IgxButtonGroupModule } from 'igniteui-angular';
+import { IgxButtonGroupModule } from 'igniteui-angular/button-group';
 // import { IgxButtonGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -52,7 +52,8 @@ export class AppModule {}
 // home.component.ts
 
 ...
-import { IGX_BUTTON_GROUP_DIRECTIVES, IgxIconComponent } from 'igniteui-angular';
+import { IGX_BUTTON_GROUP_DIRECTIVES } from 'igniteui-angular/button-group';
+import { IgxIconComponent } from 'igniteui-angular/icon';
 // import { IGX_BUTTON_GROUP_DIRECTIVES, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -115,7 +116,7 @@ Ignite UI for Angular Button Group モジュールまたはディレクティブ
 
 ```typescript
 //sample.component.ts
-import { ButtonGroupAlignment } from 'igniteui-angular';
+import { ButtonGroupAlignment } from 'igniteui-angular/button-group';
 // import { ButtonGroupAlignment } from '@infragistics/igniteui-angular'; for licensed package
 
 ...
@@ -133,8 +134,8 @@ public alignment = ButtonGroupAlignment.vertical;
 </igx-buttongroup>
 ```
 
-<code-view style="height: 220px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 220px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-2/" >
 </code-view>
 
@@ -150,8 +151,8 @@ public alignment = ButtonGroupAlignment.vertical;
 
 以下のサンプルは、公開された `igx-buttongroup` 選択モードを示しています。
 
-<code-view style="height: 170px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 170px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-4/" >
 </code-view>
 
@@ -171,8 +172,8 @@ igx-buttongroup {
 <igx-buttongroup></igx-buttongroup>
 ```
 
-<code-view style="height: 80px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 80px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-5/" >
 </code-view>
 
@@ -243,8 +244,8 @@ public ngOnInit() {
 <igx-buttongroup [selectionMode]="'multi'" [values]="bordersButtons"></igx-buttongroup>
 ```
 
-<code-view style="height: 90px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 90px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-3/" >
 </code-view>
 
@@ -430,9 +431,9 @@ $custom-button-group: button-group-theme(
 
 ### デモ
 
-<code-view style="height: 200px" 
+<code-view style="height: 200px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-style/" >
 </code-view>
 
@@ -449,6 +450,7 @@ $custom-button-group: button-group-theme(
 ```
 
 ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
 - `light-*` クラスはライト テーマ用です。
 - `dark-*` クラスはダーク テーマ用です。
 - プレフィックスの後にコンポーネント名を追加します (例: `light-button-group`、`dark-button-group`)。
@@ -478,16 +480,16 @@ class="!light-button-group ![--item-background:#7B9E89]"
 
 <div class="divider--half"></div>
 
-* [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
-* [IgxButtonGroup スタイル]({environment:sassApiUrl}/themes#function-button-group-theme)
-* [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxButton スタイル]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
+- [IgxButtonGroup スタイル]({environment:sassApiUrl}/themes#function-button-group-theme)
+- [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+- [IgxButton スタイル]({environment:sassApiUrl}/themes#function-button-theme)
 
 ## テーマの依存関係
 
-* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
-* [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ## その他のリソース
 
@@ -495,5 +497,5 @@ class="!light-button-group ![--item-background:#7B9E89]"
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

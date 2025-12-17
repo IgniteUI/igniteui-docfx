@@ -38,7 +38,7 @@ _language: ja
 <div class="sample-content">
     <article class="sample-column">
         <div class="tabbar-wrapper">
-            <p>Angular Data Grid は、データを表形式で表示するためのコンポーネントです。最新のグリッドは複雑で、通常、データ選択、Excel スタイルのフィルタリング、ソート、ページング、グループ化、テンプレート化、列の移動、列のピン固定、Excel へのエクスポート、CSV 形式などの大規模な機能セットが詰め込まれています。</p>
+            <p>Angular Data Grid は、データを表形式で表示するためのコンポーネントです。最新のグリッドは複雑で、通常、データ選択、Excel スタイルのフィルタリング、ソート、ページング、グループ化、テンプレート化、列の移動、列のピン固定、Excel へのエクスポート、CSV 形式、PDF 形式などの大規模な機能セットが詰め込まれています。</p>
             <p>Ignite UI Angular Data Grid は、これらの基本的なグリッド機能をすべてカバーするだけでなく、一括編集、状態保持、キーボード ナビゲーションなどの高度な機能も備えています。当社のコンポーネントは、さまざまなデータ ソースとのシームレスな統合を保証し、最高のパフォーマンスとスケーラビリティを提供するため、大規模なデータセットを処理するアプリや、高速なリアルタイム更新を必要とするアプリに最適です。</p>
         </div>
     </article>
@@ -46,9 +46,9 @@ _language: ja
         <div class="tabbar-wrapper">
             <div class="tab-content">
                 <img class="b-lazy responsive-img"
-                    src="../../images/general/landing-grid-page.png" 
-                    data-src="../../images/general/landing-grid-page.png" 
-                    data-srcset="../../images/general/landing-grid-page.png 480w, ../../images/general/landing-grid-page.png 768w, ../../images/general/landing-grid-page.png 1100w" 
+                    src="../../images/general/landing-grid-page.png"
+                    data-src="../../images/general/landing-grid-page.png"
+                    data-srcset="../../images/general/landing-grid-page.png 480w, ../../images/general/landing-grid-page.png 768w, ../../images/general/landing-grid-page.png 1100w"
                     alt="Angular データ グリッド"
                     title="Angular Data Grid">
                 </div>
@@ -87,7 +87,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 ```typescript
 // app.module.ts
 
-import { IgxGridModule } from 'igniteui-angular';
+import { IgxGridModule } from 'igniteui-angular/grids/grid';
 // import { IgxGridModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -105,7 +105,7 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IGX_GRID_DIRECTIVES } from 'igniteui-angular';
+import { IGX_GRID_DIRECTIVES } from 'igniteui-angular/grids/grid';
 // import { IGX_GRID_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -134,9 +134,11 @@ Ignite UI for Angular Grid モジュールまたはディレクティブをイ�
 [`autoGenerate`]({environment:angularApiUrl}/classes/igxgridcomponent.html#autoGenerate) プロパティは、データソース フィールドに基づいて `igx-grid` にグリッドの[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) を自動生成させます。開発者は[列](#angular-grid-列の構成)およびデータ ソース フィールドへのマッピングを明示的に定義することもできます。
 
 ## Angular Bootstrap グリッドの定義
+
 <p>Ignite UI for Angular には、Flex に基づくレイアウト システムのような強力なブートストラップ グリッドが含まれています。今日の最新のアプリケーションは、レスポンシブ Web デザインのアプローチに従うことが期待されています。つまり、デバイスのサイズに基づいて、または単にブラウザーのサイズを変更するだけで、HTML 要素のレイアウトを適切に調整できます。Angular ブートストラップ グリッド レイアウトはこれまで最も使用されていたアプローチでしたが、CSS グリッドのような Flex に基づくレイアウト システムは、どのブラウザーでも機能するため、より一般的になりました。Ignite UI for Angular Layout ディレクティブにより、コンテンツ/テキストの折り返し、両端揃え、配置など、垂直方向と水平方向のフローが可能になります。Ignite UI for Angular グリッドは、CSS を使用したレスポンシブ レイアウトをサポートし、サイズ変更時のグリッドの動作に究極の柔軟性を提供します。</p>
 
 ## Angular Grid スタイルの構成
+
 > [!NOTE]
 > [`IgxGridComponent`]({environment:angularApiUrl}/classes/igxgridcomponent.html) は **css グリッド レイアウト**を使用しますが、**プレフィックスなしでは IE でサポートされていない**ため、正しく描画できません。
 
@@ -158,6 +160,7 @@ Ignite UI for Angular Grid モジュールまたはディレクティブをイ�
  ```
 
 ## 編集可能な Angular グリッド
+
 <p>Angular グリッド編集の各操作にはバッチ操作が含まれます。つまり、API には、編集を単一のサーバー呼び出しにグループ化するオプションがあります。または、グリッドの操作を使用して、グリッドの編集を実行したり、発生した操作を更新したりできます。CRUD 操作を備えた編集可能な Angular グリッドとしての優れた開発者エクスペリエンスに加えて、Angular グリッドには Excel のようなキーボード ナビゲーションが含まれています。一般的なデフォルトのグリッド ナビゲーションに加えて、お客様のニーズを満たすためにナビゲーション オプションを上書きするオプションが含まれています。優れたナビゲーション スキームを備えた Angular の編集可能なグリッドは、最新の業務アプリケーションにとって重要であり、Ignite UI グリッドを使用すると簡単になります。</p>
 
 このトピックに続いて、[セル テンプレート](grid.md#セル-テンプレート)と[セル編集テンプレート](grid.md#セル編集テンプレート)および編集について詳しく学習します。
@@ -216,7 +219,7 @@ public contextObject = { firstProperty: 'testValue', secondProperty: 'testValue1
 ```
 
 >[!NOTE]
->グループ化/移動機能と一緒にヘッダー テンプレートを使用すると、*列ヘッダー領域*は**ドラッグ可能**になり、ヘッダー テンプレートのカスタム要素部分に**ドラッグ不可**としてマークするまでアクセスできません。以下は例です。
+>グループ化/移動機能と一緒にヘッダー テンプレートを使用すると、_列ヘッダー領域_は**ドラッグ可能**になり、ヘッダー テンプレートのカスタム要素部分に**ドラッグ不可**としてマークするまでアクセスできません。以下は例です。
 
 ```html
 <igx-column #col field="ProductName" header="Product Name"
@@ -228,6 +231,7 @@ public contextObject = { firstProperty: 'testValue', secondProperty: 'testValue1
     </ng-template>
 </igx-column>
 ```
+
 **draggable** 属性を false に設定して追加しています。
 
 ### セル テンプレート
@@ -358,6 +362,7 @@ const pipeArgs: IColumnPipeArgs = {
      digitsInfo: '1.1-2'
 }
 ```
+
 ```html
 <igx-column field="OrderDate" dataType="date" [pipeArgs]="pipeArgs"></igx-column>
 <igx-column field="UnitPrice" dataType="number" [pipeArgs]="pipeArgs"></igx-column>
@@ -406,6 +411,7 @@ const POJO = [{
   }];
 
 ```
+
 >[!WARNING]
 >**キー値に配列を含まないでください。**
 
@@ -542,6 +548,7 @@ export class MyComponent implements OnInit {
 [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html) は、データ レコード内のプロパティのパスを介した複合オブジェクト (1 レベルより深いネストを含む) へのバインドをサポートします。
 
 次のデータ モデルを見てください:
+
 ```typescript
 interface AminoAcid {
     name: string;
@@ -560,11 +567,14 @@ interface AminoAcid {
     ...
 }
 ```
+
 たとえば、グリッド内の特定のアミノ酸の重みを表示するには、次のスニペットで十分です。
+
 ```html
 <igx-column field="weight.molecular"></igx-column>
 <igx-column field="weight.residue"></igx-column>
 ```
+
 詳しくは、以下のサンプルを参照してください。このバインディングのタイプは、グリッドに期待されるすべてのデフォルト機能をサポートします。
 つまり、追加の構成を行わなくても、すべてのソートおよびフィルタリング操作がそのまま使用できます。トランザクションの有無に関係なく、グループ化と編集の操作、およびバインドされた列のセルをテンプレート化する機能についても同様です。
 
@@ -641,6 +651,7 @@ export const EMPLOYEE_DATA = [
     },
 ...
 ```
+
 ネスト データをレンダリングする列のカスタム テンプレート。
 
 ```html
@@ -691,6 +702,7 @@ export const EMPLOYEE_DATA = [
 Angular グリッドはデータレコードを**レンダリング**、**操作**、**保存**するためのコンポーネントのため、**すべてのデータ レコード**へアクセスすることで、それを処理する方法をカスタマイズすることができます。それには、[`data`]({environment:angularApiUrl}/classes/igxgridrow.html#data) プロパティを使用します。
 
 以下は使用するデータです。
+
 ```typescript
 export const DATA: any[] = [
     {
@@ -768,10 +780,11 @@ export const DATA: any[] = [
 <div class="divider--half"></div>
 
 ## キーボード ナビゲーション
+
 Grid のキーボード ナビゲーションは、さまざまなキーボード操作をユーザーに提供します。アクセシビリティが向上し、内部の要素 (セル、行、列ヘッダー、ツールバー、フッターなど) を直感的にナビゲートできます。詳細については、これらのリソースを参照してください。
- - [Grid キーボード ナビゲーション](../grid/keyboard-navigation.md)
- - [TreeGrid キーボード ナビゲーション](../treegrid/keyboard-navigation.md)
- - [Hierarchical Grid キーボード ナビゲーション](../hierarchicalgrid/keyboard-navigation.md)
+- [Grid キーボード ナビゲーション](../grid/keyboard-navigation.md)
+- [TreeGrid キーボード ナビゲーション](../treegrid/keyboard-navigation.md)
+- [Hierarchical Grid キーボード ナビゲーション](../hierarchicalgrid/keyboard-navigation.md)
  -「Improving Usability, Accessibility and ARIA Compliance with Grid keyboard navigation」の[ブロク](https://www.infragistics.com/community/blogs/b/engineering/posts/grid-keyboard-navigation-accessibility)
 
 ## パーシステンス (永続化) 状態
@@ -816,47 +829,51 @@ platformBrowserDynamic()
 <div class="divider--half"></div>
 
 ## API リファレンス
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
-* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
+
+- [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+- [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+- [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
+- [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
-* [IgxInputGroup テーマ]({environment:sassApiUrl}/themes#function-input-group-theme)
-* [IgxChip テーマ]({environment:sassApiUrl}/themes#function-chip-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
-* [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
-* [IgxOverlay テーマ]({environment:sassApiUrl}/themes#function-overlay-theme)
-* [IgxDropDown テーマ]({environment:sassApiUrl}/themes#function-drop-down-theme)
-* [IgxCalendar テーマ]({environment:sassApiUrl}/themes#function-calendar-theme)
-* [IgxSnackBar テーマ]({environment:sassApiUrl}/themes#function-snackbar-theme)
-* [IgxBadge テーマ]({environment:sassApiUrl}/themes#function-badge-theme)
+
+- [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxInputGroup テーマ]({environment:sassApiUrl}/themes#function-input-group-theme)
+- [IgxChip テーマ]({environment:sassApiUrl}/themes#function-chip-theme)
+- [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxOverlay テーマ]({environment:sassApiUrl}/themes#function-overlay-theme)
+- [IgxDropDown テーマ]({environment:sassApiUrl}/themes#function-drop-down-theme)
+- [IgxCalendar テーマ]({environment:sassApiUrl}/themes#function-calendar-theme)
+- [IgxSnackBar テーマ]({environment:sassApiUrl}/themes#function-snackbar-theme)
+- [IgxBadge テーマ]({environment:sassApiUrl}/themes#function-badge-theme)
 
 ## ビデオ チュートリアル
+
 Angular データ グリッドの作成について詳しくは、このビデオ チュートリアルをご覧ください:
 
 > [!Video https://www.youtube.com/embed/Xv_fQVQ8fmM]
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [グリッドのサイズ変更](sizing.md)
-* [仮想化とパフォーマンス](virtualization.md)
-* [ページング](paging.md)
-* [フィルタリング](filtering.md)
-* [ソート](sorting.md)
-* [集計](summaries.md)
-* [列移動](column-moving.md)
-* [列のピン固定](column-pinning.md)
-* [列のサイズ変更](column-resizing.md)
-* [選択](selection.md)
-* [列のデータ型](column-types.md#デフォルトのテンプレート)
-* [igxGrid を使用して CRUD 操作の構築](../general/how-to/how-to-perform-crud.md)
+- [グリッドのサイズ変更](sizing.md)
+- [仮想化とパフォーマンス](virtualization.md)
+- [ページング](paging.md)
+- [フィルタリング](filtering.md)
+- [ソート](sorting.md)
+- [集計](summaries.md)
+- [列移動](column-moving.md)
+- [列のピン固定](column-pinning.md)
+- [列のサイズ変更](column-resizing.md)
+- [選択](selection.md)
+- [列のデータ型](column-types.md#デフォルトのテンプレート)
+- [igxGrid を使用して CRUD 操作の構築](../general/how-to/how-to-perform-crud.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

@@ -6,9 +6,10 @@ _language: ja
 ---
 
 # テーマ
+
 Ignite UI for Angular を使用すると、CSS 変数を使用してすべてのコンポーネント テーマのスタイルを変更できます。本当に深く掘り下げたい場合は、強力な Sass テーマ エンジンを提供します。これにより、特定のデザイン言語に合わせた、最新のすべてのブラウザーで機能するグローバル コンポーネント テーマを作成できます。
 
->[!NOTE] 
+>[!NOTE]
 > このドキュメントでは、バージョン 12 以降の Ignite UI for Angular のテーマ システムについて説明します。バージョン 12 以降、**CSS 変数は、グローバルおよびコンポーネント テーマを変更するための推奨される方法です**。
 > バージョン 12 より前のバージョンと同様に、Sass テーマ ライブラリを引き続き使用できます。
 
@@ -209,5 +210,5 @@ igx-avatar {
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

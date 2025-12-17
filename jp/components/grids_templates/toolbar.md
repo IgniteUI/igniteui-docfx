@@ -1,6 +1,6 @@
 @@if(igxName==='IgxGrid') {
 ---
-title: Angular Grid Toolbar - Ignite UI for Angular 
+title: Angular Grid Toolbar - Ignite UI for Angular
 _description: 重要な UI 操作には Angular Data Grid Toolbar を使用します。列の非表示、ピン固定、Excel エクスポートなど、グリッドの機能にさまざまな UI コントロールをホストします。
 _keywords: angular ツールバー, igniteui for angular, インフラジスティックス
 _license: commercial
@@ -10,7 +10,7 @@ _language: ja
 
 @@if(igxName!=='IgxGrid') {
 ---
-title: Angular Grid Toolbar - Ignite UI for Angular 
+title: Angular Grid Toolbar - Ignite UI for Angular
 _description: 重要な UI 操作には Angular @@igComponent Toolbar を使用します。列の非表示、ピン固定、Excel エクスポートなど、グリッドの機能にさまざまな UI コントロールをホストします。
 _keywords: angular ツールバー, igniteui for angular, インフラジスティックス
 _license: commercial
@@ -23,10 +23,10 @@ _canonicalLink: grid/toolbar
 
 Ignite UI for Angular の @@igComponent は、UI 操作のコンテナーとなる [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) 機能をサポートします。Angular ツールバーは Angular コンポーネントの一番上、つまり @@igComponent にあり、水平方向のサイズと一致します。ツールバー コンテナーは、次の @@igComponent の機能、またはその他のカスタム コンテンツ用に事前定義された UI コントロールをホストできます:
 
- - 列の非表示
- - 列のピン固定
- - Excel エクスポート
- - 高度なフィルタリング
+- 列の非表示
+- 列のピン固定
+- Excel、CSV、PDF へのエクスポート
+- 高度なフィルタリング
 
 ツールバーと事前定義された UI コンポーネントは、Angular イベントをサポートし、開発者向けに API を公開します。
 
@@ -34,24 +34,24 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナーとな�
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:420px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:420px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-1/" alt="Angular ツールバー グリッドの例">
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:420px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:420px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-4/" alt="Angular ツールバー グリッドの例">
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-title/" alt="Angular ツールバー グリッドの例">
 </code-view>
 
@@ -60,6 +60,7 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナーとな�
 事前定義された `actions` および `title` UI コンポーネントが `<igx-grid-toolbar>` 内に追加されます。これはすべて、対応するグリッド機能とのデフォルトのインタラクションを提供するツールバーを持つために必要です。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid [data]="data" [autoGenerate]="true">
     <igx-grid-toolbar>
@@ -73,8 +74,10 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナーとな�
     </igx-grid-toolbar>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true">
     <igx-grid-toolbar>
@@ -88,8 +91,10 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナーとな�
     </igx-grid-toolbar>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid [data]="data">
     <igx-grid-toolbar>
@@ -103,6 +108,7 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナーとな�
     </igx-grid-toolbar>
 </igx-hierarchical-grid>
 ```
+
 }
 
 > 注: 上記のコード スニペットに示されているように、事前定義された `actions` UI コンポーネントは [`<igx-grid-toolbar-actions>` コンテナー]({environment:angularApiUrl}/classes/igxgridtoolbaractionscomponent.html)にラップされています。このように、ツールバーのタイトルはツールバーの左側に配置され、アクションはツールバーの右側に配置されます。
@@ -110,28 +116,34 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナーとな�
 これらの UI はそれぞれ独立して追加することも、まったく追加しないこともできます。このようにして、ツールバー コンテナーは空になります。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid [data]="data" [autoGenerate]="true">
     <igx-grid-toolbar>
     </igx-grid-toolbar>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true">
     <igx-grid-toolbar>
     </igx-grid-toolbar>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid [data]="data">
     <igx-grid-toolbar>
     </igx-grid-toolbar>
 </igx-hierarchical-grid>
 ```
+
 }
 
 デフォルトの各 UI コンポーネントの詳細については、以下の**機能**セクションを読み続けてください。
@@ -139,6 +151,7 @@ Ignite UI for Angular の @@igComponent は、UI 操作のコンテナーとな�
 @@if (igxName === 'IgxHierarchicalGrid') {
 
 ## 子グリッド付きのツールバー
+
 IgxHierarchicalGrid の子グリッドの実装方法および DI スコープの動作には制限があるため、`igx-row-island` タグ内でツールバー コンポーネントを定義する場合は、`igxGridToolbar` ディレクティブとテンプレートの短縮表現を使用します。これにより、子グリッドが独立したツールバー インスタンスを作成することができます。
 
 ```html
@@ -152,6 +165,7 @@ IgxHierarchicalGrid の子グリッドの実装方法および DI スコープ�
     ...
 </igx-hierarchical-grid>
 ```
+
 ツールバー テンプレート コンテキストは、各グリッド インスタンスへの参照を暗黙的に公開し、他のバインディング/ロジックに使用できます。以下の例を参照してください。
 
 ### 17.1.0 以前のバージョン
@@ -186,24 +200,24 @@ IgxHierarchicalGrid の子グリッドの実装方法および DI スコープ�
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:630px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:630px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-2/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:500px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:500px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-1/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-options/" >
 </code-view>
 
@@ -211,8 +225,10 @@ IgxHierarchicalGrid の子グリッドの実装方法および DI スコープ�
 
 
 ### タイトル
+
 グリッドのツールバーのタイトルを設定するには、[IgxGridToolbarTitleComponent]({environment:angularApiUrl}/classes/igxgridtoolbartitlecomponent.html) を使用します。
 ユーザーは、単純なテキストからより複雑なテンプレートまで、どんなものでも提供できます。
+
 ```html
 <igx-grid-toolbar>
     <igx-grid-toolbar-title>Grid toolbar title</igx-grid-toolbar-title>
@@ -220,8 +236,10 @@ IgxHierarchicalGrid の子グリッドの実装方法および DI スコープ�
 ```
 
 ### 操作
+
 ツールバーは、ユーザーが親グリッドに関連して操作/インタラクションを配置できる[特定のコンテナー]({environment:angularApiUrl}/classes/igxgridtoolbaractionscomponent.html)を公開します。
 ツールバーのタイトル部分と同様に、ユーザーは、デフォルトのツールバー インタラクション コンポーネントを含め、そのテンプレート部分内にどんなものでも提供できます。
+
 ```html
 <igx-grid-toolbar>
     <igx-grid-toolbar-actions>
@@ -266,9 +284,10 @@ constructor() {
 }
 ```
 
-デフォルトの overlaySettings は、*ConnectedPositionStrategy* と *Absolute* スクロール方法を使用しています。モーダルは false に設定されており、[Esc] キーを押して閉じるインタラクションと外側のクリックで閉じるインタラクションが有効になっています。
+デフォルトの overlaySettings は、_ConnectedPositionStrategy_ と _Absolute_ スクロール方法を使用しています。モーダルは false に設定されており、[Esc] キーを押して閉じるインタラクションと外側のクリックで閉じるインタラクションが有効になっています。
 
 ### 列のピン固定
+
 [Toolbar Pinning コンポーネント]({environment:angularApiUrl}/classes/igxgridtoolbarpinningcomponent.html)は、グリッド内の列のピン固定を操作するためのデフォルトの UI を提供します。
 コンポーネントは、ツールバーを含む親グリッドと、コンポーネントのタイトル、コンポーネント入力のプレースホルダー、ドロップダウン自体の高さなど、UI をカスタマイズするためのいくつかの入力プロパティを使用して、そのまま動作します。
 
@@ -287,6 +306,7 @@ constructor() {
 
 
 ### 列の非表示
+
 [Toolbar Hiding コンポーネント]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html)は、列非表示を操作するためのデフォルトの UI を提供します。コンポーネントのタイトル、コンポーネント入力のプレースホルダー、ドロップダウン自体の高さなど、UI をカスタマイズするための同じ入力プロパティを公開します。
 
 ```html
@@ -303,7 +323,9 @@ constructor() {
 ```
 
 ### 高度なフィルタリング
+
 [Toolbar Advanced Filtering コンポーネント]({environment:angularApiUrl}/classes/igxgridtoolbaradvancedfilteringcomponent.html)は、高度なフィルタリング機能のデフォルトの UI を提供します。コンポーネントは、ボタンのデフォルトのテキストを変更する方法を公開します。
+
 ```html
 <igx-grid-toolbar>
     <igx-grid-toolbar-actions>
@@ -320,18 +342,18 @@ constructor() {
 }
 
 残りのツールバー操作と同様に、エクスポートは、すぐに使用できる [Toolbar Exporter コンポーネント]({environment:angularApiUrl}/classes/igxgridtoolbarexportercomponent.html)を介して提供されます。
-エクスポート コンポーネントは、ターゲット データ形式 (Excel CSV) のそれぞれのサービスを使用しています。つまり、それぞれのサービスが依存関係挿入チェーンを通じて提供されない場合、コンポーネントは何もエクスポートできません。
+エクスポート コンポーネントは、ターゲット データ形式 ([Excel]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)、[CSV]({environment:angularApiUrl}/classes/igxcsvexporterservice.html)、[PDF]({environment:angularApiUrl}/classes/igxpdfexporterservice.html)) のそれぞれのサービスを使用しています。つまり、それぞれのサービスが依存関係挿入チェーンを通じて提供されない場合、コンポーネントは何もエクスポートできません。
 Angular の DI の復習が必要な場合は、[公式ガイド](https://angular.io/guide/dependency-injection)をご覧ください。これは、アプリケーションのすべてのエクスポート サービスを有効にする方法を示すサンプル スニペットです。
 
 ```typescript
 // app.module.ts
 
-import { IgxExcelExporterService, IgxCsvExporterService } from 'igniteui-angular';
-// import { IgxExcelExporterService, IgxCsvExporterService } from '@infragistics/igniteui-angular'; for licensed package
+import { IgxExcelExporterService, IgxCsvExporterService, IgxPdfExporterService } from 'igniteui-angular/grids/core';
+// import { IgxExcelExporterService, IgxCsvExporterService, IgxPdfExporterService } from '@infragistics/igniteui-angular/grids/core'; for licensed package
 
 @NgModule({
     ...
-    providers: [IgxExcelExporterService, IgxCsvExporterService ]
+    providers: [IgxExcelExporterService, IgxCsvExporterService, IgxPdfExporterService ]
 })
 export class AppModule { ... }
 ```
@@ -349,16 +371,19 @@ export class AppModule { ... }
 <igx-grid-toolbar>
     <igx-grid-toolbar-actions>
         <igx-grid-toolbar-exporter
-            <!-- If active, enables the csv export entry in the dropdown UI -->
+            <!-- If active, enables the CSV export entry in the dropdown UI -->
             [exportCSV]="csvExportEnabled"
             <!-- If active, enables the excel export entry in the dropdown UI -->
             [exportExcel]="excelExportEnabled"
+            <!-- If active, enables the PDF export entry in the dropdown UI -->
+            [exportPDF]="pdfExportEnabled"
             <!-- The name of the generated export file without the file extension -->
             filename="exported_data"
         >
             Custom text for the exporter button
             <span excelText>Custom text for the excel export entry</span>
             <span csvText>Custom text for the CSV export entry</span>
+            <span pdfText>Custom text for the PDF export entry</span>
         </igx-grid-toolbar-exporter>
     </igx-grid-toolbar-actions>
 </igx-grid-toolbar>
@@ -405,14 +430,15 @@ configureExport(args: IGridToolbarExportEventArgs) {
     });
 }
 ```
+
 }
 
 以下のサンプルは、エクスポート ファイルをカスタマイズする方法を示します。
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:420px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:420px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-3/" >
 </code-view>
 
@@ -420,8 +446,8 @@ configureExport(args: IGridToolbarExportEventArgs) {
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:420px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:420px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-2/" >
 </code-view>
 
@@ -436,8 +462,8 @@ configureExport(args: IGridToolbarExportEventArgs) {
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height: 370px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 370px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/exporting-visualization/" >
 </code-view>
 
@@ -445,8 +471,8 @@ configureExport(args: IGridToolbarExportEventArgs) {
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height: 370px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 370px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-exporting-visualization/" >
 </code-view>
 
@@ -494,8 +520,8 @@ configureExport(args: IGridToolbarExportEventArgs) {
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:420px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:420px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-4/" >
 </code-view>
 
@@ -503,8 +529,8 @@ configureExport(args: IGridToolbarExportEventArgs) {
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:420px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:420px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-3/" >
 </code-view>
 
@@ -512,8 +538,8 @@ configureExport(args: IGridToolbarExportEventArgs) {
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-custom/" >
 </code-view>
 
@@ -529,7 +555,7 @@ configureExport(args: IGridToolbarExportEventArgs) {
 
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 まず、新しいパレットを作成します。
 
@@ -605,9 +631,9 @@ $dark-checkbox-theme: checkbox-theme(
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:510px" 
+<code-view style="height:510px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-style/" >
 </code-view>
 
@@ -615,9 +641,9 @@ $dark-checkbox-theme: checkbox-theme(
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:420px" 
+<code-view style="height:420px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-style/" >
 </code-view>
 
@@ -625,9 +651,9 @@ $dark-checkbox-theme: checkbox-theme(
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:530px" 
+<code-view style="height:530px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-style/" >
 </code-view>
 
@@ -638,26 +664,27 @@ $dark-checkbox-theme: checkbox-theme(
 
 以下は、Grid Toolbar サービスのその他の API です。
 
-* [`IgxGridToolbarActionsComponent`]({environment:angularApiUrl}/classes/igxgridtoolbaractionscomponent.html)
-* [`IgxGridToolbarAdvancedFilteringComponent`]({environment:angularApiUrl}/classes/igxgridtoolbaradvancedfilteringcomponent.html)
-* [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html)
-* [`IgxGridToolbarExporterComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarexportercomponent.html)
-* [`IgxGridToolbarHidingComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html)
-* [`IgxGridToolbarPinningComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarpinningcomponent.html)
-* [`IgxGridToolbarTitleComponent`]({environment:angularApiUrl}/classes/igxgridtoolbartitlecomponent.html)
+- [`IgxGridToolbarActionsComponent`]({environment:angularApiUrl}/classes/igxgridtoolbaractionscomponent.html)
+- [`IgxGridToolbarAdvancedFilteringComponent`]({environment:angularApiUrl}/classes/igxgridtoolbaradvancedfilteringcomponent.html)
+- [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html)
+- [`IgxGridToolbarExporterComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarexportercomponent.html)
+- [`IgxGridToolbarHidingComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html)
+- [`IgxGridToolbarPinningComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarpinningcomponent.html)
+- [`IgxGridToolbarTitleComponent`]({environment:angularApiUrl}/classes/igxgridtoolbartitlecomponent.html)
 
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) イベント:
-* [`toolbarExporting`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#toolbarExporting)
+
+- [`toolbarExporting`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#toolbarExporting)
 
 スタイル:
 
-* [`@@igxNameComponent スタイル`]({environment:sassApiUrl}/themes#function-grid-theme)
+- [`@@igxNameComponent スタイル`]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ## その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

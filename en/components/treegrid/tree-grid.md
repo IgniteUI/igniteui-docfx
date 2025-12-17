@@ -7,11 +7,11 @@ _license: commercial
 
 # Angular Tree Grid Component Overview
 
-The Ignite UI for Angular Tree Grid is used to display and manipulate hierarchical or flat self-referencing data. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, grouping, templating, column moving, column pinning, export to Excel and CSV, and more.
+The Ignite UI for Angular Tree Grid is used to display and manipulate hierarchical or flat self-referencing data. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, grouping, templating, column moving, column pinning, export to Excel, CSV and PDF, and more.
 
 ## Angular Tree Grid Example
 
-In this example, you can see how users can display hierarchical data. We have included filtering and sorting options, pinning and hiding, row selection, export to excel and csv, and cell templating that uses our [Sparkline](../charts/types/sparkline-chart.md) component. In addition, you can see an example of custom pagination with [Angular Pagination](paging.md).
+In this example, you can see how users can display hierarchical data. We have included filtering and sorting options, pinning and hiding, row selection, export to excel, csv and pdf, and cell templating that uses our [Sparkline](../charts/types/sparkline-chart.md) component. In addition, you can see an example of custom pagination with [Angular Pagination](paging.md).
 
 <code-view style="height:850px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
@@ -35,7 +35,7 @@ The next step is to import the `IgxTreeGridModule` in your **app.module.ts** fil
 ```typescript
 // app.module.ts
 
-import { IgxTreeGridModule } from 'igniteui-angular';
+import { IgxTreeGridModule } from 'igniteui-angular/grids/tree-grid';
 // import { IgxTreeGridModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -53,7 +53,7 @@ Alternatively, as of `16.0.0` you can import the `IgxTreeGridComponent` as a sta
 ```typescript
 // home.component.ts
 
-import { IGX_TREE_GRID_DIRECTIVES } from 'igniteui-angular';
+import { IGX_TREE_GRID_DIRECTIVES } from 'igniteui-angular/grids/tree-grid';
 // import { IGX_TREE_GRID_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

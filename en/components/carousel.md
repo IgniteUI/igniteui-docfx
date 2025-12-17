@@ -43,7 +43,7 @@ The next step is to import the **IgxCarouselModule** in our **app.module.ts** fi
 // app.module.ts
 
 import { HammerModule } from '@angular/platform-browser';
-import { IgxCarouselModule } from 'igniteui-angular';
+import { IgxCarouselModule } from 'igniteui-angular/carousel';
 // import { IgxCarouselModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -60,7 +60,7 @@ Alternatively, as of `16.0.0` you can import the `IgxCarouselComponent` as a sta
 // home.component.ts
 
 import { HammerModule } from '@angular/platform-browser';
-import { IGX_CAROUSEL_DIRECTIVES } from 'igniteui-angular';
+import { IGX_CAROUSEL_DIRECTIVES } from 'igniteui-angular/carousel';
 // import { IGX_CAROUSEL_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

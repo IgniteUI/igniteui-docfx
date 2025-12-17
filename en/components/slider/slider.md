@@ -37,7 +37,7 @@ The next step is to import the `IgxSliderModule` in your **app.module.ts** file.
 // app.module.ts
 
 import { HammerModule } from '@angular/platform-browser';
-import { IgxSliderModule } from 'igniteui-angular';
+import { IgxSliderModule } from 'igniteui-angular/slider';
 // import { IgxSliderModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -54,7 +54,7 @@ Alternatively, as of `16.0.0` you can import the `IgxSliderComponent` as a stand
 // home.component.ts
 
 import { FormsModule } from '@angular/forms';
-import { IGX_SLIDER_DIRECTIVES } from 'igniteui-angular';
+import { IGX_SLIDER_DIRECTIVES } from 'igniteui-angular/slider';
 // import { IGX_SLIDER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -114,7 +114,8 @@ We also bind the slider [`value`]({environment:angularApiUrl}/classes/igxsliderc
 ```typescript
 // sample.component.ts 
 import { Component, ViewChild } from '@angular/core';
-import { IgxInputDirective, IgxSliderComponent } from 'igniteui-angular';
+import { IgxInputDirective } from 'igniteui-angular/input-group';
+import { IgxSliderComponent } from 'igniteui-angular/slider';
 // import { IgxInputDirective, IgxSliderComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -209,7 +210,7 @@ First, set the slider [`type`]({environment:angularApiUrl}/classes/igxslidercomp
 ```typescript
 // sample.component.ts
 import { Component } from '@angular/core';
-import { IgxSliderType } from 'igniteui-angular';
+import { IgxSliderType } from 'igniteui-angular/slider';
 // import { IgxSliderType } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

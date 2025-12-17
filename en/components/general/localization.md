@@ -78,7 +78,7 @@ Alternatively, you can call the `changei18n()` function passing the correspondin
 ```typescript
 // app.component.ts
 import { Component, OnInit } from '@angular/core';
-import { changei18n } from "igniteui-angular";
+import { changei18n } from "igniteui-angular/core";
 import { IgxResourceStringsJA } from 'igniteui-angular-i18n';
 
 @Component({
@@ -102,7 +102,7 @@ export class AppComponent implements OnInit {
 ```typescript
 // app.component.ts
 import { Component, OnInit } from '@angular/core';
-import { changei18n, IGridResourceStrings } from "igniteui-angular";
+import { changei18n, IGridResourceStrings } from "igniteui-angular/core";
 
 @Component({
   selector: 'app-root',
@@ -131,7 +131,7 @@ Alternatively, you may get all currently available component resource strings. T
 ```typescript
 // app.component.ts
 import { Component, OnInit } from '@angular/core';
-import { changei18n, GridResourceStringsEN, TimePickerResourceStringsEN } from "igniteui-angular";
+import { changei18n, GridResourceStringsEN, TimePickerResourceStringsEN } from "igniteui-angular/core";
 
 @Component({
   selector: 'app-root',

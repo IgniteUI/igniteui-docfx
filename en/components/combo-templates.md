@@ -25,7 +25,7 @@ The Ignite UI for Angular ComboBox Component allows defining custom templates fo
 To get started with the ComboBox component, first you need to import the `IgxComboModule` in your **app.module.ts** file:
 
 ```typescript
-import { IgxComboModule } from 'igniteui-angular';
+import { IgxComboModule } from 'igniteui-angular/combo';
 // import { IgxComboModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({

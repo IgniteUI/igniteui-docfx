@@ -34,24 +34,24 @@ _language: ja
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/multi-column-headers/" alt="Angular @@igComponent 複数列ヘッダーの例">
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-headers/" alt="Angular @@igComponent 複数列ヘッダーの例">
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column/" alt="Angular @@igComponent 複数列ヘッダーの例">
 </code-view>
 
@@ -60,6 +60,7 @@ _language: ja
 `Multi-column header` の宣言は列セットを [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) コンポーネントと渡された [`header`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#header) タイトルにラップして行います。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid [data]="data" [allowFiltering]="true">
     <igx-column-group header="Contact Information">
@@ -69,8 +70,10 @@ _language: ja
     </igx-column-group>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID">
     <igx-column-group header="Contact Information">
@@ -80,8 +83,10 @@ _language: ja
     </igx-column-group>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid [data]="localdata" [moving]="true" [allowFiltering]="true">
     <igx-column field="CustomerID" sortable="true" resizable="true"></igx-column>
@@ -99,11 +104,13 @@ _language: ja
     </igx-column-group>
 </igx-hierarchical-grid>
 ```
+
 }
 
 ネスト ヘッダーの `n-th` レベルは、上記の宣言に従います。[`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) をネストしてください。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid [data]="data" [allowFiltering]="true" [moving]="true">
     <igx-column-group header="General Information">
@@ -115,8 +122,10 @@ _language: ja
     </igx-column-group>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [moving]="true">
     <igx-column-group [pinned]="false" header="General Information">
@@ -129,8 +138,10 @@ _language: ja
     </igx-column-group>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid [data]="localdata" [allowFiltering]="true" [moving]="true">
     <igx-column field="CustomerID" sortable="true" resizable="true"></igx-column>
@@ -143,6 +154,7 @@ _language: ja
     </igx-column-group>
 </igx-hierarchical-grid>
 ```
+
 }
 
 各 [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) は、[`移動`](column-moving.md)、[`ピン固定`](column-pinning.md) と [`非表示`](column-hiding.md) をサポートします。
@@ -153,6 +165,7 @@ _language: ja
 > `columns/column-groups` が現在の `group` でラップされない場合 (**一番上のレベル** `columns` の場合)、表示列全体の移動はできません。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid [data]="data" [allowFiltering]="true" [moving]="true">
     <igx-column-group [pinned]="true" header="General Information">
@@ -163,8 +176,10 @@ _language: ja
     <igx-column sortable="true" resizable="true" field="PostalCode"></igx-column>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid [data]="data" primaryKey="ID" foreignKey="ParentID" [moving]="true">
     <igx-column-group header="Contact Information">
@@ -175,8 +190,10 @@ _language: ja
     <igx-column field="Age" dataType="number" [sortable]="true" [resizable]="true"></igx-column>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid [data]="localdata" [allowFiltering]="true" [moving]="true">
     <igx-column field="CustomerID" sortable="true" resizable="true"></igx-column>
@@ -190,6 +207,7 @@ _language: ja
     ...
 </igx-hierarchical-grid>
 ```
+
 }
 
 ## 複数列ヘッダー テンプレート
@@ -238,24 +256,24 @@ _language: ja
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/multi-column-header-template/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-header-template/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-template/" >
 </code-view>
 
@@ -287,7 +305,7 @@ $custom-theme: grid-theme(
 >[!NOTE]
 >上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/palettes#function-palette) および [`color`]({environment:sassApiUrl}/palettes#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックをご覧ください。
 
-最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。 
+最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。
 
 ```scss
 @include css-vars($custom-theme);
@@ -297,9 +315,9 @@ $custom-theme: grid-theme(
 ### デモ
 
 
-<code-view style="height:500px" 
+<code-view style="height:500px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/multi-column-headers-styling/" >
 </code-view>
 
@@ -308,9 +326,9 @@ $custom-theme: grid-theme(
 ### デモ
 
 
-<code-view style="height:500px" 
+<code-view style="height:500px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-multi-column-headers-styling/" >
 </code-view>
 
@@ -319,9 +337,9 @@ $custom-theme: grid-theme(
 ### デモ
 
 
-<code-view style="height:500px" 
+<code-view style="height:500px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-column-styling/" >
 </code-view>
 
@@ -331,28 +349,30 @@ $custom-theme: grid-theme(
 >このサンプルは、`Change Theme` (テーマの変更) から選択したグローバル テーマに影響を受けません。
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
-* [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
-* [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
+- [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
 <div class="divider--half"></div>
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [@@igComponent 概要](@@igMainTopic.md)
-* [仮想化とパフォーマンス](virtualization.md)
-* [ページング](paging.md)
-* [フィルタリング](filtering.md)
-* [ソート](sorting.md)
-* [集計](summaries.md)
-* [列のサイズ変更](column-resizing.md)
-* [選択](selection.md)
-@@if (igxName === 'IgxGrid') {* [グループ化](groupby.md)}
+- [@@igComponent 概要](@@igMainTopic.md)
+- [仮想化とパフォーマンス](virtualization.md)
+- [ページング](paging.md)
+- [フィルタリング](filtering.md)
+- [ソート](sorting.md)
+- [集計](summaries.md)
+- [列のサイズ変更](column-resizing.md)
+- [選択](selection.md)
+@@if (igxName === 'IgxGrid') {- [グループ化](groupby.md)}
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

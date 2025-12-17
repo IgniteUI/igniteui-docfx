@@ -37,7 +37,7 @@ The next step is to import the `IgxCheckboxModule` in the **app.module.ts** file
 ```typescript
 // app.module.ts
 
-import { IgxCheckboxModule } from 'igniteui-angular';
+import { IgxCheckboxModule } from 'igniteui-angular/checkbox';
 // import { IgxCheckboxModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -53,7 +53,7 @@ Alternatively, as of `16.0.0` you can import the `IgxCheckboxComponent` as a sta
 ```typescript
 // home.component.ts
 
-import { IgxCheckboxComponent } from 'igniteui-angular';
+import { IgxCheckboxComponent } from 'igniteui-angular/checkbox';
 // import { IgxCheckboxComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

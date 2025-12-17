@@ -7,15 +7,17 @@ _language: ja
 ---
 
 # Angular Stepper (ステッパー) コンポーネントの概要
+
 Ignite UI for Angular Stepper は高度にカスタマイズ可能なコンポーネントで、必要なプロセスを可視化し、進行状況を各ステップで表示します。垂直線または水平線で表示されます。Ignite UI for [Angular コンポーネント ライブラリ](https://jp.infragistics.com/products/ignite-ui-angular)によって提供されるステッパー コンポーネントは、ウィザードのようなワークフローと、ステップ検証、スタイル設定、向き、キーボード ナビゲーションなどの複数の機能を提供します。
 
 
 ## Angular Stepper の例
+
 この Angular Stepper の例では、クレジット カードをカスタマイズでき、カード タイプの選択、ビジネス情報の追加、個人情報の入力、出荷の詳細の提供、確認の 5 つの論理ステップでプロセスを実行します。
 Angular ステッパー デモの 4 番目のステップは、2 番目のステップでユーザーがチェックボックスにチェックを付けた場合にのみ有効になります。
 
-<code-view style="height: 725px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 725px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/stepper-overview-sample/" alt="Angular Stepper の例">
 </code-view>
 
@@ -23,8 +25,8 @@ Angular ステッパー デモの 4 番目のステップは、2 番目のステ
 
 これは、Angular Reactive Forms を使用して上記の機能を実現する方法を示すサンプルです。
 
-<code-view style="height: 725px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 725px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/stepper-sample-reactive-forms/" alt="リアクティブ フォームを使用した Angular Stepper の例">
 </code-view>
 
@@ -35,15 +37,16 @@ Ignite UI for Angular Stepper コンポーネントを初期化するには、Ig
 ```cmd
 ng add igniteui-angular
 ```
+
 Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-次に、**app.module** ファイルに `IgxStepperModule` をインポートします。 
+次に、**app.module** ファイルに `IgxStepperModule` をインポートします。
 
 ```typescript
 // app.module.ts
 
 ...
-import { IgxStepperModule } from 'igniteui-angular';
+import { IgxStepperModule } from 'igniteui-angular/stepper';
 // import { IgxStepperModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -61,7 +64,7 @@ export class AppModule {}
 
 import { HammerModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { IGX_STEPPER_DIRECTIVES } from 'igniteui-angular';
+import { IGX_STEPPER_DIRECTIVES } from 'igniteui-angular/stepper';
 // import { IGX_STEPPER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -87,9 +90,11 @@ export class HomeComponent {
 Angular Stepper モジュールまたはディレクティブをインポート後、`igx-stepper` とそのステップの基本設定を開始します。
 
 ## Angular Stepper の使用
+
 [IgxStepComponent]({environment:angularApiUrl}/classes/igxstepcomponent.html) は、[IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) に属するすべてのステップの表現です。ステップは [isValid]({environment:angularApiUrl}/classes/igxstepcomponent.html#isValid)、[active]({environment:angularApiUrl}/classes/igxstepcomponent.html#active)、[optional]({environment:angularApiUrl}/classes/igxstepcomponent.html#optional)、[disabled]({environment:angularApiUrl}/classes/igxstepcomponent.html#disabled)、[completed]({environment:angularApiUrl}/classes/igxstepcomponent.html#completed) プロパティを提供し、ビジネス要件に応じてステップの状態を構成できます。
 
 ### ステッパーの宣言
+
 ステッパー モジュールをインポートした後で、構成を開始します。
 
 ステップは、以下の方法のいずれかを使用して宣言できます。
@@ -99,11 +104,11 @@ Angular Stepper モジュールまたはディレクティブをインポート�
 <igx-stepper>
     <igx-step *ngFor="let step of stepsData" [disabled]=”step.disabled”>
         <igx-icon igxStepIndicator>
-			{{step.indicator}}
+   {{step.indicator}}
         </igx-icon>
 
         <p igxStepTitle>
-			{{step.title}}
+   {{step.title}}
         </p>
     </igx-step>
 </igx-stepper>
@@ -122,7 +127,8 @@ Angular Stepper モジュールまたはディレクティブをインポート�
     </igx-step>
 </igx-stepper>
 ```
-各ステップで、`igxStepIndicator`、`igxStepTitle`、`igxStepSubtitle`、および `igxStepContent` ディレクティブを使用してインジケーター、タイトル、サブタイトル、コンテンツを構成できます。 
+
+各ステップで、`igxStepIndicator`、`igxStepTitle`、`igxStepSubtitle`、および `igxStepContent` ディレクティブを使用してインジケーター、タイトル、サブタイトル、コンテンツを構成できます。
 
 ```html
 <igx-stepper>
@@ -136,9 +142,11 @@ Angular Stepper モジュールまたはディレクティブをインポート�
     </igx-step>
 </igx-stepper>
 ```
+
 <img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 500px" src="../images/stepper/stepper-step.png" />
 
 ### ステッパーの向きの変更
+
 公開された [orientation]({environment:angularApiUrl}/classes/igxsteppercomponent.html#orientation) プロパティでステッパーの向きをカスタマイズできます。`IgxStepperOrientation` 列挙型の `Horizontal` メンバー (デフォルト値) または `Vertical` メンバーを取得します。
 
 **水平方向のステッパー**
@@ -151,27 +159,30 @@ Angular Stepper モジュールまたはディレクティブをインポート�
 **水平方向のステッパー**
 
 水平レイアウトから垂直レイアウトに簡単に切り替えることができます。デフォルトの方向を変更するには、[orientation]({environment:angularApiUrl}/classes/igxsteppercomponent.html#orientation) プロパティを `vertical` に設定します。
+
 ```html
 <igx-stepper [orientation]="'vertical'">
-	<igx-step>    
-  		…   
-	</igx-step>
+ <igx-step>    
+    …   
+ </igx-step>
 
-	<igx-step>    
- 		 …   
-	</igx-step>
+ <igx-step>    
+    …   
+ </igx-step>
 </igx-stepper>
 ```
-以下のサンプルは、実行時にステッパーの[向き]({environment:angularApiUrl}/classes/igxsteppercomponent.html#orientation)と[タイトルの位置](stepper.md#ステップのカスタマイズ)を変更する方法を示しています。 
 
-<code-view style="height: 528px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+以下のサンプルは、実行時にステッパーの[向き]({environment:angularApiUrl}/classes/igxsteppercomponent.html#orientation)と[タイトルの位置](stepper.md#ステップのカスタマイズ)を変更する方法を示しています。
+
+<code-view style="height: 528px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/stepper-label-position-and-orientation-sample/" alt="Angular Stepper 向きの例">
 </code-view>
 
 <div class="divider--half"></div>
 
-### ステップ状態 
+### ステップ状態
+
 [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) は 4 つのステップ状態をサポートし、それぞれがデフォルトで異なるスタイルを適用します。
 - [**active**]({environment:angularApiUrl}/classes/igxstepcomponent.html#active) - ステップが現在表示されているかどうかを決定します。設計上、ユーザーが明示的にステップの active 属性を `true` に設定しない場合、最初の有効なステップがアクティブになります。
 - [**disabled**]({environment:angularApiUrl}/classes/igxstepcomponent.html#disabled) - ステップが操作可能かどうかを決定します。デフォルトでは、ステップの disabled 属性は `false` に設定されています。
@@ -185,17 +196,17 @@ Angular Stepper モジュールまたはディレクティブをインポート�
 
 `igx-stepper` は、[linear]({environment:angularApiUrl}/classes/igxsteppercomponent.html#linear) プロパティを使用してステップ フローを設定できます。デフォルトで、linear は `false` に設定され、ユーザーは [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) で無効にされていないステップを選択できます。
 
-[linear]({environment:angularApiUrl}/classes/igxsteppercomponent.html#linear) プロパティが `true` に設定されている場合、ステッパーは次のステップに進む前に現在のオプションではないステップを有効にする必要があります。 
+[linear]({environment:angularApiUrl}/classes/igxsteppercomponent.html#linear) プロパティが `true` に設定されている場合、ステッパーは次のステップに進む前に現在のオプションではないステップを有効にする必要があります。
 
-現在のオプションではないステップが有効でない場合、現在のステップを検証するまで次のステップに進むことができません。 
+現在のオプションではないステップが有効でない場合、現在のステップを検証するまで次のステップに進むことができません。
 
 > [!NOTE]
 > オプションのステップの有効性は考慮されません。
 
 以下の例は、リニア ステッパーを構成する方法を示しています。
 
-<code-view style="height: 430px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 430px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/stepper-linear-sample/" alt="Angular Linear Stepper の例">
 </code-view>
 
@@ -256,14 +267,15 @@ Ignite UI for Angular Stepper では、タイトル、インジケーターな�
 
 以下のサンプルは公開されたすべてのステップ タイプと変更方法を示しています。
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/stepper-steptypes-sample/" alt="Angular ステップ タイプの例">
 </code-view>
 
 <div class="divider--half"></div>
 
 [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) では、アクティブなステップ、無効なステップ、完了したステップの描画されたインジケーターをカスタマイズできます。これは、`igxStepActiveIndicator`、`igxStepInvalidIndicator`、および `igxStepCompletedIndicator` ディレクティブで実現できます。
+
 ```html
 <igx-stepper>
     <ng-template igxStepActiveIndicator>
@@ -298,21 +310,21 @@ Angular Stepper のアニメーションにより、エンドユーザーは定�
 
 ## キーボード ナビゲーション
 
-Ignite UI for Angular は、さまざまなキーボード操作をエンドユーザーに提供します。この機能はデフォルトで有効になっており、エンドユーザーは簡単にステップを移動できます。 
+Ignite UI for Angular は、さまざまなキーボード操作をエンドユーザーに提供します。この機能はデフォルトで有効になっており、エンドユーザーは簡単にステップを移動できます。
 [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html) ナビゲーションは [W3 アクセシビリティ標準](https://www.w3.org/WAI/ARIA/apg/example-index/tabs/tabs-manual.html#accessibilityfeatures)に準拠しており、便利に使用できます。
 
 **キーの組み合わせ**
 
- - <kbd>Tab</kbd> - 次の移動可能な要素にフォーカスを移動します。
- - <kbd>Shift + Tab</kbd> - 前移動可能な要素にフォーカスを移動します。
- - <kbd>下矢印</kbd> - `igx-stepper` が**垂直方向**の場合、次のアクセス可能なステップのヘッダーにフォーカスを移動します。
- - <kbd>上矢印</kbd> - `igx-stepper` が**垂直方向**の場合、前のアクセス可能なステップのヘッダーにフォーカスを移動します。
- - <kbd>左矢印</kbd> - 両方の方向で前のアクセス可能なステップのヘッダーにフォーカスを移動します。
- - <kbd>右矢印</kbd> - 両方の方向で次にアクセス可能なステップのヘッダーにフォーカスを移動します。
- - <kbd>Home</kbd> - `igx-stepper` の最初の有効なステップのヘッダーにフォーカスを移動します。
- - <kbd>End</kbd> - `igx-stepper` の最後の有効なステップのヘッダーにフォーカスを移動します。
- - <kbd>Enter / Space</kbd> - 現在フォーカスされているステップをアクティブ化します。
- 
+- <kbd>Tab</kbd> - 次の移動可能な要素にフォーカスを移動します。
+- <kbd>Shift + Tab</kbd> - 前移動可能な要素にフォーカスを移動します。
+- <kbd>下矢印</kbd> - `igx-stepper` が**垂直方向**の場合、次のアクセス可能なステップのヘッダーにフォーカスを移動します。
+- <kbd>上矢印</kbd> - `igx-stepper` が**垂直方向**の場合、前のアクセス可能なステップのヘッダーにフォーカスを移動します。
+- <kbd>左矢印</kbd> - 両方の方向で前のアクセス可能なステップのヘッダーにフォーカスを移動します。
+- <kbd>右矢印</kbd> - 両方の方向で次にアクセス可能なステップのヘッダーにフォーカスを移動します。
+- <kbd>Home</kbd> - `igx-stepper` の最初の有効なステップのヘッダーにフォーカスを移動します。
+- <kbd>End</kbd> - `igx-stepper` の最後の有効なステップのヘッダーにフォーカスを移動します。
+- <kbd>Enter / Space</kbd> - 現在フォーカスされているステップをアクティブ化します。
+
  > [!NOTE]
  > ユーザーがステップ ヘッダーで <kbd>Tab</kbd> キーを押すと、フォーカスはステップ コンテンツ コンテナーに移動します。コンテナーをスキップする場合、開発者は `[tabIndex]="-1"` コンテンツ コンテナーを設定する必要があります。
 
@@ -401,9 +413,9 @@ Stepper コンポーネントは、ローコード [ドラッグアンドドロ�
     </tbody>
 </table>
 
-[Ignite UI for Angular テーマ](themes/index.md)を使用して、`igx-stepper` の外観を変更できます。 
+[Ignite UI for Angular テーマ](themes/index.md)を使用して、`igx-stepper` の外観を変更できます。
 
-はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。 
+はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -431,10 +443,11 @@ $stepper-theme: stepper-theme(
 ```
 
 ### デモ
+
 以下のサンプルは、[Ignite UI for Angular テーマ](themes/index.md)で適用されるシンプルなスタイル設定を示します。
 
-<code-view style="height: 264px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 264px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/stepper-styling-sample/" alt="Angular Stepper スタイル設定の例">
 </code-view>
 
@@ -451,6 +464,7 @@ $stepper-theme: stepper-theme(
 ```
 
 ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
 - `light-*` クラスはライト テーマ用です。
 - `dark-*` クラスはダーク テーマ用です。
 - プレフィックスの後にコンポーネント名を追加します (例: `light-splitter`、`dark-splitter`)。
@@ -478,12 +492,14 @@ $stepper-theme: stepper-theme(
 <div class="divider--half"></div>
 
 ## API リファレンス
-* [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html)
-* [IgxStepComponent]({environment:angularApiUrl}/classes/igxstepcomponent.html)
+
+- [IgxStepperComponent]({environment:angularApiUrl}/classes/igxsteppercomponent.html)
+- [IgxStepComponent]({environment:angularApiUrl}/classes/igxstepcomponent.html)
 
 ## その他のリソース
+
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
 

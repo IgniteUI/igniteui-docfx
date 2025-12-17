@@ -36,7 +36,7 @@ The next step is to import the `IgxRadioModule` in the **app.module.ts** file.
 // app.module.ts
 
 ...
-import { IgxRadioModule } from 'igniteui-angular';
+import { IgxRadioModule } from 'igniteui-angular/radio';
 // import { IgxRadioModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -55,7 +55,7 @@ Alternatively, as of `16.0.0` you can import the `IgxRadioGroupDirective` and `I
 // home.component.ts
 
 import { FormsModule } from '@angular/forms';
-import { IGX_RADIO_GROUP_DIRECTIVES } from 'igniteui-angular';
+import { IGX_RADIO_GROUP_DIRECTIVES } from 'igniteui-angular/radio';
 // import { IGX_RADIO_GROUP_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -290,7 +290,7 @@ The Radio Group Directive is exported as an `NgModule`, thus all you need to do 
 ```typescript
 // app.module.ts
 ...
-import { IgxRadioModule } from 'igniteui-angular';
+import { IgxRadioModule } from 'igniteui-angular/radio';
 // import { IgxRadioModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -324,7 +324,7 @@ Use the [`alignment`]({environment:angularApiUrl}/classes/igxradiogroupdirective
 
 ```typescript
 //sample.component.ts
-import { RadioGroupAlignment } from "igniteui-angular";
+import { RadioGroupAlignment } from "igniteui-angular/radio";
 ...
 public alignment = RadioGroupAlignment.vertical;
 ...

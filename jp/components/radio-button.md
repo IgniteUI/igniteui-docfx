@@ -14,8 +14,8 @@ _language: ja
 
 ## Angular Radio & Radio Group の例
 
-<code-view style="height: 120px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 120px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-1/" alt="Angular Radio & Radio Group の例">
 </code-view>
 
@@ -37,7 +37,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 ...
-import { IgxRadioModule } from 'igniteui-angular';
+import { IgxRadioModule } from 'igniteui-angular/radio';
 // import { IgxRadioModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -56,7 +56,7 @@ export class AppModule {
 // home.component.ts
 
 import { FormsModule } from '@angular/forms';
-import { IGX_RADIO_GROUP_DIRECTIVES } from 'igniteui-angular';
+import { IGX_RADIO_GROUP_DIRECTIVES } from 'igniteui-angular/radio';
 // import { IGX_RADIO_GROUP_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -141,8 +141,8 @@ public selectedColor: string = this.colors[3].hex;
 
 結果は以下のようになります。
 
-<code-view style="height: 550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-sample-2/" >
 </code-view>
 
@@ -220,8 +220,8 @@ $custom-radio-theme: radio-theme(
 @include css-vars($custom-radio-theme);
 ```
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-styling-sample/" >
 </code-view>
 
@@ -243,6 +243,7 @@ $custom-radio-theme: radio-theme(
 ```
 
 ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
 - `light-*` クラスはライト テーマ用です。
 - `dark-*` クラスはダーク テーマ用です。
 - プレフィックスの後にコンポーネント名を追加します (例: `light-radio`、`dark-radio`)。
@@ -276,8 +277,8 @@ class="!light-radio ![--empty-color:#576E60] ![--fill-color:#7B9E89]"
 
 ### デモ
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-group-sample/" >
 </code-view>
 
@@ -290,7 +291,7 @@ Radio Group ディレクティブが `NgModule` としてエクスポートさ�
 ```typescript
 // app.module.ts
 ...
-import { IgxRadioModule } from 'igniteui-angular';
+import { IgxRadioModule } from 'igniteui-angular/radio';
 // import { IgxRadioModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -324,7 +325,7 @@ public fruits = ["Apple", "Mango", "Banana", "Orange"];
 
 ```typescript
 //sample.component.ts
-import { RadioGroupAlignment } from "igniteui-angular";
+import { RadioGroupAlignment } from "igniteui-angular/radio";
 ...
 public alignment = RadioGroupAlignment.vertical;
 ...
@@ -340,8 +341,8 @@ public alignment = RadioGroupAlignment.vertical;
 </igx-radio-group>
 ```
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-group-vertical/" >
 </code-view>
 
@@ -351,13 +352,13 @@ public alignment = RadioGroupAlignment.vertical;
 
 <div class="divider--half"></div>
 
-* [IgxRadioGroupDirective]({environment:angularApiUrl}/classes/igxradiogroupdirective.html)
-* [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
-* [IgxRadioComponent スタイル]({environment:sassApiUrl}/themes#function-radio-theme)
+- [IgxRadioGroupDirective]({environment:angularApiUrl}/classes/igxradiogroupdirective.html)
+- [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
+- [IgxRadioComponent スタイル]({environment:sassApiUrl}/themes#function-radio-theme)
 
 ## テーマの依存関係
 
-* [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ## その他のリソース
 
@@ -365,5 +366,5 @@ public alignment = RadioGroupAlignment.vertical;
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

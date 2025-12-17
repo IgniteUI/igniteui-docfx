@@ -11,6 +11,7 @@ _language: ja
 Ignite UI for Angular List コンポーネントは項目の行を表示し、ヘッダー項目を 1 つ以上、さらにリスト項目の検索およびフィルタリングをサポートします。各リスト項目はすべての有効な HTML または [Angular コンポーネント](https://jp.infragistics.com/products/ignite-ui-angular)をサポートするテンプレートに設定できます。リスト コンポーネントは、組み込みのパンニング機能、空および読み込み状態のテンプレートも提供し、[`IgxForOf`](for-of.md) ディレクティブを使用した大きなリストの仮想化をサポートします。
 
 ## Angular List の例
+
 次の例は、_name_ プロパティと _phone number_ プロパティを持つ連絡先が入力されたリストを表しています。[`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) コンポーネントは、[`IgxAvatar`](avatar.md) と [`IgxIcon`](icon.md) を使用して、ユーザー エクスペリエンスを向上させ、**連絡先をお気に入りに追加**にアバター写真とさまざまなアイコンを設定する機能を公開します。さらに、リスト ビューは、フィルタリング パイプを使用して実現されたソート機能を公開します。
 
 <code-view style="height: 513px"
@@ -39,7 +40,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 import { HammerModule } from '@angular/platform-browser';
-import { IgxListModule } from 'igniteui-angular';
+import { IgxListModule } from 'igniteui-angular/list';
 // import { IgxListModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -56,7 +57,7 @@ export class AppModule {}
 // home.component.ts
 
 import { HammerModule } from '@angular/platform-browser';
-import { IGX_LIST_DIRECTIVES } from 'igniteui-angular';
+import { IGX_LIST_DIRECTIVES } from 'igniteui-angular/list';
 // import { IGX_LIST_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -128,6 +129,7 @@ Ignite UI for Angular List モジュールまたはディレクティブをイ�
     </ng-template>
 </igx-list>
 ```
+
 ```css
 /* contacts.component.css */
 
@@ -230,11 +232,9 @@ public contacts = [{
 // app.module.ts
 
 ...
-import {
-    IgxListModule,
-    IgxAvatarModule,
-    IgxIconModule
-} from 'igniteui-angular';
+import { IgxListModule } from 'igniteui-angular/list';
+import { IgxAvatarModule } from 'igniteui-angular/avatar';
+import { IgxIconModule } from 'igniteui-angular/icon';
 // import { IgxListModule, IgxAvatarModule, IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -443,6 +443,7 @@ igx-icon {
     align-items: center;
 }
 ```
+
 最後にパンニング イベントを処理するタイプスクリプト コードを使用します。
 
 ```typescript
@@ -508,7 +509,8 @@ Angular コンポーネント テンプレートの上側に入力フィール�
 ```typescript
 // app.module.ts
 ...
-import { IgxFilterModule, IgxInputGroupModule } from 'igniteui-angular';
+import { IgxFilterModule } from 'igniteui-angular/directives';
+import { IgxInputGroupModule } from 'igniteui-angular/input-group';
 // import { IgxFilterModule, IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -517,7 +519,7 @@ import { IgxFilterModule, IgxInputGroupModule } from 'igniteui-angular';
 
 // contacts.component.ts
 ...
-import { IgxFilterOptions } from 'igniteui-angular';
+import { IgxFilterOptions } from 'igniteui-angular/directives';
 // import { IgxFilterOptions } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({...})
@@ -598,6 +600,7 @@ igx-list-item {
 <div class="divider--half"></div>
 
 ## Chat コンポーネント
+
 以下のサンプルは、**IgxList** を使用して作成したシンプルなチャットです。
 
 <code-view style="height: 650px"
@@ -804,7 +807,7 @@ igx-list-item {
   </tbody>
 </table>
 
-> *注:* 実際の結果はテーマのバリエーションによって異なる場合があります。
+> _注:_ 実際の結果はテーマのバリエーションによって異なる場合があります。
 
 
 以下は、リストの背景を変更する方法を説明します。まず、index.scss をコンポーネントの .scss ファイルにインポートします。
@@ -854,6 +857,7 @@ $my-list-theme: list-theme(
 ```
 
 ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
 - `light-*` クラスはライト テーマ用です。
 - `dark-*` クラスはダーク テーマ用です。
 - プレフィックスの後にコンポーネント名を追加します (例: `light-list`、`dark-list`)。
@@ -881,27 +885,28 @@ $my-list-theme: list-theme(
 
 この記事では Angular List コンポーネントについて説明しました。アバターおよびアイコンの Ignite UI for Angular コンポーネントを使用して連絡先項目のリストを作成し、カスタム項目レイアウトを作成してスタイル設定、更にリスト フィルタリングを追加しました。以下は、List コンポーネントのその他の API です。
 
-* [IgxListComponent API]({environment:angularApiUrl}/classes/igxlistcomponent.html)
-* [IgxListComponent スタイル]({environment:sassApiUrl}/themes#function-list-theme)
-* [IgxListItemComponent API]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
+- [IgxListComponent API]({environment:angularApiUrl}/classes/igxlistcomponent.html)
+- [IgxListComponent スタイル]({environment:sassApiUrl}/themes#function-list-theme)
+- [IgxListItemComponent API]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 
 使用したその他の Angular コンポーネント:
 
-* [IgxAvatarComponent API]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
-* [IgxAvatarComponent スタイル]({environment:sassApiUrl}/themes#function-avatar-theme)
-* [IgxIconComponent API]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxIconComponent スタイル]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxAvatarComponent API]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
+- [IgxAvatarComponent スタイル]({environment:sassApiUrl}/themes#function-avatar-theme)
+- [IgxIconComponent API]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+- [IgxIconComponent スタイル]({environment:sassApiUrl}/themes#function-icon-theme)
 
 <div class="divider"></div>
 
 ## テーマの依存関係
-* [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
-* [IgxAvatar テーマ]({environment:sassApiUrl}/themes#function-avatar-theme)
+
+- [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxAvatar テーマ]({environment:sassApiUrl}/themes#function-avatar-theme)
 
 ## その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

@@ -9,7 +9,7 @@ _language: ja
 
 ## トランザクション、状態、トランザクション ログ
 
-トランザクションは、[トランザクション サービス]({environment:angularApiUrl}/classes/igxtransactionservice.html) の主要な構成要素です。トランザクションは、データに対して実行するすべての操作を指します。[`Transaction`]({environment:angularApiUrl}/interfaces/transaction.html) インターフェイスは、3 つのプロパティ ([`id`]({environment:angularApiUrl}/interfaces/transaction.html#id)、[`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue)、および [`type`]({environment:angularApiUrl}/interfaces/transaction.html#type) を定義します。
+トランザクションは、[トランザクション サービス]({environment:angularApiUrl}/classes/igxtransactionservice.html) の主要な構成要素です。トランザクションは、データに対して実行するすべての操作を指します。[`Transaction`]({environment:angularApiUrl}/interfaces/transaction.html) インターフェイスは、3 つのプロパティ ([`id`]({environment:angularApiUrl}/interfaces/transaction.html#id)、[`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue)、および [`type`]({environment:angularApiUrl}/interfaces/transaction.html#type)) を定義します。
 
 トランザクションの [`id`]({environment:angularApiUrl}/interfaces/transaction.html#id) はデータレコードごとに一意である必要があり、このトランザクションが影響するレコードを定義します。[`type`]({environment:angularApiUrl}/enums/transactiontype.html#type) は、実行する操作に応じて、`ADD`、`DELETE`、`UPDATE` の 3 つのトランザクションタイプのいずれかになります。[`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue) には、`ADD` トランザクションを追加する場合の新しいレコードの値が含まれます。既存のレコードを更新する場合、[`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue) には変更のみが含まれます。同じ ID の `UPDATE` タイプのトランザクションが複数あるレコードを削除する場合、[`newValue`]({environment:angularApiUrl}/interfaces/transaction.html#newValue) には削除されたレコードの値が含まれます。
 
@@ -28,13 +28,14 @@ _language: ja
 [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) には元に戻すスタックがないため、元に戻す/やり直しの機能は提供されません。
 
 以下のトピックには、行編集を有効にするために [`igxBaseTransactionService`]({environment:angularApiUrl}/classes/igxbasetransactionservice.html) を使用する方法の詳細な例が含まれます。
-* [Grid 行編集](grid/row-editing.md)
-* [Tree Grid 行編集](treegrid/row-editing.md)
-* [Hierarchical Grid 行編集](hierarchicalgrid/row-editing.md)
+
+- [Grid 行編集](grid/row-editing.md)
+- [Tree Grid 行編集](treegrid/row-editing.md)
+- [Hierarchical Grid 行編集](hierarchicalgrid/row-editing.md)
 
 ## igxTransactionService および igxHierarchicalTransactionService に関する一般情報
 
-[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) と [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、[`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html)インターフェイスを実装する注入可能なミドルウェアです。コンポーネントはこれらを使用して、基になるデータに影響を与えることなく変更を蓄積できます。プロバイダーは、*access*、*manipulate* (元に戻すとやり直し)、およびデータへの 1 つまたはすべての変更を*破棄またはコミット*するための API を公開します。
+[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) と [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、[`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html)インターフェイスを実装する注入可能なミドルウェアです。コンポーネントはこれらを使用して、基になるデータに影響を与えることなく変更を蓄積できます。プロバイダーは、_access_、_manipulate_ (元に戻すとやり直し)、およびデータへの 1 つまたはすべての変更を_破棄またはコミット_するための API を公開します。
 
 より具体的な例では、[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) と [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、[`IgxGrid`](grid/grid.md) のセル編集と行編集の両方で機能します。セルが編集モードを終了すると、セル編集のトランザクションが追加されます。行の編集が開始されると、グリッドは [`startPending`]({environment:angularApiUrl}/interfaces/transactionservice.html#startPending) を呼び出してトランザクション サービスを保留状態に設定します。編集された各セルは、保留中のトランザクション ログに追加されますが、メイン トランザクション ログには追加されません。行が編集モードを終了すると、すべての変更がメイン トランザクション ログと undo ログに単一のトランザクションとして追加されます。
 
@@ -49,7 +50,8 @@ _language: ja
 [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) には元に戻すスタックが含まれ、元に戻す/やり直し機能を利用できます。Undo スタックは、実際にはトランザクションの配列を含む配列です。[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) 使用時に、元に戻すスタックにトランザクションがある場合は、[`canUndo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#canUndo) アクセサーを確認できます。ある場合 [`undo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#undo) メソッドを使用して最後のトランザクションを削除し、[`redo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#redo) で最後に元に戻したトランザクションを適用します。
 
 以下のトピックで、バッチ編集を使用した igxGrid の実装方法の詳細な例を見つけることができます。
-* [Grid 一括編集](grid/batch-editing.md)
+
+- [Grid 一括編集](grid/batch-editing.md)
 
 ## igxHierarchicalTransactionService の使用
 
@@ -59,6 +61,7 @@ _language: ja
 このサービスは、`ADD` トランザクションを追加するときに期待する場所に新しいレコードが追加されることを保証します。親レコードを削除すると、その子は、実装に応じて、上位レベルの階層に昇格するか、親とともに削除されます。具体的な例として、ツリーグリッドの [`cascadeOnDelete`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#cascadeOnDelete) プロパティを確認できます。値に応じて、親レコードを削除すると、その子に異なる影響があります。
 
 アプリケーションでは、ユーザーが既に削除された親レコードに子レコードを追加しようとし、トランザクションがコミットされるのを待っている状態を処理することができます。トランザクションサービスでは、削除する親にレコードを追加することはできず、コンソールにエラーメッセージが表示されます。ただし、親を削除するかどうかを確認し、以下のコードを使用してユーザーに独自のアラートを実装できます。
+
 ```typescript
     const state = this.transactions.getState(parentRecordID);
     if (state && state.type === TransactionType.DELETE) {
@@ -67,19 +70,22 @@ _language: ja
 ```
 
 以下は、[`igxTreeGrid`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) と [`igxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) でバッチ編集を実装する方法の詳細な例を含むトピックです。
-* [Tree Grid 一括編集](treegrid/batch-editing.md)
-* [Hierarchical Grid 一括編集](hierarchicalgrid/batch-editing.md)
+
+- [Tree Grid 一括編集](treegrid/batch-editing.md)
+- [Hierarchical Grid 一括編集](hierarchicalgrid/batch-editing.md)
 
 ## トランザクション ファクトリ
+
 Ignite UI for Angular グリッド内のトランザクションの具体的な実装では、グリッドの [`batchEditing`]({environment:angularApiUrl}/classes/igxgridcomponent.html#batchEditing) の値に応じて、適切なトランザクション サービスをインスタンス化するためにファクトリが使用されます。2 つの別々のトランザクション ファクトリがあります - [`IgxFlatTransactionFactory`]({environment:angularApiUrl}/classes/igxflatransactionfactory.html) ([`Grid`](grid/batch-editing.md) と [`Hierarchical Grid`](hierarchicalgrid/batch-editing.md) に使用) と [`IgxHierarchicalTransactionFactory`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionfactory.html) ([Tree Grid](treegrid/batch-editing.md) に使用)。どちらのクラスも、適切な[タイプ](#igxtransactionservice-および-igxhierarchicaltransactionservice-に関する一般情報)の新しいインスタンスを返す 1 つのメソッド  `create` のみを公開します。渡されたパラメータ (`TRANSACTION_TYPE`) は内部で使用されます - `batchEditing` が **false** の場合は `None` が使用され、一括編集が有効な場合は `Base` が使用されます。展開できるため、(`true` - `false` フラグの代わりに) `enum` が使用されます。
 
 ## トランザクション ファクトリの使用
+
 [`IgxFlatTransactionFactory`]({environment:angularApiUrl}/classes/igxflatransactionfactory.html) と [`IgxHierarchicalTransactionFactory`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionfactory.html) はどちらも `root` で提供され、パブリック API で公開されます。任意のチェックに応じて、トランザクション サービスの新しいインスタンスをインスタンス化する場合は、トランザクション ファクトリを使用できます。
 
 以下の例では、任意の (`hasUndo`) フラグに応じてさまざまなトランザクション サービスをインスタンス化する方法を確認できます。
 
 ```typescript
-import { IgxFlatTransactionFactory, TRANSACTION_TYPE } from 'igniteui-angular';
+import { IgxFlatTransactionFactory, TRANSACTION_TYPE } from 'igniteui-angular/core';
 // import { IgxFlatTransactionFactory, TRANSACTION_TYPE } from '@infragistics/igniteui-angular'; for licensed package
 
 export class MyCustomComponent {
@@ -106,7 +112,7 @@ export class MyCustomComponent {
 
 ```typescript
 import { IgxFlatTransactionFactory, TRANSACTION_TYPE, IgxBaseTransactionService,
-TransactionService, Transaction, State } from 'igniteui-angular';
+TransactionService, Transaction, State } from 'igniteui-angular/core';
 // import { IgxFlatTransactionFactory, TRANSACTION_TYPE, IgxBaseTransactionService,
 // TransactionService, Transaction, State } from '@infragistics/igniteui-angular'; for licensed package
 
@@ -129,7 +135,7 @@ export class CustomTransactionFactory extends IgxFlatTransactionFactory {
 次に、コンポーネントの `providers` 配列で、`IgxFlatTransactionFactory` (`igx-grid` によって使用される) をカスタム実装でオーバーライドします。
 
 ```typescript
-import { IgxFlatTransactionFactory } from 'igniteui-angular';
+import { IgxFlatTransactionFactory } from 'igniteui-angular/core';
 // import { IgxFlatTransactionFactory } from '@infragistics/igniteui-angular'; for licensed package
 import { CustomTransactionFactory } from '../custom-factory.ts';
 
@@ -147,11 +153,12 @@ export class GridViewComponent {
 これで、`batchEditing` が `true` に設定されている場合、グリッドは  `CustomTransactionService` のインスタンスを受け取ります。
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [トランザクション サービス API]({environment:angularApiUrl}/interfaces/transactionservice.html)
-* [トランザクション サービス](transaction.md)
-* [トランザクション サービスの使用方法](transaction-how-to-use.md)
-* [Grid 一括編集](grid/batch-editing.md)
-* [Tree Grid 一括編集](treegrid/batch-editing.md)
-* [Hierarchical Grid 一括編集](hierarchicalgrid/batch-editing.md)
+- [トランザクション サービス API]({environment:angularApiUrl}/interfaces/transactionservice.html)
+- [トランザクション サービス](transaction.md)
+- [トランザクション サービスの使用方法](transaction-how-to-use.md)
+- [Grid 一括編集](grid/batch-editing.md)
+- [Tree Grid 一括編集](treegrid/batch-editing.md)
+- [Hierarchical Grid 一括編集](hierarchicalgrid/batch-editing.md)

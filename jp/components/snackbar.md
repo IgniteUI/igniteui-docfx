@@ -6,14 +6,16 @@ _license: MIT
 _language: ja
 ---
 # Angular Snackbar (スナックバー) コンポーネントの概要
+
 <p class="highlight">Ignite UI for Angular Snackbar コンポーネントは、アクションを含むことができる単一行のメッセージで操作のフィードバックを提供します。Snackbar メッセージがその他の画面要素の上に表示され、画面の中央下に配置されます。</p>
 
 ## Angular Snackbar の例
+
 <div class="divider--half"></div>
 
 
-<code-view style="height: 140px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 140px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-1/" alt="Angular Snackbar の例">
 </code-view>
 
@@ -36,7 +38,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 ...
-import { IgxSnackbarModule } from 'igniteui-angular';
+import { IgxSnackbarModule } from 'igniteui-angular/snackbar';
 // import { IgxSnackbarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -52,7 +54,8 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IgxSnackbarComponent, IgxButtonDirective } from 'igniteui-angular';
+import { IgxSnackbarComponent } from 'igniteui-angular/snackbar';
+import { IgxButtonDirective } from 'igniteui-angular/directives';
 // import { IgxSnackbarComponent, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -75,6 +78,7 @@ Ignite UI for Angular Snackbar モジュールまたはコンポーネントを�
 ## Angular Snackbar の使用
 
 ### Snackbar の表示
+
 Snackbar コンポーネントを表示するには、ボタン クリックで [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) メソッドを呼び出します。
 
 ```html
@@ -85,6 +89,7 @@ Snackbar コンポーネントを表示するには、ボタン クリックで 
     <igx-snackbar #snackbar>Message deleted</igx-snackbar>
 </div>
 ```
+
 サンプルが正しく構成された場合、デモ サンプルが表示されます。ボタン クリック時にテキスト メッセージを表示する Snackbar が表示されます。
 以上のコード スニペットで示されるように、スナックバーに表示されるメッセージを設定する 1 つの方法は、コンテンツ プロジェクションを使用することです。ただし、カスタム ロジックに基づいてプログラムによって値を切り替える必要がある場合は、値をパラメーターとして [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) メソッドに渡すだけです。
 
@@ -99,6 +104,7 @@ Snackbar コンポーネントを表示するには、ボタン クリックで 
 ```
 
 ### 非表示/自動的に隠す
+
 開いた後は、[`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displayTime) 入力によって指定した期間遅延後に非表示になります。デフォルト値は 4000 ミリ秒です。この動作はデフォルトで有効ですが、[`autoHide`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#autoHide) を **false** に設定して変更できます。この場合、Snackbar は非表示になりません。Snackbar の [`close()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#close) メソッドを使用して、コードでコンポーネントを閉じることができます。
 
 ```html
@@ -120,15 +126,17 @@ public close(element) {
 
 サンプルを正しく構成した後、ボタンをクリックするとメッセージおよびアクション ボタンを含む Snackbar が表示されます。自動的に隠す機能が無効で、[CLOSE] ボタンのクリックで Snackbar が非表示になります。別のスナックバーが [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) メソッドを介して別のメッセージを渡し、**表示時間**が終了すると非表示にします。3 番目のコンポーネントは、メッセージをパラメーターとして [`open()`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#open) メソッドに渡し、コンテンツ プロジェクションを使用してアイコンを追加します。
 
-<code-view style="height: 230px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 230px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-2/" >
 </code-view>
 
 ### 表示時間
+
 [`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#displayTime) でミリ秒間隔に設定し、Snackbar コンポーネントが表示される時間を設定します。デフォルトでは 4000 ミリ秒に設定されています。
 
 ### Snackbar のカスタマイズ
+
 Snackbar の内容をカスタマイズして、メッセージやボタンよりも複雑な要素を表示することもできます。たとえば、ファイルの読み込み中にスナックバーを表示したい場合は、読み込みアニメーションをそのコンテンツに追加することができます。
 
 ```html
@@ -179,13 +187,14 @@ Snackbar の内容をカスタマイズして、メッセージやボタンよ�
 結果としてメッセージと 3 つのローディング ドットがスナックバーに表示されます。
 
 
-<code-view style="height: 170px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 170px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-5/" >
 </code-view>
 
 
 ### リストの Snackbar
+
 Snackbar の主な機能を説明しました。次の例はより複雑なサンプルにコンポーネントを追加します。通知およびアクションの元に戻す機能を提供する Snackbar を作成します。
 
 削除可能な連絡先のリストを作成します。項目を削除後、メッセージおよびアクションを元に戻すボタンを含む Snackbar が表示されます。
@@ -218,7 +227,7 @@ Snackbar の主な機能を説明しました。次の例はより複雑なサ�
 //sample.component.ts
 
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IgxSnackbarComponent } from 'igniteui-angular';
+import { IgxSnackbarComponent } from 'igniteui-angular/snackbar';
 // import { IgxSnackbarComponent } from '@infragistics/igniteui-angular'; for licensed package
 ...
 @ViewChild(IgxSnackbarComponent)
@@ -250,12 +259,13 @@ public restore() {
 }
 ```
 
-<code-view style="height: 350px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 350px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4/" >
 </code-view>
 
 ### 配置
+
 [`positionSettings`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html#positionSettings) プロパティを使用すると、Snackbar の表示位置を構成します。デフォルトで、ページの下に表示されます。以下のサンプルで、通知が上位置に表示されます。
 
 ```html
@@ -266,7 +276,7 @@ public restore() {
 
 ```typescript
 // sample.component.ts
-import { VerticalAlignment, HorizontalAlignment } from 'igniteui-angular';
+import { VerticalAlignment, HorizontalAlignment } from 'igniteui-angular/core';
 // import { VerticalAlignment, HorizontalAlignment } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public open(snackbar) {
@@ -308,7 +318,7 @@ public open(snackbar) {
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 最も簡単な方法は、[`snackbar-theme`]({environment:sassApiUrl}/themes#function-snackbar-theme) を拡張する新しいテーマを作成し、`$text-color`、`$background`、`$button-color`、`$border-radius` パラメーターを受け取る方法です。
 
@@ -332,9 +342,9 @@ $dark-snackbar: snackbar-theme(
 
 ### デモ
 
-<code-view style="height: 150px" 
+<code-view style="height: 150px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/snackbar-style/" >
 </code-view>
 
@@ -353,6 +363,7 @@ $dark-snackbar: snackbar-theme(
 ```
 
 ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
 - `light-*` クラスはライト テーマ用です。
 - `dark-*` クラスはダーク テーマ用です。
 - プレフィックスの後にコンポーネント名を追加します (例: `light-select`、`dark-select`)。
@@ -379,18 +390,19 @@ $dark-snackbar: snackbar-theme(
 </div>
 
 ## API リファレンス
+
 このトピックでは、[`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html) を使用と構成方法を説明しました。API の詳細については以下のリンク先を参照してください。
 
-* [`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html)
+- [`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html)
 
 スタイル:
 
-* [`IgxSnackbarComponent スタイル`]({environment:sassApiUrl}/themes#function-snackbar-theme)
+- [`IgxSnackbarComponent スタイル`]({environment:sassApiUrl}/themes#function-snackbar-theme)
 
 ## その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

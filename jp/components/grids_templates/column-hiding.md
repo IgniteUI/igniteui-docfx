@@ -34,8 +34,8 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-column-hiding-toolbar-sample/" alt="Angular @@igComponent 列非表示の例">
 </code-view>
 
@@ -43,8 +43,8 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding-toolbar/" alt="Angular @@igComponent 列非表示の例">
 </code-view>
 
@@ -52,8 +52,8 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:570px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:570px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-hiding/" alt="Angular @@igComponent 列非表示の例">
 </code-view>
 
@@ -62,9 +62,11 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 }
 
 ## @@igComponent の設定
+
 @@igComponent を作成してからデータをバインドします。列でフィルタリングとソートも有効にします。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <!--columnHiding.component.html-->
 
@@ -81,8 +83,10 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
     <igx-column [field]="'Phone'" dataType="string" [sortable]="true"></igx-column>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <!--columnHiding.component.html-->
 
@@ -101,8 +105,10 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
     <igx-column [field]="'Phone'" dataType="string" [sortable]="true"></igx-column>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid class="hgrid" [data]="localdata"
         [height]="'560px'" [width]="'100%'" columnWidth="200px" [allowFiltering]="true" #hGrid>
@@ -141,6 +147,7 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 
 </igx-hierarchical-grid>
 ```
+
 }
 
 ## ツールバーの列非表示 UI
@@ -149,6 +156,7 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 これには、@@igComponent の [`IgxGridToolbarActionsComponent`]({environment:angularApiUrl}/classes/igxgridtoolbaractionscomponent.html) および [`IgxGridToolbarHidingComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html) の両方を設定することだけです。ツールバーにタイトルを追加するには、[`IgxGridToolbarTitleComponent`]({environment:angularApiUrl}/classes/igxgridtoolbartitlecomponent.html) を設定し、@@igComponent のラッパーにカスタム スタイルを設定します。
 
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <!--columnHiding.component.html-->
 <div class="hgrid-sample">
@@ -163,6 +171,7 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
  </igx-hierarchical-grid>
 </div>
 ```
+
 ```css
 /* columnHiding.component.css */
 .photo {
@@ -173,9 +182,11 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
     margin: 1px
 }
 ```
+
 }
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
+
 ```html
 <!--columnHiding.component.html-->
 
@@ -199,6 +210,7 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
     margin: 10px;
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
@@ -209,6 +221,7 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
 `igx-grid-toolbar-hiding` の [`title`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#title) プロパティを使用して、ツールバーのドロップダウン ボタン内に表示されるタイトルを設定します。
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
+
 ```html
 <!--columnHiding.component.html-->
 
@@ -223,8 +236,10 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
     </@@igSelector>
 </div>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <div class="hgrid-sample">
     <igx-hierarchical-grid class="hgrid" [data]="localdata">
@@ -237,6 +252,7 @@ Ignite UI for Angular @@igComponent は、[`IgxColumnHidingDirective`]({environm
  </igx-hierarchical-grid>
 </div>
 ```
+
 }
 
 IgxGridToolbarHidingComponent の [`columnsAreaMaxHeight`]({environment:angularApiUrl}/classes/igxgridtoolbarhidingcomponent.html#columnsAreaMaxHeight) プロパティを使用して、列操作を含む領域の最大高さを設定できます。このように、多くの操作があり、それらのすべてがコンテナーに収まらない場合は、スクロールバーが表示され、必要な操作にスクロールできます。
@@ -249,7 +265,7 @@ public ngAfterViewInit() {
 }
 ```
 
-列非表示 UI の拡張機能セットを使用するために、IgxColumnActionsComponent の [`columnsAreaMaxHeight `]({environment:angularApiUrl}/classes/IgxColumnActionsComponent.html#columnsAreaMaxHeight) プロパティを使用できます。アプリケーションの要件に基づいて使用できます。
+列非表示 UI の拡張機能セットを使用するために、IgxColumnActionsComponent の [`columnsAreaMaxHeight`]({environment:angularApiUrl}/classes/IgxColumnActionsComponent.html#columnsAreaMaxHeight) プロパティを使用できます。アプリケーションの要件に基づいて使用できます。
 
 このトピックのはじめにあるコードの結果は、列非表示の例セクションで確認できます。
 
@@ -266,7 +282,7 @@ public ngAfterViewInit() {
 import {
     ...
     IgxColumnActionsModule 
-} from 'igniteui-angular';
+} from 'igniteui-angular/grids/core';
 // import { ..., IgxColumnActionsModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -279,6 +295,7 @@ export class AppModule {}
 次に [`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html) を作成します。アプリケーションでグリッドの隣に配置します。これはツールバーの列非表示 UI と異なります。ツールバーの場合、コンポーネントはドロップダウンに含まれます。コンポーネントの [`columns`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html#columns) プロパティをグリッドの列に設定し、更にカスタム スタイルも追加します。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <!--columnHiding.component.html-->
 
@@ -292,8 +309,10 @@ export class AppModule {}
     </@@igSelector>
 </div>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <!--columnHiding.component.html-->
 
@@ -307,9 +326,11 @@ export class AppModule {}
     </@@igSelector>
 </div>
 ```
+
 }
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
+
 ```css
 /* columnHiding.component.css */
 
@@ -347,6 +368,7 @@ export class AppModule {}
     margin-left: 30px;    
 }
 ```
+
 }
 
 ### タイトルおよびフィルター プロンプトの追加
@@ -379,7 +401,7 @@ export class AppModule {}
 import {
     ...
     IgxRadioModule    
-} from 'igniteui-angular';
+} from 'igniteui-angular/radio';
 // import { ..., IgxRadioModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -410,9 +432,11 @@ export class AppModule {}
 ```
 
 ### 列の非表示の無効化
+
 列の [`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablehiding) プロパティを true に設定すると、ユーザーが列非表示 UI によって列を非表示にできません。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <!--columnHiding.component.html-->
 
@@ -425,8 +449,10 @@ export class AppModule {}
     </igx-grid>
 </div>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <!--columnHiding.component.html-->
 
@@ -439,14 +465,15 @@ export class AppModule {}
     </igx-tree-grid>
 </div>
 ```
+
 }
 
 列非表示 UI コンポーネントは以下のようになります。
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-column-hiding-sample/" >
 </code-view>
 
@@ -454,8 +481,8 @@ export class AppModule {}
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding/" >
 </code-view>
 
@@ -497,7 +524,7 @@ $custom-button: button-theme(
 
 この例では、フラットボタンのテキストの色とボタンの無効な色のみを変更しましたが、[`button-theme`]({environment:sassApiUrl}/themes#function-button-theme) の方がより多くの方法を提供します。ボタンのスタイルを制御するパラメーター。
 
-最後にそれぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。 
+最後にそれぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。
 
 ```scss
 @include css-vars($custom-column-actions-theme);
@@ -529,9 +556,9 @@ $custom-button: button-theme(
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:600px" 
+<code-view style="height:600px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-column-hiding-style/" >
 </code-view>
 
@@ -539,9 +566,9 @@ $custom-button: button-theme(
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:600px" 
+<code-view style="height:600px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding-style/" >
 </code-view>
 
@@ -549,9 +576,9 @@ $custom-button: button-theme(
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:570px" 
+<code-view style="height:570px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-column-hiding-style/" >
 </code-view>
 
@@ -569,52 +596,58 @@ $custom-button: button-theme(
 
 以下は、列非表示 UI のその他の API です。
 
-* [IgxColumnActionsComponent]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html)
-* [IgxColumnActionsComponent スタイル]({environment:sassApiUrl}/themes#function-column-actions-theme)
+- [IgxColumnActionsComponent]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html)
+- [IgxColumnActionsComponent スタイル]({environment:sassApiUrl}/themes#function-column-actions-theme)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) プロパティ:
-* [hiddenColumnsCount]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddenColumnsCount)
+
+- [hiddenColumnsCount]({environment:angularApiUrl}/classes/@@igTypeDoc.html#hiddenColumnsCount)
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) プロパティ:
-* [disableHiding]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disableHiding)
+
+- [disableHiding]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disableHiding)
 
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) プロパティ:
-* [showProgress]({environment:angularApiUrl}/classes/IgxGridToolbarComponent.html#showProgress)
 
-[`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) components:
-* [IgxGridToolbarTitleComponent]({environment:angularApiUrl}/classes/igxgridtoolbartitlecomponent.html)
-* [IgxGridToolbarActionsComponent]({environment:angularApiUrl}/classes/igxgridtoolbaractionscomponent.html)
+- [showProgress]({environment:angularApiUrl}/classes/IgxGridToolbarComponent.html#showProgress)
+
+[`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) コンポーネント:
+
+- [IgxGridToolbarTitleComponent]({environment:angularApiUrl}/classes/igxgridtoolbartitlecomponent.html)
+- [IgxGridToolbarActionsComponent]({environment:angularApiUrl}/classes/igxgridtoolbaractionscomponent.html)
 
 [`IgxGridToolbarComponent`]({environment:angularApiUrl}/classes/igxgridtoolbarcomponent.html) メソッド:
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) イベント:
-* [columnVisibilityChanged]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnVisibilityChanged)
+
+- [columnVisibilityChanged]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnVisibilityChanged)
 
 [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
 
 スタイル:
 
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
-* [IgxRadioComponent スタイル]({environment:sassApiUrl}/themes#function-radio-theme)
+- [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxRadioComponent スタイル]({environment:sassApiUrl}/themes#function-radio-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [@@igComponent 概要](@@igMainTopic.md)
-* [仮想化とパフォーマンス](virtualization.md)
-* [フィルタリング](filtering.md)
-* [ページング](paging.md)
-* [並び替え](sorting.md)
-* [集計](summaries.md)
-* [列のピン固定](column-pinning.md)
-* [列のサイズ変更](column-resizing.md)
-* [選択](selection.md)
-@@if (igxName !== 'IgxHierarchicalGrid') {* [検索](search.md)}
+- [@@igComponent 概要](@@igMainTopic.md)
+- [仮想化とパフォーマンス](virtualization.md)
+- [フィルタリング](filtering.md)
+- [ページング](paging.md)
+- [並び替え](sorting.md)
+- [集計](summaries.md)
+- [列のピン固定](column-pinning.md)
+- [列のサイズ変更](column-resizing.md)
+- [選択](selection.md)
+@@if (igxName !== 'IgxHierarchicalGrid') {- [検索](search.md)}
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

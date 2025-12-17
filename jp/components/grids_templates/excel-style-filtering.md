@@ -25,24 +25,24 @@ _language: ja
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:950px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:950px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-1/" alt="Angular @@igComponent Excel スタイル フィルタリングの例">
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:950px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:950px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-1/" alt="Angular @@igComponent Excel スタイル フィルタリングの例">
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:950px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:950px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-1/" alt="Angular @@igComponent Excel スタイル フィルタリングの例">
 </code-view>
 
@@ -55,22 +55,28 @@ _language: ja
 Excel スタイル フィルタリングをオンにするには、2 つの入力を設定します。[`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowFiltering) を `true` に設定し、[`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterMode) を `excelStyleFilter` に設定してください。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid [data]="data" [autoGenerate]="true" [allowFiltering]="true" [filterMode]="'excelStyleFilter'">
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid [data]="data" [autoGenerate]="true" [allowFiltering]="true" [filterMode]="'excelStyleFilter'">
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid [data]="data" [autoGenerate]="true" [allowFiltering]="true" [filterMode]="'excelStyleFilter'">
 </igx-hierarchical-grid>
 ```
+
 }
 
 ## インタラクション
@@ -93,6 +99,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 ソート、移動、ピン固定、非表示の機能をフィルター メニューから削除できます。これらを制御する入力は以下のとおりです: [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable)、[`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected)、[`disablePinning`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disablePinning)、[`disableHiding`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#disableHiding)。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="650px" width="100%" [moving]="true" [allowFiltering]="true" [filterMode]="'excelStyleFilter'">
     <igx-column field="ProductName" header="Product Name" [sortable]="true" [dataType]="'string'">
@@ -113,6 +120,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 以下のサンプルの **Product Name** と **Discontinued** 列で 4 つすべての機能が有効です。**Quantity Per Unit** で 4 機能すべてが無効、**Unit Price** でソートと移動のみ有効、**Order Date** でピン固定と非表示のみ [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) です。
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid #treegrid1 [data]="data" [autoGenerate]="false" height="480px" width="100%" [moving]="true" [allowFiltering]="true"
     primaryKey="ID" foreignKey="ParentID" filterMode="excelStyleFilter">
@@ -137,6 +145,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 以下のサンプルでは、'Order Product'、'Category'、および 'Units' 列で 3 つの機能がすべて有効化され、'Price' で 3 つすべてが無効化され、'Order Date' と 'Delivered' でピン固定と非表示のみが設定されています。
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false" [moving]="true" [allowFiltering]='true' filterMode="excelStyleFilter"
     [height]="'650px'" [width]="'100%'" [rowHeight]="'65px'" #hierarchicalGrid>
@@ -183,24 +192,24 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:900px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:900px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-2/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:900px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:900px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-2/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:900px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:900px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-2/" >
 </code-view>
 
@@ -219,6 +228,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 次のコードは、[`igx-excel-style-header`]({environment:angularApiUrl}/classes/igxexcelstyleheadercomponent.html)、[`igx-excel-style-sorting`]({environment:angularApiUrl}/classes/igxexcelstylesortingcomponent.html) および [`igx-excel-style-search`]({environment:angularApiUrl}/classes/igxexcelstylesearchcomponent.html) コンポーネントを使用してカスタム Excel スタイル フィルター メニューを定義する方法を示しています。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid #grid1 [data]="data" [autoGenerate]="false" height="650px" width="100%" [allowFiltering]="true" [filterMode]="'excelStyleFilter'">
 
@@ -244,6 +254,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid #treegrid1 [data]="data" [autoGenerate]="false" height="480px" width="100%" [allowFiltering]="true"
     primaryKey="ID" foreignKey="ParentID" filterMode="excelStyleFilter">
@@ -270,6 +281,7 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false" [allowFiltering]='true' filterMode="excelStyleFilter"
     [height]="'650px'" [width]="'100%'" [rowHeight]="'65px'" #hierarchicalGrid>
@@ -328,24 +340,24 @@ Excel スタイル フィルタリングをオンにするには、2 つの入�
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-sample-3/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-sample-3/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-sample-3/" >
 </code-view>
 
@@ -374,8 +386,8 @@ Excel スタイル フィルタリング ダイアログ内のリスト項目は
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-formatted-filtering-strategy/" >
 </code-view>
 
@@ -383,8 +395,8 @@ Excel スタイル フィルタリング ダイアログ内のリスト項目は
 
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-formatted-filtering-strategy/" >
 </code-view>
 
@@ -392,8 +404,8 @@ Excel スタイル フィルタリング ダイアログ内のリスト項目は
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-formatted-filtering-strategy/" >
 </code-view>
 
@@ -407,8 +419,8 @@ Excel スタイル フィルタリング ダイアログ内のリスト項目は
 
 デフォルトでは、Excel スタイル フィルタリング ダイアログはリスト ビューで項目を表示します。それらをツリー ビューに表示するには、[`TreeGridFilteringStrategy`]({environment:angularApiUrl}/classes/treegridfilteringstrategy.html) を使用して、列フィールド名の配列を指定します。フィルター項目は、指定された列の場合はツリー ビューに、他のすべての列の場合はリスト ビューに表示されます。次のサンプルは、最初の列のツリー ビューにフィルター項目を表示する方法を示しています:
 
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-tree-filter-view/" >
 </code-view>
 }
@@ -421,8 +433,8 @@ Excel スタイル フィルタリング ダイアログ内のリスト項目は
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:670px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:670px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-external-excel-style-filtering/" >
 </code-view>
 
@@ -430,8 +442,8 @@ Excel スタイル フィルタリング ダイアログ内のリスト項目は
 
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:670px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:670px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-external-excel-style-filtering/" >
 </code-view>
 
@@ -439,8 +451,8 @@ Excel スタイル フィルタリング ダイアログ内のリスト項目は
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:670px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:670px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-excel-style-filtering/" >
 </code-view>
 
@@ -454,6 +466,7 @@ Excel スタイル フィルタリング ダイアログ内のリスト項目は
 Excel スタイル フィルタリング コンポーネントを設定するには、[`column`]({environment:angularApiUrl}/classes/igxgridexcelstylefilteringcomponent.html#column) プロパティを @@igComponent 列の 1 つに設定する必要があります。上記のサンプルで、[`column`]({environment:angularApiUrl}/classes/igxgridexcelstylefilteringcomponent.html#column) プロパティは @@igComponent 列を表示する IgxSelectComponent の値にバインドされています。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-select #gridColums value="ProductID">
    <label igxLabel>Columns:</label>
@@ -465,8 +478,10 @@ Excel スタイル フィルタリング コンポーネントを設定するに
 <igx-grid-excel-style-filtering [column]="grid1.getColumnByName(gridColums.value)">
 </igx-grid-excel-style-filtering>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-select #gridColums value="ID">
    <label igxLabel>Columns:</label>
@@ -478,8 +493,10 @@ Excel スタイル フィルタリング コンポーネントを設定するに
 <igx-grid-excel-style-filtering [column]="treegrid1.getColumnByName(gridColums.value)">
 </igx-grid-excel-style-filtering>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-select #gridColums value="Artist">
    <label igxLabel>Columns:</label>
@@ -491,6 +508,7 @@ Excel スタイル フィルタリング コンポーネントを設定するに
 <igx-grid-excel-style-filtering [column]="hierarchicalgrid1.getColumnByName(gridColums.value)">
 </igx-grid-excel-style-filtering>
 ```
+
 }
 
 ## 表示要素が重なる場合のアウトレット設定
@@ -499,10 +517,11 @@ Excel スタイル フィルタリング コンポーネントを設定するに
 ただし、グリッドの外側にある要素 (Excel スタイル フィルターなど) は、同じ `z-index` を持つ外側の要素 (たとえば、2 つのグリッドが上下に重ねる) と競合し、誤った描画が発生します。この問題の解決策は、[`outlet`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#outlet) プロパティを外部のアウトレット ディレクティブに設定し、オーバーレイ要素が常に上に表示されるようにすることです。
 
 ### デモ
+
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-external-outlet/" >
 </code-view>
 
@@ -510,8 +529,8 @@ Excel スタイル フィルタリング コンポーネントを設定するに
 
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-external-outlet/" >
 </code-view>
 
@@ -519,8 +538,8 @@ Excel スタイル フィルタリング コンポーネントを設定するに
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-outlet/" >
 </code-view>
 
@@ -643,27 +662,27 @@ $custom-list: list-theme(
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:950px" 
+<code-view style="height:950px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-excel-style-filtering-style/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:950px" 
+<code-view style="height:950px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-excel-style-filtering-style/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:950px" 
+<code-view style="height:950px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-excel-style-filtering-style/" >
 </code-view>
 
@@ -674,27 +693,29 @@ $custom-list: list-theme(
 <div class="divider--half"></div>
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+- [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [@@igComponent 概要](@@igMainTopic.md)
-* [仮想化とパフォーマンス](virtualization.md)
-* [ページング](paging.md)
-* [ソート](sorting.md)
-* [集計](summaries.md)
-* [列移動](column-moving.md)
-* [列のピン固定](column-pinning.md)
-* [列のサイズ変更](column-resizing.md)
-* [選択](selection.md)
+- [@@igComponent 概要](@@igMainTopic.md)
+- [仮想化とパフォーマンス](virtualization.md)
+- [ページング](paging.md)
+- [ソート](sorting.md)
+- [集計](summaries.md)
+- [列移動](column-moving.md)
+- [列のピン固定](column-pinning.md)
+- [列のサイズ変更](column-resizing.md)
+- [選択](selection.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
