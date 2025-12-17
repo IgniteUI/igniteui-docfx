@@ -2,23 +2,27 @@
 title: Angular @@igComponent Grid でのカスケード コンボ - インフラジスティックス
 _description: カスケード コンボを使用した Grid  について説明します。コンポーネントのサンプルも提供しています。
 _keywords: angular grid でのカスケード コンボ, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 
 # カスケード コンボを使用した Angular Grid
+
 グリッドの編集機能は、[カスケード コンボ](../simple-combo.md#カスケーディング)を使用する機会を提供します。前の[コンボ](../combo.md)で値を選択することにより、ユーザーは次のコンボ内の選択に関連するデータのみを受け取ります。
 
 ## カスケード コンボを使用した Angular Grid サンプルの概要
+
 以下のサンプルは、`Grid` がネストされた `Cascading Combos` でどのように機能するかを示しています。
 
 @@if (igxName === 'IgxGrid') {
-<code-view style="height:500px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:500px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-cascading-combos/" alt="Angular @@igComponent 一括編集とトランザクションの例">
 </code-view>
 }
 
 ## 設定
+
 列の編集を有効にするには、[`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) プロパティが **true** に設定されていることを確認してください。
 
 列の編集が有効になったら、[単一選択コンボ ボックス](../simple-combo.md)を追加します。ここで 1 つの選択のみを使用できるようにするには、igxCombo を変更する代わりに [igxSimpleCombo](../simple-combo.md) を使用する必要があることに注意してください。
@@ -26,7 +30,7 @@ _language: ja
 [Simple ComboBox](../simple-combo.md#angular-simple-combobox-の機能) コンポーネントの使用を開始するには、最初に `IgxSimpleComboModule` を **app.module.ts** ファイルにインポートする必要があります。
 
 ```typescript
-import { IgxSimpleComboModule } from 'igniteui-angular';
+import { IgxSimpleComboModule } from 'igniteui-angular/simple-combo';
 
 @NgModule({
     imports: [
@@ -84,16 +88,17 @@ public countryChanging(event: IComboSelectionChangeEventArgs) {
 ```
 
 ## API まとめ
+
 <div class="divider--half"></div>
 
-* [IgxSimpleComboComponent]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html)
-* [IgxComboComponent スタイル]({environment:sassApiUrl}/themes#function-combo-theme)
-* [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
-* [IgxLinearProgressBarComponent スタイル]({environment:sassApiUrl}/themes#function-progress-linear-theme)
+- [IgxSimpleComboComponent]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html)
+- [IgxComboComponent スタイル]({environment:sassApiUrl}/themes#function-combo-theme)
+- [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
+- [IgxLinearProgressBarComponent スタイル]({environment:sassApiUrl}/themes#function-progress-linear-theme)
 
 ## その他のリソース
 
-* [@@igComponent 編集](editing.md)
-* [単一選択コンボボックス](../simple-combo.md)
-* [カスケード コンボ](../simple-combo.md#カスケーディング)
-* [リニア プログレス](../linear-progress.md)
+- [@@igComponent 編集](editing.md)
+- [単一選択コンボボックス](../simple-combo.md)
+- [カスケード コンボ](../simple-combo.md#カスケーディング)
+- [リニア プログレス](../linear-progress.md)

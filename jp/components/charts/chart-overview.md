@@ -2,6 +2,7 @@
 title: Angular チャートとグラフ ライブラリー | Ignite UI for Angular
 _description: Ignite UI for Angular チャートおよびグラフは、データ視覚化の広範なライブラリであり、Web アプリやモバイル アプリの魅力的でインタラクティブなチャートを実現します。無料でお試しください。
 _keywords: Angular Charts, Chart, Infragistics, Angular チャート, チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ["DomainChart", "FinancialChart", "CategoryChart", "XamDataChart", "CategoryChartType"]
 _language: ja
 ---
@@ -12,14 +13,14 @@ Ignite UI for Angular チャートおよびグラフは、データ視覚化の�
 
 Ignite UI for Angular チャートは、カテゴリ シリーズ、ファイナンシャル シリーズ、極座標シリーズ、ラジアル シリーズ、範囲シリーズ、散布シリーズ、シェイプ シリーズ、地理空間シリーズなど、あらゆるタイプのデータを視覚化できる 65 種類以上のシリーズと組み合わせをサポートします。実行している比較のタイプ、または伝えようとしているデータ ストーリーのタイプに関係なく、次のいずれかの方法でデータを表すことができます:
 
-*   時間毎の変化
-*   比較
-*   相関
-*   配布
-*   地理空間
-*   概要 + 詳細
-*   部分から全体
-*   ランキング
+- 時間毎の変化
+- 比較
+- 相関
+- 配布
+- 地理空間
+- 概要 + 詳細
+- 部分から全体
+- ランキング
 
 インフラジスティックスの Angular チャートを使用して、最もニーズの高い視覚化を強化してください。
 
@@ -27,13 +28,13 @@ Ignite UI for Angular チャートは、カテゴリ シリーズ、ファイナ
 
 Angular 製品には、単一のチャート表示からインタラクティブなダッシュボードまで、あらゆるシナリオに対応する 65 を超えるさまざまなチャートおよびグラフ タイプがあります。モバイル アプリやウェブ アプリ用に、円、棒、エリア、折れ線、ポイント、積層型、ドーナツ、散布、ゲージ、極座標、ツリーマップ、株価、ファイナンシャル、地理空間マップなどの Angular チャートを作成できます。Angular チャートと他のチャートの利点は、次のような機能が完全にサポートされていることです:
 
-*   組み込まれたレスポンシブ Web デザイン
-*   マウス、キーボード、タッチを使用したインタラクティブなパンとズーム
-*   チャート アニメーションのフル コントロール
-*   チャート ドリルダウン イベント
-*   リアルタイム ストリーミングのサポート
-*   大量 (数百万のデータ ポイント) のサポート
-*   トレンドラインおよびその他のデータ分析機能
+- 組み込まれたレスポンシブ Web デザイン
+- マウス、キーボード、タッチを使用したインタラクティブなパンとズーム
+- チャート アニメーションのフル コントロール
+- チャート ドリルダウン イベント
+- リアルタイム ストリーミングのサポート
+- 大量 (数百万のデータ ポイント) のサポート
+- トレンドラインおよびその他のデータ分析機能
 
 Angular チャートは、軸、マーカー、シリーズ、凡例、および注釈レイヤーのモジュラー デザインで構築されており、あらゆるタイプのデータ ストーリーの描画を簡単にデザインできます。単一のデータ シリーズを使用して単純なチャートを作成するか、複合ビューに複数の軸があるデータの複数シリーズを使用してより複雑なデータ ストーリーを作成します。
 
@@ -333,18 +334,18 @@ alt="Angular チャート マーカー、ツールチップ、およびテンプ
 
 他の Angular チャートを検討している場合は、次のことを考慮しましょう:
 
-*   65 を超える Angular チャート タイプと複合チャートが含まれており、スマート データ アダプタを使用した類を見ない最も簡単な構成が可能です。
-*   チャートは、Angular、Blazor、jQuery / JavaScript、React、UNO、UWP、WPF、Windows Forms、WebComponents、WinUI、Xamarin などのすべてのプラットフォームで最適化されています。すべてのプラットフォームで同じ API と機能をサポートします。
-*   当社の株価チャートとファイナンシャル チャートは、YahooFinance または Google Finance のようなエクスペリエンスに必要なすべてを 1 行のコードで提供します。
-*   Ignite UI for Angular は、Angular 開発者向けの Angular 上に構築されており、サードパーティの依存関係はありません。Angular 用に 100% 最適化されています。
-*   他社のパフォーマンスに対してテストします。当社は高速で大量のデータを処理できることを証明できます。大量のデータとリアルタイムのデータ ストリーミングをどのように処理するかをご自身で確認してください。
-*   24/5 対応しております。インフラジスティックスは、常にオンラインでグローバル サポートを提供しています。北米、アジア太平洋、中東、およびヨーロッパでは、いつでもご利用いただけます。
-*   チャートの他に、Angular には多くの UI コントロールもあります。アプリケーション構築のための完全な Angular ソリューションを提供します!
+- 65 を超える Angular チャート タイプと複合チャートが含まれており、スマート データ アダプタを使用した類を見ない最も簡単な構成が可能です。
+- チャートは、Angular、Blazor、jQuery / JavaScript、React、UNO、UWP、WPF、Windows Forms、WebComponents、WinUI、Xamarin などのすべてのプラットフォームで最適化されています。すべてのプラットフォームで同じ API と機能をサポートします。
+- 当社の株価チャートとファイナンシャル チャートは、YahooFinance または Google Finance のようなエクスペリエンスに必要なすべてを 1 行のコードで提供します。
+- Ignite UI for Angular は、Angular 開発者向けの Angular 上に構築されており、サードパーティの依存関係はありません。Angular 用に 100% 最適化されています。
+- 他社のパフォーマンスに対してテストします。当社は高速で大量のデータを処理できることを証明できます。大量のデータとリアルタイムのデータ ストリーミングをどのように処理するかをご自身で確認してください。
+- 24/5 対応しております。インフラジスティックスは、常にオンラインでグローバル サポートを提供しています。北米、アジア太平洋、中東、およびヨーロッパでは、いつでもご利用いただけます。
+- チャートの他に、Angular には多くの UI コントロールもあります。アプリケーション構築のための完全な Angular ソリューションを提供します!
 
 <!-- Angular -->
 
-*   Ignite UI for Angular は、Angular 開発者向けの Angular 上に構築されており、サードパーティの依存関係はありません。Angular 用に 100% 最適化されています。
-*   Sketch デザインからピクセル パーフェクトな Angular コントロールを生成する、UX デザイナー、ビジュアル デザイナー、開発者向けのコード プラットフォームに、世界初で唯一のエンドツーエンドの包括的なデザインを提供します。Indigo.Design を使用すると、Indigo Design System から Sketch で作成するすべてのものが Ignite UI for Angular コントロールと一致します。
+- Ignite UI for Angular は、Angular 開発者向けの Angular 上に構築されており、サードパーティの依存関係はありません。Angular 用に 100% 最適化されています。
+- Sketch デザインからピクセル パーフェクトな Angular コントロールを生成する、UX デザイナー、ビジュアル デザイナー、開発者向けのコード プラットフォームに、世界初で唯一のエンドツーエンドの包括的なデザインを提供します。Indigo.Design を使用すると、Indigo Design System から Sketch で作成するすべてのものが Ignite UI for Angular コントロールと一致します。
 
 <!-- end: Angular -->
 
@@ -352,7 +353,7 @@ alt="Angular チャート マーカー、ツールチップ、およびテンプ
 
 このトピックで言及されているすべてのチャート タイプは、次の API コンポーネントに実装されています:
 
-*   [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html)
-*   [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)
-*   [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html)
-*   [`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html)
+- [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html)
+- [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)
+- [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html)
+- [`IgxTreemapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html)

@@ -2,6 +2,7 @@
 title: Angular Map | Data Visualization Tools | Displaying Bing Imagery | Infragistics
 _description: Use Infragistics' Angular to display imagery from Microsoft Bing Maps. View Ignite UI for Angular map tutorials!
 _keywords: Angular map, bing maps, Ignite UI for Angular, Infragistics, imagery tile source, map background
+_license: commercial
 mentionedTypes: ["XamGeographicMap", "BingMapsMapImagery"]
 ---
 
@@ -19,7 +20,7 @@ The Angular [`IgxBingMapsMapImagery`]({environment:dvApiBaseUrl}/products/ignite
 
 <!-- `sample="/maps/geo-map/display-bing-imagery", height="500", alt="Angular Displaying Imagery from Bing Maps Example"` -->
 
-<img src="../images/general/BingMapsImagery.png" />
+\<img src="../images/general/BingMapsImagery.png"alt="Angular Bing Maps Imagery" />
 
 <div class="divider--half"></div>
 
@@ -75,6 +76,6 @@ The following table summarized properties of the [`IgxBingMapsMapImagery`]({envi
 
 ## API References
 
-*   [`BingMapsImageryStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_maps.bingmapsimagerystyle.html)
-*   [`IgxBingMapsMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxbingmapsmapimagery.html)
-*   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html)
+- [`BingMapsImageryStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_maps.bingmapsimagerystyle.html)
+- [`IgxBingMapsMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxbingmapsmapimagery.html)
+- [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html)

@@ -5,16 +5,19 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Global Themes
+
 <div class="highlight">The global theme allows you to quickly generate a theme that uses your custom color palette, schema, and elevations. The color palette, schema, and elevations will be propagated to all components that don't have custom themes created for them.</div>
 <div class="divider"></div>
 
 ## Overview
+
 If you've included the _`igniteui-angular.css`_ file in your application project, now is a good time to remove it. We are going to use our own _`my-app-theme.scss`_ file to generate a global theme for all components in our application.
 
 **Ignite UI for Angular** uses a global theme by default to theme the entire suite of components. You can, however, create themes scoped to components you have in your app, depending on your use case. For now, we will be including all of our themes in a single file.
-To generate a global theme we're going to be including two mixins `core` and `theme`. Both of those mixins accept a few arguments: 
+To generate a global theme we're going to be including two mixins `core` and `theme`. Both of those mixins accept a few arguments:
 
 ### Core mixin  
+
 <div class="divider--half"></div>
 
 | Name                      | Type    | Default | Description                                                               |
@@ -24,6 +27,7 @@ To generate a global theme we're going to be including two mixins `core` and `th
 
 
 ### Theme mixins
+
 <div class="divider--half"></div>
 
 | Name          | Type    | Default                  | Description                                                                                                  |
@@ -61,12 +65,13 @@ $my-color-palette: palette(
 @include theme($my-color-palette);
 ```
 
-Let's explain what the `core` and `theme` mixins do. The `core` mixin takes care of some configurations, like adding enhanced accessibility(e.g. colors suitable for color blind users) and printing styles for all components. The `theme` mixin includes each individual component style (bar the ones listed as excluded) and configures the palette, schema, elevations, and roundness that is not listed in the `$exclude` list of components. 
+Let's explain what the `core` and `theme` mixins do. The `core` mixin takes care of some configurations, like adding enhanced accessibility(e.g. colors suitable for color blind users) and printing styles for all components. The `theme` mixin includes each individual component style (bar the ones listed as excluded) and configures the palette, schema, elevations, and roundness that is not listed in the `$exclude` list of components.
 
 > [!IMPORTANT]
 > Including `core` before `theme` is essential. The `core` mixins provide all base definitions needed for the `theme` mixin to work correctly.
 
 ## Excluding Components
+
 <div class="divider--half"></div>
 
 The `theme` mixin allows you to provide a list of component names to be excluded from the global theme styles. For instance, if you want to completely remove all styles we include for the `igx-avatar` and `igx-badge` to reduce the amount of produced CSS or to supply your own custom styles, you can do so by passing the list of components like so:
@@ -98,11 +103,12 @@ $allowed: (igx-avatar, igx-badge);
 
 ## Light and Dark Themes
 
-We also provide *__light__* and *__dark__*  versions for our four themes - Material, Fluent, Indigo, Bootstrap. 
+We also provide _**light**_ and _**dark**_  versions for our four themes - Material, Fluent, Indigo, Bootstrap.
 
 To use any of the versions, you would simply need to pass it to our [theme]({environment:sassApiUrl}/themes#mixin-theme) mixin:
 
-*__Light__*
+_**Light**_
+
 ```scss
 @include core();
 @include typography(
@@ -114,7 +120,9 @@ To use any of the versions, you would simply need to pass it to our [theme]({env
     $palette: $light-material-palette,
 );
 ```
-*__Dark__*
+
+***Dark**_
+
 ```scss
 @include core();
 @include typography(
@@ -126,7 +134,9 @@ To use any of the versions, you would simply need to pass it to our [theme]({env
     $palette: $dark-material-palette,
 );
 ```
+
 ### Available Themes
+
 Ignite UI for Angular gives you the option to pick from a set of predefined themes.
 The table below shows all the built-in themes that you can use right away.
 
@@ -137,19 +147,20 @@ The table below shows all the built-in themes that you can use right away.
 | [**Fluent Light**](presets/fluent.md)                             | `$light-fluent-schema`             | $light-fluent-palette <br> $light-fluent-excel-palette <br> $light-fluent-word-palette |
 | [**Fluent Dark**](presets/fluent.md#fluent-dark-theme)            |  `$dark-fluent-schema`             | $dark-fluent-palette <br> $dark-fluent-excel-palette <br> $dark-fluent-word-palette    |
 | [**Bootstrap Light**](presets/bootstrap.md)                       | `$light-bootstrap-schema`          | $light-bootstrap-palette                                                               |
-| [**Bootstrap Dark**](presets/bootstrap.md#bootstrap-dark-theme)   |  `$dark-bootstrap-schema `         | $dark-bootstrap-palette                                                                |
+| [**Bootstrap Dark**](presets/bootstrap.md#bootstrap-dark-theme)   |  `$dark-bootstrap-schema`         | $dark-bootstrap-palette                                                                |
 | [**Indigo Light**](presets/indigo.md)                             | `$light-indigo-schema`             | $light-indigo-palette                                                                  |
-| [**Indigo Dark**](presets/indigo.md#indigo-dark-theme)            |   `$dark-indigo-schema `           | $dark-indigo-palette                                                                   |
+| [**Indigo Dark**](presets/indigo.md#indigo-dark-theme)            |   `$dark-indigo-schema`           | $dark-indigo-palette                                                                   |
 
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
 Learn how to create individual component themes:
 
-* [Component Themes](component-themes.md)
+- [Component Themes](component-themes.md)
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

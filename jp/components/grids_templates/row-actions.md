@@ -2,6 +2,7 @@
 title:  Angular Data Grid の行操作 - Ignite UI for Angular 
 _description: Ignite UI for Angular のグリッド コンポーネントは、ActionStrip を使用し、行/セルコンポーネントおよび行のピン固定に CRUD を使用する機能を提供します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular ActionStrip コンポーネント, Angular ActionStrip ディレクティブ, Angular ActionStrip コントロール
+_license: commercial
 _language: ja
 ---
 @@if (igxName === 'IgxGrid') {
@@ -31,7 +32,7 @@ Ignite UI for Angular の階層グリッド コンポーネントは、[ActionSt
 // app.module.ts
 
 ...
-import { IgxActionStripModule } from 'igniteui-angular';
+import { IgxActionStripModule } from 'igniteui-angular/action-strip';
 // import { IgxActionStripModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -49,6 +50,7 @@ import { IgxActionStripModule } from 'igniteui-angular';
 これらは `<igx-action-strip>` 内に追加され、デフォルトのインタラクションを提供するアクション ストリップを持つために必要です。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid [data]="data" [rowEditable]="true" [primaryKey]="'ID'">
     <igx-column *ngFor="let c of columns" [field]="c.field">
@@ -60,8 +62,10 @@ import { IgxActionStripModule } from 'igniteui-angular';
     </igx-action-strip>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid [data]="data" [rowEditable]="true" [primaryKey]="'ID'">
     <igx-column *ngFor="let c of columns" [field]="c.field">
@@ -73,8 +77,10 @@ import { IgxActionStripModule } from 'igniteui-angular';
     </igx-action-strip>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid [data]="data" [rowEditable]="true" [primaryKey]="'ID'">
     <igx-column *ngFor="let c of columns" [field]="c.field">
@@ -86,6 +92,7 @@ import { IgxActionStripModule } from 'igniteui-angular';
     </igx-action-strip>
 </igx-hierarchical-grid>
 ```
+
 }
 
 >[!NOTE]
@@ -110,21 +117,21 @@ import { IgxActionStripModule } from 'igniteui-angular';
 ```
 
 @@if (igxName === 'IgxGrid') {
-<code-view style="height: 600px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 600px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-action-strip/" >
 </code-view>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<code-view style="height: 600px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 600px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-action-strip/" >
 </code-view>
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
-<code-view style="height: 600px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 600px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-action-strip/" >
 </code-view>
 }
@@ -135,11 +142,11 @@ import { IgxActionStripModule } from 'igniteui-angular';
 ## API リファレンス
 
 アクション ストリップの API に関する詳細な情報は、以下のリンクのトピックを参照してください:
-* [`IgxActionStripComponent API`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html)
+- [`IgxActionStripComponent API`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html)
 
 アクション ストリップで使用できるその他のコンポーネントとディレクティブ:
 
-* [`IgxGridActionsBaseDirective `]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html)
-* [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html)
-* [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html)
-* [`IgxDividerDirective`]({environment:angularApiUrl}/classes/igxdividerdirective.html)
+- [`IgxGridActionsBaseDirective`]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html)
+- [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html)
+- [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html)
+- [`IgxDividerDirective`]({environment:angularApiUrl}/classes/igxdividerdirective.html)

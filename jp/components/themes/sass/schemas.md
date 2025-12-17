@@ -6,11 +6,13 @@ _language: ja
 ---
 
 # スキーマ
+
 <p class="highlight">スキーマはシンプルかつ宣言的にコンポーネント テーマで使用する可能性のあるすべてのプロパティをリストします。</p>
 
 <div class="divider--half"></div>
 
 ## 概要
+
 スキーマはレシピのようなものです。JSON 同様のシンプルな Sass マップでテーマが使用するすべてのプロパティを定義します。プロパティは、カラー、エレベーション レベル、丸みなどでテーマが使用するあらゆる項目が `schema` (スキーマ) として記述され、グローバルまたはコンポーネント テーマへ渡します。コンポーネント スキーマは既存コンポーネント スキーマを拡張し、そのプロパティをオーバーライドします。
 
 **スキーマは、コンポーネントのデフォルト テーマ プロパティを、CSS スタイル ルールまたは CSS 変数を複製しない方法で変更する場合に使用します。**
@@ -61,6 +63,7 @@ $light-avatar: (
 <div class="divider--half"></div>
 
 ## スキーマの拡張
+
 上記例からもわかるように、スキーマはシンプルなマップのためプロパティをオーバーライドして拡張できます。デフォルトの material avatar schema は、その他すべてのプロパティを手動でコピーせずに `background` を変更することもできます。`extend` 関数を使用して簡単に行うことができます。
 
 ```scss
@@ -72,22 +75,24 @@ $my-avatar-schema: extend($light-avatar, (
 これで `$my-avatar-schema` の値には `$_light-avatar` のすべてのプロパティが含まれますが、`background` の値は `limegreen` になります。
 
 ## 事前定義されたスキーマ
+
 テーマ プリセットで使用する事前定義されたライト スキーマとダーク スキーマを提供します。
 
 - ライト スキーマ
-    - `$light-material-schema`
-    - `$light-fluent-schema`
-    - `$light-bootstrap-schema`
-    - `$light-indigo-schema`
+  - `$light-material-schema`
+  - `$light-fluent-schema`
+  - `$light-bootstrap-schema`
+  - `$light-indigo-schema`
 - ダーク スキーマ
-    - `$dark-material-schema`
-    - `$dark-fluent-schema`
-    - `$dark-bootstrap-schema`
-    - `$dark-indigo-schema`
+  - `$dark-material-schema`
+  - `$dark-fluent-schema`
+  - `$dark-bootstrap-schema`
+  - `$dark-indigo-schema`
 
 コンポーネントのテーマを作成するために、ライト パレットとダーク パレットに応じてライト スキーマとダーク スキーマを使用します。たとえば、`$light-material-schema` を `$light-material-palette` と一緒に使用すると、すべてのライト マテリアル コンポーネントのテーマを作成するのに役立ちます。逆もまた同様です。`$dark-material-schema` を `$dark-material-palette` と一緒に使用すると、ダーク マテリアル コンポーネントのテーマが得られます。
 
 ## スキーマの使用
+
 以上がコンポーネント スキーマの概要と作成方法です。次に Sass プロジェクトのスキーマの使用方法について説明します。
 
 各コンポーネント スキーマはすべてのコンポーネントのグローバル スキーマとバンドルされます。したがって、`$light-avatar` スキーマは `$material-avatar` 変数に保存され、その後グローバル `$light-material-schema` で使用されます。`$light-material-schema` マップには、すべてのコンポーネント名がキーとして含まれ、対応するスキーマが値として含まれています。`$light-material-schema` は以下のようになります。
@@ -155,14 +160,16 @@ $indigo-avatar: map.get($light-indigo-schema, avatar);
 内部でスキーマを使用してバリエーションを作成し、結果として Material、Bootstrap、Fluent、および Indigo のテーマがあらかじめバンドルされています。
 
 ## API の概要
-* [Light コンポーネント スキーマ]({environment:sassApiUrl}/schemas#variable-light-material-schema)
-* [Dark コンポーネント スキーマ]({environment:sassApiUrl}/schemas#variable-dark-material-schema)
-* [グローバル テーマ]({environment:sassApiUrl}/themes#mixin-theme)
-* [Avatar テーマ]({environment:sassApiUrl}/themes#function-avatar-theme)
+
+- [Light コンポーネント スキーマ]({environment:sassApiUrl}/schemas#variable-light-material-schema)
+- [Dark コンポーネント スキーマ]({environment:sassApiUrl}/schemas#variable-dark-material-schema)
+- [グローバル テーマ]({environment:sassApiUrl}/themes#mixin-theme)
+- [Avatar テーマ]({environment:sassApiUrl}/themes#function-avatar-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

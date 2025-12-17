@@ -5,11 +5,13 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Schemas
+
 <p class="highlight">Schemas are a simple, declarative way to list all properties a component theme uses.</p>
 
 <div class="divider--half"></div>
 
 ## Overview
+
 Schemas are like recipes. They are simple Sass maps, similar to JSON that allow us to define all properties a theme might use. Those properties can be colors, elevation levels, roundness, etc. Anything a theme consumes can be described as a `schema`, then passed to the global or component theme. A component schema can extend an existing component schema and override its properties.
 
 **Schemas should be used when you want to change the default theme properties of a component in a way that will not result in duplicating CSS style rules or CSS variables**.
@@ -53,13 +55,14 @@ $light-avatar: (
 
 As you can see from the example above, the component schema defines the properties the [Avatar Theme]({environment:sassApiUrl}/themes#function-avatar-theme) consumes. It just prescribes the colors the avatar should use, without referencing a concrete color palette map.
 
-Let's take the `background` property for example. It tells the avatar theme what the default background should be. 
+Let's take the `background` property for example. It tells the avatar theme what the default background should be.
 
-*The `background` can be assigned any value, that is, a value that can be assigned to the CSS `background-color` property.* You can also assign a map to `background`, like in the sample above. When you assign a map to the `background` property, the map should contain functions as the key names (e.g. `color`), and arguments for the functions as values for said keys. We do this to be able to resolve the values later on, when the avatar theme is being built. See, because we don't know the palette a user might pass to the avatar theme, we should be able to resolve it later on, only when the palette is known.
+_The `background` can be assigned any value, that is, a value that can be assigned to the CSS `background-color` property._ You can also assign a map to `background`, like in the sample above. When you assign a map to the `background` property, the map should contain functions as the key names (e.g. `color`), and arguments for the functions as values for said keys. We do this to be able to resolve the values later on, when the avatar theme is being built. See, because we don't know the palette a user might pass to the avatar theme, we should be able to resolve it later on, only when the palette is known.
 
 <div class="divider--half"></div>
 
 ## Extending Schemas
+
 As you saw from the example above. Schemas are simple maps and as such can be extended by overriding some of their properties. You might want to _extend_ the material avatar schema by only changing its `background` property, without having to copy all other properties manually. This is easily done using the `extend` function we provide.
 
 ```scss
@@ -71,23 +74,25 @@ $my-avatar-schema: extend($light-avatar, (
 Now the value of `$my-avatar-schema` will contain all properties of `$_light-avatar`, but the value for `background` will have be `limegreen`.
 
 ## Predefined Schemas
+
 We provide predefined light and dark schemas that we use in our theme presets:
 
 - Light Schemas
-    - `$light-material-schema`
-    - `$light-fluent-schema`
-    - `$light-bootstrap-schema`
-    - `$light-indigo-schema`
+  - `$light-material-schema`
+  - `$light-fluent-schema`
+  - `$light-bootstrap-schema`
+  - `$light-indigo-schema`
 - Dark Schemas
-    - `$dark-material-schema`
-    - `$dark-fluent-schema`
-    - `$dark-bootstrap-schema`
-    - `$dark-indigo-schema`
+  - `$dark-material-schema`
+  - `$dark-fluent-schema`
+  - `$dark-bootstrap-schema`
+  - `$dark-indigo-schema`
 
 We use the light and dark schemas accordingly with the light and dark palettes to create the component themes. For example, using the `$light-material-schema` along with the `$light-material-palette` will help us create all of the light material component themes. And vice versa - using the `$dark-material-schema` along with the `$dark-material-palette` will give us the dark material component themes.
 
 ## Consuming Schemas
-Until now we have shown what a component schema is and how you can create one, but we have not talked about how you can use schemas in your Sass project. 
+
+Until now we have shown what a component schema is and how you can create one, but we have not talked about how you can use schemas in your Sass project.
 
 Individual component schemas are bundled up in a global schema map for all components we have. So the `$light-avatar` schema is stored in the `$material-avatar` variable, which is then used in the global `$light-material-schema`. The `$light-material-schema` map contains all component names as keys, and their corresponding schemas as values. The `$light-material-schema` looks something like this:
 
@@ -154,14 +159,17 @@ Although schemas require a deeper knowledge of our theming library compared to t
 We use schemas internally to create variations that result in different pre-bundled themes for Material, Bootstrap, Fluent, and Indigo.
 
 ## API Overview
-* [Light Components Schema]({environment:sassApiUrl}/schemas#variable-light-material-schema)
-* [Dark Components Schema]({environment:sassApiUrl}/schemas#variable-dark-material-schema)
-* [Global Theme]({environment:sassApiUrl}/themes#mixin-theme)
-* [Avatar Theme]({environment:sassApiUrl}/themes#function-avatar-theme)
+
+- [Light Components Schema]({environment:sassApiUrl}/schemas#variable-light-material-schema)
+- [Dark Components Schema]({environment:sassApiUrl}/schemas#variable-dark-material-schema)
+- [Global Theme]({environment:sassApiUrl}/themes#mixin-theme)
+- [Avatar Theme]({environment:sassApiUrl}/themes#function-avatar-theme)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

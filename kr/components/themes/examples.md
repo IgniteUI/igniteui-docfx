@@ -20,7 +20,7 @@ The **Ignite UI for Angular Theming** provides you the ability to customize them
 
 ### Default Theme
 
-There is a **default theme** that styles all the components in the **Ignite UI for Angular controls** and the first thing that we are going to do is to set it in the `styles.scss` file:
+There is a *_Default theme_* that styles all the components in the **Ignite UI for Angular controls** and the first thing that we are going to do is to set it in the `styles.scss` file:
 
 ```scss
 // import first the IgniteUI themes library
@@ -43,7 +43,7 @@ The result from the above code snippet looks like this:
 
 <div class="divider--half"></div>
 
-In case you have other preferences for the appearance of the components or the **default theme** doesn't match the interior of your application, you can use the  **Ignite UI for Angular Theming**, which is much easier, fun and efficient way for styling, than writing a huge amount of CSS.
+In case you have other preferences for the appearance of the components or the *_Default theme_* doesn't match the interior of your application, you can use the  **Ignite UI for Angular Theming**, which is much easier, fun and efficient way for styling, than writing a huge amount of CSS.
 
 ### Get Started
 

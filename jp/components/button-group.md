@@ -1,7 +1,8 @@
 ---
-title: Button Group コンポーネント
+title: Button Group コンポーネント - MITライセンス
 _description: ボタン グループの機能、さらに水平/垂直の配置、単一/複数の選択、および切り替え機能を提供します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ,  Angular ボタン グループ コンポーネント, Angular Button Group コントロール, Angular Button コンポーネント, Angular Button コントロール
+_license: MIT
 _language: ja
 ---
 
@@ -11,8 +12,8 @@ _language: ja
 
 ## Angular Button Group の例
 
-<code-view style="height: 85px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 85px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-1/" alt="Angular Button Group の例">
 </code-view>
 
@@ -34,7 +35,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 ...
-import { IgxButtonGroupModule } from 'igniteui-angular';
+import { IgxButtonGroupModule } from 'igniteui-angular/button-group';
 // import { IgxButtonGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -51,7 +52,8 @@ export class AppModule {}
 // home.component.ts
 
 ...
-import { IGX_BUTTON_GROUP_DIRECTIVES, IgxIconComponent } from 'igniteui-angular';
+import { IGX_BUTTON_GROUP_DIRECTIVES } from 'igniteui-angular/button-group';
+import { IgxIconComponent } from 'igniteui-angular/icon';
 // import { IGX_BUTTON_GROUP_DIRECTIVES, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -114,7 +116,7 @@ Ignite UI for Angular Button Group モジュールまたはディレクティブ
 
 ```typescript
 //sample.component.ts
-import { ButtonGroupAlignment } from 'igniteui-angular';
+import { ButtonGroupAlignment } from 'igniteui-angular/button-group';
 // import { ButtonGroupAlignment } from '@infragistics/igniteui-angular'; for licensed package
 
 ...
@@ -132,8 +134,8 @@ public alignment = ButtonGroupAlignment.vertical;
 </igx-buttongroup>
 ```
 
-<code-view style="height: 220px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 220px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-2/" >
 </code-view>
 
@@ -149,8 +151,8 @@ public alignment = ButtonGroupAlignment.vertical;
 
 以下のサンプルは、公開された `igx-buttongroup` 選択モードを示しています。
 
-<code-view style="height: 170px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 170px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-4/" >
 </code-view>
 
@@ -170,8 +172,8 @@ igx-buttongroup {
 <igx-buttongroup></igx-buttongroup>
 ```
 
-<code-view style="height: 80px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 80px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-5/" >
 </code-view>
 
@@ -242,12 +244,165 @@ public ngOnInit() {
 <igx-buttongroup [selectionMode]="'multi'" [values]="bordersButtons"></igx-buttongroup>
 ```
 
-<code-view style="height: 90px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 90px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-sample-3/" >
 </code-view>
 
 ## スタイル設定
+
+### Button Group テーマのプロパティ マップ
+
+`$item-background` プロパティの値を設定すると、下の表にリストされている関連するすべての依存プロパティが自動的に更新され、視覚的な一貫性が維持されます。次の表は、プライマリ プロパティをカスタマイズしたときに影響を受けるプロパティを示しています。
+
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>プライマリ プロパティ</th>
+      <th>依存プロパティ</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+
+  <!-- group for item-background -->
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$item-background</strong></summary></details>
+      </td>
+      <td>$item-hover-background</td>
+      <td>項目のホバー時の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-selected-background</td>
+      <td>選択項目の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-focused-background</td>
+      <td>フォーカス時の項目の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-background-color</td>
+      <td>無効な項目の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-border-color</td>
+      <td>項目の境界線の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-text-color</td>
+      <td>項目のテキストの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$idle-shadow-color</td>
+      <td>項目のアイドル シャドウの色</td>
+    </tr>
+  </tbody>
+
+  <!-- group for item-hover-background -->
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$item-hover-background</strong></summary></details>
+      </td>
+      <td>$item-selected-hover-background</td>
+      <td>選択された項目のホバー時の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-focused-hover-background</td>
+      <td>フォーカス + ホバー時の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-hover-text-color</td>
+      <td>ホバー時の項目のテキストの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-hover-icon-color</td>
+      <td>ホバー時の項目のアイコンの色</td>
+    </tr>
+  </tbody>
+
+  <!-- group for item-selected-background -->
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$item-selected-background</strong></summary></details>
+      </td>
+      <td>$item-selected-focus-background</td>
+      <td>フォーカス時の選択項目の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-selected-background</td>
+      <td>無効な選択項目の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-selected-text-color</td>
+      <td>選択項目のテキストの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-selected-icon-color</td>
+      <td>選択項目のアイコンの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-selected-hover-text-color</td>
+      <td>ホバー時の選択項目のテキストの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-selected-hover-icon-color</td>
+      <td>ホバー時の選択項目のアイコンの色</td>
+    </tr>
+  </tbody>
+
+  <!-- group for item-border-color -->
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$item-border-color</strong></summary></details>
+      </td>
+      <td>$item-hover-border-color</td>
+      <td>ホバー時の項目の境界線の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-focused-border-color</td>
+      <td>フォーカス時の項目の境界線の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-selected-border-color</td>
+      <td>選択項目の境界線の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-selected-hover-border-color</td>
+      <td>ホバー時の選択項目の境界線の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-disabled-border</td>
+      <td>無効な項目の境界線の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-selected-border-color</td>
+      <td>無効な選択項目の境界線の色</td>
+    </tr>
+  </tbody>
+</table>
 
 ボタン グループ のスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
@@ -258,7 +413,7 @@ public ngOnInit() {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`button-group-theme`]({environment:sassApiUrl}/themes#function-button-group-theme) を拡張し、`$item-background` のみを指定して新しいテーマを作成します。これにより、インタラクション状態の色、前景色、境界線の色が自動的に算出されます。必要に応じて任意のテーマ パラメーターをオーバーライドすることも可能です。
+最もシンプルな方法として、[`button-group-theme`]({environment:sassApiUrl}/themes#function-button-group-theme) を拡張し、`$item-background` のみを指定して新しいテーマを作成します。これにより、インタラクション状態の色、前景の色、境界線の色が自動的に算出されます。必要に応じて任意のテーマ パラメーターをオーバーライドすることも可能です。
 
 ```scss
 $custom-button-group: button-group-theme(
@@ -276,27 +431,65 @@ $custom-button-group: button-group-theme(
 
 ### デモ
 
-
-<code-view style="height: 200px" 
+<code-view style="height: 200px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/button-group-style/" >
 </code-view>
+
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して `button-group` をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-button-group`、`dark-button-group`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[button-group-theme]({environment:sassApiUrl}/themes#function-button-group-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-button-group
+class="!light-button-group ![--item-background:#7B9E89]"
+>
+...
+</igx-button-group>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、button group は次のようになります:
+
+<div class="sample-container loading" style="height:100px">
+    <iframe id="button-group-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/data-entries/button-group-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ## API リファレンス
 
 <div class="divider--half"></div>
 
-* [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
-* [IgxButtonGroup スタイル]({environment:sassApiUrl}/themes#function-button-group-theme)
-* [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxButton スタイル]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
+- [IgxButtonGroup スタイル]({environment:sassApiUrl}/themes#function-button-group-theme)
+- [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+- [IgxButton スタイル]({environment:sassApiUrl}/themes#function-button-theme)
 
 ## テーマの依存関係
 
-* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
-* [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ## その他のリソース
 
@@ -304,5 +497,5 @@ $custom-button-group: button-group-theme(
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

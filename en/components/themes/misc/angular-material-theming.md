@@ -5,6 +5,7 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Angular Material Theming
+
 <p class="highlight">
 
 The Ignite UI for Angular theming engine makes it easy to be used together with external components imported from other theming libraries like the [`Angular Material`](https://material.angular.io/) library.</p>
@@ -12,7 +13,7 @@ The Ignite UI for Angular theming engine makes it easy to be used together with 
 
 ## Ignite UI and Angular Material Overview
 
-Angular Material is a UI component library for mobile and desktop Angular web applications. It includes several prebuilt themes and a great number of components that are based on the [`Material Design specification`](https://material.io/components). 
+Angular Material is a UI component library for mobile and desktop Angular web applications. It includes several prebuilt themes and a great number of components that are based on the [`Material Design specification`](https://material.io/components).
 
 The Ignite UI for Angular is a complete set of Material-based UI Widgets, Components & Sketch UI kits and supporting directives for Angular that enables developers to build modern high-performance apps. Our theming engine is easy to use and allows theming granularity on different levels from a single component, multiple components, or the entire suite. Furthermore, it can be used to style components from other theming libraries with very little effort.
 
@@ -20,8 +21,8 @@ The following article demonstrates how to use both Ignite UI and Angular Materia
 
 ## Angular Material Theming Example
 
-<code-view style="height: 1100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 1100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/theming/angular-sample/" >
 </code-view>
 
@@ -31,9 +32,9 @@ The following article demonstrates how to use both Ignite UI and Angular Materia
 
 ### How to install Angular Material
 
-If you are using Angular CLI and have an existing Angular project, you can add Angular Material with the command below: 
+If you are using Angular CLI and have an existing Angular project, you can add Angular Material with the command below:
 
-```cmd 
+```cmd
 ng add @angular/material
 ```
 
@@ -41,7 +42,7 @@ Then, you will have to choose one of the prebuilt themes and whether to set up g
 
 You can find more information about using the Angular Material library at their [`official documentation`](https://material.angular.io/guide/getting-started).
 
-### How to install Ignite UI for Angular 
+### How to install Ignite UI for Angular
 
 To install the Ignite UI for Angular package along with all of its dependencies, font imports, and styles references, run the following command in your project:
 
@@ -49,11 +50,11 @@ To install the Ignite UI for Angular package along with all of its dependencies,
 ng add igniteui-angular
 ```
 
-Then, you can use the Ignite UI components by importing their respective modules in your *app.module.ts* file:
+Then, you can use the Ignite UI components by importing their respective modules in your _app.module.ts_ file:
 
 ```ts
 // manually addition of the Igx Avatar component 
-import { IgxAvatarModule } from 'igniteui-angular';
+import { IgxAvatarModule } from 'igniteui-angular/avatar';
 // import { IgxAvatarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -71,21 +72,21 @@ Follow our [`Getting Started`](../../general/getting-started.md) topic for a com
 
 Let's see how our demo sample is done. It is a mixture of Ignite UI and Angular Material components, styled to fit nicely in one application. The navigation in our example is created using the material [`mat-toolbar`](https://material.angular.io/components/toolbar/overview) together with [`igx-buttons`]({environment:angularApiUrl}/classes/igxbuttondirective.html) and [`igx-avatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html). The [`menu`](https://material.angular.io/components/menu/overview) under the Campaigns button is also taken from the Angular Material library. Below the nav, we are using the [`igx-card`]({environment:angularApiUrl}/classes/igxcardcomponent.html) component to display some statistics. Within the cards, we have placed multiple items - [`igx-avatars`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) and [`igx-icons`]({environment:angularApiUrl}/classes/igxiconcomponent.html) as well as material [`buttons`](https://material.angular.io/components/button/overview).
 
-<img src="../../../images/material-nav.png" width="100%">
+<img src="../../../images/material-nav.png" alt="Angular Material Components Navigation" width="100%">
 
 Clicking on the `More` buttons, you will see the [`igx-dialog`]({environment:angularApiUrl}/classes/igxdialogcomponent.html):
 
-<img src="../../../images/igniteui-dialog.png" width="100%">
+<img src="../../../images/igniteui-dialog.png" alt="Ignite UI for Angular Dialog" width="100%">
 
 Next, we have added an [`igx-expansion-panel`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) showing information about some credit cards. Inside its content, there are [`mat-sliders`](https://material.angular.io/components/slider/overview), an [`igx-divider`]({environment:angularApiUrl}/classes/igxdividerdirective.html) and a [`mat-stepper`](https://material.angular.io/components/stepper/overview) with [`mat-form-fields`](https://material.angular.io/components/form-field/overview).
 
-<img src="../../../images/igx-expansion-panel.png" width="100%">
+<img src="../../../images/igx-expansion-panel.png" alt="Ignite UI for Angular Expansion Panel" width="100%">
 
 Finally, we inserted an Ignite UI for Angular [`icon button`]({environment:angularApiUrl}/classes/igxiconbuttondirective.html) in the top right corner, that changes the theme of the whole app:  
 
-<img src="../../../images/material-dark.png" width="100%">
+<img src="../../../images/material-dark.png" alt="Dark Variant Theme" width="100%">
 
-## Styling Angular Components 
+## Styling Angular Components
 
 To get started with styling components using the Ignite UI theming engine, create an scss file named of your choice that would be the base file for your global theme. We will call this file `_variables.scss`. Next, we need to import the Ignite UI and Angular Material `index` files:
 
@@ -97,7 +98,7 @@ To get started with styling components using the Ignite UI theming engine, creat
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 ### Color Palettes
 
@@ -116,7 +117,7 @@ $igx-light-palette: palette(
 );
 ```
 
-Unlike Ignite UI palettes, Angular Material color palette maps include shades for only one color and their corresponding contrast colors. For example, we can see the `$mat-purple` palette: 
+Unlike Ignite UI palettes, Angular Material color palette maps include shades for only one color and their corresponding contrast colors. For example, we can see the `$mat-purple` palette:
 
 ```scss
 $light-primary-text: white;
@@ -138,7 +139,7 @@ $mat-purple: (
 
 ### Generating Theme Palettes
 
-To define a theme palette, we will have to use the material `define-palette` function which generates a map of hues to colors. In our sample, we want to style Angular Material components with Ignite UI theme therefore we need to transform our `$light-material-palette` according to their structure. 
+To define a theme palette, we will have to use the material `define-palette` function which generates a map of hues to colors. In our sample, we want to style Angular Material components with Ignite UI theme therefore we need to transform our `$light-material-palette` according to their structure.
 
 To achieve this, we are going to create a Sass function with parameters for `$color`, `$saturations` and `$palette` that returns a map of all color variants followed by the contrast colors. The saturations we are using follow the [`Material Design color system`](https://material.io/design/color/the-color-system.html).
 
@@ -199,7 +200,7 @@ $custom-mat-light-theme: mat.define-light-theme((
 
 #### Dark Theme Palette
 
-Following the previous approach, we are going to create material palettes for the dark mode. This time, we are also going to define a custom `igx-palette`: 
+Following the previous approach, we are going to create material palettes for the dark mode. This time, we are also going to define a custom `igx-palette`:
 
 ```scss
 // Custom palette
@@ -234,7 +235,7 @@ In order to switch between `light` and `dark` mode, we are adding a custom `dark
 
 Ignite UI for Angular comes with predefined themes inspired by the [Material Design](https://material.io/design). To use them, first, you have to include our `core` mixin and then our built-in theme mixin - [theme]({environment:sassApiUrl}/themes#mixin-theme). We will also make use of our predefined material palettes - [$light-material-palette]({environment:sassApiUrl}/palettes#variable-light-material-palette) and [$dark-material-palette]({environment:sassApiUrl}/palettes#variable-dark-material-palette).
 
-For the Angular Material components, we also need to include their `core` mixin and then the `all-component-themes` mixin with the aforementioned custom material themes. 
+For the Angular Material components, we also need to include their `core` mixin and then the `all-component-themes` mixin with the aforementioned custom material themes.
 
 ```scss
 // Make sure you always include the core mixin first
@@ -297,7 +298,7 @@ Once we are done configuring color palettes and themes, we can make some additio
 
 #### Dark Mode
 
-For our dark variant, we are going to apply the same CSS styles but using the `$custom-dark-palette`. In addition, we will update some of the colors of the `mat-stepper` component: 
+For our dark variant, we are going to apply the same CSS styles but using the `$custom-dark-palette`. In addition, we will update some of the colors of the `mat-stepper` component:
 
 ```scss
 :host {
@@ -359,7 +360,7 @@ Then, add a CSS class to your navbar component following the pattern "bg - color
 
 ### Angular Components Typography
 
-Ignite UI for Angular exposes four default type scales for each of its themes, which can be used inside the [`typography`]({environment:sassApiUrl}/typography#mixin-typography) mixin to define the global typography styles of an application. In our example, we are going to apply the material predifined `typeface` and `type-scale` but you can create custom ones if you wish. 
+Ignite UI for Angular exposes four default type scales for each of its themes, which can be used inside the [`typography`]({environment:sassApiUrl}/typography#mixin-typography) mixin to define the global typography styles of an application. In our example, we are going to apply the material predifined `typeface` and `type-scale` but you can create custom ones if you wish.
 
 ```scss
 :host {
@@ -367,7 +368,7 @@ Ignite UI for Angular exposes four default type scales for each of its themes, w
 }
 ```
 
-To customize the Angular Material typography, we need to use their `define-typography-config` function. We will override their `$font-family` with the Ignite UI `$material-typeface` and their `$button` styles as follows: 
+To customize the Angular Material typography, we need to use their `define-typography-config` function. We will override their `$font-family` with the Ignite UI `$material-typeface` and their `$button` styles as follows:
 
 ```scss
 $custom-typography: mat.define-typography-config(
@@ -391,29 +392,32 @@ $custom-mat-light-theme: mat.define-light-theme((
 Check Angular Material [`Typography documentation`](https://material.angular.io/guide/typography) for more detailed information.  
 
 ## API References
+
 <div class="divider--half"></div>
 
-* [Light Material Palette]({environment:sassApiUrl}/palettes#variable-light-material-palette)
-* [Dark Material Palette]({environment:sassApiUrl}/palettes#variable-dark-material-palette)
-* [Light Material Theme]({environment:sassApiUrl}/themes#mixin-light-theme)
-* [Dark Material Theme]({environment:sassApiUrl}/themes#mixin-dark-theme)
-* [Palette Function]({environment:sassApiUrl}/palettes#function-palette)
-* [Typography Mixin]({environment:sassApiUrl}/typography#mixin-typography)
+- [Light Material Palette]({environment:sassApiUrl}/palettes#variable-light-material-palette)
+- [Dark Material Palette]({environment:sassApiUrl}/palettes#variable-dark-material-palette)
+- [Light Material Theme]({environment:sassApiUrl}/themes#mixin-light-theme)
+- [Dark Material Theme]({environment:sassApiUrl}/themes#mixin-dark-theme)
+- [Palette Function]({environment:sassApiUrl}/palettes#function-palette)
+- [Typography Mixin]({environment:sassApiUrl}/typography#mixin-typography)
 
-Related topics: 
+Related topics:
 
-* [Palettes](../sass/palettes.md)
-* [Component Themes](../sass/component-themes.md)
-* [Typography](../sass/typography.md)
-* [Avatar Component](../../avatar.md)
-* [Button Component](../../button.md)
-* [Dialog Component](../../dialog.md)
-* [Icon Component](../../icon.md)
-* [Expansion Panel Component](../../expansion-panel.md)
+- [Palettes](../sass/palettes.md)
+- [Component Themes](../sass/component-themes.md)
+- [Typography](../sass/typography.md)
+- [Avatar Component](../../avatar.md)
+- [Button Component](../../button.md)
+- [Dialog Component](../../dialog.md)
+- [Icon Component](../../icon.md)
+- [Expansion Panel Component](../../expansion-panel.md)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

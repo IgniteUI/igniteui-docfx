@@ -2,6 +2,7 @@
 title: Angular マップ | データ可視化ツール | ESRI 画像の表示 | インフラジスティックス
 _description: インフラジスティックスの Angular を使用して ESRI Maps からの画像を表示します。Ignite UI for Angular マップ チュートリアルを是非お試しください!
 _keywords: Angular map, ESRI, Ignite UI for Angular, Infragistics, imagery tile source, map background, Angular マップ, ESRI, インフラジスティックス, 画像タイル ソース, マップ背景
+_license: commercial
 mentionedTypes: ["XamGeographicMap"]
 _language: ja
 ---
@@ -64,5 +65,5 @@ this.geoMap.backgroundContent = tileSource;
 
 ## API リファレンス
 
-*   [`IgxArcGISOnlineMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxarcgisonlinemapimagery.html)
-*   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html)
+- [`IgxArcGISOnlineMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxarcgisonlinemapimagery.html)
+- [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html)

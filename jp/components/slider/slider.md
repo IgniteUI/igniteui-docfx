@@ -2,16 +2,18 @@
 title: Angular Slider |  Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular の Angular Slider でつまみラックを使用して、特定の範囲で選択を構成する方法を紹介します。
 _keywords: angular slider, angular sliderコンポーネント, angular range slider コンポーネント, angular range input コンポーネント, angular ui コンポーネント, igniteui for angular, インフラジスティックス
+_license: MIT
 _language: ja
 ---
 
 # Angular Slider (スライダー) コンポーネントの概要
+
 <p class="highlight">Ignite UI for Angular Slider は、つまみをトラックで移動して指定した範囲内で値を選択できるフォーム コンポーネントです。トラックは連続またはステップとして定義でき、スライダーは単一値または範囲 (下限値と上限値) スライダーのタイプを選択できるように構成できます。</p>
 
 ## Angular Slider の例
 
-<code-view style="height: 250px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 250px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-1/" alt="Angular Slider の例">
 </code-view>
 
@@ -36,7 +38,7 @@ Ignite UI for Angular については、「[はじめに](../general/getting-sta
 // app.module.ts
 
 import { HammerModule } from '@angular/platform-browser';
-import { IgxSliderModule } from 'igniteui-angular';
+import { IgxSliderModule } from 'igniteui-angular/slider';
 // import { IgxSliderModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -53,7 +55,7 @@ export class AppModule {}
 // home.component.ts
 
 import { FormsModule } from '@angular/forms';
-import { IGX_SLIDER_DIRECTIVES } from 'igniteui-angular';
+import { IGX_SLIDER_DIRECTIVES } from 'igniteui-angular/slider';
 // import { IGX_SLIDER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -92,6 +94,7 @@ Ignite UI for Angular Slider モジュールまたはディレクティブをイ
 ## Angular Slider の使用
 
 ### 不連続スライダー
+
 デフォルトで Slider コンポーネントは不連続タイプに設定されています。不連続スライダーで現在値は数値ラベル (バブル) で可視化されます。バブルはスライダーのつまみにカーソルを合わせると表示されます。
 定義済みステップを持つ不連続スライダーを使用すると、有意な値のみを選択可能にすることができます。
 
@@ -112,7 +115,8 @@ Angular [`ngModel`](https://angular.io/guide/built-in-directives#ngModel) を使
 ```typescript
 // sample.component.ts 
 import { Component, ViewChild } from '@angular/core';
-import { IgxInputDirective, IgxSliderComponent } from 'igniteui-angular';
+import { IgxInputDirective } from 'igniteui-angular/input-group';
+import { IgxSliderComponent } from 'igniteui-angular/slider';
 // import { IgxInputDirective, IgxSliderComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -132,14 +136,15 @@ export class SampleComponent {
 2 つのコンポーネント間の双方向データ バインディングが表示されます。
 
 
-<code-view style="height: 160px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 160px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-3/" >
 </code-view>
 
 
 ### 連続スライダー
-最初に、[`continuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#continuous) 入力を true に設定し、スライダー タイプを指定します。次に、[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minValue) および [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxValue) プロパティを設定し、最小値および最大値を定義します。 
+
+最初に、[`continuous`]({environment:angularApiUrl}/classes/igxslidercomponent.html#continuous) 入力を true に設定し、スライダー タイプを指定します。次に、[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minValue) および [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxValue) プロパティを設定し、最小値および最大値を定義します。
 
 > [!NOTE]
 > 連続スライダーには、トラック上にステップ インジケーターがなく、操作中に表示されるつまみラベルがありません。
@@ -169,13 +174,14 @@ public volume = 20;
 サンプルの構成後、スライダーのつまみをドラッグするとラベルを更新しますが、スライダー値は指定した最小値および最大値の間に制限されます。
 
 
-<code-view style="height: 140px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 140px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-2/" >
 </code-view>
 
 
 ### 範囲スライダー
+
 最初に、スライダーの [`type`]({environment:angularApiUrl}/classes/igxslidercomponent.html#type) を [`RANGE`]({environment:angularApiUrl}/enums/slidertype.html#range) に設定します。次に、スライダー値を `lower` と `upper` 値のプロパティを持つオブジェクトにバインドします。
 
 ```html
@@ -205,7 +211,7 @@ public volume = 20;
 ```typescript
 // sample.component.ts
 import { Component } from '@angular/core';
-import { IgxSliderType } from 'igniteui-angular';
+import { IgxSliderType } from 'igniteui-angular/slider';
 // import { IgxSliderType } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -225,8 +231,8 @@ export class SampleComponent {
 ```
 
 
-<code-view style="height: 200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-4/" >
 </code-view>
 
@@ -234,7 +240,7 @@ export class SampleComponent {
 > RANGE タイプのスライダーを使用する場合、`ngModel` へのバインディングはスライダーからモデルを更新する方向でのみ動作します。両方の値に双方向バインディングを使用するには、`lowerValue` と `upperValue` バインディングを利用できます。
 
 
-最大値および最小値に近い値が適切でない場合があります。[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minValue) と [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxValue) の設定以外に、ユーザー選択を更に制限するための範囲も設定できます。 
+最大値および最小値に近い値が適切でない場合があります。[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minValue) と [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxValue) の設定以外に、ユーザー選択を更に制限するための範囲も設定できます。
 これは、[`lowerBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerBound) および [`upperBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperBound) プロパティで設定します。この設定により、0 ～ 100 および 900 ～ 1000 の範囲でつまみを移動できなくなります。
 
 ```html
@@ -252,13 +258,14 @@ export class SampleComponent {
 ```
 
 
-<code-view style="height: 160px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 160px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-5/" >
 </code-view>
 
 
 ### ラベル モード
+
 ここまでで目盛りでのみ数値を表示しましたが、基本的な値の配列を使用することで、情報を提示するために使用できる別の方法があります。
 >[!NOTE]
 > 初期値の配列には少なくとも 2 つの値を含める必要があり、含めない場合は `labelsView` が有効になりません。
@@ -266,7 +273,7 @@ export class SampleComponent {
 このルールに対応する定義ができたら、`labels` 入力プロパティに渡す準備ができました。これは、データを`トラック`全体に均等に分散させることによって処理します。ラベル値は、コレクション内で定義したすべての初期値を表します。それらは、[lowerLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerLabel) または [upperLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperLabel) のいずれかを要求することによって、API を通じていつでもアクセスできます。
 
 >[!NOTE]
-> [`labelsView`]({environment:angularApiUrl}/classes/igxslidercomponent.html#labelsView) が有効になっているときは、[`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxValue)、[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minValue)、[`step`]({environment:angularApiUrl}/classes/igxslidercomponent.html#step) の入力が制御されることに注意してください。 
+> [`labelsView`]({environment:angularApiUrl}/classes/igxslidercomponent.html#labelsView) が有効になっているときは、[`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxValue)、[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minValue)、[`step`]({environment:angularApiUrl}/classes/igxslidercomponent.html#step) の入力が制御されることに注意してください。
 
 もう 1 つの重要な要素は、`labelsView` が有効になっているときに `slider` が更新プロセスを処理する方法です。
 これは単にコレクションの`インデックス`で動作します。それぞれ、`value`、`lowerBound` および `upperBound` プロパティがフォロー/設定することでトラックを制御することを意味します (`インデックス`)。
@@ -290,8 +297,8 @@ public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
 ```
 
 
-<code-view style="height: 160px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 160px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/slider-sample-6/" >
 </code-view>
 
@@ -299,6 +306,7 @@ public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
 上記のサンプルからわかるように、`境界`の設定はまだ有効な操作です。[`lowerBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerBound) と [`upperBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperBound) に対応すると、スライドできる範囲が制限されます。
 
 ### ラベルのテンプレート化
+
 上記では、[igxSliderThumbFrom]({environment:angularApiUrl}/interfaces/igxSliderThumbFrom.html) ディレクティブと [igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) ディレクティブの両方を使用して、カスタム `label` テンプレートを提供する方法を意図的に示しました。直感的に [igxSliderThumbFrom]({environment:angularApiUrl}/interfaces/igxSliderThumbFrom.html) は [lowerLabel]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerLabel)に対応し、[igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) は [igxSliderThumbTo]({environment:angularApiUrl}/interfaces/igxSliderThumbTo.html) に対応すると想定できます。 <br>
 ここでの [context]({environment:angularApiUrl}/classes/igxslidercomponent.html#context) は、暗黙的に `value` 入力プロパティへの参照を、そして `labelsView` が有効な場合は明示的に `labels` 入力への参照を与えます。
 
@@ -312,9 +320,11 @@ public labels = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturd
 ```
 
 ## Slider 目盛りとラベル
+
 **Slider 目盛り**は、特定の時間枠、曜日など、データ可視化を簡単に行うことができます。この新しい機能は、データの表示範囲を確認するための Angular Slider の操作が必要なくなります。**目盛り**と**目盛り ラベル**の配置と方向の制御に関して、高い柔軟性があります。**目盛り**の**オン/オフ**を切り替えたり、**プライマリ**、**セカンダリ**、または**その両方**を選択したりできます。さらに、この機能は、**プライマリ目盛りラベル**、**セカンダリ目盛りラベル**、またはその両方を**オン/オフ**にする方法を提供します。**目盛りラベル**は**水平**から**垂直** (**上から下** (90) または**下から上** (-90)) に向きを変更することもできます。
 
 ### 目盛りの有効化
+
 スライダーの目盛りを有効にするには、[`showTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#showTicks) を **true** に設定します。
 [`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryTicks) を使用してプライマリ目盛りの数を設定します。
 [`SecondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryTicks) を使用してセカンダリ目盛りの数を設定します。
@@ -340,14 +350,15 @@ public type = SliderType.RANGE;
 ```
 
 
-<code-view style="height: 180px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 180px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/discrete-slider-ticks-bottom/" >
 </code-view>
 
 
 
 ### ラベルの向きと表示状態
+
 以下のサンプルでは、[`secondaryTickLabels`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryTickLabels) を **false** に設定して、すべての**セカンダリ ラベル**を無効にします。  
 
 ```html
@@ -376,13 +387,14 @@ public type = SliderType.RANGE;
 ```
 
 
-<code-view style="height: 200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/slider-ticks-bottomtotop-labels/" >
 </code-view>
 
 
 ### 目盛りの位置
+
 次に、**目盛り**の位置を変更する方法を見てみましょう。
 
 ```html
@@ -398,7 +410,7 @@ public type = SliderType.RANGE;
 ```
 
 位置の変更は [`ticksOrientation`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksOrientation) 入力から行われ、**Bottom** (デフォルト) から **Mirror** に変更されました。
-これが**目盛り**の外観に反映され、スライダーの上部または下部に表示します。 
+これが**目盛り**の外観に反映され、スライダーの上部または下部に表示します。
 
 ```typescript
 
@@ -407,8 +419,8 @@ public type = SliderType.RANGE;
 ```
 
 
-<code-view style="height: 160px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 160px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/slider-secondary-ticks-mirror/" >
 </code-view>
 
@@ -417,6 +429,7 @@ public type = SliderType.RANGE;
 > [`ticksOrientaion`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksOrientaion) が **Top** または **Mirror** に設定され、**目盛りラベル**が表示されている場合、**つまみラベル**は意図的に非表示になります。このようにして、ユーザー エクスペリエンスの低下と 2 つのラベルの重複を防止できます。
 
 ### ラベル ビューを含むスライダー目盛り
+
 この例では、目盛りラベルとつまみラベルがどのように一緒に機能するかを示します。
 
 ```html
@@ -426,14 +439,15 @@ public type = SliderType.RANGE;
     [secondaryTicks]="3"
 ></igx-slider>
 ```
+
 ```typescript
   public type: SliderType = SliderType.RANGE;
   public labels = ["04:00", "08:00", "12:00", "16:00", "20:00", "00:00"];
 ```
 
 
-<code-view style="height: 160px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 160px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/slider-timeframe/" >
 </code-view>
 
@@ -441,6 +455,7 @@ public type = SliderType.RANGE;
 いずれにしても反映されないため、ここでは、[`primaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#primaryTicks) は設定されていません。コレクションの **長さ** が優先されます。これは、[`secondaryTicks`]({environment:angularApiUrl}/classes/igxslidercomponent.html#secondaryTicks) を設定できないことを意味しません。すべての**セカンダリ目盛り**は、**ラベル**なしで空になります。
 
 ### テンプレートのラベル
+
 最後に、**目盛りラベル**にカスタム テンプレートを提供する方法と、[`テンプレート コンテキスト`]({environment:angularApiUrl}/classes/igxtickscomponent.html#context) が提供するものを確認します。
 
 ```html
@@ -453,16 +468,17 @@ public type = SliderType.RANGE;
     </ng-template>
 </igx-slider>
 ```
-[`IgxTickLabelTemplateDirective`]({environment:angularApiUrl}/classes/igxticklabeltemplatedirective.html) を `ng-template` に適用すると、テンプレートがすべての**目盛りラベル**に割り当てられます。 
+
+[`IgxTickLabelTemplateDirective`]({environment:angularApiUrl}/classes/igxticklabeltemplatedirective.html) を `ng-template` に適用すると、テンプレートがすべての**目盛りラベル**に割り当てられます。
 
 > [!NOTE]
 > [`context`]({environment:angularApiUrl}/classes/igxtickscomponent.html#context) は各目盛りごとに実行されます。
 
-つまり、次への参照を提供します。 
-  * 対応する各目盛りの**値**
-  * 目盛りが**プライマリ**の場合
-  * **目盛り**インデックス
-  * そして、[`labels`]({environment:angularApiUrl}/classes/igxslidercomponent.html#labels) コレクションがある場合。
+つまり、次への参照を提供します。
+- 対応する各目盛りの**値**
+- 目盛りが**プライマリ**の場合
+- **目盛り**インデックス
+- そして、[`labels`]({environment:angularApiUrl}/classes/igxslidercomponent.html#labels) コレクションがある場合。
 
 ```typescript
   public tickLabel(value, primary, index) {
@@ -474,15 +490,195 @@ public type = SliderType.RANGE;
   }
 ```
 
-上記の **tickLabel** コールバックから、各**プライマリ**目盛りの**値**を丸めていることがわかります。 
+上記の **tickLabel** コールバックから、各**プライマリ**目盛りの**値**を丸めていることがわかります。
 
 
-<code-view style="height: 180px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 180px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/slider-tick-labels-template/" >
 </code-view>
 
 ## スタイル設定
+
+### Slider テーマのプロパティ マップ
+
+プライマリ プロパティを変更すると、関連するすべての依存プロパティが自動的に更新され、変更が反映されます。
+
+<div class="theme-switcher-wrapper">
+  <input type="radio" name="theme" id="material" checked>
+  <label for="material" class="switch-label">Material</label>
+  <input type="radio" name="theme" id="fluent">
+  <label for="fluent" class="switch-label">Fluent</label>
+  <input type="radio" name="theme" id="bootstrap">
+  <label for="bootstrap" class="switch-label">Bootstrap</label>
+  <input type="radio" name="theme" id="indigo">
+  <label for="indigo" class="switch-label">Indigo</label>
+
+  <div class="tables">
+    <!-- Material Theme Table -->
+    <div class="theme-table material">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>プライマリ プロパティ</th>
+            <th>依存プロパティ</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$track-color</strong></summary></details></td>
+            <td>$thumb-color</td>
+            <td>つまみの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$base-track-color</td><td>トラックのベース背景の色</td></tr>
+          <tr class="dependent"><td></td><td>$track-hover-color</td><td>ホバー時のトラックの色</td></tr>
+          <tr class="dependent"><td></td><td>$disabled-fill-track-color</td><td>無効なトラックの基本の塗りつぶしの色</td></tr>
+          <tr class="dependent"><td></td><td>$label-background-color</td><td>バブル ラベルの背景の色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$thumb-color</strong></summary></details></td>
+            <td>$track-color</td>
+            <td>トラックの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$disabled-thumb-color</td><td>無効時のつまみの境界線の色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$base-track-color</strong></summary></details></td>
+            <td>$base-track-hover-color</td>
+            <td>ホバー時の基本トラックの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$track-step-color</td><td>トラック ステップの色</td></tr>
+          <tr class="dependent"><td></td><td>$disabled-base-track-color</td><td>無効なトラックの基本の色</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="theme-table fluent">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>プライマリ プロパティ</th>
+            <th>依存プロパティ</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$thumb-border-color</strong></summary></details></td>
+            <td>$track-color</td>
+            <td>トラックの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$thumb-border-hover-color</td><td>ホバー時のつまみの境界線の色</td></tr>
+          <tr class="dependent"><td></td><td>$thumb-focus-color</td><td>つまみのフォーカス色</td></tr>
+          <tr class="dependent"><td></td><td>$thumb-disabled-border-color</td><td>無効なつまみの境界線の色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$track-color</strong></summary></details></td>
+            <td>$thumb-border-color</td>
+            <td>つまみの境界線の色</td>
+          </tr>
+           <tr class="dependent"><td></td><td>$track-hover-color</td><td>ホバー時のトラックの色</td></tr>
+          <tr class="dependent"><td></td><td>$disabled-fill-track-color</td><td>無効なトラックの基本の塗りつぶしの色</td></tr>
+          <tr class="dependent"><td></td><td>$label-background-color</td><td>バブル ラベルの背景の色</td></tr>
+          <tr class="dependent"><td></td><td>$label-text-color</td><td>バブル ラベルのテキストの色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$base-track-color</strong></summary></details></td>
+            <td>$base-track-hover-color</td>
+            <td>ホバー時の基本トラックの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$track-step-color</td><td>トラック ステップの色</td></tr>
+          <tr class="dependent"><td></td><td>$disabled-base-track-color</td><td>無効なトラックの基本の色</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="theme-table bootstrap">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>プライマリ プロパティ</th>
+            <th>依存プロパティ</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$thumb-color</strong></summary></details></td>
+            <td>$thumb-border-color</td>
+            <td>つまみの境界線の色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$thumb-focus-color</td><td>つまみのフォーカス色</td></tr>
+          <tr class="dependent"><td></td><td>$track-color</td><td>トラックの色</td></tr>
+          <tr class="dependent"><td></td><td>$label-background-color</td><td>バブル ラベルの背景の色</td></tr>
+          <tr class="dependent"><td></td><td>$label-text-color</td><td>バブル ラベルのテキストの色</td></tr>
+          <tr class="dependent"><td></td><td>$disabled-thumb-color</td><td>無効時のつまみの境界線の色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$track-color</strong></summary></details></td>
+            <td>$track-hover-color</td>
+            <td>ホバー時のトラックの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$disabled-fill-track-color</td><td>無効なトラックの塗りつぶしの色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$base-track-color</strong></summary></details></td>
+            <td>$base-track-hover-color</td>
+            <td>ホバー時の基本トラックの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$track-step-color</td><td>トラック ステップの色</td></tr>
+          <tr class="dependent"><td></td><td>$disabled-base-track-color</td><td>無効なトラックの基本の色</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="theme-table indigo">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>プライマリ プロパティ</th>
+            <th>依存プロパティ</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$thumb-border-color</strong></summary></details></td>
+            <td>$track-color</td>
+            <td>トラックの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$thumb-border-hover-color</td><td>ホバー時のつまみの境界線の色</td></tr>
+          <tr class="dependent"><td></td><td>$thumb-focus-color</td><td>つまみのフォーカス色</td></tr>
+          <tr class="dependent"><td></td><td>$thumb-disabled-border-color</td><td>無効なつまみの境界線の色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$track-color</strong></summary></details></td>
+            <td>$thumb-border-color</td>
+            <td>つまみの境界線の色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$track-hover-color</td><td>ホバー時のトラックの色</td></tr>
+          <tr class="dependent"><td></td><td>$disabled-fill-track-color</td><td>無効なトラックの基本の塗りつぶしの色</td></tr>
+          <tr class="dependent"><td></td><td>$label-background-color</td><td>バブル ラベルの背景の色</td></tr>
+          <tr class="dependent"><td></td><td>$label-text-color</td><td>バブル ラベルのテキストの色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$base-track-color</strong></summary></details></td>
+            <td>$base-track-hover-color</td>
+            <td>ホバー時の基本トラックの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$track-step-color</td><td>トラック ステップの色</td></tr>
+          <tr class="dependent"><td></td><td>$disabled-base-track-color</td><td>無効なトラックの基本の色</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
 
 スライダーをカスタマイズするには、すべてのスタイリング関数とミックスインが置かれている `index` ファイルをインポートする必要があります。
 
@@ -515,24 +711,63 @@ $custom-slider-theme: slider-theme(
 
 これは、新しいテーマを適用した結果です。
 
-<code-view style="height: 240px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 240px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/slider-styling-sample/" >
 </code-view>
 
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して `slider` をスタイル設定できます。まず [Tailwind を設定して](../themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-slider`、`dark-slider`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは [IgxSlider テーマ]({environment:sassApiUrl}/themes#function-slider-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-slider
+class="!light-slider ![--thumb-color:#7B9E89]"
+>
+</igx-slider>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、slider は次のようになります:
+
+<div class="sample-container loading" style="height:100px">
+    <iframe id="slider-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/interactions/slider-tailwind-styling-sample/' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
 ## API リファレンス
+
 <div class="divider--half"></div>
 
-* [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)
-* [IgxSliderComponent スタイル]({environment:sassApiUrl}/themes#function-slider-theme)
-* [SliderType]({environment:angularApiUrl}/variables/IgxSliderType-1.html)
-* [IRangeSliderValue]({environment:angularApiUrl}/interfaces/irangeslidervalue.html)
-* [TicksOrientation]({environment:angularApiUrl}/classes/IgxSliderComponent.html#ticksOrientation)
-* [TickLabelsOrientation]({environment:angularApiUrl}/classes/IgxSliderComponent.html#tickLabelsOrientation)
+- [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)
+- [IgxSliderComponent スタイル]({environment:sassApiUrl}/themes#function-slider-theme)
+- [SliderType]({environment:angularApiUrl}/variables/IgxSliderType-1.html)
+- [IRangeSliderValue]({environment:angularApiUrl}/interfaces/irangeslidervalue.html)
+- [TicksOrientation]({environment:angularApiUrl}/classes/IgxSliderComponent.html#ticksOrientation)
+- [TickLabelsOrientation]({environment:angularApiUrl}/classes/IgxSliderComponent.html#tickLabelsOrientation)
 
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

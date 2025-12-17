@@ -1,22 +1,25 @@
 ---
-title: Angular Card コンポーネント – Ignite UI for Angular
+title: Angular Card コンポーネント – Ignite UI for Angular - MITライセンス
 _description: Angular Card コンポーネントを使用して、詳細情報のエントリ ポイントとして、ダッシュボード、テキスト、画像、アイコン、ボタンなどを表示します。今すぐお試しください。
 _keywords: Angular Card コンポーネント, Angular Card コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
+_license: MIT
 _language: ja
 ---
 
 # Angular Card (カード) コンポーネントの概要
+
 <p class="highlight">
-Angular Card は、タイトル テキスト、説明、画像スタイル、CTA (行動喚起) ボタン、リンクなどのさまざまな要素を持つ柔軟なコンテナーを表します。特定のシナリオ/コンテンツを可能な限り最適な方法で表現するために、さまざまな表示オプション、ヘッダー、フッター、背景色、アニメーションなどを提供します。  
+Angular Card は、タイトル テキスト、説明、画像スタイル、CTA (行動喚起) ボタン、リンクなどのさまざまな要素を持つ柔軟なコンテナーを表します。特定のシナリオ/コンテンツを可能な限り最適な方法で表現するために、さまざまな表示オプション、ヘッダー、フッター、背景の色、アニメーションなどを提供します。  
 
 この軽量の Angular Card コンポーネントは、あらゆる種類のカードの作成に使用されます。その中には、名刺、マテリアル フリッピング カード、スタック カードなどがあります。
 </p>
 
 ## Angular Card の例
+
 以下に、画像、タイトル、サブタイトル、主要なカード コンテンツ、ボタンのコンテナなどの主要なカード セクションを備えた、巧妙に作成された Ignite UI for Angular Card の基本的なサンプルを示します。
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/card-sample-0/" alt="Angular Card の例">
 </code-view>
 
@@ -37,7 +40,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 ```typescript
 // app.module.ts
 ...
-import { IgxCardModule } from 'igniteui-angular';
+import { IgxCardModule } from 'igniteui-angular/card';
 // import { IgxCardModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -53,7 +56,7 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IGX_CARD_DIRECTIVES } from 'igniteui-angular';
+import { IGX_CARD_DIRECTIVES } from 'igniteui-angular/card';
 // import { IGX_CARD_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -105,6 +108,7 @@ export class HomeComponent {}
 Ignite UI for Angular Card モジュールまたはディレクティブをインポートしたので、`igx-card` コンポーネントの使用を開始できます。
 
 ## Angular Card コンポーネントの使用
+
 次に、デモのカード テンプレートを表すために、以下のコードを追加します。
 
 ```html
@@ -145,6 +149,7 @@ Angular Card に表示する画像や動画は、`igx-card-media` タグで囲�
 最後に `igx-card-actions` は、ボタンのようなアクション可能なアイテムを配置する場所です。要素に `igxButton` ディレクティブを使用すると、その領域内の材料設計仕様に従って自動的に正しく配置されます。
 
 ### メディア、サムネイル、アバター
+
 タイトルや字幕の横のカード ヘッダーに画像やアイコンを表示したい場合は、`igxCardThumbnail` ディレクティブを使用してそれを実行できます。
 
 上記のカードを例にとると、`igx-card-header` の内容を編集して、アイコンを保持する `igxCardThumbnail` コンテナーを追加できます。
@@ -189,6 +194,7 @@ Angular Card に表示する画像や動画は、`igx-card-media` タグで囲�
 ```
 
 ### カードのアウトライン
+
 カードには `type` 属性があり、`default` (省略した場合は自動的に設定) または `outlined` に設定できます。`outlined` タイプは、細い境界線と置き換えてカードと背景を区別してカードからすべてのシャドウを削除します。
 
 ### Angular Card の水平レイアウト
@@ -223,7 +229,7 @@ Angular Card に表示する画像や動画は、`igx-card-media` タグで囲�
 </igx-card>
 ```
 
-`.h-sample-column` クラスを使用して、`igx-card-header` と `igx-card-content` をまとめてバンドルし、垂直に揃え、カード内の他のセクションを水平に揃えています。 
+`.h-sample-column` クラスを使用して、`igx-card-header` と `igx-card-content` をまとめてバンドルし、垂直に揃え、カード内の他のセクションを水平に揃えています。
 
 以下は、`.h-sample-column` クラスが適用されるスタイルです。
 
@@ -251,11 +257,12 @@ Angular Card に表示する画像や動画は、`igx-card-media` タグで囲�
     </button>
 </igx-card-actions>
 ```
-すべて適切に設定できると、結果は以下のようになります。 
+
+すべて適切に設定できると、結果は以下のようになります。
 
 
-<code-view style="height: 220px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 220px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/card-sample-2/" >
 </code-view>
 
@@ -293,8 +300,8 @@ Angular Card に表示する画像や動画は、`igx-card-media` タグで囲�
 ```
 
 
-<code-view style="height: 270px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 270px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/card-sample-3/" >
 </code-view>
 
@@ -329,7 +336,45 @@ Angular Card の操作領域では、すでに説明したコンテンツに追�
 ```
 
 ## スタイル設定
-Card のスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
+
+### Card テーマのプロパティ マップ
+
+`$background` プロパティを変更すると、次の依存プロパティが自動的に更新されます。
+
+<table class="collapsible-table">
+    <thead>
+        <tr>
+            <th>プライマリ プロパティ</th>
+            <th>依存プロパティ</th>
+            <th>説明</th>
+        </tr>
+    </thead>
+    <tbody class="group">
+        <tr class="primary">
+            <td><strong>$background</strong></td>
+            <td>$header-text-color</td>
+            <td>カード タイトルのテキストの色</td>
+            </tr>
+            <tr>
+            <td></td>
+            <td>$subtitle-text-color</td>
+            <td>カードのサブタイトルのテキストの色</td>
+            </tr>
+            <tr>
+            <td></td>
+            <td>$content-text-color</td>
+            <td>カード コンテンツのテキストの色</td>
+            </tr>
+            <tr>
+            <td></td>
+            <td>$actions-text-color</td>
+            <td>カード ボタンのテキストの色</td>
+            </tr>
+        </tr>
+    </tbody>
+</table>
+
+カードのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントのミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -338,70 +383,112 @@ Card のスタイル設定を始めるには、すべてのテーマ関数とコ
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`card-theme`]({environment:sassApiUrl}/themes#function-card-theme) を拡張し、少数のスタイル パラメーターのみを指定して新しいテーマを作成します。`$background` パラメーターのみを指定した場合でも、適切な前景色 (黒または白) が自動的に選ばれて割り当てられます。
+最もシンプルな方法として、[`card-theme`]({environment:sassApiUrl}/themes#function-card-theme) を拡張し、少数のスタイル パラメーターのみを指定して新しいテーマを作成します。`$background` パラメーターのみを指定した場合でも、適切な前景の色 (黒または白) が自動的に選ばれて割り当てられます。
 
 ```scss
 $colorful-card: card-theme(
-  $background: #011627,
-  $subtitle-text-color: #ecaa53,
+    $background: #011627,
+    $subtitle-text-color: #ecaa53,
 );
 ```
 
-ご覧のとおり、`card-theme` は、アイテムの基本的なスタイル設定に役立ついくつかのパラメーターを公開しています。
+ご覧のとおり、`card-theme` は項目の基本的なスタイル設定に役立ついくつかのパラメーターを公開しています。
 
-最後の手順は、コンポーネントのテーマを**含める**ことです。
+最後にコンポーネントのテーマをアプリケーションに**含めます**。
 
 ```scss
-@include css-vars($colorful-card);
+@include css-vars($custom-card-theme);
 ```
 
-### Angular Card のデモ
+以下のサンプルでは、カスタマイズした CSS 変数を使用したカード コンポーネントが、[`Ant`](https://ant.design/components/card?theme=light#card-demo-meta) デザイン システムのカードに視覚的に似たデザインを実現している様子を確認できます。
 
 
-<code-view style="height: 486px" 
+<code-view style="height: 486px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/card-styling-sample/" >
 </code-view>
 
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して `card` をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-card`、`dark-card`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[card-theme]({environment:sassApiUrl}/themes#function-card-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-card
+class="!light-card
+![--background:#193625]
+![--subtitle-text-color:#ECAA53]"
+elevated>
+...
+</igx-card>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、card は次のようになります:
+
+<div class="sample-container loading" style="height:500px">
+    <iframe id="card-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/card-tailwind-styling-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ### まとめ
+
 このトピックでは Card コンポーネントの詳細について説明しました。最初にテキスト コンテンツのみを含むベーシックなカードを作成しました。次に画像を追加しました。他の Ignite UI for Angular コンポーネントをカードで使用して、アバター、ボタン、およびアイコンを追加して機能性を向上しました。最後に公開されたテーマの色を設定してカスタムパレットを作成、スキーマを拡張してカードのテーマを変更しました。
 カード コンポーネントはその他のレイアウトも表示できます。詳細については、このトピックの最初の部分の Card デモを参照してください。
 
 ## API と スタイル リファレンス
 
 カード API に関する詳細な情報は、以下のリンクのトピックを参照してください。
-* [`IgxCardComponent API`]({environment:angularApiUrl}/classes/igxcardcomponent.html)
+- [`IgxCardComponent API`]({environment:angularApiUrl}/classes/igxcardcomponent.html)
 
 以下の定義済み CSS スタイルを使用してカード レイアウトを構成しました。
 
-* [`IgxCardComponent スタイル`]({environment:sassApiUrl}/themes#function-card-theme)
+- [`IgxCardComponent スタイル`]({environment:sassApiUrl}/themes#function-card-theme)
 
 使用したその他のコンポーネントとディレクティブ
 
-* [`IgxAvatarComponent`]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
-* [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [`IgxButtonDirective`]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [`IgxDividerDirective`]({environment:angularApiUrl}/classes/igxdividerdirective.html)
+- [`IgxAvatarComponent`]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
+- [`IgxIconComponent`]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+- [`IgxButtonDirective`]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+- [`IgxDividerDirective`]({environment:angularApiUrl}/classes/igxdividerdirective.html)
 
 スタイル:
 
-* [`IgxAvatarComponent スタイル`]({environment:sassApiUrl}/themes#function-avatar-theme)
-* [`IgxIconComponent スタイル`]({environment:sassApiUrl}/themes#function-icon-theme)
-* [`IgxButtonDirective スタイル`]({environment:sassApiUrl}/themes#function-button-theme)
+- [`IgxAvatarComponent スタイル`]({environment:sassApiUrl}/themes#function-avatar-theme)
+- [`IgxIconComponent スタイル`]({environment:sassApiUrl}/themes#function-icon-theme)
+- [`IgxButtonDirective スタイル`]({environment:sassApiUrl}/themes#function-button-theme)
 
 <div class="divider"></div>
 
 ## テーマの依存関係
-* [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
-* [IgxAvatar テーマ]({environment:sassApiUrl}/themes#function-avatar-theme)
-* [IgxIconTheme]({environment:sassApiUrl}/themes#function-icon-theme)
+
+- [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxAvatar テーマ]({environment:sassApiUrl}/themes#function-avatar-theme)
+- [IgxIconTheme]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

@@ -1,18 +1,20 @@
 ---
-title: Angular Badge コンポーネント
+title: Angular Badge コンポーネント - MITライセンス
 _description: Ignite UI for Angular の Badge コントロールは、アプリケーションでその他のコンポーネントを装飾するために定義済みスタイルでアクティブ カウントまたはアイコンを表示します。
 _keywords: Angular Badge コンポーネント, Angular Badge コントロール, Ignite UI for Angular, Angular UI コンポーネント
+_license: MIT
 _language: ja
 ---
 
 # Angular Badge (バッジ) コンポーネントの概要
+
 <p class="highlight">Angular Badge は、視覚的な通知が必要な場合にアプリケーションでアバター、ナビゲーション メニュー、またはその他のコンポーネントと共に使用されるコンポーネントです。バッジは情報、成功、警告、またはエラーを表示するために定義済みのスタイルを持つアイコンとしてデザインされます。</p>
 <div class="divider"></div>
 
 ## Angular Badge の例
 
-<code-view style="height:100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-2/" alt="Angular Badge の例">
 </code-view>
 
@@ -25,6 +27,7 @@ Ignite UI for Angular Badge コンポーネントを使用した作業を開始�
 ```cmd
 ng add igniteui-angular
 ```
+
 Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
 次に、**app.module.ts** ファイルに `IgxBadgeModule` をインポートします。
@@ -33,7 +36,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 ...
-import { IgxBadgeModule } from 'igniteui-angular';
+import { IgxBadgeModule } from 'igniteui-angular/badge';
 // import { IgxBadgeModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -50,7 +53,7 @@ export class AppModule {}
 // home.component.ts
 
 ...
-import { IgxBadgeComponent } from 'igniteui-angular';
+import { IgxBadgeComponent } from 'igniteui-angular/badge';
 // import { IgxBadgeComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -66,12 +69,14 @@ export class HomeComponent {}
 Ignite UI for Angular Badge モジュールまたはコンポーネントをインポートしたので、`igx-badge` コンポーネントの基本構成を開始できます。
 
 ## Angular Badge コンポーネントの使用
+
 デモ サンプルの実行方法を見てみましょう。アバターのシンプルな success スタイルのバッジです。これを構築するためには、`IgxBadgeModule` とともに `IgxAvatarModule` をインポートする必要があります。
 
 ```typescript
 // app.module.ts
 ...
-import { IgxBadgeModule, IgxAvatarModule } from 'igniteui-angular';
+import { IgxBadgeModule } from 'igniteui-angular/badge';
+import { IgxAvatarModule } from 'igniteui-angular/avatar';
 // import {  IgxBadgeModule, IgxAvatarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -83,7 +88,7 @@ import { IgxBadgeModule, IgxAvatarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-*あるいは、`16.0.0` 以降、`IgxBadgeComponent` と `IgxAvatarComponent` をスタンドアロンの依存関係としてインポートできます。*
+_あるいは、`16.0.0` 以降、`IgxBadgeComponent` と `IgxAvatarComponent` をスタンドアロンの依存関係としてインポートできます。_
 
 次に、これらのコンポーネントをテンプレートに追加します。
 
@@ -123,7 +128,8 @@ igx-badge {
 
 バッジのサイズは `--size` 変数を使用して制御できます。これにより、バッジのサイズが両方向に比例して調整されます。ただし、テキスト値を含むバッジでは、フォント サイズと行の高さに `caption` タイポグラフィ スタイルが使用されることに注意してください。そのため、テキストを含むバッジの `--size` を 16 px 未満の値に設定する場合は、そのタイポグラフィも変更する必要があります。
 
-Example:
+例:
+
 ```scss
 igx-badge {
   --size: 12px;
@@ -149,12 +155,12 @@ export class BadgeIconComponent implements OnInit {
 
 そうすると、次のようにアイコン名とファミリを指定すればよいです。
 
-```html 
+```html
 <igx-badge icon="heart-monitor" iconSet="imx-icons"></igx-badge>
 ```
 
-<code-view style="height: 100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/badge-icon/" >
 </code-view>
 
@@ -168,11 +174,9 @@ export class BadgeIconComponent implements OnInit {
 // app.module.ts
 
 ...
-import {
-    IgxListModule,
-    IgxAvatarModule,
-    IgxBadgeModule
-} from 'igniteui-angular';
+import { IgxListModule } from 'igniteui-angular/list';
+import { IgxAvatarModule } from 'igniteui-angular/avatar';
+import { IgxBadgeModule } from 'igniteui-angular/badge';
 // import { IgxListModule, IgxAvatarModule, IgxBadgeModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -183,7 +187,7 @@ export class AppModule {}
 ```
 
 >[!NOTE]
->[`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) には、バッジの外観を構成するための [`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) および [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) 入力があります。公式の[マテリアル アイコン セット](https://material.io/icons/)から名前を指定して、アイコンを設定できます。バッジタイプは、[`default`]({environment:angularApiUrl}/enums/type.html#default)、[`info`]({environment:angularApiUrl}/enums/type.html#info)、[`success`]({environment:angularApiUrl}/enums/type.html#success)、[`warning`]({environment:angularApiUrl}/enums/type.html#warning)、または [`error`]({environment:angularApiUrl}/enums/type.html#error) のいずれかに設定できます。その型により、特定の背景色が適用されます。
+>[`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) には、バッジの外観を構成するための [`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) および [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) 入力があります。公式の[マテリアル アイコン セット](https://material.io/icons/)から名前を指定して、アイコンを設定できます。バッジタイプは、[`default`]({environment:angularApiUrl}/enums/type.html#default)、[`info`]({environment:angularApiUrl}/enums/type.html#info)、[`success`]({environment:angularApiUrl}/enums/type.html#success)、[`warning`]({environment:angularApiUrl}/enums/type.html#warning)、または [`error`]({environment:angularApiUrl}/enums/type.html#error) のいずれかに設定できます。その型により、特定の背景の色が適用されます。
 
 サンプルでは、[`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) と [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) が icon と type という名前のモデルプロパティにバインドされています。
 
@@ -283,12 +287,38 @@ class Member {
 
 サンプルを正しく構成すると、アバターと、その状態を示すバッジとともにメンバーのリストが表示されます。
 
-<code-view style="height: 280px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 280px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/badge-sample-3/" >
 </code-view>
 
 ## スタイル設定
+
+### Badge テーマのプロパティ マップ
+
+`$background-color` プロパティを変更すると、次の依存プロパティが自動的に更新されます。
+
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>プライマリ プロパティ</th>
+      <th>依存プロパティ</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+      <td><strong>$background-color</strong></td>
+      <td>$icon-color</td>
+      <td>バッジ内のアイコンの色</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>$text-color</td>
+      <td>バッジ内のテキストの色</td>
+    </tr>
+  </tbody>
+</table>
 
 Badge のスタイル設定は、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
 
@@ -299,7 +329,7 @@ Badge のスタイル設定は、すべてのテーマ関数とコンポーネ�
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`badge-theme`]({environment:sassApiUrl}/themes#function-badge-theme) を拡張する新しいテーマを作成し、バッジの項目をスタイル設定するいくつかのパラメーターを受け取る方法です。`$background-color` を設定すると、`$icon-color` と `$text-color` は、背景色とのコントラストが高い黒または白に自動的に割り当てられます。なお、`$border-radius` プロパティはバッジの `shape` が `square` に設定されている場合のみ適用されます。
+最も簡単な方法は、[`badge-theme`]({environment:sassApiUrl}/themes#function-badge-theme) を拡張する新しいテーマを作成し、バッジの項目をスタイル設定するいくつかのパラメーターを受け取る方法です。`$background-color` を設定すると、`$icon-color` と `$text-color` は、背景の色とのコントラストが高い黒または白に自動的に割り当てられます。なお、`$border-radius` プロパティはバッジの `shape` が `square` に設定されている場合のみ適用されます。
 
 ```scss
 $custom-badge-theme: badge-theme(
@@ -316,29 +346,68 @@ $custom-badge-theme: badge-theme(
 
 ### デモ
 
-<code-view style="height:340px" 
+<code-view style="height:340px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/badge-styling-sample/" >
 </code-view>
 
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して `badge` をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-badge`、`dark-badge`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[badge-theme]({environment:sassApiUrl}/themes#function-badge-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-badge
+class="!light-badge ![--background:#FF4E00] ![--border-radius:4px]">
+</igx-badge>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、badge は次のようになります:
+
+<div class="sample-container loading" style="height:340px">
+    <iframe id="badge-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/data-display/badge-tailwind-styling-sample' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
-* [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
-* [IgxBadgeComponent]({environment:angularApiUrl}/classes/igxbadgecomponent.html)
-* [IgxBadgeComponent スタイル]({environment:sassApiUrl}/themes#function-badge-theme)
-* [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
-* [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
-* [IgxBadgeType]({environment:angularApiUrl}/index.html#IgxBadgeType)
+- [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
+- [IgxBadgeComponent]({environment:angularApiUrl}/classes/igxbadgecomponent.html)
+- [IgxBadgeComponent スタイル]({environment:sassApiUrl}/themes#function-badge-theme)
+- [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
+- [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
+- [IgxBadgeType]({environment:angularApiUrl}/index.html#IgxBadgeType)
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+
+- [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

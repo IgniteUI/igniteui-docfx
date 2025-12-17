@@ -1,7 +1,8 @@
 ---
-title: Navbar コンポーネント
+title: Navbar コンポーネント | MITライセンス
 _description: Ignite UI for Angular Navbar コントロールはアプリケーションでのスムーズな移動を可能にする UI コンポーネントです。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Navbar コンポーネント, Angular Navbar コントロール, Angular Navigation Bar, Angular Navigation Bar コンポーネント
+_license: MIT
 _language: ja
 ---
 
@@ -11,8 +12,8 @@ Ignite UI for Angular [`IgxNavbarComponent`]({environment:angularApiUrl}/classes
 
 ## Angular Navbar の例
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navbar/" alt="Angular Navbar の例">
 </code-view>
 
@@ -28,12 +29,12 @@ ng add igniteui-angular
 
 Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
- はじめに、**app.module.ts** ファイルに `IgxNavbarModule` をインポートします。 
+ はじめに、**app.module.ts** ファイルに `IgxNavbarModule` をインポートします。
 
 ```typescript
 // app.module.ts
 
-import { IgxNavbarModule } from 'igniteui-angular';
+import { IgxNavbarModule } from 'igniteui-angular/navbar';
 // import { IgxNavbarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -49,7 +50,7 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IGX_NAVBAR_DIRECTIVES } from 'igniteui-angular';
+import { IGX_NAVBAR_DIRECTIVES } from 'igniteui-angular/navbar';
 // import { IGX_NAVBAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -77,7 +78,7 @@ Ignite UI for Angular Navbar モジュールまたはディレクティブをイ
 
 ### メニュー ボタンの追加
 
-メニュー ボタンを追加するには、`actionButtonIcon` によってアクション ボタンを表示し、以下のようにメニュー アイコンを使用します。 
+メニュー ボタンを追加するには、`actionButtonIcon` によってアクション ボタンを表示し、以下のようにメニュー アイコンを使用します。
 
 ```html
 <!--navbar.component.html-->
@@ -96,7 +97,9 @@ Ignite UI for Angular Navbar モジュールまたはディレクティブをイ
 // app.module.ts
 
 ...
-import { IgxNavbarModule, IgxIconButtonDirective, IgxIconModule } from 'igniteui-angular';
+import { IgxNavbarModule } from 'igniteui-angular/navbar';
+import { IgxIconButtonDirective } from 'igniteui-angular/directives';
+import { IgxIconModule } from 'igniteui-angular/icon';
 // import { IgxNavbarModule, IgxButtonModule, IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -126,8 +129,8 @@ export class AppModule {}
 
 以下は結果です:
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-1/" >
 </code-view>
 
@@ -169,8 +172,8 @@ export class AppModule {}
 
 以下はカスタム動作ボタン アイコンをした場合の navbar の外観です。
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-2/" >
 </code-view>
 
@@ -178,7 +181,7 @@ export class AppModule {}
 
 ### ナビゲーション アイコを追加
 
-戻るためのアイコンが付いたナビゲーション バーを作成する場合は、次の手順を実行します。まず、`actionButtonIcon` プロパティを使用して、Material フォントセットから適切なアイコンを選択できます。次に、以前にアクセスしたページに戻るかどうかを確認し、その結果を [`isActionButtonVisible`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#isActionButtonVisible) プロパティに渡します。最後の手順は、戻るためのメソッドを作成し、[`action`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#action) プロパティにフックすることです。 
+戻るためのアイコンが付いたナビゲーション バーを作成する場合は、次の手順を実行します。まず、`actionButtonIcon` プロパティを使用して、Material フォントセットから適切なアイコンを選択できます。次に、以前にアクセスしたページに戻るかどうかを確認し、その結果を [`isActionButtonVisible`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#isActionButtonVisible) プロパティに渡します。最後の手順は、戻るためのメソッドを作成し、[`action`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#action) プロパティにフックすることです。
 
 ```html
 <!--navbar.component.html-->
@@ -210,8 +213,8 @@ export class NavbarSample3Component {
 
 サンプルが正しく構成された場合、ブラウザーで以下が表示されます。
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-3/" >
 </code-view>
 
@@ -263,8 +266,8 @@ Navbar のタイトルにカスタム コンテンツを提供する場合は、
 > [!NOTE]
 > [`igx-navbar-title`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) または [`igxNavbarTitle`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) の場合、デフォルト [`title`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#title) が使用されません。
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navbar-custom-title/" >
 </code-view>
 
@@ -272,7 +275,38 @@ Navbar のタイトルにカスタム コンテンツを提供する場合は、
 
 ## スタイル設定
 
-ページネーターのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
+### Navbar テーマのプロパティ マップ
+
+プライマリ プロパティを変更すると、関連するすべての依存プロパティが自動的に更新され、変更が反映されます。
+
+<table class="collapsible-table">
+    <thead>
+      <tr>
+        <th>プライマリ プロパティ</th>
+        <th>依存プロパティ</th>
+        <th>説明</th>
+      </tr>
+    </thead>
+    <tbody class="group">
+      <tr class="primary">
+        <td><details><summary><strong>$background</strong></summary></details></td>
+        <td>$text-color</td>
+        <td>ナビゲーション バーのテキストの色</td>
+      </tr>
+      <tr class="dependent"><td></td><td>$idle-icon-color</td><td>ナビゲーション バーのアイドル アイコンの色</td></tr>
+      <tr class="dependent"><td></td><td>$hover-icon-color</td><td>ホバー時のナビゲーション バーのアイコンの色</td></tr>
+      <tr class="dependent"><td></td><td>$border-color (indigo バリエーションのみの変更)</td><td>ナビゲーション バーの境界線の色</td></tr>
+    </tbody>
+    <tbody class="group">
+      <tr class="primary">
+        <td><strong>$idle-icon-color</strong></td>
+        <td>$hover-icon-color</td>
+        <td>ホバー時のナビゲーション バーのアイコンの色</td>
+      </tr>
+    </tbody>
+</table>
+
+Navbar のスタイル設定を始めるには、すべてのテーマ関数とコンポーネントミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -281,7 +315,7 @@ Navbar のタイトルにカスタム コンテンツを提供する場合は、
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`navbar-theme`]({environment:sassApiUrl}/themes#function-navbar-theme) を拡張し、`$background` および `$idle-icon-color` パラメータのみを提供する新しいテーマを作成します。テーマは、さまざまなインタラクション状態に必要なすべての背景色と前景色を自動的に計算します。より細かい制御を行いたい場合は、個別のプロパティをオーバーライドすることも可能です。
+最もシンプルな方法として、[`navbar-theme`]({environment:sassApiUrl}/themes#function-navbar-theme) を拡張し、`$background` および `$idle-icon-color` パラメータのみを提供する新しいテーマを作成します。テーマは、さまざまなインタラクション状態に必要なすべての背景の色と前景の色を自動的に計算します。より細かい制御を行いたい場合は、個別のプロパティをオーバーライドすることも可能です。
 
 ```scss
 $custom-navbar-theme: navbar-theme(
@@ -301,37 +335,74 @@ $custom-navbar-theme: navbar-theme(
 
 ### デモ
 
-<code-view style="height: 150px" 
+<code-view style="height: 150px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navbar-style/" >
 </code-view>
 
 <div class="divider--half"></div>
 
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して navbar をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-navbar`、`dark-navbar`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[navbar-theme]({environment:sassApiUrl}/themes#function-navbar-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-navbar class="!light-navbar ![--background:#7B9E89] ![--text-color:#121E17]" title="Sample App">
+  ...
+</igx-navbar>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、navbar は次のようになります:
+
+<div class="sample-container loading" style="height:120px">
+    <iframe id="navbar-tailwind-style-iframe" data-src='{environment:demosBaseUrl}/menus/navbar-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
 ## API リファレンス
 
 <div class="divider--half"></div>
 
-* [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
-* [IgxNavbarActionDirective]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html)
-* [IgxNavbarTitleDirective]({environment:angularApiUrl}/classes/igxnavbartitledirective.html)
-* [IgxNavbarComponent スタイル]({environment:sassApiUrl}/themes#function-navbar-theme)
+- [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
+- [IgxNavbarActionDirective]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html)
+- [IgxNavbarTitleDirective]({environment:angularApiUrl}/classes/igxnavbartitledirective.html)
+- [IgxNavbarComponent スタイル]({environment:sassApiUrl}/themes#function-navbar-theme)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
-* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxIconComponent スタイル]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+- [IgxIconComponent スタイル]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## テーマの依存関係
 
-* [IgxIconComponent テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
-* [IgxButtonComponent テーマ]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxIconComponent テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxButtonComponent テーマ]({environment:sassApiUrl}/themes#function-button-theme)
 
 ### その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

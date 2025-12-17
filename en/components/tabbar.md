@@ -1,7 +1,8 @@
 ---
-title: Angular Bottom Navigation Component – Ignite UI for Angular | Infragistics
+title: Angular Bottom Navigation Component – Ignite UI for Angular | Infragistics | MIT license
 _description: Display tabs for any occasion and implement a completely tabbed user interface. These UI controls manage every aspect of your tabs’ appearance and behavior.
 _keywords: Angular Bottom Nav component, Angular Bottom Navigation control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
+_license: MIT
 ---
 
 # Angular Bottom Navigation Component Overview
@@ -32,7 +33,7 @@ To get started with the Ignite UI for Angular Bottom Navigation component, first
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxBottomNavModule` in your **app.module.ts** file.
 
@@ -40,7 +41,7 @@ The next step is to import the `IgxBottomNavModule` in your **app.module.ts** fi
 // app.module.ts
 
 ...
-import { IgxBottomNavModule } from 'igniteui-angular';
+import { IgxBottomNavModule } from 'igniteui-angular/bottom-nav';
 // import { IgxBottomNavModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -56,7 +57,8 @@ Alternatively, as of `16.0.0` you can import the `IgxBottomNavComponent` as a st
 ```typescript
 // home.component.ts
 
-import { IGX_BOTTOM_NAV_DIRECTIVES, IgxIconComponent } from 'igniteui-angular';
+import { IGX_BOTTOM_NAV_DIRECTIVES } from 'igniteui-angular/bottom-nav';
+import { IgxIconComponent } from 'igniteui-angular/icon';
 // import { IGX_BOTTOM_NAV_DIRECTIVES, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -206,6 +208,7 @@ Next, update the component's template markup as follows:
     </igx-bottom-nav-item>
 </igx-bottom-nav>
 ```
+
 You probably noticed that in addition to placing the icon and the span with the label between the item's header tags, we also attach the `igxBottomNavHeaderIcon` and the `igxBottomNavHeaderLabel` directives to them. These directives denote the respective elements and apply the proper styles to them.
 
 Finally, add the CSS classes used by the DIV and SPAN elements of the content's template to the component's CSS file:
@@ -382,6 +385,62 @@ The approach described above is used by the following sample to demonstrate rout
 
 ## Styles
 
+### Bottom Nav Theme Property Map
+
+When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
+
+<table>
+    <thead>
+        <tr>
+        <th>Primary Property</th>
+        <th>Dependent Property</th>
+        <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td><strong>$background</strong></td>
+        <td>$label-color</td>
+        <td>The label color used in idle state.</td>
+        </tr>
+        <tr>
+        <td><strong>$label-color</strong></td>
+        <td>$icon-color</td>
+        <td>The icon color used in idle state.</td>
+        </tr>
+        <tr>
+        <td></td>
+        <td>$label-disabled-color</td>
+        <td>The disabled color of the label.</td>
+        </tr>
+        <tr>
+        <td><strong>$icon-color</strong></td>
+        <td>$label-color</td>
+        <td>The label color used in idle state.</td>
+        </tr>
+        <tr>
+        <td><strong>$label-disabled-color</strong></td>
+        <td>$icon-disabled-color</td>
+        <td>The disabled color of the icon.</td>
+        </tr>
+        <tr>
+        <td><strong>$icon-disabled-color</strong></td>
+        <td>$label-disabled-color</td>
+        <td>The disabled color of the label.</td>
+        </tr>
+        <tr>
+        <td><strong>$label-selected-color</strong></td>
+        <td>$icon-selected-color</td>
+        <td>The icon color used in selected state.</td>
+        </tr>
+        <tr>
+        <td><strong>$icon-selected-color</strong></td>
+        <td>$label-selected-color</td>
+        <td>The label color used in selected state.</td>
+        </tr>
+    </tbody>
+</table>
+
 To get started with styling the tabs, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
@@ -389,7 +448,7 @@ To get started with styling the tabs, we need to import the `index` file, where 
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 Following the simplest approach, we create a new theme that extends the [`bottom-nav-theme`]({environment:sassApiUrl}/themes#function-bottom-nav-theme) and accepts various parameters that allow us to style the tab groups.
 
@@ -423,23 +482,67 @@ The last step is to **include** the component theme in our application.
            iframe-src="{environment:demosBaseUrl}/layouts/tabbar-style/" >
 </code-view>
 
+### Styling with Tailwind
+
+You can style the bottom navigation using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the Tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-bottom-nav`, `dark-bottom-nav`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [IgxBottomNav Theme]({environment:sassApiUrl}/themes#function-bottom-nav-theme). The syntax is as follows:
+
+```html
+<igx-bottom-nav
+    class="!light-bottom-nav
+    ![--background:#011627]
+    ![--icon-selected-color:#FF8040] 
+    ![--label-selected-color:#FF8040]">
+    ...
+</igx-bottom-nav>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your bottom nav should look like this:
+
+<div class="sample-container loading" style="height:340px">
+    <iframe id="tabbar-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/tabbar-tailwind-style' style="height: 350px; width: 300px; border: 1px solid #D4D4D4;" seamless class="lazyload"></iframe>
+</div>
+
 <div class="divider--half"></div>
 
 ## API References
+
 <div class="divider--half"></div>
 
-* [IgxBottomNavComponent]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html)
-* [IgxBottomNavComponent Styles]({environment:sassApiUrl}/themes#function-bottom-nav-theme)
-* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+- [IgxBottomNavComponent]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html)
+- [IgxBottomNavComponent Styles]({environment:sassApiUrl}/themes#function-bottom-nav-theme)
+- [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
+
+- [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

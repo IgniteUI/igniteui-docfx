@@ -4,6 +4,7 @@ title: Angular Grid の編集 - Ignite UI for Angular
 _description: 強力なパブリック API を使用し、レコードの作成、更新、削除などのデータ操作を簡単に実行できます。Angular データ グリッド編集オプションをお試しください。
 _keywords: データ操作, ignite ui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
+_license: commercial
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
@@ -12,6 +13,7 @@ title: Angular Tree Grid の編集 - Ignite UI for Angular
 _description: 強力なパブリック API を使用し、レコードの作成、更新、削除などのデータ操作を簡単に実行できます。Angular データ グリッド編集オプションをお試しください。
 _keywords: データ操作, ignite ui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
+_license: commercial
 ---
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -20,6 +22,7 @@ title: Angular Hierarchical Grid の編集 - Ignite UI for Angular
 _description: 強力なパブリック API を使用し、レコードの作成、更新、削除などのデータ操作を簡単に実行できます。Angular データ グリッド編集オプションをお試しください。
 _keywords: データ操作, ignite ui for angular, インフラジスティックス・ジャパン株式会社
 _language: ja
+_license: commercial
 ---
 }
 
@@ -32,9 +35,10 @@ _language: ja
 
 # Angular @@igComponent 編集
 
-Ignite UI for Angular @@igComponent コンポーネントは、レコードの作成、更新、削除などのデータ操作を簡単に実行できます。データの変更のフェーズは次のとおりです: [セル編集](cell-editing.md)、[行編集](row-editing.md)、および[一括編集](batch-editing.md)。@@igComponent は、これらの操作をカスタマイズできる強力なパブリック API を提供します。さらに、**セル編集**は、列のデータ型に基づいていくつかのデフォルト エディターを公開します。これらは、[igxCellEditor ディレクティブ](cell-editing.md#セル編集テンプレート)または [igxRow ディレクティブ](row-editing.md#行編集オーバーレイのカスタマイズ)を介して簡単にカスタマイズできます。 
+Ignite UI for Angular @@igComponent コンポーネントは、レコードの作成、更新、削除などのデータ操作を簡単に実行できます。データの変更のフェーズは次のとおりです: [セル編集](cell-editing.md)、[行編集](row-editing.md)、および[一括編集](batch-editing.md)。@@igComponent は、これらの操作をカスタマイズできる強力なパブリック API を提供します。さらに、**セル編集**は、列のデータ型に基づいていくつかのデフォルト エディターを公開します。これらは、[igxCellEditor ディレクティブ](cell-editing.md#セル編集テンプレート)または [igxRow ディレクティブ](row-editing.md#行編集オーバーレイのカスタマイズ)を介して簡単にカスタマイズできます。
 
 ## 設定
+
 有効にする編集モードを指定するために、@@igComponent は [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) および [`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowEditable) ブール値プロパティを公開します。
 
 以下のオプションは、プロパティ **editable** で指定できます。
@@ -49,7 +53,7 @@ Ignite UI for Angular @@igComponent コンポーネントは、レコードの�
 
 @@igComponent で rowEditable プロパティを true に設定し、editable プロパティがどの列にも明示的に定義されていない場合、編集は**主キー**以外のすべての列で有効になります。
 
-グリッドの**一括編集**は、**セル編集**モードと**行編集**モードの両方で有効にできます。一括編集を設定するには、グリッドに *TransactionService* を提供する必要があります。
+グリッドの**一括編集**は、**セル編集**モードと**行編集**モードの両方で有効にできます。一括編集を設定するには、グリッドに _TransactionService_ を提供する必要があります。
 - **セルおよび一括編集** - このシナリオでは、各セルの変更は個別に保持され、元に戻す/やり直し操作はセル レベルで使用できます。
 - **行および一括編集** - このシナリオでは、変更は行レベルで保持されるため、元に戻す/やり直し操作は変更された各セルではなく、各行のセル全体に対して動作します。
 
@@ -58,15 +62,15 @@ Ignite UI for Angular @@igComponent コンポーネントは、レコードの�
 
  データ型固有の**編集テンプレート**を使用する場合、列 [`dataType`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#datatype) プロパティを指定する必要があります。次に各型のデフォルト テンプレートについて説明します。
 
- - `string` データ型の場合、デフォルトのテンプレートは [igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) を使用します。
- - `number` データ型のデフォルト テンプレートは [igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) type="number" を使用します。数値に解析できない値にセルを更新した場合、変更は無視されてセルの値が 0 に設定されます。
- - `date` データ型ではデフォルトのテンプレートは [igxDatePicker]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) を使用します。
- - `dateTime` データ型の場合、デフォルトのテンプレートは [IgxDateTimeEditor directive]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) を使用しています。このエディターは、DateTime オブジェクトの入力要素部分のマスク方向を提供します。
- - `date` データ型の場合、デフォルトのテンプレートは [IgxDatePicker component]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) を使用しています。
- - `time` データ型の場合、デフォルトのテンプレートは [IgxTimePicker component]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) を使用しています。
+- `string` データ型の場合、デフォルトのテンプレートは [igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) を使用します。
+- `number` データ型のデフォルト テンプレートは [igxInput]({environment:angularApiUrl}/classes/igxinputdirective.html) type="number" を使用します。数値に解析できない値にセルを更新した場合、変更は無視されてセルの値が 0 に設定されます。
+- `date` データ型ではデフォルトのテンプレートは [igxDatePicker]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) を使用します。
+- `dateTime` データ型の場合、デフォルトのテンプレートは [IgxDateTimeEditor directive]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html) を使用しています。このエディターは、DateTime オブジェクトの入力要素部分のマスク方向を提供します。
+- `date` データ型の場合、デフォルトのテンプレートは [IgxDatePicker component]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) を使用しています。
+- `time` データ型の場合、デフォルトのテンプレートは [IgxTimePicker component]({environment:angularApiUrl}/classes/igxtimepickercomponent.html) を使用しています。
 - `boolean` データ型ではデフォルトのテンプレートは [igxCheckbox]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) を使用します。
- - `currency` データ型の場合、デフォルトのテンプレートは、アプリケーションまたはグリッドのロケール設定に基づいたプレフィックス/サフィックス構成の [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) を使用します。
- - `percent` パーセント データ型の場合、デフォルトのテンプレートは、編集された値のプレビューをパーセントで表示するサフィックス要素を持つ [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) を使用します。 
+- `currency` データ型の場合、デフォルトのテンプレートは、アプリケーションまたはグリッドのロケール設定に基づいたプレフィックス/サフィックス構成の [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) を使用します。
+- `percent` パーセント データ型の場合、デフォルトのテンプレートは、編集された値のプレビューをパーセントで表示するサフィックス要素を持つ [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) を使用します。
 - カスタム テンプレートについては、[セル編集トピック](cell-editing.md#セル編集テンプレート)を参照してください。
 
 すべての利用可能な列データ型は、公式の[列タイプ トピック](column-types.md#デフォルトのテンプレート)にあります。
@@ -90,6 +94,7 @@ const editorOptions: IColumnEditorOptions = {
 ```
 
 ### イベントの引数とシーケンス
+
 グリッドは、編集エクスペリエンスをより詳細に制御できる広範なイベントを公開します。これらのイベントは、[**行の編集**](row-editing.md)および[**セルの編集**](cell-editing.md)のライフサイクル - 編集の開始、コミット、またはキャンセル時に発生します。
 
  | イベント | 説明 | 引数 | キャンセル可能 |
@@ -104,38 +109,40 @@ const editorOptions: IColumnEditorOptions = {
 | [`rowEditExit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditExit) |`rowEditing`が有効な場合、行が**編集モードを終了した**ときに発生します。| [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
 
 ### イベントのキャンセル
- - `RowEditEnter` - 行もセルも編集モードに入りません。
- - `CellEditEnter` - セル編集に入ることを防止します。[`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowEditable) が有効になっている場合、セル編集は禁止されたままですが、行編集がトリガーされます。
- - `CellEdit` - セル/行の編集を許可し、**[完了]** ボタンまたは **[Enter]** を押しても値または行のトランザクションはコミットされません。**[キャンセル]** ボタンをクリックするまで、セル編集と行編集は閉じません。
- - `RowEdit` - 行全体ではなくセルのコミットは可能です。行は編集モードのままになり、行トランザクションは開いていると見なされます。**[完了]** を押しても、行をコミットまたは閉じません。**[キャンセル]** ボタンは、変更をコミットせずに編集プロセスとトランザクションを閉じます。
+
+- `RowEditEnter` - 行もセルも編集モードに入りません。
+- `CellEditEnter` - セル編集に入ることを防止します。[`rowEditable`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowEditable) が有効になっている場合、セル編集は禁止されたままですが、行編集がトリガーされます。
+- `CellEdit` - セル/行の編集を許可し、**[完了]** ボタンまたは **[Enter]** を押しても値または行のトランザクションはコミットされません。**[キャンセル]** ボタンをクリックするまで、セル編集と行編集は閉じません。
+- `RowEdit` - 行全体ではなくセルのコミットは可能です。行は編集モードのままになり、行トランザクションは開いていると見なされます。**[完了]** を押しても、行をコミットまたは閉じません。**[キャンセル]** ボタンは、変更をコミットせずに編集プロセスとトランザクションを閉じます。
 
 以下のサンプルは、実行中の編集実行シーケンスを示しています:
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-editing-lifecycle/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-editing-lifecycle/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-editing-lifecycle/" >
 </code-view>
 
 }
 
 ### 機能の統合
+
 セル/行が編集モードの場合、ユーザーはさまざまな方法でグリッドを操作できます。以下のテーブルは、特定の操作が現在の編集にどのように影響するかを示しています。
 
 | @@igComponent     | フィルタリング  | ソート | ページング | 移動 | ピン固定 | 非表示 | グループ化 | サイズ変更 | Escape | Enter | F2 | Tab | セル クリック | 新しい行の追加/削除/編集 |
@@ -164,31 +171,32 @@ public onSorting(event: ISortingEventArgs) {
 
 ## API リファレンス
 
-* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
-@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
-* [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
-* [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
-* [IgxDatePickerComponent スタイル]({environment:sassApiUrl}/themes#function-date-picker-theme)
-* [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
-* [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/themes#function-checkbox-theme)
-* [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay スタイル]({environment:sassApiUrl}/themes#function-overlay-theme)
+- [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
+- [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+@@if (igxName !== 'IgxTreeGrid') {- [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {- [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
+- [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
+- [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
+- [IgxDatePickerComponent スタイル]({environment:sassApiUrl}/themes#function-date-picker-theme)
+- [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
+- [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/themes#function-checkbox-theme)
+- [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
+- [IgxOverlay スタイル]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 
-* [igxGrid を使用して CRUD 操作の構築](../general/how-to/how-to-perform-crud.md)
-* [@@igComponent 概要](@@igMainTopic.md)
-* [列のデータ型](column-types.md#デフォルトのテンプレート)
-* [仮想化とパフォーマンス](virtualization.md)
-* [ページング](paging.md)
-* [フィルタリング](filtering.md)
-* [ソート](sorting.md)
-* [集計](summaries.md)
-* [列のピン固定](column-pinning.md)
-* [列のサイズ変更](column-resizing.md)
-* [選択](selection.md)
-@@if (igxName !== 'IgxHierarchicalGrid') {* [検索](search.md)}
+- [igxGrid を使用して CRUD 操作の構築](../general/how-to/how-to-perform-crud.md)
+- [@@igComponent 概要](@@igMainTopic.md)
+- [列のデータ型](column-types.md#デフォルトのテンプレート)
+- [仮想化とパフォーマンス](virtualization.md)
+- [ページング](paging.md)
+- [フィルタリング](filtering.md)
+- [ソート](sorting.md)
+- [集計](summaries.md)
+- [列のピン固定](column-pinning.md)
+- [列のサイズ変更](column-resizing.md)
+- [選択](selection.md)
+@@if (igxName !== 'IgxHierarchicalGrid') {- [検索](search.md)}

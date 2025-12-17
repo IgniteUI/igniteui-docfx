@@ -3,6 +3,7 @@
 title: Angular Grid のフィルター - Ignite UI for Angular
 _description: Angular フィルターを使用して、Ignite UI for Angular で特定のデータを返します。データ型の Excel スタイル フィルタリングを含む高度なフィルタリング オプションをお試しください。
 _keywords: angular フィルター, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular フィルター | フィルタリング可能なデータ ツリー グリッド | インフラジスティックス
 _description: Angular フィルターを使用して、Ignite UI for Angular で特定のデータを返します。データ型の Excel スタイル フィルタリングを含む高度なフィルタリング オプションをお試しください。
 _keywords: angular フィルター, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -19,36 +21,38 @@ _language: ja
 title: Angular Hierarchical Grid のフィルター - Ignite UI for Angular
 _description: Angular フィルターを使用して、Ignite UI for Angular で特定のデータを返します。データ型の Excel スタイル フィルタリングを含む高度なフィルタリング オプションをお試しください。
 _keywords: angular フィルター, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
 
 # Angular @@igComponent フィルタリング
+
 IgniteUI for [Angular @@igComponent コンポーネント](https://jp.infragistics.com/products/ignite-ui-angular/angular/components/grid/grid)は、クイック フィルタリング、[Excel スタイル フィルタリング](excel-style-filtering.md)、および[高度なフィルタリング](advanced-filtering.md)の 3 つの異なるフィルタリング タイプを提供します。それらのフィルタリング タイプは指定された基準を満たすレコードのみを表示できるようにします。Ignite UI の Material UI グリッドコンポーネントは、@@igComponent がバインドされているデータコンテナーを介して、Angular フィルター機能と広範なフィルター API を提供します。
 
 ## Angular @@igComponent フィルタリングの例
 
-以下のサンプルは、@@igComponent の**クイック フィルタリング**ユーザー エクスペリエンスを示しています。@@if(igxName!=='IgxHierarchicalGrid'){API [filter()]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) メソッドは、外部の _igxInputGroup_ コンポーネントを介して _ProductName_ 列に _contains_ 条件を適用するために使用されます。} 
+以下のサンプルは、@@igComponent の**クイック フィルタリング**ユーザー エクスペリエンスを示しています。@@if(igxName!=='IgxHierarchicalGrid'){API [filter()]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) メソッドは、外部の _igxInputGroup_ コンポーネントを介して _ProductName_ 列に _contains_ 条件を適用するために使用されます。}
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-filtering-sample/" alt="Angular @@igComponent フィルタリングの例">
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering/" alt="Angular @@igComponent フィルタリングの例">
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:610px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:610px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering/" alt="Angular @@igComponent フィルタリングの例">
 </code-view>
 
@@ -57,6 +61,7 @@ IgniteUI for [Angular @@igComponent コンポーネント](https://jp.infragisti
 <div class="divider--half"></div>
 
 ## 設定
+
 フィルタリングが有効かどうか、およびどのフィルタリング モードを使用するかを指定するために、@@igComponent は次のブール プロパティを公開します - [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowFiltering)、[`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowAdvancedFiltering)、[`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterMode) と [`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable)。
 
 **[allowFiltering]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowFiltering)** プロパティを使用して、以下のオプションを指定できます:
@@ -76,20 +81,24 @@ IgniteUI for [Angular @@igComponent コンポーネント](https://jp.infragisti
 - **false** - 対応する列のフィルタリングが無効になります。
 
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <@@igSelector [data]="data" [autoGenerate]="false" [allowFiltering]="true">
     <igx-column field="Name" header="Order Product"></igx-column>
     <igx-column field="Units" header="Units" dataType="number" [filterable]="false"></igx-column>
 </@@igSelector>
 ```
+
 }
 @@if (igxName !== 'IgxTreeGrid') {
+
 ```html
 <@@igSelector #grid1 [data]="data" [autoGenerate]="false" [allowFiltering]="true">
     <igx-column field="ProductName"></igx-column>
     <igx-column field="Price" [dataType]="'number'" [filterable]="false">
 </@@igSelector>
 ```
+
 }
 
 ただし、[高度なフィルタリング](advanced-filtering.md)を有効にするには、[`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowAdvancedFiltering) 入力プロパティを `true` に設定します。
@@ -115,6 +124,7 @@ IgniteUI for [Angular @@igComponent コンポーネント](https://jp.infragisti
 フィルタリング機能は、[`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowFiltering) 入力を `true` に設定すると @@igComponent コンポーネントで有効になります。デフォルトの [`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterMode) は `quickFilter` で、実行時には**変更できません**。特定の列に対してこの機能を無効にするには、[`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable) 入力を `false` に設定します。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <@@igSelector [data]="data" [autoGenerate]="false" [allowFiltering]="true">
     <igx-column field="ProductName"></igx-column>
@@ -122,8 +132,10 @@ IgniteUI for [Angular @@igComponent コンポーネント](https://jp.infragisti
     <igx-column field="Discontinued" [dataType]="'boolean'" [filterable]="false">
 </@@igSelector>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <@@igSelector [data]="data" [autoGenerate]="false" [allowFiltering]="true">
     <igx-column field="Name" header="Order Product"></igx-column>
@@ -131,14 +143,17 @@ IgniteUI for [Angular @@igComponent コンポーネント](https://jp.infragisti
     <igx-column field="Delivered" header="Delivered" [dataType]="'boolean'" [filterable]="false">
 </@@igSelector>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid [data]="localdata" [autoGenerate]="false" [allowFiltering]="true">
     <igx-column field="Artist" [filterable]="true"></igx-column>
     <igx-column field="Photo" [filterable]="false">
 </igx-hierarchical-grid>
 ```
+
 }
 
 > [!NOTE]
@@ -146,30 +161,34 @@ IgniteUI for [Angular @@igComponent コンポーネント](https://jp.infragisti
 
 列または複数の列は @@igComponent API でフィルターできます。@@igComponent は、このタスクに複数のメソッドを公開します ([`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter)、[`filterGlobal`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterGlobal)、[`clearFilter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearFilter))。
 
-*   [`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) - 単一の列または複数の列をフィルターします。
+- [`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) - 単一の列または複数の列をフィルターします。
 
 以下の 5 つのフィルタリング オペランド クラスが公開されます。
-   - [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html): カスタムフィルタリング条件の定義時に継承できるベース フィルタリング オペランドです。
-   - [`IgxBooleanFilteringOperand`]({environment:angularApiUrl}/classes/igxbooleanfilteringoperand.html) は、`boolean` 型のすべてのデフォルト フィルタリング条件を定義します。
-   - [`IgxNumberFilteringOperand`]({environment:angularApiUrl}/classes/igxnumberfilteringoperand.html) は、`numeric` 型のすべてのデフォルト フィルタリング条件を定義します。
-   - [`IgxStringFilteringOperand`]({environment:angularApiUrl}/classes/igxstringfilteringoperand.html) は、`string` 型のすべてのデフォルト フィルタリング条件を定義します。
-   - [`IgxDateFilteringOperand`]({environment:angularApiUrl}/classes/igxdatefilteringoperand.html) は、`Date` 型のすべてのデフォルト フィルタリング条件を定義します。
+- [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html): カスタムフィルタリング条件の定義時に継承できるベース フィルタリング オペランドです。
+- [`IgxBooleanFilteringOperand`]({environment:angularApiUrl}/classes/igxbooleanfilteringoperand.html) は、`boolean` 型のすべてのデフォルト フィルタリング条件を定義します。
+- [`IgxNumberFilteringOperand`]({environment:angularApiUrl}/classes/igxnumberfilteringoperand.html) は、`numeric` 型のすべてのデフォルト フィルタリング条件を定義します。
+- [`IgxStringFilteringOperand`]({environment:angularApiUrl}/classes/igxstringfilteringoperand.html) は、`string` 型のすべてのデフォルト フィルタリング条件を定義します。
+- [`IgxDateFilteringOperand`]({environment:angularApiUrl}/classes/igxdatefilteringoperand.html) は、`Date` 型のすべてのデフォルト フィルタリング条件を定義します。
 
 @@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
 // Single column filtering
 
 // Filter the `Order Product` column for values which `contains` the `myproduct` substring, ignoring case
 this.@@igObjectRef.filter('Order Product', 'myproduct', IgxStringFilteringOperand.instance().condition('contains'), true);
 ```
+
 }
 @@if (igxName !== 'IgxTreeGrid') {
+
 ```typescript
 // Single column filtering
 
 // Filter the `ProductName` column for values which `contains` the `myproduct` substring, ignoring case
 this.@@igObjectRef.filter('ProductName', 'myproduct', IgxStringFilteringOperand.instance().condition('contains'), true);
 ```
+
 }
 
 必要なパラメーターは列フィールド キーとフィルター用語のみです。条件および大文字と小文字の区別を設定しない場合、列プロパティで推測されます。フィルターが複数ある場合、このメソッドはフィルター式の配列を受け取ります。
@@ -178,6 +197,7 @@ this.@@igObjectRef.filter('ProductName', 'myproduct', IgxStringFilteringOperand.
 > フィルタリング操作でグリッドにバインドされているデータ ソースは変更されません。
 
 @@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
 // Multi column filtering
 
@@ -204,8 +224,10 @@ gridFilteringExpressionsTree.filteringOperands.push(priceFilteringExpressionsTre
 
 this.@@igObjectRef.filteringExpressionsTree = gridFilteringExpressionsTree;
 ```
+
 }
 @@if (igxName !== 'IgxTreeGrid') {
+
 ```typescript
 // Multi column filtering
 
@@ -232,9 +254,10 @@ gridFilteringExpressionsTree.filteringOperands.push(priceFilteringExpressionsTre
 
 this.@@igObjectRef.filteringExpressionsTree = gridFilteringExpressionsTree;
 ```
+
 }
 
-*   [`filterGlobal`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterGlobal) - 既存フィルターをクリアして新しいフィルター条件をすべての @@igComponent 列に適用します。
+- [`filterGlobal`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterGlobal) - 既存フィルターをクリアして新しいフィルター条件をすべての @@igComponent 列に適用します。
 
 ```typescript
 // Filter all cells for a value which contains `myproduct`
@@ -242,9 +265,10 @@ this.@@igObjectRef.filteringLogic = FilteringLogic.Or;
 this.@@igObjectRef.filterGlobal('myproduct', IgxStringFilteringOperand.instance().condition('contains'), false);
 ```
 
-*   [`clearFilter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearFilter) - 対象列から適用されたフィルターを削除します。引数がない場合、すべての列のフィルターをクリアします。
+- [`clearFilter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearFilter) - 対象列から適用されたフィルターを削除します。引数がない場合、すべての列のフィルターをクリアします。
 
 @@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
 // Remove the filtering state from the ProductName column
 this.@@igObjectRef.clearFilter('Order Product');
@@ -252,8 +276,10 @@ this.@@igObjectRef.clearFilter('Order Product');
 // Clears the filtering state from all columns
 this.@@igObjectRef.clearFilter();
 ```
+
 }
 @@if (igxName !== 'IgxTreeGrid') {
+
 ```typescript
 // Remove the filtering state from the ProductName column
 this.@@igObjectRef.clearFilter('ProductName');
@@ -261,6 +287,7 @@ this.@@igObjectRef.clearFilter('ProductName');
 // Clears the filtering state from all columns
 this.@@igObjectRef.clearFilter();
 ```
+
 }
 
 ## 初期のフィルター状態
@@ -268,6 +295,7 @@ this.@@igObjectRef.clearFilter();
 グリッドの初期フィルタリング状態の設定は、[`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringExpressionsTree) プロパティを [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) の配列に設定して各列をフィルターします。
 
 @@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
 constructor(private cdr: ChangeDetectorRef) { }
 
@@ -287,8 +315,10 @@ public ngAfterViewInit() {
     this.cdr.detectChanges();
 }
 ```
+
 }
 @@if (igxName !== 'IgxTreeGrid') {
+
 ```typescript
 constructor(private cdr: ChangeDetectorRef) { }
 
@@ -308,6 +338,7 @@ public ngAfterViewInit() {
     this.cdr.detectChanges();
 }
 ```
+
 }
 
 ### フィルター ロジック
@@ -315,7 +346,7 @@ public ngAfterViewInit() {
 @@igComponent コントロールの [`filteringLogic`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringLogic) プロパティは @@igComponent で複数の列のフィルターが解決する方法を制御します。@@igComponent API または @@igComponent の入力プロパティによって変更できます。
 
 ```typescript
-import { FilteringLogic } from 'igniteui-angular';
+import { FilteringLogic } from 'igniteui-angular/grids/core';
 // import { FilteringLogic } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
@@ -329,6 +360,7 @@ this.@@igObjectRef.filteringLogic = FilteringLogic.OR;
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
+
 ## リモート フィルタリング
 
 @@igComponent はリモート フィルタリングをサポートします。詳細については、[`@@igComponent リモート データ操作`](remote-data-operations.md) で説明されています。
@@ -337,6 +369,7 @@ this.@@igObjectRef.filteringLogic = FilteringLogic.OR;
 }
 
 ## カスタム フィルタリング オペランド
+
 フィルタリング メニューは、フィルタリング オペランド削除または変更してカスタマイズします。デフォルトでフィルタリング メニューは列のデータ型 ([`IgxBooleanFilteringOperand`]({environment:angularApiUrl}/classes/igxbooleanfilteringoperand.html)、[`IgxDateFilteringOperand`]({environment:angularApiUrl}/classes/igxdatefilteringoperand.html)、[`IgxNumberFilteringOperand`]({environment:angularApiUrl}/classes/igxnumberfilteringoperand.html)、[`IgxStringFilteringOperand`]({environment:angularApiUrl}/classes/igxstringfilteringoperand.html)) に基づいて特定のオペランドを含みます。これらのクラスまたは基本クラス [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) を拡張してフィルタリング メニュー項目の動作を変更できます。
 
 @@if (igxName !== 'IgxTreeGrid') {
@@ -409,7 +442,9 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
     }
 }
 ```
+
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <!-- grid-custom-filtering.component.html -->
 
@@ -423,8 +458,10 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
     </igx-column>
 </@@igSelector>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <!-- tree-grid-filtering-custom-sample.component.html -->
 
@@ -438,8 +475,10 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
     </igx-column>
 </@@igSelector>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <!-- hierarchical-grid-custom-filtering.component.html -->
 
@@ -453,55 +492,57 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
     </igx-column>
 </igx-hierarchical-grid>
 ```
+
 }
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-filter-conditions/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering-custom/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-   
-<code-view style="height:610px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+
+<code-view style="height:610px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-custom-filtering/" >
 </code-view>
 
 }
 
 ## フィルター セルの再テンプレート化
+
 フィルター セルを再テンプレート化するために、`igxFilterCellTemplate` とマークされたテンプレートを追加することができます。以下のサンプルでは、​​文字列カラムへの入力と日付列に IgxDatePicker が追加されています。ユーザーが値を入力または選択すると、文字列カラムには contains 演算子、日付列には equals 演算子を使用したフィルターが、グリッドのパブリック API を使用して適用されます。
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:500px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:500px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-filtering-template-sample/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:500px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:500px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering-template/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-   
-<code-view style="height:610px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+
+<code-view style="height:610px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering-template/" >
 </code-view>
 
@@ -509,8 +550,9 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 
 
 @@if (igxName === 'IgxTreeGrid') {
-    
+
 ## マッチング レコードのみのフィルタリング方式
+
 デフォルトでは、フィルタリングが適用された後、ツリー グリッド コンポーネントは、設定された基準に一致するレコードとその親をグレー表示されて、追加のコンテキストを提供します。ただし、場合によっては、親のトレースなしで、特定のフィルタリング条件に一致するレコードのみを表示したいことがあります。これは、`TreeGridMatchingRecordsOnlyFilteringStrategy` を使用して実現できます。
 
 ```html
@@ -520,7 +562,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 ```
 
 ```typescript
-import { TreeGridMatchingRecordsOnlyFilteringStrategy } from "igniteui-angular";
+import { TreeGridMatchingRecordsOnlyFilteringStrategy } from "igniteui-angular/grids/core";
 ...
 public matchingRecordsOnlyStrategy = new TreeGridMatchingRecordsOnlyFilteringStrategy();
 ```
@@ -615,27 +657,24 @@ $dark-button: button-theme(
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:500px" 
+<code-view style="height:500px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-filtering-style/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:500px" 
+<code-view style="height:500px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-filtering-style/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-   
-<code-view style="height:650px" 
-           no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering-style/" >
 </code-view>
 
@@ -645,45 +684,48 @@ $dark-button: button-theme(
 
 ## 既知の制限
 
-> [!NOTE] 
+> [!NOTE]
 > Firefox などの一部のブラウザーは、地域固有の小数点区切り文字をグループ化区切りと見なすため解析できず、無効になります。数値列フィルター値にそのような値を入力すると、数値の有効な部分のみがフィルター式に適用されます。詳細については、Firefox [問題](https://bugzilla.mozilla.org/show_bug.cgi?id=1199665)を参照してください。
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ### 6.1.0 の重大な変更
-* @@igxName `filteringExpressions` プロパティは削除されます。代わりに [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstree) を使用してください。
-* `filter_multiple` メソッドは削除されました。[`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) メソッドおよび [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringExpressionsTree) プロパティを代わりに使用してください。
-* [`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) メソッドに新しいシグネチャがあります。以下のパラメーターを受け付けます。
-  * `name` - フィルターする列の名前。
-  * `value` - フィルタリングに使用する値。
-  * `conditionOrExpressionTree` (オプション) - このパラメーターは、[`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html) または [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) 型のオブジェクトを受け付けます。簡単なフィルタリングが必要な場合、フィルタリング処理を引数として渡すことができます。高度なフィルタリングの場合、複雑なフィルタリング ロジックを含む式ツリーが引数として渡すことができます。
-  * `ignoreCase` (オプション) - フィルタリングで大文字と小文字を区別するかどうか。
-* [`filteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringDone) イベントは、フィルター列のフィルタリング状態を含む型 [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) の 1 パラメーターのみになりました。
-* フィルタリング オペランド: [`IFilteringExpression`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) 条件プロパティは、フィルタリング状態メソッドに直接参照せずに [`IFilteringExpression`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) を参照するようになりました。
-* [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) は、[`filters`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filters) プロパティを公開し、[`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) クラス参照を取得します。
-* カスタム フィルターは、[`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html) 型の処理で [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) の [`operations`]({environment:angularApiUrl}/classes/igxfilteringoperand.html#operations) プロパティを生成して @@igComponent 列で使用できます。
+
+- @@igxName `filteringExpressions` プロパティは削除されます。代わりに [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringexpressionstree) を使用してください。
+- `filter_multiple` メソッドは削除されました。[`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) メソッドおよび [`filteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringExpressionsTree) プロパティを代わりに使用してください。
+- [`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) メソッドに新しいシグネチャがあります。以下のパラメーターを受け付けます。
+  - `name` - フィルターする列の名前。
+  - `value` - フィルタリングに使用する値。
+  - `conditionOrExpressionTree` (オプション) - このパラメーターは、[`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html) または [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) 型のオブジェクトを受け付けます。簡単なフィルタリングが必要な場合、フィルタリング処理を引数として渡すことができます。高度なフィルタリングの場合、複雑なフィルタリング ロジックを含む式ツリーが引数として渡すことができます。
+  - `ignoreCase` (オプション) - フィルタリングで大文字と小文字を区別するかどうか。
+- [`filteringDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringDone) イベントは、フィルター列のフィルタリング状態を含む型 [`IFilteringExpressionsTree`]({environment:angularApiUrl}/interfaces/ifilteringexpressionstree.html) の 1 パラメーターのみになりました。
+- フィルタリング オペランド: [`IFilteringExpression`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) 条件プロパティは、フィルタリング状態メソッドに直接参照せずに [`IFilteringExpression`]({environment:angularApiUrl}/interfaces/ifilteringexpression.html) を参照するようになりました。
+- [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) は、[`filters`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filters) プロパティを公開し、[`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) クラス参照を取得します。
+- カスタム フィルターは、[`IFilteringOperation`]({environment:angularApiUrl}/interfaces/ifilteringoperation.html) 型の処理で [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html) の [`operations`]({environment:angularApiUrl}/classes/igxfilteringoperand.html#operations) プロパティを生成して @@igComponent 列で使用できます。
 }
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+- [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [@@igComponent 概要](@@igMainTopic.md)
-* [仮想化とパフォーマンス](virtualization.md)
-* [ページング](paging.md)
-* [ソート](sorting.md)
-* [集計](summaries.md)
-* [列移動](column-moving.md)
-* [列のピン固定](column-pinning.md)
-* [列のサイズ変更](column-resizing.md)
-* [選択](selection.md)
+- [@@igComponent 概要](@@igMainTopic.md)
+- [仮想化とパフォーマンス](virtualization.md)
+- [ページング](paging.md)
+- [ソート](sorting.md)
+- [集計](summaries.md)
+- [列移動](column-moving.md)
+- [列のピン固定](column-pinning.md)
+- [列のサイズ変更](column-resizing.md)
+- [選択](selection.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

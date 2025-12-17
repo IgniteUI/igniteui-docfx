@@ -3,6 +3,7 @@
 title: Angular Data Grid セル編集 - Ignite UI for Angular
 _description: Grid はセル内編集を使用しています。デフォルトのセル編集テンプレートがありますが、データ更新操作のカスタム テンプレートを定義することもできます。今すぐお試しください。
 _keywords: データ操作, ignite ui for angular, excel editing, excel 編集, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular Tree Grid のセル編集 - Ignite UI for Angular
 _description: Grid はセル内編集を使用しています。デフォルトのセル編集テンプレートがありますが、データ更新操作のカスタム テンプレートを定義することもできます。今すぐお試しください。
 _keywords: データ操作, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -19,6 +21,7 @@ _language: ja
 title: Angular Hierarchical Grid のセル編集 - Ignite UI for Angular
 _description: Grid はセル内編集を使用しています。デフォルトのセル編集テンプレートがありますが、データ更新操作のカスタム テンプレートを定義することもできます。今すぐお試しください。
 _keywords: データ操作, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -64,21 +67,21 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 
 
 編集可能なセルがフォーカスされたときに以下のいずれかの方法で特定のセルを編集モードにすることができます。
- - ダブルクリック;
- - シングル クリック - 以前選択したセルが編集モードで現在選択したセルが編集可能な場合のみ、シングル クリックで編集モードに入ります。以前選択したセルが編集モードではない場合、編集モードに入らずにシングル クリックでセルを選択します。
- - `Enter` キーの押下;
- - `F2` キーの押下;
+- ダブルクリック;
+- シングル クリック - 以前選択したセルが編集モードで現在選択したセルが編集可能な場合のみ、シングル クリックで編集モードに入ります。以前選択したセルが編集モードではない場合、編集モードに入らずにシングル クリックでセルを選択します。
+- `Enter` キーの押下;
+- `F2` キーの押下;
 
 **変更をコミットしない場合**も以下の方法で編集モードを終了できます。
- - `Escape` キーの押下;
- - *ソート*、*フィルターリング*、*検索*、*非表示* 操作の実行時。
+- `Escape` キーの押下;
+- **ソート**、**フィルターリング**、**検索**、**非表示**操作の実行時。
 
 変更を**コミット**しない場合も以下の方法で編集モードを終了できます。
- - `Enter` キーの押下;
- - `F2` キーの押下;
- - `Tab` キーの押下;
- - 他のセルをシングル クリック - @@igComponent で他のセルをクリックしたときに変更がサブミットされます。
- - その他の操作 (ページング、サイズ変更、ピン固定、移動など) は、編集モードを終了して変更を送信します。
+- `Enter` キーの押下;
+- `F2` キーの押下;
+- `Tab` キーの押下;
+- 他のセルをシングル クリック - @@igComponent で他のセルをクリックしたときに変更がサブミットされます。
+- その他の操作 (ページング、サイズ変更、ピン固定、移動など) は、編集モードを終了して変更を送信します。
 
 > [!NOTE]
 > セルは、垂直/水平方向へのスクロールや @@igComponent 以外をクリックした場合も編集モードのままです。セル編集と行編集両方で有効です。
@@ -88,30 +91,37 @@ Ignite UI for Angular @@igComponent コンポーネントは、Angular CRUD 操�
 プライマリキーが定義されている場合のみ @@igxName API でもセル値を変更することができます。
 
 @@if (igxName === 'IgxGrid') {
+
 ```typescript
 public updateCell() {
     this.grid1.updateCell(newValue, rowID, 'ReorderLevel');
 }
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
 public updateCell() {
     this.treeGrid.updateCell(newValue, rowID, 'Age');
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```typescript
 public updateCell() {
     this.hierarchicalGrid.updateCell(newValue, rowID, 'Age');
 }
 ```
+
 }
 
 セルを更新するその他の方法として [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) の [`update`]({environment:angularApiUrl}/classes/igxgridcell.html#update) メソッドで直接更新する方法があります。
 
 @@if (igxName === 'IgxGrid') {
+
 ```typescript
 public updateCell() {
     const cell = this.grid1.getCellByColumn(rowIndex, 'ReorderLevel');
@@ -120,8 +130,10 @@ public updateCell() {
     cell.update(70);
 }
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
 public updateCell() {
     const cell = this.treeGrid.getCellByColumn(rowIndex, 'Age');
@@ -130,8 +142,10 @@ public updateCell() {
     cell.update(9999);
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```typescript
 public updateCell() {
     const cell = this.hierarchicalGrid.getCellByColumn(rowIndex, 'ReorderLevel');
@@ -140,6 +154,7 @@ public updateCell() {
     cell.update(70);
 }
 ```
+
 }
 
 ### セル編集テンプレート
@@ -159,6 +174,7 @@ public updateCell() {
     </ng-template>
 </igx-column>
 ```
+
 このコードは、`Race`、`Class`、および `Alignment` 列のセルに [`IgxSelectComponent`](../select.md) を実装する以下のサンプルで使用されています。
 
 
@@ -191,7 +207,7 @@ Excel スタイル編集を使用すると、Excel を使用する場合と同�
 
 このカスタム機能を実装するには、グリッドのイベントを使用します。最初にグリッドの keydown イベントにフックし、そこから 2 つの機能を実装できます。
 
-* 常時編集モード
+- 常時編集モード
 
 ```typescript
 public keydownHandler(event) {
@@ -219,7 +235,7 @@ public keydownHandler(event) {
 }
 ```
 
-  * `Enter`/`Shift + Enter` ナビゲーション
+- `Enter`/`Shift + Enter` ナビゲーション
 
 ```typescript
 if (key == 13) {
@@ -238,6 +254,7 @@ if (key == 13) {
     });
 }
 ```
+
 次の適格なインデックスを見つけるための重要な部分は以下のようになります。
 
 ```typescript
@@ -283,14 +300,17 @@ return dataView.findIndex((rec, index) => index > currentRowIndex && this.isEdit
 @@igComponent コンポーネントは、提供したデータをデータ ソースに追加する [`addRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#addRow) メソッドを公開します。
 
 @@if (igxName === 'IgxGrid') {
+
 ```typescript
 // Adding a new record
 // Assuming we have a `getNewRecord` method returning the new row data.
 const record = this.getNewRecord();
 this.grid.addRow(record);
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
 public addNewChildRow() {
     // Adding a new record
@@ -300,8 +320,10 @@ public addNewChildRow() {
     this.treeGrid.addRow(record, 1);
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```typescript
 public addRow() {
     // Adding a new record
@@ -310,6 +332,7 @@ public addRow() {
     this.hierarchicalGrid.addRow(record, 1);
 }
 ```
+
 }
 
 ### データを @@igComponent で更新
@@ -317,6 +340,7 @@ public addRow() {
 @@igComponent のデータ更新は、**グリッドでプライマリキーが定義されている場合のみ** [`updateRow`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#updateRow) と [`updateCell`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#updateCell) メソッドで行うことができます。セルと行の値またはそのいずれかを各 `update` メソッドで直接更新できます。
 
 @@if (igxName === 'IgxGrid') {
+
 ```typescript
 // Updating the whole row
 this.grid.updateRow(newData, this.selectedCell.cellID.rowID);
@@ -331,8 +355,10 @@ this.selectedCell.update(newData);
 const row = this.grid.getRowByKey(rowID);
 row.update(newData);
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
 // Updating the whole row
 this.treeGrid.updateRow(newData, this.selectedCell.cellID.rowID);
@@ -347,8 +373,10 @@ this.selectedCell.update(newData);
 const row = this.treeGrid.getRowByKey(rowID);
 row.update(newData);
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```typescript
 // Updating the whole row
 this.hierarchicalGrid.updateRow(newData, this.selectedCell.cellID.rowID);
@@ -363,6 +391,7 @@ this.selectedCell.update(newData);
 const row = this.hierarchicalGrid.getRowByKey(rowID);
 row.update(newData);
 ```
+
 }
 
 ### @@igComponent からデータを削除
@@ -370,6 +399,7 @@ row.update(newData);
 [`deleteRow()`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#deleteRow) メソッドは、プライマリキーが定義されている場合に指定した行のみを削除することに注意してください。
 
 @@if (igxName === 'IgxGrid') {
+
 ```typescript
 // Delete row through Grid API
 this.grid.deleteRow(this.selectedCell.cellID.rowID);
@@ -377,8 +407,10 @@ this.grid.deleteRow(this.selectedCell.cellID.rowID);
 const row = this.grid.getRowByIndex(rowIndex);
 row.delete();
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
 // Delete row through Tree Grid API
 this.treeGrid.deleteRow(this.selectedCell.cellID.rowID);
@@ -386,8 +418,10 @@ this.treeGrid.deleteRow(this.selectedCell.cellID.rowID);
 const row = this.treeGrid.getRowByIndex(rowIndex);
 row.delete();
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```typescript
 // Delete row through Grid API
 this.hierarchicalGrid.deleteRow(this.selectedCell.cellID.rowID);
@@ -395,8 +429,10 @@ this.hierarchicalGrid.deleteRow(this.selectedCell.cellID.rowID);
 const row = this.hierarchicalGrid.getRowByIndex(rowIndex);
 row.delete();
 ```
+
 }
 **@@igSelector** に関係なく、ボタンのクリックなどのユーザー インタラクションに関連付けできます。
+
 ```html
 <button igxButton igxRipple (click)="deleteRow($event)">Delete Row</button>
 ```
@@ -404,6 +440,7 @@ row.delete();
 <div class="divider--half"></div>
 
 ### 編集イベントでのセル検証
+
 グリッドの編集イベントを使用して、ユーザーがグリッドを操作する方法を変更できます。
 この例では、[`cellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cellEdit) イベントにバインドすることにより、入力されたデータに基づいてセルを検証します。セルの新しい値が事前定義された基準を満たしていない場合、イベントをキャンセルすることでデータソースに到達しないようにします (`event.cancel = true`)。また、[`IgxToast`](../toast.md) を使用してカスタム エラーメッセージを表示します。
 
@@ -419,6 +456,7 @@ row.delete();
 `cellEdit` は、セルの値がコミットされる直前に発生します。`handleCellEdit` の定義では、アクションを実行する前に特定の列を確認する必要があります。
 
 @@if (igxName === 'IgxGrid') {
+
 ```typescript
 export class MyGridEventsComponent {
     public handleCellEdit(event: IGridEditEventArgs): void {
@@ -436,9 +474,11 @@ export class MyGridEventsComponent {
     }
 }
 ```
+
 **注文済み**列の下のセルに入力された値が使用可能量 (**在庫数**の値) よりも大きい場合、編集はキャンセルされ、エラー メッセージ付きのトーストが表示されます。
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
 export class MyTreeGridEventsComponent {
     public handleCellEdit(event: IGridEditEventArgs): void {
@@ -459,9 +499,11 @@ export class MyTreeGridEventsComponent {
     }
 }
 ```
+
 ここでは、2 つの列を検証しています。ユーザーが従業員の**年齢** (18歳未満) または**雇用日** (将来の日付) に無効な値を設定しようとすると、編集がキャンセルされ (値は送信されません)、エラー メッセージ付きのトースターが表示されます。
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```typescript
 export class MyHGridEventsComponent {
     public handleCellEdit(event: IGridEditEventArgs) {
@@ -483,6 +525,7 @@ export class MyHGridEventsComponent {
     }
 }
 ```
+
 ここでは、2 つの列を検証しています。ユーザーがアーティストの**デビュー**年またはアルバムの**発売日**を変更しようとした際に、グリッドは今日よりも後の日付を許可しません。
 }
 
@@ -607,29 +650,30 @@ $custom-grid-theme: grid-theme(
 
 ## API リファレンス
 
-* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
-@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
-* [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
-* [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
-* [IgxDatePickerComponent スタイル]({environment:sassApiUrl}/themes#function-date-picker-theme)
-* [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
-* [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/themes#function-checkbox-theme)
-* [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay スタイル]({environment:sassApiUrl}/themes#function-overlay-theme)
+- [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
+- [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+@@if (igxName !== 'IgxTreeGrid') {- [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {- [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
+- [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
+- [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
+- [IgxDatePickerComponent スタイル]({environment:sassApiUrl}/themes#function-date-picker-theme)
+- [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
+- [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/themes#function-checkbox-theme)
+- [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
+- [IgxOverlay スタイル]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [igxGrid を使用して CRUD 操作の構築](../general/how-to/how-to-perform-crud.md)
-* [@@igComponent 概要](@@igMainTopic.md)
-* [仮想化とパフォーマンス](virtualization.md)
-* [ページング](paging.md)
-* [フィルタリング](filtering.md)
-* [ソート](sorting.md)
-* [集計](summaries.md)
-* [列のピン固定](column-pinning.md)
-* [列のサイズ変更](column-resizing.md)
-* [選択](selection.md)
-@@if (igxName !== 'IgxHierarchicalGrid') {* [検索](search.md)}
+- [igxGrid を使用して CRUD 操作の構築](../general/how-to/how-to-perform-crud.md)
+- [@@igComponent 概要](@@igMainTopic.md)
+- [仮想化とパフォーマンス](virtualization.md)
+- [ページング](paging.md)
+- [フィルタリング](filtering.md)
+- [ソート](sorting.md)
+- [集計](summaries.md)
+- [列のピン固定](column-pinning.md)
+- [列のサイズ変更](column-resizing.md)
+- [選択](selection.md)
+@@if (igxName !== 'IgxHierarchicalGrid') {- [検索](search.md)}

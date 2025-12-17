@@ -6,7 +6,7 @@ _keywords: batch editing, igniteui for angular, infragistics
 
 # How to use the Transaction service
 
-You may get advantage of the [`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html) when using any component that needs to preserve the state of its data source and to commit many transactions at once. 
+You may get advantage of the [`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html) when using any component that needs to preserve the state of its data source and to commit many transactions at once.
 
 When working with the Ignite UI for Angular grid components, you may use the [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) and [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) that are integrated with the grids and provide batch editing out of the box. However, if you need to use transactions with any other Ignite UI for Angular or custom component, you may again use the [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) and implement similar behavior.
 
@@ -15,8 +15,8 @@ When working with the Ignite UI for Angular grid components, you may use the [`i
 In this topic we will use [`igxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component to demonstrate how to enable transactions. We will demonstrate how to add transactions, how to transform the data through a [pipe](https://angular.io/guide/pipes) and how to visually update the view in order to let the user see the changes that are about to be committed.
 
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/services/transaction-base/" alt="Angular How to use the Transaction service Example">
 </code-view>
 
@@ -55,7 +55,7 @@ export class TransactionBaseComponent { }
 In our `ts` file, we should import [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) from the `igniteui-angular` library, as well as the [`State`]({environment:angularApiUrl}/interfaces/state.html) and [`Transaction`]({environment:angularApiUrl}/interfaces/transaction.html) interfaces and the [`TransactionType`]({environment:angularApiUrl}/enums/TransactionType.html) enum, which will be needed by our application:
 
 ```typescript
-import { IgxTransactionService, State, Transaction, TransactionType } from 'igniteui-angular';
+import { IgxTransactionService, State, Transaction, TransactionType } from 'igniteui-angular/core';
 // import { IgxTransactionService, State, Transaction, TransactionType } from '@infragistics/igniteui-angular'; for licensed package
 ```
 
@@ -135,11 +135,12 @@ export class TransactionBasePipe implements PipeTransform {
 ### Define edit functionality
 
 The second list item contains an edit button, which updates the item's data.
+
 ```html
 <igx-icon igxListAction (click)="onEdit()" *ngIf="item.id === 1 && item.price !== '$999'">edit</igx-icon>
 ```
 
-When the button is pressed, inside the `onEdit` event handler, an 'UPDATE' transaction is created: 
+When the button is pressed, inside the `onEdit` event handler, an 'UPDATE' transaction is created:
 
 ```typescript
 public onEdit(): void {
@@ -174,7 +175,7 @@ The third list item contains a delete button, which deletes the item's data.
 ```
 
 
-When the button is pressed, inside `onDelete` event handler, a 'DELETE' transaction is created: 
+When the button is pressed, inside `onDelete` event handler, a 'DELETE' transaction is created:
 
 ```typescript
 public onDelete(): void {
@@ -207,7 +208,7 @@ At the end of the list an ADD button is added, which adds a new item to the list
 <button igxButton (click)="onAdd()" [disabled]="itemAdded(4)">Add New</button>```
 ```
 
-When the button is pressed, inside the `onAdd` event handler, an 'ADD' transaction is created: 
+When the button is pressed, inside the `onAdd` event handler, an 'ADD' transaction is created:
 
 ```typescript
 public onAdd(): void {
@@ -277,6 +278,7 @@ public onCommit(): void {
 }
 
 ```
+
 If we are using the [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) we can also use an overload of the [`commit`]({environment:angularApiUrl}/classes/igxtransactionservice.html#commit) method which expects primaryKey and childDataKey as arguments.
 
 ```typescript
@@ -301,8 +303,9 @@ public onClear(): void {
 ```
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [Transaction Service API]({environment:angularApiUrl}/interfaces/transactionservice.html)
-* [Transaction Service](transaction.md)
-* [Transaction Service class hierarchy](transaction-classes.md)
+- [Transaction Service API]({environment:angularApiUrl}/interfaces/transactionservice.html)
+- [Transaction Service](transaction.md)
+- [Transaction Service class hierarchy](transaction-classes.md)

@@ -2,6 +2,7 @@
 title: Angular マスター - 詳細 Grid - Ignite UI for Angular
 _description: Ignite UI Angular Grid を使用して行データの展開可能な詳細ビュー テンプレートを定義します。マスター - 詳細スタイル データを階層構造で表示する場合に便利です。
 _keywords: マスターと詳細, igniteui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 
@@ -14,12 +15,10 @@ _language: ja
 ## Angular Grid Master-Detail の例
 
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:lobDemosBaseUrl}"
            iframe-src="{environment:lobDemosBaseUrl}/grid/grid-master-detail" alt="Angular Grid Master-Detail の例">
 </code-view>
-
-
 
 ## 構成
 
@@ -68,14 +67,14 @@ Master-detail モードで表示するように `igxGrid` を設定するには�
 
 - 詳細行にフォーカスがある場合:
 
-    - `上矢印` - 前の行のセルにフォーカスし、1 つ上の行へ移動します。
-    - `下矢印` - 次の行のセルにフォーカスし、1 つ下の行へ移動します。
-    - `Tab` - フォーカス可能な要素がある場合、テンプレート内の次のフォーカス可能な要素にフォーカスを移動します。そうでない場合は、次のグリッド行に移動します。
-    - `Shift + Tab` - 前の行にフォーカスします。
+  - `上矢印` - 前の行のセルにフォーカスし、1 つ上の行へ移動します。
+  - `下矢印` - 次の行のセルにフォーカスし、1 つ下の行へ移動します。
+  - `Tab` - フォーカス可能な要素がある場合、テンプレート内の次のフォーカス可能な要素にフォーカスを移動します。そうでない場合は、次のグリッド行に移動します。
+  - `Shift + Tab` - 前の行にフォーカスします。
 
 - エキスパンダーのデータ行にフォーカスがある場合:
-    - `Alt + 右矢印/下矢印` - 行を展開します。
-    - `Alt + 左矢印/下矢印` - 行を縮小します。
+  - `Alt + 右矢印/下矢印` - 行を展開します。
+  - `Alt + 左矢印/下矢印` - 行を縮小します。
 
 ## 既知の問題と制限
 
@@ -91,10 +90,11 @@ Master-detail モードで表示するように `igxGrid` を設定するには�
 <div class="divider--half"></div>
 
 ## API リファレンス
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
-* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
-* [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
-* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
+
+- [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+- [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+- [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
+- [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
+- [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
+- [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)

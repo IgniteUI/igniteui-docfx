@@ -2,6 +2,7 @@
 title: Angular 軸レイアウト | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular 軸レイアウト
 _keywords: Angular Axis, Layouts, Location, Position, Share, Multiple, Crossing, Infragistics, Angular 軸, レイアウト, 位置, 配置, 共有, 複数, 交差, インフラジスティックス
+_license: commercial
 mentionedTypes: [ "DomainChart", "CategoryChart", "XYChart", "DomainChart", "XamDataChart", "Axis", "AxisLabelSettings", "ScatterSplineSeries", "TimeXAxis" ]
 _language: ja
 ---
@@ -70,8 +71,8 @@ Angular [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-
 
 関連するチャート機能の詳細については、以下のトピックを参照してください。
 
-*   [軸グリッド線](chart-axis-gridlines.md)
-*   [軸オプション](chart-axis-options.md)
+- [軸グリッド線](chart-axis-gridlines.md)
+- [軸オプション](chart-axis-options.md)
 
 ## API リファレンス
 

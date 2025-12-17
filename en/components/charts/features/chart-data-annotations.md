@@ -2,6 +2,7 @@
 title: Angular Chart Data Annotations | Data Visualization | Infragistics
 _description: Infragistics' Angular Chart Data Annotations
 _keywords: Angular Charts, Data Annotations, Infragistics
+_license: commercial
 mentionedTypes: ["DomainChart", "CategoryChart", "CrosshairLayer", "FinalValueLayer", "CalloutLayer"]
 namespace: Infragistics.Controls.Charts
 ---
@@ -9,6 +10,9 @@ namespace: Infragistics.Controls.Charts
 # Angular Chart Data Annotations <label class="badge badge--preview">PREVIEW</label>
 
 In the Angular chart, the data annotation layers allow you to annotate data plotted in Data Chart with sloped lines, vertical/horizontal lines (aka axis slices), vertical/horizontal strips (targeting specific axis), rectangles, and even parallelograms (aka bands). With data-binding supported, you can create as many annotations as you want to customize your charts. Also, you can combine different annotation layers and you can overlay text inside of plot area to annotated important events, patterns, and regions in your data.
+
+> \[!Note]
+> These features are designed to support cartesian axes and does not currently support radius or angle axes.
 
 For example, you can annotates stock prices with stock events and patterns.
 
@@ -100,13 +104,13 @@ For example, you can use DataAnnotationBandLayer to annotate range of growth in 
 
 The following is a list of API members mentioned in the above sections:
 
-*   `TargetAxis`: This property specifies which axis should have an enabled DataAnnotationBandLayer, DataAnnotationLineLayer, DataAnnotationRectLayer.
-*   `DataSource`: This property binds data to the annotation layer to provide the precise shape.
-*   `StartValueXMemberPath`: This property is a mapping to the name of the data column with x-positions for the start of the DataAnnotationBandLayer, DataAnnotationLineLayer, DataAnnotationRectLayer.
-*   `StartValueYMemberPath`: This property is a mapping to the name of data column with y-positions for the start of the DataAnnotationBandLayer, DataAnnotationLineLayer, DataAnnotationRectLayer.
-*   `EndValueXMemberPath`: This property is a mapping to the data column with x-positions for the end of the DataAnnotationBandLayer, DataAnnotationLineLayer, DataAnnotationRectLayer.
-*   `EndValueYMemberPath`: This property is a mapping to the data column with y-positions for end of the DataAnnotationBandLayer, DataAnnotationLineLayer, DataAnnotationRectLayer.
-*   `StartLabelXMemberPath`: This property is a mapping to the data column representing the overlay label for the starting position of the xAxis along the axis.
-*   `StartLabelXDisplayMode` | `StartLabelYDisplayMode` | `EndLabelXDisplayMode` | `EndLabelYDisplayMode` | `CenterLabelXDisplayMode`: These properties specify what should annotation labels display on starting, ending, or center of the annotation shape, e.g. mapped data value, mapped data label, axis value, or hide a given annotation label.
-*   `StartLabelYMemberPath`: This property is a mapping to the data column representing the axis label for the starting position of [`IgxDataAnnotationBandLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdataannotationbandlayercomponent.html), [`IgxDataAnnotationLineLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdataannotationlinelayercomponent.html), [`IgxDataAnnotationRectLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdataannotationrectlayercomponent.html) on the y-axis.
-*   `EndLabelYMemberPath`: This property is a mapping to the data column representing the axis label for the ending position of [`IgxDataAnnotationBandLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdataannotationbandlayercomponent.html), [`IgxDataAnnotationLineLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdataannotationlinelayercomponent.html), [`IgxDataAnnotationRectLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdataannotationrectlayercomponent.html) on the y-axis.
+- `TargetAxis`: This property specifies which axis should have an enabled DataAnnotationBandLayer, DataAnnotationLineLayer, DataAnnotationRectLayer.
+- `DataSource`: This property binds data to the annotation layer to provide the precise shape.
+- `StartValueXMemberPath`: This property is a mapping to the name of the data column with x-positions for the start of the DataAnnotationBandLayer, DataAnnotationLineLayer, DataAnnotationRectLayer.
+- `StartValueYMemberPath`: This property is a mapping to the name of data column with y-positions for the start of the DataAnnotationBandLayer, DataAnnotationLineLayer, DataAnnotationRectLayer.
+- `EndValueXMemberPath`: This property is a mapping to the data column with x-positions for the end of the DataAnnotationBandLayer, DataAnnotationLineLayer, DataAnnotationRectLayer.
+- `EndValueYMemberPath`: This property is a mapping to the data column with y-positions for end of the DataAnnotationBandLayer, DataAnnotationLineLayer, DataAnnotationRectLayer.
+- `StartLabelXMemberPath`: This property is a mapping to the data column representing the overlay label for the starting position of the xAxis along the axis.
+- `StartLabelXDisplayMode` | `StartLabelYDisplayMode` | `EndLabelXDisplayMode` | `EndLabelYDisplayMode` | `CenterLabelXDisplayMode`: These properties specify what should annotation labels display on starting, ending, or center of the annotation shape, e.g. mapped data value, mapped data label, axis value, or hide a given annotation label.
+- `StartLabelYMemberPath`: This property is a mapping to the data column representing the axis label for the starting position of [`IgxDataAnnotationBandLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdataannotationbandlayercomponent.html), [`IgxDataAnnotationLineLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdataannotationlinelayercomponent.html), [`IgxDataAnnotationRectLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdataannotationrectlayercomponent.html) on the y-axis.
+- `EndLabelYMemberPath`: This property is a mapping to the data column representing the axis label for the ending position of [`IgxDataAnnotationBandLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdataannotationbandlayercomponent.html), [`IgxDataAnnotationLineLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdataannotationlinelayercomponent.html), [`IgxDataAnnotationRectLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdataannotationrectlayercomponent.html) on the y-axis.

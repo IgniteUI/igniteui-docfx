@@ -1,7 +1,8 @@
 ---
-title: Angular スプリッター | 分割されたペイン |  Ignite UI for Angular | インフラジスティックス
+title: Angular スプリッター | 分割されたペイン |  Ignite UI for Angular | インフラジスティックス | MITライセンス
 _description: Angular Splitter コンポーネントを使用して、ビューを水平または垂直に複数の縮小可能なスプリット ペインに分割する単純な分割レイアウトを作成します。
 _keywords: angular splitter, angular splitterコンポーネント, angular 分割ビュー コンポーネント, angular ui コンポーネント, igniteui for angular, インフラジスティックス
+_license: MIT
 ---
 
 # Angular Splitter (スプリッター) コンポーネントの概要
@@ -10,8 +11,8 @@ Ignite UI for Angular Splitter コンポーネントはレイアウトを作成�
 
 ## Angular Splitter の例
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/splitter-horizontal-sample/" alt="Angular スプリッターの例">
 </code-view>
 
@@ -33,7 +34,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 ```typescript
 // app.module.ts
 ...
-import { IgxSplitterModule } from 'igniteui-angular';
+import { IgxSplitterModule } from 'igniteui-angular/splitter';
 // import { IgxSplitterModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -49,7 +50,7 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IGX_SPLITTER_DIRECTIVES } from 'igniteui-angular';
+import { IGX_SPLITTER_DIRECTIVES } from 'igniteui-angular/splitter';
 // import { IGX_SPLITTER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -96,9 +97,11 @@ Ignite UI for Angular Splitter モジュールまたはディレクティブを�
 ### 方向
 
 スプリッターは、[`type`]({environment:angularApiUrl}/classes/igxsplittercomponent.html#type) 入力によって定義される垂直または水平にすることができます。デフォルト値は Vertical です。
+
 ```typescript
 public type = SplitterType.Horizontal;
 ```
+
 ```html
 <igx-splitter [type]="type">
     <igx-splitter-pane>
@@ -125,14 +128,15 @@ public type = SplitterType.Horizontal;
 </igx-splitter>
 ```
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/splitter-collapsible-sample/" >
 </code-view>
 
 ### ペインの構成
 
 **igxSplitterPane** コンポーネントには、いくつかのプロパティが含まれています。[`size`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#size) プロパティを使用してペインの初期サイズを設定できます。[`minSize`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#minSize) および [`maxSize`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#maxSize) プロパティを使用して、ペインの最小または最大サイズを設定できます。`minSize` および `maxSize` を超えるサイズ変更は許可されません。
+
 ```html
 <igx-splitter>
     <igx-splitter-pane size='300px' minSize='100px'>
@@ -143,7 +147,9 @@ public type = SplitterType.Horizontal;
     </igx-splitter-pane>
 </igx-splitter>
 ```
+
 [`resizable`]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html#resizable) プロパティを **false** に設定してペインのサイズ変更を禁止することもできます。
+
 ```html
 <igx-splitter>
     <igx-splitter-pane [resizable]='false'>
@@ -158,10 +164,12 @@ public type = SplitterType.Horizontal;
 ### ネストされたペイン
 
 スプリッター コンポーネントをネストして、スプリッター ペイン内により複雑なレイアウトを作成できます。
+
 ```typescript
 public typeHorizontal = SplitterType.Horizontal;
 public typeVertical = SplitterType.Vertical;
 ```
+
 ```html
 <igx-splitter style='height: 30vh;' [type]='typeHorizontal' >
     <igx-splitter-pane>
@@ -189,8 +197,8 @@ public typeVertical = SplitterType.Vertical;
 
 ### デモ
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:dvDemosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:dvDemosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/splitter-nested-sample/" >
 </code-view>
 
@@ -200,6 +208,7 @@ public typeVertical = SplitterType.Vertical;
 スプリッター コンポーネントではキーボード ナビゲーションがデフォルトで有効です。以下は、スプリッター バーをフォーカスして以下のキーの組み合わせを押した場合の動作を示します。
 
 ### キーの組み合わせ
+
 - `上矢印` - 垂直スプリッターでスプリッター バーを上へ移動
 - `下矢印` - 垂直スプリッターでスプリッター バーを下へ移動
 - `左矢印` - 水平スプリッターでスプリッター バーを左へ移動
@@ -210,6 +219,30 @@ public typeVertical = SplitterType.Vertical;
 - `Ctrl + 右矢印` - 水平スプリッターでペインを展開/縮小
 
 ## スタイル設定
+
+### Splitter テーマのプロパティ マップ
+
+プライマリ プロパティを変更すると、関連するすべての依存プロパティが自動的に更新され、変更が反映されます。
+
+<table>
+    <thead>
+      <tr>
+        <th>プライマリ プロパティ</th>
+        <th>依存プロパティ</th>
+        <th>説明</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="primary">
+        <td><strong>$bar-color</strong></td>
+        <td>$handle-color</td>
+        <td>バーのドラッグ ハンドルの色</td>
+      </tr>
+      <tr class="dependent"><td></td><td>$expander-color</td><td>矢印拡張の色</td></tr>
+      <tr class="dependent"><td></td><td>$focus-color</td><td>フォーカス時のスプリッター バーの色</td></tr>
+    </tbody>
+</table>
+
 **igxSplitter** コンポーネントのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
@@ -232,7 +265,7 @@ $splitter-theme: splitter-theme(
 );
 ```
 
-### CSS 変数の使用 
+### CSS 変数の使用
 
 次に Splitter のカスタム テーマを渡します。
 
@@ -241,13 +274,46 @@ $splitter-theme: splitter-theme(
 ```
 
 ### デモ
+
 これは、新しいテーマを適用した結果です。
 
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/splitter-styling-sample/" >
 </code-view>
+
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して splitter をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-splitter`、`dark-splitter`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[splitter-theme]({environment:sassApiUrl}/themes#function-splitter-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-splitter
+  class="!light-splitter ![--bar-color:#7B9E89]">
+  ...
+</igx-splitter>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
 
 ### カスタム サイズ変更
 
@@ -266,29 +332,31 @@ igx-splitter {
   <igx-splitter></igx-splitter>
 </div>
 ```
+
 ```scss
 .my-app {
   --igx-splitter-size: 10px;
 }
 ```
 
-
 ## API リファレンス
+
 <div class="divider--half"></div>
 
-* [IgxSplitterComponent]({environment:angularApiUrl}/classes/igxsplittercomponent.html)
-* [IgxSplitterPaneComponent]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html)
-* [SplitterType]({environment:angularApiUrl}/enums/splittertype.html)
-* [IgxSplitterComponent スタイル]({environment:sassApiUrl}/themes#function-splitter-theme)
+- [IgxSplitterComponent]({environment:angularApiUrl}/classes/igxsplittercomponent.html)
+- [IgxSplitterPaneComponent]({environment:angularApiUrl}/classes/igxsplitterpanecomponent.html)
+- [SplitterType]({environment:angularApiUrl}/enums/splittertype.html)
+- [IgxSplitterComponent スタイル]({environment:sassApiUrl}/themes#function-splitter-theme)
 
 <div class="divider--half"></div>
 
 ## テーマの依存関係
-* [IgxDropDown テーマ]({environment:sassApiUrl}/themes#function-drop-down-theme)
-* [IgxIcon スタイル]({environment:sassApiUrl}/themes#function-icon-theme)
+
+- [IgxDropDown テーマ]({environment:sassApiUrl}/themes#function-drop-down-theme)
+- [IgxIcon スタイル]({environment:sassApiUrl}/themes#function-icon-theme)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
 

@@ -1,7 +1,8 @@
 ---
-title: Tooltip - ネイティブ Angular | Ignite UI for Angular
+title: Tooltip - ネイティブ Angular | Ignite UI for Angular | MITライセンス
 _description: Ignite UI for Angular Tooltip and Tooltip Target ディクティブは、ツールチップを作成する機能と要素へアタッチする機能が含まれます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular ツールチップ ディレクティブ, Angular ツールチップ コントロール, Angular ツールチップ, ツールチップ ターゲット
+_license: MIT
 _language: ja
 ---
 
@@ -12,8 +13,8 @@ _language: ja
 
 ## Angular Tooltip の例
 
-<code-view style="height:150px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:150px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/tooltip-simple/" alt="Angular Tooltip の例">
 </code-view>
 
@@ -35,7 +36,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 ...
-import { IgxTooltipModule } from 'igniteui-angular';
+import { IgxTooltipModule } from 'igniteui-angular/directives/tooltip';
 // import { IgxTooltipModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -50,7 +51,8 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IGX_TOOLTIP_DIRECTIVES, IgxAvatarComponent } from 'igniteui-angular';
+import { IGX_TOOLTIP_DIRECTIVES } from 'igniteui-angular/tooltip';
+import { IgxAvatarComponent } from 'igniteui-angular/avatar';
 // import { IGX_TOOLTIP_DIRECTIVES, IgxAvatarComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -85,7 +87,8 @@ Ignite UI for Angular Tooltip モジュールまたはディレクティブを�
 ```typescript
 // app.module.ts
 
-import { IgxTooltipModule, IgxAvatarModule } from 'igniteui-angular';
+import { IgxTooltipModule } from 'igniteui-angular/tooltip';
+import { IgxAvatarModule } from 'igniteui-angular/avatar';
 // import { IgxTooltipModule, IgxAvatarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -149,7 +152,138 @@ avatar をターゲットにして、[`igxTooltipTarget`]({environment:angularAp
 
 すべて適切に設定できると、[Tooltip デモ](#angular-tooltip-の例) セクションで示されるデモサンプルを確認することができます。
 
-### 設定の表示/非表示
+### 高機能なツールチップ
+
+ツールチップのコンテンツは単なるテキスト以上のものになります。ツールチップはマークアップ内の通常の要素であるため、必要な要素を追加し、それに応じてスタイルを設定することで、そのコンテンツを強化できます。
+
+[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) を活用し、マップの特定の場所について詳細な情報を提供します。単純な div を使用してマップを表示し、ツールチップのロゴに [`IgxAvatar`](avatar.md)、マップの場所アイコンに [`IgxIcon`](icon.md) を使用します。この目的のためには、各モジュールを取得する必要があります。  
+
+```typescript
+// app.module.ts
+
+import { IgxTooltipModule } from 'igniteui-angular/tooltip';
+import { IgxAvatarModule } from 'igniteui-angular/avatar';
+import { IgxIconModule } from 'igniteui-angular/icon';
+// import { IgxTooltipModule, IgxAvatarModule, IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
+
+@NgModule({
+    ...
+    imports: [IgxTooltipModule, IgxAvatarModule, IgxIconModule],
+})
+export class AppModule {}
+```
+
+アプリケーションには以下のスタイルを使用します。
+
+```css
+/* richTooltip.component.css */
+
+.location:hover {
+  cursor: pointer;
+}
+
+.map {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 252px;
+  background-image: url(assets/images/card/media/infragisticsMap.png);
+  border: 1px solid #d4d4d4;
+}
+
+.locationTooltip {
+  width: 310px;
+  background-color: var(--igx-grays-700);
+  padding: 3px;
+  font-size: 13px;
+}
+
+.locationTooltipContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 10px;
+  min-width: 25px;
+  width: 45px;
+  height: 45px;
+}
+```
+
+マップを作成しましょう。マップの背景画像がある単純な div を使用します。更に場所の配置を示すアイコンを追加します。場所の詳細を提供するためにアイコンがツールチップのターゲットになります。
+
+```html
+<!--richTooltip.component.html-->
+
+<div class="map">
+  <igx-icon
+    class="location"
+    [style.color]="'blue'"
+    fontSet="material"
+    [igxTooltipTarget]="locationTooltip"
+    >location_on</igx-icon>
+  ...
+</div>
+```
+
+次にツールチップを作成します。コンテンツは、テキスト情報要素とアバターで構成されるコンテナーを作成します。ツールチップをターゲットにアタッチして CSS スタイルを使用します。
+
+```html
+<!--richTooltip.component.html-->
+
+<div class="wrapper">
+  <div class="map">
+    <igx-icon
+      class="location"
+      [style.color]="'blue'"
+      fontSet="material"
+      [igxTooltipTarget]="locationTooltip"
+      >location_on</igx-icon>
+
+    <div class="locationTooltip" #locationTooltip="tooltip" igxTooltip>
+      <div class="locationTooltipContent">
+        <igx-avatar
+          class="logo"
+          src="assets/images/card/avatars/igLogo.png"
+          size="medium"
+          shape="square">
+        </igx-avatar>
+        <div>
+          <div>Infragistics Inc. HQ</div>
+          <div>2 Commerce Dr, Cranbury, NJ 08512, USA</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+上記をすべて完了すると場所とツールチップは以下のようになります。
+
+<code-view style="height:300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-rich/" >
+</code-view>
+
+<div class="divider--half"></div>
+
+### 高度な例
+
+ツールチップは他のコンポーネントとシームレスに統合され、内部にコンポーネントを含む高度なツールチップを作成できます。次の例では、[`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html)、[`IgxAvatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html)、[`IgxIcon`]({environment:angularApiUrl}/classes/igxiconcomponent.html)、[`IgxBadge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html)、[`IgxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html)、[`IgxCard`]({environment:angularApiUrl}/classes/igxcardcomponent.html) および [`IgxCategoryChart`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) コンポーネントを使用して説明的なツールチップを作成する方法を示しています。
+
+<code-view style="height:640px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-advanced/" >
+</code-view>
+
+<div class="divider--half"></div>
+
+### 遅延の表示/非表示の設定
+
 ツールチップを表示または非表示にするまでの時間を制御する場合は、[`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブの [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showDelay) と [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hideDelay) プロパティを使用します。両プロパティは型 **number** でミリセカンドでタイムスパンを取得できます。
 
 > [!NOTE]
@@ -170,6 +304,7 @@ avatar をターゲットにして、[`igxTooltipTarget`]({environment:angularAp
 
 <div #tooltipRef="tooltip" igxTooltip>Her name is Madelyn James</div>
 ```
+
 ```ts
 public positionSettings: PositionSettings = {
   horizontalDirection: HorizontalAlignment.Left,
@@ -251,6 +386,15 @@ public overlaySettings: OverlaySettings = {
 | left-end     | HorizontalAlignment.Left      | HorizontalAlignment.Left       | VerticalAlignment.Top         | VerticalAlignment.Bottom       |
 
 
+次の例では、すべての配置オプションと矢印の配置動作の実際のデモを見ることができます。
+
+<code-view style="height:220px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-placement/" >
+</code-view>
+
+<div class="divider--half"></div>
+
 #### 矢印の配置をカスタマイズする
 
 矢印の配置をカスタマイズするには、`positionArrow(arrow: HTMLElement, arrowFit: ArrowFit)` メソッドをオーバーライドできます。
@@ -289,123 +433,6 @@ public overlaySettings: OverlaySettings = {
 
 <div #tooltipRef="tooltip" igxTooltip>Her name is Madelyn James</div>
 ```
-
-## 高機能なツールチップ
-
-コンテンツのカスタマイズやスタイル設定が [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) ディレクティブで簡単にできます。ツールチップはマークアップの標準要素であるため、必要な要素を追加してコンテンツを改善や状況に応じたスタイル設定が可能です。
-
-[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) を活用し、マップの特定の場所について詳細な情報を提供します。単純な div を使用してマップを表示し、ツールチップのロゴに [`IgxAvatar`](avatar.md)、マップの場所アイコンに [`IgxIcon`](icon.md) を使用します。この目的のためには、各モジュールを取得する必要があります。  
-
-```typescript
-// app.module.ts
-
-import { IgxTooltipModule, IgxAvatarModule, IgxIconModule } from 'igniteui-angular';
-// import { IgxTooltipModule, IgxAvatarModule, IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
-
-@NgModule({
-    ...
-    imports: [IgxTooltipModule, IgxAvatarModule, IgxIconModule],
-})
-export class AppModule {}
-```
-
-アプリケーションには以下のスタイルを使用します。
-
-```css
-/* richTooltip.component.css */
-
-.location:hover {
-  cursor: pointer;
-}
-
-.map {
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 200px;
-  height: 252px;
-  background-image: url(assets/images/card/media/infragisticsMap.png);
-  border: 1px solid #d4d4d4;
-}
-
-.locationTooltip {
-  width: 310px;
-  background-color: var(--igx-grays-700);
-  padding: 3px;
-  font-size: 13px;
-}
-
-.locationTooltipContent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo {
-  margin-right: 10px;
-  min-width: 25px;
-  width: 45px;
-  height: 45px;
-}
-```
-
-マップを作成しましょう。マップの背景画像がある単純な div を使用します。更に場所の位置を示すアイコンを追加します。場所の詳細を提供するためにアイコンがツールチップのターゲットになります。
-
-```html
-<!--richTooltip.component.html-->
-
-<div class="map">
-  <igx-icon
-    class="location"
-    [style.color]="'blue'"
-    fontSet="material"
-    [igxTooltipTarget]="locationTooltip"
-    >location_on</igx-icon>
-  ...
-</div>
-```
-
-次にツールチップを作成します。コンテンツは、テキスト情報要素とアバターで構成されるコンテナーを作成します。ツールチップをターゲットにアタッチして CSS スタイルを使用します。
-
-```html
-<!--richTooltip.component.html-->
-
-<div class="wrapper">
-  <div class="map">
-    <igx-icon
-      class="location"
-      [style.color]="'blue'"
-      fontSet="material"
-      [igxTooltipTarget]="locationTooltip"
-      >location_on</igx-icon>
-
-    <div class="locationTooltip" #locationTooltip="tooltip" igxTooltip>
-      <div class="locationTooltipContent">
-        <igx-avatar
-          class="logo"
-          src="assets/images/card/avatars/igLogo.png"
-          size="medium"
-          shape="square">
-        </igx-avatar>
-        <div>
-          <div>Infragistics Inc. HQ</div>
-          <div>2 Commerce Dr, Cranbury, NJ 08512, USA</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-```
-
-上記をすべて完了すると場所とツールチップは以下のようになります。
-
-<code-view style="height:300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-rich/" >
-</code-view>
-
-<div class="divider--half"></div>
 
 ## スタイル設定
 
@@ -456,11 +483,51 @@ $dark-tooltip: tooltip-theme(
 
 ### デモ
 
-<code-view style="height:200px" 
+<code-view style="height:200px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/tooltip-style/" >
 </code-view>
+
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して tooltip をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-tooltip`、`dark-tooltip`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。 `任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。 コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[IgxTooltip テーマ]({environment:sassApiUrl}/themes#function-tooltip-theme) で確認できます。構文は次のとおりです:
+
+```html
+<div
+  class="!light-tooltip ![--background:#90B69F]"
+  #tooltipRef="tooltip"
+  igxTooltip>
+  Her name is Madelyn James
+</div>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、tooltip は次のようになります:
+
+<div class="sample-container loading" style="height:100px">
+    <iframe id="tooltip-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/interactions/tooltip-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 <div class="divider--half"></div>
 
@@ -490,21 +557,21 @@ $dark-tooltip: tooltip-theme(
 
 このトピックでは、ページ要素にツールチップを作成する方法について学習しました。アプリケーションのデザインを改善するために、アイコンやアバターなどその他の Ignite UI for Angular コンポーネントも使用しました。各 API は以下の通りです。
 
-* [IgxTooltipDirective]({environment:angularApiUrl}/classes/igxtooltipdirective.html)
-* [IgxTooltipTargetDirective]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html)
+- [IgxTooltipDirective]({environment:angularApiUrl}/classes/igxtooltipdirective.html)
+- [IgxTooltipTargetDirective]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html)
 
 使用したその他のコンポーネントとディレクティブ:
 
-* [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
-* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxToggleDirective]({environment:angularApiUrl}/classes/igxtoggledirective.html)
-* [IgxToggleActionDirective]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)
+- [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
+- [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+- [IgxToggleDirective]({environment:angularApiUrl}/classes/igxtoggledirective.html)
+- [IgxToggleActionDirective]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html)
 
 スタイル:
 
-* [IgxTooltipDirective スタイル]({environment:sassApiUrl}/themes#function-tooltip-theme)
-* [IgxAvatarComponent スタイル]({environment:sassApiUrl}/themes#function-avatar-theme)
-* [IgxIconComponent スタイル]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxTooltipDirective スタイル]({environment:sassApiUrl}/themes#function-tooltip-theme)
+- [IgxAvatarComponent スタイル]({environment:sassApiUrl}/themes#function-avatar-theme)
+- [IgxIconComponent スタイル]({environment:sassApiUrl}/themes#function-icon-theme)
 
 <div class="divider"></div>
 
@@ -513,5 +580,5 @@ $dark-tooltip: tooltip-theme(
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

@@ -3,6 +3,7 @@
 title: Angular Data Grid での列の並べ替えと移動 - インフラジスティックス
 _description: カスタム列順序を設定し、マウスのドラッグ/ドロップまたはタッチジェスチャ、または Angular Column Moving API を使用して列の並べ替えを有効にします。Ignite UI for Angular をお試しください。
 _keywords: column order, igniteui for angular, infragistics, 列順序
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular Tree Grid での列の並べ替えと移動 - インフラジスティックス
 _description: カスタム列順序を設定し、マウスのドラッグ/ドロップまたはタッチジェスチャ、または Angular Column Moving API を使用して列の並べ替えを有効にします。Ignite UI for Angular をお試しください。
 _keywords: column order, igniteui for angular, infragistics, 列順序, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -19,6 +21,7 @@ _language: ja
 title: Angular Hierarchical Grid での列の並べ替えと移動 - インフラジスティックス
 _description: カスタム列順序を設定し、マウスのドラッグ/ドロップまたはタッチジェスチャ、または Angular Column Moving API を使用して列の並べ替えを有効にします。Ignite UI for Angular をお試しください。
 _keywords: column order, igniteui for angular, infragistics, 列順序, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -46,8 +49,8 @@ Ignite UI for Angular の @@igComponent のコンポーネントは、標準ド�
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-moving-sample/" alt="Angular @@igComponent 列移動の例">
 </code-view>
 
@@ -55,8 +58,8 @@ Ignite UI for Angular の @@igComponent のコンポーネントは、標準ド�
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-moving/" alt="Angular @@igComponent 列移動の例">
 </code-view>
 
@@ -64,8 +67,8 @@ Ignite UI for Angular の @@igComponent のコンポーネントは、標準ド�
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:660px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:660px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-moving/" alt="Angular @@igComponent 列移動の例">
 </code-view>
 
@@ -78,26 +81,33 @@ Ignite UI for Angular の @@igComponent のコンポーネントは、標準ド�
 
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid [moving]="true"></igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid [moving]="true"></igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid [moving]="true">
     ...
     <igx-row-island [moving]="true"></igx-row-island>
 </igx-hierarchical-grid>
 ```
+
 }
 
 ## API
-ドラッグアンドドロップ機能に加えて、列の移動機能には、プログラムで列を移動/並べ替えできる 2 つの API メソッドも用意されています。 
+
+ドラッグアンドドロップ機能に加えて、列の移動機能には、プログラムで列を移動/並べ替えできる 2 つの API メソッドも用意されています。
 
 [`moveColumn`]({environment:angularApiUrl}/classes/igxgridcomponent.html#moveColumn) - 列を別の列 (ターゲット) の前または後に移動します。最初のパラメーターは移動する列で、2 番目のパラメーターはターゲット列です。オプションの 3 番目のパラメーター `position` ([`DropPosition`]({environment:angularApiUrl}/enums/dropposition.html) 値を表す) でターゲット列の前または後に列を配置するかどうかを決定します。
 
@@ -117,7 +127,7 @@ const idColumn = grid.getColumnByName("ID");
 idColumn.move(3);
 ```
 
-API を使用する時、操作が成功した場合、[`columnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMovingEnd) イベントのみが発行されることに注意してください。また、ドラッグアンドドロップ機能と比較して、API を使用するために `moving` プロパティを true に設定する必要がないことにも注意してください。 
+API を使用する時、操作が成功した場合、[`columnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMovingEnd) イベントのみが発行されることに注意してください。また、ドラッグアンドドロップ機能と比較して、API を使用するために `moving` プロパティを true に設定する必要がないことにも注意してください。
 
 ## イベント
 
@@ -125,6 +135,7 @@ API を使用する時、操作が成功した場合、[`columnMovingEnd`]({envi
 [`@@igSelector`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の [`columnMovingEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnMovingEnd) イベントを処理し、列が新しい位置にドロップされたときにカスタム ロジックを実装できます。たとえば、Change On Year(%) 列の後に Category のドロップをキャンセルできます。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid #dataGrid [data]="data" [autoGenerate]="false" [moving]="true" (columnMovingEnd)="onColumnMovingEnd($event)">
     <igx-column [field]="'Category'"></igx-column>
@@ -139,9 +150,11 @@ public onColumnMovingEnd(event) {
     }
 }
 ```
+
 }
 
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false" [moving]="true" (columnMovingEnd)="onColumnMovingEnd($event)">
     <igx-column [field]="'Name'" dataType="string" width="250px"></igx-column>
@@ -156,8 +169,10 @@ public onColumnMovingEnd(event) {
     }
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid #hierarchicalGrid [data]="data" [autoGenerate]="false" [moving]="true" (columnMovingEnd)="onColumnMovingEnd($event)">
     <igx-column [field]="'Country'"></igx-column>
@@ -172,6 +187,7 @@ public onColumnMovingEnd(event) {
     }
 }
 ```
+
 }
 
 ## スタイル設定
@@ -183,7 +199,7 @@ public onColumnMovingEnd(event) {
 
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 最も簡単な方法は、[`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) を拡張して `$ghost-header-background`、`$ghost-header-text-color`、`$ghost-header-icon-color` パラメーターを受け入れる新しいテーマを作成します。
 
@@ -209,9 +225,9 @@ $dark-grid-column-moving-theme: grid-theme(
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:650px" 
+<code-view style="height:650px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-moving-styled-sample/" >
 </code-view>
 
@@ -221,7 +237,7 @@ $dark-grid-column-moving-theme: grid-theme(
 
 <code-view style="height:650px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-moving-styled/" >
 </code-view>
 
@@ -229,9 +245,9 @@ $dark-grid-column-moving-theme: grid-theme(
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:660px" 
+<code-view style="height:660px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-moving-styled/" >
 </code-view>
 
@@ -241,27 +257,29 @@ $dark-grid-column-moving-theme: grid-theme(
 >このサンプルは、`Change Theme` (テーマの変更) から選択したグローバル テーマに影響を受けません。
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+- [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [@@igComponent 概要](@@igMainTopic.md)
-* [仮想化とパフォーマンス](virtualization.md)
-* [ページング](paging.md)
-* [フィルタリング](filtering.md)
-* [ソート](sorting.md)
-* [集計](summaries.md)
-* [列のピン固定](column-pinning.md)
-* [列のサイズ変更](column-resizing.md)
-* [選択](selection.md)
-@@if (igxName !== 'IgxHierarchicalGrid') {* [検索](search.md)}
+- [@@igComponent 概要](@@igMainTopic.md)
+- [仮想化とパフォーマンス](virtualization.md)
+- [ページング](paging.md)
+- [フィルタリング](filtering.md)
+- [ソート](sorting.md)
+- [集計](summaries.md)
+- [列のピン固定](column-pinning.md)
+- [列のサイズ変更](column-resizing.md)
+- [選択](selection.md)
+@@if (igxName !== 'IgxHierarchicalGrid') {- [検索](search.md)}
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

@@ -71,6 +71,7 @@ Example:
 Now, all components that use elevation levels 1 and 2 will have their shadows updated.
 
 ### Shadowing
+
 You can shadow the globally set elevations for a specific scope only. We already saw that the button component uses elevation level 2 for its resting state. Level 2 is also used by the card and grid components. So to change the shadows for all three, all you need to do is:
 
 ```css
@@ -80,6 +81,7 @@ igx-card {
     --ig-elevation-2: 0 3px 9px 0 rgba(0, 0, 0, .24);
 }
 ```
+
 This will set the `--resting-shadow` in the contained button and card, and the `--grid-shadow` in the grid, to the value assigned to `--ig-elevation-2`;
 
 Elevations can be created and consumed in a more powerful way using Sass as well. Check out the related topics below to learn more.
@@ -92,5 +94,5 @@ Related topics:
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

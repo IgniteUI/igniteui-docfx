@@ -6,6 +6,7 @@ _language: ja
 ---
 
 # ASP.NET CoreSignalR を使用したリアルタイム Web アプリ
+
 このトピックでは、**ASP.NET Core SignalR** を使用してデータの**ストリーミング**と**受信**の両方に対応するアプリケーションを作成する方法を説明します。
 
 前提条件:
@@ -38,6 +39,7 @@ SignalR はいくつかの転送を利用し、クライアントとサーバー
   title="Real-time Web App with Web Sockets" />
 
 ## SignalR の例
+
 このデモの目的は、[ASP.NET Core SignalR](https://dotnet.microsoft.com/apps/aspnet/signalr) を使用してリアルタイム データ ストリームを表示する財務用スクリーン ボードを紹介することです。
 
 <code-view style="height:700px"
@@ -48,6 +50,7 @@ SignalR はいくつかの転送を利用し、クライアントとサーバー
 ## SignalR サーバーの構成
 
 ### ASP.NET Core アプリを作成する
+
 LASP.NET Core SignalR アプリをセットアップする方法を見てみましょう。
 Visual Studio の **[ファイル]** >> **[新規作成]** >> **[プロジェクト]** で、[ASP.NET Core Web アプリケーション] を選択し、セットアップに従います。構成上の問題が発生した場合は、[Microsoft の公式ドキュメント チュートリアル](https://docs.microsoft.com/ja-jp/aspnet/core/tutorials/signalr?view=aspnetcore-3.1&tabs=visual-studio)に従ってください。
 
@@ -96,6 +99,7 @@ services.AddSignalR(options =>
     }
   }
 ```
+
 サーバー側のプロジェクトは `localhost:5001` で実行され、クライアント側は `localhost:4200` で実行されるため、これら 2 つの間の通信を確立するには、CORS を有効にする必要があります。[Startup.cs](https://github.com/IgniteUI/finjs-web-api/blob/master/WebAPI/Startup.cs#L31) クラスを開いて、変更してみましょう。
 
 ```cs
@@ -120,6 +124,7 @@ public void ConfigureServices(IServiceCollection services)
 
 クロス オリジン リソース共有の有効化で特定の問題が発生した場合は、[Microsoft の公式トピック](https://docs.microsoft.com/ja-jp/aspnet/core/signalr/security?view=aspnetcore-5.0#cross-origin-resource-sharing)を確認してください。
 ### SignalR ハブのセットアップ
+
 [SignalR ハブ](https://docs.microsoft.com/ja-jp/aspnet/core/signalr/hubs?view=aspnetcore-5.0#what-is-a-signalr-hub)とは何かを説明することから始めましょう。
 SignalR ハブ API を使用すると、サーバーから接続されたクライアントのメソッドを呼び出すことができます。サーバー コードでは、クライアントによって呼び出されるメソッドを定義します。SignalR には、**呼び出し**と呼ばれるこの概念があります。実際には、特定のメソッドを使用してクライアントからハブを呼び出すことができます。クライアント コードでは、サーバーから呼び出されるメソッドを定義します。
 
@@ -131,13 +136,13 @@ SignalR ハブ API を使用すると、サーバーから接続されたクラ�
   alt="呼び出し元との SignalR ハブのセットアップ"
   title="SignalR Hub Setup with callers" />
 
-接続、グループ、およびメッセージの管理を担当する基本 Hub クラスを継承する [StreamHub クラス](https://github.com/IgniteUI/finjs-web-api/blob/d493f159e0a6f14b5ffea3e893f543f057fdc92a/WebAPI/Models/StreamHub.cs#L9)を作成しました。Hub クラスはステートレスであり、特定のメソッドの新しい呼び出しはそれぞれ、このクラスの新しいインスタンスにあることに注意してください。インスタンス プロパティに状態を保存することは無意味です。代わりに、静的プロパティを使用することをお勧めします。この場合、静的キー値ペアのコレクションを使用して、接続されている各クライアントのデータを保存します。 
+接続、グループ、およびメッセージの管理を担当する基本 Hub クラスを継承する [StreamHub クラス](https://github.com/IgniteUI/finjs-web-api/blob/d493f159e0a6f14b5ffea3e893f543f057fdc92a/WebAPI/Models/StreamHub.cs#L9)を作成しました。Hub クラスはステートレスであり、特定のメソッドの新しい呼び出しはそれぞれ、このクラスの新しいインスタンスにあることに注意してください。インスタンス プロパティに状態を保存することは無意味です。代わりに、静的プロパティを使用することをお勧めします。この場合、静的キー値ペアのコレクションを使用して、接続されている各クライアントのデータを保存します。
 
-このクラスの他の便利なプロパティは、*Clients*、*Context*、および *Groups* です。これらは、一意の *ConnectionID* に基づいて特定の動作を管理するのに役立ちます。また、このクラスは次の便利なメソッドを提供します:
+このクラスの他の便利なプロパティは、_Clients_、_Context_、および _Groups_ です。これらは、一意の _ConnectionID_ に基づいて特定の動作を管理するのに役立ちます。また、このクラスは次の便利なメソッドを提供します:
 - OnConnectedAsync() - ハブとの新しい接続が確立されたときに呼び出されます。
 - OnDisconnectedAsync(Exception) - ハブとの接続が終了したときに呼び出されます。
 
-これにより、接続が確立または閉じられたときに追加ロジックを実行できます。このアプリケーションでは、*Context connection ID* を取得し、それを使用して特定の間隔でデータを送り返す *UpdateParameters* メソッドも追加しました。ご覧のとおり、他のクライアントからのストリーミング介入を防ぐ一意の *ConnectionID* を介して通信します。
+これにより、接続が確立または閉じられたときに追加ロジックを実行できます。このアプリケーションでは、_Context connection ID_ を取得し、それを使用して特定の間隔でデータを送り返す _UpdateParameters_ メソッドも追加しました。ご覧のとおり、他のクライアントからのストリーミング介入を防ぐ一意の _ConnectionID_ を介して通信します。
 
 ```cs
 public async void UpdateParameters(int interval, int volume, bool live = false, bool updateAll = true)
@@ -273,6 +278,7 @@ public ngOnInit() {
 }
 ...
 ```
+
 ### グリッドのデータ バインディング
 
 これまでクライアント コードで見てきたように、`transferdata` イベントのリスナーを設定します。このイベントは、更新されたデータ配列を引数として受け取ります。新しく受信したデータをグリッドに渡すために、オブザーバブルを使用します。これを設定するには、グリッドのデータ ソースを次のようにデータ オブザーバブルにバインドする必要があります。

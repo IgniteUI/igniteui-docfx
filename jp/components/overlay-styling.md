@@ -1,11 +1,13 @@
 ---
-title: オーバーレイ スタイリング
+title: オーバーレイ スタイリング - MITライセンス
 _description: IgniteUI for Angular Overlay Service は、表示される要素にスタイルを適切に適用およびスコープする方法についての詳細なチュートリアル。
 _keywords: Ignite UI for Angular, Angular Overlay Service, Angular UI controls, Overlay Service, View Encapsulation Example, Sass scoped styles in Angular, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
+_license: MIT
 _language: ja
 ---
 
 # オーバーレイ スタイリング
+
 <p class="highlight">
 
 [`IgxOverlayService`](overlay.md) は、ページ コンテンツの上にコンテンツを表示するために使用されます。Ignite UI for Angular コンポーネントの多くは、[ドロップダウン](drop-down.md)、[コンボ](combo.md)、[日付ピッカー](date-picker.md)などのオーバーレイを使用しているため、オーバーレイがコンテンツを表示する方法を理解することが重要です。
@@ -84,8 +86,8 @@ export class OverlayStylingComponent {
 コンボのアイテムのリストがコンポーネントのホスト**内**に適切にレンダリングされます。つまり、カスタムテーマが有効になります。
 
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/overlay-styling-simple/" >
 </code-view>
 
@@ -136,11 +138,13 @@ $my-overlay-theme: overlay-theme(
 ```
 
 ## API リファレンス
-* [IgniteUI for Angular - テーマ ライブラリ](themes/index.md)
-* [IgxOverlay スタイル]({environment:sassApiUrl}/themes#function-overlay-theme)
+
+- [IgniteUI for Angular - テーマ ライブラリ](themes/index.md)
+- [IgxOverlay スタイル]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## その他のリソース
-* [IgniteUI for Angular - テーマ ライブラリ](themes/index.md)
-* [オーバーレイ メイン トピック](overlay.md)
-* [配置ストラテジ](overlay-position.md)
-* [スクロール ストラテジ](overlay-scroll.md)
+
+- [IgniteUI for Angular - テーマ ライブラリ](themes/index.md)
+- [オーバーレイ メイン トピック](overlay.md)
+- [配置ストラテジ](overlay-position.md)
+- [スクロール ストラテジ](overlay-scroll.md)

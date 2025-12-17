@@ -1,16 +1,19 @@
 ---
-title: ComboBox リモート バインディング
+title: ComboBox リモート バインディング | MITライセンス
 _description: igx-combo は、コンボをリモートサービスにバインドしてデータをオンデマンドで取得する API を公開します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Combo コンポーネント, Angular Combo コントロール, Angular Combo リモート バインディング
+_license: MIT
 _language: ja
 ---
 
 # ComboBox (コンボボックス) リモート バインディング
+
 <p class="highlight">
 Ignite UI for Angular ComboBox コンポーネントは、コンボボックスをリモート サービスにバインドし、要求に応じてデータを取得できる API を公開します。
 </p>
 
 ## Angular コンボボックス リモート バインディングの例
+
 以下のサンプルは、[dataPreLoad]({environment:angularApiUrl}/classes/IgxComboComponent.html#dataPreLoad) プロパティを使用してリモート データの新しい部分をロードするリモート バインディングを示しています。
 
 
@@ -21,10 +24,11 @@ Ignite UI for Angular ComboBox コンポーネントは、コンボボックス�
 
 
 ## 使用方法
+
 ComboBox コンポーネントを初期化にするには、まず `IgxComboModule` を **app.module.ts**  ファイルにインポートします。デモではサーバー要求にリモート サービスを使用しているため、追加で `HttpClientModule` を含む必要があります。
 
 ```typescript
-import { IgxComboModule } from 'igniteui-angular';
+import { IgxComboModule } from 'igniteui-angular/combo';
 // import { IgxComboModule } from '@infragistics/igniteui-angular'; for licensed package
 
 import { HttpClientModule } from '@angular/common/http';
@@ -41,14 +45,15 @@ export class AppModule {}
 ```
 
 ### リモート サービスの定義
-コンボボックスをリモートデータへバインドする際にサーバーからデータをオンデマンドで読み込むための有効なサービスが必要です。コンボボックス コンポーネントは [virtualizationState]{environment:angularApiUrl}/classes/IgxComboComponent.html#virtualizationState) プロパティを公開し、コンボボックスの状態 (最初のインデックスと読み込む必要のある項目数) を提供します。スクロール サイズを正しく表示するには、[totalItemCount]({environment:angularApiUrl}/classes/IgxComboComponent.html#totalItemCount) プロパティにサーバー上の全項目に対応する値が必要です。
+
+コンボボックスをリモートデータへバインドする際にサーバーからデータをオンデマンドで読み込むための有効なサービスが必要です。コンボボックス コンポーネントは [virtualizationState]({environment:angularApiUrl}/classes/IgxComboComponent.html#virtualizationState) プロパティを公開し、コンボボックスの状態 (最初のインデックスと読み込む必要のある項目数) を提供します。スクロール サイズを正しく表示するには、[totalItemCount]({environment:angularApiUrl}/classes/IgxComboComponent.html#totalItemCount) プロパティにサーバー上の全項目に対応する値が必要です。
 
 以下のコードは、`getData()` メソッドでシンプルなサービスを定義し、コンボボックスの状態を受け取り、observable としてデータを返します。
 
 ```typescript
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { IForOfState } from 'igniteui-angular';
+import { IForOfState } from 'igniteui-angular/directives';
 // import { IForOfState } from '@infragistics/igniteui-angular'; for licensed package
 import { BehaviorSubject, Observable } from 'rxjs';
 
@@ -68,6 +73,7 @@ export class RemoteService {
 ```
 
 ### コンボボックスをリモート サービスへバインド
+
 データがサービスから observable として返されると [async](https://angular.io/api/common/AsyncPipe) パイプを使用してコンボボックス コンポーネントに設定します。
 
 ```html
@@ -94,7 +100,7 @@ export class RemoteService {
 
 ```typescript
 import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
-import { IgxComboComponent } from 'igniteui-angular';
+import { IgxComboComponent } from 'igniteui-angular/combo';
 // import { IgxComboComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 import { RemoteService } from '../../grid/services/remote.service';
@@ -217,6 +223,7 @@ export class ComboRemoteComponent implements OnInit {
 > サービスはプロバイダーとして含む必要があります。
 
 ### 選択の処理
+
 より複雑なデータ型 (オブジェクトなど) を扱うチャンクでロードされたリモート データにバインドされたコンボボックスを使用する場合、`valueKey` を定義する必要があります。[コンボボックス トピック](combo.md#データ値と表示プロパティ)で述べたように、`valueKey` が指定されていない場合、コンボボックスは選択を `equality (===)` で処理しようとします。選択済みとしてマークされるオブジェクトは、継続的にロードされるオブジェクトと同じではないため、選択は失敗します。
 
 > [!Note]
@@ -225,22 +232,24 @@ export class ComboRemoteComponent implements OnInit {
 コンボボックスがリモートデータにバインドされている場合、APIを介して値/選択項目を設定すると、現在のチャンクにロードされた項目のみが考慮されます。初期値を設定したい場合は、選択する前にそれらの特定の項目がロードされていることを確認してください。
 
 ## API まとめ
+
 <div class="divider--half"></div>
 
-* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
-* [IgxComboComponent スタイル]({environment:sassApiUrl}/themes#function-combo-theme)
+- [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
+- [IgxComboComponent スタイル]({environment:sassApiUrl}/themes#function-combo-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [コンボボックス コンポーネント](combo.md)
-* [コンボボックス機能](combo-features.md)
-* [コンボボックス テンプレート](combo-templates.md)
-* [テンプレート駆動フォームの統合](input-group.md)
-* [リアクティブ フォームの統合](angular-reactive-form-validation.md)
-* [単一選択コンボボックス](simple-combo.md)
+- [コンボボックス コンポーネント](combo.md)
+- [コンボボックス機能](combo-features.md)
+- [コンボボックス テンプレート](combo-templates.md)
+- [テンプレート駆動フォームの統合](input-group.md)
+- [リアクティブ フォームの統合](angular-reactive-form-validation.md)
+- [単一選択コンボボックス](simple-combo.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

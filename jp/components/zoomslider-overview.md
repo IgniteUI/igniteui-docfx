@@ -2,6 +2,7 @@
 title: Angular ズームスライダー | データ可視化ツール | ナビゲーション | ズーム | データ チャート | データ バインディング | インフラジスティックス
 _description: インフラジスティックスの Angular ズームスライダー コントロールを使用して、最小値と最大値を表す 2 つのハンドルのデータ サブセットを簡単に表示します。Ignite UI for Angular ズームスライダーでデータの可視化を向上させます。
 _keywords: zoom slider, Ignite UI for Angular, Infragistics, data chart, ズームスライダー, インフラジスティックス, データ チャート
+_license: commercial
 mentionedTypes: ["ZoomSlider", "XamDataChart"]
 _language: ja
 ---
@@ -86,5 +87,5 @@ export class AppModule {}
 
 以下は上記のセクションで説明した API メンバーのリストです。
 
-*   [`IgxZoomSliderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxzoomslidercomponent.html)
-*   [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)
+- [`IgxZoomSliderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxzoomslidercomponent.html)
+- [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)

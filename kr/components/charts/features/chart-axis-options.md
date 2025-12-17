@@ -62,15 +62,15 @@ TODO add info/example of financial chart with  YAxisMode and YAxisIsLogarithm
 
 You can find more information about related chart features in these topics:
 
-*   [Axis Gridlines](chart-axis-gridlines.md)
-*   [Axis Layout](chart-axis-layouts.md)
+- [Axis Gridlines](chart-axis-gridlines.md)
+- [Axis Layout](chart-axis-layouts.md)
 
 ## API References
 
 The following is a list of API members mentioned in the above sections:
 
-*   `XAxisMaximumValue`
-*   `XAxisMinimumValue`
-*   [`yAxisMaximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#yAxisMaximumValue)
-*   [`yAxisMinimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#yAxisMinimumValue)
-*   [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html)
+- `XAxisMaximumValue`
+- `XAxisMinimumValue`
+- [`yAxisMaximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#yAxisMaximumValue)
+- [`yAxisMinimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#yAxisMinimumValue)
+- [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html)

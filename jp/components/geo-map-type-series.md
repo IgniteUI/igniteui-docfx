@@ -2,6 +2,7 @@
 title: Angular マップ | データ可視化ツール | 地理的シリーズ タイプ | インフラジスティックス
 _description: インフラジスティックスの Angular マップ シリーズを使用して、地理的なデータをポイント (都市の位置など)、ポリライン (道路の接続など)、またはポリゴン (国の形状) として地理的コンテキストで表示します。Ignite UI for Angular マップ シーリズについての詳細を表示します。
 _keywords: Angular map, geographic series, Ignite UI for Angular, Infragistics, Angular マップ, 地理的シリーズ, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamGeographicMap']
 _language: ja
 ---
@@ -17,10 +18,10 @@ Ignite UI for Angular マップ コンポーネントでは、地理的シリー
 
 Angular 地理マップ コンポーネントは、以下の種類の地理的シリーズをサポートします。
 
--   [散布図記号シリーズの使用](geo-map-type-scatter-symbol-series.md)
--   [散布図比例シリーズの使用](geo-map-type-scatter-bubble-series.md)
--   [散布等高線シリーズの使用](geo-map-type-scatter-contour-series.md)
--   [散布図密度シリーズの使用](geo-map-type-scatter-density-series.md)
--   [散布エリア シリーズの使用](geo-map-type-scatter-area-series.md)
--   [シェイプ ポリゴン シリーズの使用](geo-map-type-shape-polygon-series.md)
--   [シェイプ ポリライン シリーズの使用](geo-map-type-shape-polyline-series.md)
+- [散布図記号シリーズの使用](geo-map-type-scatter-symbol-series.md)
+- [散布図比例シリーズの使用](geo-map-type-scatter-bubble-series.md)
+- [散布等高線シリーズの使用](geo-map-type-scatter-contour-series.md)
+- [散布図密度シリーズの使用](geo-map-type-scatter-density-series.md)
+- [散布エリア シリーズの使用](geo-map-type-scatter-area-series.md)
+- [シェイプ ポリゴン シリーズの使用](geo-map-type-shape-polygon-series.md)
+- [シェイプ ポリライン シリーズの使用](geo-map-type-shape-polyline-series.md)

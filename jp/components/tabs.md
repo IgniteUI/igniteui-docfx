@@ -1,11 +1,13 @@
 ---
-title: Tabs コンポーネント - ネイティブ Angular | Ignite UI for Angular
+title: Tabs コンポーネント - ネイティブ Angular | Ignite UI for Angular | MITライセンス
 _description: Ignite UI for Angular Tabs コンポーネントはタブを上側に配置し、複数のタブ項目がある場合にスクロールを許可します。今すぐお試しください。
 _keywords: Angular Tabs コンポーネント, Angular Tabs コントロール, Angular Tabs, Angular Tabbar コンポーネント, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コンポーネント, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
+_license: MIT
 _language: ja
 ---
 
 # Angular Tabs (タブ) コンポーネントの概要
+
 Ignite UI for Angular Tabs は、関連するコンテンツを 1 つのタブ付きビューで整理およびグループ化することを主な目的とするフル機能のユーザー インターフェース コンポーネントです。これにより、スペースを節約し、コンテンツをよりわかりやすくします。アニメーション、テンプレート化、カスタマイズ オプションなどのさまざまな機能がパックされています。
 
 Angular のタブは、多くのコンテンツを含む Web ページをカテゴリに分類し、簡潔かつスペース効率の良い方法で表示する必要がある場合に非常に便利です。
@@ -43,7 +45,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 ...
-import { IgxTabsModule } from 'igniteui-angular';
+import { IgxTabsModule } from 'igniteui-angular/tabs';
 // import { IgxTabsModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -59,7 +61,7 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IGX_TABS_DIRECTIVES } from 'igniteui-angular';
+import { IGX_TABS_DIRECTIVES } from 'igniteui-angular/tabs';
 // import { IGX_TABS_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -155,6 +157,7 @@ Ignite UI for Angular Tabs モジュールまたはディレクティブをイ�
 <div class="divider"></div>
 
 ## Angular Tabs の配置
+
 `IgxTabs` [`tabAlignment`]({environment:angularApiUrl}/classes/igxtabscomponent.html#tabAlignment) 入力プロパティは、タブの配置と配置の方法を制御します。start、center、end、justify の 4 つの異なる値を受け入れます。
 - **Start** (デフォルト): タブ ヘッダーの幅はコンテンツ (ラベル、アイコン、両方) によって異なり、すべてのタブに同じパディングがあります。最初のタブは、タブ コンテナーの左側に配置されます。
 - **Center**: タブ ヘッダーの幅はコンテンツによって異なり、タブ コンテナーの中央を占めます。スペースが足りない場合、スクロール ボタンが表示されます。
@@ -178,7 +181,7 @@ Ignite UI for Angular Tabs モジュールまたはディレクティブをイ�
 > [!NOTE]
 > これまでアプリケーションで `igx-icon` を使用したことがない場合は、続行する前に必ず **app.module.ts** の `IgxIconModule` をインポートしてください。
 
-はじめに Material Icons をメイン アプリケーション フォルダーの 'styles.scss' ファイルにインポートします。次に、`igx-tab-header` の子として、`igxTabHeaderIcon` ディレクティブが設定された `igx-icon` を追加します。 
+はじめに Material Icons をメイン アプリケーション フォルダーの 'styles.scss' ファイルにインポートします。次に、`igx-tab-header` の子として、`igxTabHeaderIcon` ディレクティブが設定された `igx-icon` を追加します。
 
 ```css
 // styles.scss
@@ -383,6 +386,325 @@ export class AppRoutingModule { }
 
 ## スタイル設定
 
+### Tabs テーマのプロパティ マップ
+
+プライマリ プロパティを変更すると、関連するすべての依存プロパティが自動的に更新され、変更が反映されます。
+
+<div class="theme-switcher-wrapper">
+  <input type="radio" name="theme" id="material" checked>
+  <label for="material" class="switch-label">Material</label>
+  <input type="radio" name="theme" id="fluent">
+  <label for="fluent" class="switch-label">Fluent</label>
+  <input type="radio" name="theme" id="bootstrap">
+  <label for="bootstrap" class="switch-label">Bootstrap</label>
+  <input type="radio" name="theme" id="indigo">
+  <label for="indigo" class="switch-label">Indigo</label>
+
+  <div class="tables">
+    <div class="theme-table material">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>プライマリ プロパティ</th>
+            <th>依存プロパティ</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-background</strong></summary></details></td>
+            <td>$item-active-background</td>
+            <td>アクティブ/フォーカスされたタブ背景に使用する色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-text-color</td><td>タブ テキストの色に使用する色</td></tr>
+          <tr class="dependent"><td></td><td>$item-icon-color</td><td>タブ アイコンに使用する色</td></tr>
+          <tr class="dependent"><td></td><td>$item-hover-background</td><td>ホバーされるタブに使用する背景</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>アクティブ タブ インジケーターに使用する色</td></tr>
+          <tr class="dependent"><td></td><td>$button-background</td><td>ボタンの背景に使用する色</td></tr>
+          <tr class="dependent"><td></td><td>$button-hover-background</td><td>ホバー時のボタン背景に使用される色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-active-background</strong></summary></details></td>
+            <td>$item-active-icon-color</td>
+            <td>アクティブなタブ アイコンに使用する色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-active-color</td><td>アクティブ タブ テキストに使用する色</td></tr>
+          <tr class="dependent"><td></td><td>$tab-ripple-color</td><td>ボタンの背景に使用する色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-text-color</strong></summary></details></td>
+            <td>$item-hover-color</td>
+            <td>`$item-hover-background` が指定されていない場合の、ホバー時のタブのテキストの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-icon-color</td><td>`$item-background` が指定されていない場合の、タブ アイコンの色</td></tr>
+          <tr class="dependent"><td></td><td>$item-active-color</td><td>`$item-active-background` が指定されていない場合の、アクティブなタブのテキストの色</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>`$item-background` が指定されていない場合の、アクティブなタブ インジケーターの色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-icon-color</strong></summary></details></td>
+            <td>$item-hover-icon-color</td>
+            <td>ホバー時のタブ アイコンに使用する色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-active-icon-color</td><td>アクティブなタブ アイコンに使用する色</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>アクティブ タブ インジケーターに使用する色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-background</strong></summary></details></td>
+            <td>$button-hover-background</td>
+            <td>ホバー時のボタン背景に使用される色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-color</td><td>ボタン アイコン/テキストの色に使用する色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-color</strong></summary></details></td>
+            <td>$button-disabled-color</td>
+            <td>無効なボタン アイコン/テキストに使用する色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-ripple-color</td><td>ホバー時のボタン背景に使用される色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><strong>$button-hover-background</strong></td>
+            <td>$button-hover-color</td>
+            <td>ボタン アイコン/テキストはホバーされる時の色に使用する色</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="theme-table fluent">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>プライマリ プロパティ</th>
+            <th>依存プロパティ</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-background</strong></summary></details></td>
+            <td>$item-active-background</td>
+            <td>アクティブ/フォーカスされたタブ背景に使用する色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-text-color</td><td>タブ テキストの色に使用する色</td></tr>
+          <tr class="dependent"><td></td><td>$item-icon-color</td><td>タブ アイコンに使用する色</td></tr>
+          <tr class="dependent"><td></td><td>$item-hover-background</td><td>ホバーされるタブに使用する背景</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>アクティブ タブ インジケーターに使用する色</td></tr>
+          <tr class="dependent"><td></td><td>$button-background</td><td>ボタンの背景に使用する色</td></tr>
+          <tr class="dependent"><td></td><td>$button-hover-background</td><td>ホバー時のボタン背景に使用される色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-active-background</strong></summary></details></td>
+            <td>$item-active-icon-color</td>
+            <td>アクティブなタブ アイコンに使用する色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-active-color</td><td>アクティブ タブ テキストに使用する色</td></tr>
+          <tr class="dependent"><td></td><td>$tab-ripple-color</td><td>タブ操作のリップル色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-text-color</strong></summary></details></td>
+            <td>$item-hover-color</td>
+            <td>`$item-hover-background` が指定されていない場合の、ホバー時のタブのテキストの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-icon-color</td><td>`$item-background` が指定されていない場合の、タブ アイコンの色</td></tr>
+          <tr class="dependent"><td></td><td>$item-active-color</td><td>`$item-active-background` が指定されていない場合の、アクティブなタブのテキストの色</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>`$item-background` が指定されていない場合の、アクティブなタブ インジケーターの色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-icon-color</strong></summary></details></td>
+            <td>$item-hover-icon-color</td>
+            <td>ホバー時のタブ アイコンに使用する色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-active-icon-color</td><td>アクティブなタブ アイコンに使用する色</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>アクティブ タブ インジケーターに使用する色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-background</strong></summary></details></td>
+            <td>$button-hover-background</td>
+            <td>ホバー時のボタン背景に使用される色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-color</td><td>ボタン アイコン/テキストの色に使用する色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-color</strong></summary></details></td>
+            <td>$button-disabled-color</td>
+            <td>無効なボタン アイコン/テキストに使用する色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-ripple-color</td><td>ホバー時のボタン背景に使用される色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><strong>$button-hover-background</strong></td>
+            <td>$button-hover-color</td>
+            <td>ボタン アイコン/テキストはホバーされる時の色に使用する色</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="theme-table bootstrap">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>プライマリ プロパティ</th>
+            <th>依存プロパティ</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-background</strong></summary></details></td>
+            <td>$item-active-background</td>
+            <td>アクティブ/フォーカスされたタブ背景に使用する色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-text-color</td><td>タブ テキストの色に使用する色</td></tr>
+          <tr class="dependent"><td></td><td>$item-icon-color</td><td>タブ アイコンに使用する色</td></tr>
+          <tr class="dependent"><td></td><td>$item-hover-background</td><td>ホバーされるタブに使用する背景</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>アクティブ タブ インジケーターに使用する色</td></tr>
+          <tr class="dependent"><td></td><td>$button-background</td><td>ボタンの背景に使用する色</td></tr>
+          <tr class="dependent"><td></td><td>$button-hover-background</td><td>ホバー時のボタン背景に使用される色</td></tr>
+          <tr class="dependent"><td></td><td>$border-color</td><td>タブの境界線の色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-active-background</strong></summary></details></td>
+            <td>$item-active-icon-color</td>
+            <td>アクティブなタブ アイコンに使用する色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-active-color</td><td>アクティブ タブ テキストに使用する色</td></tr>
+          <tr class="dependent"><td></td><td>$tab-ripple-color</td><td>ボタンの背景に使用する色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-text-color</strong></summary></details></td>
+            <td>$item-hover-color</td>
+            <td>`$item-hover-background` が指定されていない場合の、ホバー時のタブのテキストの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-icon-color</td><td>`$item-background` が指定されていない場合の、タブ アイコンの色</td></tr>
+          <tr class="dependent"><td></td><td>$button-color</td><td>`$button-background` が指定されていない場合の、ボタン アイコン/テキストの色 (非マテリアル)</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-icon-color</strong></summary></details></td>
+            <td>$item-hover-icon-color</td>
+            <td>`$item-hover-background` が指定されていない場合の、ホバー時のタブ アイコンの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-text-color</td><td>`$item-background` が指定されていない場合の、タブのテキストの色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-background</strong></summary></details></td>
+            <td>$button-hover-background</td>
+            <td>ホバー時のボタン背景に使用される色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-color</td><td>ボタン アイコン/テキストの色に使用する色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-color</strong></summary></details></td>
+            <td>$button-hover-color</td>
+            <td>`$button-background` が指定されていない場合の、ホバー時のボタン アイコン/テキストの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-disabled-color</td><td>無効なボタン アイコン/テキストに使用する色</td></tr>
+          <tr class="dependent"><td></td><td>$button-ripple-color</td><td>ホバー時のボタン背景に使用される色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><strong>$button-hover-background</strong></td>
+            <td>$button-hover-color</td>
+            <td>ボタン アイコン/テキストはホバーされる時の色に使用する色</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="theme-table indigo">
+      <table class="collapsible-table">
+        <thead>
+          <tr>
+            <th>プライマリ プロパティ</th>
+            <th>依存プロパティ</th>
+            <th>説明</th>
+          </tr>
+        </thead>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-background</strong></summary></details></td>
+            <td>$item-active-background</td>
+            <td>アクティブ/フォーカスされたタブ背景に使用する色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-text-color</td><td>タブ テキストの色に使用する色</td></tr>
+          <tr class="dependent"><td></td><td>$item-icon-color</td><td>タブ アイコンに使用する色</td></tr>
+          <tr class="dependent"><td></td><td>$item-hover-background</td><td>ホバーされるタブに使用する背景</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>アクティブ タブ インジケーターに使用する色</td></tr>
+          <tr class="dependent"><td></td><td>$button-background</td><td>ボタンの背景に使用する色</td></tr>
+          <tr class="dependent"><td></td><td>$button-hover-background</td><td>ホバー時のボタン背景に使用される色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-active-background</strong></summary></details></td>
+            <td>$item-active-icon-color</td>
+            <td>アクティブなタブ アイコンに使用する色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-active-color</td><td>アクティブ タブ テキストに使用する色</td></tr>
+          <tr class="dependent"><td></td><td>$tab-ripple-color</td><td>ボタンの背景に使用する色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-text-color</strong></summary></details></td>
+            <td>$item-hover-color</td>
+            <td>`$item-hover-background` が指定されていない場合の、ホバー時のタブのテキストの色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-icon-color</td><td>`$item-background` が指定されていない場合の、タブ アイコンの色</td></tr>
+          <tr class="dependent"><td></td><td>$item-active-color</td><td>`$item-active-background` が指定されていない場合の、アクティブなタブのテキストの色</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>`$item-background` が指定されていない場合の、アクティブなタブ インジケーターの色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$item-icon-color</strong></summary></details></td>
+            <td>$item-hover-icon-color</td>
+            <td>ホバー時のタブ アイコンに使用する色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$item-active-icon-color</td><td>アクティブなタブ アイコンに使用する色</td></tr>
+          <tr class="dependent"><td></td><td>$indicator-color</td><td>アクティブ タブ インジケーターに使用する色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-background</strong></summary></details></td>
+            <td>$button-hover-background</td>
+            <td>ホバー時のボタン背景に使用される色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-color</td><td>ボタン アイコン/テキストの色に使用する色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><details><summary><strong>$button-color</strong></summary></details></td>
+            <td>$button-disabled-color</td>
+            <td>無効なボタン アイコン/テキストに使用する色</td>
+          </tr>
+          <tr class="dependent"><td></td><td>$button-ripple-color</td><td>ホバー時のボタン背景に使用される色</td></tr>
+        </tbody>
+        <tbody class="group">
+          <tr class="primary">
+            <td><strong>$button-hover-background</strong></td>
+            <td>$button-hover-color</td>
+            <td>ボタン アイコン/テキストはホバーされる時の色に使用する色</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
 タブのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在するテーマ モジュールをインポートする必要があります。
 
 ```scss
@@ -392,7 +714,7 @@ export class AppRoutingModule { }
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`tabs-theme`]({environment:sassApiUrl}/themes#function-tabs-theme) を拡張する新しいテーマを作成します。`$item-background` や `$item-active-color` などの少数のベース パラメーターを指定することで、最小限の労力でタブのスタイルを設定できます。テーマは、さまざまなインタラクション状態に必要なすべての背景色と前景色を自動的に生成します。
+最もシンプルな方法として、[`tabs-theme`]({environment:sassApiUrl}/themes#function-tabs-theme) を拡張する新しいテーマを作成します。`$item-background` や `$item-active-color` などの少数のベース パラメーターを指定することで、最小限の労力でタブのスタイルを設定できます。テーマは、さまざまなインタラクション状態に必要なすべての背景の色と前景の色を自動的に生成します。
 
 追加のパラメーターをオーバーライドして、外観をさらに微調整することもできます。
 
@@ -425,28 +747,72 @@ $dark-tabs: tabs-theme(
            iframe-src="{environment:demosBaseUrl}/layouts/tabs-style/" >
 </code-view>
 
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して tabs をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-tabs`、`dark-tabs`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは [IgxTabs テーマ]({environment:sassApiUrl}/themes#function-tabs-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-tabs
+  class="!light-tabs
+  ![--item-background:#011627]
+  ![--item-active-icon-color:#FF8040]
+  ![--item-active-color:#FF8040]">
+  ...
+</igx-tabs>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、tabs は次のようになります:
+
+<div class="sample-container loading" style="height:200px">
+    <iframe id="tabs-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/tabs-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
 <div class="divider--half"></div>
 
 ## API リファレンス
+
 <div class="divider"></div>
 
-* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
-* [IgxTabsComponent]({environment:angularApiUrl}/classes/igxtabscomponent.html)
-* [IgxTabsComponent スタイル]({environment:sassApiUrl}/themes#function-tabs-theme)
-* [IgxTabItemComponent]({environment:angularApiUrl}/classes/igxtabitemcomponent.html)
-* [IgxTabHeaderComponent]({environment:angularApiUrl}/classes/igxtabheadercomponent.html)
-* [IgxTabContentComponent]({environment:angularApiUrl}/classes/igxtabcontentcomponent.html)
+- [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+- [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
+- [IgxTabsComponent]({environment:angularApiUrl}/classes/igxtabscomponent.html)
+- [IgxTabsComponent スタイル]({environment:sassApiUrl}/themes#function-tabs-theme)
+- [IgxTabItemComponent]({environment:angularApiUrl}/classes/igxtabitemcomponent.html)
+- [IgxTabHeaderComponent]({environment:angularApiUrl}/classes/igxtabheadercomponent.html)
+- [IgxTabContentComponent]({environment:angularApiUrl}/classes/igxtabcontentcomponent.html)
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
-* [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
+
+- [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

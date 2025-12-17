@@ -3,6 +3,7 @@
 title: Angular Grid のソート - Ignite UI for Angular
 _description: Ignite for Angular UI グリッドの Angular ソート機能を使用して、ソート可能な列の組み合わせを構成し、データ レコードの表示順序を変更します。
 _keywords: angular sort, ignite ui for angular, infragistics
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular Tree Grid のソート - Ignite UI for Angular
 _description: Ignite for Angular UI グリッドの Angular ソート機能を使用して、ソート可能な列の組み合わせを構成し、データ レコードの表示順序を変更します。
 _keywords: angular sort, ignite ui for angular, infragistics
+_license: commercial
 _language: ja
 ---
 }
@@ -19,6 +21,7 @@ _language: ja
 title: Angular Hierarchical Grid のソート - Ignite UI for Angular
 _description: Ignite for Angular UI グリッドの Angular ソート機能を使用して、ソート可能な列の組み合わせを構成し、データ レコードの表示順序を変更します。
 _keywords: angular sort, ignite ui for angular, infragistics
+_license: commercial
 _language: ja
 ---
 }
@@ -34,8 +37,8 @@ Ignite UI for Angular @@igComponent では、列レベルでのデータ ソー�
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-sample/" alt="Angular @@igComponent ソートの例">
 </code-view>
 
@@ -44,8 +47,8 @@ Ignite UI for Angular @@igComponent では、列レベルでのデータ ソー�
 更に **@@igSelector** の [`contextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#contextMenu) 出力を使用してソートにカスタム コンテキスト メニューが追加されます。
 
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-sorting/" alt="Angular @@igComponent ソートの例">
 </code-view>
 
@@ -54,8 +57,8 @@ Ignite UI for Angular @@igComponent では、列レベルでのデータ ソー�
 更に **@@igSelector** の [`contextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#contextMenu) 出力を使用してソートにカスタム コンテキスト メニューが追加されます。
 
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sorting/" alt="Angular @@igComponent ソートの例">
 </code-view>
 
@@ -66,25 +69,30 @@ Ignite UI for Angular @@igComponent では、列レベルでのデータ ソー�
 [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable) 入力で可能です。@@igComponent のソートで、[`sortingIgnoreCase`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortingIgnoreCase) プロパティを設定して大文字と小文字を区別するソートができます。
 
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-column field="Name" header="Order Product" [dataType]="'string'" sortable="true"></igx-column>
 ```
+
 }
 @@if (igxName !== 'IgxTreeGrid') {
+
 ```html
 <igx-column field="ProductName" header="Product Name" [dataType]="'string'" sortable="true"></igx-column>
 ```
+
 }
 
 ## ソート インジケーター
-ソートされた列数が一定数以上ある場合、ソート順の指定がないと混乱する可能性があります。 
+
+ソートされた列数が一定数以上ある場合、ソート順の指定がないと混乱する可能性があります。
 
 **@@igxName** は、ソートされた各列のインデックスを示すことにより、この問題の解決策を提供します。
 
 @@if(igxName === "IgxGrid"){
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-indicators/" >
 </code-view>
 
@@ -95,8 +103,9 @@ Ignite UI for Angular @@igComponent では、列レベルでのデータ ソー�
 @@igComponent [`sort`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sort) メソッドを使用して列、複数の列の組み合わせをソートできます。
 
 @@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
-import { SortingDirection } from 'igniteui-angular';
+import { SortingDirection } from 'igniteui-angular/grids/core';
 // import { SortingDirection } from '@infragistics/igniteui-angular'; for licensed package
 
 // Perform a case insensitive ascending sort on the ProductName column.
@@ -108,10 +117,12 @@ this.@@igObjectRef.sort([
     { fieldName: 'UnitPrice', dir: SortingDirection.Desc }
 ]);
 ```
+
 }
 @@if (igxName !== 'IgxTreeGrid') {
+
 ```typescript
-import { SortingDirection } from 'igniteui-angular';
+import { SortingDirection } from 'igniteui-angular/grids/core';
 // import { SortingDirection } from '@infragistics/igniteui-angular'; for licensed package
 
 // Perform a case insensitive ascending sort on the ProductName column.
@@ -123,6 +134,7 @@ this.@@igObjectRef.sort([
     { fieldName: 'Price', dir: SortingDirection.Desc }
 ]);
 ```
+
 }
 
 > [!NOTE]
@@ -131,6 +143,7 @@ this.@@igObjectRef.sort([
 フィルター動作で、ソート状態をクリアするには [`clearSort`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearSort) メソッドを使用します。
 
 @@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
 // Removes the sorting state from the ProductName column
 this.@@igObjectRef.clearSort('Name');
@@ -138,8 +151,10 @@ this.@@igObjectRef.clearSort('Name');
 // Removes the sorting state from every column in the @@igComponent
 this.@@igObjectRef.clearSort();
 ```
+
 }
 @@if (igxName !== 'IgxTreeGrid') {
+
 ```typescript
 // Removes the sorting state from the ProductName column
 this.@@igObjectRef.clearSort('ProductName');
@@ -147,6 +162,7 @@ this.@@igObjectRef.clearSort('ProductName');
 // Removes the sorting state from every column in the @@igComponent
 this.@@igObjectRef.clearSort();
 ```
+
 }
 
 > [!NOTE]
@@ -160,6 +176,7 @@ this.@@igObjectRef.clearSort();
 @@igComponent でソート状態を初期設定するには、ソート式の配列を @@igComponent の [`sortingExpressions`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingExpressions) プロパティに渡します。
 
 @@if (igxName === 'IgxGrid') {
+
 ```typescript
 public ngAfterViewInit(): void {
     this.@@igObjectRef.sortingExpressions = [
@@ -170,9 +187,11 @@ public ngAfterViewInit(): void {
     ];
 }
 ```
+
 }
 
 @@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
 public ngAfterViewInit(): void {
     this.@@igObjectRef.sortingExpressions = [
@@ -183,9 +202,11 @@ public ngAfterViewInit(): void {
     ];
 }
 ```
+
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```typescript
 public ngOnInit(): void {
     this.@@igObjectRef.sortingExpressions = [
@@ -196,6 +217,7 @@ public ngOnInit(): void {
     ];
 }
 ```
+
 }
 
 > [!NOTE]
@@ -264,7 +286,7 @@ $custom-theme: grid-theme(
 >[!NOTE]
 >上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/palettes#function-palette) および [`color`]({environment:sassApiUrl}/palettes#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックをご覧ください。
 
-最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。 
+最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。
 
 ```scss
 @include css-vars($custom-theme);
@@ -274,9 +296,9 @@ $custom-theme: grid-theme(
 ### デモ
 
 
-<code-view style="height:550px" 
+<code-view style="height:550px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-styling/" >
 </code-view>
 
@@ -285,9 +307,9 @@ $custom-theme: grid-theme(
 ### デモ
 
 
-<code-view style="height:550px" 
+<code-view style="height:550px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-sorting-styling/" >
 </code-view>
 
@@ -296,9 +318,9 @@ $custom-theme: grid-theme(
 ### デモ
 
 
-<code-view style="height:510px" 
+<code-view style="height:510px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sorting-styling/" >
 </code-view>
 
@@ -308,25 +330,27 @@ $custom-theme: grid-theme(
 >このサンプルは、`Change Theme` (テーマの変更) から選択したグローバル テーマに影響を受けません。
 
 ## API リファレンス
-* [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
-* [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
+
+- [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+- [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [@@igComponent 概要](@@igMainTopic.md)
-* [仮想化とパフォーマンス](virtualization.md)
-* [ページング](paging.md)
-* [フィルタリング](filtering.md)
-* [集計](summaries.md)
-* [列移動](column-moving.md)
-* [列のピン固定](column-pinning.md)
-* [列のサイズ変更](column-resizing.md)
-* [選択](selection.md)
+- [@@igComponent 概要](@@igMainTopic.md)
+- [仮想化とパフォーマンス](virtualization.md)
+- [ページング](paging.md)
+- [フィルタリング](filtering.md)
+- [集計](summaries.md)
+- [列移動](column-moving.md)
+- [列のピン固定](column-pinning.md)
+- [列のサイズ変更](column-resizing.md)
+- [選択](selection.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

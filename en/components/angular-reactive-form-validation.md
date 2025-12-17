@@ -4,13 +4,13 @@ _description: Angular form validation is a process of verifying if inputs entere
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Combo components, Angular Reactive Forms, Angular Forms
 ---
 
-# Angular reactive form validation 
+# Angular reactive form validation
 
 ## What are reactive forms in Angular?
 
-Reactive forms in Angular provide a direct access to the underlying form object model, offering an immutable and explicit approach to handling form inputs. As the values of those inputs change in time, the state of the form is managed by reactive forms, relying on fixed or inflexible methods. 
+Reactive forms in Angular provide a direct access to the underlying form object model, offering an immutable and explicit approach to handling form inputs. As the values of those inputs change in time, the state of the form is managed by reactive forms, relying on fixed or inflexible methods.
 
-Which means that, each time a change is triggered to the data model, the so-called observable operators return a new data model, instead of updating the already existing one again and again. And that keeps the state of a form clean. 
+Which means that, each time a change is triggered to the data model, the so-called observable operators return a new data model, instead of updating the already existing one again and again. And that keeps the state of a form clean.
 
 Angular reactive forms are considered extremely scalable, reusable, and robust due to their:
 
@@ -31,20 +31,23 @@ Reactive forms are built around observable streams which track every unique chan
 The data flow in Angular reactive forms is well-structured because the form logic is led by the component class. This enables you to add validator functions directly to the FormControl instance in the component class. Whenever a change occurs, Angular calls these functions.
 
 
-## What is angular form validation? 
-Angular form validation is an integral technical process that verifies if any input provided by a user into a web-form is correct and complete. You can manage validation in a template-driven approach or with Angular reactive forms. Based on what is entered, the form will either allow users to proceed or will display a specific error message to help the user know where they went wrong with their data input. 
+## What is angular form validation?
+
+Angular form validation is an integral technical process that verifies if any input provided by a user into a web-form is correct and complete. You can manage validation in a template-driven approach or with Angular reactive forms. Based on what is entered, the form will either allow users to proceed or will display a specific error message to help the user know where they went wrong with their data input.
 
 Depending on which validator failed, the on-screen error message gives feedback, indicating what is wrong and what exactly needs to be filled in or re-entered as data. In general, apps use forms to allow users to perform data-entry tasks like signing up, logging in, updating online profiles, submitting sensitive information, and more.  
 
 Angular runs form validation every time the value of a form input is changed and to confirm if data inputs filled in a web-form by a user are accurate and complete. To do that properly, Angular calls a list of validators which are run on every change that occurs.  
 
 Validation of user-input from the UI can be done either with template-driven forms or with Angular reactive forms. Both of these forms are built on the following base classes:
-* FormControl
-* FormGroup
-* FormArray  
-* ControlValueAccessor
+
+- FormControl
+- FormGroup
+- FormArray  
+- ControlValueAccessor
 
 ## Angular reactive form validation
+
 Reactive forms deliver a model-driven approach to managing form inputs, the values of which change with respect to time. Because reactive forms are built on a component class, Angular reactive form validation happens by adding validator functions directly to the form control model in the component class.  
 
 When the value is valid, validators return `null`. If the value is invalid, validators generate a set of errors, and you can display a specific error message on the screen.
@@ -52,6 +55,7 @@ When the value is valid, validators return `null`. If the value is invalid, 
 There are built-in validators such as `required`, `minlength`, `maxlength` etc. However, you can also create your own validators.
 
 A simple custom reactive form validator can look like this:
+
 ```typescript
 import { Directive, OnInit } from '@angular/core';
 import { Validator, NG_VALIDATORS, AbstractControl, ValidationErrors } from '@angular/forms';
@@ -77,6 +81,7 @@ export class DateValueValidatorDirective implements Validator {
 ```
 
 Also a validator can be asynchronous:
+
 ```typescript
 import { Directive, OnInit } from '@angular/core';
 import { AsyncValidator, NG_ASYNC_VALIDATORS, AbstractControl, ValidationErrors } from '@angular/forms';
@@ -103,6 +108,7 @@ export class DateValueAsyncValidatorDirective implements AsyncValidator {
 ```
 
 ## Angular Reactive form validation example
+
 Let’s see how you can set up reactive form validation in practice with this Angular form validation example.
 
 It is a quick demo of a pretty standard booking form for a movie. It shows what happens if one or several of the form inputs are incomplete and you can see how the specific error message is visualized.
@@ -120,9 +126,11 @@ So, if you enter values for movie title, full name, phone, and email, they will 
 <div class="divider--half"></div>
 
 ## Angular form group validation
-Form groups are basically a group of multiple related `FormControlls` that enable you to access the state of the encapsulated controls. Angular from group validation helps you track the value of group controls or a form as well as to track validation of the state of the form control. `FormGroup` is used with `FormControl`. 
+
+Form groups are basically a group of multiple related `FormControlls` that enable you to access the state of the encapsulated controls. Angular from group validation helps you track the value of group controls or a form as well as to track validation of the state of the form control. `FormGroup` is used with `FormControl`.
 
 ## Why would you need Angular form custom validation?
+
 With custom validators you can address different functionality and ensure the values in a form meet certain criteria, which sometimes isn’t possible to do when using built-in validators only. If you want to validate a phone number or a specific password pattern, it’s best to create custom validator and rely on Angular form custom validation.
 
 With reactive forms, generating such is just as easy as writing a new function. And for model-driven forms (such is the reactive form in Angular) we create custom validation functions and send them to the `FormControl` constructor.
@@ -168,16 +176,18 @@ export class MyComponent implements OnInit {
 ```
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
 Related topics:
-* [Combo](combo.md)
-* [Select](select.md)
-* [Input Group](input-group.md)
-* [Date Picker](date-picker.md)
-* [Time Picker](time-picker.md)
+
+- [Combo](combo.md)
+- [Select](select.md)
+- [Input Group](input-group.md)
+- [Date Picker](date-picker.md)
+- [Time Picker](time-picker.md)
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

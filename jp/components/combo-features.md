@@ -1,16 +1,19 @@
 ---
-title: ComboBox 機能
+title: ComboBox 機能 | MITライセンス
 _description: Combo コントロールは、データと値のバインディング、カスタム値、フィルタリング、グループ化など複数の機能を公開します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular widgets, web ウィジェット, UI ウィジェット, Angular, Native Angular コンポーネント スイート, Native Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Combo コンポーネント, Angular 機能, Angular Combo 機能, Angular Combo データ バインディング, Angular Combo 値バインディング, Angular Combo データ フィルタリング, Angular Combo グループ化, Angular Combo カスタム値
+_license: MIT
 _language: ja
 ---
 
 # ComboBox (コンボボックス) 機能
+
 <p class="highlight">
 Ignite UI for Angular ComboBox コントロールは、データと値のバインディング、カスタム値、フィルタリング、グループ化など複数の機能を公開します。
 </p>
 
 ## Angular ComboBox 機能の例
+
 以下のデモは、ランタイムで有効または無効にできるいくつかのコンボボックス機能を示します。
 
 
@@ -24,10 +27,12 @@ Ignite UI for Angular ComboBox コントロールは、データと値のバイ�
 ## 使用方法
 
 ### はじめに
+
 コンボボックス コンポーネントを初期化にするには、まず `IgxComboModule` を **app.module.ts**  ファイルにインポートします。サンプルは [igx-switch]({environment:angularApiUrl}/classes/igxswitchcomponent.html) コンポーネントを使用してコンボボックスのプロパティの値をトグルしているため、`IgxSwitchModule` も必要です。
 
 ```typescript
-import { IgxComboModule, IgxSwitchModule } from 'igniteui-angular';
+import { IgxComboModule } from 'igniteui-angular/combo';
+import { IgxSwitchModule } from 'igniteui-angular/switch';
 // import { IgxComboModule, IgxSwitchModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -62,6 +67,7 @@ export class AppModule {}
 ```
 
 ### コンポーネント定義
+
 グループ化は、[groupKey]({environment:angularApiUrl}/classes/IgxComboComponent.html#groupKey) プロパティを対応するデータ ソース エンティティに設定、または空文字列に設定して有効または無効にできます。
 
 ```typescript
@@ -80,6 +86,7 @@ export class AppModule {}
 ## 機能
 
 ### データ バインディング
+
 以下のコード スニペットは、ローカル データ ソースにバインドされた [igx-combo]({environment:angularApiUrl}/classes/igxcombocomponent.html) の基本的な使用方法を示しています。[valueKey]({environment:angularApiUrl}/classes/IgxComboComponent.html#valueKey) は、コンボボックスの選択に保存されるデータ エントリのプロパティを指定し、[displayKey]({environment:angularApiUrl}/classes/IgxComboComponent.html#displayKey) は、コンボボックス テキストに使用されるプロパティを指定します。
 
 ```html
@@ -104,6 +111,7 @@ export class ComboDemo implements OnInit {
 コンボボックス コンポーネントをリモート データにバインドする方法の詳細は、[コンボボックス リモート バインディング](combo-remote.md)を参照してください。
 
 ### カスタム オーバーレイ設定
+
 コンボボックス コンポーネントでは、ユーザーが項目リストの表示方法を変更できます。これを行うには、カスタム [OverlaySettings]({environment:angularApiUrl}/interfaces/overlaysettings.html) を定義し、それらを ComboBox の [overlaySettings]({environment:angularApiUrl}/classes/IgxComboComponent.html#overlaySettings) 入力に渡します。
 
 ```typescript
@@ -140,6 +148,7 @@ export class CustomOverlayCombo {
 > コンボボックス コンポーネントは、デフォルトの配置ストラテジとして [AutoPositionStrategy]({environment:angularApiUrl}/classes/autopositionstrategy.html) を使用します。
 
 ### フィルタリング
+
 コンボボックスのフィルタリングがデフォルトで有効になります。無効にするには、[disableFiltering]({environment:angularApiUrl}/classes/igxcombocomponent.html#disableFiltering) プロパティを true に設定します。
 
 フィルタリング オプションは、検索の大文字と小文字の区別を有効にすることでさらに拡張できます。大文字と小文字を区別するアイコンを検索入力に表示するには、[showSearchCaseIcon]({environment:angularApiUrl}/classes/IgxComboComponent.html#showSearchCaseIcon) プロパティを true に設定します。
@@ -151,6 +160,7 @@ export class CustomOverlayCombo {
 <div class="divider--half"></div>
 
 ### カスタム値
+
 [allowCustomValues]({environment:angularApiUrl}/classes/IgxComboComponent.html#allowCustomValues) プロパティは、カスタム値をコレクションに追加できるかどうかを制御します。有効な場合、コンボボックス UI で項目を追加できます。
 
 ```html
@@ -160,6 +170,7 @@ export class CustomOverlayCombo {
 <div class="divider--half"></div>
 
 ### 検索入力のフォーカス
+
 コンボボックスの [autoFocusSearch]({environment:angularApiUrl}/classes/IgxComboComponent.html#autoFocusSearch) プロパティは、コンボボックスのドロップダウン リストが開いたときに検索入力がフォーカスを受け取るかどうかを制御します。デフォルトで、このプロパティは `true` に設定されます。`false` に設定すると、フォーカスはコンボボックスの項目コンテナーに移動します。モバイル デバイスでは、コンボボックスのドロップダウン リストを開くときにソフトウェア キーボードがポップアップしないようにするために使用できます。
 
 ```html
@@ -169,6 +180,7 @@ export class CustomOverlayCombo {
 <div class="divider--half"></div>
 
 ### ComboBox の無効化
+
 以下のコードでコンボボックスを無効にできます。
 
 ```html
@@ -178,6 +190,7 @@ export class CustomOverlayCombo {
 <div class="divider--half"></div>
 
 ### グループ化
+
 コンボボックスの `groupKey` オプションを定義すると、キーに基づいて項目をグループ化します。
 
 ```html
@@ -192,7 +205,7 @@ export class CustomOverlayCombo {
 
 ```typescript
 ...
-import { SortingDirection } from 'igniteui-angular'
+import { SortingDirection } from 'igniteui-angular/core'
 // import { SortingDirection } from '@infragistics/igniteui-angular'; for licensed package
 
 export class ComboDemo {
@@ -204,25 +217,27 @@ export class ComboDemo {
 <div class="divider--half"></div>
 
 ## API まとめ
+
 <div class="divider--half"></div>
 
-* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
-* [IgxComboComponent スタイル]({environment:sassApiUrl}/themes#function-combo-theme)
+- [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
+- [IgxComboComponent スタイル]({environment:sassApiUrl}/themes#function-combo-theme)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
-* [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
+- [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [コンボボックス コンポーネント](combo.md)
-* [コンボボックス リモート バインディング](combo-remote.md)
-* [コンボボックス テンプレート](combo-templates.md)
-* [テンプレート駆動フォームの統合](input-group.md)
-* [リアクティブ フォームの統合](angular-reactive-form-validation.md)
-* [単一選コンボボックス](simple-combo.md)
+- [コンボボックス コンポーネント](combo.md)
+- [コンボボックス リモート バインディング](combo-remote.md)
+- [コンボボックス テンプレート](combo-templates.md)
+- [テンプレート駆動フォームの統合](input-group.md)
+- [リアクティブ フォームの統合](angular-reactive-form-validation.md)
+- [単一選コンボボックス](simple-combo.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

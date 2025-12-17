@@ -1,7 +1,8 @@
 ---
-title: 仮想スクロール ディレクティブ
+title: 仮想スクロール ディレクティブ | MITライセンス
 _description: Ignite UI for Angular は ngFor と同様の仮想 igxFor ディレクティブを公開します。DOM でデータの表示されている部分のみを可視化すると DOM オブジェクトの描画が仮想化されます。
 _keywords: Angular Virtual ForOf ディレクティブ, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ, 仮想化, パフォーマンス, 仮想ディレクティブ, Angular 仮想 For
+_license: MIT
 _language: ja
 ---
 
@@ -12,8 +13,8 @@ _language: ja
 ## Angular 仮想スクロール ディレクティブの例
 
 
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/igx-for-sample-1/" alt="Angular 仮想スクロール ディレクティブの例">
 </code-view>
 
@@ -34,7 +35,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 ```typescript
 // app.module.ts
 
-import { IgxForOfModule } from 'igniteui-angular';
+import { IgxForOfModule } from 'igniteui-angular/directives';
 // import { IgxForOfModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -52,7 +53,7 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IgxForOfDirective } from 'igniteui-angular';
+import { IgxForOfDirective } from 'igniteui-angular/directives';
 // import { IgxForOfDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -109,9 +110,9 @@ Ignite UI for Angular ForOf モジュールまたはディレクティブをイ�
 </igx-list>
 ```
 
-**注:** [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForOf) テンプレートの親コンテナーには、次の CSS ルールが適用されていることを強く推奨します: 垂直方向には `height`、水平方向には `width`、`overflow: hidden` および ` position: relative`。スムーズ スクロール動作が、表示されたままの場合にページのその他の部分に視覚的に影響を与えることが可能なコンテンツ オフセットによって実装されるためです。
+**注:** [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForOf) テンプレートの親コンテナーには、次の CSS ルールが適用されていることを強く推奨します: 垂直方向には `height`、水平方向には `width`、`overflow: hidden` および `position: relative`。スムーズ スクロール動作が、表示されたままの場合にページのその他の部分に視覚的に影響を与えることが可能なコンテンツ オフセットによって実装されるためです。
 
-### 水平仮想化 
+### 水平仮想化
 
 ```html
 <igx-list>
@@ -130,8 +131,8 @@ Ignite UI for Angular ForOf モジュールまたはディレクティブをイ�
 ```
 
 
-<code-view style="height: 240px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 240px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/igx-for-sample-2/" >
 </code-view>
 
@@ -164,11 +165,12 @@ Ignite UI for Angular ForOf モジュールまたはディレクティブをイ�
 </table>
 ```
 
-`igxFor` ディレクティブは、`igxGrid` 内のデータを垂直方向と水平方向の両方向に仮想化するために使用されます。 
+`igxFor` ディレクティブは、`igxGrid` 内のデータを垂直方向と水平方向の両方向に仮想化するために使用されます。
 
 より詳細な情報とデモについては、[グリッド仮想化](grid/virtualization.md)トピックに従ってください。
 
 ### リモート サービスにバインドされる igxFor
+
 [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForOf) ディレクティブは、`Observable` プロパティ- `remoteData`を使用してリモート サービスにバインドできます。(次の例の場合) `chunkLoading` イベントも、データのリクエストをトリガーするために利用する必要があります。
 
 ```html
@@ -185,7 +187,7 @@ Ignite UI for Angular ForOf モジュールまたはディレクティブをイ�
 </div>
 ```
 
-***注:*** [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForOf) のインスタンスで [`totalItemCount`]({environment:angularApiUrl}/classes/igxforofdirective.html#totalItemCount) プロパティを設定する必要があります。
+_**注:**_ [`igxForOf`]({environment:angularApiUrl}/classes/igxforofdirective.html#igxForOf) のインスタンスで [`totalItemCount`]({environment:angularApiUrl}/classes/igxforofdirective.html#totalItemCount) プロパティを設定する必要があります。
 
 ```typescript
 this.virtDirRemote.totalItemCount = data['@odata.count'];
@@ -275,14 +277,14 @@ igxFor ディレクティブのコンテキストには、`even`、`odd`、`firs
 
 ## API リファレンス
 
-* [IgxForOfDirective]({environment:angularApiUrl}/classes/igxforofdirective.html)
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
+- [IgxForOfDirective]({environment:angularApiUrl}/classes/igxforofdirective.html)
+- [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+- [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
 
 ## その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
