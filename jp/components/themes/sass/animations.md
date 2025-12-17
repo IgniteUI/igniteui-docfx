@@ -6,6 +6,7 @@ _language: ja
 ---
 
 # アニメーション
+
 <p class="highlight">Ignite UI for Angular には、ユーザー エクスペリエンスを向上させるために特別に設計された 100 以上のビルド済みアニメーションが含まれています。</p>
 <div class="divider"></div>
 
@@ -47,6 +48,7 @@ Ignite UI for Angular [keyframes]({environment:sassApiUrl}/animations#mixin-keyf
     }
 } 
 ```
+
 <div class="divider--half"></div>
 
 ### アニメーション ミックスイン
@@ -62,11 +64,12 @@ Ignite UI for Angular [keyframes]({environment:sassApiUrl}/animations#mixin-keyf
     @include animation('fade-in-top' 3s $ease-out-quad infinite);
 }
 ```
+
 <div class="divider--half"></div>
 
 ### タイミング関数
 
-キーフレーム ミックスインで使用するタイミング関数のリストが含まれています。タイミング関数の全てのリストの詳細は、[ドキュメント]({environment:sassApiUrl})をご覧ください。
+キーフレーム ミックスインで使用するタイミング関数のリストが含まれています。タイミング関数の全てのリストの詳細は、[ドキュメント]({environment:sassApiUrl}/animations)をご覧ください。
 
 <div class="sample-container loading" style="height: 270px">
     <iframe id="animations-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/theming/animations-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
@@ -127,20 +130,21 @@ animations: [
 ### タイミング関数
 
 Ignite UI for Angular には、アニメーションをイーズ イン/アウトするために使用できるタイミング関数のセットが含まれています。[EaseIn]({environment:angularApiUrl}/enums/easein.html)、[EaseOut]({environment:angularApiUrl}/enums/easeout.html)、[EaseInOut]({environment:angularApiUrl}/enums/easeinout.html) の 3 つの主要なタイミング関数グループがあり、それぞれ以下のタイミングを含みます。
-  - quad
-  - cubic
-  - quart
-  - quint
-  - sine
-  - expo
-  - circ
-  - back
+- quad
+- cubic
+- quart
+- quint
+- sine
+- expo
+- circ
+- back
 
 特定のタイミング関数を使用するには、まずそれはインポートします。
 
-``` typescript 
+``` typescript
 import { EaseOut } from "igniteui-angular/animations/easings";
 ```
+
 アニメーションの easing パラメーターの値として使用します。
 
 ``` typescript
@@ -152,16 +156,18 @@ useAnimation(fadeIn, {
 ```
 
 ## API リファレンス
+
 <div class="divider"></div>
 
-* [Animations]({environment:sassApiUrl}/animations)
-* [AnimationSettings]({environment:angularApiUrl}/interfaces/animationsettings.html)
-* [IAnimationParams]({environment:angularApiUrl}/interfaces/ianimationparams.html)
+- [Animations]({environment:sassApiUrl}/animations)
+- [AnimationSettings]({environment:angularApiUrl}/interfaces/animationsettings.html)
+- [IAnimationParams]({environment:angularApiUrl}/interfaces/ianimationparams.html)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

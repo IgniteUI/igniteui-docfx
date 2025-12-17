@@ -1,10 +1,12 @@
 ---
-title: ComboBox Templates
+title: ComboBox Templates - MIT license 
 _description: Custom templates for different areas of the igx-combo component can be defined, including items, header, footer, empty list and adding button.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Combo components, Angular Templates, Angular Combo Templates
+_license: MIT
 ---
 
 # ComboBox Templates
+
 <p class="highlight">
 The Ignite UI for Angular ComboBox Component allows defining custom templates for different areas such as header, footer, items, empty list and adding button.
 </p>
@@ -19,10 +21,11 @@ The Ignite UI for Angular ComboBox Component allows defining custom templates fo
 
 
 ## Usage
+
 To get started with the ComboBox component, first you need to import the `IgxComboModule` in your **app.module.ts** file:
 
 ```typescript
-import { IgxComboModule } from 'igniteui-angular';
+import { IgxComboModule } from 'igniteui-angular/combo';
 // import { IgxComboModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -36,9 +39,11 @@ export class AppModule {}
 ```
 
 ## Template Types
+
 When defining combobox templates, you need to reference them using the following predefined reference names:
 
 ### Item template
+
 Use selector `[igxComboItem]`:
 
 ```html
@@ -53,6 +58,7 @@ Use selector `[igxComboItem]`:
 ```
 
 ### Header Item template
+
 Use selector `[igxComboHeaderItem]`:
 
 ```html
@@ -64,6 +70,7 @@ Use selector `[igxComboHeaderItem]`:
 ```
 
 ### Header template
+
 Use selector `[igxComboHeader]`:
 
 ```html
@@ -75,6 +82,7 @@ Use selector `[igxComboHeader]`:
 ```
 
 ### Footer template
+
 Use selector `[igxComboFooter]`:
 
 ```html
@@ -86,6 +94,7 @@ Use selector `[igxComboFooter]`:
 ```
 
 ### Empty template
+
 Use selector `[igxComboEmpty]`:
 
 ```html
@@ -97,6 +106,7 @@ Use selector `[igxComboEmpty]`:
 ```
 
 ### Add template
+
 Use selector `[igxComboAddItem]`:
 
 ```html
@@ -110,6 +120,7 @@ Use selector `[igxComboAddItem]`:
 ```
 
 ### Toggle Icon Template
+
 Use selector `[igxComboToggleIcon]`:
 
 ```html
@@ -121,6 +132,7 @@ Use selector `[igxComboToggleIcon]`:
 ```
 
 ### Clear Icon Template
+
 Use selector `[igxComboClearIcon]`:
 
 ```html
@@ -132,6 +144,7 @@ Use selector `[igxComboClearIcon]`:
 ```
 
 ## Templating ComboBox Input
+
 When used with templates, the `igxComboClearIcon` and the `igxComboToggleIcon` selectors, change how the respective buttons appear in the combobox input. Passing content inside of the `igx-combo` also allows templating of the combobox input similar to the way an `igx-input-group` can be templated (using `igx-prefix`, `igx-suffix` and `igxLabel`). The code snippet below illustrates how to add an appropriate label and prefix to the combobox input:
 
 ```html
@@ -142,22 +155,24 @@ When used with templates, the `igxComboClearIcon` and the `igxComboToggleIcon` s
 ```
 
 ## API Summary
+
 <div class="divider--half"></div>
 
-* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
-* [IgxComboComponent Styles]({environment:sassApiUrl}/themes#function-combo-theme)
+- [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
+- [IgxComboComponent Styles]({environment:sassApiUrl}/themes#function-combo-theme)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [ComboBox Component](combo.md)
-* [ComboBox Features](combo-features.md)
-* [ComboBox Remote Binding](combo-remote.md)
-* [Template Driven Forms Integration](input-group.md)
-* [Reactive Forms Integration](angular-reactive-form-validation.md)
-* [Single Select ComboBox](simple-combo.md)
+- [ComboBox Component](combo.md)
+- [ComboBox Features](combo-features.md)
+- [ComboBox Remote Binding](combo-remote.md)
+- [Template Driven Forms Integration](input-group.md)
+- [Reactive Forms Integration](angular-reactive-form-validation.md)
+- [Single Select ComboBox](simple-combo.md)
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

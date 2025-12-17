@@ -1,7 +1,8 @@
 ---
-title: Angular Circular Progress Component – Ignite UI for Angular | Infragistics
+title: Angular Circular Progress Component – Ignite UI for Angular | Infragistics | MIT license
 _description: Ignite UI for Angular Circular Progress Indicator component allows developers to display progress in a circle with endless customization options.
 _keywords: Angular Circular Progress component, Angular Circular Progress control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Angular UI Components
+_license: MIT
 ---
 
 # Angular Circular Progress Component Overview
@@ -10,8 +11,8 @@ _keywords: Angular Circular Progress component, Angular Circular Progress contro
 
 ## Angular Circular Progress Example
 
-<code-view style="height:100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/circular-progressbar/" alt="Angular Circular Progress Example">
 </code-view>
 
@@ -25,7 +26,7 @@ To get started with the Ignite UI for Angular Circular Progress component, first
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxProgressBarModule` in the **app.module.ts** file:
 
@@ -33,7 +34,7 @@ The next step is to import the `IgxProgressBarModule` in the **app.module.ts** f
 // app.module.ts
 
 ...
-import { IgxProgressBarModule } from 'igniteui-angular';
+import { IgxProgressBarModule } from 'igniteui-angular/progressbar';
 // import { IgxProgressBarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -49,7 +50,7 @@ Alternatively, as of `16.0.0` you can import the `IgxCircularProgressBarComponen
 ```typescript
 // home.component.ts
 
-import { IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular';
+import { IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular/progressbar';
 // import { IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -83,7 +84,6 @@ After that, we should have the demo sample in your browser.
 
 > [!NOTE]
 > The **igx-circular-bar** emits [`onProgressChanged`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#onProgressChanged) event that outputs an object like this `{currentValue: 65, previousValue: 64}` on each step.
-
 > [!NOTE]
 > The default progress increments by **1% of the [`max`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#max) value** per update cycle, this happens if the [`step`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#step) value is not defined. To change the update rate, the [`step`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#step) value should be defined.```
 
@@ -100,8 +100,8 @@ If you want to track a process that is not determined precisely, you can set the
 
 The final result should be:
 
-<code-view style="height:100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/circular-indeterminate-progressbar/" >
 </code-view>
 
@@ -220,8 +220,8 @@ To provide a gradient that has more than 2 color stops, we have to use the direc
 
 After reproducing the steps above, you should get this as a result:
 
-<code-view style="height:200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/circular-dynamic-sample/" >
 </code-view>
 
@@ -257,9 +257,9 @@ The last step is to **include** the component theme in our application.
 
 <div class="divider--half"></div>
 
-<code-view style="height:100px" 
+<code-view style="height:100px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/circular-styling-sample/" >
 </code-view>
 
@@ -267,5 +267,5 @@ The last step is to **include** the component theme in our application.
 
 <div class="divider--half"></div>
 
-* [IgxCircularProgressBarComponent]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html)
-* [IgxCircularProgressBarComponent Styles]({environment:sassApiUrl}/themes#function-progress-circular-theme)
+- [IgxCircularProgressBarComponent]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html)
+- [IgxCircularProgressBarComponent Styles]({environment:sassApiUrl}/themes#function-progress-circular-theme)

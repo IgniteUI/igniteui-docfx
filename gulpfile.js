@@ -122,6 +122,12 @@ const replaceEnvironmentVariables = () => {
         .pipe(dest(DOCFX_SITE));
 }
 
+const removeLeadingComments = () => {
+    return src([`${DOCFX_ARTICLES}/**/*.md`, `!${DOCFX_ARTICLES}/grids_templates/**`])
+        .pipe(replace(/^<!--[\s\S]*?-->(?:\r?\n)*/, ''))
+        .pipe(dest(DOCFX_ARTICLES));
+}
+
 const watchFiles = (done) => {
 
     const excluded = [
@@ -191,7 +197,7 @@ const  browserSyncReload = (done) => {
 
 const build = series(
     parallel(generateGridsTopics, generateTreeGridsTopics, generateHierarchicalGridsTopics, generatePivotGridsTopics),
-    buildSite, removeHTMLExtensionFromSiteMap, replaceEnvironmentVariables);
+    removeLeadingComments, buildSite, removeHTMLExtensionFromSiteMap, replaceEnvironmentVariables);
 
 const buildCI = series(generateGridsTopics, generateTreeGridsTopics, generateHierarchicalGridsTopics, generatePivotGridsTopics, buildSite);
 

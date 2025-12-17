@@ -6,10 +6,12 @@ _language: ja
 ---
 
 # 丸み
+
 <p class="highlight">Ignite UI for Angular では、丸みを 0 から 1 の間の値に設定してコンポーネントの形を変更できます。</p>
 <div class="divider"></div>
 
 ## 概要
+
 境界半径は、コンポーネントの[テーマ スキーマ](https://github.com/IgniteUI/igniteui-theming/blob/18f878033898e1b6a3bb0ed28993e9a4037d1a80/sass/themes/schemas/components/light/_toast.scss#L44)で定義されます (以下の例を参照)。この方法で定義されたコンポーネントの境界半径は、[theme]({environment:sassApiUrl}/themes#mixin-theme) ミックスインの `$roundness` パラメーター、または `--ig-radius-factor` と呼ばれる単一の CSS 変数を介して制御できます。
 
 ```scss
@@ -39,6 +41,7 @@ $light-toast: extend(
 ```
 
 ### 使用方法
+
 上記の例のトーストのデフォルト値を変更できます。
 
 トーストが結果のテーマの `$roundness` または `--ig-radius-factor` 変数の影響を受けたい場合は、Ignite UI for Angular パッケージで提供される `border-radius` 関数を使用します。
@@ -60,18 +63,20 @@ igx-toast {
 }
 ```
 
-また、`border-radius` ミックスインを使用して、要素に border-radius プロパティを直接割り当てることもできます。 
+また、`border-radius` ミックスインを使用して、要素に border-radius プロパティを直接割り当てることもできます。
 
 ```scss
 button {
     @include border-radius(rem(4px), rem(4px), rem(16px));
 }
 ```
+
 これで、ボタンの `border-radius` は `$roundness` および `--ig-radius-factor` 変数の影響を受けるようになります。
 
 <div class="divider--half"></div>
 
 ### ベースライン境界半径の値
+
 以下の表は、マテリアル スキーマで定義されているコンポーネントの境界半径値の一部の抜粋を示しています。
 
 | **コンポーネント**          | **Min/Max 境界** | **デフォルトの境界** |
@@ -97,11 +102,11 @@ button {
 | **Tooltip**            |  0 / 16px          | 4px                |
 | **Toast**              |  0 / 26px          | 26px               |
 
-各テーマのデフォルトおよび最小/最大半径値を確認するには、各コンポーネントの [スキーマ]({environment:sassApiUrl}) ドキュメントを参照してください。
+各テーマのデフォルトおよび最小/最大半径値を確認するには、各コンポーネントの [スキーマ]({environment:sassApiUrl}/schemas) ドキュメントを参照してください。
 
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

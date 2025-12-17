@@ -11,7 +11,6 @@ WPF では、アプリケーション内で要素をレイアウトするには�
 
 ### StackPanel
 
-
  [`StackPanel`](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.controls.stackpanel?view=netframework-4.8) は、子要素を水平方向または垂直方向に配置できる単一行に配置します。StackPanel にボタンを追加して、WPF でどのように表示されるかを確認します。
 
 ```xml
@@ -99,7 +98,7 @@ button {
 
 <img class="responsive-img" src="../../../images/general/angular_wrappanel.png" />
 
-Orientation="Vertical" の WrapPane と同様の結果を得るには、[`flex-direction`](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp) プロパティを `column` に設定する必要があります。[`flex-flow`](https://www.w3schools.com/cssref/css3_pr_flex-flow.asp) プロパティは、`flex-direction` プロパティと `flex-wrap` プロパティの両方を設定するための略記プロパティです。 
+Orientation="Vertical" の WrapPane と同様の結果を得るには、[`flex-direction`](https://www.w3schools.com/cssref/css3_pr_flex-direction.asp) プロパティを `column` に設定する必要があります。[`flex-flow`](https://www.w3schools.com/cssref/css3_pr_flex-flow.asp) プロパティは、`flex-direction` プロパティと `flex-wrap` プロパティの両方を設定するための略記プロパティです。
 
 ```css
 .flex-container {
@@ -235,13 +234,14 @@ WPF グリッドと CSS グリッドの重要な違いが 1 つあります。WP
 `grid-row` および `grid-column` プロパティは、[`grid-row-start`](https://www.w3schools.com/cssref/pr_grid-row-start.asp)、[`grid-row-end`](https://www.w3schools.com/cssref/pr_grid-row-end.asp)、[`grid-column-start`](https://www.w3schools.com/cssref/pr_grid-column-start.asp)、[`grid-column-end`](https://www.w3schools.com/cssref/pr_grid-column-end.asp) プロパティの略記プロパティです。CSS グリッド コンテナーと項目プロパティの詳細については、**その他のリソース**セクションのチュートリアルをご覧ください。
 
 ## その他のリソース
-* [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp)
-* [CSS Grid 概要](https://www.w3schools.com/css/css_grid.asp)
-* [CSS Grid コンテナー](https://www.w3schools.com/css/css_grid_container.asp)
-* [CSS Grid Item](https://www.w3schools.com/css/css_grid_item.asp)
+
+- [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp)
+- [CSS Grid 概要](https://www.w3schools.com/css/css_grid.asp)
+- [CSS Grid コンテナー](https://www.w3schools.com/css/css_grid_container.asp)
+- [CSS Grid Item](https://www.w3schools.com/css/css_grid_item.asp)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

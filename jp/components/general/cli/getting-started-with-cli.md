@@ -22,13 +22,15 @@ yarn global add igniteui-cli
 ```
 
 ### ガイドの使用
-アプリケーションを最短でブートストラップする最も簡単な方法は、[Ignite UI CLI を使用したステップ バイ ステップ ガイド](step-by-step-guide-using-cli.md)を使用する方法です。 
+
+アプリケーションを最短でブートストラップする最も簡単な方法は、[Ignite UI CLI を使用したステップ バイ ステップ ガイド](step-by-step-guide-using-cli.md)を使用する方法です。
 
 Ignite UI for Angular CLI を使用してガイドをアクティブにするには、次のコマンドを実行します。
 
 ```cmd
 ig
 ```
+
 または
 
 ```cmd
@@ -130,7 +132,7 @@ ig new newAngularProject --framework=angular --type=igx-ts --template=side-nav
     <code>--template</code>
   </p>
   <p>
-    特定のフレームワーク タイプに異なるプロジェクト テンプレートがある場合、このオプションを使用します。 
+    特定のフレームワーク タイプに異なるプロジェクト テンプレートがある場合、このオプションを使用します。
     現在、このオプションは、Angular igx-ts プロジェクトタイプの Ignite UI でのみ使用できます。</p>
 </details>
 
@@ -155,7 +157,7 @@ ig add grid newGrid
   </p>
   <p>
     <i>注: module 引数は Angular プロジェクトにのみ適用できます。</i>
-  </p> 
+  </p>
   <p>
     新しいコンポーネントを登録するモジュールの、/src/app/ folder を基準とした module.ts ファイルのパス。
   </p>
@@ -181,6 +183,7 @@ ig start
 ```
 
 ## Ignite UI CLI コマンド
+
 使用可能な Ignite UI CLI コマンドとその使用方法 (フラグを渡すなど) の完全なリストは、[Ignite UI CLI wiki ページ](https://github.com/IgniteUI/igniteui-cli/wiki)ページにあります。
 
 | コマンド | エイリアス | 説明 |

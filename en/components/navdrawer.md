@@ -1,7 +1,8 @@
 ---
-title: Angular Navigation Drawer Component – Ignite UI for Angular | Infragistics
+title: Angular Navigation Drawer Component – Ignite UI for Angular | Infragistics | MIT license
 _description: Implement a user-friendly slide in/out navigation container with complete programmatic control with Ignite UI for Angular Navigation Drawer component.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Navigation Drawer component, Angular Navigation Drawer control
+_license: MIT
 ---
 
 # Angular Navigation Drawer Component Overview
@@ -12,8 +13,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 <div class="divider--half"></div>
 
-<code-view style="height: 500px; border: 1px solid #D4D4D4;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 500px; border: 1px solid #D4D4D4;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-simple/" alt="Angular Navigation Drawer Example">
 </code-view>
 
@@ -27,7 +28,7 @@ To get started with the Ignite UI for Angular Navigation Drawer component, first
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The first step is to import the `IgxNavigationDrawerModule` inside our **app.module.ts** file.
 
@@ -39,7 +40,7 @@ The first step is to import the `IgxNavigationDrawerModule` inside our **app.mod
 ...
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxNavigationDrawerModule } from 'igniteui-angular';
+import { IgxNavigationDrawerModule } from 'igniteui-angular/navigation-drawer';
 // import { IgxNavigationDrawerModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -58,7 +59,9 @@ Alternatively, as of `16.0.0` you can import the `IgxNavigationDrawerComponent` 
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgFor } from '@angular/common';
-import { IGX_NAVIGATION_DRAWER_DIRECTIVES, IgxRippleDirective, IgxIconComponent } from 'igniteui-angular';
+import { IGX_NAVIGATION_DRAWER_DIRECTIVES } from 'igniteui-angular/navigation-drawer';
+import { IgxRippleDirective } from 'igniteui-angular/directives';
+import { IgxIconComponent } from 'igniteui-angular/icon';
 // import { IGX_NAVIGATION_DRAWER_DIRECTIVES, IgxRippleDirective, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -139,7 +142,6 @@ The [`igxRipple`](ripple.md) directive completes the look and feel:
 ```
 
 > An additional template decorated with `igxDrawerMini` directive can be provided for the alternative [Mini variant](#mini-variant) as closed state.
-
 > [!NOTE]
 > The Navigation Drawer can float above the content or be pinned alongside it. By default the drawer switches between those modes depending on the viewport size. See [Modes](#modes) for more information.
 
@@ -173,7 +175,7 @@ export class AppComponent {
 }
 ```
 
-There are various ways to open and close the drawer. Input properties can be bound to app state, programatic access to the API in the component using a [`@ViewChild(IgxNavigationDrawerComponent)`](https://angular.io/api/core/ViewChild) reference or even in this case using the `#drawer` [template reference variable](https://angular.io/guide/template-syntax#ref-vars):
+There are various ways to open and close the drawer. Input properties can be bound to app state, programmatic access to the API in the component using a [`@ViewChild(IgxNavigationDrawerComponent)`](https://angular.io/api/core/ViewChild) reference or even in this case using the `#drawer` [template reference variable](https://angular.io/guide/template-syntax#ref-vars):
 
 ```html
 <button (click)="drawer.toggle()">Menu</button>
@@ -196,7 +198,7 @@ Also, if you want the drawer to close when you select an item from it, you can u
 ```ts
 /* app.component.ts */
 import { Component, ViewChild } from '@angular/core';
-import { IgxNavigationDrawerComponent } from 'igniteui-angular';
+import { IgxNavigationDrawerComponent } from 'igniteui-angular/navigation-drawer';
 // import { IgxNavigationDrawerComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({...})
@@ -256,8 +258,8 @@ Here's how that would look applied to the previous example:
 
 Now the changed example should look like that:
 
-<code-view style="height: 500px; border: 1px solid #D4D4D4;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 500px; border: 1px solid #D4D4D4;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-pin/" >
 </code-view>
 
@@ -305,8 +307,8 @@ The mini variant is commonly used in a persistent setup, so we've set `pin` and 
 </igx-nav-drawer>
 ```
 
-<code-view style="height: 400px; border: 1px solid #D4D4D4;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px; border: 1px solid #D4D4D4;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-mini/" >
 </code-view>
 
@@ -373,7 +375,7 @@ import { RouterModule } from '@angular/router';
 @NgModule([
     imports: [
         RouterModule,
-		RouterModule.forRoot([
+  RouterModule.forRoot([
             {path: 'avatar', component: NavDrawerRoutingComponent},
             {path: 'badge', component: NavDrawerRoutingComponent},
             {path: 'button-group', component: NavDrawerRoutingComponent}
@@ -384,8 +386,8 @@ import { RouterModule } from '@angular/router';
 
 After all the steps above are completed, your app should look like that:
 
-<code-view style="height: 400px; border: 1px solid #D4D4D4;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px; border: 1px solid #D4D4D4;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-routing/" >
 </code-view>
 
@@ -445,8 +447,8 @@ There's also child routing extracted from the `children` property of the routes.
 
 The example below presents the capabilities of a hierarchical structure by using predefined data with topic names and links. The structure allows users to easily generate functional and detailed navigations and to have the ability to define each element whether to be displayed as a link or as an indicator.
 
-<code-view style="height: 400px; border: 1px solid #D4D4D4;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px; border: 1px solid #D4D4D4;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-hierarchical/" >
 </code-view>
 
@@ -490,11 +492,11 @@ The last step is to **include** the component theme in our application.
     @include css-vars($custom-theme);
   }
 }
-```        
+```
 
-<code-view style="height: 400px; border: 1px solid #D4D4D4;" 
+<code-view style="height: 400px; border: 1px solid #D4D4D4;"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-styling/" >
 </code-view>
 
@@ -502,5 +504,5 @@ The last step is to **include** the component theme in our application.
 
 ## API and Style References
 
-* [IgxNavigationDrawerComponent API]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html)
-* [IgxNavigationDrawerComponent Styles]({environment:sassApiUrl}/themes#function-navdrawer-theme)
+- [IgxNavigationDrawerComponent API]({environment:angularApiUrl}/classes/igxnavigationdrawercomponent.html)
+- [IgxNavigationDrawerComponent Styles]({environment:sassApiUrl}/themes#function-navdrawer-theme)

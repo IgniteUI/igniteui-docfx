@@ -2,6 +2,7 @@
 title: Angular Grid グループ化 | 複数のフィールドでグループ化 | インフラジスティックス
 _description: Angular グループを設定して Angular テーブルにデータ レコードを視覚化し、グループ化されたデータを個別の列グループに視覚化できます。
 _keywords: angular group by, igniteui for angular, インフラジスティックス・ジャパン株式会社
+_license: commercial
 _language: ja
 ---
 
@@ -10,11 +11,12 @@ _language: ja
 Ignite UI for Angular Table または UI Grid の Group By 動作は、列の値に基づいてグループ化されたデータ行を作成します。[`igxGrid`]({environment:angularApiUrl}/classes/igxgridcomponent.html) の Group By では、グループを階層構造で視覚化できます。グループデータ行は展開または縮小でき、グループの順序は UI または API で変更できます。行選択を有効にすると、Group By 行セレクターがグループ行の一番左の領域に描画されます。[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowSelection) プロパティが単一に設定されている場合、チェックボックスは無効になり、選択が行われるグループの表示としてのみ機能します。[`rowSelection`]({environment:angularApiUrl}/classes/igxgridcomponent.html#rowSelection) プロパティが複数に設定されている場合、Group By 行セレクターをクリックすると、このグループに属するすべてのレコードが選択されます。
 
 ## Angular Grid グループ化の例
+
 この例は、大量のデータのグループ化が可能であることを示しています。列ヘッダーを一番上 (グループ化領域) にドラッグすると、ユーザーは選択した列のデータを階層構造で表示できます。さらに列ヘッダーを一番上にドラッグすることで、複数のフィールドでグループ化できます。これらのグループ化オプションは、ユーザーが多数の行と列を持つテーブルがあり、はるかに高速で視覚的に受け入れられる方法でデータを表示しようとする場合に役立ちます。
 
 
-<code-view style="height:605px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:605px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-groupby/" alt="Angular Grid グループ化の例">
 </code-view>
 
@@ -178,8 +180,8 @@ export interface IGroupByRecord {
 ### Angular ページングでグループ化の例
 
 
-<code-view style="height:605px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:605px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-paging/" alt="Angular ページングでグループ化の例">
 </code-view>
 
@@ -193,16 +195,16 @@ export interface IGroupByRecord {
 グループ UI は、以下のキーボード インタラクションをサポートします。
 
 - グループ行 (行または展開/縮小セルにフォーカス)
-   - <kbd>ALT</kbd> + <kbd>RIGHT</kbd> - グループの展開
-   - <kbd>ALT</kbd> + <kbd>LEFT</kbd> - グループの縮小
-   - <kbd>SPACE</kbd> - <kbd>rowSelection</kbd> プロパティが複数に設定されている場合、グループ内のすべての行を選択します。
+  - <kbd>ALT</kbd> + <kbd>RIGHT</kbd> - グループの展開
+  - <kbd>ALT</kbd> + <kbd>LEFT</kbd> - グループの縮小
+  - <kbd>SPACE</kbd> - <kbd>rowSelection</kbd> プロパティが複数に設定されている場合、グループ内のすべての行を選択します。
 
 - グループ領域の [`igxChip`]({environment:angularApiUrl}/classes/igxchipcomponent.html) コンポーネントのグループ化 (チップにフォーカス)
-   - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - フォーカスしたチップの左へ移動し、可能な場合はグループ順序を変更します。
-   - <kbd>SHIFT</kbd> + <kbd>RIGHT</kbd> - フォーカスしたチップの右へ移動し、可能な場合はグループ順序を変更します。
-   - <kbd>SPACE</kbd> - ソートの方向を変更します。
-   - <kbd>DELETE</kbd> - フィールドのグループ解除
-   - チップの別の要素をフォーカスでき <kbd>ENTER</kbd> キーでインタラクティブに操作できます。
+  - <kbd>SHIFT</kbd> + <kbd>LEFT</kbd> - フォーカスしたチップの左へ移動し、可能な場合はグループ順序を変更します。
+  - <kbd>SHIFT</kbd> + <kbd>RIGHT</kbd> - フォーカスしたチップの右へ移動し、可能な場合はグループ順序を変更します。
+  - <kbd>SPACE</kbd> - ソートの方向を変更します。
+  - <kbd>DELETE</kbd> - フィールドのグループ解除
+  - チップの別の要素をフォーカスでき <kbd>ENTER</kbd> キーでインタラクティブに操作できます。
 
 ## Angular Grid カスタム グループ化
 
@@ -216,8 +218,8 @@ igxGrid では、列ごとまたはグループ化式ごとにカスタム グ�
 ### Angular カスタム グループ化の例
 
 
-<code-view style="height:605px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:605px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-custom/" alt="Angular カスタム グループ化の例">
 </code-view>
 
@@ -313,7 +315,7 @@ public sortByGroup() {
 
 ## スタイル設定
 
-igxGridを使用すると、[`Ignite UI for Angular テーマ ライブラリ`](../themes/sass/component-themes.md)でスタイルを設定できます。グリッドの [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
+igxGridを使用すると、[`Ignite UI for Angular テーマ ライブラリ`](../themes/sass/component-themes.md)でスタイルを設定できます。グリッドの [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。
 
 以下の手順では、グリッドの Group By スタイルをカスタマイズする手順を実行しています。
 
@@ -326,7 +328,7 @@ igxGridを使用すると、[`Ignite UI for Angular テーマ ライブラリ`](
 
 // 重要: Ignite UI for Angular 13 より前のバージョンは、次を使用してください。
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 ### カスタム テーマの定義
 
@@ -375,7 +377,7 @@ $custom-palette: palette(
 );
 ```
 
-カスタム パレットが生成された後、`color` 関数を使用して、さまざまな種類の原色と二次色を取得できます。 
+カスタム パレットが生成された後、`color` 関数を使用して、さまざまな種類の原色と二次色を取得できます。
 
 ```scss
 $custom-theme: grid-theme(
@@ -399,6 +401,7 @@ $custom-chips-theme: chip-theme(
 ```
 
 ### カスタム スキーマの定義
+
 さらに進んで、[**スキーマ**](../themes/sass/schemas.md)のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。
 すべてのコンポーネントに提供される 2 つの事前定義されたスキーマの 1 つを拡張します。この場合、[`light-grid`]({environment:sassApiUrl}/schemas#variable-light-material-schema) を使用します。
 
@@ -470,7 +473,7 @@ $custom-theme: grid-theme(
 
 <code-view style="height:570px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-styling/" >
 </code-view>
 
@@ -485,30 +488,31 @@ $custom-theme: grid-theme(
 
 ## API リファレンス
 
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGroupByRow]({environment:angularApiUrl}/classes/igxgroupbyrow.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
-* [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [IGroupByExpandState]({environment:angularApiUrl}/interfaces/igroupbyexpandstate.html)
-* [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
-* [IgxChipComponent スタイル]({environment:sassApiUrl}/themes#function-chip-theme)
+- [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+- [IgxGroupByRow]({environment:angularApiUrl}/classes/igxgroupbyrow.html)
+- [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+- [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
+- [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+- [IGroupByExpandState]({environment:angularApiUrl}/interfaces/igroupbyexpandstate.html)
+- [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
+- [IgxChipComponent スタイル]({environment:sassApiUrl}/themes#function-chip-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [Grid 概要](grid.md)
-* [可視化とパフォーマンス](virtualization.md)
-* [ページング](paging.md)
-* [フィルタリング](filtering.md)
-* [ソート](sorting.md)
-* [列移動](column-moving.md)
-* [集計](summaries.md)
-* [列のサイズ変更](column-resizing.md)
-* [選択](selection.md)
+- [Grid 概要](grid.md)
+- [可視化とパフォーマンス](virtualization.md)
+- [ページング](paging.md)
+- [フィルタリング](filtering.md)
+- [ソート](sorting.md)
+- [列移動](column-moving.md)
+- [集計](summaries.md)
+- [列のサイズ変更](column-resizing.md)
+- [選択](selection.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

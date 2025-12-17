@@ -1,17 +1,19 @@
 ---
-title: Angular Toast Component – Ignite UI for Angular | Infragistics
+title: Angular Toast Component – Ignite UI for Angular | Infragistics | MIT license
 _description: With Ignite UI for Angular Toast component, users can provide quick, non-interactive messages to end users within their application.
 _keywords: Angular Toast component, Angular Toast control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
+_license: MIT
 ---
 
 # Angular Toast Component Overview
+
 <p class="highlight">The Ignite UI for Angular Toast component provides information and warning messages that are auto-hiding, non-interactive and cannot be dismissed by the user. Notifications can be displayed at the bottom, the middle, or the top of the page.</p>
 
 ## Angular Toast Example
 
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-2/" alt="Angular Toast Example">
 </code-view>
 
@@ -26,7 +28,7 @@ To get started with the Ignite UI for Angular Toast component, first you need to
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxToastModule` in your **app.module.ts** file.
 
@@ -34,7 +36,7 @@ The next step is to import the `IgxToastModule` in your **app.module.ts** file.
 // app.module.ts
 
 ...
-import { IgxToastModule } from 'igniteui-angular';
+import { IgxToastModule } from 'igniteui-angular/toast';
 // import { IgxToastModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -50,7 +52,8 @@ Alternatively, as of `16.0.0` you can import the `IgxToastComponent` as a standa
 ```typescript
 // home.component.ts
 
-import { IgxToastComponent, IgxButtonDirective } from 'igniteui-angular';
+import { IgxToastComponent } from 'igniteui-angular/toast';
+import { IgxButtonDirective } from 'igniteui-angular/directives';
 // import { IgxToastComponent, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -74,6 +77,7 @@ Now that you have the Ignite UI for Angular Toast module or component imported, 
 ## Using the Angular Toast
 
 ### Show Toast
+
 In order to display the toast component, use its [`open()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#open) method and call it on a button click. You can pass the toast content inside the element.
 
 ```html
@@ -112,6 +116,7 @@ public showMessage() {
 ## Examples
 
 ### Hide/Auto Hide
+
 Once opened, the toast disappears after a period specified by the [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displayTime) input which is set initially to 4000 milliseconds. This behavior is enabled by default but you can change this by setting [`autoHide`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#autoHide) to **false**. This way, the toast remains visible. Using the toast [`close()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#close) method, you can close the component.
 
 ```html
@@ -122,15 +127,16 @@ Once opened, the toast disappears after a period specified by the [`displayTime`
 <igx-toast #toast [autoHide]="false">Notification displayed</igx-toast>
 ```
 
-If the sample is configured properly, the toast will appear when the *Show button* is clicked. For the first component auto-hide feature is disabled and the toast will disappear on 'Hide' button click.
+If the sample is configured properly, the toast will appear when the _Show button_ is clicked. For the first component auto-hide feature is disabled and the toast will disappear on 'Hide' button click.
 In the other two components you can see in action how to pass different messages through the [`open()`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#open) method and use content projection.
 
-<code-view style="height: 450px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 450px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-3/" >
 </code-view>
 
 ### Display Time
+
 Use [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#displayTime) and set it to an interval in milliseconds to configure how long the toast component is visible.
 
 ```html
@@ -147,6 +153,7 @@ If the sample is configured properly, the toast auto hides faster.
 </div>
 
 ### Positioning
+
 Use [`positionSettings`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#positionSettings) property to configure where the toast appears. By default, it is displayed at the bottom of the page. In the sample below, we set notification to appear at the top position.
 
 ```html
@@ -159,7 +166,7 @@ Use [`positionSettings`]({environment:angularApiUrl}/classes/igxtoastcomponent.h
 
 ```typescript
 // sample.component.ts
-import { VerticalAlignment } from 'igniteui-angular';
+import { VerticalAlignment } from 'igniteui-angular/core';
 // import { VerticalAlignment } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public open(toast) {
@@ -169,14 +176,40 @@ public open(toast) {
 ...
 ```
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-5/" >
 </code-view>
 
 <div class="divider--half"></div>
 
 ## Styling
+
+### Toast Theme Property Map
+
+When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
+
+<table>
+  <thead>
+    <tr>
+      <th>Primary Property</th>
+      <th>Dependent Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>$background</strong></td>
+      <td>$text-color</td>
+      <td>The text-color used for the toast.</td>
+    </tr>
+    <tr>
+      <td><strong>$text-color</strong></td>
+      <td>$border-color</td>
+      <td>The border-color used for the toast.</td>
+    </tr>
+  </tbody>
+</table>
 
 To get started with styling the toast, we need to import the index file, where all the theme functions and component mixins live:
 
@@ -185,7 +218,7 @@ To get started with styling the toast, we need to import the index file, where a
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 Following the simplest approach, we create a new theme that extends the [`toast-theme`]({environment:sassApiUrl}/themes#function-toast-theme) and provide the `$background`, `$text-color` and `$border-radius` parameters.
 
@@ -208,23 +241,64 @@ The last step is to pass the custom toast theme:
 
 ### Demo
 
-<code-view style="height: 600px" 
+<code-view style="height: 600px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/notifications/toast-style/" >
 </code-view>
+
+### Styling with Tailwind
+
+You can style the toast using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the Tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-toast`, `dark-toast`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [IgxToast Theme]({environment:sassApiUrl}/themes#function-toast-theme). The syntax is as follows:
+
+```html
+<igx-toast
+  class="!light-toast ![--background:#90B69F]">
+  ...
+</igx-toast>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your toast should look like this:
+
+<div class="sample-container loading" style="height:200px">
+    <iframe id="toast-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/notifications/toast-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
 
 <div class="divider--half"></div>
 
 ## API References
+
 <div class="divider--half"></div>
 
-* [IgxToastComponent]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
-* [IgxToastComponent Styles]({environment:sassApiUrl}/themes#function-toast-theme)
+- [IgxToastComponent]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
+- [IgxToastComponent Styles]({environment:sassApiUrl}/themes#function-toast-theme)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

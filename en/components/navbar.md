@@ -1,7 +1,8 @@
 ---
-title: Angular Navbar Component – Ignite UI for Angular | Infragistics
+title: Angular Navbar Component – Ignite UI for Angular | Infragistics | MIT license
 _description: Ignite UI for Angular Navbar control provides optimal UI experience with seamless integration to allow users to move within an application smoothly.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Angular NavBar component, Angular Navbar control, Angular Navigation Bar, Angular Navigation Bar component
+_license: MIT
 ---
 
 # Angular Navbar Component Overview
@@ -10,8 +11,8 @@ The Ignite UI for Angular [`IgxNavbarComponent`]({environment:angularApiUrl}/cla
 
 ## Angular Navbar Example
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navbar/" alt="Angular Navbar Example">
 </code-view>
 
@@ -25,14 +26,14 @@ To get started with the Ignite UI for Angular Navbar component, first you need t
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The first step is to import the `IgxNavbarModule` inside our **app.module.ts** file.
 
 ```typescript
 // app.module.ts
 
-import { IgxNavbarModule } from 'igniteui-angular';
+import { IgxNavbarModule } from 'igniteui-angular/navbar';
 // import { IgxNavbarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -48,7 +49,7 @@ Alternatively, as of `16.0.0` you can import the `IgxNavbarComponent` as a stand
 ```typescript
 // home.component.ts
 
-import { IGX_NAVBAR_DIRECTIVES } from 'igniteui-angular';
+import { IGX_NAVBAR_DIRECTIVES } from 'igniteui-angular/navbar';
 // import { IGX_NAVBAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -95,7 +96,9 @@ We can make our app a little more functional by adding options for searching, fa
 // app.module.ts
 
 ...
-import { IgxNavbarModule, IgxIconButtonDirective, IgxIconModule } from 'igniteui-angular';
+import { IgxNavbarModule } from 'igniteui-angular/navbar';
+import { IgxIconButtonDirective } from 'igniteui-angular/directives';
+import { IgxIconModule } from 'igniteui-angular/icon';
 // import { IgxNavbarModule, IgxButtonModule, IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -125,8 +128,8 @@ Next, we need to update our template with an icon button for each of the options
 
 If all went well, you should see the following in your browser:
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-1/" >
 </code-view>
 
@@ -168,8 +171,8 @@ What if we want to use a custom template for our app navigation on the left-most
 
 Finally, this is how our navbar should look like with its custom action button icon:
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-2/" >
 </code-view>
 
@@ -209,8 +212,8 @@ export class NavbarSample3Component {
 
 If the sample is configured properly, you should see the following in your browser:
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-3/" >
 </code-view>
 
@@ -262,14 +265,45 @@ If we want to provide a custom content for a navbar's title, we can achieve this
 > [!NOTE]
 > If [`igx-navbar-title`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) or [`igxNavbarTitle`]({environment:angularApiUrl}/classes/igxnavbartitledirective.html) is provided, the default [`title`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#title) will not be used.
 
-<code-view style="height: 300px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 300px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navbar-custom-title/" >
 </code-view>
 
 <div class="divider--half"></div>
 
 ## Styling
+
+### Navbar Theme Property Map
+
+When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
+
+<table class="collapsible-table">
+    <thead>
+      <tr>
+        <th>Primary Property</th>
+        <th>Dependent Property</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody class="group">
+      <tr class="primary">
+        <td><details><summary><strong>$background</strong></summary></details></td>
+        <td>$text-color</td>
+        <td>The navbar text color</td>
+      </tr>
+      <tr class="dependent"><td></td><td>$idle-icon-color</td><td>The navbar idle icon color</td></tr>
+      <tr class="dependent"><td></td><td>$hover-icon-color</td><td>The navbar hover icon color</td></tr>
+      <tr class="dependent"><td></td><td>$border-color (changes for indigo variant only)</td><td>The navbar border color</td></tr>
+    </tbody>
+    <tbody class="group">
+      <tr class="primary">
+        <td><strong>$idle-icon-color</strong></td>
+        <td>$hover-icon-color</td>
+        <td>The navbar hover icon color</td>
+      </tr>
+    </tbody>
+</table>
 
 To get started with styling the navbar, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -300,37 +334,74 @@ The last step is to pass the newly created theme to the `css-vars` mixin:
 
 ### Demo
 
-<code-view style="height: 150px" 
+<code-view style="height: 150px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/menus/navbar-style/" >
 </code-view>
 
 <div class="divider--half"></div>
 
+### Styling with Tailwind
+
+You can style the navbar using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-navbar`, `dark-navbar`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [navbar-theme]({environment:sassApiUrl}/themes#function-navbar-theme). The syntax is as follows:
+
+```html
+<igx-navbar class="!light-navbar ![--background:#7B9E89] ![--text-color:#121E17]" title="Sample App">
+  ...
+</igx-navbar>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your navbar should look like this:
+
+<div class="sample-container loading" style="height:120px">
+    <iframe id="navbar-tailwind-style-iframe" data-src='{environment:demosBaseUrl}/menus/navbar-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
 ## API References
 
 <div class="divider--half"></div>
 
-* [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
-* [IgxNavbarActionDirective]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html)
-* [IgxNavbarTitleDirective]({environment:angularApiUrl}/classes/igxnavbartitledirective.html)
-* [IgxNavbarComponent Styles]({environment:sassApiUrl}/themes#function-navbar-theme)
+- [IgxNavbarComponent]({environment:angularApiUrl}/classes/igxnavbarcomponent.html)
+- [IgxNavbarActionDirective]({environment:angularApiUrl}/classes/igxnavbaractiondirective.html)
+- [IgxNavbarTitleDirective]({environment:angularApiUrl}/classes/igxnavbartitledirective.html)
+- [IgxNavbarComponent Styles]({environment:sassApiUrl}/themes#function-navbar-theme)
 
 Additional components and/or directives with relative APIs that were used:
 
-* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxIconComponent Styles]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+- [IgxIconComponent Styles]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## Theming Dependencies
 
-* [IgxIconComponent Theme]({environment:sassApiUrl}/themes#function-icon-theme)
-* [IgxButtonComponent Theme]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxIconComponent Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxButtonComponent Theme]({environment:sassApiUrl}/themes#function-button-theme)
 
 ## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

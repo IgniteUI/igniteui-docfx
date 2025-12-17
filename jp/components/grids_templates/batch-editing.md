@@ -2,6 +2,7 @@
 title: Angular @@igComponent Grid での一括編集とトランザクション - インフラジスティックス
 _description: Angular @@igComponent Grid を使用した Angular CRUD を使用して、基のデータに影響を与えずにデータを操作できます。デモと例をお試しください。
 _keywords: angular crud, ignite ui for angular, infragistics
+_license: commercial
 _language: ja
 ---
 
@@ -26,24 +27,24 @@ _language: ja
 以下のサンプルは、@@igObjectRef にプロバイダーのトランザクションがあり、[`batchEditing`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#batchEditing) と行編集が有効にされています。行編集全体を確定後にトランザクションが追加されるようにします。
 
 @@if (igxName === 'IgxGrid') {
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-batch-editing/" alt="Angular @@igComponent 一括編集とトランザクションの例">
 </code-view>
 
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-batchediting/" alt="Angular @@igComponent 一括編集とトランザクションの例">
 </code-view>
 
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<code-view style="height:680px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:680px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-batch-editing/" alt="Angular @@igComponent 一括編集とトランザクションの例">
 </code-view>
 
@@ -84,6 +85,7 @@ export class AppModule {}
 一括編集を有効にした後、バインドされたデータ ソースと [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable) を true に設定して `@@igxName` を定義し、バインドします。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid #grid [batchEditing]="true" [data]="data" [primaryKey]="'ProductID'" width="100%" height="500px"
     [rowEditable]="true">
@@ -97,8 +99,10 @@ export class AppModule {}
 ...
 
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid #treeGrid [batchEditing]="true" [data]="data" primaryKey="employeeID" foreignKey="PID"
     width ="100%" height ="500px" rowEditable=true>
@@ -112,8 +116,10 @@ export class AppModule {}
         (click)="openCommitDialog()">Commit</button>
 ...
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid #hierarchicalGrid [batchEditing]="true" [data]="data" [primaryKey]="'Artist'"
     [height]="'580px'" [width]="'100%'" [rowEditable]="true" >
@@ -137,6 +143,7 @@ export class AppModule {}
 ...
 
 ```
+
 }
 
 @@if (igxName === 'IgxGrid') {
@@ -164,9 +171,11 @@ export class GridBatchEditingSampleComponent {
     }
 }
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 以下のコード例は、[`HierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) API (undo、redo、commit) の使用方法を示します。
+
 ```typescript
 export class TreeGridBatchEditingSampleComponent {
     @ViewChild('treeGrid', { read: IgxTreeGridComponent }) public treeGrid: IgxTreeGridComponent;
@@ -189,6 +198,7 @@ export class TreeGridBatchEditingSampleComponent {
     }
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 以下のコード例は、[`transactions`]({environment:angularApiUrl}/classes/igxtransactionservice.html#) API (undo、redo、commit) の使用方法を示します。
@@ -217,9 +227,10 @@ export class HierarchicalGridBatchEditingSampleComponent {
     }
 }
 ```
+
 }
 
-> [!NOTE] 
+> [!NOTE]
 > トランザクション API は編集の終了を処理しないので、自分で行う必要があります。そうしないと、`@@igComponent` は編集モードのままになります。これを行う 1 つの方法は、それぞれのメソッドで [`endEdit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#endEdit) を呼び出すことです。
 
 @@if (igxName === 'IgxTreeGrid') {
@@ -235,8 +246,8 @@ export class HierarchicalGridBatchEditingSampleComponent {
 
 [完全なデモ構成をご覧ください](remote-data-operations.md#一括編集のリモート-ページング)。
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/remote-paging-batch-editing/" >
 </code-view>
 
@@ -244,29 +255,29 @@ export class HierarchicalGridBatchEditingSampleComponent {
 ## API リファレンス
 
 @@if (igxName === 'IgxGrid') {
-* [transactions]({environment:angularApiUrl}/classes/@@igTypeDoc.html#transactions)
-* [igxTransactionService]({environment:angularApiUrl}/classes/igxtransactionservice.html)
+- [transactions]({environment:angularApiUrl}/classes/@@igTypeDoc.html#transactions)
+- [igxTransactionService]({environment:angularApiUrl}/classes/igxtransactionservice.html)
 }
 @@if (igxName === 'IgxTreeGrid') {
-* [HierarchicalTransactionService]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) 
-* [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable)
-* [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+- [HierarchicalTransactionService]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html)
+- [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable)
+- [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
+- [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-* [igxHierarchicalTransactionServiceFactory]({environment:angularApiUrl}/index.html#igxhierarchicaltransactionservicefactory)
+- [igxHierarchicalTransactionServiceFactory]({environment:angularApiUrl}/index.html#igxhierarchicaltransactionservicefactory)
 }
 
 ## その他のリソース
 
-* [igxGrid を使用して CRUD 操作の構築](../general/how-to/how-to-perform-crud.md)
-* [@@igComponent 概要](@@igMainTopic.md)
-* [@@igComponent 編集](editing.md)
-* [@@igComponent 行編集](row-editing.md)
-* [@@igComponent 行追加](row-adding.md)
+- [igxGrid を使用して CRUD 操作の構築](../general/how-to/how-to-perform-crud.md)
+- [@@igComponent 概要](@@igMainTopic.md)
+- [@@igComponent 編集](editing.md)
+- [@@igComponent 行編集](row-editing.md)
+- [@@igComponent 行追加](row-adding.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

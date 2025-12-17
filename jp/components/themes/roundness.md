@@ -6,9 +6,11 @@ _language: ja
 ---
 
 # 丸み
+
 Ignite UI for Angular では、丸みを 0 から 1 の間の値で調整することで、コンポーネントの形状をカスタマイズできます。
 
 ## 概要
+
 多くの Ignite UI コンポーネントには、境界半径の最小値と最大値が事前定義されており、`--ig-radius-factor` CSS 変数を使用して調整できます。
 
 `--ig-radius-factor` を 0 に設定すると、コンポーネントは最小の border-radius を使用し、角がシャープなブロック状に表示されます。1 に設定すると、最大の border-radius が適用され、より丸みを帯びた外観になります。
@@ -47,8 +49,8 @@ igx-chip {
 
 以下の例では、border-radius の最小値と最大値の違いがわかります。
 
-<code-view style="height: 210px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 210px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/theming/roundness" >
 </code-view>
 
@@ -60,5 +62,5 @@ igx-chip {
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

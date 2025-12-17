@@ -3,6 +3,7 @@
 title: Angular Data Grid のライブ データ更新 - Ignite UI for Angular
 _description: Ignite UI for Angular Data Grid が、ユーザーの操作に応答し続けている間、1 秒あたり数千の更新を処理する方法を確認します。
 _keywords: angular データ グリッド, angular グリッド更新, angular ライブ データ
+_license: commercial
 _language: ja
 ---
 }
@@ -12,29 +13,35 @@ _language: ja
 title: Angular Tree Grid のライブ データ更新 - Ignite UI for Angular
 _description: Ignite UI for Angular Tree Grid が、ユーザーの操作に応答し続けている間、1 秒あたり数千の更新を処理する方法を確認します。
 _keywords: angular データ グリッド, angular グリッド更新, angular ライブ データ
+_license: commercial
 _language: ja
 ---
 }
 
 # Angular @@igComponent のライブ データ更新
+
 @@igComponent コンポーネントは、ユーザーの操作に応答し続けている間、1 秒あたり数千の更新を処理できます。
 
 ## Angular ライブ データ更新の例
+
 以下のサンプルは、すべてのレコードが 1 秒間に複数回更新される場合の @@igComponent のパフォーマンスを示しています。UI コントロールを使用して、読み込むレコードの数と更新の頻度を選択します。
 同じデータを[カテゴリ チャート](../category-chart.md)に入力して、Ignite UI forAngular の強力なチャート作成機能を体験してください。`Chart` ボタンには、選択した行の `Category Prices per Region` データが表示され、`Chart` 列ボタンには現在の行の同じデータが表示されます。
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:lobDemosBaseUrl}"
            iframe-src="{environment:lobDemosBaseUrl}/grid-finjs?theme-switch=false/" alt="Angular 更新のライブデ例">
 </code-view>
 
 
 ## データ バインディングおよび更新
+
 サービスは、ページが読み込まれたとき、およびスライダー コントローラーを使用して特定の数のレコードを取得したときに、コンポーネントにデータを提供します。実際のシナリオでは、更新されたデータはサービスから消費されますが、ここではデータはコードで更新されます。これは、デモをシンプルに保ち、その主な目標であるグリッドのパフォーマンスを実証するために行われます。
+
 ```html
 <igx-grid #grid [data]="data"></igx-grid>
 ```
+
 ```typescript
 public ngOnInit() {
     this.localService.getData(this.volume);
@@ -50,6 +57,7 @@ Angular パイプは、グリッド ビューを更新するために内部的�
     <igx-column field="price.usd"></igx-column>
 </igx-grid>
 ```
+
 ```typescript
 private updateData(data: IRecord[]) {
     const newData = []
@@ -62,6 +70,7 @@ private updateData(data: IRecord[]) {
 ```
 
 ## テンプレート
+
 ビューの更新は、デフォルト テンプレートの列とカスタム テンプレートの列で同じように機能します。ただし、カスタム テンプレートは比較的単純にしておくことをお勧めします。テンプレート内の要素の数が増えると、パフォーマンスへの悪影響も大きくなります。
 
 ## Dock Manager および igxGrid コンポーネントを使用したライブ データ フィード
@@ -69,8 +78,8 @@ private updateData(data: IRecord[]) {
 このデモの目的は、[SignalR](https://dotnet.microsoft.com/apps/aspnet/signalr) ハブ バックエンドを使用してリアルタイム データ ストリームを表示する財務用スクリーン ボードを紹介することです。
 igxGrid コンポーネントは、サーバーからの高頻度の更新を簡単に処理できます。SignalR を使用する ASP.NET Core アプリケーションのコードは、この[公開な GitHub リポジトリ](https://github.com/IgniteUI/finjs-web-api)にあります。
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:lobDemosBaseUrl}"
            iframe-src="{environment:lobDemosBaseUrl}/grid-finjs-dock-manager/grid-finjs-dock-manager/" alt="サービスを使用した Angular ライブ データ更新の例">
 </code-view>
 
@@ -116,41 +125,44 @@ this.hubConnection.invoke('updateparameters', frequency, volume, live, updateAll
 [ComponentFactoryResolver](https://angular.io/api/core/ComponentFactoryResolver) を使用して、DockSlot および Grid コンポーネントをオンザフライで作成できます。
 
 ### DockManager コンポーネント
+
 [Dock Manager](../dock-manager.md) WebComponent を利用し、ドケットまたはフローティング パネルを使用して独自の Web ビューを作成します。新しいフローティング パネルを追加するには、右側のアクション ペインを開き、[フローティング ペインの追加] ボタンをクリックします。新しいペインを目的の場所にドラッグアンドドロップします。
 
 ## API リファレンス
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
-* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
-* [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
-* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
+
+- [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+- [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+- [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
+- [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
+- [IgxHierarchicalGridRow]({environment:angularApiUrl}/classes/igxhierarchicalgridrow.html)
+- [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [仮想化とパフォーマンス](virtualization.md)
-* [ページング](paging.md)
-* [フィルタリング](filtering.md)
-* [ソート](sorting.md)
-* [集計](summaries.md)
-* [列移動](column-moving.md)
-* [列のピン固定](column-pinning.md)
-* [列のサイズ変更](column-resizing.md)
-* [選択](selection.md)
+- [仮想化とパフォーマンス](virtualization.md)
+- [ページング](paging.md)
+- [フィルタリング](filtering.md)
+- [ソート](sorting.md)
+- [集計](summaries.md)
+- [列移動](column-moving.md)
+- [列のピン固定](column-pinning.md)
+- [列のサイズ変更](column-resizing.md)
+- [選択](selection.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
 }
 
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:lobDemosBaseUrl}"
            iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs/" alt="Angular 更新のライブデ例">
 </code-view>
 
@@ -159,26 +171,26 @@ this.hubConnection.invoke('updateparameters', frequency, volume, live, updateAll
 
 <div class="divider--half"></div>
 
-* [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
-* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
+- [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
+- [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
+- [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
+- [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+- [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
+- [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 
 
 ## その他のリソース
 
 <div class="divider--half"></div>
 
-* [データ グリッド](../grid/grid.md)
-* [行編集](row-editing.md)
+- [データ グリッド](../grid/grid.md)
+- [行編集](row-editing.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
 
 }

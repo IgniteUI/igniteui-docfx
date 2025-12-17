@@ -8,10 +8,11 @@ _language: ja
 # CRUD とは?
 
 CRUD は、データ コレクションに対して実行できる CREATE、READ、UPDATE、DELETE 操作を表すコンピューター プログラミングの頭字語です。
+
 # Angular CRUD
 
 Angular CRUD、または Angular での CRUD 操作に関しては、データ ストレージがリモート サーバー上にあることに注意することが重要です。Angular アプリケーションはデータ レイヤーに直接アクセスできないため、CRUD 操作のエンドポイントを提供する Web API を介して Angular アプリケーションと通信する必要があります。例えば:
- 
+
 | API | 操作 | HTTP メソッド |
 |-----|-----------| ----------- |
 | "api/entities" | すべてのエンティティを読み取る | GET |
@@ -64,17 +65,14 @@ export class CRUDService {
 
 その他の例とガイダンスについては、公式の Angular ドキュメントの [HTTP Services (英語)](https://angular.io/tutorial/toh-pt6) チュートリアルを参照してください。
 
-
-# グリッドを使用した CRUD 操作 
+# グリッドを使用した CRUD 操作
 
 グリッドで CRUD を有効にするということは、ユーザーがグリッド内からこれらの CRUD 操作を実行するための UI を提供することを意味します。これは非常に簡単です。グリッドには、[**セル編集**](../../grid/cell-editing.md)、[**行編集**](../../grid/row-editing.md)、[**行追加**](../../grid/row-adding.md)、**行削除** UI が用意されており、これを独自に実行するための強力な API が用意されています。次に、各編集アクションの結果を取得し、それを CRUD サービスの対応するメソッドに伝達して、元のデータベースへのすべての変更を保持します。これを完了することで、グリッドで CRUD が有効になっていると言えます。
 
-
 このセクションは、グリッドで CRUD 操作を有効にするためのチュートリアルであり、コード スニペットを取得してコードにコピーし貼り付けることができます。
 
-
-
 ## 操作方法
+
 まず、rowEditing 動作を有効にし、編集アクションに必要な UI を用意して、`IgxActionStrip` ([`IgxActionStrip`](../../action-strip.md) の詳細を参照) を利用し、イベント ハンドラーをアタッチします。
 
 ```html
@@ -111,7 +109,7 @@ public rowEditDone(event: IGridEditDoneEventArgs) {
 }
 ```
 
-上記の例では、対応するメソッドのみを呼び出し、イベント引数から読み取られたデータを渡します。ほとんどの API エンドポイントは、更新 / 追加 / 削除されたエンティティを返します。これは、リクエストが成功したことを示します。 
+上記の例では、対応するメソッドのみを呼び出し、イベント引数から読み取られたデータを渡します。ほとんどの API エンドポイントは、更新 / 追加 / 削除されたエンティティを返します。これは、リクエストが成功したことを示します。
 
 検証を追加して、すべてのアクションが正常に完了したこと、またはエラーが発生したことをユーザーに通知することをお勧めします。このような場合は、エラーのハンドラーを渡して通知を完了することもできます。
 
@@ -150,29 +148,32 @@ this._crudService.delete(event.data).subscribe({
 
 ガイダンスに従って作成されたデモを参照してください。それを試してみて、シナリオに最適な方法でカスタマイズするための例を試してください。
 
-<code-view style="height:410px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:410px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-crud/" >
 </code-view>
 
 # カスタマイズ
+
 豊富な Grid API を使用すると、ニーズに合わせて編集プロセスをほぼすべての方法でカスタマイズできます。これには以下が含まれますが、これらに限定されません:
- - [**一括編集**](how-to-perform-crud.md#一括編集):  一括編集を有効にすると、すべての更新を一括処理し、単一のリクエストですべてをコミットできます。
- - [**テンプレート**](how-to-perform-crud.md#テンプレート):  セル編集用のテンプレートを追加するか、行 / セル編集、行追加、および行削除に独自の外部 UI を使用します。
- - [**イベント**](how-to-perform-crud.md#イベント):  編集フローを監視し、それに応じて対応します。編集中に発行されたすべてのイベントにイベント ハンドラーをアタッチすると、次のことが可能になります:
-    - セルごとのデータ検証
-    - 行ごとのデータ検証
-    - 予想される入力タイプの入力をユーザーにプロンプト
-    - ビジネス ルールに基づいて、それ以上の処理をキャンセル
-    - 変更の手動コミット
+- [**一括編集**](how-to-perform-crud.md#一括編集):  一括編集を有効にすると、すべての更新を一括処理し、単一のリクエストですべてをコミットできます。
+- [**テンプレート**](how-to-perform-crud.md#テンプレート):  セル編集用のテンプレートを追加するか、行 / セル編集、行追加、および行削除に独自の外部 UI を使用します。
+- [**イベント**](how-to-perform-crud.md#イベント):  編集フローを監視し、それに応じて対応します。編集中に発行されたすべてのイベントにイベント ハンドラーをアタッチすると、次のことが可能になります:
+  - セルごとのデータ検証
+  - 行ごとのデータ検証
+  - 予想される入力タイプの入力をユーザーにプロンプト
+  - ビジネス ルールに基づいて、それ以上の処理をキャンセル
+  - 変更の手動コミット
 - [**リッチな API**](how-to-perform-crud.md#api-の編集)
 
 ## 一括編集
- - **一括編集**を有効にして更新をクライアントに保持し、単一のリクエストですべてをコミットします。一括更新は、`batchEditing` オプションを true に設定することで有効になります:
+
+- **一括編集**を有効にして更新をクライアントに保持し、単一のリクエストですべてをコミットします。一括更新は、`batchEditing` オプションを true に設定することで有効になります:
+
  ```html
  <igx-grid [batchEditing]="'true'" ...>
  ```
- 
+
 詳細とデモ サンプルについては、[一括編集](../../grid/batch-editing.md)にアクセスしてください。
 
 ## テンプレート
@@ -196,6 +197,7 @@ this._crudService.delete(event.data).subscribe({
 詳細とデモについては、[セル編集](../../grid/cell-editing.md)のトピックを参照してください。
 
 ## イベント
+
 グリッドは、編集エクスペリエンスをより詳細に制御できる広範なイベントを公開します。これらのイベントは、[**行編集**](../../grid/row-editing.md)および[**セル編集**](../../grid/cell-editing.md)のライフサイクル中、つまり編集アクションを開始、コミット、またはキャンセルするときに発生します。
 
  | イベント | 説明 | 引数 | キャンセル可能 |
@@ -212,9 +214,10 @@ this._crudService.delete(event.data).subscribe({
 詳細とデモ サンプルについては、[イベント](../../grid/editing.md#イベントの引数とシーケンス)にアクセスしてください。
 
 ## API の編集
+
 グリッド内のデータの更新は、グリッドによって公開される方法によって実現されます:
 - [`updateRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#updateRow)
-- [`updateCell`]({environment:angularApiUrl}/classes/igxgridcomponent.html#updateCell) 
+- [`updateCell`]({environment:angularApiUrl}/classes/igxgridcomponent.html#updateCell)
 - [`deleteRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#deleteRow)
 - [`addRow`]({environment:angularApiUrl}/classes/igxgridcomponent.html#addRow)
 
@@ -237,22 +240,18 @@ this.grid.getRowByKey(rowID).delete();
 グリッド API の使用に関する詳細と情報は、[セル編集 CRUD 操作](../../grid/cell-editing.md#crud-操作)セクションにあります。
 
 # トピックの重要ポイント
+
 堅牢な方法で CRUD を有効にすることは、データ駆動型アプリケーションにとって重要なマイルストーンです。プロセス全体を合理化するために、CRUD 機能を念頭に置いて IgxGrid を構築し、すぐに使用できる UI と柔軟な API を提供します。利点としては、任意のデータベースに対して CRUD を実装する場合、多くの時間を節約できます。そして、現代のデータ駆動型アプリに関しては、堅牢性、速度、柔軟性が最も重要です。
 
 # API リファレンス
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
-* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [`IgxActionStripComponent API`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html)
-* [`IgxGridActionsBaseDirective `]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html)
-* [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html)
-* [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html)
 
-
-
-
-
-
+- [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+- [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
+- [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
+- [`IgxActionStripComponent API`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html)
+- [`IgxGridActionsBaseDirective`]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html)
+- [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html)
+- [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html)
 
 
 

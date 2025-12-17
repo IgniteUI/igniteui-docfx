@@ -2,6 +2,7 @@
 title: Angular Pie Chart | Data Visualization Tool | Infragistics
 _description: Use Infragistics' Angular pie chart to create a colorful pie chart to display categorical data. Learn about the Ignite UI for Angular pie chart configurable elements!
 _keywords: Angular charts, pie chart, Ignite UI for Angular, Infragistics, data binding, slice selection, slice explosion, animation
+_license: commercial
 mentionedTypes: ['XamPieChart','SliceSelectionMode','PieSliceOthersContext']
 ---
 
@@ -166,16 +167,16 @@ There is a property called [`selectionMode`]({environment:dvApiBaseUrl}/products
 
 The pie chart component supports three different selection modes.
 
--   Single - When the mode is set to single, only one slice can be selected at a time. When you select a new slice the previously selected slice will be deselected and the new one will become selected.
--   Multiple - When the mode is set to Multiple, many slices can be selected at once. If you click on a slice, it will become selected and clicking on a different slice will also select that slice leaving the previous slice selected.
--   Manual - When the mode is set to Manual, selection is disabled.
+- Single - When the mode is set to single, only one slice can be selected at a time. When you select a new slice the previously selected slice will be deselected and the new one will become selected.
+- Multiple - When the mode is set to Multiple, many slices can be selected at once. If you click on a slice, it will become selected and clicking on a different slice will also select that slice leaving the previous slice selected.
+- Manual - When the mode is set to Manual, selection is disabled.
 
 The pie chart component has 4 events associated with selection:
 
--   SelectedItemChanging
--   SelectedItemChanged
--   SelectedItemsChanging
--   SelectedItemsChanged
+- SelectedItemChanging
+- SelectedItemChanged
+- SelectedItemsChanging
+- SelectedItemsChanged
 
 The events that end in “Changing” are cancelable events which means you can stop the selection of a slice by setting the event argument property `Cancel` to true. When set to true the associated property will not update and the slice will not become selected. This is useful for scenarios where you want to keep users from being able to select certain slices based on the data inside it.
 

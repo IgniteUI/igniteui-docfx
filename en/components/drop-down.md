@@ -1,7 +1,8 @@
 ---
-title: Angular Drop Down Component –  Ignite UI For Angular
+title: Angular Drop Down Component –  Ignite UI For Angular - MIT license 
 _description: Add interactivity and see styling options to a scrollable list of items in your app. Get started using the Drop Down Component in Ignite UI for Angular now.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Angular Drop Down component, Angular Drop Down control
+_license: MIT
 ---
 
 # Angular Drop Down Component Overview
@@ -12,8 +13,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 This Angular drop down example demonstrates the basic functionalities of a drop down list. Click on it to expand the preset options, select an item, and then close the drop down.
 
-<code-view style="height:200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-1/" alt="Angular Drop Down Example">
 </code-view>
 
@@ -27,7 +28,7 @@ To get started with the Ignite UI for Angular Drop Down component, first you nee
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxDropDownModule` in your **app.module.ts** file.
 
@@ -35,7 +36,7 @@ The next step is to import the `IgxDropDownModule` in your **app.module.ts** fil
 // app.module.ts
 
 ...
-import { IgxDropDownModule } from 'igniteui-angular';
+import { IgxDropDownModule } from 'igniteui-angular/drop-down';
 // import { IgxDropDownModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -52,7 +53,9 @@ Alternatively, as of `16.0.0` you can import the `IgxDropDownComponent` as a sta
 // home.component.ts
 
 import { NgFor } from '@angular/common';
-import { IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective } from 'igniteui-angular';
+import { IGX_DROP_DOWN_DIRECTIVES } from 'igniteui-angular/drop-down';
+import { IgxToggleActionDirective } from 'igniteui-angular/directives';
+import { IgxButtonDirective } from 'igniteui-angular/directives';
 // import { IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -142,8 +145,8 @@ export class MyDropDownComponent {
 }
 ```
 
-<code-view style="height: 200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-2/" >
 </code-view>
 
@@ -188,8 +191,8 @@ export class MyDropDownComponent {
 
 If the sample is configured properly, a list of countries should be displayed as a group under European Union header, France as a non-interactive item, and Bulgaria as a selected item:
 
-<code-view style="height: 310px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 310px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-3/" >
 </code-view>
 
@@ -263,8 +266,8 @@ The group also has the additional functionality of disabling items inside of its
 
 You can see the results in the sample below:
 
-<code-view style="height: 310px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 310px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-5/" >
 </code-view>
 
@@ -328,8 +331,8 @@ export class MyMenuComponent {
 }
 ```
 
-<code-view style="height: 240px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 240px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-menu/" >
 </code-view>
 
@@ -396,8 +399,8 @@ public ngAfterViewInit(): void {
 
 The result from the above configurations could be seen in the below sample.
 
-<code-view style="height:400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-multi-level-menu/">
 </code-view>
 
@@ -462,8 +465,8 @@ export class InputDropDownComponent {
 }
 ```
 
-<code-view style="height:220px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:220px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-4/" >
 </code-view>
 
@@ -496,6 +499,122 @@ When the `allowItemsFocus` property is enabled, the drop down items gain tab ind
 
 ## Styling
 
+### Dropdown Theme Property Map
+
+When you modify a primary property, all related dependent properties are updated automatically:
+
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>Primary Property</th>
+      <th>Dependent Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$background-color</strong></summary></details>
+      </td>
+      <td>$item-text-color</td>
+      <td>The drop-down item text color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$hover-item-background</td>
+      <td>The drop-down hover item background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focused-item-background</td>
+      <td>The drop-down focused item background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focused-item-text-color</td>
+      <td>The drop-down focused item text color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-item-background</td>
+      <td>The drop-down selected item background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-item-text-color</td>
+      <td>The drop-down disabled item text color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$header-text-color</td>
+      <td>The drop-down header text color.</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$item-text-color</strong></summary></details>
+      </td>
+      <td>$item-icon-color</td>
+      <td>The drop-down item icon color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$hover-item-text-color</td>
+      <td>The drop-down item hover text color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$hover-item-icon-color</td>
+      <td>The drop-down item hover icon color.</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$selected-item-background</strong></summary></details>
+      </td>
+      <td>$selected-item-text-color</td>
+      <td>The drop-down selected item text color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-item-icon-color</td>
+      <td>The drop-down selected item icon color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-hover-item-background</td>
+      <td>The drop-down selected item hover background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-hover-item-text-color</td>
+      <td>The drop-down selected item hover text color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-hover-item-icon-color</td>
+      <td>The drop-down selected item hover icon color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-focus-item-background</td>
+      <td>The drop-down selected item focus background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-focus-item-text-color</td>
+      <td>The drop-down selected item focus text color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focused-item-border-color</td>
+      <td>The drop-down item focused border color.</td>
+    </tr>
+  </tbody>
+</table>
+
 Using the [Ignite UI for Angular Theming](themes/index.md), we can greatly alter the drop-down appearance. First, in order for us to use the functions exposed by the theme engine, we need to import the `index` file in our style file:
 
 ```scss
@@ -526,9 +645,9 @@ The last step is to pass the custom drop-down theme to a class or element select
 
 ### Demo
 
-<code-view style="height:350px" 
+<code-view style="height:350px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-styling/" >
 </code-view>
 
@@ -536,21 +655,21 @@ The last step is to pass the custom drop-down theme to a class or element select
 
 ## API Summary
 
-* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
-* [IgxDropDownComponent Styles]({environment:sassApiUrl}/themes#function-drop-down-theme)
-* [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html).
-* [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
-* [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
-* [IgxDividerDirective Styles]({environment:sassApiUrl}/themes#function-divider-theme)
+- [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
+- [IgxDropDownComponent Styles]({environment:sassApiUrl}/themes#function-drop-down-theme)
+- [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html).
+- [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
+- [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
+- [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
+- [IgxDividerDirective Styles]({environment:sassApiUrl}/themes#function-divider-theme)
 
 ## Theming Dependencies
 
-* [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
+- [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## Additional Resources
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

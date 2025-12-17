@@ -1,7 +1,8 @@
 ---
-title: Mask ディレクティブ - ネイティブ Angular | Ignite UI for Angular
+title: Mask ディレクティブ - ネイティブ Angular | Ignite UI for Angular | MITライセンス
 _description: Ignite UI for Angular Mask ディレクティブを使用すると、構成可能なマスク ルールに基づいてユーザー入力を制御し、表示される値を書式設定できます。入力オプションも構成できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント, Angular, ネイティブ Angular コンポーネント スィート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Mask ディレクティブ, マスク, ディレクティブ, マスク エディター, Angular Mask エディター
+_license: MIT
 _language: ja
 ---
 
@@ -11,8 +12,8 @@ _language: ja
 
 ## Angular Mask の例
 
-<code-view style="height: 100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-2/" alt="Angular Mask の例">
 </code-view>
 
@@ -28,7 +29,7 @@ ng add igniteui-angular
 
 Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
-次に、**app.module.ts** ファイルに `IgxMaskModule` と `IgxInputGroupModule` をインポートします。 
+次に、**app.module.ts** ファイルに `IgxMaskModule` と `IgxInputGroupModule` をインポートします。
 
 >[!NOTE]
 >[`igxMask`]({environment:angularApiUrl}/classes/igxmaskdirective.html) ディレクティブは、**text** タイプの入力で使用されます。
@@ -37,7 +38,8 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 ...
-import { IgxMaskModule, IgxInputGroupModule } from 'igniteui-angular';
+import { IgxMaskModule } from 'igniteui-angular/input-group';
+import { IgxInputGroupModule } from 'igniteui-angular/input-group';
 // import { IgxMaskModule, IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -53,7 +55,7 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IgxMaskDirective, IGX_INPUT_GROUP_DIRECTIVES } from 'igniteui-angular';
+import { IgxMaskDirective, IGX_INPUT_GROUP_DIRECTIVES } from 'igniteui-angular/input-group';
 // import { IgxMaskDirective, IGX_INPUT_GROUP_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -79,6 +81,7 @@ Ignite UI for Angular Mask モジュールまたはディレクティブをイ�
 ## Angular Mask の使用
 
 ### サポートされる定義済みマスク ルール
+
 <div class="divider--half"></div>
 
 | マスク文字 | 説明 |
@@ -94,6 +97,7 @@ Ignite UI for Angular Mask モジュールまたはディレクティブをイ�
 | C | 任意のキーボード文字 |
 
 ### マスクを入力に適用
+
 以下の例では、内線を含む電話番号のマスクを入力に適用します。
 
 ```html
@@ -114,7 +118,8 @@ Ignite UI for Angular Mask モジュールまたはディレクティブをイ�
 > `IgxMaskDirective` は IME 入力をサポートし、合成が終了するとマスクを更新します。
 
 ### 書式設定付き/Raw 値にバインド
-[`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeLiterals) 入力を使用して、指定したマスクが適用される場合にフォームにバインドする入力値 (書式設定付きまたは Raw) を構成します。デフォルトで [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeLiterals) が *false* に設定し、Raw 値が使用されます。
+
+[`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeLiterals) 入力を使用して、指定したマスクが適用される場合にフォームにバインドする入力値 (書式設定付きまたは Raw) を構成します。デフォルトで [`includeLiterals`]({environment:angularApiUrl}/classes/igxmaskdirective.html#includeLiterals) が _false_ に設定し、Raw 値が使用されます。
 
 ```html
 <!--sample.component.html-->
@@ -153,13 +158,14 @@ public clear() {
 ```
 
 
-<code-view style="height: 160px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 160px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-3/" >
 </code-view>
 
 
 ### マスク値を検証
+
 入力にマスクを設定し、入力した値を検証できます。以下の例は、Mask ディレクティブおよび Snack Bar コンポーネントを使用してマスクを実装し、無効なデータのための検証および通知を実装します。
 
 ```html
@@ -194,21 +200,22 @@ private notify(snackbar, message, input) {
 ```
 
 
-<code-view style="height: 120px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 120px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
 
 ### テキスト選択
+
 [`igxTextSelection`]({environment:angularApiUrl}/classes/igxtextselectiondirective.html) を使用して、フォーカスがあるコンポーネントにすべての入力テキストを選択させることができます。[Label および Input](label-input.md#フォーカスとテキストの選択) で `igxTextSelection` の詳細情報を参照してください。
 
 **app.module.ts** ファイルに `IgxTextSelectionModule` をインポートします:
 
 ```typescript
 ...
-import { ..., IgxTextSelectionModule } from 'igniteui-angular';
+import { ..., IgxTextSelectionModule } from 'igniteui-angular/input-group';
 // import { ..., IgxTextSelectionModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -233,9 +240,11 @@ export class AppModule {}
 >コンポーネントが正しく動作するためには、`igxMask` ディレクティブの後に `igxTextSelection` を設定することが重要です。これは、両方のディレクティブが入力 `focus` イベントで動作するため、マスクが設定された後にテキスト選択が行われるからです。
 
 ### focus と blur に追加の書式を適用
+
 デフォルトの mask 動作に加え、カスタムパイプを実装して [`focusedValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#focusedValuePipe) や [`displayValuePipe`]({environment:angularApiUrl}/classes/igxmaskdirective.html#displayValuePipe) 入力プロパティで入力がフォーカスを get または lost した場合に値を必要なアウトプットへ変換できます。基になるモデル値に影響はありません。以下はその方法です。
 
 表示値の最後に '%' サインを追加または削除する 2 つのパイプを実装します。
+
 ```typescript
 @Pipe({ name: 'displayFormat' })
 export class DisplayFormatPipe implements PipeTransform {
@@ -268,6 +277,7 @@ public value = 100;
 public displayFormat = new DisplayFormatPipe();
 public inputFormat = new InputFormatPipe();
 ```
+
 ```html
 <igx-input-group>
     <label igxLabel>Increase</label>
@@ -286,18 +296,20 @@ public inputFormat = new InputFormatPipe();
 '%' 記号が blur の値に追加されて (ユーザーが入力以外をクリックした場合など) 入力がフォーカスを取得すると削除されます。
 
 
-<code-view style="height: 100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-4/" >
 </code-view>
 
 
 ### プレースホルダーの追加
+
 [`placeholder`]({environment:angularApiUrl}/classes/igxmaskdirective.html#placeholder) プロパティは、ネイティブ プレースホルダー属性として使用できます。[`placeholder`]({environment:angularApiUrl}/classes/igxmaskdirective.html#placeholder) に値が提供されない場合、マスクの値セットが使用されます。
 
 ```typescript
 value = null;
 ```
+
 ```html
 <igx-input-group>
     <label igxLabel>Date</label>
@@ -310,23 +322,25 @@ value = null;
 ```
 
 
-<code-view style="height: 100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/mask-sample-5/" >
 </code-view>
 
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
-* [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
-* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [IgxMaskDirective]({environment:angularApiUrl}/classes/igxmaskdirective.html)
-* [IgxSnackbarComponent]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html)
+- [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
+- [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+- [IgxMaskDirective]({environment:angularApiUrl}/classes/igxmaskdirective.html)
+- [IgxSnackbarComponent]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

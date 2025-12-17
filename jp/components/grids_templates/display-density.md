@@ -3,6 +3,7 @@
 title:  Angular Grid のサイズ - Ignite UI for Angular
 _description: Data Grid コンポーネントにサイズ機能を適用する方法を説明します。Ignite UI for Angular のコンパクト ビュー オプションのセットを使用できます。
 _keywords: material density, size, igniteui for angular, infragistics, マテリアル密度
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title:  Angular Grid のサイズ - Ignite UI for Angular
 _description: Tree Grid コンポーネントにサイズ機能を適用する方法を説明します。Ignite UI for Angular のコンパクト ビュー オプションのセットを使用できます。
 _keywords: material density, size, igniteui for angular, infragistics, マテリアル密度
+_license: commercial
 _language: ja
 ---
 }
@@ -19,6 +21,7 @@ _language: ja
 title:  Angular Grid のサイズ - Ignite UI for Angular
 _description: Hierarchical Grid コンポーネントにサイズ機能を適用する方法を説明します。Ignite UI for Angular のコンパクト ビュー オプションのセットを使用できます。
 _keywords: material density, size, igniteui for angular, infragistics, マテリアル密度
+_license: commercial
 _language: ja
 ---
 }
@@ -32,8 +35,8 @@ _language: ja
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-displayDensity/" alt="Angular @@igComponent サイズの例">
 </code-view>
 
@@ -41,8 +44,8 @@ _language: ja
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-display-density/" alt="Angular @@igComponent サイズの例">
 </code-view>
 
@@ -50,8 +53,8 @@ _language: ja
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:680px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:680px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-density/" alt="Angular @@igComponent サイズの例">
 </code-view>
 
@@ -68,9 +71,9 @@ _language: ja
 ```
 
 以下のコード スニペットは、size を設定する方法を示します。各オプションを @@igComponent に反映する方法を紹介します。サイズ間で切り替える際に各 @@igComponent 要素の高さとそのパディングが変更されます。カスタムの列 [**width**]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) を適用する場合、左右のパディングより大きくする必要があることに注意してください。
- - **--ig-size-large** - これはデフォルトの @@igComponent サイズです。密度が最も低く、行の高さが `50px` です。左右のパディングは `24px` です。最小列 [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) は `80px` です。
- - **--ig-size-medium** - これは行の高さが `40px` の中間サイズです。左右のパディングは `16px` です。最小列 [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) は `64px` です。
- - **--ig-size-small** - これは行の高さが `32px` の最小サイズです。左右のパディングは `12px` です。最小列 [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) は `56px` です。
+- **--ig-size-large** - これはデフォルトの @@igComponent サイズです。密度が最も低く、行の高さが `50px` です。左右のパディングは `24px` です。最小列 [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) は `80px` です。
+- **--ig-size-medium** - これは行の高さが `40px` の中間サイズです。左右のパディングは `16px` です。最小列 [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) は `64px` です。
+- **--ig-size-small** - これは行の高さが `32px` の最小サイズです。左右のパディングは `12px` です。最小列 [`width`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#width) は `56px` です。
 
 > [!NOTE]
 > 現在サイズはオーバーライド**できません**。
@@ -112,6 +115,7 @@ public ngOnInit() {
 マークアップを追加します。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <div class="density-chooser">
     <igx-buttongroup [values]="sizes" (selected)="selectSize($event)"></igx-buttongroup>
@@ -166,8 +170,10 @@ public ngOnInit() {
     </igx-column-group>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <div class="density-chooser">
     <igx-buttongroup [values]="sizes" (selected)="selectSize($event)"></igx-buttongroup>
@@ -214,8 +220,10 @@ public ngOnInit() {
     </igx-column-group>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <div class="density-chooser">
     <igx-buttongroup [values]="sizes" (selected)="selectSize($event)"></igx-buttongroup>
@@ -255,6 +263,7 @@ public ngOnInit() {
 
 </igx-hierarchical-grid>
 ```
+
 }
 
 最後にサイズを適用するためのロジックを実装します。
@@ -277,8 +286,8 @@ protected get sizeStyle() {
 [**@@igxName**]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の @@igComponent 行の高さを変更するその他のオプションに [`rowHeight`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowheight) プロパティがあります。このプロパティと `--ig-size` CSS 変数 オプションが @@igComponent レイアウトにどのように動作に影響するかを以下で確認できます。
 
 以下を確認してください。
- - **[rowHeight]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowheight) が指定されている場合**、`--ig-size` CSS 変数は行の高さに**影響しません**。
- - `--ig-size` は、上記の理由により**残りすべてのグリッド要素に影響します**。
+- **[rowHeight]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowheight) が指定されている場合**、`--ig-size` CSS 変数は行の高さに**影響しません**。
+- `--ig-size` は、上記の理由により**残りすべてのグリッド要素に影響します**。
 
 サンプル機能を拡張して [`rowHeight`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowHeight) プロパティを @@igComponent に追加します。
 
@@ -288,34 +297,35 @@ protected get sizeStyle() {
  ..............
  </@@igSelector>
  ```
+
 <div class="divider--half"></div>
 
 ## API リファレンス
 
 <div class="divider--half"></div>
 
-* [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+- [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 
 <div class="divider--half"></div>
 
 ## その他のリソース
 
-* [@@igComponent 概要](@@igMainTopic.md)
-* [仮想化とパフォーマンス](virtualization.md)
-* [編集](editing.md)
-* [ページング](paging.md)
-* [フィルタリング](filtering.md)
-* [ソート](sorting.md)
-* [集計](summaries.md)
-* [列のピン固定](column-pinning.md)
-* [列のサイズ変更](column-resizing.md)
-* [選択](selection.md)
-* [検索](search.md)
+- [@@igComponent 概要](@@igMainTopic.md)
+- [仮想化とパフォーマンス](virtualization.md)
+- [編集](editing.md)
+- [ページング](paging.md)
+- [フィルタリング](filtering.md)
+- [ソート](sorting.md)
+- [集計](summaries.md)
+- [列のピン固定](column-pinning.md)
+- [列のサイズ変更](column-resizing.md)
+- [選択](selection.md)
+- [検索](search.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

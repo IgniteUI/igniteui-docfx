@@ -11,14 +11,14 @@ Ignite UI for Angular Charts & Graphs is an extensive library of data visualizat
 
 The Ignite UI for Angular Charts support over 65 types of series and combinations that let you visualize any type of data, including Category Series, Financial Series, Polar Series, Radial Series, Range Series, Scatter Series, Shape Series, and Geospatial Series. No matter the type of comparison you are doing, or what type of data story you are trying to tell, you can represent your data in any of these ways:
 
-*   Change Over Time
-*   Comparison
-*   Correlation
-*   Distribution
-*   Geospatial
-*   Overview + Detail
-*   Part to Whole
-*   Ranking
+- Change Over Time
+- Comparison
+- Correlation
+- Distribution
+- Geospatial
+- Overview + Detail
+- Part to Whole
+- Ranking
 
 Power your most demanding visualizations with Infragistics Angular charting!
 
@@ -26,13 +26,13 @@ Power your most demanding visualizations with Infragistics Angular charting!
 
 The Angular product has over 65 different chart and graph types for any scenario – from a single chart display to an interactive dashboard. You can create Angular charts like Pie, Bar, Area, Line, Point, Stacked, Donut, Scatter, Gauge, Polar, Treemap, Stock, Financial, Geospatial Maps and more for your mobile or web apps. The benefit of our Angular chart vs. others is full support for features like:
 
-*   Responsive Web Design built in
-*   Interactive Panning and Zooming with Mouse, Keyboard and Touch
-*   Full Control of Chart Animation
-*   Chart Drill-Down Events
-*   Real-Time Streaming Support
-*   High-Volume (Millions of Data Points) Support
-*   Trends Lines and other Data Analysis features
+- Responsive Web Design built in
+- Interactive Panning and Zooming with Mouse, Keyboard and Touch
+- Full Control of Chart Animation
+- Chart Drill-Down Events
+- Real-Time Streaming Support
+- High-Volume (Millions of Data Points) Support
+- Trends Lines and other Data Analysis features
 
 Built with a modular design of axis, markers, series, legend, and annotation layers, the Angular chart makes it easy to design a render any type of data story. Build a simple chart with a single data series, or build more complex data stories with multiple series of data, with multiple axis in composite views.
 
@@ -320,16 +320,16 @@ alt="Angular Charts Markers, Tooltips, and Templates"/>
 
 If you are considering any other Angular Charts on the market, here are a few things to think about:
 
-*   We include over 65 Angular chart types and combination charts, with the simplest configuration on the market with our smart data adapter.
-*   Our charts are optimized on all platforms including Angular, Blazor, jQuery / JavaScript, React, UNO, UWP, WPF, Windows Forms, WebComponents, WinUI, and Xamarin. They support the same API and same features on every platform.
-*   Our stock chart and financial charting gives you everything you need for a Yahoo Finance or Google Finance-like experience – all with a single line of code.
-*   We test against everyone elses performance. Everyone says they are fast and can handle lots of data, but we can prove it. See for yourself how we handle high-volume data and real-time data streaming.
-*   We are here 24x5. Infragistics has global support that is always online. For North America, Asia Pacific, Middle East, and Europe, we are on the clock when you are!
-*   We have many more UI controls in Angular besides the Charts. We offer a complete Angular solution to build your applications!
+- We include over 65 Angular chart types and combination charts, with the simplest configuration on the market with our smart data adapter.
+- Our charts are optimized on all platforms including Angular, Blazor, jQuery / JavaScript, React, UNO, UWP, WPF, Windows Forms, WebComponents, WinUI, and Xamarin. They support the same API and same features on every platform.
+- Our stock chart and financial charting gives you everything you need for a Yahoo Finance or Google Finance-like experience – all with a single line of code.
+- We test against everyone elses performance. Everyone says they are fast and can handle lots of data, but we can prove it. See for yourself how we handle high-volume data and real-time data streaming.
+- We are here 24x5. Infragistics has global support that is always online. For North America, Asia Pacific, Middle East, and Europe, we are on the clock when you are!
+- We have many more UI controls in Angular besides the Charts. We offer a complete Angular solution to build your applications!
 
 <!-- Angular -->
 
-*   Ignite UI for Angular is built on Angular for the Angular developer, with zero 3rd party dependencies. We are 100% optimized for Angular.
-*   We offer the world’s first, and only, end-to-end comprehensive design to code platform for UX Designers, Visual Designers, and Developers that will generate pixel-perfect Angular controls from Sketch designs. With Indigo.Design, everything you craft in Sketch from our Indigo Design System matches to our Ignite UI for Angular controls.
+- Ignite UI for Angular is built on Angular for the Angular developer, with zero 3rd party dependencies. We are 100% optimized for Angular.
+- We offer the world’s first, and only, end-to-end comprehensive design to code platform for UX Designers, Visual Designers, and Developers that will generate pixel-perfect Angular controls from Sketch designs. With Indigo.Design, everything you craft in Sketch from our Indigo Design System matches to our Ignite UI for Angular controls.
 
 <!-- end: Angular -->

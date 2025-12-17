@@ -3,6 +3,7 @@
 title: Angular Grid のリモートデータ操作 - Ignite UI for Angular
 _description: リモート フィルタリング、リモートソート、リモート スクロールなどの Angular リモート データ操作を使用して、Ignite UI for Angularのサーバーからデータをロードします。
 _keywords: angular リモート データ操作, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular Tree のリモートデータ操作 - Ignite UI for Angular
 _description: リモート フィルタリング、リモートソート、リモート スクロールなどの Angular リモート データ操作を使用して、Ignite UI for Angularのサーバーからデータをロードします。
 _keywords: angular リモート データ操作, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -19,6 +21,7 @@ _language: ja
 title: Angular Hierarchical Grid のリモートデータ操作 - Ignite UI for Angular
 _description: リモート フィルタリング、リモートソート、リモート スクロールなどの Angular リモート データ操作を使用して、Ignite UI for Angularのサーバーからデータをロードします。
 _keywords: angular リモート データ操作, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -289,10 +292,12 @@ public processData() {
 @@if (igxName === 'IgxHierarchicalGrid') {
  <!-- TODO -->
 ## 一意の列値ストラテジ
+
 }
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 ### 一意の列値ストラテジ
+
 }
 
 Excel スタイル フィルタリング ダイアログ内のリスト項目は、それぞれの列の一意の値を表します。@@igComponent は、デフォルトでデータソースに基づいてこれらの値を生成します。リモート フィルタリングの場合、グリッドのデータにはサーバーからのすべてのデータが含まれていません。これらの一意の値を手動で提供し、オンデマンドで読み込むために、@@igComponent の [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniqueColumnValuesStrategy) 入力を利用できます。この入力は、実際には 3 つの引数を提供するメソッドです。
@@ -306,6 +311,7 @@ Excel スタイル フィルタリング ダイアログ内のリスト項目は
 > [`uniqueColumnValuesStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#uniqueColumnValuesStrategy) 入力が提供される場合、Excel スタイル フィルタリングでプロセスを生成するデフォルトの一意の値は使用されません。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid #grid1 [data]="data" [filterMode]="'excelStyleFilter'" [uniqueColumnValuesStrategy]="columnValuesStrategy">
     ...
@@ -331,6 +337,7 @@ public columnValuesStrategy = (column: ColumnType,
 
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid #treeGrid [data]="data" [filterMode]="'excelStyleFilter'" [uniqueColumnValuesStrategy]="columnValuesStrategy">
     ...
@@ -356,6 +363,7 @@ public columnValuesStrategy = (column: ColumnType,
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid #hierarchicalGrid [primaryKey]="'Artist'" [data]="data" [filterMode]="'excelStyleFilter'"
                        [uniqueColumnValuesStrategy]="singersColumnValuesStrategy">
@@ -445,8 +453,10 @@ export class RemotePagingService {
     }
 }
 ```
+
 サービスを宣言した後にコンポーネントを作成する必要があり、@@igComponent コンストラクションとデータ サブスクリプションを処理します。
 @@if (igxName === 'IgxGrid') {
+
 ```typescript
 export class RemotePagingGridSample implements OnInit, AfterViewInit, OnDestroy {
     public data: Observable<any[]>;
@@ -470,8 +480,10 @@ export class RemotePagingGridSample implements OnInit, AfterViewInit, OnDestroy 
     }
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```typescript
 export class HGridRemotePagingSampleComponent implements OnInit, AfterViewInit, OnDestroy {
     public data: BehaviorSubject<any> = new BehaviorSubject([]);
@@ -495,28 +507,33 @@ export class HGridRemotePagingSampleComponent implements OnInit, AfterViewInit, 
     }
 }
 ```
+
 }
 }
 @@if (igxName === 'IgxTreeGrid') {
 このサンプルでは、​​子レコードがいくつあっても、ページごとに一定数のルート レコードを表示する方法を示します。レベル (root または child) に関係なく一定数のレコードを表示するビルトインの Tree Grid ページング アルゴリズムをキャンセルするには、[`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) プロパティを `Number.MAX_SAFE_INTEGER` に設定してください。
+
 ```html
 <igx-tree-grid #treeGrid ...>
         <igx-paginator [perPage]="maxPerPage">
         </igx-paginator>
 ...
 ```
+
 ```typescript
 public maxPerPage = Number.MAX_SAFE_INTEGER;
 ```
+
 }
 
 これで、独自のカスタム ページング テンプレートを設定するか、`igx-paginator` が提供するデフォルトのテンプレートを使用するかを選択できます。まず、デフォルトのページング テンプレートを使用してリモート ページングを設定するために必要なものを見てみましょう。
 
 ### デフォルト テンプレートのリモート ページング
 
-デフォルトのページング テンプレートを使用する場合、[`totalRecords`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#totalRecords) プロパティを設定する必要があります。それにより、グリッドはリモートの合計レコード数に基づいて合計ページ番号を計算できます。リモート ページネーションを実行する場合、グリッドに現在のページのデータのみを渡すため、グリッドは提供されたデータソースのページネーションを試行しません。そのため、[`pagingMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingMode) プロパティを *GridPagingMode.remote* に設定する必要があります。リモート サービスからデータをフェッチするために [`pagingDone`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#pagingDone) または [`perPageChange`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPageChange) イベントにサブスクライブする必要があります。イベントが使用されるユース ケースによって異なります。
+デフォルトのページング テンプレートを使用する場合、[`totalRecords`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#totalRecords) プロパティを設定する必要があります。それにより、グリッドはリモートの合計レコード数に基づいて合計ページ番号を計算できます。リモート ページネーションを実行する場合、グリッドに現在のページのデータのみを渡すため、グリッドは提供されたデータソースのページネーションを試行しません。そのため、[`pagingMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pagingMode) プロパティを _GridPagingMode.remote_ に設定する必要があります。リモート サービスからデータをフェッチするために [`pagingDone`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#pagingDone) または [`perPageChange`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPageChange) イベントにサブスクライブする必要があります。イベントが使用されるユース ケースによって異なります。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid #grid1 [data]="data | async" [isLoading]="isLoading" [pagingMode]="mode">
     <igx-column field="ID"></igx-column>
@@ -526,8 +543,10 @@ public maxPerPage = Number.MAX_SAFE_INTEGER;
     </igx-paginator>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content" [pagingMode]="mode">
     <igx-column field="Name"></igx-column>
@@ -537,8 +556,10 @@ public maxPerPage = Number.MAX_SAFE_INTEGER;
     </igx-paginator>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid #hierarchicalGrid [primaryKey]="'CustomerID'" [pagingMode]="mode">
     <igx-column field="CustomerID"></igx-column>
@@ -548,6 +569,7 @@ public maxPerPage = Number.MAX_SAFE_INTEGER;
     </igx-paginator>
 </igx-hierarchical-grid>
 ```
+
 }
 
 ```typescript
@@ -619,6 +641,7 @@ public paginate(page: number) {
 カスタム ページネーター コンテンツを定義するときは、要求されたページのデータのみを取得するようにコンテンツを定義し、選択したページと [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) 項目に応じて正しい **skip** および **top** パラメーターをリモート サービスに渡す必要があります。導入された [`IgxPageSizeSelectorComponent`]({environment:angularApiUrl}/classes/IgxPageSizeSelectorComponent.html) と [`IgxPageNavigationComponent`]({environment:angularApiUrl}/classes/IgxPageNavigationComponent.html) とともに、設定例を簡単にするために `<igx-paginator>` を使用します。`igx-page-size` はページごとのドロップダウンとラベルを追加し、`igx-page-nav` はナビゲーション アクション ボタンとラベルを追加します。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-paginator #paginator
     [totalRecords]="totalCount"
@@ -628,9 +651,9 @@ public paginate(page: number) {
     (pageChange)="paginate($event)"
     (perPageChange)="perPageChange($event)">
     <igx-paginator-content>
-	    <igx-page-size></igx-page-size>
+     <igx-page-size></igx-page-size>
         [This is my custom content]
-	    <igx-page-nav></igx-page-nav>
+     <igx-page-nav></igx-page-nav>
     </igx-paginator-content>
 </igx-paginator>
 ```
@@ -663,8 +686,10 @@ public perPageChange(perPage: number) {
     this.remoteService.getData(skip, top);
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-paginator #paginator
     [totalRecords]="totalCount"
@@ -680,6 +705,7 @@ public perPageChange(perPage: number) {
     </igx-paginator-content>
 </igx-paginator>
 ```
+
 ```typescript
 @ViewChild('hierarchicalGrid', { static: true }) public hierarchicalGrid: IgxHierarchicalGridComponent;
 
@@ -705,8 +731,10 @@ public ngAfterViewInit() {
 }
 
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-paginator #paginator
     [totalRecords]="totalCount"
@@ -730,33 +758,40 @@ public paginate(page: number) {
     this.remoteService.getData(skip, top);
 }
 ```
+
 }
 
 >[!NOTE]
 > リモート ページングを適切に構成するには、`GridPagingMode.Remote` を設定する必要があります。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid #grid1 [data]="data | async" width="100%" height="580px" [pagingMode]="mode"></igx-grid>
 ...
 public mode = GridPagingMode.Remote;
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid #hierarchicalGrid [data]="data | async" [primaryKey]="'CustomerID'"
     [height]="'550px'" [width]="'100%'" [pagingMode]="mode"></igx-hierarchical-grid>
 ...
 public mode = GridPagingMode.Remote;
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid #treeGrid [data]="data | async" childDataKey="Content"
         expansionDepth="0" width="100%" height="540px" [pagingMode]="mode"></igx-tree-grid>
 ...
 public mode = GridPagingMode.Remote;
 ```
+
 }
 
 最後の手順は、要件に基づいてページネーターのコンテンツを宣言することです。
@@ -856,6 +891,7 @@ public paginate(page: number, recalculate = false) {
     this.buttonDeselection(this.page, this.totalPages);
 }
 ```
+
 }
 
 @@if (igxName === 'IgxGrid') {
@@ -877,7 +913,7 @@ public ngOnInit() {
 }
 ```
 
-このユースケースを適切に処理するには、カスタム ロジックを実装する必要があります。最初に、サーバー上にあるレコードの総数を知る必要があります。サーバーのデータ ページの総数を計算し (`this._totalPagesOnServer ` を参照)、その値に基づいてカスタム ページネーション ロジックを実装します。
+このユースケースを適切に処理するには、カスタム ロジックを実装する必要があります。最初に、サーバー上にあるレコードの総数を知る必要があります。サーバーのデータ ページの総数を計算し (`this._totalPagesOnServer` を参照)、その値に基づいてカスタム ページネーション ロジックを実装します。
 
 ```typescript
 
@@ -916,35 +952,37 @@ public paginate(page: number) {
 ## 既知の問題と制限
 
 - グリッドに `primaryKey` が設定されておらず、リモート データ シナリオが有効になっている場合 (ページング、ソート、フィルタリング、スクロール時に、グリッドに表示されるデータを取得するためのリモート サーバーへのリクエストがトリガーされる場合)、データ要求が完了すると、行は次の状態を失います:
-    * 行の選択
-    * 行の展開/縮小
-    * 行の編集
-    * 行のピン固定
+  - 行の選択
+  - 行の展開/縮小
+  - 行の編集
+  - 行のピン固定
 - リモート データ シナリオでは、グリッドに `primaryKey` が設定されている場合、[`rowSelectionChanging.oldSelection`]({environment:angularApiUrl}/interfaces/IRowSelectionEventArgs.html#oldSelection) イベント引数には、現在データ ビューに含まれていない行の完全な行データ オブジェクトが含まれません。この場合、`rowSelectionChanging.oldSelection` オブジェクトには、`primaryKey` フィールドである 1 つのプロパティのみが含まれます。現在データ ビューにある残りの行については、`rowSelectionChanging.oldSelection` に行データ全体が含まれます。
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
-* [IgxPaginatorComponent API]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html)
-* [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxPaginatorComponent API]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html)
+- [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [ページング](paging.md)
-* [@@igComponent 概要](@@igMainTopic.md)
-* [仮想化とパフォーマンス](virtualization.md)
-* [フィルタリング](filtering.md)
-* [ソート](sorting.md)
-* [集計](summaries.md)
-* [列移動](column-moving.md)
-* [列のピン固定](column-pinning.md)
-* [列のサイズ変更](column-resizing.md)
-* [選択](selection.md)
+- [ページング](paging.md)
+- [@@igComponent 概要](@@igMainTopic.md)
+- [仮想化とパフォーマンス](virtualization.md)
+- [フィルタリング](filtering.md)
+- [ソート](sorting.md)
+- [集計](summaries.md)
+- [列移動](column-moving.md)
+- [列のピン固定](column-pinning.md)
+- [列のサイズ変更](column-resizing.md)
+- [選択](selection.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

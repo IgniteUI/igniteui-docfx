@@ -2,6 +2,7 @@
 title: Angular チャート データの注釈 | データ可視化 | インフラジスティックス
 _description: Infragistics' Angular チャート データの注釈
 _keywords: Angular Charts, Data Annotations, Infragistics, Angular チャート, データの注釈, インフラジスティックス
+_license: commercial
 mentionedTypes: ["DomainChart", "CategoryChart", "CrosshairLayer", "FinalValueLayer", "CalloutLayer"]
 namespace: Infragistics.Controls.Charts
 _language: ja
@@ -10,6 +11,9 @@ _language: ja
 # Angular チャート データの注釈 <label class="badge badge--preview">PREVIEW</label>
 
 Angular チャートでは、データ注釈レイヤーを使用して、データ チャートにプロットされたデータに、傾斜線、垂直/水平線 (軸スライス)、垂直/水平ストリップ (特定の軸をターゲットとする)、四角形、さらには平行四辺形 (バンド) で注釈を付けることができます。データ バインディングがサポートされているため、チャートをカスタマイズするために必要な数の注釈を作成できます。また、さまざまな注釈レイヤーを組み合わせて、プロット領域内にテキストをオーバーレイし、データ内の重要なイベント、パターン、領域に注釈を付けることもできます。
+
+> \[!Note]
+> これらの機能はデカルト軸をサポートするように設計されており、現在は半径または角度の軸には対応していません。
 
 たとえば、株式イベントやパターンを用いて株価に注釈を付けることができます。
 
@@ -101,13 +105,13 @@ Angular では、[`IgxDataAnnotationBandLayerComponent`]({environment:dvApiBaseU
 
 以下は上記のセクションで説明した API メンバーのリストです。
 
-*   `TargetAxis`: このプロパティは、どの軸に有効な DataAnnotationBandLayer、DataAnnotationLineLayer、および DataAnnotationRectLayer を設定するかを指定します。
-*   `DataSource`: このプロパティは、データを注釈レイヤーにバインドして正確な形状を提供します。
-*   `StartValueXMemberPath`: このプロパティは、DataAnnotationBandLayer、DataAnnotationLineLayer、および DataAnnotationRectLayer の開始位置となる x 座標を含むデータ列の列名にマッピングします。
-*   `StartValueYMemberPath`: このプロパティは、DataAnnotationBandLayer、DataAnnotationLineLayer、および DataAnnotationRectLayer の開始位置となる y 座標を含むデータ列の列名にマッピングします。
-*   `EndValueXMemberPath`: このプロパティは、DataAnnotationBandLayer、DataAnnotationLineLayer、および DataAnnotationRectLayer の終了位置となる x 座標を含むデータ列にマッピングします。
-*   `EndValueYMemberPath`: このプロパティは、DataAnnotationBandLayer、DataAnnotationLineLayer、および DataAnnotationRectLayer の終了位置となる y 座標を含むデータ列にマッピングします。
-*   `StartLabelXMemberPath`: このプロパティは、軸に沿った xAxis の開始位置のオーバーレイ ラベルを表すデータ列へのマッピングです。
-*   `StartLabelXDisplayMode` | `StartLabelYDisplayMode` | `EndLabelXDisplayMode` | `EndLabelYDisplayMode` | `CenterLabelXDisplayMode`: これらのプロパティは、注釈形状の開始、終了、または中央に注釈ラベルとして何を表示するかを指定します。たとえば、マップされたデータ値、データ ラベル、軸の値を表示したり、特定の注釈ラベルを非表示にします。
-*   `StartLabelYMemberPath`: このプロパティは、y 軸上の [`IgxDataAnnotationBandLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdataannotationbandlayercomponent.html)、[`IgxDataAnnotationLineLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdataannotationlinelayercomponent.html)、[`IgxDataAnnotationRectLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdataannotationrectlayercomponent.html) の開始位置の軸ラベルを表すデータ列へのマッピングです。
-*   `EndLabelYMemberPath`: このプロパティは、y 軸上の [`IgxDataAnnotationBandLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdataannotationbandlayercomponent.html)、[`IgxDataAnnotationLineLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdataannotationlinelayercomponent.html)、[`IgxDataAnnotationRectLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdataannotationrectlayercomponent.html) の終了位置の軸ラベルを表すデータ列へのマッピングです。
+- `TargetAxis`: このプロパティは、どの軸に有効な DataAnnotationBandLayer、DataAnnotationLineLayer、および DataAnnotationRectLayer を設定するかを指定します。
+- `DataSource`: このプロパティは、データを注釈レイヤーにバインドして正確な形状を提供します。
+- `StartValueXMemberPath`: このプロパティは、DataAnnotationBandLayer、DataAnnotationLineLayer、および DataAnnotationRectLayer の開始位置となる x 座標を含むデータ列の列名にマッピングします。
+- `StartValueYMemberPath`: このプロパティは、DataAnnotationBandLayer、DataAnnotationLineLayer、および DataAnnotationRectLayer の開始位置となる y 座標を含むデータ列の列名にマッピングします。
+- `EndValueXMemberPath`: このプロパティは、DataAnnotationBandLayer、DataAnnotationLineLayer、および DataAnnotationRectLayer の終了位置となる x 座標を含むデータ列にマッピングします。
+- `EndValueYMemberPath`: このプロパティは、DataAnnotationBandLayer、DataAnnotationLineLayer、および DataAnnotationRectLayer の終了位置となる y 座標を含むデータ列にマッピングします。
+- `StartLabelXMemberPath`: このプロパティは、軸に沿った xAxis の開始位置のオーバーレイ ラベルを表すデータ列へのマッピングです。
+- `StartLabelXDisplayMode` | `StartLabelYDisplayMode` | `EndLabelXDisplayMode` | `EndLabelYDisplayMode` | `CenterLabelXDisplayMode`: これらのプロパティは、注釈形状の開始、終了、または中央に注釈ラベルとして何を表示するかを指定します。たとえば、マップされたデータ値、データ ラベル、軸の値を表示したり、特定の注釈ラベルを非表示にします。
+- `StartLabelYMemberPath`: このプロパティは、y 軸上の [`IgxDataAnnotationBandLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdataannotationbandlayercomponent.html)、[`IgxDataAnnotationLineLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdataannotationlinelayercomponent.html)、[`IgxDataAnnotationRectLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdataannotationrectlayercomponent.html) の開始位置の軸ラベルを表すデータ列へのマッピングです。
+- `EndLabelYMemberPath`: このプロパティは、y 軸上の [`IgxDataAnnotationBandLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdataannotationbandlayercomponent.html)、[`IgxDataAnnotationLineLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdataannotationlinelayercomponent.html)、[`IgxDataAnnotationRectLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdataannotationrectlayercomponent.html) の終了位置の軸ラベルを表すデータ列へのマッピングです。

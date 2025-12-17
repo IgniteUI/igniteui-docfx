@@ -1,7 +1,8 @@
 ---
-title: サイズ | Ignite UI for Angular 
+title: サイズ | Ignite UI for Angular | MITライセンス 
 _description: Ignite UI for Angular は、アプリケーションまたはコンポーネント レベルで size プロパティの表示を設定できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular Components, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, サイズ
+_license: MIT
 _language: ja
 ---
 
@@ -12,8 +13,9 @@ size 設定の表示は、大規模データセットのビジュアル表示を
 `--ig-size` カスタム CSS プロパティを使用すると、アプリケーションまたはコンポーネント レベルでサイズを設定できます。
 
 ## Angular サイズの例
-<code-view style="height: 250px; width: 600px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+
+<code-view style="height: 250px; width: 600px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/theming/density/" alt="Angular サイズの例">
 </code-view>
 
@@ -46,7 +48,7 @@ igx-input-group {
 
 ## CSS カスタム プロパティによるサイズの理解
 
-Ignite UI のサイズ設定システムは、CSS カスタム プロパティのセットを通じて機能し、コンポーネントの寸法やスペーシングを自動的に調整します。`--ig-size ` プロパティを変更すると、コンポーネントはその変更を自動的に検出し、適切なサイズ値を適用します。
+Ignite UI のサイズ設定システムは、CSS カスタム プロパティのセットを通じて機能し、コンポーネントの寸法やスペーシングを自動的に調整します。`--ig-size` プロパティを変更すると、コンポーネントはその変更を自動的に検出し、適切なサイズ値を適用します。
 
 ### サイズ検出用変数
 
@@ -124,20 +126,23 @@ Ignite UI の Sass ユーティリティを使用すると、カスタム コン
 この仕組みでは、`clamp()`、`min()`、`max()`、`calc()` 関数を組み合わせた数式的アプローチにより、コンポーネントは現在の `--ig-size` 設定に基づいて自動的にサイズ値を切り替えることができます。
 
 ## API リファレンス
+
 <div class="divider"></div>
 
-* [テーマ - Sizable Mixin]({environment:sassApiUrl}/themes#mixin-sizable)
-* [テーマ - Sizable Function]({environment:sassApiUrl}/themes#function-sizable)
+- [テーマ - Sizable Mixin]({environment:sassApiUrl}/themes#mixin-sizable)
+- [テーマ - Sizable Function]({environment:sassApiUrl}/themes#function-sizable)
 
 ### サイズと間隔の関数
-* [ユーティリティ - Pad]({environment:sassApiUrl}/utilities#function-pad)
-* [ユーティリティ - Pad Inline]({environment:sassApiUrl}/utilities#function-pad-inline)
-* [ユーティリティ - Pad Block]({environment:sassApiUrl}/utilities#function-pad-block)
+
+- [ユーティリティ - Pad]({environment:sassApiUrl}/utilities#function-pad)
+- [ユーティリティ - Pad Inline]({environment:sassApiUrl}/utilities#function-pad-inline)
+- [ユーティリティ - Pad Block]({environment:sassApiUrl}/utilities#function-pad-block)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

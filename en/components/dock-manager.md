@@ -2,7 +2,9 @@
 title: Manage Angular Page Layout | Dock Manager | Ignite UI | Infragistics
 _description: Learn how the Dock Manager lets you customize the layout of your Angular application via panes that can be pinned, resized, moved, and hidden.
 _keywords: manage angular page layout, Ignite UI for Angular, Infragistics
+_license: commercial
 ---
+
 # Dock Manager
 
 The Ignite UI Dock Manager component provides means to manage the layout of your application through panes, allowing your end-users to customize it further by pinning, resizing, moving and hiding panes.
@@ -10,8 +12,8 @@ The Ignite UI Dock Manager component provides means to manage the layout of your
 ## Angular Dock Manager Example
 
 
-<code-view style="height: 600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/layouts/dock-manager-sample/" alt="Angular Dock Manager Example">
 </code-view>
 
@@ -20,6 +22,7 @@ The Ignite UI Dock Manager component provides means to manage the layout of your
 
 
 ## Usage
+
 The Dock Manager is a standard [web component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) and as such can be used in an Angular application.
 
 Follow the steps below to add the Dock Manager package to your Angular project and set it up in order to use the component.
@@ -41,6 +44,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 })
 export class AppModule {}
 ```
+
 Next, one should call the `defineCustomElements()` function in the `main.ts` file:
 
 ```typescript

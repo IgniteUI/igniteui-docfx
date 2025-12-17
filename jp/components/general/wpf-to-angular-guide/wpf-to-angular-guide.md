@@ -20,6 +20,7 @@ _language: ja
 はじめに、Angular を使用した最新の Web アプリ開発の前提条件をインストールする必要があります。このセクションでは、Node.js パッケージ マネージャの使用、Visual Studio Code IDE のインストール、および最新の Web 開発に必要な基本概念について説明します。このトピックの[ビデオ チュートリアル](https://youtu.be/dhjrAPPad54)をご覧ください。
 
 #### [Angular コンポーネントを使用した UI の作成](create-ui-with-components.md)
+
 Angularで UI を作成する方法は、WPF で UI を作成する方法と非常に似ています。通常、UserControl クラスで表されるユーザー コントロールを使用します。UserControl は、マークアップとコードを再利用可能なコンテナーにグループ化し、複数の異なる場所で同じインターフェイスと機能を使用できるようにします。Angular のコンポーネントの理解は、このシリーズの残りの部分に重要です。はじめに、WPF コンポーネントがどのように Angular のコンポーネントに変換されるかを説明します。このトピックの[ビデオ チュートリアル](https://youtu.be/z1SZUezpRXY)をご覧ください。
 
 #### [Angular 一方向バインディング](one-way-binding.md)
@@ -45,10 +46,10 @@ WPF 開発者として、ビジュアル ツリーから要素を追加または
 
 #### [レイアウト要素](layout.md)
 
-WPF では、アプリケーション内で要素をレイアウトするには、要素を Panel 内に配置する必要があります。Angular では、CSS を使用します。このトピックでは、レイアウト、および Flexbox や CSS Grid などの CSS 機能の使用方法について説明します。 
+WPF では、アプリケーション内で要素をレイアウトするには、要素を Panel 内に配置する必要があります。Angular では、CSS を使用します。このトピックでは、レイアウト、および Flexbox や CSS Grid などの CSS 機能の使用方法について説明します。
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

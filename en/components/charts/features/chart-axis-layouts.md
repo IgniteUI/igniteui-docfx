@@ -2,6 +2,7 @@
 title: Angular Axis Layouts | Data Visualization | Infragistics
 _description: Infragistics' Angular Axis Layouts
 _keywords: Angular Axis, Layouts, Location, Position, Share, Multiple, Crossing, Infragistics
+_license: commercial
 mentionedTypes: [ "DomainChart", "CategoryChart", "XYChart", "DomainChart", "XamDataChart", "Axis", "AxisLabelSettings", "ScatterSplineSeries", "TimeXAxis" ]
 ---
 
@@ -69,8 +70,8 @@ The following example shows a Sin and Cos wave represented by a [Scatter Spline 
 
 You can find more information about related chart features in these topics:
 
-*   [Axis Gridlines](chart-axis-gridlines.md)
-*   [Axis Options](chart-axis-options.md)
+- [Axis Gridlines](chart-axis-gridlines.md)
+- [Axis Options](chart-axis-options.md)
 
 ## API References
 

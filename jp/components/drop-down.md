@@ -1,7 +1,8 @@
 ---
-title: Angular Drop Down コンポーネント –  Ignite UI For Angular
+title: Angular Drop Down コンポーネント –  Ignite UI For Angular - MITライセンス
 _description: インタラクティブ機能を追加し、アプリ内の項目のスクロール可能なリストにスタイル設定オプションを表示します。今すぐ Ignite UI for Angular の Drop Down コンポーネントをお試しください。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ, Angular Drop Down コンポーネント, Angular Drop Down コントロール
+_license: MIT
 _language: ja
 ---
 
@@ -13,8 +14,8 @@ _language: ja
 
 この Angular ドロップダウンの例は、ドロップダウン リストの基本的な機能を示しています。それをクリックしてプリセット オプションを展開し、項目を選択して、ドロップダウンを閉じます。
 
-<code-view style="height:200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-1/" alt="Angular Drop Down の例">
 </code-view>
 
@@ -36,7 +37,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 ...
-import { IgxDropDownModule } from 'igniteui-angular';
+import { IgxDropDownModule } from 'igniteui-angular/drop-down';
 // import { IgxDropDownModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -53,7 +54,9 @@ export class AppModule {}
 // home.component.ts
 
 import { NgFor } from '@angular/common';
-import { IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective } from 'igniteui-angular';
+import { IGX_DROP_DOWN_DIRECTIVES } from 'igniteui-angular/drop-down';
+import { IgxToggleActionDirective } from 'igniteui-angular/directives';
+import { IgxButtonDirective } from 'igniteui-angular/directives';
 // import { IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -143,8 +146,8 @@ export class MyDropDownComponent {
 }
 ```
 
-<code-view style="height: 200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-2/" >
 </code-view>
 
@@ -189,8 +192,8 @@ export class MyDropDownComponent {
 
 サンプルを正しく構成すると European Union ヘッダーの下に国の一覧がグループ形式で表示され、France は非インタラクティブな項目、そして Bulgaria は選択済みの項目として表示されます。
 
-<code-view style="height: 310px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 310px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-3/" >
 </code-view>
 
@@ -264,8 +267,8 @@ export class MyCustomDropDownComponent {
 
 以下のサンプルで結果を確認できます。
 
-<code-view style="height: 310px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 310px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-5/" >
 </code-view>
 
@@ -329,8 +332,8 @@ export class MyMenuComponent {
 }
 ```
 
-<code-view style="height: 240px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 240px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-menu/" >
 </code-view>
 
@@ -397,8 +400,8 @@ public ngAfterViewInit(): void {
 
 上記の構成の結果は、次のサンプルで確認できます。
 
-<code-view style="height:400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-multi-level-menu/">
 </code-view>
 
@@ -463,8 +466,8 @@ export class InputDropDownComponent {
 }
 ```
 
-<code-view style="height:220px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:220px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-sample-4/" >
 </code-view>
 
@@ -497,6 +500,122 @@ export class InputDropDownComponent {
 
 ## スタイル設定
 
+### Dropdown テーマのプロパティ マップ
+
+プライマリ プロパティを変更すると、関連するすべての依存プロパティが自動的に更新されます。
+
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>プライマリ プロパティ</th>
+      <th>依存プロパティ</th>
+      <th>説明</th>
+    </tr>
+  </thead>
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$background-color</strong></summary></details>
+      </td>
+      <td>$item-text-color</td>
+      <td>ドロップダウン項目のテキストの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$hover-item-background</td>
+      <td>ドロップダウン ホバー項目の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focused-item-background</td>
+      <td>ドロップダウン フォーカスされた項目の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focused-item-text-color</td>
+      <td>ドロップダウン フォーカスされた項目のテキストの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-item-background</td>
+      <td>ドロップダウン選択された項目の背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$disabled-item-text-color</td>
+      <td>ドロップダウンが無効にされた項目のテキストの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$header-text-color</td>
+      <td>ドロップダウン ヘッダー テキストの色</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$item-text-color</strong></summary></details>
+      </td>
+      <td>$item-icon-color</td>
+      <td>ドロップダウン項目のアイコンの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$hover-item-text-color</td>
+      <td>ドロップダウン項目のホバーのテキストの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$hover-item-icon-color</td>
+      <td>ドロップダウン項目のホバーのアイコンの色</td>
+    </tr>
+  </tbody>
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$selected-item-background</strong></summary></details>
+      </td>
+      <td>$selected-item-text-color</td>
+      <td>ドロップダウン選択された項目のテキストの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-item-icon-color</td>
+      <td>選択されたドロップダウン項目のアイコンの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-hover-item-background</td>
+      <td>ドロップダウン選択された項目ホバーの背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-hover-item-text-color</td>
+      <td>ドロップダウン選択された項目ホバーのテキストの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-hover-item-icon-color</td>
+      <td>選択されたドロップダウン項目のホバーのアイコンの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-focus-item-background</td>
+      <td>ドロップダウン選択された項目フォーカスの背景の色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$selected-focus-item-text-color</td>
+      <td>ドロップダウン選択された項目フォーカスのテキストの色</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$focused-item-border-color</td>
+      <td>ドロップダウン項目のフォーカス境界線の色</td>
+    </tr>
+  </tbody>
+</table>
+
 [Ignite UI for Angular テーマ](themes/index.md) を使用して、ドロップダウンの外観を変更できます。はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。
 
 ```scss
@@ -506,7 +625,7 @@ export class InputDropDownComponent {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最もシンプルな方法として、[`drop-down-theme`]({environment:sassApiUrl}/themes#function-drop-down-theme) を拡張し、既定のテーマ パラメーターの一部を指定することで、新しいテーマを作成します。背景色を指定するだけで、インタラクション状態の色や適切な前景色が自動的に計算されます。`$background` プロパティを設定すると、完全にスタイル設定されたドロップダウンが表示されます。
+最もシンプルな方法として、[`drop-down-theme`]({environment:sassApiUrl}/themes#function-drop-down-theme) を拡張し、既定のテーマ パラメーターの一部を指定することで、新しいテーマを作成します。背景の色を指定するだけで、インタラクション状態の色や適切な前景の色が自動的に計算されます。`$background` プロパティを設定すると、完全にスタイル設定されたドロップダウンが表示されます。
 
 ```scss
 $custom-drop-down-theme: drop-down-theme(
@@ -527,29 +646,31 @@ $custom-drop-down-theme: drop-down-theme(
 
 ### デモ
 
-<code-view style="height:350px" 
+<code-view style="height:350px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-styling/" >
 </code-view>
 
 <div class="divider--half"></div>
 
 ## API リファレンス
-* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) 
-* [IgxDropDownComponent スタイル]({environment:sassApiUrl}/themes#function-drop-down-theme)
-* [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)
-* [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
-* [IgxOverlay スタイル]({environment:sassApiUrl}/themes#function-overlay-theme)
-* [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
-* [IgxDividerDirective スタイル]({environment:sassApiUrl}/themes#function-divider-theme)
+
+- [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
+- [IgxDropDownComponent スタイル]({environment:sassApiUrl}/themes#function-drop-down-theme)
+- [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html)
+- [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
+- [IgxOverlay スタイル]({environment:sassApiUrl}/themes#function-overlay-theme)
+- [IgxDividerDirective]({environment:angularApiUrl}/classes/igxdividerdirective.html)
+- [IgxDividerDirective スタイル]({environment:sassApiUrl}/themes#function-divider-theme)
 
 ## テーマの依存関係
-* [IgxOverlay テーマ]({environment:sassApiUrl}/themes#function-overlay-theme)
+
+- [IgxOverlay テーマ]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## その他のリソース
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

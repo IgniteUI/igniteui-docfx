@@ -2,22 +2,26 @@
 title: Cascading combos in Angular @@igComponent Grid - Infragistics
 _description: Grid with Cascading Combos. See the sample here.
 _keywords: angular cascading combos with grid, ignite ui for angular, infragistics
+_license: commercial
 ---
 
 # Angular Grid with Cascading Combos
+
 The Grid's Editing functionality provides with the opportunity to use [Cascading Combos](../simple-combo.md#cascading-scenario). By selecting the value in any preceding [Combos](../combo.md), the users will receive only the data that is relevant to their selection within the next Combo.
 
 ## Angular Grid with Cascading Combos Sample Overview
+
 The sample below demonstrates how `Grid` works with nested `Cascading Combos`.
 
 @@if (igxName === 'IgxGrid') {
-<code-view style="height:500px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:500px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-cascading-combos/" alt="Angular @@igComponent Batch Editing and Transactions Example">
 </code-view>
 }
 
 ## Setup
+
 In order enable column editing, make sure [`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) property is set to **true**.
 
 Once the column editing is enabled, you can start by adding your [Single Select ComboBox](../simple-combo.md). Please note that here in order to have only one single selection available, you will need to use [igxSimpleCombo](../simple-combo.md) instead of modifying the igxCombo.
@@ -25,7 +29,7 @@ Once the column editing is enabled, you can start by adding your [Single Select 
 To get started with the [Simple ComboBox component](../simple-combo.md#angular-simple-combobox-features), first you need to import the `IgxSimpleComboModule` in your **app.module.ts** file:
 
 ```typescript
-import { IgxSimpleComboModule } from 'igniteui-angular';
+import { IgxSimpleComboModule } from 'igniteui-angular/simple-combo';
 
 @NgModule({
     imports: [
@@ -39,7 +43,7 @@ export class AppModule {}
 
 Then, in the template, you should bind the combos [igx-simple-combo]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html) to some data.
 
-- `displayKey` - *Required for object arrays* - Specifies which property will be used for the items' text. If no value is specified for [displayKey]({environment:angularApiUrl}/classes/IgxSimpleComboComponent.html#displayKey), the simple combobox will use the specified `valueKey` (if any).
+- `displayKey` - _Required for object arrays_ - Specifies which property will be used for the items' text. If no value is specified for [displayKey]({environment:angularApiUrl}/classes/IgxSimpleComboComponent.html#displayKey), the simple combobox will use the specified `valueKey` (if any).
 
 ```typescript
 export class MySimpleComboComponent implements OnInit {
@@ -83,16 +87,17 @@ The [`id`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.htm
 ```
 
 ## API Summary
+
 <div class="divider--half"></div>
 
-* [IgxSimpleComboComponent]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html)
-* [IgxComboComponent Styles]({environment:sassApiUrl}/themes#function-combo-theme)
-* [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
-* [IgxLinearProgressBarComponent Styles]({environment:sassApiUrl}/themes#function-progress-linear-theme)
+- [IgxSimpleComboComponent]({environment:angularApiUrl}/classes/igxsimplecombocomponent.html)
+- [IgxComboComponent Styles]({environment:sassApiUrl}/themes#function-combo-theme)
+- [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
+- [IgxLinearProgressBarComponent Styles]({environment:sassApiUrl}/themes#function-progress-linear-theme)
 
 ## Additional Resources
 
-* [@@igComponent Editing](editing.md)
-* [Single Select ComboBox](../simple-combo.md)
-* [Cascading Combos](../simple-combo.md#cascading-scenario)
-* [Linear Progress](../linear-progress.md)
+- [@@igComponent Editing](editing.md)
+- [Single Select ComboBox](../simple-combo.md)
+- [Cascading Combos](../simple-combo.md#cascading-scenario)
+- [Linear Progress](../linear-progress.md)

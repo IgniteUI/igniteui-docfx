@@ -2,6 +2,7 @@
 title: Angular Query Builder コンポーネント - Ignite UI for Angular
 _description: Angular Query Builder (クエリ ビルダー) を使用すると、ユーザーは優れた UI エクスペリエンスを備えた Angular アプリで複雑なカスタム クエリを作成できます。今すぐお試しください。
 _keywords: Angular Query Builder コンポーネント, Angular Query Builder コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
+_license: commercial
 _language: ja
 ---
 
@@ -11,7 +12,7 @@ Angular Query Builder は、[Angular コンポーネント](https://jp.infragist
 
 <p class="highlight">
 
-[`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) コンポーネントは UI を使用して複雑なクエリを作成する方法を提供します。AND/OR 演算子、条件、および値を指定すると、クエリを記述する式ツリーが作成されます。 
+[`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) コンポーネントは UI を使用して複雑なクエリを作成する方法を提供します。AND/OR 演算子、条件、および値を指定すると、クエリを記述する式ツリーが作成されます。
 
 </p>
 
@@ -19,8 +20,8 @@ Angular Query Builder は、[Angular コンポーネント](https://jp.infragist
 
 この Angular Query Builder の例を作成して、Angular Query Builder コンポーネントのデフォルト機能を紹介しました。プラス ボタンをクリックして、条件、「and」グループ、および「or」グループを追加します。グループ解除または削除するには、サイド バーに移動します。
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/query-builder-request-sample/"
            alt="Angular Query Builder 概要の例">
 </code-view>
@@ -42,7 +43,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 ```typescript
 // app.module.ts
 
-import { IgxQueryBuilderModule } from 'igniteui-angular';
+import { IgxQueryBuilderModule } from 'igniteui-angular/query-builder';
 // import { IgxQueryBuilderModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -58,7 +59,8 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IGX_QUERY_BUILDER_DIRECTIVES, FilteringExpressionsTree, FieldType } from 'igniteui-angular';
+import { IGX_QUERY_BUILDER_DIRECTIVES } from 'igniteui-angular/query-builder';
+import { FilteringExpressionsTree, FieldType } from 'igniteui-angular/core';
 // import { IGX_QUERY_BUILDER_DIRECTIVES, FilteringExpressionsTree, FieldType } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -163,10 +165,10 @@ ngAfterViewInit(): void {
 ## キーボード操作
 
 **キーの組み合わせ**
- - <kbd>Tab</kbd>/<kbd>Shift + Tab</kbd> - 次の/前のチップ、ドラッグ インジケーター、削除ボタン、式の「追加」ボタンに移動します。
- - <kbd>下矢印</kbd>/<kbd>上矢印</kbd> - チップのドラッグ インジケーターがフォーカスされている場合、チップを上下に移動できます。
- - <kbd>Space</kbd>/<kbd>Enter</kbd> - フォーカスされた式が編集モードに入ります。チップが移動された場合、これにより新しい位置が確認されます。
- - <kbd>Esc</kbd> - チップの並べ替えがキャンセルされ、元の位置に戻ります。
+- <kbd>Tab</kbd>/<kbd>Shift + Tab</kbd> - 次の/前のチップ、ドラッグ インジケーター、削除ボタン、式の「追加」ボタンに移動します。
+- <kbd>下矢印</kbd>/<kbd>上矢印</kbd> - チップのドラッグ インジケーターがフォーカスされている場合、チップを上下に移動できます。
+- <kbd>Space</kbd>/<kbd>Enter</kbd> - フォーカスされた式が編集モードに入ります。チップが移動された場合、これにより新しい位置が確認されます。
+- <kbd>Esc</kbd> - チップの並べ替えがキャンセルされ、元の位置に戻ります。
 
 >[!NOTE]
 >キーボードの並べ替えは、マウスのドラッグ アンド ドロップと同じ機能を提供します。チップを移動したら、ユーザーは新しい位置を確認するか、並べ替えをキャンセルする必要があります。
@@ -181,7 +183,7 @@ Ignite UI for Angular Query Builder コンポーネントでは、次の定義�
 
 デフォルトでは、[`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html) ヘッダーは表示されません。これを定義するには、[`IgxQueryBuilderHeaderComponent`]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html) を `igx-query-builder` 内に追加する必要があります。
 
-次に、ヘッダー タイトルを設定するために [`title`]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html#title) 入力を使用し、`igx-query-builder-header` 内にコンテンツを渡すことで、クエリ ビルダー ヘッダーをテンプレート化できます。 
+次に、ヘッダー タイトルを設定するために [`title`]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html#title) 入力を使用し、`igx-query-builder-header` 内にコンテンツを渡すことで、クエリ ビルダー ヘッダーをテンプレート化できます。
 
 以下のコードはこれを実行する方法を示します。
 
@@ -263,12 +265,39 @@ this.ordersFields = [
 
 この Angular Query Builder の例は、Angular Query Builder コンポーネントのヘッダーと検索値のテンプレート化とフォーマッター機能を紹介するために作成しました。
 
-<code-view style="height:700px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:700px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/query-builder-template-sample/" alt="Angular Query Builder テンプレートの例">
 </code-view>
 
 ## スタイル設定
+
+### Query Builder テーマのプロパティ マップ
+
+プライマリ プロパティを変更すると、関連するすべての依存プロパティが自動的に更新され、変更が反映されます。
+
+<table class="collapsible-table">
+    <thead>
+      <tr>
+        <th>プライマリ プロパティ</th>
+        <th>依存プロパティ</th>
+        <th>説明</th>
+      </tr>
+    </thead>
+    <tbody class="group">
+      <tr class="primary">
+        <td><details><summary><strong>$background</strong></summary></details></td>
+        <td>$label-foreground</td>
+        <td>クエリ ビルダーのラベル 「from」 と 「select」 の色</td>
+      </tr>
+      <tr class="dependent"><td></td><td>$header-background</td><td>クエリ ビルダー ヘッダーの背景の色</td></tr>
+      <tr class="dependent"><td></td><td>$header-foreground</td><td>クエリ ビルダー ヘッダーの前景の色</td></tr>
+      <tr class="dependent"><td></td><td>$subquery-header-background</td><td>サブクエリ ヘッダーの背景の色</td></tr>
+      <tr class="dependent"><td></td><td>$subquery-border-color</td><td>クエリ ブロックの境界線の色</td></tr>
+      <tr class="dependent"><td></td><td>$separator-color</td><td>クエリ ブロックのセパレーターの色</td></tr>
+      <tr class="dependent"><td></td><td>$header-border (Bootstrap のみ)</td><td>クエリ ビルダーの、ヘッダーの境界線の色</td></tr>
+    </tbody>
+</table>
 
 クエリ ビルダーのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
 
@@ -279,7 +308,7 @@ this.ordersFields = [
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-クエリ ビルダーは、`background` パラメーターを使用して、そのテーマから背景色を取得します。背景を変更するには、カスタム テーマを作成する必要があります。
+クエリ ビルダーは、`background` パラメーターを使用して、そのテーマから背景の色を取得します。背景を変更するには、カスタム テーマを作成する必要があります。
 
 ```scss
 
@@ -290,7 +319,7 @@ $custom-query-builder: query-builder-theme(
 );
 ```
 
-Query Builder 内には、ボタン、チップ、ドロップダウン、入力など、他のコンポーネントがあるため、それぞれに個別のテーマを作成する必要があります。
+クエリ ビルダー内には、ボタン、チップ、ドロップダウン、入力など、他のコンポーネントがあるため、それぞれに個別のテーマを作成する必要があります。
 
 ```scss
 $custom-button: flat-button-theme(
@@ -342,9 +371,9 @@ $custom-icon-button: outlined-icon-button-theme(
 
 ### デモ
 
-<code-view style="height:530px" 
+<code-view style="height:530px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/query-builder-style/" >
 </code-view>
 
@@ -353,21 +382,59 @@ $custom-icon-button: outlined-icon-button-theme(
 
 <div class="divider--half"></div>
 
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して、query builder のスタイルを設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-query-builder`、`dark-query-builder`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[query-builder-theme]({environment:sassApiUrl}/themes#function-query-builder-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-query-builder
+  class="!light-query-builder ![--background:#90B69F]">
+  ...
+</igx-query-builder>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、query builder は次のようになります:
+
+<div class="sample-container loading" style="height:500px">
+    <iframe id="query-builder-tailwind-style-iframe" data-src='{environment:demosBaseUrl}/interactions/query-builder-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
 [WYSIWYG App Builder™](https://jp.infragistics.com/products/appbuilder) と実際の UI コンポーネントを使用して、Angular アプリ開発を効率化することもできます。
 
 ## API リファレンス
 
 <div class="divider--half"></div>
 
-* [IgxQueryBuilderComponent API]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html)
-* [IgxQueryBuilderHeaderComponent]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html)
-* [IgxQueryBuilderSearchValueTemplateDirective]({environment:angularApiUrl}/classes/igxquerybuildersearchvaluetemplatedirective.html)
-* [IgxQueryBuilderComponent スタイル]({environment:sassApiUrl}/themes#function-query-builder-theme)
+- [IgxQueryBuilderComponent API]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html)
+- [IgxQueryBuilderHeaderComponent]({environment:angularApiUrl}/classes/igxquerybuilderheadercomponent.html)
+- [IgxQueryBuilderSearchValueTemplateDirective]({environment:angularApiUrl}/classes/igxquerybuildersearchvaluetemplatedirective.html)
+- [IgxQueryBuilderComponent スタイル]({environment:sassApiUrl}/themes#function-query-builder-theme)
 
 ## その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

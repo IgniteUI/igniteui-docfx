@@ -3,6 +3,7 @@
 title: Angular Data Grid の行ドラッグ - Ignite UI for Angular
 _description: Angular Data Grid の行ドラッグは、マウスで行をすばやくドラッグして再配置します。プロジェクトで行ドラッグを構成する方法を説明します。
 _keywords: angular ドラッグ コンポーネント, マテリアル コンポーネント, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular Tree Grid の行ドラッグ - Ignite UI for Angular
 _description: Angular Tree Grid の行ドラッグは、マウスで行をすばやくドラッグして再配置します。プロジェクトで行ドラッグを構成する方法を説明します。
 _keywords: angular ドラッグ コンポーネント, マテリアル コンポーネント, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -19,6 +21,7 @@ _language: ja
 title: Angular Hierarchical Grid の行ドラッグ - Ignite UI for Angular
 _description: Angular Hierarchical Grid の行ドラッグは、マウスで行をすばやくドラッグして再配置します。プロジェクトで行ドラッグを構成する方法を説明します。
 _keywords: angular ドラッグ コンポーネント, マテリアル コンポーネント, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -31,8 +34,8 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-row-drag-base/" alt="Angular @@igComponent 行ドラッグの例">
 </code-view>
 
@@ -40,8 +43,8 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
 
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-drag-base/" alt="Angular @@igComponent 行ドラッグの例">
 </code-view>
 
@@ -50,8 +53,8 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-row-drag-base/" alt="Angular @@igComponent 行ドラッグの例">
 </code-view>
 
@@ -67,6 +70,7 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
  ...
 </@@igSelector>
 ```
+
 ドラッグ ハンドルをクリックしてボタンを押しながらカーソルを動かすと、グリッドの [`rowDragStart`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragStart) イベントが発生します。クリックをリリースすると、[`rowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragEnd) イベントが発生します。
 
 以下は、行ドラッグをサポートするための `@@igSelector` の設定方法と、ドロップイベントの適切な処理方法についてのチュートリアルです。
@@ -86,7 +90,7 @@ Ignite UI for Angular @@igComponent では、**RowDrag** がルート `@@igSelec
 はじめに、アプリ モジュールに `IgxDragDropModule` をインポートする必要があります。
 
 ```typescript
-import { ..., IgxDragDropModule } from 'igniteui-angular';
+import { ..., IgxDragDropModule } from 'igniteui-angular/directives';
 // import { ..., IgxDragDropModule } from '@infragistics/igniteui-angular'; for licensed package
 ...
 @NgModule({
@@ -97,6 +101,7 @@ import { ..., IgxDragDropModule } from 'igniteui-angular';
 次にテンプレートでディレクティブのセレクターを使ってドロップ エリアを定義します。
 
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <div class="drop-area" igxDrop (enter)="onEnterAllowed($event)" (leave)="onLeaveAllowed($event)"
 (dropped)="onDropAllowed($event)">
@@ -104,9 +109,11 @@ import { ..., IgxDragDropModule } from 'igniteui-angular';
     <div>Drag a row here to delete it</div>
 </div>
 ```
+
 }
 @@if (igxName === 'IgxGrid') {
 この場合、ドロップ領域は行をドロップする 2 番目のグリッドになります。
+
 ```html
 <igx-grid #targetGrid igxDrop [data]="data2" [autoGenerate]="false" [emptyGridTemplate]="dragHereTemplate"
     (enter)="onEnterAllowed($event)" (leave)="onLeaveAllowed($event)" (dropped)="onDropAllowed($event)" [primaryKey]="'ID'">
@@ -121,6 +128,7 @@ import { ..., IgxDragDropModule } from 'igniteui-angular';
     Drop a row to add it to the grid
 </ng-template>
 ```
+
 }
 
 [`rowDragEnd`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragEnd) イベントの `animation` パラメーターを使用して、ドロップできない領域に行がドロップされたときにアニメーションを有効にできます。true に設定されている場合、ドラッグされた行は、ドロップできない領域の上にドロップされると元の位置に戻ります。
@@ -163,27 +171,33 @@ export class @@igxNameRowDragComponent {
     }
 }
 ```
+
 `changeGhostIcon` **private** メソッドは、ドラッグ ゴースト内のアイコンを変更するだけです。メソッドのロジックは、アイコンを含む要素を検索し (ドラッグ インジケーター コンテナーに適用される `igx-grid__drag-indicator` クラスを使用)、要素の内部テキストを渡されたものに変更します。
 アイコンは [`material` フォントセット](https://material.io/tools/icons/)からのもので、別の **`enum`** で定義されています。
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
+
 ```typescript
 enum DragIcon {
     DEFAULT = 'drag_indicator',
     ALLOW = 'remove'
 }
 ```
+
 }
 @@if (igxName === 'IgxGrid') {
+
 ```typescript
 enum DragIcon {
     DEFAULT = 'drag_indicator',
     ALLOW = 'add'
 }
 ```
+
 }
 
 次に、ユーザーが実際にドロップ領域内に行を**ドロップ**したときに何が起こるかを定義する必要があります。
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
+
 ```typescript
 export class @@igxNameRowDragComponent {
 
@@ -199,6 +213,7 @@ export class @@igxNameRowDragComponent {
 }
 
 @@if (igxName === 'IgxGrid') {
+
 ```typescript
 export class @@igxNameRowDragComponent {
     @ViewChild('sourceGrid', { read: IgxGridComponent }) public sourceGrid: IgxGridComponent;
@@ -220,7 +235,9 @@ export class @@igxNameRowDragComponent {
 > イベント引数 (`args.dragData.data`) または他の行プロパティからの行データを使用する場合、行全体が参照として引数に渡されることに注意してください。つまり、ソースグリッドのデータと区別する必要がある場合は、必要なデータを複製する必要があります。
 
 #### ドラッグ ゴーストのテンプレート化
+
 ドラッグゴーストは、`@@igSelector` の本文内の `<ng-template>` に適用される `IgxRowDragGhost` ディレクティブを使用してテンプレート化できます。
+
 ```html
 <@@igSelector>
 ...
@@ -239,8 +256,8 @@ export class @@igxNameRowDragComponent {
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-multiple-row-drag/" >
 </code-view>
 
@@ -248,8 +265,8 @@ export class @@igxNameRowDragComponent {
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-multi-row-drag/" >
 </code-view>
 
@@ -278,8 +295,8 @@ export class @@igxNameRowDragComponent {
 </@@igSelector>
 ```
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-multi-row-drag/" >
 </code-view>
 
@@ -287,8 +304,10 @@ export class @@igxNameRowDragComponent {
 }
 
 ### ドラッグ アイコンのテンプレート化
+
 ドラッグ ハンドル アイコンは、グリッドの [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragIndicatorIconTemplate) を使用してテンプレート化できます。作成している例で、アイコンをデフォルトのもの (`drag_indicator`) から `drag_handle` に変更します。
 `igxDragIndicatorIcon` を使用して `@@igSelector` の本文内にテンプレートを渡して変更できます。
+
 ```html
 <@@igSelector>
 ...
@@ -300,6 +319,7 @@ export class @@igxNameRowDragComponent {
 ```
 
 新しいアイコン テンプレートの設定後、`DragIcon enum` の `DEFAULT` アイコンも調整する必要があるため、`changeIcon` メソッドによって適切に変更されます。
+
 ```typescript
 enum DragIcon {
     DEFAULT = "drag_handle",
@@ -309,7 +329,9 @@ enum DragIcon {
 
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
 ### ドロップ エリアのスタイル
+
 ドロップ ハンドラが正しく設定されたら、次にドロップ領域をスタイル設定します。
+
 ```css
 .drop-area {
     width: 160px;
@@ -341,10 +363,11 @@ enum DragIcon {
 }
 
 #### デモ
+
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-row-drag-to-grid/" >
 </code-view>
 
@@ -354,71 +377,80 @@ enum DragIcon {
 
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-drag/" >
 </code-view>
 
 
-<div class="divider--half"></div> 
+<div class="divider--half"></div>
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-drag/" >
 </code-view>
 
 
-<div class="divider--half"></div> 
+<div class="divider--half"></div>
 }
 
 ## アプリケーション デモ
+
 @@if (igxName === 'IgxGrid') {
 
 ### 行ドラッグ イベントの使用
+
 以下のデモは、行ドラッグ イベント情報を使用して、行がドロップされたカスタム コンポーネントとソース グリッド自体の両方の状態を変更する方法を示しています。
 グリッドから月をドラッグして、それらを対応する惑星にドロップしてみてください。行ドラッグ ゴーストの背景は、ホバーされた惑星に応じて動的に変更されます。成功するとグリッド内の行が選択され、ドラッグは無効になります。惑星をクリックすると役に立つ情報が得られます。
 
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-row-drag/" >
 </code-view>
 
 
-> [!NOTE] 
+> [!NOTE]
 > 上記のデモで使用した行ドラッグ ゴーストに適用されるクラスは ::ng-deep 修飾子を使用しています。行ドラッグは内部グリッド機能であり、CSS カプセル化のためにアプリケーションレベルでアクセスできないためです。
 }
 
 ### 行の並べ替えデモ
+
 グリッドの行ドラッグ イベントと `igxDrop` ディレクティブを使用して、ドラッグよる行の並べ替えるが可能なグリッドを作成できます。
 
 すべてのアクションはグリッド本体の内側で発生するため、ここで `igxDrop` ディレクティブをアタッチする必要があります:
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid #grid [data]="data" [rowDraggable]="true" [primaryKey]="'ID'" igxDrop (dropped)="onDropAllowed($event)">
     ...
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid igxPreventDocumentScroll  #treeGrid [data]="localData" [rowDraggable]="true" foreignKey="ParentID"
     [primaryKey]="'ID'" (rowDragStart)="rowDragStart($event)" igxDrop (dropped)="dropInGrid($event)">
     ...
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid #grid [data]="localData" [primaryKey]="'id'"
     [rowDraggable]="true" (rowDragStart)="rowDragStart($event)" igxDrop (dropped)="rowDrop($event)">
     ...
 </igx-hierarchical-grid>
 ```
+
 }
 
 
@@ -427,21 +459,22 @@ enum DragIcon {
 
 `rowDraggable` が有効になり、ドロップ エリアが定義されたら、ドロップ イベントの単純なハンドラーを実装する必要があります。行をドラッグするときは、以下を確認してください:
 @@if (igxName === 'IgxGrid') {
-  - 行はグリッド内にドロップされましたか?
-  - そうであれば、ドラッグされた行が他のどの行にドロップされましたか?
-  - ターゲット行が見つかれば、`data` 配列内のレコードの位置を入れ替えます。
+- 行はグリッド内にドロップされましたか?
+- そうであれば、ドラッグされた行が他のどの行にドロップされましたか?
+- ターゲット行が見つかれば、`data` 配列内のレコードの位置を入れ替えます。
 }
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
-  - 行が展開されていますか? そうであれば、行を縮小します。
-  - 行はグリッド内にドロップされましたか?
-  - そうであれば、ドラッグされた行が他のどの行にドロップされましたか?
-  - ターゲット行が見つかれば、`data` 配列内のレコードの位置を入れ替えます。
-  - 行は最初に選択されてましたか? そうであれば、選択済みとしてマークします。
+- 行が展開されていますか? そうであれば、行を縮小します。
+- 行はグリッド内にドロップされましたか?
+- そうであれば、ドラッグされた行が他のどの行にドロップされましたか?
+- ターゲット行が見つかれば、`data` 配列内のレコードの位置を入れ替えます。
+- 行は最初に選択されてましたか? そうであれば、選択済みとしてマークします。
 }
 
 以下では、コンポーネントの `.ts` ファイルに実装されていることがわかります。
 
 @@if (igxName === 'IgxGrid') {
+
 ```typescript
 export class GridRowReorderComponent {
     public onDropAllowed(args) {
@@ -466,8 +499,10 @@ export class GridRowReorderComponent {
     }
 }
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
 export class TreeGridRowReorderComponent {
     public rowDragStart(args: any): void {
@@ -533,8 +568,10 @@ export class TreeGridRowReorderComponent {
     }
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```typescript
 export class HGridRowReorderComponent {
     public rowDragStart(args: any): void {
@@ -585,14 +622,15 @@ export class HGridRowReorderComponent {
     }
 }
 ```
+
 }
 
 これらの簡単な手順で、ドラッグ/ドロップで行を並べ替えることができるグリッドを構成しました! 次のデモで、上記コードの動作を確認できます。
 @@if (igxName === 'IgxGrid') {
 ドラッグ アイコンを押下しながら、グリッド内で好きな場所に行を移動できます。
 
-<code-view style="height:830px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:830px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-row-reorder/" >
 </code-view>
 
@@ -600,8 +638,8 @@ export class HGridRowReorderComponent {
 @@if (igxName === 'IgxTreeGrid') {
 行の選択も有効で、ドラッグした行をドロップしても選択が保持されます。
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-reordering/" >
 </code-view>
 
@@ -609,8 +647,8 @@ export class HGridRowReorderComponent {
 @@if (igxName === 'IgxHierarchicalGrid') {
 行の選択も有効で、ドラッグした行をドロップしても選択が保持されます。
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-row-reorder/" >
 </code-view>
 
@@ -625,6 +663,7 @@ export class HGridRowReorderComponent {
 以下に、行の位置を知ることで実現できるいくつかのカスタム実装のスニペットの例を示します。
 
 #### カーソル位置に基づいてドラッグ ゴーストを変更する
+
 以下のスニペットでは、ドラッグ ゴースト内のテキストを変更して、ホバーされた行の名前を表示する方法を示しています。
 
 まず、ドラッグ ゴーストに使用するテンプレートを指定します。`dropName` プロパティは動的に変化し、カーソルが置かれている行の名前を取得します。
@@ -848,8 +887,8 @@ class MyGridScrollComponent {
 
 以下は、上記の両方のシナリオの例です。ドロップ インジケーターを表示し、境界線の端に達したときにビューポートをスクロールします。
 
-<code-view style="height:830px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:830px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-drop-indicator/" >
 </code-view>
 }
@@ -862,18 +901,19 @@ class MyGridScrollComponent {
 
 ## API リファレンス
 
-* [rowDraggable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDraggable)
-* [rowDragStart]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragStart)
-* [rowDragEnd]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragEnd)
-* [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [rowDraggable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDraggable)
+- [rowDragStart]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragStart)
+- [rowDragEnd]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowDragEnd)
+- [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [@@igComponent 概要](@@igMainTopic.md)
+- [@@igComponent 概要](@@igMainTopic.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

@@ -1,7 +1,8 @@
 ---
-title: Angular List View | Angular List Example | Infragistics
+title: Angular List View | Angular List Example | Infragistics | MIT license
 _description: The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Try it for FREE
 _keywords: angular list, ignite ui for angular, angular list component, angular list view, angular list view component, angular ui components
+_license: MIT
 ---
 
 # Angular List View Component Overview
@@ -9,6 +10,7 @@ _keywords: angular list, ignite ui for angular, angular list component, angular 
 The Ignite UI for Angular List component displays rows of items and supports one or more header items as well as search and filtering of list items. Each list item is completely templatable and supports any valid HTML or [Angular component](https://www.infragistics.com/products/ignite-ui-angular). The list component also providers built in panning functionality, templates for empty and loading states, and supports virtualization for large lists using the [`IgxForOf`](for-of.md) directive.
 
 ## Angular List Example
+
 The following example represents a list populated with contacts with a _name_ and a _phone number_ properties. The [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) component uses [`igx-avatar`](avatar.md) and [`igx-icon`](icon.md) to enrich the user experience and expose the capabilities of setting avatar picture and different icon for _favorite a contact_. In addition, the List View expose sorting capabilities achieved by using our filtering pipe.
 
 <code-view style="height: 513px"
@@ -26,7 +28,7 @@ To get started with the Ignite UI for Angular List View component, first you nee
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxListModule` in the **app.module.ts** file.
 
@@ -37,7 +39,7 @@ The next step is to import the `IgxListModule` in the **app.module.ts** file.
 // app.module.ts
 
 import { HammerModule } from '@angular/platform-browser';
-import { IgxListModule } from 'igniteui-angular';
+import { IgxListModule } from 'igniteui-angular/list';
 // import { IgxListModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -54,7 +56,7 @@ Alternatively, as of `16.0.0` you can import the `IgxListComponent` as a standal
 // home.component.ts
 
 import { HammerModule } from '@angular/platform-browser';
-import { IGX_LIST_DIRECTIVES } from 'igniteui-angular';
+import { IGX_LIST_DIRECTIVES } from 'igniteui-angular/list';
 // import { IGX_LIST_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -126,6 +128,7 @@ Sometimes there may be a delay in your data loading. In this case you can set th
     </ng-template>
 </igx-list>
 ```
+
 ```css
 /* contacts.component.css */
 
@@ -229,11 +232,9 @@ We can use some of our other components in conjunction with the [`IgxList`]({env
 // app.module.ts
 
 ...
-import {
-    IgxListModule,
-    IgxAvatarModule,
-    IgxIconModule
-} from 'igniteui-angular';
+import { IgxListModule } from 'igniteui-angular/list';
+import { IgxAvatarModule } from 'igniteui-angular/avatar';
+import { IgxIconModule } from 'igniteui-angular/icon';
 // import { IgxListModule, IgxAvatarModule, IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -316,7 +317,7 @@ Let's also allow the user to choose the size of the list by using the `--ig-size
 ```typescript
 // app.module.ts
 ...
-import { IgxButtonGroupModule } from 'igniteui-angular';
+import { IgxButtonGroupModule } from 'igniteui-angular/button-group';
 // import { IgxButtonGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -374,6 +375,7 @@ And here's the result of all that work:
 Now that we have such a beautiful Angular list with contacts and their phone numbers, why don't we implement an ability to call a contact.
 The [`IgxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) has the perfect solution for this - list item panning.
 To do this you have to implement the following steps:
+
 - Enable the panning using the [`allowLeftPanning`]({environment:angularApiUrl}/classes/igxlistcomponent.html#allowLeftPanning) and/or the [`allowRightPanning`]({environment:angularApiUrl}/classes/igxlistcomponent.html#allowRightPanning) properties
 - Define template(s) for the left and/or right panning
 - Handle the list item's panning event(s) and perform the desired action
@@ -442,6 +444,7 @@ igx-icon {
     align-items: center;
 }
 ```
+
 And finally here is the typescript code handling the panning events:
 
 ```typescript
@@ -508,7 +511,8 @@ It's time to import the `IgxFilterModule` and the `IgxInputGroupModule` in our a
 ```typescript
 // app.module.ts
 ...
-import { IgxFilterModule, IgxInputGroupModule } from 'igniteui-angular';
+import { IgxFilterModule } from 'igniteui-angular/directives';
+import { IgxInputGroupModule } from 'igniteui-angular/input-group';
 // import { IgxFilterModule, IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -517,7 +521,7 @@ import { IgxFilterModule, IgxInputGroupModule } from 'igniteui-angular';
 
 // contacts.component.ts
 ...
-import { IgxFilterOptions } from 'igniteui-angular';
+import { IgxFilterOptions } from 'igniteui-angular/directives';
 // import { IgxFilterOptions } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({...})
@@ -598,6 +602,7 @@ If you prefer to use the list theming function, there are parameters available t
 <div class="divider--half"></div>
 
 ## Chat Component
+
 The following sample demonstrates how to create a simple chat component using **IgxList**.
 
 <code-view style="height: 650px"
@@ -607,7 +612,205 @@ The following sample demonstrates how to create a simple chat component using **
 
 <div class="divider--half"></div>
 
-## Applying theme to the list component
+## Styling
+
+### List Theme Property Map
+
+When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
+
+<table class="collapsible-table">
+  <thead>
+    <tr>
+      <th>Primary Property</th>
+      <th>Dependent Property</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+
+  <!-- group for background -->
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <strong>$background</strong>
+      </td>
+      <td>$header-background</td>
+      <td>The list header background color.</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>$item-background</td>
+      <td>The list item background color.</td>
+    </tr>
+  </tbody>
+
+  <!-- group for header-background -->
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <strong>$header-background</strong>
+      </td>
+      <td>$header-text-color</td>
+      <td>The list header text color.</td>
+    </tr>
+  </tbody>
+
+  <!-- group for item-background -->
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$item-background</strong></summary></details>
+      </td>
+      <td>$background</td>
+      <td>The list background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$header-background</td>
+      <td>The list header background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-background-hover</td>
+      <td>The list item hover background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-text-color</td>
+      <td>The list item text color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-title-color</td>
+      <td>The list item title color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-action-color</td>
+      <td>The list item action color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-thumbnail-color</td>
+      <td>The list item thumbnail color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-subtitle-color</td>
+      <td>The list item subtitle color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$border-color</td>
+      <td>The list border color. (Fluent/Bootstrap only)</td>
+    </tr>
+  </tbody>
+
+  <!-- group for item-background-hover -->
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$item-background-hover</strong></summary></details>
+      </td>
+      <td>$item-background-active</td>
+      <td>The active list item background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-text-color-hover</td>
+      <td>The list item hover text color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-title-color-hover</td>
+      <td>The list item hover title color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-action-color-hover</td>
+      <td>The list item hover action color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-thumbnail-color-hover</td>
+      <td>The list item hover thumbnail color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-subtitle-color-hover</td>
+      <td>The list item hover subtitle color.</td>
+    </tr>
+  </tbody>
+
+  <!-- group for item-background-active -->
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$item-background-active</strong></summary></details>
+      </td>
+      <td>$item-background-selected</td>
+      <td>The selected list item background color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-text-color-active</td>
+      <td>The active list item text color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-title-color-active</td>
+      <td>The active list item title color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-action-color-active</td>
+      <td>The active list item action color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-thumbnail-color-active</td>
+      <td>The active list item thumbnail color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-subtitle-color-active</td>
+      <td>The active list item subtitle color.</td>
+    </tr>
+  </tbody>
+
+  <!-- group for item-background-selected -->
+  <tbody class="group">
+    <tr class="primary">
+      <td>
+        <details><summary><strong>$item-background-selected</strong></summary></details>
+      </td>
+      <td>$item-text-color-selected</td>
+      <td>The selected list item text color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-title-color-selected</td>
+      <td>The selected list item title color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-action-color-selected</td>
+      <td>The selected list item action color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-thumbnail-color-selected</td>
+      <td>The selected list item thumbnail color.</td>
+    </tr>
+    <tr class="dependent">
+      <td></td>
+      <td>$item-subtitle-color-selected</td>
+      <td>The selected list item subtitle color.</td>
+    </tr>
+  </tbody>
+</table>
+
+> **Note:** The actual results may vary depending on the theme variant.
+
 
 Let's see how we can change the background of our list. First we need to import index.scss in to our component .scss file.
 
@@ -643,31 +846,69 @@ The result is the following:
 
 For full list of parameters that you can change for the list component please refer to: [IgxListComponent Styles]({environment:sassApiUrl}/themes#function-list-theme)
 
+### Styling with Tailwind
+
+You can style the list using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-list`, `dark-list`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [list-theme]({environment:sassApiUrl}/themes#function-list-theme). The syntax is as follows:
+
+```html
+<igx-list class="!light-list ![--background:#81B698] ![--item-background:#A3C7B2]">
+    ...
+</igx-list>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your list should look like this:
+
+<div class="sample-container loading" style="height:400px">
+    <iframe id="list-tailwind-style-iframe" data-src='{environment:demosBaseUrl}/lists/list-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
 ## API References
 
 In this article we covered a lot of ground with the Angular list component. We created a list of contact items. Used some additional Ignite UI for Angular components inside our list items, like avatars and icons. Created some custom item layout and styled it. Finally, we added list filtering. The list component has a few more APIs to explore, which are listed below.
 
-* [IgxListComponent API]({environment:angularApiUrl}/classes/igxlistcomponent.html)
-* [IgxListComponent Styles]({environment:sassApiUrl}/themes#function-list-theme)
-* [IgxListItemComponent API]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
+- [IgxListComponent API]({environment:angularApiUrl}/classes/igxlistcomponent.html)
+- [IgxListComponent Styles]({environment:sassApiUrl}/themes#function-list-theme)
+- [IgxListItemComponent API]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 
 Additional Angular components that were used:
 
-* [IgxAvatarComponent API]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
-* [IgxAvatarComponent Styles]({environment:sassApiUrl}/themes#function-avatar-theme)
-* [IgxIconComponent API]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxIconComponent Styles]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxAvatarComponent API]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
+- [IgxAvatarComponent Styles]({environment:sassApiUrl}/themes#function-avatar-theme)
+- [IgxIconComponent API]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+- [IgxIconComponent Styles]({environment:sassApiUrl}/themes#function-icon-theme)
 
 <div class="divider"></div>
 
 ## Theming Dependencies
-* [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
-* [IgxAvatar Theme]({environment:sassApiUrl}/themes#function-avatar-theme)
+
+- [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxAvatar Theme]({environment:sassApiUrl}/themes#function-avatar-theme)
 
 ## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

@@ -3,6 +3,7 @@
 title: Angular Data Grid の高度なフィルタリング - Ignite UI for Angular
 _description: Angular テーブルを使用してデータの高度なフィルターを構成する方法を学びます。グリッドの高度なフィルタリングは、これまで以上に便利で魅力的です。
 _keywords: 高度なフィルター, igniteui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular Data Grid の高度なフィルタリング - Ignite UI for Angular
 _description: Angular テーブルを使用してデータの高度なフィルターを構成する方法を学びます。グリッドの高度なフィルタリングは、これまで以上に便利で魅力的です。
 _keywords: 高度なフィルター, igniteui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -24,24 +26,24 @@ _language: ja
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:530px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:530px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-advanced-filtering/" alt="Angular @@igComponent 高度なフィルタリングの例">
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-advanced-filtering/" alt="Angular @@igComponent 高度なフィルタリングの例">
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:630px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:630px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-advanced-filtering/" alt="Angular @@igComponent 高度なフィルタリングの例">
 </code-view>
 
@@ -60,30 +62,37 @@ _language: ja
 高度なフィルタリングを有効にするには [`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowAdvancedFiltering) 入力プロパティを true に設定します。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid [data]="data" [autoGenerate]="true" [allowAdvancedFiltering]="true">
     <igx-grid-toolbar></igx-grid-toolbar>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid [data]="data" [autoGenerate]="true" [allowAdvancedFiltering]="true">
     <igx-grid-toolbar></igx-grid-toolbar>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid [data]="data" [autoGenerate]="true" [allowAdvancedFiltering]="true">
     <igx-grid-toolbar></igx-grid-toolbar>
 </igx-hierarchical-grid>
 ```
+
 }
 
 高度なフィルタリングは、[`advancedFilteringExpressionsTree`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#advancedFilteringExpressionsTree) 入力プロパティに保存される [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) を生成します。このプロパティを使用して、高度なフィルタリングの初期状態を設定できます。
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
+
 ```typescript
 ngAfterViewInit(): void {
     const tree = new FilteringExpressionsTree(FilteringLogic.And);
@@ -111,9 +120,11 @@ ngAfterViewInit(): void {
     this.@@igObjectRef.advancedFilteringExpressionsTree = tree;
 }
 ```
+
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```TypeScript
 ngAfterViewInit(): void {
     const tree = new FilteringExpressionsTree(FilteringLogic.Or);
@@ -141,7 +152,7 @@ ngAfterViewInit(): void {
 }
 ```
 
-`IgxHierarchicalGrid` の高度なフィルタリングでは、*IN / NOT-IN* 演算子を使用して、子グリッド データに基づいてルート グリッド データをフィルタリングできます。この演算子により、サブクエリを作成して、より複雑なフィルタリング ロジックを定義できます。この機能の詳細については、[クエリ ビルダーの「サブクエリの使用」セクション](../query-builder-model.md#サブクエリの使用)を参照してください。以下はサブクエリを含むサンプル [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) です。
+`IgxHierarchicalGrid` の高度なフィルタリングでは、_IN / NOT-IN_ 演算子を使用して、子グリッド データに基づいてルート グリッド データをフィルタリングできます。この演算子により、サブクエリを作成して、より複雑なフィルタリング ロジックを定義できます。この機能の詳細については、[クエリ ビルダーの「サブクエリの使用」セクション](../query-builder-model.md#サブクエリの使用)を参照してください。以下はサブクエリを含むサンプル [`FilteringExpressionsTree`]({environment:angularApiUrl}/classes/filteringexpressionstree.html) です。
 
 ```TypeScript
 ngAfterViewInit(): void {
@@ -180,8 +191,8 @@ ngAfterViewInit(): void {
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:750px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:750px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-external-advanced-filtering/" >
 </code-view>
 
@@ -189,8 +200,8 @@ ngAfterViewInit(): void {
 
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:750px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:750px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-external-advanced-filtering/" >
 </code-view>
 
@@ -198,8 +209,8 @@ ngAfterViewInit(): void {
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:750px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:750px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-external-advanced-filtering/" >
 </code-view>
 
@@ -210,22 +221,28 @@ ngAfterViewInit(): void {
 @@igComponent の外部で動作するように高度なフィルタリングを構成する方法は簡単です。ダイアログを作成して、その [`grid`]({environment:angularApiUrl}/classes/igxgridtoolbaradvancedfilteringcomponent.html#grid) プロパティを設定するだけです。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-advanced-filtering-dialog [grid]="grid1">
 </igx-advanced-filtering-dialog>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-advanced-filtering-dialog [grid]="treegrid1">
 </igx-advanced-filtering-dialog>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-advanced-filtering-dialog [grid]="hierarchicalGrid">
 </igx-advanced-filtering-dialog>
 ```
+
 }
 
 また、[ドラッグアンドドロップ App Builder™](https://jp.infragistics.com/products/appbuilder) が、デザインから Angular コード作成へのストーリー全体をどのように効率化できるかを確認することもできます。
@@ -301,27 +318,27 @@ $custom-query-builder: query-builder-theme(
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:530px" 
+<code-view style="height:530px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-advanced-filtering-style/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:510px" 
+<code-view style="height:510px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-advanced-filtering-style/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:630px" 
+<code-view style="height:630px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-advanced-filtering-style/" >
 </code-view>
 
@@ -332,29 +349,31 @@ $custom-query-builder: query-builder-theme(
 <div class="divider--half"></div>
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+- [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [@@igComponent 概要](@@igMainTopic.md)
-* [フィルタリング](filtering.md)
-* [Excel スタイル フィルタリング](excel-style-filtering.md)
-* [仮想化とパフォーマンス](virtualization.md)
-* [ページング](paging.md)
-* [ソート](sorting.md)
-* [集計](summaries.md)
-* [列移動](column-moving.md)
-* [列固定](column-pinning.md)
-* [列サイズ変更](column-resizing.md)
-* [選択](selection.md)
+- [@@igComponent 概要](@@igMainTopic.md)
+- [フィルタリング](filtering.md)
+- [Excel スタイル フィルタリング](excel-style-filtering.md)
+- [仮想化とパフォーマンス](virtualization.md)
+- [ページング](paging.md)
+- [ソート](sorting.md)
+- [集計](summaries.md)
+- [列移動](column-moving.md)
+- [列固定](column-pinning.md)
+- [列サイズ変更](column-resizing.md)
+- [選択](selection.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
