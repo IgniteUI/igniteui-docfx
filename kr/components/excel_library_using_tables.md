@@ -13,7 +13,7 @@ The Infragistics Excel Engine's [`WorksheetTable`]({environment:dvApiBaseUrl}/pr
 
 <code-view style="height: 500px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-working-with-tables"  >
+           iframe-src="{environment:dvDemosBaseUrl}/excel/excel-library-working-with-tables/"  >
 </code-view>
 
 -->

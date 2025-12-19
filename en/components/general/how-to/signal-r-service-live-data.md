@@ -45,7 +45,7 @@ The purpose of this demo is to showcase a financial screen board with a Real-tim
 
 <code-view style="height:700px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs-dock-manager/grid-finjs-dock-manager" alt="Angular Live-data Update Example with a service">
+           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs-dock-manager/grid-finjs-dock-manager/" alt="Angular Live-data Update Example with a service">
 </code-view>
 
 ## SignalR Server Configuration

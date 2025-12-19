@@ -251,7 +251,7 @@ Additionally, you can specify each column pinning location separately, allowing 
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-pinning-both-sides" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-pinning-both-sides/" >
 </code-view>
 
 }
@@ -260,7 +260,7 @@ Additionally, you can specify each column pinning location separately, allowing 
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-both-sides-pinning" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-both-sides-pinning/" >
 </code-view>
 
 }
@@ -269,7 +269,7 @@ Additionally, you can specify each column pinning location separately, allowing 
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-both-sides-pinning" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-both-sides-pinning/" >
 </code-view>
 
 }

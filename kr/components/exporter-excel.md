@@ -18,7 +18,7 @@ Ignite UI for Angular의 Excel 내보내기 서비스는 원시 데이터(배열
 
 <code-view style="height: 100px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/services/export-excel" >
+           iframe-src="{environment:demosBaseUrl}/services/export-excel/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -115,7 +115,7 @@ public exportButtonHandler() {
 
 <code-view style="height: 300px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1/" >
 </code-view>
 
 

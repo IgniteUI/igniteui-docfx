@@ -27,7 +27,7 @@ Angular Grid Lite の機能:
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/overview" alt="Angular Grid Lite メイン アプリ サンプル">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/overview/" alt="Angular Grid Lite メイン アプリ サンプル">
 </code-view>
 
 Grid Lite コントロールは完全に無料で、MIT ライセンスの下で提供されており、Ignite UI をよりオープンで透明性が高く、アクセスしやすいものにするための取り組みの一環です。しかし、プロジェクトが拡大し、複雑さや機能が増し、エンタープライズ グレードのアプリケーションが必要になった場合には、Grid Lite からフル機能で高度な Data Grid へ移行するためのアップグレード戦略をご用意しています。  
