@@ -17,6 +17,24 @@ Ignite UI for Angular の各バージョンのすべての重要な変更は、�
 
 - [Ignite UI for Angular 変更ログ (GitHub)](https://github.com/IgniteUI/igniteui-angular/blob/master)
 
+## **20.2.1 (December 2025)**
+
+### バグ修正
+
+| バグ番号 | コントロール | 説明      |
+|------------|---------|-------------|
+|33808|IgxDataChart|TimeAxisInterval の IntervalType Ticks に設定されたスケールが表示されない。|
+|34255|IgxDataChart|0.00001 スケールの目盛りが重なって表示される。|
+|38510|IgxDataChart|Stacked シリーズの AssigningCategoryStyle イベント サポート。|
+
+### 機能拡張
+
+#### チャート
+
+- TimeXAxisLabelFormat に LabelFormatOverride イベントが追加され、TimeXAxis のすべての時間形式レベルでイベントを使用して書式設定をオーバーライドできるようになりました。
+
+- プロパティの有効な値を見つけやすくするために、より多くの項目を考慮するようにスキーマ生成を調整しました。
+
 ## **20.2.0 (November 2025)**
 
 ### igniteui-angular-charts (チャート)
