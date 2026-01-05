@@ -7,7 +7,7 @@ _language: ja
 
 # Ignite UI を使用した作業の開始
 
-[`Ignite UI for Angular`](https://github.com/IgniteUI/igniteui-angular) は、マテリアルベース UI ウィジェット、コンポーネント & Sketch UI キットでインフラジスティックス Angular のディレクティブをサポートします。デスクトップ ブラウザー向けアプリ、高パフォーマンスな HTML5 や JavaScript アプリ、Google の Angular フレームワークを対象にしたプログレッシブ ウェブアプリ (PWA) を作成できます。
+[`Ignite UI for Angular`](https://github.com/IgniteUI/igniteui-angular) は、マテリアルベース UI ウィジェット、コンポーネント & Figma UI キットでインフラジスティックス Angular のディレクティブをサポートします。デスクトップ ブラウザー向けアプリ、高パフォーマンスな HTML5 や JavaScript アプリ、Google の Angular フレームワークを対象にしたプログレッシブ ウェブアプリ (PWA) を作成できます。
 
 Ignite UI for Angular はデュアルライセンス モデルで提供され、使用するコンポーネント、モジュール、ディレクティブ、サービスに応じて商用ライセンスまたはオープンソース ライセンスが適用されます。詳細については、[Ignite UI のライセンス](./ignite-ui-licensing.md)と[オープン ソースとプレミアム](./open-source-vs-premium.md)のトピックを参照してください。
 
