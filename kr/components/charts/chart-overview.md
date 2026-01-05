@@ -330,6 +330,6 @@ If you are considering any other Angular Charts on the market, here are a few th
 <!-- Angular -->
 
 - Ignite UI for Angular is built on Angular for the Angular developer, with zero 3rd party dependencies. We are 100% optimized for Angular.
-- We offer the world’s first, and only, end-to-end comprehensive design to code platform for UX Designers, Visual Designers, and Developers that will generate pixel-perfect Angular controls from Sketch designs. With Indigo.Design, everything you craft in Sketch from our Indigo Design System matches to our Ignite UI for Angular controls.
+- We offer the world’s first, and only, end-to-end comprehensive design to code platform for UX Designers, Visual Designers, and Developers that will generate pixel-perfect Angular controls from Figma designs. With Indigo.Design, everything you craft in Figma from our Indigo Design System matches to our Ignite UI for Angular controls.
 
 <!-- end: Angular -->

@@ -267,7 +267,7 @@ Ignite Angular UI ツールセットには[データ分析機能](data-analysis.
 
 ### コード生成とデザインのためのツール
 
-Ignite UI for Angular は [Indigo.Design システム](https://jp.infragistics.com/products/indigo-design/help/video-tutorials.html "Indigo Design システム") の一部で、[Indigo.Design UI Kit](https://jp.infragistics.com/products/indigo-design/help/creating-an-artboard.html "はじめてのアートボード作成") を使用して Sketch で作成したデザインから[ネイティブな Angular コード](https://jp.infragistics.com/products/indigo-design/help/codegen/vscode-plugin.html "Visual Studio プラグイン")を生成できます。さまざまな編集およびフィルタリングモードをサポートするモバイル対応またはデータ密度の高いグリッドを生成できます。また、ソート、ページング、集計、グループ化などの一般的なグリッド機能の多くを使用することもできます。さらに、各列で移動、サイズ変更、非表示、ピン固定などのさまざまな操作を指定して、デザイン時に高度なデータ操作シナリオを実現し、数分で実行できる完璧なピクセルのユーザー インターフェイスを実現できます。
+Ignite UI for Angular は [Indigo.Design システム](https://jp.infragistics.com/products/indigo-design/help/video-tutorials.html "Indigo Design システム") の一部で、[Indigo.Design UI Kit](https://jp.infragistics.com/products/indigo-design/help/creating-an-artboard.html "はじめてのアートボード作成") を使用して Figma で作成したデザインから[ネイティブな Angular コード](https://jp.infragistics.com/products/indigo-design/help/codegen/vscode-plugin.html "Visual Studio プラグイン")を生成できます。さまざまな編集およびフィルタリングモードをサポートするモバイル対応またはデータ密度の高いグリッドを生成できます。また、ソート、ページング、集計、グループ化などの一般的なグリッド機能の多くを使用することもできます。さらに、各列で移動、サイズ変更、非表示、ピン固定などのさまざまな操作を指定して、デザイン時に高度なデータ操作シナリオを実現し、数分で実行できる完璧なピクセルのユーザー インターフェイスを実現できます。
 
 ### パフォーマンスのベンチマーク
 
