@@ -15,7 +15,7 @@ The Ignite UI for Angular theming engine makes it easy to be used together with 
 
 Angular Material is a UI component library for mobile and desktop Angular web applications. It includes several prebuilt themes and a great number of components that are based on the [`Material Design specification`](https://material.io/components).
 
-The Ignite UI for Angular is a complete set of Material-based UI Widgets, Components & Sketch UI kits and supporting directives for Angular that enables developers to build modern high-performance apps. Our theming engine is easy to use and allows theming granularity on different levels from a single component, multiple components, or the entire suite. Furthermore, it can be used to style components from other theming libraries with very little effort.
+The Ignite UI for Angular is a complete set of Material-based UI Widgets, Components & Figma UI kits and supporting directives for Angular that enables developers to build modern high-performance apps. Our theming engine is easy to use and allows theming granularity on different levels from a single component, multiple components, or the entire suite. Furthermore, it can be used to style components from other theming libraries with very little effort.
 
 The following article demonstrates how to use both Ignite UI and Angular Material components in one application and how to style them to look similar.
 
