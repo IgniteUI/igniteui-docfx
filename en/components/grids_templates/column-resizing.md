@@ -57,7 +57,7 @@ With deferred grid column resizing, the user will see a temporary resize indicat
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing" alt="Angular @@igComponent Column Resizing Example">
+           iframe-src="{environment:lobDemosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing/" alt="Angular @@igComponent Column Resizing Example">
 </code-view>
 
 <div class="divider--half"></div>

@@ -526,7 +526,7 @@ You can find the full list of properties in the [IgxTooltip Theme]({environment:
 At the end your tooltip should look like this:
 
 <div class="sample-container loading" style="height:100px">
-    <iframe id="tooltip-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/interactions/tooltip-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="tooltip-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/interactions/tooltip-tailwind-style/' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
 <div class="divider--half"></div>

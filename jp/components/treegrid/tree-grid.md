@@ -16,7 +16,7 @@ Ignite UI for Angular Tree Grid は、階層データまたはフラットな自
 
 <code-view style="height:850px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey" alt="Angular ツリー グリッドの例">
+           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey/" alt="Angular ツリー グリッドの例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -264,7 +264,7 @@ export class MyComponent implements OnInit {
 
 <code-view style="height:450px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-primaryforeignkey" >
+           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-primaryforeignkey/" >
 <div class="divider--half"></div>
 
 ## パーシステンスとインテグレーション

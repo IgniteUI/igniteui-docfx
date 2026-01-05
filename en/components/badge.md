@@ -162,6 +162,15 @@ Then, just specify the icon name and family as follows:
            iframe-src="{environment:demosBaseUrl}/data-display/badge-icon/" >
 </code-view>
 
+### Dot Badge
+
+The `igx-badge` component can also render as a minimal dot indicator for notifications by enabling its `dot` property. Dot badges do not support content, but they can be outlined and can use any of the available dot types (e.g., primary, success, info, etc.).
+
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-display/badge-dot-sample/" >
+</code-view>
+
 ### Badge in List
 
 Let's extend the previous sample and create a list with contacts, similar to those in chat clients. In addition to the contact name, we want to display an avatar and the current state of the contact (online, offline or away). To achieve this, we're using the [`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) and [`igx-avatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) components. For a container, [`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html) is used.

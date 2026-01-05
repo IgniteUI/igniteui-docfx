@@ -46,7 +46,7 @@ grid.data = [];
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/data-binding-dynamic" alt="Angular Grid Lite データ バインディングの例">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/data-binding-dynamic/" alt="Angular Grid Lite データ バインディングの例">
 </code-view>
 
 <!-- TODO ## API References

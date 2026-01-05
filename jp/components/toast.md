@@ -150,7 +150,7 @@ public showMessage() {
 サンプルが正しく構成された場合、Toast が自動ですばやく非表示になります。
 
 <div class="sample-container loading">
-    <iframe id="toast-sample-4-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-4" class="lazyload"></iframe>
+    <iframe id="toast-sample-4-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-4/" class="lazyload"></iframe>
 </div>
 
 ### 配置
@@ -283,7 +283,7 @@ $custom-toast-theme: toast-theme(
 最終的に、toast は次のようになります:
 
 <div class="sample-container loading" style="height:200px">
-    <iframe id="toast-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/notifications/toast-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="toast-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/notifications/toast-tailwind-style/' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
 <div class="divider--half"></div>

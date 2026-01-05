@@ -15,7 +15,7 @@ Tile Manager コンポーネントを使用すると、コンテンツを個々�
 
 <code-view style="height:752px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tile-manager-sample" alt="Angular Tile Manager の例">
+           iframe-src="{environment:demosBaseUrl}/layouts/tile-manager-sample/" alt="Angular Tile Manager の例">
 </code-view>
 <div class="divider--half"></div>
 

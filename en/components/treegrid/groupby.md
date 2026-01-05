@@ -51,7 +51,7 @@ The component's inputs are the following:
 
 <code-view style="height:850px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs" alt="Angular Tree Grid Group By Example">
+           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs/" alt="Angular Tree Grid Group By Example">
 </code-view>
 
 <div class="divider--half"></div>
