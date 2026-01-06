@@ -1,6 +1,6 @@
 ---
 title: Angular Grid Lite テーマ設定 | Ignite UI for Angular | MIT ライセンス
-_description: Ignite UI for Angular で Grid Lite のスタイル設定は、容易かつ迅速に行えます。デモと例をお試しください。オープンソース コンポーネントをお試しになり、次のアプリを構築してください。
+_description: Ignite UI for Angular で Grid Lite のスタイル設定は、容易かつ迅速に行えます。デモと例をお試しください。オープン ソース コンポーネントをお試しになり、次のアプリを構築してください。
 _keywords: スタイル設定, テーマ設定, {Platform}, {ComponentKeywords}, {ProductName}, インフラジスティックス
 _license: MIT
 mentionedTypes: [{ComponentApiMembers}]

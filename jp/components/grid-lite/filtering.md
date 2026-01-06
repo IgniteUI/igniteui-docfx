@@ -1,6 +1,6 @@
 ---
 title: Angular Grid Lite フィルタリング | Ignite UI for Angular | MIT ライセンス
-_description: Angular Grid Lite のフィルター操作、フィルターのカスタマイズ、およびリモート フィルタリング。オープンソースの Angular Grid Lite を使用してアプリを作成できます。今すぐお試しください。
+_description: Angular Grid Lite のフィルター操作、フィルターのカスタマイズ、およびリモート フィルタリング。オープン ソースの Angular Grid Lite を使用してアプリを作成できます。今すぐお試しください。
 _keywords: フィルタリング, {Platform}, {ComponentKeywords}, {ProductName}, インフラジスティックス
 _license: MIT
 mentionedTypes: [{ComponentApiMembers}]
