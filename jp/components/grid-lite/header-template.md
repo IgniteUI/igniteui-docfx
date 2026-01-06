@@ -1,6 +1,6 @@
 ---
 title: Angular Grid Lite ヘッダー テンプレート | Ignite UI for Angular | MIT ライセンス
-_description: カスタム Grid Lite 列ヘッダー レンダラーを構成およびカスタマイズします。オープンソースの Angular Grid Lite を使用してアプリケーションを構築できます。今すぐお試しください。
+_description: カスタム Grid Lite 列ヘッダー レンダラーを構成およびカスタマイズします。オープン ソースの Angular Grid Lite を使用してアプリケーションを構築できます。今すぐお試しください。
 _keywords: ヘッダー テンプレート, {Platform}, {ComponentKeywords}, {ProductName}, インフラジスティックス
 _license: MIT
 mentionedTypes: [{ComponentApiMembers}]
