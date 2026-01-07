@@ -13,7 +13,7 @@ The Ignite UI for Angular Color Editor is a lightweight color picker component. 
 
 ## Angular Color Editor Example
 
-<code-view style="height: 320px" alt="Angular Color Editor Example"
+<code-view style="height: 340px" alt="Angular Color Editor Example"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/inputs/color-editor/overview"
                                                  github-src="inputs/color-editor/overview">
