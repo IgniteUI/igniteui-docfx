@@ -161,17 +161,17 @@ public exactMatch: boolean = false;
 
 検索で見つかった現在の場所と総個数を示します。グリッドの `lastSearchInfo` プロパティを使用します。このプロパティは、**find** メソッド使用時に自動的に更新されます。
 
-- `@@igObjectRef.lastSearchInfo.matchInfoCache.length` 値は検索で見つかった個数です。
+- `@@igObjectRef.lastSearchInfo.matchCount` 値は検索で見つかった個数です。
 - `@@igObjectRef.lastSearchInfo.activeMatchIndex` 値は、現在の一致 (出現) のインデックス位置です。
 
 ```html
 <!--searchgrid.component.html-->
 
-<div class="resultsText" *ngIf="@@igObjectRef.lastSearchInfo">
-    <span *ngIf="@@igObjectRef.lastSearchInfo.matchInfoCache.length > 0">
-        {{ @@igObjectRef.lastSearchInfo.activeMatchIndex + 1 }} of {{ @@igObjectRef.lastSearchInfo.matchInfoCache.length }} results
+<div class="resultsText">
+    <span *ngIf="@@igObjectRef.lastSearchInfo.matchCount > 0">
+        {{ @@igObjectRef.lastSearchInfo.activeMatchIndex + 1 }} of {{ @@igObjectRef.lastSearchInfo.matchCount }} results
     </span>
-    <span *ngIf="@@igObjectRef.lastSearchInfo.matchInfoCache.length == 0">
+    <span *ngIf="@@igObjectRef.lastSearchInfo.matchCount == 0">
         No results
     </span>
 </div>
@@ -317,11 +317,11 @@ public clearSearch() {
 <!--searchgrid.component.html-->
 
 <igx-suffix *ngIf="searchText.length > 0">
-    <div class="resultsText" *ngIf="@@igObjectRef.lastSearchInfo">
-        <span *ngIf="@@igObjectRef.lastSearchInfo.matchInfoCache.length > 0">
-            {{ @@igObjectRef.lastSearchInfo.activeMatchIndex + 1 }} of {{ @@igObjectRef.lastSearchInfo.matchInfoCache.length }} results
+    <div class="resultsText">
+        <span *ngIf="@@igObjectRef.lastSearchInfo.matchCount > 0">
+            {{ @@igObjectRef.lastSearchInfo.activeMatchIndex + 1 }} of {{ @@igObjectRef.lastSearchInfo.matchCount }} results
         </span>
-        <span *ngIf="@@igObjectRef.lastSearchInfo.matchInfoCache.length == 0">
+        <span *ngIf="@@igObjectRef.lastSearchInfo.matchCount == 0">
             No results
         </span>
     </div>

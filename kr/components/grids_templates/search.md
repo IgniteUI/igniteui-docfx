@@ -145,17 +145,17 @@ public exactMatch: boolean = false;
 #### 결과 수 표시
 총 결과 수와 함께 현재 검색 위치를 표시합니다! 그리드의 `lastSearchInfo` 속성을 사용하여 이것을 실행할 수 있습니다. 이 속성은 **find** 메소드를 사용할 때 자동으로 업데이트됩니다.
 
-- `@@igObjectRef.lastSearchInfo.matchInfoCache.length` 값은 총 결과 수입니다.
+- `@@igObjectRef.lastSearchInfo.matchCount` 값은 총 결과 수입니다.
 - `@@igObjectRef.lastSearchInfo.activeMatchIndex` 값은 현재 검색(일치)의 인덱스 위치입니다.
 
 ```html
 <!--searchgrid.component.html-->
 
-<div class="resultsText" *ngIf="@@igObjectRef.lastSearchInfo">
-    <span *ngIf="@@igObjectRef.lastSearchInfo.matchInfoCache.length > 0">
-        {{ @@igObjectRef.lastSearchInfo.activeMatchIndex + 1 }} of {{ @@igObjectRef.lastSearchInfo.matchInfoCache.length }} results
+<div class="resultsText">
+    <span *ngIf="@@igObjectRef.lastSearchInfo.matchCount > 0">
+        {{ @@igObjectRef.lastSearchInfo.activeMatchIndex + 1 }} of {{ @@igObjectRef.lastSearchInfo.matchCount }} results
     </span>
-    <span *ngIf="@@igObjectRef.lastSearchInfo.matchInfoCache.length == 0">
+    <span *ngIf="@@igObjectRef.lastSearchInfo.matchCount == 0">
         No results
     </span>
 </div>
@@ -294,11 +294,11 @@ public clearSearch() {
 <!--searchgrid.component.html-->
 
 <igx-suffix *ngIf="searchText.length > 0">
-    <div class="resultsText" *ngIf="@@igObjectRef.lastSearchInfo">
-        <span *ngIf="@@igObjectRef.lastSearchInfo.matchInfoCache.length > 0">
-            {{ @@igObjectRef.lastSearchInfo.activeMatchIndex + 1 }} of {{ @@igObjectRef.lastSearchInfo.matchInfoCache.length }} results
+    <div class="resultsText">
+        <span *ngIf="@@igObjectRef.lastSearchInfo.matchCount > 0">
+            {{ @@igObjectRef.lastSearchInfo.activeMatchIndex + 1 }} of {{ @@igObjectRef.lastSearchInfo.matchCount }} results
         </span>
-        <span *ngIf="@@igObjectRef.lastSearchInfo.matchInfoCache.length == 0">
+        <span *ngIf="@@igObjectRef.lastSearchInfo.matchCount == 0">
             No results
         </span>
     </div>
