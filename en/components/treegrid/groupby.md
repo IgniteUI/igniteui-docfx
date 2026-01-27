@@ -167,6 +167,12 @@ private reloadData() {
 }
 ```
 
+## Known Limitations
+
+|Limitation|Description|
+|--- |--- |
+|Grouping is not updated with batch editing | When using Tree Grid Group By with batch editing enabled (`batchEditing=true`), the grouping is not automatically updated when editing column values that are used for grouping. The grouping will only be updated after committing the transaction. |
+
 ### API References
 
 <div class="divider--half"></div>
