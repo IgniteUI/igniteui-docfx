@@ -16,6 +16,10 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 
 - [Ignite UI for Angular CHANGELOG.md at Github](https://github.com/IgniteUI/igniteui-angular/blob/master)
 
+## **21.0.0 (January 2026)**
+
+- Angular 21 support.
+
 ## **20.2.1 (December 2025)**
 
 ### Bug Fixes
