@@ -15,24 +15,18 @@ When applying data transformations, such as sorting and filtering, the grid does
 
 ## Change the Data Source at Runtime
 
-The component supports changing its data source at runtime. If the new source has a different "shape" than the previous one make sure to update your column configuration as well.
+The component supports changing its data source at runtime. If the new source has a different "shape" than the previous one, you need to update the declarative column configuration accordingly.
 
 ```typescript
 grid.data = [...{
   /** records follow */
 }];
-
-// Update the column configuration to represent the new data.
-grid.columns = [...];
 ```
 
-If the grid has **`autoGenerate`** enabled, it will "_infer_" the new column configuration only if the old one is reset.
+If the grid has **`autoGenerate`** enabled, it will "_infer_" the column configuration from the new data source automatically.
 
 ```typescript
 grid.autoGenerate = true;
-
-/** Reset the previous column collection */
-grid.columns = [];
 
 /** After the new binding the grid will infer the column collection from the bound data. */
 grid.data = [];
