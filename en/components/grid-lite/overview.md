@@ -21,8 +21,44 @@ Angular Grid Lite features:
 - Sorting
 - Row Virtualization
 - Accessibility
-- Themes And Styling
+- Themes and Styling
 - Column Data Types
+
+## Installation and Setup
+
+### Installation
+To install GridLite, go to the root folder of your project (where `package.json` is located) and run the following command using npm:
+
+```cmd
+npm install igniteui-grid-lite --save
+```
+
+Or using yarn:
+
+```cmd
+yarn add igniteui-grid-lite
+```
+
+### Using Grid Lite in your Angular code
+
+In the file where you want to use Grid Lite, import and register it before your component class is declared:
+
+```typescript
+import { IgcGridLite } from 'igniteui-grid-lite';
+
+IgcGridLite.register();
+```
+
+Add the `<igc-grid-lite>` element to your markup:
+
+```html
+  <igc-grid-lite 
+    [columns]="columns" 
+    [data]="data">
+  </igc-grid-lite>
+```
+
+## Grid Lite in Action
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
