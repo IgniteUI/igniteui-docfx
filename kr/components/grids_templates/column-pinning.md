@@ -29,7 +29,7 @@ A column or multiple columns can be pinned to the left-hand side of the Angular 
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-toolbar-pinning" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-toolbar-pinning/" >
 </code-view>
 
 }
@@ -37,7 +37,7 @@ A column or multiple columns can be pinned to the left-hand side of the Angular 
 
 <code-view style="height:630px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-pinning" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-pinning/" >
 </code-view>
 
 }
@@ -45,7 +45,7 @@ A column or multiple columns can be pinned to the left-hand side of the Angular 
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-pinning" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-pinning/" >
 </code-view>
 
 }
@@ -230,7 +230,7 @@ public pinningConfig: IPinningConfig = { columns: ColumnPinningPosition.End };
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-right-pinning" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-right-pinning/" >
 </code-view>
 
 }
@@ -239,7 +239,7 @@ public pinningConfig: IPinningConfig = { columns: ColumnPinningPosition.End };
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sample-right-pinning" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sample-right-pinning/" >
 </code-view>
 
 }
@@ -248,7 +248,7 @@ public pinningConfig: IPinningConfig = { columns: ColumnPinningPosition.End };
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-sample-right-pinning" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-sample-right-pinning/" >
 </code-view>
 
 }
@@ -352,7 +352,7 @@ public toggleColumn(col: IgxColumnComponent) {
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-pinning" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-pinning/" >
 </code-view>
 
 }
@@ -360,7 +360,7 @@ public toggleColumn(col: IgxColumnComponent) {
 
 <code-view style="height:630px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-pinning" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-pinning/" >
 </code-view>
 
 }
@@ -368,7 +368,7 @@ public toggleColumn(col: IgxColumnComponent) {
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-pinning" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-pinning/" >
 </code-view>
 
 }
@@ -495,7 +495,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 <code-view style="height:506px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-pinning-styling" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-pinning-styling/" >
 </code-view>
 
 }

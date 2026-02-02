@@ -1,6 +1,6 @@
 ---
 title: Angular Grid Lite セル テンプレート | Ignite UI for Angular | MIT ライセンス
-_description: カスタム Grid Lite セル レンダラーを構成およびカスタマイズします。オープンソースの Angular Grid Lite を使用してアプリを作成できます。今すぐお試しください。
+_description: カスタム Grid Lite セル レンダラーを構成およびカスタマイズします。オープン ソースの Angular Grid Lite を使用してアプリを作成できます。今すぐお試しください。
 _keywords: セル テンプレート, インフラジスティックス
 _license: MIT
 mentionedTypes: [{ComponentApiMembers}]
@@ -106,7 +106,7 @@ export interface GridLiteCellContext<
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/column-config-simple" alt="Angular Grid Lite 列の基本構成">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/column-config-simple/" alt="Angular Grid Lite 列の基本構成">
 </code-view>
 
 <!-- TODO ## API References

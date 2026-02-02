@@ -268,7 +268,7 @@ We’ve created this Angular Query Builder example to show you the templating an
 
 <code-view style="height:700px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-template-sample" alt="Angular Query Builder Templates Example">
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-template-sample/" alt="Angular Query Builder Templates Example">
 </code-view>
 
 ## Styling

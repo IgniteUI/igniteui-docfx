@@ -149,7 +149,7 @@ Use [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#d
 If the sample is configured properly, the toast auto hides faster.
 
 <div class="sample-container loading">
-    <iframe id="toast-sample-4-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-4" class="lazyload"></iframe>
+    <iframe id="toast-sample-4-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-4/" class="lazyload"></iframe>
 </div>
 
 ### Positioning
@@ -282,7 +282,7 @@ You can find the full list of properties in the [IgxToast Theme]({environment:sa
 At the end your toast should look like this:
 
 <div class="sample-container loading" style="height:200px">
-    <iframe id="toast-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/notifications/toast-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="toast-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/notifications/toast-tailwind-style/' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
 <div class="divider--half"></div>

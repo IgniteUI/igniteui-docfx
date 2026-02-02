@@ -1,6 +1,6 @@
 ---
 title: Angular Grid Lite 列の構成 | Ignite UI for Angular | MIT ライセンス
-_description: Grid Lite 列の構成と列のプロパティ。オープンソースの Angular Grid Lite をお試しください。軽量でありながら、必要な機能がすべて搭載されています。
+_description: Grid Lite 列の構成と列のプロパティ。オープン ソースの Angular Grid Lite をお試しください。軽量でありながら、必要な機能がすべて搭載されています。
 _keywords: 列の構成, インフラジスティックス
 _license: MIT
 mentionedTypes: [{ComponentApiMembers}]
@@ -104,7 +104,7 @@ Grid Lite コンポーネントの各列は、列定義で **`resizable`** プ�
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/column-config-dynamic" alt="Angular Grid Lite 列のダイナミック構成">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/column-config-dynamic/" alt="Angular Grid Lite 列のダイナミック構成">
 </code-view>
 
 <!-- TODO ## API References
