@@ -1,29 +1,29 @@
-<!-- markdownlint-disable MD003 MD024 -->
+<!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if (igxName === 'IgxGrid') {
 ---
-
 title: Angular Grid Filter - Ignite UI for Angular
 _description: Start using angular filter to return specific data with Ignite UI for Angular. Check the advanced filtering options, including data-type Excel-style filtering.
 _keywords: angular filter, ignite ui for angular, infragistics
+_license: commercial
 ---
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-
 title: Angular Tree Grid Filter - Ignite UI for Angular
 _description: Start using angular filter to return specific data with Ignite UI for Angular. Check the advanced filtering options, including data-type Excel-style filtering.
 _keywords: angular filter, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/filtering
 ---
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-
 title: Angular Hierarchical Grid Filter - Ignite UI for Angular
 _description: Start using angular filter to return specific data with Ignite UI for Angular. Check the advanced filtering options, including data-type Excel-style filtering.
 _keywords: angular filter, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/filtering
 ---
 
@@ -354,7 +354,7 @@ public ngAfterViewInit() {
 The [`filteringLogic`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringlogic) property of the @@igComponent controls how filtering multiple columns will resolve in the @@igComponent. You can change it at any time through the @@igComponent API, or through the @@igComponent input property.
 
 ```typescript
-import { FilteringLogic } from 'igniteui-angular';
+import { FilteringLogic } from 'igniteui-angular/grids/core';
 // import { FilteringLogic } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
@@ -570,7 +570,7 @@ By default, after a filtering is applied, the Tree Grid component displays the r
 ```
 
 ```typescript
-import { TreeGridMatchingRecordsOnlyFilteringStrategy } from "igniteui-angular";
+import { TreeGridMatchingRecordsOnlyFilteringStrategy } from "igniteui-angular/grids/core";
 ...
 public matchingRecordsOnlyStrategy = new TreeGridMatchingRecordsOnlyFilteringStrategy();
 ```

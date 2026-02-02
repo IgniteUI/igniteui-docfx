@@ -2,6 +2,7 @@
 title: Angular Spreadsheet Component – Ignite UI for Angular
 _description: Get flexible layouts, easy customization options & convenient Excel-like interface with Ignite UI for Angular Spreadsheet. Manage tabular data the way you want!
 _keywords: Excel Spreadsheet, Ignite UI for Angular, Infragistics
+_license: commercial
 mentionedTypes: ["Spreadsheet"]
 ---
 

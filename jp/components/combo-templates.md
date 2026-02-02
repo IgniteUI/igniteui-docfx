@@ -1,11 +1,13 @@
 ---
-title: ComboBox テンプレート
+title: ComboBox テンプレート | MITライセンス
 _description: igx-combo コンポーネントの異なる領域 (項目、ヘッダー、フッター、空リスト、ボタンの追加) にカスタム テンプレートを定義できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Combo コンポーネント,  Angular テンプレート, Angular Combo テンプレート
+_license: MIT
 _language: ja
 ---
 
 # ComboBox (コンボボックス) テンプレート
+
 <p class="highlight">
 Ignite UI for Angular ComboBox コンポーネントでは、ヘッダー、フッター、項目、空のリスト、追加ボタンなどのさまざまな領域にカスタム テンプレートを定義できます。
 </p>
@@ -20,10 +22,11 @@ Ignite UI for Angular ComboBox コンポーネントでは、ヘッダー、フ�
 
 
 ## 使用方法
+
 ComboBox コンポーネントを初期化にするには、まず `IgxComboModule` を **app.module.ts**  ファイルにインポートします。
 
 ```typescript
-import { IgxComboModule } from 'igniteui-angular';
+import { IgxComboModule } from 'igniteui-angular/combo';
 // import { IgxComboModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -37,9 +40,11 @@ export class AppModule {}
 ```
 
 ## テンプレート タイプ
+
 コンボボックスのテンプレートを定義する場合、定義済みの参照名を使用して参照してください。
 
 ### 項目テンプレート
+
 セレクター `[igxComboItem]` の使用:
 
 ```html
@@ -54,6 +59,7 @@ export class AppModule {}
 ```
 
 ### ヘッダー項目テンプレート
+
 `[igxComboHeaderItem]` セレクターを使用します。
 
 ```html
@@ -65,6 +71,7 @@ export class AppModule {}
 ```
 
 ### ヘッダー テンプレート
+
 セレクター `[igxComboHeader]` の使用:
 
 ```html
@@ -76,6 +83,7 @@ export class AppModule {}
 ```
 
 ### フッター テンプレート
+
 セレクター `[igxComboFooter]` の使用:
 
 ```html
@@ -87,6 +95,7 @@ export class AppModule {}
 ```
 
 ### 空のテンプレート
+
 セレクター `[igxComboEmpty]` の使用:
 
 ```html
@@ -98,6 +107,7 @@ export class AppModule {}
 ```
 
 ### テンプレートの追加
+
 セレクター `[igxComboAddItem]` の使用:
 
 ```html
@@ -111,6 +121,7 @@ export class AppModule {}
 ```
 
 ### トグル アイコン テンプレート
+
 セレクター `[igxComboToggleIcon]` の使用:
 
 ```html
@@ -122,6 +133,7 @@ export class AppModule {}
 ```
 
 ### クリア アイコン テンプレート
+
 セレクター `[igxComboClearIcon]` の使用:
 
 ```html
@@ -133,6 +145,7 @@ export class AppModule {}
 ```
 
 ## コンボボックス入力のテンプレート化
+
 テンプレートで使用した場合、`igxComboClearIcon` および `igxComboToggleIcon` セレクターがコンボボックス入力での各ボタンの表示方法を変更します。`igx-combo` 内のコンテンツを渡すと、`igx-input-group` をテンプレート化する方法 (`igx-prefix`、`igx-suffix`、`igxLabel` を使用) と同様に、コンボボックス入力のテンプレート化も可能になります。以下のコード スニペットは、適切なラベルやプレフィックスをコンボボックスに追加する方法を示します。
 
 ```html
@@ -143,22 +156,24 @@ export class AppModule {}
 ```
 
 ## API まとめ
+
 <div class="divider--half"></div>
 
-* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
-* [IgxComboComponent スタイル]({environment:sassApiUrl}/themes#function-combo-theme)
+- [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
+- [IgxComboComponent スタイル]({environment:sassApiUrl}/themes#function-combo-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [コンボボックス コンポーネント](combo.md)
-* [コンボボックス機能](combo-features.md)
-* [コンボボックス リモート バインディング](combo-remote.md)
-* [テンプレート駆動フォームの統合](input-group.md)
-* [リアクティブ フォームの統合](angular-reactive-form-validation.md)
-* [単一選択コンボボックス](simple-combo.md)
+- [コンボボックス コンポーネント](combo.md)
+- [コンボボックス機能](combo-features.md)
+- [コンボボックス リモート バインディング](combo-remote.md)
+- [テンプレート駆動フォームの統合](input-group.md)
+- [リアクティブ フォームの統合](angular-reactive-form-validation.md)
+- [単一選択コンボボックス](simple-combo.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

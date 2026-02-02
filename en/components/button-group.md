@@ -1,7 +1,8 @@
 ---
-title: Angular Button Group Component – Ignite UI for Angular | Infragistics
+title: Angular Button Group Component – Ignite UI for Angular | Infragistics | MIT license
 _description: Provides button group functionality to developers and also allows horizontal/vertical alignment, single/multiple selection with toggling.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Button Group components, Angular Button Group controls, Angular Buttons components, Angular Buttons controls
+_license: MIT
 ---
 
 # Angular Button Group Component Overview
@@ -33,7 +34,7 @@ The next step is to import the `IgxButtonGroupModule` in your **app.module.ts** 
 // app.module.ts
 
 ...
-import { IgxButtonGroupModule } from 'igniteui-angular';
+import { IgxButtonGroupModule } from 'igniteui-angular/button-group';
 // import { IgxButtonGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -50,7 +51,8 @@ Alternatively, as of `16.0.0` you can import the `IgxButtonGroupComponent` as a 
 // home.component.ts
 
 ...
-import { IGX_BUTTON_GROUP_DIRECTIVES, IgxIconComponent } from 'igniteui-angular';
+import { IGX_BUTTON_GROUP_DIRECTIVES } from 'igniteui-angular/button-group';
+import { IgxIconComponent } from 'igniteui-angular/icon';
 // import { IGX_BUTTON_GROUP_DIRECTIVES, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -113,7 +115,7 @@ Use the [`alignment`]({environment:angularApiUrl}/classes/igxbuttongroupcomponen
 
 ```typescript
 //sample.component.ts
-import { ButtonGroupAlignment } from 'igniteui-angular';
+import { ButtonGroupAlignment } from 'igniteui-angular/button-group';
 // import { ButtonGroupAlignment } from '@infragistics/igniteui-angular'; for licensed package
 
 ...

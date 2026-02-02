@@ -1,7 +1,8 @@
 ---
-title: Angular Time Picker Component | Ignite UI for Angular
+title: Angular Time Picker Component | Ignite UI for Angular | MIT license
 _description: The Ignite UI for Angular Time Picker component allows the user to select time from a dialog with spinners which is then mirrored in the input field. Try it now
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Native Angular Components, Angular Time Picker component, Angular Time Picker control, Time Picker, Angular Time Picker
+_license: MIT
 ---
 
 # Angular Time Picker Overview
@@ -44,7 +45,7 @@ The next step is to import the `IgxTimePickerModule` in your **app.module.ts** f
 ...
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxTimePickerModule } from 'igniteui-angular';
+import { IgxTimePickerModule } from 'igniteui-angular/time-picker';
 // import { IgxTimePickerModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -61,7 +62,7 @@ Alternatively, as of `16.0.0` you can import the `IgxTimePickerComponent` as a s
 // home.component.ts
 
 import { FormsModule } from '@angular/forms';
-import { IGX_TIME_PICKER_DIRECTIVES } from 'igniteui-angular';
+import { IGX_TIME_PICKER_DIRECTIVES } from 'igniteui-angular/time-picker';
 // import { IGX_TABS_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -237,7 +238,7 @@ The default time picker mode is editable dropdown mode. To change the time picke
 ```typescript
 // timePickerDropdown.component.ts
 
-import { PickerInteractionMode } from 'igniteui-angular';
+import { PickerInteractionMode } from 'igniteui-angular/core';
 // import { PickerInteractionMode } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public mode = PickerInteractionMode.Dialog;
@@ -310,7 +311,8 @@ You can specify [`minValue`]({environment:angularApiUrl}/classes/igxtimepickerco
 
 ...
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxTimePickerModule, IgxToastModule } from 'igniteui-angular';
+import { IgxTimePickerModule } from 'igniteui-angular/time-picker';
+import { IgxToastModule } from 'igniteui-angular/toast';
 // import { IgxTimePickerModule, IgxToastModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({

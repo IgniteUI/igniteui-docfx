@@ -1,7 +1,8 @@
 ---
-title: Angular Tooltip Component | Ignite UI for Angular
+title: Angular Tooltip Component | Ignite UI for Angular | MIT license
 _description: The Ignite UI for Angular Tooltip and Tooltip Target directives feature the ability to create a tooltip and attach it to an element.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Tooltip directives, Angular Tooltip controls, Angular Tooltip, tooltip, tooltip target
+_license: MIT
 ---
 
 # Angular Tooltip Directive Overview
@@ -34,7 +35,7 @@ The next step is to import the `IgxTooltipModule` in your **app.module.ts** file
 // app.module.ts
 
 ...
-import { IgxTooltipModule } from 'igniteui-angular';
+import { IgxTooltipModule } from 'igniteui-angular/tooltip';
 // import { IgxTooltipModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -49,7 +50,8 @@ Alternatively, as of `16.0.0` you can import the `IgxTooltipDirective` as a stan
 ```typescript
 // home.component.ts
 
-import { IGX_TOOLTIP_DIRECTIVES, IgxAvatarComponent } from 'igniteui-angular';
+import { IGX_TOOLTIP_DIRECTIVES } from 'igniteui-angular/tooltip';
+import { IgxAvatarComponent } from 'igniteui-angular/avatar';
 // import { IGX_TOOLTIP_DIRECTIVES, IgxAvatarComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -84,7 +86,8 @@ Let's say we want to create a simple text tooltip like the one above. In our cas
 ```typescript
 // app.module.ts
 
-import { IgxTooltipModule, IgxAvatarModule } from 'igniteui-angular';
+import { IgxTooltipModule } from 'igniteui-angular/tooltip';
+import { IgxAvatarModule } from 'igniteui-angular/avatar';
 // import { IgxTooltipModule, IgxAvatarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -157,7 +160,9 @@ Let's expand on the use of the [`igxTooltip`]({environment:angularApiUrl}/classe
 ```typescript
 // app.module.ts
 
-import { IgxTooltipModule, IgxAvatarModule, IgxIconModule } from 'igniteui-angular';
+import { IgxTooltipModule } from 'igniteui-angular/tooltip';
+import { IgxAvatarModule } from 'igniteui-angular/avatar';
+import { IgxIconModule } from 'igniteui-angular/icon';
 // import { IgxTooltipModule, IgxAvatarModule, IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -533,7 +538,7 @@ You can find the full list of properties in the [IgxTooltip Theme]({environment:
 At the end your tooltip should look like this:
 
 <div class="sample-container loading" style="height:100px">
-    <iframe id="tooltip-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/interactions/tooltip-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="tooltip-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/interactions/tooltip-tailwind-style/' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
 <div class="divider--half"></div>

@@ -1,7 +1,8 @@
 ---
-title: Angular Chip Component – Ignite UI for Angular | Infragistics
+title: Angular Chip Component – Ignite UI for Angular | Infragistics | MIT license
 _description: The Ignite UI for Angular Chip component provide compact elements that represent an input, attribute, or action.
 _keywords: Angular Chip, Angular Chip Component, Angular Chip Area, Angular Chip Area Component, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular UI Components
+_license: MIT
 ---
 
 # Angular Chip Component Overview
@@ -32,7 +33,7 @@ The next step is to import the **IgxChipsModule** in the **app.module.ts** file:
 ```typescript
 // app.module.ts
 
-import { IgxChipsModule } from 'igniteui-angular';
+import { IgxChipsModule } from 'igniteui-angular/chips';
 // import { IgxChipsModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -48,7 +49,7 @@ Alternatively, as of `16.0.0` you can import the `IgxChipComponent` as a standal
 ```typescript
 // home.component.ts
 
-import { IGX_CHIPS_DIRECTIVES } from 'igniteui-angular';
+import { IGX_CHIPS_DIRECTIVES } from 'igniteui-angular/chips';
 import { NgFor } from '@angular/common';
 // import { IGX_CHIPS_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
@@ -150,7 +151,7 @@ Dragging can be enabled by setting the [`draggable`]({environment:angularApiUrl}
 Then, we need to add the `chipList` and the function, that handles the [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) event:
 
 ```ts
-import { IBaseChipEventArgs } from 'igniteui-angular';
+import { IBaseChipEventArgs } from 'igniteui-angular/chips';
 // import { IBaseChipEventArgs } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public chipList = [
@@ -278,7 +279,7 @@ To create the demo sample below, we will use the features above:
 Then, we need to add the `chipList` and the function, that handles the [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) event:
 
 ```ts
-import { IBaseChipEventArgs } from 'igniteui-angular';
+import { IBaseChipEventArgs } from 'igniteui-angular/chips';
 // import { IBaseChipEventArgs } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public chipList = [
@@ -427,7 +428,7 @@ Resize the avatar to fit the chip:
 Add the `chipList` and the functions that handle the events:
 
 ```ts
-import { IBaseChipEventArgs, IChipsAreaReorderEventArgs } from 'igniteui-angular';
+import { IBaseChipEventArgs, IChipsAreaReorderEventArgs } from 'igniteui-angular/chips';
 // import { IBaseChipEventArgs, IChipsAreaReorderEventArgs } from '@infragistics/igniteui-angular'; for licensed package
 
 ...
@@ -612,21 +613,21 @@ To get started with styling the chip, we need to import the `index` file, where 
 Following the simplest approach, we create a new theme that extends the [`chip-theme`]({environment:sassApiUrl}/themes#function-chip-theme) and accepts some parameters that style the chip's items. By specifying the `$background` or the `$selected-background`, the theme automatically calculates appropriate state colors and contrast foregrounds. You can still override any other parameter with custom values as needed.
 
 ```scss
-$custom-theme: chip-theme(
-  $background: #57a5cd,
-  $selected-background: #ecaa53,
-  $remove-icon-color: #d81414,
-  $border-radius: 5px,
+$custom-chip-theme: chip-theme(
+    $background: #57a5cd,
+    $selected-background: #ecaa53,
+    $remove-icon-color: #d81414,
+    $border-radius: 5px,
 );
 ```
 
-The last step is to **include** the component theme in our application.
+Finally, **include** the custom theme in your application:
 
 ```scss
-@include css-vars($custom-theme);
+@include css-vars($custom-chip-theme);
 ```
 
-### Demo
+In the sample below, you can see how using the chip component with customized CSS variables allows you to create a design that visually resembles the chip used in the [`Ant`](https://ant.design/components/tag?theme=light#tag-demo-icon) design system.
 
 <code-view style="height:100px"
            no-theming

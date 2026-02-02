@@ -1,7 +1,8 @@
 ---
-title: Angular Virtual For Directive 
+title: Angular Virtual For Directive - MIT license  
 _description: Ignite UI for Angular now exposes a virtual igxFor directive similar to ngFor, which virtualizes DOM object rendering by visualizing only the visible chunks of the data in the DOM.
 _keywords: Angular Virtual ForOf Directive, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Virtualization, Performance, Virtual directive, Angular Virtual For
+_license: MIT
 ---
 
 # Angular Virtual ForOf Directive Overview
@@ -33,7 +34,7 @@ The next step is to import the `IgxForOfModule` in your **app.module.ts** file.
 ```typescript
 // app.module.ts
 
-import { IgxForOfModule } from 'igniteui-angular';
+import { IgxForOfModule } from 'igniteui-angular/directives';
 // import { IgxForOfModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -51,7 +52,7 @@ Alternatively, as of `16.0.0` you can import the `IgxForOfDirective` as a standa
 ```typescript
 // home.component.ts
 
-import { IgxForOfDirective } from 'igniteui-angular';
+import { IgxForOfDirective } from 'igniteui-angular/directives';
 // import { IgxForOfDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

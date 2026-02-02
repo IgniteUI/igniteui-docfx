@@ -2,6 +2,7 @@
 title: Angular Grid のセル結合 - Ignite UI for Angular
 _description: Ignite UI for Angular Data Grid の複数行レイアウト機能を使用して、列をより強力な方法で配置およびサイズ設定します。デモと例をお試しください。
 _keywords: angular cell merging, cell merging, ignite ui for angular, セルの結合, セルの結合
+_license: commercial
 _language: ja
 ---
 
@@ -12,45 +13,48 @@ Ignite UI for Angular の @@igComponent には、同じ値を持つ隣接セル�
 ## Angular セル結合の例
 
 @@if(igxName === 'IgxGrid'){
-<code-view style="height:755px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-cellMerge" alt="Angular セル結合の例">
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-cellMerge/" alt="Angular セル結合の例">
 </code-view>
 }
 @@if(igxName === 'IgxHierarchicalGrid'){
-<code-view style="height:755px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-cell-merge" alt="Angular セル結合の例">
+<code-view style="height:475px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-cell-merge/" alt="Angular セル結合の例">
 </code-view>
 }
 @@if(igxName === 'IgxTreeGrid'){
-<code-view style="height:755px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-cell-merge" alt="Angular セル結合の例">
+<code-view style="height:755px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-cell-merge/" alt="Angular セル結合の例">
 </code-view>
 }
 
 ## セル結合の有効化と使用
 
 グリッドでのセル結合は、以下の 2 つのレベルで制御されます:
- - グリッド レベルの結合モード - 結合がいつ適用されるかを決定
- - 列レベルの結合トグル - どの列でセルを結合できるかを決定
+- グリッド レベルの結合モード - 結合がいつ適用されるかを決定
+- 列レベルの結合トグル - どの列でセルを結合できるかを決定
 
 ### グリッド結合モード
+
 グリッドは、`GridCellMergeMode` 列挙型の値を受け入れる `cellMergeMode` プロパティを公開します。
- - `always` - ソート状態に関係なく、結合条件を満たすすべての隣接セルを結合。
- - `onSort` - 列がソートされているときのみ隣接セルを結合 **(デフォルト値)**。
+- `always` - ソート状態に関係なく、結合条件を満たすすべての隣接セルを結合。
+- `onSort` - 列がソートされているときのみ隣接セルを結合 **(デフォルト値)**。
 
 ```html
 <@@igSelector [data]="data" [cellMergeMode]="cellMergeMode">
     ...
 </@@igSelector>
 ```
+
 ```ts
 protected cellMergeMode: GridCellMergeMode = 'always';
 ```
 
 ### 列結合のトグル
+
 列レベルでは、`merge` プロパティで結合の有効または無効を切り替えます。
 
 ```html
@@ -59,8 +63,8 @@ protected cellMergeMode: GridCellMergeMode = 'always';
 ```
 
 上記の例では:
- - **OrderID** 列は、隣接する重複値を結合します。
- - **ShipperName** 列は、結合を行わず通常通りに描画されます。
+- **OrderID** 列は、隣接する重複値を結合します。
+- **ShipperName** 列は、結合を行わず通常通りに描画されます。
 
 ### 組み合わせた例
 
@@ -71,15 +75,19 @@ protected cellMergeMode: GridCellMergeMode = 'always';
     <igx-column field="Salesperson" header="Salesperson"></igx-column>
 </@@igSelector>
 ```
+
 ```ts
 protected cellMergeMode: GridCellMergeMode = 'onSort';
 ```
+
 この例では、グリッドは列がソートされている場合のみ結合を行い、Category 列と Product 列の両方で結合が有効になっています。
 
 ## カスタム結合条件
+
 `always` と `onSort` の組み込みモードに加えて、`mergeStrategy` プロパティを使用して独自の結合条件を定義することができます。このストラテジでは、セルの比較方法と結合範囲の計算方法の両方を制御します。
 
 ### 結合ストラテジ インターフェイス
+
 カスタム結合ストラテジは `IGridMergeStrategy` インターフェイスを実装する必要があります:
 
 ```ts
@@ -96,6 +104,7 @@ export interface IGridMergeStrategy {
     comparer: (prevRecord: any, record: any, field: string) => boolean;    
 }
 ```
+
 - `merge` - 結合されたセルをどのように生成するかを定義。
 - `comparer` - 隣接するレコードを結合すべきかを判定する条件を定義。
 
@@ -116,6 +125,7 @@ export class MyCustomStrategy extends DefaultMergeStrategy {
     }
 }
 ```
+
 }
 @@if(igxName === 'IgxTreeGrid'){
 `IgxTreeGrid` には、`IGridMergeStrategy` を実装する 2 つの組み込みストラテジがあります: `DefaultTreeGridMergeStrategy` と `ByLevelTreeGridMergeStrategy`。`DefaultTreeGridMergeStrategy` は、階層レベルに関係なく同じ値を持つすべてのセルを結合します。`ByLevelTreeGridMergeStrategy` は、同じ階層レベルにあり、かつ同じ値を持つセルのみを結合します。同一階層レベルが結合の必須条件になります。
@@ -136,28 +146,51 @@ export class MyCustomStrategy extends DefaultTreeGridMergeStrategy {
     }
 }
 ```
+
 }
 
 ### カスタム ストラテジの適用
+
 定義したカスタム ストラテジは、`mergeStrategy` プロパティを通じてグリッドに割り当てます。
+
 ```html
 <@@igSelector [data]="data" [mergeStrategy]="customStrategy">
   <igx-column field="ActionID" [merge]="true"></igx-column>
   <igx-column field="ProjectName" [merge]="true"></igx-column>
 </@@igSelector>
 ```
+
 ```ts
 protected customStrategy = new MyCustomStrategy();
 ```
+
 @@if(igxName === 'IgxGrid'){
 ### デモ
-<code-view style="height:755px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-cellMerge-custom" alt="カスタム条件付き Angular セル結合の例">
+
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-cellMerge-custom/" alt="カスタム条件付き Angular セル結合の例">
 </code-view>
 }
 
-## 機能の統合 
+@@if(igxName === 'IgxHierarchicalGrid'){
+### デモ
+<code-view style="height:425px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-cell-merge-custom" alt="カスタム条件付き Angular セル結合の例">
+</code-view>
+}
+
+@@if(igxName === 'IgxTreeGrid'){
+### デモ
+<code-view style="height:755px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-cell-merge-custom" alt="カスタム条件付き Angular セル結合の例">
+</code-view>
+}
+
+## 機能の統合
+
 セル結合の特性上、他の機能との連携動作について以下の点に注意が必要です:
 @@if(igxName === 'IgxGrid'){
 - **展開と縮小**: マスター詳細、グループ化など、データ以外の行を生成する機能がある場合、その位置でセル結合が中断され、グループが分割されます。
@@ -175,22 +208,25 @@ protected customStrategy = new MyCustomStrategy();
 
 @@if(igxName === 'IgxGrid'){
 ## 制限
+
 |既知の制限| 説明|
 | --- | --- |
 | セルの結合は、複数行レイアウトとの組み合わせではサポートされません。 | 両方とも複雑なレイアウトを使用するため、同時に使用することはできません。このような無効な構成が検出された場合は警告が表示されます。 |
 }
 
 ## API リファレンス
-* [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+
+- [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [@@igComponent 概要](@@igMainTopic.md)
+- [@@igComponent 概要](@@igMainTopic.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

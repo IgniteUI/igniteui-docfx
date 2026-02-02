@@ -1,7 +1,8 @@
 ---
-title: Angular Drop Down Component – Ignite UI for Angular | Infragistics
+title: Angular Drop Down Component – Ignite UI for Angular | Infragistics | MIT license
 _description: Use Ignite UI for Angular Virtualized Drop Down to display a very large list of items which supports a single item selection.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Drop Down components, Angular Drop Down controls, Angular Control Large Item List, Angular Control Singe Selection
+_license: MIT
 ---
 
 # Virtual Drop Down
@@ -26,7 +27,7 @@ First, we need to import the `IgxForOfModule` in the module of the component tha
 
 ```typescript
 // app.module.ts
-import { IgxForOfModule } from 'igniteui-angular';
+import { IgxForOfModule } from 'igniteui-angular/directives';
 // import { IgxForOfModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -163,7 +164,7 @@ First, we need to define a remote service for fetching data:
 // remote.service.ts
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { IForOfState } from 'igniteui-angular';
+import { IForOfState } from 'igniteui-angular/directives';
 // import { IForOfState } from '@infragistics/igniteui-angular'; for licensed package
 import { BehaviorSubject, Observable } from 'rxjs';
 

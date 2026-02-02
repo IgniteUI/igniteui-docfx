@@ -1,7 +1,8 @@
 ---
-title: Angular Navbar Component – Ignite UI for Angular | Infragistics
+title: Angular Navbar Component – Ignite UI for Angular | Infragistics | MIT license
 _description: Ignite UI for Angular Navbar control provides optimal UI experience with seamless integration to allow users to move within an application smoothly.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Angular NavBar component, Angular Navbar control, Angular Navigation Bar, Angular Navigation Bar component
+_license: MIT
 ---
 
 # Angular Navbar Component Overview
@@ -32,7 +33,7 @@ The first step is to import the `IgxNavbarModule` inside our **app.module.ts** f
 ```typescript
 // app.module.ts
 
-import { IgxNavbarModule } from 'igniteui-angular';
+import { IgxNavbarModule } from 'igniteui-angular/navbar';
 // import { IgxNavbarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -48,7 +49,7 @@ Alternatively, as of `16.0.0` you can import the `IgxNavbarComponent` as a stand
 ```typescript
 // home.component.ts
 
-import { IGX_NAVBAR_DIRECTIVES } from 'igniteui-angular';
+import { IGX_NAVBAR_DIRECTIVES } from 'igniteui-angular/navbar';
 // import { IGX_NAVBAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -95,7 +96,9 @@ We can make our app a little more functional by adding options for searching, fa
 // app.module.ts
 
 ...
-import { IgxNavbarModule, IgxIconButtonDirective, IgxIconModule } from 'igniteui-angular';
+import { IgxNavbarModule } from 'igniteui-angular/navbar';
+import { IgxIconButtonDirective } from 'igniteui-angular/directives';
+import { IgxIconModule } from 'igniteui-angular/icon';
 // import { IgxNavbarModule, IgxButtonModule, IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -373,7 +376,7 @@ You can find the full list of properties in the [navbar-theme]({environment:sass
 At the end your navbar should look like this:
 
 <div class="sample-container loading" style="height:120px">
-    <iframe id="navbar-tailwind-style-iframe" data-src='{environment:demosBaseUrl}/menus/navbar-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="navbar-tailwind-style-iframe" data-src='{environment:demosBaseUrl}/menus/navbar-tailwind-style/' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
 ## API References

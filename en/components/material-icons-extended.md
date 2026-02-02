@@ -1,7 +1,8 @@
 ---
-title: Material Icons Extended - Superset of material icons
+title: Material Icons Extended - Superset of material icons | MIT license
 _description: Ignite UI for Angular extends the material icons set to provide the designers and developers a wide range of icons to choose from. 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Icon components, Angular Icon controls, Material icons extended
+_license: MIT
 ---
 
 # Material Icons Extended
@@ -26,7 +27,7 @@ First, let's see how we can register a single icon in our component:
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
-import { IgxIconService } from 'igniteui-angular';
+import { IgxIconService } from 'igniteui-angular/icon';
 // import { IgxIconService } from '@infragistics/igniteui-angular'; for licensed package
 import { github } from '@igniteui/material-icons-extended';
 // ...

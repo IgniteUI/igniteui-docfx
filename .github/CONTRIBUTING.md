@@ -192,7 +192,7 @@ Code view example:
 ```html
 <code-view style="height:700px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
-           iframe-src="{environment:lobDemosBaseUrl}/grid/grid" 
+           iframe-src="{environment:lobDemosBaseUrl}/grid/grid/" 
            alt="Angular data grid example">
 </code-view>
 ```

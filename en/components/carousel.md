@@ -1,7 +1,8 @@
 ---
-title: Angular Carousel Component – Ignite UI for Angular
+title: Angular Carousel Component – Ignite UI for Angular - MIT license 
 _description: Use Ignite UI for Angular Carousel component to navigate through a collection of slides, cards or page-based interfaces with endless programmatic features. Try it now
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Carousel component, Angular Carousel control
+_license: MIT
 ---
 
 # Angular Carousel Component Overview
@@ -42,7 +43,7 @@ The next step is to import the **IgxCarouselModule** in our **app.module.ts** fi
 // app.module.ts
 
 import { HammerModule } from '@angular/platform-browser';
-import { IgxCarouselModule } from 'igniteui-angular';
+import { IgxCarouselModule } from 'igniteui-angular/carousel';
 // import { IgxCarouselModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -59,7 +60,7 @@ Alternatively, as of `16.0.0` you can import the `IgxCarouselComponent` as a sta
 // home.component.ts
 
 import { HammerModule } from '@angular/platform-browser';
-import { IGX_CAROUSEL_DIRECTIVES } from 'igniteui-angular';
+import { IGX_CAROUSEL_DIRECTIVES } from 'igniteui-angular/carousel';
 // import { IGX_CAROUSEL_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

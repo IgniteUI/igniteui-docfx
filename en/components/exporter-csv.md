@@ -2,6 +2,7 @@
 title: Export to CSV/TSV Component - Native Angular | Ignite UI for Angular
 _description: Users can export their data for editing or offline presentation can do so in CSV or TSV format with the Export to CSV/TSV Ignite UI for Angular component.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Grid, Angular Data Grid, Angular Grid Control, Angular Grid Component, CSV Export, TSV Export
+_license: commercial
 ---
 
 # CSV Exporter
@@ -30,7 +31,7 @@ To start using the IgniteUI CSV Exporter first import the [`IgxCsvExporterServic
 // app.module.ts
 
 ...
-import { IgxCsvExporterService } from 'igniteui-angular';
+import { IgxCsvExporterService } from 'igniteui-angular/grids/core';
 // import { IgxCsvExporterService } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -57,7 +58,7 @@ Here is the code which will execute the export process in the component's typesc
 // component.ts
 
 ...
-import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes } from 'igniteui-angular';
+import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes } from 'igniteui-angular/grids/core';
 // import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
@@ -95,7 +96,8 @@ Here is an example:
 // component.ts
 
 ...
-import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes, IgxGridComponent } from 'igniteui-angular';
+import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes } from 'igniteui-angular/grids/core';
+import { IgxGridComponent } from 'igniteui-angular/grids/grid';
 // import { IgxCsvExporterService, IgxCsvExporterOptions, CsvFileTypes, IgxGridComponen } from '@infragistics/igniteui-angular'; for licensed package
 ...
 

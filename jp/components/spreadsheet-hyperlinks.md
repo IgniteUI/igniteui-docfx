@@ -2,6 +2,7 @@
 title: Angular スプレッドシート | ハイパーリンク | インフラジスティックス
 _description: インフラジスティックスの Angular スプレッドシート コントロールを使用して、Excel ワークブックに Webサイト、ファイル ディレクトリ、およびその他のワークシートにリンクするハイパーリンクを表示します。Ignite UI for Angular スプレッドシート チュートリアルを是非お試しください!
 _keywords: Excel Spreadsheet, hyperlinks, Ignite UI for Angular, Infragistics, Excel スプレッドシート、ハイパーリンク, インフラジスティックス
+_license: commercial
 mentionedTypes: ["Spreadsheet"]
 _language: ja
 ---
@@ -45,6 +46,6 @@ this.spreadsheet.activeWorksheet.hyperlinks().add(new WorksheetHyperlink("A1", "
 
 ## API リファレンス
 
-*   `Hyperlinks`
-*   [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html)
-*   [`WorksheetHyperlink`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheethyperlink.html)
+- `Hyperlinks`
+- [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html)
+- [`WorksheetHyperlink`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheethyperlink.html)

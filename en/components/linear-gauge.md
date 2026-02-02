@@ -2,6 +2,7 @@
 title: Angular Linear Gauge | Data Visualization Tools | Infragistics
 _description: Use Infragistics' Angular linear gauge control to visualize data with a simple and concise view. Learn about the Ignite UI for Angular linear gauge configurable elements!
 _keywords: linear gauge, Ignite UI for Angular, Infragistics, animation, labels, needle, scales, ranges, tick marks
+_license: commercial
 mentionedTypes: ["XamLinearGauge"]
 namespace: Infragistics.Controls.Gauges
 ---
@@ -124,11 +125,11 @@ The linear gauge can be modified to show a second needle. This will make the mai
 ```html
 <igx-linear-gauge
     #linearGauge
-    height="80px" 
+    height="80px"
     width="400px"
     value=70
-    minimumValue=0 
-    maximumValue=100 
+    minimumValue=0
+    maximumValue=100
     interval=10
     labelInterval=10
     labelExtent=0.025

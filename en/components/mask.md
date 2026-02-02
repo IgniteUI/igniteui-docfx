@@ -1,7 +1,8 @@
 ---
-title: Angular Mask Directive Component | Ignite UI for Angular
+title: Angular Mask Directive Component | Ignite UI for Angular | MIT license
 _description: With the Mask Directive in Ignite UI for Angular, the developer can control user input and format the visible value based on configurable mask rules, providing different input options and ease in use and configuration.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Angular mask directive, Mask, Directive, Mask Editor, Angular Mask Editor
+_license: MIT
 ---
 
 # Angular Mask Directive Overview
@@ -36,7 +37,8 @@ The next step is to import the `IgxMaskModule` and `IgxInputGroupModule` in your
 // app.module.ts
 
 ...
-import { IgxMaskModule, IgxInputGroupModule } from 'igniteui-angular';
+import { IgxMaskModule } from 'igniteui-angular/input-group';
+import { IgxInputGroupModule } from 'igniteui-angular/input-group';
 // import { IgxMaskModule, IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -52,7 +54,7 @@ Alternatively, as of `16.0.0` you can import the `IgxMaskDirective` as a standal
 ```typescript
 // home.component.ts
 
-import { IgxMaskDirective, IGX_INPUT_GROUP_DIRECTIVES } from 'igniteui-angular';
+import { IgxMaskDirective, IGX_INPUT_GROUP_DIRECTIVES } from 'igniteui-angular/input-group';
 // import { IgxMaskDirective, IGX_INPUT_GROUP_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -212,7 +214,7 @@ Import the `IgxTextSelectionModule` in your **app.module.ts** file:
 
 ```typescript
 ...
-import { ..., IgxTextSelectionModule } from 'igniteui-angular';
+import { ..., IgxTextSelectionModule } from 'igniteui-angular/input-group';
 // import { ..., IgxTextSelectionModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({

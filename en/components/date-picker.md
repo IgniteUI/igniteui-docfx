@@ -1,7 +1,8 @@
 ---
-title: Angular Datepicker Component – Ignite UI for Angular
+title: Angular Datepicker Component – Ignite UI for Angular - MIT license 
 _description: Learn how to use a functionality to select a date from a calendar to your web application with Angular Datepicker Component by Ignite UI. Try it now. 
 _keywords: angular datepicker, angular datepicker component, angular UI components, angular component, ignite ui for angular
+_license: MIT
 ---
 
 # Angular Date Picker Component Overview
@@ -40,7 +41,7 @@ The next step is to import the `IgxDatePickerModule` in your **app.module.ts** f
 ```typescript
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxDatePickerModule } from 'igniteui-angular';
+import { IgxDatePickerModule } from 'igniteui-angular/date-picker';
 // import { IgxDatePickerModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -58,7 +59,7 @@ Alternatively, as of `16.0.0` you can import the `IgxDatePickerComponent` as a s
 
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IGX_DATE_PICKER_DIRECTIVES } from 'igniteui-angular';
+import { IGX_DATE_PICKER_DIRECTIVES } from 'igniteui-angular/date-picker';
 // import { IGX_DATE_PICKER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

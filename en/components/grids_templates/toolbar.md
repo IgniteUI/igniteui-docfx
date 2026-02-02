@@ -1,20 +1,20 @@
-<!-- markdownlint-disable MD003 -->
+<!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if(igxName==='IgxGrid') {
 ---
-
 title: Angular Grid Toolbar - Ignite UI for Angular
 _description: Use Angular Data Grid Toolbar for essential UI operations. Hosts different UI controls for the Grid’s features - column hiding, pinning, excel exporting, etc.
 _keywords: angular toolbar, igniteui for angular, infragistics
+_license: commercial
 ---
 
 }
 
 @@if(igxName!=='IgxGrid') {
 ---
-
 title: Angular Grid Toolbar - Ignite UI for Angular
 _description: Use Angular @@igComponent Toolbar for essential UI operations. Hosts different UI controls for the Grid’s features - column hiding, pinning, excel exporting, etc.
 _keywords: angular toolbar, igniteui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/toolbar
 ---
 
@@ -26,7 +26,7 @@ The @@igComponent in Ignite UI for Angular provides an [`IgxGridToolbarComponent
 
 - Column Hiding
 - Column Pinning
-- Excel Exporting
+- Exporting to Excel, CSV and PDF
 - Advanced Filtering
 
 or just any other custom content. The toolbar and the predefined UI components support Angular events and expose API for developers.
@@ -351,7 +351,7 @@ title, the placeholder for the component input and the height of the dropdown it
 }
 
 As with the rest of the toolbar actions, exporting is provided through a [Toolbar Exporter component]({environment:angularApiUrl}/classes/igxgridtoolbarexportercomponent.html) out of the box.
-The exporting component is using the respective service for the target data format ([Excel]({environment:angularApiUrl}/classes/igxexcelexporterservice.html) [CSV]({environment:angularApiUrl}/classes/igxcsvexporterservice.html)). That means if the respective service is not provided through the dependency injection chain, the component
+The exporting component is using the respective service for the target data format ([Excel]({environment:angularApiUrl}/classes/igxexcelexporterservice.html), [CSV]({environment:angularApiUrl}/classes/igxcsvexporterservice.html), [PDF]({environment:angularApiUrl}/classes/igxpdfexporterservice.html)). That means if the respective service is not provided through the dependency injection chain, the component
 won't be able to export anything.
 If you need a refresher on the DI in Angular, check the [official guide](https://angular.io/guide/dependency-injection). Here is a sample snippet showing how to enable
 all export services for your application.
@@ -359,12 +359,12 @@ all export services for your application.
 ```typescript
 // app.module.ts
 
-import { IgxExcelExporterService, IgxCsvExporterService } from 'igniteui-angular';
-// import { IgxExcelExporterService, IgxCsvExporterService } from '@infragistics/igniteui-angular'; for licensed package
+import { IgxExcelExporterService, IgxCsvExporterService, IgxPdfExporterService } from 'igniteui-angular/grids/core';
+// import { IgxExcelExporterService, IgxCsvExporterService, IgxPdfExporterService } from '@infragistics/igniteui-angular/grids/core'; for licensed package
 
 @NgModule({
     ...
-    providers: [IgxExcelExporterService, IgxCsvExporterService ]
+    providers: [IgxExcelExporterService, IgxCsvExporterService, IgxPdfExporterService ]
 })
 export class AppModule { ... }
 ```
@@ -382,16 +382,19 @@ Here is a snippet showing some of the options which can be customized through th
 <igx-grid-toolbar>
     <igx-grid-toolbar-actions>
         <igx-grid-toolbar-exporter
-            <!-- If active, enables the csv export entry in the dropdown UI -->
+            <!-- If active, enables the CSV export entry in the dropdown UI -->
             [exportCSV]="csvExportEnabled"
             <!-- If active, enables the excel export entry in the dropdown UI -->
             [exportExcel]="excelExportEnabled"
+            <!-- If active, enables the PDF export entry in the dropdown UI -->
+            [exportPDF]="pdfExportEnabled"
             <!-- The name of the generated export file without the file extension -->
             filename="exported_data"
         >
             Custom text for the exporter button
             <span excelText>Custom text for the excel export entry</span>
             <span csvText>Custom text for the CSV export entry</span>
+            <span pdfText>Custom text for the PDF export entry</span>
         </igx-grid-toolbar-exporter>
     </igx-grid-toolbar-actions>
 </igx-grid-toolbar>

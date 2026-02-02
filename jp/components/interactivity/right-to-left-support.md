@@ -2,6 +2,7 @@
 title: Ignite UI for Angular フレームワーク & 機能 | Ignite UI for Angular | インフラジスティックス
 _description: Ignite UI for Angular によって ARIA アクセシビリティと文字表記の方向を設定する方法を説明します。
 _keywords: aria support, aria サポート, a11y, ignite ui for angular, infragistics, インフラジスティックス
+_license: MIT
 ---
 
 # 右から左 (RTL) サポート
@@ -19,13 +20,14 @@ _keywords: aria support, aria サポート, a11y, ignite ui for angular, infragi
 
 現在、以下コンポーネントは RTL 機能の一部をサポートしています。
 
-* Grid (igx-grid)
+- Grid (igx-grid)
 
 ## RTL の例
+
 このセクションでは、フレームワークのアクセシビリティ (ARIA) サポートと、コンポーネントの`文字表記の方向`の簡単な管理を示します。
 
-<code-view style="height: 600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-rtl-sample/" alt="Angular RTL サポートの例">
 </code-view>
 

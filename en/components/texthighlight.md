@@ -1,7 +1,8 @@
 ---
-title: Angular Text Highlight Directive | Ignite UI for Angular
+title: Angular Text Highlight Directive | Ignite UI for Angular | MIT license
 _description: The Ignite UI for Angular TextHighlight directive can be used to highlight parts of text and have an active highlight on one of them.
 _keywords: Angular TextHighlight Directive, Angular Text Highlight Directive, IgxTextHighlight Directive, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Components, Angular UI Components, Native Angular Components Library
+_license: MIT
 ---
 
 # Angular Text Highlight Directive Overview
@@ -32,7 +33,7 @@ The next step is to import the `IgxTextHighlightModule` in your **app.module.ts*
 ```typescript
 // app.module.ts
 ...
-import { IgxTextHighlightModule } from 'igniteui-angular';
+import { IgxTextHighlightModule } from 'igniteui-angular/directives';
 // import { IgxTextHighlightModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -48,7 +49,7 @@ Alternatively, as of `16.0.0` you can import the `IgxTextHighlightDirective` as 
 ```typescript
 // home.component.ts
 
-import { IgxTextHighlightDirective, IgxTextHighlightService } from 'igniteui-angular';
+import { IgxTextHighlightDirective, IgxTextHighlightService } from 'igniteui-angular/directives';
 // import { IgxTextHighlightDirective, IgxTextHighlightService } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

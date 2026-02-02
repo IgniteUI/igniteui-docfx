@@ -1,8 +1,10 @@
 ---
-title: Angular Snackbar Component
+title: Angular Snackbar Component - MIT license 
 _description: Easily integrate a brief, single-line message within your mobile and desktop applications with Ignite UI for Angular Snackbar component.
 _keywords: Angular Snackbar component, Angular Snackbar control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
+_license: MIT
 ---
+
 # Angular Snackbar Component Overview
 
 <p class="highlight">The Ignite UI for Angular Snackbar component provides feedback about an operation with a single-line message, which can include an action. The Snackbar message appears above all other elements and is positioned at the bottom center of the screen.</p>
@@ -36,7 +38,7 @@ The next step is to import the `IgxSnackbarModule` in your **app.module.ts** fil
 // app.module.ts
 
 ...
-import { IgxSnackbarModule } from 'igniteui-angular';
+import { IgxSnackbarModule } from 'igniteui-angular/snackbar';
 // import { IgxSnackbarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -52,7 +54,8 @@ Alternatively, as of `16.0.0` you can import the `IgxSnackbarComponent` as a sta
 ```typescript
 // home.component.ts
 
-import { IgxSnackbarComponent, IgxButtonDirective } from 'igniteui-angular';
+import { IgxSnackbarComponent } from 'igniteui-angular/snackbar';
+import { IgxButtonDirective } from 'igniteui-angular/directives';
 // import { IgxSnackbarComponent, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -224,7 +227,7 @@ Let’s create a list with contacts that can be deleted. When an item is deleted
 //sample.component.ts
 
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IgxSnackbarComponent } from 'igniteui-angular';
+import { IgxSnackbarComponent } from 'igniteui-angular/snackbar';
 // import { IgxSnackbarComponent } from '@infragistics/igniteui-angular'; for licensed package
 ...
 @ViewChild(IgxSnackbarComponent)
@@ -273,7 +276,7 @@ Use [`positionSettings`]({environment:angularApiUrl}/classes/igxsnackbarcomponen
 
 ```typescript
 // sample.component.ts
-import { VerticalAlignment, HorizontalAlignment } from 'igniteui-angular';
+import { VerticalAlignment, HorizontalAlignment } from 'igniteui-angular/core';
 // import { VerticalAlignment, HorizontalAlignment } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public open(snackbar) {

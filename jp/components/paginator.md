@@ -1,14 +1,16 @@
 ---
-title: Angular Paginator の例 – Ignite UI for Angular
+title: Angular Paginator の例 – Ignite UI for Angular - MITライセンス
 _description: Angular ページネーションを設定し、Ignite UI を使用して Angular テーブルまたは他の反復可能な UI コレクションにカスタム ページを作成し、要求されたページのデータをさまざまな Angular イベントで取得します。
 _keywords: angular paginator, angular paginator コンポーネント, angular ui コンポーネント, igniteui for angular, インフラジスティックス
+_license: MIT
 _language: ja
 ---
 
 # Angular Paginator (ページネーター) コンポーネントの概要
+
 Angular のページネーションは、巨大なデータ セットを操作する場合の最適化手法です。Angular Paginator の目的は、大量のデータを同じサイズのページに分割して分散し、エンドユーザーが操作できる UI と API を提供することです。
 
-Angular Paginator コンポーネントは、エンドユーザーが表示しているページ、ページのサイズ、ページの総数、およびページ間をすばやく移動できる UI 要素を表示します。 
+Angular Paginator コンポーネントは、エンドユーザーが表示しているページ、ページのサイズ、ページの総数、およびページ間をすばやく移動できる UI 要素を表示します。
 
 Ignite UI for Angular Paginator を使用すると、データセットを複数の同様のページに分割できます。このページネーション方法は、一度にすべてを表示して表示することが難しい大規模なデータセットに特に適しています。そのため、ページネータは通常、項目のリストまたはデータ テーブルと一緒に使用されます。Angular の Paginator を使用すると、ページの範囲から特定のページを選択し、各ページに表示するレコード数を決定できます。
 
@@ -38,7 +40,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 ```typescript
 // app.module.ts
 
-import { IgxPaginatorModule } from 'igniteui-angular';
+import { IgxPaginatorModule } from 'igniteui-angular/paginator';
 // import { IgxPaginatorModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -56,7 +58,8 @@ export class AppModule {}
 
 import { NgFor } from '@angular/common';
 import { HammerModule } from '@angular/platform-browser';
-import { IGX_PAGINATOR_DIRECTIVES, IGX_LIST_DIRECTIVES } from 'igniteui-angular';
+import { IGX_PAGINATOR_DIRECTIVES } from 'igniteui-angular/paginator';
+import { IGX_LIST_DIRECTIVES } from 'igniteui-angular/list';
 // import { IGX_PAGINATOR_DIRECTIVES, IGX_LIST_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -113,16 +116,17 @@ Ignite UI for Angular Paginator モジュールまたはディレクティブを
 
 ```html
 <igx-paginator #paginator>
-	<igx-paginator-content>
-		<igx-page-size></igx-page-size>
-		<igx-page-nav></igx-page-nav>
-	</igx-paginator-content>
+ <igx-paginator-content>
+  <igx-page-size></igx-page-size>
+  <igx-page-nav></igx-page-nav>
+ </igx-paginator-content>
 </igx-paginator>
 ```
 
-ページングは、[`paginate`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#paginate)、[`previousPage`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#previouspage)、[`nextPage`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#nextPage) メソッドおよび [`page`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#page)、[`perPage`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#perPage)、[`totalRecords`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#totalRecords) 入力を使用して、Paging API (以下のセクションで詳細に説明されています) を介してプログラムで実行することもできます。ここで *page* は現在のページを設定できます。*perPage* は 1 ページに表示される項目の数を設定できます。*totalRecords* はグリッドにあるレコードの数を設定できます。`TotalRecords` プロパティは、リモート データのページングがあり、リモート レコードの合計数に基づいてページの数を変更する場合に役に立ちます。ページングを使用しており、すべてのデータがグリッドに渡される場合、`totalRecords` プロパティの値は提供されたデータソースの長さにデフォルトで設定されることに注意してください。`totalRecords` が設定されている場合、データソースに基づいてデフォルトの長さよりも優先されます。
+ページングは、[`paginate`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#paginate)、[`previousPage`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#previouspage)、[`nextPage`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#nextPage) メソッドおよび [`page`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#page)、[`perPage`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#perPage)、[`totalRecords`]({environment:angularApiUrl}/classes/igxpaginatorcomponent.html#totalRecords) 入力を使用して、Paging API (以下のセクションで詳細に説明されています) を介してプログラムで実行することもできます。ここで _page_ は現在のページを設定できます。_perPage_ は 1 ページに表示される項目の数を設定できます。_totalRecords_ はグリッドにあるレコードの数を設定できます。`TotalRecords` プロパティは、リモート データのページングがあり、リモート レコードの合計数に基づいてページの数を変更する場合に役に立ちます。ページングを使用しており、すべてのデータがグリッドに渡される場合、`totalRecords` プロパティの値は提供されたデータソースの長さにデフォルトで設定されることに注意してください。`totalRecords` が設定されている場合、データソースに基づいてデフォルトの長さよりも優先されます。
 
 ## ページング API
+
 | 入力           |      説明                           |
 |-----------------|:------------------------------------------:|
 | page            | 現在のページを取得または設定します。 |
@@ -142,6 +146,7 @@ Ignite UI for Angular Paginator モジュールまたはディレクティブを
 
 
 ## Angular Paginator のローカリゼーション
+
 最小限のコードで、ページング コンポーネントのすべての文字列を簡単にローカライズできます。特定のページング インスタンスをローカライズするには、[resourceStrings]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#resourceStrings) 入力プロパティを使用します。
 
 **手順 1** - `IPaginatorResourceStrings` インターフェースと [changei18n]({environment:angularApiUrl}/#changei18n) 関数をインポートします:
@@ -187,21 +192,23 @@ public ngOnInit(): void {
 
 
 ## API リファレンス
-* [IgxPaginator API]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html)
-* [IgxPaginator スタイル]({environment:sassApiUrl}/themes#function-paginator-theme)
+
+- [IgxPaginator API]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html)
+- [IgxPaginator スタイル]({environment:sassApiUrl}/themes#function-paginator-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [グリッド](grid/grid.md)
-* [仮想化とパフォーマンス](grid/virtualization.md)
-* [フィルタリング](grid/filtering.md)
-* [ソート](grid/sorting.md)
-* [集計](grid/summaries.md)
+- [グリッド](grid/grid.md)
+- [仮想化とパフォーマンス](grid/virtualization.md)
+- [フィルタリング](grid/filtering.md)
+- [ソート](grid/sorting.md)
+- [集計](grid/summaries.md)
 
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

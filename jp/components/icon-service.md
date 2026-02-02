@@ -1,11 +1,13 @@
 ---
-title: Angular Icon Service – Ignite UI for Angular | インフラジスティックス
+title: Angular Icon Service – Ignite UI for Angular | インフラジスティックス | MITライセンス
 _description: Ignite UI for Angular Icon Service を使用して、様々なアイコンおよびフォント セットを統合して交互に使用し、カスタム色を定義できます。 
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Icon コンポーネント, Angular Icon コントロール, Angular Icon サービス
+_license: MIT
 _language: ja
 ---
 
 # Angular Icon Service (アイコン サービス) の概要
+
 <p class="highlight">Ignite UI for Angular アイコン サービスを使用すると、開発者はさまざまなソースから新しいアイコンを UI に追加できます。</p>
 
 ## 概要
@@ -15,7 +17,8 @@ Ignite UI for Angular アイコン サービスには、ユーザーがアイコ
 アイコン サービスは、Ignite UI for Angular パッケージから直接インポートできます。
 
 ```ts
-import { IgxIconComponent, IgxIconService } from 'igniteui-angular';
+import { IgxIconComponent } from 'igniteui-angular/icon';
+import { IgxIconService } from 'igniteui-angular/core';
 
 
 @Component({
@@ -28,8 +31,8 @@ export class AppComponent implements OnInit {
 }
 ```
 
-<code-view style="height: 180px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 180px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/icon-service/" alt="Icon Service の例">
 </code-view>
 
@@ -53,7 +56,7 @@ iconService.setFamily('fa-solid', { className: 'fas', type: 'font', prefix: 'fa'
 ```
 
 上記の例では、2 つのアイコン ファミリを作成します: 'material' と 'fa-solid'。タイプが異なり、`material` ファミリは `liga` として登録され、`fa-solid` ファミリは `font` として登録されています。
-2 つの違いは、`igx-icon` コンポーネントがそれらを描画する方法です。通常、[Font Awesome](https://fontawesome.com/) は、クラス名を使用して __font__ ファミリのコード ポイントを指定するため、そのタイプを `font` に設定します。アイコンを描画するためにコード ポイントに依存する必要がある場合は、常にタイプを `font` に設定する必要があります。[Material Icons](https://material.io/icons) ファミリは依然としてフォント ファミリですが、アイコンを表示する標準的な方法は、特定のコード ポイントを指すクラス名ではなく、`ligature` 名を提供することです。そのため、タイプを `liga` に設定する必要があります。3 番目のファミリ タイプである `svg` は、アイコン サービスを通じて登録される SVG で構成されるアイコン ファミリ用に予約されています。
+2 つの違いは、`igx-icon` コンポーネントがそれらを描画する方法です。通常、[Font Awesome](https://fontawesome.com/) は、クラス名を使用して **font** ファミリのコード ポイントを指定するため、そのタイプを `font` に設定します。アイコンを描画するためにコード ポイントに依存する必要がある場合は、常にタイプを `font` に設定する必要があります。[Material Icons](https://material.io/icons) ファミリは依然としてフォント ファミリですが、アイコンを表示する標準的な方法は、特定のコード ポイントを指すクラス名ではなく、`ligature` 名を提供することです。そのため、タイプを `liga` に設定する必要があります。3 番目のファミリ タイプである `svg` は、アイコン サービスを通じて登録される SVG で構成されるアイコン ファミリ用に予約されています。
 
 上記の 2 つのフォント ファミリを登録したら、`igx-icon` コンポーネントを介して標準化された方法でアイコンを使用できるようになりました。
 
@@ -65,6 +68,7 @@ iconService.setFamily('fa-solid', { className: 'fas', type: 'font', prefix: 'fa'
 `material` ファミリの場合は、名前として合字 `name` を使用し、`fa-solid` ファミリの場合は、名前として `className` (`fa-car`) を指定していることに気付いたかもしれません。ただし、前の手順でアイコン ファミリを登録したときに指定した `fa-` プレフィックスは削除します。
 
 ### SVG アイコンの追加
+
 Ignite UI for Angular アイコン サービスを使用すると、SVG  画像をファミリに関連付けて名前を付けることができるため、フォントベースのアイコンと同じように `igx-icon` コンポーネントを介して含めることができます。SVG は、文字列または SVG アセットへの絶対 URI を介して解決する必要があります。
 
 ```ts
@@ -85,6 +89,7 @@ iconService.addSvgIconFromText('my-icon', '<svg>...</svg>', 'fa-solid');
 カスタム SVG アイコンを `liga` および `font` タイプのファミリに追加していることに注意してください。これが可能なのは、`addSvgIcon` メソッドと `addSvgIconFromText` メソッドがアイコンを `svg` タイプとして暗黙的に登録し、`igx-icon` コンポーネントが SVG を正しく描画できるようにするためです。
 
 ## メタ ファミリ
+
 Ignite UI for Angular アイコン サービスを使用すると、フォント アイコンのファミリを設定するか、共通の傘の下に SVG を追加して追加されたアイコンを組み合わせた疑似ファミリ マップを作成し、簡単に参照できるようにすることができます。
 
 ```ts
@@ -104,6 +109,7 @@ iconService.setIconRef('car', 'my-family', { family: 'fa-solid', name: 'car' });
 ```
 
 ## アイコンの取得
+
 元のアイコン `type`、`name`、`family`、および `className` を読み取るために、特定の `family` とアイコン `name` のアイコンを取得できます。
 
 ```ts
@@ -251,12 +257,14 @@ iconService.setIconRef('input_collapse', 'default', {
 | **carousel_next** | スライド間の移動に使用されます。 |
 
 #### Chip
+
 | アイコン         | 説明                               |
 | ------------ | ----------------------------------------- |
 | **selected** | チップが選択されていることを示すために使用されます。 |
 | **remove**   | [削除] ボタンに使用されます。               |
 
 #### Combo (Simple Combo を含む)
+
 | アイコン               | 説明                                                  |
 | ------------------ | ------------------------------------------------------------ |
 | **case_sensitive** | 大文字と小文字を区別するフィルタリングを指定および切り替えのために使用されます。        |
@@ -265,23 +273,27 @@ iconService.setIconRef('input_collapse', 'default', {
 | **input_collapse** | コンボ メニューが展開されているときのトグル ボタンに使用されます。  |
 
 #### Date Picker
+
 | アイコン            | 説明                                          |
 | --------------- | ---------------------------------------------------- |
 | **today**       | ピッカーをトリガーするトグル ボタンに使用されます。 |
 | **input_clear** | [クリア] ボタンに使用されます。                           |
 
 #### Date Range Picker
+
 | アイコン           | 説明                                          |
 | -------------- | ---------------------------------------------------- |
 | **date_range** | ピッカーをトリガーするトグル ボタンに使用されます。 |
 
 #### Expansion Panel
+
 | アイコン         | 説明                                                   |
 |------------- | ------------------------------------------------------------- |
 | **expand**   | 展開状態をトリガーするトグル ボタンに使用されます。  |
 | **collapse** | 縮小状態をトリガーするトグル ボタンに使用されます。 |
 
 #### Grid
+
 | アイコン                 | 説明                                                                    |
 | -------------------- | ------------------------------------------------------------------------------ |
 | **add**              | フィルター エントリを追加するために Excel フィルター メニューで使用されます。                                 |
@@ -320,11 +332,13 @@ iconService.setIconRef('input_collapse', 'default', {
 | **view_column**      | ピボット データ セレクターによって使用されます。                                               |
 
 #### Input Group
+
 | アイコン            | 説明                                          |
 | --------------- | ---------------------------------------------------- |
 | **input_clear** | [クリア] ボタンに使用されます。                           |
 
 #### Paginator
+
 | アイコン           | 説明                                                  |
 | -------------- | ------------------------------------------------------------ |
 | **first_page** | 最初のページに移動するためのボタンで使用されます。    |
@@ -333,6 +347,7 @@ iconService.setIconRef('input_collapse', 'default', {
 | **next**       | 次のページに移動するためのボタンで使用されます。     |
 
 #### Query Builder
+
 | アイコン         | 説明                                                  |
 | ------------ | ------------------------------------------------------------ |
 | **add**      | 新しいフィルター エントリを追加するためのボタンで使用されます。            |
@@ -345,12 +360,14 @@ iconService.setIconRef('input_collapse', 'default', {
 
 
 #### Select
+
 | アイコン               | 説明                                                   |
 | ------------------ | -----------------------------------------------------------   |
 | **input_expand**   | 選択メニューが縮小されているときのトグル ボタンに使用されます。 |
 | **input_collapse** | 選択メニューが展開されているときのトグル ボタンに使用されます。  |
 
 #### Tabs
+
 | アイコン         | 説明                                                 |
 | ------------ | ----------------------------------------------------------- |
 | **prev**     | 前のタブに移動するためのボタンで使用されます。 |
@@ -358,11 +375,13 @@ iconService.setIconRef('input_collapse', 'default', {
 
 
 #### Time Picker
+
 | アイコン         | 説明                                          |
 | ------------ | ---------------------------------------------------- |
 | **clock**    | ピッカーをトリガーするトグル ボタンに使用されます。 |
 
 #### Tree
+
 | アイコン              | 説明                                          |
 | ----------------- | ---------------------------------------------------- |
 | **tree_expand**   | ピッカーをトリガーするトグル ボタンに使用されます。 |
@@ -379,6 +398,7 @@ setFamily(name: string, meta: IconFamilyMeta): IgxIconService;
 ```
 
 ### アイコン参照
+
 アイコン マップがまだ存在しない場合にのみ設定します:
 
 ```ts
@@ -386,35 +406,42 @@ addIconRef(name: string, family: string, icon: IconMeta): void;
 ```
 
 アイコン マップにアイコン参照を設定します (すでに存在する場合はオーバーライドされます):
+
 ```ts
 setIconRef(name: string, family: string, icon: IconMeta): void;
 ```
 
 アイコン参照の取得
+
 ```ts
 getIconRef(family: string, name: string): IconReference;
 ```
 
 ### SVG アイコン
+
 URI から:
+
 ```ts
 addSvgIcon(name: string, url: string, family: string, stripMeta = false): void;
 ```
 
 文字列から:
+
 ```ts
 addSvgIconFromText(name: string, iconText: string, family: string, stripMeta = false): void;
 ```
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
-* [IgxIconService]({environment:angularApiUrl}/classes/igxiconservice.html)
+- [IgxIconService]({environment:angularApiUrl}/classes/igxiconservice.html)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

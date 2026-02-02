@@ -1,7 +1,8 @@
 ---
-title: Angular Stepper Component – Ignite UI for Angular
+title: Angular Stepper Component – Ignite UI for Angular - MIT license 
 _description: Use the Angular Stepper component to visualize content as a process and show its progress by dividing the content into logical steps. Learn how to do it.
 _keywords: Angular Stepper component, Angular Wizard Component, Angular Stepper Control, Angular Wizard Control, Angular UI Components, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Infragistics
+_license: MIT
 ---
 
 # Angular Stepper Component Overview
@@ -44,7 +45,7 @@ The next step is to import the `IgxStepperModule` in your **app.module.ts** file
 // app.module.ts
 
 ...
-import { IgxStepperModule } from 'igniteui-angular';
+import { IgxStepperModule } from 'igniteui-angular/stepper';
 // import { IgxStepperModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -62,7 +63,7 @@ Alternatively, as of `16.0.0` you can import the `IgxStepperComponent` as a stan
 
 import { HammerModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { IGX_STEPPER_DIRECTIVES } from 'igniteui-angular';
+import { IGX_STEPPER_DIRECTIVES } from 'igniteui-angular/stepper';
 // import { IGX_STEPPER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

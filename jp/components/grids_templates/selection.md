@@ -3,14 +3,16 @@
 title: Angular Grid の選択 - Ignite UI for Angular
 _description: Ignite UI for Angular グリッドでデータを選択は、さまざまなイベント、豊富な API、単一選択のような単純なマウス操作を使用して簡単に行うことができます。
 _keywords: data select, igniteui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid の選択 - Ignite UI for Angular 
+title: Angular Tree Grid の選択 - Ignite UI for Angular
 _description: Ignite UI for Angular グリッドでデータを選択は、さまざまなイベント、豊富な API、単一選択のような単純なマウス操作を使用して簡単に行うことができます。
 _keywords: data select, igniteui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -19,11 +21,13 @@ _language: ja
 title: Angular Hierarchical Grid の選択 - Ignite UI for Angular
 _description: Ignite UI for Angular グリッドでデータを選択は、さまざまなイベント、豊富な API、単一選択のような単純なマウス操作を使用して簡単に行うことができます。
 _keywords: data select, igniteui for angular, インフラジスティックス
+_license: commercial
 
 ---
 }
 
 # Angular @@igComponent の選択
+
 Ignite UI for Angular @@igComponent を使用して、さまざまなイベント、豊富な API、または単一選択などのシンプルなマウス操作でデータを簡単に選択できます。
 
 ## Angular Grid 選択の例
@@ -33,8 +37,8 @@ Ignite UI for Angular @@igComponent を使用して、さまざまなイベン�
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-cell-selection/" alt="Angular Grid 選択の例">
 </code-view>
 
@@ -43,8 +47,8 @@ Ignite UI for Angular @@igComponent を使用して、さまざまなイベン�
 
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:650px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:650px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-cell-selection/" alt="Angular Grid 選択の例">
 </code-view>
 
@@ -52,8 +56,8 @@ Ignite UI for Angular @@igComponent を使用して、さまざまなイベン�
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:750px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:750px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-cell-selection/" alt="Angular Grid 選択の例">
 </code-view>
 
@@ -90,9 +94,9 @@ Ignite UI for Angular @@igComponent コンポーネントは、[行選択](row-s
 - False - 対応する列選択は @@igComponent に対して無効になります。
 - True - 対応する列選択は @@igComponent に対して有効になります。
 - 以下の 3 つのバリエーションがあります。
- - 単一選択 - 列セルを<kbd>マウス クリック</kbd>します。
- - 複数列の選択 - <kbd>Ctrl</kbd> キーを押しながら列セルを<kbd>マウス クリック</kbd>します。
- - 列の範囲選択 - <kbd>Shift</kbd> キーを押しながら + <kbd>マウス クリック</kbd>、その間のすべての列が選択されます。
+- 単一選択 - 列セルを<kbd>マウス クリック</kbd>します。
+- 複数列の選択 - <kbd>Ctrl</kbd> キーを押しながら列セルを<kbd>マウス クリック</kbd>します。
+- 列の範囲選択 - <kbd>Shift</kbd> キーを押しながら + <kbd>マウス クリック</kbd>、その間のすべての列が選択されます。
 
 > 詳細については、[列選択トピック](column-selection.md)を参照してください。
 
@@ -135,6 +139,7 @@ public rightClick(eventArgs: any) {
     this.contextmenu = true;
 }
 ```
+
 以下はコンテキストメニューの機能です。
 - 選択したセルの値のコピー。
 - 選択したセルの dataRow のコピー。
@@ -165,6 +170,7 @@ public copySelectedCells(event) {
 IgxGrid はコピーされたデータを取得し、コンテナー要素に貼り付けます。
 
 グリッドとコンテキスト メニューを組み合わせるために使用するテンプレート:
+
 ```html
 <div class="wrapper">
     <div class="grid__wrapper" (window:click)="disableContextMenu()">
@@ -189,8 +195,8 @@ IgxGrid はコピーされたデータを取得し、コンテナー要素に貼
  複数のセルを選択し、`マウスの右`ボタンを押します。コンテキストメニューが表示され、`セルデータのコピー`を選択すると、選択したデータが右側の空のボックスに表示されます。
  結果:
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-contextmenu-sample/" >
 </code-view>
 
@@ -206,34 +212,35 @@ IgxGrid はコピーされたデータを取得し、コンテナー要素に貼
     ```
 
 - グリッドに `primaryKey` が設定されておらず、リモート データ シナリオが有効になっている場合 (ページング、ソート、フィルタリング、スクロール時に、グリッドに表示されるデータを取得するためのリモート サーバーへのリクエストがトリガーされる場合)、データ要求が完了すると、行は次の状態を失います:
-    * Row Selection
-    * Row Expand/collapse
-    * Row Editing
-    * Row Pinning
+  - Row Selection
+  - Row Expand/collapse
+  - Row Editing
+  - Row Pinning
 
 ## API リファレンス
 
-* [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-@@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow API]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
-* [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+- [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+@@if (igxName !== 'IgxTreeGrid') {- [IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {- [IgxTreeGridRow API]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
+- [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
+- [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [@@igComponent 概要](@@igMainTopic.md)
-* [行選択](row-selection.md)
-* [セル選択](cell-selection.md)
-* [ページング](paging.md)
-* [フィルタリング](filtering.md)
-* [ソート](sorting.md)
-* [集計](summaries.md)
-* [列移動](column-moving.md)
-* [仮想化とパフォーマンス](virtualization.md)
-@@if (igxName === 'IgxGrid'){* [選択に基づいた集計](selection-based-aggregates.md)}
+- [@@igComponent 概要](@@igMainTopic.md)
+- [行選択](row-selection.md)
+- [セル選択](cell-selection.md)
+- [ページング](paging.md)
+- [フィルタリング](filtering.md)
+- [ソート](sorting.md)
+- [集計](summaries.md)
+- [列移動](column-moving.md)
+- [仮想化とパフォーマンス](virtualization.md)
+@@if (igxName === 'IgxGrid'){- [選択に基づいた集計](selection-based-aggregates.md)}
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

@@ -1,7 +1,8 @@
 ---
-title: Angular Icon Service – Ignite UI for Angular | Infragistics
+title: Angular Icon Service – Ignite UI for Angular | Infragistics | MIT license
 _description: Developers can unify and use various icon and font sets interchangeably with custom colors and more with Ignite UI for Angular Icon Service. 
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Icon components, Angular Icon controls, Angular Icon service
+_license: MIT
 ---
 
 # Angular Icon Service Overview
@@ -15,7 +16,8 @@ The Ignite UI for Angular Icon Service provides several methods that allow users
 The icon service can be imported directly from the Ignite UI for Angular package.
 
 ```ts
-import { IgxIconComponent, IgxIconService } from 'igniteui-angular';
+import { IgxIconComponent } from 'igniteui-angular/icon';
+import { IgxIconService } from 'igniteui-angular/core';
 
 
 @Component({

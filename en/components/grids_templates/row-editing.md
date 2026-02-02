@@ -1,19 +1,19 @@
-<!-- markdownlint-disable MD003 MD024 -->
+<!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if(igxName==='IgxGrid'){
 ---
-
 title: Editing Rows in Angular Data Grid - Ignite UI for Angular
 _description: Want to enable row editing in Angular Data Grid? Need a powerful API for CRUD operations? Try our Ignite UI for Angular Data Grid rows editing component!
 _keywords: row editing, igniteui for angular, infragistics
+_license: commercial
 ---
 
 }
 @@if(igxName!=='IgxGrid'){
 ---
-
 title: Editing Rows in Angular @@igComponent - Ignite UI for Angular
 _description: Want to enable row editing in Angular @@igComponent? Need a powerful API for CRUD operations? Try our Ignite UI for Angular Data Grid rows editing component!
 _keywords: row editing, igniteui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/row-editing
 ---
 
@@ -159,7 +159,7 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
 ```typescript
 import { Component, ViewChild } from '@angular/core';
 import { data } from './data';
-import { IgxGridComponent } from 'igniteui-angular';
+import { IgxGridComponent } from 'igniteui-angular/grids/grid';
 // import { IgxGridComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -184,7 +184,7 @@ export class GridRowEditSampleComponent {
 
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IgxTreeGridComponent } from 'igniteui-angular';
+import { IgxTreeGridComponent } from 'igniteui-angular/grids/tree-grid';
 // import { IgxTreeGridComponent } from '@infragistics/igniteui-angular'; for licensed package
 import { FLAT_DATA } from './data';
 
@@ -218,7 +218,7 @@ export class TreeGridRowEditSampleComponent implements OnInit {
 
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IgxRowIslandComponent, IgxHierarchicalGridComponent } from 'igniteui-angular';
+import { IgxRowIslandComponent, IgxHierarchicalGridComponent } from 'igniteui-angular/grids/hierarchical-grid';
 // import { IgxRowIslandComponent, IgxHierarchicalGridComponen } from '@infragistics/igniteui-angular'; for licensed package
 import { SINGERS } from './data';
 

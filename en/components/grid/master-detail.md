@@ -2,6 +2,7 @@
 title: Angular Master-Detail Grid - Ignite UI for Angular
 _description: Define expandable detail view template for data in rows with Ignite UI Angular Grid. Useful for displaying master-detail style data in a hierarchical structure.
 _keywords: master detail, igniteui for angular, infragistics
+_license: commercial
 ---
 
 # Angular Master-Detail Grid
@@ -15,7 +16,7 @@ This mode is useful when you need to display master-detail style data in a hiera
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/grid/grid-master-detail" alt="Angular Grid Master-Detail Example">
+           iframe-src="{environment:lobDemosBaseUrl}/grid/grid-master-detail/" alt="Angular Grid Master-Detail Example">
 </code-view>
 
 

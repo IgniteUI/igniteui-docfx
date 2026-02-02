@@ -1,7 +1,8 @@
 ---
-title: Angular Date Range Picker Component | Ignite UI for Angular
+title: Angular Date Range Picker Component | Ignite UI for Angular | MIT license
 _description: The Angular Date Range Picker component allows you to choose a date range by defining its start and end date. You can select a range from a calendar UI. Try it now. 
 _keywords: Angular Date Range Picker, Date Range Picker, Date Picker, Angular Date Range Picker Component, Angular UI Components, Angular component
+_license: MIT
 ---
 
 # Angular Date Range Picker Component Overview
@@ -37,7 +38,7 @@ As the [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxda
 ```typescript
 // app.module.ts
 
-import { IgxDateRangePickerModule } from 'igniteui-angular';
+import { IgxDateRangePickerModule } from 'igniteui-angular/date-picker';
 // import { IgxDateRangePickerModule } from '@infragistics/igniteui-angular'; for licensed package
 
 import { HammerModule } from '@angular/platform-browser';
@@ -58,7 +59,7 @@ Alternatively, as of `16.0.0` you can import the [`IgxDateRangePickerComponent`]
 
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IGX_DATE_RANGE_PICKER_DIRECTIVES } from 'igniteui-angular';
+import { IGX_DATE_RANGE_PICKER_DIRECTIVES } from 'igniteui-angular/date-picker';
 // import { IGX_DATE_RANGE_PICKER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -121,7 +122,7 @@ The Angular Date Range Picker component also allows configuring two separate inp
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-start-end" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-start-end/" >
 </code-view>
 
 ### Popup modes
@@ -134,7 +135,7 @@ By default, when clicked, the [`IgxDateRangePickerComponent`]({environment:angul
 
 <code-view style="height:700px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-mode" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-mode/" >
 </code-view>
 
 <div class="divider--half"></div>

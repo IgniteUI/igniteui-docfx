@@ -6,6 +6,7 @@ _language: ja
 ---
 
 # アニメーション
+
 <p class="highlight">Ignite UI for Angular には、ユーザー エクスペリエンスを向上させるために特別に設計された 100 以上のビルド済みアニメーションが含まれています。</p>
 <div class="divider"></div>
 
@@ -47,6 +48,7 @@ Ignite UI for Angular [keyframes]({environment:sassApiUrl}/animations#mixin-keyf
     }
 } 
 ```
+
 <div class="divider--half"></div>
 
 ### アニメーション ミックスイン
@@ -62,6 +64,7 @@ Ignite UI for Angular [keyframes]({environment:sassApiUrl}/animations#mixin-keyf
     @include animation('fade-in-top' 3s $ease-out-quad infinite);
 }
 ```
+
 <div class="divider--half"></div>
 
 ### タイミング関数
@@ -69,7 +72,7 @@ Ignite UI for Angular [keyframes]({environment:sassApiUrl}/animations#mixin-keyf
 キーフレーム ミックスインで使用するタイミング関数のリストが含まれています。タイミング関数の全てのリストの詳細は、[ドキュメント]({environment:sassApiUrl}/animations)をご覧ください。
 
 <div class="sample-container loading" style="height: 270px">
-    <iframe id="animations-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/theming/animations-sample-2" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="animations-sample-2-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/theming/animations-sample-2/" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <div>
 <button data-localize="codesandbox" disabled class="codesandbox-btn" data-iframe-id="animations-sample-2-iframe" data-demos-base-url="{environment:demosBaseUrl}">codesandbox で表示</button>
@@ -84,7 +87,7 @@ Sass キーフレームとアニメーション ミックスインの他に、�
 <div class="divider--half"></div>
 
 <div class="sample-container loading" style="height: 470px">
-    <iframe id="animations-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/theming/animations-sample-1" onload="onSampleIframeContentLoaded(this);"></iframe>
+    <iframe id="animations-sample-1-iframe" frameborder="0" seamless="" width="100%" height="100%" src="{environment:demosBaseUrl}/theming/animations-sample-1/" onload="onSampleIframeContentLoaded(this);"></iframe>
 </div>
 <p style="margin: 0; padding-top: 0.5rem">このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://jp.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">無料でダウンロードできます。</a></p>
 <div>
@@ -127,20 +130,21 @@ animations: [
 ### タイミング関数
 
 Ignite UI for Angular には、アニメーションをイーズ イン/アウトするために使用できるタイミング関数のセットが含まれています。[EaseIn]({environment:angularApiUrl}/enums/easein.html)、[EaseOut]({environment:angularApiUrl}/enums/easeout.html)、[EaseInOut]({environment:angularApiUrl}/enums/easeinout.html) の 3 つの主要なタイミング関数グループがあり、それぞれ以下のタイミングを含みます。
-  - quad
-  - cubic
-  - quart
-  - quint
-  - sine
-  - expo
-  - circ
-  - back
+- quad
+- cubic
+- quart
+- quint
+- sine
+- expo
+- circ
+- back
 
 特定のタイミング関数を使用するには、まずそれはインポートします。
 
-``` typescript 
+``` typescript
 import { EaseOut } from "igniteui-angular/animations/easings";
 ```
+
 アニメーションの easing パラメーターの値として使用します。
 
 ``` typescript
@@ -152,16 +156,18 @@ useAnimation(fadeIn, {
 ```
 
 ## API リファレンス
+
 <div class="divider"></div>
 
-* [Animations]({environment:sassApiUrl}/animations)
-* [AnimationSettings]({environment:angularApiUrl}/interfaces/animationsettings.html)
-* [IAnimationParams]({environment:angularApiUrl}/interfaces/ianimationparams.html)
+- [Animations]({environment:sassApiUrl}/animations)
+- [AnimationSettings]({environment:angularApiUrl}/interfaces/animationsettings.html)
+- [IAnimationParams]({environment:angularApiUrl}/interfaces/ianimationparams.html)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

@@ -2,6 +2,7 @@
 title: Angular Excel Library| Using Worksheets | Infragistics
 _description: Use Infragistics' Angular excel library to input data by working with the worksheet's row and cells and setting their corresponding values. Easily transfer data from Ignite UI for Angular excel to your application!
 _keywords: Excel library, worksheet, Ignite UI for Angular, Infragistics
+_license: commercial
 mentionedTypes: ["Workbook", "Worksheet", "WorksheetCell", "DisplayOptions", "WorksheetFilterSettings", "IWorksheetCellFormat"]
 ---
 
@@ -111,8 +112,8 @@ You can specify the region to apply the filter by using the [`setRegion`]({envir
 
 Below is a list of methods and their descriptions that you can use to add a filter to a worksheet:
 
-| Method   | Description                      |
-| -------------  |:-------------:                 |
+| Method        | Description |
+| --------------|-------------|
 |[`applyAverageFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetfiltersettings.html#applyAverageFilter)|Represents a filter which can filter data based on whether the data is below or above the average of the entire data range.|
 |[`applyDatePeriodFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetfiltersettings.html#applyDatePeriodFilter)|Represents a filter which can filter dates in a Month, or quarter of any year.|
 |[`applyFillFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetfiltersettings.html#applyFillFilter)|Represents a filter which will filter cells based on their background fills. This filter specifies a single CellFill. Cells of with this fill will be visible in the data range. All other cells will be hidden.|

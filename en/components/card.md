@@ -1,7 +1,8 @@
 ---
-title: Angular Card Component – Ignite UI for Angular
+title: Angular Card Component – Ignite UI for Angular - MIT license 
 _description: With Angular Card component you can present users with dashboards and engaging text, images, icons or buttons as an entry point for detailed information. Try it now.
 _keywords: Angular Card component, Angular Card control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
+_license: MIT
 ---
 
 # Angular Card Component Overview
@@ -38,7 +39,7 @@ The next step is to import the `IgxCardModule` inside your **app.module.ts** fil
 ```typescript
 // app.module.ts
 ...
-import { IgxCardModule } from 'igniteui-angular';
+import { IgxCardModule } from 'igniteui-angular/card';
 // import { IgxCardModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -54,7 +55,7 @@ Alternatively, as of `16.0.0` you can import the `IgxCardComponent` as a standal
 ```typescript
 // home.component.ts
 
-import { IGX_CARD_DIRECTIVES } from 'igniteui-angular';
+import { IGX_CARD_DIRECTIVES } from 'igniteui-angular/card';
 // import { IGX_CARD_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -384,21 +385,21 @@ To get started with styling the card, we need to import the `index` file, where 
 Following the simplest approach, we create a new theme that extends the [`card-theme`]({environment:sassApiUrl}/themes#function-card-theme) and providing just a few styling parameters. If you only specify the `$background` parameter, the appropriate foreground colors will be automatically chosen, either black or white, based on which offers better contrast with the background.
 
 ```scss
-$colorful-card: card-theme(
-  $background: #011627,
-  $subtitle-text-color: #ecaa53,
+$custom-card-theme: card-theme(
+    $background: #011627,
+    $subtitle-text-color: #ecaa53,
 );
 ```
 
 As seen, the `card-theme` exposes some useful parameters for basic styling of its items.
 
-The last step is to **include** the component theme in our application.
+Finally, **include** the custom theme in your application:
 
 ```scss
-@include css-vars($colorful-card);
+@include css-vars($custom-card-theme);
 ```
 
-### Angular Card Demo
+In the sample below, you can see how using the card component with customized CSS variables allows you to create a design that visually resembles the card used in the [`Ant`](https://ant.design/components/card?theme=light#card-demo-meta) design system.
 
 
 <code-view style="height: 486px"

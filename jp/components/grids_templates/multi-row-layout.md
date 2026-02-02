@@ -2,46 +2,47 @@
 title: Angular Grid の複数行レイアウト - Ignite UI for Angular
 _description: Ignite UI for Angular Data Grid の複数行レイアウト機能を使用して、列をより強力な方法で配置およびサイズ設定します。デモと例をお試しください。	
 _keywords: angular 複数行レイアウト, マテリアル行レイアウト, ignite ui for angular
+_license: commercial
 _language: ja	
 ---
 
 # Angular 複数行レイアウト
 
-複数行レイアウトは、`igxGridComponent` のレンダリング機能を拡張します。この機能により、単一のデータレコードを複数の表示行に分割することができます。	
+複数行レイアウトは、`igxGridComponent` のレンダリング機能を拡張します。この機能により、単一のデータレコードを複数の表示行に分割することができます。
 
 ## Angular 複数行レイアウトの例
 
 
-<code-view style="height:755px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:755px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout/" alt="Angular 複数行レイアウトの例">
 </code-view>
 
 
-複数行レイアウトの宣言は、[`igx-column-layout`]({environment:angularApiUrl}/classes/igxcolumnlayoutcomponent.html) コンポーネントによって実現されます。各 `igx-column-layout` コンポーネントは、単一または複数の `igx-column` コンポーネントを含むブロックと見なします。一部のグリッド機能はブロック レベルで機能します (下記の「機能の統合」セクション参照)。たとえば、仮想化ではブロックを使用して仮想チャンクを決定します。そのため、レイアウトで許容される場合は、パフォーマンスを向上させるために列を更に `igx-column-layout` ブロックに分割します。複数行のレイアウトを設定するときは、これらのブロックの外側に列がなく、`IgxColumnGroupComponent` を使用しないでください。複数行レイアウトは、[グリッド レイアウト](https://www.w3.org/TR/css-grid-1/)仕様上に実装されており、その要件に準拠する必要があります。	
+複数行レイアウトの宣言は、[`igx-column-layout`]({environment:angularApiUrl}/classes/igxcolumnlayoutcomponent.html) コンポーネントによって実現されます。各 `igx-column-layout` コンポーネントは、単一または複数の `igx-column` コンポーネントを含むブロックと見なします。一部のグリッド機能はブロック レベルで機能します (下記の「機能の統合」セクション参照)。たとえば、仮想化ではブロックを使用して仮想チャンクを決定します。そのため、レイアウトで許容される場合は、パフォーマンスを向上させるために列を更に `igx-column-layout` ブロックに分割します。複数行のレイアウトを設定するときは、これらのブロックの外側に列がなく、`IgxColumnGroupComponent` を使用しないでください。複数行レイアウトは、[グリッド レイアウト](https://www.w3.org/TR/css-grid-1/)仕様上に実装されており、その要件に準拠する必要があります。
 
-`IgxColumnComponent` は各セルの位置と範囲を決めるために 4 つの `@Input` プロパティを公開しています。	
-* [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colStart) - フィールドの開始位置となる列インデックス。このプロパティは**必須**です。	
-* [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowStart) - フィールドの開始位置となる行インデックス。このプロパティは**必須**です。
-* [`colEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colEnd) - 現在のフィールドが終了する位置の列インデックス。colStart と colEnd の間の列数によって、そのフィールドまでの列の幅が決まります。このプロパティは**オプション**です。設定されていない場合は、デフォルトで 1 に設定されます。	
-* [`rowEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowEnd) - 現在のフィールドが終了する行インデックス。rowStart と rowEnd の間の行数によって、そのフィールドにまたがる行数が決まります。このプロパティは**オプション**です。設定されていない場合は、デフォルトで `rowStart + 1` に設定されます。	
+`IgxColumnComponent` は各セルの位置と範囲を決めるために 4 つの `@Input` プロパティを公開しています。
+- [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colStart) - フィールドの開始位置となる列インデックス。このプロパティは**必須**です。
+- [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowStart) - フィールドの開始位置となる行インデックス。このプロパティは**必須**です。
+- [`colEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colEnd) - 現在のフィールドが終了する位置の列インデックス。colStart と colEnd の間の列数によって、そのフィールドまでの列の幅が決まります。このプロパティは**オプション**です。設定されていない場合は、デフォルトで 1 に設定されます。
+- [`rowEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowEnd) - 現在のフィールドが終了する行インデックス。rowStart と rowEnd の間の行数によって、そのフィールドにまたがる行数が決まります。このプロパティは**オプション**です。設定されていない場合は、デフォルトで `rowStart + 1` に設定されます。
 
 
 ```html
 <igx-column-layout>
-	<igx-column [rowStart]="1" [colStart]="1" [rowEnd]="3" field="ID"></igx-column>
+ <igx-column [rowStart]="1" [colStart]="1" [rowEnd]="3" field="ID"></igx-column>
 </igx-column-layout>
 <igx-column-layout>
-	<igx-column [rowStart]="1" [colStart]="1" [colEnd]="3" field="CompanyName"></igx-column>
-	<igx-column [rowStart]="2" [colStart]="1" [colEnd]="2" field="ContactName"></igx-column>
-	<igx-column [rowStart]="2" [colStart]="2" [colEnd]="3" field="ContactTitle"></igx-column>
+ <igx-column [rowStart]="1" [colStart]="1" [colEnd]="3" field="CompanyName"></igx-column>
+ <igx-column [rowStart]="2" [colStart]="1" [colEnd]="2" field="ContactName"></igx-column>
+ <igx-column [rowStart]="2" [colStart]="2" [colEnd]="3" field="ContactTitle"></igx-column>
 </igx-column-layout>
 <igx-column-layout>
-	<igx-column [rowStart]="1" [colStart]="1" [colEnd]="3" field="Country"></igx-column>
-	<igx-column [rowStart]="1" [colStart]="3" [colEnd]="5" field="Region"></igx-column>
-	<igx-column [rowStart]="1" [colStart]="5" [colEnd]="7" field="PostalCode"></igx-column>
-	<igx-column [rowStart]="2" [colStart]="1" [colEnd]="4" field="City"></igx-column>
-	<igx-column [rowStart]="2" [colStart]="4" [colEnd]="7" field="Address"></igx-column>
+ <igx-column [rowStart]="1" [colStart]="1" [colEnd]="3" field="Country"></igx-column>
+ <igx-column [rowStart]="1" [colStart]="3" [colEnd]="5" field="Region"></igx-column>
+ <igx-column [rowStart]="1" [colStart]="5" [colEnd]="7" field="PostalCode"></igx-column>
+ <igx-column [rowStart]="2" [colStart]="1" [colEnd]="4" field="City"></igx-column>
+ <igx-column [rowStart]="2" [colStart]="4" [colEnd]="7" field="Address"></igx-column>
 </igx-column-layout>
 <igx-column-layout>
     <igx-column [rowStart]="1" [colStart]="1" field="Phone"></igx-column>
@@ -55,35 +56,38 @@ _language: ja
 
 
 > [!Note]
-> [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowStart) プロパティと [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colStart) プロパティは、それぞれの `igx-column` に対して`igx-column-layout` に設定する必要があります。`igxColumnLayout` コンポーネントはレイアウトが正しいかどうかを検証しておらず、それについてエラーや警告を投げていません。開発者は、レイアウトの宣言が正しく完全であることを確認する必要があります。誤った配置、オーバーラップ、ブラウザの不整合などが発生し、レイアウトが壊れる可能性があります。	
+> [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowStart) プロパティと [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colStart) プロパティは、それぞれの `igx-column` に対して`igx-column-layout` に設定する必要があります。`igxColumnLayout` コンポーネントはレイアウトが正しいかどうかを検証しておらず、それについてエラーや警告を投げていません。開発者は、レイアウトの宣言が正しく完全であることを確認する必要があります。誤った配置、オーバーラップ、ブラウザの不整合などが発生し、レイアウトが壊れる可能性があります。
 
-## 機能の統合	
-複数行レイアウトのレンダリング方法は全く異なるため、列固定や列非表示など一部の列機能は `igx-column-layout` コンポーネントでのみ機能します。その他の機能ソートとグループ化などは、`igx-column` コンポーネントで同じように機能します。	
-- フィルタリング - Excel スタイルのフィルタリングのみがサポートされています。`filterMode` を `FilterMode.quickFilter` に明示的に設定しても効果はありません。	
-- ページング - 表示行ではなくレコードで機能します。	
-- グループ化 - `hideGroupedColumns` オプションは、複数行レイアウトでは効果がありません。グループ化された列は常に表示されます。	
+## 機能の統合
 
- 以下の機能は現在サポート**されません**。	
-- 列移動 	
-- 複数列ヘッダー	
-- Excel へエクスポート	
-- 集計	
+複数行レイアウトのレンダリング方法は全く異なるため、列固定や列非表示など一部の列機能は `igx-column-layout` コンポーネントでのみ機能します。その他の機能ソートとグループ化などは、`igx-column` コンポーネントで同じように機能します。
+- フィルタリング - Excel スタイルのフィルタリングのみがサポートされています。`filterMode` を `FilterMode.quickFilter` に明示的に設定しても効果はありません。
+- ページング - 表示行ではなくレコードで機能します。
+- グループ化 - `hideGroupedColumns` オプションは、複数行レイアウトでは効果がありません。グループ化された列は常に表示されます。
 
-## キーボード ナビゲーション	
+ 以下の機能は現在サポート**されません**。
+- 列移動  
+- 複数列ヘッダー
+- Excel へエクスポート
+- 集計
+
+## キーボード ナビゲーション
 
 複数行レイアウトを持つ IgxGridComponent は、ビルトインのキーボード ナビゲーションを提供します。
 
 ### 水平ナビゲーション
-* <Kbd>左矢印</kbd>または<kbd>右矢印</kbd>は、現在行内の左右に隣接するセルに移動します。定義されている列レイアウトの影響を受けません。現在のセルが複数の行にまたがる場合は、他の隣接するセルへ移動した場合を除き、<kbd>左矢印</kbd>と<kbd>右矢印</kbd>は、同じ `rowStart` で左右の最初のセルに移動します。ナビゲーションはナビゲーション開始セルを格納し、可能であれば同じ `rowStart` を持つセルに移動します。
-* <kbd>Ctrl</kbd> + <kbd>左矢印</kbd> (<kbd>HOME</kbd>) または <kbd>Ctrl</kbd> + <kbd>右矢印</kbd> (<kbd>END</kbd>) - 行の先頭または末尾に移動し、ナビゲーション開始セルに従ってセルを選択します。
+
+- <Kbd>左矢印</kbd>または<kbd>右矢印</kbd>は、現在行内の左右に隣接するセルに移動します。定義されている列レイアウトの影響を受けません。現在のセルが複数の行にまたがる場合は、他の隣接するセルへ移動した場合を除き、<kbd>左矢印</kbd>と<kbd>右矢印</kbd>は、同じ `rowStart` で左右の最初のセルに移動します。ナビゲーションはナビゲーション開始セルを格納し、可能であれば同じ `rowStart` を持つセルに移動します。
+- <kbd>Ctrl</kbd> + <kbd>左矢印</kbd> (<kbd>HOME</kbd>) または <kbd>Ctrl</kbd> + <kbd>右矢印</kbd> (<kbd>END</kbd>) - 行の先頭または末尾に移動し、ナビゲーション開始セルに従ってセルを選択します。
 
 
 ### 垂直ナビゲーション
-* <kbd>上矢印</kbd> または <kbd>下矢印</kbd> - 開始位置に対して上下のセルに移動し、行の影響は受けません。現在のセルが複数の列にまたがる場合は、次のアクティブ セルがナビゲーション開始セルに従って選択されます。
-* <kbd>Ctrl</kbd> + 上矢印</kbd>または<kbd>Ctrl</kbd> + <kbd>Down</kbd> - 最初の行または最後の行の同じ列に移動してフォーカスを適用します。 
-* <kbd>Ctrl</kbd> + <kbd>Home</kbd> または <kbd>Ctrl</kbd> + <kbd>End</kbd> - 最初の行に移動して最初のセルに移動するか、最後のセルに移動します。最後のセルに移動してフォーカスを合わせます。
-	
-	
+
+- <kbd>上矢印</kbd> または <kbd>下矢印</kbd> - 開始位置に対して上下のセルに移動し、行の影響は受けません。現在のセルが複数の列にまたがる場合は、次のアクティブ セルがナビゲーション開始セルに従って選択されます。
+- <kbd>Ctrl</kbd> + 上矢印</kbd>または<kbd>Ctrl</kbd> + <kbd>Down</kbd> - 最初の行または最後の行の同じ列に移動してフォーカスを適用します。
+- <kbd>Ctrl</kbd> + <kbd>Home</kbd> または <kbd>Ctrl</kbd> + <kbd>End</kbd> - 最初の行に移動して最初のセルに移動するか、最後のセルに移動します。最後のセルに移動してフォーカスを合わせます。
+
+
 > [!Note]
 > 複数の行または列にわたるセルを介したナビゲーションは、ナビゲーション開始セルに従って行われ、反対方向のキーを使用して開始セルに戻ることができます。グループ行を移動するときにも同じ方法が使用されます。
 
@@ -103,8 +107,8 @@ _language: ja
 ### デモ
 
 
-<code-view style="height:605px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:605px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-mrl-custom-navigation/" >
 </code-view>
 
@@ -113,13 +117,13 @@ _language: ja
 
 列レイアウトを構成するときに、適切な [`colStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colStart)  および [`colEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#colEnd)、または [`rowStart`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowStart) および [`rowEnd`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#rowEnd) を計算して設定するのが難しい場合があります。特に 1 つのレイアウトに多数の列がある場合などですが、適用時のプレビューを簡単に確認するためにコンフィギュレーターを使用できます。以下の操作が可能です。
 
-* 設定全体の行数を設定します。すべてのレイアウトは同じ行数である必要があります。
-* `レイアウトの追加` チップをクリックするか、レイアウトチップを左右にドラッグしてソートします。
-* 各レイアウトに特定の設定を列数と幅に合わせて設定します。設定は現在選択されているレイアウトを参照します。
-* レイアウト プレビューで列セルのサイズを変更して、より多くの列/行にまたがるようにしたり、`削除`ボタンを使用して列セルを消去したりできます。
-* プレビューで列チップをドラッグして列を設定します。
-* `列の追加`チップを使用して新しい列を追加/削除します。
-* [`NgForOf`](https://angular.io/api/common/NgForOf) を使用してテンプレート内で使用および解析できる JSON 表現または igxGrid 内に配置できるように構成全体のテンプレート出力を取得します。
+- 設定全体の行数を設定します。すべてのレイアウトは同じ行数である必要があります。
+- `レイアウトの追加` チップをクリックするか、レイアウトチップを左右にドラッグしてソートします。
+- 各レイアウトに特定の設定を列数と幅に合わせて設定します。設定は現在選択されているレイアウトを参照します。
+- レイアウト プレビューで列セルのサイズを変更して、より多くの列/行にまたがるようにしたり、`削除`ボタンを使用して列セルを消去したりできます。
+- プレビューで列チップをドラッグして列を設定します。
+- `列の追加`チップを使用して新しい列を追加/削除します。
+- [`NgForOf`](https://angular.io/api/common/NgForOf) を使用してテンプレート内で使用および解析できる JSON 表現または igxGrid 内に配置できるように構成全体のテンプレート出力を取得します。
 
 デフォルトでは、前のサンプルと同じ列を設定していますが、目的の設定に合わせて消去して設定することもできます。
 
@@ -128,11 +132,13 @@ _language: ja
 </div>
 
 ## スタイル設定
-igxGrid を使用すると、[`Ignite UI for Angular テーマ ライブラリ`](../themes/sass/component-themes.md)でスタイルを設定できます。[`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。 
+
+igxGrid を使用すると、[`Ignite UI for Angular テーマ ライブラリ`](../themes/sass/component-themes.md)でスタイルを設定できます。[`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。
 
 以下は、グリッドの複数行レイアウト スタイルをカスタマイズする手順です。
 
 ### グローバル テーマのインポート
+
 複数行レイアウト機能のカスタマイズは、すべてのスタイリング機能とミックスインが配置されている `index` ファイルをインポートする必要があります。
 
 ```scss
@@ -143,7 +149,8 @@ igxGrid を使用すると、[`Ignite UI for Angular テーマ ライブラリ`]
 ```
 
 ### カスタム テーマの定義
-次に、[`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) を拡張し、必要に応じて機能レイアウトをカスタマイズするために必要なパラメーターを受け取る新しいテーマを作成します。   
+
+次に、[`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) を拡張し、必要に応じて機能レイアウトをカスタマイズするために必要なパラメーターを受け取る新しいテーマを作成します。
 
 ```scss
 $custom-theme: grid-theme(
@@ -156,12 +163,13 @@ $custom-theme: grid-theme(
   $sorted-header-icon-color: #ffcd0f,
   $sortable-header-icon-hover-color: #e9bd0d
 );
-```    
+```
 
 >[!NOTE]
 >上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/palettes#function-palette) および [`color`]({environment:sassApiUrl}/palettes#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックをご覧ください。
 
 ### カスタム テーマの適用
+
 テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。
 
 ```scss
@@ -175,9 +183,9 @@ $custom-theme: grid-theme(
 ### デモ
 
 
-<code-view style="height:755px" 
+<code-view style="height:755px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout-styling/" >
 </code-view>
 
@@ -186,26 +194,28 @@ $custom-theme: grid-theme(
 
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
-* [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
-* [IgxColumnLayoutComponent]({environment:angularApiUrl}/classes/igxcolumnlayoutcomponent.html)
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+- [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxColumnLayoutComponent]({environment:angularApiUrl}/classes/igxcolumnlayoutcomponent.html)
+- [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 <div class="divider--half"></div>
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [@@igComponent 概要](@@igMainTopic.md)
-* [仮想化とパフォーマンス](virtualization.md)
-* [ページング](paging.md)
-* [ソート](sorting.md)
-* [列のサイズ変更](column-resizing.md)
-* [選択](selection.md)
+- [@@igComponent 概要](@@igMainTopic.md)
+- [仮想化とパフォーマンス](virtualization.md)
+- [ページング](paging.md)
+- [ソート](sorting.md)
+- [列のサイズ変更](column-resizing.md)
+- [選択](selection.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

@@ -2,11 +2,12 @@
 title: Angular Hierarchical Data Grid | Material Table | Ignite UI for Angular | Infragistics
 _description: Learn how to use Ignite UI for Angular data grid, based on Angular Table and create a touch-responsive angular component with variety of angular events.
 _keywords: angular hierarchical data grid, angular hierarchical table, angular hierarchical data grid component, angular hierarchical table component, angular UI components, igniteui for angular, infragistics
+_license: commercial
 ---
 
 # Angular Hierarchical Data Grid Component Overview
 
-The Ignite UI for Angular Hierarchical Data Grid is used to display and manipulate hierarchical tabular data. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating, column moving, column pinning, export to Excel and CSV, and more. The Hierarchical Grid builds upon the Flat Grid Component and extends its functionality by allowing the users to expand or collapse the rows of the parent grid, revealing corresponding child grids, when more detailed information is needed.
+The Ignite UI for Angular Hierarchical Data Grid is used to display and manipulate hierarchical tabular data. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating, column moving, column pinning, export to Excel, CSV and PDF and more. The Hierarchical Grid builds upon the Flat Grid Component and extends its functionality by allowing the users to expand or collapse the rows of the parent grid, revealing corresponding child grids, when more detailed information is needed.
 
 ## Angular Hierarchical Data Grid Example
 
@@ -14,7 +15,7 @@ In this angular grid example you can see how users can visualize hierarchical se
 
 <code-view style="height:520px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing" alt="Angular Hierarchical Data Grid Example">
+           iframe-src="{environment:lobDemosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing/" alt="Angular Hierarchical Data Grid Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -37,7 +38,7 @@ The next step is to import the `IgxHierarchicalGridModule` in your **app.module.
 ```typescript
 // app.module.ts
 
-import { IgxHierarchicalGridModule } from 'igniteui-angular';
+import { IgxHierarchicalGridModule } from 'igniteui-angular/grids/hierarchical-grid';
 // import { IgxHierarchicalGridModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -55,7 +56,7 @@ Alternatively, as of `16.0.0` you can import the `IgxHierarchicalGridComponent` 
 ```typescript
 // home.component.ts
 
-import { IGX_HIERARCHICAL_GRID_DIRECTIVES } from 'igniteui-angular';
+import { IGX_HIERARCHICAL_GRID_DIRECTIVES } from 'igniteui-angular/grids/hierarchical-grid';
 // import { IGX_HIERARCHICAL_GRID_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

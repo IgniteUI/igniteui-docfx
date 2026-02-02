@@ -2,6 +2,7 @@
 title: Using the Query Builder Model
 _description: Angular Query Builder provides a serializable/deserializable JSON format model, making it easy to build SQL queries. Try it now.
 _keywords: Angular Query Builder component, Angular Query Builder control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
+_license: commercial
 ---
 
 # Using the Query Builder Model
@@ -15,7 +16,7 @@ This Angular Query Builder example demonstrates how the [`IgxQueryBuilderCompone
 <code-view style="height:700px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-request-sample" >
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-request-sample/" >
 </code-view>
 
 ## Query Builder Model
@@ -225,7 +226,7 @@ Now we can set the `expressionsTree` property of the `IgxQueryBuilderComponent` 
 <code-view style="height:700px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-sql-sample" >
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-sql-sample/" >
 </code-view>
 
 ## API References

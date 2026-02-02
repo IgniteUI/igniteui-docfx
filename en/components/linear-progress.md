@@ -1,7 +1,8 @@
 ---
-title: Angular Linear Progress Component
+title: Angular Linear Progress Component - MIT license 
 _description: Display a progress bar and customize its appearance with endless color and striping options with Ignite UI for Angular Linear Progress Bar component.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Angular Linear Progress component, Angular Linear Progress control
+_license: MIT
 ---
 
 # Angular Linear Progress Component Overview
@@ -33,7 +34,7 @@ The next step is to import the `IgxProgressBarModule` in the **app.module.ts** f
 // app.module.ts
 
 ...
-import { IgxProgressBarModule } from 'igniteui-angular';
+import { IgxProgressBarModule } from 'igniteui-angular/progressbar';
 // import { IgxProgressBarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -49,7 +50,7 @@ Alternatively, as of `16.0.0` you can import the `IgxLinearProgressBarComponent`
 ```typescript
 // home.component.ts
 
-import { IGX_LINEAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular';
+import { IGX_LINEAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular/progressbar';
 // import { IGX_LINEAR_PROGRESS_BAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -165,7 +166,7 @@ Let's update our previous sample by using the aforementioned text properties. We
 And do not forget to import the [`IgxTextAlign`]({environment:angularApiUrl}/enums/igxtextalign.html) enumerator in your component if you're using the `textAlign` property.
 
 ```typescript
-import { ..., IgxTextAlign } from 'igniteui-angular';
+import { ..., IgxTextAlign } from 'igniteui-angular/progressbar';
 // import { ..., IgxTextAlign } from '@infragistics/igniteui-angular'; for licensed package
 ...
 

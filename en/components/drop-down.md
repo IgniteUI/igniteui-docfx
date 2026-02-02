@@ -1,7 +1,8 @@
 ---
-title: Angular Drop Down Component –  Ignite UI For Angular
+title: Angular Drop Down Component –  Ignite UI For Angular - MIT license 
 _description: Add interactivity and see styling options to a scrollable list of items in your app. Get started using the Drop Down Component in Ignite UI for Angular now.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Angular Drop Down component, Angular Drop Down control
+_license: MIT
 ---
 
 # Angular Drop Down Component Overview
@@ -35,7 +36,7 @@ The next step is to import the `IgxDropDownModule` in your **app.module.ts** fil
 // app.module.ts
 
 ...
-import { IgxDropDownModule } from 'igniteui-angular';
+import { IgxDropDownModule } from 'igniteui-angular/drop-down';
 // import { IgxDropDownModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -52,7 +53,9 @@ Alternatively, as of `16.0.0` you can import the `IgxDropDownComponent` as a sta
 // home.component.ts
 
 import { NgFor } from '@angular/common';
-import { IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective } from 'igniteui-angular';
+import { IGX_DROP_DOWN_DIRECTIVES } from 'igniteui-angular/drop-down';
+import { IgxToggleActionDirective } from 'igniteui-angular/directives';
+import { IgxButtonDirective } from 'igniteui-angular/directives';
 // import { IGX_DROP_DOWN_DIRECTIVES, IgxToggleActionDirective, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

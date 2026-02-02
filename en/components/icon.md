@@ -1,7 +1,8 @@
 ---
-title: Angular Icon Component – Ignite UI for Angular | Infragistics
+title: Angular Icon Component – Ignite UI for Angular | Infragistics | MIT license
 _description: Developers can unify and use various icon and font sets interchangeably with custom colors and more with Ignite UI for Angular Icon component.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Icon components, Angular Icon controls
+_license: MIT
 ---
 
 # Angular Icon Component Overview
@@ -32,7 +33,7 @@ The next step is to import the `IgxIconModule` in your **app.module.ts** file.
 ```typescript
 // app.module.ts
 
-import { IgxIconModule } from 'igniteui-angular';
+import { IgxIconModule } from 'igniteui-angular/icon';
 // import { IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -50,7 +51,7 @@ Alternatively, as of `16.0.0` you can import the `IgxIconComponent` as a standal
 ```typescript
 // home.component.ts
 
-import { IgxIconComponent } from 'igniteui-angular';
+import { IgxIconComponent } from 'igniteui-angular/icon';
 // import { IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

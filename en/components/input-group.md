@@ -1,7 +1,8 @@
 ---
-title: Angular Input Group Component | Ignite UI for Angular
+title: Angular Input Group Component | Ignite UI for Angular | MIT license
 _description: The Input Group component in Ignite UI for Angular allows for easy-to-use and aesthetic forms, simplicity with inputting data, and provides mitigation for handling validation and errors.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Native Angular Components, Angular Label component, Angular Label control, Angular Input component, Angular Input control, Input component, Input control, Label component, Label control, Angular Input Group component, Angular Input Group control, Angular Input directive, Angular Label directive, Angular Forms, Angular Reactive Forms, Angular Form Validation
+_license: MIT
 ---
 
 # Angular Input Group Component Overview
@@ -35,7 +36,7 @@ Note that the `IgxInputGroupComponent` also depends on the Angular **FormsModule
 // app.module.ts
 
 import { FormsModule } from '@angular/forms';
-import { IgxInputGroupModule } from 'igniteui-angular';
+import { IgxInputGroupModule } from 'igniteui-angular/input-group';
 // import { IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 
@@ -53,7 +54,8 @@ Alternatively, as of `16.0.0` you can import the `IgxInputGroupComponent` as a s
 // home.component.ts
 
 import { FormsModule } from '@angular/forms';
-import { IGX_INPUT_GROUP_DIRECTIVES, IgxIconComponent } from 'igniteui-angular';
+import { IGX_INPUT_GROUP_DIRECTIVES } from 'igniteui-angular/input-group';
+import { IgxIconComponent } from 'igniteui-angular/icon';
 // import { IGX_INPUT_GROUP_DIRECTIVES, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -781,7 +783,7 @@ The last step is to include the newly created theme:
 @include css-vars($custom-input-group);
 ```
 
-### Demo
+In the sample below, you can see how using the input group with customized CSS variables allows you to create a design that visually resembles the one used in the [`Carbon`](https://carbondesignsystem.com/components/text-input/usage/#live-demo) design system.
 
 <code-view style="height:230px"
            no-theming
@@ -789,6 +791,8 @@ The last step is to include the newly created theme:
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-style/" >
 </code-view>
 
+>[!NOTE]
+>The sample uses the [Indigo Light](themes/sass/schemas.md#predefined-schemas) schema.
 >[!NOTE]
 >If your page includes multiple types of input groups — such as `box`, `border`, `line`, or `search` — it's best to scope your theme variables to the specific input group type.
 <br>For example:<br>

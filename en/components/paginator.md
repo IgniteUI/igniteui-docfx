@@ -1,7 +1,8 @@
 ---
-title: Angular Paginator Example – Ignite UI for Angular
+title: Angular Paginator Example – Ignite UI for Angular - MIT license 
 _description: Configure Angular pagination and create custom pages in the Angular table, or other iterable UI collection, by Ignite UI, get data for the requested pages with variety of angular events.
 _keywords: angular paginator, angular paginator component, angular ui components, igniteui for angular, infragistics
+_license: MIT
 ---
 
 # Angular Paginator Component Overview
@@ -38,7 +39,7 @@ The next step is to import the `IgxPaginatorModule` in the **app.module.ts** fil
 ```typescript
 // app.module.ts
 
-import { IgxPaginatorModule } from 'igniteui-angular';
+import { IgxPaginatorModule } from 'igniteui-angular/paginator';
 // import { IgxPaginatorModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -56,7 +57,8 @@ Alternatively, as of `16.0.0` you can import the `IgxPaginatorComponent` as a st
 
 import { NgFor } from '@angular/common';
 import { HammerModule } from '@angular/platform-browser';
-import { IGX_PAGINATOR_DIRECTIVES, IGX_LIST_DIRECTIVES } from 'igniteui-angular';
+import { IGX_PAGINATOR_DIRECTIVES } from 'igniteui-angular/paginator';
+import { IGX_LIST_DIRECTIVES } from 'igniteui-angular/list';
 // import { IGX_PAGINATOR_DIRECTIVES, IGX_LIST_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -149,7 +151,7 @@ With only a few lines of code you can easily localize all strings part of the Pa
 **Step 1** - Import `IPaginatorResourceStrings` interface and [changei18n]({environment:angularApiUrl}/#changei18n) function:
 
 ```ts
-import { IPaginatorResourceStrings, changei18n } from "igniteui-angular";
+import { IPaginatorResourceStrings, changei18n } from "igniteui-angular/core";
 ```
 
 **Step 2** - Define the Paging resource strings:

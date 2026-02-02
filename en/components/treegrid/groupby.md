@@ -2,6 +2,7 @@
 title: Angular Tree Grid Group By | Group by multiple fields | Infragistics
 _description: Configure angular group by that allows visualizing of data records in Angular table, visualize the grouped data in separate and convenient column group.
 _keywords: angular group by, igniteui for angular, infragistics
+_license: commercial
 ---
 
 # Angular Tree Grid Group By
@@ -50,7 +51,7 @@ The component's inputs are the following:
 
 <code-view style="height:850px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs" alt="Angular Tree Grid Group By Example">
+           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs/" alt="Angular Tree Grid Group By Example">
 </code-view>
 
 <div class="divider--half"></div>

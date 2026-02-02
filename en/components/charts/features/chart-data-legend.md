@@ -2,6 +2,7 @@
 title: Angular Chart Data Legend | Data Visualization Tools | Infragistics
 _description: Use Infragistics Ignite UI for Angular chart with the data legend!
 _keywords: Angular charts, chart legend, legend, legend types, Ignite UI for Angular, Infragistics
+_license: commercial
 mentionedTypes: ["XamCategoryChart", "XamDataLegend", "Series", "DataLegendSummaryType", "DataAbbreviationMode" ]
 namespace: Infragistics.Controls.Charts
 ---
@@ -76,7 +77,7 @@ The unit column displays an abbreviation symbol on the right side of value colum
 
 ### Customizing Columns
 
-You can customize text displayed in the **Label** and **Unit** columns using  properties that end with **MemberAsLegendLabel** and **MemberAsLegendUnit**  on each series. The following table shows some possible customizations of the **Label** and **Unit** columns.
+You can customize text displayed in the **Label** and **Unit** columns using  properties that end with **MemberAsLegendLabel** and **MemberAsLegendUnit** on each series. The following table shows some possible customizations of the **Label** and **Unit** columns.
 
 |  Type of Series | Series Properties |
 | ------|---- |

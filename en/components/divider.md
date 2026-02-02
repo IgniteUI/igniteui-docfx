@@ -1,7 +1,8 @@
 ---
-title: Angular Divider Component
+title: Angular Divider Component - MIT license 
 _description: Ignite UI for Angular Divider component enables users to separate content both horizontally and vertically.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library, Angular Divider component, Angular Divider directive, Angular Divider control
+_license: MIT
 ---
 
 # Angular Divider Component Overview
@@ -34,7 +35,7 @@ The next step is to import the `IgxDividerModule` in your **app.module.ts** file
 // app.module.ts
 
 ...
-import { IgxDividerModule } from 'igniteui-angular';
+import { IgxDividerModule } from 'igniteui-angular/directives';
 // import { IgxDividerModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -50,7 +51,7 @@ Alternatively, as of `16.0.0` you can import the `IgxDividerDirective` as a stan
 ```typescript
 // home.component.ts
 
-import { IgxDividerDirective } from 'igniteui-angular';
+import { IgxDividerDirective } from 'igniteui-angular/directives';
 // import { IgxDividerDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

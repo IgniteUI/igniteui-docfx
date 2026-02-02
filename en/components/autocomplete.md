@@ -1,7 +1,8 @@
 ---
-title: Angular Autocomplete Component – Ignite UI for Angular
+title: Angular Autocomplete Component – Ignite UI for Angular - MIT license 
 _description: The Angular Autocomplete directive offers a way to enhance a text input by showing a panel of suggested options provided by the developer. Try it now.
 _keywords: Angular Autocomplete component, Angular Autocomplete directive, Angular Autocomplete control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
+_license: MIT
 ---
 
 # Angular Autocomplete Directive Overview
@@ -40,11 +41,8 @@ The next step is to import the **IgxAutocompleteModule** and **IgxDropDownModule
 // app.module.ts
 
 ...
-import { 
-    IgxAutocompleteModule,
-    IgxDropDownModule, 
-    IgxInputGroupModule 
-} from 'igniteui-angular';
+import { IgxAutocompleteModule, IgxDropDownModule } from 'igniteui-angular/drop-down';
+import { IgxInputGroupModule } from 'igniteui-angular/input-group';
 // import { IgxAutocompleteModule, IgxDropDownModule, IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -67,7 +65,8 @@ Alternatively, as of `16.0.0` you can import the `IgxAutocompleteDirective` as a
 // home.component.ts
 
 ...
-import { IgxAutocompleteDirective, IGX_INPUT_GROUP_DIRECTIVES, IGX_DROP_DOWN_DIRECTIVES } from 'igniteui-angular';
+import { IgxAutocompleteDirective, IGX_DROP_DOWN_DIRECTIVES } from 'igniteui-angular/drop-down';
+import { IGX_INPUT_GROUP_DIRECTIVES } from 'igniteui-angular/input-group';
 // import { IgxAutocompleteDirective, IGX_INPUT_GROUP_DIRECTIVES, IGX_DROP_DOWN_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

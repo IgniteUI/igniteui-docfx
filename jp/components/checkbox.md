@@ -1,16 +1,19 @@
 ---
-title: Angular Checkbox コンポーネント
+title: Angular Checkbox コンポーネント - MITライセンス
 _description: Ignite UI for Angular Checkbox コンポーネントは、特定の条件のバイナリ選択を許可する選択コントロールです。今すぐお試しください。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Checkbox コンポーネント, Angular Checkbox コントロール
+_license: MIT
 _language: ja
 ---
 
 # Angular Checkbox (チェックボックス) コンポーネントの概要
+
 <p class="highlight">Angular Checkbox は、標準の HTML 入力タイプのチェックボックスの拡張であり、同様の機能を提供しますが、アニメーションや Material Design のスタイル設定などでのみ強化されています。これにより、ユーザーは主にフォームや調査で、1 つまたは複数の事前定義されたオプションを選択できます。
 
 Ignite UI for Angular Checkbox コンポーネントは、特定の条件のバイナリ選択を可能にする選択コントロールです。ネイティブ ブラウザーのチェックボックスと同様に動作します。提供される機能には、スタイル設定オプション、テーマ、チェック状態、チェックなし状態、不確定状態などがあります。</p>
 
 ## Angular Checkbox の例
+
 以下の Angular Checkbox の例で、実際のチェックボックスを参照してください。
 
 <code-view style="height: 100px"
@@ -35,7 +38,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 ```typescript
 // app.module.ts
 
-import { IgxCheckboxModule } from 'igniteui-angular';
+import { IgxCheckboxModule } from 'igniteui-angular/checkbox';
 // import { IgxCheckboxModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -51,7 +54,7 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IgxCheckboxComponent } from 'igniteui-angular';
+import { IgxCheckboxComponent } from 'igniteui-angular/checkbox';
 // import { IgxCheckboxComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -71,6 +74,7 @@ export class HomeComponent {}
 Ignite UI for Angular Checkbox モジュールまたはコンポーネントをインポートしたので、`igx-checkbox` コンポーネントの使用を開始できます。
 
 ## Angular Checkbox コンポーネントの使用
+
 デモのチェックボックスを作成するには、コンポーネントのテンプレートで以下のコードを追加します。
 
 ```html
@@ -80,8 +84,10 @@ Ignite UI for Angular Checkbox モジュールまたはコンポーネントを�
 ```
 
 ### Checkbox プロパティ
+
 チェックボックス プロパティをデータにバインドし、上記のコードを拡張します。たとえば、description および done の 2 つのプロパティを持つタスク オブジェクトの配列がある場合では、チェックボックス コンポーネントの [`checked`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#checked) プロパティをその元となるタスク オブジェクトの done プロパティにバインドできます。同様に、[`value`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#value) プロパティを description にバインドします。
 オプションに [`change`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html#change) イベントをバインドし、イベント ハンドラー メソッドでカスタム ロジックを追加できます。
+
 ```typescript
 // tasks.component.ts
 @Component({...})
@@ -343,7 +349,7 @@ $custom-checkbox-theme: checkbox-theme(
 @include css-vars($custom-checkbox-theme);
 ```
 
-### デモ
+以下のサンプルでは、カスタマイズした CSS 変数を使用したチェックボックス コンポーネントが、[`SAP UI5`](https://ui5.sap.com/#/entity/sap.m.CheckBox/sample/sap.m.sample.CheckBox) デザイン システムのチェックボックスに視覚的に似たデザインを実現している様子を確認できます。
 
 <code-view style="height: 100px"
            no-theming
@@ -364,6 +370,7 @@ $custom-checkbox-theme: checkbox-theme(
 ```
 
 ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
 - `light-*` クラスはライト テーマ用です。
 - `dark-*` クラスはダーク テーマ用です。
 - プレフィックスの後にコンポーネント名を追加します (例: `light-checkbox`、`dark-checkbox`)。
@@ -394,19 +401,22 @@ class="!light-checkbox
 <div class="divider--half"></div>
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
-* [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
-* [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/themes#function-checkbox-theme)
-* [LabelPosition]({environment:angularApiUrl}/enums/labelposition.html)
+- [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
+- [IgxCheckboxComponent スタイル]({environment:sassApiUrl}/themes#function-checkbox-theme)
+- [LabelPosition]({environment:angularApiUrl}/enums/labelposition.html)
 
 ## テーマの依存関係
-* [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-riple-theme)
+
+- [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-riple-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

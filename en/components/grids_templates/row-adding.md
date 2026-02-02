@@ -1,20 +1,20 @@
-<!-- markdownlint-disable MD003 MD024 -->
+<!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if(igxName==='IgxGrid') {
 ---
-
 title: Adding Rows in Angular Data Grid - Ignite UI for Angular
 _description: Learn how to use and customize the built-in row adding functionality with Ignite UI for Angular. CRUD capabilities and Intuitive grid row adding. See examples!
 _keywords: row adding, igniteui for angular, infragistics
+_license: commercial
 ---
 
 }
 
 @@if(igxName!=='IgxGrid') {
 ---
-
 title: Adding Rows in Angular @@igComponent - Ignite UI for Angular
 _description: Learn how to use and customize the built-in row adding functionality with Ignite UI for Angular. CRUD capabilities and Intuitive grid row adding. See examples!
 _keywords: row adding, igniteui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/row-adding
 ---
 

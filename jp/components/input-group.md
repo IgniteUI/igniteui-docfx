@@ -1,7 +1,8 @@
 ---
-title: Input Group コンポーネント - ネイティブ Angular | Ignite UI for Angular
+title: Input Group コンポーネント - ネイティブ Angular | Ignite UI for Angular | MITライセンス
 _description: Ignite UI for Angular Input Group は、データ入力のための使いやすいフォーム、さらに検証およびエラー処理などの機能も提供します。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Label コンポーネント, Angular Label コントロール, Angular Input Group コンポーネント, Angular Input Group コントロール, Angular Input コンポーネント, Angular Input コントロール, Input コンポーネント, Input コントロール, Label コンポーネント, Label コントロール, Angular Input ディレクティブ, Angular Label ディレクティブ, Angular Forms, Angular Reactive Forms, Angular フォームの検証
+_license: MIT
 _language: ja
 ---
 
@@ -36,7 +37,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 import { FormsModule } from '@angular/forms';
-import { IgxInputGroupModule } from 'igniteui-angular';
+import { IgxInputGroupModule } from 'igniteui-angular/input-group';
 // import { IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 
@@ -54,7 +55,8 @@ export class AppModule {}
 // home.component.ts
 
 import { FormsModule } from '@angular/forms';
-import { IGX_INPUT_GROUP_DIRECTIVES, IgxIconComponent } from 'igniteui-angular';
+import { IGX_INPUT_GROUP_DIRECTIVES } from 'igniteui-angular/input-group';
+import { IgxIconComponent } from 'igniteui-angular/icon';
 // import { IGX_INPUT_GROUP_DIRECTIVES, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -137,6 +139,7 @@ Ignite UI for Angular Input Group モジュールまたはディレクティブ�
 入力グループのスタイルは、[`igxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) コンポーネントの [`type`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html#type) プロパティを使用して変更できます。サポートされている入力グループ コンポーネントは、`line` (タイプが指定されていない場合のデフォルト)、`border`、`box` および `search` です。`line`、`border` および `box` タイプは、マテリアル デザイン テーマ専用に作成されています。これらのタイプを他のテーマで設定しても、入力グループの外観には影響しません。
 
 特定の型を宣言的に設定する例:
+
 ```html
 <igx-input-group type="border">
 ```
@@ -274,6 +277,7 @@ constructor(fb: FormBuilder) {
     });
 }
 ```
+
 ```html
 <form [formGroup]="registrationForm">
     <igx-input-group>
@@ -308,6 +312,7 @@ public get password() {
     return this.registrationForm.get('password');
 }
 ```
+
 ```html
 <form [formGroup]="registrationForm">
     ...
@@ -779,13 +784,16 @@ $custom-input-group: input-group-theme(
 @include css-vars($custom-input-group);
 ```
 
-### デモ
+以下のサンプルでは、カスタマイズした CSS 変数を使用した入力グループが、[`Carbon`](https://carbondesignsystem.com/components/text-input/usage/#live-demo) デザイン システムの入力グループに視覚的に似たデザインを実現している様子を確認できます。
 
 <code-view style="height:230px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/input-group-style/" >
 </code-view>
+
+> [!NOTE]
+> サンプルでは、[Indigo Light](themes/sass/schemas.md#predefined-schemas) スキーマを使用します。
 
 >[!NOTE]
 >ページ内に `box`、`border`、`line`、`search` といった複数のタイプの input-group が存在する場合は、特定のタイプごとにテーマ変数のスコープを設定するのが最適です。
@@ -810,6 +818,7 @@ search 入力をターゲットにする場合は `.igx-input-group--search` を
 ```
 
 ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
 - `light-*` クラスはライト テーマ用です。
 - `dark-*` クラスはダーク テーマ用です。
 - プレフィックスの後にコンポーネント名を追加します (例: `light-input-group`、`dark-input-group`)。
@@ -850,27 +859,30 @@ search 入力をターゲットにする場合は `.igx-input-group--search` を
 </div>
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
-* [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
-* [IgxHintDirective]({environment:angularApiUrl}/classes/igxhintdirective.html)
-* [IgxInputGroup タイプ]({environment:angularApiUrl}/index.html#IgxInputGroupType)
-* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/themes#function-input-group-theme)
+- [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
+- [IgxHintDirective]({environment:angularApiUrl}/classes/igxhintdirective.html)
+- [IgxInputGroup タイプ]({environment:angularApiUrl}/index.html#IgxInputGroupType)
+- [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+- [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/themes#function-input-group-theme)
 
 ## テーマの依存関係
-* [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
-* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+
+- [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 関連トピック:
 
-* [Label および Input](label-input.md)
-* [リアクティブ フォームの統合](angular-reactive-form-validation.md)
+- [Label および Input](label-input.md)
+- [リアクティブ フォームの統合](angular-reactive-form-validation.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

@@ -1,7 +1,8 @@
 ---
-title: Angular Overlay Service – Ignite UI for Angular | Infragistics
+title: Angular Overlay Service – Ignite UI for Angular | Infragistics | MIT license
 _description: Provides a service which enables developers to position content above all other component/html content of the page. Comes with a robust API allowing for precise configuration of the service.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Overlay Service component
+_license: MIT
 ---
 
 # Overlay
@@ -156,7 +157,7 @@ For example, if we want the content to be positioned relative to an element, we 
 ```typescript
 // my-overlay-component.component.ts
 // import the ConnectedPositioningStategy class
-import { ConnectedPositioningStrategy } from 'igniteui-angular';
+import { ConnectedPositioningStrategy } from 'igniteui-angular/core';
 // import { ConnectedPositioningStrategy } from '@infragistics/igniteui-angular'; for licensed package
 ...
 export class MyOverlayComponent {
@@ -229,7 +230,7 @@ We can modify the previously defined overlay method to not only show but also hi
 ```typescript
 // my-overlay-component.component.ts
 // add an import for the definion of ConnectedPositioningStategy class
-import { ConnectedPositioningStrategy } from 'igniteui-angular';
+import { ConnectedPositioningStrategy } from 'igniteui-angular/core';
 // import { ConnectedPositioningStrategy } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({...})

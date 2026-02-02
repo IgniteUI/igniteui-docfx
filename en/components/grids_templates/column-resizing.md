@@ -1,29 +1,29 @@
-<!-- markdownlint-disable MD003 MD024 -->
+<!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if (igxName === 'IgxGrid') {
 ---
-
 title: Angular Grid Column Resizing - Ignite UI for Angular
 _description: Start using Angular Grid Column Resizing in order to change the grid column width in an instant. Angular drag resizing has never been so easy. Try for free!
 _keywords: grid column resizing, igniteui for angular, infragistics
+_license: commercial
 ---
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-
 title: Angular Tree Grid Column Resizing - Ignite UI for Angular
 _description: Start using Angular Tree Grid Column Resizing in order to change the grid column width in an instant. Angular drag resizing has never been so easy. Try for free!
 _keywords: grid column resizing, igniteui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/column-resizing
 ---
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-
 title: Angular Hierarchical Grid Column Resizing - Ignite UI for Angular
 _description: Start using Angular Hierarchical Grid Column Resizing in order to change the grid column width in an instant. Angular drag resizing has never been so easy. Try for free!
 _keywords: grid column resizing, igniteui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/column-resizing
 ---
 
@@ -57,7 +57,7 @@ With deferred grid column resizing, the user will see a temporary resize indicat
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing" alt="Angular @@igComponent Column Resizing Example">
+           iframe-src="{environment:lobDemosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing/" alt="Angular @@igComponent Column Resizing Example">
 </code-view>
 
 <div class="divider--half"></div>

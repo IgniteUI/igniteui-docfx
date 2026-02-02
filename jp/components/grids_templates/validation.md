@@ -2,10 +2,12 @@
 title: Angular @@igComponent での編集と検証 - インフラジスティックス
 _description: グリッドでユーザーの入力を検証し、Angular @@igComponent の使用中に有効かどうかを通知します。デモと例をお試しください。
 _keywords: angular 検証, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 
 # Angular @@igComponent の編集と検証
+
 @@igComponent の編集は、セル/行の編集時のユーザー入力の組み込み検証メカニズムを公開します。これは [Angular Form 検証](https://angular.io/guide/form-validation)機能を拡張し、既知の機能と簡単に統合できるようにします。エディターの状態が変更されると、視覚的なインジケーターが編集されたセルに適用されます。
 
 ## 構成
@@ -22,30 +24,31 @@ Angular Forms 検証ディレクティブは、`IgxColumn` で直接動作する
 - pattern
 
 列入力が設定され、値がメールとして書式設定されることを検証するには、関連するディレクティブを使用できます。
+
 ```html
 <igx-column [field]="email" [header]="User E-mail" required email></igx-column>
 ```
 
 以下のサンプルは、@@igComponent に組み込み済みの `required`、`email` および `min` 検証ディレクティブを使用する方法を示しています。
 @@if (igxName === 'IgxGrid') {
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-validator-service/" alt="Angular @@igComponent 検証の基本例">
 </code-view>
 
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validator-service/" alt="Angular @@igComponent 検証の基本例">
 </code-view>
 
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<code-view style="height:680px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:680px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validator-service/" alt="Angular @@igComponent 検証の基本例">
 </code-view>
 
@@ -57,23 +60,30 @@ Angular Forms 検証ディレクティブは、`IgxColumn` で直接動作する
 `formGroupCreated` イベントを介して行/セルで編集を開始するときに検証に使用する `FormGroup` を公開します。関連するフィールドに独自の検証を追加して変更できます。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid (formGroupCreated)='formCreateHandler($event)' ...>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid (formGroupCreated)='formCreateHandler($event)' ...>
 ```
+
 }
 
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid (formGroupCreated)='formCreateHandler($event)' ...>
 ```
+
 }
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
+
 ```ts
     public formCreateHandler(args: IGridFormGroupCreatedEventArgs) {
         const formGroup = args.formGroup;
@@ -86,9 +96,11 @@ Angular Forms 検証ディレクティブは、`IgxColumn` で直接動作する
         shippedDateRecord.addValidators(this.pastDateValidator());
     }
 ```
+
 }
 
 @@if (igxName === 'IgxTreeGrid') {
+
 ```ts
    public formCreateHandler(args: IGridFormGroupCreatedEventArgs) {
         const formGroup = args.formGroup;
@@ -96,6 +108,7 @@ Angular Forms 検証ディレクティブは、`IgxColumn` で直接動作する
         hireDateRecord.addValidators([this.futureDateValidator(), this.pastDateValidator()]);
     }
 ```
+
 }
 
 独自の検証関数を作成するか、[組み込みの Angular 検証関数](https://angular.io/guide/form-validation#built-in-validator-functions)を使用できます。
@@ -174,20 +187,26 @@ export class PhoneFormatDirective extends Validators {
 いずれのイベントも引数には [`valid`]({environment:angularApiUrl}/interfaces/IGridEditEventArgs.html#valid) プロパティがあり、これによってキャンセルできます。その使用方法は、[クロス フィールド検証の例](#クロス-フィールドの例)で確認できます。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid (cellEdit)='cellEdit($event)' ...>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid (cellEdit)='cellEdit($event)' ...>
 ```
+
 }
 
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid (cellEdit)='cellEdit($event)' ...>
 ```
+
 }
 
 ```ts
@@ -203,24 +222,24 @@ public cellEdit(evt) {
 以下の例は、上記のカスタマイズ オプションを示しています。
 
 @@if (igxName === 'IgxGrid') {
-<code-view style="height:570px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:570px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-validator-service-extended/" alt="Angular @@igComponent カスタム検証の例">
 </code-view>
 
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-<code-view style="height:570px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:570px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validator-service-extended/" alt="Angular @@igComponent カスタム検証の例">
 </code-view>
 
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-<code-view style="height:640px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:640px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validator-service-extended/" alt="Angular @@igComponent カスタム検証の例">
 </code-view>
 
@@ -346,6 +365,7 @@ public stateMessage(cell: CellType) {
 }
 
 ```
+
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
@@ -443,6 +463,7 @@ public stateMessage(cell: CellType) {
         return messages;
     }
 ```
+
 }
 
 
@@ -542,6 +563,7 @@ public stateMessage(cell: CellType) {
     return messages;
 }
 ```
+
 }
 ### クロス フィールドの例
 
@@ -549,8 +571,8 @@ public stateMessage(cell: CellType) {
 
 以下のサンプルは、クロス フィールド検証の動作を示しています。
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-cross-field-validator-service/" alt="Angular @@igComponent クロス フィールド検証の例">
 </code-view>
 }
@@ -559,8 +581,8 @@ public stateMessage(cell: CellType) {
 
 以下のサンプルは、ルート データと子データの両方について、階層グリッドでのクロス フィールド検証を示しています。
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-cross-field-validation/" alt="Angular @@igComponent クロス フィールド検証の例">
 </code-view>
 }
@@ -568,8 +590,8 @@ public stateMessage(cell: CellType) {
 @@if (igxName === 'IgxTreeGrid') {
 以下のサンプルは、クロス フィールド検証の動作を示しています。
 
-<code-view style="height:620px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:620px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-cross-field-validator-service/" alt="Angular @@igComponent クロス フィールド検証の例">
 </code-view>
 }
@@ -578,7 +600,7 @@ public stateMessage(cell: CellType) {
 
 ## スタイル設定
 
-[Ignite UI for Angular テーマ ライブラリ](../themes/index.md)を使用して、編集時のデフォルトの検証スタイルを変更できます。 
+[Ignite UI for Angular テーマ ライブラリ](../themes/index.md)を使用して、編集時のデフォルトの検証スタイルを変更できます。
 
 以下の例では、検証メッセージの公開されたテンプレートを使用します。ツールチップをポップアウトし、および、検証のデフォルトの外観を変更するためにエラー時の色をオーバーライドします。
 また、無効な行をより明確にするために背景のスタイルを設定します。
@@ -596,13 +618,17 @@ public stateMessage(cell: CellType) {
 ```
 
 ### スタイルを含める
+
 エラーの色を変更するには、css 変数 `--igx-error-500` を使用します。
+
 ```scss
 --igx-error-500: 34, 80%, 63%;
 ```
 
 ### カスタム テンプレート
+
 デフォルトのエラー テンプレートを変更することで、カスタム クラスとスタイルを設定できます。
+
 ```html
 <ng-template igxCellValidationError let-cell='cell' let-defaultErr='defaultErrorTemplate'>
   <div class="validator-container">
@@ -613,8 +639,10 @@ public stateMessage(cell: CellType) {
 ```
 
 ### 無効な行とセルのスタイル
+
 行とセルは、開発者が行またはセルが無効かどうか、およびアクティブなエラーの種類を知るための API を提供します。
 @@if (igxName === 'IgxGrid'){
+
 ```ts
 public rowStyles = {
     background: (row: RowType) => row.validation.status === 'INVALID' ? '#FF000033' : '#00000000'
@@ -627,13 +655,16 @@ public cellStyles = {
   }
 }
 ```
+
 ```html
 <igx-grid [rowStyles]="rowStyles">
   <igx-column field="ReorderLevel" header="ReorderLever" required [cellClasses]="cellStyles">
 ```
+
 }
 
 @@if (igxName === 'IgxHierarchicalGrid'){
+
 ```ts
 public rowStyles = {
     background: (row: RowType) => row.validation.status === 'INVALID' ? '#FF000033' : '#00000000'
@@ -652,6 +683,7 @@ public cellStyles = {
   }
 }
 ```
+
 ```html
 <igx-hierarchical-grid [rowStyles]="rowStyles">
   <igx-column field="Artist" [editable]="true" [dataType]="'string'" required [cellClasses]="cellStyles">
@@ -659,10 +691,12 @@ public cellStyles = {
   <igx-row-island [key]="'Albums'" [rowStyles]="rowStyles">
     <igx-column field="Album" [editable]="true" [dataType]="'string'" required [cellClasses]="cellStyles">
 ```
+
 }
 
 
 @@if (igxName === 'IgxTreeGrid'){
+
 ```ts
 public rowStyles = {
     background: (row: RowType) => row.cells.find(c => c.validation.errors !== null && c.validation.errors !== undefined) ? '#FF000033' : '#00000000'
@@ -675,10 +709,12 @@ public cellStyles = {
   }
 }
 ```
+
 ```html
 <igx-tree-grid [rowStyles]="rowStyles">
   <igx-column *ngFor="let c of columns" [field]="c.field" [dataType]="c.dataType" [header]="c.label" [required]="c.required" [cellClasses]="cellStyles">
 ```
+
 }
 
 
@@ -686,18 +722,18 @@ public cellStyles = {
 
 @@if (igxName === 'IgxGrid'){
 
-<code-view style="height:560px" 
+<code-view style="height:560px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-validation-style/" >
 </code-view>
 }
 
 @@if (igxName === 'IgxHierarchicalGrid'){
 
-<code-view style="height:630px" 
+<code-view style="height:630px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validation-style/" >
 </code-view>
 
@@ -706,9 +742,9 @@ public cellStyles = {
 
 @@if (igxName === 'IgxTreeGrid'){
 
-<code-view style="height:560px" 
+<code-view style="height:560px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validation-style/" >
 </code-view>
 
@@ -719,9 +755,9 @@ public cellStyles = {
 
 ## API リファレンス
 
-* [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+- [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
+- [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+- [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 
 ## 既知の問題と制限
 
@@ -731,15 +767,15 @@ public cellStyles = {
 
 ## その他のリソース
 
-* [igxGrid で CRUD 操作を構築する](../general/how-to/how-to-perform-crud.md)
-* [@@igComponent 概要](@@igMainTopic.md)
-* [@@igComponent 編集](editing.md)
-* [@@igComponent 行編集](row-editing.md)
-* [@@igComponent 行追加](row-adding.md)
-* [@@igComponent トランザクション](batch-editing.md)
+- [igxGrid で CRUD 操作を構築する](../general/how-to/how-to-perform-crud.md)
+- [@@igComponent 概要](@@igMainTopic.md)
+- [@@igComponent 編集](editing.md)
+- [@@igComponent 行編集](row-editing.md)
+- [@@igComponent 行追加](row-adding.md)
+- [@@igComponent トランザクション](batch-editing.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

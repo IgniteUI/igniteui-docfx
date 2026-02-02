@@ -1,8 +1,10 @@
 ---
-title: Angular Star Rating Component – Ignite UI for Angular
+title: Angular Star Rating Component – Ignite UI for Angular - MIT license 
 _description: With Angular Star Rating Component, users can view and provide feedback quickly. You can use the rating component in any angular app and angular forms. Try it Now
 _keywords: Angular Rating component, Angular Rating control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
+_license: MIT
 ---
+
 # Angular Star Rating Overview
 
 Rating in Angular represents a widget enabling users to quickly provide feedback and evaluate a product or a service on a web page by using a star rating system. Simple to use, the component lets developers configure the size and the number of the displayed star rating items.
@@ -65,7 +67,7 @@ With these you can now add the Rating component in an Angular component template
 In Angular forms, components often need to be able to bind their values with `ngModel` or use `formControl` which requires an implementation of Angular's `ControlValueAccessor` interface. Ignite UI for Angular package provides such implementation in the form of a directive that uses an element selector to attach to supported web components. Currently `IgcRating` is the only component that it supports. To use the directive you just need to import `IgcFormsModule` from the library.
 
 ```typescript
-import { IgcFormsModule } from 'igniteui-angular';
+import { IgcFormsModule } from 'igniteui-angular/directives';
 // import { IgcFormsModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -85,7 +87,7 @@ Alternatively, as of `16.0.0` you can import the `IgcFormControlDirective` as a 
 // home.component.ts
 
 import { FormsModule } from '@angular/forms';
-import { IgcFormControlDirective } from 'igniteui-angular';
+import { IgcFormControlDirective } from 'igniteui-angular/directives';
 // import { IgcFormControlDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

@@ -1,7 +1,8 @@
 ---
-title: Angular Tree Component - Ignite UI for Angular
+title: Angular Tree Component - Ignite UI for Angular | MIT license
 _description: With Ignite UI for Angular Tree component, you can display hierarchical data in a tree-view structure, customize nodes easily and load data on demand. Try for FREE
 _keywords: angular tree, angular tree component, angular tree view, angular tree view component, angular ui components, ignite ui for angular, UI controls, infragistics
+_license: MIT
 ---
 <style type="text/css">
     code-view .codesandbox-btn {
@@ -40,7 +41,7 @@ The next step is to import the `IgxTreeModule` in your app.module file.
 // app.module.ts
 
 ...
-import { IgxTreeModule } from 'igniteui-angular';
+import { IgxTreeModule } from 'igniteui-angular/tree';
 // import { IgxTreeModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -56,7 +57,7 @@ Alternatively, as of `16.0.0` you can import the `IgxTreeComponent` as a standal
 ```typescript
 // home.component.ts
 
-import { IGX_TREE_DIRECTIVES } from 'igniteui-angular';
+import { IGX_TREE_DIRECTIVES } from 'igniteui-angular/tree';
 // import { IGX_TREE_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

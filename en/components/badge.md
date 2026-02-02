@@ -1,7 +1,8 @@
 ---
-title: Angular Badge Component – Ignite UI for Angular | Infragistics
+title: Angular Badge Component – Ignite UI for Angular | Infragistics | MIT license
 _description: Display an active count or icon in a predefined style to decorate other components anywhere in an application with Ignite UI for Angular Badge control.
-_keywords: Angular Badge component, Angular Badge control, Ignite UI for Angular, Angular UI Components 
+_keywords: Angular Badge component, Angular Badge control, Ignite UI for Angular, Angular UI Components
+_license: MIT 
 ---
 
 # Angular Badge Component Overview
@@ -33,7 +34,7 @@ The next step is to import the `IgxBadgeModule` in your **app.module.ts** file.
 // app.module.ts
 
 ...
-import { IgxBadgeModule } from 'igniteui-angular';
+import { IgxBadgeModule } from 'igniteui-angular/badge';
 // import { IgxBadgeModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -50,7 +51,7 @@ Alternatively, as of `16.0.0` you can import the `IgxBadgeComponent` as a standa
 // home.component.ts
 
 ...
-import { IgxBadgeComponent } from 'igniteui-angular';
+import { IgxBadgeComponent } from 'igniteui-angular/badge';
 // import { IgxBadgeComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -72,7 +73,8 @@ Let's see how the demo sample is done. It's a simple success badge on an avatar.
 ```typescript
 // app.module.ts
 ...
-import { IgxBadgeModule, IgxAvatarModule } from 'igniteui-angular';
+import { IgxBadgeModule } from 'igniteui-angular/badge';
+import { IgxAvatarModule } from 'igniteui-angular/avatar';
 // import {  IgxBadgeModule, IgxAvatarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -160,6 +162,15 @@ Then, just specify the icon name and family as follows:
            iframe-src="{environment:demosBaseUrl}/data-display/badge-icon/" >
 </code-view>
 
+### Dot Badge
+
+The `igx-badge` component can also render as a minimal dot indicator for notifications by enabling its `dot` property. Dot badges do not support content, but they can be outlined and can use any of the available dot types (e.g., primary, success, info, etc.).
+
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-display/badge-dot-sample/" >
+</code-view>
+
 ### Badge in List
 
 Let's extend the previous sample and create a list with contacts, similar to those in chat clients. In addition to the contact name, we want to display an avatar and the current state of the contact (online, offline or away). To achieve this, we're using the [`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) and [`igx-avatar`]({environment:angularApiUrl}/classes/igxavatarcomponent.html) components. For a container, [`igx-list`]({environment:angularApiUrl}/classes/igxlistcomponent.html) is used.
@@ -170,11 +181,9 @@ To continue, include all needed modules and import them in the **app.module.ts**
 // app.module.ts
 
 ...
-import {
-    IgxListModule,
-    IgxAvatarModule,
-    IgxBadgeModule
-} from 'igniteui-angular';
+import { IgxListModule } from 'igniteui-angular/list';
+import { IgxAvatarModule } from 'igniteui-angular/avatar';
+import { IgxBadgeModule } from 'igniteui-angular/badge';
 // import { IgxListModule, IgxAvatarModule, IgxBadgeModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({

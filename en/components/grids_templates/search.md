@@ -1,29 +1,29 @@
-<!-- markdownlint-disable MD003 MD024 -->
+<!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if (igxName === 'IgxGrid') {
 ---
-
 title: Angular Grid Search Filter - Ignite UI for Angular
 _description: Perform fast grid search with Ignite UI for Angular Data grid. It allows instant content search in the virtualized data of the Grid, while delivering better UX.
 _keywords: Content search, ignite ui for angular, infragistics
+_license: commercial
 ---
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-
 title: Angular Tree Grid Search Filter - Ignite UI for Angular
 _description: Perform fast grid search with Ignite UI for Angular Tree grid. It allows instant content search in the virtualized data of the Grid, while delivering better UX.
 _keywords: Content search, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/search
 ---
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-
 title: Angular Hierarchical Grid Search Filter - Ignite UI for Angular
 _description: Perform fast grid search with Ignite UI for Angular Hierarchical grid. It allows instant content search in the virtualized data of the Grid, while delivering better UX.
 _keywords: Content search, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/search
 ---
 

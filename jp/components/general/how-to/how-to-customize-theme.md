@@ -9,7 +9,7 @@ _language: ja
 
 この記事では、Ignite UI for Angular アプリケーション テーマのカスタマイズと、生成されたスタイルシートのサイズの最適化について詳しく説明します。Ignite UI for Angular テーマ エンジンがどのように機能するかの詳細を示し、その高度な使用法を示します。この記事は、コンポーネントのスタイルを完全にカスタマイズして、Angularアプリケーションを希望のルック＆フィールに合わせることと、アプリケーションで使用するものだけにスタイルサイズを縮小してアプリケーションをデプロイに最適化することの両方に非常に便利です。
 
->[!NOTE] 
+>[!NOTE]
 > このドキュメントでは、バージョン 15 以降の Ignite UI for Angular のテーマ システムについて説明します。例には、テーマ エンジンによって提供される Sass API の使用と公開された CSS 変数の両方が含まれます。
 
 ## 作業の開始
@@ -84,7 +84,7 @@ $custom-palette: palette(
 
 <img class="responsive-img"  src="../../../images/general/theming-walkthrough/getting-started-dark-app.png" />
 
-アプリケーションで特定の[コンポーネント テーマ](../../themes/sass/component-themes.md)をさらに掘り下げてカスタマイズしたいので、個々のコンポーネント テーマの CSS 変数を取り込んでこれを行います。この場合、グリッド ツールバーのテーマです。 
+アプリケーションで特定の[コンポーネント テーマ](../../themes/sass/component-themes.md)をさらに掘り下げてカスタマイズしたいので、個々のコンポーネント テーマの CSS 変数を取り込んでこれを行います。この場合、グリッド ツールバーのテーマです。
 
 ```scss
 @include core();
@@ -205,11 +205,11 @@ $custom-palette-light: palette(
 
 Ignite UI テーマは、複数の次元のテーマを抽象化し、非常に堅牢なテーマ変更機能を提供します。開発者とデザイナーは、テーマ エンジン API を利用して、アプリケーションに合わせたビジュアル デザインを作成できます。これにより、Ignite UI for Angular を使用する際に独自のルック アンド フィールが得られます。テーマ エンジンは、各ディメンションからの変数も公開します。これを使用して、Ignite UI for Angular コンポーネントで UI として直接構築されていない残りのアプリケーション構造にテーマを適用できます。変更のために公開されるディメンションは次のとおりです。
 
- * [色](../../themes/sass/palettes.md) (カラー パレット)
- * [形状](../../themes/sass/roundness.md) (境界線と半径)
- * [標高](../../themes/sass/elevations.md) (影)
- * [タイポグラフィ](../../themes/sass/typography.md) (フォントとフォント サイズ)
- * [サイズ](../../display-density.md) (画面に収まる情報のサイズ)
+- [色](../../themes/sass/palettes.md) (カラー パレット)
+- [形状](../../themes/sass/roundness.md) (境界線と半径)
+- [標高](../../themes/sass/elevations.md) (影)
+- [タイポグラフィ](../../themes/sass/typography.md) (フォントとフォント サイズ)
+- [サイズ](../../display-density.md) (画面に収まる情報のサイズ)
 
 >[!NOTE]
 > 完全にカスタマイズされたビジュアル デザインが必要な場合は、サポートされているすべてのテーマ ディメンションを変更する必要があり、Sass API を最大限に活用できます。  
@@ -413,5 +413,5 @@ $include: (
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

@@ -14,7 +14,7 @@ _language: kr
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:lobDemosBaseUrl}/grid/grid" >
+           iframe-src="{environment:lobDemosBaseUrl}/grid/grid/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -413,7 +413,7 @@ Achieving a state persistence framework is easier than ever by using the new bui
 
 <code-view style="height:915px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
-           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs" >
+           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs/" >
 </code-view>
 
 

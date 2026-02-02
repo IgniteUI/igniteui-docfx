@@ -1,7 +1,8 @@
 ---
-title: Angular Circular Progress Component – Ignite UI for Angular | Infragistics
+title: Angular Circular Progress Component – Ignite UI for Angular | Infragistics | MIT license
 _description: Ignite UI for Angular Circular Progress Indicator component allows developers to display progress in a circle with endless customization options.
 _keywords: Angular Circular Progress component, Angular Circular Progress control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Angular UI Components
+_license: MIT
 ---
 
 # Angular Circular Progress Component Overview
@@ -33,7 +34,7 @@ The next step is to import the `IgxProgressBarModule` in the **app.module.ts** f
 // app.module.ts
 
 ...
-import { IgxProgressBarModule } from 'igniteui-angular';
+import { IgxProgressBarModule } from 'igniteui-angular/progressbar';
 // import { IgxProgressBarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -49,7 +50,7 @@ Alternatively, as of `16.0.0` you can import the `IgxCircularProgressBarComponen
 ```typescript
 // home.component.ts
 
-import { IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular';
+import { IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular/progressbar';
 // import { IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

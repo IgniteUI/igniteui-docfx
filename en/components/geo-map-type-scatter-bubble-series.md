@@ -2,6 +2,7 @@
 title: Angular Map | Data Visualization Tools | Scatter Proportional Series | Data Binding | Infragistics
 _description: Use Infragistics Angular map's scatter proportional series to plot markers for the geographic points specified by the data in your application. Learn more about Ignite UI for Angular map's series!
 _keywords: Angular map, scatter proportional series, Ignite UI for Angular, Infragistics
+_license: commercial
 mentionedTypes: ["XamGeographicMap", "Series"]
 ---
 

@@ -1,7 +1,8 @@
 ---
-title: Single Select ComboBox Component
+title: Single Select ComboBox Component - MIT license 
 _description: The Ignite UI for Angular Simple ComboBox provides a powerful input, combining features of the basic HTML input, select, filtering and custom drop-down lists. Try it for FREE
 _keywords: angular single selection combobox, angular combobox component, angular single selection combobox component, angular combo, angular ui components, ignite ui for angular, infragistics
+_license: MIT
 ---
 
 # Angular Single Select ComboBox Component Overview
@@ -45,7 +46,7 @@ For a complete introduction to the Ignite UI for Angular, read the [_getting sta
 The next step is to import the `IgxSimpleComboModule` in your **app.module.ts** file.
 
 ```typescript
-import { IgxSimpleComboModule } from 'igniteui-angular';
+import { IgxSimpleComboModule } from 'igniteui-angular/simple-combo';
 // import { IgxSimpleComboModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -63,7 +64,7 @@ Alternatively, as of `16.0.0` you can import the `IgxSimpleComboComponent` as a 
 ```typescript
 // home.component.ts
 
-import { IGX_SIMPLE_COMBO_DIRECTIVES } from 'igniteui-angular';
+import { IGX_SIMPLE_COMBO_DIRECTIVES } from 'igniteui-angular/simple-combo';
 // import { IGX_SIMPLE_COMBO_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

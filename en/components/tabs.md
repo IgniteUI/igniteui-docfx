@@ -1,7 +1,8 @@
 ---
-title: Angular Tabs Component | Ignite UI for Angular
+title: Angular Tabs Component | Ignite UI for Angular | MIT license
 _description: The Ignite UI for Angular Tabs component places tabs at the top and allows for scrolling when there are multiple tab items on the screen. Try it now.
 _keywords: Angular Tabs component, Angular Tabs control, Angular Tabs, Angular Tabbar Component, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Components, Angular UI Components, Native Angular Components Library
+_license: MIT
 ---
 
 # Angular Tabs Component Overview
@@ -43,7 +44,7 @@ The next step is to import the `IgxTabsModule` in your **app.module.ts** file.
 // app.module.ts
 
 ...
-import { IgxTabsModule } from 'igniteui-angular';
+import { IgxTabsModule } from 'igniteui-angular/tabs';
 // import { IgxTabsModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -59,7 +60,7 @@ Alternatively, as of `16.0.0` you can import the `IgxTabsComponent` as a standal
 ```typescript
 // home.component.ts
 
-import { IGX_TABS_DIRECTIVES } from 'igniteui-angular';
+import { IGX_TABS_DIRECTIVES } from 'igniteui-angular/tabs';
 // import { IGX_TABS_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

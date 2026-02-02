@@ -1,7 +1,8 @@
 ---
-title: Angular Drag and Drop | IgniteUI for Angular | Infragistics
+title: Angular Drag and Drop | IgniteUI for Angular | Infragistics | MIT license
 _description: Learn how to use Angular drag and drop directives to perform dragging of elements around the page.
 _keywords: Angular Drag and Drop, Angular Drag and Drop Directives, Angular UI components, Ignite UI for Angular, Infragistics
+_license: MIT
 ---
 
 # Angular Drag and Drop Directives Overview
@@ -36,7 +37,7 @@ The next step is to import the `IgxDragDropModule` in your **app.module.ts** fil
 // app.module.ts
 
 ...
-import { IgxDragDropModule } from 'igniteui-angular';
+import { IgxDragDropModule } from 'igniteui-angular/directives';
 // import { IgxDragDropModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -52,7 +53,7 @@ Alternatively, as of `16.0.0` you can import the `IgxDragDirective` and `IgxDrop
 ```typescript
 // home.component.ts
 
-import { IGX_DRAG_DROP_DIRECTIVES } from 'igniteui-angular';
+import { IGX_DRAG_DROP_DIRECTIVES } from 'igniteui-angular/directives';
 // import { IGX_DRAG_DROP_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

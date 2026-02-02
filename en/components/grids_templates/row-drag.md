@@ -1,29 +1,29 @@
-<!-- markdownlint-disable MD003 MD024 -->
+<!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if (igxName === 'IgxGrid') {
 ---
-
 title: Row Dragging in Angular Data Grid - Ignite UI for Angular
 _description: Row dragging in Angular Data Grid is used to quickly rearrange rows by dragging them with the mouse. See how to configure row dragging in your project.
 _keywords: angular drag component, material component, ignite ui for angular, infragistics
+_license: commercial
 ---
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-
 title: Row Dragging in Angular Tree Grid - Ignite UI for Angular
 _description: Row dragging in Angular Tree Grid is used to quickly rearrange rows by dragging them with the mouse. See how to configure row dragging in your project.
 _keywords: angular drag component, material component, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/row-drag
 ---
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-
 title: Row Dragging in Angular Hierarchical Grid - Ignite UI for Angular
 _description: Row dragging in Angular Hierarchical Grid is used to quickly rearrange rows by dragging them with the mouse. See how to configure row dragging in your project.
 _keywords: angular drag component, material component, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/row-drag
 ---
 
@@ -93,7 +93,7 @@ We can define where we want our rows to be dropped using the [`igxDrop` directiv
 First we need to import the `IgxDragDropModule` in our app module:
 
 ```typescript
-import { ..., IgxDragDropModule } from 'igniteui-angular';
+import { ..., IgxDragDropModule } from 'igniteui-angular/directives';
 // import { ..., IgxDragDropModule } from '@infragistics/igniteui-angular'; for licensed package
 ...
 @NgModule({

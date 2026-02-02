@@ -2,6 +2,7 @@
 title: Angular Bubble Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Bubble Chart
 _keywords: Angular Charts, Bubble Chart, Infragistics
+_license: commercial
 mentionedTypes: ["Series", "BubbleSeries", "ScatterSeries", "MarkerType"]
 namespace: Infragistics.Controls.Charts
 ---

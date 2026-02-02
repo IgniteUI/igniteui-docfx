@@ -1,7 +1,8 @@
 ---
-title: Angular Select Component - Ignite UI for Angular
+title: Angular Select Component - Ignite UI for Angular - MIT license 
 _description: Learn how to configure Angular Select Component. Angular Select provides an input with Angular dropdown list, allowing single item selection of the Angular Combobox. Try it now.
 _keywords:  angular select, angular select component, angular forms, angular form select component, angular ui components, igniteui for angular, infragistics
+_license: MIT
 ---
 
 # Angular Select Component Overview
@@ -32,7 +33,7 @@ The next step is to import the `IgxSelectModule` in the **app.module.ts** file.
 ```typescript
 // app.module.ts
 ...
-import { IgxSelectModule } from 'igniteui-angular';
+import { IgxSelectModule } from 'igniteui-angular/select';
 // import { IgxSelectModule } from '@infragistics/igniteui-angular'; for licensed package
 @NgModule({
     ...
@@ -48,7 +49,7 @@ Alternatively, as of `16.0.0` you can import the `IgxSelectComponent` as a stand
 // home.component.ts
 
 import { FormsModule } from '@angular/forms';
-import { IGX_SELECT_DIRECTIVES } from 'igniteui-angular';
+import { IGX_SELECT_DIRECTIVES } from 'igniteui-angular/select';
 // import { IGX_SELECT_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

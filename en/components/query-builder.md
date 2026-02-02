@@ -2,6 +2,7 @@
 title: Angular Query Builder Component - Ignite UI for Angular
 _description: Angular Query Builder allows users to build complex custom queries in angular apps with a great UI experience. Try it Now.
 _keywords: Angular Query Builder component, Angular Query Builder control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
+_license: commercial
 ---
 
 # Angular Query Builder Component Overview
@@ -41,7 +42,7 @@ The next step is to import the `IgxQueryBuilderModule` in the **app.module.ts** 
 ```typescript
 // app.module.ts
 
-import { IgxQueryBuilderModule } from 'igniteui-angular';
+import { IgxQueryBuilderModule } from 'igniteui-angular/query-builder';
 // import { IgxQueryBuilderModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -57,7 +58,8 @@ Alternatively, as of `16.0.0` you can import the `IgxQueryBuilderComponent` as a
 ```typescript
 // home.component.ts
 
-import { IGX_QUERY_BUILDER_DIRECTIVES, FilteringExpressionsTree, FieldType } from 'igniteui-angular';
+import { IGX_QUERY_BUILDER_DIRECTIVES } from 'igniteui-angular/query-builder';
+import { FilteringExpressionsTree, FieldType } from 'igniteui-angular/core';
 // import { IGX_QUERY_BUILDER_DIRECTIVES, FilteringExpressionsTree, FieldType } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -266,7 +268,7 @@ We’ve created this Angular Query Builder example to show you the templating an
 
 <code-view style="height:700px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-template-sample" alt="Angular Query Builder Templates Example">
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-template-sample/" alt="Angular Query Builder Templates Example">
 </code-view>
 
 ## Styling

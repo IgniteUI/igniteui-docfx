@@ -1,7 +1,8 @@
 ---
-title: Angular Radio and Radio Group – Ignite UI for Angular | Infragistics
+title: Angular Radio and Radio Group – Ignite UI for Angular | Infragistics | MIT license
 _description: With Ignite UI for Angular Radio Button and Radio Group controls, developers can seamlessly present lists of options for users to select for better UI in template-driven and reactive forms.
 _keywords: Angular Radio Group component, Angular Radio Group control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
+_license: MIT
 ---
 
 # Angular Radio & Radio Group Component Overview
@@ -35,7 +36,7 @@ The next step is to import the `IgxRadioModule` in the **app.module.ts** file.
 // app.module.ts
 
 ...
-import { IgxRadioModule } from 'igniteui-angular';
+import { IgxRadioModule } from 'igniteui-angular/radio';
 // import { IgxRadioModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -54,7 +55,7 @@ Alternatively, as of `16.0.0` you can import the `IgxRadioGroupDirective` and `I
 // home.component.ts
 
 import { FormsModule } from '@angular/forms';
-import { IGX_RADIO_GROUP_DIRECTIVES } from 'igniteui-angular';
+import { IGX_RADIO_GROUP_DIRECTIVES } from 'igniteui-angular/radio';
 // import { IGX_RADIO_GROUP_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -207,12 +208,12 @@ Following the simplest approach, we create a new theme that extends the [`radio-
 
 ```scss
 $custom-radio-theme: radio-theme(
-  $empty-color:  #345779,
-  $fill-color: #2dabe8,
+    $empty-color:  #345779,
+    $fill-color: #2dabe8,
 );
 ```
 
-The last step is to pass the custom radio theme in our application:
+Finally, **include** the custom theme in your application:
 
 ```scss
 @include css-vars($custom-radio-theme);
@@ -222,6 +223,9 @@ The last step is to pass the custom radio theme in our application:
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/radio-styling-sample/" >
 </code-view>
+
+> [!NOTE]
+> The sample uses the [Fluent Light](themes/sass/schemas.md#predefined-schemas) schema.
 
 <div class="divider--half"></div>
 
@@ -286,7 +290,7 @@ The Radio Group Directive is exported as an `NgModule`, thus all you need to do 
 ```typescript
 // app.module.ts
 ...
-import { IgxRadioModule } from 'igniteui-angular';
+import { IgxRadioModule } from 'igniteui-angular/radio';
 // import { IgxRadioModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -320,7 +324,7 @@ Use the [`alignment`]({environment:angularApiUrl}/classes/igxradiogroupdirective
 
 ```typescript
 //sample.component.ts
-import { RadioGroupAlignment } from "igniteui-angular";
+import { RadioGroupAlignment } from "igniteui-angular/radio";
 ...
 public alignment = RadioGroupAlignment.vertical;
 ...

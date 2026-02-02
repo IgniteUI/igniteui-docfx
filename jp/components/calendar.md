@@ -1,7 +1,8 @@
 ---
-title: Angular Calendar コンポーネント – Ignite UI for Angular
+title: Angular Calendar コンポーネント – Ignite UI for Angular - MITライセンス
 _description: Angular Calendar コンポーネントを使用すると、ユーザーはアプリケーション用の直感的なカレンダーを作成して、3 つの異なる選択モードを使用して日付情報を表示できます。今すぐお試しください。
 _keywords: angular calendar, angular calendar コンポーネント, angular UI コンポーネント, angular UI ライブラリ, ignite ui for angular
+_license: MIT
 _language: ja
 ---
 
@@ -20,8 +21,8 @@ Ignite UI for Angular Calendar パッケージを使用して、次の Angular C
 
 <div class="divider--half"></div>
 
-<code-view style="height: 480px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 480px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-5/" alt="Angular Calendar の例">
 </code-view>
 
@@ -46,7 +47,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 ...
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxCalendarModule } from 'igniteui-angular';
+import { IgxCalendarModule } from 'igniteui-angular/calendar';
 // import { IgxCalendarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -64,7 +65,7 @@ export class AppModule {}
 
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IGX_CALENDAR_DIRECTIVES } from 'igniteui-angular';
+import { IGX_CALENDAR_DIRECTIVES } from 'igniteui-angular/calendar';
 // import { IGX_CALENDAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -107,8 +108,8 @@ Ignite UI for Angular Calendar モジュールまたはディレクティブを�
 ```
 
 
-<code-view style="height: 360px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 360px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-1/" >
 </code-view>
 
@@ -124,8 +125,8 @@ Ignite UI for Angular Calendar モジュールまたはディレクティブを�
 ```
 
 
-<code-view style="height: 480px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 480px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-8/" >
 </code-view>
 
@@ -154,6 +155,7 @@ Ignite UI for Angular Calendar モジュールまたはディレクティブを�
     [formatViews]="formatViews">
 </igx-calendar>
 ```
+
 すべてのプロパティ値が AppCоmponent ファイルに設定されます。
 
 ```typescript
@@ -174,13 +176,14 @@ public ngOnInit() {
 すべて適切に設定できると、カスタマイズされた日付を持つカレンダーが表示され、ユーザーの場所に基づいてロケール表現が変更されます。以下は結果です。
 
 
-<code-view style="height: 580px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 580px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-2/" >
 </code-view>
 
 
 ### Angular Calendar で日付を無効にする方法
+
 このセクションは、[`disabledDates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#disabledDates) 機能の使用について説明します。これには、異なる単一の日付または範囲を配列に追加し、`disabledDates` 記述子に渡すことができます。
 
 [`DateRangeType`]({environment:angularApiUrl}/enums/daterangetype.html) は無効にする範囲を指定するために使用します。
@@ -205,13 +208,14 @@ export class CalendarSample6Component {
 これらの構成の結果は以下のようになります。
 
 
-<code-view style="height: 480px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 480px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-6/" >
 </code-view>
 
 
 ### 特別な日付
+
 [`specialDates`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#specialDates) 機能は、`disabledDates` とほとんど同じ構成を使用します。`disabled` と異なる点は `specialDates` を選択してフォーカスする機能です。
 
 `igxCalendar` に `specialDates` を追加します。これを行うには、[`DateRangeType.Specific`]({environment:angularApiUrl}/enums/daterangetype.html#specific) タイプの [`DateRangeDescriptor`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html) 項目を作成し、日付の配列を [`dateRange`]({environment:angularApiUrl}/interfaces/daterangedescriptor.html#dateRange) として渡します。
@@ -256,8 +260,8 @@ export class CalendarSample7Component {
 以下のデモでは、休暇要求オプションのカレンダーを示します。
 
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-7/" >
 </code-view>
 
@@ -271,16 +275,18 @@ export class CalendarSample7Component {
 <!-- app.component.html -->
 <igx-calendar selection="multi" [showWeekNumbers]="true"></igx-calendar>
 ```
+
 以下のデモは、週番号が有効になっているカレンダーを示しています:
 
 
-<code-view style="height: 380px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 380px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-1/" >
 </code-view>
 
 
 ## カレンダー イベント
+
 カレンダーが発するイベントを見てみましょう:
 - [`selected`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selected) - カレンダーで日付を選択すると発生されます。
 - [`viewDateChanged`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#viewDateChanged) - 表示されている月/年が変更されるたびに発行されます。たとえば、`next` または `previous` の月に移動した後。
@@ -294,6 +300,7 @@ export class CalendarSample7Component {
     (activeViewChanged)="activeViewChanged($event)">
 </igx-calendar>
 ```
+
 [`selected`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#selected)イベントは、入力検証ロジックを構築するのに適しています。以下のコードを使用して、選択が 5 日を超えた場合にユーザーに警告し、選択をリセットします。
 
 ```typescript
@@ -317,20 +324,21 @@ public activeViewChanged(event: CalendarView) {
 
 以下のデモを試して (選択を変更し、月と年を移動し)、リアルタイムで記録されたイベントを確認してください:
 
-<code-view style="height: 420px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 420px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-3/" >
 </code-view>
 
 
 
 ## Angular Calendar ビュー
+
 `IgxCalendarModule` によって提供される個別のビューがあり、別々に使用できます。
 - Angular Calendar 日ビュー - [`igx-days-view`]({environment:angularApiUrl}/classes/igxdaysviewcomponent.html)
 
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-days-view/" >
 </code-view>
 
@@ -338,8 +346,8 @@ public activeViewChanged(event: CalendarView) {
 - Angular Calendar 月ビュー - [`igx-months-view`]({environment:angularApiUrl}/classes/igxmonthsviewcomponent.html)
 
 
-<code-view style="height: 290px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 290px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-months-view/" >
 </code-view>
 
@@ -347,14 +355,15 @@ public activeViewChanged(event: CalendarView) {
 - Angular Calendar 年ビュー - [`igx-years-view`]({environment:angularApiUrl}/classes/igxyearsviewcomponent.html)
 
 
-<code-view style="height: 320px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 320px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-years-view/" >
 </code-view>
 
 
 ## キーボード ナビゲーション
-Tab キーを使用してページを移動する場合、*igxCalendarComponent* が [W3 アクセシビリティ推奨事項](https://www.w3.org/TR/wai-aria-practices/#layoutGrid)に基づいて以下のタブストップを導入することに注意してください。
+
+Tab キーを使用してページを移動する場合、_igxCalendarComponent_ が [W3 アクセシビリティ推奨事項](https://www.w3.org/TR/wai-aria-practices/#layoutGrid)に基づいて以下のタブストップを導入することに注意してください。
 - [前月] ボタン
 - [月の選択] ボタン
 - [年の選択] ボタン
@@ -364,7 +373,7 @@ Tab キーを使用してページを移動する場合、*igxCalendarComponent*
 複数の選択された日付を含む Angular Calendar では、最初の日付のみがタブ位置として導入されます。たとえば、Angular Calendar の複数選択が有効で、日付を選択した場合: **2020 年 10 月 13 日**、**2020 年 10 月 17 日**および **2020 年 10 月 21 日**のみは、タブ ナビゲーション中にアクセスできます。Angular Calendar 範囲ピッカーでは、選択した範囲の最初の日付のみがページ タブ シーケンスの一部になります。
 
 >[!NOTE]
-> *V10.2.0* からの動作変更- 日ビューの Tab キー ナビゲーションは使用できなくなりました。日付ビューの日付間を移動するには、矢印キーを使用します。
+> _V10.2.0_ からの動作変更- 日ビューの Tab キー ナビゲーションは使用できなくなりました。日付ビューの日付間を移動するには、矢印キーを使用します。
 
 `igxCalendar` コンポーネントにフォーカスがある場合、以下を使用してナビゲーションできます。
 - <kbd>PageUp</kbd> キーは前の月に移動します。
@@ -403,15 +412,17 @@ Tab キーを使用してページを移動する場合、*igxCalendarComponent*
  >バージョン 8.2.0 に続いて、キーボード ナビゲーションは現在の月以外の日をフォーカスせず、ビューの月を変更します。
 
 ## マルチビュー カレンダー
+
 マルチ ビューカレンダーは、3 種類すべての選択をサポートしています。[`monthsViewNumber`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#monthsViewNumber) 入力を使用して、表示される月の数を設定します。これは、フレックス コンテナーに水平に表示されます。設定される最大値に制限はありません。マルチ ビューカレンダーを使用する場合、現在の月に属さない日を非表示にできます。非表示にするには、[`hideOutsideDays`]({environment:angularApiUrl}/classes/igxcalendarcomponent.html#hideOutsideDays)プ ロパティを使用します。キーボード ナビゲーションは、表示されている次/前の月へ移動します。
 
 
-<code-view style="height: 500px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 500px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/multiview-calendar/" >
 </code-view>
 
 ## カレンダーの方向
+
 方向の設定により、ユーザーはカレンダーのヘッダーとビューの表示方法を選択できます。
 
 #### ヘッダーの方向オプション
@@ -450,8 +461,8 @@ export class CalendarSample9Component {
 }
 ```
 
-<code-view style="height: 750px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 750px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-sample-9/" alt="Angular Calendar の方向の例">
 </code-view>
 
@@ -783,9 +794,11 @@ $custom-calendar-theme: calendar-theme(
  @include css-vars($custom-calendar-theme);
 ```
 
-<code-view style="height:500px" 
+以下のサンプルでは、カスタマイズした CSS 変数を使用したカレンダー コンポーネントが、[`SAP UI5`](https://ui5.sap.com/#/entity/sap.ui.unified.Calendar/sample/sap.ui.unified.sample.CalendarSingleDaySelection) デザイン システムのカレンダーに視覚的に似たデザインを実現している様子を確認できます。
+
+<code-view style="height:350px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/scheduling/calendar-styling-sample/" >
 </code-view>
 
@@ -802,6 +815,7 @@ $custom-calendar-theme: calendar-theme(
 ```
 
 ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
 - `light-*` クラスはライト テーマ用です。
 - `dark-*` クラスはダーク テーマ用です。
 - プレフィックスの後にコンポーネント名を追加します (例: `light-calendar`、`dark-calendar`)。
@@ -829,17 +843,19 @@ class="!light-calendar
 </div>
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
-* [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
-* [IgxCalendarComponent スタイル]({environment:sassApiUrl}/themes#function-calendar-theme)
-* [DateRangeType]({environment:angularApiUrl}/enums/daterangetype.html)
-* [DateRangeDescriptor]({environment:angularApiUrl}/interfaces/daterangedescriptor.html)
+- [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
+- [IgxCalendarComponent スタイル]({environment:sassApiUrl}/themes#function-calendar-theme)
+- [DateRangeType]({environment:angularApiUrl}/enums/daterangetype.html)
+- [DateRangeDescriptor]({environment:angularApiUrl}/interfaces/daterangedescriptor.html)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

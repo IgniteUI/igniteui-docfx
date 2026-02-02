@@ -3,6 +3,7 @@
 title: Angular Grid の検索フィルター - Ignite UI for Angular
 _description: Ignite UI for Angular Data Grid で高速グリッド検索を実行します。優れた UX を提供しながら、グリッドの仮想化データでコンテンツの即時検索が可能です。
 _keywords: コンテンツ検索, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -11,6 +12,7 @@ _language: ja
 title: Angular Tree Grid の検索フィルター - Ignite UI for Angular
 _description: Ignite UI for Angular Tree Grid で高速グリッド検索を実行します。優れた UX を提供しながら、グリッドの仮想化データでコンテンツの即時検索が可能です。
 _keywords: コンテンツ検索, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -19,6 +21,7 @@ _language: ja
 title: Angular Hierarchical Grid の検索フィルター - Ignite UI for Angular
 _description: Ignite UI for Angular Hierarchical Grid で高速グリッド検索を実行します。優れた UX を提供しながら、グリッドの仮想化データでコンテンツの即時検索が可能です。
 _keywords: コンテンツ検索, ignite ui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 }
@@ -33,8 +36,8 @@ Angular @@igComponent 検索により、データのコレクション内の値�
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-search-sample/" alt="Angular 検索の例">
 </code-view>
 
@@ -42,8 +45,8 @@ Angular @@igComponent 検索により、データのコレクション内の値�
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-search/" alt="Angular 検索の例">
 </code-view>
 
@@ -56,9 +59,11 @@ Angular @@igComponent 検索により、データのコレクション内の値�
 ## Angular 検索の使用方法
 
 ### グリッドの設定
+
 グリッドを作成してからデータをバインドします。コンポーネントにカスタム スタイルも追加しました。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <!--searchgrid.component.html-->
 
@@ -71,8 +76,10 @@ Angular @@igComponent 検索により、データのコレクション内の値�
     <igx-column [field]="'Date'" dataType="date" [sortable]="true"></igx-column>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <!--searchgrid.component.html-->
 
@@ -84,12 +91,14 @@ Angular @@igComponent 検索により、データのコレクション内の値�
     <igx-column [field]="'HireDate'" dataType="date" [sortable]="true"></igx-column>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <!-- TODO -->
 }
 
 @@if (igxName === 'IgxGrid' || igxName === 'IgxTreeGrid') {
+
 ```css
 /* searchgrid.component.css */
 
@@ -113,6 +122,7 @@ Angular @@igComponent 検索により、データのコレクション内の値�
     margin-left: 5px;
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 <!-- TODO -->
@@ -148,6 +158,7 @@ public exactMatch: boolean = false;
 ```
 
 ### 検索結果の個数を表示
+
 検索で見つかった現在の場所と総個数を示します。グリッドの `lastSearchInfo` プロパティを使用します。このプロパティは、**find** メソッド使用時に自動的に更新されます。
 
 - `@@igObjectRef.lastSearchInfo.matchInfoCache.length` 値は検索で見つかった個数です。
@@ -316,6 +327,7 @@ public clearSearch() {
     </div>
     ...
 ```
+
 - 以下は **caseSensitive** と **exactMatch** を切り替えるチップを表示する方法です。プロパティに基づいて色が変わる 2 つのチップでチェックボックスを 置き換えます。チップをクリックすると、どちらのチップがクリックされたかによって各ハンドラー **updateSearch** または **updateExactSearch** を呼び出します。
 
 ```html
@@ -334,6 +346,7 @@ public clearSearch() {
     </div>
     ...
 ```
+
 - 検索ナビゲーション ボタンは、マテリアルアイコンを使用して入力を Ripple スタイルボタンにします。click イベントのハンドラーはそのままで [`findNext`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findNext)/[`findPrev`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findPrev) メソッドを呼び出します。
 
 ```html
@@ -364,51 +377,52 @@ public clearSearch() {
 このトピックでは、@@igComponent にカスタム検索バーを実装し、更に検索結果を移動する際の機能を追加しました。アイコン、チップ、入力などその他の Ignite UI for Angular コンポーネントも使用しています。以下は検索 API です。
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) メソッド:
--   [findNext]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findNext)
--   [findPrev]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findPrev)
--   [clearSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearSearch)
--   [refreshSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#refreshSearch)
+- [findNext]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findNext)
+- [findPrev]({environment:angularApiUrl}/classes/@@igTypeDoc.html#findPrev)
+- [clearSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearSearch)
+- [refreshSearch]({environment:angularApiUrl}/classes/@@igTypeDoc.html#refreshSearch)
 
 [`IgxGridCell`]({environment:angularApiUrl}/classes/igxgridcell.html) メソッド:
 
 [`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) プロパティ:
--   [searchable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#searchable)
+- [searchable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#searchable)
 
 [ISearchInfo]({environment:angularApiUrl}/interfaces/isearchinfo.html)
 
 その他のコンポーネントおよびディレクティブ (またはそのいずれか) で使用した API:
 
-* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
-* [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
-* [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
+- [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+- [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+- [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
+- [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
+- [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
 
 スタイル:
 
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
-* [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/themes#function-input-group-theme)
-* [IgxIconComponent スタイル]({environment:sassApiUrl}/themes#function-icon-theme)
-* [IgxRippleDirective スタイル]({environment:sassApiUrl}/themes#function-ripple-theme)
-* [IgxButtonDirective スタイル]({environment:sassApiUrl}/themes#function-button-theme)
-* [IgxChipComponent スタイル]({environment:sassApiUrl}/themes#function-chip-theme)
+- [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxInputGroupComponent スタイル]({environment:sassApiUrl}/themes#function-input-group-theme)
+- [IgxIconComponent スタイル]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxRippleDirective スタイル]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxButtonDirective スタイル]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxChipComponent スタイル]({environment:sassApiUrl}/themes#function-chip-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [@@igComponent 概要](@@igMainTopic.md)
-* [仮想化とパフォーマンス](virtualization.md)
-* [フィルタリング](filtering.md)
-* [ページング](paging.md)
-* [ソート](sorting.md)
-* [集計](summaries.md)
-* [列移動](column-moving.md)
-* [列のピン固定](column-pinning.md)
-* [列のサイズ変更](column-resizing.md)
-* [選択](selection.md)
+- [@@igComponent 概要](@@igMainTopic.md)
+- [仮想化とパフォーマンス](virtualization.md)
+- [フィルタリング](filtering.md)
+- [ページング](paging.md)
+- [ソート](sorting.md)
+- [集計](summaries.md)
+- [列移動](column-moving.md)
+- [列のピン固定](column-pinning.md)
+- [列のサイズ変更](column-resizing.md)
+- [選択](selection.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

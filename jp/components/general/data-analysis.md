@@ -60,9 +60,10 @@ _language: ja
 >この機能は、設定を簡単にし、コードを最小限に制限するために、**Ignite UI for Angular** の外部パッケージとして提供されます。
 
 ## Dock Manager のデータ分析
+
 選択したデータに基づいて `Chart Types ビュー`を有効にするには、`セル範囲の選択`または`列の選択`を実行します。このビューは、[Dock Manager](../dock-manager.md) の右ペインの一部です。以下のオプションを選択できます。
- - 特定のチャート タイプを選択し、別のペインで可視化します。
- - または、`Data Analysis` コンテキスト ボタンを使用して、さまざまなテキスト書式設定オプションを表示します。
+- 特定のチャート タイプを選択し、別のペインで可視化します。
+- または、`Data Analysis` コンテキスト ボタンを使用して、さまざまなテキスト書式設定オプションを表示します。
 
 <div class="sample-container loading" style="height: 580px;">
     <iframe id="data-analysis-dock-manager" frameborder="0" seamless width="100%" height="100%" src="{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis-dock-manager" onload="onSampleIframeContentLoaded(this);" class="no-theming"></iframe>
@@ -85,11 +86,13 @@ _language: ja
 始めましょう:
 
 - パッケージをアプリケーションにインストールします。
+
 ```cmd
 npm install @infragistics/igniteui-angular-extras
 ```
 
 - パッケージのピア依存関係をインストールします。
+
 ```cmd
 npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angular-charts
 ```
@@ -105,9 +108,11 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
     </igx-paginator>
 </igx-grid>
 ```
+
 以上です! **セル範囲の選択**を実行し、データ分析フローを実行できます。
 
 ## データ分析ボタン
+
 データ分析ボタンは、選択したデータをさまざまな方法で可視化するアウトレットです。
 
 <img class="responsive-img" src="../../images/general/data-analysis-button.png" />
@@ -117,6 +122,7 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
 ボタンは、選択範囲の**右下**にあるすべての範囲選択でレンダリングされ、選択範囲がインアクティブになると非表示になります。ボタンは、選択範囲の右下にあるすべての範囲選択でレンダリングされ、選択範囲がインアクティブになると非表示になります。
 
 ## チャートと統合
+
 このセクションでは、エンドユーザーがグリッドの選択したデータに基づいてチャートを可視化し、必要に応じて異なるチャート タイプを選択できる、チャート作成機能とグリッドの統合を紹介します。
 
 チャートは、セルの範囲を選択し、分析の表示ボタンをクリックすると表示されます。
@@ -142,12 +148,14 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
 [バブル チャート](../charts/types/bubble-chart.md)
 意味のあるバブル チャートを表示するために、データが有効な形式でない場合、プレビューを無効にします。
 
-## セルの条件付き書式 
-グリッドに数千行のデータがある場合、生の情報を検査するだけでパターンと傾向を分析することは容易ではありません。チャートやスパークラインと同様に、`条件付き書式`は、データを可視化し、理解しやすくする別の方法を提供します。 
+## セルの条件付き書式
+
+グリッドに数千行のデータがある場合、生の情報を検査するだけでパターンと傾向を分析することは容易ではありません。チャートやスパークラインと同様に、`条件付き書式`は、データを可視化し、理解しやすくする別の方法を提供します。
 
 条件付き書式は範囲選択の`値`に基づいて、色やデータ バーなどの書式設定をセルに適用できます。[以下のサンプル](#デモ)は、グリッドを構成して`条件付き書式`を適用する方法を示します。どの条件`ルール`が表示されるかは、`条件付き書式の選択タイプ`によって異なります。以下は定義済みスタイル (プリセット) があります。これを使用すると、条件付き書式をデータにすばやく適用できます。範囲の書式設定は、異なる範囲で書式設定を行った場合、またはクリア ボタンを使用してクリアにされます。クリア ボタンは、書式設定が適用されている場合にのみアクティブになります。
 
 ### 数の範囲選択
+
 - `Data Bars` - データバーは、売れ筋商品や売れ残り商品など、高値と低値を識別する場合などに役立ちます。このプリセットにより、選択したセルの範囲の値を簡単に可視化できます。長いバーはより高い値を表します。値が 0 のセルにはデータバーがありません。他のすべてのセルは比例的に塗りつぶされます。正の値は`緑色`で、負の値は`赤色`です。
 
 <img class="responsive-img" src="../../images/general/data-bars-formatting.png" />
@@ -156,7 +164,7 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
 
 > `最低のしきい値` - 範囲選択の最大セル値の 33％ 未満。
 
-> `最高のしきい値` - 範囲選択の最大セル値の 66％ 以上。 
+> `最高のしきい値` - 範囲選択の最大セル値の 66％ 以上。
 
 <img class="responsive-img" src="../../images/general/color-scale-formatting.png" />
 
@@ -173,6 +181,7 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
 - `Empty`- `未定義の値`のすべてのセルをマークします。
 
 ### テキストの範囲選択
+
 - `Text contains` - `左上に上位の選択されたセル`のセル値を含むすべてのセルをマークします。例:
 
 <img class="responsive-img" src="../../images/general/contains-formatting.png" />
@@ -190,8 +199,9 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
 <button class="full-screen-btn" onclick='window.open("{environment:lobDemosBaseUrl}/grid-dynamic-chart-data/data-analysis")'>全画面表示</button>
 
 ## データ分析パッケージ API
- 
+
 ### IgxConditionalFormattingDirective
+
 <div class="divider--half"></div>
 
 | API | 説明 | 引数 |
@@ -199,29 +209,30 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
 | `ConditionalFormattingType` | 条件付き書式タイプを表す**列挙体** |
 | `IFormatColors` | 書式設定色を表す**インターフェース** |
 | `formatter`: **string** | 現在の書式タイプを設定/取得する**入力**プロパティ |
-| `formatColors` | 現在の書式色を設定/取得する**入力**プロパティ | `val`: *IFormatColors* |
+| `formatColors` | 現在の書式色を設定/取得する**入力**プロパティ | `val`: _IFormatColors_ |
 | `onFormattersReady`| 選択されたデータに適用可能な`書式タイプ`が決定されたときにそれらを発生する**イベント**。 |
 | `formatCells` | 選択したセルに条件付き書式を適用します。使用方法: <br/> **this.conditonalFormatting.formatCells(ConditionalFormattingType.dataBars)** | `formatterName`: **string**, `formatRange`?: [GridSelectionRange]({environment:angularApiUrl}/interfaces/gridselectionrange.html) [ ], <br /> `reset`: boolean (**true** by default) |
 | `clearFormatting` | 選択されたセルの条件付き書式を削除します。使用方法: <br /> **this.conditonalFormatting.clearFormatting()** |
 
 ### IgxChartIntegrationDirective
+
 <div class="divider--half"></div>
 
 | API | 説明 | 引数 |
 |---------|-------------|-----------|
 | `CHART_TYPE` | サポートされているチャートの種類を表す**列挙型** |
-| `OPTIONS_TYPE` | チャート コンポーネントに適用できる、サポートされているオプション タイプを表す**列挙型**| 
+| `OPTIONS_TYPE` | チャート コンポーネントに適用できる、サポートされているオプション タイプを表す**列挙型**|
 | `IOptions` | チャート プロパティ オプションの**インターフェイス** |
 | `chartFactory`| 指定されたチャート タイプに基づいて、チャート コンポーネントを作成します。使用方法: <br /> **this.chartIntegration.chartFactory(CHART_TYPE.COLUMN_GROUPED, this.viewContainerRef)** | `type`: **any[ ]**, viewContainerRef: [`ViewContainerRef`](https://angular.io/api/core/ViewContainerRef) |
-| `setChartComponentOptions` | プロパティ オプションをチャート コンポーネントに設定します。使用方法: <br /> **this.chartIntegration.setChartComponentOptions(CHART_TYPE.PIE, OPTIONS_TYPE.CHART, {allowSliceExplosion: true, sliceClick: (evt) => { evt.args.isExploded = !evt.args.isExploded; } })** | `chart`: *CHART_TYPE*, `optionsType`: *OPTIONS_TYPE*, `options`: *IOptions* |
+| `setChartComponentOptions` | プロパティ オプションをチャート コンポーネントに設定します。使用方法: <br /> **this.chartIntegration.setChartComponentOptions(CHART_TYPE.PIE, OPTIONS_TYPE.CHART, {allowSliceExplosion: true, sliceClick: (evt) => { evt.args.isExploded = !evt.args.isExploded; } })** | `chart`: _CHART_TYPE_, `optionsType`: _OPTIONS_TYPE_, `options`: _IOptions_ |
 | `getAvailableCharts` | 有効なチャート タイプを返します |
-| `enableCharts` | 指定されたチャート タイプを有効にします。デフォルトでは、すべてのチャート タイプが有効です | `types`: *CHART_TYPE* [ ] |
-| `disableCharts` | 指定されたチャート タイプを無効にします | `types`: *CHART_TYPE* [ ] |
-| `onChartTypesDetermined` | `chartData` に適用可能なチャート タイプが決定されると発生する**イベント**。このイベントは、2 つのプロパティがある `IDeterminedChartTypesArgs` タイプのオブジェクトを発行します: <br /> `chartsAvailabilty`: *Map<CHART_TYPE, boolean>* - 有効/無効されたチャート タイプ、<br /> `chartsForCreation`: *CHART_TYPE[]* - `chartData` に適用可能なチャート タイプ。 |
+| `enableCharts` | 指定されたチャート タイプを有効にします。デフォルトでは、すべてのチャート タイプが有効です | `types`: *CHART_TYPE- [ ] |
+| `disableCharts` | 指定されたチャート タイプを無効にします | `types`: *CHART_TYPE- [ ] |
+| `onChartTypesDetermined` | `chartData` に適用可能なチャート タイプが決定されると発生する**イベント**。このイベントは、2 つのプロパティがある `IDeterminedChartTypesArgs` タイプのオブジェクトを発行します: <br /> `chartsAvailabilty`: _Map<CHART_TYPE, boolean>_ - 有効/無効されたチャート タイプ、<br /> `chartsForCreation`: _CHART_TYPE[]_ - `chartData` に適用可能なチャート タイプ。 |
 | `onChartCreationDone` | チャートが作成されたときに発生するイベント。このイベントは、作成されたチャート コンポーネントを発行します|
 | `chartData`: **any[ ]** | チャートのデータを設定/取得する**入力**プロパティ| `selectedData`: **any[ ]** |
 | `useLegend`: **boolean** | すべてのチャート タイプの凡例の使用を有効/無効にする**入力**。デフォルトで **true** に設定されます|
-| `defaultLabelMemberPath`: **string** | チャートのデフォルト ラベルのメンバー パスを設定/取得する**入力**プロパティ。デフォルトでは、ラベルのメンバー パスが指定されたデータに基づいて決定されます。<br />(**提供されたデータ レコードに文字列値を持つプロパティがある場合、`chartData` の最初のデータレコードの最初の文字列プロパティ名がチャートのラベルのメンバー パスとして選択されます。そうでない場合、ラベルのメンバー パスは値 *'Index'* になります**)。<br/> |
+| `defaultLabelMemberPath`: **string** | チャートのデフォルト ラベルのメンバー パスを設定/取得する**入力**プロパティ。デフォルトでは、ラベルのメンバー パスが指定されたデータに基づいて決定されます。<br />(**提供されたデータ レコードに文字列値を持つプロパティがある場合、`chartData` の最初のデータレコードの最初の文字列プロパティ名がチャートのラベルのメンバー パスとして選択されます。そうでない場合、ラベルのメンバー パスは値 _'Index'_ になります**)。<br/> |
 | `scatterChartYAxisValueMemberPath`: **string** | 散布バブル チャートのデフォルトの半径メンバー パスを設定/取得する**入力**プロパティ。**設定しない場合、デフォルトの Y 軸値のメンバー パスは、`chartData` の最初のデータ レコードの最初の数値プロパティ名になります** | `path`: **string** |
 | `bubbleChartRadiusMemberPath`: **string** | 散布バブル チャートのデフォルトの半径メンバー パスを設定/取得する**入力**プロパティ。設定しない場合、デフォルトの Y 軸値のメンバー パスは、`chartData` の最初のデータ レコードの 2 番目の数値プロパティ名になります | `path`: **string** |
 
@@ -230,9 +241,9 @@ npm install @infragistics/igniteui-angular igniteui-angular-core igniteui-angula
 
 <div class="divider--half"></div>
 
-* [Angular Universal ガイド (英語)](https://angular.io/guide/universal)
-* [Ignite UI スタート キット (英語)](https://github.com/IgniteUI/ng-universal-example)
-* [サーバー サイド レンダリング用語](https://web.dev/articles/rendering-on-the-web?hl=ja)
-* [Ignite UI を使用した作業の開始](getting-started.md)
-* [Ignite UI CLI ガイド](cli/step-by-step-guide.md)
-* [Ignite UI for Angular Schematics ガイド](cli/step-by-step-guide-using-angular-schematics.md)
+- [Angular Universal ガイド (英語)](https://angular.io/guide/universal)
+- [Ignite UI スタート キット (英語)](https://github.com/IgniteUI/ng-universal-example)
+- [サーバー サイド レンダリング用語](https://web.dev/articles/rendering-on-the-web?hl=ja)
+- [Ignite UI を使用した作業の開始](getting-started.md)
+- [Ignite UI CLI ガイド](cli/step-by-step-guide.md)
+- [Ignite UI for Angular Schematics ガイド](cli/step-by-step-guide-using-angular-schematics.md)

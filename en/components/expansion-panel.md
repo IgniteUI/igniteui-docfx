@@ -1,8 +1,10 @@
 ---
-title: Angular Expansion Panel – Ignite UI for Angular
+title: Angular Expansion Panel – Ignite UI for Angular - MIT license 
 _description: Use our Angular expansion panel which provides an easily configurable expandable component with two states - collapsed and expanded. Try it now.
 _keywords: angular expansion panel, angular expansion panel component, angular UI components, igniteui for angular, infragistics
+_license: MIT
 ---
+
 # Angular Expansion Panel Component Overview
 
 Ignite UI for Angular provides developers with one of the most useful and easy-to-use layout components - Expansion Panel. This feature-rich component is used to create an expandable/collapsible detailed summary view. The content can include Angular Expansion Panel animation, text, icons, header, action bar, and other elements.
@@ -37,7 +39,7 @@ The next step is to import the `IgxExpansionPanelModule` in your **app.module.ts
 ```typescript
 // app.module.ts
 ...
-import { IgxExpansionPanelModule } from 'igniteui-angular';
+import { IgxExpansionPanelModule } from 'igniteui-angular/expansion-panel';
 // import { IgxExpansionPanelModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -53,7 +55,7 @@ Alternatively, as of `16.0.0` you can import the `IgxExpansionPanelComponent` as
 ```typescript
 // home.component.ts
 
-import { IGX_EXPANSION_PANEL_DIRECTIVES } from 'igniteui-angular';
+import { IGX_EXPANSION_PANEL_DIRECTIVES } from 'igniteui-angular/expansion-panel';
 // import { IGX_EXPANSION_PANEL_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -107,7 +109,7 @@ We can do this by binding the description to the control [`collapsed`]({environm
 
 ```typescript
 // in expansion-panel.component.ts
-import { IgxExpansionPanelComponent } from 'igniteui-angular';
+import { IgxExpansionPanelComponent } from 'igniteui-angular/expansion-panel';
 // import { IgxExpansionPanelComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({...})
@@ -401,7 +403,8 @@ Assuming the igxExpansionPanel is already imported in `app.module.ts` as previou
 ```typescript
 // in expansion-panel.component.ts
 import { useAnimation } from '@angular/animations';
-import { IgxExpansionPanelComponent, slideInLeft, slideOutRight } from 'igniteui-angular';
+import { IgxExpansionPanelComponent } from 'igniteui-angular/expansion-panel';
+import { slideInLeft, slideOutRight } from 'igniteui-angular/animations';
 // import { IgxExpansionPanelComponent, slideInLeft, slideOutRight } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({...})

@@ -1,8 +1,10 @@
 ---
-title: Angular Banner Component – Ignite UI for Angular | Infragistics
+title: Angular Banner Component – Ignite UI for Angular | Infragistics | MIT license
 _description: Easily integrate a short, non-intrusive message (along with optional actions) using Ignite UI for Angular Banner component.
 _keywords: Angular Banner component, Angular Banner control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Angular UI Components
+_license: MIT
 ---
+
 # Angular Banner Component Overview
 
 <p class="highlight">Angular Banner Component provides a way to easily display a prominent message to your application's users in a way that is less transient than a snackbar and less obtrusive than a dialog. The Banner can also be configured to display custom action buttons and an icon.</p>
@@ -32,7 +34,7 @@ The next step is to import the `IgxBannerModule` in your **app.module.ts** file.
 // app.module.ts
 
 ...
-import { IgxBannerModule } from 'igniteui-angular';
+import { IgxBannerModule } from 'igniteui-angular/banner';
 // import { IgxBannerModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -49,7 +51,7 @@ Alternatively, as of `16.0.0` you can import the `IgxBannerComponent` as a stand
 // home.component.ts
 
 ...
-import { IGX_BANNER_DIRECTIVES } from 'igniteui-angular';
+import { IGX_BANNER_DIRECTIVES } from 'igniteui-angular/banner';
 // import { IGX_BANNER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -170,7 +172,8 @@ Let's change the animations that our banner uses, so that it slides in and out:
 
 ```typescript
 // banner.component.ts
-import { IgxBannerComponent, slideInLeft, slideOutRight } from 'igniteui-angular'
+import { IgxBannerComponent } from 'igniteui-angular/banner';
+import { slideInLeft, slideOutRight } from 'igniteui-angular/animations'
 // import { IgxBannerComponent, slideInLeft, slideOutRight } from '@infragistics/igniteui-angular'; for licensed package
 ...
 export class MyBannerComponent {

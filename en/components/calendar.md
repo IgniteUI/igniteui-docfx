@@ -1,7 +1,8 @@
 ---
-title: Angular Calendar Component – Ignite UI for Angular 
+title: Angular Calendar Component – Ignite UI for Angular | MIT license 
 _description: With Angular Calendar Component, users can create intuitive calendars for applications to display date information using three different selection modes. Try it Now
 _keywords: angular calendar, angular calendar component, angular UI components, angular UI library, ignite ui for angular
+_license: MIT
 ---
 
 # Angular Calendar Component Overview
@@ -45,7 +46,7 @@ The next step is to import the `IgxCalendarModule` in your **app.module.ts** fil
 ...
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxCalendarModule } from 'igniteui-angular';
+import { IgxCalendarModule } from 'igniteui-angular/calendar';
 // import { IgxCalendarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -63,7 +64,7 @@ Alternatively, as of `16.0.0` you can import the `IgxCalendarComponent` as a sta
 
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IGX_CALENDAR_DIRECTIVES } from 'igniteui-angular';
+import { IGX_CALENDAR_DIRECTIVES } from 'igniteui-angular/calendar';
 // import { IGX_CALENDAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

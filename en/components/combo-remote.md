@@ -1,7 +1,8 @@
 ---
-title: ComboBox Remote Binding
+title: ComboBox Remote Binding - MIT license 
 _description: The igx-combo exposes API that allows to bind a combo to a remote service and retrieve data on demand.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Combo components, Angular Combo controls, Angular Combo Remote Binding
+_license: MIT
 ---
 
 # ComboBox Remote Binding
@@ -26,7 +27,7 @@ The sample below demonstrates remote binding using the [dataPreLoad]({environmen
 To get started with the ComboBox component, first you need to import the `IgxComboModule` in your **app.module.ts** file. In this demo, a remote service is used for server requests, therefore, we also need to include the `HttpClientModule`:
 
 ```typescript
-import { IgxComboModule } from 'igniteui-angular';
+import { IgxComboModule } from 'igniteui-angular/combo';
 // import { IgxComboModule } from '@infragistics/igniteui-angular'; for licensed package
 
 import { HttpClientModule } from '@angular/common/http';
@@ -51,7 +52,7 @@ The code below defines a simple service that has a `getData()` method, which rec
 ```typescript
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { IForOfState } from 'igniteui-angular';
+import { IForOfState } from 'igniteui-angular/directives';
 // import { IForOfState } from '@infragistics/igniteui-angular'; for licensed package
 import { BehaviorSubject, Observable } from 'rxjs';
 
@@ -98,7 +99,7 @@ Below are listed the handlers that listen to the already defined actions and exe
 
 ```typescript
 import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
-import { IgxComboComponent } from 'igniteui-angular';
+import { IgxComboComponent } from 'igniteui-angular/combo';
 // import { IgxComboComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 import { RemoteService } from '../../grid/services/remote.service';

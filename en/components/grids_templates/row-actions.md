@@ -2,6 +2,7 @@
 title:  Row actions in Angular Data Grid - Ignite UI for Angular 
 _description: The grid component in Ignite UI for Angular provides the ability to use ActionStrip and utilize CRUD for row/cell components and row pinning.
 _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular ActionStrip components, Angular ActionStrip directives, Angular ActionStrip controls
+_license: commercial
 ---
 @@if (igxName === 'IgxGrid') {
 
@@ -30,7 +31,7 @@ The first step is to import the **IgxActionStripModule** in our **app.module.ts*
 // app.module.ts
 
 ...
-import { IgxActionStripModule } from 'igniteui-angular';
+import { IgxActionStripModule } from 'igniteui-angular/action-strip';
 // import { IgxActionStripModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({

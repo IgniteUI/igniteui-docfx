@@ -12,6 +12,7 @@ _language: ja
 Angular Schematics または Ignite UI CLI を使用して Angular プロジェクト作成する場合は、ユーザー管理でアプリを開始するために追加セットアップをできるだけ必要としないクライアント側認証モジュールの基本的な実装を含むテンプレートを選択できます。
 
 ## 認証プロジェクトの作成
+
 'Ignite UI for Angular' プロジェクト タイプを選択した後、ステップバイステップの手順を実行する際に認証プロジェクトを選択できます。
 
 <img class="responsive-img" src="../../../images/general/cli-igx-side-auth.png" />
@@ -21,6 +22,7 @@ Angular Schematics または Ignite UI CLI を使用して Angular プロジェ�
 ```bash
 ig new "Auth Project" --framework=angular --type=igx-ts --template=side-nav-auth
 ```
+
 Schematics コレクションを使用する場合は、以下のコマンドを実行します。
 
 ```bash
@@ -28,6 +30,7 @@ ng new "Auth Project" --collection="@igniteui/angular-schematics" --template=sid
 ```
 
 ## 説明
+
 このテンプレートはサイドナビゲーションのデフォルトに基づいて作成され、ログイン ページまたはログインユーザーのアバターを表示するプロファイル ページとログイン セクションをアプリのナビゲーションバーに追加します。
 
 <img class="responsive-img" src="../../../images/general/igx-side-auth-login-bar.png" />
@@ -36,9 +39,10 @@ ng new "Auth Project" --collection="@igniteui/angular-schematics" --template=sid
 
 <img class="responsive-img" src="../../../images/general/igx-side-auth-login-dialogs.png" />
 
-このプロジェクトは、さまざまな[外部認証プロバイダー](#add-a-third-party-social-provider)もサポートしています。 
+このプロジェクトは、さまざまな[外部認証プロバイダー](#サードパーティ-ソーシャル-プロバイダーを追加する)もサポートしています。
 
 ## コード
+
 ユーザー管理に関連するすべてのアイテムは、`src/app/authentication`フォルダー下にあります。以下は、注目すべきエクスポートです。
 
 - `authentication.module.ts` の `AuthenticationModule` は、すべてのコンポーネントとサービスをメイン アプリモジュールにエクスポートします。
@@ -91,6 +95,7 @@ Google アカウントのサインインなどで取得する必要がある場�
 プロジェクトに一致するようにプロバイダーごとにリダイレクト URL と許可されたドメイン オリジンを設定する必要があることに注意してください。開発用の Google OAuth 2.0 クライアント ID を作成するとき、リダイレクト URI として `http://localhost:4200/redirect-google` を指定できます。詳細については、[リダイレクト URL](#プロバイダーの詳細) をご覧ください。
 
 Id (`123456789.apps.googleusercontent.com`) を取得したら、以下のようにプロジェクトの Google プロバイダーを有効にできます。
+
 ```ts
 // in app.module.ts
 export class AppModule {
@@ -101,6 +106,7 @@ export class AppModule {
   }
 }
 ```
+
 これにより、ログイン ダイアログの各ボタンが自動的に有効になります。
 
 <img class="responsive-img" src="../../../images/general/igx-side-auth-login-google.png" />

@@ -1,29 +1,29 @@
-<!-- markdownlint-disable MD003 MD024 -->
+<!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if (igxName === 'IgxGrid') {
 ---
-
 title: Angular Grid Sorting - Ignite UI for Angular
 _description: Get started with the Angular sorting feature of Ignite for Angular UI grid! Configure a mix of sortable columns & change the display order of data records.
 _keywords: angular sort, ignite ui for angular, infragistics
+_license: commercial
 ---
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-
 title: Angular Tree Grid Sorting - Ignite UI for Angular
 _description: Get started with the Angular sorting feature of Ignite for Angular UI grid! Configure a mix of sortable columns & change the display order of data records.
 _keywords: angular sort, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/sorting
 ---
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
-
 title: Angular Hierarchical Grid Sorting - Ignite UI for Angular
 _description: Get started with the Angular sorting feature of Ignite for Angular UI grid! Configure a mix of sortable columns & change the display order of data records.
 _keywords: angular sort, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/sorting
 ---
 
@@ -108,7 +108,7 @@ You can sort any column or a combination of columns through the @@igComponent AP
 @@if (igxName === 'IgxTreeGrid') {
 
 ```typescript
-import { SortingDirection } from 'igniteui-angular';
+import { SortingDirection } from 'igniteui-angular/grids/core';
 // import { SortingDirection } from '@infragistics/igniteui-angular'; for licensed package
 
 // Perform a case insensitive ascending sort on the ProductName column.
@@ -125,7 +125,7 @@ this.@@igObjectRef.sort([
 @@if (igxName !== 'IgxTreeGrid') {
 
 ```typescript
-import { SortingDirection } from 'igniteui-angular';
+import { SortingDirection } from 'igniteui-angular/grids/core';
 // import { SortingDirection } from '@infragistics/igniteui-angular'; for licensed package
 
 // Perform a case insensitive ascending sort on the ProductName column.

@@ -2,6 +2,7 @@
 title: Cascading combos in Angular @@igComponent Grid - Infragistics
 _description: Grid with Cascading Combos. See the sample here.
 _keywords: angular cascading combos with grid, ignite ui for angular, infragistics
+_license: commercial
 ---
 
 # Angular Grid with Cascading Combos
@@ -28,7 +29,7 @@ Once the column editing is enabled, you can start by adding your [Single Select 
 To get started with the [Simple ComboBox component](../simple-combo.md#angular-simple-combobox-features), first you need to import the `IgxSimpleComboModule` in your **app.module.ts** file:
 
 ```typescript
-import { IgxSimpleComboModule } from 'igniteui-angular';
+import { IgxSimpleComboModule } from 'igniteui-angular/simple-combo';
 
 @NgModule({
     imports: [

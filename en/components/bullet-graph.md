@@ -2,6 +2,7 @@
 title: Angular Bullet Graph | Data Visualization Tools | Infragistics
 _description: Infragistics' Angular bullet graph control allows you to create dashboards displaying ranges or comparing multiple measurements. View our data visualization tools!
 _keywords: Angular Bullet Graph, animation, labels, needle, scales, ranges, tick marks, Infragistics
+_license: commercial
 mentionedTypes: ["XamBulletGraph"]
 namespace: Infragistics.Controls.Gauges
 ---
@@ -129,12 +130,12 @@ The bullet graph's performance value can be further modified to show progress re
 ```html
 <igx-bullet-graph
     #bulletGraph
-    height="80px" 
+    height="80px"
     width="400px"
-    value=70 
+    value=70
     targetValue=90
-    minimumValue=0 
-    maximumValue=100 
+    minimumValue=0
+    maximumValue=100
     interval=10
     labelInterval=10
     labelExtent=0.025

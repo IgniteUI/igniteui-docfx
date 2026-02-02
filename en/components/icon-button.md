@@ -1,7 +1,8 @@
 ---
-title: Angular Icon Button Component – Ignite UI for Angular
+title: Angular Icon Button Component – Ignite UI for Angular - MIT license 
 _description: Enhance standard icons with button functionalities. Try it now.
 _keywords: Angular Icon Button component, Angular Icon Button control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Angular UI Components,
+_license: MIT
 ---
 
 # Angular Icon Button Overview
@@ -33,7 +34,7 @@ The next step is to import the `IgxIconButtonDirective` as a standalone dependen
 // home.component.ts
 
 ...
-import { IgxIconButtonDirective } from 'igniteui-angular';
+import { IgxIconButtonDirective } from 'igniteui-angular/directives';
 // import { IgxIconButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
