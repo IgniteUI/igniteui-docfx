@@ -653,7 +653,7 @@ The last step is to pass the custom drop-down theme to a class or element select
 
 <div class="divider--half"></div>
 
-## API Summary
+## API References
 
 - [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
 - [IgxDropDownComponent Styles]({environment:sassApiUrl}/themes#function-drop-down-theme)

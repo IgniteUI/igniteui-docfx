@@ -450,7 +450,7 @@ At the end your combo should look like this:
 > [!NOTE]
 > The combobox uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for the combobox. For more details see [`igxForOf Known Issues`](for-of.md#known-limitations) section.
 
-## API Summary
+## API References
 
 <div class="divider--half"></div>
 

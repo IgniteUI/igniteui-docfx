@@ -167,14 +167,14 @@ private reloadData() {
 }
 ```
 
-### API References
+## API References
 
 <div class="divider--half"></div>
 
 - [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
 - [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
-### Additional Resources
+## Additional Resources
 
 <div class="divider--half"></div>
 
