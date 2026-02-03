@@ -9,30 +9,22 @@ namespace: Infragistics.Controls
 
 # Column Configuration
 
-Columns are defined declaratively using **`<igc-grid-lite-column>`** elements as children of the **`<igc-grid-lite>`** component. **`field`** is the only required property for a column as the column identifier. It is also the property that is used to map and render the relevant data in the grid rows.
+Columns are defined declaratively using column child components within the grid. The `field` property is the only required for a column, as it serves as the column identifier. It is also the property that is used to map and render the relevant data in the grid rows.
 
 ```html
 <igc-grid-lite [data]="data">
   <igc-grid-lite-column
     field="account"
+    header="Account Number"
+    ...
   ></igc-grid-lite-column>
   <!-- Additional columns -->
 </igc-grid-lite>
 ```
 
-In TypeScript, you can access the columns collection via the grid's `columns` property, which is read-only:
-
-```typescript
-// Access columns (read-only)
-const columns = grid.columns;
-```
-
->[!NOTE]
->The declarative columns are designed to be definitions and should rarely change once the grid is mounted. The grid will automatically detect changes to column elements and their attributes.
-
 ## Configuration Based on the Data Source
 
-The grid supports inferring the column configuration based on the provided data source. It tries to infer the appropriate **`field`** and **`dataType`** based on records in the data.
+The grid supports inferring the column configuration based on the provided data source when `autoGenerate` is set to true. It tries to infer the appropriate `field` and `dataType` based on records in the data.
 
 ```typescript
 const data: Record[] = [
@@ -45,10 +37,9 @@ const data: Record[] = [
 <igc-grid-lite auto-generate [data]="data"></igc-grid-lite>
 ```
 
-The previous snippet will result in the following auto-generated columns for the grid:
+The previous snippet will result in the grid automatically creating columns equivalent to:
 
-```typescript
-// Equivalent to:
+```html
 <igc-grid-lite [data]="data">
   <igc-grid-lite-column field="entryId" data-type="string"></igc-grid-lite-column>
   <igc-grid-lite-column field="source" data-type="string"></igc-grid-lite-column>
@@ -63,7 +54,7 @@ Useful for a quick render of some data without any additional customizations.
 
 ## Additional Column Configuration
 
-Column elements expose several properties via attributes:
+The column exposes several more properties for customization:
 
 ### Column Width
 
@@ -71,37 +62,28 @@ By default, the columns have a width of `minmax(136px, 1fr)` which translates to
 1 part of the available space in the Grid Lite. This way the columns are fluid and responsive accommodating for changes
 in the grid width.
 
-To change the width of a column, use the **`width`** attribute:
+To change the width of column, use the `width` property of the column.
 
 ```html
-<igc-grid-lite-column
-  field="account"
-  width="250px"
-></igc-grid-lite-column>
+<igc-grid-lite-column field="price" width="250px"></igc-grid-lite-column>
 ```
 
 The property accepts <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numbers_lengths_and_percentages" target="_blank">valid CSS length units</a>.
 
 ### Hiding Columns
 
-Columns can be hidden/shown by setting the **`hidden`** attribute:
+Columns can be hidden/shown by setting the `hidden` property of the column.
 
 ```html
-<igc-grid-lite-column
-  field="account"
-  hidden
-></igc-grid-lite-column>
+<igc-grid-lite-column field="price" hidden></igc-grid-lite-column>
 ```
 
 ### Column Resize
 
-Each column of the Grid Lite component can be configured to be resizable by setting the **`resizable`** attribute:
+Each column of the Grid Lite component can be configured to be resizable by setting the `resizable` property of the column element.
 
 ```html
-<igc-grid-lite-column
-  field="account"
-  resizable
-></igc-grid-lite-column>
+<igc-grid-lite-column field="price" resizable></igc-grid-lite-column>
 ```
 
 If a column is set to be resizable, you can drag the right size of the column header to either increase/decrease  the column width. Double-clicking on the resize area will trigger auto-sizing of the column where it will try set its width according to the largest content of its cells/header.

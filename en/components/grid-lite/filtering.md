@@ -9,7 +9,7 @@ namespace: Infragistics.Controls
 
 # Angular Grid Lite Filter Operations
 
-The Grid Lite supports filtering operations on its data source. Data filtering is controlled on per-column level, allowing you to have filterable and non-filterable columns. By default, filtering on a column is disabled unless explicitly configured with the **`filterable`** attribute.
+The Grid Lite supports filtering operations on its data source. Data filtering is controlled on per-column level, allowing you to have filterable and non-filterable columns. By default, filtering on a column is disabled unless explicitly configured with the `filterable` property of the column configuration object.
 
 ```html
 <igc-grid-lite-column
@@ -18,20 +18,19 @@ The Grid Lite supports filtering operations on its data source. Data filtering i
 ></igc-grid-lite-column>
 ```
 
-For string data types, you can control whether the filter operations will be case sensitive using the **`filteringCaseSensitive`** attribute (defaults to `false` for case insensitive):
+You can also control whether the filter operations for string columns should be case sensitive by using the `filteringCaseSensitive` property or `filtering-case-sensitive` attribute:
 
 ```html
 <igc-grid-lite-column
   field="name"
   filterable
-  filteringCaseSensitive
+  filtering-case-sensitive
 ></igc-grid-lite-column>
 ```
 
 You can also set these properties programmatically:
 
 ```typescript
-// In TypeScript
 column.filterable = true;
 column.filteringCaseSensitive = true;
 ```

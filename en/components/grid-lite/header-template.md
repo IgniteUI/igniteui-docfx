@@ -9,32 +9,35 @@ namespace: Infragistics.Controls
 
 # Customizing the Column Header
 
-Similar to the cell templates, column headers can also be customized to better fit the desired use case. You can pass a text label through the **`header`** attribute, or provide a full-blown custom template.
+Similar to the cell templates, column headers can also be customized to better fit the desired use case. You can pass a text label through the `header` property, or provide a full-blown custom template.
 
 ## Customization via Header Text
 
-By default the column uses the **`field`** property for label text. To customize the label, set the **`header`** attribute to a more human readable format.
+By default the column uses the `field` property for label text. To customize the label, set the `header` property to a more human readable format.
 
 ```html
-<igc-grid-lite-column
-  field="price"
-  header="Price per item"
-></igc-grid-lite-column>
+<igc-grid-lite-column field="price" header="Price per item"></igc-grid-lite-column>
 ```
 
 >[!NOTE]
->When **`headerTemplate`** is provided, **`header`** is ignored.
+>When `headerTemplate` is provided, `header` is ignored.
 
 ## Customization via Header Template
 
-Similar to the cell template, you can also pass a custom template renderer and create your own DOM inside the column header. With declarative columns, you can set the template in TypeScript:
+Similar to the cell template, you can also pass a custom template renderer and create your own DOM inside the column header.
 
 ```typescript
 import { html } from 'lit';
 
-// Access the column element and set the headerTemplate
-const column = grid.querySelector('igc-grid-lite-column[field="rating"]');
-column.headerTemplate = () => html`<h3>⭐ Rating ⭐</h3>`;
+protected headerTemplate(_params: IgcHeaderContext<T>) {
+    return html`<h3>⭐ Rating ⭐</h3>`;
+}
+```
+
+```html
+<igc-grid-lite>
+    <igc-grid-lite-column field="rating" [headerTemplate]="headerTemplate"></igc-grid-lite-column>
+</igc-grid-lite>
 ```
 
 <code-view style="height:510px"

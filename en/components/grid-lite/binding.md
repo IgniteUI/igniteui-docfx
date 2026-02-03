@@ -15,7 +15,7 @@ When applying data transformations, such as sorting and filtering, the grid does
 
 ## Change the Data Source at Runtime
 
-The component supports changing its data source at runtime. If the new source has a different "shape" than the previous one, you need to update the declarative column configuration accordingly.
+The component supports changing its data source at runtime. If the new source has a different "shape" than the previous one make sure to update your column configuration as well.
 
 ```typescript
 grid.data = [...{
@@ -23,7 +23,14 @@ grid.data = [...{
 }];
 ```
 
-If the grid has **`autoGenerate`** enabled, it will "_infer_" the column configuration from the new data source automatically.
+```html
+<igc-grid-lite>
+    <!-- Update column configuration, add or remove columns as needed to represent the new data. -->
+    <igc-grid-lite-column field="id"></igc-grid-lite-column>
+</igc-grid-lite>
+```
+
+If the grid has `autoGenerate` enabled, it will "_infer_" the new column configuration automatically when the data changes.
 
 ```typescript
 grid.autoGenerate = true;
