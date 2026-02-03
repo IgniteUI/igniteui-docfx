@@ -1,6 +1,6 @@
 ---
 title: Angular Grid Lite フィルタリング | Ignite UI for Angular | MIT ライセンス
-_description: Angular Grid Lite のフィルター操作、フィルターのカスタマイズ、およびリモート フィルタリング。オープンソースの Angular Grid Lite を使用してアプリを作成できます。今すぐお試しください。
+_description: Angular Grid Lite のフィルター操作、フィルターのカスタマイズ、およびリモート フィルタリング。オープン ソースの Angular Grid Lite を使用してアプリを作成できます。今すぐお試しください。
 _keywords: フィルタリング, {Platform}, {ComponentKeywords}, {ProductName}, インフラジスティックス
 _license: MIT
 mentionedTypes: [{ComponentApiMembers}]
@@ -36,7 +36,7 @@ Grid Lite は、データ ソースでのフィルター操作をサポートし
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/filtering-simple" alt="Angular Grid Lite フィルタリング構成">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/filtering-simple/" alt="Angular Grid Lite フィルタリング構成">
 </code-view>
 
 ## フィルター モデル
@@ -144,7 +144,7 @@ grid.addEventListener('filtered', (event: CustomEvent<GridLiteFilteredEvent<T>>)
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/filtering-events" alt="Angular Grid Lite フィルタリング構成イベント">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/filtering-events/" alt="Angular Grid Lite フィルタリング構成イベント">
 </code-view>
 
 ## リモート フィルター操作
@@ -180,7 +180,7 @@ grid.dataPipelineConfiguration = { filter: (params: DataPipelineParams<T>) => T[
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/filtering-pipeline" alt="Angular Grid Lite フィルタリング リモート構成">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/filtering-pipeline/" alt="Angular Grid Lite フィルタリング リモート構成">
 </code-view>
 
 <!-- TODO ## API References

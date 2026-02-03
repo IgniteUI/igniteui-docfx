@@ -21,12 +21,60 @@ Angular Grid Lite features:
 - Sorting
 - Row Virtualization
 - Accessibility
-- Themes And Styling
+- Themes and Styling
 - Column Data Types
+
+## Installation and Setup
+
+### Installation
+To install GridLite, go to the root folder of your project (where `package.json` is located) and run the following command using npm:
+
+```cmd
+npm install igniteui-grid-lite --save
+```
+
+Or using yarn:
+
+```cmd
+yarn add igniteui-grid-lite
+```
+
+### Using Grid Lite in your Angular code
+
+In the file where you want to use Grid Lite, import and register it before your component class is declared:
+
+```typescript
+import { IgcGridLite } from 'igniteui-grid-lite';
+
+IgcGridLite.register();
+```
+
+You also need to add `CUSTOM_ELEMENTS_SCHEMA` because we are working with web components for Grid Lite
+
+```typescript
+@Component({
+  selector: 'app-grid-lite',
+  templateUrl: './grid-lite.component.html',
+  styleUrls: ['./grid-lite.component.scss'],
+  imports: [CommonModule],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+})
+```
+
+Finally add the `<igc-grid-lite>` element to your markup:
+
+```html
+  <igc-grid-lite 
+    [columns]="columns" 
+    [data]="data">
+  </igc-grid-lite>
+```
+
+## Grid Lite in Action
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/overview" alt="Angular Grid Lite App Sample Main">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/overview/" alt="Angular Grid Lite App Sample Main">
 </code-view>
 
 Grid Lite controls are completely free, MIT licensed, as a part of our initiative to make Ignite UI more open, transparent, and accessible. However, if your project scales and grows in complexity and functionality, and you require an enterprise-grade application, we have an upgrade strategy for transitioning from the Grid Lite to the full-featured and advanced Data Grid.  

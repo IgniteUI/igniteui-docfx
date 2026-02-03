@@ -51,7 +51,7 @@ The component's inputs are the following:
 
 <code-view style="height:850px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs" alt="Angular Tree Grid Group By Example">
+           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs/" alt="Angular Tree Grid Group By Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -166,6 +166,12 @@ private reloadData() {
     });
 }
 ```
+
+## Known Limitations
+
+|Limitation|Description|
+|--- |--- |
+|Grouping is not updated with batch editing | When using Tree Grid Group By with batch editing enabled (`batchEditing=true`), the grouping is not automatically updated when editing column values that are used for grouping. The grouping will only be updated after committing the transaction. |
 
 ### API References
 

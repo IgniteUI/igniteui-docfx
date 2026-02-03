@@ -105,7 +105,7 @@ In the sample below you can try out the different column properties and how they
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/column-config-dynamic" alt="Angular Grid Lite Column Config Dynamic">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/column-config-dynamic/" alt="Angular Grid Lite Column Config Dynamic">
 </code-view>
 
 <!-- TODO ## API References

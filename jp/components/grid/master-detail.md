@@ -17,7 +17,7 @@ _language: ja
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/grid/grid-master-detail" alt="Angular Grid Master-Detail の例">
+           iframe-src="{environment:lobDemosBaseUrl}/grid/grid-master-detail/" alt="Angular Grid Master-Detail の例">
 </code-view>
 
 ## 構成

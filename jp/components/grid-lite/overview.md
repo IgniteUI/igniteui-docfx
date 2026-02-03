@@ -1,6 +1,6 @@
 ---
 title: Angular Grid Lite の概要 | Ignite UI for Angular | MIT ライセンス
-_description: オープンソースの Grid Lite を使用してアプリを作成できます。軽量でありながら、フィルタリング、非表示、ソート など、必要な機能がすべて搭載されています。今すぐお試しください。
+_description: オープン ソースの Grid Lite を使用してアプリを作成できます。軽量でありながら、フィルタリング、非表示、ソート など、必要な機能がすべて搭載されています。今すぐお試しください。
 _keywords: 概要, {Platform}, {ComponentKeywords}, {ProductName}, インフラジスティックス
 _license: MIT
 mentionedTypes: [{ComponentApiMembers}]
@@ -8,9 +8,9 @@ namespace: Infragistics.Controls
 _language: ja
 ---
 
-# あらゆるプロジェクトに対応するオープンソース JavaScript Grid
+# あらゆるプロジェクトに対応するオープン ソース JavaScript Grid
 
-Ignite UI for Angular Grid Lite コンポーネントは、インフラジスティックスの新しいオープンソース UI コンポーネント セットの一部であり、今後も継続的にサポートおよびメンテナンスされます。これはオープンソースの JavaScript データ グリッドで、Web コンポーネントとして構築されているため、Web フレームワークの有無に関係なく依存関係なしで使用できます。現在、Angular、React、Blazor、Web Components 向けに 50 以上の OSS コントロールが MIT ライセンスのもとで利用可能です。
+Ignite UI for Angular Grid Lite コンポーネントは、インフラジスティックスの新しいオープン ソース UI コンポーネント セットの一部であり、今後も継続的にサポートおよびメンテナンスされます。これはオープン ソースの JavaScript データ グリッドで、Web コンポーネントとして構築されているため、Web フレームワークの有無に関係なく依存関係なしで使用できます。現在、Angular、React、Blazor、Web Components 向けに 50 以上の OSS コントロールが MIT ライセンスのもとで利用可能です。
 
 Angular Grid Lite は、必要最小限のオーバーヘッドで本質的なデータ表示機能を提供し、ユーザーが期待するパフォーマンスを実現します。これは、エンタープライズ グリッドの複雑さを避けつつ、高速で軽量なデータ表示を必要とする開発者向けに設計されています。
 
@@ -27,7 +27,7 @@ Angular Grid Lite の機能:
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/overview" alt="Angular Grid Lite メイン アプリ サンプル">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/overview/" alt="Angular Grid Lite メイン アプリ サンプル">
 </code-view>
 
 Grid Lite コントロールは完全に無料で、MIT ライセンスの下で提供されており、Ignite UI をよりオープンで透明性が高く、アクセスしやすいものにするための取り組みの一環です。しかし、プロジェクトが拡大し、複雑さや機能が増し、エンタープライズ グレードのアプリケーションが必要になった場合には、Grid Lite からフル機能で高度な Data Grid へ移行するためのアップグレード戦略をご用意しています。  
