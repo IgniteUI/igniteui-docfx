@@ -1,0 +1,71 @@
+name: Build English Documentation
+
+on:
+  push:
+    branches:
+      - vnext
+      - master
+    paths-ignore:
+      - '**/jp/**'
+      - '**/kr/**'
+  workflow_dispatch:
+    inputs:
+      isVerbose:
+        description: 'Get verbose output from steps - where configurable'
+        type: boolean
+        default: false
+      shouldCleanPostExecution:
+        description: 'Clean all pipeline dirs after the pipeline finishes?'
+        type: boolean
+        default: true
+
+env:
+  BUILD_TYPE: ${{ github.ref_name == 'master' && 'production' || 'staging' }}
+
+jobs:
+  build:
+    name: Build Job
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          clean: true
+          fetch-tags: true
+          fetch-depth: 0
+
+      - name: Setup Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+
+      - name: Setup .NET Core SDK 6.x
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '6.x'
+
+      - name: Install dependencies
+        run: npm ci --production=false ${{ github.event.inputs.isVerbose == 'true' && '--verbose' || '' }}
+
+      - name: Build English documentation
+        run: npm run build-${{ env.BUILD_TYPE }} -- --lang=en ${{ github.event.inputs.isVerbose == 'true' && '--verbose' || '' }}
+
+      - name: Package English build
+        run: |
+          cd en/_site
+          zip -r ../../${{ env.BUILD_TYPE }}_en.zip .
+          cd ../..
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: IgniteUIDocFX-en
+          path: ${{ env.BUILD_TYPE }}_en.zip
+          retention-days: 30
+
+      - name: Clean workspace
+        if: ${{ github.event.inputs.shouldCleanPostExecution == 'true' || github.event_name == 'push' }}
+        run: |
+          git clean -ffdx
+          git reset --hard
