@@ -49,7 +49,19 @@ import { IgcGridLite } from 'igniteui-grid-lite';
 IgcGridLite.register();
 ```
 
-Add the `<igc-grid-lite>` element to your markup:
+You also need to add `CUSTOM_ELEMENTS_SCHEMA` because we are working with web components for Grid Lite
+
+```typescript
+@Component({
+  selector: 'app-grid-lite',
+  templateUrl: './grid-lite.component.html',
+  styleUrls: ['./grid-lite.component.scss'],
+  imports: [CommonModule],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+})
+```
+
+Finally add the `<igc-grid-lite>` element to your markup:
 
 ```html
   <igc-grid-lite 
