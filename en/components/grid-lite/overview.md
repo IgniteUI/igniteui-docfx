@@ -58,7 +58,7 @@ export class AppComponent {
 }
 ```
 
-## Goals and Features
+## Features
 
 ### Performance Built In
 
