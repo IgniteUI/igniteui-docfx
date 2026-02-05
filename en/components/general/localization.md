@@ -6,6 +6,8 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 # Localization (i18n)
 
+## Localization (i18n)
+
 >Note: As of 20.2.0 this is the recommended way of applying localization to the Ignite UI for Angular components.
 
 With this new localization we provide more features with less requirements for the localization strings and it includes formatting for all available locales, based on `Intl`.
