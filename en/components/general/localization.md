@@ -47,7 +47,7 @@ In general you should register your resources under the languages, regions and s
 
 #### `lang` attribute
 
-With this approach we have the ability to set localization through the `lang` global attribute of the `HTML` tag. If is being watched and if it is changed all rendered components will update their resource strings to the currently set language. All rules regarding the tag used applied as described above.
+With this approach we have the ability to set localization through the `lang` global attribute of the `HTML` tag. This attribute is being watched and if it is changed, all rendered components will update their resource strings to the currently set language. All rules regarding the tag used apply as described above.
 
 > Note: This works only on root level and will not work for inner elements on the page.
 
