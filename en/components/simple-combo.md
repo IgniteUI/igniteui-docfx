@@ -406,7 +406,7 @@ The last step is to include the component's theme.
 > [!NOTE]
 > The simple combobox uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for the simple combobox. For more details see [igxForOf Known Issues](for-of.md#known-limitations) section.
 
-## API Summary
+## API References
 
 <div class="divider--half"></div>
 

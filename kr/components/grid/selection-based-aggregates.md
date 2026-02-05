@@ -48,13 +48,13 @@ Change the selection to see summaries of the currently selected range.
 </code-view>
 
 
-### API References
+## API References
 
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)    
 * [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)    
 * [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)     
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>    
 
 * [Grid overview](grid.md)    
