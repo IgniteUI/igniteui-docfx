@@ -77,7 +77,7 @@ public formatOptions = this.options;
 
 The appearance of the date portions will be set (e.g. day, month, year) based on [`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) format or [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs) input. The pipe arguments can be used to specify a custom [date format](https://angular.io/api/common/DatePipe#pre-defined-format-options) or [timezone](https://angular.io/api/common/DatePipe#parameters):
 
-- **format** - The default value for formatting the date is 'mediumDate'. Other available options are 'short', 'long', 'shortDate', 'fullDate', 'longTime', 'fulLTime' and etc. This is a full list of all available [pre-defined Angular format options](https://angular.io/api/common/DatePipe#pre-defined-format-options) (legacy).
+- **format** - The default value for formatting the date is 'mediumDate'. Other available options are 'short', 'long', 'shortDate', 'fullDate', 'longTime', 'fullTime' and etc. This is a full list of all available [pre-defined Angular format options](https://angular.io/api/common/DatePipe#pre-defined-format-options) (legacy).
 - **timezone** - The user's local system timezone is the default value. The timezone offset or standard GMT/UTC or continental US timezone abbreviation can also be passed. Different timezone examples which will display the corresponding time of the location anywhere in the world:
 
  > Note: Since 20.2.x, if you have the Angular localization disabled, the list of available format options can be found in our new [localization topic](../general/localization.md#formatting).
