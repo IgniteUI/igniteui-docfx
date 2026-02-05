@@ -159,7 +159,7 @@ Custom format options:
 
 All components in Ignite UI for Angular render in English by default and they can be rendered in any of the listed languages at the top as well. There are three ways you can achieve that globally and one way per component. For any language that is not currently available, custom translation can be provided for each resource string that is available through our API.
 
-The translations for the component strings are stored in resource strings and they will need to registered in our localization system so that the component can use them.
+The translations for the component strings are stored in resource strings and they will need to be registered in our localization system so that the component can use them.
 
 First to achieve that it is needed to install the same old `igniteui-angular-i18n` package, which contains the localized resource strings for all languages:
 
