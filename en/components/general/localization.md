@@ -62,7 +62,7 @@ With this approach we have the ability to set localization through the `lang` gl
 
 #### Angular API
 
-You can use also Angular's built in [LOCALE_ID](https://angular.dev/api/core/LOCALE_ID) token the set the locale for the whole application. The tag provided will work the same way for our components compared to how our API handles.
+You can use also Angular's built in [LOCALE_ID](https://angular.dev/api/core/LOCALE_ID) token to set the locale for the whole application. The tag provided will work the same way for our components compared to how our API handles.
 
 #### Per component
 
