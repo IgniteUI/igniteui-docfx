@@ -278,7 +278,7 @@ export const customResources: IResourceStrings = Object.assign(
         grid_summary_count: 'Custom count',
         grid_summary_min: 'Minium',
         grid_summary_max: 'Maximum',
-        grid_summary_sum: 'Custom summery'
+        grid_summary_sum: 'Custom summary'
     }
 ); 
 registerI18n(customResources, 'en');
