@@ -170,16 +170,16 @@ private reloadData() {
 
 |制限|説明|
 |--- |--- |
-|バッチ編集でグループ化が更新されない | バッチ編集を有効にした (`batchEditing=true`) Tree Grid グループ化を使用する場合、グループ化に使用される列の値を編集してもグループ化は自動的に更新されません。グループ化は、トランザクションをコミットした後にのみ更新されます。|
+|一括編集でグループ化が更新されない | 一括編集を有効にした (`batchEditing=true`) Tree Grid グループ化を使用する場合、グループ化に使用される列の値を編集してもグループ化は自動的に更新されません。グループ化は、トランザクションをコミットした後にのみ更新されます。|
 
-### API リファレンス
+## API リファレンス
 
 <div class="divider--half"></div>
 
 - [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
 - [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 
-### その他のリソース
+## その他のリソース
 
 <div class="divider--half"></div>
 

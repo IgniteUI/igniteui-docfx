@@ -1,6 +1,6 @@
 ---
 title: 一括編集 | トランザクション サービス | Ignite UI for Angular | インフラジスティックス
-_description: コンポーネントで Angular CRUD 操作を実行するときにバッチ編集を実装できるトランザクション サービスクラスの階層について学びます。
+_description: コンポーネントで Angular CRUD 操作を実行するときに一括編集を実装できるトランザクション サービスクラスの階層について学びます。
 _keywords: batch editing, igniteui for angular, infragistics, 一括編集,
 _language: ja
 ---
@@ -49,7 +49,7 @@ _language: ja
 
 [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) には元に戻すスタックが含まれ、元に戻す/やり直し機能を利用できます。Undo スタックは、実際にはトランザクションの配列を含む配列です。[`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) 使用時に、元に戻すスタックにトランザクションがある場合は、[`canUndo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#canUndo) アクセサーを確認できます。ある場合 [`undo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#undo) メソッドを使用して最後のトランザクションを削除し、[`redo`]({environment:angularApiUrl}/classes/igxtransactionservice.html#redo) で最後に元に戻したトランザクションを適用します。
 
-以下のトピックで、バッチ編集を使用した igxGrid の実装方法の詳細な例を見つけることができます。
+以下のトピックで、一括編集を使用した igxGrid の実装方法の詳細な例を見つけることができます。
 
 - [Grid 一括編集](grid/batch-editing.md)
 
@@ -69,7 +69,7 @@ _language: ja
     }
 ```
 
-以下は、[`igxTreeGrid`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) と [`igxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) でバッチ編集を実装する方法の詳細な例を含むトピックです。
+以下は、[`igxTreeGrid`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html) と [`igxHierarchicalGrid`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html) で一括編集を実装する方法の詳細な例を含むトピックです。
 
 - [Tree Grid 一括編集](treegrid/batch-editing.md)
 - [Hierarchical Grid 一括編集](hierarchicalgrid/batch-editing.md)
