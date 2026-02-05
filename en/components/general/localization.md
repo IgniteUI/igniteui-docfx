@@ -280,7 +280,7 @@ export const customResources: IResourceStrings = Object.assign(
         grid_summary_max: 'Maximum',
         grid_summary_sum: 'Custom summary'
     }
-); 
+);
 registerI18n(customResources, 'en');
 
 ```
