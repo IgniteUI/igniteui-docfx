@@ -246,7 +246,7 @@ import { IResourceStrings } from 'igniteui-angular';
 
 export const customResourcesForAll: IResourceStrings = {
     //...
-}; 
+};
 registerI18n(customResourcesForAll, 'custom');
 ```
 
