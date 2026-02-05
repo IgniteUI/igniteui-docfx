@@ -194,7 +194,7 @@ If you would like to have specific component in your app use either the already 
 
 #### Language and formatting
 
-If you would like to set different from the global localization for a component, you can do that be setting the `locale` property. The will affect the language of the resource strings used as well as the formatting, since they are tied together.
+If you would like to set different from the global localization for a component, you can do that by setting the `locale` property. This will affect the language of the resource strings used as well as the formatting, since they are tied together.
 
 With this approach you should already have the available resource strings globally registered:
 
