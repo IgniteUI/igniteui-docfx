@@ -161,7 +161,7 @@ All components in Ignite UI for Angular render in English by default and they ca
 
 The translations for the component strings are stored in resource strings and they will need to be registered in our localization system so that the component can use them.
 
-First to achieve that it is needed to install the same old `igniteui-angular-i18n` package, which contains the localized resource strings for all languages:
+To achieve that, you first need to install the `igniteui-angular-i18n` package, which contains the localized resource strings for all languages:
 
 ```
 npm install igniteui-angular-i18n --save-dev
