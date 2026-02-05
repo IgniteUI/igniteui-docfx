@@ -209,6 +209,10 @@ When the simple combobox is closed and focused:
 
 - `ArrowDown` or `Alt` + `ArrowDown` will open the simple combobox's dropdown.
 
+- `Esc` will clear the selected value while keeping focus on the combobox.
+
+- `Tab` will move the focus to the next focusable element outside the combobox.
+
 > [!NOTE]
 > Any other key stroke will be handled by the input.
 
@@ -226,7 +230,9 @@ When the simple combobox is opened and an item in the list is focused:
 
 - `Enter` will select/deselect the active list item and will close the list.
 
-- `Esc` will close the list.
+- `Esc` will close the list and keep the focus on the combobox.
+
+- `Tab` will close the list and move focus to the next focusable element.
 
 When the simple combobox is opened and allow custom values are enabled, and add item button is focused:
 
