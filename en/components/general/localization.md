@@ -180,7 +180,7 @@ You will also need to provide to which locale they will apply to. If not a valid
 
 #### Regions and scripts
 
-We take into account the `language + region` or `language + script` from the locale you used to register your resources, since these are the most commonly used. They are separated by `-` and region/script are usually are defined on a second or third position. For example, `en-US` and `en-GB` or `en-Latn`.
+We take into account the `language + region` or `language + script` from the locale you used to register your resources, since these are the most commonly used. They are separated by `-` and region/script are usually defined on a second or third position. For example, `en-US` and `en-GB` or `en-Latn`.
 
 If you do not use region or script, the resources you register will apply to all locales that use the `en` language, for example. That is unless you define resources for the regions and scripts as well. Then only for those you have not defined, will return the resources for `en` in this case.
 
