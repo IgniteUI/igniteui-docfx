@@ -87,7 +87,7 @@ public countryChanging(event: IComboSelectionChangeEventArgs) {
 </igx-linear-bar>
 ```
 
-## API まとめ
+## API リファレンス
 
 <div class="divider--half"></div>
 
