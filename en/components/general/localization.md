@@ -8,9 +8,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Localization (i18n)
 
->Note: As of 20.2.0 this is the recommended way of applying localization to the Ignite UI for Angular components.
+>Note: As of 21.1.0 this is the recommended way of applying localization to the Ignite UI for Angular components.
 
-With this new localization we provide more features with less requirements for the localization strings and it includes formatting for all available locales, based on `Intl`.
+With our new localization we introduce more features with less requirements for both our localization strings and formatting for all available locales. The formatting is now based on the standards introduced by the `Intl` API.
 
 Currently, Ignite UI for Angular ships with resource strings for the following languages: `Bulgarian`, `Czech`, `Danish`, `Dutch`, `English`, `French`, `German`, `Hungarian`, `Italian`, `Japanese`, `Korean`, `Norwegian`, `Polish`, `Portuguese`, `Romanian`, `Spanish`, `Swedish`, `Turkish`, `Traditional Chinese (zh-Hant)` and `Simplified Chinese (zh-Hans)`. These are available via the `igniteui-angular-i18n` package, except for English which comes as a default localization in `igniteui-angular`.
 
@@ -35,7 +35,7 @@ There are several ways that you can set locale. Either globally or per component
 
 #### Global API
 
-You can set the locale that will be used globally using the `setCurrentI18n` method, that comes from the `igniteui-angular` package. It will affect both formatting and resource strings used in all of our components.
+You can set the locale that will be used globally using the `setCurrentI18n` method, that comes from the `igniteui-angular` package. It will affect both formatting and registered resource strings used in all of our components. For more on resource strings see [Localized resource strings](#localized-resource-strings)
 
 ```ts
 setCurrentI18n('de');
