@@ -125,7 +125,7 @@ The above code will generate CSS classes for each color variant in the palette. 
 * [Getting Contrast Colors]({environment:sassApiUrl}/palettes#function-contrast-color)
 * [Generating Color Classes]({environment:sassApiUrl}/utilities#mixin-color-classes)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.

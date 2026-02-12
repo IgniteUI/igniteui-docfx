@@ -156,7 +156,7 @@ Dialog title area can be customized using `igxDialogTitle` directive or `igx-dia
 
 <div class="divider--half"></div>
 
-### API Summary
+## API References
 <div class="divider--half"></div>
 
 * [IgxDialogComponent]({environment:angularApiUrl}/classes/igxdialogcomponent.html)
@@ -164,7 +164,7 @@ Dialog title area can be customized using `igxDialogTitle` directive or `igx-dia
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
 * [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
 
-### Additional Resources
+## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

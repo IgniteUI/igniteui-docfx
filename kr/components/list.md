@@ -626,7 +626,7 @@ public selectItem(item) {
 
 <div class="divider--half"></div>
 
-### API References
+## API References
 
 In this article we covered a lot of ground with the list component. We created a list of contact items. Used some additional Ignite UI for Angular components inside our list items, like avatars and icons. Created some custom item layout and styled it. Finally, we added list filtering. The list component has a few more APIs to explore, which are listed below.
 
@@ -643,7 +643,7 @@ Additional components that were used:
 
 <div class="divider"></div>
 
-### Additional Resources
+## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

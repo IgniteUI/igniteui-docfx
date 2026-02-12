@@ -216,7 +216,7 @@ export class ComboDemo {
 
 <div class="divider--half"></div>
 
-## API まとめ
+## API リファレンス
 
 <div class="divider--half"></div>
 
