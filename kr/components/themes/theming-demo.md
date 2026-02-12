@@ -321,7 +321,7 @@ Now we can easily change our defined themes with only a `click` event:
 * [IgxInputGroupComponent Styles]({environment:sassApiUrl}/themes#function-input-group-theme) 
 * [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [Global Theme](global-theme.md)

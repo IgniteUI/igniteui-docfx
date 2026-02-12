@@ -155,7 +155,7 @@ export class AppModule {}
 </igx-combo>
 ```
 
-## API まとめ
+## API リファレンス
 
 <div class="divider--half"></div>
 

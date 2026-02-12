@@ -258,6 +258,7 @@
     "INPC",
     "batchediting",
     "updateparameters",
-    "alldata"
+    "alldata",
+    "subtag"
   ]
 }

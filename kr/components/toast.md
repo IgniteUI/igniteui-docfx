@@ -124,7 +124,7 @@ public open(toast) {
 
 <div class="divider--half"></div>
 
-### API References
+## API References
 In this article we learned how to use and configure the [`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html). For more details in regards its API, take a look at the links below:
 
 * [`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html)

@@ -121,7 +121,7 @@ let data = [
  </igx-financial-chart>
 ```
 
-### Additional Resources
+## Additional Resources
 
 -   [Binding Multiple Sources](financial-chart-multiple-data.md)
 -   [Binding High Volume Data](financial-chart-high-volume.md)

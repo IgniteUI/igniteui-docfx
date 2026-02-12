@@ -470,7 +470,7 @@ If the component is using an [`Emulated`](themes/sass/component-themes.md#view-e
 
 }
 
-### API References
+## API References
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 * [IgxGridRow]({environment:angularApiUrl}/classes/igxgridrow.html)
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
@@ -478,7 +478,7 @@ If the component is using an [`Emulated`](themes/sass/component-themes.md#view-e
 * [RowType]({environment:angularApiUrl}/interfaces/RowType.html)
 * [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)
