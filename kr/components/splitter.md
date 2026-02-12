@@ -203,7 +203,7 @@ This is the final result from applying your new theme.
 </code-view>
 
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxSplitterComponent]({environment:angularApiUrl}/classes/igxsplittercomponent.html)

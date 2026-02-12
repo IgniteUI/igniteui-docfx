@@ -45,7 +45,7 @@ To set the display density explicitly for a control, use the [`displayDensity`](
 <igx-input-group [displayDensity]="'cosy'"> ... </igx-input-group>
 ```
 
-### API References
+## API References
 <div class="divider"></div>
 
 * [DisplayDensity]({environment:angularApiUrl}/enums/displaydensity.html)
@@ -53,7 +53,7 @@ To set the display density explicitly for a control, use the [`displayDensity`](
 * [IDisplayDensityOptions]({environment:angularApiUrl}/interfaces/idisplaydensityoptions.html)
 * [DisplayDensityToken]({environment:angularApiUrl}/index.html#displaydensitytoken)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.

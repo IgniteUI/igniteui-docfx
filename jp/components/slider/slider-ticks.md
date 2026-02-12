@@ -9,7 +9,7 @@ _language: ja
 ### 使用方法
 
 
-### API リファレンス
+## API リファレンス
 
 <div class="divider--half"></div>
 
@@ -19,7 +19,7 @@ _language: ja
 - [SliderType]({environment:angularApiUrl}/enums/slidertype.html)
 
 
-### その他のリソース
+## その他のリソース
 
 - [Slider の概要](slider.md)
 
