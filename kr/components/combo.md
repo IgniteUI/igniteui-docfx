@@ -123,7 +123,7 @@ When igxCombo is opened, allow custom values are enabled and add item button is 
 > [!NOTE]
 > `igxCombo` uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for `igxCombo`. For more details see [igxForOf Known Issues](for-of.html#known-limitations) section.
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [Combo Features](combo-features.md)

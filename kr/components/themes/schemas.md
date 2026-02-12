@@ -126,7 +126,7 @@ Another great feature of theme schemas is that you can have as many as you want 
 * [Global Theme]({environment:sassApiUrl}/themes#mixin-theme)
 * [Avatar Theme]({environment:sassApiUrl}/themes#function-avatar-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
