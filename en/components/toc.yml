@@ -1454,7 +1454,8 @@
   premium: true
 - name: PDF Exporter
   href: exporter-pdf.md
-  new: true
+  new: false
+  updated: true
   premium: true
 - name: Transaction Service
   href: transaction.md
