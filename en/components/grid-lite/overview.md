@@ -90,13 +90,13 @@ Full Excel-style keyboard navigation gives user the experience they expect with 
 
 Yes. Ignite UI Grid Lite is a free, open-source Angular data grid released under the MIT license. You can use it in commercial or personal projects with no licensing fees. It is part of our initiative to make Ignite UI more open, transparent, and accessible. 
 
-MIT-licensed 
+- MIT-licensed 
 
-Free for commercial use 
+- Free for commercial use 
 
-Community-driven development 
+- Community-driven development 
 
-No feature gating 
+- No feature gating 
 
 However, if your project scales and grows in complexity and functionality, and you require an enterprise-grade application, we have a seamless upgrade strategy. It will make the transitioning from the free Angular data grid (Grid Lite) to the full-featured and advanced Data Grid simpler and faster. 
 
