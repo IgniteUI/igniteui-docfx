@@ -100,7 +100,7 @@ public ngOnInit(): void {
 }
 ```
 
-### Additional Resources
+## Additional Resources
 
 <div class="divider--half"></div>
 

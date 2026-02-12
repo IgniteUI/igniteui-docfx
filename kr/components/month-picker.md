@@ -158,7 +158,7 @@ Here is an example of localizing the month picker component:
     - <kbd>Enter</kbd> key to select the currently focused month and close the view,
     - <kbd>Tab</kbd> key to navigate through the months.
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxMonthPickerComponent]({environment:angularApiUrl}/classes/igxmonthpickercomponent.html)
@@ -167,7 +167,7 @@ Here is an example of localizing the month picker component:
 
 <div class="divider--half"></div>
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 

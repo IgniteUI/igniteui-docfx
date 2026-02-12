@@ -361,7 +361,7 @@ $custom-button: contained-button-theme(
 
 <div class="divider--half"></div>
 
-## API まとめ
+## API リファレンス
 
 <div class="divider--half"></div>
 
