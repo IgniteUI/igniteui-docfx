@@ -68,14 +68,14 @@ public loadChildren = (parentID: any, done: (children: any[]) => void) => {
 </igx-tree-grid>
 ```
 
-### API リファレンス
+## API リファレンス
 
 <div class="divider--half"></div>
 
 - [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
 - [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 
-### その他のリソース
+## その他のリソース
 
 <div class="divider--half"></div>
 

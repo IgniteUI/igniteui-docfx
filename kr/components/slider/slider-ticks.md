@@ -231,7 +231,7 @@ From the **tackLabel** callback above, we can see that every **primary** tick **
 </code-view>
 
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)

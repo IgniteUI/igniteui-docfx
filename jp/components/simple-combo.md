@@ -209,6 +209,10 @@ Simple ComboBox は、選択が変更されるたびに [selectionChanging]({env
 Simple ComboBox を閉じてフォーカスを合わせると、次のようになります:
 - `ArrowDown` または `Alt + ArrowDown` は、Simple ComboBox のドロップダウンを開きます。
 
+- `Esc` キーは、コンボボックスにフォーカスを保持したまま、選択された値をクリアします。
+
+- `Tab` キーは、コンボボックスの外部にある次のフォーカス可能な要素へフォーカスを移動します。
+
 > [!NOTE]
 > その他のキー ストロークはすべて入力によって処理されます。
 
@@ -225,7 +229,9 @@ Simple ComboBox が開かれ、リスト項目がフォーカスされている�
 
 - `Enter` を押すと、アクティブなリスト項目が選択/選択解除され、リストが閉じます。
 
-- `Esc` はリストを閉じます。
+- `Esc` キーは、リストを閉じてコンボボックスにフォーカスを保持します。
+
+- `Tab` キーは、リストを閉じて次のフォーカス可能な要素にフォーカスを移動します。
 
 コンボボックスを開くと、カスタム値が有効になり、項目の追加ボタンがフォーカスされます。
 
@@ -400,7 +406,7 @@ $custom-drop-down-theme: drop-down-theme(
 > [!NOTE]
 > Simple ComboBox は内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` 制限は Simple ComboBox に対して有効です。詳細については、[igxForOf 既知の制限](for-of.md#既知の制限) の既知の問題のセクションを参照してください。
 
-## API まとめ
+## API リファレンス
 
 <div class="divider--half"></div>
 
