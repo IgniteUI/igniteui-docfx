@@ -72,10 +72,33 @@ jobs:
           path: |
             ${{ env.BUILD_TYPE }}_jp.zip
             ${{ env.BUILD_TYPE }}_kr.zip
-          retention-days: 30
+          retention-days: 1
 
       - name: Clean workspace
         if: ${{ github.event.inputs.shouldCleanPostExecution == 'true' || github.event_name == 'push' }}
         run: |
           git clean -ffdx
           git reset --hard
+
+      - name: Trigger Deploy Workflow in IgniteUI Actions
+        uses: actions/github-script@v8
+        with:
+          github-token: ${{ secrets.CLASSIC_PAT_GITHUB }}
+          script: |
+            await github.rest.repos.createDispatchEvent({
+              owner: 'IgniteUI',
+              repo: 'igniteui-actions',
+              event_type: 'igniteui-docfx-cd',
+              client_payload: {
+                calling_branch: "${{ github.ref }}",
+                repository: "${{ github.repository }}",
+                run_id: "${{ github.run_id }}",
+                artifact_name: "IgniteUIDocFX-jp",
+                base_href: "angularsite",
+                platform: "angular",
+                locale: "jp",
+                ref: "${{ github.ref }}",
+                sha: "${{ github.sha }}",
+                branch: '${{ github.ref_name }}',
+              }
+            });
