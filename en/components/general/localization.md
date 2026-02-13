@@ -314,7 +314,7 @@ registerI18n(customResources, 'en');
 
 ## Legacy Localization (i18n)
 
->Note: This is an old way of handling localization as of 20.2.0. We recommend using the new way above. This will still work until further notice.
+>Note: This is an old way of handling localization that was recommended until 21.0.x. We suggest using the new available way above if you are using newer versions. This will still work until further notice.
 
 Currently, Ignite UI for Angular ships with resource strings for the following languages and scripts: Bulgarian, Czech, Danish, Dutch, English, French, German, Hungarian, Italian, Japanese, Korean, Norwegian, Polish, Portuguese, Romanian, Spanish, Swedish, Turkish, Traditional Chinese (zh-Hant) and Simplified Chinese (zh-Hans). These are available via the `igniteui-angular-i18n` package, except for English which comes as a default localization in `igniteui-angular`.
 
