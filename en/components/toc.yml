@@ -13,7 +13,7 @@
 - name: Localization (i18n)
   href: general/localization.md
   new: false
-  updated: false
+  updated: true
 - name: Getting started
   href: general/getting-started.md
   new: false
