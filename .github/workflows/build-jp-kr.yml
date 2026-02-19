@@ -1,0 +1,113 @@
+name: Build Japanese and Korean Documentation
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches:
+      - vnext
+      - master
+    paths-ignore:
+      - '**/en/**'
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to checkout'
+        type: string
+        default: ''
+      isVerbose:
+        description: 'Get verbose output from steps - where configurable'
+        type: boolean
+        default: false
+      shouldCleanPostExecution:
+        description: 'Clean all pipeline dirs after the pipeline finishes?'
+        type: boolean
+        default: true
+
+env:
+  BUILD_TYPE: ${{ github.ref_name == 'master' && 'production' || 'staging' }}
+  TARGET_REF: ${{ github.event.inputs.branch && (startsWith(github.event.inputs.branch, 'refs/') && github.event.inputs.branch || format('refs/heads/{0}', github.event.inputs.branch)) || github.ref }}
+
+jobs:
+  build:
+    name: Build Job
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TARGET_REF }}
+          clean: true
+          fetch-tags: true
+          fetch-depth: 0
+
+      - name: Setup Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+
+      - name: Setup .NET Core SDK 6.x
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '6.x'
+
+      - name: Install dependencies
+        run: npm ci --production=false ${{ github.event.inputs.isVerbose == 'true' && '--verbose' || '' }}
+
+      - name: Build Japanese documentation
+        run: npm run build-${{ env.BUILD_TYPE }} -- --lang=jp ${{ github.event.inputs.isVerbose == 'true' && '--verbose' || '' }}
+
+      - name: Package Japanese build
+        run: |
+          cd jp/_site
+          zip -r ../../${{ env.BUILD_TYPE }}_jp.zip .
+          cd ../..
+
+      - name: Build Korean documentation
+        run: npm run build-${{ env.BUILD_TYPE }} -- --lang=kr ${{ github.event.inputs.isVerbose == 'true' && '--verbose' || '' }}
+
+      - name: Package Korean build
+        run: |
+          cd kr/_site
+          zip -r ../../${{ env.BUILD_TYPE }}_kr.zip .
+          cd ../..
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: IgniteUIDocFX-jp-kr
+          path: |
+            ${{ env.BUILD_TYPE }}_jp.zip
+#           ${{ env.BUILD_TYPE }}_kr.zip
+          retention-days: 1
+
+      - name: Clean workspace
+        if: ${{ github.event.inputs.shouldCleanPostExecution == 'true' || github.event_name == 'push' }}
+        run: |
+          git clean -ffdx
+          git reset --hard
+
+      - name: Trigger Deploy Workflow in IgniteUI Actions
+        uses: actions/github-script@v8
+        with:
+          github-token: ${{ secrets.CLASSIC_PAT_GITHUB }}
+          script: |
+            await github.rest.repos.createDispatchEvent({
+              owner: 'IgniteUI',
+              repo: 'igniteui-actions',
+              event_type: 'igniteui-docfx-cd',
+              client_payload: {
+                calling_branch: "${{ env.TARGET_REF }}",
+                repository: "${{ github.repository }}",
+                run_id: "${{ github.run_id }}",
+                artifact_name: "IgniteUIDocFX-jp-kr",
+                base_href: "angular-samples",
+                platform: "angular",
+                locale: "jp",
+                ref: "${{ github.ref }}",
+                sha: "${{ github.sha }}",
+                branch: '${{ github.ref_name }}',
+              }
+            });
