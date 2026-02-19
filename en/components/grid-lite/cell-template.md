@@ -9,14 +9,20 @@ namespace: Infragistics.Controls
 
 # Column Cell Template
 
-By default, the grid uses the key of the column to render the value as a string inside the cell. This is fine for basic scenarios, but if you want to customize the rendered output or the final output is a combination of different data fields, you should use a cell template renderer.
+By default, the grid uses the field of the column to render the value as a string inside the cell. This is fine for basic scenarios, but if you want to customize the rendered output or the final output is a combination of different data fields, you can customize the cell template.
 
-To achieve that, set the **`cellTemplate`** property of the column.
+To achieve that, set the `cellTemplate` property of the column.
 
 ```typescript
-{
-  cellTemplate?: (params: GridLiteCellContext<T, K>) => TemplateResult;
+protected cellTemplate(params: IgcCellContext<T, K>) {
+    // return template result
 }
+```
+
+```html
+<igc-grid-lite>
+    <igc-grid-lite-column field="price" [cellTemplate]="cellTemplate"></igc-grid-lite-column>
+</igc-grid-lite>
 ```
 
 ## Use as a Formatter Function
@@ -26,12 +32,8 @@ For the simple scenario where some formatting is required, one can just return t
 ```typescript
 const { format: asCurrency } = new Intl.NumberFormat('en-EN', { style: 'currency', currency: 'EUR' });
 
-{
-  ...
-  /** Return the custom currency format for a value `value = 123456.789` */
-  cellTemplate: (params) => asCurrency(params.value) // => "€123,456.79"
-  ...
-}
+/** Return the custom currency format for a value `value = 123456.789` */
+protected cellTemplate = (params) => asCurrency(params.value); // => "€123,456.79"
 ```
 
 You can combine values different fields from the data source as well.
@@ -41,12 +43,14 @@ Refer to the API documentation for **`GridLiteCellContext`** for more informatio
 ```typescript
 const { format: asCurrency } = new Intl.NumberFormat('en-EN', { style: 'currency', currency: 'EUR' });
 
-{
-  ...
-  /** Return the custom currency format for an order of 10 items where the price is 99.99 */
-  cellTemplate: ({value, row}) => asCurrency(value * row.data.count) // => "€999.90"
-  ...
-}
+/** Return the custom currency format for an order of 10 items where the price is 99.99 */
+protected cellTemplate = ({value, row}) => asCurrency(value * row.data.count); // => "€999.90"
+```
+
+```html
+<igc-grid-lite>
+    <igc-grid-lite-column field="price" [cellTemplate]="cellTemplate"></igc-grid-lite-column>
+</igc-grid-lite>
 ```
 
 ## Custom DOM Templates
@@ -64,12 +68,14 @@ You can template any standard DOM elements as well as web components from other 
 // Import the `html` tag function from the Lit package.
 import { html } from "lit";
 
-{
-  key: 'rating',
-  // Use another web component to represent the `rating` value in the grid
-  cellTemplate: ({ value }) => html`<igc-rating readonly value=${value}></igc-rating>`
-  ...
-}
+// Use another web component to represent the `rating` value in the grid
+protected cellTemplate = ({ value }) => html`<igc-rating readonly value=${value}></igc-rating>`;
+```
+
+```html
+<igc-grid-lite>
+    <igc-grid-lite-column field="rating" [cellTemplate]="cellTemplate"></igc-grid-lite-column>
+</igc-grid-lite>
 ```
 
 >[!NOTE]

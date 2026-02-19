@@ -9,34 +9,36 @@ namespace: Infragistics.Controls
 
 # Sort Operations
 
-The Grid Lite supports sorting operations on its data source. Data sorting is controlled on per-column level, allowing you to have sortable and non-sortable columns, while the grid itself controls certain sort behaviors. By default, sorting on a column is disabled unless explicitly configured with the **`sort`** property of the column configuration object.
+The Grid Lite supports sorting operations on its data source. Data sorting is controlled on per-column level, allowing you to have sortable and non-sortable columns, while the grid itself controls certain sort behaviors. By default, sorting on a column is disabled unless explicitly configured with the `sortable` property of the column.
 
-```typescript
-{
-  key: 'price',
-  sort: true
-}
+```html
+<igc-grid-lite-column
+  field="price"
+  sortable
+></igc-grid-lite-column>
 ```
 
-The **`sort`** property can be either a simple boolean or a **`ColumnSortConfiguration`** object which exposes additional configuration options:
+You can also control whether the sort operations for string columns should be case sensitive by using the `sortingCaseSensitive` property or `sorting-case-sensitive` attribute.
+
+```html
+<igc-grid-lite-column 
+  field="name" 
+  sortable
+  sorting-case-sensitive
+></igc-grid-lite-column>
+```
+
+For custom comparison logic, set the `sortConfiguration` property with a `comparer` function:
 
 ```typescript
-{
-  key: 'name',
-  sort: {
-    /**
-     * For string data types controls whether the sort operations for this column will be case sensitive.
-     * By default, sort operations for string types are case insensitive.
-     */
-    caseSensitive: true,
-    /**
-     * Custom comparer function which will be used for sort operations for this column.
-     *
-     * In the following sample, we compare the `name` values based on their length.
-     */
-    comparer: (a, b) => a.length - b.length
-  }
-}
+column.sortable = true;
+column.sortConfiguration = {
+  /**
+   * Custom comparer function which will be used for sort operations for this column.
+   * In the following sample, we compare the `name` values based on their length.
+   */
+  comparer: (a, b) => a.length - b.length
+};
 ```
 
 <code-view style="height:510px"
@@ -46,10 +48,10 @@ The **`sort`** property can be either a simple boolean or a **`ColumnSortConfigu
 
 ## Single and Multi-Sorting
 
-The grid supports both single and multi-column sorting. Multi-column is enabled by default and can be configured through the **`sortConfiguration`** property of the grid.
+The grid supports both single and multi-column sorting. Multi-column is enabled by default and can be configured through the `sortingOptions` property of the grid. The `mode` property accepts `'single'` or `'multiple'` as values.
 
 ```typescript
-grid.sortConfiguration = { multiple: false, triState: true };
+grid.sortingOptions = { mode: 'single' };
 ```
 
 >[!NOTE]
@@ -57,28 +59,19 @@ grid.sortConfiguration = { multiple: false, triState: true };
 
 ### Tri-State Sorting
 
-Additionally, the Grid Lite component supports tri-state sorting and it is enabled by default. Depending on the configured **`triState`**
-value for the grid **`sortConfiguration`** property, end-users will cycle through the following states,
+The Grid Lite component tri-state sorting and it is always enabled. End-users will cycle through the following direction states when clicking on sortable column headers:
 
-- **Tri-State Enabled**
+```text
+ascending -> descending -> none -> ascending
+```
 
-  - ```typescript
-    ascending -> descending -> none -> ascending
-    ```
-
-- **Tri-State Disabled**
-
-  - ```typescript
-    ascending -> descending -> ascending
-    ```
-
-where **`none`** is the initial state of the data, that is to say with no sorting applied by the grid.
+where `none` is the initial state of the data, that is to say with no sorting applied by the grid.
 
 ### Sorting Indicators
 
 When multi-column sort is enabled, the column headers will display a sorting indicator, which is a number representing the order in which the sorting operations were applied.
 
-The following sample shows the grid **`sortConfiguration`** combinations and how they reflect in the grid.
+The following sample shows the grid `sortingOptions` property and how it controls the grid sorting behavior.
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -87,10 +80,10 @@ The following sample shows the grid **`sortConfiguration`** combinations and how
 
 ## Sort model
 
-The building block for sort operations in the Grid Lite component is the **`SortExpression`** which has the following properties:
+The building block for sort operations in the Grid Lite component is the `SortingExpression` which has the following properties:
 
 ```typescript
-type SortExpression<T> = {
+type SortingExpression<T> = {
   /**
    * The `key` of the target column for the sort operation.
    */
@@ -117,9 +110,9 @@ an end-user interacts with the component. See below for additional information.
 
 ## Sort API
 
-The Grid Lite component exposes two main approaches for applying sort operations from its API. Either through the **`GridLite.sort()`**/**`GridLite.clearSort()`** methods or through the **`Grid.Lite.sortExpressions`** property.
+The Grid Lite component exposes two main approaches for applying sort operations from its API. Either through the `sort()`/`clearSort()` methods or through the `sortingExpressions` property.
 
-The **`sort()`** method accepts either a single expression or an array of sort expression and then sorts the grid data based on those expressions.
+The `sort()` method accepts either a single expression or an array of sort expression and then sorts the grid data based on those expressions.
 
 ```typescript
 // Single
@@ -132,7 +125,7 @@ grid.sort([
 ]);
 ```
 
-The **`clearSort()`** method, as the name implies, clears the sort state of a single column or the whole grid component, depending
+The `clearSort()` method, as the name implies, clears the sort state of a single column or the whole grid component, depending
 on the passed arguments.
 
 ```typescript
@@ -145,41 +138,39 @@ grid.clearSort();
 
 ### Initial Sorting State
 
-The **`sortExpressions`** property is very similar in behavior to the **`sort()`** method call. It exposes a declarative way to control
+The `sortingExpressions` property is very similar in behavior to the `sort()` method call. It exposes a declarative way to control
 sort state in the grid, but the most useful property is the ability to set initial sort state when the Grid Lite is first rendered.
 
-For example here is a Lit-based sample:
+For example:
 
 ```typescript
-{
-  sortState: SortExpression<Products>[] = [
+protected sortState: SortingExpression<Products>[] = [
     { key: 'price', direction: 'descending' },
     { key: 'name', direction: 'ascending', caseSensitive: true },
-  ];
+];
+```
 
-  render() {
-    return html`<igc-grid-lite .sortExpressions=${sortState}></igc-grid-lite>`
-  }
-}
+```html
+<igc-grid-lite [sortingExpressions]="sortState"></igc-grid-lite>
 ```
 
 It can be used to get the current sort state of the component and do additional processing depending on another state in your application.
 
 ```typescript
-const state = grid.sortExpressions;
+const state = grid.sortingExpressions;
 // Save the current sort state
 saveUserSortState(state);
 ```
 
 ## Events
 
-When a sorting operation is performed through the UI, the component emits a custom **`sorting`** event. The **`detail`** property is the sort expression which will be applied by the Grid Lite. The event is cancellable and if cancelled will stop the current sort operation.
+When a sorting operation is performed through the UI, the component emits a custom `sorting` event. The `detail` property is the sort expression which will be applied by the Grid Lite. The event is cancellable and if cancelled will stop the current sort operation.
 
-After the grid applies the new sorting state, a **`sorted`** event is emitted. It contains the expression which was used in the last sort operation and it is not cancellable.
+After the grid applies the new sorting state, a `sorted` event is emitted. It contains the expression which was used in the last sort operation and it is not cancellable.
 
 ```typescript
-grid.addEventListener('sorting', (event: CustomEvent<SortExpression<T>>) => { ... });
-grid.addEventListener('sorted', (event: CustomEvent<SortExpression<T>>) => { ... });
+grid.addEventListener('sorting', (event: CustomEvent<SortingExpression<T>>) => { ... });
+grid.addEventListener('sorted', (event: CustomEvent<SortingExpression<T>>) => { ... });
 ```
 
 In the following sample, when you try to sort the **Name** and **Rating** columns, the operation will be cancelled. Watch the event log below to see it in action.
