@@ -619,23 +619,25 @@ $dark-checkbox-theme: checkbox-theme(
 The last step is to **include** the newly created themes.
 
 ```scss
-@include css-vars($dark-grid-toolbar-theme);
-@include css-vars($dark-column-actions-theme);
-@include css-vars($dark-checkbox-theme);
-@include css-vars($dark-button-theme);
+:host {
+    @include tokens($dark-grid-toolbar-theme);
+    @include tokens($dark-column-actions-theme);
+    @include tokens($dark-checkbox-theme);
+    @include tokens($dark-button-theme);
+}
 ```
 
 >[!NOTE]
 >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep` to style the components inside the grid toolbar component:
 
 ```scss
-@include css-vars($dark-grid-toolbar-theme);
+@include tokens($dark-grid-toolbar-theme);
 
 :host {
   ::ng-deep {
-    @include css-vars($dark-column-actions-theme);
-    @include css-vars($dark-checkbox-theme);
-    @include css-vars($dark-button-theme);
+    @include tokens($dark-column-actions-theme);
+    @include tokens($dark-checkbox-theme);
+    @include tokens($dark-button-theme);
   }
 }
 ```

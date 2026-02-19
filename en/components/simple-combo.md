@@ -374,9 +374,9 @@ $custom-drop-down-theme: drop-down-theme(
 The last step is to include the component's theme.
 
 ```scss
-:host ::ng-deep {
-  @include css-vars($custom-combo-theme);
-  @include css-vars($custom-drop-down-theme);
+:host {
+  @include tokens($custom-combo-theme);
+  @include tokens($custom-drop-down-theme);
 }
 ```
 

@@ -16,7 +16,7 @@ To display the content above other elements, the service moves it into a special
 
 ## Styling Overlay Components
 
-In most cases [global](themes/sass/global-themes.md) theme styles are not affected by the overlay outlets. For example, let's take a look at a Drop Down, [styled](drop-down.md#styling) by the global [`css-vars`]({environment:sassApiUrl}/themes#mixin-css-vars) mixin:
+In most cases [global](themes/sass/global-themes.md) theme styles are not affected by the overlay outlets. For example, let's take a look at a Drop Down, [styled](drop-down.md#styling) by the [`tokens`]({environment:sassApiUrl}/themes#mixin-tokens) mixin:
 
 ```html
 <!-- overlay-styling.component.html -->
@@ -37,7 +37,9 @@ $my-drop-down-theme: drop-down-theme(
   $background-color: #efefef
 );
 
-@include css-vars($my-drop-down-theme);
+:host {
+  @include tokens($my-drop-down-theme);
+}
 ```
 
 The global styles are not generated under a scoped rule and are not affected by any encapsulation, and thus can match any element on the page, including `igx-drop-down-item` the service moved to the overlay outlet.
@@ -50,7 +52,10 @@ For example, let's take the `igx-combo` - its item [styles](combo.md#styling) us
 
 ```scss
 // overlay-styling.component.scss
-@include css-vars($my-drop-down-theme);
+
+:host {
+  @include tokens($my-drop-down-theme);
+}
 ```
 
 >[!NOTE]
@@ -60,7 +65,7 @@ For example, let's take the `igx-combo` - its item [styles](combo.md#styling) us
 // overlay-styling.component.scss
 :host {
   ::ng-deep { 
-    @include css-vars($my-drop-down-theme);
+    @include tokens($my-drop-down-theme);
   }
 }
 ```
@@ -106,7 +111,9 @@ $my-overlay-theme: overlay-theme(
   $background-color: rgba(0, 153, 255, 0.3)
 );
 
-@include css-vars($my-overlay-theme);
+:host {
+  @include tokens($my-overlay-theme);
+}
 ```
 
 Now **all** modal overlays will have a purple tint to their background.
@@ -118,7 +125,7 @@ Now **all** modal overlays will have a purple tint to their background.
 // overlay-styling.component.scss
 :host {
   ::ng-deep { 
-    @include css-vars($my-overlay-theme);
+    @include tokens($my-overlay-theme);
   }
 }
 ```
@@ -132,7 +139,7 @@ When scoping a modal overlay, you need to move the overlay outlet, which has som
 // styles.scss
 ...
 .purple {
-  @include css-vars($my-overlay-theme);
+  @include tokens($my-overlay-theme);
 }
 ```
 

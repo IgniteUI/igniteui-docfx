@@ -286,7 +286,7 @@ $custom-query-builder: query-builder-theme(
 );
 
 igx-advanced-filtering-dialog {
-  @include css-vars($custom-query-builder);
+  @include tokens($custom-query-builder);
 }
 ```
 
@@ -308,7 +308,7 @@ $custom-query-builder: query-builder-theme(
 :host {
   ::ng-deep {
     igx-advanced-filtering-dialog {
-      @include css-vars($custom-query-builder);
+      @include tokens($custom-query-builder);
     }
   }
 }

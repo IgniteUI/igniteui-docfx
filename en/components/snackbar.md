@@ -337,7 +337,9 @@ $dark-snackbar: snackbar-theme(
 The last step is to **include** the component theme in our application.
 
 ```scss
-@include css-vars($dark-snackbar);
+:host {
+    @include tokens($dark-snackbar);
+}
 ```
 
 ### Demo

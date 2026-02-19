@@ -29,8 +29,11 @@ To customize the scrollbar further, you can create a new scrollbar style with th
 // Here we set the scrollbar to have size of 16px, scrollbar thumb to be in color pink, and scrolblar track to be in color green
 $my-scrollbar-theme: scrollbar-theme($sb-size: 16px, $sb-thumb-bg-color: pink, $sb-track-bg-color: green);
 
-// We use 'css-vars' mixin for generating the css variables with the new scrollbar values.
-@include css-vars($my-scrollbar-theme);
+// We use 'tokens' mixin for generating the css variables with the new scrollbar values.
+
+:host {
+  @include tokens($my-scrollbar-theme);
+}
 ```
 
 <div class="divider"></div>

@@ -345,10 +345,12 @@ $custom-badge-theme: badge-theme(
 );
 ```
 
-To include the new theme we use the `css-vars` mixin:
+To include the new theme we use the `tokens` mixin:
 
 ```scss
-@include css-vars($custom-badge-theme);
+:host {
+  @include tokens($custom-badge-theme);
+}
 ```
 
 ### Demo

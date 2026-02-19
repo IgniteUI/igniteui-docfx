@@ -470,7 +470,9 @@ If we take a look at the [`bottom-nav-theme`]({environment:sassApiUrl}/themes#fu
 The last step is to **include** the component theme in our application.
 
 ```scss
-@include css-vars($dark-bottom-nav);
+:host {
+    @include tokens($dark-bottom-nav);
+}
 ```
 
 ### Demo

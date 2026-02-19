@@ -442,8 +442,10 @@ $custom-theme: grid-theme(
 The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file:
 
 ```scss
-@include css-vars($custom-theme);
-@include css-vars($custom-chips-theme);
+:host {
+  @include tokens($custom-theme);
+  @include tokens($custom-chips-theme);
+}
 ```
 
 ### Scoped component theme
@@ -458,11 +460,11 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 In our example, we need to use `::ng-deep` for our chip theme:
 
 ```scss
-@include css-vars($custom-theme);
-
 :host {
+  @include tokens($custom-theme);
+
   ::ng-deep {
-    @include chip($custom-chips-theme);
+    @include tokens($custom-chips-theme);
   }
 }
 ```

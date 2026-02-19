@@ -626,15 +626,17 @@ In this example we only changed some of the parameters for the input group and t
 The last step is to **include** the component mixins, each with its respective theme. We will also set the color property for the input's placeholder.
 
 ```scss
-@include css-vars($custom-grid);
+:host {
+@include tokens($custom-grid);
 
-.igx-grid__filtering-row {
-  @include css-vars($dark-button);
-  @include css-vars($dark-input-group);  
+    .igx-grid__filtering-row {
+        @include tokens($dark-button);
+        @include tokens($dark-input-group);  
 
-  .igx-input-group__input::placeholder {
-    color: #ffcd0f;
-  }
+        .igx-input-group__input::placeholder {
+            color: #ffcd0f;
+        }
+    }
 }
 ```
 
@@ -646,11 +648,11 @@ The last step is to **include** the component mixins, each with its respective t
 ```scss
 :host {
   ::ng-deep {
-    @include css-vars($custom-grid);
+    @include tokens($custom-grid);
 
     .igx-grid__filtering-row {
-      @include css-vars($dark-button);
-      @include css-vars($dark-input-group)
+      @include tokens($dark-button);
+      @include tokens($dark-input-group)
 
       .igx-input-group__input::placeholder {
         color: #ffcd0f;

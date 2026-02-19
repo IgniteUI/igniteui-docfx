@@ -359,10 +359,12 @@ Here we are using `my-banner-palette` in conjunction with [`igx-color`]({environ
 
 ### Include the theme
 
-All we have to do now is apply the theme with a Sass `@include` statement. We pass our newly defined `$banner-theme` through the [`css-vars mixin`]({environment:sassApiUrl}/themes#mixin-css-vars):
+All we have to do now is apply the theme with a Sass `@include` statement. We pass our newly defined `$banner-theme` through the [`tokens mixin`]({environment:sassApiUrl}/themes#mixin-tokens):
 
 ```scss
-@include css-vars($banner-theme);
+:host {
+  @include tokens($banner-theme);
+}
 ```
 
 ### Component styles
@@ -377,7 +379,7 @@ Since the Row Editing overlay makes use of a lot of other components' themes, st
 
 :host {
   ::ng-deep {
-    @include css-vars($banner-theme);
+    @include tokens($banner-theme);
   }
 }
 ```
@@ -404,19 +406,19 @@ To further customize our Row Editing overlay, we can pass a custom template so w
 </@@igSelector>
 ```
 
-After we've defined our custom buttons, we can make use of the [`button-theme`]({environment:sassApiUrl}/themes#function-button-theme) to style them. You can learn more about `igx-button` styling in the [Button Styling documentation](../button.md#styling). We can create a custom theme for our `Done` and `Cancel`:
+After we've defined our custom buttons, we can make use of the [`flat-icon-button-theme`]({environment:sassApiUrl}/themes#function-flat-icon-button-theme) to style them. You can learn more about `igx-icon-button` styling in the [Icon Button Styling documentation](../icon-button.md#icon-button-styling). We can create a custom theme for our `Done` and `Cancel`:
 
 ```scss
 // custom.component.scss
 ...
 
-$button-theme: button-theme(
+$button-theme: flat-icon-button-theme(
   $palette: $purple-palette
 );
 
 ...
 .custom-buttons {
-  @include css-vars($button-theme);
+  @include tokens($button-theme);
 }
 ```
 

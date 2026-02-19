@@ -737,7 +737,9 @@ If we take a look at the [`tabs-theme`]({environment:sassApiUrl}/themes#function
 The last step is to **include** the component theme in our application.
 
 ```scss
-@include css-vars($dark-tabs);
+:host {
+  @include tokens($dark-tabs);
+}
 ```
 
 ### Demo

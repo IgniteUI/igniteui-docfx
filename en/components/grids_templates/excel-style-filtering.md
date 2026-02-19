@@ -578,11 +578,15 @@ $custom-grid: grid-theme(
 We obviously have a lot more components inside the excel like filtering dialog, such as buttons, checkboxes, a list and even a drop-down. In order to style them, we need to create a separate theme for each one:
 
 ```scss
-$custom-button: button-theme(
+$custom-button: contained-button-theme(
   $background: #ffcd0f,
   $foreground: #292826,
   $hover-background: #292826,
   $hover-foreground: #ffcd0f
+);
+
+$flat-custom-button: flat-button-theme(
+  $foreground: #ffcd0f,
 );
 
 $custom-checkbox: checkbox-theme(
@@ -620,19 +624,21 @@ In this example we only changed some of the parameters for the listed components
 The last step is to **include** each component’s custom theme. We will also set the color property for the input's placeholder.
 
 ```scss
-@include css-vars($custom-grid);
-@include css-vars($custom-drop-down);
+:host {
+    @include tokens($custom-grid);
+    @include tokens($custom-drop-down);
 
-.igx-excel-filter, 
-.igx-excel-filter__secondary {
-  @include css-vars($custom-button);
-  @include css-vars($custom-checkbox);
-  @include css-vars($custom-input-group);
-  @include css-vars($custom-list);
+    .igx-excel-filter, 
+    .igx-excel-filter__secondary {
+        @include tokens($custom-button);
+        @include tokens($custom-checkbox);
+        @include tokens($custom-input-group);
+        @include tokens($custom-list);
 
-  .igx-input-group__input::placeholder {
-    color: #ffcd0f;
-  }
+        .igx-input-group__input::placeholder {
+            color: #ffcd0f;
+        }
+    }
 }
 ```
 
@@ -644,16 +650,16 @@ The last step is to **include** each component’s custom theme. We will also se
 ```scss
 :host {
   ::ng-deep {
-    @include css-vars($custom-grid);
-    @include css-vars($custom-drop-down);
-
+    @include tokens($custom-grid);
+    @include tokens($custom-drop-down);
 
     .igx-excel-filter,
     .igx-excel-filter__secondary {
-      @include css-vars($custom-button);
-      @include css-vars($custom-checkbox);
-      @include css-vars($custom-input-group);
-      @include css-vars($custom-list);
+      @include tokens($custom-button);
+      @include tokens($flat-custom-button);
+      @include tokens($custom-checkbox);
+      @include tokens($custom-input-group);
+      @include tokens($custom-list);
       
       .igx-input-group__input::placeholder {
         color: #ffcd0f;
