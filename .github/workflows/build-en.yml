@@ -13,6 +13,10 @@ on:
       - '**/kr/**'
   workflow_dispatch:
     inputs:
+      branch:
+        description: 'Branch to checkout'
+        type: string
+        default: ''
       isVerbose:
         description: 'Get verbose output from steps - where configurable'
         type: boolean
@@ -24,6 +28,7 @@ on:
 
 env:
   BUILD_TYPE: ${{ github.ref_name == 'master' && 'production' || 'staging' }}
+  TARGET_REF: ${{ github.event.inputs.branch && (startsWith(github.event.inputs.branch, 'refs/') && github.event.inputs.branch || format('refs/heads/{0}', github.event.inputs.branch)) || github.ref }}
 
 jobs:
   build:
@@ -34,6 +39,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          ref: ${{ env.TARGET_REF }}
           clean: true
           fetch-tags: true
           fetch-depth: 0
@@ -83,7 +89,7 @@ jobs:
               repo: 'igniteui-actions',
               event_type: 'igniteui-docfx-cd',
               client_payload: {
-                calling_branch: "${{ github.ref }}",
+                calling_branch: "${{ env.TARGET_REF }}",
                 repository: "${{ github.repository }}",
                 run_id: "${{ github.run_id }}",
                 artifact_name: "IgniteUIDocFX-en",
