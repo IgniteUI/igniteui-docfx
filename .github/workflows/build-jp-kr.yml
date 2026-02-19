@@ -80,7 +80,7 @@ jobs:
           name: IgniteUIDocFX-jp-kr
           path: |
             ${{ env.BUILD_TYPE }}_jp.zip
-            ${{ env.BUILD_TYPE }}_kr.zip
+#           ${{ env.BUILD_TYPE }}_kr.zip
           retention-days: 1
 
       - name: Clean workspace
@@ -102,8 +102,8 @@ jobs:
                 calling_branch: "${{ env.TARGET_REF }}",
                 repository: "${{ github.repository }}",
                 run_id: "${{ github.run_id }}",
-                artifact_name: "IgniteUIDocFX-jp",
-                base_href: "angularsite",
+                artifact_name: "IgniteUIDocFX-jp-kr",
+                base_href: "angular-samples",
                 platform: "angular",
                 locale: "jp",
                 ref: "${{ github.ref }}",
