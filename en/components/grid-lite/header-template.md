@@ -9,21 +9,18 @@ namespace: Infragistics.Controls
 
 # Customizing the Column Header
 
-Similar to the cell templates, column headers can also be customized to better fit the desired use case. You can pass a text label through the **`headerText`** property, or provide a full-blown custom template.
+Similar to the cell templates, column headers can also be customized to better fit the desired use case. You can pass a text label through the `header` property, or provide a full-blown custom template.
 
 ## Customization via Header Text
 
-By default the column uses the **`key`** configuration property for label text. To customize the label, set the **`headerText`** property to a more human readable format.
+By default the column uses the `field` property for label text. To customize the label, set the `header` property to a more human readable format.
 
-```typescript
-{
-  key: 'price',
-  headerText: 'Price per item'
-}
+```html
+<igc-grid-lite-column field="price" header="Price per item"></igc-grid-lite-column>
 ```
 
 >[!NOTE]
->When **`headerTemplate`** is provided, **`headerText`** is ignored.
+>When `headerTemplate` is provided, `header` is ignored.
 
 ## Customization via Header Template
 
@@ -32,10 +29,15 @@ Similar to the cell template, you can also pass a custom template renderer and c
 ```typescript
 import { html } from 'lit';
 
-{
-  key: 'rating',
-  headerTemplate: () => html`<h3>⭐ Rating ⭐</h3>`,
+protected headerTemplate(_params: IgcHeaderContext<T>) {
+    return html`<h3>⭐ Rating ⭐</h3>`;
 }
+```
+
+```html
+<igc-grid-lite>
+    <igc-grid-lite-column field="rating" [headerTemplate]="headerTemplate"></igc-grid-lite-column>
+</igc-grid-lite>
 ```
 
 <code-view style="height:510px"
