@@ -93,7 +93,7 @@ jobs:
                 repository: "${{ github.repository }}",
                 run_id: "${{ github.run_id }}",
                 artifact_name: "IgniteUIDocFX-en",
-                base_href: "angularsite",
+                base_href: "angular-samples",
                 platform: "angular",
                 locale: "en",
                 ref: "${{ github.ref }}",
