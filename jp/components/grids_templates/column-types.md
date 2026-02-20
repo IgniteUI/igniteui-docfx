@@ -74,8 +74,10 @@ public formatOptions = this.options;
 ### DateTime、Date と Time
 
 日付部分の外観は、[`locale`]({environment:angularApiUrl}/classes/igxgridcomponent.html#locale) の形式または [`pipeArgs`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#pipeArgs) 入力に基づいて設定されます (例: 日、月、年)。Pipe 引数はカスタム[日付書式](https://angular.io/api/common/DatePipe#pre-defined-format-options)または[タイムゾーン](https://angular.io/api/common/DatePipe#parameters)を指定するために使用できます。
-- **format** - 日付の書式設定のデフォルト値は 'mediumDate' です。その他の利用可能なオプションは 'short'、'long'、'shortDate'、'fullDate'、'longTime'、'fullTime' などです。以下は利用可能なすべての[定義済みの書式オプション](https://angular.io/api/common/DatePipe#pre-defined-format-options)の完全なリストです。
+- **format** - 日付の書式設定のデフォルト値は 'mediumDate' です。その他の利用可能なオプションは 'short'、'long'、'shortDate'、'fullDate'、'longTime'、'fullTime' などです。以下は利用可能なすべての[定義済みの書式オプション](https://angular.io/api/common/DatePipe#pre-defined-format-options) (レガシー) の完全なリストです。
 - **timezone** - ユーザーのローカル システム タイムゾーンがデフォルト値です。タイムゾーン オフセットまたは標準の UTC/GMT または米国本土のタイムゾーンの略語も渡すことができます。世界の任意の場所の対応する時間を表示するさまざまなタイムゾーンの例:
+
+> 注: 20.2.x 以降、Angular のローカリゼーションを無効にしている場合、利用可能な形式オプションの一覧は新しい[ローカライズ トピック](../general/localization.md#書式設定)を参照してください。
 
 
 ```ts
