@@ -36,7 +36,7 @@ There are several parts to a component theme:
 
 Using the `tokens` mixin is the preferred way to customize your components. It generates CSS custom properties (`design tokens`) from an Ignite UI component theme in either global or scoped mode.
 
-**Global mode (default)** — emits universal `--ig-{component}-{property} ` tokens. Local var() references are rewritten to their global equivalents so derived values (e.g., `adaptive-contrast`) resolve correctly at any scope. Sizable expressions are skipped, you have to pass concrete values instead.
+**Global mode (default)** — emits universal `--ig-{component}-{property}` tokens. Local var() references are rewritten to their global equivalents so derived values (e.g., `adaptive-contrast`) resolve correctly at any scope. Sizable expressions are skipped, you have to pass concrete values instead.
 
 ```scss
 // Input:
