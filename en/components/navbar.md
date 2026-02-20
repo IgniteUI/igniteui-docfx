@@ -326,10 +326,12 @@ $custom-navbar-theme: navbar-theme(
 >[!NOTE]
 >Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
-The last step is to pass the newly created theme to the `css-vars` mixin:
+The last step is to pass the newly created theme to the `tokens` mixin:
 
 ```scss
-@include css-vars($custom-navbar-theme);
+:host {
+  @include tokens($custom-navbar-theme);
+}
 ```
 
 ### Demo

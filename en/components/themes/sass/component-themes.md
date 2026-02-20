@@ -28,8 +28,52 @@ We'll take a look at how these approaches work in practice, and how to use one i
 There are several parts to a component theme:
 
 - **The component theme function** - A Sass function that normalizes the passed arguments and produces a theme to be consumed by a component mixin.
-- **The CSS variable mixin** - A Sass mixin that consumes a component theme and produces _CSS variables_ used to style a particular component.
+- **The Tokens mixin** - A Sass mixin that consumes a component theme that generates CSS variable tokens from an Ignite UI component theme.
 - **The component mixin** - A Sass mixin that consumes a component theme and produces _CSS rules_ used to style a particular component.
+
+
+### The tokens mixin
+
+Using the `tokens` mixin is the preferred way to customize your components. It generates CSS custom properties (`design tokens`) from an Ignite UI component theme in either global or scoped mode.
+
+**Global mode (default)** — emits universal `--ig-{component}-{property}` tokens. Local var() references are rewritten to their global equivalents so derived values (e.g., `adaptive-contrast`) resolve correctly at any scope. Sizable expressions are skipped, you have to pass concrete values instead.
+
+```scss
+// Input:
+@include tokens(avatar-theme($background: red));
+
+// Output:
+:root {
+  --ig-avatar-background: red;
+  /* ... remaining avatar properties ... */
+}
+```
+
+**Scoped mode** — emits component-scoped variables `--{property}` with a fallback chain: configured prefix `(--igx-*) -> universal (--ig-*) -> schema default`. When called from the stylesheet root, the theme's selector is used to create the rule. When called inside a selector, both the current selector and the component selector receive the variables.
+
+```scss
+// Input (from root):
+@include tokens(avatar-theme($background: red), $mode: 'scoped');
+
+// Output:
+igx-avatar {
+  --background: var(--igx-avatar-background, var(--ig-avatar-background, red));
+  /* ... remaining avatar properties ... */
+}
+
+
+// Input (from within a selector):
+.my-theme {
+  @include tokens(avatar-theme($background: red), $mode: 'scoped');
+}
+
+// Output:
+.my-theme,
+.my-theme igx-avatar {
+  --background: var(--igx-avatar-background, var(--ig-avatar-background, red));
+  /* ... */
+}
+```
 
 Say you want to create a new global avatar theme that has a different background color to the one we set in the avatar's default theme. As mentioned in the [**overview section**](#overview) there are 2 general approaches to creating a component theme.
 There are even more ways you can organize and scope your component themes. The most straightforward way to do that is in the same file you defined your [**global theme**](./global-themes.md).
@@ -37,35 +81,39 @@ There are even more ways you can organize and scope your component themes. The m
 Defining an avatar theme:
 
 ```scss
-// Some place after @include theme(...);
-
 // Change the background of the avatar to purple.
 $avatar-purple-theme: avatar-theme(
   $background: purple,
 );
 
-// Pass the css-vars to the `css-vars` mixin
-@include css-vars($avatar-purple-theme);
+// Pass the theme to the `tokens` mixin
+:root {
+  @include tokens($avatar-purple-theme);
+}
 ```
 
 The above code produces CSS variables for the `igx-avatar` component. These new CSS variables overwrite the default avatar rules.
-Similarly, if you were to include `css-vars` mixin later down in the global `scss` file, the mixin will again overwrite any previously defined themes.
+Similarly, if you were to include `tokens` mixin later down in the global `scss` file, the mixin will again overwrite any previously defined themes.
 
 For instance:
 
 ```scss
 // ...
-@include css-vars($avatar-purple-theme);
+:root {
+  @include tokens($avatar-purple-theme);
+}
 
 // Later
 $avatar-royalblue-theme: avatar-theme(
   $background: royalblue,
 );
 
-@include css-vars($avatar-royalblue-theme);
+:root {
+  @include tokens($avatar-royalblue-theme);
+}
 ```
 
-In the above code, the de facto global theme is now the `$avatar-royalblue-theme` as it overwrites any previously included `css-vars` mixins.
+In the above code, the de facto global theme is now the `$avatar-royalblue-theme` as it overwrites any previously included `tokens` mixins.
 
 This brings us to our next point.
 
@@ -81,11 +129,11 @@ As we saw in the previous example, when adding multiple themes targeting the sam
 // ...
 // CSS class selectors
 .avatar-royalblue {
-  @include css-vars($avatar-royalblue-theme);
+  @include tokens($avatar-royalblue-theme);
 }
 
 .avatar-purple {
-  @include css-vars($avatar-purple-theme);
+  @include tokens($avatar-purple-theme);
 }
 ```
 
@@ -146,18 +194,18 @@ $avatar-royalblue-theme: avatar-theme(
 );
 
 :host {
-  @include css-vars($avatar-royalblue-theme);
+  @include tokens($avatar-royalblue-theme);
 }
 ```
 
 When using CSS variables, we don't have to use the `::ng-deep` pseudo-selector. With the code above we've created CSS variables for the `igx-avatar`, which will always have `royalblue` as its background color. The theme for our custom avatar will not 'leak' into other `igx-avatar` component instances, thus staying encapsulated within our custom `app-avatar` component.
 
-The above instance could also be achieved without using any Sass. All we need to do is to set the value of `--igx-avatar-background` CSS variable to the desired color:
+The above instance could also be achieved without using any Sass. All we need to do is to set the value of `--ig-avatar-background` CSS variable to the desired color:
 
 ```css
 /* app-avatar.component.css */
 :host {
-  --igx-avatar-background: royalblue;
+  --ig-avatar-background: royalblue;
 }
 ```
 

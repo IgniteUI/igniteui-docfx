@@ -635,11 +635,11 @@ $custom-drop-down-theme: drop-down-theme(
 );
 ```
 
-The last step is to pass the custom drop-down theme to a class or element selector:
+The last step is to pass the custom drop-down theme:
 
 ```scss
-.drop-down__scroll-container {
-  @include css-vars($custom-drop-down-theme);
+:host {
+  @include tokens($custom-drop-down-theme);
 }
 ```
 

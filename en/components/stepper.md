@@ -444,7 +444,9 @@ $stepper-theme: stepper-theme(
 The last step is to include the component's theme.
 
 ```scss
-@include css-vars($custom-stepper-theme);
+:host {
+    @include tokens($custom-stepper-theme);
+}
 ```
 
 ### Demo

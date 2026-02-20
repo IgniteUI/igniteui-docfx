@@ -140,7 +140,7 @@ Let's look at an example. Say you wanted to modify the background of the avatar.
 ```css
 /* styles.css */
 :root {
-  --igx-avatar-background: black;
+  --ig-avatar-background: black;
 }
 
 igx-avatar {
@@ -151,13 +151,13 @@ igx-avatar {
 The snippet above will set the background in all avatars to orange.
 
 The avatar component will look for the `--background` variable first. If explicitly set, it will take its value. In other words, `local` variables have higher priority and will work **only** if applied to the `igx-avatar` directly, either by using its tag selector or any other selector that targets `igx-avatar`.
-The global `--igx-avatar-background` can be thought of as _fallback_ variable. It's going to be used only if the local `--background` is not explicitly overridden.
+The global `--ig-avatar-background` can be thought of as _fallback_ variable. It's going to be used only if the local `--background` is not explicitly overridden.
 
 For the curious, here's how this is implemented internally in the avatar:
 
 ```css
 igx-avatar {
-  --background: var(--igx-avatar-background, var(--ig-gray-400));
+  --background: var(--ig-avatar-background, var(--ig-gray-400));
   background: var(--background);
 }
 ```
@@ -182,7 +182,7 @@ Here's another example:
 ```css
 /* styles.css */
 :root {
-  --igx-avatar-background: lavender;
+  --ig-avatar-background: lavender;
 }
 ```
 

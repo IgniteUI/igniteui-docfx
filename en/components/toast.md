@@ -236,7 +236,9 @@ $custom-toast-theme: toast-theme(
 The last step is to pass the custom toast theme:
 
 ```scss
-@include css-vars($custom-toast-theme);
+:host {
+  @include tokens($custom-toast-theme);
+}
 ```
 
 ### Demo

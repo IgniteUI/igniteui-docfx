@@ -216,7 +216,9 @@ $custom-radio-theme: radio-theme(
 Finally, **include** the custom theme in your application:
 
 ```scss
-@include css-vars($custom-radio-theme);
+:host {
+  @include tokens($custom-radio-theme);
+}
 ```
 
 <code-view style="height: 300px"

@@ -349,21 +349,18 @@ In this example we only changed some of the parameters for the listed components
 >[!NOTE]
 >Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
-The last step is to **include** the new component themes using the `css-vars` mixin.
+The last step is to **include** the new component themes using the `tokens` mixin.
 
 ```scss
-@include css-vars($custom-query-builder);
-
 :host {
-  ::ng-deep {
-    @include css-vars($custom-input-group);
-    @include css-vars($custom-chip);
-    @include css-vars($custom-icon-button);
+    @include tokens($custom-query-builder);
+    @include tokens($custom-input-group);
+    @include tokens($custom-chip);
+    @include tokens($custom-icon-button);
 
     .igx-filter-tree__buttons {
-      @include css-vars($custom-button);
+      @include tokens($custom-button);
     }
-  }
 }
 ```
 

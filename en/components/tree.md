@@ -437,7 +437,9 @@ $custom-tree-theme: tree-theme(
 The last step is to include the component's theme.
 
 ```scss
-@include css-vars($custom-tree-theme);
+:host {
+  @include tokens($custom-tree-theme);
+}
 ```
 
 ### Demo

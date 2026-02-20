@@ -1451,7 +1451,7 @@ Finally, **include** the custom theme in your application:
 
 ```scss
 .my-contained-btn {
-    @include css-vars($custom-contained-theme);
+  @include tokens($custom-contained-theme);
 }
 ```
 
@@ -1548,7 +1548,7 @@ button {
 }
 ```
 
-Or you can use the universal `--igx-button-size` variable to target all instances:
+Or you can use the universal `--ig-button-size` variable to target all instances:
 
 ```html
 <div class="my-app">
@@ -1558,7 +1558,7 @@ Or you can use the universal `--igx-button-size` variable to target all instance
 
 ```scss
 .my-app {
-  --igx-button-size: 50px;
+  --ig-button-size: 50px;
 }
 ```
 

@@ -194,7 +194,7 @@ We will also use the following styles for our application:
 
 .locationTooltip {
   width: 310px;
-  background-color: var(--igx-grays-700);
+  background-color: var(--ig-grays-700);
   padding: 3px;
   font-size: 13px;
 }
@@ -476,7 +476,9 @@ Since the tooltip uses the [`IgxOverlayService`](overlay.md), in order for our c
 The last step is to **include** the component theme in our application.
 
 ```scss
-@include css-vars($dark-tooltip);
+:host {
+  @include tokens($dark-tooltip);
+}
 ```
 
 So now our styled tooltip should look like this:

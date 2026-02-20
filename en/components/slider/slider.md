@@ -706,7 +706,9 @@ $custom-slider-theme: slider-theme(
 The last step is to include the newly created component theme in our application.
 
 ```scss
-@include css-vars($custom-slider-theme);
+:host {
+  @include tokens($custom-slider-theme);
+}
 ```
 
 ### Demo

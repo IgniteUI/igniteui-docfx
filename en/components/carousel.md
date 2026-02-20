@@ -696,7 +696,9 @@ $carousel-theme: carousel-theme(
 The last step is to include the component's theme.
 
 ```scss
-@include css-vars($carousel-theme);
+:host {
+  @include tokens($carousel-theme);
+}
 ```
 
 ### Demo

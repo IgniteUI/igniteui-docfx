@@ -219,7 +219,9 @@ $dark-grid-column-moving-theme: grid-theme(
 The last step is to **include** the component mixins with its respective theme:
 
 ```scss
-@include css-vars($dark-grid-column-moving-theme);
+:host {
+  @include tokens($dark-grid-column-moving-theme);
+}
 ```
 
 ### Demo

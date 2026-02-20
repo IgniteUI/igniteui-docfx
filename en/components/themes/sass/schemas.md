@@ -144,7 +144,7 @@ $indigo-avatar: map.get($light-indigo-schema, avatar);
 
 // We include the specific schema to a class which we can then set on the avatar component that we want
 .indigo-avatar {
-    @include css-vars(
+    @include tokens(
         avatar-theme(
             $schema: $indigo-avatar
         )
