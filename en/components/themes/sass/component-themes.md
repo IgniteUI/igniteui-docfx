@@ -28,7 +28,7 @@ We'll take a look at how these approaches work in practice, and how to use one i
 There are several parts to a component theme:
 
 - **The component theme function** - A Sass function that normalizes the passed arguments and produces a theme to be consumed by a component mixin.
-- **The Тokens mixin** - A Sass mixin that consumes a component theme that generates CSS variable tokens from an Ignite UI component theme.
+- **The Tokens mixin** - A Sass mixin that consumes a component theme that generates CSS variable tokens from an Ignite UI component theme.
 - **The component mixin** - A Sass mixin that consumes a component theme and produces _CSS rules_ used to style a particular component.
 
 
