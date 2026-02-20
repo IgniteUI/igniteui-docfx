@@ -10,28 +10,30 @@ _language: ja
 
 # Angular Grid Lite フィルター操作
 
-Grid Lite は、データ ソースでのフィルター操作をサポートします。データ フィルタリングは列ごとに制御されるため、フィルタリング可能な列とフィルタリング不可能な列を設定できます。デフォルトでは、列構成オブジェクトの **`filter`** プロパティで明示的に構成されない限り、列のフィルタリングは無効になっています。
+Grid Lite は、データ ソースでのフィルター操作をサポートします。データ フィルタリングは列ごとに制御されるため、フィルタリング可能な列とフィルタリング不可能な列を設定できます。デフォルトでは、列構成オブジェクトの `filterable` プロパティで明示的に構成されない限り、列のフィルタリングは無効になっています。
 
-```typescript
-{
-  key: 'price',
-  filter: true
-}
+```html
+<igc-grid-lite-column
+  field="price"
+  filterable
+></igc-grid-lite-column>
 ```
 
-**`filter`** プロパティは、単純なブール値、または追加の構成オプションを公開する **`ColumnFilterConfiguration`** オブジェクトのいずれかになります。
+`filteringCaseSensitive` プロパティまたは `filtering-case-sensitive` 属性を使用して、文字列列のフィルター操作で大文字と小文字を区別するかどうかを制御することもできます:
+
+```html
+<igc-grid-lite-column
+  field="name"
+  filterable
+  filtering-case-sensitive
+></igc-grid-lite-column>
+```
+
+これらのプロパティはプログラムで設定することもできます。
 
 ```typescript
-{
-  key: 'price',
-  filter: {
-    /**
-     * string データ タイプの場合、この列のフィルター操作で大文字と小文字を区別するかどうかを制御します。
-     * 既定では、string タイプのフィルター操作は大文字と小文字を区別しません。
-     */
-    caseSensitive: true;
-  }
-}
+column.filterable = true;
+column.filteringCaseSensitive = true;
 ```
 
 <code-view style="height:600px"

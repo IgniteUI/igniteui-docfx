@@ -10,14 +10,20 @@ _language: ja
 
 # 列セル テンプレート
 
-デフォルトでは、グリッドは列のキーを使用してセル内の値を文字列としてレンダリングします。基本的なシナリオではこれで問題ありませんが、レンダリング結果をカスタマイズしたい場合や、最終出力が異なるデータ フィールドの組み合わせである場合は、セル テンプレート レンダラーを使用します。
+デフォルトでは、グリッドは列のフィールドを使用してセル内の値を文字列としてレンダリングします。これは基本的なシナリオでは問題ありませんが、レンダリングされる出力をカスタマイズしたい場合や、最終的な出力が異なるデータ フィールドの組み合わせである場合は、セル テンプレートをカスタマイズできます。
 
-列の **`cellTemplate`** プロパティを設定することで、これを実現できます。
+列の `cellTemplate` プロパティを設定することで、これを実現できます。
 
 ```typescript
-{
-  cellTemplate?: (params: GridLiteCellContext<T, K>) => TemplateResult;
+protected cellTemplate(params: IgcCellContext<T, K>) {
+    // テンプレートの結果を返す
 }
+```
+
+```html
+<igc-grid-lite>
+    <igc-grid-lite-column field="price" [cellTemplate]="cellTemplate"></igc-grid-lite-column>
+</igc-grid-lite>
 ```
 
 ## フォーマッタ関数として使用する
@@ -27,12 +33,8 @@ _language: ja
 ```typescript
 const { format: asCurrency } = new Intl.NumberFormat('en-EN', { style: 'currency', currency: 'EUR' });
 
-{
-  ...
-  /** 値 `value = 123456.789` に対してカスタム通貨形式を返します。 */
-  cellTemplate: (params) => asCurrency(params.value) // => "€123,456.79"
-  ...
-}
+/** 値 `value = 123456.789` に対してカスタム通貨形式を返します。 */
+protected cellTemplate = (params) => asCurrency(params.value); // => "€123,456.79"
 ```
 
 データ ソース内の異なるフィールドの値を組み合わせることも可能です。
@@ -42,12 +44,14 @@ Refer to the API documentation for **`GridLiteCellContext`** for more informatio
 ```typescript
 const { format: asCurrency } = new Intl.NumberFormat('en-EN', { style: 'currency', currency: 'EUR' });
 
-{
-  ...
-  /** 価格が 99.99 の品目 10 個の注文に対してカスタム通貨形式を返します。 */
-  cellTemplate: ({value, row}) => asCurrency(value * row.data.count) // => "€999.90"
-  ...
-}
+/** 価格が 99.99 の品目 10 個の注文に対してカスタム通貨形式を返します。 */
+protected cellTemplate = ({value, row}) => asCurrency(value * row.data.count); // => "€999.90"
+```
+
+```html
+<igc-grid-lite>
+    <igc-grid-lite-column field="price" [cellTemplate]="cellTemplate"></igc-grid-lite-column>
+</igc-grid-lite>
 ```
 
 ## カスタム DOM テンプレート
@@ -62,12 +66,14 @@ const { format: asCurrency } = new Intl.NumberFormat('en-EN', { style: 'currency
 // Lit パッケージから `html` タグ関数をインポートします。
 import { html } from "lit";
 
-{
-  key: 'rating',
-  // グリッド内の `rating` 値を表すために別の Web コンポーネントを使用します。
-  cellTemplate: ({ value }) => html`<igc-rating readonly value=${value}></igc-rating>`
-  ...
-}
+// グリッド内の `rating` 値を表すために別の Web コンポーネントを使用します。
+protected cellTemplate = ({ value }) => html`<igc-rating readonly value=${value}></igc-rating>`;
+```
+
+```html
+<igc-grid-lite>
+    <igc-grid-lite-column field="rating" [cellTemplate]="cellTemplate"></igc-grid-lite-column>
+</igc-grid-lite>
 ```
 
 >[!NOTE]
