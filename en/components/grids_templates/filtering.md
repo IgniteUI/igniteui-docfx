@@ -600,7 +600,7 @@ $custom-grid: grid-theme(
 );
 ```
 
-As seen, the `grid-theme` only controls colors for the filtering row and the respective column header that is being filtered. We obviously have a lot more components inside the filtering row, such as an input group, chips, buttons and others. In order to style them, we need to create a separate theme for each one, so let's create a new [`input-group-theme`]({environment:sassApiUrl}/themes#input-group-theme) and a new [`button-theme`]({environment:sassApiUrl}/themes#button-theme):
+As seen, the `grid-theme` only controls colors for the filtering row and the respective column header that is being filtered. We obviously have a lot more components inside the filtering row, such as an input group, chips, buttons and others. In order to style them, we need to create a separate theme for each one, so let's create a new [`input-group-theme`]({environment:sassApiUrl}/themes#input-group-theme) and a new [`flat-button-theme`]({environment:sassApiUrl}/themes#flat-button-theme):
 
 ```scss
 $dark-input-group: input-group-theme(
@@ -610,18 +610,18 @@ $dark-input-group: input-group-theme(
   $filled-text-color: #292826
 );
 
-$dark-button: button-theme(
-  $flat-background: #ffcd0f,
-  $flat-text-color: #292826,
-  $flat-hover-background: #292826,
-  $flat-hover-text-color: #ffcd0f
+$dark-button: flat-button-theme(
+  $background: #ffcd0f,
+  $foreground: #292826,
+  $hover-background: #292826,
+  $hover-foreground: #ffcd0f
 );
 ```
 
 >[!NOTE]
 >Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
-In this example we only changed some of the parameters for the input group and the button, but the [`input-group-theme`]({environment:sassApiUrl}/themes#function-input-group-theme) and the [`button-theme`]({environment:sassApiUrl}/themes#function-button-theme) provide way more parameters to control their respective styling.
+In this example we only changed some of the parameters for the input group and the button, but the [`input-group-theme`]({environment:sassApiUrl}/themes#function-input-group-theme) and the [`flat-button-theme`]({environment:sassApiUrl}/themes#function-flat-button-theme) provide way more parameters to control their respective styling.
 
 The last step is to **include** the component mixins, each with its respective theme. We will also set the color property for the input's placeholder.
 
@@ -641,7 +641,7 @@ The last step is to **include** the component mixins, each with its respective t
 ```
 
 >[!NOTE]
->We include the created **button-theme** and **input-group-theme** within `.igx-grid__filtering-row`, so that only the filtering row buttons and its input group would be styled. Otherwise other buttons and input groups in the grid would be affected too.
+>We include the created **flat-button-theme** and **input-group-theme** within `.igx-grid__filtering-row`, so that only the filtering row buttons and its input group would be styled. Otherwise other buttons and input groups in the grid would be affected too.
 >[!NOTE]
 >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
 
