@@ -97,7 +97,7 @@ Claude Code supports a `CLAUDE.md` file at the project root as persistent agent 
 
 ### General AI Agents
 
-Alternatively, one can use a general Agent Skills config so your Agent can easilly discover and load skills automatically on demand:
+Alternatively, one can use a general Agent Skills config so your Agent can easily discover and load skills automatically on demand:
 
 1. Create a `.agents/skills/` directory in your project root.
 2. Copy the skill directories from `igniteui-angular/skills/` repository into `.agents/skills/`:
