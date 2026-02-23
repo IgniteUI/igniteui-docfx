@@ -1,12 +1,12 @@
 ---
-title: AI-Assisted Development | Copilot Skills | Ignite UI for Angular | Infragistics
-_description: Learn how to use Copilot Skills to supercharge AI-assisted development with Ignite UI for Angular components, grids, data operations, and theming.
+title: AI-Assisted Development | AI Skills | Ignite UI for Angular | Infragistics
+_description: Learn how to use Agent Skills to supercharge AI-assisted development with Ignite UI for Angular components, grids, data operations, and theming.
 _keywords: ignite ui for angular, copilot skills, ai assisted development, github copilot, cursor, windsurf, claude, jetbrains ai
 ---
 
 # AI-Assisted Development
 
-Ignite UI for Angular ships with **Copilot Skills** — structured knowledge files that teach AI coding assistants (GitHub Copilot, Cursor, Windsurf, Claude, JetBrains AI, etc.) how to work with Ignite UI for Angular. These skill files provide context-aware guidance on components, grids, data operations, and theming, enabling your AI assistant to generate accurate, idiomatic code that follows best practices.
+Ignite UI for Angular ships with **Agent Skills** — structured knowledge files that teach AI coding assistants (GitHub Copilot, Cursor, Windsurf, Claude, JetBrains AI, etc.) how to work with Ignite UI for Angular. These skill files provide context-aware guidance on components, grids, data operations, and theming, enabling your AI assistant to generate accurate, idiomatic code that follows best practices.
 
 ## Available Skills
 
@@ -125,7 +125,7 @@ Use this approach when you want to load a specific skill on demand, without perm
 
 ### Step 1: Get the Skill Files
 
-**Option B — Download individual files**
+**Option A — Download individual files**
 
 Each skill file can be downloaded directly from GitHub. Open the raw file URL in your browser and save it, or use `curl`:
 
@@ -145,7 +145,28 @@ curl -O https://raw.githubusercontent.com/IgniteUI/igniteui-angular/master/skill
 
 **Option B — Use the installed npm package**
 
-If Ignite UI for Angular is already installed in your project, the skill files are available under `node_modules`:
+If Ignite UI for Angular is already installed in your project, the skill files are available under `node_modules`. To copy them into your project (e.g. for use with General AI Agents under `.agents/skills/`), run:
+
+```bash
+# macOS / Linux
+cp -r node_modules/igniteui-angular/skills/. .agents/skills/
+```
+
+```powershell
+# Windows (PowerShell)
+Copy-Item -Recurse node_modules\igniteui-angular\skills\* .agents\skills\
+```
+
+Or copy individual skill directories as needed:
+
+```bash
+cp -r node_modules/igniteui-angular/skills/igniteui-angular-components .agents/skills/
+cp -r node_modules/igniteui-angular/skills/igniteui-angular-grids .agents/skills/
+cp -r node_modules/igniteui-angular/skills/igniteui-angular-grid-data-operations .agents/skills/
+cp -r node_modules/igniteui-angular/skills/igniteui-angular-theming .agents/skills/
+```
+
+The skill files are located at:
 
 ```
 node_modules/igniteui-angular/skills/igniteui-angular-components/SKILL.md

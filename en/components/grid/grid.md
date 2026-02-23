@@ -875,7 +875,7 @@ Learn more about creating an Angular data grid in our short tutorial video:
 - [Selection](selection.md)
 - [Column Data Types](column-types.md#default-template)
 - [Build CRUD operations with igxGrid](../general/how-to/how-to-perform-crud.md)
-- [AI-Assisted Development](../general/ai-assisted-development.md) — Copilot Skills for grids, data operations, and theming
+- [AI-Assisted Development](../general/ai-assisted-development.md) — Agent Skills for grids, data operations, and theming
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

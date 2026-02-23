@@ -304,7 +304,7 @@ In this article we learned how to create our own Ignite UI for Angular applicati
 
 ## AI-Assisted Development
 
-Ignite UI for Angular ships with **Copilot Skills** — structured knowledge files that teach AI coding assistants (GitHub Copilot, Cursor, Windsurf, Claude, JetBrains AI, etc.) how to work with the library. Skills cover components, data grids, grid data operations, and theming.
+Ignite UI for Angular ships with **Agent Skills** — structured knowledge files that teach AI coding assistants (GitHub Copilot, Cursor, Windsurf, Claude, JetBrains AI, etc.) how to work with the library. Skills cover components, data grids, grid data operations, and theming.
 
 Learn more in the [AI-Assisted Development](ai-assisted-development.md) topic.
 
