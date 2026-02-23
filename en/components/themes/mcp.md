@@ -149,16 +149,16 @@ JetBrains AI Assistant supports MCP servers through the IDE settings:
 3. Click **+ Add** and choose **As JSON** or use the form fields.
 4. Enter the following configuration:
 
-```json
-{
-  "mcpServers": {
-    "igniteui-theming": {
-      "command": "npx",
-      "args": ["-y", "igniteui-theming", "igniteui-theming-mcp"]
+    ```json
+    {
+      "mcpServers": {
+        "igniteui-theming": {
+          "command": "npx",
+          "args": ["-y", "igniteui-theming", "igniteui-theming-mcp"]
+        }
+      }
     }
-  }
-}
-```
+    ```
 
 5. Click **OK** and restart the AI Assistant.
 
