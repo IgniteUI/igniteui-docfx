@@ -151,7 +151,7 @@ Once you have the files, open them and load them into your AI assistant:
 
 The **Theming skill** includes setup instructions for the `igniteui-theming` MCP server, which gives AI assistants access to live theming tools such as palette generation and component theme scaffolding. See the [Theming skill file](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-theming/SKILL.md) for configuration steps for VS Code, Cursor, Claude Desktop, and JetBrains IDEs.
 
-For more information on theming, refer to the [Ignite UI for Angular Theming](../themes.md) documentation and the [How to Customize Theme](./how-to/how-to-customize-theme.md) walkthrough.
+For more information on the Theming MCP, refer to the [Ignite UI Theming MCP](../themes/mcp.md) documentation.
 
 ## Additional Resources
 

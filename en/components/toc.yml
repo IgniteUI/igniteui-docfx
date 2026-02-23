@@ -1162,6 +1162,9 @@
   href: display-density.md
 - name: Spacing
   href: themes/spacing.md
+  new: false
+- name: Theming MCP
+  href: themes/mcp.md
   new: true
 - name: Sass
   new: false
@@ -1216,7 +1219,7 @@
       items:
       - name: Using Tailwind Custom Classes
         href: themes/misc/tailwind-classes.md
-        new: true
+        new: false
       - name: Printing styles
         href: themes/misc/printing-styles.md
         new: false
