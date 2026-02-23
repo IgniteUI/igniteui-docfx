@@ -131,13 +131,13 @@ public initColumns(column: IgxColumnComponent) {
 <div class="divider--half"></div>
 
 
-### API References
+## API References
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridStateDirective]({environment:angularApiUrl}/classes/igxgridstatedirective.html)
 
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)

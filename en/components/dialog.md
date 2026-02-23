@@ -361,7 +361,7 @@ The last step is to **include** the component theme in our application.
 
 <div class="divider--half"></div>
 
-## API Summary
+## API References
 
 <div class="divider--half"></div>
 

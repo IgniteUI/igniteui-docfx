@@ -13,7 +13,7 @@
 - name: Localization (i18n)
   href: general/localization.md
   new: false
-  updated: false
+  updated: true
 - name: Getting started
   href: general/getting-started.md
   new: false
@@ -1454,7 +1454,8 @@
   premium: true
 - name: PDF Exporter
   href: exporter-pdf.md
-  new: true
+  new: false
+  updated: true
   premium: true
 - name: Transaction Service
   href: transaction.md

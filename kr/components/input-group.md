@@ -97,13 +97,13 @@ Our inputs could be styled differently by using the [`type`]({environment:angula
 </code-view>
 
 
-### API References
+## API References
 * [IgxHintDirective]({environment:angularApiUrl}/classes/igxhintdirective.html)
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 * [IgxInputGroupComponent Styles]({environment:sassApiUrl}/themes#function-input-group-theme)
 
-### Additional Resources
+## Additional Resources
 Related topics:
 
 * [Reactive Forms Integration](angular-reactive-form-validation.md)

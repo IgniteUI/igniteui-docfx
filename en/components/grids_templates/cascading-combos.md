@@ -86,7 +86,7 @@ The [`id`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.htm
 </igx-linear-bar>
 ```
 
-## API Summary
+## API References
 
 <div class="divider--half"></div>
 

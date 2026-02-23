@@ -281,7 +281,7 @@ Additional components that were used:
 * [`IgxInputGroupComponent Styles`]({environment:sassApiUrl}/themes#function-input-group-theme)
 <div class="divider"></div>
 
-### Additional Resources
+## Additional Resources
 * [Grid Search](grid/search.md)
 
 <div class="divider--half"></div>
