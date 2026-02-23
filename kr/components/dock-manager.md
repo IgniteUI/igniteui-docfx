@@ -62,7 +62,7 @@ if (environment.production) {
 platformBrowserDynamic().bootstrapModule(AppModule)
     .catch(err => console.log(err));
 
-defineComponents();
+defineComponents(IgcDockManagerComponent);
 ```
 
 This is it, you are now ready to use the Dock Manager component in an Angular component template. To do so simply use its tag name:

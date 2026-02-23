@@ -61,7 +61,7 @@ if (environment.production) {
 platformBrowserDynamic().bootstrapModule(AppModule)
     .catch(err => console.log(err));
 
-defineComponents();
+defineComponents(IgcDockManagerComponent);
 ```
 
 Angular コンポーネント テンプレートで Dock Manager コンポーネントを使用する準備ができました。タグ名を使用します。
