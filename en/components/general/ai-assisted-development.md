@@ -95,6 +95,28 @@ Claude Code supports a `CLAUDE.md` file at the project root as persistent agent 
 
 3. Claude Code will automatically read `CLAUDE.md` at the start of every session.
 
+### General AI Agents
+
+Alternatively, one can use a general Agent Skills config so your Agent can easilly discover and load skills automatically on demand:
+
+1. Create a `.agents/skills/` directory in your project root.
+2. Copy the skill directories from `igniteui-angular/skills/` repository into `.agents/skills/`:
+
+    ```
+    .agents/
+      skills/
+        igniteui-angular-components/
+        igniteui-angular-grids/
+        igniteui-angular-grid-data-operations/
+        igniteui-angular-theming/
+    ```
+
+3. The Agent will now discover these skills and load the relevant one automatically based on the context of your request.
+
+> **Tip for VS Code:** VS Code searches for skills in `.github/skills/`, `.claude/skills/`, and `.agents/skills/` by default. You can configure additional locations using the `chat.agentSkillsLocations` setting.
+
+> **Tip:** VS Code searches for skills in `.github/skills/`, `.claude/skills/`, and `.agents/skills/` by default. You can configure additional locations using the `chat.agentSkillsLocations` setting.
+
 ---
 
 ## Approach 2: Download and Load Skills Manually
