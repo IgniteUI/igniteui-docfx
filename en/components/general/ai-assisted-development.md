@@ -32,16 +32,16 @@ GitHub Copilot reads custom instructions from a `.github/copilot-instructions.md
 1. Create (or open) `.github/copilot-instructions.md` in your project root.
 2. Add a reference or paste the relevant skill content into that file. For example:
 
-```markdown
-# Copilot Instructions
+    ```markdown
+    # Copilot Instructions
 
-This project uses Ignite UI for Angular. Follow the guidelines in the skill files below:
+    This project uses Ignite UI for Angular. Follow the guidelines in the skill files below:
 
-- Components & Layout: https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-components/SKILL.md
-- Data Grids: https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-grids/SKILL.md
-- Grid Data Operations: https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-grid-data-operations/SKILL.md
-- Theming & Styling: https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-theming/SKILL.md
-```
+    - Components & Layout: https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-components/SKILL.md
+    - Data Grids: https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-grids/SKILL.md
+    - Grid Data Operations: https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-grid-data-operations/SKILL.md
+    - Theming & Styling: https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-theming/SKILL.md
+    ```
 
 3. Alternatively, paste the full content of the relevant `SKILL.md` files directly into `copilot-instructions.md` for fully offline, self-contained instructions.
 4. Copilot will now apply these instructions automatically on every chat and inline suggestion in VS Code.
@@ -53,12 +53,12 @@ Cursor supports persistent project rules through a `.cursorrules` file or the `.
 1. Create `.cursorrules` in your project root (or `.cursor/rules/igniteui.md` for a named rule).
 2. Paste the contents of the desired `SKILL.md` files into that file. For example:
 
-```
-# Ignite UI for Angular Rules
+    ```
+    # Ignite UI for Angular Rules
 
-<paste contents of skills/igniteui-angular-components/SKILL.md here>
-<paste contents of skills/igniteui-angular-grids/SKILL.md here>
-```
+    <paste contents of skills/igniteui-angular-components/SKILL.md here>
+    <paste contents of skills/igniteui-angular-grids/SKILL.md here>
+    ```
 
 3. Cursor will include these rules in every AI request automatically. You can also use the `@rules` mention in chat to reference a specific rule on demand.
 
@@ -85,13 +85,13 @@ Claude Code supports a `CLAUDE.md` file at the project root as persistent agent 
 1. Create `CLAUDE.md` in your project root.
 2. Paste the contents of the relevant `SKILL.md` files into it. For example:
 
-```markdown
-# Project Instructions
+    ```markdown
+    # Project Instructions
 
-This project uses Ignite UI for Angular. Always follow these guidelines:
+    This project uses Ignite UI for Angular. Always follow these guidelines:
 
-<paste contents of SKILL.md files here>
-```
+    <paste contents of SKILL.md files here>
+    ```
 
 3. Claude Code will automatically read `CLAUDE.md` at the start of every session.
 
