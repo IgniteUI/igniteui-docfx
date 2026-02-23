@@ -55,6 +55,12 @@ npx -y igniteui-theming igniteui-theming-mcp
 > [!NOTE]
 > The `-y` flag tells `npx` to auto-confirm the package download prompt so the server can start without manual intervention.
 
+### How version resolution works
+
+Because `igniteui-theming` is a dependency of `igniteui-angular`, it is already present in your `node_modules` after `npm install`. When you run the launch command above, `npx` detects the locally installed copy and runs it directly — no network request is made. This means the MCP server version always stays in sync with the rest of your Ignite UI packages.
+
+If you run the command outside a project (or before running `npm install`), `npx -y` downloads the **latest** version from npm into a temporary cache instead. The server will still start, but `detect_platform` will return `generic` since there is no `package.json` to inspect.
+
 Choose your AI client below for the specific configuration steps.
 
 ### VS Code
