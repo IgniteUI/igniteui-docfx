@@ -45,11 +45,11 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 export class AppModule {}
 ```
 
-`main.ts` ファイルの `defineCustomElements()` 関数を呼び出します。
+`main.ts` ファイルの `defineComponents()` 関数を呼び出します。
 
 ```typescript
 import { AppModule } from './app/app.module';
-import { defineCustomElements } from 'igniteui-dockmanager/loader';
+import { defineComponents } from 'igniteui-dockmanager';
 import { enableProdMode } from '@angular/core';
 import { environment } from '.environments/environment';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
@@ -61,7 +61,7 @@ if (environment.production) {
 platformBrowserDynamic().bootstrapModule(AppModule)
     .catch(err => console.log(err));
 
-defineCustomElements();
+defineComponents();
 ```
 
 Angular コンポーネント テンプレートで Dock Manager コンポーネントを使用する準備ができました。タグ名を使用します。
