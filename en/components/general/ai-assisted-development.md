@@ -159,11 +159,31 @@ Copy-Item -Recurse node_modules\igniteui-angular\skills\* .agents\skills\
 
 Or copy individual skill directories as needed:
 
+**macOS / Linux**
+
 ```bash
 cp -r node_modules/igniteui-angular/skills/igniteui-angular-components .agents/skills/
 cp -r node_modules/igniteui-angular/skills/igniteui-angular-grids .agents/skills/
 cp -r node_modules/igniteui-angular/skills/igniteui-angular-grid-data-operations .agents/skills/
 cp -r node_modules/igniteui-angular/skills/igniteui-angular-theming .agents/skills/
+```
+
+**Windows (PowerShell)**
+
+```powershell
+Copy-Item -Recurse node_modules\igniteui-angular\skills\igniteui-angular-components .agents\skills\
+Copy-Item -Recurse node_modules\igniteui-angular\skills\igniteui-angular-grids .agents\skills\
+Copy-Item -Recurse node_modules\igniteui-angular\skills\igniteui-angular-grid-data-operations .agents\skills\
+Copy-Item -Recurse node_modules\igniteui-angular\skills\igniteui-angular-theming .agents\skills\
+```
+
+**Windows (Command Prompt)**
+
+```cmd
+xcopy /E /I node_modules\igniteui-angular\skills\igniteui-angular-components .agents\skills\igniteui-angular-components
+xcopy /E /I node_modules\igniteui-angular\skills\igniteui-angular-grids .agents\skills\igniteui-angular-grids
+xcopy /E /I node_modules\igniteui-angular\skills\igniteui-angular-grid-data-operations .agents\skills\igniteui-angular-grid-data-operations
+xcopy /E /I node_modules\igniteui-angular\skills\igniteui-angular-theming .agents\skills\igniteui-angular-theming
 ```
 
 The skill files are located at:
