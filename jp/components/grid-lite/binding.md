@@ -22,18 +22,19 @@ Grid Lite は、データ ソースとしてプレーン オブジェクトの�
 grid.data = [...{
   /** レコードが続きます */
 }];
-
-// 新しいデータを反映するように列の構成を更新します。
-grid.columns = [...];
 ```
 
-グリッドで **`autoGenerate`** 有効になっている場合、古い列設定をリセットした場合にのみ、新しい列設定を「推測します」。
+```html
+<igc-grid-lite>
+    <!-- 新しいデータを表すために、必要に応じて列の構成を更新し、列を追加または削除します。 -->
+    <igc-grid-lite-column field="id"></igc-grid-lite-column>
+</igc-grid-lite>
+```
+
+グリッドで `autoGenerate` が有効になっている場合、データが変更されると新しい列の構成が自動的に「推測されます」。
 
 ```typescript
 grid.autoGenerate = true;
-
-/** 列定義 */
-grid.columns = [];
 
 /** 新しいバインディング後、グリッドはバインドされたデータから列コレクションを推論します。 */
 grid.data = [];
