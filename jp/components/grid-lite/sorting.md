@@ -10,34 +10,36 @@ _language: ja
 
 # ソート操作
 
-Grid Lite はデータ ソースに対してソート操作をサポートします。ソートは列単位で制御され、ソート可能な列とソート不可の列を設定できます。グリッド自体も特定のソート動作を制御します。デフォルトでは、**`sort`** プロパティで明示的に設定されない限り、列のソートは無効です。
+Grid Lite はデータ ソースに対してソート操作をサポートします。ソートは列単位で制御され、ソート可能な列とソート不可の列を設定できます。グリッド自体も特定のソート動作を制御します。デフォルトでは、`sortable` プロパティで明示的に設定されない限り、列のソートは無効です。
 
-```typescript
-{
-  key: 'price',
-  sort: true
-}
+```html
+<igc-grid-lite-column
+  field="price"
+  sortable
+></igc-grid-lite-column>
 ```
 
-**`sort`** プロパティは、単純なブール値、または追加の構成オプションを公開する **`ColumnSortConfiguration`** オブジェクトのいずれかになります。
+`sortingCaseSensitive` プロパティまたは `sorting-case-sensitive` 属性を使用して、文字列列のソート操作で大文字と小文字を区別するかどうかを制御することもできます。
+
+```html
+<igc-grid-lite-column 
+  field="name" 
+  sortable
+  sorting-case-sensitive
+></igc-grid-lite-column>
+```
+
+カスタム比較ロジックの場合は、`comparer` 関数を使用して `sortConfiguration` プロパティを設定します:
 
 ```typescript
-{
-  key: 'name',
-  sort: {
-    /**
-     * string データ タイプの場合、この列のソート操作で大文字と小文字を区別するかどうかを制御します。
-     * 既定では、string タイプのソート操作は大文字と小文字を区別しません。
-     */
-    caseSensitive: true,
-    /**
-     * この列のソート操作に使用されるカスタム比較関数を指定します。
-     *
-     * 次のサンプルでは、`name` の値をその長さに基づいて比較します。
-     */
-    comparer: (a, b) => a.length - b.length
-  }
-}
+column.sortable = true;
+column.sortConfiguration = {
+  /**
+   * この列のソート操作に使用されるカスタム比較関数を指定します。
+   * 次のサンプルでは、`name` の値をその長さに基づいて比較します。
+   */
+  comparer: (a, b) => a.length - b.length
+};
 ```
 
 <code-view style="height:510px"
@@ -47,10 +49,10 @@ Grid Lite はデータ ソースに対してソート操作をサポートしま
 
 ## 単一および複数列ソート
 
-グリッドは単一および複数列ソートの両方をサポートします。複数列はデフォルトで有効で、グリッドの **`sortConfiguration`** プロパティを通じて設定可能です。
+グリッドは単一および複数列ソートの両方をサポートします。複数列はデフォルトで有効で、グリッドの `sortingOptions` プロパティを通じて設定可能です。`mode` プロパティは、値として `'single'` または `'multiple'` を受け入れます。
 
 ```typescript
-grid.sortConfiguration = { multiple: false, triState: true };
+grid.sortingOptions = { mode: 'single' };
 ```
 
 >[!NOTE]
@@ -58,20 +60,11 @@ grid.sortConfiguration = { multiple: false, triState: true };
 
 ### 3 状態ソート
 
-さらに、Grid Lite は 3 状態ソートをサポートし、デフォルトで有効です。グリッドの **`sortConfiguration`** プロパティの **`triState 設定に応じて、ユーザーは次の状態を循環します:`**
+Grid Lite コンポーネントは 3 状態ソートをサポートしており、常に有効になっています。エンド ユーザーはソート可能な列ヘッダーをクリックすると、次の方向状態を順番に切り替えます:
 
-
-- **3 状態有効**
-
-  - ```typescript
-    ascending -> descending -> none -> ascending
-    ```
-
-- **3 状態無効**
-
-  - ```typescript
-    ascending -> descending -> ascending
-    ```
+```text
+ascending -> descending -> none -> ascending
+```
 
 `none` はデータの初期状態で、グリッドによるソートが適用されていません。
 
@@ -79,7 +72,7 @@ grid.sortConfiguration = { multiple: false, triState: true };
 
 複数列ソートが有効な場合、列ヘッダーにはソートインジケーターが表示されます。これはソート操作が適用された順序を示す番号です。
 
-次のサンプルは、グリッドの **`sortConfiguration`** の組み合わせと、その反映例を示します。
+次のサンプルは、グリッドの `sortingOptions` プロパティと、それがグリッドのソート動作を制御する方法を示しています。
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -88,10 +81,10 @@ grid.sortConfiguration = { multiple: false, triState: true };
 
 ## ソート モデル
 
-Grid Lite におけるソート操作の基本単位は **`SortExpression`** で、以下のプロパティを持ちます:
+Grid Lite におけるソート操作の基本単位は `SortingExpression` で、以下のプロパティを持ちます:
 
 ```typescript
-type SortExpression<T> = {
+type SortingExpression<T> = {
   /**
    * ソート操作の対象列の `key`。
    */
@@ -117,9 +110,9 @@ type SortExpression<T> = {
 
 ## ソート API
 
-Grid Lite は、ソート操作を API から適用するために 2 つの方法を提供します。**`GridLite.sort()`**/**`GridLite.clearSort()`** メソッドを使用するか、**`Grid.Lite.sortExpressions`** プロパティを使用します。
+Grid Lite は、ソート操作を API から適用するために 2 つの方法を提供します。`sort()`/`clearSort()` メソッドを使用するか、`sortingExpressions` プロパティを使用します。
 
-The **`sort()`** メソッドは、単一式または複数のソート式の配列を受け取り、それらに基づいてグリッド データをソートします。
+The `sort()` メソッドは、単一式または複数のソート式の配列を受け取り、それらに基づいてグリッド データをソートします。
 
 ```typescript
 // 単一
@@ -132,7 +125,7 @@ grid.sort([
 ]);
 ```
 
-The **`clearSort()`** メソッドは、その名の通り、単一列またはグリッド全体のソート状態をクリアします。引数に応じて挙動が変わります。
+The `clearSort()` メソッドは、その名の通り、単一列またはグリッド全体のソート状態をクリアします。引数に応じて挙動が変わります。
 
 ```typescript
 // `price` 列のソート状態をクリアします。
@@ -144,40 +137,38 @@ grid.clearSort();
 
 ### 初期のソート状態
 
-**`sortExpressions`** プロパティは **`sort()`** メソッド呼び出しと同様の動作をします。これはグリッド内のソート状態を制御する宣言的な方法を公開していますが、最も便利なプロパティは、Grid Lite が最初にレンダリングされるときに初期ソート状態を設定できることです。
+`sortingExpressions` プロパティは `sort()` メソッド呼び出しと同様の動作をします。これはグリッド内のソート状態を制御する宣言的な方法を公開していますが、最も便利なプロパティは、Grid Lite が最初にレンダリングされるときに初期ソート状態を設定できることです。
 
-たとえば、Lit ベースのサンプルを次に示します。
+例:
 
 ```typescript
-{
-  sortState: SortExpression<Products>[] = [
+protected sortState: SortingExpression<Products>[] = [
     { key: 'price', direction: 'descending' },
     { key: 'name', direction: 'ascending', caseSensitive: true },
-  ];
+];
+```
 
-  render() {
-    return html`<igc-grid-lite .sortExpressions=${sortState}></igc-grid-lite>`
-  }
-}
+```html
+<igc-grid-lite [sortingExpressions]="sortState"></igc-grid-lite>
 ```
 
 これを使用すると、コンポーネントの現在のソート状態を取得し、アプリケーション内の別の状態に応じて追加の処理を実行できます。
 
 ```typescript
-const state = grid.sortExpressions;
+const state = grid.sortingExpressions;
 // 現在のソート状態を保存します
 saveUserSortState(state);
 ```
 
 ## イベント
 
-UI を通じてソート操作が実行されると、コンポーネントはカスタム **`sorting`** イベントを発行します。**`detail`** プロパティには Gird Lite が適用するソート式が含まれます。イベントはキャンセル可能で、キャンセルすると現在のソート操作が停止します。
+UI を通じてソート操作が実行されると、コンポーネントはカスタム `sorting` イベントを発行します。`detail` プロパティには Gird Lite が適用するソート式が含まれます。イベントはキャンセル可能で、キャンセルすると現在のソート操作が停止します。
 
-グリッドが新しいソート状態を適用した後、**`sorted`** イベントが発行されます。最後のソート操作で使用された式を含み、キャンセルはできません。
+グリッドが新しいソート状態を適用した後、`sorted` イベントが発行されます。最後のソート操作で使用された式を含み、キャンセルはできません。
 
 ```typescript
-grid.addEventListener('sorting', (event: CustomEvent<SortExpression<T>>) => { ... });
-grid.addEventListener('sorted', (event: CustomEvent<SortExpression<T>>) => { ... });
+grid.addEventListener('sorting', (event: CustomEvent<SortingExpression<T>>) => { ... });
+grid.addEventListener('sorted', (event: CustomEvent<SortingExpression<T>>) => { ... });
 ```
 
 次のサンプルでは、**Name** と **Rating** 列のソートを試みると操作がキャンセルされます。下記のイベント ログで動作を確認してください。
