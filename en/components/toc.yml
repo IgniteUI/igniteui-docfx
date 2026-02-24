@@ -1,3 +1,10 @@
+- name: AI-Assisted Development
+  href: general/ai-assisted-development.md
+  new: true
+  header: true
+- name: Theming MCP
+  href: themes/mcp.md
+  new: true
 - name: General
   header: true
   sortable: true
@@ -53,9 +60,6 @@
     - name: Use Standalone Components
       href: general/how-to/how-to-use-standalone-components.md
       updated: false
-- name: AI-Assisted Development
-  href: general/ai-assisted-development.md
-  new: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   sortable: false
@@ -1163,9 +1167,6 @@
 - name: Spacing
   href: themes/spacing.md
   new: false
-- name: Theming MCP
-  href: themes/mcp.md
-  new: true
 - name: Sass
   new: false
   items:
