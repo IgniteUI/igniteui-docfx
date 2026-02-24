@@ -124,9 +124,15 @@ Use this approach when you want to load a specific skill on demand, without perm
 
 #### **Option A — Download individual files**
 
-Each skill file can be downloaded directly from GitHub. Open the raw file URL in your browser and save it, or use `curl`:
+Each skill file can be downloaded directly from GitHub. First, create the `.agents/skills/` directory in your project root, then download the files into it:
 
 ```bash
+# Create the .agents/skills directory
+mkdir -p .agents/skills
+
+# Download skill files into .agents/skills/
+cd .agents/skills
+
 # Components & Layout
 curl -O https://raw.githubusercontent.com/IgniteUI/igniteui-angular/master/skills/igniteui-angular-components/SKILL.md
 
@@ -137,7 +143,36 @@ curl -O https://raw.githubusercontent.com/IgniteUI/igniteui-angular/master/skill
 curl -O https://raw.githubusercontent.com/IgniteUI/igniteui-angular/master/skills/igniteui-angular-theming/SKILL.md
 ```
 
-#### **Option B — Use the installed npm package**
+The skill files will now be available in `.agents/skills/` and will be automatically discovered by compatible AI assistants.
+
+
+#### **Option B — Use the `gemini skills` CLI**
+
+The `gemini skills install` command installs skills directly from a Git repository. It supports two scopes:
+
+- **User scope** (default) — installs skills globally for your user account, making them available across all projects. Skills are placed in `~/.gemini/skills/` or `~/.agents/skills/`.
+- **Workspace scope** — installs skills locally into the current project directory under `.agents/skills/`, scoping them to that project only.
+
+**Install to user scope (default):**
+
+```bash
+gemini skills install https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-components
+gemini skills install https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-grids
+gemini skills install https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-theming
+```
+
+**Install to workspace scope:**
+
+```bash
+gemini skills install --scope workspace https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-components
+gemini skills install --scope workspace https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-grids
+gemini skills install --scope workspace https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-theming
+```
+
+Once installed, the skill files are available in the respective location and will be automatically discovered by compatible AI assistants.
+
+
+#### **Option C — Use the installed npm package**
 
 If Ignite UI for Angular is already installed in your project, the skill files are available under `node_modules`. To copy them into your project (e.g. for use with General AI Agents under `.agents/skills/`), run:
 
@@ -185,7 +220,7 @@ node_modules/igniteui-angular/skills/igniteui-angular-grids/SKILL.md
 node_modules/igniteui-angular/skills/igniteui-angular-theming/SKILL.md
 ```
 
-#### **Option C — Use the `npx skills` CLI**
+#### **Option D — Use the `npx skills` CLI**
 
 The `skills` CLI is an interactive tool that downloads and installs skills directly into your project. Run the following command in your project root:
 
