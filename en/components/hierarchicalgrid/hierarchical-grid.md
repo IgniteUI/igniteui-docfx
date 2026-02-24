@@ -431,6 +431,7 @@ platformBrowserDynamic()
 - [Column Pinning](column-pinning.md)
 - [Column Resizing](column-resizing.md)
 - [Selection](selection.md)
+- [AI-Assisted Development](../general/ai-assisted-development.md) — Agent Skills for grids, data operations, and theming
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
