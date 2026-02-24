@@ -15,8 +15,7 @@ The skill files live in the [`skills/`](https://github.com/IgniteUI/igniteui-ang
 | Skill | Path | Description |
 |:------|:-----|:------------|
 | Components & Layout | [`skills/igniteui-angular-components/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-components/SKILL.md) | Standalone components, form controls, overlays, layout |
-| Data Grids | [`skills/igniteui-angular-grids/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-grids/SKILL.md) | Grid, Tree Grid, Hierarchical Grid, Pivot Grid |
-| Grid Data Operations | [`skills/igniteui-angular-grid-data-operations/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-grid-data-operations/SKILL.md) | Sorting, filtering, grouping, paging, remote data, state management |
+| Data Grids | [`skills/igniteui-angular-grids/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-grids/SKILL.md) | Grid, Tree Grid, Hierarchical Grid, Pivot Grid, sorting, filtering, grouping, paging, remote data |
 | Theming & Styling | [`skills/igniteui-angular-theming/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-theming/SKILL.md) | Palettes, typography, elevations, component themes, MCP server |
 
 There are two ways to use skills with your AI assistant: [create a persistent IDE agent](#approach-1-create-a-persistent-ide-agent) that always applies them automatically, or [download and load them manually](#approach-2-download-and-load-skills-manually) into your preferred IDE on demand.
@@ -39,7 +38,6 @@ GitHub Copilot reads custom instructions from a `.github/copilot-instructions.md
 
     - Components & Layout: https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-components/SKILL.md
     - Data Grids: https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-grids/SKILL.md
-    - Grid Data Operations: https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-grid-data-operations/SKILL.md
     - Theming & Styling: https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-theming/SKILL.md
     ```
 
@@ -107,7 +105,6 @@ Alternatively, one can use a general Agent Skills config so your Agent can easil
       skills/
         igniteui-angular-components/
         igniteui-angular-grids/
-        igniteui-angular-grid-data-operations/
         igniteui-angular-theming/
     ```
 
@@ -119,13 +116,13 @@ Alternatively, one can use a general Agent Skills config so your Agent can easil
 
 ---
 
-## Approach 2: Download and Load Skills Manually
+## Approach 2: Download and Load the Skills
 
 Use this approach when you want to load a specific skill on demand, without permanently modifying project configuration files.
 
 ### Step 1: Get the Skill Files
 
-**Option A — Download individual files**
+#### **Option A — Download individual files**
 
 Each skill file can be downloaded directly from GitHub. Open the raw file URL in your browser and save it, or use `curl`:
 
@@ -136,14 +133,11 @@ curl -O https://raw.githubusercontent.com/IgniteUI/igniteui-angular/master/skill
 # Data Grids
 curl -O https://raw.githubusercontent.com/IgniteUI/igniteui-angular/master/skills/igniteui-angular-grids/SKILL.md
 
-# Grid Data Operations
-curl -O https://raw.githubusercontent.com/IgniteUI/igniteui-angular/master/skills/igniteui-angular-grid-data-operations/SKILL.md
-
 # Theming & Styling
 curl -O https://raw.githubusercontent.com/IgniteUI/igniteui-angular/master/skills/igniteui-angular-theming/SKILL.md
 ```
 
-**Option B — Use the installed npm package**
+#### **Option B — Use the installed npm package**
 
 If Ignite UI for Angular is already installed in your project, the skill files are available under `node_modules`. To copy them into your project (e.g. for use with General AI Agents under `.agents/skills/`), run:
 
@@ -164,7 +158,6 @@ Or copy individual skill directories as needed:
 ```bash
 cp -r node_modules/igniteui-angular/skills/igniteui-angular-components .agents/skills/
 cp -r node_modules/igniteui-angular/skills/igniteui-angular-grids .agents/skills/
-cp -r node_modules/igniteui-angular/skills/igniteui-angular-grid-data-operations .agents/skills/
 cp -r node_modules/igniteui-angular/skills/igniteui-angular-theming .agents/skills/
 ```
 
@@ -173,7 +166,6 @@ cp -r node_modules/igniteui-angular/skills/igniteui-angular-theming .agents/skil
 ```powershell
 Copy-Item -Recurse node_modules\igniteui-angular\skills\igniteui-angular-components .agents\skills\
 Copy-Item -Recurse node_modules\igniteui-angular\skills\igniteui-angular-grids .agents\skills\
-Copy-Item -Recurse node_modules\igniteui-angular\skills\igniteui-angular-grid-data-operations .agents\skills\
 Copy-Item -Recurse node_modules\igniteui-angular\skills\igniteui-angular-theming .agents\skills\
 ```
 
@@ -182,7 +174,6 @@ Copy-Item -Recurse node_modules\igniteui-angular\skills\igniteui-angular-theming
 ```cmd
 xcopy /E /I node_modules\igniteui-angular\skills\igniteui-angular-components .agents\skills\igniteui-angular-components
 xcopy /E /I node_modules\igniteui-angular\skills\igniteui-angular-grids .agents\skills\igniteui-angular-grids
-xcopy /E /I node_modules\igniteui-angular\skills\igniteui-angular-grid-data-operations .agents\skills\igniteui-angular-grid-data-operations
 xcopy /E /I node_modules\igniteui-angular\skills\igniteui-angular-theming .agents\skills\igniteui-angular-theming
 ```
 
@@ -191,9 +182,26 @@ The skill files are located at:
 ```
 node_modules/igniteui-angular/skills/igniteui-angular-components/SKILL.md
 node_modules/igniteui-angular/skills/igniteui-angular-grids/SKILL.md
-node_modules/igniteui-angular/skills/igniteui-angular-grid-data-operations/SKILL.md
 node_modules/igniteui-angular/skills/igniteui-angular-theming/SKILL.md
 ```
+
+#### **Option C — Use the `npx skills` CLI**
+
+The `skills` CLI is an interactive tool that downloads and installs skills directly into your project. Run the following command in your project root:
+
+```bash
+npx skills add IgniteUI/igniteui-angular
+```
+
+The CLI will guide you through a series of prompts to:
+
+1. Select which skills to install (components, grids, and theming).
+2. Choose the target location for the skill files in your project (e.g. `.agents/skills/`, `.github/skills/`).
+3. Download and write the selected skill files automatically.
+
+Once complete, the skills are ready to use — no manual file copying required.
+
+> **Note:** Requires Node.js and an internet connection. The command fetches the latest skill files from the [IgniteUI/igniteui-angular](https://github.com/IgniteUI/igniteui-angular) repository.
 
 ### Step 2: Load the Skill into Your IDE
 
