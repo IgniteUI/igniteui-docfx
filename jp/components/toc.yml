@@ -14,7 +14,7 @@
 - name: ローカライズ
   href: general/localization.md
   new: false
-  updated: false
+  updated: true
 - name: 作業の開始
   href: general/getting-started.md
   new: false
