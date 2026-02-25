@@ -101,6 +101,7 @@ this.pdfExportService.export(this.igxGrid1, new IgxPdfExporterOptions('ExportedD
 - **pageSize**: ページ サイズ (`a3`、`a4`、`a5`、`letter`、`legal` など) を指定します。デフォルトは `a4` です。
 - **showTableBorders**: テーブルの境界線を表示するかどうかを決定します。デフォルトは `true` です。
 - **fontSize**: テーブル コンテンツのフォント サイズを設定します。デフォルトは `10` です。
+- **customFont**: Specifies a custom TrueType font (TTF) for Unicode character support. Required when exporting data containing non-Latin characters.
 
 次の例は、これらのオプションを構成する方法を示しています。
 
@@ -117,6 +118,89 @@ public exportButtonHandler() {
   this.pdfExportService.exportData(this.localData, options);
 }
 ```
+
+### Custom Font Configuration for Unicode Support
+
+By default, the PDF exporter uses the built-in Helvetica font, which only supports basic Latin characters. If your data contains non-Latin characters (such as Cyrillic, Chinese, Japanese, Arabic, Hebrew, or special symbols), you must provide a custom TrueType font (TTF) using the `customFont` property.
+
+The font data must be provided as a Base64-encoded string of the TTF file contents. You can optionally provide a separate bold variant for header styling.
+
+#### Converting TTF Files to Base64
+
+To convert a TTF file to Base64, use Node.js:
+
+```javascript
+const fs = require('fs');
+const fontData = fs.readFileSync('path/to/font.ttf');
+const base64 = fontData.toString('base64');
+fs.writeFileSync('font-base64.ts', `export const MY_FONT = '${base64}';`);
+```
+
+Alternatively, you can use an online Base64 encoder tool to convert your TTF file.
+
+#### Example: Basic Custom Font Usage
+
+```typescript
+// fonts/noto-sans.ts
+export const NOTO_SANS_REGULAR = 'AAEAAAATAQAABAAwR0...[base64-encoded font data]...';
+
+// component.ts
+import { NOTO_SANS_REGULAR } from './fonts/noto-sans';
+
+public exportButtonHandler() {
+  const options = new IgxPdfExporterOptions('ExportedDataFile');
+  options.customFont = {
+    name: 'NotoSans',
+    data: NOTO_SANS_REGULAR
+  };
+
+  this.pdfExportService.exportData(this.localData, options);
+}
+```
+
+#### Example: Custom Font with Bold Variant
+
+```typescript
+// fonts/noto-sans.ts
+export const NOTO_SANS_REGULAR = 'AAEAAAATAQAABAAwR0...[base64-encoded regular font]...';
+export const NOTO_SANS_BOLD = 'BBFAAAAUBQAACAAxS1...[base64-encoded bold font]...';
+
+// component.ts
+import { NOTO_SANS_REGULAR, NOTO_SANS_BOLD } from './fonts/noto-sans';
+
+public exportButtonHandler() {
+  const options = new IgxPdfExporterOptions('ExportedDataFile');
+  options.customFont = {
+    name: 'NotoSans',
+    data: NOTO_SANS_REGULAR,
+    bold: {
+      name: 'NotoSans-Bold',
+      data: NOTO_SANS_BOLD
+    }
+  };
+
+  this.pdfExportService.export(this.igxGrid1, options);
+}
+```
+
+#### Recommended Fonts for Unicode Support
+
+The following fonts provide excellent Unicode coverage:
+
+- **Noto Sans**: Covers most Unicode scripts — [Google Fonts](https://fonts.google.com/noto/specimen/Noto+Sans)
+- **Arial Unicode MS**: Comprehensive Unicode character support
+- **Source Han Sans**: Excellent CJK (Chinese, Japanese, Korean) support
+
+### Demo
+
+<code-view style="height: 660px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           explicit-editor="stackblitz"
+           iframe-src="{environment:demosBaseUrl}/services/export-pdf-custom-font/" alt="Angular PDF Exporter Custom Font Example">
+</code-view>
+
+<div class="divider--half"></div>
+
 
 ## 既知の制限
 

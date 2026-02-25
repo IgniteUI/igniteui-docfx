@@ -346,6 +346,7 @@ This feature allows developers to quickly create a pivot view without manually s
 
 - [Angular Pivot Grid Features](pivot-grid-features.md)
 - [Angular Pivot Grid Custom Aggregations](pivot-grid-custom.md)
+- [AI-Assisted Development](../general/ai-assisted-development.md) — Agent Skills for grids, data operations, and theming
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
