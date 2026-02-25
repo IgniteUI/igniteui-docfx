@@ -101,7 +101,7 @@ this.pdfExportService.export(this.igxGrid1, new IgxPdfExporterOptions('ExportedD
 - **pageSize**: ページ サイズ (`a3`、`a4`、`a5`、`letter`、`legal` など) を指定します。デフォルトは `a4` です。
 - **showTableBorders**: テーブルの境界線を表示するかどうかを決定します。デフォルトは `true` です。
 - **fontSize**: テーブル コンテンツのフォント サイズを設定します。デフォルトは `10` です。
-- **customFont**: Specifies a custom TrueType font (TTF) for Unicode character support. Required when exporting data containing non-Latin characters.
+- **customFont**: Unicode 文字サポート用のカスタム TrueType フォント (TTF) を指定します。ラテン文字以外の文字を含むデータをエクスポートする場合に必要です。
 
 次の例は、これらのオプションを構成する方法を示しています。
 
@@ -119,15 +119,15 @@ public exportButtonHandler() {
 }
 ```
 
-### Custom Font Configuration for Unicode Support
+### Unicode サポート用のカスタム フォント構成
 
-By default, the PDF exporter uses the built-in Helvetica font, which only supports basic Latin characters. If your data contains non-Latin characters (such as Cyrillic, Chinese, Japanese, Arabic, Hebrew, or special symbols), you must provide a custom TrueType font (TTF) using the `customFont` property.
+デフォルトでは、PDF エクスポーターは組み込みの Helvetica フォントを使用します。このフォントは基本的なラテン文字のみをサポートしています。データにラテン文字以外の文字 (キリル文字、中国語、日本語、アラビア語、ヘブライ語、特殊記号など) が含まれている場合は、`customFont` プロパティを使用してカスタム TrueType フォント (TTF) を提供する必要があります。
 
-The font data must be provided as a Base64-encoded string of the TTF file contents. You can optionally provide a separate bold variant for header styling.
+フォント データは、TTF ファイルの内容を Base64 エンコードした文字列として提供する必要があります。ヘッダーのスタイル設定用に、別途太字バリアントを提供することもできます。
 
-#### Converting TTF Files to Base64
+#### TTF ファイルを Base64 に変換
 
-To convert a TTF file to Base64, use Node.js:
+TTF ファイルを Base64 に変換するには、Node.js を使用します:
 
 ```javascript
 const fs = require('fs');
@@ -136,9 +136,9 @@ const base64 = fontData.toString('base64');
 fs.writeFileSync('font-base64.ts', `export const MY_FONT = '${base64}';`);
 ```
 
-Alternatively, you can use an online Base64 encoder tool to convert your TTF file.
+または、オンラインの Base64 エンコーダー ツールを使用して TTF ファイルを変換することもできます。
 
-#### Example: Basic Custom Font Usage
+#### 例: 基本的なカスタム フォントの使用方法
 
 ```typescript
 // fonts/noto-sans.ts
@@ -158,7 +158,7 @@ public exportButtonHandler() {
 }
 ```
 
-#### Example: Custom Font with Bold Variant
+#### 例: 太字バリアント付きカスタム フォント
 
 ```typescript
 // fonts/noto-sans.ts
@@ -183,20 +183,20 @@ public exportButtonHandler() {
 }
 ```
 
-#### Recommended Fonts for Unicode Support
+#### Unicode サポートの推奨フォント
 
-The following fonts provide excellent Unicode coverage:
+以下のフォントは優れた Unicode カバレッジを提供します:
 
-- **Noto Sans**: Covers most Unicode scripts — [Google Fonts](https://fonts.google.com/noto/specimen/Noto+Sans)
-- **Arial Unicode MS**: Comprehensive Unicode character support
-- **Source Han Sans**: Excellent CJK (Chinese, Japanese, Korean) support
+- **Noto Sans**: ほとんどの Unicode スクリプトをカバー - [Google Fonts](https://fonts.google.com/noto/specimen/Noto+Sans)
+- **Arial Unicode MS**: 包括的な Unicode 文字サポート
+- **Source Han Sans**: 優れた CJK (中国語、日本語、韓国語) サポート
 
-### Demo
+### デモ
 
 <code-view style="height: 660px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz"
-           iframe-src="{environment:demosBaseUrl}/services/export-pdf-custom-font/" alt="Angular PDF Exporter Custom Font Example">
+           iframe-src="{environment:demosBaseUrl}/services/export-pdf-custom-font/" alt="Angular PDF エクスポーター カスタム フォントの例">
 </code-view>
 
 <div class="divider--half"></div>
