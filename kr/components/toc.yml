@@ -892,6 +892,11 @@
 - name: Expansion Panel
   href: expansion-panel.md
   new: true
+- name: Dock Manager
+  href: dock-manager.md
+  new: false
+  updated: false
+  premium: true
 - name: Notifications
   header: true
 - name: Banner

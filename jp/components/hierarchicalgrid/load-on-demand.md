@@ -215,12 +215,12 @@ private buildUrl(event: IGridCreatedEventArgs) {
 }
 ````
 
-### API リファレンス
+## API リファレンス
 
 - [IgxHierarchicalGridComponent]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)
 - [IgxRowIslandComponent]({environment:angularApiUrl}/classes/igxrowislandcomponent.html)
 
-### その他のリソース
+## その他のリソース
 
 <div class="divider--half"></div>
 

@@ -204,13 +204,13 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 </code-view>
 
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
 * [IgxRipple Styles]({environment:sassApiUrl}/themes#function-ripple-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.

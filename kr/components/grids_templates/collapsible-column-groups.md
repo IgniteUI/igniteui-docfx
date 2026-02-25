@@ -137,14 +137,14 @@ Another way to achieve this behavior is to use the igxCollapsibleIndicator direc
 > hidden and you have a group defined where the same column should be shown, the column will be shown.
 
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [Grid overview](grid.md)

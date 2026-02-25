@@ -399,7 +399,7 @@ $custom-navbar-theme: navbar-theme(
 - [IgxIconComponent テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
 - [IgxButtonComponent テーマ]({environment:sassApiUrl}/themes#function-button-theme)
 
-### その他のリソース
+## その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

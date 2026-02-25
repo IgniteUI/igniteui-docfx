@@ -102,13 +102,13 @@ Analogically, the avatar can display an icon via the [`icon`]({environment:angul
 </igx-avatar>
 ```
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
 * [IgxAvatarComponent Styles]({environment:sassApiUrl}/themes#function-avatar-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
