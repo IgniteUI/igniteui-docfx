@@ -790,7 +790,9 @@ $custom-theme: grid-summary-theme(
 The last step is to **include** the component custom theme:
 
 ```scss
-@include css-vars($custom-theme);
+:host {
+  @include tokens($custom-theme);
+}
 ```
 
 >[!NOTE]
@@ -799,7 +801,7 @@ The last step is to **include** the component custom theme:
  ```scss
 :host {
   ::ng-deep {
-    @include css-vars($custom-theme);
+    @include tokens($custom-theme);
   }
 }
 ```
