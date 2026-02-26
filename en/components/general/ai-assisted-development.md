@@ -129,20 +129,18 @@ Use this approach when you want to load a specific skill on demand, without perm
 Each skill file can be downloaded directly from GitHub. First, create the `.agents/skills/` directory in your project root, then download the files into it:
 
 ```bash
-# Create the .agents/skills directory
-mkdir -p .agents/skills
 
-# Download skill files into .agents/skills/
-cd .agents/skills
+# Define the base target directory
+BASE_DIR=".agents/skills"
 
 # Components & Layout
-curl -O https://raw.githubusercontent.com/IgniteUI/igniteui-angular/master/skills/igniteui-angular-components/SKILL.md
+curl --create-dirs -o $BASE_DIR/igniteui-angular-components/SKILL.md https://raw.githubusercontent.com/IgniteUI/igniteui-angular/master/skills/igniteui-angular-components/SKILL.md
 
 # Data Grids
-curl -O https://raw.githubusercontent.com/IgniteUI/igniteui-angular/master/skills/igniteui-angular-grids/SKILL.md
+curl --create-dirs -o $BASE_DIR/igniteui-angular-grids/SKILL.md https://raw.githubusercontent.com/IgniteUI/igniteui-angular/master/skills/igniteui-angular-grids/SKILL.md
 
 # Theming & Styling
-curl -O https://raw.githubusercontent.com/IgniteUI/igniteui-angular/master/skills/igniteui-angular-theming/SKILL.md
+curl --create-dirs -o $BASE_DIR/igniteui-angular-theming/SKILL.md https://raw.githubusercontent.com/IgniteUI/igniteui-angular/master/skills/igniteui-angular-theming/SKILL.md
 ```
 
 The skill files will now be available in `.agents/skills/` and will be automatically discovered by compatible AI assistants.
