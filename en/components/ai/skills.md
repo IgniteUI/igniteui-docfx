@@ -1,10 +1,10 @@
 ---
-title: AI-Assisted Development | AI Skills | Ignite UI for Angular | Infragistics
+title: Ignite UI for Angular Skills | AI Skills | AI-Assisted Development | Ignite UI for Angular | Infragistics
 _description: Learn how to use Agent Skills to supercharge AI-assisted development with Ignite UI for Angular components, grids, data operations, and theming.
 _keywords: ignite ui for angular, copilot skills, ai assisted development, github copilot, cursor, windsurf, claude, jetbrains ai
 ---
 
-# AI-Assisted Development
+# Ignite UI for Angular Skills
 
 Ignite UI for Angular ships with **Agent Skills** — structured knowledge files that teach AI coding assistants (GitHub Copilot, Cursor, Windsurf, Claude, JetBrains AI, etc.) how to work with Ignite UI for Angular. These skill files provide context-aware guidance on components, grids, data operations, and theming, enabling your AI assistant to generate accurate, idiomatic code that follows best practices.
 
@@ -257,16 +257,16 @@ Once you have the files, open them and load them into your AI assistant:
 
 The **Theming skill** includes setup instructions for the `igniteui-theming` MCP server, which gives AI assistants access to live theming tools such as palette generation and component theme scaffolding. See the [Theming skill file](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-theming/SKILL.md) for configuration steps for VS Code, Cursor, Claude Desktop, and JetBrains IDEs.
 
-For more information on the Theming MCP, refer to the [Ignite UI Theming MCP](../themes/mcp.md) documentation.
+For more information on the Theming MCP, refer to the [Ignite UI Theming MCP](./theming-mcp.md) documentation.
 
 ## Additional Resources
 
 <div class="divider--half"></div>
 
-- [Getting Started with Ignite UI for Angular](getting-started.md)
-- [Angular Schematics & Ignite UI CLI](cli-overview.md)
-- [How to Use Standalone Components](how-to/how-to-use-standalone-components.md)
-- [Code Splitting and Multiple Entry Points](code-splitting-and-multiple-entry-points.md)
+- [Getting Started with Ignite UI for Angular](../general/getting-started.md)
+- [Angular Schematics & Ignite UI CLI](../general/cli-overview.md)
+- [How to Use Standalone Components](../general/how-to/how-to-use-standalone-components.md)
+- [Code Splitting and Multiple Entry Points](../general/code-splitting-and-multiple-entry-points.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
