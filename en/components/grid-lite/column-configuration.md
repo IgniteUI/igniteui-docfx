@@ -12,14 +12,14 @@ namespace: Infragistics.Controls
 Columns are defined declaratively using column child components within the grid. The `field` property is the only required for a column, as it serves as the column identifier. It is also the property that is used to map and render the relevant data in the grid rows.
 
 ```html
-<igc-grid-lite [data]="data">
-  <igc-grid-lite-column
+<igx-grid-lite [data]="data">
+  <igx-grid-lite-column
     field="account"
     header="Account Number"
     ...
-  ></igc-grid-lite-column>
+  ></igx-grid-lite-column>
   <!-- Additional columns -->
-</igc-grid-lite>
+</igx-grid-lite>
 ```
 
 ## Configuration Based on the Data Source
@@ -34,17 +34,17 @@ const data: Record[] = [
 ```
 
 ```html
-<igc-grid-lite auto-generate [data]="data"></igc-grid-lite>
+<igx-grid-lite [autoGenerate]="true" [data]="data"></igx-grid-lite>
 ```
 
 The previous snippet will result in the grid automatically creating columns equivalent to:
 
 ```html
-<igc-grid-lite [data]="data">
-  <igc-grid-lite-column field="entryId" data-type="string"></igc-grid-lite-column>
-  <igc-grid-lite-column field="source" data-type="string"></igc-grid-lite-column>
-  <igc-grid-lite-column field="ts" data-type="number"></igc-grid-lite-column>
-</igc-grid-lite>
+<igx-grid-lite [data]="data">
+  <igx-grid-lite-column field="entryId" dataType="string"></igx-grid-lite-column>
+  <igx-grid-lite-column field="source" dataType="string"></igx-grid-lite-column>
+  <igx-grid-lite-column field="ts" dataType="number"></igx-grid-lite-column>
+</igx-grid-lite>
 ```
 
 Useful for a quick render of some data without any additional customizations.
@@ -65,7 +65,7 @@ in the grid width.
 To change the width of column, use the `width` property of the column.
 
 ```html
-<igc-grid-lite-column field="price" width="250px"></igc-grid-lite-column>
+<igx-grid-lite-column field="price" width="250px"></igx-grid-lite-column>
 ```
 
 The property accepts <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numbers_lengths_and_percentages" target="_blank">valid CSS length units</a>.
@@ -75,7 +75,7 @@ The property accepts <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS
 Columns can be hidden/shown by setting the `hidden` property of the column.
 
 ```html
-<igc-grid-lite-column field="price" hidden></igc-grid-lite-column>
+<igx-grid-lite-column field="price" hidden></igx-grid-lite-column>
 ```
 
 ### Column Resize
@@ -83,7 +83,7 @@ Columns can be hidden/shown by setting the `hidden` property of the column.
 Each column of the Grid Lite component can be configured to be resizable by setting the `resizable` property of the column element.
 
 ```html
-<igc-grid-lite-column field="price" resizable></igc-grid-lite-column>
+<igx-grid-lite-column field="price" resizable></igx-grid-lite-column>
 ```
 
 If a column is set to be resizable, you can drag the right size of the column header to either increase/decrease  the column width. Double-clicking on the resize area will trigger auto-sizing of the column where it will try set its width according to the largest content of its cells/header.
