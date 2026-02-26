@@ -13,7 +13,7 @@ WPF から Angular へ移行する際の Angular アプリケーションの作�
 
 ### 前提条件
 
-Angular アプリケーションの作成を開始するには、Node.js と npm パッケージ マネージャーをインストールする必要があります。Node.js は、ブラウザーの外部で JavaScript コードを実行する JavaScript ランタイム環境です。Node.js を取得するには、[nodejs.org](https://nodejs.org) にアクセスします。NPM は、.NET 用の NuGet パッケージマネージャーに似たパッケージ マネージャーです。デフォルトで Node.js とともにインストールされます。IDE も必要です。Angular アプリケーションの開発に最適な環境の 1 つは、Visual Studio Code です。無料のオープンソースであり、すべてのプラットフォームで実行できます。[code.visualstudio.com](https://code.visualstudio.com/) から取得できます。
+Angular アプリケーションの作成を開始するには、Node.js と npm パッケージ マネージャーをインストールする必要があります。Node.js は、ブラウザーの外部で JavaScript コードを実行する JavaScript ランタイム環境です。Node.js を取得するには、[nodejs.org](https://nodejs.org) にアクセスします。NPM は、.NET 用の NuGet パッケージマネージャーに似たパッケージ マネージャーです。デフォルトで Node.js とともにインストールされます。IDE も必要です。Angular アプリケーションの開発に最適な環境の 1 つは、Visual Studio Code です。無料のオープン ソースであり、すべてのプラットフォームで実行できます。[code.visualstudio.com](https://code.visualstudio.com/) から取得できます。
 
 ### 新しいプロジェクトの作成
 

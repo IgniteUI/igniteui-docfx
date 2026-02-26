@@ -1,6 +1,6 @@
 ---
 title: Angular Grid Lite フィルタリング | Ignite UI for Angular | MIT ライセンス
-_description: Angular Grid Lite のフィルター操作、フィルターのカスタマイズ、およびリモート フィルタリング。オープンソースの Angular Grid Lite を使用してアプリを作成できます。今すぐお試しください。
+_description: Angular Grid Lite のフィルター操作、フィルターのカスタマイズ、およびリモート フィルタリング。オープン ソースの Angular Grid Lite を使用してアプリを作成できます。今すぐお試しください。
 _keywords: フィルタリング, {Platform}, {ComponentKeywords}, {ProductName}, インフラジスティックス
 _license: MIT
 mentionedTypes: [{ComponentApiMembers}]
@@ -10,33 +10,35 @@ _language: ja
 
 # Angular Grid Lite フィルター操作
 
-Grid Lite は、データ ソースでのフィルター操作をサポートします。データ フィルタリングは列ごとに制御されるため、フィルタリング可能な列とフィルタリング不可能な列を設定できます。デフォルトでは、列構成オブジェクトの **`filter`** プロパティで明示的に構成されない限り、列のフィルタリングは無効になっています。
+Grid Lite は、データ ソースでのフィルター操作をサポートします。データ フィルタリングは列ごとに制御されるため、フィルタリング可能な列とフィルタリング不可能な列を設定できます。デフォルトでは、列構成オブジェクトの `filterable` プロパティで明示的に構成されない限り、列のフィルタリングは無効になっています。
 
-```typescript
-{
-  key: 'price',
-  filter: true
-}
+```html
+<igc-grid-lite-column
+  field="price"
+  filterable
+></igc-grid-lite-column>
 ```
 
-**`filter`** プロパティは、単純なブール値、または追加の構成オプションを公開する **`ColumnFilterConfiguration`** オブジェクトのいずれかになります。
+`filteringCaseSensitive` プロパティまたは `filtering-case-sensitive` 属性を使用して、文字列列のフィルター操作で大文字と小文字を区別するかどうかを制御することもできます:
+
+```html
+<igc-grid-lite-column
+  field="name"
+  filterable
+  filtering-case-sensitive
+></igc-grid-lite-column>
+```
+
+これらのプロパティはプログラムで設定することもできます。
 
 ```typescript
-{
-  key: 'price',
-  filter: {
-    /**
-     * string データ タイプの場合、この列のフィルター操作で大文字と小文字を区別するかどうかを制御します。
-     * 既定では、string タイプのフィルター操作は大文字と小文字を区別しません。
-     */
-    caseSensitive: true;
-  }
-}
+column.filterable = true;
+column.filteringCaseSensitive = true;
 ```
 
 <code-view style="height:600px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/filtering-simple" alt="Angular Grid Lite フィルタリング構成">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/filtering-simple/" alt="Angular Grid Lite フィルタリング構成">
 </code-view>
 
 ## フィルター モデル
@@ -144,7 +146,7 @@ grid.addEventListener('filtered', (event: CustomEvent<GridLiteFilteredEvent<T>>)
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/filtering-events" alt="Angular Grid Lite フィルタリング構成イベント">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/filtering-events/" alt="Angular Grid Lite フィルタリング構成イベント">
 </code-view>
 
 ## リモート フィルター操作
@@ -180,7 +182,7 @@ grid.dataPipelineConfiguration = { filter: (params: DataPipelineParams<T>) => T[
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/filtering-pipeline" alt="Angular Grid Lite フィルタリング リモート構成">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/filtering-pipeline/" alt="Angular Grid Lite フィルタリング リモート構成">
 </code-view>
 
 <!-- TODO ## API References

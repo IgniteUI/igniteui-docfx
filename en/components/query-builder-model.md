@@ -16,7 +16,7 @@ This Angular Query Builder example demonstrates how the [`IgxQueryBuilderCompone
 <code-view style="height:700px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-request-sample" >
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-request-sample/" >
 </code-view>
 
 ## Query Builder Model
@@ -226,7 +226,7 @@ Now we can set the `expressionsTree` property of the `IgxQueryBuilderComponent` 
 <code-view style="height:700px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-sql-sample" >
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-sql-sample/" >
 </code-view>
 
 ## API References

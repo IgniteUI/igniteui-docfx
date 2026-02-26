@@ -12,7 +12,7 @@ _language: kr
 
 <code-view style="height:520px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
-           iframe-src="{environment:lobDemosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing" >
+           iframe-src="{environment:lobDemosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing/" >
 </code-view>
 
 <div class="divider--half"></div>

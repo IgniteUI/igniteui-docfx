@@ -15,7 +15,7 @@ The following Ignite UI for Angular Tile Manager Example shows the component in 
 
 <code-view style="height:752px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tile-manager-sample" alt="Angular Tile Manager Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/tile-manager-sample/" alt="Angular Tile Manager Example">
 </code-view>
 <div class="divider--half"></div>
 

@@ -33,7 +33,7 @@ Ignite UI for Angular @@igComponent에서 **RowDrag**는 루트 `@@igSelector` �
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-row-drag-to-grid" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-row-drag-to-grid/" >
 </code-view>
 
 }
@@ -42,7 +42,7 @@ Ignite UI for Angular @@igComponent에서 **RowDrag**는 루트 `@@igSelector` �
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-drag" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-drag/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -52,7 +52,7 @@ Ignite UI for Angular @@igComponent에서 **RowDrag**는 루트 `@@igSelector` �
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-drag" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-drag/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -269,7 +269,7 @@ enum DragIcon {
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-row-drag-to-grid" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-row-drag-to-grid/" >
 </code-view>
 
 
@@ -277,7 +277,7 @@ The following sample demonstrates how to configure row reordering in the grid. H
 
 <code-view style="height:830px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-row-reorder" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-row-reorder/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -287,7 +287,7 @@ The following sample demonstrates how to configure row reordering in the grid. H
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-drag" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-drag/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -296,7 +296,7 @@ The following sample demonstrates how to configure row reordering in the tree gr
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-reordering" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-row-reordering/" >
 </code-view>
 
 <div class="divider--half"></div> 
@@ -306,7 +306,7 @@ The following sample demonstrates how to configure row reordering in the tree gr
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-drag" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-drag/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -316,7 +316,7 @@ Notice that we also have row selection enabled and we preserve the selection whe
 
 <code-view style="height:560px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-row-reorder" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-row-reorder/" >
 </code-view>
 
 <div class="divider--half"></div> 

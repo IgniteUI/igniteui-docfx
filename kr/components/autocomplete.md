@@ -244,7 +244,7 @@ For the purpose of the sample there is a delay in the data loading, in order to 
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
 * [IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [IgxDropDownComponent](drop-down.md)

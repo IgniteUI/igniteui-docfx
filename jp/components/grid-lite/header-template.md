@@ -1,6 +1,6 @@
 ---
 title: Angular Grid Lite ヘッダー テンプレート | Ignite UI for Angular | MIT ライセンス
-_description: カスタム Grid Lite 列ヘッダー レンダラーを構成およびカスタマイズします。オープンソースの Angular Grid Lite を使用してアプリケーションを構築できます。今すぐお試しください。
+_description: カスタム Grid Lite 列ヘッダー レンダラーを構成およびカスタマイズします。オープン ソースの Angular Grid Lite を使用してアプリケーションを構築できます。今すぐお試しください。
 _keywords: ヘッダー テンプレート, {Platform}, {ComponentKeywords}, {ProductName}, インフラジスティックス
 _license: MIT
 mentionedTypes: [{ComponentApiMembers}]
@@ -10,21 +10,18 @@ _language: ja
 
 # 列ヘッダーのカスタマイズ
 
-セル テンプレートと同様に、列ヘッダーも目的のユース ケースに合わせてカスタマイズできます。**`headerText`** プロパティを通じてテキスト ラベルを渡したり、本格的なカスタム テンプレートを提供したりできます。
+セル テンプレートと同様に、列ヘッダーも目的のユース ケースに合わせてカスタマイズできます。`header`プロパティを通じてテキスト ラベルを渡したり、本格的なカスタム テンプレートを提供したりできます。
 
 ## ヘッダー テキストによるカスタマイズ
 
-デフォルトでは、列はラベル テキストに **`key`** 構成プロパティを使用します。ラベルをカスタマイズするには、**`headerText`** プロパティをより人間に読みやすい形式に設定します。
+デフォルトでは、列はラベル テキストに `field` プロパティを使用します。ラベルをカスタマイズするには、`header` プロパティをより人間に読みやすい形式に設定します。
 
-```typescript
-{
-  key: 'price',
-  headerText: 'Price per item'
-}
+```html
+<igc-grid-lite-column field="price" header="Price per item"></igc-grid-lite-column>
 ```
 
 >[!NOTE]
->**`headerTemplate`** が指定されている場合、**`headerText`** は無視されます。
+>`headerTemplate` が指定されている場合、`header` は無視されます。
 
 ## ヘッダー テンプレートによるカスタマイズ
 
@@ -33,15 +30,20 @@ _language: ja
 ```typescript
 import { html } from 'lit';
 
-{
-  key: 'rating',
-  headerTemplate: () => html`<h3>⭐ Rating ⭐</h3>`,
+protected headerTemplate(_params: IgcHeaderContext<T>) {
+    return html`<h3>⭐ Rating ⭐</h3>`;
 }
+```
+
+```html
+<igc-grid-lite>
+    <igc-grid-lite-column field="rating" [headerTemplate]="headerTemplate"></igc-grid-lite-column>
+</igc-grid-lite>
 ```
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/column-config-headers" alt="Angular Grid Lite 列構成ヘッダー">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/column-config-headers/" alt="Angular Grid Lite 列構成ヘッダー">
 </code-view>
 
 <!-- TODO ## API References

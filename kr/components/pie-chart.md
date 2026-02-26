@@ -145,7 +145,7 @@ var data = [
 
 <code-view style="height: 350px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-explosion"  >
+           iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart-explosion/"  >
 </code-view>
 
 <div class="divider--half"></div>

@@ -358,7 +358,7 @@ export class ExampleComponent {
 - [IgxOverlayService]({environment:angularApiUrl}/classes/igxoverlayservice.html)
 - [IgxOverlay スタイル]({environment:sassApiUrl}/themes#function-overlay-theme)
 
-### その他のリソース
+## その他のリソース
 
 - [配置方法](overlay-position.md)
 - [スクロール方法](overlay-scroll.md)

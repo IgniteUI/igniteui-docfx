@@ -163,7 +163,7 @@ this.csvExportService.export(this.igxGrid1, new IgxCsvExporterOptions('ExportedD
 
 [**IgxGrid**](grid/grid.md) からのデータのエクスポートで、エクスポート処理は行フィルタリングおよび列の非表示などの機能に応じてグリッドで表示されるデータのみをエクスポートします。[`IgxCsvExporterOptions`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html) オブジェクトのプロパティを設定し、エクスポーター サービスを構成してフィルターした行または非表示の列を含むことができます。このプロパティは以下の表で説明します。
 
-## API まとめ
+## API リファレンス
 
 以下は、CSV Exporter サービスのその他の API です。
 

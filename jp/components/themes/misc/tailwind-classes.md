@@ -114,7 +114,7 @@ Tailwind が提供するすべてのシャドウ関連のユーティリティ �
 
 <code-view style="height: 610px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/theming/tailwind-sample" alt="Tailwind サンプル">
+           iframe-src="{environment:demosBaseUrl}/theming/tailwind-sample/" alt="Tailwind サンプル">
 </code-view>
 
 >[!NOTE]

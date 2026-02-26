@@ -15,7 +15,7 @@ In this angular grid example you can see how users can visualize hierarchical se
 
 <code-view style="height:520px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing" alt="Angular Hierarchical Data Grid Example">
+           iframe-src="{environment:lobDemosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing/" alt="Angular Hierarchical Data Grid Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -431,6 +431,7 @@ platformBrowserDynamic()
 - [Column Pinning](column-pinning.md)
 - [Column Resizing](column-resizing.md)
 - [Selection](selection.md)
+- [AI-Assisted Development](../general/ai-assisted-development.md) — Agent Skills for grids, data operations, and theming
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

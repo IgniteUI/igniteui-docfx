@@ -9,7 +9,7 @@ _language: ja
 
 [`Ignite UI for Angular`](https://github.com/IgniteUI/igniteui-angular) は、マテリアルベース UI ウィジェット、コンポーネント & Figma UI キットでインフラジスティックス Angular のディレクティブをサポートします。デスクトップ ブラウザー向けアプリ、高パフォーマンスな HTML5 や JavaScript アプリ、Google の Angular フレームワークを対象にしたプログレッシブ ウェブアプリ (PWA) を作成できます。
 
-Ignite UI for Angular はデュアルライセンス モデルで提供され、使用するコンポーネント、モジュール、ディレクティブ、サービスに応じて商用ライセンスまたはオープンソース ライセンスが適用されます。詳細については、[Ignite UI のライセンス](./ignite-ui-licensing.md)と[オープン ソースとプレミアム](./open-source-vs-premium.md)のトピックを参照してください。
+Ignite UI for Angular はデュアルライセンス モデルで提供され、使用するコンポーネント、モジュール、ディレクティブ、サービスに応じて商用ライセンスまたはオープン ソース ライセンスが適用されます。詳細については、[Ignite UI のライセンス](./ignite-ui-licensing.md)と[オープン ソースとプレミアム](./open-source-vs-premium.md)のトピックを参照してください。
 
 ## 前提条件
 
@@ -68,7 +68,7 @@ ng add igniteui-angular
 
 プロジェクトに追加したい Ignite UI コンポーネントとして、以下が考えられます。
 
-- Grid Lite - オープンソース
+- Grid Lite - オープン ソース
 
 [Grid Lite コンポーネント](../grid-lite/overview.md)は、MIT ライセンスで利用できる最小限の機能セットを提供し、軽量で高速なデータ表示を必要とする幅広いプロジェクトに適しています。これは、エンタープライズ グリッドの複雑さを避けつつ、高速で軽量なデータ表示を必要とする開発者向けに設計されています。商用版 `IgxGrid` と似た API を持つため、アップグレードも容易です。
 

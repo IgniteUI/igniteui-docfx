@@ -231,7 +231,7 @@ export class ComboRemoteComponent implements OnInit {
 
 コンボボックスがリモートデータにバインドされている場合、APIを介して値/選択項目を設定すると、現在のチャンクにロードされた項目のみが考慮されます。初期値を設定したい場合は、選択する前にそれらの特定の項目がロードされていることを確認してください。
 
-## API まとめ
+## API リファレンス
 
 <div class="divider--half"></div>
 

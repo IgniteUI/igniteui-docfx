@@ -21,18 +21,19 @@ The component supports changing its data source at runtime. If the new source ha
 grid.data = [...{
   /** records follow */
 }];
-
-// Update the column configuration to represent the new data.
-grid.columns = [...];
 ```
 
-If the grid has **`autoGenerate`** enabled, it will "_infer_" the new column configuration only if the old one is reset.
+```html
+<igc-grid-lite>
+    <!-- Update column configuration, add or remove columns as needed to represent the new data. -->
+    <igc-grid-lite-column field="id"></igc-grid-lite-column>
+</igc-grid-lite>
+```
+
+If the grid has `autoGenerate` enabled, it will "_infer_" the new column configuration automatically when the data changes.
 
 ```typescript
 grid.autoGenerate = true;
-
-/** Reset the previous column collection */
-grid.columns = [];
 
 /** After the new binding the grid will infer the column collection from the bound data. */
 grid.data = [];
@@ -47,7 +48,7 @@ the column collection is reset, and a new data source is bound to the grid.
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/data-binding-dynamic" alt="Angular Grid Lite Data Binding Example">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/data-binding-dynamic/" alt="Angular Grid Lite Data Binding Example">
 </code-view>
 
 <!-- TODO ## API References
