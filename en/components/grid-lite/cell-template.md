@@ -28,6 +28,12 @@ You also need to import **`IgxGridLiteCellTemplateDirective`**
 import { IgxGridLiteComponent, IgxGridLiteColumnComponent, IgxGridLiteCellTemplateDirective } from 'igniteui-angular/grids/lite';
 ```
 
+And add it to the `imports` array
+
+```typescript
+imports: [ IgxGridLiteCellTemplateDirective ]
+```
+
 ## Use as a Formatter Function
 
 For the simple scenario where some formatting is required, one can just return the formatted value. Here is an example for displaying a number value to a locale currency format:

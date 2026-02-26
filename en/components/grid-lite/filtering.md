@@ -139,9 +139,13 @@ When a filter operation is performed through the UI, the component emits a custo
 
 After the grid applies the new filter state, a **`filtered`** event is emitted. It contains the filter state for the column which was the target of the operation and it is not cancellable.
 
+```html
+<igx-grid-lite (filtering)="onFiltering($event)" (filtered)="onFiltered($event)">
+```
+
 ```typescript
-grid.addEventListener('filtering', (event: CustomEvent<GridLiteFilteringEvent<T>>) => { ... });
-grid.addEventListener('filtered', (event: CustomEvent<GridLiteFilteredEvent<T>>) => { ... });
+onFiltering(event: IgxFilteringEvent) { ... }
+onFiltered(event: IgxFilteredEvent) { ... }
 ```
 
 <code-view style="height:510px"

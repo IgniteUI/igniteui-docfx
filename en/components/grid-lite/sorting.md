@@ -168,9 +168,13 @@ When a sorting operation is performed through the UI, the component emits a cust
 
 After the grid applies the new sorting state, a `sorted` event is emitted. It contains the expression which was used in the last sort operation and it is not cancellable.
 
+```html
+<igx-grid-lite (sorting)="onSorting($event)" (sorted)="onSorted($event)">
+```
+
 ```typescript
-grid.addEventListener('sorting', (event: CustomEvent<SortingExpression<T>>) => { ... });
-grid.addEventListener('sorted', (event: CustomEvent<SortingExpression<T>>) => { ... });
+onSorting(event: IgxSortingEvent) { ... }
+onSorted(event: IgxSortedEvent) { ... }
 ```
 
 In the following sample, when you try to sort the **Name** and **Rating** columns, the operation will be cancelled. Watch the event log below to see it in action.
