@@ -352,7 +352,9 @@ $custom-theme: grid-theme(
 The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file:
 
 ```scss
-@include css-vars($custom-theme);
+:host {
+  @include tokens($custom-theme);
+}
 ```
 
 In order for the custom theme do affect only specific component, you can move all of the styles you just defined from the global styles file to the custom component's style file (including the import of the `index` file).
@@ -431,7 +433,7 @@ platformBrowserDynamic()
 - [Column Pinning](column-pinning.md)
 - [Column Resizing](column-resizing.md)
 - [Selection](selection.md)
-- [AI-Assisted Development](../general/ai-assisted-development.md) — Agent Skills for grids, data operations, and theming
+- [Ignite UI for Angular Skills](../ai/skills.md) — Agent Skills for grids, data operations, and theming
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

@@ -270,7 +270,9 @@ $splitter-theme: splitter-theme(
 The next step is to pass the custom splitter theme:
 
 ```scss
-@include css-vars($custom-splitter-theme);
+:host {
+    @include tokens($custom-splitter-theme);
+}
 ```
 
 ### Demo
@@ -325,7 +327,7 @@ igx-splitter {
 }
 ```
 
-Or you can use the universal `--igx-splitter-size` variable to target all instances:
+Or you can use the universal `--ig-splitter-size` variable to target all instances:
 
 ```html
 <div class="my-app">
@@ -335,7 +337,7 @@ Or you can use the universal `--igx-splitter-size` variable to target all instan
 
 ```scss
 .my-app {
-  --igx-splitter-size: 10px;
+  --ig-splitter-size: 10px;
 }
 ```
 

@@ -621,10 +621,10 @@ The first thing we need to do is import the `themes/index` file - this gives us 
 
 ### Include the styles
 
-In order to change the error color you can use the css variable `--igx-error-500`:
+In order to change the error color you can use the css variable `--ig-error-500`:
 
 ```scss
---igx-error-500: 34, 80%, 63%;
+--ig-error-500: 34, 80%, 63%;
 ```
 
 ### Custom Templates

@@ -338,7 +338,9 @@ Since the dialog window uses the [`IgxOverlayService`](overlay.md), in order for
 The last step is to **include** the component theme in our application.
 
 ```scss
-@include css-vars($my-dialog-theme);
+:host {
+    @include tokens($my-dialog-theme);
+}
 ```
 
 >[!NOTE]
@@ -347,7 +349,7 @@ The last step is to **include** the component theme in our application.
 ```scss
 :host {
   ::ng-deep {
-    @include css-vars($my-dialog-theme);
+    @include tokens($my-dialog-theme);
   }
 }
 ```

@@ -12,20 +12,20 @@ namespace: Infragistics.Controls
 The Grid Lite supports filtering operations on its data source. Data filtering is controlled on per-column level, allowing you to have filterable and non-filterable columns. By default, filtering on a column is disabled unless explicitly configured with the `filterable` property of the column configuration object.
 
 ```html
-<igc-grid-lite-column
+<igx-grid-lite-column
   field="price"
   filterable
-></igc-grid-lite-column>
+></igx-grid-lite-column>
 ```
 
-You can also control whether the filter operations for string columns should be case sensitive by using the `filteringCaseSensitive` property or `filtering-case-sensitive` attribute:
+You can also control whether the filter operations for string columns should be case sensitive by using the `filteringCaseSensitive` property:
 
 ```html
-<igc-grid-lite-column
+<igx-grid-lite-column
   field="name"
   filterable
-  filtering-case-sensitive
-></igc-grid-lite-column>
+  filteringCaseSensitive
+></igx-grid-lite-column>
 ```
 
 You can also set these properties programmatically:
@@ -113,16 +113,16 @@ For example here is a Lit-based sample:
 
 ```typescript
 {
-  filterState: FilterExpression<User>[] = [
+  filteringExpressions: IgxGridLiteFilteringExpression<User>[] = [
     { key: 'age', condition: 'greaterThan', searchTerm: 21 },
     /** unary condition so `searchTerm` is not required */
     { key: 'active', condition: 'true' },
   ];
-
-  render() {
-    return html`<igc-grid-lite .filterExpressions=${filterState}></igc-grid-lite>`
-  }
 }
+```
+
+```html
+<igx-grid-lite [filteringExpressions]="filteringExpressions"></igx-grid-lite>
 ```
 
 It can be used to get the current filter state of the component and do additional processing depending on another state in your application.
@@ -139,9 +139,13 @@ When a filter operation is performed through the UI, the component emits a custo
 
 After the grid applies the new filter state, a **`filtered`** event is emitted. It contains the filter state for the column which was the target of the operation and it is not cancellable.
 
+```html
+<igx-grid-lite (filtering)="onFiltering($event)" (filtered)="onFiltered($event)">
+```
+
 ```typescript
-grid.addEventListener('filtering', (event: CustomEvent<GridLiteFilteringEvent<T>>) => { ... });
-grid.addEventListener('filtered', (event: CustomEvent<GridLiteFilteredEvent<T>>) => { ... });
+onFiltering(event: IgxFilteringEvent) { ... }
+onFiltered(event: IgxFilteredEvent) { ... }
 ```
 
 <code-view style="height:510px"
