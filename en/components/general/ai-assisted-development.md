@@ -199,9 +199,9 @@ cp -r node_modules/igniteui-angular/skills/igniteui-angular-theming .agents/skil
 **Windows (PowerShell)**
 
 ```powershell
-Copy-Item -Recurse node_modules\igniteui-angular\skills\igniteui-angular-components .agents\skills\
-Copy-Item -Recurse node_modules\igniteui-angular\skills\igniteui-angular-grids .agents\skills\
-Copy-Item -Recurse node_modules\igniteui-angular\skills\igniteui-angular-theming .agents\skills\
+Copy-Item -Recurse node_modules\igniteui-angular\skills\igniteui-angular-components .agents\skills\igniteui-angular-components
+Copy-Item -Recurse node_modules\igniteui-angular\skills\igniteui-angular-grids .agents\skills\igniteui-angular-grids
+Copy-Item -Recurse node_modules\igniteui-angular\skills\igniteui-angular-theming .agents\skills\igniteui-angular-theming
 ```
 
 **Windows (Command Prompt)**
