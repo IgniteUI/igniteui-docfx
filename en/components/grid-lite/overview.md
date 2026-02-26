@@ -29,7 +29,6 @@ Angular <a href="https://custom-elements-everywhere.com/#angular" target="_blank
 ## Installation and Setup
 To use Grid Lite in your application you can import it directly from `igniteui-angular` through this entry point `igniteui-angular/grids/lite`. But you also need to install the `igniteui-grid-lite` package that powers the UI. IgxGridLiteComponent provides Angular bindings (events, templates, DI, change detection, pipes), while the visual grid lite UI is rendered by `igniteui-grid-lite`. Installing both ensures the grid lite behaves natively in Angular while leveraging the full `igniteui-grid-lite` UI.
 
-To add Grid Lite to your Angular application, install the package from npm.
 ```shell
 npm install igniteui-grid-lite
 ```
