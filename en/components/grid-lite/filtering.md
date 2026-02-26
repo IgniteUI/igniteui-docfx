@@ -120,6 +120,7 @@ For example here is a Lit-based sample:
   ];
 }
 ```
+
 ```html
 <igx-grid-lite [filteringExpressions]="filteringExpressions"></igx-grid-lite>
 ```
