@@ -1,9 +1,10 @@
 - name: AI-Assisted Development
-  href: general/ai-assisted-development.md
-  new: true
   header: true
+- name: Ignite UI for Angular Skills
+  href: ai/skills.md
+  new: true
 - name: Theming MCP
-  href: themes/mcp.md
+  href: ai/theming-mcp.md
   new: true
 - name: General
   header: true

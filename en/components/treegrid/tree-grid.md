@@ -408,7 +408,7 @@ platformBrowserDynamic()
 - [Grid Sizing](sizing.md)
 - [Data Grid](../grid/grid.md)
 - [Row Editing](row-editing.md)
-- [AI-Assisted Development](../general/ai-assisted-development.md) — Agent Skills for grids, data operations, and theming
+- [Ignite UI for Angular Skills](../ai/skills.md) — Agent Skills for grids, data operations, and theming
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
