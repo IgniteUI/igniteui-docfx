@@ -1261,11 +1261,10 @@
 - name: Query Builder
   href: query-builder.md
   new: false
-  updated: true
   items:
     - name: Query Builder モデルの使用
       href: query-builder-model.md
-      new: true
+      new: false
 - name: Radio & Radio Group
   href: radio-button.md
   new: false
