@@ -12,20 +12,20 @@ namespace: Infragistics.Controls
 The Grid Lite supports sorting operations on its data source. Data sorting is controlled on per-column level, allowing you to have sortable and non-sortable columns, while the grid itself controls certain sort behaviors. By default, sorting on a column is disabled unless explicitly configured with the `sortable` property of the column.
 
 ```html
-<igc-grid-lite-column
+<igx-grid-lite-column
   field="price"
   sortable
-></igc-grid-lite-column>
+></igx-grid-lite-column>
 ```
 
-You can also control whether the sort operations for string columns should be case sensitive by using the `sortingCaseSensitive` property or `sorting-case-sensitive` attribute.
+You can also control whether the sort operations for string columns should be case sensitive by using the `sortingCaseSensitive` property.
 
 ```html
-<igc-grid-lite-column 
+<igx-grid-lite-column 
   field="name" 
   sortable
-  sorting-case-sensitive
-></igc-grid-lite-column>
+  sortingCaseSensitive
+></igx-grid-lite-column>
 ```
 
 For custom comparison logic, set the `sortConfiguration` property with a `comparer` function:
@@ -144,14 +144,14 @@ sort state in the grid, but the most useful property is the ability to set initi
 For example:
 
 ```typescript
-protected sortState: SortingExpression<Products>[] = [
+protected sortState: IgxGridLiteSortingExpression<Products>[] = [
     { key: 'price', direction: 'descending' },
     { key: 'name', direction: 'ascending', caseSensitive: true },
 ];
 ```
 
 ```html
-<igc-grid-lite [sortingExpressions]="sortState"></igc-grid-lite>
+<igx-grid-lite [sortingExpressions]="sortState"></igx-grid-lite>
 ```
 
 It can be used to get the current sort state of the component and do additional processing depending on another state in your application.

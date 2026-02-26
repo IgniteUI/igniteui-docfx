@@ -40,22 +40,10 @@ Before starting the application, make sure to import and pass the custom element
 // app.component.ts
 
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { IgcGridLite } from 'igniteui-grid-lite';
-
-IgcGridLite.register();
 
 @Component({
   ...
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
-  template: `
-    <main>
-      <igc-grid-lite [data]="products">
-        <igc-grid-lite-column field="id" header="ID" data-type="number"></igc-grid-lite-column>
-        <igc-grid-lite-column field="name" header="Name"></igc-grid-lite-column>
-        <!-- Additional columns -->
-      </igc-grid-lite>
-    </main>
-  `
 })
 export class AppComponent {
   products: Products[] = [...];
