@@ -112,8 +112,6 @@ Alternatively, one can use a general Agent Skills config so your Agent can easil
 
 3. The Agent will now discover these skills and load the relevant one automatically based on the context of your request.
 
-> **Tip for VS Code:** VS Code searches for skills in `.github/skills/`, `.claude/skills/`, and `.agents/skills/` by default. You can configure additional locations using the `chat.agentSkillsLocations` setting.
-
 > **Tip:** VS Code searches for skills in `.github/skills/`, `.claude/skills/`, and `.agents/skills/` by default. You can configure additional locations using the `chat.agentSkillsLocations` setting.
 
 ---
@@ -183,7 +181,7 @@ cp -r node_modules/igniteui-angular/skills/. .agents/skills/
 
 ```powershell
 # Windows (PowerShell)
-Copy-Item -Recurse node_modules\igniteui-angular\skills\* .agents\skills\
+Copy-Item -Recurse node_modules\igniteui-angular\skills .agents\skills
 ```
 
 Or copy individual skill directories as needed:
