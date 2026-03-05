@@ -832,7 +832,9 @@ $my-list-theme: list-theme(
 最後にコンポーネントのテーマを**含めます**。
 
 ```scss
-@include css-vars($my-list-theme);
+:host {
+  @include tokens($my-list-theme);
+}
 ```
 
 以下は上記コードの結果です。

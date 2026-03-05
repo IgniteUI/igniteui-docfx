@@ -348,21 +348,18 @@ $custom-icon-button: outlined-icon-button-theme(
 >[!NOTE]
 >上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/palettes#function-palette) および [`color`]({environment:sassApiUrl}/palettes#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](./themes/sass/palettes.md)のトピックをご覧ください。
 
-最後に、`css-vars` ミックスインを使用して新しいコンポーネント テーマを**含めます**。
+最後に、`tokens` ミックスインを使用して新しいコンポーネント テーマを**含めます**。
 
 ```scss
-@include css-vars($custom-query-builder);
-
 :host {
-  ::ng-deep {
-    @include css-vars($custom-input-group);
-    @include css-vars($custom-chip);
-    @include css-vars($custom-icon-button);
+    @include tokens($custom-query-builder);
+    @include tokens($custom-input-group);
+    @include tokens($custom-chip);
+    @include tokens($custom-icon-button);
 
     .igx-filter-tree__buttons {
-      @include css-vars($custom-button);
+      @include tokens($custom-button);
     }
-  }
 }
 ```
 

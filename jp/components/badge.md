@@ -347,10 +347,12 @@ $custom-badge-theme: badge-theme(
 );
 ```
 
-新しいテーマを含めるには、`css-vars` ミックスインを使用します。
+新しいテーマを含めるには、`tokens` ミックスインを使用します。
 
 ```scss
-@include css-vars($custom-badge-theme);
+:host {
+  @include tokens($custom-badge-theme);
+}
 ```
 
 ### デモ

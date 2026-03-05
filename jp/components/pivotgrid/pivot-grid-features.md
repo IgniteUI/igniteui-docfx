@@ -188,7 +188,7 @@ public pivotUI: IPivotUISettings = { rowLayout: PivotRowLayoutType.Horizontal, h
 
 ### キーボード ナビゲーション
 
-`IgxPivotGrid` のキーボード ナビゲーションは、`IgxGrid` のキーボード ナビゲーションと同様に機能します。ピボット グリッドは、`rows`、`columns`、`values` の 3 つの領域に分割されます。`rows` と `columns` の領域はナビゲーションの目的でヘッダーと見なされ、`values` の領域は本文です。
+`IgxPivotGrid` のキーボード ナビゲーションは、`IgxGrid` のキーボード ナビゲーションと同様に機能します。ピボット グリッドは、`rows`、`columns`、`values` の 3 つの領域に分割されます。`rows` と `columns` の領域はナビゲーションの目的でヘッダーと見なされ、`values` の領域は本体です。
 キーボードの矢印を使用すると、現在の領域内でのみアクティブな要素をナビゲートできます。
 
 ### ディメンションのドラッグアンドドロップ

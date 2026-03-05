@@ -294,7 +294,9 @@ $custom-panel-theme: expansion-panel-theme(
 最後にコンポーネントのテーマを含めます。
 
 ```scss
-@include css-vars($custom-panel-theme);
+:host {
+    @include tokens($custom-panel-theme);
+}
 ```
 
 ### デモ

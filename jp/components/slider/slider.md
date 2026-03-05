@@ -239,7 +239,6 @@ export class SampleComponent {
 >[!NOTE]
 > RANGE タイプのスライダーを使用する場合、`ngModel` へのバインディングはスライダーからモデルを更新する方向でのみ動作します。両方の値に双方向バインディングを使用するには、`lowerValue` と `upperValue` バインディングを利用できます。
 
-
 最大値および最小値に近い値が適切でない場合があります。[`minValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#minValue) と [`maxValue`]({environment:angularApiUrl}/classes/igxslidercomponent.html#maxValue) の設定以外に、ユーザー選択を更に制限するための範囲も設定できます。
 これは、[`lowerBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#lowerBound) および [`upperBound`]({environment:angularApiUrl}/classes/igxslidercomponent.html#upperBound) プロパティで設定します。この設定により、0 ～ 100 および 900 ～ 1000 の範囲でつまみを移動できなくなります。
 
@@ -424,9 +423,10 @@ public type = SliderType.RANGE;
            iframe-src="{environment:demosBaseUrl}/interactions/slider-secondary-ticks-mirror/" >
 </code-view>
 
+### Orientation
 
 > [!NOTE]
-> [`ticksOrientaion`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksOrientaion) が **Top** または **Mirror** に設定され、**目盛りラベル**が表示されている場合、**つまみラベル**は意図的に非表示になります。このようにして、ユーザー エクスペリエンスの低下と 2 つのラベルの重複を防止できます。
+> [`ticksOrientation`]({environment:angularApiUrl}/classes/igxslidercomponent.html#ticksOrientaion) が **Top** または **Mirror** に設定され、**目盛りラベル**が表示されている場合、**つまみラベル**は意図的に非表示になります。このようにして、ユーザー エクスペリエンスの低下と 2 つのラベルの重複を防止できます。
 
 ### ラベル ビューを含むスライダー目盛り
 
@@ -475,6 +475,7 @@ public type = SliderType.RANGE;
 > [`context`]({environment:angularApiUrl}/classes/igxtickscomponent.html#context) は各目盛りごとに実行されます。
 
 つまり、次への参照を提供します。
+
 - 対応する各目盛りの**値**
 - 目盛りが**プライマリ**の場合
 - **目盛り**インデックス
@@ -704,7 +705,9 @@ $custom-slider-theme: slider-theme(
 最後に新しく作成されたコンポーネントのテーマをアプリケーションに含めます。
 
 ```scss
-@include css-vars($custom-slider-theme);
+:host {
+  @include tokens($custom-slider-theme);
+}
 ```
 
 ### デモ

@@ -6,6 +6,7 @@ _keywords: angular sort, ignite ui for angular, infragistics
 _license: commercial
 _language: ja
 ---
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
@@ -15,6 +16,7 @@ _keywords: angular sort, ignite ui for angular, infragistics
 _license: commercial
 _language: ja
 ---
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
@@ -24,6 +26,7 @@ _keywords: angular sort, ignite ui for angular, infragistics
 _license: commercial
 _language: ja
 ---
+
 }
 
 # Angular @@igComponent のソート
@@ -226,6 +229,7 @@ public ngOnInit(): void {
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {
+
 ## リモート ソート
 
 @@igComponent はリモート ソートをサポートします。詳細については、[`@@igComponent リモート データ操作`](remote-data-operations.md)で説明されています。
@@ -289,10 +293,13 @@ $custom-theme: grid-theme(
 最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。
 
 ```scss
-@include css-vars($custom-theme);
+:host {
+  @include tokens($custom-theme);
+}
 ```
 
 @@if (igxName === 'IgxGrid') {
+
 ### デモ
 
 
@@ -304,6 +311,7 @@ $custom-theme: grid-theme(
 
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ### デモ
 
 
@@ -315,6 +323,7 @@ $custom-theme: grid-theme(
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ### デモ
 
 

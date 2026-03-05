@@ -17,28 +17,42 @@ _language: ja
 デフォルトでは、列はラベル テキストに `field` プロパティを使用します。ラベルをカスタマイズするには、`header` プロパティをより人間に読みやすい形式に設定します。
 
 ```html
-<igc-grid-lite-column field="price" header="Price per item"></igc-grid-lite-column>
+<igx-grid-lite-column field="price" header="Price per item"></igx-grid-lite-column>
 ```
 
 >[!NOTE]
->`headerTemplate` が指定されている場合、`header` は無視されます。
-
+>ヘッダー テンプレートが提供されている場合、`header` は無視されます。
 ## ヘッダー テンプレートによるカスタマイズ
 
 セル テンプレートと同様に、カスタム テンプレート レンダラーを渡して、列ヘッダー内に独自の DOM を作成できます。
 
 ```typescript
-import { html } from 'lit';
+// そのためのディレクティブをインポートします -> IgxGridLiteHeaderTemplateDirective
+import { IgxGridLiteComponent, IgxGridLiteColumnComponent, IgxGridLiteCellTemplateDirective, IgxGridLiteHeaderTemplateDirective } from 'igniteui-angular/grids/lite';
 
-protected headerTemplate(_params: IgcHeaderContext<T>) {
-    return html`<h3>⭐ Rating ⭐</h3>`;
-}
+// そのためのディレクティブをインポートします
+ imports: [
+    CommonModule,
+    IgxGridLiteComponent,
+    IgxGridLiteColumnComponent,
+    IgxGridLiteCellTemplateDirective, // セルをテンプレート化するため
+    IgxGridLiteHeaderTemplateDirective // ヘッダーをテンプレート化するため
+],
 ```
 
 ```html
-<igc-grid-lite>
-    <igc-grid-lite-column field="rating" [headerTemplate]="headerTemplate"></igc-grid-lite-column>
-</igc-grid-lite>
+<igx-grid-lite-column field="rating" dataType="number">
+    <!-- ヘッダーをテンプレート化するための igxGridLiteHeader ディレクティブ -->
+    <ng-template igxGridLiteHeader let-value>
+        <h3>⭐ Rating ⭐</h3>
+    </ng-template>
+
+    <!-- セルをテンプレート化するための igxGridLiteCell ディレクティブ -->
+    <ng-template igxGridLiteCell let-value>
+        <igc-rating [value]="value" readonly step="0.01" min="0" max="5">
+        </igc-rating>
+    </ng-template>
+</igx-grid-lite-column>
 ```
 
 <code-view style="height:510px"
