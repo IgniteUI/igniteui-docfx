@@ -736,7 +736,9 @@ $dark-tabs: tabs-theme(
 最後にコンポーネントのテーマを**含めます**。
 
 ```scss
-@include css-vars($dark-tabs);
+:host {
+  @include tokens($dark-tabs);
+}
 ```
 
 ### デモ

@@ -6,6 +6,7 @@ _keywords: 高度なフィルター, igniteui for angular, インフラジステ
 _license: commercial
 _language: ja
 ---
+
 }
 @@if(igxName !== 'IgxGrid'){
 ---
@@ -15,6 +16,7 @@ _keywords: 高度なフィルター, igniteui for angular, インフラジステ
 _license: commercial
 _language: ja
 ---
+
 }
 
 
@@ -285,7 +287,7 @@ $custom-query-builder: query-builder-theme(
 );
 
 igx-advanced-filtering-dialog {
-  @include css-vars($custom-query-builder);
+  @include tokens($custom-query-builder);
 }
 ```
 
@@ -308,7 +310,7 @@ $custom-query-builder: query-builder-theme(
 :host {
   ::ng-deep {
     igx-advanced-filtering-dialog {
-      @include css-vars($custom-query-builder);
+      @include tokens($custom-query-builder);
     }
   }
 }

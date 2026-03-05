@@ -25,10 +25,10 @@ grid.data = [...{
 ```
 
 ```html
-<igc-grid-lite>
+<igx-grid-lite>
     <!-- 新しいデータを表すために、必要に応じて列の構成を更新し、列を追加または削除します。 -->
-    <igc-grid-lite-column field="id"></igc-grid-lite-column>
-</igc-grid-lite>
+    <igx-grid-lite-column field="id"></igx-grid-lite-column>
+</igx-grid-lite>
 ```
 
 グリッドで `autoGenerate` が有効になっている場合、データが変更されると新しい列の構成が自動的に「推測されます」。
@@ -38,6 +38,15 @@ grid.autoGenerate = true;
 
 /** 新しいバインディング後、グリッドはバインドされたデータから列コレクションを推論します。 */
 grid.data = [];
+```
+
+または、グリッドで `@ViewChild` を使用する代わりに、html でそれぞれのプロパティを設定します。
+
+```html
+  <igx-grid-lite
+    [autoGenerate]="true"
+    [data]="data">
+  </igx-grid-lite>
 ```
 
 >[!NOTE]

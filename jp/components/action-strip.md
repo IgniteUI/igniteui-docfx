@@ -187,7 +187,9 @@ $custom-strip: action-strip-theme(
 最後に新しく作成されたコンポーネントのテーマをアプリケーションに含めます。
 
 ```scss
-@include css-vars($custom-strip);
+:host {
+  @include tokens($custom-strip);
+}
 ```
 
 <code-view style="height: 400px;"

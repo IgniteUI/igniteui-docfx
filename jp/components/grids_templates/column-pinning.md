@@ -6,6 +6,7 @@ _keywords: lock column, ignite ui for angular, infragistics
 _license: commercial
 _language: ja
 ---
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
@@ -15,6 +16,7 @@ _keywords: lock column, ignite ui for angular, infragistics
 _license: commercial
 _language: ja
 ---
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
@@ -24,6 +26,7 @@ _keywords: lock column, ignite ui for angular, infragistics
 _license: commercial
 _language: ja
 ---
+
 }
 
 # Angular @@igComponent 列ピン固定
@@ -401,9 +404,10 @@ public toggleColumn(col: ColumnType) {
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {
+
 ## スタイル設定
 
-igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md) でスタイルを設定できます。[`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。
+igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md) でスタイルを設定できます。グリッドの[テーマ]({environment:sassApiUrl}/themes#function-grid-theme)は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。
 
 以下の手順では、グリッドのピン固定スタイルをカスタマイズする手順を実行しています。
 
@@ -439,7 +443,9 @@ $custom-theme: grid-theme(
 テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。
 
 ```scss
-@include css-vars($custom-theme);
+:host {
+  @include tokens($custom-theme);
+}
 ```
 
 ### デモ

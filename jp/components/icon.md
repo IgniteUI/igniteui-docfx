@@ -235,7 +235,9 @@ $custom-icon-theme: icon-theme(
 最後には、カスタム アイコン テーマをアプリケーションに渡します。
 
 ```scss
-@include css-vars($custom-icon-theme);
+:host {
+  @include tokens($custom-icon-theme);
+}
 ```
 
 ### デモ
@@ -290,7 +292,7 @@ igx-icon {
 }
 ```
 
-または、ユニバーサル変数 `--igx-icon-size` を使用して、すべてのインスタンスをターゲットにすることもできます。
+または、ユニバーサル変数 `--ig-icon-size` を使用して、すべてのインスタンスをターゲットにすることもできます。
 
 ```html
 <div class="my-app">
@@ -300,7 +302,7 @@ igx-icon {
 
 ```scss
 .my-app {
-  --igx-icon-size: 50px;
+  --ig-icon-size: 50px;
 }
 ```
 

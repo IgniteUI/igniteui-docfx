@@ -6,6 +6,7 @@ _keywords: angular ドラッグ コンポーネント, マテリアル コンポ
 _license: commercial
 _language: ja
 ---
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
@@ -15,6 +16,7 @@ _keywords: angular ドラッグ コンポーネント, マテリアル コンポ
 _license: commercial
 _language: ja
 ---
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
@@ -24,6 +26,7 @@ _keywords: angular ドラッグ コンポーネント, マテリアル コンポ
 _license: commercial
 _language: ja
 ---
+
 }
 
 # Angular @@igComponent の行ドラッグ
@@ -227,6 +230,7 @@ export class @@igxNameRowDragComponent {
 ```
 
 次のように `ViewChild` デコレータを使用して各グリッドに refenrece を定義し、ドロップを処理します。
+
 - 削除される行のデータを含む行を `targetGrid` に追加します。
 - `sourceGrid` からドラッグした行を削除します。
 }
@@ -236,7 +240,7 @@ export class @@igxNameRowDragComponent {
 
 #### ドラッグ ゴーストのテンプレート化
 
-ドラッグゴーストは、`@@igSelector` の本文内の `<ng-template>` に適用される `IgxRowDragGhost` ディレクティブを使用してテンプレート化できます。
+ドラッグゴーストは、`@@igSelector` の本体内の `<ng-template>` に適用される `IgxRowDragGhost` ディレクティブを使用してテンプレート化できます。
 
 ```html
 <@@igSelector>
@@ -306,7 +310,7 @@ export class @@igxNameRowDragComponent {
 ### ドラッグ アイコンのテンプレート化
 
 ドラッグ ハンドル アイコンは、グリッドの [`dragIndicatorIconTemplate`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dragIndicatorIconTemplate) を使用してテンプレート化できます。作成している例で、アイコンをデフォルトのもの (`drag_indicator`) から `drag_handle` に変更します。
-`igxDragIndicatorIcon` を使用して `@@igSelector` の本文内にテンプレートを渡して変更できます。
+`igxDragIndicatorIcon` を使用して `@@igSelector` の本体内にテンプレートを渡して変更できます。
 
 ```html
 <@@igSelector>
@@ -328,7 +332,8 @@ enum DragIcon {
 ```
 
 @@if (igxName === 'IgxTreeGrid' || igxName === 'IgxHierarchicalGrid') {
-### ドロップ エリアのスタイル
+
+### ドロップ エリアのスタイル設定
 
 ドロップ ハンドラが正しく設定されたら、次にドロップ領域をスタイル設定します。
 
@@ -809,7 +814,6 @@ private changeHighlightedElement(newElement: HTMLElement) {
   }
 }
 ```
-
 
 
 <div class="divider--half"></div>

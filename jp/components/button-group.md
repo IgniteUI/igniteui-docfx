@@ -426,7 +426,9 @@ $custom-button-group: button-group-theme(
 最後にコンポーネントのテーマを含めます。
 
 ```scss
-@include css-vars($custom-button-group);
+:host {
+  @include tokens($custom-button-group);
+}
 ```
 
 ### デモ

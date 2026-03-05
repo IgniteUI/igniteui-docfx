@@ -337,7 +337,9 @@ $dark-snackbar: snackbar-theme(
 最後にコンポーネントのテーマをアプリケーションに**含めます**。
 
 ```scss
-@include css-vars($dark-snackbar);
+:host {
+    @include tokens($dark-snackbar);
+}
 ```
 
 ### デモ

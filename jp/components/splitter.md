@@ -270,7 +270,9 @@ $splitter-theme: splitter-theme(
 次に Splitter のカスタム テーマを渡します。
 
 ```scss
-@include css-vars($custom-splitter-theme);
+:host {
+    @include tokens($custom-splitter-theme);
+}
 ```
 
 ### デモ
@@ -325,7 +327,7 @@ igx-splitter {
 }
 ```
 
-または、ユニバーサル変数 `--igx-splitter-size` を使用して、すべてのインスタンスをターゲットにすることもできます。
+または、ユニバーサル変数 `--ig-splitter-size` を使用して、すべてのインスタンスをターゲットにすることもできます。
 
 ```html
 <div class="my-app">
@@ -335,7 +337,7 @@ igx-splitter {
 
 ```scss
 .my-app {
-  --igx-splitter-size: 10px;
+  --ig-splitter-size: 10px;
 }
 ```
 

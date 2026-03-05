@@ -6,6 +6,7 @@ _keywords: column hiding, ignite ui for angular, infragistics, 列非表示
 _license: commercial
 _language: ja
 ---
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
@@ -15,6 +16,7 @@ _keywords: column hiding, ignite ui for angular, infragistics, 列非表示
 _license: commercial
 _language: ja
 ---
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
@@ -24,6 +26,7 @@ _keywords: column hiding, ignite ui for angular, infragistics, 列非表示
 _license: commercial
 _language: ja
 ---
+
 }
 
 # Angular @@igComponent の列非表示
@@ -513,7 +516,7 @@ $custom-column-actions-theme: column-actions-theme(
 ご覧のように `column-actions-theme` は列操作コンテナーの色のみを制御しますが、ボタン、チェックボックス、内部の入力グループには影響しません。ボタンのスタイルも設定したい場合、新しいボタン テーマを作成します。
 
 ```scss
-$custom-button: button-theme(
+$custom-button: flat-button-theme(
   $foreground: #292826, 
   $disabled-foreground: rgba(255, 255, 255, .54)
 );
@@ -527,26 +530,28 @@ $custom-button: button-theme(
 最後にそれぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。
 
 ```scss
-@include css-vars($custom-column-actions-theme);
-
-.igx-column-actions {
-  @include css-vars($custom-button);
+:host {
+  @include tokens($custom-column-actions-theme);
+  
+  .igx-column-actions {
+    @include tokens($custom-button);
+  }
 }
 ```
 
 >[!NOTE]
->作成した **button-theme** を `.igx-column-actions` 内に含めて、列を非表示にするボタンのみにスタイルを設定します。 そうでない場合は、グリッド内の他のボタンも影響を受けます。
+>作成した **flat-button-theme** を `.igx-column-actions` 内に含めて、列を非表示にするボタンのみにスタイルを設定します。 そうでない場合は、グリッド内の他のボタンも影響を受けます。
 
 >[!NOTE]
 >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、列アクション コンポーネント内のコンポーネント (ボタン、チェックボックスなど) に対して `::ng-deep` を使用してこのカプセル化を`解除する`必要があります。
 
 ```scss
-@include css-vars($custom-column-actions-theme);
-
 :host {
+  @include tokens($custom-column-actions-theme);
+
   ::ng-deep {
     .igx-column-actions {
-      @include css-vars($custom-button);
+      @include tokens($custom-button);
     }
   }
 }
