@@ -345,6 +345,7 @@ public data = [
 
 - [Angular ピボット グリッド機能](pivot-grid-features.md)
 - [Angular ピボット グリッド カスタム集計](pivot-grid-custom.md)
+- [Ignite UI for Angular スキル](../ai/skills.md) - グリッド、データ操作、テーマ設定向けのエージェントのスキル
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

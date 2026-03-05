@@ -205,7 +205,9 @@ $my-calendar-theme: calendar-theme(
 次にコンポーネントのテーマをアプリケーションに**含めます**。
 
 ```scss
-@include css-vars($my-calendar-theme);
+:host {
+  @include tokens($my-calendar-theme);
+}
 ```
 
 すべて設定できると、結果は以下のようになります。

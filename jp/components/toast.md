@@ -237,7 +237,9 @@ $custom-toast-theme: toast-theme(
 最後に Toast のカスタム テーマを設定します。
 
 ```scss
-@include css-vars($custom-toast-theme);
+:host {
+  @include tokens($custom-toast-theme);
+}
 ```
 
 ### デモ

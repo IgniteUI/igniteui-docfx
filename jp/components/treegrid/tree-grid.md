@@ -1,7 +1,7 @@
 ---
 title: Angular Tree Grid | 最速の Angular Tree テーブル | インフラジスティックス
 _description: Ignite UI for Angular のツリー グリッドは、階層データまたはフラット データを簡単に表示および操作するために使用されます。コーディングをほとんど行わずにデータをバインドできます。無料でお試しください。
-_keywords: angular tree grid, angular tree table, angular hierarchical tree grid コンポーネント, angular tree table コンポーネント, angular UI コンポーネント, igniteui for angular, インフラジスティックス
+_keywords: angular tree grid, angular tree table, angular tree grid コンポーネント, angular tree table コンポーネント, angular UI コンポーネント, igniteui for angular, インフラジスティックス
 _license: commercial
 _language: ja
 ---
@@ -322,7 +322,9 @@ $custom-theme: grid-theme(
 最後にコンポーネントのテーマを**含めます**。
 
 ```scss
-@include css-vars($custom-theme);
+:host {
+  @include tokens($custom-theme);
+}
 ```
 
 ### Angular ツリー グリッド スタイル設定のデモ
@@ -408,6 +410,7 @@ platformBrowserDynamic()
 - [Grid サイズ変更](sizing.md)
 - [Data Grid](../grid/grid.md)
 - [行編集](row-editing.md)
+- [Ignite UI for Angular スキル](../ai/skills.md) - グリッド、データ操作、テーマ設定向けのエージェントのスキル
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

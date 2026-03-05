@@ -427,7 +427,9 @@ $custom-select-theme: select-theme(
 最後には、カスタム ラジオ テーマをアプリケーションに渡します。
 
 ```scss
-@include css-vars($custom-select-theme);
+:host {
+    @include tokens($custom-select-theme);
+}
 ```
 
 <code-view style="height: 220px;"

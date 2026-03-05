@@ -145,7 +145,7 @@ $indigo-avatar: map.get($light-indigo-schema, avatar);
 
 // We include the specific schema to a class which we can then set on the avatar component that we want
 .indigo-avatar {
-    @include css-vars(
+    @include tokens(
         avatar-theme(
             $schema: $indigo-avatar
         )
@@ -171,5 +171,6 @@ $indigo-avatar: map.get($light-indigo-schema, avatar);
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
+
 - [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 - [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

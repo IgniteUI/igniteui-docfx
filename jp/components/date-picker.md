@@ -335,7 +335,9 @@ $custom-datepicker-theme: calendar-theme(
 最後に Angular Date Picker のカスタム テーマを設定します。
 
 ```scss
-@include css-vars($custom-datepicker-theme);
+:host {
+    @include tokens($custom-datepicker-theme);
+}
 ```
 
 >[!WARNING]
@@ -344,7 +346,7 @@ $custom-datepicker-theme: calendar-theme(
 ```scss
 :host {
   ::ng-deep {
-    @include css-vars($custom-datepicker-theme);
+    @include tokens($custom-datepicker-theme);
   }
 }
 ```
