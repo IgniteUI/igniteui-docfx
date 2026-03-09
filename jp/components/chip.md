@@ -45,7 +45,7 @@ import { IgxChipsModule } from 'igniteui-angular/chips';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxChipComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_CHIPS_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/chips/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxChipComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_CHIPS_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/chips/src/chips/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts

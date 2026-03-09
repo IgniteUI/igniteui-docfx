@@ -56,7 +56,7 @@ import { IgxTabsModule } from 'igniteui-angular/tabs';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxTabsComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_TABS_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/tabs/tabs/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxTabsComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_TABS_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/tabs/src/tabs/tabs/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts

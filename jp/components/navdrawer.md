@@ -52,7 +52,7 @@ import { IgxNavigationDrawerModule } from 'igniteui-angular/navigation-drawer';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxNavigationDrawerComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_NAVIGATION_DRAWER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/navigation-drawer/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxNavigationDrawerComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_NAVIGATION_DRAWER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/navigation-drawer/src/navigation-drawer/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
