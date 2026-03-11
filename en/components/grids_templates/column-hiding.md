@@ -276,7 +276,7 @@ You can see the result of the code from above at the beginning of this article i
 
 ## Custom Column Hiding UI
 
-Let's say we want to manually define our [`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html), add the [`IgxColumnHidingDirective`]({environment:angularApiUrl}/classes/igxcolumnhidingdirective.html) so that it knows what its purpose would be and put it anywhere on the page. First, however, we need to import the `IgxColumnActionsModule`.
+Let's say we want to manually define our [`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html), add the [`IgxColumnHidingDirective`]({environment:angularApiUrl}/classes/igxcolumnhidingdirective.html) so that it knows what its purpose would be and put it anywhere on the page. First, however, we need to import the `IgxColumnActionsComponent`.
 
 ```typescript
 // app.module.ts
@@ -284,7 +284,7 @@ Let's say we want to manually define our [`IgxColumnActionsComponent`]({environm
 ...
 import {
     ...
-    IgxColumnActionsModule 
+    IgxColumnActionsComponent 
 } from 'igniteui-angular/grids/core';
 // import { ..., IgxColumnActionsModule } from '@infragistics/igniteui-angular'; for licensed package
 

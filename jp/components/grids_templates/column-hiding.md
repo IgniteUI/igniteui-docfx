@@ -276,7 +276,7 @@ public ngAfterViewInit() {
 
 ## カスタム列の非表示 UI
 
-[`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html) を手動で定義し、[`IgxColumnHidingDirective`]({environment:angularApiUrl}/classes/igxcolumnhidingdirective.html) を追加して、その目的がわかるようにして、ページの任意の場所に配置します。ただし、最初に、`IgxColumnActionsModule` をインポートする必要があります。
+[`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html) を手動で定義し、[`IgxColumnHidingDirective`]({environment:angularApiUrl}/classes/igxcolumnhidingdirective.html) を追加して、その目的がわかるようにして、ページの任意の場所に配置します。ただし、最初に、`IgxColumnActionsComponent` をインポートする必要があります。
 
 ```typescript
 // app.module.ts
@@ -284,7 +284,7 @@ public ngAfterViewInit() {
 ...
 import {
     ...
-    IgxColumnActionsModule 
+    IgxColumnActionsComponent 
 } from 'igniteui-angular/grids/core';
 // import { ..., IgxColumnActionsModule } from '@infragistics/igniteui-angular'; for licensed package
 
