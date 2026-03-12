@@ -51,7 +51,7 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IGX_TOOLTIP_DIRECTIVES } from 'igniteui-angular/tooltip';
+import { IGX_TOOLTIP_DIRECTIVES } from 'igniteui-angular/directives';
 import { IgxAvatarComponent } from 'igniteui-angular/avatar';
 // import { IGX_TOOLTIP_DIRECTIVES, IgxAvatarComponent } from '@infragistics/igniteui-angular'; for licensed package
 
