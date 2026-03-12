@@ -12,18 +12,27 @@ _language: ja
 
 デフォルトでは、グリッドは列のフィールドを使用してセル内の値を文字列としてレンダリングします。これは基本的なシナリオでは問題ありませんが、レンダリングされる出力をカスタマイズしたい場合や、最終的な出力が異なるデータ フィールドの組み合わせである場合は、セル テンプレートをカスタマイズできます。
 
-列の `cellTemplate` プロパティを設定することで、これを実現できます。
-
-```typescript
-protected cellTemplate(params: IgcCellContext<T, K>) {
-    // テンプレートの結果を返す
-}
-```
+これを実現するには、コンテンツをテンプレート化する列の `<igx-grid-lite-column>...</igx-grid-lite-column>` 内で **`<ng-template>`** を使用します。
 
 ```html
-<igc-grid-lite>
-    <igc-grid-lite-column field="price" [cellTemplate]="cellTemplate"></igc-grid-lite-column>
-</igc-grid-lite>
+<igx-grid-lite-column field="avatar" header="Avatar">
+    <ng-template igxGridLiteCell let-value>
+        <igx-avatar shape="circle" alt="User avatar" [src]="value">
+        </igx-avatar>
+    </ng-template>
+</igx-grid-lite-column>
+```
+
+**`IgxGridLiteCellTemplateDirective`** をインポートする必要もあります。
+
+```typescript
+import { IgxGridLiteComponent, IgxGridLiteColumnComponent, IgxGridLiteCellTemplateDirective } from 'igniteui-angular/grids/lite';
+```
+
+それを `imports` 配列に追加します。
+
+```typescript
+imports: [ IgxGridLiteCellTemplateDirective ]
 ```
 
 ## フォーマッタ関数として使用する
@@ -31,10 +40,15 @@ protected cellTemplate(params: IgcCellContext<T, K>) {
 簡単なシナリオでは、必要に応じてフォーマット済みの値を返すだけで済みます。以下は数値をロケール通貨形式で表示する例です。
 
 ```typescript
-const { format: asCurrency } = new Intl.NumberFormat('en-EN', { style: 'currency', currency: 'EUR' });
+public formatter = new Intl.NumberFormat('en-150', {
+  style: 'currency',
+  currency: 'EUR'
+});
 
 /** 値 `value = 123456.789` に対してカスタム通貨形式を返します。 */
-protected cellTemplate = (params) => asCurrency(params.value); // => "€123,456.79"
+protected formatCurrency = (value: number) => {
+  return this.formatter.format(value); // => "€123,456.79"
+};
 ```
 
 データ ソース内の異なるフィールドの値を組み合わせることも可能です。
@@ -42,38 +56,56 @@ protected cellTemplate = (params) => asCurrency(params.value); // => "€123,456
 Refer to the API documentation for **`GridLiteCellContext`** for more information. -->
 
 ```typescript
-const { format: asCurrency } = new Intl.NumberFormat('en-EN', { style: 'currency', currency: 'EUR' });
+public formatter = new Intl.NumberFormat('en-150', {
+  style: 'currency',
+  currency: 'EUR'
+});
 
-/** 価格が 99.99 の品目 10 個の注文に対してカスタム通貨形式を返します。 */
-protected cellTemplate = ({value, row}) => asCurrency(value * row.data.count); // => "€999.90"
+/** 製品から得た合計金額をカスタム通貨で返します。 */
+protected formatCurrency = (value: number, unitsSold: number) => {
+  return this.formatter.format(value * unitsSold);
+};
 ```
 
 ```html
-<igc-grid-lite>
-    <igc-grid-lite-column field="price" [cellTemplate]="cellTemplate"></igc-grid-lite-column>
-</igc-grid-lite>
+<igx-grid-lite-column field="price" header="Price" dataType="number">
+    <ng-template igxGridLiteCell let-value let-row="row">
+        {{formatCurrency(value, row.data.sold)}}
+    </ng-template>
+</igx-grid-lite-column>
 ```
 
 ## カスタム DOM テンプレート
 
-**`cellTemplate`** プロパティを値フォーマッタとして使用する以外に、独自の DOM テンプレートを作成することもできます。これはセルコンテナー内にレンダリングされます。
+**`<ng-template>`** 内で **`igniteui-angular`** のコンポーネントを使用する以外にも、セル コンテナー内にレンダリングされる独自の DOM テンプレートを作成することもできます。
 
-<a href="https://lit.dev/" target="_blank">Lit</a> の機能と<a href="https://lit.dev/docs/templates/expressions/" target="_blank">タグ付きテンプレート構文</a>を再利用して宣言的な DOM フラグメントを作成しています。
-
-標準の DOM 要素だけでなく、他のライブラリの Web コンポーネントもテンプレート化できます。
+標準の DOM 要素だけでなく、他のライブラリの Web コンポーネントもテンプレート化できます。たとえば、次のコード スニペットでは、**`igniteui-webcomponents`** から提供される rating コンポーネントを使用しています。これを適切に使用するには、以下で説明するいくつかの手順を実行する必要があります。
 
 ```typescript
-// Lit パッケージから `html` タグ関数をインポートします。
-import { html } from "lit";
+// カスタム テンプレート用の外部コンポーネントをインポートします
+import {
+    defineComponents,
+    IgcRatingComponent
+} from 'igniteui-webcomponents';
 
-// グリッド内の `rating` 値を表すために別の Web コンポーネントを使用します。
-protected cellTemplate = ({ value }) => html`<igc-rating readonly value=${value}></igc-rating>`;
+// サンプルで使用できるようにそれらを定義します
+defineComponents(
+    IgcRatingComponent
+);
 ```
 
 ```html
-<igc-grid-lite>
-    <igc-grid-lite-column field="rating" [cellTemplate]="cellTemplate"></igc-grid-lite-column>
-</igc-grid-lite>
+<!-- テンプレートで Web Components の rating コンポーネントを使用します -->
+<igx-grid-lite-column field="rating" header="Customer Rating" dataType="number">
+    <ng-template igxGridLiteCell let-value>
+        <igc-rating
+            [value]="value"
+            readonly
+            min="0"
+            max="5">
+        </igc-rating>
+    </ng-template>
+</igx-grid-lite-column>
 ```
 
 >[!NOTE]
@@ -87,10 +119,7 @@ protected cellTemplate = ({ value }) => html`<igc-rating readonly value=${value}
 /**
  * 行セル テンプレート コールバックのコンテキスト オブジェクトです。
  */
-export interface GridLiteCellContext<
-  T extends object,
-  K extends Keys<T> = Keys<T>
-> {
+export interface IgxGridLiteCellTemplateContext<T extends object> {
   /**
    * テンプレートのセル要素の親要素です。
    */
@@ -107,6 +136,8 @@ export interface GridLiteCellContext<
    * このセルに対するデータ ソースの値です。
    */
   value: PropertyType<T, K>;
+  
+  $implicit: PropertyType<T, K>;
 }
 ```
 

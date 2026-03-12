@@ -6,6 +6,7 @@ _keywords: angular grid 集計, ignite ui for angular, infragistics
 _license: commercial
 _language: ja
 ---
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
@@ -16,6 +17,7 @@ _license: commercial
 _canonicalLink: grid/summaries
 _language: ja
 ---
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
@@ -26,6 +28,7 @@ _license: commercial
 _canonicalLink: grid/summaries
 _language: ja
 ---
+
 }
 
 # Angular @@igComponent 集計
@@ -787,21 +790,24 @@ $custom-theme: grid-summary-theme(
 最後にコンポーネントのカスタム テーマを**含めます**。
 
 ```scss
-@include css-vars($custom-theme);
+:host {
+  @include tokens($custom-theme);
+}
 ```
 
 >[!NOTE]
->コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+>コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、 `::ng-deep` を使用してこのカプセル化を`解除する`必要があります。
 
-```scss
+ ```scss
 :host {
   ::ng-deep {
-    @include css-vars($custom-theme);
+    @include tokens($custom-theme);
   }
 }
 ```
 
 @@if (igxName === 'IgxGrid') {
+
 ### デモ
 
 
@@ -813,6 +819,7 @@ $custom-theme: grid-summary-theme(
 
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ### デモ
 
 
@@ -824,6 +831,7 @@ $custom-theme: grid-summary-theme(
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ### デモ
 
 

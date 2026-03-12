@@ -791,7 +791,9 @@ $custom-calendar-theme: calendar-theme(
 最後に calendar のカスタム テーマを設定します。
 
 ```scss
- @include css-vars($custom-calendar-theme);
+:host {
+    @include tokens($custom-calendar-theme);
+}
 ```
 
 以下のサンプルでは、カスタマイズした CSS 変数を使用したカレンダー コンポーネントが、[`SAP UI5`](https://ui5.sap.com/#/entity/sap.ui.unified.Calendar/sample/sap.ui.unified.sample.CalendarSingleDaySelection) デザイン システムのカレンダーに視覚的に似たデザインを実現している様子を確認できます。

@@ -11,13 +11,13 @@ _language: ja
 <p class="highlight">
 
 [`IgxOverlayService`](overlay.md) は、ページ コンテンツの上にコンテンツを表示するために使用されます。Ignite UI for Angular コンポーネントの多くは、[ドロップダウン](drop-down.md)、[コンボ](combo.md)、[日付ピッカー](date-picker.md)などのオーバーレイを使用しているため、オーバーレイがコンテンツを表示する方法を理解することが重要です。
-他の要素上にコンテンツを表示するために、サービスはコンテンツを特別なアウトレット コンテナーに移します (デフォルトではドキュメントの本文の最後にアタッチされています)。この動作は、[特定のコンテナーにスコープされた](#スコープ-コンポーネント-スタイル) スタイルに影響を与える可能性があります。
+他の要素上にコンテンツを表示するために、サービスはコンテンツを特別なアウトレット コンテナーに移します (デフォルトではドキュメントの本体の最後にアタッチされています)。この動作は、[特定のコンテナーにスコープされた](#スコープ-コンポーネント-スタイル) スタイルに影響を与える可能性があります。
 </p>
 <div class="divider--half"></div>
 
 ## オーバーレイ コンポーネントのスタイル設定
 
-ほとんどの場合、[グローバル](themes/sass/global-themes.md) テーマのスタイルはオーバーレイ アウトレットの影響を受けません。例として、グローバル [`css-vars`]({environment:sassApiUrl}/themes#mixin-css-vars) ミックスインで[スタイル設定された](drop-down.md#スタイル設定)ドロップダウンを見てみましょう。
+ほとんどの場合、[グローバル](themes/sass/global-themes.md) テーマのスタイルはオーバーレイ アウトレットの影響を受けません。例として、グローバル [`tokens`]({environment:sassApiUrl}/themes#mixin-tokens) ミックスインで[スタイル設定された](drop-down.md#スタイル設定)ドロップダウンを見てみましょう。
 
 ```html
 <!-- overlay-styling.component.html -->
@@ -38,7 +38,9 @@ $my-drop-down-theme: drop-down-theme(
   $background-color: #efefef
 );
 
-@include css-vars($my-drop-down-theme);
+:host {
+  @include tokens($my-drop-down-theme);
+}
 ```
 
 グローバル スタイルはスコープされたルール下では生成されず、カプセル化の影響も受けないため、サービスがオーバーレイ アウトレットに移動した `igx-drop-down-item` など、ページ上の任意の要素と一致できます。
@@ -51,7 +53,10 @@ $my-drop-down-theme: drop-down-theme(
 
 ```scss
 // overlay-styling.component.scss
-@include css-vars($my-drop-down-theme);
+
+:host {
+  @include tokens($my-drop-down-theme);
+}
 ```
 
 >[!NOTE]
@@ -61,12 +66,12 @@ $my-drop-down-theme: drop-down-theme(
 // overlay-styling.component.scss
 :host {
   ::ng-deep { 
-    @include css-vars($my-drop-down-theme);
+    @include tokens($my-drop-down-theme);
   }
 }
 ```
 
-コンボのリスト内項目は、コンポーネント `ホスト`の子孫ではありません。現在、ドキュメント本文の最後にあるデフォルトのオーバーレイ アウトレットに表示されています。変更するには、`overlaySettings` の [`outlet`]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) プロパティを使用します。`outlet` は、オーバーレイ コンテナーをレンダリングする場所を制御します。
+コンボのリスト内項目は、コンポーネント `ホスト`の子孫ではありません。現在、ドキュメント本体の最後にあるデフォルトのオーバーレイ アウトレットに表示されています。変更するには、`overlaySettings` の [`outlet`]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) プロパティを使用します。`outlet` は、オーバーレイ コンテナーをレンダリングする場所を制御します。
 
 以下でコンテナーを配置する要素への参照を渡すことができます。
 
@@ -107,7 +112,9 @@ $my-overlay-theme: overlay-theme(
   $background-color: rgba(0, 153, 255, 0.3)
 );
 
-@include css-vars($my-overlay-theme);
+:host {
+  @include tokens($my-overlay-theme);
+}
 ```
 
 これで、**すべて**のモーダル オーバーレイの背景が紫色になります。
@@ -119,7 +126,7 @@ $my-overlay-theme: overlay-theme(
 // overlay-styling.component.scss
 :host {
   ::ng-deep { 
-    @include css-vars($my-overlay-theme);
+    @include tokens($my-overlay-theme);
   }
 }
 ```
@@ -133,7 +140,7 @@ $my-overlay-theme: overlay-theme(
 // styles.scss
 ...
 .purple {
-  @include css-vars($my-overlay-theme);
+  @include tokens($my-overlay-theme);
 }
 ```
 

@@ -1,10 +1,10 @@
 ---
-title: AI-Assisted Development | AI Skills | Ignite UI for Angular | Infragistics
+title: Ignite UI for Angular Skills | AI Skills | AI-Assisted Development | Ignite UI for Angular | Infragistics
 _description: Learn how to use Agent Skills to supercharge AI-assisted development with Ignite UI for Angular components, grids, data operations, and theming.
 _keywords: ignite ui for angular, copilot skills, ai assisted development, github copilot, cursor, windsurf, claude, jetbrains ai
 ---
 
-# AI-Assisted Development
+# Ignite UI for Angular Skills
 
 Ignite UI for Angular ships with **Agent Skills** — structured knowledge files that teach AI coding assistants (GitHub Copilot, Cursor, Windsurf, Claude, JetBrains AI, etc.) how to work with Ignite UI for Angular. These skill files provide context-aware guidance on components, grids, data operations, and theming, enabling your AI assistant to generate accurate, idiomatic code that follows best practices.
 
@@ -112,8 +112,6 @@ Alternatively, one can use a general Agent Skills config so your Agent can easil
 
 3. The Agent will now discover these skills and load the relevant one automatically based on the context of your request.
 
-> **Tip for VS Code:** VS Code searches for skills in `.github/skills/`, `.claude/skills/`, and `.agents/skills/` by default. You can configure additional locations using the `chat.agentSkillsLocations` setting.
-
 > **Tip:** VS Code searches for skills in `.github/skills/`, `.claude/skills/`, and `.agents/skills/` by default. You can configure additional locations using the `chat.agentSkillsLocations` setting.
 
 ---
@@ -129,20 +127,18 @@ Use this approach when you want to load a specific skill on demand, without perm
 Each skill file can be downloaded directly from GitHub. First, create the `.agents/skills/` directory in your project root, then download the files into it:
 
 ```bash
-# Create the .agents/skills directory
-mkdir -p .agents/skills
 
-# Download skill files into .agents/skills/
-cd .agents/skills
+# Define the base target directory
+BASE_DIR=".agents/skills"
 
 # Components & Layout
-curl -O https://raw.githubusercontent.com/IgniteUI/igniteui-angular/master/skills/igniteui-angular-components/SKILL.md
+curl --create-dirs -o $BASE_DIR/igniteui-angular-components/SKILL.md https://raw.githubusercontent.com/IgniteUI/igniteui-angular/master/skills/igniteui-angular-components/SKILL.md
 
 # Data Grids
-curl -O https://raw.githubusercontent.com/IgniteUI/igniteui-angular/master/skills/igniteui-angular-grids/SKILL.md
+curl --create-dirs -o $BASE_DIR/igniteui-angular-grids/SKILL.md https://raw.githubusercontent.com/IgniteUI/igniteui-angular/master/skills/igniteui-angular-grids/SKILL.md
 
 # Theming & Styling
-curl -O https://raw.githubusercontent.com/IgniteUI/igniteui-angular/master/skills/igniteui-angular-theming/SKILL.md
+curl --create-dirs -o $BASE_DIR/igniteui-angular-theming/SKILL.md https://raw.githubusercontent.com/IgniteUI/igniteui-angular/master/skills/igniteui-angular-theming/SKILL.md
 ```
 
 The skill files will now be available in `.agents/skills/` and will be automatically discovered by compatible AI assistants.
@@ -185,7 +181,7 @@ cp -r node_modules/igniteui-angular/skills/. .agents/skills/
 
 ```powershell
 # Windows (PowerShell)
-Copy-Item -Recurse node_modules\igniteui-angular\skills\* .agents\skills\
+Copy-Item -Recurse node_modules\igniteui-angular\skills .agents\skills
 ```
 
 Or copy individual skill directories as needed:
@@ -201,9 +197,9 @@ cp -r node_modules/igniteui-angular/skills/igniteui-angular-theming .agents/skil
 **Windows (PowerShell)**
 
 ```powershell
-Copy-Item -Recurse node_modules\igniteui-angular\skills\igniteui-angular-components .agents\skills\
-Copy-Item -Recurse node_modules\igniteui-angular\skills\igniteui-angular-grids .agents\skills\
-Copy-Item -Recurse node_modules\igniteui-angular\skills\igniteui-angular-theming .agents\skills\
+Copy-Item -Recurse node_modules\igniteui-angular\skills\igniteui-angular-components .agents\skills\igniteui-angular-components
+Copy-Item -Recurse node_modules\igniteui-angular\skills\igniteui-angular-grids .agents\skills\igniteui-angular-grids
+Copy-Item -Recurse node_modules\igniteui-angular\skills\igniteui-angular-theming .agents\skills\igniteui-angular-theming
 ```
 
 **Windows (Command Prompt)**
@@ -259,16 +255,16 @@ Once you have the files, open them and load them into your AI assistant:
 
 The **Theming skill** includes setup instructions for the `igniteui-theming` MCP server, which gives AI assistants access to live theming tools such as palette generation and component theme scaffolding. See the [Theming skill file](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-theming/SKILL.md) for configuration steps for VS Code, Cursor, Claude Desktop, and JetBrains IDEs.
 
-For more information on the Theming MCP, refer to the [Ignite UI Theming MCP](../themes/mcp.md) documentation.
+For more information on the Theming MCP, refer to the [Ignite UI Theming MCP](./theming-mcp.md) documentation.
 
 ## Additional Resources
 
 <div class="divider--half"></div>
 
-- [Getting Started with Ignite UI for Angular](getting-started.md)
-- [Angular Schematics & Ignite UI CLI](cli-overview.md)
-- [How to Use Standalone Components](how-to/how-to-use-standalone-components.md)
-- [Code Splitting and Multiple Entry Points](code-splitting-and-multiple-entry-points.md)
+- [Getting Started with Ignite UI for Angular](../general/getting-started.md)
+- [Angular Schematics & Ignite UI CLI](../general/cli-overview.md)
+- [How to Use Standalone Components](../general/how-to/how-to-use-standalone-components.md)
+- [Code Splitting and Multiple Entry Points](../general/code-splitting-and-multiple-entry-points.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

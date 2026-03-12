@@ -353,7 +353,9 @@ $custom-theme: grid-theme(
 テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。
 
 ```scss
-@include css-vars($custom-theme);
+:host {
+  @include tokens($custom-theme);
+}
 ```
 
 ### スコープ コンポーネント テーマ
@@ -434,6 +436,7 @@ platformBrowserDynamic()
 - [列のピン固定](column-pinning.md)
 - [列のサイズ変更](column-resizing.md)
 - [選択](selection.md)
+- [Ignite UI for Angular スキル](../ai/skills.md) - グリッド、データ操作、テーマ設定向けのエージェントのスキル
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

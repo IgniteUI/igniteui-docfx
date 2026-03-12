@@ -185,7 +185,9 @@ $custom-strip: action-strip-theme(
 The last step is to include the newly created component theme in our application.
 
 ```scss
-@include css-vars($custom-strip);
+:host {
+  @include tokens($custom-strip);
+}
 ```
 
 <code-view style="height: 400px;"

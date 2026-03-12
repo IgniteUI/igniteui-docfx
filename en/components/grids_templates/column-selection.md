@@ -164,7 +164,9 @@ The [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) accepts 
 The last step is to include the custom `igx-grid` theme.
 
 ```scss
-@include css-vars($custom-grid-theme)
+:host {
+  @include tokens($custom-grid-theme)
+}
 ```
 
 ### Demo

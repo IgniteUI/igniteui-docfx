@@ -698,7 +698,9 @@ $carousel-theme: carousel-theme(
 最後にコンポーネントのテーマを含めます。
 
 ```scss
-@include css-vars($carousel-theme);
+:host {
+  @include tokens($carousel-theme);
+}
 ```
 
 ### デモ

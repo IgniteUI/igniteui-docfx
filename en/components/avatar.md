@@ -208,7 +208,7 @@ The last step is to pass the custom avatar theme:
 
 ```scss
 .initials {
-  @include css-vars($custom-avatar-theme);
+  @include tokens($custom-avatar-theme);
 }
 ```
 
@@ -270,7 +270,7 @@ igx-avatar {
 }
 ```
 
-Or you can use the universal `--igx-avatar-size` variable to target all instances:
+Or you can use the universal `--ig-avatar-size` variable to target all instances:
 
 ```html
 <div class="my-app">
@@ -280,7 +280,7 @@ Or you can use the universal `--igx-avatar-size` variable to target all instance
 
 ```scss
 .my-app {
-  --igx-avatar-size: 200px;
+  --ig-avatar-size: 200px;
 }
 ```
 

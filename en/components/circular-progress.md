@@ -250,7 +250,9 @@ $custom-theme: progress-circular-theme(
 The last step is to **include** the component theme in our application.
 
 ```scss
-@include css-vars($custom-theme);
+:host {
+  @include tokens($custom-theme);
+}
 ```
 
 ### Demo

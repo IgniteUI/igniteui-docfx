@@ -442,7 +442,9 @@ $custom-theme: grid-theme(
 The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file:
 
 ```scss
-@include css-vars($custom-theme);
+:host {
+  @include tokens($custom-theme);
+}
 ```
 
 ### Demo

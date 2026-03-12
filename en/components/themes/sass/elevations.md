@@ -76,7 +76,9 @@ $card-theme: card-theme(
     $resting-shadow: elevation(10)
 );
 
-@include css-vars($card-theme);
+:host {
+  @include tokens($card-theme);
+}
 ```
 
 You can also pass simple box shadows without taking advantage of the `elevation` function:
@@ -87,7 +89,7 @@ $card-theme: card-theme(
 );
 
 .my-card {
-  @include css-vars($card-theme);
+  @include tokens($card-theme);
 }
 ```
 

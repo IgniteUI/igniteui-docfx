@@ -480,7 +480,9 @@ As seen, the `navdrawer-theme` exposes some useful parameters for basic styling 
 The last step is to **include** the component theme in our application.
 
 ```scss
-@include css-vars($custom-theme);
+:host {
+  @include tokens($custom-theme);
+}
 ```
 
 >[!NOTE]
@@ -489,7 +491,7 @@ The last step is to **include** the component theme in our application.
 ```scss
 :host {
   ::ng-deep { 
-    @include css-vars($custom-theme);
+    @include tokens($custom-theme);
   }
 }
 ```

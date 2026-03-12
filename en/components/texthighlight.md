@@ -377,9 +377,7 @@ The last step is to **include** the newly created theme.
 
 ```scss
 :host {
-  ::ng-deep {
-    @include css-vars($dark-highlight);
-  }
+  @include tokens($dark-highlight);
 }
 ```
 
@@ -417,7 +415,7 @@ As mentioned earlier, we can even combine them with a theme:
 ```scss
 :host {
   ::ng-deep {
-    @include css-vars($dark-highlight);  
+    @include tokens($dark-highlight);  
     
     .custom-highlight {
       border: 1px solid #ffcd0f;

@@ -24,10 +24,10 @@ grid.data = [...{
 ```
 
 ```html
-<igc-grid-lite>
+<igx-grid-lite>
     <!-- Update column configuration, add or remove columns as needed to represent the new data. -->
-    <igc-grid-lite-column field="id"></igc-grid-lite-column>
-</igc-grid-lite>
+    <igx-grid-lite-column field="id"></igx-grid-lite-column>
+</igx-grid-lite>
 ```
 
 If the grid has `autoGenerate` enabled, it will "_infer_" the new column configuration automatically when the data changes.
@@ -38,6 +38,16 @@ grid.autoGenerate = true;
 /** After the new binding the grid will infer the column collection from the bound data. */
 grid.data = [];
 ```
+
+Or just set the respective properties in the html instead of using a `@ViewChild` for the grid.
+
+```html
+  <igx-grid-lite
+    [autoGenerate]="true"
+    [data]="data">
+  </igx-grid-lite>
+```
+
 
 >[!NOTE]
 >The sort/filter states of the Grid Lite component are kept when changing the data source in this manner.
