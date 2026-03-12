@@ -1,7 +1,8 @@
 ---
-title: Angular Circular Progress コンポーネント
+title: Angular Circular Progress コンポーネント - MITライセンス
 _description: Ignite UI for Angular Circular Progress インジケーター コンポーネントは、丸形で進行状況を表示し、カスタマイズできるコンポーネントです。
 _keywords: Angular Circular Progress コンポーネント, Angular Circular Progress コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, Angular UI コンポーネント
+_license: MIT
 _language: ja
 ---
 
@@ -11,9 +12,9 @@ _language: ja
 
 ## Angular Circular Progress の例
 
-<code-view style="height:100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/circular-progressbar" alt="Angular Circular Progress の例">
+<code-view style="height:100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-display/circular-progressbar/" alt="Angular Circular Progress の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -34,7 +35,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 ...
-import { IgxProgressBarModule } from 'igniteui-angular';
+import { IgxProgressBarModule } from 'igniteui-angular/progressbar';
 // import { IgxProgressBarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -50,7 +51,7 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular';
+import { IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular/progressbar';
 // import { IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -101,9 +102,9 @@ Ignite UI for Angular Progress Bar モジュールまたはディレクティブ
 
 結果は以下のようになります。
 
-<code-view style="height:100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/circular-indeterminate-progressbar" >
+<code-view style="height:100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-display/circular-indeterminate-progressbar/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -221,9 +222,9 @@ $custom-theme: progress-circular-theme(
 
 上記の手順を再現した後、以下のようになります。
 
-<code-view style="height:200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/circular-dynamic-sample" >
+<code-view style="height:200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-display/circular-dynamic-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -239,11 +240,10 @@ $custom-theme: progress-circular-theme(
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法として、[`progress-circular-theme`]({environment:sassApiUrl}/index.html#function-progress-circular-theme) を拡張し、`$base-circle-color` および `$fill-color-default` パラメーターを受け取る新しいテーマを作成する方法があります。
+最も簡単な方法として、[`progress-circular-theme`]({environment:sassApiUrl}/themes#function-progress-circular-theme) を拡張し、`$base-circle-color` および `$fill-color-default` パラメーターを受け取る新しいテーマを作成する方法があります。
 
 ```scss
 $custom-theme: progress-circular-theme(
-  $base-circle-color: lightgray,
   $fill-color-default: rgb(32, 192, 17),
   $diameter: 50px
 );
@@ -252,22 +252,24 @@ $custom-theme: progress-circular-theme(
 最後にコンポーネントのテーマをアプリケーションに**含めます**。
 
 ```scss
-@include css-vars($custom-theme);
+:host {
+  @include tokens($custom-theme);
+}
 ```
 
 ### デモ
 
 <div class="divider--half"></div>
 
-<code-view style="height:100px" 
+<code-view style="height:100px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/circular-styling-sample" >
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-display/circular-styling-sample/" >
 </code-view>
 
 ## API
 
 <div class="divider--half"></div>
 
-* [IgxCircularProgressBarComponent]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html)
-* [IgxCircularProgressBarComponent スタイル]({environment:sassApiUrl}/index.html#function-progress-circular-theme)
+- [IgxCircularProgressBarComponent]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html)
+- [IgxCircularProgressBarComponent スタイル]({environment:sassApiUrl}/themes#function-progress-circular-theme)

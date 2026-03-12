@@ -1,7 +1,8 @@
 ---
-title: Angular 星評価コンポーネント – Ignite UI for Angular
+title: Angular 星評価コンポーネント – Ignite UI for Angular - MITライセンス
 _description: Angular 星評価コンポーネントを使用すると、ユーザーはフィードバックをすばやく表示して提供できます。任意の Angular アプリおよび Angular フォームで評価コンポーネントを使用できます。今すぐお試しください。
 _keywords: Angular Rating コンポーネント, Angular Rating コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
+_license: MIT
 _language: ja
 ---
 # Angular Star Rating (星評価) の概要
@@ -17,7 +18,7 @@ Ignite UI Angular Star Rating コンポーネントは、igniteui-webcomponents 
 
 <code-view style="height: 550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-with-rating" alt="Angular Rating の例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-with-rating/" alt="Angular Rating の例">
 </code-view>
 
 
@@ -66,7 +67,7 @@ export class AppModule {}
 Angular フォームでは、多くの場合、コンポーネントはその値を `ngModel` にバインドしたり、Angular の `ControlValueAccessor` インターフェイスの実装を必要とする `formControl` を使用したりできる必要があります。Ignite UI for Angular パッケージは、要素セレクターを使用してサポートされているウェブ コンポーネントにアタッチするディレクティブの形式で、このような実装を提供します。現在、サポートされているコンポーネントは `IgcRating` のみです。ディレクティブを使用するには、ライブラリから `IgcFormsModule` をインポートするだけです。
 
 ```typescript
-import { IgcFormsModule } from 'igniteui-angular';
+import { IgcFormsModule } from 'igniteui-angular/directives';
 // import { IgcFormsModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -86,7 +87,7 @@ export class AppModule { }
 // home.component.ts
 
 import { FormsModule } from '@angular/forms';
-import { IgcFormControlDirective } from 'igniteui-angular';
+import { IgcFormControlDirective } from 'igniteui-angular/directives';
 // import { IgcFormControlDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -111,7 +112,7 @@ export class HomeComponent {
 
 <code-view style="height: 550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/rating-form" alt="Angular Rating の例">
+           iframe-src="{environment:demosBaseUrl}/data-entries/rating-form/" alt="Angular Rating の例">
 </code-view>
 
 Rating コンポーネントの使用方法の詳細については、[このトピック]({environment:infragisticsBaseUrl}/products/ignite-ui-web-components/web-components/components/inputs/rating.html)を参照してください。

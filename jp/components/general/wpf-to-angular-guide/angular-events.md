@@ -16,6 +16,7 @@ WPF でボタンのクリックイベントに応答する簡単な例を次に�
 ```xml
 <Button Click="Button_Click">Click Me</Button>
 ```
+
 ```csharp
 private void Button_Click(object sender, RoutedEventArgs e)
 {
@@ -24,9 +25,11 @@ private void Button_Click(object sender, RoutedEventArgs e)
 ```
 
 以下は、Angular の例です。
+
 ```html
 <button (click)="onClicked()">Click Me</button>
 ```
+
 ```typescript
 onClicked() {
     console.log('Hello World');
@@ -38,6 +41,7 @@ WPF では、送信者やイベント引数など、イベントに関する情�
 ```html
 <button (click)="onClicked($event)">Click Me</button>
 ```
+
 ```typescript
 onClicked(event) {
     console.log(event.target);
@@ -50,6 +54,7 @@ onClicked(event) {
 <input #messageInput>
 <button (click)="onClicked(messageInput.value)">Click Me</button>
 ```
+
 ```typescript
 onClicked(message) {
     console.log(message);
@@ -61,6 +66,7 @@ Enter を押したときに入力値を出力するとします。次のよう�
 ```html
 <input #messageInput (keyup)="onInputKeyup($event, messageInput.value)">
 ```
+
 ```typescript
 onInputKeyup(event, message) {
     if (event.keyCode === 13) {
@@ -74,6 +80,7 @@ Angular にはより簡単な方法があります。`keyup.enter` 疑似イベ�
 ```html
 <input #messageInput (keyup.enter)="onInputKeyup(messageInput.value)">
 ```
+
 ```typescript
 onInputKeyup(message) {
     console.log(message);
@@ -133,12 +140,13 @@ this.taskCompleted.emit(new TaskEventArgs());
 ```
 
 ## その他のリソース
-* [デスクトップから Web: Angular Event バインドを使用したイベントへの応答](https://www.youtube.com/watch?v=V1Futz4W400&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j&index=6)
-* [Angular ユーザー入力](https://angular.io/guide/user-input)
-* [コンポーネント インタラクション: 子イベントをリッスンする親](https://angular.io/guide/component-interaction#parent-listens-for-child-event)
+
+- [デスクトップから Web: Angular Event バインドを使用したイベントへの応答](https://www.youtube.com/watch?v=V1Futz4W400&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j&index=6)
+- [Angular ユーザー入力](https://angular.io/guide/user-input)
+- [コンポーネント インタラクション: 子イベントをリッスンする親](https://angular.io/guide/component-interaction#parent-listens-for-child-event)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

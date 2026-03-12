@@ -31,25 +31,25 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
 
 There are several uses cases for Column Charts. When you:
 
-*   Need to compare data values of related categories.
-*   Need to compare data over a time period.
-*   Need to display negative values as well as positive values in the same data set.
-*   Have a large, high-volume data set that fits well with the chart interactions like Panning, Zooming, and Drill-down.
+- Need to compare data values of related categories.
+- Need to compare data over a time period.
+- Need to display negative values as well as positive values in the same data set.
+- Have a large, high-volume data set that fits well with the chart interactions like Panning, Zooming, and Drill-down.
 
-### Column Charts Best Practices:
+### Column Charts Best Practices
 
-*   Always start the Y-Axis (left or right axis) at 0 so data comparison is accurate.
-*   Order time-series data from left to right.
+- Always start the Y-Axis (left or right axis) at 0 so data comparison is accurate.
+- Order time-series data from left to right.
 
 ### When Not to Use Column Charts
 
-*   You have many (more than 10 or 12) series of data. Your goal is to ensure the chart is readable.
+- You have many (more than 10 or 12) series of data. Your goal is to ensure the chart is readable.
 
-### Column Charts Data Structure:
+### Column Charts Data Structure
 
-*   The data model must contain at least one numeric property.
-*   The data model may contain an options string or date-time property for labels.
-*   The data source should contain at least one data item.
+- The data model must contain at least one numeric property.
+- The data model may contain an options string or date-time property for labels.
+- The data source should contain at least one data item.
 
 ## Angular Column Chart with Single Series
 
@@ -179,10 +179,10 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 You can find more information about related chart types in these topics:
 
-*   [Bar Chart](bar-chart.md)
-*   [Composite Chart](composite-chart.md)
-*   [Radial Chart](radial-chart.md)
-*   [Stacked Chart](stacked-chart.md)
+- [Bar Chart](bar-chart.md)
+- [Composite Chart](composite-chart.md)
+- [Radial Chart](radial-chart.md)
+- [Stacked Chart](stacked-chart.md)
 
 ## API References
 

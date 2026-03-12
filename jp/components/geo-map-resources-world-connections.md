@@ -2,6 +2,7 @@
 title: Angular マップ | ワールド コネクション | データ ソース | インフラジスティックス
 _description: インフラジスティックスの Angular JavaScript マップ データ ユーティリティを使用して、空港の位置、飛行経路、および地理的なグリッド線を生成します。Ignite UI for Angular マップのサンプルを是非お試しください!
 _keywords: Angular map, map data, Ignite UI for Angular, Infragistics, Angular マップ, マップ データ, インフラジスティックス
+_license: commercial
 mentionedTypes: ["XamGeographicMap"]
 _language: ja
 ---
@@ -141,4 +142,4 @@ export default class WorldConnections {
 
 ## API リファレンス
 
-*   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html)
+- [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html)

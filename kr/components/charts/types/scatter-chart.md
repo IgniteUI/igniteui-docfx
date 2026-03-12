@@ -104,11 +104,11 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 You can find more information about related chart types in these topics:
 
-*   [Area Chart](area-chart.md)
-*   [Bubble Chart](bubble-chart.md)
-*   [Line Chart](line-chart.md)
-*   [Spline Chart](spline-chart.md)
-*   [Shape Chart](shape-chart.md)
+- [Area Chart](area-chart.md)
+- [Bubble Chart](bubble-chart.md)
+- [Line Chart](line-chart.md)
+- [Spline Chart](spline-chart.md)
+- [Shape Chart](shape-chart.md)
 
 ## API References
 

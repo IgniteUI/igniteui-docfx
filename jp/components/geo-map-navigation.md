@@ -2,6 +2,7 @@
 title: Angular マップ | データ可視化ツール | マップ ナビゲーション | インフラジスティックス
 _description: インフラジスティックスの Angular マップをナビゲートするには、マウスまたはタッチを使用して左右にパンニングし、水平および垂直にズームします。Ignite UI for Angular マップのナビゲーション機能について説明します。
 _keywords: Angular map, navigation, Ignite UI for Angular, Infragistics, Angular マップ, ナビゲーション, インフラジスティックス
+_license: commercial
 mentionedTypes: ["XamGeographicMap"]
 _language: ja
 ---
@@ -25,8 +26,8 @@ _language: ja
 
 これらの座標で囲まれた地理的領域内の地図コンテンツをナビゲートします。
 
-*   水平方向に 180°E (マイナス) から 180°W (プラス) の経度
-*   垂直方向に 85°S (マイナス) から 85°N (プラス) の緯度
+- 水平方向に 180°E (マイナス) から 180°W (プラス) の経度
+- 垂直方向に 85°S (マイナス) から 85°N (プラス) の緯度
 
 このコード スニペットは、地理座標を使用してマップをナビゲートする方法を示しています。
 
@@ -34,8 +35,8 @@ _language: ja
 
 また、これらの相対座標で区切られたウィンドウ長方形内でマップ コンテンツをナビゲーションできます。
 
-*   水平方向に 0.0 から 1.0 の値
-*   垂直方向に 0.0 から 1.0 の値
+- 水平方向に 0.0 から 1.0 の値
+- 垂直方向に 0.0 から 1.0 の値
 
 このコード スニペットは、相対ウィンドウ座標を使用してマップをナビゲートする方法を示しています。
 
@@ -56,7 +57,7 @@ _language: ja
 
 ## API リファレンス
 
-*   [`actualWindowRect`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#actualWindowRect)
-*   [`windowRect`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#windowRect)
-*   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html)
-*   [`zoomable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html#zoomable)
+- [`actualWindowRect`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#actualWindowRect)
+- [`windowRect`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#windowRect)
+- [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html)
+- [`zoomable`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html#zoomable)

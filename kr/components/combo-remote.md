@@ -16,7 +16,7 @@ The sample below demonstrates remote binding using combo API - defining [valueKe
 
 <code-view style="height: 400px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-remote" >
+           iframe-src="{environment:demosBaseUrl}/lists/combo-remote/" >
 </code-view>
 
 

@@ -13,7 +13,7 @@ _language: kr
 
 <code-view style="height: 500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -51,7 +51,7 @@ In order to display the toast component, use its [`open()`]({environment:angular
 If the sample is configured properly, a toast appears displaying a notification when the button is clicked.
 
 <div class="sample-container loading" style="height: 300px">
-    <iframe id="toast-sample-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-2" class="lazyload"></iframe>
+    <iframe id="toast-sample-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-2/" class="lazyload"></iframe>
 </div>
 
 #### Hide/Auto Hide
@@ -68,7 +68,7 @@ Once opened, the toast disappears after a period specified by the [`displayTime`
 If the sample is configured properly, the toast appears when the 'SHOW' button is clicked. The auto hide feature is disabled and the toast disappears on 'HIDE' button click.
 
 <div class="sample-container loading" style="height: 300px">
-    <iframe id="toast-sample-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-3" class="lazyload"></iframe>
+    <iframe id="toast-sample-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-3/" class="lazyload"></iframe>
 </div>
 
 #### Display Time
@@ -84,7 +84,7 @@ Use [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#d
 If the sample is configured properly, the toast auto hides faster.
 
 <div class="sample-container loading" style="height: 300px">
-    <iframe id="toast-sample-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-4" class="lazyload"></iframe>
+    <iframe id="toast-sample-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-4/" class="lazyload"></iframe>
 </div>
 
 #### Positioning
@@ -118,20 +118,20 @@ public open(toast) {
 
 <code-view style="height: 300px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/notifications/toast-sample-5/" >
 </code-view>
 
 
 <div class="divider--half"></div>
 
-### API References
+## API References
 In this article we learned how to use and configure the [`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html). For more details in regards its API, take a look at the links below:
 
 * [`IgxToastComponent`]({environment:angularApiUrl}/classes/igxtoastcomponent.html)
 
 Styles:
 
-* [`IgxToastComponent Styles`]({environment:sassApiUrl}/index.html#function-toast-theme)
+* [`IgxToastComponent Styles`]({environment:sassApiUrl}/themes#function-toast-theme)
 
 ###Additional Resources
 

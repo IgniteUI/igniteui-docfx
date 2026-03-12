@@ -30,7 +30,7 @@ While browsers natively provide content search functionality, most of the time t
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-search-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-search-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -39,7 +39,7 @@ While browsers natively provide content search functionality, most of the time t
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-search" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-search/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -374,12 +374,12 @@ public clearSearch() {
 
 스타일:
 
-* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-grid-theme)
-* [IgxInputGroupComponent 스타일]({environment:sassApiUrl}/index.html#function-input-group-theme)
-* [IgxIconComponent 스타일]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxRippleDirective 스타일]({environment:sassApiUrl}/index.html#function-ripple-theme)
-* [IgxButtonDirective 스타일]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxChipComponent 스타일]({environment:sassApiUrl}/index.html#function-chip-theme)
+* [@@igxNameComponent 스타일]({environment:sassApiUrl}/themes#function-grid-theme)
+* [IgxInputGroupComponent 스타일]({environment:sassApiUrl}/themes#function-input-group-theme)
+* [IgxIconComponent 스타일]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxRippleDirective 스타일]({environment:sassApiUrl}/themes#function-ripple-theme)
+* [IgxButtonDirective 스타일]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxChipComponent 스타일]({environment:sassApiUrl}/themes#function-chip-theme)
 
 ### 추가 리소스
 <div class="divider--half"></div>

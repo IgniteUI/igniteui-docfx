@@ -52,7 +52,7 @@ This code demonstrates how to create a Ignite UI for Angular data chart with eac
 </igx-data-chart>
 ```
 
-### Additional Resources
+## Additional Resources
 
 -   [Data Chart Series Annotations](data-chart-series-annotations.md)
 -   [Value Overlay](data-chart-value-overlay.md)

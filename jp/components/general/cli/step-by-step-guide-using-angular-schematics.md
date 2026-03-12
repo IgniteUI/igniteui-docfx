@@ -6,6 +6,7 @@ _language: ja
 ---
 
 # Ignite UI for Angular Schematics を使用したステップ バイ ステップ ガイド
+
 利用可能なオプションでガイドを取得する場合、ステップバイステップ モードを初期化して新しいアプリケーションの作成およびセットアップ、同様に [Ignite UI Angular Schematics](getting-started-with-angular-schematics.md) で以前作成したプロジェクトを更新できます。
 
 Schematics コレクションを使用してガイドをアクティブにするには、以下のコマンドを実行します。
@@ -23,7 +24,7 @@ ng new --collection="@igniteui/angular-schematics"
     </a>
 </div>
 
-> [!Note] 
+> [!Note]
 > ステップ バイ ステップ モードは `Inquirer.js` に依存しています。[サポートされている端末](https://github.com/SBoudrias/Inquirer.js#support-os-terminals)を参照してください。
 
 
@@ -54,6 +55,7 @@ ng new --collection="@igniteui/angular-schematics"
 Ignite UI CLI は、プロジェクトに追加できる複数のコンポーネント テンプレート、およびより詳細なシナリオ テンプレートをサポートしています。このモードは、プロジェクトの作成が完了した後、または以下のコマンドを使用して既存のプロジェクト内でアクティブにできます。
 
 Schematics コレクションを使用してステップバイステップ モードをアクティブにするには、`component`(alias:`c`) schematic を実行します。
+
 ```bash
 ng g @igniteui/angular-schematics:component
 ```

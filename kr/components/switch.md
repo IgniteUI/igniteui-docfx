@@ -13,7 +13,7 @@ _language: kr
 
 <code-view style="height:200px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/switch-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/switch-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -80,11 +80,11 @@ The final result would be something like that:
     <iframe data-src='{environment:demosBaseUrl}/data-entries/switch-sample-2' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxSwitchComponent]({environment:angularApiUrl}/classes/igxswitchcomponent.html)
-* [IgxSwitchComponent Styles]({environment:sassApiUrl}/index.html#function-switch-theme)
+* [IgxSwitchComponent Styles]({environment:sassApiUrl}/themes#function-switch-theme)
 
 ###Additional Resources
 <div class="divider--half"></div>

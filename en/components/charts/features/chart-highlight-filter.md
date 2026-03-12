@@ -2,6 +2,7 @@
 title: Angular Chart Highlight Filter | Data Visualization | Infragistics
 _description: Infragistics' Angular Chart Highlight Filter
 _keywords: Angular Charts, Highlighting, Filtering, Infragistics
+_license: commercial
 mentionedTypes: ["CategoryChart", "XamDataChart", "Series", "HighlightedValuesDisplayMode"]
 namespace: Infragistics.Controls.Charts
 ---
@@ -85,9 +86,9 @@ HighlightedHighMemberPath, HighlightedLowMemberPath, HighlightedOpenMemberPath, 
 
 You can find more information about related chart features in these topics:
 
-*   [Chart Highlighting](chart-highlighting.md)
-*   [Chart Data Tooltip](chart-data-tooltip.md)
-*   [Chart Data Aggregations](chart-data-aggregations.md)
+- [Chart Highlighting](chart-highlighting.md)
+- [Chart Data Tooltip](chart-data-tooltip.md)
+- [Chart Data Aggregations](chart-data-aggregations.md)
 
 ## API References
 

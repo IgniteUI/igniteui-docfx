@@ -1,7 +1,8 @@
 ---
 title: Angular Tree Grid | 最速の Angular Tree テーブル | インフラジスティックス
 _description: Ignite UI for Angular のツリー グリッドは、階層データまたはフラット データを簡単に表示および操作するために使用されます。コーディングをほとんど行わずにデータをバインドできます。無料でお試しください。
-_keywords: angular tree grid, angular tree table, angular hierarchical tree grid コンポーネント, angular tree table コンポーネント, angular UI コンポーネント, igniteui for angular, インフラジスティックス
+_keywords: angular tree grid, angular tree table, angular tree grid コンポーネント, angular tree table コンポーネント, angular UI コンポーネント, igniteui for angular, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 
@@ -11,11 +12,11 @@ Ignite UI for Angular Tree Grid は、階層データまたはフラットな自
 
 ## Angular ツリー グリッドの例
 
-この例では、ユーザーが階層データを表示する方法を確認できます。フィルタリングとソートのオプション、ピン固定と非表示、行の選択、Excel と csv へのエクスポート、[スパークライン](../sparkline.md)コンポーネントを使用したセル テンプレートが含まれています。さらに、[Angular 改ページ](paging.md)を使用したカスタム改ページの例を見ることができます。
+この例では、ユーザーが階層データを表示する方法を確認できます。フィルタリングとソートのオプション、ピン固定と非表示、行の選択、Excel、CSV および PDF へのエクスポート、[スパークライン](../sparkline.md)コンポーネントを使用したセル テンプレートが含まれています。さらに、[Angular 改ページ](paging.md)を使用したカスタム改ページの例を見ることができます。
 
 <code-view style="height:850px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey" alt="Angular ツリー グリッドの例">
+           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey/" alt="Angular ツリー グリッドの例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -35,7 +36,7 @@ Ignite UI for Angular については、[はじめに](../general/getting-starte
 ```typescript
 // app.module.ts
 
-import { IgxTreeGridModule } from 'igniteui-angular';
+import { IgxTreeGridModule } from 'igniteui-angular/grids/tree-grid';
 // import { IgxTreeGridModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -53,7 +54,7 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IGX_TREE_GRID_DIRECTIVES } from 'igniteui-angular';
+import { IGX_TREE_GRID_DIRECTIVES } from 'igniteui-angular/grids/tree-grid';
 // import { IGX_TREE_GRID_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -94,6 +95,7 @@ Ignite UI for Angular Tree Grid モジュールまたはディレクティブを
 初期時のツリーグリッドは、すべてのノード レベルを展開して表示します。この動作は、[`expansionDepth`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#expansionDepth) プロパティを使用して設定できます。デフォルトの値は **Infinity** ですべてのノードが展開されます。初期時の展開の深さは、このプロパティを数値に設定して制御できます。たとえば、**0** はルート レベルのノードのみを表示し、**1** はルートレベルと子ノードを表示します。
 
 ### 子コレクション
+
 **child collection** オプションを使用して各データ オブジェクトは子コレクションを含み、親データ オブジェクトとして同じタイプの項目で生成します。これによりツリー グリッドの各レコードがその子への直接の参照を持つことができます。元のデータソースを含むツリー グリッドの [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) プロパティが階層が定義されたコレクションになります。
 
 このサンプルでは、コレクション ストラクチャを使用します。
@@ -195,6 +197,7 @@ IgxTreeGridComponent を階層にバインドするには、[`childDataKey`]({en
 このトピックのはじめにあるコードの結果は、[Angular ツリー グリッドの例](#angular-ツリー-グリッドの例)で確認できます。
 
 ### プライマリと外部キー
+
 **Primary and foreign keys** オプションを使用した際に各データオブジェクトはプライマリキーと外部キーを含みます。プライマリキーは現在のデータ オブジェクトの一意識別子、外部キーは親の一意識別子です。元のデータソースを含むツリー グリッドの [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) プロパティがフラットコレクションになります。
 
 以下は、主と外部キーの関係を定義したフラット コレクションを含むコンポーネントの例です。
@@ -261,7 +264,7 @@ export class MyComponent implements OnInit {
 
 <code-view style="height:450px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-primaryforeignkey" >
+           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-primaryforeignkey/" >
 <div class="divider--half"></div>
 
 ## パーシステンスとインテグレーション
@@ -282,7 +285,7 @@ export class MyComponent implements OnInit {
 
 ## スタイル設定
 
-Tree Grid は、[`Ignite UI for Angular テーマ ライブラリ`](../themes/sass/component-themes.md)でスタイルを設定できます。ツリー グリッドの [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme)  は、さまざまなプロパティを公開します。これにより、ツリーグリッドのすべての機能をカスタマイズできます。
+Tree Grid は、[`Ignite UI for Angular テーマ ライブラリ`](../themes/sass/component-themes.md)でスタイルを設定できます。ツリー グリッドの [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme)  は、さまざまなプロパティを公開します。これにより、ツリーグリッドのすべての機能をカスタマイズできます。
 
 ツリー グリッドのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが含まれる `index` ファイルをインポートする必要があります。
 
@@ -293,7 +296,7 @@ Tree Grid は、[`Ignite UI for Angular テーマ ライブラリ`](../themes/sa
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-次に、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張し、必要に応じてツリー グリッドをカスタマイズするために必要なパラメーターを受け取る新しいテーマを作成します。
+次に、[`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) を拡張し、必要に応じてツリー グリッドをカスタマイズするために必要なパラメーターを受け取る新しいテーマを作成します。
 
 >[!NOTE]
 >`sass` 階層グリッド固有の機能はありません。
@@ -314,12 +317,14 @@ $custom-theme: grid-theme(
 ```
 
 >[!NOTE]
->上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックをご覧ください。
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/palettes#function-palette) および [`color`]({environment:sassApiUrl}/palettes#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックをご覧ください。
 
 最後にコンポーネントのテーマを**含めます**。
 
 ```scss
-@include css-vars($custom-theme);
+:host {
+  @include tokens($custom-theme);
+}
 ```
 
 ### Angular ツリー グリッド スタイル設定のデモ
@@ -328,7 +333,7 @@ $custom-theme: grid-theme(
 <code-view style="height:600px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-style" alt="Angular ツリー グリッド スタイル設定のデモ">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-style/" alt="Angular ツリー グリッド スタイル設定のデモ">
 </code-view>
 
 >[!NOTE]
@@ -377,36 +382,38 @@ platformBrowserDynamic()
 
 <div class="divider--half"></div>
 
-* [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/#function-grid-theme)
-* [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
+- [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
+- [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
+- [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
+- [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+- [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxInputGroup テーマ]({environment:sassApiUrl}/index.html#function-input-group-theme)
-* [IgxChip テーマ]({environment:sassApiUrl}/index.html#function-chip-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
-* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-overlay-theme)
-* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-drop-down-theme)
-* [IgxCalendar テーマ]({environment:sassApiUrl}/index.html#function-calendar-theme)
-* [IgxSnackBar テーマ]({environment:sassApiUrl}/index.html#function-snackbar-theme)
-* [IgxBadge テーマ]({environment:sassApiUrl}/index.html#function-badge-theme)
+
+- [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxInputGroup テーマ]({environment:sassApiUrl}/themes#function-input-group-theme)
+- [IgxChip テーマ]({environment:sassApiUrl}/themes#function-chip-theme)
+- [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxOverlay テーマ]({environment:sassApiUrl}/themes#function-overlay-theme)
+- [IgxDropDown テーマ]({environment:sassApiUrl}/themes#function-drop-down-theme)
+- [IgxCalendar テーマ]({environment:sassApiUrl}/themes#function-calendar-theme)
+- [IgxSnackBar テーマ]({environment:sassApiUrl}/themes#function-snackbar-theme)
+- [IgxBadge テーマ]({environment:sassApiUrl}/themes#function-badge-theme)
 
 
 ## その他のリソース
 
 <div class="divider--half"></div>
 
-* [Grid サイズ変更](sizing.md)
-* [Data Grid](../grid/grid.md)
-* [行編集](row-editing.md)
+- [Grid サイズ変更](sizing.md)
+- [Data Grid](../grid/grid.md)
+- [行編集](row-editing.md)
+- [Ignite UI for Angular スキル](../ai/skills.md) - グリッド、データ操作、テーマ設定向けのエージェントのスキル
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

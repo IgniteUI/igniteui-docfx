@@ -2,6 +2,7 @@
 title: Angular 円チャート | データ可視化ツール | インフラジスティックス
 _description: インフラジスティックスの Angular 円チャートを使用して、分類データを表示するカラフルな円チャートを作成します。Ignite UI for Angular 円チャートの設定可能な要素について説明します。
 _keywords: Angular charts, pie chart, Ignite UI for Angular, Infragistics, data binding, slice selection, slice explosion, animation, Angular チャート, 円チャート, データ バインディング, スライス選択, スライス切り離し, アニメーション, インフラジスティックス
+_license: commercial
 mentionedTypes: ['XamPieChart','SliceSelectionMode','PieSliceOthersContext']
 _language: ja
 ---
@@ -167,16 +168,16 @@ Pie Chart コンポーネントの基本データに、小さい値を含む多�
 
 円チャートは、選択モードを 3 つサポートします。
 
--   Single - Single モードに設定すると、一度に 1 つのスライスのみ選択します。他のスライスを選択すると、最初に選択したスライスは選択解除され、新しいスライスが選択されます。
--   Multiple - Multiple モードに設定すると、一度に複数のスライスを選択します。スライスをクリックするとスライスが選択され、他のスライスをクリックすると、最初のスライスも、新しくクリックしたスライスも選択されます。
--   Manual - Manual モードに設定すると、選択は無効化されます。
+- Single - Single モードに設定すると、一度に 1 つのスライスのみ選択します。他のスライスを選択すると、最初に選択したスライスは選択解除され、新しいスライスが選択されます。
+- Multiple - Multiple モードに設定すると、一度に複数のスライスを選択します。スライスをクリックするとスライスが選択され、他のスライスをクリックすると、最初のスライスも、新しくクリックしたスライスも選択されます。
+- Manual - Manual モードに設定すると、選択は無効化されます。
 
 円チャートには、選択機能に関連する 4 つのイベントがあります。
 
--   SelectedItemChanging
--   SelectedItemChanged
--   SelectedItemsChanging
--   SelectedItemsChanged
+- SelectedItemChanging
+- SelectedItemChanged
+- SelectedItemsChanging
+- SelectedItemsChanged
 
 「Changing」で終わるイベントはキャンセル可能なイベントです。すなわち、イベント引数プロパティ `Cancel` を true に設定することで、スライスの選択を停止します。True に設定すると、関連付けられたプロパティは更新されず、その結果スライスは選択されません。この設定はたとえば、スライスのデータによって一定のスライスの選択を無効化する場合に使用します。
 

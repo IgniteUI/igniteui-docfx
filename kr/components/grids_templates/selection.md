@@ -44,7 +44,7 @@ _language: kr
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-cell-selection" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-cell-selection/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -53,7 +53,7 @@ _language: kr
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-multi-cell-selection/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -188,7 +188,7 @@ Ignite UI for Angular에서 행 선택은 해당 행의 모든 열 앞에 체크
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-selection" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-selection/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -197,7 +197,7 @@ Ignite UI for Angular에서 행 선택은 해당 행의 모든 열 앞에 체크
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-selection" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-selection/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -206,7 +206,7 @@ Ignite UI for Angular에서 행 선택은 해당 행의 모든 열 앞에 체크
 
 <code-view style="height:710px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-selection/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -221,7 +221,7 @@ Change the selection to see summaries of the currently selected range.
 
 <code-view style="height: 560px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-selection-custom-summaries" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-selection-custom-summaries/" >
 </code-view>
 
 }
@@ -409,7 +409,7 @@ public handleRowSelectionChange(args) {
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 @@if (igxName !== 'IgxTreeGrid') {* [IgxGridRow API]({environment:angularApiUrl}/classes/igxgridrow.html)}@@if (igxName === 'IgxTreeGrid') {* [IgxTreeGridRow API]({environment:angularApiUrl}/classes/igxtreegridrow.html)}
 * [IgxGridCell API]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameComponent 스타일]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ### 추가 리소스
 <div class="divider--half"></div>

@@ -14,7 +14,7 @@ Ignite UI for Angular [`IgxTreeGrid`]({environment:angularApiUrl}/classes/igxtre
 
 <code-view style="height:450px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-load-on-demand" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-load-on-demand/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -72,7 +72,7 @@ public loadChildren = (parentID: any, done: (children: any[]) => void) => {
 <div class="divider--half"></div>
 
 * [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [IgxGridComponent 스타일]({environment:sassApiUrl}/#function-grid-theme)
+* [IgxGridComponent 스타일]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ### 추가 리소스
 

@@ -2,6 +2,7 @@
 title: Angular Stacked Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Stacked Chart
 _keywords: Angular Charts, Stacked Chart, Stacked 100% Chart, Infragistics
+_license: commercial
 mentionedTypes: ["XamDataChart", "StackedAreaSeries", "Stacked100AreaSeries", "StackedBarSeries", "Stacked100BarSeries", "StackedColumnSeries", "Stacked100ColumnSeries", "StackedLineSeries", "Stacked100LineSeries", "StackedSplineSeries", "Stacked100SplineSeries", "StackedSplineAreaSeries", "Stacked100SplineAreaSeries", "Series"]
 namespace: Infragistics.Controls.Charts
 ---
@@ -207,11 +208,11 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 You can find more information about related chart types in these topics:
 
-*   [Area Chart](area-chart.md)
-*   [Bar Chart](bar-chart.md)
-*   [Column Chart](column-chart.md)
-*   [Line Chart](line-chart.md)
-*   [Spline Chart](spline-chart.md)
+- [Area Chart](area-chart.md)
+- [Bar Chart](bar-chart.md)
+- [Column Chart](column-chart.md)
+- [Line Chart](line-chart.md)
+- [Spline Chart](spline-chart.md)
 
 ## API References
 

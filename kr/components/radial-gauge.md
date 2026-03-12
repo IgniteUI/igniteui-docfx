@@ -31,8 +31,8 @@ The following sample demonstrates how setting multiple properties on the same ga
 
 When installing the gauge package, the core package must also be installed.
 
-*   **npm install --save igniteui-angular-core**
-*   **npm install --save igniteui-angular-gauges**
+- **npm install --save igniteui-angular-core**
+- **npm install --save igniteui-angular-gauges**
 
 <!-- end: Angular, React, WebComponents -->
 

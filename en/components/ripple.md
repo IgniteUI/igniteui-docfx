@@ -1,7 +1,8 @@
 ---
-title: Angular Ripple Directive – Ignite UI for Angular | Infragistics
+title: Angular Ripple Directive – Ignite UI for Angular | Infragistics | MIT license
 _description: With Ignite UI for Angular Ripple directive, developers can define an area which received a ripple animation effect for powerful UI enhancement.
 _keywords: Angular Ripple component, Angular Ripple Directive, Angular Ripple control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
+_license: MIT
 ---
 
 # Angular Ripple Directive Overview
@@ -14,7 +15,7 @@ _keywords: Angular Ripple component, Angular Ripple Directive, Angular Ripple co
 
 <code-view style="height: 100px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-5" alt="Angular Ripple Example">
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-5/" alt="Angular Ripple Example">
 </code-view>
 
 <p style="margin: 0;padding-top: 0.5rem">Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a class="no-external-icon mchNoDecorate trackCTA" target="_blank" href="https://www.infragistics.com/products/ignite-ui-angular/download" data-xd-ga-action="Download" data-xd-ga-label="Ignite UI for Angular">Download it for free.</a></p>
@@ -28,14 +29,14 @@ To get started with the Ignite UI for Angular Ripple directive, first you need t
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxRippleModule` in the **app.module.ts** file.
 
 ```typescript
 // app.module.ts
 
-import { IgxRippleModule } from 'igniteui-angular';
+import { IgxRippleModule } from 'igniteui-angular/directives';
 // import { IgxRippleModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -53,7 +54,8 @@ Alternatively, as of `16.0.0` you can import the `IgxRippleDirective` as standal
 ```typescript
 // home.component.ts
 
-import { IgxRippleDirective, IgxButtonDirective } from 'igniteui-angular';
+import { IgxRippleDirective, IgxButtonDirective } from 'igniteui-angular/directives';
+import { IgxButtonDirective } from 'igniteui-angular/button';
 // import { IgxRippleDirective, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -95,7 +97,7 @@ You can easily change the default ripple color using the `igxRipple`:
 
 <code-view style="height: 100px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-6" alt="Angular Ripple Example">
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-6/" alt="Angular Ripple Example">
 </code-view>
 
 ### Centered Ripple Effect
@@ -110,7 +112,7 @@ By default, the ripple effect starts from the position of the click event. You c
 
 <code-view style="height: 100px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-3" alt="Angular Ripple Example">
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-3/" alt="Angular Ripple Example">
 </code-view>
 
 ### Ripple Duration
@@ -125,7 +127,7 @@ We can use the [`igxRippleDuration`]({environment:angularApiUrl}/classes/igxripp
 
 <code-view style="height: 100px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-4" alt="Angular Ripple Example">
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-4/" alt="Angular Ripple Example">
 </code-view>
 
 ### Ripple Target
@@ -143,7 +145,7 @@ Notice that no matter whether you click on the parent or the child element, the 
 
 <code-view style="height: 350px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-2" alt="Angular Ripple Example">
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-sample-2/" alt="Angular Ripple Example">
 </code-view>
 
 > [!NOTE]
@@ -160,7 +162,7 @@ First, in order to use the functions exposed by the theme engine, we need to imp
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-You can easily create a new theme, that extends the [`ripple-theme`]({environment:sassApiUrl}/index.html#function-ripple-theme) and accepts the parameters, required to customize the ripple as desired.
+You can easily create a new theme, that extends the [`ripple-theme`]({environment:sassApiUrl}/themes#function-ripple-theme) and accepts the parameters, required to customize the ripple as desired.
 
 ```scss
 $custom-ripple-theme: ripple-theme(
@@ -171,7 +173,9 @@ $custom-ripple-theme: ripple-theme(
 The next step is to pass the custom ripple theme:
 
 ```scss
-@include css-vars($custom-ripple-theme);
+:host {
+  @include tokens($custom-ripple-theme);
+}
 ```
 
 > [!NOTE]
@@ -179,10 +183,10 @@ The next step is to pass the custom ripple theme:
 
 ### Demo
 
-<code-view style="height:200px" 
+<code-view style="height:200px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/ripple-styling" alt="Angular Ripple Example">
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/interactions/ripple-styling/" alt="Angular Ripple Example">
 </code-view>
 
 ## API References
@@ -190,7 +194,7 @@ The next step is to pass the custom ripple theme:
 <div class="divider--half"></div>
 
 - [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
-- [IgxRipple Styles]({environment:sassApiUrl}/index.html#function-ripple-theme)
+- [IgxRipple Styles]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ## Additional Resources
 

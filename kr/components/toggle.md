@@ -14,7 +14,7 @@ The [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) d
 
 <code-view style="height: 370px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/toggle" >
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle/" >
 </code-view>
 
 
@@ -79,7 +79,7 @@ If all went well, you should see the following in your browser:
 
 <code-view style="height: 370px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-1/" >
 </code-view>
 
 
@@ -141,7 +141,7 @@ The [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) u
 
 <code-view style="height: 370px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/toggle" >
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle/" >
 </code-view>
 
 
@@ -180,7 +180,7 @@ After these changes the toggle should work exactly in the same way.
 
 <code-view style="height: 370px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-2/" >
 </code-view>
 
 
@@ -218,7 +218,7 @@ If all went well, it will look like this:
 
 <code-view style="height: 370px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-3/" >
 </code-view>
 
 
@@ -237,7 +237,7 @@ This allows to provide the `outlet` templates variable as a setting to the toggl
 <custom-component #reference></custom-component>
 ```
 
-## API Summary
+## API References
 
 In this article we covered the details of how to use Toggle directive. We created a content which would possible to be hidden or shown by invoking programmatically methods which determine this behaviour.
 Furthermore we added another helping directive which controls automatically this same behaviour by giving it the appropriate toggle reference. In the end we have registered our [**igxToggle**]({environment:angularApiUrl}/classes/igxtoggledirective.html) directive in the **igxNavigationService** provider by giving it an ID, which we then provided to our helping **igxToggleAction** directive.

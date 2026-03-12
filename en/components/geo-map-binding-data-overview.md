@@ -2,6 +2,7 @@
 title: Angular Map | Data Visualization Tools | Data Binding | Infragistics
 _description: Use Infragistics'  Angular map to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps. View Ignite UI for Angular map demos!
 _keywords: Angular map, geo-spatial data, Ignite UI for Angular, Infragistics, data binding
+_license: commercial
 mentionedTypes: ['XamGeographicMap']
 ---
 
@@ -13,8 +14,8 @@ The Ignite UI for Angular map component is designed to display geo-spatial data 
 
 The following section list some of data source that you can bind in the geographic map component
 
--   [Binding Shape Files](geo-map-binding-shp-file.md)
--   [Binding JSON Files](geo-map-binding-data-json-points.md)
--   [Binding CSV Files](geo-map-binding-data-csv.md)
--   [Binding Data Models](geo-map-binding-data-model.md)
--   [Binding Multiple Sources](geo-map-binding-multiple-sources.md)
+- [Binding Shape Files](geo-map-binding-shp-file.md)
+- [Binding JSON Files](geo-map-binding-data-json-points.md)
+- [Binding CSV Files](geo-map-binding-data-csv.md)
+- [Binding Data Models](geo-map-binding-data-model.md)
+- [Binding Multiple Sources](geo-map-binding-multiple-sources.md)

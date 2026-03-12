@@ -1,10 +1,12 @@
 ---
-title: 拡張されたマテリアル アイコン
+title: 拡張されたマテリアル アイコン | MITライセンス
 _description: Ignite UI for Angular は、マテリアル アイコン セットを拡張して、デザイナーや開発者に幅広いアイコンを提供しています。 
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール、ネイティブ Angular コンポーネント ライブラリ, Angular Icon コンポーネント, Angular Icon コントロール, 拡張されたマテリアル アイコン
+_license: MIT
 ---
 
 # 拡張されたマテリアル アイコン
+
 <p class="highlight">Ignite UI for Angular は、マテリアル アイコン セットを拡張する素晴らしいアイコン セットを提供します。</p>
 
 <div class="sample-container loading" style="height: 700px">
@@ -25,7 +27,7 @@ npm install @igniteui/material-icons-extended
 
 ```typescript
 import { Component, OnInit } from '@angular/core';
-import { IgxIconService } from 'igniteui-angular';
+import { IgxIconService } from 'igniteui-angular/icon';
 // import { IgxIconService } from '@infragistics/igniteui-angular'; for licensed package
 import { github } from '@igniteui/material-icons-extended';
 // ...
@@ -72,11 +74,12 @@ export class SampleComponent implements OnInit {
 詳細とその他の使用方法については、[GitHub リポジトリ](https://github.com/IgniteUI/material-icons-extended)にアクセスしてください。
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 [`IgxIconService`]({environment:angularApiUrl}/classes/igxiconservice.html)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

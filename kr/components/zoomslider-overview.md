@@ -38,8 +38,8 @@ The ZoomSlider control provides zooming functionality to range-enabled controls.
 
 When installing the chart package, the core package must also be installed.
 
-*   **npm install --save igniteui-angular-core**
-*   **npm install --save igniteui-angular-charts**
+- **npm install --save igniteui-angular-core**
+- **npm install --save igniteui-angular-charts**
 
 <!-- end: Angular, React, WebComponents -->
 

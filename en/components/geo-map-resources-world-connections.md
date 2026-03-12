@@ -2,6 +2,7 @@
 title: Angular Map | World Connections | Data Source | Infragistics
 _description: Use Infragistics' Angular JavaScript map data utility to generate locations of airports, flight paths and geographic gridlines. View Ignite UI for Angular map demos!
 _keywords: Angular map, map data, Ignite UI for Angular, Infragistics
+_license: commercial
 mentionedTypes: ["XamGeographicMap"]
 ---
 
@@ -140,4 +141,4 @@ export default class WorldConnections {
 
 ## API References
 
-*   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html)
+- [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html)

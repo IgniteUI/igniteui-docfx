@@ -1,7 +1,8 @@
 ---
-title: Theming コンポーネント - ネイティブ Angular | Ignite UI for Angular
+title: Theming コンポーネント - ネイティブ Angular | Ignite UI for Angular | MITライセンス
 _description: Ignite UI for Angular テーマ コンポーネントは SASS によって開発されます。API は簡単で、単一のコンポーネント、複数のコンポーネント、またはスイート全体のスタイル変更を適用できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Theming コンポーネント, Angular Theming
+_license: MIT
 _language: ja
 ---
 

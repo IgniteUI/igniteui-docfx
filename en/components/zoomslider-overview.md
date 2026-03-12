@@ -2,6 +2,7 @@
 title: Angular ZoomSlider | Data Visualization Tools | Navigation | Zooming | DataChart | Data Binding | Infragistics
 _description: Use Infragistics' Angular zoom slider control to easily display a subset of data with two handles representing minimum and maximum values. Improve your data visualization with Ignite UI for Angular zoom slider!
 _keywords: zoom slider, Ignite UI for Angular, Infragistics, data chart
+_license: commercial
 mentionedTypes: ["ZoomSlider", "XamDataChart"]
 ---
 
@@ -85,5 +86,5 @@ You can find more information about charts in [Chart Features](charts/chart-feat
 
 The following is a list of API members mentioned in the above sections:
 
-*   [`IgxZoomSliderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxzoomslidercomponent.html)
-*   [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)
+- [`IgxZoomSliderComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxzoomslidercomponent.html)
+- [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)

@@ -1,7 +1,8 @@
 ---
-title: Bottom Navigation コンポーネント
+title: Bottom Navigation コンポーネント | MITライセンス
 _description: タブ付きのユーザー インターフェイスでタブを表示します。この UI コントロールはタブの外観および動作を管理します。
 _keywords: Angular Bottom Nav コンポーネント, Angular Bottom Navigation コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, Angular UI コンポーネント, ネイティブ Angular コンポーネント ライブラリ
+_license: MIT
 _language: ja
 ---
 
@@ -19,7 +20,7 @@ _language: ja
 
 <code-view style="height: 200px; width: 400px; border: 1px solid #D4D4D4;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-1" alt="Angular Bottom Navigation の例">
+           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-1/" alt="Angular Bottom Navigation の例">
 </code-view>
 
 
@@ -41,7 +42,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 ...
-import { IgxBottomNavModule } from 'igniteui-angular';
+import { IgxBottomNavModule } from 'igniteui-angular/bottom-nav';
 // import { IgxBottomNavModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -57,7 +58,8 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IGX_BOTTOM_NAV_DIRECTIVES, IgxIconComponent } from 'igniteui-angular';
+import { IGX_BOTTOM_NAV_DIRECTIVES } from 'igniteui-angular/bottom-nav';
+import { IgxIconComponent } from 'igniteui-angular/icon';
 // import { IGX_BOTTOM_NAV_DIRECTIVES, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -207,6 +209,7 @@ public booksList: object[] = [
     </igx-bottom-nav-item>
 </igx-bottom-nav>
 ```
+
 項目のヘッダー タグの間にアイコンとラベル付きのスパンを配置することに加えて、`igxBottomNavHeaderIcon` および `igxBottomNavHeaderLabel` ディレクティブもそれらに添付していることに気付いたと思います。これらのディレクティブはそれぞれの要素を示し、適切なスタイルを適用します。
 
 最後に、コンテンツのテンプレートの DIV および SPAN 要素に使用される CSS クラスをコンポーネントの CSS ファイルに追加します。
@@ -235,7 +238,7 @@ Bottom Navigation は以下のようになります。
 
 <code-view style="height: 350px; width: 300px; border: 1px solid #D4D4D4;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-2/" >
 </code-view>
 
 
@@ -377,13 +380,69 @@ export class TabbarRoutingModule { }
 
 <code-view style="height: 250px; width: 500px; border: 1px solid #D4D4D4;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-3/" >
 </code-view>
 
 
-## スタイル設定
+## スタイル
 
-タブのスタイル設定は、すべてのテーマ関数とコンポーネント ミックスインが存在する `index` ファイルをインポートする必要があります。
+### Bottom Nav テーマのプロパティ マップ
+
+プライマリ プロパティを変更すると、関連するすべての依存プロパティが自動的に更新され、変更が反映されます。
+
+<table>
+    <thead>
+        <tr>
+        <th>プライマリ プロパティ</th>
+        <th>依存プロパティ</th>
+        <th>説明</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td><strong>$background</strong></td>
+        <td>$label-color</td>
+        <td>アイドル状態に使用されるラベルの色</td>
+        </tr>
+        <tr>
+        <td><strong>$label-color</strong></td>
+        <td>$icon-color</td>
+        <td>アイドル状態に使用されるアイコンの色</td>
+        </tr>
+        <tr>
+        <td></td>
+        <td>$label-disabled-color</td>
+        <td>ラベルの無効な色</td>
+        </tr>
+        <tr>
+        <td><strong>$icon-color</strong></td>
+        <td>$label-color</td>
+        <td>アイドル状態に使用されるラベルの色</td>
+        </tr>
+        <tr>
+        <td><strong>$label-disabled-color</strong></td>
+        <td>$icon-disabled-color</td>
+        <td>アイコンの無効な色</td>
+        </tr>
+        <tr>
+        <td><strong>$icon-disabled-color</strong></td>
+        <td>$label-disabled-color</td>
+        <td>ラベルの無効な色</td>
+        </tr>
+        <tr>
+        <td><strong>$label-selected-color</strong></td>
+        <td>$icon-selected-color</td>
+        <td>選択状態に使用されるアイコンの色</td>
+        </tr>
+        <tr>
+        <td><strong>$icon-selected-color</strong></td>
+        <td>$label-selected-color</td>
+        <td>選択状態に使用されるラベルの色</td>
+        </tr>
+    </tbody>
+</table>
+
+タブのスタイル設定を始めるには、すべてのテーマ関数とコンポーネントのミックスインが存在する `index` ファイルをインポートする必要があります。
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -392,7 +451,7 @@ export class TabbarRoutingModule { }
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-次に、[`bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-bottom-nav-theme) を拡張する新しいテーマを作成し、タブグループのスタイルを設定できるさまざまなパラメーターを受け取ります。
+次に、[`bottom-nav-theme`]({environment:sassApiUrl}/themes#function-bottom-nav-theme) を拡張する新しいテーマを作成し、タブグループのスタイルを設定できるさまざまなパラメーターを受け取ります。
 
 ```scss
 $dark-bottom-nav: bottom-nav-theme(
@@ -402,9 +461,9 @@ $dark-bottom-nav: bottom-nav-theme(
 ```
 
 >[!NOTE]
->上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/index.html#function-palette) および [`color`]({environment:sassApiUrl}/index.html#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](themes/sass/palettes.md)のトピックをご覧ください。
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/palettes#function-palette) および [`color`]({environment:sassApiUrl}/palettes#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](themes/sass/palettes.md)のトピックをご覧ください。
 
-[`bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-bottom-nav-theme) は、tabs コンポーネントのスタイル設定で多くのパラメーターが利用できます。
+[`bottom-nav-theme`]({environment:sassApiUrl}/themes#function-bottom-nav-theme) は、tabs コンポーネントのスタイル設定で多くのパラメーターが利用できます。
 
 > [!NOTE]
 > 項目のコンテンツの一部として使用される追加コンポーネントをスタイルするには、それぞれのコンポーネントに固有の追加テーマを作成する必要があります。
@@ -412,7 +471,9 @@ $dark-bottom-nav: bottom-nav-theme(
 最後にコンポーネントのテーマをアプリケーションに**含めます**。
 
 ```scss
-@include css-vars($dark-bottom-nav);
+:host {
+    @include tokens($dark-bottom-nav);
+}
 ```
 
 ### デモ
@@ -421,26 +482,70 @@ $dark-bottom-nav: bottom-nav-theme(
 <code-view style="height: 350px; width: 300px; border: 1px solid #D4D4D4;"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-style" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-style/" >
 </code-view>
+
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して bottom navigation をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-bottom-nav`、`dark-bottom-nav`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[IgxBottomNav テーマ]({environment:sassApiUrl}/themes#function-bottom-nav-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-bottom-nav
+    class="!light-bottom-nav
+    ![--background:#011627]
+    ![--icon-selected-color:#FF8040] 
+    ![--label-selected-color:#FF8040]">
+    ...
+</igx-bottom-nav>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、bottom nav は次のようになります:
+
+<div class="sample-container loading" style="height:340px">
+    <iframe id="tabbar-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/tabbar-tailwind-style' style="height: 350px; width: 300px; border: 1px solid #D4D4D4;" seamless class="lazyload"></iframe>
+</div>
 
 <div class="divider--half"></div>
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
-* [IgxBottomNavComponent]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html)
-* [IgxBottomNavComponent スタイル]({environment:sassApiUrl}/index.html#function-bottom-nav-theme)
-* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+- [IgxBottomNavComponent]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html)
+- [IgxBottomNavComponent スタイル]({environment:sassApiUrl}/themes#function-bottom-nav-theme)
+- [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 
 ## テーマの依存関係
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
+
+- [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

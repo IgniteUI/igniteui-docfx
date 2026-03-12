@@ -13,7 +13,7 @@ _language: kr
 
 <code-view style="height: 2460px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/layout" >
+           iframe-src="{environment:demosBaseUrl}/layouts/layout/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -32,7 +32,7 @@ Use the [`igxFlex`]({environment:angularApiUrl}/classes/igxflexdirective.html) d
 <div class="divider--half"></div>
 
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxLayoutDirective]({environment:angularApiUrl}/classes/igxlayoutdirective.html)

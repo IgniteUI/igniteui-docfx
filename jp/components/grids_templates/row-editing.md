@@ -3,22 +3,26 @@
 title: Angular Data Grid での行編集 - Ignite UI for Angular
 _description: Angular Data Grid で行編集を有効にし、CRUD 操作のための強力な API が必要な場合、Ignite UI for Angular Data Grid 行編集コンポーネントをお試しください。
 _keywords: row editing, igniteui for angular, インフラジスティックス・ジャパン株式会社
+_license: commercial
 _language: ja
 ---
+
 }
 @@if(igxName!=='IgxGrid'){
 ---
 title: Angular @@igComponent での行編集 - Ignite UI for Angular
 _description: Angular @@igComponent で行編集を有効にし、CRUD 操作のための強力な API が必要な場合、Ignite UI for Angular Data Grid 行編集コンポーネントをお試しください。
 _keywords: row editing, igniteui for angular, インフラジスティックス・ジャパン株式会社
+_license: commercial
 _language: ja
 _canonicalLink: grid/row-editing
 ---
+
 }
 
 # Angular @@igComponent 行編集
 
-@@igComponent コンポーネントは、Angular CRUD 操作のためのデータ操作と強力な API を提供します。行をクリックして **Enter キー**を押すか、変更する行をダブルクリックします。 
+@@igComponent コンポーネントは、Angular CRUD 操作のためのデータ操作と強力な API を提供します。行をクリックして **Enter キー**を押すか、変更する行をダブルクリックします。
 
 ## Angular @@igComponent 行編集の例
 
@@ -28,7 +32,7 @@ _canonicalLink: grid/row-editing
 
 <code-view style="height:550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-row-editing" alt="Angular @@igComponent 行編集の例">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-row-editing/" alt="Angular @@igComponent 行編集の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -37,7 +41,7 @@ _canonicalLink: grid/row-editing
 
 <code-view style="height:590px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-row-edit" alt="Angular @@igComponent 行編集の例">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-row-edit/" alt="Angular @@igComponent 行編集の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -46,7 +50,7 @@ _canonicalLink: grid/row-editing
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-editing" alt="Angular @@igComponent 行編集の例">
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-editing/" alt="Angular @@igComponent 行編集の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -75,6 +79,7 @@ export class AppModule {}
 
 次に @@igComponent をバインドしたデータソースで定義し、[`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable) を true に設定してバインドします。
 @@if (igxName ==='IgxGrid') {
+
 ```html
 <igx-grid [data]="data" [primaryKey]="'ProductID'" width="100%" height="500px" [rowEditable]="true">
     <igx-column field="ProductID" header="Product ID" editable="false"></igx-column>
@@ -89,8 +94,10 @@ export class AppModule {}
     <igx-column field="Discontinued" header="Discontinued" [dataType]="'boolean'"></igx-column>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid [data]="data" [primaryKey]="EmployeID" [foreignKey]="PID"
                [rowEditable]="true" [rowSelection]="'multiple'" [moving]="true">
@@ -105,8 +112,10 @@ export class AppModule {}
     </igx-column>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid [data]="localdata" [autoGenerate]="false" [rowEditable]="true">
     <igx-column field="Artist" [editable]="true" [dataType]="'string'"></igx-column>
@@ -138,6 +147,7 @@ export class AppModule {}
     </igx-row-island>
 </igx-hierarchical-grid>
 ```
+
 }
 
 > [!NOTE]
@@ -147,10 +157,11 @@ export class AppModule {}
 > 各列の編集を有効にする必要はありません。@@igComponent で [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable) プロパティを使用するとプライマリ行以外 `field` プロパティを定義したすべての行が編集可能になります。特定の列の編集を無効にする場合、[`editable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable) 列の入力を false に設定します。
 
 @@if (igxName === 'IgxGrid') {
+
 ```typescript
 import { Component, ViewChild } from '@angular/core';
 import { data } from './data';
-import { IgxGridComponent } from 'igniteui-angular';
+import { IgxGridComponent } from 'igniteui-angular/grids/grid';
 // import { IgxGridComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -168,12 +179,14 @@ export class GridRowEditSampleComponent {
     }
 }
 ```
+
 }
 
 @@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IgxTreeGridComponent } from 'igniteui-angular';
+import { IgxTreeGridComponent } from 'igniteui-angular/grids/tree-grid';
 // import { IgxTreeGridComponent } from '@infragistics/igniteui-angular'; for licensed package
 import { FLAT_DATA } from './data';
 
@@ -201,11 +214,13 @@ export class TreeGridRowEditSampleComponent implements OnInit {
     }
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```typescript
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IgxRowIslandComponent, IgxHierarchicalGridComponent } from 'igniteui-angular';
+import { IgxRowIslandComponent, IgxHierarchicalGridComponent } from 'igniteui-angular/grids/hierarchical-grid';
 // import { IgxRowIslandComponent, IgxHierarchicalGridComponent } from '@infragistics/igniteui-angular'; for licensed package
 import { SINGERS } from './data';
 
@@ -229,6 +244,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
     }
 }
 ```
+
 }
 
 > [!NOTE]
@@ -289,24 +305,25 @@ export class HGridRowEditingSampleComponent implements OnInit {
 
 ```html
 <ng-template igxRowEditText let-rowChangesCount>
-	Changes: {{rowChangesCount}}
+ Changes: {{rowChangesCount}}
 </ng-template>
  ```
 
 ### ボタンのカスタマイズ
+
 `igxRowEditActionsDirective` を使用して行編集オーバーレイのボタンのカスタマイズが可能です。
 キーボード ナビゲーションにボタンを含める場合、各ボタンに `igxRowEditTabStopDirective` が必要です。
 
  ```html
  <ng-template igxRowEditActions let-endRowEdit>
-	<button igxButton igxRowEditTabStop (click)="endRowEdit(false)">Cancel</button>
-	<button igxButton igxRowEditTabStop (click)="endRowEdit(true)">Apply</button>
+ <button igxButton igxRowEditTabStop (click)="endRowEdit(false)">Cancel</button>
+ <button igxButton igxRowEditTabStop (click)="endRowEdit(true)">Apply</button>
 </ng-template>
  ```
 
 ## スタイル設定
 
-[Ignite UI for Angular テーマ ライブラリ](../themes/index.md)を使用して、行編集オーバーレイを大幅に変更できます。 
+[Ignite UI for Angular テーマ ライブラリ](../themes/index.md)を使用して、行編集オーバーレイを大幅に変更できます。
 行編集オーバーレイは複合要素です。UI は、他の 2 つのコンポーネントで構成されています。
     - コンテンツをレンダリングするための [`igx-banner`](../banner.md)
     - [`igx-button`](../button.md) はデフォルトのテンプレートでレンダリングされます (`[完了]` ボタンと `[キャンセル]` ボタンの場合)。
@@ -330,7 +347,7 @@ export class HGridRowEditingSampleComponent implements OnInit {
 
 #### テーマの定義
 
-行編集の背景にカスタムの [`banner テーマ`]({environment:sassApiUrl}/index.html#function-banner-theme)を定義して、定義済みのパレットの 1 つである `$purple-palette` を使用することができます。
+行編集の背景にカスタムの [`banner テーマ`]({environment:sassApiUrl}/themes#function-banner-theme)を定義して、定義済みのパレットの 1 つである `$purple-palette` を使用することができます。
 
 ```scss
 $banner-theme: banner-theme(
@@ -339,14 +356,16 @@ $banner-theme: banner-theme(
 );
 ```
 
-ここでは、色を生成するために `my-banner-palette` を [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) (テーマ ライブラリによって公開) と共に使用しています。
+ここでは、色を生成するために `my-banner-palette` を [`igx-color`]({environment:sassApiUrl}/palettes#function-color) (テーマ ライブラリによって公開) と共に使用しています。
 
 ### テーマを含む
 
-次に Sass `@include` ステートメントを使用してテーマを適用します。新しく定義された `$banner-theme` を [`css-vars mixin`]({environment:sassApiUrl}/index.html#mixin-css-vars) で渡します。
+次に Sass `@include` ステートメントを使用してテーマを適用します。新しく定義された `$banner-theme` を [`tokens mixin`]({environment:sassApiUrl}/themes#mixin-tokens) で渡します。
 
 ```scss
-@include css-vars($banner-theme);
+:host {
+  @include tokens($banner-theme);
+}
 ```
 
 ### コンポーネント スタイル
@@ -361,7 +380,7 @@ $banner-theme: banner-theme(
 
 :host {
   ::ng-deep {
-    @include css-vars($banner-theme);
+    @include tokens($banner-theme);
   }
 }
 ```
@@ -388,19 +407,19 @@ $banner-theme: banner-theme(
 </@@igSelector>
 ```
 
-カスタム ボタンを定義した後は、[`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme) を使用してスタイルを設定できます。[こちら](../button.md#スタイル設定)で `igx-button` のスタイリングについてさらに学ぶことができます。`[完了]` と `[キャンセル]` のカスタム テーマを作成できます。
+カスタム ボタンを定義した後は、[`flat-icon-button-theme`]({environment:sassApiUrl}/themes#function-flat-icon-button-theme) を使用してスタイルを設定できます。You can learn more about `igx-icon-button` styling in the [Icon Button Styling documentation](../icon-button.md#icon-button-styling).`[完了]` と `[キャンセル]` のカスタム テーマを作成できます。
 
 ```scss
 // custom.component.scss
 ...
 
-$button-theme: button-theme(
+$button-theme: flat-icon-button-theme(
   $palette: $purple-palette
 );
 
 ...
 .custom-buttons {
-  @include css-vars($button-theme);
+  @include tokens($button-theme);
 }
 ```
 
@@ -415,7 +434,7 @@ $button-theme: button-theme(
 <code-view style="height:560px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-row-edit-style" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-row-edit-style/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -426,7 +445,7 @@ $button-theme: button-theme(
 <code-view style="height:560px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-edit-style" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-edit-style/" >
 </code-view>
 
 }
@@ -437,7 +456,7 @@ $button-theme: button-theme(
 <code-view style="height:560px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-row-edit-style" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-row-edit-style/" >
 </code-view>
 
 }
@@ -448,34 +467,35 @@ $button-theme: button-theme(
 ## 既知の問題と制限
 
 - グリッドに `primaryKey` が設定されておらず、リモート データ シナリオが有効になっている場合 (ページング、ソート、フィルタリング、スクロール時に、グリッドに表示されるデータを取得するためのリモート サーバーへのリクエストがトリガーされる場合)、データ要求が完了すると、行は次の状態を失います:
-    * 行の選択
-    * 行の展開/縮小
-    * 行の編集
-    * 行のピン固定
+  - 行の選択
+  - 行の展開/縮小
+  - 行の編集
+  - 行のピン固定
 
 ## API リファレンス
 
-* [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable)
-* [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditEnter)
-* [onRowEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEdit)
-* [rowEditDone]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditDone)
-* [onRowEditCancel]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditCancel)
-* [endEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#endEdit)
-* [field]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field)
-* [editable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable)
-* [primaryKey]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primaryKey)
-* [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable)
+- [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditEnter)
+- [onRowEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEdit)
+- [rowEditDone]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditDone)
+- [onRowEditCancel]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditCancel)
+- [endEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#endEdit)
+- [field]({environment:angularApiUrl}/classes/igxcolumncomponent.html#field)
+- [editable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#editable)
+- [primaryKey]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primaryKey)
+- [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [igxGrid を使用して CRUD 操作の構築](../general/how-to/how-to-perform-crud.md)
-* [@@igComponent 概要](@@igMainTopic.md)
-* [@@igComponent 編集](editing.md)
-* [@@igComponent トランザクション](batch-editing.md)
+- [igxGrid を使用して CRUD 操作の構築](../general/how-to/how-to-perform-crud.md)
+- [@@igComponent 概要](@@igMainTopic.md)
+- [@@igComponent 編集](editing.md)
+- [@@igComponent トランザクション](batch-editing.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

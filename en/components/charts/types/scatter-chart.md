@@ -2,6 +2,7 @@
 title: Angular Scatter Chart | Data Visualization | Infragistics
 _description: Infragistics' Angular Scatter Chart
 _keywords: Angular Charts, Scatter Chart, Infragistics
+_license: commercial
 mentionedTypes: ["XamDataChart", "ScatterSeries", "ScatterLineSeries", "ScatterSplineSeries", "HighDensityScatterSeries", "ScatterAreaSeries", "ScatterContourSeries", "Series"]
 namespace: Infragistics.Controls.Charts
 ---
@@ -92,11 +93,11 @@ Angular Scatter Contour Chart draws colored contour lines based on a triangulati
 
 You can find more information about related chart types in these topics:
 
-*   [Area Chart](area-chart.md)
-*   [Bubble Chart](bubble-chart.md)
-*   [Line Chart](line-chart.md)
-*   [Spline Chart](spline-chart.md)
-*   [Shape Chart](shape-chart.md)
+- [Area Chart](area-chart.md)
+- [Bubble Chart](bubble-chart.md)
+- [Line Chart](line-chart.md)
+- [Spline Chart](spline-chart.md)
+- [Shape Chart](shape-chart.md)
 
 ## API References
 
