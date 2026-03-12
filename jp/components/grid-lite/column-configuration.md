@@ -13,14 +13,14 @@ _language: ja
 列は、グリッド内の列子コンポーネントを使用して宣言的に定義されます。`field` プロパティは、列識別子として機能するため、列に必須の唯一のプロパティです。グリッド行内の関連データをマッピングしてレンダリングするためにも使用されます。
 
 ```html
-<igc-grid-lite [data]="data">
-  <igc-grid-lite-column
+<igx-grid-lite [data]="data">
+  <igx-grid-lite-column
     field="account"
     header="Account Number"
     ...
-  ></igc-grid-lite-column>
-  <!-- Additional columns -->
-</igc-grid-lite>
+  ></igx-grid-lite-column>
+  <!-- 追加の列 -->
+</igx-grid-lite>
 ```
 
 ## データ ソースに基づく設定
@@ -35,17 +35,17 @@ const data: Record[] = [
 ```
 
 ```html
-<igc-grid-lite auto-generate [data]="data"></igc-grid-lite>
+<igx-grid-lite [autoGenerate]="true" [data]="data"></igx-grid-lite>
 ```
 
 前のスニペットでは、グリッドは次と同等の列を自動的に作成します:
 
 ```html
-<igc-grid-lite [data]="data">
-  <igc-grid-lite-column field="entryId" data-type="string"></igc-grid-lite-column>
-  <igc-grid-lite-column field="source" data-type="string"></igc-grid-lite-column>
-  <igc-grid-lite-column field="ts" data-type="number"></igc-grid-lite-column>
-</igc-grid-lite>
+<igx-grid-lite [data]="data">
+  <igx-grid-lite-column field="entryId" dataType="string"></igx-grid-lite-column>
+  <igx-grid-lite-column field="source" dataType="string"></igx-grid-lite-column>
+  <igx-grid-lite-column field="ts" dataType="number"></igx-grid-lite-column>
+</igx-grid-lite>
 ```
 
 追加のカスタマイズを行わずに一部のデータをすばやくレンダリングする場合に便利です。
@@ -64,7 +64,7 @@ const data: Record[] = [
 列の幅を変更するには、列の `width` プロパティを使用します。
 
 ```html
-<igc-grid-lite-column field="price" width="250px"></igc-grid-lite-column>
+<igx-grid-lite-column field="price" width="250px"></igx-grid-lite-column>
 ```
 
 このプロパティは<a href="https://developer.mozilla.org/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#数値、長さ、パーセント値" target="_blank">有効な CSS 長さ単位</a>を受け入れます.
@@ -74,7 +74,7 @@ const data: Record[] = [
 列の `hidden` プロパティを設定することで、列を非表示/表示できます。
 
 ```html
-<igc-grid-lite-column field="price" hidden></igc-grid-lite-column>
+<igx-grid-lite-column field="price" hidden></igx-grid-lite-column>
 ```
 
 ### 列のリサイズ
@@ -82,7 +82,7 @@ const data: Record[] = [
 Grid Lite コンポーネントの各列は、列要素の `resizable` プロパティを設定することで、サイズ変更可能に構成できます。
 
 ```html
-<igc-grid-lite-column field="price" resizable></igc-grid-lite-column>
+<igx-grid-lite-column field="price" resizable></igx-grid-lite-column>
 ```
 
 列がサイズ変更可能に設定されている場合、列ヘッダー右端をドラッグして幅を増減できます。リサイズ領域をダブルクリックすると、自動調整がトリガーされ、セルやヘッダーの最大コンテンツに合わせて幅が設定されます。

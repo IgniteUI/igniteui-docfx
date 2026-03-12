@@ -173,7 +173,9 @@ $custom-ripple-theme: ripple-theme(
 次に Ripple のカスタム テーマを渡します。
 
 ```scss
-@include css-vars($custom-ripple-theme);
+:host {
+  @include tokens($custom-ripple-theme);
+}
 ```
 
 > [!NOTE]

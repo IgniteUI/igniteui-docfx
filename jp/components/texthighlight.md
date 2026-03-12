@@ -378,9 +378,7 @@ $dark-highlight: highlight-theme(
 
 ```scss
 :host {
-  ::ng-deep {
-    @include css-vars($dark-highlight);
-  }
+  @include tokens($dark-highlight);
 }
 ```
 
@@ -418,7 +416,7 @@ $dark-highlight: highlight-theme(
 ```scss
 :host {
   ::ng-deep {
-    @include css-vars($dark-highlight);  
+    @include tokens($dark-highlight);  
     
     .custom-highlight {
       border: 1px solid #ffcd0f;

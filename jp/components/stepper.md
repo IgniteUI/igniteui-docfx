@@ -439,7 +439,9 @@ $stepper-theme: stepper-theme(
 最後にコンポーネントのテーマを含めます。
 
 ```scss
-@include css-vars($custom-stepper-theme);
+:host {
+    @include tokens($custom-stepper-theme);
+}
 ```
 
 ### デモ

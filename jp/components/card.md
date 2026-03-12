@@ -397,7 +397,9 @@ $colorful-card: card-theme(
 最後にコンポーネントのテーマをアプリケーションに**含めます**。
 
 ```scss
-@include css-vars($custom-card-theme);
+:host {
+    @include tokens($custom-card-theme);
+}
 ```
 
 以下のサンプルでは、カスタマイズした CSS 変数を使用したカード コンポーネントが、[`Ant`](https://ant.design/components/card?theme=light#card-demo-meta) デザイン システムのカードに視覚的に似たデザインを実現している様子を確認できます。
