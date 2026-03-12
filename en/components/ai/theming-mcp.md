@@ -292,7 +292,7 @@ $my-typography: typography(
 
 > _"Our design system specifies exact hex values for all 14 shades of our primary green. I'll paste the values — create a custom palette."_
 
-The AI will call `create_custom_palette` with `mode: "explicit"` for the primary color and auto-generate the rest. See [Palettes](./palettes.md) for more detail on shade generation.
+The AI will call `create_custom_palette` with `mode: "explicit"` for the primary color and auto-generate the rest. See [Palettes](../themes/palettes.md) for more detail on shade generation.
 
 ### Component-Level Customization
 
@@ -328,19 +328,19 @@ Ensure `igniteui-angular` and `igniteui-theming` are installed:
 ng add igniteui-angular
 ```
 
-Also confirm that `core()` is called before any other theming mixin in your `styles.scss`. See [Theming with Sass](./sass/index.md) for the correct file setup.
+Also confirm that `core()` is called before any other theming mixin in your `styles.scss`. See [Theming with Sass](../themes/sass/index.md) for the correct file setup.
 
 ## Additional Resources
 
 Related topics:
 
-- [Theming Overview](./index.md)
-- [Palettes](./palettes.md)
-- [Typography](./typography.md)
-- [Elevations](./elevations.md)
-- [Spacing](./spacing.md)
-- [Roundness](./roundness.md)
-- [Theming with Sass](./sass/index.md)
+- [Theming Overview](../themes/index.md)
+- [Palettes](../themes/palettes.md)
+- [Typography](../themes/typography.md)
+- [Elevations](../themes/elevations.md)
+- [Spacing](../themes/spacing.md)
+- [Roundness](../themes/roundness.md)
+- [Theming with Sass](../themes/sass/index.md)
 
 <div class="divider--half"></div>
 

@@ -516,7 +516,7 @@ $custom-column-actions-theme: column-actions-theme(
 As seen, the `column-actions-theme` only controls colors for the column actions container, but does not affect the buttons, checkboxes and the input-group inside of it. Let's say we want to style the buttons as well, so we will create a new button theme:
 
 ```scss
-$custom-button: button-theme(
+$custom-button: flat-button-theme(
   $foreground: #292826, 
   $disabled-foreground: rgba(255, 255, 255, .54)
 );
@@ -530,25 +530,27 @@ In this example we only changed the text-color of the flat buttons and the butto
 The last step is to **include** the component mixins, each with its respective theme:
 
 ```scss
-@include css-vars($custom-column-actions-theme);
-
-.igx-column-actions {
-  @include css-vars($custom-button);
+:host {
+  @include tokens($custom-column-actions-theme);
+  
+  .igx-column-actions {
+    @include tokens($custom-button);
+  }
 }
 ```
 
 >[!NOTE]
->We include the created **button-theme** within `.igx-column-actions`, so that only the column hiding buttons would be styled. Otherwise other buttons in the grid would be affected too.
+>We include the created **flat-button-theme** within `.igx-column-actions`, so that only the column hiding buttons would be styled. Otherwise other buttons in the grid would be affected too.
 >[!NOTE]
 >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep` for the components inside the column action component (buttons, checkboxes ...etc):
 
 ```scss
-@include css-vars($custom-column-actions-theme);
-
 :host {
+  @include tokens($custom-column-actions-theme);
+
   ::ng-deep {
     .igx-column-actions {
-      @include css-vars($custom-button);
+      @include tokens($custom-button);
     }
   }
 }

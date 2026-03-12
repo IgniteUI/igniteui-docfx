@@ -346,7 +346,9 @@ $custom-checkbox-theme: checkbox-theme(
 最後に、カスタム テーマをアプリケーションに**含めます**。
 
 ```scss
-@include css-vars($custom-checkbox-theme);
+:host {
+    @include tokens($custom-checkbox-theme);
+}
 ```
 
 以下のサンプルでは、カスタマイズした CSS 変数を使用したチェックボックス コンポーネントが、[`SAP UI5`](https://ui5.sap.com/#/entity/sap.m.CheckBox/sample/sap.m.sample.CheckBox) デザイン システムのチェックボックスに視覚的に似たデザインを実現している様子を確認できます。

@@ -217,7 +217,9 @@ $custom-radio-theme: radio-theme(
 最後に、カスタム テーマをアプリケーションに**含めます**。
 
 ```scss
-@include css-vars($custom-radio-theme);
+:host {
+  @include tokens($custom-radio-theme);
+}
 ```
 
 <code-view style="height: 300px"

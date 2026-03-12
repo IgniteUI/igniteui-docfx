@@ -626,7 +626,9 @@ $custom-chip-theme: chip-theme(
 最後に、カスタム テーマをアプリケーションに**含めます**。
 
 ```scss
-@include css-vars($custom-chip-theme);
+:host {
+  @include tokens($custom-chip-theme);
+}
 ```
 
 以下のサンプルでは、カスタマイズした CSS 変数を使用したチップ コンポーネントが、[`Ant`](https://ant.design/components/tag?theme=light#tag-demo-icon) デザイン システムのチップに視覚的に似たデザインを実現している様子を確認できます。
@@ -689,7 +691,7 @@ igx-chip {
 }
 ```
 
-または、ユニバーサル変数 `--igx-chip-size` を使用して、すべてのインスタンスをターゲットにすることもできます。
+または、ユニバーサル変数 `--ig-chip-size` を使用して、すべてのインスタンスをターゲットにすることもできます。
 
 ```html
 <div class="my-app">
@@ -699,7 +701,7 @@ igx-chip {
 
 ```scss
 .my-app {
-  --igx-chip-size: 50px;
+  --ig-chip-size: 50px;
 }
 ```
 

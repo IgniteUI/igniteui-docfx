@@ -834,7 +834,9 @@ Take a look at the [`list-theme`]({environment:sassApiUrl}/themes#function-list-
 The last step is to **include** the newly created themes.
 
 ```scss
-@include css-vars($my-list-theme);
+:host {
+  @include tokens($my-list-theme);
+}
 ```
 
 The result is the following:

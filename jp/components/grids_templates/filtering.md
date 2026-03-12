@@ -6,6 +6,7 @@ _keywords: angular フィルター, ignite ui for angular, インフラジステ
 _license: commercial
 _language: ja
 ---
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
@@ -15,6 +16,7 @@ _keywords: angular フィルター, ignite ui for angular, インフラジステ
 _license: commercial
 _language: ja
 ---
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
@@ -24,6 +26,7 @@ _keywords: angular フィルター, ignite ui for angular, インフラジステ
 _license: commercial
 _language: ja
 ---
+
 }
 
 # Angular @@igComponent フィルタリング
@@ -65,18 +68,22 @@ IgniteUI for [Angular @@igComponent コンポーネント](https://jp.infragisti
 フィルタリングが有効かどうか、およびどのフィルタリング モードを使用するかを指定するために、@@igComponent は次のブール プロパティを公開します - [`allowFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowFiltering)、[`allowAdvancedFiltering`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowAdvancedFiltering)、[`filterMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterMode) と [`filterable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable)。
 
 **[allowFiltering]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowFiltering)** プロパティを使用して、以下のオプションを指定できます:
+
 - **false** - 対応する列のフィルタリングが無効になります /デフォルト値/。
 - **true** - 対応する列のフィルタリングが有効になります。
 
 **[allowAdvancedFiltering]({environment:angularApiUrl}/classes/@@igTypeDoc.html#allowAdvancedFiltering)** プロパティを使用して、以下のオプションを指定できます:
+
 - **false** - 対応するグリッドのフィルタリングが無効になります /デフォルト値/。
 - **true** - 対応するグリッドのフィルタリングが有効になります。
 
 **[filterMode]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filterMode)** プロパティを使用して、以下のオプションを指定できます:
+
 - **quickFilter** - 簡易なフィルタリング UI /デフォルト値/。
 - **excelStyleFilter** - Excel のようなフィルタリング UI。
 
 **[filterable]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filterable)** プロパティを使用して、以下のオプションを指定できます:
+
 - **true** - 対応する列のフィルタリングが有効なになります /デフォルト値/。
 - **false** - 対応する列のフィルタリングが無効になります。
 
@@ -164,6 +171,7 @@ IgniteUI for [Angular @@igComponent コンポーネント](https://jp.infragisti
 - [`filter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filter) - 単一の列または複数の列をフィルターします。
 
 以下の 5 つのフィルタリング オペランド クラスが公開されます。
+
 - [`IgxFilteringOperand`]({environment:angularApiUrl}/classes/igxfilteringoperand.html): カスタムフィルタリング条件の定義時に継承できるベース フィルタリング オペランドです。
 - [`IgxBooleanFilteringOperand`]({environment:angularApiUrl}/classes/igxbooleanfilteringoperand.html) は、`boolean` 型のすべてのデフォルト フィルタリング条件を定義します。
 - [`IgxNumberFilteringOperand`]({environment:angularApiUrl}/classes/igxnumberfilteringoperand.html) は、`numeric` 型のすべてのデフォルト フィルタリング条件を定義します。
@@ -592,7 +600,7 @@ $custom-grid: grid-theme(
 );
 ```
 
-以下のように、`grid-theme` は、フィルタリング行とフィルタリングされているそれぞれの列ヘッダーの色のみを制御します。入力グループ、チップ、ボタンなど、フィルタリング行内には明らかに多くのコンポーネントがあります。スタイルの設定は、それぞれに個別のテーマを作成する必要があるため、新しい [`input-group-theme`]({environment:sassApiUrl}/themes#input-group-theme) と新しい [`button-theme`]({environment:sassApiUrl}/themes#button-theme) を作成します。
+以下のように、`grid-theme` は、フィルタリング行とフィルタリングされているそれぞれの列ヘッダーの色のみを制御します。入力グループ、チップ、ボタンなど、フィルタリング行内には明らかに多くのコンポーネントがあります。スタイルの設定は、それぞれに個別のテーマを作成する必要があるため、新しい [`input-group-theme`]({environment:sassApiUrl}/themes#input-group-theme) と新しい [`flat-button-theme`]({environment:sassApiUrl}/themes#flat-button-theme) を作成します。
 
 ```scss
 $dark-input-group: input-group-theme(
@@ -602,36 +610,38 @@ $dark-input-group: input-group-theme(
   $filled-text-color: #292826
 );
 
-$dark-button: button-theme(
-  $flat-background: #ffcd0f,
-  $flat-text-color: #292826,
-  $flat-hover-background: #292826,
-  $flat-hover-text-color: #ffcd0f
+$dark-button: flat-button-theme(
+  $background: #ffcd0f,
+  $foreground: #292826,
+  $hover-background: #292826,
+  $hover-foreground: #ffcd0f
 );
 ```
 
 >[!NOTE]
 >上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/palettes#function-palette) および [`color`]({environment:sassApiUrl}/palettes#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックをご覧ください。
 
-この例では、入力グループとボタンのパラメーターの一部のみを変更しましたが、[`input-group-theme`]({environment:sassApiUrl}/themes#function-input-group-theme) と [`button-theme`]({environment:sassApiUrl}/themes#function-button-theme) は、それぞれのスタイルを制御するためのより多くのパラメーターを提供します。
+この例では、入力グループとボタンのパラメーターの一部のみを変更しましたが、[`input-group-theme`]({environment:sassApiUrl}/themes#function-input-group-theme) と [`flat-button-theme`]({environment:sassApiUrl}/themes#function-flat-button-theme) は、それぞれのスタイルを制御するためのより多くのパラメーターを提供します。
 
 最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。また、入力のプレース ホルダーの色プロパティを設定します。
 
 ```scss
-@include css-vars($custom-grid);
+:host {
+@include tokens($custom-grid);
 
-.igx-grid__filtering-row {
-  @include css-vars($dark-button);
-  @include css-vars($dark-input-group);  
+    .igx-grid__filtering-row {
+        @include tokens($dark-button);
+        @include tokens($dark-input-group);  
 
-  .igx-input-group__input::placeholder {
-    color: #ffcd0f;
-  }
+        .igx-input-group__input::placeholder {
+            color: #ffcd0f;
+        }
+    }
 }
 ```
 
 >[!NOTE]
->作成した **button-theme** と **input-group-theme** を `.igx-grid__filtering-row` 内に含めて、フィルタリング行ボタンとその入力グループのみにスタイルを設定します。そうでない場合は、グリッド内の他のボタンと入力グループも影響を受けます。
+>作成した **flat-button-theme** と **input-group-theme** を `.igx-grid__filtering-row` 内に含めて、フィルタリング行ボタンとその入力グループのみにスタイルを設定します。そうでない場合は、グリッド内の他のボタンと入力グループも影響を受けます。
 
 >[!NOTE]
 >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
@@ -639,11 +649,11 @@ $dark-button: button-theme(
 ```scss
 :host {
   ::ng-deep {
-    @include css-vars($custom-grid);
+    @include tokens($custom-grid);
 
     .igx-grid__filtering-row {
-      @include css-vars($dark-button);
-      @include css-vars($dark-input-group)
+      @include tokens($dark-button);
+      @include tokens($dark-input-group)
 
       .igx-input-group__input::placeholder {
         color: #ffcd0f;
@@ -675,10 +685,14 @@ $dark-button: button-theme(
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
+<code-view style="height:650px"
+           no-theming
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-filtering-style/" >
 </code-view>
 
 }
+
 >[!NOTE]
 >このサンプルは、`Change Theme` (テーマの変更) から選択したグローバル テーマに影響を受けません。
 

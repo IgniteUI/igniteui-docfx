@@ -781,7 +781,9 @@ $custom-input-group: input-group-theme(
 最後に、新しく作成したテーマを含めます。
 
 ```scss
-@include css-vars($custom-input-group);
+:host {
+  @include tokens($custom-input-group);
+}
 ```
 
 以下のサンプルでは、カスタマイズした CSS 変数を使用した入力グループが、[`Carbon`](https://carbondesignsystem.com/components/text-input/usage/#live-demo) デザイン システムの入力グループに視覚的に似たデザインを実現している様子を確認できます。

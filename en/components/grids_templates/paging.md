@@ -223,7 +223,7 @@ $dark-paginator: paginator-theme(
 As seen, the `paginator-theme` only controls colors for the paging container, but does not affect the buttons in the pager UI. To style those buttons, let's create a new icon button theme:
 
 ```scss
-$dark-button: icon-button-theme(
+$dark-button: flat-icon-button-theme(
   $foreground: #d0ab23,
   $hover-foreground: #231c2c,
   $hover-background: #d0ab23,
@@ -239,10 +239,12 @@ $dark-button: icon-button-theme(
 The last step is to **include** the component mixins, each with its respective theme:
 
 ```scss
-@include css-vars($dark-paginator);
+:host {
+    @include tokens($dark-paginator);
 
-.igx-grid-paginator__pager {
-  @include css-vars($dark-button);
+    .igx-grid-paginator__pager {
+        @include tokens($dark-button);
+    }
 }
 ```
 
@@ -252,12 +254,12 @@ The last step is to **include** the component mixins, each with its respective t
 >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep` in order to style the components which are inside the paging container, like the button:
 
 ```scss
-@include css-vars($dark-paginator);
-
 :host {
+  @include tokens($dark-paginator);
+
   igx-paginator {
     ::ng-deep {
-      @include css-vars($dark-button);
+      @include tokens($dark-button);
     }
   }
 }

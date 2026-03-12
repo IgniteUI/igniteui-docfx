@@ -471,7 +471,9 @@ $dark-bottom-nav: bottom-nav-theme(
 最後にコンポーネントのテーマをアプリケーションに**含めます**。
 
 ```scss
-@include css-vars($dark-bottom-nav);
+:host {
+    @include tokens($dark-bottom-nav);
+}
 ```
 
 ### デモ

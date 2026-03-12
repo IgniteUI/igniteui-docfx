@@ -286,7 +286,9 @@ $custom-banner-theme: banner-theme(
 The last step is to pass the custom banner theme:
 
 ```scss
-@include css-vars($custom-banner-theme);
+:host {
+    @include tokens($custom-banner-theme);
+}
 ```
 
 <code-view style="height: 530px"

@@ -536,9 +536,11 @@ $custom-calendar-theme: calendar-theme(
 最後にカスタム テーマを渡します。
 
 ```scss
-@include css-vars($custom-date-range-theme);
-@include css-vars($custom-input-group-theme);
-@include css-vars($custom-calendar-theme);
+:host {
+  @include tokens($custom-date-range-theme);
+  @include tokens($custom-input-group-theme);
+  @include tokens($custom-calendar-theme);
+}
 ```
 
 >[!WARNING]

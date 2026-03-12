@@ -799,7 +799,9 @@ $custom-calendar-theme: calendar-theme(
 The last step is to pass the custom calendar theme:
 
 ```scss
- @include css-vars($custom-calendar-theme);
+:host {
+    @include tokens($custom-calendar-theme);
+}
 ```
 
 <code-view style="height:500px"

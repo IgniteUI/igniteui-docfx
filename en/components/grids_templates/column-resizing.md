@@ -343,7 +343,9 @@ $custom-grid-theme: grid-theme(
 The last step is to **include** the component mixins with its respective theme:
 
 ```scss
-@include css-vars($custom-grid-theme);
+:host {
+  @include tokens($custom-grid-theme);
+}
 ```
 
 ### Demo

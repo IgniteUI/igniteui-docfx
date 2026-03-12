@@ -327,10 +327,12 @@ $custom-navbar-theme: navbar-theme(
 >[!NOTE]
 >上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/palettes#function-palette) および [`color`]({environment:sassApiUrl}/palettes#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](themes/sass/palettes.md)のトピックをご覧ください。
 
-最後に、新しく作成されたテーマを `css-vars` ミックスインに渡します。
+最後に、新しく作成されたテーマを `tokens` ミックスインに渡します。
 
 ```scss
-@include css-vars($custom-navbar-theme);
+:host {
+  @include tokens($custom-navbar-theme);
+}
 ```
 
 ### デモ
