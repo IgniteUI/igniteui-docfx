@@ -286,11 +286,11 @@ import {
     ...
     IgxColumnActionsComponent 
 } from 'igniteui-angular/grids/core';
-// import { ..., IgxColumnActionsModule } from '@infragistics/igniteui-angular'; for licensed package
+// import { ..., IgxColumnActionsComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
-    imports: [..., IgxColumnActionsModule],
+    imports: [..., IgxColumnActionsComponent],
 })
 export class AppModule {}
 ```
@@ -395,7 +395,7 @@ We can also allow the user to choose the display order of the columns in the col
 - **Alphabetical** (order the columns alphabetically)
 - **DisplayOrder** (order the columns according to the way they are displayed in the @@igComponent)
 
-Let's create a couple of nicely designed radio buttons for our options! We just have to go ahead and get the [**IgxRadio**](../radio-button.md) module.
+Let's create a couple of nicely designed radio buttons for our options! We just have to go ahead and get the [**IgxRadio**](../radio-button.md) component.
 
 ```typescript
 // app.module.ts
@@ -403,13 +403,13 @@ Let's create a couple of nicely designed radio buttons for our options! We just 
 ...
 import {
     ...
-    IgxRadioModule    
+    IgxRadioComponent    
 } from 'igniteui-angular/radio';
-// import { ..., IgxRadioModule } from '@infragistics/igniteui-angular'; for licensed package
+// import { ..., IgxRadioComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
-    imports: [..., IgxRadioModule],    
+    imports: [..., IgxRadioComponent],    
 })
 export class AppModule {}
 ```

@@ -286,11 +286,11 @@ import {
     ...
     IgxColumnActionsComponent 
 } from 'igniteui-angular/grids/core';
-// import { ..., IgxColumnActionsModule } from '@infragistics/igniteui-angular'; for licensed package
+// import { ..., IgxColumnActionsComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
-    imports: [..., IgxColumnActionsModule],
+    imports: [..., IgxColumnActionsComponent],
 })
 export class AppModule {}
 ```
@@ -403,13 +403,13 @@ export class AppModule {}
 ...
 import {
     ...
-    IgxRadioModule    
+    IgxRadioComponent    
 } from 'igniteui-angular/radio';
-// import { ..., IgxRadioModule } from '@infragistics/igniteui-angular'; for licensed package
+// import { ..., IgxRadioComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
-    imports: [..., IgxRadioModule],    
+    imports: [..., IgxRadioComponent],    
 })
 export class AppModule {}
 ```
