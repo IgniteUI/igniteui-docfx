@@ -29,7 +29,7 @@ Angular はカスタム要素を<a href="https://custom-elements-everywhere.com/
 
 ## インストールとセットアップ
 
-Grid Lite を Angular アプリケーションに追加するには、npm からパッケージをインストールします。
+アプリケーションで Grid Lite を使用するには、エントリ ポイント `igniteui-angular/grids/lite` を通じて `igniteui-angular` から直接インポートできます。ただし、UI を提供する `igniteui-grid-lite` パッケージもインストールする必要があります。IgxGridLiteComponent は Angular バインディング (イベント、テンプレート、DI、変更検出、パイプ) を提供し、視覚的なグリッド ライト UI は `igniteui-grid-lite` によってレンダリングされます。両方をインストールすることで、`igniteui-grid-lite` の完全な UI を活用しながら、グリッド ライトが Angular でネイティブに動作することを保証します。
 
 ```shell
 npm install igniteui-grid-lite
@@ -40,22 +40,20 @@ npm install igniteui-grid-lite
 ```typescript
 // app.component.ts
 
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { IgcGridLite } from 'igniteui-grid-lite';
-
-IgcGridLite.register();
+import { Component } from '@angular/core';
+import { IgxGridLiteComponent, IgxGridLiteColumnComponent } from 'igniteui-angular/grids/lite';
 
 @Component({
   ...
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  imports: [IgxGridLiteComponent, IgxGridLiteColumnComponent],
   template: `
-    <main>
-      <igc-grid-lite [data]="products">
-        <igc-grid-lite-column field="id" header="ID" data-type="number"></igc-grid-lite-column>
-        <igc-grid-lite-column field="name" header="Name"></igc-grid-lite-column>
+    <div>
+      <igx-grid-lite [data]="products">
+        <igx-grid-lite-column field="id" header="ID" dataType="number"></igx-grid-lite-column>
+        <igx-grid-lite-column field="name" header="Name"></igx-grid-lite-column>
         <!-- Additional columns -->
-      </igc-grid-lite>
-    </main>
+      </igx-grid-lite>
+    </div>
   `
 })
 export class AppComponent {

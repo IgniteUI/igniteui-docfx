@@ -59,6 +59,71 @@ ng update @angular/cli
 
 例: 6.2.4 から 7.1.0 にアップデートする場合、[6.x .. から] セクションから始めて変更を適用していきます。
 
+## 21.0.x から 21.1.x の場合
+
+バージョン 21.1.0 では、Sass テーマ フレームワークの廃止予定の `css-vars` ミックスインの代わりに使用できる新しい `tokens` ミックスインが付属しています。表面的には外観的な変更ですが、新しい `tokens` ミックスインは、すべての Ignite UI フレームワークで機能する汎用的なグローバル コンポーネント テーマ トークンを生成します。`css-vars` ミックスインは現在廃止されており、将来のバージョンで削除される予定です。そのため、できるだけ早く新しい `tokens` ミックスインに切り替えることをお勧めします。
+
+`tokens` ミックスインは、汎用的な `--ig-*` フォールバック チェーンとローカル トークン参照の適切な書き換えを使用して、`global` または `scoped` モードでコンポーネントの CSS 変数トークンを生成します。
+
+**グローバル モード** (デフォルト) - ユニバーサル `--ig-{component}-{property}` トークンを出力します。ローカル `var()` 参照はグローバルな同等のものに書き換えられるため、派生値 (例: `adaptive-contrast`) は任意のスコープで正しく解決されます。サイズ可能な式はスキップされるため、代わりに具体的な値を渡してください。
+
+```scss
+// 入力:
+@include tokens(avatar-theme($background: red));
+
+// 出力:
+:root {
+  --ig-avatar-background: red;
+  /* ... 残りのアバター プロパティ ... */
+}
+```
+
+**スコープ モード** - フォールバック チェーンを持つコンポーネント スコープ変数 (`--{property}`) を出力します: 構成されたプレフィックス (`--igx-*`) -> ユニバーサル (`--ig-*`) -> スキーマ デフォルト。スタイルシート ルートから呼び出されると、テーマの `selector` がルールの作成に使用されます。セレクター内から呼び出されると、現在のセレクターとコンポーネント セレクターの両方が変数を受け取ります。基本的に、これは現在廃止されている `css-vars` ミックスインと同じ結果を生成します。
+
+```scss
+// 入力 (ルートから):
+@include tokens(avatar-theme($background: red), $mode: 'scoped');
+
+// 出力:
+igx-avatar {
+  --background: var(--igx-avatar-background, var(--ig-avatar-background, red));
+  /* ... 残りのアバター プロパティ ... */
+}
+```
+
+```scss
+// 入力 (セレクター内から):
+.my-theme {
+  @include tokens(avatar-theme($background: red), $mode: 'scoped');
+}
+
+// 出力:
+.my-theme,
+.my-theme igx-avatar {
+  --background: var(--igx-avatar-background, var(--ig-avatar-background, red));
+  /* ... */
+}
+```
+
+> [!NOTE]
+> スコープ モードでは、適切な変数スコープのコンポーネント セレクターを決定するために、生成されたテーマ マップの `selector` プロパティが必要です。ミックスインがスタイルシートのルートから呼び出された場合、生成されたルールはテーマの内部 `selector` 値を使用します。セレクター内から呼び出された場合、そのセレクターとコンポーネント セレクターの両方が変数を受け取ります。
+
+```scss
+// グローバル オーバーライド:
+:root {
+  @include tokens(avatar-theme($background: orange));
+}
+// 結果: --ig-avatar-background: orange;
+
+// スコープ消費 (明示的なオーバーライドなし):
+@include tokens(avatar-theme($schema: $schema), $mode: 'scoped');
+// 結果: --background は var(--igx-avatar-background, var(--ig-avatar-background, #000)) を通じて解決され、
+//       --ig-avatar-background からグローバル オレンジ値を取得します。
+```
+
+> [!IMPORTANT]
+> **グローバル オーバーライドはスコープ モードに流れ込みます。** スコープ変数は `--ig-*` トークンにフォールバックするため、`:root` でグローバル トークンを設定すると、すべてのスコープ インスタンスに伝播されます。
+
 ## 20.x から 21.0.x の場合
 
 ### マルチ エントリ ポイントのサポート

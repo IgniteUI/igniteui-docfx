@@ -481,7 +481,9 @@ $custom-theme: navdrawer-theme(
 最後にコンポーネントのテーマをアプリケーションに**含めます**。
 
 ```scss
-@include css-vars($custom-theme);
+:host {
+  @include tokens($custom-theme);
+}
 ```
 
 >[!NOTE]
@@ -490,7 +492,7 @@ $custom-theme: navdrawer-theme(
 ```scss
 :host {
   ::ng-deep { 
-    @include css-vars($custom-theme);
+    @include tokens($custom-theme);
   }
 }
 ```

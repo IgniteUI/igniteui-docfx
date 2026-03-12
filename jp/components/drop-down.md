@@ -636,11 +636,11 @@ $custom-drop-down-theme: drop-down-theme(
 );
 ```
 
-最後に、カスタム ドロップダウン テーマをクラスまたは要素セレクターに渡します。
+最後に、カスタム ドロップダウン テーマを渡します。
 
 ```scss
-.drop-down__scroll-container {
-  @include css-vars($custom-drop-down-theme);
+:host {
+  @include tokens($custom-drop-down-theme);
 }
 ```
 

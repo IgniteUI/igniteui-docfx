@@ -18,6 +18,14 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 
 ## **21.0.0 (January 2026)**
 
+### Enhancements
+
+### igniteui-angular-charts
+
+Added OthersCategoryBrush and OthersCategoryOutline to DataPieChart and ProportionalCategoryAngleAxis
+
+### General
+
 - Angular 21 support.
 
 ## **20.2.1 (December 2025)**

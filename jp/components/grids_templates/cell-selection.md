@@ -6,6 +6,7 @@ _keywords: データ選択, igniteui for angular, インフラジスティック
 _license: commercial
 _language: ja
 ---
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
@@ -15,6 +16,7 @@ _keywords: データ選択, igniteui for angular, infragistics
 _license: commercial
 _language: ja
 ---
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
@@ -24,6 +26,7 @@ _keywords: データ選択, igniteui for angular, infragistics
 _license: commercial
 _language: ja
 ---
+
 }
 
 # Angular セル選択
@@ -81,6 +84,7 @@ _language: ja
 - マウスでクリックしてドラッグすることで、連続した複数セルの選択が可能です。
 
 @@if (igxName === 'IgxGrid') {
+
 #### デモ
 
 
@@ -92,6 +96,7 @@ _language: ja
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 #### デモ
 
 
@@ -191,62 +196,62 @@ this.grid1.selectRange(range);
 
 1. 3 つの異なる単一セルが選択されている場合:
 
-```
-expectedData = [
-    { CompanyName: 'Infragistics' },
-    { Name: 'Michael Langdon' },
-    { ParentID: 147 }
-];
-```
+    ```
+    expectedData = [
+        { CompanyName: 'Infragistics' },
+        { Name: 'Michael Langdon' },
+        { ParentID: 147 }
+    ];
+    ```
 
 2. 1 列から 3 つのセルが選択されている場合:
 
-```
-expectedData = [
-    { Address: 'Obere Str. 57'},
-    { Address: 'Avda. de la Constitución 2222'},
-    { Address: 'Mataderos 2312'}
-];
-```
+    ```
+    expectedData = [
+        { Address: 'Obere Str. 57'},
+        { Address: 'Avda. de la Constitución 2222'},
+        { Address: 'Mataderos 2312'}
+    ];
+    ```
 
 3. 1 行 3 列から 3 つのセルをマウスドラッグで選択した場合:
 
-```
-expectedData = [
-    { Address: 'Avda. de la Constitución 2222', City: 'México D.F.', ContactTitle: 'Owner' }
-];
-```
+    ```
+    expectedData = [
+        { Address: 'Avda. de la Constitución 2222', City: 'México D.F.', ContactTitle: 'Owner' }
+    ];
+    ```
 
 4. 2 行 3 列から 3 つのセルをマウスドラッグで選択した場合:
 
-```
-expectedData = [
-    { ContactTitle: 'Sales Agent', Address: 'Cerrito 333', City: 'Buenos Aires'},
-    { ContactTitle: 'Marketing Manager', Address: 'Sierras de Granada 9993', City: 'México D.F.'}
-];
-```
+    ```
+    expectedData = [
+        { ContactTitle: 'Sales Agent', Address: 'Cerrito 333', City: 'Buenos Aires'},
+        { ContactTitle: 'Marketing Manager', Address: 'Sierras de Granada 9993', City: 'México D.F.'}
+    ];
+    ```
 
 5. 2 つの異なる範囲が選択されている場合:
 
-```
-expectedData = [
-    { ContactName: 'Martín Sommer', ContactTitle: 'Owner'},
-    { ContactName: 'Laurence Lebihan', ContactTitle: 'Owner'},
-    { Address: '23 Tsawassen Blvd.', City: 'Tsawassen'},
-    { Address: 'Fauntleroy Circus', City: 'London'}
-];
-```
+    ```
+    expectedData = [
+        { ContactName: 'Martín Sommer', ContactTitle: 'Owner'},
+        { ContactName: 'Laurence Lebihan', ContactTitle: 'Owner'},
+        { Address: '23 Tsawassen Blvd.', City: 'Tsawassen'},
+        { Address: 'Fauntleroy Circus', City: 'London'}
+    ];
+    ```
 
 6. 2 つの重複範囲が選択されている場合、形式は次のようになります。
 
-```
-expectedData = [
-    { ContactName: 'Diego Roel', ContactTitle: 'Accounting Manager', Address: 'C/ Moralzarzal, 86'},
-    { ContactName: 'Martine Rancé', ContactTitle: 'Assistant Sales Agent', Address: '184, chaussée de Tournai', City: 'Lille'},
-    { ContactName: 'Maria Larsson', ContactTitle: 'Owner', Address: 'Åkergatan 24', City: 'Bräcke'},
-    { ContactTitle: 'Marketing Manager', Address: 'Berliner Platz 43', City: 'München'}
-];
-```
+    ```
+    expectedData = [
+        { ContactName: 'Diego Roel', ContactTitle: 'Accounting Manager', Address: 'C/ Moralzarzal, 86'},
+        { ContactName: 'Martine Rancé', ContactTitle: 'Assistant Sales Agent', Address: '184, chaussée de Tournai', City: 'Lille'},
+        { ContactName: 'Maria Larsson', ContactTitle: 'Owner', Address: 'Åkergatan 24', City: 'Bräcke'},
+        { ContactTitle: 'Marketing Manager', Address: 'Berliner Platz 43', City: 'München'}
+    ];
+    ```
 
 @@if (igxName === 'IgxGrid') {
 > [!NOTE]
@@ -323,12 +328,15 @@ $custom-grid-theme: grid-theme(
 次にコンポーネントのスタイルにミックスインを含め (アプリ スタイルにすることも可能)、@@igSelector がデフォルトのテーマの代わりに新しく作成されたテーマを使用するようになります。
 
 ```scss
-@include css-vars($custom-grid-theme);
+:host {
+  @include tokens($custom-grid-theme);
+}
 ```
 
 カスタム テーマを適用すると、選択したグリッドセルが選択した色で強調表示されます。
 
 @@if (igxName === 'IgxGrid'){
+
 ### デモ
 
 
@@ -341,6 +349,7 @@ $custom-grid-theme: grid-theme(
 }
 
 @@if (igxName === 'IgxHierarchicalGrid'){
+
 ### デモ
 
 <code-view style="height:620px"
@@ -353,6 +362,7 @@ $custom-grid-theme: grid-theme(
 
 
 @@if (igxName === 'IgxTreeGrid'){
+
 ### デモ
 
 <code-view style="height:620px"

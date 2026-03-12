@@ -15,6 +15,7 @@ _language: ja
 ### テンプレート駆動で構成する
 
 Angular Forms 検証ディレクティブは、`IgxColumn` で直接動作するよう拡張されています。同じ検証が `igx-column` で宣言的に設定される属性として利用できます。以下の検証は追加設定なしでサポートされます。
+
 - required
 - min
 - max
@@ -565,6 +566,7 @@ public stateMessage(cell: CellType) {
 ```
 
 }
+
 ### クロス フィールドの例
 
 @@if (igxName === 'IgxGrid') {
@@ -619,10 +621,10 @@ public stateMessage(cell: CellType) {
 
 ### スタイルを含める
 
-エラーの色を変更するには、css 変数 `--igx-error-500` を使用します。
+エラーの色を変更するには、css 変数 `--ig-error-500` を使用します。
 
 ```scss
---igx-error-500: 34, 80%, 63%;
+--ig-error-500: 34, 80%, 63%;
 ```
 
 ### カスタム テンプレート

@@ -1,4 +1,12 @@
-﻿- name: 概要
+﻿- name: AI 支援開発
+  header: true
+- name: Ignite UI for Angular スキル
+  href: ai/skills.md
+  new: true
+- name: Theming MCP
+  href: ai/theming-mcp.md
+  new: true
+- name: 概要
   header: true
   sortable: true
   _language: "ja"
@@ -1162,7 +1170,7 @@
   href: display-density.md
 - name: スペーシング
   href: themes/spacing.md
-  new: true
+  new: false
 - name: Sass
   new: false
   items:
@@ -1216,7 +1224,7 @@
       items:
       - name: Tailwind カスタム クラスの使用
         href: themes/misc/tailwind-classes.md
-        new: true
+        new: false
       - name: 印刷スタイル
         href: themes/misc/printing-styles.md
         new: false
