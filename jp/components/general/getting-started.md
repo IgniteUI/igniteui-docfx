@@ -9,7 +9,7 @@ _language: ja
 
 [`Ignite UI for Angular`](https://github.com/IgniteUI/igniteui-angular) は、マテリアルベース UI ウィジェット、コンポーネント & Figma UI キットでインフラジスティックス Angular のディレクティブをサポートします。デスクトップ ブラウザー向けアプリ、高パフォーマンスな HTML5 や JavaScript アプリ、Google の Angular フレームワークを対象にしたプログレッシブ ウェブアプリ (PWA) を作成できます。
 
-Ignite UI for Angular はデュアルライセンス モデルで提供され、使用するコンポーネント、モジュール、ディレクティブ、サービスに応じて商用ライセンスまたはオープンソース ライセンスが適用されます。詳細については、[Ignite UI のライセンス](./ignite-ui-licensing.md)と[オープン ソースとプレミアム](./open-source-vs-premium.md)のトピックを参照してください。
+Ignite UI for Angular はデュアルライセンス モデルで提供され、使用するコンポーネント、モジュール、ディレクティブ、サービスに応じて商用ライセンスまたはオープン ソース ライセンスが適用されます。詳細については、[Ignite UI のライセンス](./ignite-ui-licensing.md)と[オープン ソースとプレミアム](./open-source-vs-premium.md)のトピックを参照してください。
 
 ## 前提条件
 
@@ -18,7 +18,7 @@ Ignite UI for Angular はデュアルライセンス モデルで提供され、
 
 <div>
     <div style="display:inline-block;width:45%;text-align:center;">
-      <img src="../../images/general/nodejs.svg"
+      <img src="../../images/general/nodejs.svg" alt="NodeJS"
            style="display:flex;max-height:100px;margin:auto auto 20px auto;" />
       <a target="_blank" href="https://nodejs.org/en/download/" class="no-external-icon"
          style="color:white;background-color:#09f;text-decoration:none;font-weight:700;font-size:16px;padding: 5px 15px 5px 15px;">
@@ -26,7 +26,7 @@ Ignite UI for Angular はデュアルライセンス モデルで提供され、
       </a>
     </div>
     <div style="display:inline-block;width:45%;text-align:center;">
-      <img src="../../images/general/vs-code.svg"
+      <img src="../../images/general/vs-code.svg" alt="Visual Studio Code"
            style="display:flex;max-height:100px;margin:auto auto 20px auto;" />
       <a target="_blank" href="https://code.visualstudio.com/download" class="no-external-icon"
          style="color:white;background-color:#09f;text-decoration:none;font-weight:700;font-size:16px;padding: 5px 15px 5px 15px;">
@@ -68,7 +68,7 @@ ng add igniteui-angular
 
 プロジェクトに追加したい Ignite UI コンポーネントとして、以下が考えられます。
 
-- Grid Lite - オープンソース
+- Grid Lite - オープン ソース
 
 [Grid Lite コンポーネント](../grid-lite/overview.md)は、MIT ライセンスで利用できる最小限の機能セットを提供し、軽量で高速なデータ表示を必要とする幅広いプロジェクトに適しています。これは、エンタープライズ グリッドの複雑さを避けつつ、高速で軽量なデータ表示を必要とする開発者向けに設計されています。商用版 `IgxGrid` と似た API を持つため、アップグレードも容易です。
 
@@ -102,13 +102,15 @@ ng g @igniteui/angular-schematics:upgrade-packages
 ig upgrade-packages
 ```
 
-Schematic はプロジェクトのパッケージの依存関係を切り替え、ソース参照を更新します。[まだセットアップされていない場合、NPM レジストリへのログインが要求されます](ignite-ui-licensing.md#プライベート-npm-フィードを使用するための環境設定方法)。
+Schematic はプロジェクトのパッケージの依存関係を切り替え、ソース参照を更新します。
+[まだセットアップされていない場合、NPM レジストリへのログインが要求されます](ignite-ui-licensing.md#プライベート-npm-フィードを使用するための環境設定方法)。
 
 #### 新しいセットアップで npm レジストリにログイン
 
 上記の方法は、Ignite UI for Angular トライアル版パッケージが既にインストールされているシナリオのみを対象としています。プロジェクトの新しいセットアップを実行する場合、または Ignite UI for Angular を使用する場合は、以下のガイダンスに従ってください。
 
 次の方法で[プライベート npm フィード環境の正しいセットアップを実行する](ignite-ui-licensing.md#プライベート-npm-フィードを使用するための環境設定方法)ことが重要です:
+
 - プライベート レジストリの有効なセットアップを確認します。
 - トライアル版以外のユーザー アカウントとパスワードを指定して npm を使用してプライベート フィードにログインします。
 
@@ -125,7 +127,7 @@ npm i -g @igniteui/angular-schematics
 または
 
 ```cmd
-npm install -g igniteui-cli 
+npm install -g igniteui-cli
 ```
 
 [Ignite UI CLI を使用したガイド付きエクスペリエンス](cli/step-by-step-guide-using-cli.md)または [Ignite UI for Angular Schematics](cli/step-by-step-guide-using-angular-schematics.md) は、構成したアプリケーションをブートストラップする最も簡単な方法です。
@@ -148,7 +150,7 @@ ig
 <div style="display:inline-block;">
     <a style="background: url(../../images/general/buildCLIapp.gif); display:flex; justify-content:center; width: 80vw; max-width:540px; min-height:315px;"
        href="https://youtu.be/QK_NsdtdA70" target="_blank">
-        <img src="../../images/general/play.svg" style="vertical-align: middle;" />
+        <img src="../../images/general/play.svg" alt="Play Video" style="vertical-align: middle;" />
     </a>
     <p style="text-align:center;">はじめての Ignite UI CLI アプリ開発</p>
 </div>
@@ -281,7 +283,7 @@ ng serve
 
 最終的な結果は以下のようになります。
 
-<img class="responsive-img"  src="../../images/general/igniteui-project.png" />
+<img class="responsive-img" src="../../images/general/igniteui-project.png" alt="Ignite UI Project" />
 
 ## API リファレンス
 
@@ -290,10 +292,17 @@ ng serve
 - [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 - [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 
+## AI 支援開発
+
+Ignite UI for Angular には**エージェントのスキル**が付属しています。これは、AI コーディング アシスタント (GitHub Copilot、Cursor、Windsurf、Claude、JetBrains AI など) にライブラリの使用方法を教える構造化された知識ファイルです。スキルには、コンポーネント、データ グリッド、グリッド データ操作、テーマ設定が含まれます。
+
+詳細については、[Ignite UI for Angular スキル](../ai/skills.md)トピックを参照してください。
+
 ## その他のリソース
 
 <div class="divider--half"></div>
 
+- [Ignite UI for Angular スキル](../ai/skills.md)
 - [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli)
 - [Ignite UI CLI コマンド](https://github.com/IgniteUI/igniteui-cli/wiki#available-commands)
 - [Grid の概要](../grid/grid.md)

@@ -15,7 +15,7 @@ In this example, you can see how users can display hierarchical data. We have in
 
 <code-view style="height:850px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey" alt="Angular tree grid example">
+           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey/" alt="Angular tree grid example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -263,7 +263,7 @@ And here is the final result:
 
 <code-view style="height:450px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-primaryforeignkey" >
+           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-primaryforeignkey/" >
 <div class="divider--half"></div>
 
 ## Persistence and Integration
@@ -321,7 +321,9 @@ $custom-theme: grid-theme(
 The last step is to **include** the component theme in our application.
 
 ```scss
-@include css-vars($custom-theme);
+:host {
+  @include tokens($custom-theme);
+}
 ```
 
 ### Angular Tree Grid Styling Demo
@@ -406,6 +408,7 @@ platformBrowserDynamic()
 - [Grid Sizing](sizing.md)
 - [Data Grid](../grid/grid.md)
 - [Row Editing](row-editing.md)
+- [Ignite UI for Angular Skills](../ai/skills.md) — Agent Skills for grids, data operations, and theming
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

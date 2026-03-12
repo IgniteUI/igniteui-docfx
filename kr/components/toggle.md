@@ -237,7 +237,7 @@ This allows to provide the `outlet` templates variable as a setting to the toggl
 <custom-component #reference></custom-component>
 ```
 
-## API Summary
+## API References
 
 In this article we covered the details of how to use Toggle directive. We created a content which would possible to be hidden or shown by invoking programmatically methods which determine this behaviour.
 Furthermore we added another helping directive which controls automatically this same behaviour by giving it the appropriate toggle reference. In the end we have registered our [**igxToggle**]({environment:angularApiUrl}/classes/igxtoggledirective.html) directive in the **igxNavigationService** provider by giving it an ID, which we then provided to our helping **igxToggleAction** directive.

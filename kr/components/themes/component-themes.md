@@ -210,7 +210,7 @@ As a bonus, any Ignite UI for Angular theme built with the `$igx-legacy-support`
 
 <div class="divider--half"></div>
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Learn how to configure a global theme:

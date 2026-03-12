@@ -1,14 +1,4 @@
-trigger:
-  branches:
-    include:
-      - vnext
-      - master
-  paths:
-    exclude:
-      - '**/jp/*'
-      - '**/kr/*'
-
-# This pipeline is meant to build specific branches for deployment. It's not meant to be a part of PR validation. Ensure that this pipeline is reserved for deployment purposes.
+trigger: none
 pr: none
 
 name: $(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)

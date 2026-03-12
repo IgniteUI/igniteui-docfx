@@ -36,7 +36,7 @@ _language: kr
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-row-editing" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-row-editing/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -45,7 +45,7 @@ _language: kr
 
 <code-view style="height:590px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-row-edit" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-row-edit/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -54,7 +54,7 @@ _language: kr
    
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-editing" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-row-editing/" >
 </code-view>
 
 <div class="divider--half"></div>

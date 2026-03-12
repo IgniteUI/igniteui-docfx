@@ -407,7 +407,7 @@ $custom-chips-theme: chip-theme(
 
 ```scss
 $custom-grid-schema: extend(
-  $light-grid,
+  map.get('grid', $light-material-schema),
   (
     group-row-background: (color:('secondary', 100)),
     group-row-selected-background: (color:('primary', 400)),
@@ -443,8 +443,10 @@ $custom-theme: grid-theme(
 テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。
 
 ```scss
-@include css-vars($custom-theme);
-@include css-vars($custom-chips-theme);
+:host {
+  @include tokens($custom-theme);
+  @include tokens($custom-chips-theme);
+}
 ```
 
 ### スコープ コンポーネント テーマ
@@ -459,11 +461,11 @@ $custom-theme: grid-theme(
 この例では、チップ テーマに `::ng-deep` を使用する必要があります。
 
 ```scss
-@include css-vars($custom-theme);
-
 :host {
+  @include tokens($custom-theme);
+
   ::ng-deep {
-    @include chip($custom-chips-theme);
+    @include tokens($custom-chips-theme);
   }
 }
 ```

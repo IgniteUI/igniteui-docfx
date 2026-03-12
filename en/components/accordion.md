@@ -294,7 +294,9 @@ $custom-panel-theme: expansion-panel-theme(
 The last step is to include the component's theme.
 
 ```scss
-@include css-vars($custom-panel-theme);
+:host {
+    @include tokens($custom-panel-theme);
+}
 ```
 
 ### Demo

@@ -213,7 +213,7 @@ If the sample is configured properly, a list of members should be displayed and 
 </code-view>
 
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
@@ -223,7 +223,7 @@ If the sample is configured properly, a list of members should be displayed and 
 * [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 * [Type]({environment:angularApiUrl}/enums/type.html)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.

@@ -77,7 +77,9 @@ $card-theme: card-theme(
     $resting-shadow: elevation(10)
 );
 
-@include css-vars($card-theme);
+:host {
+  @include tokens($card-theme);
+}
 ```
 
 `elevation` 関数を利用せずに、単純なボック スシャドウを渡すこともできます。
@@ -88,7 +90,7 @@ $card-theme: card-theme(
 );
 
 .my-card {
-  @include css-vars($card-theme);
+  @include tokens($card-theme);
 }
 ```
 
@@ -124,5 +126,6 @@ $elevations: (
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
+
 - [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 - [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

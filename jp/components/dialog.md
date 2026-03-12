@@ -338,7 +338,9 @@ $custom-button: contained-button-theme(
 最後にコンポーネントのテーマを**含めます**。
 
 ```scss
-@include css-vars($my-dialog-theme);
+:host {
+    @include tokens($my-dialog-theme);
+}
 ```
 
 >[!NOTE]
@@ -347,7 +349,7 @@ $custom-button: contained-button-theme(
 ```scss
 :host {
   ::ng-deep {
-    @include css-vars($my-dialog-theme);
+    @include tokens($my-dialog-theme);
   }
 }
 ```
@@ -361,7 +363,7 @@ $custom-button: contained-button-theme(
 
 <div class="divider--half"></div>
 
-## API まとめ
+## API リファレンス
 
 <div class="divider--half"></div>
 

@@ -433,7 +433,9 @@ $custom-tree-theme: tree-theme(
 最後にコンポーネントのテーマを含めます。
 
 ```scss
-@include css-vars($custom-tree-theme);
+:host {
+  @include tokens($custom-tree-theme);
+}
 ```
 
 ### デモ

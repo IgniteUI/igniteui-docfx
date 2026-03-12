@@ -386,7 +386,9 @@ $custom-switch-theme: switch-theme(
 最後に、カスタム テーマをアプリケーションに**含めます**。
 
 ```scss
-@include css-vars($custom-switch-theme);
+:host {
+  @include tokens($custom-switch-theme);
+}
 ```
 
 以下のサンプルでは、カスタマイズした CSS 変数を使用したスイッチ コンポーネントが、[`SAP UI5`](https://ui5.sap.com/#/entity/sap.m.Switch/sample/sap.m.sample.Switch) デザイン システムのスイッチに視覚的に似たデザインを実現している様子を確認できます。

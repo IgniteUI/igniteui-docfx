@@ -327,10 +327,12 @@ $custom-navbar-theme: navbar-theme(
 >[!NOTE]
 >上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/palettes#function-palette) および [`color`]({environment:sassApiUrl}/palettes#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](themes/sass/palettes.md)のトピックをご覧ください。
 
-最後に、新しく作成されたテーマを `css-vars` ミックスインに渡します。
+最後に、新しく作成されたテーマを `tokens` ミックスインに渡します。
 
 ```scss
-@include css-vars($custom-navbar-theme);
+:host {
+  @include tokens($custom-navbar-theme);
+}
 ```
 
 ### デモ
@@ -377,7 +379,7 @@ $custom-navbar-theme: navbar-theme(
 最終的に、navbar は次のようになります:
 
 <div class="sample-container loading" style="height:120px">
-    <iframe id="navbar-tailwind-style-iframe" data-src='{environment:demosBaseUrl}/menus/navbar-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="navbar-tailwind-style-iframe" data-src='{environment:demosBaseUrl}/menus/navbar-tailwind-style/' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
 ## API リファレンス
@@ -399,7 +401,7 @@ $custom-navbar-theme: navbar-theme(
 - [IgxIconComponent テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
 - [IgxButtonComponent テーマ]({environment:sassApiUrl}/themes#function-button-theme)
 
-### その他のリソース
+## その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。

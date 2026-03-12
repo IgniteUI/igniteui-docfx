@@ -6,6 +6,7 @@ _keywords: column headers, ignite ui for angular, infragistics
 _license: commercial
 _language: ja
 ---
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
@@ -15,6 +16,7 @@ _keywords: column headers, ignite ui for angular, infragistics
 _license: commercial
 _language: ja
 ---
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
@@ -24,6 +26,7 @@ _keywords: 列ヘッダー, ignite ui for angular, infragistics
 _license: commercial
 _language: ja
 ---
+
 }
 
 # Angular @@igComponent 複数列ヘッダーの概要
@@ -157,7 +160,8 @@ _language: ja
 
 }
 
-各 [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) は、[`移動`](column-moving.md)、[`ピン固定`](column-pinning.md) と [`非表示`](column-hiding.md) をサポートします。
+各 [`igx-column-group`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) は、[`移動`](column-moving.md)、[`ピン固定`](column-pinning.md)と[`非表示`](column-hiding.md)をサポートします。
+
 > [!NOTE]
 > 列セットと列グループがある場合、ピン固定は列の一番上の親レベルでのみ可能です。ネストした `column groups` や `columns` のピン固定はできません。<br />
 > 複数列ヘッダーでのピン固定を使用すると、グループ全体がピン固定されることに注意してください。<br />
@@ -308,10 +312,13 @@ $custom-theme: grid-theme(
 最後の手順は、それぞれのテーマを持つコンポーネント ミックスインを**含める**ことです。
 
 ```scss
-@include css-vars($custom-theme);
+:host {
+  @include tokens($custom-theme);
+}
 ```
 
 @@if (igxName === 'IgxGrid') {
+
 ### デモ
 
 
@@ -323,6 +330,7 @@ $custom-theme: grid-theme(
 
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ### デモ
 
 
@@ -334,6 +342,7 @@ $custom-theme: grid-theme(
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ### デモ
 
 

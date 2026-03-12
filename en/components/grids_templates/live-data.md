@@ -32,7 +32,7 @@ Feed the same data into the [Line Chart](../charts/types/line-chart.md) to exper
 
 <code-view style="height:700px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs?theme-switch=false" alt="Angular Live-data Update Example">
+           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs?theme-switch=false/" alt="Angular Live-data Update Example">
 </code-view>
 
 
@@ -82,7 +82,7 @@ As you can see the igxGrid component handles with ease the high-frequency update
 
 <code-view style="height:700px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs-dock-manager/grid-finjs-dock-manager" alt="Angular Live-data Update Example with a service">
+           iframe-src="{environment:lobDemosBaseUrl}/grid-finjs-dock-manager/grid-finjs-dock-manager/" alt="Angular Live-data Update Example with a service">
 </code-view>
 
 ### Start the hub connection
@@ -163,7 +163,7 @@ Our community is active and always welcoming to new ideas.
 
 <code-view style="height:700px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs" alt="Angular Live-data Update Example">
+           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs/" alt="Angular Live-data Update Example">
 </code-view>
 
 

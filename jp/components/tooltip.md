@@ -36,7 +36,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 ...
-import { IgxTooltipModule } from 'igniteui-angular/directives/tooltip';
+import { IgxTooltipModule } from 'igniteui-angular/tooltip';
 // import { IgxTooltipModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -46,7 +46,7 @@ import { IgxTooltipModule } from 'igniteui-angular/directives/tooltip';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxTooltipDirective` をスタンドアロンの依存関係としてインポートすることも、[`IGX_TOOLTIP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/directives/tooltip/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxTooltipDirective` をスタンドアロンの依存関係としてインポートすることも、[`IGX_TOOLTIP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/directives/src/directives/tooltip/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
@@ -287,13 +287,25 @@ export class AppModule {}
 ツールチップを表示または非表示にするまでの時間を制御する場合は、[`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブの [`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showDelay) と [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hideDelay) プロパティを使用します。両プロパティは型 **number** でミリセカンドでタイムスパンを取得できます。
 
 > [!NOTE]
-> [`IgxTooltipTargetDirective`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) の組み込み UI インタラクションは、[`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showDelay) および [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hideDelay) プロパティの値を考慮して動作します。一方で、API からツールチップを表示または非表示にする場合や [`IgxTooltipDirective`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) の API を使用する場合、[`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showDelay) や [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hideDelay) は考慮されません。必要な場合、ロジックはアプリケーションの仕様を手動で実装する必要があります。
+> [`IgxTooltipTargetDirective`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) の組み込み UI インタラクションは、[`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) および [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) プロパティの値を考慮して動作します。一方で、API からツールチップを表示または非表示にする場合や [`IgxTooltipDirective`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) の API を使用する場合、[`showDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showdelay) や [`hideDelay`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidedelay) は考慮されません。必要な場合、ロジックはアプリケーションの仕様を手動で実装する必要があります。
+
+### トリガー
+
+デフォルトでは、[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) は [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) 上にホバーしている間のみトリガーされます。ただし、[`showTriggers`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showtriggers) および [`hideTriggers`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidetriggers) プロパティを使用してこの動作を変更できます。これらのプロパティにより、[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) が表示および非表示になるタイミングを制御できます。これらのプロパティは `click`、`focus`、`keypress` などのイベント名を値として受け取り、さまざまなシナリオで [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) をトリガーできます。
+
+<code-view style="height:540px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-triggers/">
+</code-view>
+
+> [!NOTE]
+> [`showTriggers`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#showtriggers) および [`hideTriggers`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hidetriggers) の設定は、[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) 自体ではなく [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) とのインタラクション時にのみ有効です。[`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) のデフォルトのイベント トリガーは `pointerenter` および `pointerleave` です。
 
 ### オーバーレイ構成
 
 [`igxTooltip`]({environment:angularApiUrl}/classes/igxtooltipdirective.html) と [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) の両ディレクティブは、内部的に [`IgxOverlayService`](overlay.md) を使用してツールチップ要素を開閉します。
 
-[`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは [`positionSettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#positionSettings) プロパティを公開しており、ツールチップのアニメーション、UI 上での配置などをカスタマイズできます。未設定の場合はデフォルトの配置設定が適用されます。
+[`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは [`positionSettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#positionsettings) プロパティを公開しており、ツールチップのアニメーション、UI 上での配置などをカスタマイズできます。未設定の場合はデフォルトの配置設定が適用されます。
 
 さらに詳細なカスタマイズには、[`igxToggleAction`]({environment:angularApiUrl}/classes/igxtoggleactiondirective.html) から継承された [`overlaySettings`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#overlaysettings) プロパティを使用します。
 
@@ -338,7 +350,7 @@ public overlaySettings: OverlaySettings = {
 <div #tooltipRef="tooltip" igxTooltip>Her name is Madelyn James</div>
 ```
 
-デフォルトの閉じるボタンをカスタマイズするには、[`closeButtonTemplate`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#closebuttontemplate) プロパティを使用します。
+デフォルトの閉じるボタンをカスタマイズするには、[`closeButtonTemplate`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#closetemplate) プロパティを使用します。
 
 ```html
 
@@ -402,7 +414,7 @@ public overlaySettings: OverlaySettings = {
 例:
 
 ```ts
-export class CustomStrategy extends TooltipPositioningStrategy {
+export class CustomStrategy extends TooltipPositionStrategy {
   constructor(settings?: PositionSettings) {
     super(settings);
   }
@@ -476,7 +488,9 @@ $dark-tooltip: tooltip-theme(
 最後にコンポーネントのテーマをアプリケーションに**含めます**。
 
 ```scss
-@include css-vars($dark-tooltip);
+:host {
+  @include tokens($dark-tooltip);
+}
 ```
 
 スタイル設定されたツールチップは以下のようになります。
@@ -526,7 +540,7 @@ $dark-tooltip: tooltip-theme(
 最終的に、tooltip は次のようになります:
 
 <div class="sample-container loading" style="height:100px">
-    <iframe id="tooltip-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/interactions/tooltip-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="tooltip-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/interactions/tooltip-tailwind-style/' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
 <div class="divider--half"></div>
@@ -551,7 +565,7 @@ $dark-tooltip: tooltip-theme(
 
 | 制限                          | 説明|
 | ----------------------------------- | ---------- |
-| カスタム配置ストラテジと矢印 | [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは `TooltipPositionStrategy` を使用してツールチップと矢印を配置します。カスタムの [`positionStrategy`]({environment:angularApiUrl}/interfaces/overlaysettings.html#positioningStrategy) を使用する場合、かつ [`hasArrow`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hasarrow) を `true` に設定する場合、そのカスタム ストラテジは `TooltipPositionStrategy` を継承している必要があります。そうでない場合、矢印は表示されません。|
+| カスタム配置ストラテジと矢印 | [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) ディレクティブは [`TooltipPositionStrategy`]({environment:angularApiUrl}/classes/tooltippositionstrategy.html) を使用してツールチップと矢印を配置します。カスタムの [`positionStrategy`]({environment:angularApiUrl}/interfaces/overlaysettings.html#positioningStrategy) を使用する場合、かつ [`hasArrow`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hasarrow) を `true` に設定する場合、そのカスタム ストラテジは [`TooltipPositionStrategy`]({environment:angularApiUrl}/classes/tooltippositionstrategy.html) を継承している必要があります。そうでない場合、矢印は表示されません。|
 
 ## API リファレンス
 

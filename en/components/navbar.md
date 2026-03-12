@@ -326,10 +326,12 @@ $custom-navbar-theme: navbar-theme(
 >[!NOTE]
 >Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
-The last step is to pass the newly created theme to the `css-vars` mixin:
+The last step is to pass the newly created theme to the `tokens` mixin:
 
 ```scss
-@include css-vars($custom-navbar-theme);
+:host {
+  @include tokens($custom-navbar-theme);
+}
 ```
 
 ### Demo
@@ -376,7 +378,7 @@ You can find the full list of properties in the [navbar-theme]({environment:sass
 At the end your navbar should look like this:
 
 <div class="sample-container loading" style="height:120px">
-    <iframe id="navbar-tailwind-style-iframe" data-src='{environment:demosBaseUrl}/menus/navbar-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="navbar-tailwind-style-iframe" data-src='{environment:demosBaseUrl}/menus/navbar-tailwind-style/' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
 ## API References

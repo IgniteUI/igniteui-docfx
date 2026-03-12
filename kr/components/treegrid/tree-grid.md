@@ -14,7 +14,7 @@ _language: kr
 
 <code-view style="height:850px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
-           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey" >
+           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -220,7 +220,7 @@ export class MyComponent implements OnInit {
 
 <code-view style="height:450px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
-           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-primaryforeignkey" >
+           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-primaryforeignkey/" >
 </code-view>
 
 <div class="divider--half"></div>

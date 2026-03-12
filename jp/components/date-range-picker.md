@@ -136,7 +136,7 @@ Angular Date Range Picker コンポーネントは、開始日と終了日の 2 
 
 <code-view style="height:700px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-mode" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/daterangepicker-mode/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -536,9 +536,11 @@ $custom-calendar-theme: calendar-theme(
 最後にカスタム テーマを渡します。
 
 ```scss
-@include css-vars($custom-date-range-theme);
-@include css-vars($custom-input-group-theme);
-@include css-vars($custom-calendar-theme);
+:host {
+  @include tokens($custom-date-range-theme);
+  @include tokens($custom-input-group-theme);
+  @include tokens($custom-calendar-theme);
+}
 ```
 
 >[!WARNING]

@@ -425,7 +425,9 @@ $custom-select-theme: select-theme(
 The last step is to pass the custom radio theme in our application:
 
 ```scss
-@include css-vars($custom-select-theme);
+:host {
+    @include tokens($custom-select-theme);
+}
 ```
 
 <code-view style="height: 220px;"

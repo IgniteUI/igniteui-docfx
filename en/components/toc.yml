@@ -1,3 +1,11 @@
+- name: AI-Assisted Development
+  header: true
+- name: Ignite UI for Angular Skills
+  href: ai/skills.md
+  new: true
+- name: Theming MCP
+  href: ai/theming-mcp.md
+  new: true
 - name: General
   header: true
   sortable: true
@@ -13,7 +21,7 @@
 - name: Localization (i18n)
   href: general/localization.md
   new: false
-  updated: false
+  updated: true
 - name: Getting started
   href: general/getting-started.md
   new: false
@@ -1159,7 +1167,7 @@
   href: display-density.md
 - name: Spacing
   href: themes/spacing.md
-  new: true
+  new: false
 - name: Sass
   new: false
   items:
@@ -1213,7 +1221,7 @@
       items:
       - name: Using Tailwind Custom Classes
         href: themes/misc/tailwind-classes.md
-        new: true
+        new: false
       - name: Printing styles
         href: themes/misc/printing-styles.md
         new: false
@@ -1258,11 +1266,10 @@
 - name: Query Builder
   href: query-builder.md
   new: false
-  updated: true
   items:
     - name: Using Query Builder Model
       href: query-builder-model.md
-      new: true
+      new: false
 - name: Radio & Radio Group
   href: radio-button.md
   new: false
@@ -1454,7 +1461,8 @@
   premium: true
 - name: PDF Exporter
   href: exporter-pdf.md
-  new: true
+  new: false
+  updated: true
   premium: true
 - name: Transaction Service
   href: transaction.md

@@ -218,14 +218,14 @@ public ngOnInit() {
 </code-view>
 
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
 * [IgxButtonGroupComponent]({environment:angularApiUrl}/classes/igxbuttongroupcomponent.html)
 * [IgxButtonGroup Styles]({environment:sassApiUrl}/themes#function-button-group-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.

@@ -144,7 +144,7 @@ Finally, this is how our navbar should look like with its custom action icon:
 > [!NOTE]
 > If [`igx-action-icon`]({environment:angularApiUrl}/classes/igxactionicondirective.html) is provided, the default [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) will not be used. 
 
-### API References
+## API References
 
 In this article we show a few scenarios where the navbar component may come in handy. The APIs, we used to achieve them, are listed in the links below.
 
@@ -160,7 +160,7 @@ Styles:
 * [`IgxNavbarComponent Styles`]({environment:sassApiUrl}/themes#function-navbar-theme)
 * [`IgxIconComponent Styles`]({environment:sassApiUrl}/themes#function-icon-theme)
 
-### Additional Resources
+## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

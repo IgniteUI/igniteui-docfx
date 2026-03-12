@@ -271,7 +271,7 @@ The [context]({environment:angularApiUrl}/classes/igxslidercomponent.html#contex
   </ng-template>
 ```
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxSliderComponent]({environment:angularApiUrl}/classes/igxslidercomponent.html)

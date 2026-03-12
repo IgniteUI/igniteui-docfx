@@ -100,11 +100,11 @@ and in our markup:
 ### Input Group
 You can read about the Input Group component in a separate topic [here](input-group.md).
 
-### API References
+## API References
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
-### Additional Resources
+## Additional Resources
 Related topics:
 
 * [Input Group](input-group.md)

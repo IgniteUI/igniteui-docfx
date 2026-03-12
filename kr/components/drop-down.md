@@ -392,14 +392,14 @@ When [allowItemsFocus]({environment:angularApiUrl}/classes/igxdropdowncomponent.
 
 <div class="divider--half"></div>
 
-### API Summary
+## API References
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) 
 * [IgxDropDownComponent Styles]({environment:sassApiUrl}/themes#function-drop-down-theme)
 * [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html).
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
 * [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
 
-### Additional Resources
+## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

@@ -148,14 +148,14 @@ Note that, setting the [`igx-radio-group`]({environment:angularApiUrl}/classes/i
 public fruits = ["Apple", "Mango", "Banana", "Orange"];
 ```
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxRadioComponent]({environment:angularApiUrl}/classes/igxradiocomponent.html)
 * [IgxRadioGroupDirective]({environment:angularApiUrl}/classes/igxradiogroupdirective.html)
 * [IgxRadioComponent Styles]({environment:sassApiUrl}/themes#function-radio-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.

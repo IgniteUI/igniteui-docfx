@@ -32,7 +32,7 @@ Use the [`igxFlex`]({environment:angularApiUrl}/classes/igxflexdirective.html) d
 <div class="divider--half"></div>
 
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxLayoutDirective]({environment:angularApiUrl}/classes/igxlayoutdirective.html)

@@ -110,7 +110,9 @@ $toolbar-theme: grid-toolbar-theme(
   $background-color: $primary
 );
 
-@include css-vars($toolbar-theme);
+:host {
+  @include tokens($toolbar-theme);
+}
 /* END Grid Toolbar */
 ```
 
@@ -186,7 +188,7 @@ Then our theme definition will go in the general scope, which we will use for th
 ```
 
 >[!NOTE]
-> I have switched the `igx-grid-toolbar` theme override to overriding just two of its variables, instead of reincluding all of the theme variables using [`css-vars()`]({environment:sassApiUrl}/themes#mixin-css-vars).
+> I have switched the `igx-grid-toolbar` theme override to overriding just two of its variables, instead of reincluding all of the theme variables using [`tokens`]({environment:sassApiUrl}/themes#mixin-tokens).
 > All theme variables can be found in the [corresponding sass api doc]({environment:sassApiUrl}/themes#function-grid-toolbar-theme) and are equivalent to the sass variables, but prefixed with `--` instead of `$`.
 
 And the result now looks like this with light OS theme:
