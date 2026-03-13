@@ -211,13 +211,44 @@ In the following example, when a city is added or removed from the selection, a 
 ```typescript
 export class MyExampleCombo {
     ...
-    handleCityChange(event: IComboSelectionChangeEventArgs): void {
+    handleCityChange(event: IComboSelectionChangingEventArgs): void {
         for (const item of event.added) {
             this.addToVisualization(item);
         }
         for (const item of event.removed) {
             this.removeFromVisualization(item);
         }
+    }
+}
+```
+
+Additionally, the combobox fires a [selectionChanged]({environment:angularApiUrl}/classes/IgxComboComponent.html#selectionChanged) event after the selection is committed and the component state has been updated. The emitted event arguments, [IComboSelectionChangedEventArgs]({environment:angularApiUrl}/interfaces/icomboselectionchangedeventargs.html), contain information about the previous selection, the current selection and the items that were added or removed. Unlike `selectionChanging`, this event is not cancelable and is guaranteed to reflect the final committed selection state. When the combobox is used with `ngModel` or Angular forms, `selectionChanged` is emitted after the value change callback is invoked.
+
+Binding to the event can be done through the proper `@Output` property on the `igx-combo` tag:
+
+```html
+<igx-combo [data]="cities" displayKey="name" valueKey="id"
+           (selectionChanged)="handleCitySelectionChanged($event)">
+</igx-combo>
+```
+
+In the following example, when the selection changes, the handler updates a short summary and tracks how many items were added and removed:
+
+```typescript
+export class MyExampleCombo {
+    ...
+    handleCitySelectionChanged(event: IComboSelectionChangedEventArgs): void {
+        this.updateSelectionSummary(event.displayText, event.newSelection.length);
+
+        for (const item of event.added) {
+            this.highlightAddedCity(item);
+        }
+
+        for (const item of event.removed) {
+            this.dimRemovedCity(item);
+        }
+
+        this.logSelectionTransition(event.oldSelection, event.newSelection);
     }
 }
 ```
