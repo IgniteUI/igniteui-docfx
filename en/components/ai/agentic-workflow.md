@@ -238,9 +238,11 @@ __Example prompts:__
 ```
 Scaffold a dashboard with an IgxGrid showing server-side paginated data and an Excel export button
 ```
+
 ```
 Generate a date picker with validation and apply the corporate Fluent theme
 ```
+
 ```
 Add a column chooser to the existing grid and enable filtering
 ```
