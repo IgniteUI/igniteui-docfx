@@ -25,7 +25,7 @@ Ignite UI is the only UI component library with published Agent Skills and a liv
 ---
 
 <a name="hero"></a>
-## Your Developers and AI Agents, Finally Working from the Same Playbook
+ Your Developers and AI Agents, Finally Working from the Same Playbook
 
 AI coding assistants are fast but uninformed — they don't know your components, your APIs, or your design system. Without the right context, Copilot and Cursor generate plausible-looking code that references wrong import paths, outdated API signatures, and components that don't exist in your version. The result is a rework cycle that eliminates the productivity gain the tools were supposed to deliver.
 
@@ -95,7 +95,7 @@ The agent then iterates on that starting point — grounded by Skills and MCP �
 
 > **Scope:** Design-to-Code works with Ignite UI Design Kit files specifically. This is a feature — the pipeline knows exactly which Figma component maps to which Ignite UI component and what each property means in code. Generic Figma-to-code tools guess. This pipeline knows.
 
-### AI Capabilities Included. No New Pricing.
+### AI Capabilities Included
 
 Agent Skills, the MCP server, and the Design-to-Code pipeline extend the tools your team already uses — Copilot, Cursor, Windsurf. No usage-based AI tier. No separate billing model. No new IDE. The toolchain is part of the library because agents are already part of your team.
 
@@ -104,7 +104,7 @@ Agent Skills, the MCP server, and the Design-to-Code pipeline extend the tools y
 <a name="mcp-architecture"></a>
 ## MCP Server Architecture
 
-### One MCP Server. Every Framework. One Standard
+### One MCP Server, Every Framework, One Standard
 
 The Ignite UI MCP server is a single, unified tool server — not a separate implementation per framework. Connect it once. It understands Angular, React, Blazor, and Web Components natively, and serves the correct component APIs, usage patterns, and schemas for whichever framework your project runs.
 
@@ -160,25 +160,6 @@ This is the foundation both the MCP and the Skills layer draw from. Underinvest 
 | Ignite UI MCP | Infragistics | One server, all frameworks, live component APIs — always current |
 | Theming MCP | Infragistics | Separate server, design tokens, visual standards — all 4 frameworks, production |
 | AI-Optimized Docs | Infragistics | Structured knowledge base all layers draw from |
-
----
-
-<a name="competitive"></a>
-## Competitive Comparison — First Across Every Framework
-
-As of March 2026, no competitor has published Agent Skills for a single framework. No competitor has a live MCP server. No competitor has a Design-to-Code pipeline connected to a Figma Design Kit.
-
-> **Source:** Independent audit of publicly available agent tooling, March 2026.
->
-> **Telerik/Kendo UI note:** Their AI developer page focuses on XAML generation and low-code builders — a different product motion from structured agent Skills for IDE coding assistants. Not equivalent.
->
-> **MudBlazor note:** Community-maintained. No enterprise backing. Included as primary Blazor competitor.
->
-> **AG Grid note:** Grid-specialist library, not a full UI component suite. Included as a widely evaluated JS grid reference. Rows where AG Grid has no applicable product are marked —.
->
-> **Pre-publish checklist:** Verify Syncfusion and DevExpress MCP status independently. Update '✅ Shipping' to '✅ Live' for Blazor Skills and Design-to-Code once EP0 completes.
-
----
 
 <a name="getting-started"></a>
 ## Getting Started — Four Steps, No New Tooling
