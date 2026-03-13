@@ -55,7 +55,7 @@ export class AppModule {}
 
 ...
 import { IGX_ACTION_STRIP_DIRECTIVES } from 'igniteui-angular/action-strip';
-import { IgxButtonDirective } from 'igniteui-angular/button';
+import { IgxButtonDirective } from 'igniteui-angular/directives';
 import { IgxIconComponent } from 'igniteui-angular/icon';
 // import { IGX_ACTION_STRIP_DIRECTIVES, IgxButtonDirective, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
