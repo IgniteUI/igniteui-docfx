@@ -104,7 +104,7 @@ Agent Skills, the MCP server, and the Design-to-Code pipeline extend the tools y
 <a name="mcp-architecture"></a>
 ## MCP Server Architecture
 
-### One MCP Server. Every Framework. One Standard.
+### One MCP Server. Every Framework. One Standard
 
 The Ignite UI MCP server is a single, unified tool server — not a separate implementation per framework. Connect it once. It understands Angular, React, Blazor, and Web Components natively, and serves the correct component APIs, usage patterns, and schemas for whichever framework your project runs.
 
@@ -308,7 +308,3 @@ The Design-to-Code pipeline reads Figma files built with the Ignite UI Design Ki
 
 The AI toolchain — Skills, MCP servers, and Design-to-Code pipeline — is built on top of Ignite UI, which has been in enterprise production for 30+ years under Infragistics. Skills are versioned alongside the library. The MCP server reflects the current release. There is no separate AI tier, no usage-based pricing, and no dependency on third-party AI infrastructure that could change without notice. The toolchain extends what your team already runs — it doesn't replace it.
 
----
-
-<!-- cspell:disable-next-line -->
-_Radoslav Mirchev · Senior Product Owner · Infragistics · Q1 2026_
