@@ -168,18 +168,6 @@ This is the foundation both the MCP and the Skills layer draw from. Underinvest 
 
 As of March 2026, no competitor has published Agent Skills for a single framework. No competitor has a live MCP server. No competitor has a Design-to-Code pipeline connected to a Figma Design Kit.
 
-| Capability | Ignite UI | Telerik | Syncfusion | DevExpress | MudBlazor | AG Grid |
-|---|---|---|---|---|---|---|
-| Agent Skills — Angular | ✅ Live | ❌ | ❌ | ❌ | — | ❌ |
-| Agent Skills — React | ✅ Live | ❌ | ❌ | ❌ | — | ❌ |
-| Agent Skills — Blazor | ✅ Shipping | ❌ | ❌ | ❌ | ❌ | — |
-| Agent Skills — Web Components | ✅ Live | ❌ | ❌ | ❌ | — | ❌ |
-| MCP Server | ✅ Live | ❌ | ❌ | ❌ | ❌ | ❌ |
-| Design-to-Code Pipeline | ✅ Shipping | ❌ | ❌ | ❌ | ❌ | ❌ |
-| Figma Design Kit | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| AI-Optimized Documentation | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| Enterprise Vendor Backing | ✅ Infragistics | ✅ Progress | ✅ | ✅ | ❌ Community | ✅ |
-
 > **Source:** Independent audit of publicly available agent tooling, March 2026.
 >
 > **Telerik/Kendo UI note:** Their AI developer page focuses on XAML generation and low-code builders — a different product motion from structured agent Skills for IDE coding assistants. Not equivalent.
