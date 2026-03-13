@@ -307,3 +307,6 @@ The Design-to-Code pipeline reads Figma files built with the Ignite UI Design Ki
 The AI toolchain — Skills, MCP servers, and Design-to-Code pipeline — is built on top of Ignite UI, which has been in enterprise production for 30+ years under Infragistics. Skills are versioned alongside the library. The MCP server reflects the current release. There is no separate AI tier, no usage-based pricing, and no dependency on third-party AI infrastructure that could change without notice. The toolchain extends what your team already runs — it doesn't replace it.
 
 ---
+
+<!-- cspell:disable-next-line -->
+*Radoslav Mirchev · Senior Product Owner · Infragistics · Q1 2026*
