@@ -168,18 +168,6 @@ This is the foundation both the MCP and the Skills layer draw from. Underinvest 
 
 As of March 2026, no competitor has published Agent Skills for a single framework. No competitor has a live MCP server. No competitor has a Design-to-Code pipeline connected to a Figma Design Kit.
 
-| Capability | Ignite UI | Telerik | Syncfusion | DevExpress | MudBlazor | AG Grid |
-|---|---|---|---|---|---|---|
-| Agent Skills — Angular | ✅ Live | ❌ | ❌ | ❌ | — | ❌ |
-| Agent Skills — React | ✅ Live | ❌ | ❌ | ❌ | — | ❌ |
-| Agent Skills — Blazor | ✅ Shipping | ❌ | ❌ | ❌ | ❌ | — |
-| Agent Skills — Web Components | ✅ Live | ❌ | ❌ | ❌ | — | ❌ |
-| MCP Server | ✅ Live | ❌ | ❌ | ❌ | ❌ | ❌ |
-| Design-to-Code Pipeline | ✅ Shipping | ❌ | ❌ | ❌ | ❌ | ❌ |
-| Figma Design Kit | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| AI-Optimized Documentation | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| Enterprise Vendor Backing | ✅ Infragistics | ✅ Progress | ✅ | ✅ | ❌ Community | ✅ |
-
 > **Source:** Independent audit of publicly available agent tooling, March 2026.
 >
 > **Telerik/Kendo UI note:** Their AI developer page focuses on XAML generation and low-code builders — a different product motion from structured agent Skills for IDE coding assistants. Not equivalent.
@@ -319,5 +307,3 @@ The Design-to-Code pipeline reads Figma files built with the Ignite UI Design Ki
 The AI toolchain — Skills, MCP servers, and Design-to-Code pipeline — is built on top of Ignite UI, which has been in enterprise production for 30+ years under Infragistics. Skills are versioned alongside the library. The MCP server reflects the current release. There is no separate AI tier, no usage-based pricing, and no dependency on third-party AI infrastructure that could change without notice. The toolchain extends what your team already runs — it doesn't replace it.
 
 ---
-
-*Radoslav Mirchev · Senior Product Owner · Infragistics · Q1 2026*
