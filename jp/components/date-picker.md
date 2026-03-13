@@ -53,7 +53,7 @@ import { IgxDatePickerModule } from 'igniteui-angular/date-picker';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxDatePickerComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_DATE_PICKER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/date-picker/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxDatePickerComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_DATE_PICKER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/date-picker/src/date-picker/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts

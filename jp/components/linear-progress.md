@@ -46,7 +46,7 @@ import { IgxProgressBarModule } from 'igniteui-angular/progressbar';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxLinearProgressBarComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_LINEAR_PROGRESS_BAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/progressbar/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxLinearProgressBarComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_LINEAR_PROGRESS_BAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/progressbar/src/progressbar/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts

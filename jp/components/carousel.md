@@ -55,7 +55,7 @@ import { IgxCarouselModule } from 'igniteui-angular/carousel';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxCarouselComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_CAROUSEL_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/carousel/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxCarouselComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_CAROUSEL_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/carousel/src/carousel/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
