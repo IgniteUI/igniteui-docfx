@@ -8,7 +8,7 @@ keywords: ignite ui agent skills, ignite ui mcp server, ai-assisted ui developme
 
 Ignite UI is the only UI component library with published Agent Skills and a live MCP server across Angular, React, Blazor, and Web Components. It grounds AI coding assistants — GitHub Copilot, Cursor, Windsurf, VS Code Agent Mode — in correct component APIs, import paths, and design tokens, so agents generate production-ready code without hallucination or rework cycles.
 
-> **At a glance:** Agent Skills (developer-owned, project-customizable) + Ignite UI MCP Server (Infragistics-maintained, always current) + Theming MCP (design tokens, all 4 frameworks, live) + Design-to-Code pipeline (Figma Design Kit → Angular/React code).
+> __At a glance:__ Agent Skills (developer-owned, project-customizable) + Ignite UI MCP Server (Infragistics-maintained, always current) + Theming MCP (design tokens, all 4 frameworks, live) + Design-to-Code pipeline (Figma Design Kit → Angular/React code).
 
 ---
 
@@ -31,9 +31,9 @@ AI coding assistants are fast but uninformed — they don't know your components
 
 Ignite UI fixes this. Agent Skills, an MCP server, and a Design-to-Code pipeline give your agents the exact context they need to generate scalable, production-ready UI inside the tools your team already uses. No new IDE, no new process, no new library — your team keeps its workflow, and the agent earns its place in it.
 
-**Works with:** GitHub Copilot · Cursor · Windsurf · VS Code Agent Mode · JetBrains AI · Claude Code
+__Works with:__ GitHub Copilot · Cursor · Windsurf · VS Code Agent Mode · JetBrains AI · Claude Code
 
-**Frameworks covered:** Angular · React · Blazor · Web Components
+__Frameworks covered:__ Angular · React · Blazor · Web Components
 
 ---
 
@@ -53,30 +53,30 @@ Two layers. One gives developers control. One gives agents authority. Together, 
 
 ### Layer 1 — Agent Skills (Developer-Owned)
 
-**What an Agent Skill is:** A Skill is a structured, developer-owned package that tells AI coding assistants exactly how to use Ignite UI for a specific framework. A Skill can contain:
+__What an Agent Skill is:__ A Skill is a structured, developer-owned package that tells AI coding assistants exactly how to use Ignite UI for a specific framework. A Skill can contain:
 
-- **`SKILL.md`** — the primary instruction file: correct import paths, component patterns, property bindings, and decision flows
-- **References** — links to authoritative documentation, API specs, and usage examples the agent can fetch
-- **Assets** — diagrams, schema files, or structured data that support agent understanding
-- **Scripts** — automation helpers for Skill setup, discovery configuration, or IDE wiring
+- __`SKILL.md`__ — the primary instruction file: correct import paths, component patterns, property bindings, and decision flows
+- __References__ — links to authoritative documentation, API specs, and usage examples the agent can fetch
+- __Assets__ — diagrams, schema files, or structured data that support agent understanding
+- __Scripts__ — automation helpers for Skill setup, discovery configuration, or IDE wiring
 
 Skills are framework-specific. Angular, React, Blazor, and Web Components each have their own Skill — because each has its own import paths, component API signatures, and idiomatic patterns.
 
-**What makes Skills different from documentation:** A Skill is structured for agent consumption, not human reading. It defines decision flows, not narratives. An agent resolving "which grid API handles server-side pagination" gets a structured instruction, not a paragraph to interpret.
+__What makes Skills different from documentation:__ A Skill is structured for agent consumption, not human reading. It defines decision flows, not narratives. An agent resolving "which grid API handles server-side pagination" gets a structured instruction, not a paragraph to interpret.
 
-**Developer control:** The Skill package is yours. Edit the `SKILL.md` to match your team's conventions. Add project-specific component patterns. Reference your internal design system. Include scripts for your CI environment. Enforce your architectural decisions. Version the entire package alongside your codebase. No build step, no approval process — your team owns what it becomes.
+__Developer control:__ The Skill package is yours. Edit the `SKILL.md` to match your team's conventions. Add project-specific component patterns. Reference your internal design system. Include scripts for your CI environment. Enforce your architectural decisions. Version the entire package alongside your codebase. No build step, no approval process — your team owns what it becomes.
 
-*We don't hide enterprise UI standards behind human-only tools. We expose them directly to agents — and then hand the controls to you.*
+_We don't hide enterprise UI standards behind human-only tools. We expose them directly to agents — and then hand the controls to you._
 
 ### Layer 2 — The Ignite UI MCP Server (Infragistics-Owned)
 
-**What the MCP server is:** The Ignite UI MCP (Model Context Protocol) server is Infragistics-maintained infrastructure that exposes the complete Ignite UI component API, design tokens, and usage patterns as live, queryable context. It is not a documentation wrapper — it is a structured tool server that agents call and receive machine-readable responses from.
+__What the MCP server is:__ The Ignite UI MCP (Model Context Protocol) server is Infragistics-maintained infrastructure that exposes the complete Ignite UI component API, design tokens, and usage patterns as live, queryable context. It is not a documentation wrapper — it is a structured tool server that agents call and receive machine-readable responses from.
 
-**Key distinction from Skills:** Skills define *your* standard — your conventions, your customizations, your project rules. The MCP server enforces *the library's* standard — the authoritative, current API surface that Infragistics maintains. The agent gets both in context simultaneously.
+__Key distinction from Skills:__ Skills define _your_ standard — your conventions, your customizations, your project rules. The MCP server enforces _the library's_ standard — the authoritative, current API surface that Infragistics maintains. The agent gets both in context simultaneously.
 
-**Always current:** The MCP server updates with every Ignite UI release. Agents never work from a stale training snapshot. Developers don't maintain it — Infragistics does.
+__Always current:__ The MCP server updates with every Ignite UI release. Agents never work from a stale training snapshot. Developers don't maintain it — Infragistics does.
 
-**What the two layers produce together:** Developer flexibility at the Skills layer. Library authority at the MCP layer. Output that is correct against the Ignite UI API *and* consistent with your team's conventions — not one or the other.
+__What the two layers produce together:__ Developer flexibility at the Skills layer. Library authority at the MCP layer. Output that is correct against the Ignite UI API _and_ consistent with your team's conventions — not one or the other.
 
 Concretely:
 
@@ -93,7 +93,7 @@ Designers work in Figma with the Ignite UI Design Kit. The pipeline reads that o
 
 The agent then iterates on that starting point — grounded by Skills and MCP — from correct code, not from scratch.
 
-> **Scope:** Design-to-Code works with Ignite UI Design Kit files specifically. This is a feature — the pipeline knows exactly which Figma component maps to which Ignite UI component and what each property means in code. Generic Figma-to-code tools guess. This pipeline knows.
+> __Scope:__ Design-to-Code works with Ignite UI Design Kit files specifically. This is a feature — the pipeline knows exactly which Figma component maps to which Ignite UI component and what each property means in code. Generic Figma-to-code tools guess. This pipeline knows.
 
 ### AI Capabilities Included. No New Pricing.
 
@@ -127,13 +127,13 @@ Web Components run in Angular, React, Vue, and plain HTML host environments. The
 
 ### The Theming MCP — A Separate Server for Your Design System
 
-**What it is:** The Theming MCP is architecturally separate from the component API server. It exposes the Ignite UI Theming Engine exclusively — design tokens, theme configuration, palette definitions, and visual standards as queryable agent context.
+__What it is:__ The Theming MCP is architecturally separate from the component API server. It exposes the Ignite UI Theming Engine exclusively — design tokens, theme configuration, palette definitions, and visual standards as queryable agent context.
 
-**Frameworks:** Angular · React · Blazor · Web Components — all four, in production today.
+__Frameworks:__ Angular · React · Blazor · Web Components — all four, in production today.
 
-**Why separate:** A team that wants to give agents access to theming without exposing the full component API surface connects the Theming MCP alone. A team that wants both connects both. The separation gives you control over what the agent has access to.
+__Why separate:__ A team that wants to give agents access to theming without exposing the full component API surface connects the Theming MCP alone. A team that wants both connects both. The separation gives you control over what the agent has access to.
 
-**What it exposes:**
+__What it exposes:__
 
 - Full design token surface — color palettes, typography scales, spacing units, elevation values
 - Programmatic theme application — correct token references, correct CSS variable output, no manual Theming Engine configuration
@@ -146,9 +146,9 @@ The Theming MCP updates with every library release. Agents always work against t
 
 The MCP server is only as good as the knowledge it draws from. Ignite UI's documentation has been restructured for agent consumption — an architectural change, not a documentation refresh:
 
-- **Token-efficient** — content density optimized for agent context windows. More signal per token means fewer hallucinations at context limit edges
-- **Runnable examples** — code samples that compile against the current library version, not illustrative pseudocode
-- **Agent-readable patterns** — structured decision flows, not narrative prose. Agents get structured answers, not paragraphs to interpret
+- __Token-efficient__ — content density optimized for agent context windows. More signal per token means fewer hallucinations at context limit edges
+- __Runnable examples__ — code samples that compile against the current library version, not illustrative pseudocode
+- __Agent-readable patterns__ — structured decision flows, not narrative prose. Agents get structured answers, not paragraphs to interpret
 
 This is the foundation both the MCP and the Skills layer draw from. Underinvest here and every layer above degrades.
 
@@ -168,15 +168,15 @@ This is the foundation both the MCP and the Skills layer draw from. Underinvest 
 
 As of March 2026, no competitor has published Agent Skills for a single framework. No competitor has a live MCP server. No competitor has a Design-to-Code pipeline connected to a Figma Design Kit.
 
-> **Source:** Independent audit of publicly available agent tooling, March 2026.
+> __Source:__ Independent audit of publicly available agent tooling, March 2026.
 >
-> **Telerik/Kendo UI note:** Their AI developer page focuses on XAML generation and low-code builders — a different product motion from structured agent Skills for IDE coding assistants. Not equivalent.
+> __Telerik/Kendo UI note:__ Their AI developer page focuses on XAML generation and low-code builders — a different product motion from structured agent Skills for IDE coding assistants. Not equivalent.
 >
-> **MudBlazor note:** Community-maintained. No enterprise backing. Included as primary Blazor competitor.
+> __MudBlazor note:__ Community-maintained. No enterprise backing. Included as primary Blazor competitor.
 >
-> **AG Grid note:** Grid-specialist library, not a full UI component suite. Included as a widely evaluated JS grid reference. Rows where AG Grid has no applicable product are marked —.
+> __AG Grid note:__ Grid-specialist library, not a full UI component suite. Included as a widely evaluated JS grid reference. Rows where AG Grid has no applicable product are marked —.
 >
-> **Pre-publish checklist:** Verify Syncfusion and DevExpress MCP status independently. Update '✅ Shipping' to '✅ Live' for Blazor Skills and Design-to-Code once EP0 completes.
+> __Pre-publish checklist:__ Verify Syncfusion and DevExpress MCP status independently. Update '✅ Shipping' to '✅ Live' for Blazor Skills and Design-to-Code once EP0 completes.
 
 ---
 
@@ -193,7 +193,7 @@ Add the Ignite UI package for Angular, React, Blazor, or Web Components to your 
 
 Each framework has a dedicated Skill package. A Skill package is a structured, developer-owned directory that can include a `SKILL.md` instruction file, references, assets, and scripts — not just a single file.
 
-**Angular — three Skill packages, load what you need:**
+__Angular — three Skill packages, load what you need:__
 
 | Skill | What it covers |
 |---|---|
@@ -201,14 +201,14 @@ Each framework has a dedicated Skill package. A Skill package is a structured, d
 | `igniteui-angular-grids` | Grid, Tree Grid, Hierarchical Grid, Pivot Grid, sorting, filtering, paging, remote data |
 | `igniteui-angular-theming` | Palettes, typography, elevations, component themes |
 
-**Four ways to get them:**
+__Four ways to get them:__
 
-- **`ng update`** — fastest path for existing projects. Updating to Ignite UI for Angular 21.1.0+ includes an optional migration that places Skill packages in the correct agent discovery path automatically. Zero manual steps.
-- **`npx skills add IgniteUI/igniteui-angular`** — interactive CLI. Select which Skill packages to install and where to place them. No manual file copying.
-- **From `node_modules`** — Skill packages ship with the library. Copy from `node_modules/igniteui-angular/skills/` into `.agents/skills/`. Your agent discovers them automatically.
-- **Direct download** — pull individual Skill packages from the GitHub repository and place them wherever your IDE expects them.
+- __`ng update`__ — fastest path for existing projects. Updating to Ignite UI for Angular 21.1.0+ includes an optional migration that places Skill packages in the correct agent discovery path automatically. Zero manual steps.
+- __`npx skills add IgniteUI/igniteui-angular`__ — interactive CLI. Select which Skill packages to install and where to place them. No manual file copying.
+- __From `node_modules`__ — Skill packages ship with the library. Copy from `node_modules/igniteui-angular/skills/` into `.agents/skills/`. Your agent discovers them automatically.
+- __Direct download__ — pull individual Skill packages from the GitHub repository and place them wherever your IDE expects them.
 
-**Wiring into your IDE:**
+__Wiring into your IDE:__
 
 | IDE | Persistent setup | On-demand |
 |---|---|---|
@@ -233,7 +233,7 @@ Optionally connect the Theming MCP separately to give your agent direct access t
 
 Prompt your agent to build pages, dashboards, CRUD flows, or individual components. The Skill enforces your conventions. The MCP enforces the library standard. The output compiles.
 
-**Example prompts:**
+__Example prompts:__
 
 ```
 Scaffold a dashboard with an IgxGrid showing server-side paginated data and an Excel export button
@@ -264,7 +264,7 @@ Documentation is text an agent reads and interprets. An MCP server is a tool an 
 
 ### What is the difference between Agent Skills and the MCP server?
 
-Agent Skills are developer-owned. You customize them, version them, and adapt them to your team's conventions. The Skill enforces *your* standard. The MCP server is Infragistics-owned. It is always authoritative, always current, and reflects the actual library API. It enforces *the library's* standard. Both load into the agent's context simultaneously — Skills for your conventions, MCP for library authority. Together they produce output that is correct on both dimensions.
+Agent Skills are developer-owned. You customize them, version them, and adapt them to your team's conventions. The Skill enforces _your_ standard. The MCP server is Infragistics-owned. It is always authoritative, always current, and reflects the actual library API. It enforces _the library's_ standard. Both load into the agent's context simultaneously — Skills for your conventions, MCP for library authority. Together they produce output that is correct on both dimensions.
 
 ### What files does an Ignite UI Agent Skill package contain?
 
@@ -309,4 +309,4 @@ The AI toolchain — Skills, MCP servers, and Design-to-Code pipeline — is bui
 ---
 
 <!-- cspell:disable-next-line -->
-*Radoslav Mirchev · Senior Product Owner · Infragistics · Q1 2026*
+_Radoslav Mirchev · Senior Product Owner · Infragistics · Q1 2026_
