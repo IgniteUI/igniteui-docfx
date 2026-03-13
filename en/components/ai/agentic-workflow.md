@@ -320,4 +320,5 @@ The AI toolchain — Skills, MCP servers, and Design-to-Code pipeline — is bui
 
 ---
 
+<!-- cspell:disable-next-line -->
 *Radoslav Mirchev · Senior Product Owner · Infragistics · Q1 2026*
