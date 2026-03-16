@@ -45,7 +45,7 @@ import { IgxNavbarModule } from 'igniteui-angular/navbar';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxNavbarComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_NAVBAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/navbar/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxNavbarComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_NAVBAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/navbar/src/navbar/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts

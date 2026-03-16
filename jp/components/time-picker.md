@@ -57,7 +57,7 @@ import { IgxTimePickerModule } from 'igniteui-angular/time-picker';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxTimePickerComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_TIME_PICKER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/time-picker/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxTimePickerComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_TIME_PICKER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/time-picker/src/time-picker/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts

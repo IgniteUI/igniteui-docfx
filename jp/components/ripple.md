@@ -56,7 +56,6 @@ export class AppModule {}
 // home.component.ts
 
 import { IgxRippleDirective, IgxButtonDirective } from 'igniteui-angular/directives';
-import { IgxButtonDirective } from 'igniteui-angular/button';
 // import { IgxRippleDirective, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

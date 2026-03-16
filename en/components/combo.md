@@ -59,7 +59,7 @@ import { IgxComboModule } from 'igniteui-angular/combo';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxComboComponent` as a standalone dependency, or use the [`IGX_COMBO_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/combo/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxComboComponent` as a standalone dependency, or use the [`IGX_COMBO_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/combo/src/combo/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
@@ -222,7 +222,7 @@ export class MyExampleCombo {
 }
 ```
 
-Additionally, the combobox fires a [selectionChanged]({environment:angularApiUrl}/classes/IgxComboComponent.html#selectionChanged) event after the selection is committed and the component state has been updated. The emitted event arguments, [IComboSelectionChangedEventArgs]({environment:angularApiUrl}/interfaces/icomboselectionchangedeventargs.html), contain information about the previous selection, the current selection and the items that were added or removed. Unlike `selectionChanging`, this event is not cancelable and is guaranteed to reflect the final committed selection state. When the combobox is used with `ngModel` or Angular forms, `selectionChanged` is emitted after the value change callback is invoked.
+Additionally, the combobox fires a [selectionChanged]({environment:angularApiUrl}/classes/IgxComboComponent.html#selectionChanged) event after the selection is committed and the component state has been updated. The emitted event arguments, [IComboSelectionChangedEventArgs]({environment:angularApiUrl}/interfaces/icomboselectionchangedeventargs.html), contain information about the previous selection, the current selection and the items that were added or removed. Unlike `selectionChanging`, this event is not cancellable and is guaranteed to reflect the final committed selection state. When the combobox is used with `ngModel` or Angular forms, `selectionChanged` is emitted after the value change callback is invoked.
 
 Binding to the event can be done through the proper `@Output` property on the `igx-combo` tag:
 
