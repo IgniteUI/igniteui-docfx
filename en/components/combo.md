@@ -262,7 +262,7 @@ By default, the combo control provides multiple selection. The snippet below dem
 ```
 
 ```typescript
-public singleSelection(event: IComboSelectionChangeEventArgs) {
+public singleSelection(event: IComboSelectionChangingEventArgs) {
     if (event.added.length) {
         event.newValue = event.added;
     }

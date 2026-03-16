@@ -68,7 +68,7 @@ In order to handle the selection change, we need [selectionChanging()]({environm
 ```
 
 ```typescript
-public countryChanging(event: IComboSelectionChangeEventArgs) {
+public countryChanging(event: IComboSelectionChangingEventArgs) {
     if (event.added.length) {
         event.newSelection = event.added;
     }
