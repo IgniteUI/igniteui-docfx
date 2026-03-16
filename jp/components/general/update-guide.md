@@ -1472,7 +1472,7 @@ import { HammerModule } from "@angular/platform-browser";
     }
     ```
 
-    コンボの設定の詳細については、[readme](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/combo/README.md#value-binding) および[ドキュメント](../combo.md#選択-api)をご覧ください。
+    コンボの設定の詳細については、[readme](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/combo/README.md#value-binding) および[ドキュメント](../combo.md#選択-api)をご覧ください。
 
 ## 8.0.x から 8.1.x の場合
 

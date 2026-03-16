@@ -43,7 +43,7 @@ import { IgxSelectModule } from 'igniteui-angular/select';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxSelectComponent` as a standalone dependency, or use the [`IGX_SELECT_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/select/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxSelectComponent` as a standalone dependency, or use the [`IGX_SELECT_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/select/src/select/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts

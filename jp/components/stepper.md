@@ -57,7 +57,7 @@ import { IgxStepperModule } from 'igniteui-angular/stepper';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxStepperComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_STEPPER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/stepper/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxStepperComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_STEPPER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/stepper/src/stepper/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
