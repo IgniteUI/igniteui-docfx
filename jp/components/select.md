@@ -44,7 +44,7 @@ import { IgxSelectModule } from 'igniteui-angular/select';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxSelectComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_SELECT_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/select/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxSelectComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_SELECT_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/select/src/select/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts

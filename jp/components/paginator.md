@@ -51,7 +51,7 @@ import { IgxPaginatorModule } from 'igniteui-angular/paginator';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxPaginatorComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_PAGINATOR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/paginator/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxPaginatorComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_PAGINATOR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/paginator/src/paginator/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts

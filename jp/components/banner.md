@@ -45,7 +45,7 @@ import { IgxBannerModule } from 'igniteui-angular/banner';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxBannerComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_BANNER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/banner/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxBannerComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_BANNER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/banner/src/banner/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts

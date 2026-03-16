@@ -48,14 +48,14 @@ import { IgxActionStripModule } from 'igniteui-angular/action-strip';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxActionStripComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_ACTION_STRIP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/action-strip/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxActionStripComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_ACTION_STRIP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/action-strip/src/action-strip/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
 
 ...
 import { IGX_ACTION_STRIP_DIRECTIVES } from 'igniteui-angular/action-strip';
-import { IgxButtonDirective } from 'igniteui-angular/button';
+import { IgxButtonDirective } from 'igniteui-angular/directives';
 import { IgxIconComponent } from 'igniteui-angular/icon';
 // import { IGX_ACTION_STRIP_DIRECTIVES, IgxButtonDirective, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 

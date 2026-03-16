@@ -276,7 +276,7 @@ You can see the result of the code from above at the beginning of this article i
 
 ## Custom Column Hiding UI
 
-Let's say we want to manually define our [`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html), add the [`IgxColumnHidingDirective`]({environment:angularApiUrl}/classes/igxcolumnhidingdirective.html) so that it knows what its purpose would be and put it anywhere on the page. First, however, we need to import the `IgxColumnActionsModule`.
+Let's say we want to manually define our [`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html), add the [`IgxColumnHidingDirective`]({environment:angularApiUrl}/classes/igxcolumnhidingdirective.html) so that it knows what its purpose would be and put it anywhere on the page. First, however, we need to import the `IgxColumnActionsComponent`.
 
 ```typescript
 // app.module.ts
@@ -284,13 +284,13 @@ Let's say we want to manually define our [`IgxColumnActionsComponent`]({environm
 ...
 import {
     ...
-    IgxColumnActionsModule 
+    IgxColumnActionsComponent 
 } from 'igniteui-angular/grids/core';
-// import { ..., IgxColumnActionsModule } from '@infragistics/igniteui-angular'; for licensed package
+// import { ..., IgxColumnActionsComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
-    imports: [..., IgxColumnActionsModule],
+    imports: [..., IgxColumnActionsComponent],
 })
 export class AppModule {}
 ```
@@ -395,7 +395,7 @@ We can also allow the user to choose the display order of the columns in the col
 - **Alphabetical** (order the columns alphabetically)
 - **DisplayOrder** (order the columns according to the way they are displayed in the @@igComponent)
 
-Let's create a couple of nicely designed radio buttons for our options! We just have to go ahead and get the [**IgxRadio**](../radio-button.md) module.
+Let's create a couple of nicely designed radio buttons for our options! We just have to go ahead and get the [**IgxRadio**](../radio-button.md) component.
 
 ```typescript
 // app.module.ts
@@ -403,13 +403,13 @@ Let's create a couple of nicely designed radio buttons for our options! We just 
 ...
 import {
     ...
-    IgxRadioModule    
+    IgxRadioComponent    
 } from 'igniteui-angular/radio';
-// import { ..., IgxRadioModule } from '@infragistics/igniteui-angular'; for licensed package
+// import { ..., IgxRadioComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
-    imports: [..., IgxRadioModule],    
+    imports: [..., IgxRadioComponent],    
 })
 export class AppModule {}
 ```

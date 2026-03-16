@@ -54,7 +54,7 @@ import { IgxAccordionModule } from 'igniteui-angular/accordion';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxAccordionComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_ACCORDION_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/accordion/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxAccordionComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_ACCORDION_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/accordion/src/accordion/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
