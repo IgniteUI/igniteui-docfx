@@ -202,16 +202,6 @@ Simple ComboBox は、選択が変更されるたびに [selectionChanging]({env
 </igx-simple-combo>
 ```
 
-さらに、Simple ComboBox は選択がコミットされてコンポーネントの状態が更新された後に [selectionChanged]({environment:angularApiUrl}/classes/IgxSimpleComboComponent.html#selectionChanged) イベントを発生させます。発行されたイベント引数 [ISimpleComboSelectionChangedEventArgs]({environment:angularApiUrl}/interfaces/isimplecomboselectionchangedeventargs.html) には、変更前の選択、現在の選択、および表示された項目に関する情報が含まれています。`selectionChanging` とは異なり、このイベントはキャンセルできず、最終的にコミットされた選択状態を反映することが保証されています。Simple ComboBox が `ngModel` または Angular フォームとともに使用されている場合、`selectionChanged` はフォームの値が更新された後に発生します。
-
-イベントへのバインドは、`igx-simple-combo` タグの適切な `@Output` プロパティを介して行うことができます。
-
-```html
-<igx-simple-combo [data]="cities" [displayKey]="'name'" [valueKey]="'id'"
-           (selectionChanged)="handleSelectionChanged($event)">
-</igx-simple-combo>
-```
-
 <div class="divider--half"></div>
 
 ## キーボード ナビゲーション
