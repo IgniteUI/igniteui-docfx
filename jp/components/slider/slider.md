@@ -49,7 +49,7 @@ import { IgxSliderModule } from 'igniteui-angular/slider';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxSliderComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_SLIDER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/slider/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxSliderComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_SLIDER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/slider/src/slider/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts

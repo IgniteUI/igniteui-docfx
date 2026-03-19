@@ -354,7 +354,7 @@ public ngAfterViewInit() {
 @@igComponent コントロールの [`filteringLogic`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#filteringLogic) プロパティは @@igComponent で複数の列のフィルターが解決する方法を制御します。@@igComponent API または @@igComponent の入力プロパティによって変更できます。
 
 ```typescript
-import { FilteringLogic } from 'igniteui-angular/grids/core';
+import { FilteringLogic } from 'igniteui-angular/core';
 // import { FilteringLogic } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
@@ -570,7 +570,7 @@ export class BooleanFilteringOperand extends IgxBooleanFilteringOperand {
 ```
 
 ```typescript
-import { TreeGridMatchingRecordsOnlyFilteringStrategy } from "igniteui-angular/grids/core";
+import { TreeGridMatchingRecordsOnlyFilteringStrategy } from "igniteui-angular/core";
 ...
 public matchingRecordsOnlyStrategy = new TreeGridMatchingRecordsOnlyFilteringStrategy();
 ```

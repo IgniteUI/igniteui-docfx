@@ -49,7 +49,7 @@ import { IgxTreeGridModule } from 'igniteui-angular/grids/tree-grid';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxTreeGridComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_TREE_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/tree-grid/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxTreeGridComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_TREE_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/grids/tree-grid/src/tree-grid.module.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts

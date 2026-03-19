@@ -38,7 +38,7 @@ The next step is to import the `IgxButtonModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
-import { IgxButtonModule } from 'igniteui-angular/button';
+import { IgxButtonModule } from 'igniteui-angular/directives';
 // import { IgxButtonModule } from '@infragistics/igniteui-angular'; for licensed package
 @NgModule({
     imports: [
@@ -56,7 +56,7 @@ Alternatively, as of `16.0.0` you can import the `IgxButtonDirective` as a stand
 // home.component.ts
 
 ...
-import { IgxButtonDirective } from 'igniteui-angular/button';
+import { IgxButtonDirective } from 'igniteui-angular/directives';
 // import { IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
