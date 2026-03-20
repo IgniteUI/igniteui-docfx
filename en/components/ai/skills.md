@@ -80,20 +80,25 @@ JetBrains AI Assistant supports project-level prompts that are applied to every 
 
 ### Claude Code
 
-Claude Code supports a `CLAUDE.md` file at the project root as persistent agent instructions:
+Claude Code discovers skills from `.claude/skills/` directories at both project and user level:
 
-1. Create `CLAUDE.md` in your project root.
-2. Paste the contents of the relevant `SKILL.md` files into it. For example:
+1. Create a `.claude/skills/` directory in your project root.
+2. Copy the skill directories from the `igniteui-angular/skills/` repository into `.claude/skills/`:
 
-    ```markdown
-    # Project Instructions
-
-    This project uses Ignite UI for Angular. Always follow these guidelines:
-
-    <paste contents of SKILL.md files here>
+    ```
+    .claude/
+      skills/
+        igniteui-angular-components/
+          SKILL.md
+        igniteui-angular-grids/
+          SKILL.md
+        igniteui-angular-theming/
+          SKILL.md
     ```
 
-3. Claude Code will automatically read `CLAUDE.md` at the start of every session.
+3. Claude Code will automatically discover and apply the relevant skill based on context.
+
+> **Tip:** You can also install skills globally under `~/.claude/skills/` so they are available across all projects.
 
 ### General AI Agents
 
