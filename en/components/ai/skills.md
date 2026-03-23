@@ -44,13 +44,13 @@ GitHub Copilot reads custom instructions from a `.github/copilot-instructions.md
     ```
 
 3. Alternatively, paste the full content of the relevant `SKILL.md` files directly into `copilot-instructions.md` for fully offline, self-contained instructions.
-4. Copilot will now apply these instructions automatically on every chat and inline suggestion in VS Code.
+4. Copilot will now apply these instructions automatically on every Copilot Chat request in VS Code.
 
 ### Cursor
 
-Cursor supports persistent project rules through a `.cursorrules` file or the `.cursor/rules/` directory:
+Cursor supports persistent project rules through the `.cursor/rules/` directory:
 
-1. Create `.cursorrules` in your project root (or `.cursor/rules/igniteui.md` for a named rule).
+1. Create `.cursor/rules/igniteui.md` in your project root.
 2. Paste the contents of the desired `SKILL.md` files into that file. For example:
 
     ```
@@ -60,27 +60,29 @@ Cursor supports persistent project rules through a `.cursorrules` file or the `.
     <paste contents of skills/igniteui-angular-grids/SKILL.md here>
     ```
 
-3. Cursor will include these rules in every AI request automatically. You can also use the `@rules` mention in chat to reference a specific rule on demand.
+3. Cursor will include these rules in every AI request automatically. You can also @mention the rule by name in chat (e.g., `@igniteui`) to reference it on demand.
 
 ### Windsurf
 
-Windsurf reads persistent rules from a `.windsurfrules` file at the project root:
+Windsurf supports persistent rules stored as Markdown files in the `.windsurf/rules/` directory of your project:
 
-1. Create `.windsurfrules` in your project root.
-2. Paste the contents of the relevant `SKILL.md` files into it.
+1. Create a `.windsurf/rules/` directory in your project root.
+2. Create a rule file, for example `.windsurf/rules/igniteui.md`, and paste the contents of the relevant `SKILL.md` files into it.
 3. Every Cascade AI session in Windsurf will now include these as persistent instructions.
+
+> **Tip:** You can also define global rules (applied across all workspaces) by editing `~/.codeium/windsurf/memories/global_rules.md`.
 
 ### JetBrains IDEs (WebStorm, IntelliJ)
 
-JetBrains AI Assistant supports project-level prompts that are applied to every AI interaction:
+JetBrains AI Assistant supports project-level rules stored as Markdown files that are applied to every AI interaction:
 
-1. Open **Settings** (or **Preferences** on macOS) → **Tools** → **AI Assistant** → **Project-level prompt**.
-2. Paste the contents of the relevant `SKILL.md` files into the prompt field.
-3. Click **Apply**. The AI Assistant will now follow these instructions for all requests inside the project.
+1. Open **Settings** → **Tools** → **AI Assistant** → **Rules**.
+2. Click **New Project Rules File**, provide a name (e.g., `igniteui`), and confirm. This creates a `.aiassistant/rules/igniteui.md` file in your project root.
+3. Paste the contents of the relevant `SKILL.md` files into that file and save it. The AI Assistant will now follow these rules for all requests inside the project.
 
 ### Claude Code
 
-Claude Code discovers skills from `.claude/skills/` directories at both project and user level:
+Claude Code loads skills from `.claude/skills/` at both project and user level. Each skill's `description` field in its `SKILL.md` frontmatter tells Claude when to invoke it automatically. You can also invoke any skill directly with `/skill-name`.
 
 1. Create a `.claude/skills/` directory in your project root.
 2. Copy the skill directories from the `igniteui-angular/skills/` repository into `.claude/skills/`:
@@ -96,7 +98,7 @@ Claude Code discovers skills from `.claude/skills/` directories at both project 
           SKILL.md
     ```
 
-3. Claude Code will automatically discover and apply the relevant skill based on context.
+3. Claude Code will load the relevant skill automatically when your request matches its description, or you can invoke it directly (e.g., `/igniteui-angular-grids`).
 
 > **Tip:** You can also install skills globally under `~/.claude/skills/` so they are available across all projects.
 
