@@ -75,20 +75,24 @@ git log --name-only --format="" -1 -- en/
 
 ### Step 1b — Build the list of TOC-covered files
 
-Extract every file path referenced in the English component TOC so that only
-documentation pages that are part of the published table of contents are
-translated:
+Extract every file path referenced in the English component TOC, and also
+include the TOC file itself, so that only documentation pages that are part of
+the published table of contents are translated:
 
 ```bash
-grep -E 'href:' en/components/toc.yml \
-  | sed "s/.*href:\s*//" \
-  | tr -d "'" | tr -d '"' \
-  | grep -v '^http' \
-  | awk 'NF {print "en/components/" $0}'
+{ \
+  echo "en/components/toc.yml"; \
+  grep -E 'href:' en/components/toc.yml \
+    | sed "s/.*href:\s*//" \
+    | tr -d "'" | tr -d '"' \
+    | grep -v '^http' \
+    | awk 'NF {print "en/components/" $0}'; \
+}
 ```
 
-This produces a newline-separated list of `en/components/…` paths that are
-covered by the TOC (external `http` links are excluded automatically).
+This produces a newline-separated list that begins with `en/components/toc.yml`
+itself, followed by all `en/components/…` paths covered by the TOC (external
+`http` links are excluded automatically).
 
 ### Step 2 — Filter changed files to TOC-covered files and locate their Japanese counterparts
 
@@ -136,6 +140,13 @@ translating all new or modified English prose into natural, fluent Japanese.
   dividers, etc.) as the English source.
 - Preserve all existing Japanese translations in unchanged sections of the file;
   only modify the parts that correspond to the English diff.
+
+**Special rule for `toc.yml`:**
+When the changed file is `en/components/toc.yml`, apply structural changes
+(added/removed/reordered entries, changed `href`, `new`, `updated`, `header`,
+or `sortable` values) to `jp/components/toc.yml`, and translate only the
+`name:` values of any new or modified entries into Japanese. Do **not** modify
+`name:` values of entries that were not touched by the English diff.
 
 **If creating a new Japanese file:**
 - Mirror the full English file and translate all prose into Japanese.
