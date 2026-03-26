@@ -4,35 +4,35 @@
 
 <div class="sg-palette">
     <div class="sg-color-block sg-color-block--primary">
-        <strong>プライマリ</strong>
+        <strong>Primary</strong>
         <span></span>
     </div>
     <div class="sg-color-block sg-color-block--secondary-1">
-        <strong>セカンダリ 1</strong>
+        <strong>Secondary 1</strong>
         <span></span>
     </div>
     <div class="sg-color-block sg-color-block--secondary-2">
-        <strong>セカンダリ 2</strong>
+        <strong>Secondary 2</strong>
         <span></span>
     </div>
     <div class="sg-color-block sg-color-block--accent">
-        <strong>アクセント </strong>
+        <strong>Accent </strong>
         <span></span>
     </div>
     <div class="sg-color-block sg-color-block--info">
-        <strong>情報</strong>
+        <strong>Info</strong>
         <span></span>
     </div>
     <div class="sg-color-block sg-color-block--success">
-        <strong>成功</strong>
+        <strong>Success</strong>
         <span></span>
     </div>
     <div class="sg-color-block sg-color-block--warning">
-        <strong>警告</strong>
+        <strong>Warning</strong>
         <span></span>
     </div>
     <div class="sg-color-block sg-color-block--error">
-        <strong>エラー</strong>
+        <strong>Error</strong>
         <span></span>
     </div>
 </div>
