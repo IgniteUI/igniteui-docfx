@@ -47,7 +47,7 @@ _language: ja
   - プロット エリアの余白プロパティは、チャートがデフォルトのズーム レベルにある場合にビューポートに導入されるブリード オーバー領域を定義します。一般的なユース ケースは、軸と最初/最後のデータ ポイントの間にスペースを確保することです。以下にリストされている [`ComputedPlotAreaMarginMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/computedplotareamarginmode.html) は、マーカーが有効な場合に自動的に余白を設定します。その他は `Double` を指定して太さを表します。PlotAreaMarginLeft などはチャートの 4 辺すべてのスペースを調整します。
 - 新しいハイライト表示プロパティ
   - [`HighlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/highlightingmode.html) - ホバーされたシリーズまたはホバーされていないシリーズをフェードまたは明るくするかどうかを設定します。
-  - `HighlightingBehavior` - マウスの位置に応じてシリーズがハイライト表示されるかどうかを設定します (直接上や最近接アイテムなど)。
+  - `HighlightingBehavior` - マウスの位置に応じてシリーズがハイライト表示されるかどうかを設定します (直下や最近傍アイテムなど)。
   - 以前のリリースではハイライト表示はホバー時のフェードのみに制限されていました。
 - 以下のシリーズにハイライト表示を追加:
   - スタック
