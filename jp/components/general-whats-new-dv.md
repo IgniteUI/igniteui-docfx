@@ -26,7 +26,7 @@ _language: ja
 <div class="divider--half"></div>
 
 - Bar/Column/Waterfall シリーズを角丸から四角い角に変更
-- Scatter High Density シリーズの最小値/最大値の熱プロパティの色を変更
+- Scatter High Density シリーズの最小値/最大値の密度 (headt) プロパティの色を変更
 - Financial/Waterfall シリーズの負の塗りつぶしビジュアルの色を変更
 - マーカーの太さを 1px から 2px に変更
 - PointSeries、BubbleSeries、ScatterSeries、PolarScatterSeries のマーカーの塗りつぶしをマーカーのアウトラインと一致するように変更
