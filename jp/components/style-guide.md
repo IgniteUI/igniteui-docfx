@@ -76,7 +76,7 @@
 
 ## リンク
 
-[www.infragistics.com](https://www.infragistics.com/)
+[jp.infragistics.com](https://jp.infragistics.com/)
 
 [別のトピックへのリンク](general/getting-started.md)
 
