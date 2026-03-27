@@ -7,13 +7,13 @@ import { remarkEnv } from './src/plugins/remark-env.mjs';
 // ── Resolve build mode and language from environment variables ───────────────
 // NODE_ENV: 'development' | 'staging' | 'production'  (default: 'development')
 // DOCS_LANG: 'en' | 'jp' | 'kr'                       (default: 'en')
-const nodeEnv  = process.env.NODE_ENV  || 'development';
+const nodeEnv = process.env.NODE_ENV || 'development';
 const docsLang = process.env.DOCS_LANG || 'en';
 
 /** @type {'dev' | 'staging' | 'prod'} */
 const mode = nodeEnv === 'production' ? 'prod'
-           : nodeEnv === 'staging'    ? 'staging'
-           : 'dev';
+	: nodeEnv === 'staging' ? 'staging'
+		: 'dev';
 
 const docsDir = path.resolve(`./src/content/${docsLang}`);
 const templatesDir = path.resolve(`./src/grids_templates/${docsLang}`);
@@ -40,5 +40,5 @@ export default createDocsSite({
 		logo: { src: './public/favicon.svg' },
 	},
 	image: { service: { entrypoint: 'astro/assets/services/noop' } },
-	markdown: { remarkPlugins: [remarkEnv] },
+	markdown: {},
 });
