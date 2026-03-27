@@ -1,0 +1,375 @@
+---
+title: 계층 그리드 페이징
+_description: The Ignite UI for Angular Hierarchical Grid control features the fastest, touch-responsive data-rich tree grid with popular features.
+_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Angular Hierarchical Grid, Angular Hierarchical Table, Angular Hierarchical Grid component, Angular Hierarchical Table component, Angular Hierarchical Grid control, Angular Hierarchical Table control, Angular High Performance Hierarchical Grid, Angular High Performance Hierarchical Table, Paging, Pagination, Hierarchical Grid Paging, Hierarchical Table Paging
+_language: kr
+---
+
+
+### Hierarchical Grid 페이징
+
+Ignite UI for Angular Hierarchical Grid에서 **Paging**은 루트 `igx-hierarchical-grid` 컴포넌트에서 초기화되며 [`paging`]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html#paging) 및 [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) 입력으로 설정할 수 있습니다.
+
+#### 데모
+
+
+
+
+
+<code-view style="height:560px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-paging/" >
+</code-view>
+
+<div class="divider--half"></div>
+
+
+
+페이징은 해당 기능이 사용되는지 여부를 제어하는 불 속성이며 [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage) 속성은 페이지당 표시할 수 있는 레코드를 제어합니다. 페이징을 활성화하기 위해 Hierarchical Grid를 업데이트합니다:
+
+```html
+<igx-hierarchical-grid #hierarchicalGrid [data]="data" [height]="'500px'" [width]="'100%'" [displayDensity]="'cosy'">
+    <igx-paginator [perPage]="10">
+    </igx-paginator>
+</igx-hierarchical-grid>
+```
+
+페이징 영역은 초기화 중에 템플릿 참조가 Hierarchical Grid에 전달되는 경우 사용자가 템플릿화를 할 수 있습니다. 아래 예제는 페이징이 입력을 통해 제어되는 템플릿입니다.
+
+```html
+<igx-hierarchical-grid #hierarchicalGrid [data]="data" [height]="'500px'" [width]="'100%'" [displayDensity]="'cosy'">
+    <igx-paginator [perPage]="10">
+    </igx-paginator>
+</igx-hierarchical-grid>
+```
+
+페이징은 [`paginate`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#paginate), [`previousPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#previouspage), [`nextPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#nextPage) 메소드를 사용하여 Hierarchical Grid API를 통해 프로그래밍 방식으로 실행할 수도 있습니다:
+
+```typescript
+// Go to page 6
+this.hierarchicalGrid.paginate(5);
+
+// Go to previous/next page
+this.hierarchicalGrid.previousPage();
+this.hierarchicalGrid.nextPage();
+
+// Check for first/last page
+this.hierarchicalGrid.isFirstPage;
+this.hierarchicalGrid.isLastPage;
+
+// Get the number of pages
+this.hierarchicalGrid.totalPages;
+
+// Change the number of records per page
+this.hierarchicalGrid.perPage = 25;
+
+// Enables/disables paging
+this.hierarchicalGrid.paging = false;
+```
+
+
+### 원격 데이터
+
+페이징은 원격 데이터에서도 작동할 수 있습니다.
+
+먼저 서비스를 선언하여 데이터 가져오기를 실행합니다.
+페이지 수를 계산하기 위해 모든 데이터 항목 수가 필요하며 이 논리를 서비스에 추가할 것입니다.
+```typescript
+@Injectable()
+export class RemoteService {
+    public remoteData: BehaviorSubject<any[]>;
+    private url: string = "https://www.igniteui.com/api/products";
+
+    constructor(private http: HttpClient) {
+        this.remoteData = new BehaviorSubject([]);
+    }
+
+    public getData(index?: number, perPage?: number): any {
+        let qS = "";
+
+        if (perPage) {
+            qS = `?$skip=${index}&$top=${perPage}&$count=true`;
+        }
+
+        this.http
+            .get(`${this.url + qS}`).pipe(
+                map((data: any) => {
+                    return data;
+                })
+            ).subscribe((data) => this.remoteData.next(data));
+    }
+
+    public getDataLength(): any {
+        return this.http.get(this.url).pipe(
+            map((data: any) => {
+                return data.length;
+            })
+        );
+    }
+}
+```
+서비스를 선언 한 후에는 Hierarchical Grid 생성 및 데이터 서브스크립션을 위한 컴포넌트를 작성해야 합니다.
+
+
+```typescript
+export class HGridRemotePagingSampleComponent implements OnInit, AfterViewInit, OnDestroy {
+    public page = 0;
+    public lastPage = false;
+    public firstPage = true;
+    public totalPages: number = 1;
+    public totalCount = 0;
+    
+    constructor(private remoteService: RemotePagingService) {}
+
+    public ngOnInit(): void {
+        this._dataLengthSubscriber = this.remoteService.getDataLength(
+            { parentID: null, rootLevel: true, key: "Customers" }).subscribe((length) => {
+            this.totalCount = length;
+            this.totalPages = Math.ceil(length / this.perPage);
+            this.buttonDeselection(this.page, this.totalPages);
+        });
+    }
+}
+```
+
+요청된 페이지에 대한 데이터만 가져오고 선택된 페이지 및  [`perPage`]({environment:angularApiUrl}/classes/IgxPaginatorComponent.html#perPage)에 따라 정확한 `skip` 및 `top` 매개 변수를 원격 서비스에 전달하려면 사용자 호출 템플릿을 생성해야 합니다.
+또한, 호출 버튼의 비활성화 및 활성화도 관리해야 합니다.
+
+
+
+```html
+<ng-template #customPager let-api>
+    <button [disabled]="firstPage" (click)="paginate(0, false)" igxButton="icon" igxRipple igxRippleCentered="true">
+        <igx-icon fontSet="material">first_page</igx-icon>
+    </button>
+    <button [disabled]="firstPage" (click)="previousPage()" igxButton="icon" igxRipple igxRippleCentered="true">
+        <igx-icon fontSet="material">chevron_left</igx-icon>
+    </button>
+    <span>{{ page + 1 }} of {{totalPages}}</span>
+    <button [disabled]="lastPage" (click)="nextPage()" igxRipple igxRippleCentered="true" igxButton="icon">
+        <igx-icon fontSet="material">chevron_right</igx-icon>
+    </button>
+    <button [disabled]="lastPage" (click)="paginate(totalPages - 1, false)" igxButton="icon" igxRipple
+        igxRippleCentered="true">
+        <igx-icon fontSet="material">last_page</igx-icon>
+    </button>
+    <select style="margin-left: 1rem;" (change)="parseToInt($event.target.value);">
+        <option [value]="val" [selected]="perPage == val" *ngFor="let val of [5, 10, 15, 20]">{{ val
+            }}</option>
+    </select>
+</ng-template>
+```
+```typescript
+@ViewChild("customPager", { read: TemplateRef })
+public remotePager: TemplateRef<any>;
+public title = "gridPaging";
+    
+@ViewChild("layout1")
+public layout1: IgxRowIslandComponent;
+
+@ViewChild("hierarchicalGrid")
+public hierarchicalGrid: IgxHierarchicalGridComponent;
+    
+...
+    
+public ngAfterViewInit() {
+    this.hierarchicalGrid.isLoading = true;
+    this.remoteService.getData(
+        { parentID: null, rootLevel: true, key: "Customers" }, 0, this.perPage).subscribe((data) => {
+        this.hierarchicalGrid.isLoading = false;
+        this.hierarchicalGrid.data = data;
+        this.hierarchicalGrid.paginationTemplate = this.remotePager;
+        this.hierarchicalGrid.cdr.detectChanges();
+    });
+}
+
+...
+
+public nextPage() {
+    this.firstPage = false;
+    this.page++;
+    const skip = this.page * this.perPage;
+    const top = this.perPage;
+    this.remoteService.getData(
+        { parentID: null, rootLevel: true, key: "Customers" }, skip, top).subscribe((data) => {
+        this.hierarchicalGrid.data = data;
+        this.hierarchicalGrid.cdr.detectChanges();
+    });
+    if (this.page + 1 >= this.totalPages) {
+        this.lastPage = true;
+    }
+}
+
+public previousPage() {
+    this.lastPage = false;
+    this.page--;
+    const skip = this.page * this.perPage;
+    const top = this.perPage;
+    this.remoteService.getData(
+        { parentID: null, rootLevel: true, key: "Customers" }, skip, top).subscribe((data) => {
+        this.hierarchicalGrid.data = data;
+        this.hierarchicalGrid.cdr.detectChanges();
+    });
+    if (this.page <= 0) {
+        this.firstPage = true;
+    }
+}
+
+public paginate(page: number, recalc: true) {
+    this.page = page;
+    const skip = this.page * this.perPage;
+    const top = this.perPage;
+    if (recalc) {
+        this.totalPages = Math.ceil(this.totalCount / this.perPage);
+    }
+    this.remoteService.getData(
+        { parentID: null, rootLevel: true, key: "Customers" }, skip, top).subscribe((data) => {
+        this.hierarchicalGrid.data = data;
+        this.hierarchicalGrid.cdr.detectChanges();
+    });
+    this.buttonDeselection(this.page, this.totalPages);
+}
+
+public buttonDeselection(page: number, totalPages: number) {
+    ...
+}
+
+```
+
+마지막 단계는 그리드의 템플릿을 선언하는 것입니다.
+
+
+```html
+<igx-hierarchical-grid
+    [primaryKey]="'CustomerID'" [height]="'550px'" [width]="'100%'" #hierarchicalGrid>
+    <igx-column field="CustomerID"></igx-column>
+    <igx-column field="CompanyName"></igx-column>
+    <igx-column field="ContactName"></igx-column>
+    <igx-column field="ContactTitle"></igx-column>
+    <igx-column field="Country"></igx-column>
+    <igx-column field="Phone"></igx-column>
+    ...
+    <igx-paginator [perPage]="10">
+    </igx-paginator>
+</igx-hierarchical-grid>
+```
+
+이것으로 샘플을 실행할 수 있습니다. 또한, 페이징 템플릿을 런타임에서 변경할 수 있는 옵션을 추가하여 샘플을 더 확장할 수 있습니다. 다음은 실행 방법을 보여 줍니다. 먼저 템플릿에 하나 더 페이징 템플리트를 추가합니다:
+
+```html
+<ng-template #secCustomPager let-api>
+    <button [disabled]="firstPage" (click)="previousPage()" igxButton="flat" igxButtonColor="#09f">
+        PREV
+    </button>
+    <span *ngIf="shouldShowFirstPage" (click)="paginate(0, false)"><a class="pageNavLinks" [routerLink]=''>{{1}}</a> ...</span>
+    <span *ngFor="let item of pages" (click)="paginate(item, false)">
+        <a class="pageNavLinks {{activePage(item)}}" [routerLink]=''>{{item + 1}}</a>
+    </span>
+    <span *ngIf="shouldShowLastPage" (click)="paginate(totalPages - 1, false)">... <a class="pageNavLinks" [routerLink]=''>{{ totalPages }}</a></span>
+    <button [disabled]="lastPage" (click)="nextPage()"  igxButton="flat" igxButtonColor="#09f">
+        NEXT
+    </button>
+</ng-template>
+```
+
+그 후, 이미 생성된 메소드를 다른 추가 로직을 사용해 확장해야 합니다:
+
+```typescript
+// the same also applies for the methods previousPage() and paginate(page: number, recalc: true)
+public nextPage() {
+    ...
+    if (this.grid1.paginationTemplate === this.secondPagerTemplate) {
+        this.setNumberOfPagingItems(this.page, this.totalPages);
+    }
+}
+// creates an array with the visible page numbers where the user can navigate according to the current page and the total page number
+public setNumberOfPagingItems(currentPage, totalPages) {
+    ....
+}
+```
+마지막으로 사용자가 런타임에서 페이저 템플릿을 변경할 수 있는 버튼을 추가합니다:
+
+```html
+<button (click)="changeTemplate()" class='changeBtn' igxButton="flat"
+    igxButtonColor="#09f" igxButtonBackground="#dadada">Change Paging Template</button>
+```
+
+```typescript
+public changeTemplate() {
+    if (this.grid1.paginationTemplate === this.remotePager) {
+        this.grid1.paginationTemplate = this.secondPagerTemplate;
+        this.setNumberOfPagingItems(this.page, this.totalPages);
+    } else {
+        this.pages = [];
+        this.grid1.paginationTemplate = this.remotePager;
+    }
+    this.grid1.cdr.detectChanges();
+}
+```
+
+상기의 모든 변경 후 다음과 같은 결과가 됩니다.
+
+#### 데모
+
+
+
+<code-view style="height:560px" 
+           data-demos-base-url="{environment:demosBaseUrl}" 
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-remote-paging/" >
+</code-view>
+
+<div class="divider--half"></div>
+
+
+샘플을 이와 똑같이 보이게 하려면 사용자 페이징 테마를 적용해야 합니다:
+
+```css
+@import '~igniteui-angular/lib/core/styles/themes/index';
+
+@include core();
+@include theme($default-palette, $legacy-support: true);
+
+
+$custom-paginator-theme:grid-paginator-theme(
+    $text-color: #09f
+);
+$custom-button-theme:button-theme(
+    $icon-color: #09f,
+    $icon-hover-color: #dadada,
+    $icon-focus-color:rgb(0, 119, 255),
+    $icon-focus-background: #aeaeae
+);
+
+.customPager {
+    @include grid-paginator($custom-paginator-theme);
+    @include button($custom-button-theme);
+}
+```
+
+
+
+
+
+### API 참조
+* [IgxHierarchicalGridComponent API]({environment:angularApiUrl}/classes/igxhierarchicalgridcomponent.html)
+* [IgxHierarchicalGridComponent 스타일]({environment:sassApiUrl}/themes#function-grid-theme)
+* [IgxGridPaginator 스타일]({environment:sassApiUrl}/themes#function-paginator-theme)
+
+### 추가 리소스
+<div class="divider--half"></div>
+
+* [Hierarchical Grid 개요](hierarchical-grid.md)
+* [가상화 및 성능](virtualization.md)
+* [필터링](filtering.md)
+* [정렬](sorting.md)
+* [요약](summaries.md)
+* [열 이동](column-moving.md)
+* [열 핀 고정](column_pinning.md)
+* [열 크기 조정](column-resizing.md)
+* [선택](selection.md)
+
+<div class="divider--half"></div>
+커뮤니티는 활동적이고 새로운 아이디어를 항상 환영합니다.
+
+* [Ignite UI for Angular **포럼**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

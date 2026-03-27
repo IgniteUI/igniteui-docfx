@@ -1,170 +1,200 @@
-![Build Status](https://github.com/IgniteUI/igniteui-docfx/workflows/Node.js%20CI/badge.svg)
+# Ignite UI for Angular Docs (Astro + Starlight)
 
-# Ignite UI DocFX Site Builder
+The Astro-based migration of the [igniteui-docfx](https://github.com/IgniteUI/igniteui-docfx) documentation site for Ignite UI for Angular. Built with [Astro Starlight](https://starlight.astro.build) and the internal `docs-template` integration.
 
-This project uses Node.js and Gulp as a build tool to accelerate the development of the Ignite UI DocFX samples site for Ignite UI for Angular.
+---
 
 ## Prerequisites
 
-1. [DocFX](https://dotnet.github.io/docfx)
-2. [Node.js](https://nodejs.org)
-3. [NET SDK 6.0 or higher](https://dotnet.microsoft.com/en-us/download)
+- **Node.js** 18 or later
+- **docs-template** package at `C:/Repos/docs/docs-template`
+  (referenced as a `file:` dependency in `package.json`)
 
-## Getting Started
+---
 
-### Installing DocFX
-
-To install docfx, restore it as a dotnet tool - Installs the .NET local tools that are in scope for the current directory: 
-
-```bash
-dotnet tool restore
-```
-
-**NOTE**: Performing `npm install` also restores dotnet tool dependencies as a `postinstall` step.
-
-### Installing the Node.js dependencies:
-
-If you are using npm, run:
+## Getting started
 
 ```bash
 npm install
+npm run dev          # English, development env → http://localhost:4321
 ```
 
-If you are using yarn, run:
+---
+
+## Build commands
+
+The build depends on two environment variables:
+
+| Variable    | Values                                    | Default       |
+| :---------- | :---------------------------------------- | :------------ |
+| `NODE_ENV`  | `development`, `staging`, `production`    | `development` |
+| `DOCS_LANG` | `en`, `jp`, `kr`                          | `en`          |
+
+All combinations are available as npm scripts:
+
+### Development server
 
 ```bash
-yarn install
+npm run dev            # English (default)
+npm run dev:en         # English (explicit)
+npm run dev:jp         # Japanese
+npm run dev:kr         # Korean
 ```
-## Starting the Development Server
 
-The build process depends on the environment variable `NODE_ENV` to be able to set the correct URL for the Angular Samples. Assign either `development`, `staging`, or `production` to `NODE_ENV`.
+### Build (development URLs)
 
-You can create a `.env` file under the root of the project and set `NODE_ENV`, for instance, by assigning environment.
+```bash
+npm run build          # English (default)
+npm run build:en       # English (explicit)
+npm run build:jp       # Japanese
+npm run build:kr       # Korean
+```
+
+### Build for staging
+
+```bash
+npm run build-staging         # English (default)
+npm run build-staging:en      # English (explicit)
+npm run build-staging:jp      # Japanese
+npm run build-staging:kr      # Korean
+```
+
+### Build for production
+
+```bash
+npm run build-production         # English (default)
+npm run build-production:en      # English (explicit)
+npm run build-production:jp      # Japanese
+npm run build-production:kr      # Korean
+```
+
+### Preview
+
+```bash
+npm run preview        # serve the last build locally
+```
+
+---
+
+## Environment variables
+
+Documentation uses `{environment:variableName}` tokens inside markdown that are resolved **at build time**.
+
+All variable values are defined in each language's `environment.json` (e.g. `src/content/en/environment.json`), keyed by `NODE_ENV` (`development`, `staging`, `production`).
+
+At startup, `astro.config.mjs` reads `NODE_ENV` and `DOCS_LANG`, and the `remark-env` plugin resolves every `{environment:key}` token at render time using the matching variable set from `environment.json`.
+
+Key variables:
+
+| Token | Description |
+| :---- | :---------- |
+| `{environment:demosBaseUrl}` | Base URL for Angular sample iframes |
+| `{environment:dvDemosBaseUrl}` | Data Visualization samples base URL |
+| `{environment:lobDemosBaseUrl}` | LOB samples base URL |
+| `{environment:angularApiUrl}` | TypeScript API docs base URL |
+| `{environment:sassApiUrl}` | SASS API docs base URL |
+| `{environment:infragisticsBaseUrl}` | Main Infragistics site base URL |
+
+You can also set these via a `.env` file at the project root:
 
 ```
 NODE_ENV=development
+DOCS_LANG=en
 ```
 
-To start the server, run:
+---
 
-for English:
+## How it works
 
-```bash
-npm start -- --lang en
-```
+### 1. Content source
 
-for Japansese:
+Markdown files live in `src/content/{lang}/` (e.g. `src/content/en/`). They are either:
 
-```bash
-npm start -- --lang jp
-```
+- **Flat docs** — individual `.md` files (e.g. `accordion.md`, `calendar.md`).
+- **Grid template pages** — shared templates in `src/content/{lang}/grids_templates/` expanded at build time into per-variant pages.
 
-for Korean:
+### 2. Grid page generation (`src/generate-grids.mjs`)
 
-```bash
-npm start -- --lang kr
-```
-
-The command takes an adittional argument --lang [ en | jp | kr ] to serve English, Japanese or Korean version.
-
-## Building the Static Site
-
-For English:
-
-```bash
-npm run build -- --lang en
-```
-
-For Japanese:
-
-```bash
-npm run build -- --lang jp
-```
-
-For Korean:
-
-```bash
-npm run build -- --lang kr
-```
-
-The build script produces a folder called \_site at the root of the respective project.
-For instance, for English, the static site lives under `en/_site`;
-
-## Building for Staging and Production
-
-The build command is very similar to the aforementioned step. To build the site for staging, run:
-
-```bash
-npm run build-staging --lang en
-```
-
-The build command for staging is:
-
-```bash
-npm run build-production --lang jp
-```
-
-## Using explicit editor for live-editing samples
-
-The explicit-editor attribute for code-view elements is allowing to set explicitly live editor for specified sample and supports "csb" and "stackblitz" as values.
-
-
-```html
-<code-view explicit-editor="csb" ... ></code-view>
-```
-
-```html
-<code-view explicit-editor="stackblitz" ... ></code-view>
-```
-
-## Include TOC topic labels
-
-Open '[ en | jp | kr ]\components\toc.yml' file for the specific language version.
-Each TOC topic includes parameters for name and href, along with an optional label parameter. Starting from version 3.5.1 of the igniteui-docfx-template, the supported labels include 'new,' 'updated,' 'preview,' and 'beta.' To add a desired label, simply specify its name and set its value to true.
-
-Example:
+Grid, Tree Grid, Hierarchical Grid, and Pivot Grid share documentation via DocFX-style conditional templates:
 
 ```
-- name: Update guide
-  href: general/update-guide.md
-  updated: true
+@@if (igxName === 'IgxGrid') { ... }
+@@if (igxName === 'IgxTreeGrid') { ... }
 ```
 
-## Collapsible code snippets
+`generateGridTopics()` runs before Astro starts, evaluates the `@@if` blocks and replaces `@@variable` placeholders for each grid variant, writing resolved files into `src/content/{lang}/grid/`, `treegrid/`, `hierarchicalgrid/`, and `pivotGrid/`.
 
-To generate and display collapsible code snippets on documentation websites, follow these steps:
+### 3. Environment token resolution
 
-1. Create a \<div> section with the class "fancy-details".
+The `remark-env` remark plugin resolves `{environment:key}` tokens at render time using the values from `src/content/{lang}/environment.json` matching the current `NODE_ENV`.
 
-2. Add a \<summary> element to the created \<div> section.
+### 4. Image path normalization
 
-3. Add the summary text representing the code snippet header to the \<summary> element.
+`normalizeImagePaths()` rewrites relative `../images/` paths to absolute `/images/` so Astro resolves them from `public/`.
 
-4.  Add a \<code> element to the created \<div> section.
+### 5. Navigation (`src/content/{lang}/toc.json`)
 
-5. Add the code snippet to the \<code> element.
+The sidebar is driven by `toc.json`, consumed by the `docs-template` integration via `source.tocPath`.
 
-6. Example:
-```html
-<div class="fancy-details">
-    <summary>Example of a successful response body: </summary>
-    <code>
-        {
-            "id": "{123456}_repo",
-            "modified": "2023-02-03T14:07:34.0000000",
-            "created": "2023-02-03T14:07:34.0000000",
-            "name": "Marketing",
-            "user": {
-                "id": "{123456}_u ",
-                "name": "Teddy Mitkova"
-            },
-            "dashboardSections": [
-                {
-                    "id": "{123456}_f",
-                    "name": "May"
-                }
-            ]
-        }
-    </code>
-</div>
+### 6. Site configuration (`astro.config.mjs`)
+
+```js
+createDocsSite({
+  site: 'https://www.infragistics.com/products/ignite-ui-angular',
+  platform: 'angular',
+  navLang: docsLang === 'jp' ? 'ja' : docsLang,
+  mode,                          // 'dev' | 'staging' | 'prod'
+  source: {
+    tocPath: `./src/content/${docsLang}/toc.json`,
+    docsDir: `./src/content/${docsLang}`,
+  },
+})
 ```
+
+---
+
+## Project structure
+
+```
+.
+├── .github/
+│   └── CONTRIBUTING.md            Contribution guidelines
+├── public/
+│   └── images/                    Static images referenced by docs
+├── scripts/
+│   └── sync-docfx.mjs             Pull content from igniteui-docfx
+├── src/
+│   ├── content/
+│   │   ├── en/                    English docs + toc.json + environment.json
+│   │   ├── jp/                    Japanese docs + toc.json + environment.json
+│   │   └── kr/                    Korean docs + toc.json + environment.json
+│   │       ├── grids_templates/   Shared @@if-templated source files
+│   │       ├── grid/              Generated IgxGrid pages
+│   │       ├── treegrid/          Generated IgxTreeGrid pages
+│   │       ├── hierarchicalgrid/  Generated IgxHierarchicalGrid pages
+│   │       ├── pivotGrid/         Generated IgxPivotGrid pages
+│   │       ├── toc.json           Sidebar navigation
+│   │       └── environment.json   Environment variables (dev/staging/prod)
+│   ├── content.config.ts          Astro content collection schema
+│   ├── generate-grids.mjs         Build-time grid page generator
+│   └── plugins/
+│       └── remark-env.mjs         Remark plugin for {environment:} tokens
+├── astro.config.mjs               Main site config (grid gen, createDocsSite)
+└── package.json                   Build scripts for all lang/env combinations
+```
+
+---
+
+## Migrated from igniteui-docfx
+
+This project replaces the DocFX + Gulp build pipeline with Astro + Starlight. Key changes:
+
+| DocFX | Astro |
+| :---- | :---- |
+| `gulp serve --lang en` | `npm run dev:en` |
+| `cross-env NODE_ENV=staging gulp build --lang jp` | `npm run build-staging:jp` |
+| `cross-env NODE_ENV=production gulp build --lang kr` | `npm run build-production:kr` |
+| DocFX `docfx.json` | `astro.config.mjs` + `createDocsSite()` |
+| `gulp-file-include` (@@if/@@var) | `src/generate-grids.mjs` |
+| `environment.json` per locale dir | `src/content/{lang}/environment.json` per locale |
+| DocFX template (`igniteui-docfx-template`) | `docs-template` Astro integration |

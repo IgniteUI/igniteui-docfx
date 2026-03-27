@@ -1,0 +1,274 @@
+---
+title: Angular Pivot Grid の状態保持 - Ignite UI for Angular
+_description: 包括的な Ignite UI for Angular のツールセットを使用して、グリッドの状態を簡単に保存および復元できます。構成の復元、使用方法、デモをご覧ください。
+_keywords: 状態保持, ignite ui for angular, インフラジスティックス
+_license: commercial
+_canonicalLink: grid/state-persistence
+_language: ja
+---
+
+
+# Pivot Grid の状態保持
+
+igxGridState ディレクティブによって開発者がグリッドの状態を簡単に保存および復元できます。[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) ディレクティブがグリッドに適用されると、[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getState) および [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setState) メソッドが公開され、開発者はこれを使用して、あらゆるシナリオで状態の保持を実現できます。
+
+## サポートされている機能
+
+[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) ディレクティブは、以下の機能の状態の保存および復元をサポートします。
+
+
+
+
+
+
+
+
+- `ソート`
+- `フィルタリング`
+- `セルの選択`
+- `行の選択`
+- `列の選択`
+- `展開`
+- `ピボット構成`
+  - [`IPivotConfiguration`]({environment:angularApiUrl}/interfaces/ipivotconfiguration.html) インターフェイスによって定義されるピボット構成プロパティ。
+  - ピボットのディメンションと値の関数は、アプリケーションレベルのコードを使用して復元されます。「[ピボット構成の復元](state-persistence.md#ピボット構成の復元)」セクションを参照してください。
+  - ピボットの行と列のストラテジもアプリケーション レベルのコードを使用して復元されます。「[ピボット ストラテジの復元](state-persistence.md#ピボット-ストラテジの復元)」セクションを参照してください。
+
+
+
+
+>[!NOTE]
+> `Row Selection` 機能を使用するには、[`primaryKey`]({environment:angularApiUrl}/classes/IgxGridComponent.html#primaryKey) プロパティを設定して、正しく保存/復元する必要があります。
+
+## 使用方法
+
+[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getState) - このメソッドは、シリアル化された JSON 文字列でグリッド状態を返します。これは、開発者がそれを取得して任意のデータストレージ (データベース、クラウド、ブラウザーの localStorage など) に保存できます。このメソッドは最初のオプションのパラメーター `serialize` を受け取り、[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getState) が [`IGridState`]({environment:angularApiUrl}/interfaces/igridstate.html) オブジェクトを返すか、シリアル化された JSON 文字列を返すかを決定します。
+開発者は、機能名、または機能名を 2 番目の引数として持つ配列を渡すことにより、特定の機能の状態のみを取得することを選択できます。
+
+```typescript
+// get all features` state in a serialized JSON string
+const gridState = state.getState();
+
+// get an `IGridState` object, containing all features original state objects, as returned by the grid public API
+const gridState: IGridState = state.getState(false);
+
+// get the sorting and filtering expressions
+const sortingFilteringStates: IGridState = state.getState(false, ['sorting', 'filtering']);
+```
+
+[`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setState) - [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setState) メソッドは、シリアル化されたJSON文字列または [`IGridState`]({environment:angularApiUrl}/interfaces/igridstate.html) オブジェクトを引数として受け入れ、オブジェクト/JSON 文字列で見つかった各機能の状態を復元します。
+
+```typescript
+state.setState(gridState);
+state.setState(sortingFilteringStates)
+```
+
+`options` - [`options`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#options) オブジェクトは、[`IGridStateOptions`]({environment:angularApiUrl}/interfaces/igridstateoptions.html) インターフェースを実装します。特定の機能の名前であるキーには、この機能の状態を追跡するかどうかを示すブール値があります。[`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getState) メソッドはこれらの機能の状態を戻り値に入れず、[`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setState) メソッドはその状態を復元しません。
+
+```typescript
+public options =  { cellSelection: false; sorting: false; }
+```
+
+
+
+
+
+
+```html
+<igx-pivot-grid [igxGridState]="options"></igx-pivot-grid>
+```
+
+
+
+これらのシンプルなシングル ポイント API を使用すると、わずか数行のコードで完全な状態維持機能を実現できます。**下からコードをコピーして貼り付けます** - ユーザーが現在のページを離れるたびに、ブラウザーの `sessionStorage` オブジェクトにグリッドの状態が保存されます。ユーザーがメイン ページに戻るときに、グリッドの状態が復元されます。必要なデータを取得するために、複雑で高度なフィルタリングやソートの式を毎回設定する必要はなくなりました。一度実行して、以下のコードでユーザーに代わって処理してください。
+
+```typescript
+// app.component.ts
+@ViewChild(IgxGridStateDirective, { static: true })
+public state!: IgxGridStateDirective;
+
+public ngOnInit() {
+    this.router.events.pipe(take(1)).subscribe((event: NavigationStart) => {
+        this.saveGridState();
+    });
+}
+
+public ngAfterViewInit() {
+    this.restoreGridState();
+}
+
+public saveGridState() {
+    const state = this.state.getState() as string;
+    window.sessionStorage.setItem('grid1-state', state);
+}
+
+public restoreGridState() {
+    const state = window.sessionStorage.getItem('grid1-state');
+    this.state.setState(state);
+}
+```
+
+
+
+
+## ピボット構成の復元
+
+[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) は、デフォルトではピボット ディメンション関数、値フォーマッターなどを保持しません ([`制限`](state-persistence.md#制限)を参照)。`IgxPivotGrid` は、構成に含まれるカスタム関数を戻すために使用できる 2 つのイベント ([`dimensionInit`]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html#dimensionInit) と [`valueInit`]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html#valueInit)) を公開します。以下はその方法です。
+
+- `dimensionInit` および `valueInit` イベントのイベント ハンドラーを割り当てます。
+
+```html
+<igx-pivot-grid #grid1 [data]="data" [pivotConfiguration]="pivotConfig" [igxGridState]="options"
+    (valueInit)='onValueInit($event)' (dimensionInit)='onDimensionInit($event)'>
+</igx-pivot-grid>
+```
+
+> [`dimensionInit`]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html#dimensionInit) および [`valueInit`]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html#valueInit) イベントは、[`pivotConfiguration`]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html#pivotConfiguration) プロパティで定義された値とディメンションごとに発行されます。
+
+- `valueInit` イベント ハンドラーで、すべてのカスタム集計、フォーマッター、およびスタイルを設定します。
+
+```typescript
+public onValueInit(value: IPivotValue) {
+    // Needed only for custom aggregators, formatter or styles.
+    if (value.member === 'AmountofSale') {
+        value.aggregate.aggregator = IgxTotalSaleAggregate.totalSale;
+        value.aggregateList?.forEach((aggr: IPivotAggregator) => {
+            switch (aggr.key) {
+                case 'SUM':
+                    aggr.aggregator = IgxTotalSaleAggregate.totalSale;
+                    break;
+                case 'MIN':
+                    aggr.aggregator = IgxTotalSaleAggregate.totalMin;
+                    break;
+                case 'MAX':
+                    aggr.aggregator = IgxTotalSaleAggregate.totalMax;
+                    break;
+            }
+        });
+    } else if (value.member === 'Value') {
+        value.formatter = (value) => value ? '$' + parseFloat(value).toFixed(3) : undefined;
+        value.styles.upFontValue = (rowData: any, columnKey: any): boolean => parseFloat(rowData.aggregationValues.get(columnKey.field)) > 150
+        value.styles.downFontValue = (rowData: any, columnKey: any): boolean => parseFloat(rowData.aggregationValues.get(columnKey.field)) <= 150;
+    }
+}
+```
+
+- `dimensionInit` イベント ハンドラーで、すべてのカスタム `memberFunction` 実装を設定します。
+
+```typescript
+public onDimensionInit(dim: IPivotDimension) {
+    switch (dim.memberName) {
+        case 'AllProducts':
+            dim.memberFunction = () => 'All Products';
+            break;
+        case 'ProductCategory':
+            dim.memberFunction = (data) => data.Product.Name;
+            break;
+        case 'City':
+            dim.memberFunction = (data) => data.Seller.City;
+            break;
+        case 'SellerName':
+            dim.memberFunction = (data) => data.Seller.Name;
+            break;
+    }
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+<code-view style="height:820px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-state-persistence/" >
+</code-view>
+
+
+
+
+## ピボット ストラテジの復元
+
+[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) は、デフォルトで は ([`制限`](state-persistence.md#制限)を参照) リモート ピボット操作もカスタム ディメンション ストラテジも保持しません (詳細については、[Pivot Grid リモート操作](pivot-grid-custom.md)のサンプルを参照してください)。これらの復元は、アプリケーション レベルのコードで実現できます。`IgxGridState` は、[`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#stateParsed) と呼ばれるイベントを公開します。このイベントはグリッド状態が適用される前に追加で変更するために使用できます。以下はその方法です。
+
+> [`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective) は、文字列引数で [`setState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#setState) を使用している場合にのみ発行します。
+
+- カスタム ソート方法およびカスタム ピボット列/行ディメンション ストラテジを設定します。
+
+```html
+<igx-pivot-grid #grid [data]="data" [pivotConfiguration]="pivotConfigHierarchy" [defaultExpandState]='true'
+    [igxGridState]="options" [sortStrategy]="customStrategy" [pivotUI]='{ showConfiguration: false }' [superCompactMode]="true" [height]="'500px'">
+</igx-pivot-grid>
+```
+
+```typescript
+@ViewChild(IgxGridStateDirective, { static: true })
+public state!: IgxGridStateDirective;
+
+public customStrategy = NoopSortingStrategy.instance();
+public options: IGridStateOptions = {...};
+public pivotConfigHierarchy: IPivotConfiguration = {
+    columnStrategy: NoopPivotDimensionsStrategy.instance(),
+    rowStrategy: NoopPivotDimensionsStrategy.instance(),
+    columns: [...],
+    rows: [...],
+    values: [...],
+    filters: [...]
+};
+```
+
+- `sessionStorage` から状態を復元し、カスタム ストラテジを適用します。
+
+```typescript
+public restoreState() {
+    const state = window.sessionStorage.getItem('grid-state');
+    this.state.stateParsed.pipe(take(1)).subscribe(parsedState => {
+        parsedState.sorting.forEach(x => x.strategy = NoopSortingStrategy.instance());
+        parsedState.pivotConfiguration.rowStrategy = NoopPivotDimensionsStrategy.instance();
+        parsedState.pivotConfiguration.columnStrategy = NoopPivotDimensionsStrategy.instance();
+    });
+    this.state.setState(state as string);
+}
+```
+
+<code-view style="height: 580px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-noop-persistence/" alt="Angular ピボット Noop グリッド状態の保持の例">
+</code-view>
+
+
+
+
+## 制限
+
+
+
+
+- [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getState) メソッドは、JSON.stringify() メソッドを使用して、元のオブジェクトをJSON文字列に変換します。JSON.stringify() は関数をサポートされていないため、[`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) ディレクティブはピボット ディメンション [`memberFunction`]({environment:angularApiUrl}/interfaces/IPivotDimension.html#memberFunction)、ピボット値 [`member`]({environment:angularApiUrl}/interfaces/IPivotValue.html#member)、[`formatter`]({environment:angularApiUrl}/interfaces/IPivotValue.html#formatter)、カスタム [`aggregate`]({environment:angularApiUrl}/interfaces/IPivotValue.html#aggregate) 関数、[`styles`]({environment:angularApiUrl}/interfaces/IPivotValue.html#styles) およびピボット構成ストラテジ ([`columnStrategy`]({environment:angularApiUrl}/interfaces/ipivotconfiguration.html#columnStrategy) と [`rowStrategy`]({environment:angularApiUrl}/interfaces/ipivotconfiguration.html#rowStrategy)) を無視します。
+
+
+
+
+
+
+- [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
+- [IgxGridStateDirective]({environment:angularApiUrl}/classes/igxgridstatedirective.html)
+
+
+## その他のリソース
+
+<div class="divider--half"></div>
+
+
+
+
+- [Pivot Grid 概要](pivot-grid.md)
+- [ピボット グリッドのリモート操作](pivot-grid-custom.md)
+- [ピボット グリッド機能](pivot-grid-features.md)
