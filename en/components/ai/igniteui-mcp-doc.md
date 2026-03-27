@@ -27,7 +27,7 @@ The Ignite UI MCP server gives AI agents direct access to accurate, up-to-date I
 
 | Server | Purpose |
 |--------|---------|
-| `igniteui-cli` MCP | Component docs: `list_components`, `search_docs`, `get_doc`, `generate_ignite_app`, `search_api`, `get_api_reference` |
+| `igniteui-cli` MCP | Component docs: `list_components`, `get_doc`, `search_docs`, `get_project_setup_guide`, `search_api`, `get_api_reference` |
 
 ---
 
@@ -54,9 +54,9 @@ Create or edit `.vscode/mcp.json` in your project root:
 ```json
 {
   "servers": {
-    "igniteui-cli": {
+    "igniteui": {
       "command": "npx",
-      "args": ["-y", "igniteui-cli-mcp"]
+      "args": ["-y", "igniteui-cli@next", "mcp"]
     }
   }
 }
@@ -66,9 +66,9 @@ Alternatively, add to `settings.json`:
 
 ```json
 "github.copilot.mcp.servers": {
-    "igniteui-cli": {
+    "igniteui": {
       "command": "npx",
-      "args": ["-y", "igniteui-cli-mcp"]
+      "args": ["-y", "igniteui-cli@next", "mcp"]
     }
 }
 ```
@@ -80,9 +80,9 @@ Create or edit `.cursor/mcp.json` in your project root:
 ```json
 {
   "mcpServers": {
-    "igniteui-cli": {
+    "igniteui": {
       "command": "npx",
-      "args": ["-y", "igniteui-cli-mcp"]
+      "args": ["-y", "igniteui-cli@next", "mcp"]
     }
   }
 }
@@ -98,9 +98,9 @@ Edit the global config file for your OS:
 ```json
 {
   "mcpServers": {
-    "igniteui-cli": {
+    "igniteui": {
       "command": "npx",
-      "args": ["-y", "igniteui-cli-mcp"]
+      "args": ["-y", "igniteui-cli@next", "mcp"]
     }
   }
 }
@@ -112,7 +112,7 @@ Open your agent chat and ask:
 
 > "Which Ignite UI tools do you have available?"
 
-The agent should list `list_components`, `search_docs`, `get_doc`, `generate_ignite_app`, `search_api`, and `get_api_reference`.
+The agent should list `list_components`, `get_doc`, `search_docs`, `get_project_setup_guide`, `search_api`, and `get_api_reference`.
 
 ---
 
@@ -132,9 +132,9 @@ The agent infers the framework from context (file extensions, component prefixes
 
 **New project:**
 ```
-list_components          → survey available components
-generate_ignite_app      → scaffold project
-get_doc                  → read each component's API before writing code
+list_components              → survey available components
+get_project_setup_guide      → get setup guidance for the framework
+get_doc                      → read each component's API before writing code
 [write code]
 ```
 
@@ -183,16 +183,16 @@ What inputs and outputs does the IgcCombo component accept in Web Components?
 ### Building a New Project
 
 ```
-Create a new Angular Ignite UI app called "sales-dashboard" with a side navigation layout.
-Use grid, charts, and card components. Output it to C:/Projects.
+I want to create a new Angular Ignite UI app called "sales-dashboard" with a side navigation layout.
+Use grid, charts, and card components.
 ```
 
 ```
-Scaffold a new React Ignite UI project called "inventory-app" with a base template in my current directory.
+How do I set up a new React project with Ignite UI components?
 ```
 
 ```
-Set up a new Web Components Ignite UI project named "wc-demo" using the empty template.
+What are the steps to get started with Ignite UI Web Components in a new project?
 ```
 
 ### Adding Components to an Existing Project
@@ -240,8 +240,8 @@ and how should I update my code?
 | Tool | When to use | Key parameters |
 |------|------------|----------------|
 | `list_components` | Browse what's available; verify the MCP server is live | `framework`, `filter` |
-| `search_docs` | Full-text search when you know what you want but not the doc name | `query`, `framework` |
 | `get_doc` | Read the full API doc — always call before writing any component code | `framework`, `name` (kebab-case, no `.md`) |
-| `generate_ignite_app` | Scaffold a new project from scratch | `name`, `framework`, `template`, `outputPath` |
+| `search_docs` | Full-text search when you know what you want but not the doc name | `query`, `framework` |
+| `get_project_setup_guide` | Get setup guidance when starting a new project | `framework` |
 | `search_api` | Discover exact component name and platform by keyword or partial name — use before `get_api_reference` when the name is unknown | `query`, `platform` (optional) |
-| `get_api_reference` | Retrieve full API reference (properties, methods, events) for a known component — Angular, React, and Web Components only | `name`, `platform`, `section` (optional: `all`, `properties`, `methods`, `events`) |
+| `get_api_reference` | Retrieve full API reference (properties, methods, events) for a known component — Angular, React, and Web Components only | `component`, `platform`, `section` (optional: `all`, `properties`, `methods`, `events`) |
