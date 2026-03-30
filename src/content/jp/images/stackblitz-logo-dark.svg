@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="19px" viewBox="0 0 22 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>StackBlitz Logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" fill-opacity="0.28">
+        <g id="Artboard" transform="translate(-750.000000, -496.000000)" fill="#000000">
+            <g id="Group" transform="translate(158.000000, 480.000000)">
+                <g id="edit" transform="translate(494.000000, 16.000000)">
+                    <g id="StackBlitz-Logo" transform="translate(98.000000, 0.000000)">
+                        <polygon id="lightning" points="9.95197596 11.378882 5.33333333 11.378882 14.1381818 0.857142857 11.3813574 8.33540373 16 8.33540373 7.19515152 18.8571429"></polygon>
+                        <polygon id="right-bracket" opacity="0.699999988" points="13.5114988 14.0997376 17.8365032 9.25522643 13.0059291 3.91741071 14.1309291 0.850446429 21.3333333 9.25522643 13.5114988 18"></polygon>
+                        <polygon id="left-bracket" opacity="0.699999988" points="7.82183453 5.61454814 3.49683009 10.4590593 8.3274042 15.796875 7.2024042 18.8638393 0 10.4590593 7.82183453 1.71428571"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

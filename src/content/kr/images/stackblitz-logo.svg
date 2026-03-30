@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" fill="#FFFFFF">
+            <g id="StackBlitz-Logo" transform="translate(2.000000, 4.500000)">
+                <polygon id="lightning" points="13.0619684 13.2753623 7 13.2753623 18.5563636 1 14.9380316 9.72463768 21 9.72463768 9.44363636 22"></polygon>
+                <polygon id="right-bracket" opacity="0.699999988" points="17.7338422 16.4496938 23.4104105 10.7977642 17.070282 4.5703125 18.5468445 0.9921875 28 10.7977642 17.7338422 21"></polygon>
+                <polygon id="left-bracket" opacity="0.699999988" points="10.2661578 6.55030617 4.58958949 12.2022358 10.929718 18.4296875 9.45315552 22.0078125 0 12.2022358 10.2661578 2"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

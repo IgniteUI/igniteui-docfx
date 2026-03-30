@@ -16,11 +16,12 @@ const mode = nodeEnv === 'production' ? 'prod'
 		: 'dev';
 
 const docsDir = path.resolve(`./src/content/${docsLang}`);
-const templatesDir = path.resolve(`./src/grids_templates/${docsLang}`);
+const componentsDocsDir = path.join(docsDir, 'components');
+const templatesDir = path.resolve(`${docsDir}/grids_templates`);
 
 // ── Pre-build steps (run before Astro starts) ───────────────────────────────
-generateGridTopics(templatesDir, docsDir);
-normalizeImagePaths(docsDir);
+generateGridTopics(templatesDir, componentsDocsDir);
+normalizeImagePaths(componentsDocsDir);
 
 // https://astro.build/config
 export default createDocsSite({
@@ -28,11 +29,12 @@ export default createDocsSite({
 	title: 'Ignite UI for Angular',
 	description: 'Component and API reference docs for Ignite UI for Angular.',
 	platform: 'angular',
-	navLang: docsLang === 'jp' ? 'ja' : docsLang,   // docs-template expects 'ja' not 'jp'
+	navLang: docsLang,   // docs-template expects 'ja' not 'jp'
 	mode,
 	source: {
-		tocPath: `./src/content/${docsLang}/toc.json`,
-		docsDir: `./src/content/${docsLang}`,
+		tocPath: `${componentsDocsDir}/toc.yml`,
+		docsDir: componentsDocsDir,
+		imagesDir: `${docsDir}/images`,
 	},
 	sidebar: { exclude: [/^internal\//] },
 	head: [],
@@ -40,5 +42,5 @@ export default createDocsSite({
 		logo: { src: './public/favicon.svg' },
 	},
 	image: { service: { entrypoint: 'astro/assets/services/noop' } },
-	markdown: {},
+	markdown: { remarkPlugins: [remarkEnv] },
 });
