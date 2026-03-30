@@ -85,7 +85,7 @@ The span now looks like:
     <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-4" class="lazyload">
 </iframe></div>
 
-You can create a rased button.
+You can create a contained button:
 
 ```html
 <button igxButton="contained" igxRipple="white">Contained</button>
