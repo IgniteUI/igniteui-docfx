@@ -114,10 +114,10 @@ This is a deliberate architectural decision. A per-framework MCP means per-frame
 
 | Tool | What it does |
 |---|---|
-| `get_started` | Bootstraps correct project configuration — module imports, theming setup, peer dependency alignment — adapted to the target framework |
-| `list_components` | Returns the full component catalogue with metadata: selector names, input/output signatures, supported variants — in framework-correct syntax |
-| `scaffold_grid` | Generates a fully configured data grid with correct column definitions, data bindings, and feature flags for the active framework |
-| `get_component_docs` | Retrieves structured usage documentation for any component — token-efficient, pattern-dense, framework-specific |
+| `detect_platform` | Detects the target framework and project context (Angular, React, Blazor, Web Components) so responses use correct APIs, imports, and patterns |
+| `search_docs` | Searches the Ignite UI documentation corpus for components, patterns, and topics relevant to the agent’s query and framework context |
+| `get_doc` | Returns structured, token-efficient documentation for a specific component, feature, or pattern — ready to ground code generation |
+| `generate_ignite_app` | Generates or scaffolds Ignite UI application code, wiring up components, configuration, and theming for the detected framework |
 
 The agent queries the server, declares its framework context, and gets the right answer for the right framework — from a single connected source.
 
@@ -168,7 +168,7 @@ This is the foundation both the MCP and the Skills layer draw from. Underinvest 
 
 Add the Ignite UI package for Angular, React, Blazor, or Web Components to your project. If you're already running Ignite UI, skip this step — the AI toolchain works with your existing installation.
 
-→ [Angular installation] · [React installation] · [Blazor installation] · [Web Components installation]
+→ [Angular installation](https://www.infragistics.com/products/ignite-ui-angular/angular/components/general-getting-started) · [React installation](https://www.infragistics.com/products/ignite-ui-react/react/components/general-getting-started) · [Blazor installation](https://www.infragistics.com/products/ignite-ui-blazor/blazor/components/general-getting-started) · [Web Components installation](https://www.infragistics.com/products/ignite-ui-web-components/web-components/components/general-getting-started)
 
 ### Step 2 — Load the Agent Skill for Your Framework
 
