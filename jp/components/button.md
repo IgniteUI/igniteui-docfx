@@ -1554,7 +1554,7 @@ button {
 
 ```html
 <div class="my-app">
-  <button igxButton="raised"></button>
+  <button igxButton="contained"></button>
 </div>
 ```
 
