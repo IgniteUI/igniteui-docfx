@@ -323,7 +323,7 @@ export class CalendarSample7Component {
         selection="multi"
         (selected)="selectPTOdays($event)">
     </igx-calendar>
-    <button igxButton="raised" (click)="submitPTOdays($event)">Submit Request</button>
+    <button igxButton="contained" (click)="submitPTOdays($event)">Submit Request</button>
 </article>
 ```
 
