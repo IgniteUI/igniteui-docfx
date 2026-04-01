@@ -10,7 +10,7 @@ namespace: Infragistics.Controls.Charts
 
 All notable changes for each version of Ignite UI for Angular are documented on this page.
 
-> \[!Note]
+> [!Note]
 > This topic discusses changes only for components that are not included in the igniteui-angular package.
 > For changes specific to igniteui-angular components, please see CHANGELOG.MD.
 
@@ -183,7 +183,7 @@ There is a new property called [`useInsetOutlines`]({environment:dvApiBaseUrl}/p
 
 ### igniteui-angular-maps (Geographic Map)
 
-> \[!Note]
+> [!Note]
 > As of June 30, 2025 all Microsoft Bing Maps for Enterprise Basic (Free) accounts will be retired. If you're still using an unpaid Basic Account and key, now is the time to act to avoid service disruptions. Bing Maps for Enterprise license holders can continue to use Bing Maps in their applications until June 30,2028.
 > For more details please visit:
 
@@ -400,7 +400,7 @@ Added significant improvements to default behaviors, and refined the Category Ch
   - GroupSorts
   - GroupSortDescriptions
 
-> \[!Note]
+> [!Note]
 > The Chart's [Aggregation](charts/features/chart-data-aggregations.md) will not work when using [`includedProperties`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#includedProperties) | [`excludedProperties`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#excludedProperties) because these properties are meant for non-aggregated data. Once you attempt to aggregate data these properties should no longer be used. The reason it does not work is because aggregation replaces the collection that is passed to the chart for render. The include/exclude properties are designed to filter in/out properties of that data and those properties no longer exist in the new aggregated collection.
 
 ## **13.2.0 (June 2022)**
@@ -426,7 +426,7 @@ Added significant improvements to default behaviors, and refined the Category Ch
 
 ## **13.1.0 (November 2021)**
 
-> \[!Note]
+> [!Note]
 > Please ensure package "lit-html": "^2.0.0" or newer is added to your project for optimal compatibility.
 
 ### igniteui-angular-charts (Charts)
@@ -519,7 +519,7 @@ for example:
 
 ### igniteui-angular-maps (GeoMap)
 
-> \[!Note]
+> [!Note]
 > These features are CTP
 
 - Added support for wrap around display of the map (scroll infinitely horizontally)
@@ -535,7 +535,7 @@ for example:
 
 Import statements have been simplified to use just package names instead of full paths to API classes and enums.
 
-> \[!Note]
+> [!Note]
 > These breaking changes were introduce in these packages and components only:
 
 | Affected Packages | Affected Components |

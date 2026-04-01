@@ -1,7 +1,9 @@
 ---
-title: Ignite UI Theming MCP | Ignite UI for Angular
-_description: Ignite UI for Angular ships with the Ignite UI Theming MCP server that allows you to create custom themes, palettes, typography, and elevations for your Angular applications. Learn how to use the MCP server to generate and apply custom themes that match your brand and design requirements.
-_keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library, Artificial Intelligence, AI, MCP, Model Context Protocol, Theming, Custom Themes, Palettes, Typography, Elevations
+title: Angular Theming MCP | Infragistics 
+_description: Angular works with the Ignite UI Theming MCP server that allows you to create custom themes, palettes, typography, and elevations for your Ignite UI for Angular applications. Learn how to use the MCP server to generate and apply custom themes that match your brand and design requirements.
+_keywords: Ignite UI for Angular controls, Angular widgets, web widgets, UI widgets, Components Suite, Artificial Intelligence, AI, MCP, Model Context Protocol, Theming, Custom Themes, Palettes, Typography, Elevations
+_license: MIT
+mentionedTypes: []
 ---
 
 # Ignite UI Theming MCP
@@ -12,9 +14,9 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 ## Overview
 
-Instead of writing Sass theming code by hand, you can describe your theming intent in plain language and let an AI assistant generate the correct code for you. The MCP server gives the AI the knowledge and tools it needs to produce accurate theming code — including palettes with proper shade generation, typography, elevations, component design token overrides, and more.
+Instead of writing styles by hand, you can describe your theming intent in plain language and let an AI assistant generate the correct code for you. The MCP server gives the AI the knowledge and tools it needs to produce accurate theming code — including palettes with proper shade generation, typography, elevations, component design token overrides, and more.
 
-The server supports all four Ignite UI design systems — **Material**, **Bootstrap**, **Fluent**, and **Indigo** — in both light and dark variants. While this guide focuses on Angular, the MCP server also works with **Ignite UI for Web Components**, **React**, and **Blazor**. The `detect_platform` tool reads your `package.json` and selects the correct import paths and selectors automatically.
+The server supports all four Ignite UI design systems — **Material**, **Bootstrap**, **Fluent**, and **Indigo** — in both light and dark variants. While this guide focuses on Angular, the MCP server also works with all Ignite UI component libraries from Infragistics. The `detect_platform` tool reads your `package.json` and selects the correct import paths and selectors automatically.
 
 Most tools can produce either **Sass** or **CSS** output. Sass output is the default and integrates with the `igniteui-theming` Sass module. CSS output generates ready-to-use CSS custom properties and can be used **without a local Sass toolchain** — the server compiles it for you.
 
@@ -33,13 +35,13 @@ Most tools can produce either **Sass** or **CSS** output. Sass output is the def
 Before configuring the MCP server, make sure you have:
 
 - **Node.js** (v18 or later) installed — this provides the `npx` command used to launch the server.
-- A project with an **Ignite UI package** listed as a dependency in `package.json`. For Angular, this is `igniteui-angular` (v15.0 or later). The server also supports `igniteui-webcomponents`, `igniteui-react`, and `igniteui-blazor`.
+- A project with an **Ignite UI package** listed as a dependency in `package.json`.
 - An **AI client with MCP support** — for example, VS Code with GitHub Copilot, Cursor, Claude Desktop, Claude Code, or a JetBrains IDE with the AI Assistant plugin.
 
-If you do not have `igniteui-angular` installed yet, run:
+If you do not have Ignite UI Theming installed yet, run:
 
 ```bash
-ng add igniteui-angular
+npm install igniteui-theming
 ```
 
 ## Setup
@@ -151,8 +153,11 @@ Use the `/mcp` command inside Claude Code to verify the server is connected.
 JetBrains AI Assistant supports MCP servers through the IDE settings:
 
 1. Open **Settings** (or **Preferences** on macOS).
+
 2. Navigate to **Tools → AI Assistant → Model Context Protocol (MCP)**.
+
 3. Click **+ Add** and choose **As JSON** or use the form fields.
+
 4. Enter the following configuration:
 
     ```json
@@ -292,7 +297,7 @@ $my-typography: typography(
 
 > _"Our design system specifies exact hex values for all 14 shades of our primary green. I'll paste the values — create a custom palette."_
 
-The AI will call `create_custom_palette` with `mode: "explicit"` for the primary color and auto-generate the rest. See [Palettes](../themes/palettes.md) for more detail on shade generation.
+The AI will call `create_custom_palette` with `mode: "explicit"` for the primary color and auto-generate the rest. See [Palettes](https://www.infragistics.com/products/ignite-ui-angular/angular/components/themes/sass/palettes) for more detail on shade generation.
 
 ### Component-Level Customization
 
@@ -310,7 +315,7 @@ The AI will call `set_spacing` scoped to the calendar component and `set_size` a
 
 **Platform not detected**
 
-If `detect_platform` returns `null` or `generic`, make sure your `package.json` lists an Ignite UI package (e.g., `igniteui-angular`, `igniteui-webcomponents`) as a dependency. You can also tell the AI explicitly: _"Use the Angular platform."_
+If `detect_platform` returns `null` or `generic`, make sure your `package.json` lists an Ignite UI package (e.g., `igniteui-angular`) as a dependency. You can also tell the AI explicitly: _"Use the Angular platform."_
 
 **Luminance warning on colors**
 
@@ -328,12 +333,13 @@ Ensure `igniteui-angular` and `igniteui-theming` are installed:
 ng add igniteui-angular
 ```
 
-Also confirm that `core()` is called before any other theming mixin in your `styles.scss`. See [Theming with Sass](../themes/sass/index.md) for the correct file setup.
+Also confirm that `core()` is called before any other theming mixin in your `styles.scss`. See [Theming with Sass](<a href="https://www.infragistics.com/products/ignite-ui-angular/angular/components/themes/sass/index">) for the correct file setup.
 
 ## Additional Resources
 
-Related topics:
+- [Ignite UI for Angular Skills](./skills.md)
 
+<!-- Ideally these should be included once documentation is combined
 - [Theming Overview](../themes/index.md)
 - [Palettes](../themes/palettes.md)
 - [Typography](../themes/typography.md)
@@ -341,6 +347,7 @@ Related topics:
 - [Spacing](../themes/spacing.md)
 - [Roundness](../themes/roundness.md)
 - [Theming with Sass](../themes/sass/index.md)
+-->
 
 <div class="divider--half"></div>
 

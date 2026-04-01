@@ -19,7 +19,7 @@ This is directly integrated with the available tools of the [`IgxToolbarComponen
 </code-view>
 
 
-> \[!Note]
+> [!Note]
 > This feature is designed to support X and Y axes and does not currently support radial or angular axes.
 
 ## Using the User Annotations with the Toolbar

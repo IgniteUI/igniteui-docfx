@@ -21,8 +21,6 @@ The Infragistics Angular Excel Engine's [`worksheet`]({environment:dvApiBaseUrl}
 
 <div class="divider--half"></div>
 
-<!-- Angular, React, WebComponents -->
-
 The following code shows the imports needed to use the code-snippets below:
 
 ```ts
@@ -39,8 +37,6 @@ import { RelativeIndex } from "igniteui-angular-excel";
 import { SortDirection } from "igniteui-angular-excel";
 import { WorkbookColorInfo } from "igniteui-angular-excel";
 ```
-
-<!-- end: Angular, React, WebComponents -->
 
 ## Configuring the Gridlines
 
