@@ -16,7 +16,7 @@ Border radius as any other property is set through the theme schema like it's sh
 ```scss
 $_light-button: (
     flat-border-radius: .2,
-    raised-border-radius: .2,
+    contained-border-radius: .2,
     fab-border-radius: 1,
     icon-border-radius: 1,
 );
@@ -40,7 +40,7 @@ Let's see how we can change the default values for the buttons from the example 
 
 $myButtons-theme: (
     $flat-border-radius: .5, // will resolve to 10px
-    $raised-border-radius: 30px, // Will resolve to 30px
+    $contained-border-radius: 30px, // Will resolve to 30px
     $fab-border-radius: 10%, // Will resolve to 10%
     $icon-border-radius: .5 .2 .5 .2, // Will resolve to 10px 4px 10px 4px
 );
@@ -65,9 +65,9 @@ The table shows the default border-radius for each component and its min and max
 |                        | **Corners can be shaped?** | **Min/Max boundaries** | **Baseline theme values** |
 |------------------------|----------------------------|-----------------------|---------------------------|
 | **Button(Flat)**       | Yes; Yes; Yes; Yes;        | 0 - 20px              | 4px                       |
-| **Button(Raised)**     | Yes; Yes; Yes; Yes;        | 0 - 20px              | 4px                       |
-| **button(Fab)**        | Yes; Yes; Yes; Yes;        | 12px - 28px           | 28px                      |
-| **button(Icon)**       | Yes; Yes; Yes; Yes;        | 0 - 18px              | 18px                      |
+| **Button(Contained)**  | Yes; Yes; Yes; Yes;        | 0 - 20px              | 4px                       |
+| **Button(Fab)**        | Yes; Yes; Yes; Yes;        | 12px - 28px           | 28px                      |
+| **Button(Icon)**       | Yes; Yes; Yes; Yes;        | 0 - 18px              | 18px                      |
 | **Button-group**       | Yes; Yes; Yes; Yes;        | 0 - 20px              | 4px                       |
 | **Chip**               | Yes; Yes; Yes; Yes;        | 0 - 20px              | 4px                       |
 | **Card**               | Yes; Yes; Yes; Yes;        | 0 - 24px              | 4px                       |
@@ -80,10 +80,10 @@ The table shows the default border-radius for each component and its min and max
 | **input(Search)**      | Yes; Yes; Yes; Yes;        | 0 - 20px              | 4px                       |
 | **List**               | Yes; Yes; Yes; Yes;        | 0 - 24px              | 0                         |
 | **List item**          | Yes; Yes; Yes; Yes;        | 0 - 24px              | 0                         |
-| **Navdrawer**          | Yes; Yes; Yes; Yes;        | 0 - 36px              | 0                      |
+| **Navdrawer**          | Yes; Yes; Yes; Yes;        | 0 - 36px              | 0                         |
 | **Snackbar**           | Yes; Yes; Yes; Yes;        | 0 - 24px              | 4px                       |
 | **Tooltip**            | Yes; Yes; Yes; Yes;        | 0 - 16px              | 4px                       |
-| **Toast**              | Yes; Yes; Yes; Yes;        | 0 - 26px              | 26px                       |
+| **Toast**              | Yes; Yes; Yes; Yes;        | 0 - 26px              | 26px                      |
 
 
 <div class="divider--half"></div>

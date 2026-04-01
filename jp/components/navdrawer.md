@@ -71,7 +71,6 @@ import { IgxIconComponent } from 'igniteui-angular/icon';
     <div class="content-wrap">
       <igx-nav-drawer [isOpen]="true">
         <ng-template igxDrawer>
-          <nav>
             <span igxDrawerItem [isHeader]="true">Components</span>
             <span
               *ngFor="let item of navItems"
@@ -83,7 +82,6 @@ import { IgxIconComponent } from 'igniteui-angular/icon';
               <igx-icon fontSet="material">{{ item.name }}</igx-icon>
               <span>{{ item.text }}</span>
             </span>
-          </nav>
         </ng-template>
       </igx-nav-drawer>
       <main>
@@ -127,13 +125,11 @@ Drawer のコンテンツを `igxDrawer` ディレクティブでデコレート
 <div class="content-wrap">
   <igx-nav-drawer id="navigation" #drawer [isOpen]="true">
     <ng-template igxDrawer>
-      <nav>
         <span igxDrawerItem [isHeader]="true">Components</span>
         <span *ngFor="let item of navItems" igxDrawerItem [active]="item.text === selected" igxRipple (click)="navigate(item)">
           <igx-icon fontSet="material">{{ item.name }}</igx-icon>
           <span>{{ item.text }}</span>
         </span>
-      </nav>
     </ng-template>
   </igx-nav-drawer>
   <main>
@@ -349,7 +345,6 @@ export class AppComponent {
 
 <!-- ... -->
 <ng-template igxDrawer>
-  <nav>
     <span igxDrawerItem [isHeader]="true">Components</span>
 
     <span
@@ -362,7 +357,6 @@ export class AppComponent {
       [active]="rla.isActive">
        {{item.name}}
     </span>
-  </nav>
 </ng-template>
 <!-- ... -->
 ```

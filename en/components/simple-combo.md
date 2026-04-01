@@ -201,6 +201,16 @@ Binding to the event can be done through the proper `@Output` property on the `i
 </igx-simple-combo>
 ```
 
+Additionally, the simple combobox fires a [selectionChanged]({environment:angularApiUrl}/classes/IgxSimpleComboComponent.html#selectionChanged) event after the selection is committed and the component state has been updated. The emitted event arguments, [ISimpleComboSelectionChangedEventArgs]({environment:angularApiUrl}/interfaces/isimplecomboselectionchangedeventargs.html), contain information about the previous selection, the current selection and the displayed item. Unlike `selectionChanging`, this event is not cancellable and is guaranteed to reflect the final committed selection state. When the simple combobox is used with `ngModel` or Angular forms, `selectionChanged` is emitted after the form value has been updated.
+
+Binding to the event can be done through the proper `@Output` property on the `igx-simple-combo` tag:
+
+```html
+<igx-simple-combo [data]="cities" [displayKey]="'name'" [valueKey]="'id'"
+           (selectionChanged)="handleSelectionChanged($event)">
+</igx-simple-combo>
+```
+
 <div class="divider--half"></div>
 
 ## Keyboard Navigation

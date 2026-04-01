@@ -44,7 +44,7 @@ In order to display the toast component, use its [`open()`]({environment:angular
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="toast.open()">Show notification</button>
+<button igxButton="contained" (click)="toast.open()">Show notification</button>
 <igx-toast #toast message="Notification displayed"></igx-toast>
 ```
 
@@ -60,8 +60,8 @@ Once opened, the toast disappears after a period specified by the [`displayTime`
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="toast.open()">SHOW TOAST</button>
-<button igxButton="raised" (click)="toast.close()">HIDE TOAST</button>
+<button igxButton="contained" (click)="toast.open()">SHOW TOAST</button>
+<button igxButton="contained" (click)="toast.close()">HIDE TOAST</button>
 <igx-toast #toast message="Notification displayed" [autoHide]="false"></igx-toast>
 ```
 
@@ -77,7 +77,7 @@ Use [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#d
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="toast.open()">Show notification</button>
+<button igxButton="contained" (click)="toast.open()">Show notification</button>
 <igx-toast #toast message="Notification displayed" displayTime="1000"></igx-toast>
 ```
 
@@ -94,7 +94,7 @@ Use [`position`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#posi
 <!--sample.component.html-->
 
 <div>
-    <button igxButton="raised" (click)="open(toast)">Show notification on top</button>
+    <button igxButton="contained" (click)="open(toast)">Show notification on top</button>
     <igx-toast #toast message="Notification displayed" [position]="toastPosition"></igx-toast>
 </div>
 
