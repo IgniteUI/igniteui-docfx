@@ -37,7 +37,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 ```typescript
 // app.module.ts
 
-import { IgxRippleModule } from 'igniteui-angular';
+import { IgxRippleModule } from 'igniteui-angular/directives';
 // import { IgxRippleModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -55,7 +55,7 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IgxRippleDirective, IgxButtonDirective } from 'igniteui-angular';
+import { IgxRippleDirective, IgxButtonDirective } from 'igniteui-angular/directives';
 // import { IgxRippleDirective, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -172,7 +172,9 @@ $custom-ripple-theme: ripple-theme(
 次に Ripple のカスタム テーマを渡します。
 
 ```scss
-@include css-vars($custom-ripple-theme);
+:host {
+  @include tokens($custom-ripple-theme);
+}
 ```
 
 > [!NOTE]
@@ -180,9 +182,9 @@ $custom-ripple-theme: ripple-theme(
 
 ### デモ
 
-<code-view style="height:200px" 
+<code-view style="height:200px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/ripple-styling/" alt="Angular Ripple の例">
 </code-view>
 
@@ -190,13 +192,14 @@ $custom-ripple-theme: ripple-theme(
 
 <div class="divider--half"></div>
 
-* [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
-* [IgxRipple スタイル]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
+- [IgxRipple スタイル]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

@@ -16,7 +16,7 @@ Ignite UI for Angular Excel Exporter サービスは、Microsoft® Excel® 形�
 ## Angular Excel Exporter の例
 
 
-<code-view style="height: 100px;" 
+<code-view style="height: 100px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            explicit-editor="stackblitz"
            iframe-src="{environment:demosBaseUrl}/services/export-excel/" alt="Angular Excel Exporter の例">
@@ -32,7 +32,7 @@ IgniteUI Excel Exporter を使用するには、[`IgxExcelExporterService`]({env
 // app.module.ts
 
 ...
-import { IgxExcelExporterService } from 'igniteui-angular';
+import { IgxExcelExporterService } from 'igniteui-angular/grids/core';
 // import { IgxExcelExporterService } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -59,7 +59,7 @@ export class AppModule {}
 // component.ts
 
 ...
-import { IgxExcelExporterService, IgxExcelExporterOptions } from 'igniteui-angular';
+import { IgxExcelExporterService, IgxExcelExporterOptions } from 'igniteui-angular/grids/core';
 // import { IgxExcelExporterService, IgxExcelExporterOptions } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
@@ -101,16 +101,16 @@ this.excelExportService.export(this.igxGrid1, new IgxExcelExporterOptions('Expor
 
 以下は、その他の Excel Exporter サービスの API です。
 
-* [`IgxExcelExporterService API`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)
-* [`IgxExcelExporterOptions API`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html)
+- [`IgxExcelExporterService API`]({environment:angularApiUrl}/classes/igxexcelexporterservice.html)
+- [`IgxExcelExporterOptions API`]({environment:angularApiUrl}/classes/igxexcelexporteroptions.html)
 
 Grid Excel エクスポーター:
-* [`IgxGrid Excel エクスポーター`](grid/export-excel.md)
-* [`IgxTreeGrid Excel エクスポーター`](treegrid/export-excel.md)
+- [`IgxGrid Excel エクスポーター`](grid/export-excel.md)
+- [`IgxTreeGrid Excel エクスポーター`](treegrid/export-excel.md)
 
 その他の使用されたコンポーネント:
-* [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+- [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 
 <div class="divider"></div>
 
@@ -119,5 +119,5 @@ Grid Excel エクスポーター:
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

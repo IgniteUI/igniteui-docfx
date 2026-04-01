@@ -30,6 +30,7 @@
     }
   ],
   "words": [
+    "Figma",
     "IgniteUI",
     "Ignite",
     "DocFX",
@@ -248,6 +249,7 @@
     "artboard",
     "antumbra",
     "NOAA",
+    "Noto",
     "coalescences",
     "Lambo",
     "valuekey",
@@ -257,6 +259,7 @@
     "INPC",
     "batchediting",
     "updateparameters",
-    "alldata"
+    "alldata",
+    "subtag"
   ]
 }

@@ -39,7 +39,7 @@ The next step is to import the `IgxExpansionPanelModule` in your **app.module.ts
 ```typescript
 // app.module.ts
 ...
-import { IgxExpansionPanelModule } from 'igniteui-angular';
+import { IgxExpansionPanelModule } from 'igniteui-angular/expansion-panel';
 // import { IgxExpansionPanelModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -50,12 +50,12 @@ import { IgxExpansionPanelModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxExpansionPanelComponent` as a standalone dependency, or use the [`IGX_EXPANSION_PANEL_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/expansion-panel/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxExpansionPanelComponent` as a standalone dependency, or use the [`IGX_EXPANSION_PANEL_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/expansion-panel/src/expansion-panel/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
-import { IGX_EXPANSION_PANEL_DIRECTIVES } from 'igniteui-angular';
+import { IGX_EXPANSION_PANEL_DIRECTIVES } from 'igniteui-angular/expansion-panel';
 // import { IGX_EXPANSION_PANEL_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -109,7 +109,7 @@ We can do this by binding the description to the control [`collapsed`]({environm
 
 ```typescript
 // in expansion-panel.component.ts
-import { IgxExpansionPanelComponent } from 'igniteui-angular';
+import { IgxExpansionPanelComponent } from 'igniteui-angular/expansion-panel';
 // import { IgxExpansionPanelComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({...})
@@ -335,11 +335,13 @@ $custom-panel-theme: expansion-panel-theme(
 
 ### Applying the Component Theme
 
-Now to apply the component theme all that's left is to include `css-vars` mixin and pass the `$custom-panel-theme` map.
+Now to apply the component theme all that's left is to include `tokens` mixin and pass the `$custom-panel-theme` map.
 
 ```scss
 // In expansion-styling.component.scss
-@include css-vars($custom-panel-theme);
+:host {
+  @include tokens($custom-panel-theme);
+}
 ```
 
 To find out more on how you can use Ignite UI theming engine [`click here`](themes/sass/component-themes.md)
@@ -403,7 +405,8 @@ Assuming the igxExpansionPanel is already imported in `app.module.ts` as previou
 ```typescript
 // in expansion-panel.component.ts
 import { useAnimation } from '@angular/animations';
-import { IgxExpansionPanelComponent, slideInLeft, slideOutRight } from 'igniteui-angular';
+import { IgxExpansionPanelComponent } from 'igniteui-angular/expansion-panel';
+import { slideInLeft, slideOutRight } from 'igniteui-angular/animations';
 // import { IgxExpansionPanelComponent, slideInLeft, slideOutRight } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({...})

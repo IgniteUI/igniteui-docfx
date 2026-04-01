@@ -67,7 +67,7 @@ With these you can now add the Rating component in an Angular component template
 In Angular forms, components often need to be able to bind their values with `ngModel` or use `formControl` which requires an implementation of Angular's `ControlValueAccessor` interface. Ignite UI for Angular package provides such implementation in the form of a directive that uses an element selector to attach to supported web components. Currently `IgcRating` is the only component that it supports. To use the directive you just need to import `IgcFormsModule` from the library.
 
 ```typescript
-import { IgcFormsModule } from 'igniteui-angular';
+import { IgcFormsModule } from 'igniteui-angular/directives';
 // import { IgcFormsModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -87,7 +87,7 @@ Alternatively, as of `16.0.0` you can import the `IgcFormControlDirective` as a 
 // home.component.ts
 
 import { FormsModule } from '@angular/forms';
-import { IgcFormControlDirective } from 'igniteui-angular';
+import { IgcFormControlDirective } from 'igniteui-angular/directives';
 // import { IgcFormControlDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

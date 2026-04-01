@@ -7,7 +7,7 @@ _language: ja
 
 # トランザクション サービスの使用方法
 
-データソースの状態を保持し、一度に多くのトランザクションをコミットする必要があるコンポーネントを使用する場合、[`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html) を利用できます。 
+データソースの状態を保持し、一度に多くのトランザクションをコミットする必要があるコンポーネントを使用する場合、[`Transaction Service`]({environment:angularApiUrl}/interfaces/transactionservice.html) を利用できます。
 
 Ignite UI for Angular グリッドコンポーネントの [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) と [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) は、グリッドと統合して、追加設定なしに一括編集機能が使用できます。ただし、その他の Ignite UI for Angular またはカスタムコンポーネントでトランザクションを使用する必要がある場合は、再度 [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) を使用して、同様の動作を実装できます。
 
@@ -16,8 +16,8 @@ Ignite UI for Angular グリッドコンポーネントの [`igxTransactionServi
 このトピックでは、[`igxList`]({environment:angularApiUrl}/classes/igxlistcomponent.html) コンポーネントを使用して、トランザクションを有効にする方法を示します。トランザクションを追加する方法、[pipe](https://angular.io/guide/pipes) を介してデータを変換する方法、およびコミットされようとしている変更をユーザーに表示するするためにビューを視覚的に更新する方法を示します。
 
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/services/transaction-base/" alt="Angular トランザクション サービスの使用方法の例">
 </code-view>
 
@@ -56,7 +56,7 @@ export class TransactionBaseComponent { }
 `ts` ファイルは、アプリケーションで必要となる [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) を `igniteui-angular` ライブラリからインポートし、[`State`]({environment:angularApiUrl}/interfaces/state.html) および [`Transaction`]({environment:angularApiUrl}/interfaces/transaction.html) インターフェイスと [`TransactionType`]({environment:angularApiUrl}/enums/TransactionType.html) enum をインポートする必要があります。
 
 ```typescript
-import { IgxTransactionService, State, Transaction, TransactionType } from 'igniteui-angular';
+import { IgxTransactionService, State, Transaction, TransactionType } from 'igniteui-angular/core';
 // import { IgxTransactionService, State, Transaction, TransactionType } from '@infragistics/igniteui-angular'; for licensed package
 ```
 
@@ -136,11 +136,12 @@ export class TransactionBasePipe implements PipeTransform {
 ### 編集機能の定義
 
 2 番目のリスト アイテムには、アイテムのデータを更新する編集ボタンが含まれています。
+
 ```html
 <igx-icon igxListAction (click)="onEdit()" *ngIf="item.id === 1 && item.price !== '$999'">edit</igx-icon>
 ```
 
-`onEdit` イベント ハンドラー内でボタンが押されると、'UPDATE' トランザクションが作成されます。 
+`onEdit` イベント ハンドラー内でボタンが押されると、'UPDATE' トランザクションが作成されます。
 
 ```typescript
 public onEdit(): void {
@@ -175,7 +176,7 @@ public isEdited(id): boolean {
 ```
 
 
-`onDelete` イベント ハンドラー内でボタンが押されると、'DELETE' トランザクションが作成されます。 
+`onDelete` イベント ハンドラー内でボタンが押されると、'DELETE' トランザクションが作成されます。
 
 ```typescript
 public onDelete(): void {
@@ -278,6 +279,7 @@ public onCommit(): void {
 }
 
 ```
+
 [`igxHierarchicalTransactionService`]({environment:angularApiUrl}/classes/igxhierarchicaltransactionservice.html) を使用している場合は、primaryKey と childDataKey を引数として期待する [`commit`]({environment:angularApiUrl}/classes/igxtransactionservice.html#commit) メソッドのオーバー読み込みを使用することもできます。
 
 ```typescript
@@ -302,8 +304,9 @@ public onClear(): void {
 ```
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [トランザクション サービス API]({environment:angularApiUrl}/interfaces/transactionservice.html)
-* [トランザクション サービス](transaction.md)
-* [トランザクション サービス クラス階層](transaction-classes.md)
+- [トランザクション サービス API]({environment:angularApiUrl}/interfaces/transactionservice.html)
+- [トランザクション サービス](transaction.md)
+- [トランザクション サービス クラス階層](transaction-classes.md)

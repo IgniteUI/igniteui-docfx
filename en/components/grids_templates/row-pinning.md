@@ -463,7 +463,9 @@ $custom-grid-theme: grid-theme(
 The last step is to pass the custom grid theme:
 
 ```scss
-@include css-vars($custom-grid-theme);
+:host {
+  @include tokens($custom-grid-theme);
+}
 ```
 
 ### Demo

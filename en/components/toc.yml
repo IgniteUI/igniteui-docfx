@@ -1,3 +1,11 @@
+- name: AI-Assisted Development
+  header: true
+- name: Ignite UI for Angular Skills
+  href: ai/skills.md
+  new: true
+- name: Theming MCP
+  href: ai/theming-mcp.md
+  new: true
 - name: General
   header: true
   sortable: true
@@ -13,7 +21,7 @@
 - name: Localization (i18n)
   href: general/localization.md
   new: false
-  updated: false
+  updated: true
 - name: Getting started
   href: general/getting-started.md
   new: false
@@ -25,6 +33,9 @@
   href: general/update-guide.md
   new: false
   updated: true
+- name: Multiple Entry Points
+  href: general/code-splitting-and-multiple-entry-points.md
+  new: true
 - name: Server-side rendering (SSR)
   href: general/ssr-rendering.md
   new: false
@@ -257,10 +268,10 @@
       new: false
       updated: false
       premium: true
-    - name: Export to Excel
+    - name: Export services
       href: grid/export-excel.md
       new: false
-      updated: false
+      updated: true
       premium: true
     - name: Paste from Excel
       href: grid/paste-excel.md
@@ -447,10 +458,10 @@
       new: false
       updated: false
       premium: true
-    - name: Export to Excel
+    - name: Export services
       href: treegrid/export-excel.md
       new: false
-      updated: false
+      updated: true
       premium: true
     - name: Multi-column Headers
       href: treegrid/multi-column-headers.md
@@ -546,10 +557,10 @@
           href: hierarchicalgrid/validation.md
           new: false
           premium: true
-    - name: Export to Excel
+    - name: Export services
       href: hierarchicalgrid/export-excel.md
       new: false
-      updated: false
+      updated: true
       premium: true
     - name: Row Drag
       href: hierarchicalgrid/row-drag.md
@@ -673,7 +684,7 @@
   new: false
   updated: true
   items:
-    - name: Export to Excel
+    - name: Export services
       href: pivotGrid/export-excel.md
       new: false
       updated: true
@@ -1156,7 +1167,7 @@
   href: display-density.md
 - name: Spacing
   href: themes/spacing.md
-  new: true
+  new: false
 - name: Sass
   new: false
   items:
@@ -1210,7 +1221,7 @@
       items:
       - name: Using Tailwind Custom Classes
         href: themes/misc/tailwind-classes.md
-        new: true
+        new: false
       - name: Printing styles
         href: themes/misc/printing-styles.md
         new: false
@@ -1255,11 +1266,10 @@
 - name: Query Builder
   href: query-builder.md
   new: false
-  updated: true
   items:
     - name: Using Query Builder Model
       href: query-builder-model.md
-      new: true
+      new: false
 - name: Radio & Radio Group
   href: radio-button.md
   new: false
@@ -1300,6 +1310,7 @@
 - name: Color Editor
   href: inputs/color-editor.md
   preview: true
+  premium: true
 - name: Text Highlight
   href: texthighlight.md
   new: false
@@ -1310,6 +1321,9 @@
 - name: Interactions
   header: true
   sortable: true
+- name: Chat
+  href: chat.md
+  new: true
 - name: Dialog Window
   href: dialog.md
 - name: Slider
@@ -1444,6 +1458,11 @@
 - name: Excel Exporter
   href: exporter-excel.md
   new: false
+  premium: true
+- name: PDF Exporter
+  href: exporter-pdf.md
+  new: false
+  updated: true
   premium: true
 - name: Transaction Service
   href: transaction.md

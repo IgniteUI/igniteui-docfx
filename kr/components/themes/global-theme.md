@@ -98,7 +98,7 @@ The general rule of thumb regarding what the value of `$legacy-support` should b
 
 <div class="divider--half"></div>
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Learn how to create individual component themes:

@@ -38,7 +38,7 @@ The first step is to import the `IgxCalendarModule` inside our **app.module.ts**
 ...
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxCalendarModule } from 'igniteui-angular';
+import { IgxCalendarModule } from 'igniteui-angular/calendar';
 // import { IgxCalendarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -49,14 +49,14 @@ import { IgxCalendarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxMonthPickerComponent` as a standalone dependency, or use the [`IGX_CALENDAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/calendar/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxMonthPickerComponent` as a standalone dependency, or use the [`IGX_CALENDAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/calendar/src/calendar/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxMonthPickerComponent } from 'igniteui-angular';
+import { IgxMonthPickerComponent } from 'igniteui-angular/calendar';
 // import { IgxMonthPickerComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -204,7 +204,9 @@ $my-calendar-theme: calendar-theme(
 The next step is to **include** the component theme in our application.
 
 ```scss
-@include css-vars($my-calendar-theme);
+:host {
+  @include tokens($my-calendar-theme);
+}
 ```
 
 After everything's done, your component should look like this:

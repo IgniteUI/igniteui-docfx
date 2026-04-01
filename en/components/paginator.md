@@ -39,7 +39,7 @@ The next step is to import the `IgxPaginatorModule` in the **app.module.ts** fil
 ```typescript
 // app.module.ts
 
-import { IgxPaginatorModule } from 'igniteui-angular';
+import { IgxPaginatorModule } from 'igniteui-angular/paginator';
 // import { IgxPaginatorModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -50,14 +50,15 @@ import { IgxPaginatorModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxPaginatorComponent` as a standalone dependency, or use the [`IGX_PAGINATOR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/paginator/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxPaginatorComponent` as a standalone dependency, or use the [`IGX_PAGINATOR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/paginator/src/paginator/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
 import { NgFor } from '@angular/common';
 import { HammerModule } from '@angular/platform-browser';
-import { IGX_PAGINATOR_DIRECTIVES, IGX_LIST_DIRECTIVES } from 'igniteui-angular';
+import { IGX_PAGINATOR_DIRECTIVES } from 'igniteui-angular/paginator';
+import { IGX_LIST_DIRECTIVES } from 'igniteui-angular/list';
 // import { IGX_PAGINATOR_DIRECTIVES, IGX_LIST_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -150,7 +151,7 @@ With only a few lines of code you can easily localize all strings part of the Pa
 **Step 1** - Import `IPaginatorResourceStrings` interface and [changei18n]({environment:angularApiUrl}/#changei18n) function:
 
 ```ts
-import { IPaginatorResourceStrings, changei18n } from "igniteui-angular";
+import { IPaginatorResourceStrings, changei18n } from "igniteui-angular/core";
 ```
 
 **Step 2** - Define the Paging resource strings:

@@ -34,7 +34,7 @@ The next step is to import the `IgxInputGroupModule` in your **app.module.ts** f
 // app.module.ts
 
 import { FormsModule } from '@angular/forms';
-import { IgxInputGroupModule } from 'igniteui-angular';
+import { IgxInputGroupModule } from 'igniteui-angular/input-group';
 // import { IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 
@@ -46,13 +46,13 @@ import { IgxInputGroupModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxLabelDirective`, `IgxInputDirective`, and `IgxInputGroupComponent` as standalone dependencies, or use the [`IGX_INPUT_GROUP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/input-group/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxLabelDirective`, `IgxInputDirective`, and `IgxInputGroupComponent` as standalone dependencies, or use the [`IGX_INPUT_GROUP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/input-group/src/input-group/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
 import { FormsModule } from '@angular/forms';
-import { IGX_INPUT_GROUP_DIRECTIVES } from 'igniteui-angular';
+import { IGX_INPUT_GROUP_DIRECTIVES } from 'igniteui-angular/input-group';
 // import { IGX_INPUT_GROUP_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

@@ -34,7 +34,7 @@ The next step is to import the `IgxButtonGroupModule` in your **app.module.ts** 
 // app.module.ts
 
 ...
-import { IgxButtonGroupModule } from 'igniteui-angular';
+import { IgxButtonGroupModule } from 'igniteui-angular/button-group';
 // import { IgxButtonGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -45,13 +45,14 @@ import { IgxButtonGroupModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxButtonGroupComponent` as a standalone dependency, or use the [`IGX_BUTTON_GROUP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/buttonGroup/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxButtonGroupComponent` as a standalone dependency, or use the [`IGX_BUTTON_GROUP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/button-group/src/button-group/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
 ...
-import { IGX_BUTTON_GROUP_DIRECTIVES, IgxIconComponent } from 'igniteui-angular';
+import { IGX_BUTTON_GROUP_DIRECTIVES } from 'igniteui-angular/button-group';
+import { IgxIconComponent } from 'igniteui-angular/icon';
 // import { IGX_BUTTON_GROUP_DIRECTIVES, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -114,7 +115,7 @@ Use the [`alignment`]({environment:angularApiUrl}/classes/igxbuttongroupcomponen
 
 ```typescript
 //sample.component.ts
-import { ButtonGroupAlignment } from 'igniteui-angular';
+import { ButtonGroupAlignment } from 'igniteui-angular/button-group';
 // import { ButtonGroupAlignment } from '@infragistics/igniteui-angular'; for licensed package
 
 ...
@@ -424,7 +425,9 @@ As seen, the `button-group-theme` exposes some useful parameters for basic styli
 The last step is to include the component's theme.
 
 ```scss
-@include css-vars($custom-button-group);
+:host {
+  @include tokens($custom-button-group);
+}
 ```
 
 ### Demo

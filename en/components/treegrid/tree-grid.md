@@ -7,15 +7,15 @@ _license: commercial
 
 # Angular Tree Grid Component Overview
 
-The Ignite UI for Angular Tree Grid is used to display and manipulate hierarchical or flat self-referencing data. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, grouping, templating, column moving, column pinning, export to Excel and CSV, and more.
+The Ignite UI for Angular Tree Grid is used to display and manipulate hierarchical or flat self-referencing data. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, grouping, templating, column moving, column pinning, export to Excel, CSV and PDF, and more.
 
 ## Angular Tree Grid Example
 
-In this example, you can see how users can display hierarchical data. We have included filtering and sorting options, pinning and hiding, row selection, export to excel and csv, and cell templating that uses our [Sparkline](../charts/types/sparkline-chart.md) component. In addition, you can see an example of custom pagination with [Angular Pagination](paging.md).
+In this example, you can see how users can display hierarchical data. We have included filtering and sorting options, pinning and hiding, row selection, export to excel, csv and pdf, and cell templating that uses our [Sparkline](../charts/types/sparkline-chart.md) component. In addition, you can see an example of custom pagination with [Angular Pagination](paging.md).
 
 <code-view style="height:850px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey" alt="Angular tree grid example">
+           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey/" alt="Angular tree grid example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -35,7 +35,7 @@ The next step is to import the `IgxTreeGridModule` in your **app.module.ts** fil
 ```typescript
 // app.module.ts
 
-import { IgxTreeGridModule } from 'igniteui-angular';
+import { IgxTreeGridModule } from 'igniteui-angular/grids/tree-grid';
 // import { IgxTreeGridModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -48,12 +48,12 @@ import { IgxTreeGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxTreeGridComponent` as a standalone dependency, or use the [`IGX_TREE_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/tree-grid/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxTreeGridComponent` as a standalone dependency, or use the [`IGX_TREE_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/grids/tree-grid/src/tree-grid.module.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
-import { IGX_TREE_GRID_DIRECTIVES } from 'igniteui-angular';
+import { IGX_TREE_GRID_DIRECTIVES } from 'igniteui-angular/grids/tree-grid';
 // import { IGX_TREE_GRID_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -263,7 +263,7 @@ And here is the final result:
 
 <code-view style="height:450px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-primaryforeignkey" >
+           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-primaryforeignkey/" >
 <div class="divider--half"></div>
 
 ## Persistence and Integration
@@ -321,7 +321,9 @@ $custom-theme: grid-theme(
 The last step is to **include** the component theme in our application.
 
 ```scss
-@include css-vars($custom-theme);
+:host {
+  @include tokens($custom-theme);
+}
 ```
 
 ### Angular Tree Grid Styling Demo
@@ -406,6 +408,7 @@ platformBrowserDynamic()
 - [Grid Sizing](sizing.md)
 - [Data Grid](../grid/grid.md)
 - [Row Editing](row-editing.md)
+- [Ignite UI for Angular Skills](../ai/skills.md) — Agent Skills for grids, data operations, and theming
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

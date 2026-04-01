@@ -36,7 +36,7 @@ The next step is to import the `IgxActionStripModule` in your **app.module.ts** 
 // app.module.ts
 
 ...
-import { IgxActionStripModule } from 'igniteui-angular';
+import { IgxActionStripModule } from 'igniteui-angular/action-strip';
 // import { IgxActionStripModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -47,13 +47,15 @@ import { IgxActionStripModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxActionStripComponent` as a standalone dependency, or use the [`IGX_ACTION_STRIP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/action-strip/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxActionStripComponent` as a standalone dependency, or use the [`IGX_ACTION_STRIP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/action-strip/src/action-strip/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
 ...
-import { IGX_ACTION_STRIP_DIRECTIVES, IgxButtonDirective, IgxIconComponent } from 'igniteui-angular';
+import { IGX_ACTION_STRIP_DIRECTIVES } from 'igniteui-angular/action-strip';
+import { IgxButtonDirective } from 'igniteui-angular/directives';
+import { IgxIconComponent } from 'igniteui-angular/icon';
 // import { IGX_ACTION_STRIP_DIRECTIVES, IgxButtonDirective, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -183,7 +185,9 @@ $custom-strip: action-strip-theme(
 The last step is to include the newly created component theme in our application.
 
 ```scss
-@include css-vars($custom-strip);
+:host {
+  @include tokens($custom-strip);
+}
 ```
 
 <code-view style="height: 400px;"

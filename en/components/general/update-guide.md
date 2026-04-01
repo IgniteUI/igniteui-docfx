@@ -60,6 +60,102 @@ Unfortunately not all changes can be automatically updated. Changes below are sp
 
 For example: if you are updating from version 6.2.4 to 7.1.0 you'd start from the "From 6.x .." section apply those changes and work your way up:
 
+## From 21.0.x to 21.1.x
+
+Version 21.1.0 ships with a new `tokens` mixin that can be used in place of the now deprecated `css-vars` mixin of our Sass theming framework. On the surface, this is a cosmetic change, however, the new `tokens` mixin produces universal global component theme tokens that work across all of our Ignite UI frameworks. The `css-vars` mixin is now deprecated and will be removed in a future version, so we recommend switching to the new `tokens` mixin as soon as possible.
+
+The `tokens` mixin generates CSS variable tokens for components in `global` or `scoped` modes, with a universal `--ig-*` fallback chain and proper rewriting of local token references.
+
+**Global mode** (default) — emits universal `--ig-{component}-{property}` tokens. Local `var()` references are rewritten to their global equivalents so derived values (e.g., `adaptive-contrast`) resolve correctly at any scope. Sizable expressions are skipped; pass concrete values instead.
+
+```scss
+// Input:
+@include tokens(avatar-theme($background: red));
+
+// Output:
+:root {
+  --ig-avatar-background: red;
+  /* ... remaining avatar properties ... */
+}
+```
+
+**Scoped mode** — emits component-scoped variables (`--{property}`) with a fallback chain: configured prefix (`--igx-*`) -> universal (`--ig-*`) -> schema default. When called from the stylesheet root, the theme's `selector` is used to create the rule. When called inside a selector, both the current selector and the component selector receive the variables. Essentially, this yields the same result as the now deprecated `css-vars` mixin.
+
+```scss
+// Input (from root):
+@include tokens(avatar-theme($background: red), $mode: 'scoped');
+
+// Output:
+igx-avatar {
+  --background: var(--igx-avatar-background, var(--ig-avatar-background, red));
+  /* ... remaining avatar properties ... */
+}
+```
+
+```scss
+// Input (from within a selector):
+.my-theme {
+  @include tokens(avatar-theme($background: red), $mode: 'scoped');
+}
+
+// Output:
+.my-theme,
+.my-theme igx-avatar {
+  --background: var(--igx-avatar-background, var(--ig-avatar-background, red));
+  /* ... */
+}
+```
+
+> [!NOTE]
+> In scoped mode, the `selector` property in the produced theme map is required to determine the component selector for proper variable scoping. If the mixin is called from the stylesheet root, the generated rule will use the theme's internal `selector` value. If called from within a selector, both that selector and the component selector will receive the variables.
+
+```scss
+// Global override:
+:root {
+  @include tokens(avatar-theme($background: orange));
+}
+// Result: --ig-avatar-background: orange;
+
+// Scoped consumption (no explicit override):
+@include tokens(avatar-theme($schema: $schema), $mode: 'scoped');
+// Result: --background resolves through var(--igx-avatar-background, var(--ig-avatar-background, #000))
+//         and picks up the global orange value from --ig-avatar-background.
+```
+
+> [!IMPORTANT]
+> **Global overrides flow into scoped mode.** Because scoped variables fall back to `--ig-*` tokens, setting a global token at `:root` will propagate to all scoped instances:
+
+## From 20.x to 21.0.x
+
+### Multiple Entry Points Support
+
+Version 21.0.0 introduces **multiple entry points** for better tree-shaking and code splitting. The main entry point (`igniteui-angular`) remains fully backwards compatible, but migrating to granular entry points is recommended for optimal bundle sizes.
+
+**Key changes:**
+- Components organized into dedicated entry points (e.g., `igniteui-angular/grids/grid`, `igniteui-angular/button`)
+- Some components relocated (input directives, autocomplete, radio group)
+- Type rename: `Direction` → `CarouselAnimationDirection`
+
+**Migration:**
+
+When updating, you'll be prompted to migrate imports automatically:
+
+```cmd
+ng update igniteui-angular
+```
+
+Choose **"Yes"** when prompted, or migrate later with:
+
+```cmd
+ng update igniteui-angular --migrate-only --from=20.1.0 --to=21.0.0
+```
+
+For complete details on entry points, migration options, breaking changes, and usage examples, see the [Code Splitting and Multiple Entry Points guide](code-splitting-and-multiple-entry-points.md).
+
+### Dependency Injection Refactor
+
+All internal dependency injection now uses the `inject()` API. This generally doesn't affect application code, but if you extend Ignite UI components or services, you may need to update your constructors to use `inject()` instead of constructor parameters.
+
 ## From 17.2.x to 18.0.x
 
 ### Breaking changes
@@ -1387,7 +1483,7 @@ The `ng update` process will update all enumeration names, like `AvatarType`, `T
     }
     ```
 
-    You can read more about setting up the combo in the [readme](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/combo/README.md#value-binding) and in the [official documentation](../combo.md#selection-api).
+    You can read more about setting up the combo in the [readme](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/combo/README.md#value-binding) and in the [official documentation](../combo.md#selection-api).
 
 ## From 8.0.x to 8.1.x
 

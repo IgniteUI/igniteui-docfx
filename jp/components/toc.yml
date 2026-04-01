@@ -1,11 +1,19 @@
-﻿- name: 概要
+﻿- name: AI 支援開発
+  header: true
+- name: Ignite UI for Angular スキル
+  href: ai/skills.md
+  new: true
+- name: Theming MCP
+  href: ai/theming-mcp.md
+  new: true
+- name: 概要
   header: true
   sortable: true
   _language: "ja"
 - name: Angular - 完全ガイド
   href: general/angular-grid-overview-guide.md
   new: false
-- name: オープンソース vs プレミアム
+- name: オープン ソース vs プレミアム
   href: general/open-source-vs-premium.md
   new: true
 - name: ライセンス
@@ -14,7 +22,7 @@
 - name: ローカライズ
   href: general/localization.md
   new: false
-  updated: false
+  updated: true
 - name: 作業の開始
   href: general/getting-started.md
   new: false
@@ -26,6 +34,9 @@
   href: general/update-guide.md
   new: false
   updated: true
+- name: マルチ エントリ ポイント
+  href: general/code-splitting-and-multiple-entry-points.md
+  new: true
 - name: サーバー サイド レンダリング (SSR)
   href: general/ssr-rendering.md
   new: false
@@ -258,10 +269,10 @@
       new: false
       updated: false
       premium: true
-    - name: Excel エクスポート
+    - name: エクスポート サービス
       href: grid/export-excel.md
       new: false
-      updated: false
+      updated: true
       premium: true
     - name: Excel からの貼り付け
       href: grid/paste-excel.md
@@ -448,10 +459,10 @@
       new: false
       updated: false
       premium: true
-    - name: Excel エクスポート
+    - name: エクスポート サービス
       href: treegrid/export-excel.md
       new: false
-      updated: false
+      updated: true
       premium: true
     - name: 複数列ヘッダー
       href: treegrid/multi-column-headers.md
@@ -547,10 +558,10 @@
           href: hierarchicalgrid/validation.md
           new: false
           premium: true
-    - name: Excel へエクスポート
+    - name: エクスポート サービス
       href: hierarchicalgrid/export-excel.md
       new: false
-      updated: false
+      updated: true
       premium: true
     - name: 行ドラッグ
       href: hierarchicalgrid/row-drag.md
@@ -674,7 +685,7 @@
   new: false
   updated: true
   items:
-    - name: Excel へのエクスポート
+    - name: エクスポート サービス
       href: pivotgrid/export-excel.md
       new: false
       updated: true
@@ -967,6 +978,10 @@
       href: charts/features/chart-trendlines.md
       updated: false
       premium: true
+    - name: チャートのユーザー注釈
+      href: charts/features/chart-user-annotations.md
+      preview: true
+      premium: true
     - name: ズーム スライダー
       href: zoomslider-overview.md
       new: false
@@ -1155,7 +1170,7 @@
   href: display-density.md
 - name: スペーシング
   href: themes/spacing.md
-  new: true
+  new: false
 - name: Sass
   new: false
   items:
@@ -1209,7 +1224,7 @@
       items:
       - name: Tailwind カスタム クラスの使用
         href: themes/misc/tailwind-classes.md
-        new: true
+        new: false
       - name: 印刷スタイル
         href: themes/misc/printing-styles.md
         new: false
@@ -1254,11 +1269,10 @@
 - name: Query Builder
   href: query-builder.md
   new: false
-  updated: true
   items:
     - name: Query Builder モデルの使用
       href: query-builder-model.md
-      new: true
+      new: false
 - name: Radio & Radio Group
   href: radio-button.md
   new: false
@@ -1299,6 +1313,7 @@
 - name: Color Editor
   href: inputs/color-editor.md
   preview: true
+  premium: true
 - name: Text Highlight
   href: texthighlight.md
   new: false
@@ -1309,6 +1324,9 @@
 - name: インタラクション
   header: true
   sortable: true
+- name: Chat
+  href: chat.md
+  new: true
 - name: Dialog Window
   href: dialog.md
 - name: Slider
@@ -1443,6 +1461,11 @@
 - name: Excel エクスポーター
   href: exporter-excel.md
   new: false
+  premium: true
+- name: PDF エクスポーター
+  href: exporter-pdf.md
+  new: false
+  updated: true
   premium: true
 - name: トランザクション サービス
   href: transaction.md

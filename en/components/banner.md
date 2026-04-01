@@ -34,7 +34,7 @@ The next step is to import the `IgxBannerModule` in your **app.module.ts** file.
 // app.module.ts
 
 ...
-import { IgxBannerModule } from 'igniteui-angular';
+import { IgxBannerModule } from 'igniteui-angular/banner';
 // import { IgxBannerModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -45,13 +45,13 @@ import { IgxBannerModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxBannerComponent` as a standalone dependency, or use the [`IGX_BANNER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/banner/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxBannerComponent` as a standalone dependency, or use the [`IGX_BANNER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/banner/src/banner/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
 ...
-import { IGX_BANNER_DIRECTIVES } from 'igniteui-angular';
+import { IGX_BANNER_DIRECTIVES } from 'igniteui-angular/banner';
 // import { IGX_BANNER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -172,7 +172,8 @@ Let's change the animations that our banner uses, so that it slides in and out:
 
 ```typescript
 // banner.component.ts
-import { IgxBannerComponent, slideInLeft, slideOutRight } from 'igniteui-angular'
+import { IgxBannerComponent } from 'igniteui-angular/banner';
+import { slideInLeft, slideOutRight } from 'igniteui-angular/animations'
 // import { IgxBannerComponent, slideInLeft, slideOutRight } from '@infragistics/igniteui-angular'; for licensed package
 ...
 export class MyBannerComponent {
@@ -285,7 +286,9 @@ $custom-banner-theme: banner-theme(
 The last step is to pass the custom banner theme:
 
 ```scss
-@include css-vars($custom-banner-theme);
+:host {
+    @include tokens($custom-banner-theme);
+}
 ```
 
 <code-view style="height: 530px"

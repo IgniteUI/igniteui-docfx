@@ -33,7 +33,7 @@ The first step is to import the `IgxNavbarModule` inside our **app.module.ts** f
 ```typescript
 // app.module.ts
 
-import { IgxNavbarModule } from 'igniteui-angular';
+import { IgxNavbarModule } from 'igniteui-angular/navbar';
 // import { IgxNavbarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -44,12 +44,12 @@ import { IgxNavbarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxNavbarComponent` as a standalone dependency, or use the [`IGX_NAVBAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/navbar/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxNavbarComponent` as a standalone dependency, or use the [`IGX_NAVBAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/navbar/src/navbar/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
-import { IGX_NAVBAR_DIRECTIVES } from 'igniteui-angular';
+import { IGX_NAVBAR_DIRECTIVES } from 'igniteui-angular/navbar';
 // import { IGX_NAVBAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -96,7 +96,9 @@ We can make our app a little more functional by adding options for searching, fa
 // app.module.ts
 
 ...
-import { IgxNavbarModule, IgxIconButtonDirective, IgxIconModule } from 'igniteui-angular';
+import { IgxNavbarModule } from 'igniteui-angular/navbar';
+import { IgxIconButtonDirective } from 'igniteui-angular/directives';
+import { IgxIconModule } from 'igniteui-angular/icon';
 // import { IgxNavbarModule, IgxButtonModule, IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -324,10 +326,12 @@ $custom-navbar-theme: navbar-theme(
 >[!NOTE]
 >Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
-The last step is to pass the newly created theme to the `css-vars` mixin:
+The last step is to pass the newly created theme to the `tokens` mixin:
 
 ```scss
-@include css-vars($custom-navbar-theme);
+:host {
+  @include tokens($custom-navbar-theme);
+}
 ```
 
 ### Demo
@@ -374,7 +378,7 @@ You can find the full list of properties in the [navbar-theme]({environment:sass
 At the end your navbar should look like this:
 
 <div class="sample-container loading" style="height:120px">
-    <iframe id="navbar-tailwind-style-iframe" data-src='{environment:demosBaseUrl}/menus/navbar-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="navbar-tailwind-style-iframe" data-src='{environment:demosBaseUrl}/menus/navbar-tailwind-style/' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
 ## API References

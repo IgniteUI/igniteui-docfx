@@ -42,7 +42,7 @@ The next step is to import the `IgxQueryBuilderModule` in the **app.module.ts** 
 ```typescript
 // app.module.ts
 
-import { IgxQueryBuilderModule } from 'igniteui-angular';
+import { IgxQueryBuilderModule } from 'igniteui-angular/query-builder';
 // import { IgxQueryBuilderModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -53,12 +53,13 @@ import { IgxQueryBuilderModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxQueryBuilderComponent` as a standalone dependency, or use the [`IGX_QUERY_BUILDER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/query-builder/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxQueryBuilderComponent` as a standalone dependency, or use the [`IGX_QUERY_BUILDER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/query-builder/src/query-builder/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
-import { IGX_QUERY_BUILDER_DIRECTIVES, FilteringExpressionsTree, FieldType } from 'igniteui-angular';
+import { IGX_QUERY_BUILDER_DIRECTIVES } from 'igniteui-angular/query-builder';
+import { FilteringExpressionsTree, FieldType } from 'igniteui-angular/core';
 // import { IGX_QUERY_BUILDER_DIRECTIVES, FilteringExpressionsTree, FieldType } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -267,7 +268,7 @@ We’ve created this Angular Query Builder example to show you the templating an
 
 <code-view style="height:700px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-template-sample" alt="Angular Query Builder Templates Example">
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder-template-sample/" alt="Angular Query Builder Templates Example">
 </code-view>
 
 ## Styling
@@ -348,21 +349,18 @@ In this example we only changed some of the parameters for the listed components
 >[!NOTE]
 >Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
-The last step is to **include** the new component themes using the `css-vars` mixin.
+The last step is to **include** the new component themes using the `tokens` mixin.
 
 ```scss
-@include css-vars($custom-query-builder);
-
 :host {
-  ::ng-deep {
-    @include css-vars($custom-input-group);
-    @include css-vars($custom-chip);
-    @include css-vars($custom-icon-button);
+    @include tokens($custom-query-builder);
+    @include tokens($custom-input-group);
+    @include tokens($custom-chip);
+    @include tokens($custom-icon-button);
 
     .igx-filter-tree__buttons {
-      @include css-vars($custom-button);
+      @include tokens($custom-button);
     }
-  }
 }
 ```
 

@@ -45,7 +45,7 @@ The next step is to import the `IgxTimePickerModule` in your **app.module.ts** f
 ...
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxTimePickerModule } from 'igniteui-angular';
+import { IgxTimePickerModule } from 'igniteui-angular/time-picker';
 // import { IgxTimePickerModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -56,13 +56,13 @@ import { IgxTimePickerModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxTimePickerComponent` as a standalone dependency, or use the [`IGX_TIME_PICKER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/time-picker/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxTimePickerComponent` as a standalone dependency, or use the [`IGX_TIME_PICKER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/time-picker/src/time-picker/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
 import { FormsModule } from '@angular/forms';
-import { IGX_TIME_PICKER_DIRECTIVES } from 'igniteui-angular';
+import { IGX_TIME_PICKER_DIRECTIVES } from 'igniteui-angular/time-picker';
 // import { IGX_TABS_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -238,7 +238,7 @@ The default time picker mode is editable dropdown mode. To change the time picke
 ```typescript
 // timePickerDropdown.component.ts
 
-import { PickerInteractionMode } from 'igniteui-angular';
+import { PickerInteractionMode } from 'igniteui-angular/core';
 // import { PickerInteractionMode } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public mode = PickerInteractionMode.Dialog;
@@ -311,7 +311,8 @@ You can specify [`minValue`]({environment:angularApiUrl}/classes/igxtimepickerco
 
 ...
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxTimePickerModule, IgxToastModule } from 'igniteui-angular';
+import { IgxTimePickerModule } from 'igniteui-angular/time-picker';
+import { IgxToastModule } from 'igniteui-angular/toast';
 // import { IgxTimePickerModule, IgxToastModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -437,7 +438,9 @@ Now, the time picker's items are properly rendered **inside** of our component's
 >In order to learn more about the various options for providing themes to elements that are shown by using the [`IgxOverlayService`](overlay.md), you can take a look at the [Overlay styling topic](overlay-styling.md).
 
 ```scss
- @include css-vars($my-time-picker-theme);
+:host {
+    @include tokens($my-time-picker-theme);
+}
 ```
 
 >[!WARNING]
@@ -445,9 +448,9 @@ Now, the time picker's items are properly rendered **inside** of our component's
 
 ```scss
 :host {
-  ::ng-deep {
-    @include css-vars($my-time-picker-theme);
-  }
+    ::ng-deep {
+        @include tokens($my-time-picker-theme);
+    }
 }
 ```
 

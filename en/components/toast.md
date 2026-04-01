@@ -36,7 +36,7 @@ The next step is to import the `IgxToastModule` in your **app.module.ts** file.
 // app.module.ts
 
 ...
-import { IgxToastModule } from 'igniteui-angular';
+import { IgxToastModule } from 'igniteui-angular/toast';
 // import { IgxToastModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -52,7 +52,8 @@ Alternatively, as of `16.0.0` you can import the `IgxToastComponent` as a standa
 ```typescript
 // home.component.ts
 
-import { IgxToastComponent, IgxButtonDirective } from 'igniteui-angular';
+import { IgxToastComponent } from 'igniteui-angular/toast';
+import { IgxButtonDirective } from 'igniteui-angular/directives';
 // import { IgxToastComponent, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -148,7 +149,7 @@ Use [`displayTime`]({environment:angularApiUrl}/classes/igxtoastcomponent.html#d
 If the sample is configured properly, the toast auto hides faster.
 
 <div class="sample-container loading">
-    <iframe id="toast-sample-4-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-4" class="lazyload"></iframe>
+    <iframe id="toast-sample-4-iframe" frameborder="0" seamless width="100%" height="100%" data-src="{environment:demosBaseUrl}/notifications/toast-sample-4/" class="lazyload"></iframe>
 </div>
 
 ### Positioning
@@ -165,7 +166,7 @@ Use [`positionSettings`]({environment:angularApiUrl}/classes/igxtoastcomponent.h
 
 ```typescript
 // sample.component.ts
-import { VerticalAlignment } from 'igniteui-angular';
+import { VerticalAlignment } from 'igniteui-angular/core';
 // import { VerticalAlignment } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public open(toast) {
@@ -235,7 +236,9 @@ $custom-toast-theme: toast-theme(
 The last step is to pass the custom toast theme:
 
 ```scss
-@include css-vars($custom-toast-theme);
+:host {
+  @include tokens($custom-toast-theme);
+}
 ```
 
 ### Demo
@@ -281,7 +284,7 @@ You can find the full list of properties in the [IgxToast Theme]({environment:sa
 At the end your toast should look like this:
 
 <div class="sample-container loading" style="height:200px">
-    <iframe id="toast-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/notifications/toast-tailwind-style' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+    <iframe id="toast-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/notifications/toast-tailwind-style/' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
 </div>
 
 <div class="divider--half"></div>

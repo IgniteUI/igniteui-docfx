@@ -82,6 +82,7 @@ export class ReplacePipe implements PipeTransform {
 ```html
 <span>{{ name | replace:" ":"-" }}</span>
 ```
+
 > [!NOTE]
 > コンポーネントの html テンプレートでパイプを使用できるようにするには、モジュール宣言にパイプを追加する必要があります。
 
@@ -89,12 +90,13 @@ export class ReplacePipe implements PipeTransform {
 > Angular パイプと WPF コンバーターの重要な違いは、Angular パイプは [ConvertBack](https://docs.microsoft.com/ja-jp/dotnet/api/system.windows.data.ivalueconverter.convertback?view=netframework-4.8) メソッドを持つ WPF コンバーターとは異なり、一方向のバインディングに対してのみ機能することです。
 
 ## その他のリソース
-* [デスクトップから Web: Angular パイプを使用したデータの変換](https://www.youtube.com/watch?v=Gmz5kio50FE&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j&index=9)
-* [Angular パイプ](https://angular.io/guide/pipes)
-* [事前定義された Angular パイプのリスト](https://angular.io/api?type=pipe)
+
+- [デスクトップから Web: Angular パイプを使用したデータの変換](https://www.youtube.com/watch?v=Gmz5kio50FE&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j&index=9)
+- [Angular パイプ](https://angular.io/guide/pipes)
+- [事前定義された Angular パイプのリスト](https://angular.io/api?type=pipe)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

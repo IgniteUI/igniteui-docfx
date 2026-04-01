@@ -38,7 +38,7 @@ The next step is to import the `IgxButtonModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
-import { IgxButtonModule } from 'igniteui-angular';
+import { IgxButtonModule } from 'igniteui-angular/directives';
 // import { IgxButtonModule } from '@infragistics/igniteui-angular'; for licensed package
 @NgModule({
     imports: [
@@ -56,7 +56,7 @@ Alternatively, as of `16.0.0` you can import the `IgxButtonDirective` as a stand
 // home.component.ts
 
 ...
-import { IgxButtonDirective } from 'igniteui-angular';
+import { IgxButtonDirective } from 'igniteui-angular/directives';
 // import { IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -198,7 +198,7 @@ We can allow the user to choose the size of the `igxButton` by using the `--ig-s
 ```typescript
 // app.module.ts
 ...
-import { IgxButtonGroupModule } from 'igniteui-angular';
+import { IgxButtonGroupModule } from 'igniteui-angular/button-group';
 // import { IgxButtonGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 @NgModule({
     imports: [
@@ -1451,7 +1451,7 @@ Finally, **include** the custom theme in your application:
 
 ```scss
 .my-contained-btn {
-    @include css-vars($custom-contained-theme);
+  @include tokens($custom-contained-theme);
 }
 ```
 
@@ -1548,17 +1548,17 @@ button {
 }
 ```
 
-Or you can use the universal `--igx-button-size` variable to target all instances:
+Or you can use the universal `--ig-button-size` variable to target all instances:
 
 ```html
 <div class="my-app">
-  <button igxButton="raised"></button>
+  <button igxButton="contained"></button>
 </div>
 ```
 
 ```scss
 .my-app {
-  --igx-button-size: 50px;
+  --ig-button-size: 50px;
 }
 ```
 

@@ -27,7 +27,7 @@ First, we need to import the `IgxForOfModule` in the module of the component tha
 
 ```typescript
 // app.module.ts
-import { IgxForOfModule } from 'igniteui-angular';
+import { IgxForOfModule } from 'igniteui-angular/directives';
 // import { IgxForOfModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -164,7 +164,7 @@ First, we need to define a remote service for fetching data:
 // remote.service.ts
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { IForOfState } from 'igniteui-angular';
+import { IForOfState } from 'igniteui-angular/directives';
 // import { IForOfState } from '@infragistics/igniteui-angular'; for licensed package
 import { BehaviorSubject, Observable } from 'rxjs';
 

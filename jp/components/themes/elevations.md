@@ -70,6 +70,7 @@ Ignite UI for Angular のマテリアル テーマのさまざまなコンポー
 これで、エレベーション レベル 1 と 2 を使用するすべてのコンポーネントのシャドウが更新されます。
 
 ### シャドウイング
+
 特定のスコープに対してのみ、グローバルに設定されたエレベーションをシャドーイングすることができます。ボタン コンポーネントが静止状態にエレベーション レベル 2 を使用することはすでに見た通りです。レベル 2 は、カードおよびグリッド コンポーネントでも使用されます。したがって、3 つすべてのシャドウを変更するには、次のことを行う必要があります:
 
 ```css
@@ -79,6 +80,7 @@ igx-card {
     --ig-elevation-2: 0 3px 9px 0 rgba(0, 0, 0, .24);
 }
 ```
+
 これにより、Contained ボタンとカードの `--resting-shadow`、およびグリッドの `--grid-shadow` が、`--ig-elevation-2` に割り当てられた値に設定されます。
 
 エレベーションは、Sass を使用して、より強力な方法で作成および使用することもできます。詳細については、以下の関連トピックを参照してください。
@@ -91,5 +93,5 @@ igx-card {
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

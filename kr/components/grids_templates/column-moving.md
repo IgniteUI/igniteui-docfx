@@ -48,7 +48,7 @@ The @@igComponent component in Ignite UI for Angular provides the **Column Movin
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-moving-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-moving-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -57,7 +57,7 @@ The @@igComponent component in Ignite UI for Angular provides the **Column Movin
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-moving" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-moving/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -66,7 +66,7 @@ The @@igComponent component in Ignite UI for Angular provides the **Column Movin
 
 <code-view style="height:660px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-moving" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-moving/" >
 </code-view>
 
 <div class="divider--half"></div>

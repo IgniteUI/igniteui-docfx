@@ -113,8 +113,6 @@ Ignite UI for Angular ステップ エリア チャートはカテゴリ チャ�
 
 <div class="divider--half"></div>
 
-## 高度なタイプのエリア チャート
-
 次のセクションでは、簡略化された API を使用した [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) コントロールの代わりに [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) コントロールを使用して作成できる、より高度なタイプの Angular エリア チャートについて説明します。
 
 ## Angular 範囲エリア チャート

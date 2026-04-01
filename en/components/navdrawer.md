@@ -40,7 +40,7 @@ The first step is to import the `IgxNavigationDrawerModule` inside our **app.mod
 ...
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxNavigationDrawerModule } from 'igniteui-angular';
+import { IgxNavigationDrawerModule } from 'igniteui-angular/navigation-drawer';
 // import { IgxNavigationDrawerModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -51,7 +51,7 @@ import { IgxNavigationDrawerModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxNavigationDrawerComponent` as a standalone dependency, or use the [`IGX_NAVIGATION_DRAWER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/navigation-drawer/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxNavigationDrawerComponent` as a standalone dependency, or use the [`IGX_NAVIGATION_DRAWER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/navigation-drawer/src/navigation-drawer/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
@@ -59,7 +59,9 @@ Alternatively, as of `16.0.0` you can import the `IgxNavigationDrawerComponent` 
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgFor } from '@angular/common';
-import { IGX_NAVIGATION_DRAWER_DIRECTIVES, IgxRippleDirective, IgxIconComponent } from 'igniteui-angular';
+import { IGX_NAVIGATION_DRAWER_DIRECTIVES } from 'igniteui-angular/navigation-drawer';
+import { IgxRippleDirective } from 'igniteui-angular/directives';
+import { IgxIconComponent } from 'igniteui-angular/icon';
 // import { IGX_NAVIGATION_DRAWER_DIRECTIVES, IgxRippleDirective, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -68,7 +70,6 @@ import { IGX_NAVIGATION_DRAWER_DIRECTIVES, IgxRippleDirective, IgxIconComponent 
     <div class="content-wrap">
       <igx-nav-drawer [isOpen]="true">
         <ng-template igxDrawer>
-          <nav>
             <span igxDrawerItem [isHeader]="true">Components</span>
             <span
               *ngFor="let item of navItems"
@@ -80,7 +81,6 @@ import { IGX_NAVIGATION_DRAWER_DIRECTIVES, IgxRippleDirective, IgxIconComponent 
               <igx-icon fontSet="material">{{ item.name }}</igx-icon>
               <span>{{ item.text }}</span>
             </span>
-          </nav>
         </ng-template>
       </igx-nav-drawer>
       <main>
@@ -124,13 +124,11 @@ The [`igxRipple`](ripple.md) directive completes the look and feel:
 <div class="content-wrap">
   <igx-nav-drawer id="navigation" #drawer [isOpen]="true">
     <ng-template igxDrawer>
-      <nav>
         <span igxDrawerItem [isHeader]="true">Components</span>
         <span *ngFor="let item of navItems" igxDrawerItem [active]="item.text === selected" igxRipple (click)="navigate(item)">
           <igx-icon fontSet="material">{{ item.name }}</igx-icon>
           <span>{{ item.text }}</span>
         </span>
-      </nav>
     </ng-template>
   </igx-nav-drawer>
   <main>
@@ -196,7 +194,7 @@ Also, if you want the drawer to close when you select an item from it, you can u
 ```ts
 /* app.component.ts */
 import { Component, ViewChild } from '@angular/core';
-import { IgxNavigationDrawerComponent } from 'igniteui-angular';
+import { IgxNavigationDrawerComponent } from 'igniteui-angular/navigation-drawer';
 // import { IgxNavigationDrawerComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({...})
@@ -478,7 +476,9 @@ As seen, the `navdrawer-theme` exposes some useful parameters for basic styling 
 The last step is to **include** the component theme in our application.
 
 ```scss
-@include css-vars($custom-theme);
+:host {
+  @include tokens($custom-theme);
+}
 ```
 
 >[!NOTE]
@@ -487,7 +487,7 @@ The last step is to **include** the component theme in our application.
 ```scss
 :host {
   ::ng-deep { 
-    @include css-vars($custom-theme);
+    @include tokens($custom-theme);
   }
 }
 ```

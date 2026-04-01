@@ -34,7 +34,7 @@ The next step is to import the `IgxSwitchModule` in your **app.module.ts** file.
 // app.module.ts
 
 ...
-import { IgxSwitchModule } from 'igniteui-angular';
+import { IgxSwitchModule } from 'igniteui-angular/switch';
 // import { IgxSwitchModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -50,7 +50,7 @@ Alternatively, as of `16.0.0` you can import the `IgxSwitchComponent` as a stand
 ```typescript
 // home.component.ts
 
-import { IgxSwitchComponent } from 'igniteui-angular';
+import { IgxSwitchComponent } from 'igniteui-angular/switch';
 // import { IgxSwitchComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -384,7 +384,9 @@ $custom-switch-theme: switch-theme(
 Finally, **include** the custom theme in your application:
 
 ```scss
-@include css-vars($custom-switch-theme);
+:host {
+  @include tokens($custom-switch-theme);
+}
 ```
 
 In the sample below, you can see how using the switch component with customized CSS variables allows you to create a design that visually resembles the switch used in the [`SAP UI5`](https://ui5.sap.com/#/entity/sap.m.Switch/sample/sap.m.sample.Switch) design system.

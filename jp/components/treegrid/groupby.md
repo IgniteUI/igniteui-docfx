@@ -48,8 +48,8 @@ _language: ja
 
 ## Angular Tree Grid グループ化の例
 
-<code-view style="height:850px" 
-           data-demos-base-url="{environment:lobDemosBaseUrl}" 
+<code-view style="height:850px"
+           data-demos-base-url="{environment:lobDemosBaseUrl}"
            iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs/" alt="Angular Tree Grid グループ化の例">
 </code-view>
 
@@ -101,8 +101,8 @@ public sorting = IgxGroupedTreeGridSorting.instance();
 
 ## Angular Tree Grid グループ化 ロード オン デマンドの例
 
-<code-view style="height:850px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:850px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-group-by-load-on-demand/" alt="Angular Tree Grid グループ化 ロード オン デマンドの例">
 </code-view>
 
@@ -166,23 +166,29 @@ private reloadData() {
 }
 ```
 
-### API リファレンス
+## 既知の制限
+
+|制限|説明|
+|--- |--- |
+|一括編集でグループ化が更新されない | 一括編集を有効にした (`batchEditing=true`) Tree Grid グループ化を使用する場合、グループ化に使用される列の値を編集してもグループ化は自動的に更新されません。グループ化は、トランザクションをコミットした後にのみ更新されます。|
+
+## API リファレンス
 
 <div class="divider--half"></div>
 
-* [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
+- [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 
-### その他のリソース
+## その他のリソース
 
 <div class="divider--half"></div>
 
-* [TreeGrid 概要](tree-grid.md)
-* [TreeGrid 集計](summaries.md)
-* [Grid 集計](../grid/summaries.md)
+- [TreeGrid 概要](tree-grid.md)
+- [TreeGrid 集計](summaries.md)
+- [Grid 集計](../grid/summaries.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

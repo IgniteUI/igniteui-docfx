@@ -55,7 +55,7 @@ export class TransactionBaseComponent { }
 In our `ts` file, we should import [`igxTransactionService`]({environment:angularApiUrl}/classes/igxtransactionservice.html) from the `igniteui-angular` library, as well as the [`State`]({environment:angularApiUrl}/interfaces/state.html) and [`Transaction`]({environment:angularApiUrl}/interfaces/transaction.html) interfaces and the [`TransactionType`]({environment:angularApiUrl}/enums/TransactionType.html) enum, which will be needed by our application:
 
 ```typescript
-import { IgxTransactionService, State, Transaction, TransactionType } from 'igniteui-angular';
+import { IgxTransactionService, State, Transaction, TransactionType } from 'igniteui-angular/core';
 // import { IgxTransactionService, State, Transaction, TransactionType } from '@infragistics/igniteui-angular'; for licensed package
 ```
 

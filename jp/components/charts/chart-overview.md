@@ -345,7 +345,7 @@ alt="Angular チャート マーカー、ツールチップ、およびテンプ
 <!-- Angular -->
 
 - Ignite UI for Angular は、Angular 開発者向けの Angular 上に構築されており、サードパーティの依存関係はありません。Angular 用に 100% 最適化されています。
-- Sketch デザインからピクセル パーフェクトな Angular コントロールを生成する、UX デザイナー、ビジュアル デザイナー、開発者向けのコード プラットフォームに、世界初で唯一のエンドツーエンドの包括的なデザインを提供します。Indigo.Design を使用すると、Indigo Design System から Sketch で作成するすべてのものが Ignite UI for Angular コントロールと一致します。
+- Figma デザインからピクセル パーフェクトな Angular コントロールを生成する、UX デザイナー、ビジュアル デザイナー、開発者向けのコード プラットフォームに、世界初で唯一のエンドツーエンドの包括的なデザインを提供します。Indigo.Design を使用すると、Indigo Design System から Figma で作成するすべてのものが Ignite UI for Angular コントロールと一致します。
 
 <!-- end: Angular -->
 

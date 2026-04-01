@@ -29,7 +29,7 @@ Once the column editing is enabled, you can start by adding your [Single Select 
 To get started with the [Simple ComboBox component](../simple-combo.md#angular-simple-combobox-features), first you need to import the `IgxSimpleComboModule` in your **app.module.ts** file:
 
 ```typescript
-import { IgxSimpleComboModule } from 'igniteui-angular';
+import { IgxSimpleComboModule } from 'igniteui-angular/simple-combo';
 
 @NgModule({
     imports: [
@@ -68,7 +68,7 @@ In order to handle the selection change, we need [selectionChanging()]({environm
 ```
 
 ```typescript
-public countryChanging(event: IComboSelectionChangeEventArgs) {
+public countryChanging(event: IComboSelectionChangingEventArgs) {
     if (event.added.length) {
         event.newSelection = event.added;
     }
@@ -86,7 +86,7 @@ The [`id`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.htm
 </igx-linear-bar>
 ```
 
-## API Summary
+## API References
 
 <div class="divider--half"></div>
 

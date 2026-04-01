@@ -39,7 +39,7 @@ The next step is to import the `IgxCardModule` inside your **app.module.ts** fil
 ```typescript
 // app.module.ts
 ...
-import { IgxCardModule } from 'igniteui-angular';
+import { IgxCardModule } from 'igniteui-angular/card';
 // import { IgxCardModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -50,12 +50,12 @@ import { IgxCardModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxCardComponent` as a standalone dependency, or use the [`IGX_CARD_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/card/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxCardComponent` as a standalone dependency, or use the [`IGX_CARD_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/card/src/card/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
-import { IGX_CARD_DIRECTIVES } from 'igniteui-angular';
+import { IGX_CARD_DIRECTIVES } from 'igniteui-angular/card';
 // import { IGX_CARD_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -396,7 +396,9 @@ As seen, the `card-theme` exposes some useful parameters for basic styling of it
 Finally, **include** the custom theme in your application:
 
 ```scss
-@include css-vars($custom-card-theme);
+:host {
+    @include tokens($custom-card-theme);
+}
 ```
 
 In the sample below, you can see how using the card component with customized CSS variables allows you to create a design that visually resembles the card used in the [`Ant`](https://ant.design/components/card?theme=light#card-demo-meta) design system.

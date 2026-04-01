@@ -30,7 +30,7 @@ The Material UI Grid has a built-in column hiding UI, which can be used through 
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-column-hiding-toolbar-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-column-hiding-toolbar-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -39,7 +39,7 @@ The Material UI Grid has a built-in column hiding UI, which can be used through 
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding-toolbar" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding-toolbar/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -48,7 +48,7 @@ The Material UI Grid has a built-in column hiding UI, which can be used through 
 
 <code-view style="height:570px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-hiding" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-hiding/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -402,7 +402,7 @@ export class AppModule {}
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-column-hiding-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-column-hiding-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -411,7 +411,7 @@ export class AppModule {}
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-hiding/" >
 </code-view>
 
 <div class="divider--half"></div>

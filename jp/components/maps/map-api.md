@@ -21,7 +21,7 @@ Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite
 - [`getGeographicPoint`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html#getGeographicPoint)
 - [`getPixelPoint`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html#getPixelPoint)
 
-# Angular 地理的シリーズの種類
+## Angular 地理的シリーズの種類
 
 Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html) には 7 種類のシリーズがあり、データ バインディング用の `ItemsSource` プロパティがあります。
 

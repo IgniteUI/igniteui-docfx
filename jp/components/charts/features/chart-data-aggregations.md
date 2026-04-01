@@ -12,7 +12,7 @@ _language: ja
 
 Ignite UI for Angular [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) コントロールのデータ集計機能を使用すると、チャート内のデータを `XAxis` の一意の値でグループ化し、それらのグループをソートすることができます。次に、`YAxis` の範囲に反映され、シリーズにカーソルを合わせるとツールチップに表示される集計を適用できます。
 
-# Angular データ集計の例
+## Angular データ集計の例
 
 次の例は、`XAxis` の Country メンバーごとにグループ化する[縦棒チャート](../types/column-chart.md)を示しており、各データ項目内の他のプロパティ (Product、MonthName、Year など) に変更して販売データを集計できます。また、グループ化されたプロパティを望ましい順序で取得するために、概要とソートのオプションも利用できます。
 

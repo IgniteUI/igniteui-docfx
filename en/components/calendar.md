@@ -46,7 +46,7 @@ The next step is to import the `IgxCalendarModule` in your **app.module.ts** fil
 ...
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxCalendarModule } from 'igniteui-angular';
+import { IgxCalendarModule } from 'igniteui-angular/calendar';
 // import { IgxCalendarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -57,14 +57,14 @@ import { IgxCalendarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxCalendarComponent` as a standalone dependency, or use the [`IGX_CALENDAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/calendar/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxCalendarComponent` as a standalone dependency, or use the [`IGX_CALENDAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/calendar/src/calendar/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IGX_CALENDAR_DIRECTIVES } from 'igniteui-angular';
+import { IGX_CALENDAR_DIRECTIVES } from 'igniteui-angular/calendar';
 // import { IGX_CALENDAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -799,7 +799,9 @@ $custom-calendar-theme: calendar-theme(
 The last step is to pass the custom calendar theme:
 
 ```scss
- @include css-vars($custom-calendar-theme);
+:host {
+    @include tokens($custom-calendar-theme);
+}
 ```
 
 <code-view style="height:500px"

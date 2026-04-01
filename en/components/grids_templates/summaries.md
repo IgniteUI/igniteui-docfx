@@ -226,7 +226,8 @@ If these functions do not fulfill your requirements you can provide a custom sum
 @@if (igxName !== 'IgxHierarchicalGrid') {
 
 ```typescript
-import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from 'igniteui-angular';
+import { IgxSummaryResult } from 'igniteui-angular/core';
+import { IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from 'igniteui-angular/grids/core';
 // import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from '@infragistics/igniteui-angular'; for licensed package
 
 class MySummary extends IgxNumberSummaryOperand {
@@ -250,7 +251,9 @@ class MySummary extends IgxNumberSummaryOperand {
 @@if (igxName === 'IgxHierarchicalGrid') {
 
 ```typescript
-import { IgxRowIslandComponent, IgxHierarchicalGridComponent, IgxNumberSummaryOperand, IgxSummaryResult } from 'igniteui-angular';
+import { IgxRowIslandComponent, IgxHierarchicalGridComponent } from 'igniteui-angular/grids/hierarchical-grid';
+import { IgxSummaryResult } from 'igniteui-angular/core';
+import { IgxNumberSummaryOperand } from 'igniteui-angular/grids/core';
 // import { IgxRowIslandComponent, IgxHierarchicalGridComponent, IgxNumberSummaryOperand, IgxSummaryResult } from '@infragistics/igniteui-angular'; for licensed package
 
 class MySummary extends IgxNumberSummaryOperand {
@@ -789,7 +792,9 @@ $custom-theme: grid-summary-theme(
 The last step is to **include** the component custom theme:
 
 ```scss
-@include css-vars($custom-theme);
+:host {
+  @include tokens($custom-theme);
+}
 ```
 
 >[!NOTE]
@@ -798,7 +803,7 @@ The last step is to **include** the component custom theme:
  ```scss
 :host {
   ::ng-deep {
-    @include css-vars($custom-theme);
+    @include tokens($custom-theme);
   }
 }
 ```

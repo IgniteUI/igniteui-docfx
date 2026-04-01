@@ -276,7 +276,7 @@ You can see the result of the code from above at the beginning of this article i
 
 ## Custom Column Hiding UI
 
-Let's say we want to manually define our [`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html), add the [`IgxColumnHidingDirective`]({environment:angularApiUrl}/classes/igxcolumnhidingdirective.html) so that it knows what its purpose would be and put it anywhere on the page. First, however, we need to import the `IgxColumnActionsModule`.
+Let's say we want to manually define our [`IgxColumnActionsComponent`]({environment:angularApiUrl}/classes/igxcolumnactionscomponent.html), add the [`IgxColumnHidingDirective`]({environment:angularApiUrl}/classes/igxcolumnhidingdirective.html) so that it knows what its purpose would be and put it anywhere on the page. First, however, we need to import the `IgxColumnActionsComponent`.
 
 ```typescript
 // app.module.ts
@@ -284,13 +284,13 @@ Let's say we want to manually define our [`IgxColumnActionsComponent`]({environm
 ...
 import {
     ...
-    IgxColumnActionsModule 
-} from 'igniteui-angular';
-// import { ..., IgxColumnActionsModule } from '@infragistics/igniteui-angular'; for licensed package
+    IgxColumnActionsComponent 
+} from 'igniteui-angular/grids/core';
+// import { ..., IgxColumnActionsComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
-    imports: [..., IgxColumnActionsModule],
+    imports: [..., IgxColumnActionsComponent],
 })
 export class AppModule {}
 ```
@@ -395,7 +395,7 @@ We can also allow the user to choose the display order of the columns in the col
 - **Alphabetical** (order the columns alphabetically)
 - **DisplayOrder** (order the columns according to the way they are displayed in the @@igComponent)
 
-Let's create a couple of nicely designed radio buttons for our options! We just have to go ahead and get the [**IgxRadio**](../radio-button.md) module.
+Let's create a couple of nicely designed radio buttons for our options! We just have to go ahead and get the [**IgxRadio**](../radio-button.md) component.
 
 ```typescript
 // app.module.ts
@@ -403,13 +403,13 @@ Let's create a couple of nicely designed radio buttons for our options! We just 
 ...
 import {
     ...
-    IgxRadioModule    
-} from 'igniteui-angular';
-// import { ..., IgxRadioModule } from '@infragistics/igniteui-angular'; for licensed package
+    IgxRadioComponent    
+} from 'igniteui-angular/radio';
+// import { ..., IgxRadioComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
     ...
-    imports: [..., IgxRadioModule],    
+    imports: [..., IgxRadioComponent],    
 })
 export class AppModule {}
 ```
@@ -516,7 +516,7 @@ $custom-column-actions-theme: column-actions-theme(
 As seen, the `column-actions-theme` only controls colors for the column actions container, but does not affect the buttons, checkboxes and the input-group inside of it. Let's say we want to style the buttons as well, so we will create a new button theme:
 
 ```scss
-$custom-button: button-theme(
+$custom-button: flat-button-theme(
   $foreground: #292826, 
   $disabled-foreground: rgba(255, 255, 255, .54)
 );
@@ -530,25 +530,27 @@ In this example we only changed the text-color of the flat buttons and the butto
 The last step is to **include** the component mixins, each with its respective theme:
 
 ```scss
-@include css-vars($custom-column-actions-theme);
-
-.igx-column-actions {
-  @include css-vars($custom-button);
+:host {
+  @include tokens($custom-column-actions-theme);
+  
+  .igx-column-actions {
+    @include tokens($custom-button);
+  }
 }
 ```
 
 >[!NOTE]
->We include the created **button-theme** within `.igx-column-actions`, so that only the column hiding buttons would be styled. Otherwise other buttons in the grid would be affected too.
+>We include the created **flat-button-theme** within `.igx-column-actions`, so that only the column hiding buttons would be styled. Otherwise other buttons in the grid would be affected too.
 >[!NOTE]
 >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep` for the components inside the column action component (buttons, checkboxes ...etc):
 
 ```scss
-@include css-vars($custom-column-actions-theme);
-
 :host {
+  @include tokens($custom-column-actions-theme);
+
   ::ng-deep {
     .igx-column-actions {
-      @include css-vars($custom-button);
+      @include tokens($custom-button);
     }
   }
 }

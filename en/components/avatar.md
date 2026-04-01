@@ -35,7 +35,7 @@ The next step is to import the `IgxAvatarModule` in your **app.module.ts** file.
 // app.module.ts
 
 ...
-import { IgxAvatarModule } from 'igniteui-angular';
+import { IgxAvatarModule } from 'igniteui-angular/avatar';
 // import { IgxAvatarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -52,7 +52,7 @@ Alternatively, as of `16.0.0` you can import the `IgxAvatarComponent` as a stand
 // home.component.ts
 
 ...
-import { IgxAvatarComponent } from 'igniteui-angular';
+import { IgxAvatarComponent } from 'igniteui-angular/avatar';
 // import { IgxAvatarComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -208,7 +208,7 @@ The last step is to pass the custom avatar theme:
 
 ```scss
 .initials {
-  @include css-vars($custom-avatar-theme);
+  @include tokens($custom-avatar-theme);
 }
 ```
 
@@ -270,7 +270,7 @@ igx-avatar {
 }
 ```
 
-Or you can use the universal `--igx-avatar-size` variable to target all instances:
+Or you can use the universal `--ig-avatar-size` variable to target all instances:
 
 ```html
 <div class="my-app">
@@ -280,7 +280,7 @@ Or you can use the universal `--igx-avatar-size` variable to target all instance
 
 ```scss
 .my-app {
-  --igx-avatar-size: 200px;
+  --ig-avatar-size: 200px;
 }
 ```
 

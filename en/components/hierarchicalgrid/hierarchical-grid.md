@@ -7,7 +7,7 @@ _license: commercial
 
 # Angular Hierarchical Data Grid Component Overview
 
-The Ignite UI for Angular Hierarchical Data Grid is used to display and manipulate hierarchical tabular data. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating, column moving, column pinning, export to Excel and CSV, and more. The Hierarchical Grid builds upon the Flat Grid Component and extends its functionality by allowing the users to expand or collapse the rows of the parent grid, revealing corresponding child grids, when more detailed information is needed.
+The Ignite UI for Angular Hierarchical Data Grid is used to display and manipulate hierarchical tabular data. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, templating, column moving, column pinning, export to Excel, CSV and PDF and more. The Hierarchical Grid builds upon the Flat Grid Component and extends its functionality by allowing the users to expand or collapse the rows of the parent grid, revealing corresponding child grids, when more detailed information is needed.
 
 ## Angular Hierarchical Data Grid Example
 
@@ -15,7 +15,7 @@ In this angular grid example you can see how users can visualize hierarchical se
 
 <code-view style="height:520px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing" alt="Angular Hierarchical Data Grid Example">
+           iframe-src="{environment:lobDemosBaseUrl}/hierarchical-grid/hierarchical-grid-resizing/" alt="Angular Hierarchical Data Grid Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -38,7 +38,7 @@ The next step is to import the `IgxHierarchicalGridModule` in your **app.module.
 ```typescript
 // app.module.ts
 
-import { IgxHierarchicalGridModule } from 'igniteui-angular';
+import { IgxHierarchicalGridModule } from 'igniteui-angular/grids/hierarchical-grid';
 // import { IgxHierarchicalGridModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -51,12 +51,12 @@ import { IgxHierarchicalGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxHierarchicalGridComponent` as a standalone dependency, or use the [`IGX_HIERARCHICAL_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/hierarchical-grid/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxHierarchicalGridComponent` as a standalone dependency, or use the [`IGX_HIERARCHICAL_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/grids/hierarchical-grid/src/hierarchical-grid.module.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
-import { IGX_HIERARCHICAL_GRID_DIRECTIVES } from 'igniteui-angular';
+import { IGX_HIERARCHICAL_GRID_DIRECTIVES } from 'igniteui-angular/grids/hierarchical-grid';
 // import { IGX_HIERARCHICAL_GRID_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -352,7 +352,9 @@ $custom-theme: grid-theme(
 The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file:
 
 ```scss
-@include css-vars($custom-theme);
+:host {
+  @include tokens($custom-theme);
+}
 ```
 
 In order for the custom theme do affect only specific component, you can move all of the styles you just defined from the global styles file to the custom component's style file (including the import of the `index` file).
@@ -431,6 +433,7 @@ platformBrowserDynamic()
 - [Column Pinning](column-pinning.md)
 - [Column Resizing](column-resizing.md)
 - [Selection](selection.md)
+- [Ignite UI for Angular Skills](../ai/skills.md) — Agent Skills for grids, data operations, and theming
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

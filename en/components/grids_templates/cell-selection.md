@@ -332,7 +332,9 @@ $custom-grid-theme: grid-theme(
 Afterwards, all we need to do is include the mixin in our component's style (could also be in the app styles), so that our @@igSelector uses the newly created theme instead of the default one:
 
 ```scss
-@include css-vars($custom-grid-theme);
+:host {
+  @include tokens($custom-grid-theme);
+}
 ```
 
 With the custom theme applied, the selected grid cells are highlighted with our selected colors:

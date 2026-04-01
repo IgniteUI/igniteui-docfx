@@ -6,15 +6,17 @@ _language: ja
 ---
 
 # テーマ
+
 Ignite UI for Angular を使用すると、CSS 変数を使用してすべてのコンポーネント テーマのスタイルを変更できます。本当に深く掘り下げたい場合は、強力な Sass テーマ エンジンを提供します。これにより、特定のデザイン言語に合わせた、最新のすべてのブラウザーで機能するグローバル コンポーネント テーマを作成できます。
 
->[!NOTE] 
+>[!NOTE]
 > このドキュメントでは、バージョン 12 以降の Ignite UI for Angular のテーマ システムについて説明します。バージョン 12 以降、**CSS 変数は、グローバルおよびコンポーネント テーマを変更するための推奨される方法です**。
 > バージョン 12 より前のバージョンと同様に、Sass テーマ ライブラリを引き続き使用できます。
 
 ## 基本的な使用方法
 
 Ignite UI for Angular には、パッケージの一部として次のテーマが含まれています:
+
 - Material
 - Bootstrap
 - Fluent
@@ -79,7 +81,7 @@ Sass が適切でない場合は、[カスタム CSS プロパティ](https://de
 
 >[!WARNING]
 > 一部のコンポーネントは、パレットのカラーを使用しません。そのような場合、カラーを変更するには、コンポーネントの CSS 変数を直接ターゲットにする必要があります。
-> どのパレットのカラーがどのコンポーネントで使用されているかを確認するには、コンポーネントの[ドキュメント]({environment:sassApiUrl}/themes#function-avatar-theme)を参照してください。
+> どのパレットのカラーがどのコンポーネントで使用されているかを確認するには、コンポーネントの[ドキュメント]({environment:sassApiUrl}/themes)を参照してください。
 
 同様に、`エレベーション` (シャドウ) の変更も同様に簡単です。25 のエレベーション レベル (0〜24) が含まれています。
 これらの変数がどのように見えるかを簡略化したバージョンを次に示します。
@@ -98,7 +100,7 @@ Sass が適切でない場合は、[カスタム CSS プロパティ](https://de
 }
 ```
 
-これらは基本的に積層された CSS [`box-shadow`](https://developer.mozilla.org/ja/docs/Web/CSS/box-shadow) 宣言です。それらを他の有効な `box-shadow` 値に置き換えることができます。エレベーション レベルの数値が高いほど、シャドウが大きくなります。この場合も、コンポーネントごとに異なるエレベーション レベルが使用されます。コンポーネントが使用するエレベーション レベルを確認するには、[コンポーネントのドキュメント]({environment:sassApiUrl}/themes#function-avatar-theme)を参照してください。ドキュメントの[エレベーション](./elevations.md)でエレベーションを詳しく見ていきます。
+これらは基本的に積層された CSS [`box-shadow`](https://developer.mozilla.org/ja/docs/Web/CSS/box-shadow) 宣言です。それらを他の有効な `box-shadow` 値に置き換えることができます。エレベーション レベルの数値が高いほど、シャドウが大きくなります。この場合も、コンポーネントごとに異なるエレベーション レベルが使用されます。コンポーネントが使用するエレベーション レベルを確認するには、[コンポーネントのドキュメント]({environment:sassApiUrl}/themes)を参照してください。ドキュメントの[エレベーション](./elevations.md)でエレベーションを詳しく見ていきます。
 
 ## 構成
 
@@ -139,7 +141,7 @@ Sass が適切でない場合は、[カスタム CSS プロパティ](https://de
 ```css
 /* styles.css */
 :root {
-  --igx-avatar-background: black;
+  --ig-avatar-background: black;
 }
 
 igx-avatar {
@@ -150,13 +152,13 @@ igx-avatar {
 上記のスニペットは、すべてのアバターの背景を orange カラーに設定します。
 
 アバター コンポーネントは、最初に `--background` 変数を探します。明示的に設定されている場合は、その値を取ります。つまり、`local` 変数の優先度は高く、タグ セレクターまたは `igx-avatar` をターゲットとするその他のセレクターを使用して、`igx-avatar` に直接適用された場合に**のみ**機能します。
-グローバル `--igx-avatar-background` はフォールバック変数と考えることができます。ローカルの `--background` が明示的にオーバーライドされていない場合にのみ使用されます。
+グローバル `--ig-avatar-background` はフォールバック変数と考えることができます。ローカルの `--background` が明示的にオーバーライドされていない場合にのみ使用されます。
 
 好奇心旺盛な方のために、これがアバターの内部でどのように実装されているかを次に示します:
 
 ```css
 igx-avatar {
-  --background: var(--igx-avatar-background, var(--ig-gray-400));
+  --background: var(--ig-avatar-background, var(--ig-gray-400));
   background: var(--background);
 }
 ```
@@ -181,7 +183,7 @@ igx-avatar {
 ```css
 /* styles.css */
 :root {
-  --igx-avatar-background: lavender;
+  --ig-avatar-background: lavender;
 }
 ```
 
@@ -209,5 +211,5 @@ igx-avatar {
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

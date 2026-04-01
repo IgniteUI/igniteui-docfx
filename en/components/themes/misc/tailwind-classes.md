@@ -113,7 +113,7 @@ In the sample below, you’ll see a 404 page built entirely with Tailwind utilit
 
 <code-view style="height: 610px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/theming/tailwind-sample" alt="Tailwind Sample">
+           iframe-src="{environment:demosBaseUrl}/theming/tailwind-sample/" alt="Tailwind Sample">
 </code-view>
 
 >[!NOTE]

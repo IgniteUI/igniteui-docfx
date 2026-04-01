@@ -41,7 +41,7 @@ The next step is to import the `IgxBottomNavModule` in your **app.module.ts** fi
 // app.module.ts
 
 ...
-import { IgxBottomNavModule } from 'igniteui-angular';
+import { IgxBottomNavModule } from 'igniteui-angular/bottom-nav';
 // import { IgxBottomNavModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -52,12 +52,13 @@ import { IgxBottomNavModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxBottomNavComponent` as a standalone dependency, or use the [`IGX_BOTTOM_NAV_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/tabs/bottom-nav/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxBottomNavComponent` as a standalone dependency, or use the [`IGX_BOTTOM_NAV_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/bottom-nav/src/bottom-nav/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
-import { IGX_BOTTOM_NAV_DIRECTIVES, IgxIconComponent } from 'igniteui-angular';
+import { IGX_BOTTOM_NAV_DIRECTIVES } from 'igniteui-angular/bottom-nav';
+import { IgxIconComponent } from 'igniteui-angular/icon';
 // import { IGX_BOTTOM_NAV_DIRECTIVES, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -469,7 +470,9 @@ If we take a look at the [`bottom-nav-theme`]({environment:sassApiUrl}/themes#fu
 The last step is to **include** the component theme in our application.
 
 ```scss
-@include css-vars($dark-bottom-nav);
+:host {
+    @include tokens($dark-bottom-nav);
+}
 ```
 
 ### Demo

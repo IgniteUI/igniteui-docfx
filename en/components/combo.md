@@ -46,7 +46,7 @@ For a complete introduction to the Ignite UI for Angular, read the [_getting sta
 The next step is to import the `IgxComboModule` in your **app.module.ts** file.
 
 ```typescript
-import { IgxComboModule } from 'igniteui-angular';
+import { IgxComboModule } from 'igniteui-angular/combo';
 // import { IgxComboModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -59,12 +59,12 @@ import { IgxComboModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxComboComponent` as a standalone dependency, or use the [`IGX_COMBO_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/combo/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxComboComponent` as a standalone dependency, or use the [`IGX_COMBO_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/combo/src/combo/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
-import { IGX_COMBO_DIRECTIVES } from 'igniteui-angular';
+import { IGX_COMBO_DIRECTIVES } from 'igniteui-angular/combo';
 // import { IGX_COMBO_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -211,13 +211,44 @@ In the following example, when a city is added or removed from the selection, a 
 ```typescript
 export class MyExampleCombo {
     ...
-    handleCityChange(event: IComboSelectionChangeEventArgs): void {
+    handleCityChange(event: IComboSelectionChangingEventArgs): void {
         for (const item of event.added) {
             this.addToVisualization(item);
         }
         for (const item of event.removed) {
             this.removeFromVisualization(item);
         }
+    }
+}
+```
+
+Additionally, the combobox fires a [selectionChanged]({environment:angularApiUrl}/classes/IgxComboComponent.html#selectionChanged) event after the selection is committed and the component state has been updated. The emitted event arguments, [IComboSelectionChangedEventArgs]({environment:angularApiUrl}/interfaces/icomboselectionchangedeventargs.html), contain information about the previous selection, the current selection and the items that were added or removed. Unlike `selectionChanging`, this event is not cancellable and is guaranteed to reflect the final committed selection state. When the combobox is used with `ngModel` or Angular forms, `selectionChanged` is emitted after the value change callback is invoked.
+
+Binding to the event can be done through the proper `@Output` property on the `igx-combo` tag:
+
+```html
+<igx-combo [data]="cities" displayKey="name" valueKey="id"
+           (selectionChanged)="handleCitySelectionChanged($event)">
+</igx-combo>
+```
+
+In the following example, when the selection changes, the handler updates a short summary and tracks how many items were added and removed:
+
+```typescript
+export class MyExampleCombo {
+    ...
+    handleCitySelectionChanged(event: IComboSelectionChangedEventArgs): void {
+        this.updateSelectionSummary(event.displayText, event.newSelection.length);
+
+        for (const item of event.added) {
+            this.highlightAddedCity(item);
+        }
+
+        for (const item of event.removed) {
+            this.dimRemovedCity(item);
+        }
+
+        this.logSelectionTransition(event.oldSelection, event.newSelection);
     }
 }
 ```
@@ -231,7 +262,7 @@ By default, the combo control provides multiple selection. The snippet below dem
 ```
 
 ```typescript
-public singleSelection(event: IComboSelectionChangeEventArgs) {
+public singleSelection(event: IComboSelectionChangingEventArgs) {
     if (event.added.length) {
         event.newValue = event.added;
     }
@@ -247,6 +278,16 @@ public singleSelection(event: IComboSelectionChangeEventArgs) {
 When combobox is closed and focused:
 
 - `ArrowDown` or `Alt` + `ArrowDown` will open the combobox's drop down and will move focus to the search input.
+
+- `Esc` will clear the selected value(s) while keeping focus on the combobox.
+
+- `Tab` will move the focus to the next focusable element outside the combobox.
+
+When combobox is opened:
+
+- `Esc` will close the list and keep the focus on the combobox.
+
+- `Tab` will close the list and move focus to the next focusable element.
 
 When combobox is opened and search input is focused:
 
@@ -270,8 +311,6 @@ When combobox is opened and list item is focused:
 - `Space` will select/deselect the active list item.
 
 - `Enter` will confirm the already selected items and will close the list.
-
-- `Esc` will close the list.
 
 When combobox is opened, allow custom values are enabled and add item button is focused:
 
@@ -379,10 +418,10 @@ $custom-checkbox-theme: checkbox-theme(
 The last step is to include the component's theme.
 
 ```scss
-:host ::ng-deep {
-  @include css-vars($custom-combo-theme);
-  @include css-vars($custom-drop-down-theme);
-  @include css-vars($custom-checkbox-theme);
+:host {
+  @include tokens($custom-combo-theme);
+  @include tokens($custom-drop-down-theme);
+  @include tokens($custom-checkbox-theme);
 }
 ```
 
@@ -450,7 +489,7 @@ At the end your combo should look like this:
 > [!NOTE]
 > The combobox uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for the combobox. For more details see [`igxForOf Known Issues`](for-of.md#known-limitations) section.
 
-## API Summary
+## API References
 
 <div class="divider--half"></div>
 

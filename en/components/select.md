@@ -33,7 +33,7 @@ The next step is to import the `IgxSelectModule` in the **app.module.ts** file.
 ```typescript
 // app.module.ts
 ...
-import { IgxSelectModule } from 'igniteui-angular';
+import { IgxSelectModule } from 'igniteui-angular/select';
 // import { IgxSelectModule } from '@infragistics/igniteui-angular'; for licensed package
 @NgModule({
     ...
@@ -43,13 +43,13 @@ import { IgxSelectModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxSelectComponent` as a standalone dependency, or use the [`IGX_SELECT_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/select/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxSelectComponent` as a standalone dependency, or use the [`IGX_SELECT_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/select/src/select/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
 import { FormsModule } from '@angular/forms';
-import { IGX_SELECT_DIRECTIVES } from 'igniteui-angular';
+import { IGX_SELECT_DIRECTIVES } from 'igniteui-angular/select';
 // import { IGX_SELECT_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -425,7 +425,9 @@ $custom-select-theme: select-theme(
 The last step is to pass the custom radio theme in our application:
 
 ```scss
-@include css-vars($custom-select-theme);
+:host {
+    @include tokens($custom-select-theme);
+}
 ```
 
 <code-view style="height: 220px;"

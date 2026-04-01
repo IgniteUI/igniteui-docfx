@@ -45,7 +45,7 @@ The next step is to import the `IgxStepperModule` in your **app.module.ts** file
 // app.module.ts
 
 ...
-import { IgxStepperModule } from 'igniteui-angular';
+import { IgxStepperModule } from 'igniteui-angular/stepper';
 // import { IgxStepperModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -56,14 +56,14 @@ import { IgxStepperModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxStepperComponent` as a standalone dependency, or use the [`IGX_STEPPER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/stepper/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxStepperComponent` as a standalone dependency, or use the [`IGX_STEPPER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/stepper/src/stepper/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
 import { HammerModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { IGX_STEPPER_DIRECTIVES } from 'igniteui-angular';
+import { IGX_STEPPER_DIRECTIVES } from 'igniteui-angular/stepper';
 // import { IGX_STEPPER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -444,7 +444,9 @@ $stepper-theme: stepper-theme(
 The last step is to include the component's theme.
 
 ```scss
-@include css-vars($custom-stepper-theme);
+:host {
+    @include tokens($custom-stepper-theme);
+}
 ```
 
 ### Demo

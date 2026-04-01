@@ -34,7 +34,7 @@ The next step is to import the `IgxDialogModule` in your **app.module.ts** file.
 // app.module.ts
 
 ...
-import { IgxDialogModule } from 'igniteui-angular';
+import { IgxDialogModule } from 'igniteui-angular/dialog';
 // import { IgxDialogModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -45,12 +45,14 @@ import { IgxDialogModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxDialogComponent` as a standalone dependency, or use the [`IGX_DIALOG_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/dialog/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxDialogComponent` as a standalone dependency, or use the [`IGX_DIALOG_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/dialog/src/dialog/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
-import { IGX_DIALOG_DIRECTIVES, IgxButtonDirective, IgxRippleDirective } from 'igniteui-angular';
+import { IGX_DIALOG_DIRECTIVES } from 'igniteui-angular/dialog';
+import { IgxButtonDirective } from 'igniteui-angular/directives';
+import { IgxRippleDirective } from 'igniteui-angular/directives';
 // import { IGX_DIALOG_DIRECTIVES, IgxButtonDirective, IgxRippleDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -182,7 +184,7 @@ There are two ways to change the position at which the `igx-dialog` will be show
 - Using [`open`]({environment:angularApiUrl}/classes/igxdialogcomponent.html#open) method and pass a valid [`overlaySettings`]({environment:angularApiUrl}/interfaces/overlaysettings.html). Example:
 
 ```typescript
-import { PositionSettings, OverlaySettings, GlobalPositionStrategy, NoOpScrollStrategy, HorizontalAlignment, VerticalAlignment } from 'igniteui-angular';
+import { PositionSettings, OverlaySettings, GlobalPositionStrategy, NoOpScrollStrategy, HorizontalAlignment, VerticalAlignment } from 'igniteui-angular/core';
 // import { PositionSettings, OverlaySettings, GlobalPositionStrategy, NoOpScrollStrategy, HorizontalAlignment, VerticalAlignment } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({...})
@@ -215,7 +217,8 @@ export class HomeComponent {
 
 ```typescript
 import { useAnimation } from '@angular/animations';
-import { PositionSettings, HorizontalAlignment, VerticalAlignment } from 'igniteui-angular';
+import { slideInTop, slideOutBottom } from 'igniteui-angular/animations';
+import { PositionSettings, HorizontalAlignment, VerticalAlignment } from 'igniteui-angular/core';
 // import { PositionSettings, HorizontalAlignment, VerticalAlignment } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({...})
@@ -336,7 +339,9 @@ Since the dialog window uses the [`IgxOverlayService`](overlay.md), in order for
 The last step is to **include** the component theme in our application.
 
 ```scss
-@include css-vars($my-dialog-theme);
+:host {
+    @include tokens($my-dialog-theme);
+}
 ```
 
 >[!NOTE]
@@ -345,7 +350,7 @@ The last step is to **include** the component theme in our application.
 ```scss
 :host {
   ::ng-deep {
-    @include css-vars($my-dialog-theme);
+    @include tokens($my-dialog-theme);
   }
 }
 ```
@@ -359,7 +364,7 @@ The last step is to **include** the component theme in our application.
 
 <div class="divider--half"></div>
 
-## API Summary
+## API References
 
 <div class="divider--half"></div>
 

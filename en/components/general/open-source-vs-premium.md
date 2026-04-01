@@ -20,7 +20,7 @@ They are ideal for lightweight applications that need essential functionality wi
 
 Our Ignite UI Premium components come with advanced enterprise features and are used for complex applications requiring high-performance and richer functionality. Premium components include:
 
-### Grids with advanced components
+### Grids and advanced components
 
 - [Data Grid](../grid/grid.md), [Hierarchical Grid](../hierarchicalgrid/hierarchical-grid.md), [Tree Grid](../treegrid/tree-grid.md), [Pivot Grid](../pivotGrid/pivot-grid.md)
 - [Dock Manager](../dock-manager.md)
@@ -78,6 +78,7 @@ Start with Grid Lite for essential needs and seamlessly upgrade to the full-feat
 | Chart Step Line                   | ❌          | ✅      |
 | Chart Treemap                     | ❌          | ✅      |
 | Chart Waterfall                   | ❌          | ✅      |
+| Chat                              | ✅          | ✅      |
 | Checkbox                          | ✅          | ✅      |
 | Chip                              | ✅          | ✅      |
 | Chip Area                         | ✅          | ✅      |

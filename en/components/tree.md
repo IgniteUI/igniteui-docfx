@@ -41,7 +41,7 @@ The next step is to import the `IgxTreeModule` in your app.module file.
 // app.module.ts
 
 ...
-import { IgxTreeModule } from 'igniteui-angular';
+import { IgxTreeModule } from 'igniteui-angular/tree';
 // import { IgxTreeModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -52,12 +52,12 @@ import { IgxTreeModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxTreeComponent` as a standalone dependency, or use the [`IGX_TREE_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/tree/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxTreeComponent` as a standalone dependency, or use the [`IGX_TREE_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/tree/src/tree/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
-import { IGX_TREE_DIRECTIVES } from 'igniteui-angular';
+import { IGX_TREE_DIRECTIVES } from 'igniteui-angular/tree';
 // import { IGX_TREE_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -437,7 +437,9 @@ $custom-tree-theme: tree-theme(
 The last step is to include the component's theme.
 
 ```scss
-@include css-vars($custom-tree-theme);
+:host {
+  @include tokens($custom-tree-theme);
+}
 ```
 
 ### Demo

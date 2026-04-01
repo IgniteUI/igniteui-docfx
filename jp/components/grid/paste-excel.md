@@ -23,9 +23,8 @@ Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcom
 
 貼り付け後の新しいデータはイタリックになります。
 
-
-<code-view style="height: 570px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 570px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-paste/" alt="Angular Excel からデータを貼り付けるデ例">
 </code-view>
 
@@ -134,6 +133,7 @@ Ignite UI for Angular [`IgxGrid`]({environment:angularApiUrl}/classes/igxgridcom
         }
     }
 ```
+
 <div class="divider"></div>
 
 ## 貼り付けハンドラー ディレクディブ
@@ -220,15 +220,17 @@ export class PasteHandler {
 ```
 
 ## API リファレンス
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+
+- [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [Excel エクスポーター](export-excel.md) - Excel エクスポーター サービスを使用して、IgxGrid から Excel にデータをエクスポートします。選択したデータのみを IgxGrid からエクスポートするオプションもあります。エクスポート機能は、IgxExcelExporterService クラスでカプセル化され、MS Excel テーブル形式でデータをエクスポートします。この形式はフィルタリングやソートなどの機能が使用でき、IgxExcelExporterService の export メソッドを呼び出して最初の引数として IgxGrid コンポーネントを渡します。
+- [Excel エクスポーター](export-excel.md) - Excel エクスポーター サービスを使用して、IgxGrid から Excel にデータをエクスポートします。選択したデータのみを IgxGrid からエクスポートするオプションもあります。エクスポート機能は、IgxExcelExporterService クラスでカプセル化され、MS Excel テーブル形式でデータをエクスポートします。この形式はフィルタリングやソートなどの機能が使用でき、IgxExcelExporterService の export メソッドを呼び出して最初の引数として IgxGrid コンポーネントを渡します。
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

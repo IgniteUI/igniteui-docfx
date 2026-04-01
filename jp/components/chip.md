@@ -12,8 +12,8 @@ _language: ja
 
 ## Angular Chip の例
 
-<code-view style="height: 100px; padding-top: 10px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px; padding-top: 10px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/chip-simple/" alt="Angular Chip の例">
 </code-view>
 
@@ -34,7 +34,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 ```typescript
 // app.module.ts
 
-import { IgxChipsModule } from 'igniteui-angular';
+import { IgxChipsModule } from 'igniteui-angular/chips';
 // import { IgxChipsModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -45,12 +45,12 @@ import { IgxChipsModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxChipComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_CHIPS_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/chips/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxChipComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_CHIPS_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/chips/src/chips/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
 
-import { IGX_CHIPS_DIRECTIVES } from 'igniteui-angular';
+import { IGX_CHIPS_DIRECTIVES } from 'igniteui-angular/chips';
 import { NgFor } from '@angular/common';
 // import { IGX_CHIPS_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
@@ -152,7 +152,7 @@ public chipRemoved(event: IBaseChipEventArgs) {
 次に、`chipList` と [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) イベントを処理する関数を追加します。
 
 ```ts
-import { IBaseChipEventArgs } from 'igniteui-angular';
+import { IBaseChipEventArgs } from 'igniteui-angular/chips';
 // import { IBaseChipEventArgs } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public chipList = [
@@ -191,8 +191,8 @@ public chipRemoved(event: IBaseChipEventArgs) {
 すべて適切に設定できると、ブラウザーで以下が表示されます。
 
 
-<code-view style="height: 100px; padding-top: 10px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px; padding-top: 10px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/chip-simple/" >
 </code-view>
 
@@ -281,7 +281,7 @@ public chipRemoved(event: IBaseChipEventArgs) {
 次に、`chipList` と [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) イベントを処理する関数を追加します。
 
 ```ts
-import { IBaseChipEventArgs } from 'igniteui-angular';
+import { IBaseChipEventArgs } from 'igniteui-angular/chips';
 // import { IBaseChipEventArgs } from '@infragistics/igniteui-angular'; for licensed package
 ...
 public chipList = [
@@ -316,11 +316,12 @@ public chipRemoved(event: IBaseChipEventArgs) {
     this.changeDetectionRef.detectChanges();
 }
 ```
+
 すべて適切に設定できると、ブラウザーで以下が表示されます。
 
 
-<code-view style="height: 100px; padding-top: 10px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px; padding-top: 10px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/chip-simple/" >
 </code-view>
 
@@ -366,7 +367,7 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
 
     <img class="responsive-img"  src="../images/chip/arrow_left_key.gif" />
 
-  - <kbd>RIGHT</kbd> - チップのフォーカスを右へ移動します。 
+  - <kbd>RIGHT</kbd> - チップのフォーカスを右へ移動します。
 
     <img class="responsive-img"  src="../images/chip/arrow_right_key.gif" />
 
@@ -429,7 +430,7 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
 `chipList` とイベントを処理する関数を追加します。
 
 ```ts
-import { IBaseChipEventArgs, IChipsAreaReorderEventArgs } from 'igniteui-angular';
+import { IBaseChipEventArgs, IChipsAreaReorderEventArgs } from 'igniteui-angular/chips';
 // import { IBaseChipEventArgs, IChipsAreaReorderEventArgs } from '@infragistics/igniteui-angular'; for licensed package
 
 ...
@@ -476,8 +477,8 @@ public chipsOrderChanged(event: IChipsAreaReorderEventArgs) {
 
 ### デモ
 
-<code-view style="height: 100px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 100px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/chip-area-sample/" >
 </code-view>
 
@@ -625,14 +626,16 @@ $custom-chip-theme: chip-theme(
 最後に、カスタム テーマをアプリケーションに**含めます**。
 
 ```scss
-@include css-vars($custom-chip-theme);
+:host {
+  @include tokens($custom-chip-theme);
+}
 ```
 
-以下のサンプルでは、カスタマイズした CSS 変数を使用したチップ コンポーネントが、[`Ant`](https://ant.design/components/tag?theme=light#tag-demo-icon) デザイン システムのチップに視覚的に似たデザインを実現している様子を確認できます。 
+以下のサンプルでは、カスタマイズした CSS 変数を使用したチップ コンポーネントが、[`Ant`](https://ant.design/components/tag?theme=light#tag-demo-icon) デザイン システムのチップに視覚的に似たデザインを実現している様子を確認できます。
 
-<code-view style="height:100px" 
+<code-view style="height:100px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-display/chip-styling/" >
 </code-view>
 
@@ -688,7 +691,7 @@ igx-chip {
 }
 ```
 
-または、ユニバーサル変数 `--igx-chip-size` を使用して、すべてのインスタンスをターゲットにすることもできます。
+または、ユニバーサル変数 `--ig-chip-size` を使用して、すべてのインスタンスをターゲットにすることもできます。
 
 ```html
 <div class="my-app">
@@ -698,7 +701,7 @@ igx-chip {
 
 ```scss
 .my-app {
-  --igx-chip-size: 50px;
+  --ig-chip-size: 50px;
 }
 ```
 
@@ -714,13 +717,13 @@ igx-chip {
 
 ## API
 
-* [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
-* [IgxChipComponent スタイル]({environment:sassApiUrl}/themes#function-chip-theme)
-* [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
+- [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
+- [IgxChipComponent スタイル]({environment:sassApiUrl}/themes#function-chip-theme)
+- [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
 
 ## テーマの依存関係
 
-* [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## 参照
 

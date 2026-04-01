@@ -44,7 +44,7 @@ The next step is to import the `IgxTabsModule` in your **app.module.ts** file.
 // app.module.ts
 
 ...
-import { IgxTabsModule } from 'igniteui-angular';
+import { IgxTabsModule } from 'igniteui-angular/tabs';
 // import { IgxTabsModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -55,12 +55,12 @@ import { IgxTabsModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxTabsComponent` as a standalone dependency, or use the [`IGX_TABS_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/tabs/tabs/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxTabsComponent` as a standalone dependency, or use the [`IGX_TABS_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/tabs/src/tabs/tabs/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
-import { IGX_TABS_DIRECTIVES } from 'igniteui-angular';
+import { IGX_TABS_DIRECTIVES } from 'igniteui-angular/tabs';
 // import { IGX_TABS_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -737,7 +737,9 @@ If we take a look at the [`tabs-theme`]({environment:sassApiUrl}/themes#function
 The last step is to **include** the component theme in our application.
 
 ```scss
-@include css-vars($dark-tabs);
+:host {
+  @include tokens($dark-tabs);
+}
 ```
 
 ### Demo

@@ -16,7 +16,8 @@ The Ignite UI for Angular Icon Service provides several methods that allow users
 The icon service can be imported directly from the Ignite UI for Angular package.
 
 ```ts
-import { IgxIconComponent, IgxIconService } from 'igniteui-angular';
+import { IgxIconComponent } from 'igniteui-angular/icon';
+import { IgxIconService } from 'igniteui-angular/core';
 
 
 @Component({

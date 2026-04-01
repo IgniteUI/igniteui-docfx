@@ -6,11 +6,13 @@ _language: ja
 ---
 
 # パレット
+
 <p class="highlight">Ignite UI for Angular テーマ エンジンは、カラーを生成および取得するためのいくつかの関数とミックスインを提供します。</p>
 <div class="divider"></div>
 
 ## 概要
-Ignite UI for Angular のコンテキストでのパレットは [Sass Maps](https://sass-lang.com/documentation/values/maps) として宣言され、マップのキーはパレットのカラー (`primary`、`secondary`、`surface` など) になります。各カラーはマップ自体であり、すべてのカラー バリエーションがキーとしてリストされます。これらのカラー バリエーションに割り当てられる値は、すべてのコンポーネント テーマで使用される実際のカラーです。すべてのパレット マップは、パレット関数によってプログラムで生成されます。関数は `primary`、` secondary`、`surface`、`gray`、`info`、` success`、`warn`、そして `error` のカラーの引数を受け付けます。`primary` のカラーが通常あなたのブランド カラーです。ほとんどの場合、igx-navbar コンポーネントなどの静的要素のスタイルを設定するために使用されます。`secondary` カラーは、ボタン、スイッチ、スライダーなどの操作可能な要素に使用されるカラーです。
+
+Ignite UI for Angular のコンテキストでのパレットは [Sass Maps](https://sass-lang.com/documentation/values/maps) として宣言され、マップのキーはパレットのカラー (`primary`、`secondary`、`surface` など) になります。各カラーはマップ自体であり、すべてのカラー バリエーションがキーとしてリストされます。これらのカラー バリエーションに割り当てられる値は、すべてのコンポーネント テーマで使用される実際のカラーです。すべてのパレット マップは、パレット関数によってプログラムで生成されます。関数は `primary`、`secondary`、`surface`、`gray`、`info`、`success`、`warn`、そして `error` のカラーの引数を受け付けます。`primary` のカラーが通常あなたのブランド カラーです。ほとんどの場合、igx-navbar コンポーネントなどの静的要素のスタイルを設定するために使用されます。`secondary` カラーは、ボタン、スイッチ、スライダーなどの操作可能な要素に使用されるカラーです。
 `surface` カラーは、カード、メニュー、日付/時間ピッカー、バナー シートなどの一部のコンポーネントの背景色として使用されます。必要な引数は、`primary`、`secondary`、および `surface` カラーに関する引数のみです。`surface`、`gray`、`info`、`success`、`warn`、および `error` カラー引数のデフォルト値は定義済みのセットからの値です。
 
 カラー パレットを作成するには、グローバル テーマの基本ファイルとなる _scss_ ファイルを作成します。_`_variables.scss`_ と呼びます。
@@ -148,6 +150,7 @@ $handmade-palette: (
 <div class="divider"></div>
 
 ## 事前定義されたパレット
+
 事前定義されたライト パレットとダーク パレットを提供します。これをスキーマと一緒に使用して、コンポーネントのテーマを作成できます。
 
 - ライト パレット
@@ -262,6 +265,7 @@ CSS クラスを使用して Web 要素 (テキストや背景など) にカラ�
     $prefix: 'bg'
 );
 ```
+
 上記のコードは、パレットの各カラー バリエーションに CSS クラスを生成します。たとえば、`primary` パレットの `500` カラー バリエーションには、`.bg-primary-500` クラスが与えられます。
 
 ```html
@@ -289,15 +293,17 @@ $my-palette: palette(
 ```
 
 ## API リファレンス
-* [パレット]({environment:sassApiUrl}/palettes#function-palette)
-* [パレット カラーの取得]({environment:sassApiUrl}/palettes#function-color) 
-* [コントラスト カラーの取得]({environment:sassApiUrl}/palettes#function-contrast-color)
-* [カラー クラスの生成]({environment:sassApiUrl}/utilities#mixin-color-classes)
-* [スキーマ](./schemas.md)
+
+- [パレット]({environment:sassApiUrl}/palettes#function-palette)
+- [パレット カラーの取得]({environment:sassApiUrl}/palettes#function-color)
+- [コントラスト カラーの取得]({environment:sassApiUrl}/palettes#function-contrast-color)
+- [カラー クラスの生成]({environment:sassApiUrl}/utilities#mixin-color-classes)
+- [スキーマ](./schemas.md)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

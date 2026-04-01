@@ -35,7 +35,7 @@ The next step is to import the `IgxDividerModule` in your **app.module.ts** file
 // app.module.ts
 
 ...
-import { IgxDividerModule } from 'igniteui-angular';
+import { IgxDividerModule } from 'igniteui-angular/directives';
 // import { IgxDividerModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -51,7 +51,7 @@ Alternatively, as of `16.0.0` you can import the `IgxDividerDirective` as a stan
 ```typescript
 // home.component.ts
 
-import { IgxDividerDirective } from 'igniteui-angular';
+import { IgxDividerDirective } from 'igniteui-angular/directives';
 // import { IgxDividerDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

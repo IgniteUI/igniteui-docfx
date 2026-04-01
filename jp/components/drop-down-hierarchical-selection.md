@@ -27,13 +27,14 @@ DOM からチップを削除し、ツリー/グリッドから項目を選択解
 さらに、チップの削除時にドロップダウンが閉じないようにする方法は、イベントの複合パスで `igx-chip` ノードを確認し、`IgxDropDownComponent` の [`closing`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#closing) イベント ハンドラーでイベントをキャンセルすることです。
 
 ### デモ
-<code-view style="height: 560px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+
+<code-view style="height: 560px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-tree-hierarchical-selection/" >
 </code-view>
 
-<code-view style="height:560px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:560px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-tree-grid-hierarchical-selection/">
 </code-view>
 
@@ -42,23 +43,24 @@ DOM からチップを削除し、ツリー/グリッドから項目を選択解
 
 ## API リファレンス
 
-* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
-* [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
-* [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
-* [IgxTreeComponent]({environment:angularApiUrl}/classes/igxtreecomponent.html)
-* [IgxTreeNodeComponent]({environment:angularApiUrl}/classes/igxtreenodecomponent.html)
-* [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
+- [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
+- [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
+- [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
+- [IgxTreeComponent]({environment:angularApiUrl}/classes/igxtreecomponent.html)
+- [IgxTreeNodeComponent]({environment:angularApiUrl}/classes/igxtreenodecomponent.html)
+- [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
 
 ## その他のリソース
-<div class="divider--half"></div>    
 
-* [Drop Down の概要](drop-down.md)
-* [Chip の概要](chip.md)
-* [Tree の概要](tree.md)
-* [Tree Grid の概要](treegrid/tree-grid.md)
+<div class="divider--half"></div>
+
+- [Drop Down の概要](drop-down.md)
+- [Chip の概要](chip.md)
+- [Tree の概要](tree.md)
+- [Tree Grid の概要](treegrid/tree-grid.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)    
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)     
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

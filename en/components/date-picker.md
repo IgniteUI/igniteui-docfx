@@ -41,7 +41,7 @@ The next step is to import the `IgxDatePickerModule` in your **app.module.ts** f
 ```typescript
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IgxDatePickerModule } from 'igniteui-angular';
+import { IgxDatePickerModule } from 'igniteui-angular/date-picker';
 // import { IgxDatePickerModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -52,14 +52,14 @@ import { IgxDatePickerModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxDatePickerComponent` as a standalone dependency, or use the [`IGX_DATE_PICKER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/date-picker/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxDatePickerComponent` as a standalone dependency, or use the [`IGX_DATE_PICKER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/date-picker/src/date-picker/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
 import { HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { IGX_DATE_PICKER_DIRECTIVES } from 'igniteui-angular';
+import { IGX_DATE_PICKER_DIRECTIVES } from 'igniteui-angular/date-picker';
 // import { IGX_DATE_PICKER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -336,7 +336,9 @@ $custom-datepicker-theme: calendar-theme(
 The last step is to pass the custom Date Picker theme:
 
 ```scss
-@include css-vars($custom-datepicker-theme);
+:host {
+    @include tokens($custom-datepicker-theme);
+}
 ```
 
 >[!WARNING]
@@ -345,7 +347,7 @@ The last step is to pass the custom Date Picker theme:
 ```scss
 :host {
   ::ng-deep {
-    @include css-vars($custom-datepicker-theme);
+    @include tokens($custom-datepicker-theme);
   }
 }
 ```

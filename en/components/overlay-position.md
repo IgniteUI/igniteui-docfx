@@ -88,7 +88,7 @@ import {
     ContainerPositionStrategy,
     ElasticPositionStrategy,
     GlobalPositionStrategy
-} from 'igniteui-angular';
+} from 'igniteui-angular/core';
 // import { AutoPositionStrategy, 
 //    ConnectedPositioningStrategy, 
 //    ContainerPositionStrategy,

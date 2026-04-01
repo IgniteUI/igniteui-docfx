@@ -42,7 +42,7 @@ export class AppModule {}
 Use [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) to add a ripple effect to the specified element. It will add a ripple effect with the default color.
 
 ```html
-<button igxButton="raised" igxRipple>Click Me</button>
+<button igxButton="contained" igxRipple>Click Me</button>
 ```
 <div class="sample-container loading" style="height: 68px">
     <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-5" class="lazyload">
@@ -53,7 +53,7 @@ Use [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html) t
 You can set the ripple color using [`igxRipple`]({environment:angularApiUrl}/classes/igxrippledirective.html). In this sample, we set white color to the ripple.
 
 ```html
-<button igxButton="raised" igxRipple="white">White</button>
+<button igxButton="contained" igxRipple="white">White</button>
 ```
 <div class="sample-container loading" style="height: 68px">
     <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-6" class="lazyload">
@@ -63,7 +63,7 @@ You can set the ripple color using [`igxRipple`]({environment:angularApiUrl}/cla
 The ripple effect starts from the position of the click event. You can change this behavior using [`igxRippleCentered`]({environment:angularApiUrl}/classes/igxrippledirective.html#centered) and setting the center of the element as origin.
 
 ```html
-<button igxButton="raised" igxRipple="white" igxRippleCentered="true">Centered</button>
+<button igxButton="contained" igxRipple="white" igxRippleCentered="true">Centered</button>
 ```
 <div class="sample-container loading" style="height: 68px">
     <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/interactions/ripple-sample-3" class="lazyload">
@@ -204,13 +204,13 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 </code-view>
 
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
 * [IgxRipple Styles]({environment:sassApiUrl}/themes#function-ripple-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.

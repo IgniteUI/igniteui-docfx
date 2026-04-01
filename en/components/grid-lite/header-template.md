@@ -9,38 +9,55 @@ namespace: Infragistics.Controls
 
 # Customizing the Column Header
 
-Similar to the cell templates, column headers can also be customized to better fit the desired use case. You can pass a text label through the **`headerText`** property, or provide a full-blown custom template.
+Similar to the cell templates, column headers can also be customized to better fit the desired use case. You can pass a text label through the `header` property, or provide a full-blown custom template.
 
 ## Customization via Header Text
 
-By default the column uses the **`key`** configuration property for label text. To customize the label, set the **`headerText`** property to a more human readable format.
+By default the column uses the `field` property for label text. To customize the label, set the `header` property to a more human readable format.
 
-```typescript
-{
-  key: 'price',
-  headerText: 'Price per item'
-}
+```html
+<igx-grid-lite-column field="price" header="Price per item"></igx-grid-lite-column>
 ```
 
 >[!NOTE]
->When **`headerTemplate`** is provided, **`headerText`** is ignored.
+>When a header template is provided, `header` is ignored.
 
 ## Customization via Header Template
 
 Similar to the cell template, you can also pass a custom template renderer and create your own DOM inside the column header.
 
 ```typescript
-import { html } from 'lit';
+// Import the directive for it -> IgxGridLiteHeaderTemplateDirective
+import { IgxGridLiteComponent, IgxGridLiteColumnComponent, IgxGridLiteCellTemplateDirective, IgxGridLiteHeaderTemplateDirective } from 'igniteui-angular/grids/lite';
 
-{
-  key: 'rating',
-  headerTemplate: () => html`<h3>⭐ Rating ⭐</h3>`,
-}
+// And add it to your imports array
+ imports: [
+    CommonModule,
+    IgxGridLiteComponent,
+    IgxGridLiteColumnComponent,
+    IgxGridLiteCellTemplateDirective, // for templating cells
+    IgxGridLiteHeaderTemplateDirective // for templating headers
+],
+```
+
+```html
+<igx-grid-lite-column field="rating" dataType="number">
+    <!-- igxGridLiteHeader directive for templating the header -->
+    <ng-template igxGridLiteHeader let-value>
+        <h3>⭐ Rating ⭐</h3>
+    </ng-template>
+
+    <!-- igxGridLiteCell directive for templating the cell -->
+    <ng-template igxGridLiteCell let-value>
+        <igc-rating [value]="value" readonly step="0.01" min="0" max="5">
+        </igc-rating>
+    </ng-template>
+</igx-grid-lite-column>
 ```
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/column-config-headers" alt="Angular Grid Lite Column Config Headers">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/column-config-headers/" alt="Angular Grid Lite Column Config Headers">
 </code-view>
 
 <!-- TODO ## API References

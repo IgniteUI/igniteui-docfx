@@ -36,7 +36,7 @@ The next step is to import the `IgxRadioModule` in the **app.module.ts** file.
 // app.module.ts
 
 ...
-import { IgxRadioModule } from 'igniteui-angular';
+import { IgxRadioModule } from 'igniteui-angular/radio';
 // import { IgxRadioModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -49,13 +49,13 @@ export class AppModule {
 }
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxRadioGroupDirective` and `IgxRadioComponent` as standalone dependencies, or use the [`IGX_RADIO_GROUP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/directives/radio/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxRadioGroupDirective` and `IgxRadioComponent` as standalone dependencies, or use the [`IGX_RADIO_GROUP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/radio/src/radio/radio-group/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
 import { FormsModule } from '@angular/forms';
-import { IGX_RADIO_GROUP_DIRECTIVES } from 'igniteui-angular';
+import { IGX_RADIO_GROUP_DIRECTIVES } from 'igniteui-angular/radio';
 // import { IGX_RADIO_GROUP_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -216,7 +216,9 @@ $custom-radio-theme: radio-theme(
 Finally, **include** the custom theme in your application:
 
 ```scss
-@include css-vars($custom-radio-theme);
+:host {
+  @include tokens($custom-radio-theme);
+}
 ```
 
 <code-view style="height: 300px"
@@ -290,7 +292,7 @@ The Radio Group Directive is exported as an `NgModule`, thus all you need to do 
 ```typescript
 // app.module.ts
 ...
-import { IgxRadioModule } from 'igniteui-angular';
+import { IgxRadioModule } from 'igniteui-angular/radio';
 // import { IgxRadioModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -324,7 +326,7 @@ Use the [`alignment`]({environment:angularApiUrl}/classes/igxradiogroupdirective
 
 ```typescript
 //sample.component.ts
-import { RadioGroupAlignment } from "igniteui-angular";
+import { RadioGroupAlignment } from "igniteui-angular/radio";
 ...
 public alignment = RadioGroupAlignment.vertical;
 ...

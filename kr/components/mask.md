@@ -287,7 +287,7 @@ value = null;
 </code-view>
 
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
@@ -295,7 +295,7 @@ value = null;
 * [IgxMaskDirective]({environment:angularApiUrl}/classes/igxmaskdirective.html)
 * [IgxSnackbarComponent]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.

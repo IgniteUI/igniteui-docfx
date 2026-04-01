@@ -37,7 +37,7 @@ _license: commercial
 <div class="sample-content">
     <article class="sample-column">
         <div class="tabbar-wrapper">
-            <p>The Angular Data Grid is a component for displaying data in a tabular format. Modern grids are complex and are usually packed with a large set of features like data selection, excel style filtering, sorting, paging, grouping, templating, column moving, column pinning, exporting to Excel, CSV formats and more. </p>
+            <p>The Angular Data Grid is a component for displaying data in a tabular format. Modern grids are complex and are usually packed with a large set of features like data selection, excel style filtering, sorting, paging, grouping, templating, column moving, column pinning, exporting to Excel, CSV or PDF formats and more. </p>
             <p>Ignite UI Angular Data Grid covers all of these basic Grid features, but also advanced features like batch editing, state persistence, keyboard navigations and more. Ensuring seamless integration with various data sources, our component offers the best performance and scalability, making it ideal for apps handling large datasets or those requiring real-time updates fast.</p>
         </div>
     </article>
@@ -64,7 +64,7 @@ Boston Marathon 2021 – In this angular grid example, you can see how users can
 <code-view style="height:700px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
            img-src="https://static.infragistics.com/marketing/Website/products/Ignite-UI-for-Angular/ignite-ui-angular-marathon-app"
-           iframe-src="{environment:lobDemosBaseUrl}/grid/grid" alt="Angular data grid example">
+           iframe-src="{environment:lobDemosBaseUrl}/grid/grid/" alt="Angular data grid example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -87,7 +87,7 @@ The next step is to import the `IgxGridModule` in your **app.module.ts** file.
 ```typescript
 // app.module.ts
 
-import { IgxGridModule } from 'igniteui-angular';
+import { IgxGridModule } from 'igniteui-angular/grids/grid';
 // import { IgxGridModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -100,12 +100,12 @@ import { IgxGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxGridComponent` as a standalone dependency, or use the [`IGX_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/grid/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxGridComponent` as a standalone dependency, or use the [`IGX_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/grids/grid/src/grid.module.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
-import { IGX_GRID_DIRECTIVES } from 'igniteui-angular';
+import { IGX_GRID_DIRECTIVES } from 'igniteui-angular/grids/grid';
 // import { IGX_GRID_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -875,6 +875,7 @@ Learn more about creating an Angular data grid in our short tutorial video:
 - [Selection](selection.md)
 - [Column Data Types](column-types.md#default-template)
 - [Build CRUD operations with igxGrid](../general/how-to/how-to-perform-crud.md)
+- [Ignite UI for Angular Skills](../ai/skills.md) — Agent Skills for grids, data operations, and theming
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

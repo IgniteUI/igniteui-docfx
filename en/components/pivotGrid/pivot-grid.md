@@ -40,7 +40,7 @@ The next step is to import the `IgxPivotGridModule` in your **app.module.ts** fi
 ```typescript
 // app.module.ts
 
-import { IgxPivotGridModule } from 'igniteui-angular';
+import { IgxPivotGridModule } from 'igniteui-angular/grids/pivot-grid';
 // import { IgxPivotGridModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -53,12 +53,12 @@ import { IgxPivotGridModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxPivotGridComponent` as a standalone dependency, or use the [`IGX_PIVOT_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/pivot-grid/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxPivotGridComponent` as a standalone dependency, or use the [`IGX_PIVOT_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/grids/pivot-grid/src/pivot-grid.module.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
-import { IGX_PIVOT_GRID_DIRECTIVES } from 'igniteui-angular';
+import { IGX_PIVOT_GRID_DIRECTIVES } from 'igniteui-angular/grids/pivot-grid';
 // import { IGX_PIVOT_GRID_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -346,6 +346,7 @@ This feature allows developers to quickly create a pivot view without manually s
 
 - [Angular Pivot Grid Features](pivot-grid-features.md)
 - [Angular Pivot Grid Custom Aggregations](pivot-grid-custom.md)
+- [Ignite UI for Angular Skills](../ai/skills.md) — Agent Skills for grids, data operations, and theming
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

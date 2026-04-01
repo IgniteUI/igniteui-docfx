@@ -34,8 +34,8 @@ _canonicalLink: grid/row-adding
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:520px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:520px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-add-row/" >
 </code-view>
 
@@ -43,17 +43,17 @@ _canonicalLink: grid/row-adding
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:520px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:520px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-add-row/" alt="Angular @@igComponent 行追加の例">
 </code-view>
 
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-   
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-add-row/" alt="Angular @@igComponent 行追加の例">
 </code-view>
 
@@ -81,6 +81,7 @@ export class AppModule {}
 次に、バインドしたデータソースに @@igComponent を定義をして [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable) を true に設定し、編集アクションを有効にした[アクション ストリップ](../action-strip.md) コンポーネントを定義します。[`addRow`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html#addRow) 入力は、行追加 UI を生成するボタンの表示状態を制御します。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid [data]="data" [primaryKey]="'ProductID'" [autoGenerate]="false" [rowEditable]="true">
     <igx-column field="ProductID" header="Product ID" dataType="number"></igx-column>
@@ -95,8 +96,10 @@ export class AppModule {}
     </igx-action-strip>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid igxPreventDocumentScroll [data]="data"
     primaryKey="ID" foreignKey="ParentID" [rowEditable]="true">
@@ -115,8 +118,10 @@ export class AppModule {}
     </igx-action-strip>
 </igx-tree-grid>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid igxPreventDocumentScroll [data]="localdata"
     [autoGenerate]="false" [primaryKey]="'Debut'" [rowEditable]="true">
@@ -154,6 +159,7 @@ export class AppModule {}
     </igx-row-island>
 </igx-hierarchical-grid>
 ```
+
 }
 
 > [!NOTE]
@@ -180,16 +186,20 @@ export class AppModule {}
 `beginAddRowById` を使用するには、rowID (PK) によって操作のコンテキストとして使用する行を指定する必要があります。このメソッドは、エンドユーザーが指定された行の [行の追加] アクション ストリップ ボタンをクリックしたかのように機能し、その下に UI を生成します。@@if (igxName === 'IgxTreeGrid') { 2 番目のパラメーターは、行を子としてコンテキスト行に追加するか、兄弟として追加するかを制御します。} 最初のパラメーターに `null` を渡すことで、UI をグリッドの最初の行としてス生成させることもできます。
 
 @@if (igxName !== 'IgxTreeGrid') {
+
 ```typescript
 this.grid.beginAddRowById('ALFKI');  // spawns the add row UI under the row with PK 'ALFKI'
 this.grid.beginAddRowById(null);     // spawns the add row UI as the first record
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
 this.treeGrid.beginAddRowById('ALFKI', true);   // spawns the add row UI to add a child for the row with PK 'ALFKI'
 this.treeGrid.beginAddRowById(null);            // spawns the add row UI as the first record
 ```
+
 }
 
 @@if (igxName !== 'IgxTreeGrid') {
@@ -199,6 +209,7 @@ this.treeGrid.beginAddRowById(null);            // spawns the add row UI as the 
 this.grid.beginAddRowByIndex(10);   // spawns the add row UI at index 10
 this.grid.beginAddRowByIndex(0);    // spawns the add row UI as the first record
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 `beginAddRowByIndex` メソッドも同様に機能しますが、コンテキストとして使用する行はインデックスによって指定されます。
@@ -207,6 +218,7 @@ this.grid.beginAddRowByIndex(0);    // spawns the add row UI as the first record
 this.treeGrid.beginAddRowByIndex(10, true);   // spawns the add row UI to add a child for the row at index 10
 this.treeGrid.beginAddRowByIndex(null);       // spawns the add row UI as the first record
 ```
+
 }
 
 ## 位置
@@ -253,20 +265,22 @@ this.treeGrid.beginAddRowByIndex(null);       // spawns the add row UI as the fi
 
 ```html
 <ng-template igxRowAddText>
-	Adding Row
+ Adding Row
 </ng-template>
  ```
 
 ### ボタンのカスタマイズ
+
 `igxRowEditActionsDirective` を使用して行編集オーバーレイのボタンのカスタマイズが可能です。
 キーボード ナビゲーションにボタンを含める場合、各ボタンに `igxRowEditTabStopDirective` が必要です。
 
  ```html
  <ng-template igxRowEditActions let-endRowEdit>
-	<button igxButton igxRowEditTabStop (click)="endRowEdit(false)">Cancel</button>
-	<button igxButton igxRowEditTabStop (click)="endRowEdit(true)">Apply</button>
+ <button igxButton igxRowEditTabStop (click)="endRowEdit(false)">Cancel</button>
+ <button igxButton igxRowEditTabStop (click)="endRowEdit(true)">Apply</button>
 </ng-template>
  ```
+
 > [!NOTE]
 > `igxRowEditActions` ディレクティブを使用すると、オーバーレイ ボタンの編集と追加の両方の編集アクションが変更されます。
 
@@ -294,26 +308,27 @@ this.treeGrid.beginAddRowByIndex(null);       // spawns the add row UI as the fi
 
 ## API リファレンス
 
-* [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable)
-* [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditEnter)
-* [onRowEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEdit)
-* [rowEditDone]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditDone)
-* [onRowEditCancel]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditCancel)
-* [endEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#endEdit)
-* [primaryKey]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primaryKey)
-* [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [IgxActionStripComponent]({environment:angularApiUrl}/classes/igxactionstripcomponent.html)
-* [IgxGridEditingActionsComponent]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html)
+- [rowEditable]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable)
+- [onRowEditEnter]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditEnter)
+- [onRowEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEdit)
+- [rowEditDone]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditDone)
+- [onRowEditCancel]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onRowEditCancel)
+- [endEdit]({environment:angularApiUrl}/classes/@@igTypeDoc.html#endEdit)
+- [primaryKey]({environment:angularApiUrl}/classes/@@igTypeDoc.html#primaryKey)
+- [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [IgxActionStripComponent]({environment:angularApiUrl}/classes/igxactionstripcomponent.html)
+- [IgxGridEditingActionsComponent]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [@@igComponent の概要](@@igMainTopic.md)
-* [@@igComponent 編集](editing.md)
-* [@@igComponent トランザクション](batch-editing.md)
+- [@@igComponent の概要](@@igMainTopic.md)
+- [@@igComponent 編集](editing.md)
+- [@@igComponent トランザクション](batch-editing.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語) ](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語) ](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

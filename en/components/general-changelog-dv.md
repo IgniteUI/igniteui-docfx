@@ -16,6 +16,50 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 
 - [Ignite UI for Angular CHANGELOG.md at Github](https://github.com/IgniteUI/igniteui-angular/blob/master)
 
+## **21.0.1 (March 2026)**
+
+### Bug Fixes
+
+| Bug Number | Control | Description |
+|------------|---------|-------------|
+| 2189 | IgxDataChart | DataChart skips rendering axis when there are no labels |
+| 3055 | IgxDataPieChart | added missing styling properties for the Others Slice |
+| 38668 | IgxDataTooltipLayer | TitleTextColor is overridden when chart's TitleTextColor is used |
+| 40238 | Excel | fixed Excel Formula parser - Workbook.Load() throwing a Excel.FormulaParseException|
+| 41167 | Excel | Object's Formulas are not round-tripped - Added Excel support for round tripping the camera tool |
+| 41419 | Excel | Saving a VBA Signed Excel file does not keep a signature/certificate. |
+| 41594 | IgxDataChart | AssigningCategoryStyle args.GetItems is null or not working to update items in the fragment series. |
+
+## **21.0.0 (January 2026)**
+
+### Enhancements
+
+### igniteui-angular-charts
+
+Added OthersCategoryBrush and OthersCategoryOutline to DataPieChart and ProportionalCategoryAngleAxis
+
+### General
+
+- Angular 21 support.
+
+## **20.2.1 (December 2025)**
+
+### Bug Fixes
+
+| Bug Number | Control | Description |
+|------------|---------|-------------|
+|33808|IgxDataChart|The scale set for IntervalType Ticks in TimeAxisInterval is not displayed|
+|34255|IgxDataChart|0.00001 scale tick marks are displayed overlapping each other|
+|38510|IgxDataChart|AssigningCategoryStyle event support for Stacked Series|
+
+### Enhancements
+
+#### Charts
+
+- Added LabelFormatOverride event to TimeXAxisLabelFormat so you can now override the formatting with an event at all time-formatting levels on the TimeXAxis.
+
+- Adjusted the schema generation to account for more items to make it more likely to find valid values for properties.
+
 ## **20.2.0 (November 2025)**
 
 ### igniteui-angular-charts (Charts)

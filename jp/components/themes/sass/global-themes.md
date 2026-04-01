@@ -6,16 +6,19 @@ _language: ja
 ---
 
 # グローバル テーマ
+
 <div class="highlight">グローバルテーマを使用すると、カスタム カラー パレット、スキーマ、およびエレベーションを使用するテーマをすばやく生成できます。カラー パレット、スキーマ、およびエレベーションは、コンポーネント専用に作成されたカスタム テーマを持たないすべてのコンポーネントにプロパゲートされます。</div>
 <div class="divider"></div>
 
 ## 概要
+
 アプリケーション プロジェクトに `igniteui-angular.css` ファイルを追加した場合、削除してください。`my-app-theme.scss` ファイルを使用してアプリケーションのすべてのコンポーネント用にグローバル テーマを生成します。
 
 **Ignite UI for Angular** は、コンポーネント全体のテーマにグローバル テーマをデフォルトで使用します。アプリでユース ケースに合わせてコンポーネントにスコープしたテーマを作成できます。ここでは 1 ファイルにすべてのテーマを含みます。
-グローバル テーマの生成には 2 つのミックスイン `core` と `theme` を含みます。両方のミックスインは数個の引数を受け取ります。 
+グローバル テーマの生成には 2 つのミックスイン `core` と `theme` を含みます。両方のミックスインは数個の引数を受け取ります。
 
 ### Core ミックスイン
+
 <div class="divider--half"></div>
 
 | 名前                      | タイプ    | デフォルト設定 | 説明                                                               |
@@ -25,6 +28,7 @@ _language: ja
 
 
 ### Theme ミックスイン
+
 <div class="divider--half"></div>
 
 | 名前          | タイプ    | デフォルト設定                  | 説明                                                                                                  |
@@ -68,6 +72,7 @@ $my-color-palette: palette(
 > `theme` の前に `core` を含めることが不可欠です。`core` ミックスインは、`theme` ミックスインが正しく機能するために必要なすべての基本定義を提供します。
 
 ## コンポーネントの除外
+
 <div class="divider--half"></div>
 
 `theme` ミックスインは、グローバル テーマ スタイルから除外されるコンポーネント名のリストを提供します。たとえば、`igx-avatar` および `igx-badge` に含まれるすべてのスタイルを完全に削除したい場合は (生成される CSS の量を減らすか、独自のカスタム スタイルを提供する場合)、以下のようなコンポーネントのリストを渡すことで可能です。
@@ -99,11 +104,12 @@ $allowed: (igx-avatar, igx-badge);
 
 ## 明暗テーマ (Light/Dark)
 
-また、Material、Fluent、Indigo、Bootstrap の 4 つのテーマには、*__light__* バージョンと *__dark__* バージョンも用意されています。 
+また、Material、Fluent、Indigo、Bootstrap の 4 つのテーマには、_**light**_ バージョンと _**dark**_ バージョンも用意されています。
 
 いずれかのバージョンを使用するには、[theme]({environment:sassApiUrl}/themes#mixin-theme) ミックスインに渡すだけです。
 
-*__Light__*
+_**Light**_
+
 ```scss
 @include core();
 @include typography(
@@ -115,7 +121,9 @@ $allowed: (igx-avatar, igx-badge);
     $palette: $light-material-palette,
 );
 ```
-*__Dark__*
+
+***Dark**_
+
 ```scss
 @include core();
 @include typography(
@@ -129,6 +137,7 @@ $allowed: (igx-avatar, igx-badge);
 ```
 
 ### 使用可能なテーマ
+
 Ignite UI for Angular には、事前定義されたテーマのセットから選択するオプションがあります。
 以下の表では、すぐに使用できるすべての定義済みテーマを示します。
 
@@ -139,19 +148,20 @@ Ignite UI for Angular には、事前定義されたテーマのセットから�
 | [**Fluent Light**](presets/fluent.md)                             | `$light-fluent-schema`             | $light-fluent-palette <br> $light-fluent-excel-palette <br> $light-fluent-word-palette |
 | [**Fluent Dark**](presets/fluent.md#fluent-dark-theme)            |  `$dark-fluent-schema`             | $dark-fluent-palette <br> $dark-fluent-excel-palette <br> $dark-fluent-word-palette    |
 | [**Bootstrap Light**](presets/bootstrap.md)                       | `$light-bootstrap-schema`          | $light-bootstrap-palette                                                               |
-| [**Bootstrap Dark**](presets/bootstrap.md#bootstrap-dark-theme)   |  `$dark-bootstrap-schema `         | $dark-bootstrap-palette                                                                |
+| [**Bootstrap Dark**](presets/bootstrap.md#bootstrap-dark-theme)   |  `$dark-bootstrap-schema`         | $dark-bootstrap-palette                                                                |
 | [**Indigo Light**](presets/indigo.md)                             | `$light-indigo-schema`             | $light-indigo-palette                                                                  |
-| [**Indigo Dark**](presets/indigo.md#indigo-dark-theme)            |   `$dark-indigo-schema `           | $dark-indigo-palette                                                                   |
+| [**Indigo Dark**](presets/indigo.md#indigo-dark-theme)            |   `$dark-indigo-schema`           | $dark-indigo-palette                                                                   |
 
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 各コンポーネント テーマの作成する方法:
 
-* [コンポーネント テーマ](component-themes.md)
+- [コンポーネント テーマ](component-themes.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

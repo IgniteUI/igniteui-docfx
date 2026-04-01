@@ -44,4 +44,4 @@
 
 ## API の概要
 
-* [グローバル テーマ]({environment:sassApiUrl}/themes#mixin-theme)
+- [グローバル テーマ]({environment:sassApiUrl}/themes#mixin-theme)

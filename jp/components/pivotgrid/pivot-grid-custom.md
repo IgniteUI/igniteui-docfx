@@ -19,8 +19,8 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 ```
 
 次の例は、データがすでに集計されているシナリオの処理方法と、その構造がどのように見えるかを示しています:
-<code-view style="height: 530px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height: 530px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-noop/" alt="Angular ピボット グリッドのカスタム定義済み集計の例">
 </code-view>
 
@@ -59,7 +59,7 @@ public aggregatedData = [
 - `children` - 階層構築のために子を格納するフィールド。これは、グループ化された値と、その値に基づくすべての pivotGridRecords からのマップを表します。これは、階層の作成中に何かを行う必要がある非常に特殊なシナリオで利用できます。一般的な使用法のためにこれを変更する必要はありません。
 - `records` - 元のデータ レコードへの参照を格納するフィールド。上記の例で見ることができます - `AllProducts_records`。このプロパティと同じ名前でデータにフィールドを設定することは避けてください。データ レコードに `records` プロパティがある場合は、`pivotKeys` を使用して異なる一意の値を指定できます。
 - `aggregations` - 集計値を格納するフィールド。階層の作成中に適用され 、一般的なシナリオでは変更する必要はありません。
-- `level` - 階層に基づいてディメンション レベルを格納するフィールド。このプロパティと同じ名前でデータにフィールドを設定することは避けてください。データ レコードに `level` プロパティがある場合は、`pivotKeys` を使用して異なる一意の値を指定できます。 
+- `level` - 階層に基づいてディメンション レベルを格納するフィールド。このプロパティと同じ名前でデータにフィールドを設定することは避けてください。データ レコードに `level` プロパティがある場合は、`pivotKeys` を使用して異なる一意の値を指定できます。
 - `columnDimensionSeparator` - 一意の列フィールド値を生成するときに使用されるセパレーター。上からの例のダッシュ (`-`) - `All-Bulgaria` です。
 - `rowDimensionSeparator` - 一意の行フィールド値を生成するときに使用されるセパレーター。上記の例のアンダースコア (`_`) - `AllProducts_records` です。`records` (レコード) と `level` (レベル フィールド) を作成するときに使用されます。
 
@@ -126,18 +126,20 @@ public noopSortStrategy = NoopSortingStrategy.instance();
 ```
 
 ## API リファレンス
-* [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
-* [IgxPivotDataSelectorComponent]({environment:angularApiUrl}/classes/igxpivotdataselectorcomponent.html)
+
+- [IgxPivotGridComponent]({environment:angularApiUrl}/classes/igxpivotgridcomponent.html)
+- [IgxPivotDataSelectorComponent]({environment:angularApiUrl}/classes/igxpivotdataselectorcomponent.html)
 
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [Angular ピボット グリッド機能](pivot-grid-features.md)
-* [Angular ピボット グリッドの概要](pivot-grid.md)
+- [Angular ピボット グリッド機能](pivot-grid-features.md)
+- [Angular ピボット グリッドの概要](pivot-grid.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

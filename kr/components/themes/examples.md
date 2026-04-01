@@ -252,8 +252,8 @@ This can be achieved in a few modifications:
 <!-- Adding igxButton that triggers a dropdown with the theme options -->
 <div class = "grid_wrapper" igxOverlayOutlet #outlet>
     <div class="grid-options" igxLayout igxLayoutDir="row" igxLayoutWrap="wrap">
-        <button igxButton="raised" class="addProdBtn" (click)="openDialog()">Add New Product</button>
-        <button class="drop-down-button" igxButton="raised" (click)="toggleDropDown($event, dropdown)" [igxDropDownItemNavigation]="dropdown">Themes</button>
+        <button igxButton="contained" class="addProdBtn" (click)="openDialog()">Add New Product</button>
+        <button class="drop-down-button" igxButton="contained" (click)="toggleDropDown($event, dropdown)" [igxDropDownItemNavigation]="dropdown">Themes</button>
         <igx-drop-down #dropdown class="theme-chooser">
             <igx-drop-down-item class="light-theme-option" (click)="selectTheme(THEME.LIGHT)">
             </igx-drop-down-item>
@@ -321,7 +321,7 @@ Now we can easily change our defined themes with only a `click` event:
 * [IgxInputGroupComponent Styles]({environment:sassApiUrl}/themes#function-input-group-theme) 
 * [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [Global Theme](global-theme.md)

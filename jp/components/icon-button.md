@@ -35,7 +35,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // home.component.ts
 
 ...
-import { IgxIconButtonDirective } from 'igniteui-angular';
+import { IgxIconButtonDirective } from 'igniteui-angular/directives';
 // import { IgxIconButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -136,9 +136,9 @@ public ngOnInit() {
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/svg-icon-button">
 </iframe></div>
 
-### Size (サイズ) 
+### Size (サイズ)
 
-ユーザーは、`--ig-size` カスタム CSS プロパティを使用して、3 つの事前定義された `igxIconButton` サイズのいずれかを選択できます。デフォルトでは、コンポーネントのサイズは medium に設定されています。 
+ユーザーは、`--ig-size` カスタム CSS プロパティを使用して、3 つの事前定義された `igxIconButton` サイズのいずれかを選択できます。デフォルトでは、コンポーネントのサイズは medium に設定されています。
 
 <code-view style="height: 70px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -147,7 +147,7 @@ public ngOnInit() {
 <div class="divider--half"></div>
 
 
-上記のサンプルからわかるように、`igxIconButton` ディレクティブを使用して、`span` や `div` などの要素を Ignite UI for Angular スタイルのアイコン ボタンに変換することもできます。 
+上記のサンプルからわかるように、`igxIconButton` ディレクティブを使用して、`span` や `div` などの要素を Ignite UI for Angular スタイルのアイコン ボタンに変換することもできます。
 
 ## Icon Button のスタイル設定
 
@@ -156,244 +156,244 @@ public ngOnInit() {
 プライマリ プロパティを変更すると、関連するすべての依存プロパティが自動的に更新されます。
 
 <div class="theme-switcher-wrapper">
-	<input type="radio" name="theme" id="material" checked>
-	<label for="material" class="switch-label">Material</label>
-	<input type="radio" name="theme" id="fluent">
-	<label for="fluent" class="switch-label">Fluent</label>
-	<input type="radio" name="theme" id="bootstrap">
-	<label for="bootstrap" class="switch-label">Bootstrap</label>
-	<input type="radio" name="theme" id="indigo">
-	<label for="indigo" class="switch-label">Indigo</label>
-	<div class="tables">
-		<div class="theme-table material">
-			<h4>Flat アイコン ボタン</h4>
-			<table class="collapsible-table">
-				<thead>
-					<tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr>
-				</thead>
-				<tbody class="group">
-					<tr class="primary"><td><details><summary><strong>$foreground</strong></summary></details></td><td>$hover-foreground</td><td>ホバー時のアイコンの色</td></tr>
-					<tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時のアイコンの色</td></tr>
-					<tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカス + ホバー アイコンの色</td></tr>
-					<tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブ時のアイコンの色</td></tr>
-					<tr class="dependent"><td></td><td>$hover-background</td><td>ホバー時の背景</td></tr>
-					<tr class="dependent"><td></td><td>$focus-background</td><td>フォーカス時の背景</td></tr>
-					<tr class="dependent"><td></td><td>$focus-hover-background</td><td>フォーカス + ホバー時の背景</td></tr>
-					<tr class="dependent"><td></td><td>$active-background</td><td>アクティブ時の背景</td></tr>
-				</tbody>
-			</table>
-			<h4>Contained アイコン ボタン</h4>
-			<table class="collapsible-table">
-				<thead>
-					<tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr>
-				</thead>
-				<tbody class="group">
-					<tr class="primary"><td><details><summary><strong>$background</strong></summary></details></td><td>$foreground</td><td>アイコンの色</td></tr>
-					<tr class="dependent"><td></td><td>$hover-background</td><td>ホバー時の背景</td></tr>
-					<tr class="dependent"><td></td><td>$focus-background</td><td>フォーカス時の背景</td></tr>
-					<tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時のアイコンの色</td></tr>
-					<tr class="dependent"><td></td><td>$focus-hover-background</td><td>フォーカス + ホバー時の背景</td></tr>
-					<tr class="dependent"><td></td><td>$active-background</td><td>アクティブ時の背景</td></tr>
-					<tr class="dependent"><td></td><td>$hover-foreground</td><td>ホバー時のアイコンの色</td></tr>
-					<tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカス + ホバー アイコンの色</td></tr>
-					<tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブ時のアイコンの色</td></tr>
-					<tr class="dependent"><td></td><td>$shadow-color</td><td>フォーカス時のシャドウ</td></tr>
-					<tr class="dependent"><td></td><td>$focus-border-color</td><td>フォーカス時の境界線の色</td></tr>
-					<tr class="dependent"><td></td><td>$disabled-background</td><td>無効時の背景</td></tr>
-					<tr class="dependent"><td></td><td>$disabled-foreground</td><td>無効なアイコンの色</td></tr>
-				</tbody>
-			</table>
-			<h4>Outlined アイコン ボタン</h4>
-			<table class="collapsible-table">
-				<thead>
-					<tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr>
-				</thead>
-				<tbody class="group">
-					<tr class="primary"><td><details><summary><strong>$foreground</strong></summary></details></td><td>$hover-foreground</td><td>ホバー時のアイコンの色</td></tr>
-					<tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時のアイコンの色</td></tr>
-					<tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカス + ホバー アイコンの色</td></tr>
-					<tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブ時のアイコンの色</td></tr>
-					<tr class="dependent"><td></td><td>$hover-background</td><td>ホバー時の背景</td></tr>
-					<tr class="dependent"><td></td><td>$focus-background</td><td>フォーカス時の背景</td></tr>
-					<tr class="dependent"><td></td><td>$focus-hover-background</td><td>フォーカス + ホバー時の背景</td></tr>
-					<tr class="dependent"><td></td><td>$active-background</td><td>アクティブ時の背景</td></tr>
-					<tr class="dependent"><td></td><td>$border-color</td><td>デフォルトの境界線の色</td></tr>
-					<tr class="dependent"><td></td><td>$focus-border-color</td><td>フォーカス時の境界線の色</td></tr>
-				</tbody>
-			</table>
-		</div>
+ <input type="radio" name="theme" id="material" checked>
+ <label for="material" class="switch-label">Material</label>
+ <input type="radio" name="theme" id="fluent">
+ <label for="fluent" class="switch-label">Fluent</label>
+ <input type="radio" name="theme" id="bootstrap">
+ <label for="bootstrap" class="switch-label">Bootstrap</label>
+ <input type="radio" name="theme" id="indigo">
+ <label for="indigo" class="switch-label">Indigo</label>
+ <div class="tables">
+  <div class="theme-table material">
+   <h4>Flat アイコン ボタン</h4>
+   <table class="collapsible-table">
+    <thead>
+     <tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr>
+    </thead>
+    <tbody class="group">
+     <tr class="primary"><td><details><summary><strong>$foreground</strong></summary></details></td><td>$hover-foreground</td><td>ホバー時のアイコンの色</td></tr>
+     <tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時のアイコンの色</td></tr>
+     <tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカス + ホバー アイコンの色</td></tr>
+     <tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブ時のアイコンの色</td></tr>
+     <tr class="dependent"><td></td><td>$hover-background</td><td>ホバー時の背景</td></tr>
+     <tr class="dependent"><td></td><td>$focus-background</td><td>フォーカス時の背景</td></tr>
+     <tr class="dependent"><td></td><td>$focus-hover-background</td><td>フォーカス + ホバー時の背景</td></tr>
+     <tr class="dependent"><td></td><td>$active-background</td><td>アクティブ時の背景</td></tr>
+    </tbody>
+   </table>
+   <h4>Contained アイコン ボタン</h4>
+   <table class="collapsible-table">
+    <thead>
+     <tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr>
+    </thead>
+    <tbody class="group">
+     <tr class="primary"><td><details><summary><strong>$background</strong></summary></details></td><td>$foreground</td><td>アイコンの色</td></tr>
+     <tr class="dependent"><td></td><td>$hover-background</td><td>ホバー時の背景</td></tr>
+     <tr class="dependent"><td></td><td>$focus-background</td><td>フォーカス時の背景</td></tr>
+     <tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時のアイコンの色</td></tr>
+     <tr class="dependent"><td></td><td>$focus-hover-background</td><td>フォーカス + ホバー時の背景</td></tr>
+     <tr class="dependent"><td></td><td>$active-background</td><td>アクティブ時の背景</td></tr>
+     <tr class="dependent"><td></td><td>$hover-foreground</td><td>ホバー時のアイコンの色</td></tr>
+     <tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカス + ホバー アイコンの色</td></tr>
+     <tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブ時のアイコンの色</td></tr>
+     <tr class="dependent"><td></td><td>$shadow-color</td><td>フォーカス時のシャドウ</td></tr>
+     <tr class="dependent"><td></td><td>$focus-border-color</td><td>フォーカス時の境界線の色</td></tr>
+     <tr class="dependent"><td></td><td>$disabled-background</td><td>無効時の背景</td></tr>
+     <tr class="dependent"><td></td><td>$disabled-foreground</td><td>無効なアイコンの色</td></tr>
+    </tbody>
+   </table>
+   <h4>Outlined アイコン ボタン</h4>
+   <table class="collapsible-table">
+    <thead>
+     <tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr>
+    </thead>
+    <tbody class="group">
+     <tr class="primary"><td><details><summary><strong>$foreground</strong></summary></details></td><td>$hover-foreground</td><td>ホバー時のアイコンの色</td></tr>
+     <tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時のアイコンの色</td></tr>
+     <tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカス + ホバー アイコンの色</td></tr>
+     <tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブ時のアイコンの色</td></tr>
+     <tr class="dependent"><td></td><td>$hover-background</td><td>ホバー時の背景</td></tr>
+     <tr class="dependent"><td></td><td>$focus-background</td><td>フォーカス時の背景</td></tr>
+     <tr class="dependent"><td></td><td>$focus-hover-background</td><td>フォーカス + ホバー時の背景</td></tr>
+     <tr class="dependent"><td></td><td>$active-background</td><td>アクティブ時の背景</td></tr>
+     <tr class="dependent"><td></td><td>$border-color</td><td>デフォルトの境界線の色</td></tr>
+     <tr class="dependent"><td></td><td>$focus-border-color</td><td>フォーカス時の境界線の色</td></tr>
+    </tbody>
+   </table>
+  </div>
         <div class="theme-table fluent">
-			<h4>Flat アイコン ボタン</h4>
-			<table class="collapsible-table">
-			<thead>
-			<tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr>
-			</thead>
-			<tbody class="group">
-			<tr class="primary"><td><details><summary><strong>$foreground</strong></summary></details></td><td>$hover-foreground</td><td>ホバー時のアイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時のアイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカスかつホバー時のアイコン色</td></tr>
-			<tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブ時のアイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$hover-background</td><td>ホバー時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-background</td><td>フォーカス時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-hover-background</td><td>フォーカス時とホバー時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$active-background</td><td>アクティブ時の背景の色</td></tr>
-			</tbody>
-			</table>
-			<h4>Contained アイコン ボタン</h4>
-			<table class="collapsible-table">
-			<thead>
-			<tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr>
-			</thead>
-			<tbody class="group">
-			<tr class="primary"><td><details><summary><strong>$background</strong></summary></details></td><td>$foreground</td><td>アイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$hover-background</td><td>ホバー時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-background</td><td>フォーカス時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時のアイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-hover-background</td><td>フォーカス時とホバー時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$active-background</td><td>アクティブ時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$hover-foreground</td><td>ホバー時のアイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカスかつホバー時のアイコン色</td></tr>
-			<tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブ時のアイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$shadow-color</td><td>フォーカス時のシャドウの色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-border-color</td><td>フォーカス時の境界線の色</td></tr>
-			<tr class="dependent"><td></td><td>$disabled-background</td><td>無効な背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$disabled-foreground</td><td>無効なアイコンの色</td></tr>
-			</tbody>
-			</table>
-			<h4>Outlined アイコン ボタン</h4>
-			<table class="collapsible-table">
-			<thead>
-			<tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr>
-			</thead>
-			<tbody class="group">
-			<tr class="primary"><td><details><summary><strong>$foreground</strong></summary></details></td><td>$hover-foreground</td><td>ホバー時のアイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時のアイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカスかつホバー時のアイコン色</td></tr>
-			<tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブ時のアイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$hover-background</td><td>ホバー時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-background</td><td>フォーカス時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-hover-background</td><td>フォーカス時とホバー時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$active-background</td><td>アクティブ時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$border-color</td><td>境界線の色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-border-color</td><td>フォーカス時の境界線の色</td></tr>
-			</tbody>
-			</table>
-		</div>
+   <h4>Flat アイコン ボタン</h4>
+   <table class="collapsible-table">
+   <thead>
+   <tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr>
+   </thead>
+   <tbody class="group">
+   <tr class="primary"><td><details><summary><strong>$foreground</strong></summary></details></td><td>$hover-foreground</td><td>ホバー時のアイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時のアイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカスかつホバー時のアイコン色</td></tr>
+   <tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブ時のアイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$hover-background</td><td>ホバー時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-background</td><td>フォーカス時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-background</td><td>フォーカス時とホバー時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$active-background</td><td>アクティブ時の背景の色</td></tr>
+   </tbody>
+   </table>
+   <h4>Contained アイコン ボタン</h4>
+   <table class="collapsible-table">
+   <thead>
+   <tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr>
+   </thead>
+   <tbody class="group">
+   <tr class="primary"><td><details><summary><strong>$background</strong></summary></details></td><td>$foreground</td><td>アイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$hover-background</td><td>ホバー時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-background</td><td>フォーカス時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時のアイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-background</td><td>フォーカス時とホバー時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$active-background</td><td>アクティブ時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$hover-foreground</td><td>ホバー時のアイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカスかつホバー時のアイコン色</td></tr>
+   <tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブ時のアイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$shadow-color</td><td>フォーカス時のシャドウの色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-border-color</td><td>フォーカス時の境界線の色</td></tr>
+   <tr class="dependent"><td></td><td>$disabled-background</td><td>無効な背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$disabled-foreground</td><td>無効なアイコンの色</td></tr>
+   </tbody>
+   </table>
+   <h4>Outlined アイコン ボタン</h4>
+   <table class="collapsible-table">
+   <thead>
+   <tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr>
+   </thead>
+   <tbody class="group">
+   <tr class="primary"><td><details><summary><strong>$foreground</strong></summary></details></td><td>$hover-foreground</td><td>ホバー時のアイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時のアイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカスかつホバー時のアイコン色</td></tr>
+   <tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブ時のアイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$hover-background</td><td>ホバー時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-background</td><td>フォーカス時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-background</td><td>フォーカス時とホバー時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$active-background</td><td>アクティブ時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$border-color</td><td>境界線の色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-border-color</td><td>フォーカス時の境界線の色</td></tr>
+   </tbody>
+   </table>
+  </div>
         <div class="theme-table bootstrap">
-			<h4>Flat アイコン ボタン</h4>
-			<table class="collapsible-table">
-			<thead>
-			<tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr>
-			</thead>
-			<tbody class="group">
-			<tr class="primary"><td><details><summary><strong>$foreground</strong></summary></details></td><td>$hover-foreground</td><td>ホバー時のアイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時のアイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカスかつホバー時のアイコン色</td></tr>
-			<tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブ時のアイコンの色</td></tr>
+   <h4>Flat アイコン ボタン</h4>
+   <table class="collapsible-table">
+   <thead>
+   <tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr>
+   </thead>
+   <tbody class="group">
+   <tr class="primary"><td><details><summary><strong>$foreground</strong></summary></details></td><td>$hover-foreground</td><td>ホバー時のアイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時のアイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカスかつホバー時のアイコン色</td></tr>
+   <tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブ時のアイコンの色</td></tr>
             <tr class="dependent"><td></td><td>$disabled-foreground</td><td>無効なアイコンの色</td></tr>
             <tr class="dependent"><td></td><td>$shadow-color</td><td>アイコン ボタンのシャドウの色</td></tr>
-			</tbody>
-			</table>
-			<h4>Contained アイコン ボタン</h4>
-			<table class="collapsible-table">
-			<thead>
-			<tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr>
-			</thead>
-			<tbody class="group">
-			<tr class="primary"><td><details><summary><strong>$background</strong></summary></details></td><td>$foreground</td><td>アイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$hover-background</td><td>ホバー時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-background</td><td>フォーカス時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時のアイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-hover-background</td><td>フォーカス時とホバー時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$active-background</td><td>アクティブ時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$hover-foreground</td><td>ホバー時のアイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカスかつホバー時のアイコン色</td></tr>
-			<tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブ時のアイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$shadow-color</td><td>シャドウの色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-border-color</td><td>フォーカス時の境界線の色</td></tr>
-			<tr class="dependent"><td></td><td>$disabled-background</td><td>無効な背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$disabled-foreground</td><td>無効なアイコンの色</td></tr>
-			</tbody>
-			</table>
-			<h4>Outlined アイコン ボタン</h4>
-			<table class="collapsible-table">
-			<thead>
-			<tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr>
-			</thead>
-			<tbody class="group">
-			<tr class="primary"><td><details><summary><strong>$foreground</strong></summary></details></td><td>$hover-foreground</td><td>ホバー時のアイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時のアイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカスかつホバー時のアイコン色</td></tr>
-			<tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブ時のアイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$hover-background</td><td>ホバー時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-background</td><td>フォーカス時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-hover-background</td><td>フォーカス時とホバー時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$active-background</td><td>アクティブ時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$border-color</td><td>境界線の色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-border-color</td><td>フォーカス時の境界線の色</td></tr>
+   </tbody>
+   </table>
+   <h4>Contained アイコン ボタン</h4>
+   <table class="collapsible-table">
+   <thead>
+   <tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr>
+   </thead>
+   <tbody class="group">
+   <tr class="primary"><td><details><summary><strong>$background</strong></summary></details></td><td>$foreground</td><td>アイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$hover-background</td><td>ホバー時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-background</td><td>フォーカス時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時のアイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-background</td><td>フォーカス時とホバー時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$active-background</td><td>アクティブ時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$hover-foreground</td><td>ホバー時のアイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカスかつホバー時のアイコン色</td></tr>
+   <tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブ時のアイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$shadow-color</td><td>シャドウの色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-border-color</td><td>フォーカス時の境界線の色</td></tr>
+   <tr class="dependent"><td></td><td>$disabled-background</td><td>無効な背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$disabled-foreground</td><td>無効なアイコンの色</td></tr>
+   </tbody>
+   </table>
+   <h4>Outlined アイコン ボタン</h4>
+   <table class="collapsible-table">
+   <thead>
+   <tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr>
+   </thead>
+   <tbody class="group">
+   <tr class="primary"><td><details><summary><strong>$foreground</strong></summary></details></td><td>$hover-foreground</td><td>ホバー時のアイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時のアイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカスかつホバー時のアイコン色</td></tr>
+   <tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブ時のアイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$hover-background</td><td>ホバー時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-background</td><td>フォーカス時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-background</td><td>フォーカス時とホバー時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$active-background</td><td>アクティブ時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$border-color</td><td>境界線の色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-border-color</td><td>フォーカス時の境界線の色</td></tr>
             <tr class="dependent"><td></td><td>$shadow-color</td><td>シャドウの色</td></tr>
             <tr class="dependent"><td></td><td>$disabled-foreground</td><td>無効なアイコンの色</td></tr>
             <tr class="dependent"><td></td><td>$disabled-border-color</td><td>無効なアイコン ボタンの境界線</td></tr>
-			</tbody>
-			</table>
-		</div>
+   </tbody>
+   </table>
+  </div>
         <div class="theme-table indigo">
-			<h4>Flat アイコン ボタン</h4>
-			<table class="collapsible-table">
-			<thead>
-			<tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr>
-			</thead>
-			<tbody class="group">
-			<tr class="primary"><td><details><summary><strong>$foreground</strong></summary></details></td><td>$hover-foreground</td><td>ホバー時のアイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時のアイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカスかつホバー時のアイコン色</td></tr>
-			<tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブ時のアイコンの色</td></tr>
+   <h4>Flat アイコン ボタン</h4>
+   <table class="collapsible-table">
+   <thead>
+   <tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr>
+   </thead>
+   <tbody class="group">
+   <tr class="primary"><td><details><summary><strong>$foreground</strong></summary></details></td><td>$hover-foreground</td><td>ホバー時のアイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時のアイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカスかつホバー時のアイコン色</td></tr>
+   <tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブ時のアイコンの色</td></tr>
             <tr class="dependent"><td></td><td>$disabled-foreground</td><td>無効なアイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$hover-background</td><td>ホバー時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-background</td><td>フォーカス時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-hover-background</td><td>フォーカス時とホバー時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$active-background</td><td>アクティブ時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$hover-background</td><td>ホバー時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-background</td><td>フォーカス時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-background</td><td>フォーカス時とホバー時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$active-background</td><td>アクティブ時の背景の色</td></tr>
             <tr class="dependent"><td></td><td>$focus-border-color</td><td>フォーカス時の境界線の色</td></tr>
-			</tbody>
-			</table>
-			<h4>Contained アイコン ボタン</h4>
-			<table class="collapsible-table">
-			<thead>
-			<tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr>
-			</thead>
-			<tbody class="group">
-			<tr class="primary"><td><details><summary><strong>$background</strong></summary></details></td><td>$foreground</td><td>アイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$hover-background</td><td>ホバー時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-background</td><td>フォーカス時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時のアイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-hover-background</td><td>フォーカス時とホバー時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$active-background</td><td>アクティブ時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$hover-foreground</td><td>ホバー時のアイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカスかつホバー時のアイコン色</td></tr>
-			<tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブ時のアイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$shadow-color</td><td>シャドウの色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-border-color</td><td>フォーカス時の境界線の色</td></tr>
-			<tr class="dependent"><td></td><td>$disabled-background</td><td>無効な背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$disabled-foreground</td><td>無効なアイコンの色</td></tr>
-			</tbody>
-			</table>
-			<h4>Outlined アイコン ボタン</h4>
-			<table class="collapsible-table">
-			<thead>
-			<tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr>
-			</thead>
-			<tbody class="group">
-			<tr class="primary"><td><details><summary><strong>$foreground</strong></summary></details></td><td>$hover-foreground</td><td>ホバー時のアイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時のアイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカスかつホバー時のアイコン色</td></tr>
-			<tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブ時のアイコンの色</td></tr>
-			<tr class="dependent"><td></td><td>$hover-background</td><td>ホバー時の背景の色</td></tr>
-			<tr class="dependent"><td></td><td>$border-color</td><td>境界線の色</td></tr>
-			<tr class="dependent"><td></td><td>$focus-border-color</td><td>フォーカス時の境界線の色</td></tr>
-			</tbody>
-			</table>
-		</div>
-	</div>
+   </tbody>
+   </table>
+   <h4>Contained アイコン ボタン</h4>
+   <table class="collapsible-table">
+   <thead>
+   <tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr>
+   </thead>
+   <tbody class="group">
+   <tr class="primary"><td><details><summary><strong>$background</strong></summary></details></td><td>$foreground</td><td>アイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$hover-background</td><td>ホバー時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-background</td><td>フォーカス時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時のアイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-background</td><td>フォーカス時とホバー時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$active-background</td><td>アクティブ時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$hover-foreground</td><td>ホバー時のアイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカスかつホバー時のアイコン色</td></tr>
+   <tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブ時のアイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$shadow-color</td><td>シャドウの色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-border-color</td><td>フォーカス時の境界線の色</td></tr>
+   <tr class="dependent"><td></td><td>$disabled-background</td><td>無効な背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$disabled-foreground</td><td>無効なアイコンの色</td></tr>
+   </tbody>
+   </table>
+   <h4>Outlined アイコン ボタン</h4>
+   <table class="collapsible-table">
+   <thead>
+   <tr><th>プライマリ プロパティ</th><th>依存プロパティ</th><th>説明</th></tr>
+   </thead>
+   <tbody class="group">
+   <tr class="primary"><td><details><summary><strong>$foreground</strong></summary></details></td><td>$hover-foreground</td><td>ホバー時のアイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-foreground</td><td>フォーカス時のアイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-hover-foreground</td><td>フォーカスかつホバー時のアイコン色</td></tr>
+   <tr class="dependent"><td></td><td>$active-foreground</td><td>アクティブ時のアイコンの色</td></tr>
+   <tr class="dependent"><td></td><td>$hover-background</td><td>ホバー時の背景の色</td></tr>
+   <tr class="dependent"><td></td><td>$border-color</td><td>境界線の色</td></tr>
+   <tr class="dependent"><td></td><td>$focus-border-color</td><td>フォーカス時の境界線の色</td></tr>
+   </tbody>
+   </table>
+  </div>
+ </div>
 </div>
 
 最も簡単な方法は、CSS 変数を使用してアイコン ボタンの外観をカスタマイズする方法です。
@@ -474,16 +474,18 @@ $custom-contained: contained-icon-button-theme(
 </div>
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
-* [IgxIconButtonDirective]({environment:angularApiUrl}/classes/igxiconbuttondirective.html)
-* [IgxIconButton スタイル]({environment:sassApiUrl}/themes#function-icon-button-theme)
-* [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
+- [IgxIconButtonDirective]({environment:angularApiUrl}/classes/igxiconbuttondirective.html)
+- [IgxIconButton スタイル]({environment:sassApiUrl}/themes#function-icon-button-theme)
+- [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

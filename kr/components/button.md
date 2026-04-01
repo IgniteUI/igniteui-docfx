@@ -77,7 +77,7 @@ Result:
 Using [`igxButton`]({environment:angularApiUrl}/classes/igxbuttondirective.html) to turn a `span` element into a Ignite UI for Angular styled button.
 
 ```html
-<span igxButton="raised" igxButtonColor="yellow" igxButtonBackground="#000" igxRipple="yellow">Click me</span>
+<span igxButton="contained" igxButtonColor="yellow" igxButtonBackground="#000" igxRipple="yellow">Click me</span>
 ```
 
 The span now looks like:
@@ -85,10 +85,10 @@ The span now looks like:
     <iframe seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-4" class="lazyload">
 </iframe></div>
 
-You can create a rased button.
+You can create a contained button:
 
 ```html
-<button igxButton="raised" igxRipple="white">Raised</button>
+<button igxButton="contained" igxRipple="white">Contained</button>
 ```
 
 <div class="sample-container loading" style="height: 54px">
@@ -130,7 +130,7 @@ Icon results:
 |:----------|:-------------:|
 | `flat` | The default button type. Uses transparent background and the secondary theme color from the palette color for the text. |
 | `outlined` |  Very similar to the flat button type but with a thin outline around the edges of the button. |
-| `raised` | As the name implies, this button type features a subtle shadow. Uses the secondary theme color from the palette for background. |
+| `contained` | As the name implies, this button type features a subtle shadow. Uses the secondary theme color from the palette for background. |
 | `fab` | Floating action button type. Circular with secondary theme color for background. |
 | `icon` | This is the simplest of button types. Use it whenever you need to use an icon as button. |
 
@@ -183,14 +183,14 @@ And the final result:
 
 <div class="divider--half"></div>
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxButtonDirective]({environment:angularApiUrl}/classes/igxbuttondirective.html)
 * [IgxButton Styles]({environment:sassApiUrl}/themes#function-button-theme)
 * [IgxRippleDirective]({environment:angularApiUrl}/classes/igxrippledirective.html)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.

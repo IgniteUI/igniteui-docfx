@@ -12,8 +12,8 @@ Ignite UI for Angular Drop Down コンポーネントは、選択可能な項目
 
 ## Angular 仮想ドロップダウンの例
 
-<code-view style="height:320px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:320px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-virtual/" alt="Angular 仮想ドロップダウンの例">
 </code-view>
 
@@ -28,7 +28,7 @@ Ignite UI for Angular Drop Down コンポーネントは、選択可能な項目
 
 ```typescript
 // app.module.ts
-import { IgxForOfModule } from 'igniteui-angular';
+import { IgxForOfModule } from 'igniteui-angular/directives';
 // import { IgxForOfModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -66,11 +66,12 @@ export class AppModule {}
 </igx-drop-down>
 <div>Selected Model: <span>{{ dropdown.selectedItem?.value.name }}</span></div>
 ```
+
 以下は、`*igxFor` ディレクティブに渡される追加パラメーターです。
- - `index` - データセット内の現在の項目のインデックスを取得します。
- - `scrollOrientation` - 常に `'vertical'` にする必要があります。
- - `containerSize` - 仮想化コンテナーのサイズ (ピクセル単位)。これは、ラッピング <div> にも適用する必要があります。
- - `itemSize` - 表示される項目のサイズ (ピクセル単位)。
+- `index` - データセット内の現在の項目のインデックスを取得します。
+- `scrollOrientation` - 常に `'vertical'` にする必要があります。
+- `containerSize` - 仮想化コンテナーのサイズ (ピクセル単位)。これは、ラッピング <div> にも適用する必要があります。
+- `itemSize` - 表示される項目のサイズ (ピクセル単位)。
 
 項目の一意性を確保するために、[`value`]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#value) input の内の `item` および `igx-drop-down-item` の [`index`]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#index) 内の `index` を渡します。
 スクロールしながら選択を維持するには、ドロップダウン 項目はそれがバインドされているデータ項目への参照を持つ必要があります。
@@ -78,7 +79,7 @@ export class AppModule {}
 > [!NOTE]
 > ドロップダウンが項目の仮想化リストで機能するためには、[`value`]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#value) および [`index`]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html#index) の入力をすべての項目に渡す必要があります。
 > [!NOTE]
-> 各項目に対して `[value]` 入力に渡される一意の値を持たない場合、予想外の結果 (誤った選択) となる場合があります。 
+> 各項目に対して `[value]` 入力に渡される一意の値を持たない場合、予想外の結果 (誤った選択) となる場合があります。
 > [!NOTE]
 > ドロップダウンが仮想化項目を使用する場合、[`dropdown.selectedItem`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selectedItem) の種類は `{ value: any, index: number }` になります。ここで、`value` はデータ項目への参照です。`[value]` input の内に渡され、`index` はデータセット内の項目のインデックスです。
 
@@ -130,9 +131,11 @@ export class DropDownVirtualComponent {
 ```
 
 ## リモート データ
+
 `igx-drop-down` は、`*igxFor` 構造ディレクティブを使用したリモート データの部分的な読み込みをサポートします。構成はローカル項目の構成に似ていますが、主な違いはデータ部分の読み込み方法です。
 
 ### テンプレート
+
 ドロップダウン テンプレートは、以前の例 と比べてそれほど変更する必要はありません。それでも、ラッピング div を指定し、それに応じてスタイルを設定し、`*igxFor` の完全な設定を書き出す必要があります。リモートソースからデータを取得するので、データが観測可能になるように指定して Angular の `async` パイプに渡す必要があります。
 
 ```html
@@ -152,6 +155,7 @@ export class DropDownVirtualComponent {
 ```
 
 ### チャンクロードの処理
+
 ご覧のとおり、テンプレートは前の例のテンプレートとほとんど同じです。このリモートデータのシナリオでは、背後にあるコードが大部分の負担を軽減します。
 
 まず、データを取得するためのリモートサービスを定義する必要があります。
@@ -160,7 +164,7 @@ export class DropDownVirtualComponent {
 // remote.service.ts
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { IForOfState } from 'igniteui-angular';
+import { IForOfState } from 'igniteui-angular/directives';
 // import { IForOfState } from '@infragistics/igniteui-angular'; for licensed package
 import { BehaviorSubject, Observable } from 'rxjs';
 
@@ -244,11 +248,12 @@ export class DropDownRemoteComponent implements OnInit, OnDestroy {
 `ngAfterViewInit` フックの内部で、初期状態のデータを取得し、`igxForOf` ディレクティブの [`chunkPreload`]({environment:angularApiUrl}/classes/igxforofdirective.html#chunkPreload) エミッターをサブスクライブするために呼び出します。このサブスクリプションは、ロードされたチャンクが変更されるたびにデータを取得します。コンポーネントの破棄時にエミッターから簡単にサブスクライブ解除できるように、`pipe(takeUntil(this.destroy$))` を使用します。
 
 ### リモートの仮想化 - デモ
+
 上記の設定の結果は、スクロールバーの状態に応じて表示されるはずのデータを動的にロードするドロップダウンです。
 
 
-<code-view style="height:400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/dropdown-remote/" >
 </code-view>
 
@@ -257,19 +262,18 @@ export class DropDownRemoteComponent implements OnInit, OnDestroy {
 ## 注意と制限
 
 仮想化された項目のリストでドロップダウンを使用すると、いくつかの制限があります。`*igxFor` を使用してドロップダウン リストを設定するときは、次の点に注意してください。
- - ループされているロップダウン項目は、次の css を持つラッピング要素 (`<div>` など) で渡す必要があります。`overflow: hidden` と `height` が `containerSize` に等しい (`px` で) 。
- - リストが仮想化されている場合、`<igx-drop-down-item-group>` を項目のグループ化に使用することはできません。代わりに `isHeader` プロパティを使用します。
- - `items` アクセサーは、現在仮想化ビューにあるヘッダー以外のロップダウン項目のリストのみを返します。
- - [`dropdown.selectedItem`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selectedItem) は、タイプ  `{ value: any, index: number }` です。
- - [`selection`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selection) によって発行されたオブジェクトは、`const emittedEvent: { newSelection: { value: any, index: number }, oldSelection: { value: any, index: number }, cancel: boolean, } ` に変更されます。
- - `dropdown.setSelectedItem` は、**データセット内の項目のインデックス**を使用して呼び出す必要があります。
- - ドロップダウン項目の `[selected]` 入力を設定しても、ドロップダウン選択内の項目はマークされません。
+- ループされているロップダウン項目は、次の css を持つラッピング要素 (`<div>` など) で渡す必要があります。`overflow: hidden` と `height` が `containerSize` に等しい (`px` で) 。
+- リストが仮想化されている場合、`<igx-drop-down-item-group>` を項目のグループ化に使用することはできません。代わりに `isHeader` プロパティを使用します。
+- `items` アクセサーは、現在仮想化ビューにあるヘッダー以外のロップダウン項目のリストのみを返します。
+- [`dropdown.selectedItem`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selectedItem) は、タイプ  `{ value: any, index: number }` です。
+- [`selection`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html#selection) によって発行されたオブジェクトは、`const emittedEvent: { newSelection: { value: any, index: number }, oldSelection: { value: any, index: number }, cancel: boolean, }` に変更されます。
+- `dropdown.setSelectedItem` は、**データセット内の項目のインデックス**を使用して呼び出す必要があります。
+- ドロップダウン項目の `[selected]` 入力を設定しても、ドロップダウン選択内の項目はマークされません。
 
 ## API リファレンス
 
-* [IgxForOfDirective]({environment:angularApiUrl}/classes/igxforofdirective.html)
-* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
-
+- [IgxForOfDirective]({environment:angularApiUrl}/classes/igxforofdirective.html)
+- [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
 
 
 

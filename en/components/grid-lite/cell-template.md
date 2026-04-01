@@ -9,14 +9,29 @@ namespace: Infragistics.Controls
 
 # Column Cell Template
 
-By default, the grid uses the key of the column to render the value as a string inside the cell. This is fine for basic scenarios, but if you want to customize the rendered output or the final output is a combination of different data fields, you should use a cell template renderer.
+By default, the grid uses the field of the column to render the value as a string inside the cell. This is fine for basic scenarios, but if you want to customize the rendered output or the final output is a combination of different data fields, you can customize the cell template.
 
-To achieve that, set the **`cellTemplate`** property of the column.
+To achieve that, use **`<ng-template>`** inside `<igx-grid-lite-column>...</igx-grid-lite-column>` of a column in which you want to template the content.
+
+```html
+<igx-grid-lite-column field="avatar" header="Avatar">
+    <ng-template igxGridLiteCell let-value>
+        <igx-avatar shape="circle" alt="User avatar" [src]="value">
+        </igx-avatar>
+    </ng-template>
+</igx-grid-lite-column>
+```
+
+You also need to import **`IgxGridLiteCellTemplateDirective`**
 
 ```typescript
-{
-  cellTemplate?: (params: GridLiteCellContext<T, K>) => TemplateResult;
-}
+import { IgxGridLiteComponent, IgxGridLiteColumnComponent, IgxGridLiteCellTemplateDirective } from 'igniteui-angular/grids/lite';
+```
+
+And add it to the `imports` array
+
+```typescript
+imports: [ IgxGridLiteCellTemplateDirective ]
 ```
 
 ## Use as a Formatter Function
@@ -24,14 +39,15 @@ To achieve that, set the **`cellTemplate`** property of the column.
 For the simple scenario where some formatting is required, one can just return the formatted value. Here is an example for displaying a number value to a locale currency format:
 
 ```typescript
-const { format: asCurrency } = new Intl.NumberFormat('en-EN', { style: 'currency', currency: 'EUR' });
+public formatter = new Intl.NumberFormat('en-150', {
+  style: 'currency',
+  currency: 'EUR'
+});
 
-{
-  ...
-  /** Return the custom currency format for a value `value = 123456.789` */
-  cellTemplate: (params) => asCurrency(params.value) // => "€123,456.79"
-  ...
-}
+/** Return the custom currency format for a value `value = 123456.789` */
+protected formatCurrency = (value: number) => {
+  return this.formatter.format(value); // => "€123,456.79"
+};
 ```
 
 You can combine values different fields from the data source as well.
@@ -39,37 +55,56 @@ You can combine values different fields from the data source as well.
 Refer to the API documentation for **`GridLiteCellContext`** for more information. -->
 
 ```typescript
-const { format: asCurrency } = new Intl.NumberFormat('en-EN', { style: 'currency', currency: 'EUR' });
+public formatter = new Intl.NumberFormat('en-150', {
+  style: 'currency',
+  currency: 'EUR'
+});
 
-{
-  ...
-  /** Return the custom currency format for an order of 10 items where the price is 99.99 */
-  cellTemplate: ({value, row}) => asCurrency(value * row.data.count) // => "€999.90"
-  ...
-}
+/** Return the total earned money from a product in custom currency */
+protected formatCurrency = (value: number, unitsSold: number) => {
+  return this.formatter.format(value * unitsSold);
+};
+```
+
+```html
+<igx-grid-lite-column field="price" header="Price" dataType="number">
+    <ng-template igxGridLiteCell let-value let-row="row">
+        {{formatCurrency(value, row.data.sold)}}
+    </ng-template>
+</igx-grid-lite-column>
 ```
 
 ## Custom DOM Templates
 
-Aside from using the **`cellTemplate`** property as a value formatter, you can also create your own DOM template, which
-will be rendered inside the cell container.
+Aside from using components from **`igniteui-angular`** inside the **`<ng-template>`** , you can also create your own DOM template, which will be rendered inside the cell container.
 
-We've decided to re-use the functionality provided by <a href="https://lit.dev/" target="_blank">Lit</a> and its
-<a href="https://lit.dev/docs/templates/expressions/" target="_blank">tagged template syntax</a> for building declarative
-DOM fragments.
-
-You can template any standard DOM elements as well as web components from other libraries.
+You can template any standard DOM elements as well as web components from other libraries. For example in the following code snippets we are using the rating component coming from **`igniteui-webcomponents`**. In order to use it properly, we need to go through a few steps described below.
 
 ```typescript
-// Import the `html` tag function from the Lit package.
-import { html } from "lit";
+// Import external components for the custom template
+import {
+    defineComponents,
+    IgcRatingComponent
+} from 'igniteui-webcomponents';
 
-{
-  key: 'rating',
-  // Use another web component to represent the `rating` value in the grid
-  cellTemplate: ({ value }) => html`<igc-rating readonly value=${value}></igc-rating>`
-  ...
-}
+// Define them so that we can use them in our sample
+defineComponents(
+    IgcRatingComponent
+);
+```
+
+```html
+<!-- Use the rating component from Web Components in your template -->
+<igx-grid-lite-column field="rating" header="Customer Rating" dataType="number">
+    <ng-template igxGridLiteCell let-value>
+        <igc-rating
+            [value]="value"
+            readonly
+            min="0"
+            max="5">
+        </igc-rating>
+    </ng-template>
+</igx-grid-lite-column>
 ```
 
 >[!NOTE]
@@ -84,10 +119,7 @@ The custom cell renderer is passed an **`GridLiteCellContext`** object as a para
 /**
  * Context object for the row cell template callback.
  */
-export interface GridLiteCellContext<
-  T extends object,
-  K extends Keys<T> = Keys<T>
-> {
+export interface IgxGridLiteCellTemplateContext<T extends object> {
   /**
    * The cell element parent of the template.
    */
@@ -104,12 +136,14 @@ export interface GridLiteCellContext<
    * The value from the data source for this cell.
    */
   value: PropertyType<T, K>;
+  
+  $implicit: PropertyType<T, K>;
 }
 ```
 
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid-lite/column-config-simple" alt="Angular Grid Lite Column Config Basic">
+           iframe-src="{environment:demosBaseUrl}/grid-lite/column-config-simple/" alt="Angular Grid Lite Column Config Basic">
 </code-view>
 
 <!-- TODO ## API References

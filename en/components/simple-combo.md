@@ -46,7 +46,7 @@ For a complete introduction to the Ignite UI for Angular, read the [_getting sta
 The next step is to import the `IgxSimpleComboModule` in your **app.module.ts** file.
 
 ```typescript
-import { IgxSimpleComboModule } from 'igniteui-angular';
+import { IgxSimpleComboModule } from 'igniteui-angular/simple-combo';
 // import { IgxSimpleComboModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -59,12 +59,12 @@ import { IgxSimpleComboModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxSimpleComboComponent` as a standalone dependency, or use the [`IGX_SIMPLE_COMBO_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/simple-combo/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxSimpleComboComponent` as a standalone dependency, or use the [`IGX_SIMPLE_COMBO_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/simple-combo/src/simple-combo/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
-import { IGX_SIMPLE_COMBO_DIRECTIVES } from 'igniteui-angular';
+import { IGX_SIMPLE_COMBO_DIRECTIVES } from 'igniteui-angular/simple-combo';
 // import { IGX_SIMPLE_COMBO_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -201,6 +201,16 @@ Binding to the event can be done through the proper `@Output` property on the `i
 </igx-simple-combo>
 ```
 
+Additionally, the simple combobox fires a [selectionChanged]({environment:angularApiUrl}/classes/IgxSimpleComboComponent.html#selectionChanged) event after the selection is committed and the component state has been updated. The emitted event arguments, [ISimpleComboSelectionChangedEventArgs]({environment:angularApiUrl}/interfaces/isimplecomboselectionchangedeventargs.html), contain information about the previous selection, the current selection and the displayed item. Unlike `selectionChanging`, this event is not cancellable and is guaranteed to reflect the final committed selection state. When the simple combobox is used with `ngModel` or Angular forms, `selectionChanged` is emitted after the form value has been updated.
+
+Binding to the event can be done through the proper `@Output` property on the `igx-simple-combo` tag:
+
+```html
+<igx-simple-combo [data]="cities" [displayKey]="'name'" [valueKey]="'id'"
+           (selectionChanged)="handleSelectionChanged($event)">
+</igx-simple-combo>
+```
+
 <div class="divider--half"></div>
 
 ## Keyboard Navigation
@@ -208,6 +218,10 @@ Binding to the event can be done through the proper `@Output` property on the `i
 When the simple combobox is closed and focused:
 
 - `ArrowDown` or `Alt` + `ArrowDown` will open the simple combobox's dropdown.
+
+- `Esc` will clear the selected value while keeping focus on the combobox.
+
+- `Tab` will move the focus to the next focusable element outside the combobox.
 
 > [!NOTE]
 > Any other key stroke will be handled by the input.
@@ -226,7 +240,9 @@ When the simple combobox is opened and an item in the list is focused:
 
 - `Enter` will select/deselect the active list item and will close the list.
 
-- `Esc` will close the list.
+- `Esc` will close the list and keep the focus on the combobox.
+
+- `Tab` will close the list and move focus to the next focusable element.
 
 When the simple combobox is opened and allow custom values are enabled, and add item button is focused:
 
@@ -368,9 +384,9 @@ $custom-drop-down-theme: drop-down-theme(
 The last step is to include the component's theme.
 
 ```scss
-:host ::ng-deep {
-  @include css-vars($custom-combo-theme);
-  @include css-vars($custom-drop-down-theme);
+:host {
+  @include tokens($custom-combo-theme);
+  @include tokens($custom-drop-down-theme);
 }
 ```
 
@@ -400,7 +416,7 @@ The last step is to include the component's theme.
 > [!NOTE]
 > The simple combobox uses `igxForOf` directive internally hence all `igxForOf` limitations are valid for the simple combobox. For more details see [igxForOf Known Issues](for-of.md#known-limitations) section.
 
-## API Summary
+## API References
 
 <div class="divider--half"></div>
 

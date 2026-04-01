@@ -34,7 +34,7 @@ The next step is to import the `IgxProgressBarModule` in the **app.module.ts** f
 // app.module.ts
 
 ...
-import { IgxProgressBarModule } from 'igniteui-angular';
+import { IgxProgressBarModule } from 'igniteui-angular/progressbar';
 // import { IgxProgressBarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -45,12 +45,12 @@ import { IgxProgressBarModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxLinearProgressBarComponent` as a standalone dependency, or use the [`IGX_LINEAR_PROGRESS_BAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/progressbar/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxLinearProgressBarComponent` as a standalone dependency, or use the [`IGX_LINEAR_PROGRESS_BAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/progressbar/src/progressbar/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
-import { IGX_LINEAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular';
+import { IGX_LINEAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular/progressbar';
 // import { IGX_LINEAR_PROGRESS_BAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -166,7 +166,7 @@ Let's update our previous sample by using the aforementioned text properties. We
 And do not forget to import the [`IgxTextAlign`]({environment:angularApiUrl}/enums/igxtextalign.html) enumerator in your component if you're using the `textAlign` property.
 
 ```typescript
-import { ..., IgxTextAlign } from 'igniteui-angular';
+import { ..., IgxTextAlign } from 'igniteui-angular/progressbar';
 // import { ..., IgxTextAlign } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
@@ -267,7 +267,9 @@ $custom-theme: progress-linear-theme(
 The last step is to **include** the component theme in our application.
 
 ```scss
-@include css-vars($custom-theme);
+:host {
+  @include tokens($custom-theme);
+}
 ```
 
 ### Demo

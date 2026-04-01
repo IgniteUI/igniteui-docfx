@@ -34,7 +34,7 @@ The next step is to import the `IgxSplitterModule` in your **app.module.ts** fil
 ```typescript
 // app.module.ts
 ...
-import { IgxSplitterModule } from 'igniteui-angular';
+import { IgxSplitterModule } from 'igniteui-angular/splitter';
 // import { IgxSplitterModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -45,12 +45,12 @@ import { IgxSplitterModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxSplitterComponent` as a standalone dependency, or use the [`IGX_SPLITTER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/splitter/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxSplitterComponent` as a standalone dependency, or use the [`IGX_SPLITTER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/splitter/src/splitter/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
-import { IGX_SPLITTER_DIRECTIVES } from 'igniteui-angular';
+import { IGX_SPLITTER_DIRECTIVES } from 'igniteui-angular/splitter';
 // import { IGX_SPLITTER_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -270,7 +270,9 @@ $splitter-theme: splitter-theme(
 The next step is to pass the custom splitter theme:
 
 ```scss
-@include css-vars($custom-splitter-theme);
+:host {
+    @include tokens($custom-splitter-theme);
+}
 ```
 
 ### Demo
@@ -325,7 +327,7 @@ igx-splitter {
 }
 ```
 
-Or you can use the universal `--igx-splitter-size` variable to target all instances:
+Or you can use the universal `--ig-splitter-size` variable to target all instances:
 
 ```html
 <div class="my-app">
@@ -335,7 +337,7 @@ Or you can use the universal `--igx-splitter-size` variable to target all instan
 
 ```scss
 .my-app {
-  --igx-splitter-size: 10px;
+  --ig-splitter-size: 10px;
 }
 ```
 

@@ -25,8 +25,8 @@ _language: ja
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-collapsible-groups/" alt="Angular グリッド列グループの縮小の例">
 </code-view>
 
@@ -35,8 +35,8 @@ _language: ja
 
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-collapsible-groups/" alt="Angular グリッド列グループの縮小の例">
 </code-view>
 
@@ -44,8 +44,8 @@ _language: ja
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
+<code-view style="height:600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-collapsible-column-groups/" alt="Angular グリッド列グループの縮小の例">
 </code-view>
 
@@ -59,6 +59,7 @@ _language: ja
 ```cmd
 ng add igniteui-angular
 ```
+
 Ignite UI for Angular については、「[はじめに](general/getting-started.md)」トピックをご覧ください。
 
 次に app.module.ts ファイルに `@@igxNameModule` をインポートします。そのため、[複数列グループ](./multi-column-headers.md)のトピックを簡単に確認することを強くお勧めします。グリッドで列グループを設定する方法の詳細情報を参照してください。
@@ -91,9 +92,9 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 ```
 
 すべての子列にツリー状態があります。
--	親の展開状態に関係なく、常に表示できます。
--	親が展開されているときに表示できます。
--	親が縮小されているときに非表示にできます
+- 親の展開状態に関係なく、常に表示できます。
+- 親が展開されているときに表示できます。
+- 親が縮小されているときに非表示にできます
 
 縮小可能として指定されている列グループの初期状態は、`[expanded]="true"` です。ただし、プロパティ `[expanded]="false"` を設定することにより、この動作を簡単に変更できます。
 
@@ -125,6 +126,7 @@ igxGrid のデフォルトの展開インジケーターは次のとおりです
     </igx-column-group>
 </igx-column-group>
 ```
+
 ### igxCollapsibleIndicator ディレクティブの使用
 
 この動作を実現する別の方法は、以下の例に示すように igxCollapsibleIndicator ディレクティブを使用することです。
@@ -150,27 +152,29 @@ igxGrid のデフォルトの展開インジケーターは次のとおりです
 
 
 ## API リファレンス
+
 <div class="divider--half"></div>
 
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#mixin-grid)
+- [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+- [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+- [IgxGridComponent スタイル]({environment:sassApiUrl}/themes#mixin-grid)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [@@igComponent の概要](@@igMainTopic.md)
-* [仮想化とパフォーマンス](virtualization.md)
-* [ページング](paging.md)
-* [フィルタリング](filtering.md)
-* [ソート](sorting.md)
-* [集計](summaries.md)
-* [列移動](column-moving.md)
-* [列のピン固定](column-pinning.md)
-* [選択](selection.md)
+- [@@igComponent の概要](@@igMainTopic.md)
+- [仮想化とパフォーマンス](virtualization.md)
+- [ページング](paging.md)
+- [フィルタリング](filtering.md)
+- [ソート](sorting.md)
+- [集計](summaries.md)
+- [列移動](column-moving.md)
+- [列のピン固定](column-pinning.md)
+- [選択](selection.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

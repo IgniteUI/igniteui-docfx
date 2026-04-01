@@ -37,7 +37,7 @@ The next step is to import the `IgxDragDropModule` in your **app.module.ts** fil
 // app.module.ts
 
 ...
-import { IgxDragDropModule } from 'igniteui-angular';
+import { IgxDragDropModule } from 'igniteui-angular/directives';
 // import { IgxDragDropModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -48,12 +48,12 @@ import { IgxDragDropModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxDragDirective` and `IgxDropDirective` as standalone dependencies, or use the [`IGX_DRAG_DROP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/directives/drag-drop/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxDragDirective` and `IgxDropDirective` as standalone dependencies, or use the [`IGX_DRAG_DROP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/directives/src/directives/drag-drop/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
-import { IGX_DRAG_DROP_DIRECTIVES } from 'igniteui-angular';
+import { IGX_DRAG_DROP_DIRECTIVES } from 'igniteui-angular/directives';
 // import { IGX_DRAG_DROP_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

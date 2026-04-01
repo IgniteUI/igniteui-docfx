@@ -34,7 +34,7 @@ The next step is to import the `IgxToggleModule` in your **app.module.ts** file.
 // app.module.ts
 
 ...
-import { IgxToggleModule } from 'igniteui-angular';
+import { IgxToggleModule } from 'igniteui-angular/directives';
 // import { IgxToggleModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -50,7 +50,8 @@ Alternatively, as of `16.0.0` you can import the `IgxToggleDirective` as a stand
 ```typescript
 // home.component.ts
 
-import { IgxToggleDirective, IgxButtonDirective } from 'igniteui-angular';
+import { IgxToggleDirective, IgxButtonDirective } from 'igniteui-angular/directives';
+
 // import { IgxToggleDirective, IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -79,7 +80,7 @@ Now that you have the Ignite UI for Angular Toggle module or directive imported,
 In order to show and hide the toggle content, use its [open]({environment:angularApiUrl}/classes/igxtoggledirective.html#open) and [close]({environment:angularApiUrl}/classes/igxtoggledirective.html#close) methods:
 
 ```typescript
-import { IgxToggleDirective } from 'igniteui-angular'
+import { IgxToggleDirective } from 'igniteui-angular/directives'
 // import { IgxToggleDirective } from '@infragistics/igniteui-angular'; for licensed package
 ...
 

@@ -36,7 +36,7 @@ Note that the `IgxInputGroupComponent` also depends on the Angular **FormsModule
 // app.module.ts
 
 import { FormsModule } from '@angular/forms';
-import { IgxInputGroupModule } from 'igniteui-angular';
+import { IgxInputGroupModule } from 'igniteui-angular/input-group';
 // import { IgxInputGroupModule } from '@infragistics/igniteui-angular'; for licensed package
 
 
@@ -48,13 +48,14 @@ import { IgxInputGroupModule } from 'igniteui-angular';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxInputGroupComponent` as a standalone dependency, or use the [`IGX_INPUT_GROUP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/input-group/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxInputGroupComponent` as a standalone dependency, or use the [`IGX_INPUT_GROUP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/input-group/src/input-group/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
 
 import { FormsModule } from '@angular/forms';
-import { IGX_INPUT_GROUP_DIRECTIVES, IgxIconComponent } from 'igniteui-angular';
+import { IGX_INPUT_GROUP_DIRECTIVES } from 'igniteui-angular/input-group';
+import { IgxIconComponent } from 'igniteui-angular/icon';
 // import { IGX_INPUT_GROUP_DIRECTIVES, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -779,7 +780,9 @@ $custom-input-group: input-group-theme(
 The last step is to include the newly created theme:
 
 ```scss
-@include css-vars($custom-input-group);
+:host {
+  @include tokens($custom-input-group);
+}
 ```
 
 In the sample below, you can see how using the input group with customized CSS variables allows you to create a design that visually resembles the one used in the [`Carbon`](https://carbondesignsystem.com/components/text-input/usage/#live-demo) design system.

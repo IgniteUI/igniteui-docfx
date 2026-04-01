@@ -47,7 +47,7 @@ Having all set up, let's show all the options in the [IgxDropDownComponent]({env
 <!-- dropdown.component.html -->
 
 <div class="sample-wrapper">
-    <button class="button" igxButton="raised" [igxToggleAction]="dropdown" [igxDropDownItemNavigation]="dropdown" >Options</button>
+    <button class="button" igxButton="contained" [igxToggleAction]="dropdown" [igxDropDownItemNavigation]="dropdown" >Options</button>
     <igx-drop-down #dropdown [width]="'100px'">
         <igx-drop-down-item *ngFor="let item of items">
             {{ item.field }}
@@ -87,7 +87,7 @@ Let's say we want to have a predefined selected item. One way to do this, is by 
 <!-- dropdown.component.html -->
 
 <div class="sample-wrapper">
-    <button class="button" igxButton="raised" [igxToggleAction]="dropdown" [igxDropDownItemNavigation]="dropdown">Options</button>
+    <button class="button" igxButton="contained" [igxToggleAction]="dropdown" [igxDropDownItemNavigation]="dropdown">Options</button>
     <igx-drop-down #dropdown (opening)="dropdown.setSelectedItem(0)" [width]="'100px'">
         <igx-drop-down-item *ngFor="let item of items">
             {{ item.field }}
@@ -123,7 +123,7 @@ To provide more useful visual information, use [isHeader]({environment:angularAp
 <!-- dropdown.component.html -->
 
 <div class="sample-wrapper">
-    <button class="button" igxButton="raised" [igxToggleAction]="dropdown" [igxDropDownItemNavigation]="dropdown">Countries</button>
+    <button class="button" igxButton="contained" [igxToggleAction]="dropdown" [igxDropDownItemNavigation]="dropdown">Countries</button>
     <igx-drop-down #dropdown [width]="'144px'">
         <div class="drop-down__scroll-container">
             <igx-drop-down-item *ngFor="let item of items" [disabled]="item.disabled" [isHeader]="item.header"
@@ -392,14 +392,14 @@ When [allowItemsFocus]({environment:angularApiUrl}/classes/igxdropdowncomponent.
 
 <div class="divider--half"></div>
 
-### API Summary
+## API References
 * [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) 
 * [IgxDropDownComponent Styles]({environment:sassApiUrl}/themes#function-drop-down-theme)
 * [IgxDropDownItemComponent]({environment:angularApiUrl}/classes/igxdropdownitemcomponent.html).
 * [IgxOverlay]({environment:angularApiUrl}/interfaces/overlaysettings.html)
 * [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
 
-### Additional Resources
+## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
