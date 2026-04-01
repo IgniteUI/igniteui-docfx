@@ -16,7 +16,7 @@ The Ignite UI for Angular [`IgxNavbarComponent`]({environment:angularApiUrl}/cla
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navbar" >
+           iframe-src="{environment:demosBaseUrl}/menus/navbar/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -95,7 +95,7 @@ If all went well, you should see the following in your browser:
 
 <code-view style="height: 330px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -136,7 +136,7 @@ Finally, this is how our navbar should look like with its custom action icon:
 
 <code-view style="height: 330px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/menus/navbar-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -144,7 +144,7 @@ Finally, this is how our navbar should look like with its custom action icon:
 > [!NOTE]
 > If [`igx-action-icon`]({environment:angularApiUrl}/classes/igxactionicondirective.html) is provided, the default [`actionButtonIcon`]({environment:angularApiUrl}/classes/igxnavbarcomponent.html#actionbuttonicon) will not be used. 
 
-### API References
+## API References
 
 In this article we show a few scenarios where the navbar component may come in handy. The APIs, we used to achieve them, are listed in the links below.
 
@@ -157,10 +157,10 @@ Additional components and/or directives with relative APIs that were used:
 
 Styles:
 
-* [`IgxNavbarComponent Styles`]({environment:sassApiUrl}/index.html#function-navbar-theme)
-* [`IgxIconComponent Styles`]({environment:sassApiUrl}/index.html#function-icon-theme)
+* [`IgxNavbarComponent Styles`]({environment:sassApiUrl}/themes#function-navbar-theme)
+* [`IgxIconComponent Styles`]({environment:sassApiUrl}/themes#function-icon-theme)
 
-### Additional Resources
+## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

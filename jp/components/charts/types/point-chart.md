@@ -2,6 +2,7 @@
 title: Angular ポイント チャート | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular ポイント チャート
 _keywords: Angular Charts, Point Chart, Infragistics, Angular チャート, ポイント チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ["DomainChart", "CategoryChart", "CategoryChartType", "Legend", "Series"]
 namespace: Infragistics.Controls.Charts
 _language: ja
@@ -67,26 +68,26 @@ Angular ポイント チャートを設定したら、マーカーとそのア�
 
 次のトピックに従って、[`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) コントロールの代わりに [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) コントロールを使用して、より高度なタイプの Angular ポイント チャートを作成できます。
 
-*   [散布バブル チャート](bubble-chart.md)
-*   [散布マーカー チャート](scatter-chart.md#angular-散布マーカー-チャート)
-*   [散布高密度チャート](scatter-chart.md#angular-散布高密度チャート)
-*   [極座標型マーカー チャート](polar-chart.md#angular-極座標型マーカー-チャート)
+- [散布バブル チャート](bubble-chart.md)
+- [散布マーカー チャート](scatter-chart.md#angular-散布マーカー-チャート)
+- [散布高密度チャート](scatter-chart.md#angular-散布高密度チャート)
+- [極座標型マーカー チャート](polar-chart.md#angular-極座標型マーカー-チャート)
 
 ## その他のリソース
 
 関連するチャート機能の詳細については、以下のトピックを参照してください。
 
-*   [チャートのパフォーマンス](../features/chart-performance.md)
-*   [チャート マーカー](../features/chart-markers.md)
+- [チャートのパフォーマンス](../features/chart-performance.md)
+- [チャート マーカー](../features/chart-markers.md)
 
 ## API リファレンス
 
 以下は、上記のセクションで説明されている API メンバーのリストです。
 
-*   [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html)
-*   [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)
-*   [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#chartType)
-*   [`markerTypes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#markerTypes)
-*   [`markerOutlines`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#markerOutlines)
-*   [`markerBrushes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#markerBrushes)
-*   [`markerThickness`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#markerThickness)
+- [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html)
+- [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)
+- [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#chartType)
+- [`markerTypes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#markerTypes)
+- [`markerOutlines`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#markerOutlines)
+- [`markerBrushes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#markerBrushes)
+- [`markerThickness`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#markerThickness)

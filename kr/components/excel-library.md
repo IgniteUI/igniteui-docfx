@@ -25,8 +25,8 @@ The Infragistics Excel Library allows you to work with spreadsheet data using fa
 
 When installing the excel package, the core package must also be installed.
 
-*   **npm install --save igniteui-angular-core**
-*   **npm install --save igniteui-angular-excel**
+- **npm install --save igniteui-angular-core**
+- **npm install --save igniteui-angular-excel**
 
 The Excel Library is exported as an `NgModule`, you need to import the [`IgxExcelModule`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxexcelmodule.html) inside your `AppModule`:
 
@@ -46,31 +46,31 @@ export class AppModule {}
 
 ## The Excel Library Contains 5 Modules
 
-*   **IgxExcelCoreModule** – This contains the object model and much of the excel infrastructure
-*   **IgxExcelFunctionsModule** – This contains the majority of the functions for formula evaluations, such as Sum, Average, Min, Max, etc. The absence of this module won’t cause any issues with formula parsing if the formula is to be calculated. For example, if you apply a formula like “=SUM(A1:A5)” and ask for the Value of the cell, then you would get a #NAME! error returned. This is not an exception throw – it’s an object that represents a particular error since formulas can result in errors.
-*   **IgxExcelXlsModule** – This contains the load and save logic for xls (and related) type files – namely the Excel97to2003 related WorkbookFormats.
-*   **IgxExcelXlsxModule** – This contains the load and save logic for xlsx (and related) type files – namely the Excel2007 related and StrictOpenXml WorkbookFormats.
-*   **IgxExcelModule** – This references the other 4 modules and so basically ensures that all the functionality is loaded/available.
+- **IgxExcelCoreModule** – This contains the object model and much of the excel infrastructure
+- **IgxExcelFunctionsModule** – This contains the majority of the functions for formula evaluations, such as Sum, Average, Min, Max, etc. The absence of this module won’t cause any issues with formula parsing if the formula is to be calculated. For example, if you apply a formula like “=SUM(A1:A5)” and ask for the Value of the cell, then you would get a #NAME! error returned. This is not an exception throw – it’s an object that represents a particular error since formulas can result in errors.
+- **IgxExcelXlsModule** – This contains the load and save logic for xls (and related) type files – namely the Excel97to2003 related WorkbookFormats.
+- **IgxExcelXlsxModule** – This contains the load and save logic for xlsx (and related) type files – namely the Excel2007 related and StrictOpenXml WorkbookFormats.
+- **IgxExcelModule** – This references the other 4 modules and so basically ensures that all the functionality is loaded/available.
 
 ## Supported Versions of Microsoft Excel
 
 The following is a list of the supported versions of Excel.\*\*
 
-*   Microsoft Excel 97
+- Microsoft Excel 97
 
-*   Microsoft Excel 2000
+- Microsoft Excel 2000
 
-*   Microsoft Excel 2002
+- Microsoft Excel 2002
 
-*   Microsoft Excel 2003
+- Microsoft Excel 2003
 
-*   Microsoft Excel 2007
+- Microsoft Excel 2007
 
-*   Microsoft Excel 2010
+- Microsoft Excel 2010
 
-*   Microsoft Excel 2013
+- Microsoft Excel 2013
 
-*   Microsoft Excel 2016
+- Microsoft Excel 2016
 
 > \[!Note]
 > The Excel Library does not support the Excel Binary Workbook (.xlsb) format at this time.

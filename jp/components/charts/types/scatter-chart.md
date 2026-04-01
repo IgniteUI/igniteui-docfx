@@ -2,6 +2,7 @@
 title: Angular 散布図 | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular 散布図
 _keywords: Angular Charts, Scatter Chart, Infragistics, Angular チャート, 散布図, インフラジスティックス
+_license: commercial
 mentionedTypes: ["XamDataChart", "ScatterSeries", "ScatterLineSeries", "ScatterSplineSeries", "HighDensityScatterSeries", "ScatterAreaSeries", "ScatterContourSeries", "Series"]
 namespace: Infragistics.Controls.Charts
 _language: ja
@@ -93,11 +94,11 @@ Angular 散布等高線チャートは、X データと Y データの三角形�
 
 関連するチャートタイプの詳細については、以下のトピックを参照してください。
 
-*   [エリア チャート](area-chart.md)
-*   [バブル チャート](bubble-chart.md)
-*   [折れ線チャート](line-chart.md)
-*   [スプライン チャート](spline-chart.md)
-*   [シェープ チャート](shape-chart.md)
+- [エリア チャート](area-chart.md)
+- [バブル チャート](bubble-chart.md)
+- [折れ線チャート](line-chart.md)
+- [スプライン チャート](spline-chart.md)
+- [シェープ チャート](shape-chart.md)
 
 ## API リファレンス
 

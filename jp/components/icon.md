@@ -1,7 +1,8 @@
 ---
-title: Icon コンポーネント
+title: Icon コンポーネント | MITライセンス
 _description: Ignite UI for Angular Icon コンポーネントを使用して、様々なアイコンおよびフォント セットを統合して交互に使用し、カスタム色を定義できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スィート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Icon コンポーネント, Angular Icon コントロール
+_license: MIT
 _language: ja
 ---
 
@@ -11,9 +12,9 @@ _language: ja
 
 ## Angular Icon の例
 
-<code-view style="height: 75px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/icon-sample-1" alt="Angular Icon の例">
+<code-view style="height: 75px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-display/icon-sample-1/" alt="Angular Icon の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -33,7 +34,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 ```typescript
 // app.module.ts
 
-import { IgxIconModule } from 'igniteui-angular';
+import { IgxIconModule } from 'igniteui-angular/icon';
 // import { IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -51,7 +52,7 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IgxIconComponent } from 'igniteui-angular';
+import { IgxIconComponent } from 'igniteui-angular/icon';
 // import { IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -126,9 +127,9 @@ SVG 画像はアイコンとして使用できます。はじめに [`IgxIconSer
 
 [`addSvgIcon`]({environment:angularApiUrl}/classes/igxiconservice.html#addSvgIcon) メソッドを SVG ファイルをキャッシュにインポートするために使用します。SVG をキャッシュした場合、アプリケーションのどこでも使用できるようになります。アイコン名とファイル URL がメソッドに必須のパラメーターです。ファミリも指定できます。HTML マークアップの SVG ファイルを使用できます。または `addSvgIconFromText` メソッドを使用して SVG ファイルをインポートして、SVC テキスト コンテンツを使用できます。
 
-* 同じ名前のアイコンが 2 つある場合に同じファミリ SVG アイコンが優先順位に従って表示されます。
-* SVG ファイルの画像の幅と高さは指定しないことをお勧めします。
-* 追加のポリフィル スクリプトがインターネット エクスプローラーで必要な場合があります。
+- 同じ名前のアイコンが 2 つある場合に同じファミリ SVG アイコンが優先順位に従って表示されます。
+- SVG ファイルの画像の幅と高さは指定しないことをお勧めします。
+- 追加のポリフィル スクリプトがインターネット エクスプローラーで必要な場合があります。
 
 ```typescript
 constructor(private iconService: IgxIconService) { }
@@ -143,9 +144,9 @@ public ngOnInit() {
 <igx-icon name="contains" family="filter-icons"></igx-icon>
 ```
 
-<code-view style="height: 70px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/svg-icon-sample" >
+<code-view style="height: 70px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-display/svg-icon-sample/" >
 </code-view>
 
 ## マテリアル シンボル
@@ -179,9 +180,9 @@ public ngOnInit() {
 }
 ```
 
-<code-view style="height: 70px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/material-symbols" >
+<code-view style="height: 70px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-display/material-symbols/" >
 </code-view>
 
 マテリアル シンボル スタイルの詳細については、[`公式ドキュメント`](https://fonts.google.com/icons)をご覧ください。
@@ -222,7 +223,7 @@ npm i xmlhttprequest
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法は、[`icon-theme`]({environment:sassApiUrl}/index.html#function-icon-theme) を拡張し、必要に応じてアイコンをカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成する方法です。
+最も簡単な方法は、[`icon-theme`]({environment:sassApiUrl}/themes#function-icon-theme) を拡張し、必要に応じてアイコンをカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成する方法です。
 
 ```scss
 $custom-icon-theme: icon-theme(
@@ -234,16 +235,52 @@ $custom-icon-theme: icon-theme(
 最後には、カスタム アイコン テーマをアプリケーションに渡します。
 
 ```scss
-@include css-vars($custom-icon-theme);
+:host {
+  @include tokens($custom-icon-theme);
+}
 ```
 
 ### デモ
 
-<code-view style="height:75px" 
+<code-view style="height:75px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/icon-styling" alt="Angular Icon の例">
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-display/icon-styling/" alt="Angular Icon の例">
 </code-view>
+
+### SVG の制限
+
+カスタム SVG アイコンを使用する場合、[`icon-theme`]({environment:sassApiUrl}/themes#function-icon-theme) は `<svg>` 要素自体の色のみを適用および上書きできることに注意することが重要です。SVG 内に `<path>`、`<rect>`、`<circle>`、`<g>` などの子要素が含まれており、それらにハードコードされたカラー値が設定されている場合、その色はテーマから上書きできません。
+
+例:
+
+```html
+<svg>
+    <path fill="#050d42"/>
+</svg>
+```
+
+このような場合、アイコンは常に `<path>` 要素内で定義された `#050d42` の色を使用し、テーマで指定された色は反映されません。
+
+```html
+<svg fill="#050d42">
+    <path .../>
+</svg>
+```
+
+ここでは、塗りつぶしの色が `<svg>` 要素に適用されているため、[`icon-theme`]({environment:sassApiUrl}/themes#function-icon-theme) で提供されるカスタム カラーで上書きできます。
+
+アイコン全体を [`icon-theme`]({environment:sassApiUrl}/themes#function-icon-theme) を使用してスタイル設定できるように、SVG 子要素にハードコードされた色を使用しないことをお勧めします。ただし、子要素にハードコードされた色を適用する場合は、Ignite UI のカラー変数を使用することもできます。
+
+```html
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <!-- This element uses the theme color from the igx-icon component -->
+  <path d="M12 2L15 8H9L12 2Z" />
+
+  <!-- This element uses an accent color from Ignite UI palette -->
+  <circle cx="12" cy="17" r="4" fill="var(--ig-primary-500)" />
+</svg>
+```
 
 ### カスタム サイズ変更
 
@@ -255,7 +292,7 @@ igx-icon {
 }
 ```
 
-または、ユニバーサル変数 `--igx-icon-size` を使用して、すべてのインスタンスをターゲットにすることもできます。
+または、ユニバーサル変数 `--ig-icon-size` を使用して、すべてのインスタンスをターゲットにすることもできます。
 
 ```html
 <div class="my-app">
@@ -265,7 +302,7 @@ igx-icon {
 
 ```scss
 .my-app {
-  --igx-icon-size: 50px;
+  --ig-icon-size: 50px;
 }
 ```
 
@@ -279,12 +316,47 @@ igx-icon {
 
 詳細については、[サイズ](display-density.md)の記事をご覧ください。
 
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して `icon` をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-icon`、`dark-icon`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[icon-theme]({environment:sassApiUrl}/themes#function-icon-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-icon class="!light-icon ![--color:#7B9E89] ![--size:48px]">person</igx-icon>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、icon は次のようになります:
+
+<div class="sample-container loading" style="height:60px">
+    <iframe id="icon-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/data-display/icon-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
 ## API リファレンス
 
 <div class="divider--half"></div>
 
-* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
-* [IgxIconComponent スタイル]({environment:sassApiUrl}/index.html#function-icon-theme)
+- [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+- [IgxIconComponent スタイル]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## その他のリソース
 
@@ -292,5 +364,5 @@ igx-icon {
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

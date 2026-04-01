@@ -2,6 +2,7 @@
 title: Angular マップ | データ可視化ツール | JSON ファイルのバインディング | インフラジスティックス
 _description: インフラジスティックスの Angular マップを使用して、ビュー モデルの地理的位置や JSON ファイルからロードされた地理的位置を含むデータの表示方法について説明します。Ignite UI for Angular マップのサンプルを是非お試しください!
 _keywords: Angular map, JSON files, Ignite UI for Angular, Infragistics, data binding, Angular マップ, JSON ファイル, データ バインディング, インフラジスティックス
+_license: commercial
 mentionedTypes: ["XamGeographicMap", "Series"]
 namespace: Infragistics.Controls.Maps
 _language: ja
@@ -121,9 +122,9 @@ export class MapBindingDataJsonPointsComponent implements AfterViewInit {
 
 ## API リファレンス
 
-*   [`IgxGeographicHighDensityScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographichighdensityscatterseriescomponent.html)
-*   [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicsymbolseriescomponent.html)
-*   `GeographicMap`
-*   `DataSource`
-*   [`latitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicsymbolseriescomponent.html#latitudeMemberPath)
-*   [`longitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicsymbolseriescomponent.html#longitudeMemberPath)
+- [`IgxGeographicHighDensityScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographichighdensityscatterseriescomponent.html)
+- [`IgxGeographicSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicsymbolseriescomponent.html)
+- `GeographicMap`
+- `DataSource`
+- [`latitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicsymbolseriescomponent.html#latitudeMemberPath)
+- [`longitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicsymbolseriescomponent.html#longitudeMemberPath)

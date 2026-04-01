@@ -2,6 +2,7 @@
 title: Angular ラジアル チャート | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular ラジアル チャート
 _keywords: Angular Charts, Radial Chart, Infragistics, Angular チャート, ラジアル チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ["XamDataChart", "RadialLineSeries", "Series"]
 namespace: Infragistics.Controls.Charts
 _language: ja
@@ -65,9 +66,7 @@ Ignite UI for Angular ラジアル折れ線チャートは、データ ポイン
 
 ## Angular ラジアル チャートのスタイル設定
 
-ラジアル チャートを作成したら、線の色、マーカーの種類、またはそれらのマーカーのアウトライン色の変更など、スタイルをさらにカスタマイズしたい場合があります。
-
-この例は、[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) コントロールのスタイルをカスタマイズする方法を示しています。
+ラジアル チャートを作成したら、線の色、マーカーの種類、またはそれらのマーカーのアウトライン色の変更など、スタイルをさらにカスタマイズしたい場合があります。この例は、[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) コントロールのスタイルをカスタマイズする方法を示しています。
 
 <code-view style="height: 600px" alt="Angular ラジアル エリア チャートのスタイル設定"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -88,24 +87,24 @@ Ignite UI for Angular ラジアル折れ線チャートは、データ ポイン
 
 関連するチャート タイプの詳細については、以下のトピックを参照してください。
 
-*   [エリア チャート](area-chart.md)
-*   [縦棒チャート](column-chart.md)
-*   [ドーナツ チャート](donut-chart.md)
-*   [折れ線チャート](line-chart.md)
-*   [円チャート](pie-chart.md)
+- [エリア チャート](area-chart.md)
+- [縦棒チャート](column-chart.md)
+- [ドーナツ チャート](donut-chart.md)
+- [折れ線チャート](line-chart.md)
+- [円チャート](pie-chart.md)
 
 ## API リファレンス
 
 以下は、上記のセクションで説明した API メンバーのリストです。
 
-*   [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)
-*   [`IgxRadialAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxradialareaseriescomponent.html)
-*   [`IgxRadialColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxradialcolumnseriescomponent.html)
-*   [`IgxRadialLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxradiallineseriescomponent.html)
-*   [`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxradialpieseriescomponent.html)
-*   `ItemsSource`
-*   `AngleAxisName`
-*   `ValueAxisName`
-*   [`valueMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxanchoredradialseriescomponent.html#valueMemberPath)
-*   [`IgxCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategoryangleaxiscomponent.html)
-*   [`IgxNumericRadiusAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxnumericradiusaxiscomponent.html)
+- [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)
+- [`IgxRadialAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxradialareaseriescomponent.html)
+- [`IgxRadialColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxradialcolumnseriescomponent.html)
+- [`IgxRadialLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxradiallineseriescomponent.html)
+- [`IgxRadialPieSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxradialpieseriescomponent.html)
+- `ItemsSource`
+- `AngleAxisName`
+- `ValueAxisName`
+- [`valueMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxanchoredradialseriescomponent.html#valueMemberPath)
+- [`IgxCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategoryangleaxiscomponent.html)
+- [`IgxNumericRadiusAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxnumericradiusaxiscomponent.html)

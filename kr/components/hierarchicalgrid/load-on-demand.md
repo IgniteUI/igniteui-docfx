@@ -18,7 +18,7 @@ Ignite UI for Angular [`IgxHierarchicalGrid`]({environment:angularApiUrl}/classe
 
 <code-view style="height:620px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-lod" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-lod/" >
 </code-view>
 
 <div class="divider--half"></div>

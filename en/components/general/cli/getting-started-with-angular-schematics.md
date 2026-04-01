@@ -5,11 +5,13 @@ _keywords: angular cli, ignite ui for angular, infragistics
 ---
 
 ## Getting Started with Ignite UI for Angular Schematics
+
 To get started install [Ignite UI for Angular Schematics](https://github.com/IgniteUI/igniteui-cli/tree/master/packages/ng-schematics) globally:
 
 ```cmd
 npm i -g @igniteui/angular-schematics
 ```
+
 The above install will make the schematics available to use a collection parameter for the `ng  new` command.
 
 If you are using `yarn` package manager:
@@ -20,7 +22,7 @@ yarn global add @igniteui/angular-schematics
 
 ### Using guided experience
 
-The shortest and easiest way to bootstrap an application is to use the [step by step guide using Ignite UI for Angular Schematics](step-by-step-guide-using-angular-schematics.md). 
+The shortest and easiest way to bootstrap an application is to use the [step by step guide using Ignite UI for Angular Schematics](step-by-step-guide-using-angular-schematics.md).
 
 To activate the guide using the Ignite UI for Angular Schematics run:
 
@@ -120,7 +122,7 @@ Additionally, you can specify **arguments** to control the theme or skip package
     <code>--template</code>
   </p>
   <p>
-    Use this option if there are different project templates for a specific framework type. 
+    Use this option if there are different project templates for a specific framework type.
     Currently this option is available only for Ignite UI for Angular igx-ts project types.</p>
 </details>
 
@@ -133,6 +135,7 @@ With Schematics, use `ng generate` with the Ignite UI for Angular collection and
 ```cmd
 ng g @igniteui/angular-schematics:component grid newGrid
 ```
+
 List of all the [available templates](component-templates.md).
 
 Additionally, you can specify the module in which the component will be registered or skip the auto-generation of app navigation route:
@@ -144,7 +147,7 @@ Additionally, you can specify the module in which the component will be register
   </p>
   <p>
     <i>note: module argument is applicable only in Angular projects.</i>
-  </p> 
+  </p>
   <p>
     Path to the module.ts file, relative to the /src/app/ folder, for the module where the new component should be registered:
   </p>

@@ -93,7 +93,7 @@ The usefullnes of thеse simple to use single-point API's allows you to achieve 
 
 <code-view style="height:960px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-state" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-state/" >
 </code-view>
 
 }
@@ -116,7 +116,7 @@ public initColumns(column: IgxColumnComponent) {
 
 <code-view style="height:950px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-state" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-state/" >
 </code-view>
 
 }
@@ -124,20 +124,20 @@ public initColumns(column: IgxColumnComponent) {
 
 <code-view style="height:660px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-state" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-state/" >
 </code-view>
 
 } -->
 <div class="divider--half"></div>
 
 
-### API References
+## API References
 
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 * [IgxGridStateDirective]({environment:angularApiUrl}/classes/igxgridstatedirective.html)
 
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)

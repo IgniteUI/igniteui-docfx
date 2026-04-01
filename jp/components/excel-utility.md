@@ -2,6 +2,7 @@
 title: Angular Excel ライブラリ | Excel ユーティリティ | インフラジスティックス
 _description: インフラジスティックスの Angular Excel ライブラリは、Microsoft Excel 機能を使用してスプレッドシート データを使用した作業が可能になります。Ignite UI for Angular Excel ライブラリを使用して Excel からアプリケーションにデータを簡単に転送できる方法について説明します。
 _keywords: excel library, Ignite UI for Angular, Infragistics, saving files, loading files, WorkbookFormat, Excel ライブラリ, ファイルの保存, ファイルの読み込み, インフラジスティックス
+_license: commercial
 mentionedTypes: ["Workbook", "WorkbookFormat", "WorkbookSaveOptions"]
 _language: ja
 ---
@@ -115,6 +116,6 @@ export class ExcelUtility {
 
 ## API リファレンス
 
-*   [`WorkbookFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_excel.workbookformat.html)
-*   [`WorkbookSaveOptions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbooksaveoptions.html)
-*   [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbook.html)
+- [`WorkbookFormat`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_excel.workbookformat.html)
+- [`WorkbookSaveOptions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbooksaveoptions.html)
+- [`Workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.workbook.html)

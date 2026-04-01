@@ -2,6 +2,7 @@
 title: Angular ページ レイアウトの管理 | ドック マネージャー | Ignite UI | インフラジスティックス
 _description: ピン固定、サイズ変更、移動、非表示が可能なペインでドック マネージャーを使用して Angular アプリケーションのレイアウトをカスタマイズする方法を説明します。
 _keywords: manage angular page layout, Ignite UI for Angular, Infragistics, Angular ページ レイアウトの管理, インフラジスティックス
+_license: commercial
 _language: ja
 ---
 # ドック マネージャー
@@ -11,9 +12,9 @@ Ignite UI Dock Manager コンポーネントは、ペインでアプリケーシ
 ## Angular ドック マネージャーの例
 
 
-<code-view style="height: 600px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/dock-manager-sample" alt="Angular ドック マネージャーの例">
+<code-view style="height: 600px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/layouts/dock-manager-sample/" alt="Angular ドック マネージャーの例">
 </code-view>
 
 
@@ -21,6 +22,7 @@ Ignite UI Dock Manager コンポーネントは、ペインでアプリケーシ
 
 
 ## 使用方法
+
 ドック マネージャーは標準の [Web コンポーネント](https://developer.mozilla.org/ja-JP/docs/Web/Web_Components)であり、Angular アプリケーションで使用できます。
 
 以下の手順に従って、ドック マネージャーのパッケージを Angular プロジェクトに追加し、コンポーネントを使用するためにセットアップします。
@@ -42,11 +44,12 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 })
 export class AppModule {}
 ```
-`main.ts` ファイルの `defineCustomElements()` 関数を呼び出します。
+
+`main.ts` ファイルの `defineComponents()` 関数を呼び出します。
 
 ```typescript
 import { AppModule } from './app/app.module';
-import { defineCustomElements } from 'igniteui-dockmanager/loader';
+import { defineComponents } from 'igniteui-dockmanager';
 import { enableProdMode } from '@angular/core';
 import { environment } from '.environments/environment';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
@@ -58,7 +61,7 @@ if (environment.production) {
 platformBrowserDynamic().bootstrapModule(AppModule)
     .catch(err => console.log(err));
 
-defineCustomElements();
+defineComponents(IgcDockManagerComponent);
 ```
 
 Angular コンポーネント テンプレートで Dock Manager コンポーネントを使用する準備ができました。タグ名を使用します。

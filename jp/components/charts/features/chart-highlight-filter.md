@@ -2,6 +2,7 @@
 title: Angular チャートのハイライト表示フィルター | データ可視化 | インフラジスティックス
 _description: Infragistics の Angular チャートのハイライト表示フィルター
 _keywords: Angular Charts, Highlighting, Filtering, Infragistics, Angular チャート, ハイライト表示, フィルターリング, インフラジスティックス
+_license: commercial
 mentionedTypes: ["CategoryChart", "XamDataChart", "Series", "HighlightedValuesDisplayMode"]
 namespace: Infragistics.Controls.Charts
 _language: ja
@@ -86,9 +87,9 @@ HighlightedHighMemberPath, HighlightedLowMemberPath, HighlightedOpenMemberPath, 
 
 関連するチャート機能の詳細については、次のトピックを参照してください。
 
-*   [チャートのハイライト表示](chart-highlighting.md)
-*   [チャートのデータ ツールチップ](chart-data-tooltip.md)
-*   [チャートのデータ集計](chart-data-aggregations.md)
+- [チャートのハイライト表示](chart-highlighting.md)
+- [チャートのデータ ツールチップ](chart-data-tooltip.md)
+- [チャートのデータ集計](chart-data-aggregations.md)
 
 ## API リファレンス
 

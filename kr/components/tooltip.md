@@ -15,7 +15,7 @@ While most tooltips have a limited number of available positions, with the [`igx
 
 <code-view style="height:450px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-simple" >
+           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-simple/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -310,7 +310,7 @@ If all went well, this is how our location and tooltip should look like:
 
 <code-view style="height:400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-rich" >
+           iframe-src="{environment:demosBaseUrl}/interactions/tooltip-rich/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -333,7 +333,7 @@ Extra care should be taken in the following scenarios:
 - The tooltip is used with a manually implemented behavior (e.g. manually show/hide) instead of the built-in one.
 - The target element is unfocusable.
 
-### API References
+## API References
 
 In this article we learned how to create, configure and style awesome tooltips for the elements on our page! We also used some additional Ignite UI for Angular components like icons, avatars and cards to improve on the design of our application! The respective APIs are listed below:
 
@@ -353,17 +353,17 @@ Additional components and/or directives that were used:
 
 Styles:
 
-* [IgxTooltipDirective Styles]({environment:sassApiUrl}/index.html#function-tooltip-theme)
-* [IgxAvatarComponent Styles]({environment:sassApiUrl}/index.html#function-avatar-theme)
-* [IgxButtonDirective Styles]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxCardComponent Styles]({environment:sassApiUrl}/index.html#function-card-theme)
-* [IgxIconComponent Styles]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxSliderComponent Styles]({environment:sassApiUrl}/index.html#function-slider-theme)
-* [IgxSwitchComponent Styles]({environment:sassApiUrl}/index.html#function-switch-theme)
+* [IgxTooltipDirective Styles]({environment:sassApiUrl}/themes#function-tooltip-theme)
+* [IgxAvatarComponent Styles]({environment:sassApiUrl}/themes#function-avatar-theme)
+* [IgxButtonDirective Styles]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxCardComponent Styles]({environment:sassApiUrl}/themes#function-card-theme)
+* [IgxIconComponent Styles]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxSliderComponent Styles]({environment:sassApiUrl}/themes#function-slider-theme)
+* [IgxSwitchComponent Styles]({environment:sassApiUrl}/themes#function-switch-theme)
 
 <div class="divider"></div>
 
-### Additional Resources
+## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

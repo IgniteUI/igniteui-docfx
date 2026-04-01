@@ -1,7 +1,8 @@
 ---
-title: Angular ページレイアウトの管理 | タイル マネージャー | Ignite UI | インフラジスティックス
+title: Angular ページレイアウトの管理 | タイル マネージャー | Ignite UI | インフラジスティックス | MITライセンス
 _description: Ignite UI for Angular Tile Manager コンポーネントを使用すると、コンテンツを個々のタイルに表示できます。
 _keywords: Angular ページ レイアウトの管理, Ignite UI for Angular, UI コントロール, Angular ウィジェット, Web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular タイル マネージャー, インフラジスティックス, タイル, Angular タイル マネージャー コンポーネント, Angular タイル マネージャー コントロール
+_license: MIT
 _language: ja
 ---
 # Angular Tile Manager (タイル マネージャー) の概要
@@ -10,11 +11,11 @@ Tile Manager コンポーネントを使用すると、コンテンツを個々�
 
 ## Angular Tile Manager の例
 
-次の Ignite UI for Angular Tile Manager の例では、コンポーネントの動作を示しています。 
+次の Ignite UI for Angular Tile Manager の例では、コンポーネントの動作を示しています。
 
 <code-view style="height:752px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tile-manager-sample" alt="Angular Tile Manager の例">
+           iframe-src="{environment:demosBaseUrl}/layouts/tile-manager-sample/" alt="Angular Tile Manager の例">
 </code-view>
 <div class="divider--half"></div>
 
@@ -38,6 +39,7 @@ import { defineComponents, IgcTileManagerComponent } from 'igniteui-webcomponent
 
 defineComponents(IgcTileManagerComponent);
 ```
+
 また、コンポーネントの構成に `CUSTOM_ELEMENTS_SCHEMA` スキーマを含める必要があります。
 
 ```typescript
@@ -53,7 +55,7 @@ export class AppComponent {
 
 ## 使用方法
 
-タイル マネージャーは、最大化状態または通常状態でのタイルの配置を管理する基本的なタイル レイアウト動作を提供します。タイルはそれぞれ独立してサイズを設定でき、複雑なレイアウトを構築できます。エンドユーザーはドラッグ アンド ドロップによる直感的な操作で柔軟にタイルを並べ替えることが可能です。 
+タイル マネージャーは、最大化状態または通常状態でのタイルの配置を管理する基本的なタイル レイアウト動作を提供します。タイルはそれぞれ独立してサイズを設定でき、複雑なレイアウトを構築できます。エンドユーザーはドラッグ アンド ドロップによる直感的な操作で柔軟にタイルを並べ替えることが可能です。
 
 タイル マネージャーでは、使用できる 2 つのコンポーネントが提供されます。
 - `IgcTileComponent` - このコンポーネントは、タイル マネージャー内に表示される個々のタイルを表します。

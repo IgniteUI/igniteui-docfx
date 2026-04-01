@@ -14,7 +14,7 @@ _language: kr
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout/" >
 </code-view>
 
 
@@ -107,7 +107,7 @@ The demo below adds additional navigation down/up via the <kbd>Enter</kbd> and <
 
 <code-view style="height:605px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-mrl-custom-navigation" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-mrl-custom-navigation/" >
 </code-view>
 
 
@@ -131,7 +131,7 @@ By default we have set the same columns as our previous sample, but it can be cl
 </div>
 
 ### Styling
-The igxGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
+The igxGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The grid's [theme]({environment:sassApiUrl}/themes#function-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid. 
 
 In the below steps, we are going through the steps of customizing the grid's Multi Row Layout styling.     
 
@@ -143,7 +143,7 @@ To begin the customization of the Multi Row Layout feature, you need to import t
 ```   
 
 #### Defining custom theme
-Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the parameters, required to customize the feature layout as desired.   
+Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) and accepts the parameters, required to customize the feature layout as desired.   
 
 ```scss
 $custom-theme: grid-theme(
@@ -159,7 +159,7 @@ $custom-theme: grid-theme(
 ```    
 
 #### Defining a custom color palette
-In the approach, that was described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
+In the approach, that was described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions.   
 `igx-palette` generates a color palette, based on provided primary and secondary colors.  
 
  ```scss
@@ -246,7 +246,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 <code-view style="height:755px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout-styling" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-multi-row-layout-styling/" >
 </code-view>
 
 
@@ -254,7 +254,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 <div class="divider--half"></div>
 
 * [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameComponent 스타일]({environment:sassApiUrl}/themes#function-grid-theme)
 * [IgxColumnLayoutComponent]({environment:angularApiUrl}/classes/igxcolumnlayoutcomponent.html)
 * [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 <div class="divider--half"></div>

@@ -2,6 +2,7 @@
 title: Angular Map | Data Visualization Tools | Geographic Series Types | Infragistics
 _description: Use Infragistics Angular map's series to display geo-spatial data as points such as locations of cities, polylines such as road connections, or polygons such as shape of countries in a geographic context. Learn more about Ignite UI for Angular map's series!
 _keywords: Angular map, geographic series, Ignite UI for Angular, Infragistics
+_license: commercial
 mentionedTypes: ['XamGeographicMap', 'Series']
 ---
 
@@ -16,14 +17,14 @@ All types of geographic series are always rendered on top of the geographic imag
 
 The Angular Geographic Map component supports the following types of geographic series:
 
--   [Using Scatter Symbol Series](geo-map-type-scatter-symbol-series.md)
--   [Using Scatter Proportional Series](geo-map-type-scatter-bubble-series.md)
--   [Using Scatter Contour Series](geo-map-type-scatter-contour-series.md)
--   [Using Scatter Density Series](geo-map-type-scatter-density-series.md)
--   [Using Scatter Area Series](geo-map-type-scatter-area-series.md)
--   [Using Shape Polygon Series](geo-map-type-shape-polygon-series.md)
--   [Using Shape Polyline Series](geo-map-type-shape-polyline-series.md)
+- [Using Scatter Symbol Series](geo-map-type-scatter-symbol-series.md)
+- [Using Scatter Proportional Series](geo-map-type-scatter-bubble-series.md)
+- [Using Scatter Contour Series](geo-map-type-scatter-contour-series.md)
+- [Using Scatter Density Series](geo-map-type-scatter-density-series.md)
+- [Using Scatter Area Series](geo-map-type-scatter-area-series.md)
+- [Using Shape Polygon Series](geo-map-type-shape-polygon-series.md)
+- [Using Shape Polyline Series](geo-map-type-shape-polyline-series.md)
 
-    ## API Members
+  ## API Members
 
--   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html)
+- [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igxgeographicmapcomponent.html)

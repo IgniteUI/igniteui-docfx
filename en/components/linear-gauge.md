@@ -2,6 +2,7 @@
 title: Angular Linear Gauge | Data Visualization Tools | Infragistics
 _description: Use Infragistics' Angular linear gauge control to visualize data with a simple and concise view. Learn about the Ignite UI for Angular linear gauge configurable elements!
 _keywords: linear gauge, Ignite UI for Angular, Infragistics, animation, labels, needle, scales, ranges, tick marks
+_license: commercial
 mentionedTypes: ["XamLinearGauge"]
 namespace: Infragistics.Controls.Gauges
 ---
@@ -124,11 +125,11 @@ The linear gauge can be modified to show a second needle. This will make the mai
 ```html
 <igx-linear-gauge
     #linearGauge
-    height="80px" 
+    height="80px"
     width="400px"
     value=70
-    minimumValue=0 
-    maximumValue=100 
+    minimumValue=0
+    maximumValue=100
     interval=10
     labelInterval=10
     labelExtent=0.025
@@ -373,12 +374,12 @@ For your convenience, all above code snippets are combined into one code block b
 
 The following is a list of API members mentioned in the above sections:
 
-*   [`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargaugecomponent.html)
-*   [`IgxLinearGraphRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargraphrangecomponent.html)
+- [`IgxLinearGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargaugecomponent.html)
+- [`IgxLinearGraphRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargraphrangecomponent.html)
 
 ## Additional Resources
 
 You can find more information about other types of gauges in these topics:
 
-*   [Bullet Graph](bullet-graph.md)
-*   [Radial Gauge](radial-gauge.md)
+- [Bullet Graph](bullet-graph.md)
+- [Radial Gauge](radial-gauge.md)

@@ -153,7 +153,8 @@ Ignite UI for Angular のパレットは、テーマが明るいまたは暗い�
 
 これをもう少し明確にするために、明るいテーマと暗いテーマの両方での `gray` と `surface` のカラー バリエーションのリストを以下に示します:
 
-*Material Light:*
+_Material Light:_
+
 ```css
 :root {
   //...
@@ -166,7 +167,8 @@ Ignite UI for Angular のパレットは、テーマが明るいまたは暗い�
 }
 ```
 
-*Material Dark:*
+_Material Dark:_
+
 ```css
 :root {
   //...
@@ -203,5 +205,5 @@ Ignite UI for Angular のパレットは、テーマが明るいまたは暗い�
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

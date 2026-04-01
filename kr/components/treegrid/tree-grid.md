@@ -14,7 +14,7 @@ _language: kr
 
 <code-view style="height:850px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
-           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey" >
+           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -220,7 +220,7 @@ export class MyComponent implements OnInit {
 
 <code-view style="height:450px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
-           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-primaryforeignkey" >
+           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-primaryforeignkey/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -293,7 +293,7 @@ See the [Grid Sizing](sizing.md) topic.
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
 * [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent 스타일]({environment:sassApiUrl}/#function-grid-theme)
+* [IgxGridComponent 스타일]({environment:sassApiUrl}/themes#function-grid-theme)
 * [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
 * [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 

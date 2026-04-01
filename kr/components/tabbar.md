@@ -18,7 +18,7 @@ _language: kr
 
 <code-view style="height: 600px; width: 400px; border: 1px solid gray;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/tabbar" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabbar/" >
 </code-view>
 
 
@@ -56,7 +56,7 @@ If all went well, you should see the following in your browser:
 
 <code-view style="height: 200px; width: 300px; border: 1px solid gray;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-1/" >
 </code-view>
 
 
@@ -157,7 +157,7 @@ After these modifications our Bottom Navigation should look similar to this:
 
 <code-view style="height: 350px; width: 300px; border: 1px solid gray;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-2/" >
 </code-view>
 
 
@@ -339,19 +339,19 @@ And don't forget to include the following CSS definitions in order for the appli
 
 You can see the result of the code above at the beginning of this article in the [Bottom Navigation Demo](#bottom-navigation-demo) section.
 
-### API References
+## API References
 <div class="divider--half"></div>
 
 * [IgxAvatarComponent]({environment:angularApiUrl}/classes/igxavatarcomponent.html)
 * [IgxBottomNavComponent]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html)
-* [IgxBottomNavComponent Styles]({environment:sassApiUrl}/index.html#function-bottom-nav-theme)
+* [IgxBottomNavComponent Styles]({environment:sassApiUrl}/themes#function-bottom-nav-theme)
 * [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 * [IgxListComponent]({environment:angularApiUrl}/classes/igxlistcomponent.html)
 * [IgxListItemComponent]({environment:angularApiUrl}/classes/igxlistitemcomponent.html)
 * [IgxTabComponent]({environment:angularApiUrl}/classes/igxtabcomponent.html)
 * [IgxTabPanelComponent]({environment:angularApiUrl}/classes/igxtabpanelcomponent.html)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.

@@ -19,7 +19,7 @@ public pivotConfigHierarchy: IPivotConfiguration = {
 The following example show how to handle scenarios, where the data is already aggregated and how its structure should look like:
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-noop" alt="Angular Pivot Grid Custom Predefined Aggregations Example">
+           iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-noop/" alt="Angular Pivot Grid Custom Predefined Aggregations Example">
 </code-view>
 
 Users have the ability to achieve certain scenarios by feeding the pivot grid with already aggregated data.

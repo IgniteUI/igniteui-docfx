@@ -2,6 +2,7 @@
 title: Angular チャート タイトル | データ可視化ツール | インフラジスティックス
 _description: タイトル付きの Infragistics Ignite UI for Angular チャートをお試しください!
 _keywords: Angular charts, chart titles, titles, Ignite UI for Angular, Infragistics, Angular チャート, チャート タイトル, タイトル, インフラジスティックス
+_license: commercial
 mentionedTypes: ["CategoryChart"]
 namespace: Infragistics.Controls.Charts
 _language: ja

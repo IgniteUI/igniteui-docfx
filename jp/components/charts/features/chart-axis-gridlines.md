@@ -2,6 +2,7 @@
 title: Angular 軸グリッド線 | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular 軸グリッド線
 _keywords: Angular Axis, Gridlines, Infragistics, Angular 軸, グリッド線, インフラジスティックス
+_license: commercial
 mentionedTypes: ["DomainChart", "CategoryChart", "XYChart", "DomainChart", "XamDataChart", "NumericXAxis", "NumericYAxis", "NumericAxisBase" ]
 namespace: Infragistics.Controls.Charts
 _language: ja
@@ -111,8 +112,8 @@ _language: ja
 
 関連するチャート機能の詳細については、以下のトピックを参照してください。
 
-*   [軸レイアウト](chart-axis-layouts.md)
-*   [軸オプション](chart-axis-options.md)
+- [軸レイアウト](chart-axis-layouts.md)
+- [軸オプション](chart-axis-options.md)
 
 ## API リファレンス
 

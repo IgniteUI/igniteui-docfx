@@ -17,7 +17,7 @@ Custom templates for different areas of the [igx-combo]({environment:angularApiU
 
 <code-view style="height: 450px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-template" >
+           iframe-src="{environment:demosBaseUrl}/lists/combo-template/" >
 </code-view>
 
 

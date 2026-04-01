@@ -42,7 +42,7 @@ Finally, we have component themes. Palettes and Schemas wouldn't do much good on
 Typography is a separate module in our Sass theming framework, which is decoupled from the component themes. Although we have a default typeface of choice, we really want to give you the power to style your application in every single way. Typography is such an important part of that. We provide a method for changing the font family, the sizes and weights for headings, subheadings, buttons, body text, etc. in your app.
 <div class="divider--half"></div>
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Learn how to create themes:

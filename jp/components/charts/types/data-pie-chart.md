@@ -2,6 +2,7 @@
 title: Angular 円チャートとグラフ | Ignite UI for Angular
 _description: Ignite UI for Angular データ円チャートは、セクションに分割された円形の領域で構成される、円チャートを表示するための UI コントロールです。無料でお試しください。
 _keywords: Angular charts, pie chart, Ignite UI for Angular, Infragistics, data binding, slice selection, animation, highlighting, legend, Angular チャート, 円チャート, インフラジスティックス, データ バインディング, スライスの選択, アニメーション, ハイライト表示, 凡例
+_license: commercial
 mentionedTypes: ["DataPieChart", "XamDataChart", "OthersCategoryType", "SeriesSelectionMode", "SeriesSelectionBehavior", "SeriesHighlightingBehavior"]
 namespace: Infragistics.Controls.Charts
 _language: ja
@@ -30,30 +31,30 @@ Ignite UI for Angular データ円チャートは、データ セットのカテ
 
 Angular データ円チャートには、次のようなデータを分析するためのビューア ツールを提供するインタラクティブ機能が含まれています。
 
-*   凡例
-*   スライスの選択
-*   スライスのハイライト表示
-*   チャート アニメーション
+- 凡例
+- スライスの選択
+- スライスのハイライト表示
+- チャート アニメーション
 
 円チャートのベスト プラクティス:
 
-*   スライスまたはセグメントを、合計値または全体に比例するパーセンテージ値として比較します。
-*   カテゴリのグループがどのように小さなセグメントに分割されるかを示します。
-*   小規模で階層化されていないデータ セット (6 ～ 8 セグメント未満のデータ) を提示します。
-*   データ セグメントの合計が 100% になるようにします。
-*   データの順序を最大 (最高) から最小 (最低) に並べます。
-*   12 時の位置から始めて時計回りに続けるなどの標準的なプレゼンテーション手法を使用します。
-*   パーツのセグメント/スライスでカラー パレットを区別できるようにします。
-*   読みやすさを考慮して、セグメント内のデータ ラベルと凡例を比較します。
-*   理解しやすさに基づいて、円チャートの代わりに棒やリング などのチャートを選択します。
-*   比較分析のために複数の円チャートを隣り合わせに配置することは避けます。
+- スライスまたはセグメントを、合計値または全体に比例するパーセンテージ値として比較します。
+- カテゴリのグループがどのように小さなセグメントに分割されるかを示します。
+- 小規模で階層化されていないデータ セット (6 ～ 8 セグメント未満のデータ) を提示します。
+- データ セグメントの合計が 100% になるようにします。
+- データの順序を最大 (最高) から最小 (最低) に並べます。
+- 12 時の位置から始めて時計回りに続けるなどの標準的なプレゼンテーション手法を使用します。
+- パーツのセグメント/スライスでカラー パレットを区別できるようにします。
+- 読みやすさを考慮して、セグメント内のデータ ラベルと凡例を比較します。
+- 理解しやすさに基づいて、円チャートの代わりに棒やリング などのチャートを選択します。
+- 比較分析のために複数の円チャートを隣り合わせに配置することは避けます。
 
 以下の場合に円チャートを使用しないでください。
 
-*   時間の経過に伴う変化を比較する場合は、棒、折れ線、またはエリア チャートを使用します。
-*   正確なデータ比較が必要な場合は、棒、折れ線、またはエリア チャートを使用します。
-*   6 つまたは 8 つを超えるセグメント (大量のデータ) がある場合 — データ ストーリーに適している場合は、棒、折れ線、またはエリア チャートを検討してください。
-*   棒チャートで、ビューアが値の違いを認識しやすくなります。
+- 時間の経過に伴う変化を比較する場合は、棒、折れ線、またはエリア チャートを使用します。
+- 正確なデータ比較が必要な場合は、棒、折れ線、またはエリア チャートを使用します。
+- 6 つまたは 8 つを超えるセグメント (大量のデータ) がある場合 — データ ストーリーに適している場合は、棒、折れ線、またはエリア チャートを検討してください。
+- 棒チャートで、ビューアが値の違いを認識しやすくなります。
 
 ## Angular データ円チャートの凡例
 
@@ -76,19 +77,36 @@ ItemLegend バッジを変更することもできます。デフォルトでは
 
 <div class="divider--half"></div>
 
-## Angular 円チャートのその他カテゴリ
+## Angular 円チャートの Others (その他) カテゴリ
 
-円チャートの基本データに、小さい値を含む多くの項目が含まれる場合があります。この場合、Others カテゴリは、単一スライスへの複数のデータ値の自動集計を許可します。
+円チャートの基本データに、小さい値を含む多くの項目が含まれる場合があります。この場合、「その他」カテゴリは、単一スライスへの複数のデータ値の自動集計を許可します。
 
 [`IgxDataPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiechartcomponent.html) の「その他」カテゴリには、[`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryType)、[`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryThreshold)、[`othersCategoryText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryText) という 3 つの主要な構成可能なプロパティがあり、これらを使用して、チャート内の「その他」スライスの表示方法を構成できます。これらについては、それぞれ以下で説明します。
 
 [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryType) プロパティは、[`IgxDataPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiechartcomponent.html) の [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryThreshold) プロパティと連動して機能します。[`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryType) では、[`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryThreshold) を数値として評価するか、パーセンテージとして評価するかを定義できます。たとえば、数値を選択し、[`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryThreshold) を 5 に設定すると、5 未満の値を持つスライスはすべて「その他」カテゴリの一部になります。パーセント タイプで同じ値 5 を使用すると、[`IgxDataPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiechartcomponent.html) の合計値の 5 パーセント未満の値はすべて「その他」カテゴリの一部になります。
 
+チャートの Others スライスに含まれる基礎データ項目を取得するには、チャートの [`getOthersContext`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#getOthersContext) メソッドを利用できます。このメソッドの戻り値のタイプは、`Items` プロパティを公開する [`IgxOthersCategoryContextComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxotherscategorycontextcomponent.html) です。[`items`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxotherscategorycontextcomponent.html#items) プロパティは、Others スライス内の項目を含む配列を返します。さらに、Others スライスをクリックすると、`SeriesClick` イベントのイベント引数の `Item` プロパティもこの [`IgxOthersCategoryContextComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxotherscategorycontextcomponent.html) を返します。
+
 デフォルトでは、「その他」スライスは「その他」というラベルで表されます。チャートの [`othersCategoryText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryText) プロパティを変更することでこれを変更できます。
+
+### Angular Others (その他) のスライスのスタイル設定
+
+集約されたその他のスライスを他のスライスとは別にスタイル設定するには、次のプロパティを使用します。
+
+- `OthersCategoryBrush`\
+    「その他」のスライスに使用される塗りつぶし (ブラシ) を設定します。
+
+- `OthersCategoryOutline`\
+    「その他」のスライスに使用されるアウトライン (ストローク) を設定します。
+
+これらのプロパティは、「その他」のスライス (存在する場合) にのみ影響します。他のすべてのスライスは、通常のパレットと項目ごとの色付け動作を引き続き使用します。
+
+> \[!NOTE]
+> 「その他」のスライスは、チャートがそれを作成するように構成されている場合にのみレンダリングされます (たとえば、[`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryThreshold) が 0 より大きく、適切な [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryType) が設定されている場合)。「その他」のスライスが存在しない場合、`OthersCategoryBrush` と `OthersCategoryOutline` は表示上の効果はありません。
 
 [`IgxDataPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiechartcomponent.html) に「その他」カテゴリが表示されないようにするには、[`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryThreshold) を 0 に設定します。
 
-以下のサンプルは、[`IgxDataPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiechartcomponent.html) 内の Others スライスの使用方法を示しています。
+以下のサンプルは、[`IgxDataPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiechartcomponent.html) 内の「その他」スライスの使用方法を示しています。
 
 <code-view style="height: 600px" alt="Angular 円チャートのその他"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -107,17 +125,17 @@ ItemLegend バッジを変更することもできます。デフォルトでは
 
 [`selectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#selectionMode) プロパティは、円チャートのスライスが選択された場合にどのように反応するかを決定します。以下はその列挙体のオプションとその機能です。
 
-*   [`Brighten`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#Brighten): 選択したスライスがハイライト表示されます。
-*   [`FadeOthers`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#FadeOthers): 選択したスライスは同じ色のまま残り、他のスライスは色が薄くなります。
-*   [`FocusColorFill`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#FocusColorFill): 選択したスライスの背景がチャートの FocusBrush に変更されます。
-*   [`FocusColorOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#FocusColorOutline): 選択されたスライスには、チャートの FocusBrush によって定義された色のアウトラインが表示されます。
-*   [`FocusColorThickOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#FocusColorThickOutline): 選択されたスライスには、チャートの FocusBrush によって定義された色のアウトラインが表示されます。このアウトラインの太さは、コントロールの Thickness プロパティを使用して設定することもできます。
-*   [`GrayscaleOthers`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#GrayscaleOthers): 選択されていないスライスにはグレー色のフィルターが適用されます。
-*   [`None`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#None): 選択されたスライスには影響はありません。
-*   [`SelectionColorFill`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#SelectionColorFill): 選択されたスライスの背景がチャートの SelectionBrush に変更されます。
-*   [`SelectionColorOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#SelectionColorOutline): 選択されたスライスには、チャートの SelectionBrush によって定義された色のアウトラインが表示されます。
-*   [`SelectionColorThickOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#SelectionColorThickOutline): 選択されたスライスには、チャートの FocusBrush によって定義された色のアウトラインが表示されます。このアウトラインの太さは、コントロールの Thickness プロパティを使用して設定することもできます。
-*   [`ThickOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#ThickOutline): 選択されたスライスには、チャートの Thickness プロパティに応じて太さが異なるアウトラインが適用されます。
+- [`Brighten`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#Brighten): 選択したスライスがハイライト表示されます。
+- [`FadeOthers`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#FadeOthers): 選択したスライスは同じ色のまま残り、他のスライスは色が薄くなります。
+- [`FocusColorFill`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#FocusColorFill): 選択したスライスの背景がチャートの FocusBrush に変更されます。
+- [`FocusColorOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#FocusColorOutline): 選択されたスライスには、チャートの FocusBrush によって定義された色のアウトラインが表示されます。
+- [`FocusColorThickOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#FocusColorThickOutline): 選択されたスライスには、チャートの FocusBrush によって定義された色のアウトラインが表示されます。このアウトラインの太さは、コントロールの Thickness プロパティを使用して設定することもできます。
+- [`GrayscaleOthers`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#GrayscaleOthers): 選択されていないスライスにはグレー色のフィルターが適用されます。
+- [`None`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#None): 選択されたスライスには影響はありません。
+- [`SelectionColorFill`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#SelectionColorFill): 選択されたスライスの背景がチャートの SelectionBrush に変更されます。
+- [`SelectionColorOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#SelectionColorOutline): 選択されたスライスには、チャートの SelectionBrush によって定義された色のアウトラインが表示されます。
+- [`SelectionColorThickOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#SelectionColorThickOutline): 選択されたスライスには、チャートの FocusBrush によって定義された色のアウトラインが表示されます。このアウトラインの太さは、コントロールの Thickness プロパティを使用して設定することもできます。
+- [`ThickOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#ThickOutline): 選択されたスライスには、チャートの Thickness プロパティに応じて太さが異なるアウトラインが適用されます。
 
 スライスが選択されると、その基になるデータ項目がチャートの SelectedSeriesItems コレクションに追加されます。そのため、XamDataPieChart は SelectedSeriesItemsChanged イベントを公開して、スライスが選択されてこのコレクションが変更されたことを検出します。
 
@@ -138,18 +156,18 @@ ItemLegend バッジを変更することもできます。デフォルトでは
 
 [`highlightingBehavior`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#highlightingBehavior) 列挙プロパティは、スライスがどのようにハイライト表示されるかを決定します。以下はそのプロパティのオプションとその機能です。
 
-*   [`DirectlyOver`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.serieshighlightingbehavior.html#DirectlyOver): スライスは、マウスがその上に直接置かれている場合にのみハイライト表示されます。
-*   [`NearestItems`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.serieshighlightingbehavior.html#NearestItems): マウスの位置に最も近いスライスがハイライト表示されます。
-*   [`NearestItemsAndSeries`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.serieshighlightingbehavior.html#NearestItemsAndSeries): マウスの位置に最も近いスライスとシリーズがハイライト表示されます。
-*   [`NearestItemsRetainMainShapes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.serieshighlightingbehavior.html#NearestItemsRetainMainShapes): マウスの位置に最も近い項目がハイライト表示され、シリーズのメイン図形はハイライト表示されなくなります。
+- [`DirectlyOver`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.serieshighlightingbehavior.html#DirectlyOver): スライスは、マウスがその上に直接置かれている場合にのみハイライト表示されます。
+- [`NearestItems`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.serieshighlightingbehavior.html#NearestItems): マウスの位置に最も近いスライスがハイライト表示されます。
+- [`NearestItemsAndSeries`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.serieshighlightingbehavior.html#NearestItemsAndSeries): マウスの位置に最も近いスライスとシリーズがハイライト表示されます。
+- [`NearestItemsRetainMainShapes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.serieshighlightingbehavior.html#NearestItemsRetainMainShapes): マウスの位置に最も近い項目がハイライト表示され、シリーズのメイン図形はハイライト表示されなくなります。
 
 [`highlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#highlightingMode) 列挙プロパティは、データ円チャートのスライスがハイライト表示されたときにどのように反応するかを決定します。以下はそのプロパティのオプションとその機能です。
 
-*   [`Brighten`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#Brighten): マウスの位置がそのシリーズ上または近くにあると、そのシリーズの色が明るくなります。
-*   `BrightenSpecific`: マウスの位置が特定のスライスの上または近くにある場合、そのスライスの色が明るくなります。
-*   [`FadeOthers`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#FadeOthers): マウスの位置がそのシリーズ上または近くにある場合、そのシリーズは色を保持しますが、他の部分は薄く表示されます。
-*   `FadeOthersSpecific`: マウスの位置がそのスライスの上または近くにある場合、そのスライスの色は保持されますが、他のスライスの色は薄く表示されます。
-*   [`None`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#None): シリーズとスライスはハイライト表示されません。
+- [`Brighten`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#Brighten): マウスの位置がそのシリーズ上または近くにあると、そのシリーズの色が明るくなります。
+- `BrightenSpecific`: マウスの位置が特定のスライスの上または近くにある場合、そのスライスの色が明るくなります。
+- [`FadeOthers`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#FadeOthers): マウスの位置がそのシリーズ上または近くにある場合、そのシリーズは色を保持しますが、他の部分は薄く表示されます。
+- `FadeOthersSpecific`: マウスの位置がそのスライスの上または近くにある場合、そのスライスの色は保持されますが、他のスライスの色は薄く表示されます。
+- [`None`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.seriesselectionmode.html#None): シリーズとスライスはハイライト表示されません。
 
 以下の例は、[`IgxDataPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiechartcomponent.html) コンポーネントのマウスハイライト表示の動作を示しています。
 
@@ -196,19 +214,19 @@ ItemLegend バッジを変更することもできます。デフォルトでは
 
 ## その他のリソース
 
-*   [ドーナツ チャート](donut-chart.md)
-*   [極座標チャート](polar-chart.md)
-*   [ラジアル チャート](radial-chart.md)
+- [ドーナツ チャート](donut-chart.md)
+- [極座標チャート](polar-chart.md)
+- [ラジアル チャート](radial-chart.md)
 
 ## API リファレンス
 
 以下のテーブルは、上記のセクションで説明した API メンバーをリストします。
 
-*   [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiechartcomponent.html#chartType)
-*   [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryThreshold)
-*   [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryType)
-*   [`selectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#selectionMode)
-*   [`selectionBehavior`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#selectionBehavior)
+- [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiechartcomponent.html#chartType)
+- [`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryThreshold)
+- [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryType)
+- [`selectionMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#selectionMode)
+- [`selectionBehavior`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#selectionBehavior)
 
 |チャート タイプ       | コントロール名   | API メンバー |
 |-----------------|----------------|------------ |

@@ -30,7 +30,7 @@ While browsers natively provide content search functionality, most of the time t
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-search-sample" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-search-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -39,7 +39,7 @@ While browsers natively provide content search functionality, most of the time t
 
 <code-view style="height:600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-search" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-search/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -145,17 +145,17 @@ public exactMatch: boolean = false;
 #### 결과 수 표시
 총 결과 수와 함께 현재 검색 위치를 표시합니다! 그리드의 `lastSearchInfo` 속성을 사용하여 이것을 실행할 수 있습니다. 이 속성은 **find** 메소드를 사용할 때 자동으로 업데이트됩니다.
 
-- `@@igObjectRef.lastSearchInfo.matchInfoCache.length` 값은 총 결과 수입니다.
+- `@@igObjectRef.lastSearchInfo.matchCount` 값은 총 결과 수입니다.
 - `@@igObjectRef.lastSearchInfo.activeMatchIndex` 값은 현재 검색(일치)의 인덱스 위치입니다.
 
 ```html
 <!--searchgrid.component.html-->
 
-<div class="resultsText" *ngIf="@@igObjectRef.lastSearchInfo">
-    <span *ngIf="@@igObjectRef.lastSearchInfo.matchInfoCache.length > 0">
-        {{ @@igObjectRef.lastSearchInfo.activeMatchIndex + 1 }} of {{ @@igObjectRef.lastSearchInfo.matchInfoCache.length }} results
+<div class="resultsText">
+    <span *ngIf="@@igObjectRef.lastSearchInfo.matchCount > 0">
+        {{ @@igObjectRef.lastSearchInfo.activeMatchIndex + 1 }} of {{ @@igObjectRef.lastSearchInfo.matchCount }} results
     </span>
-    <span *ngIf="@@igObjectRef.lastSearchInfo.matchInfoCache.length == 0">
+    <span *ngIf="@@igObjectRef.lastSearchInfo.matchCount == 0">
         No results
     </span>
 </div>
@@ -294,11 +294,11 @@ public clearSearch() {
 <!--searchgrid.component.html-->
 
 <igx-suffix *ngIf="searchText.length > 0">
-    <div class="resultsText" *ngIf="@@igObjectRef.lastSearchInfo">
-        <span *ngIf="@@igObjectRef.lastSearchInfo.matchInfoCache.length > 0">
-            {{ @@igObjectRef.lastSearchInfo.activeMatchIndex + 1 }} of {{ @@igObjectRef.lastSearchInfo.matchInfoCache.length }} results
+    <div class="resultsText">
+        <span *ngIf="@@igObjectRef.lastSearchInfo.matchCount > 0">
+            {{ @@igObjectRef.lastSearchInfo.activeMatchIndex + 1 }} of {{ @@igObjectRef.lastSearchInfo.matchCount }} results
         </span>
-        <span *ngIf="@@igObjectRef.lastSearchInfo.matchInfoCache.length == 0">
+        <span *ngIf="@@igObjectRef.lastSearchInfo.matchCount == 0">
             No results
         </span>
     </div>
@@ -374,12 +374,12 @@ public clearSearch() {
 
 스타일:
 
-* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-grid-theme)
-* [IgxInputGroupComponent 스타일]({environment:sassApiUrl}/index.html#function-input-group-theme)
-* [IgxIconComponent 스타일]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxRippleDirective 스타일]({environment:sassApiUrl}/index.html#function-ripple-theme)
-* [IgxButtonDirective 스타일]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxChipComponent 스타일]({environment:sassApiUrl}/index.html#function-chip-theme)
+* [@@igxNameComponent 스타일]({environment:sassApiUrl}/themes#function-grid-theme)
+* [IgxInputGroupComponent 스타일]({environment:sassApiUrl}/themes#function-input-group-theme)
+* [IgxIconComponent 스타일]({environment:sassApiUrl}/themes#function-icon-theme)
+* [IgxRippleDirective 스타일]({environment:sassApiUrl}/themes#function-ripple-theme)
+* [IgxButtonDirective 스타일]({environment:sassApiUrl}/themes#function-button-theme)
+* [IgxChipComponent 스타일]({environment:sassApiUrl}/themes#function-chip-theme)
 
 ### 추가 리소스
 <div class="divider--half"></div>

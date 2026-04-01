@@ -13,7 +13,7 @@ _language: kr
 
 <code-view style="height: 600px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer" >
+           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -99,7 +99,7 @@ And the final result should look like this:
 
 <code-view style="height: 500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-simple" >
+           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-simple/" >
 </code-view>
 
 
@@ -138,7 +138,7 @@ Here's how that would would look applied to the previous example:
 
 <code-view style="height: 500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-pin" >
+           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-pin/" >
 </code-view>
 
 
@@ -187,7 +187,7 @@ The mini variant is commonly used in a persistent setup, so we've set `pin` and 
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-mini" >
+           iframe-src="{environment:demosBaseUrl}/menus/navigation-drawer-mini/" >
 </code-view>
 
 

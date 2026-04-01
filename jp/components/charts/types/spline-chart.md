@@ -2,6 +2,7 @@
 title: Angular スプライン チャート | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular スプライン チャート
 _keywords: Angular Charts, Spline Chart, Infragistics, Angular チャート, スプライン チャート, インフラジスティックス
+_license: commercial
 mentionedTypes: ["DomainChart", "CategoryChart", "XamDataChart", "SplineSeries", "StackedSplineSeries", "Stacked100SplineSeries", "Series", "CategoryChartType"]
 _language: ja
 ---
@@ -106,11 +107,11 @@ Ignite UI for Angular スプライン チャートは、スプラインのスム
 
 関連するチャートタイプの詳細については、以下のトピックを参照してください。
 
-*   [エリア チャート](area-chart.md)
-*   [折れ線チャート](spline-chart.md)
-*   [極座標チャート](polar-chart.md)
-*   [ラジアル チャート](radial-chart.md)
-*   [積層型チャート](stacked-chart.md)
+- [エリア チャート](area-chart.md)
+- [折れ線チャート](spline-chart.md)
+- [極座標チャート](polar-chart.md)
+- [ラジアル チャート](radial-chart.md)
+- [積層型チャート](stacked-chart.md)
 
 ## API リファレンス
 

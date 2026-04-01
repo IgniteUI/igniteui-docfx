@@ -2,6 +2,7 @@
 title: Angular Spreadsheet | Hyperlinks | Infragistics
 _description: Use Infragistics' Angular spreadsheet control to display hyperlinks in the Excel workbook, which can link to websites, file directories and other worksheets. View Ignite UI for Angular spreadsheet tutorials!
 _keywords: Excel Spreadsheet, hyperlinks, Ignite UI for Angular, Infragistics
+_license: commercial
 mentionedTypes: ["Spreadsheet"]
 ---
 
@@ -44,6 +45,6 @@ this.spreadsheet.activeWorksheet.hyperlinks().add(new WorksheetHyperlink("A1", "
 
 ## API References
 
-*   `Hyperlinks`
-*   [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html)
-*   [`WorksheetHyperlink`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheethyperlink.html)
+- `Hyperlinks`
+- [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html)
+- [`WorksheetHyperlink`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheethyperlink.html)

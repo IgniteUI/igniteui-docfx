@@ -13,7 +13,7 @@ The Angular Spreadsheet component allows displaying charts in your [`IgxSpreadsh
 
 <code-view style="height: 500px"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
-           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-adapter"  >
+           iframe-src="{environment:dvDemosBaseUrl}/excel/spreadsheet-adapter/"  >
 </code-view>
 
 <div class="divider--half"></div>

@@ -6,6 +6,7 @@ _language: ja
 ---
 
 # Ignite UI CLI を使用したステップ バイ ステップ ガイド
+
 利用可能なオプションでガイドを取得する場合、ステップバイステップ モードを初期化して新しいアプリケーションの作成およびセットアップ、同様に [Ignite UI CLI](getting-started-with-cli.md) で以前作成したプロジェクトを更新できます。
 
 Ignite UI CLI を使用してガイドを開始するには、`ig` コマンドを実行します。
@@ -13,7 +14,9 @@ Ignite UI CLI を使用してガイドを開始するには、`ig` コマンド�
 ```bash
 ig
 ```
+
 または
+
 ```bash
 ig new
 ```
@@ -27,7 +30,7 @@ ig new
     </a>
 </div>
 
-> [!Note] 
+> [!Note]
 > ステップ バイ ステップ モードは `Inquirer.js` に依存しています。[サポートされている端末](https://github.com/SBoudrias/Inquirer.js#support-os-terminals)を参照してください。
 
 
@@ -58,9 +61,11 @@ ig new
 Ignite UI CLI は、プロジェクトに追加できる複数のコンポーネント テンプレート、およびより詳細なシナリオ テンプレートをサポートしています。このモードは、プロジェクトの作成が完了した後、または以下のコマンドを使用して既存のプロジェクト内でアクティブにできます。
 
 Ignite UI CLI を使用する場合、`add` コマンドを実行します。
-```bash	
+
+```bash
 ig add
 ```
+
 新しいコントロールを追加することを選択した場合、カテゴリにグループ化された[使用可能なテンプレート](component-templates.md#コンポーネント-テンプレート)のリストが提供されます。
 
 ![](../../../images/general/ig-step-by-step-template-group.png)

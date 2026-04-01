@@ -16,7 +16,7 @@ The [`IgxQueryBuilderComponent`]({environment:angularApiUrl}/classes/igxquerybui
 
 <code-view style="height:530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder/query-builder-main" alt="Angular Query Builder Example">
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder/query-builder-main/" alt="Angular Query Builder Example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -112,7 +112,7 @@ $custom-drop-down: drop-down-theme(
 );
 ```
 
-In this example we only changed some of the parameters for the listed components, but the [`button-theme`]({environment:sassApiUrl}/index.html#function-button-theme), [`button-group-theme`]({environment:sassApiUrl}/index.html#function-button-group-theme), [`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme), [`drop-down-theme`]({environment:sassApiUrl}/index.html#function-drop-down-theme), [`input-group-theme`]({environment:sassApiUrl}/index.html#function-input-group-theme) themes provide way more parameters to control their respective styling.
+In this example we only changed some of the parameters for the listed components, but the [`button-theme`]({environment:sassApiUrl}/themes#function-button-theme), [`button-group-theme`]({environment:sassApiUrl}/themes#function-button-group-theme), [`chip-theme`]({environment:sassApiUrl}/themes#function-chip-theme), [`drop-down-theme`]({environment:sassApiUrl}/themes#function-drop-down-theme), [`input-group-theme`]({environment:sassApiUrl}/themes#function-input-group-theme) themes provide way more parameters to control their respective styling.
 
 The last step is to **include** the component mixins, each with its respective theme. We will also add some styles for other elements inside the advanced filtering dialog.
 
@@ -202,7 +202,7 @@ igx-query-builder {
 
 ### Defining a color palette
 
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
+Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions.
 
 `igx-palette` generates a color palette based on the primary and secondary colors that are passed:
 
@@ -211,7 +211,7 @@ $yellow-color: #FFCD0F;
 $black-color: #292826;
 $dark-palette: palette($primary: $yellow-color, $secondary: $black-color);
 ```
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette. 
+And then with [`color`]({environment:sassApiUrl}/palettes#function-color) we can easily retrieve color from the palette. 
 
 ```scss
 $custom-query-builder: query-builder-theme(
@@ -251,7 +251,7 @@ $custom-drop-down: drop-down-theme(
 
 Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](themes/schemas.md). A **schema** is a recipe of a theme.
 
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-query-builder`]({environment:sassApiUrl}/index.html#variable-_light-query-builder), [`light-button`]({environment:sassApiUrl}/index.html#variable-_light-button), [`light-button-group`]({environment:sassApiUrl}/index.html#variable-_light-button-group), [`light-chip`]({environment:sassApiUrl}/index.html#variable-_light-chip), [`light-input-group`]({environment:sassApiUrl}/index.html#variable-_light-input-group) and [`light-drop-down`]({environment:sassApiUrl}/index.html#variable-_light-drop-down) schemas:
+Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-query-builder`]({environment:sassApiUrl}/themes#function-query-builder-theme), [`light-button`]({environment:sassApiUrl}/themes#function-button-themes), [`light-button-group`]({environment:sassApiUrl}/themes#function-button-group-theme), [`light-chip`]({environment:sassApiUrl}/themes#function-chip-theme), [`light-input-group`]({environment:sassApiUrl}/themes#variable-input-group-theme) and [`light-drop-down`]({environment:sassApiUrl}/themes#function-drop-down-theme) schemas:
 
 ```scss
 $query-builder-dark-palette: palette($primary: #11bd7b, $secondary: #e32057, $info: $black-color);
@@ -310,7 +310,7 @@ $custom-drop-down-schema: extend($_light-drop-down,
 );
 ```
 
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
+In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/schemas#variable-light-material-schema) or [`dark`]({environment:sassApiUrl}/shemas#variable-dark-material-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
 
 ```scss
 $custom-light-schema: extend($light-schema,(
@@ -360,7 +360,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <code-view style="height:530px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/query-builder/query-builder-style" >
+           iframe-src="{environment:demosBaseUrl}/interactions/query-builder/query-builder-style/" >
 </code-view>
 
 >[!NOTE]
@@ -371,7 +371,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <div class="divider--half"></div>
 
 * [IgxQueryBuilderComponent API]({environment:angularApiUrl}/classes/igxquerybuildercomponent.html)
-* [IgxQueryBuilderComponent Styles]({environment:sassApiUrl}/index.html#function-query-builder-theme)
+* [IgxQueryBuilderComponent Styles]({environment:sassApiUrl}/themes#function-query-builder-theme)
 
 ## Additional Resources
 

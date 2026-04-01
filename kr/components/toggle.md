@@ -14,7 +14,7 @@ The [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) d
 
 <code-view style="height: 370px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/toggle" >
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle/" >
 </code-view>
 
 
@@ -39,7 +39,7 @@ Then in the template of our component we can apply the directive on the element 
 
 ```html
 <!--template.component.html-->
-<button class="toggle-button"  igxButton="raised" (click)="toggleContent()">Toggle</button>
+<button class="toggle-button"  igxButton="contained" (click)="toggleContent()">Toggle</button>
 <div class="toggle-content" igxToggle>
     <section class="toggle-section">
         <ul>
@@ -79,7 +79,7 @@ If all went well, you should see the following in your browser:
 
 <code-view style="height: 370px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-1/" >
 </code-view>
 
 
@@ -103,7 +103,7 @@ export class AppModule {}
 <!--template.component.html-->
 <div class="sample-wrapper">
   <article class="sample-column">
-    <button class="toggle-button" #button igxButton="raised" (click)="toggle()">Toggle</button>
+    <button class="toggle-button" #button igxButton="contained" (click)="toggle()">Toggle</button>
     <div class="toggle-content" igxToggle>
       <section class="toggle-section">
           <h2>Box</h2>
@@ -141,7 +141,7 @@ The [`igxToggle`]({environment:angularApiUrl}/classes/igxtoggledirective.html) u
 
 <code-view style="height: 370px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/toggle" >
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle/" >
 </code-view>
 
 
@@ -167,7 +167,7 @@ Then in the template we need to declare [**IgxToggleActionDirective**]({environm
 
 ```html
 <!--template.component.html-->
-<button class="toggle-button"  igxButton="raised" [igxToggleAction]="toggleRef">Toggle</button>
+<button class="toggle-button"  igxButton="contained" [igxToggleAction]="toggleRef">Toggle</button>
 <div class="toggle-content" igxToggle #toggleRef="toggle">
     <section class="toggle-section">
         <img src="link to random image"/>
@@ -180,7 +180,7 @@ After these changes the toggle should work exactly in the same way.
 
 <code-view style="height: 370px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-2/" >
 </code-view>
 
 
@@ -204,7 +204,7 @@ export class AppModule {}
 
 ```html
 <!--template.component.html-->
-<button igxToggleAction="toggleId" [closeOnOutsideClick]="true" class="toggle-button"  igxButton="raised">Toggle</button>
+<button igxToggleAction="toggleId" [closeOnOutsideClick]="true" class="toggle-button"  igxButton="contained">Toggle</button>
 <div igxToggle id="toggleId" class="toggle-content">
     <section class="toggle-section">
     <h3>Click 
@@ -218,7 +218,7 @@ If all went well, it will look like this:
 
 <code-view style="height: 370px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/interactions/toggle-sample-3/" >
 </code-view>
 
 
@@ -237,7 +237,7 @@ This allows to provide the `outlet` templates variable as a setting to the toggl
 <custom-component #reference></custom-component>
 ```
 
-## API Summary
+## API References
 
 In this article we covered the details of how to use Toggle directive. We created a content which would possible to be hidden or shown by invoking programmatically methods which determine this behaviour.
 Furthermore we added another helping directive which controls automatically this same behaviour by giving it the appropriate toggle reference. In the end we have registered our [**igxToggle**]({environment:angularApiUrl}/classes/igxtoggledirective.html) directive in the **igxNavigationService** provider by giving it an ID, which we then provided to our helping **igxToggleAction** directive.

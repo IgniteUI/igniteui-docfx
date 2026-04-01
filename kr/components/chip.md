@@ -14,7 +14,7 @@ _language: kr
 
 <code-view style="height:650px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/chip-sample" >
+           iframe-src="{environment:demosBaseUrl}/data-display/chip-sample/" >
 </code-view>
 
 
@@ -194,7 +194,7 @@ The chip can be focused using the `Tab` key or by clicking on it. When in chip a
   - <kbd>SPACE</kbd> or <kbd>ENTER</kbd> Fires the [`remove`]({environment:angularApiUrl}/classes/igxchipcomponent.html#remove) output so the chip deletion can be handled manually.
 
 ### Styling
-The igxChip allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The chip's [theme]({environment:sassApiUrl}/index.html#function-chip-theme) exposes a wide variety of properties, which allow the customization of many of the aspects of the chip.        
+The igxChip allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The chip's [theme]({environment:sassApiUrl}/themes#function-chip-theme) exposes a wide variety of properties, which allow the customization of many of the aspects of the chip.        
 
  #### Importing global theme
 To begin styling of the predefined chip layout, you need to import the `index` file, where all styling functions and mixins are located.  
@@ -203,7 +203,7 @@ To begin styling of the predefined chip layout, you need to import the `index` f
 ```   
 
 #### Defining custom theme
-Next, create a new theme, that extends the [`chip-theme`]({environment:sassApiUrl}/index.html#function-chip-theme) and accepts the parameters, required to customize the chip as desired.
+Next, create a new theme, that extends the [`chip-theme`]({environment:sassApiUrl}/themes#function-chip-theme) and accepts the parameters, required to customize the chip as desired.
    
 
 ```scss
@@ -222,7 +222,7 @@ $custom-theme: chip-theme(
 ```   
 
 #### Defining a custom color palette
-In the approach, that was described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
+In the approach, that was described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions.   
 `igx-palette` generates a color palette, based on provided primary and secondary colors.  
 
 ```scss
@@ -313,14 +313,14 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 <code-view style="height:650px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/chip-styling" >
+           iframe-src="{environment:demosBaseUrl}/data-display/chip-styling/" >
 </code-view>
 
 
 ### API
 
 * [IgxChipComponent]({environment:angularApiUrl}/classes/igxchipcomponent.html)
-* [IgxChipComponent Styles]({environment:sassApiUrl}/index.html#function-chip-theme)
+* [IgxChipComponent Styles]({environment:sassApiUrl}/themes#function-chip-theme)
 * [IgxChipsAreaComponent]({environment:angularApiUrl}/classes/igxchipsareacomponent.html)
 
 ### References

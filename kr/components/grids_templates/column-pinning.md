@@ -29,7 +29,7 @@ A column or multiple columns can be pinned to the left-hand side of the Angular 
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-toolbar-pinning" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-toolbar-pinning/" >
 </code-view>
 
 }
@@ -37,7 +37,7 @@ A column or multiple columns can be pinned to the left-hand side of the Angular 
 
 <code-view style="height:630px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-pinning" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-pinning/" >
 </code-view>
 
 }
@@ -45,7 +45,7 @@ A column or multiple columns can be pinned to the left-hand side of the Angular 
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-pinning" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-pinning/" >
 </code-view>
 
 }
@@ -230,7 +230,7 @@ public pinningConfig: IPinningConfig = { columns: ColumnPinningPosition.End };
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-right-pinning" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-right-pinning/" >
 </code-view>
 
 }
@@ -239,7 +239,7 @@ public pinningConfig: IPinningConfig = { columns: ColumnPinningPosition.End };
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sample-right-pinning" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sample-right-pinning/" >
 </code-view>
 
 }
@@ -248,7 +248,7 @@ public pinningConfig: IPinningConfig = { columns: ColumnPinningPosition.End };
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-sample-right-pinning" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-sample-right-pinning/" >
 </code-view>
 
 }
@@ -352,7 +352,7 @@ public toggleColumn(col: IgxColumnComponent) {
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-pinning" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-pinning/" >
 </code-view>
 
 }
@@ -360,7 +360,7 @@ public toggleColumn(col: IgxColumnComponent) {
 
 <code-view style="height:630px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-pinning" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-pinning/" >
 </code-view>
 
 }
@@ -368,7 +368,7 @@ public toggleColumn(col: IgxColumnComponent) {
 
 <code-view style="height:510px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-pinning" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-pinning/" >
 </code-view>
 
 }
@@ -392,7 +392,7 @@ public toggleColumn(col: IgxColumnComponent) {
 @@if (igxName === 'IgxGrid') {
 ### Styling   
 
-The igxGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid.      
+The igxGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The grid's [theme]({environment:sassApiUrl}/themes#function-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid.      
 
 In the below steps, we are going through the steps of customizing the grid's Pinning styling.
 
@@ -403,7 +403,7 @@ To begin the customization of the Pinning feature, you need to import the `index
 ```
 
 #### Defining custom theme
-Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the parameters, required to customize the Pinning feature as desired.   
+Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) and accepts the parameters, required to customize the Pinning feature as desired.   
 
 ```scss
 $custom-theme: grid-theme(
@@ -417,7 +417,7 @@ $custom-theme: grid-theme(
 ```    
 
 #### Defining a custom color palette
-In the approach, that was described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
+In the approach, that was described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions.   
 `igx-palette` generates a color palette, based on provided primary and secondary colors.  
 
  ```scss
@@ -495,7 +495,7 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 <code-view style="height:506px" 
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-pinning-styling" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-pinning-styling/" >
 </code-view>
 
 }

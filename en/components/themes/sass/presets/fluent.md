@@ -2,7 +2,7 @@
 
 Since version `8.2` our components include a new theme inspired by the [`Microsoft Fluent Design System`](https://www.microsoft.com/design/fluent/)
 
-In order to switch from `Material` to `Fluent`, you can use the [theme]({environment:sassApiUrl}/index.html#mixin-theme) build-in mixin.
+In order to switch from `Material` to `Fluent`, you can use the [theme]({environment:sassApiUrl}/themes#mixin-theme) build-in mixin.
 
 We also support Word and Excel palettes. To use them just pass one of the two _**light**_ maps `$light-fluent-excel-palette`, `$light-fluent-word-palette` or one of the two _**dark**_ maps `dark-fluent-excel-palette`, `$light-fluent-word-palette` to the `theme` mixin:
 
@@ -47,4 +47,4 @@ We also support Word and Excel palettes. To use them just pass one of the two _*
 
 ## API Overview
 
-* [Global Theme]({environment:sassApiUrl}/index.html#mixin-theme)
+- [Global Theme]({environment:sassApiUrl}/themes#mixin-theme)
