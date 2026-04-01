@@ -51,7 +51,7 @@ In order to display the Banner component, use its [`open()`]({environment:angula
     You are currently offline.
 </igx-banner>
 ...
-<button igxButton="raised" (click)="connectionBanner.toggle()">Toggle Banner</button>
+<button igxButton="contained" (click)="connectionBanner.toggle()">Toggle Banner</button>
 ```
 
 The banner appears relative to where the element was inserted in the page template, moving all other content. The banner typically shows some non-intrusive content that requires minimal user interaction to be dismissed (e.g. 1-2 clicks).
@@ -79,7 +79,7 @@ Changing the message displayed in the banner is easy - just change the content y
         You have lost connection to the internet. This app is offline.
     </igx-banner>
     ...
-    <button igxButton="raised" (click)="connectionBanner.toggle()">Toggle Banner</button>
+    <button igxButton="contained" (click)="connectionBanner.toggle()">Toggle Banner</button>
 ```
 
 #### Adding an icon
