@@ -46,7 +46,7 @@ import { IgxDialogModule } from 'igniteui-angular/dialog';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxDialogComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_DIALOG_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/dialog/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxDialogComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_DIALOG_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/dialog/src/dialog/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
@@ -216,6 +216,7 @@ export class HomeComponent {
 
 ```typescript
 import { useAnimation } from '@angular/animations';
+import { slideInTop, slideOutBottom } from 'igniteui-angular/animations';
 import { PositionSettings, HorizontalAlignment, VerticalAlignment } from 'igniteui-angular/core';
 // import { PositionSettings, HorizontalAlignment, VerticalAlignment } from '@infragistics/igniteui-angular'; for licensed package
 

@@ -54,7 +54,7 @@ import { IgxPivotGridModule } from 'igniteui-angular/grids/pivot-grid';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxPivotGridComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_PIVOT_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/pivot-grid/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxPivotGridComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_PIVOT_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/grids/pivot-grid/src/pivot-grid.module.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts

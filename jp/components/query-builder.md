@@ -54,7 +54,7 @@ import { IgxQueryBuilderModule } from 'igniteui-angular/query-builder';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxQueryBuilderComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_QUERY_BUILDER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/query-builder/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxQueryBuilderComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_QUERY_BUILDER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/query-builder/src/query-builder/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
