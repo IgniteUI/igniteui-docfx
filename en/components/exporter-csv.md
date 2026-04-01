@@ -135,11 +135,11 @@ The CSV Exporter supports several types of exporting formats. The export format 
 
 Different export formats have different file extensions and value delimiters. The following table maps the export formats and their respective file extensions and delimiters:
 
-| Format | File Extension | Default Delimiter |
-| :--- | :--- | :--- |
-| [`CsvFileTypes.CSV`]({environment:angularApiUrl}/enums/csvfiletypes.html#csv) | .csv | Comma |
-| [`CsvFileTypes.TAB`]({environment:angularApiUrl}/enums/csvfiletypes.html#tab) | .tab | Tab |
-| [`CsvFileTypes.TSV`]({environment:angularApiUrl}/enums/csvfiletypes.html#tsv) | .tsv | Tab |
+| Format                                                                        | File Extension | Default Delimiter |
+| :---------------------------------------------------------------------------- | :------------- | :---------------- |
+| [`CsvFileTypes.CSV`]({environment:angularApiUrl}/enums/csvfiletypes.html#csv) | .csv           | Comma             |
+| [`CsvFileTypes.TAB`]({environment:angularApiUrl}/enums/csvfiletypes.html#tab) | .tab           | Tab               |
+| [`CsvFileTypes.TSV`]({environment:angularApiUrl}/enums/csvfiletypes.html#tsv) | .tsv           | Tab               |
 
 <div class="divider--half"></div>
 

@@ -130,7 +130,7 @@ Structured statements like for `x =1 to 10` loop <a href="#"><code>structures</c
 ## Table
 
 | test | test                                                    | test | test | test |
-|------|---------------------------------------------------------|------|------|------|
+| :--- | :------------------------------------------------------ | :--- | :--- | :--- |
 | val  | Using the Table menu set the desired size of the table. | val  | val  | val  |
 | val  | Using the Table menu set the desired size of the table. | val  | val  | val  |
 | val  | Using the Table menu set the desired size of the table. | val  | val  | val  |

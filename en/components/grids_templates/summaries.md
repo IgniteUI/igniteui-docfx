@@ -36,28 +36,22 @@ The Angular UI grid in Ignite UI for Angular has a **summaries** feature that fu
 ## Angular @@igComponent Summaries Overview Example
 
 @@if (igxName === 'IgxGrid') {
-
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-summary/" alt="Angular @@igComponent Summaries Overview Example">
 </code-view>
-
 }
 @@if (igxName === 'IgxTreeGrid') {
-
 <code-view style="height:750px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary/" alt="Angular @@igComponent Summaries Overview Example">
 </code-view>
-
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary/" alt="Angular @@igComponent Summaries Overview Example">
 </code-view>
-
 }
 
 <div class="divider--half"></div>
@@ -315,7 +309,6 @@ export class GridComponent implements OnInit {
 ```
 
 }
-
 @@if (igxName === 'IgxTreeGrid') {
 And now let's add our custom summary to the column `UnitPrice`. We will achieve that by setting the [`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) property to the class we create below.
 
@@ -337,7 +330,6 @@ export class GridComponent implements OnInit {
 ```
 
 }
-
 @@if (igxName === 'IgxHierarchicalGrid') {
 And now let's add our custom summary to the column `GramyNominations`. We will achieve that by setting the [`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) property to the class we create below.
 
@@ -408,30 +400,23 @@ class MySummary extends IgxNumberSummaryOperand {
 ```
 
 }
-
 @@if (igxName === 'IgxGrid') {
-
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-alldata-summaries/" >
 </code-view>
-
 }
 @@if (igxName === 'IgxTreeGrid') {
-
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-allData-summary/" >
 </code-view>
-
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-allData-summary/" >
 </code-view>
-
 }
 
 ### Summary Template
@@ -452,30 +437,23 @@ When a default summary is defined, the height of the summary area is calculated 
 > [!NOTE]
 > Column summary template could be defined through API by setting the column [summaryTemplate]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaryTemplate) property to the required TemplateRef.
 
-
 @@if (igxName === 'IgxGrid') {
-
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-summary-template/" >
 </code-view>
-
 }
 @@if (igxName === 'IgxTreeGrid') {
-
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-summary-template/" >
 </code-view>
-
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hgrid-summary-template/" >
 </code-view>
-
 }
 
 ## Disable Summaries
@@ -632,9 +610,7 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-summary-formatter/" >
 </code-view>
 }
-
 @@if (igxName === 'IgxGrid') {
-
 ## Summaries with Group By
 
 When you have grouped by columns, the @@igComponent allows you to change the summary position and calculation mode using the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryCalculationMode) and [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryPosition) properties. Along with these two properties the @@igxName exposes and [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showSummaryOnCollapse) property which allows you to determine whether the summary row stays visible when the group row that refers to is collapsed.
@@ -663,10 +639,8 @@ The [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.ht
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-summary/" >
 </code-view>
-
 }
 @@if (igxName === 'IgxTreeGrid') {
-
 ## Child Summaries
 
 The @@igComponent supports separate summaries for the root nodes and for each nested child node level. Which summaries are shown is configurable using the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryCalculationMode) property. The child level summaries can be shown before or after the child nodes using the [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryPosition) property. Along with these two properties the @@igxName exposes and [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showSummaryOnCollapse) property which allows you to determine whether the summary row stays visible when the parent node that refers to is collapsed.
@@ -693,8 +667,8 @@ The [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.ht
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary2/" >
 </code-view>
-
 }
+
 <div class="divider--half"></div>
 
 ## Exporting Summaries
@@ -709,15 +683,12 @@ The [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/IgxExcelExpo
            iframe-src="{environment:demosBaseUrl}/grid/grid-summary-export/" >
 </code-view>
 }
-
 @@if (igxName === 'IgxTreeGrid') {
 <code-view style="height:780px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary-export/" >
 </code-view>
 }
-
-
 @@if (igxName === 'IgxHierarchicalGrid') {
 <code-view style="height:760px"
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -729,23 +700,23 @@ The exported file includes a hidden column that holds the level of each `DataRec
 
 In the table below, you can find the corresponding Excel formula for each of the default summaries.
 
-| Data Type | Function | Excel Function |
-|:--------|:--------:|:---------------|
-|`string`, `boolean` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
-|`number`, `currency`, `percent` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
-|| min| ="Min: "&MIN(IF(start:end=recordLevel, rangeStart:rangeEnd)) |
-|| max | ="Max: "&MAX(IF(start:end=recordLevel, rangeStart:rangeEnd)) |
-|| average | ="Avg: "&AVERAGEIF(start:end, recordLevel, rangeStart:rangeEnd) |
-|| sum | ="Sum: "&SUMIF(start:end, recordLevel, rangeStart:rangeEnd) |
-|`date` | count | ="Count: "&COUNTIF(start:end, recordLevel) |
-|| earliest | ="Earliest: "& TEXT(MIN(IF(start:end=recordLevel, rangeStart:rangeEnd)), format) |
-|| latest | ="Latest: "&TEXT(MAX(IF(start:end=recordLevel, rangeStart:rangeEnd)), format) |
+| Data Type                       |  Function | Excel Function                                                                   |
+| :------------------------------ | :-------: | :------------------------------------------------------------------------------- |
+| `string`, `boolean`             |    count  | ="Count: "&COUNTIF(start:end, recordLevel)                                       |
+| `number`, `currency`, `percent` |    count  | ="Count: "&COUNTIF(start:end, recordLevel)                                       |
+|                                 |      min  | ="Min: "&MIN(IF(start:end=recordLevel, rangeStart:rangeEnd))                     |
+|                                 |      max  | ="Max: "&MAX(IF(start:end=recordLevel, rangeStart:rangeEnd))                     |
+|                                 |  average  | ="Avg: "&AVERAGEIF(start:end, recordLevel, rangeStart:rangeEnd)                  |
+|                                 |      sum  | ="Sum: "&SUMIF(start:end, recordLevel, rangeStart:rangeEnd)                      |
+| `date`                          |    count  | ="Count: "&COUNTIF(start:end, recordLevel)                                       |
+|                                 |  earliest | ="Earliest: "& TEXT(MIN(IF(start:end=recordLevel, rangeStart:rangeEnd)), format) |
+|                                 |   latest  | ="Latest: "&TEXT(MAX(IF(start:end=recordLevel, rangeStart:rangeEnd)), format)    |
 
 ### Known Limitations
 
-|Limitation|Description|
-|--- |--- |
-| Exporting custom summaries | Custom summaries will be exported as strings instead of Excel functions. |
+| Limitation                    | Description                                                                     |
+| :---------------------------- | :------------------------------------------------------------------------------ |
+| Exporting custom summaries    | Custom summaries will be exported as strings instead of Excel functions.        |
 | Exporting templated summaries | Templated summaries are not supported and will be exported as the default ones. |
 
 ## Keyboard Navigation
