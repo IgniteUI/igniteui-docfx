@@ -109,18 +109,51 @@ The Angular Date Range Picker component also allows configuring two separate inp
 ```html
 <igx-date-range-picker [(ngModel)]="range">
     <igx-date-range-start>
+        <igx-picker-toggle igxPrefix>
+            <igx-icon>calendar_today</igx-icon>
+        </igx-picker-toggle>
+        <label igxLabel>Start Date</label>
         <input igxInput igxDateTimeEditor type="text">
+        <igx-picker-clear igxSuffix>
+            <igx-icon>clear</igx-icon>
+        </igx-picker-clear>
     </igx-date-range-start>
     <igx-date-range-end>
+        <igx-picker-toggle igxPrefix>
+            <igx-icon>calendar_today</igx-icon>
+        </igx-picker-toggle>
+        <label igxLabel>End Date</label>
         <input igxInput igxDateTimeEditor type="text">
+        <igx-picker-clear igxSuffix>
+            <igx-icon>clear</igx-icon>
+        </igx-picker-clear>
     </igx-date-range-end>
 </igx-date-range-picker>
 ```
 
 >[!NOTE]
-> In the two-input configuration, add the input elements directly inside `igx-date-range-start` and `igx-date-range-end`. To open the calendar from an icon, use `igx-picker-toggle`.
+> In the two-input configuration, place the `input` directly inside `igx-date-range-start` and `igx-date-range-end`.
+>
+> To open the calendar from an icon, use `igx-picker-toggle` with `igxPrefix` applied directly to it:
+>
+> ```html
+> <igx-picker-toggle igxPrefix>
+>   <igx-icon>calendar_today</igx-icon>
+> </igx-picker-toggle>
+> ```
+>
+> To show a clear action, use `igx-picker-clear` with `igxSuffix` applied directly to it:
+>
+> ```html
+> <igx-picker-clear igxSuffix>
+>   <igx-icon>clear</igx-icon>
+> </igx-picker-clear>
+> ```
+>
 
-- [`IgxDateRangeStartComponent`]({environment:angularApiUrl}/classes/igxdaterangestartcomponent.html) and [`IgxDateRangeEndComponent`]({environment:angularApiUrl}/classes/igxdaterangeendcomponent.html) support the same projected elements as [`IgxInputGroupComponent`](input-group.md), including labels, prefixes, suffixes, picker toggles, and clear buttons.
+- [`IgxDateRangeStartComponent`]({environment:angularApiUrl}/classes/igxdaterangestartcomponent.html) and [`IgxDateRangeEndComponent`]({environment:angularApiUrl}/classes/igxdaterangeendcomponent.html) support projected content such as labels, hints, picker toggles, and clear buttons.
+- Use `igx-picker-toggle` for the calendar action and `igx-picker-clear` for the clear action.
+- Apply `igxPrefix` directly to `igx-picker-toggle` and `igxSuffix` directly to `igx-picker-clear`.
 - Add the [`IgxInput`]({environment:angularApiUrl}/classes/igxinputdirective.html) directly inside each component.
 - To enable date editing, decorate both inputs with the [`igxDateTimeEditor`](date-time-editor.md) directive.
 
@@ -203,17 +236,27 @@ Or for two inputs:
 ```html
 <igx-date-range-picker #dateRangePicker [(ngModel)]="range">
     <igx-date-range-start>
-        ...
+        <igx-picker-toggle igxPrefix>
+            <igx-icon>calendar_today</igx-icon>
+        </igx-picker-toggle>
         <label igxLabel>Start Date</label>
+        <input igxInput igxDateTimeEditor type="text">
         <igx-hint *ngIf="dateRangePicker.invalid">
             Please choose start and end date!
         </igx-hint>
-        ...
+        <igx-picker-clear igxSuffix>
+            <igx-icon>clear</igx-icon>
+        </igx-picker-clear>
     </igx-date-range-start>
     <igx-date-range-end>
-        ...
+        <igx-picker-toggle igxPrefix>
+            <igx-icon>calendar_today</igx-icon>
+        </igx-picker-toggle>
         <label igxLabel>End Date</label>
-        ...
+        <input igxInput igxDateTimeEditor type="text">
+        <igx-picker-clear igxSuffix>
+            <igx-icon>clear</igx-icon>
+        </igx-picker-clear>
     </igx-date-range-end>
 </igx-date-range-picker>
 ```
@@ -236,7 +279,10 @@ In the default configuration, with a single read-only input, a default calendar 
 When a Date Range Picker has two separate inputs for start and end dates, it doesn't expose these icons by default. The [`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html)  and [`IgxPickerClearComponent`]({environment:angularApiUrl}/classes/igxpickerclearcomponent.html) should be manually added as children of the [`IgxDateRangeStartComponent`]({environment:angularApiUrl}/classes/igxdaterangestartcomponent.html) or [`IgxDateRangeEndComponent`]({environment:angularApiUrl}/classes/igxdaterangeendcomponent.html) like so:
 
 >[!NOTE]
-> In the two-input configuration, a plain prefix icon is displayed as content only. To open the calendar from an icon, use `igx-picker-toggle`.
+> In the two-input configuration:
+>
+> - use `igx-picker-toggle igxPrefix` for the calendar action
+> - use `igx-picker-clear igxSuffix` for the clear action
 
 ```html
 <igx-date-range-picker>
@@ -244,6 +290,7 @@ When a Date Range Picker has two separate inputs for start and end dates, it doe
         <igx-picker-toggle igxPrefix>
             <igx-icon>calendar_view_day</igx-icon>
         </igx-picker-toggle>
+        <label igxLabel>Start Date</label>
         <input igxInput igxDateTimeEditor type="text">
         <igx-picker-clear igxSuffix>
             <igx-icon>clear</igx-icon>
@@ -253,6 +300,7 @@ When a Date Range Picker has two separate inputs for start and end dates, it doe
         <igx-picker-toggle igxPrefix>
             <igx-icon>calendar_view_day</igx-icon>
         </igx-picker-toggle>
+        <label igxLabel>End Date</label>
         <input igxInput igxDateTimeEditor type="text">
         <igx-picker-clear igxSuffix>
             <igx-icon>clear</igx-icon>
@@ -341,6 +389,9 @@ The same configuration can be used when setting two separate inputs. Note that i
         </igx-picker-toggle>
         <label igxLabel>Start Date</label>
         <input igxInput igxDateTimeEditor type="text">
+        <igx-picker-clear igxSuffix>
+            <igx-icon>clear</igx-icon>
+        </igx-picker-clear>
     </igx-date-range-start>
     <igx-date-range-end>
         <igx-picker-toggle igxPrefix>
@@ -348,6 +399,9 @@ The same configuration can be used when setting two separate inputs. Note that i
         </igx-picker-toggle>
         <label igxLabel>End Date</label>
         <input igxInput igxDateTimeEditor type="text">
+        <igx-picker-clear igxSuffix>
+            <igx-icon>clear</igx-icon>
+        </igx-picker-clear>
     </igx-date-range-end>
 </igx-date-range-picker>
 ```
