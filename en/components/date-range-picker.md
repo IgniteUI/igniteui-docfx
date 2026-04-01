@@ -164,7 +164,7 @@ The Angular Date Range Picker component also allows configuring two separate inp
 
 ### Popup modes
 
-By default, the [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) opens its calendar pop-up in `dropdown` mode. Alternatively, the calendar can be opened in `dialog` mode by setting the `Mode` property to `dialog`.
+By default, the [`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) opens its calendar pop-up in `dropdown` mode. Alternatively, the calendar can be opened in `dialog` mode by setting the `mode` property to `dialog`.
 
 ```html
 <igx-date-range-picker [mode]="'dialog'"></igx-date-range-picker>
