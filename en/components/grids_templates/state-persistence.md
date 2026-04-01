@@ -6,7 +6,6 @@ _description: Easily save and restore the grid state, using our comprehensive Ig
 _keywords: state persistence, ignite ui for angular, infragistics
 _license: commercial
 ---
-
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
@@ -16,7 +15,6 @@ _keywords: state persistence, ignite ui for angular, infragistics
 _license: commercial
 _canonicalLink: grid/state-persistence
 ---
-
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
@@ -26,9 +24,7 @@ _keywords: state persistence, ignite ui for angular, infragistics
 _license: commercial
 _canonicalLink: grid/state-persistence
 ---
-
 }
-
 @@if (igxName === 'IgxPivotGrid') {
 ---
 title: Angular Pivot Grid State Persistence - Ignite UI for Angular
@@ -37,7 +33,6 @@ _keywords: state persistence, ignite ui for angular, infragistics
 _license: commercial
 _canonicalLink: grid/state-persistence
 ---
-
 }
 
 # Angular @@igComponent State Persistence
@@ -49,7 +44,6 @@ _canonicalLink: grid/state-persistence
 [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) directive supports saving and restoring the state of the following features:
 
 @@if (igxName === 'IgxGrid') {
-
 - `Sorting`
 - `Filtering`
 - `Advanced Filtering`
@@ -62,16 +56,12 @@ _canonicalLink: grid/state-persistence
 - `GroupBy`
 - `Columns`
   - Multi column headers
-    @@if (igxName === 'IgxGrid') {
   - Multi-row Layout
-    }
   - Columns order
   - Column properties defined by the [`IColumnState`]({environment:angularApiUrl}/interfaces/icolumnstate.html) interface.
   - Columns templates and functions are restored using application level code, see [Restoring Column](state-persistence.md#restoring-columns) section.
 }
-
 @@if (igxName === 'IgxTreeGrid') {
-
 - `Sorting`
 - `Filtering`
 - `Advanced Filtering`
@@ -87,9 +77,7 @@ _canonicalLink: grid/state-persistence
   - Column properties defined by the [`IColumnState`]({environment:angularApiUrl}/interfaces/icolumnstate.html) interface.
   - Columns templates and functions are restored using application level code, see [Restoring Column](state-persistence.md#restoring-columns) section.
 }
-
 @@if (igxName === 'IgxHierarchicalGrid') {
-
 - `RowIslands`
   - saving/restoring features for all child grids down the hierarchy
 - `Sorting`
@@ -107,9 +95,7 @@ _canonicalLink: grid/state-persistence
   - Column properties defined by the [`IColumnState`]({environment:angularApiUrl}/interfaces/icolumnstate.html) interface.
   - Columns templates and functions are restored using application level code, see [Restoring Column](state-persistence.md#restoring-columns) section.
 }
-
 @@if (igxName === 'IgxPivotGrid') {
-
 - `Sorting`
 - `Filtering`
 - `Cell Selection`
@@ -121,7 +107,6 @@ _canonicalLink: grid/state-persistence
   - Pivot Dimension and Value functions are restored using application level code, see [Restoring Pivot Configuration](state-persistence.md#restoring-pivot-configuration) section.
   - Pivot Row and Column strategies are also restored using application level code, see [Restoring Pivot Strategies](state-persistence.md#restoring-pivot-strategies) section.
 }
-
 @@if (igxName !== 'IgxPivotGrid') {
 >[!NOTE]
 > The [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) directive does not take care of templates. Go to [Restoring Column](state-persistence.md#restoring-columns) section to see how to restore column templates.
@@ -159,32 +144,24 @@ public options =  { cellSelection: false; sorting: false; }
 ```
 
 @@if (igxName === 'IgxGrid') {
-
 ```html
 <igx-grid [igxGridState]="options"></igx-grid>
 ```
-
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-
 ```html
 <igx-hierarchical-grid [igxGridState]="options"></igx-hierarchical-grid>
 ```
-
 }
 @@if (igxName === 'IgxTreeGrid') {
-
 ```html
 <igx-tree-grid [igxGridState]="options"></igx-tree-grid>
 ```
-
 }
 @@if (igxName === 'IgxPivotGrid') {
-
 ```html
 <igx-pivot-grid [igxGridState]="options"></igx-pivot-grid>
 ```
-
 }
 
 The simple to use single-point API's allows to achieve a full state persistence functionality in just a few lines of code. **Copy paste the code from below** - it will save the grid state in the browser `sessionStorage` object every time the user leaves the current page. Whenever the user returns to main page, the grid state will be restored. No more need to configure those complex advanced filtering and sorting expressions every time to get the data you want - do it once and have the code from below do the rest for your users:
@@ -216,7 +193,6 @@ public restoreGridState() {
 ```
 
 @@if (igxName !== 'IgxPivotGrid') {
-
 ## Restoring columns
 
 When possible the state directive will reuses the columns that already exists on the grid when restoring the state, instead of creating new column instances. The only scenario where a new instance will be created is when the column (or its children in case of a column groups) have no `field` property so there's no way to uniquely identify the matching column and re-use it.
@@ -224,48 +200,44 @@ When possible the state directive will reuses the columns that already exists on
 For such scenarios, the following [`limitations`](state-persistence.md#limitations) are imposed. In that case restoring complex objects can be achieved with code on application level. Let's show how to do this for templated columns:
 
 1. Define a template reference variable (in the example below it is `#activeTemplate`) and assign an event handler for the [`columnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnInit) event:
+
 @@if (igxName === 'IgxGrid') {
-
-```html
-<igx-grid id="grid" #grid igxGridState (columnInit)="onColumnInit($event)">
-    <igx-column [field]="'IsActive'" header="IsActive">
-        <ng-template igxCell #activeTemplate let-column let-val="val">
-            <igx-checkbox [checked]="val"></igx-checkbox>
-        </ng-template>
-    </igx-column>
-    ...
-</igx-grid>
-```
-
+    ```html
+    <igx-grid id="grid" #grid igxGridState (columnInit)="onColumnInit($event)">
+        <igx-column [field]="'IsActive'" header="IsActive">
+            <ng-template igxCell #activeTemplate let-column let-val="val">
+                <igx-checkbox [checked]="val"></igx-checkbox>
+            </ng-template>
+        </igx-column>
+        ...
+    </igx-grid>
+    ```
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-
-```html
-<igx-hierarchical-grid id="grid" #grid igxGridState (columnInit)="onColumnInit($event)">
-    <igx-column [field]="'IsActive'" header="IsActive">
-        <ng-template igxCell #activeTemplate let-column let-val="val">
-            <igx-checkbox [checked]="val"></igx-checkbox>
-        </ng-template>
-    </igx-column>
-    ...
-</igx-hierarchical-grid>
-```
-
+    ```html
+    <igx-hierarchical-grid id="grid" #grid igxGridState (columnInit)="onColumnInit($event)">
+        <igx-column [field]="'IsActive'" header="IsActive">
+            <ng-template igxCell #activeTemplate let-column let-val="val">
+                <igx-checkbox [checked]="val"></igx-checkbox>
+            </ng-template>
+        </igx-column>
+        ...
+    </igx-hierarchical-grid>
+    ```
 }
 @@if (igxName === 'IgxTreeGrid') {
-
-```html
-<igx-tree-grid id="grid" #grid igxGridState (columnInit)="onColumnInit($event)">
-    <igx-column [field]="'IsActive'" header="IsActive">
-        <ng-template igxCell #activeTemplate let-column let-val="val">
-            <igx-checkbox [checked]="val"></igx-checkbox>
-        </ng-template>
-    </igx-column>
-    ...
-</igx-tree-grid>
-```
-
+    ```html
+    <igx-tree-grid id="grid" #grid igxGridState (columnInit)="onColumnInit($event)">
+        <igx-column [field]="'IsActive'" header="IsActive">
+            <ng-template igxCell #activeTemplate let-column let-val="val">
+                <igx-checkbox [checked]="val"></igx-checkbox>
+            </ng-template>
+        </igx-column>
+        ...
+    </igx-tree-grid>
+    ```
 }
+
 2. Query the template view in the component using @ViewChild or @ViewChildren decorator. In the [`columnInit`]({environment:angularApiUrl}/classes/igxgridcomponent.html#columnInit) event handler, assign the template to the column `bodyTemplate` property:
 
 ```typescript
@@ -278,11 +250,8 @@ public onColumnInit(column: IgxColumnComponent) {
     }
 }
 ```
-
 }
-
 @@if (igxName === 'IgxPivotGrid') {
-
 ## Restoring Pivot Configuration
 
 [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) will not persist pivot dimension functions, value formatters, etc. by default (see [`limitations`](state-persistence.md#limitations)). Restoring any of these can be achieved with code on application level. The `IgxPivotGrid` exposes two events which can be used to set back any custom functions you have in the configuration: [`dimensionInit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#dimensionInit) and [`valueInit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#valueInit). Let's show how to do this:
@@ -345,11 +314,8 @@ public onDimensionInit(dim: IPivotDimension) {
     }
 }
 ```
-
 }
-
 @@if (igxName === 'IgxHierarchicalGrid') {
-
 ## Restoring Child Grids
 
 Saving / Restoring state for the child grids is controlled by the [`rowIslands`]({environment:angularApiUrl}/interfaces/igxgridstateoptions.html#rowIslands) property and is enabled by default. [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) will use the same options for saving/restoring features both for the root grid and all child grids down the hierarchy. For example, if we pass the following options:
@@ -364,53 +330,40 @@ Then the `getState` API will return the state for all grids (root grid and child
 ```typescript
 this.state.setState(state, ['filtering', 'rowIslands']);
 ```
-
 }
-
 @@if (igxName === 'IgxGrid') {
-
 ## Demo
 
 <code-view style="height:763px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-state/" >
 </code-view>
-
 }
-
 @@if (igxName === 'IgxTreeGrid') {
-
 ## Demo
 
 <code-view style="height:1010px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-state/" >
 </code-view>
-
 }
-
 @@if (igxName === 'IgxHierarchicalGrid') {
-
 ## Demo
 
 <code-view style="height:715px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-state/" >
 </code-view>
-
 }
-
 @@if (igxName === 'IgxPivotGrid') {
+## Demo
 
 <code-view style="height:820px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-state-persistence/" >
 </code-view>
-
 }
-
 @@if (igxName === 'IgxPivotGrid') {
-
 ## Restoring Pivot Strategies
 
 [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) will not persist neither remote pivot operations nor custom dimension strategies (For further information see [Pivot Grid Remote Operations](pivot-grid-custom.md) sample) by default (see [`limitations`](state-persistence.md#limitations)). Restoring any of these can be achieved with code on application level. The `IgxGridState` exposes an event called [`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#stateParsed) which can be used to additionally modify the grid state before it gets applied. Let's show how to do this:
@@ -459,11 +412,8 @@ public restoreState() {
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/pivot-grid/pivot-grid-noop-persistence/" alt="Angular Pivot Noop Grid State Persistence Example">
 </code-view>
-
 }
-
 @@if (igxName === 'IgxGrid') {
-
 ## Restoring Strategies
 
 [`IgxGridState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html) will not persist neither remote operations nor custom dimension strategies (For further information see [Grid Remote Operations](remote-data-operations.md) sample) by default (see [`limitations`](state-persistence.md#limitations)). Restoring any of these can be achieved with code on application level. The `IgxGridState` exposes an event called [`stateParsed`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#stateParsed) which can be used to additionally modify the grid state before it gets applied. Let's show how to do this:
@@ -507,13 +457,11 @@ public restoreState() {
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-state-persistence/" alt="Angular Grid State Persistence Example">
 </code-view>
-
 }
 
 ## Limitations
 
 @@if (igxName === 'IgxHierarchicalGrid') {
-
 - When restoring all grid features at once (using `setState` API with no parameters), then column properties for the root grid might be resetted to default. If this happens, restore the columns or column selection feature separately after that:
 
 ```typescript
@@ -521,10 +469,8 @@ state.setState(gridState);
 state.setState(gridState.columns);
 state.setState(gridState.columnSelection);
 ```
-
 }
 @@if (igxName !== 'IgxPivotGrid') {
-
 - [`getState`]({environment:angularApiUrl}/classes/igxgridstatedirective.html#getstate) method uses JSON.stringify() method to convert the original objects to a JSON string. JSON.stringify() does not support Functions, thats why the [`IgxGridState`] directive will ignore the columns [`formatter`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#formatter), [`filters`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#filters), [`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries), [`sortStrategy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortstrategy), [`cellClasses`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellClasses), [`cellStyles`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#cellstyles), [`headerTemplate`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#headerTemplate) and [`bodyTemplate`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#bodyTemplate) properties.
 }
 @@if (igxName === 'IgxPivotGrid') {
@@ -538,7 +484,6 @@ state.setState(gridState.columnSelection);
 ## API References
 
 @@if (igxName === 'IgxGrid') {
-
 - [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
 - [IgxGridStateDirective]({environment:angularApiUrl}/classes/igxgridstatedirective.html)
 }
@@ -561,7 +506,6 @@ state.setState(gridState.columnSelection);
 
 
 @@if (igxName !== 'IgxPivotGrid') {
-
 - [@@igComponent overview](@@igMainTopic.md)
 - [Paging](paging.md)
 - [Filtering](filtering.md)

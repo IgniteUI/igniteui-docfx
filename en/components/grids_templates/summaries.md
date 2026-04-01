@@ -36,28 +36,22 @@ The Angular UI grid in Ignite UI for Angular has a **summaries** feature that fu
 ## Angular @@igComponent Summaries Overview Example
 
 @@if (igxName === 'IgxGrid') {
-
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-summary/" alt="Angular @@igComponent Summaries Overview Example">
 </code-view>
-
 }
 @@if (igxName === 'IgxTreeGrid') {
-
 <code-view style="height:750px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary/" alt="Angular @@igComponent Summaries Overview Example">
 </code-view>
-
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-summary/" alt="Angular @@igComponent Summaries Overview Example">
 </code-view>
-
 }
 
 <div class="divider--half"></div>
@@ -224,7 +218,6 @@ public disableSummary() {
 If these functions do not fulfill your requirements you can provide a custom summary for the specific columns. In order to achieve this you have to override one of the base classes [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html), [`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html) or [`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) according to the column data type and your needs. This way you can redefine the existing function or you can add new functions. [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) class provides the default implementation only for the [`count`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#count) method. [`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html) extends [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) and provides implementation for the [`min`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#min), [`max`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#max), [`sum`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#sum) and [`average`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#average). [`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) extends [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) and additionally gives you [`earliest`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html#earliest) and [`latest`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html#latest).
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
-
 ```typescript
 import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from 'igniteui-angular/core';
 // import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from '@infragistics/igniteui-angular'; for licensed package
@@ -245,10 +238,8 @@ class MySummary extends IgxNumberSummaryOperand {
     }
 }
 ```
-
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-
 ```typescript
 import { IgxRowIslandComponent, IgxHierarchicalGridComponent } from 'igniteui-angular/grids/hierarchical-grid';
 import { IgxNumberSummaryOperand, IgxSummaryResult } from 'igniteui-angular/core';
@@ -313,9 +304,7 @@ export class GridComponent implements OnInit {
     ....
 }
 ```
-
 }
-
 @@if (igxName === 'IgxTreeGrid') {
 And now let's add our custom summary to the column `UnitPrice`. We will achieve that by setting the [`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) property to the class we create below.
 
@@ -335,9 +324,7 @@ export class GridComponent implements OnInit {
     ....
 }
 ```
-
 }
-
 @@if (igxName === 'IgxHierarchicalGrid') {
 And now let's add our custom summary to the column `GramyNominations`. We will achieve that by setting the [`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) property to the class we create below.
 
@@ -364,7 +351,6 @@ export class HGridSummarySampleComponent implements OnInit {
     ....
 }
 ```
-
 }
 
 ### Custom summaries, which access all data
@@ -377,7 +363,6 @@ As you can see in the code snippet below the operate method has the following th
 - fieldName - current column field
 
 @@if (igxName === 'IgxTreeGrid') {
-
 ```typescript
 class MySummary extends IgxNumberSummaryOperand {
     constructor() {
@@ -390,10 +375,8 @@ class MySummary extends IgxNumberSummaryOperand {
     }
 }
 ```
-
 }
 @@if (igxName !== 'IgxTreeGrid') {
-
 ```typescript
 class MySummary extends IgxNumberSummaryOperand {
     constructor() {
@@ -406,32 +389,24 @@ class MySummary extends IgxNumberSummaryOperand {
     }
 }
 ```
-
 }
-
 @@if (igxName === 'IgxGrid') {
-
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-alldata-summaries/" >
 </code-view>
-
 }
 @@if (igxName === 'IgxTreeGrid') {
-
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-allData-summary/" >
 </code-view>
-
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-allData-summary/" >
 </code-view>
-
 }
 
 ### Summary Template
@@ -452,30 +427,23 @@ When a default summary is defined, the height of the summary area is calculated 
 > [!NOTE]
 > Column summary template could be defined through API by setting the column [summaryTemplate]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaryTemplate) property to the required TemplateRef.
 
-
 @@if (igxName === 'IgxGrid') {
-
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-summary-template/" >
 </code-view>
-
 }
 @@if (igxName === 'IgxTreeGrid') {
-
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-summary-template/" >
 </code-view>
-
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-
 <code-view style="height:650px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hgrid-summary-template/" >
 </code-view>
-
 }
 
 ## Disable Summaries
@@ -632,9 +600,7 @@ public dateSummaryFormat(summary: IgxSummaryResult, summaryOperand: IgxSummaryOp
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hGrid-summary-formatter/" >
 </code-view>
 }
-
 @@if (igxName === 'IgxGrid') {
-
 ## Summaries with Group By
 
 When you have grouped by columns, the @@igComponent allows you to change the summary position and calculation mode using the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryCalculationMode) and [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryPosition) properties. Along with these two properties the @@igxName exposes and [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showSummaryOnCollapse) property which allows you to determine whether the summary row stays visible when the group row that refers to is collapsed.
@@ -663,10 +629,8 @@ The [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.ht
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-groupby-summary/" >
 </code-view>
-
 }
 @@if (igxName === 'IgxTreeGrid') {
-
 ## Child Summaries
 
 The @@igComponent supports separate summaries for the root nodes and for each nested child node level. Which summaries are shown is configurable using the [`summaryCalculationMode`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryCalculationMode) property. The child level summaries can be shown before or after the child nodes using the [`summaryPosition`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#summaryPosition) property. Along with these two properties the @@igxName exposes and [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#showSummaryOnCollapse) property which allows you to determine whether the summary row stays visible when the parent node that refers to is collapsed.
@@ -693,8 +657,8 @@ The [`showSummaryOnCollapse`]({environment:angularApiUrl}/classes/@@igTypeDoc.ht
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary2/" >
 </code-view>
-
 }
+
 <div class="divider--half"></div>
 
 ## Exporting Summaries
@@ -709,15 +673,12 @@ The [`IgxExcelExporterService`]({environment:angularApiUrl}/classes/IgxExcelExpo
            iframe-src="{environment:demosBaseUrl}/grid/grid-summary-export/" >
 </code-view>
 }
-
 @@if (igxName === 'IgxTreeGrid') {
 <code-view style="height:780px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-summary-export/" >
 </code-view>
 }
-
-
 @@if (igxName === 'IgxHierarchicalGrid') {
 <code-view style="height:760px"
            data-demos-base-url="{environment:demosBaseUrl}"

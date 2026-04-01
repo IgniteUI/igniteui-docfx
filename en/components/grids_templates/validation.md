@@ -60,30 +60,21 @@ The following sample demonstrates how to use the prebuilt `required`, `email` an
 We expose the `FormGroup` that will be used for validation when editing starts on a row/cell via a `formGroupCreated` event. You can modify it by adding your own validators for the related fields:
 
 @@if (igxName === 'IgxGrid') {
-
 ```html
 <igx-grid (formGroupCreated)='formCreateHandler($event)' ...>
 ```
-
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-
 ```html
 <igx-hierarchical-grid (formGroupCreated)='formCreateHandler($event)' ...>
 ```
-
 }
-
 @@if (igxName === 'IgxTreeGrid') {
-
 ```html
 <igx-tree-grid (formGroupCreated)='formCreateHandler($event)' ...>
 ```
-
 }
-
 @@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
-
 ```ts
     public formCreateHandler(args: IGridFormGroupCreatedEventArgs) {
         const formGroup = args.formGroup;
@@ -96,11 +87,8 @@ We expose the `FormGroup` that will be used for validation when editing starts o
         shippedDateRecord.addValidators(this.pastDateValidator());
     }
 ```
-
 }
-
 @@if (igxName === 'IgxTreeGrid') {
-
 ```ts
    public formCreateHandler(args: IGridFormGroupCreatedEventArgs) {
         const formGroup = args.formGroup;
@@ -108,7 +96,6 @@ We expose the `FormGroup` that will be used for validation when editing starts o
         hireDateRecord.addValidators([this.futureDateValidator(), this.pastDateValidator()]);
     }
 ```
-
 }
 
 You can decide to write your own validator function, or use one of the [built-in Angular validator functions](https://angular.io/guide/form-validation#built-in-validator-functions).
@@ -188,26 +175,19 @@ In that scenarios you can use the [`cellEdit`]({environment:angularApiUrl}/class
 Both events' arguments have a [`valid`]({environment:angularApiUrl}/interfaces/IGridEditEventArgs.html#valid) property and can be canceled accordingly. How it is used can be seen in the [Cross-field Validation example](#cross-field-example)
 
 @@if (igxName === 'IgxGrid') {
-
 ```html
 <igx-grid (cellEdit)='cellEdit($event)' ...>
 ```
-
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-
 ```html
 <igx-hierarchical-grid (cellEdit)='cellEdit($event)' ...>
 ```
-
 }
-
 @@if (igxName === 'IgxTreeGrid') {
-
 ```html
 <igx-tree-grid (cellEdit)='cellEdit($event)' ...>
 ```
-
 }
 
 ```ts
@@ -253,7 +233,6 @@ In some scenarios validation of one field may depend on the value of another fie
 In that case a custom validator can be used to compare the values in the record via their shared `FormGroup`.
 
 @@if (igxName === 'IgxGrid') {
-
 The below sample demonstrates a cross-field validation between different field of the same record. It checks the dates validity compared to the current date and between the active and created on date of the record as well as the deals won/lost ration for each employee. All errors are collected in a separate pinned column that shows that the record is invalid and displays the related errors.
 
 The next lines of code show the cross-field validator function, which contains the comparisons and sets the related errors relative to them.
@@ -366,11 +345,8 @@ public stateMessage(cell: CellType) {
 }
 
 ```
-
 }
-
 @@if (igxName === 'IgxHierarchicalGrid') {
-
   Cross-field validators can be added to the formGroup on the [`formGroupCreated`]({environment:angularApiUrl}/classes/IgxGridComponent.html#formGroupCreated) event. In them multiple fields can be compared for validity.
 
   ```ts
@@ -464,12 +440,8 @@ Errors and the detailed messages can be determined based on the row and cell's v
         return messages;
     }
 ```
-
 }
-
-
 @@if (igxName === 'IgxTreeGrid') {
-
 The below sample demonstrates a cross-field validation between different field of the same record. It checks that a specified City for a person is in the Country currently set and vice versa. Also check if the age for a person was 18 already when it was hired.
 
 The next lines of code show the cross-field validator function, which contains comparisons described above and sets the related errors.
@@ -564,13 +536,11 @@ public stateMessage(cell: CellType) {
     return messages;
 }
 ```
-
 }
 
 ### Cross-field example
 
 @@if (igxName === 'IgxGrid') {
-
 The below sample demonstrates the cross-field validation in action.
 
 <code-view style="height:620px"
@@ -578,9 +548,7 @@ The below sample demonstrates the cross-field validation in action.
            iframe-src="{environment:demosBaseUrl}/grid/grid-cross-field-validator-service/" alt="Angular @@igComponent Cross-field Validation Example">
 </code-view>
 }
-
 @@if (igxName === 'IgxHierarchicalGrid') {
-
 The below sample demonstrates cross-field validation in a Hierarchical Grid for both the root and child data.
 
 <code-view style="height:620px"
@@ -588,7 +556,6 @@ The below sample demonstrates cross-field validation in a Hierarchical Grid for 
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-cross-field-validation/" alt="Angular @@igComponent Cross-field Validation Example">
 </code-view>
 }
-
 @@if (igxName === 'IgxTreeGrid') {
 The below sample demonstrates the cross-field validation in action.
 
@@ -662,9 +629,7 @@ public cellStyles = {
 <igx-grid [rowStyles]="rowStyles">
   <igx-column field="ReorderLevel" header="ReorderLever" required [cellClasses]="cellStyles">
 ```
-
 }
-
 @@if (igxName === 'IgxHierarchicalGrid'){
 
 ```ts
@@ -693,10 +658,7 @@ public cellStyles = {
   <igx-row-island [key]="'Albums'" [rowStyles]="rowStyles">
     <igx-column field="Album" [editable]="true" [dataType]="'string'" required [cellClasses]="cellStyles">
 ```
-
 }
-
-
 @@if (igxName === 'IgxTreeGrid'){
 
 ```ts
@@ -716,40 +678,31 @@ public cellStyles = {
 <igx-tree-grid [rowStyles]="rowStyles">
   <igx-column *ngFor="let c of columns" [field]="c.field" [dataType]="c.dataType" [header]="c.label" [required]="c.required" [cellClasses]="cellStyles">
 ```
-
 }
 
 
 ### Demo
 
 @@if (igxName === 'IgxGrid'){
-
 <code-view style="height:560px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-validation-style/" >
 </code-view>
 }
-
 @@if (igxName === 'IgxHierarchicalGrid'){
-
 <code-view style="height:630px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-validation-style/" >
 </code-view>
-
 }
-
-
 @@if (igxName === 'IgxTreeGrid'){
-
 <code-view style="height:560px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-validation-style/" >
 </code-view>
-
 }
 
 <div class="divider--half"></div>
