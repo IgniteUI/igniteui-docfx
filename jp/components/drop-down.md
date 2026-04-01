@@ -48,7 +48,7 @@ import { IgxDropDownModule } from 'igniteui-angular/drop-down';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxDropDownComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_DROP_DOWN_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/drop-down/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxDropDownComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_DROP_DOWN_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/drop-down/src/drop-down/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts

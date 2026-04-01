@@ -52,7 +52,7 @@ import { IgxHierarchicalGridModule } from 'igniteui-angular/grids/hierarchical-g
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxHierarchicalGridComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_HIERARCHICAL_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/hierarchical-grid/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxHierarchicalGridComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_HIERARCHICAL_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/grids/hierarchical-grid/src/hierarchical-grid.module.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
