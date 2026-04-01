@@ -13,7 +13,7 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 <!-- Angular -->
 
 > \[!Note]
-> For changes specific to Angular LOB components, please see [Ignite UI Angular Changes](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md)
+> For changes specific to Angular LOB components, please see [Ignite UI Angular Changes](https://github.com/IgniteUI/igniteui-angular/blob/master/CHANGELOG.md)
 
 <!-- end: Angular -->
 
