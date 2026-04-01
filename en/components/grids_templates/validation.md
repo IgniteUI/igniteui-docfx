@@ -60,21 +60,28 @@ The following sample demonstrates how to use the prebuilt `required`, `email` an
 We expose the `FormGroup` that will be used for validation when editing starts on a row/cell via a `formGroupCreated` event. You can modify it by adding your own validators for the related fields:
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid (formGroupCreated)='formCreateHandler($event)' ...>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid (formGroupCreated)='formCreateHandler($event)' ...>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid (formGroupCreated)='formCreateHandler($event)' ...>
 ```
+
 }
 @@if (igxName === 'IgxGrid' || igxName === 'IgxHierarchicalGrid') {
+
 ```ts
     public formCreateHandler(args: IGridFormGroupCreatedEventArgs) {
         const formGroup = args.formGroup;
@@ -87,8 +94,10 @@ We expose the `FormGroup` that will be used for validation when editing starts o
         shippedDateRecord.addValidators(this.pastDateValidator());
     }
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```ts
    public formCreateHandler(args: IGridFormGroupCreatedEventArgs) {
         const formGroup = args.formGroup;
@@ -96,6 +105,7 @@ We expose the `FormGroup` that will be used for validation when editing starts o
         hireDateRecord.addValidators([this.futureDateValidator(), this.pastDateValidator()]);
     }
 ```
+
 }
 
 You can decide to write your own validator function, or use one of the [built-in Angular validator functions](https://angular.io/guide/form-validation#built-in-validator-functions).
@@ -175,19 +185,25 @@ In that scenarios you can use the [`cellEdit`]({environment:angularApiUrl}/class
 Both events' arguments have a [`valid`]({environment:angularApiUrl}/interfaces/IGridEditEventArgs.html#valid) property and can be canceled accordingly. How it is used can be seen in the [Cross-field Validation example](#cross-field-example)
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid (cellEdit)='cellEdit($event)' ...>
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid (cellEdit)='cellEdit($event)' ...>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid (cellEdit)='cellEdit($event)' ...>
 ```
+
 }
 
 ```ts
@@ -345,6 +361,7 @@ public stateMessage(cell: CellType) {
 }
 
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
   Cross-field validators can be added to the formGroup on the [`formGroupCreated`]({environment:angularApiUrl}/classes/IgxGridComponent.html#formGroupCreated) event. In them multiple fields can be compared for validity.
@@ -440,6 +457,7 @@ Errors and the detailed messages can be determined based on the row and cell's v
         return messages;
     }
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 The below sample demonstrates a cross-field validation between different field of the same record. It checks that a specified City for a person is in the Country currently set and vice versa. Also check if the age for a person was 18 already when it was hired.
@@ -536,6 +554,7 @@ public stateMessage(cell: CellType) {
     return messages;
 }
 ```
+
 }
 
 ### Cross-field example
@@ -629,6 +648,7 @@ public cellStyles = {
 <igx-grid [rowStyles]="rowStyles">
   <igx-column field="ReorderLevel" header="ReorderLever" required [cellClasses]="cellStyles">
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid'){
 
@@ -658,6 +678,7 @@ public cellStyles = {
   <igx-row-island [key]="'Albums'" [rowStyles]="rowStyles">
     <igx-column field="Album" [editable]="true" [dataType]="'string'" required [cellClasses]="cellStyles">
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid'){
 
@@ -678,6 +699,7 @@ public cellStyles = {
 <igx-tree-grid [rowStyles]="rowStyles">
   <igx-column *ngFor="let c of columns" [field]="c.field" [dataType]="c.dataType" [header]="c.label" [required]="c.required" [cellClasses]="cellStyles">
 ```
+
 }
 
 

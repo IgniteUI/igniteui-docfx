@@ -218,6 +218,7 @@ public disableSummary() {
 If these functions do not fulfill your requirements you can provide a custom summary for the specific columns. In order to achieve this you have to override one of the base classes [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html), [`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html) or [`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) according to the column data type and your needs. This way you can redefine the existing function or you can add new functions. [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) class provides the default implementation only for the [`count`]({environment:angularApiUrl}/classes/igxsummaryoperand.html#count) method. [`IgxNumberSummaryOperand`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html) extends [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) and provides implementation for the [`min`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#min), [`max`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#max), [`sum`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#sum) and [`average`]({environment:angularApiUrl}/classes/igxnumbersummaryoperand.html#average). [`IgxDateSummaryOperand`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html) extends [`IgxSummaryOperand`]({environment:angularApiUrl}/classes/igxsummaryoperand.html) and additionally gives you [`earliest`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html#earliest) and [`latest`]({environment:angularApiUrl}/classes/igxdatesummaryoperand.html#latest).
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
+
 ```typescript
 import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from 'igniteui-angular/core';
 // import { IgxSummaryResult, IgxSummaryOperand, IgxNumberSummaryOperand, IgxDateSummaryOperand } from '@infragistics/igniteui-angular'; for licensed package
@@ -238,8 +239,10 @@ class MySummary extends IgxNumberSummaryOperand {
     }
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```typescript
 import { IgxRowIslandComponent, IgxHierarchicalGridComponent } from 'igniteui-angular/grids/hierarchical-grid';
 import { IgxNumberSummaryOperand, IgxSummaryResult } from 'igniteui-angular/core';
@@ -304,6 +307,7 @@ export class GridComponent implements OnInit {
     ....
 }
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 And now let's add our custom summary to the column `UnitPrice`. We will achieve that by setting the [`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) property to the class we create below.
@@ -324,6 +328,7 @@ export class GridComponent implements OnInit {
     ....
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 And now let's add our custom summary to the column `GramyNominations`. We will achieve that by setting the [`summaries`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#summaries) property to the class we create below.
@@ -351,6 +356,7 @@ export class HGridSummarySampleComponent implements OnInit {
     ....
 }
 ```
+
 }
 
 ### Custom summaries, which access all data
@@ -363,6 +369,7 @@ As you can see in the code snippet below the operate method has the following th
 - fieldName - current column field
 
 @@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
 class MySummary extends IgxNumberSummaryOperand {
     constructor() {
@@ -375,8 +382,10 @@ class MySummary extends IgxNumberSummaryOperand {
     }
 }
 ```
+
 }
 @@if (igxName !== 'IgxTreeGrid') {
+
 ```typescript
 class MySummary extends IgxNumberSummaryOperand {
     constructor() {
@@ -389,6 +398,7 @@ class MySummary extends IgxNumberSummaryOperand {
     }
 }
 ```
+
 }
 @@if (igxName === 'IgxGrid') {
 <code-view style="height:650px"
