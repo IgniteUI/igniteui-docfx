@@ -42,7 +42,7 @@ In order to display the snackbar component, use its [`show()`]({environment:angu
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="snackbar.show()">Delete Message</button>
+<button igxButton="contained" (click)="snackbar.show()">Delete Message</button>
 <div>
     <igx-snackbar #snackbar>Message deleted</igx-snackbar>
 </div>
@@ -60,7 +60,7 @@ Once opened, the snackbar disappears after a period specified by the [`displayTi
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="snackbar.show()">Send message</button>
+<button igxButton="contained" (click)="snackbar.show()">Send message</button>
 <div>
   <igx-snackbar #snackbar [autoHide]="false" actionText="CLOSE" (clicked)="close(snackbar)">Message sent</igx-snackbar>
 </div>
@@ -86,7 +86,7 @@ Use [`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.htm
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="snackbar.show()">Send message</button>
+<button igxButton="contained" (click)="snackbar.show()">Send message</button>
 <div>
   <igx-snackbar #snackbar displayTime="1000">Message sent</igx-snackbar>
 </div>
@@ -103,7 +103,7 @@ We can also customize the content of the Snackbar to display more complex elemen
 
 ```html
 <!--sample.component.html-->
-<button igxButton="raised" (click)="snackbar.show()">Load file</button>
+<button igxButton="contained" (click)="snackbar.show()">Load file</button>
 <div>
   <igx-snackbar #snackbar displayTime="5000">File loading
     <svg id="dots" height="20px">
