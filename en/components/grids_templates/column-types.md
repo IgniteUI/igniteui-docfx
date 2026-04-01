@@ -101,18 +101,18 @@ public formatOptions = this.options;
 
 Available timezones:
 
-| Timezone                  | Value                     |
-|---------------------------| ------------------------- |
-| Alpha Time Zone           |‘UTC+1’                    |
-| Australian Central Time   |‘UTC+9:30/ +10:30’         |
-| Arabia Standard Time      |‘UTC+3’                    |
-| Central Standard Time     |‘UTC-6’                    |
-| China Standard Time       |‘UTC+8’                    |
-| Delta Time Zone           |‘UTC+4’                    |
-| Greenwich Mean Time       |‘UTC+0’                    |
-| Gulf Standard Time        |‘UTC+4’                    |
-| Hawaii Standard Time      |‘UTC-10’                   |
-| India Standard Time       |‘UTC+4’                    |
+| Timezone                | Value              |
+| :---------------------- | :----------------- |
+| Alpha Time Zone         | ‘UTC+1’            |
+| Australian Central Time | ‘UTC+9:30/ +10:30’ |
+| Arabia Standard Time    | ‘UTC+3’            |
+| Central Standard Time   | ‘UTC-6’            |
+| China Standard Time     | ‘UTC+8’            |
+| Delta Time Zone         | ‘UTC+4’            |
+| Greenwich Mean Time     | ‘UTC+0’            |
+| Gulf Standard Time      | ‘UTC+4’            |
+| Hawaii Standard Time    | ‘UTC-10’           |
+| India Standard Time     | ‘UTC+4’            |
 
 <div class="divider--half"></div>
 
@@ -209,11 +209,11 @@ public formatOptions = this.options;
 </igx-column>
 ```
 
-| Parameter                 | Description                                                |
-|---------------------------| -------------------------                                  |
-| digitsInfo                | Represents Decimal representation of currency value        |
-| currencyCode              | ISO 4217 currency code                                     |
-| display*                  | Displays the value by narrow or wide symbol                |
+| Parameter    | Description                                         |
+| :----------- | :-------------------------------------------------- |
+| digitsInfo   | Represents Decimal representation of currency value |
+| currencyCode | ISO 4217 currency code                              |
+| display*     | Displays the value by narrow or wide symbol         |
 
 *display - for the default en-US locale, the code USD can be represented by the narrow symbol $ or the wide symbol US$.
 
