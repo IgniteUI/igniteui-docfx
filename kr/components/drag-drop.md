@@ -15,7 +15,7 @@ Drag and drop icon to reposition it.
 
 <code-view style="height:325px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/icons-sample" >
+           iframe-src="{environment:demosBaseUrl}/interactions/icons-sample/" >
 </code-view>
 
 <div class="divider--half"></div>

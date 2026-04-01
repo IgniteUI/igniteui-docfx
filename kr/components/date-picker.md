@@ -11,7 +11,7 @@ The Ignite UI for Angular Date Picker Component lets users pick a single date th
 <!-- TODO: datepicker sample with several options enabled -->
 <code-view style="height: 550px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1" alt="Angular Date Picker Example">
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-1/" alt="Angular Date Picker Example">
 </code-view>
 <div class="divider--half"></div>
 
@@ -159,7 +159,7 @@ The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepicker
 ```
 <code-view style="height: 540px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -175,7 +175,7 @@ More information about these can be found in the [`IgxDateTimeEditor`](date-time
 
 <code-view style="height: 680px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-sample-3/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -209,7 +209,7 @@ To achieve that in template driven forms, use the `ngModel` to bind both compone
 
 <code-view style="height: 540px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/template-driven-form" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/template-driven-form/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -218,7 +218,7 @@ In reactive forms, we can handle the [`valueChange`]({environment:angularApiUrl}
 
 <code-view style="height: 540px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/reactive-form" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/reactive-form/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -252,7 +252,7 @@ To get started with styling the date picker, we need to import the `index` file,
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-The date picker uses the calendar's theme, so we have to create a new theme that extends the [`igx-calendar-theme`]({environment:sassApiUrl}/index.html#function-igx-calendar-theme) and use some of its parameters to style the date picker's items:
+The date picker uses the calendar's theme, so we have to create a new theme that extends the [`igx-calendar-theme`]({environment:sassApiUrl}/themes#function-igx-calendar-theme) and use some of its parameters to style the date picker's items:
 
 ```scss
 $custom-datepicker-theme: igx-calendar-theme(
@@ -298,7 +298,7 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 <code-view style="height:500px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-styling-sample" >
+           iframe-src="{environment:demosBaseUrl}/scheduling/datepicker-styling-sample/" >
 </code-view>
 
 ## API References
@@ -307,19 +307,19 @@ If the component is using the [`Emulated`](themes/sass/component-themes.md#view-
 * [IgxDatePickerComponent]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)
 * [IgxDateTimeEditorDirective]({environment:angularApiUrl}/classes/igxdatetimeeditordirective.html)
 * [IgxCalendarComponent]({environment:angularApiUrl}/classes/igxcalendarcomponent.html)
-* [IgxCalendarComponent Styles]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
+* [IgxCalendarComponent Styles]({environment:sassApiUrl}/themes#function-igx-calendar-theme)
+* [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-igx-overlay-theme)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
 ## Theming Dependencies
 <div class="divider--half"></div>
 
-* [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-igx-calendar-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-igx-overlay-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-igx-icon-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-igx-button-theme)
-* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-igx-input-group-theme)
-* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-igx-drop-down-theme)
+* [IgxCalendar Theme]({environment:sassApiUrl}/themes#function-igx-calendar-theme)
+* [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-igx-overlay-theme)
+* [IgxIcon Theme]({environment:sassApiUrl}/themes#function-igx-icon-theme)
+* [IgxButton Theme]({environment:sassApiUrl}/themes#function-igx-button-theme)
+* [IgxInputGroup Theme]({environment:sassApiUrl}/themes#function-igx-input-group-theme)
+* [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-igx-drop-down-theme)
 
 
 ## Additional Resources

@@ -3,7 +3,7 @@ title: Angular Spreadsheet | Grid Controls | Overview | Infragistics |
 _description: Use the Spreadsheet control to embed Excel document creation and editing experiences right into your application.
 _keywords: Spreadsheet, Ignite UI for Angular, Infragistics
 _language: kr
-mentionedTypes: ['Spreadsheet']
+mentionedTypes: ["Spreadsheet"]
 ---
 
 # Angular Angular Spreadsheet
@@ -25,9 +25,9 @@ The Angular Spreadsheet is a Angular component that allows visualizing and editi
 
 When installing the spreadsheet package, the core and excel package must also be installed.
 
-*   **npm install --save igniteui-angular-core**
-*   **npm install --save igniteui-angular-excel**
-*   **npm install --save igniteui-angular-spreadsheet**
+- **npm install --save igniteui-angular-core**
+- **npm install --save igniteui-angular-excel**
+- **npm install --save igniteui-angular-spreadsheet**
 
 ## Component Modules
 

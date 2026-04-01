@@ -2,19 +2,20 @@
 title: Angular Tree Grid | Fastest Angular Tree Table | Infragistics
 _description: The Ignite UI for Angular Tree Grid is used to display and manipulate hierarchical or flat data with ease. Quickly bind your data with very little coding. Try it for FREE
 _keywords: angular tree grid, angular tree table, angular tree grid component, angular tree table component, angular ui components, igniteui for angular, infragistics
+_license: commercial
 ---
 
 # Angular Tree Grid Component Overview
 
-The Ignite UI for Angular Tree Grid is used to display and manipulate hierarchical or flat self-referencing data. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, grouping, templating, column moving, column pinning, export to Excel and CSV, and more.
+The Ignite UI for Angular Tree Grid is used to display and manipulate hierarchical or flat self-referencing data. Quickly bind your data with very little code or use a variety of events to customize different behaviors. This component provides a rich set of features like data selection, excel style filtering, sorting, paging, grouping, templating, column moving, column pinning, export to Excel, CSV and PDF, and more.
 
 ## Angular Tree Grid Example
 
-In this example, you can see how users can display hierarchical data. We have included filtering and sorting options, pinning and hiding, row selection, export to excel and csv, and cell templating that uses our [Sparkline](../charts/types/sparkline-chart.md) component. In addition, you can see an example of custom pagination with [Angular Pagination](paging.md).
+In this example, you can see how users can display hierarchical data. We have included filtering and sorting options, pinning and hiding, row selection, export to excel, csv and pdf, and cell templating that uses our [Sparkline](../charts/types/sparkline-chart.md) component. In addition, you can see an example of custom pagination with [Angular Pagination](paging.md).
 
 <code-view style="height:850px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey" alt="Angular tree grid example">
+           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-childdatakey/" alt="Angular tree grid example">
 </code-view>
 
 <div class="divider--half"></div>
@@ -27,14 +28,14 @@ To get started with the Ignite UI for Angular Tree Grid component, first you nee
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](../general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](../general/getting-started.md) topic.
 
 The next step is to import the `IgxTreeGridModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
 
-import { IgxTreeGridModule } from 'igniteui-angular';
+import { IgxTreeGridModule } from 'igniteui-angular/grids/tree-grid';
 // import { IgxTreeGridModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -52,7 +53,7 @@ Alternatively, as of `16.0.0` you can import the `IgxTreeGridComponent` as a sta
 ```typescript
 // home.component.ts
 
-import { IGX_TREE_GRID_DIRECTIVES } from 'igniteui-angular';
+import { IGX_TREE_GRID_DIRECTIVES } from 'igniteui-angular/grids/tree-grid';
 // import { IGX_TREE_GRID_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -93,6 +94,7 @@ Regardless of which option is used for building the tree grid's hierarchy (child
 Initially the tree grid will expand all node levels and show them. This behavior can be configured using the [`expansionDepth`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#expansionDepth) property. By default its value is **Infinity** which means all node levels will be expanded. You may control the initial expansion depth by setting this property to a numeric value. For example **0** will show only root level nodes, **1** will show root level nodes and their child nodes and so on.
 
 ### Child Collection
+
 When we are using the **child collection** option, every data object contains a child collection, that is populated with items of the same type as the parent data object. This way every record in our tree grid will have a direct reference to any of its children. In this case the [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) property of our tree grid that contains the original data source will be a hierarchically defined collection.
 
 For this sample, let's use the following collection structure:
@@ -194,6 +196,7 @@ Finally, we will enable the toolbar of our tree grid, along with the column hidi
 You can see the result of the code from above at the beginning of this article in the [Angular Tree Grid Example](#angular-tree-grid-example) section.
 
 ### Primary and Foreign keys
+
 When we are using the **primary and foreign keys** option, every data object contains a primary key and a foreign key. The primary key is the unique identifier of the current data object and the foreign key is the unique identifier of its parent. In this case the [`data`]({environment:angularApiUrl}/classes/igxtreegridcomponent.html#data) property of our tree grid that contains the original data source will be a flat collection.
 
 The following is an example of a component which contains a flat collection defined with primary and foreign keys relation:
@@ -260,7 +263,7 @@ And here is the final result:
 
 <code-view style="height:450px"
            data-demos-base-url="{environment:lobDemosBaseUrl}"
-           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-primaryforeignkey" >
+           iframe-src="{environment:lobDemosBaseUrl}/tree-grid/treegrid-primaryforeignkey/" >
 <div class="divider--half"></div>
 
 ## Persistence and Integration
@@ -279,120 +282,49 @@ The indentation of the **tree cells** persists across other tree grid features l
 
 See the [Grid Sizing](sizing.md) topic.
 
-## Angular Tree Grid Styling
+## Styling
 
-The Tree Grid allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The tree grid's [theme]({environment:sassApiUrl}/index.html#function-grid-theme) exposes a wide variety of properties, which allows the customization of all the tree grid's features.
+The Tree Grid allows styling through the [`Ignite UI for Angular Theme Library`](../themes/sass/component-themes.md). The tree grid's [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) exposes a wide variety of properties, which allows the customization of all the tree grid's features.
 
 To get started with styling the Tree Grid, we need to import the `index` file, where all the theme functions and component mixins live:
 
 ```scss
-@import '~igniteui-angular/lib/core/styles/themes/index';
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-Following the simplest approach, we create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the parameters, required to customize the tree grid as desired.
+Following the simplest approach, we create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) and accepts the parameters, required to customize the tree grid as desired.
 
 >[!NOTE]
 >There is no specific `sass` tree grid function.
 
 ```scss
 $custom-theme: grid-theme(
-  $cell-active-border-color: #FFCD0F,
-  $cell-selected-background: #6F6F6F,
-  $row-hover-background: #F8E495,
-  $row-selected-background: #8D8D8D,
+  $cell-active-border-color: #ffcd0f,
+  $cell-selected-background: #6f6f6f,
+  $row-hover-background: #f8e495,
+  $row-selected-background: #8d8d8d,
   $header-background: #494949,
-  $header-text-color: #FFF,
-  $expand-icon-color: #FFCD0F,
-  $expand-icon-hover-color: #E0B710,
-  $resize-line-color: #FFCD0F,
-  $row-highlight: #FFCD0F
+  $header-text-color: #fff,
+  $expand-icon-color: #ffcd0f,
+  $expand-icon-hover-color: #e0b710,
+  $resize-line-color: #ffcd0f,
+  $row-highlight: #ffcd0f
 );
 ```
+
+>[!NOTE]
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 The last step is to **include** the component theme in our application.
 
 ```scss
-@include grid($custom-theme);
-```
-
->[!NOTE]
->If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
-
-```scss
 :host {
-    ::ng-deep {
-        @include grid($custom-theme);
-    }
+  @include tokens($custom-theme);
 }
 ```
-
-### Defining a Color Palette
-
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
-
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
-
-```scss
-$yellow-color: #FFCD0F;
-$black-color: #494949;
-$custom-palette: palette($primary: $black-color, $secondary: $yellow-color);
-```
-
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
-
-```scss
-$custom-theme: grid-theme(
-    $cell-active-border-color: color($custom-palette, "secondary", 500),
-    $cell-selected-background: color($custom-palette, "primary", 300),
-    $row-hover-background: color($custom-palette, "secondary", 100),
-    $row-selected-background: color($custom-palette, "primary", 100),
-    $header-background: color($custom-palette, "primary", 500),
-    $header-text-color:contrast-color($custom-palette, "primary", 500),
-    $expand-icon-color: color($custom-palette, "secondary", 500),
-    $expand-icon-hover-color: color($custom-palette, "secondary", 600),
-    $resize-line-color: color($custom-palette, "secondary", 500),
-    $row-highlight: color($custom-palette, "secondary", 500)
-);
-```
-
-### Using Schemas
-
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/sass/schemas.md). A **schema** is a recipe of a theme.
-
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid) schema:
-
-```scss
-// Extending the light tree grid schema
-$custom-grid-schema: extend($_light-grid, (
-    cell-active-border-color: (igx-color:('secondary', 500)),
-    cell-selected-background: (igx-color:('primary', 300)),
-    row-hover-background: (igx-color:('secondary', 100)),
-    row-selected-background: (igx-color:('primary', 100)),
-    header-background: (igx-color:('primary', 500)),
-    header-text-color: (igx-contrast-color:('primary', 500)),
-    expand-icon-color: (igx-color:('secondary', 500)),
-    expand-icon-hover-color: (igx-color:('secondary', 600)),
-    resize-line-color: (igx-color:('secondary', 500)),
-    row-highlight: (igx-color:('secondary', 500))
-));
-```
-
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
-
-```scss
-// Extending the global light-schema
-$my-custom-schema: extend($light-schema, (
-    igx-grid: $custom-grid-schema
-));
-
-// Defining grid-theme with the global light schema
-$custom-theme: grid-theme(
-    $palette: $custom-palette,
-    $schema: $my-custom-schema
-);
-```
-
-Don't forget to include the themes in the same way as it was demonstrated above.
 
 ### Angular Tree Grid Styling Demo
 
@@ -400,7 +332,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <code-view style="height:600px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-style" alt="Angular tree grid styling demo">
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-style/" alt="Angular tree grid styling demo">
 </code-view>
 
 >[!NOTE]
@@ -410,7 +342,7 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 
 ## Performance (Experimental)
 
-The `igxTreeGrid`'s design allows it to take advantage of the Event Coalescing feature that has Angular introduced. This feature allows for improved performance with roughly around **`20%`** in terms of interactions and responsiveness. This feature can be enabled on application level by simply setting the `ngZoneEventCoalescing ` and `ngZoneRunCoalescing` properties to `true` in the `bootstrapModule` method:
+The `igxTreeGrid`'s design allows it to take advantage of the Event Coalescing feature that has Angular introduced. This feature allows for improved performance with roughly around **`20%`** in terms of interactions and responsiveness. This feature can be enabled on application level by simply setting the `ngZoneEventCoalescing` and `ngZoneRunCoalescing` properties to `true` in the `bootstrapModule` method:
 
 ```typescript
 platformBrowserDynamic()
@@ -420,7 +352,6 @@ platformBrowserDynamic()
 
 >[!NOTE]
 > This is still in experimental feature for the `igxTreeGrid`. This means that there might be some unexpected behaviors in the Tree Grid. In case of encountering any such behavior, please contact us on our [Github](https://github.com/IgniteUI/igniteui-angular/discussions) page.
-
 >[!NOTE]
 > Enabling it can affects other parts of an Angular application that the `igxTreeGrid` is not related to.
 
@@ -449,36 +380,38 @@ platformBrowserDynamic()
 
 <div class="divider--half"></div>
 
-* [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
-* [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
-* [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/#function-grid-theme)
-* [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
+- [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
+- [IgxGridCell]({environment:angularApiUrl}/classes/igxgridcell.html)
+- [IgxTreeGridRow]({environment:angularApiUrl}/classes/igxtreegridrow.html)
+- [IgxGridComponent]({environment:angularApiUrl}/classes/igxgridcomponent.html)
+- [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
+- [IgxBaseTransactionService]({environment:angularApiUrl}/classes/igxbasetransactionservice.html)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxInputGroup Theme]({environment:sassApiUrl}/index.html#function-input-group-theme)
-* [IgxChip Theme]({environment:sassApiUrl}/index.html#function-chip-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
-* [IgxButton Theme]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxOverlay Theme]({environment:sassApiUrl}/index.html#function-overlay-theme)
-* [IgxDropDown Theme]({environment:sassApiUrl}/index.html#function-drop-down-theme)
-* [IgxCalendar Theme]({environment:sassApiUrl}/index.html#function-calendar-theme)
-* [IgxSnackBar Theme]({environment:sassApiUrl}/index.html#function-snackbar-theme)
-* [IgxBadge Theme]({environment:sassApiUrl}/index.html#function-badge-theme)
+
+- [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxInputGroup Theme]({environment:sassApiUrl}/themes#function-input-group-theme)
+- [IgxChip Theme]({environment:sassApiUrl}/themes#function-chip-theme)
+- [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxButton Theme]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxOverlay Theme]({environment:sassApiUrl}/themes#function-overlay-theme)
+- [IgxDropDown Theme]({environment:sassApiUrl}/themes#function-drop-down-theme)
+- [IgxCalendar Theme]({environment:sassApiUrl}/themes#function-calendar-theme)
+- [IgxSnackBar Theme]({environment:sassApiUrl}/themes#function-snackbar-theme)
+- [IgxBadge Theme]({environment:sassApiUrl}/themes#function-badge-theme)
 
 
 ## Additional Resources
 
 <div class="divider--half"></div>
 
-* [Grid Sizing](sizing.md)
-* [Data Grid](../grid/grid.md)
-* [Row Editing](row-editing.md)
+- [Grid Sizing](sizing.md)
+- [Data Grid](../grid/grid.md)
+- [Row Editing](row-editing.md)
+- [Ignite UI for Angular Skills](../ai/skills.md) — Agent Skills for grids, data operations, and theming
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

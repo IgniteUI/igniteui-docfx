@@ -2,7 +2,8 @@
 title: Angular Chart Performance | Data Visualization | Infragistics
 _description: Infragistics' Angular Chart Performance
 _keywords: Angular Charts, Performance, Infragistics
-mentionedTypes: ["DomainChart", "CategoryChart", "FinancialChart", "XamDataChart"]
+_license: commercial
+mentionedTypes: ["DomainChart", "CategoryChart", "FinancialChart", "XamDataChart", "FinancialChartVolumeType", "FinancialChartZoomSliderType"]
 namespace: Infragistics.Controls.Charts
 ---
 
@@ -48,9 +49,9 @@ This section lists guidelines and chart features that add to the overhead and pr
 
 If you need to plot data sources with large number of data points (e.g. 10,000+), we recommend using Angular [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) with one of the following type of series which where designed for specially for that purpose.
 
-*   [Scatter HD Chart](../types/scatter-chart.md#angular-scatter-high-density-chart) instead of [Category Point Chart](../types/point-chart.md) or [Scatter Marker Chart](../types/scatter-chart.md#angular-scatter-marker-chart)
-*   [Scatter Polyline Chart](../types/shape-chart.md#angular-scatter-polyline-chart) instead of [Category Line Chart](../types/line-chart.md#angular-line-chart-example) or [Scatter Line Chart](../types/scatter-chart.md#angular-scatter-line-chart)
-*   [Scatter Polygon Chart](../types/shape-chart.md#angular-scatter-polygon-chart) instead of [Category Area Chart](../types/area-chart.md#angular-area-chart-example) or [Column Chart](../types/column-chart.md#angular-column-chart-example)
+- [Scatter HD Chart](../types/scatter-chart.md#angular-scatter-high-density-chart) instead of [Category Point Chart](../types/point-chart.md) or [Scatter Marker Chart](../types/scatter-chart.md#angular-scatter-marker-chart)
+- [Scatter Polyline Chart](../types/shape-chart.md#angular-scatter-polyline-chart) instead of [Category Line Chart](../types/line-chart.md#angular-line-chart-example) or [Scatter Line Chart](../types/scatter-chart.md#angular-scatter-line-chart)
+- [Scatter Polygon Chart](../types/shape-chart.md#angular-scatter-polygon-chart) instead of [Category Area Chart](../types/area-chart.md#angular-area-chart-example) or [Column Chart](../types/column-chart.md#angular-column-chart-example)
 
 ### Data Structure
 
@@ -74,11 +75,9 @@ export class MultiDataSources {
         const dataSource1: any[] = [];
         dataSource1.push({ "Year": "1996", "Value": 148 });
         dataSource1.push({ "Year": "2000", "Value": 142 });
-
         const dataSource2: any[] = [];
         dataSource2.push({ "Year": "1996", "Value": 110 });
         dataSource2.push({ "Year": "2000", "Value": 115 });
-
         const multipleSources: any[] = [dataSource1, dataSource2];
         return multipleSources;
     }
@@ -100,13 +99,13 @@ this.Chart.excludedProperties = [ "CHN",  "FRN", "GER" ];
 
 ### Chart Types
 
-Simpler chart types such as [Line Chart](../types/line-chart.md) have faster performance than using [Spline Chart](../types/spline-chart.md) because of the complex interpolation of spline lines between data points. Therefore, you should use [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#chartType) property of Angular [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) or the [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html) control to select type of chart that renders faster. Alternatively, you can change a type of series to a faster series in Angular [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) control.
+Simpler chart types such as [Line Chart](../types/line-chart.md) have faster performance than using [Spline Chart](../types/spline-chart.md) because of the complex interpolation of spline lines between data points. Therefore, you should use [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#chartType) property of Angular [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) or the [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html) control to select type of chart that renders faster. Alternatively, you can change a type of series to a faster series in Angular [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) control.
 
 The following table lists chart types in order from the fastest performance to slower performance in each group of charts:
 
 | Chart Group     | Chart Type |
 | ----------------|--------------------------------- |
-| Pie Charts       | - [Pie Chart](../types/pie-chart.md) <br> - [Donut Chart](../types/donut-chart.md) <br> - [Radial Pie Chart](../types/radial-chart.md#angular-radial-pie-chart) <br>
+| Pie Charts       | - [Pie Chart](../types/pie-chart.md) <br> - [Donut Chart](../types/donut-chart.md) <br> - [Radial Pie Chart](../types/radial-chart.md#angular-radial-pie-chart) |
 | Line Charts      | - [Category Line Chart](../types/line-chart.md#angular-line-chart-example) <br> - [Category Spline Chart](../types/spline-chart.md#angular-spline-chart-example) <br> - [Step Line Chart](../types/step-chart.md#angular-step-line-chart) <br> - [Radial Line Chart](../types/radial-chart.md#angular-radial-line-chart) <br> - [Polar Line Chart](../types/polar-chart.md#angular-polar-line-chart) <br> - [Scatter Line Chart](../types/scatter-chart.md#angular-scatter-line-chart) <br> - [Scatter Polyline Chart](../types/shape-chart.md#angular-scatter-polyline-chart) (\*)  <br> - [Scatter Contour Chart](../types/scatter-chart.md#angular-scatter-contour-chart) <br> - [Stacked Line Chart](../types/stacked-chart.md#angular-stacked-line-chart) <br> - [Stacked 100% Line Chart](../types/stacked-chart.md#angular-stacked-100-line-chart) <br> |
 | Area Charts      | - [Category Area Chart](../types/area-chart.md#angular-area-chart-example) <br> - [Step Area Chart](../types/step-chart.md#angular-step-area-chart) <br> - [Range Area Chart](../types/area-chart.md#angular-range-area-chart) <br> - [Radial Area Chart](../types/radial-chart.md#angular-radial-area-chart) <br> - [Polar Area Chart](../types/polar-chart.md#angular-polar-area-chart) <br> - [Scatter Polygon Chart](../types/shape-chart.md#angular-scatter-polygon-chart) (\*) <br> - [Scatter Area Chart](../types/scatter-chart.md#angular-scatter-area-chart) <br> - [Stacked Area Chart](../types/stacked-chart.md#angular-stacked-area-chart) <br> - [Stacked 100% Area Chart](../types/stacked-chart.md#angular-stacked-100-area-chart) <br> |
 | Column Charts    | - [Column Chart](../types/column-chart.md#angular-column-chart-example) <br> - [Bar Chart](../types/bar-chart.md#angular-bar-chart-example) <br> - [Waterfall Chart](../types/column-chart.md#angular-waterfall-chart) <br> - [Range Column Chart](../types/column-chart.md#angular-range-column-chart) <br> - [Radial Column Chart](../types/radial-chart.md#angular-radial-column-chart) <br> - [Stacked Column Chart](../types/stacked-chart.md#angular-stacked-column-chart) <br> - [Stacked Bar Chart](../types/stacked-chart.md#angular-stacked-bar-chart) <br> - [Stacked 100% Column Chart](../types/stacked-chart.md#angular-stacked-100-column-chart) <br> - [Stacked 100% Bar Chart](../types/stacked-chart.md#angular-stacked-100-bar-chart) |
@@ -312,16 +311,16 @@ Setting a lot of panes using [`indicatorTypes`]({environment:dvApiBaseUrl}/produ
 
 ### Zoom Slider
 
-Setting the [`zoomSliderType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#zoomSliderType) option to `None` will improve chart performance and enable more vertical space for other indicators and the volume pane.
+Setting the [`zoomSliderType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#zoomSliderType) option to [`None`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#None) will improve chart performance and enable more vertical space for other indicators and the volume pane.
 
 ### Volume Type
 
 Setting the [`volumeType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#volumeType) property can have the following impact on chart performance:
 
-*   `None` - is the least expensive since it does not display the volume pane.
-*   `Line` - is more expensive volume type to render and it is recommended when rendering a lot of data points or when plotting a lot of data sources.
-*   `Area` - is more expensive to render than the `Line` volume type.
-*   [`IgxColumn`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_grids_grids.igxcolumn.html) - is more expensive to render than the `Area` volume type and it is recommended when rendering volume data of 1-3 stocks.
+- [`None`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#None) - is the least expensive since it does not display the volume pane.
+- [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#Line) - is more expensive volume type to render and it is recommended when rendering a lot of data points or when plotting a lot of data sources.
+- [`Area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#Area) - is more expensive to render than the [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#Line) volume type.
+- [`Column`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#Column) - is more expensive to render than the [`Area`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.financialchartvolumetype.html#Area) volume type and it is recommended when rendering volume data of 1-3 stocks.
 
 ## Performance in Data Chart
 
@@ -350,43 +349,43 @@ Also, adding a lot of series to the [`IgxSeriesComponent`]({environment:dvApiBas
 
 You can find more information about related chart types in these topics:
 
-*   [Area Chart](../types/area-chart.md)
-*   [Bar Chart](../types/bar-chart.md)
-*   [Bubble Chart](../types/bubble-chart.md)
-*   [Column Chart](../types/column-chart.md)
-*   [Donut Chart](../types/donut-chart.md)
-*   [Pie Chart](../types/pie-chart.md)
-*   [Point Chart](../types/point-chart.md)
-*   [Polar Chart](../types/polar-chart.md)
-*   [Radial Chart](../types/radial-chart.md)
-*   [Shape Chart](../types/shape-chart.md)
-*   [Spline Chart](../types/spline-chart.md)
-*   [Scatter Chart](../types/scatter-chart.md)
-*   [Stacked Chart](../types/stacked-chart.md)
-*   [Step Chart](../types/shape-chart.md)
-*   [Stock Chart](../types/stock-chart.md)
-*   [Chart Animations](chart-animations.md)
-*   [Chart Annotations](chart-annotations.md)
-*   [Chart Highlighting](chart-highlighting.md)
-*   [Chart Markers](chart-markers.md)
-*   [Chart Overlays](chart-overlays.md)
-*   [Chart Trendlines](chart-trendlines.md)
+- [Area Chart](../types/area-chart.md)
+- [Bar Chart](../types/bar-chart.md)
+- [Bubble Chart](../types/bubble-chart.md)
+- [Column Chart](../types/column-chart.md)
+- [Donut Chart](../types/donut-chart.md)
+- [Pie Chart](../types/pie-chart.md)
+- [Point Chart](../types/point-chart.md)
+- [Polar Chart](../types/polar-chart.md)
+- [Radial Chart](../types/radial-chart.md)
+- [Shape Chart](../types/shape-chart.md)
+- [Spline Chart](../types/spline-chart.md)
+- [Scatter Chart](../types/scatter-chart.md)
+- [Stacked Chart](../types/stacked-chart.md)
+- [Step Chart](../types/shape-chart.md)
+- [Stock Chart](../types/stock-chart.md)
+- [Chart Animations](chart-animations.md)
+- [Chart Annotations](chart-annotations.md)
+- [Chart Highlighting](chart-highlighting.md)
+- [Chart Markers](chart-markers.md)
+- [Chart Overlays](chart-overlays.md)
+- [Chart Trendlines](chart-trendlines.md)
 
 ## API References
 
 The following table lists API members mentioned in above sections:
 
-*   [`resolution`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#resolution)
-*   [`indicatorTypes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#indicatorTypes)
-*   [`overlayTypes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#overlayTypes)
-*   [`volumeType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#volumeType)
-*   [`zoomSliderType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#zoomSliderType)
-*   [`xAxisMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#xAxisMode)
-*   [`yAxisMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#yAxisMode)
-*   [`xAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#xAxisInterval)
-*   [`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#yAxisInterval)
-*   [`xAxisMinorInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#xAxisMinorInterval)
-*   [`yAxisMinorInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#yAxisMinorInterval)
-*   [`xAxisLabelVisibility`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxxychartcomponent.html#xAxisLabelVisibility)
-*   [`yAxisLabelVisibility`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxxychartcomponent.html#yAxisLabelVisibility)
-*   [`yAxisIsLogarithmic`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#yAxisIsLogarithmic)
+- [`resolution`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#resolution)
+- [`indicatorTypes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#indicatorTypes)
+- [`overlayTypes`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#overlayTypes)
+- [`volumeType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#volumeType)
+- [`zoomSliderType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#zoomSliderType)
+- [`xAxisMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#xAxisMode)
+- [`yAxisMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html#yAxisMode)
+- [`xAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#xAxisInterval)
+- [`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#yAxisInterval)
+- [`xAxisMinorInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#xAxisMinorInterval)
+- [`yAxisMinorInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#yAxisMinorInterval)
+- [`xAxisLabelVisibility`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxxychartcomponent.html#xAxisLabelVisibility)
+- [`yAxisLabelVisibility`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxxychartcomponent.html#yAxisLabelVisibility)
+- [`yAxisIsLogarithmic`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#yAxisIsLogarithmic)

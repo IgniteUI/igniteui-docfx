@@ -2,7 +2,8 @@
 title: Angular マップ | 世界の場所 | データ ソース | インフラジスティックス
 _description: インフラジスティックスの Angular JavaScript マップ データ ユーティリティを使用して、都市の地理的位置と国の首都を生成します。Ignite UI for Angular マップのサンプルを是非お試しください!
 _keywords: Angular map, map data, Ignite UI for Angular, Infragistics, Angular マップ, マップ データ, インフラジスティックス
-mentionedTypes: ['XamGeographicMap']
+_license: commercial
+mentionedTypes: ["XamGeographicMap"]
 _language: ja
 ---
 
@@ -657,4 +658,4 @@ export default class WorldLocations {
 
 ## API リファレンス
 
-*   [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html)
+- [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html)

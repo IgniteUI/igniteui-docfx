@@ -31,31 +31,31 @@ You can create Angular Category Area Chart in the [`IgxCategoryChartComponent`](
 
 There are several common use cases for choosing an Area Chart:
 
-*   Have a large, high-volume data set that fits well with the chart interactions like Panning, Zooming, and Drill-down.
-*   Need to compare the trends of your data over time.
-*   Want to show the difference between 2 or more data series.
-*   Want to show cumulative part-to-whole comparisons of distinct categories.
-*   Need to show data trends for one or more categories for comparative analysis.
-*   Need to visualize details time-series data.
+- Have a large, high-volume data set that fits well with the chart interactions like Panning, Zooming, and Drill-down.
+- Need to compare the trends of your data over time.
+- Want to show the difference between 2 or more data series.
+- Want to show cumulative part-to-whole comparisons of distinct categories.
+- Need to show data trends for one or more categories for comparative analysis.
+- Need to visualize details time-series data.
 
 ### Area Chart Best Practices
 
-*   Always start the Y-Axis (left or right axis) at 0 so data comparison is accurate.
-*   Order time-series data from left to right.
-*   Use transparent colors to ensure that data that is plotted behind another series is not blocked.
+- Always start the Y-Axis (left or right axis) at 0 so data comparison is accurate.
+- Order time-series data from left to right.
+- Use transparent colors to ensure that data that is plotted behind another series is not blocked.
 
 ### When Not to Use Area Charts
 
-*   You have many (more than 7 or 10) series of data. Your goal is to ensure the chart is readable.
-*   Time-series data has similar values (data over the same period). This makes overlapped shaded areas impossible to differentiate.
+- You have many (more than 7 or 10) series of data. Your goal is to ensure the chart is readable.
+- Time-series data has similar values (data over the same period). This makes overlapped shaded areas impossible to differentiate.
 
 ### Area Chart Data Structure
 
-*   The data source must be an array or a list of data items (for single series).
-*   The data source must be an array of arrays or a list of lists (for multiple series).
-*   The data source should contain two or more data items in order to render a line between them.
-*   All data items must contain at least one data column (string or date time).
-*   All data items must contain at least one numeric data column.
+- The data source must be an array or a list of data items (for single series).
+- The data source must be an array of arrays or a list of lists (for multiple series).
+- The data source should contain two or more data items in order to render a line between them.
+- All data items must contain at least one data column (string or date time).
+- All data items must contain at least one numeric data column.
 
 ## Angular Area Chart with Single Series
 
@@ -85,7 +85,7 @@ Similarly to how you can show multiple [Line Chart](line-chart.md) and [Spline C
 
 ## Angular Area Chart Styling
 
-Area charts often have semi-transparent fill for their areas, thicker lines and slightly larger markers than usual. Below is an example showing how you can style the Area Chart from earlier accordingly. 
+Area charts often have semi-transparent fill for their areas, thicker lines and slightly larger markers than usual. Below is an example showing how you can style the Area Chart from earlier accordingly.
 
 <code-view style="height: 600px" alt="Angular Area Chart Styling"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -225,12 +225,12 @@ The Angular Polar Spline Area Chart belongs to a group of [Polar Chart](polar-ch
 
 You can find more information about related chart types in these topics:
 
-*   [Bar Chart](bar-chart.md)
-*   [Column Chart](column-chart.md)
-*   [Polar Chart](polar-chart.md)
-*   [Radial Chart](radial-chart.md)
-*   [Spline Chart](spline-chart.md)
-*   [Stacked Chart](stacked-chart.md)
+- [Bar Chart](bar-chart.md)
+- [Column Chart](column-chart.md)
+- [Polar Chart](polar-chart.md)
+- [Radial Chart](radial-chart.md)
+- [Spline Chart](spline-chart.md)
+- [Stacked Chart](stacked-chart.md)
 
 ## API References
 

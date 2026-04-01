@@ -15,6 +15,7 @@ Here is a simple example how you respond to a click event of a button in WPF:
 ```xml
 <Button Click="Button_Click">Click Me</Button>
 ```
+
 ```csharp
 private void Button_Click(object sender, RoutedEventArgs e)
 {
@@ -23,9 +24,11 @@ private void Button_Click(object sender, RoutedEventArgs e)
 ```
 
 The same thing in Angular would look like this:
+
 ```html
 <button (click)="onClicked()">Click Me</button>
 ```
+
 ```typescript
 onClicked() {
     console.log('Hello World');
@@ -37,6 +40,7 @@ In WPF we are used to getting information about the event, such as the sender an
 ```html
 <button (click)="onClicked($event)">Click Me</button>
 ```
+
 ```typescript
 onClicked(event) {
     console.log(event.target);
@@ -49,6 +53,7 @@ Sometimes passing the event object might not be very useful. Instead, you may wa
 <input #messageInput>
 <button (click)="onClicked(messageInput.value)">Click Me</button>
 ```
+
 ```typescript
 onClicked(message) {
     console.log(message);
@@ -60,6 +65,7 @@ Let's say that we want to print the value of an input on pressing Enter. You cou
 ```html
 <input #messageInput (keyup)="onInputKeyup($event, messageInput.value)">
 ```
+
 ```typescript
 onInputKeyup(event, message) {
     if (event.keyCode === 13) {
@@ -73,13 +79,14 @@ Surprisingly, in Angular, there is an even easier way to do that. You could bind
 ```html
 <input #messageInput (keyup.enter)="onInputKeyup(messageInput.value)">
 ```
+
 ```typescript
 onInputKeyup(message) {
     console.log(message);
 }
 ```
 
-### Responding to Events of a Component
+## Responding to Events of a Component
 
 In WPF, when you create your own custom controls, often you need to extend or modify some base events like this:
 
@@ -132,12 +139,13 @@ this.taskCompleted.emit(new TaskEventArgs());
 ```
 
 ## Additional Resources
-* [Desktop to Web: Responding to Events with Angular Event Binding](https://www.youtube.com/watch?v=V1Futz4W400&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j&index=6)
-* [Angular User Input](https://angular.io/guide/user-input)
-* [Component Interaction: Parent listens for child events](https://angular.io/guide/component-interaction#parent-listens-for-child-event)
+
+- [Desktop to Web: Responding to Events with Angular Event Binding](https://www.youtube.com/watch?v=V1Futz4W400&list=PLG8rj6Rr0BU-AqcJMuwggKy0GMIkjkt3j&index=6)
+- [Angular User Input](https://angular.io/guide/user-input)
+- [Component Interaction: Parent listens for child events](https://angular.io/guide/component-interaction#parent-listens-for-child-event)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

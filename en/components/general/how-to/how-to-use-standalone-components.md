@@ -6,20 +6,19 @@ _keywords: Ignite UI for Angular, Standalone Components, Angular 16, Angular Mod
 
 # Using Standalone Components with Ignite UI for Angular
 
-Angular 14 introduced the concept of [standalone components](https://angular.io/guide/standalone-components) which allows for a simplified way of building applications by reducing the need for using `NgModules`. Standalone components were in developer preview until Angular 15. To support this new paradigm, all Ignite UI for Angular components are now exported as `standalone` with version `16.0.0`. All the existing `NgModules` are still exported by the library for backward compatibility. However, they no longer declare any of the Ignite UI for Angular components. Instead they import and export the `standalone` components.
+Angular 14 introduced the concept of [standalone components](https://angular.io/guide/standalone-components) which allows for a simplified way of building applications by reducing the need for using `NgModules`. Standalone components were in developer preview until Angular 15. To support this new paradigm, all Ignite UI for Angular components are now exported as `standalone` with version `16.0.0`. As of Angular 19 all components are standalone by default. All the existing `NgModules` are still exported by the library for backward compatibility. However, they no longer declare any of the Ignite UI for Angular components. Instead they import and export the `standalone` components.
 
 ## How to use the new standalone components
 
 Starting with Angular 16 and Ignite UI for Angular 16.0 you can now simply add the imports that your `standalone` component needs in the `imports` property. In the following example `IGX_GRID_DIRECTIVES` can be used to import all grid related components and directives.
-    
+
 ```typescript
-import { IGX_GRID_DIRECTIVES } from 'igniteui-angular';
+import { IGX_GRID_DIRECTIVES } from 'igniteui-angular/grids/grid';
 
 @Component({
     selector: 'app-grid-sample',
     styleUrls: ['grid.sample.scss'],
     templateUrl: 'grid.sample.html',
-    standalone: true,
     imports: [IGX_GRID_DIRECTIVES, AsyncPipe]
 })
 ```
@@ -27,13 +26,12 @@ import { IGX_GRID_DIRECTIVES } from 'igniteui-angular';
 But you can also import all components used by your `standalone` component individually. Example with the `IgxGridComponent` and `IgxColumnComponent` when only these two are used by another component is as follows.
 
 ```typescript
-import { IgxGridComponent, IgxColumnComponent } from 'igniteui-angular';
+import { IgxGridComponent, IgxColumnComponent } from 'igniteui-angular/grids/grid';
 
 @Component({
     selector: 'app-grid-sample',
     styleUrls: ['grid.sample.scss'],
     templateUrl: 'grid.sample.html',
-    standalone: true,
     imports: [IgxGridComponent, IgxColumnComponent, AsyncPipe]
 })
 ```
@@ -42,13 +40,12 @@ In addition, as all existing modules are preserved but now only import and expor
 
 ```typescript
 // `NgModule` import of the `IgxGridModule` module, which is equivalent to IGX_GRID_DIRECTIVES in terms of exported components and directives.
-import { IgxGridModule } from 'igniteui-angular';
+import { IgxGridModule } from 'igniteui-angular/grids/grid';
 
 @Component({
     selector: 'app-grid-sample',
     styleUrls: ['grid.sample.scss'],
     templateUrl: 'grid.sample.html',
-    standalone: true,
     imports: [IgxGridModule, AsyncPipe]
 })
 ```
@@ -68,7 +65,7 @@ The `IGX_GRID_DIRECTIVES` shown in the previous examples is a utility directive 
 | [`IGX_CARD_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/card/public_api.ts) | Exports all card related components and directives. |
 | [`IGX_CAROUSEL_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/carousel/public_api.ts) | Exports all carousel related components and directives. |
 | [`IGX_CHIPS_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/chips/public_api.ts) | Exports all chip related components and directives. |
-| [`IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES `](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/progressbar/public_api.ts) | Exports all circular progress bar related components and directives. |
+| [`IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/progressbar/public_api.ts) | Exports all circular progress bar related components and directives. |
 | [`IGX_COMBO_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/combo/public_api.ts) | Exports all combo related components and directives. |
 | [`IGX_DATE_PICKER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/date-picker/public_api.ts) | Exports all date-picker related components and directives. |
 | [`IGX_DATE_RANGE_PICKER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/date-range-picker/public_api.ts) | Exports all date-range picker related components and directives. |
@@ -109,5 +106,5 @@ Related topics:
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

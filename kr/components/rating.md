@@ -11,7 +11,7 @@ The Ignite UI Rating component allows users to view and provide feedback.
 
 <code-view style="height: 550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/grid/grid-with-rating" alt="Angular Rating Example">
+           iframe-src="{environment:demosBaseUrl}/grid/grid-with-rating/" alt="Angular Rating Example">
 </code-view>
 
 
@@ -83,7 +83,7 @@ The following application shows one example of how this integration works in a r
 
 <code-view style="height: 550px"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/data-entries/rating-form" alt="Angular Rating Example">
+           iframe-src="{environment:demosBaseUrl}/data-entries/rating-form/" alt="Angular Rating Example">
 </code-view>
 
 For further information on the usage of the Rating component, you can check out [this topic]({environment:infragisticsBaseUrl}/products/ignite-ui-web-components/web-components/components/inputs/rating.html).

@@ -56,7 +56,7 @@ Have in mind that we have set the Ignite UI for Angular package to be scoped, me
 
 If you are upgrading from trial to licensed package:
 
-*   Add a **paths** mapping in the project **tsconfig.json**.
+- Add a **paths** mapping in the project **tsconfig.json**.
 
 ```json
 {
@@ -73,7 +73,7 @@ If you are upgrading from trial to licensed package:
 }
 ```
 
-*   Change the themes imports like this:
+- Change the themes imports like this:
 
 ```ts
 @import '~igniteui-dockmanager/dist/collection/styles/igc.themes';
@@ -91,7 +91,7 @@ You can also authenticate to our private npm feed using an access token, which y
 
 The following information is on how to setup authentication to our private npm registry using an access token in local configuration, Azure Pipelines build procedures and Travis CI build process:
 
-*   Generate a token from https://account.infragistics.com/access-tokens
+- Generate a token from https://account.infragistics.com/access-tokens
 
 <img class="responsive-img" style="margin-bottom:10px; -webkit-box-shadow: 4px 4px 4px 4px #ccc; -moz-box-shadow: 4px 4px 4px 4px #ccc; box-shadow: 4px 4px 4px 4px #ccc; max-width: 600px"
 src="../images/general/generate-token.jpg"
@@ -102,7 +102,7 @@ title="Generate new token" />
 > \[!Note]
 > Each token is with Base64 encoding.
 
-*   Add the following into your [.npmrc](https://docs.npmjs.com/configuring-npm/npmrc.html) file
+- Add the following into your [.npmrc](https://docs.npmjs.com/configuring-npm/npmrc.html) file
 
 ```json
 @infragistics:registry=https://packages.infragistics.com/npm/js-licensed/
@@ -148,5 +148,5 @@ before_install:
 
 The best way to define an environment variable depends on what type of information it will contain, so [you have two options](https://docs.travis-ci.com/user/environment-variables/):
 
-*   encrypt it and add it [to your .travis.yml](https://docs.travis-ci.com/user/environment-variables/#defining-encrypted-variables-in-travisyml)
-*   add it to your [Repository Settings](https://docs.travis-ci.com/user/environment-variables/#defining-variables-in-repository-settings)
+- encrypt it and add it [to your .travis.yml](https://docs.travis-ci.com/user/environment-variables/#defining-encrypted-variables-in-travisyml)
+- add it to your [Repository Settings](https://docs.travis-ci.com/user/environment-variables/#defining-variables-in-repository-settings)

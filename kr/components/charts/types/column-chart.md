@@ -31,31 +31,31 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
 
 There are several uses cases for Column Charts. When you:
 
-*   Need to compare data values of related categories.
-*   Need to compare data over a time period.
-*   Need to display negative values as well as positive values in the same data set.
-*   Have a large, high-volume data set that fits well with the chart interactions like Panning, Zooming, and Drill-down.
+- Need to compare data values of related categories.
+- Need to compare data over a time period.
+- Need to display negative values as well as positive values in the same data set.
+- Have a large, high-volume data set that fits well with the chart interactions like Panning, Zooming, and Drill-down.
 
-### Column Charts Best Practices:
+### Column Charts Best Practices
 
-*   Always start the Y-Axis (left or right axis) at 0 so data comparison is accurate.
-*   Order time-series data from left to right.
+- Always start the Y-Axis (left or right axis) at 0 so data comparison is accurate.
+- Order time-series data from left to right.
 
 ### When Not to Use Column Charts
 
-*   You have many (more than 10 or 12) series of data. Your goal is to ensure the chart is readable.
+- You have many (more than 10 or 12) series of data. Your goal is to ensure the chart is readable.
 
-### Column Charts Data Structure:
+### Column Charts Data Structure
 
-*   The data model must contain at least one numeric property.
-*   The data model may contain an options string or date-time property for labels.
-*   The data source should contain at least one data item.
+- The data model must contain at least one numeric property.
+- The data model may contain an options string or date-time property for labels.
+- The data source should contain at least one data item.
 
 ## Angular Column Chart with Single Series
 
 Column Chart belongs to a group of Category Series and it is rendered using a collection of rectangles that extend from the bottom to top of the chart towards the values of data points.
 
-You can create this type of chart in the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) control by binding your data and setting the [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#chartType) property to [`IgxColumn`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_grids_grids.igxcolumn.html), as shown in the example below:
+You can create this type of chart in the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) control by binding your data and setting the [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#chartType) property to [`IgxColumnComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_grids_grids.igxcolumncomponent.html), as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Column Chart with Single Source"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -68,7 +68,7 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
 
 ## Angular Column Chart with Multiple Series
 
-The Column Chart is able to render multiple columns per category for comparison purposes. You can create this type of chart in the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) control by binding your data and setting the [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#chartType) property to [`IgxColumn`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_grids_grids.igxcolumn.html), as shown in the example below:
+The Column Chart is able to render multiple columns per category for comparison purposes. You can create this type of chart in the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) control by binding your data and setting the [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#chartType) property to [`IgxColumnComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_grids_grids.igxcolumncomponent.html), as shown in the example below:
 
 <code-view style="height: 600px" alt="Angular Column Chart with Multiple Sources"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -179,10 +179,10 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
 
 You can find more information about related chart types in these topics:
 
-*   [Bar Chart](bar-chart.md)
-*   [Composite Chart](composite-chart.md)
-*   [Radial Chart](radial-chart.md)
-*   [Stacked Chart](stacked-chart.md)
+- [Bar Chart](bar-chart.md)
+- [Composite Chart](composite-chart.md)
+- [Radial Chart](radial-chart.md)
+- [Stacked Chart](stacked-chart.md)
 
 ## API References
 
@@ -190,7 +190,7 @@ The following table lists API members mentioned in the above sections:
 
 | Chart Type          | Control Name       | API Members |
 | --------------------|--------------------|------------------------ |
-| Column              | [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) | [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#chartType) = [`IgxColumn`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_grids_grids.igxcolumn.html) |
+| Column              | [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) | [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#chartType) = [`IgxColumnComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_grids_grids.igxcolumncomponent.html) |
 | Radial Column       | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)     | [`IgxRadialColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxradialcolumnseriescomponent.html) |
 | Range Column        | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)     | [`IgxRangeColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxrangecolumnseriescomponent.html) |
 | Stacked Column      | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)     | [`IgxStackedColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstackedcolumnseriescomponent.html) |

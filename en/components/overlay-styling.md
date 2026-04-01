@@ -1,10 +1,12 @@
 ---
-title: Angular Overlay Styling
+title: Angular Overlay Styling | MIT license
 _description: A detailed walkthrough that explains how to properly apply and scope styles to elements that are displayed using the IgniteUI for Angular Overlay Service.
 _keywords: Ignite UI for Angular, Angular Overlay Service, Angular UI controls, Overlay Service, View Encapsulation Example, Sass scoped styles in Angular, web widgets, UI widgets, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components Library
+_license: MIT
 ---
 
 # Overlay Styling
+
 <p class="highlight">
 
 [`IgxOverlayService`](overlay.md) is used to display content above the page content. A lot of Ignite UI for Angular components use the overlay - [Drop Down](drop-down.md), [Combo](combo.md), [Date Picker](date-picker.md) and more - so it is important to understand how the overlay displays content.
@@ -14,7 +16,7 @@ To display the content above other elements, the service moves it into a special
 
 ## Styling Overlay Components
 
-In most cases [global](themes/sass/global-themes.md) theme styles are not affected by the overlay outlets. For example, let's take a look at a Drop Down, [styled](drop-down.md#styling) by the global [`css-vars`]({environment:sassApiUrl}/index.html#mixin-css-vars) mixin:
+In most cases [global](themes/sass/global-themes.md) theme styles are not affected by the overlay outlets. For example, let's take a look at a Drop Down, [styled](drop-down.md#styling) by the [`tokens`]({environment:sassApiUrl}/themes#mixin-tokens) mixin:
 
 ```html
 <!-- overlay-styling.component.html -->
@@ -31,12 +33,13 @@ In most cases [global](themes/sass/global-themes.md) theme styles are not affect
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 
-
 $my-drop-down-theme: drop-down-theme(
-    $palette: $my-custom-palette
+  $background-color: #efefef
 );
 
-@include css-vars($my-drop-down-theme);
+:host {
+  @include tokens($my-drop-down-theme);
+}
 ```
 
 The global styles are not generated under a scoped rule and are not affected by any encapsulation, and thus can match any element on the page, including `igx-drop-down-item` the service moved to the overlay outlet.
@@ -45,29 +48,25 @@ The global styles are not generated under a scoped rule and are not affected by 
 
 When scoping styles for elements that are displayed in the overlay, we need to specify to the position of the overlay `outlet` in the DOM. CSS rules that are scoped require a specific hierarchical structure of the elements - we need to make sure the overlay content is displayed in the correct context of the styles we want to apply.
 
-For example, let's take the `igx-combo` - its item [styles](combo.md#angular-combobox-styling) use the `igx-drop-down` theme, because the combo defines its content inside of its own view.
-
-> [!NOTE]
-> Always scope your styles in a `:host` selector to prevent the styles from leaking.
+For example, let's take the `igx-combo` - its item [styles](combo.md#styling) use the `igx-drop-down` theme, because the combo defines its content inside of its own view.
 
 ```scss
 // overlay-styling.component.scss
+
 :host {
-    @include css-vars($my-drop-down-theme);
+  @include tokens($my-drop-down-theme);
 }
 ```
 
-If the `$legacy-support` variable in your theme is set to `true`, you have to style your component, using the component's theme function.
-
 >[!NOTE]
->If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
+>If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep` to apply the styles.
 
 ```scss
 // overlay-styling.component.scss
 :host {
-   ::ng-deep{ 
-        @include drop-down($my-drop-down-theme);
-    }
+  ::ng-deep { 
+    @include tokens($my-drop-down-theme);
+  }
 }
 ```
 
@@ -82,48 +81,54 @@ Here, we can pass a reference to the element where we'd like our container to be
 
 ```typescript
 export class OverlayStylingComponent {
-    ...
-    constructor(public element: ElementRef) {
-    }
+  ...
+  constructor(public element: ElementRef) {
+  }
 }
 ```
 
 Now, the combo's list of items are properly rendered **inside** of our component's host, which means that our custom theme will take effect:
 
 
-<code-view style="height: 400px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/interactions/overlay-styling-simple" >
+<code-view style="height: 400px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/interactions/overlay-styling-simple/" >
 </code-view>
 
 
 ## Styling The Overlay
 
 Now that we've covered how `ViewEncapsulation` works along with the overlay's `outlet` property, we can take a look at how we can style the overlay's wrapper itself.
-The [`overlay-theme`]({environment:sassApiUrl}/index.html#function-overlay-theme) exposes a single property - `$background-color`, which affects the color of the backdrop when the overlay is set to `modal: true`.
+The [`overlay-theme`]({environment:sassApiUrl}/themes#function-overlay-theme) exposes a single property - `$background-color`, which affects the color of the backdrop when the overlay is set to `modal: true`.
 
 ### Global Styles
 
 The easiest way to style the overlay modal is to include its theme in our app's global styles:
 
 ```scss
-//  styles.scss
+// styles.scss
 $my-overlay-theme: overlay-theme(
   $background-color: rgba(0, 153, 255, 0.3)
 );
 
-@include css-vars($my-overlay-theme);
+:host {
+  @include tokens($my-overlay-theme);
+}
 ```
 
-If the `$legacy-support` variable in your theme is set to `true`, you have to style your component, using the overlay's theme function.
+Now **all** modal overlays will have a purple tint to their background.
+
+>[!NOTE]
+>If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep` to apply the styles.
 
 ```scss
-// styles.scss
-...
-@include overlay($my-overlay-theme);
-```        
-
-Now **all** modal overlays will have a purple tint to their background.
+// overlay-styling.component.scss
+:host {
+  ::ng-deep { 
+    @include tokens($my-overlay-theme);
+  }
+}
+```
 
 ### Scoped Overlay Styles
 
@@ -131,36 +136,21 @@ If we want our overlay to have a specific background **only** under a certain co
 When scoping a modal overlay, you need to move the overlay outlet, which has some [limitations](overlay.md#assumptions-and-limitations). In order to minimize the risks of overflow clipping, z-index and viewport issues, we recommend using outlets for modal overlays only in higher level components:
 
 ```scss
-//  styles.scss
+// styles.scss
 ...
 .purple {
-    @include css-vars($my-overlay-theme);
+  @include tokens($my-overlay-theme);
 }
 ```
-
-To make sure the theme **does not** affect other components in our app, use the `:host` selector.
-
-```scss
-// overlay-styling.component.scss
-@use "igniteui-angular/theming" as *;
-
-// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
-// @import '~igniteui-angular/lib/core/styles/themes/index';
-...
-:host {
-    @include css-vars($my-overlay-theme);
-}
-```
-
->[!NOTE]
->If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation and the `$legacy-support` is set to `true`, use the overlay's theme function and `penetrate` the encapsulation using `::ng-deep`
 
 ## API References
-* [IgniteUI for Angular - Theme Library](themes/index.md)
-* [IgxOverlay Styles]({environment:sassApiUrl}/index.html#function-overlay-theme)
+
+- [IgniteUI for Angular - Theme Library](themes/index.md)
+- [IgxOverlay Styles]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## Additional Resources
-* [IgniteUI for Angular - Theme Library](themes/index.md)
-* [Overlay Main Topic](overlay.md)
-* [Position strategies](overlay-position.md)
-* [Scroll strategies](overlay-scroll.md)
+
+- [IgniteUI for Angular - Theme Library](themes/index.md)
+- [Overlay Main Topic](overlay.md)
+- [Position strategies](overlay-position.md)
+- [Scroll strategies](overlay-scroll.md)

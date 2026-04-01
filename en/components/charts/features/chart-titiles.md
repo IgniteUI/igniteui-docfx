@@ -2,6 +2,7 @@
 title: Angular Chart Titles | Data Visualization Tools | Infragistics
 _description: Use Infragistics Ignite UI for Angular chart with Titles
 _keywords: Angular charts, chart titles, titles, Ignite UI for Angular, Infragistics
+_license: commercial
 mentionedTypes: ["CategoryChart"]
 namespace: Infragistics.Controls.Charts
 ---

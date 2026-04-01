@@ -107,7 +107,7 @@ You can try the `actions below` in order to observe the custom keyboard navigati
 
 <code-view style="height:400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-custom-keyboard-navigation" >
+           iframe-src="{environment:demosBaseUrl}/grid/grid-custom-keyboard-navigation/" >
 </code-view>
 
 }
@@ -172,7 +172,7 @@ You can try the `actions below` in order to observe the custom keyboard navigati
 
 <code-view style="height:520px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-custom-kb-navigation" >
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-custom-kb-navigation/" >
 </code-view>
 
 }
@@ -217,7 +217,7 @@ You can try the `actions below` in order to observe the custom keyboard navigati
 
 <code-view style="height:520px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-keyboard-navigation" >
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-keyboard-navigation/" >
 </code-view>
 
 }
@@ -227,11 +227,11 @@ You can try the `actions below` in order to observe the custom keyboard navigati
 |--- |--- |
 | Navigating inside grid with scrollable parent container. | If the grid is positioned inside a scrollable parent container and the user navigates inside the grid, it will not scroll the parent container if there are cells out of view.|
 
-### API References
+## API References
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 * [@@igComponent overview](@@igMainTopic.md)

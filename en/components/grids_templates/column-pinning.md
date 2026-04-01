@@ -1,53 +1,61 @@
+<!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid Column Pinning - Ignite UI for Angular
 _description: Want to use the Pinning feature of the Ignite UI for Angular when you develop your next app? Easily lock column or change column order with rich API.
-_keywords: lock column, ignite ui for angular, infragistics 
+_keywords: lock column, ignite ui for angular, infragistics
+_license: commercial
 ---
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
-title: Angular Tree Grid Column Pinning - Ignite UI for Angulars
+title: Angular Tree Grid Column Pinning - Ignite UI for Angular
 _description: Want to use the Pinning feature of the Ignite UI for Angular when you develop your next app? Easily lock column or change column order with rich API.
-_keywords: lock column, ignite ui for angular, infragistics 
+_keywords: lock column, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/column-pinning
 ---
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
 title: Angular Hierarchical Grid Column Pinning - Ignite UI for Angular
 _description: Want to use the Pinning feature of the Ignite UI for Angular when you develop your next app? Easily lock column or change column order with rich API.
-_keywords: lock column, ignite ui for angular, infragistics 
+_keywords: lock column, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/column-pinning
 ---
+
 }
 
-# Angular @@igComponent Column Pinning 
+# Angular @@igComponent Column Pinning
+
 A column or multiple columns can be pinned to the left or right side of the Angular UI Grid. **Column Pinning** in Ignite UI for Angular allows the end users to lock column in a particular column order, this will allow them to see it while horizontally scrolling the @@igComponent. The Material UI Grid has a built-in column pinning UI, which can be used through the @@igComponent's toolbar to change the pin state of the columns. In addition, you can define a custom UI and change the pin state of the columns via the Column Pinning API.
 
 ## Angular @@igComponent Column Pinning  Example
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-toolbar-pinning" alt="Angular @@igComponent Column Pinning  Example">
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-toolbar-pinning/" alt="Angular @@igComponent Column Pinning  Example">
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:630px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-pinning" alt="Angular @@igComponent Column Pinning  Example">
+<code-view style="height:630px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-pinning/" alt="Angular @@igComponent Column Pinning  Example">
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-pinning" alt="Angular @@igComponent Column Pinning  Example">
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-pinning/" alt="Angular @@igComponent Column Pinning  Example">
 </code-view>
 
 }
@@ -57,6 +65,7 @@ A column or multiple columns can be pinned to the left or right side of the Angu
 Column pinning is controlled through the `pinned` input of the [`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html). Pinned columns are rendered on the left side of the @@igComponent by default and stay fixed through horizontal scrolling of the unpinned columns in the @@igComponent body.
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid #grid1 [data]="data | async" [width]="700px" [autoGenerate]="false" (columnInit)="initColumns($event)"
     (selected)="selectCell($event)">
@@ -67,8 +76,10 @@ Column pinning is controlled through the `pinned` input of the [`igx-column`]({e
     </igx-paginator>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false">
     <igx-column [field]="Name" [pinned]="true"></igx-column>
@@ -76,9 +87,11 @@ Column pinning is controlled through the `pinned` input of the [`igx-column`]({e
     <igx-column [field]="ID"></igx-column>
 </igx-tree-grid>
 ```
+
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
         [height]="'600px'" [width]="'800px'" #hierarchicalGrid>
@@ -86,27 +99,34 @@ Column pinning is controlled through the `pinned` input of the [`igx-column`]({e
     <igx-column [field]="Debut" [width]="200px"></igx-column>
 </igx-hierarchical-grid>
 ```
+
 }
 
 You may also use the @@igComponent's [`pinColumn`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pinColumn) or [`unpinColumn`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#unpinColumn) methods of the [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) to pin or unpin columns by their field name:
 
 @@if (igxName === 'IgxGrid') {
+
 ```typescript
 this.grid.pinColumn('AthleteNumber');
 this.grid.unpinColumn('Name');
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
 this.treeGrid.pinColumn('Title');
 this.treeGrid.unpinColumn('Name');
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```typescript
 this.hierarchicalGrid.pinColumn('Artist');
 this.hierarchicalGrid.unpinColumn('Debut');
 ```
+
 }
 
 Both methods return a boolean value indicating whether their respective operation is successful or not. Usually the reason they fail is that the column is already in the desired state.
@@ -114,6 +134,7 @@ Both methods return a boolean value indicating whether their respective operatio
 A column is pinned to the right of the rightmost pinned column. Changing the order of the pinned columns can be done by subscribing to the [`columnPin`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnPin) event and changing the [`insertAtIndex`]({environment:angularApiUrl}/interfaces/ipincolumneventargs.html#insertAtIndex) property of the event arguments to the desired position index.
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid #grid1 [data]="data | async" [autoGenerate]="true" (columnPin)="columnPinning($event)"></igx-grid>
 ```
@@ -125,8 +146,10 @@ public columnPinning(event) {
     }
 }
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true" (columnPin)="columnPinning($event)"></igx-tree-grid>
 ```
@@ -138,8 +161,10 @@ public columnPinning(event) {
     }
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
         [height]="'600px'" [width]="'800px'" 
@@ -154,6 +179,7 @@ public columnPinning(event) {
     }
 }
 ```
+
 }
 
 ## Pinning Position
@@ -162,51 +188,88 @@ You can change the column pinning position via the [`pinning`]({environment:angu
 When set to End the columns are rendered at the end of the grid, after the unpinned columns. Unpinned columns can be scrolled horizontally, while the pinned columns remain fixed on the right.
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid [data]="data" [autoGenerate]="true" [pinning]="pinningConfig"></igx-grid>
 ```
+
 }
 
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid #grid1 [data]="data" [autoGenerate]="true" [pinning]="pinningConfig"></igx-tree-grid>
 ```
+
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid #grid1 [data]="data" [autoGenerate]="true" [pinning]="pinningConfig"></igx-hierarchical-grid>
 ```
+
 }
 
 ```typescript
 public pinningConfig: IPinningConfig = { columns: ColumnPinningPosition.End };
 ```
+
 ### Demo
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-right-pinning" >
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-right-pinning/" >
 </code-view>
 
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sample-right-pinning" >
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sample-right-pinning/" >
 </code-view>
 
 }
 
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-sample-right-pinning" >
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-sample-right-pinning/" >
+</code-view>
+
+}
+
+### Column Pinning on Both Sides
+Additionally, you can specify each column pinning location separately, allowing you to pin columns to both sides of the grid for greater convenience and easier optimization of data sets. Please refer to the demo below for further reference. In order to pin a column, please either select a column by clicking on a header and use the pin buttons added to the toolbar, or simply drag a column to another pinned one.
+
+@@if (igxName === 'IgxGrid') {
+
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-pinning-both-sides/" >
+</code-view>
+
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-both-sides-pinning/" >
+</code-view>
+
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-both-sides-pinning/" >
 </code-view>
 
 }
@@ -294,6 +357,7 @@ This can be done by creating a header template for the column with a custom icon
     </igx-row-island>
 </igx-hierarchical-grid>
 ```
+
 }
 
 On click of the custom icon the pin state of the related column can be changed using the column's API methods.
@@ -308,25 +372,25 @@ public toggleColumn(col: ColumnType) {
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-pinning" >
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-pinning/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:630px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-pinning" >
+<code-view style="height:630px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-pinning/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-pinning" >
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-pinning/" >
 </code-view>
 
 }
@@ -334,120 +398,62 @@ public toggleColumn(col: ColumnType) {
 
 ## Pinning Limitations
 
-*   Setting column widths in percentage (%) explicitly makes the @@igComponent body and header content to be misaligned when there are pinned columns. For column pinning to function correctly the column widths should be in pixels (px) or auto-assigned by the @@igComponent.
+- Setting column widths in percentage (%) explicitly makes the @@igComponent body and header content to be misaligned when there are pinned columns. For column pinning to function correctly the column widths should be in pixels (px) or auto-assigned by the @@igComponent.
 
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {
-## Styling   
 
-The igxGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The grid's [theme]({environment:sassApiUrl}/index.html#function-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid.      
+## Styling
+
+The igxGrid allows styling through the [Ignite UI for Angular Theme Library](../themes/sass/component-themes.md). The grid's [theme]({environment:sassApiUrl}/themes#function-grid-theme) exposes a wide variety of properties, which allow the customization of all the features of the grid.
 
 In the below steps, we are going through the steps of customizing the grid's Pinning styling.
 
 ### Importing global theme
+
 To begin the customization of the Pinning feature, you need to import the `index` file, where all styling functions and mixins are located.
+
 ```scss
 @use "igniteui-angular/theming" as *;
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
 ### Defining custom theme
-Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the parameters, required to customize the Pinning feature as desired.   
+
+Next, create a new theme, that extends the [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) and accepts the parameters, required to customize the Pinning feature as desired.
 
 ```scss
 $custom-theme: grid-theme(
-    /* Pinning properties that affect styling */
-    $pinned-border-width: 5px,
-    $pinned-border-style: double,
-    $pinned-border-color: #FFCD0F,
-    $cell-active-border-color: #FFCD0F
-    /* add other features properties here... */
-);
-```    
-
-### Defining a custom color palette
-In the approach, that was described above, the color values were hardcoded. Alternatively, you can achieve greater flexibility, using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.   
-`igx-palette` generates a color palette, based on provided primary and secondary colors.  
-
- ```scss
-$primary-color: #292826;
-$secondary-color: #ffcd0f;
-
-$custom-palette: palette(
-  $primary: $primary-color,
-  $secondary: $secondary-color
-);
-```   
-
-After a custom palette has been generated, the `igx-color` function can be used to obtain different varieties of the primary and the secondary colors.   
-
-
-```scss
-$custom-theme: grid-theme(
-    $pinned-border-width: 5px,
-    $pinned-border-style: double,
-    $pinned-border-color: color($custom-palette, "secondary", 500),
-    $cell-active-border-color: color($custom-palette, "secondary", 500)
-);
-```   
-
-The `$custom-theme` contains the same properties as the one in the previous section, but this time the colors are not hardcoded. Instead, the custom `igx-palette` was used and the colors were obtained through its primary and secondary colors, with a given color variant.   
-
-### Defining custom schemas
-You can go even further and build flexible structure that has all the benefits of a [**schema**](../themes/sass/schemas.md). The **schema** is the recipe of a theme.   
-Extend one of the two predefined schemas, that are provided for every component. In our case, we would use `$_light_grid`.   
-```scss
-$custom-grid-schema: extend($_light-grid,(
-    pinned-border-width: 5px,
-    pinned-border-style: double,
-    pinned-border-color: color:("secondary", 500),
-    cell-active-border-color: color:("secondary", 500)
-));
-```   
-In order for the custom schema to be applied, either `light`, or `dark` globals has to be extended. The whole process is actually supplying a component with a custom schema and adding it to the respective component theme afterwards.     
-```scss
-$my-custom-schema: extend($light-schema, ( 
-    igx-grid: $custom-grid-schema
-));
-$custom-theme: grid-theme(
-    $palette: $custom-palette,
-    $schema: $my-custom-schema
+  $pinned-border-width: 5px,
+  $pinned-border-style: double,
+  $pinned-border-color: #ffcd0f,
+  $cell-active-border-color: #ffcd0f
 );
 ```
+
+>[!NOTE]
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
 ### Applying the custom theme
-The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file: 
-```scss
-@include grid($custom-theme);
-```
 
-### Scoped component theme
-
-In order for the custom theme to affect only specific component, you can move all of the styles you just defined from the global styles file to the custom component's style file (including the import of the `index` file).
-
-This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation), your styles will be applied only to your custom component.
- >[!NOTE]
- >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to penetrate this encapsulation using `::ng-deep` in order to style the grid.
- >[!NOTE]
- >Wrap the statement inside of a `:host` selector to prevent your styles from affecting elements *outside of* our component:
+The easiest way to apply your theme is with a `sass` `@include` statement in the global styles file:
 
 ```scss
 :host {
-    ::ng-deep {
-        @include grid($custom-theme);
-    }
+  @include tokens($custom-theme);
 }
 ```
+
 ### Demo
 
 
-<code-view style="height:506px" 
+<code-view style="height:506px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-pinning-styling" >
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-pinning-styling/" >
 </code-view>
 
 >[!NOTE]
@@ -456,24 +462,26 @@ This way, due to Angular's [ViewEncapsulation](https://angular.io/api/core/Compo
 }
 
 ## API References
-* [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+
+- [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [@@igComponent overview](@@igMainTopic.md)
-* [Virtualization and Performance](virtualization.md)
-* [Paging](paging.md)
-* [Filtering](filtering.md)
-* [Sorting](sorting.md)
-* [Summaries](summaries.md)
-* [Column Moving](column-moving.md)
-* [Column Resizing](column-resizing.md)
-* [Selection](selection.md)
+- [@@igComponent overview](@@igMainTopic.md)
+- [Virtualization and Performance](virtualization.md)
+- [Paging](paging.md)
+- [Filtering](filtering.md)
+- [Sorting](sorting.md)
+- [Summaries](summaries.md)
+- [Column Moving](column-moving.md)
+- [Column Resizing](column-resizing.md)
+- [Selection](selection.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

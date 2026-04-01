@@ -1,25 +1,23 @@
 ---
-title: アクション ストリップ
+title: アクション ストリップ - MITライセンス
 _description: アクション ストリップは、1 つ以上のアクションのテンプレート領域を表します。アクション ストリップはオーバーレイするため、相対コンテナー内に配置する必要があります。
 _keywords: Angular Action Strip コンポーネント, Angular Action Strip ディレクティブ, Angular Action Strip コントロール, Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Angular UI コンポーネント
+_license: MIT
 _language: ja
 ---
 
 # Angular Action Strip (アクション ストリップ) ディレクティブの概要
+
 <p class="highlight">
 Ignite UI for Angular Action Strip コンポーネントは、ホバーなどのユーザー操作の際に特定のターゲット コンテナーの上に追加の UI および機能を表示できる 1 つ以上のアクションを含むオーバーレイ領域を提供します。アクション ストリップはコンテナーをオーバーレイしようとして絶対的に配置されるため、コンテナーは相対的に配置する必要があります。主な操作とターゲットコ ンテナーへのユーザー アクセスはアクション ストリップでオーバーラップされますが、使用できます。
 </p>
 
-<div class="divider--half"></div>
-
 ## Angular Action Strip の例
 
-
-<code-view style="height: 400px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/action-strip-paragraph" alt="Angular Action Strip の例">
+<code-view style="height: 400px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/menus/action-strip-paragraph/" alt="Angular Action Strip の例">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -39,7 +37,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 ...
-import { IgxActionStripModule } from 'igniteui-angular';
+import { IgxActionStripModule } from 'igniteui-angular/action-strip';
 // import { IgxActionStripModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -56,7 +54,9 @@ export class AppModule {}
 // home.component.ts
 
 ...
-import { IGX_ACTION_STRIP_DIRECTIVES, IgxButtonDirective, IgxIconComponent } from 'igniteui-angular';
+import { IGX_ACTION_STRIP_DIRECTIVES } from 'igniteui-angular/action-strip';
+import { IgxButtonDirective } from 'igniteui-angular/button';
+import { IgxIconComponent } from 'igniteui-angular/icon';
 // import { IGX_ACTION_STRIP_DIRECTIVES, IgxButtonDirective, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -81,45 +81,45 @@ export class HomeComponent {}
 Ignite UI for Angular Action Strip モジュールまたはディレクティブをインポートしたので、`igx-action-strip` コンポーネントの基本構成を開始できます。
 
 ## Angular Action Strip コンポーネントの使用
+
 アクション ストリップを初期化して正しく配置するには、相対的に配置されたコンテナー内に配置する必要があります。
 
 ```html
 <div style="position:relative; width:100px; height:100px;">
-    <igx-action-strip>
-        <button igxButton (click)="makeTextBold()">
-            <igx-icon>format_bold</igx-icon>
-        </button>
-    </igx-action-strip>
-<div>
+  <igx-action-strip>
+    <button igxButton (click)="makeTextBold()">
+      <igx-icon>format_bold</igx-icon>
+    </button>
+  </igx-action-strip>
+</div>
 ```
 
-デフォルトでアクション ストリップは表示されますが、これは [`hidden`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#hidden) の @Input プロパティで設定できます。
+デフォルトでアクション ストリップは表示されませんが、これは [`hidden`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html#hidden) の @Input プロパティで設定できます。
 
 ### メニューのルック アンド フィール
+
 3 つ以上のアクション項目が表示される場合に、[`IgxActionStripMenuItem`]({environment:angularApiUrl}/classes/igxactionstripmenuitemdirective.html) ディレクティブの使用をお勧めします。`*igxActionStripMenuItem` 構造ディレクティブでマークされたアクション ストリップ内の項目はドロップダウンで表示され、[その他] ボタン (最後のアクションを表す 3 つのドット) を切り替えると表示されます。
 
 ```html
 <div style="position:relative; width:100px; height:100px;">
-    <igx-action-strip>
-        <button *igxActionStripMenuItem igxButton (click)="alignTextLeft()">
-            <igx-icon>format_align_left</igx-icon>
-        </button>
-        <button *igxActionStripMenuItem igxButton (click)="alignTextCenter()">
-            <igx-icon>format_align_center</igx-icon>
-        </button>
-        <button *igxActionStripMenuItem igxButton (click)="alignTextRight()">
-            <igx-icon>format_align_right</igx-icon>
-        </button>
-    </igx-action-strip>
+  <igx-action-strip>
+    <button *igxActionStripMenuItem igxButton (click)="alignTextLeft()">
+      <igx-icon>format_align_left</igx-icon>
+    </button>
+    <button *igxActionStripMenuItem igxButton (click)="alignTextCenter()">
+      <igx-icon>format_align_center</igx-icon>
+    </button>
+    <button *igxActionStripMenuItem igxButton (click)="alignTextRight()">
+      <igx-icon>format_align_right</igx-icon>
+    </button>
+  </igx-action-strip>
 </div>
 ```
 
-
-<code-view style="height: 400px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/action-strip-paragraph-menu" >
+<code-view style="height: 400px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/menus/action-strip-paragraph-menu/" >
 </code-view>
-
 
 ### アクション ストリップの再利用
 
@@ -130,34 +130,34 @@ Ignite UI for Angular Action Strip モジュールまたはディレクティブ
 > [!NOTE]
 > アクション ストリップを `element` に追加するために、`show` API メソッドは [Angular Renderer2](https://angular.io/api/core/Renderer2) を使用します。
 
-
 ## グリッドでの使用
 
 アクション ストリップは、IgxGrid の追加機能と UI を提供します。
 これはグリッド アクション コンポーネントで利用でき、2 つのデフォルト コンポーネントを提供します。
+
 - [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html) - グリッド編集に関連する機能と UI を含みます。グリッドの `rowEditable` オプションの値と行の削除が許可されているかどうかに基づいて、セルまたは行の編集モードをすばやく切り替えることができます。
 - [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html) - グリッドの行ピン固定に関連する機能と UI を含みます。行をすばやくピン固定し、ピン固定された行とその無効な行の間を移動できます。
 
 ```html
 <igx-grid [data]="data" [rowEditable]="true" [primaryKey]="'ID'">
-    <igx-column *ngFor="let c of columns" [field]="c.field">
-    </igx-column>
+  <igx-column *ngFor="let c of columns" [field]="c.field"> </igx-column>
 
-    <igx-action-strip #actionStrip>
-        <igx-grid-pinning-actions></igx-grid-pinning-actions>
-        <igx-grid-editing-actions></igx-grid-editing-actions>
-    </igx-action-strip>
+  <igx-action-strip #actionStrip>
+    <igx-grid-pinning-actions></igx-grid-pinning-actions>
+    <igx-grid-editing-actions></igx-grid-editing-actions>
+  </igx-action-strip>
 </igx-grid>
 ```
+
 > [!NOTE]
 > これらのコンポーネントは [`IgxGridActionsBaseDirective`]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html) を継承します。カスタム グリッド アクション コンポーネントを作成する場合、`IgxGridActionsBaseDirective` も継承する必要があります。
 
 > [!NOTE]
 > `IgxActionStripComponent` がグリッドの子コンポーネントである場合、行をホバーするとUI が自動的に表示されます。
 
-<code-view style="height: 600px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-action-strip" >
+<code-view style="height: 600px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-action-strip/" >
 </code-view>
 
 > [!NOTE]
@@ -166,6 +166,7 @@ Ignite UI for Angular Action Strip モジュールまたはディレクティブ
 ## スタイル設定
 
 アクション ストリップをカスタマイズするには、すべてのスタイリング関数とミックスインが置かれている `index` ファイルをインポートする必要があります。
+
 ```scss
 @use "igniteui-angular/theming" as *;
 
@@ -177,69 +178,56 @@ Ignite UI for Angular Action Strip モジュールまたはディレクティブ
 
 ```scss
 $custom-strip: action-strip-theme(
-    $background: rgba(150, 133, 143, 0.4),
-    $actions-background: rgba(109, 121, 147, 0.6),
-    $icon-color: null,
-    $delete-action: null,
-    $actions-border-radius: 0
+  $background: rgba(109, 121, 147, 0.2),
+  $actions-background: rgba(#011627, 0.9),
+  $actions-border-radius: 0
 );
 ```
 
 最後に新しく作成されたコンポーネントのテーマをアプリケーションに含めます。
 
-`$legacy-support` が `false` (デフォルト) に設定されている場合、css 変数を以下のように含めます。
 ```scss
-@include css-vars($custom-strip);
+:host {
+  @include tokens($custom-strip);
+}
 ```
 
-`$legacy-support` が `true` に設定されている場合、コンポーネントのテーマを以下のように含めます。
-```scss
-@include action-strip($custom-strip);
-```
-
-<code-view style="height: 400px;" 
+<code-view style="height: 400px;"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/menus/action-strip-styling" >
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/menus/action-strip-styling/" >
 </code-view>
-
-## 既知の問題と制限
-
-- IE11 で Action Strip コンポーネントを使用するには、Angular アプリケーションの polyfill.ts に配列ポリフィルを明示的にインポートする必要があります。
-
-    ```typescript
-    import 'core-js/es7/array';
-    ```
 
 ## API と スタイル リファレンス
 
 アクション ストリップの API に関する詳細な情報は、以下のリンクのトピックを参照してください。
-* [`IgxActionStripComponent API`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html)
+
+- [`IgxActionStripComponent API`]({environment:angularApiUrl}/classes/igxactionstripcomponent.html)
 
 以下の定義済み CSS スタイルを使用してアクション ストリップ レイアウトを構成しました。
 
-* [`IgxActionStripComponent スタイル`]({environment:sassApiUrl}/index.html#function-action-strip-theme)
+- [`IgxActionStripComponent スタイル`]({environment:sassApiUrl}/themes#function-action-strip-theme)
 
 アクション ストリップで使用できるその他のコンポーネントとディレクティブ。
 
-* [`IgxGridActionsBaseDirective`]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html)
-* [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html)
-* [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html)
-* [`IgxDividerDirective`]({environment:angularApiUrl}/classes/igxdividerdirective.html)
-
+- [`IgxGridActionsBaseDirective`]({environment:angularApiUrl}/classes/igxgridactionsbasedirective.html)
+- [`IgxGridPinningActionsComponent`]({environment:angularApiUrl}/classes/igxgridpinningactionscomponent.html)
+- [`IgxGridEditingActionsComponent`]({environment:angularApiUrl}/classes/igxgrideditingactionscomponent.html)
+- [`IgxDividerDirective`]({environment:angularApiUrl}/classes/igxdividerdirective.html)
 
 <div class="divider"></div>
 
 ## テーマの依存関係
-* [IgxButton テーマ]({environment:sassApiUrl}/index.html#function-button-theme)
-* [IgxRipple テーマ]({environment:sassApiUrl}/index.html#function-ripple-theme)
-* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-drop-down-theme)
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
+
+- [IgxButton テーマ]({environment:sassApiUrl}/themes#function-button-theme)
+- [IgxRipple テーマ]({environment:sassApiUrl}/themes#function-ripple-theme)
+- [IgxDropDown テーマ]({environment:sassApiUrl}/themes#function-drop-down-theme)
+- [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
 
 ## その他のリソース
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

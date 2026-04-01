@@ -1,25 +1,25 @@
 ---
-title: Angular Expansion Panel – Ignite UI for Angular
+title: Angular Expansion Panel – Ignite UI for Angular - MIT license 
 _description: Use our Angular expansion panel which provides an easily configurable expandable component with two states - collapsed and expanded. Try it now.
 _keywords: angular expansion panel, angular expansion panel component, angular UI components, igniteui for angular, infragistics
+_license: MIT
 ---
+
 # Angular Expansion Panel Component Overview
 
-Ignite UI for Angular provides developers with one of the most useful and easy-to-use layout components - Expansion Panel. This feature-rich component is used to create an expandable/collapsible detailed summary view. The content can include Angular Expansion Panel animation, text, icons, header, action bar, and other elements. 
+Ignite UI for Angular provides developers with one of the most useful and easy-to-use layout components - Expansion Panel. This feature-rich component is used to create an expandable/collapsible detailed summary view. The content can include Angular Expansion Panel animation, text, icons, header, action bar, and other elements.
 <p class="highlight">
 
-Ignite UI Expansion Panel [igx-expansion-panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) is a lightweight Angular accordion component which can be rendered in two states - collapsed or expanded. The Expansion Panel in Angular can be toggled using mouse click, or keyboard interactions. You can also combine multiple Angular Expansion Panels into Angular accordion. 
+Ignite UI Expansion Panel [igx-expansion-panel]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) is a lightweight Angular accordion component which can be rendered in two states - collapsed or expanded. The Expansion Panel in Angular can be toggled using mouse click, or keyboard interactions. You can also combine multiple Angular Expansion Panels into Angular accordion.
 </p>
-
-<div class="divider--half"></div>
 
 ## Angular Expansion Panel Example
 
-We've created this simple Angular Expansion Panel Example using Ignite UI Angular. See how the sample works. 
+We've created this simple Angular Expansion Panel Example using Ignite UI Angular. See how the sample works.
 
-<code-view style="height: 320px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-1" >
+<code-view style="height: 320px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -32,14 +32,14 @@ To get started with the Ignite UI for Angular Drop Down component, first you nee
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxExpansionPanelModule` in your **app.module.ts** file.
 
 ```typescript
 // app.module.ts
 ...
-import { IgxExpansionPanelModule } from 'igniteui-angular';
+import { IgxExpansionPanelModule } from 'igniteui-angular/expansion-panel';
 // import { IgxExpansionPanelModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -55,7 +55,7 @@ Alternatively, as of `16.0.0` you can import the `IgxExpansionPanelComponent` as
 ```typescript
 // home.component.ts
 
-import { IGX_EXPANSION_PANEL_DIRECTIVES } from 'igniteui-angular';
+import { IGX_EXPANSION_PANEL_DIRECTIVES } from 'igniteui-angular/expansion-panel';
 // import { IGX_EXPANSION_PANEL_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -103,12 +103,13 @@ The table below shows all the available markup parts for the Angular Expansion P
 
 
 ## Properties Binding and Events
+
 We can add some logic to our component to make it show/hide the `igx-expansion-panel-description` depending on the current state of the panel.  
 We can do this by binding the description to the control [`collapsed`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html#collapsed) property:
 
 ```typescript
 // in expansion-panel.component.ts
-import { IgxExpansionPanelComponent } from 'igniteui-angular';
+import { IgxExpansionPanelComponent } from 'igniteui-angular/expansion-panel';
 // import { IgxExpansionPanelComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({...})
@@ -133,6 +134,7 @@ export class ExpansionPanelComponent {
 
 The following code sample will show the short description only when the component is in its collapsed state.
 If we want to add more complex functionality depending on the component state, we could also bind to an event emitter.
+
 ```typescript
 // in expansion-panel.component.ts
 
@@ -144,6 +146,7 @@ export class ExpansionPanelComponent {
     }
 }
 ```
+
 ```html
 <!-- in expansion-component.component.html -->
 <igx-expansion-panel (onExpanded)="handleExpansion($event)" (contentCollapsed)="handleCollapse($event)"></igx-expansion-panel>
@@ -151,15 +154,16 @@ export class ExpansionPanelComponent {
 
 Below we have the results:
 
-<code-view style="height: 320px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-2" >
+<code-view style="height: 320px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-2/" >
 </code-view>
 
 
 ## Component Customization
+
 The [`IgxExpansionPanelComponent`]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html) allows for easy customization of [the header]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html).
-Configuring the position of the header icon can be done through the [`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconPosition) input on the `igx-expansion-panel-header`. The possible options for the icon position are **left**, **right** and **none**. The next code sample demonstrates how to configure the component's button to go on the *right* side.
+Configuring the position of the header icon can be done through the [`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconPosition) input on the `igx-expansion-panel-header`. The possible options for the icon position are **left**, **right** and **none**. The next code sample demonstrates how to configure the component's button to go on the _right_ side.
 
 ```html
 <!-- in expansion-component.component.html -->
@@ -168,11 +172,13 @@ Configuring the position of the header icon can be done through the [`iconPositi
     ...
 </igx-expansion-panel>
 ```
+
 >[!NOTE]
 > The [`iconPosition`]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html#iconPosition) property works with `RTL` - e.g. an icon set to show up in **right** will show in the leftmost part of the header when RTL is on.
 
 The default icon for the toggle state of the control can be templated.
 We can do that by passing content in an `igx-expansion-panel-icon` tag:
+
 ```html
 <!-- in expansion-component.component.html -->
 <igx-expansion-panel>
@@ -186,11 +192,13 @@ We can do that by passing content in an `igx-expansion-panel-icon` tag:
     ...
 </igx-expansion-panel>
 ```
+
 Our Angular Expansion Panel will now render "Show More" when the panel is collapsed and "Show Less" once it's fully expanded.
 
 The `IgxExpansionPanel` control allows all sorts of content to be added inside of the `igx-expansion-panel-body`. It can render [`IgxGrid`](grid/grid.md)s, [`IgxCombo`](combo.md), charts and even other expansion panels!
 
 For the sake of simplicity let's add some basic markup to the body of our expansion panel.
+
 ```html
 <!-- in expansion-panel.component.html -->
 ...
@@ -206,26 +214,69 @@ For the sake of simplicity let's add some basic markup to the body of our expans
 
 Lets see the result from all the above changes:
 
-<code-view style="height: 460px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-3" >
+<code-view style="height: 460px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-3/" >
 </code-view>
 
 
+## Styling
 
-## Styling  
+### Expansion Panel Theme Property Map
 
-### Angular Expansion Panel Demo
+Changing the `$header-background` and `$body-background` properties automatically updates the following dependent properties:
 
-<code-view style="height: 440px;" 
-           no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-styling" >
-</code-view>
-
+<table class="collapsible-table">
+    <thead>
+        <tr>
+            <th>Primary Property</th>
+            <th>Dependent Property</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody class="group">
+        <tr class="primary">
+            <td><details><summary><strong>$header-background</strong></summary></details></td>
+            <td>$header-title-color</td>
+            <td>The panel header title text color.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$header-icon-color</td>
+            <td>The panel header icon color.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$header-description-color</td>
+            <td>The panel header description text color.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$header-focus-background</td>
+            <td>The panel header focus background color.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$disabled-text-color</td>
+            <td>The panel disabled text color.</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$disabled-description-color</td>
+            <td>The panel disabled header description text color.</td>
+        </tr>
+        <tr class="primary">
+            <td><strong>$body-background</strong></td>
+            <td>$body-color</td>
+            <td>The panel body text color.</td>
+        </tr>
+    </tbody>
+</table>
 
 ### Palettes & Colors
-Fist we create a custom palette which can later be passed to our component:
+
+First we create a custom palette which can later be passed to our component:
+
 ```scss
 // In real life, this should be in our main sass file so we can share the palette between all components. 
 // In our case, it's in the component SCSS file "expansion-styling.component.scss".
@@ -238,73 +289,124 @@ Fist we create a custom palette which can later be passed to our component:
 // Add your brand colors.
 $my-primary-color:#353a4b;
 $my-secondary-color: #ffd351;
+$my-surface-color: #efefef;
 
 // Create custom palette.
 $my-color-palette: palette(
-    $primary: $my-primary-color,
-    $secondary: $my-secondary-color
+  $primary: $my-primary-color,
+  $secondary: $my-secondary-color,
+  $surface: $my-surface-color
 );
 ```
 
 ### Creating the Component Theme
+
 Now let's create our component theme and pass the `$my-color-palette` palette from the above sniped.
+
 ```scss
 // In expansion-styling.component.scss
 // Create expansion panel theme.
 $custom-panel-theme: expansion-panel-theme(
-    // pass `$my-color-palette` palette.
-    $palette: $my-color-palette,
-
-    // Styling parameters.
-    $header-background: color($my-color-palette, "primary", 700),
-    $header-focus-background: color($my-color-palette, "primary", 700),
-    $header-title-color: color($my-color-palette, "secondary"),
-    $header-icon-color: color($my-color-palette, "secondary"),
-    $body-background: color($my-color-palette, "primary", 700),
-    $body-color: color($my-color-palette, "secondary" 100),
-    $border-radius: .5
+  // Styling parameters.
+  $header-background: color($my-color-palette, "primary", 700),
+  $header-focus-background: color($my-color-palette, "primary", 700),
+  $header-title-color: color($my-color-palette, "secondary"),
+  $header-icon-color: color($my-color-palette, "secondary"),
+  $body-background: color($my-color-palette, "primary", 700),
+  $body-color: color($my-color-palette, "secondary", 100),
+  $border-radius: .5
 );
 ```
->[!NOTE]
-> To see all the available parameters for styling trough the [`theming`](themes/sass/component-themes.md) engine check the [`API documentation`]({environment:sassApiUrl}/index.html#function-expansion-panel-theme)
 
-### Applying the Component Theme
-Now to apply the component theme all that's left is to include `css-vars` mixin and pass the `$custom-panel-theme` map.
+If we prefer instead of creating a palette, we can assign the colors directly to the expansion-panel-theme function as arguments. If the `title-color`, `icon-color`, or other foreground properties are not explicitly provided, they will be automatically assigned to either black or white - whichever offers better contrast with the background.
+
 ```scss
-// In expansion-styling.component.scss
-// Pass our custom-panel-theme to `igx-expansion-panel` mixin.
-// The `:host` here makes sure that all the theming will affect only this component.
-:host {
-  @include css-vars($custom-panel-theme);
-}
+$custom-panel-theme: expansion-panel-theme(
+  $header-background: #353a4b,
+  $header-focus-background: #353a4b,
+  $header-title-color: #ffd351,
+  $header-icon-color: #ffd351,
+  ...
+);
 ```
 
- >[!NOTE]
- > If you need to support Internet explorer 11 you have to use the component mixin `igx-expansion-panel` instead of `css-vars` and because our component have [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation we have to penetrate it by using `::ng-deep`.
- > Also in order to prevent our custom theme from leaking into other components, we have to include the `:host` selector before `::ng-deep`:
+>[!NOTE]
+> To see all the available parameters for styling trough the [`theming`](themes/sass/component-themes.md) engine check the [`API documentation`]({environment:sassApiUrl}/themes#function-expansion-panel-theme)
+
+### Applying the Component Theme
+
+Now to apply the component theme all that's left is to include `tokens` mixin and pass the `$custom-panel-theme` map.
 
 ```scss
 // In expansion-styling.component.scss
-// The `:host` here makes sure that all the theming will affect only this component after the ViewEncapsulation Penetration.
 :host {
-    // Penetrate the ViewEncapsulation.
-    ::ng-deep {
-        @include expansion-panel($custom-panel-theme);
-    }
+  @include tokens($custom-panel-theme);
 }
 ```
 
 To find out more on how you can use Ignite UI theming engine [`click here`](themes/sass/component-themes.md)
 
-## Angular Expansion Panel Animations 
+### Demo
+
+<code-view style="height: 440px;"
+           no-theming
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-styling/" >
+</code-view>
+
+### Styling with Tailwind
+
+You can style the expansion panel using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-expansion-panel`, `dark-expansion-panel`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [expansion-panel-theme]({environment:sassApiUrl}/themes#function-expansion-panel-theme). The syntax is as follows:
+
+```html
+<igx-expansion-panel
+  class="!light-expansion-panel
+  ![--header-background:#4F6A5A]
+  ![--body-background:#A3C7B2]"
+>
+  ...
+</igx-expansion-panel>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your expansion panel should look like this:
+
+<div class="sample-container loading" style="height:440px">
+    <iframe id="expansion-panel-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/expansion-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
+## Angular Expansion Panel Animations
+
 ### Using specific animation
+
 It is possible to use other than default animation when expanding and collapsing the component.
-Assuming the igxExpansionPanel is already imported in `app.module.ts` as previously described, you can create a custom animation setting object and set it to be used in the Ignite UI for Agular Expansion Panel. The approach requires the [`useAnimation`](https://angular.io/api/animations/useAnimation) method and the specific animations to be used so we start importing these and defining the animation settings like:
+Assuming the igxExpansionPanel is already imported in `app.module.ts` as previously described, you can create a custom animation setting object and set it to be used in the Ignite UI for Angular Expansion Panel. The approach requires the [`useAnimation`](https://angular.io/api/animations/useAnimation) method and the specific animations to be used so we start importing these and defining the animation settings like:
 
 ```typescript
 // in expansion-panel.component.ts
 import { useAnimation } from '@angular/animations';
-import { IgxExpansionPanelComponent, slideInLeft, slideOutRight } from 'igniteui-angular';
+import { IgxExpansionPanelComponent } from 'igniteui-angular/expansion-panel';
+import { slideInLeft, slideOutRight } from 'igniteui-angular/animations';
 // import { IgxExpansionPanelComponent, slideInLeft, slideOutRight } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({...})
@@ -333,7 +435,8 @@ export class ExpansionPanelComponent {
     }
 }
 ```
-As you can see, we are going to use [`slideInLeft`]({environment:sassApiUrl}/index.html#mixin-slide-in-left) and [`slideOutRight`]({environment:sassApiUrl}/index.html#mixin-slide-out-right) animations from our [**inbuilt suite of animations**]({environment:sassApiUrl}/index.html#animations) to make the component content appear more dramatically from the left side and disappear on the right when collapsing the content. In the process, we override some of the existing parameters with the specific ones we want to use.
+
+As you can see, we are going to use [`slideInLeft`]({environment:sassApiUrl}/animations#mixin-slide-in-left) and [`slideOutRight`]({environment:sassApiUrl}/animations#mixin-slide-out-right) animations from our [**inbuilt suite of animations**]({environment:sassApiUrl}/animations) to make the component content appear more dramatically from the left side and disappear on the right when collapsing the content. In the process, we override some of the existing parameters with the specific ones we want to use.
 
 The sample shows some user information and the key point here is passing the animation settings to the component like:
 `[animationSettings] = "animationSettingsCustom"`
@@ -354,9 +457,9 @@ The sample shows some user information and the key point here is passing the ani
 
 You can see the results below:
 
-<code-view style="height: 380px;" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-5" >
+<code-view style="height: 380px;"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/layouts/expansion-sample-5/" >
 </code-view>
 
 
@@ -365,11 +468,13 @@ You can see the results below:
 See the [igxAccordion topic](accordion.md)
 
 ## API Reference
-* [IgxExpansionPanel API]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)
-* [IgxExpansionPanelHeader API]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html)
-* [IgxExpansionPanelBody API]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html)
-* [IgxExpansionPanel Styles]({environment:sassApiUrl}/index.html#mixin-igx-expansion-panel)
+
+- [IgxExpansionPanel API]({environment:angularApiUrl}/classes/igxexpansionpanelcomponent.html)
+- [IgxExpansionPanelHeader API]({environment:angularApiUrl}/classes/igxexpansionpanelheadercomponent.html)
+- [IgxExpansionPanelBody API]({environment:angularApiUrl}/classes/igxexpansionpanelbodycomponent.html)
+- [IgxExpansionPanel Styles]({environment:sassApiUrl}/themes#mixin-expansion-panel)
 
 ## Theming Dependencies
-* [IgxExpansionPanel Theme]({environment:sassApiUrl}/index.html#function-expansion-panel-theme)
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
+
+- [IgxExpansionPanel Theme]({environment:sassApiUrl}/themes#function-expansion-panel-theme)
+- [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)

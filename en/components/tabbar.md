@@ -1,7 +1,8 @@
 ---
-title: Angular Bottom Navigation Component – Ignite UI for Angular | Infragistics
+title: Angular Bottom Navigation Component – Ignite UI for Angular | Infragistics | MIT license
 _description: Display tabs for any occasion and implement a completely tabbed user interface. These UI controls manage every aspect of your tabs’ appearance and behavior.
 _keywords: Angular Bottom Nav component, Angular Bottom Navigation control, Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI widgets, Angular, Native Angular Components Suite, Angular UI Components, Native Angular Components Library
+_license: MIT
 ---
 
 # Angular Bottom Navigation Component Overview
@@ -18,7 +19,7 @@ _keywords: Angular Bottom Nav component, Angular Bottom Navigation control, Igni
 
 <code-view style="height: 200px; width: 400px; border: 1px solid #D4D4D4;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-1" alt="Angular Bottom Navigation Example">
+           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-1/" alt="Angular Bottom Navigation Example">
 </code-view>
 
 
@@ -32,7 +33,7 @@ To get started with the Ignite UI for Angular Bottom Navigation component, first
 ng add igniteui-angular
 ```
 
-For a complete introduction to the Ignite UI for Angular, read the [*getting started*](general/getting-started.md) topic.
+For a complete introduction to the Ignite UI for Angular, read the [_getting started_](general/getting-started.md) topic.
 
 The next step is to import the `IgxBottomNavModule` in your **app.module.ts** file.
 
@@ -40,7 +41,7 @@ The next step is to import the `IgxBottomNavModule` in your **app.module.ts** fi
 // app.module.ts
 
 ...
-import { IgxBottomNavModule } from 'igniteui-angular';
+import { IgxBottomNavModule } from 'igniteui-angular/bottom-nav';
 // import { IgxBottomNavModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -56,7 +57,8 @@ Alternatively, as of `16.0.0` you can import the `IgxBottomNavComponent` as a st
 ```typescript
 // home.component.ts
 
-import { IGX_BOTTOM_NAV_DIRECTIVES, IgxIconComponent } from 'igniteui-angular';
+import { IGX_BOTTOM_NAV_DIRECTIVES } from 'igniteui-angular/bottom-nav';
+import { IgxIconComponent } from 'igniteui-angular/icon';
 // import { IGX_BOTTOM_NAV_DIRECTIVES, IgxIconComponent } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -206,6 +208,7 @@ Next, update the component's template markup as follows:
     </igx-bottom-nav-item>
 </igx-bottom-nav>
 ```
+
 You probably noticed that in addition to placing the icon and the span with the label between the item's header tags, we also attach the `igxBottomNavHeaderIcon` and the `igxBottomNavHeaderLabel` directives to them. These directives denote the respective elements and apply the proper styles to them.
 
 Finally, add the CSS classes used by the DIV and SPAN elements of the content's template to the component's CSS file:
@@ -234,7 +237,7 @@ After these modifications our Bottom Navigation should look similar to this:
 
 <code-view style="height: 350px; width: 300px; border: 1px solid #D4D4D4;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-2/" >
 </code-view>
 
 
@@ -376,11 +379,67 @@ The approach described above is used by the following sample to demonstrate rout
 
 <code-view style="height: 250px; width: 500px; border: 1px solid #D4D4D4;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-sample-3/" >
 </code-view>
 
 
 ## Styles
+
+### Bottom Nav Theme Property Map
+
+When you modify a primary property, all related dependent properties are automatically updated to reflect the change:
+
+<table>
+    <thead>
+        <tr>
+        <th>Primary Property</th>
+        <th>Dependent Property</th>
+        <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td><strong>$background</strong></td>
+        <td>$label-color</td>
+        <td>The label color used in idle state.</td>
+        </tr>
+        <tr>
+        <td><strong>$label-color</strong></td>
+        <td>$icon-color</td>
+        <td>The icon color used in idle state.</td>
+        </tr>
+        <tr>
+        <td></td>
+        <td>$label-disabled-color</td>
+        <td>The disabled color of the label.</td>
+        </tr>
+        <tr>
+        <td><strong>$icon-color</strong></td>
+        <td>$label-color</td>
+        <td>The label color used in idle state.</td>
+        </tr>
+        <tr>
+        <td><strong>$label-disabled-color</strong></td>
+        <td>$icon-disabled-color</td>
+        <td>The disabled color of the icon.</td>
+        </tr>
+        <tr>
+        <td><strong>$icon-disabled-color</strong></td>
+        <td>$label-disabled-color</td>
+        <td>The disabled color of the label.</td>
+        </tr>
+        <tr>
+        <td><strong>$label-selected-color</strong></td>
+        <td>$icon-selected-color</td>
+        <td>The icon color used in selected state.</td>
+        </tr>
+        <tr>
+        <td><strong>$icon-selected-color</strong></td>
+        <td>$label-selected-color</td>
+        <td>The label color used in selected state.</td>
+        </tr>
+    </tbody>
+</table>
 
 To get started with styling the tabs, we need to import the `index` file, where all the theme functions and component mixins live:
 
@@ -389,118 +448,32 @@ To get started with styling the tabs, we need to import the `index` file, where 
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
-Following the simplest approach, we create a new theme that extends the [`bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-bottom-nav-theme) and accepts various parameters that allow us to style the tab groups.
+Following the simplest approach, we create a new theme that extends the [`bottom-nav-theme`]({environment:sassApiUrl}/themes#function-bottom-nav-theme) and accepts various parameters that allow us to style the tab groups.
 
 ```scss
 $dark-bottom-nav: bottom-nav-theme(
-    $background: #292826,
-    $active-item-color: #F4D45C
+  $background: #292826,
+  $icon-selected-color: #f4d45c
 );
 ```
 
-If we take a look at the [`bottom-nav-theme`]({environment:sassApiUrl}/index.html#function-bottom-nav-theme), we will notice that there are even more parameters available to us in order to style our bottom navigation component!
+>[!NOTE]
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](/themes/sass/palettes.md) topic for detailed guidance on how to use them.
+
+If we take a look at the [`bottom-nav-theme`]({environment:sassApiUrl}/themes#function-bottom-nav-theme), we will notice that there are even more parameters available to us in order to style our bottom navigation component!
 
 > [!NOTE]
 > In order to style any additional components that are used as part of an item's content, an additional theme should be created that is specific to the respective component.
 
-### Including themes
-
-<div class="divider"></div>
-
 The last step is to **include** the component theme in our application.
 
-If `$legacy-support` is set to `true`, include the **component theme** like that:
-
-```scss
-@include bottom-nav($dark-bottom-nav);
-```
-
->[!NOTE]
->If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`
-
 ```scss
 :host {
-     ::ng-deep {
-        @include bottom-nav($dark-bottom-nav);
-    }
+    @include tokens($dark-bottom-nav);
 }
 ```
-
-<div class="divider"></div>
-
-If `$legacy-support` is set to `false`(default), include the component **css variables** like that:
-
-```scss
-@include css-vars($dark-bottom-nav);
-```
-
->[!NOTE]
->If the component is using an [`Emulated`](themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, you still have to use `:host` because you need a global selector in order to override the variables.
-
-```scss
-:host {
-    @include css-vars($dark-bottom-nav);
-}
-```
-### Defining a color palette
-
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
-
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
-
-```scss
-$yellow-color: #F4D45C;
-$black-color: #292826;
-$dark-palette: palette($primary: $black-color, $secondary: $yellow-color);
-```
-
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
-
-```scss
-$dark-bottom-nav: bottom-nav-theme(
-    $background: color($dark-palette, "primary", 400),
-    $active-item-color: color($dark-palette, "secondary", 400)
-);
-```
-
-### Using Schemas
-
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](themes/sass/schemas.md). A **schema** is a recipe of a theme.
-
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`dark-bottom-nav`]({environment:sassApiUrl}/index.html#variable-_dark-bottom-nav) schema:
-
-```scss
-// Extending the dark bottom nav schema
-$dark-bottom-nav-schema: extend($_dark-bottom-nav,
-    (
-        background: (
-           color: ("primary", 400)
-        ),
-        active-item-color: (
-           color: ("secondary", 400)
-        )
-    )
-);
-```
-
-In order to apply our custom schemas we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
-
-```scss
-// Extending the global dark-schema
-$custom-dark-schema: extend($dark-schema,(
-    igx-bottom-nav: $dark-bottom-nav-schema
-));
-
-// Defining bottom-nav-theme with the global dark schema
-$dark-bottom-nav: bottom-nav-theme(
-  $palette: $dark-palette,
-  $schema: $custom-dark-schema
-);
-```
-
-Don't forget to include the themes in the same way as it was demonstrated above.
 
 ### Demo
 
@@ -508,26 +481,70 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 <code-view style="height: 350px; width: 300px; border: 1px solid #D4D4D4;"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-style" >
+           iframe-src="{environment:demosBaseUrl}/layouts/tabbar-style/" >
 </code-view>
+
+### Styling with Tailwind
+
+You can style the bottom navigation using our custom Tailwind utility classes. Make sure to [set up Tailwind](themes/misc/tailwind-classes.md) first.
+
+Along with the Tailwind import in your global stylesheet, you can apply the desired theme utilities as follows:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+The utility file includes both `light` and `dark` theme variants.
+
+- Use `light-*` classes for the light theme.
+- Use `dark-*` classes for the dark theme.
+- Append the component name after the prefix, e.g., `light-bottom-nav`, `dark-bottom-nav`.
+
+Once applied, these classes enable dynamic theme calculations. From there, you can override the generated CSS variables using `arbitrary properties`. After the colon, provide any valid CSS color format (HEX, CSS variable, RGB, etc.).
+
+You can find the full list of properties in the [IgxBottomNav Theme]({environment:sassApiUrl}/themes#function-bottom-nav-theme). The syntax is as follows:
+
+```html
+<igx-bottom-nav
+    class="!light-bottom-nav
+    ![--background:#011627]
+    ![--icon-selected-color:#FF8040] 
+    ![--label-selected-color:#FF8040]">
+    ...
+</igx-bottom-nav>
+```
+
+>[!NOTE]
+>The exclamation mark(`!`) is required to ensure the utility class takes precedence. Tailwind applies styles in layers, and without marking these styles as important, they will get overridden by the component’s default theme.
+
+At the end your bottom nav should look like this:
+
+<div class="sample-container loading" style="height:340px">
+    <iframe id="tabbar-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/layouts/tabbar-tailwind-style' style="height: 350px; width: 300px; border: 1px solid #D4D4D4;" seamless class="lazyload"></iframe>
+</div>
 
 <div class="divider--half"></div>
 
 ## API References
+
 <div class="divider--half"></div>
 
-* [IgxBottomNavComponent]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html)
-* [IgxBottomNavComponent Styles]({environment:sassApiUrl}/index.html#function-bottom-nav-theme)
-* [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
+- [IgxBottomNavComponent]({environment:angularApiUrl}/classes/igxbottomnavcomponent.html)
+- [IgxBottomNavComponent Styles]({environment:sassApiUrl}/themes#function-bottom-nav-theme)
+- [IgxIconComponent]({environment:angularApiUrl}/classes/igxiconcomponent.html)
 
 ## Theming Dependencies
-* [IgxIcon Theme]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxRipple Theme]({environment:sassApiUrl}/index.html#function-ripple-theme)
+
+- [IgxIcon Theme]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxRipple Theme]({environment:sassApiUrl}/themes#function-ripple-theme)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

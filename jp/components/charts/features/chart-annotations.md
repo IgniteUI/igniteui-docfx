@@ -2,6 +2,7 @@
 title: Angular チャート注釈 | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular チャート注釈
 _keywords: Angular Charts, Annotations, Infragistics, Angular チャート, 注釈, インフラジスティックス
+_license: commercial
 mentionedTypes: ["DomainChart", "CategoryChart", "CrosshairLayer", "FinalValueLayer", "CalloutLayer"]
 namespace: Infragistics.Controls.Charts
 _language: ja
@@ -32,9 +33,9 @@ Angular チャートのホバー操作と注釈は、シリーズ コレクシ�
 
 十字線のタイプは次のとおりです:
 
-*   Horizontal
-*   Vertical
-*   Both
+- Horizontal
+- Vertical
+- Both
 
 チャートの十字線は、[`crosshairsSnapToData`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#crosshairsSnapToData) プロパティを true に設定することでデータ ポイントにスナップするように構成することもできます。そうしないと、十字線がデータ ポイント間で補完されます。注釈を有効にして軸に沿って十字線の値を表示できます。
 
@@ -61,9 +62,9 @@ Angular チャートのホバー操作と注釈は、シリーズ コレクシ�
 
 次のプロパティを設定して、この注釈をカスタマイズすることもできます:
 
-*   [`axisAnnotationBackground`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinalvaluelayercomponent.html#axisAnnotationBackground): このプロパティは注釈の背景色を選択するために使用されます。デフォルトはシリーズのブラシを使用します。
-*   [`axisAnnotationTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinalvaluelayercomponent.html#axisAnnotationTextColor): このプロパティは注釈のテキストの色のブラシを選択するために使用されます。
-*   [`axisAnnotationOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinalvaluelayercomponent.html#axisAnnotationOutline): このプロパティは注釈のアウトライン色を選択するために使用されます。
+- [`axisAnnotationBackground`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinalvaluelayercomponent.html#axisAnnotationBackground): このプロパティは注釈の背景色を選択するために使用されます。デフォルトはシリーズのブラシを使用します。
+- [`axisAnnotationTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinalvaluelayercomponent.html#axisAnnotationTextColor): このプロパティは注釈のテキストの色のブラシを選択するために使用されます。
+- [`axisAnnotationOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinalvaluelayercomponent.html#axisAnnotationOutline): このプロパティは注釈のアウトライン色を選択するために使用されます。
 
 次の例は、上記のプロパティを設定して、最終的な値レイヤーの注釈のスタイルを設定する方法を示しています。
 
@@ -93,13 +94,13 @@ Angular チャートのホバー操作と注釈は、シリーズ コレクシ�
 
 次のプロパティを設定して、この注釈をカスタマイズすることもできます:
 
-*   [`calloutLeaderBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcalloutlayercomponent.html#calloutLeaderBrush): このプロパティは、レイヤーのコールアウトのリーダー線のブラシを選択するために使用されます。
-*   [`calloutOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcalloutlayercomponent.html#calloutOutline): このプロパティは注釈のアウトライン色を選択するために使用されます。
-*   [`calloutBackground`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcalloutlayercomponent.html#calloutBackground): このプロパティは注釈の背景色を選択するために使用されます。デフォルトはシリーズのブラシを使用します。
-*   [`calloutTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcalloutlayercomponent.html#calloutTextColor): このプロパティは注釈のテキストの色のブラシを選択するために使用されます。
-*   [`calloutStrokeThickness`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcalloutlayercomponent.html#calloutStrokeThickness): このプロパティは、コールアウト バッキングの厚さを選択するために使用されます。
-*   [`calloutCornerRadius`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcalloutlayercomponent.html#calloutCornerRadius): このプロパティは、コールアウトのコーナーをカーブさせるために使用されます。
-*   [`allowedPositions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcalloutlayercomponent.html#allowedPositions): このプロパティは、コールアウト レイヤーが使用できる位置を選択するために使用されます。例: 上、下
+- [`calloutLeaderBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcalloutlayercomponent.html#calloutLeaderBrush): このプロパティは、レイヤーのコールアウトのリーダー線のブラシを選択するために使用されます。
+- [`calloutOutline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcalloutlayercomponent.html#calloutOutline): このプロパティは注釈のアウトライン色を選択するために使用されます。
+- [`calloutBackground`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcalloutlayercomponent.html#calloutBackground): このプロパティは注釈の背景色を選択するために使用されます。デフォルトはシリーズのブラシを使用します。
+- [`calloutTextColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcalloutlayercomponent.html#calloutTextColor): このプロパティは注釈のテキストの色のブラシを選択するために使用されます。
+- [`calloutStrokeThickness`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcalloutlayercomponent.html#calloutStrokeThickness): このプロパティは、コールアウト バッキングの厚さを選択するために使用されます。
+- [`calloutCornerRadius`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcalloutlayercomponent.html#calloutCornerRadius): このプロパティは、コールアウトのコーナーをカーブさせるために使用されます。
+- [`allowedPositions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcalloutlayercomponent.html#allowedPositions): このプロパティは、コールアウト レイヤーが使用できる位置を選択するために使用されます。例: 上、下
 
 次の例は、上記のプロパティを設定して、コールアウト レイヤーの注釈のスタイルを設定する方法を示しています。
 
@@ -127,5 +128,5 @@ Angular チャートのホバー操作と注釈は、シリーズ コレクシ�
 
 以下は、上記のセクションで説明した API メンバーのリストです。
 
-*   [`crosshairsSnapToData`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#crosshairsSnapToData)
-*   [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html)
+- [`crosshairsSnapToData`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#crosshairsSnapToData)
+- [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html)

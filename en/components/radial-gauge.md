@@ -2,7 +2,8 @@
 title: Angular Radial Gauge Chart | Data Visualization Tools | Infragistics
 _description: Use Infragistics' Angular radial gauge control to create engaging data visualizations and dashboards and show off KPIs with rich style and interactivity. Learn about the Ignite UI for Angular radial gauge configurable elements!
 _keywords: Radial Gauge, Ignite UI for Angular, Infragistics, animation, labels, needle, scales, ranges, tick marks
-mentionedTypes: ['XamRadialGauge', 'XamRadialGaugeRange']
+_license: commercial
+mentionedTypes: ["XamRadialGauge", "XamRadialGaugeRange"]
 namespace: Infragistics.Controls.Gauges
 ---
 
@@ -142,9 +143,11 @@ The scale is visual element that highlights full range of values in the gauge wh
 </code-view>
 
 
-## Labels
+## Labels and Titles
 
 The radial gauge labels are visual elements displaying numeric values at a specified interval between values of the [`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#minimumValue) and [`maximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#maximumValue) properties. You can position labels by setting the [`labelExtent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#labelExtent) property to a fraction, where 0 represents center of gauge and 1 represents outer extent of the gauge backing. Also, you can customize labels setting various styling properties such as [`fontBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#fontBrush) and [`font`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#font).
+
+Each of these labels for the needle have various styling attributes you can apply to change the font, angle, brush and distance from the center of the gauge such as [`titleExtent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#titleExtent), [`titleAngle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#titleAngle), `SubtitleFontSize`, [`highlightLabelBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#highlightLabelBrush).
 
 ```html
 <igx-radial-gauge
@@ -165,9 +168,22 @@ The radial gauge labels are visual elements displaying numeric values at a speci
 </code-view>
 
 
+## Title & Subtitle
+
+[`titleText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#titleText) and [`subtitleText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#subtitleText) properties are available and can both be used to display custom text for the needle. Alternatively, [`titleDisplaysValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#titleDisplaysValue) and [`subtitleDisplaysValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#subtitleDisplaysValue), when set to true, will let display the needle's value and override [`titleText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#titleText) and [`subtitleText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#subtitleText). So you can occupy custom text for the title but show the value via the subtitle and vice versa.
+
+If the highlight needle is shown, as explained below, then custom text can be shown via  [`highlightLabelText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#highlightLabelText), otherwise [`highlightLabelDisplaysValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#highlightLabelDisplaysValue) can be enabled and display it's value.
+
+```html
+<igx-radial-gauge
+    titleText="Global Sales"
+    subtitleText="2024">
+</igx-radial-gauge>
+```
+
 ## Optical Scaling
 
-The radial gauge's labels and titles can change it's scaling. To enable this, first set `OpticalScalingEnabled` to true. Then you can set `OpticalScalingSize` which manages the size at which labels have 100% optical scaling. Labels will have larger fonts when gauge's size is larger. For example, labels will have a 200% larger font size when this property is set to 500 and the gauge px size is doubled to eg. 1000.
+The radial gauge's labels and titles can change it's scaling. To enable this, first set [`opticalScalingEnabled`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#opticalScalingEnabled) to true. Then you can set [`opticalScalingSize`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#opticalScalingSize) which manages the size at which labels have 100% optical scaling. Labels will have larger fonts when gauge's size is larger. For example, labels will have a 200% larger font size when this property is set to 500 and the gauge px size is doubled to eg. 1000.
 
 <code-view style="height: 500px" alt="Angular radial gauge optical scaling"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -272,24 +288,24 @@ You can enable an interactive mode of the gauge (using [`isNeedleDraggingEnabled
 
 ## Highlight Needle
 
-The radial gauge can be modified to show a second needle. This will make the main needle's [`value`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#value) appear with a lower opacity. To enable this first set `HighlightValueDisplayMode` to Overlay and then apply a `HighlightValue`.
+The radial gauge can be modified to show a second needle. This will make the main needle's [`value`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#value) appear with a lower opacity. To enable this first set [`highlightValueDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#highlightValueDisplayMode) to Overlay and then apply a [`highlightValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#highlightValue).
 
 ```html
 <igx-radial-gauge #radialGauge
     labelExtent=0.65
     labelInterval=10
-    titleDisplaysValue=true
     highlightValueDisplayMode="Overlay"
-    highlightValue=25
+    highlightValue=50
+    highlightLabelDisplaysValue=true
+    highlightLabelSnapsToNeedlePivot=true
     isHighlightNeedleDraggingEnabled=true
-    isNeedleDraggingEnabled=true
     height="100%" width="100%"
-    minimumValue=0 value=75
-    maximumValue=80 interval=10  >
+    minimumValue=0 value=30
+    maximumValue=100 interval=10  >
 </igx-radial-gauge>
 ```
 
-<code-view style="height: 125px" alt="Angular radial gauge highlight needle"
+<code-view style="height: 320px" alt="Angular radial gauge highlight needle"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/highlight-needle"
                                                  github-src="gauges/radial-gauge/highlight-needle">
@@ -372,12 +388,12 @@ For your convenience, all above code snippets are combined into one code block b
 
 The following is a list of API members mentioned in the above sections:
 
-*   [`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html)
-*   [`IgxRadialGaugeRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugerangecomponent.html)
+- [`IgxRadialGaugeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html)
+- [`IgxRadialGaugeRangeComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugerangecomponent.html)
 
 ## Additional Resources
 
 You can find more information about other types of gauges in these topics:
 
-*   [Bullet Graph](bullet-graph.md)
-*   [Linear Gauge](linear-gauge.md)
+- [Bullet Graph](bullet-graph.md)
+- [Linear Gauge](linear-gauge.md)

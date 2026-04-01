@@ -3,7 +3,7 @@ title: Angular Excel Library Component - Native Angular | Ignite UI for Angular
 _description: The Ignite UI for Excel Library component with Workbook Operations.
 _keywords: Ignite UI for Angular, Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Excel Library, Angular Excel Library Example, Angular Excel Library Component, Angular Excel Engine, Workbook, Font, Document Properties
 _language: kr
-mentionedTypes: ['Workbook', 'WorksheetTable', 'Worksheet', 'SortSettings']
+mentionedTypes: ["Workbook", "WorksheetTable", "Worksheet", "SortSettings"]
 ---
 
 # Angular Using Workbooks
@@ -37,23 +37,23 @@ font.height = 16 * 20;
 
 Microsoft Excel® document properties provide information to help organize and keep track of your documents. You can use the Infragistics Excel Library to set these properties using the [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.sheet.html#workbook) object’s `documentProperties` property. The available properties are:
 
-*   `author`
+- `author`
 
-*   `title`
+- `title`
 
-*   `subject`
+- `subject`
 
-*   `keywords`
+- `keywords`
 
-*   `category`
+- `category`
 
-*   `status`
+- `status`
 
-*   `comments`
+- `comments`
 
-*   `company`
+- `company`
 
-*   `manager`
+- `manager`
 
 The following code demonstrates how to create a workbook and set its `title` and `status` document properties.
 
@@ -82,7 +82,7 @@ var workbook = new Workbook();
 workbook.protect(false, false);
 ```
 
-*   isProtected
+- isProtected
 
 Check if a workbook has protection. This read-only property returns true if the workbook has any protection set using the overloads of the Protect method.
 
@@ -91,7 +91,7 @@ var workbook = new Workbook();
 var protect = workbook.isProtected;
 ```
 
-*   protection
+- protection
 
 This read-only property returns an object of type WorkbookProtection which contains properties for obtaining each protection setting individually.
 

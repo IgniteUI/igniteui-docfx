@@ -13,7 +13,7 @@ _language: kr
 
 <code-view style="height:850px" 
            data-demos-base-url="{environment:lobDemosBaseUrl}" 
-           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs" >
+           iframe-src="{environment:lobDemosBaseUrl}/treegrid-finjs/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -73,7 +73,7 @@ public groupColumnKey = "Categories";
 <div class="divider--half"></div>
 
 * [IgxTreeGridComponent]({environment:angularApiUrl}/classes/igxtreegridcomponent.html)
-* [IgxGridComponent 스타일]({environment:sassApiUrl}/#function-grid-theme)
+* [IgxGridComponent 스타일]({environment:sassApiUrl}/themes#function-grid-theme)
 
 ### 추가 리소스
 

@@ -17,7 +17,7 @@ The following demo demonstrates [`igx-input-group`]({environment:angularApiUrl}/
 
 <code-view style="height: 800px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/reactive-forms" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/reactive-forms/" >
 </code-view>
 
 <div class="divider--half"></div>

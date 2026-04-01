@@ -19,7 +19,7 @@ The exporting functionality is encapsulated in the [`IgxCsvExporterService`]({en
 
 <code-view style="height: 150px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/services/export-csv" >
+           iframe-src="{environment:demosBaseUrl}/services/export-csv/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -115,7 +115,7 @@ public exportButtonHandler() {
 
 <code-view style="height: 300px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/services/export-csv-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/services/export-csv-sample-1/" >
 </code-view>
 
 
@@ -157,7 +157,7 @@ this.csvExportService.export(this.igxGrid1, new IgxCsvExporterOptions("ExportedD
 
 When you are exporting data from [**IgxGrid**](grid/grid.md) the export process takes in account features like row filtering and column hiding and exports only the data visible in the grid. You can configure the exporter service to include filtered rows or hidden columns by setting properties on the [`IgxCsvExporterOptions`]({environment:angularApiUrl}/classes/igxcsvexporteroptions.html) object. These properties are described in the table below.
 
-### API Summary
+## API References
 
 The CSV Exporter service has a few more APIs to explore, which are listed below.
 
@@ -167,11 +167,11 @@ The CSV Exporter service has a few more APIs to explore, which are listed below.
 Additional components that were used:
 
 * [IgxGridComponent API]({environment:angularApiUrl}/classes/igxgridcomponent.html)
-* [IgxGridComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [IgxGridComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
 
 <div class="divider"></div>
 
-### Additional Resources
+## Additional Resources
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.

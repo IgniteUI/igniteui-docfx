@@ -1,25 +1,32 @@
+<!-- markdownlint-disable MD003 MD024 MD022 -->
 @@if (igxName === 'IgxGrid') {
 ---
 title: Angular Grid Sorting - Ignite UI for Angular
 _description: Get started with the Angular sorting feature of Ignite for Angular UI grid! Configure a mix of sortable columns & change the display order of data records.
 _keywords: angular sort, ignite ui for angular, infragistics
+_license: commercial
 ---
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
 title: Angular Tree Grid Sorting - Ignite UI for Angular
 _description: Get started with the Angular sorting feature of Ignite for Angular UI grid! Configure a mix of sortable columns & change the display order of data records.
 _keywords: angular sort, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/sorting
 ---
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
 title: Angular Hierarchical Grid Sorting - Ignite UI for Angular
 _description: Get started with the Angular sorting feature of Ignite for Angular UI grid! Configure a mix of sortable columns & change the display order of data records.
 _keywords: angular sort, ignite ui for angular, infragistics
+_license: commercial
 _canonicalLink: grid/sorting
 ---
+
 }
 
 # Angular @@igComponent Sorting
@@ -27,35 +34,35 @@ _canonicalLink: grid/sorting
 In Ignite UI for Angular @@igComponent, data sorting is enabled on a per-column level, meaning that the **@@igSelector** can have a mix of sortable and non-sortable columns. Performing angular sort actions enables you to change the display order of the records based on specified criteria.
 
 >[!NOTE]
-> Up until now, grouping/sorting worked in conjuction with each other. In 13.2 version, a new behavior which decouples gropuing from sorting is introduced. For example - clearing the grouping will not clear sorting expressions in the grid or vice versa. Still, if a column is both sorted and grouped, grouped expressions take precedence.
+> Up until now, grouping/sorting worked in conjunction with each other. In 13.2 version, a new behavior which decouples grouping from sorting is introduced. For example - clearing the grouping will not clear sorting expressions in the grid or vice versa. Still, if a column is both sorted and grouped, grouped expressions take precedence.
 
 ## Angular @@igComponent Sorting Overview Example
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-sample" alt="Angular @@igComponent Sorting Overview Example">
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-sample/" alt="Angular @@igComponent Sorting Overview Example">
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
-Additionally there is a custom contextmenu added for sorting using **@@igSelector**'s [`contextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#contextMenu) Output.
+Additionally there is a custom context menu added for sorting using **@@igSelector**'s [`contextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#contextMenu) Output.
 
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-sorting" alt="Angular @@igComponent Sorting Overview Example">
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-sorting/" alt="Angular @@igComponent Sorting Overview Example">
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-Additionally there is a custom contextmenu added for sorting using **@@igSelector**'s [`contextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#contextMenu) Output.
+Additionally there is a custom context menu added for sorting using **@@igSelector**'s [`contextMenu`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#contextMenu) Output.
 
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sorting" alt="Angular @@igComponent Sorting Overview Example">
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sorting/" alt="Angular @@igComponent Sorting Overview Example">
 </code-view>
 
 }
@@ -65,26 +72,31 @@ Additionally there is a custom contextmenu added for sorting using **@@igSelecto
 This is done via the [`sortable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortable) input. With the @@igComponent sorting, you can also set the [`sortingIgnoreCase`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortingIgnoreCase) property to perform case sensitive sorting:
 
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-column field="Name" header="Order Product" [dataType]="'string'" sortable="true"></igx-column>
 ```
+
 }
 @@if (igxName !== 'IgxTreeGrid') {
+
 ```html
 <igx-column field="ProductName" header="Product Name" [dataType]="'string'" sortable="true"></igx-column>
 ```
+
 }
 
 ## Sorting Indicators
-Having a certain amount of sorted columns could be really confusing if there is no indication of the sorted order. 
+
+Having a certain amount of sorted columns could be really confusing if there is no indication of the sorted order.
 
 The **@@igxName** provides a solution for this problem by indicating the index of each sorted column.
 
 @@if(igxName === "IgxGrid"){
 
-<code-view style="height:550px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-indicators" >
+<code-view style="height:550px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-indicators/" >
 </code-view>
 
 }
@@ -94,8 +106,9 @@ The **@@igxName** provides a solution for this problem by indicating the index o
 You can sort any column or a combination of columns through the @@igComponent API using the @@igComponent [`sort`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sort) method:
 
 @@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
-import { SortingDirection } from 'igniteui-angular';
+import { SortingDirection } from 'igniteui-angular/grids/core';
 // import { SortingDirection } from '@infragistics/igniteui-angular'; for licensed package
 
 // Perform a case insensitive ascending sort on the ProductName column.
@@ -107,10 +120,12 @@ this.@@igObjectRef.sort([
     { fieldName: 'UnitPrice', dir: SortingDirection.Desc }
 ]);
 ```
+
 }
 @@if (igxName !== 'IgxTreeGrid') {
+
 ```typescript
-import { SortingDirection } from 'igniteui-angular';
+import { SortingDirection } from 'igniteui-angular/grids/core';
 // import { SortingDirection } from '@infragistics/igniteui-angular'; for licensed package
 
 // Perform a case insensitive ascending sort on the ProductName column.
@@ -122,6 +137,7 @@ this.@@igObjectRef.sort([
     { fieldName: 'Price', dir: SortingDirection.Desc }
 ]);
 ```
+
 }
 
 > [!NOTE]
@@ -130,6 +146,7 @@ this.@@igObjectRef.sort([
 As with the filtering behavior, you can clear the sorting state by using the [`clearSort`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#clearsort) method:
 
 @@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
 // Removes the sorting state from the ProductName column
 this.@@igObjectRef.clearSort('Name');
@@ -137,8 +154,10 @@ this.@@igObjectRef.clearSort('Name');
 // Removes the sorting state from every column in the @@igComponent
 this.@@igObjectRef.clearSort();
 ```
+
 }
 @@if (igxName !== 'IgxTreeGrid') {
+
 ```typescript
 // Removes the sorting state from the ProductName column
 this.@@igObjectRef.clearSort('ProductName');
@@ -146,11 +165,11 @@ this.@@igObjectRef.clearSort('ProductName');
 // Removes the sorting state from every column in the @@igComponent
 this.@@igObjectRef.clearSort();
 ```
+
 }
 
 > [!NOTE]
 > The [`sortStrategy`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortStrategy) of the **@@igComponent** is of different type compared to the [`sortStrategy`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#sortStrategy) of the **column**, since they work in different scopes and expose different parameters.
-
 > [!NOTE]
 > The sorting operation **DOES NOT** change the underlying data source of the @@igComponent.
 
@@ -158,25 +177,49 @@ this.@@igObjectRef.clearSort();
 
 It is possible to set the initial sorting state of the @@igComponent by passing an array of sorting expressions to the [`sortingExpressions`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#sortingExpressions) property of the @@igComponent.
 
-@@if (igxName !== 'IgxTreeGrid') {
+@@if (igxName === 'IgxGrid') {
+
 ```typescript
-public ngOnInit() {
+public ngAfterViewInit(): void {
     this.@@igObjectRef.sortingExpressions = [
-        { fieldName: 'Name', dir: SortingDirection.Asc, ignoreCase: true },
-        { fieldName: 'Price', dir: SortingDirection.Desc }
+        {
+            dir: SortingDirection.Asc, fieldName: 'CategoryName',
+            ignoreCase: true, strategy: DefaultSortingStrategy.instance()
+        }
     ];
 }
 ```
+
 }
-@@if (igxName !== 'IgxTreeGrid') {
+
+@@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
-public ngOnInit() {
+public ngAfterViewInit(): void {
     this.@@igObjectRef.sortingExpressions = [
-        { fieldName: 'ProductName', dir: SortingDirection.Asc, ignoreCase: true },
-        { fieldName: 'Price', dir: SortingDirection.Desc }
+        { 
+            dir: SortingDirection.Asc, fieldName: 'UnitPrice',
+            ignoreCase: true, strategy: DefaultSortingStrategy.instance() 
+        }
     ];
 }
 ```
+
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+
+```typescript
+public ngOnInit(): void {
+    this.@@igObjectRef.sortingExpressions = [
+        { 
+            dir: SortingDirection.Asc, fieldName: 'Artist',
+            ignoreCase: true, strategy: DefaultSortingStrategy.instance() 
+        }
+    ];
+}
+```
+
 }
 
 > [!NOTE]
@@ -185,6 +228,7 @@ public ngOnInit() {
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {
+
 ## Remote Sorting
 
 The @@igComponent supports remote sorting, which is demonstrated in the [`@@igComponent Remote Data Operations`](remote-data-operations.md) topic.
@@ -231,123 +275,61 @@ To get started with styling the sorting behavior, we need to import the `index` 
 
 // IMPORTANT: Prior to Ignite UI for Angular version 13 use:
 // @import '~igniteui-angular/lib/core/styles/themes/index';
-``` 
+```
 
-Following the simplest approach, we create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) and accepts the `$sorted-header-icon-color` and `sortable-header-icon-hover-color` parameters.
+Following the simplest approach, we create a new theme that extends the [`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) and accepts the `$sorted-header-icon-color` and `sortable-header-icon-hover-color` parameters.
 
 ```scss
 $custom-theme: grid-theme(
-    $sorted-header-icon-color: #ffb06a,
-    $sortable-header-icon-hover-color: black
+  $sorted-header-icon-color: #ffb06a,
+  $sortable-header-icon-hover-color: black
 );
-```
-The last step is to **include** the component mixins: 
-
-```scss
- @include grid($custom-theme);
 ```
 
 >[!NOTE]
- >If the component is using an [`Emulated`](../themes/sass/component-themes.md#view-encapsulation) ViewEncapsulation, it is necessary to `penetrate` this encapsulation using `::ng-deep`:
+>Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`palette`]({environment:sassApiUrl}/palettes#function-palette) and [`color`]({environment:sassApiUrl}/palettes#function-color) functions. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
 
- ```scss
+The last step is to **include** the component mixins:
+
+```scss
 :host {
-    ::ng-deep {
-        @include grid($custom-theme);
-    }
+  @include tokens($custom-theme);
 }
 ```
 
-### Defining a color palette
-
-Instead of hardcoding the color values like we just did, we can achieve greater flexibility in terms of colors by using the [`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) and [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) functions.
-
-`igx-palette` generates a color palette based on the primary and secondary colors that are passed:
-
-```scss
-$black-color: black;
-$orange-color: #ffb06a;
-
-$custom-palette: palette($primary: $black-color, $secondary: $orange-color);
-```
-
-And then with [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) we can easily retrieve color from the palette.
-
-```scss
-$custom-theme: grid-theme(
-    $sorted-header-icon-color: color($custom-palette, "secondary", 500),
-    $sortable-header-icon-hover-color: color($custom-palette, "primary", 500)
-);
-```
-
->[!NOTE]
->The `igx-color` and `igx-palette` are powerful functions for generating and retrieving colors. Please refer to [`Palettes`](../themes/sass/palettes.md) topic for detailed guidance on how to use them.
-
-### Using Schemas
-
-Going further with the theming engine, you can build a robust and flexible structure that benefits from [**schemas**](../themes/sass/schemas.md). A **schema** is a recipe of a theme.
-
-Extend one of the two predefined schemas, that are provided for every component, in this case - [`_light-grid`]({environment:sassApiUrl}/index.html#variable-_light-grid):  
-
-```scss
-// Extending the light grid schema
-$custom-grid-schema: extend($_light-grid,
-    (
-        sorted-header-icon-color: (igx-color:('secondary', 500)),
-        sortable-header-icon-hover-color: (igx-color:('primary', 500))
-    )
-);
-```
-
-In order to apply our custom schema we have to **extend** one of the globals ([`light`]({environment:sassApiUrl}/index.html#variable-light-schema) or [`dark`]({environment:sassApiUrl}/index.html#variable-dark-schema)), which is basically pointing out the components with a custom schema, and after that add it to the respective component themes:
-
-```scss
-// Extending the global light-schema
-$my-custom-schema: extend($light-schema, 
-    (
-        igx-grid: $custom-grid-schema
-    )
-);
-
-// Defining our custom theme with the custom schema
-$custom-theme: grid-theme(
-  $palette: $custom-palette,
-  $schema: $my-custom-schema
-);
-```
-
-Don't forget to include the themes in the same way as it was demonstrated above.
-
 @@if (igxName === 'IgxGrid') {
+
 ### Demo
 
 
-<code-view style="height:550px" 
+<code-view style="height:550px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-styling" >
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sorting-styling/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ### Demo
 
 
-<code-view style="height:550px" 
+<code-view style="height:550px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-sorting-styling" >
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-sorting-styling/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ### Demo
 
 
-<code-view style="height:510px" 
+<code-view style="height:510px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sorting-styling" >
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sorting-styling/" >
 </code-view>
 
 }
@@ -356,25 +338,27 @@ Don't forget to include the themes in the same way as it was demonstrated above.
 >The sample will not be affected by the selected global theme from `Change Theme`.
 
 ## API References
-* [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent Styles]({environment:sassApiUrl}/index.html#function-grid-theme)
-* [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
+
+- [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [@@igxNameComponent Styles]({environment:sassApiUrl}/themes#function-grid-theme)
+- [ISortingExpression]({environment:angularApiUrl}/interfaces/isortingexpression.html)
 
 ## Additional Resources
+
 <div class="divider--half"></div>
 
-* [@@igComponent overview](@@igMainTopic.md)
-* [Virtualization and Performance](virtualization.md)
-* [Paging](paging.md)
-* [Filtering](filtering.md)
-* [Summaries](summaries.md)
-* [Column Moving](column-moving.md)
-* [Column Pinning](column-pinning.md)
-* [Column Resizing](column-resizing.md)
-* [Selection](selection.md)
+- [@@igComponent overview](@@igMainTopic.md)
+- [Virtualization and Performance](virtualization.md)
+- [Paging](paging.md)
+- [Filtering](filtering.md)
+- [Summaries](summaries.md)
+- [Column Moving](column-moving.md)
+- [Column Pinning](column-pinning.md)
+- [Column Resizing](column-resizing.md)
+- [Selection](selection.md)
 
 <div class="divider--half"></div>
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

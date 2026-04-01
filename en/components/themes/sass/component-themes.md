@@ -28,8 +28,52 @@ We'll take a look at how these approaches work in practice, and how to use one i
 There are several parts to a component theme:
 
 - **The component theme function** - A Sass function that normalizes the passed arguments and produces a theme to be consumed by a component mixin.
-- **The CSS variable mixin** - A Sass mixin that consumes a component theme and produces _CSS variables_ used to style a particular component.
+- **The Tokens mixin** - A Sass mixin that consumes a component theme that generates CSS variable tokens from an Ignite UI component theme.
 - **The component mixin** - A Sass mixin that consumes a component theme and produces _CSS rules_ used to style a particular component.
+
+
+### The tokens mixin
+
+Using the `tokens` mixin is the preferred way to customize your components. It generates CSS custom properties (`design tokens`) from an Ignite UI component theme in either global or scoped mode.
+
+**Global mode (default)** — emits universal `--ig-{component}-{property}` tokens. Local var() references are rewritten to their global equivalents so derived values (e.g., `adaptive-contrast`) resolve correctly at any scope. Sizable expressions are skipped, you have to pass concrete values instead.
+
+```scss
+// Input:
+@include tokens(avatar-theme($background: red));
+
+// Output:
+:root {
+  --ig-avatar-background: red;
+  /* ... remaining avatar properties ... */
+}
+```
+
+**Scoped mode** — emits component-scoped variables `--{property}` with a fallback chain: configured prefix `(--igx-*) -> universal (--ig-*) -> schema default`. When called from the stylesheet root, the theme's selector is used to create the rule. When called inside a selector, both the current selector and the component selector receive the variables.
+
+```scss
+// Input (from root):
+@include tokens(avatar-theme($background: red), $mode: 'scoped');
+
+// Output:
+igx-avatar {
+  --background: var(--igx-avatar-background, var(--ig-avatar-background, red));
+  /* ... remaining avatar properties ... */
+}
+
+
+// Input (from within a selector):
+.my-theme {
+  @include tokens(avatar-theme($background: red), $mode: 'scoped');
+}
+
+// Output:
+.my-theme,
+.my-theme igx-avatar {
+  --background: var(--igx-avatar-background, var(--ig-avatar-background, red));
+  /* ... */
+}
+```
 
 Say you want to create a new global avatar theme that has a different background color to the one we set in the avatar's default theme. As mentioned in the [**overview section**](#overview) there are 2 general approaches to creating a component theme.
 There are even more ways you can organize and scope your component themes. The most straightforward way to do that is in the same file you defined your [**global theme**](./global-themes.md).
@@ -37,35 +81,39 @@ There are even more ways you can organize and scope your component themes. The m
 Defining an avatar theme:
 
 ```scss
-// Some place after @include theme(...);
-
 // Change the background of the avatar to purple.
 $avatar-purple-theme: avatar-theme(
   $background: purple,
 );
 
-// Pass the css-vars to the `css-vars` mixin
-@include css-vars($avatar-purple-theme);
+// Pass the theme to the `tokens` mixin
+:root {
+  @include tokens($avatar-purple-theme);
+}
 ```
 
 The above code produces CSS variables for the `igx-avatar` component. These new CSS variables overwrite the default avatar rules.
-Similarly, if you were to include `css-vars` mixin later down in the global `scss` file, the mixin will again overwrite any previously defined themes.
+Similarly, if you were to include `tokens` mixin later down in the global `scss` file, the mixin will again overwrite any previously defined themes.
 
 For instance:
 
 ```scss
 // ...
-@include css-vars($avatar-purple-theme);
+:root {
+  @include tokens($avatar-purple-theme);
+}
 
 // Later
 $avatar-royalblue-theme: avatar-theme(
   $background: royalblue,
 );
 
-@include css-vars($avatar-royalblue-theme);
+:root {
+  @include tokens($avatar-royalblue-theme);
+}
 ```
 
-In the above code, the de facto global theme is now the `$avatar-royalblue-theme` as it overwrites any previously included `css-vars` mixins.
+In the above code, the de facto global theme is now the `$avatar-royalblue-theme` as it overwrites any previously included `tokens` mixins.
 
 This brings us to our next point.
 
@@ -81,11 +129,11 @@ As we saw in the previous example, when adding multiple themes targeting the sam
 // ...
 // CSS class selectors
 .avatar-royalblue {
-  @include css-vars($avatar-royalblue-theme);
+  @include tokens($avatar-royalblue-theme);
 }
 
 .avatar-purple {
-  @include css-vars($avatar-purple-theme);
+  @include tokens($avatar-purple-theme);
 }
 ```
 
@@ -109,9 +157,9 @@ In a component template:
 
 So far we've explored ways to create themes that are globally scoped, and are included in a single Sass file. However, this is not always desirable, and in some instances you will want the Sass file to be bound to a specific component. In those cases we have to take View Encapsulation, and specifically how it is emulated in Angular, into consideration.
 
-The Angular team has adopted 3 strategies for View Encapsulation - Emulated(default), ShadowDom, and None. To learn more about each of these strategies, take a look at the [Angular Documentation](https://angular.io/api/core/ViewEncapsulation). We will take a closer look at how to handle theming of Ignite UI for Angular components that are part of View Encapsulated parent components.
+The Angular team has adopted 3 strategies for View Encapsulation - Emulated(default), ShadowDom, and None. To learn more about each of these strategies, take a look at the [Angular Documentation](https://angular.dev/api/core/ViewEncapsulation). We will take a closer look at how to handle theming of Ignite UI for Angular components that are part of View Encapsulated parent components.
 
-What exactly does `Emulated` View Encapsulation mean, anyway? This type of View Encapsulation does not take advantage of the Shadow DOM specification, instead it employs a way to bind styles for a component and its children by using a unique attribute identifier applied on the host element. Any style rules you add to a stylesheet of a View Encapsulated component that target some inner selector will not apply because they do not reference the unique attribute of the host element. To be able to 'penetrate' this encapsulation we have to use some View Encapsulation penetration strategy. Right now, in Angular this strategy is `::ng-deep`; it allows you to target any inner selector, which is encapsulated by its host element. It's good practice to use `::ng-deep` if you're dealing with CSS rules, instead of CSS variables and you want to customize a single instance of a component. We'll provide an example for that in the next section.
+What exactly does `Emulated` View Encapsulation mean, anyway? This type of View Encapsulation does not take advantage of the Shadow DOM specification, instead it employs a way to bind styles for a component and its children by using a unique attribute identifier applied on the host element.
 
 Let's take a look at an example using CSS variables. Let's create an avatar theme that is bound to specific parent component.
 
@@ -146,84 +194,29 @@ $avatar-royalblue-theme: avatar-theme(
 );
 
 :host {
-  @include css-vars($avatar-royalblue-theme);
+  @include tokens($avatar-royalblue-theme);
 }
 ```
 
 When using CSS variables, we don't have to use the `::ng-deep` pseudo-selector. With the code above we've created CSS variables for the `igx-avatar`, which will always have `royalblue` as its background color. The theme for our custom avatar will not 'leak' into other `igx-avatar` component instances, thus staying encapsulated within our custom `app-avatar` component.
 
-Any Ignite UI for Angular theme built with the `$igx-legacy-support` set to `false` will allow styling of components without the need of Sass in your project. For instance the above could be achieved by setting the value of `--igx-avatar-background` CSS variable to the desired color:
+The above instance could also be achieved without using any Sass. All we need to do is to set the value of `--ig-avatar-background` CSS variable to the desired color:
 
 ```css
 /* app-avatar.component.css */
 :host {
-  --igx-avatar-background: royalblue;
+  --ig-avatar-background: royalblue;
 }
 ```
 
-<div class="divider"></div>
-
-## Targeting Older Browsers
-
-<div class="divider--half"></div>
-
-In the [overview](#overview) section I mentioned you could use hard-coded values to style your components by setting the `$igx-legacy-support` global variable to `true`. If you use the `theme` mixin and pass it `$legacy-support` with value of `true` it will set the `$igx-legacy-support` to `true`, too.
-
-### Usage in global themes
-
-The below example shows how you can style components using hard-coded values.
-
-```scss
-// Import the theming module
-@use "igniteui-angular/theming" as *;
-
-// !IMPORTANT: Prior to Ignite UI for Angular version 13 use:
-// @import '~igniteui-angular/lib/core/styles/themes/index';
-
-@include core();
-@include theme($palette: $default-palette, $legacy-support: true);
-
-// Overwrite the default themes for igx-avatar using hard-coded values:
-$avatar-royalblue-theme: avatar-theme(
-  $background: royalblue,
-);
-
-@include avatar($avatar-royalblue-theme);
-```
-
-<div class="divider"></div>
-
-### Usage in encapsulated views
-
-The below sample uses the sample from the [View Encapsulation](#view-encapsulation) section as a starting point:
-
-```scss
-// Import the theming module
-@use "igniteui-angular/theming" as *;
-
-// !IMPORTANT: Prior to Ignite UI for Angular version 13 use:
-// @import '~igniteui-angular/lib/core/styles/themes/index';
-
-// Enable legacy support first.
-// !IMPORTANT: Only applicable for versions older than Ignite UI for Angular 13.
-$igx-legacy-support: true;
-$avatar-royalblue-theme: avatar-theme(
-  $initials-background: royalblue,
-);
-
-:host ::ng-deep {
-  @include avatar($avatar-royalblue-theme);
-}
-```
-
-<div class="divider"></div>
+<div class="divider-half"></div>
 
 ## API Overview
 
 <div class="divider--half"></div>
 
-- [Global Theme]({environment:sassApiUrl}/index.html#mixin-theme)
-- [Avatar Theme]({environment:sassApiUrl}/index.html#function-avatar-theme)
+- [Global Theme]({environment:sassApiUrl}/themes#mixin-theme)
+- [Avatar Theme]({environment:sassApiUrl}/themes#function-avatar-theme)
 
 ## Additional Resources
 

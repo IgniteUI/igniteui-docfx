@@ -2,6 +2,7 @@
 title: Angular チャート ツールチップ | データ可視化 | インフラジスティックス
 _description: インフラジスティックスの Angular チャート ツールチップ
 _keywords: Angular Charts, Tooltips, Infragistics, Angular チャート, ツールチップ, インフラジスティックス
+_license: commercial
 mentionedTypes: ["DomainChart", "CategoryChart", "ToolTipType"]
 namespace: Infragistics.Controls.Charts
 _language: ja
@@ -69,18 +70,18 @@ Angular チャートでは、ツールチップはバインドされたデータ
 
 関連するチャート機能の詳細については、以下のトピックを参照してください。
 
-*   [チャート注釈](chart-annotations.md)
-*   [チャート マーカー](chart-markers.md)
+- [チャート注釈](chart-annotations.md)
+- [チャート マーカー](chart-markers.md)
 
 ## API リファレンス
 
 [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) コンポーネントと [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html) コンポーネントは、次の API プロパティを共有します:
 
-*   [`toolTipType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#toolTipType)
+- [`toolTipType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#toolTipType)
 
 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) コンポーネントでは、以下の API コンポーネントおよびプロパティを使用できます:
 
-*   [`IgxDataToolTipLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatatooltiplayercomponent.html)
-*   [`IgxItemToolTipLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxitemtooltiplayercomponent.html)
-*   [`IgxCategoryToolTipLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorytooltiplayercomponent.html)
-*   `ShowDefaultToolTip`
+- [`IgxDataToolTipLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatatooltiplayercomponent.html)
+- [`IgxItemToolTipLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxitemtooltiplayercomponent.html)
+- [`IgxCategoryToolTipLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorytooltiplayercomponent.html)
+- `ShowDefaultToolTip`

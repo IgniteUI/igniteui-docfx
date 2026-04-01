@@ -13,7 +13,7 @@ _language: kr
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -89,7 +89,7 @@ If all went well, you should see something like the following in your browser:
 
 <code-view style="height:500px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar" >
+           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -159,7 +159,7 @@ So if we set up everything correctly, let's see what happened in the browser:
 
 <code-view style="height:550px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -253,7 +253,7 @@ And now let's see it in the browser:
 
 <code-view style="height:700px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -268,5 +268,5 @@ And now let's see it in the browser:
 <div class="divider--half"></div>
 
 * [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
-* [IgxLinearProgressBarComponent Styles]({environment:sassApiUrl}/index.html#function-progress-linear-theme)
+* [IgxLinearProgressBarComponent Styles]({environment:sassApiUrl}/themes#function-progress-linear-theme)
 * [IgxTextAlign]({environment:angularApiUrl}/enums/igxtextalign.html)

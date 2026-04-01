@@ -3,30 +3,38 @@
 title: Angular Grid の列選択 - Ignite UI for Angular
 _description: Ignite UI for Angular Data Grid で列選択を構成する方法を説明します。これにより、グリッドのインタラクションがより簡単かつ高速になります。
 _keywords: column selection, igniteui for angular, 列選択, infragistics, インフラジスティックス
+_license: commercial
 _language: ja
 ---
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
 title: Angular Tree Grid の列選択 - Ignite UI for Angular
 _description: Ignite UI for Angular Tree Grid で列選択を構成する方法を説明します。これにより、グリッドのインタラクションがより簡単かつ高速になります。。
 _keywords: column selection, igniteui for angular, 列選択, infragistics, インフラジスティックス
+_license: commercial
 _language: ja
 ---
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
 title: Angular Hierarchical Grid の列選択 - Ignite UI for Angular
 _description: Ignite UI for Angular Hierarchical Grid で列選択を構成する方法を説明します。これにより、グリッドのインタラクションがより簡単かつ高速になります。
 _keywords: column selection, igniteui for angular, 列選択, infragistics, インフラジスティックス
+_license: commercial
 _language: ja
 ---
+
 }
 
 # Angular @@igComponent 列選択
+
 列選択機能は、シングルク リックで列全体を選択する簡単な方法を提供します。特定の列の重要性を強調するために、ヘッダー セルとその下のすべてにフォーカスします。この機能は豊富な [`API`]({environment:angularApiUrl}) を備えて選択状態の操作、選択した部分からのデータ抽出、データ分析操作、可視化が可能になります。
 
 ## Angular 列選択の例
+
 <div class="divider--half"></div>
 
 以下のサンプルは、@@igComponent の**列選択**動作の 3 つのタイプを示します。使用可能な各選択モードを有効にするには、以下の [列選択] ドロップダウンを使用します。
@@ -41,9 +49,9 @@ _language: ja
 }
 
 
-<code-view style="height:570px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-selection" alt="Angular 列選択の例">
+<code-view style="height:570px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-selection/" alt="Angular 列選択の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -53,6 +61,7 @@ _language: ja
 列選択機能は、[GridSelectionMode]({environment:angularApiUrl}/enums/gridselectionmode.html) 値を受け取る [`columnSelection`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnSelection) 入力によって有効にすることができます。
 
 ## インタラクション
+
 デフォルトの選択モードは `none` です。`single` または `multiple` に設定されると、すべての列は [`selectable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selectable) になります。列を選択するには、列をクリックして [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected) としてマークします。列が選択不可な場合、ホバー時に選択スタイルはヘッダーに適用されません。
 
 > [!NOTE]
@@ -69,9 +78,9 @@ _language: ja
 }
 
 
-<code-view style="height:570px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-group-selection" >
+<code-view style="height:570px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-group-selection/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -86,6 +95,7 @@ _language: ja
 - 範囲列の選択 - <kbd>Shift</kbd> キーを押しながら + <kbd>クリック</kbd>、間にあるすべての**選択可能な**列を選択します。
 
 ## API 操作
+
 **API** は、**非表示**列に関していくつかの追加機能を提供し、対応する **setter** を設定することにより、すべての**非表示**列を [`selected`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#selected) としてマークできます。
 
 > [!NOTE]
@@ -94,7 +104,9 @@ _language: ja
 API 操作の詳細については、[`API リファレンス`](#api-references) セクションを参照してください。
 
 ## スタイル設定
+
 スタイル設定オプションに移動する前に、core ジュールとすべてのコンポーネント ミックスインをインポートする必要があります。
+
 ```scss
 @use "igniteui-angular/theming" as *;
 
@@ -109,113 +121,114 @@ API 操作の詳細については、[`API リファレンス`](#api-references)
 最も簡単な方法は、カスタム **テーマ**を定義する方法です。
 
 @@if (igxName === 'IgxTreeGrid') {
+
 ```scss
 $custom-grid-theme: grid-theme(
-    $row-selected-background: #011627,
-    $row-selected-text-color: #ECAA53,
-    $row-selected-hover-background: #011627,
-    $header-selected-text-color: #ECAA53,
-    $header-selected-background: #011627,
-    $expand-icon-color: #ECAA53,
-    $expand-icon-hover-color: #B64B80
+  $row-selected-background: #011627,
+  $row-selected-text-color: #ecaa53,
+  $row-selected-hover-background: #011627,
+  $header-selected-text-color: #ecaa53,
+  $header-selected-background: #011627,
+  $expand-icon-color: #ecaa53,
+  $expand-icon-hover-color: #b64b80
 );
 ```
+
 }
 @@if (igxName !== 'IgxTreeGrid') {
+
 ```scss
 $custom-grid-theme: grid-theme(
-    $row-selected-background: #011627,
-    $row-selected-text-color: #ECAA53,
-    $row-selected-hover-background: #011627,
-    $header-selected-text-color: #ECAA53,
-    $header-selected-background: #011627
+  $row-selected-background: #011627,
+  $row-selected-text-color: #ecaa53,
+  $row-selected-hover-background: #011627,
+  $header-selected-text-color: #ecaa53,
+  $header-selected-background: #011627
 );
 ```
+
 }
-[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) はいくつかのパラメーターを受け入れますが、選択したすべての列の外観を変更するのは以下の 5 つです。
+
+[`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) はいくつかのパラメーターを受け入れますが、選択したすべての列の外観を変更するのは以下の 5 つです。
+
 - **$row-selected-background**- 選択した部分の背景を設定します。
 - **$row-selected-text-color** - 選択した部分のテキスト色を設定します。
 - **$row-selected-hover-background** - ホバーされたセルまたは複数のセルの色を設定します。
-- **$header-selected-text-color** - 選択した列ヘッダーのテキスト色を設定します。 
+- **$header-selected-text-color** - 選択した列ヘッダーのテキスト色を設定します。
 - **$header-selected-background** - 選択した列ヘッダーの背景色を設定します。
 
 
 ### CSS 変数の使用
+
 最後にカスタム `igx-grid` テーマを含めます。
 
 ```scss
-@include css-vars($custom-grid-theme)
-```
-
-### 基本テーマのオーバーライド
-Internet Explorer 11 のコンポーネントをスタイル設定するには、CSS 変数をサポートしていないため、別のアプローチが必要です。
-
->[!NOTE]
->コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。カスタム テーマが他のコンポーネントに影響しないようにするには、`::ng-deep` の前に `:host` セレクターを含めるようにしてください。
-
-```scss
 :host {
-    ::ng-deep {
-        @include grid($custom-column-selection-theme);
-    }
+  @include tokens($custom-grid-theme)
 }
 ```
+
 ### デモ
 
 
-<code-view style="height:570px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-selection-styles" >
+<code-view style="height:570px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/@@igDemoBasePath/column-selection-styles/" >
 </code-view>
 
 >[!NOTE]
->このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
+>このサンプルは、`Change Theme` (テーマの変更) から選択したグローバル テーマに影響を受けません。
 <div class="divider--half"></div>
 
 # <a name="api-references"></a>API リファレンス
+
 <div class="divider--half"></div>
 以下は、列選択 UI のその他の API です。
 
-* [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumnomponent.html)
-* [IgxColumnGrpupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
-* [@@igxNameComponent スタイル]({environment:sassApiUrl}/index.html#function-grid-theme)
+- [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+- [IgxColumnGroupComponent]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html)
+- [@@igxNameComponent スタイル]({environment:sassApiUrl}/themes#function-grid-theme)
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) プロパティ:
-* [columnSelection]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnselection)
-* [selectedColumns]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selectedColumns)
-* [selectColumns]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selectColumns)
-* [deselectColumns]({environment:angularApiUrl}/classes/@@igTypeDoc.html#deselectColumns)
-* [selectAllColumns]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selectAllColumns)
-* [deselectAllColumns]({environment:angularApiUrl}/classes/@@igTypeDoc.html#deselectAllColumns)
 
-[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumnomponent.html) プロパティ:
-* [selectable]({environment:angularApiUrl}/classes/IgxColumnComponent.html#selectable)
-* [selected]({environment:angularApiUrl}/classes/IgxColumnComponent.html#selected)
+- [columnSelection]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnSelection)
+- [selectedColumns]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selectedColumns)
+- [selectColumns]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selectColumns)
+- [deselectColumns]({environment:angularApiUrl}/classes/@@igTypeDoc.html#deselectColumns)
+- [selectAllColumns]({environment:angularApiUrl}/classes/@@igTypeDoc.html#selectAllColumns)
+- [deselectAllColumns]({environment:angularApiUrl}/classes/@@igTypeDoc.html#deselectAllColumns)
+
+[`IgxColumnComponent`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) プロパティ:
+
+- [selectable]({environment:angularApiUrl}/classes/IgxColumnComponent.html#selectable)
+- [selected]({environment:angularApiUrl}/classes/IgxColumnComponent.html#selected)
 
 [`IgxColumnGrpupComponent`]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html) プロパティ:
-* [selectable]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#selectable)
-* [selected]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#selected)
+
+- [selectable]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#selectable)
+- [selected]({environment:angularApiUrl}/classes/igxcolumngroupcomponent.html#selected)
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) イベント:
-* [onColumnsSelectionChange]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onColumnsSelectionChange)
+
+- [onColumnsSelectionChange]({environment:angularApiUrl}/classes/@@igTypeDoc.html#onColumnsSelectionChange)
 
 ## その他のリソース
 
-* [@@igComponent 概要](@@igMainTopic.md)
-* [選択](selection.md)
-* [セル選択](cell-selection.md)
-* [ページング](paging.md)
-* [フィルタリング](filtering.md)
-* [ソート](sorting.md)
-* [集計](summaries.md)
-* [列移動](column-moving.md)
-* [列のピン固定](column-pinning.md)
-* [列のサイズ変更](column-resizing.md)
-* [仮想化とパフォーマンス](virtualization.md)
+- [@@igComponent 概要](@@igMainTopic.md)
+- [選択](selection.md)
+- [セル選択](cell-selection.md)
+- [ページング](paging.md)
+- [フィルタリング](filtering.md)
+- [ソート](sorting.md)
+- [集計](summaries.md)
+- [列移動](column-moving.md)
+- [列のピン固定](column-pinning.md)
+- [列のサイズ変更](column-resizing.md)
+- [仮想化とパフォーマンス](virtualization.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

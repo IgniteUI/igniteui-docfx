@@ -15,7 +15,7 @@ The Ignite UI for Angular Input and Label directives are used to create single-l
 
 <code-view style="height:100px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/data-entries/input-group-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -100,11 +100,11 @@ and in our markup:
 ### Input Group
 You can read about the Input Group component in a separate topic [here](input-group.md).
 
-### API References
+## API References
 * [IgxInputDirective]({environment:angularApiUrl}/classes/igxinputdirective.html)
 * [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
 
-### Additional Resources
+## Additional Resources
 Related topics:
 
 * [Input Group](input-group.md)

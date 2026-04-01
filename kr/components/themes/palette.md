@@ -120,12 +120,12 @@ The above code will generate CSS classes for each color variant in the palette. 
 <div class="divider--half"></div>
 
 ### API Reference
-* [Palettes]({environment:sassApiUrl}/index.html#function-igx-palette)
-* [Getting Palette Colors]({environment:sassApiUrl}/index.html#function-igx-color)
-* [Getting Contrast Colors]({environment:sassApiUrl}/index.html#function-igx-contrast-color)
-* [Generating Color Classes]({environment:sassApiUrl}/index.html#mixin-color-classes)
+* [Palettes]({environment:sassApiUrl}/palettes#function-palette)
+* [Getting Palette Colors]({environment:sassApiUrl}/palettes#function-color)
+* [Getting Contrast Colors]({environment:sassApiUrl}/palettes#function-contrast-color)
+* [Generating Color Classes]({environment:sassApiUrl}/utilities#mixin-color-classes)
 
-### Additional Resources
+## Additional Resources
 <div class="divider--half"></div>
 
 Our community is active and always welcoming to new ideas.

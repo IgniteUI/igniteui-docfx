@@ -15,7 +15,7 @@ The Ignite UI for Angular Banner Component provides a way to easily display a pr
 
 <code-view style="height: 400px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-4/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -51,7 +51,7 @@ In order to display the Banner component, use its [`open()`]({environment:angula
     You are currently offline.
 </igx-banner>
 ...
-<button igxButton="raised" (click)="connectionBanner.toggle()">Toggle Banner</button>
+<button igxButton="contained" (click)="connectionBanner.toggle()">Toggle Banner</button>
 ```
 
 The banner appears relative to where the element was inserted in the page template, moving all other content. The banner typically shows some non-intrusive content that requires minimal user interaction to be dismissed (e.g. 1-2 clicks).
@@ -61,7 +61,7 @@ The banner appears relative to where the element was inserted in the page templa
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-1/" >
 </code-view>
 
 
@@ -79,7 +79,7 @@ Changing the message displayed in the banner is easy - just change the content y
         You have lost connection to the internet. This app is offline.
     </igx-banner>
     ...
-    <button igxButton="raised" (click)="connectionBanner.toggle()">Toggle Banner</button>
+    <button igxButton="contained" (click)="connectionBanner.toggle()">Toggle Banner</button>
 ```
 
 #### Adding an icon
@@ -170,13 +170,13 @@ The results of the templated banner can be seen in the below demo:
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-2" >
+           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-2/" >
 </code-view>
 
 
 ### Applying custom animations
 
-The banner component also exposes an `Input` property that allows setting custom opening and closing animations in the [`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationsettings). Developers can pass custom animations - either self-defined, or those from our [`IgniteUI for Angular animation suite`]({environment:sassApiUrl}/index.html). The default animations used by the banner are `growVerIn` for entry and `growVerOut` for exiting.
+The banner component also exposes an `Input` property that allows setting custom opening and closing animations in the [`animationSettings`]({environment:angularApiUrl}/classes/igxbannercomponent.html#animationsettings). Developers can pass custom animations - either self-defined, or those from our [`IgniteUI for Angular animation suite`]({environment:sassApiUrl}/animations). The default animations used by the banner are `growVerIn` for entry and `growVerOut` for exiting.
 
 Let's change the animations that our banner uses, so that it slides in.
 
@@ -207,7 +207,7 @@ export class MyBannerComponent {
 
 <code-view style="height: 530px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-3" >
+           iframe-src="{environment:demosBaseUrl}/notifications/banner-sample-3/" >
 </code-view>
 
 
@@ -238,4 +238,4 @@ export class MyBannerComponent {
 ## API Reference
 
 * [IgxBannerComponent]({environment:angularApiUrl}/classes/igxbannercomponent.html)
-* [IgxBannerComponent Styles]({environment:sassApiUrl}/index.html#mixin-igx-banner)
+* [IgxBannerComponent Theme]({environment:sassApiUrl}/themes#function-banner-theme)

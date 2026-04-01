@@ -1,7 +1,8 @@
 ---
-title: Angular Combo | Data Visualization Tools | Infragistics
+title: Angular Combo | Data Visualization Tools | Infragistics | MIT license
 _description: Infragistics' Angular combo component helps you select the best chart to display your data. Improve your graphs and visualization with Ignite UI for  Angular!
 _keywords: Angular combo, drop down, Ignite UI for Angular, Infragistics
+_license: MIT
 mentionedTypes: []
 ---
 

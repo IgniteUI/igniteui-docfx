@@ -5,19 +5,21 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 ---
 
 # Theming
+
 Ignite UI for Angular allows you to modify the styles of all component themes using CSS variables. If you really wanted to dig deep, we provide a powerful Sass theming engine that allows you to create global component themes tailored to your specific design language that work in all modern browsers.
 
->[!NOTE] 
+>[!NOTE]
 > This document describes the theming system in Ignite UI for Angular from version 12 forward. Starting with version 12 **CSS variables are the recommended way to modify the global and component themes**.
 > You can still use the Sass theming library as you would've prior to version 12.
 
 ## Basic Usage
 
 Ignite UI for Angular includes the following themes as part of its package:
-    - Material
-    - Bootstrap
-    - Fluent
-    - Indigo
+
+- Material
+- Bootstrap
+- Fluent
+- Indigo
 
 All themes have light and dark variants as well as support for left-to-right(LTR) and right-to-left(RTL) content by default. The easiest way to start using any of the bundled themes in your application is by specifying the path to a CSS theme file in your `angular.json` configuration. For example, if you wanted to use the dark Material theme, you would include the path to the theme file like so:
 
@@ -66,23 +68,19 @@ If you wanted to change the primary and secondary colors, all you have to do is 
 ```css
 /* styles.css */
 :root {
-  --ig-primary-h: 105deg;
-  --ig-primary-s: 29%;
-  --ig-primary-l: 56%;
-
-  --ig-secondary-h: 259deg;
-  --ig-secondary-s: 63%;
-  --ig-secondary-l: 24%;
+  --ig-primary-500: #09f;
+  --ig-secondary-500: red;
+  --ig-surface-500: rgb(221 211 211);
 }
 ```
 
-Let's break down the names of these color variables. The `ig` prefix is there as a unique identifier to indicate that this variable is part of an Ignite UI for Angular theme, `primary` is the name of the `color` palette, and `h`, `s`, and `l` stand for hue, saturation, and lightness. We will take a deeper look at palettes in the [Palettes](./palettes.md) section of the documentation. For now all you need to know is that we have several base colors (primary, secondary, success, info, etc.) that include different shades or _variants_ that are all generated from the hue, saturation, and lightness CSS variables, The `500` color variants are considered the main representation values for hue, saturation, and lightness. For instance, the primary 500 color variant is declared as `--ig-primary-500: hsla(var(--ig-primary-h), var(--ig-primary-s), var(--ig-primary-l), var(--ig-primary-a))`.
+Let's break down the names of these color variables. The `ig` prefix is there as a unique identifier to indicate that this variable is part of an Ignite UI for Angular theme, `primary` is the color variable name, and `500` stands for the color variant. We will take a deeper look at palettes in the [Palettes](./palettes.md) section of the documentation. For now all you need to know is that we have several base color variables (primary, secondary, surface, success, info, etc.) that include different shades or _variants_ that are all generated from the main color variants. The `500` color variants that we set in the above example are considered the main variable color and all of the other variants for the given color variable are generated from the `500` variant.
 
-Following this approach, you can completely overhaul the entire palette.
+Changing these variants, you can completely overhaul the entire palette.
 
 >[!WARNING]
 > Some components do not use colors from the palettes. In those instances, you will have to target the component CSS variables directly to modify their colors.
-> To find out which palette colors are used by what component, take a look at the [Components Documentation]({environment:sassApiUrl}/index.html#variable-_light-avatar).
+> To find out which palette colors are used by what component, take a look at the [Components Documentation]({environment:sassApiUrl}/themes).
 
 Likewise, changing the `elevations`(shadows) is just as easy. We include 25 elevation levels (0-24).
 Here's a simplified version of what those variables look like:
@@ -101,13 +99,13 @@ Here's a simplified version of what those variables look like:
 }
 ```
 
-These are essentially stacked CSS [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) declarations. You can replace them with any other valid `box-shadow` value. The higher the elevation level number is, the bigger the shadow is. Again, different components use different elevation levels, to find out which elevation levels are used by which component, take look at the [Components Documentation]({environment:sassApiUrl}/index.html#variable-_light-avatar). We will take a deeper look at elevations in the [Elevations](./elevations.md) of the documentation.
+These are essentially stacked CSS [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow) declarations. You can replace them with any other valid `box-shadow` value. The higher the elevation level number is, the bigger the shadow is. Again, different components use different elevation levels, to find out which elevation levels are used by which component, take look at the [Components Documentation]({environment:sassApiUrl}/themes). We will take a deeper look at elevations in the [Elevations](./elevations.md) of the documentation.
 
 ## Configuration
 
 There are several variables that allow you to configure the global behavior of the theme:
 
-#### Roundness
+### Roundness
 
 To configure the radius factor of all components you can change the value of the `--ig-radius-factor` variable. The default value is 1, meaning the default radius factor is used across component themes.
 
@@ -120,7 +118,7 @@ Example:
 }
 ```
 
-#### Elevation Factor
+### Elevation Factor
 
 To configure the elevation factor of all components you can change the value of the `--ig-elevation-factor` variable. The default value is 1, meaning the default elevations are used across component themes.
 
@@ -142,7 +140,7 @@ Let's look at an example. Say you wanted to modify the background of the avatar.
 ```css
 /* styles.css */
 :root {
-  --igx-avatar-background: black;
+  --ig-avatar-background: black;
 }
 
 igx-avatar {
@@ -153,13 +151,13 @@ igx-avatar {
 The snippet above will set the background in all avatars to orange.
 
 The avatar component will look for the `--background` variable first. If explicitly set, it will take its value. In other words, `local` variables have higher priority and will work **only** if applied to the `igx-avatar` directly, either by using its tag selector or any other selector that targets `igx-avatar`.
-The global `--igx-avatar-background` can be thought of as _fallback_ variable. It's going to be used only if the local `--background` is not explicitly overridden.
+The global `--ig-avatar-background` can be thought of as _fallback_ variable. It's going to be used only if the local `--background` is not explicitly overridden.
 
 For the curious, here's how this is implemented internally in the avatar:
 
 ```css
 igx-avatar {
-  --background: var(--igx-avatar-background, var(--ig-gray-400));
+  --background: var(--ig-avatar-background, var(--ig-gray-400));
   background: var(--background);
 }
 ```
@@ -184,7 +182,7 @@ Here's another example:
 ```css
 /* styles.css */
 :root {
-  --igx-avatar-background: lavender;
+  --ig-avatar-background: lavender;
 }
 ```
 
@@ -212,5 +210,5 @@ Related topics:
 
 Our community is active and always welcoming to new ideas.
 
-* [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **Forums**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)

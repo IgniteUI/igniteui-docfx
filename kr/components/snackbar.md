@@ -12,7 +12,7 @@ _language: kr
 
 <code-view style="height: 350px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -42,7 +42,7 @@ In order to display the snackbar component, use its [`show()`]({environment:angu
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="snackbar.show()">Delete Message</button>
+<button igxButton="contained" (click)="snackbar.show()">Delete Message</button>
 <div>
     <igx-snackbar #snackbar>Message deleted</igx-snackbar>
 </div>
@@ -60,7 +60,7 @@ Once opened, the snackbar disappears after a period specified by the [`displayTi
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="snackbar.show()">Send message</button>
+<button igxButton="contained" (click)="snackbar.show()">Send message</button>
 <div>
   <igx-snackbar #snackbar [autoHide]="false" actionText="CLOSE" (clicked)="close(snackbar)">Message sent</igx-snackbar>
 </div>
@@ -86,7 +86,7 @@ Use [`displayTime`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.htm
 ```html
 <!--sample.component.html-->
 
-<button igxButton="raised" (click)="snackbar.show()">Send message</button>
+<button igxButton="contained" (click)="snackbar.show()">Send message</button>
 <div>
   <igx-snackbar #snackbar displayTime="1000">Message sent</igx-snackbar>
 </div>
@@ -103,7 +103,7 @@ We can also customize the content of the Snackbar to display more complex elemen
 
 ```html
 <!--sample.component.html-->
-<button igxButton="raised" (click)="snackbar.show()">Load file</button>
+<button igxButton="contained" (click)="snackbar.show()">Load file</button>
 <div>
   <igx-snackbar #snackbar displayTime="5000">File loading
     <svg id="dots" height="20px">
@@ -150,7 +150,7 @@ As a result, a message and three loading dots appear in the snackbar.
 
 <code-view style="height: 170px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-5" >
+           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-5/" >
 </code-view>
 
 #### Snackbar in list
@@ -232,20 +232,20 @@ public restore() {
 
 <code-view style="height: 350px" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4" >
+           iframe-src="{environment:demosBaseUrl}/notifications/snackbar-sample-4/" >
 </code-view>
 
 
 <div class="divider--half"></div>
 
-### API References
+## API References
 In this article we learned how to use and configure the [`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html). For more details in regards its API, take a look at the links below:
 
 * [`IgxSnackbarComponent`]({environment:angularApiUrl}/classes/igxsnackbarcomponent.html)
 
 Styles:
 
-* [`IgxSnackbarComponent Styles`]({environment:sassApiUrl}/index.html#function-snackbar-theme)
+* [`IgxSnackbarComponent Styles`]({environment:sassApiUrl}/themes#function-snackbar-theme)
 
 ###Additional Resources
 

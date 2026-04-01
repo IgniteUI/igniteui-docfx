@@ -35,7 +35,7 @@ The Excel Exporter service can export data to excel from the @@igxName. The data
 
 <code-view style="height: 300px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1" >
+           iframe-src="{environment:demosBaseUrl}/services/export-excel-sample-1/" >
 </code-view>
 
 }
@@ -43,7 +43,7 @@ The Excel Exporter service can export data to excel from the @@igxName. The data
 
 <code-view style="height: 350px;" 
            data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/services/export-excel-tree-grid-sample" >
+           iframe-src="{environment:demosBaseUrl}/services/export-excel-tree-grid-sample/" >
 </code-view>
 
 }
@@ -133,7 +133,7 @@ Excel 내보내기 서비스에는 아래의 몇 가지 API가 추가로 포함�
 사용된 추가 컴포넌트:
 
 * [@@igxNameComponent API]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [@@igxNameComponent 스타일]({environment:sassApiUrl}/index.html#function-grid-theme)
+* [@@igxNameComponent 스타일]({environment:sassApiUrl}/themes#function-grid-theme)
 
 <div class="divider"></div>
 

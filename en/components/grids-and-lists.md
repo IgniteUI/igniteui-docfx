@@ -2,6 +2,7 @@
 title: Angular Grids & Tables | Fastest Angular UI Grid | Infragistics
 _description: Looking for fast angular grids and tables? Ignite UI for Angular provides a complete library of Angular-native, Material-based UI data grids and tables. Find more.
 _keywords: angular data grid, infragistics, infragistics.com
+_license: commercial
 ---
 
 <style>
@@ -204,13 +205,14 @@ In this angular grid example, you can see how users can customize their _data vi
 <code-view style="height:435px"
            explicit-editor="stackblitz"
            data-demos-base-url="{environment:crmDemoBaseUrl}"
-           iframe-src="{environment:crmDemoBaseUrl}/" 
+           iframe-src="{environment:crmDemoBaseUrl}/"
            alt="Angular data grid example">
 </code-view>
 
 <div class="divider--half"></div>
 
 ## What is an Angular Data Grid?
+
 An Angular data grid is a component used to display tabular data in a series of rows and columns. Data grids, also known as tables, are well known in the desktop world with popular software such as Microsoft Excel. While grids have been available on desktop platforms for a long time, they have recently become part of web app UIs, such as Angular UI. Modern grids can be complex and may include a range of functionalities, including data binding, editing, Excel-like filtering, custom sorting, grouping, row reordering, row and column freezing, row aggregation, and exporting to Excel, CSV, and pdf formats.
 
 
@@ -219,6 +221,7 @@ An Angular data grid is a component used to display tabular data in a series of 
 Angular data grids are essential in use cases where lots of data must be stored and sorted through quickly. This can include industries such as financial or insurance that use high-volume, high-velocity data frequently.  Often the success of these companies is dependent on the functionality and performance of these data grids. When stock decisions need to be made in microseconds, for example, it’s imperative that the data grid performs with no lag time or flicker.
 
 ## Key Features
+
 <div class="divider--half"></div>
 
 The Ignite UI for Angular Data Grid is not just for high-volume and real-time data. It is a feature-rich Angular grid that gives you capabilities that you would never be able to accomplish with so little code on your own.
@@ -242,6 +245,7 @@ This example demonstrates a few of the data grid’s key features:
 - [**Size**](grid/display-density.md) to adjust the height and sizing of the rows
 
 - Column templates like [**Sparkline Column**](charts/types/sparkline-chart.md) and Image Column
+
 </div>
 
 <div class="divider"></div>
@@ -254,6 +258,7 @@ This example demonstrates a few of the data grid’s key features:
 <div class="divider--half"></div>
 
 ### Data Virtualization and Performance
+
 <div class="divider--half"></div>
 
 Seamlessly scroll through unlimited rows and columns in your Angular grid, with the data grid’s column and row level virtualization. With support for local or remote data sources, you get the best performance no matter where your data lives. Your users will experience Excel-like scrolling, with enterprise speed — no lag, screen flicker, or visual delay — giving you the best user experience (UX) without compromising performance.
@@ -318,12 +323,12 @@ Enable [multi-column headers](grid/multi-column-headers.md), allowing you to gro
 
 With Ignite UI for Angular you can customize cell appearance with CSS or re-template any cell with ng-template to give any cell render appearance. With full support for Material Design, you can customize your branded experience with our simple-to-use theming engine.
 
-<div class="feature__image feature__image--right"><img class="b-lazy b-lazy-gifs b-loaded responsive-img" title="Animation of different grids design showing the themeing and templating capabilities" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-styling-1100.gif?v=201808021304" alt="Animation of different grids design showing the themeing and templating capabilities of the Angular Data Grid">
+<div class="feature__image feature__image--right"><img class="b-lazy b-lazy-gifs b-loaded responsive-img" title="Animation of different grids design showing the theming and templating capabilities" src="https://static.infragistics.com/marketing/ignite-ui-angular/grid/ignite-ui-angular-grid-cell-styling-1100.gif?v=201808021304" alt="Animation of different grids design showing the theming and templating capabilities of the Angular Data Grid">
 </div>
 
 ### Excel Library for the Angular Grid
 
-Full support for exporting data grids to XLXS, XLS, TSV or CSV. The Ignite UI for Angular [Excel library](excel-library.md) includes 300+ formulas, Table support, Conditional Formatting, Chart creation and more – all without needing Microsoft Excel on the client machine.
+Full support for exporting data grids to XLSX, XLS, TSV or CSV. The Ignite UI for Angular [Excel library](excel-library.md) includes 300+ formulas, Table support, Conditional Formatting, Chart creation and more – all without needing Microsoft Excel on the client machine.
 
 <div class="feature__image feature__image--right"><img class="b-lazy b-loaded responsive-img" title="Icon representation of Microsoft Excel-like features" src="https://static.infragistics.com/marketing/Website/products/Ignite-UI-for-Angular/ignite-ui-angular-grid-export-to-excel-2-1100.jpg?v=201808021304" alt="Icon representation of Microsoft Excel-like features on the Angular Data Grid">
 </div>
@@ -331,6 +336,7 @@ Full support for exporting data grids to XLXS, XLS, TSV or CSV. The Ignite UI fo
 <div class="divider--half"></div>
 
 ## Angular Grid Features
+
 <div class="divider"></div>
 <div id="list-features-included">
 
@@ -360,6 +366,7 @@ Full support for exporting data grids to XLXS, XLS, TSV or CSV. The Ignite UI fo
 - [Remote Data Load on Demand](grid/virtualization.md#remote-virtualization)
 - [Cell Templates](grid/grid.md#cell-template)
 - [ARIA/a11y Support](interactivity/accessibility-compliance.md)
+
 </div>
 
 <div class="divider"></div>
@@ -415,6 +422,7 @@ There are multiple options to get access to our award-winning support at Infragi
 <div class="divider--half"></div>
 
 ## Ignite UI for Angular Trial License and Commercial
+
 <div class="divider--half"></div>
 <p>Ignite UI for Angular is a commercially licensed product available via a subscription model. You can try the Ignite UI for Angular product for free when you <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/free-downloads">register for a 30-day trial</a>. When you are done with your Trial Period, you can <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/how-to-buy/product-pricing">purchase a license </a> from our web site or by calling <a class="no-external-icon" href="{environment:infragisticsBaseUrl}/about-us/contact-us">sales in your region</a>.</p>
 

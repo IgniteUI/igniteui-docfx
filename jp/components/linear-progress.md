@@ -1,19 +1,20 @@
 ---
-title: Linear Progress コンポーネント
+title: Linear Progress コンポーネント | MITライセンス
 _description: Ignite UI for Angular Linear Progress Bar コンポーネントを使用すると、プログレス バーを表示し、色またはストライプなどの外観をカスタマイズします。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, Angular UI コンポーネント, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, Angular Linear Progress コンポーネント, Angular Linear Progress コントロール
+_license: MIT
 _language: ja
 ---
 
 # Angular Linear Progress (リニア プログレス) コンポーネントの概要
+
 <p class="highlight">Ignite UI for Angular Linear Progress インジケーター コンポーネントは、変更でアプリケーションの進行状況を表す視覚的なインジケーターです。インジケーターは状態変更で外観を更新します。インジケーターがストライプまたは実線色でスタイル設定できます。</p>
-<div class="divider--half"></div>
 
 ## Angular Linear Progress の例
 
-<code-view style="height:50px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar" alt="Angular Linear Progress の例">
+<code-view style="height:50px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar/" alt="Angular Linear Progress の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -34,7 +35,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 ...
-import { IgxProgressBarModule } from 'igniteui-angular';
+import { IgxProgressBarModule } from 'igniteui-angular/progressbar';
 // import { IgxProgressBarModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -50,19 +51,19 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IGX_LINEAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular';
+import { IGX_LINEAR_PROGRESS_BAR_DIRECTIVES } from 'igniteui-angular/progressbar';
 // import { IGX_LINEAR_PROGRESS_BAR_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
-    selector: 'app-home',
-    template: '<igx-linear-bar [value]="progress"></igx-linear-bar>',
-    styleUrls: ['home.component.scss'],
-    standalone: true,
-    imports: [IGX_LINEAR_PROGRESS_BAR_DIRECTIVES]
-    /* or imports: [IgxLinearProgressBarComponent] */
+  selector: 'app-home',
+  template: '<igx-linear-bar [value]="progress"></igx-linear-bar>',
+  styleUrls: ['home.component.scss'],
+  standalone: true,
+  imports: [IGX_LINEAR_PROGRESS_BAR_DIRECTIVES],
+  /* or imports: [IgxLinearProgressBarComponent] */
 })
 export class HomeComponent {
-    public progress = 50;
+  public progress = 50;
 }
 ```
 
@@ -83,33 +84,36 @@ Ignite UI for Angular Progress Bar モジュールまたはディレクティブ
 [`type`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#type) 属性を使用してバーのタイプを設定できます。リニア プログレス バーには、`default`、`error`、`success`、`info`、および `warning` の 5 つのタイプがあります。
 
 ### ストライプ プログレス
+
 バーをストライプ スタイルにするには、[`striped`]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html#type) プロパティを使用して `true` に設定します。
 
 プログレス バーの様々なタイプを作成する方法を例で紹介します。
 
 ```html
 <div class="linear-container">
-    <igx-linear-bar [value]="100" type="default"></igx-linear-bar>
-    <igx-linear-bar [value]="100" type="success" [striped]="true"></igx-linear-bar>
-    <igx-linear-bar [value]="100" type="error"></igx-linear-bar>
-    <igx-linear-bar [value]="100" type="info" [striped]="true"></igx-linear-bar>
-    <igx-linear-bar [value]="100" type="warning"></igx-linear-bar>
+  <igx-linear-bar [value]="100" type="default"></igx-linear-bar>
+  <igx-linear-bar [value]="100" type="success" [striped]="true"></igx-linear-bar>
+  <igx-linear-bar [value]="100" type="error"></igx-linear-bar>
+  <igx-linear-bar [value]="100" type="info" [striped]="true"></igx-linear-bar>
+  <igx-linear-bar [value]="100" type="warning"></igx-linear-bar>
 </div>
 ```
 
 すべてが正しく構成されると、ブラウザーで以下が表示されます。
 
-<code-view style="height:200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-1" >
+<code-view style="height:200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-1/" >
 </code-view>
 
 <div class="divider--half"></div>
 
 ### 不確定のプログレス
+
 正確に決定していないプロセスをトラックしたい場合、[`indeterminate`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#indeterminate) プロパティを `true` に設定できます。
 
 ### アニメーション期間
+
 [`animationDuration`]({environment:angularApiUrl}/classes/igxcircularprogressbarcomponent.html#animationDuration) 入力プロパティは、アニメーション サイクルにかかる時間を指定するために使用されます。
 
 次の例では、アニメーションの継続時間を 5 秒に設定しています。
@@ -132,41 +136,38 @@ Ignite UI for Angular Progress Bar モジュールまたはディレクティブ
 
 ```html
 <div class="linear-container">
-    <igx-linear-bar
-        type="default"
-        [value]="100"
-    ></igx-linear-bar>
-    <igx-linear-bar
-        type="success"
-        [value]="100"
-        class="indeterminate"
-        [indeterminate]="true"
-        [striped]="true"
-    ></igx-linear-bar>
-    <igx-linear-bar
-        type="error"
-        [value]="100"
-        [textAlign]="positionEnd"
-        [text]="'Custom text'"
-    ></igx-linear-bar>
-    <igx-linear-bar
-        type="info"
-        [value]="100"
-        [textVisibility]="false"
-        [striped]="true"
-    ></igx-linear-bar>
-    <igx-linear-bar
-        type="warning"
-        [value]="100"
-        [textTop]="true"
-    ></igx-linear-bar>
+  <igx-linear-bar type="default" [value]="100"></igx-linear-bar>
+  <igx-linear-bar
+    type="success"
+    [value]="100"
+    class="indeterminate"
+    [indeterminate]="true"
+    [striped]="true"
+  ></igx-linear-bar>
+  <igx-linear-bar
+    type="error"
+    [value]="100"
+    [textAlign]="positionEnd"
+    [text]="'Custom text'"
+  ></igx-linear-bar>
+  <igx-linear-bar
+    type="info"
+    [value]="100"
+    [textVisibility]="false"
+    [striped]="true"
+  ></igx-linear-bar>
+  <igx-linear-bar
+    type="warning"
+    [value]="100"
+    [textTop]="true"
+  ></igx-linear-bar>
 </div>
 ```
 
 `textAlign` プロパティを使用している場合、コンポーネントの [`IgxTextAlign`]({environment:angularApiUrl}/enums/igxtextalign.html) 列挙子をインポートする必要があります。
 
 ```typescript
-import { ..., IgxTextAlign } from 'igniteui-angular';
+import { ..., IgxTextAlign } from 'igniteui-angular/progressbar';
 // import { ..., IgxTextAlign } from '@infragistics/igniteui-angular'; for licensed package
 ...
 
@@ -176,10 +177,9 @@ public positionEnd: IgxTextAlign = IgxTextAlign.END;
 
 以下は結果です。
 
-
-<code-view style="height:200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-2" >
+<code-view style="height:200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-sample-2/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -197,19 +197,16 @@ public positionEnd: IgxTextAlign = IgxTextAlign.END;
 
 ```html
 <div class="linear-container">
-    <igx-linear-bar
-        [value]="currentValue"
-        [max]="100"
-    ></igx-linear-bar>
+  <igx-linear-bar [value]="currentValue" [max]="100"></igx-linear-bar>
 
-    <div class="button-container">
-        <button igxIconButton="flat" (click)="decrementProgress()">
-            <igx-icon fontSet="material">remove</igx-icon>
-        </button>
-        <button igxIconButton="flat" (click)="incrementProgress()">
-            <igx-icon fontSet="material">add</igx-icon>
-        </button>
-    </div>
+  <div class="button-container">
+    <button igxIconButton="flat" (click)="decrementProgress()">
+      <igx-icon fontSet="material">remove</igx-icon>
+    </button>
+    <button igxIconButton="flat" (click)="incrementProgress()">
+      <igx-icon fontSet="material">add</igx-icon>
+    </button>
+  </div>
 </div>
 ```
 
@@ -239,10 +236,9 @@ public decrementProgress() {
 
 上記の手順が完了した後、プログレス バーは以下のようになります。
 
-
-<code-view style="height:200px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/linear-dynamic-sample" >
+<code-view style="height:200px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-display/linear-dynamic-sample/" >
 </code-view>
 
 <div class="divider--half"></div>
@@ -258,69 +254,37 @@ public decrementProgress() {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-最も簡単な方法として、[`progress-linear-theme`]({environment:sassApiUrl}/index.html#function-progress-linear-theme) を拡張し、`$track-color`、`$fill-color-default` および `$text-color パラメーターを受け取る新しいテーマを作成する方法があります。
+最もシンプルな方法として、[`progress-linear-theme`]({environment:sassApiUrl}/themes#function-progress-linear-theme) を拡張し、`$fill-color-default` と `$text-color` のパラメーターのみをオーバーライドするテーマを作成します。
 
 ```scss
 $custom-theme: progress-linear-theme(
-    $track-color: #D3D3D3,
-    $fill-color-default: #ECAA53,
-    $text-color: #ECAA53
+  $fill-color-default: #ecaa53,
+  $text-color: #ecaa53,
 );
 ```
 
 ### テーマを含む
 
-<div class="divider"></div>
-
-最後にコンポーネントのテーマをアプリケーションに含めます。
-
-`$legacy-support` が `true` に設定されている場合、**コンポーネントのテーマ**を以下のように含めます。
-
-```scss
- @include progress-linear($custom-theme);
-```
-
->[!NOTE]
->コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、`::ng-deep` を使用してこのカプセル化を解除する必要があります。
+最後にコンポーネントのテーマをアプリケーションに**含めます**。
 
 ```scss
 :host {
-     ::ng-deep {
-        @include progress-linear($custom-theme);
-    }
-}
-```
-
-<div class="divider"></div>
-
-`$legacy-support` が `false` (デフォルト) に設定されている場合、**css 変数** を以下のように含めます。
-
-```scss
-@include css-vars($custom-theme);
-```
-
->[!NOTE]
->コンポーネントが [`Emulated`](themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合においても、変数をオーバーライドするにはグローバル セレクターが必要なため、`:host` を使用する必要があります。
-
-```scss
-:host {
-    @include css-vars($custom-theme);
+  @include tokens($custom-theme);
 }
 ```
 
 ### デモ
 
-
-<code-view style="height:50px" 
+<code-view style="height:50px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-styling" >
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/data-display/linear-progressbar-styling/" >
 </code-view>
 
-
 ## API
+
 <div class="divider--half"></div>
 
-* [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
-* [IgxLinearProgressBarComponent スタイル]({environment:sassApiUrl}/index.html#function-progress-linear-theme)
-* [IgxTextAlign]({environment:angularApiUrl}/enums/igxtextalign.html)
+- [IgxLinearProgressBarComponent]({environment:angularApiUrl}/classes/igxlinearprogressbarcomponent.html)
+- [IgxLinearProgressBarComponent スタイル]({environment:sassApiUrl}/themes#function-progress-linear-theme)
+- [IgxTextAlign]({environment:angularApiUrl}/enums/igxtextalign.html)

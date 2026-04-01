@@ -2,7 +2,8 @@
 title: Angular Spreadsheet | Data Validation | Infragistics
 _description: Use Infragistics' Angular spreadsheet control to setup built-in data validation rules. View Ignite UI for Angular spreadsheet demos!
 _keywords: Excel Spreadsheet, data validation, Ignite UI for Angular, Infragistics
-mentionedTypes: ['Spreadsheet']
+_license: commercial
+mentionedTypes: ["Spreadsheet"]
 ---
 
 # Angular Data Validation
@@ -117,4 +118,4 @@ this.spreadsheet.workbook.worksheets(0).rows(7).cells(0).value = "Check Out Date
 
 ## API References
 
-*   [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html)
+- [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html)

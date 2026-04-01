@@ -1,7 +1,8 @@
 ---
-title: Angular Combobox コンポーネント | データ バインディング ComboBox | インフラジスティックス
+title: Angular Combobox コンポーネント | データ バインディング ComboBox | インフラジスティックス | MITライセンス
 _description: Ignite UI for Angular ComboBox は、基本的な HTML 入力、選択、フィルタリング、およびカスタム ドロップダウン リストの機能を組み合わせた強力な入力を提供します。無料でお試しください。
 _keywords: angular combobox, angular combo コンポーネント, angular combobox コンポーネント, Angular UI コンポーネント, ignite ui for angular, インフラジスティックス
+_license: MIT
 _language: ja
 ---
 
@@ -16,7 +17,7 @@ Angular ComboBox コンポーネントは、編集可能な機能を提供する
 
 <code-view style="height: 400px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-main" alt="Angular ComboBox の例">
+           iframe-src="{environment:demosBaseUrl}/lists/combo-main/" alt="Angular ComboBox の例">
 </code-view>
 
 <div class="divider--half"></div>
@@ -24,13 +25,13 @@ Angular ComboBox コンポーネントは、編集可能な機能を提供する
 ## Angular ComboBox 機能
 
 コンボボックス コントロールは以下の機能を公開します。
- * データ バインディング- ローカル データおよび[リモート データ](combo-remote.md)
- * [値バインディング](combo-features.md#データ-バインディング)
- * [フィルタリング](combo-features.md#フィルタリング)
- * [グループ化](combo-features.md#グループ化)
- * [カスタム値](combo-features.md#カスタム値)
- * [テンプレート](combo-templates.md)
- * [テンプレート駆動フォーム](input-group.md)および[リアクティブ フォーム](angular-reactive-form-validation.md)との統合
+- データ バインディング- ローカル データおよび[リモート データ](combo-remote.md)
+- [値バインディング](combo-features.md#データ-バインディング)
+- [フィルタリング](combo-features.md#フィルタリング)
+- [グループ化](combo-features.md#グループ化)
+- [カスタム値](combo-features.md#カスタム値)
+- [テンプレート](combo-templates.md)
+- [テンプレート駆動フォーム](input-group.md)および[リアクティブ フォーム](angular-reactive-form-validation.md)との統合
 
 ## Ignite UI for Angular ComboBox を使用した作業の開始
 
@@ -45,7 +46,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 次に、**app.module.ts** ファイルに `IgxComboModule` をインポートします。
 
 ```typescript
-import { IgxComboModule } from 'igniteui-angular';
+import { IgxComboModule } from 'igniteui-angular/combo';
 // import { IgxComboModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -63,7 +64,7 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IGX_COMBO_DIRECTIVES } from 'igniteui-angular';
+import { IGX_COMBO_DIRECTIVES } from 'igniteui-angular/combo';
 // import { IGX_COMBO_DIRECTIVES } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({
@@ -106,8 +107,8 @@ export class ComboDemo implements OnInit {
 
 コンボボックスは複雑なデータ (オブジェクト) の配列にバインドされているため、選択したアイテムを処理するためにコントロールが使用するプロパティを指定する必要があります。コントロールは、[valueKey]({environment:angularApiUrl}/classes/IgxComboComponent.html#valueKey) と [displayKey]({environment:angularApiUrl}/classes/IgxComboComponent.html#displayKey) の 2 つの `@Input` プロパティを公開します。
 
- - `valueKey` - **オプション、オブジェクト配列に推奨。** - コンボボックスの選択のために保存されるデータ エントリのプロパティを指定します。`valueKey` が省略された場合、コンボボックス値はデータ エントリへの参照を使用します (選択は `igxCombo.data` からのエントリの配列になります)。
- - `displayKey` - **オブジェクト配列に必須。** - アイテムのテキストに使用するプロパティを指定します。`displayKey` に値が指定されていない場合、コンボボックスは指定された `valueKey` (存在する場合) を使用します。
+- `valueKey` - **オプション、オブジェクト配列に推奨。** - コンボボックスの選択のために保存されるデータ エントリのプロパティを指定します。`valueKey` が省略された場合、コンボボックス値はデータ エントリへの参照を使用します (選択は `igxCombo.data` からのエントリの配列になります)。
+- `displayKey` - **オブジェクト配列に必須。** - アイテムのテキストに使用するプロパティを指定します。`displayKey` に値が指定されていない場合、コンボボックスは指定された `valueKey` (存在する場合) を使用します。
 
 この例では、コンボボックスに各都市の `name` を表示し、コンボボックス値には各都市の `id` を格納します。格納するには、これらのプロパティをコンボボックスの`displayKey` と `valueKey` にそれぞれ提供します。
 
@@ -139,7 +140,7 @@ export class MyCombo {
 
 <code-view style="height: 550px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-valuekey" >
+           iframe-src="{environment:demosBaseUrl}/lists/combo-valuekey/" >
 </code-view>
 
 
@@ -156,7 +157,7 @@ export class MyCombo {
 
 <code-view style="height: 600px;"
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-binding" >
+           iframe-src="{environment:demosBaseUrl}/lists/combo-binding/" >
 </code-view>
 
 
@@ -232,7 +233,7 @@ export class MyExampleCombo {
 ```typescript
 public singleSelection(event: IComboSelectionChangeEventArgs) {
     if (event.added.length) {
-        event.newSelection = event.added;
+        event.newValue = event.added;
     }
 }
 ```
@@ -245,6 +246,16 @@ public singleSelection(event: IComboSelectionChangeEventArgs) {
 
 コンボボックスを閉じてフォーカスされている場合:
 - `下矢印`または `Alt` キー + `下矢印`はコンボボックス ドロップダウンを開き、検索入力にフォーカスを移動します。
+
+- `Esc` キーは、コンボボックスにフォーカスを保持したまま、選択された値をクリアします。
+
+- `Tab` キーは、コンボボックスの外部にある次のフォーカス可能な要素へフォーカスを移動します。
+
+コンボボックスが開いている場合:
+
+- `Esc` キーは、リストを閉じてコンボボックスにフォーカスを保持します。
+
+- `Tab` キーは、リストを閉じて次のフォーカス可能な要素にフォーカスを移動します。
 
 コンボボックスを開いて検索入力にフォーカスがある場合:
 - `上矢印`または `Alt` キー + `上矢印`はコンボボックス ドロップダウンを閉じ、フォーカスを閉じたコンボボックスに移動します。
@@ -267,8 +278,6 @@ public singleSelection(event: IComboSelectionChangeEventArgs) {
 
 - `Enter` キーはすでに選択した項目を確定し、リストを閉じます。
 
-- `Esc` キーはリストを閉じます。
-
 コンボボックスを開くと、カスタム値が有効になり、項目の追加ボタンがフォーカスされます。
 
 - `Enter` キーは、検索入力のテキストと等しい `valueKey` と `displayKey` を持つ新しい項目を追加し、その項目を選択します。
@@ -276,9 +285,70 @@ public singleSelection(event: IComboSelectionChangeEventArgs) {
 - `上矢印` - フォーカスは最後のリスト項目に戻るか、あるいはリストが空の場合、検索入力に移動します。
 
 
-## Angular ComboBox スタイル設定
+## スタイル設定
 
-[Ignite UI for Angular テーマ](themes/index.md)を使用して、コンボボックスの外観を変更できます。はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。
+### Combo テーマのプロパティ マップ
+
+プライマリ プロパティを変更すると、関連するすべての依存プロパティが自動的に更新されます。
+
+<table class="collapsible-table">
+    <thead>
+        <tr>
+            <th>プライマリ プロパティ</th>
+            <th>依存プロパティ</th>
+            <th>説明</th>
+        </tr>
+    </thead>
+    <tbody class="group">
+        <tr class="primary">
+            <td><strong>$empty-list-background</strong></td>
+            <td>$empty-list-placeholder-color</td>
+            <td>コンボ プレースホルダー テキストの色</td>
+        </tr>
+        <tr class="primary">
+            <td><details><summary><strong>$toggle-button-background</strong></summary></details></td>
+            <td>$toggle-button-foreground</td>
+            <td>コンボ トグル ボタンの前景の色</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$toggle-button-background-focus</td>
+            <td>フォーカス時のコンボ トグル ボタンの背景の色</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$toggle-button-background-focus--border</td>
+            <td>フォーカス時のコンボ トグル ボタン (border バリエーション) の背景の色</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$toggle-button-foreground-filled</td>
+            <td>オンの時のコンボ トグル ボタンの前景の色</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$toggle-button-background-disabled</td>
+            <td>無効なコンボ トグル ボタンの背景の色</td>
+        </tr>
+        <tr class="dependent">
+            <td></td>
+            <td>$toggle-button-foreground-disabled</td>
+            <td>無効なコンボ トグル ボタンの前景の色</td>
+        </tr>
+        <tr class="primary">
+            <td><strong>$toggle-button-background-focus</strong></td>
+            <td>$toggle-button-foreground-focus</td>
+            <td>フォーカス時のコンボ トグル ボタンの前景の色</td>
+        </tr>
+        <tr class="primary">
+            <td><strong>$clear-button-background-focus</strong></td>
+            <td>$clear-button-foreground-focus</td>
+            <td>フォーカス時のコンボ クリア ボタンの前景の色</td>
+        </tr>
+    </tbody>
+</table>
+
+[`Ignite UI for Angular テーマ`](themes/index.md)を使用して、コンボボックスの外観を変更できます。はじめに、テーマ エンジンによって公開されている関数を使用するために、スタイル ファイルに `index` ファイルをインポートする必要があります。
 
 ```scss
 @use "igniteui-angular/theming" as *;
@@ -287,38 +357,26 @@ public singleSelection(event: IComboSelectionChangeEventArgs) {
 // @import '~igniteui-angular/lib/core/styles/themes/index';
 ```
 
-[combo-theme]({environment:sassApiUrl}/index.html#function-combo-theme) を拡張する新しいテーマを作成し、`$search-separator-border-color` パラメーターを受け取ります。
+最もシンプルな方法として、[`combo-theme`]({environment:sassApiUrl}/themes#function-combo-theme) を拡張する新しいテーマを作成します。`$toggle-button-background` を設定することで、新しいテーマがボタンに対する状態色や前景の色を自動的に決定します。必要に応じて、`$search-separator-border-color` などの追加パラメーターを指定することも可能です。
+
 ```scss
 $custom-combo-theme: combo-theme(
-    $search-separator-border-color: #1a5214
+  $search-separator-border-color: #1d3743,
+  $toggle-button-background: #57a5cd,
 );
 ```
 
-[IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html) は、項目コンテナーとして [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を内部使用します。[IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) および [IgxCheckbox]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) コンポーネントも含まれます。これらのコンポーネントのテーマを拡張する新しいテーマを作成し、それぞれのクラスの下にスコープすることで、コンボボックスのスタイル設定を変更できます。
+[`IgxComboComponent`]({environment:angularApiUrl}/classes/igxcombocomponent.html) は、項目コンテナーとして [`IgxDropDownComponent`]({environment:angularApiUrl}/classes/igxdropdowncomponent.html) を内部使用します。[`IgxInputGroup`]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) および [`IgxCheckbox`]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html) コンポーネントも含まれます。これらのコンポーネントのテーマを拡張する新しいテーマを作成し、それぞれのクラスの下にスコープすることで、コンボボックスのスタイル設定を変更できます。
 
 ```scss
 $custom-drop-down-theme: drop-down-theme(
-    $background-color: #d9f5d6,
-    $header-text-color: #1a5214,
-    $item-text-color: #1a5214,
-
-    $focused-item-background: #72da67,
-    $focused-item-text-color: #1a5214,
-    $hover-item-background: #a0e698,
-    $hover-item-text-color: #1a5214,
-
-    $selected-item-background: #a0e698,
-    $selected-item-text-color: #1a5214,
-    $selected-hover-item-background: #72da67,
-    $selected-hover-item-text-color: #1a5214,
-    $selected-focus-item-background: #72da67,
-    $selected-focus-item-text-color: #1a5214,
+  $background-color: #57a5cd,
 );
 
 $custom-checkbox-theme: checkbox-theme(
-    $border-radius: 10px,
-    $fill-color: #1a5214,
-    $empty-color: #1a5214,
+  $border-radius: 10px,
+  $fill-color: #1d3743,
+  $empty-color: #1d3743,
 );
 ```
 
@@ -326,68 +384,109 @@ $custom-checkbox-theme: checkbox-theme(
 
 ```scss
 :host {
-    @include css-vars($custom-combo-theme);
-    @include css-vars($custom-drop-down-theme);
-    @include css-vars($custom-checkbox-theme);
+  @include tokens($custom-combo-theme);
+  @include tokens($custom-drop-down-theme);
+  @include tokens($custom-checkbox-theme);
 }
 ```
 
 > [!NOTE]
-> [IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) は、[IgxOverlay](overlay.md) サービスを使用して、コンボボックス項目のリスト コンテナーを保持および表示します。スタイルを適切にスコープするには、[OverlaySetting.outlet]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[IgxOverlay スタイル ガイド](overlay-styling.md)を確認してください。
+> [`IgxCombo`]({environment:angularApiUrl}/classes/igxcombocomponent.html) は、[`IgxOverlay`](overlay.md) サービスを使用して、コンボボックス項目のリスト コンテナーを保持および表示します。スタイルを適切にスコープするには、[`OverlaySetting.outlet`]({environment:angularApiUrl}/interfaces/overlaysettings.html#outlet) を使用してください。詳細については、[`IgxOverlay スタイル ガイド`](overlay-styling.md)を確認してください。また、コンポーネントのスタイルを設定するときに `::ng-deep` を使用する必要があります。
 
 > [!NOTE]
-> `IgxCombo` のデフォルト `type` は `box` です。[IgxSelect](select.md) は `line` です。
+> `IgxCombo` のデフォルト `type` は `box` です。[`IgxSelect`](select.md) は `line` です。
 
 ### デモ
 
 <code-view style="height:410px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
-           iframe-src="{environment:demosBaseUrl}/lists/combo-styling" >
+           iframe-src="{environment:demosBaseUrl}/lists/combo-styling/" >
 </code-view>
 
 
 <div class="divider--half"></div>
 
+### Tailwind によるスタイル設定
+
+カスタム Tailwind ユーティリティ クラスを使用して `combo` をスタイル設定できます。まず [Tailwind を設定して](themes/misc/tailwind-classes.md)ください。
+
+グローバル スタイルシートに Tailwind をインポートした上で、以下のように必要なテーマ ユーティリティを適用します:
+
+```scss
+@import "tailwindcss";
+...
+@use 'igniteui-theming/tailwind/utilities/material.css';
+```
+
+ユーティリティ ファイルには、`light` テーマと `dark` テーマの両方のバリエーションが含まれています。
+
+- `light-*` クラスはライト テーマ用です。
+- `dark-*` クラスはダーク テーマ用です。
+- プレフィックスの後にコンポーネント名を追加します (例: `light-combo`、`dark-combo`)。
+
+これらのクラスを適用すると、動的なテーマの計算が可能になります。そこから、`任意のプロパティ`を使用して、生成された CSS 変数をオーバーライドできます。コロンの後に、有効な CSS カラー形式 (HEX、CSS 変数、RGB など) を指定します。
+
+プロパティの完全なリストは、[combo-theme]({environment:sassApiUrl}/themes#function-combo-theme) で確認できます。構文は次のとおりです:
+
+```html
+<igx-combo
+class="!light-combo
+![--toggle-button-background:#99BAA6]
+![--clear-button-foreground:#99BAA6]"
+...></igx-combo>
+```
+
+>[!NOTE]
+>ユーティリティ クラスが優先されるようにするには、感嘆符 (`!`) が必要です。Tailwind はスタイルをレイヤーに適用しますが、これらのスタイルを重要としてマークしないと、コンポーネントのデフォルトのテーマによってオーバーライドしてしまいます。
+
+最終的に、combo は次のようになります:
+
+<div class="sample-container loading" style="height:410px">
+    <iframe id="combo-tailwind-styling-iframe" data-src='{environment:demosBaseUrl}/lists/combo-tailwind-styling' width="100%" height="100%" seamless frameBorder="0" class="lazyload"></iframe>
+</div>
+
 ## 既知の問題
 
 - 選択した項目を表示するコンボボックス入力は編集できません。ただし、IE および FireFox のブラウザー仕様により、カーソルは表示されます。
-- コンボボックスの高さを変更するための入力はありません。将来、[IgxInputGroup]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html) コンポーネントは、カスタムのサイズ変更オプションを公開し、[IgxCombo]({environment:angularApiUrl}/classes/igxcombocomponent.html) は適切なスタイル設定と外観の統一に同じ機能を使用します。
 - コンボボックスが `undefined` (例: `[ undefined, ...]`) を含むプリミティブ データの配列にバインドされる場合、`undefined` はドロップダウンに表示されません。複合データ (オブジェクトなど) の配列にバインドされ、`valueKey` に使用される値が `undefined` の場合、項目はドロップダウンに表示されますが、選択はできません。
 - コンボボックスがリモート サービスにバインドされ、定義済みの選択がある場合、要求されたデータが読み込まれるまでその入力は空白のままになります。
 
 > [!NOTE]
-> コンボボックスは内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限がコンボボックスで有効です。詳細については、[igxForOf 既知の制限](for-of.md#既知の制限)セクションを参照してください。
+> コンボボックスは内部で `igxForOf` ディレクティブを使用するため、すべての `igxForOf` の制限がコンボボックスで有効です。詳細については、[`igxForOf 既知の制限`](for-of.md#既知の制限)セクションを参照してください。
 
-## API まとめ
+## API リファレンス
+
 <div class="divider--half"></div>
 
-* [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
-* [IgxComboComponent スタイル]({environment:sassApiUrl}/index.html#function-combo-theme)
+- [IgxComboComponent]({environment:angularApiUrl}/classes/igxcombocomponent.html)
+- [IgxComboComponent スタイル]({environment:sassApiUrl}/themes#function-combo-theme)
 
 その他の [Angular コンポーネント](https://jp.infragistics.com/products/ignite-ui-angular)およびディレクティブ (またはそのいずれか) で使用した API:
 
-* [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
-* [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
-* [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
+- [IgxDropDownComponent]({environment:angularApiUrl}/classes/igxdropdowncomponent.html)
+- [IgxInputGroupComponent]({environment:angularApiUrl}/classes/igxinputgroupcomponent.html)
+- [IgxCheckboxComponent]({environment:angularApiUrl}/classes/igxcheckboxcomponent.html)
 
 ## テーマの依存関係
-* [IgxDropDown テーマ]({environment:sassApiUrl}/index.html#function-drop-down-theme)
-* [IgxIcon テーマ]({environment:sassApiUrl}/index.html#function-icon-theme)
-* [IgxCheckbox テーマ]({environment:sassApiUrl}/index.html#function-checkbox-theme)
-* [IgxOverlay テーマ]({environment:sassApiUrl}/index.html#function-overlay-theme)
+
+- [IgxDropDown テーマ]({environment:sassApiUrl}/themes#function-drop-down-theme)
+- [IgxIcon テーマ]({environment:sassApiUrl}/themes#function-icon-theme)
+- [IgxCheckbox テーマ]({environment:sassApiUrl}/themes#function-checkbox-theme)
+- [IgxOverlay テーマ]({environment:sassApiUrl}/themes#function-overlay-theme)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [コンボボックス機能](combo-features.md)
-* [コンボボックス リモート バインディング](combo-remote.md)
-* [コンボボックス テンプレート](combo-templates.md)
-* [テンプレート駆動フォームの統合](input-group.md)
-* [リアクティブ フォームの統合](angular-reactive-form-validation.md)
-* [単一選択コンボボックス](simple-combo.md)
+- [コンボボックス機能](combo-features.md)
+- [コンボボックス リモート バインディング](combo-remote.md)
+- [コンボボックス テンプレート](combo-templates.md)
+- [テンプレート駆動フォームの統合](input-group.md)
+- [リアクティブ フォームの統合](angular-reactive-form-validation.md)
+- [単一選択コンボボックス](simple-combo.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

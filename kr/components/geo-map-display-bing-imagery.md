@@ -3,8 +3,14 @@ title: Angular Map | Data Visualization Tools | Bing Maps | Infragistics
 _description: The Map allows you to display data that contains geographic locations from view models or geo-spatial data loaded from shape files on geographic imagery maps.View the demo, dependencies, usage and toolbar for more information.
 _keywords: map, Ignite UI for Angular, Infragistics, imagery tiles, Bing Maps
 _language: kr
-mentionedTypes: ['XamGeographicMap', 'ShapefileConverter']
+mentionedTypes: ["XamGeographicMap", "ShapefileConverter"]
 ---
+
+NOTE: As of June 30, 2025 all Microsoft Bing Maps for Enterprise Basic (Free) accounts will be retired. If you're still using an unpaid Basic Account and key, now is the time to act to avoid service disruptions. Bing Maps for Enterprise license holders can continue to use Bing Maps in their applications until June 30,2028.
+
+For more details:
+
+[Microsoft Bing Blogs](https://blogs.bing.com/maps/2025-06/Bing-Maps-for-Enterprise-Basic-Account-shutdown-June-30,2025)
 
 # Angular Binding Imagery from Bing Maps
 
@@ -12,12 +18,9 @@ Bing Maps is Microsoft’s® licensed geographic imagery mapping service. This g
 
 ## Demo
 
-<code-view style="height: 500px" alt="Angular geo map display bing imagery"
-           data-demos-base-url="{environment:dvDemosBaseUrl}"
-                    iframe-src="{environment:dvDemosBaseUrl}/maps/geo-map/display-bing-imagery"
-                                                 github-src="maps/geo-map/display-bing-imagery">
-</code-view>
+<!-- `sample="/maps/geo-map/display-bing-imagery", height="500", alt="Angular geo map display bing imagery"` -->
 
+<img src="../images/general/BingMapsImagery.png" alt="Angular Bing Maps Imagery"/>
 
 <div class="divider--half"></div>
 

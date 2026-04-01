@@ -3,52 +3,59 @@
 title: Angular Grid の列ピン固定 - Ignite UI for Angular
 _description: アプリの開発時に Ignite UI for Angular のピン固定機能を使用して、豊富な API で簡単に列をロックまたは列の順序を変更できます。
 _keywords: lock column, ignite ui for angular, infragistics
-_language: ja 
+_license: commercial
+_language: ja
 ---
+
 }
 @@if (igxName === 'IgxTreeGrid') {
 ---
 title: Angular Tree Grid の列ピン固定 - Ignite UI for Angular
 _description: アプリの開発時に Ignite UI for Angular のピン固定機能を使用して、豊富な API で簡単に列をロックまたは列の順序を変更できます。
-_keywords: lock column, ignite ui for angular, infragistics 
+_keywords: lock column, ignite ui for angular, infragistics
+_license: commercial
 _language: ja
 ---
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 ---
 title: Angular Hierarchical Grid の列ピン固定 - Ignite UI for Angular
 _description: アプリの開発時に Ignite UI for Angular のピン固定機能を使用して、豊富な API で簡単に列をロックまたは列の順序を変更できます。
-_keywords: lock column, ignite ui for angular, infragistics 
+_keywords: lock column, ignite ui for angular, infragistics
+_license: commercial
 _language: ja
 ---
+
 }
 
-# Angular @@igComponent 列ピン固定 
+# Angular @@igComponent 列ピン固定
+
 単一または複数の列を Angular UI グリッドの左端にピン固定できます。Ignite UI for Angular の**列固定**は、ユーザーが特定の列順序で列をロックすることを可能にし、@@igComponent で水平スクロール時にロックされた列が常に表示されます。Material UI Grid には組み込みの列ピン固定 UI があり、@@igComponent のツールバーで列の表示状態を変更できます。その他、カスタム UI を定義し、Column Pinning API を介して列のピン固定状態を変更できます。
 
 ## Angular @@igComponent 列ピン固定の例
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-toolbar-pinning" alt="Angular ##@@igComponent 列ピン固定の例">
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-toolbar-pinning/" alt="Angular @@igComponent 列ピン固定の例">
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:630px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-pinning" >
+<code-view style="height:630px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-pinning/" alt="Angular @@igComponent 列ピン固定の例">
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-pinning" >
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-pinning/" alt="Angular @@igComponent 列ピン固定の例">
 </code-view>
 
 }
@@ -58,6 +65,7 @@ _language: ja
 列ピン固定は、[`igx-column`]({environment:angularApiUrl}/classes/igxcolumncomponent.html) の `pinned` 入力によって制御されます。ピン固定列は常に @@igComponent の左側に描画され、@@igComponent 本体のピン固定されていない列の水平スクロールで固定されます。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid #grid1 [data]="data | async" [width]="700px" [autoGenerate]="false" (columnInit)="initColumns($event)"
     (selected)="selectCell($event)">
@@ -68,8 +76,10 @@ _language: ja
     </igx-paginator>
 </igx-grid>
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="false">
     <igx-column [field]="Name" [pinned]="true"></igx-column>
@@ -77,9 +87,11 @@ _language: ja
     <igx-column [field]="ID"></igx-column>
 </igx-tree-grid>
 ```
+
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
         [height]="'600px'" [width]="'800px'" #hierarchicalGrid>
@@ -87,27 +99,34 @@ _language: ja
     <igx-column [field]="Debut" [width]="200px"></igx-column>
 </igx-hierarchical-grid>
 ```
+
 }
 
 [`@@igxNameComponent`]({environment:angularApiUrl}/classes/@@igTypeDoc.html) の @@igComponent の [`pinColumn`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#pinColumn) または [`unpinColumn`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#unpinColumn) メソッドを使用してフィールド名によって列をピン固定またはピン固定解除できます。
 
 @@if (igxName === 'IgxGrid') {
+
 ```typescript
 this.grid.pinColumn('AthleteNumber');
 this.grid.unpinColumn('Name');
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```typescript
 this.treeGrid.pinColumn('Title');
 this.treeGrid.unpinColumn('Name');
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```typescript
 this.hierarchicalGrid.pinColumn('Artist');
 this.hierarchicalGrid.unpinColumn('Debut');
 ```
+
 }
 
 両方のメソッドは操作に成功したかどうかを示すブール値を返します。よくある失敗の原因として列がすでにそのステートになっていることがあります。
@@ -115,6 +134,7 @@ this.hierarchicalGrid.unpinColumn('Debut');
 列をピン固定すると、一番右に配置されたピン固定列の右にピン固定されます。ピン固定列の順序を変更するには、[`columnPin`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#columnPin) イベントでイベント引数の [`insertAtIndex`]({environment:angularApiUrl}/interfaces/ipincolumneventargs.html#insertAtIndex) プロパティを適切な位置インデックスに変更します。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid #grid1 [data]="data | async" [autoGenerate]="true" (columnPin)="columnPinning($event)"></igx-grid>
 ```
@@ -126,8 +146,10 @@ public columnPinning(event) {
     }
 }
 ```
+
 }
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid #treeGrid [data]="data" primaryKey="ID" foreignKey="ParentID" [autoGenerate]="true" (columnPin)="columnPinning($event)"></igx-tree-grid>
 ```
@@ -139,8 +161,10 @@ public columnPinning(event) {
     }
 }
 ```
+
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid class="hgrid" [data]="localdata" [autoGenerate]="false"
         [height]="'600px'" [width]="'800px'" 
@@ -155,6 +179,7 @@ public columnPinning(event) {
     }
 }
 ```
+
 }
 
 ## ピン固定の位置
@@ -163,51 +188,89 @@ public columnPinning(event) {
 ピン固定されていない列は水平にスクロールできますが、ピン固定された列は右側に固定されます。
 
 @@if (igxName === 'IgxGrid') {
+
 ```html
 <igx-grid [data]="data" [autoGenerate]="true" [pinning]="pinningConfig"></igx-grid>
 ```
+
 }
 
 @@if (igxName === 'IgxTreeGrid') {
+
 ```html
 <igx-tree-grid #grid1 [data]="data" [autoGenerate]="true" [pinning]="pinningConfig"></igx-tree-grid>
 ```
+
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
+
 ```html
 <igx-hierarchical-grid #grid1 [data]="data" [autoGenerate]="true" [pinning]="pinningConfig"></igx-hierarchical-grid>
 ```
+
 }
 
 ```typescript
 public pinningConfig: IPinningConfig = { columns: ColumnPinningPosition.End };
 ```
+
 ### デモ
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-right-pinning" >
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-right-pinning/" >
 </code-view>
 
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sample-right-pinning" >
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-sample-right-pinning/" >
 </code-view>
 
 }
 
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-sample-right-pinning" >
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-sample-right-pinning/" >
+</code-view>
+
+}
+
+### 両側の列ピン固定
+
+各列のピン固定位置を個別に指定できるため、グリッドの両側に列をピン固定して利便性を高め、データ セットの最適化を容易にすることができます。詳細については、以下のデモを参照してください。列をピン固定するには、ヘッダーをクリックして列を選択し、ツールバーに追加されたピン固定ボタンを使用するか、列を別のピン固定された列にドラッグします。
+
+@@if (igxName === 'IgxGrid') {
+
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-pinning-both-sides/" >
+</code-view>
+
+}
+
+@@if (igxName === 'IgxHierarchicalGrid') {
+
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-both-sides-pinning/" >
+</code-view>
+
+}
+
+@@if (igxName === 'IgxTreeGrid') {
+
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-both-sides-pinning/" >
 </code-view>
 
 }
@@ -295,6 +358,7 @@ public pinningConfig: IPinningConfig = { columns: ColumnPinningPosition.End };
     </igx-row-island>
 </igx-hierarchical-grid>
 ```
+
 }
 
 カスタムアイコンをクリックすると、関連する列のピン状態は、列の API メソッドを使用して変更できます。
@@ -309,25 +373,25 @@ public toggleColumn(col: ColumnType) {
 
 @@if (igxName === 'IgxGrid') {
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-pinning" >
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-sample-pinning/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxTreeGrid') {
 
-<code-view style="height:630px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-pinning" >
+<code-view style="height:630px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-column-pinning/" >
 </code-view>
 
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-<code-view style="height:510px" 
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-pinning" >
+<code-view style="height:510px"
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-pinning/" >
 </code-view>
 
 }
@@ -335,19 +399,22 @@ public toggleColumn(col: ColumnType) {
 
 ## ピン固定の制限
 
-*   列幅をパーセンテージ (%) で設定した場合にピン固定列があると @@igComponent 本体およびヘッダー コンテンツが正しく配置されません。列のピン固定を正しく設定するには、列幅をピクセル (px) に設定するか、@@igComponent によって自動的に割り当てる必要があります。
+- 列幅をパーセンテージ (%) で設定した場合にピン固定列があると @@igComponent 本体およびヘッダー コンテンツが正しく配置されません。列のピン固定を正しく設定するには、列幅をピクセル (px) に設定するか、@@igComponent によって自動的に割り当てる必要があります。
 
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {
-## スタイル設定   
 
-igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md) でスタイルを設定できます。[テーマ]({environment:sassApiUrl}/index.html#function-grid-theme) は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。
+## スタイル設定
+
+igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](../themes/sass/component-themes.md) でスタイルを設定できます。グリッドの[テーマ]({environment:sassApiUrl}/themes#function-grid-theme)は、グリッドのすべての機能をカスタマイズできるさまざまなプロパティを公開します。
 
 以下の手順では、グリッドのピン固定スタイルをカスタマイズする手順を実行しています。
 
 ### グローバル テーマのインポート
+
 グループ化機能のカスタマイズは、すべてのスタイリング機能とミックスインが配置されている `index` ファイルをインポートする必要があります。
+
 ```scss
 @use "igniteui-angular/theming" as *;
 
@@ -356,125 +423,66 @@ igxGridを使用すると、[Ignite UI for Angular テーマ ライブラリ](..
 ```
 
 ### カスタム テーマの定義
-次に、[`grid-theme`]({environment:sassApiUrl}/index.html#function-grid-theme) を拡張し、必要に応じて Group By をカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成します。
+
+次に、[`grid-theme`]({environment:sassApiUrl}/themes#function-grid-theme) を拡張し、必要に応じて Group By をカスタマイズするために必要なパラメーターを受け入れる新しいテーマを作成します。
 
 ```scss
 $custom-theme: grid-theme(
-    /* Pinning properties that affect styling */
-    $pinned-border-width: 5px,
-    $pinned-border-style: double,
-    $pinned-border-color: #FFCD0F,
-    $cell-active-border-color: #FFCD0F
-    /* add other features properties here... */
-);
-```    
-
-### カスタム カラー パレットの定義
-上記で説明したアプローチでは、色の値がハード コーディングされていました。または、[`igx-palette`]({environment:sassApiUrl}/index.html#function-igx-palette) および [`igx-color`]({environment:sassApiUrl}/index.html#function-igx-color) 関数を使用して、柔軟性を高めることができます。
-`Igx-palette` は指定した一次色と二次色に基づいてカラーパレットを生成します。
-
- ```scss
-$primary-color: #292826;
-$secondary-color: #ffcd0f;
-
-$custom-palette: palette(
-  $primary: $primary-color,
-  $secondary: $secondary-color
-);
-```   
-
-カスタム パレットが生成された後、`igx-color` 関数を使用して、さまざまな種類の原色と二次色を取得できます。   
-
-
-```scss
-$custom-theme: grid-theme(
-    $pinned-border-width: 5px,
-    $pinned-border-style: double,
-    $pinned-border-color: color($custom-palette, "secondary", 500),
-    $cell-active-border-color: color($custom-palette, "secondary", 500)
-);
-```   
-
-`$custom-theme` には前のセクションと同じプロパティが含まれていますが、今回は色がハードコードされていません。代わりに、カスタム `igx-palette` パレットが使用され、特定のカラーバリアントを使用して、プライマリ カラーとセカンダリ カラーから色が取得されました。   
-
-### カスタム スキーマの定義
-さらに進んで、[**スキーマ**](../themes/sass/schemas.md) のすべての利点を備えた柔軟な構造を構築できます。**スキーマ**はテーマを作成させるための方法です。   
-すべてのコンポーネントに提供される 2 つの事前定義されたスキーマの 1 つを拡張します。この場合、`$_light_grid` を使用します。   
-```scss
-$custom-grid-schema: extend($_light-grid,(
-    pinned-border-width: 5px,
-    pinned-border-style: double,
-    pinned-border-color: color:("secondary", 500),
-    cell-active-border-color: color:("secondary", 500)
-));
-```   
-カスタム スキーマを適用するには、`light` グローバルまたは `dark` グローバルを拡張する必要があります。プロセス全体が実際にコンポーネントにカスタム スキーマを提供し、その後、それぞれのコンポーネントテーマに追加します。     
-```scss
-$my-custom-schema: extend($light-schema, ( 
-    igx-grid: $custom-grid-schema
-));
-$custom-theme: grid-theme(
-    $palette: $custom-palette,
-    $schema: $my-custom-schema
+  $pinned-border-width: 5px,
+  $pinned-border-style: double,
+  $pinned-border-color: #ffcd0f,
+  $cell-active-border-color: #ffcd0f
 );
 ```
+
+>[!NOTE]
+>上記のようにカラーの値をハードコーディングする代わりに、[`palette`]({environment:sassApiUrl}/palettes#function-palette) および [`color`]({environment:sassApiUrl}/palettes#function-color) 関数を使用してカラーに関してより高い柔軟性を実現することができます。使い方の詳細については[`パレット`](../themes/sass/palettes.md)のトピックをご覧ください。
 
 ### カスタム テーマの適用
-テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。 
-```scss
-@include grid($custom-theme);
-```
 
-### スコープ コンポーネント テーマ
-
-カスタム テーマが特定のコンポーネントのみに影響するように、定義したすべてのスタイルをグローバル スタイル ファイルからカスタム コンポーネントのスタイルファイルに移動できます (`index` ファイルのインポートを含む)。
-
-このように、Angular の [ViewEncapsulation](https://angular.io/api/core/Component#encapsulation) により、スタイルはカスタム コンポーネントにのみ適用されます。
- >[!NOTE]
- >コンポーネントが [`Emulated`](../themes/sass/component-themes.md#表示のカプセル化) ViewEncapsulation を使用している場合、グリッドのスタイル設定は `::ng-deep` を使用してこのカプセル化を解除する必要があります。
- >[!NOTE]
- >ステートメントがコンポーネントの外にある要素に影響を与えないよう、ステートメントを `:host` セレクター内にラップします。
+テーマを適用する最も簡単な方法は、グローバル スタイル ファイルに `sass` `@include` ステートメントを使用することです。
 
 ```scss
 :host {
-    ::ng-deep {
-        @include grid($custom-theme);
-    }
+  @include tokens($custom-theme);
 }
 ```
+
 ### デモ
 
 
-<code-view style="height:506px" 
+<code-view style="height:506px"
            no-theming
-           data-demos-base-url="{environment:demosBaseUrl}" 
-           iframe-src="{environment:demosBaseUrl}/grid/grid-pinning-styling" >
+           data-demos-base-url="{environment:demosBaseUrl}"
+           iframe-src="{environment:demosBaseUrl}/grid/grid-pinning-styling/" >
 </code-view>
 
 >[!NOTE]
->このサンプルは、「テーマの変更」から選択したグローバル テーマに影響を受けません。
+>このサンプルは、`Change Theme` (テーマの変更) から選択したグローバル テーマに影響を受けません。
 
 }
 
 ## API リファレンス
-* [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
-* [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
+
+- [@@igxNameComponent]({environment:angularApiUrl}/classes/@@igTypeDoc.html)
+- [IgxColumnComponent]({environment:angularApiUrl}/classes/igxcolumncomponent.html)
 
 ## その他のリソース
+
 <div class="divider--half"></div>
 
-* [@@igComponent 概要](@@igMainTopic.md)
-* [仮想化とパフォーマンス](virtualization.md)
-* [ページング](paging.md)
-* [フィルタリング](filtering.md)
-* [ソート](sorting.md)
-* [集計](summaries.md)
-* [列移動](column-moving.md)
-* [列のサイズ変更](column-resizing.md)
-* [選択](selection.md)
+- [@@igComponent 概要](@@igMainTopic.md)
+- [仮想化とパフォーマンス](virtualization.md)
+- [ページング](paging.md)
+- [フィルタリング](filtering.md)
+- [ソート](sorting.md)
+- [集計](summaries.md)
+- [列移動](column-moving.md)
+- [列のサイズ変更](column-resizing.md)
+- [選択](selection.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

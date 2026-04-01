@@ -7,20 +7,19 @@ _language: ja
 
 # Ignite UI for Angular での Standalone (スタンドアロン) コンポーネントの使用
 
-Angular 14 では[スタンドアロン コンポーネント](https://angular.io/guide/standalone-components)の概念が導入されました。これにより、`NgModules` を使用する必要性が減り、アプリケーションを構築する方法が簡素化されます。スタンドアロン コンポーネントは、Angular 15 まで開発者プレビューでした。この新しいパラダイムをサポートするために、バージョン `16.0.0` では、すべての Ignite UI for Angular コンポーネントが `standalone` としてエクスポートされるようになりました。既存のすべての `NgModule` は、後方互換性のためにライブラリによって引き続きエクスポートされます。ただし、Ignite UI for Angular コンポーネントは宣言されなくなりました。代わりに、`standalone` コンポーネントをインポートおよびエクスポートします。
+Angular 14 では[スタンドアロン コンポーネント](https://angular.io/guide/standalone-components)の概念が導入されました。これにより、`NgModules` を使用する必要性が減り、アプリケーションを構築する方法が簡素化されます。スタンドアロン コンポーネントは、Angular 15 まで開発者プレビューでした。この新しいパラダイムをサポートするために、バージョン `16.0.0` では、すべての Ignite UI for Angular コンポーネントが `standalone` としてエクスポートされるようになりました。Angular 19 以降、すべてのコンポーネントはデフォルトでスタンドアロンです。既存のすべての `NgModule` は、後方互換性のためにライブラリによって引き続きエクスポートされます。ただし、Ignite UI for Angular コンポーネントは宣言されなくなりました。代わりに、`standalone` コンポーネントをインポートおよびエクスポートします。
 
 ## 新しいスタンドアロン コンポーネントの使用方法
 
 Angular 16 および Ignite UI for Angular 16.0 以降では、`standalone` コンポーネントに必要なインポートを `imports` プロパティに簡単に追加できるようになりました。次の例では、`IGX_GRID_DIRECTIVES` を使用して、すべてのグリッド関連のコンポーネントとディレクティブをインポートできます。
-    
+
 ```typescript
-import { IGX_GRID_DIRECTIVES } from 'igniteui-angular';
+import { IGX_GRID_DIRECTIVES } from 'igniteui-angular/grids/grid';
 
 @Component({
     selector: 'app-grid-sample',
     styleUrls: ['grid.sample.scss'],
     templateUrl: 'grid.sample.html',
-    standalone: true,
     imports: [IGX_GRID_DIRECTIVES, AsyncPipe]
 })
 ```
@@ -28,13 +27,12 @@ import { IGX_GRID_DIRECTIVES } from 'igniteui-angular';
 ただし、`standalone` コンポーネントで使用されるすべてのコンポーネントを個別にインポートすることもできます。`IgxGridComponent` と `IgxColumnComponent` を別のコンポーネントで使用する場合の例は次のとおりです。
 
 ```typescript
-import { IgxGridComponent, IgxColumnComponent } from 'igniteui-angular';
+import { IgxGridComponent, IgxColumnComponent } from 'igniteui-angular/grids/grid';
 
 @Component({
     selector: 'app-grid-sample',
     styleUrls: ['grid.sample.scss'],
     templateUrl: 'grid.sample.html',
-    standalone: true,
     imports: [IgxGridComponent, IgxColumnComponent, AsyncPipe]
 })
 ```
@@ -43,13 +41,12 @@ import { IgxGridComponent, IgxColumnComponent } from 'igniteui-angular';
 
 ```typescript
 // `NgModule` import of the `IgxGridModule` module, which is equivalent to IGX_GRID_DIRECTIVES in terms of exported components and directives.
-import { IgxGridModule } from 'igniteui-angular';
+import { IgxGridModule } from 'igniteui-angular/grids/grid';
 
 @Component({
     selector: 'app-grid-sample',
     styleUrls: ['grid.sample.scss'],
     templateUrl: 'grid.sample.html',
-    standalone: true,
     imports: [IgxGridModule, AsyncPipe]
 })
 ```
@@ -69,7 +66,7 @@ import { IgxGridModule } from 'igniteui-angular';
 | [`IGX_CARD_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/card/public_api.ts) | すべてのカード関連のコンポーネントとディレクティブをエクスポートします。 |
 | [`IGX_CAROUSEL_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/carousel/public_api.ts) | すべてのカルーセル関連のコンポーネントとディレクティブをエクスポートします。 |
 | [`IGX_CHIPS_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/chips/public_api.ts) | すべてのチップ関連のコンポーネントとディレクティブをエクスポートします。 |
-| [`IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES `](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/progressbar/public_api.ts) | すべての円形のプログレス バー関連のコンポーネントとディレクティブをエクスポートします。 |
+| [`IGX_CIRCULAR_PROGRESS_BAR_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/progressbar/public_api.ts) | すべての円形のプログレス バー関連のコンポーネントとディレクティブをエクスポートします。 |
 | [`IGX_COMBO_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/combo/public_api.ts) | すべてのコンボ関連のコンポーネントとディレクティブをエクスポートします。 |
 | [`IGX_DATE_PICKER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/date-picker/public_api.ts) | すべての日付ピッカー関連のコンポーネントとディレクティブをエクスポートします。 |
 | [`IGX_DATE_RANGE_PICKER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/date-range-picker/public_api.ts) | すべての日付範囲ピッカー関連のコンポーネントとディレクティブをエクスポートします。 |
@@ -106,9 +103,9 @@ import { IgxGridModule } from 'igniteui-angular';
 
 - [スタンドアロン コンポーネント](https://angular.io/guide/standalone-components)
 - [Ignite UI を使用した作業の開始](../getting-started.md)
-- [Angular のサーバー側レンダリング](../ssr-rendering.md)
+- [Angular のサーバー サイド レンダリング](../ssr-rendering.md)
 
 コミュニティに参加して新しいアイデアをご提案ください。
 
-* [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
-* [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)
+- [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
+- [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

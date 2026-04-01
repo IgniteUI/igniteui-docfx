@@ -3,7 +3,7 @@ title: Angular Linear Gauge Component - Native Angular | Ignite UI for Angular
 _description: Use the Linear Gauge component to see a simple display of a value compared against a scale and one or more ranges.
 _keywords: Angular, Ignite UI for Angular, Native Angular Components Suite, Native Angular Controls, Native Angular Components, Native Angular Components Library, Angular Chart, Angular Data Grid, Angular Chart Control, Angular Grid Component, Angular linear graph Component, Angular linear graph
 _language: kr
-mentionedTypes: ['XamLinearGauge']
+mentionedTypes: ["XamLinearGauge"]
 ---
 
 # Angular Linear Gauge
@@ -31,8 +31,8 @@ The following sample demonstrates how setting multiple properties on the same ga
 
 When installing the gauge package, the core package must also be installed.
 
-*   **npm install --save igniteui-angular-core**
-*   **npm install --save igniteui-angular-gauges**
+- **npm install --save igniteui-angular-core**
+- **npm install --save igniteui-angular-gauges**
 
 <!-- end: Angular, React, WebComponents -->
 

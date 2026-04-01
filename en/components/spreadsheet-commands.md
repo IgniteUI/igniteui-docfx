@@ -2,7 +2,8 @@
 title: Angular Spreadsheet | Commands | Infragistics
 _description: Perform commands to activate different features of Infragistics' Angular spreadsheet control. Learn commands such as ZoomIn and ZoomOut with Ignite UI for Angular spreadsheet!
 _keywords: Spreadsheet, commands, Ignite UI for Angular, Infragistics
-mentionedTypes: ['Spreadsheet', 'SpreadsheetAction']
+_license: commercial
+mentionedTypes: ["Spreadsheet", "SpreadsheetAction"]
 ---
 
 # Angular Working with Commands
@@ -52,5 +53,5 @@ public zoomOut(): void {
 
 ## API References
 
-*   `ExecuteAction`
-*   `SpreadsheetAction`
+- `ExecuteAction`
+- `SpreadsheetAction`

@@ -1,6 +1,6 @@
 ﻿---
 title: コンポーネント テーマ
-_description: Ignite UI for Angular Theming コンポーネントは SASS で開発されます。使用が簡単な API は単一のコンポーネント、複数のコンポーネント、またはスイート全体のスタイル変更を適用できます。
+_description: Ignite UI for Angular テーマ コンポーネントは SASS で開発されます。使用が簡単な API は単一のコンポーネント、複数のコンポーネント、またはスイート全体のスタイル変更を適用できます。
 _keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, Angular, ネイティブ Angular コンポーネント スイート, ネイティブ Angular コントロール, ネイティブ Angular コンポーネント ライブラリ, ネイティブ Angular コンポーネント, Angular Theming コンポーネント, Angular テーマ
 _language: ja
 ---
@@ -29,44 +29,92 @@ Ignite UI for Angular でコンポーネント テーマを設定する方法、
 コンポーネント テーマは複数のパーツで構成されます。
 
 - **コンポーネント テーマ関数** - Sass 関数は、渡した引数を正規化して コンポーネント ミックスインでテーマを作成します。
-- **CSS 変数 mixin** - コンポーネント テーマを使用し、特定コンポーネントのスタイルに使用される **CSS 変数**を生成する Sass mixin。
-- **コンポーネント mixin** - コンポーネント テーマを使用し、特定コンポーネントのスタイルに使用される **CSS ルール**を生成する Sass mixin。
+- **Tokens ミックスイン** - Ignite UI コンポーネント テーマから CSS 変数トークンを生成するコンポーネント テーマを使用する Sass ミックスインです。
+- **コンポーネント ミックスイン** - コンポーネント テーマを使用し、特定コンポーネントのスタイルに使用される **CSS ルール**を生成する Sass mixin。
 
-アバターのデフォルトテーマに設定するテーマと異なる背景色を持つ新規のグローバル アバター テーマを作成する場合、[**概要セクション**](#概要)のようにコンポーネント テーマを作成する 2 つの一般的な方法があります。 
+
+### Tokens ミックスイン
+
+`tokens` ミックスインを使用することは、コンポーネントをカスタマイズするための推奨される方法です。Ignite UI コンポーネント テーマから、グローバル モードまたはスコープ モードのいずれかで CSS カスタム プロパティ (`design tokens`) を生成します。
+
+**グローバル モード (デフォルト)** - ユニバーサル `--ig-{component}-{property}` トークンを出力します。ローカル var() 参照はグローバルな同等のものに書き換えられるため、派生値 (例: `adaptive-contrast`) は任意のスコープで正しく解決されます。サイズ可能な式はスキップされるため、代わりに具体的な値を渡す必要があります。
+
+```scss
+// Input:
+@include tokens(avatar-theme($background: red));
+
+// Output:
+:root {
+  --ig-avatar-background: red;
+  /* ... remaining avatar properties ... */
+}
+```
+
+**グローバル モード (デフォルト)** - ユニバーサル `--ig-{component}-{property}` トークンを出力します。ローカル var() 参照はグローバルな同等のものに書き換えられるため、派生値 (例: `adaptive-contrast`) は任意のスコープで正しく解決されます。サイズ可能な式はスキップされるため、代わりに具体的な値を渡す必要があります。
+
+```scss
+// Input (from root):
+@include tokens(avatar-theme($background: red), $mode: 'scoped');
+
+// Output:
+igx-avatar {
+  --background: var(--igx-avatar-background, var(--ig-avatar-background, red));
+  /* ... remaining avatar properties ... */
+}
+
+
+// Input (from within a selector):
+.my-theme {
+  @include tokens(avatar-theme($background: red), $mode: 'scoped');
+}
+
+// Output:
+.my-theme,
+.my-theme igx-avatar {
+  --background: var(--igx-avatar-background, var(--ig-avatar-background, red));
+  /* ... */
+}
+```
+
+アバターのデフォルトテーマに設定するテーマと異なる背景色を持つ新規のグローバル アバター テーマを作成する場合、[**概要セクション**](#概要)のようにコンポーネント テーマを作成する 2 つの一般的な方法があります。
 コンポーネントテーマを体系化し、スコープする方法があります。最も簡単な方法は、[**グローバル テーマ**](./global-themes.md)を定義した同じファイルで行う方法です。
 
 アバター テーマの定義:
 
 ```scss
-// Some place after @include theme(...);
-
 // Change the background of the avatar to purple.
 $avatar-purple-theme: avatar-theme(
   $background: purple,
 );
 
-// Pass the css-vars to the `css-vars` mixin
-@include css-vars($avatar-purple-theme);
+// Pass the theme to the `tokens` mixin
+:root {
+  @include tokens($avatar-purple-theme);
+}
 ```
 
 上記のコードは、`igx-avatar` コンポーネントに対して新しい CSS 変数を生成します。これらの新しい CSS 変数は、デフォルトのアバター ルールを上書きします。
-同様に、グローバルな `scss` ファイルに `css-vars` ミックスインを追加した場合、ミックスイン は定義済みのテーマを再び上書きします。
+同様に、グローバルな `scss` ファイルに `tokens` ミックスインを追加した場合、ミックスイン は定義済みのテーマを再び上書きします。
 
-次に例を示します。 
+次に例を示します。
 
 ```scss
 // ...
-@include css-vars($avatar-purple-theme);
+:root {
+  @include tokens($avatar-purple-theme);
+}
 
 // Later
 $avatar-royalblue-theme: avatar-theme(
   $background: royalblue,
 );
 
-@include css-vars($avatar-royalblue-theme);
+:root {
+  @include tokens($avatar-royalblue-theme);
+}
 ```
 
-上記コードでは、以前の `css-vars` ミックスインはすべて上書きされるため、事実上のグローバル テーマは `$avatar-royalblue-theme` なります。
+上記コードでは、以前の `tokens` ミックスインはすべて上書きされるため、事実上のグローバル テーマは `$avatar-royalblue-theme` なります。
 
 ここで次のポイントに移ります。
 
@@ -82,11 +130,11 @@ $avatar-royalblue-theme: avatar-theme(
 // ...
 // CSS class selectors
 .avatar-royalblue {
-  @include css-vars($avatar-royalblue-theme);
+  @include tokens($avatar-royalblue-theme);
 }
 
 .avatar-purple {
-  @include css-vars($avatar-purple-theme);
+  @include tokens($avatar-purple-theme);
 }
 ```
 
@@ -110,9 +158,9 @@ $avatar-royalblue-theme: avatar-theme(
 
 グローバルにスコープし、単一の Sass ファイルに含まれるテーマを作成する方法について説明しました。ただし最適な方法ではないため、Sass ファイルを特定のコンポーネントにバインドした方がよい場合があります。この場合、表示のカプセル化、特に Angular で発生させる方法を考慮する必要があります。
 
-Angular では、表示のカプセル化に 3 つの方法 Emulated (デフォルト)、Shadow DOM、None を採用しています。各方法の詳細については、[Angular ヘルプ](https://angular.io/api/core/ViewEncapsulation) をご覧ください。表示をカプセル化した親コンポーネントの一部である Ignite UI for Angular コンポーネントのテーマを処理する方法について詳しく説明します。
+Angular では、表示のカプセル化に 3 つの方法 Emulated (デフォルト)、Shadow DOM、None を採用しています。各方法の詳細については、[Angular ヘルプ](https://angular.dev/api/core/ViewEncapsulation) をご覧ください。表示をカプセル化した親コンポーネントの一部である Ignite UI for Angular コンポーネントのテーマを処理する方法について詳しく説明します。
 
-`エミュレートされた`表示のカプセル化とは？このタイプの表示のカプセル化は、Shadow DOM 仕様の利点を享受しませんが、ホスト要素に適用された一意の属性識別子を使用してコンポーネントとその子のスタイルをバインドする方法を利用します。インナー セレクターをターゲットにした表示のカプセル化コンポーネントのスタイルシートに追加したスタイルのルールは、ホスト要素の一意の属性を参照しないため適用されません。このカプセル化を解除するには、View Encapsulation 解除ストラテジをいくつか使用する必要があります。現在の Angular でこれを行うのは `::ng-deep` です。ホスト要素でカプセル化された内部のセレクターをターゲットにできます。CSS 変数の代わりに CSS ルールを扱っている場合やコンポーネントの単一のインスタンスをカスタマイズする場合は、`::ng-deep` の使用をお勧めします。次のセクションで例を示します。
+`エミュレートされた`表示のカプセル化とは？このタイプの表示のカプセル化は、Shadow DOM 仕様の利点を享受しませんが、ホスト要素に適用された一意の属性識別子を使用してコンポーネントとその子のスタイルをバインドする方法を利用します。
 
 以下は CSS 変数を使用する例です。特定の親コンポーネントにバインドするアバター テーマを作成します。
 
@@ -147,84 +195,29 @@ $avatar-royalblue-theme: avatar-theme(
 );
 
 :host {
-  @include css-vars($avatar-royalblue-theme);
+  @include tokens($avatar-royalblue-theme);
 }
 ```
 
 CSS 変数を使用する間は、`::ng-deep` 擬似セレクターは必要ありません。上記コードで背景色に常に `royalblue` が含まれる `igx-avatar` の CSS 変数を作成しました。カスタム アバターのテーマは、その他の `igx-avatar` コンポーネントに影響しないため、カスタムの `app-avatar` コンポーネント内でカプセル化されたままです。
 
-`$igx-legacy-support` を `false` に設定してビルドした Ignite UI for Angular テーマは、プロジェクトで Sass を使用せずにコンポーネントのスタイルを設定できます。たとえば、上記は `--igx-avatar-background` CSS 変数に色の値を設定することにより実現できます。
+上記のインスタンスは、Sass を使用せずに実現することもできます。 `--ig-avatar-background` CSS 変数の値を希望のカラーに設定します。
 
 ```css
 /* app-avatar.component.css */
 :host {
-  --igx-avatar-background: royalblue;
+  --ig-avatar-background: royalblue;
 }
 ```
 
-<div class="divider"></div>
-
-## 古いブラウザーの場合
-
-<div class="divider--half"></div>
-
-[概要](#概要)セクションの説明にあったように、`$igx-legacy-support` グローバル変数を `true` に設定することにより、ハードコーディングされた値をコンポーネントのスタイル設定に使用できます。`theme` ミックスインを使用して `$legacy-support` に `true` を渡した場合、`$igx-legacy-support` もまた `true` に設定されます。
-
-### グローバル テーマの使用
-
-以下は、ハードコーディングされた値で複数コンポーネントをスタイル設定する方法の例です。
-
-```scss
-// Import the theming module
-@use "igniteui-angular/theming" as *;
-
-// !IMPORTANT: Prior to Ignite UI for Angular version 13 use:
-// @import '~igniteui-angular/lib/core/styles/themes/index';
-
-@include core();
-@include theme($palette: $default-palette, $legacy-support: true);
-
-// Overwrite the default themes for igx-avatar using hard-coded values:
-$avatar-royalblue-theme: avatar-theme(
-  $background: royalblue,
-);
-
-@include avatar($avatar-royalblue-theme);
-```
-
-<div class="divider"></div>
-
-### カプセル化した表示の使用
-
-以下のサンプルは、[表示のカプセル化](#表示のカプセル化)セクションのサンプルを開始点として使用しています。
-
-```scss
-// Import the theming module
-@use "igniteui-angular/theming" as *;
-
-// !IMPORTANT: Prior to Ignite UI for Angular version 13 use:
-// @import '~igniteui-angular/lib/core/styles/themes/index';
-
-// Enable legacy support first.
-// !IMPORTANT: Only applicable for versions older than Ignite UI for Angular 13.
-$igx-legacy-support: true;
-$avatar-royalblue-theme: avatar-theme(
-  $initials-background: royalblue,
-);
-
-:host ::ng-deep {
-  @include avatar($avatar-royalblue-theme);
-}
-```
-
-<div class="divider"></div>
+<div class="divider-half"></div>
 
 ## API の概要
 
 <div class="divider--half"></div>
 
-- [Global テーマ]({environment:sassApiUrl}/index.html#mixin-theme)
-- [Avatar テーマ]({environment:sassApiUrl}/index.html#function-igx-avatar)
+- [グローバル テーマ]({environment:sassApiUrl}/themes#mixin-theme)
+- [Avatar テーマ]({environment:sassApiUrl}/themes#function-avatar-theme)
 
 ## その他のリソース
 
