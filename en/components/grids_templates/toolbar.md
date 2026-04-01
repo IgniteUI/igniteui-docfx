@@ -34,28 +34,22 @@ or just any other custom content. The toolbar and the predefined UI components s
 ## Angular Toolbar Grid Example
 
 @@if (igxName === 'IgxGrid') {
-
 <code-view style="height:420px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-1/" alt="Angular Toolbar Grid Example">
 </code-view>
-
 }
 @@if (igxName === 'IgxTreeGrid') {
-
 <code-view style="height:420px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-4/" alt="Angular Toolbar Grid Example">
 </code-view>
-
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-title/" alt="Angular Toolbar Grid Example">
 </code-view>
-
 }
 
 The predefined `actions` and `title` UI components are added inside the `<igx-grid-toolbar>` and this is all needed to have a toolbar providing default interactions with the corresponding Grid features:
@@ -201,32 +195,24 @@ These features can be enabled independently from each other by following a patte
 the Ignite UI for Angular suite.
 Listed below are the main features of the toolbar with example code for each of them.
 
-
 @@if (igxName === 'IgxGrid') {
-
 <code-view style="height:630px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-2/" >
 </code-view>
-
 }
 @@if (igxName === 'IgxTreeGrid') {
-
 <code-view style="height:500px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-1/" >
 </code-view>
-
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-options/" >
 </code-view>
-
 }
-
 
 ### Title
 
@@ -447,7 +433,6 @@ configureExport(args: IGridToolbarExportEventArgs) {
 The following sample demonstrates how to customize the exported files:
 
 @@if (igxName === 'IgxGrid') {
-
 <code-view style="height:420px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-3/" >
@@ -456,7 +441,6 @@ The following sample demonstrates how to customize the exported files:
 <div class="divider"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-
 <code-view style="height:420px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-2/" >
@@ -473,7 +457,6 @@ or just as another way to signify an action taking place in the grid.
 The sample below has significant amount of data. While the data is being exported, the progress bar is shown. Additionally, it has another button that simulates a long running operation in the grid:
 
 @@if (igxName === 'IgxGrid') {
-
 <code-view style="height: 370px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/exporting-visualization/" >
@@ -482,7 +465,6 @@ The sample below has significant amount of data. While the data is being exporte
 <div class="divider--half"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-
 <code-view style="height: 370px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/tree-grid-exporting-visualization/" >
@@ -532,7 +514,6 @@ Here is a sample snippet:
 The following sample demonstrates how to add an additional button to the toolbar to clear the sorting set by clicking on the columns' headers:
 
 @@if (igxName === 'IgxGrid') {
-
 <code-view style="height:420px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/grid/grid-toolbar-sample-4/" >
@@ -541,7 +522,6 @@ The following sample demonstrates how to add an additional button to the toolbar
 <div class="divider"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-
 <code-view style="height:420px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/tree-grid/treegrid-toolbar-3/" >
@@ -550,7 +530,6 @@ The following sample demonstrates how to add an additional button to the toolbar
 <div class="divider"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-
 <code-view style="height:510px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/hierarchical-grid/hierarchical-grid-toolbar-custom/" >
@@ -645,7 +624,6 @@ The last step is to **include** the newly created themes.
 ### Demo
 
 @@if (igxName === 'IgxGrid') {
-
 <code-view style="height:510px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -655,7 +633,6 @@ The last step is to **include** the newly created themes.
 <div class="divider"></div>
 }
 @@if (igxName === 'IgxTreeGrid') {
-
 <code-view style="height:420px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"
@@ -665,7 +642,6 @@ The last step is to **include** the newly created themes.
 <div class="divider"></div>
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
-
 <code-view style="height:530px"
            no-theming
            data-demos-base-url="{environment:demosBaseUrl}"

@@ -199,13 +199,13 @@ With it you gain access to the date picker's [`calendar`](calendar.md) and all o
 
 Opening and closing the [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html)'s calendar UI with the keyboard is available only for `dropdown` mode and can be triggered via the key combinations below:
 
-|Keys|Description|
-|----|-----------|
-| <kbd>Space</kbd> | Displays the calendar pop-up and focuses it |
-| <kbd>Alt</kbd> + <kbd>&darr;</kbd> | Displays the calendar pop-up and focuses it |
-| <kbd>Esc</kbd> | Closes the calendar pop-up and focuses the input field |
-| <kbd>Enter</kbd> | Closes the calendar pop-up, selecting the focused date and moves the focus to the input field |
-| <kbd>Alt</kbd> + <kbd>&uarr;</kbd> | Closes the calendar pop-up and focuses the input field |
+| Keys                               | Description                                                                                   |
+| :--------------------------------- | :-------------------------------------------------------------------------------------------- |
+| <kbd>Space</kbd>                   | Displays the calendar pop-up and focuses it                                                   |
+| <kbd>Alt</kbd> + <kbd>&darr;</kbd> | Displays the calendar pop-up and focuses it                                                   |
+| <kbd>Esc</kbd>                     | Closes the calendar pop-up and focuses the input field                                        |
+| <kbd>Enter</kbd>                   | Closes the calendar pop-up, selecting the focused date and moves the focus to the input field |
+| <kbd>Alt</kbd> + <kbd>&uarr;</kbd> | Closes the calendar pop-up and focuses the input field                                        |
 
 Since the [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepickercomponent.html) uses the [`IgxDateTimeEditorDirective`](date-time-editor.md) it inherits its keyboard navigation.
 
