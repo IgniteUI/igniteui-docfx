@@ -101,14 +101,14 @@ npx --package igniteui-cli igniteui new my-app --framework=angular --type=igx-ts
 Common variants include:
 
 - `--framework=angular`
-- `--template=base` for an project structure with routing
+- `--template=base` for a project structure with routing
 - `--template=empty` for an empty project structure with routing and home page
 - `--template=side-nav` for a project with side navigation
 - `--template=side-nav-auth` for a side navigation project with authentication
 - `--type=igx-ts` for Angular projects that use standalone components by default
 - `--type=igx-ts-legacy` for Angular projects that use module-based bootstrapping
 
-For more project templates and CLI command details, see the [Ignite UI CLI](../../general-cli-overview.md) topic.
+For more project templates and CLI command details, see the [Ignite UI CLI](../cli-overview.md) topic.
 
 ## Step 4: Complete the Guided CLI Setup
 
