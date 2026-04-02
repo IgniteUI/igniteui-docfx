@@ -37,7 +37,7 @@ Ignite UI for Angular is offered under a dual-license model, which allows for bo
 
 ## Installing Ignite UI for Angular
 
-Ignite UI for Angular can be installed using the Ignite UI CLI or Angular Schematics.
+Ignite UI for Angular can be installed using the Ignite UI CLI, Angular Schematics, or the Angular CLI `ng add igniteui-angular` command (for existing Angular CLI projects).
 
 ### Quick Start with Ignite UI CLI
 
