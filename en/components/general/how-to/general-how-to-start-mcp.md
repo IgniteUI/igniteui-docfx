@@ -158,7 +158,7 @@ Typical next actions include:
 
 This guide covers the empty-folder MCP-first flow for Angular. If you prefer to create the Angular project with Ignite UI CLI first and continue with MCP after that, see the [Create a Project with Ignite UI CLI, then Continue with MCP](general-how-to-start-mcp-cli-project.md) topic.
 
-If you already have a Angular project and want to connect MCP to the existing codebase, see [Use MCP in an Existing Project](general-how-to-use-mcp-existing-project.md).
+If you already have an Angular project and want to connect MCP to the existing codebase, see [Use MCP in an Existing Project](general-how-to-use-mcp-existing-project.md).
 
 If you want a short overview of the available MCP setup paths first, see [Ignite UI MCP Overview](general-how-to-mcp-overview.md).
 
