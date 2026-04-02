@@ -104,7 +104,7 @@ Use the short guide below to choose the best starting point:
 
 - [Start from an Empty Folder with MCP for Angular](general-how-to-start-mcp.md)
   Use this when you want to begin with an empty workspace, add the MCP configuration for your AI client, and let the assistant help create the Angular project from the beginning.
-- [Create a Angular Project with Ignite UI CLI, then Continue with MCP](general-how-to-start-mcp-cli-project.md)
+- [Create an Angular Project with Ignite UI CLI, then Continue with MCP](general-how-to-start-mcp-cli-project.md)
   Use this when you want to create the Angular project with Ignite UI CLI first and continue with the generated MCP setup after that.
 - [Use MCP in an Existing Angular Project](general-how-to-use-mcp-existing-project.md)
   Use this when you want to connect MCP to an existing Angular project, continue working in the current codebase, and ask documentation or API questions in chat.
