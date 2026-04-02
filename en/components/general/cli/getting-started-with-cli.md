@@ -186,6 +186,7 @@ ig start
 Ignite UI CLI ships with a built-in MCP (Model Context Protocol) server. Connect it to GitHub Copilot, Claude, or Cursor and your assistant can query component docs, retrieve API details, and generate accurate Ignite UI code without switching context.
 
 To start the MCP server:
+
 ```cmd
 ig mcp
 ```
