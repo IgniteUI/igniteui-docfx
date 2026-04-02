@@ -61,7 +61,7 @@
     - name: Use Standalone Components
       href: general/how-to/how-to-use-standalone-components.md
       updated: false
-    - name: Ignite UI MCP Overview
+    - name: Ignite UI CLI MCP Overview
       href: general/how-to/general-how-to-mcp-overview.md
       new: true
     - name: Start from an Empty Folder with MCP
