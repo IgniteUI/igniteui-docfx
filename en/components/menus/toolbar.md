@@ -21,8 +21,6 @@ The Angular Toolbar component is a companion container for UI operations to be u
 
 ## Dependencies
 
-<!-- Angular, WebComponents, React -->
-
 Install the Ignite UI for Angular layouts, inputs, charts and core packages:
 
 ```cmd
@@ -66,8 +64,6 @@ IgrDataChartAnnotationModule.register();
 IgrDataChartInteractivityModule.register();
 IgrDataChartCategoryTrendLineModule.register();
 ```
-
-<!-- end:Angular, WebComponents, React -->
 
 ## Usage
 

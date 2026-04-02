@@ -25,8 +25,6 @@ Interacting with the chart type menu in the toolbar will allow for selecting a d
 
 ## Dependencies
 
-<!-- Angular, WebComponents, React -->
-
 Install the following packages in the Ignite UI for Angular toolset:
 
 ```cmd
@@ -59,8 +57,6 @@ import { IgxDashboardTileModule, IgxDataChartDashboardTileModule, IgxRadialGauge
 })
 export class AppModule {}
 ```
-
-<!-- end:Angular, WebComponents, React -->
 
 ## Usage
 

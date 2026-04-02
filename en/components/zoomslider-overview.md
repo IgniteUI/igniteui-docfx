@@ -34,8 +34,6 @@ The following sample demonstrates how to use [`IgxZoomSliderComponent`]({environ
 | Extensibility                     | The ZoomSlider control supports DataChart control out-of the box.                                                                                                          |
 | Configurable zoom-range window    | The initial zoom-range window width and position, as well as its minimum size, are configurable.                                                                           |
 
-<!-- Angular, React, WebComponents -->
-
 ## Dependencies
 
 When installing the Angular chart component, the core package must also be installed.
@@ -44,8 +42,6 @@ When installing the Angular chart component, the core package must also be insta
 npm install --save igniteui-angular-core
 npm install --save igniteui-angular-charts
 ```
-
-<!-- end: Angular, React, WebComponents -->
 
 ## Component Modules
 
