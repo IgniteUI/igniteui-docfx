@@ -13,10 +13,10 @@ _keywords: Ignite UI for Angular, UI controls, Angular widgets, web widgets, UI 
 
 Here's a list of global Sass variables forwarded in the main theming module:
 
-| Variable Name | Description                                                                 |
-|:-------------:|:---------------------------------------------------------------------------:|
-| `$components` | Stores a register of all component themes. Used for tree-shaking.           |
-| `$dropped-themes`  | Stores a register of dropped themes. Used for tree-shaking. |
+|    Variable Name  |                                                      Description        |
+| :---------------: | :---------------------------------------------------------------------: |
+|    `$components`  |       Stores a register of all component themes. Used for tree-shaking. |
+| `$dropped-themes` |            Stores a register of dropped themes. Used for tree-shaking.  |
 
 ## Scrollbar Styling
 

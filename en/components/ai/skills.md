@@ -12,11 +12,11 @@ Ignite UI for Angular ships with **Agent Skills** — structured knowledge files
 
 The skill files live in the [`skills/`](https://github.com/IgniteUI/igniteui-angular/tree/master/skills) directory of the Ignite UI for Angular repository:
 
-| Skill | Path | Description |
-|:------|:-----|:------------|
-| Components & Layout | [`skills/igniteui-angular-components/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-components/SKILL.md) | Standalone components, form controls, overlays, layout |
-| Data Grids | [`skills/igniteui-angular-grids/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-grids/SKILL.md) | Grid, Tree Grid, Hierarchical Grid, Pivot Grid, sorting, filtering, grouping, paging, remote data |
-| Theming & Styling | [`skills/igniteui-angular-theming/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-theming/SKILL.md) | Palettes, typography, elevations, component themes, MCP server |
+| Skill               | Path                                                                                                                                                  | Description                                                                                       |
+| :------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ |
+| Components & Layout | [`skills/igniteui-angular-components/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-components/SKILL.md) | Standalone components, form controls, overlays, layout                                            |
+| Data Grids          | [`skills/igniteui-angular-grids/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-grids/SKILL.md)           | Grid, Tree Grid, Hierarchical Grid, Pivot Grid, sorting, filtering, grouping, paging, remote data |
+| Theming & Styling   | [`skills/igniteui-angular-theming/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-theming/SKILL.md)       | Palettes, typography, elevations, component themes, MCP server                                    |
 
 > **Note:** Starting with Ignite UI for Angular **21.1.0**, these skills are automatically discovered when placed in your agent's skills path (e.g., `.claude/skills`, `.agents/skills`, `.cursor/rules/`). This release ships with an optional `ng update` migration to add these skills to your project automatically when updating to `igniteui-angular` 21.1.0 or later.
 
@@ -240,14 +240,14 @@ Once complete, the skills are ready to use — no manual file copying required.
 
 Once you have the files, open them and load them into your AI assistant:
 
-| IDE / Tool | How to load |
-|:-----------|:------------|
-| **VS Code + GitHub Copilot** | Use `#file:path/to/SKILL.md` in the Copilot Chat input to attach it as context for that session. |
-| **Cursor** | Drag the `SKILL.md` file into the chat window, or type `@file` and select it. |
-| **Windsurf** | Attach the file using the **+** button in the Cascade chat panel. |
-| **JetBrains AI Assistant** | Click the paperclip icon in the AI chat to attach the file as context. |
-| **Claude Desktop** | Drag the file into the chat or add it to the project knowledge base via **Project → Add Content**. |
-| **Other assistants** | Open the `SKILL.md` file, copy its full contents, and paste them into the system prompt or at the top of your first message. |
+| IDE / Tool                   | How to load                                                                                                                  |
+| :--------------------------- | :--------------------------------------------------------------------------------------------------------------------------- |
+| **VS Code + GitHub Copilot** | Use `#file:path/to/SKILL.md` in the Copilot Chat input to attach it as context for that session.                             |
+| **Cursor**                   | Drag the `SKILL.md` file into the chat window, or type `@file` and select it.                                                |
+| **Windsurf**                 | Attach the file using the **+** button in the Cascade chat panel.                                                            |
+| **JetBrains AI Assistant**   | Click the paperclip icon in the AI chat to attach the file as context.                                                       |
+| **Claude Desktop**           | Drag the file into the chat or add it to the project knowledge base via **Project → Add Content**.                           |
+| **Other assistants**         | Open the `SKILL.md` file, copy its full contents, and paste them into the system prompt or at the top of your first message. |
 
 ---
 
