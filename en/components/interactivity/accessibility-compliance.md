@@ -83,7 +83,7 @@ The matrix below provides a high-level outline of the accessibility support prov
 | <span class="redCheck" />     | The control/component is not entirely accessible unless you perform some sort of action.              |                                                                                      |
 | 'white space'                 | this particular rule does not apply to the control                                                    |                                                                                      |
 
-> \[!WARNING]
+> [!WARNING]
 > The table above is relevant only to the **Default theme**of Ignite UI for Angular theming library. The checklist compliance might be different when it comes to custom themes, typography and any visual changes related to animations and colors.
 
 ### Compliance Information
@@ -164,7 +164,7 @@ The matrix below provides a high-level outline of the accessibility support prov
 | <span class="redCheck" />     | The control/component is not entirely accessible unless you perform some sort of action.              |                                                                                                                                                                                                               |
 | 'white space'                 | this particular rule does not apply to the control                                                    |                                                                                                                                                                                                               |
 
-> \[!WARNING]
+> [!WARNING]
 > The table above is relevant only to the **Default theme**of Ignite UI for Angular theming library. The checklist compliance might be different when it comes to custom themes, typography and any visual changes related to animations and colors.
 
 ### Compliance Information

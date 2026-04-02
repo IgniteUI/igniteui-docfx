@@ -35,7 +35,7 @@ The next step is to import the `IgxTooltipModule` in your **app.module.ts** file
 // app.module.ts
 
 ...
-import { IgxTooltipModule } from 'igniteui-angular/tooltip';
+import { IgxTooltipModule } from 'igniteui-angular/directives';
 // import { IgxTooltipModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -50,7 +50,7 @@ Alternatively, as of `16.0.0` you can import the `IgxTooltipDirective` as a stan
 ```typescript
 // home.component.ts
 
-import { IGX_TOOLTIP_DIRECTIVES } from 'igniteui-angular/tooltip';
+import { IGX_TOOLTIP_DIRECTIVES } from 'igniteui-angular/directives';
 import { IgxAvatarComponent } from 'igniteui-angular/avatar';
 // import { IGX_TOOLTIP_DIRECTIVES, IgxAvatarComponent } from '@infragistics/igniteui-angular'; for licensed package
 
@@ -86,7 +86,7 @@ Let's say we want to create a simple text tooltip like the one above. In our cas
 ```typescript
 // app.module.ts
 
-import { IgxTooltipModule } from 'igniteui-angular/tooltip';
+import { IgxTooltipModule } from 'igniteui-angular/directives';
 import { IgxAvatarModule } from 'igniteui-angular/avatar';
 // import { IgxTooltipModule, IgxAvatarModule } from '@infragistics/igniteui-angular'; for licensed package
 
@@ -160,7 +160,7 @@ Let's expand on the use of the [`igxTooltip`]({environment:angularApiUrl}/classe
 ```typescript
 // app.module.ts
 
-import { IgxTooltipModule } from 'igniteui-angular/tooltip';
+import { IgxTooltipModule } from 'igniteui-angular/directives';
 import { IgxAvatarModule } from 'igniteui-angular/avatar';
 import { IgxIconModule } from 'igniteui-angular/icon';
 // import { IgxTooltipModule, IgxAvatarModule, IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package

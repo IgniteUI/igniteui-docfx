@@ -53,7 +53,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、[`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) をスタンドアロンの依存関係としてインポートすることも、[`IGX_DATE_RANGE_PICKER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/date-range-picker/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、[`IgxDateRangePickerComponent`]({environment:angularApiUrl}/classes/igxdaterangepickercomponent.html) をスタンドアロンの依存関係としてインポートすることも、[`IGX_DATE_RANGE_PICKER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/date-picker/src/date-range-picker/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts

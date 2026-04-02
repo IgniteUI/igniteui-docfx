@@ -1483,7 +1483,7 @@ The `ng update` process will update all enumeration names, like `AvatarType`, `T
     }
     ```
 
-    You can read more about setting up the combo in the [readme](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/combo/README.md#value-binding) and in the [official documentation](../combo.md#selection-api).
+    You can read more about setting up the combo in the [readme](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/combo/README.md#value-binding) and in the [official documentation](../combo.md#selection-api).
 
 ## From 8.0.x to 8.1.x
 

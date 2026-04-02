@@ -100,7 +100,7 @@ import { IgxGridModule } from 'igniteui-angular/grids/grid';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxGridComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/grid/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxGridComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/grids/grid/src/grid.module.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts

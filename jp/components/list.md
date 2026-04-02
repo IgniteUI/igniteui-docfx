@@ -51,7 +51,7 @@ import { IgxListModule } from 'igniteui-angular/list';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxListComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_LIST_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/list/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxListComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_LIST_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/list/src/list/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts

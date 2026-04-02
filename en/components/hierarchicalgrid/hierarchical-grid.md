@@ -51,7 +51,7 @@ import { IgxHierarchicalGridModule } from 'igniteui-angular/grids/hierarchical-g
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxHierarchicalGridComponent` as a standalone dependency, or use the [`IGX_HIERARCHICAL_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/hierarchical-grid/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxHierarchicalGridComponent` as a standalone dependency, or use the [`IGX_HIERARCHICAL_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/grids/hierarchical-grid/src/hierarchical-grid.module.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
