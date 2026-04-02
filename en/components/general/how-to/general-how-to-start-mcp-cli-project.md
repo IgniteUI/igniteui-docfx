@@ -108,7 +108,7 @@ Common variants include:
 - `--type=igx-ts` for Angular projects that use standalone components by default
 - `--type=igx-ts-legacy` for Angular projects that use module-based bootstrapping
 
-For more project templates and CLI command details, see the [Ignite UI CLI](../../general-cli-overview.md) topic.
+For more project templates and CLI command details, see the [Ignite UI CLI](../cli-overview.md) topic.
 
 ## Step 4: Complete the Guided CLI Setup
 
