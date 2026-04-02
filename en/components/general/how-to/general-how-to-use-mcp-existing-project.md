@@ -6,7 +6,7 @@ _keywords: Angular, Ignite UI for Angular, Infragistics, MCP, Model Context Prot
 
 # Use MCP in an Existing Project
 
-This guide shows how to connect Ignite UI MCP to a Angular project that already exists and continue working in the current codebase.
+This guide shows how to connect Ignite UI MCP to an Angular project that already exists and continue working in the current codebase.
 
 It also shows how to use MCP in chat to ask documentation questions about Angular components, configuration, and available API members.
 
