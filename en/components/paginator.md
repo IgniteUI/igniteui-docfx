@@ -126,22 +126,22 @@ Paging can also be done programmatically through the Paging API /which is descri
 
 ## Paging API
 
-| Input           |      Description                           |
-|-----------------|:------------------------------------------:|
-| page            | Gets/Sets the current page. |
-| perPage         | Gets/Sets the number of visible items per page. |
+| Input           |                                                                                             Description              |
+| :-------------- | :------------------------------------------------------------------------------------------------------------------: |
+| page            |                                                                              Gets/Sets the current page.             |
+| perPage         |                                                             Gets/Sets the number of visible items per page.          |
 | selectOptions   | Gets/Sets custom options in the Select element of the paginator. Default select values [5, 10, 15, 25, 50, 100, 500] |
-| totalRecords    | Gets/Sets the total records count. |
-| totalPages      | Gets/Sets the total Pages count. |
-| resourceStrings | Gets/Sets the resource strings. By default it uses EN resource strings. |
-| overlaySettings | Gets/Sets a custom OverlaySettings. |
+| totalRecords    |                                                                        Gets/Sets the total records count.            |
+| totalPages      |                                                                          Gets/Sets the total Pages count.            |
+| resourceStrings |                                        Gets/Sets the resource strings. By default it uses EN resource strings.       |
+| overlaySettings |                                                                       Gets/Sets a custom OverlaySettings.            |
 
-| Output         |      Description                           |
-|----------------|:------------------------------------------:|
-| perPageChange   | Emitted when `perPage` property value of the paginator is changed. |
-| pageChange      | Emitted after the current page is changed. |
-| paging          | Emitted before paging is performed. Cancelable.|
-| pagingDone      | Emitted after paging is performed. |
+| Output        |                                                 Description        |
+| :------------ | :----------------------------------------------------------------: |
+| perPageChange | Emitted when `perPage` property value of the paginator is changed. |
+| pageChange    |                      Emitted after the current page is changed.    |
+| paging        |                 Emitted before paging is performed. Cancelable.    |
+| pagingDone    |                             Emitted after paging is performed.     |
 
 
 ## Angular Paginator Localization

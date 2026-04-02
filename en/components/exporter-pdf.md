@@ -202,8 +202,8 @@ The following fonts provide excellent Unicode coverage:
 
 ## Known Limitations
 
-| Limitation | Description |
-|---|---|
+| Limitation       | Description                                                                                                                                                              |
+| :--------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Wide PDF layouts | Very wide grids can force PDF columns to shrink to fit the page. Apply explicit column widths or hide low‑priority fields before exporting to keep the document legible. |
 
 ## API References

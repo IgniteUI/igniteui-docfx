@@ -16,7 +16,7 @@ This topic provides information about breaking changes in Ignite UI for Angular 
 - All types of charts/series have new colors for brush/fill and outlines
 
 | Old series brushes outlines | New series outline brushes |
-| --------------------------- | -------------------------- |
+| :-------------------------- | :------------------------- |
 | `Color_001=#7446B9`         | `Color_001=#8bdc5c`        |
 | `Color_002=#9FB328`         | `Color_002=#8b5bb1`        |
 | `Color_003=#F96232`         | `Color_003=#6db1ff`        |
@@ -40,19 +40,19 @@ This topic provides information about breaking changes in Ignite UI for Angular 
 
 - Scatter High Density series has new colors for min/max heat properties
 
-    | Old heat min color | New heat min color |
-    | ------------------ | ------------------ |
-    | `#FF7446B9`        | `#ff8b5bb1`        |
+| Old heat min color | New heat min color |
+| :----------------- | :----------------- |
+| `#FF7446B9`        | `#ff8b5bb1`        |
 
-    | Old heat max color | New heat max color |
-    | ------------------ | ------------------ |
-    | `#FFC62828`        | `#ffee5879`        |
+| Old heat max color | New heat max color |
+| :----------------- | :----------------- |
+| `#FFC62828`        | `#ffee5879`        |
 
 - Financial/Waterfall series have new colors for negative fill of their visuals
 
-    | Old negative brush | new negative brush |
-    | ------------------ | ------------------ |
-    | `#FFC62828`        | `#ffee5879`        |
+| Old negative brush | new negative brush |
+| :----------------- | :----------------- |
+| `#FFC62828`        | `#ffee5879`        |
 
 <div class="divider--half"></div>
 
@@ -68,10 +68,10 @@ Import statements have been simplified to use just package names instead of full
 > These breaking changes were introduce in version **8.2.12** of these packages and components:
 
 | Affected Packages                                                                                                              | Affected Components                                                                                         |
-| ------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| :----------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------- |
 | <a href="https://www.npmjs.com/package/igniteui-angular-excel/v/8.2.12" target="_blank">igniteui-angular-excel</a>             | [Excel Library](excel-library.md)                                                                           |
 | <a href="https://www.npmjs.com/package/igniteui-angular-spreadsheet/v/8.2.12" target="_blank">igniteui-angular-spreadsheet</a> | [Spreadsheet](spreadsheet-overview.md)                                                                      |
-| <a href="https://www.npmjs.com/package/igniteui-angular-maps/v/8.2.12" target="_blank">igniteui-angular-maps</a>               | [Geo Map](geo-map.md), [Treemap](charts/types/treemap-chart.md)                                                       |
+| <a href="https://www.npmjs.com/package/igniteui-angular-maps/v/8.2.12" target="_blank">igniteui-angular-maps</a>               | [Geo Map](geo-map.md), [Treemap](charts/types/treemap-chart.md)                                             |
 | <a href="https://www.npmjs.com/package/igniteui-angular-gauges/v/8.2.12" target="_blank">igniteui-angular-gauges</a>           | [Bullet Graph](bullet-graph.md), [Linear Gauge](linear-gauge.md), [Radial Gauge](radial-gauge.md)           |
 | <a href="https://www.npmjs.com/package/igniteui-angular-charts/v/8.2.12" target="_blank">igniteui-angular-charts</a>           | Category Chart, Data Chart, Donut Chart, Financial Chart], Pie Chart, [Zoom Slider](zoomslider-overview.md) |
 | <a href="https://www.npmjs.com/package/igniteui-angular-core/v/8.2.12" target="_blank">igniteui-angular-core</a>               | all classes and enums                                                                                       |

@@ -327,12 +327,12 @@ This feature allows developers to quickly create a pivot view without manually s
 
 ## Known Issues and Limitations
 
-|Limitation|Description|
-|--- |--- |
-| Setting columns declaratively is not supported. | The Pivot grid generates its columns based on the `columns` configuration, so setting them declaratively, like in the base grid, is not supported. Such columns are disregarded. |
-| Setting duplicate `memberName` or `member` property values for dimensions/values. | `memberName`/`member` should be unique for each dimension/value. Duplication may result in loss of data from the final result. |
-| Row Selection is only supported in `single` mode. | Multiple selection is currently not supported. |
-| Merging the dimension members is case sensitive| The pivot grid creates groups and merges the same (case sensitive) values. But the dimensions provide `memberFunction` and this can be changed there, the result of the `memberFunction` are compared and used as display value.|
+| Limitation                                                                        | Description                                                                                                                                                                                                                      |
+| :-------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Setting columns declaratively is not supported.                                   | The Pivot grid generates its columns based on the `columns` configuration, so setting them declaratively, like in the base grid, is not supported. Such columns are disregarded.                                                 |
+| Setting duplicate `memberName` or `member` property values for dimensions/values. | `memberName`/`member` should be unique for each dimension/value. Duplication may result in loss of data from the final result.                                                                                                   |
+| Row Selection is only supported in `single` mode.                                 | Multiple selection is currently not supported.                                                                                                                                                                                   |
+| Merging the dimension members is case sensitive                                   | The pivot grid creates groups and merges the same (case sensitive) values. But the dimensions provide `memberFunction` and this can be changed there, the result of the `memberFunction` are compared and used as display value. |
 
 ## API References
 
