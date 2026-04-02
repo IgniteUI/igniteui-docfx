@@ -73,6 +73,6 @@ If you choose to add a scenario to your application you will also get a list of 
 
 <img class="responsive-img"  src="../../../images/general/ig-step-by-step-scenario-templates.png" alt="Scenario templates" />
 
-After adding a template to your application, you will be asked weather you want to complete the process or to proceed with adding more controls. When you choose to complete the process, the required packages will be installed (on project creation) and the application will be served and opened in your default browser.
+After adding a template to your application, you will be asked whether you want to complete the process or to proceed with adding more controls. When you choose to complete the process, the required packages will be installed (on project creation) and the application will be served and opened in your default browser.
 
 You can always add more Ignite UI for Angular views to your application at latter moment using the `ng g @igniteui/angular-schematics:c [template] [name]` command.

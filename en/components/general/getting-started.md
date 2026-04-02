@@ -308,11 +308,16 @@ Ignite UI for Angular ships with **Agent Skills** — structured knowledge files
 
 Learn more in the [Ignite UI for Angular Skills](../ai/skills.md) topic.
 
+The **Ignite UI CLI** also includes a built-in **MCP (Model Context Protocol) server** that gives AI assistants live access to Ignite UI component documentation and API references directly inside your editor. Unlike static skills, the MCP server lets your assistant query up-to-date docs, search APIs, and retrieve setup guides on demand.
+
+Learn more in the Ignite UI MCP Server topic.
+
 ## Additional Resources
 
 <div class="divider--half"></div>
 
 - [Ignite UI for Angular Skills](../ai/skills.md)
+- Ignite UI MCP Server
 - [Ignite UI CLI](https://github.com/IgniteUI/igniteui-cli)
 - [Ignite UI CLI Commands](https://github.com/IgniteUI/igniteui-cli/wiki#available-commands)
 - [Grid overview](../grid/grid.md)
