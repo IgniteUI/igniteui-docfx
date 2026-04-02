@@ -48,10 +48,10 @@ ng add igniteui-angular
 
 The new application is created in a directory with the same name (`newAngularProject`). There are several project templates from which you can choose when creating an Ignite UI for Angular application:
 
-| template id   | template description |
-| ---           | ---                  |
-| empty         | Project structure with routing and a home page |
-| side-nav      | Project structure with side navigation drawer |
+| template id   | template description                                                                                                                                                            |
+| :------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| empty         | Project structure with routing and a home page                                                                                                                                  |
+| side-nav      | Project structure with side navigation drawer                                                                                                                                   |
 | side-nav-auth | Side navigation project extended with user authentication module. <br> [Angular Authentication Project Template](auth-template.md) topic covers the project template in detail. |
 
 Additionally, you can specify **arguments** to control the theme or skip packages install:

@@ -382,20 +382,20 @@ The arrow element is positioned based on the provided position settings. If the 
 
 #### Predefined position values
 
-| Position     | Horizontal Direction          | Horizontal Start Point         | Vertical Direction            | Vertical Start Point           |
-|--------------|-------------------------------|--------------------------------|-------------------------------|--------------------------------|
-| top          | HorizontalAlignment.Center    | HorizontalAlignment.Center     | VerticalAlignment.Top         | VerticalAlignment.Top          |
-| top-start    | HorizontalAlignment.Right     | HorizontalAlignment.Left       | VerticalAlignment.Top         | VerticalAlignment.Top          |
-| top-end      | HorizontalAlignment.Left      | HorizontalAlignment.Right      | VerticalAlignment.Top         | VerticalAlignment.Top          |
-| bottom       | HorizontalAlignment.Center    | HorizontalAlignment.Center     | VerticalAlignment.Bottom      | VerticalAlignment.Bottom       |
-| bottom-start | HorizontalAlignment.Right     | HorizontalAlignment.Left       | VerticalAlignment.Bottom      | VerticalAlignment.Bottom       |
-| bottom-end   | HorizontalAlignment.Left      | HorizontalAlignment.Right      | VerticalAlignment.Bottom      | VerticalAlignment.Bottom       |
-| right        | HorizontalAlignment.Right     | HorizontalAlignment.Right      | VerticalAlignment.Middle      | VerticalAlignment.Middle       |
-| right-start  | HorizontalAlignment.Right     | HorizontalAlignment.Right      | VerticalAlignment.Bottom      | VerticalAlignment.Top          |
-| right-end    | HorizontalAlignment.Right     | HorizontalAlignment.Right      | VerticalAlignment.Top         | VerticalAlignment.Bottom       |
-| left         | HorizontalAlignment.Left      | HorizontalAlignment.Left       | VerticalAlignment.Middle      | VerticalAlignment.Middle       |
-| left-start   | HorizontalAlignment.Left      | HorizontalAlignment.Left       | VerticalAlignment.Bottom      | VerticalAlignment.Top          |
-| left-end     | HorizontalAlignment.Left      | HorizontalAlignment.Left       | VerticalAlignment.Top         | VerticalAlignment.Bottom       |
+| Position     | Horizontal Direction       | Horizontal Start Point     | Vertical Direction       | Vertical Start Point     |
+| :----------- | :------------------------- | :------------------------- | :----------------------- | :----------------------- |
+| top          | HorizontalAlignment.Center | HorizontalAlignment.Center | VerticalAlignment.Top    | VerticalAlignment.Top    |
+| top-start    | HorizontalAlignment.Right  | HorizontalAlignment.Left   | VerticalAlignment.Top    | VerticalAlignment.Top    |
+| top-end      | HorizontalAlignment.Left   | HorizontalAlignment.Right  | VerticalAlignment.Top    | VerticalAlignment.Top    |
+| bottom       | HorizontalAlignment.Center | HorizontalAlignment.Center | VerticalAlignment.Bottom | VerticalAlignment.Bottom |
+| bottom-start | HorizontalAlignment.Right  | HorizontalAlignment.Left   | VerticalAlignment.Bottom | VerticalAlignment.Bottom |
+| bottom-end   | HorizontalAlignment.Left   | HorizontalAlignment.Right  | VerticalAlignment.Bottom | VerticalAlignment.Bottom |
+| right        | HorizontalAlignment.Right  | HorizontalAlignment.Right  | VerticalAlignment.Middle | VerticalAlignment.Middle |
+| right-start  | HorizontalAlignment.Right  | HorizontalAlignment.Right  | VerticalAlignment.Bottom | VerticalAlignment.Top    |
+| right-end    | HorizontalAlignment.Right  | HorizontalAlignment.Right  | VerticalAlignment.Top    | VerticalAlignment.Bottom |
+| left         | HorizontalAlignment.Left   | HorizontalAlignment.Left   | VerticalAlignment.Middle | VerticalAlignment.Middle |
+| left-start   | HorizontalAlignment.Left   | HorizontalAlignment.Left   | VerticalAlignment.Bottom | VerticalAlignment.Top    |
+| left-end     | HorizontalAlignment.Left   | HorizontalAlignment.Left   | VerticalAlignment.Top    | VerticalAlignment.Bottom |
 
 
 In the following example, you can see a demonstration of all position options and the arrow positioning behavior in action:
@@ -563,9 +563,9 @@ Extra care should be taken in the following scenarios:
 
 ## Notes and Limitations
 
-| Limitation                          | Description|
-| ----------------------------------- | ---------- |
-| Custom position strategy with arrow | The [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive uses the [`TooltipPositionStrategy`]({environment:angularApiUrl}/classes/tooltippositionstrategy.html) to position the tooltip and arrow element. If a custom [`positionStrategy`]({environment:angularApiUrl}/interfaces/overlaysettings.html#positionstrategy) is used and [`hasArrow`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hasarrow) is set to `true`, the custom strategy should extend the [`TooltipPositionStrategy`]({environment:angularApiUrl}/classes/tooltippositionstrategy.html). Otherwise, the arrow will not be displayed.|
+| Limitation                          | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| :---------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Custom position strategy with arrow | The [`igxTooltipTarget`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html) directive uses the [`TooltipPositionStrategy`]({environment:angularApiUrl}/classes/tooltippositionstrategy.html) to position the tooltip and arrow element. If a custom [`positionStrategy`]({environment:angularApiUrl}/interfaces/overlaysettings.html#positionstrategy) is used and [`hasArrow`]({environment:angularApiUrl}/classes/igxtooltiptargetdirective.html#hasarrow) is set to `true`, the custom strategy should extend the [`TooltipPositionStrategy`]({environment:angularApiUrl}/classes/tooltippositionstrategy.html). Otherwise, the arrow will not be displayed. |
 
 
 ## API References
