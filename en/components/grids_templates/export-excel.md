@@ -313,44 +313,44 @@ Before shipping exports to production users, review the following platform const
 
 @@if (igxName === 'IgxGrid') {
 
-|Limitation|Description|
-|--- |--- |
-|Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns. Consider slicing extremely large exports by date range or segment to stay within these limits.|
-|Cell Styling|The Excel exporter service does not support exporting a custom style applied directly to a cell component. In such scenarios we recommend using the richer [Excel Library](../excel-library.md) for fine-grained formatting.|
-|Wide PDF layouts|Very wide grids can force PDF columns to shrink to fit the page. Apply column widths or hide low-priority fields before exporting to keep the document legible.|
+| Limitation         | Description                                                                                                                                                                                                                  |
+| :----------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Max worksheet size | The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns. Consider slicing extremely large exports by date range or segment to stay within these limits.                                            |
+| Cell Styling       | The Excel exporter service does not support exporting a custom style applied directly to a cell component. In such scenarios we recommend using the richer [Excel Library](../excel-library.md) for fine-grained formatting. |
+| Wide PDF layouts   | Very wide grids can force PDF columns to shrink to fit the page. Apply column widths or hide low-priority fields before exporting to keep the document legible.                                                              |
 
 }
 
 @@if (igxName === 'IgxTreeGrid') {
 
-|Limitation|Description|
-|--- |--- |
-|Hierarchy levels|The exporter supports up to 8 levels of hierarchy. If you need deeper structures, flatten the data or export subsets to keep the file readable.|
-|Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns. Consider slicing extremely large exports by date range or segment to stay within these limits.|
-|Cell Styling|The Excel exporter service does not support exporting a custom style applied directly to a cell component. In such scenarios we recommend using the richer [Excel Library](../excel-library.md) for fine-grained formatting.|
-|Wide PDF layouts|Very wide grids can force PDF columns to shrink to fit the page. Apply column widths or hide low-priority fields before exporting to keep the document legible.|
+| Limitation         | Description                                                                                                                                                                                                                  |
+| :----------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Hierarchy levels   | The exporter supports up to 8 levels of hierarchy. If you need deeper structures, flatten the data or export subsets to keep the file readable.                                                                              |
+| Max worksheet size | The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns. Consider slicing extremely large exports by date range or segment to stay within these limits.                                            |
+| Cell Styling       | The Excel exporter service does not support exporting a custom style applied directly to a cell component. In such scenarios we recommend using the richer [Excel Library](../excel-library.md) for fine-grained formatting. |
+| Wide PDF layouts   | Very wide grids can force PDF columns to shrink to fit the page. Apply column widths or hide low-priority fields before exporting to keep the document legible.                                                              |
 
 }
 
 @@if (igxName === 'IgxHierarchicalGrid') {
 
-|Limitation|Description|
-|--- |--- |
-|Hierarchy levels|The exporter supports up to 8 levels of hierarchy. If you need deeper structures, flatten the data or export subsets to keep the file readable.|
-|Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns. Consider slicing extremely large exports by date range or segment to stay within these limits.|
-|Exporting pinned columns|In the exported Excel file, pinned columns are not frozen but preserve their order. If freezing is critical, adjust the sheet manually after export.|
-|Cell Styling|The Excel exporter service does not support exporting a custom style applied directly to a cell component. In such scenarios we recommend using the richer [Excel Library](../excel-library.md) for fine-grained formatting.|
-|Wide PDF layouts|Very wide grids can force PDF columns to shrink to fit the page. Apply column widths or hide low-priority fields before exporting to keep the document legible.|
+| Limitation               | Description                                                                                                                                                                                                                  |
+| :----------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Hierarchy levels         | The exporter supports up to 8 levels of hierarchy. If you need deeper structures, flatten the data or export subsets to keep the file readable.                                                                              |
+| Max worksheet size       | The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns. Consider slicing extremely large exports by date range or segment to stay within these limits.                                            |
+| Exporting pinned columns | In the exported Excel file, pinned columns are not frozen but preserve their order. If freezing is critical, adjust the sheet manually after export.                                                                         |
+| Cell Styling             | The Excel exporter service does not support exporting a custom style applied directly to a cell component. In such scenarios we recommend using the richer [Excel Library](../excel-library.md) for fine-grained formatting. |
+| Wide PDF layouts         | Very wide grids can force PDF columns to shrink to fit the page. Apply column widths or hide low-priority fields before exporting to keep the document legible.                                                              |
 
 }
 
 @@if (igxName === 'IgxPivotGrid') {
 
-|Limitation|Description|
-|--- |--- |
-|Max worksheet size|The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns. Consider slicing extremely large exports by date range or segment to stay within these limits.|
-|Cell Styling|The Excel exporter service does not support exporting a custom style applied directly to a cell component. In such scenarios we recommend using the richer [Excel Library](../excel-library.md) for fine-grained formatting.|
-|Wide PDF layouts|Very wide exports can force PDF columns to shrink to fit the page. Apply column widths or hide low-priority fields before exporting to keep the document legible.|
+| Limitation         | Description                                                                                                                                                                                                                  |
+| :----------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Max worksheet size | The maximum worksheet size supported by Excel is 1,048,576 rows by 16,384 columns. Consider slicing extremely large exports by date range or segment to stay within these limits.                                            |
+| Cell Styling       | The Excel exporter service does not support exporting a custom style applied directly to a cell component. In such scenarios we recommend using the richer [Excel Library](../excel-library.md) for fine-grained formatting. |
+| Wide PDF layouts   | Very wide exports can force PDF columns to shrink to fit the page. Apply column widths or hide low-priority fields before exporting to keep the document legible.                                                            |
 
 }
 

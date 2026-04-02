@@ -305,7 +305,7 @@ You can see the result of the code from above at the beginning of this article i
 
 @@if (igxName !== 'IgxHierarchicalGrid') {
 
-### Unique Column Values Strategy
+## Unique Column Values Strategy
 
 }
 

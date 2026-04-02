@@ -38,11 +38,11 @@ The Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ig
 
 The following table provides basic information and purpose for each type of shape files.
 
-| File Extension | Description |
-| ---------------|------------ |
-| `.shp` | A shape file contains geo-spatial vector data items that describe points, polylines, and polygons. In this file, points may describe cities, polylines may describe roads, and polygons may describe shapes/borders of countries in geographic context. |
-| `.shx` | A shape index file contains an index for a quick lookup of a geo-spatial vector data items. |
-| `.dbf` | A shape database file contains a table in which a row corresponds to each geo-spatial data item from a shape (.shp) file. In the shape database file, string columns may describe attributes for geo-spatial data item such as strings (names of countries, regions, cities) and numeric columns (population of countries, location of cities). |
+| File Extension | Description                                                                                                                                                                                                                                                                                                                                     |
+| :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `.shp`         | A shape file contains geo-spatial vector data items that describe points, polylines, and polygons. In this file, points may describe cities, polylines may describe roads, and polygons may describe shapes/borders of countries in geographic context.                                                                                         |
+| `.shx`         | A shape index file contains an index for a quick lookup of a geo-spatial vector data items.                                                                                                                                                                                                                                                     |
+| `.dbf`         | A shape database file contains a table in which a row corresponds to each geo-spatial data item from a shape (.shp) file. In the shape database file, string columns may describe attributes for geo-spatial data item such as strings (names of countries, regions, cities) and numeric columns (population of countries, location of cities). |
 
 Refer to the following resources for detailed information and specifications on how geo-spatial data is stored in shape files.
 
