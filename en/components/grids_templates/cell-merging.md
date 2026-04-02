@@ -214,8 +214,8 @@ Due to the specific behavior of merged cells it has to be noted how exactly it t
 
 ## Limitations
 
-|Known Limitations| Description|
-| --- | --- |
+| Known Limitations                                                   | Description                                                                                                                        |
+| :------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------------------------- |
 | Cell merging is not supported in combination with Multi-row Layout. | Both span complex layouts that don't make sense when combined. A warning will be thrown if such invalid configuration is detected. |
 
 }

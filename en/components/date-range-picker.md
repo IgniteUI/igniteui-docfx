@@ -193,24 +193,24 @@ The available keyboard navigation options vary depending on whether the componen
 
 **Two Inputs Mode:**
 
-|Keys|Description|
-|----|-----------|
-| <kbd>&larr;</kbd> | Moves the caret one character to the left |
-| <kbd>&rarr;</kbd> | Moves the caret one character to the right |
-| <kbd>Ctrl + ArrowLeft</kbd> | Moves the caret to the beginning of the current input mask section or to the start of the previous one if it's already at the beginning |
-| <kbd>Ctrl + ArrowRight</kbd> | Moves the caret to the end of the current input mask section or to the end of the next one if it's already at the end |
-| <kbd>ArrowUp</kbd> | Increments the currently "focused" part of the input mask by one step |
-| <kbd>ArrowDown</kbd> | Decrements the currently "focused" part of the input mask by one step |
-| <kbd>Home</kbd> | Moves the caret to the beginning of the input mask |
-| <kbd>End</kbd> | Moves the caret to the end of the input mask |
-| <kbd>Ctrl + ;</kbd> | Sets the current date as the value of the component |
+| Keys                         | Description                                                                                                                             |
+| :--------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------- |
+| <kbd>&larr;</kbd>            | Moves the caret one character to the left                                                                                               |
+| <kbd>&rarr;</kbd>            | Moves the caret one character to the right                                                                                              |
+| <kbd>Ctrl + ArrowLeft</kbd>  | Moves the caret to the beginning of the current input mask section or to the start of the previous one if it's already at the beginning |
+| <kbd>Ctrl + ArrowRight</kbd> | Moves the caret to the end of the current input mask section or to the end of the next one if it's already at the end                   |
+| <kbd>ArrowUp</kbd>           | Increments the currently "focused" part of the input mask by one step                                                                   |
+| <kbd>ArrowDown</kbd>         | Decrements the currently "focused" part of the input mask by one step                                                                   |
+| <kbd>Home</kbd>              | Moves the caret to the beginning of the input mask                                                                                      |
+| <kbd>End</kbd>               | Moves the caret to the end of the input mask                                                                                            |
+| <kbd>Ctrl + ;</kbd>          | Sets the current date as the value of the component                                                                                     |
 
 **Both Single and Two Inputs Modes:**
 
-|Keys|Description|
-|----|-----------|
-| <kbd>Alt + ArrowDown</kbd> | Opens the calendar dropdown |
-| <kbd>Alt + ArrowUp</kbd> | Closes the calendar dropdown |
+| Keys                       | Description                  |
+| :------------------------- | :--------------------------- |
+| <kbd>Alt + ArrowDown</kbd> | Opens the calendar dropdown  |
+| <kbd>Alt + ArrowUp</kbd>   | Closes the calendar dropdown |
 
 The [calendar keyboard navigation](calendar.md#keyboard-navigation) section contains all keyboard combinations that can be used in the calendar.
 
@@ -517,16 +517,16 @@ When two editors are used, the default separator can be replaced using the [`igx
 
 You can further customize the pop-up calendar using various properties. More information on how these affect the calendar can be found in the [**IgxCalendarComponent**](calendar.md) topic.
 
-|Name|Type|Description|
-|--|--|--|
-| `orientation` | 'vertical' or 'horizontal' | Allows you to set whether the calendar should be displayed vertically or horizontally. |
-| `displayMonthsCount` | string | Controls how many months are visible at a time, with a value of either 1 or 2. |
-| `showWeekNumbers` | string | Enables or disables the week number column in the calendar. |
-| `weekStart` | string | Sets the start day of the week. |
-| `hideOutsideDays` | boolean | Hides days that fall outside the current month view. |
-| `hideHeader` | boolean | Hides the calendar header (applicable only in dialog mode). |
-| `headerOrientation` | 'vertical' or 'horizontal' | Aligns the calendar header vertically or horizontally (dialog mode only). |
-| `activeDate` | Date | Sets the date that is initially highlighted in the calendar. If not set, the current date becomes the active date. |
+| Name                 | Type                       | Description                                                                                                        |
+| :------------------- | :------------------------- | :----------------------------------------------------------------------------------------------------------------- |
+| `orientation`        | 'vertical' or 'horizontal' | Allows you to set whether the calendar should be displayed vertically or horizontally.                             |
+| `displayMonthsCount` | string                     | Controls how many months are visible at a time, with a value of either 1 or 2.                                     |
+| `showWeekNumbers`    | string                     | Enables or disables the week number column in the calendar.                                                        |
+| `weekStart`          | string                     | Sets the start day of the week.                                                                                    |
+| `hideOutsideDays`    | boolean                    | Hides days that fall outside the current month view.                                                               |
+| `hideHeader`         | boolean                    | Hides the calendar header (applicable only in dialog mode).                                                        |
+| `headerOrientation`  | 'vertical' or 'horizontal' | Aligns the calendar header vertically or horizontally (dialog mode only).                                          |
+| `activeDate`         | Date                       | Sets the date that is initially highlighted in the calendar. If not set, the current date becomes the active date. |
 
 ```html
  <igx-date-range-picker [hideHeader]="true"

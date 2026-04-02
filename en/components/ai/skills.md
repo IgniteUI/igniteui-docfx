@@ -17,11 +17,11 @@ Ignite UI for Angular ships with **[Agent Skills](https://agentskills.io/)** —
 
 The skill files live in the [`skills/`](https://github.com/IgniteUI/igniteui-angular/tree/master/skills) directory of the Ignite UI for Angular repository:
 
-| Skill | Path | Description |
-|:------|:-----|:------------|
-| Components & Layout | [`skills/igniteui-angular-components/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-components/SKILL.md) | Standalone components, form controls, overlays, layout |
-| Data Grids | [`skills/igniteui-angular-grids/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-grids/SKILL.md) | Grid, Tree Grid, Hierarchical Grid, Pivot Grid, sorting, filtering, grouping, paging, remote data |
-| Theming & Styling | [`skills/igniteui-angular-theming/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-theming/SKILL.md) | Palettes, typography, elevations, component themes, MCP server |
+| Skill               | Path                                                                                                                                                  | Description                                                                                       |
+| :------------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------ |
+| Components & Layout | [`skills/igniteui-angular-components/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-components/SKILL.md) | Standalone components, form controls, overlays, layout                                            |
+| Data Grids          | [`skills/igniteui-angular-grids/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-grids/SKILL.md)           | Grid, Tree Grid, Hierarchical Grid, Pivot Grid, sorting, filtering, grouping, paging, remote data |
+| Theming & Styling   | [`skills/igniteui-angular-theming/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-theming/SKILL.md)       | Palettes, typography, elevations, component themes, MCP server                                    |
 
 > [!NOTE]
 > Starting with Ignite UI for Angular **21.1.0**, these skills are automatically discovered when placed in your agent's skills path (e.g., `.claude/skills`, `.agents/skills`, `.cursor/rules/`). This release ships with an optional migration to add these skills to your project automatically.

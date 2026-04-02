@@ -45,12 +45,12 @@ Navigation in the Angular data chart can happen with either touch, the mouse or 
 The zoom and pan operations can also be enabled by using modifier keys by setting the [`dragModifier`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#dragModifier) and [`panModifier`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#panModifier) properties, respectively. These properties can be set to the following modifier keys, and when pressed, the corresponding operation will be executed:
 
 | Modifier Value | Corresponding Key |
-| ---------------|------------------ |
-| `Shift`        | <kbd>SHIFT</kbd> |
-| `Control`      | <kbd>CTRL</kbd> |
-| `Windows`      | <kbd>WIN</kbd> |
-| `Apple`        | <kbd>APPLE</kbd> |
-| `None`         | no keys |
+| :------------- | :---------------- |
+| `Shift`        | <kbd>SHIFT</kbd>  |
+| `Control`      | <kbd>CTRL</kbd>   |
+| `Windows`      | <kbd>WIN</kbd>    |
+| `Apple`        | <kbd>APPLE</kbd>  |
+| `None`         | no keys           |
 
 ## Chart Navigation with Scrollbars
 
