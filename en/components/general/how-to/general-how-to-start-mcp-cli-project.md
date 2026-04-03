@@ -125,7 +125,7 @@ For VS Code, the generated file is `.vscode/mcp.json`. For other clients, add th
 | Claude Desktop (Windows) | `%APPDATA%\Claude\claude_desktop_config.json`                            |
 | Claude Code              | `.mcp.json`                                                              |
 | JetBrains IDEs           | **Tools → AI Assistant → Model Context Protocol (MCP)**                  |
-| Other MCP clients        | Use the same command and arguments through STDIO configuration            |
+| Other MCP clients        | Use the same command and arguments through STDIO configuration           |
 
 ### VS Code — expected `.vscode/mcp.json` content
 
