@@ -2,11 +2,7 @@
 title: Start from an Empty Folder with Ignite UI CLI MCP for Angular | Ignite UI for Angular | Infragistics
 _description: Set up Ignite UI CLI MCP and Ignite UI Theming MCP in a new empty folder and use an AI assistant to create an Angular project through chat. Covers VS Code, Cursor, Claude Desktop, Claude Code, and JetBrains.
 _keywords: Angular, Ignite UI for Angular, Infragistics, MCP, Model Context Protocol, Ignite UI CLI MCP, Ignite UI Theming MCP, AI
-last_updated: "2025-04-03"
 ---
-
-<!-- schema: HowTo, Article -->
-<!-- cspell:words igniteui mcpservers npx -->
 
 # Start from an Empty Folder with Ignite UI CLI MCP for Angular
 
