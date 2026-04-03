@@ -36,7 +36,7 @@ Create the MCP configuration file in the location that matches your AI client:
 | Claude Desktop (Windows) | `%APPDATA%\Claude\claude_desktop_config.json`                            |
 | Claude Code              | `.mcp.json`                                                              |
 | JetBrains IDEs           | **Tools → AI Assistant → Model Context Protocol (MCP)**                  |
-| Other MCP clients        | Use the same command and arguments through STDIO configuration            |
+| Other MCP clients        | Use the same command and arguments through STDIO configuration           |
 
 ## Step 3: Add the MCP Server Configuration
 
