@@ -1,110 +1,79 @@
 ---
-title: Ignite UI MCP Overview | Ignite UI for Angular | Infragistics
-_description: Learn what Ignite UI MCP is and choose the right Angular MCP workflow topic to start with.
-_keywords: Angular, Ignite UI for Angular, Infragistics, MCP, Model Context Protocol, Ignite UI MCP, AI, Ignite UI CLI MCP, Ignite UI Theming MCP
+title: Ignite UI CLI MCP Overview | Ignite UI for Angular | Infragistics
+_description: Ignite UI CLI MCP and Ignite UI Theming MCP expose Ignite UI for Angular tools to AI-assisted editors. Choose the right Angular setup path and get started.
+_keywords: Angular, Ignite UI for Angular, Infragistics, MCP, Model Context Protocol, Ignite UI CLI MCP, Ignite UI Theming MCP, AI
 ---
 
-# Ignite UI CLI MCP Overview
 
-This topic is the quick entry point for Ignite UI MCP for Angular.
+# Angular Ignite UI CLI MCP Overview
 
-Use it to understand what Ignite UI MCP is, how it fits into your editor or AI client, and which setup path to open next.
+Ignite UI CLI MCP and Ignite UI Theming MCP are two standalone Model Context Protocol servers that expose Ignite UI for Angular CLI and theming tools to AI-assisted editors and chat clients — including VS Code with GitHub Copilot, Cursor, Claude Desktop, Claude Code, and JetBrains IDEs with AI Assistant. The `igniteui-cli` server handles project creation, component management, and documentation questions. The `igniteui-theming` server handles theme and styling work. Both servers run via `npx` and connect to any supported client through STDIO transport.
 
-## What Ignite UI MCP Is
+Ignite UI CLI MCP and Ignite UI Theming MCP do not currently support Blazor — they cover Angular, React, and Web Components only. Neither server modifies project files autonomously; each server exposes tools to the active AI agent session in a supported client. MCP clients that use HTTP-based transport instead of STDIO are not supported by the current server configuration.
 
-Ignite UI MCP is a set of MCP servers that make Ignite UI tools available to an AI assistant in a supported editor or chat experience.
+## Prerequisites
 
-The main servers used in the current setup flows are:
+Before configuring Ignite UI CLI MCP and Ignite UI Theming MCP, make sure the following are in place:
 
-- `igniteui` for creating projects, modifying and editing existing projects, creating and changing components, and asking documentation questions
-- `igniteui-theming` for theme and styling-related work
+- Node.js installed so `npx` is available in the terminal
+- A supported editor or AI client: VS Code with GitHub Copilot, Cursor, Claude Desktop, Claude Code, JetBrains IDEs with AI Assistant, or another MCP-compatible client with STDIO support
+- Internet access for `npx` to download the MCP server packages on first run
 
-Together, they help the assistant create an Angular project, continue setup work, support theming tasks, and answer product questions from chat.
+## What Ignite UI CLI MCP and Ignite UI Theming MCP Provide
 
-Supported AI clients can include VS Code with GitHub Copilot, Cursor, Claude Desktop, Claude Code, JetBrains IDEs with AI Assistant, and other MCP-compatible clients.
+Ignite UI CLI MCP and Ignite UI Theming MCP each expose a distinct set of tools to the AI client.
 
-The exact setup flow can vary a little depending on your editor and AI client.
+**Ignite UI CLI MCP** (`igniteui-cli`) handles project and component work: creating new Angular projects, adding and modifying Ignite UI for Angular components, updating existing project structure, and answering documentation and API questions about Angular components, properties, events, and methods.
 
-## Before You Start
-
-Before you configure Ignite UI MCP, make sure you have:
-
-- Node.js installed so `npx` is available
-- a supported editor or AI client with MCP support
-- internet access for package resolution when the MCP servers start
-
-Some workflows also assume you already have an Angular project or that you want to create one in a new empty folder.
+**Ignite UI Theming MCP** (`igniteui-theming`) handles theme and styling work: applying and modifying Ignite UI themes, generating CSS custom property overrides, and answering theming-related questions.
 
 ## How the MCP Setup Works
 
-The Ignite UI MCP servers are started through `npx`.
+The setup process is consistent across all supported clients and all three setup paths.
 
-In practice, the setup is always the same at a high level:
+Add the Ignite UI CLI MCP and Ignite UI Theming MCP server entries to the MCP configuration file for your AI client. The client reads that configuration, starts the servers through `npx`, and exposes their tools in chat or agent mode. From that point, prompts in the chat session can invoke the tools from either server directly.
 
-- add MCP configuration for your AI client
-- point that configuration to the Ignite UI MCP servers
-- let the client load the servers and expose their tools
-- continue in chat or agent mode
+The server entries use these commands:
 
-The server entries use a command and arguments similar to these:
-
-- `igniteui`: `npx -y igniteui-cli@next mcp`
+- `igniteui-cli`: `npx -y igniteui-cli@next mcp`
 - `igniteui-theming`: `npx -y igniteui-theming igniteui-theming-mcp`
 
-The `-y` flag tells `npx` to auto-confirm the package download prompt so the servers can start without manual intervention.
+The `-y` flag tells `npx` to confirm the package download automatically so the servers start without manual intervention. The step-by-step topics below show the exact configuration file locations and JSON structure for each supported client.
 
-## Editors and AI Clients
+## Supported Editors and AI Clients
 
-Ignite UI MCP is not limited to one editor or one chat provider.
+Ignite UI CLI MCP and Ignite UI Theming MCP work with any editor or AI client that supports MCP with STDIO transport. Supported clients include:
 
-You can use it with different combinations of editors and AI clients, as long as they support MCP.
+- **VS Code with GitHub Copilot** — workspace-level `.vscode/mcp.json`
+- **Cursor** — `.cursor/mcp.json`
+- **Claude Desktop** — macOS: `~/Library/Application Support/Claude/claude_desktop_config.json` / Windows: `%APPDATA%\Claude\claude_desktop_config.json`
+- **Claude Code** — `.mcp.json` or the `claude mcp` command
+- **JetBrains IDEs with AI Assistant** — configured in **Tools → AI Assistant → Model Context Protocol (MCP)**
+- **Other MCP clients** — use the same command and arguments through STDIO configuration
 
-Common examples include:
+The main differences between clients are where the MCP configuration file is stored, how the client surfaces the available tools, and whether you continue in chat, agent mode, or another AI panel. The server commands and arguments are the same across all clients.
 
-- **VS Code with GitHub Copilot** using a workspace-level `.vscode/mcp.json`
-- **Cursor** using `.cursor/mcp.json`
-- **Claude Desktop** using the desktop client MCP configuration file
-- **Claude Code** using `.mcp.json` or the `claude mcp` command
-- **JetBrains IDEs with AI Assistant** using the IDE MCP settings
-- **Other MCP clients** using the same command and arguments through STDIO configuration
+Editor-based clients open the Angular project folder directly and detect the MCP configuration from the workspace. Desktop and chat-first clients use an external configuration file and work with the project context provided in the session.
 
-In practice, the main differences are usually:
+## Available Setup Paths
 
-- where the MCP configuration is stored
-- how the client shows the available MCP tools
-- whether you continue in chat, agent mode, or another AI panel
+Three setup paths are available for Ignite UI CLI MCP with Angular:
 
-The Ignite UI MCP servers stay the same even when the editor or chat experience changes.
+- **Start from an empty folder** — begin with an empty workspace, add the MCP configuration, and let the AI assistant create the Angular project from the beginning. Use this when there is no existing project.
+- **Create the project with Ignite UI CLI, then continue with MCP** — create the Angular project using Ignite UI CLI first, then connect MCP to the generated project. Use this when you prefer CLI scaffolding before bringing in the AI client.
+- **Connect MCP to an existing project** — add the MCP configuration to an Angular project that already exists and continue working in the current codebase. Use this when you have an existing Angular app and want to add Ignite UI CLI MCP and Ignite UI Theming MCP. This path also covers asking documentation and API questions from chat without making project changes.
 
-Editor-based clients usually open the project folder directly. Desktop or chat-first clients may use an external MCP configuration file and then work with the project you point them to.
+## Choose the Right Setup Path
 
-This overview keeps the client explanation short. The step-by-step topics below show the exact configuration locations and the exact JSON structure to use.
+**[Start from an Empty Folder with Ignite UI CLI MCP for Angular](general-how-to-start-mcp.md)**
+Use this when you want to begin with an empty workspace, add the MCP configuration for your AI client, and let the assistant create the Angular project through prompts.
 
-## Available Starting Paths
+**[Create an Angular Project with Ignite UI CLI, then Continue with MCP](general-how-to-start-mcp-cli-project.md)**
+Use this when you want to scaffold the Angular project with Ignite UI CLI first and connect MCP after that.
 
-The current section includes three setup paths:
+**[Use Ignite UI CLI MCP in an Existing Angular Project](general-how-to-use-mcp-existing-project.md)**
+Use this when you have an existing Angular project and want to connect Ignite UI CLI MCP and Ignite UI Theming MCP, continue working in the current codebase, and ask documentation or API questions in chat.
 
-- start from a completely empty folder and let MCP help create the Angular project
-- create the Angular project with Ignite UI CLI first, then continue with MCP
-- connect MCP to an Angular project that already exists and continue working in the current codebase
+## Related Topics
 
-The existing-project path can also be used when you want to ask documentation and API questions while working in the current app.
-
-Each topic repeats the essential setup details so it can be used on its own, even if you open it directly from search or navigation.
-
-## Open the Right Topic
-
-Use the short guide below to choose the best starting point:
-
-> **Start from an Empty Folder with MCP for Angular**: use this when you want MCP to help create the Angular project from the beginning.
-
-> **Create an Angular Project with Ignite UI CLI, then Continue with MCP**: use this when you want to create the Angular project first and use MCP after that.
-
-> **Use MCP in an Existing Angular Project**: use this when you already have an Angular project and want to connect MCP, continue working in the current codebase, and ask documentation or API questions.
-
-- [Start from an Empty Folder with MCP for Angular](general-how-to-start-mcp.md)
-  Use this when you want to begin with an empty workspace, add the MCP configuration for your AI client, and let the assistant help create the Angular project from the beginning.
-- [Create an Angular Project with Ignite UI CLI, then Continue with MCP](general-how-to-start-mcp-cli-project.md)
-  Use this when you want to create the Angular project with Ignite UI CLI first and continue with the generated MCP setup after that.
-- [Use MCP in an Existing Angular Project](general-how-to-use-mcp-existing-project.md)
-  Use this when you want to connect MCP to an existing Angular project, continue working in the current codebase, and ask documentation or API questions in chat.
+For more information about AI skills and theming workflows, see [Angular Agent Skills](ai/skills.md) and [Ignite UI Theming MCP](ai/theming-mcp.md).
