@@ -2,11 +2,7 @@
 title: Use Ignite UI CLI MCP in an Existing Angular Project | Ignite UI for Angular | Infragistics
 _description: Connect Ignite UI CLI MCP and Ignite UI Theming MCP to an existing Angular project, continue working in the current codebase, and ask documentation and API questions about Ignite UI for Angular components through chat.
 _keywords: Angular, Ignite UI for Angular, Infragistics, MCP, Model Context Protocol, Ignite UI CLI MCP, Ignite UI Theming MCP, AI, documentation, API
-last_updated: "2025-04-03"
 ---
-
-<!-- schema: HowTo, Article -->
-<!-- cspell:words igniteui mcpservers npx -->
 
 # Use Ignite UI CLI MCP in an Existing Angular Project
 
@@ -32,15 +28,15 @@ Work from the project root throughout this guide.
 
 Create the MCP configuration file in the location that matches your AI client:
 
-| Client | Configuration location |
-| --- | --- |
-| VS Code | `.vscode/mcp.json` |
-| Cursor | `.cursor/mcp.json` |
-| Claude Desktop (macOS) | `~/Library/Application Support/Claude/claude_desktop_config.json` |
-| Claude Desktop (Windows) | `%APPDATA%\Claude\claude_desktop_config.json` |
-| Claude Code | `.mcp.json` |
-| JetBrains IDEs | **Tools → AI Assistant → Model Context Protocol (MCP)** |
-| Other MCP clients | Use the same command and arguments through STDIO configuration |
+| Client                   | Configuration location                                                   |
+| ------------------------ | ------------------------------------------------------------------------ |
+| VS Code                  | `.vscode/mcp.json`                                                       |
+| Cursor                   | `.cursor/mcp.json`                                                       |
+| Claude Desktop (macOS)   | `~/Library/Application Support/Claude/claude_desktop_config.json`        |
+| Claude Desktop (Windows) | `%APPDATA%\Claude\claude_desktop_config.json`                            |
+| Claude Code              | `.mcp.json`                                                              |
+| JetBrains IDEs           | **Tools → AI Assistant → Model Context Protocol (MCP)**                  |
+| Other MCP clients        | Use the same command and arguments through STDIO configuration            |
 
 ## Step 3: Add the MCP Server Configuration
 
