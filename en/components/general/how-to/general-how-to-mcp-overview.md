@@ -2,8 +2,11 @@
 title: Ignite UI CLI MCP Overview | Ignite UI for Angular | Infragistics
 _description: Ignite UI CLI MCP and Ignite UI Theming MCP expose Ignite UI for Angular tools to AI-assisted editors. Choose the right Angular setup path and get started.
 _keywords: Angular, Ignite UI for Angular, Infragistics, MCP, Model Context Protocol, Ignite UI CLI MCP, Ignite UI Theming MCP, AI
+last_updated: "2025-04-03"
 ---
 
+<!-- schema: Article -->
+<!-- cspell:words igniteui mcpservers npx -->
 
 # Angular Ignite UI CLI MCP Overview
 
@@ -76,4 +79,4 @@ Use this when you have an existing Angular project and want to connect Ignite UI
 
 ## Related Topics
 
-For more information about AI skills and theming workflows, see [Angular Agent Skills](ai/skills.md) and [Ignite UI Theming MCP](ai/theming-mcp.md).
+For more information about AI skills and theming workflows, see [Angular Agent Skills](../../ai/skills.md) and [Ignite UI Theming MCP](../../ai/theming-mcp.md).
