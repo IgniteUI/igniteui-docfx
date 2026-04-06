@@ -29,8 +29,6 @@ The following sample demonstrates how setting multiple properties on the same [`
 The bullet graph supports one scale, one set of tick marks and one set of labels. The bullet graph component also has built-in support for animated transitions. This animation is easily customizable by setting the [`transitionDuration`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxbulletgraphcomponent.html#transitionDuration) property.
 The features of the bullet graph include configurable orientation and direction, configurable visual elements such as the needle, and more.
 
-<!-- Angular, React, WebComponents -->
-
 ## Dependencies
 
 When installing the gauge package, the core package must also be installed.
@@ -39,8 +37,6 @@ When installing the gauge package, the core package must also be installed.
 npm install --save igniteui-angular-core
 npm install --save igniteui-angular-gauges
 ```
-
-<!-- end: Angular, React, WebComponents -->
 
 ## Component Modules
 
