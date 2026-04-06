@@ -192,7 +192,7 @@ ig mcp
 ```
 
 >[!NOTE]
-> For full setup instructions, supported clients (VS Code, Claude Desktop, Cursor), and available tools, see...
+> For full setup instructions, supported clients (VS Code, Claude Desktop, Cursor), and available tools, see [Ignite UI CLI MCP Overview](../how-to/general-how-to-mcp-overview.md).
 
 ## Ignite UI CLI Commands
 

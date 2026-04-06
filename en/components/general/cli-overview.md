@@ -18,4 +18,4 @@ Both versions of the tooling allow for various projects, component and scenario 
 
 The Ignite UI CLI includes a built-in MCP (Model Context Protocol) server that connects AI coding assistants — such as GitHub Copilot, Claude, or Cursor — directly to Ignite UI component documentation and API references. Once configured, your AI assistant can look up component docs, retrieve API details, and generate accurate Ignite UI code without leaving your editor.
 
-For setup instructions and available tools, see ...
+For setup instructions and available tools, see [Ignite UI CLI MCP Overview](./how-to/general-how-to-mcp-overview.md).
