@@ -6,23 +6,25 @@ _keywords: "Angular, Ignite UI for Angular, Infragistics, Ignite UI CLI MCP, Ign
 
 # Build an App End-to-End with Ignite UI CLI MCP and Ignite UI Theming MCP
 
-<p class="highlight">Ignite UI CLI MCP and Ignite UI Theming MCP work together to let an AI assistant scaffold, extend, and theme a Ignite UI for Angular application through chat prompts. CLI MCP handles project creation, component work, and documentation questions. Theming MCP handles palettes, themes, tokens, and styling workflows. This topic shows the full process in one clear flow.</p>
+<p class="highlight">Ignite UI CLI MCP and Ignite UI Theming MCP work together to let an AI assistant scaffold, extend, and theme an Ignite UI for Angular application through chat prompts. CLI MCP handles project creation, component work, and documentation questions. Theming MCP handles palettes, themes, tokens, and styling workflows. This topic shows the full process in one clear flow.</p>
 
 <div class="divider"></div>
 
-## Overview
-
-This topic is the main end-to-end workflow topic for MCP.
-
-It shows how the process works from start to finish:
-
-- begin with a CLI-first project setup
-- connect CLI MCP and Theming MCP
-- continue in chat to build the app
-- ask documentation and API questions during development
-- apply and refine a custom theme
-
-Neither server executes steps autonomously. The AI assistant invokes the MCP tools in response to your prompts. Both servers require MCP clients that support STDIO transport.
+## How CLI MCP and Theming MCP Divide Responsibilities
+ 
+CLI MCP and Theming MCP are two separate STDIO-transport MCP servers with distinct, non-overlapping responsibilities in an Ignite UI for Angular development workflow.
+ 
+| Concern                                          | Server      |
+| ------------------------------------------------ | ----------- |
+| Create and scaffold project structure            | CLI MCP     |
+| Add or update Ignite UI for Angular components   | CLI MCP     |
+| Query component APIs and documentation           | CLI MCP     |
+| Generate color palettes and shade variations     | Theming MCP |
+| Create and apply global theme configurations     | Theming MCP |
+| Generate component-level design tokens           | Theming MCP |
+| Adjust spacing, sizing, and border-radius        | Theming MCP |
+ 
+Neither server executes steps autonomously - the AI assistant invokes MCP tools only in response to your prompts. CLI MCP does not generate or modify theme or Sass files. Theming MCP does not scaffold components, modify application logic, or answer documentation questions. Both servers require an MCP client that supports STDIO transport; they cannot be used from a browser-only chat interface.
 
 ## What You Need
 
@@ -153,7 +155,7 @@ After the project structure is clear, ask for a concrete feature.
 
 Example prompt:
 
-> _"Add an Orders page with a Ignite UI for Angular grid. Include columns for Order ID, Customer Name, Order Date, and Total Amount, and bind the grid to sample data."_
+> _"Add an Orders page with an Ignite UI for Angular grid. Include columns for Order ID, Customer Name, Order Date, and Total Amount, and bind the grid to sample data."_
 
 Follow-up prompt:
 
@@ -230,15 +232,15 @@ What happens next:
 
 ## Topic Takeaways
 
-The main pattern in this workflow is simple:
+This workflow works well when you want to keep project setup, component work, documentation lookups, and theming in one chat session.
 
-- start with Ignite UI CLI first
-- connect both MCP servers
-- use CLI MCP to scaffold and extend the app
-- use CLI MCP documentation queries when you need API clarity
-- use Theming MCP to generate and refine the visual design
+Use it when:
 
-This keeps project creation, component work, documentation lookups, and theming in one chat session instead of splitting them across multiple tools.
+- you want to start from a real project scaffold instead of isolated code snippets
+- you expect to alternate between implementation and documentation questions
+- you want project structure and visual styling to evolve together
+
+In practice, the most effective pattern is to use CLI MCP for project and component changes, pause for documentation questions when needed, and then use Theming MCP to refine the result without leaving the same conversation.
 
 ## Related Topics
 
