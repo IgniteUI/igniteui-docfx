@@ -181,6 +181,19 @@ The `start` command will build the application, start a web server and open it i
 ig start
 ```
 
+## AI Assistant Integration (MCP)
+
+Ignite UI CLI ships with a built-in MCP (Model Context Protocol) server. Connect it to GitHub Copilot, Claude, or Cursor and your assistant can query component docs, retrieve API details, and generate accurate Ignite UI code without switching context.
+
+To start the MCP server:
+
+```cmd
+ig mcp
+```
+
+>[!NOTE]
+> For full setup instructions, supported clients (VS Code, Claude Desktop, Cursor), and available tools, see [Ignite UI CLI MCP Overview](../how-to/general-how-to-mcp-overview.md).
+
 ## Ignite UI CLI Commands
 
 A full list of the available Ignite UI CLI commands and their usage (like passing flags, etc.), can be found at the [Ignite UI CLI wiki pages](https://github.com/IgniteUI/igniteui-cli/wiki):
@@ -196,3 +209,4 @@ A full list of the available Ignite UI CLI commands and their usage (like passin
 | [ig list](https://github.com/IgniteUI/igniteui-cli/wiki/list)         | l     |  Lists all templates for the specified framework and type. When you run the command within a project folder it will list all templates for the project's framework and type, even if you provide different ones. |
 | [ig test](https://github.com/IgniteUI/igniteui-cli/wiki/test)         |       | Executes the tests for the current project.                                                                                                                                                                      |
 | ig version                                                            | -v    | Shows Ignite UI CLI version installed locally, or globally if local is missing                                                                                                                                   |
+| ig mcp                                                                |       | Starts the Ignite UI MCP server for AI assistant integration, providing component documentation search and API reference tools.                                                                                  |

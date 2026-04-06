@@ -13,3 +13,9 @@ Our CLI tools provide project templates pre-configured for Ignite UI for Angular
 [Ignite UI for Angular Schematics](https://github.com/IgniteUI/igniteui-cli/tree/master/packages/ng-schematics) are available as a collection that can be used with the [Angular CLI](https://angular.io/guide/schematics#schematics-for-the-angular-cli). They offer similar core Ignite UI CLI functionality, but one that's integrated with the Schematics workflow and focused specifically on this product. The schematics collection is added to your project when you [install Ignite UI for Angular](getting-started.md#installing-ignite-ui-for-angular). You can find more information and examples about its usage in the [Getting Started with Ignite UI for Angular Schematics](./cli/getting-started-with-angular-schematics.md) topic.
 
 Both versions of the tooling allow for various projects, component and scenario views (templates) and offer [guided step-by-step mode using Ignite UI CLI](./cli/step-by-step-guide-using-cli.md) and [Ignite UI for Angular Schematics](./cli/step-by-step-guide-using-angular-schematics.md).
+
+## AI Assistant Integration (MCP)
+
+The Ignite UI CLI includes a built-in MCP (Model Context Protocol) server that connects AI coding assistants — such as GitHub Copilot, Claude, or Cursor — directly to Ignite UI component documentation and API references. Once configured, your AI assistant can look up component docs, retrieve API details, and generate accurate Ignite UI code without leaving your editor.
+
+For setup instructions and available tools, see [Ignite UI CLI MCP Overview](./how-to/general-how-to-mcp-overview.md).
