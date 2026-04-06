@@ -137,6 +137,31 @@ igx-badge {
 }
 ```
 
+### Badge Value and Icon
+
+Use the `[value]` input to display text or a numeric count inside the badge. This is the recommended approach instead of projecting content directly:
+
+```html
+<!-- Recommended -->
+<igx-badge [value]="model.value"></igx-badge>
+
+<!-- Avoid -->
+<igx-badge>{{ model.value }}</igx-badge>
+```
+
+The `[icon]` input takes precedence over `[value]`. When both inputs are set, the icon is displayed and the value is ignored:
+
+```html
+<!-- The icon "check" will be shown; the value "5" will be ignored -->
+<igx-badge [icon]="'check'" [value]="5" type="success"></igx-badge>
+```
+
+To display a numeric value without an icon, make sure `[icon]` is not set (or is `null`/empty):
+
+```html
+<igx-badge [value]="unreadCount" type="info"></igx-badge>
+```
+
 ### Badge Icon
 
 In addition to material icons, the `igx-badge` component also supports usage of [Material Icons Extended](../components/material-icons-extended.md) and any other custom icon set. To add an icon from the material icons extended set inside your badge component, first you have to register it:
