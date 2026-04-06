@@ -37,6 +37,28 @@ This walkthrough works best with a **CLI-first** setup because Ignite UI CLI sca
 
 If you still need the detailed setup reference for each client, see [Angular Schematics & Ignite UI CLI](~/components/general/cli-overview.md) and [Ignite UI Theming MCP](~/components/ai/theming-mcp.md).
 
+## Available Tools
+
+The MCP server exposes a set of tools that the AI uses automatically based on your prompts. You never call these tools directly. Describe what you want in chat, and the assistant picks the right one. This table is here so you know what's available before you start.
+
+To get the live list with current parameters, ask:
+
+> _"What tools does the Ignite UI CLI MCP provide?"_
+
+Here is a brief overview of each tool:
+
+| Tool                      | Description                                                                                                                                                          |
+| :------------------------ | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `list_components`         | Lists available Ignite UI component docs for a framework. Accepts an optional keyword filter (case-insensitive substring match against name, keywords, and summary). |                                                                 |
+| `get_doc`                 | Gets the full markdown content of a specific component doc by kebab-case name (e.g., `grid-editing`, `combo-overview`). Includes code samples, tables, and links.    |
+| `search_docs`             | Full-text search across Ignite UI docs for a framework. Returns up to 20 ranked results with excerpts.                                                               |
+| `get_project_setup_guide` | Returns the project setup guide for creating a new project in a specific framework, including CLI steps and install instructions.                                    |
+| `search_api`              | Searches API entries by keyword or component name across Angular, React, and Web Components.                                                                         |
+| `get_api_reference`       | Returns the full API reference for a specific component or class, including properties, methods, and events. Supports Angular, React, and Web Components.            |
+
+> [!NOTE]
+> Framework detection uses component prefixes: `Igx` for Angular, `Igr` for React, `Igc` for Web Components, `Igb` for Blazor. The assistant picks up the right framework automatically from your open files or prompt context.
+
 ## Step 1: Start with Ignite UI CLI
 
 The recommended starting point is to create the project with Ignite UI CLI first.
