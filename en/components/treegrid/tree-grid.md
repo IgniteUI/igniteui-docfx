@@ -357,10 +357,10 @@ platformBrowserDynamic()
 
 ## Known Limitations
 
-|Limitation|Description|
-|--- |--- |
-|Templating Tree Cells|When templating a tree cell, content that spans outside the boundaries of the cell will not be shown unless positioned in an overlay.|
-|Group By|Group By feature is not supported, because it is inherent to the tree grid.|
+| Limitation            | Description                                                                                                                           |
+| :-------------------- | :------------------------------------------------------------------------------------------------------------------------------------ |
+| Templating Tree Cells | When templating a tree cell, content that spans outside the boundaries of the cell will not be shown unless positioned in an overlay. |
+| Group By              | Group By feature is not supported, because it is inherent to the tree grid.                                                           |
 
 > [!NOTE]
 > The tree grid has a depth limit of 25 levels. Supporting more levels requires adding custom CSS classes in the application. You may see an example of such CSS class below:

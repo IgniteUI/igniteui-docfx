@@ -103,16 +103,16 @@ const editorOptions: IColumnEditorOptions = {
 
 The grid exposes a wide array of events that provide greater control over the editing experience. These events are fired during the [**Row Editing**](row-editing.md) and [**Cell Editing**](cell-editing.md) lifecycle - when starting, committing or canceling the editing action.
 
- | Event | Description | Arguments | Cancellable |
-|-------|-------------|-----------|-------------|
-| [`rowEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditEnter) | If `rowEditing` is enabled, fires when a row enters edit mode | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`cellEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cellEditEnter) | Fires when a cell **enters edit mode** (after `rowEditEnter`) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`cellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cellEdit) | If value is changed, fires just **before** a cell's value is **committed** (e.g. by pressing `Enter`) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`cellEditDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#celleditdone) | If value is changed, fires **after** a cell has been edited and cell's value is **committed** | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igrideditdoneeventargs.html) | `false` |
-| [`cellEditExit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cellEditExit) | Fires when a cell **exits edit mode** | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
-| [`rowEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEdit) | If `rowEditing` is enabled, fires just before a row in edit mode's value is **committed** (e.g. by clicking the `Done` button on the Row Editing Overlay) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `true` |
-| [`rowEditDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditDone) | If `rowEditing` is enabled, fires **after** a row has been edited and new row's value has been **committed**. | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
-| [`rowEditExit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditExit) | If `rowEditing` is enabled, fires when a row **exits edit mode** | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html) | `false` |
+| Event                                                                                 | Description                                                                                                                                               | Arguments                                                                                    | Cancellable |
+| :------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------- | :---------- |
+| [`rowEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditEnter)   | If `rowEditing` is enabled, fires when a row enters edit mode                                                                                             | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html)         | `true`      |
+| [`cellEditEnter`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cellEditEnter) | Fires when a cell **enters edit mode** (after `rowEditEnter`)                                                                                             | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html)         | `true`      |
+| [`cellEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cellEdit)           | If value is changed, fires just **before** a cell's value is **committed** (e.g. by pressing `Enter`)                                                     | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html)         | `true`      |
+| [`cellEditDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#celleditdone)   | If value is changed, fires **after** a cell has been edited and cell's value is **committed**                                                             | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igrideditdoneeventargs.html) | `false`     |
+| [`cellEditExit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#cellEditExit)   | Fires when a cell **exits edit mode**                                                                                                                     | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html)     | `false`     |
+| [`rowEdit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEdit)             | If `rowEditing` is enabled, fires just before a row in edit mode's value is **committed** (e.g. by clicking the `Done` button on the Row Editing Overlay) | [IGridEditEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html)         | `true`      |
+| [`rowEditDone`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditDone)     | If `rowEditing` is enabled, fires **after** a row has been edited and new row's value has been **committed**.                                             | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html)     | `false`     |
+| [`rowEditExit`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditExit)     | If `rowEditing` is enabled, fires when a row **exits edit mode**                                                                                          | [IGridEditDoneEventArgs]({environment:angularApiUrl}/interfaces/igridediteventargs.html)     | `false`     |
 
 ### Event cancellation
 
@@ -151,12 +151,12 @@ The following sample demonstrates the editing execution sequence in action:
 
 While a cell/row is in edit mode, a user may interact with the grid in many ways. The following table specifies how a certain interaction affects the current editing:
 
-| @@igComponent     | Filtering  | Sorting | Paging | Moving | Pinning | Hiding | GroupBy | Resizing | Escape | Enter | F2 | Tab | Cell Click | Add new row/Delete/Edit |
-| ----------------- |:---------:|:-------:|:------:|:------:|:-------:|:------:|:-------:|:--------:|:------:|:-----:|:--:|:---:|:----------:|:-----------------------:|
-| Keep edit mode    |           |      |   |   |   |   |   | ✔ |   |   |   |   |   |   |
-| Exit edit mode    |✔         | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |   | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Commit            |   |   |  |  |  |   |   |   |  | ✔ | ✔ | ✔ | ✔ | ✔ |
-| Discard           | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |✔ |   | ✔  |  |   |   |   |  |
+| @@igComponent  |  Filtering |  Sorting |  Paging |  Moving |  Pinning |  Hiding |  GroupBy |  Resizing |  Escape |  Enter |  F2 |  Tab |  Cell Click |  Add new row/Delete/Edit |
+| :------------- | :--------: | :------: | :-----: | :-----: | :------: | :-----: | :------: | :-------: | :-----: | :----: | :-: | :--: | :---------: | :----------------------: |
+| Keep edit mode |            |          |         |         |          |         |          |        ✔  |         |        |     |      |             |                          |
+| Exit edit mode |         ✔  |       ✔  |      ✔  |      ✔  |       ✔  |      ✔  |       ✔  |           |      ✔  |     ✔  |  ✔  |   ✔  |         ✔   |                     ✔    |
+| Commit         |            |          |         |         |          |         |          |           |         |     ✔  |  ✔  |   ✔  |         ✔   |                     ✔    |
+| Discard        |         ✔  |       ✔  |      ✔  |      ✔  |       ✔  |      ✔  |       ✔  |           |      ✔  |        |     |      |             |                          |
 
 As seen from the table, all interactions, except resizing a column, will end the editing and will discard the new values. Should the new value be committed, this can be done by the developer in the corresponding feature "-ing" event.
 

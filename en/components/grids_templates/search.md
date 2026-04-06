@@ -371,11 +371,11 @@ On the right in our input group, let's create three separate containers with the
 
 ## Known Limitations
 
-|Limitation|Description|
-|--- |--- |
-|Searching in cells with a template|The search functionality highlights work only for the default cell templates. If you have a column with custom cell template, the highlights will not work so you should either use alternative approaches, such as a column formatter, or set the [`searchable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#searchable) property on the column to false.|
-|Remote Virtualization| The search will not work properly when using remote virtualization|
-|Cells with cut off text| When the text in the cell is too large to fit and the text we are looking for is cut off by the ellipsis, we will still scroll to the cell and include it in the match count, but nothing will be highlighted |
+| Limitation                         | Description                                                                                                                                                                                                                                                                                                                                                                |
+| :--------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Searching in cells with a template | The search functionality highlights work only for the default cell templates. If you have a column with custom cell template, the highlights will not work so you should either use alternative approaches, such as a column formatter, or set the [`searchable`]({environment:angularApiUrl}/classes/igxcolumncomponent.html#searchable) property on the column to false. |
+| Remote Virtualization              | The search will not work properly when using remote virtualization                                                                                                                                                                                                                                                                                                         |
+| Cells with cut off text            | When the text in the cell is too large to fit and the text we are looking for is cut off by the ellipsis, we will still scroll to the cell and include it in the match count, but nothing will be highlighted                                                                                                                                                              |
 
 ## API References
 
