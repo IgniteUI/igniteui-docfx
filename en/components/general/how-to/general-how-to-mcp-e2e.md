@@ -11,9 +11,9 @@ _keywords: "Angular, Ignite UI for Angular, Infragistics, Ignite UI CLI MCP, Ign
 <div class="divider"></div>
 
 ## How CLI MCP and Theming MCP Divide Responsibilities
- 
+
 CLI MCP and Theming MCP are two separate STDIO-transport MCP servers with distinct, non-overlapping responsibilities in an Ignite UI for Angular development workflow.
- 
+
 | Concern                                          | Server      |
 | ------------------------------------------------ | ----------- |
 | Create and scaffold project structure            | CLI MCP     |
@@ -23,7 +23,7 @@ CLI MCP and Theming MCP are two separate STDIO-transport MCP servers with distin
 | Create and apply global theme configurations     | Theming MCP |
 | Generate component-level design tokens           | Theming MCP |
 | Adjust spacing, sizing, and border-radius        | Theming MCP |
- 
+
 Neither server executes steps autonomously - the AI assistant invokes MCP tools only in response to your prompts. CLI MCP does not generate or modify theme or Sass files. Theming MCP does not scaffold components, modify application logic, or answer documentation questions. Both servers require an MCP client that supports STDIO transport; they cannot be used from a browser-only chat interface.
 
 ## What You Need
