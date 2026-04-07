@@ -80,5 +80,5 @@ If you choose to add a scenario to your application, you will also get a list of
 
 After adding a template to your application, you will be asked whether you want to complete the process or proceed with adding more controls. When you choose to complete the process, the required packages will be installed (on project creation) and the application will be served and opened in your default browser.
 
-You can always add more Ignite UI for Angular views to your application at a later moment using the [`add`](getting-started-with-cli.md#add-template) command with the following syntax:
+You can always add more Ignite UI for Angular views to your application at a later moment using the [`add`](getting-started-with-cli.md#add-a-component-template) command with the following syntax:
 `ig add [template] [name]`.
