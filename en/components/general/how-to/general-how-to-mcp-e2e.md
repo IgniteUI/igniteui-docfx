@@ -1,7 +1,7 @@
 ---
-title: "Build an App End-to-End with Ignite UI CLI MCP and Ignite UI Theming MCP - Ignite UI for Angular"
-_description: "Follow an end-to-end Ignite UI for Angular workflow with Ignite UI CLI MCP and Ignite UI Theming MCP: start CLI-first, connect both MCP servers, create or extend the app through chat, ask documentation questions, and apply a custom theme."
-_keywords: "Angular, Ignite UI for Angular, Infragistics, Ignite UI CLI MCP, Ignite UI Theming MCP, MCP, Model Context Protocol, AI, workflow, theming, prompt"
+title: Build an App End-to-End with Ignite UI CLI MCP and Ignite UI Theming MCP - Ignite UI for Angular
+_description: Follow an end-to-end Ignite UI for Angular workflow with Ignite UI CLI MCP and Ignite UI Theming MCP: start CLI-first, connect both MCP servers, create or extend the app through chat, ask documentation questions, and apply a custom theme.
+_keywords: Angular, Ignite UI for Angular, Infragistics, Ignite UI CLI MCP, Ignite UI Theming MCP, MCP, Model Context Protocol, AI, workflow, theming, prompt
 ---
 
 # Build an App End-to-End with Ignite UI CLI MCP and Ignite UI Theming MCP
