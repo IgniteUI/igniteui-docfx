@@ -9,13 +9,13 @@ _language: ja
 
 # Ignite UI Theming MCP
 
-<p class="highlight">Ignite UI Theming MCP は、AI アシスタントが Ignite UI アプリケーション用の本番対応のテーマ コードを生成できるようにする <a href="https://modelcontextprotocol.io/" target="_blank">Model Context Protocol</a> (MCP) サーバーです。MCP は、AI アシスタントが外部サーバーによって提供される特殊なツールを呼び出すことができるようにするオープン標準です。Ignite UI Theming MCP をエディターまたはデスクトップ AI クライアントに接続し、必要なものを説明すると、アシスタントが残りを行います。</p>
+<p class="highlight">Ignite UI Theming MCP は、AI アシスタントが Ignite UI アプリケーション用の本番利用可能なテーマ コードを生成できるようにする <a href="https://modelcontextprotocol.io/" target="_blank">Model Context Protocol</a> (MCP) サーバーです。MCP は、AI アシスタントが外部サーバーによって提供される専用のツールを呼び出すことができるようにするオープン標準です。Ignite UI Theming MCP をエディターまたはデスクトップ AI クライアントに接続し、やりたいことを伝えると、あとはアシスタントが対応します。</p>
 
 <div class="divider"></div>
 
 ## 概要
 
-Sass テーマ コードを手動で記述する代わりに、テーマの意図を自然言語で説明し、AI アシスタントに正しいコードを生成させることができます。MCP サーバーは、適切なシェード生成を備えたパレット、タイポグラフィ、エレベーション、コンポーネント デザイン トークン オーバーライドなどを含む、正確なテーマ コードを生成するために必要な知識とツールを AI に提供します。
+手作業でスタイルを書く代わりに、テーマの意図を自然言語で説明し、AI アシスタントに正しいコードを生成してもらえます。MCP サーバーは、適切なシェード生成を備えたパレット、タイポグラフィ、エレベーション、コンポーネント デザイン トークン オーバーライドなどを含む、正確なテーマ コードを生成するために必要な知識とツールを AI に提供します。
 
 このサーバーは、4 つすべての Ignite UI デザイン システム (**Material**、**Bootstrap**、**Fluent**、**Indigo**) をライトとダークの両方のバリアントでサポートします。このガイドでは Angular に焦点を当てていますが、MCP サーバーは **Ignite UI for Web Components**、**React**、**Blazor** でも動作します。`detect_platform` ツールは `package.json` を読み取り、正しいインポート パスとセレクターを自動的に選択します。
 
@@ -49,7 +49,7 @@ npm install igniteui-theming
 
 MCP サーバーは `igniteui-theming` パッケージにバンドルされており、`npx` 経由で起動されます。プロジェクトに Ignite UI パッケージが既にインストールされている以外に、別途インストールする必要はありません。
 
-正規の起動コマンドは次のとおりです。
+正式な起動コマンドは次のとおりです。
 
 ```bash
 npx -y igniteui-theming igniteui-theming-mcp
