@@ -57,7 +57,7 @@ Ignite UI for Angular には **[エージェント スキル](https://agentskill
 | プロジェクト | `.github/skills/`、`.claude/skills/` |
 | 個人 | `~/.copilot/skills/`、`~/.claude/skills/` (Copilot コーディング エージェントおよび GitHub Copilot CLI のみ) |
 
-> **ヒント:** [VS Code](https://code.visualstudio.com/docs/copilot/customization/agent-skills) では、これらの場所に一般的な `.agents/skills/` および `~/.agents/skills/` も含まれ、`chat.agentSkillsLocations` 設定を使用して追加のスキルの場所を構成できます。
+> **ヒント:** [VS Code](https://code.visualstudio.com/docs/copilot/customization/agent-skills) では、これらの場所に加えて一般的な `.agents/skills/` および `~/.agents/skills/` も含まれます。また、`chat.agentSkillsLocations` 設定を使用して追加のスキルの場所を構成できます。
 
 ### Claude
 
@@ -114,7 +114,7 @@ Ignite UI for Angular には **[エージェント スキル](https://agentskill
 
 ### **オプション A — インストールされた npm パッケージを使用する**
 
-Ignite UI for Angular がプロジェクトに既にインストールされている場合、スキル ファイルは `node_modules` の下で利用できます。それらをプロジェクトにコピーする (例: `.agents/skills/` の下) には、次のコマンドを実行します:
+Ignite UI for Angular がプロジェクトに既にインストールされている場合、スキル ファイルは `node_modules` の配下にあります。それらをプロジェクトにコピーする (例: `.agents/skills/` の下) には、次のコマンドを実行します:
 
 **macOS / Linux / Windows (PowerShell)**
 
@@ -150,7 +150,7 @@ robocopy node_modules\igniteui-angular\skills\igniteui-angular-theming .agents\s
 
 `gemini skills install` コマンドは、Git リポジトリから直接スキルをインストールします。2 つのスコープをサポートします:
 
-- **ユーザー スコープ** (デフォルト) — ユーザー アカウントにスキルをグローバルにインストールし、すべてのプロジェクトで利用できるようにします。スキルは `~/.gemini/skills/` または `~/.agents/skills/` に配置されます。
+- **ユーザー スコープ** (デフォルト) — ユーザー アカウントに対してスキルをグローバルにインストールし、すべてのプロジェクトで利用できるようにします。スキルは `~/.gemini/skills/` または `~/.agents/skills/` に配置されます。
 - **ワークスペース スコープ** — 現在のプロジェクト ディレクトリの `.agents/skills/` にスキルをローカルにインストールし、そのプロジェクトのみにスコープします。
 
 **ユーザー スコープにインストールする (デフォルト):**
