@@ -20,6 +20,8 @@ The server supports all four Ignite UI design systems — **Material**, **Bootst
 
 Most tools can produce either **Sass** or **CSS** output. Sass output is the default and integrates with the `igniteui-theming` Sass module. CSS output generates ready-to-use CSS custom properties and can be used **without a local Sass toolchain** — the server compiles it for you.
 
+The Ignite UI Theming MCP works alongside the Ignite UI CLI MCP. In practice, the Theming MCP handles palettes, themes, tokens, typography, elevations, and styling workflows, while the CLI MCP handles project creation, project modification, component workflows, and documentation-oriented tasks. Most teams will want both servers connected in the same AI client.
+
 **Example prompts to try once connected:**
 
 > _"Create a complete Material Design dark theme for my Angular app with primary #2563eb and coral secondary #f97316."_
@@ -178,10 +180,11 @@ JetBrains AI Assistant supports MCP servers through the IDE settings:
 
 ### Other MCP Clients
 
-For any other MCP-compatible client, use the STDIO transport with the following command and arguments:
+For any other MCP-compatible client, use the STDIO transport with this launch command:
 
-- **Command**: `npx`
-- **Arguments**: `-y`, `igniteui-theming`, `igniteui-theming-mcp`
+```bash
+npx -y igniteui-theming igniteui-theming-mcp
+```
 
 ## Customizing AI Behavior with Project Rules
 
@@ -237,21 +240,21 @@ To see the current full list of tools and their parameters at any time, ask your
 
 Here is a brief overview of each tool:
 
-| Tool                          | Description                                                                                                                                                                                                      |
-| :---------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `detect_platform`             | Reads `package.json` and identifies whether the project uses Ignite UI for Angular, Web Components, React, or Blazor. Selects the correct import paths and component selectors for all subsequent tools.         |
-| `create_palette`              | Generates a color palette with automatic shade variants (50–900, A100–A700) from your base brand colors. Accepts an `output` parameter (`sass` or `css`) and a `designSystem` to select the schema.              |
-| `create_custom_palette`       | Fine-grained palette creation — specify exact hex values for every shade when automatic generation is not suitable.                                                                                              |
-| `create_typography`           | Sets up a font family and type scale for a given design system.                                                                                                                                                  |
-| `create_elevations`           | Configures box-shadow elevation levels (0–24) for Material or Indigo design systems.                                                                                                                             |
-| `create_theme`                | One-shot complete theme: palette + typography + elevations, ready to include in your `styles.scss`. Accepts a `designSystem` (`material`, `bootstrap`, `fluent`, or `indigo`) and `variant` (`light` or `dark`). |
-| `set_size`                    | Sets `--ig-size` globally or for a specific component (`small`, `medium`, or `large`).                                                                                                                           |
-| `set_spacing`                 | Sets `--ig-spacing` (and optionally inline/block overrides) globally or per component.                                                                                                                           |
-| `set_roundness`               | Sets `--ig-radius-factor` (0 = square, 1 = fully round) globally or per component.                                                                                                                               |
-| `get_component_design_tokens` | Returns all available design tokens for a component — always call this before `create_component_theme`.                                                                                                          |
-| `create_component_theme`      | Generates Sass or CSS to customize a component's tokens (colors, borders, etc.). Accepts a `variant` (`light` or `dark`) to select the correct schema.                                                           |
-| `get_color`                   | Returns a CSS variable reference for a palette color, e.g. `var(--ig-primary-500)`. Supports optional contrast and opacity parameters.                                                                           |
-| `read_resource`               | Reads built-in reference resources organized into four categories: platform configs (6), palette/typography/elevation presets (5), color guidance (7), and layout/spacing docs (8).                              |
+| Tool | Description |
+|------|-------------|
+| `detect_platform` | Reads `package.json` and identifies whether the project uses Ignite UI for Angular, Web Components, React, or Blazor. Selects the correct import paths and component selectors for all subsequent tools. |
+| `create_palette` | Generates a color palette with automatic shade variants (50–900, A100–A700) from your base brand colors. Accepts an `output` parameter (`sass` or `css`) and a `designSystem` to select the schema. |
+| `create_custom_palette` | Fine-grained palette creation — specify exact hex values for every shade when automatic generation is not suitable. |
+| `create_typography` | Sets up a font family and type scale for a given design system. |
+| `create_elevations` | Configures box-shadow elevation levels (0–24) for Material or Indigo design systems. |
+| `create_theme` | One-shot complete theme: palette + typography + elevations, ready to include in your `styles.scss`. Accepts a `designSystem` (`material`, `bootstrap`, `fluent`, or `indigo`) and `variant` (`light` or `dark`). |
+| `set_size` | Sets `--ig-size` globally or for a specific component (`small`, `medium`, or `large`). |
+| `set_spacing` | Sets `--ig-spacing` (and optionally inline/block overrides) globally or per component. |
+| `set_roundness` | Sets `--ig-radius-factor` (0 = square, 1 = fully round) globally or per component. |
+| `get_component_design_tokens` | Returns all available design tokens for a component — always call this before `create_component_theme`. |
+| `create_component_theme` | Generates Sass or CSS to customize a component's tokens (colors, borders, etc.). Accepts a `variant` (`light` or `dark`) to select the correct schema. |
+| `get_color` | Returns a CSS variable reference for a palette color, e.g. `var(--ig-primary-500)`. Supports optional contrast and opacity parameters. |
+| `read_resource` | Reads built-in reference resources organized into four categories: platform configs (6), palette/typography/elevation presets (5), color guidance (7), and layout/spacing docs (8). |
 
 > [!NOTE]
 > For compound components (e.g., `combo`, `select`, `grid`), `get_component_design_tokens` returns a list of related child themes instead of a flat token list. For example, querying `grid` may return child themes such as `grid`, `grid-toolbar`, `grid-filtering`, and `paginator`. The AI will generate a separate `create_component_theme` call for each child theme using the appropriate scoped selector.
