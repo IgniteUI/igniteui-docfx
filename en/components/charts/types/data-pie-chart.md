@@ -21,7 +21,6 @@ You can create the Angular Pie Chart in the [`IgxDataPieChartComponent`]({enviro
                                                  github-src="charts/data-pie-chart/overview">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Data Pie Chart Recommendations
@@ -73,7 +72,6 @@ Below is an example that demonstrates usage of the ItemLegend with the [`IgxData
                                                  github-src="charts/data-pie-chart/legend">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Pie Chart Others Category
@@ -113,7 +111,6 @@ The following sample demonstrates usage of the Others slice in the [`IgxDataPieC
                                                  github-src="charts/data-pie-chart/others">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Data Pie Chart Selection
@@ -146,7 +143,6 @@ The following sample demonstrates the selection feature of the [`IgxDataPieChart
                                                  github-src="charts/data-pie-chart/selection">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Data Pie Chart Highlighting
@@ -176,7 +172,6 @@ The following example demonstrates the mouse highlighting behaviors of the [`Igx
                                                  github-src="charts/data-pie-chart/highlighting">
 </code-view>
 
-
 In addition to the mouse highlighting, the [`IgxDataPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiechartcomponent.html) exposes a highlight filter capability that can display a subset of your data. This is applied by specifying a `HighlightedDataSource` for the control and by setting the [`highlightedValuesDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#highlightedValuesDisplayMode) property to `Overlay`. The `HighlightedDataSource` expects a subset of the data assigned to the `DataSource` property of the [`IgxDataPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiechartcomponent.html).
 
 When these conditions are met, the values of the subset will be highlighted, while the remainder of the full set of data will be faded - effectively creating a highlight for the subset and allowing easier visualization of a subset of your data within the same control.
@@ -188,7 +183,6 @@ The following example demonstrates highlight filtering.
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-pie-chart/highlight-filter"
                                                  github-src="charts/data-pie-chart/highlight-filter">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -207,7 +201,6 @@ The following sample demonstrates the usage of animation in the [`IgxDataPieChar
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-pie-chart/animation-replay"
                                                  github-src="charts/data-pie-chart/animation-replay">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -228,6 +221,6 @@ The following table lists API members mentioned in the above sections:
 - [`selectionBehavior`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#selectionBehavior)
 
 | Chart Type     | Control Name                                                                                                                                                                 | API Members                                                                                                                                                                  |
-| :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Data Pie Chart | [`IgxDataPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiechartcomponent.html) | [`IgxDataPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiechartcomponent.html) |
 | Item Legend    | [`IgxItemLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxitemlegendcomponent.html)     | [`IgxItemLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxitemlegendcomponent.html)     |

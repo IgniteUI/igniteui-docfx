@@ -21,7 +21,6 @@ The axis titles feature of the Angular charts, allows you to add contextual info
                                                  github-src="charts/category-chart/axis-titles">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Axis Labels Example
@@ -33,7 +32,6 @@ The Angular Charts allows you full control over configuring, formatting, and sty
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/axis-labels"
                                                  github-src="charts/category-chart/axis-labels">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -57,7 +55,6 @@ The following example formats the yAxis with a [`IgxNumberFormatSpecifier`]({env
                                                  github-src="charts/category-chart/format-specifiers">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Axis Range Example
@@ -71,7 +68,6 @@ By default, charts will calculate the minimum and maximum values for the numeric
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/axis-range"
                                                  github-src="charts/category-chart/axis-range">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -88,7 +84,6 @@ In addition to [`yAxisMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angul
                     iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/axis-types"
                                                  github-src="charts/financial-chart/axis-types">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -108,7 +103,6 @@ The following example shows the average maximum temperature in Celsius in New Yo
                                                  github-src="charts/category-chart/axis-gap">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Axis Overlap Example
@@ -122,7 +116,6 @@ The following example shows a comparison of the highest grossing worldwide film 
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/axis-overlap"
                                                  github-src="charts/category-chart/axis-overlap">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -138,7 +131,7 @@ You can find more information about related chart features in these topics:
 The following is a list of API members mentioned in the above sections:
 
 | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)                                                                                                                                                                                                     | [`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html)           | [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html)             |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `Axes` ➔ [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxnumericyaxiscomponent.html) ➔ [`maximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxnumericaxisbasecomponent.html#maximumValue)   | [`yAxisMaximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#yAxisMaximumValue)   | [`yAxisMaximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#yAxisMaximumValue)   |
 | `Axes` ➔ [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxnumericyaxiscomponent.html) ➔ [`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxnumericaxisbasecomponent.html#minimumValue)   | [`yAxisMinimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#yAxisMinimumValue)   | [`yAxisMinimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#yAxisMinimumValue)   |
 | `Axes` ➔ [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxnumericyaxiscomponent.html) ➔ [`isLogarithmic`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxnumericaxisbasecomponent.html#isLogarithmic) | [`yAxisIsLogarithmic`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#yAxisIsLogarithmic) | [`yAxisIsLogarithmic`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#yAxisIsLogarithmic) |

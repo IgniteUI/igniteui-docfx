@@ -21,7 +21,6 @@ You can create Angular Column Chart in the [`IgxCategoryChartComponent`]({enviro
                                                  github-src="charts/category-chart/column-chart-multiple-sources">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Column Charts Recommendations
@@ -62,7 +61,6 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
                                                  github-src="charts/category-chart/column-chart-single-source">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Column Chart with Multiple Series
@@ -74,7 +72,6 @@ The Column Chart is able to render multiple columns per category for comparison 
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/column-chart-multiple-sources"
                                                  github-src="charts/category-chart/column-chart-multiple-sources">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -89,7 +86,6 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/column-chart-styling"
                                                  github-src="charts/category-chart/column-chart-styling">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -109,7 +105,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                                                  github-src="charts/data-chart/waterfall-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Stacked Column Chart
@@ -124,7 +119,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                                                  github-src="charts/data-chart/stacked-column-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Stacked 100% Column Chart
@@ -138,7 +132,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-column-chart"
                                                  github-src="charts/data-chart/stacked-100-column-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -156,7 +149,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                                                  github-src="charts/data-chart/range-column-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Radial Column Chart
@@ -170,7 +162,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-column-chart"
                                                  github-src="charts/data-chart/radial-column-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -188,7 +179,7 @@ You can find more information about related chart types in these topics:
 The following table lists API members mentioned in the above sections:
 
 | Chart Type          | Control Name                                                                                                                                                                   | API Members                                                                                                                                                                                      |
-| :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Column              | [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) | [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#chartType) = **Column**            |
 | Radial Column       | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)         | [`IgxRadialColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxradialcolumnseriescomponent.html)         |
 | Range Column        | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)         | [`IgxRangeColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxrangecolumnseriescomponent.html)           |
