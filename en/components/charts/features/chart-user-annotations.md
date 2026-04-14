@@ -18,8 +18,7 @@ This is directly integrated with the available tools of the [`IgxToolbarComponen
                                                  github-src="charts/data-chart/user-annotation-layer">
 </code-view>
 
-
-> \[!Note]
+> [!Note]
 > This feature is designed to support X and Y axes and does not currently support radial or angular axes.
 
 ## Using the User Annotations with the Toolbar
@@ -41,7 +40,7 @@ When adding one of these user annotations via the `XamToolbar`, the [`IgxDataCha
 The table below details the different configurable properties on [`IgxUserAnnotationInformation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxuserannotationinformation.html):
 
 | Property                                                                                                                                                                                                  | Type     | Description                                                                                                                                                                                                                     |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`annotationData`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxuserannotationinformation.html#annotationData)                     | `string` | This property allows additional information for the user annotation. This property is designed to be utilized with the `UserAnnotationToolTipContentUpdating` event to show additional information in the annotation's tooltip. |
 | [`annotationId`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxuserannotationinformation.html#annotationId)                         | `string` | This read-only property returns the unique string ID of the user annotation.                                                                                                                                                    |
 | [`badgeColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxuserannotationinformation.html#badgeColor)                             | `string` | This property gets or sets the color to use for the badge in the user annotation.                                                                                                                                               |
