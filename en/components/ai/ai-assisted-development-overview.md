@@ -19,11 +19,11 @@ The AI toolchain does not currently support Blazor in the CLI MCP and Agent Skil
 
 Ignite UI's AI toolchain consists of three independently usable layers. Each layer can be enabled on its own; they are designed to work together.
 
-| Layer | What it provides | Owner | Frameworks |
-| --- | --- | --- | --- |
-| Agent Skills | Developer-owned instruction packages: import paths, component patterns, decision flows, project conventions | Developer | Angular, React, Web Components, Blazor |
-| CLI MCP server (`igniteui-cli`) | Project scaffolding, component management, documentation and API queries via MCP | Infragistics | Angular, React, Web Components |
-| Theming MCP server (`igniteui-theming`) | Design tokens, palette definitions, CSS variable generation, theming queries via MCP | Infragistics | Angular, React, Web Components, Blazor |
+| Layer                                   | What it provides                                                                                            | Owner        | Frameworks                             |
+| --------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------ | -------------------------------------- |
+| Agent Skills                            | Developer-owned instruction packages: import paths, component patterns, decision flows, project conventions | Developer    | Angular, React, Web Components, Blazor |
+| CLI MCP server (`igniteui-cli`)         | Project scaffolding, component management, documentation and API queries via MCP                            | Infragistics | Angular, React, Web Components         |
+| Theming MCP server (`igniteui-theming`) | Design tokens, palette definitions, CSS variable generation, theming queries via MCP                        | Infragistics | Angular, React, Web Components, Blazor |
 
 The CLI MCP server and Theming MCP server are both started through `npx` and connect to any MCP-compatible client through STDIO transport. Agent Skills are local files placed in your project that the AI client reads from disk.
 
@@ -67,14 +67,14 @@ For configuration details, see [Theming MCP](theming-mcp.md).
 
 The CLI MCP server and Theming MCP server work with any editor or AI client that supports MCP with STDIO transport.
 
-| Client | Configuration method |
-| --- | --- |
-| VS Code with GitHub Copilot | `.vscode/mcp.json` |
-| Cursor | `.cursor/mcp.json` |
-| Claude Desktop (macOS) | `~/Library/Application Support/Claude/claude_desktop_config.json` |
-| Claude Desktop (Windows) | `%APPDATA%\Claude\claude_desktop_config.json` |
-| Claude Code | `.mcp.json` or the Claude Code MCP CLI command |
-| JetBrains AI Assistant | **Tools → AI Assistant → Model Context Protocol (MCP)** |
+| Client                      | Configuration method                                              |
+| --------------------------- | ----------------------------------------------------------------- |
+| VS Code with GitHub Copilot | `.vscode/mcp.json`                                                |
+| Cursor                      | `.cursor/mcp.json`                                                |
+| Claude Desktop (macOS)      | `~/Library/Application Support/Claude/claude_desktop_config.json` |
+| Claude Desktop (Windows)    | `%APPDATA%\Claude\claude_desktop_config.json`                     |
+| Claude Code                 | `.mcp.json` or the Claude Code MCP CLI command                    |
+| JetBrains AI Assistant      | **Tools → AI Assistant → Model Context Protocol (MCP)**           |
 
 Agent Skills are compatible with GitHub Copilot via `.github/copilot-instructions.md`, Cursor via `.cursorrules` or `.cursor/rules/`, Windsurf via `.windsurfrules`, and JetBrains AI Assistant via project-level prompt settings.
 

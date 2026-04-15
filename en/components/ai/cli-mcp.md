@@ -89,19 +89,19 @@ If you are creating a project with Ignite UI CLI first, you can run the CLI in e
 
 - **Global install**
 
-    ```bash
-    npm install -g igniteui-cli
-    ```
+  ```bash
+  npm install -g igniteui-cli
+  ```
 
-    This gives you the `ig` command in any terminal session and is the clearest option if you plan to create and scaffold projects regularly.
+  This gives you the `ig` command in any terminal session and is the clearest option if you plan to create and scaffold projects regularly.
 
 - **Without a global install**
 
-    ```bash
-    npx --package igniteui-cli igniteui new
-    ```
+  ```bash
+  npx --package igniteui-cli igniteui new
+  ```
 
-    This runs the CLI through `npx` instead of a global `ig` command.
+  This runs the CLI through `npx` instead of a global `ig` command.
 
 For the **CLI-first** path, you can create the project in guided mode or with a direct command.
 
@@ -247,20 +247,20 @@ JetBrains AI Assistant supports MCP servers through the IDE settings:
 
 4. Enter the following configuration:
 
-    ```json
-    {
-      "mcpServers": {
-        "igniteui-cli": {
-          "command": "npx",
-          "args": ["-y", "igniteui-cli", "mcp"]
-        },
-        "igniteui-theming": {
-          "command": "npx",
-          "args": ["-y", "igniteui-theming", "igniteui-theming-mcp"]
-        }
-      }
-    }
-    ```
+   ```json
+   {
+     "mcpServers": {
+       "igniteui-cli": {
+         "command": "npx",
+         "args": ["-y", "igniteui-cli", "mcp"]
+       },
+       "igniteui-theming": {
+         "command": "npx",
+         "args": ["-y", "igniteui-theming", "igniteui-theming-mcp"]
+       }
+     }
+   }
+   ```
 
 5. Click **OK** and restart the AI Assistant.
 
@@ -319,14 +319,14 @@ To get the live list with current parameters, ask:
 
 Here is a brief overview of each tool:
 
-| Tool | Description |
-|------|-------------|
+| Tool                      | Description                                                                                                                                                          |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `list_components`         | Lists available Ignite UI component docs for a framework. Accepts an optional keyword filter (case-insensitive substring match against name, keywords, and summary). |
-| `get_doc`                 | Gets the full markdown content of a specific component doc by kebab-case name (e.g., `grid-editing`, `combo-overview`). Includes code samples, tables, and links. |
-| `search_docs`             | Full-text search across Ignite UI docs for a framework. Returns up to 20 ranked results with excerpts. |
-| `get_project_setup_guide` | Returns the project setup guide for creating a new project in a specific framework, including CLI steps and install instructions. |
-| `search_api`              | Searches API entries by keyword or component name across Angular, React, and Web Components. |
-| `get_api_reference`       | Returns the full API reference for a specific component or class, including properties, methods, and events. Supports Angular, React, and Web Components. |
+| `get_doc`                 | Gets the full markdown content of a specific component doc by kebab-case name (e.g., `grid-editing`, `combo-overview`). Includes code samples, tables, and links.    |
+| `search_docs`             | Full-text search across Ignite UI docs for a framework. Returns up to 20 ranked results with excerpts.                                                               |
+| `get_project_setup_guide` | Returns the project setup guide for creating a new project in a specific framework, including CLI steps and install instructions.                                    |
+| `search_api`              | Searches API entries by keyword or component name across Angular, React, and Web Components.                                                                         |
+| `get_api_reference`       | Returns the full API reference for a specific component or class, including properties, methods, and events. Supports Angular, React, and Web Components.            |
 
 At a high level, the CLI MCP tools help with:
 
@@ -337,7 +337,7 @@ At a high level, the CLI MCP tools help with:
 - answering documentation and API questions
 
 > [!NOTE]
-> Framework detection uses component prefixes: `` for Angular, `` for React, `` for Web Components, `` for Blazor. The assistant picks up the right framework automatically from your open files or prompt context.
+> Framework detection uses component prefixes: `for Angular`, `for React`, `for Web Components`, `for Blazor`. The assistant picks up the right framework automatically from your open files or prompt context.
 
 The theming server adds styling, theme, palette, and token workflows to the same client session.
 
