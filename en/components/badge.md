@@ -149,14 +149,14 @@ Use the `[value]` input to display text or a numeric count inside the badge. Thi
 <igx-badge>{{ model.value }}</igx-badge>
 ```
 
-The `[icon]` input takes precedence over `[value]`. When both inputs are set, the icon is displayed and the value is ignored:
+When both `[icon]` and `[value]` are set, the badge displays both simultaneously:
 
 ```html
-<!-- The icon "check" will be shown; the value "5" will be ignored -->
+<!-- Both the icon "check" and the value "5" will be shown -->
 <igx-badge icon="check" [value]="5" type="success"></igx-badge>
 ```
 
-To display a numeric value without an icon, make sure `[icon]` is not set (or is `null`/empty):
+To display only a numeric value without an icon, make sure `[icon]` is not set:
 
 ```html
 <igx-badge [value]="unreadCount" type="info"></igx-badge>
@@ -219,7 +219,7 @@ export class AppModule {}
 ```
 
 >[!NOTE]
->The [`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) has [`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) and [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) inputs to configure the badge look. You can set the icon by providing its name from the official [material icons set](https://material.io/icons/). The badge type can be set to either [`default`]({environment:angularApiUrl}/enums/type.html#default), [`info`]({environment:angularApiUrl}/enums/type.html#info), [`success`]({environment:angularApiUrl}/enums/type.html#success), [`warning`]({environment:angularApiUrl}/enums/type.html#warning), or [`error`]({environment:angularApiUrl}/enums/type.html#error). Depending on the type, a specific background color is applied.
+>The [`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) has [`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon), [`value`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#value), and [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) inputs to configure the badge look. You can set the icon by providing its name from the official [material icons set](https://material.io/icons/). The badge type can be set to either [`default`]({environment:angularApiUrl}/enums/type.html#default), [`info`]({environment:angularApiUrl}/enums/type.html#info), [`success`]({environment:angularApiUrl}/enums/type.html#success), [`warning`]({environment:angularApiUrl}/enums/type.html#warning), or [`error`]({environment:angularApiUrl}/enums/type.html#error). Depending on the type, a specific background color is applied.
 
 In our sample, [`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) and [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) are bound to model properties named _icon_ and _type_.
 
