@@ -153,7 +153,7 @@ The `[icon]` input takes precedence over `[value]`. When both inputs are set, th
 
 ```html
 <!-- The icon "check" will be shown; the value "5" will be ignored -->
-<igx-badge [icon]="'check'" [value]="5" type="success"></igx-badge>
+<igx-badge icon="check" [value]="5" type="success"></igx-badge>
 ```
 
 To display a numeric value without an icon, make sure `[icon]` is not set (or is `null`/empty):
