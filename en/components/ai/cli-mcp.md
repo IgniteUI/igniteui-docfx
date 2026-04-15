@@ -1,7 +1,7 @@
 ---
-title: "Angular Ignite UI CLI MCP | Infragistics"
-_description: "Connect Ignite UI CLI MCP to your AI client to scaffold projects, modify existing apps, create and update components, and ask documentation questions for Ignite UI for Angular. Learn the setup options for VS Code, GitHub, Cursor, Claude Desktop, Claude Code, JetBrains, and other MCP clients."
-_keywords: "Angular, Ignite UI for Angular, Infragistics, Ignite UI CLI MCP, Ignite UI Theming MCP, MCP, Model Context Protocol, AI, agent, GitHub Copilot, Cursor, Claude, JetBrains"
+title: Angular Ignite UI CLI MCP | Infragistics
+_description: Connect Ignite UI CLI MCP to your AI client to scaffold projects, modify existing apps, create and update components, and ask documentation questions for Ignite UI for Angular. Learn the setup options for VS Code, GitHub, Cursor, Claude Desktop, Claude Code, JetBrains, and other MCP clients.
+_keywords: Angular, Ignite UI for Angular, Infragistics, Ignite UI CLI MCP, Ignite UI Theming MCP, MCP, Model Context Protocol, AI, agent, GitHub Copilot, Cursor, Claude, JetBrains
 _language: en
 _license: MIT
 _canonicalLink: "{environment:dvUrl}/components/ai/cli-mcp"
@@ -319,14 +319,14 @@ To get the live list with current parameters, ask:
 
 Here is a brief overview of each tool:
 
-| Tool                      | Description                                                                                                                                                          |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tool | Description |
+|------|-------------|
 | `list_components`         | Lists available Ignite UI component docs for a framework. Accepts an optional keyword filter (case-insensitive substring match against name, keywords, and summary). |
-| `get_doc`                 | Gets the full markdown content of a specific component doc by kebab-case name (e.g., `grid-editing`, `combo-overview`). Includes code samples, tables, and links.    |
-| `search_docs`             | Full-text search across Ignite UI docs for a framework. Returns up to 20 ranked results with excerpts.                                                               |
-| `get_project_setup_guide` | Returns the project setup guide for creating a new project in a specific framework, including CLI steps and install instructions.                                    |
-| `search_api`              | Searches API entries by keyword or component name across Angular, React, and Web Components.                                                                         |
-| `get_api_reference`       | Returns the full API reference for a specific component or class, including properties, methods, and events. Supports Angular, React, and Web Components.            |
+| `get_doc`                 | Gets the full markdown content of a specific component doc by kebab-case name (e.g., `grid-editing`, `combo-overview`). Includes code samples, tables, and links. |
+| `search_docs`             | Full-text search across Ignite UI docs for a framework. Returns up to 20 ranked results with excerpts. |
+| `get_project_setup_guide` | Returns the project setup guide for creating a new project in a specific framework, including CLI steps and install instructions. |
+| `search_api`              | Searches API entries by keyword or component name across Angular, React, and Web Components. |
+| `get_api_reference`       | Returns the full API reference for a specific component or class, including properties, methods, and events. Supports Angular, React, and Web Components. |
 
 At a high level, the CLI MCP tools help with:
 
@@ -409,9 +409,6 @@ Validate that the JSON uses the `mcpServers` structure and that each local serve
 ## Additional Resources
 
 - [AI-Assisted Development with Ignite UI](./ai-assisted-development-overview.md)
-
-<!---->
-
 - [Ignite UI for Angular Skills](./skills.md)
 - [Ignite UI Theming MCP](./theming-mcp.md)
 

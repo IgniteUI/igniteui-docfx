@@ -21,6 +21,7 @@ Angular Scatter Marker Chart renders as a collection of markers, each having a p
                                                  github-src="charts/data-chart/scatter-point-chart">
 </code-view>
 
+
 <div class="divider--half"></div>
 
 ## Angular Scatter Line Chart
@@ -32,6 +33,7 @@ Angular Scatter Line Chart renders as a collection of markers connected by a str
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/scatter-line-chart"
                                                  github-src="charts/data-chart/scatter-line-chart">
 </code-view>
+
 
 <div class="divider--half"></div>
 
@@ -45,6 +47,7 @@ Angular Scatter Spline Chart renders as a collection of markers connected by a c
                                                  github-src="charts/data-chart/scatter-spline-chart">
 </code-view>
 
+
 <div class="divider--half"></div>
 
 ## Angular Scatter High Density Chart
@@ -56,6 +59,7 @@ Use the Angular Scatter High Density (HD) Chart to bind and show scatter data ra
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/type-scatter-hd-series"
                                                  github-src="charts/data-chart/type-scatter-hd-series">
 </code-view>
+
 
 <div class="divider--half"></div>
 
@@ -69,6 +73,7 @@ Angular Scatter Area Chart draws a colored surface based on a triangulation of X
                                                  github-src="charts/data-chart/type-scatter-area-series">
 </code-view>
 
+
 <div class="divider--half"></div>
 
 ## Angular Scatter Contour Chart
@@ -80,6 +85,7 @@ Angular Scatter Contour Chart draws colored contour lines based on a triangulati
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/type-scatter-contour-series"
                                                  github-src="charts/data-chart/type-scatter-contour-series">
 </code-view>
+
 
 <div class="divider--half"></div>
 
@@ -97,11 +103,11 @@ You can find more information about related chart types in these topics:
 
 The following table lists API members mentioned in the above sections:
 
-| Chart Type           | Control Name                                                                                                                                                           | API Members                                                                                                                                                                                          |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Scatter Marker       | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxscatterseriescomponent.html)                       |
-| Scatter Line         | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxScatterLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxscatterlineseriescomponent.html)               |
-| Scatter Spline       | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxScatterSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxscattersplineseriescomponent.html)           |
-| High Density Scatter | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxHighDensityScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxhighdensityscatterseriescomponent.html) |
-| Scatter Area         | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxscatterareaseriescomponent.html)               |
-| Scatter Contour      | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxScatterContourSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxscattercontourseriescomponent.html)         |
+|Chart Type                  | Control Name   | API Members |
+|----------------------------|----------------|------------------------ |
+|Scatter Marker              | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxscatterseriescomponent.html) |
+|Scatter Line                | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxScatterLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxscatterlineseriescomponent.html) |
+|Scatter Spline              | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxScatterSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxscattersplineseriescomponent.html) |
+|High Density Scatter        | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxHighDensityScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxhighdensityscatterseriescomponent.html) |
+|Scatter Area                | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxscatterareaseriescomponent.html) |
+|Scatter Contour             | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxScatterContourSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxscattercontourseriescomponent.html) |
