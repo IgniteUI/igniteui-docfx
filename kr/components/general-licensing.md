@@ -9,12 +9,12 @@ _language: kr
 
 It is important to know all the [legal terms and conditions](https://www.infragistics.com/legal/license/igultimate-la) regarding the Ignite UI for Angular that you purchase and use.
 
-> \[!Note]
+> [!Note]
 > We have updated our license terms and subscription model in second quarter of 2020.
 
 If you are building a **commercial product** or your license [has expired](http://www.infragistics.com/renewal), you will need to [acquire a commercial license](https://www.infragistics.com/how-to-buy/product-pricing). This will enable you to use our private npm feed hosted on https://packages.infragistics.com/npm/js-licensed/ for development. There you will find the latest versions of the Ignite UI for Angular packages. If you have a valid commercial license, you can use this private feed and you will have access to the full version of Ignite UI for Angular.
 
-> \[!Note]
+> [!Note]
 > Currently only the **igniteui-dockmanager** package is available in our private npm feed, but in the future we will add the other Ignite UI for Angular packages as well.
 
 If you are building a **non-commercial** product, [contact us](https://www.infragistics.com/about-us/contact-us) and we will provide you with the appropriate license.
@@ -25,7 +25,7 @@ Npm is the most popular package manager and is also the default one for the runt
 
 Infragistics Ignite UI for Angular is available as npm packages and you can add them as dependencies to your project in a [few easy steps](./general-getting-started.md). Choosing this approach will not require configuring npm. By installing this package you will start using the **Ignite UI for Angular Trial version** of the product.
 
-> \[!Note]
+> [!Note]
 > Currently only the [igniteui-dockmanager](https://www.npmjs.com/package/igniteui-dockmanager) npm package has a trial watermark, but in the future we will add it to the other Ignite UI for Angular packages as well.
 
 ## How to setup your environment to use the private npm feed
@@ -34,7 +34,7 @@ Infragistics Ignite UI for Angular is available as npm packages and you can add 
 
 This will allow you to seamlessly use a mix of packages from the public npm registry and the Infragistics private registry. You will be asked to provide the username and the password that you use for logging into your Infragistics account. You should also provide the email that is registered to your Infragistics profile.
 
-> \[!Note]
+> [!Note]
 > **npm** is disallowing the use of the **"@"** symbol inside your username as it is considered as being "not safe for the net". Because your username is actually the email that you use for your Infragistics account it always contains the symbol **"@"**. That's why you must escape this limitation by replacing the **"@"** symbol with **"!!"** (two exclamation marks). For example, if your username is **"username@example.com"** when asked about your username you should provide the following input: **"username!!example.com"**.
 
 ### Now, to log in to our private feed using npm, run the adduser command and specify a user account and password:
@@ -99,7 +99,7 @@ data-src="../images/general/generate-token.jpg"
 alt="New Token Generated"
 title="Generate new token" />
 
-> \[!Note]
+> [!Note]
 > Each token is with Base64 encoding.
 
 - Add the following into your [.npmrc](https://docs.npmjs.com/configuring-npm/npmrc.html) file
