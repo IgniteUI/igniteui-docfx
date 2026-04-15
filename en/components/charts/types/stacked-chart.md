@@ -21,7 +21,6 @@ The following example, you can use the drop-down to switch between all of the di
                                                  github-src="charts/data-chart/stacked-chart-types">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 The following sections demonstrate individual types of Ignite UI for Angular Stacked Charts.
@@ -38,7 +37,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                                                  github-src="charts/data-chart/stacked-area-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Stacked 100 Area Chart
@@ -52,7 +50,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-area-chart"
                                                  github-src="charts/data-chart/stacked-100-area-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -70,7 +67,6 @@ In this example of an Stacked Bar Chart, we have a Numeric X Axis (bottom labels
                                                  github-src="charts/data-chart/stacked-bar-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Stacked 100% Bar Chart
@@ -84,7 +80,6 @@ In this example of a Stacked 100% Bar Chart, the Energy Product values are shown
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-bar-chart"
                                                  github-src="charts/data-chart/stacked-100-bar-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -100,7 +95,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                                                  github-src="charts/data-chart/stacked-column-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Stacked 100% Column Chart
@@ -115,7 +109,6 @@ The example below shows a study made for online shopping traffic by departments 
                                                  github-src="charts/data-chart/stacked-100-column-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Stacked Line Chart
@@ -127,7 +120,6 @@ The Stacked Line Chart is often used to show the change of value over time such 
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-line-chart"
                                                  github-src="charts/data-chart/stacked-line-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -143,7 +135,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                                                  github-src="charts/data-chart/stacked-100-line-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Stacked Spline Area Chart
@@ -157,7 +148,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-spline-area-chart"
                                                  github-src="charts/data-chart/stacked-spline-area-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -173,7 +163,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                                                  github-src="charts/data-chart/stacked-100-spline-area-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Stacked Spline Chart
@@ -185,7 +174,6 @@ The Stacked Spline Chart is often used to show the change of value over time suc
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-spline-chart"
                                                  github-src="charts/data-chart/stacked-spline-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -200,7 +188,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-spline-chart"
                                                  github-src="charts/data-chart/stacked-100-spline-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -218,17 +205,17 @@ You can find more information about related chart types in these topics:
 
 The following table lists API members mentioned in the above sections:
 
-| Chart Type               | Control Name   | API Members |
-| -------------------------|----------------|-------------------------------- |
-| Stacked Area             | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxStackedAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstackedareaseriescomponent.html) |
-| Stacked Bar              | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxStackedBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstackedbarseriescomponent.html) |
-| Stacked Column           | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxStackedColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstackedcolumnseriescomponent.html) |
-| Stacked Line             | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxStackedLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstackedlineseriescomponent.html) |
-| Stacked Spline           | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxStackedSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstackedsplineseriescomponent.html) |
-| Stacked Spline Area      | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxStackedSplineAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstackedsplineareaseriescomponent.html) |
-| Stacked 100% Area        | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxStacked100AreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstacked100areaseriescomponent.html) |
-| Stacked 100% Bar         | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxStacked100BarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstacked100barseriescomponent.html) |
-| Stacked 100% Column      | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxStacked100ColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstacked100columnseriescomponent.html) |
-| Stacked 100% Line        | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxStacked100LineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstacked100lineseriescomponent.html) |
-| Stacked 100% Spline      | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxStacked100SplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstacked100splineseriescomponent.html) |
+| Chart Type               | Control Name                                                                                                                                                           | API Members                                                                                                                                                                                              |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Stacked Area             | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxStackedAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstackedareaseriescomponent.html)                   |
+| Stacked Bar              | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxStackedBarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstackedbarseriescomponent.html)                     |
+| Stacked Column           | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxStackedColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstackedcolumnseriescomponent.html)               |
+| Stacked Line             | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxStackedLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstackedlineseriescomponent.html)                   |
+| Stacked Spline           | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxStackedSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstackedsplineseriescomponent.html)               |
+| Stacked Spline Area      | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxStackedSplineAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstackedsplineareaseriescomponent.html)       |
+| Stacked 100% Area        | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxStacked100AreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstacked100areaseriescomponent.html)             |
+| Stacked 100% Bar         | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxStacked100BarSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstacked100barseriescomponent.html)               |
+| Stacked 100% Column      | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxStacked100ColumnSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstacked100columnseriescomponent.html)         |
+| Stacked 100% Line        | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxStacked100LineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstacked100lineseriescomponent.html)             |
+| Stacked 100% Spline      | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxStacked100SplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstacked100splineseriescomponent.html)         |
 | Stacked 100% Spline Area | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) | [`IgxStacked100SplineAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstacked100splineareaseriescomponent.html) |
