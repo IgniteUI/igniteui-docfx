@@ -29,16 +29,13 @@ The Angular [`IgxBingMapsMapImagery`]({environment:dvApiBaseUrl}/products/ignite
 The following code snippet shows how to display geographic imagery tiles from Bing Maps in Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html) using [`IgxBingMapsMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxbingmapsmapimagery.html) class.
 
 ```html
-<igx-geographic-map #map
-    width="100%"
-    height="100%"
-    zoomable="true" >
+<igx-geographic-map #map width="100%" height="100%" zoomable="true">
 </igx-geographic-map>
 ```
 
 ```ts
-import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
-import { IgxBingMapsMapImagery } from 'igniteui-angular-maps';
+import { IgxGeographicMapComponent } from "igniteui-angular-maps";
+import { IgxBingMapsMapImagery } from "igniteui-angular-maps";
 // ...
 const tileSource = new IgxBingMapsMapImagery();
 tileSource.apiKey = "YOUR_BING_MAPS_API_KEY";
@@ -50,9 +47,9 @@ tileSource.imageryStyle = BingMapsImageryStyle.Road;
 let tileUri = tileSource.actualBingImageryRestUri;
 const isHttpSecured = window.location.toString().startsWith("https:");
 if (isHttpSecured) {
-    tileUri = tileUri.replace("http:", "https:");
+  tileUri = tileUri.replace("http:", "https:");
 } else {
-    tileUri = tileUri.replace("https:", "http:");
+  tileUri = tileUri.replace("https:", "http:");
 }
 tileSource.bingImageryRestUri = tileUri;
 
@@ -64,7 +61,7 @@ this.map.backgroundContent = tileSource;
 The following table summarized properties of the [`IgxBingMapsMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxbingmapsmapimagery.html) class:
 
 | Property Name                                                                                                                                                                        | Property Type                                                                                                                                                    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`apiKey`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxbingmapsmapimagery.html#apiKey)                         | string                                                                                                                                                           | Represents the property for setting an API key required for the Bing Maps imagery service. You must obtain this key from the <a href="http://www.bingmapsportal.coms" target="_blank">www.bingmapsportal.com</a> website.                                                                                                                                                                                                                                                                                                                                         |
 | [`imageryStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxbingmapsmapimagery.html#imageryStyle)             | [`BingMapsImageryStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_maps.bingmapsimagerystyle.html) | Represents the property for setting the Bing Maps imagery tiles map style. This property can be set to the following [`BingMapsImageryStyle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_maps.bingmapsimagerystyle.html) enumeration values: <ul><li> Aerial - Specifies the Aerial map style without road or labels overlay</li> <li> AerialWithLabels - Specifies the Aerial map style with road and labels overlay</li><li> Road - Specifies the Roads map style without Aerial overlay</li></ul> |
 | [`bingImageryRestUri`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxbingmapsmapimagery.html#bingImageryRestUri) | string                                                                                                                                                           | Represents the property for setting the Bing Imagery REST URI specifying where the TilePath and SubDomains will come from. This is an optional property, and if not specified it will use the default REST URI.                                                                                                                                                                                                                                                                                                                                                   |
