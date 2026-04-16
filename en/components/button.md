@@ -119,7 +119,7 @@ As of version `17.1.0` the IgniteUI for Angular exposes a new `igxIconButton` di
 </button>
 ```
 
->[!NOTE]
+> [!NOTE]
 > To use Material Icons, add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
 
 <div class="sample-container loading" style="height: 70px">
