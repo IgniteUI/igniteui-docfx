@@ -77,6 +77,10 @@ export class AppModule {}
 ```
 
 Then define a @@igComponent with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable) set to true:
+
+>[!NOTE]
+> To use Material Icons, add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 @@if (igxName ==='IgxGrid') {
 
 ```html

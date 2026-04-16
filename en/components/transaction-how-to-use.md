@@ -83,6 +83,9 @@ In our html template, we define an [`igxList`]({environment:angularApiUrl}/class
 </igx-list>
 ```
 
+>[!NOTE]
+> To use Material Icons, add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 ## Pipe for pending changes
 
 The list component from above uses the `transactionBasePipe` to display changes to the items in the wishlist without affecting the original data. Here is how the pipe looks like:

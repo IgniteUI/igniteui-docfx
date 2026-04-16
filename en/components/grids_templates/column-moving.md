@@ -46,6 +46,9 @@ The @@igComponent component in Ignite UI for Angular provides the **Column Movin
 </ng-template>
 ```
 
+>[!NOTE]
+> To use Material Icons, add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 ## Angular @@igComponent Column Moving Overview Example
 
 @@if (igxName === 'IgxGrid') {

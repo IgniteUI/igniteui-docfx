@@ -141,6 +141,9 @@ The Select component supports the following directives applicable to the [Input 
 </igx-select>
 ```
 
+>[!NOTE]
+> To use Material Icons, add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 <code-view style="height: 350px;"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/data-entries/select-input-directives/" >

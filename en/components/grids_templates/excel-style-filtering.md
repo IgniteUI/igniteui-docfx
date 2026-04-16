@@ -339,6 +339,9 @@ You could also re-template the Excel style filtering icon in the column header u
 </@@igSelector>
 ```
 
+>[!NOTE]
+> To use Material Icons, add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 <div class="divider--half"></div>
 
 @@if (igxName === 'IgxGrid') {

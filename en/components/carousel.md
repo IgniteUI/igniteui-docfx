@@ -193,6 +193,9 @@ To achieve this we will use the [IgxCarouselPrevButtonDirective]({environment:an
 ...
 ```
 
+>[!NOTE]
+> To use Material Icons, add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 ### Slide containing other components
 
 <div class="divider--half"></div>

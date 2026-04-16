@@ -78,6 +78,9 @@ export class HomeComponent {
 }
 ```
 
+>[!NOTE]
+> To use Material Icons, add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 Now that you have the Ignite UI for Angular Input Group module or directives imported, you can start using the `igx-input-group` component.
 
 > [!NOTE]

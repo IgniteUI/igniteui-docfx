@@ -126,6 +126,9 @@ Next, we need to update our template with an icon button for each of the options
 </igx-navbar>
 ```
 
+>[!NOTE]
+> To use Material Icons, add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 If all went well, you should see the following in your browser:
 
 <code-view style="height: 300px"

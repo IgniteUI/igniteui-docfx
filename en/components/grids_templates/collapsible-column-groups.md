@@ -131,6 +131,9 @@ You can define custom expand/collapse template and provide it to each of the col
 </igx-column-group>
 ```
 
+>[!NOTE]
+> To use Material Icons, add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 ### Using igxCollapsibleIndicator directive
 
 Another way to achieve this behavior is to use the igxCollapsibleIndicator directive as shown in the example below:

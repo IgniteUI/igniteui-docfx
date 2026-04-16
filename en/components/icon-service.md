@@ -63,6 +63,9 @@ Having registered the two font families above, we can now consume their icons in
 <igx-icon family="fa-solid" name="car"></igx-icon>
 ```
 
+>[!NOTE]
+> To use Material Icons, add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 You might have noticed that for the `material` family we use the ligature `name` as name, while in the case of the `fa-solid` family we specify the `className` for name, which is `fa-car` but drop the `fa-` prefix as it has been specified when we registered the icon family in the previous step.
 
 ### Adding SVG Icons

@@ -305,6 +305,9 @@ We will wrap all of our components inside an [**IgxInputGroup**](../input-group.
 </igx-input-group>
 ```
 
+>[!NOTE]
+> To use Material Icons, add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 ```typescript
 // searchgrid.component.ts
 

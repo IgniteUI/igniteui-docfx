@@ -255,6 +255,9 @@ If you want to re-use a single template for several column groups, you could set
 </ng-template>
 ```
 
+>[!NOTE]
+> To use Material Icons, add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 The following sample demonstrates how to implement collapsible column groups using header templates.
 
 @@if (igxName === 'IgxGrid') {
