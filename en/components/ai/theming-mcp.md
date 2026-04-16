@@ -1,5 +1,5 @@
 ---
-title: Angular Theming MCP | Infragistics 
+title: Angular Theming MCP | Infragistics
 _description: Angular works with the Ignite UI Theming MCP server that allows you to create custom themes, palettes, typography, and elevations for your Ignite UI for Angular applications. Learn how to use the MCP server to generate and apply custom themes that match your brand and design requirements.
 _keywords: Ignite UI for Angular controls, Angular widgets, web widgets, UI widgets, Components Suite, Artificial Intelligence, AI, MCP, Model Context Protocol, Theming, Custom Themes, Palettes, Typography, Elevations
 _license: MIT
@@ -19,6 +19,8 @@ Instead of writing styles by hand, you can describe your theming intent in plain
 The server supports all four Ignite UI design systems — **Material**, **Bootstrap**, **Fluent**, and **Indigo** — in both light and dark variants. While this guide focuses on Angular, the MCP server also works with all Ignite UI component libraries from Infragistics. The `detect_platform` tool reads your `package.json` and selects the correct import paths and selectors automatically.
 
 Most tools can produce either **Sass** or **CSS** output. Sass output is the default and integrates with the `igniteui-theming` Sass module. CSS output generates ready-to-use CSS custom properties and can be used **without a local Sass toolchain** — the server compiles it for you.
+
+The Ignite UI Theming MCP works alongside the Ignite UI CLI MCP. In practice, the Theming MCP handles palettes, themes, tokens, typography, elevations, and styling workflows, while the CLI MCP handles project creation, project modification, component workflows, and documentation-oriented tasks. Most teams will want both servers connected in the same AI client.
 
 **Example prompts to try once connected:**
 
@@ -160,16 +162,16 @@ JetBrains AI Assistant supports MCP servers through the IDE settings:
 
 4. Enter the following configuration:
 
-    ```json
-    {
-      "mcpServers": {
-        "igniteui-theming": {
-          "command": "npx",
-          "args": ["-y", "igniteui-theming", "igniteui-theming-mcp"]
-        }
-      }
-    }
-    ```
+   ```json
+   {
+     "mcpServers": {
+       "igniteui-theming": {
+         "command": "npx",
+         "args": ["-y", "igniteui-theming", "igniteui-theming-mcp"]
+       }
+     }
+   }
+   ```
 
 5. Click **OK** and restart the AI Assistant.
 
@@ -178,10 +180,11 @@ JetBrains AI Assistant supports MCP servers through the IDE settings:
 
 ### Other MCP Clients
 
-For any other MCP-compatible client, use the STDIO transport with the following command and arguments:
+For any other MCP-compatible client, use the STDIO transport with this launch command:
 
-- **Command**: `npx`
-- **Arguments**: `-y`, `igniteui-theming`, `igniteui-theming-mcp`
+```bash
+npx -y igniteui-theming igniteui-theming-mcp
+```
 
 ## Customizing AI Behavior with Project Rules
 
@@ -195,6 +198,7 @@ Editors like VS Code and Cursor let you provide project-level instruction files 
 ## Theming Conventions
 
 ### Sass Code Style
+
 - Use `@use` / `@forward` — never `@import`.
 - Extract repeated color values into Sass variables (e.g., `$brand-hover: #a78bfa`).
 - Prefer setting primary design tokens over overriding many dependent tokens.
@@ -215,6 +219,7 @@ globs: ["**/*.scss", "**/styles/**"]
 ## Project Theming Rules
 
 ### Code conventions
+
 - `@use` / `@forward` only — no `@import`.
 - Extract shared colors into variables; do not repeat hex literals.
 - Prefer primary tokens — let dependent tokens derive automatically.
@@ -238,7 +243,7 @@ To see the current full list of tools and their parameters at any time, ask your
 Here is a brief overview of each tool:
 
 | Tool                          | Description                                                                                                                                                                                                      |
-| :---------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `detect_platform`             | Reads `package.json` and identifies whether the project uses Ignite UI for Angular, Web Components, React, or Blazor. Selects the correct import paths and component selectors for all subsequent tools.         |
 | `create_palette`              | Generates a color palette with automatic shade variants (50–900, A100–A700) from your base brand colors. Accepts an `output` parameter (`sass` or `css`) and a `designSystem` to select the schema.              |
 | `create_custom_palette`       | Fine-grained palette creation — specify exact hex values for every shade when automatic generation is not suitable.                                                                                              |
@@ -271,7 +276,7 @@ The AI will call `create_theme` and return a ready-to-use `styles.scss` file. Th
 
 ```scss
 /* styles.scss */
-@use 'igniteui-angular/theming' as *;
+@use "igniteui-angular/theming" as *;
 
 $my-palette: palette(
   $primary: #2563eb,
@@ -281,7 +286,7 @@ $my-palette: palette(
 );
 
 $my-typography: typography(
-  $font-family: 'Roboto, sans-serif',
+  $font-family: "Roboto, sans-serif",
 );
 
 @include core();
@@ -337,7 +342,9 @@ Also confirm that `core()` is called before any other theming mixin in your `sty
 
 ## Additional Resources
 
+- [AI-Assisted Development with Ignite UI](./ai-assisted-development-overview.md)
 - [Ignite UI for Angular Skills](./skills.md)
+- [Ignite UI CLI MCP](./cli-mcp.md)
 
 <!-- Ideally these should be included once documentation is combined
 - [Theming Overview](../themes/index.md)

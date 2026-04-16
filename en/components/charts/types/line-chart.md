@@ -21,7 +21,6 @@ You can create the Angular Line Chart in the [`IgxCategoryChartComponent`]({envi
                                                  github-src="charts/category-chart/line-chart-multiple-sources">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Line Chart Recommendations
@@ -53,7 +52,7 @@ There are several common use cases for choosing a Line Chart:
 ### Line Chart Best Practices
 
 - Always start the Y-Axis (left or right axis) at 0 so data comparison is accurate.
-- Order time-series data  from left to right.
+- Order time-series data from left to right.
 - Use visual attributes like solid lines to show a series of data.
 
 ### When Not to Use Line Chart
@@ -81,7 +80,6 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
                                                  github-src="charts/category-chart/line-chart-single-source">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Line Chart with Multiple Series
@@ -95,7 +93,6 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/line-chart-multiple-sources"
                                                  github-src="charts/category-chart/line-chart-multiple-sources">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -113,7 +110,6 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
                                                  github-src="charts/category-chart/high-frequency">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Styling Line Chart
@@ -128,7 +124,6 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
                                                  github-src="charts/category-chart/line-chart-styling">
 </code-view>
 
-
 You can also create a dashed line within the [`IgxLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxlineseriescomponent.html) by using the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) and setting the [`dashArray`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriescomponent.html#dashArray) property on the series. This property takes an array of numbers that will describe the length of the resulting dashes in the line.
 
 The following example demonstrates usage of the [`dashArray`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriescomponent.html#dashArray) in a [`IgxLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxlineseriescomponent.html) in [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html):
@@ -138,7 +133,6 @@ The following example demonstrates usage of the [`dashArray`]({environment:dvApi
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/dash-array-series"
                                                  github-src="charts/data-chart/dash-array-series">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -156,7 +150,6 @@ The Stacked Line Chart is often used to show the change of value over time such 
                                                  github-src="charts/data-chart/stacked-line-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Stacked 100% Line Chart
@@ -170,7 +163,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-line-chart"
                                                  github-src="charts/data-chart/stacked-100-line-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -186,7 +178,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                                                  github-src="charts/data-chart/radial-line-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Polar Line Chart
@@ -200,7 +191,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/polar-line-chart"
                                                  github-src="charts/data-chart/polar-line-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -220,7 +210,7 @@ You can find more information about related chart types in these topics:
 The following table lists API members mentioned in the above sections:
 
 | Chart Type        | Control Name                                                                                                                                                                   | API Members                                                                                                                                                                                                                                                                                                                     |
-| :---------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Line              | [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) | [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#chartType) = [`Line`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.categorycharttype.html#Line) |
 | Polar Line        | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)         | [`IgxPolarLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxpolarlineseriescomponent.html)                                                                                                                                              |
 | Radial Line       | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)         | [`IgxRadialLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxradiallineseriescomponent.html)                                                                                                                                            |
