@@ -153,7 +153,7 @@ When both `[icon]` and `[value]` are set, the badge displays both simultaneously
 
 ```html
 <!-- Both the icon "check" and the value "5" will be shown -->
-<igx-badge icon="check" [value]="5" type="success"></igx-badge>
+<igx-badge icon="check" value="5" type="success"></igx-badge>
 ```
 
 To display only a numeric value without an icon, make sure `[icon]` is not set:
