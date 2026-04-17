@@ -84,7 +84,7 @@ In our html template, we define an [`igxList`]({environment:angularApiUrl}/class
 ```
 
 > [!NOTE]
-> This component uses Material Icons. Add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+> This example uses `igx-icon` with the default Material Icons family. Add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
 
 ## Pipe for pending changes
 
