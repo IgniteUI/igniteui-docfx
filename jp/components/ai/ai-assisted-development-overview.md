@@ -11,25 +11,25 @@ mentionedTypes: []
 
 # Ignite UI による AI 支援開発
 
-Ignite UI for Angular、React、および Web Components は、Agent Skills、Ignite UI CLI MCP サーバー、Ignite UI Theming MCP サーバーという 3 つの要素からなる AI ツールチェーンを提供し、正しいコンポーネント API、インポートパス、デザイントークンを AI コーディングアシスタントに提供します。Agent Skills は、特定のプロジェクトで AI エージェントが Ignite UI を使用する方法を定義する、開発者が管理するインストラクションパッケージです。CLI MCP サーバーは、Model Context Protocol を通じてアクティブな AI エージェントセッションに Ignite UI CLI のスキャフォールディング、コンポーネント管理、ドキュメントツールを公開します。Theming MCP サーバーは、Ignite UI テーミングエンジンをクエリ可能なエージェントコンテキストとして公開します。3 つのコンポーネントはすべて、GitHub Copilot、Cursor、Claude Desktop、Claude Code、および JetBrains AI Assistant と連携します。
+Ignite UI for Angular、React、および Web Components は、Agent Skills、Ignite UI CLI MCP サーバー、Ignite UI Theming MCP サーバーという 3 つの要素からなる AI ツールチェーンを提供し、正しいコンポーネント API、インポートパス、デザイントークンを AI コーディングアシスタントに提供します。Agent Skills は、特定のプロジェクトで AI エージェントが Ignite UI を使用する方法を定義する、開発者が向けのインストラクションパッケージです。CLI MCP サーバーは、Model Context Protocol を通じてアクティブな AI エージェントセッションに Ignite UI CLI のスキャフォールディング、コンポーネント管理、ドキュメントツールを公開します。Theming MCP サーバーは、クエリ可能なエージェントコンテキストとして Ignite UI Theming Engine を公開します。これらの 3 つのコンポーネントはすべて、GitHub Copilot、Cursor、Claude Desktop、Claude Code、および JetBrains AI Assistant と連携します。
 
-AI ツールチェーンは、現時点では CLI MCP および Agent Skills レイヤーで Blazor をサポートしていません。Blazor のカバレッジは Theming MCP のみで提供されます。CLI MCP サーバーには STDIO トランスポートが必要です。HTTP ベースの MCP クライアントはサポートされていません。Agent Skills および CLI MCP サーバーはプロジェクトファイルを自律的に変更しません。これらはアクティブな AI エージェントにツールとインストラクションを公開し、エージェントが開発者のプロンプトに応じて動作します。
+現在のところ、この AI ツールチェーンの CLI MCP および Agent Skills レイヤーは Blazor をサポートしていません。Blazor に対応しているのは Theming MCP のみとなります。CLI MCP サーバーは STDIO トランスポートが必要となります。HTTP ベースの MCP クライアントはサポートされていません。Agent Skills および CLI MCP サーバーはプロジェクトファイルを自律的に変更しません。これらはアクティブな AI エージェントにツールとインストラクションを公開し、エージェントが開発者のプロンプトに応じて動作します。
 
 ## AI ツールチェーンの概要
 
-Ignite UI の AI ツールチェーンは、独立して使用可能な 3 つのレイヤーで構成されています。各レイヤーは単独で有効化でき、連携して動作するよう設計されています。
+Ignite UI の AI ツールチェーンは、独立して使用可能な 3 つのレイヤーで構成されています。各レイヤーは単独で有効化でき、また組み合わせて使用するよう設計されています。
 
-| レイヤー                                    | 提供内容                                                                                                    | オーナー         | フレームワーク                             |
+| レイヤー                                    | 提供内容                                                                                                    | 所有者         | 対応フレームワーク                             |
 | --------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------ | -------------------------------------- |
 | Agent Skills                            | 開発者管理のインストラクションパッケージ: インポートパス、コンポーネントパターン、デシジョンフロー、プロジェクト規約 | 開発者    | Angular、React、Web Components、Blazor |
-| CLI MCP サーバー (`igniteui-cli`)         | MCP を通じたプロジェクトスキャフォールディング、コンポーネント管理、ドキュメントおよび API クエリ                            | Infragistics | Angular、React、Web Components         |
-| Theming MCP サーバー (`igniteui-theming`) | MCP を通じたデザイントークン、パレット定義、CSS 変数生成、テーミングクエリ                        | Infragistics | Angular、React、Web Components、Blazor |
+| CLI MCP サーバー (`igniteui-cli`)         | MCP を経由したプロジェクトスキャフォールディング、コンポーネント管理、ドキュメントおよび API クエリ                            | Infragistics | Angular、React、Web Components         |
+| Theming MCP サーバー (`igniteui-theming`) | MCP を経由したデザイントークン、パレット定義、CSS 変数生成、テーミングクエリ                        | Infragistics | Angular、React、Web Components、Blazor |
 
-CLI MCP サーバーと Theming MCP サーバーはどちらも `npx` で起動し、STDIO トランスポートを通じて MCP 互換クライアントに接続します。Agent Skills は、AI クライアントがディスクから読み取るプロジェクト内のローカルファイルです。
+CLI MCP サーバーと Theming MCP サーバーはどちらも `npx` で起動し、STDIO トランスポートを通じて MCP 互換クライアントに接続します。Agent Skills はプロジェクト内に配置されたローカルファイルで、AI クライアントがディスクから読み込みます。
 
 ## Agent Skills
 
-Agent Skills は、特定のフレームワークで Ignite UI を使用する方法を AI コーディングアシスタントに正確に伝える、構造化された開発者管理パッケージです。Skill パッケージには、コンポーネントパターン、インポートパス、デシジョンフローを含む `SKILL.md` インストラクションファイル、権威ある Ignite UI ドキュメントへの参照、スキーマファイルやダイアグラムなどのアセットを含めることができます。AI クライアントで Skill がアクティブな場合、エージェントは古い API シグネチャやインポートパスを参照する可能性がある一般的なトレーニングデータではなく、Skill に従って動作します。
+Agent Skills は、特定のフレームワークで Ignite UI を使用する方法を AI コーディングアシスタントに正確に伝える、構造化された開発者管理パッケージです。Skill パッケージには、コンポーネントパターン、インポートパス、デシジョンフローを含む `SKILL.md` インストラクションファイル、Ignite UI の公式ドキュメントへの参照、スキーマファイルやダイアグラムなどのアセットを含めることができます。AI クライアントで Skill が有効になっている場合、エージェントは古い API シグネチャやインポートパスを参照している可能性がある一般的なトレーニングデータに頼るのではなく、Skill の内容に従って動作します。
 
 Ignite UI は、Angular、React、Web Components、および Blazor 向けの専用 Skill パッケージを提供しています。Skill パッケージは開発者が管理します。チームの規約に合わせて `SKILL.md` を編集し、プロジェクト固有のパターンを追加し、内部デザインシステムを参照し、コードベースと並べてパッケージをバージョン管理してください。
 
@@ -47,11 +47,11 @@ npx -y igniteui-cli mcp
 
 サーバーは、VS Code with GitHub Copilot、Cursor、Claude Desktop、Claude Code、JetBrains AI Assistant、および STDIO トランスポートをサポートする他の MCP 互換クライアントに接続します。設定形式はクライアントによって異なります。以下の CLI MCP セットアップガイドを参照してください。
 
-CLI MCP サーバーは Blazor をサポートしていません。コードを自律的に生成しません。開発者のプロンプトに応じて AI エージェントが呼び出すツールを公開します。
+CLI MCP サーバーは Blazor をサポートしていません。また、コードを自律的に生成することはありません。開発者のプロンプトに応じて AI エージェントがツールを呼び出す形式で動作します。
 
 ## Theming MCP サーバー
 
-Ignite UI Theming MCP サーバー (`igniteui-theming`) は、Ignite UI テーミングエンジンをクエリ可能なエージェントコンテキストとして公開する独立した MCP サーバーです。デザイントークンアクセス、パレット定義、CSS カスタムプロパティ生成、および WCAG AA コントラスト検証をカバーします。CLI MCP サーバーとはアーキテクチャ上独立しており、プロジェクトスキャフォールディングツールを公開せずに AI エージェントにテーミングツールへのアクセスを提供するため、単独で接続できます。
+Ignite UI Theming MCP サーバー (`igniteui-theming`) は、Ignite UI Theming Engine をクエリ可能なエージェントコンテキストとして公開する独立した MCP サーバーです。デザイントークンアクセス、パレット定義、CSS カスタムプロパティ生成、および WCAG AA コントラスト検証をカバーします。CLI MCP サーバーとはアーキテクチャ上独立しており、プロジェクトのスキャフォールディングツールを公開せずにテーマ関連ツールのみを AI エージェントに提供する目的で単独で接続することもできます。
 
 Theming MCP サーバーは `npx` で起動します:
 
@@ -59,13 +59,13 @@ Theming MCP サーバーは `npx` で起動します:
 npx -y igniteui-theming igniteui-theming-mcp
 ```
 
-Theming MCP サーバーは Angular、React、Web Components、および Blazor をサポートしています。Ignite UI のリリースごとに更新されるため、エージェントは常に最新のトークンサーフェスに対して動作します。
+Theming MCP サーバーは Angular、React、Web Components、および Blazor をサポートしています。Ignite UI のリリースごとに更新されるため、エージェントは常に最新のトークン情報に基づいて動作します。
 
 設定の詳細については、[Theming MCP](theming-mcp.md) を参照してください。
 
 ## サポートされている AI クライアント
 
-CLI MCP サーバーと Theming MCP サーバーは、STDIO トランスポートで MCP をサポートする任意のエディターまたは AI クライアントで動作します。
+CLI MCP サーバーと Theming MCP サーバーは、STDIO トランスポートによる MCP をサポートする任意のエディターまたは AI クライアントで動作します。
 
 | クライアント                      | 設定方法                                                              |
 | --------------------------- | ----------------------------------------------------------------- |
@@ -80,17 +80,17 @@ Agent Skills は、`.github/copilot-instructions.md` を通じた GitHub Copilot
 
 ## AI ツールチェーンのセットアップ
 
-Ignite UI AI ツールチェーンのセットアップは 3 つのステップで行います: フレームワークの Agent Skills の読み込み、CLI MCP サーバーの接続、およびオプションで Theming MCP サーバーの接続。3 つのステップはすべて独立しており、任意の順序で実行できます。
+Ignite UI AI ツールチェーンのセットアップは 3 つのステップで行います: フレームワークの Agent Skills の読み込み、CLI MCP サーバーの接続、およびオプションで Theming MCP サーバーの接続です。3 つのステップはそれぞれ独立しており、任意の順序で実行できます。
 
 ### ステップ 1 - Agent Skills の読み込み
 
-フレームワーク用の Ignite UI Skill パッケージをプロジェクトのエージェント探索パスにコピーします。Skill パッケージは `node_modules/igniteui-{framework}/skills/` のライブラリに同梱されています。クライアントの永続的なセットアップを使用して IDE に接続します。
+フレームワーク用の Ignite UI Skill パッケージをプロジェクトのエージェント探索パスにコピーします。Skill パッケージは `node_modules/igniteui-{framework}/skills/` のライブラリに同梱されています。ご利用のクライアント向けの永続的なセットアップ手順を使用して、IDE と連携させます。
 
 完全なセットアップについては、[Agent Skills](skills.md) を参照してください。
 
 ### ステップ 2 - CLI MCP サーバーの接続
 
-AI クライアントの設定ファイルに `igniteui-cli` MCP サーバーエントリを追加します。クライアントに合った JSON 構造を使用してください:
+AI クライアントの設定ファイルに `igniteui-cli` MCP サーバーエントリを追加します。各クライアントに対応した JSON 形式を使用してください:
 
 **VS Code (`.vscode/mcp.json`):**
 
@@ -118,11 +118,11 @@ AI クライアントの設定ファイルに `igniteui-cli` MCP サーバーエ
 }
 ```
 
-VS Code、GitHub、Cursor、Claude Desktop、Claude Code、JetBrains、およびその他の MCP 互換クライアントを含む完全なセットアップガイドについては、[CLI MCP](cli-mcp.md) を参照してください。
+VS Code、GitHub、Cursor、Claude Desktop、Claude Code、JetBrains、およびその他の MCP 対応クライアントを含む完全なセットアップガイドについては、[CLI MCP](cli-mcp.md) を参照してください。
 
-### ステップ 3 - Theming MCP サーバーの接続 (オプション)
+### ステップ 3 - Theming MCP サーバーの接続 (任意)
 
-`igniteui-cli` と並べて、同じ MCP 設定ファイルに `igniteui-theming` エントリを追加します:
+`igniteui-cli` と並べて、同じ MCP 設定ファイルに `igniteui-theming` のエントリを追加します:
 
 ```json
 {
@@ -135,7 +135,7 @@ VS Code、GitHub、Cursor、Claude Desktop、Claude Code、JetBrains、および
 }
 ```
 
-設定の詳細とテーミングワークフローについては、[Theming MCP](theming-mcp.md) を参照してください。
+設定の詳細とテーマのワークフローについては、[Theming MCP](theming-mcp.md) を参照してください。
 
 ## その他のリソース
 
@@ -145,7 +145,7 @@ VS Code、GitHub、Cursor、Claude Desktop、Claude Code、JetBrains、および
 
 <div class="divider--half"></div>
 
-コミュニティはいつでも活発に活動しており、新しいアイデアを歓迎しています。
+コミュニティは活発に活動しており、新しいアイデアを歓迎しています。
 
 - [Ignite UI for Angular **フォーラム**](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 - [Ignite UI for Angular **GitHub**](https://github.com/IgniteUI/igniteui-angular)
