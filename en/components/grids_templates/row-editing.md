@@ -77,6 +77,7 @@ export class AppModule {}
 ```
 
 Then define a @@igComponent with bound data source and [`rowEditable`]({environment:angularApiUrl}/classes/@@igTypeDoc.html#rowEditable) set to true:
+
 @@if (igxName ==='IgxGrid') {
 
 ```html
