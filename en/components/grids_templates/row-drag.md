@@ -113,9 +113,6 @@ Then, in our template, we define a drop-area using the directive's selector:
 </div>
 ```
 
->[!NOTE]
-> To use Material Icons, add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
-
 }
 @@if (igxName === 'IgxGrid') {
 In this case, our drop-area will be a whole second grid where we'll drop the rows.

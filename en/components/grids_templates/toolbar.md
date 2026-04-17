@@ -510,9 +510,6 @@ Here is a sample snippet:
 </@@igSelector>
 ```
 
->[!NOTE]
-> To use Material Icons, add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
-
 
 The following sample demonstrates how to add an additional button to the toolbar to clear the sorting set by clicking on the columns' headers:
 

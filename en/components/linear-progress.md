@@ -209,8 +209,8 @@ You can dynamically change the value of the progress bar by using external contr
 </div>
 ```
 
->[!NOTE]
-> To use Material Icons, add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+> [!NOTE]
+> This component uses Material Icons. Add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
 
 Create the methods that increment and decrement the value:
 

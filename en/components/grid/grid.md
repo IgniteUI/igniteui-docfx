@@ -232,8 +232,8 @@ public contextObject = { firstProperty: 'testValue', secondProperty: 'testValue1
 </igx-column>
 ```
 
->[!NOTE]
-> To use Material Icons, add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+> [!NOTE]
+> This component uses Material Icons. Add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
 
 As you can see, we are adding **draggable** attribute set to _false_.
 

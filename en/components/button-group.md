@@ -81,8 +81,8 @@ import { IgxIconComponent } from 'igniteui-angular/icon';
 export class HomeComponent {}
 ```
 
->[!NOTE]
-> To use Material Icons, add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+> [!NOTE]
+> This component uses Material Icons. Add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
 
 Now that you have the Ignite UI for Angular Button Group module or directives imported, you can start with a basic configuration of the `igx-buttongroup` and its buttons.
 

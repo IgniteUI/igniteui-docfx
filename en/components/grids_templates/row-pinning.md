@@ -272,9 +272,6 @@ This can be done by adding an extra column with a cell template containing the c
 </igx-grid>
 ```
 
->[!NOTE]
-> To use Material Icons, add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
-
 }
 
 @@if (igxName === 'IgxTreeGrid') {

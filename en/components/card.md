@@ -104,8 +104,8 @@ import { IGX_CARD_DIRECTIVES } from 'igniteui-angular/card';
 export class HomeComponent {}
 ```
 
->[!NOTE]
-> To use Material Icons, add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+> [!NOTE]
+> This component uses Material Icons. Add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
 
 Now that you have the Ignite UI for Angular Card module or directives imported, you can start using the `igx-card` component.
 

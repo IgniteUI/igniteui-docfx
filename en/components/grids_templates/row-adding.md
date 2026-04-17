@@ -120,9 +120,6 @@ Then define a @@igComponent with bound data source and [`rowEditable`]({environm
 </igx-tree-grid>
 ```
 
->[!NOTE]
-> To use Material Icons, add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
-
 }
 @@if (igxName === 'IgxHierarchicalGrid') {
 

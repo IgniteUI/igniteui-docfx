@@ -75,8 +75,8 @@ import { IgxMaskDirective, IGX_INPUT_GROUP_DIRECTIVES } from 'igniteui-angular/i
 export class HomeComponent {}
 ```
 
->[!NOTE]
-> To use Material Icons, add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+> [!NOTE]
+> This component uses Material Icons. Add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
 
 Now that you have the Ignite UI for Angular Mask module or directive imported, you can start using the `igxMask` directive.
 

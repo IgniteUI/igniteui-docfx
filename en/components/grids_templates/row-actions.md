@@ -116,9 +116,6 @@ These components expose templates giving flexibility for customization. For inst
 </igx-grid>
 ```
 
->[!NOTE]
-> To use Material Icons, add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
-
 @@if (igxName === 'IgxGrid') {
 <code-view style="height: 600px;"
            data-demos-base-url="{environment:demosBaseUrl}"
