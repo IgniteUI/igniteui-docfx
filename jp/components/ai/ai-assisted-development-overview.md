@@ -11,7 +11,7 @@ mentionedTypes: []
 
 # Ignite UI による AI 支援開発
 
-Ignite UI for Angular、React、および Web Components は、Agent Skills、Ignite UI CLI MCP サーバー、Ignite UI Theming MCP サーバーという 3 つの要素からなる AI ツールチェーンを提供し、正しいコンポーネント API、インポートパス、デザイントークンを AI コーディングアシスタントに提供します。Agent Skills は、特定のプロジェクトで AI エージェントが Ignite UI を使用する方法を定義する、開発者が向けのインストラクションパッケージです。CLI MCP サーバーは、Model Context Protocol を通じてアクティブな AI エージェントセッションに Ignite UI CLI のスキャフォールディング、コンポーネント管理、ドキュメントツールを公開します。Theming MCP サーバーは、クエリ可能なエージェントコンテキストとして Ignite UI Theming Engine を公開します。これらの 3 つのコンポーネントはすべて、GitHub Copilot、Cursor、Claude Desktop、Claude Code、および JetBrains AI Assistant と連携します。
+Ignite UI for Angular、React、および Web Components は、Agent Skills、Ignite UI CLI MCP サーバー、Ignite UI Theming MCP サーバーという 3 つの要素からなる AI ツールチェーンを提供し、正しいコンポーネント API、インポートパス、デザイントークンを AI コーディングアシスタントに提供します。Agent Skills は、特定のプロジェクトで AI エージェントが Ignite UI を使用する方法を定義する、開発者向けのインストラクションパッケージです。CLI MCP サーバーは、Model Context Protocol を通じてアクティブな AI エージェントセッションに Ignite UI CLI のスキャフォールディング、コンポーネント管理、ドキュメントツールを公開します。Theming MCP サーバーは、クエリ可能なエージェントコンテキストとして Ignite UI Theming Engine を公開します。これらの 3 つのコンポーネントはすべて、GitHub Copilot、Cursor、Claude Desktop、Claude Code、および JetBrains AI Assistant と連携します。
 
 現在のところ、この AI ツールチェーンの CLI MCP および Agent Skills レイヤーは Blazor をサポートしていません。Blazor に対応しているのは Theming MCP のみとなります。CLI MCP サーバーは STDIO トランスポートが必要となります。HTTP ベースの MCP クライアントはサポートされていません。Agent Skills および CLI MCP サーバーはプロジェクトファイルを自律的に変更しません。これらはアクティブな AI エージェントにツールとインストラクションを公開し、エージェントが開発者のプロンプトに応じて動作します。
 
