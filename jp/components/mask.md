@@ -76,6 +76,9 @@ import { IgxMaskDirective, IGX_INPUT_GROUP_DIRECTIVES } from 'igniteui-angular/i
 export class HomeComponent {}
 ```
 
+> [!NOTE]
+> このコンポーネントはマテリアル アイコンを使用します。`index.html` に次のリンクを追加してください: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 Ignite UI for Angular Mask モジュールまたはディレクティブをインポートしたので、`igxMask` ディレクティブの使用を開始できます。
 
 ## Angular Mask の使用

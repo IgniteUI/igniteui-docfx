@@ -230,6 +230,9 @@ export class AppModule {}
 </div>
 ```
 
+> [!NOTE]
+> このコンポーネントはマテリアル アイコンを使用します。`index.html` に次のリンクを追加してください: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 次にツールチップを作成します。コンテンツは、テキスト情報要素とアバターで構成されるコンテナーを作成します。ツールチップをターゲットにアタッチして CSS スタイルを使用します。
 
 ```html

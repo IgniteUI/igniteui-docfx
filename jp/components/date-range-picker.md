@@ -226,6 +226,9 @@ Angular Date Range Picker コンポーネントは、開始日と終了日の 2 
 </igx-date-range-picker>
 ```
 
+> [!NOTE]
+> このコンポーネントはマテリアル アイコンを使用します。`index.html` に次のリンクを追加してください: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 日付範囲ピッカーに開始日と終了日の 2 つの個別のインプットがある場合、デフォルトではこれらのアイコンは表示されません。[`IgxPickerToggleComponent`]({environment:angularApiUrl}/classes/igxpickertogglecomponent.html) および [`IgxPickerClearComponent`]({environment:angularApiUrl}/classes/igxpickerclearcomponent.html) は、[`IgxDateRangeStartComponent`]({environment:angularApiUrl}/classes/igxdaterangestartcomponent.html) または [`IgxDateRangeEndComponent`]({environment:angularApiUrl}/classes/igxdaterangeendcomponent.html) の子として追加する必要があります。
 
 ```html
