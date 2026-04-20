@@ -139,6 +139,39 @@ igx-badge {
 }
 ```
 
+### バッジの値とアイコン
+
+`[value]` 入力を使用して、バッジ内にテキストまたは数値カウントを表示します:
+
+```html
+<igx-badge [value]="model.value"></igx-badge>
+```
+
+`[icon]` 入力を使用して、バッジ内にアイコンを表示します:
+
+```html
+<igx-badge icon="check" type="success"></igx-badge>
+```
+
+`[icon]` と `[value]` の両方が設定されている場合、バッジは両方を同時に表示します:
+
+```html
+<!-- アイコン "check" と値 "5" の両方が表示されます -->
+<igx-badge icon="check" value="5" type="success"></igx-badge>
+```
+
+または、コンテンツを直接投影することもできます:
+
+```html
+  <igx-badge>{{ model.value }}</igx-badge>
+
+  <!-- アイコンとテキストの両方を投影する場合は、正しいパディングを保つためにテキストをラップしてください。 -->
+  <igx-badge>
+    <igx-icon>bluetooth</igx-icon>
+    <span>Bluetooth</span>
+  </igx-badge>
+```
+
 ### バッジのアイコン
 
 `igx-badge` コンポーネントは、マテリアル アイコンに加えて[マテリアル アイコン拡張](../components/material-icons-extended.md)およびその他のカスタム アイコン セットの使用もサポートしています。マテリアル アイコン拡張セットからバッジ コンポーネントにアイコンを追加するには、まずそのアイコンを登録する必要があります。
