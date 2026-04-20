@@ -142,14 +142,16 @@ igx-badge {
 
 ### Badge Value and Icon
 
-Use the `[value]` input to display text or a numeric count inside the badge. This is the recommended approach instead of projecting content directly:
+Use the `[value]` input to display text or a numeric count inside the badge:
 
 ```html
-<!-- Recommended -->
 <igx-badge [value]="model.value"></igx-badge>
+```
 
-<!-- Avoid -->
-<igx-badge>{{ model.value }}</igx-badge>
+Use the `[icon]` input to display an icon inside the badge:
+
+```html
+<igx-badge icon="check" type="success"></igx-badge>
 ```
 
 When both `[icon]` and `[value]` are set, the badge displays both simultaneously:
@@ -159,10 +161,16 @@ When both `[icon]` and `[value]` are set, the badge displays both simultaneously
 <igx-badge icon="check" value="5" type="success"></igx-badge>
 ```
 
-To display only a numeric value without an icon, make sure `[icon]` is not set:
+Or you can project content directly:
 
 ```html
-<igx-badge [value]="unreadCount" type="info"></igx-badge>
+  <igx-badge>{{ model.value }}</igx-badge>
+
+  <!-- When projecting both icon and text, wrap the text to keep correct padding. -->
+  <igx-badge>
+    <igx-icon>bluetooth</igx-icon>
+    <span>Bluetooth</span>
+  </igx-badge>
 ```
 
 ### Badge Icon
