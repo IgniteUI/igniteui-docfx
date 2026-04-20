@@ -64,6 +64,9 @@ import { IgxBadgeComponent } from 'igniteui-angular/badge';
 export class HomeComponent {}
 ```
 
+> [!NOTE]
+> This component uses Material Icons. Add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 Now that you have the Ignite UI for Angular Badge module or component imported, you can start with a basic configuration of the `igx-badge` component.
 
 ## Using the Angular Badge Component
