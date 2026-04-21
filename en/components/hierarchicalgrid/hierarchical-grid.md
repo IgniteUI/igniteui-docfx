@@ -22,8 +22,11 @@ In this angular grid example you can see how users can visualize hierarchical se
 
 ## Getting Started with Ignite UI for Angular Hierarchical Data Grid
 
->[!NOTE]
->**This component can utilize the [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) **optionally**. It can be imported in the root module of the application in order for touch interactions to work as expected.**.
+> [!NOTE]
+> This component can utilize the [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) **optionally**. It can be imported in the root module of the application in order for touch interactions to work as expected.
+
+> [!NOTE]
+> This component uses Material Icons. Add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
 
 To get started with the Ignite UI for Angular Hierarchical Data Grid component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
