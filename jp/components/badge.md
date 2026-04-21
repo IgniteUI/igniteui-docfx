@@ -160,12 +160,12 @@ igx-badge {
 <igx-badge icon="check" value="5" type="success"></igx-badge>
 ```
 
-または、コンテンツを直接投影することもできます:
+または、コンテンツを直接埋め込むこともできます:
 
 ```html
   <igx-badge>{{ model.value }}</igx-badge>
 
-  <!-- アイコンとテキストの両方を投影する場合は、正しいパディングを保つためにテキストをラップしてください。 -->
+  <!-- アイコンとテキストの両方を埋め込む場合は、正しいパディングを保つためにテキストをラップしてください。 -->
   <igx-badge>
     <igx-icon>bluetooth</igx-icon>
     <span>Bluetooth</span>
