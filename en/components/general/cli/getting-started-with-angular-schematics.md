@@ -2,7 +2,8 @@
 title: Getting Started with Ignite UI for Angular Schematics | Ignite UI for Angular | Infragistics
 _description: Install the Ignite UI for Angular Schematics collection and use it to scaffold Angular projects, add component views, and run a development server within the native Angular CLI workflow.
 _keywords: ignite ui for angular, angular schematics, angular cli, scaffolding, getting started, infragistics
-last_updated: "2025-04-08"
+last_updated: "2026-04-21"
+_license: MIT
 ---
 
 <!-- schema: Article, HowTo -->
@@ -11,7 +12,7 @@ last_updated: "2025-04-08"
 
 The Ignite UI for Angular Schematics collection is a set of Angular CLI schematics for scaffolding Angular projects and component views pre-configured for Ignite UI for Angular. It integrates into the native Angular CLI workflow - use it with `ng new` for project creation and `ng g` for component scaffolding, without installing a separate global tool. The collection is distributed as the `@igniteui/angular-schematics` package and is added automatically when you run `ng add igniteui-angular` on an existing Angular project.
 
-The Schematics collection does not include an MCP server for AI assistant integration - for that, install the [Ignite UI CLI](getting-started-with-cli.md) alongside your Angular CLI project. The collection is specific to Angular; React, Web Components, and Blazor equivalents are covered in their respective framework documentation. Neither tool is required to use Ignite UI for Angular - the library can be installed and configured manually as described in the [Getting Started guide](../getting-started.md).
+The Schematics collection does not run an MCP server - the MCP server process is provided by the Ignite UI CLI and starts via `npx igniteui-cli mcp`. The `ai-config` schematic configures the MCP client connection and copies Agent Skills without requiring a separate CLI install. The collection is specific to Angular; React, Web Components, and Blazor equivalents are covered in their respective framework documentation. Neither tool is required to use Ignite UI for Angular - the library can be installed and configured manually as described in the [Getting Started guide](../getting-started.md).
 
 ## Install the Schematics Collection
 
@@ -176,3 +177,24 @@ The `start` schematic builds the application, starts a local web server, and ope
 ```cmd
 ng g @igniteui/angular-schematics:start
 ```
+
+## AI Assistant Integration
+
+The Ignite UI for Angular Schematics collection includes an `ai-config` schematic that configures Ignite UI for Angular Agent Skills and the Ignite UI MCP servers for your project in a single step. Run it from your project root after installing Ignite UI for Angular packages:
+
+```cmd
+ng generate @igniteui/angular-schematics:ai-config
+```
+
+This copies Ignite UI for Angular Agent Skills into `.claude/skills/`, writes the Ignite UI MCP server configuration to `.vscode/mcp.json`, and also registers the `@angular/cli` MCP server alongside the Ignite UI servers. If the files already exist and are up-to-date, the command is a no-op.
+
+If you have the Ignite UI CLI installed globally, the equivalent command is:
+
+```cmd
+ig ai-config
+```
+
+> [!NOTE]
+> The `ig ai-config` form does not register the `@angular/cli` MCP server. Use `ng generate @igniteui/angular-schematics:ai-config` to get all three servers configured in a single step.
+
+For full setup instructions across all AI clients and Agent Skills wiring, see [Ignite UI CLI MCP](../../ai/cli-mcp.md).
