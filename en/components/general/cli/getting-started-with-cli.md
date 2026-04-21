@@ -2,7 +2,8 @@
 title: Getting Started with Ignite UI CLI | Ignite UI for Angular | Infragistics
 _description: Install the Ignite UI CLI globally and use it to scaffold Angular projects, add component views, run a development server, and connect an MCP server to your AI coding assistant.
 _keywords: ignite ui cli, ignite ui for angular, angular scaffolding, getting started, infragistics
-last_updated: "2025-04-06"
+last_updated: "2026-04-21"
+_license: MIT
 ---
 
 <!-- schema: Article, HowTo -->
@@ -208,13 +209,19 @@ ig start
 
 The Ignite UI CLI includes a built-in MCP (Model Context Protocol) server that connects AI coding assistants - GitHub Copilot, Claude, Cursor - to live Ignite UI component documentation and API references. Once configured, your AI assistant can query component APIs, retrieve setup guides, and generate accurate Ignite UI for Angular code without switching context.
 
-Start the MCP server:
+Run `ig ai-config` from your project root to copy Ignite UI for Angular Agent Skills into `.claude/skills/` and write the Ignite UI MCP server configuration to `.vscode/mcp.json` in a single step:
+
+```cmd
+ig ai-config
+```
+
+If you want to configure your AI client manually, or use a client other than VS Code, start the MCP server directly:
 
 ```cmd
 ig mcp
 ```
 
-For client configuration (VS Code, Claude Desktop, Cursor) and a full description of available tools, see [Ignite UI CLI MCP](../../ai/cli-mcp.md).
+For client configuration (VS Code, Claude Desktop, Cursor, and others) and a full description of available tools, see [Ignite UI CLI MCP](../../ai/cli-mcp.md).
 
 ## Ignite UI CLI Commands
 
@@ -232,3 +239,4 @@ A complete list of available Ignite UI CLI commands is maintained on the [Ignite
 | [ig test](https://github.com/IgniteUI/igniteui-cli/wiki/test)         |       | Executes the tests for the current project.                                                                                                                                                          |
 | ig version                                                            | -v    | Shows the Ignite UI CLI version installed locally, or globally if no local installation is found.                                                                                                    |
 | ig mcp                                                                |       | Starts the Ignite UI MCP server, providing component documentation search and API reference tools to connected AI assistants. See [Ignite UI CLI MCP](../../ai/cli-mcp.md).                          |
+| ig ai-config                                                          |       | Copies Ignite UI for Angular Agent Skills into `.claude/skills/` and writes the Ignite UI MCP server configuration to `.vscode/mcp.json`. Run once per project.                                      |
