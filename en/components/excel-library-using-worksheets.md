@@ -18,6 +18,7 @@ The Infragistics Angular Excel Engine's [`worksheet`]({environment:dvApiBaseUrl}
                                                  github-src="excel/excel-library/operations-on-worksheets">
 </code-view>
 
+
 <div class="divider--half"></div>
 
 The following code shows the imports needed to use the code-snippets below:
@@ -107,18 +108,18 @@ You can specify the region to apply the filter by using the [`setRegion`]({envir
 
 Below is a list of methods and their descriptions that you can use to add a filter to a worksheet:
 
-| Method                                                                                                                                                                                                      | Description                                                                                                                                                                                                      |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`applyAverageFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetfiltersettings.html#applyAverageFilter)                     | Represents a filter which can filter data based on whether the data is below or above the average of the entire data range.                                                                                      |
-| [`applyDatePeriodFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetfiltersettings.html#applyDatePeriodFilter)               | Represents a filter which can filter dates in a Month, or quarter of any year.                                                                                                                                   |
-| [`applyFillFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetfiltersettings.html#applyFillFilter)                           | Represents a filter which will filter cells based on their background fills. This filter specifies a single CellFill. Cells of with this fill will be visible in the data range. All other cells will be hidden. |
-| `ApplyFixedValuesFilter`                                                                                                                                                                                    | Represents a filter which can filter cells based on specific, fixed values, which are allowed to display.                                                                                                        |
-| [`applyFontColorFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetfiltersettings.html#applyFontColorFilter)                 | Represents a filter which will filter cells based on their font colors. This filter specifies a single color. Cells with this color font will be visible in the data range. All other cells will be hidden.      |
-| [`applyIconFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetfiltersettings.html#applyIconFilter)                           | Represents a filter which can filter cells based on their conditional formatting icon.                                                                                                                           |
-| [`applyRelativeDateRangeFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetfiltersettings.html#applyRelativeDateRangeFilter) | Represents a filter which can filter date cells based on dates relative to the when the filter was applied.                                                                                                      |
-| [`applyTopOrBottomFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetfiltersettings.html#applyTopOrBottomFilter)             | Represents a filter which can filter in cells in the upper or lower portion of the sorted values.                                                                                                                |
-| [`applyYearToDateFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetfiltersettings.html#applyYearToDateFilter)               | Represents a filter which can filter in date cells if the dates occur between the start of the current year and the time when the filter is evaluated.                                                           |
-| [`applyCustomFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetfiltersettings.html#applyCustomFilter)                       | Represents a filter which can filter data based on one or two custom conditions. These two filter conditions can be combined with a logical "and" or a logical "or" operation.                                   |
+| Method        | Description |
+| --------------|-------------|
+|[`applyAverageFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetfiltersettings.html#applyAverageFilter)|Represents a filter which can filter data based on whether the data is below or above the average of the entire data range.|
+|[`applyDatePeriodFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetfiltersettings.html#applyDatePeriodFilter)|Represents a filter which can filter dates in a Month, or quarter of any year.|
+|[`applyFillFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetfiltersettings.html#applyFillFilter)|Represents a filter which will filter cells based on their background fills. This filter specifies a single CellFill. Cells of with this fill will be visible in the data range. All other cells will be hidden.|
+|`ApplyFixedValuesFilter`|Represents a filter which can filter cells based on specific, fixed values, which are allowed to display.|
+|[`applyFontColorFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetfiltersettings.html#applyFontColorFilter)|Represents a filter which will filter cells based on their font colors. This filter specifies a single color. Cells with this color font will be visible in the data range. All other cells will be hidden.|
+|[`applyIconFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetfiltersettings.html#applyIconFilter)|Represents a filter which can filter cells based on their conditional formatting icon.|
+|[`applyRelativeDateRangeFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetfiltersettings.html#applyRelativeDateRangeFilter)|Represents a filter which can filter date cells based on dates relative to the when the filter was applied.|
+|[`applyTopOrBottomFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetfiltersettings.html#applyTopOrBottomFilter)|Represents a filter which can filter in cells in the upper or lower portion of the sorted values.|
+|[`applyYearToDateFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetfiltersettings.html#applyYearToDateFilter)|Represents a filter which can filter in date cells if the dates occur between the start of the current year and the time when the filter is evaluated.|
+|[`applyCustomFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.worksheetfiltersettings.html#applyCustomFilter)|Represents a filter which can filter data based on one or two custom conditions. These two filter conditions can be combined with a logical "and" or a logical "or" operation.|
 
 You can use the following code snippet as an example to add a filter to a worksheet region:
 
@@ -180,12 +181,7 @@ The following code snippet demonstrates how to apply a sort to a region of cells
 var workbook = new Workbook(WorkbookFormat.Excel2007);
 var worksheet = workbook.worksheets().add("Sheet1");
 
-worksheet.sortSettings
-  .sortConditions()
-  .addItem(
-    new RelativeIndex(0),
-    new OrderedSortCondition(SortDirection.Ascending),
-  );
+worksheet.sortSettings.sortConditions().addItem(new RelativeIndex(0), new OrderedSortCondition(SortDirection.Ascending));
 ```
 
 ## Worksheet Protection
@@ -233,9 +229,7 @@ var worksheet = workbook.worksheets().add("Sheet1");
 var color = new Color();
 color.colorString = "Red";
 
-var format = worksheet
-  .conditionalFormats()
-  .addAverageCondition("A1:A10", FormatConditionAboveBelow.AboveAverage);
+var format = worksheet.conditionalFormats().addAverageCondition("A1:A10", FormatConditionAboveBelow.AboveAverage);
 format.cellFormat.font.colorInfo = new WorkbookColorInfo(color);
 ```
 

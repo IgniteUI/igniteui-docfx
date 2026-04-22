@@ -54,6 +54,7 @@ The following example shows the combination of both `SelectionColorFill` and `Au
                                                  github-src="charts/category-chart/selection-modes">
 </code-view>
 
+
 ## Configuring Multiple Selection
 
 Other selection modes offer various methods of selection. For example using [`selectionBehavior`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#selectionBehavior) with `PerDataItemMultiSelect` will affect all series in entire category when multiple series are present while allowing selection across categories. Compared to `PerDataItemSingleSelect`, only a single category of items can be selected at a time. This is useful if multiple series are bound to different datasources and provides greater control of selection between categories.
@@ -64,6 +65,7 @@ Other selection modes offer various methods of selection. For example using [`se
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/selection-multiple-modes"
                                                  github-src="charts/category-chart/selection-multiple-modes">
 </code-view>
+
 
 ## Configuring Outline Selection
 
@@ -79,6 +81,7 @@ This example demonstrates another series type via the [`IgxDataChartComponent`](
                                                  github-src="charts/data-chart/radial-column-chart-selection">
 </code-view>
 
+
 ## Programmatic Selection
 
 Chart Selection can also be configured in code where selected items in the chart can be seen on startup or runtime. This can be achieved by adding items to the `SelectedSeriesCollection` of the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html). The `Matcher` property of the [`IgxChartSelection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxchartselection.html) object allows for selecting a series based on a "matcher", ideal when you do not have access to the actual series from the chart. If you know the properties that your datasource contains, you can use the `ValueMemberPath` that the series would be.
@@ -93,10 +96,11 @@ For example, if you datasource has numeric properties Nuclear, Coal, Oil, Solar 
                                                  github-src="charts/category-chart/selection-matcher">
 </code-view>
 
+
 ## API References
 
 The following is a list of API members mentioned in the above sections:
 
-| [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) Properties | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) Properties |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|                                                                                                                                                                                           |                                                                                                                                                                                   |
+| [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) Properties                    | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) Properties |
+| ----------------------------------------------|---------------------------|
+|                                               |                           |
