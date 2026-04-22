@@ -72,14 +72,14 @@ The following is a list of the supported versions of Excel.\*\*
 
 - Microsoft Excel 2016
 
-> \[!Note]
+> [!Note]
 > The Excel Library does not support the Excel Binary Workbook (.xlsb) format at this time.
 
 ## Load and Save Workbooks
 
 Now that the Excel Library module is imported, next step is to load a workbook.
 
-> \[!Note]
+> [!Note]
 >
 > In the following code snippet, an external [ExcelUtility](excel-utility.md) class is used to save and load a [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_excel.sheet.html#workbook).
 
@@ -95,8 +95,6 @@ var workbook = ExcelUtility.load(file);
 ExcelUtility.save(workbook, "fileName");
 
 ```
-
-<!-- Angular -->
 
 <div class="divider--half"></div>
 
@@ -132,5 +130,3 @@ Modify `angular.json` by setting the `vendorSourceMap` option under architect =>
       // ...
     }
 ```
-
-<!-- end:Angular -->
