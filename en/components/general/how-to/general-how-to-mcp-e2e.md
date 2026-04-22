@@ -56,7 +56,7 @@ This gives you the `ig` command in any terminal session.
 ### Without a global install
 
 ```bash
-npx --package igniteui-cli igniteui new
+npx ig new
 ```
 
 This runs the CLI through `npx` instead of a global `ig` command.
