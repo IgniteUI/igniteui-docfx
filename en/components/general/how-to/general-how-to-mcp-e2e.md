@@ -70,7 +70,7 @@ ig new
 Matching `npx` form:
 
 ```bash
-npx --package igniteui-cli igniteui new
+npx ig new
 ```
 
 You can also use a direct command when you already know the project settings.
