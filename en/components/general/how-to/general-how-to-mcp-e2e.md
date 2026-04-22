@@ -84,7 +84,7 @@ ig new my-app --framework=angular
 Matching `npx` form:
 
 ```bash
-npx --package igniteui-cli igniteui new my-app --framework=angular
+npx ig new my-app --framework=angular
 ```
 
 What happens next:
