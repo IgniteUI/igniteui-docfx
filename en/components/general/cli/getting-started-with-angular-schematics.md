@@ -186,7 +186,7 @@ The Ignite UI for Angular Schematics collection includes an `ai-config` schemati
 ng generate @igniteui/angular-schematics:ai-config
 ```
 
-This copies Ignite UI for Angular Agent Skills into `.claude/skills/` and writes three MCP server entries to `.vscode/mcp.json`: `@angular/cli`, `igniteui-angular`, and `infragistics-docs`. If the files already exist and are up-to-date, the command is a no-op.
+This copies Ignite UI for Angular Agent Skills into `.claude/skills/` and writes three MCP server entries to `.vscode/mcp.json`: `@angular/cli`, `igniteui mcp`, and `igniteui-theming-mcp`. If the files already exist and are up-to-date, the command is a no-op.
 
 If you have the Ignite UI CLI installed globally, the equivalent command is:
 
@@ -195,6 +195,6 @@ ig ai-config
 ```
 
 > [!NOTE]
-> The `ig ai-config` form configures only the two Ignite UI entries, `igniteui-angular` and `infragistics-docs`, and does not register `@angular/cli`. Use `ng generate @igniteui/angular-schematics:ai-config` to get all three servers configured in a single step.
+> The `ig ai-config` command configures only the two Ignite UI entries, `igniteui mcp` and `igniteui-theming-mcp`, and does not register `@angular/cli`. Use `ng generate @igniteui/angular-schematics:ai-config` to get all three servers configured in a single step.
 
 For full setup instructions across all AI clients and Agent Skills wiring, see [Ignite UI CLI MCP](../../ai/cli-mcp.md).
