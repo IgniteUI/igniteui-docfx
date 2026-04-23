@@ -124,8 +124,6 @@ sdsLocations.databaseSource  = url + "/Shapes/WorldCities.dbf";
 sdsLocations.dataBind();
 ```
 
-<!-- Angular, React, WebComponents -->
-
 ## ポリゴンの処理
 
 世界の国々の [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html) に読み込まれた形状データを処理し、[`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicshapeseriescomponent.html) オブジェクトに割り当てます。
@@ -216,8 +214,6 @@ public onPointsLoaded(sds: IgxShapeDataSource, e: any) {
     symbolSeries.dataSource = geoLocations;
 }
 ```
-
-<!-- end: Angular, React, WebComponents -->
 
 ## マップ背景
 

@@ -64,6 +64,9 @@ import { IgxBadgeComponent } from 'igniteui-angular/badge';
 export class HomeComponent {}
 ```
 
+> [!NOTE]
+> This component uses Material Icons. Add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 Now that you have the Ignite UI for Angular Badge module or component imported, you can start with a basic configuration of the `igx-badge` component.
 
 ## Using the Angular Badge Component
@@ -137,6 +140,39 @@ igx-badge {
 }
 ```
 
+### Badge Value and Icon
+
+Use the `[value]` input to display text or a numeric count inside the badge:
+
+```html
+<igx-badge [value]="model.value"></igx-badge>
+```
+
+Use the `[icon]` input to display an icon inside the badge:
+
+```html
+<igx-badge icon="check" type="success"></igx-badge>
+```
+
+When both `[icon]` and `[value]` are set, the badge displays both simultaneously:
+
+```html
+<!-- Both the icon "check" and the value "5" will be shown -->
+<igx-badge icon="check" value="5" type="success"></igx-badge>
+```
+
+Or you can project content directly:
+
+```html
+  <igx-badge>{{ model.value }}</igx-badge>
+
+  <!-- When projecting both icon and text, wrap the text to keep correct padding. -->
+  <igx-badge>
+    <igx-icon>bluetooth</igx-icon>
+    <span>Bluetooth</span>
+  </igx-badge>
+```
+
 ### Badge Icon
 
 In addition to material icons, the `igx-badge` component also supports usage of [Material Icons Extended](../components/material-icons-extended.md) and any other custom icon set. To add an icon from the material icons extended set inside your badge component, first you have to register it:
@@ -194,7 +230,7 @@ export class AppModule {}
 ```
 
 >[!NOTE]
->The [`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) has [`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) and [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) inputs to configure the badge look. You can set the icon by providing its name from the official [material icons set](https://material.io/icons/). The badge type can be set to either [`default`]({environment:angularApiUrl}/enums/type.html#default), [`info`]({environment:angularApiUrl}/enums/type.html#info), [`success`]({environment:angularApiUrl}/enums/type.html#success), [`warning`]({environment:angularApiUrl}/enums/type.html#warning), or [`error`]({environment:angularApiUrl}/enums/type.html#error). Depending on the type, a specific background color is applied.
+>The [`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) has [`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon), [`value`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#value), and [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) inputs to configure the badge look. You can set the icon by providing its name from the official [material icons set](https://material.io/icons/). The badge type can be set to either [`default`]({environment:angularApiUrl}/enums/type.html#default), [`info`]({environment:angularApiUrl}/enums/type.html#info), [`success`]({environment:angularApiUrl}/enums/type.html#success), [`warning`]({environment:angularApiUrl}/enums/type.html#warning), or [`error`]({environment:angularApiUrl}/enums/type.html#error). Depending on the type, a specific background color is applied.
 
 In our sample, [`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) and [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) are bound to model properties named _icon_ and _type_.
 
