@@ -343,6 +343,7 @@ Also confirm that `core()` is called before any other theming mixin in your `sty
 - [AI-Assisted Development with Ignite UI](./ai-assisted-development-overview.md)
 - [Ignite UI for Angular Skills](./skills.md)
 - [Ignite UI CLI MCP](./cli-mcp.md)
+- [MAKER Framework](./maker-framework.md)
 
 <!-- Ideally these should be included once documentation is combined
 - [Theming Overview](../themes/index.md)

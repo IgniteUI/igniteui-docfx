@@ -19,7 +19,6 @@ By the default, the Ignite UI for Angular map component already displays geograp
                                                  github-src="maps/geo-map/display-osm-imagery">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Code Snippet

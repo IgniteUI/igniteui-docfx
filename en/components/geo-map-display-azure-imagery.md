@@ -22,7 +22,6 @@ The Angular [`IgxAzureMapsImagery`]({environment:dvApiBaseUrl}/products/ignite-u
                                                  github-src="maps/geo-map/display-azure-imagery">
 </code-view>
 
-
 ## Angular Displaying Imagery from Azure Maps - Code Example
 
 The following code snippet shows how to display geographic imagery tiles from Azure Maps in Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html) using [`IgxAzureMapsImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxazuremapsimagery.html) class.

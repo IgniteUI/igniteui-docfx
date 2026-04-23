@@ -18,7 +18,6 @@ The Ignite UI for Angular map component, the [`IgxShapeDataSource`]({environment
                                                  github-src="maps/geo-map/binding-shp-polylines">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 The following table explains properties of the [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html) class for loading shape files.

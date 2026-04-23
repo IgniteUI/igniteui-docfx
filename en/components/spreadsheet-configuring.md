@@ -18,7 +18,6 @@ The Angular Spreadsheet component allows the user to configure many different as
                                                  github-src="excel/spreadsheet/config-options">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Configuring Cell Editing

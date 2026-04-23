@@ -20,7 +20,6 @@ The following sample demonstrates how display data in [`IgxGeographicMapComponen
                                                  github-src="maps/geo-map/type-scatter-bubble-series">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 The map component allows you to render geographic imagery from Bing Maps™, and Open Street Maps. The map provides plotting of tens of thousands of data points, and updates them every few milliseconds so that the control can handle your real-time feeds.

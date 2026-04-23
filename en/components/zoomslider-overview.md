@@ -20,7 +20,6 @@ The following sample demonstrates how to use [`IgxZoomSliderComponent`]({environ
                                                  github-src="charts/zoomslider/overview">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Usage

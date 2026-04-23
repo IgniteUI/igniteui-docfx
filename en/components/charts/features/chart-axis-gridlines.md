@@ -28,7 +28,6 @@ This example shows how configure the axis gridline to display major and minor gr
                                                  github-src="charts/category-chart/axis-gridlines">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Axis Gridlines Properties
@@ -66,7 +65,6 @@ The following example demonstrates how to customize the gridlines by setting the
                                                  github-src="charts/category-chart/axis-gridlines">
 </code-view>
 
-
 The axes of the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) also have the ability to place a dash array on the major and minor gridlines by utilizing the [`majorStrokeDashArray`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxaxiscomponent.html#majorStrokeDashArray) and [`minorStrokeDashArray`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxaxiscomponent.html#minorStrokeDashArray) properties, respectively. The actual axis line can be dashed as well by setting the [`strokeDashArray`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxaxiscomponent.html#strokeDashArray) property of the corresponding axis. These properties take an array of numbers that will describe the length of the dashes for the corresponding grid lines.
 
 The following example demonstrates a [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) with the above dash array properties set:
@@ -76,7 +74,6 @@ The following example demonstrates a [`IgxDataChartComponent`]({environment:dvAp
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/dash-array-axes"
                                                  github-src="charts/data-chart/dash-array-axes">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -93,7 +90,6 @@ The following example demonstrates how to customize the tickmarks by setting the
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/axis-tickmarks"
                                                  github-src="charts/category-chart/axis-tickmarks">
 </code-view>
-
 
 <div class="divider--half"></div>
 
