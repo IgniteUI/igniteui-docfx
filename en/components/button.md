@@ -119,6 +119,9 @@ As of version `17.1.0` the IgniteUI for Angular exposes a new `igxIconButton` di
 </button>
 ```
 
+> [!NOTE]
+> This component uses Material Icons. Add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 <div class="sample-container loading" style="height: 70px">
     <iframe class="lazyload" seamless width="100%" height="100%" frameborder="0" data-src="{environment:demosBaseUrl}/data-entries/buttons-sample-7">
 </iframe></div>
