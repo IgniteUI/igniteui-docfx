@@ -162,16 +162,16 @@ JetBrains AI Assistant supports MCP servers through the IDE settings:
 
 4. Enter the following configuration:
 
-    ```json
-    {
-      "mcpServers": {
-        "igniteui-theming": {
-          "command": "npx",
-          "args": ["-y", "igniteui-theming", "igniteui-theming-mcp"]
-        }
-      }
-    }
-    ```
+   ```json
+   {
+     "mcpServers": {
+       "igniteui-theming": {
+         "command": "npx",
+         "args": ["-y", "igniteui-theming", "igniteui-theming-mcp"]
+       }
+     }
+   }
+   ```
 
 5. Click **OK** and restart the AI Assistant.
 
@@ -276,7 +276,7 @@ The AI will call `create_theme` and return a ready-to-use `styles.scss` file. Th
 
 ```scss
 /* styles.scss */
-@use 'igniteui-angular/theming' as *;
+@use "igniteui-angular/theming" as *;
 
 $my-palette: palette(
   $primary: #2563eb,
@@ -286,7 +286,7 @@ $my-palette: palette(
 );
 
 $my-typography: typography(
-  $font-family: 'Roboto, sans-serif',
+  $font-family: "Roboto, sans-serif",
 );
 
 @include core();
@@ -342,7 +342,9 @@ Also confirm that `core()` is called before any other theming mixin in your `sty
 
 ## Additional Resources
 
+- [AI-Assisted Development with Ignite UI](./ai-assisted-development-overview.md)
 - [Ignite UI for Angular Skills](./skills.md)
+- [Ignite UI CLI MCP](./cli-mcp.md)
 
 <!-- Ideally these should be included once documentation is combined
 - [Theming Overview](../themes/index.md)

@@ -1,7 +1,13 @@
 - name: AI-Assisted Development
   header: true
+- name: Agent Workflow
+  href: ai/ai-assisted-development-overview.md
+  new: true
 - name: Ignite UI for Angular Skills
   href: ai/skills.md
+  new: true
+- name: CLI MCP
+  href: ai/cli-mcp.md
   new: true
 - name: Theming MCP
   href: ai/theming-mcp.md

@@ -52,7 +52,7 @@ The zoom and pan operations can also be enabled by using modifier keys by settin
 
 ## Chart Navigation through Code
 
-> \[!Note]
+> [!Note]
 > Code navigation of the chart can only be used for the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) control.
 
 The Angular data chart provides several navigation properties that are updated each time a zoom or pan operation happens in the chart. You can also set each of these properties to zoom or pan the data chart programmatically. The following is a list of these properties:
