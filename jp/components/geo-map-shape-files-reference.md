@@ -35,7 +35,7 @@ _language: ja
 
 ## シェイプ ファイルのフォーマット
 
-Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html)コントロールは、地理空間データのソースとして人気の高い[シェープ ファイル (英語)](http://en.wikipedia.org/wiki/Shapefile#Overview) フォーマットを使用します。シェープ ファイルは他のファイル タイプと一緒に配布されます。一般的なファイルには、*.shp*、*.shx*、および *.dbf* の拡張子が付いています。
+Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html)コントロールは、地理空間データのソースとして人気の高い[シェープ ファイル (英語)](http://en.wikipedia.org/wiki/Shapefile#Overview) フォーマットを使用します。シェープ ファイルは他のファイル タイプと一緒に配布されます。一般的なファイルには、_.shp_、_.shx_、および _.dbf_ の拡張子が付いています。
 
 以下の表は、シェープ ファイルの各タイプの基本情報および目的を提供しています。
 

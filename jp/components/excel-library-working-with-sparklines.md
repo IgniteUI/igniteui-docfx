@@ -20,7 +20,7 @@ Infragistics Angular Excel Library は、Excel ワークシートにスパーク
 </code-view>
 
 
-> \[!Note]
+> [!Note]
 > XLSX 形式は必要です。他の形式は現在サポートされていません。
 
 <div class="divider--half"></div>
