@@ -215,7 +215,6 @@ If your project was created with `ig new`, the VS Code MCP configuration is alre
 ig ai-config
 ```
 
-If your project already has a `.vscode/mcp.json`, review and back it up before running `ig ai-config` so you do not accidentally replace existing MCP client configuration.
 
 If you want to configure your AI client manually, or use a client other than VS Code, start the MCP server directly:
 
