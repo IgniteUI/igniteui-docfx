@@ -21,7 +21,6 @@ The following example shows all of the available panning and zooming options tha
                                                  github-src="charts/data-chart/chart-navigation">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a href="{environment:infragisticsBaseUrl}/products/ignite-ui-angular/download">Download it for free.</a>
@@ -70,7 +69,6 @@ The following example demonstrates enabling scrollbars.
                     iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/scrollbars"
                                                  github-src="charts/financial-chart/scrollbars">
 </code-view>
-
 
 <div class="divider--half"></div>
 

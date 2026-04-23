@@ -18,7 +18,6 @@ Navigation in the [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/produ
                                                  github-src="maps/geo-map/navigation">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Geographic Coordinates

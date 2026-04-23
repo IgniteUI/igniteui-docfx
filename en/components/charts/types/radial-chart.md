@@ -21,7 +21,6 @@ The Angular Radial Area Chart has a shape of a filled polygon that is bound by a
                                                  github-src="charts/data-chart/radial-area-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Radial Column Chart
@@ -33,7 +32,6 @@ The Radial Column Chart is visualized by using a collection of rectangles that e
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-column-chart"
                                                  github-src="charts/data-chart/radial-column-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -47,7 +45,6 @@ The Angular Radial Line Chart has renders as a collection of straight lines conn
                                                  github-src="charts/data-chart/radial-line-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Radial Pie Chart
@@ -60,7 +57,6 @@ The Radial Pie Chart uses pie slices that extend from the center of chart toward
                                                  github-src="charts/data-chart/radial-pie-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Radial Chart Styling
@@ -72,7 +68,6 @@ Once our radial chart is created, we may want to make some further styling custo
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart-styling"
                                                  github-src="charts/data-chart/radial-area-chart-styling">
 </code-view>
-
 
 <div class="divider--half"></div>
 

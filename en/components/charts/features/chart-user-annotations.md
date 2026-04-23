@@ -18,7 +18,6 @@ This is directly integrated with the available tools of the [`IgxToolbarComponen
                                                  github-src="charts/data-chart/user-annotation-layer">
 </code-view>
 
-
 > [!Note]
 > This feature is designed to support X and Y axes and does not currently support radial or angular axes.
 

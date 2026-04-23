@@ -25,7 +25,6 @@ The following example depicts the amount of renewable electricity produced since
                                                  github-src="charts/category-chart/axis-locations">
 </code-view>
 
-
 <!-- ## Axis Orientation Example
 
 TODO add info/example of 4 charts with all possible combinations of XAxisInverted and YAxisInverted
@@ -48,7 +47,6 @@ The following example depicts a stock price and trade volume chart with a [Stock
                                                  github-src="charts/data-chart/axis-sharing">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ### Axis Crossing Example
@@ -62,7 +60,6 @@ The following example shows a Sin and Cos wave represented by a [Scatter Spline 
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/axis-crossing"
                                                  github-src="charts/data-chart/axis-crossing">
 </code-view>
-
 
 <div class="divider--half"></div>
 

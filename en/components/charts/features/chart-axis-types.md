@@ -34,7 +34,6 @@ The following example demonstrates usage of the [`IgxCategoryXAxisComponent`]({e
                                                  github-src="charts/data-chart/stacked-column-chart">
 </code-view>
 
-
 ### Category Y-Axis
 
 The [`IgxCategoryYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategoryyaxiscomponent.html) works very similarly to the [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategoryxaxiscomponent.html) described above, but it is placed vertically rather than horizontally. Also, this axis requires you to provide a `DataSource` and a [`label`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxaxiscomponent.html#label) in order to plot data with it. The [`IgxCategoryYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategoryyaxiscomponent.html) is generally used with the [`IgxNumericXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxnumericxaxiscomponent.html) to plot the following type of series:
@@ -50,7 +49,6 @@ The following example demonstrates usage of the [`IgxCategoryYAxisComponent`]({e
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/bar-chart-multiple-sources"
                                                  github-src="charts/data-chart/bar-chart-multiple-sources">
 </code-view>
-
 
 ### Numeric X-Axis
 
@@ -79,7 +77,6 @@ The following example demonstrates usage of the [`IgxNumericXAxisComponent`]({en
                                                  github-src="charts/data-chart/type-scatter-hd-series">
 </code-view>
 
-
 ### Numeric Y-Axis
 
 The [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxnumericyaxiscomponent.html) treats its data as continuously varying numerical data items. Labels on this axis are placed vertically along the Y-Axis. The location of the [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxnumericyaxiscomponent.html) labels depends on the `YMemberPath` property of the various [ScatterSeries](../types/scatter-chart.md) that is supports if combined with a [`IgxNumericXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxnumericxaxiscomponent.html). Alternatively, if combined with the [`IgxCategoryYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategoryyaxiscomponent.html), these labels will be placed corresponding to the `ValueMemberPath` of the category or stacked series mentioned in the table above. If you are using one of the financial series, they will be placed corresponding to the Open/High/Low/Close paths and the series type that you are using.
@@ -97,7 +94,6 @@ The following example demonstrates usage of the [`IgxNumericYAxisComponent`]({en
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/scatter-line-chart"
                                                  github-src="charts/data-chart/scatter-line-chart">
 </code-view>
-
 
 ### Time X Axis
 
@@ -141,7 +137,6 @@ The following example demonstrates usage of the [`IgxCategoryAngleAxisComponent`
                                                  github-src="charts/data-chart/radial-area-chart">
 </code-view>
 
-
 ### Proportional Category Angle Axis
 
 The [`IgxProportionalCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxproportionalcategoryangleaxiscomponent.html) treats its data as a sequence of category data items. The labels on this axis are placed along the edge of a circle according to their position in that sequence. This type of axis can display almost any type of data including strings and numbers.
@@ -155,7 +150,6 @@ The following example demonstrates usage of the [`IgxProportionalCategoryAngleAx
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-proportional-category-angle-axis"
                                                  github-src="charts/data-chart/radial-proportional-category-angle-axis">
 </code-view>
-
 
 ### Numeric Angle Axis
 
@@ -171,7 +165,6 @@ The following example demonstrates usage of the [`IgxNumericAngleAxisComponent`]
                                                  github-src="charts/data-chart/polar-scatter-chart">
 </code-view>
 
-
 ### Numeric Radius Axis
 
 The [`IgxNumericRadiusAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxnumericradiusaxiscomponent.html) treats the data as continuously varying numerical data items. The labels on this axis are placed around the circular plot. The location of the labels varies according to the value in a data column mapped using the `AngleMemberPath` property of the corresponding polar series.
@@ -185,7 +178,6 @@ The following example demonstrates usage of the [`IgxNumericRadiusAxisComponent`
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/polar-line-chart"
                                                  github-src="charts/data-chart/polar-line-chart">
 </code-view>
-
 
 ## Additional Resources
 
