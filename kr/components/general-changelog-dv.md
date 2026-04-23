@@ -10,12 +10,8 @@ mentionedTypes: ["SeriesViewer", "XYChart", "DomainChart", "XamGeographicMap"]
 
 All notable changes for each version of Ignite UI for Angular are documented on this page.
 
-<!-- Angular -->
-
-> \[!Note]
-> For changes specific to Angular LOB components, please see [Ignite UI Angular Changes](https://github.com/igniteui/igniteui-angular/blob/master/changelog.md)
-
-<!-- end: Angular -->
+> [!Note]
+> For changes specific to Angular LOB components, please see [Ignite UI Angular Changes](https://github.com/IgniteUI/igniteui-angular/blob/master/CHANGELOG.md)
 
 <div class="divider--half"></div>
 
@@ -119,7 +115,7 @@ for example:
 
 ### Geographic Map
 
-> \[!Note]
+> [!Note]
 > These features are CTP
 
 - Added support for wrap around display of the map (scroll infinitely horizontally)
@@ -133,15 +129,13 @@ for example:
 
 <div class="divider--half"></div>
 
-<!-- Angular, React, WebComponents -->
-
 ## **Angular 8.2.12**
 
 - Changed Import Statements
 
 Import statements have been simplified to use just package names instead of full paths to API classes and enums.
 
-> \[!Note]
+> [!Note]
 > These breaking changes were introduce in these packages and components only:
 
 | Affected Packages | Affected Components |
@@ -201,5 +195,3 @@ import { IgxDataChartCoreModule } from "igniteui-webcomponents-charts/ES5/igx-da
 import { IgxGeographicMapComponent } from "igniteui-webcomponents-maps/ES5/igx-geographic-map-component";
 import { IgxGeographicMapModule } from "igniteui-webcomponents-maps/ES5/igx-geographic-map-module";
 ```
-
-<!-- end: Angular, React, WebComponents -->
