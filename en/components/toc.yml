@@ -12,6 +12,9 @@
 - name: Theming MCP
   href: ai/theming-mcp.md
   new: true
+- name: Maker Framework
+  href: ai/maker-framework.md
+  new: true
 - name: General
   header: true
   sortable: true
