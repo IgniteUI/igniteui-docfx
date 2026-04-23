@@ -21,10 +21,7 @@ The following sample demonstrates how setting multiple properties on the same [`
                                                  github-src="gauges/linear-gauge/animation">
 </code-view>
 
-
 <div class="divider--half"></div>
-
-<!-- Angular, React, WebComponents -->
 
 ## Dependencies
 
@@ -34,8 +31,6 @@ When installing the Angular gauge component, the core package must also be insta
 npm install --save igniteui-angular-core
 npm install --save igniteui-angular-gauges
 ```
-
-<!-- end: Angular, React, WebComponents -->
 
 ## Component Modules
 
@@ -117,7 +112,6 @@ This is the primary measure displayed by the linear gauge component and is visua
                                                  github-src="gauges/linear-gauge/needle">
 </code-view>
 
-
 ## Highlight Needle
 
 The linear gauge can be modified to show a second needle. This will make the main needle's [`value`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargaugecomponent.html#value) appear with a lower opacity. To enable this first set [`highlightValueDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargaugecomponent.html#highlightValueDisplayMode) to Overlay and then apply a [`highlightValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxlineargaugecomponent.html#highlightValue).
@@ -148,7 +142,6 @@ The linear gauge can be modified to show a second needle. This will make the mai
                                                  github-src="gauges/linear-gauge/highlight-needle">
 </code-view>
 
-
 ## Ranges
 
 The ranges are visual elements that highlight a specified range of values on a scale. Their purpose is to visually communicate the qualitative state of the performance bar measure, illustrating at the same times the degree to which it resides within that state.
@@ -178,7 +171,6 @@ The ranges are visual elements that highlight a specified range of values on a s
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge/ranges"
                                                  github-src="gauges/linear-gauge/ranges">
 </code-view>
-
 
 ## Tick Marks
 
@@ -214,7 +206,6 @@ Minor tick marks – The minor tick marks represent helper tick marks, which mig
                                                  github-src="gauges/linear-gauge/tickmarks">
 </code-view>
 
-
 ## Labels
 
 The labels indicate the measures on the scale.
@@ -239,7 +230,6 @@ The labels indicate the measures on the scale.
                                                  github-src="gauges/linear-gauge/labels">
 </code-view>
 
-
 ## Backing
 
 The backing element represents background and border of the linear gauge component. It is always the first element rendered and all the rest of elements such as labels, and tick marks are overlaid on top of it.
@@ -262,7 +252,6 @@ The backing element represents background and border of the linear gauge compone
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge/backing"
                                                  github-src="gauges/linear-gauge/backing">
 </code-view>
-
 
 ## Scale
 
@@ -289,7 +278,6 @@ The scale is a visual element that highlights the full range of values in the li
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/linear-gauge/scale"
                                                  github-src="gauges/linear-gauge/scale">
 </code-view>
-
 
 ## Summary
 

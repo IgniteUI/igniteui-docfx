@@ -18,7 +18,6 @@ The Angular Spreadsheet  (Excel viewer) component is lightweight, feature-rich a
                                                  github-src="excel/spreadsheet/overview">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Functionality
@@ -93,7 +92,7 @@ Now that the Angular spreadsheet module is imported, next is the basic configura
 </igx-spreadsheet>
 ```
 
-> \[!Note]
+> [!Note]
 >
 > In the following code snippet, an external [ExcelUtility](excel-utility.md) class is used to save and load a [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html#workbook).
 

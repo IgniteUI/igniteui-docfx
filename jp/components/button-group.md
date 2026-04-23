@@ -46,7 +46,7 @@ import { IgxButtonGroupModule } from 'igniteui-angular/button-group';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxButtonGroupComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_BUTTON_GROUP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/buttonGroup/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxButtonGroupComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_BUTTON_GROUP_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/button-group/src/button-group/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts

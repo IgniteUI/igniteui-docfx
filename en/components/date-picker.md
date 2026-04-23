@@ -52,7 +52,7 @@ import { IgxDatePickerModule } from 'igniteui-angular/date-picker';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxDatePickerComponent` as a standalone dependency, or use the [`IGX_DATE_PICKER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/date-picker/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxDatePickerComponent` as a standalone dependency, or use the [`IGX_DATE_PICKER_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/date-picker/src/date-picker/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
@@ -155,6 +155,9 @@ The [`IgxDatePickerComponent`]({environment:angularApiUrl}/classes/igxdatepicker
     <igx-icon igxSuffix (click)="datePicker.open()">keyboard_arrow_down</igx-icon>
 </igx-date-picker>
 ```
+
+> [!NOTE]
+> This component uses Material Icons. Add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
 
 The above snippet will add an additional toggle icon at the end of the input, right after the default clear icon. This will not remove the default toggle icon, though as prefixes and suffixes can be stacked one after the other.
 

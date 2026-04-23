@@ -50,7 +50,7 @@ import { IgxExpansionPanelModule } from 'igniteui-angular/expansion-panel';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxExpansionPanelComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_EXPANSION_PANEL_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/expansion-panel/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxExpansionPanelComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_EXPANSION_PANEL_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/expansion-panel/src/expansion-panel/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts

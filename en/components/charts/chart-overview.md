@@ -59,7 +59,6 @@ The Angular Bar Chart, or Bar Graph is among the most common category chart type
                                                  github-src="charts/data-chart/bar-chart-multiple-sources">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ### Angular Pie Chart
@@ -71,7 +70,6 @@ The Angular Pie Chart, or Pie Graph, is a very common part-to-whole chart type. 
                     iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart/overview"
                                                  github-src="charts/pie-chart/overview">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -85,7 +83,6 @@ The Angular Line Chart, or Line Graph is a type of category line graph shows the
                                                  github-src="charts/category-chart/line-chart-multiple-sources">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ### Angular Donut Chart
@@ -97,7 +94,6 @@ The Angular Donut Chart or Donut Graph, is a variant of a Pie Chart, proportiona
                     iframe-src="{environment:dvDemosBaseUrl}/charts/doughnut-chart/legend"
                                                  github-src="charts/doughnut-chart/legend">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -111,7 +107,6 @@ The Angular Area Chart is rendered using a collection of points connected by str
                                                  github-src="charts/category-chart/area-chart-multiple-sources">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ### Angular Sparkline Chart
@@ -123,7 +118,6 @@ The Angular Sparkline Chart, or Sparkline Graph is a type of category graph inte
                     iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline/display-types"
                                                  github-src="charts/sparkline/display-types">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -137,7 +131,6 @@ The Angular Bubble Chart, or Bubble Graph, is used to show data comprising of th
                                                  github-src="charts/data-chart/scatter-bubble-chart-multiple-sources">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ### Angular Financial / Stock Chart
@@ -149,7 +142,6 @@ The Angular Financial or Stock Chart, is a composite visualization that renders 
                     iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/multiple-data"
                                                  github-src="charts/financial-chart/multiple-data">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -163,7 +155,6 @@ The Angular Column Chart, or Column Graph is among the most common category char
                                                  github-src="charts/category-chart/column-chart-multiple-sources">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ### Angular Composite Chart
@@ -175,7 +166,6 @@ The Angular Composite Chart, also called a Combo Chart, is visualization that co
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/composite-chart"
                                                  github-src="charts/data-chart/composite-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -197,7 +187,6 @@ The Angular Polar Area Chart or Polar Graph belongs to a group of polar charts a
                                                  github-src="charts/data-chart/polar-line-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 <!-- ### Angular Pyramid Chart
@@ -214,7 +203,6 @@ The Angular Scatter Chart, or Scatter Graph, is used to show the relationship be
                                                  github-src="charts/data-chart/scatter-point-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ### Angular Shape Chart
@@ -226,7 +214,6 @@ The Angular Shape Charts is a group of chart that take array of shapes (array or
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/type-scatter-polygon-series"
                                                  github-src="charts/data-chart/type-scatter-polygon-series">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -240,7 +227,6 @@ The Angular Spline Chart, or Spline Graph is a type of category line graph shows
                                                  github-src="charts/category-chart/spline-multiple-sources">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ### Angular Step Chart
@@ -252,7 +238,6 @@ The Angular Step Chart, or Step Graph, is a category charts that renders a colle
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/step-line-multiple-sources"
                                                  github-src="charts/category-chart/step-line-multiple-sources">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -269,7 +254,6 @@ The Ignite UI for Angular Treemap displays hierarchical (tree-structured) data a
                     iframe-src="{environment:dvDemosBaseUrl}/charts/tree-map/overview"
                                                  github-src="charts/tree-map/overview">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -338,13 +322,8 @@ If you are considering any other Angular Charts on the market, here are a few th
 - We test against everyone elses performance. Everyone says they are fast and can handle lots of data, but we can prove it. See for yourself how we handle high-volume data and real-time data streaming.
 - We are here 24x5. Infragistics has global support that is always online. For North America, Asia Pacific, Middle East, and Europe, we are on the clock when you are!
 - We have many more UI controls in Angular besides the Charts. We offer a complete Angular solution to build your applications!
-
-<!-- Angular -->
-
 - Ignite UI for Angular is built on Angular for the Angular developer, with zero 3rd party dependencies. We are 100% optimized for Angular.
 - We offer the world’s first, and only, end-to-end comprehensive design to code platform for UX Designers, Visual Designers, and Developers that will generate pixel-perfect Angular controls from Figma designs. With Indigo.Design, everything you craft in Figma from our Indigo Design System matches to our Ignite UI for Angular controls.
-
-<!-- end: Angular -->
 
 ## API References
 

@@ -69,7 +69,7 @@ export class MySimpleComboComponent implements OnInit {
 ```
 
 ```typescript
-public countryChanging(event: IComboSelectionChangeEventArgs) {
+public countryChanging(event: IComboSelectionChangingEventArgs) {
     if (event.added.length) {
         event.newSelection = event.added;
     }

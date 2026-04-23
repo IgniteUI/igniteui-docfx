@@ -39,7 +39,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 
 ```typescript
 // app.module.ts
-import { IgxButtonModule } from 'igniteui-angular/button';
+import { IgxButtonModule } from 'igniteui-angular/directives';
 // import { IgxButtonModule } from '@infragistics/igniteui-angular'; for licensed package
 @NgModule({
     imports: [
@@ -57,7 +57,7 @@ export class AppModule {}
 // home.component.ts
 
 ...
-import { IgxButtonDirective } from 'igniteui-angular/button';
+import { IgxButtonDirective } from 'igniteui-angular/directives';
 // import { IgxButtonDirective } from '@infragistics/igniteui-angular'; for licensed package
 
 @Component({

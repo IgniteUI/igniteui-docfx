@@ -52,7 +52,7 @@ import { IgxTreeModule } from 'igniteui-angular/tree';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxTreeComponent` as a standalone dependency, or use the [`IGX_TREE_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/tree/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxTreeComponent` as a standalone dependency, or use the [`IGX_TREE_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/tree/src/tree/public_api.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
@@ -272,6 +272,9 @@ To create a reusable template for your nodes, declare `<ng-template>` **within `
     </ng-template>
 </igx-tree>
 ```
+
+> [!NOTE]
+> This component uses Material Icons. Add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
 
 Additionally, by using the [expandIndicator]({environment:angularApiUrl}/classes/igxtreecomponent.html#expandIndicator) input you have the ability to set a custom template to be used for rendering the expand/collapse indicators of nodes.
 

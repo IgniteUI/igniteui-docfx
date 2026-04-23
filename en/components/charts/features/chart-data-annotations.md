@@ -11,7 +11,7 @@ namespace: Infragistics.Controls.Charts
 
 In the Angular chart, the data annotation layers allow you to annotate data plotted in Data Chart with sloped lines, vertical/horizontal lines (aka axis slices), vertical/horizontal strips (targeting specific axis), rectangles, and even parallelograms (aka bands). With data-binding supported, you can create as many annotations as you want to customize your charts. Also, you can combine different annotation layers and you can overlay text inside of plot area to annotated important events, patterns, and regions in your data.
 
-> \[!Note]
+> [!Note]
 > These features are designed to support cartesian axes and does not currently support radius or angle axes.
 
 For example, you can annotates stock prices with stock events and patterns.
@@ -21,7 +21,6 @@ For example, you can annotates stock prices with stock events and patterns.
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/data-annotation-multiple-with-stocks"
                                                  github-src="charts/data-chart/data-annotation-multiple-with-stocks">
 </code-view>
-
 
 Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a href="{environment:infragisticsBaseUrl}/products/ignite-ui-angular/download">Download it for free.</a>
 
@@ -37,7 +36,6 @@ For example, you can use DataAnnotationSliceLayer to annotate stock prices with 
                                                  github-src="charts/data-chart/data-annotation-slice-layer">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Data Annotation Strip Layer Example
@@ -51,7 +49,6 @@ For example, you can use [`IgxDataAnnotationStripLayerComponent`]({environment:d
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/data-annotation-strip-layer"
                                                  github-src="charts/data-chart/data-annotation-strip-layer">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -67,7 +64,6 @@ For example, you can use DataAnnotationLineLayer to annotate growth and decline 
                                                  github-src="charts/data-chart/data-annotation-line-layer">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Data Annotation Rect Layer Example
@@ -82,7 +78,6 @@ For example, you can use DataAnnotationRectLayer to annotate bearish patterns an
                                                  github-src="charts/data-chart/data-annotation-rect-layer">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Data Annotation Band Layer Example
@@ -96,7 +91,6 @@ For example, you can use DataAnnotationBandLayer to annotate range of growth in 
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/data-annotation-band-layer"
                                                  github-src="charts/data-chart/data-annotation-band-layer">
 </code-view>
-
 
 <div class="divider--half"></div>
 

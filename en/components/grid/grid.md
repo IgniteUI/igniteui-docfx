@@ -100,7 +100,7 @@ import { IgxGridModule } from 'igniteui-angular/grids/grid';
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxGridComponent` as a standalone dependency, or use the [`IGX_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/grid/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxGridComponent` as a standalone dependency, or use the [`IGX_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/grids/grid/src/grid.module.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
@@ -231,6 +231,9 @@ public contextObject = { firstProperty: 'testValue', secondProperty: 'testValue1
     </ng-template>
 </igx-column>
 ```
+
+> [!NOTE]
+> This component uses Material Icons. Add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
 
 As you can see, we are adding **draggable** attribute set to _false_.
 

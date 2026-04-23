@@ -18,10 +18,7 @@ The Angular Toolbar component is a companion container for UI operations to be u
                                                  github-src="charts/toolbar/actions-built-in-category-chart">
 </code-view>
 
-
 ## Dependencies
-
-<!-- Angular, WebComponents, React -->
 
 Install the Ignite UI for Angular layouts, inputs, charts and core packages:
 
@@ -67,8 +64,6 @@ IgrDataChartInteractivityModule.register();
 IgrDataChartCategoryTrendLineModule.register();
 ```
 
-<!-- end:Angular, WebComponents, React -->
-
 ## Usage
 
 ### Tool Actions
@@ -95,7 +90,6 @@ The following example demonstrates a couple of features. First you can group too
                     iframe-src="{environment:dvDemosBaseUrl}/charts/toolbar/layout-actions-for-data-chart"
                                                  github-src="charts/toolbar/layout-actions-for-data-chart">
 </code-view>
-
 
 ### Angular Data Chart Integration
 
@@ -219,7 +213,6 @@ The following example demonstrates the vertical orientation of the Angular Toolb
                                                  github-src="charts/toolbar/layout-in-vertical-orientation">
 </code-view>
 
-
 ### Color Editor
 
 You can add a custom color editor tool to the the Angular Toolbar, which will also work with the Command event to perform custom styling to your application.
@@ -253,7 +246,6 @@ The following example demonstrates styling the Angular Data Chart series brush w
                     iframe-src="{environment:dvDemosBaseUrl}/charts/toolbar/color-editor-support"
                                                  github-src="charts/toolbar/color-editor-support">
 </code-view>
-
 
 <!-- ## Styling/Theming
 

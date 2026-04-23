@@ -21,7 +21,6 @@ The following example shows all of the available panning and zooming options tha
                                                  github-src="charts/data-chart/chart-navigation">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a href="{environment:infragisticsBaseUrl}/products/ignite-ui-angular/download">Download it for free.</a>
@@ -45,12 +44,12 @@ Navigation in the Angular data chart can happen with either touch, the mouse or 
 The zoom and pan operations can also be enabled by using modifier keys by setting the [`dragModifier`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#dragModifier) and [`panModifier`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#panModifier) properties, respectively. These properties can be set to the following modifier keys, and when pressed, the corresponding operation will be executed:
 
 | Modifier Value | Corresponding Key |
-| :------------- | :---------------- |
-| `Shift`        | <kbd>SHIFT</kbd>  |
-| `Control`      | <kbd>CTRL</kbd>   |
-| `Windows`      | <kbd>WIN</kbd>    |
-| `Apple`        | <kbd>APPLE</kbd>  |
-| `None`         | no keys           |
+| ---------------|------------------ |
+| `Shift`        | <kbd>SHIFT</kbd> |
+| `Control`      | <kbd>CTRL</kbd> |
+| `Windows`      | <kbd>WIN</kbd> |
+| `Apple`        | <kbd>APPLE</kbd> |
+| `None`         | no keys |
 
 ## Chart Navigation with Scrollbars
 
@@ -71,12 +70,11 @@ The following example demonstrates enabling scrollbars.
                                                  github-src="charts/financial-chart/scrollbars">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Chart Navigation through Code
 
-> \[!Note]
+> [!Note]
 > Code navigation of the chart can only be used for the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) control.
 
 The Angular data chart provides several navigation properties that are updated each time a zoom or pan operation happens in the chart. You can also set each of these properties to zoom or pan the data chart programmatically. The following is a list of these properties:

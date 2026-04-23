@@ -1,10 +1,19 @@
 - name: AI-Assisted Development
   header: true
+- name: Agent Workflow
+  href: ai/ai-assisted-development-overview.md
+  new: true
 - name: Ignite UI for Angular Skills
   href: ai/skills.md
   new: true
+- name: CLI MCP
+  href: ai/cli-mcp.md
+  new: true
 - name: Theming MCP
   href: ai/theming-mcp.md
+  new: true
+- name: Maker Framework
+  href: ai/maker-framework.md
   new: true
 - name: General
   header: true
@@ -61,6 +70,9 @@
     - name: Use Standalone Components
       href: general/how-to/how-to-use-standalone-components.md
       updated: false
+    - name: Build App with CLI MCP and Theming MCP
+      href: general/how-to/general-how-to-mcp-e2e.md
+      new: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   sortable: false

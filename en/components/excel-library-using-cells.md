@@ -18,10 +18,7 @@ The [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/
                                                  github-src="excel/excel-library/working-with-cells">
 </code-view>
 
-
 <div class="divider--half"></div>
-
-<!-- Angular, React, WebComponents -->
 
 ## References
 
@@ -36,8 +33,6 @@ import { NamedReference } from "igniteui-angular-excel";
 import { WorksheetCellComment } from "igniteui-angular-excel";
 import { FormattedString } from "igniteui-angular-excel";
 ```
-
-<!-- end: Angular, React, WebComponents -->
 
 ## Referencing Cells and Regions
 

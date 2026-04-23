@@ -59,7 +59,7 @@ import { IgxComboModule } from 'igniteui-angular/combo';
 export class AppModule {}
 ```
 
-あるいは、`16.0.0` 以降、`IgxComboComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_COMBO_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/combo/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
+あるいは、`16.0.0` 以降、`IgxComboComponent` をスタンドアロンの依存関係としてインポートすることも、[`IGX_COMBO_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/combo/src/combo/public_api.ts) トークンを使用してコンポーネントとそのすべてのサポート コンポーネントおよびディレクティブをインポートすることもできます。
 
 ```typescript
 // home.component.ts
@@ -211,13 +211,44 @@ export class MyExampleCombo {
 ```typescript
 export class MyExampleCombo {
     ...
-    handleCityChange(event: IComboSelectionChangeEventArgs): void {
+    handleCityChange(event: IComboSelectionChangingEventArgs): void {
         for (const item of event.added) {
             this.addToVisualization(item);
         }
         for (const item of event.removed) {
             this.removeFromVisualization(item);
         }
+    }
+}
+```
+
+また、コンボボックスは、選択が確定されてコンポーネントの状態が更新された後に [selectionChanged]({environment:angularApiUrl}/classes/IgxComboComponent.html#selectionChanged) イベントを発生させます。発行されたイベント引数 [IComboSelectionChangedEventArgs]({environment:angularApiUrl}/interfaces/icomboselectionchangedeventargs.html) には、以前の選択、現在の選択、および追加または削除されたアイテムに関する情報が含まれています。`selectionChanging` とは異なり、このイベントはキャンセル不可であり、最終的に確定した選択の状態を反映することが保証されています。コンボボックスが `ngModel` や Angular フォームとともに使用される場合、`selectionChanged` は値変更コールバックが呼び出された後に発行されます。
+
+イベントへのバインドは、`igx-combo` タグの適切な `@Output` プロパティを介して行うことができます。
+
+```html
+<igx-combo [data]="cities" displayKey="name" valueKey="id"
+           (selectionChanged)="handleCitySelectionChanged($event)">
+</igx-combo>
+```
+
+次の例では、選択が変更されると、ハンドラーが短い要約を更新し、追加および削除されたアイテムの数を追跡します。
+
+```typescript
+export class MyExampleCombo {
+    ...
+    handleCitySelectionChanged(event: IComboSelectionChangedEventArgs): void {
+        this.updateSelectionSummary(event.displayText, event.newSelection.length);
+
+        for (const item of event.added) {
+            this.highlightAddedCity(item);
+        }
+
+        for (const item of event.removed) {
+            this.dimRemovedCity(item);
+        }
+
+        this.logSelectionTransition(event.oldSelection, event.newSelection);
     }
 }
 ```
@@ -231,7 +262,7 @@ export class MyExampleCombo {
 ```
 
 ```typescript
-public singleSelection(event: IComboSelectionChangeEventArgs) {
+public singleSelection(event: IComboSelectionChangingEventArgs) {
     if (event.added.length) {
         event.newValue = event.added;
     }

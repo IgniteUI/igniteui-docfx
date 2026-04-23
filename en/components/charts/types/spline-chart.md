@@ -20,7 +20,6 @@ The following example shows how to create Angular Spline Chart in the [`IgxCateg
                                                  github-src="charts/category-chart/spline-multiple-sources">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Spline Chart with Single Series
@@ -34,7 +33,6 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/spline-single-source"
                                                  github-src="charts/category-chart/spline-single-source">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -50,7 +48,6 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
                                                  github-src="charts/category-chart/spline-multiple-sources">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Spline Chart Styling
@@ -64,7 +61,6 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/spline-styling"
                                                  github-src="charts/category-chart/spline-styling">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -84,7 +80,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                                                  github-src="charts/data-chart/stacked-spline-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Stacked 100% Spline Chart
@@ -98,7 +93,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-spline-chart"
                                                  github-src="charts/data-chart/stacked-100-spline-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -116,8 +110,8 @@ You can find more information about related chart types in these topics:
 
 The following table lists API members mentioned in the above sections:
 
-| Chart Type          | Control Name                                                                                                                                                                   | API Members                                                                                                                                                                                                                                                                                                                         |
-| :------------------ | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Chart Type          | Control Name       | API Members |
+| --------------------|--------------------|-------------------------- |
 | Spline              | [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) | [`chartType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#chartType) = [`Spline`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/enums/igniteui_angular_charts.categorycharttype.html#Spline) |
-| Stacked Spline      | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)         | [`IgxStackedSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstackedsplineseriescomponent.html)                                                                                                                                          |
-| Stacked 100% Spline | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)         | [`IgxStacked100SplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstacked100splineseriescomponent.html)                                                                                                                                    |
+| Stacked Spline      | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)     | [`IgxStackedSplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstackedsplineseriescomponent.html) |
+| Stacked 100% Spline | [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html)     | [`IgxStacked100SplineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxstacked100splineseriescomponent.html) |

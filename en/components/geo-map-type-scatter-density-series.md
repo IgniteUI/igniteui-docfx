@@ -18,7 +18,6 @@ In Angular map component, you can use the [`IgxGeographicHighDensityScatterSerie
                                                  github-src="maps/geo-map/type-scatter-density-series">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 The demo above shows the [`IgxGeographicHighDensityScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographichighdensityscatterseriescomponent.html) series in the map component bound to hundreds or even thousands of data points representing Australia’s population density. The map plot area with more densely populated data points represented as coalescences of red pixels and loosely distributed data points by discrete blue pixels.
@@ -33,22 +32,22 @@ Similar to other types of scatter series in the map control, the [`IgxGeographic
 
 The following table summarizes the GeographicHighDensityScatterSeries series properties used for data binding.
 
-| Property                                                                                                                                                                                                        | Type   | Description                                                                                           |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----- | :---------------------------------------------------------------------------------------------------- |
-| `ItemsSource`                                                                                                                                                                                                   | any    | Gets or sets the items source                                                                         |
-| [`longitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographichighdensityscatterseriescomponent.html#longitudeMemberPath) | string | Uses the ItemsSource property to determine the location of the longitude values on the assigned items |
-| [`latitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographichighdensityscatterseriescomponent.html#latitudeMemberPath)   | string | Uses the ItemsSource property to determine the location of the latitude values on the assigned items  |
+| Property|Type|Description |
+| ---|---|--- |
+| `ItemsSource`|any|Gets or sets the items source |
+| [`longitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographichighdensityscatterseriescomponent.html#longitudeMemberPath)|string|Uses the ItemsSource property to determine the location of the longitude values on the assigned items |
+| [`latitudeMemberPath`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographichighdensityscatterseriescomponent.html#latitudeMemberPath)|string|Uses the ItemsSource property to determine the location of the latitude values on the assigned items |
 
 ## Heat Color Scale
 
 The Heat Color Scale, an optional feature, determines the color pattern within the series. The following table summarizes the properties used for determining the color scale.
 
-| Property                                                                                                                                                                                                  | Type   | Description                                                               |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----- | :------------------------------------------------------------------------ |
-| [`heatMinimum`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographichighdensityscatterseriescomponent.html#heatMinimum)           | Double | Defines the double value representing the minimum end of the color scale  |
-| [`heatMaximum`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographichighdensityscatterseriescomponent.html#heatMaximum)           | Double | Defines the double value representing the maximum end of the color scale  |
-| [`heatMinimumColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographichighdensityscatterseriescomponent.html#heatMinimumColor) | Color  | Defines the point density color used at the bottom end of the color scale |
-| [`heatMaximumColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographichighdensityscatterseriescomponent.html#heatMaximumColor) | Color  | Defines the point density color used at the top end of the color scale    |
+| Property |Type|Description |
+| ---|---|--- |
+| [`heatMinimum`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographichighdensityscatterseriescomponent.html#heatMinimum)|Double|Defines the double value representing the minimum end of the color scale |
+| [`heatMaximum`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographichighdensityscatterseriescomponent.html#heatMaximum)|Double|Defines the double value representing the maximum end of the color scale |
+| [`heatMinimumColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographichighdensityscatterseriescomponent.html#heatMinimumColor)|Color|Defines the point density color used at the bottom end of the color scale |
+| [`heatMaximumColor`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographichighdensityscatterseriescomponent.html#heatMaximumColor)|Color|Defines the point density color used at the top end of the color scale |
 
 ## Code Example
 

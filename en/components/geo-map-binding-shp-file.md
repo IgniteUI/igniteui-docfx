@@ -18,15 +18,14 @@ The Ignite UI for Angular map component, the [`IgxShapeDataSource`]({environment
                                                  github-src="maps/geo-map/binding-shp-polylines">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 The following table explains properties of the [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html) class for loading shape files.
 
-| Property                                                                                                                                                                    | Type   | Description                                                                                              |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----- | :------------------------------------------------------------------------------------------------------- |
-| [`shapefileSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html#shapefileSource) | string | Specifies the Uri to a shape file (.shp) that contains geo-spatial data items.                           |
-| [`databaseSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html#databaseSource)   | string | Specifies the Uri to a shape database file (.dbf) that contains a data table for geo-spatial data items. |
+| Property | Type | Description   |
+|----------|------|---------------|
+| [`shapefileSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html#shapefileSource) | string |Specifies the Uri to a shape file (.shp) that contains geo-spatial data items.|
+|[`databaseSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html#databaseSource) | string |Specifies the Uri to a shape database file (.dbf) that contains a data table for geo-spatial data items.|
 
 <!-- TODO add for WPF only: -->
 
@@ -44,10 +43,10 @@ In the map component, Geographic Series are used for displaying geo-spatial data
 
 The [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapefilerecord.html) class provides properties for storing geo-spatial data, listed in the following table.
 
-| Property | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| :------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Points` | Contains all the points in one geo-spatial shape loaded from a shape file (.shp). For example, the country of Japan in shape file would be represented as a list of a list of points object, where:<ul><li>The first list of points describes shape of Hokkaido island</li><li>The second list of points describes shape of Honshu island</li><li>The third list of points describes shape of Kyushu island</li><li>The fourth list of points describes shape of Shikoku island</li></ul> |
-| `Fields` | Contains a row of data from the shape database file (.dbf) keyed by a column name. For example, a data about county of Japan which includes population, area, name of a capital, etc.                                                                                                                                                                                                                                                                                                     |
+| Property     | Description   |
+|--------------|---------------|
+|`Points`|Contains all the points in one geo-spatial shape loaded from a shape file (.shp). For example, the country of Japan in shape file would be represented as a list of a list of points object, where:<ul><li>The first list of points describes shape of Hokkaido island</li><li>The second list of points describes shape of Honshu island</li><li>The third list of points describes shape of Kyushu island</li><li>The fourth list of points describes shape of Shikoku island</li></ul>|
+| `Fields` |Contains a row of data from the shape database file (.dbf) keyed by a column name. For example, a data about county of Japan which includes population, area, name of a capital, etc.|
 
 This data structure is suitable for use in most Geographic Series as long as appropriate data columns are mapped to them.
 

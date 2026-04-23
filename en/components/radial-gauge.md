@@ -21,10 +21,7 @@ The following sample demonstrates how setting multiple properties on the same [`
                                                  github-src="gauges/radial-gauge/animation">
 </code-view>
 
-
 <div class="divider--half"></div>
-
-<!-- Angular, React, WebComponents -->
 
 ## Dependencies
 
@@ -34,8 +31,6 @@ When installing the gauge component, the core package must also be installed.
 npm install --save igniteui-angular-core
 npm install --save igniteui-angular-gauges
 ```
-
-<!-- end: Angular, React, WebComponents -->
 
 ## Component Modules
 
@@ -115,7 +110,6 @@ The backing can be circular or fitted. A circular shape creates a 360 degree cir
                                                  github-src="gauges/radial-gauge/backing">
 </code-view>
 
-
 ## Scale
 
 The scale is visual element that highlights full range of values in the gauge which can be created by supplying [`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#minimumValue) and [`maximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#maximumValue) values. Together with backing, it defines overall shape of gauge. The [`scaleStartAngle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#scaleStartAngle) and [`scaleEndAngle`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#scaleEndAngle) properties define bounds of arc of the scale. While, the [`scaleSweepDirection`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#scaleSweepDirection) property specifies whether the scale sweeps in clockwise or counter-clockwise direction. You can customize appearance of the scale by setting [`scaleBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#scaleBrush), [`scaleStartExtent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#scaleStartExtent), and [`scaleEndExtent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#scaleEndExtent) properties.
@@ -142,7 +136,6 @@ The scale is visual element that highlights full range of values in the gauge wh
                                                  github-src="gauges/radial-gauge/scale">
 </code-view>
 
-
 ## Labels and Titles
 
 The radial gauge labels are visual elements displaying numeric values at a specified interval between values of the [`minimumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#minimumValue) and [`maximumValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#maximumValue) properties. You can position labels by setting the [`labelExtent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#labelExtent) property to a fraction, where 0 represents center of gauge and 1 represents outer extent of the gauge backing. Also, you can customize labels setting various styling properties such as [`fontBrush`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#fontBrush) and [`font`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#font).
@@ -167,7 +160,6 @@ Each of these labels for the needle have various styling attributes you can appl
                                                  github-src="gauges/radial-gauge/labels">
 </code-view>
 
-
 ## Title & Subtitle
 
 [`titleText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#titleText) and [`subtitleText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#subtitleText) properties are available and can both be used to display custom text for the needle. Alternatively, [`titleDisplaysValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#titleDisplaysValue) and [`subtitleDisplaysValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#subtitleDisplaysValue), when set to true, will let display the needle's value and override [`titleText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#titleText) and [`subtitleText`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#subtitleText). So you can occupy custom text for the title but show the value via the subtitle and vice versa.
@@ -190,7 +182,6 @@ The radial gauge's labels and titles can change it's scaling. To enable this, fi
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/optical-scaling"
                                                  github-src="gauges/radial-gauge/optical-scaling">
 </code-view>
-
 
 ## Tick Marks
 
@@ -218,7 +209,6 @@ Tick marks are thin lines radiating from the center of the radial gauge. There a
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/tickmarks"
                                                  github-src="gauges/radial-gauge/tickmarks">
 </code-view>
-
 
 ## Ranges
 
@@ -248,7 +238,6 @@ A range highlights a set of continuous values bound by a specified [`minimumValu
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/ranges"
                                                  github-src="gauges/radial-gauge/ranges">
 </code-view>
-
 
 ## Needle
 
@@ -285,7 +274,6 @@ You can enable an interactive mode of the gauge (using [`isNeedleDraggingEnabled
                                                  github-src="gauges/radial-gauge/needle">
 </code-view>
 
-
 ## Highlight Needle
 
 The radial gauge can be modified to show a second needle. This will make the main needle's [`value`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#value) appear with a lower opacity. To enable this first set [`highlightValueDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#highlightValueDisplayMode) to Overlay and then apply a [`highlightValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxradialgaugecomponent.html#highlightValue).
@@ -310,7 +298,6 @@ The radial gauge can be modified to show a second needle. This will make the mai
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/highlight-needle"
                                                  github-src="gauges/radial-gauge/highlight-needle">
 </code-view>
-
 
 ## Summary
 

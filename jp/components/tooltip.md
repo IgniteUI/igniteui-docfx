@@ -36,7 +36,7 @@ Ignite UI for Angular については、「[はじめに](general/getting-starte
 // app.module.ts
 
 ...
-import { IgxTooltipModule } from 'igniteui-angular/tooltip';
+import { IgxTooltipModule } from 'igniteui-angular/directives';
 // import { IgxTooltipModule } from '@infragistics/igniteui-angular'; for licensed package
 
 @NgModule({
@@ -51,7 +51,7 @@ export class AppModule {}
 ```typescript
 // home.component.ts
 
-import { IGX_TOOLTIP_DIRECTIVES } from 'igniteui-angular/tooltip';
+import { IGX_TOOLTIP_DIRECTIVES } from 'igniteui-angular/directives';
 import { IgxAvatarComponent } from 'igniteui-angular/avatar';
 // import { IGX_TOOLTIP_DIRECTIVES, IgxAvatarComponent } from '@infragistics/igniteui-angular'; for licensed package
 
@@ -87,7 +87,7 @@ Ignite UI for Angular Tooltip モジュールまたはディレクティブを�
 ```typescript
 // app.module.ts
 
-import { IgxTooltipModule } from 'igniteui-angular/tooltip';
+import { IgxTooltipModule } from 'igniteui-angular/directives';
 import { IgxAvatarModule } from 'igniteui-angular/avatar';
 // import { IgxTooltipModule, IgxAvatarModule } from '@infragistics/igniteui-angular'; for licensed package
 
@@ -161,7 +161,7 @@ avatar をターゲットにして、[`igxTooltipTarget`]({environment:angularAp
 ```typescript
 // app.module.ts
 
-import { IgxTooltipModule } from 'igniteui-angular/tooltip';
+import { IgxTooltipModule } from 'igniteui-angular/directives';
 import { IgxAvatarModule } from 'igniteui-angular/avatar';
 import { IgxIconModule } from 'igniteui-angular/icon';
 // import { IgxTooltipModule, IgxAvatarModule, IgxIconModule } from '@infragistics/igniteui-angular'; for licensed package

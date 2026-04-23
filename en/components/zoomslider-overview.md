@@ -20,21 +20,18 @@ The following sample demonstrates how to use [`IgxZoomSliderComponent`]({environ
                                                  github-src="charts/zoomslider/overview">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Usage
 
-| Feature Name                      | Description                                                                                                                                                                |
-| :-------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Scrollbar navigation              | Users can change scale and scroll through ranges of data using the built-in capabilities of the ZoomSlider scrollbar.                                                      |
-| Panning and zooming               | Users can adjust the display scale by dragging the edges of the thumb pad to either make the current display cover a larger range (zoom out) or a smaller range (zoom in). |
-| Multiple user interaction options | All mouse user interactions are redundantly supported through touch and most of them – through the keyboard. For details, see User Interactions and Usability.             |
-| Touch support                     |  On touch-enabled devices, users can enjoy the full ZoomSlider functionality. All mouse interactions are supported in touch environment.                                   |
-| Extensibility                     | The ZoomSlider control supports DataChart control out-of the box.                                                                                                          |
-| Configurable zoom-range window    | The initial zoom-range window width and position, as well as its minimum size, are configurable.                                                                           |
-
-<!-- Angular, React, WebComponents -->
+| Feature Name        | Description |
+| --------------------|----------------------- |
+| Scrollbar navigation       | Users can change scale and scroll through ranges of data using the built-in capabilities of the ZoomSlider scrollbar. |
+| Panning and zooming       | Users can adjust the display scale by dragging the edges of the thumb pad to either make the current display cover a larger range (zoom out) or a smaller range (zoom in). |
+| Multiple user interaction options       | All mouse user interactions are redundantly supported through touch and most of them – through the keyboard. For details, see User Interactions and Usability. |
+| Touch support       |  On touch-enabled devices, users can enjoy the full ZoomSlider functionality. All mouse interactions are supported in touch environment. |
+| Extensibility       | The ZoomSlider control supports DataChart control out-of the box. |
+| Configurable zoom-range window       | The initial zoom-range window width and position, as well as its minimum size, are configurable. |
 
 ## Dependencies
 
@@ -44,8 +41,6 @@ When installing the Angular chart component, the core package must also be insta
 npm install --save igniteui-angular-core
 npm install --save igniteui-angular-charts
 ```
-
-<!-- end: Angular, React, WebComponents -->
 
 ## Component Modules
 

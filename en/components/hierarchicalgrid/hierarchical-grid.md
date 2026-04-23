@@ -22,8 +22,11 @@ In this angular grid example you can see how users can visualize hierarchical se
 
 ## Getting Started with Ignite UI for Angular Hierarchical Data Grid
 
->[!NOTE]
->**This component can utilize the [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) **optionally**. It can be imported in the root module of the application in order for touch interactions to work as expected.**.
+> [!NOTE]
+> This component can utilize the [`HammerModule`](https://angular.io/api/platform-browser/HammerModule) **optionally**. It can be imported in the root module of the application in order for touch interactions to work as expected.
+
+> [!NOTE]
+> This component uses Material Icons. Add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
 
 To get started with the Ignite UI for Angular Hierarchical Data Grid component, first you need to install Ignite UI for Angular. In an existing Angular application, type the following command:
 
@@ -51,7 +54,7 @@ import { IgxHierarchicalGridModule } from 'igniteui-angular/grids/hierarchical-g
 export class AppModule {}
 ```
 
-Alternatively, as of `16.0.0` you can import the `IgxHierarchicalGridComponent` as a standalone dependency, or use the [`IGX_HIERARCHICAL_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/src/lib/grids/hierarchical-grid/public_api.ts) token to import the component and all of its supporting components and directives.
+Alternatively, as of `16.0.0` you can import the `IgxHierarchicalGridComponent` as a standalone dependency, or use the [`IGX_HIERARCHICAL_GRID_DIRECTIVES`](https://github.com/IgniteUI/igniteui-angular/blob/master/projects/igniteui-angular/grids/hierarchical-grid/src/hierarchical-grid.module.ts) token to import the component and all of its supporting components and directives.
 
 ```typescript
 // home.component.ts
