@@ -2,6 +2,8 @@
 title: Ignite UI for Angular Schematics を使用した作業の開始 | Ignite UI for Angular | インフラジスティックス
 _description: ステップ バイ ステップ モードには、Ignite UI CLI オプションによるガイドが含まれます。
 _keywords: angular cli, ignite ui for angular, infragistics
+last_updated: "2026-04-21"
+_license: MIT
 _language: ja
 ---
 
@@ -173,3 +175,24 @@ ng g @igniteui/angular-schematics:component grid newGrid
 ```cmd
 ng g @igniteui/angular-schematics:start
 ```
+
+## AI アシスタント統合
+
+Ignite UI for Angular Schematics コレクションには、Ignite UI for Angular Agent Skills と Ignite UI MCP サーバーをプロジェクトに一括設定する `ai-config` schematic が含まれています。Ignite UI for Angular パッケージをインストールした後、プロジェクト ルートから実行してください。
+
+```cmd
+ng generate @igniteui/angular-schematics:ai-config
+```
+
+これにより、Ignite UI for Angular Agent Skills が `.claude/skills/` にコピーされ、`@angular/cli`、`igniteui mcp`、`igniteui-theming-mcp` の 3 つの MCP サーバー エントリが `.vscode/mcp.json` に書き込まれます。ファイルが既に存在していて最新の状態であれば、コマンドは何も行いません。
+
+Ignite UI CLI がグローバルにインストールされている場合、同等のコマンドは次のとおりです。
+
+```cmd
+ig ai-config
+```
+
+> [!NOTE]
+> `ig ai-config` コマンドは `igniteui mcp` と `igniteui-theming-mcp` の 2 つの Ignite UI エントリのみを設定し、`@angular/cli` は登録しません。3 つのサーバーをすべて一括設定するには `ng generate @igniteui/angular-schematics:ai-config` を使用してください。
+
+すべての AI クライアントおよび Agent Skills の設定手順の詳細については、[Ignite UI CLI MCP](../../ai/cli-mcp.md) を参照してください。
