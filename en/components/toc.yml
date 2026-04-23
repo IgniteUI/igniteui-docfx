@@ -67,6 +67,9 @@
     - name: Use Standalone Components
       href: general/how-to/how-to-use-standalone-components.md
       updated: false
+    - name: Build App with CLI MCP and Theming MCP
+      href: general/how-to/general-how-to-mcp-e2e.md
+      new: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   sortable: false
