@@ -59,7 +59,7 @@ Now that the spreadsheet module is imported, next is the basic configuration of 
 </igx-spreadsheet>
 ```
 
-> \[!Note]
+> [!Note]
 >
 > In the following code snippet, an external [ExcelUtility](excel-utility.md) class is used to save and load a [`workbook`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html#workbook).
 
