@@ -178,7 +178,7 @@ ng g @igniteui/angular-schematics:start
 
 ## AI アシスタント統合
 
-Ignite UI for Angular Schematics コレクションには、Ignite UI for Angular Agent Skills と Ignite UI MCP サーバーをプロジェクトに一括設定する `ai-config` schematic が含まれています。Ignite UI for Angular パッケージをインストールした後、プロジェクト ルートから実行してください。
+Ignite UI for Angular Schematics コレクションには、Ignite UI for Angular Agent Skills と Ignite UI MCP サーバーをプロジェクトに一括設定する `ai-config` schematic が含まれています。Ignite UI for Angular パッケージをインストールした後、プロジェクト ルートから以下のコマンドを実行してください。
 
 ```cmd
 ng generate @igniteui/angular-schematics:ai-config

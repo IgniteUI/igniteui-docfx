@@ -186,13 +186,15 @@ ig start
 
 ## AI アシスタント統合 (MCP)
 
-Ignite UI CLI には、AI コーディング アシスタント (GitHub Copilot、Claude、Cursor など) をライブの Ignite UI コンポーネント ドキュメントおよび API リファレンスに接続する組み込みの MCP (Model Context Protocol) サーバーが含まれています。設定後、AI アシスタントはコンポーネント API を照会したり、セットアップ ガイドを取得したり、コンテキストを切り替えずに正確な Ignite UI for Angular コードを生成したりできます。
+Ignite UI CLI には、AI コーディング アシスタント (GitHub Copilot、Claude、Cursor など) を最新の Ignite UI コンポーネント ドキュメントおよび API リファレンスに接続する組み込みの MCP (Model Context Protocol) サーバーが含まれています。設定後、AI アシスタントはコンポーネント API を照会したり、セットアップ ガイドを取得したり、コンテキストを切り替えずに正確な Ignite UI for Angular コードを生成したりできます。
 
-`ig new` でプロジェクトを作成した場合、スキャフォールディング時に VS Code MCP 設定が `.vscode/mcp.json` に生成され、Ignite UI for Angular Agent Skills が `.claude/skills/` にコピーされます。これらの一方または両方が欠けている既存のプロジェクトで作業している場合は、プロジェクト ルートから `ig ai-config` を実行して MCP 設定とスキルを一括セットアップしてください。
+`ig new` でプロジェクトを作成した場合、スキャフォールディング時に VS Code MCP 設定が `.vscode/mcp.json` に生成され、Ignite UI for Angular Agent Skills が `.claude/skills/` にコピーされます。これらのファイルのいずれかまたは両方が欠けている既存のプロジェクトで作業している場合は、プロジェクト ルートから `ig ai-config` を実行して MCP 設定とスキルを一括セットアップしてください。
 
 ```cmd
 ig ai-config
-If you want to configure your AI client manually, or use a client other than VS Code, start the MCP server directly:
+```
+
+AI クライアントを手動で設定する場合、または VS Code 以外のクライアントを使用する場合は、以下のコマンドで MCP サーバーを直接起動してください。
 
 ```cmd
 ig mcp
@@ -202,7 +204,7 @@ ig mcp
 
 ## Ignite UI CLI コマンド
 
-使用可能な Ignite UI CLI コマンドとその使用方法 (フラグを渡すなど) の完全なリストは、[Ignite UI CLI wiki ページ](https://github.com/IgniteUI/igniteui-cli/wiki)ページにあります。
+使用可能な Ignite UI CLI コマンドとその使用方法 (フラグを渡すなど) の完全なリストは、[Ignite UI CLI wiki](https://github.com/IgniteUI/igniteui-cli/wiki) にあります。
 
 | コマンド | エイリアス | 説明 |
 | --- | --- | --- |
