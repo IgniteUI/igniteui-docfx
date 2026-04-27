@@ -15,7 +15,7 @@ mentionedTypes: []
 
 # MAKER Framework
 
-MAKER Framework (`@igniteui/maker-mcp`) は、Infragistics が提供するマルチエージェント AI オーケストレーション MCP サーバーです。複数の AI エージェントにわたるコンセンサス ベースの投票アルゴリズムを使用して、複雑なタスクを検証済みで実行可能なステップ プランに分解します。MAKER は、Maximal Agentic decomposition (最大エージェント分解)、first-to-ahead-by-K Error correction (K 先行エラー修正)、Red-flagging (レッド フラグ) の頭文字を取ったものです。このフレームワークは、Cognizant AI Lab による研究論文 _Solving a million-step LLM task with zero errors_ に基づいています。`@igniteui` GitHub Packages レジストリから `npx` 経由で MCP サーバーとして実行され、STDIO トランスポートを通じて任意の MCP 互換 AI クライアントに接続します。接続すると、AI アシスタントは 3 つのツール (`plan`、`execute`、`plan_and_execute`) を呼び出して、自動エラー検出と修正を伴う長期タスクを実行できます。
+MAKER Framework (`@igniteui/maker-mcp`) は、Infragistics が提供するマルチエージェント AI オーケストレーション MCP サーバーです。複数の AI エージェントにわたるコンセンサス ベースの投票アルゴリズムを使用して、複雑なタスクを検証済みで実行可能なステップ プランに分解します。MAKER は、Maximal Agentic decomposition (最大エージェント分解)、first-to-ahead-by-K Error correction (K ステップ先読みエラー修正)、Red-flagging (レッド フラギング) の頭文字を取ったものです。このフレームワークは、Cognizant AI Lab による研究論文 _Solving a million-step LLM task with zero errors_ に基づいています。`@igniteui` GitHub Packages レジストリから `npx` 経由で MCP サーバーとして実行され、STDIO トランスポートを通じて任意の MCP 互換 AI クライアントに接続します。接続すると、AI アシスタントは 3 つのツール (`plan`、`execute`、`plan_and_execute`) を呼び出して、自動エラー検出と修正を伴う長期タスクを実行できます。
 
 MAKER Framework は Ignite UI コンポーネントのスキャフォールディング ツールではありません。Ignite UI プロジェクトの作成、コンポーネント生成、ドキュメント クエリには [CLI MCP サーバー](cli-mcp.md) を使用してください。MAKER はフレームワーク非依存であり、Angular、React、Web Components を特定のターゲットとせず、プロジェクトのソース ファイルを自律的に読み取ったり変更したりしません。少なくとも 1 つの AI プロバイダー API キー (OpenAI、Anthropic、または Google AI) と、`@igniteui` レジストリ用の `read:packages` スコープを持つ GitHub Personal Access Token が必要です。
 
