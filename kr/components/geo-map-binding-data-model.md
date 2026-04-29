@@ -18,7 +18,6 @@ The Ignite UI for Angular map component is designed to display geo-spatial data 
                                                  github-src="maps/geo-map/binding-data-model">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 The following table summarized data structures required for each type of geographic series:

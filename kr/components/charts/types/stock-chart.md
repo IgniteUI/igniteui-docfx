@@ -20,7 +20,6 @@ You can create Stock Chart using the [`IgxFinancialChartComponent`]({environment
                                                  github-src="charts/financial-chart/multiple-data">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Stock Chart Recommendations
@@ -70,7 +69,6 @@ As a Stock Chart is meant to allow the user to perform data analysis functions, 
                                                  github-src="charts/financial-chart/multiple-data">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Stock Chart
@@ -83,7 +81,6 @@ In this example the Stock Chart is representing the S\&P 500 over the course of 
                                                  github-src="charts/financial-chart/stock-index-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Stock Chart Styling
@@ -95,7 +92,6 @@ If you need a Stock Chart with more features such as composite other series, you
                     iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/styling"
                                                  github-src="charts/financial-chart/styling">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -114,7 +110,6 @@ Note: When using the ordinal X axis mode, the CalloutsXMemberPath should point t
                     iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/annotations"
                                                  github-src="charts/financial-chart/annotations">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -157,7 +152,6 @@ In this example, the stock chart is plotting revenue for United States.
                     iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/panes"
                                                  github-src="charts/financial-chart/panes">
 </code-view>
-
 
 <div class="divider--half"></div>
 

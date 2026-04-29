@@ -18,7 +18,6 @@ This topic explains how to perform clipboard operations.
                                                  github-src="excel/spreadsheet/clipboard">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Dependencies

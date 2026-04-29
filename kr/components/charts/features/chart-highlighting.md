@@ -20,7 +20,6 @@ The following example demonstrates the different highlighting options that are a
                                                  github-src="charts/category-chart/annotations-highlighting">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 # Angular Chart Highlighting Modes & Behaviors
@@ -35,7 +34,6 @@ The following example demonstrates the [`highlightingMode`]({environment:dvApiBa
                                                  github-src="charts/category-chart/highlighting-mode">
 </code-view>
 
-
 The following example demonstrates the [`highlightingBehavior`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#highlightingBehavior) Angular chart.
 
 <code-view style="height: 500px" alt="Angular Highlighting Mode Example"
@@ -43,7 +41,6 @@ The following example demonstrates the [`highlightingBehavior`]({environment:dvA
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/highlighting-behavior"
                                                  github-src="charts/category-chart/highlighting-behavior">
 </code-view>
-
 
 # Angular Chart Legend Highlighting
 
@@ -56,7 +53,6 @@ The following example demonstrates the legend series highlighting Angular chart.
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/legend-highlighting"
                                                  github-src="charts/category-chart/legend-highlighting">
 </code-view>
-
 
 ## Highlight Layers
 
@@ -75,7 +71,6 @@ The following example demonstrates the different highlighting layers that are av
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/column-chart-with-highlighting"
                                                  github-src="charts/category-chart/column-chart-with-highlighting">
 </code-view>
-
 
 ## Additional Resources
 

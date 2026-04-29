@@ -18,7 +18,6 @@ Use the map component's [`IgxGeographicScatterAreaSeriesComponent`]({environment
                                                  github-src="maps/geo-map/type-scatter-area-series">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 The [`IgxGeographicScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicscatterareaseriescomponent.html) works a lot like the [`IgxGeographicContourLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographiccontourlineseriescomponent.html) except that it represents data as interpolated and colored surface instead of contour lines connecting data points with the same values.
