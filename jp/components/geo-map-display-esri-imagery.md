@@ -19,7 +19,6 @@ _language: ja
                                                  github-src="maps/geo-map/display-esri-imagery">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## コード スニペット

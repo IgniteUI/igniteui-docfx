@@ -19,7 +19,6 @@ Angular マップ コンポーネントでは、[`IgxGeographicScatterAreaSeries
                                                  github-src="maps/geo-map/type-scatter-area-series">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 [`IgxGeographicScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicscatterareaseriescomponent.html) は [`IgxGeographicContourLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographiccontourlineseriescomponent.html) と同様ですが、同じ値を持つデータポイントを接続する等線の置換に補完で色つきサーフェス エリアとしてデータを表します。

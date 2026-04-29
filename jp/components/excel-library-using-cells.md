@@ -19,7 +19,6 @@ Excel ワークシートの [`WorksheetCell`]({environment:dvApiBaseUrl}/product
                                                  github-src="excel/excel-library/working-with-cells">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## 参照

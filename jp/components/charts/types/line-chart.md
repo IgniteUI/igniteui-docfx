@@ -22,7 +22,6 @@ Ignite UI for Angular 折れ線チャート (または折れ線グラフ) は、
                                                  github-src="charts/category-chart/line-chart-multiple-sources">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## 折れ線チャートの推奨事項
@@ -82,7 +81,6 @@ Ignite UI for Angular 折れ線チャート (または折れ線グラフ) は、
                                                  github-src="charts/category-chart/line-chart-single-source">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## 複数シリーズの Angular 折れ線チャート
@@ -96,7 +94,6 @@ Angular 折れ線チャートを使用すると、複数のシリーズを組み
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/line-chart-multiple-sources"
                                                  github-src="charts/category-chart/line-chart-multiple-sources">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -114,7 +111,6 @@ Angular 折れ線チャートは、次のデモに示すように、数百万に
                                                  github-src="charts/category-chart/high-frequency">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular 折れ線チャートのスタイル設定
@@ -129,7 +125,6 @@ Angular 折れ線チャートは、次のデモに示すように、数百万に
                                                  github-src="charts/category-chart/line-chart-styling">
 </code-view>
 
-
 [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) を使用し、系列に [`dashArray`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriescomponent.html#dashArray) プロパティを設定することで、[`IgxLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxlineseriescomponent.html) 内に破線を作成することもできます。このプロパティは、線の結果として得られるダッシュの長さを表す数値の配列を受け取ります。
 
 次の例は、[`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) の [`IgxLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxlineseriescomponent.html) での [`dashArray`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriescomponent.html#dashArray) の使用法を示しています。
@@ -139,7 +134,6 @@ Angular 折れ線チャートは、次のデモに示すように、数百万に
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/dash-array-series"
                                                  github-src="charts/data-chart/dash-array-series">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -157,7 +151,6 @@ Angular 折れ線チャートは、次のデモに示すように、数百万に
                                                  github-src="charts/data-chart/stacked-line-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular 積層型 100% 折れ線チャート
@@ -171,7 +164,6 @@ Angular 折れ線チャートは、次のデモに示すように、数百万に
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-line-chart"
                                                  github-src="charts/data-chart/stacked-100-line-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -187,7 +179,6 @@ Angular 折れ線チャートは、次のデモに示すように、数百万に
                                                  github-src="charts/data-chart/radial-line-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular 極座標型折れ線チャート
@@ -201,7 +192,6 @@ Angular 折れ線チャートは、次のデモに示すように、数百万に
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/polar-line-chart"
                                                  github-src="charts/data-chart/polar-line-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 

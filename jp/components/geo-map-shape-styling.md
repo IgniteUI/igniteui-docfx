@@ -19,7 +19,6 @@ _language: ja
                                                  github-src="maps/geo-map/shape-styling">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## 必要なインポート

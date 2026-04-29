@@ -19,7 +19,6 @@ Angular Spreadsheet コンポーネントは、スプレッドシートのさま
                                                  github-src="excel/spreadsheet/commands">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## 依存関係

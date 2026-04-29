@@ -22,7 +22,6 @@ Ignite UI for Angular データ円チャートは、データ セットのカテ
                                                  github-src="charts/data-pie-chart/overview">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular データ円チャートの推奨事項
@@ -74,7 +73,6 @@ ItemLegend バッジを変更することもできます。デフォルトでは
                                                  github-src="charts/data-pie-chart/legend">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular 円チャートの Others (その他) カテゴリ
@@ -114,7 +112,6 @@ ItemLegend バッジを変更することもできます。デフォルトでは
                                                  github-src="charts/data-pie-chart/others">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular データ円チャートの選択
@@ -147,7 +144,6 @@ ItemLegend バッジを変更することもできます。デフォルトでは
                                                  github-src="charts/data-pie-chart/selection">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular データ円チャートのハイライト表示
@@ -177,7 +173,6 @@ ItemLegend バッジを変更することもできます。デフォルトでは
                                                  github-src="charts/data-pie-chart/highlighting">
 </code-view>
 
-
 マウスのハイライト表示に加えて、[`IgxDataPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiechartcomponent.html) はデータのサブセットを表示できるハイライト表示フィルター機能を公開します。これは、コントロールの `HighlightedDataSource` を指定し、[`highlightedValuesDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#highlightedValuesDisplayMode) プロパティを `Overlay` に設定することによって適用されます。`HighlightedDataSource` は、[`IgxDataPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiechartcomponent.html) の `DataSource` プロパティに割り当てられたデータのサブセットを想定しています。
 
 これらの条件が満たされると、サブセットの値がハイライト表示され、データの全セットの残りの部分はフェードアウトされます。これにより、サブセットが効果的にハイライトされ、同じコントロール内でデータのサブセットをより簡単に視覚化できるようになります。
@@ -189,7 +184,6 @@ ItemLegend バッジを変更することもできます。デフォルトでは
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-pie-chart/highlight-filter"
                                                  github-src="charts/data-pie-chart/highlight-filter">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -208,7 +202,6 @@ ItemLegend バッジを変更することもできます。デフォルトでは
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-pie-chart/animation-replay"
                                                  github-src="charts/data-pie-chart/animation-replay">
 </code-view>
-
 
 <div class="divider--half"></div>
 

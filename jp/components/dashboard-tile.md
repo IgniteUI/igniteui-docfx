@@ -23,7 +23,6 @@ Angular Dashboard Tile は、データ ソース コレクション/配列また
                                                  github-src="charts/dashboard-tile/local-data-source-dashboard">
 </code-view>
 
-
 ## 依存関係
 
 Ignite UI for Angular ツールセットに次のパッケージをインストールします:
@@ -82,7 +81,6 @@ export class AppModule {}
                                                  github-src="charts/dashboard-tile/gauge-dashboard">
 </code-view>
 
-
 視覚化または視覚化のプロパティも、コントロールの上部にある [`IgxToolbarComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html) を使用して構成できます。この [`IgxToolbarComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html) には、現在の視覚化の既定のツールに加えて、以下で強調表示されている 4 つの Dashboard Tile 固有のツールが含まれています。
 
 <img src="../images/dashboard-tile-toolbar.png" alt="Dashboard Tile Toolbar"/>
@@ -102,7 +100,6 @@ export class AppModule {}
                                                  github-src="charts/dashboard-tile/pie-dashboard">
 </code-view>
 
-
 このデモでは、ダッシュボード タイルと Angular 地理マップの統合を示します。右上のツールバー オプションを使用すると、スタイル設定やデータ視覚化の変更にアクセスできます。
 
 <code-view style="height: 600px" alt="Angular Dashboard Tile Map の例"
@@ -110,7 +107,6 @@ export class AppModule {}
                     iframe-src="{environment:dvDemosBaseUrl}/charts/dashboard-tile/map-dashboard"
                                                  github-src="charts/dashboard-tile/map-dashboard">
 </code-view>
-
 
 ## API リファレンス
 

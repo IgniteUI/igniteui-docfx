@@ -19,7 +19,6 @@ Angular Spreadsheet コンポーネントは、Excel ワークブックに既存
                                                  github-src="excel/spreadsheet/hyperlinks">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## ハイパーリンク概要

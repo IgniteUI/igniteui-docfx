@@ -24,7 +24,6 @@ _language: ja
                                                  github-src="charts/category-chart/line-chart-with-animations">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## その他のリソース

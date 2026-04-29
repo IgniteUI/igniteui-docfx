@@ -24,7 +24,6 @@ Angular 散布ポリゴン チャートは、[`IgxDataChartComponent`]({environm
                                                  github-src="charts/data-chart/type-scatter-polygon-series">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular 散布ポリライン チャート
@@ -38,7 +37,6 @@ Angular 散布ポリライン チャートは、[`IgxDataChartComponent`]({envir
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/type-scatter-polyline-series"
                                                  github-src="charts/data-chart/type-scatter-polyline-series">
 </code-view>
-
 
 <div class="divider--half"></div>
 
