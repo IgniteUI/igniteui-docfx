@@ -19,7 +19,6 @@ Angular Spreadsheet コンポーネントは、ワークシートのセルに条
                                                  github-src="excel/spreadsheet/conditional-formatting">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## 条件付き書式設定の概要

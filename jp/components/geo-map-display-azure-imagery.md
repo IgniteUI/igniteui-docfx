@@ -24,7 +24,6 @@ Angular [`IgxAzureMapsImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-an
                                                  github-src="maps/geo-map/display-azure-imagery">
 </code-view>
 
-
 ## Angular Azure Maps からの画像の表示 - コード例
 
 以下のコード スニペットは、[`IgxAzureMapsImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxazuremapsimagery.html) クラスを使用して Angular [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicmapcomponent.html) で Azure Maps からの地理的画像タイルを表示する方法を示します。

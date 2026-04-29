@@ -20,7 +20,6 @@ Angular [`IgxOpenStreetMapImagery`]({environment:dvApiBaseUrl}/products/ignite-u
                                                  github-src="maps/geo-map/display-osm-imagery">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## コード スニペット

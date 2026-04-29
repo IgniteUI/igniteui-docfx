@@ -35,7 +35,6 @@ Ignite UI for Angular カテゴリ チャートは、[`IgxCategoryXAxisComponent
                                                  github-src="charts/data-chart/stacked-column-chart">
 </code-view>
 
-
 ### カテゴリ Y 軸
 
 [`IgxCategoryYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategoryyaxiscomponent.html) は、上記の [`IgxCategoryXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategoryxaxiscomponent.html) と非常によく似た働きをしますが、水平ではなく垂直に配置されます。また、この軸では、データをプロットするために `DataSource` と [`label`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxaxiscomponent.html#label) を提供する必要があります。[`IgxCategoryYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategoryyaxiscomponent.html) は通常 [`IgxNumericXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxnumericxaxiscomponent.html)  と組み合わせて次のタイプのシリーズをプロットするために使用されます。
@@ -51,7 +50,6 @@ Ignite UI for Angular カテゴリ チャートは、[`IgxCategoryXAxisComponent
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/bar-chart-multiple-sources"
                                                  github-src="charts/data-chart/bar-chart-multiple-sources">
 </code-view>
-
 
 ### 数値 X 軸
 
@@ -80,7 +78,6 @@ Ignite UI for Angular カテゴリ チャートは、[`IgxCategoryXAxisComponent
                                                  github-src="charts/data-chart/type-scatter-hd-series">
 </code-view>
 
-
 ### 数値 Y 軸
 
 [`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxnumericyaxiscomponent.html) は、そのデータを連続的に変化する数値データ項目として扱います。この軸のラベルは、Y 軸に沿って垂直に配置されます。[`IgxNumericYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxnumericyaxiscomponent.html) ラベルの位置は、[`IgxNumericXAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxnumericxaxiscomponent.html) と組み合わせた場合にサポートされるさまざまな [ScatterSeries](../types/scatter-chart.md) (散布シリーズ) の `YMemberPath` プロパティに依存します。または、[`IgxCategoryYAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategoryyaxiscomponent.html) と組み合わせた場合、これらのラベルは、上記の表に記載されているカテゴリまたは積層シリーズの `ValueMemberPath` に対応して配置されます。財務シリーズのいずれかを使用している場合、Open/High/Low/Close のパスと使用しているシリーズ タイプに対応して配置されます。
@@ -98,7 +95,6 @@ Ignite UI for Angular カテゴリ チャートは、[`IgxCategoryXAxisComponent
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/scatter-line-chart"
                                                  github-src="charts/data-chart/scatter-line-chart">
 </code-view>
-
 
 ### 時間 X 軸
 
@@ -142,7 +138,6 @@ Ignite UI for Angular カテゴリ チャートは、[`IgxCategoryXAxisComponent
                                                  github-src="charts/data-chart/radial-area-chart">
 </code-view>
 
-
 ### 比例カテゴリ角度軸
 
 [`IgxProportionalCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxproportionalcategoryangleaxiscomponent.html) は、そのデータを一連のカテゴリ データ項目として扱います。この軸のラベルは、シーケンス内の位置に応じて円の端に沿って配置されます。この軸の種類では、数字、文字列などのほぼすべてのデータのタイプを表示できます。
@@ -156,7 +151,6 @@ Ignite UI for Angular カテゴリ チャートは、[`IgxCategoryXAxisComponent
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-proportional-category-angle-axis"
                                                  github-src="charts/data-chart/radial-proportional-category-angle-axis">
 </code-view>
-
 
 ### 数字角度軸
 
@@ -172,7 +166,6 @@ Ignite UI for Angular カテゴリ チャートは、[`IgxCategoryXAxisComponent
                                                  github-src="charts/data-chart/polar-scatter-chart">
 </code-view>
 
-
 ### 数字半径軸
 
 [`IgxNumericRadiusAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxnumericradiusaxiscomponent.html) は、データを連続的に変化する数値データ項目として扱います。この軸のラベルは、円形プロットの周りに配置されます。ラベルの位置は、対応する極座標シリーズの `AngleMemberPath` プロパティを使用してマップされたデータ列の値によって異なります。
@@ -186,7 +179,6 @@ Ignite UI for Angular カテゴリ チャートは、[`IgxCategoryXAxisComponent
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/polar-line-chart"
                                                  github-src="charts/data-chart/polar-line-chart">
 </code-view>
-
 
 ## その他のリソース
 

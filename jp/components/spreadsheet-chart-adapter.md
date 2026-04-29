@@ -19,7 +19,6 @@ Angular Spreadsheet コンポーネントを使用して [`IgxSpreadsheetCompone
                                                  github-src="excel/spreadsheet/adapter-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## チャート アダプターの概要

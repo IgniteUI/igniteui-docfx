@@ -19,7 +19,6 @@ Angular Spreadsheet コンポーネントは、コントロールで現在アク
                                                  github-src="excel/spreadsheet/activation">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## アクティベーションの概要

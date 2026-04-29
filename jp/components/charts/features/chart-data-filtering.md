@@ -28,7 +28,6 @@ _language: ja
                                                  github-src="charts/category-chart/data-filter">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 [`initialFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#initialFilter) プロパティは、適切にフィルター処理するために次の構文を必要とする文字列です。値には、フィルターするレコードに関連付したフィルター式の定義、列と値の両方を含む括弧のセットが必要です。

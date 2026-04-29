@@ -22,7 +22,6 @@ Ignite UI for Angular ステップ チャートは連続する垂直線と水平
                                                  github-src="charts/category-chart/step-area-multiple-sources">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular ステップ折れ線チャート
@@ -37,7 +36,6 @@ Angular ステップ折れ線チャートは、線の下の領域が塗りつぶ
                                                  github-src="charts/category-chart/step-line-multiple-sources">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular ステップ チャートのスタイル設定
@@ -49,7 +47,6 @@ Angular ステップ折れ線チャートは、線の下の領域が塗りつぶ
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/step-line-styling"
                                                  github-src="charts/category-chart/step-line-styling">
 </code-view>
-
 
 <div class="divider--half"></div>
 

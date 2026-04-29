@@ -26,7 +26,6 @@ _language: ja
                                                  github-src="charts/category-chart/axis-locations">
 </code-view>
 
-
 <!-- ## 軸方向の例
 
 TODO add info/example of 4 charts with all possible combinations of XAxisInverted and YAxisInverted
@@ -49,7 +48,6 @@ Angular [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-
                                                  github-src="charts/data-chart/axis-sharing">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ### 軸交差の例
@@ -63,7 +61,6 @@ Angular [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/axis-crossing"
                                                  github-src="charts/data-chart/axis-crossing">
 </code-view>
-
 
 <div class="divider--half"></div>
 

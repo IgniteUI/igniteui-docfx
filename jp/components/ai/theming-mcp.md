@@ -343,7 +343,6 @@ ng add igniteui-angular
 
 - [Ignite UI for Angular スキル](./skills.md)
 
-
 <!-- Ideally these should be included once documentation is combined
 - [Theming Overview](../themes/index.md)
 - [Palettes](../themes/palettes.md)
@@ -357,7 +356,6 @@ ng add igniteui-angular
 <div class="divider--half"></div>
 
 コミュニティは常に活気があり、新しいアイデアを歓迎しています。
-
 
 - [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 - [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

@@ -19,7 +19,6 @@ Angular マップ コンポーネントでは、[`IgxGeographicShapeSeriesCompon
                                                  github-src="maps/geo-map/type-shape-polygon-series">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicshapeseriescomponent.html) は、地理空間データがポリラインではなくポリゴンでレンダリングされる以外、[`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicpolylineseriescomponent.html) とほとんど同じです。

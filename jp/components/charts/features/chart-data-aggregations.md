@@ -24,7 +24,6 @@ Ignite UI for Angular [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/p
                                                  github-src="charts/category-chart/data-aggregations">
 </code-view>
 
-
 ```html
 <igx-category-chart
     [dataSource]="salesData"

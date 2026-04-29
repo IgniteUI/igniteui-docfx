@@ -19,7 +19,6 @@ mentionedTypes: ["Spreadsheet"]
                                                  github-src="excel/spreadsheet/data-validation">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## 依存関係

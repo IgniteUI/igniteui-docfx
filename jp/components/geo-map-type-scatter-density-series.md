@@ -19,7 +19,6 @@ Angular マップ コンポーネントでは、[`IgxGeographicHighDensityScatte
                                                  github-src="maps/geo-map/type-scatter-density-series">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 上記のサンプルは、オーストラリアの人口密度を表す何百、何千ものデータ ポイントにバインドされた [`IgxGeographicHighDensityScatterSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographichighdensityscatterseriescomponent.html) シリーズをマップ コンポーネントで示しています。大量のデータ ポイントを含むマップのプロット領域は凝縮された赤色のピクセルによって表します。少量のデータ ポイントを含む領域は青色のピクセルによって表します。

@@ -19,7 +19,6 @@ Angular マップ コンポーネントでは、[`IgxGeographicProportionalSymbo
                                                  github-src="maps/geo-map/type-scatter-bubble-series">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 上記のデモは、[`IgxGeographicProportionalSymbolSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicproportionalsymbolseriescomponent.html) シリーズと、シリーズのデータ​​バインディングオプションを指定する方法を示しています。予定表連動マーカー選択は、マーカー競合回避ロジックと合わせて構成され、マーカー アウトラインと塗りつぶしの色も指定されます。

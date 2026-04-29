@@ -20,7 +20,6 @@ Ignite UI for Angular Map マップは、さまざまな種類のファイルか
                                                  github-src="maps/geo-map/binding-data-json-points">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## データ例

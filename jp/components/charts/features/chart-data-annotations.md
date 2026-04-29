@@ -23,7 +23,6 @@ Angular チャートでは、データ注釈レイヤーを使用して、デー
                                                  github-src="charts/data-chart/data-annotation-multiple-with-stocks">
 </code-view>
 
-
 このサンプルが気に入りましたか? 完全な Angular ツールキットにアクセスして、すばやく独自のアプリの作成を開始します。<a href="{environment:infragisticsBaseUrl}/products/ignite-ui-angular/download">無料でダウンロードできます。</a>
 
 ## Angular データ注釈スライス レイヤーの例
@@ -37,7 +36,6 @@ Angular では、DataAnnotationSliceLayer は、[`IgxDataChartComponent`]({envir
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/data-annotation-slice-layer"
                                                  github-src="charts/data-chart/data-annotation-slice-layer">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -53,7 +51,6 @@ Angular では、[`IgxDataAnnotationStripLayerComponent`]({environment:dvApiBase
                                                  github-src="charts/data-chart/data-annotation-strip-layer">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular データ注釈ライン レイヤーの例
@@ -67,7 +64,6 @@ Angular では、[`IgxDataAnnotationLineLayerComponent`]({environment:dvApiBaseU
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/data-annotation-line-layer"
                                                  github-src="charts/data-chart/data-annotation-line-layer">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -83,7 +79,6 @@ Angular では、[`IgxDataAnnotationRectLayerComponent`]({environment:dvApiBaseU
                                                  github-src="charts/data-chart/data-annotation-rect-layer">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular データ注釈バンド レイヤーの例
@@ -97,7 +92,6 @@ Angular では、[`IgxDataAnnotationBandLayerComponent`]({environment:dvApiBaseU
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/data-annotation-band-layer"
                                                  github-src="charts/data-chart/data-annotation-band-layer">
 </code-view>
-
 
 <div class="divider--half"></div>
 
