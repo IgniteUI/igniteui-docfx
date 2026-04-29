@@ -27,7 +27,6 @@ This example shows how configure the axis gridline to display major and minor gr
                                                  github-src="charts/category-chart/axis-gridlines">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Axis Gridlines Properties
@@ -63,7 +62,6 @@ The following example demonstrates how to customize the gridlines by setting the
                                                  github-src="charts/category-chart/axis-gridlines">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Axis Tickmarks Example
@@ -79,7 +77,6 @@ The following example demonstrates how to customize the tickmarks by setting the
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/axis-tickmarks"
                                                  github-src="charts/category-chart/axis-tickmarks">
 </code-view>
-
 
 <div class="divider--half"></div>
 

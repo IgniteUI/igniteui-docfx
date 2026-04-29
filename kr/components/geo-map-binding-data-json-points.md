@@ -18,7 +18,6 @@ With [`IgxGeographicMapComponent`]({environment:dvApiBaseUrl}/products/ignite-ui
                                                  github-src="maps/geo-map/binding-data-json-points">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Data Example

@@ -18,7 +18,6 @@ With the Ignite UI for Angular map component, you can plot geographic data loade
                                                  github-src="maps/geo-map/binding-data-csv">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Data Example

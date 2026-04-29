@@ -25,7 +25,6 @@ The following example shows the average maximum temperature in Celsius in New Yo
                                                  github-src="charts/category-chart/axis-gap">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Axis Overlap Example
@@ -40,7 +39,6 @@ The following example shows a comparison of the highest grossing worldwide film 
                                                  github-src="charts/category-chart/axis-overlap">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Axis Locations Example
@@ -54,7 +52,6 @@ The following example depicts the amount of renewable electricity produced since
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/axis-locations"
                                                  github-src="charts/category-chart/axis-locations">
 </code-view>
-
 
 <!-- ## Axis Orientation Example
 
@@ -78,7 +75,6 @@ The following example depicts a stock price and trade volume chart with a [Stock
                                                  github-src="charts/data-chart/axis-sharing">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Axis Crossing Example
@@ -92,7 +88,6 @@ The following example shows a Sin and Cos wave represented by a [Scatter Spline 
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/axis-crossing"
                                                  github-src="charts/data-chart/axis-crossing">
 </code-view>
-
 
 <div class="divider--half"></div>
 

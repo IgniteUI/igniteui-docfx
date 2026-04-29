@@ -20,7 +20,6 @@ The following example demonstrates the annotation layers that are available on t
                                                  github-src="charts/category-chart/line-chart-with-annotations">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a href="{environment:infragisticsBaseUrl}/products/ignite-ui-angular/download">Download it for free.</a>
@@ -49,7 +48,6 @@ The following example shows how to configure the crosshair layer but targeting a
                                                  github-src="charts/data-chart/crosshair-layer-styling">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Final Value Layer
@@ -71,7 +69,6 @@ The following example demonstrates how to style the final value layer annotation
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/final-value-layer-styling"
                                                  github-src="charts/data-chart/final-value-layer-styling">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -105,7 +102,6 @@ The following example demonstrates how to style the callout layer annotations by
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/callout-layer-styling"
                                                  github-src="charts/data-chart/callout-layer-styling">
 </code-view>
-
 
 <div class="divider--half"></div>
 

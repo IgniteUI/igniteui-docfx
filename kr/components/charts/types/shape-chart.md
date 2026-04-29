@@ -22,7 +22,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                                                  github-src="charts/data-chart/type-scatter-polygon-series">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Scatter Polyline Chart
@@ -36,7 +35,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/type-scatter-polyline-series"
                                                  github-src="charts/data-chart/type-scatter-polyline-series">
 </code-view>
-
 
 <div class="divider--half"></div>
 

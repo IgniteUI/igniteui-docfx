@@ -20,7 +20,6 @@ The following example, you can use the drop-down to switch between all of the di
                                                  github-src="charts/data-chart/stacked-chart-types">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 The following sections demonstrate individual types of Ignite UI for Angular Stacked Charts.
@@ -37,7 +36,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                                                  github-src="charts/data-chart/stacked-area-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Stacked 100 Area Chart
@@ -51,7 +49,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-area-chart"
                                                  github-src="charts/data-chart/stacked-100-area-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -69,7 +66,6 @@ In this example of an Stacked Bar Chart, we have a Numeric X Axis (bottom labels
                                                  github-src="charts/data-chart/stacked-bar-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Stacked 100% Bar Chart
@@ -83,7 +79,6 @@ In this example of a Stacked 100% Bar Chart, the Energy Product values are shown
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-bar-chart"
                                                  github-src="charts/data-chart/stacked-100-bar-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -99,7 +94,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                                                  github-src="charts/data-chart/stacked-column-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Stacked 100% Column Chart
@@ -114,7 +108,6 @@ The example below shows a study made for online shopping traffic by departments 
                                                  github-src="charts/data-chart/stacked-100-column-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Stacked Line Chart
@@ -126,7 +119,6 @@ The Stacked Line Chart is often used to show the change of value over time such 
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-line-chart"
                                                  github-src="charts/data-chart/stacked-line-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -142,7 +134,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                                                  github-src="charts/data-chart/stacked-100-line-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Stacked Spline Area Chart
@@ -156,7 +147,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-spline-area-chart"
                                                  github-src="charts/data-chart/stacked-spline-area-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -172,7 +162,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                                                  github-src="charts/data-chart/stacked-100-spline-area-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Stacked Spline Chart
@@ -184,7 +173,6 @@ The Stacked Spline Chart is often used to show the change of value over time suc
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-spline-chart"
                                                  github-src="charts/data-chart/stacked-spline-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -199,7 +187,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-spline-chart"
                                                  github-src="charts/data-chart/stacked-100-spline-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 

@@ -22,7 +22,6 @@ The following example depicts a [Line Chart](../types/line-chart.md) with an ani
                                                  github-src="charts/category-chart/line-chart-with-animations">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Additional Resources

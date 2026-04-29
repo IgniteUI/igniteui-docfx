@@ -22,7 +22,6 @@ You can create Angular Category Area Chart in the [`IgxCategoryChartComponent`](
                                                  github-src="charts/category-chart/area-chart-multiple-sources">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Area Chart Recommendations
@@ -67,7 +66,6 @@ Angular Area Chart is often used to show the change of value over time such as t
                                                  github-src="charts/category-chart/area-chart-single-source">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Area Chart with Multiple Series
@@ -80,7 +78,6 @@ Similarly to how you can show multiple [Line Chart](line-chart.md) and [Spline C
                                                  github-src="charts/category-chart/area-chart-multiple-sources">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Area Chart Styling
@@ -92,7 +89,6 @@ Area charts often have semi-transparent fill for their areas, thicker li
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/area-chart-styling"
                                                  github-src="charts/category-chart/area-chart-styling">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -110,7 +106,6 @@ The Angular Step Area Chart belongs to a group of category charts and it is rend
                                                  github-src="charts/category-chart/step-area-multiple-sources">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Advanced Types of Area Charts
@@ -127,7 +122,6 @@ The Angular Range Area Chart allows you show the area as a range between two v
                                                  github-src="charts/data-chart/range-area-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Stacked Area Chart
@@ -139,7 +133,6 @@ The Angular Stacked Area Chars is rendered using a collection of points connecte
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-area-chart"
                                                  github-src="charts/data-chart/stacked-area-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -153,7 +146,6 @@ The Angular Stacked 100% Area Chart allows you represent your data as part of a 
                                                  github-src="charts/data-chart/stacked-100-area-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Stacked Spline Area Chart
@@ -165,7 +157,6 @@ The Angular Stacked Spline Area Chart is rendered using a collection of points c
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-spline-area-chart"
                                                  github-src="charts/data-chart/stacked-spline-area-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -179,7 +170,6 @@ The Angular Stacked 100% Spline Area Chart is identical to the Stacked Spline Ar
                                                  github-src="charts/data-chart/stacked-100-spline-area-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Radial Area Chart
@@ -191,7 +181,6 @@ The Angular Radial Area Chart belongs to a group of [Radial Chart](radial-chart.
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-area-chart"
                                                  github-src="charts/data-chart/radial-area-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -205,7 +194,6 @@ The Angular Polar Area Chart belongs to a group of [Polar Chart](polar-chart.md)
                                                  github-src="charts/data-chart/polar-area-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Polar Spline Area Chart
@@ -217,7 +205,6 @@ The Angular Polar Spline Area Chart belongs to a group of [Polar Chart](polar-ch
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/polar-spline-area-chart"
                                                  github-src="charts/data-chart/polar-spline-area-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 

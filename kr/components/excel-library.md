@@ -18,7 +18,6 @@ The Infragistics Excel Library allows you to work with spreadsheet data using fa
                                                  github-src="excel/excel-library/overview">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Dependencies
