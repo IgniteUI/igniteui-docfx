@@ -18,7 +18,6 @@ The [`WorksheetCell`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/
                                                  github-src="excel/excel-library/working-with-cells">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## References

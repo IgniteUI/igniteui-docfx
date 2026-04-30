@@ -21,7 +21,6 @@ The following example shows all the different types of [`Sparkline`]({environmen
                                                  github-src="charts/sparkline/display-types">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a href="{environment:infragisticsBaseUrl}/products/ignite-ui-angular/download">Download it for free.</a>
@@ -71,7 +70,6 @@ The Angular Sparkline supports the following types of sparklines by setting the 
                                                  github-src="charts/sparkline/display-types">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Markers
@@ -95,7 +93,6 @@ All of the markers mentioned above can be customized using the related marker ty
                                                  github-src="charts/sparkline/markers">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Normal Range
@@ -118,7 +115,6 @@ You can also configure whether to show the normal range in front of or behind th
                                                  github-src="charts/sparkline/normal-range">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Trendlines
@@ -137,7 +133,6 @@ The sample below shows all the available trendlines via the dropdown:
                                                  github-src="charts/sparkline/trendlines">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Unknown Value Interpolation
@@ -152,7 +147,6 @@ To plot the unknown values, you can set the [`unknownValuePlotting`]({environm
                                                  github-src="charts/sparkline/unknown-values">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Sparkline in Data Grid
@@ -164,7 +158,6 @@ You can embed the Angular Sparkline in a template column of data grid or other U
                     iframe-src="{environment:dvDemosBaseUrl}/charts/sparkline/grid"
                                                  github-src="charts/sparkline/grid">
 </code-view>
-
 
 ## Additional Resources
 

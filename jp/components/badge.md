@@ -142,6 +142,31 @@ igx-badge {
 }
 ```
 
+### バッジの値とアイコン
+
+バッジ内にテキストまたは数値カウントを表示するには、`[value]` 入力を使用します。コンテンツを直接埋め込む方法よりも、この方法が推奨されます。
+
+```html
+<!-- 推奨 -->
+<igx-badge [value]="model.value"></igx-badge>
+
+<!-- 非推奨 -->
+<igx-badge>{{ model.value }}</igx-badge>
+```
+
+`[icon]` と `[value]` の両方が設定されている場合、バッジは両方を同時に表示します。
+
+```html
+<!-- アイコン "check" と値 "5" の両方が表示されます -->
+<igx-badge icon="check" value="5" type="success"></igx-badge>
+```
+
+アイコンなしで数値のみを表示するには、`[icon]` を設定しないようにしてください。
+
+```html
+<igx-badge [value]="unreadCount" type="info"></igx-badge>
+```
+
 ### バッジのアイコン
 
 `igx-badge` コンポーネントは、マテリアル アイコンに加えて[マテリアル アイコン拡張](../components/material-icons-extended.md)およびその他のカスタム アイコン セットの使用もサポートしています。マテリアル アイコン拡張セットからバッジ コンポーネントにアイコンを追加するには、まずそのアイコンを登録する必要があります。
@@ -199,7 +224,7 @@ export class AppModule {}
 ```
 
 >[!NOTE]
->[`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) には、バッジの外観を構成するための [`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) および [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) 入力があります。公式の[マテリアル アイコン セット](https://material.io/icons/)から名前を指定して、アイコンを設定できます。バッジタイプは、[`default`]({environment:angularApiUrl}/enums/type.html#default)、[`info`]({environment:angularApiUrl}/enums/type.html#info)、[`success`]({environment:angularApiUrl}/enums/type.html#success)、[`warning`]({environment:angularApiUrl}/enums/type.html#warning)、または [`error`]({environment:angularApiUrl}/enums/type.html#error) のいずれかに設定できます。その型により、特定の背景の色が適用されます。
+>[`igx-badge`]({environment:angularApiUrl}/classes/igxbadgecomponent.html) には、バッジの外観を構成するための [`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon)、[`value`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#value)、および [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) 入力があります。公式の[マテリアル アイコン セット](https://material.io/icons/)から名前を指定して、アイコンを設定できます。バッジタイプは、[`default`]({environment:angularApiUrl}/enums/type.html#default)、[`info`]({environment:angularApiUrl}/enums/type.html#info)、[`success`]({environment:angularApiUrl}/enums/type.html#success)、[`warning`]({environment:angularApiUrl}/enums/type.html#warning)、または [`error`]({environment:angularApiUrl}/enums/type.html#error) のいずれかに設定できます。その型により、特定の背景の色が適用されます。
 
 サンプルでは、[`icon`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#icon) と [`type`]({environment:angularApiUrl}/classes/igxbadgecomponent.html#type) が icon と type という名前のモデルプロパティにバインドされています。
 

@@ -25,7 +25,6 @@ The following sample depicts a [`IgxFinancialChartComponent`]({environment:dvApi
                                                  github-src="charts/financial-chart/trendlines">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Chart Trendlines Dash Array Example
@@ -37,7 +36,6 @@ The following sample depicts a [`IgxDataChartComponent`]({environment:dvApiBaseU
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/dash-array-trendline"
                                                  github-src="charts/data-chart/dash-array-trendline">
 </code-view>
-
 
 <div class="divider--half"></div>
 
