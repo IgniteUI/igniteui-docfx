@@ -126,6 +126,9 @@ igx-avatar {
 </igx-avatar>
 ```
 
+> [!NOTE]
+> このコンポーネントはマテリアル アイコンを使用します。`index.html` に次のリンクを追加してください: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 ここまでの内容が正しければ、以下のように表示されます。
 
 <div class="sample-container loading" style="height:100px">

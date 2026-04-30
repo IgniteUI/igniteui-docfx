@@ -18,7 +18,6 @@ The Infragistics Angular Excel Engine enables you to save data to and load data 
                                                  github-src="excel/excel-library/operations-on-workbooks">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Change Default Font

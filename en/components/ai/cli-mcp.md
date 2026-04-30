@@ -7,7 +7,10 @@ _license: MIT
 _canonicalLink: "{environment:dvUrl}/components/ai/cli-mcp"
 namespace: Infragistics.Controls
 mentionedTypes: []
+last_updated: "2026-04-21"
 ---
+
+<!-- schema: Article, HowTo -->
 
 # Ignite UI CLI MCP
 
@@ -18,8 +21,6 @@ mentionedTypes: []
 ## Overview
 
 Ignite UI CLI MCP gives AI assistants direct access to Ignite UI CLI project scaffolding, component generation, project modification, and documentation-aware workflows through chat or agent mode. The server works alongside Ignite UI Theming MCP - CLI MCP handles project and component workflows while Theming MCP handles palettes, themes, tokens, and styling. Most teams connect both servers in the same AI client session.
-
-The Ignite UI CLI MCP works alongside the Ignite UI Theming MCP. In practice, the CLI MCP handles project and component workflows, while the Theming MCP handles palettes, themes, tokens, and styling workflows. Most teams will want both servers connected.
 
 The recommended setup path is to start with Ignite UI CLI first. That path creates the project, installs the required packages, and writes the initial MCP configuration for VS Code. You can also start from an empty folder and let the assistant create the project through MCP, or connect MCP to a project that already exists.
 
@@ -75,13 +76,13 @@ You can start with Ignite UI CLI MCP in three ways:
 > Start with a completely empty folder, add the MCP configuration manually, and then ask the assistant to create the project through chat. This path is useful when you want MCP to drive the project creation flow from the beginning instead of running the CLI yourself first.
 
 > **Existing project**
-> Add MCP configuration to a project you already have and continue working in the current codebase. This path is useful when the project already exists and you want the assistant to help with project changes, component work, and documentation questions without regenerating anything.
+> Add MCP configuration to a project you already have and continue working in the current codebase. Run `ig ai-config` (or `ng generate @igniteui/angular-schematics:ai-config` for Angular projects) to write `.vscode/mcp.json` and copy the Agent Skills into your project automatically. For other AI clients, copy the server entries from the client-specific sections below.
 
 All three paths use the same MCP servers. The difference is only how the project is prepared before you start prompting:
 
 - in the **CLI-first** path, Ignite UI CLI creates the project and prepares the first MCP configuration for you
 - in the **empty-folder** path, you create the MCP configuration first and let the assistant create the project after that
-- in the **existing-project** path, you attach MCP to the current codebase and continue from what is already there
+- in the **existing-project** path, run `ig ai-config` to write `.vscode/mcp.json` and copy the Agent Skills automatically, or add the configuration manually for other clients
 
 In all cases, once the MCP servers are connected and visible in your AI client, the assistant can keep working in the same session.
 
@@ -89,19 +90,19 @@ If you are creating a project with Ignite UI CLI first, you can run the CLI in e
 
 - **Global install**
 
-  ```bash
-  npm install -g igniteui-cli
-  ```
+    ```bash
+    npm install -g igniteui-cli
+    ```
 
-  This gives you the `ig` command in any terminal session and is the clearest option if you plan to create and scaffold projects regularly.
+    This gives you the `ig` command in any terminal session and is the clearest option if you plan to create and scaffold projects regularly.
 
 - **Without a global install**
 
-  ```bash
-  npx --package igniteui-cli igniteui new
-  ```
+    ```bash
+    npx --package igniteui-cli igniteui new
+    ```
 
-  This runs the CLI through `npx` instead of a global `ig` command.
+    This runs the CLI through `npx` instead of a global `ig` command.
 
 For the **CLI-first** path, you can create the project in guided mode or with a direct command.
 
@@ -135,7 +136,7 @@ For more details about project templates, CLI command options, and component sca
 
 ### VS Code
 
-GitHub Copilot in VS Code supports MCP servers through a workspace-level configuration file. Create or edit `.vscode/mcp.json` in your project root:
+GitHub Copilot in VS Code supports MCP servers through a workspace-level configuration file. Run `ig ai-config` (or `ng generate @igniteui/angular-schematics:ai-config`) from your project root to generate this file automatically. To configure it manually, create or edit `.vscode/mcp.json` in your project root:
 
 ```json
 {
@@ -247,20 +248,20 @@ JetBrains AI Assistant supports MCP servers through the IDE settings:
 
 4. Enter the following configuration:
 
-   ```json
-   {
-     "mcpServers": {
-       "igniteui-cli": {
-         "command": "npx",
-         "args": ["-y", "igniteui-cli", "mcp"]
-       },
-       "igniteui-theming": {
-         "command": "npx",
-         "args": ["-y", "igniteui-theming", "igniteui-theming-mcp"]
-       }
-     }
-   }
-   ```
+    ```json
+    {
+      "mcpServers": {
+        "igniteui-cli": {
+          "command": "npx",
+          "args": ["-y", "igniteui-cli", "mcp"]
+        },
+        "igniteui-theming": {
+          "command": "npx",
+          "args": ["-y", "igniteui-theming", "igniteui-theming-mcp"]
+        }
+      }
+    }
+    ```
 
 5. Click **OK** and restart the AI Assistant.
 
@@ -322,11 +323,11 @@ Here is a brief overview of each tool:
 | Tool                      | Description                                                                                                                                                          |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `list_components`         | Lists available Ignite UI component docs for a framework. Accepts an optional keyword filter (case-insensitive substring match against name, keywords, and summary). |
-| `get_doc`                 | Gets the full markdown content of a specific component doc by kebab-case name (e.g., `grid-editing`, `combo-overview`). Includes code samples, tables, and links.    |
-| `search_docs`             | Full-text search across Ignite UI docs for a framework. Returns up to 20 ranked results with excerpts.                                                               |
-| `get_project_setup_guide` | Returns the project setup guide for creating a new project in a specific framework, including CLI steps and install instructions.                                    |
-| `search_api`              | Searches API entries by keyword or component name across Angular, React, and Web Components.                                                                         |
-| `get_api_reference`       | Returns the full API reference for a specific component or class, including properties, methods, and events. Supports Angular, React, and Web Components.            |
+| `get_doc`                 | Gets the full markdown content of a specific component doc by kebab-case name (e.g., `grid-editing`, `combo-overview`). Includes code samples, tables, and links.   |
+| `search_docs`             | Full-text search across Ignite UI docs for a framework. Returns up to 20 ranked results with excerpts.                                                              |
+| `get_project_setup_guide` | Returns the project setup guide for creating a new project in a specific framework, including CLI steps and install instructions.                                   |
+| `search_api`              | Searches API entries by keyword or component name across Angular, React, and Web Components.                                                                        |
+| `get_api_reference`       | Returns the full API reference for a specific component or class, including properties, methods, and events. Supports Angular, React, and Web Components.           |
 
 At a high level, the CLI MCP tools help with:
 

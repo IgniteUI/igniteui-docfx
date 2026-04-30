@@ -89,6 +89,9 @@ Banner コンポーネントを表示するには、ボタン クリックで [`
 ```
 
 > [!NOTE]
+> このコンポーネントはマテリアル アイコンを使用します。`index.html` に次のリンクを追加してください: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
+> [!NOTE]
 > `IgxBannerModule` には、バナーを閉じるデフォルトの `Dismiss` バナーボタンが含まれています。
 
 ## 例

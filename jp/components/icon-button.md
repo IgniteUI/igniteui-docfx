@@ -51,6 +51,9 @@ import { IgxIconButtonDirective } from 'igniteui-angular/directives';
 export class HomeComponent {}
 ```
 
+> [!NOTE]
+> このコンポーネントはマテリアル アイコンを使用します。`index.html` に次のリンクを追加してください: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 Ignite UI for Angular Icon Button ディレクティブをインポートしたので、要素で `igxIconButton` ディレクティブの使用を開始できます。
 
 ## Angular Icon Button のタイプ
