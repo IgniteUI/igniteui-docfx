@@ -66,6 +66,9 @@ import { IgxBadgeComponent } from 'igniteui-angular/badge';
 export class HomeComponent {}
 ```
 
+> [!NOTE]
+> このコンポーネントはマテリアル アイコンを使用します。`index.html` に次のリンクを追加してください: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 Ignite UI for Angular Badge モジュールまたはコンポーネントをインポートしたので、`igx-badge` コンポーネントの基本構成を開始できます。
 
 ## Angular Badge コンポーネントの使用
