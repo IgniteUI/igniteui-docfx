@@ -103,6 +103,9 @@ Ignite UI for Angular Drop Down モジュールまたはディレクティブを
 </igx-drop-down>
 ```
 
+> [!NOTE]
+> このコンポーネントはマテリアル アイコンを使用します。`index.html` に次のリンクを追加してください: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 ```typescript
 // dropdown.component.ts
 @Component({...})
