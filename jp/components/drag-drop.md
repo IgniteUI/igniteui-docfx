@@ -128,6 +128,9 @@ Angular アプリケーション内の要素をある場所から他の場所へ
 
 ```
 
+> [!NOTE]
+> このコンポーネントはマテリアル アイコンを使用します。`index.html` に次のリンクを追加してください: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 ### ゴーストなしのドラッグ
 
 `igxDrag` ディレクティブが適用されるベース要素を移動したい場合、[`ghost`]({environment:angularApiUrl}/classes/igxdragdirective.html#ghost) 入力を `false` に設定することができます。それにより、余分なゴースト要素はレンダリングされず、要素をドラッグするときにカスタム スタイル設定を適用する必要がある場合は、ベース要素に直接適用できます。

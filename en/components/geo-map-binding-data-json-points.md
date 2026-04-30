@@ -19,7 +19,6 @@ With the Ignite UI for Angular map, you can plot geographic data loaded from var
                                                  github-src="maps/geo-map/binding-data-json-points">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Data Example

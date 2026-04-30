@@ -21,7 +21,6 @@ The following example depicts a [Column Chart](../types/column-chart.md) with a 
                                                  github-src="charts/data-chart/series-value-overlay">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Value Overlay Properties
@@ -62,7 +61,6 @@ The following sample demonstrates usage of the different [`valueLines`]({environ
                                                  github-src="charts/category-chart/value-lines">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Financial Overlays
@@ -80,7 +78,6 @@ For example, you can use [`IgxDataAnnotationSliceLayerComponent`]({environment:d
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/data-annotation-multiple-with-overlay-text"
                                                  github-src="charts/data-chart/data-annotation-multiple-with-overlay-text">
 </code-view>
-
 
 ### Styling Overlay Text
 
