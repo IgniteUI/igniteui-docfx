@@ -112,7 +112,28 @@ Ignite UI for Angular には **[エージェント スキル](https://agentskill
 
 以下のオプションのいずれかを使用して、スキル ファイルをダウンロードし、AI アシスタントに適した[スキルの場所](#スキルの場所)に配置します。
 
-### **オプション A — インストールされた npm パッケージを使用する**
+### **オプション A — Ignite UI CLI を使用する**
+
+`ai-config` コマンドは、インストール済みの Ignite UI for Angular パッケージからスキル ファイルを `.claude/skills/` にコピーし、Ignite UI MCP サーバー構成を `.vscode/mcp.json` に書き込みます。ファイルが既に存在し、最新の状態であれば、このコマンドは何もしません。
+
+**Angular Schematics を使用する場合:**
+
+```bash
+ng generate @igniteui/angular-schematics:ai-config
+```
+
+これにより、Ignite UI サーバーと共に `@angular/cli` MCP サーバーも `.vscode/mcp.json` に登録されます。
+
+**Ignite UI CLI を使用する場合:**
+
+### **オプション A — Ignite UI CLI を使用する**
+
+`ai-config` コマンドは、インストール済みの Ignite UI for Angular パッケージからスキル ファイルを `.claude/skills/` にコピーし、Ignite UI MCP サーバー構成を `.vscode/mcp.json` に書き込みます。ファイルが既に存在し、最新の状態であれば、このコマンドは何もしません。
+
+**Angular Schematics を使用する場合:**
+
+````bash
+ng generate @igniteui/angular-schematics:ai-config
 
 Ignite UI for Angular がプロジェクトに既にインストールされている場合、スキル ファイルは `node_modules` の下で利用できます。それらをプロジェクトにコピーする (例: `.agents/skills/` の下での使用) には、次のコマンドを実行します:
 
@@ -146,7 +167,7 @@ robocopy node_modules\igniteui-angular\skills\igniteui-angular-grids .agents\ski
 robocopy node_modules\igniteui-angular\skills\igniteui-angular-theming .agents\skills\igniteui-angular-theming /E
 ```
 
-### **オプション B — `gemini skills` CLI を使用する**
+### **オプション C — `gemini skills` CLI を使用する**
 
 `gemini skills install` コマンドは、Git リポジトリから直接スキルをインストールします。2 つのスコープをサポートします:
 
@@ -171,7 +192,7 @@ gemini skills install --scope workspace https://github.com/IgniteUI/igniteui-ang
 
 インストールが完了すると、スキル ファイルはそれぞれの場所で利用できるようになり、互換性のある AI アシスタントによって自動的に検出されます。
 
-### **オプション C — `npx skills` CLI を使用する**
+### **オプション D — `npx skills` CLI を使用する**
 
 `skills` CLI は、スキルをプロジェクトに直接ダウンロードしてインストールするインタラクティブなツールです。プロジェクト ルートで次のコマンドを実行します:
 
@@ -205,6 +226,9 @@ Theming MCP の詳細については、[Ignite UI Theming MCP](./theming-mcp.md)
 
 - <a href="https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/getting-started">Ignite UI for Angular で作業を開始</a>
 - <a href="https://jp.infragistics.com/products/ignite-ui-angular/angular/components/general/cli-overview">Angular Schematics & Ignite UI CLI</a>
+- [Ignite UI を使用した AI 支援開発](./ai-assisted-development-overview.md)
+- [Ignite UI CLI MCP](./cli-mcp.md)
+- [Ignite UI Theming MCP](./theming-mcp.md)
 
 <div class="divider--half"></div>
 コミュニティに参加して新しいアイデアをご提案ください。
