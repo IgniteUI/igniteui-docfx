@@ -271,6 +271,9 @@ export class MyTreeViewComponent {
 </igx-tree>
 ```
 
+> [!NOTE]
+> このコンポーネントはマテリアル アイコンを使用します。`index.html` に次のリンクを追加してください: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 さらに、[expandIndicator]({environment:angularApiUrl}/classes/igxtreecomponent.html#expandIndicator) 入力を使用することにより、ノードの展開/縮小インジケーターの描画に使用されるカスタム テンプレートを設定できます。
 
 ```html
