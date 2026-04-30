@@ -22,7 +22,6 @@ For example, you can annotates stock prices with stock events and patterns.
                                                  github-src="charts/data-chart/data-annotation-multiple-with-stocks">
 </code-view>
 
-
 Like this sample? Get access to our complete Angular toolkit and start building your own apps in minutes. <a href="{environment:infragisticsBaseUrl}/products/ignite-ui-angular/download">Download it for free.</a>
 
 ## Angular Data Annotation Slice Layer Example
@@ -36,7 +35,6 @@ For example, you can use DataAnnotationSliceLayer to annotate stock prices with 
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/data-annotation-slice-layer"
                                                  github-src="charts/data-chart/data-annotation-slice-layer">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -52,7 +50,6 @@ For example, you can use [`IgxDataAnnotationStripLayerComponent`]({environment:d
                                                  github-src="charts/data-chart/data-annotation-strip-layer">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Data Annotation Line Layer Example
@@ -66,7 +63,6 @@ For example, you can use DataAnnotationLineLayer to annotate growth and decline 
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/data-annotation-line-layer"
                                                  github-src="charts/data-chart/data-annotation-line-layer">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -82,7 +78,6 @@ For example, you can use DataAnnotationRectLayer to annotate bearish patterns an
                                                  github-src="charts/data-chart/data-annotation-rect-layer">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Data Annotation Band Layer Example
@@ -96,7 +91,6 @@ For example, you can use DataAnnotationBandLayer to annotate range of growth in 
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/data-annotation-band-layer"
                                                  github-src="charts/data-chart/data-annotation-band-layer">
 </code-view>
-
 
 <div class="divider--half"></div>
 
