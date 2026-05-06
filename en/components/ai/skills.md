@@ -4,7 +4,10 @@ _description: Learn how to use Agent Skills to supercharge AI-assisted developme
 _keywords: Ignite UI for Angular, agent skills, ai assisted development, github copilot, cursor, windsurf, claude, gemini cli, junie
 _license: MIT
 mentionedTypes: []
+last_updated: "2026-04-24"
 ---
+
+<!-- schema: Article, HowTo -->
 
 # Ignite UI for Angular Agent Skills
 
@@ -56,7 +59,7 @@ For user-level (global) skills available across all projects, use `~/.agents/ski
 | Project | `.github/skills/`, `.claude/skills/` |
 | Personal | `~/.copilot/skills/`, `~/.claude/skills/` (Copilot coding agent and GitHub Copilot CLI only) |
 
-> **Tip:** In [VS Code](https://code.visualstudio.com/docs/copilot/customization/agent-skills), these locations also include the general  `.agents/skills/` and `~/.agents/skills/` and you can configure additional skill locations using the `chat.agentSkillsLocations` setting.
+> **Tip:** In [VS Code](https://code.visualstudio.com/docs/copilot/customization/agent-skills), these locations also include the general `.agents/skills/` and `~/.agents/skills/` and you can configure additional skill locations using the `chat.agentSkillsLocations` setting.
 
 ### Claude
 
@@ -113,7 +116,7 @@ Use one of the options below to download and place the skill files into the appr
 
 ### **Option A - Use the Ignite UI CLI**
 
-The `ai-config` command copies skill files from your installed Ignite UI for Angular package into `.claude/skills/` and writes the Ignite UI MCP server configuration to `.vscode/mcp.json`. If the files already exist and are up-to-date, the command is a no-op.
+The `ai-config` command copies skill files from your installed Ignite UI for Angular package into `.claude/skills/` and writes the Ignite UI CLI MCP and Theming MCP server entries to `.vscode/mcp.json`. If the files already exist and are up-to-date, the command is a no-op.
 
 **Using Angular Schematics:**
 
@@ -125,14 +128,17 @@ This also registers the `@angular/cli` MCP server in `.vscode/mcp.json` alongsid
 
 **Using the Ignite UI CLI:**
 
-### **Option A - Use the Ignite UI CLI**
+```bash
+npx igniteui-cli ai-config
+```
 
-The `ai-config` command copies skill files from your installed Ignite UI for Angular package into `.claude/skills/` and writes the Ignite UI MCP server configuration to `.vscode/mcp.json`. If the files already exist and are up-to-date, the command is a no-op.
+If you have the Ignite UI CLI installed globally, use the shorter form:
 
-**Using Angular Schematics:**
+```bash
+ig ai-config
+```
 
-````bash
-ng generate @igniteui/angular-schematics:ai-config
+### **Option B - Manual Copy from `node_modules`**
 
 If Ignite UI for Angular is already installed in your project, the skill files are available under `node_modules`. To copy them into your project (e.g. into `.agents/skills/`), run:
 
@@ -140,7 +146,7 @@ If Ignite UI for Angular is already installed in your project, the skill files a
 
 ```bash
 cp -r node_modules/igniteui-angular/skills/. .agents/skills/
-````
+```
 
 **Windows (Command Prompt)**
 
@@ -195,7 +201,7 @@ Once installed, the skill files are available in the respective location and wil
 
 The `skills` CLI is an interactive tool that downloads and installs skills directly into your project. Run the following command in your project root:
 
-```shell
+```bash
 npx skills add IgniteUI/igniteui-angular
 ```
 
@@ -220,8 +226,6 @@ For more information on the Theming MCP, refer to the [Ignite UI Theming MCP](./
 ## Additional Resources
 
 <div class="divider--half"></div>
-
-<!-- TODO: Not in xplat, can't link to md directly + docfx is aggressively and annoyingly treating all forms of relative links as such.. -->
 
 - <a href="https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/getting-started">Getting Started with Ignite UI for Angular</a>
 - <a href="https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/cli-overview">Angular Schematics & Ignite UI CLI</a>
