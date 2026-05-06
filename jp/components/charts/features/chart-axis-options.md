@@ -22,7 +22,6 @@ Angular チャートの軸タイトル機能を使用すると、チャートに
                                                  github-src="charts/category-chart/axis-titles">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## 軸ラベルの例
@@ -34,7 +33,6 @@ Angular チャートは、チャートで表示されるラベルの構成、書
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/axis-labels"
                                                  github-src="charts/category-chart/axis-labels">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -58,7 +56,6 @@ Angular チャートは、チャートで表示されるラベルの構成、書
                                                  github-src="charts/category-chart/format-specifiers">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## 軸範囲の例
@@ -72,7 +69,6 @@ Angular チャートは、チャートで表示されるラベルの構成、書
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/axis-range"
                                                  github-src="charts/category-chart/axis-range">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -89,7 +85,6 @@ Angular チャートは、チャートで表示されるラベルの構成、書
                     iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/axis-types"
                                                  github-src="charts/financial-chart/axis-types">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -109,7 +104,6 @@ Angular チャートの [`xAxisMinimumGapSize`]({environment:dvApiBaseUrl}/produ
                                                  github-src="charts/category-chart/axis-gap">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## 軸重複の例
@@ -123,7 +117,6 @@ Angular チャートの [`xAxisOverlap`]({environment:dvApiBaseUrl}/products/ign
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/axis-overlap"
                                                  github-src="charts/category-chart/axis-overlap">
 </code-view>
-
 
 <div class="divider--half"></div>
 

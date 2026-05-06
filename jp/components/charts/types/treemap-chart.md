@@ -22,7 +22,6 @@ Ignite UI for Angular ツリーマップ チャートは、ネストされた一
                                                  github-src="charts/tree-map/overview">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## ツリーマップの推奨事項
@@ -72,7 +71,6 @@ Ignite UI for Angular ツリーマップ チャートは、ネストされた一
                                                  github-src="charts/tree-map/layout">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ### レイアウトのタイプ
@@ -107,7 +105,6 @@ Ignite UI for Angular ツリーマップ チャートは、ネストされた一
                                                  github-src="charts/tree-map/styling">
 </code-view>
 
-
 ### Angular ツリーマップのハイライト表示
 
 次の例では、ツリーマップでノードのハイライト機能を示しています。
@@ -118,7 +115,6 @@ Ignite UI for Angular ツリーマップ チャートは、ネストされた一
                     iframe-src="{environment:dvDemosBaseUrl}/charts/tree-map/highlighting"
                                                  github-src="charts/tree-map/highlighting">
 </code-view>
-
 
 ## Angular ツリーマップのパーセントベースのハイライト表示
 
@@ -135,7 +131,6 @@ Ignite UI for Angular ツリーマップ チャートは、ネストされた一
                     iframe-src="{environment:dvDemosBaseUrl}/charts/tree-map/highlighting-percent-based"
                                                  github-src="charts/tree-map/highlighting-percent-based">
 </code-view>
-
 
 <div class="divider--half"></div>
 
