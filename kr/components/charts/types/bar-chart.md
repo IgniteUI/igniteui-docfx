@@ -22,7 +22,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                                                  github-src="charts/data-chart/bar-chart-multiple-sources">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Bar Chart Recommendations
@@ -85,7 +84,6 @@ Bar Chart belongs to a group of Category Series and it is rendered using a colle
                                                  github-src="charts/data-chart/bar-chart-single-source">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Bar Chart with Multiple Series
@@ -98,7 +96,6 @@ The Bar Chart is able to render multiple bars per category for comparison purpos
                                                  github-src="charts/data-chart/bar-chart-multiple-sources">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Bar Chart Styling
@@ -110,7 +107,6 @@ The Bar Chart can be styled, and allows for the ability to use [annotation value
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/bar-chart-styling"
                                                  github-src="charts/data-chart/bar-chart-styling">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -128,7 +124,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                                                  github-src="charts/data-chart/stacked-bar-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Stacked 100% Bar Chart
@@ -142,7 +137,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-bar-chart"
                                                  github-src="charts/data-chart/stacked-100-bar-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 

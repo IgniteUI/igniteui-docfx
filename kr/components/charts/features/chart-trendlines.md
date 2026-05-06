@@ -22,7 +22,6 @@ The following sample depicts a [`IgxFinancialChartComponent`]({environment:dvApi
                                                  github-src="charts/financial-chart/trendlines">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Additional Resources

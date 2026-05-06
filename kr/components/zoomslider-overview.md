@@ -18,7 +18,6 @@ The ZoomSlider control provides zooming functionality to range-enabled controls.
                                                  github-src="charts/zoomslider/overview">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Usage

@@ -21,7 +21,6 @@ The following example depicts a [Column Chart](../types/column-chart.md) with a 
                                                  github-src="charts/data-chart/series-value-overlay">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Value Overlay Properties
