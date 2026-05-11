@@ -18,7 +18,6 @@ The Angular Spreadsheet component allows displaying charts in your [`IgxSpreadsh
                                                  github-src="excel/spreadsheet/adapter-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Chart Adapter Overview

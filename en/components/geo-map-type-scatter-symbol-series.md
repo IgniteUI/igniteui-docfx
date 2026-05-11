@@ -18,7 +18,6 @@ In Angular map component, you can use the [`IgxGeographicSymbolSeriesComponent`]
                                                  github-src="maps/geo-map/type-scatter-symbol-series">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Data Requirements

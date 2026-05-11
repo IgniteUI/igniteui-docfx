@@ -5,9 +5,12 @@ _keywords: Angular, Ignite UI for Angular, Infragistics, MCP, Model Context Prot
 _language: en
 _license: MIT
 _canonicalLink: "{environment:dvUrl}/components/ai-assisted-development-overview"
+last_updated: "2026-04-21"
 namespace: Infragistics.Controls
 mentionedTypes: []
 ---
+
+<!-- schema: Article, HowTo -->
 
 # AI-Assisted Development with Ignite UI
 
@@ -23,7 +26,7 @@ Ignite UI's AI toolchain consists of three independently usable layers. Each lay
 | --------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------ | -------------------------------------- |
 | Agent Skills                            | Developer-owned instruction packages: import paths, component patterns, decision flows, project conventions | Developer    | Angular, React, Web Components, Blazor |
 | CLI MCP server (`igniteui-cli`)         | Project scaffolding, component management, documentation and API queries via MCP                            | Infragistics | Angular, React, Web Components         |
-| Theming MCP server (`igniteui-theming`) | Design tokens, palette definitions, CSS variable generation, theming queries via MCP                        | Infragistics | Angular, React, Web Components, Blazor |
+| Theming MCP server (`igniteui-theming`) | Design tokens, palette definitions, CSS custom property generation, WCAG AA contrast validation             | Infragistics | Angular, React, Web Components, Blazor |
 
 The CLI MCP server and Theming MCP server are both started through `npx` and connect to any MCP-compatible client through STDIO transport. Agent Skills are local files placed in your project that the AI client reads from disk.
 
@@ -74,13 +77,43 @@ The CLI MCP server and Theming MCP server work with any editor or AI client that
 | Claude Desktop (macOS)      | `~/Library/Application Support/Claude/claude_desktop_config.json` |
 | Claude Desktop (Windows)    | `%APPDATA%\Claude\claude_desktop_config.json`                     |
 | Claude Code                 | `.mcp.json` or the Claude Code MCP CLI command                    |
-| JetBrains AI Assistant      | **Tools → AI Assistant → Model Context Protocol (MCP)**           |
+| JetBrains AI Assistant      | **Tools → AI Assistant → Model Context Protocol (MCP)*-         |
 
 Agent Skills are compatible with GitHub Copilot via `.github/copilot-instructions.md`, Cursor via `.cursorrules` or `.cursor/rules/`, Windsurf via `.windsurfrules`, and JetBrains AI Assistant via project-level prompt settings.
 
 ## Set Up the AI Toolchain
 
-Setting up the Ignite UI AI toolchain takes three steps: load Agent Skills for your framework, connect the CLI MCP server, and optionally connect the Theming MCP server. All three steps are independent and can be done in any order.
+Use `ig ai-config` to configure Agent Skills and both MCP servers in a single command. For individual control over each layer, or to configure only part of the toolchain in an existing project, follow the steps below. Running `ig ai-config` completes Steps 1, 2, and 3 in one operation.
+
+### Quick Setup
+
+The `ai-config` command copies the Ignite UI Agent Skills into `.claude/skills/` and writes the Ignite UI MCP server configuration to `.vscode/mcp.json`. If the files already exist and are up-to-date, the command is a no-op.
+
+**Using Angular Schematics:**
+
+```bash
+ng generate @igniteui/angular-schematics:ai-config
+```
+
+This also registers the `@angular/cli` MCP server in `.vscode/mcp.json` alongside the Ignite UI servers.
+
+**Using the Ignite UI CLI:**
+
+```bash
+npx igniteui-cli ai-config
+```
+
+If you have the Ignite UI CLI installed globally, use the shorter form:
+
+```bash
+ig ai-config
+```
+
+> [!NOTE]
+> The `npx igniteui-cli` and `ig` forms do not register the `@angular/cli` MCP server. Use the Angular Schematics command above if you want all three servers configured in a single step.
+
+> [!NOTE]
+> The command requires Ignite UI packages to be installed in your project (`npm install`). If no skill files are found, make sure your packages are up-to-date.
 
 ### Step 1 - Load Agent Skills
 

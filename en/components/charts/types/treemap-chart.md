@@ -21,7 +21,6 @@ In the following example, the [`IgxTreemapComponent`]({environment:dvApiBaseUrl}
                                                  github-src="charts/tree-map/overview">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Treemap Recommendations
@@ -71,7 +70,6 @@ In the following example, the treemap demonstrates the ability of changing it's 
                                                  github-src="charts/tree-map/layout">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ### Layout Types
@@ -106,7 +104,6 @@ In the following example, the treemap demonstrates the ability of changing the l
                                                  github-src="charts/tree-map/styling">
 </code-view>
 
-
 ### Angular Treemap Highlighting
 
 In the following example, the treemap demonstrates the ability of node highlighting. There are two options for this feature. Each node can individually brighten, by decreasing its opacity, or cause all other nodes to trigger the same effect. To enable this feature, set [`highlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxtreemapcomponent.html#highlightingMode)to Brighten or FadeOthers.
@@ -116,7 +113,6 @@ In the following example, the treemap demonstrates the ability of node highlight
                     iframe-src="{environment:dvDemosBaseUrl}/charts/tree-map/highlighting"
                                                  github-src="charts/tree-map/highlighting">
 </code-view>
-
 
 ## Angular Treemap Percent based highlighting
 
@@ -133,7 +129,6 @@ In the following example, the treemap demonstrates the ability of node highlight
                     iframe-src="{environment:dvDemosBaseUrl}/charts/tree-map/highlighting-percent-based"
                                                  github-src="charts/tree-map/highlighting-percent-based">
 </code-view>
-
 
 <div class="divider--half"></div>
 

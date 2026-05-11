@@ -20,15 +20,15 @@ All notable changes for each version of Ignite UI for Angular are documented on 
 
 ### Bug Fixes
 
-| Bug Number | Control             | Description                                                                                         |
-| ---------- | ------------------- | --------------------------------------------------------------------------------------------------- |
-| 2189       | IgxDataChart        | DataChart skips rendering axis when there are no labels                                             |
-| 3055       | IgxDataPieChart     | added missing styling properties for the Others Slice                                               |
-| 38668      | IgxDataTooltipLayer | TitleTextColor is overridden when chart's TitleTextColor is used                                    |
-| 40238      | Excel               | fixed Excel Formula parser - Workbook.Load() throwing a Excel.FormulaParseException                 |
-| 41167      | Excel               | Object's Formulas are not round-tripped - Added Excel support for round tripping the camera tool    |
-| 41419      | Excel               | Saving a VBA Signed Excel file does not keep a signature/certificate.                               |
-| 41594      | IgxDataChart        | AssigningCategoryStyle args.GetItems is null or not working to update items in the fragment series. |
+| Bug Number | Control | Description |
+|------------|---------|-------------|
+| 2189 | IgxDataChart | DataChart skips rendering axis when there are no labels |
+| 3055 | IgxDataPieChart | added missing styling properties for the Others Slice |
+| 38668 | IgxDataTooltipLayer | TitleTextColor is overridden when chart's TitleTextColor is used |
+| 40238 | Excel | fixed Excel Formula parser - Workbook.Load() throwing a Excel.FormulaParseException|
+| 41167 | Excel | Object's Formulas are not round-tripped - Added Excel support for round tripping the camera tool |
+| 41419 | Excel | Saving a VBA Signed Excel file does not keep a signature/certificate. |
+| 41594 | IgxDataChart | AssigningCategoryStyle args.GetItems is null or not working to update items in the fragment series. |
 
 ## **21.0.0 (January 2026)**
 
@@ -46,11 +46,11 @@ Added OthersCategoryBrush and OthersCategoryOutline to DataPieChart and Proporti
 
 ### Bug Fixes
 
-| Bug Number | Control      | Description                                                               |
-| ---------- | ------------ | ------------------------------------------------------------------------- |
-| 33808      | IgxDataChart | The scale set for IntervalType Ticks in TimeAxisInterval is not displayed |
-| 34255      | IgxDataChart | 0.00001 scale tick marks are displayed overlapping each other             |
-| 38510      | IgxDataChart | AssigningCategoryStyle event support for Stacked Series                   |
+| Bug Number | Control | Description |
+|------------|---------|-------------|
+|33808|IgxDataChart|The scale set for IntervalType Ticks in TimeAxisInterval is not displayed|
+|34255|IgxDataChart|0.00001 scale tick marks are displayed overlapping each other|
+|38510|IgxDataChart|AssigningCategoryStyle event support for Stacked Series|
 
 ### Enhancements
 
@@ -86,12 +86,12 @@ Ability for axis annotations to automatically detect collisions and truncate to 
 
 ### Bug Fixes
 
-| Bug Number | Control        | Description                                                                                                |
-| ---------- | -------------- | ---------------------------------------------------------------------------------------------------------- |
-| 40136      | Excel Library  | FormulaParseException exception when loading an Excel workbook                                             |
-| 40262      | IgxSpreadsheet | #Circularity! is displayed when there are warnings. Request to match Excel - display a value eg. 0 instead |
-| 40458      | IgxSpreadsheet | When using Arial font, the igx-spreadsheet cuts off text in the cells                                      |
-| 40490      | IgxDatePicker  | Inputs by Autofill won't give any effects for a date picker                                                |
+| Bug Number | Control | Description |
+|------------|---------|-------------|
+|40136|Excel Library|FormulaParseException exception when loading an Excel workbook|
+|40262|IgxSpreadsheet|#Circularity! is displayed when there are warnings. Request to match Excel - display a value eg. 0 instead|
+|40458|IgxSpreadsheet|When using Arial font, the igx-spreadsheet cuts off text in the cells|
+|40490|IgxDatePicker|Inputs by Autofill won't give any effects for a date picker|
 
 ## **20.1.0 (September 2025)**
 
@@ -154,22 +154,22 @@ There is a new property called [`useInsetOutlines`]({environment:dvApiBaseUrl}/p
 
 ### Bug Fixes
 
-| Bug Number | Control                                                                                                                                                                        | Description                                                                                                                                                                                                                                                        |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 31624      | [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) | Resizing the containing window of the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) causes the chart to fail to render the series |
-| 27304      | `DataChart`                                                                                                                                                                    | Zoom rectangle is not positioned the same as the background rectangle                                                                                                                                                                                              |
-| 37930      | `DataChart`                                                                                                                                                                    | Data Annotation Overlay Text Color not working                                                                                                                                                                                                                     |
-| 30600      | `DoughnutChart`                                                                                                                                                                | No textStyle property for either the chart or series (pie chart has this)                                                                                                                                                                                          |
-| 38231      | `Grid`                                                                                                                                                                         | Unpinned column does not return to the original position if hidden columns exist                                                                                                                                                                                   |
-| 33861      | Excel Library                                                                                                                                                                  | Adding line chart corrupts excel File for German culture                                                                                                                                                                                                           |
+| Bug Number | Control | Description |
+|------------|---------|-------------|
+|31624 | [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) | Resizing the containing window of the [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) causes the chart to fail to render the series|
+|27304 | `DataChart` | Zoom rectangle is not positioned the same as the background rectangle|
+|37930 | `DataChart` | Data Annotation Overlay Text Color not working|
+|30600 | `DoughnutChart` | No textStyle property for either the chart or series (pie chart has this)|
+|38231 | `Grid` | Unpinned column does not return to the original position if hidden columns exist|
+|33861 | Excel Library | Adding line chart corrupts excel File for German culture|
 
 ## **20.0.1 (August 2025)**
 
 ### Bug Fixes
 
-| Bug Number | Control       | Description                                                        |
-| ---------- | ------------- | ------------------------------------------------------------------ |
-| 36448      | `RadialGauge` | Radial label format properties do not work. (eg. Title, SubTitles) |
+| Bug Number | Control | Description      |
+|------------|---------|------------------|
+|36448 | `RadialGauge` | Radial label format properties do not work. (eg. Title, SubTitles)|
 
 ### igniteui-angular-charts (Charts)
 
@@ -229,11 +229,11 @@ There is a new property called [`useInsetOutlines`]({environment:dvApiBaseUrl}/p
 
 ### Bug Fixes
 
-| Bug Number | Control                                                                                                                                                                         | Description                                               |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
-| 37023      | `DataChart`                                                                                                                                                                     | Tooltips are cut-off/offscreen if overflow hidden is set. |
-| 37685      | [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html) | Poor rendering of numbers formatted with Arial font.      |
-| 37244      | Excel Library                                                                                                                                                                   | Custom Data Validation is not working.                    |
+| Bug Number | Control | Description      |
+|------------|---------|------------------|
+|37023 | `DataChart` | Tooltips are cut-off/offscreen if overflow hidden is set.|
+|37685 | [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html) | Poor rendering of numbers formatted with Arial font.|
+|37244 | Excel Library | Custom Data Validation is not working.|
 
 ## **19.0.1 (February 2025)**
 
@@ -249,20 +249,20 @@ There is a new property called [`useInsetOutlines`]({environment:dvApiBaseUrl}/p
 
 The following table lists the bug fixes made for the Ignite UI for Angular toolset for this release:
 
-| Bug Number | Control                                                                                                                                                                         | Description                                                                                                                 |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| 30286      | `DataChart`                                                                                                                                                                     | Bubble Series tooltip content is switched to that of nearby bubble data in clicking a bubble                                |
-| 32906      | `DataChart`                                                                                                                                                                     | `DataChart` is showing two xAxis on the top                                                                                 |
-| 33605      | `DataChart`                                                                                                                                                                     | ScatterLineSeries is not showing the color of the line correctly in the legend                                              |
-| 35498      | `DataChart`                                                                                                                                                                     | Tooltips for the series specified in IncludedSeries are not displayed                                                       |
-| 34776      | `DataChart`                                                                                                                                                                     | Repeatedly showing and hiding the `DataChart` causes memory leakage in JS Heap                                              |
-| 34053      | `RadialGauge`                                                                                                                                                                   | The position of the scale label is shifted                                                                                  |
-| 35496      | [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html) | Error when setting styles in Excel with images                                                                              |
-| 36176      | Excel Library                                                                                                                                                                   | Exception occurs when loading an Excel workbook that has a LET function                                                     |
-| 36379      | Excel Library                                                                                                                                                                   | Colors with any alpha channel in an excel workbook fail to load                                                             |
-| 26218      | Excel Library                                                                                                                                                                   | Chart's plot area right margin becomes narrower and fill pattern and fill foreground are gone just by loading an Excel file |
-| 35495      | Excel Library                                                                                                                                                                   | Pictures in cells are lost when a template file is loaded                                                                   |
-| 34083      | Excel Library                                                                                                                                                                   | TextOperatorConditionalFormat's is not loaded/saved properly if the text contains = in a template Excel file                |
+| Bug Number | Control | Description      |
+|------------|---------|------------------|
+|30286 | `DataChart` | Bubble Series tooltip content is switched to that of nearby bubble data in clicking a bubble|
+|32906 | `DataChart` | `DataChart` is showing two xAxis on the top|
+|33605 | `DataChart` | ScatterLineSeries is not showing the color of the line correctly in the legend|
+|35498 | `DataChart` | Tooltips for the series specified in IncludedSeries are not displayed|
+|34776 | `DataChart` | Repeatedly showing and hiding the `DataChart` causes memory leakage in JS Heap|
+|34053 | `RadialGauge` | The position of the scale label is shifted|
+|35496 | [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_spreadsheet.igxspreadsheetcomponent.html) | Error when setting styles in Excel with images|
+|36176 | Excel Library | Exception occurs when loading an Excel workbook that has a LET function|
+|36379 | Excel Library | Colors with any alpha channel in an excel workbook fail to load|
+|26218 | Excel Library | Chart's plot area right margin becomes narrower and fill pattern and fill foreground are gone just by loading an Excel file|
+|35495 | Excel Library | Pictures in cells are lost when a template file is loaded|
+|34083 | Excel Library | TextOperatorConditionalFormat's is not loaded/saved properly if the text contains = in a template Excel file|
 
 ## **19.0.0 (January 2025)**
 
@@ -285,16 +285,17 @@ The following table lists the bug fixes made for the Ignite UI for Angular tools
 - <label class="badge badge--new">NEW</label> [Proportional Category Angle Axis](charts/types/radial-chart.md) - New axes for the Radial Pie Series in the [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html), to plot slices similar to a pie chart, a type of data visualization where data points are represented as segments within a circular graph.
 
 - [`IgxToolbarComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html)
+
   - New ToolActionCheckboxList
-    A new CheckboxList ToolAction that displays a collection of items with checkboxes for selecting. A grid inside ToolAction CheckboxList grows in height up to 5 items, then a scrollbar is displayed.
-    Requires IgxCheckboxListModule to be registered.
+        A new CheckboxList ToolAction that displays a collection of items with checkboxes for selecting. A grid inside ToolAction CheckboxList grows in height up to 5 items, then a scrollbar is displayed.
+        Requires IgxCheckboxListModule to be registered.
 
   - New Filtering Support
 
   - Axis Field Changes
-    New default IconMenu in Toolbar when targeting CategoryChart.
-    Label fields are mapped to the X-axis and Value fields are mapped to the Y-axis.
-    Target chart reacts in realtime to changes made. IconMenu is hidden when chart has no ItemsSource set.
+        New default IconMenu in Toolbar when targeting CategoryChart.
+        Label fields are mapped to the X-axis and Value fields are mapped to the Y-axis.
+        Target chart reacts in realtime to changes made. IconMenu is hidden when chart has no ItemsSource set.
 
 ## **18.0.0 (June 2024)**
 
@@ -304,7 +305,7 @@ The following table lists the bug fixes made for the Ignite UI for Angular tools
 
 - [Data Legend Grouping](charts/features/chart-data-legend.md#angular-data-legend-grouping) & [Data Tooltip Grouping](charts/features/chart-data-tooltip.md#angular-data-tooltip-grouping-for-data-chart) - New grouping feature added. The property `GroupRowVisible` toggles grouping with each series opting in can assign group text via the [`dataLegendGroup`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriescomponent.html#dataLegendGroup) property. If the same value is applied to more than one series then they will appear grouped. Useful for large datasets that need to be categorized and organized for all users.
 
-- [Chart Selection](charts/features/chart-data-selection.md) - New series selection styling. This is adopted broadly across all category, financial and radial series for [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) and [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html). Series can be clicked and shown a different color, brightened or faded, and focus outlines. Manage which items are effected through individual series or entire data item. Multiple series and markers are supported. Useful for illustrating various differences or similarities between values of a particular data item. Also `SelectedSeriesItemsChanged` event and [`selectedSeriesItems`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#selectedSeriesItems) are available for additional help to build out robust business requirements surrounding other actions that can take place within an application such as a popup or other screen with data analysis based on the selection.
+- [Chart Selection](charts/features/chart-data-selection.md) - New series selection styling. This is adopted broadly across all category, financial and radial series for [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) and [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html). Series can be clicked and shown a different color, brightened or faded, and focus outlines. Manage which items are effected through individual series or entire data item. Multiple series and markers are supported. Useful for illustrating various differences or similarities between values of a particular data item. Also  `SelectedSeriesItemsChanged` event and [`selectedSeriesItems`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#selectedSeriesItems) are available for additional help to build out robust business requirements surrounding other actions that can take place within an application such as a popup or other screen with data analysis based on the selection.
 
 - [Treemap Highlighting](charts/types/treemap-chart.md#angular-treemap-highlighting) - Now exposes a [`highlightingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#highlightingMode) property that allows you to configure the mouse-over highlighting of the items in the tree map. This property takes two options: `Brighten` where the highlight will apply to the item that you hover the mouse over only, and `FadeOthers` where the highlight of the hovered item will remain the same, but everything else will fade out. This highlight is animated, and can be controlled using the [`highlightingTransitionDuration`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#highlightingTransitionDuration) property.
 
@@ -325,7 +326,7 @@ The following table lists the bug fixes made for the Ignite UI for Angular tools
 
 - `XamRadialChart`
   - New Label Mode
-    The [`IgxCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategoryangleaxiscomponent.html) for the now exposes a [`labelMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategoryangleaxiscomponent.html#labelMode) property that allows you to further configure the location of the labels. This allows you to toggle between the default mode by selecting the `Center` enum, or use the new mode, `ClosestPoint`, which will bring the labels closer to the circular plot area.
+        The [`IgxCategoryAngleAxisComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategoryangleaxiscomponent.html) for the now exposes a [`labelMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategoryangleaxiscomponent.html#labelMode) property that allows you to further configure the location of the labels. This allows you to toggle between the default mode by selecting the `Center` enum, or use the new mode, `ClosestPoint`, which will bring the labels closer to the circular plot area.
 
 ### igniteui-angular-gauges
 
@@ -457,8 +458,8 @@ This release introduces a few improvements and simplifications to visual design 
 - Simplified shapes of series in chart's legend to display only circle, line, or square. This can be reverted by setting chart's [`legendItemBadgeMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriesviewercomponent.html#legendItemBadgeMode) property to `MatchSeries` enum value
 - Changed color palette of series and markers displayed in all charts to improve accessibility
 
-| Old brushes/outlines                                                                                                                                                                                                                                                                                                                                                                                                                                                              | New outline/brushes                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Old brushes/outlines | New outline/brushes |
+| -------------------- | ------------------- |
 | <span style="color:#8BDC5C">#8BDC5C</span> <br><span style="color:#8B5BB1">#8B5BB1</span> <br><span style="color:#6DB1FF">#6DB1FF</span> <br><span style="color:#F8A15F">#F8A15F</span> <br><span style="color:#EE5879">#EE5879</span> <br><span style="color:#735656">#735656</span> <br><span style="color:#F7D262">#F7D262</span> <br><span style="color:#8CE7D9">#8CE7D9</span> <br><span style="color:#E051A9">#E051A9</span> <br><span style="color:#A8A8B7">#A8A8B7</span> | <span style="color:#8BDC5C">#8BDC5C</span> <br><span style="color:#8961A9">#8961A9</span> <br><span style="color:#6DB1FF">#6DB1FF</span> <br><span style="color:#82E9D9">#82E9D9</span> <br><span style="color:#EA3C63">#EA3C63</span> <br><span style="color:#735656">#735656</span> <br><span style="color:#F8CE4F">#F8CE4F</span> <br><span style="color:#A8A8B7">#A8A8B7</span> <br><span style="color:#E051A9">#E051A9</span> <br><span style="color:#FF903B">#FF903B</span> <br> |
 
 <div class="divider--half"></div>
@@ -500,14 +501,14 @@ This release introduces several new and improved visual design and configuration
 - Added support to automatically expanding the horizontal margins of the chart based on the initial labels displayed
 - Redesigned color palette of series and markers:
 
-| Old brushes/outlines                                                                                                                                                                                                                                                                                                                                                                                                                                                              | New outline/brushes                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Old brushes/outlines | New outline/brushes |
+| -------------------- | ------------------- |
 | <span style="color:#7446B9">#7446B9</span> <br><span style="color:#9FB328">#9FB328</span> <br><span style="color:#F96232">#F96232</span> <br><span style="color:#2E9CA6">#2E9CA6</span> <br><span style="color:#DC3F76">#DC3F76</span> <br><span style="color:#FF9800">#FF9800</span> <br><span style="color:#3F51B5">#3F51B5</span> <br><span style="color:#439C47">#439C47</span> <br><span style="color:#795548">#795548</span> <br><span style="color:#9A9A9A">#9A9A9A</span> | <span style="color:#8bdc5c">#8bdc5c</span> <br><span style="color:#8b5bb1">#8b5bb1</span> <br><span style="color:#6db1ff">#6db1ff</span> <br><span style="color:#f8a15f">#f8a15f</span> <br><span style="color:#ee5879">#ee5879</span> <br><span style="color:#735656">#735656</span> <br><span style="color:#f7d262">#f7d262</span> <br><span style="color:#8ce7d9">#8ce7d9</span> <br><span style="color:#e051a9">#e051a9</span> <br><span style="color:#a8a8b7">#a8a8b7</span> <br> |
 
 for example:
 
-|                                                                                        |                                                                                        |
-| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+|   |   |
+|---|---|
 | <img class="responsive-img" src="../images/chartDefaults1.png" alt="chartDefaults1" /> | <img class="responsive-img" src="../images/chartDefaults2.png" alt="chartDefaults2" /> |
 | <img class="responsive-img" src="../images/chartDefaults3.png" alt="chartDefaults3" /> | <img class="responsive-img" src="../images/chartDefaults4.png" alt="chartDefaults4" /> |
 
@@ -537,14 +538,14 @@ Import statements have been simplified to use just package names instead of full
 > [!Note]
 > These breaking changes were introduce in these packages and components only:
 
-| Affected Packages                                                                                                              | Affected Components                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| <a href="https://www.npmjs.com/package/igniteui-angular-excel/v/8.2.12" target="_blank">igniteui-angular-excel</a>             | [Excel Library](excel-library.md)                                                                          |
-| <a href="https://www.npmjs.com/package/igniteui-angular-spreadsheet/v/8.2.12" target="_blank">igniteui-angular-spreadsheet</a> | [Spreadsheet](spreadsheet-overview.md)                                                                     |
-| <a href="https://www.npmjs.com/package/igniteui-angular-maps/v/8.2.12" target="_blank">igniteui-angular-maps</a>               | [Geo Map](geo-map.md), [Treemap](charts/types/treemap-chart.md)                                            |
-| <a href="https://www.npmjs.com/package/igniteui-angular-gauges/v/8.2.12" target="_blank">igniteui-angular-gauges</a>           | [Bullet Graph](bullet-graph.md), [Linear Gauge](linear-gauge.md), [Radial Gauge](radial-gauge.md)          |
-| <a href="https://www.npmjs.com/package/igniteui-angular-charts/v/8.2.12" target="_blank">igniteui-angular-charts</a>           | Category Chart, Data Chart, Donut Chart, Financial Chart, Pie Chart, [Zoom Slider](zoomslider-overview.md) |
-| <a href="https://www.npmjs.com/package/igniteui-angular-core/v/8.2.12" target="_blank">igniteui-angular-core</a>               | all classes and enums                                                                                      |
+| Affected Packages | Affected Components |
+| ------------------|---------------------|
+| <a href="https://www.npmjs.com/package/igniteui-angular-excel/v/8.2.12" target="_blank">igniteui-angular-excel</a> | [Excel Library](excel-library.md)  |
+| <a href="https://www.npmjs.com/package/igniteui-angular-spreadsheet/v/8.2.12" target="_blank">igniteui-angular-spreadsheet</a> | [Spreadsheet](spreadsheet-overview.md) |
+| <a href="https://www.npmjs.com/package/igniteui-angular-maps/v/8.2.12" target="_blank">igniteui-angular-maps</a> | [Geo Map](geo-map.md), [Treemap](charts/types/treemap-chart.md)  |
+| <a href="https://www.npmjs.com/package/igniteui-angular-gauges/v/8.2.12" target="_blank">igniteui-angular-gauges</a> |  [Bullet Graph](bullet-graph.md), [Linear Gauge](linear-gauge.md), [Radial Gauge](radial-gauge.md)   |
+| <a href="https://www.npmjs.com/package/igniteui-angular-charts/v/8.2.12" target="_blank">igniteui-angular-charts</a>| Category Chart, Data Chart, Donut Chart, Financial Chart, Pie Chart, [Zoom Slider](zoomslider-overview.md)  |
+| <a href="https://www.npmjs.com/package/igniteui-angular-core/v/8.2.12" target="_blank">igniteui-angular-core</a> | all classes and enums  |
 
 - Code After Changes
 
@@ -557,10 +558,10 @@ Please also note that the name of the Data Grid component and its corresponding 
 import { IgxLinearGauge } from "igniteui-angular-gauges";
 import { IgxLinearGaugeModule } from "igniteui-angular-gauges";
 import { IgxLinearGraphRange } from "igniteui-angular-gauges";
-import { IgxRadialGauge } from "igniteui-angular-gauges}";
-import { IgxRadialGaugeModule } from "igniteui-angular-gauges";
-import { IgxRadialGaugeRange } from "igniteui-angular-gauges";
-import { SweepDirection } from "igniteui-angular-core";
+import { IgxRadialGauge } from 'igniteui-angular-gauges}';
+import { IgxRadialGaugeModule } from 'igniteui-angular-gauges';
+import { IgxRadialGaugeRange } from 'igniteui-angular-gauges';
+import { SweepDirection } from 'igniteui-angular-core';
 // charts:
 import { IgxFinancialChartComponent } from "igniteui-angular-charts";
 import { IgxFinancialChartModule } from "igniteui-angular-charts";
@@ -577,9 +578,9 @@ Before, you had to import using full paths to API classes and enums:
 
 ```ts
 // gauges:
-import { IgxLinearGaugeComponent } from "igniteui-angular-gauges/ES5/igx-linear-gauge-component";
-import { IgxLinearGaugeModule } from "igniteui-angular-gauges/ES5/igx-linear-gauge-module";
-import { IgxLinearGraphRange } from "igniteui-angular-gauges/ES5/igx-linear-graph-range";
+import { IgxLinearGaugeComponent } from 'igniteui-angular-gauges/ES5/igx-linear-gauge-component';
+import { IgxLinearGaugeModule } from 'igniteui-angular-gauges/ES5/igx-linear-gauge-module';
+import { IgxLinearGraphRange } from 'igniteui-angular-gauges/ES5/igx-linear-graph-range';
 
 import { IgxRadialGaugeComponent } from "igniteui-angular-gauges/ES5/igx-radial-gauge-component";
 import { IgxRadialGaugeModule } from "igniteui-angular-gauges/ES5/igx-radial-gauge-module";

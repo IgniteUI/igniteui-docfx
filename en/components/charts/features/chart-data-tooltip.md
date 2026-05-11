@@ -37,7 +37,6 @@ The following example demonstrates the data tooltip with a summary applied:
                                                  github-src="charts/category-chart/data-tooltip">
 </code-view>
 
-
 ### Angular Data Tooltip Columns
 
 The columns of the [`IgxDataToolTipLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatatooltiplayercomponent.html) include the title, label, value, and units columns. Each series in the chart can have multiple columns for label, value, and units depending on the [`dataToolTipIncludedColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipIncludedColumns) or [`dataToolTipExcludedColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipExcludedColumns) collections of the chart.
@@ -78,7 +77,6 @@ The following example demonstrates a data tooltip with the added columns of Open
                                                  github-src="charts/financial-chart/data-tooltip">
 </code-view>
 
-
 ## Angular Data Tooltip Grouping for Data Chart
 
 [`dataLegendGroup`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriescomponent.html#dataLegendGroup) can be set, on all types of series, to a string that will categorize a group of series in Data Legend. Each group will have its own summary row displayed before another group of series is displayed:
@@ -89,7 +87,6 @@ By default, DataLegend will hide names of groups, but you can display group name
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/data-tooltip-grouping"
                                                  github-src="charts/data-chart/data-tooltip-grouping">
 </code-view>
-
 
 ## Angular Data Tooltip Grouping & Positioning for Category Chart & Financial Chart
 
@@ -103,7 +100,6 @@ The following example demonstrates a data tooltip positioned to the top-right of
                                                  github-src="charts/category-chart/data-tooltip-positioning">
 </code-view>
 
-
 ## Angular Data Tooltip Value Formatting
 
 The **DataToolTip** provides automatic abbreviation of large numbers using its [`dataToolTipValueFormatAbbreviation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueFormatAbbreviation) property. This adds a multiplier in the units column such as kilo, million, billion, etc. You can customize the number of fractional digits that are displayed by setting the [`dataToolTipValueFormatMinFractions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueFormatMinFractions) and [`dataToolTipValueFormatMaxFractions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueFormatMaxFractions). This will allow you to determine the minimum and maximum number of digits that appear after the decimal point, respectively.
@@ -116,7 +112,6 @@ The following example demonstrates a **DataToolTip** with the minimum and maximu
                                                  github-src="charts/category-chart/data-tooltip-formatting-decimals">
 </code-view>
 
-
 ## Angular Data Tooltip Value Mode
 
 You can change the default decimal display of values within the **DataToolTip** to be currency by changing the [`dataToolTipValueFormatMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueFormatMode) property of the layer. The **DataToolTip** also exposes the ability to modify the culture of the displayed currency symbol by using its [`dataToolTipValueFormatCulture`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueFormatCulture) property and setting it to its corresponding culture tag. For example, the following sample demonstrates a chart with the [`dataToolTipValueFormatCulture`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueFormatCulture) set to "en-GB":
@@ -126,7 +121,6 @@ You can change the default decimal display of values within the **DataToolTip** 
                     iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/data-tooltip-formatting-currency"
                                                  github-src="charts/financial-chart/data-tooltip-formatting-currency">
 </code-view>
-
 
 ## Layout Mode
 
@@ -147,7 +141,6 @@ The following example demonstrates usage of the styling properties mentioned abo
                     iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/data-tooltip-styling-props"
                                                  github-src="charts/financial-chart/data-tooltip-styling-props">
 </code-view>
-
 
 Several properties are exposed including grouping portions of the tooltip.
 

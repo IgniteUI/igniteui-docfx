@@ -21,7 +21,6 @@ You can create Ignite UI for Angular Bubble Chart in [`IgxDataChartComponent`]({
                                                  github-src="charts/data-chart/scatter-bubble-chart-multiple-sources">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Bubble Chart with Single Series
@@ -33,7 +32,6 @@ You can bind your data to `ItemsSource` property of [`IgxBubbleSeriesComponent`]
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/scatter-bubble-chart-single-source"
                                                  github-src="charts/data-chart/scatter-bubble-chart-single-source">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -47,7 +45,6 @@ In Angular Bubble Chart, binding multiple data sources works by setting each new
                                                  github-src="charts/data-chart/scatter-bubble-chart-multiple-sources">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Bubble Chart Styling
@@ -59,7 +56,6 @@ In Angular Bubble Chart, you can customize shape of bubble markers using [`marke
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/scatter-bubble-chart-styling"
                                                  github-src="charts/data-chart/scatter-bubble-chart-styling">
 </code-view>
-
 
 <div class="divider--half"></div>
 

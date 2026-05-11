@@ -21,7 +21,6 @@ This sample shows synchronization of two Angular data charts:
                                                  github-src="charts/data-chart/chart-synchronization">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Chart Synchronization Properties

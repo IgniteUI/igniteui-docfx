@@ -101,7 +101,7 @@ ItemLegend バッジを変更することもできます。デフォルトでは
 
 これらのプロパティは、「その他」のスライス (存在する場合) にのみ影響します。他のすべてのスライスは、通常のパレットと項目ごとの色付け動作を引き続き使用します。
 
-> \[!NOTE]
+> [!NOTE]
 > 「その他」のスライスは、チャートがそれを作成するように構成されている場合にのみレンダリングされます (たとえば、[`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryThreshold) が 0 より大きく、適切な [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryType) が設定されている場合)。「その他」のスライスが存在しない場合、`OthersCategoryBrush` と `OthersCategoryOutline` は表示上の効果はありません。
 
 [`IgxDataPieChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiechartcomponent.html) に「その他」カテゴリが表示されないようにするには、[`othersCategoryThreshold`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatapiebasechartcomponent.html#othersCategoryThreshold) を 0 に設定します。

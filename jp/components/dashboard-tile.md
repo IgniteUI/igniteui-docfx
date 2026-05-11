@@ -26,8 +26,6 @@ Angular Dashboard Tile は、データ ソース コレクション/配列また
 
 ## 依存関係
 
-<!-- Angular, WebComponents, React -->
-
 Ignite UI for Angular ツールセットに次のパッケージをインストールします:
 
 ```cmd
@@ -60,8 +58,6 @@ import { IgxDashboardTileModule, IgxDataChartDashboardTileModule, IgxRadialGauge
 })
 export class AppModule {}
 ```
-
-<!-- end:Angular, WebComponents, React -->
 
 ## 使用方法
 

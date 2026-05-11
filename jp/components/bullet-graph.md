@@ -24,13 +24,10 @@ Angular Bullet Graph コンポーネントは、目盛り上でメジャーの�
                                                  github-src="gauges/bullet-graph/animation">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 このゲージは、スケール、針、目盛 (1 組)、ラベル (1 組) をサポートします。このコンポーネントには、アニメーション化されたトランジションのサポートも組み込まれています。アニメーションは、[`transitionDuration`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxbulletgraphcomponent.html#transitionDuration) プロパティの設定で簡単にカスタマイズできます。
 ブレット グラフの機能には構成可能な向きや方向、視覚要素やツールチップなどがあります。
-
-<!-- Angular, React, WebComponents -->
 
 ## 依存関係
 
@@ -40,8 +37,6 @@ gauge パッケージのインストール時に core パッケージもイン�
 npm install --save igniteui-angular-core
 npm install --save igniteui-angular-gauges
 ```
-
-<!-- end: Angular, React, WebComponents -->
 
 ## モジュールの要件
 

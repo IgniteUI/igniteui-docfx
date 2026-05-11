@@ -18,7 +18,6 @@ The Infragistics Angular Excel Library allows you to work with spreadsheet data 
                                                  github-src="excel/excel-library/overview">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Dependencies

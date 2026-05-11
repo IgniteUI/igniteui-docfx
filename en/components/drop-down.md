@@ -173,6 +173,9 @@ To provide a more useful visual information, use the [isHeader]({environment:ang
 </igx-drop-down>
 ```
 
+> [!NOTE]
+> This component uses Material Icons. Add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 ```typescript
 // dropdown.component.ts
 export class MyDropDownComponent {

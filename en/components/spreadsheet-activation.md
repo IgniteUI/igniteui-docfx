@@ -19,7 +19,6 @@ The Angular Spreadsheet component exposes properties that allow you to determine
                                                  github-src="excel/spreadsheet/activation">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Activation Overview

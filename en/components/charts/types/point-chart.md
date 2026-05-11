@@ -21,7 +21,6 @@ You can create the Angular Point Chart in the [`IgxCategoryChartComponent`]({env
                                                  github-src="charts/category-chart/point-chart-multiple-sources">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Point Chart with Single Series
@@ -33,7 +32,6 @@ In the following example, the Angular Point Chart plots a single data source by 
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/point-chart-single-source"
                                                  github-src="charts/category-chart/point-chart-single-source">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -47,7 +45,6 @@ Since the Angular Point Chart allows you to combine multiple series and compare 
                                                  github-src="charts/category-chart/point-chart-multiple-sources">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Point Chart Styling
@@ -59,7 +56,6 @@ Once the Angular Point Chart is set up, we may want to make some further styling
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/point-chart-styling"
                                                  github-src="charts/category-chart/point-chart-styling">
 </code-view>
-
 
 <div class="divider--half"></div>
 

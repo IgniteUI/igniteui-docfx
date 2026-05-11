@@ -22,7 +22,6 @@ Modify or customize all aspects of both the X-Axis and Y-Axis using the differen
                                                  github-src="charts/data-chart/axis-crossing">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Annotations
@@ -34,7 +33,6 @@ These additional layers are on top of the chart which are mouse / touch dependen
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/line-chart-with-annotations"
                                                  github-src="charts/category-chart/line-chart-with-annotations">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -48,7 +46,6 @@ Animate your chart as it loads a new data source by enabling animations. These a
                                                  github-src="charts/category-chart/line-chart-with-animations">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Highlighting
@@ -60,7 +57,6 @@ Bring focus to visuals such as lines, columns, or markers by highlighting them a
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/column-chart-with-highlighting"
                                                  github-src="charts/category-chart/column-chart-with-highlighting">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -74,7 +70,6 @@ Identify data points quickly, even if the value falls between major gridlines wi
                                                  github-src="charts/category-chart/marker-options">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Navigation
@@ -86,7 +81,6 @@ You can navigate the chart by zooming and panning with the mouse, keyboard, and 
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/chart-navigation"
                                                  github-src="charts/data-chart/chart-navigation">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -100,7 +94,6 @@ Overlays allows you to annotate important values and thresholds by plotting hori
                                                  github-src="charts/data-chart/series-value-overlay">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Performance
@@ -112,7 +105,6 @@ Angular charts are optimized for high performance of rendering millions of data 
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/high-volume"
                                                  github-src="charts/category-chart/high-volume">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -126,7 +118,6 @@ Display all information relevant to the particular series type via Tooltips. The
                                                  github-src="charts/category-chart/column-chart-with-tooltips">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Trendlines
@@ -138,7 +129,6 @@ Use trendlines to identify a trend or find patterns in your data. There are many
                     iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/trendlines"
                                                  github-src="charts/financial-chart/trendlines">
 </code-view>
-
 
 <div class="divider--half"></div>
 

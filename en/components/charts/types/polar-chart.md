@@ -21,7 +21,6 @@ The Polar Area Chart renders using a collection of polygons connecting data poin
                                                  github-src="charts/data-chart/polar-area-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Polar Spline Area Chart
@@ -33,7 +32,6 @@ The Polar Spline Area Chart renders also as a collection of polygons but they ha
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/polar-spline-area-chart"
                                                  github-src="charts/data-chart/polar-spline-area-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -47,7 +45,6 @@ The Polar Marker Chart renders using a collection of markers representing data p
                                                  github-src="charts/data-chart/polar-scatter-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Polar Line Chart
@@ -59,7 +56,6 @@ The Polar Line Chart renders using a collection of straight lines connecting dat
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/polar-line-chart"
                                                  github-src="charts/data-chart/polar-line-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -73,7 +69,6 @@ The Polar Spline Chart renders using a collection of curved splines connecting d
                                                  github-src="charts/data-chart/polar-spline-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Polar Chart Styling
@@ -85,7 +80,6 @@ Once our polar chart is created, we may want to make some further styling custom
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/polar-area-chart-styling"
                                                  github-src="charts/data-chart/polar-area-chart-styling">
 </code-view>
-
 
 <div class="divider--half"></div>
 

@@ -33,6 +33,9 @@ To get started with the Ignite UI for Angular Pivot Grid component, first you ne
 ng add igniteui-angular
 ```
 
+> [!NOTE]
+> This component uses Material Icons. Add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 For a complete introduction to the Ignite UI for Angular, read the [_getting started_](../general/getting-started.md) topic.
 
 The next step is to import the `IgxPivotGridModule` in your **app.module.ts** file.

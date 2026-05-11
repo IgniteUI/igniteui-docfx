@@ -18,7 +18,6 @@ The [`IgxArcGISOnlineMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-
                                                  github-src="maps/geo-map/display-esri-imagery">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Code Snippet

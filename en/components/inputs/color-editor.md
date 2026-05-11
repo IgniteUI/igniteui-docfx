@@ -19,7 +19,6 @@ The Ignite UI for Angular Color Editor is a lightweight color picker component. 
                                                  github-src="inputs/color-editor/overview">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Dependencies

@@ -22,7 +22,6 @@ Interacting with the chart type menu in the toolbar will allow for selecting a d
                                                  github-src="charts/dashboard-tile/local-data-source-dashboard">
 </code-view>
 
-
 ## Dependencies
 
 Install the following packages in the Ignite UI for Angular toolset:
@@ -81,7 +80,6 @@ You are not locked into a single visualization when you bind the `DataSource`, a
                                                  github-src="charts/dashboard-tile/gauge-dashboard">
 </code-view>
 
-
 The visualization or properties of the visualization are also configurable using the [`IgxToolbarComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html) at the top of the control. This [`IgxToolbarComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_layouts.igxtoolbarcomponent.html) has the default tools for the current visualization with the addition of four Dashboard Tile specific ones, highlighted below:
 
 <img src="../images/dashboard-tile-toolbar.png" alt="Dashboard Tile Toolbar"/>
@@ -101,7 +99,6 @@ This demo demonstrates dashboard tile integration with the Angular Pie Chart. Th
                                                  github-src="charts/dashboard-tile/pie-dashboard">
 </code-view>
 
-
 This demo demonstrates dashboard tile integration with the Angular Geographic Map. The toolbar options at the top right provides access to styling and changing the data visualization.
 
 <code-view style="height: 600px" alt="Angular Dashboard Tile Map Example"
@@ -109,7 +106,6 @@ This demo demonstrates dashboard tile integration with the Angular Geographic Ma
                     iframe-src="{environment:dvDemosBaseUrl}/charts/dashboard-tile/map-dashboard"
                                                  github-src="charts/dashboard-tile/map-dashboard">
 </code-view>
-
 
 ## API References
 

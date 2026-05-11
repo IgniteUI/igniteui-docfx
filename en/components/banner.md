@@ -89,6 +89,9 @@ In order to display the banner component, use its [`open()`]({environment:angula
 ```
 
 > [!NOTE]
+> This component uses Material Icons. Add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
+> [!NOTE]
 > The `IgxBannerModule` includes a default banner button `Dismiss`, which closes the banner.
 
 ## Examples

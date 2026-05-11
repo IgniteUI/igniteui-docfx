@@ -1,7 +1,7 @@
 ---
-title: Angular Theming MCP | インフラジスティックス
-_description: Angular は Ignite UI Theming MCP サーバーと連携して、Ignite UI for Angular アプリケーション用のカスタム テーマ、パレット、タイポグラフィ、エレベーションを作成できます。MCP サーバーを使用してブランドおよび設計要件に合わせたカスタム テーマを生成および適用する方法について説明します。
-_keywords: Ignite UI for Angular コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, コンポーネント スイート, 人工知能, AI, MCP, Model Context Protocol, テーマ設定, カスタム テーマ, パレット, タイポグラフィ, エレベーション
+title: Angular Theming MCP | Infragistics
+_description: Ignite UI for Angular には Ignite UI Theming MCP サーバーが付属しており、Angular アプリケーション用のカスタム テーマ、パレット、タイポグラフィ、エレベーションを作成できます。MCP サーバーを使用してブランドおよび設計要件に合わせたカスタム テーマを生成および適用する方法について説明します。
+_keywords: Ignite UI for Angular, UI コントロール, Angular ウィジェット, web ウィジェット, UI ウィジェット, コンポーネント スイート, 人工知能, AI, MCP, Model Context Protocol, テーマ設定, カスタム テーマ, パレット, タイポグラフィ, エレベーション
 _license: MIT
 mentionedTypes: []
 _language: ja
@@ -9,15 +9,15 @@ _language: ja
 
 # Ignite UI Theming MCP
 
-<p class="highlight">Ignite UI Theming MCP は、AI アシスタントが Ignite UI アプリケーション用の本番利用可能なテーマ コードを生成できるようにする <a href="https://modelcontextprotocol.io/" target="_blank">Model Context Protocol</a> (MCP) サーバーです。MCP は、AI アシスタントが外部サーバーによって提供される専用のツールを呼び出すことができるようにするオープン標準です。Ignite UI Theming MCP をエディターまたはデスクトップ AI クライアントに接続し、やりたいことを伝えると、あとはアシスタントが対応します。</p>
+<p class="highlight">Ignite UI Theming MCP は、AI アシスタントが Ignite UI アプリケーション用の本番対応のテーマ コードを生成できるようにする <a href="https://modelcontextprotocol.io/" target="_blank">Model Context Protocol</a> (MCP) サーバーです。MCP は、AI アシスタントが外部サーバーによって提供される特殊なツールを呼び出すことができるようにするオープン標準です。Ignite UI Theming MCP をエディターまたはデスクトップ AI クライアントに接続し、必要なものを説明すると、アシスタントが残りを行います。</p>
 
 <div class="divider"></div>
 
 ## 概要
 
-手作業でスタイルを書く代わりに、テーマの意図を自然言語で説明し、AI アシスタントに正しいコードを生成してもらえます。MCP サーバーは、適切なシェード生成を備えたパレット、タイポグラフィ、エレベーション、コンポーネント デザイン トークン オーバーライドなどを含む、正確なテーマ コードを生成するために必要な知識とツールを AI に提供します。
+スタイルを手動で記述する代わりに、テーマの意図を自然言語で説明し、AI アシスタントに正しいコードを生成させることができます。MCP サーバーは、適切なシェード生成を備えたパレット、タイポグラフィ、エレベーション、コンポーネント デザイン トークン オーバーライドなどを含む、正確なテーマ コードを生成するために必要な知識とツールを AI に提供します。
 
-このサーバーは、4 つすべての Ignite UI デザイン システム (**Material**、**Bootstrap**、**Fluent**、**Indigo**) をライトとダークの両方のバリアントでサポートします。このガイドでは Angular に焦点を当てていますが、MCP サーバーは **Ignite UI for Web Components**、**React**、**Blazor** でも動作します。`detect_platform` ツールは `package.json` を読み取り、正しいインポート パスとセレクターを自動的に選択します。
+このサーバーは、4 つすべての Ignite UI デザイン システム (**Material**、**Bootstrap**、**Fluent**、**Indigo**) をライトとダークの両方のバリアントでサポートします。このガイドでは Angular に焦点を当てていますが、MCP サーバーは Infragistics のすべての Ignite UI コンポーネント ライブラリでも動作します。`detect_platform` ツールは `package.json` を読み取り、正しいインポート パスとセレクターを自動的に選択します。
 
 ほとんどのツールは、**Sass** または **CSS** 出力のいずれかを生成できます。Sass 出力がデフォルトで、`igniteui-theming` Sass モジュールと統合されます。CSS 出力は、すぐに使用できる CSS カスタム プロパティを生成し、**ローカル Sass ツールチェーンなしで**使用できます。サーバーがコンパイルを行います。
 
@@ -35,21 +35,24 @@ _language: ja
 
 MCP サーバーを構成する前に、次のものがあることを確認してください。
 
-- **Node.js** (v18 以降) がインストールされていること - これにより、サーバーの起動に使用される `npx` コマンドが提供されます。
+- **Node.js** (v18 以降) がインストールされていること — これにより、サーバーの起動に使用される `npx` コマンドが提供されます。
 - `package.json` に依存関係として **Ignite UI パッケージ**がリストされているプロジェクト。
-- **MCP サポートを備えた AI クライアント** - 例: VS Code と GitHub Copilot、Cursor、Claude Desktop、Claude Code、または AI Assistant プラグインを備えた JetBrains IDE。
 
-Ignite UI Theming がまだインストールされていない場合は、次のコマンドを実行します。
+Angular の場合、これは `igniteui-angular` (v15.0 以降) です。サーバーは、`igniteui-webcomponents`、`igniteui-react`、`igniteui-blazor` もサポートします。
+
+- **MCP サポートを備えた AI クライアント** — 例: VS Code と GitHub Copilot、Cursor、Claude Desktop、Claude Code、または AI Assistant プラグインを備えた JetBrains IDE。
+
+`igniteui-angular` がまだインストールされていない場合は、次のコマンドを実行します。
 
 ```bash
-npm install igniteui-theming
+ng add igniteui-angular
 ```
 
 ## セットアップ
 
 MCP サーバーは `igniteui-theming` パッケージにバンドルされており、`npx` 経由で起動されます。プロジェクトに Ignite UI パッケージが既にインストールされている以外に、別途インストールする必要はありません。
 
-正式な起動コマンドは次のとおりです。
+正規の起動コマンドは次のとおりです。
 
 ```bash
 npx -y igniteui-theming igniteui-theming-mcp
@@ -153,9 +156,12 @@ Claude Code 内で `/mcp` コマンドを使用して、サーバーが接続さ
 
 JetBrains AI Assistant は、IDE 設定を介して MCP サーバーをサポートします。
 
-1. **[Settings]** (macOS では **[Preferences]**) を開きます。
-2. **[Tools] → [AI Assistant] → [Model Context Protocol (MCP)]** に移動します。
-3. **[+ Add]** をクリックし、**[As JSON]** を選択するか、フォーム フィールドを使用します。
+1. **\[Settings]** (macOS では **\[Preferences]**) を開きます。
+
+2. **\[Tools] → \[AI Assistant] → \[Model Context Protocol (MCP)]** に移動します。
+
+3. **\[+ Add]** をクリックし、**\[As JSON]** を選択するか、フォーム フィールドを使用します。
+
 4. 以下の構成を入力します。
 
     ```json
@@ -169,7 +175,7 @@ JetBrains AI Assistant は、IDE 設定を介して MCP サーバーをサポー
     }
     ```
 
-5. **[OK]** をクリックし、AI Assistant を再起動します。
+5. **\[OK]** をクリックし、AI Assistant を再起動します。
 
 > [!NOTE]
 > MCP サポートには、JetBrains IDE に AI Assistant プラグインがインストールされて有効になっている必要があります。
@@ -231,7 +237,7 @@ MCP サーバーは、プロンプトに基づいて AI が自動的に使用す
 
 現在の完全なツール リストとそのパラメーターをいつでも確認するには、AI アシスタントに次のように尋ねてください。
 
-> 「What tools does the Ignite UI Theming MCP provide?」 (Ignite UI Theming MCP はどのようなツールを提供していますか?)
+> 「Ignite UI Theming MCP はどのようなツールを提供していますか?」
 
 各ツールの簡単な概要を以下に示します。
 
@@ -265,7 +271,7 @@ MCP サーバーは、プロンプトに基づいて AI が自動的に使用す
 
 > 「Ignite UI を使用して新しい Angular プロジェクトを開始しています。プライマリ #2563eb、セカンダリ #f97316、Roboto フォントで完全な Material Design ライト テーマを作成して。」
 
-AI は `create_theme` を呼び出し、すぐに使用できる `styles.scss` ファイルを返します。生成される出力は次のようになります:
+AI は `create_theme` を呼び出し、すぐに使用できる `styles.scss` ファイルを返します。生成される出力は次のようになります。
 
 ```scss
 /* styles.scss */
@@ -293,19 +299,19 @@ $my-typography: typography(
 
 ### ブランド固有のカラー シェード
 
-> 「デザイン システムでは、プライマリ グリーンの 14 個すべてのシェードに正確な 16 進数値が指定されています。値を貼り付けます - カスタム パレットを作成して」
+> 「デザイン システムでは、プライマリ グリーンの 14 個すべてのシェードに正確な 16 進数値が指定されています。値を貼り付けます — カスタム パレットを作成して。」
 
-AI は、プライマリ カラーに `mode: "explicit"` を使用して `create_custom_palette` を呼び出し、残りは自動生成します。シェード生成の詳細については、[パレット](https://www.infragistics.com/products/ignite-ui-angular/angular/components/themes/sass/palettes)を参照してください。
+AI は、プライマリ カラーに `mode: "explicit"` を使用して `create_custom_palette` を呼び出し、残りは自動生成します。 シェード生成の詳細については、[パレット](https://www.infragistics.com/products/ignite-ui-angular/angular/components/themes/sass/palettes)を参照してください。
 
 ### コンポーネント レベルのカスタマイズ
 
-> 「フラット ボタンを紫の背景 #8b5cf6 と白いテキストでスタイル設定し、ホバー時にはより明るい紫 #a78bfa にして」
+> 「フラット ボタンを紫の背景 #8b5cf6 と白いテキストでスタイル設定し、ホバー時にはより明るい紫 #a78bfa にして。」
 
 AI は最初に `get_component_design_tokens` を呼び出して有効なトークン名を検出し、次に正しい値で `create_component_theme` を呼び出します。
 
 ### レイアウト調整
 
-> 「カレンダーが場所を取りすぎている感じがします — 間隔を減らして、すべてのコンポーネントを少し小さくして」
+> 「カレンダーが場所を取りすぎている感じがします — 間隔を減らして、すべてのコンポーネントを少し小さくして。」
 
 AI は、カレンダー コンポーネントにスコープされた `set_spacing` と `:root` レベルで `set_size` を呼び出します。
 
@@ -313,7 +319,7 @@ AI は、カレンダー コンポーネントにスコープされた `set_spac
 
 **プラットフォームが検出されない**
 
-`detect_platform` が `null` または `generic` を返す場合は、`package.json` に Ignite UI パッケージ (例: `igniteui-angular`) が依存関係としてリストされていることを確認してください。AI に明示的に伝えることもできます: 「Angular プラットフォームを使用して」
+`detect_platform` が `null` または `generic` を返す場合は、`package.json` に Ignite UI パッケージ (例: `igniteui-angular`) が依存関係としてリストされていることを確認してください。AI に明示的に伝えることもできます: 「Angular プラットフォームを使用して。」
 
 **カラーの輝度警告**
 
@@ -331,11 +337,13 @@ AI がカラーの輝度について警告した場合、選択したカラー�
 ng add igniteui-angular
 ```
 
-また、`styles.scss` で他のテーマ mixin の前に `core()` が呼び出されていることを確認してください。正しいファイル設定については、[Sass を使用したテーマ](<a href="https://www.infragistics.com/products/ignite-ui-angular/angular/components/themes/sass/index">) を参照してください。
+また、`styles.scss` で他のテーマ mixin の前に `core()` が呼び出されていることを確認してください。正しいファイルのセットアップについては、「[Sass を使用したテーマ設定](<a href="https://www.infragistics.com/products/ignite-ui-angular/angular/components/themes/sass/index">)」を参照してください。
 
 ## その他のリソース
 
 - [Ignite UI for Angular スキル](./skills.md)
+- [MAKER Framework](./maker-framework.md)
+
 
 <!-- Ideally these should be included once documentation is combined
 - [Theming Overview](../themes/index.md)
@@ -349,7 +357,8 @@ ng add igniteui-angular
 
 <div class="divider--half"></div>
 
-コミュニティに参加して新しいアイデアをご提案ください。
+コミュニティは常に活気があり、新しいアイデアを歓迎しています。
+
 
 - [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 - [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

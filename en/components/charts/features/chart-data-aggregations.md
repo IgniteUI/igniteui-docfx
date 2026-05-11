@@ -23,7 +23,6 @@ Note, the abbreviated functions found within the dropdowns for [`initialSummarie
                                                  github-src="charts/category-chart/data-aggregations">
 </code-view>
 
-
 ```html
 <igx-category-chart
     [dataSource]="salesData"

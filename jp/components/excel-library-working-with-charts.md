@@ -20,7 +20,7 @@ Infragistics Angular Excel Engine の [`WorksheetChart`]({environment:dvApiBaseU
 </code-view>
 
 
-> \[!Note]
+> [!Note]
 > XLSX 形式が必要です。他の形式は現在サポートされていません。
 
 <div class="divider--half"></div>

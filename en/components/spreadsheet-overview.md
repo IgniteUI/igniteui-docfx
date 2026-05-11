@@ -18,7 +18,6 @@ The Angular Spreadsheet  (Excel viewer) component is lightweight, feature-rich a
                                                  github-src="excel/spreadsheet/overview">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Functionality

@@ -22,8 +22,6 @@ Excel ワークシートの [`WorksheetCell`]({environment:dvApiBaseUrl}/product
 
 <div class="divider--half"></div>
 
-<!-- Angular, React, WebComponents -->
-
 ## 参照
 
 以下のコードは、以下のコード スニペットを使用するインポートを示します。
@@ -37,8 +35,6 @@ import { NamedReference } from "igniteui-angular-excel";
 import { WorksheetCellComment } from "igniteui-angular-excel";
 import { FormattedString } from "igniteui-angular-excel";
 ```
-
-<!-- end: Angular, React, WebComponents -->
 
 ## セルと領域を参照
 

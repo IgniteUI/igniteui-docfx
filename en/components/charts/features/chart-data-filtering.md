@@ -27,7 +27,6 @@ The following example depicts a [Column Chart](../types/column-chart.md) of annu
                                                  github-src="charts/category-chart/data-filter">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 The [`initialFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#initialFilter) property is a string that requires the following syntax in order to filter properly. The value requires sets of parentheses that include both the filter expression definition, column and value associated with the record(s) filtering in.

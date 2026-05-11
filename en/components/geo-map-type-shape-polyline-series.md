@@ -18,7 +18,6 @@ In Angular map component, you can use the [`IgxGeographicPolylineSeriesComponent
                                                  github-src="maps/geo-map/type-shape-polyline-series">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 The [`IgxGeographicPolylineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicpolylineseriescomponent.html) works a lot like the [`IgxGeographicShapeSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicshapeseriescomponent.html) except that geo-spatial data is rendered with polylines instead of polygons.

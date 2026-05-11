@@ -18,7 +18,6 @@ The Infragistics Angular Excel Library has support for adding sparklines to an E
                                                  github-src="excel/excel-library/working-with-sparklines">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Supported Sparklines

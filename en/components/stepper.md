@@ -115,6 +115,8 @@ Steps can be declared using one of the following approaches.
 </igx-stepper>
 ```
 
+> [!NOTE]
+> This component uses Material Icons. Add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
 
 - Creating static steps
 

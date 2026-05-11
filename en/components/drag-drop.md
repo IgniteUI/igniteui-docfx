@@ -127,6 +127,9 @@ The ghost element by default is a copy of the base element the `igxDrag` is used
 
 ```
 
+> [!NOTE]
+> This component uses Material Icons. Add the following link to your `index.html`: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 ### Dragging Without Ghost
 
 If you would like to move the base element, to which the `igxDrag` directive is applied, you can do that by setting the [`ghost`]({environment:angularApiUrl}/classes/igxdragdirective.html#ghost) input to `false`. That way there will be no extra ghost element rendered and if you need to apply custom styling when dragging and element, you can apply it directly to the base element.

@@ -14,8 +14,6 @@ It is highly recommended that you review the [Binding Shape Files with Geo-Spati
 
 ## Angular Displaying Heat Imagery Example
 
-<!-- Angular, React -->
-
 ```ts
 //WebComponents sample not working in CodeSandbox. Remove build flag once this is fixed.
 ```
@@ -28,8 +26,6 @@ It is highly recommended that you review the [Binding Shape Files with Geo-Spati
 
 
 <div class="divider--half"></div>
-
-<!-- end: Angular, React -->
 
 When a `ShapeDataSource` loads its shape files, it converts that data into [`IgxShapefileRecord`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapefilerecord.html) objects. These objects can be retrieved from the `GetPointData()` method of the `ShapeDataSource` and can then be used to create a heat-map through usage of a [`IgxTileGeneratorMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxtilegeneratormapimagery.html) object with a [`IgxHeatTileGenerator`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxheattilegenerator.html) assigned to its `TileGenerator` property. This [`IgxTileGeneratorMapImagery`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxtilegeneratormapimagery.html) can then be used in a geographic tile series as its `TileImagery` source.
 

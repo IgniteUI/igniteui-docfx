@@ -18,7 +18,6 @@ In the Ignite UI for Angular map, you can add multiple geographic series objects
                                                  github-src="maps/geo-map/binding-multiple-sources">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 This topic takes you step-by-step towards displaying multiple geographic series that will plot following geo-spatial data:

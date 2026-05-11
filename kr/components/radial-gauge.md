@@ -25,16 +25,12 @@ The following sample demonstrates how setting multiple properties on the same ga
 
 <div class="divider--half"></div>
 
-<!-- Angular, React, WebComponents -->
-
 ## Dependencies
 
 When installing the gauge package, the core package must also be installed.
 
 - **npm install --save igniteui-angular-core**
 - **npm install --save igniteui-angular-gauges**
-
-<!-- end: Angular, React, WebComponents -->
 
 ## Component Modules
 

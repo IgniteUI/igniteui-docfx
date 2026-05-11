@@ -18,7 +18,6 @@ The Angular Spreadsheet component allows you to conditionally format the cells o
                                                  github-src="excel/spreadsheet/conditional-formatting">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Conditional Formatting Overview

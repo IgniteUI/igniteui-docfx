@@ -181,7 +181,7 @@ this.LineSeries.Resolution = 10;
 
 データ ポイント間の時間間隔に基づくスペースが重要でない場合は、DateTime をサポートする x 軸の使用はお勧めしません。代わりに、順序/カテゴリ軸を使用する必要があります。これは、データを結合する方法がより効率的であるためです。また、順序/カテゴリ軸は、時間ベースの x 軸のようにデータのソートを実行しません。
 
-> \[!Note]
+> [!Note]
 > [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) はすでに順序/カテゴリ軸を使用しているため、そのプロパティを変更する必要はありません。
 
 このコード スニペットは、[`IgxFinancialChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxfinancialchartcomponent.html) および [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) コントロールで x 軸を順序付け/カテゴリ化する方法を示しています。
@@ -198,7 +198,7 @@ this.LineSeries.Resolution = 10;
 
 デフォルトでは、Angular チャートは、データの範囲に基づいて [`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#yAxisInterval) を自動的に計算します。したがって、軸のグリッド線と軸のラベルが多すぎないように、軸の間隔を特に小さい値に設定することは避けてください。また、多くの軸グリッド線または軸ラベルが必要ない場合は、[`yAxisInterval`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#yAxisInterval) プロパティを自動的に計算された軸間隔よりも大きい値に増やすことを検討することをお勧めします。
 
-> \[!Note]
+> [!Note]
 > チャートのパフォーマンスが低下するため、軸の副間隔を設定することはお勧めしません。
 
 このコード スニペットは、Angular チャートで軸の主間隔を設定する方法を示しています。

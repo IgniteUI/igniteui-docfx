@@ -18,7 +18,6 @@ This topic explains how to configure and set the built-in data validation rules.
                                                  github-src="excel/spreadsheet/data-validation">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Dependencies
