@@ -1089,9 +1089,6 @@ protected get sizeStyle() {
 </table>
 </div>
 
-ボタンにスタイルを設定する別の方法は、**Sass** とタイプ別テーマ関数を使用することです。[`flat-button-theme`]({environment:sassApiUrl}/themes#function-flat-button-theme)、[`outlined-button-theme`]({environment:sassApiUrl}/themes#function-outlined-button-theme)、[`contained-button-theme`]({environment:sassApiUrl}/themes#function-contained-button-theme)、および [`fab-button-theme`]({environment:sassApiUrl}/themes#function-fab-button-theme)。
-
-それぞれは、特定のタイプのボタンのみをターゲットにします。
 
 <div class="theme-table indigo">
 <h3>Indigo テーマ</h3>
@@ -1418,7 +1415,7 @@ protected get sizeStyle() {
 
 各関数は、特定のタイプのボタンのみをターゲットにします。
 
-**Sass** を使用してボタンのスタイル設定を開始するには、まずすべてのテーマ関数とコンポーネント ミックスインを含む `index` ファイルをインポートします。
+始めるには、まずすべてのテーマ関数とコンポーネント ミックスインを含む themes モジュールをインポートします。
 
 ```scss
 @use "igniteui-angular/theming" as *;
