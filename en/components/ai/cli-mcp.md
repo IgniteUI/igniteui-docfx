@@ -1,13 +1,13 @@
 ---
-title: Angular Ignite UI CLI MCP | Infragistics
-_description: Connect Ignite UI CLI MCP to your AI client to scaffold projects, modify existing apps, create and update components, and ask documentation questions for Ignite UI for Angular. Learn the setup options for VS Code, GitHub, Cursor, Claude Desktop, Claude Code, JetBrains, and other MCP clients.
+title: Ignite UI CLI MCP | Infragistics
+_description: Use the Ignite UI CLI MCP server to scaffold Ignite UI for Angular projects, add components, and answer API questions through your AI assistant.
 _keywords: Angular, Ignite UI for Angular, Infragistics, Ignite UI CLI MCP, Ignite UI Theming MCP, MCP, Model Context Protocol, AI, agent, GitHub Copilot, Cursor, Claude, JetBrains
 _language: en
 _license: MIT
 _canonicalLink: "{environment:dvUrl}/components/ai/cli-mcp"
 namespace: Infragistics.Controls
 mentionedTypes: []
-last_updated: "2026-04-21"
+last_updated: "2026-04-24"
 ---
 
 <!-- schema: Article, HowTo -->
@@ -20,7 +20,7 @@ last_updated: "2026-04-21"
 
 ## Overview
 
-Ignite UI CLI MCP gives AI assistants direct access to Ignite UI CLI project scaffolding, component generation, project modification, and documentation-aware workflows through chat or agent mode. The server works alongside Ignite UI Theming MCP - CLI MCP handles project and component workflows while Theming MCP handles palettes, themes, tokens, and styling. Most teams connect both servers in the same AI client session.
+Ignite UI CLI MCP gives AI assistants direct access to Ignite UI CLI project scaffolding, component generation, project modification, and documentation-aware workflows through chat or agent mode. The server works alongside [Ignite UI Theming MCP](./theming-mcp.md). CLI MCP handles project and component workflows while Theming MCP handles palettes, themes, tokens, and styling. Most teams connect both servers in the same AI client session.
 
 The recommended setup path is to start with Ignite UI CLI first. That path creates the project, installs the required packages, and writes the initial MCP configuration for VS Code. You can also start from an empty folder and let the assistant create the project through MCP, or connect MCP to a project that already exists.
 
@@ -127,12 +127,10 @@ ig new my-app --framework=angular --type=igx-ts --template=empty
 Matching `npx` form:
 
 ```bash
-npx --package igniteui-cli igniteui new my-app --framework=angular --type=igx-ts --template=empty
+npx ig new my-app --framework=angular --type=igx-ts --template=empty
 ```
 
 In guided mode, Ignite UI CLI prompts for the project name, framework, template, theme, and whether to add a component or complete the setup. In direct mode, you provide the framework and any supported options in the command itself.
-
-For more details about project templates, CLI command options, and component scaffolding commands such as `ig add`, see the Ignite UI CLI documentation for Angular.
 
 ### VS Code
 
