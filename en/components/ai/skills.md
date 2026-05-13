@@ -166,6 +166,22 @@ robocopy node_modules\igniteui-angular\skills\igniteui-angular-grids .agents\ski
 robocopy node_modules\igniteui-angular\skills\igniteui-angular-theming .agents\skills\igniteui-angular-theming /E
 ```
 
+### **Option B - Use the `GitHub CLI`**
+
+The GitHub CLI can be used to download skill files directly from the Ignite UI for Angular repository. Run the following commands in your project root to start the installation process:
+
+```bash
+gh skill install IgniteUI/igniteui-angular
+```
+
+You will be asked to select which skills to install (components, grids, theming) and the target Agents for the skill files in your project. The CLI will then download and place the selected skill files into the chosen location.
+
+To update skills later, run the following command:
+
+```bash
+gh skill update IgniteUI/igniteui-angular
+```
+
 ### **Option C - Use the `gemini skills` CLI**
 
 The `gemini skills install` command installs skills directly from a Git repository. It supports two scopes:
