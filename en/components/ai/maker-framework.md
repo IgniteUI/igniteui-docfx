@@ -17,7 +17,7 @@ mentionedTypes: []
 
 The MAKER Framework (`@igniteui/maker-mcp`) is a multi-agent AI orchestration MCP server from Infragistics that decomposes complex tasks into validated, executable step plans using a consensus-based voting algorithm across multiple AI agents. MAKER stands for Maximal Agentic decomposition, first-to-ahead-by-K Error correction, and Red-flagging. The framework is based on the research paper _Solving a million-step LLM task with zero errors_ by Cognizant AI Lab. It runs as an MCP server via `npx` from the `@igniteui` GitHub Packages registry and connects to any MCP-compatible AI client through STDIO transport. Once connected, the AI assistant can invoke three tools - `plan`, `execute`, and `plan_and_execute` - to run long-horizon tasks with automatic error detection and correction.
 
-The MAKER Framework is not an Ignite UI component scaffolding tool. For Ignite UI project creation, component generation, and documentation queries, use the [CLI MCP server](cli-mcp.md). MAKER is framework-agnostic - it does not target Angular, React, or Web Components specifically, and it does not read or modify project source files on its own. It requires at least one AI provider API key (OpenAI, Anthropic, or Google AI) and a GitHub Personal Access Token with `read:packages` scope for the `@igniteui` registry.
+The MAKER Framework is not an Ignite UI component scaffolding tool. For Ignite UI project creation, component generation, and documentation queries, use the [CLI MCP server](cli-mcp.md). MAKER is framework-agnostic - it does not target Angular, React, Blazor or Web Components specifically, and it does not read or modify project source files on its own. It requires at least one AI provider API key (OpenAI, Anthropic, or Google AI) and a GitHub Personal Access Token with `read:packages` scope for the `@igniteui` registry.
 
 ## How MAKER Works
 
@@ -68,23 +68,23 @@ Switch Copilot Chat to Agent mode and confirm that `plan`, `execute`, and `plan_
 ### Claude Desktop
 
 1. Open your Claude Desktop configuration file:
-    - macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
-    - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
+  - macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
+  - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
 2. Add the `maker` entry to the `mcpServers` block:
 
-    ```json
-    {
-      "mcpServers": {
-        "maker": {
-          "command": "npx",
-          "args": ["-y", "@igniteui/maker-mcp", "--stdio"],
-          "env": {
-            "Executor__AIProviderKeys__Anthropic": "<your-anthropic-key>"
-          }
-        }
+```json
+{
+  "mcpServers": {
+    "maker": {
+      "command": "npx",
+      "args": ["-y", "@igniteui/maker-mcp", "--stdio"],
+      "env": {
+        "Executor__AIProviderKeys__Anthropic": "<your-anthropic-key>"
       }
     }
-    ```
+  }
+}
+```
 
 3. Restart Claude Desktop. The first start downloads the native binary (~30 s on a typical connection).
 
