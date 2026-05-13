@@ -22,7 +22,6 @@ Ignite UI for Angular では、[`IgxDataLegendComponent`]({environment:dvApiBase
                                                  github-src="charts/category-chart/data-legend">
 </code-view>
 
-
 ### ヘッダー行
 
 ヘッダー行には、カテゴリ シリーズとファイナンシャル シリーズにマウスを合わせると、x 軸の現在のラベルが表示されます。x 軸に日付が表示されている場合は、[`headerFormatDate`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#headerFormatDate) プロパティと [`headerFormatTime`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#headerFormatTime) プロパティを使用して、[`IgxDataLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html) の日付と時刻を書式設定できます。他のタイプのシリーズの場合、[`IgxDataLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html) はヘッダー行を描画しません。
@@ -44,7 +43,6 @@ Ignite UI for Angular では、[`IgxDataLegendComponent`]({environment:dvApiBase
                     iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/data-legend"
                                                  github-src="charts/financial-chart/data-legend">
 </code-view>
-
 
 [`includedColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#includedColumns) プロパティと [`excludedColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#excludedColumns) プロパティの値の設定は、シリーズのタイプとそれらがサポートするデータ列の数によって異なります。たとえば、[`includedColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#includedColumns) プロパティに **Open** および **Close** の文字列コレクションを設定すると、チャートがファイナンシャル シリーズをプロットしているときに、株価の始値と終値のみが表示されます。次の表に、データ シリーズの列をフィルタリングするために使用できるすべての列名を示します。
 
@@ -108,7 +106,6 @@ OHLC 価格の **TypicalPrice** (標準価格) とパーセンテージの **Cha
                                                  github-src="charts/financial-chart/data-legend-styling-props">
 </code-view>
 
-
 ## Angular データ凡例値の書式設定
 
 [`IgxDataLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html) は、[`valueFormatAbbreviation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#valueFormatAbbreviation) プロパティを使用して、大きな数値の自動省略形を提供します。これにより、単位の列に kilo、million、billion などの乗数が追加されます。[`valueFormatMinFractions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#valueFormatMinFractions) および [`valueFormatMaxFractions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#valueFormatMaxFractions) を設定することにより、表示される小数桁数をカスタマイズできます。これにより、小数点以下に表示される最小桁数と最大桁数をそれぞれ決定できます。
@@ -120,7 +117,6 @@ OHLC 価格の **TypicalPrice** (標準価格) とパーセンテージの **Cha
                                                  github-src="charts/category-chart/data-legend-formatting-decimals">
 </code-view>
 
-
 ## Angular データ凡例の値モード
 
 [`valueFormatMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#valueFormatMode) プロパティを変更することにより、[`IgxDataLegendComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html) 内の値のデフォルトの 10 進表示を通貨表示に変更することができます。また、[`valueFormatCulture`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#valueFormatCulture) プロパティにカルチャ タグを設定することで、表示される通貨記号のカルチャを変更できます。たとえば、次のデータ凡例の例では、[`valueFormatCulture`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#valueFormatCulture) が 「en-GB」 に設定されており、英国ポンド (£) の記号が表示されています:
@@ -130,7 +126,6 @@ OHLC 価格の **TypicalPrice** (標準価格) とパーセンテージの **Cha
                     iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/data-legend-formatting-currency"
                                                  github-src="charts/financial-chart/data-legend-formatting-currency">
 </code-view>
-
 
 ## Angular データ凡例のグループ化
 
@@ -142,7 +137,6 @@ OHLC 価格の **TypicalPrice** (標準価格) とパーセンテージの **Cha
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/data-legend-grouping"
                                                  github-src="charts/data-chart/data-legend-grouping">
 </code-view>
-
 
 ## Angular データ凡例のスタイル設定とイベント
 
@@ -182,7 +176,6 @@ OHLC 価格の **TypicalPrice** (標準価格) とパーセンテージの **Cha
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/data-legend-styling"
                                                  github-src="charts/data-chart/data-legend-styling">
 </code-view>
-
 
 ## API リファレンス
 

@@ -19,7 +19,6 @@ Angular Spreadsheet コンポネントは、セルの編集、グリッド線と
                                                  github-src="excel/spreadsheet/config-options">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## セル編集の構成

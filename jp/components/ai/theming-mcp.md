@@ -21,6 +21,8 @@ _language: ja
 
 ほとんどのツールは、**Sass** または **CSS** 出力のいずれかを生成できます。Sass 出力がデフォルトで、`igniteui-theming` Sass モジュールと統合されます。CSS 出力は、すぐに使用できる CSS カスタム プロパティを生成し、**ローカル Sass ツールチェーンなしで**使用できます。サーバーがコンパイルを行います。
 
+Ignite UI Theming MCP は Ignite UI CLI MCP と連携します。実際には、Theming MCP はパレット、テーマ、トークン、タイポグラフィ、エレベーション、スタイリング ワークフローを処理し、CLI MCP はプロジェクト作成、プロジェクト変更、コンポーネント ワークフロー、ドキュメント指向のタスクを処理します。ほとんどのチームは、両方のサーバーを同じ AI クライアントに接続させます。
+
 **接続後に試すプロンプトの例:**
 
 > 「プライマリ #2563eb とコーラル セカンダリ #f97316 を使用して、Angular アプリ用の完全な Material Design ダーク テーマを作成して」
@@ -341,9 +343,9 @@ ng add igniteui-angular
 
 ## その他のリソース
 
+- [Ignite UI を使った AI 支援開発](./ai-assisted-development-overview.md)
 - [Ignite UI for Angular スキル](./skills.md)
-- [MAKER Framework](./maker-framework.md)
-
+- [Ignite UI CLI MCP](./cli-mcp.md)
 
 <!-- Ideally these should be included once documentation is combined
 - [Theming Overview](../themes/index.md)
@@ -358,7 +360,6 @@ ng add igniteui-angular
 <div class="divider--half"></div>
 
 コミュニティは常に活気があり、新しいアイデアを歓迎しています。
-
 
 - [Ignite UI for Angular **フォーラム** (英語)](https://www.infragistics.com/community/forums/f/ignite-ui-for-angular)
 - [Ignite UI for Angular **GitHub** (英語)](https://github.com/IgniteUI/igniteui-angular)

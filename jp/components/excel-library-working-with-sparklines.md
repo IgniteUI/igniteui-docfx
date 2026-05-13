@@ -19,7 +19,6 @@ Infragistics Angular Excel Library は、Excel ワークシートにスパーク
                                                  github-src="excel/excel-library/working-with-sparklines">
 </code-view>
 
-
 > [!Note]
 > XLSX 形式は必要です。他の形式は現在サポートされていません。
 
