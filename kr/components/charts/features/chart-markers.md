@@ -22,7 +22,6 @@ The colors of the markers are also managed by setting the [`markerBrushes`]({env
                                                  github-src="charts/category-chart/marker-options">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Chart Marker Templates
@@ -34,7 +33,6 @@ In addition to marker properties, you can implement your own marker by setting a
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/marker-templates"
                                                  github-src="charts/category-chart/marker-templates">
 </code-view>
-
 
 <div class="divider--half"></div>
 

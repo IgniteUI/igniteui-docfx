@@ -18,7 +18,6 @@ Use the map component's [`IgxGeographicSymbolSeriesComponent`]({environment:dvAp
                                                  github-src="maps/geo-map/type-scatter-symbol-series">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Data Requirements

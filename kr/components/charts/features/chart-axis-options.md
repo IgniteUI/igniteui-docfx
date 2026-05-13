@@ -20,7 +20,6 @@ The axis titles feature of the Angular charts, allows you to add contextual info
                                                  github-src="charts/category-chart/axis-titles">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Axis Labels
@@ -32,7 +31,6 @@ The Angular Charts allows you full control over configuring, formatting, and sty
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/axis-labels"
                                                  github-src="charts/category-chart/axis-labels">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -47,7 +45,6 @@ By default, the Angular charts will calculate the minimum and maximum values for
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/axis-range"
                                                  github-src="charts/category-chart/axis-range">
 </code-view>
-
 
 <div class="divider--half"></div>
 
