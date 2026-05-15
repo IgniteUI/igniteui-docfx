@@ -4,7 +4,10 @@ _description: Learn how to use Agent Skills to supercharge AI-assisted developme
 _keywords: Ignite UI for Angular, agent skills, ai assisted development, github copilot, cursor, windsurf, claude, gemini cli, junie
 _license: MIT
 mentionedTypes: []
+last_updated: "2026-04-24"
 ---
+
+<!-- schema: Article, HowTo -->
 
 # Ignite UI for Angular Agent Skills
 
@@ -22,6 +25,7 @@ The skill files live in the [`skills/`](https://github.com/IgniteUI/igniteui-ang
 | Components & Layout | [`skills/igniteui-angular-components/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-components/SKILL.md) | Standalone components, form controls, overlays, layout |
 | Data Grids | [`skills/igniteui-angular-grids/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-grids/SKILL.md) | Grid, Tree Grid, Hierarchical Grid, Pivot Grid, sorting, filtering, grouping, paging, remote data |
 | Theming & Styling | [`skills/igniteui-angular-theming/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-theming/SKILL.md) | Palettes, typography, elevations, component themes, MCP server |
+| Generate From Image Design | [`skills/igniteui-angular-generate-from-image-design/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-generate-from-image-design/SKILL.md) | Build Angular apps from screenshots, mockups, and wireframes using Ignite UI components |
 
 > [!NOTE]
 > Starting with Ignite UI for Angular **21.1.0**, these skills are automatically discovered when placed in your agent's skills path (e.g., `.claude/skills`, `.agents/skills`, `.cursor/rules/`). This release ships with an optional migration to add these skills to your project automatically.
@@ -43,6 +47,8 @@ The `.agents/skills/` directory is a cross-agent convention supported by multipl
       SKILL.md
     igniteui-angular-theming/
       SKILL.md
+    igniteui-angular-generate-from-image-design/
+      SKILL.md
 ```
 
 For user-level (global) skills available across all projects, use `~/.agents/skills/` instead.
@@ -56,7 +62,7 @@ For user-level (global) skills available across all projects, use `~/.agents/ski
 | Project | `.github/skills/`, `.claude/skills/` |
 | Personal | `~/.copilot/skills/`, `~/.claude/skills/` (Copilot coding agent and GitHub Copilot CLI only) |
 
-> **Tip:** In [VS Code](https://code.visualstudio.com/docs/copilot/customization/agent-skills), these locations also include the general  `.agents/skills/` and `~/.agents/skills/` and you can configure additional skill locations using the `chat.agentSkillsLocations` setting.
+> **Tip:** In [VS Code](https://code.visualstudio.com/docs/copilot/customization/agent-skills), these locations also include the general `.agents/skills/` and `~/.agents/skills/` and you can configure additional skill locations using the `chat.agentSkillsLocations` setting.
 
 ### Claude
 
@@ -113,26 +119,46 @@ Use one of the options below to download and place the skill files into the appr
 
 ### **Option A - Use the Ignite UI CLI**
 
-The `ai-config` command copies skill files from your installed Ignite UI for Angular package into `.claude/skills/` and writes the Ignite UI MCP server configuration to `.vscode/mcp.json`. If the files already exist and are up-to-date, the command is a no-op.
+The `ai-config` command configures MCP servers, copies framework-specific skill files into each agent's skills directory, and sets up instruction files — all in a single step. Use `--assistants` to choose which coding assistants receive MCP config and `--agents` to choose which agents receive skill files. Existing files are only updated if their content has changed. If no parameters are provided, the command enters interactive mode, prompting you to select assistants and agents. For available options, refer to the table below.
+
+```bash
+ig ai-config --assistants generic --agents claude
+```
+
+Use `--agents` with multiple values to target several agents at once:
+
+```bash
+ig ai-config --assistants generic vscode --agents claude copilot cursor
+```
+
+| Flag | Values | Default |
+|------|--------|---------|
+| `--assistants` | `generic`, `vscode`, `cursor`, `gemini`, `junie`, `none` | Prompted interactively |
+| `--agents` | `generic`, `claude`, `copilot`, `cursor`, `codex`, `windsurf`, `gemini`, `junie`, `none` | Prompted interactively |
 
 **Using Angular Schematics:**
 
 ```bash
-ng generate @igniteui/angular-schematics:ai-config
+ng generate @igniteui/angular-schematics:ai-config --assistants cursor --agents claude copilot
 ```
 
-This also registers the `@angular/cli` MCP server in `.vscode/mcp.json` alongside the Ignite UI servers.
+This also registers the `@angular/cli` MCP server alongside the Ignite UI servers.
 
-**Using the Ignite UI CLI:**
+### **Option B - Use the `GitHub CLI`**
 
-### **Option A - Use the Ignite UI CLI**
+The GitHub CLI can be used to download skill files directly from the Ignite UI for Angular repository. Run the following commands in your project root to start the installation process:
 
-The `ai-config` command copies skill files from your installed Ignite UI for Angular package into `.claude/skills/` and writes the Ignite UI MCP server configuration to `.vscode/mcp.json`. If the files already exist and are up-to-date, the command is a no-op.
+```bash
+gh skill install IgniteUI/igniteui-angular
+```
 
-**Using Angular Schematics:**
+You will be asked to select which skills to install and the target Agents for the skill files in your project. The CLI will then download and place the selected skill according to the chosen Agents.
 
-````bash
-ng generate @igniteui/angular-schematics:ai-config
+To update skills later, run the following command:
+
+```bash
+gh skill update IgniteUI/igniteui-angular
+```
 
 If Ignite UI for Angular is already installed in your project, the skill files are available under `node_modules`. To copy them into your project (e.g. into `.agents/skills/`), run:
 
@@ -140,7 +166,7 @@ If Ignite UI for Angular is already installed in your project, the skill files a
 
 ```bash
 cp -r node_modules/igniteui-angular/skills/. .agents/skills/
-````
+```
 
 **Windows (Command Prompt)**
 
@@ -156,6 +182,7 @@ Or copy individual skill directories as needed:
 cp -r node_modules/igniteui-angular/skills/igniteui-angular-components .agents/skills/
 cp -r node_modules/igniteui-angular/skills/igniteui-angular-grids .agents/skills/
 cp -r node_modules/igniteui-angular/skills/igniteui-angular-theming .agents/skills/
+cp -r node_modules/igniteui-angular/skills/igniteui-angular-generate-from-image-design .agents/skills/
 ```
 
 **Windows (Command Prompt)**
@@ -164,6 +191,7 @@ cp -r node_modules/igniteui-angular/skills/igniteui-angular-theming .agents/skil
 robocopy node_modules\igniteui-angular\skills\igniteui-angular-components .agents\skills\igniteui-angular-components /E
 robocopy node_modules\igniteui-angular\skills\igniteui-angular-grids .agents\skills\igniteui-angular-grids /E
 robocopy node_modules\igniteui-angular\skills\igniteui-angular-theming .agents\skills\igniteui-angular-theming /E
+robocopy node_modules\igniteui-angular\skills\igniteui-angular-generate-from-image-design .agents\skills\igniteui-angular-generate-from-image-design /E
 ```
 
 ### **Option C - Use the `gemini skills` CLI**
@@ -179,6 +207,7 @@ The `gemini skills install` command installs skills directly from a Git reposito
 gemini skills install https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-components
 gemini skills install https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-grids
 gemini skills install https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-theming
+gemini skills install https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-generate-from-image-design
 ```
 
 **Install to workspace scope:**
@@ -187,6 +216,7 @@ gemini skills install https://github.com/IgniteUI/igniteui-angular.git --path sk
 gemini skills install --scope workspace https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-components
 gemini skills install --scope workspace https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-grids
 gemini skills install --scope workspace https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-theming
+gemini skills install --scope workspace https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-generate-from-image-design
 ```
 
 Once installed, the skill files are available in the respective location and will be automatically discovered by compatible AI assistants.
@@ -195,7 +225,7 @@ Once installed, the skill files are available in the respective location and wil
 
 The `skills` CLI is an interactive tool that downloads and installs skills directly into your project. Run the following command in your project root:
 
-```shell
+```bash
 npx skills add IgniteUI/igniteui-angular
 ```
 
@@ -220,8 +250,6 @@ For more information on the Theming MCP, refer to the [Ignite UI Theming MCP](./
 ## Additional Resources
 
 <div class="divider--half"></div>
-
-<!-- TODO: Not in xplat, can't link to md directly + docfx is aggressively and annoyingly treating all forms of relative links as such.. -->
 
 - <a href="https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/getting-started">Getting Started with Ignite UI for Angular</a>
 - <a href="https://www.infragistics.com/products/ignite-ui-angular/angular/components/general/cli-overview">Angular Schematics & Ignite UI CLI</a>
