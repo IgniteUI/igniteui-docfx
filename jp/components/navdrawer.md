@@ -99,6 +99,9 @@ export class HomeComponent {
 }
 ```
 
+> [!NOTE]
+> このコンポーネントはマテリアル アイコンを使用します。`index.html` に次のリンクを追加してください: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 Ignite UI for Angular Navigation Drawer モジュールまたはディレクティブをインポートしたので、`igx-nav-drawer` コンポーネントの使用を開始できます。
 
 ## Angular Navigation Drawer の使用

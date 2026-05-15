@@ -342,6 +342,7 @@ ng add igniteui-angular
 ## その他のリソース
 
 - [Ignite UI for Angular スキル](./skills.md)
+- [MAKER Framework](./maker-framework.md)
 
 
 <!-- Ideally these should be included once documentation is combined
