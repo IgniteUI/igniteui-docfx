@@ -25,6 +25,7 @@ The skill files live in the [`skills/`](https://github.com/IgniteUI/igniteui-ang
 | Components & Layout | [`skills/igniteui-angular-components/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-components/SKILL.md) | Standalone components, form controls, overlays, layout |
 | Data Grids | [`skills/igniteui-angular-grids/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-grids/SKILL.md) | Grid, Tree Grid, Hierarchical Grid, Pivot Grid, sorting, filtering, grouping, paging, remote data |
 | Theming & Styling | [`skills/igniteui-angular-theming/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-theming/SKILL.md) | Palettes, typography, elevations, component themes, MCP server |
+| Generate From Image Design | [`skills/igniteui-angular-generate-from-image-design/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-generate-from-image-design/SKILL.md) | Build Angular apps from screenshots, mockups, and wireframes using Ignite UI components |
 
 > [!NOTE]
 > Starting with Ignite UI for Angular **21.1.0**, these skills are automatically discovered when placed in your agent's skills path (e.g., `.claude/skills`, `.agents/skills`, `.cursor/rules/`). This release ships with an optional migration to add these skills to your project automatically.
@@ -45,6 +46,8 @@ The `.agents/skills/` directory is a cross-agent convention supported by multipl
     igniteui-angular-grids/
       SKILL.md
     igniteui-angular-theming/
+      SKILL.md
+    igniteui-angular-generate-from-image-design/
       SKILL.md
 ```
 
@@ -149,7 +152,7 @@ The GitHub CLI can be used to download skill files directly from the Ignite UI f
 gh skill install IgniteUI/igniteui-angular
 ```
 
-You will be asked to select which skills to install (components, grids, theming) and the target Agents for the skill files in your project. The CLI will then download and place the selected skill according to the chosen Agents.
+You will be asked to select which skills to install and the target Agents for the skill files in your project. The CLI will then download and place the selected skill according to the chosen Agents.
 
 To update skills later, run the following command:
 
@@ -179,6 +182,7 @@ Or copy individual skill directories as needed:
 cp -r node_modules/igniteui-angular/skills/igniteui-angular-components .agents/skills/
 cp -r node_modules/igniteui-angular/skills/igniteui-angular-grids .agents/skills/
 cp -r node_modules/igniteui-angular/skills/igniteui-angular-theming .agents/skills/
+cp -r node_modules/igniteui-angular/skills/igniteui-angular-generate-from-image-design .agents/skills/
 ```
 
 **Windows (Command Prompt)**
@@ -187,6 +191,7 @@ cp -r node_modules/igniteui-angular/skills/igniteui-angular-theming .agents/skil
 robocopy node_modules\igniteui-angular\skills\igniteui-angular-components .agents\skills\igniteui-angular-components /E
 robocopy node_modules\igniteui-angular\skills\igniteui-angular-grids .agents\skills\igniteui-angular-grids /E
 robocopy node_modules\igniteui-angular\skills\igniteui-angular-theming .agents\skills\igniteui-angular-theming /E
+robocopy node_modules\igniteui-angular\skills\igniteui-angular-generate-from-image-design .agents\skills\igniteui-angular-generate-from-image-design /E
 ```
 
 ### **Option C - Use the `gemini skills` CLI**
@@ -202,6 +207,7 @@ The `gemini skills install` command installs skills directly from a Git reposito
 gemini skills install https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-components
 gemini skills install https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-grids
 gemini skills install https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-theming
+gemini skills install https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-generate-from-image-design
 ```
 
 **Install to workspace scope:**
@@ -210,6 +216,7 @@ gemini skills install https://github.com/IgniteUI/igniteui-angular.git --path sk
 gemini skills install --scope workspace https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-components
 gemini skills install --scope workspace https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-grids
 gemini skills install --scope workspace https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-theming
+gemini skills install --scope workspace https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-generate-from-image-design
 ```
 
 Once installed, the skill files are available in the respective location and will be automatically discovered by compatible AI assistants.
