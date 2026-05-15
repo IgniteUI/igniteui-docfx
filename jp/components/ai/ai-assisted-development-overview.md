@@ -4,7 +4,7 @@ _description: Ignite UI は、エージェント スキル、Ignite UI CLI MCP �
 _keywords: Angular, Ignite UI for Angular, Infragistics, MCP, Model Context Protocol, Ignite UI CLI MCP, Ignite UI Theming MCP, エージェント スキル, AI, エージェント, Copilot, Cursor
 _language: ja
 _license: MIT
-_canonicalLink: "{environment:dvUrl}/components/ai-assisted-development-overview"
+_canonicalLink: "{environment:dvUrl}/components/ai/ai-assisted-development-overview"
 last_updated: "2026-04-21"
 namespace: Infragistics.Controls
 mentionedTypes: []
