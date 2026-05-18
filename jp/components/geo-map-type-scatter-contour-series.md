@@ -19,7 +19,6 @@ Angular マップ コンポーネントでは、[`IgxGeographicContourLineSeries
                                                  github-src="maps/geo-map/type-scatter-contour-series">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 [`IgxGeographicContourLineSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographiccontourlineseriescomponent.html) は [`IgxGeographicScatterAreaSeriesComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_maps.igxgeographicscatterareaseriescomponent.html) とよく似ていますが、塗りつぶしスケールを使用して色付けされた等高線としてデータを表し、地理散布エリア シリーズはカラースケールを使用して補間された面としてデータを表します。

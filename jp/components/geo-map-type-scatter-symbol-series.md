@@ -19,7 +19,6 @@ Angular マップ コンポーネントでは、[`IgxGeographicSymbolSeriesCompo
                                                  github-src="maps/geo-map/type-scatter-symbol-series">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## データ要件
