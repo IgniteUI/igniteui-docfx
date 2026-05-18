@@ -19,7 +19,7 @@ A complete list of valid expressions and keywords to form a query string can be 
 
 ## Angular Chart Data Filter Example
 
-The following example depicts a [Column Chart](../types/column-chart.md) of annual birth rates across several decades. The drop-down allows you to select a decade, which inserts an expression via the [`initialFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#initialFilter) property, to update the chart visual and thus filtering out the other decades out.
+The following example depicts a [Column Chart](../types/column-chart.md) of annual birth rates across several decades. The drop-down allows you to select a decade, which inserts an expression via the [`initialFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#initialFilter) property, to update the chart visual and thus filtering out the other decades out.
 
 <code-view style="height: 500px" alt="Angular Data Filter Example"
            data-demos-base-url="{environment:dvDemosBaseUrl}"
@@ -29,7 +29,7 @@ The following example depicts a [Column Chart](../types/column-chart.md) of annu
 
 <div class="divider--half"></div>
 
-The [`initialFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#initialFilter) property is a string that requires the following syntax in order to filter properly. The value requires sets of parentheses that include both the filter expression definition, column and value associated with the record(s) filtering in.
+The [`initialFilter`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html#initialFilter) property is a string that requires the following syntax in order to filter properly. The value requires sets of parentheses that include both the filter expression definition, column and value associated with the record(s) filtering in.
 
 eg. To show all countries that start with the letter B:
 

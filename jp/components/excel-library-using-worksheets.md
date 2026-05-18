@@ -19,7 +19,6 @@ Angular Excel Engine の [`worksheet`]({environment:dvApiBaseUrl}/products/ignit
                                                  github-src="excel/excel-library/operations-on-worksheets">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 以下のコードは、以下のコード スニペットを使用するインポートを示します。

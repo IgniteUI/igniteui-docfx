@@ -18,7 +18,6 @@ The Angular Spreadsheet is a Angular component that allows visualizing and editi
                                                  github-src="excel/spreadsheet/overview">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Dependencies

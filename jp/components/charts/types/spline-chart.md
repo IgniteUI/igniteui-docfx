@@ -21,7 +21,6 @@ Ignite UI for Angular スプライン チャートは、スプラインのスム
                                                  github-src="charts/category-chart/spline-multiple-sources">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## 単一シリーズの Angular スプライン チャート
@@ -35,7 +34,6 @@ Ignite UI for Angular スプライン チャートは、スプラインのスム
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/spline-single-source"
                                                  github-src="charts/category-chart/spline-single-source">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -51,7 +49,6 @@ Ignite UI for Angular スプライン チャートは、スプラインのスム
                                                  github-src="charts/category-chart/spline-multiple-sources">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular スプライン チャートのスタイル設定
@@ -65,7 +62,6 @@ Ignite UI for Angular スプライン チャートは、スプラインのスム
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/spline-styling"
                                                  github-src="charts/category-chart/spline-styling">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -85,7 +81,6 @@ Ignite UI for Angular スプライン チャートは、スプラインのスム
                                                  github-src="charts/data-chart/stacked-spline-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular 積層型 100% スプライン チャート
@@ -99,7 +94,6 @@ Ignite UI for Angular スプライン チャートは、スプラインのスム
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-spline-chart"
                                                  github-src="charts/data-chart/stacked-100-spline-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 

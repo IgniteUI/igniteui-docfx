@@ -18,7 +18,6 @@ Ignite UI for Angular チャート コンポーネントは、プロットされ
                                                  github-src="charts/data-chart/chart-highlight-filter-multiple-series">
 </code-view>
 
-
 データハイライト表示機能は [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) および [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxcategorychartcomponent.html) でサポートされていますが、これらのコントロールの動作の性質上、それぞれ異なる方法で構成されることに注意してください。ただし、この機能で変わらない点は、ハイライト表示を表示したい場合は [`highlightedValuesDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#highlightedValuesDisplayMode) プロパティを `Overlay` に設定する必要があることです。以下では、ハイライト表示フィルター機能のさまざまな設定について説明します。
 
 ## DataChart でのハイライト表示フィルターの使用
@@ -41,7 +40,6 @@ Ignite UI for Angular チャート コンポーネントは、プロットされ
                                                  github-src="charts/data-chart/data-legend-grouping-and-highlighting">
 </code-view>
 
-
 次の例は、[`highlightedValuesDataLegendGroup`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriescomponent.html#highlightedValuesDataLegendGroup) を使用した [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) コントロール内のデータ ツールチップのグループ化とデータ ハイライト オーバーレイ機能の使用法を示しています。
 
 <code-view style="height: 500px" alt="Angular データ ツールチップのグループ化のハイライト表示の例"
@@ -50,7 +48,6 @@ Ignite UI for Angular チャート コンポーネントは、プロットされ
                                                  github-src="charts/data-chart/data-tooltip-grouping-and-highlighting">
 </code-view>
 
-
 次の例は、`HighlightedValueMemberPath` を使用した [`IgxDataChartComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatachartcomponent.html) コントロール内のデータハイライト表示オーバーレイ機能の使用法を示しています。
 
 <code-view style="height: 500px" alt="Angular ハイライト表示フィルターの例"
@@ -58,7 +55,6 @@ Ignite UI for Angular チャート コンポーネントは、プロットされ
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/chart-highlight-filter"
                                                  github-src="charts/data-chart/chart-highlight-filter">
 </code-view>
-
 
 ## CategoryChart でのハイライト表示フィルターの使用
 
@@ -77,7 +73,6 @@ Ignite UI for Angular チャート コンポーネントは、プロットされ
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/chart-highlight-filter"
                                                  github-src="charts/category-chart/chart-highlight-filter">
 </code-view>
-
 
 <!-- TODO add new section that talks about how this feature also applies to Range, Financial series and the HighlightedValueMemberPath property corresponds to:
 HighlightedHighMemberPath and HighlightedLowMemberPath in Range Series

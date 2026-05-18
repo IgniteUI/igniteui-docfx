@@ -24,7 +24,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                                                  github-src="charts/data-chart/polar-area-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Polar Spline Area Chart
@@ -38,7 +37,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/polar-spline-area-chart"
                                                  github-src="charts/data-chart/polar-spline-area-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -54,7 +52,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                                                  github-src="charts/data-chart/polar-scatter-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Polar Line Chart
@@ -68,7 +65,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/polar-line-chart"
                                                  github-src="charts/data-chart/polar-line-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -84,7 +80,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                                                  github-src="charts/data-chart/polar-spline-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Polar Chart Styling
@@ -98,7 +93,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/polar-area-chart-styling"
                                                  github-src="charts/data-chart/polar-area-chart-styling">
 </code-view>
-
 
 <div class="divider--half"></div>
 

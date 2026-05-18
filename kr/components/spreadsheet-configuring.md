@@ -18,7 +18,6 @@ The [`IgxSpreadsheetComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-an
                                                  github-src="excel/spreadsheet/config-options">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Configuring Cell Editing

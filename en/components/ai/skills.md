@@ -119,7 +119,7 @@ Use one of the options below to download and place the skill files into the appr
 
 ### **Option A - Use the Ignite UI CLI**
 
-The `ai-config` command configures MCP servers, copies framework-specific skill files into each agent's skills directory, and sets up instruction files — all in a single step. Use `--assistants` to choose which coding assistants receive MCP config and `--agents` to choose which agents receive skill files. Existing files are only updated if their content has changed. If no parameters are provided, the command enters interactive mode, prompting you to select assistants and agents. For available options, refer to the table below.
+The `ai-config` command configures MCP servers, copies framework-specific skill files into each agent's skills directory, and sets up instruction files - all in a single step. Use `--assistants` to choose which coding assistants receive MCP config and `--agents` to choose which agents receive skill files. Existing files are only updated if their content has changed. If no parameters are provided, the command enters interactive mode, prompting you to select assistants and agents. For available options, refer to the table below.
 
 ```bash
 ig ai-config --assistants generic --agents claude
@@ -144,23 +144,8 @@ ng generate @igniteui/angular-schematics:ai-config --assistants cursor --agents 
 
 This also registers the `@angular/cli` MCP server alongside the Ignite UI servers.
 
-### **Option B - Use the `GitHub CLI`**
-
-The GitHub CLI can be used to download skill files directly from the Ignite UI for Angular repository. Run the following commands in your project root to start the installation process:
-
-```bash
-gh skill install IgniteUI/igniteui-angular
-```
-
-You will be asked to select which skills to install and the target Agents for the skill files in your project. The CLI will then download and place the selected skill according to the chosen Agents.
-
-To update skills later, run the following command:
-
-```bash
-gh skill update IgniteUI/igniteui-angular
-```
-
-If Ignite UI for Angular is already installed in your project, the skill files are available under `node_modules`. To copy them into your project (e.g. into `.agents/skills/`), run:
+> [!NOTE]
+> If you installed Ignite UI for Angular manually and want to copy skills without running `ai-config`, the skill files are also available under `node_modules`. To copy them into your project (e.g. into `.agents/skills/`), run:
 
 **macOS / Linux / Windows (PowerShell)**
 
@@ -192,6 +177,22 @@ robocopy node_modules\igniteui-angular\skills\igniteui-angular-components .agent
 robocopy node_modules\igniteui-angular\skills\igniteui-angular-grids .agents\skills\igniteui-angular-grids /E
 robocopy node_modules\igniteui-angular\skills\igniteui-angular-theming .agents\skills\igniteui-angular-theming /E
 robocopy node_modules\igniteui-angular\skills\igniteui-angular-generate-from-image-design .agents\skills\igniteui-angular-generate-from-image-design /E
+```
+
+### **Option B - Use the `GitHub CLI`**
+
+The GitHub CLI can be used to download skill files directly from the Ignite UI for Angular repository. Run the following commands in your project root to start the installation process:
+
+```bash
+gh skill install IgniteUI/igniteui-angular
+```
+
+You will be asked to select which skills to install and the target Agents for the skill files in your project. The CLI will then download and place the selected skill according to the chosen Agents.
+
+To update skills later, run the following command:
+
+```bash
+gh skill update IgniteUI/igniteui-angular
 ```
 
 ### **Option C - Use the `gemini skills` CLI**
