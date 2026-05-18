@@ -38,7 +38,6 @@ Ignite UI for Angular では、**DataToolTip** は、シリーズの値とタイ
                                                  github-src="charts/category-chart/data-tooltip">
 </code-view>
 
-
 ### Angular データ ツールチップの列
 
 [`IgxDataToolTipLayerComponent`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatatooltiplayercomponent.html) の列には、タイトル、ラベル、値、および単位の列が含まれます。チャートの各シリーズには、凡例の [`dataToolTipIncludedColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipIncludedColumns) または [`dataToolTipExcludedColumns`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipExcludedColumns) コレクションに応じて、ラベル、値、および単位の複数の列を含めることができます。
@@ -79,7 +78,6 @@ Ignite UI for Angular では、**DataToolTip** は、シリーズの値とタイ
                                                  github-src="charts/financial-chart/data-tooltip">
 </code-view>
 
-
 ## Angular データ チャートのデータ ツールチップのグループ化
 
 [`dataLegendGroup`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxseriescomponent.html#dataLegendGroup) は、すべてのタイプのシリーズで、データ凡例内のシリーズ グループを分類する文字列に設定できます。各グループには、別のシリーズ グループが表示される前に、独自の集計行が表示されます。デフォルトでは、DataLegend はグループ名を非表示にしますが、[`groupRowVisible`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#groupRowVisible) プロパティを true に設定するとグループ名を表示できます。データ ツールチップ レイヤーで [`groupingMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatatooltiplayercomponent.html#groupingMode) を 「Grouped」 に設定し、[`labelDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdatalegendcomponent.html#labelDisplayMode) を 「Visible」 に設定する必要があります。
@@ -89,7 +87,6 @@ Ignite UI for Angular では、**DataToolTip** は、シリーズの値とタイ
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/data-tooltip-grouping"
                                                  github-src="charts/data-chart/data-tooltip-grouping">
 </code-view>
-
 
 ## Angular カテゴリ チャート & ファイナンシャル チャートのデータ ツールチップのグループ化と配置
 
@@ -103,7 +100,6 @@ Ignite UI for Angular では、**DataToolTip** は、シリーズの値とタイ
                                                  github-src="charts/category-chart/data-tooltip-positioning">
 </code-view>
 
-
 ## Angular データ ツールチップ値の書式設定
 
 **DataToolTip** は、その [`dataToolTipValueFormatAbbreviation`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueFormatAbbreviation) プロパティを使用して、大きな数の自動省略形を提供します。これにより、単位の列に kilo、million、billion などの乗数が追加されます。[`dataToolTipValueFormatMinFractions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueFormatMinFractions) および [`dataToolTipValueFormatMaxFractions`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueFormatMaxFractions) を設定することにより、表示される小数桁数をカスタマイズできます。これにより、小数点以下に表示される最小桁数と最大桁数をそれぞれ決定できます。
@@ -116,7 +112,6 @@ Ignite UI for Angular では、**DataToolTip** は、シリーズの値とタイ
                                                  github-src="charts/category-chart/data-tooltip-formatting-decimals">
 </code-view>
 
-
 ## Angular データ ツールチップの値モード
 
 レイヤーの [`dataToolTipValueFormatMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueFormatMode) プロパティを変更することにより、**DataToolTip** 内の値のデフォルトの 10 進表示を通貨表示に変更できます。**DataToolTip** は、[`dataToolTipValueFormatCulture`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueFormatCulture) プロパティを使用し、対応するカルチャ タグに設定することにより、表示されている通貨記号のカルチャを変更する機能も公開します。たとえば、次のサンプルは、[`dataToolTipValueFormatCulture`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#dataToolTipValueFormatCulture) が 「en-GB」 に設定されたチャートを示しています。
@@ -126,7 +121,6 @@ Ignite UI for Angular では、**DataToolTip** は、シリーズの値とタイ
                     iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/data-tooltip-formatting-currency"
                                                  github-src="charts/financial-chart/data-tooltip-formatting-currency">
 </code-view>
-
 
 ## レイアウト モード
 
@@ -145,7 +139,6 @@ Ignite UI for Angular では、**DataToolTip** は、シリーズの値とタイ
                     iframe-src="{environment:dvDemosBaseUrl}/charts/financial-chart/data-tooltip-styling-props"
                                                  github-src="charts/financial-chart/data-tooltip-styling-props">
 </code-view>
-
 
 ツールチップのグループ化部分を含むいくつかのプロパティが公開されています。
 

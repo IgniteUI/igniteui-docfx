@@ -19,7 +19,6 @@ Infragistics Angular Excel ライブラリは、[`workbook`]({environment:dvApiB
                                                  github-src="excel/excel-library/overview">
 </code-view>
 
-
 > [!Note]
 > XLSX 形式は必要です。他の形式は現在サポートされていません。
 

@@ -126,14 +126,9 @@ ng generate @igniteui/angular-schematics:ai-config
 
 **Ignite UI CLI を使用する場合:**
 
-### **オプション A — Ignite UI CLI を使用する**
+### **オプション B — Ignite UI CLI を使用する**
 
 `ai-config` コマンドは、インストール済みの Ignite UI for Angular パッケージからスキル ファイルを `.claude/skills/` にコピーし、Ignite UI MCP サーバー構成を `.vscode/mcp.json` に書き込みます。ファイルが既に存在し、最新の状態であれば、このコマンドは何もしません。
-
-**Angular Schematics を使用する場合:**
-
-````bash
-ng generate @igniteui/angular-schematics:ai-config
 
 Ignite UI for Angular がプロジェクトに既にインストールされている場合、スキル ファイルは `node_modules` の下で利用できます。それらをプロジェクトにコピーする (例: `.agents/skills/` の下での使用) には、次のコマンドを実行します:
 
