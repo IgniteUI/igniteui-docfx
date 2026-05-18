@@ -84,6 +84,9 @@ html テンプレートで [`igxList`]({environment:angularApiUrl}/classes/igxli
 </igx-list>
 ```
 
+> [!NOTE]
+> この例ではデフォルトのマテリアル アイコン ファミリーで `igx-icon` を使用します。次のリンクを `index.html` に追加してください: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 ## 保留中の変更のパイプ
 
 上記のリスト コンポーネントは、`transactionBasePipe` を使用して、元のデータに影響を与えることなく、ウィッシュ リスト内のアイテムへの変更を表示します。パイプは以下のようになります。

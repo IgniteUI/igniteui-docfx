@@ -78,6 +78,9 @@ import { IgxIconComponent } from 'igniteui-angular/icon';
 export class HomeComponent {}
 ```
 
+> [!NOTE]
+> このコンポーネントはマテリアル アイコンを使用します。`index.html` に次のリンクを追加してください: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 Ignite UI for Angular Action Strip モジュールまたはディレクティブをインポートしたので、`igx-action-strip` コンポーネントの基本構成を開始できます。
 
 ## Angular Action Strip コンポーネントの使用

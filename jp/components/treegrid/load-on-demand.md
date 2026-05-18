@@ -68,6 +68,9 @@ public loadChildren = (parentID: any, done: (children: any[]) => void) => {
 </igx-tree-grid>
 ```
 
+> [!NOTE]
+> このコンポーネントはマテリアル アイコンを使用します。`index.html` に次のリンクを追加してください: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 ## API リファレンス
 
 <div class="divider--half"></div>

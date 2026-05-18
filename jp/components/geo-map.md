@@ -21,7 +21,6 @@ Ignite UI for Angular Map コンポーネントを使用すると、ビューモ
                                                  github-src="maps/geo-map/type-scatter-bubble-series">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 Angular 地図コンポーネントを使用すると、Bing Maps™ および Open Street Maps から地理的画像をレンダリングできます。マップは何万ものデータポイントをプロットし、コントロールがリアルタイム フィードを処理できるように数ミリ秒ごとにそれらを更新します。

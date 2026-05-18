@@ -132,6 +132,9 @@ export class AppModule {}
 </igx-combo>
 ```
 
+> [!NOTE]
+> このコンポーネントはマテリアル アイコンを使用します。`index.html` に次のリンクを追加してください: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 ### クリア アイコン テンプレート
 
 セレクター `[igxComboClearIcon]` の使用:

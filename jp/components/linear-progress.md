@@ -210,6 +210,9 @@ public positionEnd: IgxTextAlign = IgxTextAlign.END;
 </div>
 ```
 
+> [!NOTE]
+> このコンポーネントはマテリアル アイコンを使用します。`index.html` に次のリンクを追加してください: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 値を増減するメソッドを作成します。
 
 ```typescript
