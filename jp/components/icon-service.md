@@ -65,6 +65,9 @@ iconService.setFamily('fa-solid', { className: 'fas', type: 'font', prefix: 'fa'
 <igx-icon family="fa-solid" name="car"></igx-icon>
 ```
 
+> [!NOTE]
+> デフォルトの `material` ファミリーのアイコンを `igx-icon` でレンダリングするには、次のリンクを `index.html` に追加してください: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 `material` ファミリの場合は、名前として合字 `name` を使用し、`fa-solid` ファミリの場合は、名前として `className` (`fa-car`) を指定していることに気付いたかもしれません。ただし、前の手順でアイコン ファミリを登録したときに指定した `fa-` プレフィックスは削除します。
 
 ### SVG アイコンの追加

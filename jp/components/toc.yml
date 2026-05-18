@@ -1,10 +1,19 @@
 ﻿- name: AI 支援開発
   header: true
+- name: エージェント ワークフロー
+  href: ai/ai-assisted-development-overview.md
+  new: true
 - name: Ignite UI for Angular スキル
   href: ai/skills.md
   new: true
+- name: CLI MCP
+  href: ai/cli-mcp.md
+  new: true
 - name: Theming MCP
   href: ai/theming-mcp.md
+  new: true
+- name: MAKER Framework
+  href: ai/maker-framework.md
   new: true
 - name: 概要
   header: true
@@ -62,6 +71,9 @@
     - name: スタンドアロン コンポーネントの使用方法
       href: general/how-to/how-to-use-standalone-components.md
       updated: false
+    - name: CLI MCP および Theming MCP を使用したアプリのビルド
+      href: general/how-to/general-how-to-mcp-e2e.md
+      new: true
 - name: Angular Schematics & Ignite UI CLI
   href: general/cli-overview.md
   sortable: false
@@ -1024,7 +1036,6 @@
 - name: マップ
   href: geo-map.md
   new: false
-  sortable: true
   items:
     - name: CSV ファイルのバインド
       href: geo-map-binding-data-csv.md
@@ -1134,7 +1145,6 @@
       premium: true
 - name: ゲージ
   header: true
-  sortable: true
 - name: Bullet Graph
   href: bullet-graph.md
   new: false

@@ -211,6 +211,9 @@ export class NavbarSample3Component {
 }
 ```
 
+> [!NOTE]
+> このコンポーネントはマテリアル アイコンを使用します。`index.html` に次のリンクを追加してください: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 サンプルが正しく構成された場合、ブラウザーで以下が表示されます。
 
 <code-view style="height: 300px"

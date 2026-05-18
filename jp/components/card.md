@@ -105,6 +105,9 @@ import { IGX_CARD_DIRECTIVES } from 'igniteui-angular/card';
 export class HomeComponent {}
 ```
 
+> [!NOTE]
+> このコンポーネントはマテリアル アイコンを使用します。`index.html` に次のリンクを追加してください: `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
+
 Ignite UI for Angular Card モジュールまたはディレクティブをインポートしたので、`igx-card` コンポーネントの使用を開始できます。
 
 ## Angular Card コンポーネントの使用
