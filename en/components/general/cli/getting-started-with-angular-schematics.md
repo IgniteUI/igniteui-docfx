@@ -182,9 +182,9 @@ ng g @igniteui/angular-schematics:start
 
 The Ignite UI for Angular Schematics collection includes an `ai-config` schematic that sets up AI coding assistant integration for your project. In a single command, it:
 
-- **Configures MCP servers** — writes the MCP config file for your chosen coding assistant with the Ignite UI and Angular CLI MCP server entries
-- **Copies skill files** — adds Angular-specific skill guides into your agent directories
-- **Sets up instruction files** — populates each agent's instruction file with project-specific guidance
+- **Configures MCP servers** - writes the MCP config file for your chosen coding assistant with the Ignite UI and Angular CLI MCP server entries
+- **Copies skill files** - adds Angular-specific skill guides into your agent directories
+- **Sets up instruction files** - populates each agent's instruction file with project-specific guidance
 
 Run it from your project root after installing Ignite UI for Angular packages:
 
@@ -224,13 +224,13 @@ ng generate @igniteui/angular-schematics:ai-config
 
 ### Usage Examples
 
-Interactive — prompts for coding assistants, then agents:
+Interactive - prompts for coding assistants, then agents:
 
 ```bash
 ng generate @igniteui/angular-schematics:ai-config
 ```
 
-Non-interactive — specify both assistants and agents:
+Non-interactive - specify both assistants and agents:
 
 ```bash
 ng generate @igniteui/angular-schematics:ai-config --assistants cursor --agents claude copilot
@@ -252,7 +252,7 @@ The schematic also runs automatically as part of `ng add igniteui-angular` with 
 
 ### MCP Server Configuration
 
-The schematic writes (or merges into) the config file for your chosen coding assistant. Existing third-party MCP server entries are always preserved — the command merges, never overwrites. When run via the Angular schematic, an additional `angular-cli` MCP server entry is included automatically alongside the Ignite UI servers.
+The schematic writes (or merges into) the config file for your chosen coding assistant. Existing third-party MCP server entries are always preserved - the command merges, never overwrites. When run via the Angular schematic, an additional `angular-cli` MCP server entry is included automatically alongside the Ignite UI servers.
 
 **Generic, Cursor, Gemini, and Junie** (`.mcp.json` and equivalents, root key `mcpServers`):
 
@@ -298,7 +298,7 @@ The schematic writes (or merges into) the config file for your chosen coding ass
 
 ### Skill Files
 
-Skill files are Angular-specific guides copied into each agent's skills directory. They are sourced from your installed Ignite UI package and kept in sync each time you run the schematic — existing files are only updated if their content has changed.
+Skill files are Angular-specific guides copied into each agent's skills directory. They are sourced from your installed Ignite UI package and kept in sync each time you run the schematic - existing files are only updated if their content has changed.
 
 > [!NOTE]
 > If you run `ai-config` before installing packages (e.g. with `--skip-install`), the schematic falls back to built-in templates. Re-run the command after installing to pick up the skill files from your installed version.

@@ -91,12 +91,12 @@ After choosing your framework, project type, template, and theme, the wizard pro
 
 You will be prompted to select which coding assistants to configure MCP servers for. Use the SPACE key to toggle selections and ENTER to confirm:
 
-- **Generic** (Claude Code, VS Code, and others) — writes `.mcp.json`
-- **VS Code** (GitHub Copilot) — writes `.vscode/mcp.json`
-- **Cursor** — writes `.cursor/mcp.json`
-- **Gemini** — writes `.gemini/settings.json`
-- **JetBrains Junie** — writes `.junie/mcp/mcp.json`
-- **None** — skips MCP configuration
+- **Generic** (Claude Code, VS Code, and others) - writes `.mcp.json`
+- **VS Code** (GitHub Copilot) - writes `.vscode/mcp.json`
+- **Cursor** - writes `.cursor/mcp.json`
+- **Gemini** - writes `.gemini/settings.json`
+- **JetBrains Junie** - writes `.junie/mcp/mcp.json`
+- **None** - skips MCP configuration
 
 The default selection is **Generic**. Selecting **None** skips MCP server configuration entirely.
 
@@ -104,15 +104,15 @@ The default selection is **Generic**. Selecting **None** skips MCP server config
 
 Next, you will be prompted to select which AI agents to configure skill files and instructions for:
 
-- **Generic** — `.agents/skills/` and `AGENTS.md`
-- **Claude** — `.claude/skills/` and `.claude/CLAUDE.md`
-- **Copilot** — `.github/skills/` and `.github/copilot-instructions.md`
-- **Cursor** — `.cursor/skills/` and `.cursor/rules/cursor.mdc`
-- **Codex** — `.codex/skills/` and `.codex/instructions.md`
-- **Windsurf** — `.windsurf/skills/` and `.windsurf/rules/guidelines.md`
-- **Gemini** — `.gemini/skills/` and `.gemini/GEMINI.md`
-- **Junie** — `.junie/skills/` and `.junie/guidelines.md`
-- **None** — skips skill files and instructions
+- **Generic** - `.agents/skills/` and `AGENTS.md`
+- **Claude** - `.claude/skills/` and `.claude/CLAUDE.md`
+- **Copilot** - `.github/skills/` and `.github/copilot-instructions.md`
+- **Cursor** - `.cursor/skills/` and `.cursor/rules/cursor.mdc`
+- **Codex** - `.codex/skills/` and `.codex/instructions.md`
+- **Windsurf** - `.windsurf/skills/` and `.windsurf/rules/guidelines.md`
+- **Gemini** - `.gemini/skills/` and `.gemini/GEMINI.md`
+- **Junie** - `.junie/skills/` and `.junie/guidelines.md`
+- **None** - skips skill files and instructions
 
 The default selections are **Generic** and **Claude**. Selecting **None** skips agent configuration entirely.
 
