@@ -2,6 +2,8 @@
 title: Ignite UI CLI を使用した作業の開始 | Ignite UI for Angular | インフラジスティックス
 _description: ステップ バイ ステップ モードには、Ignite UI CLI オプションによるガイドが含まれます。
 _keywords: angular cli, ignite ui for angular, infragistics
+last_updated: "2026-04-21"
+_license: MIT
 _language: ja
 ---
 
@@ -182,9 +184,27 @@ ig add grid newGrid
 ig start
 ```
 
+## AI アシスタント統合 (MCP)
+
+Ignite UI CLI には、AI コーディング アシスタント (GitHub Copilot、Claude、Cursor など) を最新の Ignite UI コンポーネント ドキュメントおよび API リファレンスに接続する組み込みの MCP (Model Context Protocol) サーバーが含まれています。設定後、AI アシスタントはコンポーネント API を照会したり、セットアップ ガイドを取得したり、コンテキストを切り替えずに正確な Ignite UI for Angular コードを生成したりできます。
+
+`ig new` でプロジェクトを作成した場合、スキャフォールディング時に VS Code MCP 設定が `.vscode/mcp.json` に生成され、Ignite UI for Angular Agent Skills が `.claude/skills/` にコピーされます。これらのファイルのいずれかまたは両方が欠けている既存のプロジェクトで作業している場合は、プロジェクト ルートから `ig ai-config` を実行して MCP 設定とスキルを一括セットアップしてください。
+
+```cmd
+ig ai-config
+```
+
+AI クライアントを手動で設定する場合、または VS Code 以外のクライアントを使用する場合は、以下のコマンドで MCP サーバーを直接起動してください。
+
+```cmd
+ig mcp
+```
+
+クライアント設定 (VS Code、Claude Desktop、Cursor など) および利用可能なツールの詳細については、[Ignite UI CLI MCP](../../ai/cli-mcp.md) を参照してください。
+
 ## Ignite UI CLI コマンド
 
-使用可能な Ignite UI CLI コマンドとその使用方法 (フラグを渡すなど) の完全なリストは、[Ignite UI CLI wiki ページ](https://github.com/IgniteUI/igniteui-cli/wiki)ページにあります。
+使用可能な Ignite UI CLI コマンドとその使用方法 (フラグを渡すなど) の完全なリストは、[Ignite UI CLI wiki](https://github.com/IgniteUI/igniteui-cli/wiki) にあります。
 
 | コマンド | エイリアス | 説明 |
 | --- | --- | --- |
@@ -197,3 +217,5 @@ ig start
 | [ig list](https://github.com/IgniteUI/igniteui-cli/wiki/list) | l |  指定したフレームワークとタイプのすべてのテンプレートをリストします。プロジェクト フォルダー内でコマンド実行時にプロジェクトのフレームワークとタイプのテンプレートをすべてリストします。
 | [ig test](https://github.com/IgniteUI/igniteui-cli/wiki/test) |  | 現在のプロジェクトのテストを実行します。
 | ig version | -v | ローカル (ローカルがない場合はグローバル) にインストールされた Ignite UI CLI バージョンを示します。 |
+| ig mcp |  | Ignite UI MCP サーバーを起動し、接続された AI アシスタントにコンポーネント ドキュメント検索および API リファレンス ツールを提供します。[Ignite UI CLI MCP](../../ai/cli-mcp.md) を参照してください。 |
+| ig ai-config |  | `.claude/skills/` に Ignite UI for Angular Agent Skills をコピーし、`.vscode/mcp.json` に Ignite UI MCP サーバー設定を書き込むことで、既存のプロジェクトの AI 統合をセットアップします。 |
