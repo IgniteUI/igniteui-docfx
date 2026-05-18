@@ -22,7 +22,6 @@ The following sample demonstrates how setting multiple properties on the same ga
                                                  github-src="gauges/radial-gauge/animation">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Dependencies
@@ -111,7 +110,6 @@ The backing can be circular or fitted. A circular shape creates a 360 degree cir
                                                  github-src="gauges/radial-gauge/backing">
 </code-view>
 
-
 ## Scale
 
 The scale is visual element that highlights full range of values in the gauge which can be created by supplying `minimumValue` and `maximumValue` values. Together with backing, it defines overall shape of gauge. The `scaleStartAngle` and `scaleEndAngle` properties define bounds of arc of the scale. While, the `scaleSweepDirection` property specifies whether the scale sweeps in clockwise or counter-clockwise direction. You can customize appearance of the scale by setting `scaleBrush`, `scaleStartExtent`, and `scaleEndExtent` properties.
@@ -138,7 +136,6 @@ The scale is visual element that highlights full range of values in the gauge wh
                                                  github-src="gauges/radial-gauge/scale">
 </code-view>
 
-
 ## Labels
 
 The gauge labels are visual elements displaying numeric values at a specified interval between values of the `minimumValue` and `maximumValue` properties. You can position labels by setting the `labelExtent` property to a fraction, where 0 represents center of gauge and 1 represents outer extent of the gauge backing. Also, you can customize labels setting various styling properties such as `fontBrush` and `font`.
@@ -160,7 +157,6 @@ The gauge labels are visual elements displaying numeric values at a specified in
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/labels"
                                                  github-src="gauges/radial-gauge/labels">
 </code-view>
-
 
 ## Tick Marks
 
@@ -188,7 +184,6 @@ Tick marks are thin lines radiating from the center of the radial gauge. There a
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/tickmarks"
                                                  github-src="gauges/radial-gauge/tickmarks">
 </code-view>
-
 
 ## Ranges
 
@@ -218,7 +213,6 @@ A range highlights a set of continuous values bound by a specified `minimumValue
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/ranges"
                                                  github-src="gauges/radial-gauge/ranges">
 </code-view>
-
 
 ## Needle
 
@@ -254,7 +248,6 @@ You can enable an interactive mode of the gauge (using [`isNeedleDraggingEnabled
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/radial-gauge/needle"
                                                  github-src="gauges/radial-gauge/needle">
 </code-view>
-
 
 ## Summary
 

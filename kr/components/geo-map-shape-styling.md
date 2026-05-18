@@ -18,7 +18,6 @@ This topic explains how to apply custom styling to the [`IgxGeographicShapeSerie
                                                  github-src="maps/geo-map/shape-styling">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Required Imports
