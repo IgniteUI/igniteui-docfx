@@ -20,7 +20,6 @@ In the following example, the treemap demonstrates the 30 largest countries in t
                                                  github-src="charts/tree-map/overview">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Treemap Recommendations
@@ -70,7 +69,6 @@ In the following example, the treemap demonstrates the ability of changing it's 
                                                  github-src="charts/tree-map/layout">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ### Layout Types
@@ -104,7 +102,6 @@ In the following example, the treemap demonstrates the ability of changing the l
                     iframe-src="{environment:dvDemosBaseUrl}/charts/tree-map/styling"
                                                  github-src="charts/tree-map/styling">
 </code-view>
-
 
 <div class="divider--half"></div>
 

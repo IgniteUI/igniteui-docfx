@@ -18,7 +18,6 @@ The Angular Spreadsheet component allows you to perform commands for activating 
                                                  github-src="excel/spreadsheet/commands">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Dependencies

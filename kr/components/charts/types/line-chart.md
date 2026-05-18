@@ -22,7 +22,6 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
                                                  github-src="charts/category-chart/line-chart-multiple-sources">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Line Chart Recommendations
@@ -82,7 +81,6 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
                                                  github-src="charts/category-chart/line-chart-single-source">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Line Chart with Multiple Series
@@ -96,7 +94,6 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/line-chart-multiple-sources"
                                                  github-src="charts/category-chart/line-chart-multiple-sources">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -114,7 +111,6 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
                                                  github-src="charts/category-chart/high-frequency">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Styling Line Chart
@@ -128,7 +124,6 @@ You can create this type of chart in the [`IgxCategoryChartComponent`]({environm
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/line-chart-styling"
                                                  github-src="charts/category-chart/line-chart-styling">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -146,7 +141,6 @@ The Stacked Line Chart is often used to show the change of value over time such 
                                                  github-src="charts/data-chart/stacked-line-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Stacked 100% Line Chart
@@ -160,7 +154,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/stacked-100-line-chart"
                                                  github-src="charts/data-chart/stacked-100-line-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -176,7 +169,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                                                  github-src="charts/data-chart/radial-line-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Polar Line Chart
@@ -190,7 +182,6 @@ You can create this type of chart in the [`IgxDataChartComponent`]({environment:
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/polar-line-chart"
                                                  github-src="charts/data-chart/polar-line-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 

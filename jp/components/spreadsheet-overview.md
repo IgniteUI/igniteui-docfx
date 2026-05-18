@@ -19,7 +19,6 @@ Angular Spreadsheet (Excel ビューア) コンポーネントは軽量で機能
                                                  github-src="excel/spreadsheet/overview">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## 機能
