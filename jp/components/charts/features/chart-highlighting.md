@@ -18,7 +18,6 @@ _language: ja
                                                  github-src="charts/category-chart/annotations-highlighting">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 # Angular チャートのハイライト表示モードと動作
@@ -33,7 +32,6 @@ _language: ja
                                                  github-src="charts/category-chart/highlighting-mode">
 </code-view>
 
-
 以下の例は、[`highlightingBehavior`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#highlightingBehavior) Angular チャートを示しています。
 
 <code-view style="height: 500px" alt="Angular ハイライト表示モードの例"
@@ -41,7 +39,6 @@ _language: ja
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/highlighting-behavior"
                                                  github-src="charts/category-chart/highlighting-behavior">
 </code-view>
-
 
 # Angular チャート凡例のハイライト表示
 
@@ -54,7 +51,6 @@ _language: ja
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/legend-highlighting"
                                                  github-src="charts/category-chart/legend-highlighting">
 </code-view>
-
 
 ## ハイライト表示レイヤー
 
@@ -73,7 +69,6 @@ Ignite UI for Angular [`IgxCategoryChartComponent`]({environment:dvApiBaseUrl}/p
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/column-chart-with-highlighting"
                                                  github-src="charts/category-chart/column-chart-with-highlighting">
 </code-view>
-
 
 ## その他のリソース
 

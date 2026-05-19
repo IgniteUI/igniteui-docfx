@@ -18,7 +18,6 @@ The Ignite UI for Angular map component, the `ShapeDataSource` class loads geo-s
                                                  github-src="maps/geo-map/binding-shp-polylines">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 The following table explains properties of the `ShapeDataSource` class for loading shape files.

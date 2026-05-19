@@ -22,7 +22,6 @@ This example of an Angular Pie Chart includes a simple data set with 6 values. E
                                                  github-src="charts/pie-chart/overview">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Pie Chart Recommendations
@@ -80,7 +79,6 @@ Additionally you can use the [`legendItemTemplate`]({environment:dvApiBaseUrl}/p
                                                  github-src="charts/pie-chart/legend">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Pie Chart Others Category
@@ -97,7 +95,6 @@ If you set [`othersCategoryType`]({environment:dvApiBaseUrl}/products/ignite-ui-
                                                  github-src="charts/pie-chart/others">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Pie Chart Explosion
@@ -109,7 +106,6 @@ The pie chart supports explosion of individual pie slices as well as a `SliceCli
                     iframe-src="{environment:dvDemosBaseUrl}/charts/pie-chart/explosion"
                                                  github-src="charts/pie-chart/explosion">
 </code-view>
-
 
 <div class="divider--half"></div>
 
@@ -142,7 +138,6 @@ For scenarios where you click on the Others slice, the pie chart will return an 
                                                  github-src="charts/pie-chart/selection">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Pie Chart Animation
@@ -157,7 +152,6 @@ In the code below, the radiusFactor is increasing the chart by 0.25% of the size
                                                  github-src="charts/pie-chart/animation">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Pie Chart Styling
@@ -170,7 +164,6 @@ Once our pie chart is created, we may want to make some further styling customiz
                                                  github-src="charts/pie-chart/styling">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular Radial Pie Chart
@@ -182,7 +175,6 @@ The Radial Pie Chart belongs to a group of Radial Charts and uses belongs to a g
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/radial-pie-chart"
                                                  github-src="charts/data-chart/radial-pie-chart">
 </code-view>
-
 
 <div class="divider--half"></div>
 

@@ -19,7 +19,6 @@ _language: ja
                                                  github-src="excel/spreadsheet/clipboard">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## 依存関係

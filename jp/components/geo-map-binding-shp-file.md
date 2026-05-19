@@ -19,7 +19,6 @@ Ignite UI for Angular Map コンポーネントの [`IgxShapeDataSource`]({envir
                                                  github-src="maps/geo-map/binding-shp-polylines">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 以下の表は、シェイプ ファイルを読み込むための [`IgxShapeDataSource`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_core.igxshapedatasource.html) クラスのプロパティを説明します。

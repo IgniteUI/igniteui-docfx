@@ -19,7 +19,6 @@ _language: ja
                                                  github-src="maps/geo-map/navigation">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## 地理座標

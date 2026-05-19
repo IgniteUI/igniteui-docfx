@@ -20,7 +20,6 @@ The following example demonstrates how to create Composite Chart using [`IgxColu
                                                  github-src="charts/data-chart/composite-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Additional Resources
