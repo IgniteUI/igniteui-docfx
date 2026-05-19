@@ -180,13 +180,130 @@ ng g @igniteui/angular-schematics:start
 
 ## AI Assistant Integration
 
-The Ignite UI for Angular Schematics collection includes an `ai-config` schematic that configures Ignite UI for Angular Agent Skills and the Ignite UI MCP servers for your project in a single step. Run it from your project root after installing Ignite UI for Angular packages:
+The Ignite UI for Angular Schematics collection includes an `ai-config` schematic that sets up AI coding assistant integration for your project. In a single command, it:
+
+- **Configures MCP servers** - writes the MCP config file for your chosen coding assistant with the Ignite UI and Angular CLI MCP server entries
+- **Copies skill files** - adds Angular-specific skill guides into your agent directories
+- **Sets up instruction files** - populates each agent's instruction file with project-specific guidance
+
+Run it from your project root after installing Ignite UI for Angular packages:
 
 ```cmd
 ng generate @igniteui/angular-schematics:ai-config
 ```
 
-This copies Ignite UI for Angular Agent Skills into `.claude/skills/` and writes three MCP server entries to `.vscode/mcp.json`: `@angular/cli`, `igniteui mcp`, and `igniteui-theming-mcp`. If the files already exist and are up-to-date, the command is a no-op.
+### Flags Reference
+
+| Flag | Values | Default |
+|------|--------|---------|
+| `--assistants` | `generic`, `vscode`, `cursor`, `gemini`, `junie`, `none` | Prompted interactively; `generic` in non-interactive mode |
+| `--agents` | `generic`, `claude`, `copilot`, `cursor`, `codex`, `windsurf`, `gemini`, `junie`, `none` | Prompted interactively; `generic` + `claude` in non-interactive mode |
+
+### Supported Coding Assistants
+
+| Coding Assistant | Choice value | Config Path | Root Key |
+|-----------------|--------------|-------------|----------|
+| Generic (Claude Code, VS Code, and others) | `generic` | `.mcp.json` | `mcpServers` |
+| VS Code (GitHub Copilot) | `vscode` | `.vscode/mcp.json` | `servers` |
+| Cursor | `cursor` | `.cursor/mcp.json` | `mcpServers` |
+| Gemini | `gemini` | `.gemini/settings.json` | `mcpServers` |
+| JetBrains Junie | `junie` | `.junie/mcp/mcp.json` | `mcpServers` |
+
+### Supported AI Agents
+
+| Agent | Skills Directory | Instruction File |
+|-------|------------------|------------------|
+| Generic | `.agents/skills` | `AGENTS.md` |
+| Claude | `.claude/skills` | `.claude/CLAUDE.md` |
+| Copilot | `.github/skills` | `.github/copilot-instructions.md` |
+| Cursor | `.cursor/skills` | `.cursor/rules/cursor.mdc` |
+| Codex | `.codex/skills` | `.codex/instructions.md` |
+| Windsurf | `.windsurf/skills` | `.windsurf/rules/guidelines.md` |
+| Gemini | `.gemini/skills` | `.gemini/GEMINI.md` |
+| Junie | `.junie/skills` | `.junie/guidelines.md` |
+
+### Usage Examples
+
+Interactive - prompts for coding assistants, then agents:
+
+```bash
+ng generate @igniteui/angular-schematics:ai-config
+```
+
+Non-interactive - specify both assistants and agents:
+
+```bash
+ng generate @igniteui/angular-schematics:ai-config --assistants cursor --agents claude copilot
+```
+
+Skip MCP configuration only:
+
+```bash
+ng generate @igniteui/angular-schematics:ai-config --assistants none --agents claude generic
+```
+
+Skip skill files and instructions only (MCP servers are still configured):
+
+```bash
+ng generate @igniteui/angular-schematics:ai-config --assistants vscode --agents none
+```
+
+The schematic also runs automatically as part of `ng add igniteui-angular` with defaults: agents `["claude", "generic"]`, assistants `["generic"]`.
+
+### MCP Server Configuration
+
+The schematic writes (or merges into) the config file for your chosen coding assistant. Existing third-party MCP server entries are always preserved - the command merges, never overwrites. When run via the Angular schematic, an additional `angular-cli` MCP server entry is included automatically alongside the Ignite UI servers.
+
+**Generic, Cursor, Gemini, and Junie** (`.mcp.json` and equivalents, root key `mcpServers`):
+
+```json
+{
+  "mcpServers": {
+    "angular-cli": {
+      "command": "npx",
+      "args": ["-y", "@angular/cli", "mcp"]
+    },
+    "igniteui-cli": {
+      "command": "npx",
+      "args": ["-y", "igniteui-cli", "mcp"]
+    },
+    "igniteui-theming": {
+      "command": "npx",
+      "args": ["-y", "igniteui-theming", "igniteui-theming-mcp"]
+    }
+  }
+}
+```
+
+**VS Code / GitHub Copilot** (`.vscode/mcp.json`, root key `servers`):
+
+```json
+{
+  "servers": {
+    "angular-cli": {
+      "command": "npx",
+      "args": ["-y", "@angular/cli", "mcp"]
+    },
+    "igniteui-cli": {
+      "command": "npx",
+      "args": ["-y", "igniteui-cli", "mcp"]
+    },
+    "igniteui-theming": {
+      "command": "npx",
+      "args": ["-y", "igniteui-theming", "igniteui-theming-mcp"]
+    }
+  }
+}
+```
+
+### Skill Files
+
+Skill files are Angular-specific guides copied into each agent's skills directory. They are sourced from your installed Ignite UI package and kept in sync each time you run the schematic - existing files are only updated if their content has changed.
+
+> [!NOTE]
+> If you run `ai-config` before installing packages (e.g. with `--skip-install`), the schematic falls back to built-in templates. Re-run the command after installing to pick up the skill files from your installed version.
+
+### Using the Ignite UI CLI Instead
 
 If you have the Ignite UI CLI installed globally, the equivalent command is:
 
@@ -195,6 +312,6 @@ ig ai-config
 ```
 
 > [!NOTE]
-> The `ig ai-config` command configures only the two Ignite UI entries, `igniteui mcp` and `igniteui-theming-mcp`, and does not register `@angular/cli`. Use `ng generate @igniteui/angular-schematics:ai-config` to get all three servers configured in a single step.
+> The `ig ai-config` command configures only the two Ignite UI entries, `igniteui-cli` and `igniteui-theming`, and does not register `angular-cli`. Use `ng generate @igniteui/angular-schematics:ai-config` to get all three servers configured in a single step.
 
 For full setup instructions across all AI clients and Agent Skills wiring, see [Ignite UI CLI MCP](../../ai/cli-mcp.md).
