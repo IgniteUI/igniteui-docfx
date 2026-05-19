@@ -23,6 +23,7 @@ Ignite UI for Angular には **[エージェント スキル](https://agentskill
 | コンポーネントとレイアウト | [`skills/igniteui-angular-components/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-components/SKILL.md) | スタンドアロン コンポーネント、フォーム コントロール、オーバーレイ、レイアウト |
 | データ グリッド | [`skills/igniteui-angular-grids/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-grids/SKILL.md) | Grid、Tree Grid、Hierarchical Grid、Pivot Grid、ソート、フィルタリング、グループ化、ページング、リモート データ |
 | テーマ設定とスタイル設定 | [`skills/igniteui-angular-theming/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-theming/SKILL.md) | パレット、タイポグラフィ、エレベーション、コンポーネント テーマ、MCP サーバー |
+| 画像デザインからの生成 | [`skills/igniteui-angular-generate-from-image-design/SKILL.md`](https://github.com/IgniteUI/igniteui-angular/blob/master/skills/igniteui-angular-generate-from-image-design/SKILL.md) | スクリーンショット、モックアップ、ワイヤーフレームから Ignite UI コンポーネントを使用して Angular アプリを構築 |
 
 > [!NOTE]
 > Ignite UI for Angular **21.1.0** 以降、これらのスキルはエージェントのスキル パス (例: `.claude/skills`、`.agents/skills`、`.cursor/rules/`) に配置すると自動的に検出されます。このリリースには、これらのスキルをプロジェクトに自動的に追加するオプションの移行が含まれています。
@@ -43,6 +44,8 @@ Ignite UI for Angular には **[エージェント スキル](https://agentskill
     igniteui-angular-grids/
       SKILL.md
     igniteui-angular-theming/
+      SKILL.md
+    igniteui-angular-generate-from-image-design/
       SKILL.md
 ```
 
@@ -152,6 +155,7 @@ robocopy node_modules\igniteui-angular\skills .agents\skills /E
 cp -r node_modules/igniteui-angular/skills/igniteui-angular-components .agents/skills/
 cp -r node_modules/igniteui-angular/skills/igniteui-angular-grids .agents/skills/
 cp -r node_modules/igniteui-angular/skills/igniteui-angular-theming .agents/skills/
+cp -r node_modules/igniteui-angular/skills/igniteui-angular-generate-from-image-design .agents/skills/
 ```
 
 **Windows (Command Prompt)**
@@ -160,6 +164,7 @@ cp -r node_modules/igniteui-angular/skills/igniteui-angular-theming .agents/skil
 robocopy node_modules\igniteui-angular\skills\igniteui-angular-components .agents\skills\igniteui-angular-components /E
 robocopy node_modules\igniteui-angular\skills\igniteui-angular-grids .agents\skills\igniteui-angular-grids /E
 robocopy node_modules\igniteui-angular\skills\igniteui-angular-theming .agents\skills\igniteui-angular-theming /E
+robocopy node_modules\igniteui-angular\skills\igniteui-angular-generate-from-image-design .agents\skills\igniteui-angular-generate-from-image-design /E
 ```
 
 ### **オプション C — `gemini skills` CLI を使用する**
@@ -175,6 +180,7 @@ robocopy node_modules\igniteui-angular\skills\igniteui-angular-theming .agents\s
 gemini skills install https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-components
 gemini skills install https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-grids
 gemini skills install https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-theming
+gemini skills install https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-generate-from-image-design
 ```
 
 **ワークスペース スコープにインストールする:**
@@ -183,6 +189,7 @@ gemini skills install https://github.com/IgniteUI/igniteui-angular.git --path sk
 gemini skills install --scope workspace https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-components
 gemini skills install --scope workspace https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-grids
 gemini skills install --scope workspace https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-theming
+gemini skills install --scope workspace https://github.com/IgniteUI/igniteui-angular.git --path skills/igniteui-angular-generate-from-image-design
 ```
 
 インストールが完了すると、スキル ファイルはそれぞれの場所で利用できるようになり、互換性のある AI アシスタントによって自動的に検出されます。
