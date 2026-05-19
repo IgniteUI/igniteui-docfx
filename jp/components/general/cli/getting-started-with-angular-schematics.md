@@ -178,21 +178,138 @@ ng g @igniteui/angular-schematics:start
 
 ## AI アシスタント統合
 
-Ignite UI for Angular Schematics コレクションには、Ignite UI for Angular Agent Skills と Ignite UI MCP サーバーをプロジェクトに一括設定する `ai-config` schematic が含まれています。Ignite UI for Angular パッケージをインストールした後、プロジェクト ルートから以下のコマンドを実行してください。
+Ignite UI for Angular Schematics コレクションには、プロジェクトの AI コーディング アシスタント統合をセットアップする `ai-config` schematic が含まれています。1 つのコマンドで以下を実行します:
+
+- **MCP サーバーの設定** - 選択したコーディング アシスタント用の MCP 設定ファイルに、Ignite UI と Angular CLI MCP サーバー エントリを書き込みます
+- **スキル ファイルのコピー** - Angular 固有のスキル ガイドをエージェント ディレクトリに追加します
+- **インストラクション ファイルのセットアップ** - 各エージェントのインストラクション ファイルにプロジェクト固有のガイダンスを設定します
+
+Ignite UI for Angular パッケージをインストールした後、プロジェクト ルートから以下のコマンドを実行してください:
 
 ```cmd
 ng generate @igniteui/angular-schematics:ai-config
 ```
 
-これにより、Ignite UI for Angular Agent Skills が `.claude/skills/` にコピーされ、`@angular/cli`、`igniteui mcp`、`igniteui-theming-mcp` の 3 つの MCP サーバー エントリが `.vscode/mcp.json` に書き込まれます。ファイルが既に存在していて最新の状態であれば、コマンドは何も行いません。
+### フラグ リファレンス
 
-Ignite UI CLI がグローバルにインストールされている場合、同等のコマンドは次のとおりです。
+| フラグ | 値 | デフォルト |
+|------|--------|---------|
+| `--assistants` | `generic`, `vscode`, `cursor`, `gemini`, `junie`, `none` | 対話形式でプロンプト; 非対話形式モードでは `generic` |
+| `--agents` | `generic`, `claude`, `copilot`, `cursor`, `codex`, `windsurf`, `gemini`, `junie`, `none` | 対話形式でプロンプト; 非対話形式モードでは `generic` + `claude` |
+
+### サポートされているコーディング アシスタント
+
+| コーディング アシスタント | 選択値 | 設定ファイル パス | ルート キー |
+|-----------------|--------------|-------------|----------|
+| Generic (Claude Code、VS Code など) | `generic` | `.mcp.json` | `mcpServers` |
+| VS Code (GitHub Copilot) | `vscode` | `.vscode/mcp.json` | `servers` |
+| Cursor | `cursor` | `.cursor/mcp.json` | `mcpServers` |
+| Gemini | `gemini` | `.gemini/settings.json` | `mcpServers` |
+| JetBrains Junie | `junie` | `.junie/mcp/mcp.json` | `mcpServers` |
+
+### サポートされている AI エージェント
+
+| エージェント | スキル ディレクトリ | インストラクション ファイル |
+|-------|------------------|------------------|
+| Generic | `.agents/skills` | `AGENTS.md` |
+| Claude | `.claude/skills` | `.claude/CLAUDE.md` |
+| Copilot | `.github/skills` | `.github/copilot-instructions.md` |
+| Cursor | `.cursor/skills` | `.cursor/rules/cursor.mdc` |
+| Codex | `.codex/skills` | `.codex/instructions.md` |
+| Windsurf | `.windsurf/skills` | `.windsurf/rules/guidelines.md` |
+| Gemini | `.gemini/skills` | `.gemini/GEMINI.md` |
+| Junie | `.junie/skills` | `.junie/guidelines.md` |
+
+### 使用例
+
+対話形式 - コーディング アシスタント、エージェントの順でプロンプトが表示されます:
+
+```bash
+ng generate @igniteui/angular-schematics:ai-config
+```
+
+非対話形式 - アシスタントとエージェントの両方を指定します:
+
+```bash
+ng generate @igniteui/angular-schematics:ai-config --assistants cursor --agents claude copilot
+```
+
+MCP 設定のみをスキップします:
+
+```bash
+ng generate @igniteui/angular-schematics:ai-config --assistants none --agents claude generic
+```
+
+スキル ファイルとインストラクションのみをスキップします (MCP サーバーは引き続き設定されます):
+
+```bash
+ng generate @igniteui/angular-schematics:ai-config --assistants vscode --agents none
+```
+
+schematic は `ng add igniteui-angular` の一部として自動的に実行され、デフォルト値はエージェントに `["claude", "generic"]`、アシスタントに `["generic"]` が使用されます。
+
+### MCP サーバー設定
+
+schematic は、選択したコーディング アシスタントの設定ファイルに書き込みます (または既存のファイルにマージします)。既存のサードパーティ MCP サーバー エントリは常に保持されます - コマンドはマージするのみで、上書きしません。Angular schematic 経由で実行すると、Ignite UI サーバーと並んで追加の `angular-cli` MCP サーバー エントリが自動的に含まれます。
+
+**Generic、Cursor、Gemini、Junie** (`.mcp.json` および同等のファイル、ルート キー `mcpServers`):
+
+```json
+{
+  "mcpServers": {
+    "angular-cli": {
+      "command": "npx",
+      "args": ["-y", "@angular/cli", "mcp"]
+    },
+    "igniteui-cli": {
+      "command": "npx",
+      "args": ["-y", "igniteui-cli", "mcp"]
+    },
+    "igniteui-theming": {
+      "command": "npx",
+      "args": ["-y", "igniteui-theming", "igniteui-theming-mcp"]
+    }
+  }
+}
+```
+
+**VS Code / GitHub Copilot** (`.vscode/mcp.json`、ルート キー `servers`):
+
+```json
+{
+  "servers": {
+    "angular-cli": {
+      "command": "npx",
+      "args": ["-y", "@angular/cli", "mcp"]
+    },
+    "igniteui-cli": {
+      "command": "npx",
+      "args": ["-y", "igniteui-cli", "mcp"]
+    },
+    "igniteui-theming": {
+      "command": "npx",
+      "args": ["-y", "igniteui-theming", "igniteui-theming-mcp"]
+    }
+  }
+}
+```
+
+### スキル ファイル
+
+スキル ファイルは、各エージェントのスキル ディレクトリにコピーされる Angular 固有のガイドです。インストール済みの Ignite UI パッケージから取得され、schematic を実行するたびに同期されます - 既存のファイルはコンテンツが変更された場合にのみ更新されます。
+
+> [!NOTE]
+> パッケージをインストールする前 (例: `--skip-install` を使用した場合) に `ai-config` を実行すると、schematic は組み込みテンプレートにフォールバックします。インストール済みバージョンのスキル ファイルを取得するには、インストール後にコマンドを再実行してください。
+
+### Ignite UI CLI の使用
+
+Ignite UI CLI がグローバルにインストールされている場合、同等のコマンドは次のとおりです:
 
 ```cmd
 ig ai-config
 ```
 
 > [!NOTE]
-> `ig ai-config` コマンドは `igniteui mcp` と `igniteui-theming-mcp` の 2 つの Ignite UI エントリのみを設定し、`@angular/cli` は登録しません。3 つのサーバーをすべて一括設定するには `ng generate @igniteui/angular-schematics:ai-config` を使用してください。
+> `ig ai-config` コマンドは `igniteui-cli` と `igniteui-theming` の 2 つの Ignite UI エントリのみを設定し、`angular-cli` は登録しません。1 つのステップですべての 3 つのサーバーを設定するには `ng generate @igniteui/angular-schematics:ai-config` を使用してください。
 
-すべての AI クライアントおよび Agent Skills の設定手順の詳細については、[Ignite UI CLI MCP](../../ai/cli-mcp.md) を参照してください。
+すべての AI クライアントおよび Agent Skills の配線に関する詳細なセットアップ手順については、[Ignite UI CLI MCP](../../ai/cli-mcp.md) を参照してください。

@@ -68,23 +68,23 @@ Copilot Chat をエージェント モードに切り替え、ツール リス�
 ### Claude Desktop
 
 1. Claude Desktop の設定ファイルを開きます:
-    - macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
-    - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
+   - macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
+   - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
 2. `mcpServers` ブロックに `maker` エントリを追加します:
 
-    ```json
-    {
-      "mcpServers": {
-        "maker": {
-          "command": "npx",
-          "args": ["-y", "@igniteui/maker-mcp", "--stdio"],
-          "env": {
-            "Executor__AIProviderKeys__Anthropic": "<your-anthropic-key>"
-          }
-        }
-      }
-    }
-    ```
+   ```json
+   {
+     "mcpServers": {
+       "maker": {
+         "command": "npx",
+         "args": ["-y", "@igniteui/maker-mcp", "--stdio"],
+         "env": {
+           "Executor__AIProviderKeys__Anthropic": "<your-anthropic-key>"
+         }
+       }
+     }
+   }
+   ```
 
 3. Claude Desktop を再起動します。初回起動時にネイティブ バイナリがダウンロードされます (通常の接続で約 30 秒)。
 

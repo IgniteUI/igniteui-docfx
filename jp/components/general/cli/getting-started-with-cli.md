@@ -55,6 +55,24 @@ ig new
 ig new newAngularProject --framework=angular --type=igx-ts --template=side-nav
 ```
 
+プロジェクト作成時に AI アシスタントとエージェントの設定を指定することもできます:
+
+```cmd
+ig new my-app --framework=angular --type=igx-ts --template=side-nav --assistants generic --agents claude copilot
+```
+
+AI 設定を完全にスキップするには:
+
+```cmd
+ig new my-app --framework=angular --type=igx-ts --assistants none --agents none
+```
+
+**`ig new` の実行順序:**
+1. プロジェクト ファイルが生成されます
+2. AI 設定が新しいプロジェクト ディレクトリ内で実行されます (フラグが指定されていない場合はアシスタントとエージェントのプロンプトが表示されます)
+3. Git が初期化されます (`--skip-git` を指定した場合を除く)
+4. 依存関係がインストールされます (`--skip-install` を指定した場合を除く)
+
 >[!NOTE]
 > `v13.1.0` 以降、`igx-ts` プロジェクト タイプはデフォルトでスタンドアロン コンポーネントを使用するプロジェクトを生成します。代わりにモジュールベースのブートストラップを使用したい場合は、`type` を `igx-ts-legacy` に設定できます。
 
@@ -188,13 +206,31 @@ ig start
 
 Ignite UI CLI には、AI コーディング アシスタント (GitHub Copilot、Claude、Cursor など) を最新の Ignite UI コンポーネント ドキュメントおよび API リファレンスに接続する組み込みの MCP (Model Context Protocol) サーバーが含まれています。設定後、AI アシスタントはコンポーネント API を照会したり、セットアップ ガイドを取得したり、コンテキストを切り替えずに正確な Ignite UI for Angular コードを生成したりできます。
 
-`ig new` でプロジェクトを作成した場合、スキャフォールディング時に VS Code MCP 設定が `.vscode/mcp.json` に生成され、Ignite UI for Angular Agent Skills が `.claude/skills/` にコピーされます。これらのファイルのいずれかまたは両方が欠けている既存のプロジェクトで作業している場合は、プロジェクト ルートから `ig ai-config` を実行して MCP 設定とスキルを一括セットアップしてください。
+`ig new` でプロジェクトを作成した場合、スキャフォールディング時に MCP 設定と Agent Skills がすでに生成されています。既存のプロジェクトで作業している場合は、プロジェクト ルートから `ig ai-config` を実行して MCP サーバー、スキル ファイル、インストラクション ファイルを一括セットアップしてください:
 
 ```cmd
 ig ai-config
 ```
 
-AI クライアントを手動で設定する場合、または VS Code 以外のクライアントを使用する場合は、以下のコマンドで MCP サーバーを直接起動してください。
+コマンドは複数のコーディング アシスタントと AI エージェントをサポートしています:
+
+```cmd
+ig ai-config --assistants generic vscode --agents claude copilot
+```
+
+| フラグ | 値 | デフォルト |
+|------|--------|---------|
+| `--assistants` | `generic`, `vscode`, `cursor`, `gemini`, `junie`, `none` | 対話形式でプロンプト; 非対話形式モードでは `generic` |
+| `--agents` | `generic`, `claude`, `copilot`, `cursor`, `codex`, `windsurf`, `gemini`, `junie`, `none` | 対話形式でプロンプト; 非対話形式モードでは `generic` + `claude` |
+
+フラグなしで実行すると、`ig ai-config` は対話形式モードになり、スペースでトグル、ENTER で確認してコーディング アシスタントとエージェントを選択するよう促します。プロンプトは `ig new` 時のウィザード ステップを反映しています:
+
+1. **コーディング アシスタントの選択** - MCP サーバー設定の対象として 1 つ以上を選択します (Generic、VS Code、Cursor、Gemini、Junie)、またはスキップするには None を選択します。
+2. **AI エージェントの選択** - スキル ファイルとインストラクション ファイル用に 1 つ以上のエージェントを選択します (Generic、Claude、Copilot、Cursor、Codex、Windsurf、Gemini、Junie)、またはスキップするには None を選択します。
+
+対話形式モードのデフォルトはアシスタントに **Generic**、エージェントに **Generic + Claude** です。ウィザード プロンプトの詳細については、[Ignite UI CLI を使用したステップ バイ ステップ ガイド - AI アシスタントの設定](step-by-step-guide-using-cli.md#configure-ai-assistants)を参照してください。
+
+AI クライアントを手動で設定する場合、または VS Code 以外のクライアントを使用する場合は、以下のコマンドで MCP サーバーを直接起動してください:
 
 ```cmd
 ig mcp
@@ -218,4 +254,4 @@ ig mcp
 | [ig test](https://github.com/IgniteUI/igniteui-cli/wiki/test) |  | 現在のプロジェクトのテストを実行します。
 | ig version | -v | ローカル (ローカルがない場合はグローバル) にインストールされた Ignite UI CLI バージョンを示します。 |
 | ig mcp |  | Ignite UI MCP サーバーを起動し、接続された AI アシスタントにコンポーネント ドキュメント検索および API リファレンス ツールを提供します。[Ignite UI CLI MCP](../../ai/cli-mcp.md) を参照してください。 |
-| ig ai-config |  | `.claude/skills/` に Ignite UI for Angular Agent Skills をコピーし、`.vscode/mcp.json` に Ignite UI MCP サーバー設定を書き込むことで、既存のプロジェクトの AI 統合をセットアップします。 |
+| ig ai-config |  | AI コーディング アシスタント統合をセットアップします - 選択したアシスタントとエージェント用に MCP サーバーを設定し、スキル ファイルをコピーし、インストラクション ファイルを設定します。 |

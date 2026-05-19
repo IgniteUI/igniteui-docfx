@@ -52,7 +52,7 @@ ig new
 
 ![](../../../images/general/ig-step-by-step-new-project-theme.png)
 
-上記の手順を完了すると、アプリケーション構造が生成され、git リポジトリが初期化され、プロジェクトがコミットされます。次に、プロセスを完了するか、アプリケーションに新しいビューを追加するかのプロンプトが表示されます。
+上記の手順を完了すると、アプリケーション構造が生成されます。次に、ウィザードは [AI コーディング アシスタントの設定](#configure-ai-assistants)を促します。AI 設定が完了すると、Git リポジトリが初期化され、プロジェクトがコミットされ、プロセスを完了するかアプリケーションに新しいビューを追加するかを尋ねられます:
 
 ![](../../../images/general/ig-step-by-step-new-project-action.png)
 
@@ -84,3 +84,43 @@ ig add
 
 以下の構文を使用して [`add`](getting-started-with-cli.md#add-template) コマンドを使用すると、後からいつでも、Ignite UI for Angular ビューをアプリケーションに追加できます。
 `ig add [template] [name]`.
+
+## AI アシスタントの設定 {#configure-ai-assistants}
+
+フレームワーク、プロジェクト タイプ、テンプレート、テーマを選択した後、ウィザードは AI コーディング アシスタント統合の設定を促します。このステップは `ig ai-config` と同じロジックを実行しますが、プロジェクト作成フローに組み込まれています。
+
+### コーディング アシスタントの選択
+
+MCP サーバーを設定するコーディング アシスタントを選択するよう促されます。スペース キーで選択をトグルし、ENTER で確認します:
+
+![ステップ バイ ステップ AI 設定 コーディング アシスタント プロンプト](../../../images/general/ig-step-by-step-ai-config-assistants.png)
+
+- **Generic** (Claude Code、VS Code など) - `.mcp.json` に書き込みます
+- **VS Code** (GitHub Copilot) - `.vscode/mcp.json` に書き込みます
+- **Cursor** - `.cursor/mcp.json` に書き込みます
+- **Gemini** - `.gemini/settings.json` に書き込みます
+- **JetBrains Junie** - `.junie/mcp/mcp.json` に書き込みます
+- **None** - MCP 設定をスキップします
+
+デフォルトの選択は **Generic** です。**None** を選択すると MCP サーバー設定が完全にスキップされます。
+
+### AI エージェントの選択
+
+次に、スキル ファイルとインストラクションを設定する AI エージェントを選択するよう促されます:
+
+![ステップ バイ ステップ AI 設定 エージェント プロンプト](../../../images/general/ig-step-by-step-ai-config-agents.png)
+
+- **Generic** - `.agents/skills/` と `AGENTS.md`
+- **Claude** - `.claude/skills/` と `.claude/CLAUDE.md`
+- **Copilot** - `.github/skills/` と `.github/copilot-instructions.md`
+- **Cursor** - `.cursor/skills/` と `.cursor/rules/cursor.mdc`
+- **Codex** - `.codex/skills/` と `.codex/instructions.md`
+- **Windsurf** - `.windsurf/skills/` と `.windsurf/rules/guidelines.md`
+- **Gemini** - `.gemini/skills/` と `.gemini/GEMINI.md`
+- **Junie** - `.junie/skills/` と `.junie/guidelines.md`
+- **None** - スキル ファイルとインストラクションをスキップします
+
+デフォルトの選択は **Generic** と **Claude** です。**None** を選択するとエージェント設定が完全にスキップされます。
+
+> [!NOTE]
+> 非対話形式のプロジェクト作成時に AI 設定プロンプトを完全にスキップするには、`ig new` に `--assistants none --agents none` を渡します。後から AI 設定を再実行するには、プロジェクト ルートから `ig ai-config` を使用してください。
