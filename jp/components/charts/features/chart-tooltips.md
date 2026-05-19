@@ -22,7 +22,6 @@ Angular チャートでは、ツールチップはバインドされたデータ
                                                  github-src="charts/category-chart/column-chart-with-tooltips">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 [`toolTipType`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_charts.igxdomainchartcomponent.html#toolTipType) プロパティは構成可能であり、次のいずれかのオプションに設定できます。
@@ -50,7 +49,6 @@ Angular チャートでは、ツールチップはバインドされたデータ
                                                  github-src="charts/category-chart/tooltip-template">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## データ チャートのカスタム ツールチップ
@@ -62,7 +60,6 @@ Angular チャートでは、ツールチップはバインドされたデータ
                     iframe-src="{environment:dvDemosBaseUrl}/charts/data-chart/tooltip-template"
                                                  github-src="charts/data-chart/tooltip-template">
 </code-view>
-
 
 <div class="divider--half"></div>
 

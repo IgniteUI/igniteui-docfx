@@ -18,7 +18,6 @@ The Infragistics Excel Engine's [`WorksheetChart`]({environment:dvApiBaseUrl}/pr
                                                  github-src="excel/excel-library/working-with-charts">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Usage

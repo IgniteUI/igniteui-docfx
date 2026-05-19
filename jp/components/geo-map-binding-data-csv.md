@@ -20,7 +20,6 @@ Ignite UI for Angular Map コンポーネントを使用すると、さまざま
                                                  github-src="maps/geo-map/binding-data-csv">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## データ例

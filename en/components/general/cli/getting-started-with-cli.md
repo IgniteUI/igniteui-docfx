@@ -246,10 +246,10 @@ ig ai-config --assistants generic vscode --agents claude copilot
 
 When run without flags, `ig ai-config` enters interactive mode and prompts you to select coding assistants and agents using SPACE to toggle and ENTER to confirm. The prompts mirror the wizard steps during `ig new`:
 
-1. **Choose coding assistants** — select one or more targets for MCP server configuration (Generic, VS Code, Cursor, Gemini, Junie), or None to skip.
-2. **Choose AI agents** — select one or more agents for skill files and instruction files (Generic, Claude, Copilot, Cursor, Codex, Windsurf, Gemini, Junie), or None to skip.
+1. **Choose coding assistants** - select one or more targets for MCP server configuration (Generic, VS Code, Cursor, Gemini, Junie), or None to skip.
+2. **Choose AI agents** - select one or more agents for skill files and instruction files (Generic, Claude, Copilot, Cursor, Codex, Windsurf, Gemini, Junie), or None to skip.
 
-Defaults in interactive mode are **Generic** for assistants and **Generic + Claude** for agents. For details on the wizard prompts, see [Step-by-Step Guide Using Ignite UI CLI — Configure AI assistants](step-by-step-guide-using-cli.md#configure-ai-assistants).
+Defaults in interactive mode are **Generic** for assistants and **Generic + Claude** for agents. For details on the wizard prompts, see [Step-by-Step Guide Using Ignite UI CLI - Configure AI assistants](step-by-step-guide-using-cli.md#configure-ai-assistants).
 
 If you want to configure your AI client manually, or use a client other than VS Code, start the MCP server directly:
 
@@ -275,4 +275,4 @@ A complete list of available Ignite UI CLI commands is maintained on the [Ignite
 | [ig test](https://github.com/IgniteUI/igniteui-cli/wiki/test)         |       | Executes the tests for the current project.                                                                                                                                                          |
 | ig version                                                            | -v    | Shows the Ignite UI CLI version installed locally, or globally if no local installation is found.                                                                                                    |
 | ig mcp                                                                |       | Starts the Ignite UI MCP server, providing component documentation search and API reference tools to connected AI assistants. See [Ignite UI CLI MCP](../../ai/cli-mcp.md).                          |
-| ig ai-config                                                          |       | Sets up AI coding assistant integration — configures MCP servers, copies skill files, and populates instruction files for your chosen assistants and agents.                                          |
+| ig ai-config                                                          |       | Sets up AI coding assistant integration - configures MCP servers, copies skill files, and populates instruction files for your chosen assistants and agents.                                          |

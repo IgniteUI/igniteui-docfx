@@ -22,7 +22,6 @@ Ignite UI for Angular 複合チャートまたはコンボ チャートは、同
                                                  github-src="charts/data-chart/composite-chart">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## その他のリソース

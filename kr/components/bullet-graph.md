@@ -22,7 +22,6 @@ The following sample demonstrates how setting multiple properties on the same ga
                                                  github-src="gauges/bullet-graph/animation">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 This gauge supports one scale, one set of tick marks and one set of labels. The component also has built-in support for animated transitions. This animation is easily customizable by setting the `transitionDuration` property.
@@ -117,7 +116,6 @@ Performance value is the primary measure displayed by the component and it is vi
                                                  github-src="gauges/bullet-graph/measures">
 </code-view>
 
-
 ## Comparative Ranges
 
 The ranges are visual elements that highlight a specified range of values on a scale. Their purpose is to visually communicate the qualitative state of the performance bar measure, illustrating at the same time the degree to which it resides within that state.
@@ -153,7 +151,6 @@ The ranges are visual elements that highlight a specified range of values on a s
                                                  github-src="gauges/bullet-graph/ranges">
 </code-view>
 
-
 ## Tick Marks
 
 The tick marks serve as a visual division of the scale into intervals in order to increase the readability of the bullet graph.
@@ -187,7 +184,6 @@ The tick marks serve as a visual division of the scale into intervals in order t
                                                  github-src="gauges/bullet-graph/tickmarks">
 </code-view>
 
-
 ## Labels
 
 The labels indicate the measures on the scale.
@@ -212,7 +208,6 @@ The labels indicate the measures on the scale.
                                                  github-src="gauges/bullet-graph/labels">
 </code-view>
 
-
 ## Backing
 
 The backing element represents background and border of the bullet graph control. It is always the first element rendered and all the rest of elements such as labels, and tick marks are overlaid on top of it.
@@ -235,7 +230,6 @@ The backing element represents background and border of the bullet graph control
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph/background"
                                                  github-src="gauges/bullet-graph/background">
 </code-view>
-
 
 ## Scale
 
@@ -260,7 +254,6 @@ The scale is visual element that highlights the full range of values in the gaug
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph/scale"
                                                  github-src="gauges/bullet-graph/scale">
 </code-view>
-
 
 ## Summary
 

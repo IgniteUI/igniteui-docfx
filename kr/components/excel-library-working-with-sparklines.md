@@ -17,7 +17,6 @@ The Infragistics Excel Library has support for adding sparklines to an Excel Wor
                                                  github-src="excel/excel-library/working-with-sparklines">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Supported Sparklines

@@ -19,7 +19,6 @@ Infragistics Angular Excel Engine の [`WorksheetChart`]({environment:dvApiBaseU
                                                  github-src="excel/excel-library/working-with-charts">
 </code-view>
 
-
 > [!Note]
 > XLSX 形式が必要です。他の形式は現在サポートされていません。
 

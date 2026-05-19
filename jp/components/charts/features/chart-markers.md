@@ -24,7 +24,6 @@ Ignite UI for Angular マーカーは、カテゴリ チャートのプロット
                                                  github-src="charts/category-chart/marker-options">
 </code-view>
 
-
 <div class="divider--half"></div>
 
 ## Angular チャート マーカー テンプレート
@@ -36,7 +35,6 @@ Ignite UI for Angular マーカーは、カテゴリ チャートのプロット
                     iframe-src="{environment:dvDemosBaseUrl}/charts/category-chart/marker-templates"
                                                  github-src="charts/category-chart/marker-templates">
 </code-view>
-
 
 <div class="divider--half"></div>
 

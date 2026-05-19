@@ -118,7 +118,6 @@ export class AppModule {}
                                                  github-src="gauges/bullet-graph/measures">
 </code-view>
 
-
 ## ハイライト値
 
 バレット グラフのパフォーマンス値をさらに変更して、進捗状況をハイライト値として表示することもできます。これにより、[`value`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxbulletgraphcomponent.html#value) が低い不透明度で表示されます。良い例としては、[`value`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxbulletgraphcomponent.html#value) が 50 で、[`highlightValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxbulletgraphcomponent.html#highlightValue) が 25 に設定されている場合です。これは、[`targetValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxbulletgraphcomponent.html#targetValue) の値が何に設定されているかに関係なく、50% のパフォーマンスを表します。これを有効にするには、まず [`highlightValueDisplayMode`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxbulletgraphcomponent.html#highlightValueDisplayMode) を Overlay に設定し、次に [`highlightValue`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxbulletgraphcomponent.html#highlightValue) を [`value`]({environment:dvApiBaseUrl}/products/ignite-ui-angular/api/docs/typescript/latest/classes/igniteui_angular_gauges.igxbulletgraphcomponent.html#value) よりも低い値に適用します。
@@ -147,7 +146,6 @@ export class AppModule {}
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph/highlight-needle"
                                                  github-src="gauges/bullet-graph/highlight-needle">
 </code-view>
-
 
 ## 比較範囲
 
@@ -184,7 +182,6 @@ export class AppModule {}
                                                  github-src="gauges/bullet-graph/ranges">
 </code-view>
 
-
 ## 目盛
 
 目盛は、ブレット グラフを読み取りやすくするために、目盛の間隔でスケールを分割して見せる役割を果たします。
@@ -218,7 +215,6 @@ export class AppModule {}
                                                  github-src="gauges/bullet-graph/tickmarks">
 </code-view>
 
-
 ## ラベル
 
 ラベルはスケールのメジャーを示します。
@@ -243,7 +239,6 @@ export class AppModule {}
                                                  github-src="gauges/bullet-graph/labels">
 </code-view>
 
-
 ## バッキング
 
 バッキング要素はブレット グラフ コントロールの背景と境界線を表します。常に最初に描画される要素でラベルやメモリなどの残りの要素は互いにオーバーレイします。
@@ -266,7 +261,6 @@ export class AppModule {}
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph/background"
                                                  github-src="gauges/bullet-graph/background">
 </code-view>
-
 
 ## スケール
 
@@ -291,7 +285,6 @@ export class AppModule {}
                     iframe-src="{environment:dvDemosBaseUrl}/gauges/bullet-graph/scale"
                                                  github-src="gauges/bullet-graph/scale">
 </code-view>
-
 
 ## まとめ
 
