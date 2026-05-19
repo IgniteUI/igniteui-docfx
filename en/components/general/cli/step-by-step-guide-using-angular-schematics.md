@@ -107,8 +107,6 @@ You will be prompted to select which coding assistants to configure MCP servers 
 
 ![Step by step prompt: choose coding assistants for MCP configuration](../../../images/general/ig-step-by-step-ai-config-assistants.png)
 
-![Step by step prompt: choose coding assistants for MCP configuration](../../../images/general/ig-step-by-step-ai-config-assistants.png)
-
 - **Generic** (Claude Code, VS Code, and others) - writes `.mcp.json`
 - **VS Code** (GitHub Copilot) - writes `.vscode/mcp.json`
 - **Cursor** - writes `.cursor/mcp.json`
@@ -121,8 +119,6 @@ The default selection is **Generic**. Selecting **None** skips MCP server config
 ### Choose AI agents
 
 Next, you will be prompted to select which AI agents to configure skill files and instructions for:
-
-![Step by step prompt: choose AI agents for skill files and instructions](../../../images/general/ig-step-by-step-ai-config-agents.png)
 
 ![Step by step prompt: choose AI agents for skill files and instructions](../../../images/general/ig-step-by-step-ai-config-agents.png)
 
