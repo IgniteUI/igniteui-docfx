@@ -63,7 +63,7 @@ Two theme options are available:
 
 <img class="responsive-img" src="../../../images/general/ig-step-by-step-new-project-theme.png" alt="Step by step prompt: choose default or custom theme" />
 
-After completing these four steps, the wizard generates the project structure, initializes a Git repository, and commits the initial state. It then asks whether to finish or continue by adding a component view.
+After completing these four steps, the wizard generates the project structure, then prompts you to [configure AI coding assistants](#ai-assistant-integration). Once AI configuration is complete, a Git repository is initialized and the initial state is committed. The wizard then asks whether to finish or continue by adding a component view.
 
 <img class="responsive-img" src="../../../images/general/ig-step-by-step-new-project-action.png" alt="Step by step prompt: finish or add a view" />
 
@@ -105,6 +105,8 @@ After choosing your bootstrapping type, project name, template, and theme, the w
 
 You will be prompted to select which coding assistants to configure MCP servers for. Use the SPACE key to toggle selections and ENTER to confirm:
 
+![Step by step prompt: choose coding assistants for MCP configuration](../../../images/general/ig-step-by-step-ai-config-assistants.png)
+
 - **Generic** (Claude Code, VS Code, and others) — writes `.mcp.json`
 - **VS Code** (GitHub Copilot) — writes `.vscode/mcp.json`
 - **Cursor** — writes `.cursor/mcp.json`
@@ -117,6 +119,8 @@ The default selection is **Generic**. Selecting **None** skips MCP server config
 ### Choose AI agents
 
 Next, you will be prompted to select which AI agents to configure skill files and instructions for:
+
+![Step by step prompt: choose AI agents for skill files and instructions](../../../images/general/ig-step-by-step-ai-config-agents.png)
 
 - **Generic** — `.agents/skills/` and `AGENTS.md`
 - **Claude** — `.claude/skills/` and `.claude/CLAUDE.md`
