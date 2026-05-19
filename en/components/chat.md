@@ -399,6 +399,37 @@ We highly recommend using the standard Web Component styling approaches before r
 - `<link>` elements – For larger stylesheets, inject them inside the Shadow DOM.
 - Inline `<style>` tags – For small, scoped style overrides.
 
+### Chat theme
+
+Apart from the **CSS parts** and **slots**, the Chat component also has a [`chat-theme`]({environment:sassApiUrl}/themes#function-chat-theme) function exposed by our theming engine.
+
+In order to style the Chat component using the theme function, first we need to import the theming module, where all the theme functions and component mixins live:
+
+```scss
+@use "igniteui-angular/theming" as *;
+
+// IMPORTANT: Prior to Ignite UI for Angular version 13 use:
+// @import '~igniteui-angular/lib/core/styles/themes/index';
+```
+
+Then, we create a new theme that extends the [`chat-theme`]({environment:sassApiUrl}/themes#function-chat-theme) and provide the `$header-background`, `$sent-message-background` and `$received-message-background` parameters. Based on these parameter values, the `$header-color`, `$sent-message-color` and `$received-message-color` are automatically set to black or white, depending on which provides better contrast with the background.
+
+```scss
+$custom-chat-theme: chat-theme(
+  $header-background: #4a4a4a,
+  $sent-message-background: #fb8500,
+  $received-message-background: #e2d8c9
+);
+```
+
+Finally, **include** the custom theme in your application:
+
+```scss
+:host {
+  @include tokens($custom-chat-theme);
+}
+```
+
 <code-view style="height:900px"
            data-demos-base-url="{environment:demosBaseUrl}"
            iframe-src="{environment:demosBaseUrl}/interactions/chat-styling-sample/" alt="Angular Chat Styling">
@@ -412,6 +443,7 @@ We highly recommend using the standard Web Component styling approaches before r
 - [`IgxChatMessageContextDirective`]({environment:angularApiUrl}/classes/igxchatmessagecontextdirective.html)
 - [`IgxChatInputContextDirective`]({environment:angularApiUrl}/classes/igxchatinputcontextdirective.html)
 - [`IgxChatAttachmentContextDirective`]({environment:angularApiUrl}/classes/igxchatattachmentcontextdirective.html)
+- [`chat-theme`]({environment:sassApiUrl}/themes#function-chat-theme)
 - [`Styling & Themes`](./themes/index.md)
 
 ## Additional Resources
