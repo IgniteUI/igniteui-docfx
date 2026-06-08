@@ -2,6 +2,8 @@
 
 # Ignite UI DocFX Site Builder
 
+> **NOTE:** This repository has been archived and transferred to [igniteui/igniteui-documentation](https://github.com/igniteui/igniteui-documentation).
+
 This project uses Node.js and Gulp as a build tool to accelerate the development of the Ignite UI DocFX samples site for Ignite UI for Angular.
 
 ## Prerequisites
